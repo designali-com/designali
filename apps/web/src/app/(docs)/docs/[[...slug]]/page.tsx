@@ -98,16 +98,16 @@ export default async function DocPage({ params }: DocPageProps) {
           <SidebarTrigger className="opacity-60" />
         </div>
 
-        <div className="mx-auto flex w-full min-w-0 flex-1 flex-col gap-4 p-4 py-20">
+        <div className="mx-auto flex w-full min-w-0 flex-1 flex-col gap-4 py-20">
           <div className="flex flex-col gap-2">
             <div className="flex pb-20 text-center items-center flex-col gap-2">
 
-              <h1 className="scroll-m-20 text-xl font-semibold tracking-tight md:text-4xl">
+              <h1 className="scroll-m-20 text-2xl md:text-4xl font-medium">
                 {doc.title}
               </h1>
 
               {doc.description && (
-                <p className="text-muted-foreground">
+                <p className="max-w-80 md:max-w-xl text-sm text-muted-foreground">
                   {doc.description}
                 </p>
               )}
@@ -118,12 +118,13 @@ export default async function DocPage({ params }: DocPageProps) {
                     variant="secondary"
                     size="icon"
                     className="extend-touch-target ml-auto size-8 shadow-none md:size-7"
-                    asChild
+                    render={<Link href={neighbours.previous.url} />}
                   >
-                    <Link href={neighbours.previous.url}>
-                      <ArrowLeft className="size-4" />
-                      <span className="sr-only">Previous</span>
-                    </Link>
+
+
+
+                    <ArrowLeft className="size-4" />
+                    <span className="sr-only">Previous</span>
                   </Button>
                 )}
                 {neighbours.next && (
@@ -131,17 +132,17 @@ export default async function DocPage({ params }: DocPageProps) {
                     variant="secondary"
                     size="icon"
                     className="extend-touch-target size-8 shadow-none md:size-7"
-                    asChild
+                    render={<Link href={neighbours.next.url} />}
+
                   >
-                    <Link href={neighbours.next.url}>
-                      <span className="sr-only">Next</span>
-                      <ArrowRight className="size-4" />
-                    </Link>
+
+                    <span className="sr-only">Next</span>
+                    <ArrowRight className="size-4" />
                   </Button>
                 )}
-              </div> 
+              </div>
             </div>
- 
+
             {links ? (
               <div className="flex items-center space-x-2 pt-4">
                 {links?.doc && (
@@ -152,18 +153,15 @@ export default async function DocPage({ params }: DocPageProps) {
                   </Badge>
                 )}
                 {links?.api && (
-                  <Badge asChild variant="secondary">
-                    <Link href={links.api} target="_blank" rel="noreferrer">
-                      API Reference <ArrowUpRight className="ml-1 size-3" />
-                    </Link>
+                  <Badge render={<Link href={links.api} target="_blank" rel="noreferrer" />} variant="secondary">
+                    API Reference <ArrowUpRight className="ml-1 size-3" />
                   </Badge>
                 )}
               </div>
             ) : null}
           </div>
-
-          <Separator className={"w-full"}/>
-          <div className="w-full flex-1 *:data-[slot=alert]:first:mt-0">
+ 
+          <div className="w-full border-t border-dotted p-4 flex-1 *:data-[slot=alert]:first:mt-0">
             <MDX components={mdxComponents} />
           </div>
         </div>
@@ -174,24 +172,21 @@ export default async function DocPage({ params }: DocPageProps) {
             <Button
               variant="secondary"
               size="sm"
-              asChild
               className="shadow-none"
+              render={<Link href={neighbours.previous.url}  />}
             >
-              <Link href={neighbours.previous.url} className="flex">
-                <ArrowLeft className="mr-1 size-4" /> {neighbours.previous.name}
-              </Link>
+
+              <ArrowLeft className="mr-1 size-4" /> {neighbours.previous.name}
             </Button>
           )}
           {neighbours.next && (
             <Button
+              render={<Link href={neighbours.next.url}/>}
               variant="secondary"
               size="sm"
               className="ml-auto shadow-none"
-              asChild
             >
-              <Link href={neighbours.next.url} className="flex">
-                {neighbours.next.name} <ArrowRight className="ml-1 size-4" />
-              </Link>
+              {neighbours.next.name} <ArrowRight className="ml-1 size-4" />
             </Button>
           )}
         </div>
@@ -199,7 +194,7 @@ export default async function DocPage({ params }: DocPageProps) {
 
       {/* Right Sidebar TOC */}
       <aside className="sticky top-10 hidden h-screen w-[12rem] shrink-0 border-l border-dotted xl:block">
-        <div className="h-full overflow-y-auto p-3">
+        <div className="h-full overflow-y-auto p-4">
           {doc.toc?.length ? <DocsTableOfContents toc={doc.toc} /> : null}
         </div>
       </aside>

@@ -39,7 +39,7 @@ export function ComponentPreviewTabs({
       >
         <div className="flex items-center justify-between">
           {!hideCode && (
-            <TabsList size="sm">
+            <TabsList variant={"line"}>
               <TabsTrigger value="preview">
                 Preview
               </TabsTrigger>

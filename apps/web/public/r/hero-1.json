@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "hero-1",
+  "type": "registry:block",
+  "description": "Hero 1",
+  "files": [
+    {
+      "path": "registry/designali/blocks/hero/hero-1.tsx",
+      "content": "import { Button } from \"@workspace/ui/components/button\"\n\nexport function ButtonVariantsDemo() {\n  return (\n    <div className=\"flex flex-wrap max-w-md mx-auto justify-center items-center gap-2\">\n      <Button variant=\"default\">Default</Button>\n      <Button variant=\"outline\">Outline</Button>\n      <Button variant=\"secondary\">Secondary</Button>\n      <Button variant=\"ghost\">Ghost</Button>\n      <Button variant=\"destructive\">Destructive</Button>\n      <Button variant=\"link\">Link</Button> \n    </div>\n  )\n}",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "400px",
+    "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+    "mobile": "component"
+  },
+  "categories": [
+    "hero"
+  ]
+}

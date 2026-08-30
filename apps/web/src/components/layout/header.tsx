@@ -9,87 +9,136 @@ import { Logo } from "@workspace/ui/designali/logo"
 import { Search } from "./search"
 
 const navLinks = [
-    { name: "Templates", href: "/templates" },
-    { name: "Blocks", href: "/blocks" },
-    { name: "Illustration", href: "/illustration" },
-    { name: "Components", href: "/docs" },
-    { name: "Icons", href: "/icons" },
+  { name: "Templates", href: "/templates" },
+  { name: "Blocks", href: "/blocks" },
+  { name: "Illustration", href: "/illustration" },
+  { name: "Components", href: "/docs" },
+  { name: "Icons", href: "/icons" },
 ]
 
+const CAL_LINK = "https://cal.com/designali-com/designali"
+
 export function Header() {
-    return (
-        <header className="fixed top-0 left-0 right-0 z-50 w-full border-b border-dotted bg-background/50 backdrop-blur-md">
-            <nav className="w-full">
-                <div className="relative mx-auto flex h-10 w-full items-center justify-between px-2">
+  return (
+    <header className="fixed top-0 left-0 right-0 z-50 w-full border-b border-dotted bg-background/50 backdrop-blur-md">
+      <nav className="w-full">
+        <div className="relative mx-auto flex h-10 w-full items-center justify-between px-2">
+          {/* Left */}
+          <div className="flex items-center">
+            <Link
+              href="/"
+              className="ml-2 flex items-center gap-2"
+              aria-label="Designali"
+            >
+              <Logo className="size-6" />
+            </Link>
 
-                    <div className="flex items-center">
-                        <Link
-                            href="/"
-                            className="flex items-center gap-2 ml-2"
-                        >
-                            <Logo className="size-6" />
-                        </Link>
-
-                        <nav className="hidden items-center gap-6 ml-6 md:flex">
-                            {navLinks.map((link) => (
-                                <Link
-                                    key={link.name}
-                                    href={link.href}
-                                    className="text-xs text-muted-foreground transition hover:text-foreground"
-                                >
-                                    {link.name}
-                                </Link>
-                            ))}
-                        </nav>
-                    </div>
-
-                    <div className="absolute left-1/2 -translate-x-1/2">
-                        <Search />
-                    </div>
-
-                    <Button
-                        size="sm"
-                        render={
-                            <Link target="_blank" href="https://cal.com/designali-com/designali">
-                                Book a call
-                            </Link>
-                        }
-                    />
-                </div>
+            <nav className="ml-6 hidden items-center gap-6 md:flex">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  className="text-xs text-muted-foreground transition-colors hover:text-foreground"
+                >
+                  {link.name}
+                </Link>
+              ))}
             </nav>
-        </header>
-    )
+          </div>
+
+          {/* Center Search */}
+          <div className="absolute left-1/2 -translate-x-1/2">
+            <Search />
+          </div>
+
+          <div className="flex gap-2">
+            <Button
+              size="sm"
+              variant={"ghost"}
+              nativeButton={false}
+              render={
+                <Link
+                  href={CAL_LINK}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                />
+              }
+            >
+              Get full access
+            </Button>
+            <Button
+              size="sm"
+              nativeButton={false}
+              render={
+                <Link
+                  href={CAL_LINK}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                />
+              }
+            >
+              Dashboard
+            </Button>
+          </div>
+
+        </div>
+      </nav>
+    </header>
+  )
 }
 
 export function TemplateHeader() {
-    return (
-        <header className="fixed top-0 left-0 right-0 z-50 w-full border-b border-dotted bg-background/50 backdrop-blur-md">
-            <nav className="w-full">
-                <div className="relative mx-auto flex h-10 w-full items-center justify-between px-2">
+  return (
+    <header className="fixed top-0 left-0 right-0 z-50 w-full border-b border-dotted bg-background/50 backdrop-blur-md">
+      <nav className="w-full">
+        <div className="relative mx-auto flex h-10 w-full items-center justify-between px-2">
+          {/* Left */}
+          <div className="flex items-center">
+            <Link
+              href="/"
+              className="ml-2 flex items-center gap-2"
+              aria-label="Designali"
+            >
+              <Logo className="size-6" />
+            </Link>
+          </div>
 
-                    <div className="flex items-center">
-                        <Link
-                            href="/"
-                            className="flex items-center gap-2 ml-2"
-                        >
-                            <Logo className="size-6" />
-                        </Link>
-                    </div>
+          {/* Center Search */}
+          <div className="absolute left-1/2 -translate-x-1/2">
+            <Search />
+          </div>
 
-                    <div className="absolute left-1/2 -translate-x-1/2">
-                        <Search />
-                    </div>
-
-                    <Button
-                        size="sm"
-                        render={
-                            <Link target="_blank" href="https://cal.com/designali-com/designali">
-                                Book a call
-                            </Link>
-                        }
-                    />
-                </div>
-            </nav>
-        </header>
-    )
+          <div className="flex gap-2">
+            <Button
+              size="sm"
+              variant={"ghost"}
+              nativeButton={false}
+              render={
+                <Link
+                  href={CAL_LINK}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                />
+              }
+            >
+              Get full access
+            </Button>
+            <Button
+              size="sm"
+              nativeButton={false}
+              render={
+                <Link
+                  href={CAL_LINK}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                />
+              }
+            >
+              Dashboard
+            </Button>
+          </div>
+        </div>
+      </nav>
+    </header>
+  )
 }

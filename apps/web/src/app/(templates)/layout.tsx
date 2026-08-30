@@ -14,7 +14,7 @@ export default async function MarketingLayout({
     children,
 }: MarketingLayoutProps) {
     return (
-        <div className="flex h-screen flex-col overflow-hidden">
+        <div className="flex h-full flex-col overflow-hidden">
             <TemplateHeader />
 
             <div className="flex min-h-0 flex-1">
@@ -30,7 +30,7 @@ export default async function MarketingLayout({
                     <AppSidebar />
 
                     <main className="flex min-w-0 flex-1 flex-col overflow-y-auto">
-                        <SidebarTrigger className={"absolute opacity-60  md:hidden z-10"} /> 
+                        <SidebarTrigger className={"absolute top-12 left-2 opacity-60  md:hidden z-10"} /> 
                         {children}
                     </main>
                 </SidebarProvider>

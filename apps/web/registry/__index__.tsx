@@ -25,6 +25,204 @@ export const Index: Record<string, any> = {
     categories: undefined,
     meta: undefined,
   },
+  "header-01": {
+    name: "header-01",
+    description: "A simple header section.",
+    type: "registry:block",
+    registryDependencies: ["button","navigation-menu","toggle"],
+    files: [{
+      path: "registry/designali/blocks/header/header-01/page.tsx",
+      type: "registry:component",
+      target: "components/header-01.tsx"
+    },{
+      path: "registry/designali/blocks/header/header-01/components/header.tsx",
+      type: "registry:component",
+      target: ""
+    },{
+      path: "registry/designali/blocks/header/header-01/components/theme-switch.tsx",
+      type: "registry:component",
+      target: ""
+    },{
+      path: "registry/designali/blocks/header/header-01/components/menus.tsx",
+      type: "registry:component",
+      target: ""
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/designali/blocks/header/header-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["header"],
+    meta: {"iframeHeight":"500px"},
+  },
+  "header-02": {
+    name: "header-02",
+    description: "A simple header section.",
+    type: "registry:block",
+    registryDependencies: ["button","command","navigation-menu","toggle","accordion","sheet"],
+    files: [{
+      path: "registry/designali/blocks/header/header-02/page.tsx",
+      type: "registry:component",
+      target: "components/header-02.tsx"
+    },{
+      path: "registry/designali/blocks/header/header-02/components/header.tsx",
+      type: "registry:component",
+      target: ""
+    },{
+      path: "registry/designali/blocks/header/header-02/components/theme-switch.tsx",
+      type: "registry:component",
+      target: ""
+    },{
+      path: "registry/designali/blocks/header/header-02/components/search.tsx",
+      type: "registry:component",
+      target: ""
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/designali/blocks/header/header-02/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["header"],
+    meta: {"iframeHeight":"500px"},
+  },
+  "header-03": {
+    name: "header-03",
+    description: "A simple header section.",
+    type: "registry:block",
+    registryDependencies: ["button","navigation-menu","toggle","accordion","sheet"],
+    files: [{
+      path: "registry/designali/blocks/header/header-03/page.tsx",
+      type: "registry:component",
+      target: "components/header-03.tsx"
+    },{
+      path: "registry/designali/blocks/header/header-03/components/header.tsx",
+      type: "registry:component",
+      target: ""
+    },{
+      path: "registry/designali/blocks/header/header-03/components/theme-switch.tsx",
+      type: "registry:component",
+      target: ""
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/designali/blocks/header/header-03/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["header"],
+    meta: {"iframeHeight":"500px"},
+  },
+  "header-04": {
+    name: "header-04",
+    description: "A simple header section.",
+    type: "registry:block",
+    registryDependencies: ["button","command","toggle","separator"],
+    files: [{
+      path: "registry/designali/blocks/header/header-04/page.tsx",
+      type: "registry:component",
+      target: "components/header-04.tsx"
+    },{
+      path: "registry/designali/blocks/header/header-04/components/header.tsx",
+      type: "registry:component",
+      target: ""
+    },{
+      path: "registry/designali/blocks/header/header-04/components/theme-switch.tsx",
+      type: "registry:component",
+      target: ""
+    },{
+      path: "registry/designali/blocks/header/header-04/components/search.tsx",
+      type: "registry:component",
+      target: ""
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/designali/blocks/header/header-04/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["header"],
+    meta: {"iframeHeight":"500px"},
+  },
+  "header-05": {
+    name: "header-05",
+    description: "A simple header section.",
+    type: "registry:block",
+    registryDependencies: ["command","sheet"],
+    files: [{
+      path: "registry/designali/blocks/header/header-05/page.tsx",
+      type: "registry:component",
+      target: "components/header-05.tsx"
+    },{
+      path: "registry/designali/blocks/header/header-05/components/header.tsx",
+      type: "registry:component",
+      target: ""
+    },{
+      path: "registry/designali/blocks/header/header-05/components/menus.tsx",
+      type: "registry:component",
+      target: ""
+    },{
+      path: "registry/designali/blocks/header/header-05/components/phone-menus.tsx",
+      type: "registry:component",
+      target: ""
+    },{
+      path: "registry/designali/blocks/header/header-05/components/navigation.tsx",
+      type: "registry:component",
+      target: ""
+    },{
+      path: "registry/designali/blocks/header/header-05/components/search.tsx",
+      type: "registry:component",
+      target: ""
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/designali/blocks/header/header-05/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["header"],
+    meta: {"iframeHeight":"500px"},
+  },
+  "header-06": {
+    name: "header-06",
+    description: "A simple header section.",
+    type: "registry:block",
+    registryDependencies: ["navigation-menu","avatar","dropdown-menu","button"],
+    files: [{
+      path: "registry/designali/blocks/header/header-06/page.tsx",
+      type: "registry:component",
+      target: "components/header-06.tsx"
+    },{
+      path: "registry/designali/blocks/header/header-06/components/header.tsx",
+      type: "registry:component",
+      target: ""
+    },{
+      path: "registry/designali/blocks/header/header-06/components/theme.tsx",
+      type: "registry:component",
+      target: ""
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/designali/blocks/header/header-06/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["header"],
+    meta: {"iframeHeight":"500px"},
+  },
+  "hero-1": {
+    name: "hero-1",
+    description: "Hero 1",
+    type: "registry:block",
+    registryDependencies: undefined,
+    files: [{
+      path: "registry/designali/blocks/hero/hero-1.tsx",
+      type: "registry:block",
+      target: ""
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/designali/blocks/hero/hero-1.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["hero"],
+    meta: {"iframeHeight":"400px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
   "button-variants": {
     name: "button-variants",
     description: "Button variants showcase",

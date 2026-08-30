@@ -8,7 +8,7 @@ import {
     SidebarGroupLabel,
     SidebarMenu,
     SidebarMenuButton,
-    SidebarMenuItem, 
+    SidebarMenuItem,
 } from "@workspace/ui/components/sidebar";
 
 export function NavMain({
@@ -23,8 +23,8 @@ export function NavMain({
     const pathname = usePathname();
 
     return (
-        <SidebarGroup > 
-            <SidebarGroupLabel>designali</SidebarGroupLabel> 
+        <SidebarGroup >
+            <SidebarGroupLabel>designali</SidebarGroupLabel>
             <SidebarMenu className="pt-8">
                 {items.map((item) => {
                     const isActive =
@@ -34,20 +34,19 @@ export function NavMain({
                     return (
                         <SidebarMenuItem key={item.title}>
                             <SidebarMenuButton
+                                render={<a href={item.url} className="flex gap-2 items-center">
+                                    {item.icon && <item.icon />}
+                                    <span>{item.title}</span>
+                                </a>}
                                 tooltip={item.title}
                                 className={`
                                     transition-opacity hover:text-primary duration-200
                                     ${isActive
                                         ? "opacity-100 text-primary"
-                                        : "opacity-60 hover:opacity-100"
+                                        : "opacity-70 hover:opacity-100"
                                     }
                                 `}
-                            >
-                                <a href={item.url} className="flex gap-2 items-center">
-                                    {item.icon && <item.icon />}
-                                    <span>{item.title}</span>
-                                </a>
-                            </SidebarMenuButton>
+                            /> 
                         </SidebarMenuItem>
                     );
                 })}

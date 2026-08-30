@@ -87,25 +87,7 @@ export function ThemeListener() {
       const googleFontName = GOOGLE_FONTS_MAP[selectedFont]
       loadGoogleFont(googleFontName)
       fontFamily = `"${googleFontName}", sans-serif`
-    } else {
-      // Default/system fonts
-      const fontMap: Record<string, string> = {
-        sans: "var(--font-geist-sans)",
-        serif: "ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif",
-        mono: "var(--font-geist-mono)",
-      }
-      fontFamily = fontMap[selectedFont] || fontMap.sans
-    }
-
-    // Apply font
-    document.documentElement.style.setProperty("--font-sans", fontFamily)
-    document.body.style.fontFamily = fontFamily
-
-    // Also set it on the theme-container
-    const themeContainer = document.querySelector(".theme-container")
-    if (themeContainer instanceof HTMLElement) {
-      themeContainer.style.fontFamily = fontFamily
-    }
+    }  
   }
 
   return null

@@ -1,0 +1,1027 @@
+"use client"
+
+import * as React from "react"
+import Image from "next/image"
+import Link from "next/link"
+import {
+  Check,
+  ChevronRight,
+  Clipboard,
+  Code,
+  Eye,
+  File,
+  Folder,
+  Fullscreen,
+  Monitor,
+  RotateCw,
+  Smartphone,
+  Tablet,
+  Terminal,
+} from "lucide-react"
+
+import { trackEvent } from "@/src/lib/events"
+import {
+  createFileTreeForRegistryItemFiles,
+  FileTree,
+} from "@/src/lib/registry"
+
+import { useCopyToClipboard } from "@/src/hooks/use-copy"
+
+import { Button } from "@workspace/ui/components/button"
+
+import {
+  Collapsible,
+  CollapsibleContent,
+} from "@workspace/ui/components/collapsible"
+
+import {
+  Sidebar,
+  SidebarGroup,
+  SidebarGroupContent,
+  SidebarGroupLabel,
+  SidebarMenu,
+  SidebarMenuButton,
+  SidebarMenuItem,
+  SidebarMenuSub,
+  SidebarProvider,
+} from "@workspace/ui/components/sidebar"
+
+import {
+  Tabs,
+  TabsList,
+  TabsTrigger,
+} from "@workspace/ui/components/tabs"
+
+import {
+  ToggleGroup,
+  ToggleGroupItem,
+} from "@workspace/ui/components/toggle-group"
+import { cn } from "@workspace/ui/lib/utils"
+import { OpenInV0Button } from "./open-in-v0-button"
+
+/* -------------------------------------------------------------------------- */
+/* Types                                                                      */
+/* -------------------------------------------------------------------------- */
+
+type RegistryFile = {
+  path: string
+  target?: string
+  content?: string
+  type?: string
+}
+
+type RegistryMeta = {
+  iframeHeight?: number | string
+  mobile?: string
+  container?: string
+  containerClassName?: string
+}
+
+type RegistryItem = {
+  name: string
+  description?: string
+  files?: RegistryFile[]
+  meta?: RegistryMeta
+}
+
+type HighlightedFile = RegistryFile & {
+  highlightedContent: string
+}
+
+/* -------------------------------------------------------------------------- */
+/* Context                                                                    */
+/* -------------------------------------------------------------------------- */
+
+type BlockViewerContext = {
+  item: RegistryItem
+
+  view: "code" | "preview"
+
+  setView: (
+    view: "code" | "preview"
+  ) => void
+
+  activeFile: string | null
+
+  setActiveFile: (
+    file: string
+  ) => void
+
+  previewWidth: number
+
+  setPreviewWidth: (
+    width: number
+  ) => void
+
+  tree:
+  | ReturnType<
+    typeof createFileTreeForRegistryItemFiles
+  >
+  | null
+
+  highlightedFiles:
+  | HighlightedFile[]
+  | null
+
+  iframeKey: number
+
+  setIframeKey: React.Dispatch<
+    React.SetStateAction<number>
+  >
+}
+
+const BlockViewerContext =
+  React.createContext<BlockViewerContext | null>(
+    null
+  )
+
+function useBlockViewer() {
+  const context =
+    React.useContext(BlockViewerContext)
+
+  if (!context) {
+    throw new Error(
+      "useBlockViewer must be used within a BlockViewerProvider."
+    )
+  }
+
+  return context
+}
+
+/* -------------------------------------------------------------------------- */
+/* Provider                                                                   */
+/* -------------------------------------------------------------------------- */
+
+function BlockViewerProvider({
+  item,
+  tree,
+  highlightedFiles,
+  children,
+}: {
+  item: RegistryItem
+
+  tree:
+  | ReturnType<
+    typeof createFileTreeForRegistryItemFiles
+  >
+  | null
+
+  highlightedFiles:
+  | HighlightedFile[]
+  | null
+
+  children: React.ReactNode
+}) {
+  const [view, setView] =
+    React.useState<
+      BlockViewerContext["view"]
+    >("preview")
+
+  const [activeFile, setActiveFile] =
+    React.useState<string | null>(
+      highlightedFiles?.find(
+        (file) => file.target
+      )?.target ?? null
+    )
+
+  const [previewWidth, setPreviewWidth] =
+    React.useState<number>(100)
+
+  const [iframeKey, setIframeKey] =
+    React.useState(0)
+
+  const value =
+    React.useMemo<BlockViewerContext>(
+      () => ({
+        item,
+        view,
+        setView,
+        activeFile,
+        setActiveFile,
+        previewWidth,
+        setPreviewWidth,
+        tree,
+        highlightedFiles,
+        iframeKey,
+        setIframeKey,
+      }),
+      [
+        item,
+        view,
+        activeFile,
+        previewWidth,
+        tree,
+        highlightedFiles,
+        iframeKey,
+      ]
+    )
+
+  return (
+    <BlockViewerContext.Provider
+      value={value}
+    >
+      <div
+        id={item.name}
+        data-view={view}
+        className="
+          group/block-view-wrapper
+          flex
+          min-w-0
+          scroll-mt-24
+          flex-col-reverse
+          items-stretch
+          gap-2
+          overflow-hidden
+          md:flex-col
+        "
+        style={
+          {
+            "--height":
+              item.meta?.iframeHeight ??
+              "930px",
+          } as React.CSSProperties
+        }
+      >
+        {children}
+      </div>
+    </BlockViewerContext.Provider>
+  )
+}
+
+/* -------------------------------------------------------------------------- */
+/* Toolbar                                                                    */
+/* -------------------------------------------------------------------------- */
+
+function BlockViewerToolbar() {
+  const {
+    setView,
+    view,
+    item,
+    setIframeKey,
+    previewWidth,
+    setPreviewWidth,
+  } = useBlockViewer()
+
+  const {
+    copyToClipboard,
+    isCopied,
+  } = useCopyToClipboard()
+
+  const handleViewChange = (val: unknown) => {
+    const nextView = Array.isArray(val) ? val[0] : val
+    if (nextView === "preview" || nextView === "code") {
+      if (nextView !== view) {
+        setView(nextView)
+      }
+    }
+  }
+
+  const handleWidthChange = (val: unknown) => {
+    const selectedValue = Array.isArray(val) ? val[0] : val
+    if (!selectedValue || typeof selectedValue !== "string") return
+
+    setView("preview")
+
+    const size = Number(selectedValue)
+    if (!Number.isNaN(size)) {
+      setPreviewWidth(size)
+    }
+  }
+
+  return (
+    <div
+      className="
+        hidden
+        w-full 
+        items-center
+        gap-4  
+        lg:flex
+      "
+    >
+      {/* Preview / Code */}
+      <Tabs
+        value={view}
+        onValueChange={handleViewChange}
+      >
+        <TabsList variant={"line"}>
+          <TabsTrigger value="preview">
+            Preview
+          </TabsTrigger>
+
+          <TabsTrigger value="code">
+            Code
+          </TabsTrigger>
+        </TabsList>
+      </Tabs>
+      <div className="flex items-center gap-1">
+
+        <Button
+          size="icon-sm"
+          variant="ghost"
+          title="Mobile"
+          aria-label="Mobile preview"
+          onClick={() => handleWidthChange(["30"])}
+        >
+          <Smartphone
+            fill={previewWidth === 30 ? "currentColor" : "none"}
+          />
+        </Button>
+
+        <Button
+          size="icon-sm"
+          variant="ghost"
+          title="Tablet"
+          aria-label="Tablet preview"
+          onClick={() => handleWidthChange(["60"])}
+        >
+          <Tablet
+            fill={previewWidth === 60 ? "currentColor" : "none"}
+          />
+        </Button>
+
+        <Button
+          size="icon-sm"
+          variant="ghost"
+          title="Desktop"
+          aria-label="Desktop preview"
+          onClick={() => handleWidthChange(["100"])}
+        >
+          <Monitor
+            fill={previewWidth === 100 ? "currentColor" : "none"}
+          />
+        </Button>
+
+      </div>
+
+      <div className="ml-auto flex items-center gap-4">
+        <div className=" flex items-center gap-2">
+          <Button
+            size="icon-sm"
+            variant="ghost"
+            render={<Link
+              target="_blank"
+              href={`/view/${item.name}`}
+              rel="noopener noreferrer"
+            />}
+          >
+            <Fullscreen />
+          </Button>
+
+          <Button
+            size="icon-sm"
+            variant="ghost"
+            onClick={() => {
+              setIframeKey(
+                (key) => key + 1
+              )
+            }}
+          >
+            <RotateCw />
+          </Button>
+
+        </div>
+        <Button
+          variant="ghost"
+          size="sm"
+          onClick={() => {
+            copyToClipboard(
+              `npx @designali/cli@latest components add ${item.name}`
+            )
+          }}
+        >
+          {isCopied ? (
+            <Check />
+          ) : (
+            <Terminal />
+          )}
+
+          <span>
+            add @designali/{item.name}
+          </span>
+        </Button>
+        <OpenInV0Button name={item.name} />
+      </div>
+    </div>
+  )
+}
+
+/* -------------------------------------------------------------------------- */
+/* View & Drag Resizer                                                        */
+/* -------------------------------------------------------------------------- */
+
+function BlockViewerView() {
+  const { item, iframeKey, previewWidth, setPreviewWidth } = useBlockViewer()
+  const [isResizing, setIsResizing] = React.useState(false)
+  const containerRef = React.useRef<HTMLDivElement>(null)
+
+  const handleMouseDown = (e: React.MouseEvent) => {
+    e.preventDefault()
+    setIsResizing(true)
+
+    const handleMouseMove = (moveEvent: MouseEvent) => {
+      if (!containerRef.current) return
+      const rect = containerRef.current.getBoundingClientRect()
+      const newWidth = ((moveEvent.clientX - rect.left) / rect.width) * 100
+      // Clamps width percentage between 30% and 100%
+      setPreviewWidth(Math.min(Math.max(newWidth, 30), 100))
+    }
+
+    const handleMouseUp = () => {
+      setIsResizing(false)
+      window.removeEventListener("mousemove", handleMouseMove)
+      window.removeEventListener("mouseup", handleMouseUp)
+    }
+
+    window.addEventListener("mousemove", handleMouseMove)
+    window.addEventListener("mouseup", handleMouseUp)
+  }
+
+  return (
+    <div className="hidden group-data-[view=code]/block-view-wrapper:hidden md:h-(--height) lg:flex">
+      <div ref={containerRef} className="relative grid h-full w-full gap-4">
+        <div className="absolute inset-0 border z-0">
+          <div
+            className="absolute inset-0"
+            style={{ 
+              backgroundImage: 'radial-gradient(circle at 1px 1px, var(--primary) 0.5px, transparent 0)',
+              backgroundSize: '8px 8px', 
+              opacity: 0.3
+            }}
+          />
+          <div
+            className="absolute inset-0"
+            style={{ 
+              backgroundImage: 'radial-gradient(circle at 1px 1px, var(--primary) 1px, transparent 0)',
+              backgroundSize: '24px 24px', 
+              opacity: 0.2
+            }}
+          />
+          <div
+            className="absolute inset-0"
+            style={{ 
+              backgroundImage: 'radial-gradient(circle at 1px 1px, var(--primary) 2px, transparent 0)',
+              backgroundSize: '56px 56px', 
+              opacity: 0.15
+            }}
+          />
+        </div>
+         
+        <div
+          className="
+            relative
+            z-10
+            flex
+            h-full
+            w-full 
+            items-stretch
+          "
+        >
+          {/* Preview */}
+          <div
+            className="
+              relative
+              z-10
+              h-full
+              min-w-0
+              overflow-hidden 
+              border 
+              shadow-2xl/20
+              bg-background
+              transition-[width] 
+              duration-75
+              ease-out
+            "
+            style={{
+              width: `${previewWidth}%`,
+            }}
+          >
+            <iframe
+              key={iframeKey}
+              src={`/view/${item.name}`}
+              height={item.meta?.iframeHeight ?? 930}
+              loading="lazy"
+              className={cn(
+                "block h-full w-full border-0 bg-background",
+                isResizing && "pointer-events-none"
+              )}
+            />
+          </div>
+
+          <div onMouseDown={handleMouseDown}
+            className="
+              relative
+              z-20
+              hidden
+               
+              shrink-0
+              cursor-col-resize
+              items-center
+              justify-center
+              bg-transparent
+              md:flex
+            ">
+            <div
+              className="
+              absolute
+              w-3 
+            "
+            >
+              <div
+                className="
+                h-8
+                w-[6px]
+                rounded-full
+                bg-border
+                transition-all
+                hover:h-10
+              "
+              />
+            </div>
+          </div>
+
+          {/* Spacer */}
+          <div
+            className="min-w-0 flex-1"
+            style={{
+              width: `${100 - previewWidth}%`,
+            }}
+          />
+        </div>
+      </div>
+    </div>
+  )
+}
+
+/* -------------------------------------------------------------------------- */
+/* Mobile                                                                     */
+/* -------------------------------------------------------------------------- */
+
+function BlockViewerMobile({
+  children,
+}: {
+  children: React.ReactNode
+}) {
+  const { item } = useBlockViewer()
+
+  return (
+    <div
+      className="
+        flex
+        flex-col
+        gap-2
+        lg:hidden
+      "
+    >
+      <div
+        className="
+          flex
+          items-center
+          gap-2
+          px-2
+        "
+      >
+        <div
+          className="
+            line-clamp-1
+            text-sm
+            font-medium
+          "
+        >
+          {item.description}
+        </div>
+
+        <div
+          className="
+            ml-auto
+            shrink-0
+            font-mono
+            text-xs
+            text-muted-foreground
+          "
+        >
+          {item.name}
+        </div>
+      </div>
+
+      {item.meta?.mobile === "component" ? (
+        children
+      ) : (
+        <div
+          className="
+            overflow-hidden 
+            border border-dotted
+          "
+        >
+          <Image
+            src={`/r/blocks/${item.name}/light.webp`}
+            alt={item.name}
+            data-block={item.name}
+            width={1440}
+            height={900}
+            className="object-cover dark:hidden"
+          />
+
+          <Image
+            src={`/r/blocks/${item.name}/dark.webp`}
+            alt={item.name}
+            data-block={item.name}
+            width={1440}
+            height={900}
+            className="
+              hidden
+              object-cover
+              dark:block
+            "
+          />
+        </div>
+      )}
+    </div>
+  )
+}
+
+/* -------------------------------------------------------------------------- */
+/* Code                                                                       */
+/* -------------------------------------------------------------------------- */
+
+function BlockViewerCode() {
+  const {
+    activeFile,
+    highlightedFiles,
+  } = useBlockViewer()
+
+  const file = React.useMemo(
+    () =>
+      highlightedFiles?.find(
+        (file) =>
+          file.target === activeFile
+      ),
+    [
+      highlightedFiles,
+      activeFile,
+    ]
+  )
+
+  if (!file) {
+    return null
+  }
+
+  const language =
+    file.path.split(".").pop() ??
+    "tsx"
+
+  return (
+    <div
+      className="
+        mr-[14px]
+        flex
+        overflow-hidden 
+        border-dotted
+        border
+        bg-code
+        text-code-foreground
+        group-data-[view=preview]/block-view-wrapper:hidden
+        md:h-(--height)
+      "
+    >
+      {/* File Tree */}
+      <div className="w-60">
+        <BlockViewerFileTree />
+      </div>
+
+      {/* Code */}
+      <figure
+        data-rehype-pretty-code-figure=""
+        className="
+          !mx-0
+          mt-0
+          flex
+          min-w-0
+          flex-1
+          flex-col 
+        "
+      >
+        <figcaption
+          className="
+            flex
+            h-12
+            shrink-0
+            items-center
+            gap-2
+            border-b
+            px-4
+            py-2
+            text-code-foreground
+            [&_svg]:size-4
+            [&_svg]:opacity-70
+            [&_svg]:text-code-foreground
+          "
+          data-language={language}
+        >
+          {file.target}
+
+          <div className="ml-auto flex items-center gap-2">
+            <BlockCopyCodeButton />
+          </div>
+        </figcaption>
+
+        <div
+          key={file.path}
+          dangerouslySetInnerHTML={{
+            __html:
+              file.highlightedContent ??
+              "",
+          }}
+          className="
+            no-scrollbar
+            overflow-y-auto
+          "
+        />
+      </figure>
+    </div>
+  )
+}
+
+/* -------------------------------------------------------------------------- */
+/* File Tree                                                                  */
+/* -------------------------------------------------------------------------- */
+
+export function BlockViewerFileTree() {
+  const { tree } = useBlockViewer()
+
+  if (!tree) {
+    return null
+  }
+
+  return (
+    <SidebarProvider
+      className="
+        flex
+        !min-h-full
+        flex-col
+        border-r
+      "
+    >
+      <Sidebar
+        collapsible="none"
+        className="w-full flex-1"
+      >
+        <SidebarGroupLabel
+          className="
+            h-12
+            rounded-none
+            border-b
+            px-4
+            text-sm
+          "
+        >
+          Files
+        </SidebarGroupLabel>
+
+        <SidebarGroup className="p-0">
+          <SidebarGroupContent>
+            <SidebarMenu
+              className="
+                translate-x-0
+                gap-1.5
+              "
+            >
+              {tree.map(
+                (file, index) => (
+                  <Tree
+                    key={`${file.path}-${index}`}
+                    item={file}
+                    index={1}
+                  />
+                )
+              )}
+            </SidebarMenu>
+          </SidebarGroupContent>
+        </SidebarGroup>
+      </Sidebar>
+    </SidebarProvider>
+  )
+}
+
+/* -------------------------------------------------------------------------- */
+/* Tree                                                                       */
+/* -------------------------------------------------------------------------- */
+
+function Tree({
+  item,
+  index,
+}: {
+  item: FileTree
+  index: number
+}) {
+  const { activeFile, setActiveFile } = useBlockViewer()
+
+  const [open, setOpen] = React.useState(true)
+
+  // File
+  if (!item.children) {
+    return (
+      <SidebarMenuItem>
+        <SidebarMenuButton
+          isActive={item.path === activeFile}
+          onClick={() => {
+            if (item.path) {
+              setActiveFile(item.path)
+            }
+          }}
+          className="
+            rounded-none
+            whitespace-nowrap
+            pl-(--index)
+            hover:bg-muted-foreground/15
+            focus:bg-muted-foreground/15
+            focus-visible:bg-muted-foreground/15
+            active:bg-muted-foreground/15
+            data-[active=true]:bg-muted-foreground/15
+          "
+          data-index={index}
+          style={
+            {
+              "--index": `${index * (index === 2 ? 1.2 : 1.3)
+                }rem`,
+            } as React.CSSProperties
+          }
+        >
+          <ChevronRight className="invisible" />
+
+          <File className="h-4 w-4" />
+
+          {item.name}
+        </SidebarMenuButton>
+      </SidebarMenuItem>
+    )
+  }
+
+  // Folder
+  return (
+    <SidebarMenuItem>
+      <Collapsible
+        open={open}
+        onOpenChange={setOpen}
+        className="group/collapsible"
+      >
+        <SidebarMenuButton
+          type="button"
+          onClick={() => setOpen((value) => !value)}
+          className="
+            rounded-none
+            whitespace-nowrap
+            pl-(--index)
+            hover:bg-muted-foreground/15
+            focus:bg-muted-foreground/15
+            focus-visible:bg-muted-foreground/15
+            active:bg-muted-foreground/15
+            data-[active=true]:bg-muted-foreground/15
+          "
+          style={
+            {
+              "--index": `${index * (index === 1 ? 1 : 1.2)
+                }rem`,
+            } as React.CSSProperties
+          }
+        >
+          <ChevronRight
+            className={cn(
+              "transition-transform duration-200",
+              open && "rotate-90"
+            )}
+          />
+
+          <Folder className="h-4 w-4" />
+
+          {item.name}
+        </SidebarMenuButton>
+
+        <CollapsibleContent>
+          <SidebarMenuSub
+            className="
+              m-0
+              w-full
+              translate-x-0
+              border-none
+              p-0
+            "
+          >
+            {item.children.map((subItem, key) => (
+              <Tree
+                key={`${subItem.path}-${key}`}
+                item={subItem}
+                index={index + 1}
+              />
+            ))}
+          </SidebarMenuSub>
+        </CollapsibleContent>
+      </Collapsible>
+    </SidebarMenuItem>
+  )
+}
+
+/* -------------------------------------------------------------------------- */
+/* Copy                                                                       */
+/* -------------------------------------------------------------------------- */
+
+function BlockCopyCodeButton() {
+  const {
+    activeFile,
+    item,
+  } = useBlockViewer()
+
+  const {
+    copyToClipboard,
+    isCopied,
+  } = useCopyToClipboard()
+
+  const file = React.useMemo(
+    () =>
+      item.files?.find(
+        (file) =>
+          file.target === activeFile
+      ),
+    [
+      activeFile,
+      item.files,
+    ]
+  )
+
+  const content = file?.content
+
+  if (!content) {
+    return null
+  }
+
+  return (
+    <Button
+      variant="ghost"
+      size="icon"
+      className="size-7"
+      onClick={() => {
+        copyToClipboard(content)
+
+        trackEvent({
+          name: "copy_block_code",
+          properties: {
+            name: item.name,
+            file: file.path,
+          },
+        })
+      }}
+    >
+      {isCopied ? (
+        <Check />
+      ) : (
+        <Clipboard />
+      )}
+    </Button>
+  )
+}
+
+/* -------------------------------------------------------------------------- */
+/* Main                                                                       */
+/* -------------------------------------------------------------------------- */
+
+function BlockViewer({
+  item,
+  tree,
+  highlightedFiles,
+  children,
+}: {
+  item: RegistryItem
+
+  tree:
+  | ReturnType<
+    typeof createFileTreeForRegistryItemFiles
+  >
+  | null
+
+  highlightedFiles:
+  | HighlightedFile[]
+  | null
+
+  children: React.ReactNode
+}) {
+  return (
+    <BlockViewerProvider
+      item={item}
+      tree={tree}
+      highlightedFiles={
+        highlightedFiles
+      }
+    >
+      <BlockViewerToolbar />
+
+      <BlockViewerView />
+
+      <BlockViewerCode />
+
+      <BlockViewerMobile>
+        {children}
+      </BlockViewerMobile>
+    </BlockViewerProvider>
+  )
+}
+
+export { BlockViewer }

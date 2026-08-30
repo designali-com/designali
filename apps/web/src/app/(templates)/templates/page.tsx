@@ -1,23 +1,25 @@
-import { cn } from "@workspace/ui/lib/utils";
+import { TemplateCard } from "@/src/components/templates/template-card";
+import { templateCategories } from "@/registry/registry-categories";
 
 export default function Page() {
-    return (
-        <div className="mx-auto w-full">
+  const templates = templateCategories.filter(
+    (template) => !template.hidden
+  );
 
-            <section className="relative flex min-h-screen flex-col items-center justify-center gap-5">
-                <h1
-                    className={cn(
-                        "fade-in slide-in-from-bottom-10 animate-in text-balance fill-mode-backwards text-center text-4xl tracking-tight delay-100 duration-500 ease-out md:text-5xl lg:text-6xl",
-                        "text-shadow-[0_0px_50px_theme(--color-foreground/.2)]"
-                    )}
-                >
-                    Templates
-                </h1>
-
-
-            </section>
-
-
-        </div>
-    );
-}
+  return (
+    <main className="mx-auto my-20 w-full p-3">
+      <div className="grid gap-3 md:grid-cols-2">
+        {templates.map((template) => (
+          <TemplateCard
+            key={template.slug}
+            name={template.name}
+            url={template.url}
+            slug={template.slug} 
+            image={template.image}
+            video={template.video}
+          />
+        ))}
+      </div>
+    </main>
+  );
+} 

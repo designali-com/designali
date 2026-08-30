@@ -18,6 +18,7 @@ import { ComponentSource } from "@/src/components/docs/component-source";
 import { getIconForLanguageExtension } from "./src/components/docs/icons"
 import { CopyButton } from "./src/components/docs/copy-button"
 import { CodeBlockCommand } from "./src/components/docs/code-block-command"
+import { Changelog, ChangelogEntry, ChangelogLink, ChangelogLinks } from "./src/components/docs/changelog"
 
 export const mdxComponents = {
   h1: ({ className, ...props }: React.ComponentProps<"h1">) => (
@@ -332,6 +333,10 @@ export const mdxComponents = {
   CodeTabs,
   ComponentPreview,
   ComponentSource,
+  Changelog,
+  ChangelogEntry,
+  ChangelogLinks,
+  ChangelogLink,
   Link: ({ className, ...props }: React.ComponentProps<typeof Link>) => (
     <Link
       className={cn("font-medium underline underline-offset-4", className)}
