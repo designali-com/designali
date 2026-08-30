@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "gauge-demo-angles",
+  "type": "registry:block",
+  "description": "Gauge angle variations",
+  "files": [
+    {
+      "path": "registry/designali/components/gauge/gauge-demo-angles.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport {\n  Gauge,\n  GaugeIndicator,\n  GaugeRange,\n  GaugeTrack,\n  GaugeValueText,\n} from \"@/registry/designali/ui/gauge\"\n\nconst gauges = [\n  {\n    label: \"Full Circle\",\n    startAngle: 0,\n    endAngle: 360,\n  },\n  {\n    label: \"Semicircle\",\n    startAngle: -90,\n    endAngle: 90,\n  },\n  {\n    label: \"Three Quarter\",\n    startAngle: -135,\n    endAngle: 135,\n  },\n]\n\nexport function GaugeDemoAngles() {\n  return (\n    <div className=\"flex flex-wrap items-center justify-center gap-10\">\n      {gauges.map((gauge) => (\n        <div\n          key={gauge.label}\n          className=\"flex flex-col items-center gap-3\"\n        >\n          <Gauge\n            value={70}\n            size={180}\n            gap={20}\n            startAngle={gauge.startAngle}\n            endAngle={gauge.endAngle}\n          >\n            <GaugeIndicator>\n              <GaugeTrack />\n              <GaugeRange />\n            </GaugeIndicator>\n\n            <GaugeValueText />\n          </Gauge>\n\n          <span className=\"text-sm text-muted-foreground\">\n            {gauge.label}\n          </span>\n        </div>\n      ))}\n    </div>\n  )\n}",
+      "type": "registry:block"
+    }
+  ]
+}

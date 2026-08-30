@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "gauge-demo-multiple",
+  "type": "registry:block",
+  "description": "Multiple gauges displayed together",
+  "files": [
+    {
+      "path": "registry/designali/components/gauge/gauge-demo-multiple.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport {\n  Gauge,\n  GaugeIndicator,\n  GaugeRange,\n  GaugeTrack,\n  GaugeValueText,\n} from \"@/registry/designali/ui/gauge\"\n\nconst metrics = [\n  {\n    label: \"Strength\",\n    value: 86,\n  },\n  {\n    label: \"Mobility\",\n    value: 72,\n  },\n  {\n    label: \"Balance\",\n    value: 64,\n  },\n  {\n    label: \"Recovery\",\n    value: 91,\n  },\n]\n\nexport function GaugeDemoMultiple() {\n  return (\n    <div className=\"grid grid-cols-2 gap-6 sm:grid-cols-4\">\n      {metrics.map((metric) => (\n        <div\n          key={metric.label}\n          className=\"flex flex-col items-center gap-3\"\n        >\n          <Gauge\n            value={metric.value}\n            size={130}\n            segments={40}\n          >\n            <GaugeIndicator>\n              <GaugeTrack />\n              <GaugeRange />\n            </GaugeIndicator>\n\n            <GaugeValueText className=\"text-2xl\" />\n          </Gauge>\n\n          <span className=\"text-sm font-medium\">\n            {metric.label}\n          </span>\n        </div>\n      ))}\n    </div>\n  )\n}",
+      "type": "registry:block"
+    }
+  ]
+}

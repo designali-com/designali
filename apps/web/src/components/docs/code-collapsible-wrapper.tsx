@@ -1,0 +1,66 @@
+"use client"
+
+import * as React from "react"
+import { Button } from "@workspace/ui/components/button"
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "@workspace/ui/components/collapsible" 
+import { cn } from "@workspace/ui/lib/utils"
+
+export function CodeCollapsibleWrapper({
+  className,
+  children,
+  ...props
+}: React.ComponentProps<typeof Collapsible>) {
+  const [isOpened, setIsOpened] = React.useState(false)
+
+  return (
+    <Collapsible
+      open={isOpened}
+      onOpenChange={setIsOpened}
+      className={cn("group/collapsible relative w-full min-w-0", className)}
+      {...props}
+    >
+      <div className="relative w-full min-w-0">
+        <CollapsibleContent
+          className={cn(
+            "relative w-full min-w-0 transition-all duration-300",
+            !isOpened && "max-h-[260px] overflow-hidden"
+          )}
+        >
+           
+          <div
+            className={cn(
+              "w-full min-w-0",
+              isOpened && "max-h-[400px] overflow-y-auto"
+            )}
+          >
+            {children}
+          </div>
+        </CollapsibleContent>
+
+        {!isOpened && (
+          <div className="absolute inset-x-0 bottom-0 flex h-20 items-end justify-center bg-gradient-to-t from-background via-background/80 to-transparent pb-3 z-20 pointer-events-none">
+            <CollapsibleTrigger className="pointer-events-auto">
+              <Button variant="secondary" size="sm" className="h-8 shadow-sm border border-border">
+                Expand Code
+              </Button>
+            </CollapsibleTrigger>
+          </div>
+        )}
+
+        {isOpened && (
+          <div className="flex justify-center py-2 border-t border-border/40 bg-background/50">
+            <CollapsibleTrigger>
+              <Button variant="ghost" size="sm" className="h-8 text-muted-foreground">
+                Collapse Code
+              </Button>
+            </CollapsibleTrigger>
+          </div>
+        )}
+      </div>
+    </Collapsible>
+  )
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "gauge-demo-custom-content",
+  "type": "registry:block",
+  "description": "Gauge with custom center content",
+  "files": [
+    {
+      "path": "registry/designali/components/gauge/gauge-demo-custom-content.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport {\n  Gauge,\n  GaugeIndicator,\n  GaugeRange,\n  GaugeTrack,\n  GaugeValueText,\n} from \"@/registry/designali/ui/gauge\"\n\nexport function GaugeDemoCustomContent() {\n  return (\n    <div className=\"flex flex-wrap items-center justify-center gap-10\">\n      <Gauge value={82} size={180}>\n        <GaugeIndicator>\n          <GaugeTrack />\n          <GaugeRange />\n        </GaugeIndicator>\n\n        <GaugeValueText>\n          <div className=\"flex flex-col items-center\">\n            <span className=\"text-4xl font-medium tracking-tight\">\n              82\n            </span>\n\n            <span className=\"text-xs font-normal text-muted-foreground\">\n              Score\n            </span>\n          </div>\n        </GaugeValueText>\n      </Gauge>\n\n      <Gauge value={64} size={180}>\n        <GaugeIndicator>\n          <GaugeTrack />\n          <GaugeRange />\n        </GaugeIndicator>\n\n        <GaugeValueText>\n          <div className=\"flex flex-col items-center\">\n            <span className=\"text-4xl font-medium\">\n              64%\n            </span>\n\n            <span className=\"text-xs font-normal text-muted-foreground\">\n              Healthy\n            </span>\n          </div>\n        </GaugeValueText>\n      </Gauge>\n    </div>\n  )\n}",
+      "type": "registry:block"
+    }
+  ]
+}

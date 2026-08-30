@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "gauge-demo-basic",
+  "type": "registry:block",
+  "description": "Basic gauge demo",
+  "files": [
+    {
+      "path": "registry/designali/components/gauge/gauge-demo-basic.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport {\n  Gauge,\n  GaugeIndicator,\n  GaugeRange,\n  GaugeTrack,\n  GaugeValueText, \n} from \"@/registry/designali/ui/gauge\"\n\nexport function GaugeDemoBasic() {\n  return (\n    <Gauge value={72}>\n      <GaugeIndicator>\n        <GaugeTrack />\n        <GaugeRange />\n      </GaugeIndicator>\n\n      <GaugeValueText />\n    </Gauge>\n  )\n}",
+      "type": "registry:block"
+    }
+  ]
+}

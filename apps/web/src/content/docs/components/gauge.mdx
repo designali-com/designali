@@ -1,0 +1,120 @@
+---
+title: Gauge
+description: A flexible visual indicator for displaying values, progress, and ranges.
+---
+
+### Basic
+
+<ComponentPreview name="gauge-demo-basic" />
+
+### Combined
+
+<ComponentPreview name="gauge-demo-combined" /> 
+
+### Custom Value
+
+<ComponentPreview name="gauge-demo-custom-value" />
+
+### Sizes
+
+<ComponentPreview name="gauge-demo-sizes" />
+
+### Thickness
+
+<ComponentPreview name="gauge-demo-thickness" />
+
+### Gap
+
+<ComponentPreview name="gauge-demo-gap" />
+
+### Segments
+
+<ComponentPreview name="gauge-demo-segments" />
+
+### Angles
+
+<ComponentPreview name="gauge-demo-angles" />
+
+### Custom Radius
+
+<ComponentPreview name="gauge-demo-radius" />
+
+### States
+
+<ComponentPreview name="gauge-demo-states" />
+
+### Custom Range
+
+<ComponentPreview name="gauge-demo-range" />
+
+### Label
+
+<ComponentPreview name="gauge-demo-label" />
+
+### Custom Content
+
+<ComponentPreview name="gauge-demo-custom-content" />
+
+### Biomarker
+
+<ComponentPreview name="gauge-demo-biomarker" />
+
+### Multiple Gauges
+
+<ComponentPreview name="gauge-demo-multiple" />
+
+## Installation 
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx @designali/cli@latest components add gauge
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Install the following dependencies:</Step>
+
+```bash
+npm install radix-ui
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="gauge" title="components/ui/gauge.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</CodeTabs>
+ 
+## Props
+
+| Prop              | Type                          | Default    | Description                                              |
+| ----------------- | ----------------------------- | ---------- | -------------------------------------------------------- |
+| `value`           | `number \| null`              | `null`     | Current value of the gauge.                              |
+| `min`             | `number`                      | `0`        | Minimum value.                                           |
+| `max`             | `number`                      | `100`      | Maximum value.                                           |
+| `size`            | `number`                      | `200`      | Width and height of the gauge.                           |
+| `thickness`       | `number`                      | `2`        | Thickness of each gauge tick.                            |
+| `gap`             | `number`                      | `4`        | Gap between adjacent ticks.                              |
+| `segments`        | `number`                      | `60`       | Maximum/preferred number of gauge segments.              |
+| `startAngle`      | `number`                      | `0`        | Starting angle of the gauge.                             |
+| `endAngle`        | `number`                      | `360`      | Ending angle of the gauge.                               |
+| `tickInnerRadius` | `number`                      | calculated | Inner radius of the ticks.                               |
+| `tickOuterRadius` | `number`                      | calculated | Outer radius of the ticks.                               |
+| `getValueText`    | `(value, min, max) => string` | percentage | Function used to generate accessible/display value text. |
+| `asChild`         | `boolean`                     | `false`    | Render the root element using the child element.         |
