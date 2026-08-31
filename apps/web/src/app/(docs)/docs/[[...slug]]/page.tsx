@@ -58,9 +58,7 @@ export async function generateMetadata({
       url: absoluteUrl(page.url),
       images: [
         {
-          url: `/og?title=${encodeURIComponent(
-            doc.title
-          )} `,
+          url: `/og?title=${encodeURIComponent(doc.title)} `,
         },
       ],
     },
@@ -70,9 +68,7 @@ export async function generateMetadata({
       description: doc.description,
       images: [
         {
-          url: `/og?title=${encodeURIComponent(
-            doc.title
-          )} `,
+          url: `/og?title=${encodeURIComponent(doc.title)} `,
         },
       ],
     },
@@ -88,26 +84,21 @@ export default async function DocPage({ params }: DocPageProps) {
   const links = doc.links
 
   return (
-    <div
-      data-slot="docs"
-      className="flex mt-10 items-stretch xl:w-full"
-    >
-      <main className="flex min-w-0 flex-1 flex-col ">
-
-        <div className="sticky top-10 z-10 flex h-10 w-full items-center border-b border-dotted bg-background/50 backdrop-blur-md px-3 md:hidden">
+    <div data-slot="docs" className="mt-10 flex items-stretch xl:w-full">
+      <main className="flex min-w-0 flex-1 flex-col">
+        <div className="sticky top-10 z-10 flex h-10 w-full items-center border-b border-dotted bg-background/50 px-3 backdrop-blur-md md:hidden">
           <SidebarTrigger className="opacity-60" />
         </div>
 
         <div className="mx-auto flex w-full min-w-0 flex-1 flex-col gap-4 py-20">
           <div className="flex flex-col gap-2">
-            <div className="flex pb-20 text-center items-center flex-col gap-2">
-
-              <h1 className="scroll-m-20 text-2xl md:text-4xl font-medium">
+            <div className="flex flex-col items-center gap-2 pb-20 text-center">
+              <h1 className="scroll-m-20 text-2xl font-medium md:text-4xl">
                 {doc.title}
               </h1>
 
               {doc.description && (
-                <p className="max-w-80 md:max-w-xl text-sm text-muted-foreground">
+                <p className="max-w-80 text-sm text-muted-foreground md:max-w-xl">
                   {doc.description}
                 </p>
               )}
@@ -120,9 +111,6 @@ export default async function DocPage({ params }: DocPageProps) {
                     className="extend-touch-target ml-auto size-8 shadow-none md:size-7"
                     render={<Link href={neighbours.previous.url} />}
                   >
-
-
-
                     <ArrowLeft className="size-4" />
                     <span className="sr-only">Previous</span>
                   </Button>
@@ -133,9 +121,7 @@ export default async function DocPage({ params }: DocPageProps) {
                     size="icon"
                     className="extend-touch-target size-8 shadow-none md:size-7"
                     render={<Link href={neighbours.next.url} />}
-
                   >
-
                     <span className="sr-only">Next</span>
                     <ArrowRight className="size-4" />
                   </Button>
@@ -153,35 +139,38 @@ export default async function DocPage({ params }: DocPageProps) {
                   </Badge>
                 )}
                 {links?.api && (
-                  <Badge render={<Link href={links.api} target="_blank" rel="noreferrer" />} variant="secondary">
+                  <Badge
+                    render={
+                      <Link href={links.api} target="_blank" rel="noreferrer" />
+                    }
+                    variant="secondary"
+                  >
                     API Reference <ArrowUpRight className="ml-1 size-3" />
                   </Badge>
                 )}
               </div>
             ) : null}
           </div>
- 
-          <div className="w-full border-t border-dotted p-4 flex-1 *:data-[slot=alert]:first:mt-0">
+
+          <div className="w-full flex-1 border-t border-dotted p-4 *:data-[slot=alert]:first:mt-0">
             <MDX components={mdxComponents} />
           </div>
         </div>
 
-
-        <div className="mx-auto py-20 hidden items-center gap-2 px-4 sm:flex md:px-0">
+        <div className="mx-auto hidden items-center gap-2 px-4 py-20 sm:flex md:px-0">
           {neighbours.previous && (
             <Button
               variant="secondary"
               size="sm"
               className="shadow-none"
-              render={<Link href={neighbours.previous.url}  />}
+              render={<Link href={neighbours.previous.url} />}
             >
-
               <ArrowLeft className="mr-1 size-4" /> {neighbours.previous.name}
             </Button>
           )}
           {neighbours.next && (
             <Button
-              render={<Link href={neighbours.next.url}/>}
+              render={<Link href={neighbours.next.url} />}
               variant="secondary"
               size="sm"
               className="ml-auto shadow-none"

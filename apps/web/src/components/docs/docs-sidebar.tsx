@@ -1,16 +1,11 @@
-"use client";
+"use client"
 
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import Link from "next/link"
+import { usePathname } from "next/navigation"
 
-import {
-  BookOpen,
-  FileCode,
-  AppWindow,
-  Blocks,
-} from "lucide-react";
+import { BookOpen, FileCode, AppWindow, Blocks } from "lucide-react"
 
-import type { source } from "@/src/lib/source";
+import type { source } from "@/src/lib/source"
 
 import {
   Sidebar,
@@ -22,7 +17,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
   SidebarTrigger,
-} from "@workspace/ui/components/sidebar";
+} from "@workspace/ui/components/sidebar"
 
 const TOP_LEVEL_SECTIONS = [
   {
@@ -30,7 +25,7 @@ const TOP_LEVEL_SECTIONS = [
     href: "/docs",
     icon: BookOpen,
   },
-];
+]
 
 const BOTTOM_LEVEL_SECTIONS = [
   {
@@ -43,40 +38,34 @@ const BOTTOM_LEVEL_SECTIONS = [
     href: "/blocks",
     icon: Blocks,
   },
-];
+]
 
-const EXCLUDED_SECTIONS: string[] = [];
-const EXCLUDED_PAGES: string[] = [];
+const EXCLUDED_SECTIONS: string[] = []
+const EXCLUDED_PAGES: string[] = []
 
 // Pages that should show the "New" indicator
-const NEW_COMPONENTS: string[] = [
-  "/docs/changelog",
-];
+const NEW_COMPONENTS: string[] = ["/docs/changelog"]
 
 export function DocsSidebar({
   tree,
   ...props
 }: React.ComponentProps<typeof Sidebar> & {
-  tree: typeof source.pageTree;
+  tree: typeof source.pageTree
 }) {
-  const pathname = usePathname();
+  const pathname = usePathname()
 
   return (
-    <Sidebar
-      collapsible="icon"
-      className="mt-6"
-      {...props}
-    >
+    <Sidebar collapsible="icon" className="mt-6" {...props}>
       <SidebarContent>
         {/* Sidebar Toggle */}
-        <SidebarTrigger className="absolute right-2.5 top-6 z-10 opacity-60" />
+        <SidebarTrigger className="absolute top-6 right-2.5 z-10 opacity-60" />
 
         {/* Top Level Sections */}
         <SidebarGroup>
           <SidebarGroupContent>
             <SidebarMenu className="pt-12">
               {TOP_LEVEL_SECTIONS.map(({ name, href, icon: Icon }) => {
-                const isActive = pathname === href;
+                const isActive = pathname === href
 
                 return (
                   <SidebarMenuItem key={name}>
@@ -84,21 +73,17 @@ export function DocsSidebar({
                       isActive={isActive}
                       tooltip={name}
                       render={<Link href={href} />}
-                      className={`
-                        transition-opacity duration-200
-                        hover:text-primary
-                        ${
-                          isActive
-                            ? "text-primary opacity-100"
-                            : "opacity-60 hover:opacity-100"
-                        }
-                      `}
+                      className={`transition-opacity duration-200 hover:text-primary ${
+                        isActive
+                          ? "text-primary opacity-100"
+                          : "opacity-60 hover:opacity-100"
+                      } `}
                     >
                       <Icon className="size-3.5 shrink-0" />
                       <span>{name}</span>
                     </SidebarMenuButton>
                   </SidebarMenuItem>
-                );
+                )
               })}
             </SidebarMenu>
           </SidebarGroupContent>
@@ -106,28 +91,22 @@ export function DocsSidebar({
 
         {/* Dynamic Documentation Sections */}
         {tree.children.map((section) => {
-          const sectionId = section.$id
-            ? String(section.$id)
-            : "";
+          const sectionId = section.$id ? String(section.$id) : ""
 
-          const sectionNameStr = section.name
-            ? String(section.name)
-            : "";
+          const sectionNameStr = section.name ? String(section.name) : ""
 
           // Exclude specific sections
           if (EXCLUDED_SECTIONS.includes(sectionId)) {
-            return null;
+            return null
           }
 
           // Only render folders as sections
           if (section.type !== "folder") {
-            return null;
+            return null
           }
 
           return (
-            <SidebarGroup
-              key={sectionId || sectionNameStr}
-            >
+            <SidebarGroup key={sectionId || sectionNameStr}>
               <SidebarGroupLabel className="flex items-center gap-2">
                 <span>{section.name}</span>
               </SidebarGroupLabel>
@@ -137,24 +116,20 @@ export function DocsSidebar({
                   {section.children.map((page) => {
                     // Only render pages
                     if (page.type !== "page") {
-                      return null;
+                      return null
                     }
 
                     // Exclude specific pages
                     if (EXCLUDED_PAGES.includes(page.url)) {
-                      return null;
+                      return null
                     }
 
-                    const isActive = pathname === page.url;
+                    const isActive = pathname === page.url
 
                     // Check using the actual route URL
-                    const isNew = NEW_COMPONENTS.includes(
-                      page.url
-                    );
+                    const isNew = NEW_COMPONENTS.includes(page.url)
 
-                    const pageNameStr = page.name
-                      ? String(page.name)
-                      : "";
+                    const pageNameStr = page.name ? String(page.name) : ""
 
                     return (
                       <SidebarMenuItem key={page.url}>
@@ -162,15 +137,11 @@ export function DocsSidebar({
                           isActive={isActive}
                           tooltip={pageNameStr}
                           render={<Link href={page.url} />}
-                          className={`
-                            transition-opacity duration-200
-                            hover:text-primary
-                            ${
-                              isActive
-                                ? "text-primary opacity-100"
-                                : "opacity-60 hover:opacity-100"
-                            }
-                          `}
+                          className={`transition-opacity duration-200 hover:text-primary ${
+                            isActive
+                              ? "text-primary opacity-100"
+                              : "opacity-60 hover:opacity-100"
+                          } `}
                         >
                           <FileCode className="size-3.5 shrink-0" />
 
@@ -185,47 +156,41 @@ export function DocsSidebar({
                           )}
                         </SidebarMenuButton>
                       </SidebarMenuItem>
-                    );
+                    )
                   })}
                 </SidebarMenu>
               </SidebarGroupContent>
             </SidebarGroup>
-          );
+          )
         })}
 
         {/* Bottom Level Sections */}
         <SidebarGroup>
           <SidebarMenu>
-            {BOTTOM_LEVEL_SECTIONS.map(
-              ({ name, href, icon: Icon }) => {
-                const isActive = pathname === href;
+            {BOTTOM_LEVEL_SECTIONS.map(({ name, href, icon: Icon }) => {
+              const isActive = pathname === href
 
-                return (
-                  <SidebarMenuItem key={name}>
-                    <SidebarMenuButton
-                      isActive={isActive}
-                      tooltip={name}
-                      render={<Link href={href} />}
-                      className={`
-                        transition-opacity duration-200
-                        hover:text-primary
-                        ${
-                          isActive
-                            ? "text-primary opacity-100"
-                            : "opacity-60 hover:opacity-100"
-                        }
-                      `}
-                    >
-                      <Icon className="size-3.5 shrink-0" />
-                      <span>{name}</span>
-                    </SidebarMenuButton>
-                  </SidebarMenuItem>
-                );
-              }
-            )}
+              return (
+                <SidebarMenuItem key={name}>
+                  <SidebarMenuButton
+                    isActive={isActive}
+                    tooltip={name}
+                    render={<Link href={href} />}
+                    className={`transition-opacity duration-200 hover:text-primary ${
+                      isActive
+                        ? "text-primary opacity-100"
+                        : "opacity-60 hover:opacity-100"
+                    } `}
+                  >
+                    <Icon className="size-3.5 shrink-0" />
+                    <span>{name}</span>
+                  </SidebarMenuButton>
+                </SidebarMenuItem>
+              )
+            })}
           </SidebarMenu>
         </SidebarGroup>
       </SidebarContent>
     </Sidebar>
-  );
+  )
 }

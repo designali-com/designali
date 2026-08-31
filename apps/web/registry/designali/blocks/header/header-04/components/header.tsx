@@ -71,7 +71,7 @@ export const Header = () => {
                     <li key={index}>
                       <Link
                         href={item.href}
-                        className="text-muted-foreground hover:text-accent-foreground block duration-150"
+                        className="block text-muted-foreground duration-150 hover:text-accent-foreground"
                       >
                         <span>{item.name}</span>
                       </Link>
@@ -81,14 +81,14 @@ export const Header = () => {
               </div>
             </div>
 
-            <div className="bg-background mb-6 hidden w-full flex-wrap items-center justify-end space-y-8 rounded-3xl border p-6 shadow-2xl in-data-[state=active]:block md:flex-nowrap lg:m-0 lg:flex lg:h-14 lg:w-fit lg:gap-4 lg:space-y-0 lg:border-transparent lg:bg-transparent lg:p-0 lg:shadow-none lg:in-data-[state=active]:flex dark:shadow-none dark:lg:bg-transparent">
+            <div className="mb-6 hidden w-full flex-wrap items-center justify-end space-y-8 rounded-3xl border bg-background p-6 shadow-2xl in-data-[state=active]:block md:flex-nowrap lg:m-0 lg:flex lg:h-14 lg:w-fit lg:gap-4 lg:space-y-0 lg:border-transparent lg:bg-transparent lg:p-0 lg:shadow-none lg:in-data-[state=active]:flex dark:shadow-none dark:lg:bg-transparent">
               <div className="lg:hidden">
                 <ul className="space-y-6 text-base">
                   {menuItems.map((item, index) => (
                     <li key={index}>
                       <Link
                         href={item.href}
-                        className="text-muted-foreground hover:text-accent-foreground block duration-150"
+                        className="block text-muted-foreground duration-150 hover:text-accent-foreground"
                       >
                         <span>{item.name}</span>
                       </Link>
@@ -102,12 +102,12 @@ export const Header = () => {
               <ModeToggle />
               <Separator orientation="vertical" />
               <div className="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit">
-                <Button   variant="outline" size="sm">
+                <Button variant="outline" size="sm">
                   <Link href="#">
                     <span>Login</span>
                   </Link>
                 </Button>
-                <Button   size="sm">
+                <Button size="sm">
                   <Link href="#">
                     <span>Sign Up</span>
                   </Link>

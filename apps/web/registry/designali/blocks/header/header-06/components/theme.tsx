@@ -54,7 +54,7 @@ export const ThemeSwitcher = ({ className }: ThemeSwitcherProps) => {
   return (
     <div
       className={cn(
-        "bg-background ring-border relative isolate flex h-7 rounded-full p-1 ring-1",
+        "relative isolate flex h-7 rounded-full bg-background p-1 ring-1 ring-border",
         className
       )}
     >
@@ -70,7 +70,7 @@ export const ThemeSwitcher = ({ className }: ThemeSwitcherProps) => {
             type="button"
           >
             {isActive && (
-              <div className="bg-secondary absolute inset-0 rounded-full" />
+              <div className="absolute inset-0 rounded-full bg-secondary" />
             )}
             <Icon
               className={cn(

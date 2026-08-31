@@ -61,7 +61,7 @@ export default function PatternCard({
       className="group relative cursor-pointer"
     >
       <div
-        className={`bg-background relative aspect-video w-full overflow-hidden border transition-all duration-300 ${
+        className={`relative aspect-video w-full overflow-hidden border bg-background transition-all duration-300 ${
           activePattern === pattern.id ? "" : ""
         } ${activeMobileCard === pattern.id ? "" : ""}`}
         onClick={() => handleCardInteraction(pattern.id)}

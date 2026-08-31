@@ -1,21 +1,22 @@
 import process from "process"
-import type { Metadata } from "next" 
+import type { Metadata } from "next"
 
 import { siteConfig } from "@/src/config/site"
- 
 
 export const pluralize = (count: number, word: string) =>
   `${count} ${word}${count === 1 ? "" : "s"}`
 
 export function humanize(name: string): string {
-  return name
-    .replace(/-/g, " ")
-    .replace(/([A-Z])/g, " $1")
-    .trim()
-    .split(/\s+/)
-    //@ts-ignore
-    .map((word) => word[0].toUpperCase() + word.substring(1).toLowerCase())
-    .join(" ")
+  return (
+    name
+      .replace(/-/g, " ")
+      .replace(/([A-Z])/g, " $1")
+      .trim()
+      .split(/\s+/)
+      //@ts-ignore
+      .map((word) => word[0].toUpperCase() + word.substring(1).toLowerCase())
+      .join(" ")
+  )
 }
 
 export const truncate = (str: string | null, length: number) => {

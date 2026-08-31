@@ -4,7 +4,6 @@ import { useEffect } from "react"
 
 import { useThemeConfig } from "./active-theme"
 import { ThemePattern } from "./theme-selector"
- 
 
 export function ThemeSelectorPattern() {
   const { activeTheme } = useThemeConfig()
@@ -31,7 +30,7 @@ export function ThemeSelectorPattern() {
   }, [activeTheme])
 
   return (
-    <div className="bg-background fixed bottom-0 z-50 flex h-12 w-full justify-center border-t">
+    <div className="fixed bottom-0 z-50 flex h-12 w-full justify-center border-t bg-background">
       <ThemePattern />
     </div>
   )

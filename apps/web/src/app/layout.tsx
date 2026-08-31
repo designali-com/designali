@@ -1,8 +1,8 @@
 import { Geist, Geist_Mono } from "next/font/google"
 import type { Metadata } from "next"
 
-import "@workspace/ui/globals.css" 
-import { cn } from "@workspace/ui/lib/utils" 
+import "@workspace/ui/globals.css"
+import { cn } from "@workspace/ui/lib/utils"
 import { Provider } from "@/src/components/common/provider"
 
 const geist = Geist({
@@ -59,9 +59,7 @@ export default function RootLayout({
     >
       <body>
         <Provider>
-          <div className="bg-white dark:bg-black">
-          {children}
-          </div>
+          <div className="bg-white dark:bg-black">{children}</div>
         </Provider>
       </body>
     </html>

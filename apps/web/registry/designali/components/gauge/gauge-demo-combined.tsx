@@ -14,13 +14,7 @@ import {
 export function GaugeDemoCombined() {
   return (
     <div className="flex flex-col items-center gap-4">
-      <Gauge
-        value={84}
-        size={220}
-        thickness={20}
-        gap={20}
-        segments={60}
-      >
+      <Gauge value={84} size={220} thickness={20} gap={20} segments={60}>
         <GaugeIndicator>
           <GaugeTrack />
           <GaugeRange />
@@ -28,13 +22,9 @@ export function GaugeDemoCombined() {
 
         <GaugeValueText>
           <div className="flex flex-col items-center">
-            <span className="text-4xl font-medium tracking-tight">
-              84%
-            </span>
+            <span className="text-4xl font-medium tracking-tight">84%</span>
 
-            <span className="text-xs text-muted-foreground">
-              Excellent
-            </span>
+            <span className="text-xs text-muted-foreground">Excellent</span>
           </div>
         </GaugeValueText>
       </Gauge>

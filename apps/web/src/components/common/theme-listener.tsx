@@ -87,7 +87,7 @@ export function ThemeListener() {
       const googleFontName = GOOGLE_FONTS_MAP[selectedFont]
       loadGoogleFont(googleFontName)
       fontFamily = `"${googleFontName}", sans-serif`
-    }  
+    }
   }
 
   return null

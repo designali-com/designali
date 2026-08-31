@@ -1,30 +1,30 @@
-"use client";
+"use client"
 
-import { useState } from "react";
-import { ArrowRight, Equal } from "lucide-react";
+import { useState } from "react"
+import { ArrowRight, Equal } from "lucide-react"
 
-import { Search } from "@/registry/designali/blocks/header/header-02/components/search";
-import { ModeToggle } from "@/registry/designali/blocks/header/header-02/components/theme-switch";
+import { Search } from "@/registry/designali/blocks/header/header-02/components/search"
+import { ModeToggle } from "@/registry/designali/blocks/header/header-02/components/theme-switch"
 
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@workspace/ui/components/accordion";
+} from "@workspace/ui/components/accordion"
 
-import { Button } from "@workspace/ui/components/button";
+import { Button } from "@workspace/ui/components/button"
 
 import {
   Sheet,
   SheetContent,
   SheetTrigger,
-} from "@workspace/ui/components/sheet";
+} from "@workspace/ui/components/sheet"
 
-import { Logo } from "@workspace/ui/designali/logo";
+import { Logo } from "@workspace/ui/designali/logo"
 
 export function Header() {
-  const [mobileOpen, setMobileOpen] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false)
 
   const navItems = [
     {
@@ -64,7 +64,7 @@ export function Header() {
       label: "Resources",
       href: "#",
     },
-  ];
+  ]
 
   const properties = [
     {
@@ -89,7 +89,7 @@ export function Header() {
         },
       ],
     },
-  ];
+  ]
 
   return (
     <header className="sticky top-0 z-50 border-b bg-background">
@@ -104,9 +104,7 @@ export function Header() {
           >
             <Logo className="ml-3 size-8" />
 
-            <span className="text-lg font-medium">
-              designali
-            </span>
+            <span className="text-lg font-medium">designali</span>
           </a>
 
           {/* Search */}
@@ -123,23 +121,14 @@ export function Header() {
             </Button>
 
             {/* Mobile Menu */}
-            <Sheet
-              open={mobileOpen}
-              onOpenChange={setMobileOpen}
-            >
+            <Sheet open={mobileOpen} onOpenChange={setMobileOpen}>
               <SheetTrigger
                 render={
-                  <Button
-                    variant="ghost"
-                    size="icon"
-                    className="lg:hidden"
-                  />
+                  <Button variant="ghost" size="icon" className="lg:hidden" />
                 }
               >
                 <Equal className="h-6 w-6" />
-                <span className="sr-only">
-                  Open menu
-                </span>
+                <span className="sr-only">Open menu</span>
               </SheetTrigger>
 
               <SheetContent
@@ -149,15 +138,10 @@ export function Header() {
                 <div className="m-6 mt-14">
                   {/* Mobile Navigation */}
                   <Accordion className="mb-8">
-                    <AccordionItem
-                      value="navigation"
-                      className="border-none"
-                    >
+                    <AccordionItem value="navigation" className="border-none">
                       <AccordionTrigger className="rounded-lg bg-accent px-4 hover:bg-accent/80 hover:no-underline">
                         <div className="text-left">
-                          <div className="font-medium">
-                            Design Hub
-                          </div>
+                          <div className="font-medium">Design Hub</div>
 
                           <div className="text-sm text-muted-foreground">
                             / Overview
@@ -172,13 +156,9 @@ export function Header() {
                               key={item.label}
                               href={item.href}
                               className={`block border-b px-4 py-3 text-sm transition-colors last:border-b-0 hover:bg-accent ${
-                                item.active
-                                  ? "bg-accent font-medium"
-                                  : ""
+                                item.active ? "bg-accent font-medium" : ""
                               }`}
-                              onClick={() =>
-                                setMobileOpen(false)
-                              }
+                              onClick={() => setMobileOpen(false)}
                             >
                               {item.label}
                             </a>
@@ -192,7 +172,7 @@ export function Header() {
                   <div className="space-y-6">
                     {properties.map((property) => (
                       <div key={property.location}>
-                        <p className="mb-2 text-xs uppercase tracking-wider text-muted-foreground">
+                        <p className="mb-2 text-xs tracking-wider text-muted-foreground uppercase">
                           {property.location}
                         </p>
 
@@ -205,9 +185,7 @@ export function Header() {
                               <a
                                 href={venue.href}
                                 className="block py-3 text-lg font-medium transition-colors hover:text-muted-foreground"
-                                onClick={() =>
-                                  setMobileOpen(false)
-                                }
+                                onClick={() => setMobileOpen(false)}
                               >
                                 {venue.name}
                               </a>
@@ -244,5 +222,5 @@ export function Header() {
         </nav>
       </div>
     </header>
-  );
+  )
 }

@@ -1,7 +1,7 @@
 "use client"
 
 import * as React from "react"
-import { Moon, Sun } from "lucide-react" 
+import { Moon, Sun } from "lucide-react"
 
 import type { JSX } from "react"
 import { useSyncExternalStore } from "react"
@@ -22,15 +22,15 @@ export function ModeToggle() {
 
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger render={
-        <Button variant="ghost" size="icon">
-        <Sun className="h-[1.2rem] w-[1.2rem] scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90" />
-        <Moon className="absolute h-[1.2rem] w-[1.2rem] scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0" />
-        <span className="sr-only">Toggle theme</span>
-      </Button>
-      }>
-        
-      </DropdownMenuTrigger>
+      <DropdownMenuTrigger
+        render={
+          <Button variant="ghost" size="icon">
+            <Sun className="h-[1.2rem] w-[1.2rem] scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90" />
+            <Moon className="absolute h-[1.2rem] w-[1.2rem] scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0" />
+            <span className="sr-only">Toggle theme</span>
+          </Button>
+        }
+      ></DropdownMenuTrigger>
       <DropdownMenuContent align="center">
         <DropdownMenuItem onClick={() => setTheme("light")}>
           Light
@@ -45,7 +45,6 @@ export function ModeToggle() {
     </DropdownMenu>
   )
 }
-
 
 function ThemeOption({
   icon,
@@ -68,7 +67,7 @@ function ThemeOption({
       onClick={() => onClick(value)}
     >
       {icon}
- 
+
       {isActive && (
         <motion.span
           layoutId="theme-option"
@@ -79,51 +78,42 @@ function ThemeOption({
     </button>
   )
 }
- 
+
 const THEME_OPTIONS = [
   {
-    icon: (
-      <MonitorIcon
-      />
-    ),
+    icon: <MonitorIcon />,
     value: "system",
   },
   {
-    icon: (
-      <SunIcon
-      />
-    ),
+    icon: <SunIcon />,
     value: "light",
   },
   {
-    icon: (
-      <MoonIcon
-      />
-    ),
+    icon: <MoonIcon />,
     value: "dark",
   },
 ]
- 
+
 export function ThemeSwitcher() {
   const { theme, setTheme } = useTheme()
- 
+
   const isMounted = useSyncExternalStore(
     () => () => {},
     () => true,
     () => false
   )
- 
+
   if (!isMounted) {
     return <div className="flex h-8 w-24" />
   }
- 
+
   return (
     <motion.div
       key={String(isMounted)}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.3 }}
-      className="inline-flex items-center overflow-clip bg-background border border-dotted"
+      className="inline-flex items-center overflow-clip border border-dotted bg-background"
       role="radiogroup"
     >
       {THEME_OPTIONS.map((option) => (
@@ -137,4 +127,4 @@ export function ThemeSwitcher() {
       ))}
     </motion.div>
   )
-} 
+}

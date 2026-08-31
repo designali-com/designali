@@ -6,7 +6,7 @@ import {
 
 export function Journey() {
   return (
-    <section className="relative max-w-4xl mx-auto">
+    <section className="relative mx-auto max-w-4xl">
       <div className="border-x border-dotted pb-20">
         <SectionHeader>
           <SectionHeaderHeading>My Creative Journey</SectionHeaderHeading>

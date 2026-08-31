@@ -19,7 +19,11 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@workspace/ui/components/navigation-menu"
-import { Sheet, SheetContent, SheetTrigger } from "@workspace/ui/components/sheet"
+import {
+  Sheet,
+  SheetContent,
+  SheetTrigger,
+} from "@workspace/ui/components/sheet"
 import { Logo } from "@workspace/ui/designali/logo"
 
 const services = [
@@ -57,21 +61,18 @@ export function Header() {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <header className="bg-background/50 fixed top-0 left-0 z-50 w-full backdrop-blur-md">
+    <header className="fixed top-0 left-0 z-50 w-full bg-background/50 backdrop-blur-md">
       <div className="px-3">
         <div className="flex h-20 items-center justify-between">
           <div className="flex h-14 items-center gap-2 border px-4">
             <Logo className="size-8" />
-            <span className="text-lg font-medium">
-              designali
-            </span>
+            <span className="text-lg font-medium">designali</span>
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden items-center lg:flex">
-            <NavigationMenu>
+            <NavigationMenu align="center">
               <NavigationMenuList>
-
                 {/* Services */}
                 <NavigationMenuItem>
                   <NavigationMenuTrigger className="h-14 rounded-none border px-6 text-sm">
@@ -86,7 +87,7 @@ export function Header() {
                             render={
                               <a
                                 href={item.href}
-                                className="block p-3 leading-none no-underline outline-none transition-colors hover:bg-primary hover:text-background focus:bg-primary"
+                                className="block p-3 leading-none no-underline transition-colors outline-none hover:bg-primary hover:text-background focus:bg-primary"
                               />
                             }
                           >
@@ -114,7 +115,7 @@ export function Header() {
                             render={
                               <a
                                 href={item.href}
-                                className="block p-3 leading-none no-underline outline-none transition-colors hover:bg-primary hover:text-background focus:bg-primary"
+                                className="block p-3 leading-none no-underline transition-colors outline-none hover:bg-primary hover:text-background focus:bg-primary"
                               />
                             }
                           >
@@ -142,7 +143,7 @@ export function Header() {
                             render={
                               <a
                                 href={item.href}
-                                className="block p-3 leading-none no-underline outline-none transition-colors hover:bg-primary hover:text-background focus:bg-primary"
+                                className="block p-3 leading-none no-underline transition-colors outline-none hover:bg-primary hover:text-background focus:bg-primary"
                               />
                             }
                           >
@@ -170,7 +171,7 @@ export function Header() {
                             render={
                               <a
                                 href={item.href}
-                                className="block p-3 leading-none no-underline outline-none transition-colors hover:bg-primary hover:text-background focus:bg-primary"
+                                className="block p-3 leading-none no-underline transition-colors outline-none hover:bg-primary hover:text-background focus:bg-primary"
                               />
                             }
                           >
@@ -183,7 +184,6 @@ export function Header() {
                     </ul>
                   </NavigationMenuContent>
                 </NavigationMenuItem>
-
               </NavigationMenuList>
             </NavigationMenu>
           </nav>
@@ -191,8 +191,12 @@ export function Header() {
           {/* CTA Button */}
           <div className="hidden items-center gap-1 lg:flex">
             <ModeToggle />
-            <Button variant={"outline"} className="h-14 px-6"
-              render={<a href="/contact" className="flex items-center gap-2" />}>
+            <Button
+              nativeButton={false}
+              variant={"outline"}
+              className="h-14 px-6"
+              render={<a href="/contact" className="flex items-center gap-2" />}
+            >
               Get in touch
               <ArrowUpRight />
             </Button>
@@ -200,14 +204,16 @@ export function Header() {
 
           {/* Mobile Menu */}
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
-            <SheetTrigger className="lg:hidden">
-              <Button variant="ghost">
-                {isOpen ? (
-                  <X className="size-8" />
-                ) : (
-                  <Equal className="size-8" />
-                )}
-              </Button>
+            <SheetTrigger
+              className="lg:hidden"
+              render={
+                <button
+                  type="button"
+                  className="inline-flex h-10 w-10 items-center justify-center rounded-md hover:bg-accent hover:text-accent-foreground"
+                />
+              }
+            >
+              {isOpen ? <X className="size-8" /> : <Equal className="size-8" />}
             </SheetTrigger>
             <SheetContent
               side="right"
@@ -226,7 +232,7 @@ export function Header() {
                             <li key={item.name}>
                               <a
                                 href={item.href}
-                                className="text-muted-foreground hover:text-foreground block py-2"
+                                className="block py-2 text-muted-foreground hover:text-foreground"
                                 onClick={() => setIsOpen(false)}
                               >
                                 {item.name}
@@ -247,7 +253,7 @@ export function Header() {
                             <li key={item.name}>
                               <a
                                 href={item.href}
-                                className="text-muted-foreground hover:text-foreground block py-2"
+                                className="block py-2 text-muted-foreground hover:text-foreground"
                                 onClick={() => setIsOpen(false)}
                               >
                                 {item.name}
@@ -268,7 +274,7 @@ export function Header() {
                             <li key={item.name}>
                               <a
                                 href={item.href}
-                                className="text-muted-foreground hover:text-foreground block py-2"
+                                className="block py-2 text-muted-foreground hover:text-foreground"
                                 onClick={() => setIsOpen(false)}
                               >
                                 {item.name}
@@ -289,7 +295,7 @@ export function Header() {
                             <li key={item.name}>
                               <a
                                 href={item.href}
-                                className="text-muted-foreground hover:text-foreground block py-2"
+                                className="block py-2 text-muted-foreground hover:text-foreground"
                                 onClick={() => setIsOpen(false)}
                               >
                                 {item.name}
@@ -303,10 +309,16 @@ export function Header() {
                 </div>
 
                 <div className="pb-6">
-                  <Button render={<a
-                    href="/contact"
-                    className="flex items-center justify-center gap-2"
-                  />} className="w-full">
+                  <Button
+                    nativeButton={false}
+                    render={
+                      <a
+                        href="/contact"
+                        className="flex items-center justify-center gap-2"
+                      />
+                    }
+                    className="w-full"
+                  >
                     Get in touch
                     <ChevronsLeftRight />
                   </Button>
@@ -316,6 +328,6 @@ export function Header() {
           </Sheet>
         </div>
       </div>
-    </header >
+    </header>
   )
 }

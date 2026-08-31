@@ -9,7 +9,7 @@ import { cn } from "@workspace/ui/lib/utils"
 import { Button } from "@workspace/ui/components/button"
 import { Logo } from "@workspace/ui/designali/logo"
 
-const menuItems = [ 
+const menuItems = [
   { name: "Components", href: "#" },
   { name: "Pricing", href: "#" },
   { name: "Contact", href: "#" },
@@ -31,7 +31,7 @@ const Header = () => {
       <nav
         data-state={menuState && "active"}
         className={cn(
-          "fixed z-50 w-full transition-colors duration-300 ",
+          "fixed z-50 w-full transition-colors duration-300",
           isScrolled ? "border-transparent" : "border-b border-dotted"
         )}
       >
@@ -39,13 +39,13 @@ const Header = () => {
           className={cn(
             "mx-auto bg-background px-2 transition-all duration-300",
             isScrolled &&
-            "bg-background/50 md:mt-2 max-w-5xl border-b md:border px-1 backdrop-blur-xl"
+              "max-w-5xl border-b bg-background/50 px-1 backdrop-blur-xl md:mt-2 md:border"
           )}
         >
           <div className="relative flex flex-wrap items-center justify-between gap-3 py-1">
             <div className="flex w-full justify-between md:w-auto">
               <a href="#" aria-label="home" className="flex items-center gap-2">
-                <Logo className="size-8 ml-3" />
+                <Logo className="ml-3 size-8" />
               </a>
               <div className="flex gap-2">
                 <button
@@ -63,14 +63,14 @@ const Header = () => {
               <Menus />
             </div>
 
-            <div className="shadow-3xl hidden w-full flex-wrap items-center justify-end space-y-8 rounded-sm border p-3 shadow-zinc-300/20 backdrop-blur-2xl in-data-[state=active]:block md:flex-nowrap md:m-0 md:flex md:w-fit md:gap-6 md:space-y-0 md:border-transparent md:bg-transparent md:p-0 md:shadow-none md:in-data-[state=active]:flex dark:shadow-none dark:lg:bg-transparent">
+            <div className="shadow-3xl hidden w-full flex-wrap items-center justify-end space-y-8 rounded-sm border p-3 shadow-zinc-300/20 backdrop-blur-2xl in-data-[state=active]:block md:m-0 md:flex md:w-fit md:flex-nowrap md:gap-6 md:space-y-0 md:border-transparent md:bg-transparent md:p-0 md:shadow-none md:in-data-[state=active]:flex dark:shadow-none dark:lg:bg-transparent">
               <div className="block p-3 md:hidden">
                 <ul className="space-y-6 text-base">
                   {menuItems.map((item, index) => (
                     <li key={index}>
                       <a
                         href={item.href}
-                        className="text-muted-foreground hover:text-primary block text-sm duration-150"
+                        className="block text-sm text-muted-foreground duration-150 hover:text-primary"
                       >
                         <span>{item.name}</span>
                       </a>
@@ -80,9 +80,13 @@ const Header = () => {
               </div>
               <div className="flex w-full flex-col space-y-3 sm:flex-row sm:gap-2 sm:space-y-0">
                 <ModeToggle />
-                <Button className={cn(isScrolled && "md:hidden")}
-                  render={<a target="_blank" href="https://cal.com/designali/30min" />
-                  }>
+                <Button
+                  nativeButton={false}
+                  className={cn(isScrolled && "md:hidden")}
+                  render={
+                    <a target="_blank" href="https://cal.com/designali/30min" />
+                  }
+                >
                   <span>Book an Intro call</span>
                 </Button>
               </div>

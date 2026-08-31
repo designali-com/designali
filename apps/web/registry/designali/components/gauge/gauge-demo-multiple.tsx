@@ -33,15 +33,8 @@ export function GaugeDemoMultiple() {
   return (
     <div className="grid grid-cols-2 gap-6 sm:grid-cols-4">
       {metrics.map((metric) => (
-        <div
-          key={metric.label}
-          className="flex flex-col items-center gap-3"
-        >
-          <Gauge
-            value={metric.value}
-            size={130}
-            segments={40}
-          >
+        <div key={metric.label} className="flex flex-col items-center gap-3">
+          <Gauge value={metric.value} size={130} segments={40}>
             <GaugeIndicator>
               <GaugeTrack />
               <GaugeRange />
@@ -50,9 +43,7 @@ export function GaugeDemoMultiple() {
             <GaugeValueText className="text-2xl" />
           </Gauge>
 
-          <span className="text-sm font-medium">
-            {metric.label}
-          </span>
+          <span className="text-sm font-medium">{metric.label}</span>
         </div>
       ))}
     </div>

@@ -1,6 +1,6 @@
-"use client";
+"use client"
 
-import * as React from "react";
+import * as React from "react"
 import {
   ArrowUpRightIcon,
   FilePlus2Icon,
@@ -8,7 +8,7 @@ import {
   PaletteIcon,
   PenToolIcon,
   SearchIcon,
-} from "lucide-react";
+} from "lucide-react"
 
 import {
   Command,
@@ -20,28 +20,28 @@ import {
   CommandList,
   CommandSeparator,
   CommandShortcut,
-} from "@workspace/ui/components/command";
+} from "@workspace/ui/components/command"
 
 export function Search() {
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = React.useState(false)
 
   React.useEffect(() => {
     const down = (e: KeyboardEvent) => {
       if (e.key === "k" && (e.metaKey || e.ctrlKey)) {
-        e.preventDefault();
-        setOpen((open) => !open);
+        e.preventDefault()
+        setOpen((open) => !open)
       }
-    };
+    }
 
-    document.addEventListener("keydown", down);
+    document.addEventListener("keydown", down)
 
     return () => {
-      document.removeEventListener("keydown", down);
-    };
-  }, []);
+      document.removeEventListener("keydown", down)
+    }
+  }, [])
 
   return (
-    <div className="absolute left-1/2 -translate-x-1/2"> 
+    <div className="absolute left-1/2 -translate-x-1/2">
       <button
         type="button"
         onClick={() => setOpen(true)}
@@ -65,19 +65,12 @@ export function Search() {
       </button>
 
       {/* Command Dialog */}
-      <CommandDialog
-        open={open}
-        onOpenChange={setOpen}
-      >
+      <CommandDialog open={open} onOpenChange={setOpen}>
         <Command>
-          <CommandInput
-            placeholder="Type to search components, assets, or docs..."
-          />
+          <CommandInput placeholder="Type to search components, assets, or docs..." />
 
           <CommandList>
-            <CommandEmpty>
-              No matches found.
-            </CommandEmpty>
+            <CommandEmpty>No matches found.</CommandEmpty>
 
             {/* Create */}
             <CommandGroup heading="Create">
@@ -90,9 +83,7 @@ export function Search() {
 
                 <span>New project</span>
 
-                <CommandShortcut>
-                  ⌘N
-                </CommandShortcut>
+                <CommandShortcut>⌘N</CommandShortcut>
               </CommandItem>
 
               <CommandItem>
@@ -104,9 +95,7 @@ export function Search() {
 
                 <span>New template</span>
 
-                <CommandShortcut>
-                  ⌘T
-                </CommandShortcut>
+                <CommandShortcut>⌘T</CommandShortcut>
               </CommandItem>
 
               <CommandItem>
@@ -118,9 +107,7 @@ export function Search() {
 
                 <span>Start design</span>
 
-                <CommandShortcut>
-                  ⌘S
-                </CommandShortcut>
+                <CommandShortcut>⌘S</CommandShortcut>
               </CommandItem>
             </CommandGroup>
 
@@ -192,14 +179,12 @@ export function Search() {
 
                 <span>Switch theme</span>
 
-                <CommandShortcut>
-                  ⌘⇧T
-                </CommandShortcut>
+                <CommandShortcut>⌘⇧T</CommandShortcut>
               </CommandItem>
             </CommandGroup>
           </CommandList>
         </Command>
       </CommandDialog>
     </div>
-  );
+  )
 }

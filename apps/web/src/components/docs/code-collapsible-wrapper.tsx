@@ -6,7 +6,7 @@ import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from "@workspace/ui/components/collapsible" 
+} from "@workspace/ui/components/collapsible"
 import { cn } from "@workspace/ui/lib/utils"
 
 export function CodeCollapsibleWrapper({
@@ -30,7 +30,6 @@ export function CodeCollapsibleWrapper({
             !isOpened && "max-h-[260px] overflow-hidden"
           )}
         >
-           
           <div
             className={cn(
               "w-full min-w-0",
@@ -42,9 +41,13 @@ export function CodeCollapsibleWrapper({
         </CollapsibleContent>
 
         {!isOpened && (
-          <div className="absolute inset-x-0 bottom-0 flex h-20 items-end justify-center bg-gradient-to-t from-background via-background/80 to-transparent pb-3 z-20 pointer-events-none">
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 z-20 flex h-20 items-end justify-center bg-gradient-to-t from-background via-background/80 to-transparent pb-3">
             <CollapsibleTrigger className="pointer-events-auto">
-              <Button variant="secondary" size="sm" className="h-8 shadow-sm border border-border">
+              <Button
+                variant="secondary"
+                size="sm"
+                className="h-8 border border-border shadow-sm"
+              >
                 Expand Code
               </Button>
             </CollapsibleTrigger>
@@ -52,9 +55,13 @@ export function CodeCollapsibleWrapper({
         )}
 
         {isOpened && (
-          <div className="flex justify-center py-2 border-t border-border/40 bg-background/50">
+          <div className="flex justify-center border-t border-border/40 bg-background/50 py-2">
             <CollapsibleTrigger>
-              <Button variant="ghost" size="sm" className="h-8 text-muted-foreground">
+              <Button
+                variant="ghost"
+                size="sm"
+                className="h-8 text-muted-foreground"
+              >
                 Collapse Code
               </Button>
             </CollapsibleTrigger>

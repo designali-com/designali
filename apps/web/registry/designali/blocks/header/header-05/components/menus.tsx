@@ -44,17 +44,17 @@ export function Menus() {
               <ul className="grid w-full grid-cols-1 gap-6 md:grid-cols-5">
                 <li>
                   <a href="#" className="group block">
-                    <div className="hover:text-background text-background/80 mb-3 text-xl font-semibold">
+                    <div className="mb-3 text-xl font-semibold text-background/80 hover:text-background">
                       UI/UX
                     </div>
                   </a>
                   <a href="#" className="group block">
-                    <div className="hover:text-background text-background/80 mb-3 text-xl font-semibold">
+                    <div className="mb-3 text-xl font-semibold text-background/80 hover:text-background">
                       Branding
                     </div>
                   </a>
                   <a href="#" className="group block">
-                    <div className="hover:text-background text-background/80 mb-3 text-xl font-semibold">
+                    <div className="mb-3 text-xl font-semibold text-background/80 hover:text-background">
                       Prototypes
                     </div>
                   </a>
@@ -75,17 +75,17 @@ export function Menus() {
               <ul className="grid w-full grid-cols-1 gap-6 md:grid-cols-5">
                 <li>
                   <a href="#" className="group block">
-                    <div className="hover:text-background text-background/80 mb-3 text-xl font-semibold">
+                    <div className="mb-3 text-xl font-semibold text-background/80 hover:text-background">
                       Frontend
                     </div>
                   </a>
                   <a href="#" className="group block">
-                    <div className="hover:text-background text-background/80 mb-3 text-xl font-semibold">
+                    <div className="mb-3 text-xl font-semibold text-background/80 hover:text-background">
                       Backend
                     </div>
                   </a>
                   <a href="#" className="group block">
-                    <div className="hover:text-background text-background/80 mb-3 text-xl font-semibold">
+                    <div className="mb-3 text-xl font-semibold text-background/80 hover:text-background">
                       DevOps
                     </div>
                   </a>
@@ -106,17 +106,17 @@ export function Menus() {
               <ul className="grid w-full grid-cols-1 gap-6 md:grid-cols-5">
                 <li>
                   <a href="#" className="group block">
-                    <div className="hover:text-background text-background/80 mb-3 text-xl font-semibold">
+                    <div className="mb-3 text-xl font-semibold text-background/80 hover:text-background">
                       Tutorials
                     </div>
                   </a>
                   <a href="#" className="group block">
-                    <div className="hover:text-background text-background/80 mb-3 text-xl font-semibold">
+                    <div className="mb-3 text-xl font-semibold text-background/80 hover:text-background">
                       Courses
                     </div>
                   </a>
                   <a href="#" className="group block">
-                    <div className="hover:text-background text-background/80 mb-3 text-xl font-semibold">
+                    <div className="mb-3 text-xl font-semibold text-background/80 hover:text-background">
                       Blogs
                     </div>
                   </a>
@@ -137,17 +137,17 @@ export function Menus() {
               <ul className="grid w-full grid-cols-1 gap-6 md:grid-cols-5">
                 <li>
                   <a href="#" className="group block">
-                    <div className="hover:text-background text-background/80 mb-3 text-xl font-semibold">
+                    <div className="mb-3 text-xl font-semibold text-background/80 hover:text-background">
                       Forums
                     </div>
                   </a>
                   <a href="#" className="group block">
-                    <div className="hover:text-background text-background/80 mb-3 text-xl font-semibold">
+                    <div className="mb-3 text-xl font-semibold text-background/80 hover:text-background">
                       Discord
                     </div>
                   </a>
                   <a href="#" className="group block">
-                    <div className="hover:text-background text-background/80 mb-3 text-xl font-semibold">
+                    <div className="mb-3 text-xl font-semibold text-background/80 hover:text-background">
                       GitHub
                     </div>
                   </a>
@@ -168,17 +168,17 @@ export function Menus() {
               <ul className="grid w-full grid-cols-1 gap-6 md:grid-cols-5">
                 <li>
                   <a href="#" className="group block">
-                    <div className="hover:text-background text-background/80 mb-3 text-xl font-semibold">
+                    <div className="mb-3 text-xl font-semibold text-background/80 hover:text-background">
                       Documentation
                     </div>
                   </a>
                   <a href="#" className="group block">
-                    <div className="hover:text-background text-background/80 mb-3 text-xl font-semibold">
+                    <div className="mb-3 text-xl font-semibold text-background/80 hover:text-background">
                       API Reference
                     </div>
                   </a>
                   <a href="#" className="group block">
-                    <div className="hover:text-background text-background/80 mb-3 text-xl font-semibold">
+                    <div className="mb-3 text-xl font-semibold text-background/80 hover:text-background">
                       Changelog
                     </div>
                   </a>
@@ -199,17 +199,17 @@ export function Menus() {
               <ul className="grid w-full grid-cols-1 gap-6 md:grid-cols-5">
                 <li>
                   <a href="#" className="group block">
-                    <div className="hover:text-background text-background/80 mb-3 text-xl font-semibold">
+                    <div className="mb-3 text-xl font-semibold text-background/80 hover:text-background">
                       Figma
                     </div>
                   </a>
                   <a href="#" className="group block">
-                    <div className="hover:text-background text-background/80 mb-3 text-xl font-semibold">
+                    <div className="mb-3 text-xl font-semibold text-background/80 hover:text-background">
                       Sketch
                     </div>
                   </a>
                   <a href="#" className="group block">
-                    <div className="hover:text-background text-background/80 mb-3 text-xl font-semibold">
+                    <div className="mb-3 text-xl font-semibold text-background/80 hover:text-background">
                       Photoshop
                     </div>
                   </a>
@@ -230,17 +230,17 @@ export function Menus() {
                 <ul className="grid w-full grid-cols-1 gap-6 md:grid-cols-5">
                   <li>
                     <a href="#" className="group block">
-                      <div className="hover:text-background text-background/80 mb-3 text-xl font-semibold">
+                      <div className="mb-3 text-xl font-semibold text-background/80 hover:text-background">
                         Consulting
                       </div>
                     </a>
                     <a href="#" className="group block">
-                      <div className="hover:text-background text-background/80 mb-3 text-xl font-semibold">
+                      <div className="mb-3 text-xl font-semibold text-background/80 hover:text-background">
                         Workshops
                       </div>
                     </a>
                     <a href="#" className="group block">
-                      <div className="hover:text-background text-background/80 mb-3 text-xl font-semibold">
+                      <div className="mb-3 text-xl font-semibold text-background/80 hover:text-background">
                         Support
                       </div>
                     </a>
@@ -260,17 +260,17 @@ export function Menus() {
                 <ul className="grid w-full grid-cols-1 gap-6 md:grid-cols-5">
                   <li>
                     <a href="#" className="group block">
-                      <div className="hover:text-background text-background/80 mb-3 text-xl font-semibold">
+                      <div className="mb-3 text-xl font-semibold text-background/80 hover:text-background">
                         About Us
                       </div>
                     </a>
                     <a href="#" className="group block">
-                      <div className="hover:text-background text-background/80 mb-3 text-xl font-semibold">
+                      <div className="mb-3 text-xl font-semibold text-background/80 hover:text-background">
                         Careers
                       </div>
                     </a>
                     <a href="#" className="group block">
-                      <div className="hover:text-background text-background/80 mb-3 text-xl font-semibold">
+                      <div className="mb-3 text-xl font-semibold text-background/80 hover:text-background">
                         Contact
                       </div>
                     </a>

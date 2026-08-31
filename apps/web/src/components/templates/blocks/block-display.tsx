@@ -17,11 +17,7 @@ type RegistryFile = {
   type?: string
 }
 
-export async function BlockDisplay({
-  name,
-}: {
-  name: string
-}) {
+export async function BlockDisplay({ name }: { name: string }) {
   const item = await getCachedRegistryItem(name)
 
   if (!item?.files) {
@@ -33,9 +29,18 @@ export async function BlockDisplay({
     getCachedHighlightedFiles(item.files),
   ])
 
+  // Extract only serializable JSON props to prevent passing functions to Client Component
+  const serializableItem = {
+    name: item.name,
+    type: item.type,
+    title: item.title,
+    description: item.description,
+    meta: item.meta,
+  }
+
   return (
     <BlockViewer
-      item={item}
+      item={serializableItem}
       tree={tree}
       highlightedFiles={highlightedFiles}
     >
@@ -70,15 +75,11 @@ const getCachedFileTree = React.cache(
   }
 )
 
-const getCachedHighlightedFiles = React.cache(
-  async (files: RegistryFile[]) => {
-    return Promise.all(
-      files.map(async (file) => ({
-        ...file,
-        highlightedContent: await highlightCode(
-          file.content ?? ""
-        ),
-      }))
-    )
-  }
-)
+const getCachedHighlightedFiles = React.cache(async (files: RegistryFile[]) => {
+  return Promise.all(
+    files.map(async (file) => ({
+      ...file,
+      highlightedContent: await highlightCode(file.content ?? ""),
+    }))
+  )
+})

@@ -1,10 +1,8 @@
-import { TemplateCard } from "@/src/components/templates/template-card";
-import { templateCategories } from "@/registry/registry-categories";
+import { TemplateCard } from "@/src/components/templates/template-card"
+import { templateCategories } from "@/registry/registry-categories"
 
 export default function Page() {
-  const templates = templateCategories.filter(
-    (template) => !template.hidden
-  );
+  const templates = templateCategories.filter((template) => !template.hidden)
 
   return (
     <main className="mx-auto my-20 w-full p-3">
@@ -14,12 +12,12 @@ export default function Page() {
             key={template.slug}
             name={template.name}
             url={template.url}
-            slug={template.slug} 
+            slug={template.slug}
             image={template.image}
             video={template.video}
           />
         ))}
       </div>
     </main>
-  );
-} 
+  )
+}

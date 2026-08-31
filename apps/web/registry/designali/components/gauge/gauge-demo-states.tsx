@@ -29,29 +29,19 @@ export function GaugeDemoStates() {
   return (
     <div className="flex flex-wrap items-center justify-center gap-10">
       {states.map((item) => (
-        <div
-          key={item.label}
-          className="flex flex-col items-center gap-3"
-        >
-          <Gauge
-            value={item.value}
-            size={170}
-          >
+        <div key={item.label} className="flex flex-col items-center gap-3">
+          <Gauge value={item.value} size={170}>
             <GaugeIndicator>
               <GaugeTrack />
               <GaugeRange />
             </GaugeIndicator>
 
             <GaugeValueText>
-              {item.value === null
-                ? "—"
-                : `${item.value}%`}
+              {item.value === null ? "—" : `${item.value}%`}
             </GaugeValueText>
           </Gauge>
 
-          <span className="text-sm text-muted-foreground">
-            {item.label}
-          </span>
+          <span className="text-sm text-muted-foreground">{item.label}</span>
         </div>
       ))}
     </div>

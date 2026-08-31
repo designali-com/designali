@@ -1,6 +1,4 @@
- 
 import { gridPatterns } from "@/src/config/patterns/patterns"
- 
 
 export const PATTERN_CATEGORIES = [
   { id: "all", label: "All Patterns" },
@@ -29,4 +27,3 @@ export type UnifiedCategory = {
   type: "block" | "page" | "icon" | "pattern"
   count: number
 }
- 

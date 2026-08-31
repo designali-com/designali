@@ -1,9 +1,9 @@
-"use client" 
-import { Analytics } from "@vercel/analytics/next" 
- 
+"use client"
+import { Analytics } from "@vercel/analytics/next"
+
 import { TooltipProvider } from "@workspace/ui/components/tooltip"
 
-import { ActiveThemeProvider } from "./active-theme" 
+import { ActiveThemeProvider } from "./active-theme"
 import { ThemeProvider } from "./theme-provider"
 
 export function Provider({
@@ -19,20 +19,11 @@ export function Provider({
         enableSystem
         disableTransitionOnChange
       >
-        
-          <ActiveThemeProvider>
-             
-              <TooltipProvider>
-                {children}
-                
-              </TooltipProvider>
-            
-          </ActiveThemeProvider>
-          
-        
+        <ActiveThemeProvider>
+          <TooltipProvider>{children}</TooltipProvider>
+        </ActiveThemeProvider>
       </ThemeProvider>
       <Analytics />
-       
     </div>
   )
 }

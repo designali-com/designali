@@ -7,7 +7,7 @@ import {
   GaugeIndicator,
   GaugeRange,
   GaugeTrack,
-  GaugeValueText, 
+  GaugeValueText,
 } from "@/registry/designali/ui/gauge"
 
 export function GaugeDemoBasic() {

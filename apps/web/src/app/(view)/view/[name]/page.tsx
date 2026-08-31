@@ -3,10 +3,7 @@ import type { Metadata } from "next"
 import { notFound } from "next/navigation"
 
 import { siteConfig } from "@/src/config/site"
-import {
-  getRegistryComponent,
-  getRegistryItem,
-} from "@/src/lib/registry"
+import { getRegistryComponent, getRegistryItem } from "@/src/lib/registry"
 import { cn } from "@workspace/ui/lib/utils"
 
 export const revalidate = false

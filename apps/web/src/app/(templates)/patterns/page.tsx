@@ -7,23 +7,23 @@ import { gridPatterns } from "@/src/config/patterns/patterns"
 import { useTheme } from "@/src/hooks/useTheme"
 
 export default function Home() {
-    const [activePattern, setActivePattern] = useState<string | null>(null)
-    const { theme, updateThemeFromPattern } = useTheme()
+  const [activePattern, setActivePattern] = useState<string | null>(null)
+  const { theme, updateThemeFromPattern } = useTheme()
 
-    useEffect(() => {
-        updateThemeFromPattern(activePattern, gridPatterns)
-    }, [activePattern, updateThemeFromPattern])
+  useEffect(() => {
+    updateThemeFromPattern(activePattern, gridPatterns)
+  }, [activePattern, updateThemeFromPattern])
 
-    return (
-        <>
-            <div className="relative pt-10 z-10 overflow-hidden w-full h-full">
-                <PatternPreview activePattern={activePattern} />
-                <PatternShowcase
-                    activePattern={activePattern}
-                    setActivePattern={setActivePattern}
-                    theme={theme}
-                />
-            </div>
-        </>
-    )
+  return (
+    <>
+      <div className="relative z-10 h-full w-full overflow-hidden pt-10">
+        <PatternPreview activePattern={activePattern} />
+        <PatternShowcase
+          activePattern={activePattern}
+          setActivePattern={setActivePattern}
+          theme={theme}
+        />
+      </div>
+    </>
+  )
 }

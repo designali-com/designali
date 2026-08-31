@@ -1,4 +1,4 @@
-import { createMDX } from "fumadocs-mdx/next";
+import { createMDX } from "fumadocs-mdx/next"
 
 import type { NextConfig } from "next"
 
@@ -10,8 +10,8 @@ const nextConfig: NextConfig = {
   images: {
     remotePatterns: [
       {
-        protocol: 'https',
-        hostname: 'images.unsplash.com',
+        protocol: "https",
+        hostname: "images.unsplash.com",
       },
       {
         protocol: "https",
@@ -21,7 +21,7 @@ const nextConfig: NextConfig = {
   },
 
   async redirects() {
-    return [  
+    return [
       {
         source: "/docs/:path*.mdx",
         destination: "/docs/:path*.md",
@@ -32,7 +32,7 @@ const nextConfig: NextConfig = {
         destination: "/docs/components/:path*",
         permanent: true,
       },
-    ];
+    ]
   },
 
   rewrites() {
@@ -41,10 +41,10 @@ const nextConfig: NextConfig = {
         source: "/docs/:path*.md",
         destination: "/llm/:path*",
       },
-    ];
+    ]
   },
 }
 
-const withMDX = createMDX({});
+const withMDX = createMDX({})
 
-export default withMDX(nextConfig);
+export default withMDX(nextConfig)

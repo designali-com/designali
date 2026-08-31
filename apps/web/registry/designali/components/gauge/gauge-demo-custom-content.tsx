@@ -21,9 +21,7 @@ export function GaugeDemoCustomContent() {
 
         <GaugeValueText>
           <div className="flex flex-col items-center">
-            <span className="text-4xl font-medium tracking-tight">
-              82
-            </span>
+            <span className="text-4xl font-medium tracking-tight">82</span>
 
             <span className="text-xs font-normal text-muted-foreground">
               Score
@@ -40,9 +38,7 @@ export function GaugeDemoCustomContent() {
 
         <GaugeValueText>
           <div className="flex flex-col items-center">
-            <span className="text-4xl font-medium">
-              64%
-            </span>
+            <span className="text-4xl font-medium">64%</span>
 
             <span className="text-xs font-normal text-muted-foreground">
               Healthy

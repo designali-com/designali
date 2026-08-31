@@ -20,7 +20,7 @@ const CAL_LINK = "https://cal.com/designali-com/designali"
 
 export function Header() {
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 w-full border-b border-dotted bg-background/50 backdrop-blur-md">
+    <header className="fixed top-0 right-0 left-0 z-50 w-full border-b border-dotted bg-background/50 backdrop-blur-md">
       <nav className="w-full">
         <div className="relative mx-auto flex h-10 w-full items-center justify-between px-2">
           {/* Left */}
@@ -80,7 +80,6 @@ export function Header() {
               Dashboard
             </Button>
           </div>
-
         </div>
       </nav>
     </header>
@@ -89,7 +88,7 @@ export function Header() {
 
 export function TemplateHeader() {
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 w-full border-b border-dotted bg-background/50 backdrop-blur-md">
+    <header className="fixed top-0 right-0 left-0 z-50 w-full border-b border-dotted bg-background/50 backdrop-blur-md">
       <nav className="w-full">
         <div className="relative mx-auto flex h-10 w-full items-center justify-between px-2">
           {/* Left */}

@@ -33,15 +33,8 @@ export function GaugeDemoSegments() {
   return (
     <div className="flex flex-wrap items-center justify-center gap-8">
       {gauges.map((gauge) => (
-        <div
-          key={gauge.label}
-          className="flex flex-col items-center gap-3"
-        >
-          <Gauge
-            value={65}
-            size={160}
-            segments={gauge.segments}
-          >
+        <div key={gauge.label} className="flex flex-col items-center gap-3">
+          <Gauge value={65} size={160} segments={gauge.segments}>
             <GaugeIndicator>
               <GaugeTrack />
               <GaugeRange />
@@ -50,9 +43,7 @@ export function GaugeDemoSegments() {
             <GaugeValueText />
           </Gauge>
 
-          <span className="text-sm text-muted-foreground">
-            {gauge.label}
-          </span>
+          <span className="text-sm text-muted-foreground">{gauge.label}</span>
         </div>
       ))}
     </div>

@@ -1,8 +1,8 @@
-"use client";
+"use client"
 
-import * as React from "react";
+import * as React from "react"
 
-import { 
+import {
   Maximize2,
   Minimize2,
   Monitor,
@@ -21,47 +21,46 @@ import {
   X,
   RotateCcw,
   Download,
-} from "lucide-react";
+} from "lucide-react"
 
-import { cn } from "@workspace/ui/lib/utils";
-import { Badge } from "@workspace/ui/components/badge";
-import { Button } from "@workspace/ui/components/button"; 
+import { cn } from "@workspace/ui/lib/utils"
+import { Badge } from "@workspace/ui/components/badge"
+import { Button } from "@workspace/ui/components/button"
 
-type Device = "desktop" | "tablet" | "mobile";
+type Device = "desktop" | "tablet" | "mobile"
 
 export interface TemplatePreviewProps {
-  name: string;
-  description: string;
-  url: string;
-   
-  tech?: string[];
-  pages?: string[];
-  features?: string[];
-  colors?: string[];
-  fonts?: string[];
- 
+  name: string
+  description: string
+  url: string
 
-  className?: string;
+  tech?: string[]
+  pages?: string[]
+  features?: string[]
+  colors?: string[]
+  fonts?: string[]
 
-  showDetails?: boolean;
-  showColors?: boolean;
-  showFonts?: boolean;
-  showCTA?: boolean;
+  className?: string
 
-  ctaText?: string;
+  showDetails?: boolean
+  showColors?: boolean
+  showFonts?: boolean
+  showCTA?: boolean
 
-  onUseTemplate?: () => void;
+  ctaText?: string
+
+  onUseTemplate?: () => void
 }
- 
+
 export function TemplatePreview({
   name,
   description,
-  url, 
+  url,
   tech = [],
   pages = [],
   features = [],
   colors = [],
-  fonts = [], 
+  fonts = [],
   className,
   showDetails = true,
   showColors = true,
@@ -70,23 +69,17 @@ export function TemplatePreview({
   ctaText = "Download This Template",
   onUseTemplate,
 }: TemplatePreviewProps) {
-  const [device, setDevice] =
-    React.useState<Device>("desktop");
+  const [device, setDevice] = React.useState<Device>("desktop")
 
-  const [isFullscreen, setIsFullscreen] =
-    React.useState(false);
+  const [isFullscreen, setIsFullscreen] = React.useState(false)
 
-  const [refreshKey, setRefreshKey] =
-    React.useState(0);
+  const [refreshKey, setRefreshKey] = React.useState(0)
 
-  const [copied, setCopied] =
-    React.useState(false);
+  const [copied, setCopied] = React.useState(false)
 
-  const [showAllPages, setShowAllPages] =
-    React.useState(false);
+  const [showAllPages, setShowAllPages] = React.useState(false)
 
-  const previewRef =
-    React.useRef<HTMLDivElement>(null);
+  const previewRef = React.useRef<HTMLDivElement>(null)
 
   /*
    * Copy URL
@@ -94,33 +87,33 @@ export function TemplatePreview({
 
   const copyUrl = async () => {
     try {
-      await navigator.clipboard.writeText(url);
+      await navigator.clipboard.writeText(url)
 
-      setCopied(true);
+      setCopied(true)
 
       window.setTimeout(() => {
-        setCopied(false);
-      }, 1500);
+        setCopied(false)
+      }, 1500)
     } catch {
       // Clipboard errors can be ignored
     }
-  };
+  }
 
   /*
    * Dialog fullscreen
    */
 
   const toggleFullscreen = () => {
-    setIsFullscreen((value) => !value);
-  };
+    setIsFullscreen((value) => !value)
+  }
 
   /*
    * Close dialog
    */
 
   const closeFullscreen = () => {
-    setIsFullscreen(false);
-  };
+    setIsFullscreen(false)
+  }
 
   /*
    * Escape key + body scroll lock
@@ -128,66 +121,53 @@ export function TemplatePreview({
 
   React.useEffect(() => {
     if (!isFullscreen) {
-      document.body.style.overflow = "";
-      return;
+      document.body.style.overflow = ""
+      return
     }
 
-    document.body.style.overflow = "hidden";
+    document.body.style.overflow = "hidden"
 
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
-        setIsFullscreen(false);
+        setIsFullscreen(false)
       }
-    };
+    }
 
-    document.addEventListener(
-      "keydown",
-      handleKeyDown
-    );
+    document.addEventListener("keydown", handleKeyDown)
 
     return () => {
-      document.body.style.overflow = "";
+      document.body.style.overflow = ""
 
-      document.removeEventListener(
-        "keydown",
-        handleKeyDown
-      );
-    };
-  }, [isFullscreen]);
+      document.removeEventListener("keydown", handleKeyDown)
+    }
+  }, [isFullscreen])
 
   /*
    * Visible pages
    */
 
-  const visiblePages = showAllPages
-    ? pages
-    : pages.slice(0, 6);
+  const visiblePages = showAllPages ? pages : pages.slice(0, 6)
 
   return (
-    <section
-      className={cn(
-        "w-full overflow-hidden bg-background",
-        className
-      )}
-    >
+    <section className={cn("w-full overflow-hidden bg-background", className)}>
       {/* =========================================================
           HEADER
       ========================================================== */}
 
       <div className="border-b">
-        <div className="flex flex-col justify-center text-center gap-2 px-4 md:px-6 py-10">
+        <div className="flex flex-col justify-center gap-2 px-4 py-10 text-center md:px-6">
           <h1 className="text-xl font-semibold tracking-tight md:text-2xl">
             {name}
           </h1>
 
-          <p className="max-w-lg mx-auto text-sm text-muted-foreground">
+          <p className="mx-auto max-w-lg text-sm text-muted-foreground">
             {description}
           </p>
         </div>
       </div>
 
       <div className="border-b px-2 py-1">
-        <div className="flex gap-3 justify-between">
+        <div className="flex justify-between gap-3">
           {/* Device Switcher */}
 
           <div className="inline-flex w-fit items-center">
@@ -231,48 +211,32 @@ export function TemplatePreview({
             />
           </div>
 
-
           <div className="flex items-center gap-3">
-
             <Button
-              size={"icon-sm"} variant={"ghost"}
-              onClick={() =>
-                setRefreshKey(
-                  (value) => value + 1
-                )
-              }
+              size={"icon-sm"}
+              variant={"ghost"}
+              onClick={() => setRefreshKey((value) => value + 1)}
               aria-label="Refresh preview"
               title="Refresh preview"
             >
               <RotateCcw />
             </Button>
             <Button
-              size={"icon-sm"} variant={"ghost"}
+              size={"icon-sm"}
+              variant={"ghost"}
               onClick={toggleFullscreen}
-              aria-label={
-                isFullscreen
-                  ? "Close preview"
-                  : "Expand preview"
-              }
-              title={
-                isFullscreen
-                  ? "Close preview"
-                  : "Expand preview"
-              }
+              aria-label={isFullscreen ? "Close preview" : "Expand preview"}
+              title={isFullscreen ? "Close preview" : "Expand preview"}
             >
-              {isFullscreen ? (
-                <Minimize2 />
-              ) : (
-                <Maximize2 />
-              )}
+              {isFullscreen ? <Minimize2 /> : <Maximize2 />}
             </Button>
 
-            <Button size={"sm"} render={<a
-              href={url}
-              target="_blank"
-              rel="noopener noreferrer"
-
-            />}>
+            <Button
+              size={"sm"}
+              render={
+                <a href={url} target="_blank" rel="noopener noreferrer" />
+              }
+            >
               <Download />
               Download
             </Button>
@@ -284,13 +248,12 @@ export function TemplatePreview({
           WEBSITE PREVIEW
       ========================================================== */}
 
-
       <div
         ref={previewRef}
         className={cn(
           "relative flex min-h-[820px] items-start justify-center overflow-auto bg-muted/30 p-3 transition-all md:p-6",
           isFullscreen &&
-          "fixed inset-0 z-50 min-h-0 items-center overflow-hidden bg-black/60 p-4 backdrop-blur-sm md:p-8"
+            "fixed inset-0 z-50 min-h-0 items-center overflow-hidden bg-black/60 p-4 backdrop-blur-sm md:p-8"
         )}
       >
         {/* Backdrop */}
@@ -318,7 +281,7 @@ export function TemplatePreview({
 
             // Expanded dialog
             isFullscreen &&
-            "h-[calc(100vh-64px)] w-full max-w-[1600px] shadow-2xl"
+              "h-[calc(100vh-64px)] w-full max-w-[1600px] shadow-2xl"
           )}
         >
           {/* Browser Header */}
@@ -383,7 +346,6 @@ export function TemplatePreview({
         </div>
       </div>
 
-
       {/* =========================================================
           DETAILS
       ========================================================== */}
@@ -395,17 +357,12 @@ export function TemplatePreview({
 
             {tech.length > 0 && (
               <DetailSection
-                icon={
-                  <Code2 className="size-4" />
-                }
+                icon={<Code2 className="size-4" />}
                 title="Technology"
               >
                 <div className="flex flex-wrap gap-2">
                   {tech.map((item) => (
-                    <Badge
-                      variant={"outline"}
-                      key={item}
-                    >
+                    <Badge variant={"outline"} key={item}>
                       {item}
                     </Badge>
                   ))}
@@ -417,26 +374,22 @@ export function TemplatePreview({
 
             {features.length > 0 && (
               <DetailSection
-                icon={
-                  <Sparkles className="size-4" />
-                }
+                icon={<Sparkles className="size-4" />}
                 title="Features"
               >
                 <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
-                  {features.map(
-                    (feature) => (
-                      <div
-                        key={feature}
-                        className="flex items-center gap-2 text-sm text-muted-foreground"
-                      >
-                        <span className="flex size-5 shrink-0 items-center justify-center rounded-full bg-emerald-500/10 text-emerald-600">
-                          <Check className="size-3" />
-                        </span>
+                  {features.map((feature) => (
+                    <div
+                      key={feature}
+                      className="flex items-center gap-2 text-sm text-muted-foreground"
+                    >
+                      <span className="flex size-5 shrink-0 items-center justify-center rounded-full bg-emerald-500/10 text-emerald-600">
+                        <Check className="size-3" />
+                      </span>
 
-                        {feature}
-                      </div>
-                    )
-                  )}
+                      {feature}
+                    </div>
+                  ))}
                 </div>
               </DetailSection>
             )}
@@ -452,9 +405,7 @@ export function TemplatePreview({
                 <div className="flex items-center gap-2">
                   <FileText className="size-4" />
 
-                  <h2 className="text-sm font-medium">
-                    Pages Included
-                  </h2>
+                  <h2 className="text-sm font-medium">Pages Included</h2>
 
                   <span className="rounded-full bg-muted px-2 py-0.5 text-[11px] text-muted-foreground">
                     {pages.length}
@@ -464,22 +415,15 @@ export function TemplatePreview({
                 {pages.length > 6 && (
                   <button
                     type="button"
-                    onClick={() =>
-                      setShowAllPages(
-                        (value) => !value
-                      )
-                    }
+                    onClick={() => setShowAllPages((value) => !value)}
                     className="flex items-center gap-1 text-xs font-medium text-muted-foreground hover:text-foreground"
                   >
-                    {showAllPages
-                      ? "Show Less"
-                      : "View All"}
+                    {showAllPages ? "Show Less" : "View All"}
 
                     <ChevronDown
                       className={cn(
                         "size-3.5 transition-transform",
-                        showAllPages &&
-                        "rotate-180"
+                        showAllPages && "rotate-180"
                       )}
                     />
                   </button>
@@ -487,25 +431,19 @@ export function TemplatePreview({
               </div>
 
               <div className="flex flex-wrap gap-2">
-                {visiblePages.map(
-                  (page, index) => (
-                    <Badge
-                      variant={"outline"}
-                      key={`${page}-${index}`}
-                      className="flex items-center gap-2 px-3 py-2.5"
-                    >
-                      <span className="flex shrink-0 items-center justify-center text-xs text-muted-foreground">
-                        {String(
-                          index + 1
-                        ).padStart(2, "0")}
-                      </span>
+                {visiblePages.map((page, index) => (
+                  <Badge
+                    variant={"outline"}
+                    key={`${page}-${index}`}
+                    className="flex items-center gap-2 px-3 py-2.5"
+                  >
+                    <span className="flex shrink-0 items-center justify-center text-xs text-muted-foreground">
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
 
-                      <span className="truncate text-xs font-medium">
-                        {page}
-                      </span>
-                    </Badge>
-                  )
-                )}
+                    <span className="truncate text-xs font-medium">{page}</span>
+                  </Badge>
+                ))}
               </div>
             </div>
           )}
@@ -514,78 +452,53 @@ export function TemplatePreview({
               COLORS + FONTS
           ====================================================== */}
 
-          {(showColors &&
-            colors.length > 0) ||
-            (showFonts &&
-              fonts.length > 0) ? (
+          {(showColors && colors.length > 0) ||
+          (showFonts && fonts.length > 0) ? (
             <div className="grid divide-y border-t md:divide-x md:divide-y-0">
               {/* Colors */}
 
-              {showColors &&
-                colors.length > 0 && (
-                  <DetailSection
-                    icon={
-                      <Palette className="size-4" />
-                    }
-                    title="Color Palette"
-                  >
-                    <div className="flex flex-wrap gap-2">
-                      {colors.map(
-                        (color) => (
-                          <Badge
-                            variant={"outline"}
-                            key={color}
-                            className="pl-0"
-                          >
-                            <span
-                              className="size-8 border-r"
-                              style={{
-                                backgroundColor:
-                                  color,
-                              }}
-                            />
+              {showColors && colors.length > 0 && (
+                <DetailSection
+                  icon={<Palette className="size-4" />}
+                  title="Color Palette"
+                >
+                  <div className="flex flex-wrap gap-2">
+                    {colors.map((color) => (
+                      <Badge variant={"outline"} key={color} className="pl-0">
+                        <span
+                          className="size-8 border-r"
+                          style={{
+                            backgroundColor: color,
+                          }}
+                        />
 
-                            <span className="font-mono pl-1 text-xs uppercase text-muted-foreground">
-                              {color}
-                            </span>
-                          </Badge>
-                        )
-                      )}
-                    </div>
-                  </DetailSection>
-                )}
+                        <span className="pl-1 font-mono text-xs text-muted-foreground uppercase">
+                          {color}
+                        </span>
+                      </Badge>
+                    ))}
+                  </div>
+                </DetailSection>
+              )}
 
               {/* Fonts */}
 
-              {showFonts &&
-                fonts.length > 0 && (
-                  <DetailSection
-                    icon={
-                      <Type className="size-4" />
-                    }
-                    title="Typography"
-                  >
-                    <div className="flex flex-wrap gap-2">
-                      {fonts.map(
-                        (font) => (
-                          <Badge
-                            variant={"outline"}
-                            key={font}
-                            className="gap-2"
-                          >
-                            <span className="text-md">
-                              Aa
-                            </span>
+              {showFonts && fonts.length > 0 && (
+                <DetailSection
+                  icon={<Type className="size-4" />}
+                  title="Typography"
+                >
+                  <div className="flex flex-wrap gap-2">
+                    {fonts.map((font) => (
+                      <Badge variant={"outline"} key={font} className="gap-2">
+                        <span className="text-md">Aa</span>
 
-                            <span className="text-xs font-medium">
-                              {font}
-                            </span>
-                          </Badge>
-                        )
-                      )}
-                    </div>
-                  </DetailSection>
-                )}
+                        <span className="text-xs font-medium">{font}</span>
+                      </Badge>
+                    ))}
+                  </div>
+                </DetailSection>
+              )}
             </div>
           ) : null}
         </div>
@@ -608,8 +521,7 @@ export function TemplatePreview({
               </div>
 
               <p className="mt-1 text-xs text-muted-foreground">
-                Start building with this design
-                and customize it for your
+                Start building with this design and customize it for your
                 project.
               </p>
             </div>
@@ -627,7 +539,7 @@ export function TemplatePreview({
         </div>
       )}
     </section>
-  );
+  )
 }
 
 /* ===============================================================
@@ -639,9 +551,9 @@ function DeviceButton({
   onClick,
   icon,
 }: {
-  active: boolean;
-  onClick: () => void;
-  icon: React.ReactNode;
+  active: boolean
+  onClick: () => void
+  icon: React.ReactNode
 }) {
   return (
     <button
@@ -656,7 +568,7 @@ function DeviceButton({
     >
       {icon}
     </button>
-  );
+  )
 }
 
 /* ===============================================================
@@ -668,24 +580,21 @@ function DetailSection({
   title,
   children,
 }: {
-  icon: React.ReactNode;
-  title: string;
-  children: React.ReactNode;
+  icon: React.ReactNode
+  title: string
+  children: React.ReactNode
 }) {
   return (
     <div className="p-5 md:p-6">
       <div className="mb-4 flex items-center gap-2">
         {icon}
-        <h2 className="text-sm font-semibold">
-          {title}
-        </h2>
+        <h2 className="text-sm font-semibold">{title}</h2>
       </div>
       {children}
     </div>
-  );
+  )
 }
 
 /* ===============================================================
    BADGE
 ================================================================ */
-

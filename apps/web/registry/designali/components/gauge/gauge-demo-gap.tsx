@@ -12,7 +12,7 @@ import {
 
 const gauges = [
   {
-    label: "No Gap", 
+    label: "No Gap",
   },
   {
     label: "20 Gap",
@@ -32,15 +32,8 @@ export function GaugeDemoGap() {
   return (
     <div className="flex flex-wrap items-center justify-center gap-8">
       {gauges.map((gauge) => (
-        <div
-          key={gauge.label}
-          className="flex flex-col items-center gap-3"
-        >
-          <Gauge
-            value={75}
-            size={160}
-            gap={gauge.gap}
-          >
+        <div key={gauge.label} className="flex flex-col items-center gap-3">
+          <Gauge value={75} size={160} gap={gauge.gap}>
             <GaugeIndicator>
               <GaugeTrack />
               <GaugeRange />
@@ -49,9 +42,7 @@ export function GaugeDemoGap() {
             <GaugeValueText />
           </Gauge>
 
-          <span className="text-sm text-muted-foreground">
-            {gauge.label}
-          </span>
+          <span className="text-sm text-muted-foreground">{gauge.label}</span>
         </div>
       ))}
     </div>

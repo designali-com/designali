@@ -32,10 +32,7 @@ export function GaugeDemoAngles() {
   return (
     <div className="flex flex-wrap items-center justify-center gap-10">
       {gauges.map((gauge) => (
-        <div
-          key={gauge.label}
-          className="flex flex-col items-center gap-3"
-        >
+        <div key={gauge.label} className="flex flex-col items-center gap-3">
           <Gauge
             value={70}
             size={180}
@@ -51,9 +48,7 @@ export function GaugeDemoAngles() {
             <GaugeValueText />
           </Gauge>
 
-          <span className="text-sm text-muted-foreground">
-            {gauge.label}
-          </span>
+          <span className="text-sm text-muted-foreground">{gauge.label}</span>
         </div>
       ))}
     </div>

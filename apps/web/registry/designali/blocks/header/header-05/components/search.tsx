@@ -41,7 +41,7 @@ export function Search() {
       <button className="" onClick={() => setOpen(true)}>
         <span className="flex grow items-center">
           <SearchIcon
-            className="text-background hover:text-background/80 -ms-1 me-3"
+            className="-ms-1 me-3 text-background hover:text-background/80"
             size={16}
             aria-hidden="true"
           />

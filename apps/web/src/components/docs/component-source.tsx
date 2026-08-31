@@ -1,12 +1,12 @@
-import fs from "node:fs/promises";
-import path from "node:path";
-import type * as React from "react";
-import { CodeCollapsibleWrapper } from "@/src/components/docs/code-collapsible-wrapper";
-import { getRegistryItem } from "@/src/lib/registry";
-import { cn } from "@workspace/ui/lib/utils";
-import { getIconForLanguageExtension } from "./icons";
-import { CopyButton } from "./copy-button";
-import { highlightCode } from "@/src/lib/highlight-code";
+import fs from "node:fs/promises"
+import path from "node:path"
+import type * as React from "react"
+import { CodeCollapsibleWrapper } from "@/src/components/docs/code-collapsible-wrapper"
+import { getRegistryItem } from "@/src/lib/registry"
+import { cn } from "@workspace/ui/lib/utils"
+import { getIconForLanguageExtension } from "./icons"
+import { CopyButton } from "./copy-button"
+import { highlightCode } from "@/src/lib/highlight-code"
 
 export async function ComponentSource({
   name,
@@ -84,7 +84,7 @@ function ComponentCode({
   return (
     <figure
       data-rehype-pretty-code-figure=""
-      className="relative w-full min-w-0 border overflow-hidden"
+      className="relative w-full min-w-0 overflow-hidden border"
     >
       {title && (
         <figcaption
@@ -92,18 +92,16 @@ function ComponentCode({
           className="flex items-center gap-2 border-b p-3 text-sm font-medium [&_svg]:size-4 [&_svg]:shrink-0"
           data-language={language}
         >
-          <span className="flex size-4 items-center justify-center shrink-0 [&_svg]:size-4">
+          <span className="flex size-4 shrink-0 items-center justify-center [&_svg]:size-4">
             {getIconForLanguageExtension(language)}
           </span>
-          <span className="truncate text-xs font-mono">{title}</span>
+          <span className="truncate font-mono text-xs">{title}</span>
         </figcaption>
       )}
 
       <CopyButton value={code} />
 
-      <div
-        dangerouslySetInnerHTML={{ __html: highlightedCode }}
-      />
+      <div dangerouslySetInnerHTML={{ __html: highlightedCode }} />
     </figure>
   )
 }

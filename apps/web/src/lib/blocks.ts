@@ -37,10 +37,7 @@ const registryItemSchema = z.object({
 })
 
 export async function getAllBlockIds(
-  types: RegistryItemType[] = [
-    "registry:block",
-    "registry:internal",
-  ],
+  types: RegistryItemType[] = ["registry:block", "registry:internal"],
   categories: string[] = []
 ): Promise<string[]> {
   const blocks = await getAllBlocks(types, categories)
@@ -49,23 +46,15 @@ export async function getAllBlockIds(
 }
 
 export async function getAllBlocks(
-  types: RegistryItemType[] = [
-    "registry:block",
-    "registry:internal",
-  ],
+  types: RegistryItemType[] = ["registry:block", "registry:internal"],
   categories: string[] = []
 ): Promise<RegistryItem[]> {
   const { Index } = await import("@/registry/__index__")
 
-  const result = z
-    .record(z.string(), registryItemSchema)
-    .safeParse(Index)
+  const result = z.record(z.string(), registryItemSchema).safeParse(Index)
 
   if (!result.success) {
-    console.error(
-      "Invalid registry index:",
-      result.error.flatten()
-    )
+    console.error("Invalid registry index:", result.error.flatten())
 
     throw new Error(
       "Invalid registry index. Check registry/__index__.ts and registry item definitions."
@@ -78,9 +67,8 @@ export async function getAllBlocks(
     (block) =>
       types.includes(block.type) &&
       (categories.length === 0 ||
-        block.categories?.some((category) =>
-          categories.includes(category)
-        ) === true) &&
+        block.categories?.some((category) => categories.includes(category)) ===
+          true) &&
       !block.name.startsWith("chart-")
   )
 }

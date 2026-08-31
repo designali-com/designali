@@ -1,4 +1,4 @@
-import * as React from "react" 
+import * as React from "react"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -8,23 +8,33 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@workspace/ui/components/accordion" 
+} from "@workspace/ui/components/accordion"
 import { Button } from "@workspace/ui/components/button"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@workspace/ui/components/tabs" 
- import { CodeCollapsibleWrapper } from "@/src/components/docs/code-collapsible-wrapper";
-import { CodeTabs } from "@/src/components/docs/code-tabs";
-import { ComponentPreview } from "@/src/components/docs/component-preview";
-import { ComponentSource } from "@/src/components/docs/component-source";
+import {
+  Tabs,
+  TabsContent,
+  TabsList,
+  TabsTrigger,
+} from "@workspace/ui/components/tabs"
+import { CodeCollapsibleWrapper } from "@/src/components/docs/code-collapsible-wrapper"
+import { CodeTabs } from "@/src/components/docs/code-tabs"
+import { ComponentPreview } from "@/src/components/docs/component-preview"
+import { ComponentSource } from "@/src/components/docs/component-source"
 import { getIconForLanguageExtension } from "./src/components/docs/icons"
 import { CopyButton } from "./src/components/docs/copy-button"
 import { CodeBlockCommand } from "./src/components/docs/code-block-command"
-import { Changelog, ChangelogEntry, ChangelogLink, ChangelogLinks } from "./src/components/docs/changelog"
+import {
+  Changelog,
+  ChangelogEntry,
+  ChangelogLink,
+  ChangelogLinks,
+} from "./src/components/docs/changelog"
 
 export const mdxComponents = {
   h1: ({ className, ...props }: React.ComponentProps<"h1">) => (
     <h1
       className={cn(
-        "font-heading mt-2 scroll-m-28 text-3xl font-bold tracking-tight",
+        "mt-2 scroll-m-28 font-heading text-3xl font-bold tracking-tight",
         className
       )}
       {...props}
@@ -40,7 +50,7 @@ export const mdxComponents = {
           .replace(/\?/g, "")
           .toLowerCase()}
         className={cn(
-          "font-heading mt-8 scroll-m-28 text-xl font-medium tracking-tight first:mt-0 lg:mt-8 [&+p]:mt-4! *:[code]:text-xl",
+          "mt-8 scroll-m-28 font-heading text-xl font-medium tracking-tight first:mt-0 lg:mt-8 [&+p]:mt-4! *:[code]:text-xl",
           className
         )}
         {...props}
@@ -50,7 +60,7 @@ export const mdxComponents = {
   h3: ({ className, ...props }: React.ComponentProps<"h3">) => (
     <h3
       className={cn(
-        "font-heading mt-8 scroll-m-28 text-lg font-medium tracking-tight *:[code]:text-xl",
+        "mt-8 scroll-m-28 font-heading text-lg font-medium tracking-tight *:[code]:text-xl",
         className
       )}
       {...props}
@@ -59,7 +69,7 @@ export const mdxComponents = {
   h4: ({ className, ...props }: React.ComponentProps<"h4">) => (
     <h4
       className={cn(
-        "font-heading mt-8 scroll-m-28 text-base font-medium tracking-tight",
+        "mt-8 scroll-m-28 font-heading text-base font-medium tracking-tight",
         className
       )}
       {...props}
@@ -107,7 +117,7 @@ export const mdxComponents = {
   blockquote: ({ className, ...props }: React.ComponentProps<"blockquote">) => (
     <blockquote
       className={cn(
-        "bg-muted/50 mt-6 border-l-2 py-4 pr-4 pl-6 italic",
+        "mt-6 border-l-2 bg-muted/50 py-4 pr-4 pl-6 italic",
         className
       )}
       {...props}
@@ -125,23 +135,26 @@ export const mdxComponents = {
       className={cn("my-4 flex items-center justify-center md:my-8", className)}
     >
       <hr
-        className="via-border mx-4 h-px w-full border-0 bg-linear-to-r from-transparent to-transparent"
+        className="mx-4 h-px w-full border-0 bg-linear-to-r from-transparent via-border to-transparent"
         {...props}
       />
     </div>
   ),
   table: ({ className, ...props }: React.ComponentProps<"table">) => (
-    <div className="my-6 w-full overflow-x-auto border-dotted border">
+    <div className="my-6 w-full overflow-x-auto border border-dotted">
       <table className={cn("relative w-full text-sm", className)} {...props} />
     </div>
   ),
   thead: ({ className, ...props }: React.ComponentProps<"thead">) => (
-    <thead className={cn("bg-muted border-dotted border-b", className)} {...props} />
+    <thead
+      className={cn("border-b border-dotted bg-muted", className)}
+      {...props}
+    />
   ),
   tr: ({ className, ...props }: React.ComponentProps<"tr">) => (
     <tr
       className={cn(
-        "hover:bg-muted/50 m-0 border-b border-dotted transition-colors last:border-b-0",
+        "m-0 border-b border-dotted transition-colors last:border-b-0 hover:bg-muted/50",
         className
       )}
       {...props}
@@ -226,7 +239,7 @@ export const mdxComponents = {
       return (
         <code
           className={cn(
-            "bg-muted relative px-[0.3rem] py-[0.2rem] font-mono text-[0.8rem] wrap-break-word outline-none",
+            "relative bg-muted px-[0.3rem] py-[0.2rem] font-mono text-[0.8rem] wrap-break-word outline-none",
             className
           )}
           {...props}
@@ -251,19 +264,19 @@ export const mdxComponents = {
         {__raw__ && <CopyButton value={__raw__} src={__src__} />}
         <code {...props} />
       </>
-    ) 
+    )
   },
   Step: ({ className, ...props }: React.ComponentProps<"h3">) => (
     <h3
       className={cn(
-        "font-heading mt-8 scroll-m-32 text-xl font-medium tracking-tight",
+        "mt-8 scroll-m-32 font-heading text-xl font-medium tracking-tight",
         className
       )}
       {...props}
     />
   ),
   Steps: ({ ...props }) => (
-    <div className="[&>h3]:step steps mb-12 [counter-reset:step]" {...props} />
+    <div className="steps mb-12 [counter-reset:step] [&>h3]:step" {...props} />
   ),
   Image: ({
     src,
@@ -274,7 +287,7 @@ export const mdxComponents = {
     ...props
   }: React.ComponentProps<"img">) => (
     <Image
-      className={cn("mt-6 border-dotted border", className)}
+      className={cn("mt-6 border border-dotted", className)}
       src={(src as string) ?? ""}
       width={Number(width)}
       height={Number(height)}
@@ -290,10 +303,7 @@ export const mdxComponents = {
     ...props
   }: React.ComponentProps<typeof TabsList>) => (
     <TabsList
-      className={cn(
-        "justify-start gap-4 bg-transparent px-0",
-        className
-      )}
+      className={cn("justify-start gap-4 bg-transparent px-0", className)}
       {...props}
     />
   ),
@@ -303,7 +313,7 @@ export const mdxComponents = {
   }: React.ComponentProps<typeof TabsTrigger>) => (
     <TabsTrigger
       className={cn(
-        "text-muted-foreground data-[state=active]:text-foreground data-[state=active]:border-primary dark:data-[state=active]:border-primary hover:text-primary rounded-none border-0 border-b-2 border-transparent bg-transparent px-0 pb-3 text-base data-[state=active]:bg-transparent data-[state=active]:shadow-none dark:data-[state=active]:bg-transparent",
+        "rounded-none border-0 border-b-2 border-transparent bg-transparent px-0 pb-3 text-base text-muted-foreground hover:text-primary data-[state=active]:border-primary data-[state=active]:bg-transparent data-[state=active]:text-foreground data-[state=active]:shadow-none dark:data-[state=active]:border-primary dark:data-[state=active]:bg-transparent",
         className
       )}
       {...props}
@@ -324,11 +334,11 @@ export const mdxComponents = {
   Tab: ({ className, ...props }: React.ComponentProps<"div">) => (
     <div className={cn(className)} {...props} />
   ),
-  Button, 
+  Button,
   Accordion,
   AccordionContent,
   AccordionItem,
-  AccordionTrigger,  
+  AccordionTrigger,
   CodeCollapsibleWrapper,
   CodeTabs,
   ComponentPreview,
@@ -352,6 +362,4 @@ export const mdxComponents = {
       {...props}
     />
   ),
-   
-   
 }

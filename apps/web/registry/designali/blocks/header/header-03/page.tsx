@@ -1,5 +1,5 @@
 import { Header } from "@/registry/designali/blocks/header/header-03/components/header"
- 
+
 export default function Header03() {
   return (
     <div className="flex min-h-screen w-full flex-col">

@@ -20,7 +20,7 @@ export function Masonary({ children, initialCount = 6 }: MasonaryProps) {
 
   return (
     <>
-      <div ref={containerRef} className=" flex flex-wrap w-full justify-center">
+      <div ref={containerRef} className="flex w-full flex-wrap justify-center">
         {expanded ? (
           <Masonry
             key="expanded"
@@ -30,7 +30,7 @@ export function Masonary({ children, initialCount = 6 }: MasonaryProps) {
             render={({ data }) => <>{data}</>}
           />
         ) : (
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-2 justify-center">
+          <div className="grid justify-center gap-2 md:grid-cols-2 lg:grid-cols-3">
             {children.slice(0, initialCount).map((child, i) => (
               <div key={i} className="w-full">
                 {child}

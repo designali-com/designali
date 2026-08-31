@@ -1,6 +1,6 @@
-import { Button } from "@workspace/ui/components/button";
-import { Logo } from "@workspace/ui/designali/logo";
-import Link from "next/link";
+import { Button } from "@workspace/ui/components/button"
+import { Logo } from "@workspace/ui/designali/logo"
+import Link from "next/link"
 
 export function HeroSection() {
   return (
@@ -11,7 +11,7 @@ export function HeroSection() {
           {Array.from({ length: 400 }).map((_, i) => (
             <div
               key={i}
-              className="outline-primary absolute h-1 w-full origin-top-left -rotate-45 outline-[0.5px] outline-offset-[-0.5px]"
+              className="absolute h-1 w-full origin-top-left -rotate-45 outline-[0.5px] outline-offset-[-0.5px] outline-primary"
               style={{
                 top: `${i * 10 - 100}px`,
                 left: "-10%",
@@ -23,7 +23,7 @@ export function HeroSection() {
       </div>
 
       {/* Center Panel */}
-      <div className="relative z-10 m-2.5 flex h-[calc(100%-70px)] w-[calc(100%-70px)] border border-dotted items-center justify-center bg-background">
+      <div className="relative z-10 m-2.5 flex h-[calc(100%-70px)] w-[calc(100%-70px)] items-center justify-center border border-dotted bg-background">
         <div className="flex flex-col items-center justify-center gap-5 p-20 text-center">
           <Logo className="size-20" />
 
@@ -37,14 +37,11 @@ export function HeroSection() {
             beautifully.
           </p>
 
-          <Button
-            nativeButton={false}
-            render={<Link href="" />}
-          >
+          <Button nativeButton={false} render={<Link href="" />}>
             Book a Call
           </Button>
         </div>
       </div>
     </section>
-  );
+  )
 }

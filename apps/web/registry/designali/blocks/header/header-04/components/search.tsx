@@ -11,6 +11,7 @@ import {
 } from "lucide-react"
 
 import {
+  Command,
   CommandDialog,
   CommandEmpty,
   CommandGroup,
@@ -33,108 +34,157 @@ export function Search() {
     }
 
     document.addEventListener("keydown", down)
-    return () => document.removeEventListener("keydown", down)
+
+    return () => {
+      document.removeEventListener("keydown", down)
+    }
   }, [])
 
   return (
-    <>
+    <div className="">
       <button
-        className="border-input bg-background text-foreground placeholder:text-muted-foreground/70 focus-visible:border-ring focus-visible:ring-ring/50 hidden h-9 w-full max-w-md rounded-md border px-3 py-2 text-sm shadow-xs transition-[color,box-shadow] outline-none focus-visible:ring-[3px] lg:inline-flex"
+        type="button"
         onClick={() => setOpen(true)}
+        className="hidden h-9 w-full max-w-xs items-center border border-input bg-background px-3 py-2 text-sm shadow-xs transition-[color,box-shadow] outline-none focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 lg:inline-flex"
       >
         <span className="flex grow items-center">
           <SearchIcon
-            className="text-muted-foreground/80 -ms-1 me-3"
+            className="-ms-1 me-3 text-muted-foreground/80"
             size={16}
             aria-hidden="true"
           />
-          <span className="text-muted-foreground/70 font-normal">
-            Search designs...
+
+          <span className="font-normal text-muted-foreground/70">
+            Search design...
           </span>
         </span>
-        <kbd className="bg-background text-muted-foreground/70 ms-12 -me-1 inline-flex h-5 max-h-full items-center rounded border px-1 font-[inherit] text-[0.625rem] font-medium">
+
+        <kbd className="ms-12 -me-1 inline-flex h-5 items-center border bg-background px-1 font-[inherit] text-[0.625rem] font-medium text-muted-foreground/70">
           ⌘K
         </kbd>
       </button>
+
+      {/* Command Dialog */}
       <CommandDialog open={open} onOpenChange={setOpen}>
-        <CommandInput placeholder="Type to search components, assets, or docs..." />
-        <CommandList>
-          <CommandEmpty>No matches found.</CommandEmpty>
+        <Command>
+          <CommandInput placeholder="Type to search components, assets, or docs..." />
 
-          <CommandGroup heading="Create">
-            <CommandItem>
-              <FilePlus2Icon
-                size={16}
-                className="opacity-60"
-                aria-hidden="true"
-              />
-              <span>New project</span>
-              <CommandShortcut className="justify-center">⌘N</CommandShortcut>
-            </CommandItem>
-            <CommandItem>
-              <LayoutTemplateIcon
-                size={16}
-                className="opacity-60"
-                aria-hidden="true"
-              />
-              <span>New template</span>
-              <CommandShortcut className="justify-center">⌘T</CommandShortcut>
-            </CommandItem>
-            <CommandItem>
-              <PenToolIcon
-                size={16}
-                className="opacity-60"
-                aria-hidden="true"
-              />
-              <span>Start design</span>
-              <CommandShortcut className="justify-center">⌘S</CommandShortcut>
-            </CommandItem>
-          </CommandGroup>
+          <CommandList>
+            <CommandEmpty>No matches found.</CommandEmpty>
 
-          <CommandSeparator />
+            {/* Create */}
+            <CommandGroup heading="Create">
+              <CommandItem>
+                <FilePlus2Icon
+                  size={16}
+                  className="opacity-60"
+                  aria-hidden="true"
+                />
 
-          <CommandGroup heading="Navigate">
-            <CommandItem>
-              <ArrowUpRightIcon
-                size={16}
-                className="opacity-60"
-                aria-hidden="true"
-              />
-              <span>Go to workspace</span>
-            </CommandItem>
-            <CommandItem>
-              <ArrowUpRightIcon
-                size={16}
-                className="opacity-60"
-                aria-hidden="true"
-              />
-              <span>Go to assets</span>
-            </CommandItem>
-            <CommandItem>
-              <ArrowUpRightIcon
-                size={16}
-                className="opacity-60"
-                aria-hidden="true"
-              />
-              <span>Go to documentation</span>
-            </CommandItem>
-          </CommandGroup>
+                <span>New project</span>
 
-          <CommandSeparator />
+                <CommandShortcut>⌘N</CommandShortcut>
+              </CommandItem>
 
-          <CommandGroup heading="Themes">
-            <CommandItem>
-              <PaletteIcon
-                size={16}
-                className="opacity-60"
-                aria-hidden="true"
-              />
-              <span>Switch theme</span>
-              <CommandShortcut>⌘⇧T</CommandShortcut>
-            </CommandItem>
-          </CommandGroup>
-        </CommandList>
+              <CommandItem>
+                <LayoutTemplateIcon
+                  size={16}
+                  className="opacity-60"
+                  aria-hidden="true"
+                />
+
+                <span>New template</span>
+
+                <CommandShortcut>⌘T</CommandShortcut>
+              </CommandItem>
+
+              <CommandItem>
+                <PenToolIcon
+                  size={16}
+                  className="opacity-60"
+                  aria-hidden="true"
+                />
+
+                <span>Start design</span>
+
+                <CommandShortcut>⌘S</CommandShortcut>
+              </CommandItem>
+            </CommandGroup>
+
+            <CommandSeparator />
+
+            {/* Navigate */}
+            <CommandGroup heading="Navigate">
+              <CommandItem>
+                <ArrowUpRightIcon
+                  size={16}
+                  className="opacity-60"
+                  aria-hidden="true"
+                />
+
+                <span>Go to workspace</span>
+              </CommandItem>
+
+              <CommandItem>
+                <ArrowUpRightIcon
+                  size={16}
+                  className="opacity-60"
+                  aria-hidden="true"
+                />
+
+                <span>Go to templates</span>
+              </CommandItem>
+
+              <CommandItem>
+                <ArrowUpRightIcon
+                  size={16}
+                  className="opacity-60"
+                  aria-hidden="true"
+                />
+
+                <span>Go to documentation</span>
+              </CommandItem>
+
+              <CommandItem>
+                <ArrowUpRightIcon
+                  size={16}
+                  className="opacity-60"
+                  aria-hidden="true"
+                />
+
+                <span>Go to blocks</span>
+              </CommandItem>
+
+              <CommandItem>
+                <ArrowUpRightIcon
+                  size={16}
+                  className="opacity-60"
+                  aria-hidden="true"
+                />
+
+                <span>Go to icons</span>
+              </CommandItem>
+            </CommandGroup>
+
+            <CommandSeparator />
+
+            {/* Themes */}
+            <CommandGroup heading="Themes">
+              <CommandItem>
+                <PaletteIcon
+                  size={16}
+                  className="opacity-60"
+                  aria-hidden="true"
+                />
+
+                <span>Switch theme</span>
+
+                <CommandShortcut>⌘⇧T</CommandShortcut>
+              </CommandItem>
+            </CommandGroup>
+          </CommandList>
+        </Command>
       </CommandDialog>
-    </>
+    </div>
   )
 }

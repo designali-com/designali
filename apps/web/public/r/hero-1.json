@@ -6,7 +6,7 @@
   "files": [
     {
       "path": "registry/designali/blocks/hero/hero-1.tsx",
-      "content": "import { Button } from \"@workspace/ui/components/button\"\n\nexport function ButtonVariantsDemo() {\n  return (\n    <div className=\"flex flex-wrap max-w-md mx-auto justify-center items-center gap-2\">\n      <Button variant=\"default\">Default</Button>\n      <Button variant=\"outline\">Outline</Button>\n      <Button variant=\"secondary\">Secondary</Button>\n      <Button variant=\"ghost\">Ghost</Button>\n      <Button variant=\"destructive\">Destructive</Button>\n      <Button variant=\"link\">Link</Button> \n    </div>\n  )\n}",
+      "content": "import { Button } from \"@workspace/ui/components/button\"\n\nexport function ButtonVariantsDemo() {\n  return (\n    <div className=\"mx-auto flex max-w-md flex-wrap items-center justify-center gap-2\">\n      <Button variant=\"default\">Default</Button>\n      <Button variant=\"outline\">Outline</Button>\n      <Button variant=\"secondary\">Secondary</Button>\n      <Button variant=\"ghost\">Ghost</Button>\n      <Button variant=\"destructive\">Destructive</Button>\n      <Button variant=\"link\">Link</Button>\n    </div>\n  )\n}\n",
       "type": "registry:block"
     }
   ],

@@ -37,10 +37,7 @@ export function GaugeDemoThickness() {
   return (
     <div className="flex flex-wrap items-center justify-center gap-8">
       {gauges.map((gauge) => (
-        <div
-          key={gauge.label}
-          className="flex flex-col items-center gap-3"
-        >
+        <div key={gauge.label} className="flex flex-col items-center gap-3">
           <Gauge
             value={gauge.thickness}
             min={0}
@@ -57,9 +54,7 @@ export function GaugeDemoThickness() {
             <GaugeValueText />
           </Gauge>
 
-          <span className="text-sm text-muted-foreground">
-            {gauge.label}
-          </span>
+          <span className="text-sm text-muted-foreground">{gauge.label}</span>
         </div>
       ))}
     </div>

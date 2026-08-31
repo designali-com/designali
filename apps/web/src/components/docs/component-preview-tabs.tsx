@@ -2,11 +2,7 @@
 
 import * as React from "react"
 
-import {
-  Tabs,
-  TabsList,
-  TabsTrigger,
-} from "@workspace/ui/components/tabs"
+import { Tabs, TabsList, TabsTrigger } from "@workspace/ui/components/tabs"
 
 import { cn } from "@workspace/ui/lib/utils"
 
@@ -27,35 +23,22 @@ export function ComponentPreviewTabs({
 
   return (
     <div
-      className={cn(
-        "group relative mt-4 mb-12 flex flex-col gap-2",
-        className
-      )}
+      className={cn("group relative mt-4 mb-12 flex flex-col gap-2", className)}
       {...props}
     >
-      <Tabs
-        onValueChange={setTab}
-        value={tab}
-      >
+      <Tabs onValueChange={setTab} value={tab}>
         <div className="flex items-center justify-between">
           {!hideCode && (
             <TabsList variant={"line"}>
-              <TabsTrigger value="preview">
-                Preview
-              </TabsTrigger>
+              <TabsTrigger value="preview">Preview</TabsTrigger>
 
-              <TabsTrigger value="code">
-                Code
-              </TabsTrigger>
+              <TabsTrigger value="code">Code</TabsTrigger>
             </TabsList>
           )}
         </div>
       </Tabs>
 
-      <div
-        className="relative w-full border-dotted border"
-        data-tab={tab}
-      >
+      <div className="relative w-full border border-dotted" data-tab={tab}>
         {/* Preview */}
         <div
           className="invisible data-[active=true]:visible"
@@ -68,13 +51,13 @@ export function ComponentPreviewTabs({
 
               align === "center" && "items-center justify-center",
               align === "start" && "items-start justify-start",
-              align === "end" && "items-end justify-end",
+              align === "end" && "items-end justify-end"
             )}
           >
             <div
               data-slot="preview"
               className={cn(
-                "min-w-0 w-full",
+                "w-full min-w-0",
                 align === "center" && "flex justify-center",
                 align === "start" && "flex justify-start",
                 align === "end" && "flex justify-end"

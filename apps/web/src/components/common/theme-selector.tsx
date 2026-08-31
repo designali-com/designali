@@ -2,10 +2,7 @@
 
 import { useEffect, useState } from "react"
 import { useThemeConfig } from "@/src/components/common/active-theme"
-import {
-  COLOR_OPTIONS,
-  THEME_PRESETS,
-} from "@/src/lib/themes"
+import { COLOR_OPTIONS, THEME_PRESETS } from "@/src/lib/themes"
 import { cn } from "@workspace/ui/lib/utils"
 import { Shuffle } from "lucide-react"
 
@@ -21,9 +18,7 @@ import {
   SelectValue,
 } from "@workspace/ui/components/select"
 
-export function ThemePattern({
-  className,
-}: React.ComponentProps<"div">) {
+export function ThemePattern({ className }: React.ComponentProps<"div">) {
   const { activeTheme, setActiveTheme } = useThemeConfig()
   const [mounted, setMounted] = useState(false)
 
@@ -50,10 +45,7 @@ export function ThemePattern({
 
   return (
     <div
-      className={cn(
-        "flex w-full flex-wrap items-center gap-2 px-2",
-        className
-      )}
+      className={cn("flex w-full flex-wrap items-center gap-2 px-2", className)}
     >
       <Button
         onClick={applyRandomTheme}
@@ -68,10 +60,7 @@ export function ThemePattern({
       <Label className="sr-only">Color</Label>
 
       {mounted ? (
-        <Select
-          value={activeTheme}
-          onValueChange={applyColorOnly}
-        >
+        <Select value={activeTheme} onValueChange={applyColorOnly}>
           <SelectTrigger className="w-40 bg-secondary shadow-none">
             <span className="font-medium">Color:</span>
             <SelectValue placeholder="Pick color" />
@@ -96,9 +85,7 @@ export function ThemePattern({
       ) : (
         <div className="flex h-9 w-40 items-center rounded-md border bg-secondary px-3 text-sm">
           <span className="font-medium">Color:</span>
-          <span className="ml-2 text-muted-foreground">
-            Pick color
-          </span>
+          <span className="ml-2 text-muted-foreground">Pick color</span>
         </div>
       )}
     </div>

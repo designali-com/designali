@@ -13,10 +13,7 @@ import {
 export function GaugeDemoCustomValue() {
   return (
     <div className="flex flex-wrap items-center justify-center gap-10">
-      <Gauge
-        value={72} 
-        getValueText={(value) => `${value} BPM`}
-      >
+      <Gauge value={72} getValueText={(value) => `${value} BPM`}>
         <GaugeIndicator>
           <GaugeTrack />
           <GaugeRange />
@@ -25,12 +22,7 @@ export function GaugeDemoCustomValue() {
         <GaugeValueText />
       </Gauge>
 
-      <Gauge
-        value={4}
-        min={0}
-        max={10} 
-        getValueText={(value) => `${value}/10`}
-      >
+      <Gauge value={4} min={0} max={10} getValueText={(value) => `${value}/10`}>
         <GaugeIndicator>
           <GaugeTrack />
           <GaugeRange />
@@ -42,7 +34,7 @@ export function GaugeDemoCustomValue() {
       <Gauge
         value={42}
         min={0}
-        max={60} 
+        max={60}
         getValueText={(value) => `${value} min`}
       >
         <GaugeIndicator>

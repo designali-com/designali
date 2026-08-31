@@ -1,15 +1,14 @@
-import type { Registry } from "shadcn/schema";
+import type { Registry } from "shadcn/schema"
 
 export const ui: Registry["items"] = [
-    {
-        name: "gauge",
+  {
+    name: "gauge",
+    type: "registry:ui",
+    files: [
+      {
+        path: "ui/gauge.tsx",
         type: "registry:ui",
-        files: [
-            {
-                path: "ui/gauge.tsx",
-                type: "registry:ui",
-            },
-        ],
-    },
-
-];
+      },
+    ],
+  },
+]

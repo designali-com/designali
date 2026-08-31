@@ -14,12 +14,7 @@ export function GaugeDemoRadius() {
   return (
     <div className="flex flex-wrap items-center justify-center gap-10">
       <div className="flex flex-col items-center gap-3">
-        <Gauge
-          value={72}
-          size={180}
-          tickInnerRadius={77}
-          tickOuterRadius={88}
-        >
+        <Gauge value={72} size={180} tickInnerRadius={77} tickOuterRadius={88}>
           <GaugeIndicator>
             <GaugeTrack />
             <GaugeRange />
@@ -28,18 +23,11 @@ export function GaugeDemoRadius() {
           <GaugeValueText />
         </Gauge>
 
-        <span className="text-sm text-muted-foreground">
-          Compact
-        </span>
+        <span className="text-sm text-muted-foreground">Compact</span>
       </div>
 
       <div className="flex flex-col items-center gap-3">
-        <Gauge
-          value={72}
-          size={180}
-          tickInnerRadius={35}
-          tickOuterRadius={88}
-        >
+        <Gauge value={72} size={180} tickInnerRadius={35} tickOuterRadius={88}>
           <GaugeIndicator>
             <GaugeTrack />
             <GaugeRange />
@@ -48,9 +36,7 @@ export function GaugeDemoRadius() {
           <GaugeValueText />
         </Gauge>
 
-        <span className="text-sm text-muted-foreground">
-          Wide
-        </span>
+        <span className="text-sm text-muted-foreground">Wide</span>
       </div>
     </div>
   )

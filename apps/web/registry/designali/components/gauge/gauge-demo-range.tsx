@@ -35,18 +35,14 @@ export function GaugeDemoRange() {
   return (
     <div className="flex flex-wrap items-center justify-center gap-10">
       {ranges.map((item) => (
-        <div
-          key={item.label}
-          className="flex flex-col items-center gap-3"
-        >
+        <div key={item.label} className="flex flex-col items-center gap-3">
           <Gauge
             value={item.value}
             min={item.min}
             max={item.max}
             size={170}
             getValueText={(value, min, max) => {
-              const percentage =
-                ((value - min) / (max - min)) * 100
+              const percentage = ((value - min) / (max - min)) * 100
 
               return `${Math.round(percentage)}%`
             }}
@@ -59,9 +55,7 @@ export function GaugeDemoRange() {
             <GaugeValueText />
           </Gauge>
 
-          <span className="text-sm text-muted-foreground">
-            {item.label}
-          </span>
+          <span className="text-sm text-muted-foreground">{item.label}</span>
         </div>
       ))}
     </div>
