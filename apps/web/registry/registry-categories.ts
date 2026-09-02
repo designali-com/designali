@@ -220,14 +220,14 @@ export const templateCategories: {
   fonts: string[]
 }[] = [
   {
-    name: "SaaSly",
-    slug: "saasly",
+    name: "Portfolio Simple",
+    slug: "portfolio-simple",
     description:
       "A modern SaaS landing page designed to help software products communicate their value and convert visitors into customers.",
     iconName: "PanelTop",
     hidden: false,
 
-    url: "https://vercel.com/home",
+    url: "https://portfolio-simple.designali.com",
 
     tech: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
 
@@ -248,19 +248,19 @@ export const templateCategories: {
 
     fonts: ["Inter", "Geist"],
 
-    image: "/og.jpg",
-    video: "/templates/saasly.mp4",
+    image: "/images/templates/portfolio-simple.jpg",
+    video: "/images/templates/portfolio-simple.jpg",
   },
 
   {
-    name: "Ali Imam",
-    slug: "aliimam",
+    name: "Design Agency",
+    slug: "design-agency",
     description:
       "A clean and modern personal portfolio template for designers, developers, creatives, and digital professionals.",
     iconName: "PanelTop",
     hidden: false,
 
-    url: "https://aliimam.in",
+    url: "https://design-agency.designali.com",
 
     tech: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
 
@@ -281,7 +281,7 @@ export const templateCategories: {
 
     fonts: ["Inter", "Geist"],
 
-    image: "/og.jpg",
-    video: "/templates/saasly.mp4",
+    image: "/images/templates/design-agency.jpg",
+    video: "/images/templates/design-agency.jpg",
   },
 ]

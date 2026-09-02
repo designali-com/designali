@@ -5,6 +5,7 @@ import "@workspace/ui/globals.css"
 import { cn } from "@workspace/ui/lib/utils"
 import { Provider } from "@/src/components/common/provider"
 
+
 const geist = Geist({
   subsets: ["latin"],
   variable: "--font-sans",

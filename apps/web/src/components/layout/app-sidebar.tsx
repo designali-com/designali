@@ -18,6 +18,7 @@ import {
   Palette,
   Shapes,
   BookOpen,
+  Frame,
 } from "lucide-react"
 
 import { NavMain } from "./nav-main"
@@ -33,17 +34,7 @@ const data = {
       title: "Blocks",
       url: "/blocks",
       icon: Blocks,
-    },
-    {
-      title: "Pages",
-      url: "/pages",
-      icon: FileText,
-    },
-    {
-      title: "Illustrations",
-      url: "/illustrations",
-      icon: Image,
-    },
+    }, 
     {
       title: "Landing",
       url: "/landing",
@@ -55,9 +46,19 @@ const data = {
       icon: Shapes,
     },
     {
+      title: "Illustrations",
+      url: "/illustrations",
+      icon: Image,
+    },
+    {
       title: "Icons",
       url: "/icons",
       icon: FileText,
+    },
+    {
+      title: "Logos",
+      url: "/logos",
+      icon: Frame,
     },
     {
       title: "Components",
