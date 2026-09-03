@@ -1,85 +1,145 @@
 import type { Registry } from "shadcn/schema"
 
 export const components: Registry["items"] = [
+   
   {
-    name: "accordion-01",
-    type: "registry:block",
-    description:
-      "Personal FAQ accordion introducing Ali Imam, his design approach, inspirations, and ways to connect for collaborations.",
+    title: "Counter Number",
+    name: "counter-number-default",
+    type: "registry:component", 
     files: [
       {
-        path: "components/accordion/accordion-01.tsx",
+        path: "components/counter-number/counter-number-default.tsx",
+        type: "registry:component",
+      },
+    ],
+  },
+  {
+    title: "Counter Number",
+    name: "counter-number-currency",
+    type: "registry:component", 
+    files: [
+      {
+        path: "components/counter-number/counter-number-currency.tsx",
+        type: "registry:component",
+      },
+    ],
+  },
+  {
+    title: "Counter Number",
+    name: "counter-number-custom",
+    type: "registry:component", 
+    files: [
+      {
+        path: "components/counter-number/counter-number-custom.tsx",
+        type: "registry:component",
+      },
+    ],
+  },
+  {
+    title: "Counter Number",
+    name: "counter-number-decimal",
+    type: "registry:component", 
+    files: [
+      {
+        path: "components/counter-number/counter-number-decimal.tsx",
+        type: "registry:component",
+      },
+    ],
+  },
+  {
+    title: "Counter Number",
+    name: "counter-number-percentage",
+    type: "registry:component", 
+    files: [
+      {
+        path: "components/counter-number/counter-number-percentage.tsx",
+        type: "registry:component",
+      },
+    ],
+  },
+  {
+    title: "Counter Number",
+    name: "counter-number-prefix",
+    type: "registry:component",  
+    files: [
+      {
+        path: "components/counter-number/counter-number-prefix.tsx",
+        type: "registry:component",
+      },
+    ],
+  },
+  {
+    title: "Counter Number",
+    name: "counter-number-seperator",
+    type: "registry:block",  
+    files: [
+      {
+        path: "components/counter-number/counter-number-seperator.tsx",
         type: "registry:block",
       },
     ],
   },
   {
-    name: "accordion-02",
+    title: "Dot Pattern",
+    name: "dot-pattern-default",
     type: "registry:block",
-    description:
-      "Personal FAQ accordion introducing Ali Imam, his design approach, inspirations, and ways to connect for collaborations.",
+    description: "block showing a simple dot pattern.",
+    registryDependencies: ["dot-pattern"],
     files: [
       {
-        path: "components/accordion/accordion-02.tsx",
+        path: "components/dot-pattern/dot-pattern-default.tsx",
         type: "registry:block",
       },
     ],
   },
   {
-    name: "accordion-03",
+    title: "Dot Pattern",
+    name: "dot-pattern-custom",
     type: "registry:block",
-    description:
-      "Personal FAQ accordion introducing Ali Imam, his design approach, inspirations, and ways to connect for collaborations.",
+    description: "block showing a simple dot pattern.",
+    registryDependencies: ["dot-pattern"],
     files: [
       {
-        path: "components/accordion/accordion-03.tsx",
+        path: "components/dot-pattern/dot-pattern-custom.tsx",
         type: "registry:block",
       },
     ],
   },
   {
-    name: "accordion-04",
+    title: "Dot Pattern",
+    name: "dot-pattern-01",
     type: "registry:block",
-    description:
-      "Personal FAQ accordion introducing Ali Imam, his design approach, inspirations, and ways to connect for collaborations.",
+    description: "block showing a simple dot pattern.",
+    registryDependencies: ["dot-pattern"],
     files: [
       {
-        path: "components/accordion/accordion-04.tsx",
+        path: "components/dot-pattern/dot-pattern-01.tsx",
         type: "registry:block",
       },
     ],
   },
   {
-    name: "accordion-05",
+    title: "Dot Pattern",
+    name: "dot-pattern-02",
     type: "registry:block",
-    description:
-      "Personal FAQ accordion introducing Ali Imam, his design approach, inspirations, and ways to connect for collaborations.",
+    description: "block showing a simple dot pattern.",
+    registryDependencies: ["dot-pattern"],
     files: [
       {
-        path: "components/accordion/accordion-05.tsx",
+        path: "components/dot-pattern/dot-pattern-02.tsx",
         type: "registry:block",
       },
     ],
   },
   {
-    name: "accordion-06",
+    title: "Dot Pattern",
+    name: "dot-pattern-03",
     type: "registry:block",
-    description:
-      "Personal FAQ accordion introducing Ali Imam, his design approach, inspirations, and ways to connect for collaborations.",
+    description: "block showing a simple dot pattern.",
+    registryDependencies: ["dot-pattern"],
     files: [
       {
-        path: "components/accordion/accordion-06.tsx",
-        type: "registry:block",
-      },
-    ],
-  },
-  {
-    name: "button-variants",
-    description: "Button variants showcase",
-    type: "registry:block",
-    files: [
-      {
-        path: "components/button/button-variants.tsx",
+        path: "components/dot-pattern/dot-pattern-03.tsx",
         type: "registry:block",
       },
     ],
@@ -218,7 +278,7 @@ export const components: Registry["items"] = [
   },
   {
     name: "gauge-demo-biomarker",
-    description: "Biomarker gauge examples",
+    description: "Biomarker gauge components",
     type: "registry:block",
     files: [
       {
@@ -252,7 +312,7 @@ export const components: Registry["items"] = [
   {
     name: "bento-01",
     type: "registry:block", 
-    description: "Example showing a simple bento.", 
+    description: "block showing a simple bento.", 
     files: [
       {
         path: "components/bento/bento-01.tsx",
@@ -263,7 +323,7 @@ export const components: Registry["items"] = [
   {
     name: "bento-02",
     type: "registry:block", 
-    description: "Example showing a simple bento.", 
+    description: "block showing a simple bento.", 
     files: [
       {
         path: "components/bento/bento-02.tsx",
@@ -274,7 +334,7 @@ export const components: Registry["items"] = [
   {
     name: "bento-03",
     type: "registry:block", 
-    description: "Example showing a simple bento.", 
+    description: "block showing a simple bento.", 
     files: [
       {
         path: "components/bento/bento-03.tsx",
@@ -285,7 +345,7 @@ export const components: Registry["items"] = [
   {
     name: "bento-04",
     type: "registry:block", 
-    description: "Example showing a simple bento.", 
+    description: "block showing a simple bento.", 
     files: [
       {
         path: "components/bento/bento-04.tsx",
@@ -296,10 +356,140 @@ export const components: Registry["items"] = [
   {
     name: "bento-05",
     type: "registry:block", 
-    description: "Example showing a simple bento.", 
+    description: "block showing a simple bento.", 
     files: [
       {
         path: "components/bento/bento-05.tsx",
+        type: "registry:block",
+      },
+    ],
+  },
+  {
+    title: "Grid Pattern",
+    name: "grid-pattern-default",
+    type: "registry:block",
+    description: "block showing a simple grid pattern.",
+    registryDependencies: ["grid-pattern"],
+    files: [
+      {
+        path: "components/grid-pattern/grid-pattern-default.tsx",
+        type: "registry:block",
+      },
+    ],
+  },
+  {
+    title: "Grid Pattern",
+    name: "grid-pattern-custom",
+    type: "registry:block",
+    description: "block showing a simple grid pattern.",
+    registryDependencies: ["grid-pattern"],
+    files: [
+      {
+        path: "components/grid-pattern/grid-pattern-custom.tsx",
+        type: "registry:block",
+      },
+    ],
+  },
+  {
+    title: "Grid Pattern",
+    name: "grid-pattern-large",
+    type: "registry:block",
+    description: "block showing a simple grid pattern.",
+    registryDependencies: ["grid-pattern"],
+    files: [
+      {
+        path: "components/grid-pattern/grid-pattern-large.tsx",
+        type: "registry:block",
+      },
+    ],
+  },
+  {
+    title: "Grid Pattern",
+    name: "grid-pattern-small",
+    type: "registry:block",
+    description: "block showing a simple grid pattern.",
+    registryDependencies: ["grid-pattern"],
+    files: [
+      {
+        path: "components/grid-pattern/grid-pattern-small.tsx",
+        type: "registry:block",
+      },
+    ],
+  },
+  {
+    title: "Grid Pattern",
+    name: "grid-pattern-01",
+    type: "registry:block",
+    description: "block showing a simple grid pattern.",
+    registryDependencies: ["grid-pattern"],
+    files: [
+      {
+        path: "components/grid-pattern/grid-pattern-01.tsx",
+        type: "registry:block",
+      },
+    ],
+  },
+  {
+    title: "Typewriter",
+    name: "typewriter-01",
+    type: "registry:block",
+    description: "block showing a simple typewriter.",
+    registryDependencies: ["typewriter"],
+    files: [
+      {
+        path: "components/typewriter/typewriter-01.tsx",
+        type: "registry:block",
+      },
+    ],
+  },
+  {
+    title: "Typewriter",
+    name: "typewriter-02",
+    type: "registry:block",
+    description: "block showing a simple typewriter.",
+    registryDependencies: ["typewriter"],
+    files: [
+      {
+        path: "components/typewriter/typewriter-02.tsx",
+        type: "registry:block",
+      },
+    ],
+  },
+  {
+    title: "Typewriter",
+    name: "typewriter-03",
+    type: "registry:block",
+    description: "block showing a simple typewriter.",
+    registryDependencies: ["typewriter"],
+    files: [
+      {
+        path: "components/typewriter/typewriter-03.tsx",
+        type: "registry:block",
+      },
+    ],
+  },
+  {
+    title: "Typewriter",
+    name: "typewriter-04",
+    type: "registry:block",
+    description: "block showing a simple typewriter.",
+    registryDependencies: ["typewriter"],
+    files: [
+      {
+        path: "components/typewriter/typewriter-04.tsx",
+        type: "registry:block",
+      },
+    ],
+  },
+  {
+    title: "Typewriter",
+    name: "typewriter-05",
+    type: "registry:block",
+    description: "block showing a simple typewriter.",
+    registryDependencies: ["typewriter"],
+    files: [
+      {
+        path: "components/typewriter/typewriter-05.tsx",
         type: "registry:block",
       },
     ],

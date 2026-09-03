@@ -17,7 +17,47 @@ export const ui: Registry["items"] = [
     files: [
       {
         path: "ui/bento.tsx",
-        type: "registry:component",
+        type: "registry:ui",
+      },
+    ],
+  },
+  {
+    name: "counter-number",
+    type: "registry:ui",
+    files: [
+      {
+        path: "ui/counter-number.tsx",
+        type: "registry:ui",
+      },
+    ],
+  },
+  {
+    name: "dot-pattern",
+    type: "registry:ui",
+    files: [
+      {
+        path: "ui/dot-pattern.tsx",
+        type: "registry:ui",
+      },
+    ],
+  },
+  {
+    name: "grid-pattern",
+    type: "registry:ui",
+    files: [
+      {
+        path: "ui/grid-pattern.tsx",
+        type: "registry:ui",
+      },
+    ],
+  },
+  {
+    name: "typewriter",
+    type: "registry:ui",
+    files: [
+      {
+        path: "ui/typewriter.tsx",
+        type: "registry:ui",
       },
     ],
   },

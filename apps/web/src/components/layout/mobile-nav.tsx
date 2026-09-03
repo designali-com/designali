@@ -5,9 +5,8 @@ import Link from "next/link"
 import { Equal, XIcon } from "lucide-react"
 
 import { cn } from "@workspace/ui/lib/utils"
-import { Button } from "@workspace/ui/components/button"
-
-import { navLinks } from "@/src/components/layout/header"
+import { Button } from "@workspace/ui/components/button" 
+import { navLinks } from "@/registry/registry-categories"
 
 export function MobileNav() {
   const [open, setOpen] = React.useState(false)

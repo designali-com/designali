@@ -1,4 +1,481 @@
-import { type LucideIcon } from "lucide-react"
+import {
+  AppWindow,
+  Blocks,
+  BookOpen,
+  Component,
+  FileText,
+  Frame,
+  Image,
+  LayoutGrid,
+  LayoutTemplate,
+  Shapes,
+} from "lucide-react"
+
+export const navLinks = [
+  { name: "Templates", href: "/templates" },
+  { name: "Blocks", href: "/blocks" },
+  { name: "Illustration", href: "/illustration" },
+  { name: "Components", href: "/docs" },
+  { name: "Icons", href: "/icons" },
+]
+
+
+export const data = {
+  navMain: [
+    {
+      title: "Templates",
+      url: "/templates",
+      icon: AppWindow,
+    },
+    {
+      title: "Blocks",
+      url: "/blocks",
+      icon: Blocks,
+    }, 
+    {
+      title: "Landing",
+      url: "/landing",
+      icon: LayoutTemplate,
+    },
+    {
+      title: "Patterns",
+      url: "/patterns",
+      icon: Shapes,
+    },
+    {
+      title: "Illustrations",
+      url: "/illustrations",
+      icon: Image,
+    },
+    {
+      title: "Icons",
+      url: "/icons",
+      icon: FileText,
+    },
+    {
+      title: "Logos",
+      url: "/logos",
+      icon: Frame,
+    },
+    {
+      title: "UI Designs",
+      url: "/ui",
+      icon: LayoutGrid,
+    },
+    {
+      title: "Components",
+      url: "/docs/components/bento",
+      icon: Component,
+    },
+    {
+      title: "Documentation",
+      url: "/docs",
+      icon: BookOpen,
+    },
+  ],
+}
+
+export const uiCategories: {
+  name: string
+  slug: string
+  description: string
+  iconName: string
+  hidden: boolean
+}[] = [
+  {
+    name: "Accordion",
+    slug: "accordion",
+    description:
+      "A vertically stacked set of interactive headings that reveal or hide content.",
+    iconName: "List",
+    hidden: false,
+  },
+  {
+    name: "Alert",
+    slug: "alert",
+    description:
+      "Displays a callout message that draws attention to important information.",
+    iconName: "CircleAlert",
+    hidden: false,
+  },
+  {
+    name: "Alert Dialog",
+    slug: "alert-dialog",
+    description:
+      "A modal dialog that interrupts the user with important information or actions.",
+    iconName: "TriangleAlert",
+    hidden: false,
+  },
+  {
+    name: "Aspect Ratio",
+    slug: "aspect-ratio",
+    description:
+      "Displays content within a fixed aspect ratio container.",
+    iconName: "Ratio",
+    hidden: false,
+  },
+  {
+    name: "Avatar",
+    slug: "avatar",
+    description:
+      "An image element with a fallback for representing users or entities.",
+    iconName: "CircleUser",
+    hidden: false,
+  },
+  {
+    name: "Badge",
+    slug: "badge",
+    description:
+      "Small status indicators for labels, categories, and metadata.",
+    iconName: "Badge",
+    hidden: false,
+  },
+  {
+    name: "Breadcrumb",
+    slug: "breadcrumb",
+    description:
+      "Displays the user's current location within a navigational hierarchy.",
+    iconName: "ChevronRight",
+    hidden: false,
+  },
+  {
+    name: "Button",
+    slug: "button",
+    description:
+      "Interactive buttons for actions, navigation, forms, and user interactions.",
+    iconName: "Square",
+    hidden: false,
+  },
+  {
+    name: "Calendar",
+    slug: "calendar",
+    description:
+      "A date picker component for selecting and navigating dates.",
+    iconName: "Calendar",
+    hidden: false,
+  },
+  {
+    name: "Card",
+    slug: "card",
+    description:
+      "A flexible container for grouping related content and actions.",
+    iconName: "CreditCard",
+    hidden: false,
+  },
+  {
+    name: "Carousel",
+    slug: "carousel",
+    description:
+      "A slideshow component for displaying content in a horizontal sequence.",
+    iconName: "GalleryHorizontal",
+    hidden: false,
+  },
+  {
+    name: "Chart",
+    slug: "chart",
+    description:
+      "Composable chart components for visualizing data and analytics.",
+    iconName: "ChartNoAxesCombined",
+    hidden: false,
+  },
+  {
+    name: "Checkbox",
+    slug: "checkbox",
+    description:
+      "A control that allows users to select one or multiple options.",
+    iconName: "SquareCheck",
+    hidden: false,
+  },
+  {
+    name: "Collapsible",
+    slug: "collapsible",
+    description:
+      "An interactive component that expands and collapses content.",
+    iconName: "PanelTop",
+    hidden: false,
+  },
+  {
+    name: "Combobox",
+    slug: "combobox",
+    description:
+      "A searchable select control for choosing from a list of options.",
+    iconName: "ChevronsUpDown",
+    hidden: false,
+  },
+  {
+    name: "Command",
+    slug: "command",
+    description:
+      "A command menu for searching and executing actions quickly.",
+    iconName: "Command",
+    hidden: false,
+  },
+  {
+    name: "Context Menu",
+    slug: "context-menu",
+    description:
+      "A menu that appears in response to a user interaction such as right-clicking.",
+    iconName: "MousePointerClick",
+    hidden: false,
+  },
+  {
+    name: "Dialog",
+    slug: "dialog",
+    description:
+      "A modal window for displaying content and user actions.",
+    iconName: "SquareArrowOutUpRight",
+    hidden: false,
+  },
+  {
+    name: "Drawer",
+    slug: "drawer",
+    description:
+      "A panel that slides in from the edge of the screen.",
+    iconName: "PanelLeft",
+    hidden: false,
+  },
+  {
+    name: "Dropdown Menu",
+    slug: "dropdown-menu",
+    description:
+      "A menu that displays a list of actions or options.",
+    iconName: "ChevronDown",
+    hidden: false,
+  },
+  {
+    name: "Form",
+    slug: "form",
+    description:
+      "Form components with validation and accessible input handling.",
+    iconName: "ClipboardList",
+    hidden: false,
+  },
+  {
+    name: "Hover Card",
+    slug: "hover-card",
+    description:
+      "A card that appears when the user hovers over an element.",
+    iconName: "SquareMousePointer",
+    hidden: false,
+  },
+  {
+    name: "Input",
+    slug: "input",
+    description:
+      "A text input field for collecting user information.",
+    iconName: "TextCursorInput",
+    hidden: false,
+  },
+  {
+    name: "Input OTP",
+    slug: "input-otp",
+    description:
+      "A one-time password input for verification codes.",
+    iconName: "KeyRound",
+    hidden: false,
+  },
+  {
+    name: "Label",
+    slug: "label",
+    description:
+      "An accessible label for form controls and input elements.",
+    iconName: "Tag",
+    hidden: false,
+  },
+  {
+    name: "Menubar",
+    slug: "menubar",
+    description:
+      "A horizontal menu bar for navigation and application actions.",
+    iconName: "Menu",
+    hidden: false,
+  },
+  {
+    name: "Navigation Menu",
+    slug: "navigation-menu",
+    description:
+      "A navigational menu with support for nested and structured content.",
+    iconName: "Navigation",
+    hidden: false,
+  },
+  {
+    name: "Pagination",
+    slug: "pagination",
+    description:
+      "Controls for navigating between pages of content.",
+    iconName: "ChevronsLeftRight",
+    hidden: false,
+  },
+  {
+    name: "Popover",
+    slug: "popover",
+    description:
+      "A floating panel for displaying contextual content.",
+    iconName: "MessageSquare",
+    hidden: false,
+  },
+  {
+    name: "Progress",
+    slug: "progress",
+    description:
+      "Displays the progress of an operation or task.",
+    iconName: "Loader",
+    hidden: false,
+  },
+  {
+    name: "Radio Group",
+    slug: "radio-group",
+    description:
+      "A group of mutually exclusive radio options.",
+    iconName: "CircleDot",
+    hidden: false,
+  },
+  {
+    name: "Resizable",
+    slug: "resizable",
+    description:
+      "Resizable panels for creating flexible application layouts.",
+    iconName: "PanelLeft",
+    hidden: false,
+  },
+  {
+    name: "Scroll Area",
+    slug: "scroll-area",
+    description:
+      "A custom scrollable container with consistent styling.",
+    iconName: "ScrollText",
+    hidden: false,
+  },
+  {
+    name: "Select",
+    slug: "select",
+    description:
+      "A dropdown control for selecting an option from a list.",
+    iconName: "ListFilter",
+    hidden: false,
+  },
+  {
+    name: "Separator",
+    slug: "separator",
+    description:
+      "A visual divider used to separate sections of content.",
+    iconName: "Minus",
+    hidden: false,
+  },
+  {
+    name: "Sheet",
+    slug: "sheet",
+    description:
+      "A panel that slides into view from the edge of the screen.",
+    iconName: "PanelRight",
+    hidden: false,
+  },
+  {
+    name: "Sidebar",
+    slug: "sidebar",
+    description:
+      "A responsive navigation sidebar for application layouts.",
+    iconName: "PanelLeft",
+    hidden: false,
+  },
+  {
+    name: "Skeleton",
+    slug: "skeleton",
+    description:
+      "A loading placeholder used while content is being fetched.",
+    iconName: "LoaderCircle",
+    hidden: false,
+  },
+  {
+    name: "Slider",
+    slug: "slider",
+    description:
+      "A control for selecting a value from a defined range.",
+    iconName: "SlidersHorizontal",
+    hidden: false,
+  },
+  {
+    name: "Sonner",
+    slug: "sonner",
+    description:
+      "Toast notifications for displaying temporary feedback messages.",
+    iconName: "Bell",
+    hidden: false,
+  },
+  {
+    name: "Spinner",
+    slug: "spinner",
+    description:
+      "An animated loading indicator for asynchronous operations.",
+    iconName: "LoaderCircle",
+    hidden: false,
+  },
+  {
+    name: "Switch",
+    slug: "switch",
+    description:
+      "A toggle control for switching between two states.",
+    iconName: "ToggleLeft",
+    hidden: false,
+  },
+  {
+    name: "Table",
+    slug: "table",
+    description:
+      "Structured components for displaying tabular data.",
+    iconName: "Table",
+    hidden: false,
+  },
+  {
+    name: "Tabs",
+    slug: "tabs",
+    description:
+      "Organizes content into multiple selectable tab panels.",
+    iconName: "PanelTop",
+    hidden: false,
+  },
+  {
+    name: "Textarea",
+    slug: "textarea",
+    description:
+      "A multiline text input for longer user responses.",
+    iconName: "AlignLeft",
+    hidden: false,
+  },
+  {
+    name: "Toast",
+    slug: "toast",
+    description:
+      "Temporary notification messages that provide feedback to users.",
+    iconName: "Bell",
+    hidden: false,
+  },
+  {
+    name: "Toggle",
+    slug: "toggle",
+    description:
+      "A button that can be toggled between two states.",
+    iconName: "ToggleLeft",
+    hidden: false,
+  },
+  {
+    name: "Toggle Group",
+    slug: "toggle-group",
+    description:
+      "A group of toggle buttons for selecting one or multiple options.",
+    iconName: "ListChecks",
+    hidden: false,
+  },
+  {
+    name: "Tooltip",
+    slug: "tooltip",
+    description:
+      "Displays additional information when hovering or focusing an element.",
+    iconName: "Info",
+    hidden: false,
+  },
+]
+
 
 export const registryCategories: {
   name: string

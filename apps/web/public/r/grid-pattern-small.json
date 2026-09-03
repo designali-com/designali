@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "grid-pattern-small",
+  "type": "registry:block",
+  "title": "Grid Pattern",
+  "description": "block showing a simple grid pattern.",
+  "registryDependencies": [
+    "grid-pattern"
+  ],
+  "files": [
+    {
+      "path": "registry/designali/components/grid-pattern/grid-pattern-small.tsx",
+      "content": "import { GridPattern } from \"@/registry/designali/ui/grid-pattern\"\n\nexport default function Component() {\n  return (\n    <div className=\"flex h-full w-full items-center justify-center\">\n      <GridPattern variant=\"small\" />\n    </div>\n  )\n}\n",
+      "type": "registry:block"
+    }
+  ]
+}

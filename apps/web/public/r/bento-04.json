@@ -2,7 +2,7 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "bento-04",
   "type": "registry:block",
-  "description": "Example showing a simple bento.",
+  "description": "block showing a simple bento.",
   "files": [
     {
       "path": "registry/designali/components/bento/bento-04.tsx",

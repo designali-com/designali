@@ -8,14 +8,7 @@ import { Logo } from "@workspace/ui/designali/logo"
 
 import { Search } from "./search"
 import { MobileNav } from "./mobile-nav"
-
-export const navLinks = [
-  { name: "Templates", href: "/templates" },
-  { name: "Blocks", href: "/blocks" },
-  { name: "Illustration", href: "/illustration" },
-  { name: "Components", href: "/docs" },
-  { name: "Icons", href: "/icons" },
-]
+import { navLinks } from "@/registry/registry-categories"
 
 const CAL_LINK = "https://cal.com/designali-com/designali"
 
@@ -34,7 +27,7 @@ export function Header() {
               <Logo className="size-6" />
             </Link>
 
-            <nav className="ml-6 hidden items-center gap-6 md:flex">
+            <nav className="ml-6 hidden items-center gap-6 lg:flex">
               {navLinks.map((link) => (
                 <Link
                   key={link.name}
@@ -48,14 +41,16 @@ export function Header() {
           </div>
 
           {/* Center Search */}
-          <div className="absolute left-1/2 -translate-x-1/2">
-            <Search />
-          </div>
 
-          <div className="flex gap-2">
+
+          <div className="flex items-center gap-2">
+            <div className="md:absolute md:left-1/2 md:-translate-x-1/2">
+              <Search />
+            </div>
             <Button
               size="sm"
               variant={"ghost"}
+              className={"hidden md:flex"}
               nativeButton={false}
               render={
                 <Link
@@ -81,8 +76,8 @@ export function Header() {
               Dashboard
             </Button>
 
-            <MobileNav/>
-          </div>  
+            <MobileNav />
+          </div>
         </div>
       </nav>
     </header>
