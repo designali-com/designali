@@ -9,6 +9,12 @@ interface PageProps {
   }>
 }
 
+export function generateStaticParams() {
+  return templateCategories.map((template) => ({
+    slug: template.slug,
+  }))
+}
+
 export default async function Page({ params }: PageProps) {
   const { slug } = await params
 
