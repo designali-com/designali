@@ -44,7 +44,10 @@ const EXCLUDED_SECTIONS: string[] = []
 const EXCLUDED_PAGES: string[] = []
 
 // Pages that should show the "New" indicator
-const NEW_COMPONENTS: string[] = ["/docs/changelog"]
+const NEW_COMPONENTS: string[] = [
+  "/docs/changelog",
+  "/docs/components/bento"
+]
 
 export function DocsSidebar({
   tree,

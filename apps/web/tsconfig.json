@@ -20,6 +20,6 @@
     "**/*.mts",
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts"
-  ],
+, "../../packages/ui/src/designali/image-line.tsx"  ],
   "exclude": ["node_modules"]
 }

@@ -2,6 +2,78 @@ import type { Registry } from "shadcn/schema"
 
 export const components: Registry["items"] = [
   {
+    name: "accordion-01",
+    type: "registry:block",
+    description:
+      "Personal FAQ accordion introducing Ali Imam, his design approach, inspirations, and ways to connect for collaborations.",
+    files: [
+      {
+        path: "components/accordion/accordion-01.tsx",
+        type: "registry:block",
+      },
+    ],
+  },
+  {
+    name: "accordion-02",
+    type: "registry:block",
+    description:
+      "Personal FAQ accordion introducing Ali Imam, his design approach, inspirations, and ways to connect for collaborations.",
+    files: [
+      {
+        path: "components/accordion/accordion-02.tsx",
+        type: "registry:block",
+      },
+    ],
+  },
+  {
+    name: "accordion-03",
+    type: "registry:block",
+    description:
+      "Personal FAQ accordion introducing Ali Imam, his design approach, inspirations, and ways to connect for collaborations.",
+    files: [
+      {
+        path: "components/accordion/accordion-03.tsx",
+        type: "registry:block",
+      },
+    ],
+  },
+  {
+    name: "accordion-04",
+    type: "registry:block",
+    description:
+      "Personal FAQ accordion introducing Ali Imam, his design approach, inspirations, and ways to connect for collaborations.",
+    files: [
+      {
+        path: "components/accordion/accordion-04.tsx",
+        type: "registry:block",
+      },
+    ],
+  },
+  {
+    name: "accordion-05",
+    type: "registry:block",
+    description:
+      "Personal FAQ accordion introducing Ali Imam, his design approach, inspirations, and ways to connect for collaborations.",
+    files: [
+      {
+        path: "components/accordion/accordion-05.tsx",
+        type: "registry:block",
+      },
+    ],
+  },
+  {
+    name: "accordion-06",
+    type: "registry:block",
+    description:
+      "Personal FAQ accordion introducing Ali Imam, his design approach, inspirations, and ways to connect for collaborations.",
+    files: [
+      {
+        path: "components/accordion/accordion-06.tsx",
+        type: "registry:block",
+      },
+    ],
+  },
+  {
     name: "button-variants",
     description: "Button variants showcase",
     type: "registry:block",
@@ -173,6 +245,61 @@ export const components: Registry["items"] = [
     files: [
       {
         path: "components/gauge/gauge-demo-combined.tsx",
+        type: "registry:block",
+      },
+    ],
+  },
+  {
+    name: "bento-01",
+    type: "registry:block", 
+    description: "Example showing a simple bento.", 
+    files: [
+      {
+        path: "components/bento/bento-01.tsx",
+        type: "registry:block",
+      },
+    ],
+  },
+  {
+    name: "bento-02",
+    type: "registry:block", 
+    description: "Example showing a simple bento.", 
+    files: [
+      {
+        path: "components/bento/bento-02.tsx",
+        type: "registry:block",
+      },
+    ],
+  },
+  {
+    name: "bento-03",
+    type: "registry:block", 
+    description: "Example showing a simple bento.", 
+    files: [
+      {
+        path: "components/bento/bento-03.tsx",
+        type: "registry:block",
+      },
+    ],
+  },
+  {
+    name: "bento-04",
+    type: "registry:block", 
+    description: "Example showing a simple bento.", 
+    files: [
+      {
+        path: "components/bento/bento-04.tsx",
+        type: "registry:block",
+      },
+    ],
+  },
+  {
+    name: "bento-05",
+    type: "registry:block", 
+    description: "Example showing a simple bento.", 
+    files: [
+      {
+        path: "components/bento/bento-05.tsx",
         type: "registry:block",
       },
     ],

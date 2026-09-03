@@ -97,7 +97,7 @@ export function FAQSection() {
 
   return (
     <section className="relative">
-      <div className="border border-dotted">
+      <div className="border border-b-0 mb-1 border-dotted">
         <div className="mx-auto max-w-4xl border-dotted lg:border-x">
           <SectionHeader>
             <SectionHeaderHeading>

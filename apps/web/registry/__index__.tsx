@@ -25,6 +25,24 @@ export const Index: Record<string, any> = {
     categories: undefined,
     meta: undefined,
   },
+  "bento": {
+    name: "bento",
+    description: "",
+    type: "registry:ui",
+    registryDependencies: undefined,
+    files: [{
+      path: "registry/designali/ui/bento.tsx",
+      type: "registry:component",
+      target: ""
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/designali/ui/bento.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
   "header-01": {
     name: "header-01",
     description: "A simple header section.",
@@ -222,6 +240,114 @@ export const Index: Record<string, any> = {
     }),
     categories: ["hero"],
     meta: {"iframeHeight":"400px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
+  "accordion-01": {
+    name: "accordion-01",
+    description: "Personal FAQ accordion introducing Ali Imam, his design approach, inspirations, and ways to connect for collaborations.",
+    type: "registry:block",
+    registryDependencies: undefined,
+    files: [{
+      path: "registry/designali/components/accordion/accordion-01.tsx",
+      type: "registry:block",
+      target: ""
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/designali/components/accordion/accordion-01.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "accordion-02": {
+    name: "accordion-02",
+    description: "Personal FAQ accordion introducing Ali Imam, his design approach, inspirations, and ways to connect for collaborations.",
+    type: "registry:block",
+    registryDependencies: undefined,
+    files: [{
+      path: "registry/designali/components/accordion/accordion-02.tsx",
+      type: "registry:block",
+      target: ""
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/designali/components/accordion/accordion-02.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "accordion-03": {
+    name: "accordion-03",
+    description: "Personal FAQ accordion introducing Ali Imam, his design approach, inspirations, and ways to connect for collaborations.",
+    type: "registry:block",
+    registryDependencies: undefined,
+    files: [{
+      path: "registry/designali/components/accordion/accordion-03.tsx",
+      type: "registry:block",
+      target: ""
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/designali/components/accordion/accordion-03.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "accordion-04": {
+    name: "accordion-04",
+    description: "Personal FAQ accordion introducing Ali Imam, his design approach, inspirations, and ways to connect for collaborations.",
+    type: "registry:block",
+    registryDependencies: undefined,
+    files: [{
+      path: "registry/designali/components/accordion/accordion-04.tsx",
+      type: "registry:block",
+      target: ""
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/designali/components/accordion/accordion-04.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "accordion-05": {
+    name: "accordion-05",
+    description: "Personal FAQ accordion introducing Ali Imam, his design approach, inspirations, and ways to connect for collaborations.",
+    type: "registry:block",
+    registryDependencies: undefined,
+    files: [{
+      path: "registry/designali/components/accordion/accordion-05.tsx",
+      type: "registry:block",
+      target: ""
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/designali/components/accordion/accordion-05.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "accordion-06": {
+    name: "accordion-06",
+    description: "Personal FAQ accordion introducing Ali Imam, his design approach, inspirations, and ways to connect for collaborations.",
+    type: "registry:block",
+    registryDependencies: undefined,
+    files: [{
+      path: "registry/designali/components/accordion/accordion-06.tsx",
+      type: "registry:block",
+      target: ""
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/designali/components/accordion/accordion-06.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: undefined,
+    meta: undefined,
   },
   "button-variants": {
     name: "button-variants",
@@ -505,6 +631,96 @@ export const Index: Record<string, any> = {
     }],
     component: React.lazy(async () => {
       const mod = await import("@/registry/designali/components/gauge/gauge-demo-combined.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "bento-01": {
+    name: "bento-01",
+    description: "Example showing a simple bento.",
+    type: "registry:block",
+    registryDependencies: undefined,
+    files: [{
+      path: "registry/designali/components/bento/bento-01.tsx",
+      type: "registry:block",
+      target: ""
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/designali/components/bento/bento-01.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "bento-02": {
+    name: "bento-02",
+    description: "Example showing a simple bento.",
+    type: "registry:block",
+    registryDependencies: undefined,
+    files: [{
+      path: "registry/designali/components/bento/bento-02.tsx",
+      type: "registry:block",
+      target: ""
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/designali/components/bento/bento-02.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "bento-03": {
+    name: "bento-03",
+    description: "Example showing a simple bento.",
+    type: "registry:block",
+    registryDependencies: undefined,
+    files: [{
+      path: "registry/designali/components/bento/bento-03.tsx",
+      type: "registry:block",
+      target: ""
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/designali/components/bento/bento-03.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "bento-04": {
+    name: "bento-04",
+    description: "Example showing a simple bento.",
+    type: "registry:block",
+    registryDependencies: undefined,
+    files: [{
+      path: "registry/designali/components/bento/bento-04.tsx",
+      type: "registry:block",
+      target: ""
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/designali/components/bento/bento-04.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "bento-05": {
+    name: "bento-05",
+    description: "Example showing a simple bento.",
+    type: "registry:block",
+    registryDependencies: undefined,
+    files: [{
+      path: "registry/designali/components/bento/bento-05.tsx",
+      type: "registry:block",
+      target: ""
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/designali/components/bento/bento-05.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),

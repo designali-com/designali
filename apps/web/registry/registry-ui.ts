@@ -11,4 +11,14 @@ export const ui: Registry["items"] = [
       },
     ],
   },
+  {
+    name: "bento",
+    type: "registry:ui",
+    files: [
+      {
+        path: "ui/bento.tsx",
+        type: "registry:component",
+      },
+    ],
+  },
 ]

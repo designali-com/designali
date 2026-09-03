@@ -28,7 +28,7 @@ export function Search() {
   const [open, setOpen] = React.useState(false)
 
   return (
-    <div className="flex flex-col gap-4">
+    <div className="md:flex hidden flex-col gap-4">
       <Button
         size={"sm"}
         onClick={() => setOpen(true)}

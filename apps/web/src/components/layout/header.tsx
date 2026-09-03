@@ -7,8 +7,9 @@ import { Button } from "@workspace/ui/components/button"
 import { Logo } from "@workspace/ui/designali/logo"
 
 import { Search } from "./search"
+import { MobileNav } from "./mobile-nav"
 
-const navLinks = [
+export const navLinks = [
   { name: "Templates", href: "/templates" },
   { name: "Blocks", href: "/blocks" },
   { name: "Illustration", href: "/illustration" },
@@ -79,7 +80,9 @@ export function Header() {
             >
               Dashboard
             </Button>
-          </div>
+
+            <MobileNav/>
+          </div>  
         </div>
       </nav>
     </header>

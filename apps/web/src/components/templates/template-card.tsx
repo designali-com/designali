@@ -3,7 +3,6 @@
 import * as React from "react"
 import Link from "next/link"
 import { Download } from "lucide-react"
-
 import { cn } from "@workspace/ui/lib/utils"
 
 export interface TemplateCardProps {
@@ -24,13 +23,18 @@ export function TemplateCard({
   className,
 }: TemplateCardProps) {
   return (
-    <div className="group relative overflow-hidden">
+    <div
+      className={cn(
+        "group relative overflow-hidden border border-dotted bg-muted",
+        className
+      )}
+    >
       {/* Preview */}
       <Link
         href={`/templates/${slug}`}
-        className={cn("group block", className)}
+        className="group block"
       >
-        <div className="relative aspect-[16/10] border bg-muted">
+        <div className="relative aspect-[16/10] overflow-hidden">
           {image ? (
             <img
               src={image}
@@ -68,17 +72,17 @@ export function TemplateCard({
         )}
       >
         <div className="flex min-w-0">
-          <h3 className="truncate pl-2 text-sm font-medium">{name}</h3>
+          <h3 className="truncate pl-2 text-sm font-medium">
+            {name}
+          </h3>
         </div>
 
         <Link
           href={url}
           className={cn(
             "inline-flex h-8 shrink-0 items-center justify-center gap-2",
-            "px-3 text-sm font-medium",
-            "bg-primary text-primary-foreground",
-            "hover:bg-primary/90",
-            "transition-colors"
+            "bg-primary px-3 text-sm font-medium text-primary-foreground",
+            "transition-colors hover:bg-primary/90"
           )}
         >
           <Download className="size-4" />
