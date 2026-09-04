@@ -9,7 +9,7 @@
         "../../packages/ui/src/*"
       ],
       "@designali/logos": [
-        "../../packages/logos/src/*"
+        "../../packages/logos/src/index.ts"
       ]
     },
     "plugins": [
