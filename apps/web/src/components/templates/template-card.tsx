@@ -2,7 +2,7 @@
 
 import * as React from "react"
 import Link from "next/link"
-import { Download } from "lucide-react"
+import { ArrowUpRight, Download } from "lucide-react"
 import { cn } from "@workspace/ui/lib/utils"
 
 export interface TemplateCardProps {
@@ -31,7 +31,7 @@ export function TemplateCard({
     >
       {/* Preview */}
       <Link href={`/templates/${slug}`} className="group block">
-        <div className="relative aspect-[16/10] overflow-hidden">
+        <div className="relative aspect-[16/9] overflow-hidden">
           {image ? (
             <img
               src={image}
@@ -73,16 +73,71 @@ export function TemplateCard({
         </div>
 
         <Link
+          target="_blank"
           href={url}
           className={cn(
-            "inline-flex h-8 shrink-0 items-center justify-center gap-2",
-            "bg-primary px-3 text-sm font-medium text-primary-foreground",
+            "inline-flex h-8 w-8 shrink-0 items-center justify-center gap-2",
+            "bg-primary text-sm font-medium text-primary-foreground",
             "transition-colors hover:bg-primary/90"
           )}
         >
-          <Download className="size-4" />
-          Download
+          <ArrowUpRight className="size-4" />
+
         </Link>
+      </div>
+    </div>
+  )
+}
+
+export interface TemplateCardProgressProps {
+  name: string
+  image?: string
+  className?: string
+}
+
+
+export function TemplateCardProgress({
+  name,
+  image,
+  className,
+}: TemplateCardProgressProps) {
+  return (
+    <div
+      className={cn(
+        "group relative overflow-hidden border border-dotted bg-muted",
+        className
+      )}
+    >
+      <div className="relative aspect-[16/9] overflow-hidden">
+        {image ? (
+          <img
+            src={image}
+            alt={name}
+            className="absolute inset-0 size-full object-cover"
+          />
+        ) : (
+          <div className="flex size-full items-center justify-center">
+            <span className="text-sm text-muted-foreground">
+              {name}
+            </span>
+          </div>
+        )}
+
+        {/* Hover Progress */}
+        <div
+          className={cn(
+            "absolute inset-0 flex flex-col items-center justify-center",
+            "bg-background/70 backdrop-blur-sm",
+            "opacity-0 transition-opacity duration-300",
+            "group-hover:opacity-100"
+          )}
+        >
+          <div className="w-full max-w-48 px-4 text-center">
+            <p className="text-sm font-medium">
+              Design in process
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   )

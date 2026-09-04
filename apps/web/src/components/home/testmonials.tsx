@@ -40,7 +40,7 @@ export function Testimonials() {
       </div>
 
       <section className="relative z-10">
-        <div className="p-2 lg:border-x">
+        <div className="p-3">
           <div className="flex flex-wrap justify-center gap-2">
             <Masonary initialCount={9}>
               {allTweets.map((id) => (

@@ -5,7 +5,7 @@ import { Dithering, DotOrbit, Spiral } from "@paper-design/shaders-react"
 
 export default function FeatureSection() {
     return (
-        <div className="mt-40">
+        <div className="mx-auto max-w-5xl flex flex-col justify-center h-[100vh] w-full">
             <div className="flex flex-col items-center justify-center pt-10 pb-3">
                 {/* Heading */}
                 <div>
@@ -17,8 +17,8 @@ export default function FeatureSection() {
                 {/* Cards */}
                 <div className="grid w-full grid-cols-1 gap-3 md:grid-cols-3">
                     {/* Card 1 — Strategy */}
-                    <div className="h-[430px] md:h-[460px] overflow-hidden rounded-lg border border-dashed">
-                        <div className="relative h-full shadow-[inset_0_6px_6px_rgba(255,255,255,0.4),inset_0_-3px_6px_rgba(0,0,0,0.1),inset_0_-4px_8px_rgba(0,0,0,0.2)] rounded-md">
+                    <div className="h-[430px] md:h-[460px] overflow-hidden  border border-dashed">
+                        <div className="relative h-full  ">
                             <Image
                                 src="/stock/strategy.jpg"
                                 alt="DesignAli Strategy"
@@ -28,7 +28,7 @@ export default function FeatureSection() {
                             />
 
                             <DotOrbit
-                                className="absolute bottom-0 h-full w-full rounded-md"
+                                className="absolute bottom-0 h-full w-full "
                                 colors={["#00aaff"]}
                                 colorBack="#00000000"
                                 stepsPerColor={1}
@@ -52,8 +52,8 @@ export default function FeatureSection() {
                     </div>
 
                     {/* Card 2 — Design */}
-                    <div className="h-[430px] md:h-[460px] overflow-hidden rounded-lg border border-dashed">
-                        <div className="relative h-full shadow-[inset_0_6px_6px_rgba(255,255,255,0.4),inset_0_-3px_6px_rgba(0,0,0,0.1),inset_0_-4px_8px_rgba(0,0,0,0.2)] rounded-md">
+                    <div className="h-[430px] md:h-[460px] overflow-hidden  border border-dashed">
+                        <div className="relative h-full ">
                             <Image
                                 src="/stock/design.jpg"
                                 alt="DesignAli Creative Design"
@@ -63,7 +63,7 @@ export default function FeatureSection() {
                             />
 
                             <Dithering
-                                className="absolute bottom-0 h-full w-full rounded-md"
+                                className="absolute bottom-0 h-full w-full "
                                 colorBack="#00000000"
                                 colorFront="#00aaff"
                                 shape="ripple"
@@ -86,8 +86,8 @@ export default function FeatureSection() {
                     </div>
 
                     {/* Card 3 — Development */}
-                    <div className="h-[430px] md:h-[460px] overflow-hidden rounded-lg border border-dashed">
-                        <div className="relative h-full shadow-[inset_0_6px_6px_rgba(255,255,255,0.4),inset_0_-3px_6px_rgba(0,0,0,0.1),inset_0_-4px_8px_rgba(0,0,0,0.2)] rounded-md">
+                    <div className="h-[430px] md:h-[460px] overflow-hidden  border border-dashed">
+                        <div className="relative h-full ">
                             <Image
                                 src="/stock/development.jpg"
                                 alt="DesignAli Development"
@@ -97,7 +97,7 @@ export default function FeatureSection() {
                             />
 
                             <Spiral
-                                className="absolute bottom-0 h-full w-full rounded-md"
+                                className="absolute bottom-0 h-full w-full "
                                 colorBack="#a0f02800"
                                 colorFront="#00aaff"
                                 density={0.5}
@@ -124,7 +124,7 @@ export default function FeatureSection() {
                         </div>
                     </div>
                 </div>
-                <div className="relative w-full border mt-3 border-dashed h-full rounded-md lg:rounded-full">
+                <div className="relative w-full border mt-3 border-dashed h-full">
                     <div className="grid w-full grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
                         <div className="border-b border-dashed py-10 md:border-r lg:border-b-0 lg:border-r">
                             <p className="text-center text-md">48 Hours Delivery</p>

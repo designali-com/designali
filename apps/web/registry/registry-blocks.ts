@@ -433,9 +433,9 @@ export const blocks: Registry["items"] = [
         type: "registry:component",
       },
     ],
-    categories: ["feature"],
+    categories: ["feature", "features"],
     meta: {
-      iframeHeight: "600px",
+      iframeHeight: "900px",
     },
   },
 ]

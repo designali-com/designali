@@ -2,6 +2,8 @@
 
 import * as React from "react"
 
+import { Progress } from "@workspace/ui/components/progress"
+
 import {
   Maximize2,
   Minimize2,
@@ -22,16 +24,19 @@ import {
   RotateCcw,
   Download,
   ArrowUpRight,
+  Loader2,
 } from "lucide-react"
 
 import { cn } from "@workspace/ui/lib/utils"
 import { Badge } from "@workspace/ui/components/badge"
 import { Button } from "@workspace/ui/components/button"
+import { Github } from "@designali/logos"
 
 type Device = "desktop" | "tablet" | "mobile"
 
 export interface TemplatePreviewProps {
   name: string
+  slug: string
   description: string
   url: string
   downloadurl: string
@@ -56,6 +61,7 @@ export interface TemplatePreviewProps {
 
 export function TemplatePreview({
   name,
+  slug,
   description,
   url,
   downloadurl,
@@ -83,6 +89,71 @@ export function TemplatePreview({
   const [showAllPages, setShowAllPages] = React.useState(false)
 
   const previewRef = React.useRef<HTMLDivElement>(null)
+
+  const [isDownloading, setIsDownloading] = React.useState(false)
+  const [downloadProgress, setDownloadProgress] = React.useState(0)
+
+  const abortControllerRef = React.useRef<AbortController | null>(null)
+
+  const handleDownload = async () => {
+    if (isDownloading) return
+
+    const controller = new AbortController()
+    abortControllerRef.current = controller
+
+    try {
+      setIsDownloading(true)
+      setDownloadProgress(10)
+
+      const response = await fetch(downloadurl, {
+        signal: controller.signal,
+      })
+
+      if (!response.ok) {
+        throw new Error("Download failed")
+      }
+
+      setDownloadProgress(40)
+
+      const blob = await response.blob()
+
+      setDownloadProgress(90)
+
+      const blobUrl = window.URL.createObjectURL(blob)
+
+      const link = document.createElement("a")
+      link.href = blobUrl
+      link.download = `${name
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, "-")
+        .replace(/(^-|-$)/g, "")}.zip`
+
+      document.body.appendChild(link)
+      link.click()
+      link.remove()
+
+      window.URL.revokeObjectURL(blobUrl)
+
+      setDownloadProgress(100)
+    } catch (error) {
+      if (error instanceof DOMException && error.name === "AbortError") {
+        console.log("Download cancelled")
+      } else {
+        console.error("Download error:", error)
+      }
+    } finally {
+      abortControllerRef.current = null
+
+      setTimeout(() => {
+        setIsDownloading(false)
+        setDownloadProgress(0)
+      }, 500)
+    }
+  }
+
+  const handleCancelDownload = () => {
+    abortControllerRef.current?.abort()
+  }
 
   /*
    * Copy URL
@@ -167,6 +238,47 @@ export function TemplatePreview({
             {description}
           </p>
         </div>
+        {isDownloading && (
+          <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-background/80 p-4 backdrop-blur-sm">
+            <div className="w-full max-w-sm border bg-background p-6 shadow-xl">
+              <div className="flex items-center justify-between">
+                <div>
+                  <p className="font-medium">
+                    Preparing your template
+                  </p>
+
+                  <p className="mt-1 text-sm text-muted-foreground">
+                    Creating ZIP file...
+                  </p>
+                </div>
+
+                <span className="text-sm font-medium">
+                  {downloadProgress}%
+                </span>
+              </div>
+
+              <Progress
+                value={downloadProgress}
+                className="mt-5"
+              />
+
+              <div className="mt-5 flex items-center justify-between gap-4">
+                <p className="text-xs text-muted-foreground">
+                  Your download will start automatically.
+                </p>
+
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={handleCancelDownload}
+                >
+                  <X />
+                  Cancel
+                </Button>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
 
       <div className="border-b px-2 py-1">
@@ -174,6 +286,16 @@ export function TemplatePreview({
           {/* Device Switcher */}
 
           <div className="inline-flex w-fit items-center">
+            <Button
+              size={"icon-sm"}
+              variant={"ghost"}
+              className={"mr-1"}
+              render={
+                <a href={`https://github.com/designali-com/templates/tree/main/${slug}`} target="_blank" rel="noopener noreferrer" />
+              }
+            >
+              <Github />
+            </Button>
             <DeviceButton
               active={device === "desktop"}
               onClick={() => setDevice("desktop")}
@@ -242,17 +364,26 @@ export function TemplatePreview({
               }
             >
               <ArrowUpRight />
-              
+
             </Button>
             <Button
-              size={"sm"}
-              render={
-                <a href={downloadurl} target="_blank" rel="noopener noreferrer" />
-              }
+              size="sm"
+              onClick={handleDownload}
+              disabled={isDownloading}
             >
-              <Download />
-              Download
+              {isDownloading ? (
+                <>
+                  <Loader2 className="animate-spin" />
+                  Preparing...
+                </>
+              ) : (
+                <>
+                  <Download />
+                  Download
+                </>
+              )}
             </Button>
+
           </div>
         </div>
       </div>
@@ -266,7 +397,7 @@ export function TemplatePreview({
         className={cn(
           "relative flex min-h-[820px] items-start justify-center overflow-auto bg-muted/30 p-3 transition-all md:p-6",
           isFullscreen &&
-            "fixed inset-0 z-50 min-h-0 items-center overflow-hidden bg-black/60 p-4 backdrop-blur-sm md:p-8"
+          "fixed inset-0 z-50 min-h-0 items-center overflow-hidden bg-black/60 p-4 backdrop-blur-sm md:p-8"
         )}
       >
         {/* Backdrop */}
@@ -294,7 +425,7 @@ export function TemplatePreview({
 
             // Expanded dialog
             isFullscreen &&
-              "h-[calc(100vh-64px)] w-full max-w-[1600px] shadow-2xl"
+            "h-[calc(100vh-64px)] w-full max-w-[1600px] shadow-2xl"
           )}
         >
           {/* Browser Header */}
@@ -466,7 +597,7 @@ export function TemplatePreview({
           ====================================================== */}
 
           {(showColors && colors.length > 0) ||
-          (showFonts && fonts.length > 0) ? (
+            (showFonts && fonts.length > 0) ? (
             <div className="grid divide-y border-t md:divide-x md:divide-y-0">
               {/* Colors */}
 

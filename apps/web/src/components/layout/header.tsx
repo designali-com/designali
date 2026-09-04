@@ -99,15 +99,17 @@ export function TemplateHeader() {
             </Link>
           </div>
 
-          {/* Center Search */}
-          <div className="absolute left-1/2 -translate-x-1/2">
-            <Search />
-          </div>
 
-          <div className="flex gap-2">
+
+
+          <div className="flex items-center gap-2">
+            <div className="md:absolute md:left-1/2 md:-translate-x-1/2">
+              <Search />
+            </div>
             <Button
               size="sm"
               variant={"ghost"}
+              className={"hidden md:flex"}
               nativeButton={false}
               render={
                 <Link
@@ -132,6 +134,7 @@ export function TemplateHeader() {
             >
               Dashboard
             </Button>
+            <MobileNav />
           </div>
         </div>
       </nav>

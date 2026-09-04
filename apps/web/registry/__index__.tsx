@@ -560,8 +560,8 @@ export const Index: Record<string, any> = {
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
-    categories: ["feature"],
-    meta: {"iframeHeight":"600px"},
+    categories: ["feature","features"],
+    meta: {"iframeHeight":"900px"},
   },
   "accordion-01": {
     name: "accordion-01",

@@ -590,10 +590,11 @@
         }
       ],
       "categories": [
-        "feature"
+        "feature",
+        "features"
       ],
       "meta": {
-        "iframeHeight": "600px"
+        "iframeHeight": "900px"
       }
     },
     {

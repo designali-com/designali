@@ -4,7 +4,7 @@ import Link from "next/link"
 
 export function HeroSection() {
   return (
-    <section className="relative mx-auto flex h-[910px] w-full items-center justify-center overflow-hidden">
+    <section className="relative mx-auto flex h-[700px] md:h-[910px] w-full items-center justify-center overflow-hidden">
       {/* Background Lines */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
         <div className="relative h-full w-full">

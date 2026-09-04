@@ -29,9 +29,10 @@ export default async function Page({ params }: PageProps) {
       <div className="mx-auto w-full">
         <TemplatePreview
           name={template.name}
+          slug={template.slug}
           description={template.description}
           url={template.url}
-          downloadurl={template.downloadurl}
+          downloadurl={`/api/templates/${template.slug}/download`}
           tech={template.tech}
           pages={template.pages}
           features={template.features}

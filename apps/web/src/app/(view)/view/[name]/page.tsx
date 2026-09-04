@@ -98,7 +98,7 @@ export default async function BlockPage({
   }
 
   return (
-    <div className={cn("bg-muted/50", item.meta?.container)}>
+    <div className={cn("", item.meta?.container)}>
       <Component />
     </div>
   )
