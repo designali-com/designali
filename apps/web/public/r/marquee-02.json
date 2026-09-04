@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "marquee-02",
+  "type": "registry:block",
+  "title": "Marquee",
+  "registryDependencies": [
+    "marquee"
+  ],
+  "files": [
+    {
+      "path": "registry/designali/components/marquee/marquee-02.tsx",
+      "content": "import {\n  ClaudeAIWordmark,\n  CursorWordmark,\n  GithubWordmark,\n  GoogleWordmark,\n  GrokWordmark,\n  OpenAIWordmark,\n  ReplicateWordmark,\n} from \"@designali/logos\"\n\nimport { Marquee } from \"@/registry/designali/ui/marquee\"\n\nexport default function DemoOne() {\n  return (\n    <div className=\"flex h-full w-full items-center justify-center overflow-hidden border\">\n      <main className=\"w-full\">\n        <Marquee gap={\"80px\"} speed={25} fade={true}>\n          <OpenAIWordmark size={100} />\n          <ClaudeAIWordmark size={100} />\n          <ReplicateWordmark size={100} />\n          <CursorWordmark size={100} />\n          <GithubWordmark size={100} />\n          <GrokWordmark size={100} />\n          <GoogleWordmark className=\"mr-20\" size={100} />\n        </Marquee>\n      </main>\n    </div>\n  )\n}\n",
+      "type": "registry:block"
+    }
+  ]
+}

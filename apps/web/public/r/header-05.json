@@ -3,9 +3,6 @@
   "name": "header-05",
   "type": "registry:block",
   "description": "A simple header section.",
-  "dependencies": [
-    "lucide-react"
-  ],
   "registryDependencies": [
     "command",
     "sheet"

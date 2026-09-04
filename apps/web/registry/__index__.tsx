@@ -97,6 +97,24 @@ export const Index: Record<string, any> = {
     categories: undefined,
     meta: undefined,
   },
+  "marquee": {
+    name: "marquee",
+    description: "",
+    type: "registry:ui",
+    registryDependencies: undefined,
+    files: [{
+      path: "registry/designali/ui/marquee.tsx",
+      type: "registry:ui",
+      target: ""
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/designali/ui/marquee.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
   "typewriter": {
     name: "typewriter",
     description: "",
@@ -312,6 +330,220 @@ export const Index: Record<string, any> = {
     }),
     categories: ["hero"],
     meta: {"iframeHeight":"400px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
+  "footer-01": {
+    name: "footer-01",
+    description: "A simple footer.",
+    type: "registry:block",
+    registryDependencies: ["button","dropdown-menu"],
+    files: [{
+      path: "registry/designali/blocks/footer/footer-01/page.tsx",
+      type: "registry:component",
+      target: "layout/footer/index.tsx"
+    },{
+      path: "registry/designali/blocks/footer/footer-01/components/footer.tsx",
+      type: "registry:component",
+      target: "layout/footer/footer.tsx"
+    },{
+      path: "registry/designali/blocks/footer/footer-01/components/theme.tsx",
+      type: "registry:component",
+      target: "layout/footer/theme.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/designali/blocks/footer/footer-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["footer"],
+    meta: {"iframeHeight":"600px"},
+  },
+  "footer-02": {
+    name: "footer-02",
+    description: "A simple footer.",
+    type: "registry:block",
+    registryDependencies: undefined,
+    files: [{
+      path: "registry/designali/blocks/footer/footer-02/demo.tsx",
+      type: "registry:component",
+      target: "layout/footer/index.tsx"
+    },{
+      path: "registry/designali/blocks/footer/footer-02/theme.tsx",
+      type: "registry:component",
+      target: "layout/footer/theme.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/designali/blocks/footer/footer-02/demo.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["footer"],
+    meta: {"iframeHeight":"600px"},
+  },
+  "footer-03": {
+    name: "footer-03",
+    description: "A simple footer.",
+    type: "registry:block",
+    registryDependencies: undefined,
+    files: [{
+      path: "registry/designali/blocks/footer/footer-03/footer.tsx",
+      type: "registry:component",
+      target: "layout/footer/index.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/designali/blocks/footer/footer-03/footer.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["footer"],
+    meta: {"iframeHeight":"400px"},
+  },
+  "footer-04": {
+    name: "footer-04",
+    description: "A simple footer.",
+    type: "registry:block",
+    registryDependencies: ["button","switch","select","input"],
+    files: [{
+      path: "registry/designali/blocks/footer/footer-04/footer.tsx",
+      type: "registry:component",
+      target: "layout/footer/index.tsx"
+    },{
+      path: "registry/designali/blocks/footer/footer-04/theme.tsx",
+      type: "registry:component",
+      target: "layout/footer/theme.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/designali/blocks/footer/footer-04/footer.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["footer"],
+    meta: {"iframeHeight":"600px"},
+  },
+  "footer-05": {
+    name: "footer-05",
+    description: "A simple footer.",
+    type: "registry:block",
+    registryDependencies: undefined,
+    files: [{
+      path: "registry/designali/blocks/footer/footer-05/footer.tsx",
+      type: "registry:component",
+      target: "layout/footer/index.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/designali/blocks/footer/footer-05/footer.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["footer"],
+    meta: {"iframeHeight":"600px"},
+  },
+  "footer-06": {
+    name: "footer-06",
+    description: "A simple footer.",
+    type: "registry:block",
+    registryDependencies: undefined,
+    files: [{
+      path: "registry/designali/blocks/footer/footer-06/footer.tsx",
+      type: "registry:component",
+      target: "layout/footer/index.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/designali/blocks/footer/footer-06/footer.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["footer"],
+    meta: {"iframeHeight":"600px"},
+  },
+  "logos-01": {
+    name: "logos-01",
+    description: "A simple logos section.",
+    type: "registry:block",
+    registryDependencies: undefined,
+    files: [{
+      path: "registry/designali/blocks/logos/logos-01/page.tsx",
+      type: "registry:component",
+      target: "components/logos-01.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/designali/blocks/logos/logos-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["logos","clients"],
+    meta: {"iframeHeight":"500px"},
+  },
+  "logos-02": {
+    name: "logos-02",
+    description: "A simple logos section.",
+    type: "registry:block",
+    registryDependencies: undefined,
+    files: [{
+      path: "registry/designali/blocks/logos/logos-02/page.tsx",
+      type: "registry:component",
+      target: "components/logos-02.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/designali/blocks/logos/logos-02/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["logos","clients"],
+    meta: {"iframeHeight":"500px"},
+  },
+  "logos-03": {
+    name: "logos-03",
+    description: "A simple logos section.",
+    type: "registry:block",
+    registryDependencies: undefined,
+    files: [{
+      path: "registry/designali/blocks/logos/logos-03/page.tsx",
+      type: "registry:component",
+      target: "components/logos-03.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/designali/blocks/logos/logos-03/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["logos","clients"],
+    meta: {"iframeHeight":"500px"},
+  },
+  "logos-04": {
+    name: "logos-04",
+    description: "A simple logos section.",
+    type: "registry:block",
+    registryDependencies: undefined,
+    files: [{
+      path: "registry/designali/blocks/logos/logos-04/page.tsx",
+      type: "registry:component",
+      target: "components/logos-04.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/designali/blocks/logos/logos-04/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["logos","clients"],
+    meta: {"iframeHeight":"500px"},
+  },
+  "logos-05": {
+    name: "logos-05",
+    description: "A simple logos section.",
+    type: "registry:block",
+    registryDependencies: undefined,
+    files: [{
+      path: "registry/designali/blocks/logos/logos-05/page.tsx",
+      type: "registry:component",
+      target: "components/logos-05.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/designali/blocks/logos/logos-05/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["logos","clients"],
+    meta: {"iframeHeight":"500px"},
   },
   "accordion-01": {
     name: "accordion-01",
@@ -1099,6 +1331,96 @@ export const Index: Record<string, any> = {
     }],
     component: React.lazy(async () => {
       const mod = await import("@/registry/designali/components/grid-pattern/grid-pattern-01.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "marquee-01": {
+    name: "marquee-01",
+    description: "",
+    type: "registry:block",
+    registryDependencies: ["marquee"],
+    files: [{
+      path: "registry/designali/components/marquee/marquee-01.tsx",
+      type: "registry:block",
+      target: ""
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/designali/components/marquee/marquee-01.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "marquee-02": {
+    name: "marquee-02",
+    description: "",
+    type: "registry:block",
+    registryDependencies: ["marquee"],
+    files: [{
+      path: "registry/designali/components/marquee/marquee-02.tsx",
+      type: "registry:block",
+      target: ""
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/designali/components/marquee/marquee-02.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "marquee-03": {
+    name: "marquee-03",
+    description: "",
+    type: "registry:block",
+    registryDependencies: ["marquee"],
+    files: [{
+      path: "registry/designali/components/marquee/marquee-03.tsx",
+      type: "registry:block",
+      target: ""
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/designali/components/marquee/marquee-03.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "marquee-04": {
+    name: "marquee-04",
+    description: "",
+    type: "registry:block",
+    registryDependencies: ["marquee"],
+    files: [{
+      path: "registry/designali/components/marquee/marquee-04.tsx",
+      type: "registry:block",
+      target: ""
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/designali/components/marquee/marquee-04.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "marquee-05": {
+    name: "marquee-05",
+    description: "",
+    type: "registry:block",
+    registryDependencies: ["marquee"],
+    files: [{
+      path: "registry/designali/components/marquee/marquee-05.tsx",
+      type: "registry:block",
+      target: ""
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/designali/components/marquee/marquee-05.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),

@@ -73,7 +73,7 @@ export default function PricingAccordion() {
             key={item.id}
             className="last:border-b"
           >
-            <AccordionTrigger className="text-foreground/20 data-[state=open]:text-primary cursor-pointer -space-y-6 overflow-hidden pl-6 text-left duration-200 hover:no-underline data-[state=open]:space-y-0 md:pl-14 [&>svg]:hidden">
+            <AccordionTrigger className="cursor-pointer -space-y-6 overflow-hidden pl-6 text-left text-foreground/20 duration-200 hover:no-underline data-[state=open]:space-y-0 data-[state=open]:text-primary md:pl-14 [&>svg]:hidden">
               <div className="flex flex-1 items-start gap-4">
                 <p className="text-xs">{item.id}</p>
                 <h1
@@ -84,7 +84,7 @@ export default function PricingAccordion() {
               </div>
             </AccordionTrigger>
 
-            <AccordionContent className="text-muted-foreground pb-6 pl-6 md:px-20">
+            <AccordionContent className="pb-6 pl-6 text-muted-foreground md:px-20">
               {item.content}
             </AccordionContent>
           </AccordionItem>

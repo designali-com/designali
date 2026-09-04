@@ -60,7 +60,9 @@ export function NavMain() {
 
           // Dynamically resolve the icon from iconName
           const Icon = category.iconName
-            ? (Icons[category.iconName as keyof typeof Icons] as React.ElementType)
+            ? (Icons[
+                category.iconName as keyof typeof Icons
+              ] as React.ElementType)
             : null
 
           return (

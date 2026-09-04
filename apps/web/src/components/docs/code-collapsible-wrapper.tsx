@@ -26,14 +26,14 @@ export function CodeCollapsibleWrapper({
       <div className="relative w-full min-w-0">
         <CollapsibleContent
           className={cn(
-            "relative w-full min-w-0 transition-all duration-300",
-            !isOpened && "max-h-[260px] overflow-hidden"
+            "relative w-full min-w-0 border transition-all duration-300",
+            !isOpened && "max-h-[360px] overflow-hidden"
           )}
         >
           <div
             className={cn(
               "w-full min-w-0",
-              isOpened && "max-h-[400px] overflow-y-auto"
+              isOpened && "max-h-[300px] overflow-y-auto md:max-h-[500px]"
             )}
           >
             {children}
@@ -41,12 +41,12 @@ export function CodeCollapsibleWrapper({
         </CollapsibleContent>
 
         {!isOpened && (
-          <div className="pointer-events-none absolute inset-x-0 bottom-0 z-20 flex h-20 items-end justify-center bg-gradient-to-t from-background via-background/80 to-transparent pb-3">
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 z-20 flex h-10 items-end justify-center bg-gradient-to-t from-background via-background/80 to-transparent pb-3">
             <CollapsibleTrigger className="pointer-events-auto">
               <Button
                 variant="secondary"
                 size="sm"
-                className="h-8 border border-border shadow-sm"
+                className="h-8 border shadow-sm"
               >
                 Expand Code
               </Button>
@@ -55,7 +55,7 @@ export function CodeCollapsibleWrapper({
         )}
 
         {isOpened && (
-          <div className="flex justify-center border-t border-border/40 bg-background/50 py-2">
+          <div className="flex justify-center border-border/40 bg-background/50 py-2">
             <CollapsibleTrigger>
               <Button
                 variant="ghost"

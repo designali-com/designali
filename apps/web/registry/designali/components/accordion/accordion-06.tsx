@@ -75,9 +75,7 @@ export default function FAQs() {
     <section className="relative container flex items-center justify-center">
       <div className="border">
         <div className="mx-auto max-w-5xl">
-          <Accordion
-            className="-mb-1"
-          >
+          <Accordion className="-mb-1">
             {faqItems.map((item) => (
               <AccordionItem
                 key={item.id}
@@ -85,13 +83,13 @@ export default function FAQs() {
                 className="space-y-1 border-none"
               >
                 <AccordionTrigger className="group flex w-full justify-end py-0 hover:no-underline [&_svg]:hidden">
-                  <div className="bg-primary text-primary-foreground max-w-[80%] cursor-pointer px-4 py-3 text-left text-base transition">
+                  <div className="max-w-[80%] cursor-pointer bg-primary px-4 py-3 text-left text-base text-primary-foreground transition">
                     {item.question}
                   </div>
                 </AccordionTrigger>
 
                 <AccordionContent className="flex justify-start">
-                  <div className="bg-muted text-muted-foreground max-w-[80%] px-4 py-3 text-base">
+                  <div className="max-w-[80%] bg-muted px-4 py-3 text-base text-muted-foreground">
                     {item.answer}
                   </div>
                 </AccordionContent>

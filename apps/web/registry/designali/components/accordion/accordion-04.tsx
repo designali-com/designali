@@ -45,16 +45,14 @@ const items = [
 export default function Accordion02() {
   return (
     <div className="mx-auto flex h-full w-full max-w-xl items-center justify-center">
-      <Accordion 
-        className="w-full space-y-2"
-      >
+      <Accordion className="w-full space-y-2">
         {items.map((item) => (
           <AccordionItem
             value={item.id}
             key={item.id}
             className="rounded-xl border last:border-b"
           >
-            <AccordionTrigger className="bg-primary/10 [data-slot=accordion-trigger] m-1 cursor-pointer text-left duration-500 hover:no-underline data-[state=open]:rounded-b-none data-[state=open]:[&_svg]:rotate-180 data-[state=open]:[&_svg]:[#plus]:opacity-0 [&_svg]:[#plus]:[data-state=open]:opacity-0 [&>svg]:hidden">
+            <AccordionTrigger className="[data-slot=accordion-trigger] m-1 cursor-pointer bg-primary/10 text-left duration-500 hover:no-underline data-[state=open]:rounded-b-none data-[state=open]:[&_svg]:rotate-180 data-[state=open]:[&_svg]:[#plus]:opacity-0 [&_svg]:[#plus]:[data-state=open]:opacity-0 [&>svg]:hidden">
               <div className="flex flex-1 items-center justify-between gap-4 px-6">
                 <h3 className="text-2xl font-semibold">{item.title}</h3>
                 <div className="relative">

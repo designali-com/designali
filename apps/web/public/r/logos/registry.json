@@ -1,0 +1,6787 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "@designali/logos",
+  "homepage": "https://designali.com",
+  "items": [
+    {
+      "name": "adobe-after-effects",
+      "type": "registry:ui",
+      "title": "Adobe After Effects",
+      "description": "Adobe After Effects icon component",
+      "files": [
+        {
+          "path": "registry/logos/adobe/adobe-after-effects.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "adobe-animate",
+      "type": "registry:ui",
+      "title": "Adobe Animate",
+      "description": "Adobe Animate icon component",
+      "files": [
+        {
+          "path": "registry/logos/adobe/adobe-animate.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "adobe-dreamweaver",
+      "type": "registry:ui",
+      "title": "Adobe Dreamweaver",
+      "description": "Adobe Dreamweaver icon component",
+      "files": [
+        {
+          "path": "registry/logos/adobe/adobe-dreamweaver.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "adobe-illustrator",
+      "type": "registry:ui",
+      "title": "Adobe Illustrator",
+      "description": "Adobe Illustrator icon component",
+      "files": [
+        {
+          "path": "registry/logos/adobe/adobe-illustrator.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "adobe-incopy",
+      "type": "registry:ui",
+      "title": "Adobe Incopy",
+      "description": "Adobe Incopy icon component",
+      "files": [
+        {
+          "path": "registry/logos/adobe/adobe-incopy.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "adobe-indesign",
+      "type": "registry:ui",
+      "title": "Adobe Indesign",
+      "description": "Adobe Indesign icon component",
+      "files": [
+        {
+          "path": "registry/logos/adobe/adobe-indesign.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "adobe-lightroom",
+      "type": "registry:ui",
+      "title": "Adobe Lightroom",
+      "description": "Adobe Lightroom icon component",
+      "files": [
+        {
+          "path": "registry/logos/adobe/adobe-lightroom.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "adobe-photoshop",
+      "type": "registry:ui",
+      "title": "Adobe Photoshop",
+      "description": "Adobe Photoshop icon component",
+      "files": [
+        {
+          "path": "registry/logos/adobe/adobe-photoshop.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "adobe-premiere",
+      "type": "registry:ui",
+      "title": "Adobe Premiere",
+      "description": "Adobe Premiere icon component",
+      "files": [
+        {
+          "path": "registry/logos/adobe/adobe-premiere.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "adobe-xd",
+      "type": "registry:ui",
+      "title": "Adobe Xd",
+      "description": "Adobe Xd icon component",
+      "files": [
+        {
+          "path": "registry/logos/adobe/adobe-xd.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "adobe",
+      "type": "registry:ui",
+      "title": "Adobe",
+      "description": "Adobe icon component",
+      "files": [
+        {
+          "path": "registry/logos/adobe/adobe.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "adobe_wordmark",
+      "type": "registry:ui",
+      "title": "Adobe",
+      "description": "Adobe icon component",
+      "files": [
+        {
+          "path": "registry/logos/adobe/adobe_wordmark.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Anthropic-dark_wordmark",
+      "type": "registry:ui",
+      "title": "Anthropic Dark",
+      "description": "Anthropic Dark icon component",
+      "files": [
+        {
+          "path": "registry/logos/ai/Anthropic-dark_wordmark.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Anthropic-light_wordmark",
+      "type": "registry:ui",
+      "title": "Anthropic Light",
+      "description": "Anthropic Light icon component",
+      "files": [
+        {
+          "path": "registry/logos/ai/Anthropic-light_wordmark.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Anthropic",
+      "type": "registry:ui",
+      "title": "Anthropic",
+      "description": "Anthropic icon component",
+      "files": [
+        {
+          "path": "registry/logos/ai/Anthropic.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Claude-AI",
+      "type": "registry:ui",
+      "title": "Claude AI",
+      "description": "Claude AI icon component",
+      "files": [
+        {
+          "path": "registry/logos/ai/Claude-AI.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "ClaudeAI_wordmark",
+      "type": "registry:ui",
+      "title": "ClaudeAI",
+      "description": "ClaudeAI icon component",
+      "files": [
+        {
+          "path": "registry/logos/ai/ClaudeAI_wordmark.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "DeepSeek_wordmark",
+      "type": "registry:ui",
+      "title": "DeepSeek",
+      "description": "DeepSeek icon component",
+      "files": [
+        {
+          "path": "registry/logos/ai/DeepSeek_wordmark.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Grok",
+      "type": "registry:ui",
+      "title": "Grok",
+      "description": "Grok icon component",
+      "files": [
+        {
+          "path": "registry/logos/ai/Grok.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Grok_wordmark",
+      "type": "registry:ui",
+      "title": "Grok",
+      "description": "Grok icon component",
+      "files": [
+        {
+          "path": "registry/logos/ai/Grok_wordmark.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Hume",
+      "type": "registry:ui",
+      "title": "Hume",
+      "description": "Hume icon component",
+      "files": [
+        {
+          "path": "registry/logos/ai/Hume.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "OpenAI",
+      "type": "registry:ui",
+      "title": "OpenAI",
+      "description": "OpenAI icon component",
+      "files": [
+        {
+          "path": "registry/logos/ai/OpenAI.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "OpenAI_wordmark",
+      "type": "registry:ui",
+      "title": "OpenAI",
+      "description": "OpenAI icon component",
+      "files": [
+        {
+          "path": "registry/logos/ai/OpenAI_wordmark.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "PerplexityAI",
+      "type": "registry:ui",
+      "title": "PerplexityAI",
+      "description": "PerplexityAI icon component",
+      "files": [
+        {
+          "path": "registry/logos/ai/PerplexityAI.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "PerplexityAI_wordmark",
+      "type": "registry:ui",
+      "title": "PerplexityAI",
+      "description": "PerplexityAI icon component",
+      "files": [
+        {
+          "path": "registry/logos/ai/PerplexityAI_wordmark.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Replicate",
+      "type": "registry:ui",
+      "title": "Replicate",
+      "description": "Replicate icon component",
+      "files": [
+        {
+          "path": "registry/logos/ai/Replicate.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Replicate_wordmark",
+      "type": "registry:ui",
+      "title": "Replicate",
+      "description": "Replicate icon component",
+      "files": [
+        {
+          "path": "registry/logos/ai/Replicate_wordmark.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Runway",
+      "type": "registry:ui",
+      "title": "Runway",
+      "description": "Runway icon component",
+      "files": [
+        {
+          "path": "registry/logos/ai/Runway.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Suno",
+      "type": "registry:ui",
+      "title": "Suno",
+      "description": "Suno icon component",
+      "files": [
+        {
+          "path": "registry/logos/ai/Suno.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Suno_wordmark",
+      "type": "registry:ui",
+      "title": "Suno",
+      "description": "Suno icon component",
+      "files": [
+        {
+          "path": "registry/logos/ai/Suno_wordmark.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "TogetherAI_wordmark",
+      "type": "registry:ui",
+      "title": "TogetherAI",
+      "description": "TogetherAI icon component",
+      "files": [
+        {
+          "path": "registry/logos/ai/TogetherAI_wordmark.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Windsurf",
+      "type": "registry:ui",
+      "title": "Windsurf",
+      "description": "Windsurf icon component",
+      "files": [
+        {
+          "path": "registry/logos/ai/Windsurf.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Windsurf_wordmark",
+      "type": "registry:ui",
+      "title": "Windsurf",
+      "description": "Windsurf icon component",
+      "files": [
+        {
+          "path": "registry/logos/ai/Windsurf_wordmark.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "deepseek",
+      "type": "registry:ui",
+      "title": "Deepseek",
+      "description": "Deepseek icon component",
+      "files": [
+        {
+          "path": "registry/logos/ai/deepseek.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "hugging-face",
+      "type": "registry:ui",
+      "title": "Hugging Face",
+      "description": "Hugging Face icon component",
+      "files": [
+        {
+          "path": "registry/logos/ai/hugging-face.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "lovable",
+      "type": "registry:ui",
+      "title": "Lovable",
+      "description": "Lovable icon component",
+      "files": [
+        {
+          "path": "registry/logos/ai/lovable.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "midday",
+      "type": "registry:ui",
+      "title": "Midday",
+      "description": "Midday icon component",
+      "files": [
+        {
+          "path": "registry/logos/ai/midday.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "xAI-Grok",
+      "type": "registry:ui",
+      "title": "XAI Grok",
+      "description": "XAI Grok icon component",
+      "files": [
+        {
+          "path": "registry/logos/ai/xAI-Grok.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Arc",
+      "type": "registry:ui",
+      "title": "Arc",
+      "description": "Arc icon component",
+      "files": [
+        {
+          "path": "registry/logos/browser/Arc.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Bing",
+      "type": "registry:ui",
+      "title": "Bing",
+      "description": "Bing icon component",
+      "files": [
+        {
+          "path": "registry/logos/browser/Bing.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "BraveBrowser",
+      "type": "registry:ui",
+      "title": "BraveBrowser",
+      "description": "BraveBrowser icon component",
+      "files": [
+        {
+          "path": "registry/logos/browser/BraveBrowser.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Chrome",
+      "type": "registry:ui",
+      "title": "Chrome",
+      "description": "Chrome icon component",
+      "files": [
+        {
+          "path": "registry/logos/browser/Chrome.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Chromium",
+      "type": "registry:ui",
+      "title": "Chromium",
+      "description": "Chromium icon component",
+      "files": [
+        {
+          "path": "registry/logos/browser/Chromium.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Duck-Duck-Go",
+      "type": "registry:ui",
+      "title": "Duck Duck Go",
+      "description": "Duck Duck Go icon component",
+      "files": [
+        {
+          "path": "registry/logos/browser/Duck-Duck-Go.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Edge",
+      "type": "registry:ui",
+      "title": "Edge",
+      "description": "Edge icon component",
+      "files": [
+        {
+          "path": "registry/logos/browser/Edge.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Firefox",
+      "type": "registry:ui",
+      "title": "Firefox",
+      "description": "Firefox icon component",
+      "files": [
+        {
+          "path": "registry/logos/browser/Firefox.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Opera",
+      "type": "registry:ui",
+      "title": "Opera",
+      "description": "Opera icon component",
+      "files": [
+        {
+          "path": "registry/logos/browser/Opera.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Safari",
+      "type": "registry:ui",
+      "title": "Safari",
+      "description": "Safari icon component",
+      "files": [
+        {
+          "path": "registry/logos/browser/Safari.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Vivaldi",
+      "type": "registry:ui",
+      "title": "Vivaldi",
+      "description": "Vivaldi icon component",
+      "files": [
+        {
+          "path": "registry/logos/browser/Vivaldi.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "ZenBrowser",
+      "type": "registry:ui",
+      "title": "ZenBrowser",
+      "description": "ZenBrowser icon component",
+      "files": [
+        {
+          "path": "registry/logos/browser/ZenBrowser.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Alipay_symbols",
+      "type": "registry:ui",
+      "title": "Alipay",
+      "description": "Alipay icon component",
+      "files": [
+        {
+          "path": "registry/logos/cards/Alipay_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Amazon_symbols",
+      "type": "registry:ui",
+      "title": "Amazon",
+      "description": "Amazon icon component",
+      "files": [
+        {
+          "path": "registry/logos/cards/Amazon_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "American-Express_symbols",
+      "type": "registry:ui",
+      "title": "American Express",
+      "description": "American Express icon component",
+      "files": [
+        {
+          "path": "registry/logos/cards/American-Express_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Apple-Pay_symbols",
+      "type": "registry:ui",
+      "title": "Apple Pay",
+      "description": "Apple Pay icon component",
+      "files": [
+        {
+          "path": "registry/logos/cards/Apple-Pay_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Bank-account_symbols",
+      "type": "registry:ui",
+      "title": "Bank Account",
+      "description": "Bank Account icon component",
+      "files": [
+        {
+          "path": "registry/logos/cards/Bank-account_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Bitcoin_symbols",
+      "type": "registry:ui",
+      "title": "Bitcoin",
+      "description": "Bitcoin icon component",
+      "files": [
+        {
+          "path": "registry/logos/cards/Bitcoin_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "CVC_symbols",
+      "type": "registry:ui",
+      "title": "CVC",
+      "description": "CVC icon component",
+      "files": [
+        {
+          "path": "registry/logos/cards/CVC_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Diners-Club_symbols",
+      "type": "registry:ui",
+      "title": "Diners Club",
+      "description": "Diners Club icon component",
+      "files": [
+        {
+          "path": "registry/logos/cards/Diners-Club_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Discover_symbols",
+      "type": "registry:ui",
+      "title": "Discover",
+      "description": "Discover icon component",
+      "files": [
+        {
+          "path": "registry/logos/cards/Discover_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Eftpos_symbols",
+      "type": "registry:ui",
+      "title": "Eftpos",
+      "description": "Eftpos icon component",
+      "files": [
+        {
+          "path": "registry/logos/cards/Eftpos_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Front-1_symbols",
+      "type": "registry:ui",
+      "title": "Front 1",
+      "description": "Front 1 icon component",
+      "files": [
+        {
+          "path": "registry/logos/cards/Front-1_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Front_symbols",
+      "type": "registry:ui",
+      "title": "Front",
+      "description": "Front icon component",
+      "files": [
+        {
+          "path": "registry/logos/cards/Front_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Google-Pay_symbols",
+      "type": "registry:ui",
+      "title": "Google Pay",
+      "description": "Google Pay icon component",
+      "files": [
+        {
+          "path": "registry/logos/cards/Google-Pay_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "JCB_symbols",
+      "type": "registry:ui",
+      "title": "JCB",
+      "description": "JCB icon component",
+      "files": [
+        {
+          "path": "registry/logos/cards/JCB_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Maestro_symbols",
+      "type": "registry:ui",
+      "title": "Maestro",
+      "description": "Maestro icon component",
+      "files": [
+        {
+          "path": "registry/logos/cards/Maestro_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Mastercard-1_symbols",
+      "type": "registry:ui",
+      "title": "Mastercard 1",
+      "description": "Mastercard 1 icon component",
+      "files": [
+        {
+          "path": "registry/logos/cards/Mastercard-1_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Mastercard_symbols",
+      "type": "registry:ui",
+      "title": "Mastercard",
+      "description": "Mastercard icon component",
+      "files": [
+        {
+          "path": "registry/logos/cards/Mastercard_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Paypal-1_symbols",
+      "type": "registry:ui",
+      "title": "Paypal 1",
+      "description": "Paypal 1 icon component",
+      "files": [
+        {
+          "path": "registry/logos/cards/Paypal-1_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Paypal_symbols",
+      "type": "registry:ui",
+      "title": "Paypal",
+      "description": "Paypal icon component",
+      "files": [
+        {
+          "path": "registry/logos/cards/Paypal_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "RuPay_symbols",
+      "type": "registry:ui",
+      "title": "RuPay",
+      "description": "RuPay icon component",
+      "files": [
+        {
+          "path": "registry/logos/cards/RuPay_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Shop-Pay_symbols",
+      "type": "registry:ui",
+      "title": "Shop Pay",
+      "description": "Shop Pay icon component",
+      "files": [
+        {
+          "path": "registry/logos/cards/Shop-Pay_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "UnionPay_symbols",
+      "type": "registry:ui",
+      "title": "UnionPay",
+      "description": "UnionPay icon component",
+      "files": [
+        {
+          "path": "registry/logos/cards/UnionPay_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Visa-1_symbols",
+      "type": "registry:ui",
+      "title": "Visa 1",
+      "description": "Visa 1 icon component",
+      "files": [
+        {
+          "path": "registry/logos/cards/Visa-1_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Visa_symbols",
+      "type": "registry:ui",
+      "title": "Visa",
+      "description": "Visa icon component",
+      "files": [
+        {
+          "path": "registry/logos/cards/Visa_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "WeChat-Pay_symbols",
+      "type": "registry:ui",
+      "title": "WeChat Pay",
+      "description": "WeChat Pay icon component",
+      "files": [
+        {
+          "path": "registry/logos/cards/WeChat-Pay_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Builder",
+      "type": "registry:ui",
+      "title": "Builder",
+      "description": "Builder icon component",
+      "files": [
+        {
+          "path": "registry/logos/cms/Builder.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Directus",
+      "type": "registry:ui",
+      "title": "Directus",
+      "description": "Directus icon component",
+      "files": [
+        {
+          "path": "registry/logos/cms/Directus.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "PayloadCMS",
+      "type": "registry:ui",
+      "title": "PayloadCMS",
+      "description": "PayloadCMS icon component",
+      "files": [
+        {
+          "path": "registry/logos/cms/PayloadCMS.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Sanity",
+      "type": "registry:ui",
+      "title": "Sanity",
+      "description": "Sanity icon component",
+      "files": [
+        {
+          "path": "registry/logos/cms/Sanity.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Shopify",
+      "type": "registry:ui",
+      "title": "Shopify",
+      "description": "Shopify icon component",
+      "files": [
+        {
+          "path": "registry/logos/cms/Shopify.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Storyblok",
+      "type": "registry:ui",
+      "title": "Storyblok",
+      "description": "Storyblok icon component",
+      "files": [
+        {
+          "path": "registry/logos/cms/Storyblok.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Strapi",
+      "type": "registry:ui",
+      "title": "Strapi",
+      "description": "Strapi icon component",
+      "files": [
+        {
+          "path": "registry/logos/cms/Strapi.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Tina",
+      "type": "registry:ui",
+      "title": "Tina",
+      "description": "Tina icon component",
+      "files": [
+        {
+          "path": "registry/logos/cms/Tina.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Webflow",
+      "type": "registry:ui",
+      "title": "Webflow",
+      "description": "Webflow icon component",
+      "files": [
+        {
+          "path": "registry/logos/cms/Webflow.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "WordPress",
+      "type": "registry:ui",
+      "title": "WordPress",
+      "description": "WordPress icon component",
+      "files": [
+        {
+          "path": "registry/logos/cms/WordPress.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Algorand",
+      "type": "registry:ui",
+      "title": "Algorand",
+      "description": "Algorand icon component",
+      "files": [
+        {
+          "path": "registry/logos/crypto/Algorand.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Binance",
+      "type": "registry:ui",
+      "title": "Binance",
+      "description": "Binance icon component",
+      "files": [
+        {
+          "path": "registry/logos/crypto/Binance.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Coinbase",
+      "type": "registry:ui",
+      "title": "Coinbase",
+      "description": "Coinbase icon component",
+      "files": [
+        {
+          "path": "registry/logos/crypto/Coinbase.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "DingoCoin",
+      "type": "registry:ui",
+      "title": "DingoCoin",
+      "description": "DingoCoin icon component",
+      "files": [
+        {
+          "path": "registry/logos/crypto/DingoCoin.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Link",
+      "type": "registry:ui",
+      "title": "Link",
+      "description": "Link icon component",
+      "files": [
+        {
+          "path": "registry/logos/crypto/Link.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Litecoin",
+      "type": "registry:ui",
+      "title": "Litecoin",
+      "description": "Litecoin icon component",
+      "files": [
+        {
+          "path": "registry/logos/crypto/Litecoin.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "MetaMask",
+      "type": "registry:ui",
+      "title": "MetaMask",
+      "description": "MetaMask icon component",
+      "files": [
+        {
+          "path": "registry/logos/crypto/MetaMask.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Monero",
+      "type": "registry:ui",
+      "title": "Monero",
+      "description": "Monero icon component",
+      "files": [
+        {
+          "path": "registry/logos/crypto/Monero.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "OpenSea",
+      "type": "registry:ui",
+      "title": "OpenSea",
+      "description": "OpenSea icon component",
+      "files": [
+        {
+          "path": "registry/logos/crypto/OpenSea.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Polygon",
+      "type": "registry:ui",
+      "title": "Polygon",
+      "description": "Polygon icon component",
+      "files": [
+        {
+          "path": "registry/logos/crypto/Polygon.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Solana",
+      "type": "registry:ui",
+      "title": "Solana",
+      "description": "Solana icon component",
+      "files": [
+        {
+          "path": "registry/logos/crypto/Solana.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Tether",
+      "type": "registry:ui",
+      "title": "Tether",
+      "description": "Tether icon component",
+      "files": [
+        {
+          "path": "registry/logos/crypto/Tether.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Ton",
+      "type": "registry:ui",
+      "title": "Ton",
+      "description": "Ton icon component",
+      "files": [
+        {
+          "path": "registry/logos/crypto/Ton.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Tron",
+      "type": "registry:ui",
+      "title": "Tron",
+      "description": "Tron icon component",
+      "files": [
+        {
+          "path": "registry/logos/crypto/Tron.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "TrustWallet",
+      "type": "registry:ui",
+      "title": "TrustWallet",
+      "description": "TrustWallet icon component",
+      "files": [
+        {
+          "path": "registry/logos/crypto/TrustWallet.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Drizzle",
+      "type": "registry:ui",
+      "title": "Drizzle",
+      "description": "Drizzle icon component",
+      "files": [
+        {
+          "path": "registry/logos/database/Drizzle.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Manifest",
+      "type": "registry:ui",
+      "title": "Manifest",
+      "description": "Manifest icon component",
+      "files": [
+        {
+          "path": "registry/logos/database/Manifest.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "MariaDB",
+      "type": "registry:ui",
+      "title": "MariaDB",
+      "description": "MariaDB icon component",
+      "files": [
+        {
+          "path": "registry/logos/database/MariaDB.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Microsoft-SQL-Server",
+      "type": "registry:ui",
+      "title": "Microsoft SQL Server",
+      "description": "Microsoft SQL Server icon component",
+      "files": [
+        {
+          "path": "registry/logos/database/Microsoft-SQL-Server.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Mongo-DB",
+      "type": "registry:ui",
+      "title": "Mongo DB",
+      "description": "Mongo DB icon component",
+      "files": [
+        {
+          "path": "registry/logos/database/Mongo-DB.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "MySQL",
+      "type": "registry:ui",
+      "title": "MySQL",
+      "description": "MySQL icon component",
+      "files": [
+        {
+          "path": "registry/logos/database/MySQL.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Neon",
+      "type": "registry:ui",
+      "title": "Neon",
+      "description": "Neon icon component",
+      "files": [
+        {
+          "path": "registry/logos/database/Neon.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "PlanetScale",
+      "type": "registry:ui",
+      "title": "PlanetScale",
+      "description": "PlanetScale icon component",
+      "files": [
+        {
+          "path": "registry/logos/database/PlanetScale.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Pocketbase",
+      "type": "registry:ui",
+      "title": "Pocketbase",
+      "description": "Pocketbase icon component",
+      "files": [
+        {
+          "path": "registry/logos/database/Pocketbase.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Qdrant",
+      "type": "registry:ui",
+      "title": "Qdrant",
+      "description": "Qdrant icon component",
+      "files": [
+        {
+          "path": "registry/logos/database/Qdrant.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "SQLite",
+      "type": "registry:ui",
+      "title": "SQLite",
+      "description": "SQLite icon component",
+      "files": [
+        {
+          "path": "registry/logos/database/SQLite.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Turso",
+      "type": "registry:ui",
+      "title": "Turso",
+      "description": "Turso icon component",
+      "files": [
+        {
+          "path": "registry/logos/database/Turso.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "TypeORM",
+      "type": "registry:ui",
+      "title": "TypeORM",
+      "description": "TypeORM icon component",
+      "files": [
+        {
+          "path": "registry/logos/database/TypeORM.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Upstash",
+      "type": "registry:ui",
+      "title": "Upstash",
+      "description": "Upstash icon component",
+      "files": [
+        {
+          "path": "registry/logos/database/Upstash.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Axure",
+      "type": "registry:ui",
+      "title": "Axure",
+      "description": "Axure icon component",
+      "files": [
+        {
+          "path": "registry/logos/design/Axure.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Blender",
+      "type": "registry:ui",
+      "title": "Blender",
+      "description": "Blender icon component",
+      "files": [
+        {
+          "path": "registry/logos/design/Blender.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Canva",
+      "type": "registry:ui",
+      "title": "Canva",
+      "description": "Canva icon component",
+      "files": [
+        {
+          "path": "registry/logos/design/Canva.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Figma",
+      "type": "registry:ui",
+      "title": "Figma",
+      "description": "Figma icon component",
+      "files": [
+        {
+          "path": "registry/logos/design/Figma.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Layers",
+      "type": "registry:ui",
+      "title": "Layers",
+      "description": "Layers icon component",
+      "files": [
+        {
+          "path": "registry/logos/design/Layers.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "LottieFiles",
+      "type": "registry:ui",
+      "title": "LottieFiles",
+      "description": "LottieFiles icon component",
+      "files": [
+        {
+          "path": "registry/logos/design/LottieFiles.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Penpot",
+      "type": "registry:ui",
+      "title": "Penpot",
+      "description": "Penpot icon component",
+      "files": [
+        {
+          "path": "registry/logos/design/Penpot.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Pitch",
+      "type": "registry:ui",
+      "title": "Pitch",
+      "description": "Pitch icon component",
+      "files": [
+        {
+          "path": "registry/logos/design/Pitch.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "SVG",
+      "type": "registry:ui",
+      "title": "SVG",
+      "description": "SVG icon component",
+      "files": [
+        {
+          "path": "registry/logos/design/SVG.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Sketch",
+      "type": "registry:ui",
+      "title": "Sketch",
+      "description": "Sketch icon component",
+      "files": [
+        {
+          "path": "registry/logos/design/Sketch.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Bolt",
+      "type": "registry:ui",
+      "title": "Bolt",
+      "description": "Bolt icon component",
+      "files": [
+        {
+          "path": "registry/logos/devtool/Bolt.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Dotenv",
+      "type": "registry:ui",
+      "title": "Dotenv",
+      "description": "Dotenv icon component",
+      "files": [
+        {
+          "path": "registry/logos/devtool/Dotenv.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Dotenvx",
+      "type": "registry:ui",
+      "title": "Dotenvx",
+      "description": "Dotenvx icon component",
+      "files": [
+        {
+          "path": "registry/logos/devtool/Dotenvx.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Kilo-Code",
+      "type": "registry:ui",
+      "title": "Kilo Code",
+      "description": "Kilo Code icon component",
+      "files": [
+        {
+          "path": "registry/logos/devtool/Kilo-Code.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Microsoft-NET",
+      "type": "registry:ui",
+      "title": "Microsoft NET",
+      "description": "Microsoft NET icon component",
+      "files": [
+        {
+          "path": "registry/logos/devtool/Microsoft-NET.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Nx",
+      "type": "registry:ui",
+      "title": "Nx",
+      "description": "Nx icon component",
+      "files": [
+        {
+          "path": "registry/logos/devtool/Nx.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Oxc",
+      "type": "registry:ui",
+      "title": "Oxc",
+      "description": "Oxc icon component",
+      "files": [
+        {
+          "path": "registry/logos/devtool/Oxc.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Post-Hog",
+      "type": "registry:ui",
+      "title": "Post Hog",
+      "description": "Post Hog icon component",
+      "files": [
+        {
+          "path": "registry/logos/devtool/Post-Hog.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Rsbuild",
+      "type": "registry:ui",
+      "title": "Rsbuild",
+      "description": "Rsbuild icon component",
+      "files": [
+        {
+          "path": "registry/logos/devtool/Rsbuild.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Uno-CSS",
+      "type": "registry:ui",
+      "title": "Uno CSS",
+      "description": "Uno CSS icon component",
+      "files": [
+        {
+          "path": "registry/logos/devtool/Uno-CSS.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Aaland-Islands_symbols",
+      "type": "registry:ui",
+      "title": "Aaland Islands",
+      "description": "Aaland Islands icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Aaland-Islands_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Afghanistan_symbols",
+      "type": "registry:ui",
+      "title": "Afghanistan",
+      "description": "Afghanistan icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Afghanistan_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Albania_symbols",
+      "type": "registry:ui",
+      "title": "Albania",
+      "description": "Albania icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Albania_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Algeria_symbols",
+      "type": "registry:ui",
+      "title": "Algeria",
+      "description": "Algeria icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Algeria_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Andorra_symbols",
+      "type": "registry:ui",
+      "title": "Andorra",
+      "description": "Andorra icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Andorra_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Angola_symbols",
+      "type": "registry:ui",
+      "title": "Angola",
+      "description": "Angola icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Angola_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Anguilla_symbols",
+      "type": "registry:ui",
+      "title": "Anguilla",
+      "description": "Anguilla icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Anguilla_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Antarctica_symbols",
+      "type": "registry:ui",
+      "title": "Antarctica",
+      "description": "Antarctica icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Antarctica_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Antigua-Barbuda_symbols",
+      "type": "registry:ui",
+      "title": "Antigua Barbuda",
+      "description": "Antigua Barbuda icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Antigua-Barbuda_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Argentina_symbols",
+      "type": "registry:ui",
+      "title": "Argentina",
+      "description": "Argentina icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Argentina_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Armenia_symbols",
+      "type": "registry:ui",
+      "title": "Armenia",
+      "description": "Armenia icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Armenia_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Aruba_symbols",
+      "type": "registry:ui",
+      "title": "Aruba",
+      "description": "Aruba icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Aruba_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Australia_symbols",
+      "type": "registry:ui",
+      "title": "Australia",
+      "description": "Australia icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Australia_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Austria_symbols",
+      "type": "registry:ui",
+      "title": "Austria",
+      "description": "Austria icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Austria_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Azerbaijan_symbols",
+      "type": "registry:ui",
+      "title": "Azerbaijan",
+      "description": "Azerbaijan icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Azerbaijan_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Bahamas_symbols",
+      "type": "registry:ui",
+      "title": "Bahamas",
+      "description": "Bahamas icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Bahamas_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Bahrain_symbols",
+      "type": "registry:ui",
+      "title": "Bahrain",
+      "description": "Bahrain icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Bahrain_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Bangladesh_symbols",
+      "type": "registry:ui",
+      "title": "Bangladesh",
+      "description": "Bangladesh icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Bangladesh_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Barbados_symbols",
+      "type": "registry:ui",
+      "title": "Barbados",
+      "description": "Barbados icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Barbados_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Basque_symbols",
+      "type": "registry:ui",
+      "title": "Basque",
+      "description": "Basque icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Basque_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Belarus_symbols",
+      "type": "registry:ui",
+      "title": "Belarus",
+      "description": "Belarus icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Belarus_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Belgium_symbols",
+      "type": "registry:ui",
+      "title": "Belgium",
+      "description": "Belgium icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Belgium_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Belize_symbols",
+      "type": "registry:ui",
+      "title": "Belize",
+      "description": "Belize icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Belize_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Benin_symbols",
+      "type": "registry:ui",
+      "title": "Benin",
+      "description": "Benin icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Benin_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Bermuda_symbols",
+      "type": "registry:ui",
+      "title": "Bermuda",
+      "description": "Bermuda icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Bermuda_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Bhutan_symbols",
+      "type": "registry:ui",
+      "title": "Bhutan",
+      "description": "Bhutan icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Bhutan_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Bolivia_symbols",
+      "type": "registry:ui",
+      "title": "Bolivia",
+      "description": "Bolivia icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Bolivia_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Bosnia-Herzegovina_symbols",
+      "type": "registry:ui",
+      "title": "Bosnia Herzegovina",
+      "description": "Bosnia Herzegovina icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Bosnia-Herzegovina_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Botswana_symbols",
+      "type": "registry:ui",
+      "title": "Botswana",
+      "description": "Botswana icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Botswana_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Brazil_symbols",
+      "type": "registry:ui",
+      "title": "Brazil",
+      "description": "Brazil icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Brazil_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "British-Virgin-Islands_symbols",
+      "type": "registry:ui",
+      "title": "British Virgin Islands",
+      "description": "British Virgin Islands icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/British-Virgin-Islands_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Brunei_symbols",
+      "type": "registry:ui",
+      "title": "Brunei",
+      "description": "Brunei icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Brunei_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Bulgaria_symbols",
+      "type": "registry:ui",
+      "title": "Bulgaria",
+      "description": "Bulgaria icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Bulgaria_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Burkina-Faso_symbols",
+      "type": "registry:ui",
+      "title": "Burkina Faso",
+      "description": "Burkina Faso icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Burkina-Faso_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Burundi_symbols",
+      "type": "registry:ui",
+      "title": "Burundi",
+      "description": "Burundi icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Burundi_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Cambodia_symbols",
+      "type": "registry:ui",
+      "title": "Cambodia",
+      "description": "Cambodia icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Cambodia_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Cameroon_symbols",
+      "type": "registry:ui",
+      "title": "Cameroon",
+      "description": "Cameroon icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Cameroon_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Canada_symbols",
+      "type": "registry:ui",
+      "title": "Canada",
+      "description": "Canada icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Canada_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Canary-Islands_symbols",
+      "type": "registry:ui",
+      "title": "Canary Islands",
+      "description": "Canary Islands icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Canary-Islands_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Cape-Verde_symbols",
+      "type": "registry:ui",
+      "title": "Cape Verde",
+      "description": "Cape Verde icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Cape-Verde_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Cayman-Islands_symbols",
+      "type": "registry:ui",
+      "title": "Cayman Islands",
+      "description": "Cayman Islands icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Cayman-Islands_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Central-African-Repu_symbols",
+      "type": "registry:ui",
+      "title": "Central African Repu",
+      "description": "Central African Repu icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Central-African-Repu_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Chad_symbols",
+      "type": "registry:ui",
+      "title": "Chad",
+      "description": "Chad icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Chad_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Chile_symbols",
+      "type": "registry:ui",
+      "title": "Chile",
+      "description": "Chile icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Chile_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "China_symbols",
+      "type": "registry:ui",
+      "title": "China",
+      "description": "China icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/China_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Colombia_symbols",
+      "type": "registry:ui",
+      "title": "Colombia",
+      "description": "Colombia icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Colombia_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Comoros_symbols",
+      "type": "registry:ui",
+      "title": "Comoros",
+      "description": "Comoros icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Comoros_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Cook-Islands_symbols",
+      "type": "registry:ui",
+      "title": "Cook Islands",
+      "description": "Cook Islands icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Cook-Islands_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Costa-Rica_symbols",
+      "type": "registry:ui",
+      "title": "Costa Rica",
+      "description": "Costa Rica icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Costa-Rica_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Croatia_symbols",
+      "type": "registry:ui",
+      "title": "Croatia",
+      "description": "Croatia icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Croatia_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Cuba_symbols",
+      "type": "registry:ui",
+      "title": "Cuba",
+      "description": "Cuba icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Cuba_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Curacao_symbols",
+      "type": "registry:ui",
+      "title": "Curacao",
+      "description": "Curacao icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Curacao_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Cyprus_symbols",
+      "type": "registry:ui",
+      "title": "Cyprus",
+      "description": "Cyprus icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Cyprus_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Czechia_symbols",
+      "type": "registry:ui",
+      "title": "Czechia",
+      "description": "Czechia icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Czechia_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Democratic-Republic-of-Congo_symbols",
+      "type": "registry:ui",
+      "title": "Democratic Republic Of Congo",
+      "description": "Democratic Republic Of Congo icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Democratic-Republic-of-Congo_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Denmark_symbols",
+      "type": "registry:ui",
+      "title": "Denmark",
+      "description": "Denmark icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Denmark_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Djibouti_symbols",
+      "type": "registry:ui",
+      "title": "Djibouti",
+      "description": "Djibouti icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Djibouti_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Dominica_symbols",
+      "type": "registry:ui",
+      "title": "Dominica",
+      "description": "Dominica icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Dominica_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Dominican-Republic_symbols",
+      "type": "registry:ui",
+      "title": "Dominican Republic",
+      "description": "Dominican Republic icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Dominican-Republic_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "East-Timor_symbols",
+      "type": "registry:ui",
+      "title": "East Timor",
+      "description": "East Timor icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/East-Timor_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Ecuador_symbols",
+      "type": "registry:ui",
+      "title": "Ecuador",
+      "description": "Ecuador icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Ecuador_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Egypt_symbols",
+      "type": "registry:ui",
+      "title": "Egypt",
+      "description": "Egypt icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Egypt_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "El-Salvador_symbols",
+      "type": "registry:ui",
+      "title": "El Salvador",
+      "description": "El Salvador icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/El-Salvador_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "England_symbols",
+      "type": "registry:ui",
+      "title": "England",
+      "description": "England icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/England_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Equatorial-Guinea_symbols",
+      "type": "registry:ui",
+      "title": "Equatorial Guinea",
+      "description": "Equatorial Guinea icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Equatorial-Guinea_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Eritrea_symbols",
+      "type": "registry:ui",
+      "title": "Eritrea",
+      "description": "Eritrea icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Eritrea_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Estonia_symbols",
+      "type": "registry:ui",
+      "title": "Estonia",
+      "description": "Estonia icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Estonia_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Eswatini_symbols",
+      "type": "registry:ui",
+      "title": "Eswatini",
+      "description": "Eswatini icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Eswatini_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Ethiopia_symbols",
+      "type": "registry:ui",
+      "title": "Ethiopia",
+      "description": "Ethiopia icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Ethiopia_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Europe_symbols",
+      "type": "registry:ui",
+      "title": "Europe",
+      "description": "Europe icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Europe_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Falkland-Islands_symbols",
+      "type": "registry:ui",
+      "title": "Falkland Islands",
+      "description": "Falkland Islands icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Falkland-Islands_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Faroe-Islands_symbols",
+      "type": "registry:ui",
+      "title": "Faroe Islands",
+      "description": "Faroe Islands icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Faroe-Islands_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Fiji_symbols",
+      "type": "registry:ui",
+      "title": "Fiji",
+      "description": "Fiji icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Fiji_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Finland_symbols",
+      "type": "registry:ui",
+      "title": "Finland",
+      "description": "Finland icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Finland_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "France_symbols",
+      "type": "registry:ui",
+      "title": "France",
+      "description": "France icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/France_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "French-Guiana_symbols",
+      "type": "registry:ui",
+      "title": "French Guiana",
+      "description": "French Guiana icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/French-Guiana_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "French-Polynesia_symbols",
+      "type": "registry:ui",
+      "title": "French Polynesia",
+      "description": "French Polynesia icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/French-Polynesia_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Gabon_symbols",
+      "type": "registry:ui",
+      "title": "Gabon",
+      "description": "Gabon icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Gabon_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Gambia_symbols",
+      "type": "registry:ui",
+      "title": "Gambia",
+      "description": "Gambia icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Gambia_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Georgia_symbols",
+      "type": "registry:ui",
+      "title": "Georgia",
+      "description": "Georgia icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Georgia_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Germany_symbols",
+      "type": "registry:ui",
+      "title": "Germany",
+      "description": "Germany icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Germany_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Ghana_symbols",
+      "type": "registry:ui",
+      "title": "Ghana",
+      "description": "Ghana icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Ghana_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Gibraltar_symbols",
+      "type": "registry:ui",
+      "title": "Gibraltar",
+      "description": "Gibraltar icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Gibraltar_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Greece_symbols",
+      "type": "registry:ui",
+      "title": "Greece",
+      "description": "Greece icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Greece_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Greenland_symbols",
+      "type": "registry:ui",
+      "title": "Greenland",
+      "description": "Greenland icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Greenland_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Grenada_symbols",
+      "type": "registry:ui",
+      "title": "Grenada",
+      "description": "Grenada icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Grenada_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Guadeloupe_symbols",
+      "type": "registry:ui",
+      "title": "Guadeloupe",
+      "description": "Guadeloupe icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Guadeloupe_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Guatemala_symbols",
+      "type": "registry:ui",
+      "title": "Guatemala",
+      "description": "Guatemala icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Guatemala_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Guernsey_symbols",
+      "type": "registry:ui",
+      "title": "Guernsey",
+      "description": "Guernsey icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Guernsey_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Guinea-Bissau_symbols",
+      "type": "registry:ui",
+      "title": "Guinea Bissau",
+      "description": "Guinea Bissau icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Guinea-Bissau_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Guinea_symbols",
+      "type": "registry:ui",
+      "title": "Guinea",
+      "description": "Guinea icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Guinea_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Guyana_symbols",
+      "type": "registry:ui",
+      "title": "Guyana",
+      "description": "Guyana icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Guyana_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Haiti_symbols",
+      "type": "registry:ui",
+      "title": "Haiti",
+      "description": "Haiti icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Haiti_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Hawaii_symbols",
+      "type": "registry:ui",
+      "title": "Hawaii",
+      "description": "Hawaii icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Hawaii_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Honduras_symbols",
+      "type": "registry:ui",
+      "title": "Honduras",
+      "description": "Honduras icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Honduras_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Hong-Kong_symbols",
+      "type": "registry:ui",
+      "title": "Hong Kong",
+      "description": "Hong Kong icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Hong-Kong_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Hungary_symbols",
+      "type": "registry:ui",
+      "title": "Hungary",
+      "description": "Hungary icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Hungary_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Iceland_symbols",
+      "type": "registry:ui",
+      "title": "Iceland",
+      "description": "Iceland icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Iceland_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "India_symbols",
+      "type": "registry:ui",
+      "title": "India",
+      "description": "India icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/India_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Indonesia_symbols",
+      "type": "registry:ui",
+      "title": "Indonesia",
+      "description": "Indonesia icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Indonesia_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Iran_symbols",
+      "type": "registry:ui",
+      "title": "Iran",
+      "description": "Iran icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Iran_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Iraq_symbols",
+      "type": "registry:ui",
+      "title": "Iraq",
+      "description": "Iraq icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Iraq_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Ireland_symbols",
+      "type": "registry:ui",
+      "title": "Ireland",
+      "description": "Ireland icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Ireland_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Isle-Of-Man_symbols",
+      "type": "registry:ui",
+      "title": "Isle Of Man",
+      "description": "Isle Of Man icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Isle-Of-Man_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Israel_symbols",
+      "type": "registry:ui",
+      "title": "Israel",
+      "description": "Israel icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Israel_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Italy_symbols",
+      "type": "registry:ui",
+      "title": "Italy",
+      "description": "Italy icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Italy_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Ivory-Coast_symbols",
+      "type": "registry:ui",
+      "title": "Ivory Coast",
+      "description": "Ivory Coast icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Ivory-Coast_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Jamaica_symbols",
+      "type": "registry:ui",
+      "title": "Jamaica",
+      "description": "Jamaica icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Jamaica_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Japan_symbols",
+      "type": "registry:ui",
+      "title": "Japan",
+      "description": "Japan icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Japan_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Jersey_symbols",
+      "type": "registry:ui",
+      "title": "Jersey",
+      "description": "Jersey icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Jersey_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Jordan_symbols",
+      "type": "registry:ui",
+      "title": "Jordan",
+      "description": "Jordan icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Jordan_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Kazakhstan_symbols",
+      "type": "registry:ui",
+      "title": "Kazakhstan",
+      "description": "Kazakhstan icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Kazakhstan_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Kenya_symbols",
+      "type": "registry:ui",
+      "title": "Kenya",
+      "description": "Kenya icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Kenya_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Kiribati_symbols",
+      "type": "registry:ui",
+      "title": "Kiribati",
+      "description": "Kiribati icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Kiribati_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Kosovo_symbols",
+      "type": "registry:ui",
+      "title": "Kosovo",
+      "description": "Kosovo icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Kosovo_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Kurdistan_symbols",
+      "type": "registry:ui",
+      "title": "Kurdistan",
+      "description": "Kurdistan icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Kurdistan_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Kuwait_symbols",
+      "type": "registry:ui",
+      "title": "Kuwait",
+      "description": "Kuwait icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Kuwait_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Kyrgyzstan_symbols",
+      "type": "registry:ui",
+      "title": "Kyrgyzstan",
+      "description": "Kyrgyzstan icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Kyrgyzstan_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Laos_symbols",
+      "type": "registry:ui",
+      "title": "Laos",
+      "description": "Laos icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Laos_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Latvia_symbols",
+      "type": "registry:ui",
+      "title": "Latvia",
+      "description": "Latvia icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Latvia_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Lebanon_symbols",
+      "type": "registry:ui",
+      "title": "Lebanon",
+      "description": "Lebanon icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Lebanon_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Lesotho_symbols",
+      "type": "registry:ui",
+      "title": "Lesotho",
+      "description": "Lesotho icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Lesotho_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Liberia_symbols",
+      "type": "registry:ui",
+      "title": "Liberia",
+      "description": "Liberia icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Liberia_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Libya_symbols",
+      "type": "registry:ui",
+      "title": "Libya",
+      "description": "Libya icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Libya_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Liechtenstein_symbols",
+      "type": "registry:ui",
+      "title": "Liechtenstein",
+      "description": "Liechtenstein icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Liechtenstein_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Lithuania_symbols",
+      "type": "registry:ui",
+      "title": "Lithuania",
+      "description": "Lithuania icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Lithuania_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Luxembourg_symbols",
+      "type": "registry:ui",
+      "title": "Luxembourg",
+      "description": "Luxembourg icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Luxembourg_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Macau_symbols",
+      "type": "registry:ui",
+      "title": "Macau",
+      "description": "Macau icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Macau_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Madagascar_symbols",
+      "type": "registry:ui",
+      "title": "Madagascar",
+      "description": "Madagascar icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Madagascar_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Malawi_symbols",
+      "type": "registry:ui",
+      "title": "Malawi",
+      "description": "Malawi icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Malawi_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Malaysia_symbols",
+      "type": "registry:ui",
+      "title": "Malaysia",
+      "description": "Malaysia icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Malaysia_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Maldives_symbols",
+      "type": "registry:ui",
+      "title": "Maldives",
+      "description": "Maldives icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Maldives_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Mali_symbols",
+      "type": "registry:ui",
+      "title": "Mali",
+      "description": "Mali icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Mali_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Malta_symbols",
+      "type": "registry:ui",
+      "title": "Malta",
+      "description": "Malta icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Malta_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Marshall-Islands_symbols",
+      "type": "registry:ui",
+      "title": "Marshall Islands",
+      "description": "Marshall Islands icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Marshall-Islands_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Martinique_symbols",
+      "type": "registry:ui",
+      "title": "Martinique",
+      "description": "Martinique icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Martinique_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Mauritania_symbols",
+      "type": "registry:ui",
+      "title": "Mauritania",
+      "description": "Mauritania icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Mauritania_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Mauritius_symbols",
+      "type": "registry:ui",
+      "title": "Mauritius",
+      "description": "Mauritius icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Mauritius_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Mexico_symbols",
+      "type": "registry:ui",
+      "title": "Mexico",
+      "description": "Mexico icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Mexico_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Micronesia_symbols",
+      "type": "registry:ui",
+      "title": "Micronesia",
+      "description": "Micronesia icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Micronesia_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Moldova_symbols",
+      "type": "registry:ui",
+      "title": "Moldova",
+      "description": "Moldova icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Moldova_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Monaco_symbols",
+      "type": "registry:ui",
+      "title": "Monaco",
+      "description": "Monaco icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Monaco_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Mongolia_symbols",
+      "type": "registry:ui",
+      "title": "Mongolia",
+      "description": "Mongolia icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Mongolia_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Montenegro_symbols",
+      "type": "registry:ui",
+      "title": "Montenegro",
+      "description": "Montenegro icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Montenegro_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Morocco_symbols",
+      "type": "registry:ui",
+      "title": "Morocco",
+      "description": "Morocco icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Morocco_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Mozanbique_symbols",
+      "type": "registry:ui",
+      "title": "Mozanbique",
+      "description": "Mozanbique icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Mozanbique_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Myanmar_symbols",
+      "type": "registry:ui",
+      "title": "Myanmar",
+      "description": "Myanmar icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Myanmar_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Namibia_symbols",
+      "type": "registry:ui",
+      "title": "Namibia",
+      "description": "Namibia icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Namibia_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Nauru_symbols",
+      "type": "registry:ui",
+      "title": "Nauru",
+      "description": "Nauru icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Nauru_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Nepal_symbols",
+      "type": "registry:ui",
+      "title": "Nepal",
+      "description": "Nepal icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Nepal_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Netherlands-Antilles_symbols",
+      "type": "registry:ui",
+      "title": "Netherlands Antilles",
+      "description": "Netherlands Antilles icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Netherlands-Antilles_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Netherlands_symbols",
+      "type": "registry:ui",
+      "title": "Netherlands",
+      "description": "Netherlands icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Netherlands_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "New-Caledonia_symbols",
+      "type": "registry:ui",
+      "title": "New Caledonia",
+      "description": "New Caledonia icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/New-Caledonia_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "New-Zealand_symbols",
+      "type": "registry:ui",
+      "title": "New Zealand",
+      "description": "New Zealand icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/New-Zealand_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Nicaragua_symbols",
+      "type": "registry:ui",
+      "title": "Nicaragua",
+      "description": "Nicaragua icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Nicaragua_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Niger_symbols",
+      "type": "registry:ui",
+      "title": "Niger",
+      "description": "Niger icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Niger_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Nigeria_symbols",
+      "type": "registry:ui",
+      "title": "Nigeria",
+      "description": "Nigeria icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Nigeria_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Niue_symbols",
+      "type": "registry:ui",
+      "title": "Niue",
+      "description": "Niue icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Niue_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "North-Korea_symbols",
+      "type": "registry:ui",
+      "title": "North Korea",
+      "description": "North Korea icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/North-Korea_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "North-Macedonia_symbols",
+      "type": "registry:ui",
+      "title": "North Macedonia",
+      "description": "North Macedonia icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/North-Macedonia_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Northen-Ireland_symbols",
+      "type": "registry:ui",
+      "title": "Northen Ireland",
+      "description": "Northen Ireland icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Northen-Ireland_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Norway_symbols",
+      "type": "registry:ui",
+      "title": "Norway",
+      "description": "Norway icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Norway_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Oman_symbols",
+      "type": "registry:ui",
+      "title": "Oman",
+      "description": "Oman icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Oman_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Pakistan_symbols",
+      "type": "registry:ui",
+      "title": "Pakistan",
+      "description": "Pakistan icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Pakistan_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Palau_symbols",
+      "type": "registry:ui",
+      "title": "Palau",
+      "description": "Palau icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Palau_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Palestine_symbols",
+      "type": "registry:ui",
+      "title": "Palestine",
+      "description": "Palestine icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Palestine_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Panama_symbols",
+      "type": "registry:ui",
+      "title": "Panama",
+      "description": "Panama icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Panama_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Papua-New-Guinea_symbols",
+      "type": "registry:ui",
+      "title": "Papua New Guinea",
+      "description": "Papua New Guinea icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Papua-New-Guinea_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Paraguay_symbols",
+      "type": "registry:ui",
+      "title": "Paraguay",
+      "description": "Paraguay icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Paraguay_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Peru_symbols",
+      "type": "registry:ui",
+      "title": "Peru",
+      "description": "Peru icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Peru_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Philippines_symbols",
+      "type": "registry:ui",
+      "title": "Philippines",
+      "description": "Philippines icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Philippines_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Poland_symbols",
+      "type": "registry:ui",
+      "title": "Poland",
+      "description": "Poland icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Poland_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Portugal_symbols",
+      "type": "registry:ui",
+      "title": "Portugal",
+      "description": "Portugal icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Portugal_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Puerto-Rico_symbols",
+      "type": "registry:ui",
+      "title": "Puerto Rico",
+      "description": "Puerto Rico icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Puerto-Rico_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Qatar_symbols",
+      "type": "registry:ui",
+      "title": "Qatar",
+      "description": "Qatar icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Qatar_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Republic-Congo_symbols",
+      "type": "registry:ui",
+      "title": "Republic Congo",
+      "description": "Republic Congo icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Republic-Congo_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Romania_symbols",
+      "type": "registry:ui",
+      "title": "Romania",
+      "description": "Romania icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Romania_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Russia_symbols",
+      "type": "registry:ui",
+      "title": "Russia",
+      "description": "Russia icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Russia_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Rwanda_symbols",
+      "type": "registry:ui",
+      "title": "Rwanda",
+      "description": "Rwanda icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Rwanda_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Saint-Kitts-Nevis_symbols",
+      "type": "registry:ui",
+      "title": "Saint Kitts Nevis",
+      "description": "Saint Kitts Nevis icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Saint-Kitts-Nevis_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Sierra-Leone_symbols",
+      "type": "registry:ui",
+      "title": "Sierra Leone",
+      "description": "Sierra Leone icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Sierra-Leone_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Singapore_symbols",
+      "type": "registry:ui",
+      "title": "Singapore",
+      "description": "Singapore icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Singapore_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Sint-Maarten_symbols",
+      "type": "registry:ui",
+      "title": "Sint Maarten",
+      "description": "Sint Maarten icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Sint-Maarten_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Slovakia_symbols",
+      "type": "registry:ui",
+      "title": "Slovakia",
+      "description": "Slovakia icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Slovakia_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Slovenia_symbols",
+      "type": "registry:ui",
+      "title": "Slovenia",
+      "description": "Slovenia icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Slovenia_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Solomon-Islands_symbols",
+      "type": "registry:ui",
+      "title": "Solomon Islands",
+      "description": "Solomon Islands icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Solomon-Islands_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Somalia_symbols",
+      "type": "registry:ui",
+      "title": "Somalia",
+      "description": "Somalia icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Somalia_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "South-Africa_symbols",
+      "type": "registry:ui",
+      "title": "South Africa",
+      "description": "South Africa icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/South-Africa_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "South-Georgia-Sandwich-Islands_symbols",
+      "type": "registry:ui",
+      "title": "South Georgia Sandwich Islands",
+      "description": "South Georgia Sandwich Islands icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/South-Georgia-Sandwich-Islands_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "South-Korea_symbols",
+      "type": "registry:ui",
+      "title": "South Korea",
+      "description": "South Korea icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/South-Korea_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "South-Sudan_symbols",
+      "type": "registry:ui",
+      "title": "South Sudan",
+      "description": "South Sudan icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/South-Sudan_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Spain_symbols",
+      "type": "registry:ui",
+      "title": "Spain",
+      "description": "Spain icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Spain_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Sri-Lanka_symbols",
+      "type": "registry:ui",
+      "title": "Sri Lanka",
+      "description": "Sri Lanka icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Sri-Lanka_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Sudan_symbols",
+      "type": "registry:ui",
+      "title": "Sudan",
+      "description": "Sudan icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Sudan_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Suriname_symbols",
+      "type": "registry:ui",
+      "title": "Suriname",
+      "description": "Suriname icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Suriname_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Sweden_symbols",
+      "type": "registry:ui",
+      "title": "Sweden",
+      "description": "Sweden icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Sweden_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Switzerland_symbols",
+      "type": "registry:ui",
+      "title": "Switzerland",
+      "description": "Switzerland icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Switzerland_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Syria_symbols",
+      "type": "registry:ui",
+      "title": "Syria",
+      "description": "Syria icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Syria_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Taiwan_symbols",
+      "type": "registry:ui",
+      "title": "Taiwan",
+      "description": "Taiwan icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Taiwan_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Tajikistan_symbols",
+      "type": "registry:ui",
+      "title": "Tajikistan",
+      "description": "Tajikistan icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Tajikistan_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Tanzania_symbols",
+      "type": "registry:ui",
+      "title": "Tanzania",
+      "description": "Tanzania icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Tanzania_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Thailand_symbols",
+      "type": "registry:ui",
+      "title": "Thailand",
+      "description": "Thailand icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Thailand_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Togo_symbols",
+      "type": "registry:ui",
+      "title": "Togo",
+      "description": "Togo icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Togo_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Tonga_symbols",
+      "type": "registry:ui",
+      "title": "Tonga",
+      "description": "Tonga icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Tonga_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Trinidad-Tobago_symbols",
+      "type": "registry:ui",
+      "title": "Trinidad Tobago",
+      "description": "Trinidad Tobago icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Trinidad-Tobago_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Tunisia_symbols",
+      "type": "registry:ui",
+      "title": "Tunisia",
+      "description": "Tunisia icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Tunisia_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Turkey_symbols",
+      "type": "registry:ui",
+      "title": "Turkey",
+      "description": "Turkey icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Turkey_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Turkmenistan_symbols",
+      "type": "registry:ui",
+      "title": "Turkmenistan",
+      "description": "Turkmenistan icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Turkmenistan_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Turks-And-Caicos-Islands_symbols",
+      "type": "registry:ui",
+      "title": "Turks And Caicos Islands",
+      "description": "Turks And Caicos Islands icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Turks-And-Caicos-Islands_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Tuvalu_symbols",
+      "type": "registry:ui",
+      "title": "Tuvalu",
+      "description": "Tuvalu icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Tuvalu_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "USA-Virgin-Islands_symbols",
+      "type": "registry:ui",
+      "title": "USA Virgin Islands",
+      "description": "USA Virgin Islands icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/USA-Virgin-Islands_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Uganda_symbols",
+      "type": "registry:ui",
+      "title": "Uganda",
+      "description": "Uganda icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Uganda_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Ukraine_symbols",
+      "type": "registry:ui",
+      "title": "Ukraine",
+      "description": "Ukraine icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Ukraine_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "United-Arab-Emira_symbols",
+      "type": "registry:ui",
+      "title": "United Arab Emira",
+      "description": "United Arab Emira icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/United-Arab-Emira_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "United-Kingdom_symbols",
+      "type": "registry:ui",
+      "title": "United Kingdom",
+      "description": "United Kingdom icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/United-Kingdom_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "United-States_symbols",
+      "type": "registry:ui",
+      "title": "United States",
+      "description": "United States icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/United-States_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Uruguay_symbols",
+      "type": "registry:ui",
+      "title": "Uruguay",
+      "description": "Uruguay icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Uruguay_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Uzbekistan_symbols",
+      "type": "registry:ui",
+      "title": "Uzbekistan",
+      "description": "Uzbekistan icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Uzbekistan_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Vanuatu_symbols",
+      "type": "registry:ui",
+      "title": "Vanuatu",
+      "description": "Vanuatu icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Vanuatu_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Vatican-City_symbols",
+      "type": "registry:ui",
+      "title": "Vatican City",
+      "description": "Vatican City icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Vatican-City_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Venezuela_symbols",
+      "type": "registry:ui",
+      "title": "Venezuela",
+      "description": "Venezuela icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Venezuela_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Vietnam_symbols",
+      "type": "registry:ui",
+      "title": "Vietnam",
+      "description": "Vietnam icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Vietnam_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Wales_symbols",
+      "type": "registry:ui",
+      "title": "Wales",
+      "description": "Wales icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Wales_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Western-Sahara_symbols",
+      "type": "registry:ui",
+      "title": "Western Sahara",
+      "description": "Western Sahara icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Western-Sahara_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Yemen_symbols",
+      "type": "registry:ui",
+      "title": "Yemen",
+      "description": "Yemen icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Yemen_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Zambia_symbols",
+      "type": "registry:ui",
+      "title": "Zambia",
+      "description": "Zambia icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Zambia_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Zimbabwe_symbols",
+      "type": "registry:ui",
+      "title": "Zimbabwe",
+      "description": "Zimbabwe icon component",
+      "files": [
+        {
+          "path": "registry/logos/flags/Zimbabwe_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Astro",
+      "type": "registry:ui",
+      "title": "Astro",
+      "description": "Astro icon component",
+      "files": [
+        {
+          "path": "registry/logos/framework/Astro.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Blitz",
+      "type": "registry:ui",
+      "title": "Blitz",
+      "description": "Blitz icon component",
+      "files": [
+        {
+          "path": "registry/logos/framework/Blitz.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Bootstrap",
+      "type": "registry:ui",
+      "title": "Bootstrap",
+      "description": "Bootstrap icon component",
+      "files": [
+        {
+          "path": "registry/logos/framework/Bootstrap.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Django",
+      "type": "registry:ui",
+      "title": "Django",
+      "description": "Django icon component",
+      "files": [
+        {
+          "path": "registry/logos/framework/Django.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Elysia-JS",
+      "type": "registry:ui",
+      "title": "Elysia JS",
+      "description": "Elysia JS icon component",
+      "files": [
+        {
+          "path": "registry/logos/framework/Elysia-JS.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Express-js",
+      "type": "registry:ui",
+      "title": "Express Js",
+      "description": "Express Js icon component",
+      "files": [
+        {
+          "path": "registry/logos/framework/Express-js.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Fast-API",
+      "type": "registry:ui",
+      "title": "Fast API",
+      "description": "Fast API icon component",
+      "files": [
+        {
+          "path": "registry/logos/framework/Fast-API.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Fastify",
+      "type": "registry:ui",
+      "title": "Fastify",
+      "description": "Fastify icon component",
+      "files": [
+        {
+          "path": "registry/logos/framework/Fastify.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Flask",
+      "type": "registry:ui",
+      "title": "Flask",
+      "description": "Flask icon component",
+      "files": [
+        {
+          "path": "registry/logos/framework/Flask.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Flutter",
+      "type": "registry:ui",
+      "title": "Flutter",
+      "description": "Flutter icon component",
+      "files": [
+        {
+          "path": "registry/logos/framework/Flutter.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Fresh",
+      "type": "registry:ui",
+      "title": "Fresh",
+      "description": "Fresh icon component",
+      "files": [
+        {
+          "path": "registry/logos/framework/Fresh.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Gatsby",
+      "type": "registry:ui",
+      "title": "Gatsby",
+      "description": "Gatsby icon component",
+      "files": [
+        {
+          "path": "registry/logos/framework/Gatsby.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Hono",
+      "type": "registry:ui",
+      "title": "Hono",
+      "description": "Hono icon component",
+      "files": [
+        {
+          "path": "registry/logos/framework/Hono.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Jasmine",
+      "type": "registry:ui",
+      "title": "Jasmine",
+      "description": "Jasmine icon component",
+      "files": [
+        {
+          "path": "registry/logos/framework/Jasmine.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Jest",
+      "type": "registry:ui",
+      "title": "Jest",
+      "description": "Jest icon component",
+      "files": [
+        {
+          "path": "registry/logos/framework/Jest.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Kraken-JS",
+      "type": "registry:ui",
+      "title": "Kraken JS",
+      "description": "Kraken JS icon component",
+      "files": [
+        {
+          "path": "registry/logos/framework/Kraken-JS.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Laravel",
+      "type": "registry:ui",
+      "title": "Laravel",
+      "description": "Laravel icon component",
+      "files": [
+        {
+          "path": "registry/logos/framework/Laravel.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Material-UI",
+      "type": "registry:ui",
+      "title": "Material UI",
+      "description": "Material UI icon component",
+      "files": [
+        {
+          "path": "registry/logos/framework/Material-UI.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Model-Context-Protocol",
+      "type": "registry:ui",
+      "title": "Model Context Protocol",
+      "description": "Model Context Protocol icon component",
+      "files": [
+        {
+          "path": "registry/logos/framework/Model-Context-Protocol.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Nest-JS",
+      "type": "registry:ui",
+      "title": "Nest JS",
+      "description": "Nest JS icon component",
+      "files": [
+        {
+          "path": "registry/logos/framework/Nest-JS.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Nuxt",
+      "type": "registry:ui",
+      "title": "Nuxt",
+      "description": "Nuxt icon component",
+      "files": [
+        {
+          "path": "registry/logos/framework/Nuxt.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Playwright",
+      "type": "registry:ui",
+      "title": "Playwright",
+      "description": "Playwright icon component",
+      "files": [
+        {
+          "path": "registry/logos/framework/Playwright.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "React-Query",
+      "type": "registry:ui",
+      "title": "React Query",
+      "description": "React Query icon component",
+      "files": [
+        {
+          "path": "registry/logos/framework/React-Query.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Redwood-JS",
+      "type": "registry:ui",
+      "title": "Redwood JS",
+      "description": "Redwood JS icon component",
+      "files": [
+        {
+          "path": "registry/logos/framework/Redwood-JS.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Refine",
+      "type": "registry:ui",
+      "title": "Refine",
+      "description": "Refine icon component",
+      "files": [
+        {
+          "path": "registry/logos/framework/Refine.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Remix",
+      "type": "registry:ui",
+      "title": "Remix",
+      "description": "Remix icon component",
+      "files": [
+        {
+          "path": "registry/logos/framework/Remix.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Remotion",
+      "type": "registry:ui",
+      "title": "Remotion",
+      "description": "Remotion icon component",
+      "files": [
+        {
+          "path": "registry/logos/framework/Remotion.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "SST",
+      "type": "registry:ui",
+      "title": "SST",
+      "description": "SST icon component",
+      "files": [
+        {
+          "path": "registry/logos/framework/SST.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Sequelize",
+      "type": "registry:ui",
+      "title": "Sequelize",
+      "description": "Sequelize icon component",
+      "files": [
+        {
+          "path": "registry/logos/framework/Sequelize.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Spring",
+      "type": "registry:ui",
+      "title": "Spring",
+      "description": "Spring icon component",
+      "files": [
+        {
+          "path": "registry/logos/framework/Spring.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Stimulus",
+      "type": "registry:ui",
+      "title": "Stimulus",
+      "description": "Stimulus icon component",
+      "files": [
+        {
+          "path": "registry/logos/framework/Stimulus.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "T3-Stack",
+      "type": "registry:ui",
+      "title": "T3 Stack",
+      "description": "T3 Stack icon component",
+      "files": [
+        {
+          "path": "registry/logos/framework/T3-Stack.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "TRPC",
+      "type": "registry:ui",
+      "title": "TRPC",
+      "description": "TRPC icon component",
+      "files": [
+        {
+          "path": "registry/logos/framework/TRPC.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Tailwind-CSS",
+      "type": "registry:ui",
+      "title": "Tailwind CSS",
+      "description": "Tailwind CSS icon component",
+      "files": [
+        {
+          "path": "registry/logos/framework/Tailwind-CSS.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Vitest",
+      "type": "registry:ui",
+      "title": "Vitest",
+      "description": "Vitest icon component",
+      "files": [
+        {
+          "path": "registry/logos/framework/Vitest.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Vue",
+      "type": "registry:ui",
+      "title": "Vue",
+      "description": "Vue icon component",
+      "files": [
+        {
+          "path": "registry/logos/framework/Vue.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "google-360suite",
+      "type": "registry:ui",
+      "title": "Google 360suite",
+      "description": "Google 360suite icon component",
+      "files": [
+        {
+          "path": "registry/logos/google/google-360suite.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "google-admob",
+      "type": "registry:ui",
+      "title": "Google Admob",
+      "description": "Google Admob icon component",
+      "files": [
+        {
+          "path": "registry/logos/google/google-admob.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "google-ads",
+      "type": "registry:ui",
+      "title": "Google Ads",
+      "description": "Google Ads icon component",
+      "files": [
+        {
+          "path": "registry/logos/google/google-ads.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "google-adsense",
+      "type": "registry:ui",
+      "title": "Google Adsense",
+      "description": "Google Adsense icon component",
+      "files": [
+        {
+          "path": "registry/logos/google/google-adsense.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "google-analytics",
+      "type": "registry:ui",
+      "title": "Google Analytics",
+      "description": "Google Analytics icon component",
+      "files": [
+        {
+          "path": "registry/logos/google/google-analytics.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "google-bard-icon",
+      "type": "registry:ui",
+      "title": "Google Bard Icon",
+      "description": "Google Bard Icon icon component",
+      "files": [
+        {
+          "path": "registry/logos/google/google-bard-icon.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "google-bard",
+      "type": "registry:ui",
+      "title": "Google Bard",
+      "description": "Google Bard icon component",
+      "files": [
+        {
+          "path": "registry/logos/google/google-bard.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "google-calendar",
+      "type": "registry:ui",
+      "title": "Google Calendar",
+      "description": "Google Calendar icon component",
+      "files": [
+        {
+          "path": "registry/logos/google/google-calendar.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "google-cloud-functions",
+      "type": "registry:ui",
+      "title": "Google Cloud Functions",
+      "description": "Google Cloud Functions icon component",
+      "files": [
+        {
+          "path": "registry/logos/google/google-cloud-functions.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "google-cloud-run",
+      "type": "registry:ui",
+      "title": "Google Cloud Run",
+      "description": "Google Cloud Run icon component",
+      "files": [
+        {
+          "path": "registry/logos/google/google-cloud-run.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "google-cloud",
+      "type": "registry:ui",
+      "title": "Google Cloud",
+      "description": "Google Cloud icon component",
+      "files": [
+        {
+          "path": "registry/logos/google/google-cloud.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "google-data-studio",
+      "type": "registry:ui",
+      "title": "Google Data Studio",
+      "description": "Google Data Studio icon component",
+      "files": [
+        {
+          "path": "registry/logos/google/google-data-studio.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "google-developers",
+      "type": "registry:ui",
+      "title": "Google Developers",
+      "description": "Google Developers icon component",
+      "files": [
+        {
+          "path": "registry/logos/google/google-developers.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "google-domains",
+      "type": "registry:ui",
+      "title": "Google Domains",
+      "description": "Google Domains icon component",
+      "files": [
+        {
+          "path": "registry/logos/google/google-domains.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "google-domains_wordmark",
+      "type": "registry:ui",
+      "title": "Google Domains",
+      "description": "Google Domains icon component",
+      "files": [
+        {
+          "path": "registry/logos/google/google-domains_wordmark.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "google-drive",
+      "type": "registry:ui",
+      "title": "Google Drive",
+      "description": "Google Drive icon component",
+      "files": [
+        {
+          "path": "registry/logos/google/google-drive.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "google-fit",
+      "type": "registry:ui",
+      "title": "Google Fit",
+      "description": "Google Fit icon component",
+      "files": [
+        {
+          "path": "registry/logos/google/google-fit.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "google-gemini",
+      "type": "registry:ui",
+      "title": "Google Gemini",
+      "description": "Google Gemini icon component",
+      "files": [
+        {
+          "path": "registry/logos/google/google-gemini.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "google-gemini_wordmark",
+      "type": "registry:ui",
+      "title": "Google Gemini",
+      "description": "Google Gemini icon component",
+      "files": [
+        {
+          "path": "registry/logos/google/google-gemini_wordmark.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "google-gmail",
+      "type": "registry:ui",
+      "title": "Google Gmail",
+      "description": "Google Gmail icon component",
+      "files": [
+        {
+          "path": "registry/logos/google/google-gmail.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "google-home",
+      "type": "registry:ui",
+      "title": "Google Home",
+      "description": "Google Home icon component",
+      "files": [
+        {
+          "path": "registry/logos/google/google-home.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "google-icon",
+      "type": "registry:ui",
+      "title": "Google Icon",
+      "description": "Google Icon icon component",
+      "files": [
+        {
+          "path": "registry/logos/google/google-icon.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "google-keep",
+      "type": "registry:ui",
+      "title": "Google Keep",
+      "description": "Google Keep icon component",
+      "files": [
+        {
+          "path": "registry/logos/google/google-keep.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "google-maps",
+      "type": "registry:ui",
+      "title": "Google Maps",
+      "description": "Google Maps icon component",
+      "files": [
+        {
+          "path": "registry/logos/google/google-maps.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "google-marketing-platform",
+      "type": "registry:ui",
+      "title": "Google Marketing Platform",
+      "description": "Google Marketing Platform icon component",
+      "files": [
+        {
+          "path": "registry/logos/google/google-marketing-platform.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "google-meet",
+      "type": "registry:ui",
+      "title": "Google Meet",
+      "description": "Google Meet icon component",
+      "files": [
+        {
+          "path": "registry/logos/google/google-meet.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "google-one",
+      "type": "registry:ui",
+      "title": "Google One",
+      "description": "Google One icon component",
+      "files": [
+        {
+          "path": "registry/logos/google/google-one.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "google-optimize",
+      "type": "registry:ui",
+      "title": "Google Optimize",
+      "description": "Google Optimize icon component",
+      "files": [
+        {
+          "path": "registry/logos/google/google-optimize.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "google-palm",
+      "type": "registry:ui",
+      "title": "Google Palm",
+      "description": "Google Palm icon component",
+      "files": [
+        {
+          "path": "registry/logos/google/google-palm.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "google-pay",
+      "type": "registry:ui",
+      "title": "Google Pay",
+      "description": "Google Pay icon component",
+      "files": [
+        {
+          "path": "registry/logos/google/google-pay.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "google-photos",
+      "type": "registry:ui",
+      "title": "Google Photos",
+      "description": "Google Photos icon component",
+      "files": [
+        {
+          "path": "registry/logos/google/google-photos.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "google-play-console",
+      "type": "registry:ui",
+      "title": "Google Play Console",
+      "description": "Google Play Console icon component",
+      "files": [
+        {
+          "path": "registry/logos/google/google-play-console.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "google-play-console_wordmark",
+      "type": "registry:ui",
+      "title": "Google Play Console",
+      "description": "Google Play Console icon component",
+      "files": [
+        {
+          "path": "registry/logos/google/google-play-console_wordmark.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "google-play",
+      "type": "registry:ui",
+      "title": "Google Play",
+      "description": "Google Play icon component",
+      "files": [
+        {
+          "path": "registry/logos/google/google-play.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "google-play_wordmark",
+      "type": "registry:ui",
+      "title": "Google Play",
+      "description": "Google Play icon component",
+      "files": [
+        {
+          "path": "registry/logos/google/google-play_wordmark.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "google-search-console",
+      "type": "registry:ui",
+      "title": "Google Search Console",
+      "description": "Google Search Console icon component",
+      "files": [
+        {
+          "path": "registry/logos/google/google-search-console.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "google-tag-manager",
+      "type": "registry:ui",
+      "title": "Google Tag Manager",
+      "description": "Google Tag Manager icon component",
+      "files": [
+        {
+          "path": "registry/logos/google/google-tag-manager.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "google-workspace_wordmark",
+      "type": "registry:ui",
+      "title": "Google Workspace",
+      "description": "Google Workspace icon component",
+      "files": [
+        {
+          "path": "registry/logos/google/google-workspace_wordmark.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "google_wordmark",
+      "type": "registry:ui",
+      "title": "Google",
+      "description": "Google icon component",
+      "files": [
+        {
+          "path": "registry/logos/google/google_wordmark.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Bash",
+      "type": "registry:ui",
+      "title": "Bash",
+      "description": "Bash icon component",
+      "files": [
+        {
+          "path": "registry/logos/language/Bash.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "C-Plus-Plus",
+      "type": "registry:ui",
+      "title": "C Plus Plus",
+      "description": "C Plus Plus icon component",
+      "files": [
+        {
+          "path": "registry/logos/language/C-Plus-Plus.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "C",
+      "type": "registry:ui",
+      "title": "C",
+      "description": "C icon component",
+      "files": [
+        {
+          "path": "registry/logos/language/C.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "CHas",
+      "type": "registry:ui",
+      "title": "CHas",
+      "description": "CHas icon component",
+      "files": [
+        {
+          "path": "registry/logos/language/CHas.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "CSS-New",
+      "type": "registry:ui",
+      "title": "CSS New",
+      "description": "CSS New icon component",
+      "files": [
+        {
+          "path": "registry/logos/language/CSS-New.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "CSS",
+      "type": "registry:ui",
+      "title": "CSS",
+      "description": "CSS icon component",
+      "files": [
+        {
+          "path": "registry/logos/language/CSS.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Cobol",
+      "type": "registry:ui",
+      "title": "Cobol",
+      "description": "Cobol icon component",
+      "files": [
+        {
+          "path": "registry/logos/language/Cobol.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Fortran",
+      "type": "registry:ui",
+      "title": "Fortran",
+      "description": "Fortran icon component",
+      "files": [
+        {
+          "path": "registry/logos/language/Fortran.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Gleam",
+      "type": "registry:ui",
+      "title": "Gleam",
+      "description": "Gleam icon component",
+      "files": [
+        {
+          "path": "registry/logos/language/Gleam.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Go",
+      "type": "registry:ui",
+      "title": "Go",
+      "description": "Go icon component",
+      "files": [
+        {
+          "path": "registry/logos/language/Go.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Graph-QL",
+      "type": "registry:ui",
+      "title": "Graph QL",
+      "description": "Graph QL icon component",
+      "files": [
+        {
+          "path": "registry/logos/language/Graph-QL.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "HTML5",
+      "type": "registry:ui",
+      "title": "HTML5",
+      "description": "HTML5 icon component",
+      "files": [
+        {
+          "path": "registry/logos/language/HTML5.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Haskell",
+      "type": "registry:ui",
+      "title": "Haskell",
+      "description": "Haskell icon component",
+      "files": [
+        {
+          "path": "registry/logos/language/Haskell.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Java-Script",
+      "type": "registry:ui",
+      "title": "Java Script",
+      "description": "Java Script icon component",
+      "files": [
+        {
+          "path": "registry/logos/language/Java-Script.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Java",
+      "type": "registry:ui",
+      "title": "Java",
+      "description": "Java icon component",
+      "files": [
+        {
+          "path": "registry/logos/language/Java.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Lua",
+      "type": "registry:ui",
+      "title": "Lua",
+      "description": "Lua icon component",
+      "files": [
+        {
+          "path": "registry/logos/language/Lua.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Markdown",
+      "type": "registry:ui",
+      "title": "Markdown",
+      "description": "Markdown icon component",
+      "files": [
+        {
+          "path": "registry/logos/language/Markdown.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Php",
+      "type": "registry:ui",
+      "title": "Php",
+      "description": "Php icon component",
+      "files": [
+        {
+          "path": "registry/logos/language/Php.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "R",
+      "type": "registry:ui",
+      "title": "R",
+      "description": "R icon component",
+      "files": [
+        {
+          "path": "registry/logos/language/R.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Rust",
+      "type": "registry:ui",
+      "title": "Rust",
+      "description": "Rust icon component",
+      "files": [
+        {
+          "path": "registry/logos/language/Rust.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Sass",
+      "type": "registry:ui",
+      "title": "Sass",
+      "description": "Sass icon component",
+      "files": [
+        {
+          "path": "registry/logos/language/Sass.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Solidity",
+      "type": "registry:ui",
+      "title": "Solidity",
+      "description": "Solidity icon component",
+      "files": [
+        {
+          "path": "registry/logos/language/Solidity.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Terraform",
+      "type": "registry:ui",
+      "title": "Terraform",
+      "description": "Terraform icon component",
+      "files": [
+        {
+          "path": "registry/logos/language/Terraform.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Type-Script",
+      "type": "registry:ui",
+      "title": "Type Script",
+      "description": "Type Script icon component",
+      "files": [
+        {
+          "path": "registry/logos/language/Type-Script.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Zig",
+      "type": "registry:ui",
+      "title": "Zig",
+      "description": "Zig icon component",
+      "files": [
+        {
+          "path": "registry/logos/language/Zig.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "AMP",
+      "type": "registry:ui",
+      "title": "AMP",
+      "description": "AMP icon component",
+      "files": [
+        {
+          "path": "registry/logos/library/AMP.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Ahooks",
+      "type": "registry:ui",
+      "title": "Ahooks",
+      "description": "Ahooks icon component",
+      "files": [
+        {
+          "path": "registry/logos/library/Ahooks.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Ark-UI",
+      "type": "registry:ui",
+      "title": "Ark UI",
+      "description": "Ark UI icon component",
+      "files": [
+        {
+          "path": "registry/logos/library/Ark-UI.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Auth0",
+      "type": "registry:ui",
+      "title": "Auth0",
+      "description": "Auth0 icon component",
+      "files": [
+        {
+          "path": "registry/logos/library/Auth0.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Base-UI",
+      "type": "registry:ui",
+      "title": "Base UI",
+      "description": "Base UI icon component",
+      "files": [
+        {
+          "path": "registry/logos/library/Base-UI.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Better-Auth",
+      "type": "registry:ui",
+      "title": "Better Auth",
+      "description": "Better Auth icon component",
+      "files": [
+        {
+          "path": "registry/logos/library/Better-Auth.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Bun",
+      "type": "registry:ui",
+      "title": "Bun",
+      "description": "Bun icon component",
+      "files": [
+        {
+          "path": "registry/logos/library/Bun.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Chart-js",
+      "type": "registry:ui",
+      "title": "Chart Js",
+      "description": "Chart Js icon component",
+      "files": [
+        {
+          "path": "registry/logos/library/Chart-js.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Deno",
+      "type": "registry:ui",
+      "title": "Deno",
+      "description": "Deno icon component",
+      "files": [
+        {
+          "path": "registry/logos/library/Deno.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Discord-js",
+      "type": "registry:ui",
+      "title": "Discord Js",
+      "description": "Discord Js icon component",
+      "files": [
+        {
+          "path": "registry/logos/library/Discord-js.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Drizzle-ORM",
+      "type": "registry:ui",
+      "title": "Drizzle ORM",
+      "description": "Drizzle ORM icon component",
+      "files": [
+        {
+          "path": "registry/logos/library/Drizzle-ORM.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "ES-Lint",
+      "type": "registry:ui",
+      "title": "ES Lint",
+      "description": "ES Lint icon component",
+      "files": [
+        {
+          "path": "registry/logos/library/ES-Lint.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Effect-TS",
+      "type": "registry:ui",
+      "title": "Effect TS",
+      "description": "Effect TS icon component",
+      "files": [
+        {
+          "path": "registry/logos/library/Effect-TS.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Electron",
+      "type": "registry:ui",
+      "title": "Electron",
+      "description": "Electron icon component",
+      "files": [
+        {
+          "path": "registry/logos/library/Electron.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Exome",
+      "type": "registry:ui",
+      "title": "Exome",
+      "description": "Exome icon component",
+      "files": [
+        {
+          "path": "registry/logos/library/Exome.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Frame-99",
+      "type": "registry:ui",
+      "title": "Frame 99",
+      "description": "Frame 99 icon component",
+      "files": [
+        {
+          "path": "registry/logos/library/Frame-99.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Hero-UI",
+      "type": "registry:ui",
+      "title": "Hero UI",
+      "description": "Hero UI icon component",
+      "files": [
+        {
+          "path": "registry/logos/library/Hero-UI.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "JSON-Schema",
+      "type": "registry:ui",
+      "title": "JSON Schema",
+      "description": "JSON Schema icon component",
+      "files": [
+        {
+          "path": "registry/logos/library/JSON-Schema.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "JWT",
+      "type": "registry:ui",
+      "title": "JWT",
+      "description": "JWT icon component",
+      "files": [
+        {
+          "path": "registry/logos/library/JWT.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Kibo-UI",
+      "type": "registry:ui",
+      "title": "Kibo UI",
+      "description": "Kibo UI icon component",
+      "files": [
+        {
+          "path": "registry/logos/library/Kibo-UI.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Kokonut-UI",
+      "type": "registry:ui",
+      "title": "Kokonut UI",
+      "description": "Kokonut UI icon component",
+      "files": [
+        {
+          "path": "registry/logos/library/Kokonut-UI.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Lit",
+      "type": "registry:ui",
+      "title": "Lit",
+      "description": "Lit icon component",
+      "files": [
+        {
+          "path": "registry/logos/library/Lit.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Mantine",
+      "type": "registry:ui",
+      "title": "Mantine",
+      "description": "Mantine icon component",
+      "files": [
+        {
+          "path": "registry/logos/library/Mantine.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Mermaid",
+      "type": "registry:ui",
+      "title": "Mermaid",
+      "description": "Mermaid icon component",
+      "files": [
+        {
+          "path": "registry/logos/library/Mermaid.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Motion",
+      "type": "registry:ui",
+      "title": "Motion",
+      "description": "Motion icon component",
+      "files": [
+        {
+          "path": "registry/logos/library/Motion.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Nuqs",
+      "type": "registry:ui",
+      "title": "Nuqs",
+      "description": "Nuqs icon component",
+      "files": [
+        {
+          "path": "registry/logos/library/Nuqs.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Nuxt-Hub",
+      "type": "registry:ui",
+      "title": "Nuxt Hub",
+      "description": "Nuxt Hub icon component",
+      "files": [
+        {
+          "path": "registry/logos/library/Nuxt-Hub.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Panda-CSS",
+      "type": "registry:ui",
+      "title": "Panda CSS",
+      "description": "Panda CSS icon component",
+      "files": [
+        {
+          "path": "registry/logos/library/Panda-CSS.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Preact",
+      "type": "registry:ui",
+      "title": "Preact",
+      "description": "Preact icon component",
+      "files": [
+        {
+          "path": "registry/logos/library/Preact.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Prettier",
+      "type": "registry:ui",
+      "title": "Prettier",
+      "description": "Prettier icon component",
+      "files": [
+        {
+          "path": "registry/logos/library/Prettier.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Radix-UI",
+      "type": "registry:ui",
+      "title": "Radix UI",
+      "description": "Radix UI icon component",
+      "files": [
+        {
+          "path": "registry/logos/library/Radix-UI.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "React-Lib",
+      "type": "registry:ui",
+      "title": "React Lib",
+      "description": "React Lib icon component",
+      "files": [
+        {
+          "path": "registry/logos/library/React-Lib.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "React-Router",
+      "type": "registry:ui",
+      "title": "React Router",
+      "description": "React Router icon component",
+      "files": [
+        {
+          "path": "registry/logos/library/React-Router.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "React-Wheel-Picker",
+      "type": "registry:ui",
+      "title": "React Wheel Picker",
+      "description": "React Wheel Picker icon component",
+      "files": [
+        {
+          "path": "registry/logos/library/React-Wheel-Picker.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Redux",
+      "type": "registry:ui",
+      "title": "Redux",
+      "description": "Redux icon component",
+      "files": [
+        {
+          "path": "registry/logos/library/Redux.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "SWR",
+      "type": "registry:ui",
+      "title": "SWR",
+      "description": "SWR icon component",
+      "files": [
+        {
+          "path": "registry/logos/library/SWR.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Shiki",
+      "type": "registry:ui",
+      "title": "Shiki",
+      "description": "Shiki icon component",
+      "files": [
+        {
+          "path": "registry/logos/library/Shiki.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Socket-IO",
+      "type": "registry:ui",
+      "title": "Socket IO",
+      "description": "Socket IO icon component",
+      "files": [
+        {
+          "path": "registry/logos/library/Socket-IO.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Svelte",
+      "type": "registry:ui",
+      "title": "Svelte",
+      "description": "Svelte icon component",
+      "files": [
+        {
+          "path": "registry/logos/library/Svelte.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Tauri",
+      "type": "registry:ui",
+      "title": "Tauri",
+      "description": "Tauri icon component",
+      "files": [
+        {
+          "path": "registry/logos/library/Tauri.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Three-js",
+      "type": "registry:ui",
+      "title": "Three Js",
+      "description": "Three Js icon component",
+      "files": [
+        {
+          "path": "registry/logos/library/Three-js.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Un-JS",
+      "type": "registry:ui",
+      "title": "Un JS",
+      "description": "Un JS icon component",
+      "files": [
+        {
+          "path": "registry/logos/library/Un-JS.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Vuetify",
+      "type": "registry:ui",
+      "title": "Vuetify",
+      "description": "Vuetify icon component",
+      "files": [
+        {
+          "path": "registry/logos/library/Vuetify.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Web-Components",
+      "type": "registry:ui",
+      "title": "Web Components",
+      "description": "Web Components icon component",
+      "files": [
+        {
+          "path": "registry/logos/library/Web-Components.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Web-GL",
+      "type": "registry:ui",
+      "title": "Web GL",
+      "description": "Web GL icon component",
+      "files": [
+        {
+          "path": "registry/logos/library/Web-GL.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Sound-Cloud",
+      "type": "registry:ui",
+      "title": "Sound Cloud",
+      "description": "Sound Cloud icon component",
+      "files": [
+        {
+          "path": "registry/logos/music/Sound-Cloud.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Spotify",
+      "type": "registry:ui",
+      "title": "Spotify",
+      "description": "Spotify icon component",
+      "files": [
+        {
+          "path": "registry/logos/music/Spotify.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "TIDAL",
+      "type": "registry:ui",
+      "title": "TIDAL",
+      "description": "TIDAL icon component",
+      "files": [
+        {
+          "path": "registry/logos/music/TIDAL.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Leap-Wallet",
+      "type": "registry:ui",
+      "title": "Leap Wallet",
+      "description": "Leap Wallet icon component",
+      "files": [
+        {
+          "path": "registry/logos/payment/Leap-Wallet.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Mercado-Pago",
+      "type": "registry:ui",
+      "title": "Mercado Pago",
+      "description": "Mercado Pago icon component",
+      "files": [
+        {
+          "path": "registry/logos/payment/Mercado-Pago.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "PayPal",
+      "type": "registry:ui",
+      "title": "PayPal",
+      "description": "PayPal icon component",
+      "files": [
+        {
+          "path": "registry/logos/payment/PayPal.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Polar",
+      "type": "registry:ui",
+      "title": "Polar",
+      "description": "Polar icon component",
+      "files": [
+        {
+          "path": "registry/logos/payment/Polar.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Stripe",
+      "type": "registry:ui",
+      "title": "Stripe",
+      "description": "Stripe icon component",
+      "files": [
+        {
+          "path": "registry/logos/payment/Stripe.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Bluesky",
+      "type": "registry:ui",
+      "title": "Bluesky",
+      "description": "Bluesky icon component",
+      "files": [
+        {
+          "path": "registry/logos/social/Bluesky.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Facebook",
+      "type": "registry:ui",
+      "title": "Facebook",
+      "description": "Facebook icon component",
+      "files": [
+        {
+          "path": "registry/logos/social/Facebook.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Hashnode",
+      "type": "registry:ui",
+      "title": "Hashnode",
+      "description": "Hashnode icon component",
+      "files": [
+        {
+          "path": "registry/logos/social/Hashnode.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Instagram",
+      "type": "registry:ui",
+      "title": "Instagram",
+      "description": "Instagram icon component",
+      "files": [
+        {
+          "path": "registry/logos/social/Instagram.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "LinkedIn",
+      "type": "registry:ui",
+      "title": "LinkedIn",
+      "description": "LinkedIn icon component",
+      "files": [
+        {
+          "path": "registry/logos/social/LinkedIn.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Meta",
+      "type": "registry:ui",
+      "title": "Meta",
+      "description": "Meta icon component",
+      "files": [
+        {
+          "path": "registry/logos/social/Meta.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Peerlist",
+      "type": "registry:ui",
+      "title": "Peerlist",
+      "description": "Peerlist icon component",
+      "files": [
+        {
+          "path": "registry/logos/social/Peerlist.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Pinterest",
+      "type": "registry:ui",
+      "title": "Pinterest",
+      "description": "Pinterest icon component",
+      "files": [
+        {
+          "path": "registry/logos/social/Pinterest.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Reddit",
+      "type": "registry:ui",
+      "title": "Reddit",
+      "description": "Reddit icon component",
+      "files": [
+        {
+          "path": "registry/logos/social/Reddit.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Telegram",
+      "type": "registry:ui",
+      "title": "Telegram",
+      "description": "Telegram icon component",
+      "files": [
+        {
+          "path": "registry/logos/social/Telegram.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Threads",
+      "type": "registry:ui",
+      "title": "Threads",
+      "description": "Threads icon component",
+      "files": [
+        {
+          "path": "registry/logos/social/Threads.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "TikTok",
+      "type": "registry:ui",
+      "title": "TikTok",
+      "description": "TikTok icon component",
+      "files": [
+        {
+          "path": "registry/logos/social/TikTok.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Twitter",
+      "type": "registry:ui",
+      "title": "Twitter",
+      "description": "Twitter icon component",
+      "files": [
+        {
+          "path": "registry/logos/social/Twitter.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "VK",
+      "type": "registry:ui",
+      "title": "VK",
+      "description": "VK icon component",
+      "files": [
+        {
+          "path": "registry/logos/social/VK.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "WhatsApp",
+      "type": "registry:ui",
+      "title": "WhatsApp",
+      "description": "WhatsApp icon component",
+      "files": [
+        {
+          "path": "registry/logos/social/WhatsApp.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "X",
+      "type": "registry:ui",
+      "title": "X",
+      "description": "X icon component",
+      "files": [
+        {
+          "path": "registry/logos/social/X.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "YouTube",
+      "type": "registry:ui",
+      "title": "YouTube",
+      "description": "YouTube icon component",
+      "files": [
+        {
+          "path": "registry/logos/social/YouTube.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "YouTube_wordmark",
+      "type": "registry:ui",
+      "title": "YouTube",
+      "description": "YouTube icon component",
+      "files": [
+        {
+          "path": "registry/logos/social/YouTube_wordmark.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Android",
+      "type": "registry:ui",
+      "title": "Android",
+      "description": "Android icon component",
+      "files": [
+        {
+          "path": "registry/logos/software/Android.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Apple",
+      "type": "registry:ui",
+      "title": "Apple",
+      "description": "Apple icon component",
+      "files": [
+        {
+          "path": "registry/logos/software/Apple.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Bento",
+      "type": "registry:ui",
+      "title": "Bento",
+      "description": "Bento icon component",
+      "files": [
+        {
+          "path": "registry/logos/software/Bento.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Clerk",
+      "type": "registry:ui",
+      "title": "Clerk",
+      "description": "Clerk icon component",
+      "files": [
+        {
+          "path": "registry/logos/software/Clerk.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Clerk_wordmark",
+      "type": "registry:ui",
+      "title": "Clerk",
+      "description": "Clerk icon component",
+      "files": [
+        {
+          "path": "registry/logos/software/Clerk_wordmark.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Cursor",
+      "type": "registry:ui",
+      "title": "Cursor",
+      "description": "Cursor icon component",
+      "files": [
+        {
+          "path": "registry/logos/software/Cursor.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Cursor_wordmark",
+      "type": "registry:ui",
+      "title": "Cursor",
+      "description": "Cursor icon component",
+      "files": [
+        {
+          "path": "registry/logos/software/Cursor_wordmark.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Dropbox",
+      "type": "registry:ui",
+      "title": "Dropbox",
+      "description": "Dropbox icon component",
+      "files": [
+        {
+          "path": "registry/logos/software/Dropbox.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Dropbox_wordmark",
+      "type": "registry:ui",
+      "title": "Dropbox",
+      "description": "Dropbox icon component",
+      "files": [
+        {
+          "path": "registry/logos/software/Dropbox_wordmark.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Dub",
+      "type": "registry:ui",
+      "title": "Dub",
+      "description": "Dub icon component",
+      "files": [
+        {
+          "path": "registry/logos/software/Dub.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Dub_wordmark",
+      "type": "registry:ui",
+      "title": "Dub",
+      "description": "Dub icon component",
+      "files": [
+        {
+          "path": "registry/logos/software/Dub_wordmark.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Ebay_wordmark",
+      "type": "registry:ui",
+      "title": "Ebay",
+      "description": "Ebay icon component",
+      "files": [
+        {
+          "path": "registry/logos/software/Ebay_wordmark.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Github",
+      "type": "registry:ui",
+      "title": "Github",
+      "description": "Github icon component",
+      "files": [
+        {
+          "path": "registry/logos/software/Github.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Github_wordmark",
+      "type": "registry:ui",
+      "title": "Github",
+      "description": "Github icon component",
+      "files": [
+        {
+          "path": "registry/logos/software/Github_wordmark.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "IBM_wordmark",
+      "type": "registry:ui",
+      "title": "IBM",
+      "description": "IBM icon component",
+      "files": [
+        {
+          "path": "registry/logos/software/IBM_wordmark.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Lemon-Squeezy",
+      "type": "registry:ui",
+      "title": "Lemon Squeezy",
+      "description": "Lemon Squeezy icon component",
+      "files": [
+        {
+          "path": "registry/logos/software/Lemon-Squeezy.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Nextjs",
+      "type": "registry:ui",
+      "title": "Nextjs",
+      "description": "Nextjs icon component",
+      "files": [
+        {
+          "path": "registry/logos/software/Nextjs.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Nextjs_wordmark",
+      "type": "registry:ui",
+      "title": "Nextjs",
+      "description": "Nextjs icon component",
+      "files": [
+        {
+          "path": "registry/logos/software/Nextjs_wordmark.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Notion",
+      "type": "registry:ui",
+      "title": "Notion",
+      "description": "Notion icon component",
+      "files": [
+        {
+          "path": "registry/logos/software/Notion.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "PNPM",
+      "type": "registry:ui",
+      "title": "PNPM",
+      "description": "PNPM icon component",
+      "files": [
+        {
+          "path": "registry/logos/software/PNPM.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Playstation",
+      "type": "registry:ui",
+      "title": "Playstation",
+      "description": "Playstation icon component",
+      "files": [
+        {
+          "path": "registry/logos/software/Playstation.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Raycast",
+      "type": "registry:ui",
+      "title": "Raycast",
+      "description": "Raycast icon component",
+      "files": [
+        {
+          "path": "registry/logos/software/Raycast.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Raycast_wordmark",
+      "type": "registry:ui",
+      "title": "Raycast",
+      "description": "Raycast icon component",
+      "files": [
+        {
+          "path": "registry/logos/software/Raycast_wordmark.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Resend",
+      "type": "registry:ui",
+      "title": "Resend",
+      "description": "Resend icon component",
+      "files": [
+        {
+          "path": "registry/logos/software/Resend.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Resend_wordmark",
+      "type": "registry:ui",
+      "title": "Resend",
+      "description": "Resend icon component",
+      "files": [
+        {
+          "path": "registry/logos/software/Resend_wordmark.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Steam",
+      "type": "registry:ui",
+      "title": "Steam",
+      "description": "Steam icon component",
+      "files": [
+        {
+          "path": "registry/logos/software/Steam.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "V0",
+      "type": "registry:ui",
+      "title": "V0",
+      "description": "V0 icon component",
+      "files": [
+        {
+          "path": "registry/logos/software/V0.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Vercel",
+      "type": "registry:ui",
+      "title": "Vercel",
+      "description": "Vercel icon component",
+      "files": [
+        {
+          "path": "registry/logos/software/Vercel.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Vercel_wordmark",
+      "type": "registry:ui",
+      "title": "Vercel",
+      "description": "Vercel icon component",
+      "files": [
+        {
+          "path": "registry/logos/software/Vercel_wordmark.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Xbox",
+      "type": "registry:ui",
+      "title": "Xbox",
+      "description": "Xbox icon component",
+      "files": [
+        {
+          "path": "registry/logos/software/Xbox.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Zoom",
+      "type": "registry:ui",
+      "title": "Zoom",
+      "description": "Zoom icon component",
+      "files": [
+        {
+          "path": "registry/logos/software/Zoom.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Nike",
+      "type": "registry:ui",
+      "title": "Nike",
+      "description": "Nike icon component",
+      "files": [
+        {
+          "path": "registry/logos/sports/Nike.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "Verified-Badge_symbols",
+      "type": "registry:ui",
+      "title": "Verified Badge",
+      "description": "Verified Badge icon component",
+      "files": [
+        {
+          "path": "registry/logos/stickers/Verified-Badge_symbols.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    }
+  ]
+}

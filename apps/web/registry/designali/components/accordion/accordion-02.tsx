@@ -328,9 +328,7 @@ const items = [
 export default function Accordion02() {
   return (
     <div className="flex h-full w-full items-center justify-center">
-      <Accordion 
-        className="w-full rounded-md border"
-      >
+      <Accordion className="w-full rounded-md border">
         {items.map((item) => (
           <AccordionItem value={item.id} key={item.id}>
             <AccordionTrigger className="[data-slot=accordion-trigger] cursor-pointer text-left duration-500 hover:no-underline data-[state=open]:[&_svg]:rotate-180 data-[state=open]:[&_svg]:[#plus]:opacity-0 [&_svg]:[#plus]:[data-state=open]:opacity-0 [&>svg]:hidden">

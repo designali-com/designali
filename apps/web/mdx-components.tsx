@@ -182,7 +182,7 @@ export const mdxComponents = {
     return (
       <pre
         className={cn(
-          "no-scrollbar min-w-0 overflow-x-auto px-4 py-3.5 outline-none has-data-highlighted-line:px-0 has-data-line-numbers:px-0 has-data-[slot=tabs]:p-0",
+          "no-scrollbar min-w-0 overflow-x-auto border px-4 py-3.5 outline-none has-data-highlighted-line:px-0 has-data-line-numbers:px-0 has-data-[slot=tabs]:p-0",
           className
         )}
         {...props}
@@ -285,12 +285,19 @@ export const mdxComponents = {
     height,
     alt,
     ...props
-  }: React.ComponentProps<"img">) => (
+  }: {
+    src?: string
+    className?: string
+    width?: string | number
+    height?: string | number
+    alt?: string
+    [key: string]: unknown
+  }) => (
     <Image
       className={cn("mt-6 border border-dotted", className)}
-      src={(src as string) ?? ""}
-      width={Number(width)}
-      height={Number(height)}
+      src={src ?? ""}
+      width={Number(width) || 1200}
+      height={Number(height) || 800}
       alt={alt ?? ""}
       {...props}
     />

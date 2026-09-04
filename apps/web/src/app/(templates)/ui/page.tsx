@@ -1,12 +1,7 @@
 import { ComponentPreview } from "@/src/components/docs/component-preview"
 import { LayoutGrid } from "lucide-react"
 
-const UI_COMPONENTS = [
-  "button-variants",
-
-  "accordion-01",
-  "accordion-02",
-]
+const UI_COMPONENTS = ["button-variants", "accordion-01", "accordion-02"]
 
 export default function Page() {
   return (
@@ -22,17 +17,11 @@ export default function Page() {
         </p>
       </div>
 
-
-      <div className="grid xl:grid-cols-2 w-full gap-3">
+      <div className="grid w-full gap-3 xl:grid-cols-2">
         {UI_COMPONENTS.map((name) => (
-          <ComponentPreview
-            key={name}
-            name={name}
-            align="center"
-          />
+          <ComponentPreview key={name} name={name} align="center" />
         ))}
       </div>
-
     </div>
   )
 }

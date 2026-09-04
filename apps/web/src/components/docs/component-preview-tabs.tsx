@@ -80,7 +80,7 @@ export function ComponentPreviewTabs({
 
               <React.Suspense
                 fallback={
-                  <div className="text-muted-foreground flex items-center text-sm">
+                  <div className="flex items-center text-sm text-muted-foreground">
                     <Loader className="mr-2 size-4 animate-spin" />
                     Loading...
                   </div>
@@ -88,7 +88,6 @@ export function ComponentPreviewTabs({
               >
                 {component}
               </React.Suspense>
-
             </div>
           </div>
         </div>

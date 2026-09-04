@@ -153,7 +153,7 @@ export default async function DocPage({ params }: DocPageProps) {
           </div>
 
           <div className="w-full flex-1 border-t border-dotted p-4 *:data-[slot=alert]:first:mt-0">
-            <MDX components={mdxComponents} />
+            <MDX components={mdxComponents as any} />
           </div>
         </div>
 

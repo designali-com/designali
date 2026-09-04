@@ -12,6 +12,7 @@ export default function Page() {
         >
           Landing
         </h1>
+        <p>Design in Progress</p>
       </section>
     </div>
   )

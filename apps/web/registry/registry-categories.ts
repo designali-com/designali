@@ -19,7 +19,6 @@ export const navLinks = [
   { name: "Icons", href: "/icons" },
 ]
 
-
 export const data = {
   navMain: [
     {
@@ -31,7 +30,7 @@ export const data = {
       title: "Blocks",
       url: "/blocks",
       icon: Blocks,
-    }, 
+    },
     {
       title: "Landing",
       url: "/landing",
@@ -109,8 +108,7 @@ export const uiCategories: {
   {
     name: "Aspect Ratio",
     slug: "aspect-ratio",
-    description:
-      "Displays content within a fixed aspect ratio container.",
+    description: "Displays content within a fixed aspect ratio container.",
     iconName: "Ratio",
     hidden: false,
   },
@@ -149,8 +147,7 @@ export const uiCategories: {
   {
     name: "Calendar",
     slug: "calendar",
-    description:
-      "A date picker component for selecting and navigating dates.",
+    description: "A date picker component for selecting and navigating dates.",
     iconName: "Calendar",
     hidden: false,
   },
@@ -189,8 +186,7 @@ export const uiCategories: {
   {
     name: "Collapsible",
     slug: "collapsible",
-    description:
-      "An interactive component that expands and collapses content.",
+    description: "An interactive component that expands and collapses content.",
     iconName: "PanelTop",
     hidden: false,
   },
@@ -205,8 +201,7 @@ export const uiCategories: {
   {
     name: "Command",
     slug: "command",
-    description:
-      "A command menu for searching and executing actions quickly.",
+    description: "A command menu for searching and executing actions quickly.",
     iconName: "Command",
     hidden: false,
   },
@@ -221,24 +216,21 @@ export const uiCategories: {
   {
     name: "Dialog",
     slug: "dialog",
-    description:
-      "A modal window for displaying content and user actions.",
+    description: "A modal window for displaying content and user actions.",
     iconName: "SquareArrowOutUpRight",
     hidden: false,
   },
   {
     name: "Drawer",
     slug: "drawer",
-    description:
-      "A panel that slides in from the edge of the screen.",
+    description: "A panel that slides in from the edge of the screen.",
     iconName: "PanelLeft",
     hidden: false,
   },
   {
     name: "Dropdown Menu",
     slug: "dropdown-menu",
-    description:
-      "A menu that displays a list of actions or options.",
+    description: "A menu that displays a list of actions or options.",
     iconName: "ChevronDown",
     hidden: false,
   },
@@ -253,32 +245,28 @@ export const uiCategories: {
   {
     name: "Hover Card",
     slug: "hover-card",
-    description:
-      "A card that appears when the user hovers over an element.",
+    description: "A card that appears when the user hovers over an element.",
     iconName: "SquareMousePointer",
     hidden: false,
   },
   {
     name: "Input",
     slug: "input",
-    description:
-      "A text input field for collecting user information.",
+    description: "A text input field for collecting user information.",
     iconName: "TextCursorInput",
     hidden: false,
   },
   {
     name: "Input OTP",
     slug: "input-otp",
-    description:
-      "A one-time password input for verification codes.",
+    description: "A one-time password input for verification codes.",
     iconName: "KeyRound",
     hidden: false,
   },
   {
     name: "Label",
     slug: "label",
-    description:
-      "An accessible label for form controls and input elements.",
+    description: "An accessible label for form controls and input elements.",
     iconName: "Tag",
     hidden: false,
   },
@@ -301,96 +289,84 @@ export const uiCategories: {
   {
     name: "Pagination",
     slug: "pagination",
-    description:
-      "Controls for navigating between pages of content.",
+    description: "Controls for navigating between pages of content.",
     iconName: "ChevronsLeftRight",
     hidden: false,
   },
   {
     name: "Popover",
     slug: "popover",
-    description:
-      "A floating panel for displaying contextual content.",
+    description: "A floating panel for displaying contextual content.",
     iconName: "MessageSquare",
     hidden: false,
   },
   {
     name: "Progress",
     slug: "progress",
-    description:
-      "Displays the progress of an operation or task.",
+    description: "Displays the progress of an operation or task.",
     iconName: "Loader",
     hidden: false,
   },
   {
     name: "Radio Group",
     slug: "radio-group",
-    description:
-      "A group of mutually exclusive radio options.",
+    description: "A group of mutually exclusive radio options.",
     iconName: "CircleDot",
     hidden: false,
   },
   {
     name: "Resizable",
     slug: "resizable",
-    description:
-      "Resizable panels for creating flexible application layouts.",
+    description: "Resizable panels for creating flexible application layouts.",
     iconName: "PanelLeft",
     hidden: false,
   },
   {
     name: "Scroll Area",
     slug: "scroll-area",
-    description:
-      "A custom scrollable container with consistent styling.",
+    description: "A custom scrollable container with consistent styling.",
     iconName: "ScrollText",
     hidden: false,
   },
   {
     name: "Select",
     slug: "select",
-    description:
-      "A dropdown control for selecting an option from a list.",
+    description: "A dropdown control for selecting an option from a list.",
     iconName: "ListFilter",
     hidden: false,
   },
   {
     name: "Separator",
     slug: "separator",
-    description:
-      "A visual divider used to separate sections of content.",
+    description: "A visual divider used to separate sections of content.",
     iconName: "Minus",
     hidden: false,
   },
   {
     name: "Sheet",
     slug: "sheet",
-    description:
-      "A panel that slides into view from the edge of the screen.",
+    description: "A panel that slides into view from the edge of the screen.",
     iconName: "PanelRight",
     hidden: false,
   },
   {
     name: "Sidebar",
     slug: "sidebar",
-    description:
-      "A responsive navigation sidebar for application layouts.",
+    description: "A responsive navigation sidebar for application layouts.",
     iconName: "PanelLeft",
     hidden: false,
   },
   {
     name: "Skeleton",
     slug: "skeleton",
-    description:
-      "A loading placeholder used while content is being fetched.",
+    description: "A loading placeholder used while content is being fetched.",
     iconName: "LoaderCircle",
     hidden: false,
   },
   {
     name: "Slider",
     slug: "slider",
-    description:
-      "A control for selecting a value from a defined range.",
+    description: "A control for selecting a value from a defined range.",
     iconName: "SlidersHorizontal",
     hidden: false,
   },
@@ -405,40 +381,35 @@ export const uiCategories: {
   {
     name: "Spinner",
     slug: "spinner",
-    description:
-      "An animated loading indicator for asynchronous operations.",
+    description: "An animated loading indicator for asynchronous operations.",
     iconName: "LoaderCircle",
     hidden: false,
   },
   {
     name: "Switch",
     slug: "switch",
-    description:
-      "A toggle control for switching between two states.",
+    description: "A toggle control for switching between two states.",
     iconName: "ToggleLeft",
     hidden: false,
   },
   {
     name: "Table",
     slug: "table",
-    description:
-      "Structured components for displaying tabular data.",
+    description: "Structured components for displaying tabular data.",
     iconName: "Table",
     hidden: false,
   },
   {
     name: "Tabs",
     slug: "tabs",
-    description:
-      "Organizes content into multiple selectable tab panels.",
+    description: "Organizes content into multiple selectable tab panels.",
     iconName: "PanelTop",
     hidden: false,
   },
   {
     name: "Textarea",
     slug: "textarea",
-    description:
-      "A multiline text input for longer user responses.",
+    description: "A multiline text input for longer user responses.",
     iconName: "AlignLeft",
     hidden: false,
   },
@@ -453,8 +424,7 @@ export const uiCategories: {
   {
     name: "Toggle",
     slug: "toggle",
-    description:
-      "A button that can be toggled between two states.",
+    description: "A button that can be toggled between two states.",
     iconName: "ToggleLeft",
     hidden: false,
   },
@@ -475,7 +445,6 @@ export const uiCategories: {
     hidden: false,
   },
 ]
-
 
 export const registryCategories: {
   name: string

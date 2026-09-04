@@ -34,7 +34,7 @@ export function Typewriter({
         if (!isDeleting) {
           //@ts-ignore
           if (charIndex < currentWord.length) {
-             //@ts-ignore
+            //@ts-ignore
             setDisplayText(currentWord.substring(0, charIndex + 1))
             setCharIndex(charIndex + 1)
           } else {
@@ -46,7 +46,7 @@ export function Typewriter({
         } else {
           // Deleting logic
           if (charIndex > 0) {
-             //@ts-ignore
+            //@ts-ignore
             setDisplayText(currentWord.substring(0, charIndex - 1))
             setCharIndex(charIndex - 1)
           } else {

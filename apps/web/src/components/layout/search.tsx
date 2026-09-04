@@ -2,11 +2,7 @@
 
 import * as React from "react"
 
-import {
-  ArrowUpRight,
-  SearchIcon,
-  icons,
-} from "lucide-react"
+import { ArrowUpRight, SearchIcon, icons } from "lucide-react"
 
 import { Button } from "@workspace/ui/components/button"
 
@@ -37,10 +33,7 @@ export function Search() {
    */
   React.useEffect(() => {
     const down = (event: KeyboardEvent) => {
-      if (
-        (event.metaKey || event.ctrlKey) &&
-        event.key.toLowerCase() === "k"
-      ) {
+      if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === "k") {
         event.preventDefault()
         setOpen((value) => !value)
       }
@@ -56,26 +49,17 @@ export function Search() {
   /**
    * Visible items
    */
-  const visibleUI = uiCategories.filter(
-    (item) => !item.hidden
-  )
+  const visibleUI = uiCategories.filter((item) => !item.hidden)
 
-  const visibleRegistry = registryCategories.filter(
-    (item) => !item.hidden
-  )
+  const visibleRegistry = registryCategories.filter((item) => !item.hidden)
 
-  const visibleTemplates = templateCategories.filter(
-    (item) => !item.hidden
-  )
+  const visibleTemplates = templateCategories.filter((item) => !item.hidden)
 
   /**
    * Dynamic Lucide icon
    */
   const getIcon = (iconName: string) => {
-    return (
-      icons[iconName as keyof typeof icons] ??
-      SearchIcon
-    )
+    return icons[iconName as keyof typeof icons] ?? SearchIcon
   }
 
   /**
@@ -90,36 +74,26 @@ export function Search() {
         size="sm"
         variant="outline"
         onClick={() => setOpen(true)}
-        className="relative h-7 w-full justify-between pl-3 w-32 md:w-48 lg:w-64"
+        className="relative h-7 w-32 w-full justify-between pl-3 md:w-48 lg:w-64"
       >
-        <span className="inline-flex text-muted-foreground">
-          Search...
-        </span>
+        <span className="inline-flex text-muted-foreground">Search...</span>
 
         <div className="flex items-center gap-1">
           <SearchIcon className="size-3.5" />
 
-          <kbd className="pointer-events-none hidden h-4 select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium text-muted-foreground sm:flex">
-            <span className="text-xs">⌘</span>
-            K
+          <kbd className="pointer-events-none hidden h-4 items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium text-muted-foreground select-none sm:flex">
+            <span className="text-xs">⌘</span>K
           </kbd>
         </div>
       </Button>
 
       {/* Search Dialog */}
-      <CommandDialog
-        open={open}
-        onOpenChange={setOpen}
-      >
+      <CommandDialog open={open} onOpenChange={setOpen}>
         <Command>
-          <CommandInput
-            placeholder="Search everything..."
-          />
+          <CommandInput placeholder="Search everything..." />
 
           <CommandList>
-            <CommandEmpty>
-              No results found.
-            </CommandEmpty>
+            <CommandEmpty>No results found.</CommandEmpty>
 
             {/* =========================
                 NAVIGATION
@@ -138,11 +112,10 @@ export function Search() {
                     }}
                     className="cursor-pointer"
                   >
-                     
-                      <Icon className="size-4 shrink-0" />
+                    <Icon className="size-4 shrink-0" />
 
-                      <span>{item.title}</span>
-                     
+                    <span>{item.title}</span>
+
                     <CommandShortcut>
                       <ArrowUpRight />
                     </CommandShortcut>
@@ -168,7 +141,7 @@ export function Search() {
                       window.location.href = `/ui/${item.slug}`
                       setOpen(false)
                     }}
-                    className="cursor-pointer w-full"
+                    className="w-full cursor-pointer"
                   >
                     {/* LEFT ICON */}
                     <Icon className="size-4 shrink-0" />
@@ -200,7 +173,7 @@ export function Search() {
                       window.location.href = `/blocks/${item.slug}`
                       setOpen(false)
                     }}
-                    className="cursor-pointer w-full"
+                    className="w-full cursor-pointer"
                   >
                     {/* LEFT ICON */}
                     <Icon className="size-4 shrink-0" />
@@ -232,7 +205,7 @@ export function Search() {
                       window.location.href = `/templates/${item.slug}`
                       setOpen(false)
                     }}
-                    className="cursor-pointer w-full"
+                    className="w-full cursor-pointer"
                   >
                     {/* LEFT ICON */}
                     <Icon className="size-4 shrink-0" />

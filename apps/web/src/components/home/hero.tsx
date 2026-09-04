@@ -1,7 +1,7 @@
 import { Button } from "@workspace/ui/components/button"
 import { Logo } from "@workspace/ui/designali/logo"
 import Link from "next/link"
- 
+
 export function HeroSection() {
   return (
     <section className="relative mx-auto flex h-[910px] w-full items-center justify-center overflow-hidden">
@@ -23,7 +23,7 @@ export function HeroSection() {
       </div>
 
       {/* Center Panel */}
-      <div className="relative z-10 m-2.5 flex h-[calc(100%-30px)] md:h-[calc(100%-70px)] w-[calc(100%-30px)] md:w-[calc(100%-70px)] items-center justify-center border border-dotted bg-background">
+      <div className="relative z-10 m-2.5 flex h-[calc(100%-30px)] w-[calc(100%-30px)] items-center justify-center border border-dotted bg-background md:h-[calc(100%-70px)] md:w-[calc(100%-70px)]">
         <div className="flex flex-col items-center justify-center gap-5 p-20 text-center">
           <Logo className="size-20" />
 
@@ -41,7 +41,6 @@ export function HeroSection() {
             Book a Call
           </Button>
         </div>
-         
       </div>
     </section>
   )

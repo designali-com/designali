@@ -1,4 +1,3 @@
- 
 import { BlockDisplay } from "@/src/components/templates/blocks/block-display"
 import { Blocks } from "lucide-react"
 

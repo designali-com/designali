@@ -7,11 +7,9 @@ import {
   SidebarHeader,
   SidebarTrigger,
 } from "@workspace/ui/components/sidebar"
- 
+
 import { NavMain } from "./nav-main"
 import { data } from "@/registry/registry-categories"
-
-
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (

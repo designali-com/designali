@@ -30,10 +30,7 @@ export function TemplateCard({
       )}
     >
       {/* Preview */}
-      <Link
-        href={`/templates/${slug}`}
-        className="group block"
-      >
+      <Link href={`/templates/${slug}`} className="group block">
         <div className="relative aspect-[16/10] overflow-hidden">
           {image ? (
             <img
@@ -72,9 +69,7 @@ export function TemplateCard({
         )}
       >
         <div className="flex min-w-0">
-          <h3 className="truncate pl-2 text-sm font-medium">
-            {name}
-          </h3>
+          <h3 className="truncate pl-2 text-sm font-medium">{name}</h3>
         </div>
 
         <Link

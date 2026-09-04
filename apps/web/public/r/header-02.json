@@ -4,8 +4,7 @@
   "type": "registry:block",
   "description": "A simple header section.",
   "dependencies": [
-    "next-themes",
-    "@aliimam/icons"
+    "next-themes"
   ],
   "registryDependencies": [
     "button",

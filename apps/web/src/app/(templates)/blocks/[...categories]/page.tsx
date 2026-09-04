@@ -34,7 +34,9 @@ export default async function BlocksPage({
 
   // Dynamically derive the icon component using iconName
   const Icon = currentCategory?.iconName
-    ? (Icons[currentCategory.iconName as keyof typeof Icons] as React.ElementType)
+    ? (Icons[
+        currentCategory.iconName as keyof typeof Icons
+      ] as React.ElementType)
     : null
 
   return (

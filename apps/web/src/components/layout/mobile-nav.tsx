@@ -5,7 +5,7 @@ import Link from "next/link"
 import { Equal, XIcon } from "lucide-react"
 
 import { cn } from "@workspace/ui/lib/utils"
-import { Button } from "@workspace/ui/components/button" 
+import { Button } from "@workspace/ui/components/button"
 import { navLinks } from "@/registry/registry-categories"
 
 export function MobileNav() {
@@ -27,11 +27,7 @@ export function MobileNav() {
         aria-controls="mobile-menu"
         onClick={() => setOpen((value) => !value)}
       >
-        {open ? (
-          <XIcon className="size-4" />
-        ) : (
-          <Equal className="size-4" />
-        )}
+        {open ? <XIcon className="size-4" /> : <Equal className="size-4" />}
       </Button>
 
       {/* Mobile Menu */}
@@ -72,24 +68,14 @@ export function MobileNav() {
                 <Button
                   variant="ghost"
                   className="w-full justify-start"
-                  render={
-                    <Link
-                      href="/"
-                      onClick={closeMenu}
-                    />
-                  }
+                  render={<Link href="/" onClick={closeMenu} />}
                 >
                   Get full access
                 </Button>
 
                 <Button
                   className="w-full justify-start"
-                  render={
-                    <Link
-                      href="/"
-                      onClick={closeMenu}
-                    />
-                  }
+                  render={<Link href="/" onClick={closeMenu} />}
                 >
                   Dashboard
                 </Button>

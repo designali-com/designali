@@ -52,6 +52,16 @@ export const ui: Registry["items"] = [
     ],
   },
   {
+    name: "marquee",
+    type: "registry:ui",
+    files: [
+      {
+        path: "ui/marquee.tsx",
+        type: "registry:ui",
+      },
+    ],
+  },
+  {
     name: "typewriter",
     type: "registry:ui",
     files: [

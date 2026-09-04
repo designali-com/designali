@@ -385,7 +385,7 @@ export function BentoGridItem({
   return (
     <div
       className={cn(
-        "bg-background border p-4 transition-transform",
+        "border bg-background p-4 transition-transform",
         getResponsiveClasses(
           colSpan,
           RESPONSIVE_COL_SPAN as ResponsiveMap<ColSpanValue>

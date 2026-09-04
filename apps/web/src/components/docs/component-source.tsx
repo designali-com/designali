@@ -84,7 +84,7 @@ function ComponentCode({
   return (
     <figure
       data-rehype-pretty-code-figure=""
-      className="relative w-full min-w-0 overflow-hidden border"
+      className="relative w-full min-w-0 overflow-hidden"
     >
       {title && (
         <figcaption

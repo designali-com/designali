@@ -5,7 +5,6 @@ export const blocks: Registry["items"] = [
     name: "header-01",
     description: "A simple header section.",
     type: "registry:block",
-    dependencies: ["next-themes", "@aliimam/icons"],
     registryDependencies: ["button", "navigation-menu", "toggle"],
     files: [
       {
@@ -34,7 +33,8 @@ export const blocks: Registry["items"] = [
   {
     name: "header-02",
     description: "A simple header section.",
-    dependencies: ["next-themes", "@aliimam/icons"],
+    type: "registry:block",
+    dependencies: ["next-themes"],
     registryDependencies: [
       "button",
       "command",
@@ -43,7 +43,6 @@ export const blocks: Registry["items"] = [
       "accordion",
       "sheet",
     ],
-    type: "registry:block",
     files: [
       {
         path: "blocks/header/header-02/page.tsx",
@@ -71,7 +70,7 @@ export const blocks: Registry["items"] = [
   {
     name: "header-03",
     description: "A simple header section.",
-    dependencies: ["next-themes", "@aliimam/icons"],
+    type: "registry:block",
     registryDependencies: [
       "button",
       "navigation-menu",
@@ -79,7 +78,6 @@ export const blocks: Registry["items"] = [
       "accordion",
       "sheet",
     ],
-    type: "registry:block",
     files: [
       {
         path: "blocks/header/header-03/page.tsx",
@@ -103,9 +101,8 @@ export const blocks: Registry["items"] = [
   {
     name: "header-04",
     description: "A simple header section.",
-    dependencies: ["next-themes", "@aliimam/icons"],
-    registryDependencies: ["button", "command", "toggle", "separator"],
     type: "registry:block",
+    registryDependencies: ["button", "command", "toggle", "separator"],
     files: [
       {
         path: "blocks/header/header-04/page.tsx",
@@ -133,9 +130,8 @@ export const blocks: Registry["items"] = [
   {
     name: "header-05",
     description: "A simple header section.",
-    dependencies: ["lucide-react"],
-    registryDependencies: ["command", "sheet"],
     type: "registry:block",
+    registryDependencies: ["command", "sheet"],
     files: [
       {
         path: "blocks/header/header-05/page.tsx",
@@ -171,14 +167,14 @@ export const blocks: Registry["items"] = [
   {
     name: "header-06",
     description: "A simple header section.",
-    dependencies: ["@aliimam/logos", "@aliimam/icons", "next-themes"],
+    type: "registry:block",
+    dependencies: ["next-themes"],
     registryDependencies: [
       "navigation-menu",
       "avatar",
       "dropdown-menu",
       "button",
     ],
-    type: "registry:block",
     files: [
       {
         path: "blocks/header/header-06/page.tsx",
@@ -209,12 +205,220 @@ export const blocks: Registry["items"] = [
         type: "registry:block",
       },
     ],
+    categories: ["hero"],
     meta: {
       iframeHeight: "400px",
       container:
         "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
       mobile: "component",
     },
-    categories: ["hero"],
+  },
+  {
+    name: "footer-01",
+    description: "A simple footer.",
+    type: "registry:block",
+    dependencies: ["@designali/logos"],
+    registryDependencies: ["button", "dropdown-menu"],
+    files: [
+      {
+        path: "blocks/footer/footer-01/page.tsx",
+        target: "layout/footer/index.tsx",
+        type: "registry:component",
+      },
+      {
+        path: "blocks/footer/footer-01/components/footer.tsx",
+        target: "layout/footer/footer.tsx",
+        type: "registry:component",
+      },
+      {
+        path: "blocks/footer/footer-01/components/theme.tsx",
+        target: "layout/footer/theme.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["footer"],
+    meta: {
+      iframeHeight: "600px",
+    },
+  },
+  {
+    name: "footer-02",
+    description: "A simple footer.",
+    type: "registry:block",
+    dependencies: ["@designali/logos"],
+    files: [
+      {
+        path: "blocks/footer/footer-02/demo.tsx",
+        target: "layout/footer/index.tsx",
+        type: "registry:component",
+      },
+      {
+        path: "blocks/footer/footer-02/theme.tsx",
+        target: "layout/footer/theme.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["footer"],
+    meta: {
+      iframeHeight: "600px",
+    },
+  },
+  {
+    name: "footer-03",
+    description: "A simple footer.",
+    type: "registry:block",
+    files: [
+      {
+        path: "blocks/footer/footer-03/footer.tsx",
+        target: "layout/footer/index.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["footer"],
+    meta: {
+      iframeHeight: "400px",
+    },
+  },
+  {
+    name: "footer-04",
+    description: "A simple footer.",
+    type: "registry:block",
+    dependencies: ["@designali/logos"],
+    registryDependencies: ["button", "switch", "select", "input"],
+    files: [
+      {
+        path: "blocks/footer/footer-04/footer.tsx",
+        target: "layout/footer/index.tsx",
+        type: "registry:component",
+      },
+      {
+        path: "blocks/footer/footer-04/theme.tsx",
+        target: "layout/footer/theme.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["footer"],
+    meta: {
+      iframeHeight: "600px",
+    },
+  },
+  {
+    name: "footer-05",
+    description: "A simple footer.",
+    type: "registry:block",
+    dependencies: ["@designali/logos"],
+    files: [
+      {
+        path: "blocks/footer/footer-05/footer.tsx",
+        target: "layout/footer/index.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["footer"],
+    meta: {
+      iframeHeight: "600px",
+    },
+  },
+  {
+    name: "footer-06",
+    description: "A simple footer.",
+    type: "registry:block",
+    dependencies: ["@designali/logos"],
+    files: [
+      {
+        path: "blocks/footer/footer-06/footer.tsx",
+        target: "layout/footer/index.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["footer"],
+    meta: {
+      iframeHeight: "600px",
+    },
+  },
+  {
+    name: "logos-01",
+    description: "A simple logos section.",
+    type: "registry:block",
+    dependencies: ["@designali/logos"],
+    files: [
+      {
+        path: "blocks/logos/logos-01/page.tsx",
+        target: "components/logos-01.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["logos", "clients"],
+    meta: {
+      iframeHeight: "500px",
+    },
+  },
+  {
+    name: "logos-02",
+    description: "A simple logos section.",
+    type: "registry:block",
+    dependencies: ["@designali/logos"],
+    files: [
+      {
+        path: "blocks/logos/logos-02/page.tsx",
+        target: "components/logos-02.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["logos", "clients"],
+    meta: {
+      iframeHeight: "500px",
+    },
+  },
+  {
+    name: "logos-03",
+    description: "A simple logos section.",
+    type: "registry:block",
+    dependencies: ["@designali/logos"],
+    files: [
+      {
+        path: "blocks/logos/logos-03/page.tsx",
+        target: "components/logos-03.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["logos", "clients"],
+    meta: {
+      iframeHeight: "500px",
+    },
+  },
+  {
+    name: "logos-04",
+    description: "A simple logos section.",
+    type: "registry:block",
+    dependencies: ["@designali/logos"],
+    files: [
+      {
+        path: "blocks/logos/logos-04/page.tsx",
+        target: "components/logos-04.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["logos", "clients"],
+    meta: {
+      iframeHeight: "500px",
+    },
+  },
+  {
+    name: "logos-05",
+    description: "A simple logos section.",
+    type: "registry:block",
+    dependencies: ["@designali/logos"],
+    files: [
+      {
+        path: "blocks/logos/logos-05/page.tsx",
+        target: "components/logos-05.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["logos", "clients"],
+    meta: {
+      iframeHeight: "500px",
+    },
   },
 ]

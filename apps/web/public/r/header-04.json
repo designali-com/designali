@@ -3,10 +3,6 @@
   "name": "header-04",
   "type": "registry:block",
   "description": "A simple header section.",
-  "dependencies": [
-    "next-themes",
-    "@aliimam/icons"
-  ],
   "registryDependencies": [
     "button",
     "command",
@@ -27,7 +23,7 @@
     },
     {
       "path": "registry/designali/blocks/header/header-04/components/theme-switch.tsx",
-      "content": "\"use client\"\n\nimport { Moon, Sun } from \"lucide-react\"\nimport { useTheme } from \"next-themes\"\n\nimport { Toggle } from \"@workspace/ui/components/toggle\"\n\nexport function ModeToggle() {\n  const { resolvedTheme, setTheme } = useTheme()\n\n  const isDark = resolvedTheme === \"dark\"\n\n  return (\n    <div className=\"flex flex-col justify-center\">\n      <Toggle\n        className=\"group size-9 cursor-pointer bg-secondary data-[state=on]:bg-transparent data-[state=on]:hover:bg-muted dark:bg-secondary\"\n        pressed={isDark}\n        onPressedChange={() => setTheme(isDark ? \"light\" : \"dark\")}\n        aria-label={`Switch to ${isDark ? \"light\" : \"dark\"} mode`}\n      >\n        <Moon\n          size={16}\n          className=\"shrink-0 scale-0 opacity-0 transition-all group-data-[state=on]:scale-100 group-data-[state=on]:opacity-100\"\n          aria-hidden=\"true\"\n        />\n\n        <Sun\n          size={16}\n          className=\"absolute shrink-0 scale-100 opacity-100 transition-all group-data-[state=on]:scale-0 group-data-[state=on]:opacity-0\"\n          aria-hidden=\"true\"\n        />\n      </Toggle>\n    </div>\n  )\n}",
+      "content": "\"use client\"\n\nimport { Moon, Sun } from \"lucide-react\"\nimport { useTheme } from \"next-themes\"\n\nimport { Toggle } from \"@workspace/ui/components/toggle\"\n\nexport function ModeToggle() {\n  const { resolvedTheme, setTheme } = useTheme()\n\n  const isDark = resolvedTheme === \"dark\"\n\n  return (\n    <div className=\"flex flex-col justify-center\">\n      <Toggle\n        className=\"group size-9 cursor-pointer bg-secondary data-[state=on]:bg-transparent data-[state=on]:hover:bg-muted dark:bg-secondary\"\n        pressed={isDark}\n        onPressedChange={() => setTheme(isDark ? \"light\" : \"dark\")}\n        aria-label={`Switch to ${isDark ? \"light\" : \"dark\"} mode`}\n      >\n        <Moon\n          size={16}\n          className=\"shrink-0 scale-0 opacity-0 transition-all group-data-[state=on]:scale-100 group-data-[state=on]:opacity-100\"\n          aria-hidden=\"true\"\n        />\n\n        <Sun\n          size={16}\n          className=\"absolute shrink-0 scale-100 opacity-100 transition-all group-data-[state=on]:scale-0 group-data-[state=on]:opacity-0\"\n          aria-hidden=\"true\"\n        />\n      </Toggle>\n    </div>\n  )\n}\n",
       "type": "registry:component"
     },
     {

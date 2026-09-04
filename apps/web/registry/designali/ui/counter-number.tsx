@@ -11,12 +11,7 @@ import { cn } from "@workspace/ui/lib/utils"
 
 type SizeVariant = "sm" | "md" | "lg" | "xl" | "2xl"
 type ColorVariant =
-  | "default"
-  | "primary"
-  | "secondary"
-  | "success"
-  | "warning"
-  | "error"
+  "default" | "primary" | "secondary" | "success" | "warning" | "error"
 
 interface CounterNumberProps extends ComponentPropsWithoutRef<"span"> {
   value: number
@@ -114,7 +109,7 @@ export function CounterNumber({
   }
 
   const combinedClassName = cn(
-    "inline-block tabular-nums tracking-wider transition-all",
+    "inline-block tracking-wider tabular-nums transition-all",
     sizeClasses[size],
     colorClasses[color],
     preserveAspectRatio && "font-mono",

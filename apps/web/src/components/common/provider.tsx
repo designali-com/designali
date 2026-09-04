@@ -6,6 +6,7 @@ import { GoogleAnalytics } from "@next/third-parties/google"
 
 import { ActiveThemeProvider } from "./active-theme"
 import { ThemeProvider } from "./theme-provider"
+import { LogoFilterProvider } from "../templates/logos/logo-filter-context"
 
 export function Provider({
   children,
@@ -21,7 +22,9 @@ export function Provider({
         disableTransitionOnChange
       >
         <ActiveThemeProvider>
-          <TooltipProvider>{children}</TooltipProvider>
+          <TooltipProvider>
+            <LogoFilterProvider>{children}</LogoFilterProvider>
+          </TooltipProvider>
         </ActiveThemeProvider>
       </ThemeProvider>
       <GoogleAnalytics gaId="G-85BCJQ64HE" />

@@ -1,0 +1,145 @@
+---
+title: Marquee
+description: Renders a looping marquee animation with horizontal or vertical scrolling. Supports adjustable speed, direction, repeat count, and pause on hover.
+---
+
+<ComponentPreview
+  name="marquee-01"
+  className="[&_.preview>[data-orientation=vertical]]:sm:max-w-[80%] **:[.preview]:min-h-[400px]"
+  description="An accordion with three items"
+  align="start"
+/>
+
+<ComponentPreview
+  name="marquee-02"
+  className="[&_.preview>[data-orientation=vertical]]:sm:max-w-[80%] **:[.preview]:min-h-[400px]"
+  description="An accordion with three items"
+  align="start"
+/>
+
+<ComponentPreview
+  name="marquee-03"
+  className="[&_.preview>[data-orientation=vertical]]:sm:max-w-[80%] **:[.preview]:min-h-[400px]"
+  description="An accordion with three items"
+  align="start"
+/>
+
+<ComponentPreview
+  name="marquee-04"
+  className="[&_.preview>[data-orientation=vertical]]:sm:max-w-[80%] **:[.preview]:min-h-[400px]"
+  description="An accordion with three items"
+  align="start"
+/>
+
+<ComponentPreview
+  name="marquee-05"
+  className="[&_.preview>[data-orientation=vertical]]:sm:max-w-[80%] **:[.preview]:min-h-[400px]"
+  description="An accordion with three items"
+  align="start"
+/>
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add https://aliimam.in/r/marquee.json
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="marquee" title="components/ui/marquee.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</CodeTabs>
+
+## Usage
+
+```tsx showLineNumbers
+import { Marquee } from "@/components/marquee"
+```
+
+```tsx showLineNumbers
+// Basic
+<Marquee>
+  <div>Item 1</div>
+  <div>Item 2</div>
+</Marquee>
+
+// With fade and custom speed
+<Marquee speed={25} fade={true} gap="20px">
+  <img src="logo1.png" />
+  <img src="logo2.png" />
+</Marquee>
+
+// Vertical with delay
+<Marquee vertical delay={2} pauseOnHover>
+  <Card>Content</Card>
+</Marquee>
+
+// Auto-fill responsive
+<Marquee autoFill speed="slow" reverse>
+  <Badge>Tag</Badge>
+</Marquee>
+```
+
+## CSS
+
+```tsx showLineNumbers
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme inline {
+  --animate-marquee: marquee var(--duration) infinite linear;
+  --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
+}
+
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+
+@keyframes marquee-vertical {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(calc(-100% - var(--gap)));
+  }
+}
+```
+
+## Props
+
+| Prop           | Type                           | Default  |
+| -------------- | ------------------------------ | -------- |
+| `children`     | `React.ReactNode`              | —        |
+| `className`    | `string`                       | —        |
+| `reverse`      | `boolean`                      | `false`  |
+| `pauseOnHover` | `boolean`                      | `false`  |
+| `vertical`     | `boolean`                      | `false`  |
+| `repeat`       | `number`                       | `5`      |
+| `speed`        | `"slow" \| "normal" \| "fast"` | `normal` |

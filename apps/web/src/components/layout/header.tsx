@@ -42,7 +42,6 @@ export function Header() {
 
           {/* Center Search */}
 
-
           <div className="flex items-center gap-2">
             <div className="md:absolute md:left-1/2 md:-translate-x-1/2">
               <Search />

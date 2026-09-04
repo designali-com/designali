@@ -2,7 +2,7 @@
 
 import {
   Sidebar,
-  SidebarContent, 
+  SidebarContent,
   SidebarHeader,
   SidebarTrigger,
 } from "@workspace/ui/components/sidebar"
@@ -17,8 +17,7 @@ export function TemplateSidebar(props: React.ComponentProps<typeof Sidebar>) {
       <SidebarContent className="items-end pb-20">
         <SidebarTrigger className="absolute top-6 left-2.5 z-10 opacity-60" />
         <NavMain />
-        
-      </SidebarContent>  
+      </SidebarContent>
     </Sidebar>
   )
 }

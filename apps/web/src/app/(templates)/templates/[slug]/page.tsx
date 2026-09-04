@@ -18,9 +18,7 @@ export function generateStaticParams() {
 export default async function Page({ params }: PageProps) {
   const { slug } = await params
 
-  const template = templateCategories.find(
-    (item) => item.slug === slug
-  )
+  const template = templateCategories.find((item) => item.slug === slug)
 
   if (!template) {
     notFound()

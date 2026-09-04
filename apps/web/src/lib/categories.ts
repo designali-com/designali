@@ -1,5 +1,3 @@
-import { gridPatterns } from "@/src/config/patterns/patterns"
-
 export const PATTERN_CATEGORIES = [
   { id: "all", label: "All Patterns" },
   { id: "gradients", label: "Gradients" },

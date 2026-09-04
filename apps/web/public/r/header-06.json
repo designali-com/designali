@@ -4,8 +4,6 @@
   "type": "registry:block",
   "description": "A simple header section.",
   "dependencies": [
-    "@aliimam/logos",
-    "@aliimam/icons",
     "next-themes"
   ],
   "registryDependencies": [

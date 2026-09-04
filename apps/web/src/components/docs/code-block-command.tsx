@@ -67,7 +67,7 @@ export function CodeBlockCommand({
   }, [packageManager, tabs])
 
   return (
-    <div className="relative mt-2 overflow-x-auto">
+    <div className="relative overflow-x-auto">
       <Tabs
         value={packageManager}
         className="gap-0"
@@ -78,7 +78,7 @@ export function CodeBlockCommand({
           })
         }}
       >
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 border-b">
           <TabsList>
             {Object.entries(tabs).map(([key, value]) => {
               if (!value) return null
@@ -97,11 +97,7 @@ export function CodeBlockCommand({
             if (!value) return null
 
             return (
-              <TabsContent
-                key={key}
-                value={key}
-                className="relative mt-2 border px-4 py-3.5"
-              >
+              <TabsContent key={key} value={key} className="relative p-4">
                 <pre>
                   <code
                     className="relative font-mono text-sm leading-none"
@@ -116,7 +112,7 @@ export function CodeBlockCommand({
                       <Button
                         data-slot="copy-button"
                         size="icon"
-                        variant="ghost"
+                        variant="secondary"
                         className="absolute top-2.5 right-3 z-10 size-7 opacity-70 hover:opacity-100 focus-visible:opacity-100"
                         onClick={copyCommand}
                       >

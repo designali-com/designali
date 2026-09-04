@@ -1,11 +1,10 @@
 import type { Registry } from "shadcn/schema"
 
 export const components: Registry["items"] = [
-   
   {
     title: "Counter Number",
     name: "counter-number-default",
-    type: "registry:component", 
+    type: "registry:component",
     files: [
       {
         path: "components/counter-number/counter-number-default.tsx",
@@ -16,7 +15,7 @@ export const components: Registry["items"] = [
   {
     title: "Counter Number",
     name: "counter-number-currency",
-    type: "registry:component", 
+    type: "registry:component",
     files: [
       {
         path: "components/counter-number/counter-number-currency.tsx",
@@ -27,7 +26,7 @@ export const components: Registry["items"] = [
   {
     title: "Counter Number",
     name: "counter-number-custom",
-    type: "registry:component", 
+    type: "registry:component",
     files: [
       {
         path: "components/counter-number/counter-number-custom.tsx",
@@ -38,7 +37,7 @@ export const components: Registry["items"] = [
   {
     title: "Counter Number",
     name: "counter-number-decimal",
-    type: "registry:component", 
+    type: "registry:component",
     files: [
       {
         path: "components/counter-number/counter-number-decimal.tsx",
@@ -49,7 +48,7 @@ export const components: Registry["items"] = [
   {
     title: "Counter Number",
     name: "counter-number-percentage",
-    type: "registry:component", 
+    type: "registry:component",
     files: [
       {
         path: "components/counter-number/counter-number-percentage.tsx",
@@ -60,7 +59,7 @@ export const components: Registry["items"] = [
   {
     title: "Counter Number",
     name: "counter-number-prefix",
-    type: "registry:component",  
+    type: "registry:component",
     files: [
       {
         path: "components/counter-number/counter-number-prefix.tsx",
@@ -71,7 +70,7 @@ export const components: Registry["items"] = [
   {
     title: "Counter Number",
     name: "counter-number-seperator",
-    type: "registry:block",  
+    type: "registry:block",
     files: [
       {
         path: "components/counter-number/counter-number-seperator.tsx",
@@ -311,8 +310,8 @@ export const components: Registry["items"] = [
   },
   {
     name: "bento-01",
-    type: "registry:block", 
-    description: "block showing a simple bento.", 
+    type: "registry:block",
+    description: "block showing a simple bento.",
     files: [
       {
         path: "components/bento/bento-01.tsx",
@@ -322,8 +321,8 @@ export const components: Registry["items"] = [
   },
   {
     name: "bento-02",
-    type: "registry:block", 
-    description: "block showing a simple bento.", 
+    type: "registry:block",
+    description: "block showing a simple bento.",
     files: [
       {
         path: "components/bento/bento-02.tsx",
@@ -333,8 +332,8 @@ export const components: Registry["items"] = [
   },
   {
     name: "bento-03",
-    type: "registry:block", 
-    description: "block showing a simple bento.", 
+    type: "registry:block",
+    description: "block showing a simple bento.",
     files: [
       {
         path: "components/bento/bento-03.tsx",
@@ -344,8 +343,8 @@ export const components: Registry["items"] = [
   },
   {
     name: "bento-04",
-    type: "registry:block", 
-    description: "block showing a simple bento.", 
+    type: "registry:block",
+    description: "block showing a simple bento.",
     files: [
       {
         path: "components/bento/bento-04.tsx",
@@ -355,8 +354,8 @@ export const components: Registry["items"] = [
   },
   {
     name: "bento-05",
-    type: "registry:block", 
-    description: "block showing a simple bento.", 
+    type: "registry:block",
+    description: "block showing a simple bento.",
     files: [
       {
         path: "components/bento/bento-05.tsx",
@@ -425,6 +424,66 @@ export const components: Registry["items"] = [
     files: [
       {
         path: "components/grid-pattern/grid-pattern-01.tsx",
+        type: "registry:block",
+      },
+    ],
+  },
+  {
+    title: "Marquee",
+    name: "marquee-01",
+    type: "registry:block",
+    registryDependencies: ["marquee"],
+    files: [
+      {
+        path: "components/marquee/marquee-01.tsx",
+        type: "registry:block",
+      },
+    ],
+  },
+  {
+    title: "Marquee",
+    name: "marquee-02",
+    type: "registry:block",
+    registryDependencies: ["marquee"],
+    files: [
+      {
+        path: "components/marquee/marquee-02.tsx",
+        type: "registry:block",
+      },
+    ],
+  },
+  {
+    title: "Marquee",
+    name: "marquee-03",
+    type: "registry:block",
+    registryDependencies: ["marquee"],
+    files: [
+      {
+        path: "components/marquee/marquee-03.tsx",
+        type: "registry:block",
+      },
+    ],
+  },
+  {
+    title: "Marquee",
+    name: "marquee-04",
+    type: "registry:block",
+    registryDependencies: ["marquee"],
+    files: [
+      {
+        path: "components/marquee/marquee-04.tsx",
+        type: "registry:block",
+      },
+    ],
+  },
+  {
+    title: "Marquee",
+    name: "marquee-05",
+    type: "registry:block",
+    registryDependencies: ["marquee"],
+    files: [
+      {
+        path: "components/marquee/marquee-05.tsx",
         type: "registry:block",
       },
     ],

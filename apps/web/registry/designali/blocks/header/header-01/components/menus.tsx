@@ -10,7 +10,7 @@ import {
   NavigationMenuContent,
   NavigationMenuItem,
   NavigationMenuLink,
-  NavigationMenuList,
+  NavigationMenuList as BaseNavigationMenuList,
   NavigationMenuTrigger,
 } from "@workspace/ui/components/navigation-menu"
 
@@ -49,6 +49,13 @@ const resources = [
       "Get in touch for support, collaboration, and project inquiries.",
   },
 ]
+
+// Fix incorrect/stale workspace type
+const NavigationMenuList = BaseNavigationMenuList as React.ComponentType<
+  React.PropsWithChildren<{
+    className?: string
+  }>
+>
 
 export function Menus() {
   return (

@@ -48,15 +48,13 @@ const items = [
 export default function Accordion03() {
   return (
     <div className="mx-auto flex w-full max-w-3xl items-center justify-center border">
-      <Accordion 
-        className="h-full w-full"
-      >
+      <Accordion className="h-full w-full">
         {items.map((item) => (
           <AccordionItem className="relative" value={item.id} key={item.id}>
             <AccordionTrigger className="pl-6 hover:no-underline [&>svg]:hidden">
               <h1 className="text-lg font-semibold md:text-xl">{item.title}</h1>
             </AccordionTrigger>
-            <AccordionContent className="text-muted-foreground grid h-full w-full space-y-6 md:h-full md:grid-cols-2">
+            <AccordionContent className="grid h-full w-full space-y-6 text-muted-foreground md:h-full md:grid-cols-2">
               <div className="space-y-6 px-6">
                 <p> {item.content}</p>
                 <Button>View More</Button>

@@ -65,7 +65,7 @@ export default function Accordion01() {
       <Accordion className="w-full">
         {items.map((item) => (
           <AccordionItem value={item.id} key={item.id}>
-            <AccordionTrigger className="hover:[&_div.bg-primary]:bg-secondary [data-slot=accordion-trigger] hover:[&_svg]:text-primary cursor-pointer text-left duration-1000 hover:pl-3 hover:no-underline hover:[&_svg]:rotate-90 [&>svg]:hidden">
+            <AccordionTrigger className="[data-slot=accordion-trigger] cursor-pointer text-left duration-1000 hover:pl-3 hover:no-underline hover:[&_div.bg-primary]:bg-secondary hover:[&_svg]:rotate-90 hover:[&_svg]:text-primary [&>svg]:hidden">
               <div className="flex flex-1 items-start justify-between gap-4">
                 <div className="flex items-center gap-3">
                   <h1>{item.id}</h1>
@@ -73,10 +73,10 @@ export default function Accordion01() {
                     {item.title}
                   </h3>
                 </div>
-                <div className="bg-primary flex items-center rounded-sm p-2 duration-500">
+                <div className="flex items-center rounded-sm bg-primary p-2 duration-500">
                   <Plus
                     className={cn(
-                      "text-primary-foreground size-4 shrink-0 transition-transform duration-1000",
+                      "size-4 shrink-0 text-primary-foreground transition-transform duration-1000",
                       "[data-state=open]:rotate-90"
                     )}
                   />
@@ -84,7 +84,7 @@ export default function Accordion01() {
               </div>
             </AccordionTrigger>
 
-            <AccordionContent className="text-muted-foreground pr-20 pb-6">
+            <AccordionContent className="pr-20 pb-6 text-muted-foreground">
               {item.content}
             </AccordionContent>
           </AccordionItem>
