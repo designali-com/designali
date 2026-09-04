@@ -3,6 +3,7 @@ import {
   Blocks,
   BookOpen,
   Component,
+  DollarSign,
   FileText,
   Frame,
   Image,
@@ -65,6 +66,11 @@ export const data = {
       title: "Components",
       url: "/docs/components/bento",
       icon: Component,
+    },
+    {
+      title: "Pricing",
+      url: "/pricing",
+      icon: DollarSign,
     },
     {
       title: "Documentation",
@@ -655,6 +661,7 @@ export const templateCategories: {
   hidden: boolean
 
   url: string
+  downloadurl: string
 
   tech: string[]
   pages: string[]
@@ -674,6 +681,7 @@ export const templateCategories: {
     hidden: false,
 
     url: "https://portfolio-simple.designali.com",
+    downloadurl: "https://portfolio-simple.designali.com",
 
     tech: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
 
@@ -707,6 +715,7 @@ export const templateCategories: {
     hidden: false,
 
     url: "https://design-agency.designali.com",
+    downloadurl: "https://portfolio-simple.designali.com",
 
     tech: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
 

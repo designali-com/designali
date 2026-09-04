@@ -21,6 +21,7 @@ import {
   X,
   RotateCcw,
   Download,
+  ArrowUpRight,
 } from "lucide-react"
 
 import { cn } from "@workspace/ui/lib/utils"
@@ -33,6 +34,7 @@ export interface TemplatePreviewProps {
   name: string
   description: string
   url: string
+  downloadurl: string
 
   tech?: string[]
   pages?: string[]
@@ -56,6 +58,7 @@ export function TemplatePreview({
   name,
   description,
   url,
+  downloadurl,
   tech = [],
   pages = [],
   features = [],
@@ -232,9 +235,19 @@ export function TemplatePreview({
             </Button>
 
             <Button
-              size={"sm"}
+              size={"icon-sm"}
+              variant={"ghost"}
               render={
                 <a href={url} target="_blank" rel="noopener noreferrer" />
+              }
+            >
+              <ArrowUpRight />
+              
+            </Button>
+            <Button
+              size={"sm"}
+              render={
+                <a href={downloadurl} target="_blank" rel="noopener noreferrer" />
               }
             >
               <Download />

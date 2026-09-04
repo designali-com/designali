@@ -545,6 +545,24 @@ export const Index: Record<string, any> = {
     categories: ["logos","clients"],
     meta: {"iframeHeight":"500px"},
   },
+  "feature-01": {
+    name: "feature-01",
+    description: "A simple feature section.",
+    type: "registry:block",
+    registryDependencies: undefined,
+    files: [{
+      path: "registry/designali/blocks/feature/feature-01/page.tsx",
+      type: "registry:component",
+      target: "components/feature-01.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/designali/blocks/feature/feature-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["feature"],
+    meta: {"iframeHeight":"600px"},
+  },
   "accordion-01": {
     name: "accordion-01",
     description: "Personal FAQ accordion introducing Ali Imam, his design approach, inspirations, and ways to connect for collaborations.",

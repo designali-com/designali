@@ -576,6 +576,27 @@
       }
     },
     {
+      "name": "feature-01",
+      "description": "A simple feature section.",
+      "type": "registry:block",
+      "dependencies": [
+        "@designali/logos"
+      ],
+      "files": [
+        {
+          "path": "registry/designali/blocks/feature/feature-01/page.tsx",
+          "target": "components/feature-01.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "categories": [
+        "feature"
+      ],
+      "meta": {
+        "iframeHeight": "600px"
+      }
+    },
+    {
       "name": "accordion-01",
       "type": "registry:example",
       "description": "Personal FAQ accordion introducing Ali Imam, his design approach, inspirations, and ways to connect for collaborations.",

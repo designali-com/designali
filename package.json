@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "build": "turbo build",
+    "sync:templates": "git branch -D templates-public 2>/dev/null || true && git subtree split --prefix=templates -b templates-public && git push --force templates templates-public:main",
     "dev": "turbo dev",
     "lint": "turbo lint",
     "format": "turbo format",

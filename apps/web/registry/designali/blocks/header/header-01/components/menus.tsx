@@ -59,70 +59,8 @@ const NavigationMenuList = BaseNavigationMenuList as React.ComponentType<
 
 export function Menus() {
   return (
-    <NavigationMenu align="center">
-      <NavigationMenuList className="gap-1">
-        {/* Templates */}
-        <NavigationMenuItem>
-          <NavigationMenuLink
-            render={<Link href="/templates" />}
-            className="bg-transparent text-xs"
-          >
-            Templates
-          </NavigationMenuLink>
-        </NavigationMenuItem>
-
-        {/* Blocks */}
-        <NavigationMenuItem>
-          <NavigationMenuLink
-            render={<Link href="/blocks" />}
-            className="bg-transparent text-xs"
-          >
-            Blocks
-          </NavigationMenuLink>
-        </NavigationMenuItem>
-
-        {/* Resources */}
-        <NavigationMenuItem>
-          <NavigationMenuTrigger className="bg-transparent text-xs">
-            Resources
-          </NavigationMenuTrigger>
-
-          <NavigationMenuContent className="p-2">
-            <ul className="grid w-[650px] grid-cols-3 gap-1">
-              {resources.map((resource) => (
-                <ListItem
-                  key={resource.title}
-                  title={resource.title}
-                  href={resource.href}
-                >
-                  {resource.description}
-                </ListItem>
-              ))}
-            </ul>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
-
-        {/* Icons */}
-        <NavigationMenuItem>
-          <NavigationMenuLink
-            render={<Link href="/icons" />}
-            className="bg-transparent text-xs"
-          >
-            Icons
-          </NavigationMenuLink>
-        </NavigationMenuItem>
-
-        {/* Components */}
-        <NavigationMenuItem>
-          <NavigationMenuLink
-            render={<Link href="/docs/components" />}
-            className="bg-transparent text-xs"
-          >
-            Components
-          </NavigationMenuLink>
-        </NavigationMenuItem>
-      </NavigationMenuList>
-    </NavigationMenu>
+    <div> 
+    </div>
   )
 }
 

@@ -25,12 +25,13 @@ export default async function Page({ params }: PageProps) {
   }
 
   return (
-    <main className="my-20 w-full">
+    <main className="my-10 w-full">
       <div className="mx-auto w-full">
         <TemplatePreview
           name={template.name}
           description={template.description}
           url={template.url}
+          downloadurl={template.downloadurl}
           tech={template.tech}
           pages={template.pages}
           features={template.features}

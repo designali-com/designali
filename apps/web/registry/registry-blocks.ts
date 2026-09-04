@@ -421,4 +421,21 @@ export const blocks: Registry["items"] = [
       iframeHeight: "500px",
     },
   },
+  {
+    name: "feature-01",
+    description: "A simple feature section.",
+    type: "registry:block",
+    dependencies: ["@designali/logos"],
+    files: [
+      {
+        path: "blocks/feature/feature-01/page.tsx",
+        target: "components/feature-01.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["feature"],
+    meta: {
+      iframeHeight: "600px",
+    },
+  },
 ]
