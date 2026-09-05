@@ -138,7 +138,104 @@ export const invitation = pgTable("invitation", {
     .references(() => user.id, { onDelete: "cascade" }),
 });
 
+export const template = pgTable("template", {
+  id: text("id").primaryKey(),
+  title: text("title").notNull(),
+  slug: text("slug").notNull().unique(),
+  description: text("description"),
+  thumbnail: text("thumbnail").notNull(),
+  previewUrl: text("preview_url"),
+  downloadUrl: text("download_url").notNull(), // S3/Cloudinary/Zip link
+  figmaUrl: text("figma_url"),
+  category: text("category").notNull(), // e.g., "Dashboard", "Landing Page", "Mobile App"
+  isPro: boolean("is_pro").default(true).notNull(),
+  createdAt: timestamp("created_at")
+    .$defaultFn(() => new Date())
+    .notNull(),
+  updatedAt: timestamp("updated_at")
+    .$defaultFn(() => new Date())
+    .notNull(),
+});
+
+// 2. DOWNLOADS TABLE (Konsa user/org kaunsa template download kar raha hai)
+export const download = pgTable("download", {
+  id: text("id").primaryKey(),
+  userId: text("user_id")
+    .notNull()
+    .references(() => user.id, { onDelete: "cascade" }),
+  organizationId: text("organization_id").references(() => organization.id, {
+    onDelete: "set null",
+  }), // Optional: agar team download kar rahi hai
+  templateId: text("template_id")
+    .notNull()
+    .references(() => template.id, { onDelete: "cascade" }),
+  licenseKey: text("license_key").notNull(), // Unique license code per download
+  downloadedAt: timestamp("downloaded_at")
+    .$defaultFn(() => new Date())
+    .notNull(),
+});
+
+// 3. SUBSCRIPTION TABLE (User ya Organization ka Pro Plan Track karne ke liye)
+export const subscriptionStatus = pgEnum("subscription_status", [
+  "active",
+  "canceled",
+  "expired",
+]);
+
+export const subscription = pgTable("subscription", {
+  id: text("id").primaryKey(),
+  userId: text("user_id").references(() => user.id, { onDelete: "cascade" }),
+  organizationId: text("organization_id").references(() => organization.id, {
+    onDelete: "cascade",
+  }),
+  plan: text("plan").notNull(), // e.g., "pro_monthly", "pro_yearly", "team_pro"
+  status: subscriptionStatus("status").default("active").notNull(),
+  currentPeriodStart: timestamp("current_period_start").notNull(),
+  currentPeriodEnd: timestamp("current_period_end").notNull(),
+  createdAt: timestamp("created_at")
+    .$defaultFn(() => new Date())
+    .notNull(),
+});
+
+// 4. RELATIONS SETUP (Drizzle ORM Queries ke liye)
+export const templateRelations = relations(template, ({ many }) => ({
+  downloads: many(download),
+}));
+
+export const downloadRelations = relations(download, ({ one }) => ({
+  user: one(user, {
+    fields: [download.userId],
+    references: [user.id],
+  }),
+  organization: one(organization, {
+    fields: [download.organizationId],
+    references: [organization.id],
+  }),
+  template: one(template, {
+    fields: [download.templateId],
+    references: [template.id],
+  }),
+}));
+
+export const subscriptionRelations = relations(subscription, ({ one }) => ({
+  user: one(user, {
+    fields: [subscription.userId],
+    references: [user.id],
+  }),
+  organization: one(organization, {
+    fields: [subscription.organizationId],
+    references: [organization.id],
+  }),
+}));
+
+// Types Infer Export (Typescript autocomplete ke liye)
+export type Template = typeof template.$inferSelect;
+export type Download = typeof download.$inferSelect;
+export type Subscription = typeof subscription.$inferSelect;
+
+// Updated Export Schema
 export const schema = {
+  // Existing...
   user,
   session,
   account,
@@ -148,4 +245,11 @@ export const schema = {
   invitation,
   organizationRelations,
   memberRelations,
+  // New Additions
+  template,
+  download,
+  subscription,
+  templateRelations,
+  downloadRelations,
+  subscriptionRelations,
 };

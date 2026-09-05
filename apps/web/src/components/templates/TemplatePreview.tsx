@@ -31,10 +31,13 @@ import { cn } from "@workspace/ui/lib/utils"
 import { Badge } from "@workspace/ui/components/badge"
 import { Button } from "@workspace/ui/components/button"
 import { Github } from "@designali/logos"
+import { recordDownload } from "@/src/server/download";
 
 type Device = "desktop" | "tablet" | "mobile"
 
 export interface TemplatePreviewProps {
+  templateId: string
+  organizationId?: string
   name: string
   slug: string
   description: string
@@ -60,6 +63,8 @@ export interface TemplatePreviewProps {
 }
 
 export function TemplatePreview({
+  templateId,
+  organizationId,
   name,
   slug,
   description,
@@ -97,53 +102,62 @@ export function TemplatePreview({
 
   const handleDownload = async () => {
     if (isDownloading) return
-
+  
     const controller = new AbortController()
     abortControllerRef.current = controller
-
+  
     try {
       setIsDownloading(true)
       setDownloadProgress(10)
-
+  
+      // 1. Log activity in background (Do not block download if this fails)
+      try {
+        await recordDownload(templateId, organizationId)
+      } catch (err) {
+        console.warn("Analytics/DB log failed, proceeding to direct download:", err)
+      }
+  
+      setDownloadProgress(40)
+  
+      // 2. Fetch ZIP File Directly
       const response = await fetch(downloadurl, {
         signal: controller.signal,
       })
-
+  
       if (!response.ok) {
         throw new Error("Download failed")
       }
-
-      setDownloadProgress(40)
-
-      const blob = await response.blob()
-
+  
       setDownloadProgress(90)
-
+  
+      const blob = await response.blob()
+  
+      // 3. Trigger File Download
       const blobUrl = window.URL.createObjectURL(blob)
-
       const link = document.createElement("a")
       link.href = blobUrl
       link.download = `${name
         .toLowerCase()
         .replace(/[^a-z0-9]+/g, "-")
         .replace(/(^-|-$)/g, "")}.zip`
-
+  
       document.body.appendChild(link)
       link.click()
       link.remove()
-
+  
       window.URL.revokeObjectURL(blobUrl)
-
+  
       setDownloadProgress(100)
     } catch (error) {
       if (error instanceof DOMException && error.name === "AbortError") {
         console.log("Download cancelled")
       } else {
         console.error("Download error:", error)
+        alert("Unable to download file. Please check the template link.")
       }
     } finally {
       abortControllerRef.current = null
-
+  
       setTimeout(() => {
         setIsDownloading(false)
         setDownloadProgress(0)

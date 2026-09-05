@@ -28,6 +28,7 @@ export default async function Page({ params }: PageProps) {
     <main className="my-10 w-full">
       <div className="mx-auto w-full">
         <TemplatePreview
+          templateId={template.id}
           name={template.name}
           slug={template.slug}
           description={template.description}

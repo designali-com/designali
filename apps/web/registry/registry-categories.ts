@@ -659,6 +659,7 @@ export const registryCategories: {
 ]
 
 export const templateCategories: {
+  id: string
   name: string
   slug: string
   description: string
@@ -678,6 +679,7 @@ export const templateCategories: {
   fonts: string[]
 }[] = [
   {
+    id: "portfolio-simple",
     name: "Portfolio Simple",
     slug: "portfolio-simple",
     description:
@@ -712,6 +714,7 @@ export const templateCategories: {
   },
 
   {
+    id: "design-agency",
     name: "Design Agency",
     slug: "design-agency",
     description:

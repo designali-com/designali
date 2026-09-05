@@ -43,6 +43,13 @@
       "when": 1788634969015,
       "tag": "0005_careful_krista_starr",
       "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "7",
+      "when": 1788638018407,
+      "tag": "0006_last_genesis",
+      "breakpoints": true
     }
   ]
 }
