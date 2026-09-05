@@ -1,13 +1,13 @@
 // @ts-nocheck -- skip type checking
-import * as docs_10 from "../src/content/docs/components/typewriter.mdx?collection=docs&hash=1788584662253"
-import * as docs_9 from "../src/content/docs/components/marquee.mdx?collection=docs&hash=1788584662253"
-import * as docs_8 from "../src/content/docs/components/grid-pattern.mdx?collection=docs&hash=1788584662253"
-import * as docs_7 from "../src/content/docs/components/gauge.mdx?collection=docs&hash=1788584662253"
-import * as docs_6 from "../src/content/docs/components/dot-pattern.mdx?collection=docs&hash=1788584662253"
-import * as docs_5 from "../src/content/docs/components/counter-number.mdx?collection=docs&hash=1788584662253"
-import * as docs_4 from "../src/content/docs/components/card.mdx?collection=docs&hash=1788584662253"
-import * as docs_3 from "../src/content/docs/components/bento.mdx?collection=docs&hash=1788584662253"
-import * as docs_2 from "../src/content/docs/legal/terms.mdx?collection=docs&hash=1788584662253"
+import * as docs_10 from "../src/content/docs/legal/terms.mdx?collection=docs&hash=1788584662253"
+import * as docs_9 from "../src/content/docs/components/typewriter.mdx?collection=docs&hash=1788584662253"
+import * as docs_8 from "../src/content/docs/components/marquee.mdx?collection=docs&hash=1788584662253"
+import * as docs_7 from "../src/content/docs/components/grid-pattern.mdx?collection=docs&hash=1788584662253"
+import * as docs_6 from "../src/content/docs/components/gauge.mdx?collection=docs&hash=1788584662253"
+import * as docs_5 from "../src/content/docs/components/dot-pattern.mdx?collection=docs&hash=1788584662253"
+import * as docs_4 from "../src/content/docs/components/counter-number.mdx?collection=docs&hash=1788584662253"
+import * as docs_3 from "../src/content/docs/components/card.mdx?collection=docs&hash=1788584662253"
+import * as docs_2 from "../src/content/docs/components/bento.mdx?collection=docs&hash=1788584662253"
 import * as docs_1 from "../src/content/docs/(root)/index.mdx?collection=docs&hash=1788584662253"
 import * as docs_0 from "../src/content/docs/(root)/changelog.mdx?collection=docs&hash=1788584662253"
 import * as blogs_2 from "../src/content/blogs/websites-to-build-and-publish.mdx?collection=blogs&hash=1788584662253"
@@ -16,4 +16,4 @@ import * as blogs_0 from "../src/content/blogs/free-ui-component-libraries.mdx?c
 import { _runtime } from "fumadocs-mdx/runtime/next"
 import * as _source from "../source.config"
 export const blogs = _runtime.docs<typeof _source.blogs>([{ info: {"path":"free-ui-component-libraries.mdx","fullPath":"src/content/blogs/free-ui-component-libraries.mdx"}, data: blogs_0 }, { info: {"path":"open-source-nextjs-projects.mdx","fullPath":"src/content/blogs/open-source-nextjs-projects.mdx"}, data: blogs_1 }, { info: {"path":"websites-to-build-and-publish.mdx","fullPath":"src/content/blogs/websites-to-build-and-publish.mdx"}, data: blogs_2 }], [])
-export const docs = _runtime.docs<typeof _source.docs>([{ info: {"path":"(root)/changelog.mdx","fullPath":"src/content/docs/(root)/changelog.mdx"}, data: docs_0 }, { info: {"path":"(root)/index.mdx","fullPath":"src/content/docs/(root)/index.mdx"}, data: docs_1 }, { info: {"path":"legal/terms.mdx","fullPath":"src/content/docs/legal/terms.mdx"}, data: docs_2 }, { info: {"path":"components/bento.mdx","fullPath":"src/content/docs/components/bento.mdx"}, data: docs_3 }, { info: {"path":"components/card.mdx","fullPath":"src/content/docs/components/card.mdx"}, data: docs_4 }, { info: {"path":"components/counter-number.mdx","fullPath":"src/content/docs/components/counter-number.mdx"}, data: docs_5 }, { info: {"path":"components/dot-pattern.mdx","fullPath":"src/content/docs/components/dot-pattern.mdx"}, data: docs_6 }, { info: {"path":"components/gauge.mdx","fullPath":"src/content/docs/components/gauge.mdx"}, data: docs_7 }, { info: {"path":"components/grid-pattern.mdx","fullPath":"src/content/docs/components/grid-pattern.mdx"}, data: docs_8 }, { info: {"path":"components/marquee.mdx","fullPath":"src/content/docs/components/marquee.mdx"}, data: docs_9 }, { info: {"path":"components/typewriter.mdx","fullPath":"src/content/docs/components/typewriter.mdx"}, data: docs_10 }], [{"info":{"path":"meta.json","fullPath":"src/content/docs/meta.json"},"data":{"pages":["(root)","components","legal"],"root":true}}])
+export const docs = _runtime.docs<typeof _source.docs>([{ info: {"path":"(root)/changelog.mdx","fullPath":"src/content/docs/(root)/changelog.mdx"}, data: docs_0 }, { info: {"path":"(root)/index.mdx","fullPath":"src/content/docs/(root)/index.mdx"}, data: docs_1 }, { info: {"path":"components/bento.mdx","fullPath":"src/content/docs/components/bento.mdx"}, data: docs_2 }, { info: {"path":"components/card.mdx","fullPath":"src/content/docs/components/card.mdx"}, data: docs_3 }, { info: {"path":"components/counter-number.mdx","fullPath":"src/content/docs/components/counter-number.mdx"}, data: docs_4 }, { info: {"path":"components/dot-pattern.mdx","fullPath":"src/content/docs/components/dot-pattern.mdx"}, data: docs_5 }, { info: {"path":"components/gauge.mdx","fullPath":"src/content/docs/components/gauge.mdx"}, data: docs_6 }, { info: {"path":"components/grid-pattern.mdx","fullPath":"src/content/docs/components/grid-pattern.mdx"}, data: docs_7 }, { info: {"path":"components/marquee.mdx","fullPath":"src/content/docs/components/marquee.mdx"}, data: docs_8 }, { info: {"path":"components/typewriter.mdx","fullPath":"src/content/docs/components/typewriter.mdx"}, data: docs_9 }, { info: {"path":"legal/terms.mdx","fullPath":"src/content/docs/legal/terms.mdx"}, data: docs_10 }], [{"info":{"path":"meta.json","fullPath":"src/content/docs/meta.json"},"data":{"pages":["(root)","components","legal"],"root":true}}])
