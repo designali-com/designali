@@ -1,16 +1,17 @@
+ 
 "use client"
 
 import Link from "next/link"
-import { usePathname, useSearchParams } from "next/navigation"
+import { usePathname } from "next/navigation"
 
 import {
-  BookOpen,
-  FileCode,
   AppWindow,
   Blocks,
+  Book,
+  BookOpen,
+  FileCode,
   LayoutGrid,
   NotebookText,
-  Book,
 } from "lucide-react"
 
 import type { blogSource } from "@/src/lib/source"
@@ -74,21 +75,27 @@ interface BlogTag {
   count: number
 }
 
+interface BlogsSidebarProps
+  extends React.ComponentProps<typeof Sidebar> {
+  tree: typeof blogSource.pageTree
+  tags: BlogTag[]
+  selectedTag?: string
+}
+
 export function BlogsSidebar({
   tree,
   tags,
+  selectedTag = "",
   ...props
-}: React.ComponentProps<typeof Sidebar> & {
-  tree: typeof blogSource.pageTree
-  tags: BlogTag[]
-}) {
+}: BlogsSidebarProps) {
   const pathname = usePathname()
-  const searchParams = useSearchParams()
-
-  const selectedTag = searchParams.get("tag") ?? ""
 
   return (
-    <Sidebar collapsible="icon" className="mt-6" {...props}>
+    <Sidebar
+      collapsible="icon"
+      className="mt-6"
+      {...props}
+    >
       <SidebarContent>
         {/* Sidebar Toggle */}
         <SidebarTrigger className="absolute top-6 right-2.5 z-10 opacity-60" />
@@ -99,7 +106,9 @@ export function BlogsSidebar({
             <SidebarMenu className="pt-12">
               {TOP_LEVEL_SECTIONS.map(
                 ({ name, href, icon: Icon }) => {
-                  const isActive = pathname === href
+                  const isActive =
+                    pathname === href &&
+                    !selectedTag
 
                   return (
                     <SidebarMenuItem key={name}>
@@ -107,10 +116,11 @@ export function BlogsSidebar({
                         isActive={isActive}
                         tooltip={name}
                         render={<Link href={href} />}
-                        className={`transition-opacity duration-200 hover:text-primary ${isActive
+                        className={`transition-opacity duration-200 hover:text-primary ${
+                          isActive
                             ? "text-primary opacity-100"
                             : "opacity-60 hover:opacity-100"
-                          }`}
+                        }`}
                       >
                         <Icon className="size-3.5 shrink-0" />
                         <span>{name}</span>
@@ -139,7 +149,8 @@ export function BlogsSidebar({
 
                   const isActive =
                     pathname === "/blogs" &&
-                    selectedTag === tag.name
+                    selectedTag.toLowerCase() ===
+                      tag.name.toLowerCase()
 
                   return (
                     <SidebarMenuItem key={tag.name}>
@@ -147,10 +158,11 @@ export function BlogsSidebar({
                         isActive={isActive}
                         tooltip={tag.name}
                         render={<Link href={href} />}
-                        className={`transition-opacity duration-200 hover:text-primary ${isActive
+                        className={`transition-opacity duration-200 hover:text-primary ${
+                          isActive
                             ? "text-primary opacity-100"
                             : "opacity-60 hover:opacity-100"
-                          }`}
+                        }`}
                       >
                         <NotebookText className="size-3.5 shrink-0" />
 
@@ -201,30 +213,41 @@ export function BlogsSidebar({
                       return null
                     }
 
-                    if (EXCLUDED_PAGES.includes(page.url)) {
+                    if (
+                      EXCLUDED_PAGES.includes(
+                        page.url
+                      )
+                    ) {
                       return null
                     }
 
-                    const isActive = pathname === page.url
+                    const isActive =
+                      pathname === page.url
 
-                    const isNew = NEW_COMPONENTS.includes(
-                      page.url
-                    )
+                    const isNew =
+                      NEW_COMPONENTS.includes(
+                        page.url
+                      )
 
                     const pageNameStr = page.name
                       ? String(page.name)
                       : ""
 
                     return (
-                      <SidebarMenuItem key={page.url}>
+                      <SidebarMenuItem
+                        key={page.url}
+                      >
                         <SidebarMenuButton
                           isActive={isActive}
                           tooltip={pageNameStr}
-                          render={<Link href={page.url} />}
-                          className={`transition-opacity duration-200 hover:text-primary ${isActive
+                          render={
+                            <Link href={page.url} />
+                          }
+                          className={`transition-opacity duration-200 hover:text-primary ${
+                            isActive
                               ? "text-primary opacity-100"
                               : "opacity-60 hover:opacity-100"
-                            }`}
+                          }`}
                         >
                           <FileCode className="size-3.5 shrink-0" />
 
@@ -251,10 +274,12 @@ export function BlogsSidebar({
           <SidebarGroupLabel>
             <span>Pages</span>
           </SidebarGroupLabel>
+
           <SidebarMenu>
             {BOTTOM_LEVEL_SECTIONS.map(
               ({ name, href, icon: Icon }) => {
-                const isActive = pathname === href
+                const isActive =
+                  pathname === href
 
                 return (
                   <SidebarMenuItem key={name}>
@@ -262,12 +287,14 @@ export function BlogsSidebar({
                       isActive={isActive}
                       tooltip={name}
                       render={<Link href={href} />}
-                      className={`transition-opacity duration-200 hover:text-primary ${isActive
+                      className={`transition-opacity duration-200 hover:text-primary ${
+                        isActive
                           ? "text-primary opacity-100"
                           : "opacity-60 hover:opacity-100"
-                        }`}
+                      }`}
                     >
                       <Icon className="size-3.5 shrink-0" />
+
                       <span>{name}</span>
                     </SidebarMenuButton>
                   </SidebarMenuItem>
@@ -279,4 +306,4 @@ export function BlogsSidebar({
       </SidebarContent>
     </Sidebar>
   )
-}
+} 
