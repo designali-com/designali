@@ -1,7 +1,7 @@
 import { createMDX } from "fumadocs-mdx/next"
-import type { NextConfig } from "next"
 
-const nextConfig: NextConfig = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   transpilePackages: ["@workspace/ui"],
 
   outputFileTracingIncludes: {
