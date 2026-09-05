@@ -1,0 +1,48 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1788632696243,
+      "tag": "0000_far_luckman",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1788632851631,
+      "tag": "0001_pretty_risque",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1788634147654,
+      "tag": "0002_amused_sue_storm",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1788634402897,
+      "tag": "0003_rapid_trauma",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1788634489638,
+      "tag": "0004_spotty_albert_cleary",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1788634969015,
+      "tag": "0005_careful_krista_starr",
+      "breakpoints": true
+    }
+  ]
+}

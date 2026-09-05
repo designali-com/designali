@@ -98,10 +98,7 @@ export function TemplateHeader() {
               <Logo className="size-6" />
             </Link>
           </div>
-
-
-
-
+ 
           <div className="flex items-center gap-2">
             <div className="md:absolute md:left-1/2 md:-translate-x-1/2">
               <Search />
@@ -113,8 +110,7 @@ export function TemplateHeader() {
               nativeButton={false}
               render={
                 <Link
-                  href={CAL_LINK}
-                  target="_blank"
+                  href={"/pricing"} 
                   rel="noopener noreferrer"
                 />
               }
@@ -126,8 +122,7 @@ export function TemplateHeader() {
               nativeButton={false}
               render={
                 <Link
-                  href={CAL_LINK}
-                  target="_blank"
+                  href={"/dashboard"} 
                   rel="noopener noreferrer"
                 />
               }
