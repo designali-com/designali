@@ -5,8 +5,12 @@
     "build": {
       "dependsOn": ["^build"],
       "env": [
+        "BETTER_AUTH_SECRET",
+        "BETTER_AUTH_URL",
         "GOOGLE_CLIENT_ID",
         "GOOGLE_CLIENT_SECRET",
+        "GITHUB_CLIENT_ID",
+        "GITHUB_CLIENT_SECRET",
         "DATABASE_URL",
         "RESEND_API_KEY",
         "EMAIL_SENDER_NAME",
