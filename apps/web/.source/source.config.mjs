@@ -85,7 +85,20 @@ var docs = defineDocs({
     })
   }
 });
+var blogs = defineDocs({
+  dir: "./src/content/blogs",
+  docs: {
+    schema: frontmatterSchema.extend({
+      tag: z.array(z.string()).optional(),
+      publishedOn: z.string(),
+      featured: z.boolean().optional().default(false),
+      image: z.string().optional(),
+      author: z.string().optional()
+    })
+  }
+});
 export {
+  blogs,
   source_config_default as default,
   docs
 };

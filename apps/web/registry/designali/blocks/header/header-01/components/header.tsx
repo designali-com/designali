@@ -7,7 +7,7 @@ import { Menus } from "@/registry/designali/blocks/header/header-01/components/m
 import { ModeToggle } from "@/registry/designali/blocks/header/header-01/components/theme-switch"
 import { cn } from "@workspace/ui/lib/utils"
 import { Button } from "@workspace/ui/components/button"
-import { Logo } from "@workspace/ui/designali/logo"
+import { Logo } from "@/src/components/logo"
 
 const menuItems = [
   { name: "Components", href: "#" },

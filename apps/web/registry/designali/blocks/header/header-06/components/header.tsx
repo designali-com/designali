@@ -1,36 +1,8 @@
 "use client"
 
 import * as React from "react"
-import type { ReactElement } from "react"
 import { useEffect, useState } from "react"
 import Link from "next/link"
-
-import {
-  AArrowUp,
-  AppWindow,
-  BookText,
-  Bot,
-  Box,
-  BriefcaseBusiness,
-  Calendar1,
-  ChartNoAxesColumnIncreasing,
-  CirclePlus,
-  Code,
-  Component,
-  Cpu,
-  Globe,
-  Layers,
-  LayoutGrid,
-  LogOut,
-  Network,
-  PenTool,
-  ScanText,
-  ScreenShare,
-  Shield,
-  Smile,
-  Sparkle,
-  Sparkles,
-} from "lucide-react"
 
 import { ThemeSwitcher } from "@/registry/designali/blocks/header/header-06/components/theme"
 import { cn } from "@workspace/ui/lib/utils"
@@ -58,240 +30,9 @@ import {
   DropdownMenuTrigger,
 } from "@workspace/ui/components/dropdown-menu"
 
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-  navigationMenuTriggerStyle,
-} from "@workspace/ui/components/navigation-menu"
-
 import { Logo } from "@workspace/ui/designali/logo"
+import { NavMenu } from "@/registry/designali/blocks/header/header-06/components/menus"
 
-type MenuItem = {
-  title: string
-  icon: ReactElement
-  href: string
-  description: string
-}
-
-const cloud: MenuItem[] = [
-  {
-    title: "AI SDK",
-    href: "#",
-    icon: <Box strokeWidth={2} />,
-    description: "The AI Toolkit for Typescript",
-  },
-  {
-    title: "AI Gateway",
-    href: "#",
-    icon: <Sparkle strokeWidth={2} />,
-    description: "One endpoint, all your models",
-  },
-  {
-    title: "Vercel Agent",
-    href: "#",
-    icon: <AArrowUp strokeWidth={2} />,
-    description: "An agent that knows your stack",
-  },
-]
-
-const core: MenuItem[] = [
-  {
-    title: "CI/CD",
-    href: "#",
-    icon: <LayoutGrid strokeWidth={2} />,
-    description: "Helping teams ship 6× faster",
-  },
-  {
-    title: "Content Delivery",
-    href: "#",
-    icon: <Globe strokeWidth={2} />,
-    description: "Fast, scalable, and reliable",
-  },
-  {
-    title: "Fluid Compute",
-    href: "#",
-    icon: <Cpu strokeWidth={2} />,
-    description: "Servers, in serverless form",
-  },
-  {
-    title: "Observability",
-    href: "#",
-    icon: <ChartNoAxesColumnIncreasing strokeWidth={2} />,
-    description: "Trace every step",
-  },
-]
-
-const security: MenuItem[] = [
-  {
-    title: "Bot Management",
-    href: "#",
-    icon: <Bot strokeWidth={2} />,
-    description: "Scalable bot protection",
-  },
-  {
-    title: "BotID",
-    href: "#",
-    icon: <ScanText strokeWidth={2} />,
-    description: "Invisible CAPTCHA",
-  },
-  {
-    title: "Platform Security",
-    href: "#",
-    icon: <Shield strokeWidth={2} />,
-    description: "DDOS Protection, Firewall",
-  },
-  {
-    title: "Web Application Firewall",
-    href: "#",
-    icon: <Calendar1 strokeWidth={2} />,
-    description: "Granular, custom protection",
-  },
-]
-
-const company: MenuItem[] = [
-  {
-    title: "Customers",
-    href: "#",
-    icon: <Smile strokeWidth={2} />,
-    description: "Trusted by the best teams",
-  },
-  {
-    title: "Blog",
-    href: "#",
-    icon: <PenTool strokeWidth={2} />,
-    description: "The latest posts and changes",
-  },
-  {
-    title: "Changelog",
-    href: "#",
-    icon: <BookText strokeWidth={2} />,
-    description: "See what shipped",
-  },
-  {
-    title: "Press",
-    href: "#",
-    icon: <BriefcaseBusiness strokeWidth={2} />,
-    description: "Read the latest news",
-  },
-  {
-    title: "Events",
-    href: "#",
-    icon: <Calendar1 strokeWidth={2} />,
-    description: "Join us at an event",
-  },
-]
-
-const open: MenuItem[] = [
-  {
-    title: "Next.js",
-    href: "#",
-    icon: <Code strokeWidth={2} />,
-    description: "The native Next.js platform",
-  },
-  {
-    title: "Nuxt",
-    href: "#",
-    icon: <Component strokeWidth={2} />,
-    description: "The progressive web framework",
-  },
-  {
-    title: "Svelte",
-    href: "#",
-    icon: <Component strokeWidth={2} />,
-    description: "The web's efficient UI framework",
-  },
-  {
-    title: "Turborepo",
-    href: "#",
-    icon: <Network strokeWidth={2} />,
-    description: "Speed with Enterprise scale",
-  },
-]
-
-const tools: MenuItem[] = [
-  {
-    title: "Academy",
-    href: "#",
-    icon: <Code strokeWidth={2} />,
-    description: "Learn the ins and outs of Vercel",
-  },
-  {
-    title: "Marketplace",
-    href: "#",
-    icon: <Component strokeWidth={2} />,
-    description: "Extend and automate workflows",
-  },
-  {
-    title: "Templates",
-    href: "#",
-    icon: <Component strokeWidth={2} />,
-    description: "Jumpstart app development",
-  },
-  {
-    title: "Guides",
-    href: "#",
-    icon: <Network strokeWidth={2} />,
-    description: "Find help quickly",
-  },
-  {
-    title: "Partner Finder",
-    href: "#",
-    icon: <Network strokeWidth={2} />,
-    description: "Get help from solution partners",
-  },
-]
-
-const cases: MenuItem[] = [
-  {
-    title: "AI Apps",
-    href: "#",
-    icon: <Sparkles strokeWidth={2} />,
-    description: "Deploy at the speed of AI",
-  },
-  {
-    title: "Composable Commerce",
-    href: "#",
-    icon: <Component strokeWidth={2} />,
-    description: "Power storefronts that convert",
-  },
-  {
-    title: "Marketing Sites",
-    href: "#",
-    icon: <ScreenShare strokeWidth={2} />,
-    description: "Jumpstart app development",
-  },
-  {
-    title: "Multi-tenant Platforms",
-    href: "#",
-    icon: <Network strokeWidth={2} />,
-    description: "Scale apps with one codebase",
-  },
-  {
-    title: "Web Apps",
-    href: "#",
-    icon: <AppWindow strokeWidth={2} />,
-    description: "Ship features, not infrastructure",
-  },
-]
-
-const users: MenuItem[] = [
-  {
-    title: "Platform Engineers",
-    href: "#",
-    icon: <Code strokeWidth={2} />,
-    description: "Automate away repetition",
-  },
-  {
-    title: "Design Engineers",
-    href: "#",
-    icon: <Layers strokeWidth={2} />,
-    description: "Deploy for every idea",
-  },
-]
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false)
@@ -317,20 +58,23 @@ export function Header() {
     >
       <div className="mx-auto flex w-full max-w-7xl items-center justify-between">
         {/* Logo */}
-        <Link href="/" aria-label="Home">
+        <Link href="/" className="flex gap-2 items-center" aria-label="Home">
           <Logo className="size-8" />
+          <p className="uppercase font-medium text-sm">
+            designali
+          </p>
         </Link>
 
-        {/* Desktop Navigation */}
-         
+        <NavMenu />
+
 
         {/* Right Actions */}
         <div className="flex items-center gap-2">
-          <Button variant="outline" size="sm">
+          <Button variant="outline" size="md">
             Contact
           </Button>
 
-          <Button variant="outline" size="sm">
+          <Button variant="outline" size="md">
             Dashboard
           </Button>
 
@@ -345,9 +89,9 @@ export function Header() {
                 />
               }
             >
-              <Avatar className="border">
+              <Avatar className="border rounded-none">
                 <AvatarImage src="/ali.jpg" alt="Ali Imam" />
-                <AvatarFallback>AI</AvatarFallback>
+                <AvatarFallback className={"rounded-none"}>AI</AvatarFallback>
               </Avatar>
             </DropdownMenuTrigger>
 
@@ -423,6 +167,19 @@ export function Header() {
 
               <DropdownMenuSeparator />
 
+              <DropdownMenuGroup>
+                <div className="flex my-1 px-2 items-center justify-between">
+                  <p className="text-xs">
+                    Theme
+                  </p>
+                  <DropdownMenuShortcut>
+                    <ThemeSwitcher />
+                  </DropdownMenuShortcut>
+                </div>
+              </DropdownMenuGroup>
+
+              <DropdownMenuSeparator />
+
               {/* Logout */}
               <DropdownMenuGroup>
                 <DropdownMenuItem>
@@ -437,4 +194,3 @@ export function Header() {
     </header>
   )
 }
- 

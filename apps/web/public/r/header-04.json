@@ -14,7 +14,7 @@
       "path": "registry/designali/blocks/header/header-04/page.tsx",
       "content": "import { Header } from \"@/registry/designali/blocks/header/header-04/components/header\"\n\nexport default function Header04() {\n  return (\n    <div className=\"flex min-h-screen w-full flex-col\">\n      <Header />\n      <main className=\"flex-1\">\n        <section className=\"flex h-screen items-center justify-center\">\n          <h1 className=\"text-4xl font-bold\">Hero</h1>\n        </section>\n\n        <section className=\"flex h-screen items-center justify-center\">\n          <h1 className=\"text-4xl font-bold\">Section</h1>\n        </section>\n      </main>\n    </div>\n  )\n}\n",
       "type": "registry:component",
-      "target": "components/header-04.tsx"
+      "target": "header/index.tsx"
     },
     {
       "path": "registry/designali/blocks/header/header-04/components/header.tsx",

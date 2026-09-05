@@ -144,9 +144,15 @@ function BlockViewerProvider({
 }) {
   const [view, setView] = React.useState<BlockViewerContext["view"]>("preview")
 
-  const [activeFile, setActiveFile] = React.useState<string | null>(
-    highlightedFiles?.find((file) => file.target)?.target ?? null
-  )
+  const [activeFile, setActiveFile] = React.useState<string | null>(() => {
+    const firstFile = highlightedFiles?.[0]
+
+    if (!firstFile) {
+      return null
+    }
+
+    return firstFile.target || firstFile.path
+  })
 
   const [previewWidth, setPreviewWidth] = React.useState<number>(100)
 
@@ -464,10 +470,17 @@ function BlockViewerMobile({ children }: { children: React.ReactNode }) {
 function BlockViewerCode() {
   const { activeFile, highlightedFiles } = useBlockViewer()
 
-  const file = React.useMemo(
-    () => highlightedFiles?.find((file) => file.target === activeFile),
-    [highlightedFiles, activeFile]
-  )
+  const file = React.useMemo(() => {
+    if (!highlightedFiles || !activeFile) {
+      return null
+    }
+
+    return (
+      highlightedFiles.find(
+        (file) => (file.target || file.path) === activeFile
+      ) ?? null
+    )
+  }, [highlightedFiles, activeFile])
 
   if (!file) {
     return null
@@ -477,12 +490,10 @@ function BlockViewerCode() {
 
   return (
     <div className="bg-code text-code-foreground mr-[14px] flex overflow-hidden border border-dotted group-data-[view=preview]/block-view-wrapper:hidden md:h-(--height)">
-      {/* File Tree */}
       <div className="w-60">
         <BlockViewerFileTree />
       </div>
 
-      {/* Code */}
       <figure
         data-rehype-pretty-code-figure=""
         className="!mx-0 mt-0 flex min-w-0 flex-1 flex-col"
@@ -491,7 +502,7 @@ function BlockViewerCode() {
           className="text-code-foreground [&_svg]:text-code-foreground flex h-12 shrink-0 items-center gap-2 border-b px-4 py-2 [&_svg]:size-4 [&_svg]:opacity-70"
           data-language={language}
         >
-          {file.target}
+          {file.target || file.path}
 
           <div className="ml-auto flex items-center gap-2">
             <BlockCopyCodeButton />
@@ -499,7 +510,7 @@ function BlockViewerCode() {
         </figcaption>
 
         <div
-          key={file.path}
+          key={file.target || file.path}
           dangerouslySetInnerHTML={{
             __html: file.highlightedContent ?? "",
           }}
@@ -553,16 +564,20 @@ function Tree({ item, index }: { item: FileTree; index: number }) {
 
   // File
   if (!item.children) {
+    if (!item.path) {
+      return null
+    }
+
     return (
       <SidebarMenuItem>
         <SidebarMenuButton
-          isActive={item.path === activeFile}
-          onClick={() => {
-            if (item.path) {
-              setActiveFile(item.path)
-            }
-          }}
-          className="rounded-none pl-(--index) whitespace-nowrap hover:bg-muted-foreground/15 focus:bg-muted-foreground/15 focus-visible:bg-muted-foreground/15 active:bg-muted-foreground/15 data-[active=true]:bg-muted-foreground/15"
+          onClick={() => setActiveFile(item.path!)}
+          className={cn(
+            "rounded-none pl-(--index) whitespace-nowrap",
+            "hover:bg-muted-foreground/15",
+            item.path === activeFile &&
+            "bg-foreground text-background hover:text-background hover:bg-foreground/80"
+          )}
           data-index={index}
           style={
             {
@@ -571,9 +586,7 @@ function Tree({ item, index }: { item: FileTree; index: number }) {
           }
         >
           <ChevronRight className="invisible" />
-
           <File className="h-4 w-4" />
-
           {item.name}
         </SidebarMenuButton>
       </SidebarMenuItem>
@@ -631,14 +644,20 @@ function Tree({ item, index }: { item: FileTree; index: number }) {
 /* -------------------------------------------------------------------------- */
 
 function BlockCopyCodeButton() {
-  const { activeFile, item } = useBlockViewer()
-
+  const { activeFile, highlightedFiles, item } = useBlockViewer()
   const { copyToClipboard, isCopied } = useCopyToClipboard()
 
-  const file = React.useMemo(
-    () => item.files?.find((file) => file.target === activeFile),
-    [activeFile, item.files]
-  )
+  const file = React.useMemo(() => {
+    if (!activeFile || !highlightedFiles) {
+      return null
+    }
+
+    return (
+      highlightedFiles.find(
+        (file) => (file.target || file.path) === activeFile
+      ) ?? null
+    )
+  }, [activeFile, highlightedFiles])
 
   const content = file?.content
 
@@ -658,7 +677,7 @@ function BlockCopyCodeButton() {
           name: "copy_block_code",
           properties: {
             name: item.name,
-            file: file.path,
+            file: file?.path ?? file?.target,
           },
         })
       }}

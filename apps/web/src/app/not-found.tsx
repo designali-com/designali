@@ -26,7 +26,7 @@ export default function Page() {
               Back to Home
             </Button>
 
-            <Button render={<Link href="/docs" />} variant="outline" size="lg">
+            <Button render={<Link href="/docs/components/bento" />} variant="outline" size="lg">
               View Components
             </Button>
           </div>

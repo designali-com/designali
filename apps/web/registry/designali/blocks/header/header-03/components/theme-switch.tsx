@@ -13,7 +13,7 @@ export function ModeToggle() {
   return (
     <div className="flex flex-col justify-center">
       <Toggle
-        className="group size-9 cursor-pointer bg-secondary data-[state=on]:bg-transparent data-[state=on]:hover:bg-muted dark:bg-secondary"
+        className="group size-9 h-14 w-14 cursor-pointer bg-secondary data-[state=on]:bg-transparent data-[state=on]:hover:bg-muted dark:bg-secondary"
         pressed={isDark}
         onPressedChange={() => setTheme(isDark ? "light" : "dark")}
         aria-label={`Switch to ${isDark ? "light" : "dark"} mode`}

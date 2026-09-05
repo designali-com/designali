@@ -1,5 +1,4 @@
-import { DocsSidebar } from "@/src/components/docs/docs-sidebar"
-import { AppSidebar } from "@/src/components/layout/app-sidebar"
+import { DocsSidebar } from "@/src/components/docs/docs-sidebar" 
 import { source } from "@/src/lib/source"
 import {
   SidebarProvider,

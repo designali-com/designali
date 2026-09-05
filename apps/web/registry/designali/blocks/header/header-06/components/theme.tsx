@@ -54,7 +54,7 @@ export const ThemeSwitcher = ({ className }: ThemeSwitcherProps) => {
   return (
     <div
       className={cn(
-        "relative isolate flex h-7 rounded-full bg-background p-1 ring-1 ring-border",
+        "relative isolate flex h-7 bg-background p-1 ring-1 ring-border",
         className
       )}
     >

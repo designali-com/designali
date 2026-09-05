@@ -21,7 +21,7 @@ import {
   SheetTrigger,
 } from "@workspace/ui/components/sheet"
 
-import { Logo } from "@workspace/ui/designali/logo"
+import { Logo } from "@/src/components/logo"
 
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false)

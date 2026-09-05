@@ -5,36 +5,46 @@ export const blocks: Registry["items"] = [
     name: "header-01",
     description: "A simple header section.",
     type: "registry:block",
+
     registryDependencies: ["button", "navigation-menu", "toggle"],
+
     files: [
       {
         path: "blocks/header/header-01/page.tsx",
-        target: "components/header-01.tsx",
+        target: "header/index.tsx",
         type: "registry:component",
       },
       {
         path: "blocks/header/header-01/components/header.tsx",
+        target: "components/header.tsx",  
         type: "registry:component",
       },
       {
         path: "blocks/header/header-01/components/theme-switch.tsx",
+        target: "components/theme-switch.tsx", 
         type: "registry:component",
       },
       {
         path: "blocks/header/header-01/components/menus.tsx",
+        target: "components/menus.tsx",  
         type: "registry:component",
       },
     ],
+
     categories: ["header"],
+
     meta: {
       iframeHeight: "500px",
     },
   },
+
   {
     name: "header-02",
     description: "A simple header section.",
     type: "registry:block",
+
     dependencies: ["next-themes"],
+
     registryDependencies: [
       "button",
       "command",
@@ -43,26 +53,32 @@ export const blocks: Registry["items"] = [
       "accordion",
       "sheet",
     ],
+
     files: [
       {
         path: "blocks/header/header-02/page.tsx",
-        target: "components/header-02.tsx",
+        target: "header/index.tsx",
         type: "registry:component",
       },
       {
         path: "blocks/header/header-02/components/header.tsx",
+        target: "components/header.tsx",
         type: "registry:component",
       },
       {
         path: "blocks/header/header-02/components/theme-switch.tsx",
+        target: "components/theme-switch.tsx",
         type: "registry:component",
       },
       {
         path: "blocks/header/header-02/components/search.tsx",
+        target: "components/search.tsx",
         type: "registry:component",
       },
     ],
+
     categories: ["header"],
+
     meta: {
       iframeHeight: "500px",
     },
@@ -81,7 +97,7 @@ export const blocks: Registry["items"] = [
     files: [
       {
         path: "blocks/header/header-03/page.tsx",
-        target: "components/header-03.tsx",
+        target: "header/index.tsx",
         type: "registry:component",
       },
       {
@@ -106,7 +122,7 @@ export const blocks: Registry["items"] = [
     files: [
       {
         path: "blocks/header/header-04/page.tsx",
-        target: "components/header-04.tsx",
+        target: "header/index.tsx",
         type: "registry:component",
       },
       {
@@ -135,7 +151,7 @@ export const blocks: Registry["items"] = [
     files: [
       {
         path: "blocks/header/header-05/page.tsx",
-        target: "components/header-05.tsx",
+        target: "header/index.tsx",
         type: "registry:component",
       },
       {
@@ -178,7 +194,7 @@ export const blocks: Registry["items"] = [
     files: [
       {
         path: "blocks/header/header-06/page.tsx",
-        target: "components/header-06.tsx",
+        target: "header/index.tsx",
         type: "registry:component",
       },
       {
@@ -197,7 +213,7 @@ export const blocks: Registry["items"] = [
   },
   {
     name: "hero-1",
-    description: "Hero 1",
+    description: "A split-screen hero section with branding, theme toggle, video, work, and contact cards.",
     type: "registry:block",
     files: [
       {
@@ -207,9 +223,42 @@ export const blocks: Registry["items"] = [
     ],
     categories: ["hero"],
     meta: {
-      iframeHeight: "400px",
-      container:
-        "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+      iframeHeight: "800px",
+      container: "",
+      mobile: "component",
+    },
+  },
+  {
+    name: "hero-2",
+    description: "A split-screen hero section with branding, theme toggle, video, work, and contact cards.",
+    type: "registry:block",
+    files: [
+      {
+        path: "blocks/hero/hero-2.tsx",
+        type: "registry:block",
+      },
+    ],
+    categories: ["hero"],
+    meta: {
+      iframeHeight: "800px",
+      container: "",
+      mobile: "component",
+    },
+  },
+  {
+    name: "hero-3",
+    description: "A split-screen hero section with branding, theme toggle, video, work, and contact cards.",
+    type: "registry:block",
+    files: [
+      {
+        path: "blocks/hero/hero-3.tsx",
+        type: "registry:block",
+      },
+    ],
+    categories: ["hero"],
+    meta: {
+      iframeHeight: "800px",
+      container: "",
       mobile: "component",
     },
   },

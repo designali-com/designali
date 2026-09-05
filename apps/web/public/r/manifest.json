@@ -1,0 +1,498 @@
+{
+  "version": 1,
+  "generatedAt": "2026-09-05T12:52:07.381Z",
+  "items": [
+    {
+      "name": "gauge",
+      "type": "registry:ui",
+      "description": "",
+      "categories": []
+    },
+    {
+      "name": "bento",
+      "type": "registry:ui",
+      "description": "",
+      "categories": []
+    },
+    {
+      "name": "counter-number",
+      "type": "registry:ui",
+      "description": "",
+      "categories": []
+    },
+    {
+      "name": "dot-pattern",
+      "type": "registry:ui",
+      "description": "",
+      "categories": []
+    },
+    {
+      "name": "grid-pattern",
+      "type": "registry:ui",
+      "description": "",
+      "categories": []
+    },
+    {
+      "name": "marquee",
+      "type": "registry:ui",
+      "description": "",
+      "categories": []
+    },
+    {
+      "name": "typewriter",
+      "type": "registry:ui",
+      "description": "",
+      "categories": []
+    },
+    {
+      "name": "header-01",
+      "type": "registry:block",
+      "description": "A simple header section.",
+      "categories": ["header"]
+    },
+    {
+      "name": "header-02",
+      "type": "registry:block",
+      "description": "A simple header section.",
+      "categories": ["header"]
+    },
+    {
+      "name": "header-03",
+      "type": "registry:block",
+      "description": "A simple header section.",
+      "categories": ["header"]
+    },
+    {
+      "name": "header-04",
+      "type": "registry:block",
+      "description": "A simple header section.",
+      "categories": ["header"]
+    },
+    {
+      "name": "header-05",
+      "type": "registry:block",
+      "description": "A simple header section.",
+      "categories": ["header"]
+    },
+    {
+      "name": "header-06",
+      "type": "registry:block",
+      "description": "A simple header section.",
+      "categories": ["header"]
+    },
+    {
+      "name": "hero-1",
+      "type": "registry:block",
+      "description": "A split-screen hero section with branding, theme toggle, video, work, and contact cards.",
+      "categories": ["hero"]
+    },
+    {
+      "name": "hero-2",
+      "type": "registry:block",
+      "description": "A split-screen hero section with branding, theme toggle, video, work, and contact cards.",
+      "categories": ["hero"]
+    },
+    {
+      "name": "hero-3",
+      "type": "registry:block",
+      "description": "A split-screen hero section with branding, theme toggle, video, work, and contact cards.",
+      "categories": ["hero"]
+    },
+    {
+      "name": "footer-01",
+      "type": "registry:block",
+      "description": "A simple footer.",
+      "categories": ["footer"]
+    },
+    {
+      "name": "footer-02",
+      "type": "registry:block",
+      "description": "A simple footer.",
+      "categories": ["footer"]
+    },
+    {
+      "name": "footer-03",
+      "type": "registry:block",
+      "description": "A simple footer.",
+      "categories": ["footer"]
+    },
+    {
+      "name": "footer-04",
+      "type": "registry:block",
+      "description": "A simple footer.",
+      "categories": ["footer"]
+    },
+    {
+      "name": "footer-05",
+      "type": "registry:block",
+      "description": "A simple footer.",
+      "categories": ["footer"]
+    },
+    {
+      "name": "footer-06",
+      "type": "registry:block",
+      "description": "A simple footer.",
+      "categories": ["footer"]
+    },
+    {
+      "name": "logos-01",
+      "type": "registry:block",
+      "description": "A simple logos section.",
+      "categories": ["logos", "clients"]
+    },
+    {
+      "name": "logos-02",
+      "type": "registry:block",
+      "description": "A simple logos section.",
+      "categories": ["logos", "clients"]
+    },
+    {
+      "name": "logos-03",
+      "type": "registry:block",
+      "description": "A simple logos section.",
+      "categories": ["logos", "clients"]
+    },
+    {
+      "name": "logos-04",
+      "type": "registry:block",
+      "description": "A simple logos section.",
+      "categories": ["logos", "clients"]
+    },
+    {
+      "name": "logos-05",
+      "type": "registry:block",
+      "description": "A simple logos section.",
+      "categories": ["logos", "clients"]
+    },
+    {
+      "name": "feature-01",
+      "type": "registry:block",
+      "description": "A simple feature section.",
+      "categories": ["feature", "features"]
+    },
+    {
+      "name": "accordion-01",
+      "type": "registry:example",
+      "description": "Personal FAQ accordion introducing Ali Imam, his design approach, inspirations, and ways to connect for collaborations.",
+      "categories": []
+    },
+    {
+      "name": "accordion-02",
+      "type": "registry:example",
+      "description": "Personal FAQ accordion introducing Ali Imam, his design approach, inspirations, and ways to connect for collaborations.",
+      "categories": []
+    },
+    {
+      "name": "accordion-03",
+      "type": "registry:example",
+      "description": "Personal FAQ accordion introducing Ali Imam, his design approach, inspirations, and ways to connect for collaborations.",
+      "categories": []
+    },
+    {
+      "name": "accordion-04",
+      "type": "registry:example",
+      "description": "Personal FAQ accordion introducing Ali Imam, his design approach, inspirations, and ways to connect for collaborations.",
+      "categories": []
+    },
+    {
+      "name": "accordion-05",
+      "type": "registry:example",
+      "description": "Personal FAQ accordion introducing Ali Imam, his design approach, inspirations, and ways to connect for collaborations.",
+      "categories": []
+    },
+    {
+      "name": "accordion-06",
+      "type": "registry:example",
+      "description": "Personal FAQ accordion introducing Ali Imam, his design approach, inspirations, and ways to connect for collaborations.",
+      "categories": []
+    },
+    {
+      "name": "button-variants",
+      "type": "registry:example",
+      "description": "Button variants showcase",
+      "categories": []
+    },
+    {
+      "name": "counter-number-default",
+      "type": "registry:component",
+      "description": "",
+      "categories": []
+    },
+    {
+      "name": "counter-number-currency",
+      "type": "registry:component",
+      "description": "",
+      "categories": []
+    },
+    {
+      "name": "counter-number-custom",
+      "type": "registry:component",
+      "description": "",
+      "categories": []
+    },
+    {
+      "name": "counter-number-decimal",
+      "type": "registry:component",
+      "description": "",
+      "categories": []
+    },
+    {
+      "name": "counter-number-percentage",
+      "type": "registry:component",
+      "description": "",
+      "categories": []
+    },
+    {
+      "name": "counter-number-prefix",
+      "type": "registry:component",
+      "description": "",
+      "categories": []
+    },
+    {
+      "name": "counter-number-seperator",
+      "type": "registry:block",
+      "description": "",
+      "categories": []
+    },
+    {
+      "name": "dot-pattern-default",
+      "type": "registry:block",
+      "description": "block showing a simple dot pattern.",
+      "categories": []
+    },
+    {
+      "name": "dot-pattern-custom",
+      "type": "registry:block",
+      "description": "block showing a simple dot pattern.",
+      "categories": []
+    },
+    {
+      "name": "dot-pattern-01",
+      "type": "registry:block",
+      "description": "block showing a simple dot pattern.",
+      "categories": []
+    },
+    {
+      "name": "dot-pattern-02",
+      "type": "registry:block",
+      "description": "block showing a simple dot pattern.",
+      "categories": []
+    },
+    {
+      "name": "dot-pattern-03",
+      "type": "registry:block",
+      "description": "block showing a simple dot pattern.",
+      "categories": []
+    },
+    {
+      "name": "gauge-demo-basic",
+      "type": "registry:block",
+      "description": "Basic gauge demo",
+      "categories": []
+    },
+    {
+      "name": "gauge-demo-custom-value",
+      "type": "registry:block",
+      "description": "Gauge with custom value text",
+      "categories": []
+    },
+    {
+      "name": "gauge-demo-sizes",
+      "type": "registry:block",
+      "description": "Gauge size variations",
+      "categories": []
+    },
+    {
+      "name": "gauge-demo-thickness",
+      "type": "registry:block",
+      "description": "Gauge thickness variations",
+      "categories": []
+    },
+    {
+      "name": "gauge-demo-gap",
+      "type": "registry:block",
+      "description": "Gauge gap variations",
+      "categories": []
+    },
+    {
+      "name": "gauge-demo-segments",
+      "type": "registry:block",
+      "description": "Gauge segment variations",
+      "categories": []
+    },
+    {
+      "name": "gauge-demo-angles",
+      "type": "registry:block",
+      "description": "Gauge angle variations",
+      "categories": []
+    },
+    {
+      "name": "gauge-demo-radius",
+      "type": "registry:block",
+      "description": "Gauge radius customization",
+      "categories": []
+    },
+    {
+      "name": "gauge-demo-states",
+      "type": "registry:block",
+      "description": "Gauge loading and complete states",
+      "categories": []
+    },
+    {
+      "name": "gauge-demo-range",
+      "type": "registry:block",
+      "description": "Gauge with custom min and max ranges",
+      "categories": []
+    },
+    {
+      "name": "gauge-demo-label",
+      "type": "registry:block",
+      "description": "Gauge with label",
+      "categories": []
+    },
+    {
+      "name": "gauge-demo-custom-content",
+      "type": "registry:block",
+      "description": "Gauge with custom center content",
+      "categories": []
+    },
+    {
+      "name": "gauge-demo-biomarker",
+      "type": "registry:block",
+      "description": "Biomarker gauge components",
+      "categories": []
+    },
+    {
+      "name": "gauge-demo-multiple",
+      "type": "registry:block",
+      "description": "Multiple gauges displayed together",
+      "categories": []
+    },
+    {
+      "name": "gauge-demo-combined",
+      "type": "registry:block",
+      "description": "Combined gauge composition demo",
+      "categories": []
+    },
+    {
+      "name": "bento-01",
+      "type": "registry:block",
+      "description": "block showing a simple bento.",
+      "categories": []
+    },
+    {
+      "name": "bento-02",
+      "type": "registry:block",
+      "description": "block showing a simple bento.",
+      "categories": []
+    },
+    {
+      "name": "bento-03",
+      "type": "registry:block",
+      "description": "block showing a simple bento.",
+      "categories": []
+    },
+    {
+      "name": "bento-04",
+      "type": "registry:block",
+      "description": "block showing a simple bento.",
+      "categories": []
+    },
+    {
+      "name": "bento-05",
+      "type": "registry:block",
+      "description": "block showing a simple bento.",
+      "categories": []
+    },
+    {
+      "name": "grid-pattern-default",
+      "type": "registry:block",
+      "description": "block showing a simple grid pattern.",
+      "categories": []
+    },
+    {
+      "name": "grid-pattern-custom",
+      "type": "registry:block",
+      "description": "block showing a simple grid pattern.",
+      "categories": []
+    },
+    {
+      "name": "grid-pattern-large",
+      "type": "registry:block",
+      "description": "block showing a simple grid pattern.",
+      "categories": []
+    },
+    {
+      "name": "grid-pattern-small",
+      "type": "registry:block",
+      "description": "block showing a simple grid pattern.",
+      "categories": []
+    },
+    {
+      "name": "grid-pattern-01",
+      "type": "registry:block",
+      "description": "block showing a simple grid pattern.",
+      "categories": []
+    },
+    {
+      "name": "marquee-01",
+      "type": "registry:block",
+      "description": "",
+      "categories": []
+    },
+    {
+      "name": "marquee-02",
+      "type": "registry:block",
+      "description": "",
+      "categories": []
+    },
+    {
+      "name": "marquee-03",
+      "type": "registry:block",
+      "description": "",
+      "categories": []
+    },
+    {
+      "name": "marquee-04",
+      "type": "registry:block",
+      "description": "",
+      "categories": []
+    },
+    {
+      "name": "marquee-05",
+      "type": "registry:block",
+      "description": "",
+      "categories": []
+    },
+    {
+      "name": "typewriter-01",
+      "type": "registry:block",
+      "description": "block showing a simple typewriter.",
+      "categories": []
+    },
+    {
+      "name": "typewriter-02",
+      "type": "registry:block",
+      "description": "block showing a simple typewriter.",
+      "categories": []
+    },
+    {
+      "name": "typewriter-03",
+      "type": "registry:block",
+      "description": "block showing a simple typewriter.",
+      "categories": []
+    },
+    {
+      "name": "typewriter-04",
+      "type": "registry:block",
+      "description": "block showing a simple typewriter.",
+      "categories": []
+    },
+    {
+      "name": "typewriter-05",
+      "type": "registry:block",
+      "description": "block showing a simple typewriter.",
+      "categories": []
+    }
+  ]
+}

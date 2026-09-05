@@ -1,7 +1,7 @@
+ 
 import { promises as fs } from "node:fs"
-import { tmpdir } from "node:os"
 import path from "node:path"
-import { Project, ScriptKind } from "ts-morph"
+
 import { Index } from "@/registry/__index__"
 
 type RegistryFile = {
@@ -22,62 +22,45 @@ export async function getRegistryItem(name: string) {
     return null
   }
 
-  // Convert all file paths to object.
-  // TODO: remove when we migrate to new registry.
-  if (Array.isArray(item.files)) {
-    item.files = item.files.map((file: unknown) =>
-      typeof file === "string" ? { path: file } : file
-    )
-  }
+  // Convert all file paths to objects.
+  // TODO: remove when we migrate to the new registry.
+  const normalizedFiles: RegistryFile[] = Array.isArray(item.files)
+    ? item.files.map((file: unknown) =>
+        typeof file === "string" ? { path: file } : file
+      )
+    : []
 
-  const files: RegistryFile[] = Array.isArray(item.files) ? item.files : []
-  const processedFiles: RegistryFile[] = []
+  // Read all files in parallel.
+  let files: RegistryFile[] = await Promise.all(
+    normalizedFiles.map(async (file) => {
+      const content = await getFileContent(file)
+      const relativePath = path.relative(process.cwd(), file.path)
 
-  for (const file of files) {
-    const content = await getFileContent(file)
-    const relativePath = path.relative(process.cwd(), file.path)
-
-    processedFiles.push({
-      ...file,
-      content,
-      path: relativePath,
+      return {
+        ...file,
+        path: relativePath,
+        content,
+      }
     })
-  }
+  )
 
   // Fix file paths.
-  const finalFiles = fixFilePaths(processedFiles)
+  files = fixFilePaths(files)
 
   return {
     ...item,
-    files: finalFiles,
+    files,
   }
 }
 
 async function getFileContent(file: RegistryFile) {
-  const raw = await fs.readFile(file.path, "utf-8")
+  let code = await fs.readFile(file.path, "utf-8")
 
-  const project = new Project({
-    compilerOptions: {},
-  })
-
-  const tempFile = await createTempSourceFile(file.path)
-  const sourceFile = project.createSourceFile(tempFile, raw, {
-    scriptKind: ScriptKind.TSX,
-  })
-
-  // Remove meta variables.
-  // removeVariable(sourceFile, "iframeHeight")
-  // removeVariable(sourceFile, "containerClassName")
-  // removeVariable(sourceFile, "description")
-
-  let code = sourceFile.getFullText()
-
-  // Some registry items uses default export.
-  // We want to use named export instead.
-  // TODO: do we really need this? - @shadcn.
-  // if (file.type !== "registry:page") {
-  //   code = code.replaceAll("export default", "export")
-  // }
+  // Some registry items use default exports.
+  // Convert them to named exports.
+  if (file.type !== "registry:page") {
+    code = code.replaceAll("export default", "export")
+  }
 
   // Fix imports.
   code = fixImport(code)
@@ -90,6 +73,7 @@ function getFileTarget(file: RegistryFile) {
 
   if (!target || target === "") {
     const fileName = file.path.split("/").pop()
+
     if (
       file.type === "registry:block" ||
       file.type === "registry:component" ||
@@ -116,34 +100,47 @@ function getFileTarget(file: RegistryFile) {
   return target ?? ""
 }
 
-async function createTempSourceFile(filename: string) {
-  const dir = await fs.mkdtemp(path.join(tmpdir(), "shadcn-"))
-  return path.join(dir, filename)
-}
-
 function fixFilePaths(files: RegistryFile[]) {
-  if (!files) {
-    return []
-  }
-
-  // Resolve all paths relative to the first file's directory.
-  const firstFilePath = files[0]?.path
-  if (!firstFilePath) {
-    return []
-  }
-  const firstFilePathDir = path.dirname(firstFilePath)
-
-  return files.map((file) => {
-    return {
-      ...file,
-      path: path.relative(firstFilePathDir, file.path),
-      target: getFileTarget(file),
-    }
-  })
+  return files.map((file) => ({
+    ...file,
+    target: getFileTarget(file),
+  }))
 }
 
 export function fixImport(content: string) {
-  const regex = /@\/(.+?)\/((?:.*?\/)?(?:components|ui|hooks|lib))\/([\w-]+)/g
+  // Handle @workspace/ui/* monorepo aliases:
+  // @workspace/ui/components/navigation-menu -> @/components/ui/navigation-menu
+  // @workspace/ui/lib/utils                  -> @/lib/utils
+  // @workspace/ui/hooks/use-foo              -> @/hooks/use-foo
+  content = content.replace(
+    /@workspace\/ui\/(components|ui|lib|hooks)\/([\w-]+)/g,
+    (match, type, name) => {
+      if (type === "components" || type === "ui") {
+        return `@/components/ui/${name}`
+      }
+      if (type === "lib") {
+        return `@/lib/${name}`
+      }
+      if (type === "hooks") {
+        return `@/hooks/${name}`
+      }
+      return match
+    }
+  )
+
+  content = content.replace(
+    /@\/registry\/[\w-]+\/blocks\/[\w-]+\/([\w-]+)\/components\/([\w-]+)/g,
+    (_match, blockName, component) =>
+      `@/components/${blockName}/components/${component}`
+  )
+
+  // Handle imports such as:
+  // @/registry/designali/components/button
+  // @/registry/designali/ui/button
+  // @/registry/designali/hooks/use-example
+  // @/registry/designali/lib/utils
+  const regex =
+    /@\/(.+?)\/((?:.*?\/)?(?:components|ui|hooks|lib))\/([\w-]+)/g
 
   const replacement = (
     match: string,
@@ -154,12 +151,15 @@ export function fixImport(content: string) {
     if (type.endsWith("components")) {
       return `@/components/${component}`
     }
+
     if (type.endsWith("ui")) {
       return `@/components/ui/${component}`
     }
+
     if (type.endsWith("hooks")) {
       return `@/hooks/${component}`
     }
+
     if (type.endsWith("lib")) {
       return `@/lib/${component}`
     }
@@ -174,7 +174,7 @@ export type FileTree = {
   name: string
   path?: string
   children?: FileTree[]
-}
+} 
 
 export function createFileTreeForRegistryItemFiles(
   files: Array<{ path: string; target?: string }>
@@ -182,33 +182,54 @@ export function createFileTreeForRegistryItemFiles(
   const root: FileTree[] = []
 
   for (const file of files) {
-    const path = file.target ?? file.path
-    const parts = path.split("/")
+    // target is the canonical path shown in the file tree.
+    // Fall back to path only when target is unavailable.
+    const filePath = file.target || file.path
+
+    if (!filePath) {
+      continue
+    }
+
+    const parts = filePath.split("/").filter(Boolean)
+
     let currentLevel = root
 
     for (let i = 0; i < parts.length; i++) {
       const part = parts[i]
+
+      if (!part) {
+        continue
+      }
+
       const isFile = i === parts.length - 1
-      const existingNode = currentLevel.find((node) => node.name === part)
 
-      if (existingNode) {
-        if (isFile) {
-          // Update existing file node with full path
-          existingNode.path = path
-        } else if (existingNode.children) {
-          // Move to next level in the tree
-          currentLevel = existingNode.children
+      let existingNode = currentLevel.find(
+        (node) => node.name === part
+      )
+
+      if (!existingNode) {
+        existingNode = isFile
+          ? {
+              name: part,
+              path: filePath,
+            }
+          : {
+              name: part,
+              children: [],
+            }
+
+        currentLevel.push(existingNode)
+      }
+
+      if (isFile) {
+        // Always keep the complete canonical path.
+        existingNode.path = filePath
+      } else {
+        if (!existingNode.children) {
+          existingNode.children = []
         }
-      } else if (part) {
-        const newNode: FileTree = isFile
-          ? { name: part, path }
-          : { children: [], name: part }
 
-        currentLevel.push(newNode)
-
-        if (!isFile && newNode.children) {
-          currentLevel = newNode.children
-        }
+        currentLevel = existingNode.children
       }
     }
   }

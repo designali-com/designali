@@ -5,7 +5,7 @@ import type { NextConfig } from "next"
 const nextConfig: NextConfig = {
   transpilePackages: ["@workspace/ui"],
   outputFileTracingIncludes: {
-    "/*": ["./registry/**/*", "./content/**/*"],
+    "/*": ["./registry/**/*", "./content/**/*", "../../templates/**/*"]
   },
   images: {
     remotePatterns: [

@@ -77,6 +77,11 @@ export const data = {
       url: "/docs",
       icon: BookOpen,
     },
+    {
+      title: "Blogs",
+      url: "/blogs",
+      icon: BookOpen,
+    },
   ],
 }
 

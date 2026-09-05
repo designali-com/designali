@@ -11,6 +11,7 @@ import {
   Square,
   List,
   LayoutGrid,
+  Book,
 } from "lucide-react"
 
 import type { source } from "@/src/lib/source"
@@ -58,6 +59,11 @@ const BOTTOM_LEVEL_SECTIONS = [
     name: "Blocks",
     href: "/blocks",
     icon: Blocks,
+  },
+  {
+    name: "Blogs",
+    href: "/blogs",
+    icon: Book,
   },
 ]
 
