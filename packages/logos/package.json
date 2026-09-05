@@ -20,10 +20,10 @@
     "access": "public"
   },
   "peerDependencies": {
-    "react": ">=17"
+    "react": "19.2.4"
   },
   "devDependencies": {
-    "@types/react": "^18.3.28",
+    "@types/react": "^19",
     "tsup": "^8.5.1",
     "typescript": "^5.9.3"
   }
