@@ -9,9 +9,7 @@ import { Logo } from "@workspace/ui/designali/logo"
 import { Search } from "./search"
 import { MobileNav } from "./mobile-nav"
 import { navLinks } from "@/registry/registry-categories"
-
-const CAL_LINK = "https://cal.com/designali-com/designali"
-
+ 
 export function Header() {
   return (
     <header className="fixed top-0 right-0 left-0 z-50 w-full border-b border-dotted bg-background/50 backdrop-blur-md">
@@ -53,8 +51,7 @@ export function Header() {
               nativeButton={false}
               render={
                 <Link
-                  href={CAL_LINK}
-                  target="_blank"
+                  href={"/pricing"} 
                   rel="noopener noreferrer"
                 />
               }
@@ -66,8 +63,7 @@ export function Header() {
               nativeButton={false}
               render={
                 <Link
-                  href={CAL_LINK}
-                  target="_blank"
+                  href={"/dashboard"} 
                   rel="noopener noreferrer"
                 />
               }

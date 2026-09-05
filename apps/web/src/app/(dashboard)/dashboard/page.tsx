@@ -35,14 +35,15 @@ export default async function Dashboard() {
       <div className="flex flex-col gap-2">
         <h2 className="font-bold text-2xl">Organizations</h2>
         {organizations.map((organization) => (
-          <Button key={organization.id} variant="outline">
-            <Link href={`/dashboard/organization/${organization.slug}`}>
-              {organization.name}
-            </Link>
+          <Button
+            render={<Link href={`/dashboard/organization/${organization.slug}`} />}
+            key={organization.id}
+            variant="outline">
+            {organization.name}
           </Button>
         ))}
       </div>
-      <Logout/>
+      <Logout />
     </div>
   );
 }

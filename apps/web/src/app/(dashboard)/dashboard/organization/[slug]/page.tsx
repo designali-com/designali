@@ -1,4 +1,5 @@
  
+import { Logout } from "@/src/components/layout/logout";
 import { getOrganizationBySlug } from "@/src/server/organizations";
 import { getUsers } from "@/src/server/users";
 
@@ -11,9 +12,10 @@ export default async function OrganizationPage({ params }: { params: Params }) {
   const users = await getUsers(organization?.id || "");
 
   return (
-    <div className="mx-auto flex max-w-3xl flex-col gap-4 py-10">
-      <h1 className="font-bold text-2xl">{organization?.name}</h1>
+    <div className="mx-auto items-center flex max-w-3xl flex-col gap-4 py-20">
+      <h1 className="font-bold text-2xl">{organization?.name}</h1> 
        
+      <Logout/>
     </div>
   );
 }
