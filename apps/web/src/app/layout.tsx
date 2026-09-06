@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     url: process.env.NEXT_PUBLIC_SITE_URL!,
     images: [
       {
-        url: `${process.env.NEXT_PUBLIC_SITE_URL}/og.jp`,
+        url: `${process.env.NEXT_PUBLIC_SITE_URL}/og.jpg`,
         width: 1920,
         height: 1080,
         alt: siteConfig.name,
