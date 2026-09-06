@@ -37,8 +37,8 @@ export default async function UIPage({
 
   const Icon = currentCategory.iconName
     ? (Icons[
-        currentCategory.iconName as keyof typeof Icons
-      ] as React.ElementType)
+      currentCategory.iconName as keyof typeof Icons
+    ] as React.ElementType)
     : null
 
   return (
@@ -56,14 +56,28 @@ export default async function UIPage({
         </p>
       </div>
 
-      {/* Components */}
-      {components.length > 0 && (
-        <div className="grid w-full xl:grid-cols-2 gap-3">
+
+      {components.length > 0 ? (
+        <div className="grid w-full gap-3 xl:grid-cols-2">
           {components.map((name) => (
-            <ComponentPreview key={name} name={name} align="center" />
+            <ComponentPreview
+              key={name}
+              name={name}
+              align="center"
+            />
           ))}
         </div>
+      ) : (
+        <div className="flex min-h-120 items-center justify-center border border-dotted">
+          <div className="text-center">
+            <h2 className="text-xl font-medium">Design in process</h2>
+            <p className="text-muted-foreground mt-2 text-sm">
+              I&apos;m currently working on ui components for this category.
+            </p>
+          </div>
+        </div>
       )}
+
     </div>
   )
 }

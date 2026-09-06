@@ -46,7 +46,7 @@ export function Footer() {
         {/* -------------------------------- */}
 
         <div className="col-span-3 hidden w-full md:col-span-1 md:block">
-          <span className="text-xs text-muted-foreground">Components</span>
+          <span className="text-xs text-muted-foreground">Design</span>
 
           <div className="mt-2 flex flex-col gap-2">
             {componentLinks.map(({ href, label }) => (
@@ -129,12 +129,24 @@ export function Footer() {
 
 const componentLinks = [
   {
-    href: "/docs/components/button",
-    label: "Button",
+    href: "/templates",
+    label: "Templates",
   },
   {
-    href: "/docs/components/card",
-    label: "Card",
+    href: "/blocks",
+    label: "Blocks",
+  },
+  {
+    href: "/ui",
+    label: "UI Designs",
+  },
+  {
+    href: "/docs/components/bento",
+    label: "Bento",
+  },
+  {
+    href: "/docs/components/number-counter",
+    label: "Number Counter",
   },
   {
     href: "/docs/components/gauge",
@@ -148,16 +160,20 @@ const componentLinks = [
 
 const companyLinks = [
   {
-    href: "/about",
-    label: "About",
+    href: "/pricing",
+    label: "Pricing",
   },
   {
     href: "/docs",
     label: "Documentation",
   },
   {
-    href: "/contact",
-    label: "Contact",
+    href: "/blogs",
+    label: "Blogs",
+  },
+  {
+    href: "/docs/legal/terms",
+    label: "Terms",
   },
 ]
 

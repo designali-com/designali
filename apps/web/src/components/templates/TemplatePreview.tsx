@@ -102,14 +102,14 @@ export function TemplatePreview({
 
   const handleDownload = async () => {
     if (isDownloading) return
-  
+
     const controller = new AbortController()
     abortControllerRef.current = controller
-  
+
     try {
       setIsDownloading(true)
       setDownloadProgress(10)
-    
+
       // Don't block the actual download
       void recordDownload(
         templateId,
@@ -120,42 +120,42 @@ export function TemplatePreview({
           err
         )
       })
-    
+
       setDownloadProgress(40)
-    
+
       const response = await fetch(downloadurl, {
         signal: controller.signal,
       })
-    
+
       if (!response.ok) {
         throw new Error(
           `Download failed: ${response.status}`
         )
       }
-    
+
       setDownloadProgress(90)
-    
+
       const blob = await response.blob()
-    
+
       const blobUrl =
         window.URL.createObjectURL(blob)
-    
+
       const link =
         document.createElement("a")
-    
+
       link.href = blobUrl
-    
+
       link.download = `${name
         .toLowerCase()
         .replace(/[^a-z0-9]+/g, "-")
         .replace(/(^-|-$)/g, "")}.zip`
-    
+
       document.body.appendChild(link)
       link.click()
       link.remove()
-    
+
       window.URL.revokeObjectURL(blobUrl)
-    
+
       setDownloadProgress(100)
     } catch (error) {
       if (error instanceof DOMException && error.name === "AbortError") {
@@ -166,7 +166,7 @@ export function TemplatePreview({
       }
     } finally {
       abortControllerRef.current = null
-  
+
       setTimeout(() => {
         setIsDownloading(false)
         setDownloadProgress(0)
@@ -247,20 +247,9 @@ export function TemplatePreview({
 
   return (
     <section className={cn("w-full overflow-hidden bg-background", className)}>
-      {/* =========================================================
-          HEADER
-      ========================================================== */}
-
-      <div className="border-b">
-        <div className="flex flex-col justify-center gap-2 px-4 py-10 text-center md:px-6">
-          <h1 className="text-xl font-semibold tracking-tight md:text-2xl">
-            {name}
-          </h1>
-
-          <p className="mx-auto max-w-lg text-sm text-muted-foreground">
-            {description}
-          </p>
-        </div>
+       
+      <div className="">
+        
         {isDownloading && (
           <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-background/80 p-4 backdrop-blur-sm">
             <div className="w-full max-w-sm border bg-background p-6 shadow-xl">
@@ -319,14 +308,16 @@ export function TemplatePreview({
             >
               <Github />
             </Button>
+
+
             <DeviceButton
-              active={device === "desktop"}
-              onClick={() => setDevice("desktop")}
+              active={device === "mobile"}
+              onClick={() => setDevice("mobile")}
               icon={
-                <Monitor
+                <Smartphone
                   className={cn(
                     "size-4 transition-all",
-                    device === "desktop" && "fill-current"
+                    device === "mobile" && "fill-current"
                   )}
                 />
               }
@@ -346,13 +337,13 @@ export function TemplatePreview({
             />
 
             <DeviceButton
-              active={device === "mobile"}
-              onClick={() => setDevice("mobile")}
+              active={device === "desktop"}
+              onClick={() => setDevice("desktop")}
               icon={
-                <Smartphone
+                <Monitor
                   className={cn(
                     "size-4 transition-all",
-                    device === "mobile" && "fill-current"
+                    device === "desktop" && "fill-current"
                   )}
                 />
               }
@@ -512,6 +503,16 @@ export function TemplatePreview({
           </div>
         </div>
       </div>
+
+      <div className="flex flex-col justify-center gap-2 border-t px-4 py-10 text-center md:px-6">
+          <h1 className="text-xl font-semibold tracking-tight md:text-2xl">
+            {name}
+          </h1>
+
+          <p className="mx-auto max-w-lg text-sm text-muted-foreground">
+            {description}
+          </p>
+        </div>
 
       {/* =========================================================
           DETAILS

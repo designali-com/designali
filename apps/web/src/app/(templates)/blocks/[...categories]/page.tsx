@@ -35,8 +35,8 @@ export default async function BlocksPage({
   // Dynamically derive the icon component using iconName
   const Icon = currentCategory?.iconName
     ? (Icons[
-        currentCategory.iconName as keyof typeof Icons
-      ] as React.ElementType)
+      currentCategory.iconName as keyof typeof Icons
+    ] as React.ElementType)
     : null
 
   return (
@@ -52,9 +52,20 @@ export default async function BlocksPage({
       </div>
 
       <div className="flex flex-col gap-12 md:gap-24">
-        {blocks.map((name) => (
-          <BlockDisplay key={name} name={name} />
-        ))}
+        {blocks.length > 0 ? (
+          blocks.map((name) => (
+            <BlockDisplay key={name} name={name} />
+          ))
+        ) : (
+          <div className="flex min-h-120 items-center justify-center border border-dotted">
+            <div className="text-center">
+              <h2 className="text-xl font-medium">Design in process</h2>
+              <p className="text-muted-foreground mt-2 text-sm">
+                I&apos;m currently working on blocks for this category.
+              </p>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   )

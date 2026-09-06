@@ -1,6 +1,6 @@
 import Link from "next/link"
 import {
-  Apple,
+  Adobe,
   Facebook,
   Instagram,
   LinkedIn,
@@ -61,7 +61,7 @@ export default function FooterSection() {
         <div className="grid gap-12 md:grid-cols-5">
           <div className="md:col-span-2">
             <Link href="#" aria-label="go home" className="block size-fit">
-              <Apple className="text-primary" />
+              <Adobe />
             </Link>
           </div>
 

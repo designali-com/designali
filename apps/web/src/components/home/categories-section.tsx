@@ -22,13 +22,13 @@ export function UIDesignCategory() {
                   href={`/ui/${category.slug}`}
                   className="block"
                 >
-                  <div className="flex w-full items-center justify-between border px-4 py-2 transition-colors hover:bg-muted">
+                  <div className="flex w-full items-center justify-between border px-4 py-2 hover:text-background transition-colors hover:bg-foreground">
                     <div className="flex items-center gap-2.5 min-w-0">
                       {/* Icon Render */}
                       <CategoryIcon name={category.iconName} />
 
                       <div className="min-w-0">
-                        <p className="truncate font-medium">{category.name}</p>
+                        <p className="truncate text-sm font-medium">{category.name}</p>
                       </div>
                     </div>
                   </div>
@@ -55,13 +55,13 @@ export function BlocksCategory() {
                   href={`/ui/${category.slug}`}
                   className="block"
                 >
-                  <div className="flex w-full items-center justify-between border px-4 py-2 transition-colors hover:bg-muted">
+                  <div className="flex w-full items-center justify-between border px-4 py-2 hover:text-background transition-colors hover:bg-foreground">
                     <div className="flex items-center gap-2.5 min-w-0">
                       {/* Icon Render */}
                       <CategoryIcon name={category.iconName} />
 
                       <div className="min-w-0">
-                        <p className="truncate font-medium">{category.name}</p>
+                        <p className="truncate text-sm font-medium">{category.name}</p>
                       </div>
                     </div>
                   </div>

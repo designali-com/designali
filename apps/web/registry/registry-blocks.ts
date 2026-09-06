@@ -505,6 +505,22 @@ export const blocks: Registry["items"] = [
     },
   },
   {
+    name: "call-to-action-01",
+    description: "A simple call-to-action section.",
+    type: "registry:block", 
+    files: [
+      {
+        path: "blocks/call-to-action/call-to-action-01.tsx",
+        target: "components/call-to-action-01.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["call-to-action"],
+    meta: {
+      iframeHeight: "800px",
+    },
+  },
+  {
     name: "feature-01",
     description: "A simple feature section.",
     type: "registry:block",
@@ -518,7 +534,55 @@ export const blocks: Registry["items"] = [
     ],
     categories: ["feature", "features"],
     meta: {
-      iframeHeight: "900px",
+      iframeHeight: "800px",
+    },
+  },
+  {
+    name: "faqs-01",
+    description: "A simple pricing section.",
+    type: "registry:block", 
+    files: [
+      {
+        path: "blocks/faqs/faqs-01.tsx",
+        target: "components/faqs-01.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["faqs"],
+    meta: {
+      iframeHeight: "800px",
+    },
+  },
+  {
+    name: "pricing-01",
+    description: "A simple pricing section.",
+    type: "registry:block", 
+    files: [
+      {
+        path: "blocks/pricing/pricing-01.tsx",
+        target: "components/pricing-01.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["pricing"],
+    meta: {
+      iframeHeight: "800px",
+    },
+  },
+  {
+    name: "testimonial-01",
+    description: "A simple pricing section.",
+    type: "registry:block", 
+    files: [
+      {
+        path: "blocks/testimonials/testimonial-01.tsx",
+        target: "components/testimonial-01.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["testimonials", "testimonial"],
+    meta: {
+      iframeHeight: "800px",
     },
   },
 ]

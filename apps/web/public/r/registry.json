@@ -565,6 +565,22 @@
       }
     },
     {
+      "name": "call-to-action-01",
+      "description": "A simple call-to-action section.",
+      "type": "registry:block",
+      "files": [
+        {
+          "path": "registry/designali/blocks/call-to-action/call-to-action-01.tsx",
+          "type": "registry:component",
+          "target": "components/call-to-action-01.tsx"
+        }
+      ],
+      "categories": ["call-to-action"],
+      "meta": {
+        "iframeHeight": "800px"
+      }
+    },
+    {
       "name": "feature-01",
       "description": "A simple feature section.",
       "type": "registry:block",
@@ -578,7 +594,55 @@
       ],
       "categories": ["feature", "features"],
       "meta": {
-        "iframeHeight": "900px"
+        "iframeHeight": "800px"
+      }
+    },
+    {
+      "name": "faqs-01",
+      "description": "A simple pricing section.",
+      "type": "registry:block",
+      "files": [
+        {
+          "path": "registry/designali/blocks/faqs/faqs-01.tsx",
+          "type": "registry:component",
+          "target": "components/faqs-01.tsx"
+        }
+      ],
+      "categories": ["faqs"],
+      "meta": {
+        "iframeHeight": "800px"
+      }
+    },
+    {
+      "name": "pricing-01",
+      "description": "A simple pricing section.",
+      "type": "registry:block",
+      "files": [
+        {
+          "path": "registry/designali/blocks/pricing/pricing-01.tsx",
+          "type": "registry:component",
+          "target": "components/pricing-01.tsx"
+        }
+      ],
+      "categories": ["pricing"],
+      "meta": {
+        "iframeHeight": "800px"
+      }
+    },
+    {
+      "name": "testimonial-01",
+      "description": "A simple pricing section.",
+      "type": "registry:block",
+      "files": [
+        {
+          "path": "registry/designali/blocks/testimonials/testimonial-01.tsx",
+          "type": "registry:component",
+          "target": "components/testimonial-01.tsx"
+        }
+      ],
+      "categories": ["testimonials", "testimonial"],
+      "meta": {
+        "iframeHeight": "800px"
       }
     },
     {

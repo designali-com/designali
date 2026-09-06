@@ -9,6 +9,7 @@ import { ComponentsSection } from "@/src/components/home/components"
 import { WorksSection } from "@/src/components/home/works"
 import { FeaturedBlocks } from "@/src/components/home/featured-blocks"
 import { BuildWith } from "@/src/components/home/build-with"
+import { NumbersSection } from "@/src/components/home/numbers"
 
 export default function Page() {
   const templates = templateCategories.filter((template) => !template.hidden)
@@ -16,6 +17,7 @@ export default function Page() {
     <div className="">
       <HeroSection />
       <BuildWith/>
+      <NumbersSection/>
       <div className="grid gap-3 border-b border-dotted p-3 md:grid-cols-2">
         {templates.map((template) => (
           <TemplateCard

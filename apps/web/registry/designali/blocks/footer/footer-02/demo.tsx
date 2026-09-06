@@ -8,7 +8,7 @@ import {
   LinkedIn,
   Threads,
   Facebook,
-  WhatsApp,
+  WhatsApp, 
   X,
   YouTube,
 } from "@designali/logos"
@@ -89,7 +89,7 @@ export default function Footer() {
       <div className="relative mx-auto grid max-w-7xl items-center justify-center gap-6 p-10 pb-0 md:flex">
         <Link href="/">
           <p className="flex items-center justify-center rounded-full">
-            <Apple className="w-8 text-primary" />
+            <Apple className="w-8" />
           </p>
         </Link>
         <p className="text-center text-xs leading-4 text-muted-foreground md:text-left">
@@ -125,7 +125,7 @@ export default function Footer() {
                       <li key={item.name} className="flow-root">
                         <Link
                           href={item.href}
-                          className="text-sm text-slate-600 hover:text-black md:text-xs dark:text-slate-400 hover:dark:text-white"
+                          className="text-sm hover:text-foreground text-muted-foreground md:text-xs "
                         >
                           {item.name}
                         </Link>
@@ -186,16 +186,7 @@ export default function Footer() {
             className={Underline}
           >
             <WhatsApp className="h-5 w-5" />
-          </Link>
-          <Link
-            aria-label="Logo"
-            href="https://www.behance.net/designali-in"
-            rel="noreferrer"
-            target="_blank"
-            className={Underline}
-          >
-            Behance
-          </Link>
+          </Link> 
           <Link
             aria-label="Logo"
             href="https://www.facebook.com/designali.agency"

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-06T14:56:09.682Z",
+  "generatedAt": "2026-09-06T17:35:32.510Z",
   "items": [
     {
       "name": "gauge",
@@ -177,10 +177,34 @@
       "categories": ["logos", "clients"]
     },
     {
+      "name": "call-to-action-01",
+      "type": "registry:block",
+      "description": "A simple call-to-action section.",
+      "categories": ["call-to-action"]
+    },
+    {
       "name": "feature-01",
       "type": "registry:block",
       "description": "A simple feature section.",
       "categories": ["feature", "features"]
+    },
+    {
+      "name": "faqs-01",
+      "type": "registry:block",
+      "description": "A simple pricing section.",
+      "categories": ["faqs"]
+    },
+    {
+      "name": "pricing-01",
+      "type": "registry:block",
+      "description": "A simple pricing section.",
+      "categories": ["pricing"]
+    },
+    {
+      "name": "testimonial-01",
+      "type": "registry:block",
+      "description": "A simple pricing section.",
+      "categories": ["testimonials", "testimonial"]
     },
     {
       "name": "accordion-01",

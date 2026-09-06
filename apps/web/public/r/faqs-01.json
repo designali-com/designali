@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "faqs-01",
+  "type": "registry:block",
+  "description": "A simple pricing section.",
+  "files": [
+    {
+      "path": "registry/designali/blocks/faqs/faqs-01.tsx",
+      "content": "\"use client\"\n\nimport {\n  Accordion,\n  AccordionContent,\n  AccordionItem,\n  AccordionTrigger,\n} from \"@workspace/ui/components/accordion\"\n\ninterface FAQItem {\n  question: string\n  answer: string\n}\n\nconst faqData: FAQItem[] = [\n  {\n    question: \"What is Brillance and who is it for?\",\n    answer:\n      \"Brillance is a modern design-driven platform built for teams that care about clarity, consistency, and scalable systems. It’s ideal for startups, product teams, and agencies looking to create cohesive digital experiences.\",\n  },\n  {\n    question: \"How does Brillance improve my design workflow?\",\n    answer:\n      \"Brillance helps you build structured layouts, reusable components, and consistent visual patterns. From typography to spacing systems, everything is designed to reduce friction and increase creative velocity.\",\n  },\n  {\n    question: \"Can Brillance fit into my existing design system?\",\n    answer:\n      \"Yes. Brillance is built to be flexible and token-based, allowing you to integrate your brand colors, typography scales, and spacing rules seamlessly into your existing workflow.\",\n  },\n  {\n    question: \"Is it suitable for large teams?\",\n    answer:\n      \"Absolutely. Brillance supports scalable architecture and consistent component patterns, making collaboration between designers and developers smooth and predictable.\",\n  },\n  {\n    question: \"Does Brillance support responsive design?\",\n    answer:\n      \"Yes. Every component is built with responsiveness in mind, ensuring your layouts adapt beautifully across desktop, tablet, and mobile devices.\",\n  },\n  {\n    question: \"How do I get started?\",\n    answer:\n      \"Start by integrating the core components into your project, customize your design tokens, and build your first layout. Brillance is structured to help you move from idea to interface quickly and confidently.\",\n  },\n]\n\nexport function FAQs() {\n  return (\n    <div className=\"overflow-auto h-screen flex justify-center items-center max-w-xl mx-auto border-x px-6 py-10\">\n      <div className=\"mx-auto flex-1 flex-col gap-6 lg:flex-row\">\n        <div className=\"flex w-full flex-col gap-4 lg:flex-1 py-5\">\n          <h2 className=\"text-4xl leading-tight font-semibold tracking-tight\">\n            Frequently Asked Questions\n          </h2>\n          <p className=\"text-muted-foreground text-base leading-7\">\n            Explore your data, build your dashboard,\n            <br className=\"hidden md:block\" />\n            bring your team together.\n          </p>\n        </div>\n\n        <div className=\"w-full lg:flex-1\">\n          <Accordion defaultValue={[\"item-2\"]} className=\"w-full rounded-sm\">\n            {faqData.map((item, index) => (\n              <AccordionItem\n                key={index}\n                value={`item-${index}`}\n                className=\"border-b\"\n              >\n                <AccordionTrigger className=\"py-5 text-left text-base font-medium hover:no-underline\">\n                  {item.question}\n                </AccordionTrigger>\n\n                <AccordionContent className=\"p-5 text-sm leading-6\">\n                  {item.answer}\n                </AccordionContent>\n              </AccordionItem>\n            ))}\n          </Accordion>\n        </div>\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:component",
+      "target": "components/faqs-01.tsx"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "800px"
+  },
+  "categories": [
+    "faqs"
+  ]
+}

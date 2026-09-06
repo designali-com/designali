@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { Apple } from "@designali/logos"
+import { Nike } from "@designali/logos"
 import { Send } from "lucide-react"
 
 import { ThemeSwitch } from "@/registry/designali/blocks/footer/footer-04/theme"
@@ -30,11 +30,11 @@ export default function Footer() {
       <div className="p-10">
         <div className="-my-6 grid gap-12 rounded-md border bg-background p-10 md:-my-4 md:grid-cols-2 lg:grid-cols-4">
           <div className="relative">
-            <Apple className="text-primary" />
+            <Nike />
             <h2 className="mt-6 mb-2 text-2xl font-semibold tracking-tight">
               Stay Connected
             </h2>
-            <p className="mb-4">
+            <p className="mb-4 text-muted-foreground">
               Join our newsletter for the latest updates and exclusive offers.
             </p>
             <form className="relative">
@@ -45,8 +45,8 @@ export default function Footer() {
               />
               <Button
                 type="submit"
-                size="icon"
-                className="absolute top-0.5 right-0.5 h-8 w-8 rounded-md bg-primary transition-transform hover:scale-105 hover:text-muted-foreground dark:hover:text-white"
+                size="icon-sm"
+                className="absolute top-0.5 right-0.5"
               >
                 <Send className="h-4 w-4" />
                 <span className="sr-only">Subscribe</span>
@@ -119,7 +119,7 @@ export default function Footer() {
                 target="_blank"
                 className="text-muted-foreground transition-colors hover:text-foreground"
               >
-                Twitter X
+                 X
               </Link>
               <Link
                 href={"https://www.instagram.com/aliimam.in/"}

@@ -1027,6 +1027,37 @@ export const Index: Record<string, any> = {
       }
     }),
   },
+  "call-to-action-01": {
+    name: "call-to-action-01",
+    description: "A simple call-to-action section.",
+    type: "registry:block",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/blocks/call-to-action/call-to-action-01.tsx",
+        type: "registry:component",
+        target: "components/call-to-action-01.tsx",
+      },
+    ],
+    categories: ["call-to-action"],
+    meta: { iframeHeight: "800px" },
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/blocks/call-to-action/call-to-action-01")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "call-to-action-01"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
   "feature-01": {
     name: "feature-01",
     description: "A simple feature section.",
@@ -1042,7 +1073,7 @@ export const Index: Record<string, any> = {
       },
     ],
     categories: ["feature", "features"],
-    meta: { iframeHeight: "900px" },
+    meta: { iframeHeight: "800px" },
     component: React.lazy(async () => {
       const mod =
         await import("@/registry/designali/blocks/feature/feature-01/page")
@@ -1052,6 +1083,97 @@ export const Index: Record<string, any> = {
           (key) =>
             typeof mod[key] === "function" || typeof mod[key] === "object"
         ) || "feature-01"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "faqs-01": {
+    name: "faqs-01",
+    description: "A simple pricing section.",
+    type: "registry:block",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/blocks/faqs/faqs-01.tsx",
+        type: "registry:component",
+        target: "components/faqs-01.tsx",
+      },
+    ],
+    categories: ["faqs"],
+    meta: { iframeHeight: "800px" },
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/designali/blocks/faqs/faqs-01")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "faqs-01"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "pricing-01": {
+    name: "pricing-01",
+    description: "A simple pricing section.",
+    type: "registry:block",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/blocks/pricing/pricing-01.tsx",
+        type: "registry:component",
+        target: "components/pricing-01.tsx",
+      },
+    ],
+    categories: ["pricing"],
+    meta: { iframeHeight: "800px" },
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/designali/blocks/pricing/pricing-01")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "pricing-01"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "testimonial-01": {
+    name: "testimonial-01",
+    description: "A simple pricing section.",
+    type: "registry:block",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/blocks/testimonials/testimonial-01.tsx",
+        type: "registry:component",
+        target: "components/testimonial-01.tsx",
+      },
+    ],
+    categories: ["testimonials", "testimonial"],
+    meta: { iframeHeight: "800px" },
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/blocks/testimonials/testimonial-01")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "testimonial-01"
 
       return {
         default: mod.default || mod[exportName],

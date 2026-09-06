@@ -4,6 +4,7 @@ import type { Metadata } from "next"
 import "@workspace/ui/globals.css"
 import { cn } from "@workspace/ui/lib/utils"
 import { Provider } from "@/src/components/common/provider"
+import { siteConfig } from "../config/site"
 
 const geist = Geist({
   subsets: ["latin"],
@@ -28,12 +29,29 @@ export const metadata: Metadata = {
     "Design Engineering",
   ],
   authors: [{ name: "Ali Imam" }],
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL!),
   creator: "Ali Imam",
   openGraph: {
     title: "designali — Design & Code",
     description:
       "Where thoughtful design meets production-ready code. I design and build digital experiences that look great, feel intuitive, and work beautifully.",
+    url: process.env.NEXT_PUBLIC_SITE_URL!,
+    images: [
+      {
+        url: `${process.env.NEXT_PUBLIC_SITE_URL}/og.jp`,
+        width: 1920,
+        height: 1080,
+        alt: siteConfig.name,
+      },
+    ],
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: siteConfig.name,
+    description: siteConfig.description,
+    images: [`${process.env.NEXT_PUBLIC_SITE_URL}/og.jpg`],
+    creator: "@designali-com",
   },
   robots: {
     index: true,
