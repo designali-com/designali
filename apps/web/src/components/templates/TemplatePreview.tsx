@@ -109,44 +109,53 @@ export function TemplatePreview({
     try {
       setIsDownloading(true)
       setDownloadProgress(10)
-  
-      // 1. Log activity in background (Do not block download if this fails)
-      try {
-        await recordDownload(templateId, organizationId)
-      } catch (err) {
-        console.warn("Analytics/DB log failed, proceeding to direct download:", err)
-      }
-  
+    
+      // Don't block the actual download
+      void recordDownload(
+        templateId,
+        organizationId
+      ).catch((err) => {
+        console.warn(
+          "Analytics/DB log failed:",
+          err
+        )
+      })
+    
       setDownloadProgress(40)
-  
-      // 2. Fetch ZIP File Directly
+    
       const response = await fetch(downloadurl, {
         signal: controller.signal,
       })
-  
+    
       if (!response.ok) {
-        throw new Error("Download failed")
+        throw new Error(
+          `Download failed: ${response.status}`
+        )
       }
-  
+    
       setDownloadProgress(90)
-  
+    
       const blob = await response.blob()
-  
-      // 3. Trigger File Download
-      const blobUrl = window.URL.createObjectURL(blob)
-      const link = document.createElement("a")
+    
+      const blobUrl =
+        window.URL.createObjectURL(blob)
+    
+      const link =
+        document.createElement("a")
+    
       link.href = blobUrl
+    
       link.download = `${name
         .toLowerCase()
         .replace(/[^a-z0-9]+/g, "-")
         .replace(/(^-|-$)/g, "")}.zip`
-  
+    
       document.body.appendChild(link)
       link.click()
       link.remove()
-  
+    
       window.URL.revokeObjectURL(blobUrl)
-  
+    
       setDownloadProgress(100)
     } catch (error) {
       if (error instanceof DOMException && error.name === "AbortError") {

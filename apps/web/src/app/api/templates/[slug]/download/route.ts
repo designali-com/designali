@@ -1,9 +1,9 @@
 import fs from "node:fs/promises"
 import path from "node:path"
-import { execFile } from "node:child_process"
-import { promisify } from "node:util"
+import JSZip from "jszip"
 
-const execFileAsync = promisify(execFile)
+export const runtime = "nodejs"
+export const dynamic = "force-dynamic"
 
 export async function GET(
   _request: Request,
@@ -11,73 +11,163 @@ export async function GET(
 ) {
   const { slug } = await params
 
+  // Prevent path traversal
   if (!/^[a-zA-Z0-9_-]+$/.test(slug)) {
-    return new Response("Invalid template", { status: 400 })
+    return new Response("Invalid template", {
+      status: 400,
+    })
   }
 
-  const templatesDir = path.join(process.cwd(), "../../templates")
-  const templateDir = path.join(templatesDir, slug)
+  const templatesDir = path.resolve(
+    process.cwd(),
+    "../../templates"
+  )
+
+  const templateDir = path.resolve(
+    templatesDir,
+    slug
+  )
 
   console.log("Template directory:", templateDir)
 
   try {
+    // Check template exists
     const stat = await fs.stat(templateDir)
 
     if (!stat.isDirectory()) {
-      return new Response("Template not found", { status: 404 })
+      return new Response("Template not found", {
+        status: 404,
+      })
     }
 
-    const zipName = `${slug}.zip`
-    const zipPath = path.join("/tmp", zipName)
+    const zip = new JSZip()
 
-    // Remove previous ZIP if it exists
-    await fs.rm(zipPath, {
-      force: true,
-    })
+    const ignoredDirectories = new Set([
+      "node_modules",
+      ".next",
+      ".git",
+    ])
 
-    // Create ZIP directly from template directory
-    await execFileAsync(
-      "zip",
-      [
-        "-r",
-        zipPath,
-        ".",
-        "-x",
-        "node_modules/*",
-        "node_modules/**/*",
-        ".next/*",
-        ".next/**/*",
-        ".git/*",
-        ".git/**/*",
-        "*.zip",
-      ],
-      {
-        cwd: templateDir,
-        maxBuffer: 10 * 1024 * 1024,
+    const ignoredFiles = new Set([
+      ".DS_Store",
+    ])
+
+    async function addDirectory(
+      directory: string,
+      zipFolder: JSZip
+    ): Promise<void> {
+      const entries = await fs.readdir(directory, {
+        withFileTypes: true,
+      })
+
+      for (const entry of entries) {
+        const fullPath = path.join(
+          directory,
+          entry.name
+        )
+
+        // Ignore directories
+        if (
+          entry.isDirectory() &&
+          ignoredDirectories.has(entry.name)
+        ) {
+          continue
+        }
+
+        // Ignore files
+        if (
+          entry.isFile() &&
+          (
+            ignoredFiles.has(entry.name) ||
+            entry.name.endsWith(".zip")
+          )
+        ) {
+          continue
+        }
+
+        // Recursive directory
+        if (entry.isDirectory()) {
+          const folder = zipFolder.folder(entry.name)
+
+          if (folder) {
+            await addDirectory(
+              fullPath,
+              folder
+            )
+          }
+
+          continue
+        }
+
+        // Add file
+        if (entry.isFile()) {
+          const file = await fs.readFile(fullPath)
+
+          zipFolder.file(
+            entry.name,
+            file
+          )
+        }
       }
+    }
+
+    // Add template files
+    await addDirectory(
+      templateDir,
+      zip
     )
 
-    const file = await fs.readFile(zipPath)
-
-    // Cleanup
-    await fs.rm(zipPath, {
-      force: true,
+    // Generate ZIP
+    const zipBuffer = await zip.generateAsync({
+      type: "uint8array",
+      compression: "DEFLATE",
+      compressionOptions: {
+        level: 9,
+      },
     })
 
-    return new Response(file, {
+    // Convert Uint8Array -> ArrayBuffer
+    const arrayBuffer = new ArrayBuffer(
+      zipBuffer.byteLength
+    )
+
+    new Uint8Array(arrayBuffer).set(
+      zipBuffer
+    )
+
+    const zipName = `${slug}.zip`
+
+    return new Response(arrayBuffer, {
       status: 200,
+
       headers: {
         "Content-Type": "application/zip",
-        "Content-Disposition": `attachment; filename="${zipName}"`,
-        "Content-Length": file.length.toString(),
-        "Cache-Control": "no-store",
+
+        "Content-Disposition":
+          `attachment; filename="${zipName}"`,
+
+        "Content-Length":
+          String(zipBuffer.byteLength),
+
+        "Cache-Control":
+          "no-store",
       },
     })
   } catch (error) {
-    console.error("Template download error:", error)
+    console.error(
+      "Template download error:",
+      error
+    )
 
-    return new Response("Template download failed", {
-      status: 500,
-    })
+    return new Response(
+      "Template download failed",
+      {
+        status: 500,
+
+        headers: {
+          "Content-Type": "text/plain",
+        },
+      }
+    )
   }
 }

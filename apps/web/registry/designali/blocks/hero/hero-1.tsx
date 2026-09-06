@@ -13,7 +13,7 @@ import { Button } from "@workspace/ui/components/button";
 import { Card } from "@workspace/ui/components/card";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
-import { Logo } from "@workspace/ui/designali/logo";
+import { Logo } from "@/src/components/logo";
 
 export function HeroSection() {
   const { theme, setTheme } = useTheme();
