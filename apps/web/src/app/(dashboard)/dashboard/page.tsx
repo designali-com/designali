@@ -47,8 +47,8 @@ export default async function Dashboard() {
       {/* 1. Header / Navbar */}
       <header className="flex  my-10 flex-col sm:flex-row justify-between items-start sm:items-center gap-4 pb-6 border-b">
         <div>
-          <h1 className="text-2xl font-bold tracking-tight">Overview Dashboard</h1>
-          <p className="text-zinc-400 text-sm">
+          <h1 className="text-2xl font-medium tracking-tight">Overview Dashboard</h1>
+          <p className="text-muted-foreground text-sm">
             Manage your organizations, templates, and team workspaces.
           </p>
         </div>
@@ -149,7 +149,7 @@ export default async function Dashboard() {
 
         {userDownloads.length === 0 ? (
           <div className="p-8 text-center border">
-            <p className="text-zinc-400">Aapne abhi tak koi template download nahi kiya hai.</p>
+            <p className="text-muted-foreground">Aapne abhi tak koi template download nahi kiya hai.</p>
           </div>
         ) : (
           <div className="border divide-y divide-zinc-800 overflow-hidden">
@@ -164,8 +164,8 @@ export default async function Dashboard() {
                     />
                   )}
                   <div>
-                    <h3 className="font-medium text-sm text-zinc-100">{template.title}</h3>
-                    <p className="text-xs text-zinc-500">
+                    <h3 className="font-medium text-sm">{template.title}</h3>
+                    <p className="text-xs text-muted-foreground">
                       Downloaded on {new Date(downloadedAt).toLocaleDateString()}
                     </p>
                   </div>
@@ -175,11 +175,12 @@ export default async function Dashboard() {
                   <span className="hidden sm:inline-block text-xs border font-mono px-2 py-1 rounded">
                     {licenseKey}
                   </span>
-                  <Button size="sm" variant="outline" >
-                    <a href={template.downloadUrl} download>
-                      Re-Download
-                    </a>
+                  <Button render={<a target="_blank"  href={template.previewUrl ?? undefined}   />} size="sm" variant="outline" >
+                      Preview 
                   </Button>
+                  <Button render={<a target="_blank" href={template.downloadUrl}   />} size="sm" variant="outline" >
+                     Re-Download 
+                </Button>
                 </div>
               </div>
             ))}

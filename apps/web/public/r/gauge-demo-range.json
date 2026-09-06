@@ -1,13 +1,13 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "gauge-demo-range",
-  "type": "registry:block",
+  "type": "registry:component",
   "description": "Gauge with custom min and max ranges",
   "files": [
     {
       "path": "registry/designali/components/gauge/gauge-demo-range.tsx",
       "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport {\n  Gauge,\n  GaugeIndicator,\n  GaugeRange,\n  GaugeTrack,\n  GaugeValueText,\n} from \"@/registry/designali/ui/gauge\"\n\nconst ranges = [\n  {\n    label: \"0–100\",\n    min: 0,\n    max: 100,\n    value: 72,\n  },\n  {\n    label: \"0–10\",\n    min: 0,\n    max: 10,\n    value: 7,\n  },\n  {\n    label: \"50–150\",\n    min: 50,\n    max: 150,\n    value: 120,\n  },\n]\n\nexport function GaugeDemoRange() {\n  return (\n    <div className=\"flex flex-wrap items-center justify-center gap-10\">\n      {ranges.map((item) => (\n        <div key={item.label} className=\"flex flex-col items-center gap-3\">\n          <Gauge\n            value={item.value}\n            min={item.min}\n            max={item.max}\n            size={170}\n            getValueText={(value, min, max) => {\n              const percentage = ((value - min) / (max - min)) * 100\n\n              return `${Math.round(percentage)}%`\n            }}\n          >\n            <GaugeIndicator>\n              <GaugeTrack />\n              <GaugeRange />\n            </GaugeIndicator>\n\n            <GaugeValueText />\n          </Gauge>\n\n          <span className=\"text-sm text-muted-foreground\">{item.label}</span>\n        </div>\n      ))}\n    </div>\n  )\n}\n",
-      "type": "registry:block"
+      "type": "registry:component"
     }
   ]
 }

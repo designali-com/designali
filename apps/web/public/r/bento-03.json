@@ -1,13 +1,13 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "bento-03",
-  "type": "registry:block",
-  "description": "block showing a simple bento.",
+  "type": "registry:component",
+  "description": "component showing a simple bento.",
   "files": [
     {
       "path": "registry/designali/components/bento/bento-03.tsx",
       "content": "import { BentoGrid, BentoGridItem } from \"@/registry/designali/ui/bento\"\n\nexport default function BentoExample() {\n  return (\n    <BentoGrid rowHeight={{ base: \"60px\", md: \"120px\", lg: \"120px\" }}>\n      <BentoGridItem rowSpan={{ base: 1, md: 3, lg: 3 }}>\n        Full Height Banner\n      </BentoGridItem>\n      <BentoGridItem rowSpan={{ base: 1, lg: 2 }}>Feature 1</BentoGridItem>\n      <BentoGridItem rowSpan={{ base: 1, lg: 2 }}>Feature 1</BentoGridItem>\n\n      <BentoGridItem rowSpan={{ base: 1, lg: 2 }}>Feature 1</BentoGridItem>\n\n      <BentoGridItem rowSpan={{ base: 1, md: 2, lg: 3 }}>\n        Full Height Banner\n      </BentoGridItem>\n      <BentoGridItem colSpan={{ base: 1, lg: 3 }}>Feature 1</BentoGridItem>\n    </BentoGrid>\n  )\n}\n",
-      "type": "registry:block"
+      "type": "registry:component"
     }
   ]
 }

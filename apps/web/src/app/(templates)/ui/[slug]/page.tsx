@@ -58,7 +58,7 @@ export default async function UIPage({
 
       {/* Components */}
       {components.length > 0 && (
-        <div className="flex flex-col gap-12 md:gap-24">
+        <div className="grid w-full xl:grid-cols-2 gap-3">
           {components.map((name) => (
             <ComponentPreview key={name} name={name} align="center" />
           ))}

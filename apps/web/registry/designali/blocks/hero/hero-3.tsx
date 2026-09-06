@@ -12,8 +12,6 @@ const images = [
   { src: "/img/login-1.jpg", alt: "Login Screen" },
 ]
 
-const steps = ["03", "02", "01", "00", "01"]
-
 function createCSS(
   direction: 1 | -1,
   id: string
@@ -103,7 +101,7 @@ export function HeroSection() {
   return (
     <section className="relative flex min-h-screen w-full flex-col justify-between overflow-hidden bg-background text-foreground">
 
-      <div className="absolute inset-0 z-0">
+      <div className="absolute w-full h-full z-0">
         <div
           style={{
             WebkitMaskImage: 'linear-gradient(to bottom, #000 0%, transparent 75%)',
@@ -120,13 +118,13 @@ export function HeroSection() {
         />
       </div>
 
-      <div className="pointer-events-none absolute left-5 top-5 z-30 h-12 w-12 border-l-2 border-t-2 border-primary/60" />
+      <div className="pointer-events-none z-10 absolute left-5 top-5 z-30 h-12 w-12 border-l-8 border-t-8 border-primary" />
 
-      <div className="pointer-events-none absolute right-5 top-5 z-30 h-12 w-12 border-r-2 border-t-2 border-primary/60" />
+      <div className="pointer-events-none z-10 absolute right-5 top-5 z-30 h-12 w-12 border-r-8 border-t-8 border-primary" />
 
-      <div className="pointer-events-none absolute bottom-5 left-5 z-30 h-12 w-12 border-b-2 border-l-2 border-primary/60" />
+      <div className="pointer-events-none z-10 absolute bottom-5 left-5 z-30 h-12 w-12 border-b-8 border-l-8 border-primary" />
 
-      <div className="pointer-events-none absolute bottom-5 right-5 z-30 h-12 w-12 border-b-2 border-r-2 border-primary/60" />
+      <div className="pointer-events-none z-10 absolute bottom-5 right-5 z-30 h-12 w-12 border-b-8 border-r-8 border-primary" />
 
       <style>{css}</style>
 
@@ -147,7 +145,7 @@ export function HeroSection() {
             </h1>
 
             <h1 className="text-[10vw] font-black uppercase leading-[0.8] tracking-[-0.065em] sm:text-[9vw] lg:text-[8vw]">
-              WHAT MATTERS
+              WHAT&nbsp;&nbsp;MATTERS
             </h1>
 
           </div>
@@ -173,7 +171,7 @@ export function HeroSection() {
 
         </div>
         <div
-          className="pointer-events-none lg:mt-0 -mt-40 relative"
+          className="pointer-events-none lg:-mt-20 -mt-40 relative"
           style={{
             perspective: "30cqw",
             perspectiveOrigin: "50% 50%",
@@ -233,32 +231,16 @@ export function HeroSection() {
         <div className="relative z-20 flex w-full items-center justify-between px-10 text-xs tracking-wide text-foreground/60 sm:px-20">
 
           <span>
-            EN&nbsp;&nbsp;&nbsp;AR
+            EN&nbsp;&nbsp;&nbsp;IN
           </span>
 
           <div className="hidden text-center sm:block">
 
-            <div className="flex items-center gap-2 tracking-[4px]">
-              {steps.map((num, idx) => (
-                <span
-                  key={idx}
-                  className={`transition-colors duration-500 ${idx === 2
-                    ? "scale-110 font-bold text-foreground opacity-100"
-                    : "opacity-30"
-                    }`}
-                >
-                  {num}
-
-                  {idx < steps.length - 1 && (
-                    <span className="ml-2">
-                      .
-                    </span>
-                  )}
-                </span>
-              ))}
+            <div className="flex tracking-[1rem] pl-4 uppercase items-center">
+               Scroll 
             </div>
 
-            <div className="mx-auto mt-2 h-5 w-px bg-foreground/70" />
+             
 
           </div>
 

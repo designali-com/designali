@@ -70,486 +70,486 @@ export const components: Registry["items"] = [
   {
     title: "Counter Number",
     name: "counter-number-seperator",
-    type: "registry:block",
+    type: "registry:component",
     files: [
       {
         path: "components/counter-number/counter-number-seperator.tsx",
-        type: "registry:block",
+        type: "registry:component",
       },
     ],
   },
   {
     title: "Dot Pattern",
     name: "dot-pattern-default",
-    type: "registry:block",
-    description: "block showing a simple dot pattern.",
+    type: "registry:component",
+    description: "component showing a simple dot pattern.",
     registryDependencies: ["dot-pattern"],
     files: [
       {
         path: "components/dot-pattern/dot-pattern-default.tsx",
-        type: "registry:block",
+        type: "registry:component",
       },
     ],
   },
   {
     title: "Dot Pattern",
     name: "dot-pattern-custom",
-    type: "registry:block",
-    description: "block showing a simple dot pattern.",
+    type: "registry:component",
+    description: "component showing a simple dot pattern.",
     registryDependencies: ["dot-pattern"],
     files: [
       {
         path: "components/dot-pattern/dot-pattern-custom.tsx",
-        type: "registry:block",
+        type: "registry:component",
       },
     ],
   },
   {
     title: "Dot Pattern",
     name: "dot-pattern-01",
-    type: "registry:block",
-    description: "block showing a simple dot pattern.",
+    type: "registry:component",
+    description: "component showing a simple dot pattern.",
     registryDependencies: ["dot-pattern"],
     files: [
       {
         path: "components/dot-pattern/dot-pattern-01.tsx",
-        type: "registry:block",
+        type: "registry:component",
       },
     ],
   },
   {
     title: "Dot Pattern",
     name: "dot-pattern-02",
-    type: "registry:block",
-    description: "block showing a simple dot pattern.",
+    type: "registry:component",
+    description: "component showing a simple dot pattern.",
     registryDependencies: ["dot-pattern"],
     files: [
       {
         path: "components/dot-pattern/dot-pattern-02.tsx",
-        type: "registry:block",
+        type: "registry:component",
       },
     ],
   },
   {
     title: "Dot Pattern",
     name: "dot-pattern-03",
-    type: "registry:block",
-    description: "block showing a simple dot pattern.",
+    type: "registry:component",
+    description: "component showing a simple dot pattern.",
     registryDependencies: ["dot-pattern"],
     files: [
       {
         path: "components/dot-pattern/dot-pattern-03.tsx",
-        type: "registry:block",
+        type: "registry:component",
       },
     ],
   },
   {
     name: "gauge-demo-basic",
     description: "Basic gauge demo",
-    type: "registry:block",
+    type: "registry:component",
     files: [
       {
         path: "components/gauge/gauge-demo-basic.tsx",
-        type: "registry:block",
+        type: "registry:component",
       },
     ],
   },
   {
     name: "gauge-demo-custom-value",
     description: "Gauge with custom value text",
-    type: "registry:block",
+    type: "registry:component",
     files: [
       {
         path: "components/gauge/gauge-demo-custom-value.tsx",
-        type: "registry:block",
+        type: "registry:component",
       },
     ],
   },
   {
     name: "gauge-demo-sizes",
     description: "Gauge size variations",
-    type: "registry:block",
+    type: "registry:component",
     files: [
       {
         path: "components/gauge/gauge-demo-sizes.tsx",
-        type: "registry:block",
+        type: "registry:component",
       },
     ],
   },
   {
     name: "gauge-demo-thickness",
     description: "Gauge thickness variations",
-    type: "registry:block",
+    type: "registry:component",
     files: [
       {
         path: "components/gauge/gauge-demo-thickness.tsx",
-        type: "registry:block",
+        type: "registry:component",
       },
     ],
   },
   {
     name: "gauge-demo-gap",
     description: "Gauge gap variations",
-    type: "registry:block",
+    type: "registry:component",
     files: [
       {
         path: "components/gauge/gauge-demo-gap.tsx",
-        type: "registry:block",
+        type: "registry:component",
       },
     ],
   },
   {
     name: "gauge-demo-segments",
     description: "Gauge segment variations",
-    type: "registry:block",
+    type: "registry:component",
     files: [
       {
         path: "components/gauge/gauge-demo-segments.tsx",
-        type: "registry:block",
+        type: "registry:component",
       },
     ],
   },
   {
     name: "gauge-demo-angles",
     description: "Gauge angle variations",
-    type: "registry:block",
+    type: "registry:component",
     files: [
       {
         path: "components/gauge/gauge-demo-angles.tsx",
-        type: "registry:block",
+        type: "registry:component",
       },
     ],
   },
   {
     name: "gauge-demo-radius",
     description: "Gauge radius customization",
-    type: "registry:block",
+    type: "registry:component",
     files: [
       {
         path: "components/gauge/gauge-demo-radius.tsx",
-        type: "registry:block",
+        type: "registry:component",
       },
     ],
   },
   {
     name: "gauge-demo-states",
     description: "Gauge loading and complete states",
-    type: "registry:block",
+    type: "registry:component",
     files: [
       {
         path: "components/gauge/gauge-demo-states.tsx",
-        type: "registry:block",
+        type: "registry:component",
       },
     ],
   },
   {
     name: "gauge-demo-range",
     description: "Gauge with custom min and max ranges",
-    type: "registry:block",
+    type: "registry:component",
     files: [
       {
         path: "components/gauge/gauge-demo-range.tsx",
-        type: "registry:block",
+        type: "registry:component",
       },
     ],
   },
   {
     name: "gauge-demo-label",
     description: "Gauge with label",
-    type: "registry:block",
+    type: "registry:component",
     files: [
       {
         path: "components/gauge/gauge-demo-label.tsx",
-        type: "registry:block",
+        type: "registry:component",
       },
     ],
   },
   {
     name: "gauge-demo-custom-content",
     description: "Gauge with custom center content",
-    type: "registry:block",
+    type: "registry:component",
     files: [
       {
         path: "components/gauge/gauge-demo-custom-content.tsx",
-        type: "registry:block",
+        type: "registry:component",
       },
     ],
   },
   {
     name: "gauge-demo-biomarker",
     description: "Biomarker gauge components",
-    type: "registry:block",
+    type: "registry:component",
     files: [
       {
         path: "components/gauge/gauge-demo-biomarker.tsx",
-        type: "registry:block",
+        type: "registry:component",
       },
     ],
   },
   {
     name: "gauge-demo-multiple",
     description: "Multiple gauges displayed together",
-    type: "registry:block",
+    type: "registry:component",
     files: [
       {
         path: "components/gauge/gauge-demo-multiple.tsx",
-        type: "registry:block",
+        type: "registry:component",
       },
     ],
   },
   {
     name: "gauge-demo-combined",
     description: "Combined gauge composition demo",
-    type: "registry:block",
+    type: "registry:component",
     files: [
       {
         path: "components/gauge/gauge-demo-combined.tsx",
-        type: "registry:block",
+        type: "registry:component",
       },
     ],
   },
   {
     name: "bento-01",
-    type: "registry:block",
-    description: "block showing a simple bento.",
+    type: "registry:component",
+    description: "component showing a simple bento.",
     files: [
       {
         path: "components/bento/bento-01.tsx",
-        type: "registry:block",
+        type: "registry:component",
       },
     ],
   },
   {
     name: "bento-02",
-    type: "registry:block",
-    description: "block showing a simple bento.",
+    type: "registry:component",
+    description: "component showing a simple bento.",
     files: [
       {
         path: "components/bento/bento-02.tsx",
-        type: "registry:block",
+        type: "registry:component",
       },
     ],
   },
   {
     name: "bento-03",
-    type: "registry:block",
-    description: "block showing a simple bento.",
+    type: "registry:component",
+    description: "component showing a simple bento.",
     files: [
       {
         path: "components/bento/bento-03.tsx",
-        type: "registry:block",
+        type: "registry:component",
       },
     ],
   },
   {
     name: "bento-04",
-    type: "registry:block",
-    description: "block showing a simple bento.",
+    type: "registry:component",
+    description: "component showing a simple bento.",
     files: [
       {
         path: "components/bento/bento-04.tsx",
-        type: "registry:block",
+        type: "registry:component",
       },
     ],
   },
   {
     name: "bento-05",
-    type: "registry:block",
-    description: "block showing a simple bento.",
+    type: "registry:component",
+    description: "component showing a simple bento.",
     files: [
       {
         path: "components/bento/bento-05.tsx",
-        type: "registry:block",
+        type: "registry:component",
       },
     ],
   },
   {
     title: "Grid Pattern",
     name: "grid-pattern-default",
-    type: "registry:block",
-    description: "block showing a simple grid pattern.",
+    type: "registry:component",
+    description: "component showing a simple grid pattern.",
     registryDependencies: ["grid-pattern"],
     files: [
       {
         path: "components/grid-pattern/grid-pattern-default.tsx",
-        type: "registry:block",
+        type: "registry:component",
       },
     ],
   },
   {
     title: "Grid Pattern",
     name: "grid-pattern-custom",
-    type: "registry:block",
-    description: "block showing a simple grid pattern.",
+    type: "registry:component",
+    description: "component showing a simple grid pattern.",
     registryDependencies: ["grid-pattern"],
     files: [
       {
         path: "components/grid-pattern/grid-pattern-custom.tsx",
-        type: "registry:block",
+        type: "registry:component",
       },
     ],
   },
   {
     title: "Grid Pattern",
     name: "grid-pattern-large",
-    type: "registry:block",
-    description: "block showing a simple grid pattern.",
+    type: "registry:component",
+    description: "component showing a simple grid pattern.",
     registryDependencies: ["grid-pattern"],
     files: [
       {
         path: "components/grid-pattern/grid-pattern-large.tsx",
-        type: "registry:block",
+        type: "registry:component",
       },
     ],
   },
   {
     title: "Grid Pattern",
     name: "grid-pattern-small",
-    type: "registry:block",
-    description: "block showing a simple grid pattern.",
+    type: "registry:component",
+    description: "component showing a simple grid pattern.",
     registryDependencies: ["grid-pattern"],
     files: [
       {
         path: "components/grid-pattern/grid-pattern-small.tsx",
-        type: "registry:block",
+        type: "registry:component",
       },
     ],
   },
   {
     title: "Grid Pattern",
     name: "grid-pattern-01",
-    type: "registry:block",
-    description: "block showing a simple grid pattern.",
+    type: "registry:component",
+    description: "component showing a simple grid pattern.",
     registryDependencies: ["grid-pattern"],
     files: [
       {
         path: "components/grid-pattern/grid-pattern-01.tsx",
-        type: "registry:block",
+        type: "registry:component",
       },
     ],
   },
   {
     title: "Marquee",
     name: "marquee-01",
-    type: "registry:block",
+    type: "registry:component",
     registryDependencies: ["marquee"],
     files: [
       {
         path: "components/marquee/marquee-01.tsx",
-        type: "registry:block",
+        type: "registry:component",
       },
     ],
   },
   {
     title: "Marquee",
     name: "marquee-02",
-    type: "registry:block",
+    type: "registry:component",
     registryDependencies: ["marquee"],
     files: [
       {
         path: "components/marquee/marquee-02.tsx",
-        type: "registry:block",
+        type: "registry:component",
       },
     ],
   },
   {
     title: "Marquee",
     name: "marquee-03",
-    type: "registry:block",
+    type: "registry:component",
     registryDependencies: ["marquee"],
     files: [
       {
         path: "components/marquee/marquee-03.tsx",
-        type: "registry:block",
+        type: "registry:component",
       },
     ],
   },
   {
     title: "Marquee",
     name: "marquee-04",
-    type: "registry:block",
+    type: "registry:component",
     registryDependencies: ["marquee"],
     files: [
       {
         path: "components/marquee/marquee-04.tsx",
-        type: "registry:block",
+        type: "registry:component",
       },
     ],
   },
   {
     title: "Marquee",
     name: "marquee-05",
-    type: "registry:block",
+    type: "registry:component",
     registryDependencies: ["marquee"],
     files: [
       {
         path: "components/marquee/marquee-05.tsx",
-        type: "registry:block",
+        type: "registry:component",
       },
     ],
   },
   {
     title: "Typewriter",
     name: "typewriter-01",
-    type: "registry:block",
-    description: "block showing a simple typewriter.",
+    type: "registry:component",
+    description: "component showing a simple typewriter.",
     registryDependencies: ["typewriter"],
     files: [
       {
         path: "components/typewriter/typewriter-01.tsx",
-        type: "registry:block",
+        type: "registry:component",
       },
     ],
   },
   {
     title: "Typewriter",
     name: "typewriter-02",
-    type: "registry:block",
-    description: "block showing a simple typewriter.",
+    type: "registry:component",
+    description: "component showing a simple typewriter.",
     registryDependencies: ["typewriter"],
     files: [
       {
         path: "components/typewriter/typewriter-02.tsx",
-        type: "registry:block",
+        type: "registry:component",
       },
     ],
   },
   {
     title: "Typewriter",
     name: "typewriter-03",
-    type: "registry:block",
-    description: "block showing a simple typewriter.",
+    type: "registry:component",
+    description: "component showing a simple typewriter.",
     registryDependencies: ["typewriter"],
     files: [
       {
         path: "components/typewriter/typewriter-03.tsx",
-        type: "registry:block",
+        type: "registry:component",
       },
     ],
   },
   {
     title: "Typewriter",
     name: "typewriter-04",
-    type: "registry:block",
-    description: "block showing a simple typewriter.",
+    type: "registry:component",
+    description: "component showing a simple typewriter.",
     registryDependencies: ["typewriter"],
     files: [
       {
         path: "components/typewriter/typewriter-04.tsx",
-        type: "registry:block",
+        type: "registry:component",
       },
     ],
   },
   {
     title: "Typewriter",
     name: "typewriter-05",
-    type: "registry:block",
-    description: "block showing a simple typewriter.",
+    type: "registry:component",
+    description: "component showing a simple typewriter.",
     registryDependencies: ["typewriter"],
     files: [
       {
         path: "components/typewriter/typewriter-05.tsx",
-        type: "registry:block",
+        type: "registry:component",
       },
     ],
   },

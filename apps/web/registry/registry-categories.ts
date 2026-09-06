@@ -688,7 +688,7 @@ export const templateCategories: {
     hidden: false,
 
     url: "https://portfolio-simple.designali.com",
-    downloadurl: "https://portfolio-simple.designali.com",
+    downloadurl: "https://github.com/designali-com/templates/tree/main/portfolio-simple",
 
     tech: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
 
@@ -723,7 +723,7 @@ export const templateCategories: {
     hidden: false,
 
     url: "https://design-agency.designali.com",
-    downloadurl: "https://portfolio-simple.designali.com",
+    downloadurl: "https://github.com/designali-com/templates/tree/main/design-agency",
 
     tech: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
 

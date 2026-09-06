@@ -421,7 +421,11 @@ function BlockViewerView() {
 /* Mobile                                                                     */
 /* -------------------------------------------------------------------------- */
 
-function BlockViewerMobile({ children }: { children: React.ReactNode }) {
+function BlockViewerMobile({
+  children,
+}: {
+  children: React.ReactNode
+}) {
   const { item } = useBlockViewer()
 
   return (
@@ -436,29 +440,27 @@ function BlockViewerMobile({ children }: { children: React.ReactNode }) {
         </div>
       </div>
 
-      {item.meta?.mobile === "component" ? (
-        children
-      ) : (
-        <div className="overflow-hidden border border-dotted">
-          <Image
-            src={`/r/blocks/${item.name}/light.webp`}
-            alt={item.name}
-            data-block={item.name}
-            width={1440}
-            height={900}
-            className="object-cover dark:hidden"
-          />
+      <div className="overflow-hidden border border-dotted bg-background">
+        <Image
+          src={`/r/blocks/${item.name}/light.webp`}
+          alt={item.name}
+          data-block={item.name}
+          width={1440}
+          height={900}
+          priority
+          className="block h-auto w-full object-cover dark:hidden"
+        />
 
-          <Image
-            src={`/r/blocks/${item.name}/dark.webp`}
-            alt={item.name}
-            data-block={item.name}
-            width={1440}
-            height={900}
-            className="hidden object-cover dark:block"
-          />
-        </div>
-      )}
+        <Image
+          src={`/r/blocks/${item.name}/dark.webp`}
+          alt={item.name}
+          data-block={item.name}
+          width={1440}
+          height={900}
+          priority
+          className="hidden h-auto w-full object-cover dark:block"
+        />
+      </div>
     </div>
   )
 }
@@ -717,7 +719,9 @@ function BlockViewer({
 
       <BlockViewerCode />
 
-      <BlockViewerMobile>{children}</BlockViewerMobile>
+      <BlockViewerMobile>
+        {children}
+      </BlockViewerMobile>
     </BlockViewerProvider>
   )
 }

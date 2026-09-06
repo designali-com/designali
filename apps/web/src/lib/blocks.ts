@@ -41,7 +41,6 @@ export async function getAllBlockIds(
   categories: string[] = []
 ): Promise<string[]> {
   const blocks = await getAllBlocks(types, categories)
-
   return blocks.map((block) => block.name)
 }
 

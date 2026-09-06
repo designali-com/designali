@@ -1,13 +1,13 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "gauge-demo-segments",
-  "type": "registry:block",
+  "type": "registry:component",
   "description": "Gauge segment variations",
   "files": [
     {
       "path": "registry/designali/components/gauge/gauge-demo-segments.tsx",
       "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport {\n  Gauge,\n  GaugeIndicator,\n  GaugeRange,\n  GaugeTrack,\n  GaugeValueText,\n} from \"@/registry/designali/ui/gauge\"\n\nconst gauges = [\n  {\n    label: \"4 Segments\",\n    segments: 4,\n  },\n  {\n    label: \"8 Segments\",\n    segments: 8,\n  },\n  {\n    label: \"12 Segments\",\n    segments: 12,\n  },\n  {\n    label: \"24 Segments\",\n    segments: 24,\n  },\n]\n\nexport function GaugeDemoSegments() {\n  return (\n    <div className=\"flex flex-wrap items-center justify-center gap-8\">\n      {gauges.map((gauge) => (\n        <div key={gauge.label} className=\"flex flex-col items-center gap-3\">\n          <Gauge value={65} size={160} segments={gauge.segments}>\n            <GaugeIndicator>\n              <GaugeTrack />\n              <GaugeRange />\n            </GaugeIndicator>\n\n            <GaugeValueText />\n          </Gauge>\n\n          <span className=\"text-sm text-muted-foreground\">{gauge.label}</span>\n        </div>\n      ))}\n    </div>\n  )\n}\n",
-      "type": "registry:block"
+      "type": "registry:component"
     }
   ]
 }

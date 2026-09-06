@@ -7,6 +7,7 @@ import { templateCategories } from "@/registry/registry-categories"
 import { UIDesignCategory } from "@/src/components/home/categories-section"
 import { ComponentsSection } from "@/src/components/home/components"
 import { WorksSection } from "@/src/components/home/works"
+import { FeaturedBlocks } from "@/src/components/home/featured-blocks"
 
 export default function Page() {
   const templates = templateCategories.filter((template) => !template.hidden)
@@ -26,8 +27,9 @@ export default function Page() {
         ))}
       </div>
       <ComponentsSection />
-      <UIDesignCategory />
+      <FeaturedBlocks/>
       <WorksSection/>
+      <UIDesignCategory />
       <Testimonials />
       <FAQSection />
     </div>

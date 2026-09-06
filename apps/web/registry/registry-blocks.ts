@@ -263,6 +263,40 @@ export const blocks: Registry["items"] = [
     },
   },
   {
+    name: "hero-4",
+    description: "A split-screen hero section with branding, theme toggle, video, work, and contact cards.",
+    type: "registry:block",
+    files: [
+      {
+        path: "blocks/hero/hero-4.tsx",
+        type: "registry:block",
+      },
+    ],
+    categories: ["hero"],
+    meta: {
+      iframeHeight: "800px",
+      container: "",
+      mobile: "component",
+    },
+  },
+  {
+    name: "hero-5",
+    description: "A split-screen hero section with branding, theme toggle, video, work, and contact cards.",
+    type: "registry:block",
+    files: [
+      {
+        path: "blocks/hero/hero-5.tsx",
+        type: "registry:block",
+      },
+    ],
+    categories: ["hero"],
+    meta: {
+      iframeHeight: "800px",
+      container: "",
+      mobile: "component",
+    },
+  },
+  {
     name: "footer-01",
     description: "A simple footer.",
     type: "registry:block",

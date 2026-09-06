@@ -1,13 +1,13 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "bento-04",
-  "type": "registry:block",
-  "description": "block showing a simple bento.",
+  "type": "registry:component",
+  "description": "component showing a simple bento.",
   "files": [
     {
       "path": "registry/designali/components/bento/bento-04.tsx",
       "content": "import { BentoGrid, BentoGridItem } from \"@/registry/designali/ui/bento\"\n\nexport default function BentoExample() {\n  return (\n    <BentoGrid\n      className=\"border\"\n      gap={0}\n      cols={4}\n      rowHeight={{ base: \"40px\", md: \"90px\", lg: \"180px\" }}\n    >\n      {Array.from({ length: 8 }).map((_, i) => (\n        <BentoGridItem colSpan={{ base: 4, md: 2, lg: 1 }} key={i}>\n          Card {i + 1}\n        </BentoGridItem>\n      ))}\n    </BentoGrid>\n  )\n}\n",
-      "type": "registry:block"
+      "type": "registry:component"
     }
   ]
 }

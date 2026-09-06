@@ -1,13 +1,13 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "gauge-demo-states",
-  "type": "registry:block",
+  "type": "registry:component",
   "description": "Gauge loading and complete states",
   "files": [
     {
       "path": "registry/designali/components/gauge/gauge-demo-states.tsx",
       "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport {\n  Gauge,\n  GaugeIndicator,\n  GaugeRange,\n  GaugeTrack,\n  GaugeValueText,\n} from \"@/registry/designali/ui/gauge\"\n\nconst states = [\n  {\n    label: \"Indeterminate\",\n    value: null,\n  },\n  {\n    label: \"Loading\",\n    value: 64,\n  },\n  {\n    label: \"Complete\",\n    value: 100,\n  },\n]\n\nexport function GaugeDemoStates() {\n  return (\n    <div className=\"flex flex-wrap items-center justify-center gap-10\">\n      {states.map((item) => (\n        <div key={item.label} className=\"flex flex-col items-center gap-3\">\n          <Gauge value={item.value} size={170}>\n            <GaugeIndicator>\n              <GaugeTrack />\n              <GaugeRange />\n            </GaugeIndicator>\n\n            <GaugeValueText>\n              {item.value === null ? \"—\" : `${item.value}%`}\n            </GaugeValueText>\n          </Gauge>\n\n          <span className=\"text-sm text-muted-foreground\">{item.label}</span>\n        </div>\n      ))}\n    </div>\n  )\n}\n",
-      "type": "registry:block"
+      "type": "registry:component"
     }
   ]
 }

@@ -1,9 +1,9 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "dot-pattern-custom",
-  "type": "registry:block",
+  "type": "registry:component",
   "title": "Dot Pattern",
-  "description": "block showing a simple dot pattern.",
+  "description": "component showing a simple dot pattern.",
   "registryDependencies": [
     "dot-pattern"
   ],
@@ -11,7 +11,7 @@
     {
       "path": "registry/designali/components/dot-pattern/dot-pattern-custom.tsx",
       "content": "import { DotPattern } from \"@/registry/designali/ui/dot-pattern\"\n\nexport default function Component() {\n  return (\n    <div className=\"flex h-full w-full items-center justify-center\">\n      <DotPattern dotSize={0.5} width={5} height={5} />\n    </div>\n  )\n}\n",
-      "type": "registry:block"
+      "type": "registry:component"
     }
   ]
 }
