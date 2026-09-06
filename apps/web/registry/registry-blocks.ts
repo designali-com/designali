@@ -321,7 +321,7 @@ export const blocks: Registry["items"] = [
     ],
     categories: ["footer"],
     meta: {
-      iframeHeight: "600px",
+      iframeHeight: "700px",
     },
   },
   {

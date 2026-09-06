@@ -711,8 +711,7 @@ export const templateCategories: {
 
     image: "/images/templates/portfolio-simple.jpg",
     video: "/images/templates/portfolio-simple.jpg",
-  },
-
+  }, 
   {
     id: "design-agency",
     name: "Design Agency",
@@ -747,4 +746,72 @@ export const templateCategories: {
     image: "/images/templates/design-agency.jpg",
     video: "/images/templates/design-agency.jpg",
   },
+  {
+    id: "vercel",
+    name: "Vercel",
+    slug: "vercel",
+    description:
+      "A clean and modern personal portfolio template for designers, developers, creatives, and digital professionals.",
+    iconName: "PanelTop",
+    hidden: false,
+
+    url: "https://vercel.designali.com",
+    downloadurl: "https://github.com/designali-com/templates/tree/main/vercel",
+
+    tech: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
+
+    pages: ["Home", "About", "Work", "Projects", "Services", "Contact"],
+
+    features: [
+      "Responsive Design",
+      "Dark Mode",
+      "Page Transitions",
+      "Smooth Animations",
+      "SEO Ready",
+      "Accessible",
+      "Fast Performance",
+      "Modern Typography",
+    ],
+
+    colors: ["#0A0A0A", "#FFFFFF", "#6366F1", "#F4F4F5"],
+
+    fonts: ["Inter", "Geist"],
+
+    image: "/images/templates/vercel.jpg",
+    video: "/images/templates/vercel.jpg",
+  },
+  {
+    id: "aliimam",
+    name: "Ali Imam",
+    slug: "aliimam",
+    description:
+      "A clean and modern personal portfolio template for designers, developers, creatives, and digital professionals.",
+    iconName: "PanelTop",
+    hidden: false,
+
+    url: "https://old.aliimam.in/",
+    downloadurl: "https://github.com/aliimam-in/aliimam",
+
+    tech: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
+
+    pages: ["Home", "About", "Work", "Projects", "Services", "Contact"],
+
+    features: [
+      "Responsive Design",
+      "Dark Mode",
+      "Page Transitions",
+      "Smooth Animations",
+      "SEO Ready",
+      "Accessible",
+      "Fast Performance",
+      "Modern Typography",
+    ],
+
+    colors: ["#0A0A0A", "#FFFFFF", "#6366F1", "#F4F4F5"],
+
+    fonts: ["Inter", "Geist"],
+
+    image: "/images/templates/aliimam.jpg",
+    video: "/images/templates/aliimam.jpg",
+  }, 
 ]

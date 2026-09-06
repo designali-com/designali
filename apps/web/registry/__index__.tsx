@@ -691,7 +691,7 @@ export const Index: Record<string, any> = {
       },
     ],
     categories: ["footer"],
-    meta: { iframeHeight: "600px" },
+    meta: { iframeHeight: "700px" },
     component: React.lazy(async () => {
       const mod =
         await import("@/registry/designali/blocks/footer/footer-01/page")

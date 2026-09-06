@@ -158,7 +158,7 @@ const linksCom = [
 
 export function Footer() {
   return (
-    <footer className="py-16">
+    <footer className="py-16 mt-auto border-t">
       <div className="mx-auto max-w-6xl px-6">
         <div className="">
           <div className="grid grid-cols-2 gap-14 md:grid-cols-3 lg:grid-cols-5">

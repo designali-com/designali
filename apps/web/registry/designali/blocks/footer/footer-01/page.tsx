@@ -2,7 +2,7 @@ import { Footer } from "@/registry/designali/blocks/footer/footer-01/components/
 
 export default function Header05() {
   return (
-    <div className="flex h-full w-full flex-col">
+    <div className="flex mt-auto h-screen w-full flex-col">
       <Footer />
     </div>
   )

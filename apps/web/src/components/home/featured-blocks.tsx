@@ -11,7 +11,8 @@ import {
     Navigation,
     User,
     RectangleHorizontal,
-    BadgeDollarSign,  
+    BadgeDollarSign,
+    Sparkle,  
 } from "lucide-react"
 import Link from "next/link"
 
@@ -44,9 +45,13 @@ export function FeaturedBlocks() {
                                     <PanelBottom className="h-3" />
                                     Footer
                                 </TabsTrigger>
+                                <TabsTrigger value="feature">
+                                    <Sparkle className="h-3" />
+                                    Feature
+                                </TabsTrigger>
                                 <TabsTrigger value="pricing">
                                     <BadgeDollarSign className="h-3" />
-                                    Pricing
+                                    Secondary Hero
                                 </TabsTrigger>
                                 <TabsTrigger value="clients">
                                     <User className="h-3" />
@@ -70,6 +75,11 @@ export function FeaturedBlocks() {
                         <TabsContent value="footer">
                             <BlockList blocks={["footer-01"]} />
                         </TabsContent>
+
+                        <TabsContent value="feature">
+                            <BlockList blocks={["feature-01"]} />
+                        </TabsContent>
+
 
                         <TabsContent value="pricing">
                             <BlockList blocks={["hero-4"]} />

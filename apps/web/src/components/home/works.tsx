@@ -21,11 +21,11 @@ export function WorksSection({ className }: { className?: string }) {
       <div className="relative"> 
         <div className="flex flex-col items-center md:flex-row">
           <div className="relative w-full py-2"> 
-              <Marquee pauseOnHover gap={10}>
+              <Marquee>
                 {technologies.map((tech, index) => (
                   <div key={`${tech.name}-${index}`} className="py-2">
                     <img
-                      className="mx-auto h-60 md:h-120 border object-contain w-auto"
+                      className="mx-auto h-60 last:mr-2 md:h-120 border object-contain w-auto"
                       src={tech.image}
                       alt={tech.name}
                     />
