@@ -5,6 +5,10 @@ const nextConfig = {
   transpilePackages: ["@workspace/ui"],
 
   outputFileTracingIncludes: {
+    "/api/templates/[slug]/download": [
+      "../../templates/**/*",
+    ],
+  
     "/*": [
       "./registry/**/*",
       "./content/**/*",

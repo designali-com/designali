@@ -27,8 +27,8 @@
     "@paper-design/shaders-react": "^0.0.78",
     "@react-email/components": "^1.0.4",
     "@shikijs/transformers": "^3.15.0",
-    "@vercel/analytics": "^2.0.1",
-    "@workspace/ui": "workspace:*",
+    "@vercel/analytics": "^2.0.1", 
+    "@workspace/ui": "workspace:*", 
     "better-auth": "^1.6.11",
     "crypto": "^1.0.1",
     "dotenv": "^17.2.3",
@@ -60,7 +60,7 @@
     "zod": "^4.4.3"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4",
+    "@tailwindcss/postcss": "^4", 
     "@types/mdx": "^2.0.13",
     "@types/node": "^20",
     "@types/react": "^19",

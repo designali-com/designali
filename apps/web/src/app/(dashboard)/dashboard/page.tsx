@@ -43,7 +43,7 @@ export default async function Dashboard() {
     : null;
 
   return (
-    <div className="min-h-screen p-6 md:p-10 space-y-8">
+    <div className="min-h-screen p-6 space-y-8">
       {/* 1. Header / Navbar */}
       <header className="flex  my-10 flex-col sm:flex-row justify-between items-start sm:items-center gap-4 pb-6 border-b">
         <div>
@@ -53,10 +53,10 @@ export default async function Dashboard() {
           </p>
         </div>
         <div className="flex items-center gap-3">
-          <Dialog>
+          <Dialog >
             <DialogTrigger
               render={
-                <Button variant="outline" size={"sm"}>
+                <Button className={"hidden"} variant="outline" size={"sm"}>
                   + Create Organization
                 </Button>
               } />
@@ -83,13 +83,13 @@ export default async function Dashboard() {
             <p className="text-xl font-bold capitalize text-emerald-400">
               {sub?.status === "active" ? sub.plan : "Free Tier"}
             </p>
-            <Button size="sm" variant="ghost" className="text-xs text-zinc-400 hover:text-white">
+            <Button size="sm" variant="ghost">
               Upgrade
             </Button>
           </div>
         </div>
 
-        <div className="p-5 border">
+        <div className="p-5 border hidden">
           <span className="text-xs text-zinc-400 font-medium">Total Organizations</span>
           <p className="text-xl font-bold">{organizations.length}</p>
         </div>
@@ -101,7 +101,7 @@ export default async function Dashboard() {
       </div>
 
       {/* 3. Organizations Grid Section */}
-      <section className="space-y-4">
+      <section className="space-y-4 hidden">
         <div className="flex justify-between items-center">
           <h2 className="font-bold text-xl tracking-tight">Your Workspaces</h2>
           <span className="text-xs text-zinc-500">{organizations.length} Active</span>
