@@ -1,4 +1,4 @@
- 
+
 "use client"
 
 import { useEffect, useMemo, useState } from "react"
@@ -72,28 +72,28 @@ export function NavIcon() {
   const categoriesWithCount = useMemo(() => {
     const map = new Map<string, number>()
 
-    ;(
-      Object.entries(allIcons) as [string, Record<string, any>][]
-    ).forEach(([category, icons]) => {
-      const uniqueBaseIds = new Set(
-        Object.values(icons)
-          .filter((entry: any) =>
-            matchesVariantTab(
-              entry.metadata?.variant,
-              variantTab
+      ; (
+        Object.entries(allIcons) as [string, Record<string, any>][]
+      ).forEach(([category, icons]) => {
+        const uniqueBaseIds = new Set(
+          Object.values(icons)
+            .filter((entry: any) =>
+              matchesVariantTab(
+                entry.metadata?.variant,
+                variantTab
+              )
             )
-          )
-          .map(
-            (entry: any) =>
-              entry.metadata?.baseId as string
-          )
-          .filter(Boolean)
-      )
+            .map(
+              (entry: any) =>
+                entry.metadata?.baseId as string
+            )
+            .filter(Boolean)
+        )
 
-      if (uniqueBaseIds.size > 0) {
-        map.set(category, uniqueBaseIds.size)
-      }
-    })
+        if (uniqueBaseIds.size > 0) {
+          map.set(category, uniqueBaseIds.size)
+        }
+      })
 
     return Array.from(map.entries()).sort((a, b) =>
       a[0].localeCompare(b[0])
@@ -109,35 +109,7 @@ export function NavIcon() {
       ),
     [categoriesWithCount]
   )
-
-  // Handle category selection
-  const handleClick = (category: string | null) => {
-    setCategory(category)
-
-    const url = new URL(window.location.href)
-
-    const tab = url.searchParams.get("tab")
-
-    const params = new URLSearchParams()
-
-    if (tab) {
-      params.set("tab", tab)
-    }
-
-    const search = params.size ? `?${params}` : ""
-    const hash = category ? `#${category}` : ""
-
-    window.history.pushState(
-      null,
-      "",
-      `/icons${search}${hash}`
-    )
-
-    window.dispatchEvent(
-      new HashChangeEvent("hashchange")
-    )
-  }
-
+ 
   return (
     <SidebarGroup>
       {/* Category Heading */}
@@ -148,24 +120,22 @@ export function NavIcon() {
       {/* All Icons */}
       <SidebarMenu className="pt-8">
         <SidebarMenuItem>
-          <SidebarMenuButton
-            onClick={() => handleClick(null)}
+          <SidebarMenuButton 
+            render={<a href="/icons" />}
             tooltip="All Icons"
-            className={`justify-end gap-2 group-data-[collapsible=icon]:justify-center hover:text-primary ${
-              activeHash === null
+            className={`justify-end gap-2 group-data-[collapsible=icon]:justify-center hover:text-primary ${activeHash === null
                 ? "text-primary opacity-100"
                 : "opacity-70 hover:opacity-100"
-            }`}
+              }`}
           >
             <span className="capitalize group-data-[collapsible=icon]:hidden">
               All
             </span>
 
             <div className="flex items-center gap-2">
-              <span className="shrink-0 tabular-nums">
+              <span className="shrink-0 tabular-nums group-data-[collapsible=icon]:hidden">
                 {totalCount}
               </span>
-
               <LayoutGrid className="size-4 shrink-0" />
             </div>
           </SidebarMenuButton>
@@ -181,24 +151,17 @@ export function NavIcon() {
 
             return (
               <SidebarMenuItem key={category}>
-                <SidebarMenuButton
-                  onClick={() =>
-                    handleClick(category)
-                  }
+                <SidebarMenuButton 
+                  render={<a href={`/icons#${category}`}/>}
                   tooltip={category}
-                  className={`justify-end gap-2 group-data-[collapsible=icon]:justify-center hover:text-primary ${
-                    isActive
+                  className={`justify-end gap-2 group-data-[collapsible=icon]:justify-center hover:text-primary ${isActive
                       ? "text-primary opacity-100"
                       : "opacity-70 hover:opacity-100"
-                  }`}
+                    }`}
                 >
                   <span className="capitalize group-data-[collapsible=icon]:hidden">
                     {category}
-                  </span>
-
-                  <span className="shrink-0 tabular-nums">
-                    {count}
-                  </span>
+                  </span> 
                 </SidebarMenuButton>
               </SidebarMenuItem>
             )

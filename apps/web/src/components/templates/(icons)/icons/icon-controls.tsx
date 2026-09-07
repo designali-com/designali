@@ -1,6 +1,14 @@
 "use client"
 
 import { RotateCw } from "lucide-react"
+import {
+  Square,
+  Circle,
+  Minus,
+  CornerDownRight,
+  SquareDot,
+  FoldVertical
+} from "lucide-react";
 
 import { Button } from "@workspace/ui/components/button"
 import { Input } from "@workspace/ui/components/input"
@@ -56,8 +64,8 @@ export function IconControlsPanel({
             } else {
               onSizeChange(value[0] ?? size)
             }
-          }} 
-        /> 
+          }}
+        />
       </div>
 
       {!isFilled && (
@@ -74,7 +82,7 @@ export function IconControlsPanel({
               } else {
                 onstrokeWidthChange(value[0] ?? size)
               }
-            }} 
+            }}
           />
         </div>
       )}
@@ -131,7 +139,7 @@ export function IconViewControlsPanel({
 }: LogoControlsPanelProps) {
   const { variantTab } = useIconFilter()
   const isFilled =
-    activeVariant === "filled" || 
+    activeVariant === "filled" ||
     activeVariant === "rounded" ||
     activeVariant === "doodle" ||
     variantTab === "filled" ||
@@ -139,137 +147,171 @@ export function IconViewControlsPanel({
 
   return (
     <div className="space-y-6">
-      <div className="space-y-2">
-        <Label>Size: {size}px</Label>
-        <Slider
-          min={16}
-          max={400}
-          step={4}
-          value={[size]}
-          onValueChange={(value) => {
-            if (typeof value === "number") {
-              onstrokeWidthChange(value)
-            } else {
-              onstrokeWidthChange(value[0] ?? size)
-            }
-          }}  
-        />
-      </div>
-
-      {!isFilled && (
-        <div className="space-y-2">
-          <Label>strokeWidth: {strokeWidth}</Label>
+      <div className="flex gap-3 w-full">
+        <div className="space-y-2 w-full">
+          <Label>Size: {size}px</Label>
           <Slider
-            min={0.1}
-            max={4}
-            step={0.1}
-            value={[strokeWidth]}
+            min={16}
+            max={600}
+            step={4}
+            value={[size]}
             onValueChange={(value) => {
               if (typeof value === "number") {
-                onstrokeWidthChange(value)
+                onSizeChange(value)
               } else {
-                onstrokeWidthChange(value[0] ?? size)
+                onSizeChange(value[0] ?? size)
               }
-            }} 
+            }}
           />
         </div>
-      )}
 
-      <div className="flex w-full gap-2">
-        {!isFilled && (onStrokeLinecapChange || onStrokeLinejoinChange) && (
-          <div className="flex w-full gap-2">
-            {!isFilled && onStrokeLinecapChange && (
-              <div className="flex-1 space-y-2">
-                <Label>Cap: {strokeLinecap}</Label>
-                <ToggleGroup
-                   
-                  size="sm"
-                  variant="outline"
-                  
-                  onValueChange={(val) =>
-                    val &&
-                    onStrokeLinecapChange(val as unknown as "round" | "butt" | "square")
-                  }
-                  className="w-full"
-                >
-                  {(["round", "butt", "square"] as const).map((val) => (
-                    <ToggleGroupItem
-                      key={val}
-                      value={val}
-                      className="flex-1 text-xs"
-                    >
-                      {val}
-                    </ToggleGroupItem>
-                  ))}
-                </ToggleGroup>
-              </div>
-            )}
-
-            {activeVariant !== "filled" &&
-              activeVariant !== "pixel" &&
-              onStrokeLinejoinChange && (
-                <div className="flex-1 space-y-2">
-                  <Label>Join: {strokeLinejoin}</Label>
-                  <ToggleGroup
-                     
-                    size="sm"
-                    variant="outline"
-                    
-                    onValueChange={(val) =>
-                      val &&
-                      onStrokeLinejoinChange(val as unknown as "round" | "miter" | "bevel")
-                    }
-                    className="w-full"
-                  >
-                    {(["round", "miter", "bevel"] as const).map((val) => (
-                      <ToggleGroupItem
-                        key={val}
-                        value={val}
-                        className="flex-1 text-xs"
-                      >
-                        {val}
-                      </ToggleGroupItem>
-                    ))}
-                  </ToggleGroup>
-                </div>
-              )}
+        {!isFilled && (
+          <div className="space-y-2 w-full">
+            <Label>strokeWidth: {strokeWidth}</Label>
+            <Slider
+              min={0.1}
+              max={4}
+              step={0.1}
+              value={[strokeWidth]}
+              onValueChange={(value) => {
+                if (typeof value === "number") {
+                  onstrokeWidthChange(value)
+                } else {
+                  onstrokeWidthChange(value[0] ?? size)
+                }
+              }}
+            />
           </div>
         )}
       </div>
 
-      <div className="flex -mt-4 flex-wrap items-center justify-between gap-2">
-        <input
-          id="color"
-          type="color"
-          value={color === "currentColor" ? "#000000" : color}
-          onChange={(e) => onColorChange(e.target.value)}
-          className="absolute h-8 w-8 border p-3"
-        />
-        <div
-          className="h-8 w-8 border"
-          style={{
-            backgroundColor: color === "currentColor" ? "#000000" : color,
-          }}
-        />
-        <Input
-          type="text"
-          value={color}
-          onChange={(e) => onColorChange(e.target.value)}
-          className="flex-1"
-          placeholder="currentColor"
-        />
-        <Button
-          variant="secondary"
-          size="icon"
-          onClick={() => {
-            onSizeChange(200)
-            onColorChange("currentColor")
-            onstrokeWidthChange(1)
-          }}
-        >
-          <RotateCw />
-        </Button>
+
+
+      <div className="grid grid-cols-2 w-full items-center justify-between gap-2">
+        <div className="flex items-center justify-between gap-2">
+          <input
+            id="color"
+            type="color"
+            value={color === "currentColor" ? "#000000" : color}
+            onChange={(e) => onColorChange(e.target.value)}
+            className="absolute h-8 w-8 border p-3"
+          />
+          <div
+            className="h-8 w-10 border"
+            style={{
+              backgroundColor: color === "currentColor" ? "#000000" : color,
+            }}
+          />
+          <Input
+            type="text"
+            value={color}
+            onChange={(e) => onColorChange(e.target.value)}
+            className=""
+            placeholder="currentColor"
+          />
+        </div>
+        <div className="flex w-full items-center gap-2">
+          {!isFilled && (onStrokeLinecapChange || onStrokeLinejoinChange) && (
+            <div className="flex w-full gap-2">
+              {onStrokeLinecapChange && (
+                <div className="min-w-0 flex-1 space-y-2">
+                  <ToggleGroup
+                    size="sm"
+                    variant="outline"
+                    onValueChange={(val) =>
+                      val &&
+                      onStrokeLinecapChange(
+                        val as unknown as "round" | "butt" | "square"
+                      )
+                    }
+                    className="flex w-full"
+                  >
+                    <ToggleGroupItem
+                      value="round"
+                      className="flex-1"
+                      aria-label="Round cap"
+                    >
+                      <Circle className="size-4" />
+                    </ToggleGroupItem>
+
+                    <ToggleGroupItem
+                      value="butt"
+                      className="flex-1"
+                      aria-label="Butt cap"
+                    >
+                      <Minus className="size-4" />
+                    </ToggleGroupItem>
+
+                    <ToggleGroupItem
+                      value="square"
+                      className="flex-1"
+                      aria-label="Square cap"
+                    >
+                      <Square className="size-4" />
+                    </ToggleGroupItem>
+                  </ToggleGroup>
+                </div>
+              )}
+
+              {activeVariant !== "filled" &&
+                activeVariant !== "pixel" &&
+                onStrokeLinejoinChange && (
+                  <div className="min-w-0 flex-1 space-y-2">
+                    <ToggleGroup
+                      size="sm"
+                      variant="outline"
+                      onValueChange={(val) =>
+                        val &&
+                        onStrokeLinejoinChange(
+                          val as unknown as "round" | "miter" | "bevel"
+                        )
+                      }
+                      className="flex w-full"
+                    >
+                      <ToggleGroupItem
+                        value="round"
+                        className="flex-1"
+                        aria-label="Round join"
+                      >
+                        <Circle className="size-4" />
+                      </ToggleGroupItem>
+
+                      <ToggleGroupItem
+                        value="miter"
+                        className="flex-1"
+                        aria-label="Miter join"
+                      >
+                        <CornerDownRight className="size-4" />
+                      </ToggleGroupItem>
+
+                      <ToggleGroupItem
+                        value="bevel"
+                        className="flex-1"
+                        aria-label="Bevel join"
+                      >
+                        <Square className="size-4" />
+                      </ToggleGroupItem>
+                    </ToggleGroup>
+                  </div>
+                )}
+            </div>
+          )}
+          <Button
+            variant="secondary"
+            size="icon"
+            onClick={() => {
+              onSizeChange(200)
+              onColorChange("currentColor")
+              onstrokeWidthChange(1)
+            }}
+          >
+            <RotateCw />
+          </Button>
+        </div>
+
       </div>
-    </div>
+
+
+    </div >
   )
 }

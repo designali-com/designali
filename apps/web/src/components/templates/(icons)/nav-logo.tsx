@@ -83,25 +83,7 @@ export function NavLogo() {
   }, [variantTab])
  
    
-
-  // Handle category selection
-  const handleClick = (category: string | null) => {
-    setCategory(category)
-
-    const url = new URL(window.location.href)
-
-    url.pathname = "/logos"
-    url.hash = category ? `#${category}` : ""
-
-    window.history.pushState(
-      null,
-      "",
-      `${url.pathname}${url.search}${url.hash}`
-    )
-
-    window.dispatchEvent(new HashChangeEvent("hashchange"))
-  }
-
+ 
   return (
     <SidebarGroup>
       {/* Category Heading */}
@@ -113,7 +95,7 @@ export function NavLogo() {
       <SidebarMenu className="pt-8">
         <SidebarMenuItem>
           <SidebarMenuButton
-            onClick={() => handleClick(null)}
+             render={<a href={`/logos`}/>}
             tooltip="All Logos"
             className={`justify-end gap-2 group-data-[collapsible=icon]:justify-center hover:text-primary ${
               activeHash === null
@@ -137,7 +119,7 @@ export function NavLogo() {
           return (
             <SidebarMenuItem key={category}>
               <SidebarMenuButton
-                onClick={() => handleClick(category)}
+                 render={<a href={`/logos#${category}`}/>}
                 tooltip={category}
                 className={`justify-end gap-2 group-data-[collapsible=icon]:justify-center hover:text-primary ${
                   isActive

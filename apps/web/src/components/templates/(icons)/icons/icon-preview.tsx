@@ -3,7 +3,7 @@
 
 import { useEffect, useState } from "react"
 import Link from "next/link"
-import { allIcons } from "@designali/icons" 
+import { allIcons } from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -15,8 +15,8 @@ import { IconControlsPanel } from "./icon-controls"
 import { IconDownloadPanel } from "./icon-download"
 import { useIconFilter } from "./icon-filter-context"
 import { Icons } from "./icons"
-import { IconGridLines } from "@/src/components/logo" 
-import { PanelRightClose } from "lucide-react"
+import { IconGridLines } from "@/src/components/logo"
+import { ExpandIcon, PanelRightClose } from "lucide-react"
 
 interface Props {
   selectedLogo: string
@@ -95,8 +95,14 @@ export function IconPreview({ selectedLogo, onClearSelection }: Props) {
             <ToggleGroup
               size="sm"
               variant="outline"
-              value={[activeVariant]}
-               
+              value={[activeVariant]} 
+              onValueChange={(val) => {
+                const variant = val[0]
+
+                if (variant !== undefined) {
+                  setActiveVariant(variant)
+                }
+              }}
               className="w-full flex-wrap"
             >
               {variants.map((v) => (
@@ -112,21 +118,31 @@ export function IconPreview({ selectedLogo, onClearSelection }: Props) {
           </div>
         )}
 
-        <div className="flex flex-wrap items-center pb-6 justify-between">
+        <div className="flex w-68 gap-3 items-center pb-6 justify-between">
           <h2 className="truncate text-center text-sm font-medium">
             {selectedLogo}
           </h2>
-          <Button
-            className="text-muted-foreground cursor-pointer"
-            variant="ghost"
-            size={"icon"}
-            onClick={onClearSelection}
-          >
-            <PanelRightClose />
-          </Button>
+          <div className="flex gap-1">
+            <Button
+              render={
+                <Link href={`/icons/${selectedLogo}`} />
+              }
+              className="text-muted-foreground cursor-pointer"
+              variant="ghost"
+              size={"icon"}
+            >
+              <ExpandIcon />
+            </Button>
+            <Button
+              className="text-muted-foreground cursor-pointer"
+              variant="ghost"
+              size={"icon"}
+              onClick={onClearSelection}
+            >
+              <PanelRightClose />
+            </Button>
+          </div>
         </div>
-
-
 
         <IconControlsPanel
           size={size}
@@ -139,8 +155,8 @@ export function IconPreview({ selectedLogo, onClearSelection }: Props) {
         />
 
         <IconDownloadPanel logoName={activeId} size={size} color={color} />
-         
-      </div> 
+
+      </div>
     </div>
   )
 }
@@ -178,7 +194,7 @@ export function IconPreviewPhone({ selectedLogo, onClearSelection }: Props) {
             size="sm"
             variant="outline"
             value={[activeVariant]}
-             
+
             className="w-full flex-wrap"
           >
             {variants.map((v) => (
@@ -204,15 +220,18 @@ export function IconPreviewPhone({ selectedLogo, onClearSelection }: Props) {
           >
             [Close]
           </Button>
-          <Link href={`/icons/${selectedLogo}`}>
-            <Button
-              className="text-muted-foreground cursor-pointer"
-              variant="ghost"
-              size="sm"
-            >
-              [Open]
-            </Button>
-          </Link>
+
+          <Button
+            render={
+              <Link href={`/icons/${selectedLogo}`} />
+            }
+            className="text-muted-foreground cursor-pointer"
+            variant="ghost"
+            size="sm"
+          >
+            [Open]
+          </Button>
+
         </div>
       </div>
 

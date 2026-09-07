@@ -11,6 +11,7 @@ import { FeaturedBlocks } from "@/src/components/home/featured-blocks"
 import { BuildWith } from "@/src/components/home/build-with"
 import { NumbersSection } from "@/src/components/home/numbers"
 import { WaitlistSection } from "@/src/components/auth/waitlist"
+import { IconsShowcase } from "@/src/components/home/icons-showcase"
 
 export default function Page() {
   const templates = templateCategories.filter((template) => !template.hidden)
@@ -35,6 +36,7 @@ export default function Page() {
       <FeaturedBlocks/>
       <WorksSection/>
       <BlocksCategory/>
+      <IconsShowcase/>
       <UIDesignCategory />
       <Testimonials />
       <WaitlistSection/>

@@ -124,6 +124,16 @@ export function VectorPreview({ selectedLogo, onClearSelection }: Props) {
             {selectedLogo}
           </h2>
           <Button
+            render={
+              <Link href={`/vectors/${selectedLogo}`} />
+            }
+            className="text-muted-foreground cursor-pointer"
+            variant="ghost"
+            size="sm"
+          >
+            [Open]
+          </Button>
+          <Button
             className="text-muted-foreground cursor-pointer"
             variant="ghost"
             size="sm"
