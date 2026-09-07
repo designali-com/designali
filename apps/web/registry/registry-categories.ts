@@ -6,6 +6,7 @@ import {
   DollarSign,
   FileText,
   Frame,
+  Triangle,
   Image,
   LayoutGrid,
   LayoutTemplate,
@@ -56,6 +57,11 @@ export const data = {
       title: "Logos",
       url: "/logos",
       icon: Frame,
+    },
+    {
+      title: "Vectors",
+      url: "/vectors",
+      icon: Triangle,
     },
     {
       title: "UI Designs",

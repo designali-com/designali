@@ -2,17 +2,17 @@ import { betterAuth } from "better-auth";
 import { drizzleAdapter } from "better-auth/adapters/drizzle";
 import { nextCookies } from "better-auth/next-js";
 import { lastLoginMethod, organization } from "better-auth/plugins";
-import { Resend } from "resend";
-import OrganizationInvitationEmail from "@/src/components/email/organization-invitation";
-import ForgotPasswordEmail from "@/src/components/email/reset-password";
-import VerifyEmail from "@/src/components/email/verify-email";
+import OrganizationInvitationEmail from "@/emails/organization-invitation";
+import ForgotPasswordEmail from "@/emails/reset-password";
+import VerifyEmail from "@/emails/verify-email";
 import { db } from "@/src/db/drizzle";
 import { schema } from "@/src/db/schema";
 import { getActiveOrganization } from "@/src/server/organizations";
 import { admin, member, owner } from "./permissions";
 import { admin as adminPlugin } from "better-auth/plugins";
+import { resend } from "../resend";
+import WelcomeEmail from "@/emails/welcome";
 
-const resend = new Resend(process.env.RESEND_API_KEY as string);
 
 export const auth = betterAuth({
   emailVerification: {
@@ -53,6 +53,21 @@ export const auth = betterAuth({
     requireEmailVerification: true,
   },
   databaseHooks: {
+    user: {
+      create: {
+        after: async (user) => {
+          await resend.emails.send({
+            from: `${process.env.EMAIL_SENDER_NAME} <${process.env.EMAIL_SENDER_ADDRESS}>`,
+            to: user.email,
+            subject: "Welcome to Designali 🎉",
+            react: WelcomeEmail({
+              username: user.name,
+              url: `${process.env.NEXT_PUBLIC_SITE_URL}/dashboard`,
+            }),
+          })
+        },
+      },
+    },
     session: {
       create: {
         before: async (session) => {
@@ -77,7 +92,7 @@ export const auth = betterAuth({
     adminPlugin(),
     organization({
       sendInvitationEmail: async (data) => {
-        const inviteLink = `${process.env.NEXT_PUBLIC_APP_URL}/api/accept-invitation/${data.id}`;
+        const inviteLink = `${process.env.NEXT_PUBLIC_SITE_URL}/api/accept-invitation/${data.id}`;
 
         await resend.emails.send({
           from: `${process.env.EMAIL_SENDER_NAME} <${process.env.EMAIL_SENDER_ADDRESS}>`,

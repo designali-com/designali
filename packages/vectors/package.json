@@ -1,0 +1,31 @@
+{
+  "name": "@designali/vectors",
+  "version": "0.0.1",
+  "description": "Custom React vectors library generated from JSON",
+  "license": "MIT",
+  "source": "./src/index.ts",
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "generate:vectors": "tsx scripts/generate-vectors.ts",
+    "registry:gen": "tsx scripts/generate-registry.ts",
+    "build": "tsup",
+    "prepublishOnly": "npm run generate:vectors && npm run build"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "react": "19.2.4"
+  },
+  "devDependencies": {
+    "@types/react": "^19",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3"
+  }
+}

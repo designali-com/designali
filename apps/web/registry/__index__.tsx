@@ -1190,7 +1190,7 @@ export const Index: Record<string, any> = {
     devDependencies: [],
     files: [
       {
-        path: "registry/designali/components/accordion/accordion-01.tsx",
+        path: "registry/designali/examples/accordion/accordion-01.tsx",
         type: "registry:example",
         target: "",
       },
@@ -1199,7 +1199,7 @@ export const Index: Record<string, any> = {
     meta: {},
     component: React.lazy(async () => {
       const mod =
-        await import("@/registry/designali/components/accordion/accordion-01")
+        await import("@/registry/designali/examples/accordion/accordion-01")
 
       const exportName =
         Object.keys(mod).find(
@@ -1222,7 +1222,7 @@ export const Index: Record<string, any> = {
     devDependencies: [],
     files: [
       {
-        path: "registry/designali/components/accordion/accordion-02.tsx",
+        path: "registry/designali/examples/accordion/accordion-02.tsx",
         type: "registry:example",
         target: "",
       },
@@ -1231,7 +1231,7 @@ export const Index: Record<string, any> = {
     meta: {},
     component: React.lazy(async () => {
       const mod =
-        await import("@/registry/designali/components/accordion/accordion-02")
+        await import("@/registry/designali/examples/accordion/accordion-02")
 
       const exportName =
         Object.keys(mod).find(
@@ -1254,7 +1254,7 @@ export const Index: Record<string, any> = {
     devDependencies: [],
     files: [
       {
-        path: "registry/designali/components/accordion/accordion-03.tsx",
+        path: "registry/designali/examples/accordion/accordion-03.tsx",
         type: "registry:example",
         target: "",
       },
@@ -1263,7 +1263,7 @@ export const Index: Record<string, any> = {
     meta: {},
     component: React.lazy(async () => {
       const mod =
-        await import("@/registry/designali/components/accordion/accordion-03")
+        await import("@/registry/designali/examples/accordion/accordion-03")
 
       const exportName =
         Object.keys(mod).find(
@@ -1286,7 +1286,7 @@ export const Index: Record<string, any> = {
     devDependencies: [],
     files: [
       {
-        path: "registry/designali/components/accordion/accordion-04.tsx",
+        path: "registry/designali/examples/accordion/accordion-04.tsx",
         type: "registry:example",
         target: "",
       },
@@ -1295,7 +1295,7 @@ export const Index: Record<string, any> = {
     meta: {},
     component: React.lazy(async () => {
       const mod =
-        await import("@/registry/designali/components/accordion/accordion-04")
+        await import("@/registry/designali/examples/accordion/accordion-04")
 
       const exportName =
         Object.keys(mod).find(
@@ -1318,7 +1318,7 @@ export const Index: Record<string, any> = {
     devDependencies: [],
     files: [
       {
-        path: "registry/designali/components/accordion/accordion-05.tsx",
+        path: "registry/designali/examples/accordion/accordion-05.tsx",
         type: "registry:example",
         target: "",
       },
@@ -1327,7 +1327,7 @@ export const Index: Record<string, any> = {
     meta: {},
     component: React.lazy(async () => {
       const mod =
-        await import("@/registry/designali/components/accordion/accordion-05")
+        await import("@/registry/designali/examples/accordion/accordion-05")
 
       const exportName =
         Object.keys(mod).find(
@@ -1350,7 +1350,7 @@ export const Index: Record<string, any> = {
     devDependencies: [],
     files: [
       {
-        path: "registry/designali/components/accordion/accordion-06.tsx",
+        path: "registry/designali/examples/accordion/accordion-06.tsx",
         type: "registry:example",
         target: "",
       },
@@ -1359,7 +1359,7 @@ export const Index: Record<string, any> = {
     meta: {},
     component: React.lazy(async () => {
       const mod =
-        await import("@/registry/designali/components/accordion/accordion-06")
+        await import("@/registry/designali/examples/accordion/accordion-06")
 
       const exportName =
         Object.keys(mod).find(
@@ -1381,7 +1381,7 @@ export const Index: Record<string, any> = {
     devDependencies: [],
     files: [
       {
-        path: "registry/designali/components/button/button-variants.tsx",
+        path: "registry/designali/examples/button/button-variants.tsx",
         type: "registry:example",
         target: "",
       },
@@ -1390,7 +1390,7 @@ export const Index: Record<string, any> = {
     meta: {},
     component: React.lazy(async () => {
       const mod =
-        await import("@/registry/designali/components/button/button-variants")
+        await import("@/registry/designali/examples/button/button-variants")
 
       const exportName =
         Object.keys(mod).find(

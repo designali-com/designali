@@ -14,12 +14,14 @@ export function ComponentPreviewTabs({
   hideCode = false,
   component,
   source,
+  name,
   ...props
 }: React.ComponentProps<"div"> & {
   align?: "center" | "start" | "end"
   hideCode?: boolean
   component: React.ReactNode
   source: React.ReactNode
+  name: string
 }) {
   const [tab, setTab] = React.useState("preview")
   const [key, setKey] = React.useState(0)
@@ -29,17 +31,22 @@ export function ComponentPreviewTabs({
       className={cn("group relative mt-4 mb-12 flex flex-col gap-2", className)}
       {...props}
     >
-      <Tabs onValueChange={setTab} value={tab}>
-        <div className="flex items-center justify-between">
-          {!hideCode && (
-            <TabsList variant={"line"}>
-              <TabsTrigger value="preview">Preview</TabsTrigger>
+      <div className="flex justify-between items-end">
+        <Tabs onValueChange={setTab} value={tab}>
+          <div className="flex items-center justify-between">
+            {!hideCode && (
+              <TabsList variant={"line"}>
+                <TabsTrigger value="preview">Preview</TabsTrigger>
 
-              <TabsTrigger value="code">Code</TabsTrigger>
-            </TabsList>
-          )}
-        </div>
-      </Tabs>
+                <TabsTrigger value="code">Code</TabsTrigger>
+              </TabsList>
+            )}
+          </div>
+        </Tabs>
+        <p className="text-sm pr-2 text-primary">
+          {name}
+        </p>
+      </div>
 
       <div className="relative w-full border border-dotted" data-tab={tab}>
         {/* Preview */}
@@ -95,9 +102,9 @@ export function ComponentPreviewTabs({
         {/* Code */}
         <div
           className={cn(
-            "absolute inset-0 hidden overflow-hidden data-[active=true]:block",
+            "absolute inset-0 hidden overflow-auto data-[active=true]:block",
             "**:[figure]:m-0!",
-            "**:[pre]:h-[450px]"
+            "**:[pre]:h-full"
           )}
           data-active={tab === "code"}
           data-slot="code"

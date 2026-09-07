@@ -40,6 +40,7 @@ export function ComponentPreview({
       <ComponentPreviewTabs
         align={align}
         className={cn("w-full min-w-0", metaClassName, className)}
+        name={name}
         component={
           <div className="flex w-full min-w-0 items-center justify-center overflow-x-auto p-4">
             <Component />

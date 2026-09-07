@@ -1,7 +1,6 @@
 import { Accordion as AccordionPrimitive } from "@base-ui/react/accordion"
 
-import { cn } from "@workspace/ui/lib/utils"
-import { ChevronDownIcon, ChevronUpIcon } from "lucide-react"
+import { cn } from "@workspace/ui/lib/utils" 
 
 function Accordion({ className, ...props }: AccordionPrimitive.Root.Props) {
   return (
@@ -38,7 +37,7 @@ function AccordionTrigger({
         )}
         {...props}
       >
-        {children}
+        {children} 
          </AccordionPrimitive.Trigger>
     </AccordionPrimitive.Header>
   )

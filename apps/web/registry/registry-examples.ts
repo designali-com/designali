@@ -8,7 +8,7 @@ export const examples: Registry["items"] = [
       "Personal FAQ accordion introducing Ali Imam, his design approach, inspirations, and ways to connect for collaborations.",
     files: [
       {
-        path: "components/accordion/accordion-01.tsx",
+        path: "examples/accordion/accordion-01.tsx",
         type: "registry:example",
       },
     ],
@@ -20,7 +20,7 @@ export const examples: Registry["items"] = [
       "Personal FAQ accordion introducing Ali Imam, his design approach, inspirations, and ways to connect for collaborations.",
     files: [
       {
-        path: "components/accordion/accordion-02.tsx",
+        path: "examples/accordion/accordion-02.tsx",
         type: "registry:example",
       },
     ],
@@ -32,7 +32,7 @@ export const examples: Registry["items"] = [
       "Personal FAQ accordion introducing Ali Imam, his design approach, inspirations, and ways to connect for collaborations.",
     files: [
       {
-        path: "components/accordion/accordion-03.tsx",
+        path: "examples/accordion/accordion-03.tsx",
         type: "registry:example",
       },
     ],
@@ -44,7 +44,7 @@ export const examples: Registry["items"] = [
       "Personal FAQ accordion introducing Ali Imam, his design approach, inspirations, and ways to connect for collaborations.",
     files: [
       {
-        path: "components/accordion/accordion-04.tsx",
+        path: "examples/accordion/accordion-04.tsx",
         type: "registry:example",
       },
     ],
@@ -56,7 +56,7 @@ export const examples: Registry["items"] = [
       "Personal FAQ accordion introducing Ali Imam, his design approach, inspirations, and ways to connect for collaborations.",
     files: [
       {
-        path: "components/accordion/accordion-05.tsx",
+        path: "examples/accordion/accordion-05.tsx",
         type: "registry:example",
       },
     ],
@@ -68,7 +68,7 @@ export const examples: Registry["items"] = [
       "Personal FAQ accordion introducing Ali Imam, his design approach, inspirations, and ways to connect for collaborations.",
     files: [
       {
-        path: "components/accordion/accordion-06.tsx",
+        path: "examples/accordion/accordion-06.tsx",
         type: "registry:example",
       },
     ],
@@ -79,7 +79,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     files: [
       {
-        path: "components/button/button-variants.tsx",
+        path: "examples/button/button-variants.tsx",
         type: "registry:example",
       },
     ],

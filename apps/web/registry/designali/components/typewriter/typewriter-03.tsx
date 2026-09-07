@@ -9,7 +9,7 @@ export default function DemoOne() {
   ]
 
   return (
-    <main className="flex h-full items-center justify-center">
+    <main className="flex h-80 items-center justify-center">
       <Typewriter
         words={words}
         speed={80}

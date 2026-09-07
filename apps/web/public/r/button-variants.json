@@ -5,7 +5,7 @@
   "description": "Button variants showcase",
   "files": [
     {
-      "path": "registry/designali/components/button/button-variants.tsx",
+      "path": "registry/designali/examples/button/button-variants.tsx",
       "content": "import { Button } from \"@workspace/ui/components/button\"\n\nexport function ButtonVariantsDemo() {\n  return (\n    <div className=\"mx-auto flex max-w-md flex-wrap items-center justify-center gap-2\">\n      <Button variant=\"default\">Default</Button>\n      <Button variant=\"outline\">Outline</Button>\n      <Button variant=\"secondary\">Secondary</Button>\n      <Button variant=\"ghost\">Ghost</Button>\n      <Button variant=\"destructive\">Destructive</Button>\n      <Button variant=\"link\">Link</Button>\n    </div>\n  )\n}\n",
       "type": "registry:example"
     }

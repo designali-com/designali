@@ -12,7 +12,7 @@ import { Marquee } from "@/registry/designali/ui/marquee"
 
 export default function DemoOne() {
   return (
-    <div className="flex h-full w-full items-center justify-center overflow-hidden border">
+    <div className="flex h-80 w-full items-center justify-center overflow-hidden border">
       <main className="w-full">
         <Marquee gap={"80px"} speed={25} fade={true}>
           <OpenAIWordmark size={100} />

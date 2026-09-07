@@ -14,13 +14,16 @@
     "db:push": "drizzle-kit push",
     "db:seed": "tsx src/db/seed.ts",
     "db:studio": "drizzle-kit studio",
+    "email:dev": "email dev",
     "lint": "eslint",
     "format": "prettier --write \"**/*.{ts,tsx}\"",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@base-ui/react": "^1.7.0",
+    "@designali/icons": "workspace:*",
     "@designali/logos": "workspace:*",
+    "@designali/vectors": "workspace:*",
     "@hookform/resolvers": "^5.4.0",
     "@neondatabase/serverless": "^1.0.2",
     "@next/third-parties": "^15.5.18",
@@ -48,6 +51,7 @@
     "react": "19.2.4",
     "react-dom": "19.2.4",
     "react-element-to-jsx-string": "^17.0.1",
+    "react-email": "6.9.3",
     "react-hook-form": "^7.76.1",
     "react-resizable-panels": "^2.1.7",
     "resend": "^6.12.4",
@@ -61,6 +65,7 @@
     "zod": "^4.4.3"
   },
   "devDependencies": {
+    "@react-email/ui": "6.9.3",
     "@tailwindcss/postcss": "^4",
     "@types/mdx": "^2.0.13",
     "@types/node": "^20",

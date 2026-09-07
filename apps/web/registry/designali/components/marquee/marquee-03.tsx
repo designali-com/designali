@@ -14,7 +14,7 @@ const technologies = [
 
 export default function DemoOne() {
   return (
-    <div className="flex h-full w-full items-center justify-center overflow-hidden border">
+    <div className="flex h-80 w-full items-center justify-center overflow-hidden border">
       <main>
         <Marquee vertical gap={6} delay={2}>
           {technologies.map((tech, index) => (

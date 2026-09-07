@@ -16,7 +16,7 @@ import { ThemeSwitcher } from "./toggle-mode"
 export function Footer() {
   return (
     <footer className={cn("relative")}>
-      <div className="grid grid-cols-6 gap-3 p-6">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-7 gap-3 p-6">
         <div className="col-span-6 flex flex-col gap-4 md:col-span-4">
           <p className="max-w-sm text-sm text-balance text-muted-foreground">
             A brand owned by designali.
@@ -39,13 +39,16 @@ export function Footer() {
               </a>
             ))}
           </div>
+          <a href="mailto:hello@designali.com" className="text-sm hover:underline hover:text-primary">
+            hello@designali.com
+          </a>
         </div>
 
         {/* -------------------------------- */}
         {/* RESOURCES */}
         {/* -------------------------------- */}
 
-        <div className="col-span-3 hidden w-full md:col-span-1 md:block">
+        <div className="col-span-1 w-full md:col-span-1">
           <span className="text-xs text-muted-foreground">Design</span>
 
           <div className="mt-2 flex flex-col gap-2">
@@ -64,6 +67,22 @@ export function Footer() {
         {/* -------------------------------- */}
         {/* COMPANY */}
         {/* -------------------------------- */}
+
+        <div className="col-span-1 w-full md:col-span-1">
+          <span className="text-xs text-muted-foreground">Code</span>
+
+          <div className="mt-2 flex flex-col gap-2">
+            {designLinks.map(({ href, label }) => (
+              <a
+                className="w-max text-xs hover:text-primary hover:underline"
+                href={href}
+                key={label}
+              >
+                {label}
+              </a>
+            ))}
+          </div>
+        </div>
 
         <div className="col-span-3 w-full md:col-span-1">
           <span className="text-xs text-muted-foreground">Company</span>
@@ -141,17 +160,17 @@ const componentLinks = [
     label: "UI Designs",
   },
   {
-    href: "/docs/components/bento",
-    label: "Bento",
+    href: "/icons",
+    label: "Icons",
   },
   {
-    href: "/docs/components/number-counter",
-    label: "Number Counter",
+    href: "/logos",
+    label: "Logos",
   },
   {
-    href: "/docs/components/gauge",
-    label: "Gauge",
-  },
+    href: "/illustration",
+    label: "Illustration",
+  }, 
 ]
 
 /* -------------------------------- */
@@ -174,6 +193,37 @@ const companyLinks = [
   {
     href: "/docs/legal/terms",
     label: "Terms",
+  },
+]
+
+const designLinks = [ 
+  {
+    href: "/docs/components/bento",
+    label: "Bento",
+  },
+  {
+    href: "/docs/components/number-counter",
+    label: "Number Counter",
+  },
+  {
+    href: "/docs/components/gauge",
+    label: "Gauge",
+  },
+  {
+    href: "/docs/components/dot-pattern",
+    label: "Dot Pattern",
+  },
+  {
+    href: "/docs/components/grid-pattern",
+    label: "Grid Pattern",
+  },
+  {
+    href: "/docs/components/marquee",
+    label: "Marquee",
+  },
+  {
+    href: "/docs/components/typewriter",
+    label: "Typewriter",
   },
 ]
 

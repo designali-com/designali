@@ -17,7 +17,7 @@ export default function Page() {
         </p>
       </div>
 
-      <div className="grid w-full gap-3 xl:grid-cols-2">
+      <div className="grid w-full gap-3">
         {UI_COMPONENTS.map((name) => (
           <ComponentPreview key={name} name={name} align="center" />
         ))}

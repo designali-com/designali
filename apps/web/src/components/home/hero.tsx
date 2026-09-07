@@ -37,11 +37,11 @@ export function HeroSection() {
             beautifully.
           </p>
 
-          <Button nativeButton={false} render={<Link href="" />}>
+          <Button nativeButton={false} render={<Link target="_blank" href="https://cal.com/designali-com/website" />}>
             Book a Call
           </Button>
         </div>
-      </div>
+      </div> 
     </section>
   )
 }

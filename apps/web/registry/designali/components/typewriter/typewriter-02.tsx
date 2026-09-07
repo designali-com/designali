@@ -4,7 +4,7 @@ export default function DemoOne() {
   const words = ["Design", "Without", "Limits"]
 
   return (
-    <main className="flex h-full items-center justify-center">
+    <main className="flex h-80 items-center justify-center">
       <div className="text-center">
         <h1 className="mb-8">
           <Typewriter

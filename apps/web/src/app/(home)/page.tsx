@@ -10,6 +10,7 @@ import { WorksSection } from "@/src/components/home/works"
 import { FeaturedBlocks } from "@/src/components/home/featured-blocks"
 import { BuildWith } from "@/src/components/home/build-with"
 import { NumbersSection } from "@/src/components/home/numbers"
+import { WaitlistSection } from "@/src/components/auth/waitlist"
 
 export default function Page() {
   const templates = templateCategories.filter((template) => !template.hidden)
@@ -36,6 +37,7 @@ export default function Page() {
       <BlocksCategory/>
       <UIDesignCategory />
       <Testimonials />
+      <WaitlistSection/>
       <FAQSection />
     </div>
   )
