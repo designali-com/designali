@@ -154,7 +154,7 @@ export function LogoPreviewPhone({ selectedLogo, onClearSelection }: Props) {
           <ToggleGroup
             size="sm"
             variant="outline"
-            onValueChange={(val) => val && setActiveVariant(val)}
+             
             className="w-full flex-wrap"
           >
             {variants.map((v) => (
