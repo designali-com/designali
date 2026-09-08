@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "aspect-ratio-01",
+  "type": "registry:example",
+  "description": "Aspect ratio default 16:9 showcase",
+  "files": [
+    {
+      "path": "registry/designali/examples/aspect-ratio/aspect-ratio-01.tsx",
+      "content": "import Image from \"next/image\";\n\nimport { AspectRatio } from \"@workspace/ui/components/aspect-ratio\";\n\nexport default function AspectRatioDemo() {\n  return (\n    <AspectRatio ratio={16 / 9} className=\"w-full max-w-sm rounded-lg bg-muted\">\n      <Image\n        src=\"/img/hero-1.jpg\"\n        alt=\"Designali showcase visual\"\n        fill\n        className=\"rounded-lg object-cover\"\n      />\n    </AspectRatio>\n  );\n}",
+      "type": "registry:example"
+    }
+  ]
+}

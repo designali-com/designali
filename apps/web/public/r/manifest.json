@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-07T13:12:28.719Z",
+  "generatedAt": "2026-09-08T09:57:29.479Z",
   "items": [
     {
       "name": "gauge",
@@ -240,6 +240,132 @@
       "name": "accordion-06",
       "type": "registry:example",
       "description": "Personal FAQ accordion introducing Ali Imam, his design approach, inspirations, and ways to connect for collaborations.",
+      "categories": []
+    },
+    {
+      "name": "alert-01",
+      "type": "registry:example",
+      "description": "Alert component showcase",
+      "categories": []
+    },
+    {
+      "name": "alert-02",
+      "type": "registry:example",
+      "description": "Alert with icon showcase",
+      "categories": []
+    },
+    {
+      "name": "alert-03",
+      "type": "registry:example",
+      "description": "Alert with action buttons showcase",
+      "categories": []
+    },
+    {
+      "name": "alert-04",
+      "type": "registry:example",
+      "description": "Alert variants showcase",
+      "categories": []
+    },
+    {
+      "name": "alert-05",
+      "type": "registry:example",
+      "description": "Alert success variant showcase",
+      "categories": []
+    },
+    {
+      "name": "alert-06",
+      "type": "registry:example",
+      "description": "Alert warning variant showcase",
+      "categories": []
+    },
+    {
+      "name": "alert-07",
+      "type": "registry:example",
+      "description": "Alert error variant showcase",
+      "categories": []
+    },
+    {
+      "name": "alert-dialog-01",
+      "type": "registry:example",
+      "description": "Alert dialog error variant showcase",
+      "categories": []
+    },
+    {
+      "name": "alert-dialog-02",
+      "type": "registry:example",
+      "description": "Alert dialog error variant showcase",
+      "categories": []
+    },
+    {
+      "name": "aspect-ratio-01",
+      "type": "registry:example",
+      "description": "Aspect ratio default 16:9 showcase",
+      "categories": []
+    },
+    {
+      "name": "aspect-ratio-02",
+      "type": "registry:example",
+      "description": "Aspect ratio square 1:1 showcase",
+      "categories": []
+    },
+    {
+      "name": "aspect-ratio-03",
+      "type": "registry:example",
+      "description": "Aspect ratio portrait 9:16 showcase",
+      "categories": []
+    },
+    {
+      "name": "aspect-ratio-04",
+      "type": "registry:example",
+      "description": "Aspect ratio RTL translation showcase",
+      "categories": []
+    },
+    {
+      "name": "avatar-01",
+      "type": "registry:example",
+      "description": "Basic avatar showcase",
+      "categories": []
+    },
+    {
+      "name": "avatar-02",
+      "type": "registry:example",
+      "description": "Avatar with status badge showcase",
+      "categories": []
+    },
+    {
+      "name": "avatar-03",
+      "type": "registry:example",
+      "description": "Avatar with badge icon showcase",
+      "categories": []
+    },
+    {
+      "name": "avatar-04",
+      "type": "registry:example",
+      "description": "Avatar group stack showcase",
+      "categories": []
+    },
+    {
+      "name": "avatar-05",
+      "type": "registry:example",
+      "description": "Avatar group with numerical count showcase",
+      "categories": []
+    },
+    {
+      "name": "avatar-06",
+      "type": "registry:example",
+      "description": "Avatar group with icon count showcase",
+      "categories": []
+    },
+    {
+      "name": "avatar-07",
+      "type": "registry:example",
+      "description": "Avatar different sizes showcase",
+      "categories": []
+    },
+    {
+      "name": "avatar-08",
+      "type": "registry:example",
+      "description": "Avatar dropdown menu trigger showcase",
       "categories": []
     },
     {

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "avatar-07",
+  "type": "registry:example",
+  "description": "Avatar different sizes showcase",
+  "files": [
+    {
+      "path": "registry/designali/examples/avatar/avatar-07.tsx",
+      "content": "import {\n    Avatar,\n    AvatarFallback,\n    AvatarImage,\n  } from \"@workspace/ui/components/avatar\";\n  \n  export default function AvatarSizeExample() {\n    return (\n      <div className=\"flex flex-wrap items-center gap-2\">\n        <Avatar size=\"sm\">\n          <AvatarImage src=\"https://github.com/designali-com.png\" alt=\"@designali\" />\n          <AvatarFallback>DA</AvatarFallback>\n        </Avatar>\n        <Avatar>\n          <AvatarImage src=\"https://github.com/designali-com.png\" alt=\"@designali\" />\n          <AvatarFallback>DA</AvatarFallback>\n        </Avatar>\n        <Avatar size=\"lg\">\n          <AvatarImage src=\"https://github.com/designali-com.png\" alt=\"@designali\" />\n          <AvatarFallback>DA</AvatarFallback>\n        </Avatar>\n      </div>\n    );\n  }",
+      "type": "registry:example"
+    }
+  ]
+}

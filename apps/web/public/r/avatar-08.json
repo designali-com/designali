@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "avatar-08",
+  "type": "registry:example",
+  "description": "Avatar dropdown menu trigger showcase",
+  "files": [
+    {
+      "path": "registry/designali/examples/avatar/avatar-08.tsx",
+      "content": "\"use client\";\n\nimport {\n  Avatar,\n  AvatarFallback,\n  AvatarImage,\n} from \"@workspace/ui/components/avatar\";\nimport { Button } from \"@workspace/ui/components/button\";\nimport {\n  DropdownMenu,\n  DropdownMenuContent,\n  DropdownMenuGroup,\n  DropdownMenuItem,\n  DropdownMenuSeparator,\n  DropdownMenuTrigger,\n} from \"@workspace/ui/components/dropdown-menu\";\n\nexport default function AvatarDropdown() {\n  return ( \n      <DropdownMenu>\n        <DropdownMenuTrigger\n          render={\n            <Button variant=\"ghost\" size=\"icon\" className=\"rounded-full\">\n              <Avatar>\n                <AvatarImage src=\"https://github.com/designali-com.png\" alt=\"@designali\" />\n                <AvatarFallback>DA</AvatarFallback>\n              </Avatar>\n            </Button>\n          }\n        />\n        <DropdownMenuContent className=\"w-32\">\n          <DropdownMenuGroup>\n            <DropdownMenuItem>Profile</DropdownMenuItem>\n            <DropdownMenuItem>Billing</DropdownMenuItem>\n            <DropdownMenuItem>Settings</DropdownMenuItem>\n          </DropdownMenuGroup>\n          <DropdownMenuSeparator />\n          <DropdownMenuGroup>\n            <DropdownMenuItem variant=\"destructive\">Log out</DropdownMenuItem>\n          </DropdownMenuGroup>\n        </DropdownMenuContent>\n      </DropdownMenu> \n  );\n}",
+      "type": "registry:example"
+    }
+  ]
+}

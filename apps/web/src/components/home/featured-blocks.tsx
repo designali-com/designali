@@ -9,98 +9,75 @@ import {
 import {
     PanelBottom,
     Navigation,
-    User,
     RectangleHorizontal,
     BadgeDollarSign,
-    Sparkle,  
+    LayoutTemplate,
+    Quote,
+    Sparkles,
+    Users,
 } from "lucide-react"
 import Link from "next/link"
+
+// Config Data for Tabs to eliminate code repetition
+const TAB_ITEMS = [
+    { value: "hero", label: "Hero", icon: RectangleHorizontal, block: "hero-1" },
+
+    { value: "header", label: "Header", icon: Navigation, block: "header-05" },
+
+    { value: "footer", label: "Footer", icon: PanelBottom, block: "footer-01" },
+
+    { value: "feature", label: "Feature", icon: Sparkles, block: "feature-01" },
+
+    { value: "secondary-hero", label: "Secondary Hero", icon: LayoutTemplate, block: "hero-4" },
+
+    { value: "pricing", label: "Pricing", icon: BadgeDollarSign, block: "pricing-01" },
+
+    { value: "clients", label: "Clients", icon: Users, block: "logos-03" },
+
+    { value: "testimonial", label: "Testimonials", icon: Quote, block: "testimonial-01" },
+] as const
 
 export function FeaturedBlocks() {
     return (
         <section className="max-w-7xl my-3 md:my-40 px-3 mx-auto">
-
             <div className="overflow-hidden border bg-background shadow-2xl/10">
-
-                <Tabs defaultValue="all" className="w-full">
+                <Tabs defaultValue="hero" className="w-full">
                     <div className="flex items-center justify-between border-b bg-muted/30 px-1.5 py-1">
-                        {/* Window Controls (Red, Yellow, Green dots) */}
-                        <div className="flex items-center gap-2 pl-2">
+
+                        {/* Window Controls (Mac Style Dots) */}
+                        <div className="hidden md:flex items-center gap-2 pl-2">
                             <div className="h-3 w-3 rounded-full bg-red-500" />
                             <div className="h-3 w-3 rounded-full bg-yellow-500" />
                             <div className="h-3 w-3 rounded-full bg-green-500" />
                         </div>
 
-                        <div className="mx-auto max-w-60 md:flex justify-center overflow-x-auto md:max-w-none">
+                        {/* Navigation Tabs */}
+                        <div className="mx-auto md:flex justify-center scrollbar-hide overflow-x-auto md:max-w-none">
                             <TabsList>
-                                <TabsTrigger value="hero" >
-                                    <RectangleHorizontal className="h-3" />
-                                    Hero
-                                </TabsTrigger>
-                                <TabsTrigger value="header" >
-                                    <Navigation className="h-3" />
-                                    Header
-                                </TabsTrigger>
-                                <TabsTrigger value="footer" >
-                                    <PanelBottom className="h-3" />
-                                    Footer
-                                </TabsTrigger>
-                                <TabsTrigger value="feature">
-                                    <Sparkle className="h-3" />
-                                    Feature
-                                </TabsTrigger>
-                                <TabsTrigger value="pricing">
-                                    <BadgeDollarSign className="h-3" />
-                                    Secondary Hero
-                                </TabsTrigger>
-                                <TabsTrigger value="clients">
-                                    <User className="h-3" />
-                                    Clients
-                                </TabsTrigger>
+                                {TAB_ITEMS.map(({ value, label, icon: Icon }) => (
+                                    <TabsTrigger key={value} value={value}>
+                                        <Icon className="h-3" />
+                                        {label}
+                                    </TabsTrigger>
+                                ))}
                             </TabsList>
                         </div>
-                        <Button render={<Link href={"/blocks"} />} size={"sm"}>
+
+                        <Button className="hidden md:flex" render={<Link href="/blocks" />} size="sm">
                             All Blocks
                         </Button>
                     </div>
+
+                    {/* Tab Panels */}
                     <div className="px-2 pb-2">
-                        <TabsContent value="hero">
-                            <BlockList blocks={["hero-1"]} />
-                        </TabsContent>
-
-                        <TabsContent value="header">
-                            <BlockList blocks={["header-05"]} />
-                        </TabsContent>
-
-                        <TabsContent value="footer">
-                            <BlockList blocks={["footer-01"]} />
-                        </TabsContent>
-
-                        <TabsContent value="feature">
-                            <BlockList blocks={["feature-01"]} />
-                        </TabsContent>
-
-
-                        <TabsContent value="pricing">
-                            <BlockList blocks={["hero-4"]} />
-                        </TabsContent>
-
-                        <TabsContent value="clients">
-                            <BlockList blocks={["logos-03"]} />
-                        </TabsContent>
+                        {TAB_ITEMS.map(({ value, block }) => (
+                            <TabsContent key={value} value={value}>
+                                <BlockDisplay name={block} />
+                            </TabsContent>
+                        ))}
                     </div>
                 </Tabs>
             </div>
         </section>
-    )
-}
-
-function BlockList({ blocks }: { blocks: readonly string[] }) {
-    return (
-        <div className="flex flex-col gap-12 md:gap-24">
-            {blocks.map((name) => (
-                <BlockDisplay key={name} name={name} />
-            ))}
-        </div>
     )
 }

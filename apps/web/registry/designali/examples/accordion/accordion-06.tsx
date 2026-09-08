@@ -72,32 +72,28 @@ export default function FAQs() {
   ]
 
   return (
-    <section className="relative container flex items-center justify-center">
-      <div className="border">
-        <div className="mx-auto max-w-xl w-full">
-          <Accordion defaultValue={["item-7"]} className="-mb-1">
-            {faqItems.map((item) => (
-              <AccordionItem
-                key={item.id}
-                value={item.id}
-                className="space-y-1 border-none"
-              >
-                <AccordionTrigger className="group flex w-full justify-end py-0 hover:no-underline [&_svg]:hidden">
-                  <div className="max-w-[80%] cursor-pointer bg-primary px-4 py-3 text-left text-base text-primary-foreground transition">
-                    {item.question}
-                  </div>
-                </AccordionTrigger>
+    <div className="border">
+      <Accordion defaultValue={["item-7"]} className="-mb-1 w-sm md:w-xl">
+        {faqItems.map((item) => (
+          <AccordionItem
+            key={item.id}
+            value={item.id}
+            className="space-y-1 border-none"
+          >
+            <AccordionTrigger className="group flex w-full justify-end py-0 hover:no-underline [&_svg]:hidden">
+              <div className="max-w-[80%] cursor-pointer bg-primary px-4 py-3 text-left text-base text-primary-foreground transition">
+                {item.question}
+              </div>
+            </AccordionTrigger>
 
-                <AccordionContent className="flex justify-start">
-                  <div className="max-w-[80%] bg-muted px-4 py-3 text-base text-muted-foreground">
-                    {item.answer}
-                  </div>
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
-        </div>
-      </div>
-    </section>
+            <AccordionContent className="flex justify-start">
+              <div className="max-w-[80%] bg-muted px-4 py-3 text-base text-muted-foreground">
+                {item.answer}
+              </div>
+            </AccordionContent>
+          </AccordionItem>
+        ))}
+      </Accordion>
+    </div>
   )
 }

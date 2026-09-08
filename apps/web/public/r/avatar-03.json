@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "avatar-03",
+  "type": "registry:example",
+  "description": "Avatar with badge icon showcase",
+  "files": [
+    {
+      "path": "registry/designali/examples/avatar/avatar-03.tsx",
+      "content": "import { PlusIcon } from \"lucide-react\";\n\nimport {\n  Avatar,\n  AvatarBadge,\n  AvatarFallback,\n  AvatarImage,\n} from \"@workspace/ui/components/avatar\";\n\nexport default function AvatarBadgeIconExample() {\n  return (\n    <Avatar>\n      <AvatarImage src=\"https://github.com/designali-com.png\" alt=\"@designali\" />\n      <AvatarFallback>DA</AvatarFallback>\n      <AvatarBadge>\n        <PlusIcon />\n      </AvatarBadge>\n    </Avatar>\n  );\n}",
+      "type": "registry:example"
+    }
+  ]
+}

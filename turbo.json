@@ -14,7 +14,7 @@
         "DATABASE_URL",
         "RESEND_API_KEY",
         "EMAIL_SENDER_NAME",
-        "EMAIL_SENDER_ADDRESS",
+        "EMAIL_SENDER_ADDRESS", 
         "NEXT_PUBLIC_*"
       ],
       "inputs": ["$TURBO_DEFAULT$", ".env*"],

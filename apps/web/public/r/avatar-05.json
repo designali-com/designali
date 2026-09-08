@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "avatar-05",
+  "type": "registry:example",
+  "description": "Avatar group with numerical count showcase",
+  "files": [
+    {
+      "path": "registry/designali/examples/avatar/avatar-05.tsx",
+      "content": "import {\n    Avatar,\n    AvatarFallback,\n    AvatarGroup,\n    AvatarGroupCount,\n    AvatarImage,\n  } from \"@workspace/ui/components/avatar\";\n  \n  export default function AvatarGroupCountExample() {\n    return (\n      <AvatarGroup>\n        <Avatar>\n          <AvatarImage src=\"https://github.com/designali-com.png\" alt=\"@designali\" />\n          <AvatarFallback>DA</AvatarFallback>\n        </Avatar>\n        <Avatar>\n          <AvatarImage src=\"https://github.com/shadcn.png\" alt=\"@shadcn\" />\n          <AvatarFallback>CN</AvatarFallback>\n        </Avatar>\n        <Avatar>\n          <AvatarImage\n            src=\"https://github.com/evilrabbit.png\"\n            alt=\"@evilrabbit\"\n          />\n          <AvatarFallback>ER</AvatarFallback>\n        </Avatar>\n        <AvatarGroupCount>+3</AvatarGroupCount>\n      </AvatarGroup>\n    );\n  }",
+      "type": "registry:example"
+    }
+  ]
+}

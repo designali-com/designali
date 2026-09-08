@@ -17,7 +17,7 @@ const fontMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: "designali — Design & Code",
+  title: "designali — design se code tak",
   description:
     "Where thoughtful design meets production-ready code. I design and build digital experiences that look great, feel intuitive, and work beautifully.",
   keywords: [

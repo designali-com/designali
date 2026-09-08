@@ -582,7 +582,7 @@ export const blocks: Registry["items"] = [
     ],
     categories: ["testimonials", "testimonial"],
     meta: {
-      iframeHeight: "800px",
+      iframeHeight: "500px",
     },
   },
 ]

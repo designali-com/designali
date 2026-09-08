@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "aspect-ratio-04",
+  "type": "registry:example",
+  "description": "Aspect ratio RTL translation showcase",
+  "files": [
+    {
+      "path": "registry/designali/examples/aspect-ratio/aspect-ratio-04.tsx",
+      "content": "\"use client\";\n\nimport * as React from \"react\";\n\nimport { AspectRatio } from \"@workspace/ui/components/aspect-ratio\";\n\nexport default function AspectRatioVideo() {\n  return (\n    <figure className=\"w-full max-w-sm\">\n      <AspectRatio ratio={16 / 9} className=\"rounded-lg bg-muted\">\n        <video\n          src=\"/vid/colorful-spheres.mp4\"\n          autoPlay\n          loop\n          muted\n          playsInline\n          className=\"h-full w-full rounded-lg object-cover\"\n        />\n      </AspectRatio>\n      <figcaption className=\"mt-2 text-center text-sm text-muted-foreground\">\n        Designali motion components showcase\n      </figcaption>\n    </figure>\n  );\n}",
+      "type": "registry:example"
+    }
+  ]
+}

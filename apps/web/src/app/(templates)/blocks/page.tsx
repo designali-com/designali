@@ -4,7 +4,7 @@ import { Blocks } from "lucide-react"
 export const dynamic = "force-static"
 export const revalidate = false
 
-const FEATURED_BLOCKS = ["hero-1", "feature-01", "hero-3", "header-01"]
+const FEATURED_BLOCKS = ["hero-4", "feature-01", "hero-1", "header-01", "logos-01"]
 
 export default function BlocksPage() {
   return (

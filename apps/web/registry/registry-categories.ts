@@ -11,12 +11,13 @@ import {
   LayoutGrid,
   LayoutTemplate,
   Shapes,
+  Pen,
 } from "lucide-react"
 
 export const navLinks = [
   { name: "Templates", href: "/templates" },
   { name: "Blocks", href: "/blocks" },
-  { name: "Illustration", href: "/illustration" },
+  { name: "UI Design", href: "/ui" },
   { name: "Components", href: "/docs" },
   { name: "Icons", href: "/icons" },
 ]
@@ -44,9 +45,9 @@ export const data = {
       icon: Shapes,
     },
     {
-      title: "Illustrations",
-      url: "/illustrations",
-      icon: Image,
+      title: "Design",
+      url: "/design",
+      icon: Pen,
     },
     {
       title: "Icons",
@@ -62,6 +63,11 @@ export const data = {
       title: "Vectors",
       url: "/vectors",
       icon: Triangle,
+    },
+    {
+      title: "Illustrations",
+      url: "/illustrations",
+      icon: Image,
     },
     {
       title: "UI Designs",

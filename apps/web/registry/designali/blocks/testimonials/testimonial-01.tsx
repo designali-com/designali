@@ -70,7 +70,7 @@ export function TestimonialsSection() {
   }
 
   return (
-    <div className="flex min-h-svh w-full flex-col items-center justify-center">
+    <div className="flex w-full h-screen flex-col items-center justify-center">
       <div className="bg-background flex items-center justify-start self-stretch overflow-hidden border border-t-0 border-r-0 border-b border-l-0 px-2">
         <div className="flex flex-1 flex-col items-end justify-center gap-6 py-16 md:flex-row md:py-17">
           <div className="flex flex-col items-start justify-center gap-4 self-stretch px-3 md:flex-row md:px-12">

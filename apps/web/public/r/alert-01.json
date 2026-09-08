@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "alert-01",
+  "type": "registry:example",
+  "description": "Alert component showcase",
+  "files": [
+    {
+      "path": "registry/designali/examples/alert/alert-01.tsx",
+      "content": "import {\n    Alert,\n    AlertDescription,\n    AlertTitle,\n  } from \"@workspace/ui/components/alert\";\n  \n  export default function AlertDemo() {\n    return (\n      <Alert className=\"max-w-80\">\n        <AlertTitle>Designali UI</AlertTitle>\n        <AlertDescription>\n          <p>Explore beautiful, customizable components built for modern web applications.</p>\n        </AlertDescription>\n      </Alert>\n    );\n  }",
+      "type": "registry:example"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "alert-05",
+  "type": "registry:example",
+  "description": "Alert success variant showcase",
+  "files": [
+    {
+      "path": "registry/designali/examples/alert/alert-05.tsx",
+      "content": "import { CircleCheckIcon } from \"lucide-react\";\nimport {\n  Alert,\n  AlertDescription,\n  AlertTitle,\n} from \"@workspace/ui/components/alert\";\n\nexport default function AlertDemo() {\n  return (\n    <Alert variant=\"success\" className=\"max-w-80\">\n      <CircleCheckIcon />\n      <AlertTitle>Designali UI</AlertTitle>\n      <AlertDescription>\n        Explore beautiful, customizable components built for modern web applications.\n      </AlertDescription>\n    </Alert>\n  );\n}",
+      "type": "registry:example"
+    }
+  ]
+}

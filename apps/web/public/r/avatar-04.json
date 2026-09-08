@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "avatar-04",
+  "type": "registry:example",
+  "description": "Avatar group stack showcase",
+  "files": [
+    {
+      "path": "registry/designali/examples/avatar/avatar-04.tsx",
+      "content": "import {\n    Avatar,\n    AvatarFallback,\n    AvatarGroup,\n    AvatarImage,\n  } from \"@workspace/ui/components/avatar\";\n  \n  export default function AvatarGroupExample() {\n    return (\n      <AvatarGroup>\n        <Avatar>\n          <AvatarImage src=\"https://github.com/designali-com.png\" alt=\"@designali\" />\n          <AvatarFallback>DA</AvatarFallback>\n        </Avatar>\n        <Avatar>\n          <AvatarImage src=\"https://github.com/shadcn.png\" alt=\"@shadcn\" />\n          <AvatarFallback>CN</AvatarFallback>\n        </Avatar>\n        <Avatar>\n          <AvatarImage\n            src=\"https://github.com/evilrabbit.png\"\n            alt=\"@evilrabbit\"\n          />\n          <AvatarFallback>ER</AvatarFallback>\n        </Avatar>\n      </AvatarGroup>\n    );\n  }",
+      "type": "registry:example"
+    }
+  ]
+}

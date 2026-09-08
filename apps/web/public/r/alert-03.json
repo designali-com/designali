@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "alert-03",
+  "type": "registry:example",
+  "description": "Alert with action buttons showcase",
+  "files": [
+    {
+      "path": "registry/designali/examples/alert/alert-03.tsx",
+      "content": "import { InfoIcon } from \"lucide-react\";\nimport {\n  Alert,\n  AlertAction,\n  AlertDescription,\n  AlertTitle,\n} from \"@workspace/ui/components/alert\";\nimport { Button } from \"@workspace/ui/components/button\";\n\nexport default function AlertDemo() {\n  return (\n    <Alert className=\"max-w-80\">\n      <InfoIcon />\n      <AlertTitle>Designali UI</AlertTitle>\n      <AlertDescription>\n        Explore beautiful, customizable components built for modern web applications.\n      </AlertDescription>\n      <AlertAction>\n        <Button size=\"xs\" variant=\"ghost\">\n          Dismiss\n        </Button>\n        <Button size=\"xs\">Ok</Button>\n      </AlertAction>\n    </Alert>\n  );\n}",
+      "type": "registry:example"
+    }
+  ]
+}

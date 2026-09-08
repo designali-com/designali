@@ -52,7 +52,7 @@ export function BlocksCategory() {
               .map((category) => (
                 <Link
                   key={category.slug}
-                  href={`/ui/${category.slug}`}
+                  href={`/blocks/${category.slug}`}
                   className="block"
                 >
                   <div className="flex w-full items-center justify-between border px-4 py-2 hover:text-background transition-colors hover:bg-foreground">

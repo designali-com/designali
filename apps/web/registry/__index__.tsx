@@ -1164,7 +1164,7 @@ export const Index: Record<string, any> = {
       },
     ],
     categories: ["testimonials", "testimonial"],
-    meta: { iframeHeight: "800px" },
+    meta: { iframeHeight: "500px" },
     component: React.lazy(async () => {
       const mod =
         await import("@/registry/designali/blocks/testimonials/testimonial-01")
@@ -1366,6 +1366,642 @@ export const Index: Record<string, any> = {
           (key) =>
             typeof mod[key] === "function" || typeof mod[key] === "object"
         ) || "accordion-06"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "alert-01": {
+    name: "alert-01",
+    description: "Alert component showcase",
+    type: "registry:example",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/examples/alert/alert-01.tsx",
+        type: "registry:example",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/designali/examples/alert/alert-01")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "alert-01"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "alert-02": {
+    name: "alert-02",
+    description: "Alert with icon showcase",
+    type: "registry:example",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/examples/alert/alert-02.tsx",
+        type: "registry:example",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/designali/examples/alert/alert-02")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "alert-02"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "alert-03": {
+    name: "alert-03",
+    description: "Alert with action buttons showcase",
+    type: "registry:example",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/examples/alert/alert-03.tsx",
+        type: "registry:example",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/designali/examples/alert/alert-03")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "alert-03"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "alert-04": {
+    name: "alert-04",
+    description: "Alert variants showcase",
+    type: "registry:example",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/examples/alert/alert-04.tsx",
+        type: "registry:example",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/designali/examples/alert/alert-04")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "alert-04"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "alert-05": {
+    name: "alert-05",
+    description: "Alert success variant showcase",
+    type: "registry:example",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/examples/alert/alert-05.tsx",
+        type: "registry:example",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/designali/examples/alert/alert-05")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "alert-05"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "alert-06": {
+    name: "alert-06",
+    description: "Alert warning variant showcase",
+    type: "registry:example",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/examples/alert/alert-06.tsx",
+        type: "registry:example",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/designali/examples/alert/alert-06")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "alert-06"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "alert-07": {
+    name: "alert-07",
+    description: "Alert error variant showcase",
+    type: "registry:example",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/examples/alert/alert-07.tsx",
+        type: "registry:example",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/designali/examples/alert/alert-07")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "alert-07"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "alert-dialog-01": {
+    name: "alert-dialog-01",
+    description: "Alert dialog error variant showcase",
+    type: "registry:example",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/examples/alert-dialog/alert-dialog-01.tsx",
+        type: "registry:example",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/examples/alert-dialog/alert-dialog-01")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "alert-dialog-01"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "alert-dialog-02": {
+    name: "alert-dialog-02",
+    description: "Alert dialog error variant showcase",
+    type: "registry:example",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/examples/alert-dialog/alert-dialog-02.tsx",
+        type: "registry:example",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/examples/alert-dialog/alert-dialog-02")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "alert-dialog-02"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "aspect-ratio-01": {
+    name: "aspect-ratio-01",
+    description: "Aspect ratio default 16:9 showcase",
+    type: "registry:example",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/examples/aspect-ratio/aspect-ratio-01.tsx",
+        type: "registry:example",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/examples/aspect-ratio/aspect-ratio-01")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "aspect-ratio-01"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "aspect-ratio-02": {
+    name: "aspect-ratio-02",
+    description: "Aspect ratio square 1:1 showcase",
+    type: "registry:example",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/examples/aspect-ratio/aspect-ratio-02.tsx",
+        type: "registry:example",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/examples/aspect-ratio/aspect-ratio-02")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "aspect-ratio-02"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "aspect-ratio-03": {
+    name: "aspect-ratio-03",
+    description: "Aspect ratio portrait 9:16 showcase",
+    type: "registry:example",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/examples/aspect-ratio/aspect-ratio-03.tsx",
+        type: "registry:example",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/examples/aspect-ratio/aspect-ratio-03")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "aspect-ratio-03"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "aspect-ratio-04": {
+    name: "aspect-ratio-04",
+    description: "Aspect ratio RTL translation showcase",
+    type: "registry:example",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/examples/aspect-ratio/aspect-ratio-04.tsx",
+        type: "registry:example",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/examples/aspect-ratio/aspect-ratio-04")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "aspect-ratio-04"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "avatar-01": {
+    name: "avatar-01",
+    description: "Basic avatar showcase",
+    type: "registry:example",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/examples/avatar/avatar-01.tsx",
+        type: "registry:example",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/designali/examples/avatar/avatar-01")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "avatar-01"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "avatar-02": {
+    name: "avatar-02",
+    description: "Avatar with status badge showcase",
+    type: "registry:example",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/examples/avatar/avatar-02.tsx",
+        type: "registry:example",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/designali/examples/avatar/avatar-02")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "avatar-02"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "avatar-03": {
+    name: "avatar-03",
+    description: "Avatar with badge icon showcase",
+    type: "registry:example",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/examples/avatar/avatar-03.tsx",
+        type: "registry:example",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/designali/examples/avatar/avatar-03")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "avatar-03"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "avatar-04": {
+    name: "avatar-04",
+    description: "Avatar group stack showcase",
+    type: "registry:example",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/examples/avatar/avatar-04.tsx",
+        type: "registry:example",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/designali/examples/avatar/avatar-04")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "avatar-04"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "avatar-05": {
+    name: "avatar-05",
+    description: "Avatar group with numerical count showcase",
+    type: "registry:example",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/examples/avatar/avatar-05.tsx",
+        type: "registry:example",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/designali/examples/avatar/avatar-05")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "avatar-05"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "avatar-06": {
+    name: "avatar-06",
+    description: "Avatar group with icon count showcase",
+    type: "registry:example",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/examples/avatar/avatar-06.tsx",
+        type: "registry:example",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/designali/examples/avatar/avatar-06")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "avatar-06"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "avatar-07": {
+    name: "avatar-07",
+    description: "Avatar different sizes showcase",
+    type: "registry:example",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/examples/avatar/avatar-07.tsx",
+        type: "registry:example",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/designali/examples/avatar/avatar-07")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "avatar-07"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "avatar-08": {
+    name: "avatar-08",
+    description: "Avatar dropdown menu trigger showcase",
+    type: "registry:example",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/examples/avatar/avatar-08.tsx",
+        type: "registry:example",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/designali/examples/avatar/avatar-08")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "avatar-08"
 
       return {
         default: mod.default || mod[exportName],
