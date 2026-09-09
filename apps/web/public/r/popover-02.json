@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "popover-02",
+  "type": "registry:example",
+  "description": "Popover content alignment variants illustrating start, center, and end placements.",
+  "registryDependencies": [
+    "button",
+    "popover"
+  ],
+  "files": [
+    {
+      "path": "registry/designali/examples/popover/popover-02.tsx",
+      "content": "import { Button } from \"@workspace/ui/components/button\"\nimport {\n  Popover,\n  PopoverContent,\n  PopoverTrigger,\n} from \"@workspace/ui/components/popover\"\n\nexport function PopoverAlignments() {\n  return (\n    <>\n      <div className=\"flex gap-6\">\n        <Popover>\n          <PopoverTrigger render={<Button variant=\"outline\" size=\"sm\">Start</Button>} />\n          <PopoverContent align=\"start\" className=\"w-40\">\n            Aligned to start\n          </PopoverContent>\n        </Popover>\n        <Popover>\n          <PopoverTrigger render={<Button variant=\"outline\" size=\"sm\">Center</Button>} />\n          <PopoverContent align=\"center\" className=\"w-40\">\n            Aligned to center\n          </PopoverContent>\n        </Popover>\n        <Popover>\n          <PopoverTrigger render={<Button variant=\"outline\" size=\"sm\">End</Button>} />\n          <PopoverContent align=\"end\" className=\"w-40\">\n            Aligned to end\n          </PopoverContent>\n        </Popover>\n      </div>\n    </>\n  )\n}",
+      "type": "registry:example"
+    }
+  ]
+}

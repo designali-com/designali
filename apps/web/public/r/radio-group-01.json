@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "radio-group-01",
+  "type": "registry:example",
+  "description": "Standard radio button group with text labels.",
+  "registryDependencies": [
+    "label",
+    "radio-group"
+  ],
+  "files": [
+    {
+      "path": "registry/designali/examples/radio-group/radio-group-01.tsx",
+      "content": "import { Label } from \"@workspace/ui/components/label\"\nimport { RadioGroup, RadioGroupItem } from \"@workspace/ui/components/radio-group\"\n\nexport function RadioGroupDemo() {\n  return (\n    <RadioGroup defaultValue=\"comfortable\" className=\"w-fit\">\n      <div className=\"flex items-center gap-3\">\n        <RadioGroupItem value=\"default\" id=\"r1\" />\n        <Label htmlFor=\"r1\">Default</Label>\n      </div>\n      <div className=\"flex items-center gap-3\">\n        <RadioGroupItem value=\"comfortable\" id=\"r2\" />\n        <Label htmlFor=\"r2\">Comfortable</Label>\n      </div>\n      <div className=\"flex items-center gap-3\">\n        <RadioGroupItem value=\"compact\" id=\"r3\" />\n        <Label htmlFor=\"r3\">Compact</Label>\n      </div>\n    </RadioGroup>\n  )\n}",
+      "type": "registry:example"
+    }
+  ]
+}

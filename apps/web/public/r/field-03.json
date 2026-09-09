@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "field-03",
+  "type": "registry:example",
+  "description": "A feedback form field configuration utilizing a textarea control with descriptive field text.",
+  "registryDependencies": [
+    "field",
+    "textarea"
+  ],
+  "files": [
+    {
+      "path": "registry/designali/examples/field/field-03.tsx",
+      "content": "import {\n  Field,\n  FieldDescription,\n  FieldGroup,\n  FieldLabel,\n  FieldSet,\n} from \"@workspace/ui/components/field\"\nimport { Textarea } from \"@workspace/ui/components/textarea\"\n\nexport function FieldTextarea() {\n  return (\n    <FieldSet className=\"w-full max-w-xs\">\n      <FieldGroup>\n        <Field>\n          <FieldLabel htmlFor=\"feedback\">Feedback</FieldLabel>\n          <Textarea\n            id=\"feedback\"\n            placeholder=\"Your feedback helps us improve...\"\n            rows={4}\n          />\n          <FieldDescription>\n            Share your thoughts about our service.\n          </FieldDescription>\n        </Field>\n      </FieldGroup>\n    </FieldSet>\n  )\n}",
+      "type": "registry:example"
+    }
+  ]
+}

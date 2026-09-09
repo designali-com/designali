@@ -1264,4 +1264,316 @@ export const examples: Registry["items"] = [
       },
     ],
   },
+  {
+    name: "field-01",
+    description: "A complete checkout form demonstrating nested field groups, fieldsets, field legends, and layout grids.",
+    type: "registry:example",
+    registryDependencies: ["button", "checkbox", "field", "input", "select", "textarea"],
+    files: [
+      {
+        path: "examples/field/field-01.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "field-02",
+    description: "An account credentials fieldset featuring username and password inputs with field descriptions.",
+    type: "registry:example",
+    registryDependencies: ["field", "input"],
+    files: [
+      {
+        path: "examples/field/field-02.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "field-03",
+    description: "A feedback form field configuration utilizing a textarea control with descriptive field text.",
+    type: "registry:example",
+    registryDependencies: ["field", "textarea"],
+    files: [
+      {
+        path: "examples/field/field-03.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "pagination-01",
+    description: "Standard pagination bar with previous, next, page numbers, and ellipsis indicator.",
+    type: "registry:example",
+    registryDependencies: ["pagination"],
+    files: [
+      {
+        path: "examples/pagination/pagination-01.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "pagination-02",
+    description: "Compact pagination layout featuring rows-per-page selector paired with icon-only previous and next controls.",
+    type: "registry:example",
+    registryDependencies: ["field", "pagination", "select"],
+    files: [
+      {
+        path: "examples/pagination/pagination-02.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "pagination-03",
+    description: "Simple, minimal pagination listing numbered page links without previous or next buttons.",
+    type: "registry:example",
+    registryDependencies: ["pagination"],
+    files: [
+      {
+        path: "examples/pagination/pagination-03.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "popover-01",
+    description: "Standard popover with dimension controls and field inputs.",
+    type: "registry:example",
+    registryDependencies: ["button", "input", "label", "popover"],
+    files: [
+      {
+        path: "examples/popover/popover-01.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "popover-02",
+    description: "Popover content alignment variants illustrating start, center, and end placements.",
+    type: "registry:example",
+    registryDependencies: ["button", "popover"],
+    files: [
+      {
+        path: "examples/popover/popover-02.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "popover-03",
+    description: "Popover containing a structured form with headers, descriptions, and horizontal field inputs.",
+    type: "registry:example",
+    registryDependencies: ["button", "field", "input", "popover"],
+    files: [
+      {
+        path: "examples/popover/popover-03.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "progress-01",
+    description: "Standard animated progress bar component demonstrating a dynamic loading state.",
+    type: "registry:example",
+    registryDependencies: ["progress"],
+    files: [
+      {
+        path: "examples/progress/progress-01.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "progress-02",
+    description: "Progress component featuring built-in label and numerical percentage indicators.",
+    type: "registry:example",
+    registryDependencies: ["progress"],
+    files: [
+      {
+        path: "examples/progress/progress-02.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "progress-03",
+    description: "Controlled progress indicator paired with an interactive slider control.",
+    type: "registry:example",
+    registryDependencies: ["progress", "slider"],
+    files: [
+      {
+        path: "examples/progress/progress-03.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "radio-group-01",
+    description: "Standard radio button group with text labels.",
+    type: "registry:example",
+    registryDependencies: ["label", "radio-group"],
+    files: [
+      {
+        path: "examples/radio-group/radio-group-01.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "radio-group-02",
+    description: "Radio group integrated with field components for layout and detailed descriptions.",
+    type: "registry:example",
+    registryDependencies: ["field", "radio-group"],
+    files: [
+      {
+        path: "examples/radio-group/radio-group-02.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "radio-group-03",
+    description: "Radio group styled as interactive choice cards with title and description fields.",
+    type: "registry:example",
+    registryDependencies: ["field", "radio-group"],
+    files: [
+      {
+        path: "examples/radio-group/radio-group-03.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "resizable-01",
+    description: "Nested horizontal and vertical resizable panel groups with visible drag handles.",
+    type: "registry:example",
+    registryDependencies: ["resizable"],
+    files: [
+      {
+        path: "examples/resizable/resizable-01.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "resizable-02",
+    description: "Vertical resizable panel layout configured for header and content areas.",
+    type: "registry:example",
+    registryDependencies: ["resizable"],
+    files: [
+      {
+        path: "examples/resizable/resizable-02.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "resizable-03",
+    description: "Horizontal resizable panel layout with a drag handle icon for sidebar and main content.",
+    type: "registry:example",
+    registryDependencies: ["resizable"],
+    files: [
+      {
+        path: "examples/resizable/resizable-03.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "scroll-area-01",
+    description: "Vertical scroll area component displaying a long list with subtle dividers.",
+    type: "registry:example",
+    registryDependencies: ["scroll-area", "separator"],
+    files: [
+      {
+        path: "examples/scroll-area/scroll-area-01.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "scroll-area-02",
+    description: "Horizontal scroll area featuring image thumbnails and an explicit scroll bar orientation.",
+    type: "registry:example",
+    registryDependencies: ["scroll-area"],
+    files: [
+      {
+        path: "examples/scroll-area/scroll-area-02.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "select-01",
+    description: "Basic select dropdown component with grouped items and a clear placeholder state.",
+    type: "registry:example",
+    registryDependencies: ["select"],
+    files: [
+      {
+        path: "examples/select/select-01.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "select-02",
+    description: "Interactive select component with a toggle switch to dynamically adjust trigger alignment.",
+    type: "registry:example",
+    registryDependencies: ["select", "field", "label", "switch"],
+    files: [
+      {
+        path: "examples/select/select-02.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "select-03",
+    description: "Select dropdown featuring grouped categories separated by visual dividers.",
+    type: "registry:example",
+    registryDependencies: ["select"],
+    files: [
+      {
+        path: "examples/select/select-03.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "separator-01",
+    description: "Horizontal separator component dividing text content and headers.",
+    type: "registry:example",
+    registryDependencies: ["separator"],
+    files: [
+      {
+        path: "examples/separator/separator-01.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "separator-02",
+    description: "Vertical separator component used as a divider between inline navigation links.",
+    type: "registry:example",
+    registryDependencies: ["separator"],
+    files: [
+      {
+        path: "examples/separator/separator-02.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "separator-03",
+    description: "Multiple horizontal separators dividing items in a key-value list layout.",
+    type: "registry:example",
+    registryDependencies: ["separator"],
+    files: [
+      {
+        path: "examples/separator/separator-03.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
 ]

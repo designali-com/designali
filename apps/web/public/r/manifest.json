@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-09T06:57:13.786Z",
+  "generatedAt": "2026-09-09T17:07:05.819Z",
   "items": [
     {
       "name": "gauge",
@@ -858,6 +858,162 @@
       "name": "navigation-menu-01",
       "type": "registry:example",
       "description": "Full-featured navigation menu with rich dropdown layouts, component grids, and icons.",
+      "categories": []
+    },
+    {
+      "name": "field-01",
+      "type": "registry:example",
+      "description": "A complete checkout form demonstrating nested field groups, fieldsets, field legends, and layout grids.",
+      "categories": []
+    },
+    {
+      "name": "field-02",
+      "type": "registry:example",
+      "description": "An account credentials fieldset featuring username and password inputs with field descriptions.",
+      "categories": []
+    },
+    {
+      "name": "field-03",
+      "type": "registry:example",
+      "description": "A feedback form field configuration utilizing a textarea control with descriptive field text.",
+      "categories": []
+    },
+    {
+      "name": "pagination-01",
+      "type": "registry:example",
+      "description": "Standard pagination bar with previous, next, page numbers, and ellipsis indicator.",
+      "categories": []
+    },
+    {
+      "name": "pagination-02",
+      "type": "registry:example",
+      "description": "Compact pagination layout featuring rows-per-page selector paired with icon-only previous and next controls.",
+      "categories": []
+    },
+    {
+      "name": "pagination-03",
+      "type": "registry:example",
+      "description": "Simple, minimal pagination listing numbered page links without previous or next buttons.",
+      "categories": []
+    },
+    {
+      "name": "popover-01",
+      "type": "registry:example",
+      "description": "Standard popover with dimension controls and field inputs.",
+      "categories": []
+    },
+    {
+      "name": "popover-02",
+      "type": "registry:example",
+      "description": "Popover content alignment variants illustrating start, center, and end placements.",
+      "categories": []
+    },
+    {
+      "name": "popover-03",
+      "type": "registry:example",
+      "description": "Popover containing a structured form with headers, descriptions, and horizontal field inputs.",
+      "categories": []
+    },
+    {
+      "name": "progress-01",
+      "type": "registry:example",
+      "description": "Standard animated progress bar component demonstrating a dynamic loading state.",
+      "categories": []
+    },
+    {
+      "name": "progress-02",
+      "type": "registry:example",
+      "description": "Progress component featuring built-in label and numerical percentage indicators.",
+      "categories": []
+    },
+    {
+      "name": "progress-03",
+      "type": "registry:example",
+      "description": "Controlled progress indicator paired with an interactive slider control.",
+      "categories": []
+    },
+    {
+      "name": "radio-group-01",
+      "type": "registry:example",
+      "description": "Standard radio button group with text labels.",
+      "categories": []
+    },
+    {
+      "name": "radio-group-02",
+      "type": "registry:example",
+      "description": "Radio group integrated with field components for layout and detailed descriptions.",
+      "categories": []
+    },
+    {
+      "name": "radio-group-03",
+      "type": "registry:example",
+      "description": "Radio group styled as interactive choice cards with title and description fields.",
+      "categories": []
+    },
+    {
+      "name": "resizable-01",
+      "type": "registry:example",
+      "description": "Nested horizontal and vertical resizable panel groups with visible drag handles.",
+      "categories": []
+    },
+    {
+      "name": "resizable-02",
+      "type": "registry:example",
+      "description": "Vertical resizable panel layout configured for header and content areas.",
+      "categories": []
+    },
+    {
+      "name": "resizable-03",
+      "type": "registry:example",
+      "description": "Horizontal resizable panel layout with a drag handle icon for sidebar and main content.",
+      "categories": []
+    },
+    {
+      "name": "scroll-area-01",
+      "type": "registry:example",
+      "description": "Vertical scroll area component displaying a long list with subtle dividers.",
+      "categories": []
+    },
+    {
+      "name": "scroll-area-02",
+      "type": "registry:example",
+      "description": "Horizontal scroll area featuring image thumbnails and an explicit scroll bar orientation.",
+      "categories": []
+    },
+    {
+      "name": "select-01",
+      "type": "registry:example",
+      "description": "Basic select dropdown component with grouped items and a clear placeholder state.",
+      "categories": []
+    },
+    {
+      "name": "select-02",
+      "type": "registry:example",
+      "description": "Interactive select component with a toggle switch to dynamically adjust trigger alignment.",
+      "categories": []
+    },
+    {
+      "name": "select-03",
+      "type": "registry:example",
+      "description": "Select dropdown featuring grouped categories separated by visual dividers.",
+      "categories": []
+    },
+    {
+      "name": "separator-01",
+      "type": "registry:example",
+      "description": "Horizontal separator component dividing text content and headers.",
+      "categories": []
+    },
+    {
+      "name": "separator-02",
+      "type": "registry:example",
+      "description": "Vertical separator component used as a divider between inline navigation links.",
+      "categories": []
+    },
+    {
+      "name": "separator-03",
+      "type": "registry:example",
+      "description": "Multiple horizontal separators dividing items in a key-value list layout.",
       "categories": []
     },
     {

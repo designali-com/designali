@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "progress-03",
+  "type": "registry:example",
+  "description": "Controlled progress indicator paired with an interactive slider control.",
+  "registryDependencies": [
+    "progress",
+    "slider"
+  ],
+  "files": [
+    {
+      "path": "registry/designali/examples/progress/progress-03.tsx",
+      "content": "import {\n  Progress,\n  ProgressLabel,\n  ProgressValue,\n} from \"@workspace/ui/components/progress\"\n\nexport function ProgressWithLabel() {\n  return (\n    <Progress value={56} className=\"w-full max-w-sm\">\n      <ProgressLabel>Upload progress</ProgressLabel>\n      <ProgressValue />\n    </Progress>\n  )\n}",
+      "type": "registry:example"
+    }
+  ]
+}

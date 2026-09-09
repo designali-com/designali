@@ -4560,6 +4560,837 @@ export const Index: Record<string, any> = {
       }
     }),
   },
+  "field-01": {
+    name: "field-01",
+    description:
+      "A complete checkout form demonstrating nested field groups, fieldsets, field legends, and layout grids.",
+    type: "registry:example",
+    registryDependencies: [
+      "button",
+      "checkbox",
+      "field",
+      "input",
+      "select",
+      "textarea",
+    ],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/examples/field/field-01.tsx",
+        type: "registry:example",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/designali/examples/field/field-01")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "field-01"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "field-02": {
+    name: "field-02",
+    description:
+      "An account credentials fieldset featuring username and password inputs with field descriptions.",
+    type: "registry:example",
+    registryDependencies: ["field", "input"],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/examples/field/field-02.tsx",
+        type: "registry:example",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/designali/examples/field/field-02")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "field-02"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "field-03": {
+    name: "field-03",
+    description:
+      "A feedback form field configuration utilizing a textarea control with descriptive field text.",
+    type: "registry:example",
+    registryDependencies: ["field", "textarea"],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/examples/field/field-03.tsx",
+        type: "registry:example",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/designali/examples/field/field-03")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "field-03"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "pagination-01": {
+    name: "pagination-01",
+    description:
+      "Standard pagination bar with previous, next, page numbers, and ellipsis indicator.",
+    type: "registry:example",
+    registryDependencies: ["pagination"],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/examples/pagination/pagination-01.tsx",
+        type: "registry:example",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/examples/pagination/pagination-01")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "pagination-01"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "pagination-02": {
+    name: "pagination-02",
+    description:
+      "Compact pagination layout featuring rows-per-page selector paired with icon-only previous and next controls.",
+    type: "registry:example",
+    registryDependencies: ["field", "pagination", "select"],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/examples/pagination/pagination-02.tsx",
+        type: "registry:example",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/examples/pagination/pagination-02")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "pagination-02"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "pagination-03": {
+    name: "pagination-03",
+    description:
+      "Simple, minimal pagination listing numbered page links without previous or next buttons.",
+    type: "registry:example",
+    registryDependencies: ["pagination"],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/examples/pagination/pagination-03.tsx",
+        type: "registry:example",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/examples/pagination/pagination-03")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "pagination-03"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "popover-01": {
+    name: "popover-01",
+    description: "Standard popover with dimension controls and field inputs.",
+    type: "registry:example",
+    registryDependencies: ["button", "input", "label", "popover"],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/examples/popover/popover-01.tsx",
+        type: "registry:example",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/examples/popover/popover-01")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "popover-01"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "popover-02": {
+    name: "popover-02",
+    description:
+      "Popover content alignment variants illustrating start, center, and end placements.",
+    type: "registry:example",
+    registryDependencies: ["button", "popover"],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/examples/popover/popover-02.tsx",
+        type: "registry:example",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/examples/popover/popover-02")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "popover-02"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "popover-03": {
+    name: "popover-03",
+    description:
+      "Popover containing a structured form with headers, descriptions, and horizontal field inputs.",
+    type: "registry:example",
+    registryDependencies: ["button", "field", "input", "popover"],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/examples/popover/popover-03.tsx",
+        type: "registry:example",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/examples/popover/popover-03")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "popover-03"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "progress-01": {
+    name: "progress-01",
+    description:
+      "Standard animated progress bar component demonstrating a dynamic loading state.",
+    type: "registry:example",
+    registryDependencies: ["progress"],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/examples/progress/progress-01.tsx",
+        type: "registry:example",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/examples/progress/progress-01")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "progress-01"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "progress-02": {
+    name: "progress-02",
+    description:
+      "Progress component featuring built-in label and numerical percentage indicators.",
+    type: "registry:example",
+    registryDependencies: ["progress"],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/examples/progress/progress-02.tsx",
+        type: "registry:example",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/examples/progress/progress-02")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "progress-02"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "progress-03": {
+    name: "progress-03",
+    description:
+      "Controlled progress indicator paired with an interactive slider control.",
+    type: "registry:example",
+    registryDependencies: ["progress", "slider"],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/examples/progress/progress-03.tsx",
+        type: "registry:example",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/examples/progress/progress-03")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "progress-03"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "radio-group-01": {
+    name: "radio-group-01",
+    description: "Standard radio button group with text labels.",
+    type: "registry:example",
+    registryDependencies: ["label", "radio-group"],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/examples/radio-group/radio-group-01.tsx",
+        type: "registry:example",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/examples/radio-group/radio-group-01")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "radio-group-01"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "radio-group-02": {
+    name: "radio-group-02",
+    description:
+      "Radio group integrated with field components for layout and detailed descriptions.",
+    type: "registry:example",
+    registryDependencies: ["field", "radio-group"],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/examples/radio-group/radio-group-02.tsx",
+        type: "registry:example",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/examples/radio-group/radio-group-02")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "radio-group-02"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "radio-group-03": {
+    name: "radio-group-03",
+    description:
+      "Radio group styled as interactive choice cards with title and description fields.",
+    type: "registry:example",
+    registryDependencies: ["field", "radio-group"],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/examples/radio-group/radio-group-03.tsx",
+        type: "registry:example",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/examples/radio-group/radio-group-03")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "radio-group-03"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "resizable-01": {
+    name: "resizable-01",
+    description:
+      "Nested horizontal and vertical resizable panel groups with visible drag handles.",
+    type: "registry:example",
+    registryDependencies: ["resizable"],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/examples/resizable/resizable-01.tsx",
+        type: "registry:example",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/examples/resizable/resizable-01")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "resizable-01"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "resizable-02": {
+    name: "resizable-02",
+    description:
+      "Vertical resizable panel layout configured for header and content areas.",
+    type: "registry:example",
+    registryDependencies: ["resizable"],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/examples/resizable/resizable-02.tsx",
+        type: "registry:example",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/examples/resizable/resizable-02")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "resizable-02"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "resizable-03": {
+    name: "resizable-03",
+    description:
+      "Horizontal resizable panel layout with a drag handle icon for sidebar and main content.",
+    type: "registry:example",
+    registryDependencies: ["resizable"],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/examples/resizable/resizable-03.tsx",
+        type: "registry:example",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/examples/resizable/resizable-03")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "resizable-03"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "scroll-area-01": {
+    name: "scroll-area-01",
+    description:
+      "Vertical scroll area component displaying a long list with subtle dividers.",
+    type: "registry:example",
+    registryDependencies: ["scroll-area", "separator"],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/examples/scroll-area/scroll-area-01.tsx",
+        type: "registry:example",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/examples/scroll-area/scroll-area-01")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "scroll-area-01"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "scroll-area-02": {
+    name: "scroll-area-02",
+    description:
+      "Horizontal scroll area featuring image thumbnails and an explicit scroll bar orientation.",
+    type: "registry:example",
+    registryDependencies: ["scroll-area"],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/examples/scroll-area/scroll-area-02.tsx",
+        type: "registry:example",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/examples/scroll-area/scroll-area-02")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "scroll-area-02"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "select-01": {
+    name: "select-01",
+    description:
+      "Basic select dropdown component with grouped items and a clear placeholder state.",
+    type: "registry:example",
+    registryDependencies: ["select"],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/examples/select/select-01.tsx",
+        type: "registry:example",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/designali/examples/select/select-01")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "select-01"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "select-02": {
+    name: "select-02",
+    description:
+      "Interactive select component with a toggle switch to dynamically adjust trigger alignment.",
+    type: "registry:example",
+    registryDependencies: ["select", "field", "label", "switch"],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/examples/select/select-02.tsx",
+        type: "registry:example",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/designali/examples/select/select-02")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "select-02"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "select-03": {
+    name: "select-03",
+    description:
+      "Select dropdown featuring grouped categories separated by visual dividers.",
+    type: "registry:example",
+    registryDependencies: ["select"],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/examples/select/select-03.tsx",
+        type: "registry:example",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/designali/examples/select/select-03")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "select-03"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "separator-01": {
+    name: "separator-01",
+    description:
+      "Horizontal separator component dividing text content and headers.",
+    type: "registry:example",
+    registryDependencies: ["separator"],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/examples/separator/separator-01.tsx",
+        type: "registry:example",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/examples/separator/separator-01")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "separator-01"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "separator-02": {
+    name: "separator-02",
+    description:
+      "Vertical separator component used as a divider between inline navigation links.",
+    type: "registry:example",
+    registryDependencies: ["separator"],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/examples/separator/separator-02.tsx",
+        type: "registry:example",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/examples/separator/separator-02")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "separator-02"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "separator-03": {
+    name: "separator-03",
+    description:
+      "Multiple horizontal separators dividing items in a key-value list layout.",
+    type: "registry:example",
+    registryDependencies: ["separator"],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/examples/separator/separator-03.tsx",
+        type: "registry:example",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/examples/separator/separator-03")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "separator-03"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
   "counter-number-default": {
     name: "counter-number-default",
     description: "",

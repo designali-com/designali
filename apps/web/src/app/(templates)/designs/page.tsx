@@ -14,6 +14,7 @@ export default function Page() {
                 </h1>
                 <p>Design in Progress</p>
             </section>
+            
         </div>
     )
 }

@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "popover-03",
+  "type": "registry:example",
+  "description": "Popover containing a structured form with headers, descriptions, and horizontal field inputs.",
+  "registryDependencies": [
+    "button",
+    "field",
+    "input",
+    "popover"
+  ],
+  "files": [
+    {
+      "path": "registry/designali/examples/popover/popover-03.tsx",
+      "content": "import { Button } from \"@workspace/ui/components/button\"\nimport { Field, FieldGroup, FieldLabel } from \"@workspace/ui/components/field\"\nimport { Input } from \"@workspace/ui/components/input\"\nimport {\n  Popover,\n  PopoverContent,\n  PopoverDescription,\n  PopoverHeader,\n  PopoverTitle,\n  PopoverTrigger,\n} from \"@workspace/ui/components/popover\"\n\nexport function PopoverForm() {\n  return (\n    <>\n      <Popover>\n        <PopoverTrigger render={<Button variant=\"outline\">Open Popover</Button>} />\n        <PopoverContent className=\"w-64\" align=\"start\">\n          <PopoverHeader>\n            <PopoverTitle>Dimensions</PopoverTitle>\n            <PopoverDescription>\n              Set the dimensions for the layer.\n            </PopoverDescription>\n          </PopoverHeader>\n          <FieldGroup className=\"gap-4\">\n            <Field orientation=\"horizontal\">\n              <FieldLabel htmlFor=\"width\" className=\"w-1/2\">\n                Width\n              </FieldLabel>\n              <Input id=\"width\" defaultValue=\"100%\" />\n            </Field>\n            <Field orientation=\"horizontal\">\n              <FieldLabel htmlFor=\"height\" className=\"w-1/2\">\n                Height\n              </FieldLabel>\n              <Input id=\"height\" defaultValue=\"25px\" />\n            </Field>\n          </FieldGroup>\n        </PopoverContent>\n      </Popover>\n    </>\n  )\n}",
+      "type": "registry:example"
+    }
+  ]
+}
