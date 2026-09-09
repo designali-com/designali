@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "calendar-08",
+  "type": "registry:example",
+  "description": "Calendar picker integrated with a time slot selector.",
+  "files": [
+    {
+      "path": "registry/designali/examples/calendar/calendar-08.tsx",
+      "content": "\"use client\"\n\nimport { Calendar } from \"@workspace/ui/components/calendar\" \nimport * as React from \"react\" \nimport { Card, CardContent } from \"@workspace/ui/components/card\"\n    \n\nexport function CalendarWeekNumbers() {\n  const [date, setDate] = React.useState<Date | undefined>(\n    new Date(new Date().getFullYear(), 0, 12)\n  )\n\n  return (\n    <Card className=\"mx-auto w-fit p-0\">\n      <CardContent className=\"p-0\">\n        <Calendar\n          mode=\"single\"\n          defaultMonth={date}\n          selected={date}\n          onSelect={setDate}\n          showWeekNumber\n        />\n      </CardContent>\n    </Card>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

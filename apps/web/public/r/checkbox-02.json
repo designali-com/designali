@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "checkbox-02",
+  "type": "registry:example",
+  "description": "Checkbox with supporting helper text description block.",
+  "registryDependencies": [
+    "checkbox",
+    "field"
+  ],
+  "files": [
+    {
+      "path": "registry/designali/examples/checkbox/checkbox-02.tsx",
+      "content": "import { Checkbox } from \"@workspace/ui/components/checkbox\"\nimport {\n  Field,\n  FieldContent,\n  FieldDescription,\n  FieldGroup,\n  FieldLabel,\n} from \"@workspace/ui/components/field\"\n\nexport function CheckboxDescription() {\n  return (\n    <FieldGroup className=\"mx-auto w-72\">\n      <Field orientation=\"horizontal\">\n        <Checkbox\n          id=\"terms-checkbox-desc\"\n          name=\"terms-checkbox-desc\"\n          defaultChecked\n        />\n        <FieldContent>\n          <FieldLabel htmlFor=\"terms-checkbox-desc\">\n            Accept terms and conditions\n          </FieldLabel>\n          <FieldDescription>\n            By clicking this checkbox, you agree to the terms and conditions.\n          </FieldDescription>\n        </FieldContent>\n      </Field>\n    </FieldGroup>\n  )\n}",
+      "type": "registry:example"
+    }
+  ]
+}

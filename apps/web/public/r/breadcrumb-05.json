@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "breadcrumb-05",
+  "type": "registry:example",
+  "description": "Breadcrumb with custom link components showcase",
+  "files": [
+    {
+      "path": "registry/designali/examples/breadcrumb/breadcrumb-05.tsx",
+      "content": "import Link from \"next/link\"\n\nimport {\n  Breadcrumb,\n  BreadcrumbItem,\n  BreadcrumbLink,\n  BreadcrumbList,\n  BreadcrumbPage,\n  BreadcrumbSeparator,\n} from \"@workspace/ui/components/breadcrumb\"\n\nexport function BreadcrumbLinkDemo() {\n  return (\n    <Breadcrumb>\n      <BreadcrumbList>\n        <BreadcrumbItem>\n          <BreadcrumbLink render={<Link href=\"#link-component\">Home</Link>} />\n        </BreadcrumbItem>\n        <BreadcrumbSeparator />\n        <BreadcrumbItem>\n          <BreadcrumbLink render={<Link href=\"#link-component\">Components</Link>} />\n        </BreadcrumbItem>\n        <BreadcrumbSeparator />\n        <BreadcrumbItem>\n          <BreadcrumbPage>Breadcrumb</BreadcrumbPage>\n        </BreadcrumbItem>\n      </BreadcrumbList>\n    </Breadcrumb>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

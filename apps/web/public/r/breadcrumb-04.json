@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "breadcrumb-04",
+  "type": "registry:example",
+  "description": "Breadcrumb with collapsed ellipsis showcase",
+  "files": [
+    {
+      "path": "registry/designali/examples/breadcrumb/breadcrumb-04.tsx",
+      "content": "import Link from \"next/link\"\n\nimport {\n  Breadcrumb,\n  BreadcrumbEllipsis,\n  BreadcrumbItem,\n  BreadcrumbLink,\n  BreadcrumbList,\n  BreadcrumbPage,\n  BreadcrumbSeparator,\n} from \"@workspace/ui/components/breadcrumb\"\n\nexport function BreadcrumbEllipsisDemo() {\n  return (\n    <Breadcrumb>\n      <BreadcrumbList>\n        <BreadcrumbItem>\n          <BreadcrumbLink render={<Link href=\"/\">Home</Link>} />\n        </BreadcrumbItem>\n        <BreadcrumbSeparator />\n        <BreadcrumbItem>\n          <BreadcrumbEllipsis />\n        </BreadcrumbItem>\n        <BreadcrumbSeparator />\n        <BreadcrumbItem>\n          <BreadcrumbLink render={<Link href=\"/docs/components\">Components</Link>} />\n        </BreadcrumbItem>\n        <BreadcrumbSeparator />\n        <BreadcrumbItem>\n          <BreadcrumbPage>Breadcrumb</BreadcrumbPage>\n        </BreadcrumbItem>\n      </BreadcrumbList>\n    </Breadcrumb>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

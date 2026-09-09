@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "checkbox-01",
+  "type": "registry:example",
+  "description": "Simple single checkbox with an aligned label field.",
+  "registryDependencies": [
+    "checkbox",
+    "field"
+  ],
+  "files": [
+    {
+      "path": "registry/designali/examples/checkbox/checkbox-01.tsx",
+      "content": "import { Checkbox } from \"@workspace/ui/components/checkbox\"\nimport { Field, FieldGroup, FieldLabel } from \"@workspace/ui/components/field\"\n\nexport function CheckboxBasic() {\n  return (\n    <FieldGroup className=\"mx-auto w-56\">\n      <Field orientation=\"horizontal\">\n        <Checkbox id=\"terms-checkbox-basic\" name=\"terms-checkbox-basic\" />\n        <FieldLabel htmlFor=\"terms-checkbox-basic\">\n          Accept terms and conditions\n        </FieldLabel>\n      </Field>\n    </FieldGroup>\n  )\n}",
+      "type": "registry:example"
+    }
+  ]
+}

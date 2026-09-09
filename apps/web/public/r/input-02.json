@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-02",
+  "type": "registry:example",
+  "description": "Input example",
+  "files": [
+    {
+      "path": "registry/designali/examples/input/input-02.tsx",
+      "content": " \n  import { Input } from \"@workspace/ui/components/input\"\n  \n  export function InputBasic() {\n    return <Input placeholder=\"Enter text\" />\n  }\n  ",
+      "type": "registry:example"
+    }
+  ]
+}

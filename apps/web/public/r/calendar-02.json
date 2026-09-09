@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "calendar-02",
+  "type": "registry:example",
+  "description": "Dual-month range picker inside a card container.",
+  "files": [
+    {
+      "path": "registry/designali/examples/calendar/calendar-02.tsx",
+      "content": "\"use client\"\n\nimport { Calendar } from \"@workspace/ui/components/calendar\"\n \nimport * as React from \"react\"\nimport { addDays } from \"date-fns\"\nimport { type DateRange } from \"react-day-picker\"\n \nimport { Card, CardContent } from \"@workspace/ui/components/card\"\n\nexport function CalendarRange() {\n  const [dateRange, setDateRange] = React.useState<DateRange | undefined>(() => {\n    const today = new Date()\n    const startDate = new Date(today.getFullYear(), 0, 12)\n    return {\n      from: startDate,\n      to: addDays(startDate, 30),\n    }\n  })\n\n  return (\n    <Card className=\"w-fit\">\n      <CardContent className=\"p-4\">\n        <Calendar\n          mode=\"range\"\n          defaultMonth={dateRange?.from}\n          selected={dateRange}\n          onSelect={setDateRange}\n          numberOfMonths={2}\n          className=\"rounded-lg border\"\n        />\n      </CardContent>\n    </Card>\n  )\n}",
+      "type": "registry:example"
+    }
+  ]
+}

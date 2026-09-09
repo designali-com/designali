@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "combobox-03",
+  "type": "registry:example",
+  "description": "Combobox input featuring a clear selection action button.",
+  "registryDependencies": [
+    "combobox"
+  ],
+  "files": [
+    {
+      "path": "registry/designali/examples/combobox/combobox-03.tsx",
+      "content": "\"use client\"\n\nimport {\n  Combobox,\n  ComboboxContent,\n  ComboboxEmpty,\n  ComboboxInput,\n  ComboboxItem,\n  ComboboxList,\n} from \"@workspace/ui/components/combobox\"\n\nconst frameworks = [\n  \"Next.js\",\n  \"SvelteKit\",\n  \"Nuxt.js\",\n  \"Remix\",\n  \"Astro\",\n] as const\n\nexport function ComboboxWithClear() {\n  return (\n    <Combobox items={frameworks} defaultValue={frameworks[0]}>\n      <ComboboxInput placeholder=\"Select a framework\" showClear />\n      <ComboboxContent>\n        <ComboboxEmpty>No items found.</ComboboxEmpty>\n        <ComboboxList>\n          {(item) => (\n            <ComboboxItem key={item} value={item}>\n              {item}\n            </ComboboxItem>\n          )}\n        </ComboboxList>\n      </ComboboxContent>\n    </Combobox>\n  )\n}",
+      "type": "registry:example"
+    }
+  ]
+}

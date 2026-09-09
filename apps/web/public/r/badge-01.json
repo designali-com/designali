@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "badge-01",
+  "type": "registry:example",
+  "description": "Badge variants showcase",
+  "files": [
+    {
+      "path": "registry/designali/examples/badge/badge-01.tsx",
+      "content": "import { Badge } from \"@workspace/ui/components/badge\";\n\nexport default function BadgeVariants() {\n  return (\n    <div className=\"flex flex-wrap gap-2\">\n      <Badge>Default</Badge>\n      <Badge variant=\"secondary\">Secondary</Badge>\n      <Badge variant=\"destructive\">Destructive</Badge>\n      <Badge variant=\"outline\">Outline</Badge>\n      <Badge variant=\"ghost\">Ghost</Badge>\n    </div>\n  );\n}",
+      "type": "registry:example"
+    }
+  ]
+}

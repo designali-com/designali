@@ -45,8 +45,8 @@ export const data = {
       icon: Shapes,
     },
     {
-      title: "Design",
-      url: "/design",
+      title: "Designs",
+      url: "/designs",
       icon: Pen,
     },
     {
@@ -189,15 +189,7 @@ export const uiCategories: {
       "A slideshow component for displaying content in a horizontal sequence.",
     iconName: "GalleryHorizontal",
     hidden: false,
-  },
-  {
-    name: "Chart",
-    slug: "chart",
-    description:
-      "Composable chart components for visualizing data and analytics.",
-    iconName: "ChartNoAxesCombined",
-    hidden: false,
-  },
+  }, 
   {
     name: "Checkbox",
     slug: "checkbox",
@@ -258,10 +250,10 @@ export const uiCategories: {
     hidden: false,
   },
   {
-    name: "Form",
-    slug: "form",
+    name: "Field",
+    slug: "field",
     description:
-      "Form components with validation and accessible input handling.",
+      "Field components with validation and accessible input handling.",
     iconName: "ClipboardList",
     hidden: false,
   },

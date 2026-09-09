@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "collapsible-01",
+  "type": "registry:example",
+  "description": "Basic order status details toggle with header and content trigger.",
+  "registryDependencies": [
+    "button",
+    "collapsible"
+  ],
+  "files": [
+    {
+      "path": "registry/designali/examples/collapsible/collapsible-01.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { ChevronsUpDown } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  Collapsible,\n  CollapsibleContent,\n  CollapsibleTrigger,\n} from \"@workspace/ui/components/collapsible\"\n\nexport function CollapsibleDemo() {\n  const [isOpen, setIsOpen] = React.useState(false)\n\n  return (\n    <Collapsible\n      open={isOpen}\n      onOpenChange={setIsOpen}\n      className=\"flex w-[350px] flex-col gap-2\"\n    >\n      <div className=\"flex items-center justify-between gap-4 px-4\">\n        <h4 className=\"text-sm font-semibold\">Order #4189</h4>\n        <CollapsibleTrigger\n          render={\n            <Button variant=\"ghost\" size=\"icon\" className=\"size-8\">\n              <ChevronsUpDown />\n              <span className=\"sr-only\">Toggle details</span>\n            </Button>\n          }\n        />\n      </div>\n      <div className=\"flex items-center justify-between border px-4 py-2 text-sm\">\n        <span className=\"text-muted-foreground\">Status</span>\n        <span className=\"font-medium\">Shipped</span>\n      </div>\n      <CollapsibleContent className=\"flex flex-col gap-2\">\n        <div className=\"border px-4 py-2 text-sm\">\n          <p className=\"font-medium\">Shipping address</p>\n          <p className=\"text-muted-foreground\">100 Market St, San Francisco</p>\n        </div>\n        <div className=\"border px-4 py-2 text-sm\">\n          <p className=\"font-medium\">Items</p>\n          <p className=\"text-muted-foreground\">2x Studio Headphones</p>\n        </div>\n      </CollapsibleContent>\n    </Collapsible>\n  )\n}",
+      "type": "registry:example"
+    }
+  ]
+}

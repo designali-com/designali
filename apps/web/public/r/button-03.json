@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button-03",
+  "type": "registry:example",
+  "description": "Rounded full button variant",
+  "files": [
+    {
+      "path": "registry/designali/examples/button/button-03.tsx",
+      "content": "import { ArrowUpIcon } from \"lucide-react\";\n\nimport { Button } from \"@workspace/ui/components/button\";\n\nexport default function ButtonRounded() {\n  return (\n    <div className=\"flex gap-2\">\n      <Button size={\"md\"} className=\"rounded-full\">Get Started</Button>\n      <Button variant=\"outline\" size=\"icon-lg\" className=\"rounded-full\">\n        <ArrowUpIcon />\n      </Button>\n    </div>\n  );\n}",
+      "type": "registry:example"
+    }
+  ]
+}

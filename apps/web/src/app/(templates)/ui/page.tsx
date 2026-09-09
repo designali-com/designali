@@ -1,7 +1,7 @@
 import { ComponentPreview } from "@/src/components/docs/component-preview"
 import { LayoutGrid } from "lucide-react"
 
-const UI_COMPONENTS = ["button-variants", "accordion-01", "accordion-02"]
+const UI_COMPONENTS = ["accordion-01", "accordion-02", "button-02", "card-02"]
 
 export default function Page() {
   return (

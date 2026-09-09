@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "hover-card-02",
+  "type": "registry:example",
+  "description": "Hover card with custom delay configurations and rich avatar content.",
+  "registryDependencies": [
+    "hover-card",
+    "avatar",
+    "button"
+  ],
+  "files": [
+    {
+      "path": "registry/designali/examples/hover-card/hover-card-02.tsx",
+      "content": "import { Button } from \"@workspace/ui/components/button\"\nimport {\n  HoverCard,\n  HoverCardContent,\n  HoverCardTrigger,\n} from \"@workspace/ui/components/hover-card\"\n\nconst HOVER_CARD_SIDES = [\"left\", \"top\", \"bottom\", \"right\"] as const\n\nexport function HoverCardSides() {\n  return (\n    <div className=\"flex flex-wrap justify-center gap-2\">\n      {HOVER_CARD_SIDES.map((side) => (\n        <HoverCard key={side}>\n          <HoverCardTrigger delay={100} closeDelay={100} render={<Button variant=\"outline\" className=\"capitalize\">{side}</Button>} />\n          <HoverCardContent side={side}>\n            <div className=\"flex flex-col gap-1\">\n              <h4 className=\"font-medium\">Hover Card</h4>\n              <p>This hover card appears on the {side} side of the trigger.</p>\n            </div>\n          </HoverCardContent>\n        </HoverCard>\n      ))}\n    </div>\n  )\n}",
+      "type": "registry:example"
+    }
+  ]
+}

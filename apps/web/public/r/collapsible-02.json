@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "collapsible-02",
+  "type": "registry:example",
+  "description": "Expandable product details section inside a card container.",
+  "registryDependencies": [
+    "button",
+    "card",
+    "collapsible"
+  ],
+  "files": [
+    {
+      "path": "registry/designali/examples/collapsible/collapsible-02.tsx",
+      "content": "import { ChevronDownIcon } from \"lucide-react\"\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Card, CardContent } from \"@workspace/ui/components/card\"\nimport {\n  Collapsible,\n  CollapsibleContent,\n  CollapsibleTrigger,\n} from \"@workspace/ui/components/collapsible\"\n\nexport function CollapsibleBasic() {\n  return (\n    <Card className=\"mx-auto w-full max-w-sm\">\n      <CardContent>\n        <Collapsible className=\"rounded-md data-open:bg-muted\">\n          <CollapsibleTrigger\n            render={\n              <Button variant=\"ghost\" className=\"w-full\">\n                Product details\n                <ChevronDownIcon className=\"ml-auto group-data-panel-open/button:rotate-180\" />\n              </Button>\n            }\n          />\n          <CollapsibleContent className=\"flex flex-col items-start gap-2 p-2.5 pt-0 text-sm\">\n            <div>\n              This panel can be expanded or collapsed to reveal additional\n              content.\n            </div>\n            <Button size=\"xs\">Learn More</Button>\n          </CollapsibleContent>\n        </Collapsible>\n      </CardContent>\n    </Card>\n  )\n}",
+      "type": "registry:example"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "badge-03",
+  "type": "registry:example",
+  "description": "Badge with spinner showcase",
+  "files": [
+    {
+      "path": "registry/designali/examples/badge/badge-03.tsx",
+      "content": "import { Badge } from \"@workspace/ui/components/badge\";\nimport { Spinner } from \"@workspace/ui/components/spinner\";\n\nexport default function BadgeWithSpinner() {\n  return (\n    <div className=\"flex flex-wrap gap-2\">\n      <Badge variant=\"destructive\">\n        <Spinner data-icon=\"inline-start\" />\n        Deleting\n      </Badge>\n      <Badge variant=\"secondary\">\n        Generating\n        <Spinner data-icon=\"inline-end\" />\n      </Badge>\n    </div>\n  );\n}",
+      "type": "registry:example"
+    }
+  ]
+}

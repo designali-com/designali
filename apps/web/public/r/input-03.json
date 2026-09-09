@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-03",
+  "type": "registry:example",
+  "description": "Input example",
+  "files": [
+    {
+      "path": "registry/designali/examples/input/input-03.tsx",
+      "content": "import { Input } from \"@workspace/ui/components/input\"\n\nimport {\n  Field,\n  FieldDescription,\n  FieldLabel,\n} from \"@workspace/ui/components/field\"\n\nexport function InputField() {\n  return (\n    <Field>\n      <FieldLabel htmlFor=\"input-field-username\">Username</FieldLabel>\n      <Input\n        id=\"input-field-username\"\n        type=\"text\"\n        placeholder=\"Enter your username\"\n      />\n      <FieldDescription>\n        Choose a unique username for your account.\n      </FieldDescription>\n    </Field>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

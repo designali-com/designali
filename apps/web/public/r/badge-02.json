@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "badge-02",
+  "type": "registry:example",
+  "description": "Badge with icons showcase",
+  "files": [
+    {
+      "path": "registry/designali/examples/badge/badge-02.tsx",
+      "content": "import { BadgeCheck, BookmarkIcon } from \"lucide-react\";\n\nimport { Badge } from \"@workspace/ui/components/badge\";\n\nexport default function BadgeWithIconLeft() {\n  return (\n    <div className=\"flex flex-wrap gap-2\">\n      <Badge variant=\"secondary\">\n        <BadgeCheck data-icon=\"inline-start\" />\n        Verified\n      </Badge>\n      <Badge variant=\"outline\">\n        Bookmark\n        <BookmarkIcon data-icon=\"inline-end\" />\n      </Badge>\n    </div>\n  );\n}",
+      "type": "registry:example"
+    }
+  ]
+}

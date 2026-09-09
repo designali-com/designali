@@ -49,7 +49,9 @@ export default async function UIPage({
     "alert", 
     "alert-dialog", 
     "aspect-ratio",
-    "avatar"
+    "avatar",
+    "badge",
+    "button"
   ]
 
   const isTwoColumn = twoColumnCategories.includes(slug)

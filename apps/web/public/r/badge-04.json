@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "badge-04",
+  "type": "registry:example",
+  "description": "Badge rendered as link showcase",
+  "files": [
+    {
+      "path": "registry/designali/examples/badge/badge-04.tsx",
+      "content": "import { ArrowUpRightIcon } from \"lucide-react\";\n\nimport { Badge } from \"@workspace/ui/components/badge\";\n\nexport default function BadgeAsLink() {\n  return (\n    <Badge\n      render={\n        <a href=\"#link\">\n          Open Link <ArrowUpRightIcon data-icon=\"inline-end\" />\n        </a>\n      }\n    />\n  );\n}",
+      "type": "registry:example"
+    }
+  ]
+}

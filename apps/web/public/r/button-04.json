@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button-04",
+  "type": "registry:example",
+  "description": "Button with loading spinner state",
+  "files": [
+    {
+      "path": "registry/designali/examples/button/button-04.tsx",
+      "content": "import { Button } from \"@workspace/ui/components/button\";\nimport { Spinner } from \"@workspace/ui/components/spinner\";\n\nexport default function ButtonLoading() {\n  return (\n    <div className=\"flex gap-2\">\n      <Button variant=\"outline\" disabled>\n        <Spinner data-icon=\"inline-start\" />\n        Generating\n      </Button>\n      <Button variant=\"secondary\" disabled>\n        Downloading\n        <Spinner data-icon=\"inline-start\" />\n      </Button>\n    </div>\n  );\n}",
+      "type": "registry:example"
+    }
+  ]
+}

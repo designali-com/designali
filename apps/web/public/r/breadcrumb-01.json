@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "breadcrumb-01",
+  "type": "registry:example",
+  "description": "Basic breadcrumb showcase",
+  "files": [
+    {
+      "path": "registry/designali/examples/breadcrumb/breadcrumb-01.tsx",
+      "content": "import {\n    Breadcrumb,\n    BreadcrumbItem,\n    BreadcrumbLink,\n    BreadcrumbList,\n    BreadcrumbPage,\n    BreadcrumbSeparator,\n  } from \"@workspace/ui/components/breadcrumb\";\n  \n  export default function BreadcrumbBasic() {\n    return (\n      <Breadcrumb>\n        <BreadcrumbList>\n          <BreadcrumbItem>\n            <BreadcrumbLink href=\"#\">Home</BreadcrumbLink>\n          </BreadcrumbItem>\n          <BreadcrumbSeparator />\n          <BreadcrumbItem>\n            <BreadcrumbLink href=\"#\">Components</BreadcrumbLink>\n          </BreadcrumbItem>\n          <BreadcrumbSeparator />\n          <BreadcrumbItem>\n            <BreadcrumbPage>Breadcrumb</BreadcrumbPage>\n          </BreadcrumbItem>\n        </BreadcrumbList>\n      </Breadcrumb>\n    );\n  }",
+      "type": "registry:example"
+    }
+  ]
+}

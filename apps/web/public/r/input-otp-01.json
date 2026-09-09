@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-otp-01",
+  "type": "registry:example",
+  "description": "Standard 6-digit OTP input field with default value.",
+  "registryDependencies": [
+    "input-otp"
+  ],
+  "files": [
+    {
+      "path": "registry/designali/examples/input-otp/input-otp-01.tsx",
+      "content": "import {\n    InputOTP,\n    InputOTPGroup,\n    InputOTPSlot,\n  } from \"@workspace/ui/components/input-otp\"\n  \n  export function InputOTPDemo() {\n    return (\n      <InputOTP maxLength={6} defaultValue=\"123456\">\n        <InputOTPGroup>\n          <InputOTPSlot index={0} />\n          <InputOTPSlot index={1} />\n          <InputOTPSlot index={2} />\n          <InputOTPSlot index={3} />\n          <InputOTPSlot index={4} />\n          <InputOTPSlot index={5} />\n        </InputOTPGroup>\n      </InputOTP>\n    )\n  }",
+      "type": "registry:example"
+    }
+  ]
+}

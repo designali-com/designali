@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "calendar-03",
+  "type": "registry:example",
+  "description": "Date range picker with quick preset options.",
+  "files": [
+    {
+      "path": "registry/designali/examples/calendar/calendar-03.tsx",
+      "content": "\"use client\"\n\nimport { Calendar } from \"@workspace/ui/components/calendar\"\n\nexport function CalendarCaption() {\n  return (\n    <Calendar\n      mode=\"single\"\n      captionLayout=\"dropdown\"\n      className=\"rounded-lg border\"\n    />\n  )\n}",
+      "type": "registry:example"
+    }
+  ]
+}

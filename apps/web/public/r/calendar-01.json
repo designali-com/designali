@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "calendar-01",
+  "type": "registry:example",
+  "description": "Simple popover single date picker with button trigger.",
+  "files": [
+    {
+      "path": "registry/designali/examples/calendar/calendar-01.tsx",
+      "content": "\"use client\"\n\nimport { Calendar } from \"@workspace/ui/components/calendar\"\n\nexport function CalendarBasic() {\n  return <Calendar mode=\"single\" className=\"rounded-lg border\" />\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

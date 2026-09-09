@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "hover-card-01",
+  "type": "registry:example",
+  "description": "Standard hover card displaying preview information on hover trigger.",
+  "registryDependencies": [
+    "hover-card",
+    "avatar",
+    "button"
+  ],
+  "files": [
+    {
+      "path": "registry/designali/examples/hover-card/hover-card-01.tsx",
+      "content": "import {\n    Avatar,\n    AvatarFallback,\n    AvatarImage,\n  } from \"@workspace/ui/components/avatar\"\n  import { Button } from \"@workspace/ui/components/button\"\n  import {\n    HoverCard,\n    HoverCardContent,\n    HoverCardTrigger,\n  } from \"@workspace/ui/components/hover-card\"\n  \n  export function HoverCardDemo() {\n    return (\n      <HoverCard>\n        <HoverCardTrigger delay={10} closeDelay={100} render={<Button variant=\"link\">Hover Here</Button>} />\n        <HoverCardContent className=\"flex w-64 flex-col gap-0.5\">\n          <div className=\"font-semibold\">@nextjs</div>\n          <div>The React Framework – created and maintained by @vercel.</div>\n          <div className=\"mt-1 text-xs text-muted-foreground\">\n            Joined December 2021\n          </div>\n        </HoverCardContent>\n      </HoverCard>\n    )\n  }",
+      "type": "registry:example"
+    }
+  ]
+}

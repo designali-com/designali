@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-08T09:57:29.479Z",
+  "generatedAt": "2026-09-09T06:57:13.786Z",
   "items": [
     {
       "name": "gauge",
@@ -369,9 +369,495 @@
       "categories": []
     },
     {
-      "name": "button-variants",
+      "name": "badge-01",
       "type": "registry:example",
-      "description": "Button variants showcase",
+      "description": "Badge variants showcase",
+      "categories": []
+    },
+    {
+      "name": "badge-02",
+      "type": "registry:example",
+      "description": "Badge with icons showcase",
+      "categories": []
+    },
+    {
+      "name": "badge-03",
+      "type": "registry:example",
+      "description": "Badge with spinner showcase",
+      "categories": []
+    },
+    {
+      "name": "badge-04",
+      "type": "registry:example",
+      "description": "Badge rendered as link showcase",
+      "categories": []
+    },
+    {
+      "name": "badge-05",
+      "type": "registry:example",
+      "description": "Badge custom color variants showcase",
+      "categories": []
+    },
+    {
+      "name": "breadcrumb-01",
+      "type": "registry:example",
+      "description": "Basic breadcrumb showcase",
+      "categories": []
+    },
+    {
+      "name": "breadcrumb-02",
+      "type": "registry:example",
+      "description": "Breadcrumb with custom separators showcase",
+      "categories": []
+    },
+    {
+      "name": "breadcrumb-03",
+      "type": "registry:example",
+      "description": "Breadcrumb with dropdown menu showcase",
+      "categories": []
+    },
+    {
+      "name": "breadcrumb-04",
+      "type": "registry:example",
+      "description": "Breadcrumb with collapsed ellipsis showcase",
+      "categories": []
+    },
+    {
+      "name": "breadcrumb-05",
+      "type": "registry:example",
+      "description": "Breadcrumb with custom link components showcase",
+      "categories": []
+    },
+    {
+      "name": "button-01",
+      "type": "registry:example",
+      "description": "Button sizes and icon-only variants",
+      "categories": []
+    },
+    {
+      "name": "button-02",
+      "type": "registry:example",
+      "description": "Button with leading and trailing icons",
+      "categories": []
+    },
+    {
+      "name": "button-03",
+      "type": "registry:example",
+      "description": "Rounded full button variant",
+      "categories": []
+    },
+    {
+      "name": "button-04",
+      "type": "registry:example",
+      "description": "Button with loading spinner state",
+      "categories": []
+    },
+    {
+      "name": "button-05",
+      "type": "registry:example",
+      "description": "Button group with dropdown actions",
+      "categories": []
+    },
+    {
+      "name": "button-06",
+      "type": "registry:example",
+      "description": "Button rendered using buttonVariants helper",
+      "categories": []
+    },
+    {
+      "name": "button-07",
+      "type": "registry:example",
+      "description": "Button custom variant showcase",
+      "categories": []
+    },
+    {
+      "name": "button-07",
+      "type": "registry:example",
+      "description": "Button custom variant showcase",
+      "categories": []
+    },
+    {
+      "name": "calendar-01",
+      "type": "registry:example",
+      "description": "Simple popover single date picker with button trigger.",
+      "categories": []
+    },
+    {
+      "name": "calendar-02",
+      "type": "registry:example",
+      "description": "Dual-month range picker inside a card container.",
+      "categories": []
+    },
+    {
+      "name": "calendar-03",
+      "type": "registry:example",
+      "description": "Date range picker with quick preset options.",
+      "categories": []
+    },
+    {
+      "name": "calendar-04",
+      "type": "registry:example",
+      "description": "Calendar with month and year dropdown navigation.",
+      "categories": []
+    },
+    {
+      "name": "calendar-05",
+      "type": "registry:example",
+      "description": "Multiple individual dates selection mode.",
+      "categories": []
+    },
+    {
+      "name": "calendar-06",
+      "type": "registry:example",
+      "description": "Calendar with disabled dates, weekends, and bounds.",
+      "categories": []
+    },
+    {
+      "name": "calendar-07",
+      "type": "registry:example",
+      "description": "Calendar with custom modifier classes and availability indicators.",
+      "categories": []
+    },
+    {
+      "name": "calendar-08",
+      "type": "registry:example",
+      "description": "Calendar picker integrated with a time slot selector.",
+      "categories": []
+    },
+    {
+      "name": "card-01",
+      "type": "registry:example",
+      "description": "Compact workspace management card with checklist and action buttons.",
+      "categories": []
+    },
+    {
+      "name": "card-02",
+      "type": "registry:example",
+      "description": "Login form card with custom spacing toggle control.",
+      "categories": []
+    },
+    {
+      "name": "card-03",
+      "type": "registry:example",
+      "description": "Terms of service card with edge-to-edge scrollable content area.",
+      "categories": []
+    },
+    {
+      "name": "card-04",
+      "type": "registry:example",
+      "description": "Featured event card with full-width image header and overlay badge.",
+      "categories": []
+    },
+    {
+      "name": "card-05",
+      "type": "registry:example",
+      "description": "Standard authentication login form card with social login button.",
+      "categories": []
+    },
+    {
+      "name": "carousel-01",
+      "type": "registry:example",
+      "description": "Basic horizontal carousel with previous and next controls.",
+      "categories": []
+    },
+    {
+      "name": "carousel-02",
+      "type": "registry:example",
+      "description": "Responsive multi-item carousel with custom basis sizes.",
+      "categories": []
+    },
+    {
+      "name": "carousel-03",
+      "type": "registry:example",
+      "description": "Carousel with explicit negative item spacing and padding options.",
+      "categories": []
+    },
+    {
+      "name": "carousel-04",
+      "type": "registry:example",
+      "description": "Vertical orientation carousel with fixed height container.",
+      "categories": []
+    },
+    {
+      "name": "carousel-05",
+      "type": "registry:example",
+      "description": "Carousel with API event listener for current slide and total count indicator.",
+      "categories": []
+    },
+    {
+      "name": "carousel-06",
+      "type": "registry:example",
+      "description": "Autoplay carousel plugin with hover pause and resume controls.",
+      "categories": []
+    },
+    {
+      "name": "checkbox-01",
+      "type": "registry:example",
+      "description": "Simple single checkbox with an aligned label field.",
+      "categories": []
+    },
+    {
+      "name": "checkbox-02",
+      "type": "registry:example",
+      "description": "Checkbox with supporting helper text description block.",
+      "categories": []
+    },
+    {
+      "name": "checkbox-03",
+      "type": "registry:example",
+      "description": "Disabled state checkbox wrapped in a field group with data attributes.",
+      "categories": []
+    },
+    {
+      "name": "checkbox-04",
+      "type": "registry:example",
+      "description": "Multiple stacked options using FieldSet and FieldLegend layout components.",
+      "categories": []
+    },
+    {
+      "name": "checkbox-05",
+      "type": "registry:example",
+      "description": "Interactive data table rows with batch and row-level selection checkboxes.",
+      "categories": []
+    },
+    {
+      "name": "checkbox-06",
+      "type": "registry:example",
+      "description": "Comprehensive checkbox demo displaying basic, descriptive, disabled, and wrapped variants.",
+      "categories": []
+    },
+    {
+      "name": "collapsible-01",
+      "type": "registry:example",
+      "description": "Basic order status details toggle with header and content trigger.",
+      "categories": []
+    },
+    {
+      "name": "collapsible-02",
+      "type": "registry:example",
+      "description": "Expandable product details section inside a card container.",
+      "categories": []
+    },
+    {
+      "name": "collapsible-03",
+      "type": "registry:example",
+      "description": "Settings card with collapsible field controls and expand/collapse trigger.",
+      "categories": []
+    },
+    {
+      "name": "collapsible-04",
+      "type": "registry:example",
+      "description": "Recursive file tree explorer with nested collapsible folders.",
+      "categories": []
+    },
+    {
+      "name": "combobox-01",
+      "type": "registry:example",
+      "description": "Basic single selection combobox with framework list.",
+      "categories": []
+    },
+    {
+      "name": "combobox-02",
+      "type": "registry:example",
+      "description": "Multi-select combobox with interactive tag chips.",
+      "categories": []
+    },
+    {
+      "name": "combobox-03",
+      "type": "registry:example",
+      "description": "Combobox input featuring a clear selection action button.",
+      "categories": []
+    },
+    {
+      "name": "combobox-04",
+      "type": "registry:example",
+      "description": "Grouped timezone options with visual separators between sections.",
+      "categories": []
+    },
+    {
+      "name": "combobox-05",
+      "type": "registry:example",
+      "description": "Custom rich item layout displaying country code and continent metadata.",
+      "categories": []
+    },
+    {
+      "name": "combobox-06",
+      "type": "registry:example",
+      "description": "Combobox displaying aria-invalid validation error state.",
+      "categories": []
+    },
+    {
+      "name": "combobox-07",
+      "type": "registry:example",
+      "description": "Comprehensive combobox demo showcasing form integration and variations.",
+      "categories": []
+    },
+    {
+      "name": "command-01",
+      "type": "registry:example",
+      "description": "Default context menu with submenus, checkboxes, and radio items.",
+      "categories": []
+    },
+    {
+      "name": "command-02",
+      "type": "registry:example",
+      "description": "Default context menu with submenus, checkboxes, and radio items.",
+      "categories": []
+    },
+    {
+      "name": "command-03",
+      "type": "registry:example",
+      "description": "Default context menu with submenus, checkboxes, and radio items.",
+      "categories": []
+    },
+    {
+      "name": "context-menu-01",
+      "type": "registry:example",
+      "description": "Default context menu with submenus, checkboxes, and radio items.",
+      "categories": []
+    },
+    {
+      "name": "context-menu-02",
+      "type": "registry:example",
+      "description": "Context menu with keyboard shortcut indicators.",
+      "categories": []
+    },
+    {
+      "name": "context-menu-03",
+      "type": "registry:example",
+      "description": "Context menu items with Lucide icons and destructive actions.",
+      "categories": []
+    },
+    {
+      "name": "dialog-01",
+      "type": "registry:example",
+      "description": "Standard modal dialog with form fields and submit action.",
+      "categories": []
+    },
+    {
+      "name": "dialog-02",
+      "type": "registry:example",
+      "description": "Dialog configured without a default top-right close button.",
+      "categories": []
+    },
+    {
+      "name": "dialog-03",
+      "type": "registry:example",
+      "description": "Dialog with a scrollable content body and sticky footer action controls.",
+      "categories": []
+    },
+    {
+      "name": "drawer-01",
+      "type": "registry:example",
+      "description": "Drawer with radio group selection for interactive options.",
+      "categories": []
+    },
+    {
+      "name": "drawer-02",
+      "type": "registry:example",
+      "description": "Drawer featuring a visible top/side swipe indicator handle.",
+      "categories": []
+    },
+    {
+      "name": "drawer-03",
+      "type": "registry:example",
+      "description": "Non-modal drawer configuration with rightward swipe direction.",
+      "categories": []
+    },
+    {
+      "name": "dropdown-menu-01",
+      "type": "registry:example",
+      "description": "Complex dropdown menu with submenus, shortcuts, groups, and separator items.",
+      "categories": []
+    },
+    {
+      "name": "dropdown-menu-02",
+      "type": "registry:example",
+      "description": "Dropdown menu featuring item keyboard shortcuts and labels.",
+      "categories": []
+    },
+    {
+      "name": "dropdown-menu-03",
+      "type": "registry:example",
+      "description": "Dropdown menu with interactive toggleable checkbox items.",
+      "categories": []
+    },
+    {
+      "name": "hover-card-01",
+      "type": "registry:example",
+      "description": "Standard hover card displaying preview information on hover trigger.",
+      "categories": []
+    },
+    {
+      "name": "hover-card-02",
+      "type": "registry:example",
+      "description": "Hover card with custom delay configurations and rich avatar content.",
+      "categories": []
+    },
+    {
+      "name": "input-01",
+      "type": "registry:example",
+      "description": "Input example",
+      "categories": []
+    },
+    {
+      "name": "input-02",
+      "type": "registry:example",
+      "description": "Input example",
+      "categories": []
+    },
+    {
+      "name": "input-03",
+      "type": "registry:example",
+      "description": "Input example",
+      "categories": []
+    },
+    {
+      "name": "input-otp-01",
+      "type": "registry:example",
+      "description": "Standard 6-digit OTP input field with default value.",
+      "categories": []
+    },
+    {
+      "name": "input-otp-02",
+      "type": "registry:example",
+      "description": "6-digit OTP input with separators dividing field groups.",
+      "categories": []
+    },
+    {
+      "name": "input-otp-03",
+      "type": "registry:example",
+      "description": "4-digit numeric OTP input restricted with digit-only regex pattern validation.",
+      "categories": []
+    },
+    {
+      "name": "label-01",
+      "type": "registry:example",
+      "description": "",
+      "categories": []
+    },
+    {
+      "name": "label-02",
+      "type": "registry:example",
+      "description": "",
+      "categories": []
+    },
+    {
+      "name": "menubar-01",
+      "type": "registry:example",
+      "description": "Desktop application top navigation bar with nested submenus, shortcuts, and selections.",
+      "categories": []
+    },
+    {
+      "name": "menubar-02",
+      "type": "registry:example",
+      "description": "Menubar featuring single-select radio button groups for active user and theme selections.",
+      "categories": []
+    },
+    {
+      "name": "navigation-menu-01",
+      "type": "registry:example",
+      "description": "Full-featured navigation menu with rich dropdown layouts, component grids, and icons.",
       "categories": []
     },
     {

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button-02",
+  "type": "registry:example",
+  "description": "Button with leading and trailing icons",
+  "files": [
+    {
+      "path": "registry/designali/examples/button/button-02.tsx",
+      "content": "import { GitBranchIcon, GitForkIcon } from \"lucide-react\";\n\nimport { Button } from \"@workspace/ui/components/button\";\n\nexport default function ButtonWithIcon() {\n  return (\n    <div className=\"flex gap-2\">\n      <Button variant=\"outline\">\n        <GitBranchIcon data-icon=\"inline-start\" /> New Branch\n      </Button>\n      <Button variant=\"outline\">\n        Fork\n        <GitForkIcon data-icon=\"inline-end\" />\n      </Button>\n    </div>\n  );\n}",
+      "type": "registry:example"
+    }
+  ]
+}

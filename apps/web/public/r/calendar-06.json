@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "calendar-06",
+  "type": "registry:example",
+  "description": "Calendar with disabled dates, weekends, and bounds.",
+  "files": [
+    {
+      "path": "registry/designali/examples/calendar/calendar-06.tsx",
+      "content": "\"use client\"\n\nimport { Calendar } from \"@workspace/ui/components/calendar\" \nimport * as React from \"react\" \nimport { Card, CardContent, CardFooter } from \"@workspace/ui/components/card\"\n  \nexport function CalendarBookedDates() {\n  const [date, setDate] = React.useState<Date | undefined>(\n    new Date(new Date().getFullYear(), 0, 6)\n  )\n  const bookedDates = Array.from(\n    { length: 15 },\n    (_, i) => new Date(new Date().getFullYear(), 0, 12 + i)\n  )\n\n  return (\n    <Card className=\"mx-auto w-fit p-0\">\n      <CardContent className=\"p-0\">\n        <Calendar\n          mode=\"single\"\n          defaultMonth={date}\n          selected={date}\n          onSelect={setDate}\n          disabled={bookedDates}\n          modifiers={{\n            booked: bookedDates,\n          }}\n          modifiersClassNames={{\n            booked: \"[&>button]:line-through opacity-100\",\n          }}\n        />\n      </CardContent>\n    </Card>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}
