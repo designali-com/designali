@@ -585,4 +585,20 @@ export const blocks: Registry["items"] = [
       iframeHeight: "500px",
     },
   },
+  {
+    name: "gallery-01",
+    description: "A simple gallery section.",
+    type: "registry:block", 
+    files: [
+      {
+        path: "blocks/gallery/gallery-01.tsx",
+        target: "components/gallery-01.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["gallery"],
+    meta: {
+      iframeHeight: "500px",
+    },
+  },
 ]

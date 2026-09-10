@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-09T17:07:05.819Z",
+  "generatedAt": "2026-09-10T05:12:22.766Z",
   "items": [
     {
       "name": "gauge",
@@ -205,6 +205,12 @@
       "type": "registry:block",
       "description": "A simple pricing section.",
       "categories": ["testimonials", "testimonial"]
+    },
+    {
+      "name": "gallery-01",
+      "type": "registry:block",
+      "description": "A simple gallery section.",
+      "categories": ["gallery"]
     },
     {
       "name": "accordion-01",
@@ -1014,6 +1020,168 @@
       "name": "separator-03",
       "type": "registry:example",
       "description": "Multiple horizontal separators dividing items in a key-value list layout.",
+      "categories": []
+    },
+    {
+      "name": "sheet-01",
+      "type": "registry:example",
+      "description": "Slide-over sheet component with header, form fields, and footer actions.",
+      "categories": []
+    },
+    {
+      "name": "sheet-02",
+      "type": "registry:example",
+      "description": "Sheet component featuring custom side placements and interaction options.",
+      "categories": []
+    },
+    {
+      "name": "skeleton-01",
+      "type": "registry:example",
+      "description": "Basic skeleton loading state for an avatar and multi-line text block.",
+      "categories": []
+    },
+    {
+      "name": "skeleton-02",
+      "type": "registry:example",
+      "description": "Skeleton loader structured inside a card container with header and video placeholder.",
+      "categories": []
+    },
+    {
+      "name": "skeleton-03",
+      "type": "registry:example",
+      "description": "Complex skeleton placeholder layout for a data table or feed item.",
+      "categories": []
+    },
+    {
+      "name": "slider-01",
+      "type": "registry:example",
+      "description": "Basic single-thumb range slider component.",
+      "categories": []
+    },
+    {
+      "name": "slider-02",
+      "type": "registry:example",
+      "description": "Controlled dual-thumb range slider with label and dynamic value output.",
+      "categories": []
+    },
+    {
+      "name": "slider-03",
+      "type": "registry:example",
+      "description": "Slider component configured with custom step intervals and tick indicators.",
+      "categories": []
+    },
+    {
+      "name": "slider-04",
+      "type": "registry:example",
+      "description": "Vertical slider variant with boundary limits and disabled state showcase.",
+      "categories": []
+    },
+    {
+      "name": "spinner-01",
+      "type": "registry:example",
+      "description": "Loading spinner integrated within an item component to indicate an active processing state.",
+      "categories": []
+    },
+    {
+      "name": "spinner-02",
+      "type": "registry:example",
+      "description": "Standalone spinner indicator with varying size and color utility configurations.",
+      "categories": []
+    },
+    {
+      "name": "switch-01",
+      "type": "registry:example",
+      "description": "Basic toggle switch component paired with an inline text label.",
+      "categories": []
+    },
+    {
+      "name": "switch-02",
+      "type": "registry:example",
+      "description": "Grouped layout containing switches alongside titles and descriptions.",
+      "categories": []
+    },
+    {
+      "name": "table-01",
+      "type": "registry:example",
+      "description": "Standard data table display with caption, styled header, row items, and total calculation footer.",
+      "categories": []
+    },
+    {
+      "name": "table-02",
+      "type": "registry:example",
+      "description": "Interactive data table with per-row dropdown action menus.",
+      "categories": []
+    },
+    {
+      "name": "tabs-01",
+      "type": "registry:example",
+      "description": "Standard tabs layout with card components inside tab content panels.",
+      "categories": []
+    },
+    {
+      "name": "tabs-02",
+      "type": "registry:example",
+      "description": "Tabs navigation rendered with an active underline indicator variant.",
+      "categories": []
+    },
+    {
+      "name": "textarea-01",
+      "type": "registry:example",
+      "description": "Standard multi-line text input field component.",
+      "categories": []
+    },
+    {
+      "name": "textarea-02",
+      "type": "registry:example",
+      "description": "Textarea input integrated within a field wrapper with label and helper description.",
+      "categories": []
+    },
+    {
+      "name": "toast-01",
+      "type": "registry:example",
+      "description": "Actionable toast notification triggered via button interaction.",
+      "categories": []
+    },
+    {
+      "name": "toast-02",
+      "type": "registry:example",
+      "description": "Variant toast notifications displaying default, success, info, warning, and error states.",
+      "categories": []
+    },
+    {
+      "name": "toggle-01",
+      "type": "registry:example",
+      "description": "Small outline toggle button featuring an icon and text label.",
+      "categories": []
+    },
+    {
+      "name": "toggle-02",
+      "type": "registry:example",
+      "description": "Group of outline toggle buttons for text formatting controls.",
+      "categories": []
+    },
+    {
+      "name": "toggle-group-01",
+      "type": "registry:example",
+      "description": "Multiple-selection outline toggle group for text formatting icon controls.",
+      "categories": []
+    },
+    {
+      "name": "toggle-group-02",
+      "type": "registry:example",
+      "description": "Outline toggle group for filter selection with a default active state.",
+      "categories": []
+    },
+    {
+      "name": "tooltip-01",
+      "type": "registry:example",
+      "description": "Standard tooltip triggered by hovering over an outline button.",
+      "categories": []
+    },
+    {
+      "name": "tooltip-02",
+      "type": "registry:example",
+      "description": "Tooltips demonstrated across all directional sides (left, top, bottom, right).",
       "categories": []
     },
     {

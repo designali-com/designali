@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "gallery-01",
+  "type": "registry:block",
+  "description": "A simple gallery section.",
+  "files": [
+    {
+      "path": "registry/designali/blocks/gallery/gallery-01.tsx",
+      "content": "\"use client\"\n\nimport { useState } from \"react\"\nimport Image from \"next/image\"\n\nimport { Badge } from \"@workspace/ui/components/badge\"\nimport {\n  Card,\n  CardContent,\n  CardDescription,\n  CardHeader,\n  CardTitle,\n} from \"@workspace/ui/components/card\"\nimport {\n  Tabs,\n  TabsList,\n  TabsTrigger,\n} from \"@workspace/ui/components/tabs\"\n\nexport interface GalleryItem {\n  id: string\n  title: string\n  category: string\n  src: string\n  alt: string\n}\n\nconst DEFAULT_ITEMS: GalleryItem[] = [\n  { id: \"1\", title: \"Modern Architecture\", category: \"Design\", src: \"https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600\", alt: \"Architecture\" },\n  { id: \"2\", title: \"Abstract Art\", category: \"Art\", src: \"https://images.unsplash.com/photo-1541701494587-cb58502866ab?w=600\", alt: \"Abstract Art\" },\n  { id: \"3\", title: \"Mountain Peak\", category: \"Nature\", src: \"https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=600\", alt: \"Mountain\" },\n  { id: \"4\", title: \"Minimal Interiors\", category: \"Design\", src: \"https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=600\", alt: \"Interior\" },\n  { id: \"5\", title: \"Forest Path\", category: \"Nature\", src: \"https://images.unsplash.com/photo-1448375240586-882707db888b?w=600\", alt: \"Forest\" },\n  { id: \"6\", title: \"Digital Portrait\", category: \"Art\", src: \"https://images.unsplash.com/photo-1579783902614-a3fb3927b675?w=600\", alt: \"Portrait\" },\n]\n\nexport function GalleryBlock01() {\n  const [activeTab, setActiveTab] = useState(\"all\")\n\n  const filteredItems = activeTab === \"all\"\n    ? DEFAULT_ITEMS\n    : DEFAULT_ITEMS.filter((item) => item.category.toLowerCase() === activeTab)\n\n  return (\n    <Card className=\"w-full border-none shadow-none\">\n      <CardHeader className=\"text-center\">\n        <CardTitle className=\"text-3xl font-bold tracking-tight sm:text-4xl\">\n          Visual Showcase\n        </CardTitle>\n        <CardDescription className=\"text-base\">\n          Browse through our curated collection of designs and media.\n        </CardDescription>\n      </CardHeader>\n      <CardContent className=\"space-y-6\">\n        <Tabs defaultValue=\"all\" onValueChange={setActiveTab} className=\"w-full items-center\">\n          <TabsList className=\"mx-auto flex w-fit\">\n            <TabsTrigger value=\"all\">All</TabsTrigger>\n            <TabsTrigger value=\"design\">Design</TabsTrigger>\n            <TabsTrigger value=\"art\">Art</TabsTrigger>\n            <TabsTrigger value=\"nature\">Nature</TabsTrigger>\n          </TabsList>\n        </Tabs>\n\n        <div className=\"grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3\">\n          {filteredItems.map((item) => (\n            <Card key={item.id} className=\"group overflow-hidden border\">\n              <div className=\"relative aspect-[4/3] w-full overflow-hidden bg-muted\">\n                <Image\n                  src={item.src}\n                  alt={item.alt}\n                  fill\n                  className=\"object-cover transition-transform duration-300 group-hover:scale-105\"\n                  sizes=\"(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw\"\n                />\n              </div>\n              <CardContent className=\"p-4\">\n                <Badge variant=\"secondary\" className=\"mb-2\">\n                  {item.category}\n                </Badge>\n                <h3 className=\"text-base font-semibold text-foreground\">{item.title}</h3>\n              </CardContent>\n            </Card>\n          ))}\n        </div>\n      </CardContent>\n    </Card>\n  )\n}",
+      "type": "registry:component",
+      "target": "components/gallery-01.tsx"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "500px"
+  },
+  "categories": [
+    "gallery"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "table-02",
+  "type": "registry:example",
+  "description": "Interactive data table with per-row dropdown action menus.",
+  "registryDependencies": [
+    "table",
+    "button",
+    "dropdown-menu"
+  ],
+  "files": [
+    {
+      "path": "registry/designali/examples/table/table-02.tsx",
+      "content": "import { MoreHorizontalIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  DropdownMenu,\n  DropdownMenuContent,\n  DropdownMenuItem,\n  DropdownMenuSeparator,\n  DropdownMenuTrigger,\n} from \"@workspace/ui/components/dropdown-menu\"\nimport {\n  Table,\n  TableBody,\n  TableCell,\n  TableHead,\n  TableHeader,\n  TableRow,\n} from \"@workspace/ui/components/table\"\n\nexport function TableActions() {\n  return (\n    <Table>\n      <TableHeader>\n        <TableRow>\n          <TableHead>Product</TableHead>\n          <TableHead>Price</TableHead>\n          <TableHead className=\"text-right\">Actions</TableHead>\n        </TableRow>\n      </TableHeader>\n      <TableBody>\n        <TableRow>\n          <TableCell className=\"font-medium\">Wireless Mouse</TableCell>\n          <TableCell>$29.99</TableCell>\n          <TableCell className=\"text-right\">\n            <DropdownMenu>\n              <DropdownMenuTrigger render={<Button variant=\"ghost\" size=\"icon\" className=\"size-8\"><MoreHorizontalIcon /><span className=\"sr-only\">Open menu</span></Button>} />\n              <DropdownMenuContent align=\"end\">\n                <DropdownMenuItem>Edit</DropdownMenuItem>\n                <DropdownMenuItem>Duplicate</DropdownMenuItem>\n                <DropdownMenuSeparator />\n                <DropdownMenuItem variant=\"destructive\">\n                  Delete\n                </DropdownMenuItem>\n              </DropdownMenuContent>\n            </DropdownMenu>\n          </TableCell>\n        </TableRow>\n        <TableRow>\n          <TableCell className=\"font-medium\">Mechanical Keyboard</TableCell>\n          <TableCell>$129.99</TableCell>\n          <TableCell className=\"text-right\">\n            <DropdownMenu>\n              <DropdownMenuTrigger render={<Button variant=\"ghost\" size=\"icon\" className=\"size-8\"><MoreHorizontalIcon /><span className=\"sr-only\">Open menu</span></Button>} />\n              <DropdownMenuContent align=\"end\">\n                <DropdownMenuItem>Edit</DropdownMenuItem>\n                <DropdownMenuItem>Duplicate</DropdownMenuItem>\n                <DropdownMenuSeparator />\n                <DropdownMenuItem variant=\"destructive\">\n                  Delete\n                </DropdownMenuItem>\n              </DropdownMenuContent>\n            </DropdownMenu>\n          </TableCell>\n        </TableRow>\n        <TableRow>\n          <TableCell className=\"font-medium\">USB-C Hub</TableCell>\n          <TableCell>$49.99</TableCell>\n          <TableCell className=\"text-right\">\n            <DropdownMenu>\n              <DropdownMenuTrigger render={<Button variant=\"ghost\" size=\"icon\" className=\"size-8\"><MoreHorizontalIcon /><span className=\"sr-only\">Open menu</span></Button>} />\n              <DropdownMenuContent align=\"end\">\n                <DropdownMenuItem>Edit</DropdownMenuItem>\n                <DropdownMenuItem>Duplicate</DropdownMenuItem>\n                <DropdownMenuSeparator />\n                <DropdownMenuItem variant=\"destructive\">\n                  Delete\n                </DropdownMenuItem>\n              </DropdownMenuContent>\n            </DropdownMenu>\n          </TableCell>\n        </TableRow>\n      </TableBody>\n    </Table>\n  )\n}",
+      "type": "registry:example"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "textarea-01",
+  "type": "registry:example",
+  "description": "Standard multi-line text input field component.",
+  "registryDependencies": [
+    "textarea"
+  ],
+  "files": [
+    {
+      "path": "registry/designali/examples/textarea/textarea-01.tsx",
+      "content": "import { Textarea } from \"@workspace/ui/components/textarea\"\n\nexport function TextareaDemo() {\n  return <Textarea placeholder=\"Type your message here.\" />\n}",
+      "type": "registry:example"
+    }
+  ]
+}

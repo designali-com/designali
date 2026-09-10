@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toggle-group-02",
+  "type": "registry:example",
+  "description": "Outline toggle group for filter selection with a default active state.",
+  "registryDependencies": [
+    "toggle-group"
+  ],
+  "files": [
+    {
+      "path": "registry/designali/examples/toggle-group/toggle-group-02.tsx",
+      "content": "import {\n  ToggleGroup,\n  ToggleGroupItem,\n} from \"@workspace/ui/components/toggle-group\"\n\nexport function ToggleGroupOutline() {\n  return (\n    <ToggleGroup variant=\"outline\" defaultValue={[\"all\"]}>\n      <ToggleGroupItem value=\"all\" aria-label=\"Toggle all\">\n        All\n      </ToggleGroupItem>\n      <ToggleGroupItem value=\"missed\" aria-label=\"Toggle missed\">\n        Missed\n      </ToggleGroupItem>\n    </ToggleGroup>\n  )\n}",
+      "type": "registry:example"
+    }
+  ]
+}

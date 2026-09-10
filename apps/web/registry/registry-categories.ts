@@ -363,14 +363,7 @@ export const uiCategories: {
     description: "A panel that slides into view from the edge of the screen.",
     iconName: "PanelRight",
     hidden: false,
-  },
-  {
-    name: "Sidebar",
-    slug: "sidebar",
-    description: "A responsive navigation sidebar for application layouts.",
-    iconName: "PanelLeft",
-    hidden: false,
-  },
+  }, 
   {
     name: "Skeleton",
     slug: "skeleton",
@@ -384,15 +377,7 @@ export const uiCategories: {
     description: "A control for selecting a value from a defined range.",
     iconName: "SlidersHorizontal",
     hidden: false,
-  },
-  {
-    name: "Sonner",
-    slug: "sonner",
-    description:
-      "Toast notifications for displaying temporary feedback messages.",
-    iconName: "Bell",
-    hidden: false,
-  },
+  }, 
   {
     name: "Spinner",
     slug: "spinner",
@@ -539,15 +524,7 @@ export const registryCategories: {
       "Beautiful testimonial layouts for highlighting customer experiences and feedback.",
     iconName: "Quote",
     hidden: false,
-  },
-  {
-    name: "Dashboard",
-    slug: "dashboard",
-    description:
-      "Modern dashboard layouts for analytics, metrics, data, and application interfaces.",
-    iconName: "LayoutDashboard",
-    hidden: false,
-  },
+  }, 
   {
     name: "Gallery",
     slug: "gallery",

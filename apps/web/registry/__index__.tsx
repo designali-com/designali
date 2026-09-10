@@ -1180,6 +1180,36 @@ export const Index: Record<string, any> = {
       }
     }),
   },
+  "gallery-01": {
+    name: "gallery-01",
+    description: "A simple gallery section.",
+    type: "registry:block",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/blocks/gallery/gallery-01.tsx",
+        type: "registry:component",
+        target: "components/gallery-01.tsx",
+      },
+    ],
+    categories: ["gallery"],
+    meta: { iframeHeight: "500px" },
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/designali/blocks/gallery/gallery-01")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "gallery-01"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
   "accordion-01": {
     name: "accordion-01",
     description:
@@ -5385,6 +5415,851 @@ export const Index: Record<string, any> = {
           (key) =>
             typeof mod[key] === "function" || typeof mod[key] === "object"
         ) || "separator-03"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "sheet-01": {
+    name: "sheet-01",
+    description:
+      "Slide-over sheet component with header, form fields, and footer actions.",
+    type: "registry:example",
+    registryDependencies: ["sheet", "button", "input", "label"],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/examples/sheet/sheet-01.tsx",
+        type: "registry:example",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/designali/examples/sheet/sheet-01")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "sheet-01"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "sheet-02": {
+    name: "sheet-02",
+    description:
+      "Sheet component featuring custom side placements and interaction options.",
+    type: "registry:example",
+    registryDependencies: ["sheet", "button"],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/examples/sheet/sheet-02.tsx",
+        type: "registry:example",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/designali/examples/sheet/sheet-02")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "sheet-02"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "skeleton-01": {
+    name: "skeleton-01",
+    description:
+      "Basic skeleton loading state for an avatar and multi-line text block.",
+    type: "registry:example",
+    registryDependencies: ["skeleton"],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/examples/skeleton/skeleton-01.tsx",
+        type: "registry:example",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/examples/skeleton/skeleton-01")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "skeleton-01"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "skeleton-02": {
+    name: "skeleton-02",
+    description:
+      "Skeleton loader structured inside a card container with header and video placeholder.",
+    type: "registry:example",
+    registryDependencies: ["skeleton", "card"],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/examples/skeleton/skeleton-02.tsx",
+        type: "registry:example",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/examples/skeleton/skeleton-02")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "skeleton-02"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "skeleton-03": {
+    name: "skeleton-03",
+    description:
+      "Complex skeleton placeholder layout for a data table or feed item.",
+    type: "registry:example",
+    registryDependencies: ["skeleton"],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/examples/skeleton/skeleton-03.tsx",
+        type: "registry:example",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/examples/skeleton/skeleton-03")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "skeleton-03"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "slider-01": {
+    name: "slider-01",
+    description: "Basic single-thumb range slider component.",
+    type: "registry:example",
+    registryDependencies: ["slider"],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/examples/slider/slider-01.tsx",
+        type: "registry:example",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/designali/examples/slider/slider-01")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "slider-01"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "slider-02": {
+    name: "slider-02",
+    description:
+      "Controlled dual-thumb range slider with label and dynamic value output.",
+    type: "registry:example",
+    registryDependencies: ["slider", "label"],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/examples/slider/slider-02.tsx",
+        type: "registry:example",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/designali/examples/slider/slider-02")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "slider-02"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "slider-03": {
+    name: "slider-03",
+    description:
+      "Slider component configured with custom step intervals and tick indicators.",
+    type: "registry:example",
+    registryDependencies: ["slider"],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/examples/slider/slider-03.tsx",
+        type: "registry:example",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/designali/examples/slider/slider-03")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "slider-03"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "slider-04": {
+    name: "slider-04",
+    description:
+      "Vertical slider variant with boundary limits and disabled state showcase.",
+    type: "registry:example",
+    registryDependencies: ["slider"],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/examples/slider/slider-04.tsx",
+        type: "registry:example",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/designali/examples/slider/slider-04")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "slider-04"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "spinner-01": {
+    name: "spinner-01",
+    description:
+      "Loading spinner integrated within an item component to indicate an active processing state.",
+    type: "registry:example",
+    registryDependencies: ["spinner", "item"],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/examples/spinner/spinner-01.tsx",
+        type: "registry:example",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/examples/spinner/spinner-01")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "spinner-01"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "spinner-02": {
+    name: "spinner-02",
+    description:
+      "Standalone spinner indicator with varying size and color utility configurations.",
+    type: "registry:example",
+    registryDependencies: ["spinner"],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/examples/spinner/spinner-02.tsx",
+        type: "registry:example",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/examples/spinner/spinner-02")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "spinner-02"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "switch-01": {
+    name: "switch-01",
+    description:
+      "Basic toggle switch component paired with an inline text label.",
+    type: "registry:example",
+    registryDependencies: ["switch", "label"],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/examples/switch/switch-01.tsx",
+        type: "registry:example",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/designali/examples/switch/switch-01")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "switch-01"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "switch-02": {
+    name: "switch-02",
+    description:
+      "Grouped layout containing switches alongside titles and descriptions.",
+    type: "registry:example",
+    registryDependencies: ["switch", "field"],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/examples/switch/switch-02.tsx",
+        type: "registry:example",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/designali/examples/switch/switch-02")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "switch-02"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "table-01": {
+    name: "table-01",
+    description:
+      "Standard data table display with caption, styled header, row items, and total calculation footer.",
+    type: "registry:example",
+    registryDependencies: ["table"],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/examples/table/table-01.tsx",
+        type: "registry:example",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/designali/examples/table/table-01")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "table-01"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "table-02": {
+    name: "table-02",
+    description: "Interactive data table with per-row dropdown action menus.",
+    type: "registry:example",
+    registryDependencies: ["table", "button", "dropdown-menu"],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/examples/table/table-02.tsx",
+        type: "registry:example",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/designali/examples/table/table-02")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "table-02"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "tabs-01": {
+    name: "tabs-01",
+    description:
+      "Standard tabs layout with card components inside tab content panels.",
+    type: "registry:example",
+    registryDependencies: ["tabs", "card"],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/examples/tabs/tabs-01.tsx",
+        type: "registry:example",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/designali/examples/tabs/tabs-01")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "tabs-01"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "tabs-02": {
+    name: "tabs-02",
+    description:
+      "Tabs navigation rendered with an active underline indicator variant.",
+    type: "registry:example",
+    registryDependencies: ["tabs"],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/examples/tabs/tabs-02.tsx",
+        type: "registry:example",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/designali/examples/tabs/tabs-02")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "tabs-02"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "textarea-01": {
+    name: "textarea-01",
+    description: "Standard multi-line text input field component.",
+    type: "registry:example",
+    registryDependencies: ["textarea"],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/examples/textarea/textarea-01.tsx",
+        type: "registry:example",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/examples/textarea/textarea-01")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "textarea-01"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "textarea-02": {
+    name: "textarea-02",
+    description:
+      "Textarea input integrated within a field wrapper with label and helper description.",
+    type: "registry:example",
+    registryDependencies: ["textarea", "field"],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/examples/textarea/textarea-02.tsx",
+        type: "registry:example",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/examples/textarea/textarea-02")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "textarea-02"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "toast-01": {
+    name: "toast-01",
+    description:
+      "Actionable toast notification triggered via button interaction.",
+    type: "registry:example",
+    registryDependencies: ["toast", "button"],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/examples/toast/toast-01.tsx",
+        type: "registry:example",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/designali/examples/toast/toast-01")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "toast-01"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "toast-02": {
+    name: "toast-02",
+    description:
+      "Variant toast notifications displaying default, success, info, warning, and error states.",
+    type: "registry:example",
+    registryDependencies: ["toast", "button"],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/examples/toast/toast-02.tsx",
+        type: "registry:example",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/designali/examples/toast/toast-02")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "toast-02"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "toggle-01": {
+    name: "toggle-01",
+    description:
+      "Small outline toggle button featuring an icon and text label.",
+    type: "registry:example",
+    registryDependencies: ["toggle"],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/examples/toggle/toggle-01.tsx",
+        type: "registry:example",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/designali/examples/toggle/toggle-01")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "toggle-01"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "toggle-02": {
+    name: "toggle-02",
+    description:
+      "Group of outline toggle buttons for text formatting controls.",
+    type: "registry:example",
+    registryDependencies: ["toggle"],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/examples/toggle/toggle-02.tsx",
+        type: "registry:example",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/designali/examples/toggle/toggle-02")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "toggle-02"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "toggle-group-01": {
+    name: "toggle-group-01",
+    description:
+      "Multiple-selection outline toggle group for text formatting icon controls.",
+    type: "registry:example",
+    registryDependencies: ["toggle-group"],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/examples/toggle-group/toggle-group-01.tsx",
+        type: "registry:example",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/examples/toggle-group/toggle-group-01")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "toggle-group-01"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "toggle-group-02": {
+    name: "toggle-group-02",
+    description:
+      "Outline toggle group for filter selection with a default active state.",
+    type: "registry:example",
+    registryDependencies: ["toggle-group"],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/examples/toggle-group/toggle-group-02.tsx",
+        type: "registry:example",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/examples/toggle-group/toggle-group-02")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "toggle-group-02"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "tooltip-01": {
+    name: "tooltip-01",
+    description:
+      "Standard tooltip triggered by hovering over an outline button.",
+    type: "registry:example",
+    registryDependencies: ["tooltip", "button"],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/examples/tooltip/tooltip-01.tsx",
+        type: "registry:example",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/examples/tooltip/tooltip-01")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "tooltip-01"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "tooltip-02": {
+    name: "tooltip-02",
+    description:
+      "Tooltips demonstrated across all directional sides (left, top, bottom, right).",
+    type: "registry:example",
+    registryDependencies: ["tooltip", "button"],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/examples/tooltip/tooltip-02.tsx",
+        type: "registry:example",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/examples/tooltip/tooltip-02")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "tooltip-02"
 
       return {
         default: mod.default || mod[exportName],

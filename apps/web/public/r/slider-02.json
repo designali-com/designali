@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "slider-02",
+  "type": "registry:example",
+  "description": "Controlled dual-thumb range slider with label and dynamic value output.",
+  "registryDependencies": [
+    "slider",
+    "label"
+  ],
+  "files": [
+    {
+      "path": "registry/designali/examples/slider/slider-02.tsx",
+      "content": "import { Slider } from \"@workspace/ui/components/slider\" \n\nexport function SliderRange() {\n  return (\n    <Slider\n      defaultValue={[25, 50]}\n      max={100}\n      step={5}\n      className=\"mx-auto w-full max-w-xs\"\n    />\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

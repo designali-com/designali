@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "skeleton-02",
+  "type": "registry:example",
+  "description": "Skeleton loader structured inside a card container with header and video placeholder.",
+  "registryDependencies": [
+    "skeleton",
+    "card"
+  ],
+  "files": [
+    {
+      "path": "registry/designali/examples/skeleton/skeleton-02.tsx",
+      "content": "import { Card, CardContent, CardHeader } from \"@workspace/ui/components/card\"\nimport { Skeleton } from \"@workspace/ui/components/skeleton\"\n\nexport function SkeletonCard() {\n  return (\n    <Card className=\"w-full max-w-xs\">\n      <CardHeader>\n        <Skeleton className=\"h-4 w-2/3\" />\n        <Skeleton className=\"h-4 w-1/2\" />\n      </CardHeader>\n      <CardContent>\n        <Skeleton className=\"aspect-video w-full\" />\n      </CardContent>\n    </Card>\n  )\n}",
+      "type": "registry:example"
+    }
+  ]
+}

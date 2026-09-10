@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "textarea-02",
+  "type": "registry:example",
+  "description": "Textarea input integrated within a field wrapper with label and helper description.",
+  "registryDependencies": [
+    "textarea",
+    "field"
+  ],
+  "files": [
+    {
+      "path": "registry/designali/examples/textarea/textarea-02.tsx",
+      "content": "import {\n  Field,\n  FieldDescription,\n  FieldLabel,\n} from \"@workspace/ui/components/field\"\nimport { Textarea } from \"@workspace/ui/components/textarea\"\n\nexport function TextareaField() {\n  return (\n    <Field>\n      <FieldLabel htmlFor=\"textarea-message\">Message</FieldLabel>\n      <FieldDescription>Enter your message below.</FieldDescription>\n      <Textarea id=\"textarea-message\" placeholder=\"Type your message here.\" />\n    </Field>\n  )\n}",
+      "type": "registry:example"
+    }
+  ]
+}

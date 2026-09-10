@@ -6,7 +6,7 @@ import { Button } from "@workspace/ui/components/button"
 
 export function CallToAction() {
   return (
-    <section className="relative container flex h-screen w-full flex-col items-center justify-center overflow-hidden">
+    <section className="relative mx-auto flex h-screen w-full flex-col items-center justify-center overflow-hidden">
       <div
         className="absolute inset-0 z-0"
         style={{

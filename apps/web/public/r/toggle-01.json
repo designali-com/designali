@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toggle-01",
+  "type": "registry:example",
+  "description": "Small outline toggle button featuring an icon and text label.",
+  "registryDependencies": [
+    "toggle"
+  ],
+  "files": [
+    {
+      "path": "registry/designali/examples/toggle/toggle-01.tsx",
+      "content": "import { BookmarkIcon } from \"lucide-react\"\n\nimport { Toggle } from \"@workspace/ui/components/toggle\"\n\nexport function ToggleDemo() {\n  return (\n    <Toggle aria-label=\"Toggle bookmark\" size=\"sm\" variant=\"outline\">\n      <BookmarkIcon className=\"group-aria-pressed/toggle:fill-foreground\" />\n      Bookmark\n    </Toggle>\n  )\n}",
+      "type": "registry:example"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "spinner-02",
+  "type": "registry:example",
+  "description": "Standalone spinner indicator with varying size and color utility configurations.",
+  "registryDependencies": [
+    "spinner"
+  ],
+  "files": [
+    {
+      "path": "registry/designali/examples/spinner/spinner-02.tsx",
+      "content": "\nimport { Spinner } from \"@workspace/ui/components/spinner\"\n\nexport function SpinnerSize() {\n  return (\n    <div className=\"flex items-center gap-6\">\n      <Spinner className=\"size-3\" />\n      <Spinner className=\"size-4\" />\n      <Spinner className=\"size-6\" />\n      <Spinner className=\"size-8\" />\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}
