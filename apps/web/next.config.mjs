@@ -25,6 +25,10 @@ const nextConfig = {
         protocol: "https",
         hostname: "images.lummi.ai",
       },
+      {
+        protocol: "https",
+        hostname: "figma-alpha-api.s3.us-west-2.amazonaws.com",
+      },
     ],
   },
 

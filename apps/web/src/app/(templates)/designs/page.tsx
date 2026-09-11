@@ -1,20 +1,24 @@
-import { cn } from "@workspace/ui/lib/utils"
+import { FigmaFrameCard } from "@/src/components/templates/design/figma-card"
+import { figmaDesigns } from "@/src/components/templates/design/figma-category"
 
-export default function Page() {
-    return (
-        <div className="mx-auto w-full">
-            <section className="relative flex min-h-screen flex-col items-center justify-center gap-5">
-                <h1
-                    className={cn(
-                        "animate-in text-center text-4xl tracking-tight text-balance delay-100 duration-500 ease-out fill-mode-backwards slide-in-from-bottom-10 fade-in md:text-5xl lg:text-6xl",
-                        "text-shadow-[0_0px_50px_theme(--color-foreground/.2)]"
-                    )}
-                >
-                    Design
-                </h1>
-                <p>Design in Progress</p>
-            </section>
-            
-        </div>
-    )
+const FILE_KEY = "gAnjUgpK63tTzC9AgOyGma"
+
+export default function DesignPage() {
+  return (
+    <div className="mt-12 w-full px-2">
+      <div className="columns-1 gap-2 md:columns-2 lg:columns-3">
+        {figmaDesigns.map((design) => (
+          <div
+            key={design.nodeId}
+            className="mb-2 break-inside-avoid"
+          >
+            <FigmaFrameCard
+              fileKey={FILE_KEY}
+              nodeId={design.nodeId}
+            />
+          </div>
+        ))}
+      </div>
+    </div>
+  )
 }

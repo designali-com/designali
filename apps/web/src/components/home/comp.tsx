@@ -21,14 +21,14 @@ export function Comps({ tree }: { tree: typeof source.pageTree }) {
                 }
 
                 return (
-                  <Link key={item.url} href={item.url} className="block">
-                    <Badge
-                      className="duration-200 hover:bg-foreground hover:text-background"
-                      variant="secondary"
-                    >
-                      {item.name}
-                    </Badge>
-                  </Link>
+                  <Badge
+                    key={item.url}
+                    className="duration-200 hover:bg-foreground hover:text-background"
+                    variant="secondary"
+                    render={<Link href={item.url} className="block" />}
+                  > 
+                    {item.name}
+                  </Badge>
                 )
               })}
           </div>

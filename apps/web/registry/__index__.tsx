@@ -1195,7 +1195,7 @@ export const Index: Record<string, any> = {
       },
     ],
     categories: ["gallery"],
-    meta: { iframeHeight: "500px" },
+    meta: { iframeHeight: "800px" },
     component: React.lazy(async () => {
       const mod = await import("@/registry/designali/blocks/gallery/gallery-01")
 
