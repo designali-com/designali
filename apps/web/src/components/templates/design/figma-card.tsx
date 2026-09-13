@@ -1,7 +1,15 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Copy, Check, Loader2, Maximize2, X } from "lucide-react";
+
+import {
+    Copy,
+    Check,
+    Loader2,
+    Maximize2,
+    X,
+} from "lucide-react";
+
 import { cn } from "@workspace/ui/lib/utils";
 import { Button } from "@workspace/ui/components/button";
 import { Figma } from "@designali/logos";
@@ -11,7 +19,10 @@ interface FigmaFrameCardProps {
     nodeId: string;
 }
 
-export function FigmaFrameCard({ fileKey, nodeId }: FigmaFrameCardProps) {
+export function FigmaFrameCard({
+    fileKey,
+    nodeId,
+}: FigmaFrameCardProps) {
     const [imageUrl, setImageUrl] = useState<string | null>(null);
     const [frameName, setFrameName] = useState<string>("Loading...");
     const [loading, setLoading] = useState<boolean>(true);
@@ -19,21 +30,36 @@ export function FigmaFrameCard({ fileKey, nodeId }: FigmaFrameCardProps) {
     const [copyLoading, setCopyLoading] = useState<boolean>(false);
     const [isFullscreen, setIsFullscreen] = useState<boolean>(false);
 
-    // ✨ Safe formatter: Sirf FIRST dash ko colon (:) mein badlega
+    // Safe formatter:
+    // Sirf FIRST dash ko colon (:) mein badlega
     const formatFigmaNodeId = (id: string) => {
         if (!id) return "";
+
         // Agar pehle se colon hai toh waise hi rehne do
         if (id.includes(":")) return id;
 
         // Sirf pehle dash (-) ko colon (:) mein replace karo
         const firstDashIndex = id.indexOf("-");
+
         if (firstDashIndex !== -1) {
-            return id.substring(0, firstDashIndex) + ":" + id.substring(firstDashIndex + 1);
+            return (
+                id.substring(0, firstDashIndex) +
+                ":" +
+                id.substring(firstDashIndex + 1)
+            );
         }
+
         return id;
     };
 
     const formattedNodeId = formatFigmaNodeId(nodeId);
+
+    // Figma S3 image ko apne Next.js API ke through proxy karo.
+    // Production mein direct Figma S3 URL load karne se CORS / access
+    // related issues avoid honge.
+    const getProxyImageUrl = (url: string) => {
+        return `/api/figma/image?url=${encodeURIComponent(url)}`;
+    };
 
     useEffect(() => {
         let cancelled = false;
@@ -41,22 +67,44 @@ export function FigmaFrameCard({ fileKey, nodeId }: FigmaFrameCardProps) {
         async function fetchFrame() {
             try {
                 setLoading(true);
+
                 const res = await fetch(
-                    `/api/figma?fileKey=${fileKey}&nodeId=${encodeURIComponent(formattedNodeId)}`
+                    `/api/figma?fileKey=${fileKey}&nodeId=${encodeURIComponent(
+                        formattedNodeId
+                    )}`
                 );
+
+                if (!res.ok) {
+                    throw new Error(
+                        `Figma API request failed: ${res.status}`
+                    );
+                }
+
                 const data = await res.json();
+
                 if (cancelled) return;
 
-                if (data.imageUrl) setImageUrl(data.imageUrl);
-                if (data.nodeName) setFrameName(data.nodeName);
+                if (data.imageUrl) {
+                    setImageUrl(data.imageUrl);
+                }
+
+                if (data.nodeName) {
+                    setFrameName(data.nodeName);
+                }
             } catch (err) {
-                console.error("Error fetching Figma frame:", err);
+                console.error(
+                    "Error fetching Figma frame:",
+                    err
+                );
             } finally {
-                if (!cancelled) setLoading(false);
+                if (!cancelled) {
+                    setLoading(false);
+                }
             }
         }
 
         fetchFrame();
+
         return () => {
             cancelled = true;
         };
@@ -65,24 +113,52 @@ export function FigmaFrameCard({ fileKey, nodeId }: FigmaFrameCardProps) {
     const copyToFigmaCanvas = async () => {
         try {
             setCopyLoading(true);
-            const res = await fetch(
-                `/api/figma/svg?fileKey=${fileKey}&nodeId=${encodeURIComponent(formattedNodeId)}`
-            );
-            const data = await res.json();
-            if (!data.svgContent) return;
 
-            await navigator.clipboard.writeText(data.svgContent.trim());
+            const res = await fetch(
+                `/api/figma/svg?fileKey=${fileKey}&nodeId=${encodeURIComponent(
+                    formattedNodeId
+                )}`
+            );
+
+            if (!res.ok) {
+                throw new Error(
+                    `SVG API request failed: ${res.status}`
+                );
+            }
+
+            const data = await res.json();
+
+            if (!data.svgContent) {
+                console.error("No SVG content returned");
+                return;
+            }
+
+            await navigator.clipboard.writeText(
+                data.svgContent.trim()
+            );
+
             setCopied(true);
-            setTimeout(() => setCopied(false), 2000);
+
+            setTimeout(() => {
+                setCopied(false);
+            }, 2000);
         } catch (err) {
-            console.error("Clipboard write failed:", err);
+            console.error(
+                "Clipboard write failed:",
+                err
+            );
         } finally {
             setCopyLoading(false);
         }
     };
 
-    const openFullscreen = () => setIsFullscreen(true);
-    const closeFullscreen = () => setIsFullscreen(false);
+    const openFullscreen = () => {
+        setIsFullscreen(true);
+    };
+
+    const closeFullscreen = () => {
+        setIsFullscreen(false);
+    };
 
     useEffect(() => {
         if (!isFullscreen) {
@@ -92,23 +168,32 @@ export function FigmaFrameCard({ fileKey, nodeId }: FigmaFrameCardProps) {
 
         document.body.style.overflow = "hidden";
 
-        const handleKeyDown = (event: KeyboardEvent) => {
+        const handleKeyDown = (
+            event: KeyboardEvent
+        ) => {
             if (event.key === "Escape") {
                 setIsFullscreen(false);
             }
         };
 
-        document.addEventListener("keydown", handleKeyDown);
+        document.addEventListener(
+            "keydown",
+            handleKeyDown
+        );
 
         return () => {
             document.body.style.overflow = "";
-            document.removeEventListener("keydown", handleKeyDown);
+
+            document.removeEventListener(
+                "keydown",
+                handleKeyDown
+            );
         };
     }, [isFullscreen]);
 
     return (
         <>
-            <div className="group relative w-full h-auto overflow-hidden border bg-background transition-all">
+            <div className="group relative h-auto w-full overflow-hidden border bg-background transition-all">
                 <div className="relative flex w-full items-center justify-center bg-muted/10">
                     {loading ? (
                         <div className="flex min-h-60 items-center gap-2 text-sm text-muted-foreground">
@@ -116,15 +201,16 @@ export function FigmaFrameCard({ fileKey, nodeId }: FigmaFrameCardProps) {
                             Fetching Design...
                         </div>
                     ) : imageUrl ? (
-                        <div className="relative w-full h-full overflow-hidden">
+                        <div className="relative h-full w-full overflow-hidden">
                             <img
-                                src={imageUrl}
+                                src={getProxyImageUrl(imageUrl)}
                                 alt={frameName}
                                 className="block h-auto w-full object-contain"
                                 loading="lazy"
                                 decoding="async"
                             />
 
+                            {/* Fullscreen Button */}
                             <Button
                                 size="icon"
                                 variant="secondary"
@@ -140,6 +226,7 @@ export function FigmaFrameCard({ fileKey, nodeId }: FigmaFrameCardProps) {
                                 <Maximize2 className="h-3.5 w-3.5" />
                             </Button>
 
+                            {/* Bottom Actions */}
                             <div
                                 className={cn(
                                     "absolute inset-x-0 bottom-0",
@@ -158,7 +245,9 @@ export function FigmaFrameCard({ fileKey, nodeId }: FigmaFrameCardProps) {
                                 <Button
                                     size="sm"
                                     className="h-7 shrink-0 px-2.5 text-xs"
-                                    onClick={copyToFigmaCanvas}
+                                    onClick={
+                                        copyToFigmaCanvas
+                                    }
                                     disabled={copyLoading}
                                 >
                                     {copied ? (
@@ -181,15 +270,19 @@ export function FigmaFrameCard({ fileKey, nodeId }: FigmaFrameCardProps) {
                             </div>
                         </div>
                     ) : (
-                        <p className="text-xs text-destructive">
-                            Failed to render frame preview
-                        </p>
+                        <div className="flex min-h-60 items-center justify-center">
+                            <p className="text-xs text-destructive">
+                                Failed to render frame preview
+                            </p>
+                        </div>
                     )}
                 </div>
             </div>
 
+            {/* Fullscreen Preview */}
             {isFullscreen && (
                 <div className="fixed inset-0 z-50 flex items-center justify-center overflow-hidden bg-black/60 p-4 backdrop-blur-sm md:p-8">
+                    {/* Backdrop */}
                     <button
                         type="button"
                         aria-label="Close preview"
@@ -200,8 +293,9 @@ export function FigmaFrameCard({ fileKey, nodeId }: FigmaFrameCardProps) {
                     <div
                         role="dialog"
                         aria-modal="true"
-                        className="relative z-10 flex max-w-7xl h-fit max-h-[calc(100vh-64px)] w-full flex-col overflow-hidden border bg-background shadow-2xl"
+                        className="relative z-10 flex h-fit max-h-[calc(100vh-64px)] w-full max-w-7xl flex-col overflow-hidden border bg-background shadow-2xl"
                     >
+                        {/* Browser Header */}
                         <div className="flex h-11 shrink-0 items-center gap-3 border-b bg-background px-3">
                             <div className="flex shrink-0 items-center gap-1.5">
                                 <span className="size-2.5 rounded-full bg-red-400/70" />
@@ -223,16 +317,20 @@ export function FigmaFrameCard({ fileKey, nodeId }: FigmaFrameCardProps) {
                             </button>
                         </div>
 
+                        {/* Fullscreen Image */}
                         <div className="min-h-0 flex-1 overflow-y-auto bg-muted/10">
                             {imageUrl && (
                                 <img
-                                    src={imageUrl}
+                                    src={getProxyImageUrl(
+                                        imageUrl
+                                    )}
                                     alt={frameName}
                                     className="block h-auto w-full object-contain"
                                 />
                             )}
                         </div>
 
+                        {/* Fullscreen Bottom Actions */}
                         <div className="flex shrink-0 items-center justify-between gap-3 border-t bg-background/80 p-2">
                             <h3 className="truncate px-1 text-sm font-medium">
                                 {frameName}
@@ -241,7 +339,9 @@ export function FigmaFrameCard({ fileKey, nodeId }: FigmaFrameCardProps) {
                             <Button
                                 size="sm"
                                 className="h-7 shrink-0 px-2.5 text-xs"
-                                onClick={copyToFigmaCanvas}
+                                onClick={
+                                    copyToFigmaCanvas
+                                }
                                 disabled={copyLoading}
                             >
                                 {copied ? (

@@ -108,7 +108,7 @@ export type FigmaDesign = {
     {
       nodeId: "36-5303",
       name: "Dashboard 01",
-      category: "dashboard",
+      category: "section",
       description: "Dashboard interface design",
     },
     {
