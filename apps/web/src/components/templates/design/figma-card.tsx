@@ -19,7 +19,21 @@ export function FigmaFrameCard({ fileKey, nodeId }: FigmaFrameCardProps) {
     const [copyLoading, setCopyLoading] = useState<boolean>(false);
     const [isFullscreen, setIsFullscreen] = useState<boolean>(false);
 
-    const formattedNodeId = nodeId.replace("-", ":");
+    // ✨ Safe formatter: Sirf FIRST dash ko colon (:) mein badlega
+    const formatFigmaNodeId = (id: string) => {
+        if (!id) return "";
+        // Agar pehle se colon hai toh waise hi rehne do
+        if (id.includes(":")) return id;
+
+        // Sirf pehle dash (-) ko colon (:) mein replace karo
+        const firstDashIndex = id.indexOf("-");
+        if (firstDashIndex !== -1) {
+            return id.substring(0, firstDashIndex) + ":" + id.substring(firstDashIndex + 1);
+        }
+        return id;
+    };
+
+    const formattedNodeId = formatFigmaNodeId(nodeId);
 
     useEffect(() => {
         let cancelled = false;
@@ -48,7 +62,6 @@ export function FigmaFrameCard({ fileKey, nodeId }: FigmaFrameCardProps) {
         };
     }, [fileKey, formattedNodeId]);
 
-    // SVG sirf tabhi fetch hoga jab user Copy dabayega — initial load ab fast hoga
     const copyToFigmaCanvas = async () => {
         try {
             setCopyLoading(true);
@@ -95,7 +108,7 @@ export function FigmaFrameCard({ fileKey, nodeId }: FigmaFrameCardProps) {
 
     return (
         <>
-            <div className="group relative w-full h-auto overflow-hidden border bg-background p-1 transition-all">
+            <div className="group relative w-full h-auto overflow-hidden border bg-background transition-all">
                 <div className="relative flex w-full items-center justify-center bg-muted/10">
                     {loading ? (
                         <div className="flex min-h-60 items-center gap-2 text-sm text-muted-foreground">
@@ -187,7 +200,7 @@ export function FigmaFrameCard({ fileKey, nodeId }: FigmaFrameCardProps) {
                     <div
                         role="dialog"
                         aria-modal="true"
-                        className="relative z-10 flex max-w-7xl h-[calc(100vh-64px)] w-full flex-col overflow-hidden border bg-background shadow-2xl"
+                        className="relative z-10 flex max-w-7xl h-fit max-h-[calc(100vh-64px)] w-full flex-col overflow-hidden border bg-background shadow-2xl"
                     >
                         <div className="flex h-11 shrink-0 items-center gap-3 border-b bg-background px-3">
                             <div className="flex shrink-0 items-center gap-1.5">
@@ -235,6 +248,11 @@ export function FigmaFrameCard({ fileKey, nodeId }: FigmaFrameCardProps) {
                                     <>
                                         <Check className="mr-1.5 h-3.5 w-3.5" />
                                         Copied to Figma
+                                    </>
+                                ) : copyLoading ? (
+                                    <>
+                                        <Loader2 className="mr-1.5 h-3.5 w-3.5 animate-spin" />
+                                        Copy to Figma
                                     </>
                                 ) : (
                                     <>

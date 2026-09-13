@@ -3,7 +3,7 @@ import { figmaCategories, figmaDesigns } from "@/src/components/templates/design
 import { notFound } from "next/navigation"
  
 
-const FILE_KEY = "gAnjUgpK63tTzC9AgOyGma"
+const FILE_KEY = "VztJy6DsCcvC1DHeyWK0oK"
 
 interface DesignCategoryPageProps {
   params: Promise<{
@@ -30,7 +30,7 @@ export default async function DesignCategoryPage({
 
   return (
     <div className="mt-12 w-full px-2">
-      <div className="mb-6 px-1">
+      <div className="my-6 px-1">
         <h1 className="text-4xl font-medium tracking-tight">
           {category.name}
         </h1>
@@ -50,7 +50,7 @@ export default async function DesignCategoryPage({
           </p>
         </div>
       ) : (
-        <div className="columns-1 gap-2 md:columns-2 lg:columns-3">
+        <div className="columns-1 gap-2 md:columns-2">
           {designs.map((design) => (
             <div
               key={design.nodeId}

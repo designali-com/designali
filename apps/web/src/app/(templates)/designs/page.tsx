@@ -1,7 +1,7 @@
 import { FigmaFrameCard } from "@/src/components/templates/design/figma-card"
 import { figmaDesigns } from "@/src/components/templates/design/figma-category"
 
-const FILE_KEY = "gAnjUgpK63tTzC9AgOyGma"
+const FILE_KEY = "VztJy6DsCcvC1DHeyWK0oK"
 
 export default function DesignPage() {
   return (
