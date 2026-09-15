@@ -11,6 +11,7 @@ export default async function DesignPage() {
     FILE_KEY,
     figmaDesigns.map((d) => d.nodeId)
   )
+  
 
   return (
     <div className="mt-12 w-full px-2">
