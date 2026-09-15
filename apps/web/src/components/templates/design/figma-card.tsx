@@ -17,15 +17,19 @@ import { Figma } from "@designali/logos";
 interface FigmaFrameCardProps {
     fileKey: string;
     nodeId: string;
+    imageUrl?: string | null;
+    frameName?: string;
 }
 
 export function FigmaFrameCard({
     fileKey,
     nodeId,
+    imageUrl: preloadedImageUrl = null,
+    frameName: preloadedFrameName,
 }: FigmaFrameCardProps) {
-    const [imageUrl, setImageUrl] = useState<string | null>(null);
-    const [frameName, setFrameName] = useState<string>("Loading...");
-    const [loading, setLoading] = useState<boolean>(true);
+    const [imageUrl, setImageUrl] = useState<string | null>(preloadedImageUrl);
+    const [frameName, setFrameName] = useState<string>(preloadedFrameName ?? "Loading...");
+    const [loading, setLoading] = useState<boolean>(!preloadedImageUrl);
     const [copied, setCopied] = useState<boolean>(false);
     const [copyLoading, setCopyLoading] = useState<boolean>(false);
     const [isFullscreen, setIsFullscreen] = useState<boolean>(false);
@@ -62,9 +66,11 @@ export function FigmaFrameCard({
     };
 
     useEffect(() => {
-        let cancelled = false;
+        // Server se already mil chuka hai to dubara fetch mat karo
+        if (preloadedImageUrl) return;
 
-        async function fetchFrame() {
+        let cancelled = false;
+        async function fetchFrame() { 
             try {
                 setLoading(true);
 
@@ -102,13 +108,9 @@ export function FigmaFrameCard({
                 }
             }
         }
-
         fetchFrame();
-
-        return () => {
-            cancelled = true;
-        };
-    }, [fileKey, formattedNodeId]);
+        return () => { cancelled = true; };
+    }, [fileKey, formattedNodeId, preloadedImageUrl]);
 
     const copyToFigmaCanvas = async () => {
         try {
