@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<svg width="1080" height="1080" viewBox="0 0 1080 1080" fill="none" version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg">
+  <title>bimi-svg-tiny-12-ps</title>
+  <g>
+    <rect width="1080" height="1080" fill="black"/>
+    <rect width="1080" height="1080" rx="540" fill="black"/>
+    <path d="M537.806 352.43L588.52 489.484L725.574 540.198L588.52 590.913L537.806 727.966L487.092 590.913L350.038 540.198L487.092 489.484L537.806 352.43Z" fill="#00A8FF"/>
+    <path d="M631.792 674.052V630.164L839.741 537.161V542.386L631.792 449.384V405.495L869 512.082V567.465L631.792 674.052Z" fill="#00A8FF"/>
+    <path d="M448.951 674.052L211.743 567.465V512.082L448.951 405.495V449.384L241.002 542.386V537.161L448.951 630.164V674.052Z" fill="#00A8FF"/>
+  </g>
+  <defs/>
+</svg>
