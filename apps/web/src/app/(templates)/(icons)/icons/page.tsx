@@ -14,10 +14,10 @@ import { Tabs, TabsList, TabsTrigger } from "@workspace/ui/components/tabs"
 type VariantTab = "outline" | "filled" | "doodle"
   | "rounded"
 const VARIANT_TABS: { value: VariantTab; label: string }[] = [
+  { value: "doodle", label: "Doodle" },
   { value: "outline", label: "Outline" },
   { value: "filled", label: "Filled" },
   { value: "rounded", label: "Rounded" },
-  { value: "doodle", label: "Doodle" },
 ]
 
 export default function Page() {
@@ -32,7 +32,7 @@ export default function Page() {
     if (tab && VARIANT_TABS.some((t) => t.value === tab)) {
       setVariantTab(tab)
     } else {
-      setVariantTab("outline")
+      setVariantTab("doodle")
     }
     setSelectedLogo(null)
   }, [searchParams, setVariantTab])
@@ -51,7 +51,7 @@ export default function Page() {
   const handleTabChange = (value: string) => {
     const tab = value as VariantTab
     const params = new URLSearchParams()
-    if (tab !== "outline") params.set("tab", tab)
+    if (tab !== "doodle") params.set("tab", tab)
     const hash = window.location.hash
     router.push(`/icons${params.size ? `?${params}` : ""}${hash}`, { scroll: false })
   }
