@@ -92,7 +92,7 @@ export function ForgotPasswordForm({
                   <Input
                     id="email"
                     type="email"
-                    placeholder="m@example.com"
+                    placeholder="a@designali.com"
                     aria-invalid={!!emailError}
                     {...form.register("email")}
                   />

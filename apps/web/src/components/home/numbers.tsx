@@ -38,19 +38,19 @@ export function NumbersSection() {
             className="relative mx-auto w-full border-2 max-w-5xl border-dotted p-2 mb-20"
         >
             <div className="relative h-full w-full border border-dotted">
-                <div className="grid w-full grid-cols-1 md:grid-cols-2">
+                <div className="grid w-full grid-cols-1 md:grid-cols-3">
                     <div className="border-b border-dotted py-10 md:border-r md:border-b-0 lg:border-r">
                         <div className="flex flex-col space-y-2 text-center text-md">
                             {isVisible && (
                                 <CounterNumber
                                     value={11}
                                     suffix="M+"
-                                    className="text-primary text-7xl font-bold tracking-tight"
+                                    className="text-primary text-5xl font-bold tracking-tight"
                                 />
                             )}
 
-                            <h1 className="text-2xl font-medium">
-                            Components Views 
+                            <h1 className="text-xl font-medium">
+                                Components Views
                             </h1>
 
                             <Link
@@ -63,17 +63,17 @@ export function NumbersSection() {
                         </div>
                     </div>
 
-                    <div className="py-10">
+                    <div className="py-10 md:border-r border-b border-dotted md:border-b-0 lg:border-r">
                         <div className="flex flex-col space-y-2 text-center text-md">
                             {isVisible && (
                                 <CounterNumber
                                     value={2000}
                                     suffix="+"
-                                    className="text-primary text-7xl font-bold tracking-tight"
+                                    className="text-primary text-5xl font-bold tracking-tight"
                                 />
                             )}
 
-                            <h1 className="text-2xl font-medium">
+                            <h1 className="text-xl font-medium">
                                 Weekly Downloads
                             </h1>
 
@@ -83,6 +83,30 @@ export function NumbersSection() {
                                 className="underline hover:text-primary"
                             >
                                 npmjs
+                            </Link>
+                        </div>
+                    </div>
+
+                    <div className="py-10">
+                        <div className="flex flex-col space-y-2 text-center text-md">
+                            {isVisible && (
+                                <CounterNumber
+                                    value={1}
+                                    suffix="M+"
+                                    className="text-primary text-5xl font-bold tracking-tight"
+                                />
+                            )}
+
+                            <h1 className="text-xl font-medium">
+                                Monthly Views
+                            </h1>
+
+                            <Link
+                                target="_blank"
+                                href="https://in.pinterest.com/designalicom/"
+                                className="underline hover:text-primary"
+                            >
+                                pinterest
                             </Link>
                         </div>
                     </div>
