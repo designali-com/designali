@@ -318,7 +318,13 @@ function BlockViewerToolbar() {
 function BlockViewerView() {
   const { item, iframeKey, previewWidth, setPreviewWidth } = useBlockViewer()
   const [isResizing, setIsResizing] = React.useState(false)
+  const [isLoading, setIsLoading] = React.useState(true) // <-- New State
   const containerRef = React.useRef<HTMLDivElement>(null)
+
+  // Jab bhi iframeKey change ho (refresh button click par), loading phir se true kar dein
+  React.useEffect(() => {
+    setIsLoading(true)
+  }, [iframeKey])
 
   const handleMouseDown = (e: React.MouseEvent) => {
     e.preventDefault()
@@ -328,7 +334,6 @@ function BlockViewerView() {
       if (!containerRef.current) return
       const rect = containerRef.current.getBoundingClientRect()
       const newWidth = ((moveEvent.clientX - rect.left) / rect.width) * 100
-      // Clamps width percentage between 30% and 100%
       setPreviewWidth(Math.min(Math.max(newWidth, 30), 100))
     }
 
@@ -345,32 +350,14 @@ function BlockViewerView() {
   return (
     <div className="hidden group-data-[view=code]/block-view-wrapper:hidden md:h-(--height) lg:flex">
       <div ref={containerRef} className="relative grid h-full w-full gap-4">
+        {/* Background Grid Style (Same as before) */}
         <div className="absolute inset-0 z-0 border">
           <div
             className="absolute inset-0"
             style={{
-              backgroundImage:
-                "radial-gradient(circle at 1px 1px, var(--primary) 0.5px, transparent 0)",
+              backgroundImage: "radial-gradient(circle at 1px 1px, var(--primary) 0.5px, transparent 0)",
               backgroundSize: "8px 8px",
               opacity: 0.3,
-            }}
-          />
-          <div
-            className="absolute inset-0"
-            style={{
-              backgroundImage:
-                "radial-gradient(circle at 1px 1px, var(--primary) 1px, transparent 0)",
-              backgroundSize: "24px 24px",
-              opacity: 0.2,
-            }}
-          />
-          <div
-            className="absolute inset-0"
-            style={{
-              backgroundImage:
-                "radial-gradient(circle at 1px 1px, var(--primary) 2px, transparent 0)",
-              backgroundSize: "56px 56px",
-              opacity: 0.15,
             }}
           />
         </div>
@@ -383,13 +370,24 @@ function BlockViewerView() {
               width: `${previewWidth}%`,
             }}
           >
+            {/* Jab tak iframe load ho raha hai, Skeleton/Loader dikhayein */}
+            {isLoading && (
+              <div className="absolute inset-0 z-20 flex flex-col items-center justify-center gap-4 bg-background/80 backdrop-blur-sm animate-pulse">
+                <div className="w-3/4 h-8 bg-muted rounded-md" />
+                <div className="w-1/2 h-4 bg-muted rounded-md" />
+                <div className="w-5/6 h-64 bg-muted/50 rounded-md mt-4" />
+              </div>
+            )}
+
             <iframe
               key={iframeKey}
               src={`/view/${item.name}`}
               height={item.meta?.iframeHeight ?? 930}
               loading="lazy"
+              onLoad={() => setIsLoading(false)} // <-- Load hone par false kar dein
               className={cn(
-                "block h-full w-full border-0 bg-background",
+                "block h-full w-full border-0 bg-background transition-opacity duration-300",
+                isLoading ? "opacity-0" : "opacity-100",
                 isResizing && "pointer-events-none"
               )}
             />

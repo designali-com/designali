@@ -1,6 +1,5 @@
 "use client"
 
-import { useFavorites } from "@/src/config/favourites-context"
 import { Pattern } from "@/src/types/pattern"
 
 import PatternCard from "./pattern-card"
@@ -24,8 +23,6 @@ export default function PatternGrid({
   setActiveMobileCard,
   columns,
 }: PatternGridProps) {
-  const { favourites } = useFavorites()
-
   return (
     <div
       className="grid w-full gap-2 pb-2"
@@ -35,7 +32,7 @@ export default function PatternGrid({
     >
       {patterns.map((pattern) => (
         <PatternCard
-          key={`${pattern.id}-${favourites.includes(pattern.id)}`}
+          key={pattern.id}
           pattern={pattern}
           activePattern={activePattern}
           setActivePattern={setActivePattern}

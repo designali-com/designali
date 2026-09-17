@@ -1,9 +1,8 @@
 "use client"
 
-import { useFavorites } from "@/src/config/favourites-context"
 import { useCopy } from "@/src/hooks/use-copy"
 import { Pattern } from "@/src/types/pattern"
-import { Check, Copy, Star } from "lucide-react"
+import { Check, Copy } from "lucide-react"
 import reactElementToJSXString from "react-element-to-jsx-string"
 
 import { Button } from "@workspace/ui/components/button"
@@ -26,7 +25,6 @@ export default function PatternCard({
   setActiveMobileCard,
 }: PatternCardProps) {
   const { copyToClipboard, isCopied } = useCopy()
-  const { toggleFavourite, isFavourite } = useFavorites()
   const isPatternDark = theme === "dark"
 
   const previewPattern = (patternId: string) => {
@@ -79,29 +77,6 @@ export default function PatternCard({
         )}
 
         <div className="absolute inset-0 hidden items-end justify-start p-2 opacity-0 transition-all duration-300 group-hover:opacity-100 lg:flex">
-          <Button
-            size={"icon"}
-            variant={"outline"}
-            onClick={(e: { stopPropagation: () => void }) => {
-              e.stopPropagation()
-              toggleFavourite(pattern.id)
-            }}
-            className={`absolute top-2 left-2 z-10 cursor-pointer backdrop-blur-md${
-              isFavourite(pattern.id)
-                ? isPatternDark
-                  ? "bg-yellow-500/20 text-yellow-500"
-                  : "bg-yellow-500/20 text-yellow-500"
-                : isPatternDark
-                  ? "bg-black/20 text-white"
-                  : "dark:bg-black/20"
-            }`}
-          >
-            <Star
-              className={`h-4 w-4 ${
-                isFavourite(pattern.id) ? "fill-current" : ""
-              }`}
-            />
-          </Button>
           <div className="text-center">
             <h3 className="mb-3 text-lg font-semibold">{pattern.name}</h3>
 

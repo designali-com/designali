@@ -45,28 +45,28 @@ export function ThemePattern({ className }: React.ComponentProps<"div">) {
 
   return (
     <div
-      className={cn("flex w-full flex-wrap items-center gap-2 px-2", className)}
+      className={cn("flex w-full items-center gap-1", className)}
     >
       <Button
         onClick={applyRandomTheme}
-        size="sm"
+         
         variant="outline"
-        className="cursor-pointer gap-2"
+        className="cursor-pointer h-8 gap-2"
       >
         <Shuffle className="h-4 w-4" />
-        Random
+        Random Color
       </Button>
 
       <Label className="sr-only">Color</Label>
 
       {mounted ? (
-        <Select value={activeTheme} onValueChange={applyColorOnly}>
+        <Select  value={activeTheme} onValueChange={applyColorOnly}>
           <SelectTrigger className="w-40 bg-secondary shadow-none">
             <span className="font-medium">Color:</span>
             <SelectValue placeholder="Pick color" />
           </SelectTrigger>
 
-          <SelectContent>
+          <SelectContent side="bottom">
             <SelectGroup>
               <SelectLabel>Colors</SelectLabel>
 

@@ -30,7 +30,7 @@ export function ThemeSelectorPattern() {
   }, [activeTheme])
 
   return (
-    <div className="fixed bottom-0 z-50 flex h-12 w-full justify-center border-t bg-background">
+    <div className="">
       <ThemePattern />
     </div>
   )

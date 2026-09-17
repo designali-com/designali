@@ -4,14 +4,17 @@ import { createMDX } from "fumadocs-mdx/next"
 const nextConfig = {
   transpilePackages: ["@workspace/ui"],
 
+  // Scoped specifically to routes that actually need them, instead of global "/*"
   outputFileTracingIncludes: {
     "/api/templates/[slug]/download": [
       "../../templates/**/*",
     ],
-  
-    "/*": [
-      "./registry/**/*",
+    // Change "/*" to the exact route patterns that need content/registry
+    "/docs/:path*": [
       "./content/**/*",
+    ],
+    "/view/:path*": [
+      "./registry/**/*",
     ],
   },
 
