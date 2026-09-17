@@ -221,7 +221,6 @@ function WaitlistForm() {
       </FieldGroup>
 
       <Button
-        nativeButton={false}
         type="submit"
         disabled={loading}
         size="lg"

@@ -63,7 +63,9 @@ export function FeaturedBlocks() {
                             </TabsList>
                         </div>
 
-                        <Button className="hidden md:flex" render={<Link href="/blocks" />} size="sm">
+                        <Button
+                            nativeButton={false} 
+                            className="hidden md:flex" render={<Link href="/blocks" />} size="sm">
                             All Blocks
                         </Button>
                     </div>

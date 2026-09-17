@@ -1,7 +1,6 @@
 "use client"
 
 import * as React from "react"
-import Image from "next/image"
 import Link from "next/link"
 import {
   Check,
@@ -268,7 +267,8 @@ function BlockViewerToolbar() {
 
       <div className="ml-auto flex items-center gap-4">
         <div className="flex items-center gap-2">
-          <Button
+          <Button 
+            nativeButton={false}
             size="icon-sm"
             variant="ghost"
             render={
@@ -441,23 +441,21 @@ function BlockViewerMobile({
       </div>
 
       <div className="overflow-hidden border border-dotted bg-background">
-        <Image
+        <img
           src={`/r/blocks/${item.name}/light.webp`}
           alt={item.name}
           data-block={item.name}
           width={1440}
           height={900}
-          priority
           className="block h-auto w-full object-cover dark:hidden"
         />
 
-        <Image
+        <img
           src={`/r/blocks/${item.name}/dark.webp`}
           alt={item.name}
           data-block={item.name}
           width={1440}
           height={900}
-          priority
           className="hidden h-auto w-full object-cover dark:block"
         />
       </div>

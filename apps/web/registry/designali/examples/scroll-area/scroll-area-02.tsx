@@ -1,5 +1,4 @@
 import * as React from "react"
-import Image from "next/image"
 
 import { ScrollArea, ScrollBar } from "@workspace/ui/components/scroll-area"
 
@@ -30,7 +29,7 @@ export function ScrollAreaHorizontalDemo() {
         {works.map((artwork) => (
           <figure key={artwork.artist} className="shrink-0">
             <div className="overflow-hidden rounded-md">
-              <Image
+              <img
                 src={artwork.art}
                 alt={`Photo by ${artwork.artist}`}
                 className="aspect-[3/4] h-fit w-fit object-cover"

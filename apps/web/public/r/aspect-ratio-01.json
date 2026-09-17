@@ -6,7 +6,7 @@
   "files": [
     {
       "path": "registry/designali/examples/aspect-ratio/aspect-ratio-01.tsx",
-      "content": "import Image from \"next/image\";\n\nimport { AspectRatio } from \"@workspace/ui/components/aspect-ratio\";\n\nexport default function AspectRatioDemo() {\n  return (\n    <AspectRatio ratio={16 / 9} className=\"w-full max-w-sm rounded-lg bg-muted\">\n      <Image\n        src=\"/img/hero-1.jpg\"\n        alt=\"Designali showcase visual\"\n        fill\n        className=\"rounded-lg object-cover\"\n      />\n    </AspectRatio>\n  );\n}",
+      "content": "import { AspectRatio } from \"@workspace/ui/components/aspect-ratio\";\n\nexport default function AspectRatioDemo() {\n  return (\n    <AspectRatio ratio={16 / 9} className=\"w-full max-w-sm rounded-lg bg-muted\">\n      <img\n        src=\"/img/hero-1.jpg\"\n        alt=\"Designali showcase visual\"\n        className=\"absolute inset-0 h-full w-full rounded-lg object-cover\"\n      />\n    </AspectRatio>\n  );\n}",
       "type": "registry:example"
     }
   ]

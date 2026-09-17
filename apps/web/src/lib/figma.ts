@@ -1,13 +1,9 @@
-
 const FIGMA_API = "https://api.figma.com/v1";
 
 export function formatFigmaNodeId(id: string) {
   if (!id) return "";
-
   if (id.includes(":")) return id;
-
   const firstDashIndex = id.indexOf("-");
-
   if (firstDashIndex !== -1) {
     return (
       id.substring(0, firstDashIndex) +
@@ -15,79 +11,39 @@ export function formatFigmaNodeId(id: string) {
       id.substring(firstDashIndex + 1)
     );
   }
-
   return id;
-}
-
-export interface FigmaFrameData {
-  imageUrl: string | null;
-  name: string;
 }
 
 export async function getFigmaFrames(
   fileKey: string,
   rawNodeIds: string[]
-): Promise<Record<string, FigmaFrameData>> {
+): Promise<Record<string, string>> {
   const token = process.env.FIGMA_PERSONAL_ACCESS_TOKEN;
+  if (!token) return {};
 
-  if (!token) {
-    throw new Error("FIGMA_PERSONAL_ACCESS_TOKEN missing");
-  }
-
+  // Sabhi IDs ko format karke comma se jod lo (e.g., "5:13,33:3510,36:8534")
   const nodeIds = rawNodeIds.map(formatFigmaNodeId);
-
   const idsParam = nodeIds.join(",");
 
-  // Sabhi frames ek hi request mein fetch karo
-  const [imageRes, nodeRes] = await Promise.all([
-    fetch(
-      `${FIGMA_API}/images/${fileKey}?ids=${encodeURIComponent(
-        idsParam
-      )}&format=png&scale=2`,
+  try {
+    // Sirf 1 API call sari images ke liye (No /nodes call)
+    const res = await fetch(
+      `${FIGMA_API}/images/${fileKey}?ids=${encodeURIComponent(idsParam)}&format=png&scale=2`,
       {
-        cache: "no-store",
-        headers: {
-          "X-Figma-Token": token,
-        },
+        headers: { "X-Figma-Token": token },
+        next: { revalidate: 3600 }, // 1 ghante ke liye cache
       }
-    ),
-
-    fetch(
-      `${FIGMA_API}/files/${fileKey}/nodes?ids=${encodeURIComponent(
-        idsParam
-      )}`,
-      {
-        cache: "no-store",
-        headers: {
-          "X-Figma-Token": token,
-        },
-      }
-    ),
-  ]);
-
-  if (!imageRes.ok || !nodeRes.ok) {
-    console.error(
-      "Figma batch fetch failed",
-      imageRes.status,
-      nodeRes.status
     );
 
+    if (!res.ok) {
+      console.error("Figma batch fetch failed:", res.status);
+      return {};
+    }
+
+    const data = await res.json();
+    return data.images || {}; // Returns { "5:13": "https://...", "33:3510": "https://..." }
+  } catch (error) {
+    console.error("Error fetching Figma frames:", error);
     return {};
   }
-
-  const [imageData, nodeData] = await Promise.all([
-    imageRes.json(),
-    nodeRes.json(),
-  ]);
-
-  const result: Record<string, FigmaFrameData> = {};
-
-  for (const id of nodeIds) {
-    result[id] = {
-      imageUrl: imageData.images?.[id] ?? null,
-      name: nodeData.nodes?.[id]?.document?.name ?? "Figma Frame",
-    };
-  }
-
-  return result;
 }

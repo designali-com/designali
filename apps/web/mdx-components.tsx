@@ -1,5 +1,4 @@
 import * as React from "react"
-import Image from "next/image"
 import Link from "next/link"
 
 import { cn } from "@workspace/ui/lib/utils"
@@ -293,7 +292,7 @@ export const mdxComponents = {
     alt?: string
     [key: string]: unknown
   }) => (
-    <Image
+    <img
       className={cn("mt-6 border border-dotted", className)}
       src={src ?? ""}
       width={Number(width) || 1200}

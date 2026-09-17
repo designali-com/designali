@@ -6,30 +6,22 @@ export async function GET(request: NextRequest) {
   const nodeId = searchParams.get("nodeId");
 
   if (!fileKey || !nodeId) {
-    return NextResponse.json(
-      { error: "fileKey and nodeId are required" },
-      { status: 400 }
-    );
+    return NextResponse.json({ error: "fileKey and nodeId are required" }, { status: 400 });
   }
 
   const token = process.env.FIGMA_PERSONAL_ACCESS_TOKEN;
   if (!token) {
-    return NextResponse.json(
-      { error: "Figma Access Token missing in environment variables" },
-      { status: 500 }
-    );
+    return NextResponse.json({ error: "Figma Access Token missing" }, { status: 500 });
   }
 
   try {
-    // Image + node metadata parallel me fetch karo.
-    // SVG content YAHAN nahi laate — wo alag endpoint se, sirf copy click par.
     const [imageRes, nodeRes] = await Promise.all([
       fetch(
-        `https://api.figma.com/v1/images/${fileKey}?ids=${nodeId}&format=png&scale=2`,
+        `https://api.figma.com/v1/images/${fileKey}?ids=${encodeURIComponent(nodeId)}&format=png&scale=2`,
         { headers: { "X-Figma-Token": token }, next: { revalidate: 3600 } }
       ),
       fetch(
-        `https://api.figma.com/v1/files/${fileKey}/nodes?ids=${nodeId}`,
+        `https://api.figma.com/v1/files/${fileKey}/nodes?ids=${encodeURIComponent(nodeId)}`,
         { headers: { "X-Figma-Token": token }, next: { revalidate: 3600 } }
       ),
     ]);
@@ -39,7 +31,7 @@ export async function GET(request: NextRequest) {
       nodeRes.json(),
     ]);
 
-    const imageUrl = imageData.images?.[nodeId];
+    const imageUrl = imageData.images?.[nodeId] || null;
     const nodeName = nodeData.nodes?.[nodeId]?.document?.name || "Figma Frame";
 
     return NextResponse.json(
@@ -47,9 +39,7 @@ export async function GET(request: NextRequest) {
       { headers: { "Cache-Control": "s-maxage=3600, stale-while-revalidate=86400" } }
     );
   } catch (error) {
-    return NextResponse.json(
-      { error: "Failed to fetch Figma data" },
-      { status: 500 }
-    );
+    console.error("Figma API Error:", error);
+    return NextResponse.json({ error: "Failed to fetch Figma data" }, { status: 500 });
   }
 }

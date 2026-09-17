@@ -1,6 +1,4 @@
 
-import Image from "next/image"
-
 import { Dithering, DotOrbit, Spiral } from "@paper-design/shaders-react"
 
 export default function FeatureSection() {
@@ -19,7 +17,7 @@ export default function FeatureSection() {
                     {/* Card 1 — Strategy */}
                     <div className="h-[430px] md:h-[460px] overflow-hidden  border border-dashed">
                         <div className="relative h-full  ">
-                            <Image
+                            <img
                                 src="/stock/strategy.jpg"
                                 alt="DesignAli Strategy"
                                 width={300}
@@ -54,7 +52,7 @@ export default function FeatureSection() {
                     {/* Card 2 — Design */}
                     <div className="h-[430px] md:h-[460px] overflow-hidden  border border-dashed">
                         <div className="relative h-full ">
-                            <Image
+                            <img
                                 src="/stock/design.jpg"
                                 alt="DesignAli Creative Design"
                                 width={300}
@@ -88,7 +86,7 @@ export default function FeatureSection() {
                     {/* Card 3 — Development */}
                     <div className="h-[430px] md:h-[460px] overflow-hidden  border border-dashed">
                         <div className="relative h-full ">
-                            <Image
+                            <img
                                 src="/stock/development.jpg"
                                 alt="DesignAli Development"
                                 width={300}
