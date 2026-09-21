@@ -37,6 +37,7 @@ export async function inviteMember(prevState: any, formData: FormData) {
       email,
       role,
       status: "pending",
+      createdAt: new Date(),
       expiresAt,
       inviterId: session.user.id,
     });

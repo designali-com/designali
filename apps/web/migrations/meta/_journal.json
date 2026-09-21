@@ -50,6 +50,13 @@
       "when": 1788638018407,
       "tag": "0006_last_genesis",
       "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "7",
+      "when": 1789986493377,
+      "tag": "0007_polite_raider",
+      "breakpoints": true
     }
   ]
 }
