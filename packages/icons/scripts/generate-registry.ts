@@ -77,7 +77,7 @@ const ROOT = process.cwd();
 
 const INPUT_FILE        = process.argv[2] || path.join(ROOT, "src/generated/logos.json");
 const GENERATED_DIR     = path.join(ROOT, "src/generated");  // where .tsx files live
-const OUTPUT_DIR        = process.argv[3] || path.join(ROOT, "../../apps/web/public/icons/r");
+const OUTPUT_DIR        = process.argv[3] || path.join(ROOT, "../../apps/web/public/r/icons");
 const REGISTRY_NAME     = "@designali/icons";
 const REGISTRY_HOMEPAGE = "https://designali.com";
 const ICON_REGISTRY_DIR = "registry/icons"; // path shown inside registry item

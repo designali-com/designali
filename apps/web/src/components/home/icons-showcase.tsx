@@ -17,15 +17,19 @@ import { CounterNumber } from "@/registry/designali/ui/counter-number"
 // ─────────────────────────────────────────────
 // Utility: Fisher–Yates Shuffle
 // ─────────────────────────────────────────────
-function shuffleArray<T>(array: T[]): T[] {
+function seededShuffle<T>(array: T[], seed = 42): T[] {
     const arr = [...array]
+    let value = seed
+  
     for (let i = arr.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1))
-            //@ts-ignore
-            ;[arr[i], arr[j]] = [arr[j], arr[i]]
+      value = (value * 9301 + 49297) % 233280
+      const j = Math.floor((value / 233280) * (i + 1))
+  //@ts-ignore
+      ;[arr[i], arr[j]] = [arr[j], arr[i]]
     }
+  
     return arr
-}
+  }
 
 
 export function IconsShowcase() {
@@ -98,33 +102,34 @@ function getUniqueBaseIds(
     source: Record<string, any>,
     limit = 40,
     firstOccurrence = false
-): string[] {
+  ): string[] {
     const seen = new Set<string>()
     const ids: string[] = []
-
+  
     for (const group of Object.values(source)) {
-        for (const entry of Object.values(group as Record<string, any>)) {
-            const metadata = (entry as any)?.metadata
-            if (!metadata?.baseId) continue
-
-            const { baseId, variant } = metadata
-
-            if (seen.has(baseId)) continue
-
-            if (firstOccurrence) {
-                seen.add(baseId)
-                ids.push(baseId)
-            } else {
-                if (!variant || variant === "default") {
-                    seen.add(baseId)
-                    ids.push(baseId)
-                }
-            }
+      for (const entry of Object.values(group as Record<string, any>)) {
+        const metadata = (entry as any)?.metadata
+  
+        if (!metadata?.baseId) continue
+  
+        const { baseId, variant } = metadata
+  
+        if (seen.has(baseId)) continue
+  
+        if (firstOccurrence) {
+          seen.add(baseId)
+          ids.push(baseId)
+        } else {
+          if (!variant || variant === "default") {
+            seen.add(baseId)
+            ids.push(baseId)
+          }
         }
+      }
     }
-
-    return shuffleArray(ids).slice(0, limit)
-}
+  
+    return seededShuffle(ids).slice(0, limit)
+  }
 
 // ─────────────────────────────────────────────
 // Tiles

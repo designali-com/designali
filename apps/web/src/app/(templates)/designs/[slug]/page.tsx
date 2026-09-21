@@ -30,19 +30,7 @@ export default async function DesignCategoryPage({
 
   return (
     <div className="mt-12 w-full px-2">
-      <div className="my-6 px-1">
-        <h1 className="text-4xl font-medium tracking-tight">
-          {category.name}
-        </h1>
-
-        {designs.length > 0 && (
-          <p className="mt-1 text-sm text-muted-foreground">
-            {designs.length}{" "}
-            {designs.length === 1 ? "design" : "designs"}
-          </p>
-        )}
-      </div>
-
+       
       {designs.length === 0 ? (
         <div className="flex min-h-60 items-center justify-center border border-dashed">
           <p className="text-sm text-muted-foreground">
