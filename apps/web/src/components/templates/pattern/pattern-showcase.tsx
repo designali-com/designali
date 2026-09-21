@@ -10,8 +10,7 @@ import { useCopy } from "@/src/hooks/use-copy"
 
 import PatternEmptyState from "./pattern-empty-state"
 import PatternGrid from "./pattern-grid"
-import { Button } from "@workspace/ui/components/button"
-import { SidebarTrigger } from "@workspace/ui/components/sidebar"
+import { Button } from "@workspace/ui/components/button" 
 import { ThemeSelectorPattern } from "../../common/synced-theme-selector"
 
 interface PatternShowcaseProps {
@@ -31,6 +30,8 @@ export default function PatternShowcase({
   const [activeMobileCard, setActiveMobileCard] = useState<string | null>(null)
 
   const [activeTab, setActiveTab] = useState<string>(initialCategory)
+  // Category ko alag se track karne ke liye state taaki view mode me bhi yaad rahe
+  const [currentCategory, setCurrentCategory] = useState<string>(initialCategory)
   const [searchInput] = useState("")
   const [columns] = useState(3)
 
@@ -45,6 +46,7 @@ export default function PatternShowcase({
   useEffect(() => {
     if (initialCategory) {
       setActiveTab(initialCategory)
+      setCurrentCategory(initialCategory)
     }
   }, [initialCategory])
 
@@ -70,19 +72,56 @@ export default function PatternShowcase({
   }
 
   // --------------------------------------------------------------------------
-  // Random Pattern
+  // Filter Patterns based on Category & Search
+  // --------------------------------------------------------------------------
+
+  const getFilteredPatterns = (categoryToFilter: string) => {
+    let patterns = gridPatterns
+
+    // 1. Agar category "all" hai, toh saare patterns dikhayein (sara random hoga)
+    if (categoryToFilter === "all") {
+      patterns = gridPatterns
+    }
+    // 2. Agar koi specific category hai, toh sirf usi category ke patterns aayenge
+    else if (categoryToFilter && categoryToFilter !== "view") {
+      patterns = patterns.filter(
+        (pattern) => pattern.category?.toLowerCase() === categoryToFilter.toLowerCase()
+      )
+    }
+
+    if (searchInput.trim()) {
+      const query = searchInput.toLowerCase().trim()
+
+      patterns = patterns.filter((pattern) => {
+        return (
+          pattern.id.toLowerCase().includes(query) ||
+          pattern.category?.toLowerCase().includes(query)
+        )
+      })
+    }
+
+    return patterns
+  }
+
+  const filteredPatterns = getFilteredPatterns(activeTab === "view" ? currentCategory : activeTab)
+
+  // --------------------------------------------------------------------------
+  // Random Pattern Logic
   // --------------------------------------------------------------------------
 
   const handleRandomSelect = () => {
-    if (gridPatterns.length === 0) return
+    // currentCategory ke base par pool banega (All page par sara, Category page par sirf us category ka)
+    const pool = getFilteredPatterns(currentCategory)
+
+    if (pool.length === 0) return
 
     const availablePatterns =
-      gridPatterns.length > 1
-        ? gridPatterns.filter((pattern) => pattern.id !== activePattern)
-        : gridPatterns
+      pool.length > 1
+        ? pool.filter((pattern) => pattern.id !== activePattern)
+        : pool
 
     const randomPattern =
-      availablePatterns[Math.floor(Math.random() * availablePatterns.length)]
+      availablePatterns[Math.floor(Math.random() * availablePatterns.length)] || pool[0]
 
     if (!randomPattern) return
 
@@ -103,42 +142,15 @@ export default function PatternShowcase({
     if (nextValue === activeTab) return
 
     setActiveTab(nextValue)
+    if (nextValue !== "view") {
+      setCurrentCategory(nextValue)
+    }
 
     if (nextValue === "all") {
       router.push("/patterns")
       return
     }
   }
-
-  // --------------------------------------------------------------------------
-  // Filter Patterns based on Category & Search
-  // --------------------------------------------------------------------------
-
-  const getFilteredPatterns = () => {
-    let patterns = gridPatterns
-
-    // Agar activeTab "all" ya "view" nahi hai, toh ise ek category slug maankar filter karein
-    if (activeTab && activeTab !== "all" && activeTab !== "view") {
-      patterns = patterns.filter(
-        (pattern) => pattern.category?.toLowerCase() === activeTab.toLowerCase()
-      )
-    }
-
-    if (searchInput.trim()) {
-      const query = searchInput.toLowerCase().trim()
-
-      patterns = patterns.filter((pattern) => {
-        return (
-          pattern.id.toLowerCase().includes(query) ||
-          pattern.category?.toLowerCase().includes(query)
-        )
-      })
-    }
-
-    return patterns
-  }
-
-  const filteredPatterns = getFilteredPatterns()
 
   const activePatternData = activePattern
     ? gridPatterns.filter((pattern) => pattern.id === activePattern)
@@ -175,14 +187,6 @@ export default function PatternShowcase({
             >
               All Patterns
             </Button>
-            <Button
-              size="md"
-              onClick={handleRandomSelect}
-              disabled={gridPatterns.length === 0}
-            >
-              Random
-            </Button>
-
             {/* Copy button sirf tab dikhega jab activeTab "view" hoga */}
             {activeTab === "view" && (
               <Button
@@ -193,6 +197,15 @@ export default function PatternShowcase({
                 {activePattern && isCopied(activePattern) ? "Copied" : "Copy"}
               </Button>
             )}
+            <Button
+              size="md"
+              onClick={handleRandomSelect}
+              disabled={gridPatterns.length === 0}
+            >
+              Random
+            </Button>
+
+            
           </div>
 
         </div>

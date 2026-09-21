@@ -41,13 +41,13 @@ export default async function UIPage({
 
   const Icon = currentCategory.iconName
     ? (Icons[
-        currentCategory.iconName as keyof typeof Icons
-      ] as React.ElementType)
+      currentCategory.iconName as keyof typeof Icons
+    ] as React.ElementType)
     : null
- 
+
   const twoColumnCategories = [
-    "alert", 
-    "alert-dialog", 
+    "alert",
+    "alert-dialog",
     "aspect-ratio",
     "avatar",
     "badge",
@@ -57,47 +57,37 @@ export default async function UIPage({
   const isTwoColumn = twoColumnCategories.includes(slug)
 
   return (
-    <div className="my-20 px-3">
-      {/* Header */}
-      <div className="flex flex-col items-center pt-10 pb-20 text-center">
-        {Icon && <Icon className="mb-4 size-8 text-primary" />}
-
-        <h1 className="text-2xl font-medium md:text-4xl">
-          {currentCategory.name}
-        </h1>
-
-        <p className="mx-auto mt-2 max-w-80 text-sm text-muted-foreground md:max-w-xl">
-          {currentCategory.description}
-        </p>
-      </div>
-
-      {components.length > 0 ? (
-        <div
-          className={
-            isTwoColumn
-              ? "grid w-full gap-3 md:grid-cols-2"
-              : "grid w-full gap-3"
-          }
-        >
-          {components.map((name) => (
-            <ComponentPreview
-              key={name}
-              name={name}
-              align="center"
-            />
-          ))}
-        </div>
-      ) : (
-        <div className="flex min-h-120 items-center justify-center border border-dotted">
-          <div className="text-center">
-            <h2 className="text-xl font-medium">Design in process</h2>
-
-            <p className="mt-2 text-sm text-muted-foreground">
-              I&apos;m currently working on ui components for this category.
-            </p>
+    <div className="mb-20 mt-3">
+       
+      <div className="m-3">
+        {components.length > 0 ? (
+          <div
+            className={
+              isTwoColumn
+                ? "grid w-full gap-3 md:grid-cols-2"
+                : "grid w-full gap-3"
+            }
+          >
+            {components.map((name) => (
+              <ComponentPreview
+                key={name}
+                name={name}
+                align="center"
+              />
+            ))}
           </div>
-        </div>
-      )}
+        ) : (
+          <div className="flex min-h-120 items-center justify-center border border-dotted">
+            <div className="text-center">
+              <h2 className="text-xl font-medium">Design in process</h2>
+
+              <p className="mt-2 text-sm text-muted-foreground">
+                I&apos;m currently working on ui components for this category.
+              </p>
+            </div>
+          </div>
+        )}
+      </div>
     </div>
   )
 }

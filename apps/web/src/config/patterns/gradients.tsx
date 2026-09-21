@@ -884,4 +884,5 @@ export const gradientPatterns: Pattern[] = [
       )
     },
   },
+  
 ]

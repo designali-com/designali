@@ -9,6 +9,8 @@ export interface Pattern {
     | "dots"
     | "textures"
     | "abstract"
+    | "radial-beam"
+    | "vertical-bar"
   badge?: "New" | "Popular" | string
   render?: () => React.ReactNode
 }

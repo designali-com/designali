@@ -4,6 +4,8 @@ import { gradientPatterns } from "./gradients"
 import { layeredPatterns } from "./layered"
 import { linePatterns } from "./lines"
 import { meshPatterns } from "./mesh"
+import { radialBeamPatterns } from "./radial-beam"
+import { verticalBarPatterns } from "./vertical-bar"
 
 export const gridPatterns = [
   ...gradientPatterns,
@@ -12,4 +14,6 @@ export const gridPatterns = [
   ...abstractPatterns,
   ...meshPatterns,
   ...layeredPatterns,
+  ...radialBeamPatterns,
+  ...verticalBarPatterns,
 ]

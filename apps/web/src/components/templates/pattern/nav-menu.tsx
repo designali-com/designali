@@ -5,8 +5,7 @@ import {
   Layers as LayersIcon,
   Activity,
   Maximize2,
-  Shapes,
-  Star,
+  Shapes, 
 } from "lucide-react"
 
 export const patternCategories = [
@@ -15,6 +14,7 @@ export const patternCategories = [
     name: "All Patterns",
     icon: Layers,
   },
+   
   {
     slug: "gradients",
     name: "Gradients",

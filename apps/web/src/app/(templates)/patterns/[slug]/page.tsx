@@ -31,7 +31,7 @@ export default function CategoryPage({ params }: CategoryPageProps) {
         activePattern={activePattern}
         setActivePattern={setActivePattern}
         theme={theme}
-        initialCategory={categorySlug} // Yahan URL ka slug pass ho raha hai
+        initialCategory={categorySlug}  
       />
     </div>
   )

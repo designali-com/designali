@@ -40,18 +40,9 @@ export default async function BlocksPage({
     : null
 
   return (
-    <div className="my-20 px-3">
-      <div className="flex flex-col items-center pt-10 pb-20 text-center">
-        {Icon && <Icon className="mb-4 size-8 text-primary" />}
-
-        <h1 className="text-2xl font-medium md:text-4xl">{title}</h1>
-
-        <p className="mx-auto mt-2 max-w-80 text-sm text-muted-foreground md:max-w-xl">
-          {description}
-        </p>
-      </div>
-
-      <div className="flex flex-col gap-12 md:gap-24">
+    <div className="mb-20 mt-10">
+       
+      <div className="flex m-3 flex-col gap-12 md:gap-24">
         {blocks.length > 0 ? (
           blocks.map((name) => (
             <BlockDisplay key={name} name={name} />
