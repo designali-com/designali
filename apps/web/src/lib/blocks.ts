@@ -71,3 +71,31 @@ export async function getAllBlocks(
       !block.name.startsWith("chart-")
   )
 }
+
+export async function getAllPages(
+  types: RegistryItemType[] = ["registry:page", "registry:internal"],
+  categories: string[] = []
+): Promise<RegistryItem[]> {
+  const { Index } = await import("@/registry/__index__")
+
+  const result = z.record(z.string(), registryItemSchema).safeParse(Index)
+
+  if (!result.success) {
+    console.error("Invalid registry index:", result.error.flatten())
+
+    throw new Error(
+      "Invalid registry index. Check registry/__index__.ts and registry item definitions."
+    )
+  }
+
+  const index = result.data
+
+  return Object.values(index).filter(
+    (page) =>
+      types.includes(page.type) &&
+      (categories.length === 0 ||
+        page.categories?.some((category) => categories.includes(category)) ===
+          true) &&
+      !page.name.startsWith("chart-")
+  )
+}

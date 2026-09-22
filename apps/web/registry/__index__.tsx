@@ -1210,6 +1210,41 @@ export const Index: Record<string, any> = {
       }
     }),
   },
+  "landing-01": {
+    name: "landing-01",
+    description: "A simple header section.",
+    type: "registry:page",
+    registryDependencies: ["button", "navigation-menu", "toggle"],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/pages/landing-01/page.tsx",
+        type: "registry:component",
+        target: "header/index.tsx",
+      },
+      {
+        path: "registry/designali/pages/landing-01/components/hero.tsx",
+        type: "registry:component",
+        target: "components/header.tsx",
+      },
+    ],
+    categories: ["pages"],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/designali/pages/landing-01/page")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "landing-01"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
   "accordion-01": {
     name: "accordion-01",
     description:

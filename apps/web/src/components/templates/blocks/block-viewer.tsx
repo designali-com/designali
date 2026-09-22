@@ -47,10 +47,6 @@ import {
 
 import { Tabs, TabsList, TabsTrigger } from "@workspace/ui/components/tabs"
 
-import {
-  ToggleGroup,
-  ToggleGroupItem,
-} from "@workspace/ui/components/toggle-group"
 import { cn } from "@workspace/ui/lib/utils"
 import { OpenInV0Button } from "./open-in-v0-button"
 

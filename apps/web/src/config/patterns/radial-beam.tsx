@@ -1,420 +1,668 @@
 import type { Pattern } from "@/src/types/pattern"
- 
 
-export const radialBeamPatterns: Pattern[] = [ 
- 
+export const radialBeamPatterns: Pattern[] = [
   {
-    id: "burst-d02",
-    name: "Wide Compass",
+    id: "beam-01",
+    name: "Classic Manga Burst",
     category: "radial-beam",
     render: function () {
       return (
-        <>
-          <div
-            className="absolute inset-0 z-0 block dark:hidden"
+        <div className="absolute inset-0 overflow-hidden bg-background">
+          <div 
+            className="absolute inset-0"
             style={{
               background: `
-              repeating-conic-gradient(from 0deg at 50% 50%,
-                rgba(79, 70, 229, 0.5) 0deg, transparent 10deg,
-                transparent 35deg, rgba(79, 70, 229, 0.3) 45deg, transparent 55deg
-              ),
-              radial-gradient(circle at 50% 50%, rgba(224, 231, 255, 0.95) 0%, rgba(79, 70, 229, 0.45) 15%, transparent 42%),
-              radial-gradient(circle at 50% 50%, #0c0a1d 0%, transparent 4%),
-              radial-gradient(circle at 50% 50%, #eef2ff 0%, #e0e7ff 100%)
-            `,
-              filter: "blur(2px)",
+                repeating-conic-gradient(
+                  from 0deg at 50% 50%,
+                  var(--primary) 0deg 15deg,
+                  transparent 15deg 30deg
+                )
+              `,
             }}
           />
-          <div
-            className="absolute inset-0 z-0 hidden dark:block"
-            style={{
-              background: `
-              repeating-conic-gradient(from 0deg at 50% 50%,
-                rgba(99, 102, 241, 0.8) 0deg, transparent 10deg,
-                transparent 35deg, rgba(99, 102, 241, 0.45) 45deg, transparent 55deg
-              ),
-              radial-gradient(circle at 50% 50%, rgba(224, 231, 255, 0.95) 0%, rgba(99, 102, 241, 0.55) 15%, transparent 44%),
-              radial-gradient(circle at 50% 50%, #03020a 0%, transparent 4%),
-              radial-gradient(circle at 50% 50%, #09090b 0%, #000000 100%)
-            `,
-              filter: "blur(2px)",
-            }}
-          />
-        </>
+        </div>
+      )
+    },
+  }, 
+  {
+    id: "beam-02",
+    name: "Manga Action Burst",
+    category: "radial-beam",
+    render: function () {
+      const totalRays = 16
+      const rays = Array.from({ length: totalRays })
+      return (
+        <div className="absolute inset-0 overflow-hidden bg-background flex items-center justify-center">
+          <svg className="absolute inset-0 w-full h-full" viewBox="-500 -350 1000 700" preserveAspectRatio="xMidYMid slice">
+            <g>
+              {rays.map((_, i) => {
+                const angle = (i * 360) / totalRays
+                return (
+                  <g key={i} transform={`rotate(${angle})`}>
+                    <polygon points="0,0 -35,-800 0,-180 35,-800" fill="var(--primary)" />
+                  </g>
+                )
+              })}
+            </g>
+          </svg>
+        </div>
       )
     },
   },
-
-  // 3. Corner Flare — off-center burst, like a sun peeking from top-right
   {
-    id: "burst-d03",
-    name: "Corner Flare",
+    id: "beam-03",
+    name: "Manga Concentration Lines",
     category: "radial-beam",
     render: function () {
+      const totalRays = 36
+      const rays = Array.from({ length: totalRays })
       return (
-        <>
-          <div
-            className="absolute inset-0 z-0 block dark:hidden"
-            style={{
-              background: `
-              repeating-conic-gradient(from 90deg at 82% 18%,
-                transparent 0deg, rgba(79, 70, 229, 0.45) 2deg, transparent 8deg,
-                transparent 20deg, rgba(79, 70, 229, 0.25) 22deg, transparent 30deg
-              ),
-              radial-gradient(circle at 82% 18%, rgba(224, 231, 255, 0.95) 0%, rgba(79, 70, 229, 0.5) 12%, transparent 55%),
-              radial-gradient(circle at 82% 18%, #0c0a1d 0%, transparent 3%),
-              radial-gradient(circle at 82% 18%, #eef2ff 0%, #dbeafe 60%, #c7d2fe 100%)
-            `,
-              filter: "blur(1px)",
-            }}
-          />
-          <div
-            className="absolute inset-0 z-0 hidden dark:block"
-            style={{
-              background: `
-              repeating-conic-gradient(from 90deg at 82% 18%,
-                transparent 0deg, rgba(99, 102, 241, 0.75) 2deg, transparent 8deg,
-                transparent 20deg, rgba(99, 102, 241, 0.45) 22deg, transparent 30deg
-              ),
-              radial-gradient(circle at 82% 18%, rgba(224, 231, 255, 0.95) 0%, rgba(99, 102, 241, 0.6) 12%, transparent 58%),
-              radial-gradient(circle at 82% 18%, #03020a 0%, transparent 3%),
-              radial-gradient(circle at 82% 18%, #05050a 0%, #000000 70%)
-            `,
-              filter: "blur(1px)",
-            }}
-          />
-        </>
+        <div className="absolute inset-0 overflow-hidden bg-background flex items-center justify-center">
+          <svg className="absolute inset-0 w-full h-full" viewBox="-500 -350 1000 700" preserveAspectRatio="xMidYMid slice">
+            <g>
+              {rays.map((_, i) => {
+                const angle = (i * 360) / totalRays
+                const widthOffset = (i % 3 === 0) ? 6 : (i % 2 === 0 ? 4 : 2)
+                return (
+                  <g key={i} transform={`rotate(${angle})`}>
+                    <polygon points={`0,0 -${widthOffset},-800 0,-200 ${widthOffset},-800`} fill="var(--primary)" />
+                  </g>
+                )
+              })}
+            </g>
+          </svg>
+        </div>
       )
     },
   },
-
-  // 4. Double Star — two overlapping burst centers (binary star)
   {
-    id: "burst-d04",
-    name: "Double Star",
+    id: "beam-04",
+    name: "Vintage Sunburst Badge",
     category: "radial-beam",
     render: function () {
+      const totalRays = 48
+      const rays = Array.from({ length: totalRays })
       return (
-        <>
-          <div
-            className="absolute inset-0 z-0 block dark:hidden"
-            style={{
-              background: `
-              repeating-conic-gradient(from 10deg at 35% 45%,
-                transparent 0deg, rgba(79, 70, 229, 0.4) 2deg, transparent 8deg,
-                transparent 30deg, rgba(79, 70, 229, 0.2) 32deg, transparent 42deg
-              ),
-              repeating-conic-gradient(from 25deg at 68% 62%,
-                transparent 0deg, rgba(67, 56, 202, 0.4) 2deg, transparent 8deg,
-                transparent 30deg, rgba(67, 56, 202, 0.2) 32deg, transparent 42deg
-              ),
-              radial-gradient(circle at 35% 45%, rgba(224, 231, 255, 0.9) 0%, rgba(79, 70, 229, 0.35) 9%, transparent 30%),
-              radial-gradient(circle at 68% 62%, rgba(224, 231, 255, 0.9) 0%, rgba(67, 56, 202, 0.35) 9%, transparent 30%),
-              radial-gradient(circle at 45% 55%, #f5f3ff 0%, #e0e7ff 100%)
-            `,
-              filter: "blur(1px)",
-            }}
-          />
-          <div
-            className="absolute inset-0 z-0 hidden dark:block"
-            style={{
-              background: `
-              repeating-conic-gradient(from 10deg at 35% 45%,
-                transparent 0deg, rgba(99, 102, 241, 0.75) 2deg, transparent 8deg,
-                transparent 30deg, rgba(99, 102, 241, 0.35) 32deg, transparent 42deg
-              ),
-              repeating-conic-gradient(from 25deg at 68% 62%,
-                transparent 0deg, rgba(129, 140, 248, 0.75) 2deg, transparent 8deg,
-                transparent 30deg, rgba(129, 140, 248, 0.35) 32deg, transparent 42deg
-              ),
-              radial-gradient(circle at 35% 45%, rgba(224, 231, 255, 0.9) 0%, rgba(99, 102, 241, 0.45) 9%, transparent 32%),
-              radial-gradient(circle at 68% 62%, rgba(224, 231, 255, 0.9) 0%, rgba(129, 140, 248, 0.45) 9%, transparent 32%),
-              radial-gradient(circle at 45% 55%, #05050f 0%, #000000 100%)
-            `,
-              filter: "blur(1px)",
-            }}
-          />
-        </>
+        <div className="absolute inset-0 overflow-hidden bg-background flex items-center justify-center">
+          <svg className="absolute w-[400px] h-[400px]" viewBox="-400 -400 800 800">
+            <g>
+              {rays.map((_, i) => {
+                const angle = (i * 360) / totalRays
+                const innerRadius = 50
+                const outerRadius = i % 2 === 0 ? 400 : 300
+                return (
+                  <line key={i} x1="0" y1={-innerRadius} x2="0" y2={-outerRadius} stroke="var(--primary)" strokeWidth="3" strokeLinecap="round" transform={`rotate(${angle})`} />
+                )
+              })}
+            </g>
+          </svg>
+        </div>
       )
     },
   },
-
-  // 5. Lens Cross — 4 dominant beams in a plus shape, camera-flare style
   {
-    id: "burst-d05",
-    name: "Lens Cross",
+    id: "beam-05",
+    name: "Manga Blur Burst",
     category: "radial-beam",
     render: function () {
+      const totalRays = 48
+      const rays = Array.from({ length: totalRays })
       return (
-        <>
-          <div
-            className="absolute inset-0 z-0 block dark:hidden"
-            style={{
-              background: `
-              repeating-conic-gradient(from 0deg at 50% 50%,
-                rgba(79, 70, 229, 0.45) 0deg, transparent 4deg,
-                transparent 86deg, rgba(79, 70, 229, 0.45) 90deg, transparent 94deg,
-                transparent 176deg, rgba(79, 70, 229, 0.45) 180deg, transparent 184deg,
-                transparent 266deg, rgba(79, 70, 229, 0.45) 270deg, transparent 274deg
-              ),
-              repeating-conic-gradient(from 8deg at 50% 50%,
-                transparent 0deg, rgba(79, 70, 229, 0.12) 3deg, transparent 15deg
-              ),
-              radial-gradient(circle at 50% 50%, rgba(224, 231, 255, 0.95) 0%, rgba(79, 70, 229, 0.5) 10%, transparent 30%),
-              radial-gradient(circle at 50% 50%, #0c0a1d 0%, transparent 3%),
-              radial-gradient(circle at 50% 50%, #eef2ff 0%, #e0e7ff 100%)
-            `,
-              filter: "blur(0.6px)",
-            }}
-          />
-          <div
-            className="absolute inset-0 z-0 hidden dark:block"
-            style={{
-              background: `
-              repeating-conic-gradient(from 0deg at 50% 50%,
-                rgba(99, 102, 241, 0.8) 0deg, transparent 4deg,
-                transparent 86deg, rgba(99, 102, 241, 0.8) 90deg, transparent 94deg,
-                transparent 176deg, rgba(99, 102, 241, 0.8) 180deg, transparent 184deg,
-                transparent 266deg, rgba(99, 102, 241, 0.8) 270deg, transparent 274deg
-              ),
-              repeating-conic-gradient(from 8deg at 50% 50%,
-                transparent 0deg, rgba(99, 102, 241, 0.18) 3deg, transparent 15deg
-              ),
-              radial-gradient(circle at 50% 50%, rgba(224, 231, 255, 0.95) 0%, rgba(99, 102, 241, 0.6) 10%, transparent 32%),
-              radial-gradient(circle at 50% 50%, #03020a 0%, transparent 3%),
-              radial-gradient(circle at 50% 50%, #09090b 0%, #000000 100%)
-            `,
-              filter: "blur(0.6px)",
-            }}
-          />
-        </>
+        <div className="absolute inset-0 overflow-hidden bg-background flex items-center justify-center">
+          <svg className="absolute w-[400px] h-[400px]" viewBox="-400 -400 800 800">
+            <g>
+              {rays.map((_, i) => {
+                const angle = (i * 360) / totalRays
+                const innerRadius = 200
+                const outerRadius = i % 2 === 0 ? 400 : 300
+                return (
+                  <line key={i} x1="0" y1={-innerRadius} x2="0" y2={-outerRadius} stroke="var(--primary)" strokeWidth="10" transform={`rotate(${angle})`} />
+                )
+              })}
+            </g>
+          </svg>
+        </div>
       )
     },
   },
-
-  // 6. Spiral Burst — layered rotated conic gradients give a twisted feel
   {
-    id: "burst-d06",
-    name: "Spiral Burst",
+    id: "beam-06",
+    name: "Hypnotic Spiral Vortex",
     category: "radial-beam",
     render: function () {
+      const numArms = 12
+      const arms = Array.from({ length: numArms })
       return (
-        <>
-          <div
-            className="absolute inset-0 z-0 block dark:hidden"
-            style={{
-              background: `
-              repeating-conic-gradient(from 0deg at 50% 50%,
-                transparent 0deg, rgba(79, 70, 229, 0.35) 2deg, transparent 12deg
-              ),
-              repeating-conic-gradient(from 30deg at 50% 50%,
-                transparent 0deg, rgba(79, 70, 229, 0.25) 2deg, transparent 12deg
-              ),
-              repeating-conic-gradient(from 60deg at 50% 50%,
-                transparent 0deg, rgba(79, 70, 229, 0.18) 2deg, transparent 12deg
-              ),
-              conic-gradient(from 0deg at 50% 50%, transparent 0deg, rgba(79,70,229,0.1) 180deg, transparent 360deg),
-              radial-gradient(circle at 50% 50%, rgba(224, 231, 255, 0.95) 0%, rgba(79, 70, 229, 0.45) 12%, transparent 40%),
-              radial-gradient(circle at 50% 50%, #0c0a1d 0%, transparent 5%),
-              radial-gradient(circle at 50% 50%, #eef2ff 0%, #e0e7ff 100%)
-            `,
-              filter: "blur(2px)",
-            }}
-          />
-          <div
-            className="absolute inset-0 z-0 hidden dark:block"
-            style={{
-              background: `
-              repeating-conic-gradient(from 0deg at 50% 50%,
-                transparent 0deg, rgba(99, 102, 241, 0.65) 2deg, transparent 12deg
-              ),
-              repeating-conic-gradient(from 30deg at 50% 50%,
-                transparent 0deg, rgba(99, 102, 241, 0.45) 2deg, transparent 12deg
-              ),
-              repeating-conic-gradient(from 60deg at 50% 50%,
-                transparent 0deg, rgba(99, 102, 241, 0.35) 2deg, transparent 12deg
-              ),
-              conic-gradient(from 0deg at 50% 50%, transparent 0deg, rgba(99,102,241,0.15) 180deg, transparent 360deg),
-              radial-gradient(circle at 50% 50%, rgba(224, 231, 255, 0.95) 0%, rgba(99, 102, 241, 0.55) 12%, transparent 42%),
-              radial-gradient(circle at 50% 50%, #03020a 0%, transparent 5%),
-              radial-gradient(circle at 50% 50%, #09090b 0%, #000000 100%)
-            `,
-              filter: "blur(2px)",
-            }}
-          />
-        </>
+        <div className="absolute inset-0 overflow-hidden bg-background flex items-center justify-center">
+          <svg className="absolute inset-0 w-full h-full" viewBox="-400 -400 800 800" preserveAspectRatio="xMidYMid slice">
+            <g>
+              {arms.map((_, i) => {
+                const angleOffset = (i * 360) / numArms
+                return (
+                  <g key={i} transform={`rotate(${angleOffset})`}>
+                    <path d="M 0 0 C 80 40, 180 120, 250 350 C 300 450, 400 600, 600 800 L 800 800 L 800 600 C 600 450, 450 300, 350 200 C 200 100, 100 40, 0 0 Z" fill="var(--primary)" />
+                  </g>
+                )
+              })}
+            </g>
+          </svg>
+        </div>
       )
     },
   },
-
-  // 7. Shockwave Rings — rays + concentric expanding rings, radar/pulse feel
   {
-    id: "burst-d07",
-    name: "Shockwave Rings",
+    id: "beam-07",
+    name: "Cyber Neon Laser Beams",
     category: "radial-beam",
     render: function () {
+      const totalRays = 24
+      const rays = Array.from({ length: totalRays })
       return (
-        <>
-          <div
-            className="absolute inset-0 z-0 block dark:hidden"
-            style={{
-              background: `
-              repeating-conic-gradient(from 0deg at 50% 50%,
-                transparent 0deg, rgba(79, 70, 229, 0.3) 2deg, transparent 15deg
-              ),
-              repeating-radial-gradient(circle at 50% 50%,
-                transparent 0%, transparent 12%, rgba(79, 70, 229, 0.22) 13%, transparent 15%,
-                transparent 24%, rgba(79, 70, 229, 0.15) 25%, transparent 27%,
-                transparent 36%, rgba(79, 70, 229, 0.1) 37%, transparent 39%
-              ),
-              radial-gradient(circle at 50% 50%, rgba(224, 231, 255, 0.95) 0%, rgba(79, 70, 229, 0.45) 10%, transparent 30%),
-              radial-gradient(circle at 50% 50%, #0c0a1d 0%, transparent 5%),
-              radial-gradient(circle at 50% 50%, #eef2ff 0%, #e0e7ff 100%)
-            `,
-              filter: "blur(0.8px)",
-            }}
-          />
-          <div
-            className="absolute inset-0 z-0 hidden dark:block"
-            style={{
-              background: `
-              repeating-conic-gradient(from 0deg at 50% 50%,
-                transparent 0deg, rgba(99, 102, 241, 0.55) 2deg, transparent 15deg
-              ),
-              repeating-radial-gradient(circle at 50% 50%,
-                transparent 0%, transparent 12%, rgba(99, 102, 241, 0.3) 13%, transparent 15%,
-                transparent 24%, rgba(99, 102, 241, 0.2) 25%, transparent 27%,
-                transparent 36%, rgba(99, 102, 241, 0.12) 37%, transparent 39%
-              ),
-              radial-gradient(circle at 50% 50%, rgba(224, 231, 255, 0.95) 0%, rgba(99, 102, 241, 0.55) 10%, transparent 32%),
-              radial-gradient(circle at 50% 50%, #03020a 0%, transparent 5%),
-              radial-gradient(circle at 50% 50%, #09090b 0%, #000000 100%)
-            `,
-              filter: "blur(0.8px)",
-            }}
-          />
-        </>
+        <div className="absolute inset-0 overflow-hidden bg-background flex items-center justify-center">
+          <svg className="absolute inset-0 w-full h-full" viewBox="-400 -400 800 800" preserveAspectRatio="xMidYMid slice">
+            <g>
+              {rays.map((_, i) => {
+                const angle = (i * 360) / totalRays
+                return (
+                  <line key={i} x1="0" y1="0" x2="0" y2="-600" stroke="var(--primary)" strokeWidth={i % 2 === 0 ? "6" : "2"} strokeDasharray={i % 3 === 0 ? "20, 10" : "none"} transform={`rotate(${angle})`} />
+                )
+              })}
+            </g>
+          </svg>
+        </div>
       )
     },
   },
-
-  // 8. Vertical Pillar — a single dominant light shaft, no radiating rays
   {
-    id: "burst-d08",
-    name: "Vertical Pillar",
+    id: "beam-08",
+    name: "Halftone Dot Burst",
     category: "radial-beam",
     render: function () {
+      const rings = [100, 180, 260, 340]
       return (
-        <>
-          <div
-            className="absolute inset-0 z-0 block dark:hidden"
-            style={{
-              background: `
-              linear-gradient(90deg, transparent 44%, rgba(79, 70, 229, 0.45) 50%, transparent 56%),
-              linear-gradient(90deg, transparent 40%, rgba(79, 70, 229, 0.2) 50%, transparent 60%),
-              radial-gradient(ellipse 30% 40% at 50% 100%, rgba(224, 231, 255, 0.9) 0%, rgba(79, 70, 229, 0.35) 40%, transparent 75%),
-              radial-gradient(circle at 50% 100%, #f5f3ff 0%, #e0e7ff 100%)
-            `,
-              filter: "blur(3px)",
-            }}
-          />
-          <div
-            className="absolute inset-0 z-0 hidden dark:block"
-            style={{
-              background: `
-              linear-gradient(90deg, transparent 44%, rgba(99, 102, 241, 0.7) 50%, transparent 56%),
-              linear-gradient(90deg, transparent 40%, rgba(99, 102, 241, 0.3) 50%, transparent 60%),
-              radial-gradient(ellipse 30% 40% at 50% 100%, rgba(224, 231, 255, 0.9) 0%, rgba(99, 102, 241, 0.45) 40%, transparent 78%),
-              radial-gradient(circle at 50% 100%, #03020a 0%, #000000 100%)
-            `,
-              filter: "blur(3px)",
-            }}
-          />
-        </>
+        <div className="absolute inset-0 overflow-hidden bg-background flex items-center justify-center">
+          <svg className="absolute inset-0 w-full h-full" viewBox="-400 -400 800 800" preserveAspectRatio="xMidYMid slice">
+            <g>
+              {rings.map((r, ringIdx) => {
+                const count = 12 + ringIdx * 8
+                return Array.from({ length: count }).map((_, i) => {
+                  const angle = (i * 360) / count
+                  return (
+                    <circle key={`${ringIdx}-${i}`} cx="0" cy={-r} r={3 + ringIdx * 1.5} fill="var(--primary)" transform={`rotate(${angle})`} />
+                  )
+                })
+              })}
+            </g>
+          </svg>
+        </div>
       )
     },
   },
-
-  // 9. Scattered Sparks — 3 small stars scattered at different points
   {
-    id: "burst-d09",
-    name: "Scattered Sparks",
+    id: "beam-09",
+    name: "Sharp Geometric Starburst",
     category: "radial-beam",
     render: function () {
+      const totalRays = 8
+      const rays = Array.from({ length: totalRays })
       return (
-        <>
-          <div
-            className="absolute inset-0 z-0 block dark:hidden"
-            style={{
-              background: `
-              repeating-conic-gradient(from 5deg at 25% 30%, transparent 0deg, rgba(79, 70, 229, 0.4) 2deg, transparent 6deg, transparent 40deg, rgba(79, 70, 229, 0.2) 42deg, transparent 48deg),
-              repeating-conic-gradient(from 20deg at 72% 22%, transparent 0deg, rgba(79, 70, 229, 0.35) 2deg, transparent 6deg, transparent 40deg, rgba(79, 70, 229, 0.18) 42deg, transparent 48deg),
-              repeating-conic-gradient(from 35deg at 55% 75%, transparent 0deg, rgba(79, 70, 229, 0.38) 2deg, transparent 6deg, transparent 40deg, rgba(79, 70, 229, 0.2) 42deg, transparent 48deg),
-              radial-gradient(circle at 25% 30%, rgba(224, 231, 255, 0.95) 0%, rgba(79, 70, 229, 0.35) 6%, transparent 20%),
-              radial-gradient(circle at 72% 22%, rgba(224, 231, 255, 0.9) 0%, rgba(79, 70, 229, 0.3) 5%, transparent 18%),
-              radial-gradient(circle at 55% 75%, rgba(224, 231, 255, 0.9) 0%, rgba(79, 70, 229, 0.3) 5%, transparent 18%),
-              radial-gradient(circle at 50% 50%, #f5f3ff 0%, #e0e7ff 100%)
-            `,
-              filter: "blur(0.8px)",
-            }}
-          />
-          <div
-            className="absolute inset-0 z-0 hidden dark:block"
-            style={{
-              background: `
-              repeating-conic-gradient(from 5deg at 25% 30%, transparent 0deg, rgba(99, 102, 241, 0.7) 2deg, transparent 6deg, transparent 40deg, rgba(99, 102, 241, 0.4) 42deg, transparent 48deg),
-              repeating-conic-gradient(from 20deg at 72% 22%, transparent 0deg, rgba(99, 102, 241, 0.6) 2deg, transparent 6deg, transparent 40deg, rgba(99, 102, 241, 0.35) 42deg, transparent 48deg),
-              repeating-conic-gradient(from 35deg at 55% 75%, transparent 0deg, rgba(99, 102, 241, 0.65) 2deg, transparent 6deg, transparent 40deg, rgba(99, 102, 241, 0.38) 42deg, transparent 48deg),
-              radial-gradient(circle at 25% 30%, rgba(224, 231, 255, 0.95) 0%, rgba(99, 102, 241, 0.45) 6%, transparent 22%),
-              radial-gradient(circle at 72% 22%, rgba(224, 231, 255, 0.9) 0%, rgba(99, 102, 241, 0.4) 5%, transparent 20%),
-              radial-gradient(circle at 55% 75%, rgba(224, 231, 255, 0.9) 0%, rgba(99, 102, 241, 0.4) 5%, transparent 20%),
-              radial-gradient(circle at 50% 50%, #03020a 0%, #000000 100%)
-            `,
-              filter: "blur(0.8px)",
-            }}
-          />
-        </>
+        <div className="absolute inset-0 overflow-hidden bg-background flex items-center justify-center">
+          <svg className="absolute inset-0 w-full h-full" viewBox="-400 -400 800 800" preserveAspectRatio="xMidYMid slice">
+            <g>
+              {rays.map((_, i) => {
+                const angle = (i * 360) / totalRays
+                return (
+                  <polygon key={i} points="0,0 -40,-700 0,-50 40,-700" fill="var(--primary)" transform={`rotate(${angle})`} />
+                )
+              })}
+            </g>
+          </svg>
+        </div>
       )
     },
   },
-
-  // 10. Soft Nebula — few, wide, heavily-blurred rays with a big dreamy core
   {
-    id: "burst-d10",
-    name: "Soft Nebula",
+    id: "beam-10",
+    name: "Minimalist Ray Grid",
+    category: "radial-beam",
+    render: function () {
+      const totalRays = 32
+      const rays = Array.from({ length: totalRays })
+      return (
+        <div className="absolute inset-0 overflow-hidden bg-background flex items-center justify-center">
+          <svg className="absolute inset-0 w-full h-full" viewBox="-400 -400 800 800" preserveAspectRatio="xMidYMid slice">
+            <g>
+              {rays.map((_, i) => {
+                const angle = (i * 360) / totalRays
+                return (
+                  <line key={i} x1="0" y1="-100" x2="0" y2="-500" stroke="var(--primary)" strokeWidth="1.5" strokeOpacity="0.7" transform={`rotate(${angle})`} />
+                )
+              })}
+            </g>
+          </svg>
+        </div>
+      )
+    },
+  },
+  {
+    id: "beam-11",
+    name: "Subtle Soft Radiance",
     category: "radial-beam",
     render: function () {
       return (
-        <>
-          <div
-            className="absolute inset-0 z-0 block dark:hidden"
-            style={{
-              background: `
-              repeating-conic-gradient(from 0deg at 50% 50%,
-                rgba(79, 70, 229, 0.25) 0deg, transparent 25deg,
-                transparent 65deg, rgba(79, 70, 229, 0.15) 90deg, transparent 115deg
-              ),
-              radial-gradient(circle at 50% 50%, rgba(224, 231, 255, 0.95) 0%, rgba(79, 70, 229, 0.38) 22%, transparent 60%),
-              radial-gradient(circle at 50% 50%, #f5f3ff 0%, #e0e7ff 100%)
-            `,
-              filter: "blur(10px)",
-            }}
-          />
-          <div
-            className="absolute inset-0 z-0 hidden dark:block"
-            style={{
-              background: `
-              repeating-conic-gradient(from 0deg at 50% 50%,
-                rgba(99, 102, 241, 0.5) 0deg, transparent 25deg,
-                transparent 65deg, rgba(99, 102, 241, 0.3) 90deg, transparent 115deg
-              ),
-              radial-gradient(circle at 50% 50%, rgba(224, 231, 255, 0.95) 0%, rgba(99, 102, 241, 0.48) 22%, transparent 62%),
-              radial-gradient(circle at 50% 50%, #03020a 0%, #000000 100%)
-            `,
-              filter: "blur(10px)",
-            }}
-          />
-        </>
+        <div className="absolute inset-0 overflow-hidden bg-background">
+          <div className="absolute inset-0" style={{ background: `repeating-conic-gradient(from 0deg at 50% 50%, var(--primary) 0deg 5deg, transparent 5deg 20deg)`, opacity: 0.3 }} />
+        </div>
+      )
+    },
+  },
+  {
+    id: "beam-12",
+    name: "Dense Action Waves",
+    category: "radial-beam",
+    render: function () {
+      const totalRays = 60
+      const rays = Array.from({ length: totalRays })
+      return (
+        <div className="absolute inset-0 overflow-hidden bg-background flex items-center justify-center">
+          <svg className="absolute inset-0 w-full h-full" viewBox="-500 -350 1000 700" preserveAspectRatio="xMidYMid slice">
+            <g>
+              {rays.map((_, i) => {
+                const angle = (i * 360) / totalRays
+                return (
+                  <line key={i} x1="0" y1="-80" x2="0" y2="-700" stroke="var(--primary)" strokeWidth="2" transform={`rotate(${angle})`} />
+                )
+              })}
+            </g>
+          </svg>
+        </div>
+      )
+    },
+  },
+  {
+    id: "beam-13",
+    name: "Comic Speed Lines Heavy",
+    category: "radial-beam",
+    render: function () {
+      const totalRays = 20
+      const rays = Array.from({ length: totalRays })
+      return (
+        <div className="absolute inset-0 overflow-hidden bg-background flex items-center justify-center">
+          <svg className="absolute inset-0 w-full h-full" viewBox="-500 -350 1000 700" preserveAspectRatio="xMidYMid slice">
+            <g>
+              {rays.map((_, i) => {
+                const angle = (i * 360) / totalRays
+                return (
+                  <polygon key={i} points="0,0 -20,-900 0,-100 20,-900" fill="var(--primary)" transform={`rotate(${angle})`} />
+                )
+              })}
+            </g>
+          </svg>
+        </div>
+      )
+    },
+  },
+  {
+    id: "beam-14",
+    name: "Retro Sunburst Thin",
+    category: "radial-beam",
+    render: function () {
+      const totalRays = 72
+      const rays = Array.from({ length: totalRays })
+      return (
+        <div className="absolute inset-0 overflow-hidden bg-background flex items-center justify-center">
+          <svg className="absolute w-[450px] h-[450px]" viewBox="-400 -400 800 800">
+            <g>
+              {rays.map((_, i) => {
+                const angle = (i * 360) / totalRays
+                return (
+                  <line key={i} x1="0" y1="0" x2="0" y2="-400" stroke="var(--primary)" strokeWidth="1" transform={`rotate(${angle})`} />
+                )
+              })}
+            </g>
+          </svg>
+        </div>
+      )
+    },
+  },
+  {
+    id: "beam-15",
+    name: "Abstract Tri-Sector",
+    category: "radial-beam",
+    render: function () {
+      return (
+        <div className="absolute inset-0 overflow-hidden bg-background">
+          <div className="absolute inset-0" style={{ background: `conic-gradient(from 0deg at 50% 50%, var(--primary) 0deg 120deg, transparent 120deg 240deg, var(--primary) 240deg 360deg)` }} />
+        </div>
+      )
+    },
+  },
+  {
+    id: "beam-16",
+    name: "Dashed Concentric Ring Burst",
+    category: "radial-beam",
+    render: function () {
+      const totalRays = 30
+      const rays = Array.from({ length: totalRays })
+      return (
+        <div className="absolute inset-0 overflow-hidden bg-background flex items-center justify-center">
+          <svg className="absolute inset-0 w-full h-full" viewBox="-400 -400 800 800" preserveAspectRatio="xMidYMid slice">
+            <g>
+              {rays.map((_, i) => {
+                const angle = (i * 360) / totalRays
+                return (
+                  <line key={i} x1="0" y1="-150" x2="0" y2="-600" stroke="var(--primary)" strokeWidth="4" strokeDasharray="15, 15" transform={`rotate(${angle})`} />
+                )
+              })}
+            </g>
+          </svg>
+        </div>
+      )
+    },
+  },
+  {
+    id: "beam-17",
+    name: "Spiked Neon Pulsar",
+    category: "radial-beam",
+    render: function () {
+      const totalRays = 12
+      const rays = Array.from({ length: totalRays })
+      return (
+        <div className="absolute inset-0 overflow-hidden bg-background flex items-center justify-center">
+          <svg className="absolute inset-0 w-full h-full" viewBox="-400 -400 800 800" preserveAspectRatio="xMidYMid slice">
+            <g>
+              {rays.map((_, i) => {
+                const angle = (i * 360) / totalRays
+                return (
+                  <polygon key={i} points="0,0 -12,-700 0,-300 12,-700" fill="var(--primary)" transform={`rotate(${angle})`} />
+                )
+              })}
+            </g>
+          </svg>
+        </div>
+      )
+    },
+  },
+  {
+    id: "beam-18",
+    name: "Smooth Gradient Fan",
+    category: "radial-beam",
+    render: function () {
+      return (
+        <div className="absolute inset-0 overflow-hidden bg-background">
+          <div className="absolute inset-0" style={{ background: `repeating-conic-gradient(from 0deg at 50% 50%, var(--primary) 0deg 45deg, transparent 45deg 90deg)` }} />
+        </div>
+      )
+    },
+  },
+  {
+    id: "beam-19",
+    name: "Ethereal Star Dust",
+    category: "radial-beam",
+    render: function () {
+      const totalRays = 50
+      const rays = Array.from({ length: totalRays })
+      return (
+        <div className="absolute inset-0 overflow-hidden bg-background flex items-center justify-center">
+          <svg className="absolute inset-0 w-full h-full" viewBox="-400 -400 800 800" preserveAspectRatio="xMidYMid slice">
+            <g>
+              {rays.map((_, i) => {
+                const angle = (i * 360) / totalRays
+                return (
+                  <circle key={i} cx="0" cy={-(150 + (i % 5) * 40)} r="2" fill="var(--primary)" transform={`rotate(${angle})`} />
+                )
+              })}
+            </g>
+          </svg>
+        </div>
+      )
+    },
+  },
+  {
+    id: "beam-20",
+    name: "Crosshatch Radial Blast",
+    category: "radial-beam",
+    render: function () {
+      const totalRays = 24
+      const rays = Array.from({ length: totalRays })
+      return (
+        <div className="absolute inset-0 overflow-hidden bg-background flex items-center justify-center">
+          <svg className="absolute inset-0 w-full h-full" viewBox="-400 -400 800 800" preserveAspectRatio="xMidYMid slice">
+            <g>
+              {rays.map((_, i) => {
+                const angle = (i * 360) / totalRays
+                return (
+                  <g key={i} transform={`rotate(${angle})`}>
+                    <line x1="0" y1="-50" x2="0" y2="-500" stroke="var(--primary)" strokeWidth="3" />
+                    <line x1="10" y1="-200" x2="10" y2="-450" stroke="var(--primary)" strokeWidth="1" />
+                  </g>
+                )
+              })}
+            </g>
+          </svg>
+        </div>
+      )
+    },
+  },
+  {
+    id: "beam-21",
+    name: "Bold Comic Impact",
+    category: "radial-beam",
+    render: function () {
+      const totalRays = 10
+      const rays = Array.from({ length: totalRays })
+      return (
+        <div className="absolute inset-0 overflow-hidden bg-background flex items-center justify-center">
+          <svg className="absolute inset-0 w-full h-full" viewBox="-500 -350 1000 700" preserveAspectRatio="xMidYMid slice">
+            <g>
+              {rays.map((_, i) => {
+                const angle = (i * 360) / totalRays
+                return (
+                  <polygon key={i} points="0,0 -50,-800 0,-150 50,-800" fill="var(--primary)" transform={`rotate(${angle})`} />
+                )
+              })}
+            </g>
+          </svg>
+        </div>
+      )
+    },
+  },
+  {
+    id: "beam-22",
+    name: "Sharp Arcane Web",
+    category: "radial-beam",
+    render: function () {
+      const totalRays = 16
+      const rays = Array.from({ length: totalRays })
+      return (
+        <div className="absolute inset-0 overflow-hidden bg-background flex items-center justify-center">
+          <svg className="absolute inset-0 w-full h-full" viewBox="-400 -400 800 800" preserveAspectRatio="xMidYMid slice">
+            <g>
+              {rays.map((_, i) => {
+                const angle = (i * 360) / totalRays
+                return (
+                  <line key={i} x1="0" y1="-50" x2="0" y2="-700" stroke="var(--primary)" strokeWidth="2" strokeDasharray="30, 10, 5, 10" transform={`rotate(${angle})`} />
+                )
+              })}
+            </g>
+          </svg>
+        </div>
+      )
+    },
+  },
+  {
+    id: "beam-23",
+    name: "Monochrome Ray Matrix",
+    category: "radial-beam",
+    render: function () {
+      const totalRays = 40
+      const rays = Array.from({ length: totalRays })
+      return (
+        <div className="absolute inset-0 overflow-hidden bg-background flex items-center justify-center">
+          <svg className="absolute inset-0 w-full h-full" viewBox="-400 -400 800 800" preserveAspectRatio="xMidYMid slice">
+            <g>
+              {rays.map((_, i) => {
+                const angle = (i * 360) / totalRays
+                return (
+                  <line key={i} x1="0" y1="-100" x2="0" y2="-450" stroke="var(--primary)" strokeWidth={i % 4 === 0 ? "5" : "1"} transform={`rotate(${angle})`} />
+                )
+              })}
+            </g>
+          </svg>
+        </div>
+      )
+    },
+  },
+  {
+    id: "beam-24",
+    name: "Prismatic Angular Burst",
+    category: "radial-beam",
+    render: function () {
+      return (
+        <div className="absolute inset-0 overflow-hidden bg-background">
+          <div className="absolute inset-0" style={{ background: `repeating-conic-gradient(from 0deg at 50% 50%, var(--primary) 0deg 10deg, transparent 10deg 20deg, var(--primary) 20deg 25deg, transparent 25deg 40deg)` }} />
+        </div>
+      )
+    },
+  },
+  {
+    id: "beam-25",
+    name: "Retro Arcade Sun",
+    category: "radial-beam",
+    render: function () {
+      const totalRays = 16
+      const rays = Array.from({ length: totalRays })
+      return (
+        <div className="absolute inset-0 overflow-hidden bg-background flex items-center justify-center">
+          <svg className="absolute w-[500px] h-[500px]" viewBox="-400 -400 800 800">
+            <g>
+              {rays.map((_, i) => {
+                const angle = (i * 360) / totalRays
+                return (
+                  <polygon key={i} points="0,-180 -25,-400 25,-400" fill="var(--primary)" transform={`rotate(${angle})`} />
+                )
+              })}
+            </g>
+          </svg>
+        </div>
+      )
+    },
+  },
+  {
+    id: "beam-26",
+    name: "Pulsating Core Rays",
+    category: "radial-beam",
+    render: function () {
+      const totalRays = 28
+      const rays = Array.from({ length: totalRays })
+      return (
+        <div className="absolute inset-0 overflow-hidden bg-background flex items-center justify-center">
+          <svg className="absolute inset-0 w-full h-full" viewBox="-400 -400 800 800" preserveAspectRatio="xMidYMid slice">
+            <g>
+              {rays.map((_, i) => {
+                const angle = (i * 360) / totalRays
+                return (
+                  <line key={i} x1="0" y1="-250" x2="0" y2="-650" stroke="var(--primary)" strokeWidth="4" transform={`rotate(${angle})`} />
+                )
+              })}
+            </g>
+          </svg>
+        </div>
+      )
+    },
+  },
+  {
+    id: "beam-27",
+    name: "Fine Silk Threads",
+    category: "radial-beam",
+    render: function () {
+      const totalRays = 90
+      const rays = Array.from({ length: totalRays })
+      return (
+        <div className="absolute inset-0 overflow-hidden bg-background flex items-center justify-center">
+          <svg className="absolute inset-0 w-full h-full" viewBox="-400 -400 800 800" preserveAspectRatio="xMidYMid slice">
+            <g>
+              {rays.map((_, i) => {
+                const angle = (i * 360) / totalRays
+                return (
+                  <line key={i} x1="0" y1="-50" x2="0" y2="-500" stroke="var(--primary)" strokeWidth="0.75" transform={`rotate(${angle})`} />
+                )
+              })}
+            </g>
+          </svg>
+        </div>
+      )
+    },
+  },
+  {
+    id: "beam-28",
+    name: "Stepped Comic Segments",
+    category: "radial-beam",
+    render: function () {
+      const totalRays = 18
+      const rays = Array.from({ length: totalRays })
+      return (
+        <div className="absolute inset-0 overflow-hidden bg-background flex items-center justify-center">
+          <svg className="absolute inset-0 w-full h-full" viewBox="-400 -400 800 800" preserveAspectRatio="xMidYMid slice">
+            <g>
+              {rays.map((_, i) => {
+                const angle = (i * 360) / totalRays
+                return (
+                  <g key={i} transform={`rotate(${angle})`}>
+                    <line x1="0" y1="-100" x2="0" y2="-250" stroke="var(--primary)" strokeWidth="8" />
+                    <line x1="0" y1="-300" x2="0" y2="-500" stroke="var(--primary)" strokeWidth="4" />
+                  </g>
+                )
+              })}
+            </g>
+          </svg>
+        </div>
+      )
+    },
+  },
+  {
+    id: "beam-29",
+    name: "Cosmic Radar sweep",
+    category: "radial-beam",
+    render: function () {
+      const totalRays = 12
+      const rays = Array.from({ length: totalRays })
+      return (
+        <div className="absolute inset-0 overflow-hidden bg-background flex items-center justify-center">
+          <svg className="absolute inset-0 w-full h-full" viewBox="-400 -400 800 800" preserveAspectRatio="xMidYMid slice">
+            <g>
+              {rays.map((_, i) => {
+                const angle = (i * 360) / totalRays
+                return (
+                  <line key={i} x1="0" y1="0" x2="0" y2="-500" stroke="var(--primary)" strokeWidth="2" strokeDasharray="10, 20, 30, 40" transform={`rotate(${angle})`} />
+                )
+              })}
+            </g>
+          </svg>
+        </div>
+      )
+    },
+  },
+  {
+    id: "beam-30",
+    name: "Ultimate Radial Crown",
+    category: "radial-beam",
+    render: function () {
+      const totalRays = 36
+      const rays = Array.from({ length: totalRays })
+      return (
+        <div className="absolute inset-0 overflow-hidden bg-background flex items-center justify-center">
+          <svg className="absolute inset-0 w-full h-full" viewBox="-400 -400 800 800" preserveAspectRatio="xMidYMid slice">
+            <g>
+              {rays.map((_, i) => {
+                const angle = (i * 360) / totalRays
+                return (
+                  <polygon key={i} points="0,-120 -8,-500 8,-500" fill="var(--primary)" transform={`rotate(${angle})`} />
+                )
+              })}
+            </g>
+          </svg>
+        </div>
       )
     },
   },

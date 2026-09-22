@@ -35,8 +35,8 @@ export const data = {
       icon: Blocks,
     },
     {
-      title: "Landing",
-      url: "/landing",
+      title: "Pages",
+      url: "/pages",
       icon: LayoutTemplate,
     },
     {

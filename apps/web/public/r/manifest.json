@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-17T12:28:02.734Z",
+  "generatedAt": "2026-09-21T16:44:04.705Z",
   "items": [
     {
       "name": "gauge",
@@ -211,6 +211,12 @@
       "type": "registry:block",
       "description": "A simple gallery section.",
       "categories": ["gallery"]
+    },
+    {
+      "name": "landing-01",
+      "type": "registry:page",
+      "description": "A simple header section.",
+      "categories": ["pages"]
     },
     {
       "name": "accordion-01",

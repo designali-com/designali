@@ -1,6 +1,5 @@
 import { BlockDisplay } from "@/src/components/templates/blocks/block-display"
-import { Blocks } from "lucide-react"
-
+ 
 export const dynamic = "force-static"
 export const revalidate = false
 

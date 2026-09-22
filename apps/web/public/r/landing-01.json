@@ -1,0 +1,29 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "landing-01",
+  "type": "registry:page",
+  "description": "A simple header section.",
+  "registryDependencies": [
+    "button",
+    "navigation-menu",
+    "toggle"
+  ],
+  "files": [
+    {
+      "path": "registry/designali/pages/landing-01/page.tsx",
+      "content": "import { ThemeSwitcher } from \"@/registry/designali/pages/landing-01/components/hero\";\n\nexport default function Landing01() {\n    return (\n        <div className=\"flex min-h-screen w-full flex-col\">\n            <ThemeSwitcher />\n            <main className=\"flex-1\">\n                <section className=\"flex h-screen items-center justify-center\">\n                    <h1 className=\"text-4xl font-bold\">Hero</h1>\n                </section>\n\n                <section className=\"flex h-screen items-center justify-center\">\n                    <h1 className=\"text-4xl font-bold\">Section</h1>\n                </section>\n            </main>\n        </div>\n    )\n}\n",
+      "type": "registry:component",
+      "target": "header/index.tsx"
+    },
+    {
+      "path": "registry/designali/pages/landing-01/components/hero.tsx",
+      "content": "\"use client\"\n\nimport { useCallback, useEffect, useState } from \"react\"\nimport { Monitor, Moon, Sun } from \"lucide-react\"\nimport { useTheme } from \"next-themes\"\n\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst themes = [\n  {\n    key: \"system\",\n    icon: Monitor,\n    label: \"System theme\",\n  },\n  {\n    key: \"light\",\n    icon: Sun,\n    label: \"Light theme\",\n  },\n  {\n    key: \"dark\",\n    icon: Moon,\n    label: \"Dark theme\",\n  },\n]\n\nexport type ThemeSwitcherProps = {\n  value?: \"light\" | \"dark\" | \"system\"\n  onChange?: (theme: \"light\" | \"dark\" | \"system\") => void\n  defaultValue?: \"light\" | \"dark\" | \"system\"\n  className?: string\n}\n\nexport const ThemeSwitcher = ({ className }: ThemeSwitcherProps) => {\n  const { theme, setTheme } = useTheme()\n  const [mounted, setMounted] = useState(false)\n\n  const handleThemeClick = useCallback(\n    (themeKey: \"light\" | \"dark\" | \"system\") => {\n      setTheme(themeKey)\n    },\n    [setTheme]\n  )\n\n  // Prevent hydration mismatch\n  useEffect(() => {\n    setMounted(true)\n  }, [])\n\n  if (!mounted) {\n    return null\n  }\n\n  return (\n    <div\n      className={cn(\n        \"relative isolate flex h-7 bg-background p-1 ring-1 ring-border\",\n        className\n      )}\n    >\n      {themes.map(({ key, icon: Icon, label }) => {\n        const isActive = theme === key\n\n        return (\n          <button\n            aria-label={label}\n            className=\"relative h-5 w-6 rounded-full\"\n            key={key}\n            onClick={() => handleThemeClick(key as \"light\" | \"dark\" | \"system\")}\n            type=\"button\"\n          >\n            {isActive && (\n              <div className=\"absolute inset-0 rounded-full bg-secondary\" />\n            )}\n            <Icon\n              className={cn(\n                \"relative z-10 m-auto h-3.5 w-3.5\",\n                isActive ? \"text-foreground\" : \"text-muted-foreground\"\n              )}\n            />\n          </button>\n        )\n      })}\n    </div>\n  )\n}\n",
+      "type": "registry:component",
+      "target": "components/header.tsx"
+    }
+  ],
+  "meta": {},
+  "categories": [
+    "pages"
+  ]
+}

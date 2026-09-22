@@ -5,7 +5,9 @@ import {
   Layers as LayersIcon,
   Activity,
   Maximize2,
-  Shapes, 
+  Shapes,
+  CircleDot,
+  BarChart, 
 } from "lucide-react"
 
 export const patternCategories = [
@@ -14,7 +16,16 @@ export const patternCategories = [
     name: "All Patterns",
     icon: Layers,
   },
-   
+  {
+    slug: "radial-beam",
+    name: "Radial Beam",
+    icon: CircleDot,
+  },
+  {
+    slug: "vertical-bar",
+    name: "Vertical Bar",
+    icon: BarChart,
+  },
   {
     slug: "gradients",
     name: "Gradients",
