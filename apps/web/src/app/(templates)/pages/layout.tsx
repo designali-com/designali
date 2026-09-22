@@ -1,4 +1,4 @@
-import { BlockSidebar } from "@/src/components/templates/blocks/blocks-sidebar"
+import { PagesSidebar } from "@/src/components/templates/pages/pages-sidebar"
 
 import {
   SidebarProvider,
@@ -29,7 +29,7 @@ export default async function MarketingLayout({
             />
             {children}
           </main>
-          <BlockSidebar side="right" />
+          <PagesSidebar side="right" />
         </SidebarProvider>
       </div>
     </div>

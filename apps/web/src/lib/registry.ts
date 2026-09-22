@@ -76,6 +76,7 @@ function getFileTarget(file: RegistryFile) {
 
     if (
       file.type === "registry:block" ||
+      file.type === "registry:page" ||
       file.type === "registry:component" ||
       file.type === "registry:example"
     ) {

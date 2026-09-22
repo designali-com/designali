@@ -366,14 +366,7 @@ function BlockViewerView() {
               width: `${previewWidth}%`,
             }}
           >
-            {/* Jab tak iframe load ho raha hai, Skeleton/Loader dikhayein */}
-            {isLoading && (
-              <div className="absolute inset-0 z-20 flex flex-col items-center justify-center gap-4 bg-background/80 backdrop-blur-sm animate-pulse">
-                <div className="w-3/4 h-8 bg-muted rounded-md" />
-                <div className="w-1/2 h-4 bg-muted rounded-md" />
-                <div className="w-5/6 h-64 bg-muted/50 rounded-md mt-4" />
-              </div>
-            )}
+            
 
             <iframe
               key={iframeKey}

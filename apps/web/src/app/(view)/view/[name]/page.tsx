@@ -66,6 +66,7 @@ export async function generateStaticParams() {
     .filter((block) =>
       [
         "registry:block",
+        "registry:page",
         "registry:component",
         "registry:example",
         "registry:internal",
@@ -73,6 +74,9 @@ export async function generateStaticParams() {
     )
     .map((block) => ({
       name: block.name,
+    }))
+    .map((page) => ({
+      name: page.name,
     }))
 }
 

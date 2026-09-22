@@ -639,6 +639,31 @@ export const registryCategories: {
   },
 ]
 
+export const registryPages: {
+  name: string
+  slug: string
+  description: string
+  iconName: string
+  hidden: boolean
+}[] = [
+  {
+    name: "About",
+    slug: "about",
+    description:
+      "Bold and flexible hero sections to make a strong first impression.",
+    iconName: "PanelTop",
+    hidden: false,
+  },
+  {
+    name: "Contact",
+    slug: "contact",
+    description:
+      "Clean and responsive headers for navigation, branding, and page actions.",
+    iconName: "Navigation",
+    hidden: false,
+  },  
+]
+
 export const templateCategories: {
   id: string
   name: string
