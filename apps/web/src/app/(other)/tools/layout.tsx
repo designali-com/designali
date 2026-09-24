@@ -1,9 +1,10 @@
- 
-import { ToolsSidebar } from "@/src/components/others/tools-sidebar" 
+
+import { ToolsSidebar } from "@/src/components/others/tools-sidebar"
 import {
   SidebarProvider,
   SidebarTrigger,
 } from "@workspace/ui/components/sidebar"
+import { Suspense } from "react"
 
 interface FigmaLayoutProps {
   children: React.ReactNode
@@ -31,7 +32,9 @@ export default function FigmaLayout({
             {children}
           </main>
 
-          <ToolsSidebar side="right" />
+          <Suspense fallback={null}>
+            <ToolsSidebar side="right" />
+          </Suspense>
         </SidebarProvider>
       </div>
     </div>

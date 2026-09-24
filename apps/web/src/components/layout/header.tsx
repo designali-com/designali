@@ -1,14 +1,24 @@
 "use client"
 
-import React from "react"
+import React, { useState } from "react"
 import Link from "next/link"
 
 import { Button } from "@workspace/ui/components/button"
 import { Logo } from "@workspace/ui/designali/logo"
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@workspace/ui/components/dialog"
+
+import SubmitToolForm from "@/src/components/auth/submit-tool-form"   
 
 import { Search } from "./search"
 import { MobileNav } from "./mobile-nav"
 import { navLinks } from "@/registry/registry-categories"
+import { Plus } from "lucide-react"
  
 export function Header() {
   return (
@@ -113,6 +123,81 @@ export function TemplateHeader() {
             >
               Get full access
             </Button>
+            <Button
+              size="sm"
+              nativeButton={false}
+              render={
+                <Link
+                  href={"/dashboard"} 
+                  rel="noopener noreferrer"
+                />
+              }
+            >
+              Dashboard
+            </Button>
+            <MobileNav />
+          </div>
+        </div>
+      </nav>
+    </header>
+  )
+}
+
+
+export function ToolsHeader() {
+  const [isDialogOpen, setIsDialogOpen] = useState(false)
+  return (
+    <header className="fixed top-0 right-0 left-0 z-50 w-full border-b border-dotted bg-background/50 backdrop-blur-md">
+      <nav className="w-full">
+        <div className="relative mx-auto flex h-10 w-full items-center justify-between px-2">
+          {/* Left */}
+          <div className="flex items-center">
+            <Link
+              href="/"
+              className="ml-2 flex items-center gap-2"
+              aria-label="Designali"
+            >
+              <Logo className="size-6" />
+            </Link>
+          </div>
+ 
+          <div className="flex items-center gap-2">
+            <div className="md:absolute md:left-1/2 md:-translate-x-1/2">
+              <Search />
+            </div>
+            
+            <Button
+              size="sm"
+              variant={"ghost"}
+              className={"hidden md:flex"}
+              nativeButton={false}
+              render={
+                <Link
+                  href={"/pricing"} 
+                  rel="noopener noreferrer"
+                />
+              }
+            >
+              Get full access
+            </Button>
+            <div>
+          <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
+            <DialogTrigger render={
+              <Button size="sm">
+              <Plus className="size-4 shrink-0" />
+              <span>Submit Tool</span>
+            </Button>
+            } />
+               
+            <DialogContent >
+              <DialogHeader>
+                <DialogTitle>Submit a Tool</DialogTitle>
+              </DialogHeader>
+                
+              <SubmitToolForm onSuccess={() => setIsDialogOpen(false)} />
+            </DialogContent>
+          </Dialog>
+        </div>
             <Button
               size="sm"
               nativeButton={false}

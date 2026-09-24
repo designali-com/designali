@@ -1,5 +1,5 @@
 import { AppSidebar } from "@/src/components/layout/app-sidebar"
-import { TemplateHeader } from "@/src/components/layout/header"
+import { ToolsHeader } from "@/src/components/layout/header"
 
 import {
   SidebarProvider,
@@ -15,7 +15,7 @@ export default async function MarketingLayout({
 }: MarketingLayoutProps) {
   return (
     <div className="flex h-full flex-col overflow-hidden">
-      <TemplateHeader />
+      <ToolsHeader />
 
       <div className="flex min-h-0 flex-1">
         <SidebarProvider

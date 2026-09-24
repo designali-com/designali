@@ -1,7 +1,7 @@
 "use client"
-
+ 
 import Link from "next/link"
-import { usePathname, useSearchParams } from "next/navigation"
+import { usePathname, useSearchParams } from "next/navigation" 
 
 import {
   Sidebar,
@@ -24,6 +24,7 @@ export function ToolsSidebar(
   const searchParams = useSearchParams()
   const currentCategory = searchParams.get("category")
 
+
   return (
     <Sidebar
       side="right"
@@ -35,23 +36,21 @@ export function ToolsSidebar(
 
       <div className="pointer-events-none absolute inset-x-0 bottom-0 z-50 h-20 bg-gradient-to-t from-background to-transparent" />
 
-      <SidebarContent className="items-end pb-20">
+      <SidebarContent className="items-end pb-20 flex flex-col justify-between h-full">
         <SidebarTrigger className="absolute top-6 left-2.5 z-10 opacity-60" />
 
-        <SidebarGroup>
+        <SidebarGroup className="w-full">
           <SidebarGroupLabel className="justify-end group-data-[collapsible=icon]:hidden">
             Tools
           </SidebarGroupLabel>
 
           <SidebarMenu className="pt-8">
             {toolsCategory.map((category) => {
-              // Query parameter format me href generate karna
               const href =
                 category.slug === "all"
                   ? "/tools"
                   : `/tools?category=${encodeURIComponent(category.slug)}`
 
-              // Active state check karna query params ke basis par
               const isActive =
                 category.slug === "all"
                   ? pathname === "/tools" && !currentCategory
@@ -76,10 +75,9 @@ export function ToolsSidebar(
                       justify-end
                       group-data-[collapsible=icon]:justify-center
                       hover:text-primary
-                      ${
-                        isActive
-                          ? "text-primary opacity-100"
-                          : "opacity-70 hover:opacity-100"
+                      ${isActive
+                        ? "text-primary opacity-100"
+                        : "opacity-70 hover:opacity-100"
                       }
                     `}
                   />
@@ -88,6 +86,9 @@ export function ToolsSidebar(
             })}
           </SidebarMenu>
         </SidebarGroup>
+
+
+
       </SidebarContent>
     </Sidebar>
   )

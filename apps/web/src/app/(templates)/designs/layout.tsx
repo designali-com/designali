@@ -4,6 +4,7 @@ import {
   SidebarProvider,
   SidebarTrigger,
 } from "@workspace/ui/components/sidebar"
+import { Suspense } from "react"
 
 interface FigmaLayoutProps {
   children: React.ReactNode
@@ -30,8 +31,9 @@ export default function FigmaLayout({
 
             {children}
           </main>
-
-          <FigmaSidebar side="right" />
+          <Suspense fallback={null}>
+            <FigmaSidebar side="right" />
+          </Suspense>
         </SidebarProvider>
       </div>
     </div>
