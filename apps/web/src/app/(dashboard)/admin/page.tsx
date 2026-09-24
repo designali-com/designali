@@ -71,7 +71,7 @@ export default async function AdminPage() {
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className=" ">
       <div className="border-b px-6 py-5">
         <h1 className="text-2xl font-semibold">
           Admin Dashboard

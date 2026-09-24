@@ -1,4 +1,5 @@
  
+import { AppSidebar } from "@/src/components/layout/app-sidebar"
 import { TemplateHeader } from "@/src/components/layout/header"
 
 import {
@@ -28,7 +29,7 @@ export default async function MarketingLayout({
           className="flex h-full min-h-0 w-full"
         >
            
-
+          <AppSidebar />
           <main className="flex min-w-0 flex-1 flex-col overflow-y-auto">
             <SidebarTrigger
               className={"absolute top-12 left-2 z-10 opacity-60 md:hidden"}

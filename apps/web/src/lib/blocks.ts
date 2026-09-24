@@ -37,7 +37,7 @@ const registryItemSchema = z.object({
 })
 
 export async function getAllBlockIds(
-  types: RegistryItemType[] = ["registry:block", "registry:internal"],
+  types: RegistryItemType[] = ["registry:block", "registry:page", "registry:internal"],
   categories: string[] = []
 ): Promise<string[]> {
   const blocks = await getAllBlocks(types, categories)

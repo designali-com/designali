@@ -38,28 +38,20 @@ export const session = pgTable("session", {
 });
 
 export const account = pgTable("account", {
-  id: text("id").primaryKey(),
-
+  id: text("id").primaryKey(), 
   accountId: text("account_id").notNull(),
-  providerId: text("provider_id").notNull(),
-
+  providerId: text("provider_id").notNull(), 
   userId: text("user_id")
     .notNull()
-    .references(() => user.id, { onDelete: "cascade" }),
-
+    .references(() => user.id, { onDelete: "cascade" }), 
   accessToken: text("access_token"),
   refreshToken: text("refresh_token"),
-  idToken: text("id_token"),
-
+  idToken: text("id_token"), 
   accessTokenExpiresAt: timestamp("access_token_expires_at"),
-  refreshTokenExpiresAt: timestamp("refresh_token_expires_at"),
-
+  refreshTokenExpiresAt: timestamp("refresh_token_expires_at"), 
   scope: text("scope"),
-  password: text("password"),
-
-  // ADD THIS
-  issuer: text("issuer"),
-
+  password: text("password"), 
+  issuer: text("issuer"), 
   createdAt: timestamp("created_at").notNull(),
   updatedAt: timestamp("updated_at").notNull(),
 });
@@ -147,9 +139,9 @@ export const template = pgTable("template", {
   description: text("description"),
   thumbnail: text("thumbnail").notNull(),
   previewUrl: text("preview_url"),
-  downloadUrl: text("download_url").notNull(), // S3/Cloudinary/Zip link
+  downloadUrl: text("download_url").notNull(),  
   figmaUrl: text("figma_url"),
-  category: text("category").notNull(), // e.g., "Dashboard", "Landing Page", "Mobile App"
+  category: text("category").notNull(),  
   isPro: boolean("is_pro").default(true).notNull(),
   createdAt: timestamp("created_at")
     .$defaultFn(() => new Date())
@@ -158,8 +150,7 @@ export const template = pgTable("template", {
     .$defaultFn(() => new Date())
     .notNull(),
 });
-
-// 2. DOWNLOADS TABLE (Konsa user/org kaunsa template download kar raha hai)
+ 
 export const download = pgTable("download", {
   id: text("id").primaryKey(),
   userId: text("user_id")
@@ -176,8 +167,7 @@ export const download = pgTable("download", {
     .$defaultFn(() => new Date())
     .notNull(),
 });
-
-// 3. SUBSCRIPTION TABLE (User ya Organization ka Pro Plan Track karne ke liye)
+ 
 export const subscriptionStatus = pgEnum("subscription_status", [
   "active",
   "canceled",
@@ -198,8 +188,7 @@ export const subscription = pgTable("subscription", {
     .$defaultFn(() => new Date())
     .notNull(),
 });
-
-// 4. RELATIONS SETUP (Drizzle ORM Queries ke liye)
+ 
 export const templateRelations = relations(template, ({ many }) => ({
   downloads: many(download),
 }));
@@ -230,14 +219,35 @@ export const subscriptionRelations = relations(subscription, ({ one }) => ({
   }),
 }));
 
-// Types Infer Export (Typescript autocomplete ke liye)
+export const tool = pgTable("tool", {
+  id: text("id").primaryKey(), 
+  title: text("title").notNull(), 
+  slug: text("slug").notNull().unique(),
+  description: text("description").notNull(), 
+  link: text("link").notNull(), 
+  madeBy: text("made_by").notNull(), 
+  category: text("category").notNull(), 
+  tags: text("tags").array().default([]).notNull(), 
+  coverImage: text("cover_image"),
+  isPublished: boolean("is_published")
+    .default(true)
+    .notNull(), 
+  createdAt: timestamp("created_at")
+    .$defaultFn(() => new Date())
+    .notNull(), 
+  updatedAt: timestamp("updated_at")
+    .$defaultFn(() => new Date())
+    .notNull(),
+});
+ 
 export type Template = typeof template.$inferSelect;
 export type Download = typeof download.$inferSelect;
 export type Subscription = typeof subscription.$inferSelect;
 
-// Updated Export Schema
+export type Tool = typeof tool.$inferSelect;
+export type NewTool = typeof tool.$inferInsert;
+ 
 export const schema = {
-  // Existing...
   user,
   session,
   account,
@@ -245,12 +255,14 @@ export const schema = {
   organization,
   member,
   invitation,
-  organizationRelations,
-  memberRelations,
-  // New Additions
+
   template,
   download,
   subscription,
+  tool,
+
+  organizationRelations,
+  memberRelations,
   templateRelations,
   downloadRelations,
   subscriptionRelations,

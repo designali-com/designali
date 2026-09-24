@@ -1,0 +1,1 @@
+ALTER TABLE "tool" ADD COLUMN "cover_image" text;

@@ -12,6 +12,7 @@ import {
   LayoutTemplate,
   Shapes,
   Pen,
+  Wrench,
 } from "lucide-react"
 
 export const navLinks = [
@@ -78,6 +79,11 @@ export const data = {
       title: "Components",
       url: "/docs/components/bento",
       icon: Component,
+    },
+    {
+      title: "Tools",
+      url: "/tools",
+      icon: Wrench,
     },
     {
       title: "Pricing",
