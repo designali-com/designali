@@ -1,7 +1,7 @@
 import { BlockDisplay } from "@/src/components/templates/blocks/block-display"
  
-export const dynamic = process.env.NODE_ENV === "production" ? "force-static" : "auto"
-export const revalidate = process.env.NODE_ENV === "production" ? false : 0
+export const dynamic = "force-static"
+export const revalidate = false
 
 const FEATURED_PAGES = ["landing-01"]
 
