@@ -1210,6 +1210,66 @@ export const Index: Record<string, any> = {
       }
     }),
   },
+  "gallery-02": {
+    name: "gallery-02",
+    description: "A simple gallery section.",
+    type: "registry:block",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/blocks/gallery/gallery-02.tsx",
+        type: "registry:component",
+        target: "components/gallery-02.tsx",
+      },
+    ],
+    categories: ["gallery"],
+    meta: { iframeHeight: "800px" },
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/designali/blocks/gallery/gallery-02")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "gallery-02"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "media-01": {
+    name: "media-01",
+    description: "A simple media section.",
+    type: "registry:block",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/blocks/media/media-01.tsx",
+        type: "registry:component",
+        target: "components/media-01.tsx",
+      },
+    ],
+    categories: ["media"],
+    meta: { iframeHeight: "800px" },
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/designali/blocks/media/media-01")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "media-01"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
   "landing-01": {
     name: "landing-01",
     description: "A simple header section.",

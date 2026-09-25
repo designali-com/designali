@@ -313,15 +313,9 @@ function BlockViewerToolbar() {
 
 function BlockViewerView() {
   const { item, iframeKey, previewWidth, setPreviewWidth } = useBlockViewer()
-  const [isResizing, setIsResizing] = React.useState(false)
-  const [isLoading, setIsLoading] = React.useState(true) // <-- New State
+  const [isResizing, setIsResizing] = React.useState(false) 
   const containerRef = React.useRef<HTMLDivElement>(null)
-
-  // Jab bhi iframeKey change ho (refresh button click par), loading phir se true kar dein
-  React.useEffect(() => {
-    setIsLoading(true)
-  }, [iframeKey])
-
+ 
   const handleMouseDown = (e: React.MouseEvent) => {
     e.preventDefault()
     setIsResizing(true)
@@ -366,17 +360,14 @@ function BlockViewerView() {
               width: `${previewWidth}%`,
             }}
           >
-            
-
+             
             <iframe
               key={iframeKey}
               src={`/view/${item.name}`}
               height={item.meta?.iframeHeight ?? 930}
-              loading="lazy"
-              onLoad={() => setIsLoading(false)} // <-- Load hone par false kar dein
+              loading="lazy" 
               className={cn(
-                "block h-full w-full border-0 bg-background transition-opacity duration-300",
-                isLoading ? "opacity-0" : "opacity-100",
+                "block h-full w-full border-0 bg-background transition-opacity duration-300", 
                 isResizing && "pointer-events-none"
               )}
             />

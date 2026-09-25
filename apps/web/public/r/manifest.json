@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-21T16:44:04.705Z",
+  "generatedAt": "2026-09-25T15:49:09.001Z",
   "items": [
     {
       "name": "gauge",
@@ -211,6 +211,18 @@
       "type": "registry:block",
       "description": "A simple gallery section.",
       "categories": ["gallery"]
+    },
+    {
+      "name": "gallery-02",
+      "type": "registry:block",
+      "description": "A simple gallery section.",
+      "categories": ["gallery"]
+    },
+    {
+      "name": "media-01",
+      "type": "registry:block",
+      "description": "A simple media section.",
+      "categories": ["media"]
     },
     {
       "name": "landing-01",

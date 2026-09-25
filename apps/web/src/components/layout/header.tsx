@@ -13,13 +13,14 @@ import {
   DialogTrigger,
 } from "@workspace/ui/components/dialog"
 
-import SubmitToolForm from "@/src/components/auth/submit-tool-form"   
+import SubmitToolForm from "@/src/components/auth/submit-tool-form"
 
 import { Search } from "./search"
 import { MobileNav } from "./mobile-nav"
 import { navLinks } from "@/registry/registry-categories"
 import { Plus } from "lucide-react"
- 
+import { Logout } from "@/src/components/layout/logout";
+
 export function Header() {
   return (
     <header className="fixed top-0 right-0 left-0 z-50 w-full border-b border-dotted bg-background/50 backdrop-blur-md">
@@ -61,19 +62,19 @@ export function Header() {
               nativeButton={false}
               render={
                 <Link
-                  href={"/pricing"} 
+                  href={"https://cal.com/designali/30min"}
                   rel="noopener noreferrer"
                 />
               }
             >
-              Get full access
+              Book a Call
             </Button>
             <Button
               size="sm"
               nativeButton={false}
               render={
                 <Link
-                  href={"/dashboard"} 
+                  href={"/dashboard"}
                   rel="noopener noreferrer"
                 />
               }
@@ -104,7 +105,7 @@ export function TemplateHeader() {
               <Logo className="size-6" />
             </Link>
           </div>
- 
+
           <div className="flex items-center gap-2">
             <div className="md:absolute md:left-1/2 md:-translate-x-1/2">
               <Search />
@@ -116,7 +117,7 @@ export function TemplateHeader() {
               nativeButton={false}
               render={
                 <Link
-                  href={"/pricing"} 
+                  href={"/pricing"}
                   rel="noopener noreferrer"
                 />
               }
@@ -128,7 +129,7 @@ export function TemplateHeader() {
               nativeButton={false}
               render={
                 <Link
-                  href={"/dashboard"} 
+                  href={"/dashboard"}
                   rel="noopener noreferrer"
                 />
               }
@@ -160,12 +161,12 @@ export function ToolsHeader() {
               <Logo className="size-6" />
             </Link>
           </div>
- 
-          <div className="flex items-center gap-2">
+
+          <div className="flex items-center gap-1">
             <div className="md:absolute md:left-1/2 md:-translate-x-1/2">
               <Search />
             </div>
-            
+
             <Button
               size="sm"
               variant={"ghost"}
@@ -173,7 +174,7 @@ export function ToolsHeader() {
               nativeButton={false}
               render={
                 <Link
-                  href={"/pricing"} 
+                  href={"/pricing"}
                   rel="noopener noreferrer"
                 />
               }
@@ -181,35 +182,79 @@ export function ToolsHeader() {
               Get full access
             </Button>
             <div>
-          <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
-            <DialogTrigger render={
-              <Button size="sm">
-              <Plus className="size-4 shrink-0" />
-              <span>Submit Tool</span>
-            </Button>
-            } />
-               
-            <DialogContent >
-              <DialogHeader>
-                <DialogTitle>Submit a Tool</DialogTitle>
-              </DialogHeader>
-                
-              <SubmitToolForm onSuccess={() => setIsDialogOpen(false)} />
-            </DialogContent>
-          </Dialog>
-        </div>
+              <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
+                <DialogTrigger render={
+                  <Button size="sm">
+                    <Plus className="size-4 shrink-0" />
+                    <span>Submit Tool</span>
+                  </Button>
+                } />
+
+                <DialogContent >
+                  <DialogHeader>
+                    <DialogTitle>Submit a Tool</DialogTitle>
+                  </DialogHeader>
+
+                  <SubmitToolForm onSuccess={() => setIsDialogOpen(false)} />
+                </DialogContent>
+              </Dialog>
+            </div>
             <Button
               size="sm"
               nativeButton={false}
               render={
                 <Link
-                  href={"/dashboard"} 
+                  href={"/dashboard"}
                   rel="noopener noreferrer"
                 />
               }
             >
               Dashboard
             </Button>
+            <MobileNav />
+          </div>
+        </div>
+      </nav>
+    </header>
+  )
+}
+
+
+export function DashboardHeader() {
+  return (
+    <header className="fixed top-0 right-0 left-0 z-50 w-full border-b border-dotted bg-background/50 backdrop-blur-md">
+      <nav className="w-full">
+        <div className="relative mx-auto flex h-10 w-full items-center justify-between px-2">
+          {/* Left */}
+          <div className="flex items-center">
+            <Link
+              href="/"
+              className="ml-2 flex items-center gap-2"
+              aria-label="Designali"
+            >
+              <Logo className="size-6" />
+            </Link>
+          </div>
+
+          <div className="flex items-center gap-2">
+            <div className="md:absolute md:left-1/2 md:-translate-x-1/2">
+              <Search />
+            </div>
+            <Button
+              size="sm"
+              variant={"ghost"}
+              className={"hidden md:flex"}
+              nativeButton={false}
+              render={
+                <Link
+                  href={"/pricing"}
+                  rel="noopener noreferrer"
+                />
+              }
+            >
+              Get full access
+            </Button>
+            <Logout/> 
             <MobileNav />
           </div>
         </div>

@@ -601,4 +601,36 @@ export const blocks: Registry["items"] = [
       iframeHeight: "800px",
     },
   },
+  {
+    name: "gallery-02",
+    description: "A simple gallery section.",
+    type: "registry:block", 
+    files: [
+      {
+        path: "blocks/gallery/gallery-02.tsx",
+        target: "components/gallery-02.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["gallery"],
+    meta: {
+      iframeHeight: "800px",
+    },
+  },
+  {
+    name: "media-01",
+    description: "A simple media section.",
+    type: "registry:block", 
+    files: [
+      {
+        path: "blocks/media/media-01.tsx",
+        target: "components/media-01.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["media"],
+    meta: {
+      iframeHeight: "800px",
+    },
+  },
 ]

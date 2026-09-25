@@ -10,12 +10,12 @@ import {
   DialogTrigger,
 } from "@workspace/ui/components/dialog";
 import { getOrganizations } from "@/src/server/organizations";
-import { Logout } from "@/src/components/layout/logout";
 import { db } from "@/src/db/drizzle";
 import { download, subscription } from "@/src/db/schema";
 import { eq, desc } from "drizzle-orm";
 import { headers } from "next/headers";
 import { auth } from "@/src/lib/auth/auth";
+import { Avatar, AvatarFallback, AvatarImage } from "@workspace/ui/components/avatar";
 
 export default async function Dashboard() {
   // 1. Correct User Auth Session Fetching
@@ -46,11 +46,17 @@ export default async function Dashboard() {
     <div className="min-h-screen p-6 space-y-8">
       {/* 1. Header / Navbar */}
       <header className="flex  my-10 flex-col sm:flex-row justify-between items-start sm:items-center gap-4 pb-6 border-b">
-        <div>
-          <h1 className="text-2xl font-medium tracking-tight">Overview Dashboard</h1>
+        <div className="flex items-center gap-3">
+          <Avatar  className="w-14 h-14">
+            <AvatarImage src={session?.user?.image ?? undefined} />
+            <AvatarFallback>{session?.user?.name?.charAt(0).toUpperCase()}</AvatarFallback>
+          </Avatar>
+          <div className="flex flex-col">
+          <h1 className="text-2xl font-medium tracking-tight">{session?.user?.name}</h1>
           <p className="text-muted-foreground text-sm">
-            Manage your organizations, templates, and team workspaces.
+            {session?.user?.email}
           </p>
+          </div>
         </div>
         <div className="flex items-center gap-3">
           <Dialog >
@@ -71,7 +77,7 @@ export default async function Dashboard() {
               <CreateOrganizationForm />
             </DialogContent>
           </Dialog>
-          <Logout />
+
         </div>
       </header>
 
@@ -140,13 +146,7 @@ export default async function Dashboard() {
 
       {/* 4. Recent Template Downloads Preview */}
       <section className="space-y-4 pt-4">
-        <div className="flex justify-between items-center">
-          <h2 className="font-bold text-xl tracking-tight">Recent Template Downloads</h2>
-          <Link href="/dashboard/downloads" className="text-xs">
-            View All
-          </Link>
-        </div>
-
+         
         {userDownloads.length === 0 ? (
           <div className="p-8 text-center border">
             <p className="text-muted-foreground">Aapne abhi tak koi template download nahi kiya hai.</p>
@@ -175,12 +175,12 @@ export default async function Dashboard() {
                   <span className="hidden sm:inline-block text-xs border font-mono px-2 py-1 rounded">
                     {licenseKey}
                   </span>
-                  <Button render={<a target="_blank"  href={template.previewUrl ?? undefined}   />} size="sm" variant="outline" >
-                      Preview 
+                  <Button render={<a target="_blank" href={template.previewUrl ?? undefined} />} size="sm" variant="outline" >
+                    Preview
                   </Button>
-                  <Button render={<a target="_blank" href={template.downloadUrl}   />} size="sm" variant="outline" >
-                     Re-Download 
-                </Button>
+                  <Button render={<a target="_blank" href={template.downloadUrl} />} size="sm" variant="outline" >
+                    Re-Download
+                  </Button>
                 </div>
               </div>
             ))}

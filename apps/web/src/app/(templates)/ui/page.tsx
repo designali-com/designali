@@ -1,5 +1,4 @@
-import { ComponentPreview } from "@/src/components/docs/component-preview"
-import { LayoutGrid } from "lucide-react"
+import { ComponentPreview } from "@/src/components/docs/component-preview" 
 
 const UI_COMPONENTS = ["accordion-01", "accordion-02", "button-02", "card-02"]
 

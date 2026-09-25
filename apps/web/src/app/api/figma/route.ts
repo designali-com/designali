@@ -1,5 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 
+const FIGMA_API = "https://api.figma.com/v1";
+
 export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url);
   const fileKey = searchParams.get("fileKey");
@@ -17,12 +19,12 @@ export async function GET(request: NextRequest) {
   try {
     const [imageRes, nodeRes] = await Promise.all([
       fetch(
-        `https://api.figma.com/v1/images/${fileKey}?ids=${encodeURIComponent(nodeId)}&format=png&scale=2`,
-        { headers: { "X-Figma-Token": token }, next: { revalidate: 3600 } }
+        `${FIGMA_API}/images/${fileKey}?ids=${encodeURIComponent(nodeId)}&format=png&scale=2`,
+        { headers: { "X-Figma-Token": token }, next: { revalidate: 86400 } }
       ),
       fetch(
-        `https://api.figma.com/v1/files/${fileKey}/nodes?ids=${encodeURIComponent(nodeId)}`,
-        { headers: { "X-Figma-Token": token }, next: { revalidate: 3600 } }
+        `${FIGMA_API}/files/${fileKey}/nodes?ids=${encodeURIComponent(nodeId)}`,
+        { headers: { "X-Figma-Token": token }, next: { revalidate: 86400 } }
       ),
     ]);
 
@@ -36,7 +38,7 @@ export async function GET(request: NextRequest) {
 
     return NextResponse.json(
       { imageUrl, nodeName },
-      { headers: { "Cache-Control": "s-maxage=3600, stale-while-revalidate=86400" } }
+      { headers: { "Cache-Control": "public, s-maxage=86400, stale-while-revalidate=604800" } }
     );
   } catch (error) {
     console.error("Figma API Error:", error);

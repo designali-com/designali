@@ -662,6 +662,38 @@
       }
     },
     {
+      "name": "gallery-02",
+      "description": "A simple gallery section.",
+      "type": "registry:block",
+      "files": [
+        {
+          "path": "registry/designali/blocks/gallery/gallery-02.tsx",
+          "type": "registry:component",
+          "target": "components/gallery-02.tsx"
+        }
+      ],
+      "categories": ["gallery"],
+      "meta": {
+        "iframeHeight": "800px"
+      }
+    },
+    {
+      "name": "media-01",
+      "description": "A simple media section.",
+      "type": "registry:block",
+      "files": [
+        {
+          "path": "registry/designali/blocks/media/media-01.tsx",
+          "type": "registry:component",
+          "target": "components/media-01.tsx"
+        }
+      ],
+      "categories": ["media"],
+      "meta": {
+        "iframeHeight": "800px"
+      }
+    },
+    {
       "name": "landing-01",
       "description": "A simple header section.",
       "type": "registry:page",

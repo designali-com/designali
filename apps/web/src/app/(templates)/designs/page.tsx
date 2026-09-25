@@ -7,7 +7,6 @@ import Link from "next/link"
 
 const FILE_KEY = "VztJy6DsCcvC1DHeyWK0oK"
 
-
 export default async function DesignPage() {
   const nodeIds = figmaDesigns.map((d) => d.nodeId)
 

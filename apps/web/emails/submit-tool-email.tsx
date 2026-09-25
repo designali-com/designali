@@ -157,7 +157,7 @@ import {
     title: "Designali UI",
     email: "hello@designali.com",
     description: "A comprehensive library of UI components and templates.",
-    link: "https://designali.com",
+    link: "https://designali.com/tools",
     madeBy: "Ali",
     category: "UI Components",
     isAdminCopy: false,

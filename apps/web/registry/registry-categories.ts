@@ -76,14 +76,14 @@ export const data = {
       icon: LayoutGrid,
     },
     {
-      title: "Components",
-      url: "/docs/components/bento",
-      icon: Component,
-    },
-    {
       title: "Tools",
       url: "/tools",
       icon: Wrench,
+    },
+    {
+      title: "Components",
+      url: "/docs/components/bento",
+      icon: Component,
     },
     {
       title: "Pricing",

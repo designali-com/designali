@@ -5,7 +5,7 @@ import * as Icons from "lucide-react"
 
 export const revalidate = false
 export const dynamic = "force-static"
-export const dynamicParams = false
+export const dynamicParams = false  
 
 export async function generateStaticParams() {
   return registryCategories.map((category) => ({
