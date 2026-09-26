@@ -980,7 +980,7 @@ export const Index: Record<string, any> = {
       },
     ],
     categories: ["logos", "clients"],
-    meta: { iframeHeight: "500px" },
+    meta: { iframeHeight: "700px" },
     component: React.lazy(async () => {
       const mod =
         await import("@/registry/designali/blocks/logos/logos-04/page")

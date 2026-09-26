@@ -484,7 +484,7 @@ export const blocks: Registry["items"] = [
     ],
     categories: ["logos", "clients"],
     meta: {
-      iframeHeight: "500px",
+      iframeHeight: "700px",
     },
   },
   {

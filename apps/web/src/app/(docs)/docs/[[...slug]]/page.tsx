@@ -107,6 +107,7 @@ export default async function DocPage({ params }: DocPageProps) {
                 {neighbours.previous && (
                   <Button
                     variant="secondary"
+                    nativeButton={false}
                     size="icon"
                     className="extend-touch-target ml-auto size-8 shadow-none md:size-7"
                     render={<Link href={neighbours.previous.url} />}
@@ -118,6 +119,7 @@ export default async function DocPage({ params }: DocPageProps) {
                 {neighbours.next && (
                   <Button
                     variant="secondary"
+                    nativeButton={false}
                     size="icon"
                     className="extend-touch-target size-8 shadow-none md:size-7"
                     render={<Link href={neighbours.next.url} />}
@@ -132,10 +134,11 @@ export default async function DocPage({ params }: DocPageProps) {
             {links ? (
               <div className="flex items-center space-x-2 pt-4">
                 {links?.doc && (
-                  <Badge variant="secondary">
-                    <Link href={links.doc} target="_blank" rel="noreferrer">
-                      Docs <ArrowUpRight className="ml-1 size-3" />
-                    </Link>
+                  <Badge variant="secondary" render={
+                    <Link href={links.doc} target="_blank" rel="noreferrer"/>
+                     
+                     }> 
+                   Docs <ArrowUpRight className="ml-1 size-3" />
                   </Badge>
                 )}
                 {links?.api && (
@@ -161,6 +164,7 @@ export default async function DocPage({ params }: DocPageProps) {
           {neighbours.previous && (
             <Button
               variant="secondary"
+              nativeButton={false}
               size="sm"
               className="shadow-none"
               render={<Link href={neighbours.previous.url} />}
@@ -170,6 +174,7 @@ export default async function DocPage({ params }: DocPageProps) {
           )}
           {neighbours.next && (
             <Button
+            nativeButton={false}
               render={<Link href={neighbours.next.url} />}
               variant="secondary"
               size="sm"

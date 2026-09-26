@@ -38,25 +38,7 @@ export function HeroSection() {
       <div className="relative border-x px-3 max-w-7xl mx-auto h-full w-full">
        
         <div className="relative border-x flex h-full w-full flex-col justify-between overflow-hidden">
-        <div
-          className="absolute h-full w-full z-0" >
-          <div
-            style={{
-              WebkitMaskImage: 'linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 100%)',
-              backgroundImage: 'linear-gradient(var(--primary) 1px, transparent 1px), linear-gradient(90deg, var(--primary) 1px, transparent 1px)',
-              backgroundSize: '20px 20px',
-              bottom: '0',
-              height: '60%',
-              left: '0',
-              maskImage: 'linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 100%)',
-              opacity: 0.5,
-              pointerEvents: 'none',
-              position: 'absolute',
-              width: '100%'
-            }}
-          />
-        </div>
-
+         
           <style>{css}</style>
           <div
             className="relative flex w-full flex-col justify-between pt-[7vh] pb-[6vh] sm:pt-[9vh]"

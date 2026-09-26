@@ -3,7 +3,7 @@ import { BlockDisplay } from "@/src/components/templates/blocks/block-display"
 export const dynamic = "force-static"
 export const revalidate = false
 
-const FEATURED_BLOCKS = ["hero-4", "feature-01", "hero-1", "header-01", "logos-01"]
+const FEATURED_BLOCKS = ["hero-4", "gallery-01", "feature-01", "hero-1", "header-01", "logos-01"]
 
 export default function BlocksPage() {
   return (
