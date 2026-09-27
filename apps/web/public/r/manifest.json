@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-26T18:43:54.059Z",
+  "generatedAt": "2026-09-27T17:36:37.155Z",
   "items": [
     {
       "name": "gauge",
@@ -189,13 +189,55 @@
       "categories": ["feature", "features"]
     },
     {
+      "name": "feature-02",
+      "type": "registry:block",
+      "description": "A simple feature section.",
+      "categories": ["feature", "features"]
+    },
+    {
+      "name": "feature-03",
+      "type": "registry:block",
+      "description": "A simple feature section.",
+      "categories": ["feature", "features"]
+    },
+    {
       "name": "faqs-01",
       "type": "registry:block",
       "description": "A simple pricing section.",
       "categories": ["faqs"]
     },
     {
+      "name": "faqs-02",
+      "type": "registry:block",
+      "description": "A simple pricing section.",
+      "categories": ["faqs"]
+    },
+    {
+      "name": "faqs-03",
+      "type": "registry:block",
+      "description": "A simple pricing section.",
+      "categories": ["faqs"]
+    },
+    {
       "name": "pricing-01",
+      "type": "registry:block",
+      "description": "A simple pricing section.",
+      "categories": ["pricing"]
+    },
+    {
+      "name": "pricing-02",
+      "type": "registry:block",
+      "description": "A simple pricing section.",
+      "categories": ["pricing"]
+    },
+    {
+      "name": "pricing-03",
+      "type": "registry:block",
+      "description": "A simple pricing section.",
+      "categories": ["pricing"]
+    },
+    {
+      "name": "pricing-04",
       "type": "registry:block",
       "description": "A simple pricing section.",
       "categories": ["pricing"]

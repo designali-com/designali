@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "feature-02",
+  "type": "registry:block",
+  "description": "A simple feature section.",
+  "files": [
+    {
+      "path": "registry/designali/blocks/feature/feature-02/page.tsx",
+      "content": "import { ArrowUpRight } from \"lucide-react\"\nimport { cn } from \"@workspace/ui/lib/utils\"\nimport {\n  Card,\n  CardContent,\n  CardHeader,\n} from \"@workspace/ui/components/card\"\nimport { Button } from \"@workspace/ui/components/button\"\n\ninterface FeatureItem {\n  img?: string\n  title: string\n  description: string\n  link?: {\n    text: string\n    url: string\n  }\n}\n\ninterface Feature01Props {\n  title?: string\n  description?: string\n  features?: FeatureItem[]\n  className?: string\n}\n\nexport const Feature02 = ({\n  title = \"You need to build faster\",\n  description = \"Production-ready components and resources designed for modern Design Engineers.\",\n  features = [\n    {\n      img: \"/img/ask/ask7.jpg\",\n      title: \"Production-ready components\",\n      description:\n        \"Build polished interfaces faster with reusable components designed for modern React and Tailwind workflows.\",\n      link: {\n        text: \"Explore Components\",\n        url: \"/blocks\",\n      },\n    },\n    {\n      img: \"/img/ask/ask14.jpg\",\n      title: \"Beautiful templates\",\n      description:\n        \"Start with carefully crafted layouts and templates that you can copy, customize, and ship.\",\n      link: {\n        text: \"Explore Templates\",\n        url: \"/templates\",\n      },\n    },\n    {\n      img: \"/img/ask/ask12.jpg\",\n      title: \"Design resources\",\n      description:\n        \"Access logos, icons, vectors, and other resources built to speed up your design and development workflow.\",\n      link: {\n        text: \"Explore Resources\",\n        url: \"/logos\",\n      },\n    },\n  ],\n  className,\n}: Feature01Props) => {\n  return (\n    <section\n      className={cn(\n        \"max-w-6xl mx-auto h-screen flex flex-col justify-center px-4 py-10\",\n        className\n      )}\n    >\n      {/* Header */}\n      <div className=\"mx-auto flex max-w-2xl flex-col items-center gap-3 text-center\">\n        <h2 className=\"text-3xl font-medium tracking-tight md:text-4xl lg:text-5xl\">\n          {title}\n        </h2>\n\n        {description && (\n          <p className=\"text-muted-foreground md:text-lg\">\n            {description}\n          </p>\n        )}\n      </div>\n\n      {/* Features */}\n      <div className=\"mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3\">\n        {features.map((feature) => (\n          <Card\n            key={feature.title}\n            className=\"group flex flex-col gap-0 overflow-hidden  p-2 shadow-none transition-colors\"\n          >\n            <CardHeader className=\"gap-0 p-0\">\n              {feature.img && (\n                <div className=\"overflow-hidden  border bg-muted\">\n                  <img\n                    src={feature.img}\n                    alt={feature.title}\n                    className=\"aspect-[4/3] h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.02]\"\n                  />\n                </div>\n              )}\n            </CardHeader>\n\n            <CardContent className=\"flex flex-1 flex-col gap-3 p-4\">\n              <h3 className=\"text-lg font-semibold tracking-tight\">\n                {feature.title}\n              </h3>\n\n              <p className=\"flex-1 text-sm leading-6 text-muted-foreground\">\n                {feature.description}\n              </p>\n\n              {feature.link && (\n                <Button\n                  variant=\"outline\"\n                  render={ <a href={feature.link.url}/>}\n                  className=\"mt-2 w-full\" >\n                   {feature.link.text}\n                    <ArrowUpRight className=\"size-4\" />\n                   \n                </Button>\n              )}\n            </CardContent>\n          </Card>\n        ))}\n      </div>\n    </section>\n  )\n} ",
+      "type": "registry:component",
+      "target": "components/feature-02.tsx"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "800px"
+  },
+  "categories": [
+    "feature",
+    "features"
+  ]
+}

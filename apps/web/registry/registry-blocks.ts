@@ -538,6 +538,38 @@ export const blocks: Registry["items"] = [
     },
   },
   {
+    name: "feature-02",
+    description: "A simple feature section.",
+    type: "registry:block",
+    files: [
+      {
+        path: "blocks/feature/feature-02/page.tsx",
+        target: "components/feature-02.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["feature", "features"],
+    meta: {
+      iframeHeight: "800px",
+    },
+  },
+  {
+    name: "feature-03",
+    description: "A simple feature section.",
+    type: "registry:block",
+    files: [
+      {
+        path: "blocks/feature/feature-03/page.tsx",
+        target: "components/feature-03.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["feature", "features"],
+    meta: {
+      iframeHeight: "800px",
+    },
+  },
+  {
     name: "faqs-01",
     description: "A simple pricing section.",
     type: "registry:block", 
@@ -554,6 +586,38 @@ export const blocks: Registry["items"] = [
     },
   },
   {
+    name: "faqs-02",
+    description: "A simple pricing section.",
+    type: "registry:block", 
+    files: [
+      {
+        path: "blocks/faqs/faqs-02.tsx",
+        target: "components/faqs-02.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["faqs"],
+    meta: {
+      iframeHeight: "800px",
+    },
+  },
+  {
+    name: "faqs-03",
+    description: "A simple pricing section.",
+    type: "registry:block", 
+    files: [
+      {
+        path: "blocks/faqs/faqs-03.tsx",
+        target: "components/faqs-03.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["faqs"],
+    meta: {
+      iframeHeight: "800px",
+    },
+  },
+  {
     name: "pricing-01",
     description: "A simple pricing section.",
     type: "registry:block", 
@@ -561,6 +625,54 @@ export const blocks: Registry["items"] = [
       {
         path: "blocks/pricing/pricing-01.tsx",
         target: "components/pricing-01.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["pricing"],
+    meta: {
+      iframeHeight: "800px",
+    },
+  },
+  {
+    name: "pricing-02",
+    description: "A simple pricing section.",
+    type: "registry:block", 
+    files: [
+      {
+        path: "blocks/pricing/pricing-02.tsx",
+        target: "components/pricing-02.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["pricing"],
+    meta: {
+      iframeHeight: "900px",
+    },
+  },
+  {
+    name: "pricing-03",
+    description: "A simple pricing section.",
+    type: "registry:block", 
+    files: [
+      {
+        path: "blocks/pricing/pricing-03.tsx",
+        target: "components/pricing-03.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["pricing"],
+    meta: {
+      iframeHeight: "900px",
+    },
+  },
+  {
+    name: "pricing-04",
+    description: "A simple pricing section.",
+    type: "registry:block", 
+    files: [
+      {
+        path: "blocks/pricing/pricing-04.tsx",
+        target: "components/pricing-04.tsx",
         type: "registry:component",
       },
     ],

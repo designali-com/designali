@@ -1089,6 +1089,68 @@ export const Index: Record<string, any> = {
       }
     }),
   },
+  "feature-02": {
+    name: "feature-02",
+    description: "A simple feature section.",
+    type: "registry:block",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/blocks/feature/feature-02/page.tsx",
+        type: "registry:component",
+        target: "components/feature-02.tsx",
+      },
+    ],
+    categories: ["feature", "features"],
+    meta: { iframeHeight: "800px" },
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/blocks/feature/feature-02/page")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "feature-02"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "feature-03": {
+    name: "feature-03",
+    description: "A simple feature section.",
+    type: "registry:block",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/blocks/feature/feature-03/page.tsx",
+        type: "registry:component",
+        target: "components/feature-03.tsx",
+      },
+    ],
+    categories: ["feature", "features"],
+    meta: { iframeHeight: "800px" },
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/blocks/feature/feature-03/page")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "feature-03"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
   "faqs-01": {
     name: "faqs-01",
     description: "A simple pricing section.",
@@ -1119,6 +1181,66 @@ export const Index: Record<string, any> = {
       }
     }),
   },
+  "faqs-02": {
+    name: "faqs-02",
+    description: "A simple pricing section.",
+    type: "registry:block",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/blocks/faqs/faqs-02.tsx",
+        type: "registry:component",
+        target: "components/faqs-02.tsx",
+      },
+    ],
+    categories: ["faqs"],
+    meta: { iframeHeight: "800px" },
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/designali/blocks/faqs/faqs-02")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "faqs-02"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "faqs-03": {
+    name: "faqs-03",
+    description: "A simple pricing section.",
+    type: "registry:block",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/blocks/faqs/faqs-03.tsx",
+        type: "registry:component",
+        target: "components/faqs-03.tsx",
+      },
+    ],
+    categories: ["faqs"],
+    meta: { iframeHeight: "800px" },
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/designali/blocks/faqs/faqs-03")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "faqs-03"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
   "pricing-01": {
     name: "pricing-01",
     description: "A simple pricing section.",
@@ -1143,6 +1265,96 @@ export const Index: Record<string, any> = {
           (key) =>
             typeof mod[key] === "function" || typeof mod[key] === "object"
         ) || "pricing-01"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "pricing-02": {
+    name: "pricing-02",
+    description: "A simple pricing section.",
+    type: "registry:block",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/blocks/pricing/pricing-02.tsx",
+        type: "registry:component",
+        target: "components/pricing-02.tsx",
+      },
+    ],
+    categories: ["pricing"],
+    meta: { iframeHeight: "900px" },
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/designali/blocks/pricing/pricing-02")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "pricing-02"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "pricing-03": {
+    name: "pricing-03",
+    description: "A simple pricing section.",
+    type: "registry:block",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/blocks/pricing/pricing-03.tsx",
+        type: "registry:component",
+        target: "components/pricing-03.tsx",
+      },
+    ],
+    categories: ["pricing"],
+    meta: { iframeHeight: "900px" },
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/designali/blocks/pricing/pricing-03")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "pricing-03"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "pricing-04": {
+    name: "pricing-04",
+    description: "A simple pricing section.",
+    type: "registry:block",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/blocks/pricing/pricing-04.tsx",
+        type: "registry:component",
+        target: "components/pricing-04.tsx",
+      },
+    ],
+    categories: ["pricing"],
+    meta: { iframeHeight: "800px" },
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/designali/blocks/pricing/pricing-04")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "pricing-04"
 
       return {
         default: mod.default || mod[exportName],

@@ -3,7 +3,7 @@ import { Figma, Github, LinkedIn, X } from "@designali/logos"
 export default function Footer() {
   return (
     <div className="flex h-screen w-full flex-col items-center justify-center">
-      <div className="container flex h-auto flex-col items-stretch justify-between self-stretch md:flex-row">
+      <div className=" flex h-auto flex-col items-stretch justify-between self-stretch md:flex-row">
         <div className="flex h-auto flex-col items-start justify-start gap-8 p-4 md:p-8">
           <div className="flex items-center justify-start gap-3 self-stretch">
             <div className="text-center text-xl leading-4 font-semibold">

@@ -129,13 +129,23 @@ export function Footer() {
         </div>
       </div>
 
-      {/* -------------------------------- */}
-      {/* COPYRIGHT */}
-      {/* -------------------------------- */}
-
       <div className="flex items-center justify-center gap-2 border-t border-dotted py-4">
         <p className="text-center text-xs text-muted-foreground">
           &copy; {new Date().getFullYear()} designali, All rights reserved
+        </p>
+
+        <span className="text-xs text-muted-foreground">·</span>
+
+        <p className="text-xs text-muted-foreground">
+          Built with <span className="text-primary">❤</span> by{" "}
+          <a
+            href="https://www.linkedin.com/in/aliimam-in/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-medium text-primary transition-colors hover:underline"
+          >
+            Ali Imam
+          </a>
         </p>
       </div>
     </footer>
@@ -170,7 +180,7 @@ const componentLinks = [
   {
     href: "/illustration",
     label: "Illustration",
-  }, 
+  },
 ]
 
 /* -------------------------------- */
@@ -196,7 +206,7 @@ const companyLinks = [
   },
 ]
 
-const designLinks = [ 
+const designLinks = [
   {
     href: "/docs/components/bento",
     label: "Bento",

@@ -5,7 +5,7 @@ import { Button } from "@workspace/ui/components/button"
 
 export function Pricing() {
     return (
-        <section id="pricing" className="scroll-mt-40 flex h-screen relative w-full flex-col items-center px-3 justify-center md:pb-20">
+        <section id="pricing" className="scroll-mt-40 flex h-screen relative w-full flex-col items-center px-3 justify-center">
             <div className="z-10 flex justify-center">
                 <div className="grid max-w-5xl items-center gap-6 md:grid-cols-5 md:gap-0 md:px-12">
                     <div className="bg-background/50 flex h-min flex-col justify-between space-y-8 border-y p-6 backdrop-blur-lg md:col-span-2 md:my-2 md:rounded-l-md md:border md:border-r-0 lg:p-10">
@@ -65,19 +65,17 @@ export function Pricing() {
                             </div>
                             <div className="flex gap-2">
                                 <Button >
-                                    <Link href="https://cal.com/aliimam/30min" target="_blank">
+                                    <Link href="https://cal.com/designali/30min" target="_blank">
                                         Join Today
                                     </Link>
                                 </Button>
                                 <Button variant={"outline"}>
-                                    <Link href="https://cal.com/aliimam/30min" target="_blank">
+                                    <Link href="https://cal.com/designali/30min" target="_blank">
                                         Book a Call
                                     </Link>
                                 </Button>
                             </div>
-
-
-
+ 
                             <div>
                                 <h3 className="text-muted-foreground mb-2 text-xs font-light">
                                     What’s included:

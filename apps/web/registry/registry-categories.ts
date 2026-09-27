@@ -64,12 +64,7 @@ export const data = {
       title: "Vectors",
       url: "/vectors",
       icon: Triangle,
-    },
-    {
-      title: "Illustrations",
-      url: "/illustrations",
-      icon: Image,
-    },
+    }, 
     {
       title: "UI Designs",
       url: "/ui",
