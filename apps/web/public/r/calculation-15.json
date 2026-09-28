@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "calculation-15",
+  "type": "registry:component",
+  "title": "Calculation",
+  "files": [
+    {
+      "path": "registry/designali/components/calculation/calculation-15.tsx",
+      "content": "import { Calculation } from \"@/registry/designali/ui/calculation\"\n\nexport default function AbsoluteExample() {\n  return (\n    <Calculation\n      defaultOperation=\"absolute\"\n      defaultInput=\"-250\"\n    />\n  )\n}",
+      "type": "registry:component"
+    }
+  ]
+}

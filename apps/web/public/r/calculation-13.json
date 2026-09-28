@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "calculation-13",
+  "type": "registry:component",
+  "title": "Calculation",
+  "files": [
+    {
+      "path": "registry/designali/components/calculation/calculation-13.tsx",
+      "content": "import { Calculation } from \"@/registry/designali/ui/calculation\"\n\nexport default function RemainderExample() {\n  return (\n    <Calculation\n      defaultOperation=\"remainder\"\n      defaultInput=\"17, 5\"\n    />\n  )\n}",
+      "type": "registry:component"
+    }
+  ]
+}

@@ -1,11 +1,6 @@
 "use client"
-
-import {
-  Code2,
-  Palette,
-  Target,
-} from "lucide-react"
-import { Dithering, DotOrbit, Spiral } from "@paper-design/shaders-react"
+ 
+import { Dithering  } from "@paper-design/shaders-react"
 import { Abstract12Shapes, Abstract131Shapes, Abstract36Shapes } from "@designali/vectors"
 
 export default function FeatureSection() {
@@ -25,23 +20,11 @@ export default function FeatureSection() {
           <div className="h-[430px] overflow-hidden border border-dashed md:h-[460px]">
             <div className="relative h-full">
               {/* Icon */}
-              <div className="absolute left-1/2  top-40 z-10 flex size-60 -translate-x-1/2 -translate-y-1/2 items-center justify-center border bg-background">
+              <div className="absolute left-1/2  top-40 z-10 flex size-60 -translate-x-1/2 -translate-y-1/2 items-center justify-center border bg-background/80 backdrop-blur-md">
                 
-                <Abstract12Shapes className="size-40" />
+                <Abstract12Shapes className="size-40 animate-[spin_30s_linear_infinite]" />
               </div>
-
-              <DotOrbit
-                className="absolute bottom-0 h-full w-full"
-                colors={["#00aaff"]}
-                colorBack="#00000000"
-                stepsPerColor={1}
-                size={1}
-                scale={1.5}
-                sizeRange={1}
-                spreading={1}
-                speed={0.5}
-              />
-
+ 
               <div className="absolute bottom-0 left-1/2 w-full -translate-x-1/2 rounded-b-sm bg-gradient-to-t from-white to-transparent p-8 pt-60 dark:from-black dark:to-transparent">
                 <h2 className="text-2xl">Strategy</h2>
                 <p className="pt-2 text-sm text-muted-foreground">
@@ -57,9 +40,9 @@ export default function FeatureSection() {
           <div className="h-[430px] overflow-hidden border border-dashed md:h-[460px]">
             <div className="relative h-full">
               {/* Icon */}
-              <div className="absolute left-1/2  top-40 z-10 flex size-60 -translate-x-1/2 -translate-y-1/2 items-center justify-center border bg-background">
+              <div className="absolute left-1/2  top-40 z-10 flex size-60 -translate-x-1/2 -translate-y-1/2 items-center justify-center border bg-background/80 backdrop-blur-md">
                
-              <Abstract131Shapes className="size-40" />
+              <Abstract131Shapes className="size-40 animate-[spin_30s_linear_infinite]" />
               </div>
 
               <Dithering
@@ -89,24 +72,10 @@ export default function FeatureSection() {
             <div className="relative h-full">
               {/* Icon */}
               <div className="absolute left-1/2  top-40 z-10 flex size-60 -translate-x-1/2 -translate-y-1/2 items-center justify-center border bg-background">
-              <Abstract36Shapes className="size-40" />
+              <Abstract36Shapes className="size-40 animate-[spin_30s_linear_infinite]" />
               </div>
 
-              <Spiral
-                className="absolute bottom-0 h-full w-full"
-                colorBack="#a0f02800"
-                colorFront="#00aaff"
-                density={0.5}
-                distortion={0}
-                strokeWidth={0.1}
-                strokeTaper={0}
-                strokeCap={0}
-                noise={1}
-                noiseFrequency={0.25}
-                softness={0}
-                speed={0.75}
-                scale={1.3}
-              />
+              
 
               <div className="absolute bottom-0 left-1/2 w-full -translate-x-1/2 rounded-b-sm bg-gradient-to-t from-white to-transparent p-8 pt-60 dark:from-black dark:to-transparent">
                 <h2 className="text-2xl">Development</h2>

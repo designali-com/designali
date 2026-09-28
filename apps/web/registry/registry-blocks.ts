@@ -570,6 +570,22 @@ export const blocks: Registry["items"] = [
     },
   },
   {
+    name: "feature-04",
+    description: "A simple feature section.",
+    type: "registry:block",
+    files: [
+      {
+        path: "blocks/feature/feature-04/page.tsx",
+        target: "components/feature-04.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["feature", "features"],
+    meta: {
+      iframeHeight: "800px",
+    },
+  },
+  {
     name: "faqs-01",
     description: "A simple pricing section.",
     type: "registry:block", 

@@ -67,6 +67,36 @@ export const Index: Record<string, any> = {
       }
     }),
   },
+  calculation: {
+    name: "calculation",
+    description: "",
+    type: "registry:ui",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/ui/calculation.tsx",
+        type: "registry:ui",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/designali/ui/calculation")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "calculation"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
   "counter-number": {
     name: "counter-number",
     description: "",
@@ -1145,6 +1175,37 @@ export const Index: Record<string, any> = {
           (key) =>
             typeof mod[key] === "function" || typeof mod[key] === "object"
         ) || "feature-03"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "feature-04": {
+    name: "feature-04",
+    description: "A simple feature section.",
+    type: "registry:block",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/blocks/feature/feature-04/page.tsx",
+        type: "registry:component",
+        target: "components/feature-04.tsx",
+      },
+    ],
+    categories: ["feature", "features"],
+    meta: { iframeHeight: "800px" },
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/blocks/feature/feature-04/page")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "feature-04"
 
       return {
         default: mod.default || mod[exportName],
@@ -6790,6 +6851,161 @@ export const Index: Record<string, any> = {
       }
     }),
   },
+  "calculation-01": {
+    name: "calculation-01",
+    description: "",
+    type: "registry:component",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/components/calculation/calculation-01.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/components/calculation/calculation-01")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "calculation-01"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "calculation-02": {
+    name: "calculation-02",
+    description: "",
+    type: "registry:component",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/components/calculation/calculation-02.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/components/calculation/calculation-02")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "calculation-02"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "calculation-03": {
+    name: "calculation-03",
+    description: "",
+    type: "registry:component",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/components/calculation/calculation-03.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/components/calculation/calculation-03")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "calculation-03"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "calculation-04": {
+    name: "calculation-04",
+    description: "",
+    type: "registry:component",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/components/calculation/calculation-04.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/components/calculation/calculation-04")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "calculation-04"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "calculation-05": {
+    name: "calculation-05",
+    description: "",
+    type: "registry:component",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/components/calculation/calculation-05.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/components/calculation/calculation-05")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "calculation-05"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
   "dot-pattern-default": {
     name: "dot-pattern-default",
     description: "component showing a simple dot pattern.",
@@ -6815,6 +7031,502 @@ export const Index: Record<string, any> = {
           (key) =>
             typeof mod[key] === "function" || typeof mod[key] === "object"
         ) || "dot-pattern-default"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "calculation-06": {
+    name: "calculation-06",
+    description: "",
+    type: "registry:component",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/components/calculation/calculation-06.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/components/calculation/calculation-06")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "calculation-06"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "calculation-07": {
+    name: "calculation-07",
+    description: "",
+    type: "registry:component",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/components/calculation/calculation-07.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/components/calculation/calculation-07")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "calculation-07"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "calculation-08": {
+    name: "calculation-08",
+    description: "",
+    type: "registry:component",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/components/calculation/calculation-08.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/components/calculation/calculation-08")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "calculation-08"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "calculation-09": {
+    name: "calculation-09",
+    description: "",
+    type: "registry:component",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/components/calculation/calculation-09.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/components/calculation/calculation-09")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "calculation-09"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "calculation-10": {
+    name: "calculation-10",
+    description: "",
+    type: "registry:component",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/components/calculation/calculation-10.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/components/calculation/calculation-10")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "calculation-10"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "calculation-11": {
+    name: "calculation-11",
+    description: "",
+    type: "registry:component",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/components/calculation/calculation-11.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/components/calculation/calculation-11")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "calculation-11"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "calculation-12": {
+    name: "calculation-12",
+    description: "",
+    type: "registry:component",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/components/calculation/calculation-12.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/components/calculation/calculation-12")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "calculation-12"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "calculation-13": {
+    name: "calculation-13",
+    description: "",
+    type: "registry:component",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/components/calculation/calculation-13.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/components/calculation/calculation-13")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "calculation-13"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "calculation-14": {
+    name: "calculation-14",
+    description: "",
+    type: "registry:component",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/components/calculation/calculation-14.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/components/calculation/calculation-14")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "calculation-14"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "calculation-15": {
+    name: "calculation-15",
+    description: "",
+    type: "registry:component",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/components/calculation/calculation-15.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/components/calculation/calculation-15")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "calculation-15"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "calculation-16": {
+    name: "calculation-16",
+    description: "",
+    type: "registry:component",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/components/calculation/calculation-16.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/components/calculation/calculation-16")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "calculation-16"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "calculation-17": {
+    name: "calculation-17",
+    description: "",
+    type: "registry:component",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/components/calculation/calculation-17.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/components/calculation/calculation-17")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "calculation-17"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "calculation-18": {
+    name: "calculation-18",
+    description: "",
+    type: "registry:component",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/components/calculation/calculation-18.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/components/calculation/calculation-18")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "calculation-18"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "calculation-19": {
+    name: "calculation-19",
+    description: "",
+    type: "registry:component",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/components/calculation/calculation-19.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/components/calculation/calculation-19")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "calculation-19"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "calculation-20": {
+    name: "calculation-20",
+    description: "",
+    type: "registry:component",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/components/calculation/calculation-20.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/components/calculation/calculation-20")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "calculation-20"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "calculation-21": {
+    name: "calculation-21",
+    description: "",
+    type: "registry:component",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/components/calculation/calculation-21.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/components/calculation/calculation-21")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "calculation-21"
 
       return {
         default: mod.default || mod[exportName],

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "calculation-12",
+  "type": "registry:component",
+  "title": "Calculation",
+  "files": [
+    {
+      "path": "registry/designali/components/calculation/calculation-12.tsx",
+      "content": "import { Calculation } from \"@/registry/designali/ui/calculation\"\n\nexport default function AverageExample() {\n  return (\n    <Calculation\n      defaultOperation=\"average\"\n      defaultInput=\"10, 20, 30, 40, 50\"\n    />\n  )\n}",
+      "type": "registry:component"
+    }
+  ]
+}

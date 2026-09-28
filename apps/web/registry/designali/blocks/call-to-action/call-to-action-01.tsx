@@ -8,27 +8,27 @@ export function CallToAction() {
   return (
     <section className="relative mx-auto flex h-screen w-full flex-col items-center justify-center overflow-hidden">
       <div
-  className="absolute inset-0 z-0"
-  style={{
-    background: 'linear-gradient(to bottom, var(--background) 0%, var(--background) 35%, rgba(255,255,255,0) 100%), radial-gradient(ellipse at 50% 130%, var(--primary) 0%, var(--background) 70%)',
-    opacity: 0.7
-  }}
->
-  <div
-    style={{
-      WebkitMaskImage: 'linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.6) 100%)',
-      backgroundImage: 'radial-gradient(circle, var(--primary) 1px, transparent 1px)',
-      backgroundSize: '32px 32px',
-      bottom: '0',
-      height: '70%',
-      left: '0',
-      maskImage: 'linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.6) 100%)',
-      pointerEvents: 'none',
-      position: 'absolute',
-      width: '100%'
-    }}
-   />
-</div>
+        className="absolute inset-0 z-0"
+        style={{
+          background: 'linear-gradient(to bottom, var(--background) 0%, var(--background) 35%, rgba(255,255,255,0) 100%), radial-gradient(ellipse at 50% 130%, var(--primary) 0%, var(--background) 70%)',
+          opacity: 0.7
+        }}
+      >
+        <div
+          style={{
+            WebkitMaskImage: 'linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.6) 100%)',
+            backgroundImage: 'radial-gradient(circle, var(--primary) 1px, transparent 1px)',
+            backgroundSize: '32px 32px',
+            bottom: '0',
+            height: '70%',
+            left: '0',
+            maskImage: 'linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.6) 100%)',
+            pointerEvents: 'none',
+            position: 'absolute',
+            width: '100%'
+          }}
+        />
+      </div>
       <div className="relative overflow-hidden">
         <div className="relative z-10 space-y-3 text-center">
           <div className="space-y-3 pb-16">

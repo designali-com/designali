@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "calculation-19",
+  "type": "registry:component",
+  "title": "Calculation",
+  "files": [
+    {
+      "path": "registry/designali/components/calculation/calculation-19.tsx",
+      "content": "import { Calculation } from \"@/registry/designali/ui/calculation\"\n\nexport default function FactorialExample() {\n  return (\n    <Calculation\n      defaultOperation=\"factorial\"\n      defaultInput=\"5\"\n    />\n  )\n}",
+      "type": "registry:component"
+    }
+  ]
+}

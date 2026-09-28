@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "calculation-21",
+  "type": "registry:component",
+  "title": "Calculation",
+  "files": [
+    {
+      "path": "registry/designali/components/calculation/calculation-21.tsx",
+      "content": "import { Calculation } from \"@/registry/designali/ui/calculation\"\n\nexport default function LcmExample() {\n  return (\n    <Calculation\n      defaultOperation=\"lcm\"\n      defaultInput=\"12, 18\"\n    />\n  )\n}",
+      "type": "registry:component"
+    }
+  ]
+}

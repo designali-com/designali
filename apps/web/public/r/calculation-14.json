@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "calculation-14",
+  "type": "registry:component",
+  "title": "Calculation",
+  "files": [
+    {
+      "path": "registry/designali/components/calculation/calculation-14.tsx",
+      "content": "import { Calculation } from \"@/registry/designali/ui/calculation\"\n\nexport default function SquareRootExample() {\n  return (\n    <Calculation\n      defaultOperation=\"sqrt\"\n      defaultInput=\"144\"\n    />\n  )\n}",
+      "type": "registry:component"
+    }
+  ]
+}

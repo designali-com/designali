@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "calculation-01",
+  "type": "registry:component",
+  "title": "Calculation",
+  "files": [
+    {
+      "path": "registry/designali/components/calculation/calculation-01.tsx",
+      "content": "import { Calculation } from \"@/registry/designali/ui/calculation\"\n\nexport default function SumExample() {\n  return (\n    <Calculation\n      defaultOperation=\"sum\"\n      defaultInput=\"100, 200, 300\"\n    />\n  )\n}",
+      "type": "registry:component"
+    }
+  ]
+}

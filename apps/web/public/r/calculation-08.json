@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "calculation-08",
+  "type": "registry:component",
+  "title": "Calculation",
+  "files": [
+    {
+      "path": "registry/designali/components/calculation/calculation-08.tsx",
+      "content": "import { Calculation } from \"@/registry/designali/ui/calculation\"\n\nexport default function SubtractExample() {\n  return (\n    <Calculation\n      defaultOperation=\"subtract\"\n      defaultInput=\"100, 35\"\n    />\n  )\n}",
+      "type": "registry:component"
+    }
+  ]
+}

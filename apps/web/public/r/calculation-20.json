@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "calculation-20",
+  "type": "registry:component",
+  "title": "Calculation",
+  "files": [
+    {
+      "path": "registry/designali/components/calculation/calculation-20.tsx",
+      "content": "import { Calculation } from \"@/registry/designali/ui/calculation\"\n\nexport default function GcdExample() {\n  return (\n    <Calculation\n      defaultOperation=\"gcd\"\n      defaultInput=\"48, 18\"\n    />\n  )\n}",
+      "type": "registry:component"
+    }
+  ]
+}

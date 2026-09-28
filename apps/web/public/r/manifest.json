@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-27T17:36:37.155Z",
+  "generatedAt": "2026-09-28T12:20:03.866Z",
   "items": [
     {
       "name": "gauge",
@@ -10,6 +10,12 @@
     },
     {
       "name": "bento",
+      "type": "registry:ui",
+      "description": "",
+      "categories": []
+    },
+    {
+      "name": "calculation",
       "type": "registry:ui",
       "description": "",
       "categories": []
@@ -196,6 +202,12 @@
     },
     {
       "name": "feature-03",
+      "type": "registry:block",
+      "description": "A simple feature section.",
+      "categories": ["feature", "features"]
+    },
+    {
+      "name": "feature-04",
       "type": "registry:block",
       "description": "A simple feature section.",
       "categories": ["feature", "features"]
@@ -1287,9 +1299,135 @@
       "categories": []
     },
     {
+      "name": "calculation-01",
+      "type": "registry:component",
+      "description": "",
+      "categories": []
+    },
+    {
+      "name": "calculation-02",
+      "type": "registry:component",
+      "description": "",
+      "categories": []
+    },
+    {
+      "name": "calculation-03",
+      "type": "registry:component",
+      "description": "",
+      "categories": []
+    },
+    {
+      "name": "calculation-04",
+      "type": "registry:component",
+      "description": "",
+      "categories": []
+    },
+    {
+      "name": "calculation-05",
+      "type": "registry:component",
+      "description": "",
+      "categories": []
+    },
+    {
       "name": "dot-pattern-default",
       "type": "registry:component",
       "description": "component showing a simple dot pattern.",
+      "categories": []
+    },
+    {
+      "name": "calculation-06",
+      "type": "registry:component",
+      "description": "",
+      "categories": []
+    },
+    {
+      "name": "calculation-07",
+      "type": "registry:component",
+      "description": "",
+      "categories": []
+    },
+    {
+      "name": "calculation-08",
+      "type": "registry:component",
+      "description": "",
+      "categories": []
+    },
+    {
+      "name": "calculation-09",
+      "type": "registry:component",
+      "description": "",
+      "categories": []
+    },
+    {
+      "name": "calculation-10",
+      "type": "registry:component",
+      "description": "",
+      "categories": []
+    },
+    {
+      "name": "calculation-11",
+      "type": "registry:component",
+      "description": "",
+      "categories": []
+    },
+    {
+      "name": "calculation-12",
+      "type": "registry:component",
+      "description": "",
+      "categories": []
+    },
+    {
+      "name": "calculation-13",
+      "type": "registry:component",
+      "description": "",
+      "categories": []
+    },
+    {
+      "name": "calculation-14",
+      "type": "registry:component",
+      "description": "",
+      "categories": []
+    },
+    {
+      "name": "calculation-15",
+      "type": "registry:component",
+      "description": "",
+      "categories": []
+    },
+    {
+      "name": "calculation-16",
+      "type": "registry:component",
+      "description": "",
+      "categories": []
+    },
+    {
+      "name": "calculation-17",
+      "type": "registry:component",
+      "description": "",
+      "categories": []
+    },
+    {
+      "name": "calculation-18",
+      "type": "registry:component",
+      "description": "",
+      "categories": []
+    },
+    {
+      "name": "calculation-19",
+      "type": "registry:component",
+      "description": "",
+      "categories": []
+    },
+    {
+      "name": "calculation-20",
+      "type": "registry:component",
+      "description": "",
+      "categories": []
+    },
+    {
+      "name": "calculation-21",
+      "type": "registry:component",
+      "description": "",
       "categories": []
     },
     {

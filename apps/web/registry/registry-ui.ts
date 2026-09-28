@@ -22,6 +22,16 @@ export const ui: Registry["items"] = [
     ],
   },
   {
+    name: "calculation",
+    type: "registry:ui",
+    files: [
+      {
+        path: "ui/calculation.tsx",
+        type: "registry:ui",
+      },
+    ],
+  },
+  {
     name: "counter-number",
     type: "registry:ui",
     files: [

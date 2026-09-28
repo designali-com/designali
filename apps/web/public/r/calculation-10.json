@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "calculation-10",
+  "type": "registry:component",
+  "title": "Calculation",
+  "files": [
+    {
+      "path": "registry/designali/components/calculation/calculation-10.tsx",
+      "content": "import { Calculation } from \"@/registry/designali/ui/calculation\"\n\nexport default function PercentageExample() {\n  return (\n    <Calculation\n      defaultOperation=\"percentage\"\n      defaultInput=\"20, 500\"\n    />\n  )\n}",
+      "type": "registry:component"
+    }
+  ]
+}
