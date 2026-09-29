@@ -1,8 +1,7 @@
 "use client"
- 
-import Link from "next/link"
-import { usePathname, useSearchParams } from "next/navigation" 
 
+import Link from "next/link"
+import { usePathname, useSearchParams } from "next/navigation"
 import {
   Sidebar,
   SidebarContent,
@@ -14,8 +13,8 @@ import {
   SidebarGroupLabel,
   SidebarTrigger,
 } from "@workspace/ui/components/sidebar"
-
 import { toolsCategory } from "./tools-category"
+import { Palette } from "lucide-react"
 
 export function ToolsSidebar(
   props: React.ComponentProps<typeof Sidebar>
@@ -24,6 +23,7 @@ export function ToolsSidebar(
   const searchParams = useSearchParams()
   const currentCategory = searchParams.get("category")
 
+  const isGradientActive = pathname === "/tools/gradient"
 
   return (
     <Sidebar
@@ -43,8 +43,36 @@ export function ToolsSidebar(
           <SidebarGroupLabel className="justify-end group-data-[collapsible=icon]:hidden">
             Tools
           </SidebarGroupLabel>
-
+ 
           <SidebarMenu className="pt-8">
+            <SidebarMenuItem>
+              <SidebarMenuButton
+                render={
+                  <Link href="/tools/gradient">
+                    <span className="group-data-[collapsible=icon]:hidden">
+                      Gradient
+                    </span>
+
+                    <Palette className="size-4 shrink-0" />
+                  </Link>
+                }
+                tooltip="Gradient"
+                className={`
+                  justify-end
+                  group-data-[collapsible=icon]:justify-center
+                  hover:text-primary
+                  ${
+                    isGradientActive
+                      ? "text-primary opacity-100"
+                      : "opacity-70 hover:opacity-100"
+                  }
+                `}
+              />
+            </SidebarMenuItem>
+          </SidebarMenu>
+
+          {/* Categories */}
+          <SidebarMenu >
             {toolsCategory.map((category) => {
               const href =
                 category.slug === "all"
@@ -75,9 +103,10 @@ export function ToolsSidebar(
                       justify-end
                       group-data-[collapsible=icon]:justify-center
                       hover:text-primary
-                      ${isActive
-                        ? "text-primary opacity-100"
-                        : "opacity-70 hover:opacity-100"
+                      ${
+                        isActive
+                          ? "text-primary opacity-100"
+                          : "opacity-70 hover:opacity-100"
                       }
                     `}
                   />
@@ -86,9 +115,6 @@ export function ToolsSidebar(
             })}
           </SidebarMenu>
         </SidebarGroup>
-
-
-
       </SidebarContent>
     </Sidebar>
   )
