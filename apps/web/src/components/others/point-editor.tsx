@@ -21,9 +21,9 @@ export function PointEditor({
   onRemovePoint,
 }: PointEditorProps) {
   return (
-    <div className="flex flex-col gap-3 border p-3">
+    <div className="flex flex-col gap-3 border p-1">
       <div className="flex items-center justify-between gap-3">
-        <span className="text-xs font-medium">Color</span>
+        <span className="text-xs">Color</span>
         <div className="flex items-center gap-2">
           <GradientColorField
             label="Point color"
@@ -34,19 +34,18 @@ export function PointEditor({
             {active.color}
           </code>
         </div>
-      </div>
-
-      <Button
-        type="button"
+        <Button 
         variant="destructive"
-        size="sm"
-        className="w-full"
+        size="icon" 
         onClick={() => onRemovePoint(active.id)}
         disabled={pointsCount <= 1}
       >
-        <Trash2 className="mr-2 h-4 w-4" />
-        Remove Point
+        <Trash2 className="h-4 w-4" />
+         
       </Button>
+      </div>
+
+      
     </div>
   )
 }

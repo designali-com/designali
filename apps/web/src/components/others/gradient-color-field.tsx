@@ -28,8 +28,7 @@ export function GradientColorField({
       <ColorPickerTrigger
         render={
           <Button
-            aria-label={label}
-            className="size-7 overflow-hidden p-0"
+            aria-label={label} 
             size="icon-sm"
             variant="outline"
           />
@@ -43,7 +42,7 @@ export function GradientColorField({
           <ColorPickerEyeDropper size="icon-sm" />
           <ColorPickerHueSlider />
         </div>
-        <ColorPickerInput withoutAlpha />
+        <ColorPickerInput   />
       </ColorPickerContent>
     </ColorPicker>
   )

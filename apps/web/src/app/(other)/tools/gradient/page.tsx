@@ -1,6 +1,8 @@
 "use client"
 
 import React, { useMemo, useRef, useState } from "react"
+import { GradientTemplate } from "@/src/config/gradient/templates"
+
 
 import {
   GRADIENT_RADIUS,
@@ -73,7 +75,7 @@ function paintGradients(
 }
 
 export default function MeshGradientGenerator() {
-  const [base, setBase] = useState("#0f172a")
+  const [base, setBase] = useState("#ffffff")
   const [blur, setBlur] = useState(48)
   const [points, setPoints] = useState<Point[]>(INITIAL)
   const [selected, setSelected] = useState<number>(INITIAL[0]!.id)
@@ -193,9 +195,21 @@ filter: blur(${blur}px);`
     )
   }
 
+  const applyTemplate = (template: GradientTemplate) => {
+    const newPoints: Point[] = template.points.map((point) => ({
+      ...point,
+      id: nextId.current++,
+    }))
+  
+    setBase(template.base)
+    setBlur(template.blur)
+    setPoints(newPoints)
+    setSelected(newPoints[0]!.id)
+  }
+
   return (
     <main className="flex h-auto min-h-full flex-col pt-10 lg:h-full lg:min-h-0 lg:flex-row lg:overflow-hidden">
-      <div className="h-[calc(100dvh-2.5rem)] w-full shrink-0 lg:h-auto lg:min-h-0 lg:flex-1">
+      <div className="h-[calc(100dvh-30rem)] w-full shrink-0 lg:h-auto lg:min-h-0 lg:flex-1">
         <GradientPreview
           base={base}
           blur={blur}
@@ -209,6 +223,7 @@ filter: blur(${blur}px);`
       </div>
 
       <ControlPanel
+        onApplyTemplate={applyTemplate}
         base={base}
         blur={blur}
         cssCode={cssCode}
