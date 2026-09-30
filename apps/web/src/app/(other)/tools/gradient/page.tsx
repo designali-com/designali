@@ -4,12 +4,11 @@ import React, { useMemo, useRef, useState } from "react"
 import { GradientTemplate } from "@/src/config/gradient/templates"
 
 
+import { renderGradientCanvas } from "@/src/lib/gradient-render"
 import {
-  GRADIENT_RADIUS,
   Point,
   SizeOption,
   generateLayers,
-  hexToRgba,
   randHex,
 } from "@/src/types/gradient"
 
@@ -48,35 +47,12 @@ const INITIAL: Point[] = [
   { id: 4, x: 18, y: 80, color: "#f9d423" },
 ]
 
-function paintGradients(
-  ctx: CanvasRenderingContext2D,
-  points: Point[],
-  width: number,
-  height: number
-) {
-  ;[...points].reverse().forEach((point) => {
-    const cx = (point.x / 100) * width
-    const cy = (point.y / 100) * height
-    const farthest = Math.max(
-      Math.hypot(cx, cy),
-      Math.hypot(width - cx, cy),
-      Math.hypot(cx, height - cy),
-      Math.hypot(width - cx, height - cy)
-    )
-    const radius = Math.max((farthest * GRADIENT_RADIUS) / 100, 1)
-    const gradient = ctx.createRadialGradient(cx, cy, 0, cx, cy, radius)
-
-    gradient.addColorStop(0, hexToRgba(point.color, 1))
-    gradient.addColorStop(1, hexToRgba(point.color, 0))
-
-    ctx.fillStyle = gradient
-    ctx.fillRect(0, 0, width, height)
-  })
-}
-
 export default function MeshGradientGenerator() {
   const [base, setBase] = useState("#ffffff")
   const [blur, setBlur] = useState(48)
+  const [noise, setNoise] = useState(40)
+  const [effectId, setEffectId] = useState("none")
+  const [effectAmount, setEffectAmount] = useState(70)
   const [points, setPoints] = useState<Point[]>(INITIAL)
   const [selected, setSelected] = useState<number>(INITIAL[0]!.id)
   const [sizeIdx, setSizeIdx] = useState(0)
@@ -144,38 +120,32 @@ filter: blur(${blur}px);`
       }))
     )
     setBlur(Math.round(20 + Math.random() * 80))
+    setNoise(Math.round(Math.random() * 70))
   }
 
-  const downloadJpg = () => {
+  const downloadJpg = async () => {
     const { w, h } = size
     const canvas = document.createElement("canvas")
     canvas.width = w
     canvas.height = h
 
-    const ctx = canvas.getContext("2d")
+    const ctx = canvas.getContext("2d", { willReadFrequently: true })
     if (!ctx) return
 
-    const layer = document.createElement("canvas")
-    layer.width = w
-    layer.height = h
-    const layerCtx = layer.getContext("2d")
-    if (!layerCtx) return
-
-    paintGradients(layerCtx, points, w, h)
-
-    ctx.fillStyle = base
-    ctx.fillRect(0, 0, w, h)
-
     const previewWidth = previewRef.current?.clientWidth ?? w
-    const exportBlur =
-      blur > 0 && previewWidth > 0 ? (blur * w) / previewWidth : 0
+    const pixelScale = previewWidth > 0 ? w / previewWidth : 1
 
-    if (exportBlur > 0) {
-      ctx.filter = `blur(${exportBlur}px)`
-    }
-
-    ctx.drawImage(layer, 0, 0)
-    ctx.filter = "none"
+    await renderGradientCanvas(ctx, {
+      base,
+      points,
+      blur,
+      noise,
+      effectId,
+      effectAmount,
+      width: w,
+      height: h,
+      pixelScale,
+    })
 
     canvas.toBlob(
       (blob) => {
@@ -213,6 +183,9 @@ filter: blur(${blur}px);`
         <GradientPreview
           base={base}
           blur={blur}
+          noise={noise}
+          effectId={effectId}
+          effectAmount={effectAmount}
           layers={layers}
           onSelectPoint={setSelected}
           onUpdatePoint={updatePoint}
@@ -226,6 +199,9 @@ filter: blur(${blur}px);`
         onApplyTemplate={applyTemplate}
         base={base}
         blur={blur}
+        noise={noise}
+        effectId={effectId}
+        effectAmount={effectAmount}
         cssCode={cssCode}
         onAddPoint={addPoint}
         onDownloadJpg={downloadJpg}
@@ -236,6 +212,9 @@ filter: blur(${blur}px);`
         selected={selected}
         setBase={setBase}
         setBlur={setBlur}
+        setNoise={setNoise}
+        setEffectId={setEffectId}
+        setEffectAmount={setEffectAmount}
         setSelected={setSelected}
         setSizeIdx={setSizeIdx}
         sizeIdx={sizeIdx}

@@ -14,6 +14,13 @@ export interface SizeOption {
 /** Fade distance as a percent of the farthest corner. Softness comes from blur. */
 export const GRADIENT_RADIUS = 62
 
+/** Seamless fractal-noise tile used for the grain overlay. */
+export const NOISE_TILE_SIZE = 180
+
+const NOISE_SVG = `<svg xmlns="http://www.w3.org/2000/svg" width="${NOISE_TILE_SIZE}" height="${NOISE_TILE_SIZE}"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="4" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/></filter><rect width="100%" height="100%" filter="url(#n)"/></svg>`
+
+export const NOISE_DATA_URI = `data:image/svg+xml,${encodeURIComponent(NOISE_SVG)}`
+
 export function clamp(value: number, min: number, max: number) {
   return Math.min(Math.max(value, min), max)
 }

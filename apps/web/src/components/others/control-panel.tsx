@@ -2,7 +2,17 @@
 
 import React, { useMemo, useState } from "react"
 
-import { Point, SizeOption } from "@/src/types/gradient"
+import {
+  EFFECT_CATEGORIES,
+  GRADIENT_EFFECTS,
+  effectExportNote,
+} from "@/src/lib/gradient-effects"
+import {
+  NOISE_DATA_URI,
+  NOISE_TILE_SIZE,
+  Point,
+  SizeOption,
+} from "@/src/types/gradient"
 
 import { PointEditor } from "./point-editor"
 import { GradientColorField } from "./gradient-color-field"
@@ -36,6 +46,14 @@ interface ControlPanelProps {
 
   blur: number
   setBlur: (value: number) => void
+
+  noise: number
+  setNoise: (value: number) => void
+
+  effectId: string
+  setEffectId: (value: string) => void
+  effectAmount: number
+  setEffectAmount: (value: number) => void
 
   sizes: SizeOption[]
   sizeIdx: number
@@ -71,6 +89,12 @@ export function ControlPanel({
   setBase,
   blur,
   setBlur,
+  noise,
+  setNoise,
+  effectId,
+  setEffectId,
+  effectAmount,
+  setEffectAmount,
   sizes,
   sizeIdx,
   setSizeIdx,
@@ -92,6 +116,27 @@ export function ControlPanel({
     points.find((point) => point.id === selected) ?? points[0]
 
   const currentSize = sizes[sizeIdx]
+  const selectedEffect = GRADIENT_EFFECTS.find((effect) => effect.id === effectId)
+  const effectCategory = selectedEffect?.category ?? "none"
+  const effectCategoryLabel =
+    EFFECT_CATEGORIES.find((category) => category.id === effectCategory)?.label ??
+    "None"
+  const effectsInCategory = GRADIENT_EFFECTS.filter(
+    (effect) => effect.category === effectCategory
+  )
+
+  const selectCategory = (value: string) => {
+    if (value === "none") {
+      setEffectId("none")
+      return
+    }
+
+    const current = GRADIENT_EFFECTS.find((effect) => effect.id === effectId)
+    if (current?.category === value) return
+
+    const first = GRADIENT_EFFECTS.find((effect) => effect.category === value)
+    if (first) setEffectId(first.id)
+  }
 
   /*
    * Extract background-image from generated CSS.
@@ -114,8 +159,11 @@ export function ControlPanel({
    * Dynamic gradient values are kept inside style because
    * they are generated at runtime.
    */
+  const effectNote = effectExportNote(effectId, effectAmount)
+
   const tailwindCode = useMemo(() => {
-    return `<div
+    if (noise <= 0) {
+      return `<div
   className="min-h-full w-full"
   style={{
     backgroundColor: "${base}",
@@ -123,22 +171,66 @@ export function ControlPanel({
     filter: "blur(${blur}px)",
   }}
 />`
-  }, [base, backgroundImage, blur])
+    }
+
+    const filterLine =
+      blur > 0 ? `\n      filter: "blur(${blur}px)",` : ""
+
+    return `<div className="relative isolate min-h-full w-full overflow-hidden" style={{ backgroundColor: "${base}" }}>
+  <div
+    className="absolute inset-0"
+    style={{
+      backgroundImage: \`${backgroundImage}\`,${filterLine}
+    }}
+  />
+  <div
+    className="pointer-events-none absolute inset-0"
+    style={{
+      backgroundImage: \`url("${NOISE_DATA_URI}")\`,
+      backgroundRepeat: "repeat",
+      backgroundSize: "${NOISE_TILE_SIZE}px",
+      opacity: ${(noise / 100).toFixed(2)},
+      mixBlendMode: "overlay",
+    }}
+  />
+</div>`
+  }, [base, backgroundImage, blur, noise])
 
   /*
    * Pure inline style version.
    */
   const styleCode = useMemo(() => {
-    return `style={{
+    if (noise <= 0) {
+      return `style={{
   backgroundColor: "${base}",
   backgroundImage: \`${backgroundImage}\`,
   filter: "blur(${blur}px)",
 }}`
-  }, [base, backgroundImage, blur])
+    }
 
-  const code = copyMode === "tailwind"
-    ? tailwindCode
-    : styleCode
+    const filterLine =
+      blur > 0 ? `\n    filter: "blur(${blur}px)",` : ""
+
+    return `<div style={{ position: "relative", isolation: "isolate", minHeight: "100%", width: "100%", overflow: "hidden", backgroundColor: "${base}" }}>
+  <div style={{
+    position: "absolute",
+    inset: 0,
+    backgroundImage: \`${backgroundImage}\`,${filterLine}
+  }} />
+  <div style={{
+    position: "absolute",
+    inset: 0,
+    pointerEvents: "none",
+    backgroundImage: \`url("${NOISE_DATA_URI}")\`,
+    backgroundRepeat: "repeat",
+    backgroundSize: "${NOISE_TILE_SIZE}px",
+    opacity: ${(noise / 100).toFixed(2)},
+    mixBlendMode: "overlay",
+  }} />
+</div>`
+  }, [base, backgroundImage, blur, noise])
+
+  const code = `${effectNote}${copyMode === "tailwind" ? tailwindCode : styleCode}`
 
   const copyCode = async () => {
     try {
@@ -214,7 +306,107 @@ export function ControlPanel({
         />
       </div>
 
-       
+      <div className="flex flex-col gap-2">
+        <div className="flex items-center justify-between">
+          <Label>
+            Noise
+          </Label>
+
+          <span className="font-mono text-xs text-muted-foreground">
+            {noise}%
+          </span>
+        </div>
+
+        <Slider
+          min={0}
+          max={100}
+          step={1}
+          value={[noise]}
+          onValueChange={(value) =>
+            setNoise(sliderValue(value, noise))
+          }
+        />
+      </div>
+
+      <div className="flex flex-col gap-2">
+        <Label>Effect</Label>
+
+        <Select
+          value={effectCategoryLabel}
+          onValueChange={(value) => {
+            if (typeof value !== "string") return
+            if (value === "None") {
+              selectCategory("none")
+              return
+            }
+            const category = EFFECT_CATEGORIES.find((item) => item.label === value)
+            if (category) selectCategory(category.id)
+          }}
+        >
+          <SelectTrigger className="h-8 w-full text-xs">
+            <SelectValue placeholder="None" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="None" className="text-xs">
+              None
+            </SelectItem>
+            {EFFECT_CATEGORIES.map((category) => (
+              <SelectItem
+                key={category.id}
+                value={category.label}
+                className="text-xs"
+              >
+                {category.label}
+              </SelectItem>
+            ))}
+          </SelectContent>
+        </Select>
+
+        {effectCategory !== "none" && (
+          <>
+            <Select
+              value={selectedEffect?.name}
+              onValueChange={(value) => {
+                if (typeof value !== "string") return
+                const effect = effectsInCategory.find((item) => item.name === value)
+                if (effect) setEffectId(effect.id)
+              }}
+            >
+              <SelectTrigger className="h-8 w-full text-xs">
+                <SelectValue placeholder="Choose an effect" />
+              </SelectTrigger>
+              <SelectContent>
+                {effectsInCategory.map((effect) => (
+                  <SelectItem
+                    key={effect.id}
+                    value={effect.name}
+                    className="text-xs"
+                  >
+                    {effect.name}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+
+            <div className="flex items-center justify-between">
+              <Label>Amount</Label>
+              <span className="font-mono text-xs text-muted-foreground">
+                {effectAmount}%
+              </span>
+            </div>
+
+            <Slider
+              min={0}
+              max={100}
+              step={1}
+              value={[effectAmount]}
+              onValueChange={(value) =>
+                setEffectAmount(sliderValue(value, effectAmount))
+              }
+            />
+          </>
+        )}
+      </div>
 
       <div className="flex flex-col gap-2">
 
@@ -359,7 +551,7 @@ export function ControlPanel({
           value={code}
           readOnly
           rows={8}
-          className="w-full max-h-60 resize-none bg-muted/50 font-mono text-[10px] leading-5"
+          className="w-full max-h-40 resize-none bg-muted/50 font-mono text-[10px] leading-5"
         />
 
       </div>
