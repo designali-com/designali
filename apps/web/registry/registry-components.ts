@@ -2,6 +2,336 @@ import type { Registry } from "shadcn/schema"
 
 export const components: Registry["items"] = [
   {
+    title: "Apple iMac",
+    name: "imac-01",
+    type: "registry:component",
+    files: [
+      {
+        path: "components/apple/imac/imac-01.tsx",
+        type: "registry:component",
+      },  
+    ],
+  },
+  {
+    title: "Apple iMac",
+    name: "imac-02",
+    type: "registry:component",
+    files: [
+      {
+        path: "components/apple/imac/imac-02.tsx",
+        type: "registry:component",
+      },  
+    ],
+  },
+  {
+    title: "Apple iMac",
+    name: "imac-03",
+    type: "registry:component",
+    files: [
+      {
+        path: "components/apple/imac/imac-03.tsx",
+        type: "registry:component",
+      },    
+    ],
+  },
+  {
+    title: "Apple iMac",
+    name: "imac-04",
+    type: "registry:component",
+    files: [
+      {
+        path: "components/apple/imac/imac-04.tsx",
+        type: "registry:component",
+      },    
+    ],
+  },
+  {
+    title: "Apple iMac",
+    name: "imac-05",
+    type: "registry:component",
+    files: [
+      {
+        path: "components/apple/imac/imac-05.tsx",
+        type: "registry:component",
+      },    
+    ],
+  },
+  {
+    title: "Apple iPhone",
+    name: "iphone-01",
+    type: "registry:component",
+    files: [
+      {
+        path: "components/apple/iphone/iphone-01.tsx",
+        type: "registry:component",
+      },    
+    ],
+  },
+  {
+    title: "Apple iPhone",
+    name: "iphone-02",
+    type: "registry:component",
+    files: [
+      {
+        path: "components/apple/iphone/iphone-02.tsx",
+        type: "registry:component",
+      },    
+    ],
+  },
+  {
+    title: "Apple iPhone",
+    name: "iphone-03",
+    type: "registry:component",
+    files: [
+      {
+        path: "components/apple/iphone/iphone-03.tsx",
+        type: "registry:component",
+      },    
+    ],
+  },
+  {
+    title: "Apple iPhone",
+    name: "iphone-04",
+    type: "registry:component",
+    files: [
+      {
+        path: "components/apple/iphone/iphone-04.tsx",
+        type: "registry:component",
+      },    
+    ],
+  },
+  {
+    title: "Apple iPhone",
+    name: "iphone-05",
+    type: "registry:component",
+    files: [
+      {
+        path: "components/apple/iphone/iphone-05.tsx",
+        type: "registry:component",
+      },    
+    ],
+  },
+  {
+    title: "Apple iPhone Duo",
+    name: "iphone-duo-01",
+    type: "registry:component",
+    files: [
+      {
+        path: "components/apple/iphone-duo/iphone-duo-01.tsx",
+        type: "registry:component",
+      },    
+    ],
+  },
+  {
+    title: "Apple iPhone Duo",
+    name: "iphone-duo-02",
+    type: "registry:component",
+    files: [
+      {
+        path: "components/apple/iphone-duo/iphone-duo-02.tsx",
+        type: "registry:component",
+      },    
+    ],
+  },
+  {
+    title: "Apple iPhone Duo",
+    name: "iphone-duo-03",
+    type: "registry:component",
+    files: [
+      {
+        path: "components/apple/iphone-duo/iphone-duo-03.tsx",
+        type: "registry:component",
+      },    
+    ],
+  },
+  {
+    title: "Apple iPhone Duo",
+    name: "iphone-duo-04",
+    type: "registry:component",
+    files: [
+      {
+        path: "components/apple/iphone-duo/iphone-duo-04.tsx",
+        type: "registry:component",
+      },    
+    ],
+  },
+  {
+    title: "Apple iPhone Duo",
+    name: "iphone-duo-05",
+    type: "registry:component",
+    files: [
+      {
+        path: "components/apple/iphone-duo/iphone-duo-05.tsx",
+        type: "registry:component",
+      },    
+    ],
+  },
+  {
+    title: "Apple MacBook",
+    name: "macbook-01",
+    type: "registry:component",
+    files: [
+      {
+        path: "components/apple/macbook/macbook-01.tsx",
+        type: "registry:component",
+      },    
+    ],
+  },
+  {
+    title: "Apple MacBook",
+    name: "macbook-02",
+    type: "registry:component",
+    files: [
+      {
+        path: "components/apple/macbook/macbook-02.tsx",
+        type: "registry:component",
+      },    
+    ],
+  },
+  {
+    title: "Apple MacBook",
+    name: "macbook-03",
+    type: "registry:component",
+    files: [
+      {
+        path: "components/apple/macbook/macbook-03.tsx",
+        type: "registry:component",
+      },    
+    ],
+  },
+  {
+    title: "Apple MacBook",
+    name: "macbook-04",
+    type: "registry:component",
+    files: [
+      {
+        path: "components/apple/macbook/macbook-04.tsx",
+        type: "registry:component",
+      },    
+    ],
+  },
+  {
+    title: "Apple MacBook",
+    name: "macbook-05",
+    type: "registry:component",
+    files: [
+      {
+        path: "components/apple/macbook/macbook-05.tsx",
+        type: "registry:component",
+      },    
+    ],
+  },
+  {
+    title: "Apple Studio Display",
+    name: "studio-display-01",
+    type: "registry:component",
+    files: [
+      {
+        path: "components/apple/studio-display/studio-display-01.tsx",
+        type: "registry:component",
+      },    
+    ],
+  },
+  {
+    title: "Apple Studio Display",
+    name: "studio-display-02",
+    type: "registry:component",
+    files: [
+      {
+        path: "components/apple/studio-display/studio-display-02.tsx",
+        type: "registry:component",
+      },    
+    ],
+  },
+  {
+    title: "Apple Studio Display",
+    name: "studio-display-03",
+    type: "registry:component",
+    files: [
+      {
+        path: "components/apple/studio-display/studio-display-03.tsx",
+        type: "registry:component",
+      },    
+    ],
+  },
+  {
+    title: "Apple Studio Display",
+    name: "studio-display-04",
+    type: "registry:component",
+    files: [
+      {
+        path: "components/apple/studio-display/studio-display-04.tsx",
+        type: "registry:component",
+      },    
+    ],
+  },
+  {
+    title: "Apple Studio Display",
+    name: "studio-display-05",
+    type: "registry:component",
+    files: [
+      {
+        path: "components/apple/studio-display/studio-display-05.tsx",
+        type: "registry:component",
+      },    
+    ],
+  },
+  {
+    title: "Apple iPad",
+    name: "ipad-01",
+    type: "registry:component",
+    files: [
+      {
+        path: "components/apple/ipad/ipad-01.tsx",
+        type: "registry:component",
+      },    
+    ],
+  },
+  {
+    title: "Counter Number",
+    name: "ipad-02",
+    type: "registry:component",
+    files: [
+      {
+        path: "components/apple/ipad/ipad-02.tsx",
+        type: "registry:component",
+      },    
+    ],
+  },
+  {
+    title: "Apple iPad",
+    name: "ipad-03",
+    type: "registry:component",
+    files: [
+      {
+        path: "components/apple/ipad/ipad-03.tsx",
+        type: "registry:component",
+      },    
+    ],
+  },
+  {
+    title: "Apple iPad",
+    name: "ipad-04",
+    type: "registry:component",
+    files: [
+      {
+        path: "components/apple/ipad/ipad-04.tsx",
+        type: "registry:component",
+      },    
+    ],
+  },
+  {
+    title: "Apple iPad",
+    name: "ipad-05",
+    type: "registry:component",
+    files: [
+      {
+        path: "components/apple/ipad/ipad-05.tsx",
+        type: "registry:component",
+      },    
+    ],
+  },
+  {
     title: "Counter Number",
     name: "counter-number-default",
     type: "registry:component",

@@ -2,6 +2,66 @@ import type { Registry } from "shadcn/schema"
 
 export const ui: Registry["items"] = [
   {
+    name: "iphone",
+    type: "registry:ui",
+    files: [
+      {
+        path: "ui/apple/iphone.tsx",
+        type: "registry:ui",
+      },
+    ],
+  },
+  {
+    name: "iphone-duo",
+    type: "registry:ui",
+    files: [
+      {
+        path: "ui/apple/iphone-duo.tsx",
+        type: "registry:ui",
+      },
+    ],
+  },
+  {
+    name: "ipad",
+    type: "registry:ui",
+    files: [
+      {
+        path: "ui/apple/ipad.tsx",
+        type: "registry:ui",
+      },
+    ],
+  },
+  {
+    name: "imac",
+    type: "registry:ui",
+    files: [
+      {
+        path: "ui/apple/imac.tsx",
+        type: "registry:ui",
+      },
+    ],
+  },
+  {
+    name: "studio-display",
+    type: "registry:ui",
+    files: [
+      {
+        path: "ui/apple/studio-display.tsx",
+        type: "registry:ui",
+      },
+    ],
+  },
+  {
+    name: "macbook",
+    type: "registry:ui",
+    files: [
+      {
+        path: "ui/apple/macbook.tsx",
+        type: "registry:ui",
+      },
+    ],
+  },
+  {
     name: "gauge",
     type: "registry:ui",
     files: [

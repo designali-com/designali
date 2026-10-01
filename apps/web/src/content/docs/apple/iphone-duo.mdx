@@ -1,0 +1,147 @@
+---
+title: iPhone Duo
+description: A responsive iPhone Duo frame component that wraps any content inside a realistic foldable iPhone display, with front, back and open views.
+---
+
+<ComponentPreview
+  name="iphone-duo-01"
+  className="[&_.preview>[data-orientation=vertical]]:sm:max-w-[90%] **:[.preview]:min-h-[300px]"
+  description="Default iPhone Duo front view with custom content on the screen."
+  align="start"
+/>
+
+<ComponentPreview
+  name="iphone-duo-02"
+  className="[&_.preview>[data-orientation=vertical]]:sm:max-w-[90%] **:[.preview]:min-h-[300px]"
+  description="iPhone Duo in portrait and landscape orientations."
+  align="start"
+/>
+
+<ComponentPreview
+  name="iphone-duo-03"
+  className="[&_.preview>[data-orientation=vertical]]:sm:max-w-[90%] **:[.preview]:min-h-[300px]"
+  description="iPhone Duo front, back and frontback views."
+  align="start"
+/>
+
+<ComponentPreview
+  name="iphone-duo-04"
+  className="[&_.preview>[data-orientation=vertical]]:sm:max-w-[90%] **:[.preview]:min-h-[300px]"
+  description="iPhone Duo in Night Sky and Star White colors."
+  align="start"
+/>
+
+<ComponentPreview
+  name="iphone-duo-05"
+  className="[&_.preview>[data-orientation=vertical]]:sm:max-w-[90%] **:[.preview]:min-h-[300px]"
+  description="iPhone Duo in different sizes: sm, md, lg and xl."
+  align="start"
+/>
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add https://designali.com/r/iphone-duo.json
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="iphone-duo" title="components/ui/iphone-duo.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</CodeTabs>
+
+## Usage
+
+```tsx showLineNumbers
+import { IPhoneDuo } from "@/components/ui/iphone-duo"
+```
+
+```tsx showLineNumbers
+<IPhoneDuo>
+  <div className="p-6">Your content here</div>
+</IPhoneDuo>
+```
+
+### Size
+
+```tsx showLineNumbers
+<IPhoneDuo size="lg">
+  <div className="p-6">Large iPhone Duo</div>
+</IPhoneDuo>
+```
+
+### Orientation
+
+```tsx showLineNumbers
+<IPhoneDuo orientation="landscape">
+  <div className="p-6">Landscape iPhone Duo</div>
+</IPhoneDuo>
+```
+
+### Side
+
+```tsx showLineNumbers
+<IPhoneDuo side="back" />
+```
+
+```tsx showLineNumbers
+<IPhoneDuo side="frontback" className="h-[28rem] w-auto" />
+```
+
+### Color
+
+```tsx showLineNumbers
+<IPhoneDuo color="star-white">
+  <div className="p-6">Star White iPhone Duo</div>
+</IPhoneDuo>
+```
+
+### Custom frame image
+
+```tsx showLineNumbers
+<IPhoneDuo image="/images/my-phone-frame.png" alt="Custom phone frame">
+  <div className="p-6">Custom frame</div>
+</IPhoneDuo>
+```
+
+## Props
+
+| Prop          | Type                                  | Default        |
+| ------------- | ------------------------------------- | -------------- |
+| `children`    | `ReactNode`                           | —              |
+| `className`   | `string`                              | —              |
+| `size`        | `"sm" \| "md" \| "lg" \| "xl"`        | `"md"`         |
+| `orientation` | `"portrait" \| "landscape"`           | `"portrait"`   |
+| `side`        | `"front" \| "back" \| "frontback"`    | `"front"`      |
+| `color`       | `"night-sky" \| "star-white"`         | `"night-sky"`  |
+| `image`       | `string`                              | —              |
+| `alt`         | `string`                              | `"iPhone Duo"` |
+
+## Notes
+
+- The screen area is an absolutely positioned container, so `children` scroll vertically inside it when they overflow.
+- `children` are only rendered when `side="front"`. The `back` and `frontback` views show the frame image only.
+- `orientation` is ignored when `side="frontback"`.
+- With `side="frontback"`, no size or aspect ratio classes are applied, so you must set the dimensions yourself with `className` (for example `h-[28rem] w-auto`).
+- Passing `image` overrides `side`, `orientation` and `color` for the frame.

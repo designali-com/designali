@@ -1,7 +1,43 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-28T12:20:03.866Z",
+  "generatedAt": "2026-10-01T12:00:08.672Z",
   "items": [
+    {
+      "name": "iphone",
+      "type": "registry:ui",
+      "description": "",
+      "categories": []
+    },
+    {
+      "name": "iphone-duo",
+      "type": "registry:ui",
+      "description": "",
+      "categories": []
+    },
+    {
+      "name": "ipad",
+      "type": "registry:ui",
+      "description": "",
+      "categories": []
+    },
+    {
+      "name": "imac",
+      "type": "registry:ui",
+      "description": "",
+      "categories": []
+    },
+    {
+      "name": "studio-display",
+      "type": "registry:ui",
+      "description": "",
+      "categories": []
+    },
+    {
+      "name": "macbook",
+      "type": "registry:ui",
+      "description": "",
+      "categories": []
+    },
     {
       "name": "gauge",
       "type": "registry:ui",
@@ -1254,6 +1290,186 @@
       "name": "tooltip-02",
       "type": "registry:example",
       "description": "Tooltips demonstrated across all directional sides (left, top, bottom, right).",
+      "categories": []
+    },
+    {
+      "name": "imac-01",
+      "type": "registry:component",
+      "description": "",
+      "categories": []
+    },
+    {
+      "name": "imac-02",
+      "type": "registry:component",
+      "description": "",
+      "categories": []
+    },
+    {
+      "name": "imac-03",
+      "type": "registry:component",
+      "description": "",
+      "categories": []
+    },
+    {
+      "name": "imac-04",
+      "type": "registry:component",
+      "description": "",
+      "categories": []
+    },
+    {
+      "name": "imac-05",
+      "type": "registry:component",
+      "description": "",
+      "categories": []
+    },
+    {
+      "name": "iphone-01",
+      "type": "registry:component",
+      "description": "",
+      "categories": []
+    },
+    {
+      "name": "iphone-02",
+      "type": "registry:component",
+      "description": "",
+      "categories": []
+    },
+    {
+      "name": "iphone-03",
+      "type": "registry:component",
+      "description": "",
+      "categories": []
+    },
+    {
+      "name": "iphone-04",
+      "type": "registry:component",
+      "description": "",
+      "categories": []
+    },
+    {
+      "name": "iphone-05",
+      "type": "registry:component",
+      "description": "",
+      "categories": []
+    },
+    {
+      "name": "iphone-duo-01",
+      "type": "registry:component",
+      "description": "",
+      "categories": []
+    },
+    {
+      "name": "iphone-duo-02",
+      "type": "registry:component",
+      "description": "",
+      "categories": []
+    },
+    {
+      "name": "iphone-duo-03",
+      "type": "registry:component",
+      "description": "",
+      "categories": []
+    },
+    {
+      "name": "iphone-duo-04",
+      "type": "registry:component",
+      "description": "",
+      "categories": []
+    },
+    {
+      "name": "iphone-duo-05",
+      "type": "registry:component",
+      "description": "",
+      "categories": []
+    },
+    {
+      "name": "macbook-01",
+      "type": "registry:component",
+      "description": "",
+      "categories": []
+    },
+    {
+      "name": "macbook-02",
+      "type": "registry:component",
+      "description": "",
+      "categories": []
+    },
+    {
+      "name": "macbook-03",
+      "type": "registry:component",
+      "description": "",
+      "categories": []
+    },
+    {
+      "name": "macbook-04",
+      "type": "registry:component",
+      "description": "",
+      "categories": []
+    },
+    {
+      "name": "macbook-05",
+      "type": "registry:component",
+      "description": "",
+      "categories": []
+    },
+    {
+      "name": "studio-display-01",
+      "type": "registry:component",
+      "description": "",
+      "categories": []
+    },
+    {
+      "name": "studio-display-02",
+      "type": "registry:component",
+      "description": "",
+      "categories": []
+    },
+    {
+      "name": "studio-display-03",
+      "type": "registry:component",
+      "description": "",
+      "categories": []
+    },
+    {
+      "name": "studio-display-04",
+      "type": "registry:component",
+      "description": "",
+      "categories": []
+    },
+    {
+      "name": "studio-display-05",
+      "type": "registry:component",
+      "description": "",
+      "categories": []
+    },
+    {
+      "name": "ipad-01",
+      "type": "registry:component",
+      "description": "",
+      "categories": []
+    },
+    {
+      "name": "ipad-02",
+      "type": "registry:component",
+      "description": "",
+      "categories": []
+    },
+    {
+      "name": "ipad-03",
+      "type": "registry:component",
+      "description": "",
+      "categories": []
+    },
+    {
+      "name": "ipad-04",
+      "type": "registry:component",
+      "description": "",
+      "categories": []
+    },
+    {
+      "name": "ipad-05",
+      "type": "registry:component",
+      "description": "",
       "categories": []
     },
     {

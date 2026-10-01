@@ -1,0 +1,144 @@
+---
+title: iPhone
+description: A responsive iPhone frame component that wraps any content inside a realistic iPhone 18 Pro or 18 Pro Max display, with portrait and landscape orientations.
+---
+
+<ComponentPreview
+  name="iphone-01"
+  className="[&_.preview>[data-orientation=vertical]]:sm:max-w-[90%] **:[.preview]:min-h-[300px]"
+  description="Default iPhone 18 Pro in portrait with custom content on the screen."
+  align="start"
+/>
+
+<ComponentPreview
+  name="iphone-02"
+  className="[&_.preview>[data-orientation=vertical]]:sm:max-w-[90%] **:[.preview]:min-h-[300px]"
+  description="iPhone 18 Pro and iPhone 18 Pro Max variants."
+  align="start"
+/>
+
+<ComponentPreview
+  name="iphone-03"
+  className="[&_.preview>[data-orientation=vertical]]:sm:max-w-[90%] **:[.preview]:min-h-[300px]"
+  description="iPhone in portrait and landscape orientations."
+  align="start"
+/>
+
+<ComponentPreview
+  name="iphone-04"
+  className="[&_.preview>[data-orientation=vertical]]:sm:max-w-[90%] **:[.preview]:min-h-[300px]"
+  description="iPhone in Black, Glacier, Silver and Burgundy colors."
+  align="start"
+/>
+
+<ComponentPreview
+  name="iphone-05"
+  className="[&_.preview>[data-orientation=vertical]]:sm:max-w-[90%] **:[.preview]:min-h-[300px]"
+  description="iPhone in different sizes: sm, md, lg and xl."
+  align="start"
+/>
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add https://designali.com/r/iphone.json
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="iphone" title="components/ui/iphone.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</CodeTabs>
+
+## Usage
+
+```tsx showLineNumbers
+import { IPhone } from "@/components/ui/iphone"
+```
+
+```tsx showLineNumbers
+<IPhone>
+  <div className="p-6">Your content here</div>
+</IPhone>
+```
+
+### Variant
+
+```tsx showLineNumbers
+<IPhone variant="18-pro-max">
+  <div className="p-6">iPhone 18 Pro Max</div>
+</IPhone>
+```
+
+### Size
+
+```tsx showLineNumbers
+<IPhone size="lg">
+  <div className="p-6">Large iPhone</div>
+</IPhone>
+```
+
+### Orientation
+
+```tsx showLineNumbers
+<IPhone orientation="landscape">
+  <div className="p-6">Landscape iPhone</div>
+</IPhone>
+```
+
+### Color
+
+```tsx showLineNumbers
+<IPhone color="burgundy">
+  <div className="p-6">Burgundy iPhone</div>
+</IPhone>
+```
+
+### Custom frame image
+
+```tsx showLineNumbers
+<IPhone image="/images/my-phone-frame.png" alt="Custom phone frame">
+  <div className="p-6">Custom frame</div>
+</IPhone>
+```
+
+## Props
+
+| Prop          | Type                                          | Default      |
+| ------------- | --------------------------------------------- | ------------ |
+| `children`    | `ReactNode`                                   | —            |
+| `className`   | `string`                                      | —            |
+| `variant`     | `"18-pro" \| "18-pro-max"`                    | `"18-pro"`   |
+| `size`        | `"sm" \| "md" \| "lg" \| "xl"`                | `"md"`       |
+| `orientation` | `"portrait" \| "landscape"`                   | `"portrait"` |
+| `color`       | `"black" \| "glacier" \| "silver" \| "burgundy"` | `"silver"` |
+| `image`       | `string`                                      | —            |
+| `alt`         | `string`                                      | `"iPhone"`   |
+
+## Notes
+
+- The screen area is an absolutely positioned container, so `children` scroll vertically inside it when they overflow.
+- The iPhone is sized by height, and the width follows from the aspect ratio (`9/19.5` in portrait, `19.5/9` in landscape).
+- All four colors are available for both variants.
+- Passing `image` overrides `variant`, `orientation` and `color` for the frame.

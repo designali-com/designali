@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "imac-01",
+  "type": "registry:component",
+  "title": "Apple iMac",
+  "files": [
+    {
+      "path": "registry/designali/components/apple/imac/imac-01.tsx",
+      "content": "import { IMac } from \"@/registry/designali/ui/apple/imac\" \n\nexport default function IMac01() {\n  return (\n    <div className=\"flex h-full w-full items-center justify-center\">\n       <IMac size=\"md\" color=\"silver\">\n        Hi\n       </IMac>\n    </div>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ]
+}

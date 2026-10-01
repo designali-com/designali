@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "studio-display-04",
+  "type": "registry:component",
+  "title": "Apple Studio Display",
+  "files": [
+    {
+      "path": "registry/designali/components/apple/studio-display/studio-display-04.tsx",
+      "content": "import { StudioDisplay } from \"@/registry/designali/ui/apple/studio-display\" \n\nexport default function IPhone01() {\n  return (\n    <div className=\"flex h-full w-full items-center justify-center\">\n       <StudioDisplay size=\"md\">\n        Hi\n       </StudioDisplay>\n    </div>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ]
+}

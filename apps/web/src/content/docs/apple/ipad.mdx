@@ -1,0 +1,151 @@
+---
+title: iPad
+description: A responsive iPad frame component that wraps any content inside a realistic iPad Pro or iPad Air display, with portrait and landscape orientations.
+---
+
+<ComponentPreview
+  name="ipad-01"
+  className="[&_.preview>[data-orientation=vertical]]:sm:max-w-[90%] **:[.preview]:min-h-[300px]"
+  description="Default iPad Pro in portrait with custom content on the screen."
+  align="start"
+/>
+
+<ComponentPreview
+  name="ipad-02"
+  className="[&_.preview>[data-orientation=vertical]]:sm:max-w-[90%] **:[.preview]:min-h-[300px]"
+  description="iPad Pro and iPad Air variants."
+  align="start"
+/>
+
+<ComponentPreview
+  name="ipad-03"
+  className="[&_.preview>[data-orientation=vertical]]:sm:max-w-[90%] **:[.preview]:min-h-[300px]"
+  description="iPad in portrait and landscape orientations."
+  align="start"
+/>
+
+<ComponentPreview
+  name="ipad-04"
+  className="[&_.preview>[data-orientation=vertical]]:sm:max-w-[90%] **:[.preview]:min-h-[300px]"
+  description="iPad in different frame colors."
+  align="start"
+/>
+
+<ComponentPreview
+  name="ipad-05"
+  className="[&_.preview>[data-orientation=vertical]]:sm:max-w-[90%] **:[.preview]:min-h-[300px]"
+  description="iPad in different sizes: sm, md, lg and xl."
+  align="start"
+/>
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add https://designali.com/r/ipad.json
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="ipad" title="components/ui/ipad.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</CodeTabs>
+
+## Usage
+
+```tsx showLineNumbers
+import { IPad } from "@/components/ui/ipad"
+```
+
+```tsx showLineNumbers
+<IPad>
+  <div className="p-6">Your content here</div>
+</IPad>
+```
+
+### Variant
+
+```tsx showLineNumbers
+<IPad variant="ipad-air" color="blue">
+  <div className="p-6">iPad Air</div>
+</IPad>
+```
+
+### Orientation
+
+```tsx showLineNumbers
+<IPad orientation="landscape">
+  <div className="p-6">Landscape iPad</div>
+</IPad>
+```
+
+### Size
+
+```tsx showLineNumbers
+<IPad size="lg">
+  <div className="p-6">Large iPad</div>
+</IPad>
+```
+
+### Color
+
+```tsx showLineNumbers
+<IPad variant="ipad-pro" color="black">
+  <div className="p-6">Space Black iPad Pro</div>
+</IPad>
+```
+
+### Custom frame image
+
+```tsx showLineNumbers
+<IPad image="/images/my-ipad-frame.png" alt="Custom iPad frame">
+  <div className="p-6">Custom frame</div>
+</IPad>
+```
+
+## Props
+
+| Prop          | Type                                                                          | Default       |
+| ------------- | ----------------------------------------------------------------------------- | ------------- |
+| `children`    | `ReactNode`                                                                   | —             |
+| `className`   | `string`                                                                      | —             |
+| `variant`     | `"ipad-pro" \| "ipad-air"`                                                    | `"ipad-pro"`  |
+| `size`        | `"sm" \| "md" \| "lg" \| "xl"`                                                | `"md"`        |
+| `orientation` | `"portrait" \| "landscape"`                                                   | `"portrait"`  |
+| `color`       | `"black" \| "silver" \| "purple" \| "space-grey" \| "starlight" \| "blue"`    | `"silver"`    |
+| `image`       | `string`                                                                      | —             |
+| `alt`         | `string`                                                                      | `"iPad"`      |
+
+## Available colors
+
+| Variant     | Colors                                       |
+| ----------- | -------------------------------------------- |
+| `ipad-pro`  | `black`, `silver`                            |
+| `ipad-air`  | `purple`, `space-grey`, `starlight`, `blue`  |
+
+## Notes
+
+- The screen area is an absolutely positioned container, so `children` scroll vertically inside it when they overflow.
+- The iPad is sized by height, and the width follows from the aspect ratio (`3/4` in portrait, `4/3` in landscape).
+- If the selected `color` isn't available for the chosen `variant`, the first color of that variant is used. For example, `variant="ipad-air"` with the default `silver` falls back to `purple`.
+- Passing `image` overrides both `variant` and `color`.

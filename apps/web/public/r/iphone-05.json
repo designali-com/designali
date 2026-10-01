@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "iphone-05",
+  "type": "registry:component",
+  "title": "Apple iPhone",
+  "files": [
+    {
+      "path": "registry/designali/components/apple/iphone/iphone-05.tsx",
+      "content": "import { IPhone } from \"@/registry/designali/ui/apple/iphone\" \n\nexport default function IPhone01() {\n  return (\n    <div className=\"flex h-full w-full items-center justify-center\">\n       <IPhone size=\"md\" color=\"silver\">\n        Hi\n       </IPhone>\n    </div>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "macbook-05",
+  "type": "registry:component",
+  "title": "Apple MacBook",
+  "files": [
+    {
+      "path": "registry/designali/components/apple/macbook/macbook-05.tsx",
+      "content": "import { Macbook } from \"@/registry/designali/ui/apple/macbook\" \n\nexport default function IPhone01() {\n  return (\n    <div className=\"flex h-full w-full items-center justify-center\">\n       <Macbook size=\"md\">\n        Hi\n       </Macbook>\n    </div>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ]
+}

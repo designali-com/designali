@@ -1,0 +1,144 @@
+---
+title: Macbook
+description: A responsive MacBook frame component that wraps any content inside a realistic MacBook Air, MacBook Pro or MacBook Neo display, with multiple sizes and colors.
+---
+
+<ComponentPreview
+  name="macbook-01"
+  className="[&_.preview>[data-orientation=vertical]]:sm:max-w-[90%] **:[.preview]:min-h-[300px]"
+  description="Default silver MacBook Air with custom content on the screen."
+  align="start"
+/>
+
+<ComponentPreview
+  name="macbook-02"
+  className="[&_.preview>[data-orientation=vertical]]:sm:max-w-[90%] **:[.preview]:min-h-[300px]"
+  description="MacBook Air, MacBook Pro and MacBook Neo variants."
+  align="start"
+/>
+
+<ComponentPreview
+  name="macbook-03"
+  className="[&_.preview>[data-orientation=vertical]]:sm:max-w-[90%] **:[.preview]:min-h-[300px]"
+  description="MacBook in different frame colors."
+  align="start"
+/>
+
+<ComponentPreview
+  name="macbook-04"
+  className="[&_.preview>[data-orientation=vertical]]:sm:max-w-[90%] **:[.preview]:min-h-[300px]"
+  description="MacBook in different sizes: sm, md, lg and xl."
+  align="start"
+/>
+
+<ComponentPreview
+  name="macbook-05"
+  className="[&_.preview>[data-orientation=vertical]]:sm:max-w-[90%] **:[.preview]:min-h-[300px]"
+  description="MacBook with scrollable content inside the screen."
+  align="start"
+/>
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add https://designali.com/r/macbook.json
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="macbook" title="components/ui/macbook.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</CodeTabs>
+
+## Usage
+
+```tsx showLineNumbers
+import { Macbook } from "@/components/ui/macbook"
+```
+
+```tsx showLineNumbers
+<Macbook>
+  <div className="p-6">Your content here</div>
+</Macbook>
+```
+
+### Variant
+
+```tsx showLineNumbers
+<Macbook variant="macbook-pro" color="black">
+  <div className="p-6">MacBook Pro</div>
+</Macbook>
+```
+
+### Size
+
+```tsx showLineNumbers
+<Macbook size="lg">
+  <div className="p-6">Large MacBook</div>
+</Macbook>
+```
+
+### Color
+
+```tsx showLineNumbers
+<Macbook variant="macbook-air" color="sky-blue">
+  <div className="p-6">Sky Blue MacBook Air</div>
+</Macbook>
+```
+
+### Custom frame image
+
+```tsx showLineNumbers
+<Macbook image="/images/my-macbook-frame.png" alt="Custom MacBook frame">
+  <div className="p-6">Custom frame</div>
+</Macbook>
+```
+
+## Props
+
+| Prop        | Type                                                                                                  | Default         |
+| ----------- | ----------------------------------------------------------------------------------------------------- | --------------- |
+| `children`  | `ReactNode`                                                                                           | —               |
+| `className` | `string`                                                                                              | —               |
+| `variant`   | `"macbook-air" \| "macbook-pro" \| "macbook-neo"`                                                     | `"macbook-air"` |
+| `size`      | `"sm" \| "md" \| "lg" \| "xl"`                                                                        | `"md"`          |
+| `color`     | `"sky-blue" \| "midnight" \| "starlight" \| "silver" \| "black" \| "indigo" \| "blush" \| "citrus"`   | `"silver"`      |
+| `image`     | `string`                                                                                              | —               |
+| `alt`       | `string`                                                                                              | `"Macbook"`     |
+
+## Available colors
+
+| Variant       | Colors                                          |
+| ------------- | ----------------------------------------------- |
+| `macbook-air` | `sky-blue`, `midnight`, `starlight`, `silver`   |
+| `macbook-pro` | `black`, `silver`                               |
+| `macbook-neo` | `silver`, `indigo`, `blush`, `citrus`           |
+
+## Notes
+
+- The screen area is an absolutely positioned container, so `children` scroll vertically inside it when they overflow.
+- Sizes map to fixed widths (`24rem`, `36rem`, `48rem`, `64rem`) with a `16/10` aspect ratio. Use `className` (for example `max-w-full`) to keep the MacBook inside small viewports.
+- If the selected `color` isn't available for the chosen `variant`, the first color of that variant is used. For example, `variant="macbook-pro"` with `color="blush"` falls back to `black`.
+- `silver` exists in all three variants, so the default works everywhere.
+- Passing `image` overrides both `variant` and `color`.

@@ -77,7 +77,14 @@ const EXCLUDED_PAGES: string[] = []
    New Components
 ───────────────────────────────────────────── */
 
-const NEW_COMPONENTS: string[] = ["/docs/changelog", "/docs/components/bento"]
+const NEW_COMPONENTS: string[] = [
+  "/docs/apple/iphone-duo", 
+  "/docs/apple/iphone", 
+  "/docs/apple/ipad", 
+  "/docs/apple/macbook", 
+  "/docs/apple/imac",  
+  "/docs/apple/studio-display",
+]
 
 /* ─────────────────────────────────────────────
    Sidebar
@@ -217,7 +224,7 @@ export function DocsSidebar({
         ───────────────────────────────────── */}
 
         <SidebarGroup>
-          <SidebarMenu>
+          <SidebarMenu className="pb-12">
             {BOTTOM_LEVEL_SECTIONS.map(({ name, href, icon: Icon }) => {
               const isActive = pathname === href
 

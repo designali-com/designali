@@ -1,0 +1,125 @@
+---
+title: iMac
+description: A responsive iMac frame component that wraps any content inside a realistic iMac M4 display, with multiple sizes and colors.
+---
+
+<ComponentPreview
+  name="imac-01"
+  className="[&_.preview>[data-orientation=vertical]]:sm:max-w-[90%] **:[.preview]:min-h-[300px]"
+  description="Default silver iMac with custom content on the screen."
+  align="start"
+/>
+
+<ComponentPreview
+  name="imac-02"
+  className="[&_.preview>[data-orientation=vertical]]:sm:max-w-[90%] **:[.preview]:min-h-[300px]"
+  description="iMac in different frame colors."
+  align="start"
+/>
+
+<ComponentPreview
+  name="imac-03"
+  className="[&_.preview>[data-orientation=vertical]]:sm:max-w-[90%] **:[.preview]:min-h-[300px]"
+  description="iMac in different sizes: sm, md, lg and xl."
+  align="start"
+/>
+
+<ComponentPreview
+  name="imac-04"
+  className="[&_.preview>[data-orientation=vertical]]:sm:max-w-[90%] **:[.preview]:min-h-[300px]"
+  description="iMac with scrollable content inside the screen."
+  align="start"
+/>
+
+<ComponentPreview
+  name="imac-05"
+  className="[&_.preview>[data-orientation=vertical]]:sm:max-w-[90%] **:[.preview]:min-h-[300px]"
+  description="iMac with a custom frame image."
+  align="start"
+/>
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add https://designali.com/r/imac.json
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="imac" title="components/ui/imac.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</CodeTabs>
+
+## Usage
+
+```tsx showLineNumbers
+import { IMac } from "@/components/ui/imac"
+```
+
+```tsx showLineNumbers
+<IMac>
+  <div className="p-6">Your content here</div>
+</IMac>
+```
+
+### Size
+
+```tsx showLineNumbers
+<IMac size="lg">
+  <div className="p-6">Large iMac</div>
+</IMac>
+```
+
+### Color
+
+```tsx showLineNumbers
+<IMac color="blue">
+  <div className="p-6">Blue iMac</div>
+</IMac>
+```
+
+### Custom frame image
+
+```tsx showLineNumbers
+<IMac image="/images/my-imac-frame.png" alt="Custom iMac frame">
+  <div className="p-6">Custom frame</div>
+</IMac>
+```
+
+## Props
+
+| Prop        | Type                                                                          | Default    |
+| ----------- | ----------------------------------------------------------------------------- | ---------- |
+| `children`  | `ReactNode`                                                                   | —          |
+| `className` | `string`                                                                      | —          |
+| `size`      | `"sm" \| "md" \| "lg" \| "xl"`                                                | `"md"`     |
+| `color`     | `"blue" \| "green" \| "pink" \| "silver" \| "yellow" \| "orange" \| "purple"` | `"silver"` |
+| `image`     | `string`                                                                      | —          |
+| `alt`       | `string`                                                                      | `"iMac"`   |
+
+## Notes
+
+- The screen area is an absolutely positioned container, so `children` scroll vertically inside it when they overflow.
+- Passing `image` overrides the `color` prop.
+- Sizes map to fixed widths (`28rem`, `40rem`, `54rem`, `68rem`). Use `className` (for example `max-w-full`) to keep the iMac inside small viewports.

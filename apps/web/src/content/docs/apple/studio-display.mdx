@@ -1,0 +1,134 @@
+---
+title: Studio Display
+description: A responsive Studio Display frame component that wraps any content inside a realistic Apple Studio Display or Studio Display XDR screen.
+---
+
+<ComponentPreview
+  name="studio-display-01"
+  className="[&_.preview>[data-orientation=vertical]]:sm:max-w-[90%] **:[.preview]:min-h-[300px]"
+  description="Default Studio Display with custom content on the screen."
+  align="start"
+/>
+
+<ComponentPreview
+  name="studio-display-02"
+  className="[&_.preview>[data-orientation=vertical]]:sm:max-w-[90%] **:[.preview]:min-h-[300px]"
+  description="Studio Display and Studio Display XDR variants."
+  align="start"
+/>
+
+<ComponentPreview
+  name="studio-display-03"
+  className="[&_.preview>[data-orientation=vertical]]:sm:max-w-[90%] **:[.preview]:min-h-[300px]"
+  description="Studio Display in light and dark colors."
+  align="start"
+/>
+
+<ComponentPreview
+  name="studio-display-04"
+  className="[&_.preview>[data-orientation=vertical]]:sm:max-w-[90%] **:[.preview]:min-h-[300px]"
+  description="Studio Display in different sizes: sm, md, lg and xl."
+  align="start"
+/>
+
+<ComponentPreview
+  name="studio-display-05"
+  className="[&_.preview>[data-orientation=vertical]]:sm:max-w-[90%] **:[.preview]:min-h-[300px]"
+  description="Studio Display with scrollable content inside the screen."
+  align="start"
+/>
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add https://designali.com/r/studio-display.json
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="studio-display" title="components/ui/studio-display.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</CodeTabs>
+
+## Usage
+
+```tsx showLineNumbers
+import { StudioDisplay } from "@/components/ui/studio-display"
+```
+
+```tsx showLineNumbers
+<StudioDisplay>
+  <div className="p-6">Your content here</div>
+</StudioDisplay>
+```
+
+### Variant
+
+```tsx showLineNumbers
+<StudioDisplay variant="studio-display-xdr">
+  <div className="p-6">Studio Display XDR</div>
+</StudioDisplay>
+```
+
+### Size
+
+```tsx showLineNumbers
+<StudioDisplay size="lg">
+  <div className="p-6">Large Studio Display</div>
+</StudioDisplay>
+```
+
+### Color
+
+```tsx showLineNumbers
+<StudioDisplay color="light">
+  <div className="p-6">Light Studio Display</div>
+</StudioDisplay>
+```
+
+### Custom frame image
+
+```tsx showLineNumbers
+<StudioDisplay image="/images/my-display-frame.png" alt="Custom display frame">
+  <div className="p-6">Custom frame</div>
+</StudioDisplay>
+```
+
+## Props
+
+| Prop        | Type                                           | Default              |
+| ----------- | ---------------------------------------------- | -------------------- |
+| `children`  | `ReactNode`                                    | —                    |
+| `className` | `string`                                       | —                    |
+| `variant`   | `"studio-display" \| "studio-display-xdr"`     | `"studio-display"`   |
+| `size`      | `"sm" \| "md" \| "lg" \| "xl"`                 | `"md"`               |
+| `color`     | `"light" \| "dark"`                            | `"dark"`             |
+| `image`     | `string`                                       | —                    |
+| `alt`       | `string`                                       | `"Studio Display"`   |
+
+## Notes
+
+- The screen area is an absolutely positioned container, so `children` scroll vertically inside it when they overflow.
+- The display is sized by height, and the width follows from the aspect ratio.
+- Passing `image` overrides both `variant` and `color` for the frame.

@@ -7,6 +7,186 @@ import "server-only"
 import * as React from "react"
 
 export const Index: Record<string, any> = {
+  iphone: {
+    name: "iphone",
+    description: "",
+    type: "registry:ui",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/ui/apple/iphone.tsx",
+        type: "registry:ui",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/designali/ui/apple/iphone")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "iphone"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "iphone-duo": {
+    name: "iphone-duo",
+    description: "",
+    type: "registry:ui",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/ui/apple/iphone-duo.tsx",
+        type: "registry:ui",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/designali/ui/apple/iphone-duo")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "iphone-duo"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  ipad: {
+    name: "ipad",
+    description: "",
+    type: "registry:ui",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/ui/apple/ipad.tsx",
+        type: "registry:ui",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/designali/ui/apple/ipad")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "ipad"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  imac: {
+    name: "imac",
+    description: "",
+    type: "registry:ui",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/ui/apple/imac.tsx",
+        type: "registry:ui",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/designali/ui/apple/imac")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "imac"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "studio-display": {
+    name: "studio-display",
+    description: "",
+    type: "registry:ui",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/ui/apple/studio-display.tsx",
+        type: "registry:ui",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/designali/ui/apple/studio-display")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "studio-display"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  macbook: {
+    name: "macbook",
+    description: "",
+    type: "registry:ui",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/ui/apple/macbook.tsx",
+        type: "registry:ui",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/designali/ui/apple/macbook")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "macbook"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
   gauge: {
     name: "gauge",
     description: "",
@@ -6628,6 +6808,936 @@ export const Index: Record<string, any> = {
           (key) =>
             typeof mod[key] === "function" || typeof mod[key] === "object"
         ) || "tooltip-02"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "imac-01": {
+    name: "imac-01",
+    description: "",
+    type: "registry:component",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/components/apple/imac/imac-01.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/components/apple/imac/imac-01")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "imac-01"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "imac-02": {
+    name: "imac-02",
+    description: "",
+    type: "registry:component",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/components/apple/imac/imac-02.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/components/apple/imac/imac-02")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "imac-02"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "imac-03": {
+    name: "imac-03",
+    description: "",
+    type: "registry:component",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/components/apple/imac/imac-03.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/components/apple/imac/imac-03")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "imac-03"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "imac-04": {
+    name: "imac-04",
+    description: "",
+    type: "registry:component",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/components/apple/imac/imac-04.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/components/apple/imac/imac-04")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "imac-04"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "imac-05": {
+    name: "imac-05",
+    description: "",
+    type: "registry:component",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/components/apple/imac/imac-05.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/components/apple/imac/imac-05")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "imac-05"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "iphone-01": {
+    name: "iphone-01",
+    description: "",
+    type: "registry:component",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/components/apple/iphone/iphone-01.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/components/apple/iphone/iphone-01")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "iphone-01"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "iphone-02": {
+    name: "iphone-02",
+    description: "",
+    type: "registry:component",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/components/apple/iphone/iphone-02.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/components/apple/iphone/iphone-02")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "iphone-02"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "iphone-03": {
+    name: "iphone-03",
+    description: "",
+    type: "registry:component",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/components/apple/iphone/iphone-03.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/components/apple/iphone/iphone-03")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "iphone-03"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "iphone-04": {
+    name: "iphone-04",
+    description: "",
+    type: "registry:component",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/components/apple/iphone/iphone-04.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/components/apple/iphone/iphone-04")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "iphone-04"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "iphone-05": {
+    name: "iphone-05",
+    description: "",
+    type: "registry:component",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/components/apple/iphone/iphone-05.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/components/apple/iphone/iphone-05")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "iphone-05"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "iphone-duo-01": {
+    name: "iphone-duo-01",
+    description: "",
+    type: "registry:component",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/components/apple/iphone-duo/iphone-duo-01.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/components/apple/iphone-duo/iphone-duo-01")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "iphone-duo-01"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "iphone-duo-02": {
+    name: "iphone-duo-02",
+    description: "",
+    type: "registry:component",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/components/apple/iphone-duo/iphone-duo-02.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/components/apple/iphone-duo/iphone-duo-02")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "iphone-duo-02"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "iphone-duo-03": {
+    name: "iphone-duo-03",
+    description: "",
+    type: "registry:component",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/components/apple/iphone-duo/iphone-duo-03.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/components/apple/iphone-duo/iphone-duo-03")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "iphone-duo-03"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "iphone-duo-04": {
+    name: "iphone-duo-04",
+    description: "",
+    type: "registry:component",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/components/apple/iphone-duo/iphone-duo-04.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/components/apple/iphone-duo/iphone-duo-04")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "iphone-duo-04"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "iphone-duo-05": {
+    name: "iphone-duo-05",
+    description: "",
+    type: "registry:component",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/components/apple/iphone-duo/iphone-duo-05.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/components/apple/iphone-duo/iphone-duo-05")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "iphone-duo-05"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "macbook-01": {
+    name: "macbook-01",
+    description: "",
+    type: "registry:component",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/components/apple/macbook/macbook-01.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/components/apple/macbook/macbook-01")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "macbook-01"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "macbook-02": {
+    name: "macbook-02",
+    description: "",
+    type: "registry:component",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/components/apple/macbook/macbook-02.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/components/apple/macbook/macbook-02")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "macbook-02"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "macbook-03": {
+    name: "macbook-03",
+    description: "",
+    type: "registry:component",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/components/apple/macbook/macbook-03.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/components/apple/macbook/macbook-03")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "macbook-03"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "macbook-04": {
+    name: "macbook-04",
+    description: "",
+    type: "registry:component",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/components/apple/macbook/macbook-04.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/components/apple/macbook/macbook-04")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "macbook-04"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "macbook-05": {
+    name: "macbook-05",
+    description: "",
+    type: "registry:component",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/components/apple/macbook/macbook-05.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/components/apple/macbook/macbook-05")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "macbook-05"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "studio-display-01": {
+    name: "studio-display-01",
+    description: "",
+    type: "registry:component",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/components/apple/studio-display/studio-display-01.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/components/apple/studio-display/studio-display-01")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "studio-display-01"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "studio-display-02": {
+    name: "studio-display-02",
+    description: "",
+    type: "registry:component",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/components/apple/studio-display/studio-display-02.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/components/apple/studio-display/studio-display-02")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "studio-display-02"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "studio-display-03": {
+    name: "studio-display-03",
+    description: "",
+    type: "registry:component",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/components/apple/studio-display/studio-display-03.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/components/apple/studio-display/studio-display-03")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "studio-display-03"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "studio-display-04": {
+    name: "studio-display-04",
+    description: "",
+    type: "registry:component",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/components/apple/studio-display/studio-display-04.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/components/apple/studio-display/studio-display-04")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "studio-display-04"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "studio-display-05": {
+    name: "studio-display-05",
+    description: "",
+    type: "registry:component",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/components/apple/studio-display/studio-display-05.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/components/apple/studio-display/studio-display-05")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "studio-display-05"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "ipad-01": {
+    name: "ipad-01",
+    description: "",
+    type: "registry:component",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/components/apple/ipad/ipad-01.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/components/apple/ipad/ipad-01")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "ipad-01"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "ipad-02": {
+    name: "ipad-02",
+    description: "",
+    type: "registry:component",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/components/apple/ipad/ipad-02.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/components/apple/ipad/ipad-02")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "ipad-02"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "ipad-03": {
+    name: "ipad-03",
+    description: "",
+    type: "registry:component",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/components/apple/ipad/ipad-03.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/components/apple/ipad/ipad-03")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "ipad-03"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "ipad-04": {
+    name: "ipad-04",
+    description: "",
+    type: "registry:component",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/components/apple/ipad/ipad-04.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/components/apple/ipad/ipad-04")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "ipad-04"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "ipad-05": {
+    name: "ipad-05",
+    description: "",
+    type: "registry:component",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/components/apple/ipad/ipad-05.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/components/apple/ipad/ipad-05")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "ipad-05"
 
       return {
         default: mod.default || mod[exportName],

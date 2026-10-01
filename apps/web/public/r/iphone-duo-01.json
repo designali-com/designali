@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "iphone-duo-01",
+  "type": "registry:component",
+  "title": "Apple iPhone Duo",
+  "files": [
+    {
+      "path": "registry/designali/components/apple/iphone-duo/iphone-duo-01.tsx",
+      "content": "import { IPhoneDuo } from \"@/registry/designali/ui/apple/iphone-duo\" \n\nexport default function IPhone01() {\n  return (\n    <div className=\"flex h-full w-full items-center justify-center\">\n       <IPhoneDuo size=\"md\">\n        Hi\n       </IPhoneDuo>\n    </div>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ]
+}

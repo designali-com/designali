@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "ipad-05",
+  "type": "registry:component",
+  "title": "Apple iPad",
+  "files": [
+    {
+      "path": "registry/designali/components/apple/ipad/ipad-05.tsx",
+      "content": "import { IPad } from \"@/registry/designali/ui/apple/ipad\" \n\nexport default function IPad01() {\n  return (\n    <div className=\"flex h-full w-full items-center justify-center\">\n       <IPad size=\"md\" color=\"silver\">\n        Hi\n       </IPad>\n    </div>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ]
+}
