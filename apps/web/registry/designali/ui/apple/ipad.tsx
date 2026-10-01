@@ -93,26 +93,26 @@ const landscapeSizeClasses = {
 };
 
 const roundedClasses = {
-  sm: "rounded-[16px]",
-  md: "rounded-[24px]",
-  lg: "rounded-[32px]",
-  xl: "rounded-[40px]",
+  sm: "rounded-[6px]",
+  md: "rounded-[10px]",
+  lg: "rounded-[18px]",
+  xl: "rounded-[20px]",
 };
 
 const landscapeRoundedClasses = {
-  sm: "rounded-[16px]",
-  md: "rounded-[24px]",
-  lg: "rounded-[32px]",
-  xl: "rounded-[40px]",
+  sm: "rounded-[6px]",
+  md: "rounded-[10px]",
+  lg: "rounded-[18px]",
+  xl: "rounded-[20px]",
 };
 
 export function IPad({
   children,
   className = "",
   variant = "ipad-pro",
-  size = "md",
-  orientation = "portrait",
-  color = "silver",
+  size = "xl",
+  orientation = "landscape",
+  color = "purple",
   image,
   alt = "iPad",
 }: IpadProps) {

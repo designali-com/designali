@@ -9,12 +9,7 @@ interface ImacProps {
 
   /** Frame color */
   color?: "blue" | "green" | "pink" | "silver" | "yellow" | "orange" | "purple";
-
-  /** Custom iMac frame image */
-  image?: string;
-
-  /** Image alt text */
-  alt?: string;
+ 
 }
 
 type ImacColor = ImacProps["color"];
@@ -35,23 +30,15 @@ const sizeClasses = {
   lg: "w-[54rem]",
   xl: "w-[68rem]",
 };
-
-const roundedClasses = {
-  sm: "rounded-[8px]",
-  md: "rounded-[12px]",
-  lg: "rounded-[16px]",
-  xl: "rounded-[20px]",
-};
+ 
 
 export function IMac({
   children,
   className = "",
   size = "md",
-  color = "silver",
-  image,
-  alt = "iMac",
+  color = "silver", 
 }: ImacProps) {
-  const frameImage = image ?? imacImages[color] ?? imacImages.silver;
+  const frameImage = imacImages[color] ?? imacImages.silver;
 
   return (
     <div
@@ -64,15 +51,14 @@ export function IMac({
     >
       <img
         src={frameImage}
-        alt={alt}
+        alt={"iMac"}
         className="pointer-events-none absolute inset-0 z-10 h-full w-full select-none object-contain"
       />
-
-      {/* Screen container overlay positioned precisely for iMac display area */}
+ 
       <div
         className={`
-          absolute left-[6%] right-[6%] top-[5%] bottom-[22%] overflow-hidden bg-background
-          ${roundedClasses[size]}
+          absolute left-[12%] right-[12%] top-[3.8%] bottom-[32%] overflow-hidden bg-background
+          ${[size]}
         `}
       >
         <div className="h-full w-full overflow-y-auto">
