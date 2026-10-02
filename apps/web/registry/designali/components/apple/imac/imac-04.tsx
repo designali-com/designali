@@ -12,7 +12,7 @@ const colors = [
 
 export function IMacColorsDemo() {
   return (
-    <div className="grid grid-cols-2 gap-8 p-8 xl:grid-cols-3">
+    <div className="grid grid-cols-2 gap-8 p-8">
       {colors.map((color) => (
         <IMac key={color} size="sm" color={color}>
           <div className="flex h-full items-center justify-center bg-background">

@@ -6969,6 +6969,37 @@ export const Index: Record<string, any> = {
       }
     }),
   },
+  "imac-06": {
+    name: "imac-06",
+    description: "",
+    type: "registry:component",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/components/apple/imac/imac-06.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/components/apple/imac/imac-06")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "imac-06"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
   "iphone-01": {
     name: "iphone-01",
     description: "",

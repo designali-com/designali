@@ -1,7 +1,7 @@
 import * as React from "react";
 
 interface MacbookProps {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   className?: string;
 
   /** Macbook variant/model */
@@ -28,10 +28,10 @@ interface MacbookProps {
   alt?: string;
 }
 
-type MacbookVariant = MacbookProps["variant"]; 
+type MacbookVariant = NonNullable<MacbookProps["variant"]>; 
 
 const macbookImages: Record<
-  NonNullable<MacbookVariant>,
+  MacbookVariant,
   Record<string, string>
 > = {
   "macbook-air": {
@@ -71,24 +71,65 @@ const sizeClasses = {
   xl: "w-[64rem]",
 };
 
-const roundedClasses = {
-  sm: "rounded-t-[12px]",
-  md: "rounded-t-[16px]",
-  lg: "rounded-t-[20px]",
-  xl: "rounded-t-[24px]",
+// Har Macbook model aur uske har size ke liye bilkul alag screen positions (left, right, top, bottom)
+const screenPositionClasses: Record<MacbookVariant, Record<string, string>> = {
+  "macbook-air": {
+    sm: "left-[8%] right-[8%] top-[8%] bottom-[8%]",
+    md: "left-[10%] right-[10%] top-[9.5%] bottom-[9%]",
+    lg: "left-[12%] right-[12%] top-[11%] bottom-[10%]",
+    xl: "left-[14%] right-[14%] top-[12.5%] bottom-[11%]",
+  },
+  "macbook-pro": {
+    sm: "left-[7%] right-[7%] top-[7%] bottom-[7%]",
+    md: "left-[9%] right-[9%] top-[8.5%] bottom-[8%]",
+    lg: "left-[11%] right-[11%] top-[10%] bottom-[9%]",
+    xl: "left-[13%] right-[13%] top-[11.5%] bottom-[10%]",
+  },
+  "macbook-neo": {
+    sm: "left-[9%] right-[9%] top-[9%] bottom-[8%]",
+    md: "left-[14%] right-[14%] top-[14%] bottom-[14%]",
+    lg: "left-[13%] right-[13%] top-[12%] bottom-[11%]",
+    xl: "left-[15%] right-[15%] top-[13.5%] bottom-[12%]",
+  },
+};
+
+// Har Macbook model aur uske har size ke liye alag border-radius
+const roundedClasses: Record<MacbookVariant, Record<string, string>> = {
+  "macbook-air": {
+    sm: "rounded-t-[6px]",
+    md: "rounded-t-[10px]",
+    lg: "rounded-t-[14px]",
+    xl: "rounded-t-[18px]",
+  },
+  "macbook-pro": {
+    sm: "rounded-t-[8px]",
+    md: "rounded-t-[12px]",
+    lg: "rounded-t-[16px]",
+    xl: "rounded-t-[20px]",
+  },
+  "macbook-neo": {
+    sm: "rounded-t-[4px]",
+    md: "rounded-t-[8px]",
+    lg: "rounded-t-[12px]",
+    xl: "rounded-t-[16px]",
+  },
 };
 
 export function Macbook({
   children,
   className = "",
-  variant = "macbook-air",
+  variant = "macbook-neo",
   size = "md",
-  color = "silver",
+  color = "citrus",
   image,
   alt = "Macbook",
 }: MacbookProps) {
   const defaultImages = macbookImages[variant];
   const frameImage = image ?? defaultImages[color] ?? Object.values(defaultImages)[0];
+
+  // Variant aur size ke hisaab se exact independent position aur rounded class lena
+  const currentPosition = screenPositionClasses[variant]?.[size] || screenPositionClasses["macbook-air"].md;
+  const currentRounded = roundedClasses[variant]?.[size] || roundedClasses["macbook-air"].md;
 
   return (
     <div
@@ -105,17 +146,19 @@ export function Macbook({
         className="pointer-events-none absolute inset-0 z-10 h-full w-full select-none object-contain"
       />
 
-      {/* Screen container overlay positioning adjusted for standard laptop frame inner displays */}
-      <div
-        className={`
-          absolute left-[12%] right-[12%] top-[8%] bottom-[14%] overflow-hidden bg-background
-          ${roundedClasses[size]}
-        `}
-      >
-        <div className="h-full w-full overflow-y-auto">
-          {children}
+      {children && (
+        <div
+          className={`
+            absolute overflow-hidden bg-background
+            ${currentPosition}
+            ${currentRounded}
+          `}
+        >
+          <div className="h-full w-full overflow-y-auto">
+            {children}
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 }

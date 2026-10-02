@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-01T12:00:08.672Z",
+  "generatedAt": "2026-10-02T16:52:07.758Z",
   "items": [
     {
       "name": "iphone",
@@ -1318,6 +1318,12 @@
     },
     {
       "name": "imac-05",
+      "type": "registry:component",
+      "description": "",
+      "categories": []
+    },
+    {
+      "name": "imac-06",
       "type": "registry:component",
       "description": "",
       "categories": []

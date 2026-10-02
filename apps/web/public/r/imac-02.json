@@ -6,7 +6,7 @@
   "files": [
     {
       "path": "registry/designali/components/apple/imac/imac-02.tsx",
-      "content": "import { IMac } from \"@/registry/designali/ui/apple/imac\" \n\nexport default function IMac01() {\n  return (\n    <div className=\"flex h-full w-full items-center justify-center\">\n       <IMac size=\"md\" color=\"silver\">\n        Hi\n       </IMac>\n    </div>\n  )\n}\n",
+      "content": "import { IMac } from \"@/registry/designali/ui/apple/imac\"\n\nexport function IMacDashboardDemo() {\n  return (\n    <div className=\"flex items-center justify-center p-8\">\n      <div className=\"flex flex-col items-center gap-8\">\n        <IMac size=\"sm\">\n          <div className=\"flex h-full items-center justify-center\">\n            <span className=\"text-lg font-semibold\">Small</span>\n          </div>\n        </IMac>\n\n        <IMac size=\"md\">\n          <div className=\"flex h-full items-center justify-center\">\n            <span className=\"text-2xl font-semibold\">Medium</span>\n          </div>\n        </IMac>\n\n        <IMac size=\"lg\">\n          <div className=\"flex h-full items-center justify-center\">\n            <span className=\"text-3xl font-semibold\">Large</span>\n          </div>\n        </IMac>\n      </div>\n    </div>\n  );\n}",
       "type": "registry:component"
     }
   ]

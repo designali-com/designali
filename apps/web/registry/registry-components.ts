@@ -57,6 +57,17 @@ export const components: Registry["items"] = [
     ],
   },
   {
+    title: "Apple iMac",
+    name: "imac-06",
+    type: "registry:component",
+    files: [
+      {
+        path: "components/apple/imac/imac-06.tsx",
+        type: "registry:component",
+      },    
+    ],
+  },
+  {
     title: "Apple iPhone",
     name: "iphone-01",
     type: "registry:component",

@@ -95,24 +95,24 @@ const landscapeSizeClasses = {
 const roundedClasses = {
   sm: "rounded-[6px]",
   md: "rounded-[10px]",
-  lg: "rounded-[18px]",
+  lg: "rounded-[14px]",
   xl: "rounded-[20px]",
 };
 
 const landscapeRoundedClasses = {
   sm: "rounded-[6px]",
   md: "rounded-[10px]",
-  lg: "rounded-[18px]",
+  lg: "rounded-[14px]",
   xl: "rounded-[20px]",
 };
 
 export function IPad({
   children,
   className = "",
-  variant = "ipad-pro",
+  variant = "ipad-air",
   size = "xl",
-  orientation = "landscape",
-  color = "purple",
+  orientation = "portrait",
+  color = "blue",
   image,
   alt = "iPad",
 }: IpadProps) {

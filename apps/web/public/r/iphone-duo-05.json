@@ -6,7 +6,7 @@
   "files": [
     {
       "path": "registry/designali/components/apple/iphone-duo/iphone-duo-05.tsx",
-      "content": "import { IPhoneDuo } from \"@/registry/designali/ui/apple/iphone-duo\" \n\nexport default function IPhone01() {\n  return (\n    <div className=\"flex h-full w-full items-center justify-center\">\n       <IPhoneDuo size=\"md\">\n        Hi\n       </IPhoneDuo>\n    </div>\n  )\n}\n",
+      "content": "import { IPhoneDuo } from \"@/registry/designali/ui/apple/iphone-duo\" \n\nexport default function IPhone01() {\n  return (\n    <div className=\"flex h-full w-full items-center justify-center\">\n       <IPhoneDuo>\n        Hi\n       </IPhoneDuo>\n    </div>\n  )\n}\n",
       "type": "registry:component"
     }
   ]

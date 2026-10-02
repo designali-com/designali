@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "imac-06",
+  "type": "registry:component",
+  "title": "Apple iMac",
+  "files": [
+    {
+      "path": "registry/designali/components/apple/imac/imac-06.tsx",
+      "content": "import { IMac } from \"@/registry/designali/ui/apple/imac\"\n\nexport function IMacCustomFrameDemo() {\n  return (\n    <div className=\"flex items-center justify-center p-8\">\n      <IMac size=\"lg\" color=\"silver\">\n        <div className=\"h-full bg-black text-white\">\n          <div className=\"flex h-full flex-col items-center justify-center px-12 text-center\">\n            <span className=\"mb-4 rounded-full border border-white/20 px-4 py-1 text-xs\">\n              New Release\n            </span>\n\n            <h1 className=\"text-5xl font-bold tracking-tight\">\n              The future of design.\n            </h1>\n\n            <p className=\"mt-4 max-w-lg text-white/60\">\n              Create, prototype and ship modern digital experiences.\n            </p>\n\n            <button className=\"mt-8 rounded-full bg-white px-6 py-3 text-sm font-medium text-black\">\n              Explore\n            </button>\n          </div>\n        </div>\n      </IMac>\n    </div>\n  );\n}",
+      "type": "registry:component"
+    }
+  ]
+}

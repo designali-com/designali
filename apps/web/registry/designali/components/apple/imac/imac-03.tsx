@@ -1,31 +1,35 @@
-import { IMac } from "@/registry/designali/ui/apple/imac" 
+import { IMac } from "@/registry/designali/ui/apple/imac"
 
 export function IMacWebsiteDemo() {
   return (
-    <div className="flex items-center justify-center p-8">
-      <IMac color="purple">
-        <div className="h-full bg-white text-black">
-          <header className="flex items-center justify-between border-b px-6 py-4">
-            <span className="font-semibold">Designali</span>
+    <div className="flex h-[600px] w-full items-center justify-center">
+      <IMac size="lg" color="blue">
+        <div className="h-full bg-white">
+          <header className="flex items-center justify-between border-b px-8 py-4">
+            <div className="font-semibold">designali</div>
 
-            <nav className="flex gap-4 text-xs">
-              <span>Products</span>
+            <nav className="flex gap-6 text-sm text-muted-foreground">
+              <span>Components</span>
+              <span>Blocks</span>
               <span>Docs</span>
-              <span>Pricing</span>
             </nav>
           </header>
 
-          <main className="flex h-[calc(100%-65px)] items-center justify-center px-10">
-            <div className="text-center">
-              <h1 className="text-4xl font-bold tracking-tight">
+          <main className="flex h-full items-center justify-center px-12">
+            <div className="max-w-xl text-center">
+              <p className="mb-3 text-sm text-muted-foreground">
                 Design to Code
-              </h1>
-
-              <p className="mx-auto mt-3 max-w-md text-sm text-neutral-500">
-                Build beautiful interfaces with reusable components.
               </p>
 
-              <button className="mt-6 rounded-full bg-black px-5 py-2 text-sm text-white">
+              <h1 className="text-5xl font-bold tracking-tight">
+                Build beautiful interfaces faster.
+              </h1>
+
+              <p className="mt-4 text-muted-foreground">
+                A modern component library for designers and developers.
+              </p>
+
+              <button className="mt-6 rounded-lg bg-black px-5 py-3 text-sm text-white">
                 Get Started
               </button>
             </div>

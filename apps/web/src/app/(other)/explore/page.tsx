@@ -1,6 +1,7 @@
-import { IMac } from "@/registry/designali/ui/apple/imac"
-import { IPad } from "@/registry/designali/ui/apple/ipad"
-import { IPhone } from "@/registry/designali/ui/apple/iphone"
+ 
+import { IPhoneDuo } from "@/registry/designali/ui/apple/iphone-duo"
+import { Macbook } from "@/registry/designali/ui/apple/macbook"
+import { StudioDisplay } from "@/registry/designali/ui/apple/studio-display"
 import { Button } from "@workspace/ui/components/button"
 import Link from "next/link"
 
@@ -8,21 +9,14 @@ export default function Page() {
   return (
     <div className="mx-auto mt-40 h-full w-full">
       <section className="relative flex flex-wrap items-center justify-center gap-5">
-        <IPad size="md" color="silver">
+        <StudioDisplay >
           <img
             src="/img/login-1.jpg"
             alt="App screen"
             className="h-full w-full object-cover"
           />
-        </IPad>
-        <IMac>
-          <img
-            src="/img/login-1.jpg"
-            alt="App screen"
-            className="h-full w-full object-cover"
-          />
-        </IMac>
-        <IMac>
+        </StudioDisplay>
+        <IPhoneDuo >
           <video
             src="/vid/colorful-spheres.mp4"
             autoPlay
@@ -31,8 +25,8 @@ export default function Page() {
             playsInline
             className="h-full w-full object-cover"
           />
-        </IMac>
-        <IMac>
+        </IPhoneDuo>
+        <IPhoneDuo >
           <div className="flex flex-col text-center px-4 gap-4 items-center justify-center h-full w-full">
             <h1 className="text-xl font-bold">
               Hi Ali
@@ -44,9 +38,7 @@ export default function Page() {
               Contact Me
             </Button>
           </div>
-        </IMac>
-
-
+        </IPhoneDuo>
       </section>
     </div>
   )

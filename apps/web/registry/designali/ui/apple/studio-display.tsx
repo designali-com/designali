@@ -42,17 +42,17 @@ const studioDisplayImages: Record<
 };
 
 const sizeClasses = {
-  sm: "h-[20rem]",
-  md: "h-[28rem]",
+  sm: "h-[16rem]",
+  md: "h-[24rem]",
   lg: "h-[32rem]",
   xl: "h-[48rem]",
 };
 
 const roundedClasses = {
-  sm: "rounded-[18px]",
-  md: "rounded-[24px]",
-  lg: "rounded-[32px]",
-  xl: "rounded-[48px]",
+  sm: "rounded-[10px]",
+  md: "rounded-[10px]",
+  lg: "rounded-[10px]",
+  xl: "rounded-[10px]",
 };
 
 export function StudioDisplay({
@@ -72,7 +72,7 @@ export function StudioDisplay({
       className={`
         relative inline-block
         ${sizeClasses[size]}
-        aspect-[9/19.5]
+        aspect-[16/9]
         ${className}
       `}
     >
@@ -84,7 +84,7 @@ export function StudioDisplay({
 
       <div
         className={`
-          absolute inset-[4%] overflow-hidden bg-background
+          absolute left-[15%] right-[15%] top-[3%] bottom-[26%] overflow-hidden bg-background
           ${roundedClasses[size]}
         `}
       >
