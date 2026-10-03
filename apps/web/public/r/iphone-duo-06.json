@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "iphone-duo-06",
+  "type": "registry:component",
+  "title": "Apple iPhone Duo",
+  "files": [
+    {
+      "path": "registry/designali/components/apple/iphone-duo/iphone-duo-06.tsx",
+      "content": "\"use client\"\n\nimport { useState } from \"react\"\n\nimport { IPhoneDuo } from \"@/registry/designali/ui/apple/iphone-duo\"\n\nconst colors = [\"night-sky\", \"star-white\"] as const\n\ntype PhoneColor = (typeof colors)[number]\n\nexport function IPhoneDuoColorsDemo() {\n  const [activeColor, setActiveColor] =\n    useState<PhoneColor>(\"night-sky\")\n\n  return (\n    <div className=\"flex flex-col items-center justify-center gap-10 p-8\">\n      <div className=\"flex items-center justify-center gap-1 rounded-lg bg-gray-100 p-1 dark:bg-zinc-800\">\n        {colors.map((color) => (\n          <button\n            key={color}\n            onClick={() => setActiveColor(color)}\n            className={`rounded-md px-4 py-2 text-sm font-medium capitalize transition-all duration-200 ${\n              activeColor === color\n                ? \"bg-white text-black shadow-sm dark:bg-zinc-950 dark:text-white\"\n                : \"text-gray-500 hover:text-gray-900 dark:text-zinc-400 dark:hover:text-zinc-100\"\n            }`}\n          >\n            {color.replace(\"-\", \" \")}\n          </button>\n        ))}\n      </div>\n\n      <IPhoneDuo\n        size=\"lg\"\n        side=\"frontback\"\n        color={activeColor}\n      >\n        <div className=\"flex h-full items-center justify-center bg-background\">\n          <p className=\"text-2xl font-medium capitalize\">\n            {activeColor.replace(\"-\", \" \")} iPhone Duo\n          </p>\n        </div>\n      </IPhoneDuo>\n    </div>\n  )\n}",
+      "type": "registry:component"
+    }
+  ]
+}

@@ -110,7 +110,7 @@ import { StudioDisplay } from "@/components/ui/studio-display"
 ### Custom frame image
 
 ```tsx showLineNumbers
-<StudioDisplay image="/images/my-display-frame.png" alt="Custom display frame">
+<StudioDisplay>
   <div className="p-6">Custom frame</div>
 </StudioDisplay>
 ```
@@ -124,9 +124,7 @@ import { StudioDisplay } from "@/components/ui/studio-display"
 | `variant`   | `"studio-display" \| "studio-display-xdr"`     | `"studio-display"`   |
 | `size`      | `"sm" \| "md" \| "lg" \| "xl"`                 | `"md"`               |
 | `color`     | `"light" \| "dark"`                            | `"dark"`             |
-| `image`     | `string`                                       | —                    |
-| `alt`       | `string`                                       | `"Studio Display"`   |
-
+ 
 ## Notes
 
 - The screen area is an absolutely positioned container, so `children` scroll vertically inside it when they overflow.

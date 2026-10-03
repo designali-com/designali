@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "ipad-12",
+  "type": "registry:component",
+  "title": "Apple iPad",
+  "files": [
+    {
+      "path": "registry/designali/components/apple/ipad/ipad-12.tsx",
+      "content": "\"use client\"\n\nimport { useState } from \"react\"\nimport { IPad } from \"@/registry/designali/ui/apple/ipad\"\n\ntype Orientation = \"portrait\" | \"landscape\"\n\nexport function IPadOrientationDemo() {\n  const [orientation, setOrientation] =\n    useState<Orientation>(\"portrait\")\n\n  return (\n    <div className=\"flex flex-col items-center justify-center gap-10 p-8\">\n      <div className=\"flex items-center gap-1 rounded-lg bg-gray-100 p-1 dark:bg-zinc-800\">\n        <button\n          onClick={() => setOrientation(\"portrait\")}\n          className={`rounded-md px-4 py-2 text-sm font-medium ${\n            orientation === \"portrait\"\n              ? \"bg-white text-black shadow-sm dark:bg-zinc-950 dark:text-white\"\n              : \"text-gray-500\"\n          }`}\n        >\n          Portrait\n        </button>\n\n        <button\n          onClick={() => setOrientation(\"landscape\")}\n          className={`rounded-md px-4 py-2 text-sm font-medium ${\n            orientation === \"landscape\"\n              ? \"bg-white text-black shadow-sm dark:bg-zinc-950 dark:text-white\"\n              : \"text-gray-500\"\n          }`}\n        >\n          Landscape\n        </button>\n      </div>\n\n      <IPad\n        variant=\"ipad-pro\"\n        color=\"black\"\n        size=\"lg\"\n        orientation={orientation}\n      >\n        <iframe\n          src=\"https://design-agency.designali.com/\"\n          className=\"block size-full border-0\"\n          loading=\"lazy\"\n          referrerPolicy=\"strict-origin-when-cross-origin\"\n        />\n      </IPad>\n    </div>\n  )\n}",
+      "type": "registry:component"
+    }
+  ]
+}

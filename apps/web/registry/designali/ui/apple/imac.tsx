@@ -25,10 +25,10 @@ const imacImages: Record<NonNullable<ImacColor>, string> = {
 };
 
 const sizeClasses = {
-  sm: "w-[28rem]",
-  md: "w-[40rem]",
-  lg: "w-[54rem]",
-  xl: "w-[68rem]",
+  sm: "w-[24rem]",
+  md: "w-[32rem]",
+  lg: "w-[40rem]",
+  xl: "w-[52rem]",
 };
  
 

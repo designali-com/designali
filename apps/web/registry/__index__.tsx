@@ -7310,6 +7310,68 @@ export const Index: Record<string, any> = {
       }
     }),
   },
+  "iphone-duo-06": {
+    name: "iphone-duo-06",
+    description: "",
+    type: "registry:component",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/components/apple/iphone-duo/iphone-duo-06.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/components/apple/iphone-duo/iphone-duo-06")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "iphone-duo-06"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "iphone-duo-07": {
+    name: "iphone-duo-07",
+    description: "",
+    type: "registry:component",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/components/apple/iphone-duo/iphone-duo-07.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/components/apple/iphone-duo/iphone-duo-07")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "iphone-duo-07"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
   "macbook-01": {
     name: "macbook-01",
     description: "",
@@ -7769,6 +7831,254 @@ export const Index: Record<string, any> = {
           (key) =>
             typeof mod[key] === "function" || typeof mod[key] === "object"
         ) || "ipad-05"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "ipad-03": {
+    name: "ipad-03",
+    description: "",
+    type: "registry:component",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/components/apple/ipad/ipad-03.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/components/apple/ipad/ipad-03")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "ipad-03"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "ipad-04": {
+    name: "ipad-04",
+    description: "",
+    type: "registry:component",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/components/apple/ipad/ipad-04.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/components/apple/ipad/ipad-04")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "ipad-04"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "ipad-05": {
+    name: "ipad-05",
+    description: "",
+    type: "registry:component",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/components/apple/ipad/ipad-05.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/components/apple/ipad/ipad-05")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "ipad-05"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "ipad-06": {
+    name: "ipad-06",
+    description: "",
+    type: "registry:component",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/components/apple/ipad/ipad-06.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/components/apple/ipad/ipad-06")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "ipad-06"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "ipad-07": {
+    name: "ipad-07",
+    description: "",
+    type: "registry:component",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/components/apple/ipad/ipad-07.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/components/apple/ipad/ipad-07")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "ipad-07"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "ipad-08": {
+    name: "ipad-08",
+    description: "",
+    type: "registry:component",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/components/apple/ipad/ipad-08.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/components/apple/ipad/ipad-08")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "ipad-08"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "ipad-09": {
+    name: "ipad-09",
+    description: "",
+    type: "registry:component",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/components/apple/ipad/ipad-09.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/components/apple/ipad/ipad-09")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "ipad-09"
+
+      return {
+        default: mod.default || mod[exportName],
+      }
+    }),
+  },
+  "ipad-10": {
+    name: "ipad-10",
+    description: "",
+    type: "registry:component",
+    registryDependencies: [],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/components/apple/ipad/ipad-10.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    categories: [],
+    meta: {},
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/designali/components/apple/ipad/ipad-10")
+
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "ipad-10"
 
       return {
         default: mod.default || mod[exportName],

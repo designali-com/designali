@@ -90,9 +90,9 @@ export default async function DocPage({ params }: DocPageProps) {
           <SidebarTrigger className="opacity-60" />
         </div>
 
-        <div className="mx-auto flex w-full min-w-0 flex-1 flex-col gap-4 py-10">
+        <div className="mx-auto flex w-full min-w-0 flex-1 flex-col gap-4 pb-10 pt-6">
           <div className="flex flex-col gap-2">
-            <div className="flex flex-col items-center gap-2 text-center">
+            <div className="flex justify-between px-6 items-center gap-2 text-center">
               <h1 className="scroll-m-20 text-2xl font-medium md:text-4xl">
                 {doc.title}
               </h1>

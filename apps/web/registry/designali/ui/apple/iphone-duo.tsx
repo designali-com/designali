@@ -81,7 +81,7 @@ const sizeClasses = {
 
 const landscapeSizeClasses = {
   sm: "h-[14rem]",
-  md: "h-[20rem]",
+  md: "h-[16rem]",
   lg: "h-[24rem]",
   xl: "h-[32rem]",
 };
@@ -129,7 +129,7 @@ const screenPositionClasses = {
     },
     landscape: {
       sm: "left-[12%] right-[12%] top-[8%] bottom-[8%]",
-      md: "left-[13%] right-[13%] top-[8.5%] bottom-[8.5%]",
+      md: "left-[10%] right-[10%] top-[8.5%] bottom-[8.5%]",
       lg: "left-[14%] right-[14%] top-[9%] bottom-[9%]",
       xl: "left-[40%] right-[14%] top-[9%] bottom-[9%]",
     },
@@ -153,7 +153,7 @@ const screenPositionClasses = {
 export function IPhoneDuo({
   children,
   className = "",
-  size = "xl",
+  size = "md",
   orientation = "portrait",
   side = "frontback",
   color = "night-sky",

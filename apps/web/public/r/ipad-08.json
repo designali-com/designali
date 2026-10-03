@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "ipad-08",
+  "type": "registry:component",
+  "title": "Apple iPad",
+  "files": [
+    {
+      "path": "registry/designali/components/apple/ipad/ipad-08.tsx",
+      "content": "import { IPad } from \"@/registry/designali/ui/apple/ipad\"\n\nexport function IPadVideoDemo() {\n  return (\n    <div className=\"flex items-center justify-center p-8\">\n      <IPad\n        variant=\"ipad-pro\"\n        color=\"black\"\n        size=\"lg\"\n        orientation=\"landscape\"\n      >\n        <video\n          src=\"/vid/colorful-spheres.mp4\"\n          autoPlay\n          loop\n          muted\n          playsInline\n          className=\"h-full w-full object-cover\"\n        />\n      </IPad>\n    </div>\n  )\n}",
+      "type": "registry:component"
+    }
+  ]
+}

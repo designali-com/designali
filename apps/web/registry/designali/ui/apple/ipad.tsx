@@ -16,11 +16,6 @@ interface IpadProps {
   /** Frame color based on the selected variant */
   color?: "black" | "silver" | "purple" | "space-grey" | "starlight" | "blue";
 
-  /** Custom iPad frame image */
-  image?: string;
-
-  /** Image alt text */
-  alt?: string;
 }
 
 type IpadVariant = IpadProps["variant"];
@@ -96,14 +91,14 @@ const roundedClasses = {
   sm: "rounded-[6px]",
   md: "rounded-[10px]",
   lg: "rounded-[14px]",
-  xl: "rounded-[20px]",
+  xl: "rounded-[18px]",
 };
 
 const landscapeRoundedClasses = {
   sm: "rounded-[6px]",
   md: "rounded-[10px]",
   lg: "rounded-[14px]",
-  xl: "rounded-[20px]",
+  xl: "rounded-[18px]",
 };
 
 export function IPad({
@@ -113,8 +108,6 @@ export function IPad({
   size = "xl",
   orientation = "portrait",
   color = "blue",
-  image,
-  alt = "iPad",
 }: IpadProps) {
   const isLandscape = orientation === "landscape";
 
@@ -122,7 +115,7 @@ export function IPad({
   const defaultImages = variantImages[color] || Object.values(variantImages)[0];
 
   const frameImage =
-    image ??
+
     (isLandscape
       ? defaultImages?.landscape
       : defaultImages?.portrait);
@@ -138,17 +131,16 @@ export function IPad({
     >
       <img
         src={frameImage}
-        alt={alt}
+        alt={"iPad"}
         className="pointer-events-none absolute inset-0 z-10 h-full w-full select-none object-contain"
       />
 
       <div
         className={`
           absolute inset-[5%] overflow-hidden bg-background
-          ${
-            isLandscape
-              ? landscapeRoundedClasses[size]
-              : roundedClasses[size]
+          ${isLandscape
+            ? landscapeRoundedClasses[size]
+            : roundedClasses[size]
           }
         `}
       >

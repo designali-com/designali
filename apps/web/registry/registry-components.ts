@@ -178,6 +178,28 @@ export const components: Registry["items"] = [
     ],
   },
   {
+    title: "Apple iPhone Duo",
+    name: "iphone-duo-06",
+    type: "registry:component",
+    files: [
+      {
+        path: "components/apple/iphone-duo/iphone-duo-06.tsx",
+        type: "registry:component",
+      },    
+    ],
+  },
+  {
+    title: "Apple iPhone Duo",
+    name: "iphone-duo-07",
+    type: "registry:component",
+    files: [
+      {
+        path: "components/apple/iphone-duo/iphone-duo-07.tsx",
+        type: "registry:component",
+      },    
+    ],
+  },
+  {
     title: "Apple MacBook",
     name: "macbook-01",
     type: "registry:component",
@@ -299,7 +321,7 @@ export const components: Registry["items"] = [
     ],
   },
   {
-    title: "Counter Number",
+    title: "Apple iPad",
     name: "ipad-02",
     type: "registry:component",
     files: [
@@ -337,11 +359,99 @@ export const components: Registry["items"] = [
     type: "registry:component",
     files: [
       {
+          path: "components/apple/ipad/ipad-05.tsx",
+        type: "registry:component",
+      },    
+    ],
+  },
+  {
+    title: "Apple iPad",
+    name: "ipad-03",
+    type: "registry:component",
+    files: [
+      {
+        path: "components/apple/ipad/ipad-03.tsx",
+        type: "registry:component",
+      },    
+    ],
+  },
+  {
+    title: "Apple iPad",
+    name: "ipad-04",
+    type: "registry:component",
+    files: [
+      {
+        path: "components/apple/ipad/ipad-04.tsx",
+        type: "registry:component",
+      },    
+    ],
+  },
+  {
+    title: "Apple iPad",
+    name: "ipad-05",
+    type: "registry:component",
+    files: [
+      {
         path: "components/apple/ipad/ipad-05.tsx",
         type: "registry:component",
       },    
     ],
   },
+  {
+    title: "Apple iPad",
+    name: "ipad-06",
+    type: "registry:component",
+    files: [
+      {
+        path: "components/apple/ipad/ipad-06.tsx",
+        type: "registry:component",
+      },    
+    ],
+  },
+  {
+    title: "Apple iPad",
+    name: "ipad-07",
+    type: "registry:component",
+    files: [
+      {
+        path: "components/apple/ipad/ipad-07.tsx",
+        type: "registry:component",
+      },    
+    ],
+  },
+  {
+    title: "Apple iPad",
+    name: "ipad-08",
+    type: "registry:component",
+    files: [
+      {
+        path: "components/apple/ipad/ipad-08.tsx",
+        type: "registry:component",
+      },    
+    ],
+  },
+  {
+    title: "Apple iPad",
+    name: "ipad-09",
+    type: "registry:component",
+    files: [
+      {
+        path: "components/apple/ipad/ipad-09.tsx",
+        type: "registry:component",
+      },    
+    ],
+  },
+  {
+    title: "Apple iPad",
+    name: "ipad-10",
+    type: "registry:component",
+    files: [
+      {
+        path: "components/apple/ipad/ipad-10.tsx",
+        type: "registry:component",
+      },    
+    ],
+  }, 
   {
     title: "Counter Number",
     name: "counter-number-default",

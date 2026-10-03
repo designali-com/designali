@@ -38,6 +38,42 @@ description: A responsive iPad frame component that wraps any content inside a r
   align="start"
 />
 
+<ComponentPreview
+  name="ipad-06"
+  className="[&_.preview>[data-orientation=vertical]]:sm:max-w-[90%] **:[.preview]:min-h-[300px]"
+  description="iPad in different sizes: sm, md, lg and xl."
+  align="start"
+/>
+
+<ComponentPreview
+  name="ipad-07"
+  className="[&_.preview>[data-orientation=vertical]]:sm:max-w-[90%] **:[.preview]:min-h-[300px]"
+  description="iPad in different sizes: sm, md, lg and xl."
+  align="start"
+/>
+
+<ComponentPreview
+  name="ipad-08"
+  className="[&_.preview>[data-orientation=vertical]]:sm:max-w-[90%] **:[.preview]:min-h-[300px]"
+  description="iPad in different sizes: sm, md, lg and xl."
+  align="start"
+/>
+
+<ComponentPreview
+  name="ipad-09"
+  className="[&_.preview>[data-orientation=vertical]]:sm:max-w-[90%] **:[.preview]:min-h-[300px]"
+  description="iPad in different sizes: sm, md, lg and xl."
+  align="start"
+/>
+
+<ComponentPreview
+  name="ipad-10"
+  className="[&_.preview>[data-orientation=vertical]]:sm:max-w-[90%] **:[.preview]:min-h-[300px]"
+  description="iPad in different sizes: sm, md, lg and xl."
+  align="start"
+/>
+ 
+
 ## Installation
 
 <CodeTabs>
@@ -118,9 +154,17 @@ import { IPad } from "@/components/ui/ipad"
 ### Custom frame image
 
 ```tsx showLineNumbers
-<IPad image="/images/my-ipad-frame.png" alt="Custom iPad frame">
-  <div className="p-6">Custom frame</div>
-</IPad>
+<IPad
+        variant="ipad-air"
+        color="blue"
+        size="lg"
+      >
+        <img
+          src="/img/login-1.jpg"
+          alt="App screen"
+          className="h-full w-full object-cover"
+        />
+      </IPad>
 ```
 
 ## Props
@@ -132,9 +176,7 @@ import { IPad } from "@/components/ui/ipad"
 | `variant`     | `"ipad-pro" \| "ipad-air"`                                                    | `"ipad-pro"`  |
 | `size`        | `"sm" \| "md" \| "lg" \| "xl"`                                                | `"md"`        |
 | `orientation` | `"portrait" \| "landscape"`                                                   | `"portrait"`  |
-| `color`       | `"black" \| "silver" \| "purple" \| "space-grey" \| "starlight" \| "blue"`    | `"silver"`    |
-| `image`       | `string`                                                                      | —             |
-| `alt`         | `string`                                                                      | `"iPad"`      |
+| `color`       | `"black" \| "silver" \| "purple" \| "space-grey" \| "starlight" \| "blue"`    | `"silver"`    |                                                                     | `"iPad"`      |
 
 ## Available colors
 

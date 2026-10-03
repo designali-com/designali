@@ -38,6 +38,20 @@ description: A responsive iPhone Duo frame component that wraps any content insi
   align="start"
 />
 
+<ComponentPreview
+  name="iphone-duo-06"
+  className="[&_.preview>[data-orientation=vertical]]:sm:max-w-[90%] **:[.preview]:min-h-[300px]"
+  description="iPhone Duo in different sizes: sm, md, lg and xl."
+  align="start"
+/>
+
+<ComponentPreview
+  name="iphone-duo-07"
+  className="[&_.preview>[data-orientation=vertical]]:sm:max-w-[90%] **:[.preview]:min-h-[300px]"
+  description="iPhone Duo in different sizes: sm, md, lg and xl."
+  align="start"
+/>
+
 ## Installation
 
 <CodeTabs>
@@ -120,7 +134,7 @@ import { IPhoneDuo } from "@/components/ui/iphone-duo"
 ### Custom frame image
 
 ```tsx showLineNumbers
-<IPhoneDuo image="/images/my-phone-frame.png" alt="Custom phone frame">
+<IPhoneDuo>
   <div className="p-6">Custom frame</div>
 </IPhoneDuo>
 ```
@@ -135,9 +149,7 @@ import { IPhoneDuo } from "@/components/ui/iphone-duo"
 | `orientation` | `"portrait" \| "landscape"`           | `"portrait"`   |
 | `side`        | `"front" \| "back" \| "frontback"`    | `"front"`      |
 | `color`       | `"night-sky" \| "star-white"`         | `"night-sky"`  |
-| `image`       | `string`                              | —              |
-| `alt`         | `string`                              | `"iPhone Duo"` |
-
+ 
 ## Notes
 
 - The screen area is an absolutely positioned container, so `children` scroll vertically inside it when they overflow.

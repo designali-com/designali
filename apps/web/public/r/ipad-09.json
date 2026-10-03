@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "ipad-09",
+  "type": "registry:component",
+  "title": "Apple iPad",
+  "files": [
+    {
+      "path": "registry/designali/components/apple/ipad/ipad-09.tsx",
+      "content": "import { IPad } from \"@/registry/designali/ui/apple/ipad\"\n\nexport function IPadImageDemo() {\n  return (\n    <div className=\"flex items-center justify-center p-8\">\n      <IPad\n        variant=\"ipad-air\"\n        color=\"blue\"\n        size=\"lg\"\n      >\n        <img\n          src=\"/img/login-1.jpg\"\n          alt=\"App screen\"\n          className=\"h-full w-full object-cover\"\n        />\n      </IPad>\n    </div>\n  )\n}",
+      "type": "registry:component"
+    }
+  ]
+}

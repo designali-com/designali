@@ -1,11 +1,15 @@
-import { IPhoneDuo } from "@/registry/designali/ui/apple/iphone-duo" 
+import { IPhoneDuo } from "@/registry/designali/ui/apple/iphone-duo"
 
-export default function IPhone01() {
+export function IPhoneDuoDemo() {
   return (
-    <div className="flex h-full w-full items-center justify-center">
-       <IPhoneDuo>
-        Hi
-       </IPhoneDuo>
+    <div className="flex items-center justify-center p-8">
+      <IPhoneDuo size="xl" side="frontback" color="night-sky">
+      <img
+          src="/img/login-1.jpg"
+          alt="App screen"
+          className="h-full w-full object-cover"
+        />
+      </IPhoneDuo>
     </div>
   )
 }

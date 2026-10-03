@@ -12,12 +12,7 @@ interface StudioDisplayProps {
 
   /** Frame color */
   color?: "light" | "dark";
-
-  /** Custom phone frame image */
-  image?: string;
-
-  /** Image alt text */
-  alt?: string;
+ 
 }
 
 type PhoneVariant = StudioDisplayProps["variant"];
@@ -35,9 +30,9 @@ const studioDisplayImages: Record<
   },
   "studio-display-xdr": {
     dark:
-      "https://ik.imagekit.io/designali/images/apple/Studio%20Display/Studio%20Display%20XDR%202026%20On%20Light%20Background.png?updatedAt=1790829605361",
+      "https://ik.imagekit.io/designali/images/apple/Studio%20Display/Studio%20Display%20XDR%202026%20On%20Dark%20Background.png?updatedAt=1790829605486",
     light:
-      "https://ik.imagekit.io/designali/images/apple/iPhone%2018%20Pro%20Max/iPhone%2018%20Pro%20Max%20-%20Glacier%20-%20Portrait.png?updatedAt=1790753782052",
+      "https://ik.imagekit.io/designali/images/apple/Studio%20Display/Studio%20Display%20XDR%202026%20On%20Light%20Background.png?updatedAt=1790829605361",
   },
 };
 
@@ -60,12 +55,10 @@ export function StudioDisplay({
   className = "",
   variant = "studio-display",
   size = "md",
-  color = "dark",
-  image,
-  alt = "Studio Display",
+  color = "dark", 
 }: StudioDisplayProps) {
   const defaultImage = studioDisplayImages[variant][color];
-  const frameImage = image ?? defaultImage;
+  const frameImage = defaultImage;
 
   return (
     <div
@@ -78,7 +71,7 @@ export function StudioDisplay({
     >
       <img
         src={frameImage}
-        alt={alt}
+        alt={"Studio Display"}
         className="pointer-events-none absolute inset-0 z-10 h-full w-full select-none object-contain"
       />
 

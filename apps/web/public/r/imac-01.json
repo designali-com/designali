@@ -6,7 +6,7 @@
   "files": [
     {
       "path": "registry/designali/components/apple/imac/imac-01.tsx",
-      "content": "import { IMac } from \"@/registry/designali/ui/apple/imac\"\n\nexport function IMacDemo() {\n  return (\n    <div className=\"flex items-center justify-center p-8\">\n      <IMac>\n        <video\n          src=\"/vid/colorful-spheres.mp4\"\n          autoPlay\n          loop\n          muted\n          playsInline\n          className=\"h-full w-full object-cover\"\n        />\n        <img\n          src=\"/img/login-1.jpg\"\n          alt=\"App screen\"\n          className=\"h-full w-full object-cover\"\n        />\n      </IMac>\n    </div>\n  );\n}",
+      "content": "import { IMac } from \"@/registry/designali/ui/apple/imac\"\n\nexport function IMacDemo() {\n  return (\n    <div className=\"flex items-center justify-center p-8\">\n      <IMac size=\"xl\" color=\"blue\">\n        <iframe \n          src={\"https://design-agency.designali.com/\"} \n          className=\"block size-full border-0\"\n          loading=\"lazy\"\n          allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\"\n          referrerPolicy=\"strict-origin-when-cross-origin\"\n        /> \n      </IMac>\n    </div>\n  );\n}",
       "type": "registry:component"
     }
   ]

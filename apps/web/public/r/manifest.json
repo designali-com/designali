@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-02T16:52:07.758Z",
+  "generatedAt": "2026-10-03T18:46:26.286Z",
   "items": [
     {
       "name": "iphone",
@@ -1389,6 +1389,18 @@
       "categories": []
     },
     {
+      "name": "iphone-duo-06",
+      "type": "registry:component",
+      "description": "",
+      "categories": []
+    },
+    {
+      "name": "iphone-duo-07",
+      "type": "registry:component",
+      "description": "",
+      "categories": []
+    },
+    {
       "name": "macbook-01",
       "type": "registry:component",
       "description": "",
@@ -1474,6 +1486,54 @@
     },
     {
       "name": "ipad-05",
+      "type": "registry:component",
+      "description": "",
+      "categories": []
+    },
+    {
+      "name": "ipad-03",
+      "type": "registry:component",
+      "description": "",
+      "categories": []
+    },
+    {
+      "name": "ipad-04",
+      "type": "registry:component",
+      "description": "",
+      "categories": []
+    },
+    {
+      "name": "ipad-05",
+      "type": "registry:component",
+      "description": "",
+      "categories": []
+    },
+    {
+      "name": "ipad-06",
+      "type": "registry:component",
+      "description": "",
+      "categories": []
+    },
+    {
+      "name": "ipad-07",
+      "type": "registry:component",
+      "description": "",
+      "categories": []
+    },
+    {
+      "name": "ipad-08",
+      "type": "registry:component",
+      "description": "",
+      "categories": []
+    },
+    {
+      "name": "ipad-09",
+      "type": "registry:component",
+      "description": "",
+      "categories": []
+    },
+    {
+      "name": "ipad-10",
       "type": "registry:component",
       "description": "",
       "categories": []

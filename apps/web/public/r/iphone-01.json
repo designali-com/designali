@@ -6,7 +6,7 @@
   "files": [
     {
       "path": "registry/designali/components/apple/iphone/iphone-01.tsx",
-      "content": "import { IPhone } from \"@/registry/designali/ui/apple/iphone\" \n\nexport default function IPhone01() {\n  return (\n    <div className=\"flex h-full w-full items-center justify-center\">\n       <IPhone size=\"md\" color=\"silver\">\n        Hi\n       </IPhone>\n    </div>\n  )\n}\n",
+      "content": "import { IPhone } from \"@/registry/designali/ui/apple/iphone\"\n\nexport default function IPhone01() {\n  return (\n    <div className=\"flex h-full w-full items-center justify-center\">\n      <IPhone size=\"md\" color=\"silver\">\n      <img\n          src=\"/img/login-1.jpg\"\n          alt=\"App screen\"\n          className=\"h-full w-full object-cover\"\n        />\n      </IPhone>\n    </div>\n  )\n}\n",
       "type": "registry:component"
     }
   ]

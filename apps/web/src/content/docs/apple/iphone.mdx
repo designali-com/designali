@@ -118,7 +118,7 @@ import { IPhone } from "@/components/ui/iphone"
 ### Custom frame image
 
 ```tsx showLineNumbers
-<IPhone image="/images/my-phone-frame.png" alt="Custom phone frame">
+<IPhone>
   <div className="p-6">Custom frame</div>
 </IPhone>
 ```
@@ -133,9 +133,7 @@ import { IPhone } from "@/components/ui/iphone"
 | `size`        | `"sm" \| "md" \| "lg" \| "xl"`                | `"md"`       |
 | `orientation` | `"portrait" \| "landscape"`                   | `"portrait"` |
 | `color`       | `"black" \| "glacier" \| "silver" \| "burgundy"` | `"silver"` |
-| `image`       | `string`                                      | —            |
-| `alt`         | `string`                                      | `"iPhone"`   |
-
+ 
 ## Notes
 
 - The screen area is an absolutely positioned container, so `children` scroll vertically inside it when they overflow.

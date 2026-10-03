@@ -81,7 +81,7 @@ const screenPositionClasses: Record<MacbookVariant, Record<string, string>> = {
   },
   "macbook-pro": {
     sm: "left-[7%] right-[7%] top-[7%] bottom-[7%]",
-    md: "left-[9%] right-[9%] top-[8.5%] bottom-[8%]",
+    md: "left-[12%] right-[12%] top-[11%] bottom-[10%]",
     lg: "left-[11%] right-[11%] top-[10%] bottom-[9%]",
     xl: "left-[13%] right-[13%] top-[11.5%] bottom-[10%]",
   },
@@ -102,8 +102,8 @@ const roundedClasses: Record<MacbookVariant, Record<string, string>> = {
     xl: "rounded-t-[18px]",
   },
   "macbook-pro": {
-    sm: "rounded-t-[8px]",
-    md: "rounded-t-[12px]",
+    sm: "rounded-t-[4px]",
+    md: "rounded-t-[6px]",
     lg: "rounded-t-[16px]",
     xl: "rounded-t-[20px]",
   },
@@ -120,12 +120,10 @@ export function Macbook({
   className = "",
   variant = "macbook-neo",
   size = "md",
-  color = "citrus",
-  image,
-  alt = "Macbook",
+  color = "citrus", 
 }: MacbookProps) {
   const defaultImages = macbookImages[variant];
-  const frameImage = image ?? defaultImages[color] ?? Object.values(defaultImages)[0];
+  const frameImage = defaultImages[color] ?? Object.values(defaultImages)[0];
 
   // Variant aur size ke hisaab se exact independent position aur rounded class lena
   const currentPosition = screenPositionClasses[variant]?.[size] || screenPositionClasses["macbook-air"].md;
@@ -142,7 +140,7 @@ export function Macbook({
     >
       <img
         src={frameImage}
-        alt={alt}
+        alt={"Macbook"}
         className="pointer-events-none absolute inset-0 z-10 h-full w-full select-none object-contain"
       />
 

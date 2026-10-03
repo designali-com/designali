@@ -8,14 +8,16 @@ export function CodeTabs({ children }: React.ComponentProps<typeof Tabs>) {
   const [config, setConfig] = useConfig()
 
   const installationType = React.useMemo(() => {
-    return config.installationType || "cli"
+    // Safely access installationType using optional chaining
+    return config?.installationType || "cli"
   }, [config])
 
   return (
     <Tabs
       className="relative mt-6 w-full"
       onValueChange={(value) =>
-        setConfig({ ...config, installationType: value as "cli" | "manual" })
+        // Safely spread config, falling back to an empty object if undefined
+        setConfig({ ...(config || {}), installationType: value as "cli" | "manual" })
       }
       value={installationType}
     >

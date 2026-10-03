@@ -6,7 +6,7 @@
   "files": [
     {
       "path": "registry/designali/components/apple/studio-display/studio-display-01.tsx",
-      "content": "import { StudioDisplay } from \"@/registry/designali/ui/apple/studio-display\" \n\nexport default function IPhone01() {\n  return (\n    <div className=\"flex h-full w-full items-center justify-center\">\n       <StudioDisplay size=\"md\">\n        Hi\n       </StudioDisplay>\n    </div>\n  )\n}\n",
+      "content": "import { StudioDisplay } from \"@/registry/designali/ui/apple/studio-display\" \n\nexport default function IPhone01() {\n  return (\n    <div className=\"flex h-full w-full items-center justify-center\">\n       <StudioDisplay size=\"md\">\n       <iframe \n          src={\"https://design-agency.designali.com/\"} \n          className=\"block size-full border-0\"\n          loading=\"lazy\"\n          allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\"\n          referrerPolicy=\"strict-origin-when-cross-origin\"\n        /> \n       </StudioDisplay>\n    </div>\n  )\n}\n",
       "type": "registry:component"
     }
   ]

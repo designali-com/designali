@@ -16,12 +16,7 @@ interface IPhoneProps {
 
   /** Frame color */
   color?: "black" | "glacier" | "silver" | "burgundy";
-
-  /** Custom phone frame image */
-  image?: string;
-
-  /** Image alt text */
-  alt?: string;
+ 
 }
 
 type PhoneVariant = IPhoneProps["variant"];
@@ -112,8 +107,8 @@ const landscapeSizeClasses = {
 };
 
 const roundedClasses = {
-  sm: "rounded-[18px]",
-  md: "rounded-[24px]",
+  sm: "rounded-[20px]",
+  md: "rounded-[32px]",
   lg: "rounded-[32px]",
   xl: "rounded-[48px]",
 };
@@ -131,16 +126,13 @@ export function IPhone({
   variant = "18-pro",
   size = "md",
   orientation = "portrait",
-  color = "silver",
-  image,
-  alt = "iPhone",
+  color = "silver", 
 }: IPhoneProps) {
   const isLandscape = orientation === "landscape";
 
   const defaultImages = phoneImages[variant][color];
 
-  const frameImage =
-    image ??
+  const frameImage = 
     (isLandscape
       ? defaultImages.landscape
       : defaultImages.portrait);
@@ -156,7 +148,7 @@ export function IPhone({
     >
       <img
         src={frameImage}
-        alt={alt}
+        alt={"iPhone"}
         className="pointer-events-none absolute inset-0 z-10 h-full w-full select-none object-contain"
       />
 

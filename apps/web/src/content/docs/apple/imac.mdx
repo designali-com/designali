@@ -109,8 +109,12 @@ import { IMac } from "@/components/ui/imac"
 ### Custom frame image
 
 ```tsx showLineNumbers
-<IMac image="/images/my-imac-frame.png" alt="Custom iMac frame">
-  <div className="p-6">Custom frame</div>
+<IMac>
+  <img
+    src="/img/hero-1.jpg"
+    alt="App screen"
+    className="h-full w-full object-cover"
+  />
 </IMac>
 ```
 
@@ -122,11 +126,9 @@ import { IMac } from "@/components/ui/imac"
 | `className` | `string`                                                                      | —          |
 | `size`      | `"sm" \| "md" \| "lg" \| "xl"`                                                | `"md"`     |
 | `color`     | `"blue" \| "green" \| "pink" \| "silver" \| "yellow" \| "orange" \| "purple"` | `"silver"` |
-| `image`     | `string`                                                                      | —          |
-| `alt`       | `string`                                                                      | `"iMac"`   |
-
+ 
 ## Notes
 
 - The screen area is an absolutely positioned container, so `children` scroll vertically inside it when they overflow.
 - Passing `image` overrides the `color` prop.
-- Sizes map to fixed widths (`28rem`, `40rem`, `54rem`, `68rem`). Use `className` (for example `max-w-full`) to keep the iMac inside small viewports.
+- Sizes map to fixed widths (`24rem`, `32rem`, `40rem`, `52rem`). Use `className` (for example `max-w-full`) to keep the iMac inside small viewports.
