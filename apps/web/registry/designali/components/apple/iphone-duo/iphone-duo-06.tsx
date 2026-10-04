@@ -31,7 +31,7 @@ export function IPhoneDuoColorsDemo() {
       </div>
 
       <IPhoneDuo
-        size="lg" 
+        size="xl" 
         color={activeColor}
       >
        <img

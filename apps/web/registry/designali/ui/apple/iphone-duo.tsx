@@ -15,12 +15,6 @@ interface IPhoneDuoProps {
 
   /** Frame color */
   color?: "night-sky" | "star-white";
-
-  /** Custom phone frame image */
-  image?: string;
-
-  /** Image alt text */
-  alt?: string;
 }
 
 type PhoneColor = NonNullable<IPhoneDuoProps["color"]>;
@@ -36,172 +30,243 @@ interface OrientationImageSet {
   frontback: string; // Single image without orientation
 }
 
+// ==========================================
+// 📱 DEVICE IMAGES CONFIGURATION
+// ==========================================
 const phoneImages: Record<PhoneColor, OrientationImageSet> = {
   "night-sky": {
     front: {
-      portrait:
-        "https://ik.imagekit.io/designali/images/apple/iPhone%20Duo/iPhone%20Duo%20-%20Night%20Sky%20-%20Inner%20Open%20Portrait.png?updatedAt=1790829512133",
-      landscape:
-        "https://ik.imagekit.io/designali/images/apple/iPhone%20Duo/iPhone%20Duo%20-%20Night%20Sky%20-%20Inner%20Open%20Landscape.png?updatedAt=1790829512135",
+      portrait: "https://ik.imagekit.io/designali/images/apple/iPhone%20Duo/iPhone%20Duo%20-%20Night%20Sky%20-%20Inner%20Open%20Portrait.png?updatedAt=1790829512133",
+      landscape: "https://ik.imagekit.io/designali/images/apple/iPhone%20Duo/iPhone%20Duo%20-%20Night%20Sky%20-%20Inner%20Open%20Landscape.png?updatedAt=1790829512135",
     },
     back: {
-      portrait:
-        "https://ik.imagekit.io/designali/images/apple/iPhone%20Duo/iPhone%20Duo%20-%20Night%20Sky%20-%20Outer%20Closed%20Portrait.png?updatedAt=1790829511949",
-      landscape:
-        "https://ik.imagekit.io/designali/images/apple/iPhone%20Duo/iPhone%20Duo%20-%20Night%20Sky%20-%20Outer%20Closed%20Landscape.png?updatedAt=1790829511938",
+      portrait: "https://ik.imagekit.io/designali/images/apple/iPhone%20Duo/iPhone%20Duo%20-%20Night%20Sky%20-%20Outer%20Closed%20Portrait.png?updatedAt=1790829511949",
+      landscape: "https://ik.imagekit.io/designali/images/apple/iPhone%20Duo/iPhone%20Duo%20-%20Night%20Sky%20-%20Outer%20Closed%20Landscape.png?updatedAt=1790829511938",
     },
-    frontback:
-      "https://ik.imagekit.io/designali/images/apple/iPhone%20Duo/iPhone%20Duo%20-%20Night%20Sky%20-%20Outer%20Open.png?updatedAt=1790829512290",
+    frontback: "https://ik.imagekit.io/designali/images/apple/iPhone%20Duo/iPhone%20Duo%20-%20Night%20Sky%20-%20Outer%20Open.png?updatedAt=1790829512290",
   },
-
   "star-white": {
     front: {
-      portrait:
-        "https://ik.imagekit.io/designali/images/apple/iPhone%20Duo/iPhone%20Duo%20-%20Star%20White%20-%20Inner%20Open%20Portrait.png?updatedAt=1790829512079",
-      landscape:
-        "https://ik.imagekit.io/designali/images/apple/iPhone%20Duo/iPhone%20Duo%20-%20Star%20White%20-%20Inner%20Open%20Landscape.png?updatedAt=1790829512033",
+      portrait: "https://ik.imagekit.io/designali/images/apple/iPhone%20Duo/iPhone%20Duo%20-%20Star%20White%20-%20Inner%20Open%20Portrait.png?updatedAt=1790829512079",
+      landscape: "https://ik.imagekit.io/designali/images/apple/iPhone%20Duo/iPhone%20Duo%20-%20Star%20White%20-%20Inner%20Open%20Landscape.png?updatedAt=1790829512033",
     },
     back: {
-      portrait:
-        "https://ik.imagekit.io/designali/images/apple/iPhone%20Duo/iPhone%20Duo%20-%20Star%20White%20-%20Inner%20Open%20Portrait.png?updatedAt=1790829512079",
-      landscape:
-        "https://ik.imagekit.io/designali/images/apple/iPhone%20Duo/iPhone%20Duo%20-%20Star%20White%20-%20Inner%20Open%20Landscape.png?updatedAt=1790829512033",
+      portrait: "https://ik.imagekit.io/designali/images/apple/iPhone%20Duo/iPhone%20Duo%20-%20Star%20White%20-%20Outer%20Closed%20Portrait.png?updatedAt=1790829511959",
+      landscape: "https://ik.imagekit.io/designali/images/apple/iPhone%20Duo/iPhone%20Duo%20-%20Star%20White%20-%20Outer%20Closed%20Landscape.png?updatedAt=1790829511960",
     },
-    frontback:
-      "https://ik.imagekit.io/designali/images/apple/iPhone%20Duo/iPhone%20Duo%20-%20Star%20White%20-%20Outer%20Open.png?updatedAt=1790829512168",
+    frontback: "https://ik.imagekit.io/designali/images/apple/iPhone%20Duo/iPhone%20Duo%20-%20Star%20White%20-%20Outer%20Open.png?updatedAt=1790829512168",
   },
 };
 
-const sizeClasses = {
-  sm: "h-[20rem]",
-  md: "h-[28rem]",
-  lg: "h-[32rem]",
-  xl: "h-[48rem]",
-};
-
-const landscapeSizeClasses = {
-  sm: "h-[14rem]",
-  md: "h-[16rem]",
-  lg: "h-[24rem]",
-  xl: "h-[32rem]",
-};
-
-// Portrait rounded classes (Standard vs FrontBack)
-const roundedClasses = {
-  standardView: {
-    sm: "rounded-[6px]",
-    md: "rounded-[10px]",
-    lg: "rounded-[16px]",
-    xl: "rounded-[20px]",
-  },
-  frontBackView: {
-    sm: "rounded-[8px]",
-    md: "rounded-[12px]",
-    lg: "rounded-[18px]",
-    xl: "rounded-l-[6px] rounded-r-[20px]", // Yahan xl ke liye frontback ka alag rounded diya hai
-  },
-};
-
-// Landscape rounded classes (Standard vs FrontBack)
-const landscapeRoundedClasses = {
-  standardView: {
-    sm: "rounded-[32px]",
-    md: "rounded-[48px]",
-    lg: "rounded-[52px]",
-    xl: "rounded-b-[6px] rounded-t-[30px]",
-  },
-  frontBackView: {
-    sm: "rounded-[20px]",
-    md: "rounded-[32px]",
-    lg: "rounded-[42px]",
-    xl: "rounded-[52px]", // Yahan bhi landscape frontback ke liye alag rounded hai
-  },
-};
- 
-// Front, Back aur Frontback (Open view) ke liye alag-alag screen position mappings
-const screenPositionClasses = {
-  frontBackView: {
+// ==========================================
+// 📏 OVERALL DEVICE HEIGHT SIZES
+// ==========================================
+const deviceSizeClasses = {
+  // --- 1. FRONT VIEW SIZES ---
+  front: {
     portrait: {
-      sm: "left-[8%] right-[8%] top-[12%] bottom-[12%]",
-      md: "left-[8.5%] right-[8.5%] top-[13%] bottom-[13%]",
-      lg: "left-[9%] right-[9%] top-[14%] bottom-[14%]",
-      xl: "left-[51%] right-[2%] top-[34.5%] bottom-[34.5%]",
+      sm: "h-[24rem]",
+      md: "h-[32rem]",
+      lg: "h-[40rem]",
+      xl: "h-[48rem]",
     },
     landscape: {
-      sm: "left-[12%] right-[12%] top-[8%] bottom-[8%]",
-      md: "left-[10%] right-[10%] top-[8.5%] bottom-[8.5%]",
-      lg: "left-[14%] right-[14%] top-[9%] bottom-[9%]",
-      xl: "left-[40%] right-[14%] top-[9%] bottom-[9%]",
+      sm: "h-[12rem]",
+      md: "h-[16rem]",
+      lg: "h-[20rem]",
+      xl: "h-[24rem]",
     },
   },
-  standardView: {
+  
+  // --- 2. BACK VIEW SIZES ---
+  back: {
     portrait: {
-      sm: "left-[4%] right-[4%] top-[18%] bottom-[18%]",
-      md: "left-[4.5%] right-[4.5%] top-[19%] bottom-[19%]",
+      sm: "h-[24rem]",
+      md: "h-[32rem]",
+      lg: "h-[40rem]",
+      xl: "h-[48rem]",
+    },
+    landscape: {
+      sm: "h-[12rem]",
+      md: "h-[16rem]",
+      lg: "h-[20rem]",
+      xl: "h-[24rem]",
+    },
+  },
+
+  // --- 3. FRONTBACK VIEW SIZES (NO ORIENTATION) ---
+  frontback: {
+    sm: "h-[40rem]",
+    md: "h-[48rem]",
+    lg: "h-[52rem]",
+    xl: "h-[64rem]",
+  },
+};
+
+// ==========================================
+// 🖼️ ASPECT RATIO CLASSES
+// ==========================================
+const aspectRatioClasses = {
+  // --- 1. FRONT ASPECT RATIO ---
+  front: {
+    portrait: "aspect-[9/19.5]",
+    landscape: "aspect-[19.5/9]",
+  },
+  
+  // --- 2. BACK ASPECT RATIO ---
+  back: {
+    portrait: "aspect-[9/19.5]",
+    landscape: "aspect-[19.5/9]",
+  },
+
+  // --- 3. FRONTBACK ASPECT RATIO ---
+  frontback: "aspect-[9/19.5]",
+};
+
+// ==========================================
+// 🎨 BORDER RADIUS (ROUNDED) CLASSES
+// ==========================================
+const roundedClasses = {
+  // --- 1. FRONT VIEW ROUNDED ---
+  front: {
+    portrait: {
+      sm: "rounded-[16px]",
+      md: "rounded-[10px]",
+      lg: "rounded-[16px]",
+      xl: "rounded-[20px]",
+    },
+    landscape: {
+      sm: "rounded-[16px]",
+      md: "rounded-[20px]",
+      lg: "rounded-[24px]",
+      xl: "rounded-[30px]",
+    },
+  },
+  
+  // --- 2. BACK VIEW ROUNDED ---
+  back: {
+    portrait: {
+      sm: "rounded-l-[4px] rounded-r-[12px]",
+      md: "rounded-l-[6px] rounded-r-[14px]",
+      lg: "rounded-l-[8px] rounded-r-[16px]",
+      xl: "rounded-l-[10px] rounded-r-[20px]",
+    },
+    landscape: {
+      sm: "rounded-t-[20px] rounded-b-[6px]",
+      md: "rounded-t-[30px] rounded-b-[10px]",
+      lg: "rounded-t-[30px] rounded-b-[10px]",
+      xl: "rounded-t-[30px] rounded-b-[10px]",
+    },
+  },
+
+  // --- 3. FRONTBACK VIEW ROUNDED (NO ORIENTATION) ---
+  frontback: {
+    sm: "rounded-l-[1px] rounded-r-[12px]",
+    md: "rounded-l-[2px] rounded-r-[16px]",
+    lg: "rounded-l-[4px] rounded-r-[20px]",
+    xl: "rounded-l-[6px] rounded-r-[24px]",
+  },
+};
+
+// ==========================================
+// 📐 SCREEN POSITION CLASSES (INSET)
+// ==========================================
+const screenPositionClasses = {
+  // --- 1. FRONT VIEW POSITIONS ---
+  front: {
+    portrait: {
+      sm: "left-[5.5%] right-[5.5%] top-[19.5%] bottom-[20%]",
+      md: "left-[5.5%] right-[5.5%] top-[20%] bottom-[20%]",
       lg: "left-[5%] right-[5%] top-[20%] bottom-[20%]",
       xl: "left-[5%] right-[5%] top-[20%] bottom-[20%]",
     },
     landscape: {
-      sm: "left-[18%] right-[18%] top-[4%] bottom-[4%]",
-      md: "left-[19%] right-[19%] top-[4.5%] bottom-[4.5%]",
+      sm: "left-[20.5%] right-[20.5%] top-[5%] bottom-[4.5%]",
+      md: "left-[20.5%] right-[20.5%] top-[5%] bottom-[4.5%]",
       lg: "left-[20%] right-[20%] top-[5%] bottom-[5%]",
       xl: "left-[20%] right-[20%] top-[5%] bottom-[5%]",
     },
   },
+
+  // --- 2. BACK VIEW POSITIONS ---
+  back: {
+    portrait: {
+      sm: "left-[5.5%] right-[5.5%] top-[19.5%] bottom-[20%]",
+      md: "left-[5.5%] right-[5.5%] top-[20%] bottom-[20%]",
+      lg: "left-[5%] right-[5%] top-[20%] bottom-[20%]",
+      xl: "left-[5%] right-[5%] top-[20%] bottom-[20%]",
+    },
+    landscape: {
+      sm: "left-[20%] right-[20%] top-[5%] bottom-[4.5%]",
+      md: "left-[20%] right-[20%] top-[5%] bottom-[4.5%]",
+      lg: "left-[20%] right-[20%] top-[5%] bottom-[5%]",
+      xl: "left-[20%] right-[20%] top-[5%] bottom-[5%]",
+    },
+  },
+
+  // --- 3. FRONTBACK VIEW POSITIONS (NO ORIENTATION) ---
+  frontback: {
+    sm: "left-[51%] right-[2%] top-[34.5%] bottom-[34.5%]",
+    md: "left-[51%] right-[2%] top-[34.5%] bottom-[34.5%]",
+    lg: "left-[51%] right-[2%] top-[34.5%] bottom-[34.5%]",
+    xl: "left-[51%] right-[2%] top-[34.5%] bottom-[34.5%]",
+  },
 };
 
+// ==========================================
+// 🚀 MAIN COMPONENT
+// ==========================================
 export function IPhoneDuo({
   children,
   className = "",
-  size = "md",
+  size = "xl",
   orientation = "portrait",
   side = "frontback",
-  color = "night-sky",
-  image,
-  alt = "iPhone Duo",
+  color = "star-white",
 }: IPhoneDuoProps) {
-  const isLandscape = orientation === "landscape";
-  const colorImages = phoneImages[color] || phoneImages["night-sky"];
- 
-  let frameImage = image;
-  if (!frameImage) {
-    if (side === "frontback") {
-      frameImage = colorImages.frontback;
-    } else {
-      const sideImages = colorImages[side] as SideImageSet;
-      frameImage = isLandscape ? sideImages.landscape : sideImages.portrait;
-    }
-  }
-
+  
   const isFrontBack = side === "frontback";
+  const isLandscape = !isFrontBack && orientation === "landscape";
+  const currentOrientation = isLandscape ? "landscape" : "portrait";
+  
+  const colorImages = phoneImages[color] || phoneImages["night-sky"];
 
-  // Side ke mutabiq sahi position aur rounded classes choose karna
-  const positionGroup = isFrontBack 
-    ? screenPositionClasses.frontBackView 
-    : screenPositionClasses.standardView;
+  // Dynamic class variables
+  let frameImage = "";
+  let currentSizeClass = "";
+  let currentPositionClass = "";
+  let currentRoundedClass = "";
+  let currentAspectRatioClass = "";
 
-  const currentPositionClass = isLandscape
-    ? positionGroup.landscape[size]
-    : positionGroup.portrait[size];
-
-  const roundedGroup = isLandscape 
-    ? (isFrontBack ? landscapeRoundedClasses.frontBackView : landscapeRoundedClasses.standardView)
-    : (isFrontBack ? roundedClasses.frontBackView : roundedClasses.standardView);
-
-  const currentRoundedClass = roundedGroup[size];
+  if (isFrontBack) {
+    // Frontback view handling (no orientation)
+    frameImage = colorImages.frontback;
+    currentSizeClass = deviceSizeClasses.frontback[size];
+    currentPositionClass = screenPositionClasses.frontback[size];
+    currentRoundedClass = roundedClasses.frontback[size];
+    currentAspectRatioClass = aspectRatioClasses.frontback;
+  } else {
+    // Front and Back views handling (uses orientation)
+    const sideImages = colorImages[side] as SideImageSet;
+    frameImage = isLandscape ? sideImages.landscape : sideImages.portrait;
+    currentSizeClass = deviceSizeClasses[side][currentOrientation][size];
+    currentPositionClass = screenPositionClasses[side][currentOrientation][size];
+    currentRoundedClass = roundedClasses[side][currentOrientation][size];
+    currentAspectRatioClass = aspectRatioClasses[side][currentOrientation];
+  }
 
   return (
     <div
       className={`
         relative inline-block
-        ${isLandscape ? landscapeSizeClasses[size] : sizeClasses[size]}
-        ${isLandscape ? "aspect-[19.5/9]" : "aspect-[9/19.5]"}
+        ${currentSizeClass}
+        ${currentAspectRatioClass}
         ${className}
       `}
     >
       <img
         src={frameImage}
-        alt={alt}
+        alt="iPhone Duo Mockup"
         className="pointer-events-none absolute inset-0 z-10 h-full w-full select-none object-contain"
       />
 
