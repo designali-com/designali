@@ -1,10 +1,16 @@
 "use client"
 
-import React, { useMemo, useRef, useState } from "react"
+import React, { useEffect, useMemo, useRef, useState } from "react"
 import { GradientTemplate } from "@/src/config/gradient/templates"
+import { toast } from "sonner"
 
 
 import { renderGradientCanvas } from "@/src/lib/gradient-render"
+import {
+  GradientExportJob,
+  MotionStyle,
+  animationExportSize,
+} from "@/src/lib/gradient-motion"
 import {
   Point,
   SizeOption,
@@ -53,14 +59,33 @@ export default function MeshGradientGenerator() {
   const [noise, setNoise] = useState(40)
   const [effectId, setEffectId] = useState("none")
   const [effectAmount, setEffectAmount] = useState(70)
+  const [motionStyle, setMotionStyle] = useState<MotionStyle>("flow")
+  const [travel, setTravel] = useState(48)
+  const [loopSeconds, setLoopSeconds] = useState(6)
+  const [exporting, setExporting] = useState<GradientExportJob | null>(null)
   const [points, setPoints] = useState<Point[]>(INITIAL)
   const [selected, setSelected] = useState<number>(INITIAL[0]!.id)
   const [sizeIdx, setSizeIdx] = useState(0)
 
   const nextId = useRef(100)
   const previewRef = useRef<HTMLDivElement>(null)
+  const exportGeneration = useRef(0)
 
   const size = SIZES[sizeIdx] ?? DEFAULT_SIZE
+  const gifSize = animationExportSize(size.w, size.h, "gif")
+  const mp4Size = animationExportSize(size.w, size.h, "mp4")
+
+  useEffect(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      setMotionStyle("still")
+    }
+  }, [])
+
+  useEffect(() => {
+    return () => {
+      exportGeneration.current += 1
+    }
+  }, [])
 
   const layers = useMemo(() => generateLayers(points), [points])
 
@@ -165,6 +190,51 @@ filter: blur(${blur}px);`
     )
   }
 
+  const downloadAnimation = async (format: "gif" | "mp4") => {
+    if (exporting || motionStyle === "still" || travel <= 0) return
+
+    const generation = ++exportGeneration.current
+    const output = format === "gif" ? gifSize : mp4Size
+    const previewWidth = previewRef.current?.clientWidth ?? output.width
+    const pixelScale = previewWidth > 0 ? output.width / previewWidth : 1
+
+    setExporting({ format, progress: 0 })
+
+    try {
+      const { exportGradientAnimation } = await import(
+        "@/src/lib/gradient-export"
+      )
+      await exportGradientAnimation({
+        format,
+        base,
+        points,
+        blur,
+        noise,
+        effectId,
+        effectAmount,
+        width: output.width,
+        height: output.height,
+        pixelScale,
+        motionStyle,
+        travel,
+        loopSeconds,
+        onProgress: (progress) => {
+          if (exportGeneration.current !== generation) return
+          setExporting({ format, progress })
+        },
+        shouldContinue: () => exportGeneration.current === generation,
+      })
+    } catch (error) {
+      if (exportGeneration.current === generation) {
+        toast.error(error instanceof Error ? error.message : "Export failed")
+      }
+    } finally {
+      if (exportGeneration.current === generation) {
+        setExporting(null)
+      }
+    }
+  }
+
   const applyTemplate = (template: GradientTemplate) => {
     const newPoints: Point[] = template.points.map((point) => ({
       ...point,
@@ -190,6 +260,10 @@ filter: blur(${blur}px);`
           onSelectPoint={setSelected}
           onUpdatePoint={updatePoint}
           points={points}
+          motionStyle={motionStyle}
+          travel={travel}
+          loopSeconds={loopSeconds}
+          playing={!exporting}
           previewRef={previewRef}
           selected={selected}
         />
@@ -204,7 +278,18 @@ filter: blur(${blur}px);`
         effectAmount={effectAmount}
         cssCode={cssCode}
         onAddPoint={addPoint}
+        motionStyle={motionStyle}
+        setMotionStyle={setMotionStyle}
+        travel={travel}
+        setTravel={setTravel}
+        loopSeconds={loopSeconds}
+        setLoopSeconds={setLoopSeconds}
+        exporting={exporting}
+        gifSize={gifSize}
+        mp4Size={mp4Size}
         onDownloadJpg={downloadJpg}
+        onDownloadGif={() => void downloadAnimation("gif")}
+        onDownloadMp4={() => void downloadAnimation("mp4")}
         onRandomize={randomize}
         onRemovePoint={removePoint}
         onUpdatePoint={updatePoint}

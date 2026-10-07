@@ -38,6 +38,14 @@ import {
   Download,
 } from "lucide-react"
 import { GradientTemplate } from "@/src/config/gradient/templates"
+import {
+  GradientExportJob,
+  MOTION_STYLES,
+  MotionStyle,
+  isMotionStyle,
+  motionDescription,
+  motionLabel,
+} from "@/src/lib/gradient-motion"
 import { TemplatePicker } from "./gradient-templates"
 
 interface ControlPanelProps {
@@ -66,11 +74,23 @@ interface ControlPanelProps {
   cssCode: string
   onApplyTemplate: (template: GradientTemplate) => void
 
+  motionStyle: MotionStyle
+  setMotionStyle: (value: MotionStyle) => void
+  travel: number
+  setTravel: (value: number) => void
+  loopSeconds: number
+  setLoopSeconds: (value: number) => void
+  exporting: GradientExportJob | null
+  gifSize: { width: number; height: number }
+  mp4Size: { width: number; height: number }
+
   onRandomize: () => void
   onAddPoint: () => void
   onRemovePoint: (id: number) => void
   onUpdatePoint: (id: number, patch: Partial<Point>) => void
   onDownloadJpg: () => void
+  onDownloadGif: () => void
+  onDownloadMp4: () => void
 }
 
 type CopyMode = "tailwind" | "style"
@@ -103,11 +123,22 @@ export function ControlPanel({
   setSelected,
   onApplyTemplate,
   cssCode,
+  motionStyle,
+  setMotionStyle,
+  travel,
+  setTravel,
+  loopSeconds,
+  setLoopSeconds,
+  exporting,
+  gifSize,
+  mp4Size,
   onRandomize,
   onAddPoint,
   onRemovePoint,
   onUpdatePoint,
   onDownloadJpg,
+  onDownloadGif,
+  onDownloadMp4,
 }: ControlPanelProps) {
   const [copied, setCopied] = useState(false)
   const [copyMode, setCopyMode] = useState<CopyMode>("tailwind")
@@ -160,6 +191,14 @@ export function ControlPanel({
    * they are generated at runtime.
    */
   const effectNote = effectExportNote(effectId, effectAmount)
+  const motionNote =
+    motionStyle === "still"
+      ? ""
+      : `/* ${motionLabel(motionStyle)} motion plays in the preview. Export GIF or MP4 for the loop. */\n`
+  const motionReady = motionStyle !== "still" && travel > 0
+  const exportPercent = exporting
+    ? Math.round(exporting.progress * 100)
+    : 0
 
   const tailwindCode = useMemo(() => {
     if (noise <= 0) {
@@ -230,7 +269,7 @@ export function ControlPanel({
 </div>`
   }, [base, backgroundImage, blur, noise])
 
-  const code = `${effectNote}${copyMode === "tailwind" ? tailwindCode : styleCode}`
+  const code = `${motionNote}${effectNote}${copyMode === "tailwind" ? tailwindCode : styleCode}`
 
   const copyCode = async () => {
     try {
@@ -326,6 +365,69 @@ export function ControlPanel({
             setNoise(sliderValue(value, noise))
           }
         />
+      </div>
+
+      <div className="flex flex-col gap-2">
+        <Label>Motion</Label>
+
+        <Select
+          value={motionStyle}
+          onValueChange={(value) => {
+            if (typeof value !== "string" || !isMotionStyle(value)) return
+            setMotionStyle(value)
+          }}
+        >
+          <SelectTrigger className="h-8 w-full text-xs">
+            <SelectValue />
+          </SelectTrigger>
+          <SelectContent>
+            {MOTION_STYLES.map((style) => (
+              <SelectItem key={style.id} value={style.id} className="text-xs">
+                {style.label}
+              </SelectItem>
+            ))}
+          </SelectContent>
+        </Select>
+
+        {motionStyle !== "still" && (
+          <>
+            <p className="text-[11px] leading-4 text-muted-foreground">
+              {motionDescription(motionStyle)}
+            </p>
+
+            <div className="flex items-center justify-between">
+              <Label>Travel</Label>
+              <span className="font-mono text-xs text-muted-foreground">
+                {travel}%
+              </span>
+            </div>
+
+            <Slider
+              min={1}
+              max={100}
+              step={1}
+              value={[travel]}
+              onValueChange={(value) => setTravel(sliderValue(value, travel))}
+            />
+
+            <div className="flex items-center justify-between">
+              <Label>Loop</Label>
+              <span className="font-mono text-xs text-muted-foreground">
+                {loopSeconds}s
+              </span>
+            </div>
+
+            <Slider
+              min={3}
+              max={10}
+              step={1}
+              value={[loopSeconds]}
+              onValueChange={(value) =>
+                setLoopSeconds(sliderValue(value, loopSeconds))
+              }
+            />
+          </>
+        )}
       </div>
 
       <div className="flex flex-col gap-2">
@@ -600,6 +702,7 @@ export function ControlPanel({
       <Button
         type="button"
         onClick={onDownloadJpg}
+        disabled={Boolean(exporting)}
         className="w-full"
       >
         <Download className="mr-2 h-4 w-4" />
@@ -610,6 +713,45 @@ export function ControlPanel({
           ? ` (${currentSize.w}×${currentSize.h})`
           : ""}
       </Button>
+
+      <Button
+        type="button"
+        variant="outline"
+        onClick={onDownloadGif}
+        disabled={!motionReady || Boolean(exporting)}
+        className="w-full"
+      >
+        {exporting?.format === "gif"
+          ? `GIF ${exportPercent}%`
+          : `GIF · ${gifSize.width}×${gifSize.height}`}
+      </Button>
+
+      <Button
+        type="button"
+        variant="outline"
+        onClick={onDownloadMp4}
+        disabled={!motionReady || Boolean(exporting)}
+        className="w-full"
+      >
+        {exporting?.format === "mp4"
+          ? `MP4 ${exportPercent}%`
+          : `MP4 · ${mp4Size.width}×${mp4Size.height}`}
+      </Button>
+
+      {exporting && (
+        <div className="h-1 w-full overflow-hidden bg-muted">
+          <div
+            className="h-full bg-primary"
+            style={{ width: `${exportPercent}%` }}
+          />
+        </div>
+      )}
+
+      <p className="text-[11px] leading-4 text-muted-foreground">
+        {motionReady
+          ? `GIF and MP4 export one ${loopSeconds}s loop.`
+          : motionDescription("still")}
+      </p>
 
     </aside>
   )

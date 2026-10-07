@@ -1774,5 +1774,5 @@ export function applyGradientEffect(
 export function effectExportNote(effectId: string, amount: number) {
   const effect = EFFECTS_BY_ID.get(effectId)
   if (!effect || amount <= 0) return ""
-  return `/* ${effect.name} ${Math.round(amount)}% is included in the JPG export */\n`
+  return `/* ${effect.name} ${Math.round(amount)}% is included in JPG, GIF, and MP4 export */\n`
 }
