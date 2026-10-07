@@ -144,6 +144,7 @@ async function exportGif(
   gif.finish()
   const bytes = gif.bytes()
   downloadBlob(
+    //@ts-ignore
     new Blob([bytes], { type: "image/gif" }),
     `mesh-gradient-${canvas.width}x${canvas.height}.gif`
   )
