@@ -796,8 +796,8 @@ export const templateCategories: {
     iconName: "PanelTop",
     hidden: false,
 
-    url: "https://old.aliimam.in/",
-    downloadurl: "https://github.com/aliimam-in/aliimam",
+    url: "https://aliimam.designali.com/",
+    downloadurl: "https://github.com/designali-com/templates/tree/main/aliimam",
 
     tech: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
 
