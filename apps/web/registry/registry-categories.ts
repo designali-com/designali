@@ -818,7 +818,367 @@ export const templateCategories: {
 
     fonts: ["Inter", "Geist"],
 
-    image: "/images/templates/aliimam.jpg",
-    video: "/images/templates/aliimam.jpg",
+    image: "/images/templates/ai.jpg",
+    video: "/images/templates/ai.jpg",
   }, 
+  {
+    id: "resort",
+    name: "Resort",
+    slug: "resort",
+    description:
+      "A modern resort website template for showcasing hotels, resorts, and vacation destinations.",
+    iconName: "PanelTop",
+    hidden: false,
+
+    url: "https://resort.designali.com/",
+    downloadurl: "https://github.com/designali-com/templates/tree/main/resort",
+
+    tech: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
+
+    pages: ["Home", "About", "Work", "Projects", "Contact"],
+
+    features: [
+      "Responsive Design",
+      "Portfolio Showcase",
+      "Project Gallery",
+      "Modern Typography",
+    ],
+
+    colors: ["#0A0A0A", "#FFFFFF", "#6366F1", "#F4F4F5"],
+
+    fonts: ["Inter", "Geist"],
+
+    image: "/images/templates/resort.jpg",
+    video: "/images/templates/resort.jpg",
+  },
+  {
+    id: "aliimam-old-components",
+    name: "Ali Old Components",
+    slug: "aliimam-old-components",
+    description:
+      "An older components library showcasing design projects, creative work, and professional experience.",
+    iconName: "PanelTop",
+    hidden: false,
+
+    url: "https://aliimam-sigma.vercel.app/",
+    downloadurl: "https://github.com/designali-com",
+
+    tech: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
+
+    pages: ["Home", "About", "Work", "Projects", "Contact"],
+
+    features: [
+      "Responsive Design",
+      "Portfolio Showcase",
+      "Project Gallery",
+      "Modern Typography",
+    ],
+
+    colors: ["#0A0A0A", "#FFFFFF", "#6366F1", "#F4F4F5"],
+
+    fonts: ["Inter", "Geist"],
+
+    image: "/images/templates/aliimam-comp.jpg",
+    video: "/images/templates/aliimam-comp.jpg",
+  },
+  {
+    id: "aliimam-old",
+    name: "Ali Old Portfolio",
+    slug: "aliimam-old",
+    description:
+      "An older personal portfolio showcasing design projects, creative work, and professional experience.",
+    iconName: "PanelTop",
+    hidden: false,
+
+    url: "https://aliimam-web.vercel.app/",
+    downloadurl: "https://github.com/designali-com", 
+
+    tech: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
+
+    pages: ["Home", "About", "Work", "Projects", "Contact"],
+
+    features: [
+      "Responsive Design",
+      "Portfolio Showcase",
+      "Project Gallery",
+      "Modern Typography",
+    ],
+
+    colors: ["#0A0A0A", "#FFFFFF", "#6366F1", "#F4F4F5"],
+
+    fonts: ["Inter", "Geist"],
+
+    image: "/images/templates/aliimam-old.jpg",
+    video: "/images/templates/aliimam-old.jpg",
+  },
+  {
+    id: "dalim-old",
+    name: "Dalim Old",
+    slug: "dalim-old",
+    description:
+      "An older version of the Dalim website, showcasing its original design and digital experience.",
+    iconName: "PanelTop",
+    hidden: false,
+
+    url: "https://www-three-zeta.vercel.app/",
+    downloadurl: "https://github.com/dalim-in/dalim/tree/main/apps",
+
+    tech: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
+
+    pages: ["Home"],
+
+    features: [
+      "Responsive Design",
+      "Modern Layout",
+      "Clean Typography",
+    ],
+
+    colors: ["#0A0A0A", "#FFFFFF", "#6366F1", "#F4F4F5"],
+
+    fonts: ["Inter", "Geist"],
+
+    image: "/images/templates/dalim-old.jpg",
+    video: "/images/templates/dalim-old.jpg",
+  },
+  {
+    id: "dalim-ui-old",
+    name: "Dalim UI Old",
+    slug: "dalim-ui-old",
+    description:
+      "An older UI project focused on reusable interface components and modern web design.",
+    iconName: "PanelsTopLeft",
+    hidden: false,
+
+    url: "https://dalim-ui.vercel.app/",
+    downloadurl: "https://github.com/dalim-in/dalim/tree/main/apps",
+
+    tech: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
+
+    pages: ["Home", "Components"],
+
+    features: [
+      "Reusable Components",
+      "Responsive Design",
+      "Modern UI",
+      "Clean Typography",
+    ],
+
+    colors: ["#0A0A0A", "#FFFFFF", "#6366F1", "#F4F4F5"],
+
+    fonts: ["Inter", "Geist"],
+
+    image: "/images/templates/dalim-ui-old.jpg",
+    video: "/images/templates/dalim-ui-old.jpg",
+  },
+  {
+    id: "dalim-icons-old",
+    name: "Dalim Icons Old",
+    slug: "dalim-icons-old",
+    description:
+      "An older icon library project for discovering and using icons in digital products.",
+    iconName: "Shapes",
+    hidden: false,
+
+    url: "https://dalim-icons.vercel.app/",
+    downloadurl: "https://github.com/dalim-in/dalim/tree/main/apps",
+
+    tech: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
+
+    pages: ["Home", "Icons"],
+
+    features: [
+      "Icon Library",
+      "Icon Browsing",
+      "Responsive Design",
+      "Developer Friendly",
+    ],
+
+    colors: ["#0A0A0A", "#FFFFFF", "#6366F1", "#F4F4F5"],
+
+    fonts: ["Inter", "Geist"],
+
+    image: "/images/templates/dalim-icons-old.jpg",
+    video: "/images/templates/dalim-icons-old.jpg",
+  },
+  {
+    id: "dalim-fonts-old",
+    name: "Dalim Fonts Old",
+    slug: "dalim-fonts-old",
+    description:
+      "An older typography project for exploring fonts and discovering typefaces for creative projects.",
+    iconName: "Type",
+    hidden: false,
+
+    url: "https://dalim-fonts.vercel.app/",
+    downloadurl: "https://github.com/dalim-in/dalim/tree/main/apps",
+
+    tech: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
+
+    pages: ["Home", "Fonts"],
+
+    features: [
+      "Font Discovery",
+      "Typography Showcase",
+      "Font Preview",
+      "Responsive Design",
+    ],
+
+    colors: ["#0A0A0A", "#FFFFFF", "#6366F1", "#F4F4F5"],
+
+    fonts: ["Inter", "Geist"],
+
+    image: "/images/templates/dalim-fonts-old.jpg",
+    video: "/images/templates/dalim-fonts-old.jpg",
+  },
+  {
+    id: "dalim-visuals-old",
+    name: "Dalim Visuals Old",
+    slug: "dalim-visuals-old",
+    description:
+      "An older visual design project showcasing creative assets and visual resources.",
+    iconName: "Images",
+    hidden: false,
+
+    url: "https://dalim-visuals.vercel.app/",
+    downloadurl: "https://github.com/dalim-in/dalim/tree/main/apps",
+
+    tech: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
+
+    pages: ["Home", "Visuals"],
+
+    features: [
+      "Visual Gallery",
+      "Creative Resources",
+      "Responsive Design",
+      "Visual Showcase",
+    ],
+
+    colors: ["#0A0A0A", "#FFFFFF", "#6366F1", "#F4F4F5"],
+
+    fonts: ["Inter", "Geist"],
+
+    image: "/images/templates/dalim-visuals-old.jpg",
+    video: "/images/templates/dalim-visuals-old.jpg",
+  },
+  {
+    id: "dalim-works-old",
+    name: "Dalim Works Old",
+    slug: "dalim-works-old",
+    description:
+      "An older creative portfolio showcasing selected projects, design work, and visual experiments.",
+    iconName: "BriefcaseBusiness",
+    hidden: false,
+
+    url: "https://dalim-works.vercel.app/",
+    downloadurl: "https://github.com/dalim-in/dalim/tree/main/apps",
+
+    tech: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
+
+    pages: ["Home", "Work", "Projects"],
+
+    features: [
+      "Project Showcase",
+      "Portfolio Gallery",
+      "Responsive Design",
+      "Modern Layout",
+    ],
+
+    colors: ["#0A0A0A", "#FFFFFF", "#6366F1", "#F4F4F5"],
+
+    fonts: ["Inter", "Geist"],
+
+    image: "/images/templates/dalim-works-old.jpg",
+    video: "/images/templates/dalim-works-old.jpg",
+  },
+  {
+    id: "dalim-agency-old",
+    name: "Dalim Agency Old",
+    slug: "dalim-agency-old",
+    description:
+      "An older digital agency website concept focused on creative services, branding, and digital experiences.",
+    iconName: "Building2",
+    hidden: false,
+
+    url: "https://dalim-agency.vercel.app/",
+    downloadurl: "https://github.com/dalim-in/dalim/tree/main/apps",
+
+    tech: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
+
+    pages: ["Home", "About", "Services", "Work", "Contact"],
+
+    features: [
+      "Agency Website",
+      "Service Showcase",
+      "Project Gallery",
+      "Responsive Design",
+      "Modern Typography",
+    ],
+
+    colors: ["#0A0A0A", "#FFFFFF", "#6366F1", "#F4F4F5"],
+
+    fonts: ["Inter", "Geist"],
+
+    image: "/images/templates/dalim-agency-old.jpg",
+    video: "/images/templates/dalim-agency-old.jpg",
+  },
+  {
+    id: "dalim-graphic-old",
+    name: "Dalim Graphic Old",
+    slug: "dalim-graphic-old",
+    description:
+      "An older graphic design portfolio showcasing visual design, branding, and creative work.",
+    iconName: "Palette",
+    hidden: false,
+
+    url: "https://dalim-graphic.vercel.app/",
+    downloadurl: "https://github.com/dalim-in/dalim/tree/main/apps",
+
+    tech: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
+
+    pages: ["Home", "Portfolio", "Projects", "Contact"],
+
+    features: [
+      "Graphic Design Showcase",
+      "Portfolio Gallery",
+      "Branding Projects",
+      "Responsive Design",
+    ],
+
+    colors: ["#0A0A0A", "#FFFFFF", "#6366F1", "#F4F4F5"],
+
+    fonts: ["Inter", "Geist"],
+
+    image: "/images/templates/dalim-graphic-old.jpg",
+    video: "/images/templates/dalim-graphic-old.jpg",
+  },
+  {
+    id: "dalim-tools-old",
+    name: "Dalim Tools Old",
+    slug: "dalim-tools-old",
+    description:
+      "An older collection of digital tools designed to help creators and designers with their workflows.",
+    iconName: "Wrench",
+    hidden: false,
+
+    url: "https://dalim-tools.vercel.app/",
+    downloadurl: "https://github.com/dalim-in/dalim/tree/main/apps",
+
+    tech: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
+
+    pages: ["Home", "Tools"],
+
+    features: [
+      "Digital Tools",
+      "Utility Collection",
+      "Responsive Design",
+      "Creator Focused",
+    ],
+
+    colors: ["#0A0A0A", "#FFFFFF", "#6366F1", "#F4F4F5"],
+
+    fonts: ["Inter", "Geist"],
+
+    image: "/images/templates/dalim-tools-old.jpg",
+    video: "/images/templates/dalim-tools-old.jpg",
+  },
 ]
