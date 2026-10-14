@@ -21,7 +21,7 @@ export default function Page() {
       <BuildWith/>
       <NumbersSection/>
       <div className="grid gap-3 border-b border-dotted p-3 md:grid-cols-2">
-        {templates.map((template) => (
+        {templates.slice(0, 4).map((template) => (
           <TemplateCard
             key={template.slug}
             name={template.name}
