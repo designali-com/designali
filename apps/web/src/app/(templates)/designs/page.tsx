@@ -1,52 +1,61 @@
-import { FigmaFrameCard } from "@/src/components/templates/design/figma-card"
-import { figmaDesigns } from "@/src/components/templates/design/figma-category"
-import { getFigmaFrames, formatFigmaNodeId } from "@/src/lib/figma"
-import { Figma } from "@designali/logos"
-import { Button } from "@workspace/ui/components/button"
-import Link from "next/link"
 
-const FILE_KEY = "VztJy6DsCcvC1DHeyWK0oK"
+import { FigmaFrameCard } from "@/src/components/templates/design/figma-card";
+import { figmaDesigns } from "@/src/components/templates/design/figma-category";
+import { Figma } from "@designali/logos";
+import { Button } from "@workspace/ui/components/button";
+import Link from "next/link";
 
-export default async function DesignPage() {
-  const nodeIds = figmaDesigns.map((d) => d.nodeId)
-
-  const imageUrls = await getFigmaFrames(FILE_KEY, nodeIds)
-
+export default function DesignPage() {
   return (
-    <div className="mt-10 w-full">
-      <div className="flex items-center border-b px-3 py-2 justify-between">
+    <main className="mt-10 w-full">
+      <header className="flex flex-wrap items-center justify-between gap-3 border-b px-3 py-3">
         <div className="flex items-center gap-2">
-          <Figma className="size-5"/>
-          <h1 className="text-md font-medium">
-            Free Copy and Use Figma Designs in Your Projects
-          </h1> 
+          <Figma className="size-5" />
+          <h1 className="text-base font-medium">
+            Free Figma Resources
+          </h1>
         </div>
-        <Button
-          size="sm"
-          render={<Link target="_blank" href="https://www.figma.com/design/VztJy6DsCcvC1DHeyWK0oK/designali?node-id=0-1&t=Nt4Sanqvi2jeHzeL-1" />} >
-          View All Designs
-        </Button>
-      </div>
-      <div className="columns-1 m-3 gap-2 md:columns-2 lg:columns-3">
+      </header>
+
+      <div className="grid gap-2 p-2">
         {figmaDesigns.map((design) => {
-          const formattedId = formatFigmaNodeId(design.nodeId)
-          const imageUrl = imageUrls[formattedId] ?? null
+          const fileUrl =
+            `https://www.figma.com/design/${design.fileKey}/${design.fileName}?node-id=${design.nodeId}`;
 
           return (
-            <div
-              key={design.nodeId}
-              className="mb-2 break-inside-avoid"
+            <article
+              key={design.fileKey}
+              className="min-w-0"
             >
               <FigmaFrameCard
-                fileKey={FILE_KEY}
+                fileKey={design.fileKey}
                 nodeId={design.nodeId}
-                imageUrl={imageUrl}
                 frameName={design.name}
               />
-            </div>
-          )
+
+              <div className="mt-2 flex items-center justify-between gap-2">
+                <span className="text-xs text-muted-foreground">
+                  {design.slug}
+                </span>
+
+                <Button
+                  size="sm"
+                  variant="outline"
+                  render={
+                    <Link
+                      href={fileUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                    />
+                  }
+                >
+                  Open Figma
+                </Button>
+              </div>
+            </article>
+          );
         })}
       </div>
-    </div >
-  )
+    </main>
+  );
 }

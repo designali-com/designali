@@ -1,13 +1,14 @@
+
 "use client";
 
 import { useEffect, useState } from "react";
-
 import {
-    Copy,
-    Check,
-    Loader2,
-    Maximize2,
-    X,
+  Copy,
+  Check,
+  Loader2,
+  Maximize2,
+  X,
+  ExternalLink,
 } from "lucide-react";
 
 import { cn } from "@workspace/ui/lib/utils";
@@ -15,358 +16,226 @@ import { Button } from "@workspace/ui/components/button";
 import { Figma } from "@designali/logos";
 
 interface FigmaFrameCardProps {
-    fileKey: string;
-    nodeId: string;
-    imageUrl?: string | null;
-    frameName?: string;
+  fileKey: string;
+  nodeId: string;
+  imageUrl?: string | null;
+  frameName?: string;
+}
+
+function formatFigmaNodeId(id: string) {
+  if (!id) return "";
+  if (id.includes(":")) return id;
+
+  const index = id.indexOf("-");
+
+  return index === -1
+    ? id
+    : `${id.slice(0, index)}:${id.slice(index + 1)}`;
 }
 
 export function FigmaFrameCard({
-    fileKey,
-    nodeId,
-    imageUrl: preloadedImageUrl = null,
-    frameName: preloadedFrameName,
+  fileKey,
+  nodeId,
+  frameName = "Figma Design",
 }: FigmaFrameCardProps) {
-    const [imageUrl, setImageUrl] = useState<string | null>(preloadedImageUrl);
-    const [frameName, setFrameName] = useState<string>(preloadedFrameName ?? "Loading...");
-    const [loading, setLoading] = useState<boolean>(!preloadedImageUrl);
-    const [copied, setCopied] = useState<boolean>(false);
-    const [copyLoading, setCopyLoading] = useState<boolean>(false);
-    const [isFullscreen, setIsFullscreen] = useState<boolean>(false);
+  const [copied, setCopied] = useState(false);
+  const [copyLoading, setCopyLoading] = useState(false);
+  const [isFullscreen, setIsFullscreen] = useState(false);
+  const [loaded, setLoaded] = useState(false);
+  const [failed, setFailed] = useState(false);
 
-    // Safe formatter:
-    // Sirf FIRST dash ko colon (:) mein badlega
-    const formatFigmaNodeId = (id: string) => {
-        if (!id) return "";
+  const formattedNodeId = formatFigmaNodeId(nodeId);
 
-        // Agar pehle se colon hai toh waise hi rehne do
-        if (id.includes(":")) return id;
+  const embedUrl =
+    `https://embed.figma.com/design/${fileKey}/designali` +
+    `?node-id=${encodeURIComponent(formattedNodeId)}` +
+    "&embed-host=designali";
 
-        // Sirf pehle dash (-) ko colon (:) mein replace karo
-        const firstDashIndex = id.indexOf("-");
+  const figmaUrl =
+    `https://www.figma.com/design/${fileKey}/designali` +
+    `?node-id=${encodeURIComponent(formattedNodeId)}`;
 
-        if (firstDashIndex !== -1) {
-            return (
-                id.substring(0, firstDashIndex) +
-                ":" +
-                id.substring(firstDashIndex + 1)
-            );
-        }
+  const copyToFigmaCanvas = async () => {
+    try {
+      setCopyLoading(true);
 
-        return id;
-    };
+      const params = new URLSearchParams({
+        fileKey,
+        nodeId: formattedNodeId,
+      });
 
-    const formattedNodeId = formatFigmaNodeId(nodeId);
+      const response = await fetch(`/api/figma/svg?${params}`);
 
-    // Figma S3 image ko apne Next.js API ke through proxy karo.
-    // Production mein direct Figma S3 URL load karne se CORS / access
-    // related issues avoid honge.
-    const getProxyImageUrl = (url: string) => {
-        return `/api/figma/image?url=${encodeURIComponent(url)}`;
-    };
+      if (!response.ok) {
+        throw new Error(`SVG request failed: ${response.status}`);
+      }
 
-    useEffect(() => {
-        // Server se already mil chuka hai to dubara fetch mat karo
-        if (preloadedImageUrl) return;
+      const data = await response.json();
 
-        let cancelled = false;
-        async function fetchFrame() { 
-            try {
-                setLoading(true);
+      if (!data.svgContent) {
+        throw new Error("No SVG content returned");
+      }
 
-                const res = await fetch(
-                    `/api/figma?fileKey=${fileKey}&nodeId=${encodeURIComponent(
-                        formattedNodeId
-                    )}`
-                );
+      await navigator.clipboard.writeText(data.svgContent.trim());
 
-                if (!res.ok) {
-                    throw new Error(
-                        `Figma API request failed: ${res.status}`
-                    );
-                }
+      setCopied(true);
+      window.setTimeout(() => setCopied(false), 2000);
+    } catch (error) {
+      console.error("Could not copy Figma frame:", error);
+    } finally {
+      setCopyLoading(false);
+    }
+  };
 
-                const data = await res.json();
+  useEffect(() => {
+    if (!isFullscreen) return;
 
-                if (cancelled) return;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
 
-                if (data.imageUrl) {
-                    setImageUrl(data.imageUrl);
-                }
-
-                if (data.nodeName) {
-                    setFrameName(data.nodeName);
-                }
-            } catch (err) {
-                console.error(
-                    "Error fetching Figma frame:",
-                    err
-                );
-            } finally {
-                if (!cancelled) {
-                    setLoading(false);
-                }
-            }
-        }
-        fetchFrame();
-        return () => { cancelled = true; };
-    }, [fileKey, formattedNodeId, preloadedImageUrl]);
-
-    const copyToFigmaCanvas = async () => {
-        try {
-            setCopyLoading(true);
-
-            const res = await fetch(
-                `/api/figma/svg?fileKey=${fileKey}&nodeId=${encodeURIComponent(
-                    formattedNodeId
-                )}`
-            );
-
-            if (!res.ok) {
-                throw new Error(
-                    `SVG API request failed: ${res.status}`
-                );
-            }
-
-            const data = await res.json();
-
-            if (!data.svgContent) {
-                console.error("No SVG content returned");
-                return;
-            }
-
-            await navigator.clipboard.writeText(
-                data.svgContent.trim()
-            );
-
-            setCopied(true);
-
-            setTimeout(() => {
-                setCopied(false);
-            }, 2000);
-        } catch (err) {
-            console.error(
-                "Clipboard write failed:",
-                err
-            );
-        } finally {
-            setCopyLoading(false);
-        }
-    };
-
-    const openFullscreen = () => {
-        setIsFullscreen(true);
-    };
-
-    const closeFullscreen = () => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
         setIsFullscreen(false);
+      }
     };
 
-    useEffect(() => {
-        if (!isFullscreen) {
-            document.body.style.overflow = "";
-            return;
-        }
+    document.addEventListener("keydown", handleKeyDown);
 
-        document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [isFullscreen]);
 
-        const handleKeyDown = (
-            event: KeyboardEvent
-        ) => {
-            if (event.key === "Escape") {
-                setIsFullscreen(false);
-            }
-        };
+  const renderActions = () => (
+    <div className="flex items-center justify-between gap-2 border-t bg-background/90 p-2 backdrop-blur-md">
+      <p className="min-w-0 flex-1 truncate text-sm font-medium">
+        {frameName}
+      </p>
 
-        document.addEventListener(
-            "keydown",
-            handleKeyDown
-        );
+      <div className="flex shrink-0 items-center gap-1">
+        <Button
+          variant="ghost"
+          size="icon"
+          className="size-8"
+          render={
+            <a
+              href={figmaUrl}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Open design in Figma"
+            />
+          }
+        >
+          <ExternalLink className="size-4" />
+        </Button> 
+      </div>
+    </div>
+  );
 
-        return () => {
-            document.body.style.overflow = "";
+  return (
+    <>
+      <article className="group relative w-full overflow-hidden border bg-background transition-colors hover:border-foreground/20">
+        <div className="relative aspect-[4/3] w-full overflow-hidden bg-muted/20">
+          {!loaded && !failed && (
+            <div className="absolute inset-0 z-10 flex items-center justify-center gap-2 text-sm text-muted-foreground">
+              <Loader2 className="size-4 animate-spin" />
+              Loading Figma preview...
+            </div>
+          )}
 
-            document.removeEventListener(
-                "keydown",
-                handleKeyDown
-            );
-        };
-    }, [isFullscreen]);
+          {failed ? (
+            <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 p-4 text-center">
+              <Figma className="size-6 text-muted-foreground" />
+              <p className="text-sm text-muted-foreground">
+                Preview unavailable
+              </p>
+              <Button
+                size="sm"
+                variant="outline"
+                render={
+                  <a href={figmaUrl} target="_blank" rel="noreferrer" />
+                }
+              >
+                Open in Figma
+                <ExternalLink className="ml-2 size-3.5" />
+              </Button>
+            </div>
+          ) : (
+            <iframe
+              key={embedUrl}
+              src={embedUrl}
+              title={frameName}
+              className={cn(
+                "absolute inset-0 size-full border-0 transition-opacity duration-300",
+                loaded ? "opacity-100" : "opacity-0"
+              )}
+              allow="fullscreen"
+              loading="lazy"
+              onLoad={() => setLoaded(true)}
+              onError={() => setFailed(true)}
+            />
+          )}
 
-    return (
-        <>
-            <div className="group relative h-auto w-full overflow-hidden border bg-background transition-all">
-                <div className="relative flex w-full items-center justify-center bg-muted/10">
-                    {loading ? (
-                        <div className="flex min-h-60 items-center gap-2 text-sm text-muted-foreground">
-                            <Loader2 className="h-4 w-4 animate-spin" />
-                            Fetching Design...
-                        </div>
-                    ) : imageUrl ? (
-                        <div className="relative h-full w-full overflow-hidden">
-                            <img
-                                src={getProxyImageUrl(imageUrl)}
-                                alt={frameName}
-                                className="block h-auto w-full object-contain"
-                                loading="lazy"
-                                decoding="async"
-                            />
+          <Button
+            size="icon"
+            variant="secondary"
+            className="absolute right-2 top-2 z-20 size-8 opacity-0 transition-opacity group-hover:opacity-100 focus-visible:opacity-100"
+            onClick={() => setIsFullscreen(true)}
+            aria-label="Expand preview"
+            title="Expand preview"
+          >
+            <Maximize2 className="size-4" />
+          </Button>
+        </div>
 
-                            {/* Fullscreen Button */}
-                            <Button
-                                size="icon"
-                                variant="secondary"
-                                className={cn(
-                                    "absolute right-2 top-2 h-7 w-7",
-                                    "opacity-0 transition-opacity duration-200",
-                                    "group-hover:opacity-100"
-                                )}
-                                onClick={openFullscreen}
-                                aria-label="Expand preview"
-                                title="Expand preview"
-                            >
-                                <Maximize2 className="h-3.5 w-3.5" />
-                            </Button>
+        {renderActions()}
+      </article>
 
-                            {/* Bottom Actions */}
-                            <div
-                                className={cn(
-                                    "absolute inset-x-0 bottom-0",
-                                    "flex items-center justify-between gap-3",
-                                    "border-t bg-background/80 p-2 backdrop-blur-md",
-                                    "translate-y-full transition-transform duration-300 ease-out",
-                                    "group-hover:translate-y-0"
-                                )}
-                            >
-                                <div className="min-w-0 flex-1">
-                                    <h3 className="truncate px-1 text-sm font-medium">
-                                        {frameName}
-                                    </h3>
-                                </div>
+      {isFullscreen && (
+        <div
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/70 p-3 backdrop-blur-sm md:p-8"
+          onClick={() => setIsFullscreen(false)}
+        >
+          <section
+            role="dialog"
+            aria-modal="true"
+            aria-label={`${frameName} preview`}
+            className="relative z-10 flex h-[90vh] w-full max-w-7xl flex-col overflow-hidden border bg-background shadow-2xl"
+            onClick={(event) => event.stopPropagation()}
+          >
+            <header className="flex h-12 shrink-0 items-center justify-between gap-3 border-b px-3">
+              <div className="flex min-w-0 items-center gap-2">
+                <Figma className="size-4 shrink-0" />
+                <h2 className="truncate text-sm font-medium">
+                  {frameName}
+                </h2>
+              </div>
 
-                                <Button
-                                    size="sm"
-                                    className="h-7 shrink-0 px-2.5 text-xs"
-                                    onClick={
-                                        copyToFigmaCanvas
-                                    }
-                                    disabled={copyLoading}
-                                >
-                                    {copied ? (
-                                        <>
-                                            <Check className="mr-1.5 h-3.5 w-3.5" />
-                                            Copied to Figma
-                                        </>
-                                    ) : copyLoading ? (
-                                        <>
-                                            <Loader2 className="mr-1.5 h-3.5 w-3.5 animate-spin" />
-                                            Copy to Figma
-                                        </>
-                                    ) : (
-                                        <>
-                                            <Copy className="mr-1.5 h-3.5 w-3.5" />
-                                            Copy to Figma
-                                        </>
-                                    )}
-                                </Button>
-                            </div>
-                        </div>
-                    ) : (
-                        <div className="flex min-h-60 items-center justify-center">
-                            <p className="text-xs text-destructive">
-                                Failed to render frame preview
-                            </p>
-                        </div>
-                    )}
-                </div>
+              <Button
+                variant="ghost"
+                size="icon"
+                className="size-8 shrink-0"
+                onClick={() => setIsFullscreen(false)}
+                aria-label="Close preview"
+              >
+                <X className="size-4" />
+              </Button>
+            </header>
+
+            <div className="relative min-h-0 flex-1 bg-muted/10">
+              <iframe
+                src={embedUrl}
+                title={`${frameName} fullscreen preview`}
+                className="size-full border-0"
+                allow="fullscreen"
+              />
             </div>
 
-            {/* Fullscreen Preview */}
-            {isFullscreen && (
-                <div className="fixed inset-0 z-50 flex items-center justify-center overflow-hidden bg-black/60 p-4 backdrop-blur-sm md:p-8">
-                    {/* Backdrop */}
-                    <button
-                        type="button"
-                        aria-label="Close preview"
-                        onClick={closeFullscreen}
-                        className="absolute inset-0 cursor-default"
-                    />
-
-                    <div
-                        role="dialog"
-                        aria-modal="true"
-                        className="relative z-10 flex h-fit max-h-[calc(100vh-64px)] w-full max-w-7xl flex-col overflow-hidden border bg-background shadow-2xl"
-                    >
-                        {/* Browser Header */}
-                        <div className="flex h-11 shrink-0 items-center gap-3 border-b bg-background px-3">
-                            <div className="flex shrink-0 items-center gap-1.5">
-                                <span className="size-2.5 rounded-full bg-red-400/70" />
-                                <span className="size-2.5 rounded-full bg-yellow-400/70" />
-                                <span className="size-2.5 rounded-full bg-green-400/70" />
-                            </div>
-
-                            <div className="flex min-w-0 flex-1 items-center justify-center">
-                                <Figma className="size-3.5 shrink-0 text-muted-foreground" />
-                            </div>
-
-                            <button
-                                type="button"
-                                onClick={closeFullscreen}
-                                aria-label="Close preview"
-                                className="flex size-7 shrink-0 items-center justify-center rounded-md text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
-                            >
-                                <X className="size-4" />
-                            </button>
-                        </div>
-
-                        {/* Fullscreen Image */}
-                        <div className="min-h-0 flex-1 overflow-y-auto bg-muted/10">
-                            {imageUrl && (
-                                <img
-                                    src={getProxyImageUrl(
-                                        imageUrl
-                                    )}
-                                    alt={frameName}
-                                    className="block h-auto w-full object-contain"
-                                />
-                            )}
-                        </div>
-
-                        {/* Fullscreen Bottom Actions */}
-                        <div className="flex shrink-0 items-center justify-between gap-3 border-t bg-background/80 p-2">
-                            <h3 className="truncate px-1 text-sm font-medium">
-                                {frameName}
-                            </h3>
-
-                            <Button
-                                size="sm"
-                                className="h-7 shrink-0 px-2.5 text-xs"
-                                onClick={
-                                    copyToFigmaCanvas
-                                }
-                                disabled={copyLoading}
-                            >
-                                {copied ? (
-                                    <>
-                                        <Check className="mr-1.5 h-3.5 w-3.5" />
-                                        Copied to Figma
-                                    </>
-                                ) : copyLoading ? (
-                                    <>
-                                        <Loader2 className="mr-1.5 h-3.5 w-3.5 animate-spin" />
-                                        Copy to Figma
-                                    </>
-                                ) : (
-                                    <>
-                                        <Copy className="mr-1.5 h-3.5 w-3.5" />
-                                        Copy to Figma
-                                    </>
-                                )}
-                            </Button>
-                        </div>
-                    </div>
-                </div>
-            )}
-        </>
-    );
+            {renderActions()}
+          </section>
+        </div>
+      )}
+    </>
+  );
 }

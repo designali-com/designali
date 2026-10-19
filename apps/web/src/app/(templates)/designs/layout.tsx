@@ -31,9 +31,7 @@ export default function FigmaLayout({
 
             {children}
           </main>
-          <Suspense fallback={null}>
-            <FigmaSidebar side="right" />
-          </Suspense>
+          
         </SidebarProvider>
       </div>
     </div>

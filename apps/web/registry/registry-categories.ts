@@ -921,7 +921,7 @@ export const templateCategories: {
     hidden: false,
 
     url: "https://www-three-zeta.vercel.app/",
-    downloadurl: "https://github.com/dalim-in/dalim/tree/main/apps",
+    downloadurl: "https://github.com/designali-com/dalim",
 
     tech: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
 
@@ -950,7 +950,7 @@ export const templateCategories: {
     hidden: false,
 
     url: "https://dalim-ui.vercel.app/",
-    downloadurl: "https://github.com/dalim-in/dalim/tree/main/apps",
+    downloadurl: "https://github.com/designali-com/dalim",
 
     tech: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
 
@@ -980,7 +980,7 @@ export const templateCategories: {
     hidden: false,
 
     url: "https://dalim-icons.vercel.app/",
-    downloadurl: "https://github.com/dalim-in/dalim/tree/main/apps",
+    downloadurl: "https://github.com/designali-com/dalim",
 
     tech: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
 
@@ -1010,7 +1010,7 @@ export const templateCategories: {
     hidden: false,
 
     url: "https://dalim-fonts.vercel.app/",
-    downloadurl: "https://github.com/dalim-in/dalim/tree/main/apps",
+    downloadurl: "https://github.com/designali-com/dalim",
 
     tech: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
 
@@ -1040,7 +1040,7 @@ export const templateCategories: {
     hidden: false,
 
     url: "https://dalim-visuals.vercel.app/",
-    downloadurl: "https://github.com/dalim-in/dalim/tree/main/apps",
+    downloadurl: "https://github.com/designali-com/dalim",
 
     tech: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
 
@@ -1070,7 +1070,7 @@ export const templateCategories: {
     hidden: false,
 
     url: "https://dalim-works.vercel.app/",
-    downloadurl: "https://github.com/dalim-in/dalim/tree/main/apps",
+    downloadurl: "https://github.com/designali-com/dalim",
 
     tech: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
 
@@ -1100,7 +1100,7 @@ export const templateCategories: {
     hidden: false,
 
     url: "https://dalim-agency.vercel.app/",
-    downloadurl: "https://github.com/dalim-in/dalim/tree/main/apps",
+    downloadurl: "https://github.com/designali-com/dalim",
 
     tech: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
 
@@ -1131,7 +1131,7 @@ export const templateCategories: {
     hidden: false,
 
     url: "https://dalim-graphic.vercel.app/",
-    downloadurl: "https://github.com/dalim-in/dalim/tree/main/apps",
+    downloadurl: "https://github.com/designali-com/dalim",
 
     tech: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
 
@@ -1161,7 +1161,7 @@ export const templateCategories: {
     hidden: false,
 
     url: "https://dalim-tools.vercel.app/",
-    downloadurl: "https://github.com/dalim-in/dalim/tree/main/apps",
+    downloadurl: "https://github.com/designali-com/dalim",
 
     tech: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
 
