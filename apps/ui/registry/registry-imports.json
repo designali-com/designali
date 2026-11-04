@@ -1,0 +1,16 @@
+{
+    "items": [
+      {
+        "name": "dashboard-1",
+        "source": "shadcn",
+        "type": "blocks",
+        "title": "Dashboard 1",
+        "description": "Dashboard layout",
+        "category": "dashboard",
+        "tags": ["dashboard", "analytics", "admin"],
+        "author": "shadcn",
+        "url": "https://ui.shadcn.com/r/styles/default/dashboard-01.json",
+        "githubUrl": "https://github.com/shadcn-ui/ui"
+      }
+    ]
+  }

@@ -43,8 +43,9 @@ export function NumbersSection() {
                         <div className="flex flex-col space-y-2 text-center text-md">
                             {isVisible && (
                                 <CounterNumber
-                                    value={13}
+                                    value={15.5}
                                     suffix="M+"
+                                    decimalPlaces={1}
                                     className="text-primary text-5xl font-bold tracking-tight"
                                 />
                             )}
@@ -67,8 +68,9 @@ export function NumbersSection() {
                         <div className="flex flex-col space-y-2 text-center text-md">
                             {isVisible && (
                                 <CounterNumber
-                                    value={2000}
-                                    suffix="+"
+                                    value={1.4}
+                                    decimalPlaces={1}
+                                    suffix="M+"
                                     className="text-primary text-5xl font-bold tracking-tight"
                                 />
                             )}
@@ -91,7 +93,8 @@ export function NumbersSection() {
                         <div className="flex flex-col space-y-2 text-center text-md">
                             {isVisible && (
                                 <CounterNumber
-                                    value={1}
+                                    value={1.4}
+                                    decimalPlaces={1}
                                     suffix="M+"
                                     className="text-primary text-5xl font-bold tracking-tight"
                                 />
