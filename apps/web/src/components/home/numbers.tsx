@@ -68,9 +68,9 @@ export function NumbersSection() {
                         <div className="flex flex-col space-y-2 text-center text-md">
                             {isVisible && (
                                 <CounterNumber
-                                    value={1.4}
+                                    value={2000}
                                     decimalPlaces={1}
-                                    suffix="M+"
+                                    suffix="+"
                                     className="text-primary text-5xl font-bold tracking-tight"
                                 />
                             )}
