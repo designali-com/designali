@@ -6,16 +6,12 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "registry:import": "node scripts/import-registry.mjs",
-    "registry:import:overwrite": "node scripts/import-registry.mjs --overwrite",
-    "registry:build": "shadcn build",
+    "start": "next start", 
     "lint": "eslint",
     "format": "prettier --write \"**/*.{ts,tsx}\"",
     "typecheck": "tsc --noEmit"
   },
-  "dependencies": {
-    "@codesandbox/sandpack-react": "^2.20.0",
+  "dependencies": { 
     "@next/third-parties": "^15.5.18",
     "@paper-design/shaders-react": "^0.0.78",
     "@workspace/ui": "workspace:*",
