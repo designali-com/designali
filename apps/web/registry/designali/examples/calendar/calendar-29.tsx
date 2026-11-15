@@ -1,3 +1,5 @@
+"use client"
+
 import * as React from "react"
 import { isAfter, startOfDay } from "date-fns"
 import { FlameIcon } from "lucide-react"

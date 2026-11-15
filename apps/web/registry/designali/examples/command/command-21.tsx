@@ -1,3 +1,5 @@
+"use client"
+
 import { AppleIcon } from "lucide-react"
 
 import {

@@ -75,6 +75,10 @@ function needsClient(code: string) {
     /\son[A-Z]\w*=\{/.test(code) ||
     /\btoast\.|\bcreateToastManager\(/.test(code) ||
     /\b(setApi|formatter|formatters|tickFormatter)=\{/.test(code) ||
+    // any prop given an inline function, e.g. filter={(value, search) => ...}
+    /\s[a-z]\w*=\{\s*(?:async\s*)?(?:\([^)]*\)|[a-z_]\w*)\s*=>/.test(code) ||
+    // component slots, e.g. components={{ DayButton: MyDayButton }}
+    /\scomponents=\{\{/.test(code) ||
     // children-as-function / render callbacks passed to components
     />\s*\{\s*\(?[\w\s,{}:]*\)?\s*=>/.test(code)
   )
