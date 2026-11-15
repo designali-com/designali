@@ -1085,6 +1085,9 @@ ${visual}
 
 const PAGES_PER_CATEGORY = 10
 
+/** Categories featured on the /pages overview (first page of each). */
+const FEATURED = ["saas", "ai", "ecommerce", "fintech", "agency", "restaurant", "travel", "developer-tools"]
+
 const files = readdirSync(contentDir).filter((f) => f.endsWith(".ts")).sort()
 const categories: CategoryContent[] = []
 for (const file of files) {
@@ -1186,8 +1189,11 @@ ${categories
   .join("\n")}
 ]
 
-/** First page of every category, used on the /pages overview. */
-export const featuredPages = ${J(items.filter((i) => i.name.endsWith("-01")).map((i) => i.name))}
+/**
+ * Pages shown on the /pages overview. Kept short on purpose: every preview
+ * embeds its highlighted source, and Vercel rejects prerendered pages over 20 MB.
+ */
+export const featuredPages = ${J(FEATURED.map((slug) => `landing-${slug}-01`))}
 `
 )
 

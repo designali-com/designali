@@ -176,5 +176,8 @@ export const pageCategories: {
   },
 ]
 
-/** First page of every category, used on the /pages overview. */
-export const featuredPages = ["landing-agency-01","landing-ai-01","landing-app-01","landing-architecture-01","landing-consulting-01","landing-crypto-01","landing-developer-tools-01","landing-ecommerce-01","landing-education-01","landing-event-01","landing-fintech-01","landing-fitness-01","landing-gaming-01","landing-health-01","landing-legal-01","landing-music-01","landing-nonprofit-01","landing-photography-01","landing-portfolio-01","landing-real-estate-01","landing-restaurant-01","landing-saas-01","landing-startup-01","landing-travel-01"]
+/**
+ * Pages shown on the /pages overview. Kept short on purpose: every preview
+ * embeds its highlighted source, and Vercel rejects prerendered pages over 20 MB.
+ */
+export const featuredPages = ["landing-saas-01","landing-ai-01","landing-ecommerce-01","landing-fintech-01","landing-agency-01","landing-restaurant-01","landing-travel-01","landing-developer-tools-01"]

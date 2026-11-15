@@ -373,7 +373,7 @@ export default function LandingFintech01() {
               </h2>
               <p className="mt-4 text-lg leading-8 text-muted-foreground">
                 Everything you need to spend, save and move money, available in
-                one app and one login .
+                one app and one login.
               </p>
             </div>
             <Button
