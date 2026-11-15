@@ -1,0 +1,17 @@
+[
+  ["lists-06", "lists", "850px", "Activity feed grouped by day with avatar badges, unread markers and quoted replies."],
+  ["lists-07", "lists", "850px", "Ranked leaderboard with podium colours, score bars, rank deltas and a pinned you row."],
+  ["lists-08", "lists", "650px", "Sortable package list with clickable column headers and download bars."],
+  ["lists-09", "lists", "1100px", "Book table of contents with sticky cover, parts and large chapter numbers."],
+  ["lists-10", "lists", "800px", "Order history accordion list that expands into line items and shipping actions."],
+  ["lists-11", "lists", "800px", "Grouped technical spec sheet as definition lists beside a device illustration."],
+  ["lists-12", "lists", "950px", "Conference agenda list with day tabs, time column, track badges and rooms."],
+  ["lists-13", "lists", "800px", "Searchable people directory with department filter chips and presence dots."],
+  ["lists-14", "lists", "750px", "Feature request voting list that re-sorts live as items are upvoted."],
+  ["lists-15", "lists", "950px", "Dark restaurant menu in two columns with dotted price leaders."],
+  ["lists-16", "lists", "1000px", "Status page service list with 90-day uptime bars and a legend."],
+  ["lists-17", "lists", "700px", "Inbox master-detail list with a reading pane and mobile back navigation."],
+  ["lists-18", "lists", "900px", "Do and don't guideline list in three columns with green and red callouts."],
+  ["lists-19", "lists", "950px", "Alternating centre-line company milestone timeline that stacks on mobile."],
+  ["lists-20", "lists", "850px", "Bank transaction ledger grouped by date with daily net and in/out totals."]
+]

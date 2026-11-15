@@ -1,0 +1,26 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "footer-07",
+  "type": "registry:block",
+  "description": "A footer with a newsletter signup and three columns of links.",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button",
+    "input"
+  ],
+  "files": [
+    {
+      "path": "registry/designali/blocks/footer/footer-07.tsx",
+      "content": "import { ArrowRight } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Input } from \"@workspace/ui/components/input\"\n\nconst columns = [\n  { title: \"Product\", links: [\"Features\", \"Pricing\", \"Changelog\", \"Roadmap\"] },\n  { title: \"Resources\", links: [\"Docs\", \"Guides\", \"Templates\", \"API status\"] },\n  { title: \"Company\", links: [\"About\", \"Careers\", \"Press\", \"Contact\"] },\n]\n\nexport default function Footer07() {\n  return (\n    <footer className=\"w-full border-t border-border bg-background\">\n      <div className=\"mx-auto grid max-w-7xl gap-12 px-6 py-16 lg:grid-cols-[1.2fr_2fr]\">\n        <div className=\"max-w-sm\">\n          <a href=\"#\" className=\"text-lg font-semibold tracking-tight\">\n            Fieldnote\n          </a>\n          <p className=\"mt-4 text-sm leading-6 text-muted-foreground\">\n            A monthly letter on design, tools and craft. Read by 28,000\n            designers and engineers.\n          </p>\n          <form className=\"mt-6 flex\">\n            <Input\n              type=\"email\"\n              placeholder=\"you@studio.com\"\n              aria-label=\"Email address\"\n              className=\"h-10 border-r-0\"\n            />\n            <Button type=\"submit\" className=\"h-10\" aria-label=\"Subscribe\">\n              <ArrowRight />\n            </Button>\n          </form>\n        </div>\n\n        <div className=\"grid grid-cols-2 gap-8 sm:grid-cols-3\">\n          {columns.map((column) => (\n            <div key={column.title}>\n              <h3 className=\"text-xs font-medium tracking-widest text-muted-foreground uppercase\">\n                {column.title}\n              </h3>\n              <ul className=\"mt-4 space-y-3\">\n                {column.links.map((link) => (\n                  <li key={link}>\n                    <a href=\"#\" className=\"text-sm hover:underline underline-offset-4\">\n                      {link}\n                    </a>\n                  </li>\n                ))}\n              </ul>\n            </div>\n          ))}\n        </div>\n      </div>\n\n      <div className=\"border-t border-border\">\n        <div className=\"mx-auto flex max-w-7xl flex-col gap-3 px-6 py-6 text-xs text-muted-foreground sm:flex-row sm:items-center sm:justify-between\">\n          <p>© 2026 Fieldnote Inc. All rights reserved.</p>\n          <div className=\"flex gap-6\">\n            <a href=\"#\" className=\"hover:text-foreground\">Privacy</a>\n            <a href=\"#\" className=\"hover:text-foreground\">Terms</a>\n            <a href=\"#\" className=\"hover:text-foreground\">Cookies</a>\n          </div>\n        </div>\n      </div>\n    </footer>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "600px"
+  },
+  "categories": [
+    "footer"
+  ]
+}

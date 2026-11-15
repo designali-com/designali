@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "testimonials-04",
+  "type": "registry:block",
+  "description": "A testimonial carousel with previous and next controls.",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "registry/designali/blocks/testimonials/testimonials-04.tsx",
+      "content": "\"use client\"\n\nimport { useState } from \"react\"\nimport { ArrowLeft, ArrowRight } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\n\nconst testimonials = [\n  {\n    quote:\n      \"Our conversion rate on the pricing page went up 22% after we switched to these layouts. The hierarchy is simply clearer.\",\n    name: \"Hannah Lee\",\n    role: \"Growth Lead\",\n    company: \"Polar\",\n  },\n  {\n    quote:\n      \"It is the first library our brand team and our engineers both agreed on. That alone was worth it.\",\n    name: \"Marcus Webb\",\n    role: \"VP Engineering\",\n    company: \"Meridian Group\",\n  },\n  {\n    quote:\n      \"Every section reads like it was art-directed. Clients assume we built everything from scratch.\",\n    name: \"Aiko Tanaka\",\n    role: \"Partner\",\n    company: \"Blockhaus Studio\",\n  },\n]\n\nexport default function Testimonials04() {\n  const [index, setIndex] = useState(0)\n  const current = testimonials[index]!\n  const go = (step: number) =>\n    setIndex((i) => (i + step + testimonials.length) % testimonials.length)\n\n  return (\n    <section className=\"w-full bg-muted/40 py-20\">\n      <div className=\"mx-auto grid max-w-6xl gap-10 px-6 lg:grid-cols-[1fr_2fr]\">\n        <div className=\"flex flex-col justify-between gap-8\">\n          <div>\n            <p className=\"text-xs tracking-widest text-muted-foreground uppercase\">\n              Testimonials\n            </p>\n            <h2 className=\"mt-3 text-3xl font-semibold tracking-tight\">\n              What our customers say\n            </h2>\n          </div>\n          <div className=\"flex items-center gap-2\">\n            <Button\n              variant=\"outline\"\n              size=\"icon\"\n              onClick={() => go(-1)}\n              aria-label=\"Previous\"\n            >\n              <ArrowLeft />\n            </Button>\n            <Button\n              variant=\"outline\"\n              size=\"icon\"\n              onClick={() => go(1)}\n              aria-label=\"Next\"\n            >\n              <ArrowRight />\n            </Button>\n            <span className=\"ml-3 text-sm text-muted-foreground tabular-nums\">\n              {String(index + 1).padStart(2, \"0\")} /{\" \"}\n              {String(testimonials.length).padStart(2, \"0\")}\n            </span>\n          </div>\n        </div>\n        <figure className=\"border border-border bg-background p-8 md:p-12\">\n          <blockquote className=\"text-xl leading-relaxed font-medium md:text-2xl\">\n            &ldquo;{current.quote}&rdquo;\n          </blockquote>\n          <figcaption className=\"mt-10 border-t border-border pt-6 text-sm\">\n            <span className=\"font-medium\">{current.name}</span>\n            <span className=\"text-muted-foreground\">\n              {\" \"}\n              &middot; {current.role}, {current.company}\n            </span>\n          </figcaption>\n        </figure>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "600px"
+  },
+  "categories": [
+    "testimonials"
+  ]
+}

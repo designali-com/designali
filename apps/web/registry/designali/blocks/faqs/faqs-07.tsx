@@ -53,7 +53,7 @@ export default function Faqs07() {
             Can&apos;t find what you&apos;re looking for? Our team usually
             replies within a few hours.
           </p>
-          <Button className="mt-8" variant="outline" render={<a href="#" />}>
+          <Button className="mt-8" variant="outline" nativeButton={false} render={<a href="#" />}>
             Email support
           </Button>
         </div>

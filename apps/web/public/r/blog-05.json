@@ -1,0 +1,26 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "blog-05",
+  "type": "registry:block",
+  "description": "A newsletter archive with a sticky subscribe form.",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button",
+    "input"
+  ],
+  "files": [
+    {
+      "path": "registry/designali/blocks/blog/blog-05.tsx",
+      "content": "import { Mail } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Input } from \"@workspace/ui/components/input\"\n\nconst issues = [\n  {\n    number: 112,\n    title: \"Tokens, themes, and the myth of the perfect palette\",\n    summary: \"Three teams share how they handle brand color across five products.\",\n    date: \"Nov 14\",\n  },\n  {\n    number: 111,\n    title: \"The case for boring navigation\",\n    summary: \"Why we removed our mega menu and conversion went up 9%.\",\n    date: \"Nov 7\",\n  },\n  {\n    number: 110,\n    title: \"Prototyping with real data from day one\",\n    summary: \"Fake content hides real problems. A workflow for testing with production samples.\",\n    date: \"Oct 31\",\n  },\n]\n\nexport default function Blog05() {\n  return (\n    <section className=\"w-full border-y border-border bg-muted/40 py-16 text-foreground md:py-24\">\n      <div className=\"mx-auto grid max-w-6xl gap-12 px-6 md:grid-cols-2\">\n        <div className=\"md:sticky md:top-24 md:self-start\">\n          <span className=\"flex size-12 items-center justify-center border border-border bg-background\">\n            <Mail className=\"size-5\" />\n          </span>\n          <h2 className=\"mt-6 text-3xl font-medium tracking-tight md:text-5xl\">\n            The Friday Margin\n          </h2>\n          <p className=\"mt-4 max-w-md text-muted-foreground\">\n            One essay on interface design every week. Read by 32,000 designers and\n            engineers. No tracking pixels, unsubscribe in one click.\n          </p>\n          <form className=\"mt-8 flex max-w-md flex-col gap-2 sm:flex-row\">\n            <Input\n              type=\"email\"\n              placeholder=\"you@company.com\"\n              aria-label=\"Email address\"\n              className=\"h-10 bg-background\"\n            />\n            <Button type=\"submit\">Subscribe</Button>\n          </form>\n        </div>\n\n        <div className=\"divide-y divide-border border-y border-border bg-background\">\n          {issues.map((issue) => (\n            <a key={issue.number} href=\"#\" className=\"group block p-6 transition-colors hover:bg-muted/60 md:p-8\">\n              <div className=\"flex items-center justify-between text-xs text-muted-foreground\">\n                <span className=\"font-mono\">Issue #{issue.number}</span>\n                <span>{issue.date}</span>\n              </div>\n              <h3 className=\"mt-3 text-xl font-medium\">{issue.title}</h3>\n              <p className=\"mt-2 text-sm leading-6 text-muted-foreground\">\n                {issue.summary}\n              </p>\n              <span className=\"mt-4 inline-block text-xs underline-offset-4 group-hover:underline\">\n                Read issue\n              </span>\n            </a>\n          ))}\n        </div>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "700px"
+  },
+  "categories": [
+    "blog"
+  ]
+}

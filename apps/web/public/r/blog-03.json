@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "blog-03",
+  "type": "registry:block",
+  "description": "A filterable article index with categories and read times.",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/designali/blocks/blog/blog-03.tsx",
+      "content": "\"use client\"\n\nimport { useState } from \"react\"\nimport { ArrowRight } from \"lucide-react\"\n\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst categories = [\"All\", \"Design\", \"Engineering\", \"Company\", \"Guides\"]\n\nconst posts = [\n  { title: \"Introducing variable themes for every block\", category: \"Company\", date: \"Nov 13, 2026\", read: 4 },\n  { title: \"Building accessible comboboxes without a framework\", category: \"Engineering\", date: \"Nov 9, 2026\", read: 12 },\n  { title: \"Grids that bend: layout for editorial products\", category: \"Design\", date: \"Nov 6, 2026\", read: 7 },\n  { title: \"How to migrate a design system without a freeze\", category: \"Guides\", date: \"Oct 31, 2026\", read: 9 },\n  { title: \"We are opening a studio in Lisbon\", category: \"Company\", date: \"Oct 24, 2026\", read: 3 },\n  { title: \"Color contrast is a product decision\", category: \"Design\", date: \"Oct 18, 2026\", read: 6 },\n  { title: \"Server components for marketing sites, one year in\", category: \"Engineering\", date: \"Oct 11, 2026\", read: 10 },\n  { title: \"Writing a component brief your engineers will read\", category: \"Guides\", date: \"Oct 4, 2026\", read: 5 },\n]\n\nexport default function Blog03() {\n  const [active, setActive] = useState(\"All\")\n  const visible = active === \"All\" ? posts : posts.filter((p) => p.category === active)\n\n  return (\n    <section className=\"w-full bg-background py-16 text-foreground md:py-24\">\n      <div className=\"mx-auto max-w-4xl px-6\">\n        <h2 className=\"text-4xl font-medium tracking-tight md:text-6xl\">Writing</h2>\n        <p className=\"mt-4 max-w-lg text-muted-foreground\">\n          Product updates, long-form essays, and practical guides from the people\n          building the platform.\n        </p>\n\n        <div className=\"mt-10 flex flex-wrap gap-2 border-b border-border pb-6\">\n          {categories.map((category) => (\n            <button\n              key={category}\n              type=\"button\"\n              onClick={() => setActive(category)}\n              className={cn(\n                \"border px-3 py-1.5 text-xs transition-colors\",\n                active === category\n                  ? \"border-foreground bg-foreground text-background\"\n                  : \"border-border text-muted-foreground hover:text-foreground\"\n              )}\n            >\n              {category}\n            </button>\n          ))}\n        </div>\n\n        <ul>\n          {visible.map((post) => (\n            <li key={post.title} className=\"border-b border-border\">\n              <a\n                href=\"#\"\n                className=\"group grid grid-cols-1 gap-2 py-6 sm:grid-cols-[140px_1fr_auto] sm:items-center sm:gap-6\"\n              >\n                <span className=\"text-xs text-muted-foreground\">{post.date}</span>\n                <span className=\"text-lg font-medium transition-transform group-hover:translate-x-1\">\n                  {post.title}\n                </span>\n                <span className=\"flex items-center gap-3 text-xs text-muted-foreground\">\n                  {post.category} · {post.read} min\n                  <ArrowRight className=\"size-4 opacity-0 transition-opacity group-hover:opacity-100\" />\n                </span>\n              </a>\n            </li>\n          ))}\n        </ul>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "800px"
+  },
+  "categories": [
+    "blog"
+  ]
+}

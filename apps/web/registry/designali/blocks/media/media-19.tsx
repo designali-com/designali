@@ -1,0 +1,88 @@
+"use client"
+
+import { useEffect, useState } from "react"
+import { Play, X } from "lucide-react"
+
+import { Button } from "@workspace/ui/components/button"
+
+const stats = [
+  { value: "2m 14s", label: "Average time to first deploy" },
+  { value: "38%", label: "Fewer rollbacks after switching" },
+  { value: "11k", label: "Teams shipping with Relay" },
+]
+
+export default function Media19() {
+  const [open, setOpen] = useState(false)
+
+  useEffect(() => {
+    if (!open) return
+    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setOpen(false)
+    window.addEventListener("keydown", onKey)
+    return () => window.removeEventListener("keydown", onKey)
+  }, [open])
+
+  return (
+    <section className="w-full bg-background py-16">
+      <div className="mx-auto max-w-7xl px-6">
+        <div className="relative overflow-hidden bg-foreground px-6 py-16 text-background md:px-14 md:py-20">
+          <div
+            className="absolute inset-0 opacity-20"
+            style={{ backgroundImage: "linear-gradient(var(--background) 1px, transparent 1px), linear-gradient(90deg, var(--background) 1px, transparent 1px)", backgroundSize: "48px 48px" }}
+          />
+          <div className="relative grid gap-12 lg:grid-cols-[1.1fr_1fr] lg:items-center">
+            <div>
+              <p className="text-xs tracking-widest text-background/60 uppercase">Keynote replay - Relay Summit</p>
+              <h2 className="mt-4 text-3xl font-semibold tracking-tight md:text-5xl">Watch the launch in 4 minutes.</h2>
+              <p className="mt-4 max-w-md text-background/70">
+                Preview environments, instant rollbacks and the new edge runtime, demoed live on stage by the people who built them.
+              </p>
+              <dl className="mt-10 grid grid-cols-3 gap-4 border-t border-background/20 pt-6">
+                {stats.map((s) => (
+                  <div key={s.label}>
+                    <dt className="sr-only">{s.label}</dt>
+                    <dd className="text-xl font-semibold md:text-3xl">{s.value}</dd>
+                    <p className="mt-1 text-xs text-background/60">{s.label}</p>
+                  </div>
+                ))}
+              </dl>
+            </div>
+            <button
+              type="button"
+              onClick={() => setOpen(true)}
+              aria-label="Play keynote video"
+              className="group relative aspect-video w-full overflow-hidden border border-background/20 text-left"
+            >
+              <div
+                className="absolute inset-0 transition-transform duration-700 group-hover:scale-105"
+                style={{ background: "radial-gradient(circle at 30% 30%, var(--chart-2), transparent 55%), radial-gradient(circle at 75% 70%, var(--chart-5), transparent 50%), #0b0b0b" }}
+              />
+              <span className="absolute top-1/2 left-1/2 flex size-20 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white text-black shadow-2xl transition-transform group-hover:scale-110">
+                <span className="absolute inset-0 animate-ping rounded-full bg-white/40" />
+                <Play className="relative size-7 translate-x-0.5 fill-current" />
+              </span>
+              <span className="absolute bottom-3 left-3 bg-black/60 px-2 py-1 text-xs text-white backdrop-blur">Keynote - 4:06</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {open && (
+        <div role="dialog" aria-modal="true" aria-label="Keynote video" className="fixed inset-0 z-50 flex items-center justify-center bg-black/85 p-4 backdrop-blur-sm" onClick={() => setOpen(false)}>
+          <div className="relative w-full max-w-4xl" onClick={(e) => e.stopPropagation()}>
+            <Button variant="outline" size="icon-lg" aria-label="Close" className="absolute -top-12 right-0 border-white/20 bg-transparent text-white hover:bg-white/10 hover:text-white" onClick={() => setOpen(false)}>
+              <X />
+            </Button>
+            <div className="relative aspect-video w-full overflow-hidden border border-white/10 bg-black">
+              <div className="absolute inset-0" style={{ background: "radial-gradient(circle at 50% 40%, var(--chart-2), transparent 60%), #000" }} />
+              <div className="absolute inset-x-0 bottom-0 flex items-center gap-3 bg-gradient-to-t from-black/90 to-transparent p-4 text-white">
+                <Play className="size-4 fill-current" />
+                <div className="h-1 flex-1 bg-white/25"><div className="h-full w-[6%] bg-white" /></div>
+                <span className="font-mono text-xs tabular-nums">0:14 / 4:06</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+    </section>
+  )
+}

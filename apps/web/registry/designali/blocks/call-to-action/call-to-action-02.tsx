@@ -21,11 +21,11 @@ export default function CallToAction02() {
             following Monday.
           </p>
           <div className="flex flex-wrap gap-3">
-            <Button size="lg" render={<a href="#" />}>
+            <Button size="lg" nativeButton={false} render={<a href="#" />}>
               Book a scoping call
               <ArrowRight />
             </Button>
-            <Button size="lg" variant="outline" render={<a href="#" />}>
+            <Button size="lg" variant="outline" nativeButton={false} render={<a href="#" />}>
               See our process
             </Button>
           </div>

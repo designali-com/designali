@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "testimonials-02",
+  "type": "registry:block",
+  "description": "A single centred pull-quote testimonial with an initials avatar.",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/designali/blocks/testimonials/testimonials-02.tsx",
+      "content": "import { Quote } from \"lucide-react\"\n\nexport default function Testimonials02() {\n  return (\n    <section className=\"w-full border-y border-border bg-background py-24\">\n      <div className=\"mx-auto max-w-4xl px-6 text-center\">\n        <Quote className=\"mx-auto size-8 text-muted-foreground\" />\n        <blockquote className=\"mt-8 text-2xl leading-snug font-medium tracking-tight md:text-4xl\">\n          &ldquo;We replaced three separate UI kits with one system. Our\n          designers stopped redrawing buttons and started solving real product\n          problems again.&rdquo;\n        </blockquote>\n        <div className=\"mt-10 flex items-center justify-center gap-4\">\n          <span className=\"flex size-12 items-center justify-center rounded-full bg-primary text-sm font-semibold text-primary-foreground\">\n            MR\n          </span>\n          <div className=\"text-left\">\n            <p className=\"text-sm font-medium\">Maya Rahman</p>\n            <p className=\"text-sm text-muted-foreground\">\n              Head of Design, Halcyon Bank\n            </p>\n          </div>\n        </div>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "500px"
+  },
+  "categories": [
+    "testimonials"
+  ]
+}

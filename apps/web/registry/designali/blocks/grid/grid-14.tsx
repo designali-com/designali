@@ -1,0 +1,93 @@
+"use client"
+
+import { useState } from "react"
+import {
+  BookOpen,
+  Check,
+  KanbanSquare,
+  type LucideIcon,
+  Megaphone,
+  Palette,
+  Rocket,
+  Users,
+} from "lucide-react"
+
+import { Button } from "@workspace/ui/components/button"
+import { cn } from "@workspace/ui/lib/utils"
+
+const options: { id: string; icon: LucideIcon; title: string; text: string; includes: string }[] = [
+  { id: "product", icon: Rocket, title: "Product launch", text: "Roadmap, launch checklist and release notes in one board.", includes: "4 views · 32 tasks" },
+  { id: "design", icon: Palette, title: "Design system", text: "Component inventory, token tracker and review queue.", includes: "3 views · 18 tasks" },
+  { id: "marketing", icon: Megaphone, title: "Campaign planner", text: "Content calendar with channels, owners and budgets.", includes: "5 views · 40 tasks" },
+  { id: "sprint", icon: KanbanSquare, title: "Engineering sprints", text: "Two-week cycles, backlog grooming and burndown.", includes: "4 views · 26 tasks" },
+  { id: "hiring", icon: Users, title: "Hiring pipeline", text: "Candidate stages, scorecards and interview loops.", includes: "3 views · 12 tasks" },
+  { id: "wiki", icon: BookOpen, title: "Team wiki", text: "Onboarding docs, rituals and decision records.", includes: "2 views · 24 pages" },
+]
+
+export default function Grid14() {
+  const [selected, setSelected] = useState<string[]>(["product"])
+
+  const toggle = (id: string) =>
+    setSelected((current) =>
+      current.includes(id) ? current.filter((item) => item !== id) : [...current, id]
+    )
+
+  return (
+    <section className="w-full bg-muted/30 py-24">
+      <div className="mx-auto max-w-5xl px-6">
+        <p className="font-mono text-xs text-muted-foreground">Step 2 of 3</p>
+        <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-4xl">
+          What will your team use Plotline for?
+        </h2>
+        <p className="mt-3 text-sm text-muted-foreground">
+          Pick as many as you like. We&apos;ll set up starter spaces so nobody faces a blank page.
+        </p>
+
+        <div className="mt-10 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          {options.map((option) => {
+            const isSelected = selected.includes(option.id)
+            return (
+              <button
+                key={option.id}
+                type="button"
+                aria-pressed={isSelected}
+                onClick={() => toggle(option.id)}
+                className={cn(
+                  "group relative flex flex-col items-start gap-4 border bg-background p-5 text-left transition-colors",
+                  isSelected ? "border-foreground ring-1 ring-foreground" : "border-border hover:border-foreground/40"
+                )}
+              >
+                <span
+                  className={cn(
+                    "absolute top-4 right-4 flex size-5 items-center justify-center border transition-colors",
+                    isSelected ? "border-foreground bg-foreground text-background" : "border-border"
+                  )}
+                >
+                  {isSelected && <Check className="size-3" />}
+                </span>
+                <span className="flex size-10 items-center justify-center bg-muted">
+                  <option.icon className="size-5" />
+                </span>
+                <span>
+                  <span className="block font-medium">{option.title}</span>
+                  <span className="mt-1 block text-sm leading-6 text-muted-foreground">{option.text}</span>
+                </span>
+                <span className="font-mono text-[10px] tracking-wider text-muted-foreground uppercase">
+                  {option.includes}
+                </span>
+              </button>
+            )
+          })}
+        </div>
+
+        <div className="mt-8 flex flex-col-reverse gap-3 border-t border-border pt-6 sm:flex-row sm:items-center sm:justify-between">
+          <Button variant="ghost">Skip for now</Button>
+          <div className="flex items-center justify-between gap-4 sm:justify-end">
+            <span className="text-xs text-muted-foreground">{selected.length} selected</span>
+            <Button disabled={selected.length === 0}>Create workspace</Button>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}

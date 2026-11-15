@@ -1,0 +1,92 @@
+[
+  [
+    "blog-06",
+    "blog",
+    "1000px",
+    "Magazine masthead with a full-width gradient cover story overlay and a three-up row of secondary stories."
+  ],
+  [
+    "blog-07",
+    "blog",
+    "600px",
+    "Horizontal scroll-snap carousel of post cards with previous and next arrow controls."
+  ],
+  [
+    "blog-08",
+    "blog",
+    "900px",
+    "Minimal archive list grouped by month with sticky month labels and day numbers."
+  ],
+  [
+    "blog-09",
+    "blog",
+    "950px",
+    "Author selector grid of initials avatars that filters the post list below by writer."
+  ],
+  [
+    "blog-10",
+    "blog",
+    "850px",
+    "Sidebar search input and topic chips that live-filter a list of engineering posts with result count and empty state."
+  ],
+  [
+    "blog-11",
+    "blog",
+    "1200px",
+    "Masonry columns mixing post cards of varied image heights, dark pull quotes and dashed studio notes."
+  ],
+  [
+    "blog-12",
+    "blog",
+    "850px",
+    "Inverted editor's picks band with a large heading and a big-numbered ranked list of posts."
+  ],
+  [
+    "blog-13",
+    "blog",
+    "1200px",
+    "Article page with centered header, sticky table of contents with scroll-spy highlighting, body sections and a share rail."
+  ],
+  [
+    "blog-14",
+    "blog",
+    "700px",
+    "Multi-part series panel with reading progress and CTA beside a stepper list of read, current, upcoming and locked parts."
+  ],
+  [
+    "blog-15",
+    "blog",
+    "800px",
+    "Podcast episode list with gradient play thumbnails that toggle an inline waveform progress row."
+  ],
+  [
+    "blog-16",
+    "blog",
+    "750px",
+    "Tabbed Latest, Most read and Staff picks switcher showing a lead story beside two thumbnail list items."
+  ],
+  [
+    "blog-17",
+    "blog",
+    "1100px",
+    "Changelog-style product journal timeline with dates in a left rail, type badges, bullets and a dot marker per entry."
+  ],
+  [
+    "blog-18",
+    "blog",
+    "1000px",
+    "Three-column story grid with client-side numbered pagination and newer and older controls."
+  ],
+  [
+    "blog-19",
+    "blog",
+    "700px",
+    "Post footer with author bio, previous and next article navigation and a keep reading row of related cards."
+  ],
+  [
+    "blog-20",
+    "blog",
+    "800px",
+    "Bento topic directory of category cards with icons, post counts, blurbs and latest titles."
+  ]
+]

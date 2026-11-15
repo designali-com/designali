@@ -40,7 +40,7 @@ export default function CallToAction07() {
           <h2 className="max-w-2xl text-3xl font-medium tracking-tight md:text-5xl">
             Join the studios already designing with us.
           </h2>
-          <Button size="lg" render={<a href="#" />}>
+          <Button size="lg" nativeButton={false} render={<a href="#" />}>
             Get started today
             <ArrowRight />
           </Button>

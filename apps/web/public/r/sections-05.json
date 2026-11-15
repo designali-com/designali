@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "sections-05",
+  "type": "registry:block",
+  "description": "A team section with initials portraits and roles.",
+  "dependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/designali/blocks/sections/sections-05.tsx",
+      "content": "const team = [\n  { name: \"Amara Osei\", role: \"Founder, Creative Director\", location: \"London\" },\n  { name: \"Tomás Ibarra\", role: \"Design Director\", location: \"Mexico City\" },\n  { name: \"Hana Sato\", role: \"Head of Product Design\", location: \"Tokyo\" },\n  { name: \"Elias Berg\", role: \"Lead Engineer\", location: \"Stockholm\" },\n  { name: \"Priya Raman\", role: \"Brand Strategist\", location: \"Bangalore\" },\n  { name: \"Noah Clarke\", role: \"Motion Designer\", location: \"Melbourne\" },\n  { name: \"Sofia Moretti\", role: \"Type Designer\", location: \"Milan\" },\n  { name: \"Kwame Asante\", role: \"Producer\", location: \"Accra\" },\n]\n\nconst initials = (name: string) =>\n  name\n    .split(\" \")\n    .map((part) => part[0])\n    .join(\"\")\n\nexport default function Sections05() {\n  return (\n    <section className=\"w-full bg-background py-24\">\n      <div className=\"mx-auto max-w-7xl px-6\">\n        <div className=\"grid gap-6 border-b border-border pb-10 md:grid-cols-2\">\n          <h2 className=\"text-4xl font-semibold tracking-tight md:text-5xl\">\n            The people behind the work\n          </h2>\n          <p className=\"self-end text-sm leading-6 text-muted-foreground md:justify-self-end md:text-right\">\n            A distributed team of 8 across 8 cities.\n            <br />\n            We are hiring a senior product designer.{\" \"}\n            <a href=\"#\" className=\"text-foreground underline underline-offset-4\">\n              See the role\n            </a>\n          </p>\n        </div>\n\n        <ul className=\"grid grid-cols-2 border-l border-border md:grid-cols-4\">\n          {team.map((member) => (\n            <li\n              key={member.name}\n              className=\"group border-r border-b border-border p-6\"\n            >\n              <div className=\"flex aspect-square items-center justify-center bg-muted text-3xl font-medium tracking-tight text-muted-foreground transition-colors group-hover:bg-foreground group-hover:text-background\">\n                {initials(member.name)}\n              </div>\n              <p className=\"mt-4 text-sm font-medium\">{member.name}</p>\n              <p className=\"text-xs text-muted-foreground\">{member.role}</p>\n              <p className=\"mt-3 font-mono text-[10px] tracking-wider text-muted-foreground uppercase\">\n                {member.location}\n              </p>\n            </li>\n          ))}\n        </ul>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "800px"
+  },
+  "categories": [
+    "sections"
+  ]
+}

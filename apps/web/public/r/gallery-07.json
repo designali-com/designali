@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "gallery-07",
+  "type": "registry:block",
+  "description": "A generative artwork gallery built from inline SVG compositions.",
+  "dependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/designali/blocks/gallery/gallery-07.tsx",
+      "content": "const works = [\n  { title: \"Bloom\", year: \"2025\", medium: \"Generative print\", shape: \"circle\" },\n  { title: \"Fold\", year: \"2025\", medium: \"Paper study\", shape: \"fold\" },\n  { title: \"Orbit\", year: \"2024\", medium: \"Animated loop\", shape: \"rings\" },\n  { title: \"Stack\", year: \"2024\", medium: \"Risograph\", shape: \"bars\" },\n] as const\n\nfunction Artwork({ shape }: { shape: (typeof works)[number][\"shape\"] }) {\n  return (\n    <svg viewBox=\"0 0 200 200\" className=\"size-full\" fill=\"none\">\n      {shape === \"circle\" && (\n        <circle cx=\"100\" cy=\"100\" r=\"60\" fill=\"var(--chart-1)\" />\n      )}\n      {shape === \"fold\" && (\n        <>\n          <path d=\"M40 160 100 40 160 160Z\" fill=\"var(--chart-2)\" />\n          <path d=\"M100 40 160 160H100Z\" fill=\"var(--chart-4)\" />\n        </>\n      )}\n      {shape === \"rings\" &&\n        [70, 50, 30].map((r) => (\n          <circle\n            key={r}\n            cx=\"100\"\n            cy=\"100\"\n            r={r}\n            stroke=\"var(--chart-3)\"\n            strokeWidth=\"8\"\n          />\n        ))}\n      {shape === \"bars\" &&\n        [0, 1, 2, 3].map((i) => (\n          <rect\n            key={i}\n            x={40 + i * 32}\n            y={60 + i * 15}\n            width=\"22\"\n            height={100 - i * 15}\n            fill=\"var(--chart-5)\"\n          />\n        ))}\n    </svg>\n  )\n}\n\nexport default function Gallery07() {\n  return (\n    <section className=\"w-full bg-background py-20\">\n      <div className=\"mx-auto max-w-6xl px-6\">\n        <div className=\"grid gap-px border border-border bg-border sm:grid-cols-2 lg:grid-cols-4\">\n          {works.map((work) => (\n            <figure key={work.title} className=\"group bg-background\">\n              <div className=\"aspect-square bg-muted p-8 transition-colors group-hover:bg-accent\">\n                <Artwork shape={work.shape} />\n              </div>\n              <figcaption className=\"border-t border-border p-4\">\n                <div className=\"flex items-baseline justify-between\">\n                  <span className=\"font-medium\">{work.title}</span>\n                  <span className=\"text-xs text-muted-foreground\">\n                    {work.year}\n                  </span>\n                </div>\n                <p className=\"mt-1 text-xs text-muted-foreground\">\n                  {work.medium}\n                </p>\n              </figcaption>\n            </figure>\n          ))}\n        </div>\n        <p className=\"mt-6 text-sm text-muted-foreground\">\n          Exhibited at Lumen Gallery, Rotterdam. All works available as limited\n          editions of 25.\n        </p>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "900px"
+  },
+  "categories": [
+    "gallery"
+  ]
+}

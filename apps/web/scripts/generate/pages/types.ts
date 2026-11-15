@@ -3,13 +3,13 @@
  *
  * Each category file exports one `CategoryContent`. Pools (features,
  * testimonials, faqs, ...) are intentionally larger than what a single page
- * renders: every page picks a rotated subset so the five pages in a category
+ * renders: every page picks a rotated subset so the pages in a category
  * do not repeat the exact same copy.
  *
  * Rules for copy:
  * - Realistic, industry-specific, no lorem ipsum.
  * - Never mention a page brand inside the shared pools (pools are reused by
- *   all five brands of the category). Use "we", "our team", etc.
+ *   all brands of the category). Use "we", "our team", etc.
  * - `icon` values must be valid lucide-react export names (PascalCase), e.g.
  *   "Zap", "ShieldCheck", "ChartLine". The generator validates them.
  */
@@ -116,6 +116,6 @@ export type CategoryContent = {
   faqs: Faq[]
   /** 3 footer columns. */
   footer: { title: string; links: string[] }[]
-  /** Exactly 5 pages (brands). */
+  /** Exactly 10 pages (brands). */
   pages: PageBrand[]
 }

@@ -1,0 +1,12 @@
+[
+  ["header-11", "header", "460px", "Header with a hover and click mega menu of product cards, resources and a promo tile, plus a mobile accordion menu."],
+  ["header-12", "header", "360px", "Floating rounded pill navbar on a soft gradient with a detached dropdown card menu on mobile."],
+  ["header-13", "header", "480px", "Docs header with a Ctrl+K command search overlay that filters guides and endpoints, plus a scrollable mobile nav row."],
+  ["header-14", "header", "300px", "Ecommerce header with a utility bar, category nav, search, account, wishlist and cart badge, and a slide-in mobile drawer."],
+  ["header-15", "header", "300px", "Open-source library header with a version picker, star counter, theme toggle and a two-column mobile grid menu."],
+  ["header-16", "header", "320px", "App workspace header with team and project breadcrumb switcher, branch and deploy status, and a tab bar."],
+  ["header-17", "header", "600px", "Minimal agency header whose animated Menu button reveals a full-width inverted overlay with large links and contact details."],
+  ["header-18", "header", "260px", "Header with a centered segmented nav and sliding active indicator, falling back to scrollable pills on mobile."],
+  ["header-19", "header", "240px", "Checkout header with back link, centered wordmark, secure badge and a four-step progress indicator."],
+  ["header-20", "header", "420px", "Studio header with live local time, availability pulse and underline CTA, opening a numbered large-type mobile menu."]
+]

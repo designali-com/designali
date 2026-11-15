@@ -1,0 +1,12 @@
+[
+  ["footer-11", "footer", "560px", "Newsletter-first footer with a publication pitch and subscribe form above link columns and an address block."],
+  ["footer-12", "footer", "560px", "Dense six-column sitemap footer with app download links, a region selector and legal line."],
+  ["footer-13", "footer", "620px", "Editorial footer with contact prompt and link lists above a giant cropped wordmark."],
+  ["footer-14", "footer", "440px", "Brand footer whose link columns collapse into tap-to-expand accordions on mobile."],
+  ["footer-15", "footer", "620px", "Footer with a headline and email above three office location cards with address, phone and timezone."],
+  ["footer-16", "footer", "560px", "Footer led by an inverted call-to-action card with glow, followed by a single-row brand and link bar."],
+  ["footer-17", "footer", "520px", "Developer footer in monospace with an install snippet, live system status list and build metadata."],
+  ["footer-18", "footer", "600px", "Ecommerce footer with a perks strip, brand and review badge, link columns and payment method chips."],
+  ["footer-19", "footer", "340px", "Minimal personal-site footer with author card, back-to-top button, small nav and icon links."],
+  ["footer-20", "footer", "520px", "Bento footer grid with a newsletter tile, link tiles, address tile and an inverted social tile."]
+]

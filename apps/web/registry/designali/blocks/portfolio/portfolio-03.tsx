@@ -61,7 +61,7 @@ export default function Portfolio03() {
             </dl>
 
             <div className="mt-auto pt-8">
-              <Button render={<a href="#" />}>
+              <Button nativeButton={false} render={<a href="#" />}>
                 Read the case study
                 <ArrowRight />
               </Button>

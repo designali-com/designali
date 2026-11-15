@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "hero-09",
+  "type": "registry:block",
+  "description": "A studio hero with a large wordmark, service tags and staggered gradient tiles.",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/designali/blocks/hero/hero-09.tsx",
+      "content": "import { ArrowUpRight } from \"lucide-react\"\n\nconst tiles = [\n  { label: \"Brand identity\", className: \"from-chart-1/60 to-chart-2/30\" },\n  { label: \"Product design\", className: \"from-chart-3/60 to-chart-4/30\" },\n  { label: \"Motion\", className: \"from-chart-5/60 to-chart-1/30\" },\n  { label: \"3D and CGI\", className: \"from-chart-2/60 to-chart-5/30\" },\n]\n\nconst services = [\"Strategy\", \"Identity\", \"Web\", \"Motion\", \"CGI\"]\n\nexport default function Hero09() {\n  return (\n    <section className=\"w-full bg-background px-6 py-16 md:py-24\">\n      <div className=\"mx-auto max-w-7xl\">\n        <div className=\"grid gap-10 border-b border-border pb-12 lg:grid-cols-[1.5fr_1fr] lg:items-end\">\n          <h1 className=\"text-5xl leading-none font-medium tracking-tight md:text-8xl\">\n            Northwind\n            <br />\n            <span className=\"text-muted-foreground\">Studio</span>\n          </h1>\n          <div>\n            <p className=\"text-base leading-7 text-muted-foreground\">\n              A design practice for companies at the edge of a category. We\n              help them look like the leader before they are one.\n            </p>\n            <ul className=\"mt-6 flex flex-wrap gap-2\">\n              {services.map((service) => (\n                <li\n                  key={service}\n                  className=\"border border-border px-3 py-1 text-xs\"\n                >\n                  {service}\n                </li>\n              ))}\n            </ul>\n          </div>\n        </div>\n        <div className=\"mt-12 grid grid-cols-2 gap-4 md:grid-cols-4\">\n          {tiles.map((tile, index) => (\n            <a\n              key={tile.label}\n              href=\"#\"\n              className={`group relative flex aspect-[3/4] flex-col justify-end border border-border bg-gradient-to-br p-4 ${tile.className} ${index % 2 === 1 ? \"md:mt-12\" : \"\"}`}\n            >\n              <div className=\"flex items-center justify-between bg-background/80 px-3 py-2 text-sm backdrop-blur\">\n                {tile.label}\n                <ArrowUpRight className=\"size-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5\" />\n              </div>\n            </a>\n          ))}\n        </div>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "900px"
+  },
+  "categories": [
+    "hero"
+  ]
+}

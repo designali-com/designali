@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "lists-03",
+  "type": "registry:block",
+  "description": "An interactive launch checklist with progress count.",
+  "dependencies": [],
+  "registryDependencies": [
+    "checkbox"
+  ],
+  "files": [
+    {
+      "path": "registry/designali/blocks/lists/lists-03.tsx",
+      "content": "\"use client\"\n\nimport { useState } from \"react\"\n\nimport { Checkbox } from \"@workspace/ui/components/checkbox\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst initialTasks = [\n  { id: 1, title: \"Finalise homepage hero copy\", owner: \"AK\", due: \"Today\", done: true },\n  { id: 2, title: \"Review pricing page with legal\", owner: \"JM\", due: \"Today\", done: false },\n  { id: 3, title: \"Export icon set at 1.5px stroke\", owner: \"SL\", due: \"Tomorrow\", done: false },\n  { id: 4, title: \"QA dark mode on dashboard\", owner: \"AK\", due: \"Wed\", done: false },\n  { id: 5, title: \"Write release notes for v4.2\", owner: \"RP\", due: \"Thu\", done: false },\n  { id: 6, title: \"Schedule launch newsletter\", owner: \"JM\", due: \"Fri\", done: true },\n]\n\nexport default function Lists03() {\n  const [tasks, setTasks] = useState(initialTasks)\n  const completed = tasks.filter((task) => task.done).length\n\n  const toggle = (id: number) =>\n    setTasks((current) =>\n      current.map((task) => (task.id === id ? { ...task, done: !task.done } : task))\n    )\n\n  return (\n    <section className=\"w-full bg-muted/40 py-24\">\n      <div className=\"mx-auto max-w-2xl px-6\">\n        <div className=\"border border-border bg-background\">\n          <header className=\"border-b border-border p-6\">\n            <div className=\"flex items-center justify-between\">\n              <h2 className=\"text-xl font-semibold tracking-tight\">Launch week</h2>\n              <span className=\"font-mono text-xs text-muted-foreground\">\n                {completed}/{tasks.length}\n              </span>\n            </div>\n            <div className=\"mt-4 h-1 w-full bg-muted\">\n              <div\n                className=\"h-full bg-foreground transition-all\"\n                style={{ width: `${(completed / tasks.length) * 100}%` }}\n              />\n            </div>\n          </header>\n\n          <ul className=\"divide-y divide-border\">\n            {tasks.map((task) => (\n              <li key={task.id}>\n                <label className=\"flex cursor-pointer items-center gap-4 px-6 py-4 hover:bg-muted/40\">\n                  <Checkbox\n                    checked={task.done}\n                    onCheckedChange={() => toggle(task.id)}\n                  />\n                  <span\n                    className={cn(\n                      \"flex-1 text-sm\",\n                      task.done && \"text-muted-foreground line-through\"\n                    )}\n                  >\n                    {task.title}\n                  </span>\n                  <span className=\"hidden text-xs text-muted-foreground sm:block\">\n                    {task.due}\n                  </span>\n                  <span className=\"flex size-6 items-center justify-center rounded-full bg-muted text-[10px] font-medium\">\n                    {task.owner}\n                  </span>\n                </label>\n              </li>\n            ))}\n          </ul>\n        </div>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "600px"
+  },
+  "categories": [
+    "lists"
+  ]
+}

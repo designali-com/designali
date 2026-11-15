@@ -29,10 +29,10 @@ export default function CallToAction03() {
           codebase on every merge. Set up takes about ten minutes.
         </p>
         <div className="mt-10 flex flex-col gap-3 sm:flex-row">
-          <Button size="lg" render={<a href="#" />}>
+          <Button size="lg" nativeButton={false} render={<a href="#" />}>
             Start for free
           </Button>
-          <Button size="lg" variant="outline" render={<a href="#" />}>
+          <Button size="lg" variant="outline" nativeButton={false} render={<a href="#" />}>
             Talk to sales
           </Button>
         </div>

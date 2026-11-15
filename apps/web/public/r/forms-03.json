@@ -1,0 +1,28 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "forms-03",
+  "type": "registry:block",
+  "description": "A profile settings form with selects, toggles and a bio field.",
+  "dependencies": [],
+  "registryDependencies": [
+    "button",
+    "input",
+    "label",
+    "native-select",
+    "switch",
+    "textarea"
+  ],
+  "files": [
+    {
+      "path": "registry/designali/blocks/forms/forms-03.tsx",
+      "content": "\"use client\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Input } from \"@workspace/ui/components/input\"\nimport { Label } from \"@workspace/ui/components/label\"\nimport {\n  NativeSelect,\n  NativeSelectOption,\n} from \"@workspace/ui/components/native-select\"\nimport { Switch } from \"@workspace/ui/components/switch\"\nimport { Textarea } from \"@workspace/ui/components/textarea\"\n\nconst notifications = [\n  {\n    title: \"Product updates\",\n    description: \"Release notes and new features, once a month.\",\n    enabled: true,\n  },\n  {\n    title: \"Comment mentions\",\n    description: \"When someone mentions you in a file or thread.\",\n    enabled: true,\n  },\n  {\n    title: \"Weekly digest\",\n    description: \"A summary of activity across your projects.\",\n    enabled: false,\n  },\n]\n\nexport default function Forms03() {\n  return (\n    <section className=\"w-full bg-background py-20\">\n      <div className=\"mx-auto max-w-5xl px-6\">\n        <div className=\"mb-10 border-b border-border pb-6\">\n          <h2 className=\"text-3xl font-semibold tracking-tight\">Settings</h2>\n          <p className=\"mt-2 text-sm text-muted-foreground\">\n            Manage your public profile and how we contact you.\n          </p>\n        </div>\n\n        <form className=\"divide-y divide-border\">\n          <div className=\"grid gap-6 py-8 md:grid-cols-3\">\n            <div>\n              <h3 className=\"text-sm font-medium\">Profile</h3>\n              <p className=\"mt-1 text-xs leading-5 text-muted-foreground\">\n                This information appears on your public portfolio page.\n              </p>\n            </div>\n            <div className=\"space-y-5 md:col-span-2\">\n              <div className=\"grid gap-5 sm:grid-cols-2\">\n                <div className=\"space-y-2\">\n                  <Label htmlFor=\"f3-first\">First name</Label>\n                  <Input id=\"f3-first\" defaultValue=\"Jonah\" className=\"h-10\" />\n                </div>\n                <div className=\"space-y-2\">\n                  <Label htmlFor=\"f3-last\">Last name</Label>\n                  <Input id=\"f3-last\" defaultValue=\"Okafor\" className=\"h-10\" />\n                </div>\n              </div>\n              <div className=\"space-y-2\">\n                <Label htmlFor=\"f3-bio\">Bio</Label>\n                <Textarea\n                  id=\"f3-bio\"\n                  rows={4}\n                  defaultValue=\"Type designer and brand consultant based in Lagos. Currently working on a variable grotesk for West African languages.\"\n                />\n              </div>\n              <div className=\"space-y-2\">\n                <Label htmlFor=\"f3-timezone\">Timezone</Label>\n                <NativeSelect id=\"f3-timezone\" className=\"w-full\" defaultValue=\"wat\">\n                  <NativeSelectOption value=\"gmt\">GMT (London)</NativeSelectOption>\n                  <NativeSelectOption value=\"wat\">WAT (Lagos)</NativeSelectOption>\n                  <NativeSelectOption value=\"est\">EST (New York)</NativeSelectOption>\n                  <NativeSelectOption value=\"jst\">JST (Tokyo)</NativeSelectOption>\n                </NativeSelect>\n              </div>\n            </div>\n          </div>\n\n          <div className=\"grid gap-6 py-8 md:grid-cols-3\">\n            <div>\n              <h3 className=\"text-sm font-medium\">Notifications</h3>\n              <p className=\"mt-1 text-xs leading-5 text-muted-foreground\">\n                Choose which emails land in your inbox.\n              </p>\n            </div>\n            <ul className=\"divide-y divide-border border border-border md:col-span-2\">\n              {notifications.map((item) => (\n                <li\n                  key={item.title}\n                  className=\"flex items-center justify-between gap-6 p-4\"\n                >\n                  <div>\n                    <p className=\"text-sm font-medium\">{item.title}</p>\n                    <p className=\"text-xs text-muted-foreground\">\n                      {item.description}\n                    </p>\n                  </div>\n                  <Switch defaultChecked={item.enabled} aria-label={item.title} />\n                </li>\n              ))}\n            </ul>\n          </div>\n\n          <div className=\"flex justify-end gap-2 py-8\">\n            <Button variant=\"outline\" type=\"button\">\n              Cancel\n            </Button>\n            <Button type=\"submit\">Save changes</Button>\n          </div>\n        </form>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "1000px"
+  },
+  "categories": [
+    "forms"
+  ]
+}

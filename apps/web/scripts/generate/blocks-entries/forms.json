@@ -1,0 +1,17 @@
+[
+  ["forms-06", "forms", "600px", "Inverted newsletter band with topic checkboxes and inline email signup."],
+  ["forms-07", "forms", "850px", "Centered sign-in card with SSO providers, passkey option and email login."],
+  ["forms-08", "forms", "750px", "Split trial sign-up with testimonial panel and live password strength meter."],
+  ["forms-09", "forms", "650px", "Centered two-factor verification with six-digit OTP input and resend countdown."],
+  ["forms-10", "forms", "950px", "Checkout with stepped contact, shipping and card fields beside a sticky order summary."],
+  ["forms-11", "forms", "850px", "Project cost estimator with type cards, sliders and toggles driving a live price range."],
+  ["forms-12", "forms", "950px", "Job application form with sticky role facts, resume dropzone and portfolio link."],
+  ["forms-13", "forms", "650px", "Meeting booking widget with host details, date strip and selectable time slots."],
+  ["forms-14", "forms", "950px", "Support ticket form with icon category cards, segmented priority and details."],
+  ["forms-15", "forms", "700px", "Centered waitlist signup that swaps to a queue position and referral link on submit."],
+  ["forms-16", "forms", "1000px", "Dense delivery address grid with breadcrumb steps and radio shipping methods."],
+  ["forms-17", "forms", "600px", "One-question-at-a-time conversational form with progress bar and lettered choices."],
+  ["forms-18", "forms", "850px", "Notification preferences matrix of events by email, push and SMS checkboxes."],
+  ["forms-19", "forms", "950px", "Product review form with hover star rating, fit selector and tag chips."],
+  ["forms-20", "forms", "850px", "Department-tabbed contact form whose fields change for sales, support and press."]
+]

@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "clients-08",
+  "type": "registry:block",
+  "description": "An infinite marquee of client wordmarks with faded edges.",
+  "dependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/designali/blocks/clients/clients-08.tsx",
+      "content": "const row = [\n  \"Acme Studio\",\n  \"Polar\",\n  \"Basecraft\",\n  \"Meridian\",\n  \"Sable\",\n  \"Foundry\",\n  \"Atlas Type\",\n  \"Corvid\",\n]\n\nexport default function Clients08() {\n  return (\n    <section className=\"w-full overflow-hidden border-y border-border bg-muted/40 py-12\">\n      <div className=\"mx-auto max-w-6xl px-6\">\n        <div className=\"flex items-center gap-4\">\n          <span className=\"h-px flex-1 bg-border\" />\n          <p className=\"text-xs tracking-widest text-muted-foreground uppercase\">\n            Powering design at\n          </p>\n          <span className=\"h-px flex-1 bg-border\" />\n        </div>\n      </div>\n      <div className=\"relative mt-8 [mask-image:linear-gradient(to_right,transparent,black_15%,black_85%,transparent)]\">\n        <div className=\"flex gap-(--gap) overflow-hidden [--duration:30s] [--gap:4rem]\">\n          {[0, 1].map((copy) => (\n            <div\n              key={copy}\n              aria-hidden={copy === 1}\n              className=\"flex shrink-0 animate-marquee items-center gap-(--gap)\"\n            >\n              {row.map((name) => (\n                <span\n                  key={name}\n                  className=\"text-2xl font-semibold tracking-tight whitespace-nowrap text-muted-foreground/70\"\n                >\n                  {name}\n                </span>\n              ))}\n            </div>\n          ))}\n        </div>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "350px"
+  },
+  "categories": [
+    "clients"
+  ]
+}

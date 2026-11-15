@@ -1,0 +1,16 @@
+[
+  ["testimonials-07", "testimonials", "720px", "Numbered list of large quotes with highlighted key phrases and right-aligned attribution."],
+  ["testimonials-08", "testimonials", "560px", "Two rows of short quote cards scrolling in opposite directions as a marquee."],
+  ["testimonials-09", "testimonials", "560px", "Single centered quote switched by clicking a row of gradient initials avatars."],
+  ["testimonials-10", "testimonials", "680px", "Rating summary with score and star distribution bars beside a list of verified reviews."],
+  ["testimonials-11", "testimonials", "780px", "Three video testimonial cards with gradient thumbnails, play buttons and durations."],
+  ["testimonials-12", "testimonials", "640px", "Case-study cards led by a large result metric, a short quote and a read-more link."],
+  ["testimonials-13", "testimonials", "560px", "Tabbed testimonials filtered by team, showing two quote cards per tab."],
+  ["testimonials-14", "testimonials", "760px", "Grid of social-post style testimonials with handles, verified badges and engagement counts."],
+  ["testimonials-15", "testimonials", "900px", "Sticky rating headline and CTA on the left with a scrolling stack of quote cards on the right."],
+  ["testimonials-16", "testimonials", "560px", "Inverted band with three quotes in columns separated by thin dividers."],
+  ["testimonials-17", "testimonials", "680px", "Results table of customers with before, after and change badges plus a short quote each."],
+  ["testimonials-18", "testimonials", "520px", "Auto-advancing quote card with pause control and segmented progress bars per testimonial."],
+  ["testimonials-19", "testimonials", "640px", "Grid of fictional typographic wordmarks above a featured quote with a large gradient avatar."],
+  ["testimonials-20", "testimonials", "620px", "Split section with headline beside a chat-thread mockup of customer recommendations as bubbles."]
+]

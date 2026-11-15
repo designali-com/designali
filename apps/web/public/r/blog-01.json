@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "blog-01",
+  "type": "registry:block",
+  "description": "A three-column grid of latest articles with cover gradients.",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/designali/blocks/blog/blog-01.tsx",
+      "content": "import { ArrowUpRight } from \"lucide-react\"\n\nconst posts = [\n  {\n    category: \"Design systems\",\n    title: \"Why your tokens should describe intent, not color\",\n    excerpt:\n      \"A naming model that survives rebrands, dark mode, and the third product team joining your library.\",\n    author: \"Maya Okafor\",\n    date: \"Nov 12, 2026\",\n    read: \"8 min read\",\n    gradient: \"from-chart-1/60 to-chart-3/30\",\n  },\n  {\n    category: \"Engineering\",\n    title: \"Shipping a component library to four frameworks\",\n    excerpt:\n      \"What we learned compiling one source of truth to React, Vue, Svelte, and plain web components.\",\n    author: \"Daniel Reyes\",\n    date: \"Nov 5, 2026\",\n    read: \"11 min read\",\n    gradient: \"from-chart-2/60 to-chart-4/30\",\n  },\n  {\n    category: \"Process\",\n    title: \"The two-week design sprint we actually kept\",\n    excerpt:\n      \"Trimming rituals until only the ones that changed decisions were left on the calendar.\",\n    author: \"Lena Fischer\",\n    date: \"Oct 29, 2026\",\n    read: \"6 min read\",\n    gradient: \"from-chart-5/60 to-chart-1/30\",\n  },\n]\n\nexport default function Blog01() {\n  return (\n    <section className=\"w-full bg-background py-16 text-foreground md:py-24\">\n      <div className=\"mx-auto max-w-6xl px-6\">\n        <div className=\"mb-12 flex items-end justify-between gap-6\">\n          <div>\n            <p className=\"text-xs tracking-widest text-muted-foreground uppercase\">\n              Journal\n            </p>\n            <h2 className=\"mt-2 text-3xl font-medium tracking-tight md:text-4xl\">\n              Latest from the studio\n            </h2>\n          </div>\n          <a\n            href=\"#\"\n            className=\"hidden items-center gap-1 text-sm text-muted-foreground transition-colors hover:text-foreground sm:inline-flex\"\n          >\n            All articles\n            <ArrowUpRight className=\"size-4\" />\n          </a>\n        </div>\n\n        <div className=\"grid gap-px border border-border bg-border md:grid-cols-3\">\n          {posts.map((post) => (\n            <a key={post.title} href=\"#\" className=\"group flex flex-col bg-background\">\n              <div className={`aspect-[4/3] bg-gradient-to-br ${post.gradient}`} />\n              <div className=\"flex flex-1 flex-col p-6\">\n                <span className=\"text-xs text-muted-foreground\">{post.category}</span>\n                <h3 className=\"mt-3 text-lg leading-snug font-medium group-hover:underline group-hover:underline-offset-4\">\n                  {post.title}\n                </h3>\n                <p className=\"mt-3 text-sm leading-6 text-muted-foreground\">\n                  {post.excerpt}\n                </p>\n                <div className=\"mt-auto flex items-center justify-between pt-6 text-xs text-muted-foreground\">\n                  <span>{post.author}</span>\n                  <span>\n                    {post.date} · {post.read}\n                  </span>\n                </div>\n              </div>\n            </a>\n          ))}\n        </div>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "800px"
+  },
+  "categories": [
+    "blog"
+  ]
+}

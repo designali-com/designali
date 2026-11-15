@@ -1,0 +1,94 @@
+import { Award, Mic, Newspaper } from "lucide-react"
+
+const awards = [
+  { year: "2026", name: "Type Directors Club", detail: "Certificate of Excellence", project: "Stillwater Press" },
+  { year: "2026", name: "Awwwards", detail: "Site of the Day", project: "Tidewater Festival" },
+  { year: "2025", name: "European Design Awards", detail: "Gold, Packaging", project: "Saltmarsh Wines" },
+  { year: "2025", name: "Webby Awards", detail: "Honoree, Health", project: "Canopy Clinics" },
+  { year: "2024", name: "D&AD", detail: "Wood Pencil, Branding", project: "Ember Bakery" },
+]
+
+const press = [
+  { outlet: "Grain & Grid Journal", title: "The studios redesigning civic software" },
+  { outlet: "Printmaker Quarterly", title: "Why the label still matters" },
+  { outlet: "Northern Design Review", title: "Ten studios to watch in 2026" },
+]
+
+const talks = [
+  { event: "Interface North", city: "Leeds", topic: "Designing for bad signal" },
+  { event: "Typefest", city: "Ghent", topic: "Archives as raw material" },
+]
+
+export default function Portfolio16() {
+  return (
+    <section className="w-full bg-background py-16 text-foreground md:py-24">
+      <div className="mx-auto max-w-6xl px-6">
+        <div className="grid gap-12 lg:grid-cols-[2fr_1fr]">
+          <div>
+            <div className="flex items-center gap-3">
+              <Award className="size-5" />
+              <h2 className="text-2xl font-medium tracking-tight md:text-3xl">Recognition</h2>
+              <span className="ml-auto font-mono text-xs text-muted-foreground">
+                {awards.length} of 31
+              </span>
+            </div>
+            <ul className="mt-6 border-t border-border">
+              {awards.map((award) => (
+                <li
+                  key={award.name + award.year}
+                  className="grid grid-cols-[3.5rem_1fr] gap-x-4 gap-y-1 border-b border-border py-5 sm:grid-cols-[4rem_1fr_1fr_auto] sm:items-center"
+                >
+                  <span className="row-span-2 font-mono text-sm text-muted-foreground sm:row-span-1">
+                    {award.year}
+                  </span>
+                  <span className="font-medium">{award.name}</span>
+                  <span className="text-sm text-muted-foreground">{award.detail}</span>
+                  <span className="col-start-2 text-xs text-muted-foreground sm:col-start-auto sm:text-right">
+                    {award.project}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="space-y-10">
+            <div>
+              <div className="flex items-center gap-3">
+                <Newspaper className="size-4" />
+                <h3 className="text-sm font-medium">In the press</h3>
+              </div>
+              <ul className="mt-4 space-y-4">
+                {press.map((item) => (
+                  <li key={item.title}>
+                    <a href="#" className="group block border-l-2 border-border pl-4 transition-colors hover:border-foreground">
+                      <p className="text-xs text-muted-foreground">{item.outlet}</p>
+                      <p className="mt-1 text-sm font-medium group-hover:underline">
+                        &ldquo;{item.title}&rdquo;
+                      </p>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <div className="flex items-center gap-3">
+                <Mic className="size-4" />
+                <h3 className="text-sm font-medium">Speaking</h3>
+              </div>
+              <ul className="mt-4 space-y-3">
+                {talks.map((talk) => (
+                  <li key={talk.event} className="bg-muted p-4">
+                    <p className="text-sm font-medium">{talk.topic}</p>
+                    <p className="mt-1 text-xs text-muted-foreground">
+                      {talk.event}, {talk.city}
+                    </p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}

@@ -38,8 +38,8 @@ export default function Portfolio05() {
             people use all day.
           </h2>
           <div className="mt-8 flex flex-wrap gap-3">
-            <Button render={<a href="#" />}>Get in touch</Button>
-            <Button variant="outline" render={<a href="#" />}>
+            <Button nativeButton={false} render={<a href="#" />}>Get in touch</Button>
+            <Button variant="outline" nativeButton={false} render={<a href="#" />}>
               Download CV
             </Button>
           </div>

@@ -1,0 +1,735 @@
+import {
+  ArrowRight,
+  ArrowUpRight,
+  Check,
+  FileCheck,
+  Landmark,
+  Lock,
+  Plus,
+  ShieldCheck,
+  Wallet,
+  Zap,
+} from "lucide-react"
+
+import { Button } from "@workspace/ui/components/button"
+
+const navLinks = ["Markets", "Earn", "Security", "Developers", "Learn"]
+
+const logos = [
+  "Chainlab",
+  "Polaris",
+  "Satori",
+  "Fidelis",
+  "Blockframe",
+  "Node Capital",
+  "Arcvault",
+  "Meridian",
+]
+
+const features = [
+  {
+    icon: Wallet,
+    title: "Self-custody wallet",
+    description:
+      "Move to a non-custodial wallet with one tap and connect to thousands of decentralised apps.",
+  },
+  {
+    icon: Landmark,
+    title: "Fiat on and off ramps",
+    description:
+      "Deposit and withdraw in USD, EUR and GBP by bank transfer, card or Apple Pay, with same-day settlement.",
+  },
+  {
+    icon: FileCheck,
+    title: "Licensed and regulated",
+    description:
+      "Registered with FinCEN, licensed under MiCA in the EU and compliant with the travel rule worldwide.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Proof of reserves",
+    description:
+      "Independent auditors verify our reserves monthly, and you can check your own balance on-chain at any time.",
+  },
+  {
+    icon: Lock,
+    title: "Multi-party custody",
+    description:
+      "Keys are split across secure enclaves in three jurisdictions. No single person can ever move funds.",
+  },
+  {
+    icon: Zap,
+    title: "Sub-second execution",
+    description:
+      "Our matching engine handles 1.4 million orders per second with a median latency under 4ms.",
+  },
+]
+
+const stats = [
+  { value: "0", label: "Security breaches since 2017" },
+  { value: "$48B", label: "Quarterly trading volume" },
+  { value: "6.2M", label: "Verified customers" },
+  { value: "312", label: "Supported assets" },
+]
+
+const steps = [
+  {
+    title: "Create your account",
+    description:
+      "Sign up with email and set up two-factor authentication in under a minute.",
+  },
+  {
+    title: "Verify your identity",
+    description:
+      "Upload an ID and a selfie. Most verifications are approved in under five minutes.",
+  },
+  {
+    title: "Fund your wallet",
+    description:
+      "Deposit by bank transfer, card or crypto from another wallet or exchange.",
+  },
+  {
+    title: "Trade and earn",
+    description:
+      "Buy, sell, swap or stake from one balance, with clear fees on every screen.",
+  },
+]
+
+const showcase = [
+  {
+    name: "Bitcoin",
+    meta: "BTC · Market cap $1.3T",
+    tag: "+2.4%",
+    price: "$67,420",
+  },
+  {
+    name: "Ethereum",
+    meta: "ETH · Staking 3.8% APY",
+    tag: "+1.9%",
+    price: "$3,512",
+  },
+  {
+    name: "Solana",
+    meta: "SOL · Staking 6.7% APY",
+    tag: "+5.1%",
+    price: "$172.30",
+  },
+  {
+    name: "USD Coin",
+    meta: "USDC · Fully reserved",
+    tag: "Stable",
+    price: "$1.00",
+  },
+  {
+    name: "Chainlink",
+    meta: "LINK · Oracle network",
+    tag: "-0.6%",
+    price: "$18.04",
+  },
+  { name: "Arbitrum", meta: "ARB · Layer 2", tag: "New", price: "$1.12" },
+]
+
+const testimonials = [
+  {
+    quote:
+      "Support answered my withdrawal question at 3am on a Sunday in under two minutes. That earned my loyalty.",
+    name: "Felix Andersson",
+    role: "Day trader",
+  },
+  {
+    quote:
+      "We moved our treasury here because the custody model is the only one our auditors signed off on without a single follow-up.",
+    name: "Hannah Weiss",
+    role: "CFO, Arcvault",
+  },
+  {
+    quote:
+      "The API is fast and boringly reliable, which is exactly what you want when your bots trade around the clock.",
+    name: "Kenji Watanabe",
+    role: "Quant Developer",
+  },
+]
+
+const tiers = [
+  {
+    name: "Standard",
+    price: "0.40%",
+    period: "per trade",
+    description: "For everyday buying and selling.",
+    features: [
+      "Instant buy and sell",
+      "Recurring purchases",
+      "Staking rewards",
+      "Email support",
+    ],
+    cta: "Create account",
+  },
+  {
+    name: "Advanced",
+    price: "0.10%",
+    period: "maker fee",
+    description: "For active traders who want pro tools.",
+    features: [
+      "Full order book",
+      "Limit, stop and OCO orders",
+      "Advanced charting",
+      "API access",
+      "Priority support",
+    ],
+    cta: "Start trading",
+  },
+  {
+    name: "Institutional",
+    price: "Custom",
+    period: "",
+    description: "For funds, treasuries and market makers.",
+    features: [
+      "Dedicated custody",
+      "OTC desk",
+      "FIX API",
+      "Sub-accounts",
+      "Named account manager",
+    ],
+    cta: "Contact sales",
+  },
+]
+
+const faqs = [
+  {
+    q: "Do you report to tax authorities?",
+    a: "We provide downloadable tax reports and comply with local reporting rules in each country where we operate.",
+  },
+  {
+    q: "Is my crypto insured?",
+    a: "Assets in hot storage are covered by a $320M crime insurance policy, and 98% of customer funds are held offline in cold storage.",
+  },
+  {
+    q: "Which countries are supported?",
+    a: "We serve customers in over 100 countries, including the US, UK, EU member states, Canada and Australia.",
+  },
+  {
+    q: "How long do withdrawals take?",
+    a: "Crypto withdrawals are processed within minutes. Bank withdrawals usually arrive the same or next business day.",
+  },
+  {
+    q: "Can I withdraw to my own wallet?",
+    a: "Yes. You can withdraw to any address you control, and we support every major network for each asset.",
+  },
+]
+
+const footer = [
+  {
+    title: "Products",
+    links: ["Exchange", "Wallet", "Staking", "Institutional"],
+  },
+  {
+    title: "Company",
+    links: ["About", "Careers", "Proof of reserves", "Press"],
+  },
+  { title: "Support", links: ["Help center", "Fees", "API docs", "Status"] },
+]
+
+export default function LandingCrypto06() {
+  return (
+    <div className="min-h-screen bg-background text-foreground">
+      <header className="border-b bg-background/80 backdrop-blur sticky top-0 z-40">
+        <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-6 px-6">
+          <a
+            href="#"
+            className="flex items-center gap-2 font-semibold tracking-tight"
+          >
+            <span className="flex size-7 items-center justify-center rounded-md bg-indigo-600 text-white text-sm">
+              M
+            </span>
+            <span className="">Mintmark</span>
+          </a>
+          <nav className="hidden items-center gap-7 text-sm md:flex">
+            {navLinks.map((link) => (
+              <a
+                key={link}
+                href="#"
+                className="text-muted-foreground hover:text-foreground transition-colors"
+              >
+                {link}
+              </a>
+            ))}
+          </nav>
+          <div className="flex items-center gap-2">
+            <Button
+              variant="ghost"
+              size="sm"
+              className="hidden sm:inline-flex"
+              nativeButton={false}
+              render={<a href="#" />}
+            >
+              Log in
+            </Button>
+            <Button size="sm" nativeButton={false} render={<a href="#" />}>
+              Create an event
+            </Button>
+          </div>
+        </div>
+      </header>
+      <section className="border-b">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="flex items-center justify-between border-x border-b px-6 py-3 text-xs text-muted-foreground">
+            <span>Onchain ticketing</span>
+            <span className="hidden sm:inline">
+              Fair tickets for real fans.
+            </span>
+          </div>
+          <div className="border-x px-6 py-16 md:py-28">
+            <h1 className="max-w-5xl text-4xl leading-[1.05] font-semibold tracking-tight text-balance sm:text-5xl md:text-8xl ">
+              {"Tickets that cannot be "}
+              <span className="text-indigo-600 dark:text-indigo-400">
+                faked or scalped
+              </span>
+            </h1>
+            <div className="mt-12 flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
+              <p className="max-w-md text-base leading-7 text-muted-foreground">
+                Mintmark issues event tickets as verifiable digital passes with
+                resale caps, royalties to organisers and simple QR entry at the
+                door.
+              </p>
+              <div className="flex flex-wrap gap-3 ">
+                <Button size="lg" nativeButton={false} render={<a href="#" />}>
+                  Create an event
+                  <ArrowRight />
+                </Button>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  nativeButton={false}
+                  render={<a href="#" />}
+                >
+                  See how it works
+                </Button>
+              </div>
+            </div>
+          </div>
+          <div className="grid grid-cols-2 border-x border-t lg:grid-cols-4">
+            {stats.slice(0, 4).map((stat, i) => (
+              <div
+                key={stat.label}
+                className={`border-b px-6 py-8 ${i % 2 === 0 ? "border-r" : ""} ${i === 1 ? "lg:border-r" : ""}`}
+              >
+                <div className="text-3xl font-semibold tracking-tight">
+                  {stat.value}
+                </div>
+                <div className="mt-1 text-sm text-muted-foreground">
+                  {stat.label}
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="border-x p-6 md:p-10">
+            <HeroVisual />
+          </div>
+        </div>
+      </section>
+      <section className="border-b">
+        <div className="mx-auto max-w-7xl px-6 py-12">
+          <p className="text-center text-sm text-muted-foreground">
+            Backed by and integrated with
+          </p>
+          <div className="mt-8 grid grid-cols-2 items-center gap-x-8 gap-y-6 sm:grid-cols-4 lg:grid-cols-8">
+            {logos.map((logo) => (
+              <div
+                key={logo}
+                className="text-center text-base font-semibold tracking-tight text-muted-foreground/70 "
+              >
+                {logo}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      <section className="border-b">
+        <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
+          <div className="max-w-2xl">
+            <p className="text-sm font-medium text-indigo-600 dark:text-indigo-400">
+              Why us
+            </p>
+            <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl  mt-3">
+              Built for people who take custody seriously
+            </h2>
+            <p className="mt-4 text-lg leading-8 text-muted-foreground">
+              Institutional-grade infrastructure with an interface simple enough
+              for your first trade.
+            </p>
+          </div>
+          <div className="mt-14 grid overflow-hidden rounded-2xl border sm:grid-cols-2 lg:grid-cols-3">
+            {features.map((feature) => (
+              <div
+                key={feature.title}
+                className="-mt-px -ml-px border-t border-l p-8"
+              >
+                <feature.icon className="size-6 text-indigo-600 dark:text-indigo-400" />
+                <h3 className="mt-5 font-semibold">{feature.title}</h3>
+                <p className="mt-2 text-sm leading-6 text-muted-foreground">
+                  {feature.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      <section className="border-b">
+        <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
+          <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
+            <div className="max-w-2xl">
+              <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl">
+                Markets moving right now
+              </h2>
+              <p className="mt-4 text-lg leading-8 text-muted-foreground">
+                Trade more than 300 assets with deep liquidity, transparent fees
+                and real-time order books.
+              </p>
+            </div>
+            <Button
+              variant="outline"
+              nativeButton={false}
+              render={<a href="#" />}
+            >
+              View all
+              <ArrowUpRight />
+            </Button>
+          </div>
+          <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {showcase.map((item) => (
+              <a
+                key={item.name}
+                href="#"
+                className="group flex flex-col rounded-xl border p-6 transition-colors hover:bg-muted/40"
+              >
+                <div className="flex items-center justify-between">
+                  <span className="flex size-10 items-center justify-center rounded-lg border bg-muted/50 font-semibold ">
+                    {item.name.charAt(0)}
+                  </span>
+                  <span className="rounded-full bg-indigo-500/10 px-2.5 py-0.5 text-xs font-medium text-indigo-600 dark:text-indigo-400">
+                    {item.tag}
+                  </span>
+                </div>
+                <h3 className="mt-6 font-semibold ">{item.name}</h3>
+                <p className="mt-1 flex-1 text-sm text-muted-foreground">
+                  {item.meta}
+                </p>
+                <div className="mt-6 flex items-center justify-between border-t pt-4 text-sm">
+                  <span className="font-medium">{item.price}</span>
+                  <ArrowUpRight className="size-4 text-muted-foreground transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+      <section className="border-b">
+        <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
+          <div className="mx-auto max-w-2xl text-center">
+            <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl">
+              Trusted by traders, builders and treasuries
+            </h2>
+          </div>
+          <div className="mt-14 grid gap-6 md:grid-cols-3">
+            {testimonials.map((t) => (
+              <figure
+                key={t.name}
+                className="flex flex-col rounded-2xl border p-6"
+              >
+                <blockquote className="flex-1 leading-7">
+                  &ldquo;{t.quote}&rdquo;
+                </blockquote>
+                <figcaption className="mt-8 flex items-center gap-3 border-t pt-6 text-sm">
+                  <span className="flex size-10 shrink-0 items-center justify-center rounded-full bg-muted text-xs font-semibold">
+                    {t.name
+                      .split(" ")
+                      .map((p) => p[0])
+                      .join("")}
+                  </span>
+                  <span>
+                    <span className="block font-medium">{t.name}</span>
+                    <span className="block text-muted-foreground">
+                      {t.role}
+                    </span>
+                  </span>
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+        </div>
+      </section>
+      <section className="border-b">
+        <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
+          <div className="mx-auto max-w-2xl text-center">
+            <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl">
+              From sign-up to first trade in minutes
+            </h2>
+          </div>
+          <ol className="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+            {steps.map((step, i) => (
+              <li
+                key={step.title}
+                className="relative border-t-2 border-border pt-6"
+              >
+                <span className="text-sm font-medium text-indigo-600 dark:text-indigo-400">
+                  Step {i + 1}
+                </span>
+                <h3 className="mt-2 text-lg font-semibold">{step.title}</h3>
+                <p className="mt-2 text-sm leading-6 text-muted-foreground">
+                  {step.description}
+                </p>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+      <section className="border-b">
+        <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
+          <div className="mx-auto max-w-2xl text-center">
+            <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl">
+              Transparent fees, no surprises
+            </h2>
+            <p className="mt-4 text-lg leading-8 text-muted-foreground">
+              Pay less as you trade more. Every tier includes cold storage,
+              proof of reserves and 24/7 support.
+            </p>
+          </div>
+          <div className="mx-auto mt-14 grid max-w-6xl items-start gap-6 lg:grid-cols-3">
+            {tiers.map((tier, i) => {
+              const featured = i === 1
+              return (
+                <div
+                  key={tier.name}
+                  className={`relative flex h-full flex-col rounded-2xl border p-8 ${featured ? "border-transparent ring-2 ring-indigo-500 shadow-xl" : ""}`}
+                >
+                  {featured && (
+                    <span className="absolute -top-3 left-8 rounded-full bg-indigo-600 text-white px-3 py-1 text-xs font-medium">
+                      Most popular
+                    </span>
+                  )}
+                  <h3 className="font-semibold">{tier.name}</h3>
+                  <p className="mt-2 text-sm text-muted-foreground">
+                    {tier.description}
+                  </p>
+                  <div className="mt-6 flex items-baseline gap-1">
+                    <span className="text-4xl font-semibold tracking-tight">
+                      {tier.price}
+                    </span>
+                    <span className="text-sm text-muted-foreground">
+                      {tier.period}
+                    </span>
+                  </div>
+                  <ul className="mt-8 flex-1 space-y-3 text-sm">
+                    {tier.features.map((feature) => (
+                      <li key={feature} className="flex gap-3">
+                        <Check className="mt-0.5 size-4 shrink-0 text-indigo-600 dark:text-indigo-400" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                  <Button
+                    className="mt-8 w-full"
+                    variant={featured ? "default" : "outline"}
+                    nativeButton={false}
+                    render={<a href="#" />}
+                  >
+                    {tier.cta}
+                  </Button>
+                </div>
+              )
+            })}
+          </div>
+        </div>
+      </section>
+      <section className="border-b">
+        <div className="mx-auto grid max-w-7xl gap-12 px-6 py-20 md:py-28 lg:grid-cols-[1fr_1.5fr]">
+          <div className="lg:sticky lg:top-24 lg:self-start">
+            <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl">
+              Frequently asked questions
+            </h2>
+            <p className="mt-4 text-muted-foreground">
+              Still curious?{" "}
+              <a
+                href="#"
+                className="font-medium text-foreground underline underline-offset-4"
+              >
+                Get in touch
+              </a>
+              .
+            </p>
+          </div>
+          <div className="divide-y border-y">
+            {faqs.map((faq, i) => (
+              <details key={faq.q} className="group py-5" open={i === 0}>
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-6 font-medium [&::-webkit-details-marker]:hidden">
+                  {faq.q}
+                  <Plus className="size-4 shrink-0 text-muted-foreground transition-transform group-open:rotate-45" />
+                </summary>
+                <p className="mt-3 pr-10 leading-7 text-muted-foreground">
+                  {faq.a}
+                </p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+      <section className="px-6 py-20 md:py-28">
+        <div className="relative mx-auto max-w-6xl overflow-hidden rounded-3xl border bg-indigo-500/10 px-6 py-16 text-center md:py-24">
+          <div className="pointer-events-none absolute -top-24 left-1/2 size-96 -translate-x-1/2 rounded-full bg-gradient-to-b from-indigo-500/25 via-violet-500/10 to-transparent blur-3xl" />
+          <div className="relative mx-auto max-w-2xl space-y-6">
+            <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl">
+              Take back control of your ticket sales
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              Launch your first event free and pay only when tickets sell.
+            </p>
+            <div className="flex flex-wrap gap-3 justify-center">
+              <Button size="lg" nativeButton={false} render={<a href="#" />}>
+                Create an event
+                <ArrowRight />
+              </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                nativeButton={false}
+                render={<a href="#" />}
+              >
+                See how it works
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer className="">
+        <div className="mx-auto grid max-w-7xl gap-12 px-6 py-16 md:grid-cols-[1.5fr_repeat(3,1fr)]">
+          <div className="space-y-4">
+            <a
+              href="#"
+              className="flex items-center gap-2 font-semibold tracking-tight"
+            >
+              <span className="flex size-7 items-center justify-center rounded-md bg-indigo-600 text-white text-sm">
+                M
+              </span>
+              <span className="">Mintmark</span>
+            </a>
+            <p className="max-w-xs text-sm text-muted-foreground">
+              Fair tickets for real fans.
+            </p>
+          </div>
+          {footer.map((column) => (
+            <div key={column.title}>
+              <h3 className="text-sm font-medium">{column.title}</h3>
+              <ul className="mt-4 space-y-3 text-sm">
+                {column.links.map((link) => (
+                  <li key={link}>
+                    <a
+                      href="#"
+                      className="text-muted-foreground transition-colors hover:text-foreground"
+                    >
+                      {link}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+        <div className="border-t ">
+          <div className="mx-auto flex max-w-7xl flex-col justify-between gap-4 px-6 py-6 text-xs text-muted-foreground sm:flex-row">
+            <span>
+              © {new Date().getFullYear()} Mintmark. All rights reserved.
+            </span>
+            <div className="flex gap-6">
+              <a href="#" className="hover:text-foreground">
+                Privacy
+              </a>
+              <a href="#" className="hover:text-foreground">
+                Terms
+              </a>
+              <a href="#" className="hover:text-foreground">
+                Cookies
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  )
+}
+
+function HeroVisual() {
+  const bars = [38, 52, 44, 63, 58, 71, 66, 80, 74, 88, 83, 95]
+  return (
+    <div className="overflow-hidden rounded-xl border bg-card text-left text-card-foreground shadow-2xl/10">
+      <div className="flex items-center gap-2 border-b px-4 py-3">
+        <span className="size-2.5 rounded-full bg-muted-foreground/30" />
+        <span className="size-2.5 rounded-full bg-muted-foreground/30" />
+        <span className="size-2.5 rounded-full bg-muted-foreground/30" />
+        <span className="ml-3 hidden rounded-md bg-muted px-3 py-0.5 text-[11px] text-muted-foreground sm:inline">
+          app.mintmark.com
+        </span>
+      </div>
+      <div className="grid md:grid-cols-[180px_1fr]">
+        <aside className="hidden space-y-1 border-r p-3 text-sm md:block">
+          {navLinks.map((link, i) => (
+            <div
+              key={link}
+              className={`rounded-md px-3 py-1.5 ${i === 0 ? "bg-muted font-medium" : "text-muted-foreground"}`}
+            >
+              {link}
+            </div>
+          ))}
+        </aside>
+        <div className="space-y-4 p-4 md:p-6">
+          <div className="grid grid-cols-2 gap-3 lg:grid-cols-4">
+            {stats.slice(0, 4).map((stat) => (
+              <div key={stat.label} className="rounded-lg border p-3">
+                <div className="truncate text-[11px] text-muted-foreground">
+                  {stat.label}
+                </div>
+                <div className="mt-1 text-lg font-semibold tracking-tight">
+                  {stat.value}
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="rounded-lg border p-4">
+            <div className="mb-4 flex items-center justify-between text-xs">
+              <span className="font-medium">Last 12 weeks</span>
+              <span className="text-indigo-600 dark:text-indigo-400">
+                +24.6%
+              </span>
+            </div>
+            <div className="flex h-32 items-end gap-1.5">
+              {bars.map((h, i) => (
+                <div
+                  key={i}
+                  className={`flex-1 rounded-t-sm ${i === bars.length - 1 ? "bg-indigo-600" : "bg-muted-foreground/20"}`}
+                  style={{ height: `${h}%` }}
+                />
+              ))}
+            </div>
+          </div>
+          <div className="hidden divide-y rounded-lg border sm:block">
+            {showcase.slice(0, 3).map((item) => (
+              <div
+                key={item.name}
+                className="flex items-center justify-between gap-4 px-4 py-2.5 text-sm"
+              >
+                <div className="min-w-0">
+                  <div className="truncate font-medium">{item.name}</div>
+                  <div className="truncate text-xs text-muted-foreground">
+                    {item.meta}
+                  </div>
+                </div>
+                <span className="shrink-0 rounded-full bg-indigo-500/10 px-2 py-0.5 text-[11px] font-medium text-indigo-600 dark:text-indigo-400">
+                  {item.tag}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}

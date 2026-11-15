@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "features-05",
+  "type": "registry:block",
+  "description": "A six-item bordered feature grid with icons.",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/designali/blocks/features/features-05.tsx",
+      "content": "import {\n  Gauge,\n  GitBranch,\n  Globe,\n  Layers,\n  Lock,\n  Zap,\n} from \"lucide-react\"\n\nconst features = [\n  {\n    icon: Zap,\n    title: \"Instant previews\",\n    body: \"Every pull request gets a live URL in under 20 seconds, ready to share.\",\n  },\n  {\n    icon: GitBranch,\n    title: \"Branch environments\",\n    body: \"Isolated databases and secrets per branch, torn down automatically on merge.\",\n  },\n  {\n    icon: Globe,\n    title: \"Edge delivery\",\n    body: \"Static assets and functions served from 90 regions close to your users.\",\n  },\n  {\n    icon: Lock,\n    title: \"Access controls\",\n    body: \"SSO, role-based permissions and audit logs included on every plan.\",\n  },\n  {\n    icon: Gauge,\n    title: \"Performance budgets\",\n    body: \"Fail a build when bundle size or Core Web Vitals regress beyond limits.\",\n  },\n  {\n    icon: Layers,\n    title: \"Composable stacks\",\n    body: \"Bring any framework. We detect it and configure the build for you.\",\n  },\n]\n\nexport default function Features05() {\n  return (\n    <section className=\"w-full bg-background px-6 py-20 md:py-28\">\n      <div className=\"mx-auto max-w-6xl\">\n        <div className=\"max-w-2xl\">\n          <p className=\"text-xs tracking-[0.2em] text-muted-foreground uppercase\">\n            Platform\n          </p>\n          <h2 className=\"mt-4 text-3xl font-medium tracking-tight md:text-5xl\">\n            Everything you need to go from commit to production.\n          </h2>\n        </div>\n        <div className=\"mt-14 grid border-t border-l border-border sm:grid-cols-2 lg:grid-cols-3\">\n          {features.map(({ icon: Icon, title, body }) => (\n            <div\n              key={title}\n              className=\"border-r border-b border-border p-8 transition-colors hover:bg-muted/50\"\n            >\n              <Icon className=\"size-5 text-muted-foreground\" />\n              <h3 className=\"mt-6 text-base font-medium\">{title}</h3>\n              <p className=\"mt-2 text-sm leading-6 text-muted-foreground\">\n                {body}\n              </p>\n            </div>\n          ))}\n        </div>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "800px"
+  },
+  "categories": [
+    "features"
+  ]
+}

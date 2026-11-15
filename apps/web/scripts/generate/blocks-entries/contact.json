@@ -1,0 +1,17 @@
+[
+  ["contact-06", "contact", "700px", "Centered email-first contact with a copy-to-clipboard address bar, availability pill and a four-column social links grid."],
+  ["contact-07", "contact", "800px", "Three-step sales enquiry wizard with a segmented progress bar, choice tiles, back/continue controls and a success state."],
+  ["contact-08", "contact", "760px", "Department switcher (sales, support, press) that swaps the info panel, response time and form fields per team."],
+  ["contact-09", "contact", "720px", "Inverted dark band listing four named contacts with gradient initials avatars, region labels, emails and phone numbers."],
+  ["contact-10", "contact", "820px", "Bento grid of support channels with a large live-chat tile, community, phone, hours, uptime status bars and office cards."],
+  ["contact-11", "contact", "760px", "Split layout pairing an FAQ accordion with a compact enquiry form card that includes check-in and check-out dates."],
+  ["contact-12", "contact", "720px", "Booking widget with host profile and meeting details beside a weekday picker, time-slot grid and confirm bar."],
+  ["contact-13", "contact", "720px", "Conversational quote bot with chat bubbles, quick-reply option chips and a final email capture inside a chat window."],
+  ["contact-14", "contact", "720px", "Support channel comparison table with best-for, response time, hours and plan badges that stacks into cards on mobile."],
+  ["contact-15", "contact", "900px", "Sticky studio intro beside a numbered editorial index of enquiry topics, each with a description and direct email link."],
+  ["contact-16", "contact", "900px", "Floating glass form card over blurred colour orbs and a faded grid, with a stat strip and NDA reassurance line."],
+  ["contact-17", "contact", "760px", "Office grid with live local clocks per timezone, open or closed status and sun/moon indicators plus contact links."],
+  ["contact-18", "contact", "700px", "Net promoter feedback form with a 0-10 score scale, adaptive follow-up prompt, reason chips and success state."],
+  ["contact-19", "contact", "400px", "Compact warm-toned callback band with country code phone field, preferred time segmented control and ASAP checkbox."],
+  ["contact-20", "contact", "720px", "Footer-style contact with an oversized animated-underline email headline, studio addresses columns and social links."]
+]

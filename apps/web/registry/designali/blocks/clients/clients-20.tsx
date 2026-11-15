@@ -1,0 +1,67 @@
+import { Star } from "lucide-react"
+
+import { Button } from "@workspace/ui/components/button"
+
+const marks = [
+  { initials: "NW", className: "bg-sky-500" },
+  { initials: "HC", className: "bg-violet-500" },
+  { initials: "KL", className: "bg-emerald-500" },
+  { initials: "OB", className: "bg-amber-500" },
+  { initials: "FN", className: "bg-rose-500" },
+]
+
+const names = ["Northwind", "Halcyon", "Kestrel Labs", "Orbital", "Fieldnote"]
+
+export default function Clients20() {
+  return (
+    <section className="w-full bg-background py-12">
+      <div className="mx-auto max-w-7xl px-6">
+        <div className="flex flex-col gap-8 border border-border bg-card p-6 md:p-8 lg:flex-row lg:items-center lg:justify-between">
+          <div className="flex flex-col gap-5 sm:flex-row sm:items-center">
+            <div className="flex -space-x-2">
+              {marks.map((mark) => (
+                <span
+                  key={mark.initials}
+                  className={`flex size-11 items-center justify-center rounded-full text-xs font-semibold text-white ring-2 ring-card ${mark.className}`}
+                >
+                  {mark.initials}
+                </span>
+              ))}
+              <span className="flex size-11 items-center justify-center rounded-full bg-muted text-xs font-medium text-muted-foreground ring-2 ring-card">
+                +4k
+              </span>
+            </div>
+            <div>
+              <div className="flex items-center gap-2">
+                <div className="flex text-amber-500 dark:text-amber-400">
+                  {[0, 1, 2, 3, 4].map((i) => (
+                    <Star key={i} className="size-4 fill-current" />
+                  ))}
+                </div>
+                <span className="text-sm font-medium">4.9 / 5</span>
+              </div>
+              <p className="mt-1 text-sm text-muted-foreground">
+                Rated by 4,200+ teams at{" "}
+                <span className="text-foreground">{names.join(", ")}</span>{" "}
+                and more.
+              </p>
+            </div>
+          </div>
+          <div className="flex flex-col gap-3 sm:flex-row">
+            <Button size="lg" nativeButton={false} render={<a href="#" />}>
+              Join them free
+            </Button>
+            <Button
+              size="lg"
+              variant="outline"
+              nativeButton={false}
+              render={<a href="#" />}
+            >
+              Read reviews
+            </Button>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}

@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "navigation-03",
+  "type": "registry:block",
+  "description": "A breadcrumb and tab navigation bar for nested pages.",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "registry/designali/blocks/navigation/navigation-03.tsx",
+      "content": "\"use client\"\n\nimport { useState } from \"react\"\nimport { ChevronRight } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst crumbs = [\"Acme\", \"Projects\", \"Marketing site\"]\n\nconst tabs = [\n  { label: \"Overview\" },\n  { label: \"Deployments\", count: 128 },\n  { label: \"Analytics\" },\n  { label: \"Logs\" },\n  { label: \"Domains\", count: 3 },\n  { label: \"Settings\" },\n]\n\nexport default function Navigation03() {\n  const [active, setActive] = useState(\"Deployments\")\n\n  return (\n    <section className=\"w-full border-b bg-background\">\n      <div className=\"mx-auto max-w-7xl px-6\">\n        <div className=\"flex flex-col gap-4 py-6 md:flex-row md:items-center md:justify-between\">\n          <div className=\"space-y-2\">\n            <nav aria-label=\"Breadcrumb\">\n              <ol className=\"flex flex-wrap items-center gap-1.5 text-sm text-muted-foreground\">\n                {crumbs.map((crumb, index) => (\n                  <li key={crumb} className=\"flex items-center gap-1.5\">\n                    {index > 0 && <ChevronRight className=\"size-3.5\" />}\n                    {index === crumbs.length - 1 ? (\n                      <span className=\"text-foreground\">{crumb}</span>\n                    ) : (\n                      <a href=\"#\" className=\"hover:text-foreground\">\n                        {crumb}\n                      </a>\n                    )}\n                  </li>\n                ))}\n              </ol>\n            </nav>\n            <h2 className=\"flex items-center gap-3 text-2xl font-semibold tracking-tight\">\n              Marketing site\n              <span className=\"flex items-center gap-1.5 border px-2 py-0.5 text-xs font-normal text-muted-foreground\">\n                <span className=\"size-1.5 rounded-full bg-emerald-500\" />\n                Production\n              </span>\n            </h2>\n          </div>\n          <div className=\"flex gap-2\">\n            <Button variant=\"outline\">Visit site</Button>\n            <Button>Redeploy</Button>\n          </div>\n        </div>\n\n        <nav className=\"-mb-px flex gap-6 overflow-x-auto\">\n          {tabs.map((tab) => (\n            <button\n              key={tab.label}\n              type=\"button\"\n              onClick={() => setActive(tab.label)}\n              className={cn(\n                \"flex shrink-0 items-center gap-2 border-b-2 pb-3 text-sm transition-colors\",\n                active === tab.label\n                  ? \"border-foreground text-foreground\"\n                  : \"border-transparent text-muted-foreground hover:text-foreground\"\n              )}\n            >\n              {tab.label}\n              {tab.count !== undefined && (\n                <span className=\"bg-muted px-1.5 text-xs tabular-nums text-muted-foreground\">\n                  {tab.count}\n                </span>\n              )}\n            </button>\n          ))}\n        </nav>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "600px"
+  },
+  "categories": [
+    "navigation"
+  ]
+}

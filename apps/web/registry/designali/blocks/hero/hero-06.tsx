@@ -26,11 +26,11 @@ export default function Hero06() {
               copy, motion and analytics handled by one small senior team.
             </p>
             <div className="flex flex-wrap gap-3">
-              <Button size="lg" render={<a href="#" />}>
+              <Button size="lg" nativeButton={false} render={<a href="#" />}>
                 Start a project
                 <ArrowRight />
               </Button>
-              <Button size="lg" variant="outline" render={<a href="#" />}>
+              <Button size="lg" variant="outline" nativeButton={false} render={<a href="#" />}>
                 View case studies
               </Button>
             </div>

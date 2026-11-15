@@ -1,0 +1,16 @@
+[
+  ["media-07", "media", "850px", "Cinematic video player with custom controls, seek bar chapter markers, captions and a chapter grid."],
+  ["media-08", "media", "800px", "Music player card with album art, transport controls and a clickable tracklist."],
+  ["media-09", "media", "900px", "Webinar landing page with agenda, speaker cards and a sticky countdown registration form."],
+  ["media-10", "media", "700px", "Livestream player with live badges, channel info and an interactive live chat sidebar."],
+  ["media-11", "media", "950px", "Podcast episode with a sticky player bar and a clickable, auto-highlighting transcript."],
+  ["media-12", "media", "800px", "Horizontal scroll of vertical 9:16 customer video testimonial reels."],
+  ["media-13", "media", "750px", "Course lesson player with a progress-tracking curriculum sidebar of collapsible modules."],
+  ["media-14", "media", "650px", "Voice sample list with single-active mini players and progress-filling waveforms."],
+  ["media-15", "media", "750px", "Product tour with vertical feature tabs driving a large video preview panel."],
+  ["media-16", "media", "850px", "Inverted radio station band with an animated equalizer dial, station grid and schedule."],
+  ["media-17", "media", "850px", "Searchable, topic-filtered table of webinar replay recordings."],
+  ["media-18", "media", "750px", "Album release with a spinning vinyl sliding from its sleeve, side A/B tracklist and pre-order CTA."],
+  ["media-19", "media", "650px", "Inverted keynote band with stats and a video thumbnail that opens a modal player."],
+  ["media-20", "media", "850px", "Podcast network show cards with a play queue and a slide-up mini player bar."]
+]

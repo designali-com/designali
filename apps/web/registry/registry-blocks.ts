@@ -1,5 +1,7 @@
 import { type Registry } from "shadcn/schema"
 
+import { blocksNew } from "./registry-blocks-new"
+
 export const blocks: Registry["items"] = [
   {
     name: "header-01",
@@ -761,4 +763,6 @@ export const blocks: Registry["items"] = [
       iframeHeight: "800px",
     },
   },
+
+  ...blocksNew,
 ]

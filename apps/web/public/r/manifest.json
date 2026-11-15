@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-15T08:39:25.224Z",
+  "generatedAt": "2026-11-15T15:19:04.029Z",
   "items": [
     {
       "name": "iphone",
@@ -192,31 +192,31 @@
       "name": "logos-01",
       "type": "registry:block",
       "description": "A simple logos section.",
-      "categories": ["logos", "clients"]
+      "categories": ["clients"]
     },
     {
       "name": "logos-02",
       "type": "registry:block",
       "description": "A simple logos section.",
-      "categories": ["logos", "clients"]
+      "categories": ["clients"]
     },
     {
       "name": "logos-03",
       "type": "registry:block",
       "description": "A simple logos section.",
-      "categories": ["logos", "clients"]
+      "categories": ["clients"]
     },
     {
       "name": "logos-04",
       "type": "registry:block",
       "description": "A simple logos section.",
-      "categories": ["logos", "clients"]
+      "categories": ["clients"]
     },
     {
       "name": "logos-05",
       "type": "registry:block",
       "description": "A simple logos section.",
-      "categories": ["logos", "clients"]
+      "categories": ["clients"]
     },
     {
       "name": "call-to-action-01",
@@ -228,25 +228,25 @@
       "name": "feature-01",
       "type": "registry:block",
       "description": "A simple feature section.",
-      "categories": ["feature", "features"]
+      "categories": ["features"]
     },
     {
       "name": "feature-02",
       "type": "registry:block",
       "description": "A simple feature section.",
-      "categories": ["feature", "features"]
+      "categories": ["features"]
     },
     {
       "name": "feature-03",
       "type": "registry:block",
       "description": "A simple feature section.",
-      "categories": ["feature", "features"]
+      "categories": ["features"]
     },
     {
       "name": "feature-04",
       "type": "registry:block",
       "description": "A simple feature section.",
-      "categories": ["feature", "features"]
+      "categories": ["features"]
     },
     {
       "name": "faqs-01",
@@ -294,7 +294,7 @@
       "name": "testimonial-01",
       "type": "registry:block",
       "description": "A simple pricing section.",
-      "categories": ["testimonials", "testimonial"]
+      "categories": ["testimonials"]
     },
     {
       "name": "gallery-01",
@@ -315,10 +315,2116 @@
       "categories": ["media"]
     },
     {
-      "name": "landing-01",
+      "name": "hero-06",
+      "type": "registry:block",
+      "description": "An editorial framed hero with oversized type, actions and a metrics row.",
+      "categories": ["hero"]
+    },
+    {
+      "name": "hero-07",
+      "type": "registry:block",
+      "description": "A split product hero with an announcement link and an MRR chart card.",
+      "categories": ["hero"]
+    },
+    {
+      "name": "hero-08",
+      "type": "registry:block",
+      "description": "A centred waitlist hero with a gradient glow and inline email form.",
+      "categories": ["hero"]
+    },
+    {
+      "name": "hero-09",
+      "type": "registry:block",
+      "description": "A studio hero with a large wordmark, service tags and staggered gradient tiles.",
+      "categories": ["hero"]
+    },
+    {
+      "name": "header-07",
+      "type": "registry:block",
+      "description": "A centred-logo storefront header with split navigation and a mobile menu.",
+      "categories": ["header"]
+    },
+    {
+      "name": "header-08",
+      "type": "registry:block",
+      "description": "A dismissible announcement bar above a header with mega-menu style links.",
+      "categories": ["header"]
+    },
+    {
+      "name": "header-09",
+      "type": "registry:block",
+      "description": "An app header with a search field, notifications and an account avatar.",
+      "categories": ["header"]
+    },
+    {
+      "name": "header-10",
+      "type": "registry:block",
+      "description": "A newspaper-style masthead with a dateline, large title and section links.",
+      "categories": ["header"]
+    },
+    {
+      "name": "footer-07",
+      "type": "registry:block",
+      "description": "A footer with a newsletter signup and three columns of links.",
+      "categories": ["footer"]
+    },
+    {
+      "name": "footer-08",
+      "type": "registry:block",
+      "description": "An inverted studio footer with an oversized email link, address and socials.",
+      "categories": ["footer"]
+    },
+    {
+      "name": "footer-09",
+      "type": "registry:block",
+      "description": "A minimal single-row footer with links and a system status indicator.",
+      "categories": ["footer"]
+    },
+    {
+      "name": "footer-10",
+      "type": "registry:block",
+      "description": "A five-column SaaS footer with product, resources and compliance badges.",
+      "categories": ["footer"]
+    },
+    {
+      "name": "pricing-05",
+      "type": "registry:block",
+      "description": "Three pricing tiers with a monthly and yearly billing switch.",
+      "categories": ["pricing"]
+    },
+    {
+      "name": "pricing-06",
+      "type": "registry:block",
+      "description": "A detailed plan comparison table with grouped feature rows.",
+      "categories": ["pricing"]
+    },
+    {
+      "name": "pricing-07",
+      "type": "registry:block",
+      "description": "A usage-based pricing calculator with a seat slider and live total.",
+      "categories": ["pricing"]
+    },
+    {
+      "name": "pricing-08",
+      "type": "registry:block",
+      "description": "Fixed-scope service packages presented as two editorial price cards.",
+      "categories": ["pricing"]
+    },
+    {
+      "name": "faqs-04",
+      "type": "registry:block",
+      "description": "A numbered two-column FAQ grid with bordered cells.",
+      "categories": ["faqs"]
+    },
+    {
+      "name": "faqs-05",
+      "type": "registry:block",
+      "description": "A searchable help center with topic filters and grouped answers.",
+      "categories": ["faqs"]
+    },
+    {
+      "name": "faqs-06",
+      "type": "registry:block",
+      "description": "A master-detail FAQ with a question list and a large answer panel.",
+      "categories": ["faqs"]
+    },
+    {
+      "name": "faqs-07",
+      "type": "registry:block",
+      "description": "A sticky intro beside a numbered accordion of licensing questions.",
+      "categories": ["faqs"]
+    },
+    {
+      "name": "call-to-action-02",
+      "type": "registry:block",
+      "description": "A split call-to-action with an oversized headline, supporting copy and two actions.",
+      "categories": ["call-to-action"]
+    },
+    {
+      "name": "call-to-action-03",
+      "type": "registry:block",
+      "description": "A centred call-to-action over a masked grid background with a status pill.",
+      "categories": ["call-to-action"]
+    },
+    {
+      "name": "call-to-action-04",
+      "type": "registry:block",
+      "description": "A newsletter signup card with perks list and an email form.",
+      "categories": ["call-to-action"]
+    },
+    {
+      "name": "call-to-action-05",
+      "type": "registry:block",
+      "description": "A three-path call-to-action grid with inverting hover cards.",
+      "categories": ["call-to-action"]
+    },
+    {
+      "name": "call-to-action-06",
+      "type": "registry:block",
+      "description": "An inverted call-to-action band with an install command and paired buttons.",
+      "categories": ["call-to-action"]
+    },
+    {
+      "name": "call-to-action-07",
+      "type": "registry:block",
+      "description": "A call-to-action card with a stats strip, avatar stack and primary action.",
+      "categories": ["call-to-action"]
+    },
+    {
+      "name": "features-05",
+      "type": "registry:block",
+      "description": "A six-item bordered feature grid with icons.",
+      "categories": ["features"]
+    },
+    {
+      "name": "features-06",
+      "type": "registry:block",
+      "description": "Alternating feature rows with numbered eyebrows, tags and mock UI visuals.",
+      "categories": ["features"]
+    },
+    {
+      "name": "features-07",
+      "type": "registry:block",
+      "description": "A bento feature layout with an assistant preview, small tiles and a wide export row.",
+      "categories": ["features"]
+    },
+    {
+      "name": "features-08",
+      "type": "registry:block",
+      "description": "A tabbed feature showcase with a highlighted metric panel.",
+      "categories": ["features"]
+    },
+    {
+      "name": "features-09",
+      "type": "registry:block",
+      "description": "A sticky intro with a numbered vertical timeline of steps.",
+      "categories": ["features"]
+    },
+    {
+      "name": "features-10",
+      "type": "registry:block",
+      "description": "A feature comparison table against a typical competitor.",
+      "categories": ["features"]
+    },
+    {
+      "name": "clients-06",
+      "type": "registry:block",
+      "description": "A bordered grid of client wordmarks with hover highlight.",
+      "categories": ["clients"]
+    },
+    {
+      "name": "clients-07",
+      "type": "registry:block",
+      "description": "A client section with a headline stat and a grid of logo marks.",
+      "categories": ["clients"]
+    },
+    {
+      "name": "clients-08",
+      "type": "registry:block",
+      "description": "An infinite marquee of client wordmarks with faded edges.",
+      "categories": ["clients"]
+    },
+    {
+      "name": "clients-09",
+      "type": "registry:block",
+      "description": "Client logos paired with short results and case study links.",
+      "categories": ["clients"]
+    },
+    {
+      "name": "clients-10",
+      "type": "registry:block",
+      "description": "A statement headline above client names grouped by company size.",
+      "categories": ["clients"]
+    },
+    {
+      "name": "testimonials-02",
+      "type": "registry:block",
+      "description": "A single centred pull-quote testimonial with an initials avatar.",
+      "categories": ["testimonials"]
+    },
+    {
+      "name": "testimonials-03",
+      "type": "registry:block",
+      "description": "A masonry-style grid of customer testimonials.",
+      "categories": ["testimonials"]
+    },
+    {
+      "name": "testimonials-04",
+      "type": "registry:block",
+      "description": "A testimonial carousel with previous and next controls.",
+      "categories": ["testimonials"]
+    },
+    {
+      "name": "testimonials-05",
+      "type": "registry:block",
+      "description": "Social-post style testimonials arranged in three columns.",
+      "categories": ["testimonials"]
+    },
+    {
+      "name": "testimonials-06",
+      "type": "registry:block",
+      "description": "A featured testimonial beside headline rating and adoption stats.",
+      "categories": ["testimonials"]
+    },
+    {
+      "name": "gallery-03",
+      "type": "registry:block",
+      "description": "A mixed-span editorial image grid with captions.",
+      "categories": ["gallery"]
+    },
+    {
+      "name": "gallery-04",
+      "type": "registry:block",
+      "description": "A filterable archive gallery with category tabs.",
+      "categories": ["gallery"]
+    },
+    {
+      "name": "gallery-05",
+      "type": "registry:block",
+      "description": "A photo carousel with previous and next controls, captions and thumbnails.",
+      "categories": ["gallery"]
+    },
+    {
+      "name": "gallery-06",
+      "type": "registry:block",
+      "description": "A masonry gallery of gradient frames laid out in responsive columns.",
+      "categories": ["gallery"]
+    },
+    {
+      "name": "gallery-07",
+      "type": "registry:block",
+      "description": "A generative artwork gallery built from inline SVG compositions.",
+      "categories": ["gallery"]
+    },
+    {
+      "name": "media-02",
+      "type": "registry:block",
+      "description": "A featured video section with a large player frame and title.",
+      "categories": ["media"]
+    },
+    {
+      "name": "media-03",
+      "type": "registry:block",
+      "description": "A podcast episode player with cover art, play controls and show notes.",
+      "categories": ["media"]
+    },
+    {
+      "name": "media-04",
+      "type": "registry:block",
+      "description": "A video tutorial library with a featured lesson and a thumbnail grid.",
+      "categories": ["media"]
+    },
+    {
+      "name": "media-05",
+      "type": "registry:block",
+      "description": "A product demo video section with copy and highlight points.",
+      "categories": ["media"]
+    },
+    {
+      "name": "media-06",
+      "type": "registry:block",
+      "description": "A podcast episode list with guests, numbers and durations.",
+      "categories": ["media"]
+    },
+    {
+      "name": "contact-01",
+      "type": "registry:block",
+      "description": "A two-column contact section with details and a message form.",
+      "categories": ["contact"]
+    },
+    {
+      "name": "contact-02",
+      "type": "registry:block",
+      "description": "Three contact channel cards for sales, support and press.",
+      "categories": ["contact"]
+    },
+    {
+      "name": "contact-03",
+      "type": "registry:block",
+      "description": "A project inquiry form with selectable services and budget ranges.",
+      "categories": ["contact"]
+    },
+    {
+      "name": "contact-04",
+      "type": "registry:block",
+      "description": "A compact contact band with an inline email capture.",
+      "categories": ["contact"]
+    },
+    {
+      "name": "contact-05",
+      "type": "registry:block",
+      "description": "A list of studio offices with time zones, phone numbers and copyable emails.",
+      "categories": ["contact"]
+    },
+    {
+      "name": "location-01",
+      "type": "registry:block",
+      "description": "A single-venue location card with an illustrated map, hours and directions.",
+      "categories": ["location"]
+    },
+    {
+      "name": "location-02",
+      "type": "registry:block",
+      "description": "A grid of office locations with addresses and local times.",
+      "categories": ["location"]
+    },
+    {
+      "name": "location-03",
+      "type": "registry:block",
+      "description": "A store finder with a searchable list of locations and a map panel.",
+      "categories": ["location"]
+    },
+    {
+      "name": "location-04",
+      "type": "registry:block",
+      "description": "An event venue section with address, transport and access details.",
+      "categories": ["location"]
+    },
+    {
+      "name": "location-05",
+      "type": "registry:block",
+      "description": "A dotted world map with pinned offices and a regional list.",
+      "categories": ["location"]
+    },
+    {
+      "name": "navigation-01",
+      "type": "registry:block",
+      "description": "A mega menu navigation with product and resource columns.",
+      "categories": ["navigation"]
+    },
+    {
+      "name": "navigation-02",
+      "type": "registry:block",
+      "description": "An application sidebar with pinned projects and a user profile.",
+      "categories": ["navigation"]
+    },
+    {
+      "name": "navigation-03",
+      "type": "registry:block",
+      "description": "A breadcrumb and tab navigation bar for nested pages.",
+      "categories": ["navigation"]
+    },
+    {
+      "name": "navigation-04",
+      "type": "registry:block",
+      "description": "A command palette style navigation with search and grouped actions.",
+      "categories": ["navigation"]
+    },
+    {
+      "name": "navigation-05",
+      "type": "registry:block",
+      "description": "A floating dock navigation beside a mobile bottom tab bar.",
+      "categories": ["navigation"]
+    },
+    {
+      "name": "authentication-01",
+      "type": "registry:block",
+      "description": "A split sign-in screen with email, password and remember me.",
+      "categories": ["authentication"]
+    },
+    {
+      "name": "authentication-02",
+      "type": "registry:block",
+      "description": "A sign-up form with social providers and a brand panel.",
+      "categories": ["authentication"]
+    },
+    {
+      "name": "authentication-03",
+      "type": "registry:block",
+      "description": "A one-time code verification screen with six digit inputs.",
+      "categories": ["authentication"]
+    },
+    {
+      "name": "authentication-04",
+      "type": "registry:block",
+      "description": "A passwordless magic-link sign-in with a split layout.",
+      "categories": ["authentication"]
+    },
+    {
+      "name": "authentication-05",
+      "type": "registry:block",
+      "description": "A reset password form with a live strength meter and requirements.",
+      "categories": ["authentication"]
+    },
+    {
+      "name": "forms-01",
+      "type": "registry:block",
+      "description": "A project brief form with grouped fields and budget options.",
+      "categories": ["forms"]
+    },
+    {
+      "name": "forms-02",
+      "type": "registry:block",
+      "description": "A multi-step account creation form with progress indicator.",
+      "categories": ["forms"]
+    },
+    {
+      "name": "forms-03",
+      "type": "registry:block",
+      "description": "A profile settings form with selects, toggles and a bio field.",
+      "categories": ["forms"]
+    },
+    {
+      "name": "forms-04",
+      "type": "registry:block",
+      "description": "An NPS survey form with a 0 to 10 scale and follow-up comment.",
+      "categories": ["forms"]
+    },
+    {
+      "name": "forms-05",
+      "type": "registry:block",
+      "description": "An event registration form with ticket type and agreement checkbox.",
+      "categories": ["forms"]
+    },
+    {
+      "name": "sections-01",
+      "type": "registry:block",
+      "description": "An about section with a large statement and key company figures.",
+      "categories": ["sections"]
+    },
+    {
+      "name": "sections-02",
+      "type": "registry:block",
+      "description": "A numbered process section describing how a project runs.",
+      "categories": ["sections"]
+    },
+    {
+      "name": "sections-03",
+      "type": "registry:block",
+      "description": "A split product section with copy, actions and a mock canvas.",
+      "categories": ["sections"]
+    },
+    {
+      "name": "sections-04",
+      "type": "registry:block",
+      "description": "A comparison table section showing why teams are switching.",
+      "categories": ["sections"]
+    },
+    {
+      "name": "sections-05",
+      "type": "registry:block",
+      "description": "A team section with initials portraits and roles.",
+      "categories": ["sections"]
+    },
+    {
+      "name": "grid-01",
+      "type": "registry:block",
+      "description": "A four-column bordered feature grid with icon cells.",
+      "categories": ["grid"]
+    },
+    {
+      "name": "grid-02",
+      "type": "registry:block",
+      "description": "A colour palette grid of swatches with token names and values.",
+      "categories": ["grid"]
+    },
+    {
+      "name": "grid-03",
+      "type": "registry:block",
+      "description": "A filterable resource library grid of cards.",
+      "categories": ["grid"]
+    },
+    {
+      "name": "grid-04",
+      "type": "registry:block",
+      "description": "A sticky heading beside a grid of design system statistics.",
+      "categories": ["grid"]
+    },
+    {
+      "name": "grid-05",
+      "type": "registry:block",
+      "description": "An integrations grid of tool tiles in six columns.",
+      "categories": ["grid"]
+    },
+    {
+      "name": "lists-01",
+      "type": "registry:block",
+      "description": "A list of open roles with team, location and type.",
+      "categories": ["lists"]
+    },
+    {
+      "name": "lists-02",
+      "type": "registry:block",
+      "description": "A dated changelog list with version tags.",
+      "categories": ["lists"]
+    },
+    {
+      "name": "lists-03",
+      "type": "registry:block",
+      "description": "An interactive launch checklist with progress count.",
+      "categories": ["lists"]
+    },
+    {
+      "name": "lists-04",
+      "type": "registry:block",
+      "description": "An alphabetical design glossary with term definitions.",
+      "categories": ["lists"]
+    },
+    {
+      "name": "lists-05",
+      "type": "registry:block",
+      "description": "A shared file list table with types, sizes and owners.",
+      "categories": ["lists"]
+    },
+    {
+      "name": "analytics-01",
+      "type": "registry:block",
+      "description": "A revenue performance overview with KPI tiles and a line chart.",
+      "categories": ["analytics"]
+    },
+    {
+      "name": "analytics-02",
+      "type": "registry:block",
+      "description": "A traffic sources breakdown with switchable ranges and bar meters.",
+      "categories": ["analytics"]
+    },
+    {
+      "name": "analytics-03",
+      "type": "registry:block",
+      "description": "A large-number stats section for infrastructure and growth metrics.",
+      "categories": ["analytics"]
+    },
+    {
+      "name": "analytics-04",
+      "type": "registry:block",
+      "description": "A content report with top pages table and visit patterns.",
+      "categories": ["analytics"]
+    },
+    {
+      "name": "analytics-05",
+      "type": "registry:block",
+      "description": "A conversion funnel chart from first visit to paid plan.",
+      "categories": ["analytics"]
+    },
+    {
+      "name": "blog-01",
+      "type": "registry:block",
+      "description": "A three-column grid of latest articles with cover gradients.",
+      "categories": ["blog"]
+    },
+    {
+      "name": "blog-02",
+      "type": "registry:block",
+      "description": "A featured article with a large cover and a list of recent posts.",
+      "categories": ["blog"]
+    },
+    {
+      "name": "blog-03",
+      "type": "registry:block",
+      "description": "A filterable article index with categories and read times.",
+      "categories": ["blog"]
+    },
+    {
+      "name": "blog-04",
+      "type": "registry:block",
+      "description": "A blog section of guides with tag badges in four columns.",
+      "categories": ["blog"]
+    },
+    {
+      "name": "blog-05",
+      "type": "registry:block",
+      "description": "A newsletter archive with a sticky subscribe form.",
+      "categories": ["blog"]
+    },
+    {
+      "name": "portfolio-01",
+      "type": "registry:block",
+      "description": "A selected work grid with project covers, roles and years.",
+      "categories": ["portfolio"]
+    },
+    {
+      "name": "portfolio-02",
+      "type": "registry:block",
+      "description": "A project index list with a sticky hover preview.",
+      "categories": ["portfolio"]
+    },
+    {
+      "name": "portfolio-03",
+      "type": "registry:block",
+      "description": "A case study summary with challenge, approach and results.",
+      "categories": ["portfolio"]
+    },
+    {
+      "name": "portfolio-04",
+      "type": "registry:block",
+      "description": "A filterable project archive grid.",
+      "categories": ["portfolio"]
+    },
+    {
+      "name": "portfolio-05",
+      "type": "registry:block",
+      "description": "A personal portfolio intro with experience and featured work.",
+      "categories": ["portfolio"]
+    },
+    {
+      "name": "ecommerce-01",
+      "type": "registry:block",
+      "description": "A product collection grid with prices and quick add.",
+      "categories": ["ecommerce"]
+    },
+    {
+      "name": "ecommerce-02",
+      "type": "registry:block",
+      "description": "A product detail section with gallery, colour and size selection.",
+      "categories": ["ecommerce"]
+    },
+    {
+      "name": "ecommerce-03",
+      "type": "registry:block",
+      "description": "A shopping cart with quantity controls, promo code and summary.",
+      "categories": ["ecommerce"]
+    },
+    {
+      "name": "ecommerce-04",
+      "type": "registry:block",
+      "description": "A split promotional banner for a featured collection.",
+      "categories": ["ecommerce"]
+    },
+    {
+      "name": "ecommerce-05",
+      "type": "registry:block",
+      "description": "A product bundle section with included items and pricing.",
+      "categories": ["ecommerce"]
+    },
+    {
+      "name": "landing-agency-01",
       "type": "registry:page",
-      "description": "A simple header section.",
-      "categories": ["pages"]
+      "description": "An agency landing page for a brand identity studio with editorial type and case studies.",
+      "categories": ["agency"]
+    },
+    {
+      "name": "landing-agency-02",
+      "type": "registry:page",
+      "description": "An agency landing page for a web design and development shop with split hero.",
+      "categories": ["agency"]
+    },
+    {
+      "name": "landing-agency-03",
+      "type": "registry:page",
+      "description": "An agency landing page for an integrated advertising and campaign agency with bold gradient hero.",
+      "categories": ["agency"]
+    },
+    {
+      "name": "landing-agency-04",
+      "type": "registry:page",
+      "description": "An agency landing page for a motion design and animation studio with bento hero.",
+      "categories": ["agency"]
+    },
+    {
+      "name": "landing-agency-05",
+      "type": "registry:page",
+      "description": "A landing page for a performance marketing and growth agency with inverted hero and stats.",
+      "categories": ["agency"]
+    },
+    {
+      "name": "landing-agency-06",
+      "type": "registry:page",
+      "description": "An agency landing page for a UX research and product discovery studio with framed hero and process steps.",
+      "categories": ["agency"]
+    },
+    {
+      "name": "landing-agency-07",
+      "type": "registry:page",
+      "description": "An agency landing page for a packaging and retail design studio with spotlight hero and project gallery.",
+      "categories": ["agency"]
+    },
+    {
+      "name": "landing-agency-08",
+      "type": "registry:page",
+      "description": "An agency landing page for an SEO and content marketing agency with split hero and email capture.",
+      "categories": ["agency"]
+    },
+    {
+      "name": "landing-agency-09",
+      "type": "registry:page",
+      "description": "An agency landing page for a product photography and video production studio with bento hero.",
+      "categories": ["agency"]
+    },
+    {
+      "name": "landing-agency-10",
+      "type": "registry:page",
+      "description": "An agency landing page for a copywriting and brand voice studio with minimal editorial layout.",
+      "categories": ["agency"]
+    },
+    {
+      "name": "landing-ai-01",
+      "type": "registry:page",
+      "description": "An AI landing page for an enterprise knowledge assistant with product mockup and pricing.",
+      "categories": ["ai"]
+    },
+    {
+      "name": "landing-ai-02",
+      "type": "registry:page",
+      "description": "An AI landing page for a model inference API with editorial typography and usage stats.",
+      "categories": ["ai"]
+    },
+    {
+      "name": "landing-ai-03",
+      "type": "registry:page",
+      "description": "An AI landing page for a writing copilot for marketing teams with split hero.",
+      "categories": ["ai"]
+    },
+    {
+      "name": "landing-ai-04",
+      "type": "registry:page",
+      "description": "An AI landing page for an LLM observability and evaluation platform with bento hero.",
+      "categories": ["ai"]
+    },
+    {
+      "name": "landing-ai-05",
+      "type": "registry:page",
+      "description": "An AI landing page for a voice agent platform for call centres with dark inverted hero.",
+      "categories": ["ai"]
+    },
+    {
+      "name": "landing-ai-06",
+      "type": "registry:page",
+      "description": "An AI landing page for a contract review assistant with framed hero and pricing tiers.",
+      "categories": ["ai"]
+    },
+    {
+      "name": "landing-ai-07",
+      "type": "registry:page",
+      "description": "An AI landing page for a computer vision quality inspection platform with spotlight hero and stats.",
+      "categories": ["ai"]
+    },
+    {
+      "name": "landing-ai-08",
+      "type": "registry:page",
+      "description": "An AI landing page for a personalised AI tutor for students with split hero and email capture.",
+      "categories": ["ai"]
+    },
+    {
+      "name": "landing-ai-09",
+      "type": "registry:page",
+      "description": "An AI landing page for a synthetic data generation platform with bento hero and use cases.",
+      "categories": ["ai"]
+    },
+    {
+      "name": "landing-ai-10",
+      "type": "registry:page",
+      "description": "An AI landing page for a research paper summariser with minimal editorial layout.",
+      "categories": ["ai"]
+    },
+    {
+      "name": "landing-app-01",
+      "type": "registry:page",
+      "description": "A mobile app landing page for a journaling app with phone mockup and app reviews.",
+      "categories": ["app"]
+    },
+    {
+      "name": "landing-app-02",
+      "type": "registry:page",
+      "description": "A mobile app landing page for a bill-splitting and shared expenses app with split hero.",
+      "categories": ["app"]
+    },
+    {
+      "name": "landing-app-03",
+      "type": "registry:page",
+      "description": "A mobile app landing page for a plant care app with bento hero and feature grid.",
+      "categories": ["app"]
+    },
+    {
+      "name": "landing-app-04",
+      "type": "registry:page",
+      "description": "A mobile app landing page for a running coach app with dark inverted hero and plans.",
+      "categories": ["app"]
+    },
+    {
+      "name": "landing-app-05",
+      "type": "registry:page",
+      "description": "A mobile app landing page for a language learning app with email capture and pricing.",
+      "categories": ["app"]
+    },
+    {
+      "name": "landing-app-06",
+      "type": "registry:page",
+      "description": "A mobile app landing page for a meal planning and grocery list app with framed hero and reviews.",
+      "categories": ["app"]
+    },
+    {
+      "name": "landing-app-07",
+      "type": "registry:page",
+      "description": "A mobile app landing page for a baby monitor app with spotlight hero and safety features.",
+      "categories": ["app"]
+    },
+    {
+      "name": "landing-app-08",
+      "type": "registry:page",
+      "description": "A mobile app landing page for a trail navigation app with split hero and email capture.",
+      "categories": ["app"]
+    },
+    {
+      "name": "landing-app-09",
+      "type": "registry:page",
+      "description": "A mobile app landing page for a focus timer and deep work app with bento hero.",
+      "categories": ["app"]
+    },
+    {
+      "name": "landing-app-10",
+      "type": "registry:page",
+      "description": "A mobile app landing page for a reading tracker and book club app with minimal editorial layout.",
+      "categories": ["app"]
+    },
+    {
+      "name": "landing-architecture-01",
+      "type": "registry:page",
+      "description": "An architecture studio landing page with editorial type, project index and process.",
+      "categories": ["architecture"]
+    },
+    {
+      "name": "landing-architecture-02",
+      "type": "registry:page",
+      "description": "An interior design studio landing page with warm visuals, services and fixed packages.",
+      "categories": ["architecture"]
+    },
+    {
+      "name": "landing-architecture-03",
+      "type": "registry:page",
+      "description": "A sustainable architecture practice landing page focused on low-carbon timber buildings.",
+      "categories": ["architecture"]
+    },
+    {
+      "name": "landing-architecture-04",
+      "type": "registry:page",
+      "description": "A workplace architecture firm landing page with bento hero, stats and client logos.",
+      "categories": ["architecture"]
+    },
+    {
+      "name": "landing-architecture-05",
+      "type": "registry:page",
+      "description": "A residential architect landing page for custom homes with a minimal inverted hero.",
+      "categories": ["architecture"]
+    },
+    {
+      "name": "landing-architecture-06",
+      "type": "registry:page",
+      "description": "A heritage restoration architecture practice landing page with framed hero and project index.",
+      "categories": ["architecture"]
+    },
+    {
+      "name": "landing-architecture-07",
+      "type": "registry:page",
+      "description": "A landscape architecture studio landing page with spotlight hero and public realm projects.",
+      "categories": ["architecture"]
+    },
+    {
+      "name": "landing-architecture-08",
+      "type": "registry:page",
+      "description": "A home extension architect landing page with split hero and email capture for planning guides.",
+      "categories": ["architecture"]
+    },
+    {
+      "name": "landing-architecture-09",
+      "type": "registry:page",
+      "description": "A civic and education architecture firm landing page with bento hero and project stats.",
+      "categories": ["architecture"]
+    },
+    {
+      "name": "landing-architecture-10",
+      "type": "registry:page",
+      "description": "A small residential architecture studio landing page with minimal editorial layout.",
+      "categories": ["architecture"]
+    },
+    {
+      "name": "landing-consulting-01",
+      "type": "registry:page",
+      "description": "A consulting landing page for a strategy consultancy with dashboard visual and case studies.",
+      "categories": ["consulting"]
+    },
+    {
+      "name": "landing-consulting-02",
+      "type": "registry:page",
+      "description": "A consulting landing page for an operations and lean manufacturing consultancy with editorial hero.",
+      "categories": ["consulting"]
+    },
+    {
+      "name": "landing-consulting-03",
+      "type": "registry:page",
+      "description": "A consulting landing page for a private equity value-creation advisory with stats and engagement tiers.",
+      "categories": ["consulting"]
+    },
+    {
+      "name": "landing-consulting-04",
+      "type": "registry:page",
+      "description": "A consulting landing page for an organisation design and HR consultancy with split hero.",
+      "categories": ["consulting"]
+    },
+    {
+      "name": "landing-consulting-05",
+      "type": "registry:page",
+      "description": "A consulting landing page for a data and digital transformation consultancy with dark inverted hero.",
+      "categories": ["consulting"]
+    },
+    {
+      "name": "landing-consulting-06",
+      "type": "registry:page",
+      "description": "A consulting landing page for a finance transformation and CFO advisory firm with framed hero and services.",
+      "categories": ["consulting"]
+    },
+    {
+      "name": "landing-consulting-07",
+      "type": "registry:page",
+      "description": "A consulting landing page for a sustainability and ESG consultancy with spotlight hero and stats.",
+      "categories": ["consulting"]
+    },
+    {
+      "name": "landing-consulting-08",
+      "type": "registry:page",
+      "description": "A consulting landing page for a go-to-market and sales strategy consultancy with split hero and email capture.",
+      "categories": ["consulting"]
+    },
+    {
+      "name": "landing-consulting-09",
+      "type": "registry:page",
+      "description": "A consulting landing page for a cybersecurity and risk advisory with bento hero and engagement tiers.",
+      "categories": ["consulting"]
+    },
+    {
+      "name": "landing-consulting-10",
+      "type": "registry:page",
+      "description": "A consulting landing page for a family business succession advisory with minimal editorial layout.",
+      "categories": ["consulting"]
+    },
+    {
+      "name": "landing-crypto-01",
+      "type": "registry:page",
+      "description": "A crypto exchange landing page with live market mockup and fee tiers.",
+      "categories": ["crypto"]
+    },
+    {
+      "name": "landing-crypto-02",
+      "type": "registry:page",
+      "description": "A self-custody wallet landing page with split hero and security features.",
+      "categories": ["crypto"]
+    },
+    {
+      "name": "landing-crypto-03",
+      "type": "registry:page",
+      "description": "A DeFi protocol landing page with editorial hero and staking stats.",
+      "categories": ["crypto"]
+    },
+    {
+      "name": "landing-crypto-04",
+      "type": "registry:page",
+      "description": "A crypto payments landing page for merchants with bento hero and pricing.",
+      "categories": ["crypto"]
+    },
+    {
+      "name": "landing-crypto-05",
+      "type": "registry:page",
+      "description": "A Web3 infrastructure landing page with dark inverted hero for RPC and node services.",
+      "categories": ["crypto"]
+    },
+    {
+      "name": "landing-crypto-06",
+      "type": "registry:page",
+      "description": "An NFT ticketing platform landing page with framed hero and event organiser pricing.",
+      "categories": ["crypto"]
+    },
+    {
+      "name": "landing-crypto-07",
+      "type": "registry:page",
+      "description": "A crypto tax reporting app landing page with spotlight hero and supported exchanges.",
+      "categories": ["crypto"]
+    },
+    {
+      "name": "landing-crypto-08",
+      "type": "registry:page",
+      "description": "A Bitcoin layer two developer platform landing page with split hero and email capture.",
+      "categories": ["crypto"]
+    },
+    {
+      "name": "landing-crypto-09",
+      "type": "registry:page",
+      "description": "A smart contract security audit firm landing page with bento hero and audit stats.",
+      "categories": ["crypto"]
+    },
+    {
+      "name": "landing-crypto-10",
+      "type": "registry:page",
+      "description": "A crypto research and market newsletter landing page with minimal editorial layout.",
+      "categories": ["crypto"]
+    },
+    {
+      "name": "landing-developer-tools-01",
+      "type": "registry:page",
+      "description": "A deployment platform landing page with terminal hero, preview environments and usage pricing.",
+      "categories": ["developer-tools"]
+    },
+    {
+      "name": "landing-developer-tools-02",
+      "type": "registry:page",
+      "description": "A serverless database landing page with code samples, SDK packages and pricing tiers.",
+      "categories": ["developer-tools"]
+    },
+    {
+      "name": "landing-developer-tools-03",
+      "type": "registry:page",
+      "description": "An observability tool landing page with editorial layout, feature list and testimonials.",
+      "categories": ["developer-tools"]
+    },
+    {
+      "name": "landing-developer-tools-04",
+      "type": "registry:page",
+      "description": "An authentication API landing page with bento hero, SDK showcase and developer FAQ.",
+      "categories": ["developer-tools"]
+    },
+    {
+      "name": "landing-developer-tools-05",
+      "type": "registry:page",
+      "description": "An open source developer tooling landing page with dark inverted hero and sponsor tiers.",
+      "categories": ["developer-tools"]
+    },
+    {
+      "name": "landing-developer-tools-06",
+      "type": "registry:page",
+      "description": "A feature flag platform landing page with framed hero, rollout controls and usage pricing.",
+      "categories": ["developer-tools"]
+    },
+    {
+      "name": "landing-developer-tools-07",
+      "type": "registry:page",
+      "description": "A background jobs platform landing page with spotlight hero, code samples and pricing tiers.",
+      "categories": ["developer-tools"]
+    },
+    {
+      "name": "landing-developer-tools-08",
+      "type": "registry:page",
+      "description": "An API documentation tool landing page with split hero, email capture and SDK generation.",
+      "categories": ["developer-tools"]
+    },
+    {
+      "name": "landing-developer-tools-09",
+      "type": "registry:page",
+      "description": "An end-to-end testing platform landing page with bento hero, browser grid and team pricing.",
+      "categories": ["developer-tools"]
+    },
+    {
+      "name": "landing-developer-tools-10",
+      "type": "registry:page",
+      "description": "A secrets management tool landing page with minimal editorial layout and security FAQ.",
+      "categories": ["developer-tools"]
+    },
+    {
+      "name": "landing-ecommerce-01",
+      "type": "registry:page",
+      "description": "An e-commerce landing page for a home textiles brand with product grid and reviews.",
+      "categories": ["ecommerce"]
+    },
+    {
+      "name": "landing-ecommerce-02",
+      "type": "registry:page",
+      "description": "An e-commerce landing page for a sustainable sneaker brand with bold gradient hero.",
+      "categories": ["ecommerce"]
+    },
+    {
+      "name": "landing-ecommerce-03",
+      "type": "registry:page",
+      "description": "An e-commerce landing page for a specialty coffee subscription with split hero.",
+      "categories": ["ecommerce"]
+    },
+    {
+      "name": "landing-ecommerce-04",
+      "type": "registry:page",
+      "description": "An e-commerce landing page for a clean skincare brand with bento hero and memberships.",
+      "categories": ["ecommerce"]
+    },
+    {
+      "name": "landing-ecommerce-05",
+      "type": "registry:page",
+      "description": "An e-commerce landing page for an outdoor gear brand with dark inverted hero.",
+      "categories": ["ecommerce"]
+    },
+    {
+      "name": "landing-ecommerce-06",
+      "type": "registry:page",
+      "description": "An e-commerce landing page for a seasonal flower delivery service with framed hero and bouquet subscriptions.",
+      "categories": ["ecommerce"]
+    },
+    {
+      "name": "landing-ecommerce-07",
+      "type": "registry:page",
+      "description": "An e-commerce landing page for an independent watch brand with spotlight hero and limited editions.",
+      "categories": ["ecommerce"]
+    },
+    {
+      "name": "landing-ecommerce-08",
+      "type": "registry:page",
+      "description": "An e-commerce landing page for a small-batch olive oil and pantry goods brand with split hero and email capture.",
+      "categories": ["ecommerce"]
+    },
+    {
+      "name": "landing-ecommerce-09",
+      "type": "registry:page",
+      "description": "An e-commerce landing page for a wooden toy brand with bento hero and age-based collections.",
+      "categories": ["ecommerce"]
+    },
+    {
+      "name": "landing-ecommerce-10",
+      "type": "registry:page",
+      "description": "An e-commerce landing page for a stationery brand with minimal editorial layout and product grid.",
+      "categories": ["ecommerce"]
+    },
+    {
+      "name": "landing-education-01",
+      "type": "registry:page",
+      "description": "An online course platform landing page with course catalog and subscription pricing.",
+      "categories": ["education"]
+    },
+    {
+      "name": "landing-education-02",
+      "type": "registry:page",
+      "description": "A K-12 tutoring service landing page with split hero and tutor matching.",
+      "categories": ["education"]
+    },
+    {
+      "name": "landing-education-03",
+      "type": "registry:page",
+      "description": "A coding bootcamp landing page with dark hero, curriculum steps and outcomes.",
+      "categories": ["education"]
+    },
+    {
+      "name": "landing-education-04",
+      "type": "registry:page",
+      "description": "A language learning app landing page with bento hero and plans.",
+      "categories": ["education"]
+    },
+    {
+      "name": "landing-education-05",
+      "type": "registry:page",
+      "description": "An independent school admissions landing page with editorial serif hero.",
+      "categories": ["education"]
+    },
+    {
+      "name": "landing-education-06",
+      "type": "registry:page",
+      "description": "A maths practice app for primary students landing page with framed hero and family plans.",
+      "categories": ["education"]
+    },
+    {
+      "name": "landing-education-07",
+      "type": "registry:page",
+      "description": "A university entrance test prep landing page with spotlight hero and score guarantee.",
+      "categories": ["education"]
+    },
+    {
+      "name": "landing-education-08",
+      "type": "registry:page",
+      "description": "A college admissions counselling landing page with split hero and email capture for guides.",
+      "categories": ["education"]
+    },
+    {
+      "name": "landing-education-09",
+      "type": "registry:page",
+      "description": "A STEM after-school program landing page with bento hero and term enrolment.",
+      "categories": ["education"]
+    },
+    {
+      "name": "landing-education-10",
+      "type": "registry:page",
+      "description": "An online lecture series for adult learners landing page with minimal editorial layout and membership.",
+      "categories": ["education"]
+    },
+    {
+      "name": "landing-event-01",
+      "type": "registry:page",
+      "description": "An event landing page for a product and engineering conference with speakers and ticket tiers.",
+      "categories": ["event"]
+    },
+    {
+      "name": "landing-event-02",
+      "type": "registry:page",
+      "description": "An event landing page for a summer music and arts festival with bold editorial typography.",
+      "categories": ["event"]
+    },
+    {
+      "name": "landing-event-03",
+      "type": "registry:page",
+      "description": "An event landing page for an intimate founder meetup series with email capture hero.",
+      "categories": ["event"]
+    },
+    {
+      "name": "landing-event-04",
+      "type": "registry:page",
+      "description": "An event landing page for a data and AI summit with bento hero and session listings.",
+      "categories": ["event"]
+    },
+    {
+      "name": "landing-event-05",
+      "type": "registry:page",
+      "description": "An event landing page for a sustainability trade expo with exhibitors and pass pricing.",
+      "categories": ["event"]
+    },
+    {
+      "name": "landing-event-06",
+      "type": "registry:page",
+      "description": "An event landing page for a city marathon and half marathon with framed hero and race registration.",
+      "categories": ["event"]
+    },
+    {
+      "name": "landing-event-07",
+      "type": "registry:page",
+      "description": "An event landing page for a charity gala dinner with spotlight hero and table packages.",
+      "categories": ["event"]
+    },
+    {
+      "name": "landing-event-08",
+      "type": "registry:page",
+      "description": "An event landing page for a weekend hackathon with split hero and email capture for updates.",
+      "categories": ["event"]
+    },
+    {
+      "name": "landing-event-09",
+      "type": "registry:page",
+      "description": "An event landing page for an independent design and craft market with bento hero and vendor listings.",
+      "categories": ["event"]
+    },
+    {
+      "name": "landing-event-10",
+      "type": "registry:page",
+      "description": "An event landing page for a literary festival with minimal editorial layout and author programme.",
+      "categories": ["event"]
+    },
+    {
+      "name": "landing-fintech-01",
+      "type": "registry:page",
+      "description": "A fintech landing page for a mobile-first bank with account dashboard mockup.",
+      "categories": ["fintech"]
+    },
+    {
+      "name": "landing-fintech-02",
+      "type": "registry:page",
+      "description": "A fintech landing page for a payments API for online businesses with editorial hero.",
+      "categories": ["fintech"]
+    },
+    {
+      "name": "landing-fintech-03",
+      "type": "registry:page",
+      "description": "A fintech landing page for a business spend management platform with split hero.",
+      "categories": ["fintech"]
+    },
+    {
+      "name": "landing-fintech-04",
+      "type": "registry:page",
+      "description": "A fintech landing page for an automated investing and retirement app with bento hero.",
+      "categories": ["fintech"]
+    },
+    {
+      "name": "landing-fintech-05",
+      "type": "registry:page",
+      "description": "A fintech landing page for an international money transfer app with dark inverted hero.",
+      "categories": ["fintech"]
+    },
+    {
+      "name": "landing-fintech-06",
+      "type": "registry:page",
+      "description": "A fintech landing page for a freelancer tax filing app with framed hero and pricing tiers.",
+      "categories": ["fintech"]
+    },
+    {
+      "name": "landing-fintech-07",
+      "type": "registry:page",
+      "description": "A fintech landing page for a credit builder card with spotlight hero and score tracking.",
+      "categories": ["fintech"]
+    },
+    {
+      "name": "landing-fintech-08",
+      "type": "registry:page",
+      "description": "A fintech landing page for a small business invoicing tool with split hero and email capture.",
+      "categories": ["fintech"]
+    },
+    {
+      "name": "landing-fintech-09",
+      "type": "registry:page",
+      "description": "A fintech landing page for a global payroll platform with bento hero and compliance features.",
+      "categories": ["fintech"]
+    },
+    {
+      "name": "landing-fintech-10",
+      "type": "registry:page",
+      "description": "A fintech landing page for an online mortgage platform with minimal editorial layout and rate calculator.",
+      "categories": ["fintech"]
+    },
+    {
+      "name": "landing-fitness-01",
+      "type": "registry:page",
+      "description": "A strength gym landing page with full-bleed hero, class schedule and memberships.",
+      "categories": ["fitness"]
+    },
+    {
+      "name": "landing-fitness-02",
+      "type": "registry:page",
+      "description": "A boutique yoga and pilates studio landing page with editorial serif typography.",
+      "categories": ["fitness"]
+    },
+    {
+      "name": "landing-fitness-03",
+      "type": "registry:page",
+      "description": "A fitness coaching app landing page with split hero and app features.",
+      "categories": ["fitness"]
+    },
+    {
+      "name": "landing-fitness-04",
+      "type": "registry:page",
+      "description": "An indoor cycling studio landing page with bento hero and class listings.",
+      "categories": ["fitness"]
+    },
+    {
+      "name": "landing-fitness-05",
+      "type": "registry:page",
+      "description": "A hybrid performance gym landing page with dark inverted hero and programs.",
+      "categories": ["fitness"]
+    },
+    {
+      "name": "landing-fitness-06",
+      "type": "registry:page",
+      "description": "A swim school landing page with framed hero, lesson levels and term pricing.",
+      "categories": ["fitness"]
+    },
+    {
+      "name": "landing-fitness-07",
+      "type": "registry:page",
+      "description": "A bouldering gym landing page with spotlight hero, route setting and memberships.",
+      "categories": ["fitness"]
+    },
+    {
+      "name": "landing-fitness-08",
+      "type": "registry:page",
+      "description": "A nutrition coaching service landing page with split hero, meal plans and email capture.",
+      "categories": ["fitness"]
+    },
+    {
+      "name": "landing-fitness-09",
+      "type": "registry:page",
+      "description": "A boxing gym landing page with bento hero, class types and memberships.",
+      "categories": ["fitness"]
+    },
+    {
+      "name": "landing-fitness-10",
+      "type": "registry:page",
+      "description": "A sauna and cold plunge recovery studio landing page with minimal editorial layout and passes.",
+      "categories": ["fitness"]
+    },
+    {
+      "name": "landing-gaming-01",
+      "type": "registry:page",
+      "description": "A game launch landing page for an action RPG with editions, regions and critic quotes.",
+      "categories": ["gaming"]
+    },
+    {
+      "name": "landing-gaming-02",
+      "type": "registry:page",
+      "description": "An indie studio landing page with a cosy, editorial feel and a wishlist call to action.",
+      "categories": ["gaming"]
+    },
+    {
+      "name": "landing-gaming-03",
+      "type": "registry:page",
+      "description": "An esports organisation landing page with rosters, results and membership tiers.",
+      "categories": ["gaming"]
+    },
+    {
+      "name": "landing-gaming-04",
+      "type": "registry:page",
+      "description": "A sci-fi strategy game landing page with a bold bento hero and season roadmap.",
+      "categories": ["gaming"]
+    },
+    {
+      "name": "landing-gaming-05",
+      "type": "registry:page",
+      "description": "A cloud gaming platform landing page with a library showcase and subscription plans.",
+      "categories": ["gaming"]
+    },
+    {
+      "name": "landing-gaming-06",
+      "type": "registry:page",
+      "description": "A game launch landing page for a co-op survival horror title with framed hero and edition tiers.",
+      "categories": ["gaming"]
+    },
+    {
+      "name": "landing-gaming-07",
+      "type": "registry:page",
+      "description": "A racing game landing page for an open-world sailing sim with spotlight hero and season pass.",
+      "categories": ["gaming"]
+    },
+    {
+      "name": "landing-gaming-08",
+      "type": "registry:page",
+      "description": "A tabletop gaming companion app landing page with split hero and email capture for beta access.",
+      "categories": ["gaming"]
+    },
+    {
+      "name": "landing-gaming-09",
+      "type": "registry:page",
+      "description": "A turn-based tactics game landing page for a mech squad title with bento hero and DLC roadmap.",
+      "categories": ["gaming"]
+    },
+    {
+      "name": "landing-gaming-10",
+      "type": "registry:page",
+      "description": "A narrative puzzle game landing page with minimal editorial layout and critic quotes.",
+      "categories": ["gaming"]
+    },
+    {
+      "name": "landing-health-01",
+      "type": "registry:page",
+      "description": "A telehealth landing page with app mockup, services and membership pricing.",
+      "categories": ["health"]
+    },
+    {
+      "name": "landing-health-02",
+      "type": "registry:page",
+      "description": "A mental health therapy landing page with editorial hero and therapist matching.",
+      "categories": ["health"]
+    },
+    {
+      "name": "landing-health-03",
+      "type": "registry:page",
+      "description": "A family medical clinic landing page with split hero and same-day booking.",
+      "categories": ["health"]
+    },
+    {
+      "name": "landing-health-04",
+      "type": "registry:page",
+      "description": "A remote patient monitoring landing page for chronic care with bento hero.",
+      "categories": ["health"]
+    },
+    {
+      "name": "landing-health-05",
+      "type": "registry:page",
+      "description": "An at-home lab testing landing page with dark inverted hero and test catalog.",
+      "categories": ["health"]
+    },
+    {
+      "name": "landing-health-06",
+      "type": "registry:page",
+      "description": "A dental clinic landing page for family and cosmetic dentistry with framed hero and treatment plans.",
+      "categories": ["health"]
+    },
+    {
+      "name": "landing-health-07",
+      "type": "registry:page",
+      "description": "A physical therapy landing page for sports injury rehab with spotlight hero and session packages.",
+      "categories": ["health"]
+    },
+    {
+      "name": "landing-health-08",
+      "type": "registry:page",
+      "description": "A virtual nutrition coaching landing page with split hero and email capture for a free meal plan.",
+      "categories": ["health"]
+    },
+    {
+      "name": "landing-health-09",
+      "type": "registry:page",
+      "description": "A sleep health clinic landing page for insomnia and sleep apnea care with bento hero and at-home testing.",
+      "categories": ["health"]
+    },
+    {
+      "name": "landing-health-10",
+      "type": "registry:page",
+      "description": "An optometry practice landing page with minimal editorial layout and eye exam booking.",
+      "categories": ["health"]
+    },
+    {
+      "name": "landing-legal-01",
+      "type": "registry:page",
+      "description": "A legal landing page for a full-service law firm with serif editorial typography and practice areas.",
+      "categories": ["legal"]
+    },
+    {
+      "name": "landing-legal-02",
+      "type": "registry:page",
+      "description": "A legal landing page for a personal injury firm with stats band and no-win-no-fee pricing.",
+      "categories": ["legal"]
+    },
+    {
+      "name": "landing-legal-03",
+      "type": "registry:page",
+      "description": "A legal landing page for a startup and venture law boutique with bento hero and fixed fees.",
+      "categories": ["legal"]
+    },
+    {
+      "name": "landing-legal-04",
+      "type": "registry:page",
+      "description": "A legal landing page for a family law practice with gentle split hero and FAQ.",
+      "categories": ["legal"]
+    },
+    {
+      "name": "landing-legal-05",
+      "type": "registry:page",
+      "description": "A legal landing page for an immigration law service with timeline steps and fixed-fee plans.",
+      "categories": ["legal"]
+    },
+    {
+      "name": "landing-legal-06",
+      "type": "registry:page",
+      "description": "A legal landing page for an estate planning practice with framed hero and flat-fee wills.",
+      "categories": ["legal"]
+    },
+    {
+      "name": "landing-legal-07",
+      "type": "registry:page",
+      "description": "A legal landing page for a trademark and patent firm with spotlight hero and filing packages.",
+      "categories": ["legal"]
+    },
+    {
+      "name": "landing-legal-08",
+      "type": "registry:page",
+      "description": "A legal landing page for an employment law firm with split hero and email capture for a rights guide.",
+      "categories": ["legal"]
+    },
+    {
+      "name": "landing-legal-09",
+      "type": "registry:page",
+      "description": "A legal landing page for a tax dispute and IRS resolution firm with bento hero and case outcomes.",
+      "categories": ["legal"]
+    },
+    {
+      "name": "landing-legal-10",
+      "type": "registry:page",
+      "description": "A legal landing page for a real estate conveyancing practice with minimal editorial layout and fixed quotes.",
+      "categories": ["legal"]
+    },
+    {
+      "name": "landing-music-01",
+      "type": "registry:page",
+      "description": "An indie band landing page with new album release, tour tickets and press quotes.",
+      "categories": ["music"]
+    },
+    {
+      "name": "landing-music-02",
+      "type": "registry:page",
+      "description": "An independent record label landing page with roster, releases and a demo submission call.",
+      "categories": ["music"]
+    },
+    {
+      "name": "landing-music-03",
+      "type": "registry:page",
+      "description": "A music practice app landing page with features, testimonials and subscription pricing.",
+      "categories": ["music"]
+    },
+    {
+      "name": "landing-music-04",
+      "type": "registry:page",
+      "description": "A music festival landing page with line-up, ticket tiers and practical FAQs.",
+      "categories": ["music"]
+    },
+    {
+      "name": "landing-music-05",
+      "type": "registry:page",
+      "description": "A solo artist landing page with dark editorial styling, singles and fan club membership.",
+      "categories": ["music"]
+    },
+    {
+      "name": "landing-music-06",
+      "type": "registry:page",
+      "description": "A synthwave duo landing page with framed hero, new single and tour dates.",
+      "categories": ["music"]
+    },
+    {
+      "name": "landing-music-07",
+      "type": "registry:page",
+      "description": "A vocal training app landing page with spotlight hero and subscription pricing.",
+      "categories": ["music"]
+    },
+    {
+      "name": "landing-music-08",
+      "type": "registry:page",
+      "description": "A music production sample marketplace landing page with split hero and email capture for free packs.",
+      "categories": ["music"]
+    },
+    {
+      "name": "landing-music-09",
+      "type": "registry:page",
+      "description": "A live music venue landing page with bento hero, gig listings and memberships.",
+      "categories": ["music"]
+    },
+    {
+      "name": "landing-music-10",
+      "type": "registry:page",
+      "description": "A classical string quartet landing page with minimal editorial layout and concert season.",
+      "categories": ["music"]
+    },
+    {
+      "name": "landing-nonprofit-01",
+      "type": "registry:page",
+      "description": "A nonprofit landing page for a clean water charity with impact stats and donation tiers.",
+      "categories": ["nonprofit"]
+    },
+    {
+      "name": "landing-nonprofit-02",
+      "type": "registry:page",
+      "description": "A nonprofit landing page for an education charity with editorial hero and programme list.",
+      "categories": ["nonprofit"]
+    },
+    {
+      "name": "landing-nonprofit-03",
+      "type": "registry:page",
+      "description": "A nonprofit landing page for a local food bank with volunteer call to action.",
+      "categories": ["nonprofit"]
+    },
+    {
+      "name": "landing-nonprofit-04",
+      "type": "registry:page",
+      "description": "A nonprofit landing page for a wildlife conservation trust with bento hero and stories.",
+      "categories": ["nonprofit"]
+    },
+    {
+      "name": "landing-nonprofit-05",
+      "type": "registry:page",
+      "description": "A nonprofit landing page for a homelessness and housing charity with timeline steps.",
+      "categories": ["nonprofit"]
+    },
+    {
+      "name": "landing-nonprofit-06",
+      "type": "registry:page",
+      "description": "A nonprofit landing page for a children's literacy charity with framed hero and monthly giving.",
+      "categories": ["nonprofit"]
+    },
+    {
+      "name": "landing-nonprofit-07",
+      "type": "registry:page",
+      "description": "A nonprofit landing page for a respite and caregiver support charity with spotlight hero and volunteer roles.",
+      "categories": ["nonprofit"]
+    },
+    {
+      "name": "landing-nonprofit-08",
+      "type": "registry:page",
+      "description": "A nonprofit landing page for a river restoration charity with split hero and email capture for updates.",
+      "categories": ["nonprofit"]
+    },
+    {
+      "name": "landing-nonprofit-09",
+      "type": "registry:page",
+      "description": "A nonprofit landing page for an animal rescue and adoption shelter with bento hero and sponsor tiers.",
+      "categories": ["nonprofit"]
+    },
+    {
+      "name": "landing-nonprofit-10",
+      "type": "registry:page",
+      "description": "A nonprofit landing page for a community arts grant foundation with minimal editorial layout and grant rounds.",
+      "categories": ["nonprofit"]
+    },
+    {
+      "name": "landing-photography-01",
+      "type": "registry:page",
+      "description": "A wedding photographer landing page with editorial galleries, packages and client stories.",
+      "categories": ["photography"]
+    },
+    {
+      "name": "landing-photography-02",
+      "type": "registry:page",
+      "description": "A family and newborn photographer landing page with warm tones and session packages.",
+      "categories": ["photography"]
+    },
+    {
+      "name": "landing-photography-03",
+      "type": "registry:page",
+      "description": "A commercial photography studio landing page for product, brand and e-commerce shoots.",
+      "categories": ["photography"]
+    },
+    {
+      "name": "landing-photography-04",
+      "type": "registry:page",
+      "description": "A fine art portrait photographer landing page with large serif type and a minimal layout.",
+      "categories": ["photography"]
+    },
+    {
+      "name": "landing-photography-05",
+      "type": "registry:page",
+      "description": "A corporate headshot studio landing page with team packages and fast turnaround.",
+      "categories": ["photography"]
+    },
+    {
+      "name": "landing-photography-06",
+      "type": "registry:page",
+      "description": "An elopement photographer landing page with framed hero, adventure locations and packages.",
+      "categories": ["photography"]
+    },
+    {
+      "name": "landing-photography-07",
+      "type": "registry:page",
+      "description": "A pet photographer landing page with spotlight hero, session packages and printed albums.",
+      "categories": ["photography"]
+    },
+    {
+      "name": "landing-photography-08",
+      "type": "registry:page",
+      "description": "A photography workshop landing page with split hero and email capture for a free lesson series.",
+      "categories": ["photography"]
+    },
+    {
+      "name": "landing-photography-09",
+      "type": "registry:page",
+      "description": "A drone and aerial photography studio landing page with bento hero and project rates.",
+      "categories": ["photography"]
+    },
+    {
+      "name": "landing-photography-10",
+      "type": "registry:page",
+      "description": "A food photographer landing page with minimal editorial layout and restaurant menu packages.",
+      "categories": ["photography"]
+    },
+    {
+      "name": "landing-portfolio-01",
+      "type": "registry:page",
+      "description": "A portfolio page for a product designer with editorial typography and selected projects.",
+      "categories": ["portfolio"]
+    },
+    {
+      "name": "landing-portfolio-02",
+      "type": "registry:page",
+      "description": "A portfolio page for a creative front-end developer with code-forward split hero.",
+      "categories": ["portfolio"]
+    },
+    {
+      "name": "landing-portfolio-03",
+      "type": "registry:page",
+      "description": "A portfolio page for a freelance brand and packaging designer with gradient hero.",
+      "categories": ["portfolio"]
+    },
+    {
+      "name": "landing-portfolio-04",
+      "type": "registry:page",
+      "description": "A portfolio page for a UX researcher and strategist with bento hero and services.",
+      "categories": ["portfolio"]
+    },
+    {
+      "name": "landing-portfolio-05",
+      "type": "registry:page",
+      "description": "A portfolio page for a 3D artist and motion designer with dark inverted hero.",
+      "categories": ["portfolio"]
+    },
+    {
+      "name": "landing-portfolio-06",
+      "type": "registry:page",
+      "description": "A portfolio page for a documentary and editorial photographer with framed hero and selected stories.",
+      "categories": ["portfolio"]
+    },
+    {
+      "name": "landing-portfolio-07",
+      "type": "registry:page",
+      "description": "A portfolio page for a children's book illustrator with spotlight hero and picture book highlights.",
+      "categories": ["portfolio"]
+    },
+    {
+      "name": "landing-portfolio-08",
+      "type": "registry:page",
+      "description": "A portfolio page for a freelance conversion copywriter with split hero and email capture newsletter.",
+      "categories": ["portfolio"]
+    },
+    {
+      "name": "landing-portfolio-09",
+      "type": "registry:page",
+      "description": "A portfolio page for an interior architect with bento hero and residential projects.",
+      "categories": ["portfolio"]
+    },
+    {
+      "name": "landing-portfolio-10",
+      "type": "registry:page",
+      "description": "A portfolio page for an independent type designer with minimal editorial layout and font releases.",
+      "categories": ["portfolio"]
+    },
+    {
+      "name": "landing-real-estate-01",
+      "type": "registry:page",
+      "description": "A real estate agency landing page with listings grid and fee tiers.",
+      "categories": ["real-estate"]
+    },
+    {
+      "name": "landing-real-estate-02",
+      "type": "registry:page",
+      "description": "A luxury property landing page with editorial serif typography and exclusive listings.",
+      "categories": ["real-estate"]
+    },
+    {
+      "name": "landing-real-estate-03",
+      "type": "registry:page",
+      "description": "A rental marketplace landing page with search hero and verified apartments.",
+      "categories": ["real-estate"]
+    },
+    {
+      "name": "landing-real-estate-04",
+      "type": "registry:page",
+      "description": "A new-build development landing page with bento hero and floor plan availability.",
+      "categories": ["real-estate"]
+    },
+    {
+      "name": "landing-real-estate-05",
+      "type": "registry:page",
+      "description": "A proptech investment platform landing page with dark inverted hero and returns stats.",
+      "categories": ["real-estate"]
+    },
+    {
+      "name": "landing-real-estate-06",
+      "type": "registry:page",
+      "description": "A commercial office leasing landing page with framed hero and available floor space.",
+      "categories": ["real-estate"]
+    },
+    {
+      "name": "landing-real-estate-07",
+      "type": "registry:page",
+      "description": "A rural land and farm property landing page with spotlight hero and acreage listings.",
+      "categories": ["real-estate"]
+    },
+    {
+      "name": "landing-real-estate-08",
+      "type": "registry:page",
+      "description": "A mortgage pre-approval landing page with split hero and email capture for rate alerts.",
+      "categories": ["real-estate"]
+    },
+    {
+      "name": "landing-real-estate-09",
+      "type": "registry:page",
+      "description": "A property management landing page for landlords with bento hero and service tiers.",
+      "categories": ["real-estate"]
+    },
+    {
+      "name": "landing-real-estate-10",
+      "type": "registry:page",
+      "description": "A holiday home and vacation property sales landing page with minimal editorial layout.",
+      "categories": ["real-estate"]
+    },
+    {
+      "name": "landing-restaurant-01",
+      "type": "registry:page",
+      "description": "A wood-fired restaurant landing page with full-bleed hero, menu highlights and reservations.",
+      "categories": ["restaurant"]
+    },
+    {
+      "name": "landing-restaurant-02",
+      "type": "registry:page",
+      "description": "A fine dining tasting-menu landing page with editorial serif typography.",
+      "categories": ["restaurant"]
+    },
+    {
+      "name": "landing-restaurant-03",
+      "type": "registry:page",
+      "description": "A bakery and cafe landing page with split hero, daily bakes and pre-orders.",
+      "categories": ["restaurant"]
+    },
+    {
+      "name": "landing-restaurant-04",
+      "type": "registry:page",
+      "description": "A food delivery and takeaway landing page with bento hero and popular dishes.",
+      "categories": ["restaurant"]
+    },
+    {
+      "name": "landing-restaurant-05",
+      "type": "registry:page",
+      "description": "A seafood restaurant and catering landing page with dark inverted hero and event packages.",
+      "categories": ["restaurant"]
+    },
+    {
+      "name": "landing-restaurant-06",
+      "type": "registry:page",
+      "description": "A ramen bar landing page with framed hero, signature bowls and walk-in times.",
+      "categories": ["restaurant"]
+    },
+    {
+      "name": "landing-restaurant-07",
+      "type": "registry:page",
+      "description": "A wine bar and small plates landing page with spotlight hero and tasting flights.",
+      "categories": ["restaurant"]
+    },
+    {
+      "name": "landing-restaurant-08",
+      "type": "registry:page",
+      "description": "A plant-based meal prep landing page with split hero and email capture for weekly menus.",
+      "categories": ["restaurant"]
+    },
+    {
+      "name": "landing-restaurant-09",
+      "type": "registry:page",
+      "description": "A barbecue smokehouse landing page with bento hero and catering trays.",
+      "categories": ["restaurant"]
+    },
+    {
+      "name": "landing-restaurant-10",
+      "type": "registry:page",
+      "description": "A neighbourhood coffee shop landing page with minimal editorial layout and brunch menu.",
+      "categories": ["restaurant"]
+    },
+    {
+      "name": "landing-saas-01",
+      "type": "registry:page",
+      "description": "A SaaS landing page for a project management platform with dashboard mockup and pricing.",
+      "categories": ["saas"]
+    },
+    {
+      "name": "landing-saas-02",
+      "type": "registry:page",
+      "description": "A SaaS landing page for an accounting automation tool with editorial typography.",
+      "categories": ["saas"]
+    },
+    {
+      "name": "landing-saas-03",
+      "type": "registry:page",
+      "description": "A SaaS landing page for a customer support platform with split hero and testimonials.",
+      "categories": ["saas"]
+    },
+    {
+      "name": "landing-saas-04",
+      "type": "registry:page",
+      "description": "A SaaS landing page for a workforce scheduling app with bento hero and comparison pricing.",
+      "categories": ["saas"]
+    },
+    {
+      "name": "landing-saas-05",
+      "type": "registry:page",
+      "description": "A SaaS landing page for a product analytics platform with dark inverted hero.",
+      "categories": ["saas"]
+    },
+    {
+      "name": "landing-saas-06",
+      "type": "registry:page",
+      "description": "A SaaS landing page for a contract lifecycle management tool with framed hero and pricing tiers.",
+      "categories": ["saas"]
+    },
+    {
+      "name": "landing-saas-07",
+      "type": "registry:page",
+      "description": "A SaaS landing page for a sales pipeline CRM with spotlight hero and team dashboards.",
+      "categories": ["saas"]
+    },
+    {
+      "name": "landing-saas-08",
+      "type": "registry:page",
+      "description": "A SaaS landing page for an online form and survey builder with split hero and email capture signup.",
+      "categories": ["saas"]
+    },
+    {
+      "name": "landing-saas-09",
+      "type": "registry:page",
+      "description": "A SaaS landing page for a password and access management platform with bento hero and security features.",
+      "categories": ["saas"]
+    },
+    {
+      "name": "landing-saas-10",
+      "type": "registry:page",
+      "description": "A SaaS landing page for a product changelog and release notes tool with minimal editorial layout.",
+      "categories": ["saas"]
+    },
+    {
+      "name": "landing-startup-01",
+      "type": "registry:page",
+      "description": "A startup launch page for a no-code app builder with product mockup and waitlist.",
+      "categories": ["startup"]
+    },
+    {
+      "name": "landing-startup-02",
+      "type": "registry:page",
+      "description": "A startup landing page for a founder banking and equity tool with editorial hero.",
+      "categories": ["startup"]
+    },
+    {
+      "name": "landing-startup-03",
+      "type": "registry:page",
+      "description": "A startup landing page for an async video messaging tool with email capture hero.",
+      "categories": ["startup"]
+    },
+    {
+      "name": "landing-startup-04",
+      "type": "registry:page",
+      "description": "A startup landing page for a climate tech carbon tracking tool with bento hero.",
+      "categories": ["startup"]
+    },
+    {
+      "name": "landing-startup-05",
+      "type": "registry:page",
+      "description": "A startup landing page for a co-founder matching platform with inverted hero.",
+      "categories": ["startup"]
+    },
+    {
+      "name": "landing-startup-06",
+      "type": "registry:page",
+      "description": "A startup landing page for an on-demand dog walking app with framed hero and city launch details.",
+      "categories": ["startup"]
+    },
+    {
+      "name": "landing-startup-07",
+      "type": "registry:page",
+      "description": "A startup landing page for an AI coding interview platform with spotlight hero and early customers.",
+      "categories": ["startup"]
+    },
+    {
+      "name": "landing-startup-08",
+      "type": "registry:page",
+      "description": "A startup landing page for a kids financial literacy app with split hero and email capture waitlist.",
+      "categories": ["startup"]
+    },
+    {
+      "name": "landing-startup-09",
+      "type": "registry:page",
+      "description": "A startup landing page for a community governance and voting tool with bento hero and feature highlights.",
+      "categories": ["startup"]
+    },
+    {
+      "name": "landing-startup-10",
+      "type": "registry:page",
+      "description": "A startup landing page for an AI meeting notes tool for doctors with minimal editorial layout.",
+      "categories": ["startup"]
+    },
+    {
+      "name": "landing-travel-01",
+      "type": "registry:page",
+      "description": "A travel landing page for a small-group tour operator with destination cards and trip packages.",
+      "categories": ["travel"]
+    },
+    {
+      "name": "landing-travel-02",
+      "type": "registry:page",
+      "description": "A travel landing page for a luxury sailing and island-hopping company with editorial layout.",
+      "categories": ["travel"]
+    },
+    {
+      "name": "landing-travel-03",
+      "type": "registry:page",
+      "description": "A travel landing page for an adventure trekking company with bento hero and trip ratings.",
+      "categories": ["travel"]
+    },
+    {
+      "name": "landing-travel-04",
+      "type": "registry:page",
+      "description": "A travel landing page for a scenic rail journey operator with timeline steps and pricing.",
+      "categories": ["travel"]
+    },
+    {
+      "name": "landing-travel-05",
+      "type": "registry:page",
+      "description": "A travel landing page for a remote-work retreat and coliving platform with email capture hero.",
+      "categories": ["travel"]
+    },
+    {
+      "name": "landing-travel-06",
+      "type": "registry:page",
+      "description": "A travel landing page for an arctic expedition cruise company with framed hero and voyage packages.",
+      "categories": ["travel"]
+    },
+    {
+      "name": "landing-travel-07",
+      "type": "registry:page",
+      "description": "A travel landing page for a wine country cycling tour company with spotlight hero and tour dates.",
+      "categories": ["travel"]
+    },
+    {
+      "name": "landing-travel-08",
+      "type": "registry:page",
+      "description": "A travel landing page for a flight deal alert service with split hero and email capture signup.",
+      "categories": ["travel"]
+    },
+    {
+      "name": "landing-travel-09",
+      "type": "registry:page",
+      "description": "A travel landing page for an East African safari lodge operator with bento hero and lodge highlights.",
+      "categories": ["travel"]
+    },
+    {
+      "name": "landing-travel-10",
+      "type": "registry:page",
+      "description": "A travel landing page for a boutique countryside hotel collection with minimal editorial layout.",
+      "categories": ["travel"]
     },
     {
       "name": "accordion-01",

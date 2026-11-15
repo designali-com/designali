@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "testimonials-03",
+  "type": "registry:block",
+  "description": "A masonry-style grid of customer testimonials.",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/designali/blocks/testimonials/testimonials-03.tsx",
+      "content": "import { Star } from \"lucide-react\"\n\nconst reviews = [\n  {\n    name: \"Daniel Okafor\",\n    role: \"Founder, Driftwave\",\n    initials: \"DO\",\n    text: \"The blocks are thoughtfully built. We launched our marketing site in four days instead of four weeks.\",\n  },\n  {\n    name: \"Lena Fischer\",\n    role: \"Product Designer, Tessel\",\n    initials: \"LF\",\n    text: \"Dark mode just works. Every token maps cleanly, which is rare in component libraries.\",\n  },\n  {\n    name: \"Arjun Mehta\",\n    role: \"CTO, Quanta AI\",\n    initials: \"AM\",\n    text: \"Clean TSX, no magic. My engineers can read and extend everything without a learning curve.\",\n  },\n  {\n    name: \"Sofia Alvarez\",\n    role: \"Creative Director, Corvid\",\n    initials: \"SA\",\n    text: \"Finally a library with editorial taste. It feels designed, not assembled.\",\n  },\n  {\n    name: \"Tom Becker\",\n    role: \"Freelance Developer\",\n    initials: \"TB\",\n    text: \"I reuse the pricing and FAQ sections on nearly every client project. Huge time saver.\",\n  },\n  {\n    name: \"Priya Nair\",\n    role: \"Design Lead, Orbital Health\",\n    initials: \"PN\",\n    text: \"Accessible defaults out of the box meant our audit came back with almost nothing to fix.\",\n  },\n]\n\nexport default function Testimonials03() {\n  return (\n    <section className=\"w-full bg-background py-20\">\n      <div className=\"mx-auto max-w-6xl px-6\">\n        <div className=\"max-w-2xl\">\n          <h2 className=\"text-3xl font-semibold tracking-tight md:text-4xl\">\n            Loved by people who ship\n          </h2>\n          <p className=\"mt-3 text-muted-foreground\">\n            Rated 4.9 out of 5 by more than 3,000 designers and developers.\n          </p>\n        </div>\n        <div className=\"mt-12 grid border-t border-l border-border sm:grid-cols-2 lg:grid-cols-3\">\n          {reviews.map((review) => (\n            <figure\n              key={review.name}\n              className=\"flex flex-col justify-between gap-8 border-r border-b border-border p-6\"\n            >\n              <div>\n                <div className=\"flex gap-0.5\">\n                  {Array.from({ length: 5 }).map((_, i) => (\n                    <Star\n                      key={i}\n                      className=\"size-3.5 fill-foreground text-foreground\"\n                    />\n                  ))}\n                </div>\n                <blockquote className=\"mt-4 text-sm leading-6\">\n                  {review.text}\n                </blockquote>\n              </div>\n              <figcaption className=\"flex items-center gap-3\">\n                <span className=\"flex size-9 items-center justify-center rounded-full bg-muted text-xs font-medium\">\n                  {review.initials}\n                </span>\n                <div>\n                  <p className=\"text-sm font-medium\">{review.name}</p>\n                  <p className=\"text-xs text-muted-foreground\">{review.role}</p>\n                </div>\n              </figcaption>\n            </figure>\n          ))}\n        </div>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "900px"
+  },
+  "categories": [
+    "testimonials"
+  ]
+}

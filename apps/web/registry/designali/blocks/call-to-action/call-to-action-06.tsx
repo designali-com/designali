@@ -25,7 +25,7 @@ export default function CallToAction06() {
             <Button
               size="lg"
               className="flex-1 bg-background text-foreground hover:bg-background/90"
-              render={<a href="#" />}
+              nativeButton={false} render={<a href="#" />}
             >
               Browse blocks
             </Button>
@@ -33,7 +33,7 @@ export default function CallToAction06() {
               size="lg"
               variant="ghost"
               className="flex-1 border-background/20 text-background hover:bg-background/10 hover:text-background"
-              render={<a href="#" />}
+              nativeButton={false} render={<a href="#" />}
             >
               Read the docs
             </Button>

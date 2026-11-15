@@ -1,0 +1,15 @@
+[
+  ["gallery-08", "gallery", "800px", "Horizontal scroll-snap strip of portrait frames with numbered counters and arrow navigation."],
+  ["gallery-09", "gallery", "700px", "Square thumbnail grid that opens a fullscreen lightbox with keyboard and arrow navigation."],
+  ["gallery-10", "gallery", "700px", "Before and after renovation comparison slider beside a selectable project list."],
+  ["gallery-11", "gallery", "1200px", "Editorial exhibition layout with a sticky intro panel and a vertical stack of numbered plates."],
+  ["gallery-12", "gallery", "1000px", "Scattered polaroid-style print collage on a dotted background with hover pick-up."],
+  ["gallery-13", "gallery", "650px", "Two opposing infinite marquee rows of project tiles that pause on hover."],
+  ["gallery-14", "gallery", "700px", "Expanding accordion panels that widen on hover to reveal category details."],
+  ["gallery-15", "gallery", "750px", "Artwork catalogue list with a sticky hover preview of the highlighted piece."],
+  ["gallery-16", "gallery", "1000px", "Album overview grid of stacked-deck cards with photo counts and shared avatars."],
+  ["gallery-17", "gallery", "1000px", "Chronological timeline of yearly photo series with thumbnail rows per year."],
+  ["gallery-18", "gallery", "650px", "3D coverflow carousel of album covers with a centered focus and controls."],
+  ["gallery-19", "gallery", "900px", "Asset library grid with aspect-ratio, density and detail toggles in a toolbar."],
+  ["gallery-20", "gallery", "1100px", "Social profile header with stats, tabbed content and a square post grid with hover counts."]
+]

@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "portfolio-02",
+  "type": "registry:block",
+  "description": "A project index list with a sticky hover preview.",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/designali/blocks/portfolio/portfolio-02.tsx",
+      "content": "\"use client\"\n\nimport { useState } from \"react\"\nimport { ArrowRight } from \"lucide-react\"\n\nconst projects = [\n  { name: \"Halcyon Bank\", discipline: \"Fintech app\", year: \"2026\", hue: \"var(--chart-1)\" },\n  { name: \"Orbit Studio\", discipline: \"Brand identity\", year: \"2026\", hue: \"var(--chart-2)\" },\n  { name: \"Wildgrain\", discipline: \"E-commerce\", year: \"2025\", hue: \"var(--chart-3)\" },\n  { name: \"Meridian Labs\", discipline: \"Developer docs\", year: \"2025\", hue: \"var(--chart-4)\" },\n  { name: \"Common Ground\", discipline: \"Non-profit website\", year: \"2024\", hue: \"var(--chart-5)\" },\n  { name: \"Parcel & Co\", discipline: \"Logistics dashboard\", year: \"2024\", hue: \"var(--chart-1)\" },\n]\n\nexport default function Portfolio02() {\n  const [hovered, setHovered] = useState(0)\n  const current = projects[hovered]\n\n  return (\n    <section className=\"w-full bg-background py-16 text-foreground md:py-24\">\n      <div className=\"mx-auto grid max-w-6xl gap-10 px-6 lg:grid-cols-[1fr_380px]\">\n        <div>\n          <p className=\"mb-6 text-xs tracking-widest text-muted-foreground uppercase\">\n            Index of projects\n          </p>\n          <ul className=\"border-t border-border\">\n            {projects.map((project, i) => (\n              <li key={project.name} className=\"border-b border-border\">\n                <a\n                  href=\"#\"\n                  onMouseEnter={() => setHovered(i)}\n                  onFocus={() => setHovered(i)}\n                  className=\"group flex items-center justify-between gap-4 py-5 md:py-6\"\n                >\n                  <span\n                    className={`text-2xl font-medium tracking-tight transition-colors md:text-4xl ${\n                      hovered === i ? \"text-foreground\" : \"text-muted-foreground\"\n                    }`}\n                  >\n                    {project.name}\n                  </span>\n                  <span className=\"flex shrink-0 items-center gap-4 text-xs text-muted-foreground\">\n                    <span className=\"hidden sm:inline\">{project.discipline}</span>\n                    <span className=\"font-mono\">{project.year}</span>\n                    <ArrowRight\n                      className={`size-4 transition-transform ${\n                        hovered === i ? \"translate-x-0 opacity-100\" : \"-translate-x-2 opacity-0\"\n                      }`}\n                    />\n                  </span>\n                </a>\n              </li>\n            ))}\n          </ul>\n        </div>\n\n        <div className=\"hidden lg:block\">\n          <div className=\"sticky top-24 border border-border bg-muted p-3\">\n            <div\n              className=\"aspect-[3/4] w-full transition-colors duration-500\"\n              style={{\n                background: `linear-gradient(160deg, ${current?.hue} 0%, transparent 85%)`,\n              }}\n            />\n            <div className=\"flex items-center justify-between pt-3 text-xs\">\n              <span className=\"font-medium\">{current?.name}</span>\n              <span className=\"text-muted-foreground\">{current?.discipline}</span>\n            </div>\n          </div>\n        </div>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "800px"
+  },
+  "categories": [
+    "portfolio"
+  ]
+}

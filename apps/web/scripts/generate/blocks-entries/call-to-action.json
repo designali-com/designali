@@ -1,0 +1,15 @@
+[
+  ["call-to-action-08", "call-to-action", "500px", "Centered newsletter card with inline email form and a confirmation state after submit."],
+  ["call-to-action-09", "call-to-action", "520px", "Gradient-bordered trial offer card split into pitch with buttons and a checklist of included perks."],
+  ["call-to-action-10", "call-to-action", "560px", "Split pricing teaser with a monthly or yearly switch that updates the price and savings line."],
+  ["call-to-action-11", "call-to-action", "640px", "Split CTA with copy on the left and a browser-window dashboard mockup with KPIs and bar chart."],
+  ["call-to-action-12", "call-to-action", "520px", "Bold centered headline above an infinitely scrolling marquee of use-case chips and a single button."],
+  ["call-to-action-13", "call-to-action", "560px", "Three numbered onboarding steps with time estimates in a bordered grid, headed by a get-started button."],
+  ["call-to-action-14", "call-to-action", "600px", "Talk-to-sales split with team avatars and an interactive day and time-slot picker that enables booking."],
+  ["call-to-action-15", "call-to-action", "520px", "Inverted primary-colour band with a large headline, two buttons and a row of four headline stats."],
+  ["call-to-action-16", "call-to-action", "420px", "Floating dismissible promo banner with icon, offer copy, claim button and countdown progress strip."],
+  ["call-to-action-17", "call-to-action", "560px", "App download card with star rating, store buttons and a CSS-drawn QR code on desktop."],
+  ["call-to-action-18", "call-to-action", "560px", "Four audience cards for startups, agencies, enterprise and education, each with its own link CTA."],
+  ["call-to-action-19", "call-to-action", "820px", "Oversized typographic studio CTA followed by a list of large arrow links and a contact email."],
+  ["call-to-action-20", "call-to-action", "560px", "Dark waitlist section with email capture that reveals queue position and a copyable referral link."]
+]

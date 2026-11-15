@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "faqs-06",
+  "type": "registry:block",
+  "description": "A master-detail FAQ with a question list and a large answer panel.",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "registry/designali/blocks/faqs/faqs-06.tsx",
+      "content": "\"use client\"\n\nimport { useState } from \"react\"\nimport { ArrowRight, MessageCircle } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst faqs = [\n  {\n    question: \"Is there a free trial?\",\n    answer:\n      \"Every plan starts with a 14-day trial with full access to Pro features. No credit card is needed, and your workspace stays intact if you decide to upgrade later.\",\n  },\n  {\n    question: \"What happens when my trial ends?\",\n    answer:\n      \"Your workspace moves to the Free plan automatically. Projects beyond the free limit become read-only until you upgrade or archive them.\",\n  },\n  {\n    question: \"Can I bring my existing components?\",\n    answer:\n      \"Yes. Import from Figma, Storybook or a public npm package and we will map your tokens and variants automatically during onboarding.\",\n  },\n  {\n    question: \"Do you offer discounts for nonprofits?\",\n    answer:\n      \"Registered nonprofits and schools get 50% off any paid plan. Send us proof of status and we will apply the discount within one business day.\",\n  },\n  {\n    question: \"How does support work?\",\n    answer:\n      \"Free and Pro plans get email support with a 24-hour response time. Business plans include a shared Slack channel and a named success manager.\",\n  },\n]\n\nexport default function Faqs06() {\n  const [selected, setSelected] = useState(0)\n  const current = faqs[selected] ?? faqs[0]!\n\n  return (\n    <section className=\"w-full border-y border-border bg-background\">\n      <div className=\"mx-auto grid max-w-6xl md:grid-cols-[1fr_1.2fr]\">\n        <div className=\"border-border p-6 py-16 md:border-e md:p-12\">\n          <h2 className=\"text-3xl font-semibold tracking-tight md:text-4xl\">\n            Common questions\n          </h2>\n          <ul className=\"mt-10 border-t border-border\">\n            {faqs.map((faq, index) => (\n              <li key={faq.question} className=\"border-b border-border\">\n                <button\n                  type=\"button\"\n                  onClick={() => setSelected(index)}\n                  className={cn(\n                    \"flex w-full items-center justify-between gap-4 py-4 text-start text-sm transition-colors\",\n                    selected === index\n                      ? \"font-medium text-foreground\"\n                      : \"text-muted-foreground hover:text-foreground\"\n                  )}\n                >\n                  {faq.question}\n                  <ArrowRight\n                    className={cn(\n                      \"size-4 shrink-0 transition-transform\",\n                      selected === index ? \"translate-x-0\" : \"-translate-x-1 opacity-0\"\n                    )}\n                  />\n                </button>\n              </li>\n            ))}\n          </ul>\n        </div>\n        <div className=\"flex flex-col justify-between gap-10 bg-muted/40 p-6 py-16 md:p-12\">\n          <div>\n            <span className=\"font-mono text-xs text-muted-foreground\">\n              {String(selected + 1).padStart(2, \"0\")} / {String(faqs.length).padStart(2, \"0\")}\n            </span>\n            <h3 className=\"mt-6 text-2xl font-medium tracking-tight\">\n              {current.question}\n            </h3>\n            <p className=\"mt-4 text-base leading-7 text-muted-foreground\">\n              {current.answer}\n            </p>\n          </div>\n          <div className=\"flex flex-col gap-4 border border-border bg-background p-5 sm:flex-row sm:items-center sm:justify-between\">\n            <div className=\"flex items-center gap-3\">\n              <MessageCircle className=\"size-5 text-muted-foreground\" />\n              <p className=\"text-sm\">Still have a question?</p>\n            </div>\n            <Button size=\"md\" variant=\"outline\">\n              Talk to us\n            </Button>\n          </div>\n        </div>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "700px"
+  },
+  "categories": [
+    "faqs"
+  ]
+}

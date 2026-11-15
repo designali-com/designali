@@ -1,0 +1,13 @@
+[
+  ["hero-10", "hero", "720px", "Developer hero with a tabbed package-manager install command, copy button and a terminal deploy preview."],
+  ["hero-11", "hero", "760px", "Bento hero with a large headline tile beside metric, avatar, queue and feature tiles."],
+  ["hero-12", "hero", "720px", "Centered marketplace hero with a two-field search bar, category chips and clickable popular searches over a masked grid."],
+  ["hero-13", "hero", "900px", "Centered launch hero above a browser-window product mockup with sidebar and roadmap table."],
+  ["hero-14", "hero", "760px", "Split hero with avatar-stack rating proof on the left and a staggered stack of customer quote cards on the right."],
+  ["hero-15", "hero", "760px", "Audience-switcher hero whose segmented tabs swap the headline, benefits and preview panel per role."],
+  ["hero-16", "hero", "800px", "Split hero with an inverted pitch panel and floor-plan sketch beside a sign-up form with success state."],
+  ["hero-17", "hero", "820px", "Mobile app hero with platform download buttons, rating stats and a CSS phone mockup of the app."],
+  ["hero-18", "hero", "680px", "Split hero with an interactive ROI calculator card driven by a team-size slider."],
+  ["hero-19", "hero", "1000px", "Conference hero with oversized gradient wordmark, date and venue meta, countdown blocks and speaker cards."],
+  ["hero-20", "hero", "860px", "Sticky headline column beside a vertical three-step timeline, with a wordmark customer strip below."]
+]

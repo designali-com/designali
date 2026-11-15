@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "contact-05",
+  "type": "registry:block",
+  "description": "A list of studio offices with time zones, phone numbers and copyable emails.",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "registry/designali/blocks/contact/contact-05.tsx",
+      "content": "\"use client\"\n\nimport { useState } from \"react\"\nimport { Check, Copy, Mail, Phone } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\n\nconst offices = [\n  {\n    city: \"London\",\n    timezone: \"GMT\",\n    email: \"london@fieldwork.co\",\n    phone: \"+44 20 7946 0958\",\n    address: [\"48 Shoreditch High St\", \"London E1 6PG\"],\n  },\n  {\n    city: \"New York\",\n    timezone: \"EST\",\n    email: \"nyc@fieldwork.co\",\n    phone: \"+1 212 555 0187\",\n    address: [\"101 Greene St, Floor 4\", \"New York, NY 10012\"],\n  },\n  {\n    city: \"Singapore\",\n    timezone: \"SGT\",\n    email: \"sg@fieldwork.co\",\n    phone: \"+65 6555 0143\",\n    address: [\"8 Club St, #03-01\", \"Singapore 069472\"],\n  },\n]\n\nexport default function Contact05() {\n  const [copied, setCopied] = useState<string | null>(null)\n\n  function copy(value: string) {\n    navigator.clipboard?.writeText(value)\n    setCopied(value)\n    setTimeout(() => setCopied(null), 1600)\n  }\n\n  return (\n    <section className=\"w-full bg-background py-20 md:py-28\">\n      <div className=\"mx-auto max-w-6xl px-6\">\n        <div className=\"flex flex-col justify-between gap-6 border-b pb-10 md:flex-row md:items-end\">\n          <h2 className=\"text-4xl font-semibold tracking-tight md:text-5xl\">\n            Three studios,\n            <br />\n            one team.\n          </h2>\n          <p className=\"max-w-sm text-muted-foreground\">\n            Reach the office closest to you. Every studio handles new business,\n            press and careers.\n          </p>\n        </div>\n\n        <div className=\"divide-y\">\n          {offices.map((office) => (\n            <div\n              key={office.city}\n              className=\"grid gap-6 py-10 md:grid-cols-[1fr_1fr_auto] md:items-center\"\n            >\n              <div className=\"flex items-baseline gap-3\">\n                <h3 className=\"text-3xl font-medium tracking-tight\">\n                  {office.city}\n                </h3>\n                <span className=\"text-xs text-muted-foreground\">\n                  {office.timezone}\n                </span>\n              </div>\n              <address className=\"text-sm leading-6 text-muted-foreground not-italic\">\n                {office.address.map((line) => (\n                  <span key={line} className=\"block\">\n                    {line}\n                  </span>\n                ))}\n              </address>\n              <div className=\"flex flex-col gap-2 sm:flex-row\">\n                <Button\n                  variant=\"outline\"\n                  onClick={() => copy(office.email)}\n                  className=\"justify-between gap-3\"\n                >\n                  <Mail />\n                  {office.email}\n                  {copied === office.email ? <Check /> : <Copy />}\n                </Button>\n                <Button\n                  variant=\"ghost\"\n                  nativeButton={false}\n                  render={<a href={`tel:${office.phone}`} />}\n                >\n                  <Phone />\n                  {office.phone}\n                </Button>\n              </div>\n            </div>\n          ))}\n        </div>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "700px"
+  },
+  "categories": [
+    "contact"
+  ]
+}

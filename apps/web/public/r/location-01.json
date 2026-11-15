@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "location-01",
+  "type": "registry:block",
+  "description": "A single-venue location card with an illustrated map, hours and directions.",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "registry/designali/blocks/location/location-01.tsx",
+      "content": "import { ArrowUpRight, Clock, MapPin, Phone } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\n\nconst hours = [\n  { day: \"Monday – Friday\", time: \"7:00 – 18:00\" },\n  { day: \"Saturday\", time: \"8:00 – 16:00\" },\n  { day: \"Sunday\", time: \"Closed\" },\n]\n\nfunction MapIllustration() {\n  return (\n    <svg\n      viewBox=\"0 0 600 400\"\n      className=\"h-full w-full text-border\"\n      preserveAspectRatio=\"xMidYMid slice\"\n      aria-hidden\n    >\n      <rect width=\"600\" height=\"400\" className=\"fill-muted\" />\n      <g stroke=\"currentColor\" strokeWidth=\"1\" fill=\"none\">\n        {Array.from({ length: 12 }).map((_, i) => (\n          <line key={`v${i}`} x1={i * 52} y1=\"0\" x2={i * 52 + 40} y2=\"400\" />\n        ))}\n        {Array.from({ length: 9 }).map((_, i) => (\n          <line key={`h${i}`} x1=\"0\" y1={i * 48} x2=\"600\" y2={i * 48 - 20} />\n        ))}\n      </g>\n      <path\n        d=\"M0 260 C 120 220, 220 300, 330 240 S 520 160, 600 190\"\n        className=\"stroke-foreground/25\"\n        strokeWidth=\"14\"\n        fill=\"none\"\n      />\n      <rect x=\"380\" y=\"70\" width=\"120\" height=\"70\" className=\"fill-chart-2/30\" />\n    </svg>\n  )\n}\n\nexport default function Location01() {\n  return (\n    <section className=\"w-full bg-background py-20 md:py-28\">\n      <div className=\"mx-auto grid max-w-6xl border md:grid-cols-[1fr_1.4fr]\">\n        <div className=\"flex flex-col gap-8 p-8 md:p-10\">\n          <div className=\"space-y-3\">\n            <p className=\"text-xs tracking-widest text-muted-foreground uppercase\">\n              Visit the roastery\n            </p>\n            <h2 className=\"text-3xl font-semibold tracking-tight md:text-4xl\">\n              Common Ground Coffee\n            </h2>\n          </div>\n          <div className=\"space-y-4 text-sm\">\n            <p className=\"flex gap-3\">\n              <MapPin className=\"mt-0.5 size-4 shrink-0 text-muted-foreground\" />\n              1180 Mission Street, Portland, OR 97209\n            </p>\n            <p className=\"flex gap-3\">\n              <Phone className=\"mt-0.5 size-4 shrink-0 text-muted-foreground\" />\n              (503) 555-0174\n            </p>\n          </div>\n          <div className=\"border-t pt-6\">\n            <p className=\"mb-3 flex items-center gap-2 text-sm font-medium\">\n              <Clock className=\"size-4\" />\n              Opening hours\n            </p>\n            <dl className=\"space-y-2 text-sm\">\n              {hours.map((row) => (\n                <div key={row.day} className=\"flex justify-between\">\n                  <dt className=\"text-muted-foreground\">{row.day}</dt>\n                  <dd>{row.time}</dd>\n                </div>\n              ))}\n            </dl>\n          </div>\n          <Button size=\"lg\" className=\"mt-auto w-full\">\n            Get directions\n            <ArrowUpRight />\n          </Button>\n        </div>\n        <div className=\"relative min-h-80 border-t md:border-t-0 md:border-s\">\n          <MapIllustration />\n          <div className=\"absolute top-[38%] left-[52%] flex -translate-x-1/2 -translate-y-full flex-col items-center\">\n            <span className=\"bg-foreground px-3 py-1.5 text-xs font-medium text-background\">\n              Common Ground\n            </span>\n            <span className=\"h-6 w-px bg-foreground\" />\n            <span className=\"size-3 rounded-full border-2 border-background bg-foreground ring-4 ring-foreground/20\" />\n          </div>\n        </div>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "700px"
+  },
+  "categories": [
+    "location"
+  ]
+}

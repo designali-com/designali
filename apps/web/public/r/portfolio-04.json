@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "portfolio-04",
+  "type": "registry:block",
+  "description": "A filterable project archive grid.",
+  "dependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/designali/blocks/portfolio/portfolio-04.tsx",
+      "content": "\"use client\"\n\nimport { useState } from \"react\"\n\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst filters = [\"All\", \"Branding\", \"Product\", \"Motion\", \"Print\"]\n\nconst works = [\n  { title: \"Kinfolk Ceramics\", type: \"Branding\", ratio: \"aspect-square\", color: \"var(--chart-1)\" },\n  { title: \"Pulse Wearable\", type: \"Product\", ratio: \"aspect-[3/4]\", color: \"var(--chart-2)\" },\n  { title: \"Tide Festival\", type: \"Motion\", ratio: \"aspect-[4/3]\", color: \"var(--chart-3)\" },\n  { title: \"Verso Magazine\", type: \"Print\", ratio: \"aspect-[3/4]\", color: \"var(--chart-4)\" },\n  { title: \"Fieldnote App\", type: \"Product\", ratio: \"aspect-square\", color: \"var(--chart-5)\" },\n  { title: \"Harbor Hotel\", type: \"Branding\", ratio: \"aspect-[4/3]\", color: \"var(--chart-2)\" },\n  { title: \"Signal Conference\", type: \"Motion\", ratio: \"aspect-square\", color: \"var(--chart-1)\" },\n  { title: \"Paper Trail Annual\", type: \"Print\", ratio: \"aspect-[4/3]\", color: \"var(--chart-3)\" },\n]\n\nexport default function Portfolio04() {\n  const [filter, setFilter] = useState(\"All\")\n  const visible = filter === \"All\" ? works : works.filter((w) => w.type === filter)\n\n  return (\n    <section className=\"w-full bg-background py-16 text-foreground md:py-24\">\n      <div className=\"mx-auto max-w-6xl px-6\">\n        <div className=\"flex flex-col justify-between gap-6 border-b border-border pb-6 md:flex-row md:items-end\">\n          <div>\n            <h2 className=\"text-3xl font-medium tracking-tight md:text-5xl\">Archive</h2>\n            <p className=\"mt-2 text-sm text-muted-foreground\">\n              {visible.length} projects shown\n            </p>\n          </div>\n          <div className=\"flex flex-wrap gap-x-5 gap-y-2 text-sm\">\n            {filters.map((item) => (\n              <button\n                key={item}\n                type=\"button\"\n                onClick={() => setFilter(item)}\n                className={cn(\n                  \"pb-1 transition-colors\",\n                  filter === item\n                    ? \"border-b border-foreground text-foreground\"\n                    : \"text-muted-foreground hover:text-foreground\"\n                )}\n              >\n                {item}\n              </button>\n            ))}\n          </div>\n        </div>\n\n        <div className=\"mt-8 columns-1 gap-4 sm:columns-2 lg:columns-3\">\n          {visible.map((work) => (\n            <a key={work.title} href=\"#\" className=\"group mb-4 block break-inside-avoid\">\n              <div className={cn(\"relative overflow-hidden border border-border bg-muted\", work.ratio)}>\n                <div\n                  className=\"absolute inset-0 opacity-70 transition-opacity group-hover:opacity-100\"\n                  style={{\n                    background: `radial-gradient(circle at 70% 30%, ${work.color}, transparent 70%)`,\n                  }}\n                />\n                <div className=\"absolute inset-x-0 bottom-0 flex items-center justify-between bg-background/90 px-4 py-3 text-sm backdrop-blur transition-transform md:translate-y-full md:group-hover:translate-y-0\">\n                  <span className=\"font-medium\">{work.title}</span>\n                  <span className=\"text-xs text-muted-foreground\">{work.type}</span>\n                </div>\n              </div>\n            </a>\n          ))}\n        </div>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "1000px"
+  },
+  "categories": [
+    "portfolio"
+  ]
+}

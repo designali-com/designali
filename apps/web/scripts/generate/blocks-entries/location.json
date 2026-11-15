@@ -1,0 +1,17 @@
+[
+  ["location-06", "location", "680px", "Full-bleed illustrated city map with a dropped pin and an overlaid store card holding address, hours and actions."],
+  ["location-07", "location", "820px", "Dot-matrix world map with dashed arcs from headquarters to offices and a city headcount strip below."],
+  ["location-08", "location", "720px", "City tabs that move a pulsing pin across an SVG street map and swap venue, hours, transit and parking details."],
+  ["location-09", "location", "760px", "Getting-here planner with transport mode toggles, travel time, step list and an animated route drawn on a grid map."],
+  ["location-10", "location", "760px", "Opening hours table that highlights today, beside an illustrated pin map tile and a holiday hours card."],
+  ["location-11", "location", "760px", "Region accordion with continent silhouettes that expands into a grid of office addresses and HQ badges."],
+  ["location-12", "location", "780px", "Interactive venue floor plan with numbered zones that highlight from a synced legend list on hover or focus."],
+  ["location-13", "location", "700px", "Delivery zone checker with postcode lookup, result messages and concentric radius rings around a depot map."],
+  ["location-14", "location", "640px", "Horizontal snap carousel of location cards with generated street-grid thumbnails and prev/next controls."],
+  ["location-15", "location", "800px", "Expansion map of a country silhouette with open, coming soon and planned pins filtered by legend chips."],
+  ["location-16", "location", "720px", "Inverted dark band with oversized GPS coordinates, trail facts grid, route actions and an SVG compass."],
+  ["location-17", "location", "760px", "Neighbourhood guide map with toggleable category pins around the venue and a synced list of nearby places."],
+  ["location-18", "location", "760px", "Dense branch directory table with sticky header, status badges, step-free access column and CSV link."],
+  ["location-19", "location", "760px", "Visitor info bento with an illustrated campus map tile and cards for parking, transit, cycling, airport and access."],
+  ["location-20", "location", "800px", "Hiking route hero with a contour-line SVG trail, labelled waypoints, copyable coordinates and a stats bar."]
+]

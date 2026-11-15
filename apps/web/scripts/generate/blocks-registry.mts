@@ -1,6 +1,6 @@
 // Generates registry/registry-blocks-new.ts from the block files on disk.
 // Usage: npx tsx scripts/generate/blocks-registry.mts
-import { readFileSync, writeFileSync, existsSync } from "node:fs"
+import { readFileSync, writeFileSync, existsSync, readdirSync } from "node:fs"
 import path from "node:path"
 
 const root = path.resolve(import.meta.dirname, "../..")
@@ -122,6 +122,21 @@ const entries: Entry[] = [
   ["ecommerce-04", "ecommerce", "700px", "A split promotional banner for a featured collection."],
   ["ecommerce-05", "ecommerce", "800px", "A product bundle section with included items and pricing."],
 ]
+
+// Additional entries live in scripts/generate/blocks-entries/<category>.json
+// as [name, category, iframeHeight, description] tuples.
+const entriesDir = path.join(import.meta.dirname, "blocks-entries")
+if (existsSync(entriesDir)) {
+  for (const file of readdirSync(entriesDir).filter((f) => f.endsWith(".json")).sort()) {
+    const extra = JSON.parse(readFileSync(path.join(entriesDir, file), "utf8")) as Entry[]
+    entries.push(...extra)
+  }
+}
+const seen = new Set<string>()
+for (const [name] of entries) {
+  if (seen.has(name)) throw new Error(`Duplicate block entry ${name}`)
+  seen.add(name)
+}
 
 const lines: string[] = []
 for (const [name, category, height, description] of entries) {

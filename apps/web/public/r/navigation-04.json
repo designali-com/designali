@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "navigation-04",
+  "type": "registry:block",
+  "description": "A command palette style navigation with search and grouped actions.",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/designali/blocks/navigation/navigation-04.tsx",
+      "content": "\"use client\"\n\nimport { useState } from \"react\"\nimport { ArrowRight, Command, FileText, Search, Settings, Users } from \"lucide-react\"\n\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst results = [\n  {\n    group: \"Pages\",\n    items: [\n      { icon: FileText, label: \"Getting started\", hint: \"Docs\" },\n      { icon: FileText, label: \"API reference\", hint: \"Docs\" },\n      { icon: FileText, label: \"Pricing\", hint: \"Marketing\" },\n    ],\n  },\n  {\n    group: \"Actions\",\n    items: [\n      { icon: Users, label: \"Invite teammates\", hint: \"⌘ I\" },\n      { icon: Settings, label: \"Open settings\", hint: \"⌘ ,\" },\n    ],\n  },\n]\n\nexport default function Navigation04() {\n  const [query, setQuery] = useState(\"\")\n  const [highlight, setHighlight] = useState(0)\n\n  const flat = results.flatMap((group) =>\n    group.items\n      .filter((item) => item.label.toLowerCase().includes(query.toLowerCase()))\n      .map((item) => ({ ...item, group: group.group }))\n  )\n\n  return (\n    <section className=\"w-full bg-muted/40 py-20 md:py-28\">\n      <div className=\"mx-auto max-w-xl px-6\">\n        <p className=\"mb-6 flex items-center justify-center gap-2 text-sm text-muted-foreground\">\n          Press\n          <kbd className=\"inline-flex items-center gap-1 border bg-background px-1.5 py-0.5 font-mono text-xs\">\n            <Command className=\"size-3\" />K\n          </kbd>\n          anywhere to jump\n        </p>\n        <div className=\"border bg-background shadow-xl/5\">\n          <div className=\"flex items-center gap-3 border-b px-4\">\n            <Search className=\"size-4 text-muted-foreground\" />\n            <input\n              value={query}\n              onChange={(event) => {\n                setQuery(event.target.value)\n                setHighlight(0)\n              }}\n              placeholder=\"Search pages and actions...\"\n              className=\"h-14 flex-1 bg-transparent text-sm outline-none placeholder:text-muted-foreground\"\n            />\n            <kbd className=\"border px-1.5 py-0.5 font-mono text-[10px] text-muted-foreground\">\n              ESC\n            </kbd>\n          </div>\n          <ul className=\"max-h-80 overflow-y-auto p-2\">\n            {flat.map((item, index) => (\n              <li key={item.label}>\n                {(index === 0 || flat[index - 1]?.group !== item.group) && (\n                  <p className=\"px-3 pt-3 pb-1 text-xs text-muted-foreground\">\n                    {item.group}\n                  </p>\n                )}\n                <a\n                  href=\"#\"\n                  onMouseEnter={() => setHighlight(index)}\n                  className={cn(\n                    \"flex h-11 items-center gap-3 px-3 text-sm\",\n                    highlight === index && \"bg-muted\"\n                  )}\n                >\n                  <item.icon className=\"size-4 text-muted-foreground\" />\n                  {item.label}\n                  <span className=\"ms-auto text-xs text-muted-foreground\">\n                    {highlight === index ? <ArrowRight className=\"size-3.5\" /> : item.hint}\n                  </span>\n                </a>\n              </li>\n            ))}\n            {flat.length === 0 && (\n              <li className=\"px-3 py-10 text-center text-sm text-muted-foreground\">\n                No results for &ldquo;{query}&rdquo;\n              </li>\n            )}\n          </ul>\n          <div className=\"flex items-center gap-4 border-t px-4 py-2.5 text-xs text-muted-foreground\">\n            <span>↑↓ to navigate</span>\n            <span>↵ to select</span>\n          </div>\n        </div>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "700px"
+  },
+  "categories": [
+    "navigation"
+  ]
+}

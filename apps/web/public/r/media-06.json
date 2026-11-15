@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "media-06",
+  "type": "registry:block",
+  "description": "A podcast episode list with guests, numbers and durations.",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/designali/blocks/media/media-06.tsx",
+      "content": "import { Headphones, Mic, Radio } from \"lucide-react\"\n\nconst episodes = [\n  {\n    number: \"48\",\n    title: \"The case for boring interfaces\",\n    guest: \"Marcus Webb\",\n    length: \"52 min\",\n  },\n  {\n    number: \"47\",\n    title: \"Hiring your first design engineer\",\n    guest: \"Priya Nair\",\n    length: \"44 min\",\n  },\n  {\n    number: \"46\",\n    title: \"Brand systems at scale\",\n    guest: \"Sofia Alvarez\",\n    length: \"61 min\",\n  },\n  {\n    number: \"45\",\n    title: \"What we learned from 1,000 audits\",\n    guest: \"Jonas Lindqvist\",\n    length: \"38 min\",\n  },\n]\n\nconst platforms = [\n  { label: \"Apple Podcasts\", icon: Headphones },\n  { label: \"Spotify\", icon: Radio },\n  { label: \"RSS feed\", icon: Mic },\n]\n\nexport default function Media06() {\n  return (\n    <section className=\"w-full bg-background py-20\">\n      <div className=\"mx-auto max-w-5xl px-6\">\n        <div className=\"grid gap-8 md:grid-cols-[1fr_auto] md:items-end\">\n          <div>\n            <h2 className=\"text-3xl font-semibold tracking-tight md:text-4xl\">\n              The Design Room\n            </h2>\n            <p className=\"mt-3 max-w-lg text-muted-foreground\">\n              A weekly conversation with people building the tools designers use\n              every day.\n            </p>\n          </div>\n          <div className=\"flex flex-wrap gap-2\">\n            {platforms.map(({ label, icon: Icon }) => (\n              <a\n                key={label}\n                href=\"#\"\n                className=\"flex items-center gap-2 border border-border px-3 py-2 text-xs hover:bg-muted\"\n              >\n                <Icon className=\"size-3.5\" />\n                {label}\n              </a>\n            ))}\n          </div>\n        </div>\n        <ul className=\"mt-12 border-t border-border\">\n          {episodes.map((episode) => (\n            <li key={episode.number} className=\"border-b border-border\">\n              <a\n                href=\"#\"\n                className=\"grid grid-cols-[3rem_1fr] gap-4 py-6 hover:bg-muted/50 md:grid-cols-[4rem_1fr_10rem_5rem] md:items-center\"\n              >\n                <span className=\"text-2xl font-semibold text-muted-foreground tabular-nums\">\n                  {episode.number}\n                </span>\n                <span className=\"font-medium\">{episode.title}</span>\n                <span className=\"col-start-2 text-sm text-muted-foreground md:col-start-auto\">\n                  with {episode.guest}\n                </span>\n                <span className=\"col-start-2 text-sm text-muted-foreground tabular-nums md:col-start-auto md:text-right\">\n                  {episode.length}\n                </span>\n              </a>\n            </li>\n          ))}\n        </ul>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "800px"
+  },
+  "categories": [
+    "media"
+  ]
+}

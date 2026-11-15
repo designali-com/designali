@@ -1,0 +1,114 @@
+"use client"
+
+import { useState } from "react"
+import { Bell, Heart, ShoppingBag, Trash2 } from "lucide-react"
+
+import { Button } from "@workspace/ui/components/button"
+import { cn } from "@workspace/ui/lib/utils"
+
+type Item = {
+  id: number
+  name: string
+  variant: string
+  price: number
+  was?: number
+  stock: "in" | "low" | "out"
+  added: string
+  tone: string
+}
+
+const initial: Item[] = [
+  { id: 1, name: "Merino Travel Blazer", variant: "Navy · 40R", price: 245, was: 295, stock: "in", added: "Added 3 days ago", tone: "from-blue-900/70 to-blue-400/30" },
+  { id: 2, name: "Leather Weekender", variant: "Cognac", price: 380, stock: "low", added: "Added 2 weeks ago", tone: "from-amber-800/70 to-orange-300/30" },
+  { id: 3, name: "Cashmere Scarf", variant: "Heather grey", price: 120, stock: "out", added: "Added 1 month ago", tone: "from-zinc-500/60 to-zinc-200/30" },
+  { id: 4, name: "Suede Chelsea Boot", variant: "Sand · UK 9", price: 210, stock: "in", added: "Added 1 month ago", tone: "from-yellow-700/50 to-stone-200/30" },
+]
+
+const stockLabel = {
+  in: { text: "In stock", className: "text-emerald-700 dark:text-emerald-400" },
+  low: { text: "Only 2 left", className: "text-amber-700 dark:text-amber-400" },
+  out: { text: "Sold out", className: "text-muted-foreground" },
+}
+
+export default function Ecommerce17() {
+  const [items, setItems] = useState(initial)
+  const [moved, setMoved] = useState<number[]>([])
+  const [notify, setNotify] = useState<number[]>([])
+
+  const remove = (id: number) => setItems((l) => l.filter((i) => i.id !== id))
+  const value = items.reduce((s, i) => s + i.price, 0)
+  const drops = items.filter((i) => i.was).length
+
+  return (
+    <section className="w-full bg-background py-16 text-foreground md:py-24">
+      <div className="mx-auto max-w-5xl px-6">
+        <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
+          <div>
+            <h2 className="flex items-center gap-3 text-3xl font-medium tracking-tight">
+              <Heart className="size-6" />
+              Saved for later
+            </h2>
+            <p className="mt-1 text-sm text-muted-foreground">
+              {items.length} items · ${value.toLocaleString()} total
+              {drops > 0 && <span> · {drops} price drop</span>}
+            </p>
+          </div>
+          <Button variant="outline" disabled={items.length === 0} onClick={() => setMoved(items.filter((i) => i.stock !== "out").map((i) => i.id))}>
+            <ShoppingBag />
+            Move all available to bag
+          </Button>
+        </div>
+
+        <ul className="mt-8 border-t border-border">
+          {items.length === 0 && (
+            <li className="py-20 text-center text-sm text-muted-foreground">
+              Nothing saved yet. Tap the heart on any product to keep it here.
+            </li>
+          )}
+          {items.map((item) => {
+            const inBag = moved.includes(item.id)
+            const notified = notify.includes(item.id)
+            return (
+              <li key={item.id} className="grid grid-cols-[80px_1fr] gap-4 border-b border-border py-5 sm:grid-cols-[96px_1fr_auto] sm:items-center">
+                <div className={cn("aspect-square bg-gradient-to-br", item.tone, item.stock === "out" && "opacity-50 grayscale")} />
+                <div className="min-w-0">
+                  <a href="#" className="font-medium hover:underline">{item.name}</a>
+                  <p className="text-xs text-muted-foreground">{item.variant}</p>
+                  <p className="mt-2 flex flex-wrap items-baseline gap-x-2 text-sm tabular-nums">
+                    <span className={cn(item.was && "text-red-600 dark:text-red-400")}>${item.price}</span>
+                    {item.was && <span className="text-xs text-muted-foreground line-through">${item.was}</span>}
+                    <span className={cn("text-xs", stockLabel[item.stock].className)}>{stockLabel[item.stock].text}</span>
+                  </p>
+                  <p className="mt-1 text-[11px] text-muted-foreground">{item.added}</p>
+                </div>
+                <div className="col-span-2 flex items-center gap-2 sm:col-span-1">
+                  {item.stock === "out" ? (
+                    <Button
+                      variant="outline"
+                      className="flex-1 sm:w-40 sm:flex-none"
+                      onClick={() => setNotify((n) => (n.includes(item.id) ? n : [...n, item.id]))}
+                    >
+                      <Bell />
+                      {notified ? "We'll email you" : "Notify me"}
+                    </Button>
+                  ) : (
+                    <Button
+                      variant={inBag ? "secondary" : "default"}
+                      className="flex-1 sm:w-40 sm:flex-none"
+                      onClick={() => setMoved((m) => (m.includes(item.id) ? m : [...m, item.id]))}
+                    >
+                      {inBag ? "In your bag" : "Move to bag"}
+                    </Button>
+                  )}
+                  <Button variant="ghost" size="icon-lg" aria-label={`Remove ${item.name}`} onClick={() => remove(item.id)}>
+                    <Trash2 />
+                  </Button>
+                </div>
+              </li>
+            )
+          })}
+        </ul>
+      </div>
+    </section>
+  )
+}

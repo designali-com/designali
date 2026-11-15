@@ -1,0 +1,92 @@
+[
+  [
+    "analytics-06",
+    "analytics",
+    "650px",
+    "Four KPI cards in a responsive grid, each with a change badge and an inline area sparkline."
+  ],
+  [
+    "analytics-07",
+    "analytics",
+    "750px",
+    "Interactive stacked bar chart of signups by channel with toggleable legend chips and hover-to-inspect weekly totals."
+  ],
+  [
+    "analytics-08",
+    "analytics",
+    "700px",
+    "Centered SLO header above three semicircle gauge cards showing value, target and status."
+  ],
+  [
+    "analytics-09",
+    "analytics",
+    "650px",
+    "Split layout with retention narrative and summary stats beside a color-scaled monthly cohort retention table."
+  ],
+  [
+    "analytics-10",
+    "analytics",
+    "750px",
+    "Two-panel geo breakdown with total visitors and continent share bar beside a ranked country list with relative bars."
+  ],
+  [
+    "analytics-11",
+    "analytics",
+    "650px",
+    "Inverted live band with pulsing status, ticking visitor counter, auto-updating bar stream and top live pages."
+  ],
+  [
+    "analytics-12",
+    "analytics",
+    "700px",
+    "KPI tab strip that switches a gradient area chart with hover point tooltips across twelve months."
+  ],
+  [
+    "analytics-13",
+    "analytics",
+    "650px",
+    "Period-over-period line chart comparing this month to last (dashed) with axis ticks beside a stacked totals panel."
+  ],
+  [
+    "analytics-14",
+    "analytics",
+    "600px",
+    "GitHub-style activity heatmap of daily deploys over 26 weeks with headline stats and an intensity legend."
+  ],
+  [
+    "analytics-15",
+    "analytics",
+    "700px",
+    "Sticky device-mix summary beside 100% stacked horizontal bars per month with in-bar labels."
+  ],
+  [
+    "analytics-16",
+    "analytics",
+    "750px",
+    "Clickable bubble scatter of campaign spend vs ROAS with a break-even line and a detail panel for the selected campaign."
+  ],
+  [
+    "analytics-17",
+    "analytics",
+    "650px",
+    "Investor-style milestone timeline toward an ARR goal with a horizontal progress track on desktop and vertical list on mobile."
+  ],
+  [
+    "analytics-18",
+    "analytics",
+    "850px",
+    "Bento dashboard with a primary DAU hero tile, small stat tiles, a plan donut and segmented feature adoption meters."
+  ],
+  [
+    "analytics-19",
+    "analytics",
+    "650px",
+    "Sortable leaderboard table of marketplace apps with initials avatars, numeric columns and inline trend sparklines."
+  ],
+  [
+    "analytics-20",
+    "analytics",
+    "1000px",
+    "Email-style weekly digest card with a narrative summary using highlighted figures, stat row, biggest movers and CTAs."
+  ]
+]

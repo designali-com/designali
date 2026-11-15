@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "clients-10",
+  "type": "registry:block",
+  "description": "A statement headline above client names grouped by company size.",
+  "dependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/designali/blocks/clients/clients-10.tsx",
+      "content": "const tiers = [\n  {\n    label: \"Enterprise\",\n    names: [\"Meridian Group\", \"Halcyon Bank\", \"Atlas Freight\"],\n  },\n  {\n    label: \"Scale-ups\",\n    names: [\"Driftwave\", \"Quanta AI\", \"Tessel\", \"Polar\"],\n  },\n  {\n    label: \"Studios\",\n    names: [\"Corvid\", \"Blockhaus\", \"Lumen & Co\", \"Fieldnote\", \"Sable\"],\n  },\n]\n\nexport default function Clients10() {\n  return (\n    <section className=\"w-full bg-background py-20\">\n      <div className=\"mx-auto max-w-5xl px-6\">\n        <h2 className=\"max-w-xl text-3xl font-semibold tracking-tight md:text-4xl\">\n          Companies of every size build their brand on our foundation.\n        </h2>\n        <div className=\"mt-12 divide-y divide-border border-y border-border\">\n          {tiers.map((tier) => (\n            <div\n              key={tier.label}\n              className=\"grid gap-4 py-6 md:grid-cols-[180px_1fr] md:items-center\"\n            >\n              <p className=\"text-xs tracking-widest text-muted-foreground uppercase\">\n                {tier.label}\n              </p>\n              <div className=\"flex flex-wrap gap-x-10 gap-y-3\">\n                {tier.names.map((name) => (\n                  <span\n                    key={name}\n                    className=\"text-lg font-medium tracking-tight\"\n                  >\n                    {name}\n                  </span>\n                ))}\n              </div>\n            </div>\n          ))}\n        </div>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "500px"
+  },
+  "categories": [
+    "clients"
+  ]
+}

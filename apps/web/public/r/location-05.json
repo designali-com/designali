@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "location-05",
+  "type": "registry:block",
+  "description": "A dotted world map with pinned offices and a regional list.",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/designali/blocks/location/location-05.tsx",
+      "content": "import { ArrowUpRight } from \"lucide-react\"\n\nconst regions = [\n  {\n    region: \"Americas\",\n    cities: [\n      { city: \"San Francisco\", type: \"HQ\" },\n      { city: \"Austin\", type: \"Engineering\" },\n      { city: \"São Paulo\", type: \"Sales\" },\n    ],\n  },\n  {\n    region: \"Europe\",\n    cities: [\n      { city: \"Amsterdam\", type: \"EMEA HQ\" },\n      { city: \"Dublin\", type: \"Support\" },\n      { city: \"Warsaw\", type: \"Engineering\" },\n    ],\n  },\n  {\n    region: \"Asia Pacific\",\n    cities: [\n      { city: \"Sydney\", type: \"APAC HQ\" },\n      { city: \"Bengaluru\", type: \"Engineering\" },\n      { city: \"Seoul\", type: \"Sales\" },\n    ],\n  },\n]\n\nconst dots: [number, number][] = [\n  [18, 38], [24, 46], [33, 72], [48, 30], [46, 34], [53, 32],\n  [86, 76], [70, 54], [82, 38],\n]\n\nexport default function Location05() {\n  return (\n    <section className=\"w-full bg-foreground py-20 text-background md:py-28\">\n      <div className=\"mx-auto max-w-6xl px-6\">\n        <div className=\"relative aspect-[2.4/1] w-full border border-background/15\">\n          <svg viewBox=\"0 0 100 42\" className=\"absolute inset-0 h-full w-full\">\n            {Array.from({ length: 50 }).map((_, x) =>\n              Array.from({ length: 21 }).map((_, y) => (\n                <circle\n                  key={`${x}-${y}`}\n                  cx={x * 2 + 1}\n                  cy={y * 2 + 1}\n                  r=\"0.18\"\n                  className=\"fill-background/20\"\n                />\n              ))\n            )}\n            {dots.map(([x, y]) => (\n              <g key={`${x}-${y}`}>\n                <circle cx={x} cy={y * 0.42} r=\"1.6\" className=\"fill-background/15\" />\n                <circle cx={x} cy={y * 0.42} r=\"0.6\" className=\"fill-background\" />\n              </g>\n            ))}\n          </svg>\n          <p className=\"absolute start-4 top-4 text-xs tracking-widest text-background/60 uppercase\">\n            9 offices &middot; 3 regions\n          </p>\n        </div>\n\n        <div className=\"mt-14 grid gap-10 md:grid-cols-3\">\n          {regions.map((group) => (\n            <div key={group.region}>\n              <h3 className=\"border-b border-background/15 pb-3 text-sm text-background/60\">\n                {group.region}\n              </h3>\n              <ul>\n                {group.cities.map((item) => (\n                  <li key={item.city}>\n                    <a\n                      href=\"#\"\n                      className=\"group flex items-center justify-between border-b border-background/15 py-4\"\n                    >\n                      <span className=\"text-xl font-medium tracking-tight\">\n                        {item.city}\n                      </span>\n                      <span className=\"flex items-center gap-2 text-xs text-background/60\">\n                        {item.type}\n                        <ArrowUpRight className=\"size-3.5 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5\" />\n                      </span>\n                    </a>\n                  </li>\n                ))}\n              </ul>\n            </div>\n          ))}\n        </div>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "800px"
+  },
+  "categories": [
+    "location"
+  ]
+}

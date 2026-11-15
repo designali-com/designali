@@ -1,0 +1,17 @@
+[
+  ["ecommerce-06", "ecommerce", "1000px", "Product listing with sidebar filters for category, material and price, active filter chips and sorting."],
+  ["ecommerce-07", "ecommerce", "650px", "Recommended products scroll-snap carousel with SVG sneakers, colour swatches, sale badges and wishlist toggles."],
+  ["ecommerce-08", "ecommerce", "900px", "Three-column product comparison table with highlighted popular model, feature checks and add-to-cart row."],
+  ["ecommerce-09", "ecommerce", "800px", "Multi-step checkout stepper for contact, delivery and payment beside a live order summary."],
+  ["ecommerce-10", "ecommerce", "850px", "Order tracking page with a horizontal progress bar, vertical event timeline, parcel contents and address."],
+  ["ecommerce-11", "ecommerce", "600px", "Inverted sale banner with a live countdown timer, copyable promo code and stock-claimed progress bar."],
+  ["ecommerce-12", "ecommerce", "1000px", "Reviews section with rating distribution bars that filter a list of verified reviews with helpful votes."],
+  ["ecommerce-13", "ecommerce", "800px", "Slide-over cart drawer on a mock storefront with free-shipping progress, quantity steppers and an upsell."],
+  ["ecommerce-14", "ecommerce", "750px", "Shop-the-room scene with clickable hotspots on an SVG interior linked to a product list and bundle price."],
+  ["ecommerce-15", "ecommerce", "850px", "Gift card builder with amount, design and message inputs driving a live card preview."],
+  ["ecommerce-16", "ecommerce", "850px", "Subscribe-and-save product page with purchase type radios, delivery frequency, grind and bag count options."],
+  ["ecommerce-17", "ecommerce", "750px", "Wishlist rows with price drops, stock status, move-to-bag, notify-me and remove actions."],
+  ["ecommerce-18", "ecommerce", "900px", "Product spotlight with recolourable SVG speaker, finish swatches, highlight icons and overview/specs tabs."],
+  ["ecommerce-19", "ecommerce", "750px", "Numbered bestseller leaderboard with period switcher, rank movement indicators and quick-add buttons."],
+  ["ecommerce-20", "ecommerce", "800px", "Account order history with status filter tabs and expandable orders showing items, invoice and buy-again actions."]
+]

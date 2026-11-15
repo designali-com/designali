@@ -1,0 +1,27 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "contact-03",
+  "type": "registry:block",
+  "description": "A project inquiry form with selectable services and budget ranges.",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button",
+    "input",
+    "textarea"
+  ],
+  "files": [
+    {
+      "path": "registry/designali/blocks/contact/contact-03.tsx",
+      "content": "\"use client\"\n\nimport { useState } from \"react\"\nimport { Check } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Input } from \"@workspace/ui/components/input\"\nimport { Textarea } from \"@workspace/ui/components/textarea\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst services = [\n  \"Brand identity\",\n  \"Website\",\n  \"Product design\",\n  \"Motion\",\n  \"3D & CGI\",\n  \"Design system\",\n]\n\nconst budgets = [\"< $10k\", \"$10k – $25k\", \"$25k – $50k\", \"$50k +\"]\n\nexport default function Contact03() {\n  const [selected, setSelected] = useState<string[]>([\"Website\"])\n  const [budget, setBudget] = useState(budgets[1])\n\n  function toggle(service: string) {\n    setSelected((current) =>\n      current.includes(service)\n        ? current.filter((item) => item !== service)\n        : [...current, service]\n    )\n  }\n\n  return (\n    <section className=\"w-full bg-muted/40 py-20 md:py-28\">\n      <div className=\"mx-auto max-w-3xl px-6\">\n        <h2 className=\"text-4xl font-semibold tracking-tight md:text-6xl\">\n          Start a project\n        </h2>\n        <p className=\"mt-4 text-muted-foreground\">\n          A few quick details help us put the right people on your brief.\n        </p>\n\n        <form className=\"mt-12 space-y-10\">\n          <fieldset className=\"space-y-4\">\n            <legend className=\"text-sm font-medium\">\n              01 &mdash; What do you need?\n            </legend>\n            <div className=\"flex flex-wrap gap-2\">\n              {services.map((service) => {\n                const active = selected.includes(service)\n                return (\n                  <button\n                    key={service}\n                    type=\"button\"\n                    onClick={() => toggle(service)}\n                    className={cn(\n                      \"inline-flex h-10 items-center gap-2 border px-4 text-sm transition-colors\",\n                      active\n                        ? \"border-foreground bg-foreground text-background\"\n                        : \"bg-background hover:bg-muted\"\n                    )}\n                  >\n                    {active && <Check className=\"size-3.5\" />}\n                    {service}\n                  </button>\n                )\n              })}\n            </div>\n          </fieldset>\n\n          <fieldset className=\"space-y-4\">\n            <legend className=\"text-sm font-medium\">02 &mdash; Budget</legend>\n            <div className=\"grid grid-cols-2 border bg-background sm:grid-cols-4\">\n              {budgets.map((item) => (\n                <button\n                  key={item}\n                  type=\"button\"\n                  onClick={() => setBudget(item)}\n                  className={cn(\n                    \"h-12 border-e border-b text-sm transition-colors last:border-e-0 sm:border-b-0 [&:nth-child(2)]:border-e-0 sm:[&:nth-child(2)]:border-e\",\n                    budget === item\n                      ? \"bg-primary text-primary-foreground\"\n                      : \"hover:bg-muted\"\n                  )}\n                >\n                  {item}\n                </button>\n              ))}\n            </div>\n          </fieldset>\n\n          <fieldset className=\"space-y-4\">\n            <legend className=\"text-sm font-medium\">\n              03 &mdash; About you\n            </legend>\n            <div className=\"grid gap-3 sm:grid-cols-2\">\n              <Input placeholder=\"Full name\" className=\"h-11 bg-background\" />\n              <Input\n                type=\"email\"\n                placeholder=\"Email address\"\n                className=\"h-11 bg-background\"\n              />\n            </div>\n            <Textarea\n              placeholder=\"Anything else we should know? Links, deadlines, references...\"\n              className=\"min-h-32 bg-background\"\n            />\n          </fieldset>\n\n          <div className=\"flex flex-col items-start justify-between gap-4 border-t pt-6 sm:flex-row sm:items-center\">\n            <p className=\"text-xs text-muted-foreground\">\n              {selected.length} service{selected.length === 1 ? \"\" : \"s\"}{\" \"}\n              selected &middot; {budget}\n            </p>\n            <Button type=\"submit\" size=\"lg\">\n              Submit brief\n            </Button>\n          </div>\n        </form>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "1000px"
+  },
+  "categories": [
+    "contact"
+  ]
+}

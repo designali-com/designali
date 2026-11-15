@@ -24,10 +24,10 @@ export default function Hero07() {
             cohort reporting that reconciles to the cent, updated hourly.
           </p>
           <div className="mt-10 flex flex-wrap gap-3">
-            <Button size="lg" render={<a href="#" />}>
+            <Button size="lg" nativeButton={false} render={<a href="#" />}>
               Start 14-day trial
             </Button>
-            <Button size="lg" variant="ghost" render={<a href="#" />}>
+            <Button size="lg" variant="ghost" nativeButton={false} render={<a href="#" />}>
               <Play />
               Watch 2-minute demo
             </Button>

@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "footer-09",
+  "type": "registry:block",
+  "description": "A minimal single-row footer with links and a system status indicator.",
+  "dependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/designali/blocks/footer/footer-09.tsx",
+      "content": "const links = [\"Work\", \"Services\", \"Journal\", \"About\", \"Contact\"]\n\nexport default function Footer09() {\n  return (\n    <footer className=\"w-full border-t border-border bg-background\">\n      <div className=\"mx-auto flex max-w-6xl flex-col items-center gap-8 px-6 py-12 md:flex-row md:justify-between\">\n        <a href=\"#\" className=\"flex items-center gap-2 text-sm font-semibold\">\n          <span className=\"flex size-6 items-center justify-center bg-foreground text-[10px] text-background\">\n            L\n          </span>\n          Lumen\n        </a>\n        <nav className=\"flex flex-wrap justify-center gap-x-8 gap-y-3 text-sm text-muted-foreground\">\n          {links.map((link) => (\n            <a key={link} href=\"#\" className=\"hover:text-foreground\">\n              {link}\n            </a>\n          ))}\n        </nav>\n        <div className=\"flex items-center gap-2 text-xs text-muted-foreground\">\n          <span className=\"size-2 rounded-full bg-emerald-500\" />\n          All systems operational\n        </div>\n      </div>\n      <p className=\"border-t border-border py-4 text-center text-xs text-muted-foreground\">\n        © 2026 Lumen Labs. Made with care in Lisbon.\n      </p>\n    </footer>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "300px"
+  },
+  "categories": [
+    "footer"
+  ]
+}

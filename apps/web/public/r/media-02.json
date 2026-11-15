@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "media-02",
+  "type": "registry:block",
+  "description": "A featured video section with a large player frame and title.",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/designali/blocks/media/media-02.tsx",
+      "content": "import { Play } from \"lucide-react\"\n\nconst chapters = [\n  { time: \"00:00\", title: \"Why design systems fail\" },\n  { time: \"04:12\", title: \"Tokens before components\" },\n  { time: \"11:38\", title: \"Shipping in public\" },\n  { time: \"18:05\", title: \"Q&A with the team\" },\n]\n\nexport default function Media02() {\n  return (\n    <section className=\"w-full bg-background py-20\">\n      <div className=\"mx-auto grid max-w-6xl gap-8 px-6 lg:grid-cols-[2fr_1fr]\">\n        <div\n          className=\"group relative aspect-video border border-border\"\n          style={{\n            background:\n              \"linear-gradient(135deg, var(--chart-1), var(--chart-3) 60%, var(--chart-5))\",\n          }}\n        >\n          <button\n            aria-label=\"Play video\"\n            className=\"absolute top-1/2 left-1/2 flex size-20 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-background text-foreground transition-transform group-hover:scale-105\"\n          >\n            <Play className=\"size-7 translate-x-0.5 fill-current\" />\n          </button>\n          <span className=\"absolute bottom-4 left-4 bg-background px-2 py-1 text-xs tabular-nums\">\n            24:16\n          </span>\n        </div>\n        <div className=\"flex flex-col\">\n          <p className=\"text-xs tracking-widest text-muted-foreground uppercase\">\n            Keynote\n          </p>\n          <h2 className=\"mt-3 text-2xl font-semibold tracking-tight\">\n            Building systems that outlive the team that made them\n          </h2>\n          <ol className=\"mt-6 divide-y divide-border border-y border-border\">\n            {chapters.map((chapter) => (\n              <li key={chapter.time}>\n                <a href=\"#\" className=\"flex gap-4 py-3 text-sm hover:bg-muted\">\n                  <span className=\"w-12 text-muted-foreground tabular-nums\">\n                    {chapter.time}\n                  </span>\n                  <span>{chapter.title}</span>\n                </a>\n              </li>\n            ))}\n          </ol>\n        </div>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "800px"
+  },
+  "categories": [
+    "media"
+  ]
+}

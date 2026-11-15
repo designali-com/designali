@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "lists-05",
+  "type": "registry:block",
+  "description": "A shared file list table with types, sizes and owners.",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/designali/blocks/lists/lists-05.tsx",
+      "content": "import {\n  Download,\n  FileText,\n  Film,\n  Folder,\n  ImageIcon,\n  type LucideIcon,\n} from \"lucide-react\"\n\nconst files: {\n  name: string\n  icon: LucideIcon\n  size: string\n  modified: string\n  owner: string\n}[] = [\n  { name: \"Brand guidelines 2026.pdf\", icon: FileText, size: \"18.4 MB\", modified: \"2 hours ago\", owner: \"Amara Osei\" },\n  { name: \"Logo package\", icon: Folder, size: \"42 files\", modified: \"Yesterday\", owner: \"Tomás Ibarra\" },\n  { name: \"Campaign hero.png\", icon: ImageIcon, size: \"6.1 MB\", modified: \"Nov 10\", owner: \"Hana Sato\" },\n  { name: \"Launch film final.mp4\", icon: Film, size: \"312 MB\", modified: \"Nov 08\", owner: \"Noah Clarke\" },\n  { name: \"Tone of voice.pdf\", icon: FileText, size: \"2.3 MB\", modified: \"Oct 29\", owner: \"Priya Raman\" },\n]\n\nexport default function Lists05() {\n  return (\n    <section className=\"w-full bg-background py-24\">\n      <div className=\"mx-auto max-w-5xl px-6\">\n        <div className=\"flex flex-wrap items-center justify-between gap-4\">\n          <div>\n            <p className=\"text-xs text-muted-foreground\">Shared with you</p>\n            <h2 className=\"mt-1 text-3xl font-semibold tracking-tight\">Brand assets</h2>\n          </div>\n          <a\n            href=\"#\"\n            className=\"inline-flex items-center gap-2 border border-border px-4 py-2 text-xs hover:bg-muted\"\n          >\n            <Download className=\"size-3.5\" />\n            Download all\n          </a>\n        </div>\n\n        <div className=\"mt-10 overflow-x-auto border border-border\">\n          <table className=\"w-full min-w-[640px] text-left text-sm\">\n            <thead className=\"border-b border-border bg-muted/50 text-xs text-muted-foreground\">\n              <tr>\n                <th className=\"px-4 py-3 font-medium\">Name</th>\n                <th className=\"px-4 py-3 font-medium\">Owner</th>\n                <th className=\"px-4 py-3 font-medium\">Modified</th>\n                <th className=\"px-4 py-3 text-right font-medium\">Size</th>\n              </tr>\n            </thead>\n            <tbody className=\"divide-y divide-border\">\n              {files.map((file) => (\n                <tr key={file.name} className=\"hover:bg-muted/40\">\n                  <td className=\"px-4 py-3.5\">\n                    <span className=\"flex items-center gap-3\">\n                      <file.icon className=\"size-4 text-muted-foreground\" />\n                      {file.name}\n                    </span>\n                  </td>\n                  <td className=\"px-4 py-3.5 text-muted-foreground\">{file.owner}</td>\n                  <td className=\"px-4 py-3.5 text-muted-foreground\">{file.modified}</td>\n                  <td className=\"px-4 py-3.5 text-right font-mono text-xs text-muted-foreground\">\n                    {file.size}\n                  </td>\n                </tr>\n              ))}\n            </tbody>\n          </table>\n        </div>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "600px"
+  },
+  "categories": [
+    "lists"
+  ]
+}

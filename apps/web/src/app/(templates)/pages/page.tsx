@@ -1,9 +1,8 @@
+import { featuredPages as FEATURED_PAGES } from "@/registry/registry-page-categories"
 import { BlockDisplay } from "@/src/components/templates/blocks/block-display"
  
 export const dynamic = "force-static"
 export const revalidate = false
-
-const FEATURED_PAGES = ["landing-01"]
 
 export default function PagesPage() {
   return (

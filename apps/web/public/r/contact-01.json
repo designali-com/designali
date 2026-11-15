@@ -1,0 +1,28 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "contact-01",
+  "type": "registry:block",
+  "description": "A two-column contact section with details and a message form.",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button",
+    "input",
+    "label",
+    "textarea"
+  ],
+  "files": [
+    {
+      "path": "registry/designali/blocks/contact/contact-01.tsx",
+      "content": "import { ArrowRight, Mail, MapPin, Phone } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Input } from \"@workspace/ui/components/input\"\nimport { Label } from \"@workspace/ui/components/label\"\nimport { Textarea } from \"@workspace/ui/components/textarea\"\n\nconst details = [\n  {\n    icon: Mail,\n    label: \"Email\",\n    value: \"hello@northwind.studio\",\n    href: \"mailto:hello@northwind.studio\",\n  },\n  {\n    icon: Phone,\n    label: \"Phone\",\n    value: \"+1 (415) 555-0132\",\n    href: \"tel:+14155550132\",\n  },\n  {\n    icon: MapPin,\n    label: \"Studio\",\n    value: \"214 Valencia St, San Francisco, CA\",\n    href: \"#\",\n  },\n]\n\nexport default function Contact01() {\n  return (\n    <section className=\"w-full border-y bg-background py-20 md:py-28\">\n      <div className=\"mx-auto grid max-w-6xl gap-12 px-6 md:grid-cols-2 md:gap-20\">\n        <div className=\"flex flex-col justify-between gap-10\">\n          <div className=\"space-y-5\">\n            <p className=\"text-xs font-medium tracking-widest text-muted-foreground uppercase\">\n              Contact\n            </p>\n            <h2 className=\"text-4xl font-semibold tracking-tight md:text-5xl\">\n              Let&apos;s build something worth talking about.\n            </h2>\n            <p className=\"max-w-md text-muted-foreground\">\n              Tell us about your product, timeline and budget. A partner from\n              our team replies within one business day.\n            </p>\n          </div>\n\n          <ul className=\"divide-y border-y\">\n            {details.map((item) => (\n              <li key={item.label}>\n                <a\n                  href={item.href}\n                  className=\"group flex items-center gap-4 py-4 transition-colors hover:text-foreground\"\n                >\n                  <item.icon className=\"size-4 text-muted-foreground\" />\n                  <span className=\"w-16 text-xs text-muted-foreground uppercase\">\n                    {item.label}\n                  </span>\n                  <span className=\"text-sm font-medium\">{item.value}</span>\n                  <ArrowRight className=\"ms-auto size-4 -translate-x-1 opacity-0 transition-all group-hover:translate-x-0 group-hover:opacity-100\" />\n                </a>\n              </li>\n            ))}\n          </ul>\n        </div>\n\n        <form className=\"space-y-5 border bg-card p-6 md:p-8\">\n          <div className=\"grid gap-5 sm:grid-cols-2\">\n            <div className=\"space-y-2\">\n              <Label htmlFor=\"contact-01-first\">First name</Label>\n              <Input id=\"contact-01-first\" placeholder=\"Ada\" className=\"h-10\" />\n            </div>\n            <div className=\"space-y-2\">\n              <Label htmlFor=\"contact-01-last\">Last name</Label>\n              <Input\n                id=\"contact-01-last\"\n                placeholder=\"Lovelace\"\n                className=\"h-10\"\n              />\n            </div>\n          </div>\n          <div className=\"space-y-2\">\n            <Label htmlFor=\"contact-01-email\">Work email</Label>\n            <Input\n              id=\"contact-01-email\"\n              type=\"email\"\n              placeholder=\"ada@company.com\"\n              className=\"h-10\"\n            />\n          </div>\n          <div className=\"space-y-2\">\n            <Label htmlFor=\"contact-01-message\">Project details</Label>\n            <Textarea\n              id=\"contact-01-message\"\n              placeholder=\"We're redesigning our onboarding flow and need help with...\"\n              className=\"min-h-36\"\n            />\n          </div>\n          <Button type=\"submit\" size=\"lg\" className=\"w-full\">\n            Send message\n            <ArrowRight />\n          </Button>\n          <p className=\"text-center text-xs text-muted-foreground\">\n            By submitting you agree to our privacy policy.\n          </p>\n        </form>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "800px"
+  },
+  "categories": [
+    "contact"
+  ]
+}

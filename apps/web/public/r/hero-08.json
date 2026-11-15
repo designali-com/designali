@@ -1,0 +1,26 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "hero-08",
+  "type": "registry:block",
+  "description": "A centred waitlist hero with a gradient glow and inline email form.",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button",
+    "input"
+  ],
+  "files": [
+    {
+      "path": "registry/designali/blocks/hero/hero-08.tsx",
+      "content": "\"use client\"\n\nimport { useState } from \"react\"\nimport { ArrowRight } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Input } from \"@workspace/ui/components/input\"\n\nexport default function Hero08() {\n  const [email, setEmail] = useState(\"\")\n  const [joined, setJoined] = useState(false)\n\n  return (\n    <section className=\"relative w-full overflow-hidden bg-background px-6 py-28 md:py-40\">\n      <div\n        aria-hidden\n        className=\"pointer-events-none absolute inset-x-0 top-0 h-[480px] opacity-40 blur-3xl\"\n        style={{\n          background:\n            \"radial-gradient(ellipse at 50% 0%, var(--chart-2) 0%, transparent 60%)\",\n        }}\n      />\n      <div className=\"relative mx-auto flex max-w-3xl flex-col items-center text-center\">\n        <p className=\"font-mono text-xs tracking-widest text-muted-foreground uppercase\">\n          Private beta, spring 2027\n        </p>\n        <h1 className=\"mt-6 text-5xl font-medium tracking-tight md:text-7xl\">\n          Notes that write their own follow-ups.\n        </h1>\n        <p className=\"mt-6 max-w-xl text-base leading-7 text-muted-foreground\">\n          Drift listens to your meetings, drafts the recap and files action\n          items in the tools your team already uses. Join the waitlist to get\n          early access.\n        </p>\n        <form\n          className=\"mt-10 flex w-full max-w-md flex-col gap-2 sm:flex-row\"\n          onSubmit={(event) => {\n            event.preventDefault()\n            if (email) setJoined(true)\n          }}\n        >\n          <Input\n            type=\"email\"\n            required\n            placeholder=\"name@company.com\"\n            aria-label=\"Email address\"\n            value={email}\n            onChange={(event) => setEmail(event.target.value)}\n            className=\"h-11 bg-background text-sm\"\n          />\n          <Button type=\"submit\" size=\"lg\" className=\"h-11\" disabled={joined}>\n            {joined ? \"You're in\" : \"Join waitlist\"}\n            {!joined && <ArrowRight />}\n          </Button>\n        </form>\n        <p className=\"mt-4 text-xs text-muted-foreground\">\n          3,412 people ahead of you. We invite a new group every Friday.\n        </p>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "700px"
+  },
+  "categories": [
+    "hero"
+  ]
+}

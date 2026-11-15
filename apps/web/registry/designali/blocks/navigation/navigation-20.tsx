@@ -1,0 +1,103 @@
+"use client"
+
+import { useState } from "react"
+import { ArrowUpRight } from "lucide-react"
+
+import { cn } from "@workspace/ui/lib/utils"
+
+const entries = [
+  {
+    title: "Tidewater Hotel",
+    kind: "Hospitality identity",
+    year: "2025",
+    gradient: "from-amber-200 via-orange-300 to-rose-400",
+  },
+  {
+    title: "Quill & Ledger",
+    kind: "Editorial platform",
+    year: "2025",
+    gradient: "from-emerald-200 via-teal-300 to-cyan-500",
+  },
+  {
+    title: "Vanta Audio",
+    kind: "Product launch site",
+    year: "2024",
+    gradient: "from-zinc-300 via-zinc-500 to-zinc-800",
+  },
+  {
+    title: "Fernhill Dairy",
+    kind: "Packaging system",
+    year: "2024",
+    gradient: "from-lime-200 via-green-300 to-emerald-500",
+  },
+  {
+    title: "Northgate Transit",
+    kind: "Wayfinding",
+    year: "2023",
+    gradient: "from-sky-200 via-blue-400 to-indigo-600",
+  },
+]
+
+export default function Navigation20() {
+  const [hovered, setHovered] = useState(0)
+
+  return (
+    <section className="w-full bg-foreground py-20 text-background md:py-28">
+      <div className="mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-[1fr_380px]">
+        <nav aria-label="Selected work">
+          <div className="flex items-end justify-between border-b border-background/20 pb-4">
+            <p className="text-xs tracking-widest text-background/60 uppercase">Index</p>
+            <p className="text-xs text-background/60 tabular-nums">{entries.length} projects</p>
+          </div>
+          <ul>
+            {entries.map((entry, index) => (
+              <li key={entry.title} className="border-b border-background/20">
+                <a
+                  href="#"
+                  onMouseEnter={() => setHovered(index)}
+                  onFocus={() => setHovered(index)}
+                  className="group grid grid-cols-[2rem_1fr_auto] items-baseline gap-4 py-5 md:grid-cols-[3rem_1fr_200px_4rem]"
+                >
+                  <span className="font-mono text-xs text-background/50 tabular-nums">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <span
+                    className={cn(
+                      "text-2xl font-semibold tracking-tight transition-colors md:text-4xl",
+                      hovered === index ? "text-background" : "text-background/40"
+                    )}
+                  >
+                    {entry.title}
+                  </span>
+                  <span className="hidden text-sm text-background/60 md:block">{entry.kind}</span>
+                  <span className="flex items-center justify-end gap-1 text-sm text-background/60 tabular-nums">
+                    <span className="hidden sm:inline">{entry.year}</span>
+                    <ArrowUpRight className="size-4 opacity-0 transition-opacity group-hover:opacity-100" />
+                  </span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+
+        <div className="relative hidden aspect-[4/5] overflow-hidden lg:block">
+          {entries.map((entry, index) => (
+            <div
+              key={entry.title}
+              className={cn(
+                "absolute inset-0 flex flex-col justify-end bg-gradient-to-br p-6 text-zinc-950 transition-all duration-500",
+                entry.gradient,
+                hovered === index ? "scale-100 opacity-100" : "scale-105 opacity-0"
+              )}
+            >
+              <span className="absolute top-6 left-6 size-24 rounded-full border-2 border-zinc-950/30" />
+              <span className="absolute top-20 right-8 h-40 w-16 bg-zinc-950/10" />
+              <p className="text-xs tracking-widest uppercase opacity-70">{entry.kind}</p>
+              <p className="mt-1 text-2xl font-semibold">{entry.title}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}

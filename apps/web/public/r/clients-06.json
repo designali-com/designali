@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "clients-06",
+  "type": "registry:block",
+  "description": "A bordered grid of client wordmarks with hover highlight.",
+  "dependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/designali/blocks/clients/clients-06.tsx",
+      "content": "const clients = [\n  \"Northwind\",\n  \"Lumen & Co\",\n  \"Halcyon\",\n  \"Vertex Labs\",\n  \"Orbital\",\n  \"Kestrel\",\n  \"Monolith\",\n  \"Fieldnote\",\n]\n\nexport default function Clients06() {\n  return (\n    <section className=\"w-full border-y border-border bg-background py-16\">\n      <div className=\"mx-auto max-w-6xl px-6\">\n        <p className=\"text-center text-xs tracking-[0.2em] text-muted-foreground uppercase\">\n          Trusted by product teams at\n        </p>\n        <div className=\"mt-10 grid grid-cols-2 border-t border-l border-border sm:grid-cols-4\">\n          {clients.map((client) => (\n            <div\n              key={client}\n              className=\"flex h-28 items-center justify-center border-r border-b border-border text-lg font-semibold tracking-tight text-muted-foreground transition-colors hover:bg-muted hover:text-foreground\"\n            >\n              {client}\n            </div>\n          ))}\n        </div>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "500px"
+  },
+  "categories": [
+    "clients"
+  ]
+}

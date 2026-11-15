@@ -1,0 +1,17 @@
+[
+  ["grid-06", "grid", "900px", "Team member grid with gradient initials portraits and a bio panel that slides up on hover."],
+  ["grid-07", "grid", "1200px", "Masonry moodboard mixing colour swatches, pull quotes and design notes in CSS columns."],
+  ["grid-08", "grid", "600px", "Bordered KPI grid with big values, trend deltas and inline SVG sparklines."],
+  ["grid-09", "grid", "750px", "Asymmetric shop-by-category grid with one feature tile and gradient image tiles."],
+  ["grid-10", "grid", "1100px", "Filterable template gallery with segmented category tabs and browser-mockup previews."],
+  ["grid-11", "grid", "750px", "Numbered six-step process grid with durations and a nine-week progress strip."],
+  ["grid-12", "grid", "900px", "Month calendar grid with colour-coded events, a legend and dot markers on mobile."],
+  ["grid-13", "grid", "750px", "Inverted dark band with an enterprise security feature grid and a whitepaper CTA."],
+  ["grid-14", "grid", "750px", "Multi-select onboarding card grid with check states and a create workspace footer."],
+  ["grid-15", "grid", "950px", "Office locations grid paired with a dotted world map showing pulsing hub markers."],
+  ["grid-16", "grid", "1000px", "Project grid where a clicked card expands to two columns with summary and results."],
+  ["grid-17", "grid", "850px", "Product bento mixing a bar chart, reviewer avatars, feature flag toggles and a code card."],
+  ["grid-18", "grid", "750px", "Searchable icon library grid with click-to-copy feedback and an empty state."],
+  ["grid-19", "grid", "1000px", "Photographer portfolio mosaic with spanning gradient frames and hover captions."],
+  ["grid-20", "grid", "850px", "Keyboard shortcut cheat sheet grid of grouped cards with key caps."]
+]

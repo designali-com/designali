@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "call-to-action-03",
+  "type": "registry:block",
+  "description": "A centred call-to-action over a masked grid background with a status pill.",
+  "dependencies": [],
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "registry/designali/blocks/call-to-action/call-to-action-03.tsx",
+      "content": "import { Button } from \"@workspace/ui/components/button\"\n\nexport default function CallToAction03() {\n  return (\n    <section className=\"relative w-full overflow-hidden bg-background px-6 py-24 md:py-32\">\n      <div\n        aria-hidden\n        className=\"pointer-events-none absolute inset-0 opacity-60\"\n        style={{\n          backgroundImage:\n            \"linear-gradient(var(--border) 1px, transparent 1px), linear-gradient(90deg, var(--border) 1px, transparent 1px)\",\n          backgroundSize: \"48px 48px\",\n          maskImage:\n            \"radial-gradient(ellipse at center, black 20%, transparent 70%)\",\n          WebkitMaskImage:\n            \"radial-gradient(ellipse at center, black 20%, transparent 70%)\",\n        }}\n      />\n      <div className=\"relative mx-auto flex max-w-3xl flex-col items-center text-center\">\n        <span className=\"inline-flex items-center gap-2 border border-border bg-background px-3 py-1 text-xs text-muted-foreground\">\n          <span className=\"size-1.5 rounded-full bg-emerald-500\" />\n          Free for teams up to five\n        </span>\n        <h2 className=\"mt-8 text-4xl font-medium tracking-tight text-foreground md:text-6xl\">\n          Design systems your whole team will actually use.\n        </h2>\n        <p className=\"mt-6 max-w-xl text-base leading-7 text-muted-foreground\">\n          Tokens, components and documentation in one place, synced with your\n          codebase on every merge. Set up takes about ten minutes.\n        </p>\n        <div className=\"mt-10 flex flex-col gap-3 sm:flex-row\">\n          <Button size=\"lg\" nativeButton={false} render={<a href=\"#\" />}>\n            Start for free\n          </Button>\n          <Button size=\"lg\" variant=\"outline\" nativeButton={false} render={<a href=\"#\" />}>\n            Talk to sales\n          </Button>\n        </div>\n        <p className=\"mt-6 text-xs text-muted-foreground\">\n          No credit card required. Cancel anytime.\n        </p>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "600px"
+  },
+  "categories": [
+    "call-to-action"
+  ]
+}

@@ -1,0 +1,17 @@
+[
+  ["portfolio-06", "portfolio", "800px", "Horizontal scroll-snap carousel of tall project cards with numbered counters and previous/next arrow controls."],
+  ["portfolio-07", "portfolio", "1200px", "Alternating zigzag case studies pairing a framed mockup with summary, headline metric and service tags."],
+  ["portfolio-08", "portfolio", "1200px", "Sticky studio introduction with stats on the left beside a vertically scrolling column of large project tiles."],
+  ["portfolio-09", "portfolio", "1100px", "Vertical year-by-year timeline of client projects with gradient thumbnails and role labels."],
+  ["portfolio-10", "portfolio", "750px", "Discipline tabs that swap a featured project panel with artwork, description and deliverables list."],
+  ["portfolio-11", "portfolio", "750px", "Spreadsheet-style project index table with client, discipline, role, year and highlighted outcome columns."],
+  ["portfolio-12", "portfolio", "650px", "Inverted dark band with an infinite marquee of oversized project names above a four-stat grid."],
+  ["portfolio-13", "portfolio", "900px", "Before/after redesign comparison with a draggable divider over two UI mockups and result metrics."],
+  ["portfolio-14", "portfolio", "1000px", "Photographer square grid with hover captions that opens a full-screen keyboard-navigable lightbox."],
+  ["portfolio-15", "portfolio", "750px", "Case study process stepper with progress bars and a detail card for each project phase."],
+  ["portfolio-16", "portfolio", "700px", "Awards list with year column beside sidebars for press mentions and speaking engagements."],
+  ["portfolio-17", "portfolio", "850px", "Developer profile with a contribution heatmap and open-source repository cards showing stars and language bars."],
+  ["portfolio-18", "portfolio", "1050px", "Centered featured-project hero over desktop and phone device mockups with a project metadata strip."],
+  ["portfolio-19", "portfolio", "900px", "Expandable accordion list of projects that reveals artwork, summary, key facts and a project link."],
+  ["portfolio-20", "portfolio", "900px", "Contact section with oversized copy-to-clipboard email, intro call slot picker and social links list."]
+]

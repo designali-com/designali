@@ -1,0 +1,24 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "pricing-07",
+  "type": "registry:block",
+  "description": "A usage-based pricing calculator with a seat slider and live total.",
+  "dependencies": [],
+  "registryDependencies": [
+    "button",
+    "slider"
+  ],
+  "files": [
+    {
+      "path": "registry/designali/blocks/pricing/pricing-07.tsx",
+      "content": "\"use client\"\n\nimport { useState } from \"react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Slider } from \"@workspace/ui/components/slider\"\n\nconst pricePerSeat = 14\nconst included = [\n  \"Unlimited projects\",\n  \"Shared component library\",\n  \"Version history\",\n  \"Role-based permissions\",\n]\n\nexport default function Pricing07() {\n  const [seats, setSeats] = useState(12)\n  const discount = seats >= 50 ? 0.2 : seats >= 20 ? 0.1 : 0\n  const total = Math.round(seats * pricePerSeat * (1 - discount))\n\n  return (\n    <section className=\"w-full bg-muted/40 py-20\">\n      <div className=\"mx-auto max-w-5xl px-6\">\n        <div className=\"grid border border-border bg-background lg:grid-cols-[3fr_2fr]\">\n          <div className=\"p-8 md:p-12\">\n            <p className=\"text-xs tracking-widest text-muted-foreground uppercase\">\n              Usage-based\n            </p>\n            <h2 className=\"mt-3 text-3xl font-semibold tracking-tight\">\n              Pay only for the seats you use\n            </h2>\n            <p className=\"mt-3 text-sm text-muted-foreground\">\n              ${pricePerSeat} per seat each month. Volume discounts apply\n              automatically at 20 and 50 seats.\n            </p>\n            <div className=\"mt-10\">\n              <div className=\"flex items-baseline justify-between text-sm\">\n                <span>Team size</span>\n                <span className=\"text-2xl font-semibold tabular-nums\">\n                  {seats} seats\n                </span>\n              </div>\n              <Slider\n                className=\"mt-4\"\n                min={1}\n                max={100}\n                value={[seats]}\n                onValueChange={(value) =>\n                  setSeats(Array.isArray(value) ? value[0]! : value)\n                }\n              />\n              <div className=\"mt-2 flex justify-between text-xs text-muted-foreground\">\n                <span>1</span>\n                <span>100</span>\n              </div>\n            </div>\n          </div>\n          <div className=\"flex flex-col justify-between gap-8 border-t border-border bg-muted/50 p-8 md:p-12 lg:border-t-0 lg:border-l\">\n            <div>\n              <p className=\"text-sm text-muted-foreground\">\n                Estimated monthly total\n              </p>\n              <p className=\"mt-2 text-5xl font-semibold tracking-tighter tabular-nums\">\n                ${total}\n              </p>\n              {discount > 0 && (\n                <p className=\"mt-2 text-xs text-muted-foreground\">\n                  Includes {discount * 100}% volume discount\n                </p>\n              )}\n              <ul className=\"mt-6 space-y-2 text-sm\">\n                {included.map((item) => (\n                  <li key={item}>&mdash; {item}</li>\n                ))}\n              </ul>\n            </div>\n            <Button size=\"lg\" className=\"w-full\">\n              Start 14-day trial\n            </Button>\n          </div>\n        </div>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "700px"
+  },
+  "categories": [
+    "pricing"
+  ]
+}

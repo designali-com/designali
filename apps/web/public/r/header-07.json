@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "header-07",
+  "type": "registry:block",
+  "description": "A centred-logo storefront header with split navigation and a mobile menu.",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "registry/designali/blocks/header/header-07.tsx",
+      "content": "\"use client\"\n\nimport { useState } from \"react\"\nimport { Menu, X } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\n\nconst left = [\"Shop\", \"Collections\", \"Journal\"]\nconst right = [\"About\", \"Stores\"]\n\nexport default function Header07() {\n  const [open, setOpen] = useState(false)\n\n  return (\n    <section className=\"w-full border-b bg-background\">\n      <header className=\"mx-auto grid h-20 max-w-7xl grid-cols-[1fr_auto_1fr] items-center px-6\">\n        <nav className=\"hidden gap-8 text-sm md:flex\">\n          {left.map((link) => (\n            <a key={link} href=\"#\" className=\"text-muted-foreground transition-colors hover:text-foreground\">\n              {link}\n            </a>\n          ))}\n        </nav>\n        <Button\n          variant=\"ghost\"\n          size=\"icon\"\n          className=\"md:hidden\"\n          aria-label=\"Toggle menu\"\n          onClick={() => setOpen(!open)}\n        >\n          {open ? <X /> : <Menu />}\n        </Button>\n\n        <a href=\"#\" className=\"font-serif text-2xl tracking-[0.3em] uppercase\">\n          Atelier\n        </a>\n\n        <div className=\"flex items-center justify-end gap-8 text-sm\">\n          <nav className=\"hidden gap-8 md:flex\">\n            {right.map((link) => (\n              <a key={link} href=\"#\" className=\"text-muted-foreground transition-colors hover:text-foreground\">\n                {link}\n              </a>\n            ))}\n          </nav>\n          <a href=\"#\" className=\"border-b border-foreground pb-0.5\">\n            Bag (2)\n          </a>\n        </div>\n      </header>\n\n      {open && (\n        <nav className=\"border-t md:hidden\">\n          {[...left, ...right].map((link) => (\n            <a key={link} href=\"#\" className=\"block border-b px-6 py-4 text-lg last:border-b-0\">\n              {link}\n            </a>\n          ))}\n        </nav>\n      )}\n    </section>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "400px"
+  },
+  "categories": [
+    "header"
+  ]
+}

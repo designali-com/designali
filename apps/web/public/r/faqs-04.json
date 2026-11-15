@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "faqs-04",
+  "type": "registry:block",
+  "description": "A numbered two-column FAQ grid with bordered cells.",
+  "dependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/designali/blocks/faqs/faqs-04.tsx",
+      "content": "const faqs = [\n  {\n    question: \"How long does a typical project take?\",\n    answer:\n      \"Most brand and website projects run six to ten weeks from kickoff to launch. Smaller scopes, like a landing page or a component audit, usually ship in two to three weeks.\",\n  },\n  {\n    question: \"Do you work with early-stage startups?\",\n    answer:\n      \"Yes. Around half of our clients are pre-seed to Series A. We offer a fixed-scope launch package designed for teams that need to move quickly on a lean budget.\",\n  },\n  {\n    question: \"What do you need from us to get started?\",\n    answer:\n      \"A short brief, access to any existing brand assets, and one decision-maker who can join a weekly review. We handle the rest, including research and stakeholder interviews.\",\n  },\n  {\n    question: \"Can you hand off to our in-house developers?\",\n    answer:\n      \"Every project ships with annotated Figma files, a token library and a recorded walkthrough. We stay on Slack for two weeks after handoff to answer questions.\",\n  },\n  {\n    question: \"How do payments work?\",\n    answer:\n      \"We invoice 50% at kickoff and 50% at delivery. Retainers are billed monthly in advance and can be paused or cancelled with 30 days' notice.\",\n  },\n  {\n    question: \"Do you sign NDAs?\",\n    answer:\n      \"Of course. We are happy to sign your NDA before the first call, or we can send over our standard mutual agreement.\",\n  },\n]\n\nexport default function Faqs04() {\n  return (\n    <section className=\"w-full border-y border-border bg-background py-20 md:py-28\">\n      <div className=\"mx-auto max-w-6xl px-6\">\n        <div className=\"max-w-2xl\">\n          <p className=\"text-xs tracking-[0.2em] text-muted-foreground uppercase\">\n            Questions\n          </p>\n          <h2 className=\"mt-4 text-3xl font-semibold tracking-tight md:text-5xl\">\n            Everything you need to know before we start.\n          </h2>\n        </div>\n        <dl className=\"mt-14 grid border-t border-l border-border md:grid-cols-2\">\n          {faqs.map((faq, index) => (\n            <div\n              key={faq.question}\n              className=\"flex gap-6 border-r border-b border-border p-6 md:p-8\"\n            >\n              <span className=\"font-mono text-xs text-muted-foreground\">\n                {String(index + 1).padStart(2, \"0\")}\n              </span>\n              <div>\n                <dt className=\"text-base font-medium\">{faq.question}</dt>\n                <dd className=\"mt-3 text-sm leading-6 text-muted-foreground\">\n                  {faq.answer}\n                </dd>\n              </div>\n            </div>\n          ))}\n        </dl>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "800px"
+  },
+  "categories": [
+    "faqs"
+  ]
+}
