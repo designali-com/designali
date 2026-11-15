@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-08",
+  "type": "registry:example",
+  "description": "A search input with a leading icon and a keyboard shortcut hint.",
+  "files": [
+    {
+      "path": "registry/designali/examples/input/input-08.tsx",
+      "content": "import { SearchIcon } from \"lucide-react\"\n\nimport {\n  InputGroup,\n  InputGroupAddon,\n  InputGroupInput,\n} from \"@workspace/ui/components/input-group\"\nimport { Kbd, KbdGroup } from \"@workspace/ui/components/kbd\"\n\nexport default function SearchShortcutInput() {\n  return (\n    <InputGroup className=\"w-full max-w-sm\">\n      <InputGroupAddon>\n        <SearchIcon />\n      </InputGroupAddon>\n      <InputGroupInput placeholder=\"Search docs, issues, people...\" />\n      <InputGroupAddon align=\"inline-end\">\n        <KbdGroup>\n          <Kbd>⌘</Kbd>\n          <Kbd>K</Kbd>\n        </KbdGroup>\n      </InputGroupAddon>\n    </InputGroup>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

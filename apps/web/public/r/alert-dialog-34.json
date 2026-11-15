@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "alert-dialog-34",
+  "type": "registry:example",
+  "description": "Dialog whose actions display Esc and Enter keyboard hints.",
+  "files": [
+    {
+      "path": "registry/designali/examples/alert-dialog/alert-dialog-34.tsx",
+      "content": "import {\n  AlertDialog,\n  AlertDialogAction,\n  AlertDialogCancel,\n  AlertDialogContent,\n  AlertDialogDescription,\n  AlertDialogFooter,\n  AlertDialogHeader,\n  AlertDialogTitle,\n  AlertDialogTrigger,\n} from \"@workspace/ui/components/alert-dialog\"\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Kbd, KbdGroup } from \"@workspace/ui/components/kbd\"\n\nexport default function KeyboardShortcutHints() {\n  return (\n    <AlertDialog>\n      <AlertDialogTrigger render={<Button variant=\"outline\" />}>\n        Close tab\n        <KbdGroup className=\"ms-1\">\n          <Kbd>Ctrl</Kbd>\n          <Kbd>W</Kbd>\n        </KbdGroup>\n      </AlertDialogTrigger>\n      <AlertDialogContent>\n        <AlertDialogHeader>\n          <AlertDialogTitle>Close with unsaved changes?</AlertDialogTitle>\n          <AlertDialogDescription>\n            &quot;onboarding-copy.md&quot; has edits that haven&apos;t been\n            saved.\n          </AlertDialogDescription>\n        </AlertDialogHeader>\n        <AlertDialogFooter>\n          <AlertDialogCancel>\n            Cancel <Kbd className=\"ms-1\">Esc</Kbd>\n          </AlertDialogCancel>\n          <AlertDialogAction variant=\"destructive\" autoFocus>\n            Close anyway <Kbd className=\"ms-1\">Enter</Kbd>\n          </AlertDialogAction>\n        </AlertDialogFooter>\n      </AlertDialogContent>\n    </AlertDialog>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

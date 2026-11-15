@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "switch-24",
+  "type": "registry:example",
+  "description": "Checkout add-on switches for gift wrap and shipping protection that update the total.",
+  "files": [
+    {
+      "path": "registry/designali/examples/switch/switch-24.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  Field,\n  FieldContent,\n  FieldDescription,\n  FieldLabel,\n} from \"@workspace/ui/components/field\"\nimport { Separator } from \"@workspace/ui/components/separator\"\nimport { Switch } from \"@workspace/ui/components/switch\"\n\nconst addOns = [\n  {\n    id: \"gift\",\n    label: \"Gift wrap\",\n    description: \"Recycled paper and a handwritten note\",\n    price: 4,\n  },\n  {\n    id: \"protection\",\n    label: \"Shipping protection\",\n    description: \"Covers loss, theft, and damage\",\n    price: 2.5,\n  },\n]\n\nexport default function CheckoutAddOns() {\n  const [selected, setSelected] = React.useState<Record<string, boolean>>({\n    protection: true,\n  })\n  const subtotal = 86\n  const total = addOns.reduce(\n    (sum, a) => sum + (selected[a.id] ? a.price : 0),\n    subtotal\n  )\n\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-3 border p-4\">\n      {addOns.map((addOn) => (\n        <Field key={addOn.id} orientation=\"horizontal\">\n          <FieldContent>\n            <FieldLabel htmlFor={\"addon-\" + addOn.id}>\n              {addOn.label}{\" \"}\n              <span className=\"text-muted-foreground\">\n                +{\"$\" + addOn.price.toFixed(2)}\n              </span>\n            </FieldLabel>\n            <FieldDescription>{addOn.description}</FieldDescription>\n          </FieldContent>\n          <Switch\n            id={\"addon-\" + addOn.id}\n            checked={!!selected[addOn.id]}\n            onCheckedChange={(checked) =>\n              setSelected((s) => ({ ...s, [addOn.id]: checked }))\n            }\n          />\n        </Field>\n      ))}\n      <Separator />\n      <div className=\"flex justify-between text-sm\">\n        <span className=\"text-muted-foreground\">Total</span>\n        <span className=\"font-semibold\">{\"$\" + total.toFixed(2)}</span>\n      </div>\n      <Button className=\"w-full\">Pay now</Button>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

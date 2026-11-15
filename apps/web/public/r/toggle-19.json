@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toggle-19",
+  "type": "registry:example",
+  "description": "Editor toolbar toggles for word wrap and line numbers that change a code preview.",
+  "files": [
+    {
+      "path": "registry/designali/examples/toggle/toggle-19.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { ListOrderedIcon, WrapTextIcon } from \"lucide-react\"\n\nimport { Toggle } from \"@workspace/ui/components/toggle\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst lines = [\n  \"export function formatPrice(cents: number, currency = 'EUR') {\",\n  \"  return new Intl.NumberFormat('de-DE', { style: 'currency', currency }).format(cents / 100)\",\n  \"}\",\n]\n\nexport default function CodeEditorViewToggles() {\n  const [wrap, setWrap] = React.useState(false)\n  const [numbers, setNumbers] = React.useState(true)\n\n  return (\n    <div className=\"w-full max-w-md border\">\n      <div className=\"flex items-center gap-1 border-b px-2 py-1\">\n        <span className=\"flex-1 font-mono text-xs text-muted-foreground\">\n          price.ts\n        </span>\n        <Toggle\n          size=\"sm\"\n          pressed={wrap}\n          onPressedChange={setWrap}\n          aria-label=\"Word wrap\"\n        >\n          <WrapTextIcon />\n        </Toggle>\n        <Toggle\n          size=\"sm\"\n          pressed={numbers}\n          onPressedChange={setNumbers}\n          aria-label=\"Line numbers\"\n        >\n          <ListOrderedIcon />\n        </Toggle>\n      </div>\n      <pre\n        className={cn(\n          \"overflow-x-auto p-3 font-mono text-xs leading-5\",\n          wrap && \"break-all whitespace-pre-wrap\"\n        )}\n      >\n        {lines.map((line, i) => (\n          <div key={i} className=\"flex gap-3\">\n            {numbers && (\n              <span className=\"w-4 shrink-0 text-end text-muted-foreground select-none\">\n                {i + 1}\n              </span>\n            )}\n            <span>{line}</span>\n          </div>\n        ))}\n      </pre>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

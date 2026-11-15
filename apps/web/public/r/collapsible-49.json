@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "collapsible-49",
+  "type": "registry:example",
+  "description": "Settings danger zone kept collapsed so destructive actions are not exposed by default.",
+  "files": [
+    {
+      "path": "registry/designali/examples/collapsible/collapsible-49.tsx",
+      "content": "import { ChevronDownIcon, Trash2Icon, TriangleAlertIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  Collapsible,\n  CollapsibleContent,\n  CollapsibleTrigger,\n} from \"@workspace/ui/components/collapsible\"\n\nexport default function DangerZoneSettings() {\n  return (\n    <Collapsible className=\"w-full max-w-md border border-destructive/40\">\n      <CollapsibleTrigger\n        render={\n          <Button\n            variant=\"ghost\"\n            className=\"w-full justify-start text-destructive hover:text-destructive\"\n          >\n            <TriangleAlertIcon />\n            Danger zone\n            <ChevronDownIcon className=\"ml-auto transition-transform group-data-panel-open/button:rotate-180\" />\n          </Button>\n        }\n      />\n      <CollapsibleContent className=\"h-(--collapsible-panel-height) overflow-hidden transition-[height] duration-200 ease-out data-ending-style:h-0 data-starting-style:h-0\">\n        <div className=\"divide-y border-t border-destructive/40\">\n          <div className=\"flex items-center justify-between gap-4 p-4\">\n            <div>\n              <p className=\"text-sm font-medium\">Transfer ownership</p>\n              <p className=\"text-xs text-muted-foreground\">\n                Hand this workspace to another admin.\n              </p>\n            </div>\n            <Button variant=\"outline\" size=\"sm\">\n              Transfer\n            </Button>\n          </div>\n          <div className=\"flex items-center justify-between gap-4 p-4\">\n            <div>\n              <p className=\"text-sm font-medium\">Delete workspace</p>\n              <p className=\"text-xs text-muted-foreground\">\n                Permanently remove all projects and data.\n              </p>\n            </div>\n            <Button variant=\"destructive\" size=\"sm\">\n              <Trash2Icon data-icon=\"inline-start\" />\n              Delete\n            </Button>\n          </div>\n        </div>\n      </CollapsibleContent>\n    </Collapsible>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

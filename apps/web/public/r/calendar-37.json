@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "calendar-37",
+  "type": "registry:example",
+  "description": "Calendar with built-in navigation hidden and replaced by a custom header with a Today button.",
+  "files": [
+    {
+      "path": "registry/designali/examples/calendar/calendar-37.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { addMonths, format, isSameMonth, subMonths } from \"date-fns\"\nimport { ChevronLeftIcon, ChevronRightIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Calendar } from \"@workspace/ui/components/calendar\"\n\nexport default function CustomHeaderNavigation() {\n  const [today] = React.useState(() => new Date())\n  const [month, setMonth] = React.useState(today)\n  const [date, setDate] = React.useState<undefined | Date>(today)\n\n  return (\n    <div className=\"w-fit border\">\n      <div className=\"flex items-center gap-1 border-b p-2\">\n        <span className=\"flex-1 ps-1 text-sm font-medium\">\n          {format(month, \"MMMM yyyy\")}\n        </span>\n        <Button\n          variant=\"outline\"\n          size=\"sm\"\n          disabled={isSameMonth(month, today)}\n          onClick={() => {\n            setMonth(today)\n            setDate(today)\n          }}\n        >\n          Today\n        </Button>\n        <Button\n          variant=\"ghost\"\n          size=\"icon-sm\"\n          aria-label=\"Previous month\"\n          onClick={() => setMonth(subMonths(month, 1))}\n        >\n          <ChevronLeftIcon />\n        </Button>\n        <Button\n          variant=\"ghost\"\n          size=\"icon-sm\"\n          aria-label=\"Next month\"\n          onClick={() => setMonth(addMonths(month, 1))}\n        >\n          <ChevronRightIcon />\n        </Button>\n      </div>\n      <Calendar\n        mode=\"single\"\n        hideNavigation\n        month={month}\n        onMonthChange={setMonth}\n        selected={date}\n        onSelect={setDate}\n        classNames={{ month_caption: \"hidden\" }}\n      />\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

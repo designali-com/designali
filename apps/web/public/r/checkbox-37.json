@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "checkbox-37",
+  "type": "registry:example",
+  "description": "Multiple-choice survey question where checking \"Other\" reveals a text input.",
+  "files": [
+    {
+      "path": "registry/designali/examples/checkbox/checkbox-37.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { Checkbox } from \"@workspace/ui/components/checkbox\"\nimport {\n  Field,\n  FieldDescription,\n  FieldGroup,\n  FieldLabel,\n  FieldLegend,\n  FieldSet,\n} from \"@workspace/ui/components/field\"\nimport { Input } from \"@workspace/ui/components/input\"\n\nconst options = [\n  \"Search engine\",\n  \"Friend or colleague\",\n  \"Podcast\",\n  \"Social media\",\n]\n\nexport default function SurveyOtherOption() {\n  const [other, setOther] = React.useState(false)\n\n  return (\n    <FieldSet className=\"w-full max-w-xs\">\n      <FieldLegend>How did you hear about us?</FieldLegend>\n      <FieldDescription>Select all that apply.</FieldDescription>\n      <FieldGroup className=\"gap-3\">\n        {options.map((option) => (\n          <Field key={option} orientation=\"horizontal\">\n            <Checkbox id={\"source-\" + option} name=\"source\" value={option} />\n            <FieldLabel htmlFor={\"source-\" + option} className=\"font-normal\">\n              {option}\n            </FieldLabel>\n          </Field>\n        ))}\n        <Field orientation=\"horizontal\">\n          <Checkbox\n            id=\"source-other\"\n            checked={other}\n            onCheckedChange={setOther}\n          />\n          <FieldLabel htmlFor=\"source-other\" className=\"font-normal\">\n            Other\n          </FieldLabel>\n        </Field>\n        {other && (\n          <Input\n            autoFocus\n            placeholder=\"Tell us where\"\n            aria-label=\"Other source\"\n            className=\"ms-6 w-auto\"\n          />\n        )}\n      </FieldGroup>\n    </FieldSet>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

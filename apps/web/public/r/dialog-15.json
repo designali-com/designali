@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "dialog-15",
+  "type": "registry:example",
+  "description": "Thumbnail grid where each tile opens a large gradient preview with metadata.",
+  "files": [
+    {
+      "path": "registry/designali/examples/dialog/dialog-15.tsx",
+      "content": "import { DownloadIcon, HeartIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  Dialog,\n  DialogContent,\n  DialogDescription,\n  DialogFooter,\n  DialogHeader,\n  DialogTitle,\n  DialogTrigger,\n} from \"@workspace/ui/components/dialog\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst artworks = [\n  {\n    id: \"dawn\",\n    title: \"Dawn Over Harbor\",\n    gradient: \"from-amber-300 via-rose-400 to-violet-500\",\n    size: \"4000 × 3000\",\n  },\n  {\n    id: \"tide\",\n    title: \"Low Tide\",\n    gradient: \"from-sky-300 via-cyan-400 to-emerald-500\",\n    size: \"3600 × 2400\",\n  },\n  {\n    id: \"dusk\",\n    title: \"Dusk Ridge\",\n    gradient: \"from-indigo-500 via-purple-500 to-pink-500\",\n    size: \"5120 × 2880\",\n  },\n  {\n    id: \"moss\",\n    title: \"Moss Garden\",\n    gradient: \"from-lime-300 via-green-500 to-teal-600\",\n    size: \"3000 × 3000\",\n  },\n]\n\nexport default function GalleryPreviewDialog() {\n  return (\n    <div className=\"grid w-full max-w-sm grid-cols-2 gap-2\">\n      {artworks.map((art) => (\n        <Dialog key={art.id}>\n          <DialogTrigger\n            className={cn(\n              \"aspect-square bg-gradient-to-br outline-none focus-visible:ring-2 focus-visible:ring-ring\",\n              art.gradient\n            )}\n            aria-label={\"Preview \" + art.title}\n          />\n          <DialogContent className=\"sm:max-w-lg\">\n            <div\n              className={cn(\n                \"aspect-[4/3] w-full bg-gradient-to-br\",\n                art.gradient\n              )}\n            />\n            <DialogHeader>\n              <DialogTitle>{art.title}</DialogTitle>\n              <DialogDescription>\n                {art.size} px · Uploaded by Mira Solberg\n              </DialogDescription>\n            </DialogHeader>\n            <DialogFooter>\n              <Button variant=\"outline\">\n                <HeartIcon data-icon=\"inline-start\" />\n                Favorite\n              </Button>\n              <Button>\n                <DownloadIcon data-icon=\"inline-start\" />\n                Download\n              </Button>\n            </DialogFooter>\n          </DialogContent>\n        </Dialog>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

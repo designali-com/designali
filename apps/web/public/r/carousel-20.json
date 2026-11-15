@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "carousel-20",
+  "type": "registry:example",
+  "description": "Booking date strip of selectable days with week-by-week navigation.",
+  "files": [
+    {
+      "path": "registry/designali/examples/carousel/carousel-20.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport {\n  Carousel,\n  CarouselContent,\n  CarouselItem,\n  CarouselNext,\n  CarouselPrevious,\n} from \"@workspace/ui/components/carousel\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst dayNames = [\"Sun\", \"Mon\", \"Tue\", \"Wed\", \"Thu\", \"Fri\", \"Sat\"]\nconst dates = Array.from({ length: 21 }, (_, i) => ({\n  key: i,\n  weekday: dayNames[(i + 1) % 7],\n  date: ((i + 2) % 30) + 1,\n  full: (i + 1) % 7 === 0 || i === 4,\n}))\n\nexport default function WeekDayPickerStrip() {\n  const [picked, setPicked] = React.useState(2)\n\n  return (\n    <div className=\"w-full max-w-sm\">\n      <p className=\"mb-2 text-sm font-medium\">Pick a delivery date</p>\n      <Carousel opts={{ slidesToScroll: 7, align: \"start\" }} className=\"px-8\">\n        <CarouselContent className=\"-ms-1\">\n          {dates.map((d) => (\n            <CarouselItem key={d.key} className=\"basis-1/7 ps-1\">\n              <button\n                type=\"button\"\n                disabled={d.full}\n                onClick={() => setPicked(d.key)}\n                className={cn(\n                  \"flex w-full flex-col items-center gap-0.5 border py-2 text-xs transition-colors disabled:cursor-not-allowed disabled:opacity-40\",\n                  picked === d.key\n                    ? \"border-primary bg-primary text-primary-foreground\"\n                    : \"hover:bg-muted\"\n                )}\n              >\n                <span className=\"text-[10px] uppercase\">{d.weekday}</span>\n                <span className=\"text-sm font-semibold\">{d.date}</span>\n              </button>\n            </CarouselItem>\n          ))}\n        </CarouselContent>\n        <CarouselPrevious variant=\"ghost\" className=\"start-0\" />\n        <CarouselNext variant=\"ghost\" className=\"end-0\" />\n      </Carousel>\n      <p className=\"mt-2 text-xs text-muted-foreground\">\n        Greyed out days are fully booked.\n      </p>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

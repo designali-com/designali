@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-otp-17",
+  "type": "registry:example",
+  "description": "Minimal underline-only slots for a clean, borderless verification look.",
+  "files": [
+    {
+      "path": "registry/designali/examples/input-otp/input-otp-17.tsx",
+      "content": "import {\n  InputOTP,\n  InputOTPGroup,\n  InputOTPSlot,\n} from \"@workspace/ui/components/input-otp\"\n\nexport default function UnderlineSlots() {\n  return (\n    <InputOTP maxLength={6}>\n      <InputOTPGroup className=\"gap-3\">\n        <InputOTPSlot\n          index={0}\n          className=\"size-9 border-0 border-b-2 bg-transparent text-lg first:border-s-0 data-[active=true]:ring-0 dark:bg-transparent\"\n        />\n        <InputOTPSlot\n          index={1}\n          className=\"size-9 border-0 border-b-2 bg-transparent text-lg first:border-s-0 data-[active=true]:ring-0 dark:bg-transparent\"\n        />\n        <InputOTPSlot\n          index={2}\n          className=\"size-9 border-0 border-b-2 bg-transparent text-lg first:border-s-0 data-[active=true]:ring-0 dark:bg-transparent\"\n        />\n        <InputOTPSlot\n          index={3}\n          className=\"size-9 border-0 border-b-2 bg-transparent text-lg first:border-s-0 data-[active=true]:ring-0 dark:bg-transparent\"\n        />\n        <InputOTPSlot\n          index={4}\n          className=\"size-9 border-0 border-b-2 bg-transparent text-lg first:border-s-0 data-[active=true]:ring-0 dark:bg-transparent\"\n        />\n        <InputOTPSlot\n          index={5}\n          className=\"size-9 border-0 border-b-2 bg-transparent text-lg first:border-s-0 data-[active=true]:ring-0 dark:bg-transparent\"\n        />\n      </InputOTPGroup>\n    </InputOTP>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

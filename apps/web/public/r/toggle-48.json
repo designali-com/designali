@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toggle-48",
+  "type": "registry:example",
+  "description": "A toggle with an inline-start icon slot and an inline-end count, used as a saved-search chip.",
+  "files": [
+    {
+      "path": "registry/designali/examples/toggle/toggle-48.tsx",
+      "content": "import { FilterIcon } from \"lucide-react\"\n\nimport { Toggle } from \"@workspace/ui/components/toggle\"\n\nconst searches = [\n  { label: \"Open bugs\", count: 14 },\n  { label: \"Assigned to me\", count: 6 },\n  { label: \"Due this week\", count: 3 },\n]\n\nexport default function SavedSearchToggleChips() {\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-2 border p-4\">\n      <p className=\"text-xs font-medium text-muted-foreground\">\n        Saved searches\n      </p>\n      <div className=\"flex flex-wrap gap-2\">\n        {searches.map((s, i) => (\n          <Toggle key={s.label} variant=\"outline\" defaultPressed={i === 0}>\n            <FilterIcon data-icon=\"inline-start\" />\n            {s.label}\n            <span\n              data-icon=\"inline-end\"\n              className=\"text-muted-foreground tabular-nums\"\n            >\n              {s.count}\n            </span>\n          </Toggle>\n        ))}\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

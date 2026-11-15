@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "footer-13",
+  "type": "registry:block",
+  "description": "Editorial footer with contact prompt and link lists above a giant cropped wordmark.",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/designali/blocks/footer/footer-13.tsx",
+      "content": "import { ArrowUpRight } from \"lucide-react\"\n\nconst links = [\"Index\", \"Work\", \"Studio\", \"Journal\", \"Contact\"]\nconst social = [\"Newsletter\", \"Reading list\", \"Showreel\", \"Press kit\"]\n\nexport default function Footer13() {\n  return (\n    <footer className=\"w-full overflow-hidden border-t bg-background\">\n      <div className=\"mx-auto max-w-7xl px-6 pt-14\">\n        <div className=\"grid gap-10 md:grid-cols-[2fr_1fr_1fr]\">\n          <div>\n            <p className=\"max-w-sm text-2xl leading-tight font-medium tracking-tight\">\n              Have a building, a brand or a book that needs a point of view?\n            </p>\n            <a\n              href=\"#\"\n              className=\"group mt-6 inline-flex items-center gap-2 border-b border-foreground pb-1 text-sm\"\n            >\n              studio@morrow.works\n              <ArrowUpRight className=\"size-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5\" />\n            </a>\n          </div>\n          <ul className=\"space-y-2 text-sm\">\n            {links.map((link) => (\n              <li key={link}>\n                <a href=\"#\" className=\"text-muted-foreground hover:text-foreground\">\n                  {link}\n                </a>\n              </li>\n            ))}\n          </ul>\n          <ul className=\"space-y-2 text-sm\">\n            {social.map((link) => (\n              <li key={link}>\n                <a href=\"#\" className=\"text-muted-foreground hover:text-foreground\">\n                  {link}\n                </a>\n              </li>\n            ))}\n          </ul>\n        </div>\n        <div className=\"mt-14 flex justify-between text-xs text-muted-foreground\">\n          <span>© 2026 Morrow Works</span>\n          <span>Rotterdam / Lisbon</span>\n        </div>\n      </div>\n      <p\n        aria-hidden\n        className=\"mx-auto mt-4 max-w-7xl translate-y-[18%] px-4 text-center text-[24vw] leading-[0.8] font-semibold tracking-tighter text-foreground select-none xl:text-[300px]\"\n      >\n        morrow\n      </p>\n    </footer>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "620px"
+  },
+  "categories": [
+    "footer"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "separator-05",
+  "type": "registry:example",
+  "description": "Row of dashboard KPIs divided by vertical separators.",
+  "files": [
+    {
+      "path": "registry/designali/examples/separator/separator-05.tsx",
+      "content": "import * as React from \"react\"\n\nimport { Separator } from \"@workspace/ui/components/separator\"\n\nconst kpis = [\n  { label: \"MRR\", value: \"$48.2k\", delta: \"+6.4%\" },\n  { label: \"Active users\", value: \"3,912\", delta: \"+2.1%\" },\n  { label: \"Churn\", value: \"1.8%\", delta: \"-0.3%\" },\n]\n\nexport default function KpiStatsVerticalSeparators() {\n  return (\n    <div className=\"flex w-full max-w-md items-stretch border p-4\">\n      {kpis.map((kpi, index) => (\n        <React.Fragment key={kpi.label}>\n          {index > 0 && <Separator orientation=\"vertical\" className=\"mx-4\" />}\n          <div className=\"flex flex-1 flex-col gap-1\">\n            <span className=\"text-xs text-muted-foreground\">{kpi.label}</span>\n            <span className=\"text-lg font-semibold tabular-nums\">\n              {kpi.value}\n            </span>\n            <span className=\"text-xs text-emerald-600 dark:text-emerald-400\">\n              {kpi.delta}\n            </span>\n          </div>\n        </React.Fragment>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

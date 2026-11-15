@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "slider-36",
+  "type": "registry:example",
+  "description": "Bill splitter with a tip percentage slider and per-person totals.",
+  "files": [
+    {
+      "path": "registry/designali/examples/slider/slider-36.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { Slider } from \"@workspace/ui/components/slider\"\n\nconst bill = 86.4\n\nexport default function TipCalculatorSlider() {\n  const [tip, setTip] = React.useState([18])\n  const [people, setPeople] = React.useState([3])\n  const total = bill * (1 + tip[0]! / 100)\n\n  return (\n    <div className=\"flex w-full max-w-xs flex-col gap-4 border p-4\">\n      <div className=\"flex justify-between text-sm\">\n        <span className=\"text-muted-foreground\">Bill</span>\n        <span className=\"tabular-nums\">${bill.toFixed(2)}</span>\n      </div>\n      <div className=\"flex flex-col gap-2\">\n        <div className=\"flex justify-between text-sm\">\n          <span>Tip</span>\n          <span className=\"tabular-nums\">{tip[0]}%</span>\n        </div>\n        <Slider\n          aria-label=\"Tip\"\n          value={tip}\n          onValueChange={(value) => setTip(value as number[])}\n          max={30}\n        />\n      </div>\n      <div className=\"flex flex-col gap-2\">\n        <div className=\"flex justify-between text-sm\">\n          <span>Split</span>\n          <span className=\"tabular-nums\">{people[0]} people</span>\n        </div>\n        <Slider\n          aria-label=\"People\"\n          value={people}\n          onValueChange={(value) => setPeople(value as number[])}\n          min={1}\n          max={10}\n        />\n      </div>\n      <div className=\"flex items-baseline justify-between border-t pt-3\">\n        <span className=\"text-sm\">Each pays</span>\n        <span className=\"text-xl font-semibold tabular-nums\">\n          ${(total / people[0]!).toFixed(2)}\n        </span>\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

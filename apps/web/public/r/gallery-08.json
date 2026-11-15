@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "gallery-08",
+  "type": "registry:block",
+  "description": "Horizontal scroll-snap strip of portrait frames with numbered counters and arrow navigation.",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "registry/designali/blocks/gallery/gallery-08.tsx",
+      "content": "\"use client\"\n\nimport { useRef } from \"react\"\nimport { ArrowLeft, ArrowRight } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\n\nconst frames = [\n  {\n    title: \"Harbour at Dawn\",\n    place: \"Porto Veil\",\n    year: \"2025\",\n    gradient: \"linear-gradient(160deg, var(--chart-1), var(--chart-3))\",\n  },\n  {\n    title: \"Terrace Garden\",\n    place: \"Casa Lumen\",\n    year: \"2025\",\n    gradient: \"linear-gradient(200deg, var(--chart-2), var(--chart-4))\",\n  },\n  {\n    title: \"Quarry Light\",\n    place: \"North Ridge\",\n    year: \"2024\",\n    gradient: \"linear-gradient(120deg, var(--chart-5), var(--chart-2))\",\n  },\n  {\n    title: \"Glass Pavilion\",\n    place: \"Atelier Osk\",\n    year: \"2024\",\n    gradient: \"linear-gradient(90deg, var(--chart-3), var(--chart-1))\",\n  },\n  {\n    title: \"Winter Orchard\",\n    place: \"Valmont Farm\",\n    year: \"2023\",\n    gradient: \"linear-gradient(30deg, var(--chart-4), var(--chart-5))\",\n  },\n  {\n    title: \"Salt Road\",\n    place: \"Coastline 9\",\n    year: \"2023\",\n    gradient: \"linear-gradient(240deg, var(--chart-2), var(--chart-1))\",\n  },\n]\n\nexport default function Gallery08() {\n  const track = useRef<HTMLDivElement>(null)\n  const scroll = (dir: number) => {\n    const el = track.current\n    if (!el) return\n    el.scrollBy({ left: dir * el.clientWidth * 0.8, behavior: \"smooth\" })\n  }\n\n  return (\n    <section className=\"w-full overflow-hidden bg-background py-20\">\n      <div className=\"mx-auto max-w-7xl px-6\">\n        <div className=\"flex flex-wrap items-end justify-between gap-6\">\n          <div>\n            <p className=\"text-xs tracking-widest text-muted-foreground uppercase\">\n              Field journal\n            </p>\n            <h2 className=\"mt-3 text-3xl font-semibold tracking-tight md:text-4xl\">\n              Places we photographed this year\n            </h2>\n          </div>\n          <div className=\"flex gap-2\">\n            <Button\n              variant=\"outline\"\n              size=\"icon-lg\"\n              aria-label=\"Previous\"\n              onClick={() => scroll(-1)}\n            >\n              <ArrowLeft />\n            </Button>\n            <Button\n              variant=\"outline\"\n              size=\"icon-lg\"\n              aria-label=\"Next\"\n              onClick={() => scroll(1)}\n            >\n              <ArrowRight />\n            </Button>\n          </div>\n        </div>\n        <div\n          ref={track}\n          className=\"-mx-6 mt-10 flex snap-x snap-mandatory gap-4 overflow-x-auto scroll-px-6 px-6 pb-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden\"\n        >\n          {frames.map((frame, i) => (\n            <figure\n              key={frame.title}\n              className=\"group w-[78%] shrink-0 snap-start sm:w-[45%] lg:w-[30%]\"\n            >\n              <div className=\"relative aspect-[3/4] overflow-hidden border border-border\">\n                <div\n                  className=\"absolute inset-0 transition-transform duration-700 group-hover:scale-105\"\n                  style={{ background: frame.gradient }}\n                />\n                <span className=\"absolute top-4 left-4 bg-background/85 px-2 py-1 font-mono text-[11px] tabular-nums backdrop-blur\">\n                  {String(i + 1).padStart(2, \"0\")} / {String(frames.length).padStart(2, \"0\")}\n                </span>\n              </div>\n              <figcaption className=\"mt-3 flex items-baseline justify-between gap-4\">\n                <span className=\"font-medium\">{frame.title}</span>\n                <span className=\"text-xs text-muted-foreground\">\n                  {frame.place}, {frame.year}\n                </span>\n              </figcaption>\n            </figure>\n          ))}\n        </div>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "800px"
+  },
+  "categories": [
+    "gallery"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-22",
+  "type": "registry:example",
+  "description": "A controlled search input that shows a clear button only when it has a value.",
+  "files": [
+    {
+      "path": "registry/designali/examples/input/input-22.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { SearchIcon, XIcon } from \"lucide-react\"\n\nimport {\n  InputGroup,\n  InputGroupAddon,\n  InputGroupButton,\n  InputGroupInput,\n} from \"@workspace/ui/components/input-group\"\n\nexport default function ClearableSearchInput() {\n  const [query, setQuery] = React.useState(\"quarterly report\")\n\n  return (\n    <InputGroup className=\"w-full max-w-sm\">\n      <InputGroupAddon>\n        <SearchIcon />\n      </InputGroupAddon>\n      <InputGroupInput\n        aria-label=\"Search files\"\n        placeholder=\"Search files\"\n        value={query}\n        onChange={(e) => setQuery(e.target.value)}\n      />\n      {query && (\n        <InputGroupAddon align=\"inline-end\">\n          <InputGroupButton\n            size=\"icon-xs\"\n            aria-label=\"Clear search\"\n            onClick={() => setQuery(\"\")}\n          >\n            <XIcon />\n          </InputGroupButton>\n        </InputGroupAddon>\n      )}\n    </InputGroup>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

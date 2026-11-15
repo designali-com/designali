@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "pagination-28",
+  "type": "registry:example",
+  "description": "Documentation footer with bordered previous and next cards that show page titles.",
+  "files": [
+    {
+      "path": "registry/designali/examples/pagination/pagination-28.tsx",
+      "content": "import { ArrowLeftIcon, ArrowRightIcon } from \"lucide-react\"\n\nimport {\n  Pagination,\n  PaginationContent,\n  PaginationItem,\n} from \"@workspace/ui/components/pagination\"\n\nexport default function DocsPrevNextCards() {\n  return (\n    <Pagination className=\"max-w-md\">\n      <PaginationContent className=\"grid w-full grid-cols-2 gap-3\">\n        <PaginationItem>\n          <a\n            href=\"#\"\n            className=\"flex flex-col gap-1 border p-3 transition-colors hover:bg-muted\"\n          >\n            <span className=\"flex items-center gap-1 text-[11px] text-muted-foreground\">\n              <ArrowLeftIcon className=\"size-3\" /> Previous\n            </span>\n            <span className=\"truncate text-sm font-medium\">Installation</span>\n          </a>\n        </PaginationItem>\n        <PaginationItem>\n          <a\n            href=\"#\"\n            className=\"flex flex-col items-end gap-1 border p-3 text-end transition-colors hover:bg-muted\"\n          >\n            <span className=\"flex items-center gap-1 text-[11px] text-muted-foreground\">\n              Next <ArrowRightIcon className=\"size-3\" />\n            </span>\n            <span className=\"truncate text-sm font-medium\">Theming</span>\n          </a>\n        </PaginationItem>\n      </PaginationContent>\n    </Pagination>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "skeleton-39",
+  "type": "registry:example",
+  "description": "Feed placeholder whose rows pulse with staggered animation delays for a wave effect.",
+  "files": [
+    {
+      "path": "registry/designali/examples/skeleton/skeleton-39.tsx",
+      "content": "import { Skeleton } from \"@workspace/ui/components/skeleton\"\n\nexport default function StaggeredPulseSkeleton() {\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-4\">\n      {Array.from({ length: 5 }).map((_, i) => {\n        const style = { animationDelay: i * 150 + \"ms\" }\n        return (\n          <div key={i} className=\"flex items-center gap-3\">\n            <Skeleton className=\"size-10 shrink-0\" style={style} />\n            <div className=\"flex flex-1 flex-col gap-2\">\n              <Skeleton className=\"h-3 w-3/4\" style={style} />\n              <Skeleton className=\"h-3 w-1/2\" style={style} />\n            </div>\n          </div>\n        )\n      })}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

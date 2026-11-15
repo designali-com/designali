@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toast-46",
+  "type": "registry:example",
+  "description": "A document overflow menu where each command is acknowledged with a toast.",
+  "files": [
+    {
+      "path": "registry/designali/examples/toast/toast-46.tsx",
+      "content": "\"use client\"\n\nimport {\n  CopyIcon,\n  FileTextIcon,\n  HistoryIcon,\n  MoreVerticalIcon,\n  PinIcon,\n} from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  DropdownMenu,\n  DropdownMenuContent,\n  DropdownMenuItem,\n  DropdownMenuTrigger,\n} from \"@workspace/ui/components/dropdown-menu\"\nimport { Toaster, createToastManager } from \"@workspace/ui/components/toast\"\n\nconst notify = createToastManager()\n\nexport default function DropdownActionsToast() {\n  return (\n    <Toaster toastManager={notify}>\n      <div className=\"flex w-full max-w-xs items-center gap-3 border p-3\">\n        <FileTextIcon className=\"size-5 text-muted-foreground\" />\n        <span className=\"flex-1 truncate text-sm\">\n          Partnership proposal.docx\n        </span>\n        <DropdownMenu>\n          <DropdownMenuTrigger\n            render={\n              <Button\n                variant=\"ghost\"\n                size=\"icon-sm\"\n                aria-label=\"More actions\"\n              />\n            }\n          >\n            <MoreVerticalIcon />\n          </DropdownMenuTrigger>\n          <DropdownMenuContent align=\"end\">\n            <DropdownMenuItem\n              onClick={() =>\n                notify.add({ description: \"A copy was created in My files.\" })\n              }\n            >\n              <CopyIcon />\n              Duplicate\n            </DropdownMenuItem>\n            <DropdownMenuItem\n              onClick={() =>\n                notify.add({\n                  type: \"success\",\n                  description: \"Pinned to the top of the folder.\",\n                })\n              }\n            >\n              <PinIcon />\n              Pin\n            </DropdownMenuItem>\n            <DropdownMenuItem\n              onClick={() =>\n                notify.add({\n                  type: \"info\",\n                  description: \"Version history opened in a new tab.\",\n                })\n              }\n            >\n              <HistoryIcon />\n              Version history\n            </DropdownMenuItem>\n          </DropdownMenuContent>\n        </DropdownMenu>\n      </div>\n    </Toaster>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

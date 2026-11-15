@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "avatar-29",
+  "type": "registry:example",
+  "description": "A ranked leaderboard with avatars, medal colors for the top three, and totals.",
+  "files": [
+    {
+      "path": "registry/designali/examples/avatar/avatar-29.tsx",
+      "content": "import { Avatar, AvatarFallback } from \"@workspace/ui/components/avatar\"\nimport {\n  Card,\n  CardContent,\n  CardHeader,\n  CardTitle,\n} from \"@workspace/ui/components/card\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst leaders = [\n  { name: \"Rosa Diaz\", initials: \"RD\", amount: \"$84,200\" },\n  { name: \"Tomás Herrera\", initials: \"TH\", amount: \"$71,950\" },\n  { name: \"Wen Li\", initials: \"WL\", amount: \"$66,300\" },\n  { name: \"Kai Johansson\", initials: \"KJ\", amount: \"$52,780\" },\n  { name: \"Noor Aziz\", initials: \"NA\", amount: \"$48,010\" },\n]\n\nconst medals = [\"ring-amber-400\", \"ring-zinc-400\", \"ring-orange-700\"]\n\nexport default function SalesLeaderboard() {\n  return (\n    <Card className=\"w-full max-w-sm\">\n      <CardHeader>\n        <CardTitle>Top sellers this quarter</CardTitle>\n      </CardHeader>\n      <CardContent className=\"flex flex-col gap-3\">\n        {leaders.map((leader, index) => (\n          <div key={leader.name} className=\"flex items-center gap-3\">\n            <span className=\"w-4 text-xs text-muted-foreground tabular-nums\">\n              {index + 1}\n            </span>\n            <Avatar\n              className={cn(\n                index < 3 && \"ring-2 ring-offset-2 ring-offset-card\",\n                medals[index]\n              )}\n            >\n              <AvatarFallback>{leader.initials}</AvatarFallback>\n            </Avatar>\n            <span className=\"flex-1 truncate text-sm\">{leader.name}</span>\n            <span className=\"text-sm font-medium tabular-nums\">\n              {leader.amount}\n            </span>\n          </div>\n        ))}\n      </CardContent>\n    </Card>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

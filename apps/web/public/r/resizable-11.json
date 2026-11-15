@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "resizable-11",
+  "type": "registry:example",
+  "description": "Panels with labelled minimum and maximum size constraints.",
+  "files": [
+    {
+      "path": "registry/designali/examples/resizable/resizable-11.tsx",
+      "content": "import { Badge } from \"@workspace/ui/components/badge\"\nimport {\n  ResizableHandle,\n  ResizablePanel,\n  ResizablePanelGroup,\n} from \"@workspace/ui/components/resizable\"\n\nexport default function MinMaxConstraints() {\n  return (\n    <ResizablePanelGroup\n      orientation=\"horizontal\"\n      className=\"h-44 w-full max-w-lg border\"\n    >\n      <ResizablePanel defaultSize=\"30%\" minSize=\"20%\" maxSize=\"40%\">\n        <div className=\"flex h-full flex-col items-center justify-center gap-1 bg-muted/40 p-3 text-center\">\n          <span className=\"text-xs font-medium\">Navigation</span>\n          <Badge variant=\"outline\">20% - 40%</Badge>\n        </div>\n      </ResizablePanel>\n      <ResizableHandle withHandle />\n      <ResizablePanel defaultSize=\"70%\" minSize=\"60%\">\n        <div className=\"flex h-full flex-col items-center justify-center gap-1 p-3 text-center\">\n          <span className=\"text-xs font-medium\">Workspace</span>\n          <Badge variant=\"outline\">min 60%</Badge>\n          <p className=\"max-w-48 text-[11px] text-muted-foreground\">\n            The handle stops when either panel reaches its limit.\n          </p>\n        </div>\n      </ResizablePanel>\n    </ResizablePanelGroup>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

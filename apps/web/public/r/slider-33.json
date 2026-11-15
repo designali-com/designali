@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "slider-33",
+  "type": "registry:example",
+  "description": "Sliders recolored per threshold to signal healthy, warning, and critical alert levels.",
+  "files": [
+    {
+      "path": "registry/designali/examples/slider/slider-33.tsx",
+      "content": "import { Slider } from \"@workspace/ui/components/slider\"\n\nconst thresholds = [\n  {\n    label: \"CPU alert\",\n    value: 45,\n    range: \"[&_[data-slot=slider-range]]:bg-emerald-500\",\n    note: \"Healthy\",\n  },\n  {\n    label: \"Memory alert\",\n    value: 72,\n    range: \"[&_[data-slot=slider-range]]:bg-amber-500\",\n    note: \"Warning\",\n  },\n  {\n    label: \"Disk alert\",\n    value: 91,\n    range: \"[&_[data-slot=slider-range]]:bg-destructive\",\n    note: \"Critical\",\n  },\n]\n\nexport default function StatusColorSliders() {\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-5 border p-4\">\n      {thresholds.map((t) => (\n        <div key={t.label} className=\"flex flex-col gap-2\">\n          <div className=\"flex justify-between text-sm\">\n            <span>{t.label}</span>\n            <span className=\"text-xs text-muted-foreground\">\n              {t.value}% &middot; {t.note}\n            </span>\n          </div>\n          <Slider\n            aria-label={t.label}\n            className={t.range}\n            defaultValue={[t.value]}\n          />\n        </div>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

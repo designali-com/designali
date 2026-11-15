@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tooltip-05",
+  "type": "registry:example",
+  "description": "Bottom tooltips aligned to the start, center and end of wide triggers.",
+  "files": [
+    {
+      "path": "registry/designali/examples/tooltip/tooltip-05.tsx",
+      "content": "import { Button } from \"@workspace/ui/components/button\"\nimport {\n  Tooltip,\n  TooltipContent,\n  TooltipProvider,\n  TooltipTrigger,\n} from \"@workspace/ui/components/tooltip\"\n\nconst aligns = [\"start\", \"center\", \"end\"] as const\n\nexport default function TooltipAlignments() {\n  return (\n    <TooltipProvider>\n      <div className=\"flex w-full max-w-sm flex-col gap-2\">\n        {aligns.map((align) => (\n          <Tooltip key={align}>\n            <TooltipTrigger\n              render={\n                <Button variant=\"outline\" className=\"w-full capitalize\" />\n              }\n            >\n              Align {align}\n            </TooltipTrigger>\n            <TooltipContent side=\"bottom\" align={align}>\n              Aligned to the {align} edge\n            </TooltipContent>\n          </Tooltip>\n        ))}\n      </div>\n    </TooltipProvider>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

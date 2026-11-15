@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "accordion-27",
+  "type": "registry:example",
+  "description": "Accordion items styled as separate boxed cards that tint when open.",
+  "files": [
+    {
+      "path": "registry/designali/examples/accordion/accordion-27.tsx",
+      "content": "import { ChevronDownIcon } from \"lucide-react\"\n\nimport {\n  Accordion,\n  AccordionContent,\n  AccordionItem,\n  AccordionTrigger,\n} from \"@workspace/ui/components/accordion\"\n\nconst questions = [\n  {\n    value: \"trial\",\n    q: \"Do I need a card to start the trial?\",\n    a: \"No. The 14 day trial starts without any payment details.\",\n  },\n  {\n    value: \"switch\",\n    q: \"Can I switch plans later?\",\n    a: \"Upgrade or downgrade any time. We prorate the difference on your next invoice.\",\n  },\n  {\n    value: \"discount\",\n    q: \"Do you offer nonprofit pricing?\",\n    a: \"Registered nonprofits get 50% off any paid plan. Contact us with your registration number.\",\n  },\n]\n\nexport default function AccordionSeparatedCards() {\n  return (\n    <Accordion defaultValue={[\"switch\"]} className=\"w-full max-w-md gap-2\">\n      {questions.map((item) => (\n        <AccordionItem\n          key={item.value}\n          value={item.value}\n          className=\"border px-4 not-last:border-b data-open:bg-muted/50\"\n        >\n          <AccordionTrigger className=\"py-3 text-sm hover:no-underline\">\n            {item.q}\n            <ChevronDownIcon\n              data-slot=\"accordion-trigger-icon\"\n              className=\"transition-transform duration-200 group-aria-expanded/accordion-trigger:rotate-180\"\n            />\n          </AccordionTrigger>\n          <AccordionContent className=\"pb-3 text-muted-foreground\">\n            {item.a}\n          </AccordionContent>\n        </AccordionItem>\n      ))}\n    </Accordion>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

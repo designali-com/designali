@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toggle-group-03",
+  "type": "registry:example",
+  "description": "Single-select outline group for left, center, right and justified text alignment.",
+  "files": [
+    {
+      "path": "registry/designali/examples/toggle-group/toggle-group-03.tsx",
+      "content": "import {\n  AlignCenterIcon,\n  AlignJustifyIcon,\n  AlignLeftIcon,\n  AlignRightIcon,\n} from \"lucide-react\"\n\nimport {\n  ToggleGroup,\n  ToggleGroupItem,\n} from \"@workspace/ui/components/toggle-group\"\n\nexport default function TextAlignmentToggleGroup() {\n  return (\n    <ToggleGroup variant=\"outline\" spacing={0} defaultValue={[\"left\"]}>\n      <ToggleGroupItem value=\"left\" aria-label=\"Align left\">\n        <AlignLeftIcon />\n      </ToggleGroupItem>\n      <ToggleGroupItem value=\"center\" aria-label=\"Align center\">\n        <AlignCenterIcon />\n      </ToggleGroupItem>\n      <ToggleGroupItem value=\"right\" aria-label=\"Align right\">\n        <AlignRightIcon />\n      </ToggleGroupItem>\n      <ToggleGroupItem value=\"justify\" aria-label=\"Justify\">\n        <AlignJustifyIcon />\n      </ToggleGroupItem>\n    </ToggleGroup>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

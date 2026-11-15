@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "aspect-ratio-20",
+  "type": "registry:example",
+  "description": "A tall 9:19.5 phone frame showing a chat app screen.",
+  "files": [
+    {
+      "path": "registry/designali/examples/aspect-ratio/aspect-ratio-20.tsx",
+      "content": "import { AspectRatio } from \"@workspace/ui/components/aspect-ratio\"\n\nexport default function PhoneMockupScreen() {\n  return (\n    <div className=\"w-full max-w-44 rounded-[2rem] border-4 border-foreground/80 p-1\">\n      <AspectRatio\n        ratio={9 / 19.5}\n        className=\"overflow-hidden rounded-[1.6rem] bg-background\"\n      >\n        <div className=\"absolute start-1/2 top-1.5 h-4 w-14 -translate-x-1/2 rounded-full bg-foreground/80 rtl:translate-x-1/2\" />\n        <div className=\"absolute inset-0 flex flex-col gap-2 px-3 pt-8 pb-3 text-[10px]\">\n          <p className=\"text-xs font-semibold\">Weekend hike</p>\n          <div className=\"max-w-[80%] self-start bg-muted px-2 py-1\">\n            Trailhead at 8?\n          </div>\n          <div className=\"max-w-[80%] self-end bg-primary px-2 py-1 text-primary-foreground\">\n            Works for me\n          </div>\n          <div className=\"max-w-[80%] self-start bg-muted px-2 py-1\">\n            Bringing snacks\n          </div>\n          <div className=\"mt-auto border px-2 py-1 text-muted-foreground\">\n            Message\n          </div>\n        </div>\n      </AspectRatio>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

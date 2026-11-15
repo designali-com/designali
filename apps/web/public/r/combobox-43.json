@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "combobox-43",
+  "type": "registry:example",
+  "description": "Theme picker that previews whichever option is highlighted before it is chosen.",
+  "files": [
+    {
+      "path": "registry/designali/examples/combobox/combobox-43.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport {\n  Combobox,\n  ComboboxContent,\n  ComboboxInput,\n  ComboboxItem,\n  ComboboxList,\n} from \"@workspace/ui/components/combobox\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\ntype Theme = { name: string; bg: string; fg: string; accent: string }\n\nconst themes: Theme[] = [\n  {\n    name: \"Paper\",\n    bg: \"bg-stone-50\",\n    fg: \"text-stone-900\",\n    accent: \"bg-stone-900\",\n  },\n  {\n    name: \"Midnight\",\n    bg: \"bg-slate-950\",\n    fg: \"text-slate-100\",\n    accent: \"bg-indigo-400\",\n  },\n  {\n    name: \"Forest\",\n    bg: \"bg-emerald-950\",\n    fg: \"text-emerald-50\",\n    accent: \"bg-lime-400\",\n  },\n  {\n    name: \"Sunset\",\n    bg: \"bg-orange-100\",\n    fg: \"text-orange-950\",\n    accent: \"bg-rose-500\",\n  },\n]\n\nexport default function HighlightedThemePreview() {\n  const [value, setValue] = React.useState<Theme | null>(themes[0]!)\n  const [preview, setPreview] = React.useState<Theme | undefined>(undefined)\n  const shown = preview ?? value ?? themes[0]!\n  return (\n    <div className=\"w-full max-w-xs space-y-3\">\n      <div\n        className={cn(\n          \"space-y-2 border p-4 transition-colors\",\n          shown.bg,\n          shown.fg\n        )}\n      >\n        <p className=\"text-sm font-semibold\">{shown.name}</p>\n        <p className=\"text-xs opacity-80\">Your editor will look like this.</p>\n        <span className={cn(\"block h-1.5 w-16\", shown.accent)} />\n      </div>\n      <Combobox\n        items={themes}\n        value={value}\n        onValueChange={setValue}\n        onItemHighlighted={(item) => setPreview(item)}\n        onOpenChange={(open) => !open && setPreview(undefined)}\n        itemToStringLabel={(t: Theme) => t.name}\n      >\n        <ComboboxInput placeholder=\"Choose theme\" className=\"w-full\" />\n        <ComboboxContent>\n          <ComboboxList>\n            {(t: Theme) => (\n              <ComboboxItem key={t.name} value={t}>\n                <span className={cn(\"size-4 border\", t.bg)} />\n                {t.name}\n              </ComboboxItem>\n            )}\n          </ComboboxList>\n        </ComboboxContent>\n      </Combobox>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

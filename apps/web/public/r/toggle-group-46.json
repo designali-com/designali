@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toggle-group-46",
+  "type": "registry:example",
+  "description": "Full-width vertical cabin class picker with descriptions and fares for a flight booking.",
+  "files": [
+    {
+      "path": "registry/designali/examples/toggle-group/toggle-group-46.tsx",
+      "content": "import {\n  ToggleGroup,\n  ToggleGroupItem,\n} from \"@workspace/ui/components/toggle-group\"\n\nconst cabins = [\n  {\n    value: \"economy\",\n    label: \"Economy\",\n    detail: \"Carry-on included\",\n    price: \"$412\",\n  },\n  {\n    value: \"premium\",\n    label: \"Premium economy\",\n    detail: \"Extra legroom, priority boarding\",\n    price: \"$689\",\n  },\n  {\n    value: \"business\",\n    label: \"Business\",\n    detail: \"Lie-flat seat, lounge access\",\n    price: \"$1,940\",\n  },\n]\n\nexport default function CabinClassToggleGroup() {\n  return (\n    <ToggleGroup\n      orientation=\"vertical\"\n      variant=\"outline\"\n      spacing={2}\n      defaultValue={[\"premium\"]}\n      className=\"w-full max-w-sm\"\n    >\n      {cabins.map((c) => (\n        <ToggleGroupItem\n          key={c.value}\n          value={c.value}\n          className=\"h-auto justify-between px-3 py-2.5 text-start\"\n        >\n          <span className=\"flex flex-col\">\n            <span className=\"text-sm\">{c.label}</span>\n            <span className=\"font-normal text-muted-foreground\">\n              {c.detail}\n            </span>\n          </span>\n          <span className=\"text-sm\">{c.price}</span>\n        </ToggleGroupItem>\n      ))}\n    </ToggleGroup>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

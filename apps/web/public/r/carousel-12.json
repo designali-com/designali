@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "carousel-12",
+  "type": "registry:example",
+  "description": "Drag-free category chip row with compact inline scroll buttons and an active filter.",
+  "files": [
+    {
+      "path": "registry/designali/examples/carousel/carousel-12.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  Carousel,\n  CarouselContent,\n  CarouselItem,\n  CarouselNext,\n  CarouselPrevious,\n} from \"@workspace/ui/components/carousel\"\n\nconst categories = [\n  \"All\",\n  \"Design\",\n  \"Engineering\",\n  \"Marketing\",\n  \"Sales\",\n  \"Support\",\n  \"Finance\",\n  \"People\",\n  \"Legal\",\n  \"Operations\",\n]\n\nexport default function CategoryChipScroller() {\n  const [active, setActive] = React.useState(\"All\")\n\n  return (\n    <Carousel\n      opts={{ dragFree: true, align: \"start\" }}\n      className=\"w-full max-w-sm px-9\"\n    >\n      <CarouselContent className=\"-ms-2\">\n        {categories.map((category) => (\n          <CarouselItem key={category} className=\"basis-auto ps-2\">\n            <Button\n              size=\"sm\"\n              variant={active === category ? \"default\" : \"outline\"}\n              onClick={() => setActive(category)}\n            >\n              {category}\n            </Button>\n          </CarouselItem>\n        ))}\n      </CarouselContent>\n      <CarouselPrevious variant=\"ghost\" className=\"start-0\" />\n      <CarouselNext variant=\"ghost\" className=\"end-0\" />\n    </Carousel>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

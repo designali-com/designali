@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "select-32",
+  "type": "registry:example",
+  "description": "Calendar header with navigation buttons and a select to switch day, week or month view.",
+  "files": [
+    {
+      "path": "registry/designali/examples/select/select-32.tsx",
+      "content": "import { ChevronLeftIcon, ChevronRightIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { ButtonGroup } from \"@workspace/ui/components/button-group\"\nimport {\n  Select,\n  SelectContent,\n  SelectItem,\n  SelectTrigger,\n  SelectValue,\n} from \"@workspace/ui/components/select\"\n\nconst views = [\n  { label: \"Day\", value: \"day\" },\n  { label: \"Week\", value: \"week\" },\n  { label: \"Month\", value: \"month\" },\n  { label: \"Agenda\", value: \"agenda\" },\n]\n\nexport default function CalendarViewSelect() {\n  return (\n    <div className=\"flex w-full max-w-md items-center gap-2 border p-2\">\n      <ButtonGroup>\n        <Button variant=\"outline\" size=\"icon-sm\" aria-label=\"Previous\">\n          <ChevronLeftIcon />\n        </Button>\n        <Button variant=\"outline\" size=\"sm\">\n          Today\n        </Button>\n        <Button variant=\"outline\" size=\"icon-sm\" aria-label=\"Next\">\n          <ChevronRightIcon />\n        </Button>\n      </ButtonGroup>\n      <span className=\"flex-1 truncate text-sm font-medium\">March 2026</span>\n      <Select items={views} defaultValue=\"week\">\n        <SelectTrigger size=\"sm\" className=\"w-24\" aria-label=\"Calendar view\">\n          <SelectValue />\n        </SelectTrigger>\n        <SelectContent>\n          {views.map((item) => (\n            <SelectItem key={item.value} value={item.value}>\n              {item.label}\n            </SelectItem>\n          ))}\n        </SelectContent>\n      </Select>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "spinner-22",
+  "type": "registry:example",
+  "description": "Note editor whose header shows a spinner while saving and a check once saved.",
+  "files": [
+    {
+      "path": "registry/designali/examples/spinner/spinner-22.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { CloudCheckIcon } from \"lucide-react\"\n\nimport { Spinner } from \"@workspace/ui/components/spinner\"\nimport { Textarea } from \"@workspace/ui/components/textarea\"\n\nexport default function AutosaveIndicator() {\n  const [text, setText] = React.useState(\n    \"Agenda: review onboarding drop-off, finalize Q4 hiring plan.\"\n  )\n  const [saving, setSaving] = React.useState(false)\n  const timer = React.useRef<ReturnType<typeof setTimeout>>(undefined)\n\n  const handleChange = (next: string) => {\n    setText(next)\n    setSaving(true)\n    clearTimeout(timer.current)\n    timer.current = setTimeout(() => setSaving(false), 900)\n  }\n\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-2\">\n      <div className=\"flex items-center justify-between\">\n        <span className=\"text-sm font-medium\">Weekly sync notes</span>\n        <span className=\"flex items-center gap-1.5 text-xs text-muted-foreground\">\n          {saving ? (\n            <Spinner className=\"size-3\" />\n          ) : (\n            <CloudCheckIcon className=\"size-3.5\" />\n          )}\n          {saving ? \"Saving...\" : \"Saved\"}\n        </span>\n      </div>\n      <Textarea\n        value={text}\n        onChange={(e) => handleChange(e.target.value)}\n        rows={4}\n      />\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

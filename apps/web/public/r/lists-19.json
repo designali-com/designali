@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "lists-19",
+  "type": "registry:block",
+  "description": "Alternating centre-line company milestone timeline that stacks on mobile.",
+  "dependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/designali/blocks/lists/lists-19.tsx",
+      "content": "const milestones = [\n  { year: \"2019\", title: \"Two people, one spare room\", text: \"Lena and Marcus quit their agency jobs to build the scheduling tool they wished they had.\" },\n  { year: \"2020\", title: \"First 1,000 teams\", text: \"A launch on a Tuesday afternoon brought more sign-ups in a week than we had planned for the year.\" },\n  { year: \"2021\", title: \"Seed round & first hires\", text: \"Raised $4M and grew to 12 people across Copenhagen and Lisbon.\" },\n  { year: \"2023\", title: \"Calendar 2.0\", text: \"Rebuilt the core on a local-first sync engine. Load times dropped from 2.4s to 180ms.\" },\n  { year: \"2025\", title: \"Profitable\", text: \"Crossed $12M ARR with a team of 58, without spending on paid acquisition.\" },\n  { year: \"2026\", title: \"100,000 teams\", text: \"From two-person studios to hospitals with 9,000 staff, all running on Weekfold.\" },\n]\n\nexport default function Lists19() {\n  return (\n    <section className=\"w-full bg-background py-24\">\n      <div className=\"mx-auto max-w-5xl px-6\">\n        <div className=\"text-center\">\n          <p className=\"text-xs tracking-widest text-muted-foreground uppercase\">Our story</p>\n          <h2 className=\"mt-3 text-4xl font-semibold tracking-tight md:text-5xl\">Seven years, one calendar.</h2>\n        </div>\n\n        <ol className=\"relative mt-16\">\n          <span className=\"absolute top-0 bottom-0 left-[7px] w-px bg-border md:left-1/2\" aria-hidden />\n          {milestones.map((item, index) => {\n            const right = index % 2 === 1\n            return (\n              <li key={item.year} className=\"relative grid pb-12 pl-10 last:pb-0 md:grid-cols-2 md:pl-0\">\n                <span\n                  className={`absolute top-1.5 left-0 size-[15px] border-2 border-background ring-1 ring-border md:left-1/2 md:-translate-x-1/2 ${\n                    index === milestones.length - 1 ? \"bg-foreground\" : \"bg-muted-foreground/40\"\n                  }`}\n                />\n                <div className={right ? \"md:col-start-2 md:pl-12\" : \"md:pr-12 md:text-right\"}>\n                  <span className=\"font-mono text-sm text-muted-foreground\">{item.year}</span>\n                  <h3 className=\"mt-1 text-xl font-medium tracking-tight\">{item.title}</h3>\n                  <p className=\"mt-2 text-sm leading-6 text-muted-foreground\">{item.text}</p>\n                </div>\n              </li>\n            )\n          })}\n        </ol>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "950px"
+  },
+  "categories": [
+    "lists"
+  ]
+}

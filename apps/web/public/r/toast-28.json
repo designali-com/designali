@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toast-28",
+  "type": "registry:example",
+  "description": "Custom-rendered toasts with a colored leading border that reflects the toast type.",
+  "files": [
+    {
+      "path": "registry/designali/examples/toast/toast-28.tsx",
+      "content": "\"use client\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  Toast,\n  ToastClose,\n  ToastContent,\n  ToastDescription,\n  ToastPortal,\n  ToastProvider,\n  ToastTitle,\n  ToastViewport,\n  createToastManager,\n  useToastManager,\n} from \"@workspace/ui/components/toast\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst notify = createToastManager()\n\nconst accents: Record<string, string> = {\n  success: \"border-s-emerald-500\",\n  warning: \"border-s-amber-500\",\n  error: \"border-s-destructive\",\n}\n\nfunction AccentToasts() {\n  const { toasts } = useToastManager()\n  return toasts.map((t) => (\n    <Toast\n      key={t.id}\n      toast={t}\n      className={cn(\"border-s-4\", accents[t.type ?? \"\"] ?? \"border-s-primary\")}\n    >\n      <ToastContent>\n        <div className=\"flex min-w-0 flex-1 flex-col gap-0.5\">\n          <ToastTitle />\n          <ToastDescription />\n        </div>\n        <ToastClose />\n      </ToastContent>\n    </Toast>\n  ))\n}\n\nexport default function AccentBorderToasts() {\n  return (\n    <ToastProvider toastManager={notify}>\n      <div className=\"flex flex-wrap justify-center gap-2\">\n        <Button\n          variant=\"outline\"\n          size=\"sm\"\n          onClick={() =>\n            notify.add({\n              type: \"success\",\n              title: \"Backup complete\",\n              description: \"Snapshot 2025-10-21 stored.\",\n            })\n          }\n        >\n          Success\n        </Button>\n        <Button\n          variant=\"outline\"\n          size=\"sm\"\n          onClick={() =>\n            notify.add({\n              type: \"warning\",\n              title: \"Quota at 90%\",\n              description: \"Consider upgrading storage.\",\n            })\n          }\n        >\n          Warning\n        </Button>\n        <Button\n          variant=\"outline\"\n          size=\"sm\"\n          onClick={() =>\n            notify.add({\n              type: \"error\",\n              title: \"Webhook failed\",\n              description: \"Endpoint returned 502.\",\n            })\n          }\n        >\n          Error\n        </Button>\n      </div>\n      <ToastPortal>\n        <ToastViewport>\n          <AccentToasts />\n        </ToastViewport>\n      </ToastPortal>\n    </ToastProvider>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "avatar-49",
+  "type": "registry:example",
+  "description": "Avatar badges with role icons for owners, admins, and moderators.",
+  "files": [
+    {
+      "path": "registry/designali/examples/avatar/avatar-49.tsx",
+      "content": "import { CrownIcon, ShieldIcon, StarIcon } from \"lucide-react\"\n\nimport {\n  Avatar,\n  AvatarBadge,\n  AvatarFallback,\n} from \"@workspace/ui/components/avatar\"\n\nconst roles = [\n  {\n    initials: \"OW\",\n    role: \"Owner\",\n    icon: CrownIcon,\n    tone: \"bg-amber-500 text-white\",\n  },\n  {\n    initials: \"AD\",\n    role: \"Admin\",\n    icon: ShieldIcon,\n    tone: \"bg-blue-600 text-white\",\n  },\n  {\n    initials: \"MO\",\n    role: \"Moderator\",\n    icon: StarIcon,\n    tone: \"bg-violet-600 text-white\",\n  },\n]\n\nexport default function RoleIconAvatarBadges() {\n  return (\n    <div className=\"flex flex-wrap items-center justify-center gap-6\">\n      {roles.map((item) => (\n        <div key={item.role} className=\"flex flex-col items-center gap-2\">\n          <Avatar size=\"lg\">\n            <AvatarFallback>{item.initials}</AvatarFallback>\n            <AvatarBadge className={item.tone}>\n              <item.icon />\n            </AvatarBadge>\n          </Avatar>\n          <span className=\"text-xs text-muted-foreground\">{item.role}</span>\n        </div>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

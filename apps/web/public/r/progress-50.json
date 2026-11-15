@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "progress-50",
+  "type": "registry:example",
+  "description": "Sync job paused by an admin, shown with a dimmed progress bar.",
+  "files": [
+    {
+      "path": "registry/designali/examples/progress/progress-50.tsx",
+      "content": "import { CirclePauseIcon } from \"lucide-react\"\n\nimport {\n  Progress,\n  ProgressLabel,\n  ProgressValue,\n} from \"@workspace/ui/components/progress\"\n\nexport default function DisabledPausedProgress() {\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-3 border p-4\">\n      <Progress\n        value={61}\n        className=\"opacity-50 [&_[data-slot=progress-indicator]]:bg-muted-foreground\"\n      >\n        <ProgressLabel className=\"flex items-center gap-1.5\">\n          <CirclePauseIcon className=\"size-3.5\" />\n          Drive sync paused\n        </ProgressLabel>\n        <ProgressValue />\n      </Progress>\n      <p className=\"text-xs text-muted-foreground\">\n        Your admin paused syncing during maintenance. It will resume\n        automatically at 6:00 PM.\n      </p>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

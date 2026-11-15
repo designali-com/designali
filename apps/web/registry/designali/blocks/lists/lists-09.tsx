@@ -62,7 +62,7 @@ export default function Lists09() {
               </div>
               <ol>
                 {part.chapters.map((chapter, chapterIndex) => {
-                  const n = offsets[partIndex] + chapterIndex + 1
+                  const n = offsets[partIndex]! + chapterIndex + 1
                   return (
                     <li key={chapter.title}>
                       <a

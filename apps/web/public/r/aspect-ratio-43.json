@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "aspect-ratio-43",
+  "type": "registry:example",
+  "description": "Demonstrates the ratio holding steady as a slider resizes the container width.",
+  "files": [
+    {
+      "path": "registry/designali/examples/aspect-ratio/aspect-ratio-43.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { AspectRatio } from \"@workspace/ui/components/aspect-ratio\"\nimport { Field, FieldLabel } from \"@workspace/ui/components/field\"\nimport { Slider } from \"@workspace/ui/components/slider\"\n\nexport default function WidthSliderResponsive() {\n  const [width, setWidth] = React.useState(70)\n\n  return (\n    <div className=\"flex w-full max-w-md flex-col gap-4\">\n      <div className=\"flex h-56 items-start\">\n        <div style={{ width: width + \"%\" }} className=\"transition-[width]\">\n          <AspectRatio\n            ratio={4 / 3}\n            className=\"border-2 border-primary bg-primary/10\"\n          >\n            <span className=\"absolute inset-0 flex items-center justify-center font-mono text-xs\">\n              4:3 at {width}%\n            </span>\n          </AspectRatio>\n        </div>\n      </div>\n      <Field>\n        <FieldLabel>Container width</FieldLabel>\n        <Slider\n          min={30}\n          max={100}\n          value={[width]}\n          onValueChange={(value) =>\n            setWidth(Array.isArray(value) ? value[0]! : value)\n          }\n        />\n      </Field>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

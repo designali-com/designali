@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "card-29",
+  "type": "registry:example",
+  "description": "Whole-card link to a blog article with a gradient cover, tags, author and hover state.",
+  "files": [
+    {
+      "path": "registry/designali/examples/card/card-29.tsx",
+      "content": "import { ArrowUpRightIcon } from \"lucide-react\"\n\nimport { Avatar, AvatarFallback } from \"@workspace/ui/components/avatar\"\nimport { Badge } from \"@workspace/ui/components/badge\"\nimport {\n  Card,\n  CardDescription,\n  CardFooter,\n  CardHeader,\n  CardTitle,\n} from \"@workspace/ui/components/card\"\n\nexport default function ArticleLinkCard() {\n  return (\n    <a href=\"#\" className=\"group block w-full max-w-sm outline-none\">\n      <Card className=\"pt-0 transition-shadow group-hover:ring-foreground/30 group-focus-visible:ring-2 group-focus-visible:ring-ring\">\n        <div className=\"relative aspect-[2/1] overflow-hidden bg-gradient-to-br from-teal-400 via-cyan-500 to-blue-600\">\n          <svg\n            viewBox=\"0 0 200 100\"\n            className=\"absolute inset-0 size-full opacity-30\"\n            aria-hidden=\"true\"\n          >\n            <path d=\"M0 70 Q50 30 100 60 T200 40 V100 H0Z\" fill=\"white\" />\n            <path d=\"M0 85 Q60 55 120 80 T200 70 V100 H0Z\" fill=\"white\" />\n          </svg>\n        </div>\n        <CardHeader>\n          <div className=\"flex gap-1.5\">\n            <Badge variant=\"secondary\">Engineering</Badge>\n            <Badge variant=\"outline\">8 min read</Badge>\n          </div>\n          <CardTitle className=\"mt-1 text-base group-hover:underline\">\n            How we cut cold starts by 70% with edge caching\n          </CardTitle>\n          <CardDescription>\n            A look at the request path, the cache keys we chose and what broke\n            along the way.\n          </CardDescription>\n        </CardHeader>\n        <CardFooter className=\"gap-2\">\n          <Avatar size=\"sm\">\n            <AvatarFallback>RP</AvatarFallback>\n          </Avatar>\n          <span className=\"flex-1\">Ravi Patel · Nov 12</span>\n          <ArrowUpRightIcon className=\"size-4 text-muted-foreground transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5\" />\n        </CardFooter>\n      </Card>\n    </a>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

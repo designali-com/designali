@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-18",
+  "type": "registry:example",
+  "description": "Native date and time inputs for scheduling a post.",
+  "files": [
+    {
+      "path": "registry/designali/examples/input/input-18.tsx",
+      "content": "import {\n  Field,\n  FieldDescription,\n  FieldLabel,\n  FieldLegend,\n  FieldSet,\n} from \"@workspace/ui/components/field\"\nimport { Input } from \"@workspace/ui/components/input\"\n\nexport default function DateTimeInputs() {\n  return (\n    <FieldSet className=\"w-full max-w-sm\">\n      <FieldLegend>Schedule post</FieldLegend>\n      <div className=\"grid grid-cols-2 gap-3\">\n        <Field>\n          <FieldLabel htmlFor=\"post-date\">Date</FieldLabel>\n          <Input id=\"post-date\" type=\"date\" defaultValue=\"2025-04-18\" />\n        </Field>\n        <Field>\n          <FieldLabel htmlFor=\"post-time\">Time</FieldLabel>\n          <Input id=\"post-time\" type=\"time\" defaultValue=\"09:30\" />\n        </Field>\n      </div>\n      <FieldDescription>Times are shown in Pacific Time (PT).</FieldDescription>\n    </FieldSet>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

@@ -47,7 +47,7 @@ const offices = [
 
 export default function Forms20() {
   const [active, setActive] = useState("sales")
-  const department = departments.find((item) => item.id === active) ?? departments[0]
+  const department = departments.find((item) => item.id === active) ?? departments[0]!
 
   return (
     <section className="w-full bg-background py-20">

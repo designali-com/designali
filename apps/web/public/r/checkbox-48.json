@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "checkbox-48",
+  "type": "registry:example",
+  "description": "Editor preference checkboxes each paired with its keyboard shortcut.",
+  "files": [
+    {
+      "path": "registry/designali/examples/checkbox/checkbox-48.tsx",
+      "content": "import { Checkbox } from \"@workspace/ui/components/checkbox\"\nimport { Field, FieldGroup, FieldLabel } from \"@workspace/ui/components/field\"\nimport { Kbd, KbdGroup } from \"@workspace/ui/components/kbd\"\n\nconst prefs = [\n  { id: \"wrap\", label: \"Word wrap\", keys: [\"Alt\", \"Z\"], on: true },\n  { id: \"minimap\", label: \"Show minimap\", keys: [\"Ctrl\", \"M\"], on: false },\n  { id: \"lines\", label: \"Line numbers\", keys: [\"Ctrl\", \"L\"], on: true },\n  { id: \"zen\", label: \"Zen mode\", keys: [\"Ctrl\", \"K\", \"Z\"], on: false },\n]\n\nexport default function ShortcutPreferenceList() {\n  return (\n    <FieldGroup className=\"w-full max-w-xs gap-3\">\n      {prefs.map((pref) => (\n        <Field key={pref.id} orientation=\"horizontal\">\n          <Checkbox id={\"pref-\" + pref.id} defaultChecked={pref.on} />\n          <FieldLabel\n            htmlFor={\"pref-\" + pref.id}\n            className=\"flex-1 font-normal\"\n          >\n            {pref.label}\n          </FieldLabel>\n          <KbdGroup>\n            {pref.keys.map((key) => (\n              <Kbd key={key}>{key}</Kbd>\n            ))}\n          </KbdGroup>\n        </Field>\n      ))}\n    </FieldGroup>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toggle-group-09",
+  "type": "registry:example",
+  "description": "Light, dark and system appearance picker with icon and label items.",
+  "files": [
+    {
+      "path": "registry/designali/examples/toggle-group/toggle-group-09.tsx",
+      "content": "import { MonitorIcon, MoonIcon, SunIcon } from \"lucide-react\"\n\nimport {\n  ToggleGroup,\n  ToggleGroupItem,\n} from \"@workspace/ui/components/toggle-group\"\n\nexport default function ThemeModeToggleGroup() {\n  return (\n    <div className=\"flex flex-col gap-2\">\n      <span className=\"text-sm font-medium\">Appearance</span>\n      <ToggleGroup variant=\"outline\" defaultValue={[\"system\"]}>\n        <ToggleGroupItem value=\"light\">\n          <SunIcon data-icon=\"inline-start\" />\n          Light\n        </ToggleGroupItem>\n        <ToggleGroupItem value=\"dark\">\n          <MoonIcon data-icon=\"inline-start\" />\n          Dark\n        </ToggleGroupItem>\n        <ToggleGroupItem value=\"system\">\n          <MonitorIcon data-icon=\"inline-start\" />\n          System\n        </ToggleGroupItem>\n      </ToggleGroup>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

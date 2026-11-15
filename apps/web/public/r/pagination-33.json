@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "pagination-33",
+  "type": "registry:example",
+  "description": "Exam navigator showing answered, flagged, and current questions as page links.",
+  "files": [
+    {
+      "path": "registry/designali/examples/pagination/pagination-33.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { FlagIcon } from \"lucide-react\"\n\nimport {\n  Pagination,\n  PaginationContent,\n  PaginationItem,\n  PaginationLink,\n} from \"@workspace/ui/components/pagination\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst answered = new Set([1, 2, 3, 5, 6, 8])\nconst flagged = new Set([4, 9])\n\nexport default function QuizQuestionPagination() {\n  const [question, setQuestion] = React.useState(7)\n\n  return (\n    <div className=\"flex w-full max-w-xs flex-col gap-3 border p-3\">\n      <div className=\"flex items-center justify-between text-xs\">\n        <span className=\"font-medium\">Question {question} of 12</span>\n        <span className=\"text-muted-foreground\">{answered.size} answered</span>\n      </div>\n      <Pagination>\n        <PaginationContent className=\"grid grid-cols-6 gap-1\">\n          {Array.from({ length: 12 }, (_, i) => i + 1).map((q) => (\n            <PaginationItem key={q}>\n              <PaginationLink\n                href=\"#\"\n                size=\"icon-sm\"\n                isActive={q === question}\n                className={cn(\n                  \"w-full\",\n                  answered.has(q) && q !== question && \"bg-muted\",\n                  flagged.has(q) && \"text-amber-600 dark:text-amber-400\"\n                )}\n                onClick={(event) => {\n                  event.preventDefault()\n                  setQuestion(q)\n                }}\n              >\n                {flagged.has(q) ? <FlagIcon className=\"size-3\" /> : q}\n              </PaginationLink>\n            </PaginationItem>\n          ))}\n        </PaginationContent>\n      </Pagination>\n      <div className=\"flex gap-3 text-[11px] text-muted-foreground\">\n        <span className=\"flex items-center gap-1\">\n          <span className=\"size-2 bg-muted ring-1 ring-border\" /> Answered\n        </span>\n        <span className=\"flex items-center gap-1\">\n          <FlagIcon className=\"size-3 text-amber-600 dark:text-amber-400\" />{\" \"}\n          Flagged\n        </span>\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

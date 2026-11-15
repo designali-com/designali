@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "lists-16",
+  "type": "registry:block",
+  "description": "Status page service list with 90-day uptime bars and a legend.",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/designali/blocks/lists/lists-16.tsx",
+      "content": "import { CircleAlert, CircleCheck } from \"lucide-react\"\n\nconst services = [\n  { name: \"Web app\", uptime: 99.99, incidents: [] as number[], degraded: [] as number[] },\n  { name: \"Public API\", uptime: 99.94, incidents: [61], degraded: [12, 62] },\n  { name: \"Realtime sync\", uptime: 99.97, incidents: [], degraded: [33, 34] },\n  { name: \"File storage\", uptime: 100, incidents: [], degraded: [] },\n  { name: \"Webhooks\", uptime: 99.81, incidents: [78, 79], degraded: [45, 80] },\n  { name: \"Search\", uptime: 99.96, incidents: [], degraded: [88] },\n]\n\nconst days = 90\n\nexport default function Lists16() {\n  return (\n    <section className=\"w-full bg-background py-24\">\n      <div className=\"mx-auto max-w-4xl px-6\">\n        <div className=\"flex items-center gap-4 border border-emerald-600/30 bg-emerald-50 p-5 dark:bg-emerald-500/10\">\n          <CircleCheck className=\"size-6 shrink-0 text-emerald-600 dark:text-emerald-400\" />\n          <div>\n            <h2 className=\"font-semibold\">All systems operational</h2>\n            <p className=\"text-xs text-muted-foreground\">Last checked 40 seconds ago</p>\n          </div>\n        </div>\n\n        <div className=\"mt-10 flex items-end justify-between gap-4\">\n          <h3 className=\"text-xl font-semibold tracking-tight\">Uptime</h3>\n          <span className=\"text-xs text-muted-foreground\">Last 90 days</span>\n        </div>\n\n        <ul className=\"mt-4 divide-y divide-border border border-border\">\n          {services.map((service) => (\n            <li key={service.name} className=\"p-5\">\n              <div className=\"flex items-center justify-between gap-4\">\n                <span className=\"inline-flex items-center gap-2 text-sm font-medium\">\n                  {service.incidents.length > 0 ? (\n                    <CircleAlert className=\"size-4 text-amber-500\" />\n                  ) : (\n                    <CircleCheck className=\"size-4 text-emerald-600 dark:text-emerald-400\" />\n                  )}\n                  {service.name}\n                </span>\n                <span className=\"font-mono text-xs text-muted-foreground\">{service.uptime.toFixed(2)}%</span>\n              </div>\n              <div className=\"mt-3 flex h-8 gap-px\">\n                {Array.from({ length: days }).map((_, day) => {\n                  const tone = service.incidents.includes(day)\n                    ? \"bg-rose-500\"\n                    : service.degraded.includes(day)\n                      ? \"bg-amber-400\"\n                      : \"bg-emerald-500\"\n                  return (\n                    <span\n                      key={day}\n                      title={`Day ${day + 1}`}\n                      className={`min-w-0 flex-1 ${tone} ${day < 45 ? \"hidden sm:block\" : \"\"} opacity-90 hover:opacity-100`}\n                    />\n                  )\n                })}\n              </div>\n              <div className=\"mt-2 flex justify-between font-mono text-[10px] text-muted-foreground\">\n                <span>\n                  <span className=\"sm:hidden\">45 days ago</span>\n                  <span className=\"hidden sm:inline\">90 days ago</span>\n                </span>\n                <span>Today</span>\n              </div>\n            </li>\n          ))}\n        </ul>\n\n        <div className=\"mt-6 flex flex-wrap gap-4 text-xs text-muted-foreground\">\n          <span className=\"inline-flex items-center gap-1.5\"><span className=\"size-2 bg-emerald-500\" /> Operational</span>\n          <span className=\"inline-flex items-center gap-1.5\"><span className=\"size-2 bg-amber-400\" /> Degraded</span>\n          <span className=\"inline-flex items-center gap-1.5\"><span className=\"size-2 bg-rose-500\" /> Outage</span>\n        </div>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "1000px"
+  },
+  "categories": [
+    "lists"
+  ]
+}

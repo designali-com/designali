@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "authentication-19",
+  "type": "registry:block",
+  "description": "Verify your email screen with inbox shortcuts and resend or change email beside delivery tips.",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "registry/designali/blocks/authentication/authentication-19.tsx",
+      "content": "\"use client\"\n\nimport { useEffect, useState } from \"react\"\nimport { MailCheck, Pencil, RotateCw } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\n\nconst COOLDOWN = 45\n\nconst providers = [\n  { label: \"Open web mail\", href: \"#\" },\n  { label: \"Open desktop mail\", href: \"#\" },\n  { label: \"Open mobile mail\", href: \"#\" },\n]\n\nexport default function Authentication19() {\n  const [remaining, setRemaining] = useState(COOLDOWN)\n  const [resends, setResends] = useState(0)\n\n  useEffect(() => {\n    if (remaining <= 0) return\n    const timer = setTimeout(() => setRemaining((value) => value - 1), 1000)\n    return () => clearTimeout(timer)\n  }, [remaining])\n\n  const progress = ((COOLDOWN - remaining) / COOLDOWN) * 100\n\n  return (\n    <section className=\"w-full border-y bg-background\">\n      <div className=\"mx-auto grid max-w-6xl md:grid-cols-[1.1fr_1fr]\">\n        <div className=\"flex flex-col justify-center px-6 py-16 md:border-e md:px-14 md:py-24\">\n          <span className=\"flex size-12 items-center justify-center bg-foreground text-background\">\n            <MailCheck className=\"size-5\" />\n          </span>\n          <h2 className=\"mt-8 text-4xl font-semibold tracking-tight\">Verify your email</h2>\n          <p className=\"mt-3 max-w-md text-muted-foreground\">\n            We sent a confirmation link to{\" \"}\n            <span className=\"font-medium text-foreground\">theo.lindqvist@marrow.so</span>. Click it to activate your Marrow account.\n          </p>\n          <button type=\"button\" className=\"mt-3 flex w-fit items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground\">\n            <Pencil className=\"size-3.5\" />\n            Wrong address? Change it\n          </button>\n\n          <div className=\"mt-10 grid gap-2 sm:grid-cols-3\">\n            {providers.map((provider) => (\n              <Button key={provider.label} variant=\"outline\" nativeButton={false} render={<a href={provider.href} />}>\n                {provider.label}\n              </Button>\n            ))}\n          </div>\n        </div>\n\n        <div className=\"flex flex-col justify-center gap-8 border-t bg-muted/30 px-6 py-16 md:border-t-0 md:px-14\">\n          <div>\n            <p className=\"text-sm font-medium\">Didn&apos;t get the email?</p>\n            <ul className=\"mt-3 space-y-2 text-sm text-muted-foreground\">\n              <li>Check your spam or promotions folder.</li>\n              <li>Search your inbox for &ldquo;Marrow&rdquo;.</li>\n              <li>Corporate filters can delay mail by a few minutes.</li>\n            </ul>\n          </div>\n\n          <div className=\"space-y-3\">\n            <Button\n              size=\"lg\"\n              className=\"w-full\"\n              disabled={remaining > 0}\n              onClick={() => {\n                setResends(resends + 1)\n                setRemaining(COOLDOWN)\n              }}\n            >\n              <RotateCw />\n              {remaining > 0 ? `Resend available in 0:${String(remaining).padStart(2, \"0\")}` : \"Resend email\"}\n            </Button>\n            <div className=\"h-1 bg-muted\">\n              <div className=\"h-full bg-foreground transition-[width] duration-1000 ease-linear\" style={{ width: `${progress}%` }} />\n            </div>\n            {resends > 0 && (\n              <p className=\"text-xs text-muted-foreground\">\n                Sent again {resends} {resends === 1 ? \"time\" : \"times\"}. The newest link replaces older ones.\n              </p>\n            )}\n          </div>\n        </div>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "650px"
+  },
+  "categories": [
+    "authentication"
+  ]
+}

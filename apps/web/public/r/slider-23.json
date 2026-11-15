@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "slider-23",
+  "type": "registry:example",
+  "description": "Hue picker slider whose track shows the full color spectrum.",
+  "files": [
+    {
+      "path": "registry/designali/examples/slider/slider-23.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { Label } from \"@workspace/ui/components/label\"\nimport { Slider } from \"@workspace/ui/components/slider\"\n\nexport default function HueGradientSlider() {\n  const [hue, setHue] = React.useState([210])\n\n  return (\n    <div className=\"flex w-full max-w-xs flex-col gap-3\">\n      <div className=\"flex items-center justify-between\">\n        <Label>Accent hue</Label>\n        <div className=\"flex items-center gap-2\">\n          <span\n            className=\"size-4 border\"\n            style={{ backgroundColor: \"hsl(\" + hue[0] + \" 80% 55%)\" }}\n          />\n          <span className=\"text-xs text-muted-foreground tabular-nums\">\n            {hue[0]}&deg;\n          </span>\n        </div>\n      </div>\n      <Slider\n        aria-label=\"Accent hue\"\n        className=\"[&_[data-slot=slider-range]]:bg-transparent [&_[data-slot=slider-thumb]]:size-4 [&_[data-slot=slider-track]]:h-3! [&_[data-slot=slider-track]]:bg-[linear-gradient(to_right,red,yellow,lime,cyan,blue,magenta,red)]\"\n        value={hue}\n        onValueChange={(value) => setHue(value as number[])}\n        max={360}\n      />\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

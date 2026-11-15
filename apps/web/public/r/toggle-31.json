@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toggle-31",
+  "type": "registry:example",
+  "description": "A sidebar toggle that collapses navigation to icons only.",
+  "files": [
+    {
+      "path": "registry/designali/examples/toggle/toggle-31.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport {\n  ChartBarIcon,\n  FolderIcon,\n  InboxIcon,\n  PanelLeftCloseIcon,\n  PanelLeftOpenIcon,\n  SettingsIcon,\n} from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Toggle } from \"@workspace/ui/components/toggle\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst nav = [\n  { label: \"Inbox\", icon: InboxIcon },\n  { label: \"Projects\", icon: FolderIcon },\n  { label: \"Reports\", icon: ChartBarIcon },\n  { label: \"Settings\", icon: SettingsIcon },\n]\n\nexport default function SidebarCollapseToggle() {\n  const [collapsed, setCollapsed] = React.useState(false)\n\n  return (\n    <div className=\"flex h-56 w-full max-w-sm border\">\n      <aside\n        className={cn(\n          \"flex flex-col gap-1 border-e p-2 transition-all\",\n          collapsed ? \"w-12\" : \"w-40\"\n        )}\n      >\n        {nav.map((n) => (\n          <Button\n            key={n.label}\n            variant=\"ghost\"\n            size=\"sm\"\n            className={cn(\"justify-start\", collapsed && \"justify-center px-0\")}\n            aria-label={n.label}\n          >\n            <n.icon />\n            {!collapsed && n.label}\n          </Button>\n        ))}\n      </aside>\n      <div className=\"flex flex-1 flex-col gap-2 p-3\">\n        <Toggle\n          size=\"sm\"\n          pressed={collapsed}\n          onPressedChange={setCollapsed}\n          aria-label=\"Collapse sidebar\"\n          className=\"self-start\"\n        >\n          {collapsed ? <PanelLeftOpenIcon /> : <PanelLeftCloseIcon />}\n        </Toggle>\n        <p className=\"text-xs text-muted-foreground\">Main content area</p>\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

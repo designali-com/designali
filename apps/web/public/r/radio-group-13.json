@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "radio-group-13",
+  "type": "registry:example",
+  "description": "Controlled radio group whose selection updates an order summary line.",
+  "files": [
+    {
+      "path": "registry/designali/examples/radio-group/radio-group-13.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { Field, FieldLabel } from \"@workspace/ui/components/field\"\nimport {\n  RadioGroup,\n  RadioGroupItem,\n} from \"@workspace/ui/components/radio-group\"\nimport { Separator } from \"@workspace/ui/components/separator\"\n\nconst options = [\n  { value: \"pickup\", label: \"Store pickup\", fee: 0 },\n  { value: \"courier\", label: \"Courier\", fee: 6.5 },\n  { value: \"locker\", label: \"Parcel locker\", fee: 2.99 },\n]\n\nexport default function ControlledDeliverySummary() {\n  const [value, setValue] = React.useState(\"courier\")\n  const selected = options.find((o) => o.value === value)\n  const subtotal = 48\n\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-4 border p-4\">\n      <RadioGroup value={value} onValueChange={(v) => setValue(v as string)}>\n        {options.map((o) => (\n          <Field key={o.value} orientation=\"horizontal\">\n            <RadioGroupItem value={o.value} id={\"del-\" + o.value} />\n            <FieldLabel htmlFor={\"del-\" + o.value} className=\"font-normal\">\n              {o.label}\n            </FieldLabel>\n            <span className=\"ms-auto text-sm text-muted-foreground\">\n              {o.fee === 0 ? \"Free\" : \"$\" + o.fee.toFixed(2)}\n            </span>\n          </Field>\n        ))}\n      </RadioGroup>\n      <Separator />\n      <div className=\"flex justify-between text-sm font-medium\">\n        <span>Total</span>\n        <span className=\"tabular-nums\">\n          {\"$\" + (subtotal + (selected?.fee ?? 0)).toFixed(2)}\n        </span>\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

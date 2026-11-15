@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "clients-13",
+  "type": "registry:block",
+  "description": "Three case study cards with gradient headers, initials badges, big outcome metrics and read the story links.",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/designali/blocks/clients/clients-13.tsx",
+      "content": "import { ArrowUpRight } from \"lucide-react\"\n\nconst cases = [\n  {\n    company: \"Oakmont Health\",\n    initials: \"OH\",\n    industry: \"Healthcare\",\n    metric: \"3x\",\n    metricLabel: \"faster patient portal releases\",\n    summary:\n      \"Replaced four legacy UI kits with one accessible system across web, kiosk and mobile.\",\n    gradient: \"from-emerald-500/20 to-teal-500/5\",\n  },\n  {\n    company: \"Parallax Freight\",\n    initials: \"PF\",\n    industry: \"Logistics\",\n    metric: \"-62%\",\n    metricLabel: \"front-end bug reports\",\n    summary:\n      \"Dispatch dashboards now ship from shared blocks, so QA focuses on routing logic instead of pixels.\",\n    gradient: \"from-sky-500/20 to-indigo-500/5\",\n  },\n  {\n    company: \"Nimbus Bank\",\n    initials: \"NB\",\n    industry: \"Fintech\",\n    metric: \"11 days\",\n    metricLabel: \"to launch a new card product\",\n    summary:\n      \"The growth team assembles compliant onboarding flows without waiting on a design sprint.\",\n    gradient: \"from-amber-500/20 to-orange-500/5\",\n  },\n]\n\nexport default function Clients13() {\n  return (\n    <section className=\"w-full border-y border-border bg-muted/30 py-20 md:py-24\">\n      <div className=\"mx-auto max-w-7xl px-6\">\n        <div className=\"flex flex-col gap-4 md:flex-row md:items-end md:justify-between\">\n          <h2 className=\"max-w-lg text-3xl font-semibold tracking-tight md:text-4xl\">\n            Outcomes, not logos.\n          </h2>\n          <a\n            href=\"#\"\n            className=\"inline-flex items-center gap-1 text-sm font-medium underline-offset-4 hover:underline\"\n          >\n            All case studies\n            <ArrowUpRight className=\"size-4\" />\n          </a>\n        </div>\n        <div className=\"mt-12 grid gap-6 md:grid-cols-3\">\n          {cases.map((item) => (\n            <a\n              key={item.company}\n              href=\"#\"\n              className=\"group flex flex-col border border-border bg-background transition-colors hover:border-foreground/40\"\n            >\n              <div\n                className={`relative flex h-36 items-end justify-between bg-gradient-to-br p-6 ${item.gradient}`}\n              >\n                <span className=\"flex size-12 items-center justify-center border border-border bg-background text-sm font-semibold tracking-tight\">\n                  {item.initials}\n                </span>\n                <span className=\"text-xs tracking-widest text-muted-foreground uppercase\">\n                  {item.industry}\n                </span>\n              </div>\n              <div className=\"flex flex-1 flex-col p-6\">\n                <p className=\"text-sm font-medium\">{item.company}</p>\n                <p className=\"mt-6 text-4xl font-semibold tracking-tight\">\n                  {item.metric}\n                </p>\n                <p className=\"mt-1 text-sm text-muted-foreground\">\n                  {item.metricLabel}\n                </p>\n                <p className=\"mt-6 flex-1 text-sm leading-6 text-muted-foreground\">\n                  {item.summary}\n                </p>\n                <span className=\"mt-6 inline-flex items-center gap-1 text-sm font-medium\">\n                  Read the story\n                  <ArrowUpRight className=\"size-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5\" />\n                </span>\n              </div>\n            </a>\n          ))}\n        </div>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "750px"
+  },
+  "categories": [
+    "clients"
+  ]
+}

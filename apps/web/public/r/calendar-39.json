@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "calendar-39",
+  "type": "registry:example",
+  "description": "Calendar that shows a spinner and disables days while a month's availability loads.",
+  "files": [
+    {
+      "path": "registry/designali/examples/calendar/calendar-39.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { Calendar } from \"@workspace/ui/components/calendar\"\nimport { Spinner } from \"@workspace/ui/components/spinner\"\n\nfunction isBooked(d: Date) {\n  return (d.getDate() * 3 + d.getMonth()) % 4 === 0\n}\n\nexport default function LoadingAvailability() {\n  const [loading, setLoading] = React.useState(false)\n  const [date, setDate] = React.useState<undefined | Date>()\n  const timer = React.useRef<ReturnType<typeof setTimeout>>(undefined)\n\n  React.useEffect(() => () => clearTimeout(timer.current), [])\n\n  return (\n    <div className=\"relative w-fit border\">\n      <Calendar\n        mode=\"single\"\n        selected={date}\n        onSelect={setDate}\n        onMonthChange={() => {\n          setLoading(true)\n          clearTimeout(timer.current)\n          timer.current = setTimeout(() => setLoading(false), 900)\n        }}\n        disabled={loading ? true : isBooked}\n        aria-busy={loading}\n      />\n      {loading ? (\n        <div className=\"absolute inset-x-0 top-10 bottom-0 flex items-center justify-center gap-2 bg-background/70 text-xs text-muted-foreground\">\n          <Spinner />\n          Checking availability...\n        </div>\n      ) : null}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

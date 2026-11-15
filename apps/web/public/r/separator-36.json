@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "separator-36",
+  "type": "registry:example",
+  "description": "Reference sheet of separator thicknesses and tones for a design system.",
+  "files": [
+    {
+      "path": "registry/designali/examples/separator/separator-36.tsx",
+      "content": "import { Separator } from \"@workspace/ui/components/separator\"\n\nconst variants = [\n  { label: \"Hairline\", className: \"\" },\n  { label: \"Medium\", className: \"data-horizontal:h-0.5\" },\n  { label: \"Heavy\", className: \"data-horizontal:h-1 bg-foreground\" },\n  { label: \"Subtle\", className: \"bg-border/50\" },\n  { label: \"Brand\", className: \"data-horizontal:h-0.5 bg-primary\" },\n]\n\nexport default function SeparatorWeights() {\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-4\">\n      {variants.map((variant) => (\n        <div key={variant.label} className=\"flex items-center gap-4\">\n          <span className=\"w-16 shrink-0 text-xs text-muted-foreground\">\n            {variant.label}\n          </span>\n          <Separator className={variant.className} />\n        </div>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

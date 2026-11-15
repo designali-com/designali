@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "switch-19",
+  "type": "registry:example",
+  "description": "Weekly availability editor where each day's switch enables its hour inputs.",
+  "files": [
+    {
+      "path": "registry/designali/examples/switch/switch-19.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { Input } from \"@workspace/ui/components/input\"\nimport { Label } from \"@workspace/ui/components/label\"\nimport { Switch } from \"@workspace/ui/components/switch\"\n\nconst days = [\n  { day: \"Monday\", on: true },\n  { day: \"Tuesday\", on: true },\n  { day: \"Wednesday\", on: true },\n  { day: \"Thursday\", on: true },\n  { day: \"Friday\", on: false },\n]\n\nexport default function WeeklyAvailability() {\n  const [open, setOpen] = React.useState(() =>\n    Object.fromEntries(days.map((d) => [d.day, d.on]))\n  )\n\n  return (\n    <div className=\"w-full max-w-md divide-y border\">\n      {days.map(({ day }) => (\n        <div\n          key={day}\n          className=\"flex flex-wrap items-center gap-3 px-4 py-2.5\"\n        >\n          <Switch\n            size=\"sm\"\n            id={\"day-\" + day}\n            checked={open[day]}\n            onCheckedChange={(checked) =>\n              setOpen((o) => ({ ...o, [day]: checked }))\n            }\n          />\n          <Label htmlFor={\"day-\" + day} className=\"w-20\">\n            {day}\n          </Label>\n          {open[day] ? (\n            <div className=\"ms-auto flex items-center gap-1.5\">\n              <Input\n                type=\"time\"\n                defaultValue=\"09:00\"\n                className=\"h-7 w-24\"\n                aria-label={day + \" start\"}\n              />\n              <span className=\"text-xs text-muted-foreground\">to</span>\n              <Input\n                type=\"time\"\n                defaultValue=\"17:00\"\n                className=\"h-7 w-24\"\n                aria-label={day + \" end\"}\n              />\n            </div>\n          ) : (\n            <span className=\"ms-auto text-xs text-muted-foreground\">\n              Unavailable\n            </span>\n          )}\n        </div>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

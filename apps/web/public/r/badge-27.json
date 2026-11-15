@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "badge-27",
+  "type": "registry:example",
+  "description": "Free, Pro, Team, and Enterprise tier badges with escalating emphasis.",
+  "files": [
+    {
+      "path": "registry/designali/examples/badge/badge-27.tsx",
+      "content": "import { GemIcon, UsersIcon, ZapIcon } from \"lucide-react\"\n\nimport { Badge } from \"@workspace/ui/components/badge\"\n\nexport default function PlanTierBadges() {\n  return (\n    <div className=\"flex flex-wrap items-center justify-center gap-2\">\n      <Badge variant=\"outline\">Free</Badge>\n      <Badge>\n        <ZapIcon data-icon=\"inline-start\" />\n        Pro\n      </Badge>\n      <Badge className=\"bg-gradient-to-r from-sky-500 to-indigo-600 text-white\">\n        <UsersIcon data-icon=\"inline-start\" />\n        Team\n      </Badge>\n      <Badge className=\"bg-gradient-to-r from-amber-400 via-orange-500 to-rose-500 text-white\">\n        <GemIcon data-icon=\"inline-start\" />\n        Enterprise\n      </Badge>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

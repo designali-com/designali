@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "avatar-21",
+  "type": "registry:example",
+  "description": "Square avatars used to represent workspaces and organizations instead of people.",
+  "files": [
+    {
+      "path": "registry/designali/examples/avatar/avatar-21.tsx",
+      "content": "import { Avatar, AvatarFallback } from \"@workspace/ui/components/avatar\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst workspaces = [\n  { name: \"Acorn Studio\", short: \"AS\", tone: \"bg-emerald-600\" },\n  { name: \"Bluefin Labs\", short: \"BL\", tone: \"bg-sky-600\" },\n  { name: \"Copperline\", short: \"CO\", tone: \"bg-orange-600\" },\n]\n\nexport default function SquareWorkspaceAvatars() {\n  return (\n    <div className=\"flex w-full max-w-xs flex-col gap-2\">\n      {workspaces.map((workspace) => (\n        <div\n          key={workspace.name}\n          className=\"flex items-center gap-3 border p-2\"\n        >\n          <Avatar className=\"rounded-none after:rounded-none\">\n            <AvatarFallback\n              className={cn(\n                \"rounded-none text-xs font-semibold text-white\",\n                workspace.tone\n              )}\n            >\n              {workspace.short}\n            </AvatarFallback>\n          </Avatar>\n          <span className=\"text-sm font-medium\">{workspace.name}</span>\n        </div>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "alert-dialog-17",
+  "type": "registry:example",
+  "description": "Version history action confirming a restore to an earlier revision.",
+  "files": [
+    {
+      "path": "registry/designali/examples/alert-dialog/alert-dialog-17.tsx",
+      "content": "import { HistoryIcon } from \"lucide-react\"\n\nimport {\n  AlertDialog,\n  AlertDialogAction,\n  AlertDialogCancel,\n  AlertDialogContent,\n  AlertDialogDescription,\n  AlertDialogFooter,\n  AlertDialogHeader,\n  AlertDialogMedia,\n  AlertDialogTitle,\n  AlertDialogTrigger,\n} from \"@workspace/ui/components/alert-dialog\"\nimport { Button } from \"@workspace/ui/components/button\"\n\nexport default function RestoreVersionDialog() {\n  return (\n    <div className=\"flex w-full max-w-md items-center gap-3 border p-4\">\n      <div className=\"flex size-9 shrink-0 items-center justify-center bg-muted\">\n        <HistoryIcon className=\"size-4\" />\n      </div>\n      <div className=\"min-w-0 flex-1\">\n        <p className=\"text-sm font-medium\">Version 14</p>\n        <p className=\"text-xs text-muted-foreground\">\n          Edited by Priya Nair - 2 days ago\n        </p>\n      </div>\n      <AlertDialog>\n        <AlertDialogTrigger render={<Button variant=\"outline\" size=\"sm\" />}>\n          Restore\n        </AlertDialogTrigger>\n        <AlertDialogContent>\n          <AlertDialogHeader>\n            <AlertDialogMedia>\n              <HistoryIcon />\n            </AlertDialogMedia>\n            <AlertDialogTitle>Restore version 14?</AlertDialogTitle>\n            <AlertDialogDescription>\n              The current document will be saved as a new version first, so\n              nothing is lost.\n            </AlertDialogDescription>\n          </AlertDialogHeader>\n          <AlertDialogFooter>\n            <AlertDialogCancel>Cancel</AlertDialogCancel>\n            <AlertDialogAction>Restore this version</AlertDialogAction>\n          </AlertDialogFooter>\n        </AlertDialogContent>\n      </AlertDialog>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

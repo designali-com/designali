@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "pagination-21",
+  "type": "registry:example",
+  "description": "Dense small-size pagination for side panels and compact widgets.",
+  "files": [
+    {
+      "path": "registry/designali/examples/pagination/pagination-21.tsx",
+      "content": "import {\n  Pagination,\n  PaginationContent,\n  PaginationItem,\n  PaginationLink,\n  PaginationNext,\n  PaginationPrevious,\n} from \"@workspace/ui/components/pagination\"\n\nexport default function SmallSizePagination() {\n  return (\n    <div className=\"flex w-full max-w-xs flex-col gap-2 border p-3\">\n      <span className=\"text-xs font-medium\">Recent deployments</span>\n      <Pagination>\n        <PaginationContent>\n          <PaginationItem>\n            <PaginationPrevious href=\"#\" size=\"sm\" />\n          </PaginationItem>\n          {[1, 2, 3, 4].map((p) => (\n            <PaginationItem key={p}>\n              <PaginationLink\n                href=\"#\"\n                size=\"icon-sm\"\n                isActive={p === 2}\n                className=\"text-[11px]\"\n              >\n                {p}\n              </PaginationLink>\n            </PaginationItem>\n          ))}\n          <PaginationItem>\n            <PaginationNext href=\"#\" size=\"sm\" />\n          </PaginationItem>\n        </PaginationContent>\n      </Pagination>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

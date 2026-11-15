@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "avatar-18",
+  "type": "registry:example",
+  "description": "Avatars with numeric badges showing unread messages per conversation.",
+  "files": [
+    {
+      "path": "registry/designali/examples/avatar/avatar-18.tsx",
+      "content": "import {\n  Avatar,\n  AvatarBadge,\n  AvatarFallback,\n} from \"@workspace/ui/components/avatar\"\n\nconst inbox = [\n  { initials: \"TF\", unread: 3 },\n  { initials: \"MO\", unread: 12 },\n  { initials: \"RS\", unread: 0 },\n]\n\nexport default function UnreadCountAvatarBadge() {\n  return (\n    <div className=\"flex items-center gap-5\">\n      {inbox.map((item) => (\n        <Avatar key={item.initials} size=\"lg\">\n          <AvatarFallback>{item.initials}</AvatarFallback>\n          {item.unread > 0 && (\n            <AvatarBadge className=\"-end-1.5 -top-1.5 bottom-auto h-4 min-w-4 bg-destructive px-1 text-[10px] font-semibold text-white group-data-[size=lg]/avatar:size-auto group-data-[size=lg]/avatar:h-4\">\n              {item.unread > 9 ? \"9+\" : item.unread}\n            </AvatarBadge>\n          )}\n        </Avatar>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

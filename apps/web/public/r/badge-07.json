@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "badge-07",
+  "type": "registry:example",
+  "description": "Outline badges with a colored leading dot for compact status labels.",
+  "files": [
+    {
+      "path": "registry/designali/examples/badge/badge-07.tsx",
+      "content": "import { Badge } from \"@workspace/ui/components/badge\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst items = [\n  { label: \"Active\", dot: \"bg-emerald-500\" },\n  { label: \"Paused\", dot: \"bg-amber-500\" },\n  { label: \"Archived\", dot: \"bg-muted-foreground\" },\n  { label: \"Error\", dot: \"bg-red-500\" },\n]\n\nexport default function StatusDotBadges() {\n  return (\n    <div className=\"flex flex-wrap justify-center gap-2\">\n      {items.map((item) => (\n        <Badge key={item.label} variant=\"outline\">\n          <span\n            className={cn(\"size-1.5 rounded-full\", item.dot)}\n            aria-hidden=\"true\"\n          />\n          {item.label}\n        </Badge>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

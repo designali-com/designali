@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "aspect-ratio-50",
+  "type": "registry:example",
+  "description": "A Card whose header media uses a 2:1 aspect ratio above the content.",
+  "files": [
+    {
+      "path": "registry/designali/examples/aspect-ratio/aspect-ratio-50.tsx",
+      "content": "import { AspectRatio } from \"@workspace/ui/components/aspect-ratio\"\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  Card,\n  CardDescription,\n  CardFooter,\n  CardHeader,\n  CardTitle,\n} from \"@workspace/ui/components/card\"\n\nexport default function CardMediaHeader() {\n  return (\n    <Card className=\"w-full max-w-xs gap-0 overflow-hidden pt-0\">\n      <AspectRatio\n        ratio={2}\n        className=\"bg-linear-to-r from-cyan-500 to-blue-600\"\n      >\n        <svg\n          viewBox=\"0 0 200 100\"\n          className=\"absolute inset-0 size-full text-white/20\"\n          aria-hidden=\"true\"\n        >\n          <path\n            d=\"M0 80 Q50 40 100 70 T200 50\"\n            fill=\"none\"\n            stroke=\"currentColor\"\n            strokeWidth=\"2\"\n          />\n          <path\n            d=\"M0 95 Q60 60 120 85 T200 70\"\n            fill=\"none\"\n            stroke=\"currentColor\"\n            strokeWidth=\"2\"\n          />\n        </svg>\n      </AspectRatio>\n      <CardHeader className=\"pt-4\">\n        <CardTitle>Harbor Analytics</CardTitle>\n        <CardDescription>\n          Track shipments and dwell time across all ports in one view.\n        </CardDescription>\n      </CardHeader>\n      <CardFooter className=\"pt-4\">\n        <Button size=\"sm\" className=\"w-full\">\n          Open workspace\n        </Button>\n      </CardFooter>\n    </Card>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

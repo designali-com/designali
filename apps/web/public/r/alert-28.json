@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "alert-28",
+  "type": "registry:example",
+  "description": "Compact title-only alerts used as a status strip for each service in a dashboard.",
+  "files": [
+    {
+      "path": "registry/designali/examples/alert/alert-28.tsx",
+      "content": "import { CircleCheckIcon, CircleXIcon, TriangleAlertIcon } from \"lucide-react\"\n\nimport { Alert, AlertTitle } from \"@workspace/ui/components/alert\"\n\nconst services = [\n  {\n    name: \"API\",\n    status: \"Operational\",\n    variant: \"success\" as const,\n    icon: CircleCheckIcon,\n  },\n  {\n    name: \"Dashboard\",\n    status: \"Operational\",\n    variant: \"success\" as const,\n    icon: CircleCheckIcon,\n  },\n  {\n    name: \"Webhooks\",\n    status: \"Degraded performance\",\n    variant: \"warning\" as const,\n    icon: TriangleAlertIcon,\n  },\n  {\n    name: \"Email delivery\",\n    status: \"Partial outage\",\n    variant: \"error\" as const,\n    icon: CircleXIcon,\n  },\n]\n\nexport default function AlertServiceStatusStrip() {\n  return (\n    <div className=\"w-full max-w-sm space-y-1.5\">\n      {services.map((service) => (\n        <Alert\n          key={service.name}\n          variant={service.variant}\n          className=\"items-center py-1.5 *:[svg]:row-span-1\"\n        >\n          <service.icon className=\"size-3.5\" />\n          <AlertTitle className=\"flex justify-between gap-2\">\n            {service.name}\n            <span className=\"font-normal text-muted-foreground\">\n              {service.status}\n            </span>\n          </AlertTitle>\n        </Alert>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

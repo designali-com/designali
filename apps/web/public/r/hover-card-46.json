@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "hover-card-46",
+  "type": "registry:example",
+  "description": "Compact, default, and wide hover cards sized for different amounts of content.",
+  "files": [
+    {
+      "path": "registry/designali/examples/hover-card/hover-card-46.tsx",
+      "content": "import { Button } from \"@workspace/ui/components/button\"\nimport {\n  HoverCard,\n  HoverCardContent,\n  HoverCardTrigger,\n} from \"@workspace/ui/components/hover-card\"\n\nexport default function WidthVariantsHoverCard() {\n  return (\n    <div className=\"flex flex-wrap justify-center gap-2\">\n      <HoverCard>\n        <HoverCardTrigger render={<Button variant=\"outline\" size=\"sm\" />}>\n          Compact\n        </HoverCardTrigger>\n        <HoverCardContent className=\"w-40 p-2\">\n          Autosave is on.\n        </HoverCardContent>\n      </HoverCard>\n      <HoverCard>\n        <HoverCardTrigger render={<Button variant=\"outline\" size=\"sm\" />}>\n          Default\n        </HoverCardTrigger>\n        <HoverCardContent>\n          <p className=\"font-medium\">Version history</p>\n          <p className=\"text-muted-foreground\">\n            We keep 30 days of versions for every file in this workspace.\n          </p>\n        </HoverCardContent>\n      </HoverCard>\n      <HoverCard>\n        <HoverCardTrigger render={<Button variant=\"outline\" size=\"sm\" />}>\n          Wide\n        </HoverCardTrigger>\n        <HoverCardContent className=\"grid w-80 grid-cols-2 gap-3 p-3\">\n          <div>\n            <p className=\"font-medium\">Drafts</p>\n            <p className=\"text-muted-foreground\">\n              Only visible to you until published.\n            </p>\n          </div>\n          <div>\n            <p className=\"font-medium\">Published</p>\n            <p className=\"text-muted-foreground\">\n              Visible to everyone with the link.\n            </p>\n          </div>\n        </HoverCardContent>\n      </HoverCard>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

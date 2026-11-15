@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "separator-42",
+  "type": "registry:example",
+  "description": "Five-day forecast with vertical separators between day columns.",
+  "files": [
+    {
+      "path": "registry/designali/examples/separator/separator-42.tsx",
+      "content": "import * as React from \"react\"\nimport { CloudIcon, CloudRainIcon, CloudSunIcon, SunIcon } from \"lucide-react\"\n\nimport { Separator } from \"@workspace/ui/components/separator\"\n\nconst days = [\n  { day: \"Mon\", icon: SunIcon, high: 22, low: 13 },\n  { day: \"Tue\", icon: CloudSunIcon, high: 20, low: 12 },\n  { day: \"Wed\", icon: CloudRainIcon, high: 16, low: 10 },\n  { day: \"Thu\", icon: CloudIcon, high: 18, low: 11 },\n  { day: \"Fri\", icon: SunIcon, high: 23, low: 14 },\n]\n\nexport default function WeatherForecastColumns() {\n  return (\n    <div className=\"flex w-full max-w-md border py-3\">\n      {days.map((day, index) => (\n        <React.Fragment key={day.day}>\n          {index > 0 && <Separator orientation=\"vertical\" />}\n          <div className=\"flex flex-1 flex-col items-center gap-1.5 text-xs\">\n            <span className=\"text-muted-foreground\">{day.day}</span>\n            <day.icon className=\"size-5\" />\n            <span className=\"font-medium\">{day.high}&deg;</span>\n            <span className=\"text-muted-foreground\">{day.low}&deg;</span>\n          </div>\n        </React.Fragment>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

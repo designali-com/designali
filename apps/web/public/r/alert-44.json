@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "alert-44",
+  "type": "registry:example",
+  "description": "Polite status alert above an editor that reflects saving and saved states as you type.",
+  "files": [
+    {
+      "path": "registry/designali/examples/alert/alert-44.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { CloudCheckIcon } from \"lucide-react\"\n\nimport { Alert, AlertTitle } from \"@workspace/ui/components/alert\"\nimport { Spinner } from \"@workspace/ui/components/spinner\"\nimport { Textarea } from \"@workspace/ui/components/textarea\"\n\nexport default function AlertAutosaveStatus() {\n  const [status, setStatus] = React.useState<\"saved\" | \"saving\">(\"saved\")\n  const timer = React.useRef<ReturnType<typeof setTimeout> | null>(null)\n\n  const onChange = () => {\n    setStatus(\"saving\")\n    if (timer.current) clearTimeout(timer.current)\n    timer.current = setTimeout(() => setStatus(\"saved\"), 900)\n  }\n\n  return (\n    <div className=\"w-full max-w-sm space-y-2\">\n      <Alert role=\"status\" aria-live=\"polite\" className=\"border-dashed py-1.5\">\n        {status === \"saving\" ? (\n          <Spinner className=\"size-3.5\" />\n        ) : (\n          <CloudCheckIcon className=\"size-3.5\" />\n        )}\n        <AlertTitle className=\"font-normal text-muted-foreground\">\n          {status === \"saving\"\n            ? \"Saving draft...\"\n            : \"All changes saved to the cloud\"}\n        </AlertTitle>\n      </Alert>\n      <Textarea\n        rows={4}\n        onChange={onChange}\n        defaultValue=\"Hi team, here are the notes from Tuesday's planning session.\"\n        aria-label=\"Draft\"\n      />\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

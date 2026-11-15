@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "context-menu-20",
+  "type": "registry:example",
+  "description": "A context menu disabled through the root prop while a document is locked for signing.",
+  "files": [
+    {
+      "path": "registry/designali/examples/context-menu/context-menu-20.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport {\n  FileSignatureIcon,\n  LockIcon,\n  MessageSquareIcon,\n  PencilIcon,\n  SendIcon,\n} from \"lucide-react\"\n\nimport {\n  ContextMenu,\n  ContextMenuContent,\n  ContextMenuGroup,\n  ContextMenuItem,\n  ContextMenuTrigger,\n} from \"@workspace/ui/components/context-menu\"\nimport { Label } from \"@workspace/ui/components/label\"\nimport { Switch } from \"@workspace/ui/components/switch\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nexport default function LockedDocumentMenu() {\n  const [locked, setLocked] = React.useState(true)\n\n  return (\n    <div className=\"flex w-full max-w-xs flex-col gap-3\">\n      <div className=\"flex items-center justify-between gap-2 text-xs\">\n        <Label htmlFor=\"doc-lock\">Lock for e-signature</Label>\n        <Switch id=\"doc-lock\" checked={locked} onCheckedChange={setLocked} />\n      </div>\n      <ContextMenu disabled={locked}>\n        <ContextMenuTrigger\n          className={cn(\n            \"flex flex-col gap-1 border p-4 text-xs\",\n            locked && \"bg-muted/50\"\n          )}\n        >\n          <span className=\"flex items-center gap-1.5 font-medium\">\n            {locked ? (\n              <LockIcon className=\"size-3.5\" />\n            ) : (\n              <FileSignatureIcon className=\"size-3.5\" />\n            )}\n            Master services agreement\n          </span>\n          <span className=\"text-muted-foreground\">\n            {locked\n              ? \"Editing is locked until all parties sign.\"\n              : \"Right-click to edit this document.\"}\n          </span>\n        </ContextMenuTrigger>\n        <ContextMenuContent className=\"w-44\">\n          <ContextMenuGroup>\n            <ContextMenuItem>\n              <PencilIcon />\n              Edit clauses\n            </ContextMenuItem>\n            <ContextMenuItem>\n              <MessageSquareIcon />\n              Add comment\n            </ContextMenuItem>\n            <ContextMenuItem>\n              <SendIcon />\n              Send for signature\n            </ContextMenuItem>\n          </ContextMenuGroup>\n        </ContextMenuContent>\n      </ContextMenu>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

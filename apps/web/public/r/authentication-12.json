@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "authentication-12",
+  "type": "registry:block",
+  "description": "Account chooser listing saved profiles with avatars, remove buttons and an add account row.",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "registry/designali/blocks/authentication/authentication-12.tsx",
+      "content": "\"use client\"\n\nimport { useState } from \"react\"\nimport { ChevronRight, Plus, Trash2 } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst initialAccounts = [\n  {\n    name: \"Elena Vasquez\",\n    email: \"elena@cobaltworks.io\",\n    org: \"Cobalt Works\",\n    color: \"from-orange-400 to-rose-500\",\n    status: \"Signed in\",\n  },\n  {\n    name: \"Elena Vasquez\",\n    email: \"evasquez@personal.me\",\n    org: \"Personal\",\n    color: \"from-sky-400 to-indigo-500\",\n    status: \"Signed out\",\n  },\n  {\n    name: \"E. Vasquez\",\n    email: \"elena.v@harborclinic.org\",\n    org: \"Harbor Clinic\",\n    color: \"from-emerald-400 to-teal-600\",\n    status: \"Session expired\",\n  },\n]\n\nexport default function Authentication12() {\n  const [accounts, setAccounts] = useState(initialAccounts)\n  const [editing, setEditing] = useState(false)\n\n  return (\n    <section className=\"flex min-h-[640px] w-full items-center justify-center bg-muted/40 px-6 py-16\">\n      <div className=\"w-full max-w-md\">\n        <div className=\"text-center\">\n          <span className=\"mx-auto flex size-10 items-center justify-center bg-foreground font-mono text-sm font-bold text-background\">\n            ~\n          </span>\n          <h2 className=\"mt-5 text-2xl font-semibold tracking-tight\">Choose an account</h2>\n          <p className=\"mt-1 text-sm text-muted-foreground\">to continue to Tilde Notes</p>\n        </div>\n\n        <ul className=\"mt-8 divide-y border bg-background\">\n          {accounts.map((account) => (\n            <li key={account.email}>\n              <div className=\"flex items-center gap-4 p-4\">\n                <span\n                  className={cn(\n                    \"flex size-10 shrink-0 items-center justify-center rounded-full bg-gradient-to-br text-sm font-semibold text-white\",\n                    account.color\n                  )}\n                >\n                  {account.name\n                    .split(\" \")\n                    .map((part) => part[0])\n                    .join(\"\")\n                    .replace(\".\", \"\")}\n                </span>\n                <button type=\"button\" disabled={editing} className=\"min-w-0 flex-1 text-start disabled:cursor-default\">\n                  <span className=\"block truncate text-sm font-medium\">{account.name}</span>\n                  <span className=\"block truncate text-sm text-muted-foreground\">{account.email}</span>\n                </button>\n                {editing ? (\n                  <button\n                    type=\"button\"\n                    aria-label={`Remove ${account.email}`}\n                    onClick={() => setAccounts(accounts.filter((item) => item.email !== account.email))}\n                    className=\"flex size-8 items-center justify-center text-muted-foreground hover:text-red-600 dark:hover:text-red-400\"\n                  >\n                    <Trash2 className=\"size-4\" />\n                  </button>\n                ) : (\n                  <span className=\"flex shrink-0 items-center gap-2\">\n                    <span\n                      className={cn(\n                        \"hidden text-xs sm:inline\",\n                        account.status === \"Signed in\" ? \"text-emerald-700 dark:text-emerald-400\" : \"text-muted-foreground\"\n                      )}\n                    >\n                      {account.status}\n                    </span>\n                    <ChevronRight className=\"size-4 text-muted-foreground\" />\n                  </span>\n                )}\n              </div>\n            </li>\n          ))}\n          <li>\n            <button type=\"button\" className=\"flex w-full items-center gap-4 p-4 text-sm hover:bg-muted/50\">\n              <span className=\"flex size-10 items-center justify-center rounded-full border border-dashed\">\n                <Plus className=\"size-4\" />\n              </span>\n              Use another account\n            </button>\n          </li>\n        </ul>\n\n        <div className=\"mt-4 flex items-center justify-between text-sm\">\n          <Button variant=\"ghost\" size=\"sm\" onClick={() => setEditing(!editing)}>\n            {editing ? \"Done\" : \"Remove an account\"}\n          </Button>\n          <a href=\"#\" className=\"text-muted-foreground hover:text-foreground\">Help</a>\n        </div>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "650px"
+  },
+  "categories": [
+    "authentication"
+  ]
+}

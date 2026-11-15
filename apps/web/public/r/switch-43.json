@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "switch-43",
+  "type": "registry:example",
+  "description": "A fieldset of grouped switches for email digest content with a legend.",
+  "files": [
+    {
+      "path": "registry/designali/examples/switch/switch-43.tsx",
+      "content": "import {\n  Field,\n  FieldDescription,\n  FieldGroup,\n  FieldLabel,\n  FieldLegend,\n  FieldSet,\n} from \"@workspace/ui/components/field\"\nimport { Switch } from \"@workspace/ui/components/switch\"\n\nexport default function EmailDigestFieldSet() {\n  return (\n    <FieldSet className=\"w-full max-w-sm border p-4\">\n      <FieldLegend>Daily digest includes</FieldLegend>\n      <FieldDescription>Sent at 7:00 AM in your time zone.</FieldDescription>\n      <FieldGroup className=\"gap-3\">\n        <Field orientation=\"horizontal\">\n          <FieldLabel htmlFor=\"digest-tasks\" className=\"font-normal\">\n            Tasks due today\n          </FieldLabel>\n          <Switch id=\"digest-tasks\" defaultChecked />\n        </Field>\n        <Field orientation=\"horizontal\">\n          <FieldLabel htmlFor=\"digest-overdue\" className=\"font-normal\">\n            Overdue tasks\n          </FieldLabel>\n          <Switch id=\"digest-overdue\" defaultChecked />\n        </Field>\n        <Field orientation=\"horizontal\">\n          <FieldLabel htmlFor=\"digest-activity\" className=\"font-normal\">\n            Team activity\n          </FieldLabel>\n          <Switch id=\"digest-activity\" />\n        </Field>\n        <Field orientation=\"horizontal\">\n          <FieldLabel htmlFor=\"digest-calendar\" className=\"font-normal\">\n            Calendar events\n          </FieldLabel>\n          <Switch id=\"digest-calendar\" />\n        </Field>\n      </FieldGroup>\n    </FieldSet>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

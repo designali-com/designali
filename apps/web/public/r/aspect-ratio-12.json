@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "aspect-ratio-12",
+  "type": "registry:example",
+  "description": "A 3:1 profile banner with an overlapping avatar and follow button.",
+  "files": [
+    {
+      "path": "registry/designali/examples/aspect-ratio/aspect-ratio-12.tsx",
+      "content": "import { AspectRatio } from \"@workspace/ui/components/aspect-ratio\"\nimport { Avatar, AvatarFallback } from \"@workspace/ui/components/avatar\"\nimport { Button } from \"@workspace/ui/components/button\"\n\nexport default function ProfileBannerAvatar() {\n  return (\n    <div className=\"w-full max-w-md border\">\n      <AspectRatio\n        ratio={3}\n        className=\"bg-linear-to-r from-emerald-400 via-cyan-400 to-blue-500\"\n      />\n      <div className=\"flex items-end justify-between gap-3 px-4 pb-4\">\n        <Avatar className=\"-mt-8 size-16 ring-4 ring-background\">\n          <AvatarFallback className=\"text-lg\">OB</AvatarFallback>\n        </Avatar>\n        <Button size=\"sm\">Follow</Button>\n      </div>\n      <div className=\"px-4 pb-4\">\n        <p className=\"text-sm font-semibold\">Oren Baxter</p>\n        <p className=\"text-xs text-muted-foreground\">\n          Product designer - Lisbon\n        </p>\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

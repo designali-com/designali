@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button-35",
+  "type": "registry:example",
+  "description": "Audio player transport with skip, play and pause icon buttons of different sizes.",
+  "files": [
+    {
+      "path": "registry/designali/examples/button/button-35.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport {\n  PauseIcon,\n  PlayIcon,\n  RepeatIcon,\n  ShuffleIcon,\n  SkipBackIcon,\n  SkipForwardIcon,\n} from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\n\nexport default function MediaPlayerControls() {\n  const [playing, setPlaying] = React.useState(false)\n\n  return (\n    <div className=\"flex w-full max-w-xs flex-col items-center gap-3 border p-4\">\n      <div className=\"text-center\">\n        <p className=\"text-sm font-medium\">Low Tide Sessions</p>\n        <p className=\"text-xs text-muted-foreground\">\n          Marlow &amp; the Lanterns\n        </p>\n      </div>\n      <div className=\"flex items-center gap-2\">\n        <Button variant=\"ghost\" size=\"icon-sm\" aria-label=\"Shuffle\">\n          <ShuffleIcon />\n        </Button>\n        <Button variant=\"ghost\" size=\"icon\" aria-label=\"Previous track\">\n          <SkipBackIcon />\n        </Button>\n        <Button\n          size=\"icon-lg\"\n          className=\"size-11 rounded-full\"\n          aria-label={playing ? \"Pause\" : \"Play\"}\n          onClick={() => setPlaying(!playing)}\n        >\n          {playing ? (\n            <PauseIcon className=\"size-5\" />\n          ) : (\n            <PlayIcon className=\"size-5\" />\n          )}\n        </Button>\n        <Button variant=\"ghost\" size=\"icon\" aria-label=\"Next track\">\n          <SkipForwardIcon />\n        </Button>\n        <Button variant=\"ghost\" size=\"icon-sm\" aria-label=\"Repeat\">\n          <RepeatIcon />\n        </Button>\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "progress-34",
+  "type": "registry:example",
+  "description": "Monthly budget categories with spend bars, flagging overspent categories.",
+  "files": [
+    {
+      "path": "registry/designali/examples/progress/progress-34.tsx",
+      "content": "import { Progress, ProgressLabel } from \"@workspace/ui/components/progress\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst categories = [\n  { name: \"Groceries\", spent: 412, budget: 500 },\n  { name: \"Dining out\", spent: 265, budget: 200 },\n  { name: \"Transport\", spent: 88, budget: 150 },\n  { name: \"Subscriptions\", spent: 54, budget: 60 },\n]\n\nexport default function BudgetCategorySpending() {\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-4 border p-4\">\n      <p className=\"text-sm font-medium\">November budget</p>\n      {categories.map((c) => {\n        const over = c.spent > c.budget\n        return (\n          <Progress\n            key={c.name}\n            value={Math.min(c.spent, c.budget)}\n            max={c.budget}\n            className={cn(\n              over && \"[&_[data-slot=progress-indicator]]:bg-destructive\"\n            )}\n          >\n            <ProgressLabel className=\"text-sm\">{c.name}</ProgressLabel>\n            <span\n              className={cn(\n                \"ms-auto text-xs tabular-nums\",\n                over ? \"text-destructive\" : \"text-muted-foreground\"\n              )}\n            >\n              {\"$\" + c.spent} / {\"$\" + c.budget}\n            </span>\n          </Progress>\n        )\n      })}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

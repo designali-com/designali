@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "field-24",
+  "type": "registry:example",
+  "description": "Cookie consent switches where the essential category is checked and disabled.",
+  "files": [
+    {
+      "path": "registry/designali/examples/field/field-24.tsx",
+      "content": "import { Badge } from \"@workspace/ui/components/badge\"\nimport {\n  Field,\n  FieldContent,\n  FieldDescription,\n  FieldGroup,\n  FieldLabel,\n  FieldLegend,\n  FieldSet,\n} from \"@workspace/ui/components/field\"\nimport { Switch } from \"@workspace/ui/components/switch\"\n\nconst categories = [\n  {\n    id: \"essential\",\n    title: \"Essential\",\n    hint: \"Required for sign-in and security.\",\n    locked: true,\n  },\n  {\n    id: \"analytics\",\n    title: \"Analytics\",\n    hint: \"Help us understand how the app is used.\",\n    locked: false,\n  },\n  {\n    id: \"marketing\",\n    title: \"Marketing\",\n    hint: \"Personalized offers on partner sites.\",\n    locked: false,\n  },\n]\n\nexport default function PrivacySwitchesWithLocked() {\n  return (\n    <FieldSet className=\"w-full max-w-sm\">\n      <FieldLegend>Cookie preferences</FieldLegend>\n      <FieldGroup className=\"gap-4\">\n        {categories.map((c) => (\n          <Field key={c.id} orientation=\"horizontal\" data-disabled={c.locked}>\n            <FieldContent>\n              <FieldLabel htmlFor={\"cookie-\" + c.id}>\n                {c.title}\n                {c.locked && <Badge variant=\"outline\">Always on</Badge>}\n              </FieldLabel>\n              <FieldDescription>{c.hint}</FieldDescription>\n            </FieldContent>\n            <Switch\n              id={\"cookie-\" + c.id}\n              defaultChecked={c.locked}\n              disabled={c.locked}\n            />\n          </Field>\n        ))}\n      </FieldGroup>\n    </FieldSet>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

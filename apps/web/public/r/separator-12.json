@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "separator-12",
+  "type": "registry:example",
+  "description": "Chat transcript with a centered date label separating messages by day.",
+  "files": [
+    {
+      "path": "registry/designali/examples/separator/separator-12.tsx",
+      "content": "import { Separator } from \"@workspace/ui/components/separator\"\n\nexport default function ChatDateDivider() {\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-3 text-sm\">\n      <div className=\"max-w-[75%] self-start bg-muted px-3 py-2\">\n        Sending the revised floor plan tonight.\n      </div>\n      <div className=\"flex items-center gap-3 py-1\">\n        <Separator className=\"flex-1\" />\n        <span className=\"text-[11px] text-muted-foreground\">Today</span>\n        <Separator className=\"flex-1\" />\n      </div>\n      <div className=\"max-w-[75%] self-start bg-muted px-3 py-2\">\n        Got it, the kitchen layout looks great.\n      </div>\n      <div className=\"max-w-[75%] self-end bg-primary px-3 py-2 text-primary-foreground\">\n        Thanks! Can we lock it in by Friday?\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

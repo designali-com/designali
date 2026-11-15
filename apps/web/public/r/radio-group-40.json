@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "radio-group-40",
+  "type": "registry:example",
+  "description": "Backup schedule where choosing Custom reveals a nested radio group.",
+  "files": [
+    {
+      "path": "registry/designali/examples/radio-group/radio-group-40.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport {\n  Field,\n  FieldLabel,\n  FieldLegend,\n  FieldSet,\n} from \"@workspace/ui/components/field\"\nimport {\n  RadioGroup,\n  RadioGroupItem,\n} from \"@workspace/ui/components/radio-group\"\n\nexport default function NestedScheduleOptions() {\n  const [schedule, setSchedule] = React.useState(\"custom\")\n\n  return (\n    <FieldSet className=\"w-full max-w-sm\">\n      <FieldLegend variant=\"label\">Backup schedule</FieldLegend>\n      <RadioGroup\n        value={schedule}\n        onValueChange={(v) => setSchedule(v as string)}\n      >\n        <Field orientation=\"horizontal\">\n          <RadioGroupItem value=\"hourly\" id=\"bk-hourly\" />\n          <FieldLabel htmlFor=\"bk-hourly\" className=\"font-normal\">\n            Every hour\n          </FieldLabel>\n        </Field>\n        <Field orientation=\"horizontal\">\n          <RadioGroupItem value=\"nightly\" id=\"bk-nightly\" />\n          <FieldLabel htmlFor=\"bk-nightly\" className=\"font-normal\">\n            Nightly at 2:00 AM\n          </FieldLabel>\n        </Field>\n        <Field orientation=\"horizontal\">\n          <RadioGroupItem value=\"custom\" id=\"bk-custom\" />\n          <FieldLabel htmlFor=\"bk-custom\" className=\"font-normal\">\n            Custom\n          </FieldLabel>\n        </Field>\n      </RadioGroup>\n      {schedule === \"custom\" && (\n        <div className=\"ms-1.5 border-s ps-4\">\n          <RadioGroup\n            defaultValue=\"weekdays\"\n            aria-label=\"Custom days\"\n            className=\"gap-2\"\n          >\n            <Field orientation=\"horizontal\">\n              <RadioGroupItem value=\"weekdays\" id=\"bk-weekdays\" />\n              <FieldLabel\n                htmlFor=\"bk-weekdays\"\n                className=\"font-normal text-muted-foreground\"\n              >\n                Weekdays only\n              </FieldLabel>\n            </Field>\n            <Field orientation=\"horizontal\">\n              <RadioGroupItem value=\"weekends\" id=\"bk-weekends\" />\n              <FieldLabel\n                htmlFor=\"bk-weekends\"\n                className=\"font-normal text-muted-foreground\"\n              >\n                Weekends only\n              </FieldLabel>\n            </Field>\n          </RadioGroup>\n        </div>\n      )}\n    </FieldSet>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

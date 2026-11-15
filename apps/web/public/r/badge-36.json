@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "badge-36",
+  "type": "registry:example",
+  "description": "Environment labels for production, staging, preview, and local deployments.",
+  "files": [
+    {
+      "path": "registry/designali/examples/badge/badge-36.tsx",
+      "content": "import { Badge } from \"@workspace/ui/components/badge\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst envs = [\n  {\n    name: \"Production\",\n    url: \"app.quillstack.io\",\n    className: \"bg-red-600 text-white\",\n  },\n  {\n    name: \"Staging\",\n    url: \"staging.quillstack.io\",\n    className: \"bg-amber-400 text-amber-950\",\n  },\n  {\n    name: \"Preview\",\n    url: \"pr-812.quillstack.dev\",\n    className:\n      \"bg-violet-50 text-violet-700 dark:bg-violet-950 dark:text-violet-300\",\n  },\n  {\n    name: \"Local\",\n    url: \"localhost:3000\",\n    className: \"bg-muted text-muted-foreground\",\n  },\n]\n\nexport default function EnvironmentBadges() {\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-2\">\n      {envs.map((env) => (\n        <div key={env.name} className=\"flex items-center gap-3 border p-2.5\">\n          <Badge className={cn(\"w-20 font-semibold uppercase\", env.className)}>\n            {env.name}\n          </Badge>\n          <span className=\"truncate font-mono text-xs text-muted-foreground\">\n            {env.url}\n          </span>\n        </div>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

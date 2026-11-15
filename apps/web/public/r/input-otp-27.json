@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-otp-27",
+  "type": "registry:example",
+  "description": "Controlled OTP with a button that pastes a numeric code straight from the clipboard.",
+  "files": [
+    {
+      "path": "registry/designali/examples/input-otp/input-otp-27.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { ClipboardPasteIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  InputOTP,\n  InputOTPGroup,\n  InputOTPSlot,\n} from \"@workspace/ui/components/input-otp\"\n\nexport default function PasteFromClipboard() {\n  const [value, setValue] = React.useState(\"\")\n\n  async function handlePaste() {\n    try {\n      const text = await navigator.clipboard.readText()\n      setValue(text.replace(/\\D/g, \"\").slice(0, 6))\n    } catch {\n      // Clipboard access denied; the user can still type or paste manually.\n    }\n  }\n\n  return (\n    <div className=\"flex flex-col items-center gap-3\">\n      <InputOTP maxLength={6} value={value} onChange={setValue}>\n        <InputOTPGroup>\n          <InputOTPSlot index={0} />\n          <InputOTPSlot index={1} />\n          <InputOTPSlot index={2} />\n          <InputOTPSlot index={3} />\n          <InputOTPSlot index={4} />\n          <InputOTPSlot index={5} />\n        </InputOTPGroup>\n      </InputOTP>\n      <Button variant=\"outline\" size=\"sm\" onClick={handlePaste}>\n        <ClipboardPasteIcon data-icon=\"inline-start\" />\n        Paste code\n      </Button>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

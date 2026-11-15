@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "skeleton-44",
+  "type": "registry:example",
+  "description": "Full mini app shell placeholder with sidebar, top bar, stat row, and content panel.",
+  "files": [
+    {
+      "path": "registry/designali/examples/skeleton/skeleton-44.tsx",
+      "content": "import { Skeleton } from \"@workspace/ui/components/skeleton\"\n\nexport default function AppShellSkeleton() {\n  return (\n    <div className=\"flex h-72 w-full max-w-xl border\">\n      <div className=\"hidden w-36 flex-col gap-3 border-e p-3 sm:flex\">\n        <Skeleton className=\"h-6 w-20\" />\n        {Array.from({ length: 5 }).map((_, i) => (\n          <Skeleton key={i} className=\"h-3 w-full\" />\n        ))}\n      </div>\n      <div className=\"flex flex-1 flex-col\">\n        <div className=\"flex items-center justify-between border-b p-3\">\n          <Skeleton className=\"h-6 w-32\" />\n          <Skeleton className=\"size-7 rounded-full\" />\n        </div>\n        <div className=\"flex flex-1 flex-col gap-3 p-3\">\n          <div className=\"grid grid-cols-3 gap-2\">\n            {[0, 1, 2].map((i) => (\n              <Skeleton key={i} className=\"h-14\" />\n            ))}\n          </div>\n          <Skeleton className=\"flex-1\" />\n        </div>\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

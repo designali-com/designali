@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "hero-19",
+  "type": "registry:block",
+  "description": "Conference hero with oversized gradient wordmark, date and venue meta, countdown blocks and speaker cards.",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "registry/designali/blocks/hero/hero-19.tsx",
+      "content": "import { ArrowRight, CalendarDays, MapPin, Ticket } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\n\nconst countdown = [\n  { value: \"42\", label: \"Days\" },\n  { value: \"09\", label: \"Hours\" },\n  { value: \"31\", label: \"Minutes\" },\n]\n\nconst speakers = [\n  { initials: \"AO\", name: \"Ada Obi\", topic: \"Type systems at scale\", color: \"from-chart-1 to-chart-2\" },\n  { initials: \"LM\", name: \"Luca Moretti\", topic: \"The edge is a lie\", color: \"from-chart-3 to-chart-4\" },\n  { initials: \"SN\", name: \"Sun Ning\", topic: \"Designing for latency\", color: \"from-chart-5 to-chart-1\" },\n  { initials: \"RK\", name: \"Rhea Kapoor\", topic: \"Postgres is enough\", color: \"from-chart-2 to-chart-5\" },\n]\n\nexport default function Hero19() {\n  return (\n    <section className=\"w-full bg-background px-6 py-16 md:py-24\">\n      <div className=\"mx-auto max-w-7xl\">\n        <div className=\"flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-muted-foreground\">\n          <span className=\"flex items-center gap-2\">\n            <CalendarDays className=\"size-4\" />\n            March 18 to 20, 2027\n          </span>\n          <span className=\"flex items-center gap-2\">\n            <MapPin className=\"size-4\" />\n            Pier 27, San Francisco and online\n          </span>\n        </div>\n\n        <h1 className=\"mt-8 text-5xl leading-[0.95] font-medium tracking-tight sm:text-7xl md:text-8xl lg:text-9xl\">\n          Frontier\n          <span className=\"block bg-gradient-to-r from-chart-1 via-chart-2 to-chart-4 bg-clip-text text-transparent\">\n            Conf 27\n          </span>\n        </h1>\n\n        <div className=\"mt-12 grid gap-10 border-t border-border pt-10 lg:grid-cols-[1fr_auto] lg:items-end\">\n          <div className=\"max-w-xl\">\n            <p className=\"text-base leading-7 text-muted-foreground\">\n              Three days, 60 talks and one very long hallway track for people\n              who build the web&apos;s infrastructure. Early-bird pricing ends\n              when the countdown does.\n            </p>\n            <div className=\"mt-8 flex flex-wrap gap-3\">\n              <Button size=\"lg\" nativeButton={false} render={<a href=\"#\" />}>\n                <Ticket />\n                Get tickets from $349\n              </Button>\n              <Button size=\"lg\" variant=\"outline\" nativeButton={false} render={<a href=\"#\" />}>\n                Browse the agenda\n                <ArrowRight />\n              </Button>\n            </div>\n          </div>\n          <div className=\"grid grid-cols-3 border border-border\">\n            {countdown.map((unit) => (\n              <div key={unit.label} className=\"border-e border-border px-5 py-4 text-center last:border-e-0 sm:px-8\">\n                <p className=\"font-mono text-3xl font-medium tabular-nums sm:text-4xl\">{unit.value}</p>\n                <p className=\"mt-1 text-xs text-muted-foreground\">{unit.label}</p>\n              </div>\n            ))}\n          </div>\n        </div>\n\n        <div className=\"mt-12 grid grid-cols-2 gap-4 md:grid-cols-4\">\n          {speakers.map((speaker) => (\n            <a key={speaker.name} href=\"#\" className=\"group border border-border p-4 transition-colors hover:bg-muted/50\">\n              <span\n                className={`flex size-12 items-center justify-center rounded-full bg-gradient-to-br text-sm font-medium text-white ${speaker.color}`}\n              >\n                {speaker.initials}\n              </span>\n              <p className=\"mt-4 text-sm font-medium\">{speaker.name}</p>\n              <p className=\"mt-0.5 text-xs text-muted-foreground\">{speaker.topic}</p>\n            </a>\n          ))}\n        </div>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "1000px"
+  },
+  "categories": [
+    "hero"
+  ]
+}

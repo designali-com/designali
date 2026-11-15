@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button-30",
+  "type": "registry:example",
+  "description": "Single-select filter chips built from small buttons with a pressed state.",
+  "files": [
+    {
+      "path": "registry/designali/examples/button/button-30.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\n\nconst filters = [\"All\", \"Unread\", \"Mentions\", \"Assigned\", \"Archived\"]\n\nexport default function FilterChipButtons() {\n  const [active, setActive] = React.useState(\"All\")\n\n  return (\n    <div className=\"flex max-w-sm flex-wrap gap-1.5\">\n      {filters.map((filter) => (\n        <Button\n          key={filter}\n          size=\"xs\"\n          variant={active === filter ? \"default\" : \"outline\"}\n          aria-pressed={active === filter}\n          onClick={() => setActive(filter)}\n          className=\"rounded-full px-3\"\n        >\n          {filter}\n        </Button>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

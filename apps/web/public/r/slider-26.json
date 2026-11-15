@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "slider-26",
+  "type": "registry:example",
+  "description": "Restaurant settings card for the delivery radius with an estimated reach.",
+  "files": [
+    {
+      "path": "registry/designali/examples/slider/slider-26.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { MapPinIcon } from \"lucide-react\"\n\nimport {\n  Card,\n  CardContent,\n  CardDescription,\n  CardHeader,\n  CardTitle,\n} from \"@workspace/ui/components/card\"\nimport { Slider } from \"@workspace/ui/components/slider\"\n\nexport default function DeliveryRadiusSlider() {\n  const [radius, setRadius] = React.useState([5])\n  const r = radius[0]!\n\n  return (\n    <Card className=\"w-full max-w-sm\">\n      <CardHeader>\n        <CardTitle className=\"flex items-center gap-2\">\n          <MapPinIcon className=\"size-4\" />\n          Delivery radius\n        </CardTitle>\n        <CardDescription>\n          Orders outside this area are hidden from the menu.\n        </CardDescription>\n      </CardHeader>\n      <CardContent className=\"flex flex-col gap-4\">\n        <div className=\"flex items-end justify-between\">\n          <span className=\"text-3xl font-semibold tabular-nums\">\n            {r}\n            <span className=\"text-base font-normal text-muted-foreground\">\n              {\" \"}\n              km\n            </span>\n          </span>\n          <span className=\"text-xs text-muted-foreground\">\n            ~{Math.round(r * r * 410).toLocaleString()} households\n          </span>\n        </div>\n        <Slider\n          aria-label=\"Delivery radius\"\n          value={radius}\n          onValueChange={(value) => setRadius(value as number[])}\n          min={1}\n          max={15}\n          step={0.5}\n        />\n      </CardContent>\n    </Card>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

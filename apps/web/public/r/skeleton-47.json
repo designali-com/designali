@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "skeleton-47",
+  "type": "registry:example",
+  "description": "Screen-reader friendly loading region using role status, aria-busy, and hidden skeletons.",
+  "files": [
+    {
+      "path": "registry/designali/examples/skeleton/skeleton-47.tsx",
+      "content": "import { Skeleton } from \"@workspace/ui/components/skeleton\"\n\nexport default function AccessibleSkeleton() {\n  return (\n    <div\n      role=\"status\"\n      aria-busy=\"true\"\n      aria-live=\"polite\"\n      className=\"flex w-full max-w-sm flex-col gap-3 border p-4\"\n    >\n      <span className=\"sr-only\">Loading your recent invoices…</span>\n      <div aria-hidden=\"true\" className=\"flex flex-col gap-3\">\n        {Array.from({ length: 3 }).map((_, i) => (\n          <div key={i} className=\"flex items-center justify-between\">\n            <div className=\"flex flex-col gap-1.5\">\n              <Skeleton className=\"h-3 w-24\" />\n              <Skeleton className=\"h-2.5 w-16\" />\n            </div>\n            <Skeleton className=\"h-4 w-14\" />\n          </div>\n        ))}\n      </div>\n      <p className=\"text-xs text-muted-foreground\">\n        Placeholders are hidden from assistive tech; a status message is\n        announced instead.\n      </p>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

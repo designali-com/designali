@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tabs-24",
+  "type": "registry:example",
+  "description": "Saved dashboard views as tabs with a button that adds a new view.",
+  "files": [
+    {
+      "path": "registry/designali/examples/tabs/tabs-24.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { PlusIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  Tabs,\n  TabsContent,\n  TabsList,\n  TabsTrigger,\n} from \"@workspace/ui/components/tabs\"\n\nexport default function AddableDashboardTabs() {\n  const [views, setViews] = React.useState([\"Overview\", \"Marketing\"])\n  const [active, setActive] = React.useState(\"Overview\")\n\n  function addView() {\n    const name = \"View \" + (views.length + 1)\n    setViews([...views, name])\n    setActive(name)\n  }\n\n  return (\n    <Tabs\n      value={active}\n      onValueChange={(v) => setActive(v as string)}\n      className=\"w-full max-w-md\"\n    >\n      <div className=\"flex items-center gap-1\">\n        <TabsList variant=\"line\">\n          {views.map((v) => (\n            <TabsTrigger key={v} value={v}>\n              {v}\n            </TabsTrigger>\n          ))}\n        </TabsList>\n        <Button\n          variant=\"ghost\"\n          size=\"icon-sm\"\n          aria-label=\"Add view\"\n          onClick={addView}\n          disabled={views.length >= 5}\n        >\n          <PlusIcon />\n        </Button>\n      </div>\n      {views.map((v) => (\n        <TabsContent\n          key={v}\n          value={v}\n          className=\"flex h-24 items-center justify-center border border-dashed text-muted-foreground\"\n        >\n          {v} widgets appear here\n        </TabsContent>\n      ))}\n    </Tabs>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

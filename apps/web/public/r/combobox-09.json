@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "combobox-09",
+  "type": "registry:example",
+  "description": "Controlled combobox whose selected value is mirrored below with a reset action.",
+  "files": [
+    {
+      "path": "registry/designali/examples/combobox/combobox-09.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  Combobox,\n  ComboboxContent,\n  ComboboxEmpty,\n  ComboboxInput,\n  ComboboxItem,\n  ComboboxList,\n} from \"@workspace/ui/components/combobox\"\n\nconst regions = [\n  \"Frankfurt (eu-central-1)\",\n  \"Dublin (eu-west-1)\",\n  \"Virginia (us-east-1)\",\n  \"Oregon (us-west-2)\",\n  \"Singapore (ap-southeast-1)\",\n]\n\nexport default function ControlledRegionReadout() {\n  const [value, setValue] = React.useState<string | null>(regions[0]!)\n  return (\n    <div className=\"flex w-full max-w-xs flex-col gap-3\">\n      <Combobox items={regions} value={value} onValueChange={setValue}>\n        <ComboboxInput placeholder=\"Choose a region\" className=\"w-full\" />\n        <ComboboxContent>\n          <ComboboxEmpty>No regions found.</ComboboxEmpty>\n          <ComboboxList>\n            {(item: string) => (\n              <ComboboxItem key={item} value={item}>\n                {item}\n              </ComboboxItem>\n            )}\n          </ComboboxList>\n        </ComboboxContent>\n      </Combobox>\n      <div className=\"flex items-center justify-between border bg-muted/40 px-3 py-2 text-xs\">\n        <span>\n          Deploying to: <span className=\"font-medium\">{value ?? \"none\"}</span>\n        </span>\n        <Button\n          variant=\"ghost\"\n          size=\"xs\"\n          onClick={() => setValue(null)}\n          disabled={!value}\n        >\n          Reset\n        </Button>\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

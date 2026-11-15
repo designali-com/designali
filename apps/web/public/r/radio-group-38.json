@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "radio-group-38",
+  "type": "registry:example",
+  "description": "Inbox filter radio list with unread counts in badges.",
+  "files": [
+    {
+      "path": "registry/designali/examples/radio-group/radio-group-38.tsx",
+      "content": "import { AtSignIcon, InboxIcon, MailIcon, StarIcon } from \"lucide-react\"\n\nimport { Badge } from \"@workspace/ui/components/badge\"\nimport {\n  RadioGroup,\n  RadioGroupItem,\n} from \"@workspace/ui/components/radio-group\"\n\nconst filters = [\n  { value: \"all\", label: \"All messages\", icon: InboxIcon, count: 128 },\n  { value: \"unread\", label: \"Unread\", icon: MailIcon, count: 12 },\n  { value: \"mentions\", label: \"Mentions\", icon: AtSignIcon, count: 3 },\n  { value: \"starred\", label: \"Starred\", icon: StarIcon, count: 0 },\n]\n\nexport default function InboxFilterCounts() {\n  return (\n    <RadioGroup\n      defaultValue=\"unread\"\n      aria-label=\"Inbox filter\"\n      className=\"w-full max-w-60 gap-0.5\"\n    >\n      {filters.map((f) => (\n        <label\n          key={f.value}\n          htmlFor={\"inbox-\" + f.value}\n          className=\"flex cursor-pointer items-center gap-2.5 px-2 py-1.5 text-sm hover:bg-muted/60 has-data-checked:bg-muted has-data-checked:font-medium\"\n        >\n          <RadioGroupItem\n            value={f.value}\n            id={\"inbox-\" + f.value}\n            className=\"sr-only\"\n          />\n          <f.icon className=\"size-4 text-muted-foreground\" />\n          <span className=\"flex-1\">{f.label}</span>\n          {f.count > 0 && <Badge variant=\"secondary\">{f.count}</Badge>}\n        </label>\n      ))}\n    </RadioGroup>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "grid-20",
+  "type": "registry:block",
+  "description": "Keyboard shortcut cheat sheet grid of grouped cards with key caps.",
+  "dependencies": [],
+  "registryDependencies": [
+    "kbd"
+  ],
+  "files": [
+    {
+      "path": "registry/designali/blocks/grid/grid-20.tsx",
+      "content": "import { Kbd, KbdGroup } from \"@workspace/ui/components/kbd\"\n\nconst groups = [\n  {\n    title: \"General\",\n    shortcuts: [\n      { action: \"Command menu\", keys: [\"⌘\", \"K\"] },\n      { action: \"Search everywhere\", keys: [\"/\"] },\n      { action: \"Toggle sidebar\", keys: [\"⌘\", \"\\\\\"] },\n      { action: \"Open settings\", keys: [\"⌘\", \",\"] },\n    ],\n  },\n  {\n    title: \"Editing\",\n    shortcuts: [\n      { action: \"Bold\", keys: [\"⌘\", \"B\"] },\n      { action: \"Insert link\", keys: [\"⌘\", \"K\", \"L\"] },\n      { action: \"Duplicate block\", keys: [\"⌘\", \"D\"] },\n      { action: \"Move block up\", keys: [\"⌥\", \"↑\"] },\n      { action: \"Move block down\", keys: [\"⌥\", \"↓\"] },\n    ],\n  },\n  {\n    title: \"Navigation\",\n    shortcuts: [\n      { action: \"Go to inbox\", keys: [\"G\", \"I\"] },\n      { action: \"Go to projects\", keys: [\"G\", \"P\"] },\n      { action: \"Next item\", keys: [\"J\"] },\n      { action: \"Previous item\", keys: [\"K\"] },\n    ],\n  },\n  {\n    title: \"Issues\",\n    shortcuts: [\n      { action: \"New issue\", keys: [\"C\"] },\n      { action: \"Assign to me\", keys: [\"I\"] },\n      { action: \"Change status\", keys: [\"S\"] },\n      { action: \"Set priority\", keys: [\"P\"] },\n      { action: \"Copy issue link\", keys: [\"⌘\", \"⇧\", \"C\"] },\n    ],\n  },\n  {\n    title: \"View\",\n    shortcuts: [\n      { action: \"Zoom in\", keys: [\"⌘\", \"+\"] },\n      { action: \"Zoom out\", keys: [\"⌘\", \"-\"] },\n      { action: \"Full screen\", keys: [\"⌃\", \"⌘\", \"F\"] },\n    ],\n  },\n  {\n    title: \"Selection\",\n    shortcuts: [\n      { action: \"Select all\", keys: [\"⌘\", \"A\"] },\n      { action: \"Extend selection\", keys: [\"⇧\", \"J\"] },\n      { action: \"Clear selection\", keys: [\"Esc\"] },\n    ],\n  },\n]\n\nexport default function Grid20() {\n  return (\n    <section className=\"w-full bg-muted/30 py-24\">\n      <div className=\"mx-auto max-w-6xl px-6\">\n        <div className=\"flex flex-col justify-between gap-4 md:flex-row md:items-end\">\n          <div>\n            <h2 className=\"text-4xl font-semibold tracking-tight\">Keyboard shortcuts</h2>\n            <p className=\"mt-2 text-sm text-muted-foreground\">\n              Never reach for the mouse. Press <Kbd>?</Kbd> anywhere in Tracklane to open this sheet.\n            </p>\n          </div>\n          <span className=\"text-xs text-muted-foreground\">macOS · Windows uses Ctrl for ⌘</span>\n        </div>\n\n        <div className=\"mt-12 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3\">\n          {groups.map((group) => (\n            <div key={group.title} className=\"border border-border bg-background\">\n              <h3 className=\"border-b border-border px-5 py-3 text-xs font-medium tracking-widest text-muted-foreground uppercase\">\n                {group.title}\n              </h3>\n              <ul className=\"divide-y divide-border\">\n                {group.shortcuts.map((shortcut) => (\n                  <li key={shortcut.action} className=\"flex items-center justify-between gap-4 px-5 py-3\">\n                    <span className=\"text-sm\">{shortcut.action}</span>\n                    <KbdGroup>\n                      {shortcut.keys.map((key) => (\n                        <Kbd key={key}>{key}</Kbd>\n                      ))}\n                    </KbdGroup>\n                  </li>\n                ))}\n              </ul>\n            </div>\n          ))}\n        </div>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "850px"
+  },
+  "categories": [
+    "grid"
+  ]
+}

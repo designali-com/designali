@@ -1,0 +1,58 @@
+import {
+  CircleCheckIcon,
+  OctagonAlertIcon,
+  TriangleAlertIcon,
+} from "lucide-react"
+
+import {
+  Progress,
+  ProgressLabel,
+  ProgressValue,
+} from "@workspace/ui/components/progress"
+import { cn } from "@workspace/ui/lib/utils"
+
+const statuses = [
+  {
+    label: "Healthy",
+    value: 42,
+    icon: CircleCheckIcon,
+    tone: "text-emerald-600 dark:text-emerald-400",
+    bar: "[&_[data-slot=progress-indicator]]:bg-emerald-500",
+  },
+  {
+    label: "Warning",
+    value: 78,
+    icon: TriangleAlertIcon,
+    tone: "text-amber-600 dark:text-amber-400",
+    bar: "[&_[data-slot=progress-indicator]]:bg-amber-500",
+  },
+  {
+    label: "Critical",
+    value: 96,
+    icon: OctagonAlertIcon,
+    tone: "text-destructive",
+    bar: "[&_[data-slot=progress-indicator]]:bg-destructive",
+  },
+]
+
+export default function ProgressStatusTones() {
+  return (
+    <div className="flex w-full max-w-sm flex-col gap-5">
+      {statuses.map((status) => (
+        <Progress
+          key={status.label}
+          value={status.value}
+          className={cn("[&_[data-slot=progress-track]]:h-1.5", status.bar)}
+        >
+          <ProgressLabel
+            className={cn("flex items-center gap-1.5", status.tone)}
+          >
+            <status.icon className="size-3.5" />
+            {status.label}
+          </ProgressLabel>
+          <ProgressValue />
+        </Progress>
+      ))}
+    </div>
+  )
+}

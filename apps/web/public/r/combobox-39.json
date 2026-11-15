@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "combobox-39",
+  "type": "registry:example",
+  "description": "Command-style combobox popup with a footer of keyboard navigation hints.",
+  "files": [
+    {
+      "path": "registry/designali/examples/combobox/combobox-39.tsx",
+      "content": "\"use client\"\n\nimport {\n  Combobox,\n  ComboboxContent,\n  ComboboxEmpty,\n  ComboboxInput,\n  ComboboxItem,\n  ComboboxList,\n} from \"@workspace/ui/components/combobox\"\nimport { InputGroupAddon } from \"@workspace/ui/components/input-group\"\nimport { Kbd } from \"@workspace/ui/components/kbd\"\n\nconst pages = [\n  \"Dashboard\",\n  \"Customers\",\n  \"Invoices\",\n  \"Subscriptions\",\n  \"Reports\",\n  \"Settings\",\n  \"API keys\",\n]\n\nexport default function KeyboardHintFooter() {\n  return (\n    <div className=\"w-full max-w-xs\">\n      <Combobox items={pages} autoHighlight>\n        <ComboboxInput\n          placeholder=\"Go to page...\"\n          className=\"w-full\"\n          showTrigger={false}\n        >\n          <InputGroupAddon align=\"inline-end\">\n            <Kbd>⌘K</Kbd>\n          </InputGroupAddon>\n        </ComboboxInput>\n        <ComboboxContent>\n          <ComboboxEmpty>No pages found.</ComboboxEmpty>\n          <ComboboxList>\n            {(item: string) => (\n              <ComboboxItem key={item} value={item}>\n                {item}\n              </ComboboxItem>\n            )}\n          </ComboboxList>\n          <div className=\"flex items-center gap-3 border-t px-2 py-1.5 text-[11px] text-muted-foreground\">\n            <span className=\"flex items-center gap-1\">\n              <Kbd>↑</Kbd>\n              <Kbd>↓</Kbd>\n              navigate\n            </span>\n            <span className=\"flex items-center gap-1\">\n              <Kbd>↵</Kbd>\n              open\n            </span>\n            <span className=\"flex items-center gap-1\">\n              <Kbd>esc</Kbd>\n              close\n            </span>\n          </div>\n        </ComboboxContent>\n      </Combobox>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

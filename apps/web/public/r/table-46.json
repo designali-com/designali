@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "table-46",
+  "type": "registry:example",
+  "description": "Service uptime table with a 30-day bar strip and uptime percentage per service.",
+  "files": [
+    {
+      "path": "registry/designali/examples/table/table-46.tsx",
+      "content": "import {\n  Table,\n  TableBody,\n  TableCell,\n  TableHead,\n  TableHeader,\n  TableRow,\n} from \"@workspace/ui/components/table\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst services = [\n  { name: \"Web app\", uptime: 99.98, down: [12] },\n  { name: \"API\", uptime: 99.71, down: [4, 5, 21] },\n  { name: \"Webhooks\", uptime: 100, down: [] as number[] },\n]\n\nexport default function UptimeStatusTable() {\n  return (\n    <div className=\"w-full max-w-xl border\">\n      <Table>\n        <TableHeader>\n          <TableRow>\n            <TableHead>Service</TableHead>\n            <TableHead>Last 30 days</TableHead>\n            <TableHead className=\"text-right\">Uptime</TableHead>\n          </TableRow>\n        </TableHeader>\n        <TableBody>\n          {services.map((s) => (\n            <TableRow key={s.name}>\n              <TableCell className=\"font-medium\">{s.name}</TableCell>\n              <TableCell>\n                <div\n                  className=\"flex gap-px\"\n                  aria-label={s.down.length + \" incidents\"}\n                >\n                  {Array.from({ length: 30 }).map((_, day) => (\n                    <span\n                      key={day}\n                      className={cn(\n                        \"h-5 w-1\",\n                        s.down.includes(day)\n                          ? \"bg-amber-500\"\n                          : \"bg-emerald-500/80\"\n                      )}\n                    />\n                  ))}\n                </div>\n              </TableCell>\n              <TableCell className=\"text-right tabular-nums\">\n                {s.uptime.toFixed(2)}%\n              </TableCell>\n            </TableRow>\n          ))}\n        </TableBody>\n      </Table>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

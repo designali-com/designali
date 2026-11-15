@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tabs-11",
+  "type": "registry:example",
+  "description": "Install command tabs for different package managers with a copy button.",
+  "files": [
+    {
+      "path": "registry/designali/examples/tabs/tabs-11.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { CheckIcon, CopyIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  Tabs,\n  TabsContent,\n  TabsList,\n  TabsTrigger,\n} from \"@workspace/ui/components/tabs\"\n\nconst commands = {\n  npm: \"npm install @acme/charts\",\n  pnpm: \"pnpm add @acme/charts\",\n  yarn: \"yarn add @acme/charts\",\n  bun: \"bun add @acme/charts\",\n}\n\nexport default function PackageManagerTabs() {\n  const [copied, setCopied] = React.useState(false)\n  const [manager, setManager] = React.useState<keyof typeof commands>(\"npm\")\n\n  return (\n    <Tabs\n      value={manager}\n      onValueChange={(v) => {\n        setManager(v as keyof typeof commands)\n        setCopied(false)\n      }}\n      className=\"w-full max-w-md gap-0 border\"\n    >\n      <div className=\"flex items-center justify-between border-b bg-muted/40 pe-1\">\n        <TabsList variant=\"line\" className=\"h-9\">\n          {Object.keys(commands).map((key) => (\n            <TabsTrigger key={key} value={key} className=\"font-mono\">\n              {key}\n            </TabsTrigger>\n          ))}\n        </TabsList>\n        <Button\n          variant=\"ghost\"\n          size=\"icon-sm\"\n          aria-label=\"Copy command\"\n          onClick={() => {\n            void navigator.clipboard?.writeText(commands[manager])\n            setCopied(true)\n          }}\n        >\n          {copied ? <CheckIcon /> : <CopyIcon />}\n        </Button>\n      </div>\n      {Object.entries(commands).map(([key, cmd]) => (\n        <TabsContent key={key} value={key} className=\"px-3 py-3 font-mono\">\n          <span className=\"text-muted-foreground\">$ </span>\n          {cmd}\n        </TabsContent>\n      ))}\n    </Tabs>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

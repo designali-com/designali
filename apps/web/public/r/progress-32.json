@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "progress-32",
+  "type": "registry:example",
+  "description": "Free trial banner showing days remaining and an upgrade call to action.",
+  "files": [
+    {
+      "path": "registry/designali/examples/progress/progress-32.tsx",
+      "content": "import { SparklesIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Progress } from \"@workspace/ui/components/progress\"\n\nexport default function TrialDaysRemaining() {\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-3 border bg-muted/40 p-4\">\n      <div className=\"flex items-center gap-2\">\n        <SparklesIcon className=\"size-4\" />\n        <span className=\"text-sm font-medium\">Pro trial</span>\n        <span className=\"ms-auto text-xs text-muted-foreground\">\n          9 days left\n        </span>\n      </div>\n      <Progress value={5} max={14} aria-label=\"Trial days used\" />\n      <p className=\"text-xs text-muted-foreground\">\n        Upgrade before Nov 24 to keep unlimited projects and version history.\n      </p>\n      <Button size=\"sm\" className=\"self-start\">\n        Upgrade to Pro\n      </Button>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

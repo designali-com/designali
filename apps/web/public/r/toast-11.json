@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toast-11",
+  "type": "registry:example",
+  "description": "Copies a masked API key to the clipboard and confirms with a toast.",
+  "files": [
+    {
+      "path": "registry/designali/examples/toast/toast-11.tsx",
+      "content": "\"use client\"\n\nimport { CopyIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Label } from \"@workspace/ui/components/label\"\nimport { Toaster, createToastManager } from \"@workspace/ui/components/toast\"\n\nconst notify = createToastManager()\nconst apiKey = \"key_demo_1e8d\"\n\nexport default function CopyApiKeyToast() {\n  function copy() {\n    void navigator.clipboard?.writeText(apiKey)\n    notify.add({\n      type: \"success\",\n      title: \"Copied to clipboard\",\n      description: \"Keep this key secret.\",\n      timeout: 2500,\n    })\n  }\n\n  return (\n    <Toaster toastManager={notify}>\n      <div className=\"flex w-full max-w-sm flex-col gap-2 border p-4\">\n        <Label>Secret key</Label>\n        <div className=\"flex items-center gap-2\">\n          <code className=\"flex h-8 min-w-0 flex-1 items-center truncate border bg-muted/40 px-2.5 font-mono text-xs\">\n            key_demo_••••••••1e8d\n          </code>\n          <Button\n            variant=\"outline\"\n            size=\"icon\"\n            aria-label=\"Copy API key\"\n            onClick={copy}\n          >\n            <CopyIcon />\n          </Button>\n        </div>\n      </div>\n    </Toaster>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

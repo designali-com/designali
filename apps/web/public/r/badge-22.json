@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "badge-22",
+  "type": "registry:example",
+  "description": "Workspace members with Owner, Admin, Member, and Guest role badges.",
+  "files": [
+    {
+      "path": "registry/designali/examples/badge/badge-22.tsx",
+      "content": "import { CrownIcon } from \"lucide-react\"\n\nimport { Avatar, AvatarFallback } from \"@workspace/ui/components/avatar\"\nimport { Badge } from \"@workspace/ui/components/badge\"\n\nconst members = [\n  { name: \"Lucia Ferrer\", initials: \"LF\", role: \"Owner\" },\n  { name: \"Ahmed Saleh\", initials: \"AS\", role: \"Admin\" },\n  { name: \"Bea Grant\", initials: \"BG\", role: \"Member\" },\n  { name: \"Contractor\", initials: \"CT\", role: \"Guest\" },\n]\n\nconst roleClass: Record<string, string> = {\n  Owner: \"\",\n  Admin: \"bg-blue-50 text-blue-700 dark:bg-blue-950 dark:text-blue-300\",\n  Member: \"bg-secondary text-secondary-foreground\",\n  Guest: \"border-dashed border-border bg-transparent text-muted-foreground\",\n}\n\nexport default function MemberRoleBadges() {\n  return (\n    <div className=\"flex w-full max-w-xs flex-col gap-3\">\n      {members.map((member) => (\n        <div key={member.name} className=\"flex items-center gap-3\">\n          <Avatar size=\"sm\">\n            <AvatarFallback>{member.initials}</AvatarFallback>\n          </Avatar>\n          <span className=\"flex-1 text-sm\">{member.name}</span>\n          <Badge className={roleClass[member.role]}>\n            {member.role === \"Owner\" && <CrownIcon data-icon=\"inline-start\" />}\n            {member.role}\n          </Badge>\n        </div>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

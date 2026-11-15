@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toggle-10",
+  "type": "registry:example",
+  "description": "A meeting control bar of independent toggles for camera, screen share, captions and hand raise.",
+  "files": [
+    {
+      "path": "registry/designali/examples/toggle/toggle-10.tsx",
+      "content": "import {\n  CaptionsIcon,\n  HandIcon,\n  MonitorUpIcon,\n  PhoneOffIcon,\n  VideoIcon,\n} from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Separator } from \"@workspace/ui/components/separator\"\nimport { Toggle } from \"@workspace/ui/components/toggle\"\n\nconst controls = [\n  { id: \"camera\", label: \"Camera\", icon: VideoIcon, on: true },\n  { id: \"share\", label: \"Share screen\", icon: MonitorUpIcon, on: false },\n  { id: \"captions\", label: \"Captions\", icon: CaptionsIcon, on: false },\n  { id: \"hand\", label: \"Raise hand\", icon: HandIcon, on: false },\n]\n\nexport default function CallControlBar() {\n  return (\n    <div className=\"flex items-center gap-1 border bg-background p-1.5 shadow-sm\">\n      {controls.map((c) => (\n        <Toggle\n          key={c.id}\n          size=\"lg\"\n          defaultPressed={c.on}\n          aria-label={c.label}\n          title={c.label}\n        >\n          <c.icon />\n        </Toggle>\n      ))}\n      <Separator orientation=\"vertical\" className=\"mx-1 h-6\" />\n      <Button variant=\"destructive\" size=\"icon-lg\" aria-label=\"Leave call\">\n        <PhoneOffIcon />\n      </Button>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

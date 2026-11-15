@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "switch-40",
+  "type": "registry:example",
+  "description": "Mobile app permission switches with icons and last-used timestamps.",
+  "files": [
+    {
+      "path": "registry/designali/examples/switch/switch-40.tsx",
+      "content": "import { CameraIcon, ContactIcon, MicIcon, NavigationIcon } from \"lucide-react\"\n\nimport { Label } from \"@workspace/ui/components/label\"\nimport { Switch } from \"@workspace/ui/components/switch\"\n\nconst permissions = [\n  {\n    id: \"camera\",\n    label: \"Camera\",\n    icon: CameraIcon,\n    used: \"Used today\",\n    on: true,\n  },\n  {\n    id: \"microphone\",\n    label: \"Microphone\",\n    icon: MicIcon,\n    used: \"Used 3 days ago\",\n    on: true,\n  },\n  {\n    id: \"location\",\n    label: \"Location\",\n    icon: NavigationIcon,\n    used: \"Never used\",\n    on: false,\n  },\n  {\n    id: \"contacts\",\n    label: \"Contacts\",\n    icon: ContactIcon,\n    used: \"Never used\",\n    on: false,\n  },\n]\n\nexport default function AppPermissions() {\n  return (\n    <div className=\"w-full max-w-xs border\">\n      <div className=\"border-b px-4 py-3\">\n        <p className=\"text-sm font-medium\">Trailmate permissions</p>\n        <p className=\"text-xs text-muted-foreground\">\n          Control what this app can access.\n        </p>\n      </div>\n      {permissions.map((permission) => (\n        <div\n          key={permission.id}\n          className=\"flex items-center gap-3 px-4 py-2.5\"\n        >\n          <permission.icon className=\"size-4 text-muted-foreground\" />\n          <div className=\"flex-1\">\n            <Label htmlFor={\"perm-\" + permission.id}>{permission.label}</Label>\n            <p className=\"text-xs text-muted-foreground\">{permission.used}</p>\n          </div>\n          <Switch id={\"perm-\" + permission.id} defaultChecked={permission.on} />\n        </div>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

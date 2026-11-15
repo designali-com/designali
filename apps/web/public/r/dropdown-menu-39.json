@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "dropdown-menu-39",
+  "type": "registry:example",
+  "description": "Dashboard KPI card where a metric menu swaps the headline number and trend.",
+  "files": [
+    {
+      "path": "registry/designali/examples/dropdown-menu/dropdown-menu-39.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { ChevronDownIcon, TrendingDownIcon, TrendingUpIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  DropdownMenu,\n  DropdownMenuContent,\n  DropdownMenuRadioGroup,\n  DropdownMenuRadioItem,\n  DropdownMenuTrigger,\n} from \"@workspace/ui/components/dropdown-menu\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst metrics = [\n  { id: \"revenue\", label: \"Revenue\", value: \"$48,210\", trend: \"+12.4%\" },\n  { id: \"orders\", label: \"Orders\", value: \"1,932\", trend: \"+4.1%\" },\n  { id: \"aov\", label: \"Avg. order value\", value: \"$24.95\", trend: \"-1.8%\" },\n  { id: \"refunds\", label: \"Refund rate\", value: \"2.3%\", trend: \"-0.4%\" },\n]\n\nexport default function KpiMetricSwitcher() {\n  const [metric, setMetric] = React.useState(\"revenue\")\n  const current = metrics.find((m) => m.id === metric)!\n  const positive = current.trend.startsWith(\"+\")\n\n  return (\n    <div className=\"flex w-full max-w-xs flex-col gap-2 border p-4\">\n      <DropdownMenu>\n        <DropdownMenuTrigger\n          render={\n            <Button\n              variant=\"ghost\"\n              size=\"xs\"\n              className=\"-ms-2 w-fit text-muted-foreground\"\n            />\n          }\n        >\n          {current.label}\n          <ChevronDownIcon data-icon=\"inline-end\" />\n        </DropdownMenuTrigger>\n        <DropdownMenuContent className=\"w-44\">\n          <DropdownMenuRadioGroup value={metric} onValueChange={setMetric}>\n            {metrics.map((m) => (\n              <DropdownMenuRadioItem key={m.id} value={m.id}>\n                {m.label}\n              </DropdownMenuRadioItem>\n            ))}\n          </DropdownMenuRadioGroup>\n        </DropdownMenuContent>\n      </DropdownMenu>\n      <p className=\"text-2xl font-semibold tabular-nums\">{current.value}</p>\n      <p\n        className={cn(\n          \"flex items-center gap-1 text-xs\",\n          positive ? \"text-emerald-600\" : \"text-destructive\"\n        )}\n      >\n        {positive ? (\n          <TrendingUpIcon className=\"size-3.5\" />\n        ) : (\n          <TrendingDownIcon className=\"size-3.5\" />\n        )}\n        {current.trend} vs last month\n      </p>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

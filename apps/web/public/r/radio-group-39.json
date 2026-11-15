@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "radio-group-39",
+  "type": "registry:example",
+  "description": "New project template picker in a two-by-two grid of icon cards.",
+  "files": [
+    {
+      "path": "registry/designali/examples/radio-group/radio-group-39.tsx",
+      "content": "import { BookOpenIcon, FileIcon, KanbanIcon, MilestoneIcon } from \"lucide-react\"\n\nimport {\n  RadioGroup,\n  RadioGroupItem,\n} from \"@workspace/ui/components/radio-group\"\n\nconst templates = [\n  { value: \"blank\", label: \"Blank\", icon: FileIcon },\n  { value: \"kanban\", label: \"Kanban board\", icon: KanbanIcon },\n  { value: \"roadmap\", label: \"Roadmap\", icon: MilestoneIcon },\n  { value: \"docs\", label: \"Docs wiki\", icon: BookOpenIcon },\n]\n\nexport default function ProjectTemplateGrid() {\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-3\">\n      <p className=\"text-sm font-medium\">Start from a template</p>\n      <RadioGroup defaultValue=\"kanban\" className=\"grid grid-cols-2 gap-2\">\n        {templates.map((t) => (\n          <label\n            key={t.value}\n            htmlFor={\"tpl-\" + t.value}\n            className=\"relative flex cursor-pointer flex-col gap-3 border p-3 has-data-checked:border-primary has-data-checked:bg-primary/5\"\n          >\n            <RadioGroupItem\n              value={t.value}\n              id={\"tpl-\" + t.value}\n              className=\"absolute end-3 top-3\"\n            />\n            <t.icon className=\"size-5 text-muted-foreground\" />\n            <span className=\"text-sm font-medium\">{t.label}</span>\n          </label>\n        ))}\n      </RadioGroup>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

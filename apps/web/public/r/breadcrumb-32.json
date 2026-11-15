@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "breadcrumb-32",
+  "type": "registry:example",
+  "description": "Very long path that stays on one line and scrolls horizontally inside its container.",
+  "files": [
+    {
+      "path": "registry/designali/examples/breadcrumb/breadcrumb-32.tsx",
+      "content": "import { Fragment } from \"react\"\n\nimport {\n  Breadcrumb,\n  BreadcrumbItem,\n  BreadcrumbLink,\n  BreadcrumbList,\n  BreadcrumbPage,\n  BreadcrumbSeparator,\n} from \"@workspace/ui/components/breadcrumb\"\n\nconst path = [\n  \"Company\",\n  \"Engineering\",\n  \"Platform\",\n  \"Observability\",\n  \"Dashboards\",\n  \"Alerts\",\n  \"Paging rules\",\n]\n\nexport default function ScrollableBreadcrumb() {\n  return (\n    <div className=\"w-full max-w-xs overflow-x-auto border px-3 py-2 [scrollbar-width:thin]\">\n      <Breadcrumb>\n        <BreadcrumbList className=\"flex-nowrap whitespace-nowrap\">\n          {path.map((item, index) => (\n            <Fragment key={item}>\n              <BreadcrumbItem>\n                {index === path.length - 1 ? (\n                  <BreadcrumbPage>{item}</BreadcrumbPage>\n                ) : (\n                  <BreadcrumbLink href=\"#\">{item}</BreadcrumbLink>\n                )}\n              </BreadcrumbItem>\n              {index < path.length - 1 && <BreadcrumbSeparator />}\n            </Fragment>\n          ))}\n        </BreadcrumbList>\n      </Breadcrumb>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "switch-27",
+  "type": "registry:example",
+  "description": "Location sharing switch that enables a duration picker when turned on.",
+  "files": [
+    {
+      "path": "registry/designali/examples/switch/switch-27.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { MapPinIcon } from \"lucide-react\"\n\nimport { Label } from \"@workspace/ui/components/label\"\nimport {\n  NativeSelect,\n  NativeSelectOption,\n} from \"@workspace/ui/components/native-select\"\nimport { Switch } from \"@workspace/ui/components/switch\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nexport default function LocationSharingDuration() {\n  const [sharing, setSharing] = React.useState(false)\n\n  return (\n    <div className=\"flex w-full max-w-xs flex-col gap-3 border p-4\">\n      <div className=\"flex items-center gap-3\">\n        <MapPinIcon className=\"size-4 text-muted-foreground\" />\n        <Label htmlFor=\"share-location\" className=\"flex-1\">\n          Share live location\n        </Label>\n        <Switch\n          id=\"share-location\"\n          checked={sharing}\n          onCheckedChange={setSharing}\n        />\n      </div>\n      <div className=\"flex flex-col gap-1.5\">\n        <Label\n          htmlFor=\"share-duration\"\n          className={cn(\"text-xs\", !sharing && \"text-muted-foreground\")}\n        >\n          Share for\n        </Label>\n        <NativeSelect id=\"share-duration\" disabled={!sharing} defaultValue=\"1h\">\n          <NativeSelectOption value=\"15m\">15 minutes</NativeSelectOption>\n          <NativeSelectOption value=\"1h\">1 hour</NativeSelectOption>\n          <NativeSelectOption value=\"8h\">Until end of day</NativeSelectOption>\n        </NativeSelect>\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "slider-12",
+  "type": "registry:example",
+  "description": "Loan calculator with amount and term sliders that compute a monthly payment.",
+  "files": [
+    {
+      "path": "registry/designali/examples/slider/slider-12.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport {\n  Card,\n  CardContent,\n  CardDescription,\n  CardFooter,\n  CardHeader,\n  CardTitle,\n} from \"@workspace/ui/components/card\"\nimport { Slider } from \"@workspace/ui/components/slider\"\n\nexport default function LoanCalculatorSliders() {\n  const [amount, setAmount] = React.useState([25000])\n  const [months, setMonths] = React.useState([36])\n  const rate = 0.069 / 12\n  const n = months[0]!\n  const payment = (amount[0]! * rate) / (1 - Math.pow(1 + rate, -n))\n\n  return (\n    <Card className=\"w-full max-w-sm\">\n      <CardHeader>\n        <CardTitle>Personal loan</CardTitle>\n        <CardDescription>6.9% APR, fixed rate</CardDescription>\n      </CardHeader>\n      <CardContent className=\"flex flex-col gap-5\">\n        <div className=\"flex flex-col gap-2\">\n          <div className=\"flex justify-between text-sm\">\n            <span>Amount</span>\n            <span className=\"tabular-nums\">${amount[0]!.toLocaleString()}</span>\n          </div>\n          <Slider\n            aria-label=\"Loan amount\"\n            value={amount}\n            onValueChange={(value) => setAmount(value as number[])}\n            min={1000}\n            max={50000}\n            step={500}\n          />\n        </div>\n        <div className=\"flex flex-col gap-2\">\n          <div className=\"flex justify-between text-sm\">\n            <span>Term</span>\n            <span className=\"tabular-nums\">{n} months</span>\n          </div>\n          <Slider\n            aria-label=\"Loan term\"\n            value={months}\n            onValueChange={(value) => setMonths(value as number[])}\n            min={12}\n            max={72}\n            step={12}\n          />\n        </div>\n      </CardContent>\n      <CardFooter className=\"justify-between border-t\">\n        <span className=\"text-sm text-muted-foreground\">Monthly payment</span>\n        <span className=\"text-lg font-semibold tabular-nums\">\n          ${payment.toFixed(2)}\n        </span>\n      </CardFooter>\n    </Card>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "breadcrumb-09",
+  "type": "registry:example",
+  "description": "Online store category trail above a product title with a result count.",
+  "files": [
+    {
+      "path": "registry/designali/examples/breadcrumb/breadcrumb-09.tsx",
+      "content": "import { Fragment } from \"react\"\n\nimport {\n  Breadcrumb,\n  BreadcrumbItem,\n  BreadcrumbLink,\n  BreadcrumbList,\n  BreadcrumbPage,\n  BreadcrumbSeparator,\n} from \"@workspace/ui/components/breadcrumb\"\n\nconst trail = [\"Shop\", \"Outdoor\", \"Footwear\"]\n\nexport default function StoreCategoryBreadcrumb() {\n  return (\n    <div className=\"flex w-full max-w-md flex-col gap-2\">\n      <Breadcrumb>\n        <BreadcrumbList>\n          {trail.map((item) => (\n            <Fragment key={item}>\n              <BreadcrumbItem>\n                <BreadcrumbLink href=\"#\">{item}</BreadcrumbLink>\n              </BreadcrumbItem>\n              <BreadcrumbSeparator />\n            </Fragment>\n          ))}\n          <BreadcrumbItem>\n            <BreadcrumbPage>Trail running</BreadcrumbPage>\n          </BreadcrumbItem>\n        </BreadcrumbList>\n      </Breadcrumb>\n      <div className=\"flex items-baseline justify-between gap-2\">\n        <h2 className=\"text-lg font-semibold\">Trail running shoes</h2>\n        <span className=\"text-xs text-muted-foreground\">128 results</span>\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

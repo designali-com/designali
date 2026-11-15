@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "field-14",
+  "type": "registry:example",
+  "description": "Tag entry field where pressing Enter adds removable badges, with a maximum count.",
+  "files": [
+    {
+      "path": "registry/designali/examples/field/field-14.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { XIcon } from \"lucide-react\"\n\nimport { Badge } from \"@workspace/ui/components/badge\"\nimport {\n  Field,\n  FieldDescription,\n  FieldLabel,\n} from \"@workspace/ui/components/field\"\nimport { Input } from \"@workspace/ui/components/input\"\n\nexport default function SkillTagsField() {\n  const [tags, setTags] = React.useState([\n    \"Figma\",\n    \"Prototyping\",\n    \"User research\",\n  ])\n  const [draft, setDraft] = React.useState(\"\")\n  const full = tags.length >= 5\n\n  return (\n    <Field className=\"w-full max-w-sm\">\n      <FieldLabel htmlFor=\"skill-input\">Skills</FieldLabel>\n      <div className=\"flex flex-wrap gap-1.5\">\n        {tags.map((tag) => (\n          <Badge key={tag} variant=\"secondary\" className=\"gap-1 pe-1\">\n            {tag}\n            <button\n              type=\"button\"\n              aria-label={\"Remove \" + tag}\n              onClick={() => setTags(tags.filter((t) => t !== tag))}\n            >\n              <XIcon />\n            </button>\n          </Badge>\n        ))}\n      </div>\n      <Input\n        id=\"skill-input\"\n        value={draft}\n        disabled={full}\n        placeholder={full ? \"Maximum reached\" : \"Type a skill and press Enter\"}\n        onChange={(e) => setDraft(e.target.value)}\n        onKeyDown={(e) => {\n          if (e.key === \"Enter\" && draft.trim()) {\n            e.preventDefault()\n            if (!tags.includes(draft.trim())) setTags([...tags, draft.trim()])\n            setDraft(\"\")\n          }\n        }}\n      />\n      <FieldDescription>{tags.length}/5 skills added.</FieldDescription>\n    </Field>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

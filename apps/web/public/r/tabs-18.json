@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tabs-18",
+  "type": "registry:example",
+  "description": "Profile header followed by line tabs for posts, replies and likes.",
+  "files": [
+    {
+      "path": "registry/designali/examples/tabs/tabs-18.tsx",
+      "content": "import { Avatar, AvatarFallback } from \"@workspace/ui/components/avatar\"\nimport {\n  Tabs,\n  TabsContent,\n  TabsList,\n  TabsTrigger,\n} from \"@workspace/ui/components/tabs\"\n\nexport default function ProfilePageTabs() {\n  return (\n    <div className=\"w-full max-w-sm border\">\n      <div className=\"h-16 bg-gradient-to-r from-violet-500 to-fuchsia-400\" />\n      <div className=\"-mt-6 flex items-end gap-3 px-4\">\n        <Avatar size=\"lg\" className=\"ring-4 ring-background\">\n          <AvatarFallback>KO</AvatarFallback>\n        </Avatar>\n        <div className=\"pb-1\">\n          <p className=\"text-sm font-medium\">Kai Okafor</p>\n          <p className=\"text-xs text-muted-foreground\">\n            @kaio · 2,481 followers\n          </p>\n        </div>\n      </div>\n      <Tabs defaultValue=\"posts\" className=\"mt-3\">\n        <TabsList variant=\"line\" className=\"w-full border-b px-2\">\n          <TabsTrigger value=\"posts\">Posts</TabsTrigger>\n          <TabsTrigger value=\"replies\">Replies</TabsTrigger>\n          <TabsTrigger value=\"likes\">Likes</TabsTrigger>\n        </TabsList>\n        <TabsContent value=\"posts\" className=\"px-4 pb-4\">\n          Shipped dark mode for the mobile app today.\n        </TabsContent>\n        <TabsContent\n          value=\"replies\"\n          className=\"px-4 pb-4 text-muted-foreground\"\n        >\n          Kai hasn&apos;t replied to anyone yet.\n        </TabsContent>\n        <TabsContent value=\"likes\" className=\"px-4 pb-4 text-muted-foreground\">\n          Likes are private.\n        </TabsContent>\n      </Tabs>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

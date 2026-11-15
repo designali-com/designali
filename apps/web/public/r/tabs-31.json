@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tabs-31",
+  "type": "registry:example",
+  "description": "Order management tabs with a destructive badge on the tab needing attention.",
+  "files": [
+    {
+      "path": "registry/designali/examples/tabs/tabs-31.tsx",
+      "content": "import { Badge } from \"@workspace/ui/components/badge\"\nimport {\n  Tabs,\n  TabsContent,\n  TabsList,\n  TabsTrigger,\n} from \"@workspace/ui/components/tabs\"\n\nconst orders = {\n  pending: [\n    { id: \"#4821\", customer: \"Lina Vos\", total: \"$82.00\" },\n    { id: \"#4822\", customer: \"Omar Haddad\", total: \"$19.50\" },\n  ],\n  shipped: [{ id: \"#4810\", customer: \"Sam Reyes\", total: \"$240.00\" }],\n  issues: [{ id: \"#4799\", customer: \"Ivy Chen\", total: \"$56.10\" }],\n}\n\nexport default function OrderStatusTabs() {\n  return (\n    <Tabs defaultValue=\"pending\" className=\"w-full max-w-sm\">\n      <TabsList>\n        <TabsTrigger value=\"pending\">\n          Pending <Badge variant=\"secondary\">{orders.pending.length}</Badge>\n        </TabsTrigger>\n        <TabsTrigger value=\"shipped\">Shipped</TabsTrigger>\n        <TabsTrigger value=\"issues\">\n          Issues <Badge variant=\"destructive\">{orders.issues.length}</Badge>\n        </TabsTrigger>\n      </TabsList>\n      {Object.entries(orders).map(([key, list]) => (\n        <TabsContent key={key} value={key} className=\"divide-y border\">\n          {list.map((o) => (\n            <div\n              key={o.id}\n              className=\"flex items-center justify-between px-3 py-2\"\n            >\n              <span>\n                <span className=\"font-mono\">{o.id}</span> · {o.customer}\n              </span>\n              <span className=\"font-medium tabular-nums\">{o.total}</span>\n            </div>\n          ))}\n        </TabsContent>\n      ))}\n    </Tabs>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

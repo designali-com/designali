@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "textarea-11",
+  "type": "registry:example",
+  "description": "Feedback widget pairing an emoji-style rating with a follow-up textarea.",
+  "files": [
+    {
+      "path": "registry/designali/examples/textarea/textarea-11.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { FrownIcon, MehIcon, SmileIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Textarea } from \"@workspace/ui/components/textarea\"\n\nconst moods = [\n  { value: \"bad\", label: \"Bad\", icon: FrownIcon },\n  { value: \"ok\", label: \"Okay\", icon: MehIcon },\n  { value: \"good\", label: \"Good\", icon: SmileIcon },\n]\n\nexport default function FeedbackRatingTextarea() {\n  const [mood, setMood] = React.useState<string | null>(null)\n\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-3 border p-4\">\n      <p className=\"text-sm font-medium\">How was your checkout experience?</p>\n      <div className=\"flex gap-2\">\n        {moods.map((m) => (\n          <Button\n            key={m.value}\n            variant={mood === m.value ? \"default\" : \"outline\"}\n            size=\"sm\"\n            onClick={() => setMood(m.value)}\n            aria-pressed={mood === m.value}\n          >\n            <m.icon data-icon=\"inline-start\" />\n            {m.label}\n          </Button>\n        ))}\n      </div>\n      <Textarea\n        disabled={!mood}\n        placeholder={\n          mood === \"bad\"\n            ? \"Sorry to hear that. What went wrong?\"\n            : \"Anything we could do better?\"\n        }\n        aria-label=\"Feedback details\"\n      />\n      <Button size=\"sm\" disabled={!mood} className=\"self-end\">\n        Send feedback\n      </Button>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "popover-18",
+  "type": "registry:example",
+  "description": "Pricing card with a 'What's included' popover listing the plan's features.",
+  "files": [
+    {
+      "path": "registry/designali/examples/popover/popover-18.tsx",
+      "content": "import { CheckIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  Popover,\n  PopoverContent,\n  PopoverTitle,\n  PopoverTrigger,\n} from \"@workspace/ui/components/popover\"\n\nconst features = [\n  \"Unlimited projects\",\n  \"10 GB file storage\",\n  \"Version history (90 days)\",\n  \"Priority email support\",\n  \"SAML single sign-on\",\n]\n\nexport default function PlanFeaturesPopover() {\n  return (\n    <div className=\"flex w-full max-w-xs flex-col gap-3 border p-4\">\n      <div className=\"flex items-baseline justify-between\">\n        <span className=\"text-sm font-medium\">Growth</span>\n        <span className=\"text-lg font-semibold\">\n          $24\n          <span className=\"text-xs font-normal text-muted-foreground\">\n            /seat/mo\n          </span>\n        </span>\n      </div>\n      <p className=\"text-xs text-muted-foreground\">\n        For teams scaling their workflows.\n      </p>\n      <div className=\"flex items-center gap-2\">\n        <Button size=\"sm\" className=\"flex-1\">\n          Choose Growth\n        </Button>\n        <Popover>\n          <PopoverTrigger render={<Button variant=\"link\" size=\"sm\" />}>\n            What&apos;s included\n          </PopoverTrigger>\n          <PopoverContent className=\"w-60\" side=\"top\">\n            <PopoverTitle>Growth includes</PopoverTitle>\n            <ul className=\"flex flex-col gap-1.5\">\n              {features.map((feature) => (\n                <li key={feature} className=\"flex items-center gap-2 text-xs\">\n                  <CheckIcon className=\"size-3.5 text-emerald-600 dark:text-emerald-400\" />\n                  {feature}\n                </li>\n              ))}\n            </ul>\n          </PopoverContent>\n        </Popover>\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

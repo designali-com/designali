@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "aspect-ratio-09",
+  "type": "registry:example",
+  "description": "A 4:3 static map built from SVG streets with a location pin and address card.",
+  "files": [
+    {
+      "path": "registry/designali/examples/aspect-ratio/aspect-ratio-09.tsx",
+      "content": "import { MapPinIcon, NavigationIcon } from \"lucide-react\"\n\nimport { AspectRatio } from \"@workspace/ui/components/aspect-ratio\"\nimport { Button } from \"@workspace/ui/components/button\"\n\nexport default function MapEmbedPlaceholder() {\n  return (\n    <div className=\"w-full max-w-sm border\">\n      <AspectRatio ratio={4 / 3} className=\"overflow-hidden bg-muted\">\n        <svg\n          viewBox=\"0 0 400 300\"\n          className=\"absolute inset-0 size-full text-border\"\n          aria-hidden=\"true\"\n        >\n          <rect\n            x=\"40\"\n            y=\"30\"\n            width=\"90\"\n            height=\"70\"\n            className=\"fill-emerald-500/15\"\n          />\n          <rect\n            x=\"250\"\n            y=\"180\"\n            width=\"120\"\n            height=\"90\"\n            className=\"fill-sky-500/15\"\n          />\n          <g stroke=\"currentColor\" strokeWidth=\"10\" fill=\"none\">\n            <path d=\"M0 140 H400\" />\n            <path d=\"M190 0 V300\" />\n            <path d=\"M0 260 L400 40\" strokeWidth=\"6\" />\n          </g>\n          <g stroke=\"currentColor\" strokeWidth=\"3\" fill=\"none\" opacity=\"0.7\">\n            <path d=\"M0 70 H400\" />\n            <path d=\"M0 210 H400\" />\n            <path d=\"M90 0 V300\" />\n            <path d=\"M300 0 V300\" />\n          </g>\n        </svg>\n        <div className=\"absolute start-1/2 top-[46%] flex -translate-x-1/2 -translate-y-full flex-col items-center rtl:translate-x-1/2\">\n          <MapPinIcon className=\"size-8 fill-primary text-primary-foreground\" />\n        </div>\n      </AspectRatio>\n      <div className=\"flex items-center justify-between gap-2 p-3\">\n        <div>\n          <p className=\"text-sm font-medium\">Fern & Ember Coffee</p>\n          <p className=\"text-xs text-muted-foreground\">\n            218 Alder Street - 0.4 mi\n          </p>\n        </div>\n        <Button size=\"sm\" variant=\"outline\">\n          <NavigationIcon data-icon=\"inline-start\" />\n          Directions\n        </Button>\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

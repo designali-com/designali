@@ -1,0 +1,17 @@
+[
+  ["authentication-06", "authentication", "800px", "Two-factor setup wizard with an authenticator QR code, 6-digit verification and downloadable backup codes."],
+  ["authentication-07", "authentication", "600px", "Identifier-first sign-in that checks the work email and routes to SSO or a password step."],
+  ["authentication-08", "authentication", "600px", "Workspace invitation card showing the inviter, assigned role and accept or decline actions."],
+  ["authentication-09", "authentication", "750px", "Three-step onboarding flow to pick a work type, name the workspace and invite teammates."],
+  ["authentication-10", "authentication", "650px", "Account recovery page with a radio list of reset methods beside a help and back to sign in panel."],
+  ["authentication-11", "authentication", "750px", "Centred auth card with a sliding Sign in / Sign up tab switch, name and password fields and terms."],
+  ["authentication-12", "authentication", "650px", "Account chooser listing saved profiles with avatars, remove buttons and an add account row."],
+  ["authentication-13", "authentication", "600px", "Passkey manager with an explainer beside a list of registered devices and add or remove actions."],
+  ["authentication-14", "authentication", "700px", "Dark lock screen with the user avatar, password unlock field and switch user or sign out links."],
+  ["authentication-15", "authentication", "700px", "Phone number sign-in with a country code picker, one-time code step and an SMS preview mockup."],
+  ["authentication-16", "authentication", "700px", "OAuth consent screen listing requested permissions with checkboxes and Allow or Cancel buttons."],
+  ["authentication-17", "authentication", "650px", "CLI device authorization pairing a terminal mockup with a browser code confirmation card."],
+  ["authentication-18", "authentication", "750px", "Security settings with two-factor and alert switches above an active sessions device table."],
+  ["authentication-19", "authentication", "650px", "Verify your email screen with inbox shortcuts and resend or change email beside delivery tips."],
+  ["authentication-20", "authentication", "650px", "Workspace picker with search, a grid of workspace cards showing role and SSO lock, and a create option."]
+]

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-19",
+  "type": "registry:example",
+  "description": "A numeric quantity input flanked by decrement and increment buttons with bounds.",
+  "files": [
+    {
+      "path": "registry/designali/examples/input/input-19.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { MinusIcon, PlusIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  Field,\n  FieldDescription,\n  FieldLabel,\n} from \"@workspace/ui/components/field\"\nimport { Input } from \"@workspace/ui/components/input\"\n\nexport default function QuantityStepperInput() {\n  const [qty, setQty] = React.useState(2)\n  const clamp = (n: number) => Math.min(10, Math.max(1, n))\n\n  return (\n    <Field className=\"w-fit\">\n      <FieldLabel htmlFor=\"qty\">Seats</FieldLabel>\n      <div className=\"flex\">\n        <Button\n          variant=\"outline\"\n          size=\"icon\"\n          aria-label=\"Decrease\"\n          disabled={qty <= 1}\n          onClick={() => setQty((q) => clamp(q - 1))}\n        >\n          <MinusIcon />\n        </Button>\n        <Input\n          id=\"qty\"\n          type=\"number\"\n          min={1}\n          max={10}\n          value={qty}\n          onChange={(e) => setQty(clamp(Number(e.target.value) || 1))}\n          className=\"w-14 [appearance:textfield] border-x-0 text-center tabular-nums [&::-webkit-inner-spin-button]:appearance-none\"\n        />\n        <Button\n          variant=\"outline\"\n          size=\"icon\"\n          aria-label=\"Increase\"\n          disabled={qty >= 10}\n          onClick={() => setQty((q) => clamp(q + 1))}\n        >\n          <PlusIcon />\n        </Button>\n      </div>\n      <FieldDescription>Up to 10 seats on the Team plan.</FieldDescription>\n    </Field>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

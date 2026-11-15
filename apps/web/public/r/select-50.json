@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "select-50",
+  "type": "registry:example",
+  "description": "Select using a record object for items to map stored keys to display labels.",
+  "files": [
+    {
+      "path": "registry/designali/examples/select/select-50.tsx",
+      "content": "import { ActivityIcon } from \"lucide-react\"\n\nimport { Field, FieldLabel } from \"@workspace/ui/components/field\"\nimport {\n  Select,\n  SelectContent,\n  SelectItem,\n  SelectTrigger,\n  SelectValue,\n} from \"@workspace/ui/components/select\"\n\nconst intervals = {\n  \"1m\": \"Every minute\",\n  \"5m\": \"Every 5 minutes\",\n  \"15m\": \"Every 15 minutes\",\n  \"1h\": \"Every hour\",\n}\n\nexport default function RecordItemsSelect() {\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-3 border p-4\">\n      <div className=\"flex items-center gap-2\">\n        <ActivityIcon className=\"size-4 text-emerald-500\" />\n        <span className=\"text-sm font-medium\">api.fieldnote.app/health</span>\n      </div>\n      <Field orientation=\"horizontal\" className=\"justify-between\">\n        <FieldLabel htmlFor=\"interval\">Check interval</FieldLabel>\n        <Select items={intervals} defaultValue=\"5m\">\n          <SelectTrigger id=\"interval\" className=\"w-40\">\n            <SelectValue />\n          </SelectTrigger>\n          <SelectContent>\n            {Object.entries(intervals).map(([value, label]) => (\n              <SelectItem key={value} value={value}>\n                {label}\n              </SelectItem>\n            ))}\n          </SelectContent>\n        </Select>\n      </Field>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

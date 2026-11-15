@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "field-28",
+  "type": "registry:example",
+  "description": "Appearance picker with radio cards that include miniature theme previews.",
+  "files": [
+    {
+      "path": "registry/designali/examples/field/field-28.tsx",
+      "content": "import {\n  Field,\n  FieldDescription,\n  FieldLabel,\n  FieldLegend,\n  FieldSet,\n  FieldTitle,\n} from \"@workspace/ui/components/field\"\nimport {\n  RadioGroup,\n  RadioGroupItem,\n} from \"@workspace/ui/components/radio-group\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst themes = [\n  {\n    value: \"light\",\n    label: \"Light\",\n    bg: \"bg-white\",\n    bar: \"bg-zinc-200\",\n    line: \"bg-zinc-300\",\n  },\n  {\n    value: \"dark\",\n    label: \"Dark\",\n    bg: \"bg-zinc-900\",\n    bar: \"bg-zinc-700\",\n    line: \"bg-zinc-600\",\n  },\n  {\n    value: \"system\",\n    label: \"System\",\n    bg: \"bg-gradient-to-r from-white to-zinc-900\",\n    bar: \"bg-zinc-400\",\n    line: \"bg-zinc-500\",\n  },\n]\n\nexport default function ThemePreviewChoiceCards() {\n  return (\n    <FieldSet className=\"w-full max-w-md\">\n      <FieldLegend>Appearance</FieldLegend>\n      <FieldDescription>\n        Choose how the interface looks on this device.\n      </FieldDescription>\n      <RadioGroup defaultValue=\"system\" className=\"grid grid-cols-3 gap-2\">\n        {themes.map((t) => (\n          <FieldLabel key={t.value} htmlFor={\"theme-\" + t.value}>\n            <Field className=\"gap-2\">\n              <div\n                className={cn(\"flex h-14 flex-col gap-1 border p-1.5\", t.bg)}\n              >\n                <span className={cn(\"h-1.5 w-2/3\", t.bar)} />\n                <span className={cn(\"h-1 w-full\", t.line)} />\n                <span className={cn(\"h-1 w-4/5\", t.line)} />\n              </div>\n              <div className=\"flex items-center justify-between\">\n                <FieldTitle>{t.label}</FieldTitle>\n                <RadioGroupItem value={t.value} id={\"theme-\" + t.value} />\n              </div>\n            </Field>\n          </FieldLabel>\n        ))}\n      </RadioGroup>\n    </FieldSet>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

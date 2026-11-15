@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toggle-group-08",
+  "type": "registry:example",
+  "description": "Monthly versus yearly billing switch that updates the plan price and savings badge.",
+  "files": [
+    {
+      "path": "registry/designali/examples/toggle-group/toggle-group-08.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { Badge } from \"@workspace/ui/components/badge\"\nimport {\n  ToggleGroup,\n  ToggleGroupItem,\n} from \"@workspace/ui/components/toggle-group\"\n\nexport default function BillingCycleToggleGroup() {\n  const [cycle, setCycle] = React.useState(\"yearly\")\n  const price = cycle === \"yearly\" ? 16 : 20\n\n  return (\n    <div className=\"flex w-full max-w-xs flex-col items-center gap-4 border p-5\">\n      <ToggleGroup\n        variant=\"outline\"\n        spacing={0}\n        value={[cycle]}\n        onValueChange={(next) => next[0] && setCycle(next[0])}\n      >\n        <ToggleGroupItem value=\"monthly\">Monthly</ToggleGroupItem>\n        <ToggleGroupItem value=\"yearly\">\n          Yearly\n          <Badge variant=\"secondary\" className=\"ms-1\">\n            -20%\n          </Badge>\n        </ToggleGroupItem>\n      </ToggleGroup>\n      <div className=\"text-center\">\n        <p className=\"text-xs text-muted-foreground\">Team plan</p>\n        <p className=\"text-3xl font-semibold\">\n          ${price}\n          <span className=\"text-sm font-normal text-muted-foreground\">\n            /seat/mo\n          </span>\n        </p>\n        <p className=\"text-xs text-muted-foreground\">\n          {cycle === \"yearly\"\n            ? \"Billed $192 per seat annually\"\n            : \"Billed monthly, cancel anytime\"}\n        </p>\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

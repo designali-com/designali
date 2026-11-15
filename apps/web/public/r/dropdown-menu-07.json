@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "dropdown-menu-07",
+  "type": "registry:example",
+  "description": "Controlled radio group menu for sorting a list, with the trigger reflecting the active sort.",
+  "files": [
+    {
+      "path": "registry/designali/examples/dropdown-menu/dropdown-menu-07.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { ArrowUpDownIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  DropdownMenu,\n  DropdownMenuContent,\n  DropdownMenuLabel,\n  DropdownMenuRadioGroup,\n  DropdownMenuRadioItem,\n  DropdownMenuTrigger,\n} from \"@workspace/ui/components/dropdown-menu\"\n\nconst options = [\n  { value: \"newest\", label: \"Newest first\" },\n  { value: \"oldest\", label: \"Oldest first\" },\n  { value: \"name\", label: \"Name A–Z\" },\n  { value: \"size\", label: \"Largest size\" },\n]\n\nexport default function SortOrderRadioMenu() {\n  const [sort, setSort] = React.useState(\"newest\")\n  const current = options.find((option) => option.value === sort)\n\n  return (\n    <DropdownMenu>\n      <DropdownMenuTrigger render={<Button variant=\"outline\" />}>\n        <ArrowUpDownIcon data-icon=\"inline-start\" />\n        Sort: {current?.label}\n      </DropdownMenuTrigger>\n      <DropdownMenuContent className=\"w-44\">\n        <DropdownMenuRadioGroup value={sort} onValueChange={setSort}>\n          <DropdownMenuLabel>Sort by</DropdownMenuLabel>\n          {options.map((option) => (\n            <DropdownMenuRadioItem key={option.value} value={option.value}>\n              {option.label}\n            </DropdownMenuRadioItem>\n          ))}\n        </DropdownMenuRadioGroup>\n      </DropdownMenuContent>\n    </DropdownMenu>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "navigation-menu-07",
+  "type": "registry:example",
+  "description": "Flat link navigation tracking the active page in state via the Link active prop.",
+  "files": [
+    {
+      "path": "registry/designali/examples/navigation-menu/navigation-menu-07.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport {\n  NavigationMenu,\n  NavigationMenuItem,\n  NavigationMenuLink,\n  NavigationMenuList,\n  navigationMenuTriggerStyle,\n} from \"@workspace/ui/components/navigation-menu\"\n\nconst pages = [\"Overview\", \"Activity\", \"Settings\", \"Billing\"]\n\nexport default function ActiveLinkNav() {\n  const [active, setActive] = React.useState(\"Overview\")\n\n  return (\n    <div className=\"flex flex-col items-center gap-3\">\n      <NavigationMenu>\n        <NavigationMenuList>\n          {pages.map((page) => (\n            <NavigationMenuItem key={page}>\n              <NavigationMenuLink\n                href=\"#\"\n                active={active === page}\n                onClick={(e) => {\n                  e.preventDefault()\n                  setActive(page)\n                }}\n                className={navigationMenuTriggerStyle()}\n              >\n                {page}\n              </NavigationMenuLink>\n            </NavigationMenuItem>\n          ))}\n        </NavigationMenuList>\n      </NavigationMenu>\n      <p className=\"text-xs text-muted-foreground\">Current page: {active}</p>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

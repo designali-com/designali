@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "skeleton-36",
+  "type": "registry:example",
+  "description": "Shipment tracking placeholder with a horizontal step tracker and ETA block.",
+  "files": [
+    {
+      "path": "registry/designali/examples/skeleton/skeleton-36.tsx",
+      "content": "import { TruckIcon } from \"lucide-react\"\n\nimport { Skeleton } from \"@workspace/ui/components/skeleton\"\n\nexport default function OrderTrackingSkeleton() {\n  return (\n    <div className=\"flex w-full max-w-md flex-col gap-5 border p-4\">\n      <div className=\"flex items-center justify-between\">\n        <div className=\"flex flex-col gap-1.5\">\n          <Skeleton className=\"h-3 w-24\" />\n          <Skeleton className=\"h-5 w-36\" />\n        </div>\n        <TruckIcon className=\"size-5 text-muted-foreground/40\" />\n      </div>\n      <div className=\"flex items-center\">\n        {Array.from({ length: 4 }).map((_, i) => (\n          <div key={i} className=\"flex flex-1 items-center last:flex-none\">\n            <Skeleton className=\"size-4 rounded-full\" />\n            {i < 3 && <Skeleton className=\"mx-1 h-0.5 flex-1\" />}\n          </div>\n        ))}\n      </div>\n      <div className=\"flex justify-between\">\n        {Array.from({ length: 4 }).map((_, i) => (\n          <Skeleton key={i} className=\"h-2.5 w-12\" />\n        ))}\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button-27",
+  "type": "registry:example",
+  "description": "Destructive button that must be pressed and held until its fill completes.",
+  "files": [
+    {
+      "path": "registry/designali/examples/button/button-27.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { Trash2Icon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\n\nexport default function HoldToConfirmButton() {\n  const [progress, setProgress] = React.useState(0)\n  const [done, setDone] = React.useState(false)\n  const timer = React.useRef<ReturnType<typeof setInterval> | null>(null)\n\n  function start() {\n    if (done) return\n    timer.current = setInterval(() => {\n      setProgress((p) => {\n        if (p >= 100) {\n          stop()\n          setDone(true)\n          return 100\n        }\n        return p + 5\n      })\n    }, 50)\n  }\n\n  function stop() {\n    if (timer.current) clearInterval(timer.current)\n    timer.current = null\n  }\n\n  function cancel() {\n    stop()\n    if (!done) setProgress(0)\n  }\n\n  return (\n    <div className=\"flex flex-col items-center gap-2\">\n      <Button\n        variant=\"destructive\"\n        className=\"relative w-48 overflow-hidden\"\n        onPointerDown={start}\n        onPointerUp={cancel}\n        onPointerLeave={cancel}\n      >\n        <span\n          className=\"absolute inset-y-0 left-0 bg-destructive/25\"\n          style={{ width: progress + \"%\" }}\n        />\n        <span className=\"relative flex items-center gap-1.5\">\n          <Trash2Icon className=\"size-4\" />\n          {done ? \"Account deleted\" : \"Hold to delete\"}\n        </span>\n      </Button>\n      {done && (\n        <Button\n          variant=\"link\"\n          size=\"xs\"\n          onClick={() => {\n            setDone(false)\n            setProgress(0)\n          }}\n        >\n          Undo\n        </Button>\n      )}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

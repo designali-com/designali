@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-otp-04",
+  "type": "registry:example",
+  "description": "Card asking the user to enter the six-digit code sent to their email, with a resend link.",
+  "files": [
+    {
+      "path": "registry/designali/examples/input-otp/input-otp-04.tsx",
+      "content": "\"use client\"\n\nimport { REGEXP_ONLY_DIGITS } from \"input-otp\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  Card,\n  CardContent,\n  CardDescription,\n  CardFooter,\n  CardHeader,\n  CardTitle,\n} from \"@workspace/ui/components/card\"\nimport {\n  InputOTP,\n  InputOTPGroup,\n  InputOTPSlot,\n} from \"@workspace/ui/components/input-otp\"\n\nexport default function EmailVerificationCard() {\n  return (\n    <Card className=\"w-full max-w-sm\">\n      <CardHeader>\n        <CardTitle>Check your inbox</CardTitle>\n        <CardDescription>\n          We sent a 6-digit code to{\" \"}\n          <span className=\"font-medium text-foreground\">\n            maya.chen@lumen.app\n          </span>\n          .\n        </CardDescription>\n      </CardHeader>\n      <CardContent className=\"flex flex-col items-center gap-4\">\n        <InputOTP maxLength={6} pattern={REGEXP_ONLY_DIGITS} autoFocus>\n          <InputOTPGroup>\n            <InputOTPSlot index={0} />\n            <InputOTPSlot index={1} />\n            <InputOTPSlot index={2} />\n            <InputOTPSlot index={3} />\n            <InputOTPSlot index={4} />\n            <InputOTPSlot index={5} />\n          </InputOTPGroup>\n        </InputOTP>\n        <Button className=\"w-full\">Verify email</Button>\n      </CardContent>\n      <CardFooter className=\"justify-center text-xs text-muted-foreground\">\n        Didn&apos;t get it?\n        <Button variant=\"link\" size=\"sm\" className=\"px-1\">\n          Resend code\n        </Button>\n      </CardFooter>\n    </Card>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

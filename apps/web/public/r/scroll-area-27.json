@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "scroll-area-27",
+  "type": "registry:example",
+  "description": "Billing settings card with a scrollable list of past invoices.",
+  "files": [
+    {
+      "path": "registry/designali/examples/scroll-area/scroll-area-27.tsx",
+      "content": "import { DownloadIcon, ReceiptIcon } from \"lucide-react\"\n\nimport { Badge } from \"@workspace/ui/components/badge\"\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  Card,\n  CardDescription,\n  CardHeader,\n  CardTitle,\n} from \"@workspace/ui/components/card\"\nimport { ScrollArea } from \"@workspace/ui/components/scroll-area\"\n\nconst invoices = Array.from({ length: 10 }, (_, i) => ({\n  id: \"INV-\" + (2050 - i),\n  date:\n    [\"Nov\", \"Oct\", \"Sep\", \"Aug\", \"Jul\", \"Jun\", \"May\", \"Apr\", \"Mar\", \"Feb\"][i] +\n    \" 1, 2026\",\n  amount: i === 4 ? \"$0.00\" : \"$29.00\",\n  status: i === 0 ? \"Due\" : \"Paid\",\n}))\n\nexport default function BillingHistoryList() {\n  return (\n    <Card className=\"w-full max-w-md gap-0 py-0\">\n      <CardHeader className=\"border-b py-4\">\n        <CardTitle>Billing history</CardTitle>\n        <CardDescription>Download invoices for your records.</CardDescription>\n      </CardHeader>\n      <ScrollArea className=\"h-60\">\n        <div className=\"flex flex-col divide-y\">\n          {invoices.map((inv) => (\n            <div\n              key={inv.id}\n              className=\"flex items-center gap-3 px-4 py-2.5 text-xs\"\n            >\n              <ReceiptIcon className=\"size-4 shrink-0 text-muted-foreground\" />\n              <div className=\"min-w-0 flex-1\">\n                <p className=\"font-medium\">{inv.id}</p>\n                <p className=\"text-muted-foreground\">{inv.date}</p>\n              </div>\n              <span className=\"tabular-nums\">{inv.amount}</span>\n              <Badge variant={inv.status === \"Due\" ? \"default\" : \"secondary\"}>\n                {inv.status}\n              </Badge>\n              <Button\n                size=\"icon-xs\"\n                variant=\"ghost\"\n                aria-label={\"Download \" + inv.id}\n              >\n                <DownloadIcon />\n              </Button>\n            </div>\n          ))}\n        </div>\n      </ScrollArea>\n    </Card>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

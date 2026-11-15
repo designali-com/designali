@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "switch-11",
+  "type": "registry:example",
+  "description": "Monthly versus yearly billing switch that updates plan prices.",
+  "files": [
+    {
+      "path": "registry/designali/examples/switch/switch-11.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { Badge } from \"@workspace/ui/components/badge\"\nimport { Switch } from \"@workspace/ui/components/switch\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst plans = [\n  { name: \"Starter\", monthly: 12 },\n  { name: \"Team\", monthly: 29 },\n]\n\nexport default function BillingCycleSwitch() {\n  const [yearly, setYearly] = React.useState(true)\n\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-4\">\n      <div className=\"flex items-center justify-center gap-3 text-sm\">\n        <span className={cn(!yearly ? \"font-medium\" : \"text-muted-foreground\")}>\n          Monthly\n        </span>\n        <Switch\n          checked={yearly}\n          onCheckedChange={setYearly}\n          aria-label=\"Bill yearly\"\n        />\n        <span className={cn(yearly ? \"font-medium\" : \"text-muted-foreground\")}>\n          Yearly\n        </span>\n        <Badge variant=\"secondary\">Save 20%</Badge>\n      </div>\n      <div className=\"grid grid-cols-2 gap-2\">\n        {plans.map((plan) => {\n          const price = yearly ? Math.round(plan.monthly * 0.8) : plan.monthly\n          return (\n            <div key={plan.name} className=\"border p-4\">\n              <p className=\"text-sm font-medium\">{plan.name}</p>\n              <p className=\"mt-2 text-2xl font-semibold\">\n                {\"$\" + price}\n                <span className=\"text-xs font-normal text-muted-foreground\">\n                  {\" \"}\n                  /mo\n                </span>\n              </p>\n              <p className=\"text-xs text-muted-foreground\">\n                {yearly\n                  ? \"Billed \" + \"$\" + price * 12 + \" yearly\"\n                  : \"Billed monthly\"}\n              </p>\n            </div>\n          )\n        })}\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

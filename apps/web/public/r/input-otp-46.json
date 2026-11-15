@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-otp-46",
+  "type": "registry:example",
+  "description": "Choose SMS, voice call, or email delivery for the code with a radio group above the input.",
+  "files": [
+    {
+      "path": "registry/designali/examples/input-otp/input-otp-46.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { REGEXP_ONLY_DIGITS } from \"input-otp\"\nimport { MailIcon, MessageSquareIcon, PhoneIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  InputOTP,\n  InputOTPGroup,\n  InputOTPSlot,\n} from \"@workspace/ui/components/input-otp\"\nimport { Label } from \"@workspace/ui/components/label\"\nimport {\n  RadioGroup,\n  RadioGroupItem,\n} from \"@workspace/ui/components/radio-group\"\n\nconst methods = [\n  { value: \"sms\", label: \"Text message\", icon: MessageSquareIcon },\n  { value: \"call\", label: \"Voice call\", icon: PhoneIcon },\n  { value: \"email\", label: \"Email\", icon: MailIcon },\n]\n\nexport default function DeliveryMethodChooser() {\n  const [method, setMethod] = React.useState(\"sms\")\n\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-4\">\n      <RadioGroup\n        value={method}\n        onValueChange={(v) => setMethod(String(v))}\n        className=\"grid grid-cols-3 gap-2\"\n      >\n        {methods.map((m) => (\n          <Label\n            key={m.value}\n            htmlFor={\"method-\" + m.value}\n            className=\"flex-col gap-2 border p-3 has-data-checked:border-primary has-data-checked:bg-muted\"\n          >\n            <RadioGroupItem\n              id={\"method-\" + m.value}\n              value={m.value}\n              className=\"sr-only\"\n            />\n            <m.icon className=\"size-4\" />\n            {m.label}\n          </Label>\n        ))}\n      </RadioGroup>\n      <InputOTP maxLength={6} pattern={REGEXP_ONLY_DIGITS}>\n        <InputOTPGroup>\n          <InputOTPSlot index={0} />\n          <InputOTPSlot index={1} />\n          <InputOTPSlot index={2} />\n          <InputOTPSlot index={3} />\n          <InputOTPSlot index={4} />\n          <InputOTPSlot index={5} />\n        </InputOTPGroup>\n      </InputOTP>\n      <Button variant=\"outline\" size=\"sm\" className=\"self-start\">\n        Send new code\n      </Button>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

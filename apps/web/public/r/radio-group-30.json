@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "radio-group-30",
+  "type": "registry:example",
+  "description": "Store sidebar filter for price range with result counts.",
+  "files": [
+    {
+      "path": "registry/designali/examples/radio-group/radio-group-30.tsx",
+      "content": "import { Button } from \"@workspace/ui/components/button\"\nimport { Field, FieldLabel } from \"@workspace/ui/components/field\"\nimport {\n  RadioGroup,\n  RadioGroupItem,\n} from \"@workspace/ui/components/radio-group\"\n\nconst ranges = [\n  { value: \"any\", label: \"Any price\", count: 248 },\n  { value: \"0-25\", label: \"Under $25\", count: 64 },\n  { value: \"25-50\", label: \"$25 to $50\", count: 92 },\n  { value: \"50-100\", label: \"$50 to $100\", count: 71 },\n  { value: \"100+\", label: \"$100 and up\", count: 21 },\n]\n\nexport default function PriceRangeFilter() {\n  return (\n    <div className=\"flex w-full max-w-60 flex-col gap-3 border p-4\">\n      <div className=\"flex items-center justify-between\">\n        <span className=\"text-sm font-medium\">Price</span>\n        <Button variant=\"link\" size=\"xs\" className=\"h-auto p-0\">\n          Clear\n        </Button>\n      </div>\n      <RadioGroup defaultValue=\"any\" className=\"gap-2.5\">\n        {ranges.map((r) => (\n          <Field key={r.value} orientation=\"horizontal\">\n            <RadioGroupItem value={r.value} id={\"price-\" + r.value} />\n            <FieldLabel htmlFor={\"price-\" + r.value} className=\"font-normal\">\n              {r.label}\n            </FieldLabel>\n            <span className=\"ms-auto text-xs text-muted-foreground tabular-nums\">\n              {r.count}\n            </span>\n          </Field>\n        ))}\n      </RadioGroup>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

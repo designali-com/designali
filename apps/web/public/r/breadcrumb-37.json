@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "breadcrumb-37",
+  "type": "registry:example",
+  "description": "Right-to-left breadcrumb where the default chevron separator flips direction.",
+  "files": [
+    {
+      "path": "registry/designali/examples/breadcrumb/breadcrumb-37.tsx",
+      "content": "import {\n  Breadcrumb,\n  BreadcrumbItem,\n  BreadcrumbLink,\n  BreadcrumbList,\n  BreadcrumbPage,\n  BreadcrumbSeparator,\n} from \"@workspace/ui/components/breadcrumb\"\n\nexport default function RtlBreadcrumb() {\n  return (\n    <div dir=\"rtl\">\n      <Breadcrumb>\n        <BreadcrumbList>\n          <BreadcrumbItem>\n            <BreadcrumbLink href=\"#\">الرئيسية</BreadcrumbLink>\n          </BreadcrumbItem>\n          <BreadcrumbSeparator />\n          <BreadcrumbItem>\n            <BreadcrumbLink href=\"#\">المتجر</BreadcrumbLink>\n          </BreadcrumbItem>\n          <BreadcrumbSeparator />\n          <BreadcrumbItem>\n            <BreadcrumbPage>سلة المشتريات</BreadcrumbPage>\n          </BreadcrumbItem>\n        </BreadcrumbList>\n      </Breadcrumb>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

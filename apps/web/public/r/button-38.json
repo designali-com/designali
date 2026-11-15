@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button-38",
+  "type": "registry:example",
+  "description": "Integration list where each row shows a connect, connected or reconnect button state.",
+  "files": [
+    {
+      "path": "registry/designali/examples/button/button-38.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport {\n  CalendarIcon,\n  CheckIcon,\n  CloudIcon,\n  MessageSquareIcon,\n  RefreshCwIcon,\n} from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\n\nconst initial = [\n  { name: \"Calendar sync\", icon: CalendarIcon, status: \"connected\" },\n  { name: \"Team chat\", icon: MessageSquareIcon, status: \"disconnected\" },\n  { name: \"Cloud storage\", icon: CloudIcon, status: \"error\" },\n]\n\nexport default function IntegrationConnectButtons() {\n  const [items, setItems] = React.useState(initial)\n\n  function connect(name: string) {\n    setItems(\n      items.map((item) =>\n        item.name === name ? { ...item, status: \"connected\" } : item\n      )\n    )\n  }\n\n  return (\n    <div className=\"flex w-full max-w-sm flex-col divide-y border\">\n      {items.map((item) => (\n        <div key={item.name} className=\"flex items-center gap-3 p-3\">\n          <div className=\"flex size-8 items-center justify-center bg-muted\">\n            <item.icon className=\"size-4\" />\n          </div>\n          <div className=\"flex flex-1 flex-col\">\n            <span className=\"text-sm font-medium\">{item.name}</span>\n            {item.status === \"error\" && (\n              <span className=\"text-xs text-destructive\">Token expired</span>\n            )}\n          </div>\n          {item.status === \"connected\" && (\n            <Button variant=\"ghost\" size=\"sm\" disabled>\n              <CheckIcon data-icon=\"inline-start\" />\n              Connected\n            </Button>\n          )}\n          {item.status === \"disconnected\" && (\n            <Button\n              variant=\"outline\"\n              size=\"sm\"\n              onClick={() => connect(item.name)}\n            >\n              Connect\n            </Button>\n          )}\n          {item.status === \"error\" && (\n            <Button\n              variant=\"destructive\"\n              size=\"sm\"\n              onClick={() => connect(item.name)}\n            >\n              <RefreshCwIcon data-icon=\"inline-start\" />\n              Reconnect\n            </Button>\n          )}\n        </div>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

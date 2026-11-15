@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "scroll-area-38",
+  "type": "registry:example",
+  "description": "Keyboard shortcut reference with grouped key combinations.",
+  "files": [
+    {
+      "path": "registry/designali/examples/scroll-area/scroll-area-38.tsx",
+      "content": "import { Kbd, KbdGroup } from \"@workspace/ui/components/kbd\"\nimport { ScrollArea } from \"@workspace/ui/components/scroll-area\"\n\nconst sections = [\n  {\n    title: \"General\",\n    items: [\n      [\"Command menu\", [\"⌘\", \"K\"]],\n      [\"Search\", [\"/\"]],\n      [\"Settings\", [\"⌘\", \",\"]],\n    ],\n  },\n  {\n    title: \"Navigation\",\n    items: [\n      [\"Go to inbox\", [\"G\", \"I\"]],\n      [\"Go to projects\", [\"G\", \"P\"]],\n      [\"Next item\", [\"J\"]],\n      [\"Previous item\", [\"K\"]],\n    ],\n  },\n  {\n    title: \"Editing\",\n    items: [\n      [\"Bold\", [\"⌘\", \"B\"]],\n      [\"Italic\", [\"⌘\", \"I\"]],\n      [\"Undo\", [\"⌘\", \"Z\"]],\n      [\"Redo\", [\"⌘\", \"⇧\", \"Z\"]],\n    ],\n  },\n] as const\n\nexport default function KeyboardShortcutsSheet() {\n  return (\n    <ScrollArea className=\"h-72 w-full max-w-sm border\">\n      <div className=\"flex flex-col gap-4 p-4\">\n        {sections.map((s) => (\n          <div key={s.title} className=\"flex flex-col gap-2\">\n            <span className=\"text-[11px] font-medium text-muted-foreground uppercase\">\n              {s.title}\n            </span>\n            {s.items.map(([label, keys]) => (\n              <div\n                key={label}\n                className=\"flex items-center justify-between text-xs\"\n              >\n                <span>{label}</span>\n                <KbdGroup>\n                  {keys.map((k) => (\n                    <Kbd key={k}>{k}</Kbd>\n                  ))}\n                </KbdGroup>\n              </div>\n            ))}\n          </div>\n        ))}\n      </div>\n    </ScrollArea>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

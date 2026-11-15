@@ -48,7 +48,7 @@ const statusStyle: Record<string, string> = {
 }
 
 export default function Lists10() {
-  const [open, setOpen] = useState<string | null>(orders[0].id)
+  const [open, setOpen] = useState<string | null>(orders[0]!.id)
 
   return (
     <section className="w-full bg-background py-24">

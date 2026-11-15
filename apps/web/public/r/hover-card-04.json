@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "hover-card-04",
+  "type": "registry:example",
+  "description": "A repository link that previews its description, primary language, stars, and forks.",
+  "files": [
+    {
+      "path": "registry/designali/examples/hover-card/hover-card-04.tsx",
+      "content": "import { BookMarkedIcon, GitForkIcon, StarIcon } from \"lucide-react\"\n\nimport { Badge } from \"@workspace/ui/components/badge\"\nimport {\n  HoverCard,\n  HoverCardContent,\n  HoverCardTrigger,\n} from \"@workspace/ui/components/hover-card\"\n\nexport default function RepositoryPreviewHoverCard() {\n  return (\n    <div className=\"flex items-center gap-2 text-sm\">\n      <BookMarkedIcon className=\"size-4 text-muted-foreground\" />\n      <HoverCard>\n        <HoverCardTrigger href=\"#\" className=\"font-medium hover:underline\">\n          lumen-labs/orbit-router\n        </HoverCardTrigger>\n        <HoverCardContent className=\"flex w-80 flex-col gap-2\">\n          <div className=\"flex items-center justify-between\">\n            <span className=\"font-semibold\">orbit-router</span>\n            <Badge variant=\"outline\">Public</Badge>\n          </div>\n          <p className=\"text-muted-foreground\">\n            File-based routing with typed params, nested layouts, and streaming\n            loaders.\n          </p>\n          <div className=\"flex items-center gap-4 text-muted-foreground\">\n            <span className=\"flex items-center gap-1\">\n              <span className=\"size-2.5 rounded-full bg-blue-500\" />\n              TypeScript\n            </span>\n            <span className=\"flex items-center gap-1\">\n              <StarIcon className=\"size-3.5\" />\n              8.2k\n            </span>\n            <span className=\"flex items-center gap-1\">\n              <GitForkIcon className=\"size-3.5\" />\n              416\n            </span>\n          </div>\n          <p className=\"text-muted-foreground\">Updated 2 hours ago</p>\n        </HoverCardContent>\n      </HoverCard>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

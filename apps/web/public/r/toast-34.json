@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toast-34",
+  "type": "registry:example",
+  "description": "Share buttons for several channels, each confirming the share destination in a toast.",
+  "files": [
+    {
+      "path": "registry/designali/examples/toast/toast-34.tsx",
+      "content": "\"use client\"\n\nimport { CodeIcon, LinkIcon, MailIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Toaster, createToastManager } from \"@workspace/ui/components/toast\"\n\nconst notify = createToastManager()\n\nconst channels = [\n  { label: \"Copy link\", icon: LinkIcon, message: \"Link copied to clipboard\" },\n  { label: \"Email\", icon: MailIcon, message: \"Email draft opened\" },\n  { label: \"Embed\", icon: CodeIcon, message: \"Embed code copied\" },\n]\n\nexport default function ShareLinkToast() {\n  return (\n    <Toaster toastManager={notify}>\n      <div className=\"flex w-full max-w-xs flex-col gap-3 border p-4\">\n        <p className=\"text-sm font-medium\">Share &quot;Spring lookbook&quot;</p>\n        <div className=\"grid grid-cols-3 gap-2\">\n          {channels.map((c) => (\n            <Button\n              key={c.label}\n              variant=\"outline\"\n              className=\"h-auto flex-col gap-1.5 py-3 text-xs\"\n              onClick={() =>\n                notify.add({\n                  type: \"success\",\n                  description: c.message,\n                  timeout: 2500,\n                })\n              }\n            >\n              <c.icon />\n              {c.label}\n            </Button>\n          ))}\n        </div>\n      </div>\n    </Toaster>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

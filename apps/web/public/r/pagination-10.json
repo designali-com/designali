@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "pagination-10",
+  "type": "registry:example",
+  "description": "Full-width mobile pagination with large tap targets and a centered page counter.",
+  "files": [
+    {
+      "path": "registry/designali/examples/pagination/pagination-10.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport {\n  Pagination,\n  PaginationContent,\n  PaginationItem,\n  PaginationNext,\n  PaginationPrevious,\n} from \"@workspace/ui/components/pagination\"\n\nconst TOTAL = 9\n\nexport default function CompactMobilePagination() {\n  const [page, setPage] = React.useState(4)\n\n  return (\n    <Pagination className=\"max-w-xs\">\n      <PaginationContent className=\"w-full justify-between\">\n        <PaginationItem>\n          <PaginationPrevious\n            href=\"#\"\n            text=\"Back\"\n            className=\"border\"\n            onClick={(event) => {\n              event.preventDefault()\n              setPage((p) => Math.max(1, p - 1))\n            }}\n          />\n        </PaginationItem>\n        <PaginationItem className=\"text-sm tabular-nums\">\n          <span className=\"font-semibold\">{page}</span>\n          <span className=\"text-muted-foreground\"> / {TOTAL}</span>\n        </PaginationItem>\n        <PaginationItem>\n          <PaginationNext\n            href=\"#\"\n            text=\"More\"\n            className=\"border\"\n            onClick={(event) => {\n              event.preventDefault()\n              setPage((p) => Math.min(TOTAL, p + 1))\n            }}\n          />\n        </PaginationItem>\n      </PaginationContent>\n    </Pagination>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

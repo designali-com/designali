@@ -1,0 +1,17 @@
+[
+  ["navigation-06", "navigation", "500px", "Boutique storefront header with split links around a centred serif wordmark, search, bag count and a slide-down mobile menu."],
+  ["navigation-07", "navigation", "300px", "Dismissible live event announcement bar above a nav with dropdown links, language picker, log in and CTA."],
+  ["navigation-08", "navigation", "600px", "Collapsible app sidebar that toggles between icon rail and labelled view with badges, counts and active state."],
+  ["navigation-09", "navigation", "700px", "Docs layout with a searchable sidebar of collapsible sections, active page marker and article content."],
+  ["navigation-10", "navigation", "700px", "Studio header whose menu button opens a full-screen inverted overlay with large links and contact details."],
+  ["navigation-11", "navigation", "300px", "Floating pill nav where a sliding highlight follows the pointer and an underline marks the active link."],
+  ["navigation-12", "navigation", "500px", "Checkout header with a numbered step progress bar, completed checkmarks and back/continue controls."],
+  ["navigation-13", "navigation", "500px", "Table pagination with rows-per-page select and page numbers, plus previous/next chapter article navigation cards."],
+  ["navigation-14", "navigation", "350px", "E-commerce header with delivery bar, location, search field, account, wishlist and cart icons above category tabs."],
+  ["navigation-15", "navigation", "750px", "Mobile menu demo in a phone frame where nested sections slide in as full panels with back buttons."],
+  ["navigation-16", "navigation", "650px", "Report reader with a sticky section index that tracks scroll position and smooth-scrolls to sections."],
+  ["navigation-17", "navigation", "600px", "App top bar with a workspace switcher, project search and notifications popover panels."],
+  ["navigation-18", "navigation", "650px", "Nav with an industries mega menu showing a list of sectors beside detail links and a proof card."],
+  ["navigation-19", "navigation", "450px", "File browser breadcrumb that collapses middle folders into an overflow button and jumps to any level."],
+  ["navigation-20", "navigation", "750px", "Inverted selected work index list whose hovered entry reveals a gradient preview card beside it."]
+]

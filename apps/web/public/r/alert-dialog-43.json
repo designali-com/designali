@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "alert-dialog-43",
+  "type": "registry:example",
+  "description": "Calendar event cancellation with a notify-guests switch and optional message.",
+  "files": [
+    {
+      "path": "registry/designali/examples/alert-dialog/alert-dialog-43.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { CalendarXIcon } from \"lucide-react\"\n\nimport {\n  AlertDialog,\n  AlertDialogAction,\n  AlertDialogCancel,\n  AlertDialogContent,\n  AlertDialogDescription,\n  AlertDialogFooter,\n  AlertDialogHeader,\n  AlertDialogTitle,\n  AlertDialogTrigger,\n} from \"@workspace/ui/components/alert-dialog\"\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Field, FieldGroup, FieldLabel } from \"@workspace/ui/components/field\"\nimport { Switch } from \"@workspace/ui/components/switch\"\nimport { Textarea } from \"@workspace/ui/components/textarea\"\n\nexport default function CancelEventNotifyGuests() {\n  const [notify, setNotify] = React.useState(true)\n\n  return (\n    <AlertDialog>\n      <AlertDialogTrigger render={<Button variant=\"outline\" />}>\n        <CalendarXIcon data-icon=\"inline-start\" />\n        Cancel event\n      </AlertDialogTrigger>\n      <AlertDialogContent>\n        <AlertDialogHeader>\n          <AlertDialogTitle>\n            Cancel &quot;Quarterly planning&quot;?\n          </AlertDialogTitle>\n          <AlertDialogDescription>\n            Thu, Sep 12 - 10:00-11:30 AM - 12 guests\n          </AlertDialogDescription>\n        </AlertDialogHeader>\n        <FieldGroup className=\"gap-4\">\n          <Field orientation=\"horizontal\">\n            <FieldLabel htmlFor=\"notify-guests\" className=\"flex-1\">\n              Email guests about the cancellation\n            </FieldLabel>\n            <Switch\n              id=\"notify-guests\"\n              checked={notify}\n              onCheckedChange={setNotify}\n            />\n          </Field>\n          {notify && (\n            <Field>\n              <FieldLabel htmlFor=\"cancel-note\">Message (optional)</FieldLabel>\n              <Textarea\n                id=\"cancel-note\"\n                placeholder=\"We'll reschedule after the offsite.\"\n                className=\"min-h-16\"\n              />\n            </Field>\n          )}\n        </FieldGroup>\n        <AlertDialogFooter>\n          <AlertDialogCancel>Keep event</AlertDialogCancel>\n          <AlertDialogAction variant=\"destructive\">\n            {notify ? \"Cancel and notify\" : \"Cancel event\"}\n          </AlertDialogAction>\n        </AlertDialogFooter>\n      </AlertDialogContent>\n    </AlertDialog>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

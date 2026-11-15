@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "radio-group-50",
+  "type": "registry:example",
+  "description": "Settings row using responsive field orientation so the radio group wraps below on narrow widths.",
+  "files": [
+    {
+      "path": "registry/designali/examples/radio-group/radio-group-50.tsx",
+      "content": "import {\n  Field,\n  FieldContent,\n  FieldDescription,\n  FieldGroup,\n  FieldLabel,\n} from \"@workspace/ui/components/field\"\nimport {\n  RadioGroup,\n  RadioGroupItem,\n} from \"@workspace/ui/components/radio-group\"\n\nexport default function ResponsiveFieldOrientation() {\n  return (\n    <FieldGroup className=\"w-full max-w-md\">\n      <Field orientation=\"responsive\">\n        <FieldContent>\n          <FieldLabel>Start of week</FieldLabel>\n          <FieldDescription>Used in calendars and reports.</FieldDescription>\n        </FieldContent>\n        <RadioGroup\n          defaultValue=\"monday\"\n          className=\"flex w-auto gap-4\"\n          aria-label=\"Start of week\"\n        >\n          <Field orientation=\"horizontal\" className=\"w-auto\">\n            <RadioGroupItem value=\"sunday\" id=\"week-sunday\" />\n            <FieldLabel htmlFor=\"week-sunday\" className=\"font-normal\">\n              Sunday\n            </FieldLabel>\n          </Field>\n          <Field orientation=\"horizontal\" className=\"w-auto\">\n            <RadioGroupItem value=\"monday\" id=\"week-monday\" />\n            <FieldLabel htmlFor=\"week-monday\" className=\"font-normal\">\n              Monday\n            </FieldLabel>\n          </Field>\n        </RadioGroup>\n      </Field>\n      <Field orientation=\"responsive\">\n        <FieldContent>\n          <FieldLabel>Time format</FieldLabel>\n          <FieldDescription>How times appear across the app.</FieldDescription>\n        </FieldContent>\n        <RadioGroup\n          defaultValue=\"12h\"\n          className=\"flex w-auto gap-4\"\n          aria-label=\"Time format\"\n        >\n          <Field orientation=\"horizontal\" className=\"w-auto\">\n            <RadioGroupItem value=\"12h\" id=\"time-12h\" />\n            <FieldLabel htmlFor=\"time-12h\" className=\"font-normal\">\n              1:00 PM\n            </FieldLabel>\n          </Field>\n          <Field orientation=\"horizontal\" className=\"w-auto\">\n            <RadioGroupItem value=\"24h\" id=\"time-24h\" />\n            <FieldLabel htmlFor=\"time-24h\" className=\"font-normal\">\n              13:00\n            </FieldLabel>\n          </Field>\n        </RadioGroup>\n      </Field>\n    </FieldGroup>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-otp-45",
+  "type": "registry:example",
+  "description": "Two-step passwordless sign-in: enter email, then the code, with an edit-email link.",
+  "files": [
+    {
+      "path": "registry/designali/examples/input-otp/input-otp-45.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { REGEXP_ONLY_DIGITS } from \"input-otp\"\nimport { PencilIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Field, FieldLabel } from \"@workspace/ui/components/field\"\nimport { Input } from \"@workspace/ui/components/input\"\nimport {\n  InputOTP,\n  InputOTPGroup,\n  InputOTPSlot,\n} from \"@workspace/ui/components/input-otp\"\n\nexport default function MagicCodeTwoStep() {\n  const [email, setEmail] = React.useState(\"sam@parcelpost.dev\")\n  const [step, setStep] = React.useState<\"email\" | \"code\">(\"code\")\n\n  return (\n    <div className=\"flex w-full max-w-xs flex-col gap-4\">\n      {step === \"email\" ? (\n        <>\n          <Field>\n            <FieldLabel htmlFor=\"magic-email\">Email</FieldLabel>\n            <Input\n              id=\"magic-email\"\n              type=\"email\"\n              value={email}\n              onChange={(e) => setEmail(e.target.value)}\n            />\n          </Field>\n          <Button onClick={() => setStep(\"code\")}>Send sign-in code</Button>\n        </>\n      ) : (\n        <>\n          <div className=\"flex items-center justify-between gap-2 text-xs\">\n            <span className=\"truncate text-muted-foreground\">{email}</span>\n            <Button\n              variant=\"link\"\n              size=\"sm\"\n              className=\"px-0\"\n              onClick={() => setStep(\"email\")}\n            >\n              <PencilIcon data-icon=\"inline-start\" />\n              Edit\n            </Button>\n          </div>\n          <InputOTP maxLength={6} pattern={REGEXP_ONLY_DIGITS} autoFocus>\n            <InputOTPGroup>\n              <InputOTPSlot index={0} />\n              <InputOTPSlot index={1} />\n              <InputOTPSlot index={2} />\n              <InputOTPSlot index={3} />\n              <InputOTPSlot index={4} />\n              <InputOTPSlot index={5} />\n            </InputOTPGroup>\n          </InputOTP>\n          <Button>Sign in</Button>\n        </>\n      )}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

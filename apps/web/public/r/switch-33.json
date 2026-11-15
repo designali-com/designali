@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "switch-33",
+  "type": "registry:example",
+  "description": "Service controls with custom checked colors that signal running or stopped status.",
+  "files": [
+    {
+      "path": "registry/designali/examples/switch/switch-33.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { Switch } from \"@workspace/ui/components/switch\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst services = [\n  { id: \"api\", name: \"API gateway\", region: \"us-east-1\", on: true },\n  { id: \"worker\", name: \"Queue worker\", region: \"eu-west-2\", on: false },\n  { id: \"cron\", name: \"Scheduler\", region: \"us-east-1\", on: true },\n]\n\nexport default function ServiceStatusSwitches() {\n  const [running, setRunning] = React.useState(() =>\n    Object.fromEntries(services.map((s) => [s.id, s.on]))\n  )\n\n  return (\n    <div className=\"w-full max-w-sm divide-y border\">\n      {services.map((service) => (\n        <div key={service.id} className=\"flex items-center gap-3 px-4 py-3\">\n          <span\n            className={cn(\n              \"size-2 rounded-full\",\n              running[service.id] ? \"bg-emerald-500\" : \"bg-muted-foreground/40\"\n            )}\n          />\n          <div className=\"flex-1\">\n            <p className=\"text-sm font-medium\">{service.name}</p>\n            <p className=\"font-mono text-xs text-muted-foreground\">\n              {service.region}\n            </p>\n          </div>\n          <span className=\"text-xs text-muted-foreground\">\n            {running[service.id] ? \"Running\" : \"Stopped\"}\n          </span>\n          <Switch\n            className=\"data-checked:bg-emerald-600\"\n            checked={running[service.id]}\n            onCheckedChange={(checked) =>\n              setRunning((r) => ({ ...r, [service.id]: checked }))\n            }\n            aria-label={service.name}\n          />\n        </div>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "separator-41",
+  "type": "registry:example",
+  "description": "Changelog with version entries separated by horizontal separators.",
+  "files": [
+    {
+      "path": "registry/designali/examples/separator/separator-41.tsx",
+      "content": "import * as React from \"react\"\n\nimport { Badge } from \"@workspace/ui/components/badge\"\nimport { Separator } from \"@workspace/ui/components/separator\"\n\nconst releases = [\n  {\n    version: \"2.8.0\",\n    date: \"Mar 12\",\n    notes: [\"Bulk edit for tasks\", \"Faster search indexing\"],\n  },\n  { version: \"2.7.2\", date: \"Feb 27\", notes: [\"Fixed calendar sync drift\"] },\n  {\n    version: \"2.7.0\",\n    date: \"Feb 18\",\n    notes: [\"Dark mode for embeds\", \"New CSV importer\"],\n  },\n]\n\nexport default function ChangelogEntries() {\n  return (\n    <div className=\"flex w-full max-w-sm flex-col\">\n      {releases.map((release, index) => (\n        <React.Fragment key={release.version}>\n          {index > 0 && <Separator />}\n          <div className=\"flex gap-4 py-3\">\n            <div className=\"flex w-14 shrink-0 flex-col text-xs\">\n              <Badge variant={index === 0 ? \"default\" : \"secondary\"}>\n                {release.version}\n              </Badge>\n              <span className=\"mt-1 text-muted-foreground\">{release.date}</span>\n            </div>\n            <ul className=\"flex flex-col gap-1 text-sm\">\n              {release.notes.map((note) => (\n                <li key={note}>{note}</li>\n              ))}\n            </ul>\n          </div>\n        </React.Fragment>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

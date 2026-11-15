@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "aspect-ratio-25",
+  "type": "registry:example",
+  "description": "An event poster using the ISO paper ratio of 1:1.414.",
+  "files": [
+    {
+      "path": "registry/designali/examples/aspect-ratio/aspect-ratio-25.tsx",
+      "content": "import { AspectRatio } from \"@workspace/ui/components/aspect-ratio\"\n\nexport default function EventPosterPaper() {\n  return (\n    <AspectRatio\n      ratio={1 / 1.414}\n      className=\"w-full max-w-52 overflow-hidden bg-[#f1ece2] text-zinc-900 shadow-md\"\n    >\n      <div className=\"absolute -end-8 top-8 size-32 rounded-full bg-orange-500\" />\n      <div className=\"absolute -start-6 top-28 size-20 bg-indigo-600\" />\n      <div className=\"absolute inset-0 flex flex-col justify-end p-4\">\n        <p className=\"text-[10px] font-semibold tracking-[0.2em] uppercase\">\n          Riverside Hall\n        </p>\n        <p className=\"text-2xl leading-none font-black uppercase\">\n          Night Market\n        </p>\n        <p className=\"mt-2 text-[10px]\">\n          Fri 18 Oct - 6pm till late - Free entry\n        </p>\n      </div>\n    </AspectRatio>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

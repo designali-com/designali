@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "switch-49",
+  "type": "registry:example",
+  "description": "Settings with switches that track unsaved changes and offer reset or save.",
+  "files": [
+    {
+      "path": "registry/designali/examples/switch/switch-49.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Label } from \"@workspace/ui/components/label\"\nimport { Switch } from \"@workspace/ui/components/switch\"\n\nconst initial = { autoplay: true, captions: false, hd: true }\ntype Prefs = typeof initial\n\nconst labels: Record<keyof Prefs, string> = {\n  autoplay: \"Autoplay next episode\",\n  captions: \"Always show captions\",\n  hd: \"Stream in HD\",\n}\n\nexport default function UnsavedChangesSwitches() {\n  const [saved, setSaved] = React.useState<Prefs>(initial)\n  const [draft, setDraft] = React.useState<Prefs>(initial)\n  const dirty = (Object.keys(draft) as (keyof Prefs)[]).some(\n    (k) => draft[k] !== saved[k]\n  )\n\n  return (\n    <div className=\"w-full max-w-sm border\">\n      <div className=\"flex flex-col gap-3 p-4\">\n        {(Object.keys(labels) as (keyof Prefs)[]).map((key) => (\n          <div key={key} className=\"flex items-center justify-between\">\n            <Label htmlFor={\"pref-\" + key}>\n              {labels[key]}\n              {draft[key] !== saved[key] && (\n                <span className=\"size-1.5 rounded-full bg-primary\" />\n              )}\n            </Label>\n            <Switch\n              id={\"pref-\" + key}\n              checked={draft[key]}\n              onCheckedChange={(v) => setDraft((d) => ({ ...d, [key]: v }))}\n            />\n          </div>\n        ))}\n      </div>\n      <div className=\"flex items-center justify-between border-t bg-muted/40 px-4 py-2\">\n        <span className=\"text-xs text-muted-foreground\">\n          {dirty ? \"Unsaved changes\" : \"All changes saved\"}\n        </span>\n        <div className=\"flex gap-2\">\n          <Button\n            variant=\"ghost\"\n            size=\"sm\"\n            disabled={!dirty}\n            onClick={() => setDraft(saved)}\n          >\n            Reset\n          </Button>\n          <Button size=\"sm\" disabled={!dirty} onClick={() => setSaved(draft)}>\n            Save\n          </Button>\n        </div>\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

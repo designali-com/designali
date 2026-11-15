@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "skeleton-31",
+  "type": "registry:example",
+  "description": "Team roster placeholder with avatar, name, email, role pill, and overflow menu stubs.",
+  "files": [
+    {
+      "path": "registry/designali/examples/skeleton/skeleton-31.tsx",
+      "content": "import { Skeleton } from \"@workspace/ui/components/skeleton\"\n\nexport default function TeamMembersSkeleton() {\n  return (\n    <div className=\"flex w-full max-w-md flex-col gap-4\">\n      <div className=\"flex items-center justify-between\">\n        <Skeleton className=\"h-4 w-28\" />\n        <Skeleton className=\"h-8 w-24\" />\n      </div>\n      {Array.from({ length: 4 }).map((_, i) => (\n        <div key={i} className=\"flex items-center gap-3\">\n          <Skeleton className=\"size-9 rounded-full\" />\n          <div className=\"flex flex-1 flex-col gap-1.5\">\n            <Skeleton className=\"h-3 w-28\" />\n            <Skeleton className=\"h-2.5 w-40\" />\n          </div>\n          <Skeleton className=\"h-5 w-16\" />\n          <Skeleton className=\"size-6\" />\n        </div>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

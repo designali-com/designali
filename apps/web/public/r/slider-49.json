@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "slider-49",
+  "type": "registry:example",
+  "description": "Uncontrolled slider with a name inside a form, reading its value on submit.",
+  "files": [
+    {
+      "path": "registry/designali/examples/slider/slider-49.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  Field,\n  FieldDescription,\n  FieldLabel,\n} from \"@workspace/ui/components/field\"\nimport { Slider } from \"@workspace/ui/components/slider\"\n\nexport default function FormSubmitSliderName() {\n  const [submitted, setSubmitted] = React.useState<string | null>(null)\n\n  return (\n    <form\n      className=\"flex w-full max-w-sm flex-col gap-4 border p-4\"\n      onSubmit={(e) => {\n        e.preventDefault()\n        setSubmitted(String(new FormData(e.currentTarget).get(\"effort\")))\n      }}\n    >\n      <Field>\n        <FieldLabel>\n          Story points for &quot;Bulk invoice export&quot;\n        </FieldLabel>\n        <Slider\n          name=\"effort\"\n          aria-label=\"Story points\"\n          defaultValue={[5]}\n          min={1}\n          max={13}\n        />\n        <FieldDescription>1 is trivial, 13 needs to be split.</FieldDescription>\n      </Field>\n      <div className=\"flex items-center justify-between\">\n        <span className=\"text-xs text-muted-foreground\">\n          {submitted\n            ? \"Submitted: \" + submitted + \" points\"\n            : \"Not submitted yet\"}\n        </span>\n        <Button type=\"submit\" size=\"sm\">\n          Save estimate\n        </Button>\n      </div>\n    </form>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tabs-37",
+  "type": "registry:example",
+  "description": "Team management tabs for members and pending invitations.",
+  "files": [
+    {
+      "path": "registry/designali/examples/tabs/tabs-37.tsx",
+      "content": "import { UserPlusIcon } from \"lucide-react\"\n\nimport { Avatar, AvatarFallback } from \"@workspace/ui/components/avatar\"\nimport { Badge } from \"@workspace/ui/components/badge\"\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  Tabs,\n  TabsContent,\n  TabsList,\n  TabsTrigger,\n} from \"@workspace/ui/components/tabs\"\n\nconst members = [\n  { name: \"Rhea Kapoor\", role: \"Owner\" },\n  { name: \"Felix Navarro\", role: \"Admin\" },\n  { name: \"June Abara\", role: \"Member\" },\n]\nconst invites = [\"oscar@fieldnotes.io\", \"wren@fieldnotes.io\"]\n\nexport default function TeamMembersTabs() {\n  return (\n    <Tabs defaultValue=\"members\" className=\"w-full max-w-sm\">\n      <div className=\"flex items-center justify-between\">\n        <TabsList>\n          <TabsTrigger value=\"members\">Members</TabsTrigger>\n          <TabsTrigger value=\"invites\">\n            Invites <Badge variant=\"secondary\">{invites.length}</Badge>\n          </TabsTrigger>\n        </TabsList>\n        <Button size=\"sm\">\n          <UserPlusIcon data-icon=\"inline-start\" />\n          Invite\n        </Button>\n      </div>\n      <TabsContent value=\"members\" className=\"flex flex-col gap-2\">\n        {members.map((m) => (\n          <div key={m.name} className=\"flex items-center gap-3\">\n            <Avatar size=\"sm\">\n              <AvatarFallback>\n                {m.name\n                  .split(\" \")\n                  .map((p) => p[0])\n                  .join(\"\")}\n              </AvatarFallback>\n            </Avatar>\n            <span className=\"flex-1 font-medium\">{m.name}</span>\n            <Badge variant=\"outline\">{m.role}</Badge>\n          </div>\n        ))}\n      </TabsContent>\n      <TabsContent value=\"invites\" className=\"flex flex-col gap-2\">\n        {invites.map((email) => (\n          <div key={email} className=\"flex items-center justify-between\">\n            <span className=\"text-muted-foreground\">{email}</span>\n            <Button variant=\"ghost\" size=\"xs\">\n              Revoke\n            </Button>\n          </div>\n        ))}\n      </TabsContent>\n    </Tabs>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

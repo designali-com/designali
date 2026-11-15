@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "accordion-28",
+  "type": "registry:example",
+  "description": "Accordion that swaps a plus icon for a minus icon when an item is open.",
+  "files": [
+    {
+      "path": "registry/designali/examples/accordion/accordion-28.tsx",
+      "content": "import { MinusIcon, PlusIcon } from \"lucide-react\"\n\nimport {\n  Accordion,\n  AccordionContent,\n  AccordionItem,\n  AccordionTrigger,\n} from \"@workspace/ui/components/accordion\"\n\nconst items = [\n  {\n    value: \"where\",\n    q: \"Where do you ship?\",\n    a: \"We ship to 38 countries across Europe, North America and Oceania.\",\n  },\n  {\n    value: \"duties\",\n    q: \"Are duties included?\",\n    a: \"Yes, all prices include duties and taxes at checkout, so there are no surprise fees.\",\n  },\n  {\n    value: \"track\",\n    q: \"How do I track my parcel?\",\n    a: \"A tracking link is emailed as soon as your order leaves the warehouse.\",\n  },\n]\n\nexport default function AccordionPlusMinusIcon() {\n  return (\n    <Accordion defaultValue={[\"duties\"]} className=\"w-full max-w-md\">\n      {items.map((item) => (\n        <AccordionItem key={item.value} value={item.value}>\n          <AccordionTrigger className=\"items-center py-4 text-sm hover:no-underline\">\n            {item.q}\n            <span className=\"ms-auto flex size-6 shrink-0 items-center justify-center border\">\n              <PlusIcon className=\"size-3.5 group-aria-expanded/accordion-trigger:hidden\" />\n              <MinusIcon className=\"hidden size-3.5 group-aria-expanded/accordion-trigger:block\" />\n            </span>\n          </AccordionTrigger>\n          <AccordionContent className=\"pe-10 pb-4 text-muted-foreground\">\n            {item.a}\n          </AccordionContent>\n        </AccordionItem>\n      ))}\n    </Accordion>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

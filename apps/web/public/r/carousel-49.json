@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "carousel-49",
+  "type": "registry:example",
+  "description": "Showcase carousel with faded edges and round overlay controls placed inside the frame.",
+  "files": [
+    {
+      "path": "registry/designali/examples/carousel/carousel-49.tsx",
+      "content": "import { UsersIcon } from \"lucide-react\"\n\nimport {\n  Carousel,\n  CarouselContent,\n  CarouselItem,\n  CarouselNext,\n  CarouselPrevious,\n} from \"@workspace/ui/components/carousel\"\n\nconst spaces = [\n  { name: \"Studio loft\", seats: 8 },\n  { name: \"Quiet room\", seats: 2 },\n  { name: \"Board room\", seats: 14 },\n  { name: \"Phone booth\", seats: 1 },\n  { name: \"Workshop\", seats: 20 },\n  { name: \"Lounge\", seats: 10 },\n]\n\nexport default function EdgeFadeOverlayControls() {\n  return (\n    <Carousel opts={{ align: \"start\", loop: true }} className=\"w-full max-w-md\">\n      <CarouselContent className=\"-ms-2 [mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent)]\">\n        {spaces.map((space) => (\n          <CarouselItem\n            key={space.name}\n            className=\"basis-1/2 ps-2 sm:basis-1/3\"\n          >\n            <div className=\"flex aspect-[3/4] flex-col justify-end gap-0.5 bg-muted p-3\">\n              <span className=\"text-sm font-medium\">{space.name}</span>\n              <span className=\"flex items-center gap-1 text-xs text-muted-foreground\">\n                <UsersIcon className=\"size-3\" />\n                {space.seats} seats\n              </span>\n            </div>\n          </CarouselItem>\n        ))}\n      </CarouselContent>\n      <CarouselPrevious\n        variant=\"secondary\"\n        size=\"icon\"\n        className=\"start-2 rounded-full shadow-sm\"\n      />\n      <CarouselNext\n        variant=\"secondary\"\n        size=\"icon\"\n        className=\"end-2 rounded-full shadow-sm\"\n      />\n    </Carousel>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

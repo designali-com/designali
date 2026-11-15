@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "textarea-29",
+  "type": "registry:example",
+  "description": "Bulk invite textarea that parses pasted emails into valid and invalid badges.",
+  "files": [
+    {
+      "path": "registry/designali/examples/textarea/textarea-29.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { SendIcon } from \"lucide-react\"\n\nimport { Badge } from \"@workspace/ui/components/badge\"\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Label } from \"@workspace/ui/components/label\"\nimport { Textarea } from \"@workspace/ui/components/textarea\"\n\nexport default function BulkInviteTextarea() {\n  const [raw, setRaw] = React.useState(\n    \"maya@loom.dev, kenji@loom.dev\\nnot-an-email\\nzara@loom.dev\"\n  )\n  const entries = raw.split(/[\\s,;]+/).filter(Boolean)\n  const isValid = (e: string) => /^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$/.test(e)\n  const valid = entries.filter(isValid)\n\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-2\">\n      <Label htmlFor=\"ta-invite\">Invite by email</Label>\n      <Textarea\n        id=\"ta-invite\"\n        value={raw}\n        onChange={(e) => setRaw(e.target.value)}\n        className=\"min-h-20\"\n        placeholder=\"Paste emails separated by commas or new lines\"\n      />\n      <div className=\"flex flex-wrap gap-1\">\n        {entries.map((e, i) => (\n          <Badge key={i} variant={isValid(e) ? \"secondary\" : \"destructive\"}>\n            {e}\n          </Badge>\n        ))}\n      </div>\n      <Button size=\"sm\" disabled={!valid.length}>\n        <SendIcon data-icon=\"inline-start\" />\n        Send {valid.length} invite{valid.length === 1 ? \"\" : \"s\"}\n      </Button>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

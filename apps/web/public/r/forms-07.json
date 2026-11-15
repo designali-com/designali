@@ -1,0 +1,28 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "forms-07",
+  "type": "registry:block",
+  "description": "Centered sign-in card with SSO providers, passkey option and email login.",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button",
+    "checkbox",
+    "input",
+    "label"
+  ],
+  "files": [
+    {
+      "path": "registry/designali/blocks/forms/forms-07.tsx",
+      "content": "import { KeyRound, Lock } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Checkbox } from \"@workspace/ui/components/checkbox\"\nimport { Input } from \"@workspace/ui/components/input\"\nimport { Label } from \"@workspace/ui/components/label\"\n\nfunction GlyphMark({ letter }: { letter: string }) {\n  return (\n    <span className=\"flex size-5 items-center justify-center bg-foreground text-[10px] font-semibold text-background\">\n      {letter}\n    </span>\n  )\n}\n\nconst providers = [\n  { name: \"Continue with Orbit ID\", letter: \"O\" },\n  { name: \"Continue with Stackhouse\", letter: \"S\" },\n]\n\nexport default function Forms07() {\n  return (\n    <section className=\"w-full bg-muted/40 py-20\">\n      <div className=\"mx-auto max-w-md px-6\">\n        <div className=\"border border-border bg-background p-6 shadow-sm md:p-10\">\n          <div className=\"flex items-center gap-2 text-sm font-semibold\">\n            <span className=\"flex size-7 items-center justify-center bg-primary text-primary-foreground\">\n              <Lock className=\"size-3.5\" />\n            </span>\n            Ledgerline\n          </div>\n          <h2 className=\"mt-8 text-2xl font-semibold tracking-tight\">\n            Sign in to your workspace\n          </h2>\n          <p className=\"mt-2 text-sm text-muted-foreground\">\n            New here?{\" \"}\n            <a href=\"#\" className=\"text-foreground underline underline-offset-4\">\n              Create an account\n            </a>\n          </p>\n\n          <div className=\"mt-8 grid gap-2\">\n            {providers.map((provider) => (\n              <Button key={provider.name} variant=\"outline\" size=\"lg\" className=\"w-full\">\n                <GlyphMark letter={provider.letter} />\n                {provider.name}\n              </Button>\n            ))}\n            <Button variant=\"outline\" size=\"lg\" className=\"w-full\">\n              <KeyRound />\n              Sign in with a passkey\n            </Button>\n          </div>\n\n          <div className=\"my-8 flex items-center gap-4 text-xs text-muted-foreground\">\n            <span className=\"h-px flex-1 bg-border\" />\n            or with email\n            <span className=\"h-px flex-1 bg-border\" />\n          </div>\n\n          <form className=\"space-y-5\">\n            <div className=\"space-y-2\">\n              <Label htmlFor=\"f7-email\">Email</Label>\n              <Input id=\"f7-email\" type=\"email\" autoComplete=\"email\" placeholder=\"ines@harbourfoods.co\" className=\"h-10\" />\n            </div>\n            <div className=\"space-y-2\">\n              <div className=\"flex items-center justify-between\">\n                <Label htmlFor=\"f7-password\">Password</Label>\n                <a href=\"#\" className=\"text-xs text-muted-foreground hover:text-foreground\">\n                  Forgot password?\n                </a>\n              </div>\n              <Input id=\"f7-password\" type=\"password\" autoComplete=\"current-password\" className=\"h-10\" />\n            </div>\n            <Label className=\"flex items-center gap-2 text-xs font-normal text-muted-foreground\">\n              <Checkbox defaultChecked />\n              Keep me signed in for 30 days\n            </Label>\n            <Button type=\"submit\" size=\"lg\" className=\"w-full\">\n              Sign in\n            </Button>\n          </form>\n        </div>\n        <p className=\"mt-6 text-center text-xs text-muted-foreground\">\n          Protected by SOC 2 Type II controls and hardware-backed keys.\n        </p>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "850px"
+  },
+  "categories": [
+    "forms"
+  ]
+}

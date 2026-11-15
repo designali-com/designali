@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "hover-card-43",
+  "type": "registry:example",
+  "description": "API reference endpoints that preview method, parameters, and rate limits.",
+  "files": [
+    {
+      "path": "registry/designali/examples/hover-card/hover-card-43.tsx",
+      "content": "import { GaugeIcon } from \"lucide-react\"\n\nimport { Badge } from \"@workspace/ui/components/badge\"\nimport {\n  HoverCard,\n  HoverCardContent,\n  HoverCardTrigger,\n} from \"@workspace/ui/components/hover-card\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst endpoints = [\n  {\n    method: \"GET\",\n    path: \"/v1/invoices\",\n    params: [\"status\", \"limit\", \"cursor\"],\n    rate: \"100 req/min\",\n  },\n  {\n    method: \"POST\",\n    path: \"/v1/invoices\",\n    params: [\"customer_id\", \"items\", \"due_date\"],\n    rate: \"30 req/min\",\n  },\n  {\n    method: \"DELETE\",\n    path: \"/v1/invoices/:id\",\n    params: [\"id\"],\n    rate: \"10 req/min\",\n  },\n]\nconst tone: Record<string, string> = {\n  GET: \"text-emerald-600\",\n  POST: \"text-blue-600\",\n  DELETE: \"text-destructive\",\n}\n\nexport default function ApiEndpointHoverCard() {\n  return (\n    <div className=\"flex w-full max-w-xs flex-col gap-1 font-mono text-xs\">\n      {endpoints.map((e) => (\n        <HoverCard key={e.method + e.path}>\n          <HoverCardTrigger\n            href=\"#\"\n            className=\"flex gap-2 px-2 py-1.5 hover:bg-muted\"\n          >\n            <span className={cn(\"w-12 font-semibold\", tone[e.method])}>\n              {e.method}\n            </span>\n            {e.path}\n          </HoverCardTrigger>\n          <HoverCardContent side=\"right\" className=\"w-56 font-sans\">\n            <p className=\"font-mono font-medium\">{e.path}</p>\n            <p className=\"mt-2 text-muted-foreground\">Parameters</p>\n            <div className=\"mt-1 flex flex-wrap gap-1\">\n              {e.params.map((p) => (\n                <Badge key={p} variant=\"outline\" className=\"font-mono\">\n                  {p}\n                </Badge>\n              ))}\n            </div>\n            <p className=\"mt-2 flex items-center gap-1.5 text-muted-foreground\">\n              <GaugeIcon className=\"size-3.5\" />\n              {e.rate}\n            </p>\n          </HoverCardContent>\n        </HoverCard>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

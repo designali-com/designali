@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "checkbox-13",
+  "type": "registry:example",
+  "description": "Storefront filter panel with brand and size checkboxes, counts, and a clear action.",
+  "files": [
+    {
+      "path": "registry/designali/examples/checkbox/checkbox-13.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Checkbox } from \"@workspace/ui/components/checkbox\"\nimport {\n  Field,\n  FieldGroup,\n  FieldLabel,\n  FieldLegend,\n  FieldSet,\n} from \"@workspace/ui/components/field\"\n\nconst filters: Record<string, [string, number][]> = {\n  Brand: [\n    [\"Northpeak\", 42],\n    [\"Aster\", 18],\n    [\"Field & Co\", 27],\n  ],\n  Size: [\n    [\"S\", 30],\n    [\"M\", 54],\n    [\"L\", 41],\n    [\"XL\", 0],\n  ],\n}\n\nexport default function ProductFilterSidebar() {\n  const [active, setActive] = React.useState<string[]>([\"M\"])\n\n  const toggle = (value: string, checked: boolean) =>\n    setActive((list) =>\n      checked ? [...list, value] : list.filter((v) => v !== value)\n    )\n\n  return (\n    <div className=\"flex w-full max-w-[14rem] flex-col gap-4\">\n      <div className=\"flex items-center justify-between\">\n        <span className=\"text-sm font-medium\">Filters</span>\n        <Button\n          variant=\"link\"\n          size=\"xs\"\n          disabled={active.length === 0}\n          onClick={() => setActive([])}\n        >\n          Clear ({active.length})\n        </Button>\n      </div>\n      {Object.entries(filters).map(([group, options]) => (\n        <FieldSet key={group}>\n          <FieldLegend variant=\"label\">{group}</FieldLegend>\n          <FieldGroup className=\"gap-2.5\">\n            {options.map(([value, count]) => (\n              <Field\n                key={value}\n                orientation=\"horizontal\"\n                data-disabled={count === 0 || undefined}\n              >\n                <Checkbox\n                  id={\"filter-\" + value}\n                  checked={active.includes(value)}\n                  disabled={count === 0}\n                  onCheckedChange={(checked) => toggle(value, checked)}\n                />\n                <FieldLabel\n                  htmlFor={\"filter-\" + value}\n                  className=\"flex-1 font-normal\"\n                >\n                  {value}\n                </FieldLabel>\n                <span className=\"text-xs text-muted-foreground\">{count}</span>\n              </Field>\n            ))}\n          </FieldGroup>\n        </FieldSet>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

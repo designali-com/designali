@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toast-29",
+  "type": "registry:example",
+  "description": "Composes the toast parts manually to place the viewport at the top center of the screen.",
+  "files": [
+    {
+      "path": "registry/designali/examples/toast/toast-29.tsx",
+      "content": "\"use client\"\n\nimport { ArrowUpIcon, InfoIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  Toast,\n  ToastClose,\n  ToastContent,\n  ToastDescription,\n  ToastPortal,\n  ToastProvider,\n  ToastViewport,\n  createToastManager,\n  useToastManager,\n} from \"@workspace/ui/components/toast\"\n\nconst notify = createToastManager()\n\nfunction TopToasts() {\n  const { toasts } = useToastManager()\n  return toasts.map((t) => (\n    <Toast\n      key={t.id}\n      toast={t}\n      className=\"top-0 bottom-auto origin-top data-starting-style:[transform:translateY(-150%)]\"\n    >\n      <ToastContent>\n        <InfoIcon className=\"size-4 shrink-0\" />\n        <ToastDescription className=\"flex-1 text-foreground\" />\n        <ToastClose />\n      </ToastContent>\n    </Toast>\n  ))\n}\n\nexport default function TopCenterToastViewport() {\n  return (\n    <ToastProvider toastManager={notify}>\n      <Button\n        variant=\"outline\"\n        onClick={() =>\n          notify.add({ description: \"A new version of the app is available.\" })\n        }\n      >\n        <ArrowUpIcon data-icon=\"inline-start\" />\n        Show at top\n      </Button>\n      <ToastPortal>\n        <ToastViewport className=\"top-4 bottom-auto sm:start-1/2 sm:end-auto sm:-translate-x-1/2\">\n          <TopToasts />\n        </ToastViewport>\n      </ToastPortal>\n    </ToastProvider>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "slider-29",
+  "type": "registry:example",
+  "description": "Video clip trimmer with a range slider over a filmstrip and in and out timestamps.",
+  "files": [
+    {
+      "path": "registry/designali/examples/slider/slider-29.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { ScissorsIcon } from \"lucide-react\"\n\nimport { Badge } from \"@workspace/ui/components/badge\"\nimport { Slider } from \"@workspace/ui/components/slider\"\n\nconst length = 94\n\nfunction stamp(s: number) {\n  return (\n    \"0:\" +\n    String(Math.floor(s / 60)).padStart(2, \"0\") +\n    \":\" +\n    String(s % 60).padStart(2, \"0\")\n  )\n}\n\nexport default function VideoTrimRange() {\n  const [trim, setTrim] = React.useState([12, 68])\n\n  return (\n    <div className=\"flex w-full max-w-md flex-col gap-3 border p-4\">\n      <div className=\"flex h-10 overflow-hidden border\">\n        {Array.from({ length: 8 }, (_, i) => (\n          <div\n            key={i}\n            className=\"flex-1 border-r last:border-r-0\"\n            style={{\n              background:\n                \"linear-gradient(135deg, hsl(\" +\n                (200 + i * 12) +\n                \" 60% 55%), hsl(\" +\n                (230 + i * 12) +\n                \" 50% 35%))\",\n            }}\n          />\n        ))}\n      </div>\n      <Slider\n        aria-label=\"Trim clip\"\n        value={trim}\n        onValueChange={(value) => setTrim(value as number[])}\n        max={length}\n        minStepsBetweenValues={3}\n      />\n      <div className=\"flex items-center justify-between text-xs tabular-nums\">\n        <span>In {stamp(trim[0]!)}</span>\n        <Badge variant=\"secondary\">\n          <ScissorsIcon />\n          {trim[1]! - trim[0]!}s\n        </Badge>\n        <span>Out {stamp(trim[1]!)}</span>\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

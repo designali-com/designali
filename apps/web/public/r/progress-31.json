@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "progress-31",
+  "type": "registry:example",
+  "description": "CI pipeline with complete, running (indeterminate), and queued stages.",
+  "files": [
+    {
+      "path": "registry/designali/examples/progress/progress-31.tsx",
+      "content": "import { Badge } from \"@workspace/ui/components/badge\"\nimport { Progress, ProgressLabel } from \"@workspace/ui/components/progress\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst stages = [\n  { name: \"Build\", status: \"done\", duration: \"1m 12s\" },\n  { name: \"Unit tests\", status: \"done\", duration: \"2m 48s\" },\n  { name: \"Integration tests\", status: \"running\", duration: \"Running\" },\n  { name: \"Deploy to production\", status: \"queued\", duration: \"Queued\" },\n]\n\nexport default function DeploymentPipelineStages() {\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-4 border p-4\">\n      <div className=\"flex items-center justify-between\">\n        <span className=\"font-mono text-xs\">main &middot; 4f2a9c1</span>\n        <Badge variant=\"secondary\">In progress</Badge>\n      </div>\n      {stages.map((stage) => (\n        <Progress\n          key={stage.name}\n          value={\n            stage.status === \"done\" ? 100 : stage.status === \"queued\" ? 0 : null\n          }\n          className={cn(\n            stage.status === \"running\" &&\n              \"[&_[data-slot=progress-indicator]]:w-2/5 [&_[data-slot=progress-indicator]]:animate-pulse\"\n          )}\n        >\n          <ProgressLabel\n            className={cn(\n              \"text-sm\",\n              stage.status === \"queued\" && \"text-muted-foreground\"\n            )}\n          >\n            {stage.name}\n          </ProgressLabel>\n          <span className=\"ms-auto text-xs text-muted-foreground\">\n            {stage.duration}\n          </span>\n        </Progress>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

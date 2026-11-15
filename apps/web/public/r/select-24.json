@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "select-24",
+  "type": "registry:example",
+  "description": "Long scrollable list of half-hour time slots for booking a meeting.",
+  "files": [
+    {
+      "path": "registry/designali/examples/select/select-24.tsx",
+      "content": "import { ClockIcon } from \"lucide-react\"\n\nimport { Field, FieldLabel } from \"@workspace/ui/components/field\"\nimport {\n  Select,\n  SelectContent,\n  SelectItem,\n  SelectTrigger,\n  SelectValue,\n} from \"@workspace/ui/components/select\"\n\nconst slots = Array.from({ length: 48 }, (_, index) => {\n  const hours = Math.floor(index / 2)\n  const minutes = index % 2 === 0 ? \"00\" : \"30\"\n  const period = hours < 12 ? \"AM\" : \"PM\"\n  const display =\n    (hours % 12 === 0 ? 12 : hours % 12) + \":\" + minutes + \" \" + period\n  return {\n    label: display,\n    value: String(hours).padStart(2, \"0\") + \":\" + minutes,\n  }\n})\n\nexport default function MeetingTimeSelect() {\n  return (\n    <div className=\"flex w-full max-w-xs flex-col gap-3 border p-4\">\n      <div className=\"flex flex-col\">\n        <span className=\"text-sm font-medium\">Design review</span>\n        <span className=\"text-xs text-muted-foreground\">\n          Thursday, March 12 - 45 min\n        </span>\n      </div>\n      <div className=\"grid grid-cols-2 gap-2\">\n        <Field>\n          <FieldLabel htmlFor=\"start-time\">Start</FieldLabel>\n          <Select items={slots} defaultValue=\"10:00\">\n            <SelectTrigger id=\"start-time\" className=\"w-full\">\n              <ClockIcon className=\"text-muted-foreground\" />\n              <SelectValue />\n            </SelectTrigger>\n            <SelectContent className=\"max-h-60\">\n              {slots.map((item) => (\n                <SelectItem key={item.value} value={item.value}>\n                  {item.label}\n                </SelectItem>\n              ))}\n            </SelectContent>\n          </Select>\n        </Field>\n        <Field>\n          <FieldLabel htmlFor=\"end-time\">End</FieldLabel>\n          <Select items={slots} defaultValue=\"10:30\">\n            <SelectTrigger id=\"end-time\" className=\"w-full\">\n              <ClockIcon className=\"text-muted-foreground\" />\n              <SelectValue />\n            </SelectTrigger>\n            <SelectContent className=\"max-h-60\">\n              {slots.map((item) => (\n                <SelectItem key={item.value} value={item.value}>\n                  {item.label}\n                </SelectItem>\n              ))}\n            </SelectContent>\n          </Select>\n        </Field>\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "slider-07",
+  "type": "registry:example",
+  "description": "Display brightness control flanked by dim and bright sun icons.",
+  "files": [
+    {
+      "path": "registry/designali/examples/slider/slider-07.tsx",
+      "content": "import { SunDimIcon, SunIcon } from \"lucide-react\"\n\nimport { Label } from \"@workspace/ui/components/label\"\nimport { Slider } from \"@workspace/ui/components/slider\"\n\nexport default function BrightnessSlider() {\n  return (\n    <div className=\"flex w-full max-w-xs flex-col gap-2\">\n      <Label>Display brightness</Label>\n      <div className=\"flex items-center gap-3\">\n        <SunDimIcon className=\"size-4 text-muted-foreground\" />\n        <Slider aria-label=\"Display brightness\" defaultValue={[70]} max={100} />\n        <SunIcon className=\"size-5\" />\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

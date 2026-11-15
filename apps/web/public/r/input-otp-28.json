@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-otp-28",
+  "type": "registry:example",
+  "description": "Uses pasteTransformer so codes pasted as 123-456 are cleaned before filling the slots.",
+  "files": [
+    {
+      "path": "registry/designali/examples/input-otp/input-otp-28.tsx",
+      "content": "\"use client\"\n\nimport { REGEXP_ONLY_DIGITS } from \"input-otp\"\n\nimport {\n  Field,\n  FieldDescription,\n  FieldLabel,\n} from \"@workspace/ui/components/field\"\nimport {\n  InputOTP,\n  InputOTPGroup,\n  InputOTPSeparator,\n  InputOTPSlot,\n} from \"@workspace/ui/components/input-otp\"\n\nexport default function StripDashesOnPaste() {\n  return (\n    <Field className=\"w-fit\">\n      <FieldLabel htmlFor=\"otp-paste\">Paste your code</FieldLabel>\n      <InputOTP\n        id=\"otp-paste\"\n        maxLength={6}\n        pattern={REGEXP_ONLY_DIGITS}\n        pasteTransformer={(pasted) => pasted.replace(/[^0-9]/g, \"\")}\n      >\n        <InputOTPGroup>\n          <InputOTPSlot index={0} />\n          <InputOTPSlot index={1} />\n          <InputOTPSlot index={2} />\n        </InputOTPGroup>\n        <InputOTPSeparator />\n        <InputOTPGroup>\n          <InputOTPSlot index={3} />\n          <InputOTPSlot index={4} />\n          <InputOTPSlot index={5} />\n        </InputOTPGroup>\n      </InputOTP>\n      <FieldDescription>\n        Dashes and spaces are removed automatically, e.g. 482-913.\n      </FieldDescription>\n    </Field>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

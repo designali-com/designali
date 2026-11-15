@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "alert-39",
+  "type": "registry:example",
+  "description": "Interactive preview that cycles one alert through every variant with matching icons.",
+  "files": [
+    {
+      "path": "registry/designali/examples/alert/alert-39.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport {\n  BellIcon,\n  CircleCheckIcon,\n  CircleXIcon,\n  InfoIcon,\n  TriangleAlertIcon,\n} from \"lucide-react\"\n\nimport {\n  Alert,\n  AlertDescription,\n  AlertTitle,\n} from \"@workspace/ui/components/alert\"\nimport { Button } from \"@workspace/ui/components/button\"\n\nconst variants = [\n  {\n    value: \"default\" as const,\n    icon: BellIcon,\n    title: \"Heads up\",\n    body: \"Your weekly report is ready to view.\",\n  },\n  {\n    value: \"info\" as const,\n    icon: InfoIcon,\n    title: \"New in reports\",\n    body: \"You can now schedule exports to your inbox.\",\n  },\n  {\n    value: \"success\" as const,\n    icon: CircleCheckIcon,\n    title: \"Report sent\",\n    body: \"Delivered to 12 recipients.\",\n  },\n  {\n    value: \"warning\" as const,\n    icon: TriangleAlertIcon,\n    title: \"Partial data\",\n    body: \"Two sources haven’t synced since yesterday.\",\n  },\n  {\n    value: \"error\" as const,\n    icon: CircleXIcon,\n    title: \"Export failed\",\n    body: \"The report was too large to attach.\",\n  },\n]\n\nexport default function AlertVariantPlayground() {\n  const [index, setIndex] = React.useState(0)\n  const current = variants[index] ?? variants[0]!\n\n  return (\n    <div className=\"w-full max-w-md space-y-3\">\n      <div className=\"flex flex-wrap gap-1\">\n        {variants.map((variant, i) => (\n          <Button\n            key={variant.value}\n            size=\"xs\"\n            variant={i === index ? \"default\" : \"outline\"}\n            onClick={() => setIndex(i)}\n          >\n            {variant.value}\n          </Button>\n        ))}\n      </div>\n      <Alert variant={current.value}>\n        <current.icon />\n        <AlertTitle>{current.title}</AlertTitle>\n        <AlertDescription>{current.body}</AlertDescription>\n      </Alert>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

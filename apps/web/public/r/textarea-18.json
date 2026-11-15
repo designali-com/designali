@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "textarea-18",
+  "type": "registry:example",
+  "description": "Monospace JSON textarea that validates on demand and reports parse errors.",
+  "files": [
+    {
+      "path": "registry/designali/examples/textarea/textarea-18.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Label } from \"@workspace/ui/components/label\"\nimport { Textarea } from \"@workspace/ui/components/textarea\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nexport default function JsonEditorTextarea() {\n  const [value, setValue] = React.useState(\n    '{\\n  \"retries\": 3,\\n  \"timeout\": 5000\\n}'\n  )\n  const [status, setStatus] = React.useState<{\n    ok: boolean\n    msg: string\n  } | null>(null)\n\n  function validate() {\n    try {\n      const keys = Object.keys(JSON.parse(value) as object)\n      setStatus({ ok: true, msg: \"Valid JSON · \" + keys.length + \" keys\" })\n    } catch (err) {\n      setStatus({ ok: false, msg: (err as Error).message })\n    }\n  }\n\n  return (\n    <div className=\"grid w-full max-w-sm gap-2\">\n      <Label htmlFor=\"ta-json\">Webhook config</Label>\n      <Textarea\n        id=\"ta-json\"\n        value={value}\n        spellCheck={false}\n        aria-invalid={status?.ok === false || undefined}\n        onChange={(e) => {\n          setValue(e.target.value)\n          setStatus(null)\n        }}\n        className=\"min-h-28 font-mono\"\n      />\n      <div className=\"flex items-center justify-between gap-2\">\n        <span\n          className={cn(\n            \"truncate text-xs\",\n            status?.ok ? \"text-emerald-600\" : \"text-destructive\"\n          )}\n        >\n          {status?.msg}\n        </span>\n        <Button variant=\"outline\" size=\"sm\" onClick={validate}>\n          Validate\n        </Button>\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

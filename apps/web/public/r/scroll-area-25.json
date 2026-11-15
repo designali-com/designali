@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "scroll-area-25",
+  "type": "registry:example",
+  "description": "Email inbox list with unread styling inside a scroll area.",
+  "files": [
+    {
+      "path": "registry/designali/examples/scroll-area/scroll-area-25.tsx",
+      "content": "import { ScrollArea } from \"@workspace/ui/components/scroll-area\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst emails = [\n  {\n    from: \"Parcel\",\n    subject: \"Your order has shipped\",\n    preview: \"Track package #PX-4421 on the way\",\n    unread: true,\n  },\n  {\n    from: \"Maya Chen\",\n    subject: \"Roadmap feedback\",\n    preview: \"Left a few comments on the Q3 doc\",\n    unread: true,\n  },\n  {\n    from: \"Fieldnote\",\n    subject: \"Weekly digest\",\n    preview: \"12 new notes across 4 projects\",\n    unread: false,\n  },\n  {\n    from: \"Leo Park\",\n    subject: \"Invoice #2041\",\n    preview: \"Payment received, thanks!\",\n    unread: false,\n  },\n  {\n    from: \"Security\",\n    subject: \"New sign-in\",\n    preview: \"Firefox on macOS from Lisbon\",\n    unread: true,\n  },\n  {\n    from: \"Ines Duarte\",\n    subject: \"Crit notes\",\n    preview: \"Summary from today's design crit\",\n    unread: false,\n  },\n  {\n    from: \"Calendar\",\n    subject: \"Offsite next week\",\n    preview: \"Reminder: travel details inside\",\n    unread: false,\n  },\n]\n\nexport default function InboxUnreadList() {\n  return (\n    <ScrollArea className=\"h-72 w-full max-w-sm border\">\n      <div className=\"flex flex-col divide-y\">\n        {emails.map((e) => (\n          <a\n            key={e.subject}\n            href=\"#\"\n            className=\"flex flex-col gap-0.5 px-4 py-3 hover:bg-muted/60\"\n          >\n            <div className=\"flex items-center gap-2 text-xs\">\n              {e.unread && (\n                <span className=\"size-1.5 rounded-full bg-primary\" />\n              )}\n              <span\n                className={cn(\n                  \"flex-1 truncate\",\n                  e.unread ? \"font-semibold\" : \"text-muted-foreground\"\n                )}\n              >\n                {e.from}\n              </span>\n            </div>\n            <span className={cn(\"truncate text-xs\", e.unread && \"font-medium\")}>\n              {e.subject}\n            </span>\n            <span className=\"truncate text-xs text-muted-foreground\">\n              {e.preview}\n            </span>\n          </a>\n        ))}\n      </div>\n    </ScrollArea>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

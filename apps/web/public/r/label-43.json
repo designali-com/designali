@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "label-43",
+  "type": "registry:example",
+  "description": "Feedback rating from 1 to 5 using labels as tappable scale buttons with end captions.",
+  "files": [
+    {
+      "path": "registry/designali/examples/label/label-43.tsx",
+      "content": "import { Label } from \"@workspace/ui/components/label\"\nimport {\n  RadioGroup,\n  RadioGroupItem,\n} from \"@workspace/ui/components/radio-group\"\n\nexport default function RatingScaleLabels() {\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-3\">\n      <span className=\"text-sm font-medium\">\n        How likely are you to recommend Pinecone Notes?\n      </span>\n      <RadioGroup className=\"grid grid-cols-5 gap-1.5\">\n        {[1, 2, 3, 4, 5].map((n) => (\n          <Label\n            key={n}\n            htmlFor={\"rate-\" + n}\n            className=\"h-10 justify-center border text-sm hover:bg-muted has-data-checked:border-primary has-data-checked:bg-primary/10\"\n          >\n            <RadioGroupItem\n              id={\"rate-\" + n}\n              value={String(n)}\n              className=\"sr-only\"\n            />\n            {n}\n          </Label>\n        ))}\n      </RadioGroup>\n      <div className=\"flex justify-between text-xs text-muted-foreground\">\n        <span>Not likely</span>\n        <span>Very likely</span>\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

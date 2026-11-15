@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "blog-17",
+  "type": "registry:block",
+  "description": "Changelog-style product journal timeline with dates in a left rail, type badges, bullets and a dot marker per entry.",
+  "dependencies": [],
+  "registryDependencies": [
+    "badge"
+  ],
+  "files": [
+    {
+      "path": "registry/designali/blocks/blog/blog-17.tsx",
+      "content": "import { Badge } from \"@workspace/ui/components/badge\"\n\nconst entries = [\n  {\n    date: \"Nov 14, 2026\",\n    type: \"Launch\",\n    title: \"Offline mode is here for every plan\",\n    body: \"Edit documents on a plane, in a tunnel, or on hotel wifi. Changes sync and merge the moment you reconnect, with conflicts surfaced inline.\",\n    bullets: [\"Works on desktop and mobile\", \"Up to 2GB of cached workspaces\", \"Conflict review in the history panel\"],\n  },\n  {\n    date: \"Nov 3, 2026\",\n    type: \"Behind the scenes\",\n    title: \"How we built a CRDT that fits in 14kb\",\n    body: \"A deep dive into the sync engine behind offline mode, and why we wrote our own instead of adopting an existing library.\",\n  },\n  {\n    date: \"Oct 21, 2026\",\n    type: \"Improvement\",\n    title: \"Search is now four times faster\",\n    body: \"We moved indexing to the client for workspaces under 10,000 pages. Results now appear as you type, even for long documents.\",\n    bullets: [\"Typo tolerance\", \"Filter by author and date\"],\n  },\n  {\n    date: \"Oct 2, 2026\",\n    type: \"Company\",\n    title: \"Quillstack raises a seed round to stay small\",\n    body: \"Why we raised just enough to hire four more engineers, and what we promised our customers we would not do with it.\",\n  },\n]\n\nexport default function Blog17() {\n  return (\n    <section className=\"w-full bg-background py-16 text-foreground md:py-24\">\n      <div className=\"mx-auto max-w-5xl px-6\">\n        <div className=\"mb-14\">\n          <h2 className=\"text-3xl font-medium tracking-tight md:text-4xl\">Product journal</h2>\n          <p className=\"mt-3 max-w-xl text-muted-foreground\">\n            Launches, deep dives, and company news from the Quillstack team, in the order they happened.\n          </p>\n        </div>\n\n        <ol className=\"relative\">\n          {entries.map((e, i) => (\n            <li key={e.title} className=\"grid gap-4 md:grid-cols-[180px_1fr] md:gap-10\">\n              <div className=\"md:pt-1 md:text-right\">\n                <time className=\"font-mono text-xs text-muted-foreground\">{e.date}</time>\n              </div>\n              <div className={i === entries.length - 1 ? \"relative border-l pl-8 md:pl-10\" : \"relative border-l pb-14 pl-8 md:pl-10\"}>\n                <span\n                  className={\n                    i === 0\n                      ? \"absolute top-1.5 -left-[7px] size-3.5 rounded-full border-2 border-background bg-primary ring-4 ring-primary/15\"\n                      : \"absolute top-1.5 -left-[7px] size-3.5 rounded-full border-2 border-background bg-muted-foreground/50\"\n                  }\n                />\n                <Badge variant=\"outline\">{e.type}</Badge>\n                <h3 className=\"mt-3 text-xl font-medium tracking-tight md:text-2xl\">\n                  <a href=\"#\" className=\"hover:underline hover:underline-offset-4\">\n                    {e.title}\n                  </a>\n                </h3>\n                <p className=\"mt-3 leading-7 text-muted-foreground\">{e.body}</p>\n                {e.bullets && (\n                  <ul className=\"mt-4 space-y-1.5 text-sm\">\n                    {e.bullets.map((b) => (\n                      <li key={b} className=\"flex items-center gap-2\">\n                        <span className=\"size-1 bg-foreground\" />\n                        {b}\n                      </li>\n                    ))}\n                  </ul>\n                )}\n                {i === 0 && (\n                  <div className=\"mt-6 aspect-[16/7] border bg-[linear-gradient(135deg,var(--muted)_25%,transparent_25%,transparent_50%,var(--muted)_50%,var(--muted)_75%,transparent_75%)] bg-[length:24px_24px]\" />\n                )}\n              </div>\n            </li>\n          ))}\n        </ol>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "1100px"
+  },
+  "categories": [
+    "blog"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "card-24",
+  "type": "registry:example",
+  "description": "Getting-started card with numbered steps, completion states and an overall progress bar.",
+  "files": [
+    {
+      "path": "registry/designali/examples/card/card-24.tsx",
+      "content": "import { CircleCheckIcon, XIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  Card,\n  CardAction,\n  CardContent,\n  CardDescription,\n  CardHeader,\n  CardTitle,\n} from \"@workspace/ui/components/card\"\nimport { Progress } from \"@workspace/ui/components/progress\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst steps = [\n  { title: \"Create your workspace\", done: true },\n  { title: \"Invite your teammates\", done: true },\n  { title: \"Connect a data source\", done: false, cta: \"Connect\" },\n  { title: \"Publish your first dashboard\", done: false, cta: \"Start\" },\n]\n\nexport default function OnboardingChecklistCard() {\n  const done = steps.filter((s) => s.done).length\n  const next = steps.findIndex((s) => !s.done)\n\n  return (\n    <Card className=\"w-full max-w-sm\">\n      <CardHeader>\n        <CardTitle>Get started</CardTitle>\n        <CardDescription>\n          {done} of {steps.length} steps complete\n        </CardDescription>\n        <CardAction>\n          <Button variant=\"ghost\" size=\"icon-xs\" aria-label=\"Dismiss\">\n            <XIcon />\n          </Button>\n        </CardAction>\n      </CardHeader>\n      <CardContent className=\"grid gap-3\">\n        <Progress\n          value={(done / steps.length) * 100}\n          aria-label=\"Onboarding progress\"\n        />\n        <ol className=\"grid gap-1\">\n          {steps.map((s, i) => (\n            <li\n              key={s.title}\n              className={cn(\n                \"flex items-center gap-3 p-2\",\n                i === next && \"bg-muted/60\"\n              )}\n            >\n              {s.done ? (\n                <CircleCheckIcon className=\"size-5 text-emerald-500\" />\n              ) : (\n                <span className=\"flex size-5 items-center justify-center rounded-full border text-[10px]\">\n                  {i + 1}\n                </span>\n              )}\n              <span\n                className={cn(\n                  \"flex-1\",\n                  s.done && \"text-muted-foreground line-through\"\n                )}\n              >\n                {s.title}\n              </span>\n              {i === next ? <Button size=\"xs\">{s.cta}</Button> : null}\n            </li>\n          ))}\n        </ol>\n      </CardContent>\n    </Card>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "hover-card-49",
+  "type": "registry:example",
+  "description": "A hover card for a deactivated or unknown user that shows an empty fallback state.",
+  "files": [
+    {
+      "path": "registry/designali/examples/hover-card/hover-card-49.tsx",
+      "content": "import { UserXIcon } from \"lucide-react\"\n\nimport {\n  HoverCard,\n  HoverCardContent,\n  HoverCardTrigger,\n} from \"@workspace/ui/components/hover-card\"\n\nexport default function EmptyProfileHoverCard() {\n  return (\n    <p className=\"max-w-sm text-sm text-muted-foreground\">\n      Originally created by{\" \"}\n      <HoverCard>\n        <HoverCardTrigger\n          href=\"#\"\n          className=\"text-muted-foreground line-through hover:text-foreground\"\n        >\n          @former-contractor\n        </HoverCardTrigger>\n        <HoverCardContent className=\"flex w-56 flex-col items-center gap-2 py-4 text-center\">\n          <span className=\"flex size-10 items-center justify-center rounded-full bg-muted\">\n            <UserXIcon className=\"size-5 text-muted-foreground\" />\n          </span>\n          <p className=\"font-medium\">Account deactivated</p>\n          <p className=\"text-muted-foreground\">\n            This user no longer has access to the workspace.\n          </p>\n        </HoverCardContent>\n      </HoverCard>{\" \"}\n      in 2023.\n    </p>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

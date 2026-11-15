@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "spinner-17",
+  "type": "registry:example",
+  "description": "Sign-in form that disables its fields and shows a spinner in the submit button.",
+  "files": [
+    {
+      "path": "registry/designali/examples/spinner/spinner-17.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Field, FieldGroup, FieldLabel } from \"@workspace/ui/components/field\"\nimport { Input } from \"@workspace/ui/components/input\"\nimport { Spinner } from \"@workspace/ui/components/spinner\"\n\nexport default function SubmittingFormSpinner() {\n  const [pending, setPending] = React.useState(false)\n\n  return (\n    <form\n      className=\"w-full max-w-sm border p-4\"\n      onSubmit={(e) => {\n        e.preventDefault()\n        setPending(true)\n        setTimeout(() => setPending(false), 1800)\n      }}\n    >\n      <FieldGroup>\n        <Field>\n          <FieldLabel htmlFor=\"login-email\">Email</FieldLabel>\n          <Input\n            id=\"login-email\"\n            type=\"email\"\n            defaultValue=\"ines@quillpost.io\"\n            disabled={pending}\n          />\n        </Field>\n        <Field>\n          <FieldLabel htmlFor=\"login-password\">Password</FieldLabel>\n          <Input\n            id=\"login-password\"\n            type=\"password\"\n            defaultValue=\"hunter22\"\n            disabled={pending}\n          />\n        </Field>\n        <Button type=\"submit\" disabled={pending}>\n          {pending && <Spinner data-icon=\"inline-start\" />}\n          {pending ? \"Signing in...\" : \"Sign in\"}\n        </Button>\n      </FieldGroup>\n    </form>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-otp-42",
+  "type": "registry:example",
+  "description": "Round slots with spacing for a softer, friendlier verification style.",
+  "files": [
+    {
+      "path": "registry/designali/examples/input-otp/input-otp-42.tsx",
+      "content": "import {\n  InputOTP,\n  InputOTPGroup,\n  InputOTPSlot,\n} from \"@workspace/ui/components/input-otp\"\n\nexport default function CircularSlots() {\n  return (\n    <InputOTP maxLength={4}>\n      <InputOTPGroup className=\"gap-3\">\n        <InputOTPSlot\n          index={0}\n          className=\"size-12 rounded-full border text-lg first:rounded-full last:rounded-full\"\n        />\n        <InputOTPSlot\n          index={1}\n          className=\"size-12 rounded-full border text-lg first:rounded-full last:rounded-full\"\n        />\n        <InputOTPSlot\n          index={2}\n          className=\"size-12 rounded-full border text-lg first:rounded-full last:rounded-full\"\n        />\n        <InputOTPSlot\n          index={3}\n          className=\"size-12 rounded-full border text-lg first:rounded-full last:rounded-full\"\n        />\n      </InputOTPGroup>\n    </InputOTP>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

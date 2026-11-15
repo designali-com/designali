@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "skeleton-46",
+  "type": "registry:example",
+  "description": "Horizontal stories strip placeholder with ringed circles and name stubs.",
+  "files": [
+    {
+      "path": "registry/designali/examples/skeleton/skeleton-46.tsx",
+      "content": "import { Skeleton } from \"@workspace/ui/components/skeleton\"\n\nexport default function StoriesRowSkeleton() {\n  return (\n    <div className=\"flex w-full max-w-md gap-3 overflow-x-auto pb-1\">\n      {Array.from({ length: 7 }).map((_, i) => (\n        <div key={i} className=\"flex shrink-0 flex-col items-center gap-1.5\">\n          <div className=\"rounded-full border-2 border-muted p-0.5\">\n            <Skeleton className=\"size-12 rounded-full\" />\n          </div>\n          <Skeleton className=\"h-2.5 w-10\" />\n        </div>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

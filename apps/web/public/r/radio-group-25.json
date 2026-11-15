@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "radio-group-25",
+  "type": "registry:example",
+  "description": "Members table with a radio column to pick the workspace primary owner.",
+  "files": [
+    {
+      "path": "registry/designali/examples/radio-group/radio-group-25.tsx",
+      "content": "import { Avatar, AvatarFallback } from \"@workspace/ui/components/avatar\"\nimport {\n  RadioGroup,\n  RadioGroupItem,\n} from \"@workspace/ui/components/radio-group\"\nimport {\n  Table,\n  TableBody,\n  TableCell,\n  TableHead,\n  TableHeader,\n  TableRow,\n} from \"@workspace/ui/components/table\"\n\nconst members = [\n  { id: \"m1\", name: \"Ava Lindqvist\", email: \"ava@fernwood.io\" },\n  { id: \"m2\", name: \"Jonah Mbeki\", email: \"jonah@fernwood.io\" },\n  { id: \"m3\", name: \"Rosa Delgado\", email: \"rosa@fernwood.io\" },\n]\n\nexport default function PrimaryOwnerTable() {\n  return (\n    <div className=\"w-full max-w-md border\">\n      <RadioGroup defaultValue=\"m1\" aria-label=\"Primary owner\">\n        <Table>\n          <TableHeader>\n            <TableRow>\n              <TableHead className=\"w-12\">Owner</TableHead>\n              <TableHead>Member</TableHead>\n            </TableRow>\n          </TableHeader>\n          <TableBody>\n            {members.map((m) => (\n              <TableRow key={m.id}>\n                <TableCell>\n                  <RadioGroupItem\n                    value={m.id}\n                    id={\"owner-\" + m.id}\n                    aria-label={\"Make \" + m.name + \" primary owner\"}\n                  />\n                </TableCell>\n                <TableCell>\n                  <label\n                    htmlFor={\"owner-\" + m.id}\n                    className=\"flex cursor-pointer items-center gap-2\"\n                  >\n                    <Avatar size=\"sm\">\n                      <AvatarFallback>\n                        {m.name\n                          .split(\" \")\n                          .map((p) => p[0])\n                          .join(\"\")}\n                      </AvatarFallback>\n                    </Avatar>\n                    <span>\n                      <span className=\"block font-medium\">{m.name}</span>\n                      <span className=\"block text-xs text-muted-foreground\">\n                        {m.email}\n                      </span>\n                    </span>\n                  </label>\n                </TableCell>\n              </TableRow>\n            ))}\n          </TableBody>\n        </Table>\n      </RadioGroup>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "drawer-12",
+  "type": "registry:example",
+  "description": "Drawer that slides down from the top with a maintenance announcement.",
+  "files": [
+    {
+      "path": "registry/designali/examples/drawer/drawer-12.tsx",
+      "content": "import { MegaphoneIcon, WrenchIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  Drawer,\n  DrawerClose,\n  DrawerContent,\n  DrawerDescription,\n  DrawerTitle,\n  DrawerTrigger,\n} from \"@workspace/ui/components/drawer\"\n\nexport default function TopAnnouncementDrawer() {\n  return (\n    <Drawer swipeDirection=\"up\" showSwipeHandle>\n      <DrawerTrigger render={<Button variant=\"outline\" />}>\n        <MegaphoneIcon data-icon=\"inline-start\" />\n        Show announcement\n      </DrawerTrigger>\n      <DrawerContent>\n        <div className=\"mx-auto flex w-full max-w-lg flex-col gap-3 p-4 sm:flex-row sm:items-center\">\n          <div className=\"flex size-10 shrink-0 items-center justify-center bg-amber-500/15 text-amber-600 dark:text-amber-400\">\n            <WrenchIcon className=\"size-5\" />\n          </div>\n          <div className=\"flex-1\">\n            <DrawerTitle>Scheduled maintenance on Sunday</DrawerTitle>\n            <DrawerDescription>\n              The API will be read-only from 02:00 to 03:30 UTC. Webhooks will\n              be queued and delivered after.\n            </DrawerDescription>\n          </div>\n          <DrawerClose render={<Button size=\"sm\" />}>Got it</DrawerClose>\n        </div>\n      </DrawerContent>\n    </Drawer>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

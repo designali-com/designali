@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "pagination-40",
+  "type": "registry:example",
+  "description": "Vertically stacked pagination used as a section rail in a settings sidebar.",
+  "files": [
+    {
+      "path": "registry/designali/examples/pagination/pagination-40.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport {\n  Pagination,\n  PaginationContent,\n  PaginationItem,\n  PaginationLink,\n} from \"@workspace/ui/components/pagination\"\n\nconst sections = [\n  \"Profile\",\n  \"Security\",\n  \"Notifications\",\n  \"Billing\",\n  \"Integrations\",\n]\n\nexport default function VerticalPagination() {\n  const [active, setActive] = React.useState(1)\n\n  return (\n    <div className=\"flex w-full max-w-sm gap-4 border p-3\">\n      <Pagination className=\"mx-0 w-auto\">\n        <PaginationContent className=\"flex-col items-stretch\">\n          {sections.map((section, i) => (\n            <PaginationItem key={section}>\n              <PaginationLink\n                href=\"#\"\n                size=\"sm\"\n                isActive={i === active}\n                className=\"w-full justify-start gap-2\"\n                onClick={(event) => {\n                  event.preventDefault()\n                  setActive(i)\n                }}\n              >\n                <span className=\"text-muted-foreground tabular-nums\">\n                  {String(i + 1).padStart(2, \"0\")}\n                </span>\n                {section}\n              </PaginationLink>\n            </PaginationItem>\n          ))}\n        </PaginationContent>\n      </Pagination>\n      <div className=\"flex flex-1 flex-col gap-1 border-s ps-4\">\n        <span className=\"text-sm font-medium\">{sections[active]}</span>\n        <span className=\"text-xs text-muted-foreground\">\n          Section {active + 1} of {sections.length}\n        </span>\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

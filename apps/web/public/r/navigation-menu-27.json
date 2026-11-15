@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "navigation-menu-27",
+  "type": "registry:example",
+  "description": "Navigation menu using align center so each popup is centered beneath its trigger.",
+  "files": [
+    {
+      "path": "registry/designali/examples/navigation-menu/navigation-menu-27.tsx",
+      "content": "import {\n  NavigationMenu,\n  NavigationMenuContent,\n  NavigationMenuItem,\n  NavigationMenuLink,\n  NavigationMenuList,\n  NavigationMenuTrigger,\n} from \"@workspace/ui/components/navigation-menu\"\n\nconst menus = {\n  Explore: [\"Trending\", \"Collections\", \"Creators\"],\n  Create: [\"New gallery\", \"Upload artwork\", \"Start a challenge\"],\n}\n\nexport default function CenterAlignedNav() {\n  return (\n    <NavigationMenu align=\"center\">\n      <NavigationMenuList>\n        {Object.entries(menus).map(([label, links]) => (\n          <NavigationMenuItem key={label}>\n            <NavigationMenuTrigger>{label}</NavigationMenuTrigger>\n            <NavigationMenuContent>\n              <ul className=\"flex w-48 flex-col gap-1 text-center\">\n                {links.map((link) => (\n                  <li key={link}>\n                    <NavigationMenuLink href=\"#\" className=\"justify-center\">\n                      {link}\n                    </NavigationMenuLink>\n                  </li>\n                ))}\n              </ul>\n            </NavigationMenuContent>\n          </NavigationMenuItem>\n        ))}\n      </NavigationMenuList>\n    </NavigationMenu>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

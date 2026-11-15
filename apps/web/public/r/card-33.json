@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "card-33",
+  "type": "registry:example",
+  "description": "Status page card with per-service uptime bars over 30 days and an incident note.",
+  "files": [
+    {
+      "path": "registry/designali/examples/card/card-33.tsx",
+      "content": "import { InfoIcon } from \"lucide-react\"\n\nimport { Badge } from \"@workspace/ui/components/badge\"\nimport {\n  Card,\n  CardAction,\n  CardContent,\n  CardDescription,\n  CardFooter,\n  CardHeader,\n  CardTitle,\n} from \"@workspace/ui/components/card\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst services = [\n  { name: \"API\", uptime: \"99.98%\", incidents: [12] },\n  { name: \"Dashboard\", uptime: \"100%\", incidents: [] as number[] },\n  { name: \"Webhooks\", uptime: \"99.71%\", incidents: [4, 5, 22] },\n]\n\nexport default function ServiceStatusCard() {\n  return (\n    <Card className=\"w-full max-w-sm\">\n      <CardHeader>\n        <CardTitle>System status</CardTitle>\n        <CardDescription>Last 30 days</CardDescription>\n        <CardAction>\n          <Badge variant=\"secondary\" className=\"gap-1.5\">\n            <span className=\"size-1.5 animate-pulse rounded-full bg-emerald-500\" />\n            Operational\n          </Badge>\n        </CardAction>\n      </CardHeader>\n      <CardContent className=\"grid gap-4\">\n        {services.map((s) => (\n          <div key={s.name} className=\"grid gap-1.5\">\n            <div className=\"flex justify-between\">\n              <span className=\"font-medium\">{s.name}</span>\n              <span className=\"text-muted-foreground tabular-nums\">\n                {s.uptime}\n              </span>\n            </div>\n            <div className=\"flex gap-px\">\n              {Array.from({ length: 30 }).map((_, i) => (\n                <span\n                  key={i}\n                  title={s.incidents.includes(i) ? \"Degraded\" : \"Operational\"}\n                  className={cn(\n                    \"h-6 flex-1\",\n                    s.incidents.includes(i)\n                      ? \"bg-amber-500\"\n                      : \"bg-emerald-500/70\"\n                  )}\n                />\n              ))}\n            </div>\n          </div>\n        ))}\n      </CardContent>\n      <CardFooter className=\"gap-2 text-muted-foreground\">\n        <InfoIcon className=\"size-3.5 shrink-0\" />\n        Webhook delays on Nov 4-5 were resolved within 40 minutes.\n      </CardFooter>\n    </Card>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

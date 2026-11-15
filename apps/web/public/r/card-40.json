@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "card-40",
+  "type": "registry:example",
+  "description": "Agenda card listing today's meetings with a live 'now' marker and join button.",
+  "files": [
+    {
+      "path": "registry/designali/examples/card/card-40.tsx",
+      "content": "import { PlusIcon, VideoIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  Card,\n  CardAction,\n  CardContent,\n  CardDescription,\n  CardHeader,\n  CardTitle,\n} from \"@workspace/ui/components/card\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst meetings = [\n  {\n    time: \"09:00\",\n    end: \"09:15\",\n    title: \"Daily standup\",\n    room: \"Zoom\",\n    past: true,\n  },\n  {\n    time: \"10:30\",\n    end: \"11:30\",\n    title: \"Pricing page critique\",\n    room: \"Room Atlas\",\n    now: true,\n  },\n  { time: \"13:00\", end: \"13:30\", title: \"1:1 with Grace\", room: \"Zoom\" },\n  { time: \"15:00\", end: \"16:00\", title: \"Roadmap review\", room: \"Room Nova\" },\n]\n\nexport default function TodayScheduleCard() {\n  return (\n    <Card className=\"w-full max-w-sm\">\n      <CardHeader>\n        <CardTitle>Today</CardTitle>\n        <CardDescription>Thursday, November 20</CardDescription>\n        <CardAction>\n          <Button variant=\"outline\" size=\"icon-sm\" aria-label=\"New event\">\n            <PlusIcon />\n          </Button>\n        </CardAction>\n      </CardHeader>\n      <CardContent className=\"grid gap-1\">\n        {meetings.map((m) => (\n          <div\n            key={m.title}\n            className={cn(\n              \"flex items-center gap-3 border-s-2 border-transparent p-2\",\n              m.now && \"border-primary bg-muted/60\",\n              m.past && \"opacity-50\"\n            )}\n          >\n            <div className=\"grid w-10 text-muted-foreground tabular-nums\">\n              <span className=\"text-foreground\">{m.time}</span>\n              <span>{m.end}</span>\n            </div>\n            <div className=\"grid min-w-0 flex-1\">\n              <span className=\"truncate font-medium\">{m.title}</span>\n              <span className=\"text-muted-foreground\">{m.room}</span>\n            </div>\n            {m.now ? (\n              <Button size=\"xs\">\n                <VideoIcon data-icon=\"inline-start\" />\n                Join\n              </Button>\n            ) : null}\n          </div>\n        ))}\n      </CardContent>\n    </Card>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

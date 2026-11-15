@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "label-49",
+  "type": "registry:example",
+  "description": "Labels that wrap their inputs directly, so no htmlFor or id is needed.",
+  "files": [
+    {
+      "path": "registry/designali/examples/label/label-49.tsx",
+      "content": "import { Checkbox } from \"@workspace/ui/components/checkbox\"\nimport { Input } from \"@workspace/ui/components/input\"\nimport { Label } from \"@workspace/ui/components/label\"\n\nexport default function WrappingLabelImplicit() {\n  return (\n    <form className=\"flex w-full max-w-sm flex-col gap-4\">\n      <Label className=\"flex-col items-start gap-2\">\n        Display name\n        <Input defaultValue=\"Wren Abbott\" />\n      </Label>\n      <Label className=\"flex-col items-start gap-2\">\n        Pronouns\n        <Input placeholder=\"they/them\" />\n      </Label>\n      <Label className=\"gap-2\">\n        <Checkbox defaultChecked />\n        Show pronouns on my profile\n      </Label>\n    </form>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

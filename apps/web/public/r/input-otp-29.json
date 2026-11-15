@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-otp-29",
+  "type": "registry:example",
+  "description": "Completed OTP rendered with success-colored slots and a verified confirmation.",
+  "files": [
+    {
+      "path": "registry/designali/examples/input-otp/input-otp-29.tsx",
+      "content": "import { BadgeCheckIcon } from \"lucide-react\"\n\nimport {\n  InputOTP,\n  InputOTPGroup,\n  InputOTPSlot,\n} from \"@workspace/ui/components/input-otp\"\n\nexport default function VerifiedSuccessState() {\n  return (\n    <div className=\"flex flex-col items-center gap-3\">\n      <InputOTP\n        maxLength={6}\n        value=\"305918\"\n        disabled\n        containerClassName=\"has-disabled:opacity-100\"\n      >\n        <InputOTPGroup>\n          <InputOTPSlot\n            index={0}\n            className=\"border-emerald-500/60 bg-emerald-500/10 text-emerald-700 dark:text-emerald-300\"\n          />\n          <InputOTPSlot\n            index={1}\n            className=\"border-emerald-500/60 bg-emerald-500/10 text-emerald-700 dark:text-emerald-300\"\n          />\n          <InputOTPSlot\n            index={2}\n            className=\"border-emerald-500/60 bg-emerald-500/10 text-emerald-700 dark:text-emerald-300\"\n          />\n          <InputOTPSlot\n            index={3}\n            className=\"border-emerald-500/60 bg-emerald-500/10 text-emerald-700 dark:text-emerald-300\"\n          />\n          <InputOTPSlot\n            index={4}\n            className=\"border-emerald-500/60 bg-emerald-500/10 text-emerald-700 dark:text-emerald-300\"\n          />\n          <InputOTPSlot\n            index={5}\n            className=\"border-emerald-500/60 bg-emerald-500/10 text-emerald-700 dark:text-emerald-300\"\n          />\n        </InputOTPGroup>\n      </InputOTP>\n      <p className=\"flex items-center gap-1.5 text-xs font-medium text-emerald-700 dark:text-emerald-400\">\n        <BadgeCheckIcon className=\"size-4\" />\n        Email verified\n      </p>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

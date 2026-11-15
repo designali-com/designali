@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "switch-32",
+  "type": "registry:example",
+  "description": "Video call pre-join screen with camera and microphone switches.",
+  "files": [
+    {
+      "path": "registry/designali/examples/switch/switch-32.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { MicIcon, MicOffIcon, VideoIcon, VideoOffIcon } from \"lucide-react\"\n\nimport { Avatar, AvatarFallback } from \"@workspace/ui/components/avatar\"\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Switch } from \"@workspace/ui/components/switch\"\n\nexport default function VideoCallPreflight() {\n  const [camera, setCamera] = React.useState(true)\n  const [mic, setMic] = React.useState(false)\n\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-3 border p-3\">\n      <div className=\"relative flex aspect-video items-center justify-center bg-gradient-to-br from-muted to-muted/40\">\n        {camera ? (\n          <Avatar size=\"lg\">\n            <AvatarFallback>JO</AvatarFallback>\n          </Avatar>\n        ) : (\n          <VideoOffIcon className=\"size-6 text-muted-foreground\" />\n        )}\n        {!mic && (\n          <span className=\"absolute start-2 bottom-2 flex items-center gap-1 bg-background/80 px-1.5 py-0.5 text-xs\">\n            <MicOffIcon className=\"size-3\" /> Muted\n          </span>\n        )}\n      </div>\n      <div className=\"grid grid-cols-2 gap-2\">\n        <label className=\"flex items-center justify-between gap-2 border px-3 py-2 text-sm\">\n          <span className=\"flex items-center gap-2\">\n            <VideoIcon className=\"size-4\" />\n            Camera\n          </span>\n          <Switch size=\"sm\" checked={camera} onCheckedChange={setCamera} />\n        </label>\n        <label className=\"flex items-center justify-between gap-2 border px-3 py-2 text-sm\">\n          <span className=\"flex items-center gap-2\">\n            <MicIcon className=\"size-4\" />\n            Mic\n          </span>\n          <Switch size=\"sm\" checked={mic} onCheckedChange={setMic} />\n        </label>\n      </div>\n      <Button className=\"w-full\">Join meeting</Button>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

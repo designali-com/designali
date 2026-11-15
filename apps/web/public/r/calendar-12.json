@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "calendar-12",
+  "type": "registry:example",
+  "description": "Checkout delivery picker that blocks weekends, holidays and the next two days.",
+  "files": [
+    {
+      "path": "registry/designali/examples/calendar/calendar-12.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { addDays, format, isWeekend } from \"date-fns\"\nimport { TruckIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Calendar } from \"@workspace/ui/components/calendar\"\nimport {\n  Card,\n  CardContent,\n  CardDescription,\n  CardFooter,\n  CardHeader,\n  CardTitle,\n} from \"@workspace/ui/components/card\"\n\nconst today = new Date()\n\nfunction firstDeliveryDay() {\n  let d = addDays(today, 2)\n  while (isWeekend(d)) d = addDays(d, 1)\n  return d\n}\n\nconst holidays = [addDays(today, 9), addDays(today, 10)]\n\nexport default function DeliveryDateCheckout() {\n  const [date, setDate] = React.useState<undefined | Date>(firstDeliveryDay)\n\n  return (\n    <Card className=\"w-full max-w-xs\">\n      <CardHeader>\n        <CardTitle className=\"flex items-center gap-2\">\n          <TruckIcon className=\"size-4 text-muted-foreground\" />\n          Choose delivery date\n        </CardTitle>\n        <CardDescription>\n          Weekdays only. Couriers are off on public holidays.\n        </CardDescription>\n      </CardHeader>\n      <CardContent className=\"flex justify-center\">\n        <Calendar\n          mode=\"single\"\n          selected={date}\n          onSelect={setDate}\n          disabled={[\n            { before: addDays(today, 2) },\n            { dayOfWeek: [0, 6] },\n            ...holidays,\n          ]}\n          modifiers={{ holiday: holidays }}\n          modifiersClassNames={{ holiday: \"[&>button]:line-through\" }}\n          className=\"p-0\"\n        />\n      </CardContent>\n      <CardFooter className=\"justify-between gap-2\">\n        <div className=\"grid gap-0.5\">\n          <span className=\"text-muted-foreground\">Arrives</span>\n          <span className=\"font-medium\">\n            {date ? format(date, \"EEEE, MMM d\") : \"No date selected\"}\n          </span>\n        </div>\n        <Button size=\"sm\" disabled={!date}>\n          Continue\n        </Button>\n      </CardFooter>\n    </Card>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button-34",
+  "type": "registry:example",
+  "description": "Add to cart button that animates through adding and added states beside the price.",
+  "files": [
+    {
+      "path": "registry/designali/examples/button/button-34.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { CheckIcon, ShoppingCartIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Spinner } from \"@workspace/ui/components/spinner\"\n\nexport default function AddToCartButton() {\n  const [state, setState] = React.useState<\"idle\" | \"adding\" | \"added\">(\"idle\")\n\n  function add() {\n    setState(\"adding\")\n    setTimeout(() => setState(\"added\"), 800)\n  }\n\n  return (\n    <div className=\"flex w-full max-w-xs items-center justify-between gap-3 border p-3\">\n      <div className=\"flex flex-col\">\n        <span className=\"text-sm font-medium\">Linen tote bag</span>\n        <span className=\"text-sm text-muted-foreground\">$38.00</span>\n      </div>\n      <Button\n        variant={state === \"added\" ? \"secondary\" : \"default\"}\n        disabled={state === \"adding\"}\n        onClick={state === \"added\" ? () => setState(\"idle\") : add}\n        className=\"w-32\"\n      >\n        {state === \"idle\" && <ShoppingCartIcon data-icon=\"inline-start\" />}\n        {state === \"adding\" && <Spinner data-icon=\"inline-start\" />}\n        {state === \"added\" && <CheckIcon data-icon=\"inline-start\" />}\n        {state === \"idle\"\n          ? \"Add to cart\"\n          : state === \"adding\"\n            ? \"Adding\"\n            : \"In cart\"}\n      </Button>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

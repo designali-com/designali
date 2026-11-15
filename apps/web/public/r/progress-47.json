@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "progress-47",
+  "type": "registry:example",
+  "description": "Upload that failed partway, with a destructive bar and retry action.",
+  "files": [
+    {
+      "path": "registry/designali/examples/progress/progress-47.tsx",
+      "content": "import { FileVideoIcon, RefreshCwIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  Progress,\n  ProgressLabel,\n  ProgressValue,\n} from \"@workspace/ui/components/progress\"\n\nexport default function FailedUploadRetry() {\n  return (\n    <div className=\"flex w-full max-w-sm items-start gap-3 border border-destructive/40 p-3\">\n      <div className=\"flex size-9 shrink-0 items-center justify-center bg-destructive/10\">\n        <FileVideoIcon className=\"size-4 text-destructive\" />\n      </div>\n      <Progress\n        value={43}\n        className=\"min-w-0 flex-1 gap-1.5 [&_[data-slot=progress-indicator]]:bg-destructive\"\n      >\n        <ProgressLabel className=\"truncate text-sm font-medium\">\n          keynote-recording.mov\n        </ProgressLabel>\n        <ProgressValue className=\"text-destructive\" />\n        <span className=\"w-full text-xs text-destructive\">\n          Connection lost. Upload stopped at 1.2 of 2.8 GB.\n        </span>\n      </Progress>\n      <Button variant=\"outline\" size=\"icon-sm\" aria-label=\"Retry upload\">\n        <RefreshCwIcon />\n      </Button>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

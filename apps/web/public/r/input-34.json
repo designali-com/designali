@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-34",
+  "type": "registry:example",
+  "description": "Width and height inputs with unit suffixes and an aspect ratio lock toggle.",
+  "files": [
+    {
+      "path": "registry/designali/examples/input/input-34.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { LockIcon, LockOpenIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Field, FieldLabel } from \"@workspace/ui/components/field\"\nimport {\n  InputGroup,\n  InputGroupAddon,\n  InputGroupInput,\n  InputGroupText,\n} from \"@workspace/ui/components/input-group\"\n\nexport default function DimensionUnitInputs() {\n  const [w, setW] = React.useState(1200)\n  const [h, setH] = React.useState(630)\n  const [locked, setLocked] = React.useState(true)\n  const ratio = 1200 / 630\n\n  return (\n    <div className=\"flex w-full max-w-xs items-end gap-2\">\n      <Field>\n        <FieldLabel htmlFor=\"dim-w\">Width</FieldLabel>\n        <InputGroup>\n          <InputGroupInput\n            id=\"dim-w\"\n            type=\"number\"\n            value={w}\n            onChange={(e) => {\n              const v = Number(e.target.value)\n              setW(v)\n              if (locked) setH(Math.round(v / ratio))\n            }}\n          />\n          <InputGroupAddon align=\"inline-end\">\n            <InputGroupText>px</InputGroupText>\n          </InputGroupAddon>\n        </InputGroup>\n      </Field>\n      <Button\n        variant={locked ? \"secondary\" : \"ghost\"}\n        size=\"icon\"\n        aria-label=\"Lock aspect ratio\"\n        aria-pressed={locked}\n        onClick={() => setLocked((l) => !l)}\n      >\n        {locked ? <LockIcon /> : <LockOpenIcon />}\n      </Button>\n      <Field>\n        <FieldLabel htmlFor=\"dim-h\">Height</FieldLabel>\n        <InputGroup>\n          <InputGroupInput\n            id=\"dim-h\"\n            type=\"number\"\n            value={h}\n            onChange={(e) => {\n              const v = Number(e.target.value)\n              setH(v)\n              if (locked) setW(Math.round(v * ratio))\n            }}\n          />\n          <InputGroupAddon align=\"inline-end\">\n            <InputGroupText>px</InputGroupText>\n          </InputGroupAddon>\n        </InputGroup>\n      </Field>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

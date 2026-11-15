@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "select-11",
+  "type": "registry:example",
+  "description": "Priority select using signal icons to communicate urgency levels.",
+  "files": [
+    {
+      "path": "registry/designali/examples/select/select-11.tsx",
+      "content": "\"use client\"\n\nimport {\n  MinusIcon,\n  SignalHighIcon,\n  SignalLowIcon,\n  SignalMediumIcon,\n  SirenIcon,\n} from \"lucide-react\"\n\nimport { Field, FieldLabel } from \"@workspace/ui/components/field\"\nimport {\n  Select,\n  SelectContent,\n  SelectItem,\n  SelectTrigger,\n  SelectValue,\n} from \"@workspace/ui/components/select\"\n\nconst priorities = [\n  {\n    label: \"No priority\",\n    value: \"none\",\n    icon: MinusIcon,\n    tone: \"text-muted-foreground\",\n  },\n  { label: \"Low\", value: \"low\", icon: SignalLowIcon, tone: \"text-sky-500\" },\n  {\n    label: \"Medium\",\n    value: \"medium\",\n    icon: SignalMediumIcon,\n    tone: \"text-amber-500\",\n  },\n  {\n    label: \"High\",\n    value: \"high\",\n    icon: SignalHighIcon,\n    tone: \"text-orange-500\",\n  },\n  { label: \"Urgent\", value: \"urgent\", icon: SirenIcon, tone: \"text-red-500\" },\n]\n\nexport default function PrioritySelectIcons() {\n  return (\n    <Field className=\"w-full max-w-56\">\n      <FieldLabel htmlFor=\"priority\">Priority</FieldLabel>\n      <Select items={priorities} defaultValue=\"high\">\n        <SelectTrigger id=\"priority\" className=\"w-full\">\n          <SelectValue>\n            {(value: string) => {\n              const priority = priorities.find((item) => item.value === value)\n              if (!priority) return null\n              return (\n                <>\n                  <priority.icon className={priority.tone} />\n                  {priority.label}\n                </>\n              )\n            }}\n          </SelectValue>\n        </SelectTrigger>\n        <SelectContent>\n          {priorities.map((item) => (\n            <SelectItem key={item.value} value={item.value}>\n              <item.icon className={item.tone} />\n              {item.label}\n            </SelectItem>\n          ))}\n        </SelectContent>\n      </Select>\n    </Field>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

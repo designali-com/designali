@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "calendar-13",
+  "type": "registry:example",
+  "description": "Clinic appointment calendar limited to the next 30 days with navigation bounded to that window.",
+  "files": [
+    {
+      "path": "registry/designali/examples/calendar/calendar-13.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { addDays, format, startOfMonth } from \"date-fns\"\nimport { InfoIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Calendar } from \"@workspace/ui/components/calendar\"\n\nconst today = new Date()\nconst lastDay = addDays(today, 30)\n\nexport default function AppointmentWindow() {\n  const [date, setDate] = React.useState<undefined | Date>()\n\n  return (\n    <div className=\"flex w-full max-w-xs flex-col gap-3\">\n      <div className=\"flex items-start gap-2 border bg-muted/40 p-3 text-xs\">\n        <InfoIcon className=\"mt-0.5 size-4 shrink-0 text-muted-foreground\" />\n        <p>\n          Appointments open up to 30 days ahead, until{\" \"}\n          <span className=\"font-medium\">{format(lastDay, \"MMMM d\")}</span>.\n        </p>\n      </div>\n      <Calendar\n        mode=\"single\"\n        selected={date}\n        onSelect={setDate}\n        startMonth={startOfMonth(today)}\n        endMonth={lastDay}\n        disabled={[{ before: today }, { after: lastDay }]}\n        className=\"self-center border\"\n      />\n      <Button disabled={!date}>\n        {date ? \"Book for \" + format(date, \"MMM d\") : \"Select a day\"}\n      </Button>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

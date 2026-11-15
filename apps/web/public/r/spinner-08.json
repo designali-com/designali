@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "spinner-08",
+  "type": "registry:example",
+  "description": "Search field that shows a trailing spinner while results are fetched.",
+  "files": [
+    {
+      "path": "registry/designali/examples/spinner/spinner-08.tsx",
+      "content": "import { SearchIcon } from \"lucide-react\"\n\nimport {\n  InputGroup,\n  InputGroupAddon,\n  InputGroupInput,\n} from \"@workspace/ui/components/input-group\"\nimport { Spinner } from \"@workspace/ui/components/spinner\"\n\nexport default function SearchInputSpinner() {\n  return (\n    <InputGroup className=\"w-full max-w-sm\">\n      <InputGroupAddon>\n        <SearchIcon />\n      </InputGroupAddon>\n      <InputGroupInput placeholder=\"Search customers\" defaultValue=\"harbor\" />\n      <InputGroupAddon align=\"inline-end\">\n        <Spinner />\n      </InputGroupAddon>\n    </InputGroup>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

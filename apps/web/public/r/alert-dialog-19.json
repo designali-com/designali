@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "alert-dialog-19",
+  "type": "registry:example",
+  "description": "Warning dialog before force-pushing over a protected branch.",
+  "files": [
+    {
+      "path": "registry/designali/examples/alert-dialog/alert-dialog-19.tsx",
+      "content": "import { GitBranchIcon, TriangleAlertIcon } from \"lucide-react\"\n\nimport {\n  AlertDialog,\n  AlertDialogAction,\n  AlertDialogCancel,\n  AlertDialogContent,\n  AlertDialogDescription,\n  AlertDialogFooter,\n  AlertDialogHeader,\n  AlertDialogMedia,\n  AlertDialogTitle,\n  AlertDialogTrigger,\n} from \"@workspace/ui/components/alert-dialog\"\nimport { Button } from \"@workspace/ui/components/button\"\n\nexport default function ForcePushWarning() {\n  return (\n    <AlertDialog>\n      <AlertDialogTrigger render={<Button variant=\"destructive\" />}>\n        <GitBranchIcon data-icon=\"inline-start\" />\n        Force push\n      </AlertDialogTrigger>\n      <AlertDialogContent>\n        <AlertDialogHeader>\n          <AlertDialogMedia className=\"bg-amber-500/10 text-amber-600 dark:text-amber-400\">\n            <TriangleAlertIcon />\n          </AlertDialogMedia>\n          <AlertDialogTitle>Force push to main?</AlertDialogTitle>\n          <AlertDialogDescription>\n            This rewrites history on a shared branch. 3 teammates have commits\n            that will be overwritten.\n          </AlertDialogDescription>\n        </AlertDialogHeader>\n        <AlertDialogFooter>\n          <AlertDialogCancel>Abort</AlertDialogCancel>\n          <AlertDialogAction variant=\"destructive\">\n            Force push anyway\n          </AlertDialogAction>\n        </AlertDialogFooter>\n      </AlertDialogContent>\n    </AlertDialog>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

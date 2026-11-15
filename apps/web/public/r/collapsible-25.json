@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "collapsible-25",
+  "type": "registry:example",
+  "description": "Cookie consent banner with a customise section that expands category toggles.",
+  "files": [
+    {
+      "path": "registry/designali/examples/collapsible/collapsible-25.tsx",
+      "content": "import { CookieIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  Collapsible,\n  CollapsibleContent,\n  CollapsibleTrigger,\n} from \"@workspace/ui/components/collapsible\"\nimport { Label } from \"@workspace/ui/components/label\"\nimport { Switch } from \"@workspace/ui/components/switch\"\n\nconst categories = [\n  { id: \"necessary\", label: \"Strictly necessary\", locked: true },\n  { id: \"analytics\", label: \"Analytics\", locked: false },\n  { id: \"marketing\", label: \"Marketing\", locked: false },\n]\n\nexport default function CookiePreferences() {\n  return (\n    <Collapsible className=\"w-full max-w-md space-y-3 border bg-background p-4 shadow-sm\">\n      <div className=\"flex items-start gap-3\">\n        <CookieIcon className=\"mt-0.5 size-5 shrink-0\" />\n        <p className=\"text-sm text-muted-foreground\">\n          We use cookies to keep you signed in and to understand how the product\n          is used.\n        </p>\n      </div>\n      <CollapsibleContent className=\"h-(--collapsible-panel-height) overflow-hidden transition-[height] duration-200 ease-out data-ending-style:h-0 data-starting-style:h-0\">\n        <div className=\"flex flex-col gap-3 border-t pt-3\">\n          {categories.map((category) => (\n            <div\n              key={category.id}\n              className=\"flex items-center justify-between\"\n            >\n              <Label htmlFor={\"cookie-\" + category.id}>{category.label}</Label>\n              <Switch\n                id={\"cookie-\" + category.id}\n                defaultChecked={category.locked}\n                disabled={category.locked}\n              />\n            </div>\n          ))}\n        </div>\n      </CollapsibleContent>\n      <div className=\"flex flex-wrap justify-end gap-2\">\n        <CollapsibleTrigger render={<Button variant=\"ghost\" size=\"sm\" />}>\n          Customise\n        </CollapsibleTrigger>\n        <Button variant=\"outline\" size=\"sm\">\n          Reject all\n        </Button>\n        <Button size=\"sm\">Accept all</Button>\n      </div>\n    </Collapsible>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

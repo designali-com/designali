@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "alert-49",
+  "type": "registry:example",
+  "description": "Error alert for a failing webhook endpoint with recent delivery attempts and status codes.",
+  "files": [
+    {
+      "path": "registry/designali/examples/alert/alert-49.tsx",
+      "content": "import { RefreshCwIcon, WebhookIcon } from \"lucide-react\"\n\nimport {\n  Alert,\n  AlertDescription,\n  AlertTitle,\n} from \"@workspace/ui/components/alert\"\nimport { Button } from \"@workspace/ui/components/button\"\n\nconst attempts = [\n  { time: \"14:02:11\", code: 503 },\n  { time: \"13:57:09\", code: 503 },\n  { time: \"13:52:04\", code: 504 },\n]\n\nexport default function AlertWebhookFailing() {\n  return (\n    <Alert variant=\"error\" className=\"max-w-md\">\n      <WebhookIcon />\n      <AlertTitle>Endpoint failing for 12 minutes</AlertTitle>\n      <AlertDescription>\n        <p className=\"truncate font-mono\">\n          https://hooks.parcelpoint.example/orders\n        </p>\n        <ul className=\"my-1.5 border bg-background font-mono\">\n          {attempts.map((attempt) => (\n            <li\n              key={attempt.time}\n              className=\"flex justify-between border-b px-2 py-1 last:border-0\"\n            >\n              <span>{attempt.time}</span>\n              <span className=\"text-destructive\">{attempt.code}</span>\n            </li>\n          ))}\n        </ul>\n        <div className=\"flex gap-1.5\">\n          <Button size=\"xs\" variant=\"outline\">\n            <RefreshCwIcon data-icon=\"inline-start\" />\n            Retry now\n          </Button>\n          <Button size=\"xs\" variant=\"ghost\">\n            Disable endpoint\n          </Button>\n        </div>\n      </AlertDescription>\n    </Alert>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

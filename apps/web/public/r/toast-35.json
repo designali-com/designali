@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toast-35",
+  "type": "registry:example",
+  "description": "A security form that confirms a password change and offers to sign out other devices.",
+  "files": [
+    {
+      "path": "registry/designali/examples/toast/toast-35.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { LockIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Input } from \"@workspace/ui/components/input\"\nimport { Toaster, createToastManager } from \"@workspace/ui/components/toast\"\n\nconst notify = createToastManager()\n\nexport default function PasswordChangedToast() {\n  function submit(event: React.FormEvent<React.ComponentRef<\"form\">>) {\n    event.preventDefault()\n    event.currentTarget.reset()\n    const id = notify.add({\n      type: \"success\",\n      title: \"Password changed\",\n      description: \"You are still signed in on 2 other devices.\",\n      timeout: 8000,\n      actionProps: {\n        children: \"Sign out others\",\n        onClick: () =>\n          notify.update(id, {\n            title: \"Other sessions ended\",\n            description: \"Only this device is signed in.\",\n            actionProps: undefined,\n          }),\n      },\n    })\n  }\n\n  return (\n    <Toaster toastManager={notify}>\n      <form\n        onSubmit={submit}\n        className=\"flex w-full max-w-sm flex-col gap-3 border p-4\"\n      >\n        <div className=\"flex items-center gap-2 text-sm font-medium\">\n          <LockIcon className=\"size-4\" />\n          Change password\n        </div>\n        <Input type=\"password\" placeholder=\"Current password\" required />\n        <Input\n          type=\"password\"\n          placeholder=\"New password\"\n          required\n          minLength={8}\n        />\n        <Button type=\"submit\">Update password</Button>\n      </form>\n    </Toaster>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

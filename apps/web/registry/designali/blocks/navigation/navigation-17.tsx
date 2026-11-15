@@ -31,7 +31,7 @@ type Panel = "workspace" | "notifications" | "account" | null
 
 export default function Navigation17() {
   const [panel, setPanel] = useState<Panel>(null)
-  const [workspace, setWorkspace] = useState(workspaces[0])
+  const [workspace, setWorkspace] = useState(workspaces[0]!)
 
   function toggle(next: Panel) {
     setPanel((current) => (current === next ? null : next))

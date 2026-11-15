@@ -45,7 +45,7 @@ const steps = [
 
 export default function Sections13() {
   const [active, setActive] = useState(1)
-  const step = steps[active]
+  const step = steps[active]!
 
   return (
     <section className="w-full bg-background py-24">

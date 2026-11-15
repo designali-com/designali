@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "breadcrumb-27",
+  "type": "registry:example",
+  "description": "Side-by-side comparison of chevron, slash, dot, arrow and double-chevron separators.",
+  "files": [
+    {
+      "path": "registry/designali/examples/breadcrumb/breadcrumb-27.tsx",
+      "content": "import { ArrowRightIcon, ChevronsRightIcon, DotIcon } from \"lucide-react\"\n\nimport {\n  Breadcrumb,\n  BreadcrumbItem,\n  BreadcrumbLink,\n  BreadcrumbList,\n  BreadcrumbPage,\n  BreadcrumbSeparator,\n} from \"@workspace/ui/components/breadcrumb\"\n\nconst styles = [\n  { label: \"Chevron\", separator: null },\n  { label: \"Slash\", separator: \"/\" },\n  { label: \"Dot\", separator: \"dot\" },\n  { label: \"Arrow\", separator: \"arrow\" },\n  { label: \"Chevrons\", separator: \"chevrons\" },\n]\n\nfunction Sep({ type }: { type: string | null }) {\n  if (type === \"/\") return <BreadcrumbSeparator>/</BreadcrumbSeparator>\n  if (type === \"dot\")\n    return (\n      <BreadcrumbSeparator>\n        <DotIcon />\n      </BreadcrumbSeparator>\n    )\n  if (type === \"arrow\")\n    return (\n      <BreadcrumbSeparator>\n        <ArrowRightIcon />\n      </BreadcrumbSeparator>\n    )\n  if (type === \"chevrons\")\n    return (\n      <BreadcrumbSeparator>\n        <ChevronsRightIcon />\n      </BreadcrumbSeparator>\n    )\n  return <BreadcrumbSeparator />\n}\n\nexport default function SeparatorStylesBreadcrumb() {\n  return (\n    <div className=\"grid gap-3\">\n      {styles.map((style) => (\n        <div\n          key={style.label}\n          className=\"grid grid-cols-[72px_1fr] items-center gap-2\"\n        >\n          <span className=\"text-[10px] text-muted-foreground uppercase\">\n            {style.label}\n          </span>\n          <Breadcrumb>\n            <BreadcrumbList>\n              <BreadcrumbItem>\n                <BreadcrumbLink href=\"#\">Home</BreadcrumbLink>\n              </BreadcrumbItem>\n              <Sep type={style.separator} />\n              <BreadcrumbItem>\n                <BreadcrumbLink href=\"#\">Reports</BreadcrumbLink>\n              </BreadcrumbItem>\n              <Sep type={style.separator} />\n              <BreadcrumbItem>\n                <BreadcrumbPage>Q3</BreadcrumbPage>\n              </BreadcrumbItem>\n            </BreadcrumbList>\n          </Breadcrumb>\n        </div>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

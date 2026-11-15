@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "aspect-ratio-05",
+  "type": "registry:example",
+  "description": "A 16:9 video player shell with a gradient poster, play button and control bar.",
+  "files": [
+    {
+      "path": "registry/designali/examples/aspect-ratio/aspect-ratio-05.tsx",
+      "content": "import { MaximizeIcon, PlayIcon, Volume2Icon } from \"lucide-react\"\n\nimport { AspectRatio } from \"@workspace/ui/components/aspect-ratio\"\nimport { Button } from \"@workspace/ui/components/button\"\n\nexport default function VideoPlayerPlaceholder() {\n  return (\n    <div className=\"w-full max-w-md\">\n      <AspectRatio\n        ratio={16 / 9}\n        className=\"overflow-hidden bg-linear-to-br from-indigo-500 via-purple-500 to-pink-500\"\n      >\n        <div className=\"absolute inset-0 flex items-center justify-center\">\n          <Button\n            size=\"icon-lg\"\n            variant=\"secondary\"\n            aria-label=\"Play video\"\n            className=\"rounded-full\"\n          >\n            <PlayIcon className=\"fill-current\" />\n          </Button>\n        </div>\n        <div className=\"absolute inset-x-0 bottom-0 flex items-center gap-2 bg-linear-to-t from-black/70 to-transparent px-3 pt-6 pb-2 text-white\">\n          <span className=\"font-mono text-[10px] tabular-nums\">0:00</span>\n          <div className=\"h-1 flex-1 bg-white/30\">\n            <div className=\"h-full w-1/4 bg-white\" />\n          </div>\n          <span className=\"font-mono text-[10px] tabular-nums\">12:48</span>\n          <Volume2Icon className=\"size-3.5\" />\n          <MaximizeIcon className=\"size-3.5\" />\n        </div>\n      </AspectRatio>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

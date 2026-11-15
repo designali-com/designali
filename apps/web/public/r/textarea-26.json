@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "textarea-26",
+  "type": "registry:example",
+  "description": "Application essay textarea that turns invalid when it exceeds a word limit.",
+  "files": [
+    {
+      "path": "registry/designali/examples/textarea/textarea-26.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport {\n  Field,\n  FieldDescription,\n  FieldError,\n  FieldLabel,\n} from \"@workspace/ui/components/field\"\nimport { Textarea } from \"@workspace/ui/components/textarea\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nexport default function WordLimitEssayTextarea() {\n  const [text, setText] = React.useState(\"\")\n  const limit = 50\n  const words = text.trim() ? text.trim().split(/\\s+/).length : 0\n  const over = words > limit\n\n  return (\n    <Field data-invalid={over || undefined} className=\"w-full max-w-sm\">\n      <FieldLabel htmlFor=\"ta-essay\">\n        Why do you want to join the residency?\n      </FieldLabel>\n      <Textarea\n        id=\"ta-essay\"\n        value={text}\n        aria-invalid={over || undefined}\n        onChange={(e) => setText(e.target.value)}\n        className=\"min-h-28\"\n      />\n      <div className=\"flex justify-between text-xs\">\n        {over ? (\n          <FieldError>Please trim {words - limit} words.</FieldError>\n        ) : (\n          <FieldDescription>Up to {limit} words.</FieldDescription>\n        )}\n        <span\n          className={cn(\n            \"tabular-nums\",\n            over ? \"text-destructive\" : \"text-muted-foreground\"\n          )}\n        >\n          {words}/{limit}\n        </span>\n      </div>\n    </Field>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

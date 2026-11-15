@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toggle-50",
+  "type": "registry:example",
+  "description": "A reader mode toggle that switches an article to a serif, sepia reading layout.",
+  "files": [
+    {
+      "path": "registry/designali/examples/toggle/toggle-50.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { BookOpenIcon } from \"lucide-react\"\n\nimport { Toggle } from \"@workspace/ui/components/toggle\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nexport default function ReadingModeToggle() {\n  const [reader, setReader] = React.useState(false)\n\n  return (\n    <div className=\"flex w-full max-w-sm flex-col border\">\n      <div className=\"flex items-center justify-between border-b px-3 py-1.5\">\n        <span className=\"truncate text-xs text-muted-foreground\">\n          field-notes.example/slow-mornings\n        </span>\n        <Toggle\n          size=\"sm\"\n          pressed={reader}\n          onPressedChange={setReader}\n          aria-label=\"Reader mode\"\n        >\n          <BookOpenIcon />\n        </Toggle>\n      </div>\n      <article\n        className={cn(\n          \"p-4 transition-colors\",\n          reader &&\n            \"bg-amber-50 font-serif text-amber-950 dark:bg-amber-950/30 dark:text-amber-100\"\n        )}\n      >\n        <h3 className={cn(\"font-semibold\", reader ? \"text-lg\" : \"text-sm\")}>\n          The case for slow mornings\n        </h3>\n        <p\n          className={cn(\n            \"mt-1 leading-relaxed\",\n            reader ? \"text-base\" : \"text-xs text-muted-foreground\"\n          )}\n        >\n          Before the inbox, before the news, there is a quiet half hour that\n          belongs only to you.\n        </p>\n      </article>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

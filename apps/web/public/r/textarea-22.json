@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "textarea-22",
+  "type": "registry:example",
+  "description": "Notes textarea that autosaves after typing stops and shows the save status.",
+  "files": [
+    {
+      "path": "registry/designali/examples/textarea/textarea-22.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { CloudCheckIcon } from \"lucide-react\"\n\nimport { Label } from \"@workspace/ui/components/label\"\nimport { Spinner } from \"@workspace/ui/components/spinner\"\nimport { Textarea } from \"@workspace/ui/components/textarea\"\n\nexport default function AutosaveTextarea() {\n  const [value, setValue] = React.useState(\n    \"Call the venue about the projector.\"\n  )\n  const [status, setStatus] = React.useState<\"saved\" | \"saving\" | \"idle\">(\n    \"saved\"\n  )\n\n  React.useEffect(() => {\n    if (status !== \"idle\") return\n    const save = setTimeout(() => setStatus(\"saving\"), 600)\n    return () => clearTimeout(save)\n  }, [value, status])\n\n  React.useEffect(() => {\n    if (status !== \"saving\") return\n    const done = setTimeout(() => setStatus(\"saved\"), 700)\n    return () => clearTimeout(done)\n  }, [status])\n\n  return (\n    <div className=\"grid w-full max-w-sm gap-1.5\">\n      <div className=\"flex items-center justify-between\">\n        <Label htmlFor=\"ta-autosave\">Private notes</Label>\n        <span\n          className=\"flex items-center gap-1 text-xs text-muted-foreground\"\n          aria-live=\"polite\"\n        >\n          {status === \"saving\" && (\n            <>\n              <Spinner className=\"size-3\" />\n              Saving…\n            </>\n          )}\n          {status === \"saved\" && (\n            <>\n              <CloudCheckIcon className=\"size-3.5\" />\n              Saved\n            </>\n          )}\n          {status === \"idle\" && \"Editing\"}\n        </span>\n      </div>\n      <Textarea\n        id=\"ta-autosave\"\n        value={value}\n        onChange={(e) => {\n          setValue(e.target.value)\n          setStatus(\"idle\")\n        }}\n      />\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "radio-group-07",
+  "type": "registry:example",
+  "description": "Settings card for choosing how often digest emails are sent.",
+  "files": [
+    {
+      "path": "registry/designali/examples/radio-group/radio-group-07.tsx",
+      "content": "import {\n  Card,\n  CardContent,\n  CardDescription,\n  CardHeader,\n  CardTitle,\n} from \"@workspace/ui/components/card\"\nimport {\n  Field,\n  FieldContent,\n  FieldDescription,\n  FieldLabel,\n} from \"@workspace/ui/components/field\"\nimport {\n  RadioGroup,\n  RadioGroupItem,\n} from \"@workspace/ui/components/radio-group\"\n\nconst options = [\n  {\n    value: \"instant\",\n    label: \"As it happens\",\n    hint: \"One email per notification\",\n  },\n  { value: \"daily\", label: \"Daily digest\", hint: \"Every morning at 8:00 AM\" },\n  { value: \"weekly\", label: \"Weekly digest\", hint: \"Mondays at 8:00 AM\" },\n  { value: \"off\", label: \"Off\", hint: \"Only in-app notifications\" },\n]\n\nexport default function NotificationFrequencySettings() {\n  return (\n    <Card className=\"w-full max-w-sm\">\n      <CardHeader>\n        <CardTitle>Email notifications</CardTitle>\n        <CardDescription>\n          Choose how often we email you about activity.\n        </CardDescription>\n      </CardHeader>\n      <CardContent>\n        <RadioGroup defaultValue=\"daily\" className=\"gap-4\">\n          {options.map((o) => (\n            <Field key={o.value} orientation=\"horizontal\">\n              <RadioGroupItem value={o.value} id={\"freq-\" + o.value} />\n              <FieldContent>\n                <FieldLabel htmlFor={\"freq-\" + o.value}>{o.label}</FieldLabel>\n                <FieldDescription>{o.hint}</FieldDescription>\n              </FieldContent>\n            </Field>\n          ))}\n        </RadioGroup>\n      </CardContent>\n    </Card>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

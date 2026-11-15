@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "hover-card-50",
+  "type": "registry:example",
+  "description": "A link preview that shows skeleton placeholders while content loads after opening.",
+  "files": [
+    {
+      "path": "registry/designali/examples/hover-card/hover-card-50.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport {\n  HoverCard,\n  HoverCardContent,\n  HoverCardTrigger,\n} from \"@workspace/ui/components/hover-card\"\nimport { Skeleton } from \"@workspace/ui/components/skeleton\"\n\nexport default function LoadingPreviewHoverCard() {\n  const [loaded, setLoaded] = React.useState(false)\n\n  return (\n    <HoverCard\n      onOpenChange={(open) => {\n        if (open) {\n          setLoaded(false)\n          setTimeout(() => setLoaded(true), 900)\n        }\n      }}\n    >\n      <HoverCardTrigger\n        href=\"#\"\n        className=\"text-sm underline underline-offset-4\"\n      >\n        docs.pinecrest.dev/webhooks\n      </HoverCardTrigger>\n      <HoverCardContent className=\"w-72\">\n        {loaded ? (\n          <div className=\"flex flex-col gap-1\">\n            <p className=\"font-medium\">Webhooks · Pinecrest Docs</p>\n            <p className=\"text-muted-foreground\">\n              Receive signed HTTP callbacks whenever a payment, refund, or\n              dispute changes state.\n            </p>\n          </div>\n        ) : (\n          <div className=\"flex flex-col gap-2\">\n            <Skeleton className=\"h-3.5 w-2/3\" />\n            <Skeleton className=\"h-3 w-full\" />\n            <Skeleton className=\"h-3 w-4/5\" />\n          </div>\n        )}\n      </HoverCardContent>\n    </HoverCard>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "contact-14",
+  "type": "registry:block",
+  "description": "Support channel comparison table with best-for, response time, hours and plan badges that stacks into cards on mobile.",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "badge"
+  ],
+  "files": [
+    {
+      "path": "registry/designali/blocks/contact/contact-14.tsx",
+      "content": "import { ArrowUpRight, Mail, MessageSquare, Phone, Ticket, Video } from \"lucide-react\"\n\nimport { Badge } from \"@workspace/ui/components/badge\"\n\nconst channels = [\n  {\n    icon: MessageSquare,\n    name: \"In-app chat\",\n    best: \"Quick questions, billing\",\n    response: \"< 5 min\",\n    hours: \"24/7\",\n    plan: \"All plans\",\n    href: \"#\",\n  },\n  {\n    icon: Mail,\n    name: \"Email\",\n    best: \"Detailed issues with screenshots\",\n    response: \"< 4 hrs\",\n    hours: \"24/7\",\n    plan: \"All plans\",\n    href: \"#\",\n  },\n  {\n    icon: Ticket,\n    name: \"Priority ticket\",\n    best: \"Outages, data problems\",\n    response: \"< 30 min\",\n    hours: \"24/7\",\n    plan: \"Business\",\n    href: \"#\",\n  },\n  {\n    icon: Phone,\n    name: \"Phone\",\n    best: \"Urgent account access\",\n    response: \"Live\",\n    hours: \"Mon-Fri, 8-18 GMT\",\n    plan: \"Business\",\n    href: \"#\",\n  },\n  {\n    icon: Video,\n    name: \"Screen-share session\",\n    best: \"Setup, migrations, training\",\n    response: \"Booked\",\n    hours: \"Mon-Thu\",\n    plan: \"Enterprise\",\n    href: \"#\",\n  },\n]\n\nexport default function Contact14() {\n  return (\n    <section className=\"w-full bg-background py-20 md:py-28\">\n      <div className=\"mx-auto max-w-6xl px-6\">\n        <div className=\"grid gap-4 md:grid-cols-2 md:items-end\">\n          <h2 className=\"text-4xl font-semibold tracking-tight md:text-5xl\">\n            Pick the right channel\n          </h2>\n          <p className=\"text-muted-foreground md:text-end\">\n            Response times are measured medians for Orbitdesk customers over the\n            last 90 days.\n          </p>\n        </div>\n\n        <div className=\"mt-12 border\">\n          <div className=\"hidden grid-cols-[1.4fr_1.6fr_1fr_1fr_1fr_40px] gap-4 border-b bg-muted/50 px-6 py-3 text-xs font-medium tracking-wide text-muted-foreground uppercase md:grid\">\n            <span>Channel</span>\n            <span>Best for</span>\n            <span>Response</span>\n            <span>Hours</span>\n            <span>Plan</span>\n            <span />\n          </div>\n          <ul className=\"divide-y\">\n            {channels.map((channel) => (\n              <li key={channel.name}>\n                <a\n                  href={channel.href}\n                  className=\"group grid grid-cols-2 gap-x-4 gap-y-3 px-6 py-5 transition-colors hover:bg-muted/40 md:grid-cols-[1.4fr_1.6fr_1fr_1fr_1fr_40px] md:items-center\"\n                >\n                  <span className=\"col-span-2 flex items-center gap-3 font-medium md:col-span-1\">\n                    <span className=\"flex size-9 shrink-0 items-center justify-center border bg-background\">\n                      <channel.icon className=\"size-4\" />\n                    </span>\n                    {channel.name}\n                  </span>\n                  <span className=\"col-span-2 text-sm text-muted-foreground md:col-span-1\">\n                    {channel.best}\n                  </span>\n                  <span className=\"text-sm\">\n                    <span className=\"me-1 text-xs text-muted-foreground md:hidden\">Response</span>\n                    <span className=\"font-medium tabular-nums\">{channel.response}</span>\n                  </span>\n                  <span className=\"text-sm text-muted-foreground\">{channel.hours}</span>\n                  <span>\n                    <Badge variant={channel.plan === \"All plans\" ? \"secondary\" : \"outline\"}>\n                      {channel.plan}\n                    </Badge>\n                  </span>\n                  <ArrowUpRight className=\"hidden size-4 justify-self-end text-muted-foreground transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 md:block\" />\n                </a>\n              </li>\n            ))}\n          </ul>\n        </div>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "720px"
+  },
+  "categories": [
+    "contact"
+  ]
+}

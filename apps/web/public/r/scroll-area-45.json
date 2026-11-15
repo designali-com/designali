@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "scroll-area-45",
+  "type": "registry:example",
+  "description": "Scrollable grid of gradient wallpapers with selection.",
+  "files": [
+    {
+      "path": "registry/designali/examples/scroll-area/scroll-area-45.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { CheckIcon } from \"lucide-react\"\n\nimport { ScrollArea } from \"@workspace/ui/components/scroll-area\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst gradients = [\n  \"from-rose-400 to-orange-300\",\n  \"from-sky-400 to-indigo-500\",\n  \"from-emerald-300 to-teal-600\",\n  \"from-fuchsia-500 to-purple-700\",\n  \"from-amber-200 to-yellow-500\",\n  \"from-slate-500 to-slate-900\",\n  \"from-pink-300 to-rose-500\",\n  \"from-cyan-300 to-blue-600\",\n  \"from-lime-300 to-green-600\",\n  \"from-violet-300 to-indigo-700\",\n  \"from-orange-400 to-red-600\",\n  \"from-teal-200 to-cyan-500\",\n]\n\nexport default function GradientGalleryGrid() {\n  const [picked, setPicked] = React.useState(1)\n\n  return (\n    <div className=\"flex w-full max-w-xs flex-col gap-2\">\n      <span className=\"text-sm font-medium\">Choose a wallpaper</span>\n      <ScrollArea className=\"h-60 border\">\n        <div className=\"grid grid-cols-3 gap-2 p-2\">\n          {gradients.map((g, i) => (\n            <button\n              key={g}\n              onClick={() => setPicked(i)}\n              aria-label={\"Wallpaper \" + (i + 1)}\n              aria-pressed={picked === i}\n              className={cn(\n                \"relative aspect-[3/4] bg-gradient-to-br\",\n                g,\n                picked === i &&\n                  \"ring-2 ring-ring ring-offset-2 ring-offset-background\"\n              )}\n            >\n              {picked === i && (\n                <CheckIcon className=\"absolute top-1 right-1 size-3.5 text-white\" />\n              )}\n            </button>\n          ))}\n        </div>\n      </ScrollArea>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

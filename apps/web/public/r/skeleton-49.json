@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "skeleton-49",
+  "type": "registry:example",
+  "description": "Banking transactions placeholder grouped by date with right-aligned amounts.",
+  "files": [
+    {
+      "path": "registry/designali/examples/skeleton/skeleton-49.tsx",
+      "content": "import { Skeleton } from \"@workspace/ui/components/skeleton\"\n\nconst groups = [\n  { label: \"Today\", count: 2 },\n  { label: \"Yesterday\", count: 3 },\n]\n\nexport default function TransactionsSkeleton() {\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-4\">\n      {groups.map((g) => (\n        <div key={g.label} className=\"flex flex-col gap-3\">\n          <span className=\"text-xs font-medium text-muted-foreground\">\n            {g.label}\n          </span>\n          {Array.from({ length: g.count }).map((_, i) => (\n            <div key={i} className=\"flex items-center gap-3\">\n              <Skeleton className=\"size-9 rounded-full\" />\n              <div className=\"flex flex-1 flex-col gap-1.5\">\n                <Skeleton className=\"h-3 w-28\" />\n                <Skeleton className=\"h-2.5 w-16\" />\n              </div>\n              <Skeleton className=\"h-3.5 w-14\" />\n            </div>\n          ))}\n        </div>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

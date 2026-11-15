@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "switch-47",
+  "type": "registry:example",
+  "description": "Selectable cards that use the whole surface as the switch label for delivery options.",
+  "files": [
+    {
+      "path": "registry/designali/examples/switch/switch-47.tsx",
+      "content": "import { LeafIcon, TruckIcon } from \"lucide-react\"\n\nimport { Switch } from \"@workspace/ui/components/switch\"\n\nconst options = [\n  {\n    id: \"express\",\n    title: \"Express delivery\",\n    description: \"Arrives tomorrow before 12 PM\",\n    icon: TruckIcon,\n    on: false,\n  },\n  {\n    id: \"eco\",\n    title: \"Eco packaging\",\n    description: \"Plastic-free, compostable materials\",\n    icon: LeafIcon,\n    on: true,\n  },\n]\n\nexport default function SegmentedSwitchCards() {\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-2\">\n      {options.map((option) => (\n        <label\n          key={option.id}\n          htmlFor={\"card-\" + option.id}\n          className=\"flex cursor-pointer items-start gap-3 border p-4 transition-colors hover:bg-muted/40 has-data-checked:border-primary has-data-checked:bg-primary/5\"\n        >\n          <option.icon className=\"mt-0.5 size-4\" />\n          <div className=\"flex-1\">\n            <p className=\"text-sm font-medium\">{option.title}</p>\n            <p className=\"text-xs text-muted-foreground\">\n              {option.description}\n            </p>\n          </div>\n          <Switch id={\"card-\" + option.id} defaultChecked={option.on} />\n        </label>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

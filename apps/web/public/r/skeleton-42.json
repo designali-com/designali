@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "skeleton-42",
+  "type": "registry:example",
+  "description": "Learning platform course card placeholder with lesson count and a progress track.",
+  "files": [
+    {
+      "path": "registry/designali/examples/skeleton/skeleton-42.tsx",
+      "content": "import { Skeleton } from \"@workspace/ui/components/skeleton\"\n\nexport default function CourseCardSkeleton() {\n  return (\n    <div className=\"flex w-full max-w-sm gap-4 border p-3\">\n      <Skeleton className=\"h-20 w-28 shrink-0\" />\n      <div className=\"flex flex-1 flex-col gap-2\">\n        <Skeleton className=\"h-3.5 w-full\" />\n        <Skeleton className=\"h-3 w-2/3\" />\n        <div className=\"mt-auto flex flex-col gap-1.5\">\n          <div className=\"flex justify-between\">\n            <Skeleton className=\"h-2.5 w-16\" />\n            <Skeleton className=\"h-2.5 w-8\" />\n          </div>\n          <Skeleton className=\"h-1 w-full\" />\n        </div>\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

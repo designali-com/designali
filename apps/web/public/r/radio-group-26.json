@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "radio-group-26",
+  "type": "registry:example",
+  "description": "Saved shipping addresses with a default selection and edit actions.",
+  "files": [
+    {
+      "path": "registry/designali/examples/radio-group/radio-group-26.tsx",
+      "content": "import { MapPinIcon, PencilIcon, PlusIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  Field,\n  FieldContent,\n  FieldDescription,\n  FieldLabel,\n  FieldTitle,\n} from \"@workspace/ui/components/field\"\nimport {\n  RadioGroup,\n  RadioGroupItem,\n} from \"@workspace/ui/components/radio-group\"\n\nconst addresses = [\n  { id: \"home\", label: \"Home\", line: \"14 Alder Lane, Portland, OR 97205\" },\n  {\n    id: \"office\",\n    label: \"Office\",\n    line: \"220 Market St, Suite 4, Portland, OR 97204\",\n  },\n]\n\nexport default function SavedAddressList() {\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-3\">\n      <RadioGroup defaultValue=\"home\">\n        {addresses.map((a) => (\n          <FieldLabel key={a.id} htmlFor={\"addr-\" + a.id}>\n            <Field orientation=\"horizontal\">\n              <RadioGroupItem value={a.id} id={\"addr-\" + a.id} />\n              <FieldContent>\n                <FieldTitle>\n                  <MapPinIcon className=\"size-3.5\" />\n                  {a.label}\n                </FieldTitle>\n                <FieldDescription>{a.line}</FieldDescription>\n              </FieldContent>\n              <Button\n                variant=\"ghost\"\n                size=\"icon-xs\"\n                aria-label={\"Edit \" + a.label}\n              >\n                <PencilIcon />\n              </Button>\n            </Field>\n          </FieldLabel>\n        ))}\n      </RadioGroup>\n      <Button variant=\"outline\" size=\"sm\" className=\"self-start\">\n        <PlusIcon data-icon=\"inline-start\" />\n        Add address\n      </Button>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toast-37",
+  "type": "registry:example",
+  "description": "A CSV import whose promise result count is interpolated into the success toast.",
+  "files": [
+    {
+      "path": "registry/designali/examples/toast/toast-37.tsx",
+      "content": "\"use client\"\n\nimport { FileSpreadsheetIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Toaster, createToastManager } from \"@workspace/ui/components/toast\"\n\nconst notify = createToastManager()\n\nfunction importRows() {\n  return new Promise<{ imported: number; skipped: number }>((resolve) =>\n    setTimeout(() => resolve({ imported: 318, skipped: 4 }), 1600)\n  )\n}\n\nexport default function CsvImportResultToast() {\n  return (\n    <Toaster toastManager={notify}>\n      <div className=\"flex w-full max-w-xs flex-col gap-3 border p-4\">\n        <div className=\"flex items-center gap-2\">\n          <FileSpreadsheetIcon className=\"size-5 text-muted-foreground\" />\n          <div>\n            <p className=\"text-sm font-medium\">customers.csv</p>\n            <p className=\"text-xs text-muted-foreground\">322 rows detected</p>\n          </div>\n        </div>\n        <Button\n          size=\"sm\"\n          onClick={() =>\n            notify.promise(importRows(), {\n              loading: {\n                title: \"Importing customers\",\n                description: \"Matching columns...\",\n              },\n              success: (r: { imported: number; skipped: number }) => ({\n                title: r.imported + \" customers imported\",\n                description: r.skipped + \" duplicate rows were skipped.\",\n              }),\n              error: \"Import failed\",\n            })\n          }\n        >\n          Start import\n        </Button>\n      </div>\n    </Toaster>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

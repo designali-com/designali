@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "accordion-48",
+  "type": "registry:example",
+  "description": "Accordion where the open item is highlighted with a solid accent bar on its leading edge.",
+  "files": [
+    {
+      "path": "registry/designali/examples/accordion/accordion-48.tsx",
+      "content": "import {\n  Accordion,\n  AccordionContent,\n  AccordionItem,\n  AccordionTrigger,\n} from \"@workspace/ui/components/accordion\"\n\nconst steps = [\n  {\n    value: \"research\",\n    title: \"Research\",\n    body: \"Interview eight customers and summarise the top three pains.\",\n  },\n  {\n    value: \"concept\",\n    title: \"Concept\",\n    body: \"Sketch two directions and review them with engineering for feasibility.\",\n  },\n  {\n    value: \"build\",\n    title: \"Build\",\n    body: \"Ship behind a flag to 10% of workspaces and watch activation.\",\n  },\n]\n\nexport default function AccordionActiveAccentBorder() {\n  return (\n    <Accordion defaultValue={[\"concept\"]} className=\"w-full max-w-sm\">\n      {steps.map((step) => (\n        <AccordionItem\n          key={step.value}\n          value={step.value}\n          className=\"border-s-2 border-b-0 border-s-border ps-4 transition-colors not-last:border-b-0 data-open:border-s-foreground\"\n        >\n          <AccordionTrigger className=\"text-sm text-muted-foreground hover:no-underline aria-expanded:text-foreground\">\n            {step.title}\n          </AccordionTrigger>\n          <AccordionContent className=\"text-muted-foreground\">\n            {step.body}\n          </AccordionContent>\n        </AccordionItem>\n      ))}\n    </Accordion>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

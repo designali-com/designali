@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-27",
+  "type": "registry:example",
+  "description": "Inputs with labels that float above the value when focused or filled.",
+  "files": [
+    {
+      "path": "registry/designali/examples/input/input-27.tsx",
+      "content": "import { Input } from \"@workspace/ui/components/input\"\n\nconst fields = [\n  { id: \"fl-first\", label: \"First name\", value: \"Talia\" },\n  { id: \"fl-last\", label: \"Last name\", value: \"\" },\n]\n\nexport default function FloatingLabelInput() {\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-3\">\n      {fields.map((f) => (\n        <div key={f.id} className=\"relative\">\n          <Input\n            id={f.id}\n            placeholder=\" \"\n            defaultValue={f.value}\n            className=\"peer h-11 pt-4\"\n          />\n          <label\n            htmlFor={f.id}\n            className=\"pointer-events-none absolute start-2.5 top-1.5 text-[10px] text-muted-foreground transition-all peer-placeholder-shown:top-3.5 peer-placeholder-shown:text-xs peer-focus:top-1.5 peer-focus:text-[10px] peer-focus:text-foreground\"\n          >\n            {f.label}\n          </label>\n        </div>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

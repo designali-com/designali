@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "command-43",
+  "type": "registry:example",
+  "description": "A command menu whose input and items are disabled while the app is offline.",
+  "files": [
+    {
+      "path": "registry/designali/examples/command/command-43.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport {\n  CloudIcon,\n  HardDriveIcon,\n  UsersIcon,\n  WifiIcon,\n  WifiOffIcon,\n} from \"lucide-react\"\n\nimport {\n  Command,\n  CommandEmpty,\n  CommandGroup,\n  CommandInput,\n  CommandItem,\n  CommandList,\n} from \"@workspace/ui/components/command\"\nimport { Switch } from \"@workspace/ui/components/switch\"\n\nexport default function OfflineDisabledSearch() {\n  const [online, setOnline] = React.useState(false)\n\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-2\">\n      <div className=\"flex items-center justify-between gap-2 border px-3 py-2 text-xs\">\n        <span className=\"flex items-center gap-2\">\n          {online ? (\n            <WifiIcon className=\"size-4\" />\n          ) : (\n            <WifiOffIcon className=\"size-4 text-destructive\" />\n          )}\n          {online ? \"Connected\" : \"You are offline\"}\n        </span>\n        <Switch\n          checked={online}\n          onCheckedChange={setOnline}\n          aria-label=\"Toggle connection\"\n        />\n      </div>\n      <Command className=\"border\">\n        <CommandInput\n          disabled={!online}\n          placeholder={\n            online ? \"Search workspace...\" : \"Search unavailable offline\"\n          }\n        />\n        <CommandList>\n          <CommandEmpty>No results.</CommandEmpty>\n          <CommandGroup heading=\"Cloud\">\n            <CommandItem disabled={!online}>\n              <CloudIcon />\n              <span>Search shared drives</span>\n            </CommandItem>\n            <CommandItem disabled={!online}>\n              <UsersIcon />\n              <span>Search people</span>\n            </CommandItem>\n          </CommandGroup>\n          <CommandGroup heading=\"On this device\">\n            <CommandItem>\n              <HardDriveIcon />\n              <span>Downloaded files</span>\n            </CommandItem>\n          </CommandGroup>\n        </CommandList>\n      </Command>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button-40",
+  "type": "registry:example",
+  "description": "Screen recording toggle with a pulsing dot and elapsed timer while active.",
+  "files": [
+    {
+      "path": "registry/designali/examples/button/button-40.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nexport default function RecordToggleButton() {\n  const [recording, setRecording] = React.useState(false)\n  const [seconds, setSeconds] = React.useState(0)\n\n  React.useEffect(() => {\n    if (!recording) return\n    const id = setInterval(() => setSeconds((s) => s + 1), 1000)\n    return () => clearInterval(id)\n  }, [recording])\n\n  const time =\n    String(Math.floor(seconds / 60)).padStart(2, \"0\") +\n    \":\" +\n    String(seconds % 60).padStart(2, \"0\")\n\n  return (\n    <Button\n      variant={recording ? \"destructive\" : \"outline\"}\n      onClick={() => {\n        setRecording(!recording)\n        if (recording) setSeconds(0)\n      }}\n      className=\"w-40\"\n    >\n      <span\n        className={cn(\n          \"size-2.5 rounded-full bg-destructive\",\n          recording && \"animate-pulse\"\n        )}\n      />\n      {recording ? (\n        <span className=\"tabular-nums\">Stop · {time}</span>\n      ) : (\n        \"Start recording\"\n      )}\n    </Button>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

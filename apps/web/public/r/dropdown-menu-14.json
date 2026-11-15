@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "dropdown-menu-14",
+  "type": "registry:example",
+  "description": "Multi-select assignee menu with avatar initials and a stacked avatar trigger.",
+  "files": [
+    {
+      "path": "registry/designali/examples/dropdown-menu/dropdown-menu-14.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { UserPlusIcon } from \"lucide-react\"\n\nimport {\n  Avatar,\n  AvatarFallback,\n  AvatarGroup,\n} from \"@workspace/ui/components/avatar\"\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  DropdownMenu,\n  DropdownMenuCheckboxItem,\n  DropdownMenuContent,\n  DropdownMenuGroup,\n  DropdownMenuLabel,\n  DropdownMenuTrigger,\n} from \"@workspace/ui/components/dropdown-menu\"\n\nconst people = [\n  \"Priya Natarajan\",\n  \"Owen Clarke\",\n  \"Sofia Marin\",\n  \"Kenji Watanabe\",\n  \"Lena Hoffmann\",\n]\n\nconst initialsOf = (name: string) =>\n  name\n    .split(\" \")\n    .map((part) => part[0])\n    .join(\"\")\n\nexport default function AssigneeMultiSelectMenu() {\n  const [selected, setSelected] = React.useState([\n    \"Priya Natarajan\",\n    \"Sofia Marin\",\n  ])\n\n  return (\n    <DropdownMenu>\n      <DropdownMenuTrigger\n        render={<Button variant=\"outline\" className=\"gap-2\" />}\n      >\n        {selected.length ? (\n          <AvatarGroup>\n            {selected.slice(0, 3).map((name) => (\n              <Avatar key={name} size=\"sm\">\n                <AvatarFallback>{initialsOf(name)}</AvatarFallback>\n              </Avatar>\n            ))}\n          </AvatarGroup>\n        ) : (\n          <UserPlusIcon />\n        )}\n        {selected.length ? selected.length + \" assigned\" : \"Assign\"}\n      </DropdownMenuTrigger>\n      <DropdownMenuContent className=\"w-52\">\n        <DropdownMenuGroup>\n          <DropdownMenuLabel>Assignees</DropdownMenuLabel>\n          {people.map((name) => (\n            <DropdownMenuCheckboxItem\n              key={name}\n              checked={selected.includes(name)}\n              onCheckedChange={(checked) =>\n                setSelected((prev) =>\n                  checked ? [...prev, name] : prev.filter((n) => n !== name)\n                )\n              }\n            >\n              <Avatar size=\"sm\">\n                <AvatarFallback>{initialsOf(name)}</AvatarFallback>\n              </Avatar>\n              {name}\n            </DropdownMenuCheckboxItem>\n          ))}\n        </DropdownMenuGroup>\n      </DropdownMenuContent>\n    </DropdownMenu>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

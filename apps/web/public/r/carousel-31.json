@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "carousel-31",
+  "type": "registry:example",
+  "description": "Center-aligned looping carousel that scales up the active slide and dims the rest.",
+  "files": [
+    {
+      "path": "registry/designali/examples/carousel/carousel-31.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport {\n  Carousel,\n  CarouselContent,\n  CarouselItem,\n  type CarouselApi,\n} from \"@workspace/ui/components/carousel\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst quotes = [\n  \"Ship small, ship often.\",\n  \"Clarity beats cleverness.\",\n  \"Make it work, then make it nice.\",\n  \"Defaults matter.\",\n  \"Leave it better than you found it.\",\n]\n\nexport default function CenterFocusCarousel() {\n  const [selected, setSelected] = React.useState(0)\n\n  const handleApi = React.useCallback((api: CarouselApi) => {\n    if (!api) return\n    api.on(\"select\", () => setSelected(api.selectedScrollSnap()))\n  }, [])\n\n  return (\n    <Carousel\n      setApi={handleApi}\n      opts={{ align: \"center\", loop: true }}\n      className=\"w-full max-w-md\"\n    >\n      <CarouselContent>\n        {quotes.map((quote, index) => (\n          <CarouselItem key={quote} className=\"basis-2/3 sm:basis-1/2\">\n            <div\n              className={cn(\n                \"flex aspect-[4/3] items-center justify-center border p-4 text-center text-sm font-medium transition-all duration-300\",\n                selected === index\n                  ? \"scale-100 bg-card\"\n                  : \"scale-90 bg-muted/50 opacity-50\"\n              )}\n            >\n              {quote}\n            </div>\n          </CarouselItem>\n        ))}\n      </CarouselContent>\n    </Carousel>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

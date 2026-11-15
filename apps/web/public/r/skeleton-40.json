@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "skeleton-40",
+  "type": "registry:example",
+  "description": "Reference sheet of skeleton shapes: circle, pill, square, text line, and block.",
+  "files": [
+    {
+      "path": "registry/designali/examples/skeleton/skeleton-40.tsx",
+      "content": "import { Skeleton } from \"@workspace/ui/components/skeleton\"\n\nconst shapes = [\n  { label: \"Circle\", el: <Skeleton className=\"size-12 rounded-full\" /> },\n  { label: \"Square\", el: <Skeleton className=\"size-12\" /> },\n  { label: \"Pill\", el: <Skeleton className=\"h-6 w-20 rounded-full\" /> },\n  { label: \"Text\", el: <Skeleton className=\"h-3 w-24\" /> },\n  { label: \"Button\", el: <Skeleton className=\"h-8 w-24\" /> },\n  { label: \"Block\", el: <Skeleton className=\"h-12 w-24\" /> },\n]\n\nexport default function SkeletonShapes() {\n  return (\n    <div className=\"grid w-full max-w-md grid-cols-3 gap-3\">\n      {shapes.map((shape) => (\n        <div\n          key={shape.label}\n          className=\"flex flex-col items-center gap-2 border p-3\"\n        >\n          <div className=\"flex h-12 items-center\">{shape.el}</div>\n          <span className=\"text-xs text-muted-foreground\">{shape.label}</span>\n        </div>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

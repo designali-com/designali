@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "textarea-04",
+  "type": "registry:example",
+  "description": "Disabled textarea with an explanation of why editing is locked.",
+  "files": [
+    {
+      "path": "registry/designali/examples/textarea/textarea-04.tsx",
+      "content": "import { LockIcon } from \"lucide-react\"\n\nimport {\n  Field,\n  FieldDescription,\n  FieldLabel,\n} from \"@workspace/ui/components/field\"\nimport { Textarea } from \"@workspace/ui/components/textarea\"\n\nexport default function DisabledTextarea() {\n  return (\n    <Field data-disabled=\"true\" className=\"w-full max-w-sm\">\n      <FieldLabel htmlFor=\"ta-disabled\">Contract terms</FieldLabel>\n      <Textarea\n        id=\"ta-disabled\"\n        disabled\n        defaultValue=\"Payment is due within 30 days of invoice. Late payments incur a 1.5% monthly fee.\"\n      />\n      <FieldDescription className=\"flex items-center gap-1\">\n        <LockIcon className=\"size-3\" />\n        Locked after signature on Nov 3, 2026.\n      </FieldDescription>\n    </Field>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

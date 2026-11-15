@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "skeleton-05",
+  "type": "registry:example",
+  "description": "Long-form article placeholder with title, byline, hero block, and paragraph lines.",
+  "files": [
+    {
+      "path": "registry/designali/examples/skeleton/skeleton-05.tsx",
+      "content": "import { Skeleton } from \"@workspace/ui/components/skeleton\"\n\nexport default function ArticleSkeleton() {\n  return (\n    <article className=\"flex w-full max-w-md flex-col gap-4\">\n      <Skeleton className=\"h-3 w-20\" />\n      <div className=\"flex flex-col gap-2\">\n        <Skeleton className=\"h-6 w-full\" />\n        <Skeleton className=\"h-6 w-3/4\" />\n      </div>\n      <div className=\"flex items-center gap-2\">\n        <Skeleton className=\"size-7 rounded-full\" />\n        <Skeleton className=\"h-3 w-28\" />\n        <Skeleton className=\"h-3 w-16\" />\n      </div>\n      <Skeleton className=\"aspect-[16/9] w-full\" />\n      {[100, 96, 92, 60].map((w, i) => (\n        <Skeleton key={i} className=\"h-3\" style={{ width: w + \"%\" }} />\n      ))}\n    </article>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

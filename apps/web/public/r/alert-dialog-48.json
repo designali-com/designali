@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "alert-dialog-48",
+  "type": "registry:example",
+  "description": "Data residency change whose description includes an inline documentation link.",
+  "files": [
+    {
+      "path": "registry/designali/examples/alert-dialog/alert-dialog-48.tsx",
+      "content": "import { GlobeLockIcon, MapPinIcon } from \"lucide-react\"\n\nimport {\n  AlertDialog,\n  AlertDialogAction,\n  AlertDialogCancel,\n  AlertDialogContent,\n  AlertDialogDescription,\n  AlertDialogFooter,\n  AlertDialogHeader,\n  AlertDialogMedia,\n  AlertDialogTitle,\n  AlertDialogTrigger,\n} from \"@workspace/ui/components/alert-dialog\"\nimport { Button } from \"@workspace/ui/components/button\"\n\nexport default function DescriptionWithLearnMoreLink() {\n  return (\n    <AlertDialog>\n      <AlertDialogTrigger render={<Button variant=\"outline\" />}>\n        <MapPinIcon data-icon=\"inline-start\" />\n        Move data to EU region\n      </AlertDialogTrigger>\n      <AlertDialogContent>\n        <AlertDialogHeader>\n          <AlertDialogMedia>\n            <GlobeLockIcon />\n          </AlertDialogMedia>\n          <AlertDialogTitle>Migrate workspace to Frankfurt?</AlertDialogTitle>\n          <AlertDialogDescription>\n            Migration runs overnight and the workspace is read-only for up to 2\n            hours. <a href=\"#\">Learn how data residency works</a>.\n          </AlertDialogDescription>\n        </AlertDialogHeader>\n        <AlertDialogFooter>\n          <AlertDialogCancel>Not now</AlertDialogCancel>\n          <AlertDialogAction>Schedule migration</AlertDialogAction>\n        </AlertDialogFooter>\n      </AlertDialogContent>\n    </AlertDialog>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

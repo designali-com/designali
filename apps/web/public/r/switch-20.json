@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "switch-20",
+  "type": "registry:example",
+  "description": "Conversation options panel for a chat app with mute, pin, and read receipts.",
+  "files": [
+    {
+      "path": "registry/designali/examples/switch/switch-20.tsx",
+      "content": "import { BellOffIcon, CheckCheckIcon, PinIcon } from \"lucide-react\"\n\nimport { Avatar, AvatarFallback } from \"@workspace/ui/components/avatar\"\nimport { Switch } from \"@workspace/ui/components/switch\"\n\nconst options = [\n  { id: \"mute\", label: \"Mute conversation\", icon: BellOffIcon, on: false },\n  { id: \"pin\", label: \"Pin to top\", icon: PinIcon, on: true },\n  {\n    id: \"receipts\",\n    label: \"Send read receipts\",\n    icon: CheckCheckIcon,\n    on: true,\n  },\n]\n\nexport default function ChatConversationOptions() {\n  return (\n    <div className=\"w-full max-w-xs border\">\n      <div className=\"flex items-center gap-3 border-b p-4\">\n        <Avatar>\n          <AvatarFallback>DS</AvatarFallback>\n        </Avatar>\n        <div>\n          <p className=\"text-sm font-medium\">Design Squad</p>\n          <p className=\"text-xs text-muted-foreground\">8 members</p>\n        </div>\n      </div>\n      <div className=\"flex flex-col gap-1 p-2\">\n        {options.map((option) => (\n          <label\n            key={option.id}\n            className=\"flex cursor-pointer items-center gap-3 px-2 py-2 hover:bg-muted/50\"\n          >\n            <option.icon className=\"size-4 text-muted-foreground\" />\n            <span className=\"flex-1 text-sm\">{option.label}</span>\n            <Switch size=\"sm\" defaultChecked={option.on} />\n          </label>\n        ))}\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

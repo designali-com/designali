@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "separator-29",
+  "type": "registry:example",
+  "description": "Keyboard shortcut cheat sheet with separators between shortcut sections.",
+  "files": [
+    {
+      "path": "registry/designali/examples/separator/separator-29.tsx",
+      "content": "import * as React from \"react\"\n\nimport { Kbd, KbdGroup } from \"@workspace/ui/components/kbd\"\nimport { Separator } from \"@workspace/ui/components/separator\"\n\nconst sections = [\n  {\n    title: \"General\",\n    items: [\n      { label: \"Command menu\", keys: [\"⌘\", \"K\"] },\n      { label: \"Search\", keys: [\"/\"] },\n    ],\n  },\n  {\n    title: \"Navigation\",\n    items: [\n      { label: \"Go to inbox\", keys: [\"G\", \"I\"] },\n      { label: \"Go to projects\", keys: [\"G\", \"P\"] },\n    ],\n  },\n]\n\nexport default function ShortcutSectionsSeparated() {\n  return (\n    <div className=\"flex w-full max-w-xs flex-col gap-3 border p-4 text-sm\">\n      {sections.map((section, index) => (\n        <React.Fragment key={section.title}>\n          {index > 0 && <Separator />}\n          <div className=\"flex flex-col gap-2\">\n            <span className=\"text-xs font-medium text-muted-foreground\">\n              {section.title}\n            </span>\n            {section.items.map((item) => (\n              <div\n                key={item.label}\n                className=\"flex items-center justify-between\"\n              >\n                <span>{item.label}</span>\n                <KbdGroup>\n                  {item.keys.map((key) => (\n                    <Kbd key={key}>{key}</Kbd>\n                  ))}\n                </KbdGroup>\n              </div>\n            ))}\n          </div>\n        </React.Fragment>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

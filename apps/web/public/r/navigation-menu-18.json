@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "navigation-menu-18",
+  "type": "registry:example",
+  "description": "Healthcare clinic navigation with a Find a doctor menu of specialists shown with avatar initials.",
+  "files": [
+    {
+      "path": "registry/designali/examples/navigation-menu/navigation-menu-18.tsx",
+      "content": "import { StethoscopeIcon } from \"lucide-react\"\n\nimport { Avatar, AvatarFallback } from \"@workspace/ui/components/avatar\"\nimport {\n  NavigationMenu,\n  NavigationMenuContent,\n  NavigationMenuItem,\n  NavigationMenuLink,\n  NavigationMenuList,\n  NavigationMenuTrigger,\n  navigationMenuTriggerStyle,\n} from \"@workspace/ui/components/navigation-menu\"\nimport { Separator } from \"@workspace/ui/components/separator\"\n\nconst doctors = [\n  { name: \"Dr. Amara Osei\", specialty: \"Cardiology\" },\n  { name: \"Dr. Tomas Lindqvist\", specialty: \"Dermatology\" },\n  { name: \"Dr. Rina Patel\", specialty: \"Pediatrics\" },\n]\n\nexport default function ClinicDoctorsNav() {\n  return (\n    <NavigationMenu>\n      <NavigationMenuList>\n        <NavigationMenuItem>\n          <NavigationMenuTrigger>Find a doctor</NavigationMenuTrigger>\n          <NavigationMenuContent>\n            <div className=\"flex w-64 flex-col gap-1\">\n              {doctors.map((d) => (\n                <NavigationMenuLink key={d.name} href=\"#\">\n                  <Avatar className=\"size-8\">\n                    <AvatarFallback>\n                      {d.name\n                        .split(\" \")\n                        .slice(1)\n                        .map((n) => n[0])\n                        .join(\"\")}\n                    </AvatarFallback>\n                  </Avatar>\n                  <span className=\"flex flex-col\">\n                    <span className=\"font-medium\">{d.name}</span>\n                    <span className=\"text-muted-foreground\">{d.specialty}</span>\n                  </span>\n                </NavigationMenuLink>\n              ))}\n              <Separator className=\"my-1\" />\n              <NavigationMenuLink href=\"#\">\n                <StethoscopeIcon /> Browse all specialties\n              </NavigationMenuLink>\n            </div>\n          </NavigationMenuContent>\n        </NavigationMenuItem>\n        <NavigationMenuItem>\n          <NavigationMenuLink href=\"#\" className={navigationMenuTriggerStyle()}>\n            Locations\n          </NavigationMenuLink>\n        </NavigationMenuItem>\n      </NavigationMenuList>\n    </NavigationMenu>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

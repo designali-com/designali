@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "separator-18",
+  "type": "registry:example",
+  "description": "Short, thick accent separator placed under a section heading.",
+  "files": [
+    {
+      "path": "registry/designali/examples/separator/separator-18.tsx",
+      "content": "import { Separator } from \"@workspace/ui/components/separator\"\n\nexport default function AccentHeadingSeparator() {\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-3\">\n      <h3 className=\"text-lg font-semibold\">Our principles</h3>\n      <Separator className=\"bg-primary data-horizontal:h-1 data-horizontal:w-12\" />\n      <p className=\"text-sm text-muted-foreground\">\n        We build tools that respect attention, keep data portable, and stay out\n        of the way once the work begins.\n      </p>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

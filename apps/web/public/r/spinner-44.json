@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "spinner-44",
+  "type": "registry:example",
+  "description": "Media grid where thumbnails still processing show a spinner over a gradient tile.",
+  "files": [
+    {
+      "path": "registry/designali/examples/spinner/spinner-44.tsx",
+      "content": "import { Spinner } from \"@workspace/ui/components/spinner\"\n\nconst tiles = [\n  { hue: 210, ready: true },\n  { hue: 160, ready: false },\n  { hue: 30, ready: true },\n  { hue: 280, ready: false },\n  { hue: 350, ready: false },\n  { hue: 90, ready: true },\n]\n\nexport default function GalleryTilesLoading() {\n  return (\n    <div className=\"grid w-full max-w-sm grid-cols-3 gap-1.5\">\n      {tiles.map((tile, i) => (\n        <div\n          key={i}\n          className=\"relative aspect-square\"\n          style={{\n            background:\n              \"linear-gradient(135deg, hsl(\" +\n              tile.hue +\n              \" 70% 65%), hsl(\" +\n              (tile.hue + 40) +\n              \" 60% 45%))\",\n            opacity: tile.ready ? 1 : 0.35,\n          }}\n        >\n          {!tile.ready && (\n            <div className=\"absolute inset-0 flex items-center justify-center\">\n              <Spinner className=\"size-5 text-foreground\" />\n            </div>\n          )}\n        </div>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

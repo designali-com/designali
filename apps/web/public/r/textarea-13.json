@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "textarea-13",
+  "type": "registry:example",
+  "description": "Product review form with star rating and a minimum-length textarea check.",
+  "files": [
+    {
+      "path": "registry/designali/examples/textarea/textarea-13.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { StarIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  Field,\n  FieldDescription,\n  FieldError,\n  FieldLabel,\n} from \"@workspace/ui/components/field\"\nimport { Textarea } from \"@workspace/ui/components/textarea\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nexport default function ProductReviewTextarea() {\n  const [stars, setStars] = React.useState(4)\n  const [text, setText] = React.useState(\"\")\n  const tooShort = text.length > 0 && text.length < 30\n\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-3\">\n      <div\n        className=\"flex items-center gap-1\"\n        role=\"radiogroup\"\n        aria-label=\"Rating\"\n      >\n        {[1, 2, 3, 4, 5].map((n) => (\n          <button\n            key={n}\n            type=\"button\"\n            role=\"radio\"\n            aria-checked={stars === n}\n            aria-label={n + \" stars\"}\n            onClick={() => setStars(n)}\n          >\n            <StarIcon\n              className={cn(\n                \"size-5\",\n                n <= stars\n                  ? \"fill-amber-400 text-amber-400\"\n                  : \"text-muted-foreground\"\n              )}\n            />\n          </button>\n        ))}\n      </div>\n      <Field data-invalid={tooShort || undefined}>\n        <FieldLabel htmlFor=\"pr-text\">Your review</FieldLabel>\n        <Textarea\n          id=\"pr-text\"\n          value={text}\n          aria-invalid={tooShort || undefined}\n          onChange={(e) => setText(e.target.value)}\n          placeholder=\"How did the Alder desk lamp work out?\"\n        />\n        {tooShort ? (\n          <FieldError>{30 - text.length} more characters needed.</FieldError>\n        ) : (\n          <FieldDescription>Minimum 30 characters.</FieldDescription>\n        )}\n      </Field>\n      <Button size=\"sm\" disabled={text.length < 30}>\n        Post review\n      </Button>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

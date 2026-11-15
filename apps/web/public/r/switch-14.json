@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "switch-14",
+  "type": "registry:example",
+  "description": "Turning off two-factor authentication asks for confirmation in an alert dialog.",
+  "files": [
+    {
+      "path": "registry/designali/examples/switch/switch-14.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { ShieldCheckIcon } from \"lucide-react\"\n\nimport {\n  AlertDialog,\n  AlertDialogAction,\n  AlertDialogCancel,\n  AlertDialogContent,\n  AlertDialogDescription,\n  AlertDialogFooter,\n  AlertDialogHeader,\n  AlertDialogTitle,\n} from \"@workspace/ui/components/alert-dialog\"\nimport { Label } from \"@workspace/ui/components/label\"\nimport { Switch } from \"@workspace/ui/components/switch\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nexport default function ConfirmTurnOffTwoFactor() {\n  const [enabled, setEnabled] = React.useState(true)\n  const [confirmOpen, setConfirmOpen] = React.useState(false)\n\n  return (\n    <div className=\"flex w-full max-w-sm items-center gap-3 border p-4\">\n      <ShieldCheckIcon\n        className={cn(\n          \"size-5 shrink-0\",\n          enabled ? \"text-primary\" : \"text-muted-foreground\"\n        )}\n      />\n      <div className=\"flex-1\">\n        <Label htmlFor=\"two-factor\">Two-factor authentication</Label>\n        <p className=\"text-xs text-muted-foreground\">\n          {enabled\n            ? \"Authenticator app is active.\"\n            : \"Your account is less secure.\"}\n        </p>\n      </div>\n      <Switch\n        id=\"two-factor\"\n        checked={enabled}\n        onCheckedChange={(next) =>\n          next ? setEnabled(true) : setConfirmOpen(true)\n        }\n      />\n      <AlertDialog open={confirmOpen} onOpenChange={setConfirmOpen}>\n        <AlertDialogContent>\n          <AlertDialogHeader>\n            <AlertDialogTitle>Turn off two-factor?</AlertDialogTitle>\n            <AlertDialogDescription>\n              Anyone with your password will be able to sign in. You can turn it\n              back on at any time.\n            </AlertDialogDescription>\n          </AlertDialogHeader>\n          <AlertDialogFooter>\n            <AlertDialogCancel>Keep it on</AlertDialogCancel>\n            <AlertDialogAction\n              variant=\"destructive\"\n              onClick={() => {\n                setEnabled(false)\n                setConfirmOpen(false)\n              }}\n            >\n              Turn off\n            </AlertDialogAction>\n          </AlertDialogFooter>\n        </AlertDialogContent>\n      </AlertDialog>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

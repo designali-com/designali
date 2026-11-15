@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tabs-09",
+  "type": "registry:example",
+  "description": "Controlled tabs driven by Back and Continue buttons for a three-step onboarding.",
+  "files": [
+    {
+      "path": "registry/designali/examples/tabs/tabs-09.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  Tabs,\n  TabsContent,\n  TabsList,\n  TabsTrigger,\n} from \"@workspace/ui/components/tabs\"\n\nconst steps = [\n  {\n    value: \"profile\",\n    label: \"Profile\",\n    text: \"Tell us your name and role so we can tailor your workspace.\",\n  },\n  {\n    value: \"team\",\n    label: \"Team\",\n    text: \"Invite up to five teammates now, or skip and do it later.\",\n  },\n  {\n    value: \"finish\",\n    label: \"Finish\",\n    text: \"You're all set. We created a starter project for you.\",\n  },\n]\n\nexport default function OnboardingStepTabs() {\n  const [step, setStep] = React.useState(\"profile\")\n  const index = steps.findIndex((s) => s.value === step)\n\n  return (\n    <Tabs\n      value={step}\n      onValueChange={(v) => setStep(v as string)}\n      className=\"w-full max-w-sm border p-4\"\n    >\n      <TabsList className=\"w-full\">\n        {steps.map((s, i) => (\n          <TabsTrigger key={s.value} value={s.value}>\n            <span className=\"text-muted-foreground tabular-nums\">{i + 1}.</span>\n            {s.label}\n          </TabsTrigger>\n        ))}\n      </TabsList>\n      {steps.map((s) => (\n        <TabsContent\n          key={s.value}\n          value={s.value}\n          className=\"min-h-12 py-2 text-muted-foreground\"\n        >\n          {s.text}\n        </TabsContent>\n      ))}\n      <div className=\"flex justify-between\">\n        <Button\n          variant=\"ghost\"\n          size=\"sm\"\n          disabled={index === 0}\n          onClick={() => setStep(steps[index - 1]!.value)}\n        >\n          Back\n        </Button>\n        <Button\n          size=\"sm\"\n          disabled={index === steps.length - 1}\n          onClick={() => setStep(steps[index + 1]!.value)}\n        >\n          Continue\n        </Button>\n      </div>\n    </Tabs>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

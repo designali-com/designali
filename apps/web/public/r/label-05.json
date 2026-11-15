@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "label-05",
+  "type": "registry:example",
+  "description": "Label followed by an info tooltip that explains what the field is used for.",
+  "files": [
+    {
+      "path": "registry/designali/examples/label/label-05.tsx",
+      "content": "import { InfoIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Input } from \"@workspace/ui/components/input\"\nimport { Label } from \"@workspace/ui/components/label\"\nimport {\n  Tooltip,\n  TooltipContent,\n  TooltipTrigger,\n} from \"@workspace/ui/components/tooltip\"\n\nexport default function LabelWithTooltipInfo() {\n  return (\n    <div className=\"grid w-full max-w-sm gap-2\">\n      <div className=\"flex items-center gap-1\">\n        <Label htmlFor=\"tax-id\">Tax ID</Label>\n        <Tooltip>\n          <TooltipTrigger\n            render={\n              <Button\n                variant=\"ghost\"\n                size=\"icon-xs\"\n                aria-label=\"About tax ID\"\n              />\n            }\n          >\n            <InfoIcon />\n          </TooltipTrigger>\n          <TooltipContent>\n            Shown on invoices sent to your customers.\n          </TooltipContent>\n        </Tooltip>\n      </div>\n      <Input id=\"tax-id\" placeholder=\"EU 123 456 789\" />\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

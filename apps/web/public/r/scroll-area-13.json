@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "scroll-area-13",
+  "type": "registry:example",
+  "description": "Scrollable radio list for choosing a shipping country.",
+  "files": [
+    {
+      "path": "registry/designali/examples/scroll-area/scroll-area-13.tsx",
+      "content": "import { Label } from \"@workspace/ui/components/label\"\nimport {\n  RadioGroup,\n  RadioGroupItem,\n} from \"@workspace/ui/components/radio-group\"\nimport { ScrollArea } from \"@workspace/ui/components/scroll-area\"\n\nconst countries = [\n  \"Argentina\",\n  \"Australia\",\n  \"Austria\",\n  \"Belgium\",\n  \"Brazil\",\n  \"Canada\",\n  \"Chile\",\n  \"Denmark\",\n  \"Finland\",\n  \"France\",\n  \"Germany\",\n  \"Ireland\",\n  \"Italy\",\n  \"Japan\",\n  \"Mexico\",\n  \"Netherlands\",\n  \"Norway\",\n  \"Portugal\",\n  \"Spain\",\n  \"Sweden\",\n]\n\nexport default function CountryRadioList() {\n  return (\n    <div className=\"flex w-full max-w-xs flex-col gap-2\">\n      <Label className=\"text-xs\">Shipping country</Label>\n      <ScrollArea className=\"h-56 border\">\n        <RadioGroup defaultValue=\"Portugal\" className=\"gap-0 p-1\">\n          {countries.map((c) => (\n            <Label\n              key={c}\n              className=\"flex items-center gap-2 px-2 py-1.5 text-xs font-normal hover:bg-muted\"\n            >\n              <RadioGroupItem value={c} />\n              {c}\n            </Label>\n          ))}\n        </RadioGroup>\n      </ScrollArea>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

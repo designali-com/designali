@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "drawer-49",
+  "type": "registry:example",
+  "description": "Permission priming drawer explaining camera and microphone access before the system prompt.",
+  "files": [
+    {
+      "path": "registry/designali/examples/drawer/drawer-49.tsx",
+      "content": "import { CameraIcon, MicIcon, ShieldCheckIcon, VideoIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  Drawer,\n  DrawerClose,\n  DrawerContent,\n  DrawerDescription,\n  DrawerFooter,\n  DrawerHeader,\n  DrawerTitle,\n  DrawerTrigger,\n} from \"@workspace/ui/components/drawer\"\n\nconst reasons = [\n  {\n    icon: CameraIcon,\n    title: \"Camera\",\n    text: \"So teammates can see you during standups.\",\n  },\n  {\n    icon: MicIcon,\n    title: \"Microphone\",\n    text: \"So you can talk and be heard in calls.\",\n  },\n  {\n    icon: ShieldCheckIcon,\n    title: \"Private by default\",\n    text: \"We never record without a visible indicator.\",\n  },\n]\n\nexport default function PermissionRequestDrawer() {\n  return (\n    <Drawer showSwipeHandle>\n      <DrawerTrigger render={<Button />}>\n        <VideoIcon data-icon=\"inline-start\" />\n        Join call\n      </DrawerTrigger>\n      <DrawerContent>\n        <div className=\"mx-auto flex w-full max-w-sm flex-col\">\n          <DrawerHeader>\n            <DrawerTitle className=\"text-base\">\n              Allow camera and microphone\n            </DrawerTitle>\n            <DrawerDescription>\n              Your browser will ask next. Here&apos;s why we need it.\n            </DrawerDescription>\n          </DrawerHeader>\n          <div className=\"flex flex-col gap-4 p-4\">\n            {reasons.map((reason) => (\n              <div key={reason.title} className=\"flex gap-3\">\n                <div className=\"flex size-9 shrink-0 items-center justify-center rounded-full bg-muted\">\n                  <reason.icon className=\"size-4\" />\n                </div>\n                <div>\n                  <p className=\"font-medium\">{reason.title}</p>\n                  <p className=\"text-muted-foreground\">{reason.text}</p>\n                </div>\n              </div>\n            ))}\n          </div>\n          <DrawerFooter>\n            <DrawerClose render={<Button />}>Continue</DrawerClose>\n            <DrawerClose render={<Button variant=\"ghost\" />}>\n              Join without audio or video\n            </DrawerClose>\n          </DrawerFooter>\n        </div>\n      </DrawerContent>\n    </Drawer>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

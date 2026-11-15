@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "table-14",
+  "type": "registry:example",
+  "description": "A fixed-height scrolling table with a sticky header row.",
+  "files": [
+    {
+      "path": "registry/designali/examples/table/table-14.tsx",
+      "content": "import {\n  Table,\n  TableBody,\n  TableCell,\n  TableHead,\n  TableHeader,\n  TableRow,\n} from \"@workspace/ui/components/table\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst logs = Array.from({ length: 18 }, (_, i) => ({\n  time: \"14:\" + String(10 + i).padStart(2, \"0\") + \":0\" + (i % 10),\n  level: i % 7 === 0 ? \"ERROR\" : i % 3 === 0 ? \"WARN\" : \"INFO\",\n  message: [\n    \"Request completed\",\n    \"Cache miss for user profile\",\n    \"Retrying webhook delivery\",\n    \"Job queued\",\n  ][i % 4],\n}))\n\nexport default function StickyHeaderScrollTable() {\n  return (\n    <div className=\"h-72 w-full max-w-lg overflow-y-auto border\">\n      <Table>\n        <TableHeader className=\"sticky top-0 z-10 bg-background\">\n          <TableRow>\n            <TableHead>Time</TableHead>\n            <TableHead>Level</TableHead>\n            <TableHead>Message</TableHead>\n          </TableRow>\n        </TableHeader>\n        <TableBody>\n          {logs.map((log, i) => (\n            <TableRow key={i}>\n              <TableCell className=\"font-mono text-muted-foreground\">\n                {log.time}\n              </TableCell>\n              <TableCell>\n                <span\n                  className={cn(\n                    \"font-mono font-medium\",\n                    log.level === \"ERROR\" && \"text-destructive\",\n                    log.level === \"WARN\" && \"text-amber-600 dark:text-amber-400\"\n                  )}\n                >\n                  {log.level}\n                </span>\n              </TableCell>\n              <TableCell>{log.message}</TableCell>\n            </TableRow>\n          ))}\n        </TableBody>\n      </Table>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button-21",
+  "type": "registry:example",
+  "description": "Toggleable like button that fills the heart and updates its counter.",
+  "files": [
+    {
+      "path": "registry/designali/examples/button/button-21.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { HeartIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nexport default function LikeCounterButton() {\n  const [liked, setLiked] = React.useState(false)\n  const count = 248 + (liked ? 1 : 0)\n\n  return (\n    <Button\n      variant=\"outline\"\n      aria-pressed={liked}\n      onClick={() => setLiked(!liked)}\n      className={cn(\n        liked && \"border-rose-500/40 text-rose-600 dark:text-rose-400\"\n      )}\n    >\n      <HeartIcon\n        data-icon=\"inline-start\"\n        className={cn(liked && \"fill-current\")}\n      />\n      <span className=\"tabular-nums\">{count}</span>\n    </Button>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

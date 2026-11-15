@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "alert-37",
+  "type": "registry:example",
+  "description": "Tip alert teaching a keyboard shortcut with a don't-show-again checkbox.",
+  "files": [
+    {
+      "path": "registry/designali/examples/alert/alert-37.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { LightbulbIcon } from \"lucide-react\"\n\nimport {\n  Alert,\n  AlertDescription,\n  AlertTitle,\n} from \"@workspace/ui/components/alert\"\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Checkbox } from \"@workspace/ui/components/checkbox\"\nimport { Kbd, KbdGroup } from \"@workspace/ui/components/kbd\"\nimport { Label } from \"@workspace/ui/components/label\"\n\nexport default function AlertShortcutTip() {\n  const [hidden, setHidden] = React.useState(false)\n  const [remember, setRemember] = React.useState(false)\n\n  if (hidden) {\n    return (\n      <p className=\"text-xs text-muted-foreground\">\n        {remember ? \"Tip hidden for good.\" : \"Tip hidden for this session.\"}\n      </p>\n    )\n  }\n\n  return (\n    <Alert className=\"max-w-md\">\n      <LightbulbIcon />\n      <AlertTitle className=\"flex flex-wrap items-center gap-1\">\n        Tip: press\n        <KbdGroup>\n          <Kbd>Ctrl</Kbd>\n          <Kbd>K</Kbd>\n        </KbdGroup>\n        to jump anywhere\n      </AlertTitle>\n      <AlertDescription>\n        <div className=\"mt-1 flex items-center justify-between gap-2\">\n          <div className=\"flex items-center gap-1.5\">\n            <Checkbox\n              id=\"tip-remember\"\n              checked={remember}\n              onCheckedChange={setRemember}\n            />\n            <Label\n              htmlFor=\"tip-remember\"\n              className=\"font-normal text-muted-foreground\"\n            >\n              Don&apos;t show again\n            </Label>\n          </div>\n          <Button size=\"xs\" variant=\"ghost\" onClick={() => setHidden(true)}>\n            Got it\n          </Button>\n        </div>\n      </AlertDescription>\n    </Alert>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

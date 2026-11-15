@@ -66,7 +66,7 @@ export default function Lists12() {
         </div>
 
         <ol className="mt-10 border-t border-border">
-          {schedule[day].map((session) => (
+          {schedule[day]!.map((session) => (
             <li
               key={session.time + session.title}
               className={cn(

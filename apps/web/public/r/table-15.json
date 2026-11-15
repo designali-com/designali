@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "table-15",
+  "type": "registry:example",
+  "description": "A wide analytics table that scrolls horizontally within its own container.",
+  "files": [
+    {
+      "path": "registry/designali/examples/table/table-15.tsx",
+      "content": "import {\n  Table,\n  TableBody,\n  TableCell,\n  TableHead,\n  TableHeader,\n  TableRow,\n} from \"@workspace/ui/components/table\"\n\nconst months = [\n  \"Jan\",\n  \"Feb\",\n  \"Mar\",\n  \"Apr\",\n  \"May\",\n  \"Jun\",\n  \"Jul\",\n  \"Aug\",\n  \"Sep\",\n  \"Oct\",\n  \"Nov\",\n  \"Dec\",\n]\nconst channels = [\n  { name: \"Organic search\", base: 1200 },\n  { name: \"Paid social\", base: 860 },\n  { name: \"Email\", base: 540 },\n  { name: \"Referral\", base: 310 },\n]\n\nexport default function WideScrollableTable() {\n  return (\n    <div className=\"w-full max-w-xl border\">\n      <Table>\n        <TableHeader>\n          <TableRow>\n            <TableHead className=\"sticky start-0 z-10 bg-background\">\n              Channel\n            </TableHead>\n            {months.map((m) => (\n              <TableHead key={m} className=\"text-right\">\n                {m}\n              </TableHead>\n            ))}\n          </TableRow>\n        </TableHeader>\n        <TableBody>\n          {channels.map((channel) => (\n            <TableRow key={channel.name}>\n              <TableCell className=\"sticky start-0 z-10 bg-background font-medium\">\n                {channel.name}\n              </TableCell>\n              {months.map((m, i) => (\n                <TableCell key={m} className=\"text-right tabular-nums\">\n                  {(channel.base + ((i * 97) % 400)).toLocaleString()}\n                </TableCell>\n              ))}\n            </TableRow>\n          ))}\n        </TableBody>\n      </Table>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

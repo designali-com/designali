@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "popover-19",
+  "type": "registry:example",
+  "description": "Inline delete confirmation that requires typing the item name before deleting.",
+  "files": [
+    {
+      "path": "registry/designali/examples/popover/popover-19.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { DatabaseIcon, Trash2Icon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Input } from \"@workspace/ui/components/input\"\nimport {\n  Popover,\n  PopoverContent,\n  PopoverDescription,\n  PopoverHeader,\n  PopoverTitle,\n  PopoverTrigger,\n} from \"@workspace/ui/components/popover\"\n\nconst NAME = \"staging-db\"\n\nexport default function ConfirmDeletePopover() {\n  const [open, setOpen] = React.useState(false)\n  const [value, setValue] = React.useState(\"\")\n  const [deleted, setDeleted] = React.useState(false)\n\n  if (deleted) {\n    return (\n      <p className=\"flex items-center gap-1.5 text-xs text-muted-foreground\">\n        <Trash2Icon className=\"size-3.5\" /> {NAME} was deleted.\n      </p>\n    )\n  }\n\n  return (\n    <div className=\"flex w-full max-w-sm items-center justify-between border p-3\">\n      <div className=\"flex items-center gap-2 text-xs\">\n        <DatabaseIcon className=\"size-4 text-muted-foreground\" />\n        <span className=\"font-mono\">{NAME}</span>\n      </div>\n      <Popover\n        open={open}\n        onOpenChange={(next) => {\n          setOpen(next)\n          setValue(\"\")\n        }}\n      >\n        <PopoverTrigger render={<Button variant=\"destructive\" size=\"sm\" />}>\n          Delete\n        </PopoverTrigger>\n        <PopoverContent className=\"w-64\" align=\"end\">\n          <PopoverHeader>\n            <PopoverTitle>Delete database?</PopoverTitle>\n            <PopoverDescription>\n              Type <span className=\"font-mono text-foreground\">{NAME}</span> to\n              confirm. This cannot be undone.\n            </PopoverDescription>\n          </PopoverHeader>\n          <Input\n            value={value}\n            onChange={(event) => setValue(event.target.value)}\n            aria-label=\"Confirm name\"\n            className=\"h-8\"\n          />\n          <Button\n            variant=\"destructive\"\n            size=\"sm\"\n            disabled={value !== NAME}\n            onClick={() => setDeleted(true)}\n          >\n            Delete permanently\n          </Button>\n        </PopoverContent>\n      </Popover>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

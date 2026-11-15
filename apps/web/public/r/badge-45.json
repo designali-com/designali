@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "badge-45",
+  "type": "registry:example",
+  "description": "Article metadata using ghost and link badge variants for category and read time.",
+  "files": [
+    {
+      "path": "registry/designali/examples/badge/badge-45.tsx",
+      "content": "import { CalendarIcon, ClockIcon } from \"lucide-react\"\n\nimport { Badge } from \"@workspace/ui/components/badge\"\n\nexport default function ArticleMetaBadges() {\n  return (\n    <article className=\"flex w-full max-w-sm flex-col gap-2 border p-4\">\n      <div className=\"flex flex-wrap items-center gap-1\">\n        <Badge variant=\"link\" className=\"px-0\" render={<a href=\"#\" />}>\n          Engineering\n        </Badge>\n        <span className=\"text-muted-foreground\">·</span>\n        <Badge variant=\"ghost\">\n          <ClockIcon data-icon=\"inline-start\" />7 min read\n        </Badge>\n        <Badge variant=\"ghost\">\n          <CalendarIcon data-icon=\"inline-start\" />\n          Feb 21\n        </Badge>\n      </div>\n      <h3 className=\"text-base font-semibold\">How we cut cold starts by 60%</h3>\n      <p className=\"text-sm text-muted-foreground\">\n        Lazy module loading, smarter bundling, and a few surprises from\n        profiling production traffic.\n      </p>\n    </article>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "select-41",
+  "type": "registry:example",
+  "description": "Controlled select with a clear button that resets the value back to the placeholder.",
+  "files": [
+    {
+      "path": "registry/designali/examples/select/select-41.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { XIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  Field,\n  FieldDescription,\n  FieldLabel,\n} from \"@workspace/ui/components/field\"\nimport {\n  Select,\n  SelectContent,\n  SelectItem,\n  SelectTrigger,\n  SelectValue,\n} from \"@workspace/ui/components/select\"\n\nconst projects = [\n  { label: \"Website refresh\", value: \"website\" },\n  { label: \"Mobile app v3\", value: \"mobile\" },\n  { label: \"Internal tools\", value: \"internal\" },\n]\n\nexport default function ClearableSelect() {\n  const [project, setProject] = React.useState<string | null>(\"mobile\")\n\n  return (\n    <Field className=\"w-full max-w-xs\">\n      <FieldLabel htmlFor=\"project\">Project</FieldLabel>\n      <div className=\"flex gap-1\">\n        <Select items={projects} value={project} onValueChange={setProject}>\n          <SelectTrigger id=\"project\" className=\"flex-1\">\n            <SelectValue placeholder=\"No project\" />\n          </SelectTrigger>\n          <SelectContent>\n            {projects.map((item) => (\n              <SelectItem key={item.value} value={item.value}>\n                {item.label}\n              </SelectItem>\n            ))}\n          </SelectContent>\n        </Select>\n        <Button\n          variant=\"ghost\"\n          size=\"icon\"\n          aria-label=\"Clear project\"\n          disabled={!project}\n          onClick={() => setProject(null)}\n        >\n          <XIcon />\n        </Button>\n      </div>\n      <FieldDescription>\n        Leave empty to file this task in your inbox.\n      </FieldDescription>\n    </Field>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

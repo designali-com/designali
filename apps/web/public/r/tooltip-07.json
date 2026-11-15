@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tooltip-07",
+  "type": "registry:example",
+  "description": "A tooltip whose open state is driven by a switch outside the trigger.",
+  "files": [
+    {
+      "path": "registry/designali/examples/tooltip/tooltip-07.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { SparklesIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Switch } from \"@workspace/ui/components/switch\"\nimport {\n  Tooltip,\n  TooltipContent,\n  TooltipTrigger,\n} from \"@workspace/ui/components/tooltip\"\n\nexport default function ControlledTooltip() {\n  const [open, setOpen] = React.useState(false)\n\n  return (\n    <div className=\"flex flex-col items-center gap-6\">\n      <Tooltip open={open} onOpenChange={setOpen}>\n        <TooltipTrigger render={<Button variant=\"outline\" />}>\n          <SparklesIcon data-icon=\"inline-start\" />\n          Generate summary\n        </TooltipTrigger>\n        <TooltipContent>Uses 1 AI credit</TooltipContent>\n      </Tooltip>\n      <label className=\"flex items-center gap-2 text-xs text-muted-foreground\">\n        <Switch checked={open} onCheckedChange={setOpen} />\n        Show tooltip\n      </label>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

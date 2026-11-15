@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "spinner-35",
+  "type": "registry:example",
+  "description": "AI writing assistant card with a generating spinner and a stop button.",
+  "files": [
+    {
+      "path": "registry/designali/examples/spinner/spinner-35.tsx",
+      "content": "import { SparklesIcon, SquareIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Spinner } from \"@workspace/ui/components/spinner\"\n\nexport default function GeneratingResponseCard() {\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-3 border p-4\">\n      <div className=\"flex items-center gap-2 text-xs text-muted-foreground\">\n        <SparklesIcon className=\"size-3.5\" />\n        Draft a friendly reply declining the meeting\n      </div>\n      <p className=\"text-sm leading-relaxed\">\n        Hi Daniel, thanks so much for the invite. Unfortunately I&apos;m fully\n        booked on Thursday, but\n      </p>\n      <div className=\"flex items-center justify-between\">\n        <span className=\"flex items-center gap-2 text-xs text-muted-foreground\">\n          <Spinner className=\"size-3.5\" />\n          Generating\n        </span>\n        <Button variant=\"outline\" size=\"xs\">\n          <SquareIcon data-icon=\"inline-start\" className=\"fill-current\" />\n          Stop\n        </Button>\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

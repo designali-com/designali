@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "spinner-43",
+  "type": "registry:example",
+  "description": "Destructive confirmation card with a deleting spinner on the danger button.",
+  "files": [
+    {
+      "path": "registry/designali/examples/spinner/spinner-43.tsx",
+      "content": "import { Button } from \"@workspace/ui/components/button\"\nimport {\n  Card,\n  CardDescription,\n  CardFooter,\n  CardHeader,\n  CardTitle,\n} from \"@workspace/ui/components/card\"\nimport { Spinner } from \"@workspace/ui/components/spinner\"\n\nexport default function DeletingConfirmation() {\n  return (\n    <Card className=\"w-full max-w-sm\">\n      <CardHeader>\n        <CardTitle>Delete project &quot;Atlas&quot;?</CardTitle>\n        <CardDescription>\n          This removes 38 environments and all deployment history. This\n          can&apos;t be undone.\n        </CardDescription>\n      </CardHeader>\n      <CardFooter className=\"justify-end gap-2\">\n        <Button variant=\"outline\" disabled>\n          Cancel\n        </Button>\n        <Button variant=\"destructive\" disabled>\n          <Spinner data-icon=\"inline-start\" />\n          Deleting...\n        </Button>\n      </CardFooter>\n    </Card>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

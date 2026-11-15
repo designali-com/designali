@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "card-13",
+  "type": "registry:example",
+  "description": "Destructive card that requires typing the workspace name before deletion is enabled.",
+  "files": [
+    {
+      "path": "registry/designali/examples/card/card-13.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { Trash2Icon, TriangleAlertIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  Card,\n  CardContent,\n  CardDescription,\n  CardFooter,\n  CardHeader,\n  CardTitle,\n} from \"@workspace/ui/components/card\"\nimport { Field, FieldLabel } from \"@workspace/ui/components/field\"\nimport { Input } from \"@workspace/ui/components/input\"\n\nconst workspace = \"acme-marketing\"\n\nexport default function DangerZoneCard() {\n  const [value, setValue] = React.useState(\"\")\n\n  return (\n    <Card className=\"w-full max-w-sm ring-destructive/40\">\n      <CardHeader>\n        <CardTitle className=\"flex items-center gap-2 text-destructive\">\n          <TriangleAlertIcon className=\"size-4\" />\n          Delete workspace\n        </CardTitle>\n        <CardDescription>\n          This permanently removes 38 projects, 1,204 files and all member\n          access. This can&apos;t be undone.\n        </CardDescription>\n      </CardHeader>\n      <CardContent>\n        <Field>\n          <FieldLabel htmlFor=\"confirm-name\">\n            Type <code className=\"bg-muted px-1 font-mono\">{workspace}</code> to\n            confirm\n          </FieldLabel>\n          <Input\n            id=\"confirm-name\"\n            value={value}\n            onChange={(e) => setValue(e.target.value)}\n            autoComplete=\"off\"\n          />\n        </Field>\n      </CardContent>\n      <CardFooter className=\"justify-end bg-destructive/5\">\n        <Button variant=\"destructive\" disabled={value !== workspace}>\n          <Trash2Icon data-icon=\"inline-start\" />\n          Delete forever\n        </Button>\n      </CardFooter>\n    </Card>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

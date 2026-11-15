@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "field-29",
+  "type": "registry:example",
+  "description": "Ticket quantity field with decrement and increment buttons and min/max bounds.",
+  "files": [
+    {
+      "path": "registry/designali/examples/field/field-29.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { MinusIcon, PlusIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { ButtonGroup } from \"@workspace/ui/components/button-group\"\nimport {\n  Field,\n  FieldContent,\n  FieldDescription,\n  FieldLabel,\n} from \"@workspace/ui/components/field\"\nimport { Input } from \"@workspace/ui/components/input\"\n\nexport default function QuantityStepperField() {\n  const [qty, setQty] = React.useState(2)\n  const max = 6\n\n  return (\n    <Field orientation=\"horizontal\" className=\"w-full max-w-sm\">\n      <FieldContent>\n        <FieldLabel htmlFor=\"ticket-qty\">General admission</FieldLabel>\n        <FieldDescription>$45 each · Max {max} per order</FieldDescription>\n      </FieldContent>\n      <ButtonGroup>\n        <Button\n          variant=\"outline\"\n          size=\"icon-sm\"\n          aria-label=\"Decrease\"\n          disabled={qty <= 0}\n          onClick={() => setQty(qty - 1)}\n        >\n          <MinusIcon />\n        </Button>\n        <Input\n          id=\"ticket-qty\"\n          inputMode=\"numeric\"\n          value={qty}\n          onChange={(e) =>\n            setQty(Math.min(max, Math.max(0, Number(e.target.value) || 0)))\n          }\n          className=\"h-7 w-10 text-center tabular-nums\"\n        />\n        <Button\n          variant=\"outline\"\n          size=\"icon-sm\"\n          aria-label=\"Increase\"\n          disabled={qty >= max}\n          onClick={() => setQty(qty + 1)}\n        >\n          <PlusIcon />\n        </Button>\n      </ButtonGroup>\n    </Field>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

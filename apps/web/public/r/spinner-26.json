@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "spinner-26",
+  "type": "registry:example",
+  "description": "Mail sidebar navigation where unread counts still loading show a small spinner.",
+  "files": [
+    {
+      "path": "registry/designali/examples/spinner/spinner-26.tsx",
+      "content": "import { ArchiveIcon, InboxIcon, SendIcon, StarIcon } from \"lucide-react\"\n\nimport { Spinner } from \"@workspace/ui/components/spinner\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst folders = [\n  { label: \"Inbox\", icon: InboxIcon, count: null },\n  { label: \"Starred\", icon: StarIcon, count: 4 },\n  { label: \"Sent\", icon: SendIcon, count: 0 },\n  { label: \"Archive\", icon: ArchiveIcon, count: null },\n]\n\nexport default function SidebarCountsLoading() {\n  return (\n    <nav className=\"flex w-full max-w-[220px] flex-col gap-0.5 border p-2\">\n      {folders.map((folder, i) => (\n        <a\n          key={folder.label}\n          href=\"#\"\n          className={cn(\n            \"flex items-center gap-2 px-2 py-1.5 text-sm hover:bg-muted\",\n            i === 0 && \"bg-muted font-medium\"\n          )}\n        >\n          <folder.icon className=\"size-4 text-muted-foreground\" />\n          <span className=\"flex-1\">{folder.label}</span>\n          {folder.count === null ? (\n            <Spinner className=\"size-3 text-muted-foreground\" />\n          ) : folder.count > 0 ? (\n            <span className=\"text-xs text-muted-foreground tabular-nums\">\n              {folder.count}\n            </span>\n          ) : null}\n        </a>\n      ))}\n    </nav>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

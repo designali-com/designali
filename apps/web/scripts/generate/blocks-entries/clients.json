@@ -1,0 +1,12 @@
+[
+  ["clients-11", "clients", "500px", "Inverted dark band with a headline and two opposing scrolling logo marquee rows faded at the edges."],
+  ["clients-12", "clients", "650px", "Customer results stat row beside a headline above a bordered four-column grid of logo marks."],
+  ["clients-13", "clients", "750px", "Three case study cards with gradient headers, initials badges, big outcome metrics and read the story links."],
+  ["clients-14", "clients", "600px", "Tabbed logo grid where selecting a customer swaps in their quote with avatar and role."],
+  ["clients-15", "clients", "650px", "Split section with headline and CTAs beside three vertically scrolling logo columns."],
+  ["clients-16", "clients", "650px", "Logo bento with a dark featured case study tile, a short quote tile and smaller logo tiles."],
+  ["clients-17", "clients", "500px", "Industry tabs that switch a bordered six-column logo grid and a supporting stat line."],
+  ["clients-18", "clients", "750px", "Client roster table with initials, industry, start year and result columns that collapses to rows on mobile."],
+  ["clients-19", "clients", "700px", "Customer spotlight carousel pairing a gradient company panel with stats, a quote and prev/next controls."],
+  ["clients-20", "clients", "300px", "Compact social proof card with stacked avatar initials, a star rating, customer names and two CTAs."]
+]

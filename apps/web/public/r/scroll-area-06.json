@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "scroll-area-06",
+  "type": "registry:example",
+  "description": "Scrollable product changelog presented as a vertical timeline.",
+  "files": [
+    {
+      "path": "registry/designali/examples/scroll-area/scroll-area-06.tsx",
+      "content": "import { Badge } from \"@workspace/ui/components/badge\"\nimport { ScrollArea } from \"@workspace/ui/components/scroll-area\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst releases = [\n  {\n    version: \"3.2.0\",\n    date: \"Nov 12\",\n    notes: \"Bulk archive, faster search indexing.\",\n  },\n  {\n    version: \"3.1.4\",\n    date: \"Nov 02\",\n    notes: \"Fixed CSV export timezone offsets.\",\n  },\n  {\n    version: \"3.1.0\",\n    date: \"Oct 21\",\n    notes: \"New activity feed and saved filters.\",\n  },\n  { version: \"3.0.2\", date: \"Oct 09\", notes: \"Improved SSO error messages.\" },\n  {\n    version: \"3.0.0\",\n    date: \"Sep 30\",\n    notes: \"Redesigned navigation and dark mode.\",\n  },\n  { version: \"2.9.1\", date: \"Sep 14\", notes: \"Webhook retries with backoff.\" },\n]\n\nexport default function ChangelogTimeline() {\n  return (\n    <ScrollArea className=\"h-72 w-full max-w-sm border\">\n      <ol className=\"relative flex flex-col gap-5 p-5 before:absolute before:inset-y-5 before:left-[25px] before:w-px before:bg-border\">\n        {releases.map((r, i) => (\n          <li key={r.version} className=\"relative flex gap-3 pl-6\">\n            <span\n              className={cn(\n                \"absolute top-1 left-[1px] size-2.5 border-2 border-background\",\n                i === 0 ? \"bg-primary\" : \"bg-muted-foreground\"\n              )}\n            />\n            <div className=\"flex flex-col gap-0.5\">\n              <div className=\"flex items-center gap-2\">\n                <span className=\"font-mono text-xs font-medium\">\n                  v{r.version}\n                </span>\n                {i === 0 && <Badge>Latest</Badge>}\n                <span className=\"text-[11px] text-muted-foreground\">\n                  {r.date}\n                </span>\n              </div>\n              <p className=\"text-xs text-muted-foreground\">{r.notes}</p>\n            </div>\n          </li>\n        ))}\n      </ol>\n    </ScrollArea>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

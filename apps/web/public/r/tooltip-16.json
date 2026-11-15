@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tooltip-16",
+  "type": "registry:example",
+  "description": "Plan feature checklist where each feature has a help tooltip with details.",
+  "files": [
+    {
+      "path": "registry/designali/examples/tooltip/tooltip-16.tsx",
+      "content": "import { CheckIcon, CircleHelpIcon } from \"lucide-react\"\n\nimport {\n  Tooltip,\n  TooltipContent,\n  TooltipProvider,\n  TooltipTrigger,\n} from \"@workspace/ui/components/tooltip\"\n\nconst features = [\n  {\n    name: \"Unlimited projects\",\n    help: \"No cap on active or archived projects.\",\n  },\n  {\n    name: \"SSO & SCIM\",\n    help: \"SAML 2.0 single sign-on with automatic user provisioning.\",\n  },\n  { name: \"Audit log\", help: \"365 days of searchable workspace activity.\" },\n  { name: \"Priority support\", help: \"Replies within 4 business hours.\" },\n]\n\nexport default function PricingFeatureHelpTooltips() {\n  return (\n    <TooltipProvider>\n      <div className=\"flex w-full max-w-xs flex-col gap-3 border p-4\">\n        <div>\n          <p className=\"text-sm font-medium\">Business</p>\n          <p className=\"text-2xl font-semibold\">\n            $32\n            <span className=\"text-sm font-normal text-muted-foreground\">\n              /seat\n            </span>\n          </p>\n        </div>\n        <ul className=\"flex flex-col gap-2 text-sm\">\n          {features.map((f) => (\n            <li key={f.name} className=\"flex items-center gap-2\">\n              <CheckIcon className=\"size-4 text-emerald-600\" />\n              <span className=\"flex-1\">{f.name}</span>\n              <Tooltip>\n                <TooltipTrigger\n                  render={\n                    <button\n                      type=\"button\"\n                      aria-label={\"About \" + f.name}\n                      className=\"text-muted-foreground hover:text-foreground\"\n                    />\n                  }\n                >\n                  <CircleHelpIcon className=\"size-3.5\" />\n                </TooltipTrigger>\n                <TooltipContent side=\"left\" className=\"max-w-48\">\n                  {f.help}\n                </TooltipContent>\n              </Tooltip>\n            </li>\n          ))}\n        </ul>\n      </div>\n    </TooltipProvider>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

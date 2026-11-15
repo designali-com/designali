@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toast-21",
+  "type": "registry:example",
+  "description": "Pressing a keyboard shortcut (or the button) shows a toast that teaches the shortcut.",
+  "files": [
+    {
+      "path": "registry/designali/examples/toast/toast-21.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { SaveIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Kbd, KbdGroup } from \"@workspace/ui/components/kbd\"\nimport { Toaster, createToastManager } from \"@workspace/ui/components/toast\"\n\nconst notify = createToastManager()\n\nexport default function KeyboardShortcutToast() {\n  const save = React.useCallback(() => {\n    notify.add({\n      id: \"saved\",\n      title: \"Document saved\",\n      description: (\n        <span className=\"inline-flex items-center gap-1\">\n          Tip: press <Kbd>Ctrl</Kbd>+<Kbd>S</Kbd> anytime\n        </span>\n      ),\n      timeout: 2500,\n    })\n  }, [])\n\n  React.useEffect(() => {\n    function onKey(e: KeyboardEvent) {\n      if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === \"s\") {\n        e.preventDefault()\n        save()\n      }\n    }\n    window.addEventListener(\"keydown\", onKey)\n    return () => window.removeEventListener(\"keydown\", onKey)\n  }, [save])\n\n  return (\n    <Toaster toastManager={notify}>\n      <div className=\"flex w-full max-w-xs flex-col items-center gap-3 border p-4 text-center\">\n        <p className=\"text-sm text-muted-foreground\">\n          Press the shortcut or use the button.\n        </p>\n        <KbdGroup>\n          <Kbd>Ctrl</Kbd>\n          <Kbd>S</Kbd>\n        </KbdGroup>\n        <Button variant=\"outline\" size=\"sm\" onClick={save}>\n          <SaveIcon data-icon=\"inline-start\" />\n          Save\n        </Button>\n      </div>\n    </Toaster>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

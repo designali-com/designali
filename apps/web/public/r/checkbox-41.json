@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "checkbox-41",
+  "type": "registry:example",
+  "description": "Accessibility preferences whose checkboxes immediately restyle a live preview card.",
+  "files": [
+    {
+      "path": "registry/designali/examples/checkbox/checkbox-41.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { Checkbox } from \"@workspace/ui/components/checkbox\"\nimport { Field, FieldGroup, FieldLabel } from \"@workspace/ui/components/field\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nexport default function AccessibilityPreviewToggles() {\n  const [prefs, setPrefs] = React.useState({\n    large: false,\n    contrast: false,\n    underline: true,\n  })\n  const set = (key: keyof typeof prefs) => (value: boolean) =>\n    setPrefs((p) => ({ ...p, [key]: value }))\n\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-4\">\n      <FieldGroup className=\"gap-3\">\n        <Field orientation=\"horizontal\">\n          <Checkbox\n            id=\"a11y-large\"\n            checked={prefs.large}\n            onCheckedChange={set(\"large\")}\n          />\n          <FieldLabel htmlFor=\"a11y-large\">Larger text</FieldLabel>\n        </Field>\n        <Field orientation=\"horizontal\">\n          <Checkbox\n            id=\"a11y-contrast\"\n            checked={prefs.contrast}\n            onCheckedChange={set(\"contrast\")}\n          />\n          <FieldLabel htmlFor=\"a11y-contrast\">High contrast</FieldLabel>\n        </Field>\n        <Field orientation=\"horizontal\">\n          <Checkbox\n            id=\"a11y-underline\"\n            checked={prefs.underline}\n            onCheckedChange={set(\"underline\")}\n          />\n          <FieldLabel htmlFor=\"a11y-underline\">Underline links</FieldLabel>\n        </Field>\n      </FieldGroup>\n      <div\n        className={cn(\n          \"border p-4 transition-all\",\n          prefs.large ? \"text-base\" : \"text-xs\",\n          prefs.contrast ? \"bg-foreground text-background\" : \"bg-muted/40\"\n        )}\n      >\n        <p className=\"font-medium\">Preview</p>\n        <p className={cn(!prefs.contrast && \"text-muted-foreground\")}>\n          Your order has shipped.{\" \"}\n          <a\n            href=\"#\"\n            className={cn(\"font-medium\", prefs.underline && \"underline\")}\n          >\n            Track package\n          </a>\n        </p>\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

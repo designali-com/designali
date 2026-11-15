@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "progress-06",
+  "type": "registry:example",
+  "description": "Onboarding checklist whose progress bar reflects completed setup tasks.",
+  "files": [
+    {
+      "path": "registry/designali/examples/progress/progress-06.tsx",
+      "content": "import { CircleCheckIcon, CircleIcon } from \"lucide-react\"\n\nimport { Progress, ProgressLabel } from \"@workspace/ui/components/progress\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst tasks = [\n  { label: \"Create your workspace\", done: true },\n  { label: \"Invite teammates\", done: true },\n  { label: \"Connect a calendar\", done: true },\n  { label: \"Import your first project\", done: false },\n  { label: \"Set up notifications\", done: false },\n]\n\nexport default function OnboardingChecklistProgress() {\n  const done = tasks.filter((task) => task.done).length\n\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-4 border p-4\">\n      <Progress value={(done / tasks.length) * 100}>\n        <ProgressLabel className=\"text-sm font-medium\">\n          Get started\n        </ProgressLabel>\n        <span className=\"ms-auto text-xs text-muted-foreground\">\n          {done} of {tasks.length} complete\n        </span>\n      </Progress>\n      <ul className=\"flex flex-col gap-2\">\n        {tasks.map((task) => (\n          <li key={task.label} className=\"flex items-center gap-2 text-sm\">\n            {task.done ? (\n              <CircleCheckIcon className=\"size-4 text-primary\" />\n            ) : (\n              <CircleIcon className=\"size-4 text-muted-foreground\" />\n            )}\n            <span\n              className={cn(task.done && \"text-muted-foreground line-through\")}\n            >\n              {task.label}\n            </span>\n          </li>\n        ))}\n      </ul>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

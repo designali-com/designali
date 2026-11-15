@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "hover-card-13",
+  "type": "registry:example",
+  "description": "A file manager list where each file reveals size, owner, and last modified date.",
+  "files": [
+    {
+      "path": "registry/designali/examples/hover-card/hover-card-13.tsx",
+      "content": "import { FileSpreadsheetIcon, FileTextIcon, FileVideoIcon } from \"lucide-react\"\n\nimport {\n  HoverCard,\n  HoverCardContent,\n  HoverCardTrigger,\n} from \"@workspace/ui/components/hover-card\"\n\nconst files = [\n  {\n    name: \"Q3-forecast.xlsx\",\n    icon: FileSpreadsheetIcon,\n    size: \"248 KB\",\n    owner: \"Hana Ito\",\n    modified: \"Today, 9:14 AM\",\n  },\n  {\n    name: \"brand-guidelines.pdf\",\n    icon: FileTextIcon,\n    size: \"12.4 MB\",\n    owner: \"Leo Martins\",\n    modified: \"Mar 2, 2025\",\n  },\n  {\n    name: \"onboarding-video.mp4\",\n    icon: FileVideoIcon,\n    size: \"184 MB\",\n    owner: \"Sara Novak\",\n    modified: \"Feb 18, 2025\",\n  },\n]\n\nexport default function FileDetailsHoverCard() {\n  return (\n    <div className=\"w-full max-w-xs divide-y border\">\n      {files.map((file) => (\n        <HoverCard key={file.name}>\n          <HoverCardTrigger\n            delay={300}\n            render={\n              <div className=\"flex cursor-default items-center gap-2 px-3 py-2 text-sm hover:bg-muted\" />\n            }\n          >\n            <file.icon className=\"size-4 text-muted-foreground\" />\n            <span className=\"truncate\">{file.name}</span>\n          </HoverCardTrigger>\n          <HoverCardContent side=\"right\" className=\"w-56\">\n            <p className=\"mb-2 truncate font-medium\">{file.name}</p>\n            <dl className=\"grid grid-cols-[auto_1fr] gap-x-3 gap-y-1\">\n              <dt className=\"text-muted-foreground\">Size</dt>\n              <dd>{file.size}</dd>\n              <dt className=\"text-muted-foreground\">Owner</dt>\n              <dd>{file.owner}</dd>\n              <dt className=\"text-muted-foreground\">Modified</dt>\n              <dd>{file.modified}</dd>\n            </dl>\n          </HoverCardContent>\n        </HoverCard>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tabs-28",
+  "type": "registry:example",
+  "description": "Tabs where one panel shows an empty state with a call to action.",
+  "files": [
+    {
+      "path": "registry/designali/examples/tabs/tabs-28.tsx",
+      "content": "import { FilePenIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  Empty,\n  EmptyContent,\n  EmptyDescription,\n  EmptyHeader,\n  EmptyMedia,\n  EmptyTitle,\n} from \"@workspace/ui/components/empty\"\nimport {\n  Tabs,\n  TabsContent,\n  TabsList,\n  TabsTrigger,\n} from \"@workspace/ui/components/tabs\"\n\nexport default function EmptyStateTabs() {\n  return (\n    <Tabs defaultValue=\"drafts\" className=\"w-full max-w-sm\">\n      <TabsList>\n        <TabsTrigger value=\"published\">Published</TabsTrigger>\n        <TabsTrigger value=\"drafts\">Drafts</TabsTrigger>\n        <TabsTrigger value=\"scheduled\">Scheduled</TabsTrigger>\n      </TabsList>\n      <TabsContent value=\"published\" className=\"border p-3\">\n        How we cut build times by 60%\n      </TabsContent>\n      <TabsContent value=\"drafts\">\n        <Empty className=\"border\">\n          <EmptyHeader>\n            <EmptyMedia variant=\"icon\">\n              <FilePenIcon />\n            </EmptyMedia>\n            <EmptyTitle>No drafts</EmptyTitle>\n            <EmptyDescription>\n              Start writing and your drafts will be saved here.\n            </EmptyDescription>\n          </EmptyHeader>\n          <EmptyContent>\n            <Button size=\"sm\">New post</Button>\n          </EmptyContent>\n        </Empty>\n      </TabsContent>\n      <TabsContent value=\"scheduled\" className=\"border p-3\">\n        Release notes v4.2 · Nov 20, 09:00\n      </TabsContent>\n    </Tabs>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

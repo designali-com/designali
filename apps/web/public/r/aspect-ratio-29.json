@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "aspect-ratio-29",
+  "type": "registry:example",
+  "description": "A 2x2 grid of 16:9 participant tiles for a video call with mute indicators.",
+  "files": [
+    {
+      "path": "registry/designali/examples/aspect-ratio/aspect-ratio-29.tsx",
+      "content": "import { MicOffIcon } from \"lucide-react\"\n\nimport { AspectRatio } from \"@workspace/ui/components/aspect-ratio\"\nimport { Avatar, AvatarFallback } from \"@workspace/ui/components/avatar\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst people = [\n  {\n    name: \"Ada Brennan\",\n    tone: \"from-sky-700 to-sky-900\",\n    muted: false,\n    speaking: true,\n  },\n  {\n    name: \"Ravi Iyer\",\n    tone: \"from-emerald-700 to-emerald-900\",\n    muted: true,\n    speaking: false,\n  },\n  {\n    name: \"Lucia Ferro\",\n    tone: \"from-violet-700 to-violet-900\",\n    muted: false,\n    speaking: false,\n  },\n  {\n    name: \"Ken Ito\",\n    tone: \"from-zinc-700 to-zinc-900\",\n    muted: true,\n    speaking: false,\n  },\n]\n\nexport default function VideoCallTiles() {\n  return (\n    <div className=\"grid w-full max-w-md grid-cols-2 gap-1.5\">\n      {people.map((person) => (\n        <AspectRatio\n          key={person.name}\n          ratio={16 / 9}\n          className={cn(\n            \"overflow-hidden bg-linear-to-br\",\n            person.tone,\n            person.speaking && \"ring-2 ring-emerald-400\"\n          )}\n        >\n          <div className=\"absolute inset-0 flex items-center justify-center\">\n            <Avatar size=\"lg\">\n              <AvatarFallback>\n                {person.name\n                  .split(\" \")\n                  .map((part) => part[0])\n                  .join(\"\")}\n              </AvatarFallback>\n            </Avatar>\n          </div>\n          <span className=\"absolute start-1.5 bottom-1.5 flex items-center gap-1 bg-black/50 px-1.5 py-0.5 text-[10px] text-white\">\n            {person.muted && <MicOffIcon className=\"size-3 text-red-400\" />}\n            {person.name}\n          </span>\n        </AspectRatio>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

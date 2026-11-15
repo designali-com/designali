@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "label-50",
+  "type": "registry:example",
+  "description": "Transfer amount label showing the available balance and a max button.",
+  "files": [
+    {
+      "path": "registry/designali/examples/label/label-50.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport {\n  InputGroup,\n  InputGroupAddon,\n  InputGroupButton,\n  InputGroupInput,\n  InputGroupText,\n} from \"@workspace/ui/components/input-group\"\nimport { Label } from \"@workspace/ui/components/label\"\n\nexport default function AmountLabelWithBalance() {\n  const [amount, setAmount] = React.useState(\"\")\n\n  return (\n    <div className=\"grid w-full max-w-sm gap-2\">\n      <div className=\"flex items-center justify-between\">\n        <Label htmlFor=\"amount\">Amount</Label>\n        <span className=\"text-xs text-muted-foreground\">\n          Available:{\" \"}\n          <span className=\"font-medium text-foreground\">$3,218.40</span>\n        </span>\n      </div>\n      <InputGroup>\n        <InputGroupAddon>\n          <InputGroupText>$</InputGroupText>\n        </InputGroupAddon>\n        <InputGroupInput\n          id=\"amount\"\n          inputMode=\"decimal\"\n          placeholder=\"0.00\"\n          value={amount}\n          onChange={(e) => setAmount(e.target.value)}\n        />\n        <InputGroupAddon align=\"inline-end\">\n          <InputGroupButton size=\"xs\" onClick={() => setAmount(\"3218.40\")}>\n            Max\n          </InputGroupButton>\n        </InputGroupAddon>\n      </InputGroup>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

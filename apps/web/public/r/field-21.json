@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "field-21",
+  "type": "registry:example",
+  "description": "Field rendering several validation errors from an errors array as a bulleted list.",
+  "files": [
+    {
+      "path": "registry/designali/examples/field/field-21.tsx",
+      "content": "import { Field, FieldError, FieldLabel } from \"@workspace/ui/components/field\"\nimport { Input } from \"@workspace/ui/components/input\"\n\nconst errors = [\n  { message: \"Username must be at least 4 characters.\" },\n  { message: \"Only lowercase letters, numbers, and dashes are allowed.\" },\n  { message: \"Username must be at least 4 characters.\" },\n]\n\nexport default function MultipleErrorsField() {\n  return (\n    <Field data-invalid=\"true\" className=\"w-full max-w-xs\">\n      <FieldLabel htmlFor=\"handle-errors\">Handle</FieldLabel>\n      <Input id=\"handle-errors\" defaultValue=\"J_\" aria-invalid=\"true\" />\n      <FieldError errors={errors} />\n    </Field>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

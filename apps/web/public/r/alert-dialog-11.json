@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "alert-dialog-11",
+  "type": "registry:example",
+  "description": "Small destructive dialog for ending a video call for every participant.",
+  "files": [
+    {
+      "path": "registry/designali/examples/alert-dialog/alert-dialog-11.tsx",
+      "content": "import { PhoneOffIcon } from \"lucide-react\"\n\nimport {\n  AlertDialog,\n  AlertDialogAction,\n  AlertDialogCancel,\n  AlertDialogContent,\n  AlertDialogDescription,\n  AlertDialogFooter,\n  AlertDialogHeader,\n  AlertDialogMedia,\n  AlertDialogTitle,\n  AlertDialogTrigger,\n} from \"@workspace/ui/components/alert-dialog\"\nimport { Button } from \"@workspace/ui/components/button\"\n\nexport default function EndMeetingForAll() {\n  return (\n    <AlertDialog>\n      <AlertDialogTrigger render={<Button variant=\"destructive\" />}>\n        <PhoneOffIcon data-icon=\"inline-start\" />\n        End call\n      </AlertDialogTrigger>\n      <AlertDialogContent size=\"sm\">\n        <AlertDialogHeader>\n          <AlertDialogMedia className=\"bg-destructive/10 text-destructive\">\n            <PhoneOffIcon />\n          </AlertDialogMedia>\n          <AlertDialogTitle>End meeting for all?</AlertDialogTitle>\n          <AlertDialogDescription>\n            All 9 participants will be disconnected.\n          </AlertDialogDescription>\n        </AlertDialogHeader>\n        <AlertDialogFooter>\n          <AlertDialogCancel>Cancel</AlertDialogCancel>\n          <AlertDialogAction variant=\"destructive\">\n            End for all\n          </AlertDialogAction>\n        </AlertDialogFooter>\n      </AlertDialogContent>\n    </AlertDialog>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

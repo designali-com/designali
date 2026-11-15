@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "select-22",
+  "type": "registry:example",
+  "description": "Billing cycle select on a plan card that recalculates price and savings.",
+  "files": [
+    {
+      "path": "registry/designali/examples/select/select-22.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  Card,\n  CardContent,\n  CardDescription,\n  CardFooter,\n  CardHeader,\n  CardTitle,\n} from \"@workspace/ui/components/card\"\nimport {\n  Select,\n  SelectContent,\n  SelectItem,\n  SelectTrigger,\n  SelectValue,\n} from \"@workspace/ui/components/select\"\n\nconst cycles = [\n  { label: \"Monthly\", value: \"monthly\", price: 20, note: \"Billed every month\" },\n  { label: \"Quarterly\", value: \"quarterly\", price: 18, note: \"Save 10%\" },\n  { label: \"Yearly\", value: \"yearly\", price: 16, note: \"Save 20%\" },\n]\n\nexport default function BillingCycleSelect() {\n  const [cycle, setCycle] = React.useState<string | null>(\"yearly\")\n  const current = cycles.find((item) => item.value === cycle) ?? cycles[0]!\n\n  return (\n    <Card className=\"w-full max-w-xs\">\n      <CardHeader>\n        <CardTitle>Studio plan</CardTitle>\n        <CardDescription>For small creative teams.</CardDescription>\n      </CardHeader>\n      <CardContent className=\"flex flex-col gap-3\">\n        <div className=\"flex items-baseline gap-1\">\n          <span className=\"text-3xl font-semibold\">{\"$\" + current.price}</span>\n          <span className=\"text-sm text-muted-foreground\">\n            per seat / month\n          </span>\n        </div>\n        <Select items={cycles} value={cycle} onValueChange={setCycle}>\n          <SelectTrigger className=\"w-full\" aria-label=\"Billing cycle\">\n            <SelectValue />\n          </SelectTrigger>\n          <SelectContent>\n            {cycles.map((item) => (\n              <SelectItem key={item.value} value={item.value}>\n                {item.label}\n                <span className=\"ms-auto ps-4 text-muted-foreground\">\n                  {item.note}\n                </span>\n              </SelectItem>\n            ))}\n          </SelectContent>\n        </Select>\n      </CardContent>\n      <CardFooter>\n        <Button className=\"w-full\">Upgrade</Button>\n      </CardFooter>\n    </Card>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

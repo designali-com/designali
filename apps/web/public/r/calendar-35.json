@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "calendar-35",
+  "type": "registry:example",
+  "description": "Calendar rendered in a chosen IANA time zone so today and selections follow that zone.",
+  "files": [
+    {
+      "path": "registry/designali/examples/calendar/calendar-35.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { GlobeIcon } from \"lucide-react\"\n\nimport { Calendar } from \"@workspace/ui/components/calendar\"\nimport {\n  NativeSelect,\n  NativeSelectOption,\n} from \"@workspace/ui/components/native-select\"\n\nconst zones = [\n  { value: \"America/Los_Angeles\", label: \"Los Angeles\" },\n  { value: \"Europe/London\", label: \"London\" },\n  { value: \"Asia/Tokyo\", label: \"Tokyo\" },\n  { value: \"Pacific/Auckland\", label: \"Auckland\" },\n]\n\nexport default function TimeZoneCalendar() {\n  const [zone, setZone] = React.useState(\"Asia/Tokyo\")\n  const [date, setDate] = React.useState<undefined | Date>()\n  const [now] = React.useState(() => new Date())\n  const fmt = (d: Date, opts: Intl.DateTimeFormatOptions) =>\n    d.toLocaleString(\"en-US\", { timeZone: zone, ...opts })\n\n  return (\n    <div className=\"flex w-full max-w-xs flex-col gap-3\">\n      <div className=\"flex items-center justify-between gap-2\">\n        <span className=\"flex items-center gap-1.5 text-xs font-medium\">\n          <GlobeIcon className=\"size-4 text-muted-foreground\" />\n          Time zone\n        </span>\n        <NativeSelect\n          size=\"sm\"\n          value={zone}\n          onChange={(e) => setZone(e.target.value)}\n          aria-label=\"Time zone\"\n        >\n          {zones.map((z) => (\n            <NativeSelectOption key={z.value} value={z.value}>\n              {z.label}\n            </NativeSelectOption>\n          ))}\n        </NativeSelect>\n      </div>\n      <Calendar\n        key={zone}\n        mode=\"single\"\n        timeZone={zone}\n        selected={date}\n        onSelect={setDate}\n        className=\"self-center border\"\n      />\n      <p className=\"text-center text-xs text-muted-foreground\">\n        It&apos;s{\" \"}\n        {fmt(now, {\n          weekday: \"short\",\n          month: \"short\",\n          day: \"numeric\",\n          hour: \"numeric\",\n          minute: \"2-digit\",\n        })}{\" \"}\n        in {zones.find((z) => z.value === zone)?.label}\n        {date\n          ? \" · Selected \" + fmt(date, { month: \"short\", day: \"numeric\" })\n          : \"\"}\n      </p>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

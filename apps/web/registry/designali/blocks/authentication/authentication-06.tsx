@@ -26,7 +26,7 @@ function QrCode() {
     [0, 0],
     [SIZE - 7, 0],
     [0, SIZE - 7],
-  ]
+  ] as const
   return (
     <svg viewBox={`-1 -1 ${SIZE + 2} ${SIZE + 2}`} className="size-full" aria-label="Authenticator QR code">
       <rect x={-1} y={-1} width={SIZE + 2} height={SIZE + 2} fill="white" />

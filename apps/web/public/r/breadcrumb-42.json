@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "breadcrumb-42",
+  "type": "registry:example",
+  "description": "Collapses middle levels beyond a maximum and expands them inline when the ellipsis is clicked.",
+  "files": [
+    {
+      "path": "registry/designali/examples/breadcrumb/breadcrumb-42.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport {\n  Breadcrumb,\n  BreadcrumbEllipsis,\n  BreadcrumbItem,\n  BreadcrumbLink,\n  BreadcrumbList,\n  BreadcrumbPage,\n  BreadcrumbSeparator,\n} from \"@workspace/ui/components/breadcrumb\"\n\nconst path = [\n  \"Home\",\n  \"Teams\",\n  \"Design\",\n  \"Research\",\n  \"Interviews\",\n  \"Round 2\",\n  \"Session notes\",\n]\nconst MAX_ITEMS = 3\n\nexport default function ExpandableEllipsisBreadcrumb() {\n  const [expanded, setExpanded] = React.useState(false)\n  const collapsed = !expanded && path.length > MAX_ITEMS\n  const visible = collapsed ? [path[0]!, ...path.slice(-2)] : path\n\n  return (\n    <Breadcrumb>\n      <BreadcrumbList>\n        {visible.map((item, index) => {\n          const isLast = index === visible.length - 1\n          return (\n            <React.Fragment key={item}>\n              <BreadcrumbItem>\n                {isLast ? (\n                  <BreadcrumbPage>{item}</BreadcrumbPage>\n                ) : (\n                  <BreadcrumbLink href=\"#\">{item}</BreadcrumbLink>\n                )}\n              </BreadcrumbItem>\n              {!isLast && <BreadcrumbSeparator />}\n              {collapsed && index === 0 && (\n                <>\n                  <BreadcrumbItem>\n                    <button\n                      type=\"button\"\n                      aria-label=\"Show full path\"\n                      className=\"hover:text-foreground\"\n                      onClick={() => setExpanded(true)}\n                    >\n                      <BreadcrumbEllipsis />\n                    </button>\n                  </BreadcrumbItem>\n                  <BreadcrumbSeparator />\n                </>\n              )}\n            </React.Fragment>\n          )\n        })}\n      </BreadcrumbList>\n    </Breadcrumb>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

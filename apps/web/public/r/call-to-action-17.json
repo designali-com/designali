@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "call-to-action-17",
+  "type": "registry:block",
+  "description": "App download card with star rating, store buttons and a CSS-drawn QR code on desktop.",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "registry/designali/blocks/call-to-action/call-to-action-17.tsx",
+      "content": "import { Apple, Smartphone, Star } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\n\nconst pattern = [\n  \"1111111001011111110\",\n  \"1000001010001000001\",\n  \"1011101001101011101\",\n  \"1011101100101011101\",\n  \"1011101011001011101\",\n  \"1000001001101000001\",\n  \"1111111010101111111\",\n  \"0000000011000000000\",\n  \"1101011100111010110\",\n  \"0110100011010101101\",\n  \"1011011101101100110\",\n  \"0000000010110010101\",\n  \"1111111001011101011\",\n  \"1000001011100110100\",\n  \"1011101000111011011\",\n  \"1011101011010001100\",\n  \"1011101001101110101\",\n  \"1000001010011001010\",\n  \"1111111011101010111\",\n]\n\nexport default function CallToAction17() {\n  return (\n    <section className=\"w-full bg-background px-6 py-20 md:py-28\">\n      <div className=\"mx-auto grid max-w-6xl items-center gap-12 border border-border bg-gradient-to-br from-emerald-50 to-background p-8 md:grid-cols-[1fr_auto] md:p-14 dark:from-emerald-950/30\">\n        <div>\n          <div className=\"flex items-center gap-1 text-amber-500\">\n            {Array.from({ length: 5 }).map((_, i) => (\n              <Star key={i} className=\"size-4 fill-current\" />\n            ))}\n            <span className=\"ml-2 text-xs text-muted-foreground\">\n              4.8 from 21,000 ratings\n            </span>\n          </div>\n          <h2 className=\"mt-5 text-3xl font-medium tracking-tight md:text-5xl\">\n            Your budget, in your pocket.\n          </h2>\n          <p className=\"mt-4 max-w-md text-sm leading-7 text-muted-foreground\">\n            Tally syncs every account overnight and tells you, in plain words,\n            what you can safely spend today.\n          </p>\n          <div className=\"mt-8 flex flex-col gap-3 sm:flex-row\">\n            <Button size=\"lg\" nativeButton={false} render={<a href=\"#\" />}>\n              <Apple data-icon=\"inline-start\" />\n              App Store\n            </Button>\n            <Button\n              size=\"lg\"\n              variant=\"outline\"\n              nativeButton={false}\n              render={<a href=\"#\" />}\n            >\n              <Smartphone data-icon=\"inline-start\" />\n              Google Play\n            </Button>\n          </div>\n        </div>\n        <div className=\"hidden flex-col items-center gap-3 md:flex\">\n          <div className=\"border border-border bg-white p-3\">\n            <div\n              className=\"grid size-40 gap-0\"\n              style={{ gridTemplateColumns: \"repeat(19, minmax(0, 1fr))\" }}\n              aria-hidden\n            >\n              {pattern.flatMap((row, r) =>\n                row\n                  .split(\"\")\n                  .map((c, col) => (\n                    <span\n                      key={`${r}-${col}`}\n                      className={c === \"1\" ? \"bg-neutral-900\" : \"bg-white\"}\n                    />\n                  ))\n              )}\n            </div>\n          </div>\n          <span className=\"text-xs text-muted-foreground\">\n            Scan to download\n          </span>\n        </div>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "560px"
+  },
+  "categories": [
+    "call-to-action"
+  ]
+}

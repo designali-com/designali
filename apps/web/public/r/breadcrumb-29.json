@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "breadcrumb-29",
+  "type": "registry:example",
+  "description": "Breadcrumb used inside a card header to show where a report lives.",
+  "files": [
+    {
+      "path": "registry/designali/examples/breadcrumb/breadcrumb-29.tsx",
+      "content": "import {\n  Breadcrumb,\n  BreadcrumbItem,\n  BreadcrumbLink,\n  BreadcrumbList,\n  BreadcrumbPage,\n  BreadcrumbSeparator,\n} from \"@workspace/ui/components/breadcrumb\"\nimport {\n  Card,\n  CardContent,\n  CardDescription,\n  CardHeader,\n  CardTitle,\n} from \"@workspace/ui/components/card\"\n\nexport default function CardHeaderBreadcrumb() {\n  return (\n    <Card className=\"w-full max-w-sm\">\n      <CardHeader>\n        <Breadcrumb>\n          <BreadcrumbList>\n            <BreadcrumbItem>\n              <BreadcrumbLink href=\"#\">Reports</BreadcrumbLink>\n            </BreadcrumbItem>\n            <BreadcrumbSeparator />\n            <BreadcrumbItem>\n              <BreadcrumbPage>Weekly signups</BreadcrumbPage>\n            </BreadcrumbItem>\n          </BreadcrumbList>\n        </Breadcrumb>\n        <CardTitle>2,418 new accounts</CardTitle>\n        <CardDescription>\n          Up 12% compared with the previous week.\n        </CardDescription>\n      </CardHeader>\n      <CardContent>\n        <div className=\"flex h-16 items-end gap-1\">\n          {[40, 55, 35, 70, 60, 85, 75].map((value, index) => (\n            <div\n              key={index}\n              className=\"flex-1 bg-primary/80\"\n              style={{ height: value + \"%\" }}\n            />\n          ))}\n        </div>\n      </CardContent>\n    </Card>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

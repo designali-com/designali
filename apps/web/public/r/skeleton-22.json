@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "skeleton-22",
+  "type": "registry:example",
+  "description": "Music playlist placeholder with cover art header and numbered track rows.",
+  "files": [
+    {
+      "path": "registry/designali/examples/skeleton/skeleton-22.tsx",
+      "content": "import { Skeleton } from \"@workspace/ui/components/skeleton\"\n\nexport default function PlaylistSkeleton() {\n  return (\n    <div className=\"flex w-full max-w-md flex-col gap-4\">\n      <div className=\"flex items-end gap-4\">\n        <Skeleton className=\"size-24 shrink-0\" />\n        <div className=\"flex flex-1 flex-col gap-2\">\n          <Skeleton className=\"h-2.5 w-14\" />\n          <Skeleton className=\"h-6 w-3/4\" />\n          <Skeleton className=\"h-3 w-1/2\" />\n        </div>\n      </div>\n      <div className=\"flex flex-col\">\n        {Array.from({ length: 5 }).map((_, i) => (\n          <div key={i} className=\"flex items-center gap-3 py-2\">\n            <span className=\"w-4 text-center text-xs text-muted-foreground tabular-nums\">\n              {i + 1}\n            </span>\n            <Skeleton className=\"size-9\" />\n            <div className=\"flex flex-1 flex-col gap-1.5\">\n              <Skeleton className=\"h-3 w-40\" />\n              <Skeleton className=\"h-2.5 w-24\" />\n            </div>\n            <Skeleton className=\"h-2.5 w-8\" />\n          </div>\n        ))}\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

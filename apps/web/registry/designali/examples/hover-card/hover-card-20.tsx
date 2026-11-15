@@ -1,0 +1,55 @@
+import { HashIcon, UsersIcon } from "lucide-react"
+
+import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
+import { Button } from "@workspace/ui/components/button"
+import {
+  HoverCard,
+  HoverCardContent,
+  HoverCardTrigger,
+} from "@workspace/ui/components/hover-card"
+
+export default function ChannelMentionHoverCard() {
+  return (
+    <div className="flex w-full max-w-sm gap-2 text-sm">
+      <Avatar size="sm">
+        <AvatarFallback>KB</AvatarFallback>
+      </Avatar>
+      <div>
+        <p className="font-medium">
+          Kofi Boateng{" "}
+          <span className="text-xs font-normal text-muted-foreground">
+            11:02
+          </span>
+        </p>
+        <p>
+          Release notes are up, discuss in{" "}
+          <HoverCard>
+            <HoverCardTrigger
+              href="#"
+              className="bg-blue-500/10 px-1 font-medium text-blue-600 dark:text-blue-400"
+            >
+              #launch-room
+            </HoverCardTrigger>
+            <HoverCardContent className="flex flex-col gap-2">
+              <div className="flex items-center gap-1.5 font-medium">
+                <HashIcon className="size-3.5" />
+                launch-room
+              </div>
+              <p className="text-muted-foreground">
+                Coordination for the v4.0 launch: timelines, blockers, and
+                go/no-go calls.
+              </p>
+              <div className="flex items-center justify-between">
+                <span className="flex items-center gap-1 text-muted-foreground">
+                  <UsersIcon className="size-3.5" />
+                  42 members
+                </span>
+                <Button size="xs">Join channel</Button>
+              </div>
+            </HoverCardContent>
+          </HoverCard>
+        </p>
+      </div>
+    </div>
+  )
+}

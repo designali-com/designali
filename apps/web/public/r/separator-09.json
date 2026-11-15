@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "separator-09",
+  "type": "registry:example",
+  "description": "Article byline metadata separated by short vertical separators.",
+  "files": [
+    {
+      "path": "registry/designali/examples/separator/separator-09.tsx",
+      "content": "import { Badge } from \"@workspace/ui/components/badge\"\nimport { Separator } from \"@workspace/ui/components/separator\"\n\nexport default function ArticleMetaInline() {\n  return (\n    <div className=\"flex w-full max-w-md flex-col gap-2\">\n      <h3 className=\"text-lg leading-tight font-semibold\">\n        Designing calmer notification systems\n      </h3>\n      <div className=\"flex h-4 flex-wrap items-center gap-3 text-xs text-muted-foreground\">\n        <span>Owen Hartley</span>\n        <Separator orientation=\"vertical\" />\n        <span>May 4, 2026</span>\n        <Separator orientation=\"vertical\" />\n        <span>6 min read</span>\n        <Separator orientation=\"vertical\" />\n        <Badge variant=\"secondary\">Product</Badge>\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

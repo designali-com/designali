@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "table-03",
+  "type": "registry:example",
+  "description": "Recent orders with status badges, customer names, and right-aligned totals.",
+  "files": [
+    {
+      "path": "registry/designali/examples/table/table-03.tsx",
+      "content": "import { Badge } from \"@workspace/ui/components/badge\"\nimport {\n  Table,\n  TableBody,\n  TableCell,\n  TableHead,\n  TableHeader,\n  TableRow,\n} from \"@workspace/ui/components/table\"\n\nconst orders = [\n  {\n    id: \"#3210\",\n    customer: \"Olivia Martin\",\n    date: \"Nov 12\",\n    status: \"Fulfilled\",\n    total: 129.0,\n  },\n  {\n    id: \"#3209\",\n    customer: \"Jackson Lee\",\n    date: \"Nov 12\",\n    status: \"Processing\",\n    total: 39.5,\n  },\n  {\n    id: \"#3208\",\n    customer: \"Isabella Nguyen\",\n    date: \"Nov 11\",\n    status: \"Refunded\",\n    total: 299.0,\n  },\n  {\n    id: \"#3207\",\n    customer: \"William Kim\",\n    date: \"Nov 10\",\n    status: \"Fulfilled\",\n    total: 74.25,\n  },\n]\n\nconst statusVariant: Record<string, \"default\" | \"secondary\" | \"destructive\"> = {\n  Fulfilled: \"default\",\n  Processing: \"secondary\",\n  Refunded: \"destructive\",\n}\n\nexport default function OrderStatusTable() {\n  return (\n    <div className=\"w-full max-w-xl border\">\n      <Table>\n        <TableHeader>\n          <TableRow>\n            <TableHead>Order</TableHead>\n            <TableHead>Customer</TableHead>\n            <TableHead>Date</TableHead>\n            <TableHead>Status</TableHead>\n            <TableHead className=\"text-right\">Total</TableHead>\n          </TableRow>\n        </TableHeader>\n        <TableBody>\n          {orders.map((order) => (\n            <TableRow key={order.id}>\n              <TableCell className=\"font-medium\">{order.id}</TableCell>\n              <TableCell>{order.customer}</TableCell>\n              <TableCell className=\"text-muted-foreground\">\n                {order.date}\n              </TableCell>\n              <TableCell>\n                <Badge variant={statusVariant[order.status]}>\n                  {order.status}\n                </Badge>\n              </TableCell>\n              <TableCell className=\"text-right tabular-nums\">\n                {\"$\" + order.total.toFixed(2)}\n              </TableCell>\n            </TableRow>\n          ))}\n        </TableBody>\n      </Table>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

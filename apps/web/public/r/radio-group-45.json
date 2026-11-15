@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "radio-group-45",
+  "type": "registry:example",
+  "description": "Cookie consent banner with essential, analytics, and full tracking levels.",
+  "files": [
+    {
+      "path": "registry/designali/examples/radio-group/radio-group-45.tsx",
+      "content": "import { CookieIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  Field,\n  FieldContent,\n  FieldDescription,\n  FieldLabel,\n} from \"@workspace/ui/components/field\"\nimport {\n  RadioGroup,\n  RadioGroupItem,\n} from \"@workspace/ui/components/radio-group\"\n\nexport default function CookieConsentLevels() {\n  return (\n    <div className=\"flex w-full max-w-md flex-col gap-4 border p-4\">\n      <div className=\"flex items-center gap-2\">\n        <CookieIcon className=\"size-4\" />\n        <span className=\"text-sm font-medium\">Cookie preferences</span>\n      </div>\n      <RadioGroup defaultValue=\"analytics\" className=\"gap-3\">\n        <Field orientation=\"horizontal\">\n          <RadioGroupItem value=\"essential\" id=\"cookie-essential\" />\n          <FieldContent>\n            <FieldLabel htmlFor=\"cookie-essential\">Essential only</FieldLabel>\n            <FieldDescription>\n              Required for sign-in and checkout.\n            </FieldDescription>\n          </FieldContent>\n        </Field>\n        <Field orientation=\"horizontal\">\n          <RadioGroupItem value=\"analytics\" id=\"cookie-analytics\" />\n          <FieldContent>\n            <FieldLabel htmlFor=\"cookie-analytics\">\n              Essential + analytics\n            </FieldLabel>\n            <FieldDescription>\n              Helps us understand which pages are useful.\n            </FieldDescription>\n          </FieldContent>\n        </Field>\n        <Field orientation=\"horizontal\">\n          <RadioGroupItem value=\"all\" id=\"cookie-all\" />\n          <FieldContent>\n            <FieldLabel htmlFor=\"cookie-all\">All cookies</FieldLabel>\n            <FieldDescription>\n              Includes personalized recommendations.\n            </FieldDescription>\n          </FieldContent>\n        </Field>\n      </RadioGroup>\n      <div className=\"flex justify-end gap-2\">\n        <Button variant=\"outline\" size=\"sm\">\n          Reject all\n        </Button>\n        <Button size=\"sm\">Save choices</Button>\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

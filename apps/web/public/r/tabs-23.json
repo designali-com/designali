@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tabs-23",
+  "type": "registry:example",
+  "description": "Editor file tabs that can be closed, falling back to a neighbouring tab.",
+  "files": [
+    {
+      "path": "registry/designali/examples/tabs/tabs-23.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { FileCodeIcon, XIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  Tabs,\n  TabsContent,\n  TabsList,\n  TabsTrigger,\n} from \"@workspace/ui/components/tabs\"\n\nconst initial = [\"index.ts\", \"router.ts\", \"styles.css\", \"README.md\"]\n\nexport default function CloseableEditorTabs() {\n  const [files, setFiles] = React.useState(initial)\n  const [active, setActive] = React.useState(\"router.ts\")\n\n  function close(name: string) {\n    const next = files.filter((f) => f !== name)\n    setFiles(next)\n    if (active === name && next.length)\n      setActive(next[Math.max(0, files.indexOf(name) - 1)]!)\n  }\n\n  if (!files.length) {\n    return (\n      <div className=\"flex w-full max-w-md flex-col items-center gap-2 border p-6 text-xs text-muted-foreground\">\n        All files closed.\n        <Button\n          size=\"xs\"\n          variant=\"outline\"\n          onClick={() => {\n            setFiles(initial)\n            setActive(initial[0]!)\n          }}\n        >\n          Reopen files\n        </Button>\n      </div>\n    )\n  }\n\n  return (\n    <Tabs\n      value={active}\n      onValueChange={(v) => setActive(v as string)}\n      className=\"w-full max-w-md gap-0 border\"\n    >\n      <TabsList className=\"h-8 w-full justify-start overflow-x-auto p-0\">\n        {files.map((f) => (\n          <div key={f} className=\"group flex h-full items-center border-e\">\n            <TabsTrigger value={f} className=\"flex-none px-2.5 font-mono\">\n              <FileCodeIcon data-icon=\"inline-start\" />\n              {f}\n            </TabsTrigger>\n            <button\n              type=\"button\"\n              aria-label={\"Close \" + f}\n              onClick={() => close(f)}\n              className=\"me-1 p-0.5 text-muted-foreground hover:bg-muted hover:text-foreground\"\n            >\n              <XIcon className=\"size-3\" />\n            </button>\n          </div>\n        ))}\n      </TabsList>\n      {files.map((f) => (\n        <TabsContent\n          key={f}\n          value={f}\n          className=\"p-3 font-mono text-muted-foreground\"\n        >\n          {\"// \" + f + \" — 42 lines\"}\n        </TabsContent>\n      ))}\n    </Tabs>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

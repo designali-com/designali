@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "badge-26",
+  "type": "registry:example",
+  "description": "An invoices list with paid, overdue, draft, and scheduled status badges.",
+  "files": [
+    {
+      "path": "registry/designali/examples/badge/badge-26.tsx",
+      "content": "import { Badge } from \"@workspace/ui/components/badge\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst invoices = [\n  {\n    id: \"INV-1042\",\n    client: \"Northlake Dental\",\n    amount: \"$2,400.00\",\n    status: \"Paid\",\n  },\n  {\n    id: \"INV-1043\",\n    client: \"Fern & Finch\",\n    amount: \"$860.00\",\n    status: \"Overdue\",\n  },\n  {\n    id: \"INV-1044\",\n    client: \"Orbit Fitness\",\n    amount: \"$1,125.50\",\n    status: \"Scheduled\",\n  },\n  { id: \"INV-1045\", client: \"Quill Press\", amount: \"$340.00\", status: \"Draft\" },\n]\n\nexport default function InvoiceStatusList() {\n  return (\n    <div className=\"w-full max-w-md divide-y border\">\n      {invoices.map((invoice) => (\n        <div key={invoice.id} className=\"flex items-center gap-3 p-3\">\n          <div className=\"min-w-0 flex-1\">\n            <p className=\"truncate text-sm font-medium\">{invoice.client}</p>\n            <p className=\"font-mono text-xs text-muted-foreground\">\n              {invoice.id}\n            </p>\n          </div>\n          <span className=\"text-sm tabular-nums\">{invoice.amount}</span>\n          <Badge\n            variant={\n              invoice.status === \"Overdue\"\n                ? \"destructive\"\n                : invoice.status === \"Draft\"\n                  ? \"outline\"\n                  : \"secondary\"\n            }\n            className={cn(\n              \"w-20\",\n              invoice.status === \"Paid\" &&\n                \"bg-emerald-50 text-emerald-700 dark:bg-emerald-950 dark:text-emerald-300\"\n            )}\n          >\n            {invoice.status}\n          </Badge>\n        </div>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

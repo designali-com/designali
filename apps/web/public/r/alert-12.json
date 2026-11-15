@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "alert-12",
+  "type": "registry:example",
+  "description": "Error summary alert listing invalid fields above a sign-up form.",
+  "files": [
+    {
+      "path": "registry/designali/examples/alert/alert-12.tsx",
+      "content": "\"use client\"\n\nimport { CircleAlertIcon } from \"lucide-react\"\n\nimport {\n  Alert,\n  AlertDescription,\n  AlertTitle,\n} from \"@workspace/ui/components/alert\"\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Input } from \"@workspace/ui/components/input\"\nimport { Label } from \"@workspace/ui/components/label\"\n\nconst errors = [\n  { field: \"email\", message: \"Enter a valid work email\" },\n  { field: \"password\", message: \"Password must be at least 12 characters\" },\n]\n\nexport default function AlertFormErrorSummary() {\n  return (\n    <form\n      className=\"w-full max-w-sm space-y-3\"\n      onSubmit={(e) => e.preventDefault()}\n    >\n      <Alert variant=\"error\">\n        <CircleAlertIcon />\n        <AlertTitle>Fix 2 fields to continue</AlertTitle>\n        <AlertDescription>\n          <ul className=\"list-disc ps-4\">\n            {errors.map((error) => (\n              <li key={error.field}>\n                <a href={\"#\" + error.field}>{error.message}</a>\n              </li>\n            ))}\n          </ul>\n        </AlertDescription>\n      </Alert>\n      <div className=\"space-y-1.5\">\n        <Label htmlFor=\"email\">Work email</Label>\n        <Input id=\"email\" defaultValue=\"lena@\" aria-invalid />\n      </div>\n      <div className=\"space-y-1.5\">\n        <Label htmlFor=\"password\">Password</Label>\n        <Input\n          id=\"password\"\n          type=\"password\"\n          defaultValue=\"short\"\n          aria-invalid\n        />\n      </div>\n      <Button type=\"submit\" className=\"w-full\">\n        Create account\n      </Button>\n    </form>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

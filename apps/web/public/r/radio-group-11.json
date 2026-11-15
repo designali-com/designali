@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "radio-group-11",
+  "type": "registry:example",
+  "description": "Entire radio group disabled because the setting is managed by an admin.",
+  "files": [
+    {
+      "path": "registry/designali/examples/radio-group/radio-group-11.tsx",
+      "content": "import { LockIcon } from \"lucide-react\"\n\nimport {\n  Field,\n  FieldDescription,\n  FieldLabel,\n  FieldLegend,\n  FieldSet,\n} from \"@workspace/ui/components/field\"\nimport {\n  RadioGroup,\n  RadioGroupItem,\n} from \"@workspace/ui/components/radio-group\"\n\nexport default function AdminLockedRadioGroup() {\n  return (\n    <FieldSet className=\"w-full max-w-sm\" disabled>\n      <FieldLegend variant=\"label\" className=\"flex items-center gap-1.5\">\n        <LockIcon className=\"size-3.5\" />\n        File sharing\n      </FieldLegend>\n      <RadioGroup defaultValue=\"org\" disabled>\n        <Field orientation=\"horizontal\" data-disabled>\n          <RadioGroupItem value=\"anyone\" id=\"share-anyone\" />\n          <FieldLabel htmlFor=\"share-anyone\" className=\"font-normal\">\n            Anyone with the link\n          </FieldLabel>\n        </Field>\n        <Field orientation=\"horizontal\" data-disabled>\n          <RadioGroupItem value=\"org\" id=\"share-org\" />\n          <FieldLabel htmlFor=\"share-org\" className=\"font-normal\">\n            People in Fernwood Labs\n          </FieldLabel>\n        </Field>\n        <Field orientation=\"horizontal\" data-disabled>\n          <RadioGroupItem value=\"none\" id=\"share-none\" />\n          <FieldLabel htmlFor=\"share-none\" className=\"font-normal\">\n            Invited people only\n          </FieldLabel>\n        </Field>\n      </RadioGroup>\n      <FieldDescription>\n        This setting is managed by your workspace admin.\n      </FieldDescription>\n    </FieldSet>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

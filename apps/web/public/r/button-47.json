@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button-47",
+  "type": "registry:example",
+  "description": "Extra-small preset buttons for picking a dashboard date range.",
+  "files": [
+    {
+      "path": "registry/designali/examples/button/button-47.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { CalendarRangeIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\n\nconst presets = [\"Today\", \"7D\", \"30D\", \"90D\", \"YTD\"]\n\nexport default function DateRangePresetButtons() {\n  const [range, setRange] = React.useState(\"30D\")\n\n  return (\n    <div className=\"flex items-center gap-2\">\n      <CalendarRangeIcon className=\"size-4 text-muted-foreground\" />\n      <div className=\"flex border p-0.5\">\n        {presets.map((preset) => (\n          <Button\n            key={preset}\n            size=\"xs\"\n            variant={range === preset ? \"secondary\" : \"ghost\"}\n            aria-pressed={range === preset}\n            onClick={() => setRange(preset)}\n          >\n            {preset}\n          </Button>\n        ))}\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

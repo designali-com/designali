@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "field-08",
+  "type": "registry:example",
+  "description": "Checkbox choice cards for optional add-ons with a running monthly total.",
+  "files": [
+    {
+      "path": "registry/designali/examples/field/field-08.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { Checkbox } from \"@workspace/ui/components/checkbox\"\nimport {\n  Field,\n  FieldContent,\n  FieldDescription,\n  FieldGroup,\n  FieldLabel,\n  FieldLegend,\n  FieldSet,\n  FieldTitle,\n} from \"@workspace/ui/components/field\"\n\nconst addons = [\n  { id: \"backups\", title: \"Daily backups\", hint: \"30-day retention\", price: 8 },\n  { id: \"sso\", title: \"Single sign-on\", hint: \"SAML and SCIM\", price: 25 },\n  {\n    id: \"support\",\n    title: \"Priority support\",\n    hint: \"4-hour response time\",\n    price: 40,\n  },\n]\n\nexport default function AddOnCheckboxCards() {\n  const [selected, setSelected] = React.useState<string[]>([\"backups\"])\n  const total = addons\n    .filter((a) => selected.includes(a.id))\n    .reduce((sum, a) => sum + a.price, 0)\n\n  return (\n    <FieldSet className=\"w-full max-w-sm\">\n      <FieldLegend>Add-ons</FieldLegend>\n      <FieldDescription>\n        Extend your workspace. Cancel any time.\n      </FieldDescription>\n      <FieldGroup className=\"gap-2\">\n        {addons.map((a) => (\n          <FieldLabel key={a.id} htmlFor={\"addon-\" + a.id}>\n            <Field orientation=\"horizontal\">\n              <Checkbox\n                id={\"addon-\" + a.id}\n                checked={selected.includes(a.id)}\n                onCheckedChange={(checked) =>\n                  setSelected((prev) =>\n                    checked ? [...prev, a.id] : prev.filter((x) => x !== a.id)\n                  )\n                }\n              />\n              <FieldContent>\n                <FieldTitle>{a.title}</FieldTitle>\n                <FieldDescription>{a.hint}</FieldDescription>\n              </FieldContent>\n              <span className=\"text-xs font-medium tabular-nums\">\n                +{\"$\"}\n                {a.price}\n              </span>\n            </Field>\n          </FieldLabel>\n        ))}\n      </FieldGroup>\n      <p className=\"text-end text-xs text-muted-foreground\">\n        Add-ons total:{\" \"}\n        <span className=\"font-medium text-foreground\">\n          {\"$\"}\n          {total}/mo\n        </span>\n      </p>\n    </FieldSet>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

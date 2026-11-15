@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tooltip-12",
+  "type": "registry:example",
+  "description": "File list rows with truncated names that reveal the full filename on hover.",
+  "files": [
+    {
+      "path": "registry/designali/examples/tooltip/tooltip-12.tsx",
+      "content": "import { FileIcon } from \"lucide-react\"\n\nimport {\n  Tooltip,\n  TooltipContent,\n  TooltipProvider,\n  TooltipTrigger,\n} from \"@workspace/ui/components/tooltip\"\n\nconst files = [\n  \"2026-Q2-board-meeting-financial-summary-final-v3.pdf\",\n  \"customer-interviews-transcripts-northwind-batch.docx\",\n  \"brand-refresh-moodboard-exploration.fig\",\n]\n\nexport default function TruncatedFileNameTooltip() {\n  return (\n    <TooltipProvider>\n      <ul className=\"flex w-full max-w-60 flex-col divide-y border text-sm\">\n        {files.map((f) => (\n          <li key={f} className=\"flex items-center gap-2 px-3 py-2\">\n            <FileIcon className=\"size-4 shrink-0 text-muted-foreground\" />\n            <Tooltip>\n              <TooltipTrigger\n                render={<span tabIndex={0} className=\"min-w-0 truncate\" />}\n              >\n                {f}\n              </TooltipTrigger>\n              <TooltipContent className=\"break-all\">{f}</TooltipContent>\n            </Tooltip>\n          </li>\n        ))}\n      </ul>\n    </TooltipProvider>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

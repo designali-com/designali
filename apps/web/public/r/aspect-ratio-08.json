@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "aspect-ratio-08",
+  "type": "registry:example",
+  "description": "A 3-column gallery of square tiles with hover captions.",
+  "files": [
+    {
+      "path": "registry/designali/examples/aspect-ratio/aspect-ratio-08.tsx",
+      "content": "import { AspectRatio } from \"@workspace/ui/components/aspect-ratio\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst photos = [\n  { title: \"Dune\", className: \"from-amber-300 to-orange-600\" },\n  { title: \"Lagoon\", className: \"from-cyan-300 to-blue-600\" },\n  { title: \"Fern\", className: \"from-lime-300 to-emerald-600\" },\n  { title: \"Dusk\", className: \"from-fuchsia-400 to-indigo-700\" },\n  { title: \"Clay\", className: \"from-rose-300 to-red-600\" },\n  { title: \"Fog\", className: \"from-slate-200 to-slate-500\" },\n]\n\nexport default function PhotoGalleryGrid() {\n  return (\n    <div className=\"grid w-full max-w-sm grid-cols-3 gap-1\">\n      {photos.map((photo) => (\n        <AspectRatio\n          key={photo.title}\n          ratio={1}\n          className={cn(\n            \"group overflow-hidden bg-linear-to-br\",\n            photo.className\n          )}\n        >\n          <div className=\"absolute inset-0 flex items-end bg-black/0 p-2 transition-colors group-hover:bg-black/30\">\n            <span className=\"text-xs font-medium text-white opacity-0 transition-opacity group-hover:opacity-100\">\n              {photo.title}\n            </span>\n          </div>\n        </AspectRatio>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

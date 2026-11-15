@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "collapsible-12",
+  "type": "registry:example",
+  "description": "Disabled collapsible for a feature gated behind an upgrade.",
+  "files": [
+    {
+      "path": "registry/designali/examples/collapsible/collapsible-12.tsx",
+      "content": "import { ChevronDownIcon, LockIcon, UsersIcon } from \"lucide-react\"\n\nimport { Badge } from \"@workspace/ui/components/badge\"\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  Collapsible,\n  CollapsibleContent,\n  CollapsibleTrigger,\n} from \"@workspace/ui/components/collapsible\"\n\nexport default function LockedSectionDisabled() {\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-2\">\n      <Collapsible className=\"border\" defaultOpen>\n        <CollapsibleTrigger\n          render={\n            <Button variant=\"ghost\" className=\"w-full justify-start\">\n              <UsersIcon />\n              Team members\n              <ChevronDownIcon className=\"ml-auto transition-transform group-data-panel-open/button:rotate-180\" />\n            </Button>\n          }\n        />\n        <CollapsibleContent className=\"h-(--collapsible-panel-height) overflow-hidden transition-[height] duration-200 ease-out data-ending-style:h-0 data-starting-style:h-0\">\n          <p className=\"border-t px-4 py-3 text-sm text-muted-foreground\">\n            5 of 10 seats in use.\n          </p>\n        </CollapsibleContent>\n      </Collapsible>\n      <Collapsible disabled className=\"border border-dashed\">\n        <CollapsibleTrigger\n          render={\n            <Button variant=\"ghost\" className=\"w-full justify-start\">\n              <LockIcon />\n              Audit log\n              <Badge variant=\"secondary\" className=\"ml-auto\">\n                Business\n              </Badge>\n            </Button>\n          }\n        />\n        <CollapsibleContent>\n          <p className=\"px-4 py-3 text-sm\">Hidden content</p>\n        </CollapsibleContent>\n      </Collapsible>\n      <p className=\"text-xs text-muted-foreground\">\n        Upgrade to the Business plan to review every change made in your\n        workspace.\n      </p>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

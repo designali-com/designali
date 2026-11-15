@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "alert-11",
+  "type": "registry:example",
+  "description": "Usage warning with a progress bar showing how much storage quota is used.",
+  "files": [
+    {
+      "path": "registry/designali/examples/alert/alert-11.tsx",
+      "content": "import { HardDriveIcon } from \"lucide-react\"\n\nimport {\n  Alert,\n  AlertDescription,\n  AlertTitle,\n} from \"@workspace/ui/components/alert\"\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Progress } from \"@workspace/ui/components/progress\"\n\nexport default function AlertStorageUsage() {\n  const used = 9.2\n  const limit = 10\n\n  return (\n    <Alert variant=\"warning\" className=\"max-w-md\">\n      <HardDriveIcon />\n      <AlertTitle>You&apos;re almost out of storage</AlertTitle>\n      <AlertDescription className=\"space-y-2\">\n        <p>\n          {used} GB of {limit} GB used. Uploads will pause when you reach the\n          limit.\n        </p>\n        <Progress value={(used / limit) * 100} aria-label=\"Storage used\" />\n        <Button size=\"xs\" variant=\"outline\">\n          Upgrade storage\n        </Button>\n      </AlertDescription>\n    </Alert>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

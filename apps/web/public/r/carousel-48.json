@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "carousel-48",
+  "type": "registry:example",
+  "description": "Video chapter carousel that can be jumped to via a NativeSelect.",
+  "files": [
+    {
+      "path": "registry/designali/examples/carousel/carousel-48.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { PlayCircleIcon } from \"lucide-react\"\n\nimport {\n  Carousel,\n  CarouselContent,\n  CarouselItem,\n  type CarouselApi,\n} from \"@workspace/ui/components/carousel\"\nimport {\n  NativeSelect,\n  NativeSelectOption,\n} from \"@workspace/ui/components/native-select\"\n\nconst chapters = [\n  { title: \"Introduction\", time: \"0:00\" },\n  { title: \"Setting up the project\", time: \"2:14\" },\n  { title: \"Writing the first query\", time: \"7:40\" },\n  { title: \"Handling errors\", time: \"13:05\" },\n  { title: \"Deploying\", time: \"18:22\" },\n]\n\nexport default function VideoChapterJump() {\n  const [api, setApi] = React.useState<CarouselApi>()\n  const [selected, setSelected] = React.useState(0)\n\n  const handleApi = React.useCallback((next: CarouselApi) => {\n    if (!next) return\n    setApi(next)\n    next.on(\"select\", () => setSelected(next.selectedScrollSnap()))\n  }, [])\n\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-3\">\n      <NativeSelect\n        aria-label=\"Jump to chapter\"\n        value={String(selected)}\n        onChange={(e) => api?.scrollTo(Number(e.target.value))}\n        className=\"w-full\"\n      >\n        {chapters.map((chapter, index) => (\n          <NativeSelectOption key={chapter.title} value={String(index)}>\n            {chapter.time} · {chapter.title}\n          </NativeSelectOption>\n        ))}\n      </NativeSelect>\n      <Carousel setApi={handleApi}>\n        <CarouselContent>\n          {chapters.map((chapter, index) => (\n            <CarouselItem key={chapter.title}>\n              <div className=\"relative flex aspect-video items-center justify-center bg-gradient-to-br from-muted to-muted-foreground/30\">\n                <PlayCircleIcon className=\"size-10 text-foreground/70\" />\n                <span className=\"absolute start-2 bottom-2 bg-background/80 px-1.5 py-0.5 font-mono text-[11px]\">\n                  {chapter.time}\n                </span>\n                <span className=\"absolute end-2 top-2 text-[11px] text-foreground/70\">\n                  Chapter {index + 1}\n                </span>\n              </div>\n            </CarouselItem>\n          ))}\n        </CarouselContent>\n      </Carousel>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

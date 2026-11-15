@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "radio-group-09",
+  "type": "registry:example",
+  "description": "Clothing size selector as compact tiles with a sold-out size disabled.",
+  "files": [
+    {
+      "path": "registry/designali/examples/radio-group/radio-group-09.tsx",
+      "content": "import {\n  RadioGroup,\n  RadioGroupItem,\n} from \"@workspace/ui/components/radio-group\"\n\nconst sizes = [\n  { value: \"xs\", stock: true },\n  { value: \"s\", stock: true },\n  { value: \"m\", stock: true },\n  { value: \"l\", stock: false },\n  { value: \"xl\", stock: true },\n]\n\nexport default function ApparelSizeTiles() {\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-2\">\n      <div className=\"flex justify-between text-sm\">\n        <span className=\"font-medium\">Size</span>\n        <a\n          href=\"#\"\n          className=\"text-muted-foreground underline underline-offset-4\"\n        >\n          Size guide\n        </a>\n      </div>\n      <RadioGroup defaultValue=\"m\" className=\"grid grid-cols-5 gap-2\">\n        {sizes.map((size) => (\n          <label\n            key={size.value}\n            htmlFor={\"size-\" + size.value}\n            className=\"flex h-11 cursor-pointer items-center justify-center border text-sm font-medium uppercase has-focus-visible:ring-2 has-focus-visible:ring-ring/50 has-disabled:cursor-not-allowed has-disabled:text-muted-foreground has-disabled:line-through has-data-checked:border-primary has-data-checked:bg-primary has-data-checked:text-primary-foreground\"\n          >\n            <RadioGroupItem\n              value={size.value}\n              id={\"size-\" + size.value}\n              disabled={!size.stock}\n              className=\"sr-only\"\n            />\n            {size.value}\n          </label>\n        ))}\n      </RadioGroup>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

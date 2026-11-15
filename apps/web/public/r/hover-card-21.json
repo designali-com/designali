@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "hover-card-21",
+  "type": "registry:example",
+  "description": "Order IDs in a fulfillment list that preview the shipping progress timeline.",
+  "files": [
+    {
+      "path": "registry/designali/examples/hover-card/hover-card-21.tsx",
+      "content": "import { CheckIcon } from \"lucide-react\"\n\nimport { Badge } from \"@workspace/ui/components/badge\"\nimport {\n  HoverCard,\n  HoverCardContent,\n  HoverCardTrigger,\n} from \"@workspace/ui/components/hover-card\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst steps = [\"Placed\", \"Packed\", \"Shipped\", \"Delivered\"]\nconst orders = [\n  { id: \"#ORD-2041\", customer: \"Nadia Haddad\", step: 2 },\n  { id: \"#ORD-2040\", customer: \"Ben Carter\", step: 3 },\n  { id: \"#ORD-2039\", customer: \"Yuki Mori\", step: 1 },\n]\n\nexport default function OrderStatusHoverCard() {\n  return (\n    <div className=\"w-full max-w-xs divide-y border text-sm\">\n      {orders.map((order) => (\n        <div\n          key={order.id}\n          className=\"flex items-center justify-between px-3 py-2\"\n        >\n          <HoverCard>\n            <HoverCardTrigger href=\"#\" className=\"font-mono hover:underline\">\n              {order.id}\n            </HoverCardTrigger>\n            <HoverCardContent side=\"right\" className=\"w-56\">\n              <p className=\"mb-2 font-medium\">{order.customer}</p>\n              <ol className=\"flex flex-col gap-1.5\">\n                {steps.map((step, i) => (\n                  <li key={step} className=\"flex items-center gap-2\">\n                    <span\n                      className={cn(\n                        \"flex size-4 items-center justify-center rounded-full border\",\n                        i <= order.step\n                          ? \"border-primary bg-primary text-primary-foreground\"\n                          : \"text-muted-foreground\"\n                      )}\n                    >\n                      {i <= order.step && <CheckIcon className=\"size-2.5\" />}\n                    </span>\n                    <span\n                      className={i <= order.step ? \"\" : \"text-muted-foreground\"}\n                    >\n                      {step}\n                    </span>\n                  </li>\n                ))}\n              </ol>\n            </HoverCardContent>\n          </HoverCard>\n          <Badge variant=\"outline\">{steps[order.step]}</Badge>\n        </div>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

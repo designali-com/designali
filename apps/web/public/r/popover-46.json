@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "popover-46",
+  "type": "registry:example",
+  "description": "Popover that opens on hover with a delay to preview a linked repository.",
+  "files": [
+    {
+      "path": "registry/designali/examples/popover/popover-46.tsx",
+      "content": "import { FolderGit2Icon, GitForkIcon, StarIcon } from \"lucide-react\"\n\nimport {\n  Popover,\n  PopoverContent,\n  PopoverDescription,\n  PopoverTitle,\n  PopoverTrigger,\n} from \"@workspace/ui/components/popover\"\n\nexport default function HoverOpenPopover() {\n  return (\n    <p className=\"max-w-xs text-xs leading-relaxed text-muted-foreground\">\n      The fix landed in{\" \"}\n      <Popover>\n        <PopoverTrigger\n          openOnHover\n          delay={250}\n          render={\n            <a\n              href=\"#\"\n              className=\"font-medium text-foreground underline underline-offset-2\"\n            />\n          }\n        >\n          northwind/ledger\n        </PopoverTrigger>\n        <PopoverContent className=\"w-64\" align=\"start\">\n          <div className=\"flex items-center gap-2\">\n            <FolderGit2Icon className=\"size-4\" />\n            <PopoverTitle>northwind/ledger</PopoverTitle>\n          </div>\n          <PopoverDescription>\n            Double-entry accounting service for invoices and payouts.\n          </PopoverDescription>\n          <div className=\"flex gap-3 text-[11px] text-muted-foreground\">\n            <span className=\"flex items-center gap-1\">\n              <StarIcon className=\"size-3\" /> 1.2k\n            </span>\n            <span className=\"flex items-center gap-1\">\n              <GitForkIcon className=\"size-3\" /> 86\n            </span>\n            <span className=\"flex items-center gap-1\">\n              <span className=\"size-2 rounded-full bg-sky-500\" /> TypeScript\n            </span>\n          </div>\n        </PopoverContent>\n      </Popover>{\" \"}\n      yesterday and ships with the next release.\n    </p>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

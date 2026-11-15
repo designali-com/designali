@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "alert-dialog-15",
+  "type": "registry:example",
+  "description": "Close button on an onboarding flow that confirms skipping setup.",
+  "files": [
+    {
+      "path": "registry/designali/examples/alert-dialog/alert-dialog-15.tsx",
+      "content": "import { MapIcon, XIcon } from \"lucide-react\"\n\nimport {\n  AlertDialog,\n  AlertDialogAction,\n  AlertDialogCancel,\n  AlertDialogContent,\n  AlertDialogDescription,\n  AlertDialogFooter,\n  AlertDialogHeader,\n  AlertDialogMedia,\n  AlertDialogTitle,\n  AlertDialogTrigger,\n} from \"@workspace/ui/components/alert-dialog\"\nimport { Button } from \"@workspace/ui/components/button\"\n\nexport default function ExitOnboardingDialog() {\n  return (\n    <AlertDialog>\n      <AlertDialogTrigger\n        render={\n          <Button variant=\"outline\" size=\"icon\" aria-label=\"Exit setup\" />\n        }\n      >\n        <XIcon />\n      </AlertDialogTrigger>\n      <AlertDialogContent size=\"sm\">\n        <AlertDialogHeader>\n          <AlertDialogMedia>\n            <MapIcon />\n          </AlertDialogMedia>\n          <AlertDialogTitle>Skip setup for now?</AlertDialogTitle>\n          <AlertDialogDescription>\n            You can finish onboarding anytime from Settings.\n          </AlertDialogDescription>\n        </AlertDialogHeader>\n        <AlertDialogFooter>\n          <AlertDialogCancel>Continue setup</AlertDialogCancel>\n          <AlertDialogAction variant=\"secondary\">Skip</AlertDialogAction>\n        </AlertDialogFooter>\n      </AlertDialogContent>\n    </AlertDialog>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

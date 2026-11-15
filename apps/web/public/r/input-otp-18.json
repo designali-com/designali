@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-otp-18",
+  "type": "registry:example",
+  "description": "Custom slots built on OTPInputContext that mask each PIN digit as a dot.",
+  "files": [
+    {
+      "path": "registry/designali/examples/input-otp/input-otp-18.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { OTPInputContext } from \"input-otp\"\n\nimport {\n  Field,\n  FieldDescription,\n  FieldLabel,\n} from \"@workspace/ui/components/field\"\nimport { InputOTP, InputOTPGroup } from \"@workspace/ui/components/input-otp\"\n\nfunction MaskedSlot({ index }: { index: number }) {\n  const context = React.useContext(OTPInputContext)\n  const slot = context.slots[index]\n\n  return (\n    <div\n      data-active={slot?.isActive}\n      className=\"relative flex size-10 items-center justify-center border-y border-e border-input first:border-s data-[active=true]:z-10 data-[active=true]:border-ring data-[active=true]:ring-1 data-[active=true]:ring-ring/50\"\n    >\n      {slot?.char ? (\n        <span className=\"size-2.5 rounded-full bg-foreground\" />\n      ) : null}\n      {slot?.hasFakeCaret && (\n        <span className=\"h-4 w-px animate-caret-blink bg-foreground\" />\n      )}\n    </div>\n  )\n}\n\nexport default function MaskedPinSlots() {\n  return (\n    <Field className=\"w-fit\">\n      <FieldLabel htmlFor=\"card-pin\">Card PIN</FieldLabel>\n      <InputOTP id=\"card-pin\" maxLength={4} inputMode=\"numeric\">\n        <InputOTPGroup>\n          {[0, 1, 2, 3].map((index) => (\n            <MaskedSlot key={index} index={index} />\n          ))}\n        </InputOTPGroup>\n      </InputOTP>\n      <FieldDescription>Digits are hidden as you type.</FieldDescription>\n    </Field>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

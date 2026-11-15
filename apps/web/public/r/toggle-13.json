@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toggle-13",
+  "type": "registry:example",
+  "description": "A product card with a floating wishlist toggle over a gradient image placeholder.",
+  "files": [
+    {
+      "path": "registry/designali/examples/toggle/toggle-13.tsx",
+      "content": "import { HeartIcon } from \"lucide-react\"\n\nimport { Toggle } from \"@workspace/ui/components/toggle\"\n\nexport default function WishlistProductToggle() {\n  return (\n    <div className=\"w-full max-w-[240px] border\">\n      <div className=\"relative aspect-square bg-gradient-to-br from-sky-200 to-indigo-400 dark:from-sky-800 dark:to-indigo-950\">\n        <Toggle\n          size=\"sm\"\n          aria-label=\"Add to wishlist\"\n          className=\"absolute end-2 top-2 bg-background/80 backdrop-blur hover:bg-background aria-pressed:bg-background aria-pressed:text-rose-500\"\n        >\n          <HeartIcon className=\"group-aria-pressed/toggle:fill-current\" />\n        </Toggle>\n      </div>\n      <div className=\"p-3\">\n        <p className=\"text-sm font-medium\">Merino crew sweater</p>\n        <p className=\"text-sm text-muted-foreground\">$89.00</p>\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

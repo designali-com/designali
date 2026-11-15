@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toggle-group-15",
+  "type": "registry:example",
+  "description": "Weekday picker for a recurring meeting with a readable summary of the chosen days.",
+  "files": [
+    {
+      "path": "registry/designali/examples/toggle-group/toggle-group-15.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport {\n  ToggleGroup,\n  ToggleGroupItem,\n} from \"@workspace/ui/components/toggle-group\"\n\nconst days = [\n  { value: \"mon\", label: \"M\", name: \"Mon\" },\n  { value: \"tue\", label: \"T\", name: \"Tue\" },\n  { value: \"wed\", label: \"W\", name: \"Wed\" },\n  { value: \"thu\", label: \"T\", name: \"Thu\" },\n  { value: \"fri\", label: \"F\", name: \"Fri\" },\n  { value: \"sat\", label: \"S\", name: \"Sat\" },\n  { value: \"sun\", label: \"S\", name: \"Sun\" },\n]\n\nexport default function RecurringWeekdayPicker() {\n  const [selected, setSelected] = React.useState<string[]>([\n    \"mon\",\n    \"wed\",\n    \"fri\",\n  ])\n  const names = days\n    .filter((d) => selected.includes(d.value))\n    .map((d) => d.name)\n\n  return (\n    <div className=\"flex flex-col gap-2\">\n      <span className=\"text-sm font-medium\">Repeat on</span>\n      <ToggleGroup\n        multiple\n        variant=\"outline\"\n        spacing={1}\n        value={selected}\n        onValueChange={setSelected}\n      >\n        {days.map((d) => (\n          <ToggleGroupItem\n            key={d.value}\n            value={d.value}\n            aria-label={d.name}\n            className=\"rounded-full\"\n          >\n            {d.label}\n          </ToggleGroupItem>\n        ))}\n      </ToggleGroup>\n      <span className=\"text-xs text-muted-foreground\">\n        {names.length\n          ? \"Weekly on \" + names.join(\", \")\n          : \"Pick at least one day\"}\n      </span>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

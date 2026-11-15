@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "popover-24",
+  "type": "registry:example",
+  "description": "Media player volume control with a vertical slider in a popover above the button.",
+  "files": [
+    {
+      "path": "registry/designali/examples/popover/popover-24.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { PlayIcon, Volume1Icon, Volume2Icon, VolumeXIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  Popover,\n  PopoverContent,\n  PopoverTrigger,\n} from \"@workspace/ui/components/popover\"\nimport { Slider } from \"@workspace/ui/components/slider\"\n\nexport default function VolumePopover() {\n  const [volume, setVolume] = React.useState(64)\n  const Icon =\n    volume === 0 ? VolumeXIcon : volume < 50 ? Volume1Icon : Volume2Icon\n\n  return (\n    <div className=\"flex w-full max-w-xs items-center gap-2 border p-2\">\n      <Button size=\"icon-sm\" aria-label=\"Play\">\n        <PlayIcon />\n      </Button>\n      <div className=\"flex min-w-0 flex-1 flex-col\">\n        <span className=\"truncate text-xs font-medium\">\n          Ep. 42 · Building in public\n        </span>\n        <span className=\"text-[11px] text-muted-foreground\">12:08 / 48:30</span>\n      </div>\n      <Popover>\n        <PopoverTrigger\n          render={<Button variant=\"ghost\" size=\"icon-sm\" aria-label=\"Volume\" />}\n        >\n          <Icon />\n        </PopoverTrigger>\n        <PopoverContent side=\"top\" className=\"w-12 items-center p-2\">\n          <Slider\n            orientation=\"vertical\"\n            className=\"h-28\"\n            value={[volume]}\n            onValueChange={(v) => setVolume(Array.isArray(v) ? v[0]! : v)}\n            aria-label=\"Volume\"\n          />\n          <span className=\"text-[10px] text-muted-foreground tabular-nums\">\n            {volume}\n          </span>\n        </PopoverContent>\n      </Popover>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

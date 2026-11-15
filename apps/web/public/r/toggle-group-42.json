@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toggle-group-42",
+  "type": "registry:example",
+  "description": "New task form with a priority group using colored status dots.",
+  "files": [
+    {
+      "path": "registry/designali/examples/toggle-group/toggle-group-42.tsx",
+      "content": "import { Input } from \"@workspace/ui/components/input\"\nimport {\n  ToggleGroup,\n  ToggleGroupItem,\n} from \"@workspace/ui/components/toggle-group\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst priorities = [\n  { value: \"low\", label: \"Low\", dot: \"bg-slate-400\" },\n  { value: \"medium\", label: \"Medium\", dot: \"bg-sky-500\" },\n  { value: \"high\", label: \"High\", dot: \"bg-amber-500\" },\n  { value: \"urgent\", label: \"Urgent\", dot: \"bg-rose-500\" },\n]\n\nexport default function TaskPriorityToggleGroup() {\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-3 border p-4\">\n      <Input placeholder=\"Task title\" defaultValue=\"Migrate billing webhooks\" />\n      <div className=\"flex flex-col gap-1.5\">\n        <span className=\"text-xs font-medium text-muted-foreground\">\n          Priority\n        </span>\n        <ToggleGroup\n          variant=\"outline\"\n          spacing={0}\n          size=\"sm\"\n          defaultValue={[\"high\"]}\n          className=\"flex-wrap\"\n        >\n          {priorities.map((p) => (\n            <ToggleGroupItem key={p.value} value={p.value}>\n              <span className={cn(\"size-2 rounded-full\", p.dot)} />\n              {p.label}\n            </ToggleGroupItem>\n          ))}\n        </ToggleGroup>\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

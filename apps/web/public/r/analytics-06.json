@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "analytics-06",
+  "type": "registry:block",
+  "description": "Four KPI cards in a responsive grid, each with a change badge and an inline area sparkline.",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/designali/blocks/analytics/analytics-06.tsx",
+      "content": "import { ArrowDownRight, ArrowUpRight } from \"lucide-react\"\n\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst cards = [\n  {\n    label: \"Net revenue\",\n    value: \"$1.28M\",\n    change: 14.2,\n    data: [12, 14, 13, 17, 16, 19, 22, 21, 24, 26, 25, 29],\n  },\n  {\n    label: \"New customers\",\n    value: \"3,416\",\n    change: 8.7,\n    data: [30, 28, 33, 31, 36, 35, 38, 41, 39, 44, 43, 47],\n  },\n  {\n    label: \"Refund rate\",\n    value: \"1.9%\",\n    change: -0.6,\n    data: [28, 26, 27, 24, 25, 22, 21, 22, 19, 18, 18, 16],\n  },\n  {\n    label: \"Support backlog\",\n    value: \"214\",\n    change: 11.3,\n    data: [14, 15, 13, 16, 18, 17, 21, 20, 23, 22, 25, 27],\n    inverse: true,\n  },\n]\n\nfunction Sparkline({ data, positive }: { data: number[]; positive: boolean }) {\n  const max = Math.max(...data)\n  const min = Math.min(...data)\n  const points = data\n    .map((v, i) => {\n      const x = (i / (data.length - 1)) * 100\n      const y = 36 - ((v - min) / (max - min || 1)) * 32\n      return `${x},${y}`\n    })\n    .join(\" \")\n  const tone = positive\n    ? \"fill-emerald-500 stroke-emerald-500\"\n    : \"fill-rose-500 stroke-rose-500\"\n\n  return (\n    <svg viewBox=\"0 0 100 40\" preserveAspectRatio=\"none\" className={`h-12 w-full ${tone}`}>\n      <polygon points={`0,40 ${points} 100,40`} stroke=\"none\" opacity=\"0.1\" />\n      <polyline\n        points={points}\n        fill=\"none\"\n        strokeWidth=\"1.75\"\n        vectorEffect=\"non-scaling-stroke\"\n        strokeLinejoin=\"round\"\n      />\n    </svg>\n  )\n}\n\nexport default function Analytics06() {\n  return (\n    <section className=\"w-full bg-background py-16 text-foreground md:py-24\">\n      <div className=\"mx-auto max-w-7xl px-6\">\n        <div className=\"mb-8 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between\">\n          <div>\n            <h2 className=\"text-2xl font-medium tracking-tight md:text-3xl\">\n              Last 12 weeks at a glance\n            </h2>\n            <p className=\"mt-1 text-sm text-muted-foreground\">\n              Lumen Supply Co. storefront, all sales channels combined.\n            </p>\n          </div>\n          <span className=\"text-xs text-muted-foreground\">Week 46, 2026</span>\n        </div>\n\n        <div className=\"grid gap-4 sm:grid-cols-2 lg:grid-cols-4\">\n          {cards.map((card) => {\n            const good = card.inverse ? card.change < 0 : card.change > 0\n            return (\n              <div key={card.label} className=\"flex flex-col border bg-card p-5\">\n                <div className=\"flex items-center justify-between\">\n                  <p className=\"text-sm text-muted-foreground\">{card.label}</p>\n                  <span\n                    className={cn(\n                      \"inline-flex items-center gap-0.5 px-1.5 py-0.5 text-xs font-medium\",\n                      good\n                        ? \"bg-emerald-500/10 text-emerald-700 dark:text-emerald-400\"\n                        : \"bg-rose-500/10 text-rose-700 dark:text-rose-400\"\n                    )}\n                  >\n                    {card.change > 0 ? (\n                      <ArrowUpRight className=\"size-3\" />\n                    ) : (\n                      <ArrowDownRight className=\"size-3\" />\n                    )}\n                    {Math.abs(card.change)}%\n                  </span>\n                </div>\n                <p className=\"mt-3 text-3xl font-semibold tracking-tight\">{card.value}</p>\n                <div className=\"mt-4\">\n                  <Sparkline data={card.data} positive={good} />\n                </div>\n                <div className=\"mt-2 flex justify-between text-[10px] text-muted-foreground\">\n                  <span>Aug 25</span>\n                  <span>Nov 10</span>\n                </div>\n              </div>\n            )\n          })}\n        </div>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "650px"
+  },
+  "categories": [
+    "analytics"
+  ]
+}

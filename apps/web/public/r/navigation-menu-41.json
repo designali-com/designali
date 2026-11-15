@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "navigation-menu-41",
+  "type": "registry:example",
+  "description": "What's new menu listing recent releases with version badges and dates.",
+  "files": [
+    {
+      "path": "registry/designali/examples/navigation-menu/navigation-menu-41.tsx",
+      "content": "import { RssIcon } from \"lucide-react\"\n\nimport { Badge } from \"@workspace/ui/components/badge\"\nimport {\n  NavigationMenu,\n  NavigationMenuContent,\n  NavigationMenuItem,\n  NavigationMenuLink,\n  NavigationMenuList,\n  NavigationMenuTrigger,\n  navigationMenuTriggerStyle,\n} from \"@workspace/ui/components/navigation-menu\"\n\nconst releases = [\n  { version: \"3.8\", title: \"Recurring invoices\", date: \"Nov 4\" },\n  { version: \"3.7\", title: \"Dark mode for reports\", date: \"Oct 21\" },\n  { version: \"3.6\", title: \"Bulk CSV import\", date: \"Oct 2\" },\n]\n\nexport default function ChangelogNav() {\n  return (\n    <NavigationMenu>\n      <NavigationMenuList>\n        <NavigationMenuItem>\n          <NavigationMenuLink href=\"#\" className={navigationMenuTriggerStyle()}>\n            Product\n          </NavigationMenuLink>\n        </NavigationMenuItem>\n        <NavigationMenuItem>\n          <NavigationMenuTrigger>What&apos;s new</NavigationMenuTrigger>\n          <NavigationMenuContent>\n            <div className=\"flex w-64 flex-col gap-1\">\n              {releases.map((r, i) => (\n                <NavigationMenuLink key={r.version} href=\"#\">\n                  <Badge\n                    variant={i === 0 ? \"default\" : \"secondary\"}\n                    className=\"font-mono\"\n                  >\n                    v{r.version}\n                  </Badge>\n                  <span className=\"flex-1 truncate font-medium\">{r.title}</span>\n                  <span className=\"text-muted-foreground\">{r.date}</span>\n                </NavigationMenuLink>\n              ))}\n              <NavigationMenuLink\n                href=\"#\"\n                className=\"border-t text-muted-foreground\"\n              >\n                <RssIcon /> Subscribe to updates\n              </NavigationMenuLink>\n            </div>\n          </NavigationMenuContent>\n        </NavigationMenuItem>\n      </NavigationMenuList>\n    </NavigationMenu>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

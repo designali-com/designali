@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "analytics-14",
+  "type": "registry:block",
+  "description": "GitHub-style activity heatmap of daily deploys over 26 weeks with headline stats and an intensity legend.",
+  "dependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/designali/blocks/analytics/analytics-14.tsx",
+      "content": "const weeks = 26\nconst dayLabels = [\"Mon\", \"\", \"Wed\", \"\", \"Fri\", \"\", \"Sun\"]\n\nfunction level(week: number, day: number) {\n  const base = Math.sin(week * 0.7 + day * 1.3) + Math.cos(week * 0.31 - day * 0.9)\n  const weekend = day >= 5 ? -1.1 : 0\n  const ramp = week / weeks\n  const score = base + weekend + ramp * 1.4\n  if (score < -0.8) return 0\n  if (score < 0) return 1\n  if (score < 0.7) return 2\n  if (score < 1.4) return 3\n  return 4\n}\n\nconst tones = [\n  \"bg-muted\",\n  \"bg-emerald-200 dark:bg-emerald-900\",\n  \"bg-emerald-400 dark:bg-emerald-700\",\n  \"bg-emerald-500 dark:bg-emerald-500\",\n  \"bg-emerald-700 dark:bg-emerald-300\",\n]\n\nconst monthLabels = [\"Jun\", \"Jul\", \"Aug\", \"Sep\", \"Oct\", \"Nov\"]\n\nexport default function Analytics14() {\n  const grid = Array.from({ length: weeks }, (_, w) =>\n    Array.from({ length: 7 }, (_, d) => level(w, d))\n  )\n  const activeDays = grid.flat().filter((l) => l > 0).length\n\n  return (\n    <section className=\"w-full bg-background py-16 text-foreground md:py-24\">\n      <div className=\"mx-auto max-w-5xl px-6\">\n        <div className=\"flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between\">\n          <div>\n            <h2 className=\"text-2xl font-medium tracking-tight md:text-3xl\">Deploy activity</h2>\n            <p className=\"mt-1 text-sm text-muted-foreground\">\n              Production deploys for the Harbor platform team, last 26 weeks.\n            </p>\n          </div>\n          <div className=\"flex gap-8 text-sm\">\n            <div>\n              <p className=\"text-2xl font-semibold\">1,906</p>\n              <p className=\"text-xs text-muted-foreground\">Deploys</p>\n            </div>\n            <div>\n              <p className=\"text-2xl font-semibold\">{activeDays}</p>\n              <p className=\"text-xs text-muted-foreground\">Active days</p>\n            </div>\n            <div>\n              <p className=\"text-2xl font-semibold\">23</p>\n              <p className=\"text-xs text-muted-foreground\">Day streak</p>\n            </div>\n          </div>\n        </div>\n\n        <div className=\"mt-10 border p-4 md:p-6\">\n          <div className=\"mb-2 ml-8 grid grid-cols-6 text-[10px] text-muted-foreground\">\n            {monthLabels.map((m) => (\n              <span key={m}>{m}</span>\n            ))}\n          </div>\n          <div className=\"flex gap-2\">\n            <div className=\"grid w-6 shrink-0 grid-rows-7 gap-[3px] text-[9px] leading-none text-muted-foreground\">\n              {dayLabels.map((d, i) => (\n                <span key={i} className=\"flex items-center\">\n                  {d}\n                </span>\n              ))}\n            </div>\n            <div\n              className=\"grid min-w-0 flex-1 grid-flow-col grid-rows-7 gap-[3px]\"\n              style={{ gridTemplateColumns: `repeat(${weeks}, minmax(0, 1fr))` }}\n            >\n              {grid.map((week, w) =>\n                week.map((l, d) => (\n                  <div\n                    key={`${w}-${d}`}\n                    title={`Week ${w + 1}, ${[\"Mon\", \"Tue\", \"Wed\", \"Thu\", \"Fri\", \"Sat\", \"Sun\"][d]}: level ${l}`}\n                    className={`aspect-square w-full ${tones[l]}`}\n                  />\n                ))\n              )}\n            </div>\n          </div>\n          <div className=\"mt-4 flex items-center justify-end gap-1.5 text-[10px] text-muted-foreground\">\n            <span>Less</span>\n            {tones.map((t) => (\n              <span key={t} className={`size-3 ${t}`} />\n            ))}\n            <span>More</span>\n          </div>\n        </div>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "600px"
+  },
+  "categories": [
+    "analytics"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button-45",
+  "type": "registry:example",
+  "description": "Link-variant buttons used inline within helper text on a sign-in form.",
+  "files": [
+    {
+      "path": "registry/designali/examples/button/button-45.tsx",
+      "content": "import { Button } from \"@workspace/ui/components/button\"\n\nexport default function InlineLinkButtons() {\n  return (\n    <div className=\"flex w-full max-w-xs flex-col gap-2 text-xs text-muted-foreground\">\n      <div className=\"flex items-center justify-between\">\n        <span>Password</span>\n        <Button variant=\"link\" size=\"xs\" className=\"h-auto p-0\">\n          Forgot password?\n        </Button>\n      </div>\n      <p>\n        Didn&apos;t get the verification email?{\" \"}\n        <Button variant=\"link\" size=\"xs\" className=\"h-auto p-0\">\n          Resend it\n        </Button>\n      </p>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

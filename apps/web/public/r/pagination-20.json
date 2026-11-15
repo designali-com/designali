@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "pagination-20",
+  "type": "registry:example",
+  "description": "Right-to-left pagination with Arabic labels where the chevrons flip automatically.",
+  "files": [
+    {
+      "path": "registry/designali/examples/pagination/pagination-20.tsx",
+      "content": "import {\n  Pagination,\n  PaginationContent,\n  PaginationEllipsis,\n  PaginationItem,\n  PaginationLink,\n  PaginationNext,\n  PaginationPrevious,\n} from \"@workspace/ui/components/pagination\"\n\nexport default function RtlPagination() {\n  return (\n    <div dir=\"rtl\" className=\"w-full max-w-md\">\n      <Pagination>\n        <PaginationContent>\n          <PaginationItem>\n            <PaginationPrevious href=\"#\" text=\"السابق\" />\n          </PaginationItem>\n          <PaginationItem>\n            <PaginationLink href=\"#\">١</PaginationLink>\n          </PaginationItem>\n          <PaginationItem>\n            <PaginationLink href=\"#\" isActive>\n              ٢\n            </PaginationLink>\n          </PaginationItem>\n          <PaginationItem>\n            <PaginationLink href=\"#\">٣</PaginationLink>\n          </PaginationItem>\n          <PaginationItem>\n            <PaginationEllipsis />\n          </PaginationItem>\n          <PaginationItem>\n            <PaginationNext href=\"#\" text=\"التالي\" />\n          </PaginationItem>\n        </PaginationContent>\n      </Pagination>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

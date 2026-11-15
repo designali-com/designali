@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "separator-32",
+  "type": "registry:example",
+  "description": "File manager details panel with separators between preview, metadata and sharing sections.",
+  "files": [
+    {
+      "path": "registry/designali/examples/separator/separator-32.tsx",
+      "content": "import * as React from \"react\"\nimport { FileIcon, Share2Icon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Separator } from \"@workspace/ui/components/separator\"\n\nconst meta = [\n  { label: \"Type\", value: \"Figma file\" },\n  { label: \"Size\", value: \"12.4 MB\" },\n  { label: \"Modified\", value: \"Yesterday, 18:02\" },\n  { label: \"Owner\", value: \"Ada Kowalski\" },\n]\n\nexport default function FileDetailsPanel() {\n  return (\n    <div className=\"flex w-full max-w-60 flex-col gap-3 border p-3\">\n      <div className=\"flex aspect-video items-center justify-center bg-linear-to-br from-violet-500/30 to-sky-500/30\">\n        <FileIcon className=\"size-8 text-muted-foreground\" />\n      </div>\n      <span className=\"truncate text-sm font-medium\">\n        Onboarding flow v4.fig\n      </span>\n      <Separator />\n      <dl className=\"grid grid-cols-2 gap-y-1.5 text-xs\">\n        {meta.map((item) => (\n          <React.Fragment key={item.label}>\n            <dt className=\"text-muted-foreground\">{item.label}</dt>\n            <dd className=\"truncate text-end\">{item.value}</dd>\n          </React.Fragment>\n        ))}\n      </dl>\n      <Separator />\n      <Button variant=\"outline\" size=\"sm\">\n        <Share2Icon data-icon=\"inline-start\" />\n        Share\n      </Button>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

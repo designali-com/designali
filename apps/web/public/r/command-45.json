@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "command-45",
+  "type": "registry:example",
+  "description": "A search palette with scope tabs that switch between all results, docs, and people.",
+  "files": [
+    {
+      "path": "registry/designali/examples/command/command-45.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { FileTextIcon, HashIcon, UserIcon } from \"lucide-react\"\n\nimport {\n  Command,\n  CommandEmpty,\n  CommandGroup,\n  CommandInput,\n  CommandItem,\n  CommandList,\n} from \"@workspace/ui/components/command\"\nimport {\n  ToggleGroup,\n  ToggleGroupItem,\n} from \"@workspace/ui/components/toggle-group\"\n\nconst results = [\n  { scope: \"docs\", label: \"Release checklist\", icon: FileTextIcon },\n  { scope: \"docs\", label: \"Incident runbook\", icon: FileTextIcon },\n  { scope: \"people\", label: \"Hana Sato\", icon: UserIcon },\n  { scope: \"people\", label: \"Marcus Bell\", icon: UserIcon },\n  { scope: \"channels\", label: \"#releases\", icon: HashIcon },\n  { scope: \"channels\", label: \"#on-call\", icon: HashIcon },\n]\n\nexport default function ScopedSearchTabs() {\n  const [scope, setScope] = React.useState(\"all\")\n  const visible = results.filter((r) => scope === \"all\" || r.scope === scope)\n\n  return (\n    <Command className=\"w-full max-w-sm border\">\n      <CommandInput placeholder=\"Search everything...\" />\n      <div className=\"border-b p-1\">\n        <ToggleGroup\n          value={[scope]}\n          onValueChange={(value) => value[0] && setScope(value[0])}\n          size=\"sm\"\n        >\n          <ToggleGroupItem value=\"all\">All</ToggleGroupItem>\n          <ToggleGroupItem value=\"docs\">Docs</ToggleGroupItem>\n          <ToggleGroupItem value=\"people\">People</ToggleGroupItem>\n          <ToggleGroupItem value=\"channels\">Channels</ToggleGroupItem>\n        </ToggleGroup>\n      </div>\n      <CommandList>\n        <CommandEmpty>No results in this scope.</CommandEmpty>\n        <CommandGroup>\n          {visible.map((r) => (\n            <CommandItem key={r.label} value={r.label}>\n              <r.icon />\n              <span>{r.label}</span>\n              <span className=\"ms-auto text-[11px] text-muted-foreground capitalize\">\n                {r.scope}\n              </span>\n            </CommandItem>\n          ))}\n        </CommandGroup>\n      </CommandList>\n    </Command>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

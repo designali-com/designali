@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tabs-32",
+  "type": "registry:example",
+  "description": "Tabs rendered as anchor links for page-level section navigation.",
+  "files": [
+    {
+      "path": "registry/designali/examples/tabs/tabs-32.tsx",
+      "content": "import { Tabs, TabsList, TabsTrigger } from \"@workspace/ui/components/tabs\"\n\nconst links = [\n  { value: \"overview\", label: \"Overview\" },\n  { value: \"deployments\", label: \"Deployments\" },\n  { value: \"analytics\", label: \"Analytics\" },\n  { value: \"settings\", label: \"Settings\" },\n]\n\nexport default function LinkNavigationTabs() {\n  return (\n    <Tabs defaultValue=\"deployments\" className=\"w-full max-w-md\">\n      <TabsList variant=\"line\" className=\"w-full justify-start border-b\">\n        {links.map((l) => (\n          <TabsTrigger\n            key={l.value}\n            value={l.value}\n            nativeButton={false}\n            render={<a href={\"#\" + l.value} />}\n            className=\"flex-none\"\n          >\n            {l.label}\n          </TabsTrigger>\n        ))}\n      </TabsList>\n      <p className=\"text-muted-foreground\">\n        Each tab is a real link, so it can be opened in a new tab.\n      </p>\n    </Tabs>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

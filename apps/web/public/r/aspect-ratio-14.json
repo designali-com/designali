@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "aspect-ratio-14",
+  "type": "registry:example",
+  "description": "Loading state where a skeleton fills a 16:9 media slot above text placeholders.",
+  "files": [
+    {
+      "path": "registry/designali/examples/aspect-ratio/aspect-ratio-14.tsx",
+      "content": "import { AspectRatio } from \"@workspace/ui/components/aspect-ratio\"\nimport { Skeleton } from \"@workspace/ui/components/skeleton\"\n\nexport default function SkeletonMediaLoading() {\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-3\">\n      <AspectRatio ratio={16 / 9}>\n        <Skeleton className=\"absolute inset-0\" />\n      </AspectRatio>\n      <div className=\"flex items-center gap-3\">\n        <Skeleton className=\"size-8 rounded-full\" />\n        <div className=\"flex flex-1 flex-col gap-1.5\">\n          <Skeleton className=\"h-3 w-3/4\" />\n          <Skeleton className=\"h-3 w-1/2\" />\n        </div>\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

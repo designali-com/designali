@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button-18",
+  "type": "registry:example",
+  "description": "Buttons rendered as anchor elements for navigation, including an external link.",
+  "files": [
+    {
+      "path": "registry/designali/examples/button/button-18.tsx",
+      "content": "import { ExternalLinkIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\n\nexport default function AnchorLinkButtons() {\n  return (\n    <div className=\"flex flex-wrap items-center gap-2\">\n      <Button nativeButton={false} render={<a href=\"#\" />}>\n        View dashboard\n      </Button>\n      <Button\n        variant=\"outline\"\n        nativeButton={false}\n        render={<a href=\"#\" target=\"_blank\" rel=\"noreferrer\" />}\n      >\n        Status page\n        <ExternalLinkIcon data-icon=\"inline-end\" />\n      </Button>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "switch-21",
+  "type": "registry:example",
+  "description": "File sharing switch that reveals a copyable public link when enabled.",
+  "files": [
+    {
+      "path": "registry/designali/examples/switch/switch-21.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { CheckIcon, CopyIcon, FileTextIcon, Link2Icon } from \"lucide-react\"\n\nimport {\n  InputGroup,\n  InputGroupAddon,\n  InputGroupButton,\n  InputGroupInput,\n} from \"@workspace/ui/components/input-group\"\nimport { Label } from \"@workspace/ui/components/label\"\nimport { Switch } from \"@workspace/ui/components/switch\"\n\nexport default function ShareLinkSwitch() {\n  const [shared, setShared] = React.useState(false)\n  const [copied, setCopied] = React.useState(false)\n\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-3 border p-4\">\n      <div className=\"flex items-center gap-3\">\n        <FileTextIcon className=\"size-5 text-muted-foreground\" />\n        <div className=\"flex-1\">\n          <p className=\"text-sm font-medium\">Q3-roadmap.pdf</p>\n          <p className=\"text-xs text-muted-foreground\">2.4 MB</p>\n        </div>\n      </div>\n      <div className=\"flex items-center justify-between gap-4\">\n        <Label htmlFor=\"share-link\" className=\"flex items-center gap-2\">\n          <Link2Icon className=\"size-4\" />\n          Anyone with the link\n        </Label>\n        <Switch\n          id=\"share-link\"\n          checked={shared}\n          onCheckedChange={(v) => {\n            setShared(v)\n            setCopied(false)\n          }}\n        />\n      </div>\n      {shared && (\n        <InputGroup>\n          <InputGroupInput\n            readOnly\n            value=\"https://files.example.com/s/k39xQ\"\n            aria-label=\"Share link\"\n          />\n          <InputGroupAddon align=\"inline-end\">\n            <InputGroupButton\n              onClick={() => setCopied(true)}\n              aria-label=\"Copy link\"\n            >\n              {copied ? <CheckIcon /> : <CopyIcon />}\n            </InputGroupButton>\n          </InputGroupAddon>\n        </InputGroup>\n      )}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

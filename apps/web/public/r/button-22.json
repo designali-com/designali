@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button-22",
+  "type": "registry:example",
+  "description": "Search trigger button showing its keyboard shortcut with Kbd keys.",
+  "files": [
+    {
+      "path": "registry/designali/examples/button/button-22.tsx",
+      "content": "import { SearchIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Kbd, KbdGroup } from \"@workspace/ui/components/kbd\"\n\nexport default function ShortcutHintButton() {\n  return (\n    <Button\n      variant=\"outline\"\n      className=\"w-full max-w-xs justify-start text-muted-foreground\"\n    >\n      <SearchIcon data-icon=\"inline-start\" />\n      <span className=\"flex-1 text-left\">Search documentation...</span>\n      <KbdGroup>\n        <Kbd>⌘</Kbd>\n        <Kbd>K</Kbd>\n      </KbdGroup>\n    </Button>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

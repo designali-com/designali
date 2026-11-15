@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "sections-14",
+  "type": "registry:block",
+  "description": "Sticky intro column beside a stacked list of numbered product principles.",
+  "dependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/designali/blocks/sections/sections-14.tsx",
+      "content": "const principles = [\n  {\n    title: \"Defaults are a product decision\",\n    body: \"Most users never open settings. We ship the configuration we would choose ourselves and make the alternative one click away.\",\n  },\n  {\n    title: \"Fast is a feature\",\n    body: \"Every screen has a performance budget of 100ms to first interaction on a five-year-old laptop. Regressions block releases.\",\n  },\n  {\n    title: \"Show the work\",\n    body: \"When the system makes a decision, it explains why, links to the source and lets you override it.\",\n  },\n  {\n    title: \"Your data leaves with you\",\n    body: \"Full exports in open formats, at any time, on every plan. No support ticket, no retention call.\",\n  },\n  {\n    title: \"Nothing ships without a reader\",\n    body: \"Every feature has a short public changelog entry written before the code, so we know what we are building.\",\n  },\n]\n\nexport default function Sections14() {\n  return (\n    <section className=\"w-full bg-background py-24\">\n      <div className=\"mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-[5fr_7fr] lg:gap-20\">\n        <div className=\"lg:sticky lg:top-12 lg:h-fit\">\n          <p className=\"font-mono text-xs tracking-widest text-muted-foreground uppercase\">Product principles</p>\n          <h2 className=\"mt-4 text-4xl font-semibold tracking-tight md:text-5xl\">\n            The rules we design by.\n          </h2>\n          <p className=\"mt-6 max-w-sm text-sm leading-6 text-muted-foreground\">\n            Five principles that settle arguments before they start. Each one\n            has cost us a feature we wanted to build.\n          </p>\n          <div className=\"mt-10 hidden aspect-[4/3] max-w-sm overflow-hidden border border-border bg-muted lg:block\" aria-hidden>\n            <div className=\"grid h-full grid-cols-5 grid-rows-4 gap-px bg-border\">\n              {Array.from({ length: 20 }, (_, index) => (\n                <span\n                  key={index}\n                  className={\n                    [2, 6, 7, 11, 12, 13, 17].includes(index) ? \"bg-foreground\" : \"bg-background\"\n                  }\n                />\n              ))}\n            </div>\n          </div>\n        </div>\n\n        <ol className=\"space-y-4\">\n          {principles.map((principle, index) => (\n            <li key={principle.title} className=\"border border-border bg-card p-6 md:p-8\">\n              <div className=\"flex items-start gap-6\">\n                <span className=\"font-mono text-4xl font-light tracking-tighter text-muted-foreground/50 md:text-5xl\">\n                  {String(index + 1).padStart(2, \"0\")}\n                </span>\n                <div className=\"pt-1\">\n                  <h3 className=\"text-xl font-semibold tracking-tight\">{principle.title}</h3>\n                  <p className=\"mt-3 text-sm leading-7 text-muted-foreground\">{principle.body}</p>\n                </div>\n              </div>\n            </li>\n          ))}\n        </ol>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "1100px"
+  },
+  "categories": [
+    "sections"
+  ]
+}

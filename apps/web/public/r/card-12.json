@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "card-12",
+  "type": "registry:example",
+  "description": "Settings card with labelled switches for notification channels and a save footer.",
+  "files": [
+    {
+      "path": "registry/designali/examples/card/card-12.tsx",
+      "content": "import { Button } from \"@workspace/ui/components/button\"\nimport {\n  Card,\n  CardContent,\n  CardDescription,\n  CardFooter,\n  CardHeader,\n  CardTitle,\n} from \"@workspace/ui/components/card\"\nimport {\n  Field,\n  FieldContent,\n  FieldDescription,\n  FieldLabel,\n} from \"@workspace/ui/components/field\"\nimport { Switch } from \"@workspace/ui/components/switch\"\n\nconst channels = [\n  {\n    id: \"mentions\",\n    label: \"Mentions\",\n    description: \"When someone @mentions you in a comment.\",\n    on: true,\n  },\n  {\n    id: \"digest\",\n    label: \"Weekly digest\",\n    description: \"A Monday summary of project activity.\",\n    on: true,\n  },\n  {\n    id: \"billing\",\n    label: \"Billing alerts\",\n    description: \"Failed payments and upcoming renewals.\",\n    on: false,\n  },\n  {\n    id: \"product\",\n    label: \"Product updates\",\n    description: \"New features and occasional tips.\",\n    on: false,\n  },\n]\n\nexport default function NotificationSettingsCard() {\n  return (\n    <Card className=\"w-full max-w-sm\">\n      <CardHeader className=\"border-b\">\n        <CardTitle>Email notifications</CardTitle>\n        <CardDescription>Choose what lands in your inbox.</CardDescription>\n      </CardHeader>\n      <CardContent className=\"grid gap-4\">\n        {channels.map((c) => (\n          <Field key={c.id} orientation=\"horizontal\">\n            <FieldContent>\n              <FieldLabel htmlFor={c.id}>{c.label}</FieldLabel>\n              <FieldDescription>{c.description}</FieldDescription>\n            </FieldContent>\n            <Switch id={c.id} defaultChecked={c.on} />\n          </Field>\n        ))}\n      </CardContent>\n      <CardFooter className=\"justify-end gap-2\">\n        <Button variant=\"ghost\" size=\"sm\">\n          Reset\n        </Button>\n        <Button size=\"sm\">Save preferences</Button>\n      </CardFooter>\n    </Card>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

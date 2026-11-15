@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "scroll-area-40",
+  "type": "registry:example",
+  "description": "Long list of notification toggles inside a settings scroll area.",
+  "files": [
+    {
+      "path": "registry/designali/examples/scroll-area/scroll-area-40.tsx",
+      "content": "import {\n  Card,\n  CardDescription,\n  CardHeader,\n  CardTitle,\n} from \"@workspace/ui/components/card\"\nimport { Label } from \"@workspace/ui/components/label\"\nimport { ScrollArea } from \"@workspace/ui/components/scroll-area\"\nimport { Switch } from \"@workspace/ui/components/switch\"\n\nconst prefs = [\n  [\"Mentions\", \"When someone @mentions you\"],\n  [\"Comments\", \"Replies on your posts\"],\n  [\"Assignments\", \"Tasks assigned to you\"],\n  [\"Due dates\", \"Reminders 24h before due\"],\n  [\"Status changes\", \"Tasks you follow change status\"],\n  [\"Weekly digest\", \"Summary every Monday\"],\n  [\"Product updates\", \"New features and improvements\"],\n  [\"Security alerts\", \"New sign-ins and password changes\"],\n  [\"Billing\", \"Receipts and failed payments\"],\n]\n\nexport default function NotificationPreferences() {\n  return (\n    <Card className=\"w-full max-w-sm gap-0 py-0\">\n      <CardHeader className=\"border-b py-4\">\n        <CardTitle>Email notifications</CardTitle>\n        <CardDescription>Decide what lands in your inbox.</CardDescription>\n      </CardHeader>\n      <ScrollArea className=\"h-64\">\n        <div className=\"flex flex-col divide-y\">\n          {prefs.map(([title, desc], i) => (\n            <div\n              key={title}\n              className=\"flex items-center justify-between gap-3 px-4 py-3\"\n            >\n              <div className=\"min-w-0\">\n                <Label htmlFor={\"pref-\" + i} className=\"text-xs\">\n                  {title}\n                </Label>\n                <p className=\"text-xs text-muted-foreground\">{desc}</p>\n              </div>\n              <Switch\n                id={\"pref-\" + i}\n                defaultChecked={i % 3 !== 2}\n                disabled={title === \"Security alerts\"}\n              />\n            </div>\n          ))}\n        </div>\n      </ScrollArea>\n    </Card>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

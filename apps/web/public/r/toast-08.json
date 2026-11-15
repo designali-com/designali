@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toast-08",
+  "type": "registry:example",
+  "description": "Toasts with timeout 0 stay open until a Dismiss all button closes every one.",
+  "files": [
+    {
+      "path": "registry/designali/examples/toast/toast-08.tsx",
+      "content": "\"use client\"\n\nimport { BellRingIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Toaster, createToastManager } from \"@workspace/ui/components/toast\"\n\nconst notify = createToastManager()\n\nconst alerts = [\n  \"Disk usage on db-primary is above 85%\",\n  \"SSL certificate for status page expires in 6 days\",\n  \"3 background jobs failed in the last hour\",\n]\n\nexport default function PersistentToastDismissAll() {\n  return (\n    <Toaster toastManager={notify}>\n      <div className=\"flex flex-wrap items-center justify-center gap-2\">\n        <Button\n          variant=\"outline\"\n          onClick={() =>\n            alerts.forEach((text) =>\n              notify.add({\n                type: \"warning\",\n                title: \"Needs attention\",\n                description: text,\n                timeout: 0,\n              })\n            )\n          }\n        >\n          <BellRingIcon data-icon=\"inline-start\" />\n          Show alerts\n        </Button>\n        <Button variant=\"ghost\" onClick={() => notify.close()}>\n          Dismiss all\n        </Button>\n      </div>\n    </Toaster>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

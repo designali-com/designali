@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "field-40",
+  "type": "registry:example",
+  "description": "Visibility radio choice cards with icons for public, team-only, and private profiles.",
+  "files": [
+    {
+      "path": "registry/designali/examples/field/field-40.tsx",
+      "content": "import { GlobeIcon, LockIcon, UsersIcon } from \"lucide-react\"\n\nimport {\n  Field,\n  FieldContent,\n  FieldDescription,\n  FieldLabel,\n  FieldLegend,\n  FieldSet,\n  FieldTitle,\n} from \"@workspace/ui/components/field\"\nimport {\n  RadioGroup,\n  RadioGroupItem,\n} from \"@workspace/ui/components/radio-group\"\n\nconst options = [\n  {\n    value: \"public\",\n    title: \"Public\",\n    hint: \"Anyone on the internet can see your profile.\",\n    icon: GlobeIcon,\n  },\n  {\n    value: \"team\",\n    title: \"Team only\",\n    hint: \"Only members of your workspaces.\",\n    icon: UsersIcon,\n  },\n  {\n    value: \"private\",\n    title: \"Private\",\n    hint: \"Only you. Your name still shows on comments.\",\n    icon: LockIcon,\n  },\n]\n\nexport default function ProfileVisibilityRadio() {\n  return (\n    <FieldSet className=\"w-full max-w-sm\">\n      <FieldLegend variant=\"label\">Profile visibility</FieldLegend>\n      <RadioGroup defaultValue=\"team\" className=\"gap-2\">\n        {options.map((o) => (\n          <FieldLabel key={o.value} htmlFor={\"vis-\" + o.value}>\n            <Field orientation=\"horizontal\">\n              <o.icon className=\"mt-0.5 size-4 shrink-0 text-muted-foreground\" />\n              <FieldContent>\n                <FieldTitle>{o.title}</FieldTitle>\n                <FieldDescription>{o.hint}</FieldDescription>\n              </FieldContent>\n              <RadioGroupItem value={o.value} id={\"vis-\" + o.value} />\n            </Field>\n          </FieldLabel>\n        ))}\n      </RadioGroup>\n    </FieldSet>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "checkbox-35",
+  "type": "registry:example",
+  "description": "Two-factor verification form with a \"remember this device\" checkbox and helper text.",
+  "files": [
+    {
+      "path": "registry/designali/examples/checkbox/checkbox-35.tsx",
+      "content": "import { Button } from \"@workspace/ui/components/button\"\nimport {\n  Card,\n  CardContent,\n  CardDescription,\n  CardHeader,\n  CardTitle,\n} from \"@workspace/ui/components/card\"\nimport { Checkbox } from \"@workspace/ui/components/checkbox\"\nimport {\n  Field,\n  FieldContent,\n  FieldDescription,\n  FieldLabel,\n} from \"@workspace/ui/components/field\"\nimport { Input } from \"@workspace/ui/components/input\"\n\nexport default function RememberDeviceLogin() {\n  return (\n    <Card className=\"w-full max-w-xs\">\n      <CardHeader>\n        <CardTitle>Two-factor authentication</CardTitle>\n        <CardDescription>\n          Enter the 6-digit code from your authenticator app.\n        </CardDescription>\n      </CardHeader>\n      <CardContent>\n        <form className=\"flex flex-col gap-4\">\n          <Field>\n            <FieldLabel htmlFor=\"otp-code\">Code</FieldLabel>\n            <Input\n              id=\"otp-code\"\n              inputMode=\"numeric\"\n              placeholder=\"000000\"\n              className=\"font-mono tracking-widest\"\n            />\n          </Field>\n          <Field orientation=\"horizontal\">\n            <Checkbox id=\"remember-device\" name=\"remember\" defaultChecked />\n            <FieldContent>\n              <FieldLabel htmlFor=\"remember-device\">\n                Remember this device\n              </FieldLabel>\n              <FieldDescription>\n                Skip verification here for 30 days.\n              </FieldDescription>\n            </FieldContent>\n          </Field>\n          <Button type=\"submit\">Verify</Button>\n        </form>\n      </CardContent>\n    </Card>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

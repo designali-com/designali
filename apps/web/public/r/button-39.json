@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button-39",
+  "type": "registry:example",
+  "description": "Form submit button that switches to its aria-invalid style while required fields are empty.",
+  "files": [
+    {
+      "path": "registry/designali/examples/button/button-39.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Input } from \"@workspace/ui/components/input\"\n\nexport default function InvalidSubmitButton() {\n  const [email, setEmail] = React.useState(\"\")\n  const [tried, setTried] = React.useState(false)\n  const invalid = tried && !email.includes(\"@\")\n\n  return (\n    <form\n      className=\"flex w-full max-w-xs flex-col gap-2\"\n      onSubmit={(event) => {\n        event.preventDefault()\n        setTried(true)\n      }}\n    >\n      <Input\n        type=\"email\"\n        placeholder=\"you@example.com\"\n        value={email}\n        aria-invalid={invalid}\n        onChange={(event) => setEmail(event.target.value)}\n      />\n      <Button type=\"submit\" variant=\"outline\" aria-invalid={invalid}>\n        Join waitlist\n      </Button>\n      {invalid && (\n        <p className=\"text-xs text-destructive\">\n          Enter a valid email address to continue.\n        </p>\n      )}\n    </form>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "slider-19",
+  "type": "registry:example",
+  "description": "Ad targeting age range with a minimum gap enforced between thumbs.",
+  "files": [
+    {
+      "path": "registry/designali/examples/slider/slider-19.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport {\n  Field,\n  FieldDescription,\n  FieldLabel,\n} from \"@workspace/ui/components/field\"\nimport { Slider } from \"@workspace/ui/components/slider\"\n\nexport default function AudienceAgeRange() {\n  const [ages, setAges] = React.useState([25, 44])\n\n  return (\n    <Field className=\"w-full max-w-sm\">\n      <div className=\"flex items-center justify-between\">\n        <FieldLabel>Audience age</FieldLabel>\n        <span className=\"text-sm tabular-nums\">\n          {ages[0]} - {ages[1] === 65 ? \"65+\" : ages[1]}\n        </span>\n      </div>\n      <Slider\n        aria-label=\"Audience age\"\n        value={ages}\n        onValueChange={(value) => setAges(value as number[])}\n        min={18}\n        max={65}\n        minStepsBetweenValues={5}\n      />\n      <FieldDescription>\n        Ranges must span at least 5 years. Estimated reach: 1.2M people.\n      </FieldDescription>\n    </Field>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

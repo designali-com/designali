@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "checkbox-27",
+  "type": "registry:example",
+  "description": "Destructive confirmation where the delete button stays disabled until every acknowledgement is checked.",
+  "files": [
+    {
+      "path": "registry/designali/examples/checkbox/checkbox-27.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { Trash2Icon, TriangleAlertIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  Card,\n  CardContent,\n  CardDescription,\n  CardFooter,\n  CardHeader,\n  CardTitle,\n} from \"@workspace/ui/components/card\"\nimport { Checkbox } from \"@workspace/ui/components/checkbox\"\nimport { Field, FieldGroup, FieldLabel } from \"@workspace/ui/components/field\"\n\nconst acknowledgements = [\n  \"All projects and files will be permanently deleted.\",\n  \"Active subscriptions will be cancelled without refund.\",\n  \"This action cannot be undone.\",\n]\n\nexport default function DeleteAccountConfirm() {\n  const [acked, setAcked] = React.useState<number[]>([])\n\n  return (\n    <Card className=\"w-full max-w-sm ring-destructive/30\">\n      <CardHeader>\n        <CardTitle className=\"flex items-center gap-2 text-destructive\">\n          <TriangleAlertIcon className=\"size-4\" />\n          Delete workspace\n        </CardTitle>\n        <CardDescription>\n          Confirm you understand what happens next.\n        </CardDescription>\n      </CardHeader>\n      <CardContent>\n        <FieldGroup className=\"gap-3\">\n          {acknowledgements.map((text, index) => (\n            <Field key={text} orientation=\"horizontal\">\n              <Checkbox\n                id={\"ack-\" + index}\n                checked={acked.includes(index)}\n                onCheckedChange={(checked) =>\n                  setAcked((list) =>\n                    checked ? [...list, index] : list.filter((i) => i !== index)\n                  )\n                }\n              />\n              <FieldLabel htmlFor={\"ack-\" + index} className=\"font-normal\">\n                {text}\n              </FieldLabel>\n            </Field>\n          ))}\n        </FieldGroup>\n      </CardContent>\n      <CardFooter className=\"border-t\">\n        <Button\n          variant=\"destructive\"\n          className=\"w-full\"\n          disabled={acked.length < acknowledgements.length}\n        >\n          <Trash2Icon data-icon=\"inline-start\" />\n          Delete workspace\n        </Button>\n      </CardFooter>\n    </Card>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

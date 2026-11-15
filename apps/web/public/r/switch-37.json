@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "switch-37",
+  "type": "registry:example",
+  "description": "A settings list filtered by a search input, with an empty state when nothing matches.",
+  "files": [
+    {
+      "path": "registry/designali/examples/switch/switch-37.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { SearchIcon } from \"lucide-react\"\n\nimport {\n  InputGroup,\n  InputGroupAddon,\n  InputGroupInput,\n} from \"@workspace/ui/components/input-group\"\nimport { Label } from \"@workspace/ui/components/label\"\nimport { Switch } from \"@workspace/ui/components/switch\"\n\nconst allSettings = [\n  { id: \"spell\", label: \"Spell check\", on: true },\n  { id: \"autosave\", label: \"Autosave drafts\", on: true },\n  { id: \"wordwrap\", label: \"Word wrap\", on: false },\n  { id: \"minimap\", label: \"Show minimap\", on: false },\n  { id: \"linenumbers\", label: \"Line numbers\", on: true },\n  { id: \"format\", label: \"Format on save\", on: true },\n]\n\nexport default function SearchableSettingsList() {\n  const [query, setQuery] = React.useState(\"\")\n  const filtered = allSettings.filter((s) =>\n    s.label.toLowerCase().includes(query.toLowerCase())\n  )\n\n  return (\n    <div className=\"flex w-full max-w-xs flex-col gap-2\">\n      <InputGroup>\n        <InputGroupAddon>\n          <SearchIcon />\n        </InputGroupAddon>\n        <InputGroupInput\n          placeholder=\"Search settings\"\n          value={query}\n          onChange={(e) => setQuery(e.target.value)}\n        />\n      </InputGroup>\n      <div className=\"divide-y border\">\n        {filtered.map((setting) => (\n          <div\n            key={setting.id}\n            className=\"flex items-center justify-between px-3 py-2.5\"\n          >\n            <Label htmlFor={\"search-\" + setting.id}>{setting.label}</Label>\n            <Switch\n              id={\"search-\" + setting.id}\n              size=\"sm\"\n              defaultChecked={setting.on}\n            />\n          </div>\n        ))}\n        {filtered.length === 0 && (\n          <p className=\"px-3 py-6 text-center text-xs text-muted-foreground\">\n            No settings match &quot;{query}&quot;\n          </p>\n        )}\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

@@ -33,14 +33,14 @@ const sections = [
 ]
 
 export default function Navigation16() {
-  const [active, setActive] = useState(sections[0].id)
+  const [active, setActive] = useState(sections[0]!.id)
   const container = useRef<HTMLDivElement>(null)
 
   function onScroll() {
     const element = container.current
     if (!element) return
     const top = element.scrollTop + 40
-    let current = sections[0].id
+    let current = sections[0]!.id
     for (const section of sections) {
       const target = element.querySelector<HTMLElement>(`[data-section="${section.id}"]`)
       if (target && target.offsetTop <= top) current = section.id

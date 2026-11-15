@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "combobox-10",
+  "type": "registry:example",
+  "description": "Disabled combobox in a settings field managed by a workspace admin.",
+  "files": [
+    {
+      "path": "registry/designali/examples/combobox/combobox-10.tsx",
+      "content": "\"use client\"\n\nimport { LockIcon } from \"lucide-react\"\n\nimport {\n  Combobox,\n  ComboboxContent,\n  ComboboxInput,\n  ComboboxItem,\n  ComboboxList,\n} from \"@workspace/ui/components/combobox\"\nimport {\n  Field,\n  FieldDescription,\n  FieldLabel,\n} from \"@workspace/ui/components/field\"\n\nconst plans = [\"Starter\", \"Team\", \"Business\", \"Enterprise\"]\n\nexport default function DisabledCombobox() {\n  return (\n    <Field className=\"w-full max-w-xs\" data-disabled>\n      <FieldLabel>Billing plan</FieldLabel>\n      <Combobox items={plans} defaultValue=\"Business\" disabled>\n        <ComboboxInput disabled className=\"w-full\" />\n        <ComboboxContent>\n          <ComboboxList>\n            {(item: string) => (\n              <ComboboxItem key={item} value={item}>\n                {item}\n              </ComboboxItem>\n            )}\n          </ComboboxList>\n        </ComboboxContent>\n      </Combobox>\n      <FieldDescription className=\"flex items-center gap-1\">\n        <LockIcon className=\"size-3\" />\n        Only workspace owners can change the plan.\n      </FieldDescription>\n    </Field>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

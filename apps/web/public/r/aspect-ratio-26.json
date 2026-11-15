@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "aspect-ratio-26",
+  "type": "registry:example",
+  "description": "A golden-ratio frame with an SVG spiral subdivision overlay.",
+  "files": [
+    {
+      "path": "registry/designali/examples/aspect-ratio/aspect-ratio-26.tsx",
+      "content": "import { AspectRatio } from \"@workspace/ui/components/aspect-ratio\"\n\nexport default function GoldenRatioSpiral() {\n  return (\n    <div className=\"w-full max-w-sm\">\n      <AspectRatio\n        ratio={1.618}\n        className=\"border bg-linear-to-br from-amber-100 to-yellow-300 dark:from-amber-900 dark:to-yellow-700\"\n      >\n        <svg\n          viewBox=\"0 0 161.8 100\"\n          className=\"absolute inset-0 size-full text-amber-900/50 dark:text-amber-100/50\"\n          fill=\"none\"\n          stroke=\"currentColor\"\n          aria-hidden=\"true\"\n        >\n          <path\n            d=\"M100 0 V100 M100 61.8 H161.8 M138.2 61.8 V100 M138.2 85.4 H100\"\n            strokeWidth=\"0.6\"\n          />\n          <path\n            d=\"M100 100 A100 100 0 0 1 0 0 M100 0 A61.8 61.8 0 0 1 161.8 61.8 M161.8 61.8 A38.2 38.2 0 0 1 123.6 100\"\n            strokeWidth=\"1\"\n          />\n        </svg>\n      </AspectRatio>\n      <p className=\"mt-2 text-center font-mono text-xs text-muted-foreground\">\n        phi = 1.618\n      </p>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

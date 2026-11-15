@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "navigation-menu-34",
+  "type": "registry:example",
+  "description": "University site navigation with Admissions and Academics menus organized under headings.",
+  "files": [
+    {
+      "path": "registry/designali/examples/navigation-menu/navigation-menu-34.tsx",
+      "content": "import {\n  NavigationMenu,\n  NavigationMenuContent,\n  NavigationMenuItem,\n  NavigationMenuLink,\n  NavigationMenuList,\n  NavigationMenuTrigger,\n  navigationMenuTriggerStyle,\n} from \"@workspace/ui/components/navigation-menu\"\n\nconst menus = [\n  {\n    label: \"Admissions\",\n    groups: [\n      { heading: \"Apply\", links: [\"Undergraduate\", \"Graduate\", \"Transfer\"] },\n      { heading: \"Afford\", links: [\"Tuition & fees\", \"Scholarships\"] },\n    ],\n  },\n  {\n    label: \"Academics\",\n    groups: [\n      {\n        heading: \"Schools\",\n        links: [\"Engineering\", \"Arts & Sciences\", \"Business\"],\n      },\n      { heading: \"Resources\", links: [\"Library\", \"Academic calendar\"] },\n    ],\n  },\n]\n\nexport default function UniversityNav() {\n  return (\n    <NavigationMenu>\n      <NavigationMenuList>\n        {menus.map((menu) => (\n          <NavigationMenuItem key={menu.label}>\n            <NavigationMenuTrigger>{menu.label}</NavigationMenuTrigger>\n            <NavigationMenuContent>\n              <div className=\"grid w-72 grid-cols-2 gap-2 sm:w-80\">\n                {menu.groups.map((g) => (\n                  <div key={g.heading} className=\"flex flex-col gap-0.5\">\n                    <p className=\"px-2 py-1 text-[11px] font-semibold tracking-wide text-muted-foreground uppercase\">\n                      {g.heading}\n                    </p>\n                    {g.links.map((link) => (\n                      <NavigationMenuLink\n                        key={link}\n                        href=\"#\"\n                        className=\"py-1.5\"\n                      >\n                        {link}\n                      </NavigationMenuLink>\n                    ))}\n                  </div>\n                ))}\n              </div>\n            </NavigationMenuContent>\n          </NavigationMenuItem>\n        ))}\n        <NavigationMenuItem>\n          <NavigationMenuLink href=\"#\" className={navigationMenuTriggerStyle()}>\n            Visit\n          </NavigationMenuLink>\n        </NavigationMenuItem>\n      </NavigationMenuList>\n    </NavigationMenu>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

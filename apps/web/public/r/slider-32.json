@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "slider-32",
+  "type": "registry:example",
+  "description": "Small, default, and large slider sizes made by scaling the track and thumb.",
+  "files": [
+    {
+      "path": "registry/designali/examples/slider/slider-32.tsx",
+      "content": "import { Slider } from \"@workspace/ui/components/slider\"\n\nconst sizes = [\n  {\n    label: \"Small\",\n    className:\n      \"[&_[data-slot=slider-thumb]]:size-2.5 [&_[data-slot=slider-track]]:h-0.5!\",\n  },\n  { label: \"Default\", className: \"\" },\n  {\n    label: \"Large\",\n    className:\n      \"[&_[data-slot=slider-thumb]]:size-5 [&_[data-slot=slider-track]]:h-2!\",\n  },\n]\n\nexport default function SliderSizes() {\n  return (\n    <div className=\"flex w-full max-w-xs flex-col gap-6\">\n      {sizes.map((size) => (\n        <div key={size.label} className=\"flex flex-col gap-2\">\n          <span className=\"text-xs text-muted-foreground\">{size.label}</span>\n          <Slider\n            aria-label={size.label + \" slider\"}\n            className={size.className}\n            defaultValue={[55]}\n          />\n        </div>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

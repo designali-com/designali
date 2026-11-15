@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "radio-group-16",
+  "type": "registry:example",
+  "description": "Grocery delivery time slot grid with fully booked slots disabled.",
+  "files": [
+    {
+      "path": "registry/designali/examples/radio-group/radio-group-16.tsx",
+      "content": "import { CalendarIcon } from \"lucide-react\"\n\nimport {\n  RadioGroup,\n  RadioGroupItem,\n} from \"@workspace/ui/components/radio-group\"\n\nconst slots = [\n  { value: \"08\", label: \"8-10 AM\", full: false },\n  { value: \"10\", label: \"10-12 PM\", full: true },\n  { value: \"12\", label: \"12-2 PM\", full: false },\n  { value: \"14\", label: \"2-4 PM\", full: false },\n  { value: \"16\", label: \"4-6 PM\", full: true },\n  { value: \"18\", label: \"6-8 PM\", full: false },\n]\n\nexport default function DeliveryTimeSlots() {\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-3\">\n      <p className=\"flex items-center gap-2 text-sm font-medium\">\n        <CalendarIcon className=\"size-4\" />\n        Saturday, Nov 22\n      </p>\n      <RadioGroup defaultValue=\"12\" className=\"grid grid-cols-3 gap-2\">\n        {slots.map((slot) => (\n          <label\n            key={slot.value}\n            htmlFor={\"slot-\" + slot.value}\n            className=\"flex cursor-pointer flex-col items-center gap-0.5 border px-2 py-2.5 text-sm has-disabled:cursor-not-allowed has-disabled:opacity-50 has-data-checked:border-primary has-data-checked:bg-primary/5\"\n          >\n            <RadioGroupItem\n              value={slot.value}\n              id={\"slot-\" + slot.value}\n              disabled={slot.full}\n              className=\"sr-only\"\n            />\n            <span className=\"font-medium\">{slot.label}</span>\n            <span className=\"text-[11px] text-muted-foreground\">\n              {slot.full ? \"Full\" : \"$3.99\"}\n            </span>\n          </label>\n        ))}\n      </RadioGroup>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "navigation-11",
+  "type": "registry:block",
+  "description": "Floating pill nav where a sliding highlight follows the pointer and an underline marks the active link.",
+  "dependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/designali/blocks/navigation/navigation-11.tsx",
+      "content": "\"use client\"\n\nimport { useLayoutEffect, useRef, useState } from \"react\"\n\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst links = [\"Overview\", \"Integrations\", \"Changelog\", \"Pricing\", \"Docs\"]\n\ntype Box = { left: number; width: number }\n\nexport default function Navigation11() {\n  const [active, setActive] = useState(0)\n  const [hovered, setHovered] = useState<number | null>(null)\n  const [boxes, setBoxes] = useState<Box[]>([])\n  const refs = useRef<(HTMLButtonElement | null)[]>([])\n\n  useLayoutEffect(() => {\n    function measure() {\n      setBoxes(\n        refs.current.map((element) => ({\n          left: element?.offsetLeft ?? 0,\n          width: element?.offsetWidth ?? 0,\n        }))\n      )\n    }\n    measure()\n    window.addEventListener(\"resize\", measure)\n    return () => window.removeEventListener(\"resize\", measure)\n  }, [])\n\n  const hoverBox = hovered !== null ? boxes[hovered] : undefined\n  const activeBox = boxes[active]\n\n  return (\n    <section className=\"w-full bg-background py-16\">\n      <div className=\"mx-auto flex max-w-7xl flex-col items-center gap-10 px-6\">\n        <header className=\"flex w-full max-w-3xl items-center justify-between gap-4 border bg-background p-2\">\n          <a href=\"#\" className=\"flex shrink-0 items-center gap-2 ps-2 text-sm font-semibold\">\n            <span className=\"size-4 rotate-45 border-2 border-foreground\" />\n            <span className=\"hidden sm:inline\">Prism</span>\n          </a>\n          <nav\n            className=\"relative flex min-w-0 overflow-x-auto\"\n            onMouseLeave={() => setHovered(null)}\n          >\n            {hoverBox && (\n              <span\n                aria-hidden\n                className=\"absolute inset-y-0 bg-muted transition-all duration-200\"\n                style={{ left: hoverBox.left, width: hoverBox.width }}\n              />\n            )}\n            {activeBox && (\n              <span\n                aria-hidden\n                className=\"absolute bottom-0 h-0.5 bg-foreground transition-all duration-300\"\n                style={{ left: activeBox.left, width: activeBox.width }}\n              />\n            )}\n            {links.map((link, index) => (\n              <button\n                key={link}\n                ref={(element) => {\n                  refs.current[index] = element\n                }}\n                type=\"button\"\n                onMouseEnter={() => setHovered(index)}\n                onClick={() => setActive(index)}\n                className={cn(\n                  \"relative h-9 shrink-0 px-3 text-sm transition-colors\",\n                  active === index ? \"text-foreground\" : \"text-muted-foreground\"\n                )}\n              >\n                {link}\n              </button>\n            ))}\n          </nav>\n          <a\n            href=\"#\"\n            className=\"hidden h-9 shrink-0 items-center bg-primary px-4 text-sm text-primary-foreground md:flex\"\n          >\n            Try free\n          </a>\n        </header>\n\n        <div className=\"w-full max-w-3xl border bg-muted/30 p-8 text-center md:p-12\">\n          <p className=\"text-xs tracking-widest text-muted-foreground uppercase\">\n            {links[active]}\n          </p>\n          <p className=\"mt-3 text-2xl font-semibold tracking-tight\">\n            A sliding highlight follows the pointer while the underline marks where you are.\n          </p>\n        </div>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "300px"
+  },
+  "categories": [
+    "navigation"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "scroll-area-18",
+  "type": "registry:example",
+  "description": "Project file tree with nested folders in a scrollable sidebar.",
+  "files": [
+    {
+      "path": "registry/designali/examples/scroll-area/scroll-area-18.tsx",
+      "content": "import { FileIcon, FolderIcon } from \"lucide-react\"\n\nimport { ScrollArea } from \"@workspace/ui/components/scroll-area\"\n\nconst tree = [\n  { name: \"src\", depth: 0, folder: true },\n  { name: \"app\", depth: 1, folder: true },\n  { name: \"layout.tsx\", depth: 2 },\n  { name: \"page.tsx\", depth: 2 },\n  { name: \"dashboard\", depth: 2, folder: true },\n  { name: \"page.tsx\", depth: 3 },\n  { name: \"loading.tsx\", depth: 3 },\n  { name: \"components\", depth: 1, folder: true },\n  { name: \"header.tsx\", depth: 2 },\n  { name: \"sidebar.tsx\", depth: 2 },\n  { name: \"chart.tsx\", depth: 2 },\n  { name: \"lib\", depth: 1, folder: true },\n  { name: \"db.ts\", depth: 2 },\n  { name: \"auth.ts\", depth: 2 },\n  { name: \"package.json\", depth: 0 },\n  { name: \"tsconfig.json\", depth: 0 },\n  { name: \"README.md\", depth: 0 },\n]\n\nexport default function FileTreeExplorer() {\n  return (\n    <div className=\"w-full max-w-xs border\">\n      <div className=\"border-b px-3 py-2 text-[10px] font-medium tracking-wide text-muted-foreground uppercase\">\n        Explorer\n      </div>\n      <ScrollArea className=\"h-64\">\n        <div className=\"flex flex-col py-1 text-xs\">\n          {tree.map((node, i) => (\n            <div\n              key={i}\n              className=\"flex items-center gap-1.5 py-1 pr-3 hover:bg-muted\"\n              style={{ paddingLeft: 12 + node.depth * 14 }}\n            >\n              {node.folder ? (\n                <FolderIcon className=\"size-3.5 shrink-0 text-sky-500\" />\n              ) : (\n                <FileIcon className=\"size-3.5 shrink-0 text-muted-foreground\" />\n              )}\n              <span className=\"truncate\">{node.name}</span>\n            </div>\n          ))}\n        </div>\n      </ScrollArea>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

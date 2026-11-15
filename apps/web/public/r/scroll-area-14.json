@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "scroll-area-14",
+  "type": "registry:example",
+  "description": "Emoji picker with grouped emoji grids inside a scroll area.",
+  "files": [
+    {
+      "path": "registry/designali/examples/scroll-area/scroll-area-14.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { ScrollArea } from \"@workspace/ui/components/scroll-area\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst groups = [\n  {\n    label: \"Smileys\",\n    items: [\n      \"😀\",\n      \"😄\",\n      \"😁\",\n      \"😅\",\n      \"😂\",\n      \"🙂\",\n      \"😉\",\n      \"😊\",\n      \"😍\",\n      \"🤩\",\n      \"😎\",\n      \"🤔\",\n      \"😴\",\n      \"🥳\",\n    ],\n  },\n  {\n    label: \"Gestures\",\n    items: [\"👍\", \"👎\", \"👏\", \"🙌\", \"🙏\", \"👋\", \"✌️\", \"🤞\", \"💪\", \"👀\"],\n  },\n  {\n    label: \"Objects\",\n    items: [\n      \"🎉\",\n      \"🔥\",\n      \"✨\",\n      \"💡\",\n      \"📌\",\n      \"📎\",\n      \"🧩\",\n      \"🎯\",\n      \"🚀\",\n      \"⏰\",\n      \"📦\",\n      \"🔒\",\n    ],\n  },\n  {\n    label: \"Nature\",\n    items: [\"🌱\", \"🌸\", \"🌊\", \"⛰️\", \"🌙\", \"☀️\", \"🌈\", \"❄️\", \"🍀\", \"🌵\"],\n  },\n]\n\nexport default function EmojiPickerGrid() {\n  const [picked, setPicked] = React.useState(\"👍\")\n\n  return (\n    <div className=\"w-full max-w-xs border\">\n      <div className=\"flex items-center gap-2 border-b px-3 py-2 text-xs\">\n        <span className=\"text-lg\">{picked}</span>\n        <span className=\"text-muted-foreground\">Selected reaction</span>\n      </div>\n      <ScrollArea className=\"h-56\">\n        <div className=\"flex flex-col gap-3 p-3\">\n          {groups.map((g) => (\n            <div key={g.label} className=\"flex flex-col gap-1\">\n              <span className=\"text-[10px] font-medium text-muted-foreground uppercase\">\n                {g.label}\n              </span>\n              <div className=\"grid grid-cols-7 gap-1\">\n                {g.items.map((e) => (\n                  <button\n                    key={e}\n                    onClick={() => setPicked(e)}\n                    aria-label={\"React with \" + e}\n                    className={cn(\n                      \"flex aspect-square items-center justify-center text-lg hover:bg-muted\",\n                      picked === e && \"bg-muted ring-1 ring-ring\"\n                    )}\n                  >\n                    {e}\n                  </button>\n                ))}\n              </div>\n            </div>\n          ))}\n        </div>\n      </ScrollArea>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

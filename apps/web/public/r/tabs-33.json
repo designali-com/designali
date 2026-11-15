@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tabs-33",
+  "type": "registry:example",
+  "description": "Many category tabs inside a horizontally scrollable list.",
+  "files": [
+    {
+      "path": "registry/designali/examples/tabs/tabs-33.tsx",
+      "content": "import {\n  Tabs,\n  TabsContent,\n  TabsList,\n  TabsTrigger,\n} from \"@workspace/ui/components/tabs\"\n\nconst categories = [\n  \"All\",\n  \"Pizza\",\n  \"Sushi\",\n  \"Burgers\",\n  \"Salads\",\n  \"Tacos\",\n  \"Ramen\",\n  \"Desserts\",\n  \"Drinks\",\n]\n\nexport default function ScrollableCategoryTabs() {\n  return (\n    <Tabs defaultValue=\"All\" className=\"w-full max-w-sm\">\n      <div className=\"overflow-x-auto\">\n        <TabsList variant=\"line\" className=\"w-max\">\n          {categories.map((c) => (\n            <TabsTrigger key={c} value={c} className=\"flex-none\">\n              {c}\n            </TabsTrigger>\n          ))}\n        </TabsList>\n      </div>\n      {categories.map((c) => (\n        <TabsContent\n          key={c}\n          value={c}\n          className=\"border p-3 text-muted-foreground\"\n        >\n          Showing{\" \"}\n          {c === \"All\" ? \"every restaurant\" : c.toLowerCase() + \" places\"} near\n          you.\n        </TabsContent>\n      ))}\n    </Tabs>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

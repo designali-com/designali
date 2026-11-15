@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "separator-10",
+  "type": "registry:example",
+  "description": "Compact site footer with a top separator and inline legal links divided vertically.",
+  "files": [
+    {
+      "path": "registry/designali/examples/separator/separator-10.tsx",
+      "content": "import * as React from \"react\"\n\nimport { Separator } from \"@workspace/ui/components/separator\"\n\nconst links = [\"Privacy\", \"Terms\", \"Cookies\", \"Status\"]\n\nexport default function SiteFooterSeparators() {\n  return (\n    <footer className=\"flex w-full max-w-md flex-col gap-4\">\n      <Separator />\n      <div className=\"flex flex-wrap items-center justify-between gap-3 text-xs text-muted-foreground\">\n        <span>&copy; 2026 Fieldnote Labs</span>\n        <nav className=\"flex h-3.5 items-center gap-3\">\n          {links.map((link, index) => (\n            <React.Fragment key={link}>\n              {index > 0 && <Separator orientation=\"vertical\" />}\n              <a href=\"#\" className=\"hover:text-foreground\">\n                {link}\n              </a>\n            </React.Fragment>\n          ))}\n        </nav>\n      </div>\n    </footer>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

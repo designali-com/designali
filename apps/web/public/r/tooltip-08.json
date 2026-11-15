@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tooltip-08",
+  "type": "registry:example",
+  "description": "Three triggers with instant, short and long hover delays set on each trigger.",
+  "files": [
+    {
+      "path": "registry/designali/examples/tooltip/tooltip-08.tsx",
+      "content": "import { Button } from \"@workspace/ui/components/button\"\nimport {\n  Tooltip,\n  TooltipContent,\n  TooltipTrigger,\n} from \"@workspace/ui/components/tooltip\"\n\nconst delays = [0, 400, 1000]\n\nexport default function TriggerDelayTooltips() {\n  return (\n    <div className=\"flex flex-wrap justify-center gap-2\">\n      {delays.map((delay) => (\n        <Tooltip key={delay}>\n          <TooltipTrigger delay={delay} render={<Button variant=\"outline\" />}>\n            {delay === 0 ? \"Instant\" : delay + \" ms\"}\n          </TooltipTrigger>\n          <TooltipContent>Opened after {delay} ms</TooltipContent>\n        </Tooltip>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toast-27",
+  "type": "registry:example",
+  "description": "Selecting rows and running a bulk action reports how many items were affected.",
+  "files": [
+    {
+      "path": "registry/designali/examples/toast/toast-27.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Checkbox } from \"@workspace/ui/components/checkbox\"\nimport { Toaster, createToastManager } from \"@workspace/ui/components/toast\"\n\nconst notify = createToastManager()\n\nconst tickets = [\n  { id: \"SUP-201\", title: \"Cannot reset password\" },\n  { id: \"SUP-202\", title: \"Invoice shows wrong VAT\" },\n  { id: \"SUP-203\", title: \"Export stuck at 90%\" },\n  { id: \"SUP-204\", title: \"Feature request: dark mode\" },\n]\n\nexport default function BulkActionToast() {\n  const [selected, setSelected] = React.useState<string[]>([])\n\n  function resolve() {\n    notify.add({\n      type: \"success\",\n      title:\n        selected.length +\n        (selected.length === 1 ? \" ticket resolved\" : \" tickets resolved\"),\n      description: selected.join(\", \"),\n    })\n    setSelected([])\n  }\n\n  return (\n    <Toaster toastManager={notify}>\n      <div className=\"w-full max-w-sm border\">\n        {tickets.map((t) => (\n          <label\n            key={t.id}\n            className=\"flex items-center gap-3 border-b px-3 py-2 text-sm last:border-b-0\"\n          >\n            <Checkbox\n              checked={selected.includes(t.id)}\n              onCheckedChange={(checked) =>\n                setSelected((prev) =>\n                  checked ? [...prev, t.id] : prev.filter((x) => x !== t.id)\n                )\n              }\n            />\n            <span className=\"font-mono text-xs text-muted-foreground\">\n              {t.id}\n            </span>\n            <span className=\"truncate\">{t.title}</span>\n          </label>\n        ))}\n        <div className=\"flex justify-end bg-muted/40 p-2\">\n          <Button size=\"sm\" disabled={!selected.length} onClick={resolve}>\n            Resolve selected\n          </Button>\n        </div>\n      </div>\n    </Toaster>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

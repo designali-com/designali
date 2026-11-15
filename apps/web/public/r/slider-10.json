@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "slider-10",
+  "type": "registry:example",
+  "description": "Stepped slider with labelled tick marks under the track.",
+  "files": [
+    {
+      "path": "registry/designali/examples/slider/slider-10.tsx",
+      "content": "import { Label } from \"@workspace/ui/components/label\"\nimport { Slider } from \"@workspace/ui/components/slider\"\n\nconst ticks = [0, 25, 50, 75, 100]\n\nexport default function SliderWithTickMarks() {\n  return (\n    <div className=\"flex w-full max-w-xs flex-col gap-2\">\n      <Label>Compression quality</Label>\n      <Slider\n        aria-label=\"Compression quality\"\n        defaultValue={[75]}\n        step={25}\n        max={100}\n      />\n      <div className=\"flex justify-between\">\n        {ticks.map((tick) => (\n          <div key={tick} className=\"flex flex-col items-center gap-1\">\n            <span className=\"h-1.5 w-px bg-border\" />\n            <span className=\"text-[10px] text-muted-foreground tabular-nums\">\n              {tick}%\n            </span>\n          </div>\n        ))}\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

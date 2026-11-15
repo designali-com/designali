@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "calendar-45",
+  "type": "registry:example",
+  "description": "Start and end date inputs kept in sync with a range calendar in both directions.",
+  "files": [
+    {
+      "path": "registry/designali/examples/calendar/calendar-45.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { addDays, format, isValid, parseISO } from \"date-fns\"\nimport { type DateRange } from \"react-day-picker\"\n\nimport { Calendar } from \"@workspace/ui/components/calendar\"\nimport { Field, FieldLabel } from \"@workspace/ui/components/field\"\nimport { Input } from \"@workspace/ui/components/input\"\n\nconst toInput = (d?: Date) => (d ? format(d, \"yyyy-MM-dd\") : \"\")\n\nexport default function RangeWithDateInputs() {\n  const [range, setRange] = React.useState<DateRange | undefined>(() => {\n    const from = new Date()\n    return { from, to: addDays(from, 5) }\n  })\n  const [month, setMonth] = React.useState<undefined | Date>(range?.from)\n\n  const update = (key: \"from\" | \"to\", value: string) => {\n    const parsed = parseISO(value)\n    if (!isValid(parsed)) return\n    setRange(\n      (prev) => ({ from: prev?.from, to: prev?.to, [key]: parsed }) as DateRange\n    )\n    setMonth(parsed)\n  }\n\n  return (\n    <div className=\"flex w-fit max-w-full flex-col gap-3 border p-3\">\n      <div className=\"grid grid-cols-2 gap-2\">\n        <Field>\n          <FieldLabel htmlFor=\"range-start\">Start</FieldLabel>\n          <Input\n            id=\"range-start\"\n            type=\"date\"\n            value={toInput(range?.from)}\n            onChange={(e) => update(\"from\", e.target.value)}\n          />\n        </Field>\n        <Field>\n          <FieldLabel htmlFor=\"range-end\">End</FieldLabel>\n          <Input\n            id=\"range-end\"\n            type=\"date\"\n            value={toInput(range?.to)}\n            onChange={(e) => update(\"to\", e.target.value)}\n          />\n        </Field>\n      </div>\n      <Calendar\n        mode=\"range\"\n        selected={range}\n        onSelect={setRange}\n        month={month}\n        onMonthChange={setMonth}\n        className=\"p-0\"\n      />\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

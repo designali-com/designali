@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "separator-45",
+  "type": "registry:example",
+  "description": "Custom tab bar where a separator forms the baseline under an active-tab indicator.",
+  "files": [
+    {
+      "path": "registry/designali/examples/separator/separator-45.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { Separator } from \"@workspace/ui/components/separator\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst tabs = [\"Overview\", \"Activity\", \"Settings\"]\n\nexport default function UnderlineTabsBaseline() {\n  const [active, setActive] = React.useState(\"Activity\")\n\n  return (\n    <div className=\"flex w-full max-w-sm flex-col\">\n      <div className=\"flex gap-4\">\n        {tabs.map((tab) => (\n          <button\n            key={tab}\n            type=\"button\"\n            onClick={() => setActive(tab)}\n            className={cn(\n              \"relative pb-2 text-sm\",\n              tab === active\n                ? \"font-medium\"\n                : \"text-muted-foreground hover:text-foreground\"\n            )}\n          >\n            {tab}\n            {tab === active && (\n              <span className=\"absolute inset-x-0 -bottom-px h-0.5 bg-foreground\" />\n            )}\n          </button>\n        ))}\n      </div>\n      <Separator />\n      <p className=\"pt-3 text-sm text-muted-foreground\">\n        Showing {active.toLowerCase()} for Orbit CRM.\n      </p>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

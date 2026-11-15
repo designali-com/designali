@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "blog-07",
+  "type": "registry:block",
+  "description": "Horizontal scroll-snap carousel of post cards with previous and next arrow controls.",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "registry/designali/blocks/blog/blog-07.tsx",
+      "content": "\"use client\"\n\nimport { useRef } from \"react\"\nimport { ArrowLeft, ArrowRight } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\n\nconst posts = [\n  { tag: \"Research\", title: \"What 1,200 support tickets say about onboarding\", date: \"Nov 13\", read: 9, hue: \"from-chart-1/50 to-chart-2/20\" },\n  { tag: \"Engineering\", title: \"Cutting our cold start from 2.1s to 380ms\", date: \"Nov 8\", read: 12, hue: \"from-chart-2/50 to-chart-3/20\" },\n  { tag: \"Design\", title: \"Dense tables that still breathe\", date: \"Nov 2\", read: 6, hue: \"from-chart-3/50 to-chart-4/20\" },\n  { tag: \"Culture\", title: \"Our writing guide, published in full\", date: \"Oct 27\", read: 15, hue: \"from-chart-4/50 to-chart-5/20\" },\n  { tag: \"Product\", title: \"Inside the redesign of recurring invoices\", date: \"Oct 21\", read: 8, hue: \"from-chart-5/50 to-chart-1/20\" },\n  { tag: \"Engineering\", title: \"Postgres row-level security, two years on\", date: \"Oct 14\", read: 11, hue: \"from-chart-1/50 to-chart-3/20\" },\n]\n\nexport default function Blog07() {\n  const track = useRef<HTMLDivElement>(null)\n\n  function scroll(dir: 1 | -1) {\n    const el = track.current\n    if (!el) return\n    el.scrollBy({ left: dir * el.clientWidth * 0.8, behavior: \"smooth\" })\n  }\n\n  return (\n    <section className=\"w-full overflow-hidden bg-background py-16 text-foreground md:py-24\">\n      <div className=\"mx-auto max-w-7xl px-6\">\n        <div className=\"flex items-end justify-between gap-6\">\n          <div>\n            <p className=\"text-xs tracking-widest text-muted-foreground uppercase\">Tallyhall blog</p>\n            <h2 className=\"mt-2 text-3xl font-medium tracking-tight md:text-4xl\">Fresh from the team</h2>\n          </div>\n          <div className=\"flex gap-2\">\n            <Button variant=\"outline\" size=\"icon-lg\" aria-label=\"Previous posts\" onClick={() => scroll(-1)}>\n              <ArrowLeft />\n            </Button>\n            <Button variant=\"outline\" size=\"icon-lg\" aria-label=\"Next posts\" onClick={() => scroll(1)}>\n              <ArrowRight />\n            </Button>\n          </div>\n        </div>\n\n        <div\n          ref={track}\n          className=\"-mx-6 mt-10 flex snap-x snap-mandatory scroll-px-6 gap-5 overflow-x-auto px-6 pb-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden\"\n        >\n          {posts.map((post) => (\n            <a\n              key={post.title}\n              href=\"#\"\n              className=\"group flex w-[80%] shrink-0 snap-start flex-col border bg-card sm:w-[340px]\"\n            >\n              <div className={`relative aspect-[4/3] bg-gradient-to-br ${post.hue}`}>\n                <span className=\"absolute top-3 left-3 bg-background/90 px-2 py-0.5 text-xs\">{post.tag}</span>\n              </div>\n              <div className=\"flex flex-1 flex-col p-5\">\n                <h3 className=\"text-lg leading-snug font-medium group-hover:underline group-hover:underline-offset-4\">\n                  {post.title}\n                </h3>\n                <p className=\"mt-auto pt-6 text-xs text-muted-foreground\">\n                  {post.date} · {post.read} min read\n                </p>\n              </div>\n            </a>\n          ))}\n        </div>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "600px"
+  },
+  "categories": [
+    "blog"
+  ]
+}

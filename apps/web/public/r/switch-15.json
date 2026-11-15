@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "switch-15",
+  "type": "registry:example",
+  "description": "An out-of-office switch that reveals an auto-reply message editor when enabled.",
+  "files": [
+    {
+      "path": "registry/designali/examples/switch/switch-15.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { Label } from \"@workspace/ui/components/label\"\nimport { Switch } from \"@workspace/ui/components/switch\"\nimport { Textarea } from \"@workspace/ui/components/textarea\"\n\nexport default function AutoReplySwitch() {\n  const [enabled, setEnabled] = React.useState(true)\n\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-3 border p-4\">\n      <div className=\"flex items-center justify-between gap-4\">\n        <div>\n          <Label htmlFor=\"auto-reply\">Out of office reply</Label>\n          <p className=\"text-xs text-muted-foreground\">Sent once per sender.</p>\n        </div>\n        <Switch\n          id=\"auto-reply\"\n          checked={enabled}\n          onCheckedChange={setEnabled}\n        />\n      </div>\n      {enabled && (\n        <Textarea\n          aria-label=\"Auto-reply message\"\n          defaultValue=\"Thanks for your note! I'm away until Monday, Dec 2 with limited access to email. For urgent issues, reach Priya Raman.\"\n          className=\"min-h-24\"\n        />\n      )}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

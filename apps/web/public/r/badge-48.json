@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "badge-48",
+  "type": "registry:example",
+  "description": "A password field with a live badge rating strength as weak, fair, or strong.",
+  "files": [
+    {
+      "path": "registry/designali/examples/badge/badge-48.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { Badge } from \"@workspace/ui/components/badge\"\nimport { Input } from \"@workspace/ui/components/input\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nfunction score(value: string) {\n  let points = 0\n  if (value.length >= 8) points++\n  if (/[A-Z]/.test(value) && /[a-z]/.test(value)) points++\n  if (/[0-9]/.test(value)) points++\n  if (/[^A-Za-z0-9]/.test(value)) points++\n  return points\n}\n\nexport default function PasswordStrengthBadge() {\n  const [password, setPassword] = React.useState(\"\")\n  const points = score(password)\n  const level =\n    points <= 1\n      ? \"Weak\"\n      : points <= 2\n        ? \"Fair\"\n        : points === 3\n          ? \"Good\"\n          : \"Strong\"\n\n  return (\n    <div className=\"flex w-full max-w-xs flex-col gap-2\">\n      <div className=\"flex items-center justify-between\">\n        <label htmlFor=\"new-password\" className=\"text-sm font-medium\">\n          New password\n        </label>\n        {password && (\n          <Badge\n            variant={level === \"Weak\" ? \"destructive\" : \"secondary\"}\n            className={cn(\n              level === \"Fair\" &&\n                \"bg-amber-50 text-amber-700 dark:bg-amber-950 dark:text-amber-300\",\n              (level === \"Good\" || level === \"Strong\") &&\n                \"bg-emerald-50 text-emerald-700 dark:bg-emerald-950 dark:text-emerald-300\"\n            )}\n          >\n            {level}\n          </Badge>\n        )}\n      </div>\n      <Input\n        id=\"new-password\"\n        type=\"password\"\n        value={password}\n        onChange={(event) => setPassword(event.target.value)}\n        placeholder=\"At least 8 characters\"\n      />\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-28",
+  "type": "registry:example",
+  "description": "A chat message composer with attach and emoji actions and a send button.",
+  "files": [
+    {
+      "path": "registry/designali/examples/input/input-28.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { PaperclipIcon, SendIcon, SmileIcon } from \"lucide-react\"\n\nimport {\n  InputGroup,\n  InputGroupAddon,\n  InputGroupButton,\n  InputGroupInput,\n} from \"@workspace/ui/components/input-group\"\n\nexport default function ChatComposerInput() {\n  const [message, setMessage] = React.useState(\"\")\n\n  return (\n    <InputGroup className=\"h-10 w-full max-w-md\">\n      <InputGroupAddon>\n        <InputGroupButton size=\"icon-xs\" aria-label=\"Attach file\">\n          <PaperclipIcon />\n        </InputGroupButton>\n      </InputGroupAddon>\n      <InputGroupInput\n        aria-label=\"Message\"\n        placeholder=\"Message #design-crit\"\n        value={message}\n        onChange={(e) => setMessage(e.target.value)}\n      />\n      <InputGroupAddon align=\"inline-end\">\n        <InputGroupButton size=\"icon-xs\" aria-label=\"Insert emoji\">\n          <SmileIcon />\n        </InputGroupButton>\n        <InputGroupButton\n          size=\"icon-xs\"\n          variant=\"default\"\n          aria-label=\"Send\"\n          disabled={!message.trim()}\n          onClick={() => setMessage(\"\")}\n        >\n          <SendIcon />\n        </InputGroupButton>\n      </InputGroupAddon>\n    </InputGroup>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

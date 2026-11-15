@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tooltip-28",
+  "type": "registry:example",
+  "description": "Password field with a live checklist tooltip of the remaining requirements.",
+  "files": [
+    {
+      "path": "registry/designali/examples/tooltip/tooltip-28.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { CheckIcon, XIcon } from \"lucide-react\"\n\nimport { Input } from \"@workspace/ui/components/input\"\nimport { Label } from \"@workspace/ui/components/label\"\nimport {\n  Tooltip,\n  TooltipContent,\n  TooltipTrigger,\n} from \"@workspace/ui/components/tooltip\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nexport default function PasswordRulesTooltip() {\n  const [value, setValue] = React.useState(\"\")\n  const rules = [\n    { label: \"At least 12 characters\", ok: value.length >= 12 },\n    { label: \"One number\", ok: /\\d/.test(value) },\n    { label: \"One symbol\", ok: /[^A-Za-z0-9]/.test(value) },\n  ]\n\n  return (\n    <div className=\"flex w-full max-w-xs flex-col gap-1.5\">\n      <Label htmlFor=\"new-password\">New password</Label>\n      <Tooltip>\n        <TooltipTrigger\n          render={\n            <Input\n              id=\"new-password\"\n              type=\"password\"\n              value={value}\n              onChange={(e) => setValue(e.target.value)}\n            />\n          }\n        />\n        <TooltipContent\n          side=\"right\"\n          className=\"flex-col items-start gap-1 py-2\"\n        >\n          {rules.map((r) => (\n            <span\n              key={r.label}\n              className={cn(\n                \"flex items-center gap-1.5\",\n                r.ok && \"line-through opacity-60\"\n              )}\n            >\n              {r.ok ? (\n                <CheckIcon className=\"size-3\" />\n              ) : (\n                <XIcon className=\"size-3\" />\n              )}\n              {r.label}\n            </span>\n          ))}\n        </TooltipContent>\n      </Tooltip>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

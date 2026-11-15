@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "radio-group-34",
+  "type": "registry:example",
+  "description": "AI assistant model choice with speed and depth indicators.",
+  "files": [
+    {
+      "path": "registry/designali/examples/radio-group/radio-group-34.tsx",
+      "content": "import {\n  Field,\n  FieldContent,\n  FieldDescription,\n  FieldLabel,\n  FieldTitle,\n} from \"@workspace/ui/components/field\"\nimport {\n  RadioGroup,\n  RadioGroupItem,\n} from \"@workspace/ui/components/radio-group\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst models = [\n  {\n    value: \"swift\",\n    label: \"Swift\",\n    hint: \"Fast replies for quick questions\",\n    speed: 3,\n    depth: 1,\n  },\n  {\n    value: \"balanced\",\n    label: \"Balanced\",\n    hint: \"Good for everyday writing\",\n    speed: 2,\n    depth: 2,\n  },\n  {\n    value: \"deep\",\n    label: \"Deep think\",\n    hint: \"Slower, best for analysis\",\n    speed: 1,\n    depth: 3,\n  },\n]\n\nfunction Meter({ value }: { value: number }) {\n  return (\n    <span className=\"flex gap-0.5\">\n      {[1, 2, 3].map((n) => (\n        <span\n          key={n}\n          className={cn(\"h-2 w-1\", n <= value ? \"bg-foreground\" : \"bg-muted\")}\n        />\n      ))}\n    </span>\n  )\n}\n\nexport default function AssistantModelSelect() {\n  return (\n    <RadioGroup defaultValue=\"balanced\" className=\"w-full max-w-sm\">\n      {models.map((m) => (\n        <FieldLabel key={m.value} htmlFor={\"model-\" + m.value}>\n          <Field orientation=\"horizontal\">\n            <RadioGroupItem value={m.value} id={\"model-\" + m.value} />\n            <FieldContent>\n              <FieldTitle>{m.label}</FieldTitle>\n              <FieldDescription>{m.hint}</FieldDescription>\n            </FieldContent>\n            <div className=\"flex flex-col items-end gap-1 text-[10px] text-muted-foreground\">\n              <span className=\"flex items-center gap-1.5\">\n                Speed <Meter value={m.speed} />\n              </span>\n              <span className=\"flex items-center gap-1.5\">\n                Depth <Meter value={m.depth} />\n              </span>\n            </div>\n          </Field>\n        </FieldLabel>\n      ))}\n    </RadioGroup>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

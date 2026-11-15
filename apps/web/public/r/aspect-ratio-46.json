@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "aspect-ratio-46",
+  "type": "registry:example",
+  "description": "Error state inside a 16:9 slot when media fails to load, with a retry action.",
+  "files": [
+    {
+      "path": "registry/designali/examples/aspect-ratio/aspect-ratio-46.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { ImageOffIcon, RefreshCwIcon } from \"lucide-react\"\n\nimport { AspectRatio } from \"@workspace/ui/components/aspect-ratio\"\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Spinner } from \"@workspace/ui/components/spinner\"\n\nexport default function MediaErrorFallback() {\n  const [loading, setLoading] = React.useState(false)\n\n  function retry() {\n    setLoading(true)\n    setTimeout(() => setLoading(false), 1200)\n  }\n\n  return (\n    <AspectRatio ratio={16 / 9} className=\"w-full max-w-sm border bg-muted/50\">\n      <div className=\"absolute inset-0 flex flex-col items-center justify-center gap-2 p-4 text-center\">\n        <ImageOffIcon className=\"size-6 text-muted-foreground\" />\n        <p className=\"text-sm font-medium\">Preview unavailable</p>\n        <p className=\"text-xs text-muted-foreground\">\n          We couldn&apos;t load this media. Check your connection.\n        </p>\n        <Button size=\"sm\" variant=\"outline\" onClick={retry} disabled={loading}>\n          {loading ? (\n            <Spinner data-icon=\"inline-start\" />\n          ) : (\n            <RefreshCwIcon data-icon=\"inline-start\" />\n          )}\n          Retry\n        </Button>\n      </div>\n    </AspectRatio>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

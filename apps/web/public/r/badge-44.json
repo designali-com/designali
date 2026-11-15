@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "badge-44",
+  "type": "registry:example",
+  "description": "Trial and coupon badges that escalate from neutral to warning to expired.",
+  "files": [
+    {
+      "path": "registry/designali/examples/badge/badge-44.tsx",
+      "content": "import { CalendarIcon, HourglassIcon } from \"lucide-react\"\n\nimport { Badge } from \"@workspace/ui/components/badge\"\n\nconst items = [\n  { label: \"Pro trial\", days: 12 },\n  { label: \"SPRING25 coupon\", days: 2 },\n  { label: \"API key key_demo_...4f\", days: 0 },\n]\n\nexport default function ExpiryCountdownBadges() {\n  return (\n    <div className=\"flex w-full max-w-xs flex-col gap-2\">\n      {items.map((item) => (\n        <div\n          key={item.label}\n          className=\"flex items-center justify-between border p-3\"\n        >\n          <span className=\"truncate text-sm\">{item.label}</span>\n          {item.days === 0 ? (\n            <Badge variant=\"destructive\">Expired</Badge>\n          ) : item.days <= 3 ? (\n            <Badge className=\"bg-amber-50 text-amber-700 dark:bg-amber-950 dark:text-amber-300\">\n              <HourglassIcon data-icon=\"inline-start\" />\n              {item.days} days left\n            </Badge>\n          ) : (\n            <Badge variant=\"secondary\">\n              <CalendarIcon data-icon=\"inline-start\" />\n              {item.days} days left\n            </Badge>\n          )}\n        </div>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

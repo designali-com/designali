@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "combobox-08",
+  "type": "registry:example",
+  "description": "Assign a task to a teammate with avatar initials and email in each option.",
+  "files": [
+    {
+      "path": "registry/designali/examples/combobox/combobox-08.tsx",
+      "content": "\"use client\"\n\nimport { Avatar, AvatarFallback } from \"@workspace/ui/components/avatar\"\nimport {\n  Combobox,\n  ComboboxContent,\n  ComboboxEmpty,\n  ComboboxInput,\n  ComboboxItem,\n  ComboboxList,\n} from \"@workspace/ui/components/combobox\"\n\ntype Member = { id: string; name: string; email: string; initials: string }\n\nconst members: Member[] = [\n  { id: \"1\", name: \"Maya Chen\", email: \"maya@northwind.test\", initials: \"MC\" },\n  {\n    id: \"2\",\n    name: \"Arjun Patel\",\n    email: \"arjun@northwind.test\",\n    initials: \"AP\",\n  },\n  {\n    id: \"3\",\n    name: \"Sofia Martins\",\n    email: \"sofia@northwind.test\",\n    initials: \"SM\",\n  },\n  {\n    id: \"4\",\n    name: \"Kwame Asante\",\n    email: \"kwame@northwind.test\",\n    initials: \"KA\",\n  },\n  { id: \"5\", name: \"Lina Berg\", email: \"lina@northwind.test\", initials: \"LB\" },\n]\n\nexport default function AssigneePicker() {\n  return (\n    <div className=\"w-full max-w-xs\">\n      <Combobox\n        items={members}\n        itemToStringLabel={(member: Member) => member.name}\n      >\n        <ComboboxInput placeholder=\"Assign to...\" className=\"w-full\" />\n        <ComboboxContent>\n          <ComboboxEmpty>No teammates found.</ComboboxEmpty>\n          <ComboboxList>\n            {(member: Member) => (\n              <ComboboxItem key={member.id} value={member}>\n                <Avatar size=\"sm\">\n                  <AvatarFallback>{member.initials}</AvatarFallback>\n                </Avatar>\n                <div className=\"flex min-w-0 flex-col\">\n                  <span className=\"truncate\">{member.name}</span>\n                  <span className=\"truncate text-[11px] text-muted-foreground\">\n                    {member.email}\n                  </span>\n                </div>\n              </ComboboxItem>\n            )}\n          </ComboboxList>\n        </ComboboxContent>\n      </Combobox>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

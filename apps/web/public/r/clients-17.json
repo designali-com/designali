@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "clients-17",
+  "type": "registry:block",
+  "description": "Industry tabs that switch a bordered six-column logo grid and a supporting stat line.",
+  "dependencies": [],
+  "registryDependencies": [
+    "tabs"
+  ],
+  "files": [
+    {
+      "path": "registry/designali/blocks/clients/clients-17.tsx",
+      "content": "\"use client\"\n\nimport {\n  Tabs,\n  TabsContent,\n  TabsList,\n  TabsTrigger,\n} from \"@workspace/ui/components/tabs\"\n\nconst industries = [\n  {\n    id: \"fintech\",\n    label: \"Fintech\",\n    stat: \"240+ financial teams\",\n    names: [\"Nimbus Bank\", \"Ledgerly\", \"Coinpath\", \"Truecap\", \"Fairway Pay\", \"Minted\"],\n  },\n  {\n    id: \"health\",\n    label: \"Healthcare\",\n    stat: \"90+ care providers\",\n    names: [\"Oakmont Health\", \"Helix Bio\", \"Carewell\", \"Pulsewise\", \"Medara\", \"Lumen Clinics\"],\n  },\n  {\n    id: \"commerce\",\n    label: \"Commerce\",\n    stat: \"410+ storefronts\",\n    names: [\"Mosswood\", \"Threadline\", \"Bask & Co\", \"Parcelo\", \"Goodform\", \"Rally Goods\"],\n  },\n  {\n    id: \"devtools\",\n    label: \"Developer tools\",\n    stat: \"180+ dev platforms\",\n    names: [\"Ferro\", \"Stackway\", \"Deployr\", \"Quarry\", \"Bytewise\", \"Tessel\"],\n  },\n]\n\nexport default function Clients17() {\n  return (\n    <section className=\"w-full bg-background py-20 md:py-24\">\n      <div className=\"mx-auto max-w-7xl px-6\">\n        <Tabs defaultValue=\"fintech\" className=\"gap-0\">\n          <div className=\"flex flex-col gap-6 md:flex-row md:items-end md:justify-between\">\n            <div>\n              <h2 className=\"text-3xl font-semibold tracking-tight md:text-4xl\">\n                Built for your industry\n              </h2>\n              <p className=\"mt-3 text-sm text-muted-foreground\">\n                See who already ships with us in your space.\n              </p>\n            </div>\n            <div className=\"-mx-6 overflow-x-auto px-6 md:mx-0 md:px-0\">\n              <TabsList variant=\"line\" className=\"h-10\">\n                {industries.map((industry) => (\n                  <TabsTrigger\n                    key={industry.id}\n                    value={industry.id}\n                    className=\"px-3 text-sm\"\n                  >\n                    {industry.label}\n                  </TabsTrigger>\n                ))}\n              </TabsList>\n            </div>\n          </div>\n          {industries.map((industry) => (\n            <TabsContent key={industry.id} value={industry.id} className=\"mt-10\">\n              <div className=\"grid grid-cols-2 border-t border-l border-border sm:grid-cols-3 lg:grid-cols-6\">\n                {industry.names.map((name) => (\n                  <div\n                    key={name}\n                    className=\"flex h-24 items-center justify-center border-r border-b border-border px-3 text-center text-base font-semibold tracking-tight text-muted-foreground\"\n                  >\n                    {name}\n                  </div>\n                ))}\n              </div>\n              <p className=\"mt-6 text-sm text-muted-foreground\">\n                <span className=\"font-medium text-foreground\">\n                  {industry.stat}\n                </span>{\" \"}\n                rely on our blocks for regulated, high-traffic surfaces.\n              </p>\n            </TabsContent>\n          ))}\n        </Tabs>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "500px"
+  },
+  "categories": [
+    "clients"
+  ]
+}

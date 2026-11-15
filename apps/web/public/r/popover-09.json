@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "popover-09",
+  "type": "registry:example",
+  "description": "Label color picker with a swatch grid and a hex value readout.",
+  "files": [
+    {
+      "path": "registry/designali/examples/popover/popover-09.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { CheckIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  Popover,\n  PopoverContent,\n  PopoverTitle,\n  PopoverTrigger,\n} from \"@workspace/ui/components/popover\"\n\nconst swatches = [\n  \"#ef4444\",\n  \"#f97316\",\n  \"#eab308\",\n  \"#22c55e\",\n  \"#14b8a6\",\n  \"#3b82f6\",\n  \"#6366f1\",\n  \"#a855f7\",\n  \"#ec4899\",\n  \"#64748b\",\n]\n\nexport default function ColorSwatchPopover() {\n  const [color, setColor] = React.useState(\"#3b82f6\")\n\n  return (\n    <Popover>\n      <PopoverTrigger render={<Button variant=\"outline\" />}>\n        <span className=\"size-3.5 border\" style={{ backgroundColor: color }} />\n        Label color\n      </PopoverTrigger>\n      <PopoverContent className=\"w-56\">\n        <PopoverTitle>Choose a color</PopoverTitle>\n        <div className=\"grid grid-cols-5 gap-1.5\">\n          {swatches.map((swatch) => (\n            <button\n              key={swatch}\n              type=\"button\"\n              aria-label={swatch}\n              aria-pressed={swatch === color}\n              onClick={() => setColor(swatch)}\n              className=\"flex aspect-square items-center justify-center ring-offset-2 ring-offset-popover outline-none focus-visible:ring-2 focus-visible:ring-ring aria-pressed:ring-2 aria-pressed:ring-foreground\"\n              style={{ backgroundColor: swatch }}\n            >\n              {swatch === color && (\n                <CheckIcon className=\"size-3.5 text-white\" />\n              )}\n            </button>\n          ))}\n        </div>\n        <div className=\"flex items-center justify-between border p-1.5 font-mono text-[11px]\">\n          <span className=\"text-muted-foreground\">HEX</span>\n          <span>{color.toUpperCase()}</span>\n        </div>\n      </PopoverContent>\n    </Popover>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

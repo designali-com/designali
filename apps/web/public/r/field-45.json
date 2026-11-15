@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "field-45",
+  "type": "registry:example",
+  "description": "Accessibility settings mixing a font size slider, a reduced motion switch, and a contrast radio.",
+  "files": [
+    {
+      "path": "registry/designali/examples/field/field-45.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport {\n  Field,\n  FieldContent,\n  FieldDescription,\n  FieldGroup,\n  FieldLabel,\n  FieldLegend,\n  FieldSeparator,\n  FieldSet,\n} from \"@workspace/ui/components/field\"\nimport {\n  RadioGroup,\n  RadioGroupItem,\n} from \"@workspace/ui/components/radio-group\"\nimport { Slider } from \"@workspace/ui/components/slider\"\nimport { Switch } from \"@workspace/ui/components/switch\"\n\nexport default function AccessibilityPreferencesFields() {\n  const [size, setSize] = React.useState([16])\n\n  return (\n    <FieldGroup className=\"w-full max-w-sm\">\n      <Field>\n        <div className=\"flex items-center justify-between\">\n          <FieldLabel htmlFor=\"a11y-size\">Text size</FieldLabel>\n          <span className=\"text-xs text-muted-foreground tabular-nums\">\n            {size[0]}px\n          </span>\n        </div>\n        <Slider\n          id=\"a11y-size\"\n          value={size}\n          onValueChange={(v) => setSize(v as number[])}\n          min={12}\n          max={24}\n          step={1}\n        />\n        <p style={{ fontSize: size[0] }} className=\"leading-snug\">\n          The quick brown fox jumps.\n        </p>\n      </Field>\n      <FieldSeparator />\n      <Field orientation=\"horizontal\">\n        <FieldContent>\n          <FieldLabel htmlFor=\"a11y-motion\">Reduce motion</FieldLabel>\n          <FieldDescription>Minimize animations and parallax.</FieldDescription>\n        </FieldContent>\n        <Switch id=\"a11y-motion\" size=\"sm\" />\n      </Field>\n      <FieldSeparator />\n      <FieldSet>\n        <FieldLegend variant=\"label\">Contrast</FieldLegend>\n        <RadioGroup defaultValue=\"standard\" className=\"flex gap-4\">\n          {[\"standard\", \"high\"].map((c) => (\n            <Field key={c} orientation=\"horizontal\" className=\"w-auto\">\n              <RadioGroupItem value={c} id={\"contrast-\" + c} />\n              <FieldLabel\n                htmlFor={\"contrast-\" + c}\n                className=\"font-normal capitalize\"\n              >\n                {c}\n              </FieldLabel>\n            </Field>\n          ))}\n        </RadioGroup>\n      </FieldSet>\n    </FieldGroup>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "avatar-33",
+  "type": "registry:example",
+  "description": "A mention that opens a hover card with the contact's avatar and details.",
+  "files": [
+    {
+      "path": "registry/designali/examples/avatar/avatar-33.tsx",
+      "content": "import { ClockIcon } from \"lucide-react\"\n\nimport {\n  Avatar,\n  AvatarBadge,\n  AvatarFallback,\n} from \"@workspace/ui/components/avatar\"\nimport {\n  HoverCard,\n  HoverCardContent,\n  HoverCardTrigger,\n} from \"@workspace/ui/components/hover-card\"\n\nexport default function ContactHoverCard() {\n  return (\n    <p className=\"max-w-sm text-sm text-muted-foreground\">\n      Final copy was approved by{\" \"}\n      <HoverCard>\n        <HoverCardTrigger\n          delay={10}\n          closeDelay={100}\n          render={\n            <a\n              href=\"#\"\n              className=\"font-medium text-foreground underline underline-offset-4\"\n            />\n          }\n        >\n          @mira.holt\n        </HoverCardTrigger>\n        <HoverCardContent className=\"flex w-72 gap-3\">\n          <Avatar size=\"lg\">\n            <AvatarFallback>MH</AvatarFallback>\n            <AvatarBadge className=\"bg-emerald-500\" />\n          </Avatar>\n          <div className=\"flex flex-col gap-1\">\n            <p className=\"text-sm font-semibold\">Mira Holt</p>\n            <p className=\"text-xs text-muted-foreground\">\n              Head of Content · Lisbon\n            </p>\n            <p className=\"flex items-center gap-1 text-xs text-muted-foreground\">\n              <ClockIcon className=\"size-3\" /> 4:12 PM local time\n            </p>\n          </div>\n        </HoverCardContent>\n      </HoverCard>{\" \"}\n      this morning.\n    </p>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

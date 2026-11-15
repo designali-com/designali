@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "label-07",
+  "type": "registry:example",
+  "description": "Bio label row with a live character counter aligned to the right.",
+  "files": [
+    {
+      "path": "registry/designali/examples/label/label-07.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { Label } from \"@workspace/ui/components/label\"\nimport { Textarea } from \"@workspace/ui/components/textarea\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nexport default function LabelWithCharacterCount() {\n  const [bio, setBio] = React.useState(\n    \"Product designer who loves type and tiny details.\"\n  )\n  const max = 160\n\n  return (\n    <div className=\"grid w-full max-w-sm gap-2\">\n      <div className=\"flex items-center justify-between\">\n        <Label htmlFor=\"bio\">Bio</Label>\n        <span\n          className={cn(\n            \"text-xs text-muted-foreground tabular-nums\",\n            bio.length > max && \"text-destructive\"\n          )}\n        >\n          {bio.length}/{max}\n        </span>\n      </div>\n      <Textarea\n        id=\"bio\"\n        value={bio}\n        onChange={(e) => setBio(e.target.value)}\n        className=\"min-h-20\"\n      />\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

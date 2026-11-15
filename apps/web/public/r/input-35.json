@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-35",
+  "type": "registry:example",
+  "description": "A checkout promo code input that applies a code and shows success or error feedback.",
+  "files": [
+    {
+      "path": "registry/designali/examples/input/input-35.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { TicketIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  Field,\n  FieldDescription,\n  FieldError,\n  FieldLabel,\n} from \"@workspace/ui/components/field\"\nimport { Input } from \"@workspace/ui/components/input\"\n\nconst codes: Record<string, string> = {\n  SPRING20: \"20% off your first year\",\n  WELCOME: \"$10 off\",\n}\n\nexport default function CouponCodeInput() {\n  const [code, setCode] = React.useState(\"\")\n  const [result, setResult] = React.useState<{\n    ok: boolean\n    text: string\n  } | null>(null)\n\n  return (\n    <Field data-invalid={result?.ok === false} className=\"w-full max-w-sm\">\n      <FieldLabel htmlFor=\"coupon\">Promo code</FieldLabel>\n      <div className=\"flex gap-2\">\n        <Input\n          id=\"coupon\"\n          placeholder=\"SPRING20\"\n          value={code}\n          aria-invalid={result?.ok === false}\n          onChange={(e) => {\n            setCode(e.target.value.toUpperCase())\n            setResult(null)\n          }}\n          className=\"font-mono uppercase\"\n        />\n        <Button\n          variant=\"outline\"\n          disabled={!code}\n          onClick={() =>\n            setResult(\n              codes[code]\n                ? { ok: true, text: codes[code] }\n                : { ok: false, text: \"This code is invalid or expired.\" }\n            )\n          }\n        >\n          Apply\n        </Button>\n      </div>\n      {result?.ok && (\n        <FieldDescription className=\"flex items-center gap-1 text-emerald-600\">\n          <TicketIcon className=\"size-3.5\" />\n          {result.text} applied\n        </FieldDescription>\n      )}\n      {result?.ok === false && <FieldError>{result.text}</FieldError>}\n    </Field>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

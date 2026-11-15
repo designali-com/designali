@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "select-05",
+  "type": "registry:example",
+  "description": "Small-size selects composed into a dense filter bar above a task list.",
+  "files": [
+    {
+      "path": "registry/designali/examples/select/select-05.tsx",
+      "content": "import { ListFilterIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  Select,\n  SelectContent,\n  SelectItem,\n  SelectTrigger,\n  SelectValue,\n} from \"@workspace/ui/components/select\"\n\nconst statuses = [\n  { label: \"Any status\", value: \"any\" },\n  { label: \"Open\", value: \"open\" },\n  { label: \"In review\", value: \"review\" },\n  { label: \"Closed\", value: \"closed\" },\n]\n\nconst owners = [\n  { label: \"Anyone\", value: \"anyone\" },\n  { label: \"Me\", value: \"me\" },\n  { label: \"Unassigned\", value: \"unassigned\" },\n]\n\nconst ranges = [\n  { label: \"This week\", value: \"week\" },\n  { label: \"This month\", value: \"month\" },\n  { label: \"This quarter\", value: \"quarter\" },\n]\n\nexport default function CompactFilterBar() {\n  return (\n    <div className=\"flex w-full max-w-md flex-wrap items-center gap-2 border bg-muted/30 p-2\">\n      <ListFilterIcon className=\"size-4 text-muted-foreground\" />\n      <Select items={statuses} defaultValue=\"any\">\n        <SelectTrigger size=\"sm\" aria-label=\"Status\">\n          <SelectValue />\n        </SelectTrigger>\n        <SelectContent>\n          {statuses.map((item) => (\n            <SelectItem key={item.value} value={item.value}>\n              {item.label}\n            </SelectItem>\n          ))}\n        </SelectContent>\n      </Select>\n      <Select items={owners} defaultValue=\"me\">\n        <SelectTrigger size=\"sm\" aria-label=\"Owner\">\n          <SelectValue />\n        </SelectTrigger>\n        <SelectContent>\n          {owners.map((item) => (\n            <SelectItem key={item.value} value={item.value}>\n              {item.label}\n            </SelectItem>\n          ))}\n        </SelectContent>\n      </Select>\n      <Select items={ranges} defaultValue=\"month\">\n        <SelectTrigger size=\"sm\" aria-label=\"Date range\">\n          <SelectValue />\n        </SelectTrigger>\n        <SelectContent>\n          {ranges.map((item) => (\n            <SelectItem key={item.value} value={item.value}>\n              {item.label}\n            </SelectItem>\n          ))}\n        </SelectContent>\n      </Select>\n      <Button variant=\"ghost\" size=\"sm\" className=\"ms-auto\">\n        Reset\n      </Button>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "hover-card-10",
+  "type": "registry:example",
+  "description": "A ticker symbol in a news feed that previews price, daily change, and an SVG sparkline.",
+  "files": [
+    {
+      "path": "registry/designali/examples/hover-card/hover-card-10.tsx",
+      "content": "import { TrendingUpIcon } from \"lucide-react\"\n\nimport {\n  HoverCard,\n  HoverCardContent,\n  HoverCardTrigger,\n} from \"@workspace/ui/components/hover-card\"\n\nconst points = [32, 30, 34, 33, 38, 36, 41, 40, 44, 47]\n\nexport default function StockTickerHoverCard() {\n  const max = Math.max(...points)\n  const min = Math.min(...points)\n  const path = points\n    .map(\n      (p, i) =>\n        (i === 0 ? \"M\" : \"L\") +\n        (i * 100) / (points.length - 1) +\n        \" \" +\n        (40 - ((p - min) / (max - min)) * 36 - 2)\n    )\n    .join(\" \")\n\n  return (\n    <p className=\"max-w-sm text-sm text-muted-foreground\">\n      Shares of{\" \"}\n      <HoverCard>\n        <HoverCardTrigger\n          href=\"#\"\n          className=\"font-mono font-medium text-foreground hover:underline\"\n        >\n          $NOVA\n        </HoverCardTrigger>\n        <HoverCardContent className=\"w-60\">\n          <div className=\"flex items-baseline justify-between\">\n            <span className=\"font-medium\">Novagrid Energy</span>\n            <span className=\"font-mono text-muted-foreground\">NOVA</span>\n          </div>\n          <div className=\"mt-1 flex items-baseline gap-2\">\n            <span className=\"text-lg font-semibold\">$47.12</span>\n            <span className=\"flex items-center text-emerald-600 dark:text-emerald-400\">\n              <TrendingUpIcon className=\"mr-1 size-3.5\" />\n              +3.8%\n            </span>\n          </div>\n          <svg\n            viewBox=\"0 0 100 40\"\n            className=\"mt-2 h-12 w-full text-emerald-500\"\n            preserveAspectRatio=\"none\"\n          >\n            <path\n              d={path}\n              fill=\"none\"\n              stroke=\"currentColor\"\n              strokeWidth=\"2\"\n              vectorEffect=\"non-scaling-stroke\"\n            />\n          </svg>\n          <p className=\"text-muted-foreground\">Market open · Vol 2.4M</p>\n        </HoverCardContent>\n      </HoverCard>{\" \"}\n      rallied after the quarterly report.\n    </p>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

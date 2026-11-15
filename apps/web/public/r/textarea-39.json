@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "textarea-39",
+  "type": "registry:example",
+  "description": "Report dialog with reason chips and a details textarea.",
+  "files": [
+    {
+      "path": "registry/designali/examples/textarea/textarea-39.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { FlagIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  Dialog,\n  DialogClose,\n  DialogContent,\n  DialogDescription,\n  DialogFooter,\n  DialogHeader,\n  DialogTitle,\n  DialogTrigger,\n} from \"@workspace/ui/components/dialog\"\nimport { Textarea } from \"@workspace/ui/components/textarea\"\n\nconst reasons = [\"Spam\", \"Harassment\", \"Misinformation\", \"Other\"]\n\nexport default function ReportContentDialog() {\n  const [reason, setReason] = React.useState(\"Spam\")\n\n  return (\n    <Dialog>\n      <DialogTrigger render={<Button variant=\"outline\" />}>\n        <FlagIcon data-icon=\"inline-start\" />\n        Report post\n      </DialogTrigger>\n      <DialogContent className=\"sm:max-w-sm\">\n        <DialogHeader>\n          <DialogTitle>Report this post</DialogTitle>\n          <DialogDescription>\n            Reports are anonymous. Our moderators review them within 24 hours.\n          </DialogDescription>\n        </DialogHeader>\n        <div className=\"flex flex-wrap gap-1.5\">\n          {reasons.map((r) => (\n            <Button\n              key={r}\n              size=\"xs\"\n              variant={reason === r ? \"default\" : \"outline\"}\n              onClick={() => setReason(r)}\n            >\n              {r}\n            </Button>\n          ))}\n        </div>\n        <Textarea\n          placeholder=\"Add details that help us understand the problem\"\n          aria-label=\"Details\"\n          className=\"min-h-24\"\n        />\n        <DialogFooter>\n          <DialogClose render={<Button variant=\"ghost\" />}>Cancel</DialogClose>\n          <Button variant=\"destructive\">Submit report</Button>\n        </DialogFooter>\n      </DialogContent>\n    </Dialog>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

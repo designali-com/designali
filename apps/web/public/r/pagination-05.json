@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "pagination-05",
+  "type": "registry:example",
+  "description": "Pagination for 24 pages that collapses distant pages into ellipses around the current page.",
+  "files": [
+    {
+      "path": "registry/designali/examples/pagination/pagination-05.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport {\n  Pagination,\n  PaginationContent,\n  PaginationEllipsis,\n  PaginationItem,\n  PaginationLink,\n  PaginationNext,\n  PaginationPrevious,\n} from \"@workspace/ui/components/pagination\"\n\nfunction getPages(current: number, total: number, siblings = 1) {\n  const pages: (number | \"ellipsis\")[] = [1]\n  const start = Math.max(2, current - siblings)\n  const end = Math.min(total - 1, current + siblings)\n  if (start > 2) pages.push(\"ellipsis\")\n  for (let i = start; i <= end; i++) pages.push(i)\n  if (end < total - 1) pages.push(\"ellipsis\")\n  if (total > 1) pages.push(total)\n  return pages\n}\n\nconst TOTAL = 24\n\nexport default function EllipsisRangePagination() {\n  const [page, setPage] = React.useState(9)\n\n  const go = (event: React.MouseEvent, next: number) => {\n    event.preventDefault()\n    setPage(Math.min(TOTAL, Math.max(1, next)))\n  }\n\n  return (\n    <Pagination>\n      <PaginationContent>\n        <PaginationItem>\n          <PaginationPrevious\n            href=\"#\"\n            onClick={(event) => go(event, page - 1)}\n          />\n        </PaginationItem>\n        {getPages(page, TOTAL).map((p, index) =>\n          p === \"ellipsis\" ? (\n            <PaginationItem key={\"ellipsis-\" + index}>\n              <PaginationEllipsis />\n            </PaginationItem>\n          ) : (\n            <PaginationItem key={p}>\n              <PaginationLink\n                href=\"#\"\n                isActive={p === page}\n                onClick={(event) => go(event, p)}\n              >\n                {p}\n              </PaginationLink>\n            </PaginationItem>\n          )\n        )}\n        <PaginationItem>\n          <PaginationNext href=\"#\" onClick={(event) => go(event, page + 1)} />\n        </PaginationItem>\n      </PaginationContent>\n    </Pagination>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

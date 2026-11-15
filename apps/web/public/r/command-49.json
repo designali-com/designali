@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "command-49",
+  "type": "registry:example",
+  "description": "A SQL client table picker grouped by schema with row counts.",
+  "files": [
+    {
+      "path": "registry/designali/examples/command/command-49.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { TableIcon } from \"lucide-react\"\n\nimport {\n  Command,\n  CommandEmpty,\n  CommandGroup,\n  CommandInput,\n  CommandItem,\n  CommandList,\n} from \"@workspace/ui/components/command\"\n\nconst schemas = [\n  {\n    schema: \"public\",\n    tables: [\n      { name: \"users\", rows: \"48.2k\" },\n      { name: \"organizations\", rows: \"3.1k\" },\n      { name: \"subscriptions\", rows: \"5.7k\" },\n    ],\n  },\n  {\n    schema: \"analytics\",\n    tables: [\n      { name: \"events\", rows: \"12.4M\" },\n      { name: \"page_views\", rows: \"8.9M\" },\n    ],\n  },\n  {\n    schema: \"billing\",\n    tables: [\n      { name: \"invoices\", rows: \"61.0k\" },\n      { name: \"payments\", rows: \"59.3k\" },\n    ],\n  },\n]\n\nexport default function DatabaseTablePicker() {\n  const [table, setTable] = React.useState(\"public.users\")\n\n  return (\n    <div className=\"flex w-full max-w-xs flex-col gap-2\">\n      <code className=\"border bg-muted/40 px-2 py-1.5 text-[11px]\">\n        SELECT * FROM {table} LIMIT 50;\n      </code>\n      <Command className=\"border\">\n        <CommandInput placeholder=\"Search tables...\" />\n        <CommandList className=\"max-h-60\">\n          <CommandEmpty>No table found.</CommandEmpty>\n          {schemas.map((s) => (\n            <CommandGroup key={s.schema} heading={s.schema}>\n              {s.tables.map((t) => (\n                <CommandItem\n                  key={t.name}\n                  value={s.schema + \".\" + t.name}\n                  data-checked={table === s.schema + \".\" + t.name}\n                  onSelect={() => setTable(s.schema + \".\" + t.name)}\n                >\n                  <TableIcon />\n                  <span className=\"font-mono\">{t.name}</span>\n                  <span className=\"text-[11px] text-muted-foreground\">\n                    {t.rows}\n                  </span>\n                </CommandItem>\n              ))}\n            </CommandGroup>\n          ))}\n        </CommandList>\n      </Command>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

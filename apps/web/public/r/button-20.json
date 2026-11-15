@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button-20",
+  "type": "registry:example",
+  "description": "Follow button that toggles to Following and reveals Unfollow on hover.",
+  "files": [
+    {
+      "path": "registry/designali/examples/button/button-20.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { UserPlusIcon } from \"lucide-react\"\n\nimport { Avatar, AvatarFallback } from \"@workspace/ui/components/avatar\"\nimport { Button } from \"@workspace/ui/components/button\"\n\nexport default function FollowToggleButton() {\n  const [following, setFollowing] = React.useState(false)\n\n  return (\n    <div className=\"flex w-full max-w-xs items-center gap-3 border p-3\">\n      <Avatar>\n        <AvatarFallback>RN</AvatarFallback>\n      </Avatar>\n      <div className=\"flex min-w-0 flex-1 flex-col\">\n        <span className=\"truncate text-sm font-medium\">Rosa Nakamura</span>\n        <span className=\"text-xs text-muted-foreground\">Illustrator</span>\n      </div>\n      <Button\n        size=\"sm\"\n        variant={following ? \"outline\" : \"default\"}\n        aria-pressed={following}\n        onClick={() => setFollowing(!following)}\n        className=\"group w-24\"\n      >\n        {following ? (\n          <>\n            <span className=\"group-hover:hidden\">Following</span>\n            <span className=\"hidden text-destructive group-hover:inline\">\n              Unfollow\n            </span>\n          </>\n        ) : (\n          <>\n            <UserPlusIcon data-icon=\"inline-start\" />\n            Follow\n          </>\n        )}\n      </Button>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

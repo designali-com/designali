@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "card-43",
+  "type": "registry:example",
+  "description": "Real-estate listing card with a gradient photo placeholder, price, specs and favorite toggle.",
+  "files": [
+    {
+      "path": "registry/designali/examples/card/card-43.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport {\n  BathIcon,\n  BedDoubleIcon,\n  HeartIcon,\n  HouseIcon,\n  MapPinIcon,\n  RulerIcon,\n} from \"lucide-react\"\n\nimport { Badge } from \"@workspace/ui/components/badge\"\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  Card,\n  CardDescription,\n  CardFooter,\n  CardHeader,\n  CardTitle,\n} from \"@workspace/ui/components/card\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst specs = [\n  { icon: BedDoubleIcon, label: \"3 beds\" },\n  { icon: BathIcon, label: \"2 baths\" },\n  { icon: RulerIcon, label: \"118 m²\" },\n]\n\nexport default function PropertyListingCard() {\n  const [fav, setFav] = React.useState(false)\n\n  return (\n    <Card className=\"w-full max-w-xs pt-0\">\n      <div className=\"relative aspect-[4/3] bg-gradient-to-br from-stone-300 via-amber-200 to-emerald-300 dark:from-stone-700 dark:via-amber-900 dark:to-emerald-900\">\n        <HouseIcon\n          className=\"absolute inset-0 m-auto size-16 text-white/70\"\n          strokeWidth={1}\n        />\n        <Badge className=\"absolute start-3 top-3\">New listing</Badge>\n        <Button\n          size=\"icon-sm\"\n          variant=\"secondary\"\n          aria-label=\"Favorite\"\n          aria-pressed={fav}\n          onClick={() => setFav(!fav)}\n          className=\"absolute end-3 top-3\"\n        >\n          <HeartIcon className={cn(fav && \"fill-rose-500 text-rose-500\")} />\n        </Button>\n      </div>\n      <CardHeader>\n        <CardTitle className=\"text-lg font-semibold\">€640,000</CardTitle>\n        <CardDescription className=\"flex items-center gap-1\">\n          <MapPinIcon className=\"size-3\" />\n          14 Linden Court, Eastgate\n        </CardDescription>\n      </CardHeader>\n      <CardFooter className=\"justify-between\">\n        {specs.map((s) => (\n          <span\n            key={s.label}\n            className=\"flex items-center gap-1.5 text-muted-foreground\"\n          >\n            <s.icon className=\"size-3.5\" />\n            {s.label}\n          </span>\n        ))}\n      </CardFooter>\n    </Card>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

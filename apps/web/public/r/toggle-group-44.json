@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toggle-group-44",
+  "type": "registry:example",
+  "description": "Interest picker that caps selection at three and disables the remaining items.",
+  "files": [
+    {
+      "path": "registry/designali/examples/toggle-group/toggle-group-44.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport {\n  ToggleGroup,\n  ToggleGroupItem,\n} from \"@workspace/ui/components/toggle-group\"\n\nconst topics = [\n  \"Design\",\n  \"Engineering\",\n  \"Product\",\n  \"Marketing\",\n  \"Data\",\n  \"Sales\",\n  \"Support\",\n]\nconst MAX = 3\n\nexport default function LimitedSelectionToggleGroup() {\n  const [picked, setPicked] = React.useState<string[]>([\"Design\"])\n\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-2\">\n      <div className=\"flex items-center justify-between text-sm\">\n        <span className=\"font-medium\">Pick up to {MAX} topics</span>\n        <span className=\"text-xs text-muted-foreground tabular-nums\">\n          {picked.length}/{MAX}\n        </span>\n      </div>\n      <ToggleGroup\n        multiple\n        variant=\"outline\"\n        spacing={2}\n        value={picked}\n        onValueChange={(next) => next.length <= MAX && setPicked(next)}\n        className=\"flex-wrap\"\n      >\n        {topics.map((t) => (\n          <ToggleGroupItem\n            key={t}\n            value={t}\n            disabled={picked.length >= MAX && !picked.includes(t)}\n          >\n            {t}\n          </ToggleGroupItem>\n        ))}\n      </ToggleGroup>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

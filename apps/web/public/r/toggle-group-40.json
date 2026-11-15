@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toggle-group-40",
+  "type": "registry:example",
+  "description": "Rich text toolbar combining a heading group, a marks group and an alignment group with separators.",
+  "files": [
+    {
+      "path": "registry/designali/examples/toggle-group/toggle-group-40.tsx",
+      "content": "import {\n  AlignCenterIcon,\n  AlignLeftIcon,\n  BoldIcon,\n  CodeIcon,\n  Heading1Icon,\n  Heading2Icon,\n  ItalicIcon,\n  LinkIcon,\n  PilcrowIcon,\n} from \"lucide-react\"\n\nimport { Separator } from \"@workspace/ui/components/separator\"\nimport {\n  ToggleGroup,\n  ToggleGroupItem,\n} from \"@workspace/ui/components/toggle-group\"\n\nexport default function EditorToolbarToggleGroups() {\n  return (\n    <div className=\"flex w-full max-w-md flex-wrap items-center gap-1 border p-1\">\n      <ToggleGroup size=\"sm\" defaultValue={[\"p\"]}>\n        <ToggleGroupItem value=\"h1\" aria-label=\"Heading 1\">\n          <Heading1Icon />\n        </ToggleGroupItem>\n        <ToggleGroupItem value=\"h2\" aria-label=\"Heading 2\">\n          <Heading2Icon />\n        </ToggleGroupItem>\n        <ToggleGroupItem value=\"p\" aria-label=\"Paragraph\">\n          <PilcrowIcon />\n        </ToggleGroupItem>\n      </ToggleGroup>\n      <Separator orientation=\"vertical\" className=\"mx-1 h-5\" />\n      <ToggleGroup multiple size=\"sm\">\n        <ToggleGroupItem value=\"bold\" aria-label=\"Bold\">\n          <BoldIcon />\n        </ToggleGroupItem>\n        <ToggleGroupItem value=\"italic\" aria-label=\"Italic\">\n          <ItalicIcon />\n        </ToggleGroupItem>\n        <ToggleGroupItem value=\"code\" aria-label=\"Inline code\">\n          <CodeIcon />\n        </ToggleGroupItem>\n        <ToggleGroupItem value=\"link\" aria-label=\"Link\">\n          <LinkIcon />\n        </ToggleGroupItem>\n      </ToggleGroup>\n      <Separator orientation=\"vertical\" className=\"mx-1 h-5\" />\n      <ToggleGroup size=\"sm\" defaultValue={[\"left\"]}>\n        <ToggleGroupItem value=\"left\" aria-label=\"Align left\">\n          <AlignLeftIcon />\n        </ToggleGroupItem>\n        <ToggleGroupItem value=\"center\" aria-label=\"Align center\">\n          <AlignCenterIcon />\n        </ToggleGroupItem>\n      </ToggleGroup>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

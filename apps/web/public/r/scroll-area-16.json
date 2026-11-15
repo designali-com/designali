@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "scroll-area-16",
+  "type": "registry:example",
+  "description": "Kanban board that scrolls horizontally, with each column scrolling vertically.",
+  "files": [
+    {
+      "path": "registry/designali/examples/scroll-area/scroll-area-16.tsx",
+      "content": "import { Badge } from \"@workspace/ui/components/badge\"\nimport { ScrollArea, ScrollBar } from \"@workspace/ui/components/scroll-area\"\n\nconst columns = [\n  {\n    title: \"Backlog\",\n    cards: [\n      \"Audit email templates\",\n      \"Pricing FAQ\",\n      \"Referral program brief\",\n      \"Update logo assets\",\n      \"Localize checkout\",\n    ],\n  },\n  {\n    title: \"In progress\",\n    cards: [\"Billing redesign\", \"Webhook retries\", \"Mobile nav polish\"],\n  },\n  { title: \"Review\", cards: [\"SSO for Teams\", \"Usage-based invoices\"] },\n  {\n    title: \"Done\",\n    cards: [\"Dark mode\", \"CSV export\", \"Saved filters\", \"Activity feed\"],\n  },\n]\n\nexport default function KanbanBoardScroll() {\n  return (\n    <ScrollArea className=\"w-full max-w-lg border bg-muted/30\">\n      <div className=\"flex w-max gap-3 p-3\">\n        {columns.map((col) => (\n          <div\n            key={col.title}\n            className=\"flex w-44 flex-col border bg-background\"\n          >\n            <div className=\"flex items-center justify-between border-b px-2 py-1.5 text-xs font-medium\">\n              {col.title}\n              <Badge variant=\"secondary\">{col.cards.length}</Badge>\n            </div>\n            <ScrollArea className=\"h-44\">\n              <div className=\"flex flex-col gap-2 p-2\">\n                {col.cards.map((card) => (\n                  <div key={card} className=\"border p-2 text-xs shadow-xs\">\n                    {card}\n                  </div>\n                ))}\n              </div>\n            </ScrollArea>\n          </div>\n        ))}\n      </div>\n      <ScrollBar orientation=\"horizontal\" />\n    </ScrollArea>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

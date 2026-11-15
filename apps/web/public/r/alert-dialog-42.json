@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "alert-dialog-42",
+  "type": "registry:example",
+  "description": "Account email change showing the old and new address side by side.",
+  "files": [
+    {
+      "path": "registry/designali/examples/alert-dialog/alert-dialog-42.tsx",
+      "content": "import { ArrowRightIcon, AtSignIcon } from \"lucide-react\"\n\nimport {\n  AlertDialog,\n  AlertDialogAction,\n  AlertDialogCancel,\n  AlertDialogContent,\n  AlertDialogDescription,\n  AlertDialogFooter,\n  AlertDialogHeader,\n  AlertDialogTitle,\n  AlertDialogTrigger,\n} from \"@workspace/ui/components/alert-dialog\"\nimport { Button } from \"@workspace/ui/components/button\"\n\nexport default function EmailChangeConfirm() {\n  return (\n    <AlertDialog>\n      <AlertDialogTrigger render={<Button variant=\"secondary\" />}>\n        <AtSignIcon data-icon=\"inline-start\" />\n        Update email\n      </AlertDialogTrigger>\n      <AlertDialogContent>\n        <AlertDialogHeader>\n          <AlertDialogTitle>Change your sign-in email?</AlertDialogTitle>\n          <AlertDialogDescription>\n            We&apos;ll send a verification link to the new address. Until then,\n            keep using your current one.\n          </AlertDialogDescription>\n        </AlertDialogHeader>\n        <div className=\"flex flex-col gap-2 border p-3 text-sm sm:flex-row sm:items-center\">\n          <span className=\"min-w-0 truncate text-muted-foreground line-through\">\n            sam.rivera@oldmail.com\n          </span>\n          <ArrowRightIcon className=\"size-4 shrink-0 rotate-90 text-muted-foreground sm:rotate-0\" />\n          <span className=\"min-w-0 truncate font-medium\">\n            sam@rivera.studio\n          </span>\n        </div>\n        <AlertDialogFooter>\n          <AlertDialogCancel>Cancel</AlertDialogCancel>\n          <AlertDialogAction>Send verification</AlertDialogAction>\n        </AlertDialogFooter>\n      </AlertDialogContent>\n    </AlertDialog>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

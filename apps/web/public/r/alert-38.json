@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "alert-38",
+  "type": "registry:example",
+  "description": "Default alert with multi-paragraph content and links announcing updated terms.",
+  "files": [
+    {
+      "path": "registry/designali/examples/alert/alert-38.tsx",
+      "content": "import { ScrollTextIcon } from \"lucide-react\"\n\nimport {\n  Alert,\n  AlertDescription,\n  AlertTitle,\n} from \"@workspace/ui/components/alert\"\n\nexport default function AlertPolicyUpdate() {\n  return (\n    <Alert className=\"max-w-md\">\n      <ScrollTextIcon />\n      <AlertTitle>We&apos;re updating our terms</AlertTitle>\n      <AlertDescription>\n        <p>\n          On January 1, 2027 our Terms of Service and Privacy Policy change to\n          cover new data residency options for EU workspaces.\n        </p>\n        <p>\n          Continuing to use Lumen after that date means you accept the new\n          terms. Review the <a href=\"#\">Terms of Service</a> and the{\" \"}\n          <a href=\"#\">Privacy Policy</a>.\n        </p>\n      </AlertDescription>\n    </Alert>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

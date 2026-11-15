@@ -1,0 +1,28 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "contact-16",
+  "type": "registry:block",
+  "description": "Floating glass form card over blurred colour orbs and a faded grid, with a stat strip and NDA reassurance line.",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button",
+    "input",
+    "label",
+    "textarea"
+  ],
+  "files": [
+    {
+      "path": "registry/designali/blocks/contact/contact-16.tsx",
+      "content": "import { ArrowRight, ShieldCheck } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Input } from \"@workspace/ui/components/input\"\nimport { Label } from \"@workspace/ui/components/label\"\nimport { Textarea } from \"@workspace/ui/components/textarea\"\n\nconst stats = [\n  { value: \"1 day\", label: \"Median reply\" },\n  { value: \"340+\", label: \"Products shipped\" },\n  { value: \"4.9/5\", label: \"Client rating\" },\n]\n\nexport default function Contact16() {\n  return (\n    <section className=\"relative w-full overflow-hidden bg-background py-20 md:py-28\">\n      <div aria-hidden className=\"absolute inset-0\">\n        <div className=\"absolute -top-24 -left-24 size-[28rem] rounded-full bg-sky-300/40 blur-3xl dark:bg-sky-500/20\" />\n        <div className=\"absolute -right-24 -bottom-32 size-[30rem] rounded-full bg-violet-400/40 blur-3xl dark:bg-violet-600/25\" />\n      </div>\n      <div\n        aria-hidden\n        className=\"absolute inset-0 opacity-40 [background-image:linear-gradient(var(--border)_1px,transparent_1px),linear-gradient(90deg,var(--border)_1px,transparent_1px)] [background-size:56px_56px] [mask-image:radial-gradient(ellipse_at_center,black,transparent_75%)]\"\n      />\n\n      <div className=\"relative mx-auto max-w-xl px-6\">\n        <div className=\"border bg-background/80 p-6 shadow-2xl shadow-black/5 backdrop-blur md:p-10\">\n          <h2 className=\"text-3xl font-semibold tracking-tight md:text-4xl\">\n            Tell us what you&apos;re building\n          </h2>\n          <p className=\"mt-3 text-sm text-muted-foreground\">\n            Lumen Collective partners with seed to Series B teams on product,\n            brand and engineering.\n          </p>\n\n          <dl className=\"mt-8 grid grid-cols-3 border-y\">\n            {stats.map((stat) => (\n              <div key={stat.label} className=\"py-4 text-center not-last:border-e\">\n                <dt className=\"text-[11px] text-muted-foreground uppercase\">{stat.label}</dt>\n                <dd className=\"mt-1 text-lg font-semibold\">{stat.value}</dd>\n              </div>\n            ))}\n          </dl>\n\n          <form className=\"mt-8 space-y-5\">\n            <div className=\"space-y-2\">\n              <Label htmlFor=\"contact-16-email\">Email</Label>\n              <Input id=\"contact-16-email\" type=\"email\" placeholder=\"theo@kitebase.dev\" className=\"h-11\" />\n            </div>\n            <div className=\"space-y-2\">\n              <Label htmlFor=\"contact-16-link\">Website or pitch deck</Label>\n              <Input id=\"contact-16-link\" type=\"url\" placeholder=\"https://\" className=\"h-11\" />\n            </div>\n            <div className=\"space-y-2\">\n              <Label htmlFor=\"contact-16-brief\">The short version</Label>\n              <Textarea\n                id=\"contact-16-brief\"\n                placeholder=\"We're a 6-person team building scheduling software for clinics...\"\n                className=\"min-h-28\"\n              />\n            </div>\n            <Button type=\"submit\" size=\"lg\" className=\"w-full\">\n              Send brief\n              <ArrowRight />\n            </Button>\n            <p className=\"flex items-center justify-center gap-2 text-xs text-muted-foreground\">\n              <ShieldCheck className=\"size-3.5\" />\n              Happy to sign an NDA before you share details.\n            </p>\n          </form>\n        </div>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "900px"
+  },
+  "categories": [
+    "contact"
+  ]
+}

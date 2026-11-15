@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "avatar-48",
+  "type": "registry:example",
+  "description": "A customer testimonial attributed with an avatar, name, and title.",
+  "files": [
+    {
+      "path": "registry/designali/examples/avatar/avatar-48.tsx",
+      "content": "import { QuoteIcon } from \"lucide-react\"\n\nimport { Avatar, AvatarFallback } from \"@workspace/ui/components/avatar\"\n\nexport default function TestimonialAuthor() {\n  return (\n    <figure className=\"flex w-full max-w-sm flex-col gap-4 border p-5\">\n      <QuoteIcon className=\"size-5 text-muted-foreground\" />\n      <blockquote className=\"text-sm leading-relaxed\">\n        We cut our month-end close from six days to two. The reconciliation view\n        alone paid for the subscription.\n      </blockquote>\n      <figcaption className=\"flex items-center gap-3\">\n        <Avatar size=\"lg\">\n          <AvatarFallback className=\"bg-gradient-to-br from-emerald-400 to-teal-600 font-medium text-white\">\n            CA\n          </AvatarFallback>\n        </Avatar>\n        <div>\n          <p className=\"text-sm font-medium\">Celeste Arno</p>\n          <p className=\"text-xs text-muted-foreground\">\n            Finance Lead, Brightwater Co.\n          </p>\n        </div>\n      </figcaption>\n    </figure>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

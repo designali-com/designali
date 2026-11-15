@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "slider-46",
+  "type": "registry:example",
+  "description": "Disk partition split between system and data volumes using a single thumb.",
+  "files": [
+    {
+      "path": "registry/designali/examples/slider/slider-46.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { HardDriveIcon } from \"lucide-react\"\n\nimport { Slider } from \"@workspace/ui/components/slider\"\n\nconst total = 512\n\nexport default function StorageAllocationSlider() {\n  const [system, setSystem] = React.useState([128])\n\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-4 border p-4\">\n      <div className=\"flex items-center gap-2 text-sm font-medium\">\n        <HardDriveIcon className=\"size-4\" />\n        Partition disk ({total} GB)\n      </div>\n      <Slider\n        aria-label=\"System partition size\"\n        className=\"[&_[data-slot=slider-thumb]]:size-4 [&_[data-slot=slider-track]]:h-2! [&_[data-slot=slider-track]]:bg-sky-500/40\"\n        value={system}\n        onValueChange={(value) => setSystem(value as number[])}\n        min={64}\n        max={448}\n        step={16}\n      />\n      <div className=\"grid grid-cols-2 gap-2 text-xs\">\n        <div className=\"flex items-center gap-2\">\n          <span className=\"size-2.5 bg-primary\" />\n          System: {system[0]} GB\n        </div>\n        <div className=\"flex items-center justify-end gap-2\">\n          <span className=\"size-2.5 bg-sky-500/40\" />\n          Data: {total - system[0]!} GB\n        </div>\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

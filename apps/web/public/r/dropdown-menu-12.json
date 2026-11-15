@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "dropdown-menu-12",
+  "type": "registry:example",
+  "description": "Share menu with copy link feedback and a nested Export as submenu.",
+  "files": [
+    {
+      "path": "registry/designali/examples/dropdown-menu/dropdown-menu-12.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport {\n  CheckIcon,\n  CodeIcon,\n  FileDownIcon,\n  LinkIcon,\n  MailIcon,\n  Share2Icon,\n} from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  DropdownMenu,\n  DropdownMenuContent,\n  DropdownMenuItem,\n  DropdownMenuSeparator,\n  DropdownMenuSub,\n  DropdownMenuSubContent,\n  DropdownMenuSubTrigger,\n  DropdownMenuTrigger,\n} from \"@workspace/ui/components/dropdown-menu\"\n\nexport default function ShareDocumentMenu() {\n  const [copied, setCopied] = React.useState(false)\n\n  return (\n    <DropdownMenu onOpenChange={(open) => !open && setCopied(false)}>\n      <DropdownMenuTrigger render={<Button />}>\n        <Share2Icon data-icon=\"inline-start\" />\n        Share\n      </DropdownMenuTrigger>\n      <DropdownMenuContent align=\"end\" className=\"w-48\">\n        <DropdownMenuItem closeOnClick={false} onClick={() => setCopied(true)}>\n          {copied ? <CheckIcon /> : <LinkIcon />}\n          {copied ? \"Link copied\" : \"Copy link\"}\n        </DropdownMenuItem>\n        <DropdownMenuItem>\n          <MailIcon />\n          Send by email\n        </DropdownMenuItem>\n        <DropdownMenuItem>\n          <CodeIcon />\n          Embed\n        </DropdownMenuItem>\n        <DropdownMenuSeparator />\n        <DropdownMenuSub>\n          <DropdownMenuSubTrigger>\n            <FileDownIcon />\n            Export as\n          </DropdownMenuSubTrigger>\n          <DropdownMenuSubContent>\n            <DropdownMenuItem>PDF document</DropdownMenuItem>\n            <DropdownMenuItem>Markdown</DropdownMenuItem>\n            <DropdownMenuItem>HTML page</DropdownMenuItem>\n          </DropdownMenuSubContent>\n        </DropdownMenuSub>\n      </DropdownMenuContent>\n    </DropdownMenu>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

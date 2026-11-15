@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "hover-card-25",
+  "type": "registry:example",
+  "description": "Three triggers comparing instant, standard, and deliberate open and close delays.",
+  "files": [
+    {
+      "path": "registry/designali/examples/hover-card/hover-card-25.tsx",
+      "content": "import { TimerIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  HoverCard,\n  HoverCardContent,\n  HoverCardTrigger,\n} from \"@workspace/ui/components/hover-card\"\n\nconst presets = [\n  { label: \"Instant\", delay: 0, closeDelay: 0 },\n  { label: \"Standard\", delay: 600, closeDelay: 300 },\n  { label: \"Deliberate\", delay: 1200, closeDelay: 600 },\n]\n\nexport default function DelayPresetsHoverCard() {\n  return (\n    <div className=\"flex flex-wrap justify-center gap-2\">\n      {presets.map((p) => (\n        <HoverCard key={p.label}>\n          <HoverCardTrigger\n            delay={p.delay}\n            closeDelay={p.closeDelay}\n            render={<Button variant=\"secondary\" />}\n          >\n            <TimerIcon data-icon=\"inline-start\" />\n            {p.label}\n          </HoverCardTrigger>\n          <HoverCardContent className=\"w-52\">\n            <p className=\"font-medium\">{p.label}</p>\n            <p className=\"text-muted-foreground\">\n              Opens after {p.delay}ms, closes after {p.closeDelay}ms.\n            </p>\n          </HoverCardContent>\n        </HoverCard>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

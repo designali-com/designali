@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "navigation-menu-47",
+  "type": "registry:example",
+  "description": "Navigation that shows all links on wider screens and collapses extras into a More menu on narrow ones.",
+  "files": [
+    {
+      "path": "registry/designali/examples/navigation-menu/navigation-menu-47.tsx",
+      "content": "import {\n  NavigationMenu,\n  NavigationMenuContent,\n  NavigationMenuItem,\n  NavigationMenuLink,\n  NavigationMenuList,\n  NavigationMenuTrigger,\n  navigationMenuTriggerStyle,\n} from \"@workspace/ui/components/navigation-menu\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst primary = [\"Home\", \"Explore\"]\nconst secondary = [\"Library\", \"Following\", \"Saved\", \"History\"]\n\nexport default function ResponsiveOverflowNav() {\n  return (\n    <NavigationMenu>\n      <NavigationMenuList>\n        {primary.map((link, i) => (\n          <NavigationMenuItem key={link}>\n            <NavigationMenuLink\n              href=\"#\"\n              active={i === 0}\n              className={navigationMenuTriggerStyle()}\n            >\n              {link}\n            </NavigationMenuLink>\n          </NavigationMenuItem>\n        ))}\n        {secondary.slice(0, 2).map((link) => (\n          <NavigationMenuItem key={link} className=\"hidden sm:block\">\n            <NavigationMenuLink\n              href=\"#\"\n              className={navigationMenuTriggerStyle()}\n            >\n              {link}\n            </NavigationMenuLink>\n          </NavigationMenuItem>\n        ))}\n        <NavigationMenuItem>\n          <NavigationMenuTrigger>More</NavigationMenuTrigger>\n          <NavigationMenuContent>\n            <ul className=\"flex w-40 flex-col gap-1\">\n              {secondary.map((link, i) => (\n                <li key={link} className={cn(i < 2 && \"sm:hidden\")}>\n                  <NavigationMenuLink href=\"#\">{link}</NavigationMenuLink>\n                </li>\n              ))}\n            </ul>\n          </NavigationMenuContent>\n        </NavigationMenuItem>\n      </NavigationMenuList>\n    </NavigationMenu>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

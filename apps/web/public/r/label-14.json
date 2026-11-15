@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "label-14",
+  "type": "registry:example",
+  "description": "Label turned destructive along with its input and an error message.",
+  "files": [
+    {
+      "path": "registry/designali/examples/label/label-14.tsx",
+      "content": "import { CircleAlertIcon } from \"lucide-react\"\n\nimport { Input } from \"@workspace/ui/components/input\"\nimport { Label } from \"@workspace/ui/components/label\"\n\nexport default function InvalidFieldLabel() {\n  return (\n    <div className=\"grid w-full max-w-sm gap-2\">\n      <Label htmlFor=\"username\" className=\"text-destructive\">\n        Username\n      </Label>\n      <Input\n        id=\"username\"\n        defaultValue=\"admin\"\n        aria-invalid\n        aria-describedby=\"username-error\"\n      />\n      <p\n        id=\"username-error\"\n        className=\"flex items-center gap-1 text-xs text-destructive\"\n      >\n        <CircleAlertIcon className=\"size-3.5\" />\n        That username is reserved. Try another.\n      </p>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

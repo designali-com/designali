@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "spinner-36",
+  "type": "registry:example",
+  "description": "Settings toggle that shows a spinner while the change is being applied.",
+  "files": [
+    {
+      "path": "registry/designali/examples/spinner/spinner-36.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport {\n  Field,\n  FieldContent,\n  FieldDescription,\n  FieldLabel,\n} from \"@workspace/ui/components/field\"\nimport { Spinner } from \"@workspace/ui/components/spinner\"\nimport { Switch } from \"@workspace/ui/components/switch\"\n\nexport default function SwitchApplyingSetting() {\n  const [enabled, setEnabled] = React.useState(false)\n  const [applying, setApplying] = React.useState(false)\n\n  return (\n    <Field orientation=\"horizontal\" className=\"w-full max-w-sm border p-4\">\n      <FieldContent>\n        <FieldLabel htmlFor=\"two-factor\">\n          Require two-factor authentication\n        </FieldLabel>\n        <FieldDescription>\n          {applying\n            ? \"Updating 42 member accounts...\"\n            : \"Applies to everyone in the workspace.\"}\n        </FieldDescription>\n      </FieldContent>\n      <div className=\"flex items-center gap-2\">\n        {applying && <Spinner className=\"text-muted-foreground\" />}\n        <Switch\n          id=\"two-factor\"\n          checked={enabled}\n          disabled={applying}\n          onCheckedChange={(checked) => {\n            setApplying(true)\n            setTimeout(() => {\n              setEnabled(checked)\n              setApplying(false)\n            }, 1200)\n          }}\n        />\n      </div>\n    </Field>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

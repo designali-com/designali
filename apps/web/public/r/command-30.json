@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "command-30",
+  "type": "registry:example",
+  "description": "A scheduling palette that turns the typed text into dynamic “create event” suggestions.",
+  "files": [
+    {
+      "path": "registry/designali/examples/command/command-30.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { CalendarIcon, CalendarPlusIcon, UsersIcon } from \"lucide-react\"\n\nimport {\n  Command,\n  CommandGroup,\n  CommandInput,\n  CommandItem,\n  CommandList,\n  CommandSeparator,\n} from \"@workspace/ui/components/command\"\n\nconst when = [\n  \"today at 3:00 PM\",\n  \"tomorrow at 10:00 AM\",\n  \"next Monday at 9:30 AM\",\n]\n\nexport default function NaturalLanguageScheduler() {\n  const [text, setText] = React.useState(\"Design review\")\n  const title = text.trim() || \"Untitled event\"\n\n  return (\n    <Command shouldFilter={false} className=\"w-full max-w-sm border\">\n      <CommandInput\n        value={text}\n        onValueChange={setText}\n        placeholder=\"Name your event...\"\n      />\n      <CommandList>\n        <CommandGroup heading=\"Create event\">\n          {when.map((slot) => (\n            <CommandItem key={slot} value={slot}>\n              <CalendarPlusIcon />\n              <span className=\"truncate\">\n                <span className=\"font-medium\">{title}</span>{\" \"}\n                <span className=\"text-muted-foreground\">{slot}</span>\n              </span>\n            </CommandItem>\n          ))}\n        </CommandGroup>\n        <CommandSeparator />\n        <CommandGroup heading=\"Other\">\n          <CommandItem value=\"pick-date\">\n            <CalendarIcon />\n            <span>Pick a custom date...</span>\n          </CommandItem>\n          <CommandItem value=\"find-time\">\n            <UsersIcon />\n            <span>Find a time with attendees</span>\n          </CommandItem>\n        </CommandGroup>\n      </CommandList>\n    </Command>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

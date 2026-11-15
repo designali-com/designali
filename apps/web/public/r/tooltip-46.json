@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tooltip-46",
+  "type": "registry:example",
+  "description": "Tooltips placed with the direction-aware inline-start and inline-end sides.",
+  "files": [
+    {
+      "path": "registry/designali/examples/tooltip/tooltip-46.tsx",
+      "content": "import { ChevronLeftIcon, ChevronRightIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  Tooltip,\n  TooltipContent,\n  TooltipProvider,\n  TooltipTrigger,\n} from \"@workspace/ui/components/tooltip\"\n\nexport default function LogicalSideTooltips() {\n  return (\n    <TooltipProvider>\n      <div className=\"flex gap-2\">\n        <Tooltip>\n          <TooltipTrigger\n            render={\n              <Button\n                variant=\"outline\"\n                size=\"icon\"\n                aria-label=\"Previous page\"\n              />\n            }\n          >\n            <ChevronLeftIcon />\n          </TooltipTrigger>\n          <TooltipContent side=\"inline-start\">Previous page</TooltipContent>\n        </Tooltip>\n        <Tooltip>\n          <TooltipTrigger\n            render={\n              <Button variant=\"outline\" size=\"icon\" aria-label=\"Next page\" />\n            }\n          >\n            <ChevronRightIcon />\n          </TooltipTrigger>\n          <TooltipContent side=\"inline-end\">Next page</TooltipContent>\n        </Tooltip>\n      </div>\n    </TooltipProvider>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

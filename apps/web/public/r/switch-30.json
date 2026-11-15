@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "switch-30",
+  "type": "registry:example",
+  "description": "Cloud sync switch showing storage usage and last sync time when enabled.",
+  "files": [
+    {
+      "path": "registry/designali/examples/switch/switch-30.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { CloudIcon, CloudOffIcon } from \"lucide-react\"\n\nimport { Label } from \"@workspace/ui/components/label\"\nimport { Progress } from \"@workspace/ui/components/progress\"\nimport { Switch } from \"@workspace/ui/components/switch\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nexport default function CloudSyncSwitch() {\n  const [sync, setSync] = React.useState(true)\n\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-4 border p-4\">\n      <div className=\"flex items-center gap-3\">\n        {sync ? (\n          <CloudIcon className=\"size-5\" />\n        ) : (\n          <CloudOffIcon className=\"size-5 text-muted-foreground\" />\n        )}\n        <div className=\"flex-1\">\n          <Label htmlFor=\"cloud-sync\">Sync photos to cloud</Label>\n          <p className=\"text-xs text-muted-foreground\">\n            {sync ? \"Last synced 4 minutes ago\" : \"Photos stay on this device\"}\n          </p>\n        </div>\n        <Switch id=\"cloud-sync\" checked={sync} onCheckedChange={setSync} />\n      </div>\n      <div className={cn(\"flex flex-col gap-1.5\", !sync && \"opacity-50\")}>\n        <div className=\"flex justify-between text-xs\">\n          <span>Storage</span>\n          <span className=\"text-muted-foreground\">38.2 of 50 GB</span>\n        </div>\n        <Progress value={76} aria-label=\"Storage used\" />\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

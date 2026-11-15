@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tooltip-20",
+  "type": "registry:example",
+  "description": "Tooltip with a title, description and meta line laid out in a column.",
+  "files": [
+    {
+      "path": "registry/designali/examples/tooltip/tooltip-20.tsx",
+      "content": "import { CalendarClockIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  Tooltip,\n  TooltipContent,\n  TooltipTrigger,\n} from \"@workspace/ui/components/tooltip\"\n\nexport default function RichContentTooltip() {\n  return (\n    <Tooltip>\n      <TooltipTrigger render={<Button variant=\"outline\" />}>\n        <CalendarClockIcon data-icon=\"inline-start\" />\n        Auto-archive\n      </TooltipTrigger>\n      <TooltipContent className=\"flex-col items-start gap-1 py-2\">\n        <span className=\"font-medium\">Auto-archive inactive channels</span>\n        <span className=\"opacity-80\">\n          Channels with no messages for 90 days are archived each Sunday.\n        </span>\n        <span className=\"opacity-60\">Last run: 3 channels archived</span>\n      </TooltipContent>\n    </Tooltip>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

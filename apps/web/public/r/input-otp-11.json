@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-otp-11",
+  "type": "registry:example",
+  "description": "Oversized slots with larger type for touch-first mobile verification screens.",
+  "files": [
+    {
+      "path": "registry/designali/examples/input-otp/input-otp-11.tsx",
+      "content": "import {\n  InputOTP,\n  InputOTPGroup,\n  InputOTPSlot,\n} from \"@workspace/ui/components/input-otp\"\n\nexport default function LargeOtpSlots() {\n  return (\n    <InputOTP maxLength={4}>\n      <InputOTPGroup>\n        <InputOTPSlot index={0} className=\"size-14 text-2xl font-semibold\" />\n        <InputOTPSlot index={1} className=\"size-14 text-2xl font-semibold\" />\n        <InputOTPSlot index={2} className=\"size-14 text-2xl font-semibold\" />\n        <InputOTPSlot index={3} className=\"size-14 text-2xl font-semibold\" />\n      </InputOTPGroup>\n    </InputOTP>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

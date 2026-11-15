@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toggle-group-23",
+  "type": "registry:example",
+  "description": "Share dialog member rows with a view, comment or edit permission group each.",
+  "files": [
+    {
+      "path": "registry/designali/examples/toggle-group/toggle-group-23.tsx",
+      "content": "import { Avatar, AvatarFallback } from \"@workspace/ui/components/avatar\"\nimport {\n  ToggleGroup,\n  ToggleGroupItem,\n} from \"@workspace/ui/components/toggle-group\"\n\nconst members = [\n  { name: \"Lena Ortiz\", email: \"lena@fieldnote.app\", role: \"edit\" },\n  { name: \"Tomás Reyes\", email: \"tomas@fieldnote.app\", role: \"comment\" },\n  { name: \"Hana Sato\", email: \"hana@fieldnote.app\", role: \"view\" },\n]\n\nexport default function MemberPermissionToggleGroup() {\n  return (\n    <div className=\"flex w-full max-w-md flex-col gap-3\">\n      {members.map((m) => (\n        <div key={m.email} className=\"flex items-center gap-3\">\n          <Avatar size=\"sm\">\n            <AvatarFallback>\n              {m.name\n                .split(\" \")\n                .map((p) => p[0])\n                .join(\"\")}\n            </AvatarFallback>\n          </Avatar>\n          <div className=\"flex min-w-0 flex-1 flex-col\">\n            <span className=\"truncate text-sm font-medium\">{m.name}</span>\n            <span className=\"truncate text-xs text-muted-foreground\">\n              {m.email}\n            </span>\n          </div>\n          <ToggleGroup\n            size=\"sm\"\n            variant=\"outline\"\n            spacing={0}\n            defaultValue={[m.role]}\n          >\n            <ToggleGroupItem value=\"view\">View</ToggleGroupItem>\n            <ToggleGroupItem value=\"comment\">Comment</ToggleGroupItem>\n            <ToggleGroupItem value=\"edit\">Edit</ToggleGroupItem>\n          </ToggleGroup>\n        </div>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "skeleton-13",
+  "type": "registry:example",
+  "description": "Settings form placeholder with label and input pairs, a textarea, and actions.",
+  "files": [
+    {
+      "path": "registry/designali/examples/skeleton/skeleton-13.tsx",
+      "content": "import { Skeleton } from \"@workspace/ui/components/skeleton\"\n\nexport default function FormSkeleton() {\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-5\">\n      <div className=\"flex flex-col gap-2\">\n        <Skeleton className=\"h-5 w-32\" />\n        <Skeleton className=\"h-3 w-56\" />\n      </div>\n      {Array.from({ length: 3 }).map((_, i) => (\n        <div key={i} className=\"flex flex-col gap-2\">\n          <Skeleton className=\"h-3 w-20\" />\n          <Skeleton className=\"h-8 w-full\" />\n        </div>\n      ))}\n      <div className=\"flex flex-col gap-2\">\n        <Skeleton className=\"h-3 w-16\" />\n        <Skeleton className=\"h-20 w-full\" />\n      </div>\n      <div className=\"flex justify-end gap-2\">\n        <Skeleton className=\"h-8 w-20\" />\n        <Skeleton className=\"h-8 w-28\" />\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

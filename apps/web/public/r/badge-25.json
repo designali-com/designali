@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "badge-25",
+  "type": "registry:example",
+  "description": "Fully rounded pill badges across every variant.",
+  "files": [
+    {
+      "path": "registry/designali/examples/badge/badge-25.tsx",
+      "content": "import { Badge } from \"@workspace/ui/components/badge\"\n\nconst variants = [\n  \"default\",\n  \"secondary\",\n  \"destructive\",\n  \"outline\",\n  \"ghost\",\n  \"link\",\n] as const\n\nexport default function PillShapeBadges() {\n  return (\n    <div className=\"flex flex-wrap justify-center gap-2\">\n      {variants.map((variant) => (\n        <Badge\n          key={variant}\n          variant={variant}\n          className=\"rounded-full px-2.5 capitalize\"\n        >\n          {variant}\n        </Badge>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

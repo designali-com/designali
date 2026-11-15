@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "progress-27",
+  "type": "registry:example",
+  "description": "Subscription contract term using a custom max of 12 months.",
+  "files": [
+    {
+      "path": "registry/designali/examples/progress/progress-27.tsx",
+      "content": "\"use client\"\n\nimport {\n  Progress,\n  ProgressLabel,\n  ProgressValue,\n} from \"@workspace/ui/components/progress\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nexport default function ContractTermProgress() {\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-3 border p-4\">\n      <div className=\"flex items-center justify-between text-sm\">\n        <span className=\"font-medium\">Annual contract</span>\n        <span className=\"text-muted-foreground\">Renews Mar 1, 2027</span>\n      </div>\n      <Progress value={8} min={0} max={12}>\n        <ProgressLabel className=\"text-muted-foreground\">\n          Term elapsed\n        </ProgressLabel>\n        <ProgressValue>{(_, value) => value + \" of 12 months\"}</ProgressValue>\n      </Progress>\n      <div className=\"grid grid-cols-12 gap-0.5\" aria-hidden>\n        {Array.from({ length: 12 }, (_, i) => (\n          <span\n            key={i}\n            className={cn(\"h-1\", i < 8 ? \"bg-primary/40\" : \"bg-muted\")}\n          />\n        ))}\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

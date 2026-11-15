@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "separator-24",
+  "type": "registry:example",
+  "description": "Contact details row with icons separated by vertical separators, wrapping on small screens.",
+  "files": [
+    {
+      "path": "registry/designali/examples/separator/separator-24.tsx",
+      "content": "import * as React from \"react\"\nimport { MailIcon, MapPinIcon, PhoneIcon } from \"lucide-react\"\n\nimport { Separator } from \"@workspace/ui/components/separator\"\n\nconst details = [\n  { icon: MailIcon, text: \"hello@larkstudio.co\" },\n  { icon: PhoneIcon, text: \"+44 20 7946 0958\" },\n  { icon: MapPinIcon, text: \"Bristol, UK\" },\n]\n\nexport default function ContactDetailsInline() {\n  return (\n    <div className=\"flex w-full max-w-md flex-col gap-3\">\n      <span className=\"text-sm font-medium\">Lark Studio</span>\n      <div className=\"flex flex-col gap-2 text-xs text-muted-foreground sm:h-4 sm:flex-row sm:items-center sm:gap-3\">\n        {details.map((detail, index) => (\n          <React.Fragment key={detail.text}>\n            {index > 0 && (\n              <Separator orientation=\"vertical\" className=\"hidden sm:block\" />\n            )}\n            <span className=\"flex items-center gap-1.5\">\n              <detail.icon className=\"size-3.5\" />\n              {detail.text}\n            </span>\n          </React.Fragment>\n        ))}\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

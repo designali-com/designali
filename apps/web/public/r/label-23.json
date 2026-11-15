@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "label-23",
+  "type": "registry:example",
+  "description": "Floating label that sits inside the input and moves up on focus or when filled.",
+  "files": [
+    {
+      "path": "registry/designali/examples/label/label-23.tsx",
+      "content": "import { Label } from \"@workspace/ui/components/label\"\n\nexport default function FloatingLabelInput() {\n  return (\n    <div className=\"relative w-full max-w-sm\">\n      <input\n        id=\"floating-email\"\n        type=\"email\"\n        placeholder=\" \"\n        className=\"peer h-12 w-full border border-input bg-transparent px-3 pt-4 text-sm outline-none focus:border-ring focus:ring-1 focus:ring-ring/50 dark:bg-input/30\"\n      />\n      <Label\n        htmlFor=\"floating-email\"\n        className=\"pointer-events-none absolute start-3 top-1.5 text-[11px] text-muted-foreground transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-xs peer-focus:top-1.5 peer-focus:text-[11px]\"\n      >\n        Email address\n      </Label>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

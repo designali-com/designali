@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toast-16",
+  "type": "registry:example",
+  "description": "Sending a workspace invite confirms the recipient and role in the toast.",
+  "files": [
+    {
+      "path": "registry/designali/examples/toast/toast-16.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { SendIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Input } from \"@workspace/ui/components/input\"\nimport { Toaster, createToastManager } from \"@workspace/ui/components/toast\"\n\nconst notify = createToastManager()\n\nexport default function TeamInviteToast() {\n  const [email, setEmail] = React.useState(\"\")\n\n  function invite() {\n    if (!email.includes(\"@\")) {\n      notify.add({ type: \"error\", title: \"Enter a valid email address\" })\n      return\n    }\n    notify.add({\n      type: \"success\",\n      title: \"Invite sent\",\n      description: email + \" was invited as an Editor.\",\n    })\n    setEmail(\"\")\n  }\n\n  return (\n    <Toaster toastManager={notify}>\n      <div className=\"flex w-full max-w-sm flex-col gap-2 border p-4\">\n        <p className=\"text-sm font-medium\">Invite to Northwind Studio</p>\n        <div className=\"flex gap-2\">\n          <Input\n            type=\"email\"\n            placeholder=\"teammate@example.com\"\n            value={email}\n            onChange={(e) => setEmail(e.target.value)}\n          />\n          <Button onClick={invite}>\n            <SendIcon data-icon=\"inline-start\" />\n            Invite\n          </Button>\n        </div>\n      </div>\n    </Toaster>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

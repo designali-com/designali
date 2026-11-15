@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "breadcrumb-22",
+  "type": "registry:example",
+  "description": "Documentation trail with a copy-link button that confirms when the URL is copied.",
+  "files": [
+    {
+      "path": "registry/designali/examples/breadcrumb/breadcrumb-22.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { CheckIcon, LinkIcon } from \"lucide-react\"\n\nimport {\n  Breadcrumb,\n  BreadcrumbItem,\n  BreadcrumbLink,\n  BreadcrumbList,\n  BreadcrumbPage,\n  BreadcrumbSeparator,\n} from \"@workspace/ui/components/breadcrumb\"\nimport { Button } from \"@workspace/ui/components/button\"\n\nexport default function DocsCopyLinkBreadcrumb() {\n  const [copied, setCopied] = React.useState(false)\n\n  return (\n    <div className=\"flex w-full max-w-md items-center justify-between gap-2 border px-3 py-2\">\n      <Breadcrumb>\n        <BreadcrumbList>\n          <BreadcrumbItem>\n            <BreadcrumbLink href=\"#\">Docs</BreadcrumbLink>\n          </BreadcrumbItem>\n          <BreadcrumbSeparator />\n          <BreadcrumbItem>\n            <BreadcrumbLink href=\"#\">Guides</BreadcrumbLink>\n          </BreadcrumbItem>\n          <BreadcrumbSeparator />\n          <BreadcrumbItem>\n            <BreadcrumbPage>Webhooks</BreadcrumbPage>\n          </BreadcrumbItem>\n        </BreadcrumbList>\n      </Breadcrumb>\n      <Button\n        variant=\"ghost\"\n        size=\"xs\"\n        onClick={() => {\n          setCopied(true)\n          setTimeout(() => setCopied(false), 1500)\n        }}\n      >\n        {copied ? (\n          <CheckIcon data-icon=\"inline-start\" />\n        ) : (\n          <LinkIcon data-icon=\"inline-start\" />\n        )}\n        {copied ? \"Copied\" : \"Copy link\"}\n      </Button>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

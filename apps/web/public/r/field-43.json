@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "field-43",
+  "type": "registry:example",
+  "description": "Danger zone field requiring the user to type the workspace name before deleting.",
+  "files": [
+    {
+      "path": "registry/designali/examples/field/field-43.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { Trash2Icon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  Field,\n  FieldDescription,\n  FieldLabel,\n  FieldLegend,\n  FieldSet,\n} from \"@workspace/ui/components/field\"\nimport { Input } from \"@workspace/ui/components/input\"\n\nconst NAME = \"orbit-analytics\"\n\nexport default function DeleteAccountConfirmField() {\n  const [value, setValue] = React.useState(\"\")\n\n  return (\n    <div className=\"w-full max-w-sm border border-destructive/40 p-4\">\n      <FieldSet>\n        <FieldLegend className=\"text-destructive\">Delete workspace</FieldLegend>\n        <FieldDescription>\n          This permanently removes all projects, files, and billing history.\n        </FieldDescription>\n        <Field>\n          <FieldLabel htmlFor=\"confirm-delete\" className=\"font-normal\">\n            Type <code className=\"bg-muted px-1 font-mono\">{NAME}</code> to\n            confirm\n          </FieldLabel>\n          <Input\n            id=\"confirm-delete\"\n            value={value}\n            onChange={(e) => setValue(e.target.value)}\n            autoComplete=\"off\"\n          />\n        </Field>\n        <Button\n          variant=\"destructive\"\n          disabled={value !== NAME}\n          className=\"w-fit\"\n        >\n          <Trash2Icon data-icon=\"inline-start\" />\n          Delete forever\n        </Button>\n      </FieldSet>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

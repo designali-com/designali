@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "skeleton-26",
+  "type": "registry:example",
+  "description": "Settings list placeholder whose rows end in switch-shaped skeletons.",
+  "files": [
+    {
+      "path": "registry/designali/examples/skeleton/skeleton-26.tsx",
+      "content": "import { Skeleton } from \"@workspace/ui/components/skeleton\"\n\nexport default function SettingsTogglesSkeleton() {\n  return (\n    <div className=\"w-full max-w-md border\">\n      <div className=\"border-b p-4\">\n        <Skeleton className=\"h-4 w-32\" />\n      </div>\n      {Array.from({ length: 4 }).map((_, i) => (\n        <div\n          key={i}\n          className=\"flex items-center justify-between gap-4 border-b p-4 last:border-b-0\"\n        >\n          <div className=\"flex flex-1 flex-col gap-1.5\">\n            <Skeleton className=\"h-3 w-28\" />\n            <Skeleton className=\"h-2.5 w-48 max-w-full\" />\n          </div>\n          <Skeleton className=\"h-4.5 w-8 rounded-full\" />\n        </div>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

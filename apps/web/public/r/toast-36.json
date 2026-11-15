@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toast-36",
+  "type": "registry:example",
+  "description": "An order timeline where advancing the status announces each step with a toast.",
+  "files": [
+    {
+      "path": "registry/designali/examples/toast/toast-36.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { CircleCheckIcon, CircleIcon, TruckIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Toaster, createToastManager } from \"@workspace/ui/components/toast\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst notify = createToastManager()\n\nconst steps = [\n  \"Order placed\",\n  \"Packed\",\n  \"Shipped\",\n  \"Out for delivery\",\n  \"Delivered\",\n]\n\nexport default function OrderShippedToast() {\n  const [step, setStep] = React.useState(0)\n\n  function advance() {\n    const next = Math.min(step + 1, steps.length - 1)\n    setStep(next)\n    notify.add({\n      id: \"order\",\n      type: next === steps.length - 1 ? \"success\" : \"info\",\n      title: \"Order #A-3391: \" + steps[next],\n      description:\n        next === 2 ? \"Tracking number 1Z 999 AA1 01 2345 6784\" : undefined,\n      actionProps: next === 2 ? { children: \"Track\" } : undefined,\n    })\n  }\n\n  return (\n    <Toaster toastManager={notify}>\n      <div className=\"flex w-full max-w-xs flex-col gap-3 border p-4\">\n        <ol className=\"flex flex-col gap-1.5\">\n          {steps.map((s, i) => (\n            <li\n              key={s}\n              className={cn(\n                \"flex items-center gap-2 text-sm\",\n                i > step && \"text-muted-foreground\"\n              )}\n            >\n              {i <= step ? (\n                <CircleCheckIcon className=\"size-4\" />\n              ) : (\n                <CircleIcon className=\"size-4\" />\n              )}\n              {s}\n            </li>\n          ))}\n        </ol>\n        <Button\n          size=\"sm\"\n          onClick={advance}\n          disabled={step === steps.length - 1}\n        >\n          <TruckIcon data-icon=\"inline-start\" />\n          Advance status\n        </Button>\n      </div>\n    </Toaster>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

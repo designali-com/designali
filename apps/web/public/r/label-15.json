@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "label-15",
+  "type": "registry:example",
+  "description": "Horizontal form layout with labels in a left column on wider screens.",
+  "files": [
+    {
+      "path": "registry/designali/examples/label/label-15.tsx",
+      "content": "import { Input } from \"@workspace/ui/components/input\"\nimport { Label } from \"@workspace/ui/components/label\"\n\nconst rows = [\n  { id: \"h-name\", label: \"Full name\", value: \"Iris Navarro\" },\n  { id: \"h-role\", label: \"Job title\", value: \"Staff Engineer\" },\n  { id: \"h-loc\", label: \"Location\", value: \"Lisbon, Portugal\" },\n]\n\nexport default function HorizontalFormLabels() {\n  return (\n    <div className=\"flex w-full max-w-md flex-col gap-3\">\n      {rows.map((row) => (\n        <div\n          key={row.id}\n          className=\"grid gap-2 sm:grid-cols-[7rem_1fr] sm:items-center\"\n        >\n          <Label\n            htmlFor={row.id}\n            className=\"text-muted-foreground sm:justify-end\"\n          >\n            {row.label}\n          </Label>\n          <Input id={row.id} defaultValue={row.value} />\n        </div>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "card-21",
+  "type": "registry:example",
+  "description": "Storage card with a segmented usage bar broken down by file type and an upgrade link.",
+  "files": [
+    {
+      "path": "registry/designali/examples/card/card-21.tsx",
+      "content": "import { HardDriveIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  Card,\n  CardContent,\n  CardDescription,\n  CardFooter,\n  CardHeader,\n  CardTitle,\n} from \"@workspace/ui/components/card\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst segments = [\n  { label: \"Documents\", gb: 18.4, className: \"bg-sky-500\" },\n  { label: \"Photos\", gb: 31.2, className: \"bg-violet-500\" },\n  { label: \"Videos\", gb: 22.7, className: \"bg-amber-500\" },\n  { label: \"Other\", gb: 6.1, className: \"bg-zinc-400\" },\n]\nconst total = 100\n\nexport default function StorageUsageCard() {\n  const used = segments.reduce((s, x) => s + x.gb, 0)\n\n  return (\n    <Card className=\"w-full max-w-sm\">\n      <CardHeader>\n        <CardTitle className=\"flex items-center gap-2\">\n          <HardDriveIcon className=\"size-4 text-muted-foreground\" />\n          Storage\n        </CardTitle>\n        <CardDescription>\n          {used.toFixed(1)} GB of {total} GB used\n        </CardDescription>\n      </CardHeader>\n      <CardContent className=\"grid gap-4\">\n        <div className=\"flex h-2 w-full overflow-hidden bg-muted\">\n          {segments.map((s) => (\n            <div\n              key={s.label}\n              className={s.className}\n              style={{ width: (s.gb / total) * 100 + \"%\" }}\n            />\n          ))}\n        </div>\n        <ul className=\"grid grid-cols-2 gap-2\">\n          {segments.map((s) => (\n            <li key={s.label} className=\"flex items-center gap-2\">\n              <span className={cn(\"size-2\", s.className)} />\n              <span className=\"flex-1\">{s.label}</span>\n              <span className=\"text-muted-foreground tabular-nums\">\n                {s.gb} GB\n              </span>\n            </li>\n          ))}\n        </ul>\n      </CardContent>\n      <CardFooter className=\"justify-between\">\n        <span className=\"text-muted-foreground\">\n          {(total - used).toFixed(1)} GB free\n        </span>\n        <Button size=\"sm\" variant=\"outline\">\n          Get 2 TB\n        </Button>\n      </CardFooter>\n    </Card>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

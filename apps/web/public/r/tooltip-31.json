@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tooltip-31",
+  "type": "registry:example",
+  "description": "Chat reaction chips whose tooltips list the people who reacted.",
+  "files": [
+    {
+      "path": "registry/designali/examples/tooltip/tooltip-31.tsx",
+      "content": "import { HeartIcon, RocketIcon, ThumbsUpIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  Tooltip,\n  TooltipContent,\n  TooltipProvider,\n  TooltipTrigger,\n} from \"@workspace/ui/components/tooltip\"\n\nconst reactions = [\n  { icon: ThumbsUpIcon, people: [\"Ana\", \"Ben\", \"Chloe\"] },\n  { icon: HeartIcon, people: [\"Dmitri\"] },\n  { icon: RocketIcon, people: [\"Ana\", \"Esme\", \"Farid\", \"Gus\"] },\n]\n\nexport default function ReactionWhoTooltip() {\n  return (\n    <TooltipProvider>\n      <div className=\"flex w-full max-w-sm flex-col gap-2\">\n        <div className=\"bg-muted px-3 py-2 text-sm\">\n          v2.8 is live in all regions.\n        </div>\n        <div className=\"flex gap-1\">\n          {reactions.map((r, i) => (\n            <Tooltip key={i}>\n              <TooltipTrigger\n                render={\n                  <Button\n                    variant=\"outline\"\n                    size=\"xs\"\n                    className=\"rounded-full\"\n                  />\n                }\n              >\n                <r.icon data-icon=\"inline-start\" />\n                {r.people.length}\n              </TooltipTrigger>\n              <TooltipContent>Reacted by {r.people.join(\", \")}</TooltipContent>\n            </Tooltip>\n          ))}\n        </div>\n      </div>\n    </TooltipProvider>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

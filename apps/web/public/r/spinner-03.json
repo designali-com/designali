@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "spinner-03",
+  "type": "registry:example",
+  "description": "Spinner inside each button variant to show a pending action.",
+  "files": [
+    {
+      "path": "registry/designali/examples/spinner/spinner-03.tsx",
+      "content": "import { Button } from \"@workspace/ui/components/button\"\nimport { Spinner } from \"@workspace/ui/components/spinner\"\n\nconst variants = [\n  \"default\",\n  \"secondary\",\n  \"outline\",\n  \"ghost\",\n  \"destructive\",\n] as const\n\nexport default function ButtonVariantsLoading() {\n  return (\n    <div className=\"flex max-w-md flex-wrap items-center justify-center gap-2\">\n      {variants.map((variant) => (\n        <Button key={variant} variant={variant} disabled>\n          <Spinner data-icon=\"inline-start\" />\n          <span className=\"capitalize\">{variant}</span>\n        </Button>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

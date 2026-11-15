@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "carousel-32",
+  "type": "registry:example",
+  "description": "Focusable carousel that advertises its arrow-key navigation with Kbd hints.",
+  "files": [
+    {
+      "path": "registry/designali/examples/carousel/carousel-32.tsx",
+      "content": "import {\n  Carousel,\n  CarouselContent,\n  CarouselItem,\n} from \"@workspace/ui/components/carousel\"\nimport { Kbd, KbdGroup } from \"@workspace/ui/components/kbd\"\n\nconst tips = [\n  {\n    title: \"Quick search\",\n    body: \"Open search from anywhere to jump to any record.\",\n  },\n  { title: \"Command menu\", body: \"Run actions without leaving the keyboard.\" },\n  {\n    title: \"Inline editing\",\n    body: \"Press Enter on any cell to start editing.\",\n  },\n  {\n    title: \"Undo everything\",\n    body: \"Every change in a session can be reverted.\",\n  },\n]\n\nexport default function KeyboardHintCarousel() {\n  return (\n    <div className=\"flex w-full max-w-xs flex-col items-center gap-3\">\n      <Carousel\n        tabIndex={0}\n        aria-label=\"Product tips\"\n        className=\"w-full outline-none focus-visible:ring-2 focus-visible:ring-ring/50\"\n      >\n        <CarouselContent>\n          {tips.map((tip) => (\n            <CarouselItem key={tip.title}>\n              <div className=\"flex h-32 flex-col justify-center gap-1 border bg-muted/30 p-4\">\n                <span className=\"text-sm font-semibold\">{tip.title}</span>\n                <span className=\"text-xs text-muted-foreground\">\n                  {tip.body}\n                </span>\n              </div>\n            </CarouselItem>\n          ))}\n        </CarouselContent>\n      </Carousel>\n      <p className=\"flex items-center gap-1.5 text-xs text-muted-foreground\">\n        Focus and use\n        <KbdGroup>\n          <Kbd>←</Kbd>\n          <Kbd>→</Kbd>\n        </KbdGroup>\n        to browse\n      </p>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

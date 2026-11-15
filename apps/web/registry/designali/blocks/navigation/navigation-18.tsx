@@ -55,7 +55,7 @@ const industries = [
 export default function Navigation18() {
   const [open, setOpen] = useState(true)
   const [active, setActive] = useState(0)
-  const current = industries[active]
+  const current = industries[active]!
 
   return (
     <section className="relative w-full bg-background">

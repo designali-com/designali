@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tabs-50",
+  "type": "registry:example",
+  "description": "Small, default and large tab list sizes stacked for comparison.",
+  "files": [
+    {
+      "path": "registry/designali/examples/tabs/tabs-50.tsx",
+      "content": "import { Tabs, TabsList, TabsTrigger } from \"@workspace/ui/components/tabs\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst sizes = [\n  {\n    label: \"Small\",\n    list: \"group-data-horizontal/tabs:h-6\",\n    trigger: \"text-[11px] px-1\",\n  },\n  { label: \"Default\", list: \"\", trigger: \"\" },\n  {\n    label: \"Large\",\n    list: \"group-data-horizontal/tabs:h-10\",\n    trigger: \"text-sm px-3\",\n  },\n]\n\nexport default function TabsSizeScale() {\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-4\">\n      {sizes.map((s) => (\n        <div key={s.label} className=\"flex items-center justify-between gap-4\">\n          <span className=\"w-14 text-xs text-muted-foreground\">{s.label}</span>\n          <Tabs defaultValue=\"code\" className=\"flex-1\">\n            <TabsList className={cn(\"w-full\", s.list)}>\n              <TabsTrigger value=\"code\" className={s.trigger}>\n                Code\n              </TabsTrigger>\n              <TabsTrigger value=\"issues\" className={s.trigger}>\n                Issues\n              </TabsTrigger>\n              <TabsTrigger value=\"wiki\" className={s.trigger}>\n                Wiki\n              </TabsTrigger>\n            </TabsList>\n          </Tabs>\n        </div>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

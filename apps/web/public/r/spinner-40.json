@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "spinner-40",
+  "type": "registry:example",
+  "description": "Concentric spinners rotating at different speeds and directions for a hero loader.",
+  "files": [
+    {
+      "path": "registry/designali/examples/spinner/spinner-40.tsx",
+      "content": "import { Spinner } from \"@workspace/ui/components/spinner\"\n\nexport default function LayeredOrbitSpinner() {\n  return (\n    <div className=\"flex flex-col items-center gap-4\">\n      <div className=\"relative flex size-20 items-center justify-center\">\n        <Spinner\n          className=\"absolute size-20 text-muted-foreground/40\"\n          strokeWidth={1}\n          style={{ animationDuration: \"3s\" }}\n        />\n        <Spinner\n          className=\"absolute size-14 text-muted-foreground\"\n          strokeWidth={1.5}\n          style={{ animationDuration: \"1.6s\", animationDirection: \"reverse\" }}\n        />\n        <Spinner className=\"absolute size-8 text-primary\" />\n      </div>\n      <span className=\"text-xs text-muted-foreground\">Calibrating sensors</span>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

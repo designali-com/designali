@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "skeleton-09",
+  "type": "registry:example",
+  "description": "Dashboard KPI tiles placeholder with label, value, and trend chip.",
+  "files": [
+    {
+      "path": "registry/designali/examples/skeleton/skeleton-09.tsx",
+      "content": "import { Card, CardContent } from \"@workspace/ui/components/card\"\nimport { Skeleton } from \"@workspace/ui/components/skeleton\"\n\nexport default function StatCardsSkeleton() {\n  return (\n    <div className=\"grid w-full max-w-lg grid-cols-2 gap-3\">\n      {Array.from({ length: 4 }).map((_, i) => (\n        <Card key={i} size=\"sm\">\n          <CardContent className=\"flex flex-col gap-3\">\n            <div className=\"flex items-center justify-between\">\n              <Skeleton className=\"h-3 w-20\" />\n              <Skeleton className=\"size-4\" />\n            </div>\n            <Skeleton className=\"h-7 w-24\" />\n            <Skeleton className=\"h-4 w-14\" />\n          </CardContent>\n        </Card>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "table-37",
+  "type": "registry:example",
+  "description": "A weekly activity table whose cells are tinted by intensity like a heatmap.",
+  "files": [
+    {
+      "path": "registry/designali/examples/table/table-37.tsx",
+      "content": "import {\n  Table,\n  TableBody,\n  TableCell,\n  TableHead,\n  TableHeader,\n  TableRow,\n} from \"@workspace/ui/components/table\"\n\nconst hours = [\"8a\", \"10a\", \"12p\", \"2p\", \"4p\", \"6p\"]\nconst week = [\n  { day: \"Mon\", values: [2, 5, 8, 6, 4, 1] },\n  { day: \"Tue\", values: [3, 7, 9, 8, 5, 2] },\n  { day: \"Wed\", values: [1, 4, 6, 9, 7, 3] },\n  { day: \"Thu\", values: [2, 6, 7, 5, 4, 2] },\n  { day: \"Fri\", values: [1, 3, 5, 4, 2, 0] },\n]\n\nexport default function HeatmapCellsTable() {\n  return (\n    <div className=\"w-full max-w-md border\">\n      <Table className=\"table-fixed\">\n        <TableHeader>\n          <TableRow>\n            <TableHead className=\"w-12\" />\n            {hours.map((h) => (\n              <TableHead\n                key={h}\n                className=\"px-1 text-center text-muted-foreground\"\n              >\n                {h}\n              </TableHead>\n            ))}\n          </TableRow>\n        </TableHeader>\n        <TableBody>\n          {week.map((row) => (\n            <TableRow key={row.day} className=\"border-0 hover:bg-transparent\">\n              <TableCell className=\"py-0.5 font-medium\">{row.day}</TableCell>\n              {row.values.map((v, i) => (\n                <TableCell key={hours[i]} className=\"p-0.5\">\n                  <div\n                    className=\"flex h-7 items-center justify-center bg-primary text-[10px] text-primary-foreground tabular-nums\"\n                    style={{ opacity: 0.1 + v / 10 }}\n                    title={row.day + \" \" + hours[i] + \": \" + v + \" sessions\"}\n                  >\n                    {v}\n                  </div>\n                </TableCell>\n              ))}\n            </TableRow>\n          ))}\n        </TableBody>\n      </Table>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

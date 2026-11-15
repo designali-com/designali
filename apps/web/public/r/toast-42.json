@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toast-42",
+  "type": "registry:example",
+  "description": "A short focus timer that fires a persistent toast with a restart action when it ends.",
+  "files": [
+    {
+      "path": "registry/designali/examples/toast/toast-42.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { PlayIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Toaster, createToastManager } from \"@workspace/ui/components/toast\"\n\nconst notify = createToastManager()\n\nexport default function FocusTimerToast() {\n  const [left, setLeft] = React.useState<number | null>(null)\n\n  const start = React.useCallback(() => setLeft(5), [])\n\n  React.useEffect(() => {\n    if (left === null) return\n    const id = setTimeout(() => {\n      if (left > 1) {\n        setLeft(left - 1)\n        return\n      }\n      setLeft(null)\n      notify.add({\n        type: \"success\",\n        title: \"Focus session complete\",\n        description: \"Take a 5 minute break.\",\n        timeout: 0,\n        actionProps: {\n          children: \"Restart\",\n          onClick: () => {\n            notify.close()\n            start()\n          },\n        },\n      })\n    }, 1000)\n    return () => clearTimeout(id)\n  }, [left, start])\n\n  return (\n    <Toaster toastManager={notify}>\n      <div className=\"flex w-full max-w-xs flex-col items-center gap-3 border p-6\">\n        <span className=\"font-mono text-4xl tabular-nums\">00:0{left ?? 5}</span>\n        <Button onClick={start} disabled={left !== null}>\n          <PlayIcon data-icon=\"inline-start\" />\n          {left !== null ? \"Focusing...\" : \"Start 5s demo\"}\n        </Button>\n      </div>\n    </Toaster>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

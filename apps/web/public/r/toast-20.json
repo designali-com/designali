@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toast-20",
+  "type": "registry:example",
+  "description": "Reads useToastManager to display how many notifications are currently open.",
+  "files": [
+    {
+      "path": "registry/designali/examples/toast/toast-20.tsx",
+      "content": "\"use client\"\n\nimport { BellIcon } from \"lucide-react\"\n\nimport { Badge } from \"@workspace/ui/components/badge\"\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  Toaster,\n  createToastManager,\n  useToastManager,\n} from \"@workspace/ui/components/toast\"\n\nconst notify = createToastManager()\n\nfunction Counter() {\n  const { toasts } = useToastManager()\n  const open = toasts.filter((t) => t.transitionStatus !== \"ending\").length\n  return (\n    <div className=\"flex items-center gap-2 text-sm\">\n      <BellIcon className=\"size-4\" />\n      <span>Open notifications</span>\n      <Badge variant={open ? \"default\" : \"secondary\"}>{open}</Badge>\n    </div>\n  )\n}\n\nexport default function ActiveToastCounter() {\n  return (\n    <Toaster toastManager={notify}>\n      <div className=\"flex w-full max-w-xs flex-col gap-3 border p-4\">\n        <Counter />\n        <div className=\"flex gap-2\">\n          <Button\n            size=\"sm\"\n            className=\"flex-1\"\n            onClick={() =>\n              notify.add({\n                title: \"Build #812 passed\",\n                description: \"main - 3m 12s\",\n              })\n            }\n          >\n            Notify\n          </Button>\n          <Button\n            size=\"sm\"\n            variant=\"outline\"\n            className=\"flex-1\"\n            onClick={() => notify.close()}\n          >\n            Clear\n          </Button>\n        </div>\n      </div>\n    </Toaster>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

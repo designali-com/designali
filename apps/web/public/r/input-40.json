@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-40",
+  "type": "registry:example",
+  "description": "A short form with required markers that reveals errors for empty fields on submit.",
+  "files": [
+    {
+      "path": "registry/designali/examples/input/input-40.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  Field,\n  FieldError,\n  FieldGroup,\n  FieldLabel,\n} from \"@workspace/ui/components/field\"\nimport { Input } from \"@workspace/ui/components/input\"\n\nexport default function RequiredFieldsFormInputs() {\n  const [submitted, setSubmitted] = React.useState(false)\n  const [values, setValues] = React.useState({ company: \"\", vat: \"\" })\n  const companyError = submitted && !values.company\n\n  return (\n    <form\n      noValidate\n      className=\"w-full max-w-sm\"\n      onSubmit={(e) => {\n        e.preventDefault()\n        setSubmitted(true)\n      }}\n    >\n      <FieldGroup>\n        <Field data-invalid={companyError}>\n          <FieldLabel htmlFor=\"req-company\">\n            Company name <span className=\"text-destructive\">*</span>\n          </FieldLabel>\n          <Input\n            id=\"req-company\"\n            required\n            aria-invalid={companyError}\n            value={values.company}\n            onChange={(e) => setValues({ ...values, company: e.target.value })}\n          />\n          {companyError && <FieldError>Company name is required.</FieldError>}\n        </Field>\n        <Field>\n          <FieldLabel htmlFor=\"req-vat\">\n            VAT number{\" \"}\n            <span className=\"font-normal text-muted-foreground\">\n              (optional)\n            </span>\n          </FieldLabel>\n          <Input\n            id=\"req-vat\"\n            value={values.vat}\n            onChange={(e) => setValues({ ...values, vat: e.target.value })}\n          />\n        </Field>\n        <Button type=\"submit\">Continue to payment</Button>\n      </FieldGroup>\n    </form>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-otp-24",
+  "type": "registry:example",
+  "description": "Dialog that asks for an authenticator code to finish enabling two-factor authentication.",
+  "files": [
+    {
+      "path": "registry/designali/examples/input-otp/input-otp-24.tsx",
+      "content": "\"use client\"\n\nimport { REGEXP_ONLY_DIGITS } from \"input-otp\"\nimport { ShieldIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  Dialog,\n  DialogClose,\n  DialogContent,\n  DialogDescription,\n  DialogFooter,\n  DialogHeader,\n  DialogTitle,\n  DialogTrigger,\n} from \"@workspace/ui/components/dialog\"\nimport {\n  InputOTP,\n  InputOTPGroup,\n  InputOTPSeparator,\n  InputOTPSlot,\n} from \"@workspace/ui/components/input-otp\"\n\nexport default function EnableTwoFactorDialog() {\n  return (\n    <Dialog>\n      <DialogTrigger render={<Button variant=\"outline\" />}>\n        <ShieldIcon data-icon=\"inline-start\" />\n        Enable 2FA\n      </DialogTrigger>\n      <DialogContent className=\"sm:max-w-sm\">\n        <DialogHeader>\n          <DialogTitle>Confirm your authenticator</DialogTitle>\n          <DialogDescription>\n            Enter the 6-digit code from your app to finish setup.\n          </DialogDescription>\n        </DialogHeader>\n        <InputOTP\n          maxLength={6}\n          pattern={REGEXP_ONLY_DIGITS}\n          containerClassName=\"justify-center py-2\"\n        >\n          <InputOTPGroup>\n            <InputOTPSlot index={0} />\n            <InputOTPSlot index={1} />\n            <InputOTPSlot index={2} />\n          </InputOTPGroup>\n          <InputOTPSeparator />\n          <InputOTPGroup>\n            <InputOTPSlot index={3} />\n            <InputOTPSlot index={4} />\n            <InputOTPSlot index={5} />\n          </InputOTPGroup>\n        </InputOTP>\n        <DialogFooter>\n          <DialogClose render={<Button variant=\"outline\" />}>\n            Cancel\n          </DialogClose>\n          <Button>Enable</Button>\n        </DialogFooter>\n      </DialogContent>\n    </Dialog>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

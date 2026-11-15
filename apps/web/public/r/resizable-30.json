@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "resizable-30",
+  "type": "registry:example",
+  "description": "Event log that records each committed layout change and whether the user caused it.",
+  "files": [
+    {
+      "path": "registry/designali/examples/resizable/resizable-30.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport {\n  ResizableHandle,\n  ResizablePanel,\n  ResizablePanelGroup,\n} from \"@workspace/ui/components/resizable\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nexport default function LayoutChangeLog() {\n  const [log, setLog] = React.useState<string[]>([])\n\n  return (\n    <div className=\"flex w-full max-w-md flex-col gap-2\">\n      <ResizablePanelGroup\n        orientation=\"horizontal\"\n        className=\"h-32 border\"\n        onLayoutChanged={(layout, meta) => {\n          const entry =\n            Object.values(layout)\n              .map((v) => Math.round(v) + \"%\")\n              .join(\" / \") + (meta.isUserInteraction ? \" (drag)\" : \" (initial)\")\n          setLog((prev) => [entry, ...prev].slice(0, 4))\n        }}\n      >\n        <ResizablePanel id=\"a\" defaultSize=\"40%\">\n          <div className=\"flex h-full items-center justify-center text-xs\">\n            A\n          </div>\n        </ResizablePanel>\n        <ResizableHandle withHandle />\n        <ResizablePanel id=\"b\" defaultSize=\"60%\">\n          <div className=\"flex h-full items-center justify-center text-xs\">\n            B\n          </div>\n        </ResizablePanel>\n      </ResizablePanelGroup>\n      <div className=\"flex flex-col gap-1 border bg-muted/40 p-2 font-mono text-[11px]\">\n        {log.length === 0 ? (\n          <span className=\"text-muted-foreground\">\n            Drag the handle to record changes\n          </span>\n        ) : (\n          log.map((entry, i) => (\n            <span key={i} className={cn(i > 0 && \"text-muted-foreground\")}>\n              {entry}\n            </span>\n          ))\n        )}\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

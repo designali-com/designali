@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "grid-13",
+  "type": "registry:block",
+  "description": "Inverted dark band with an enterprise security feature grid and a whitepaper CTA.",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/designali/blocks/grid/grid-13.tsx",
+      "content": "import {\n  Cpu,\n  Fingerprint,\n  HardDrive,\n  type LucideIcon,\n  Network,\n  RefreshCw,\n  ScanEye,\n  ShieldCheck,\n  Timer,\n} from \"lucide-react\"\n\nconst features: { icon: LucideIcon; title: string; text: string }[] = [\n  { icon: ShieldCheck, title: \"SOC 2 Type II\", text: \"Audited annually by an independent firm. Report available under NDA.\" },\n  { icon: Fingerprint, title: \"SSO & SCIM\", text: \"SAML with Okta, Entra and Google. Users provision and deprovision automatically.\" },\n  { icon: HardDrive, title: \"Data residency\", text: \"Pin workspaces to EU, US or APAC regions. Data never leaves its region.\" },\n  { icon: ScanEye, title: \"Audit logs\", text: \"Every permission change and export, streamed to your SIEM in real time.\" },\n  { icon: Network, title: \"Private networking\", text: \"Connect over private link. No traffic crosses the public internet.\" },\n  { icon: RefreshCw, title: \"Point-in-time restore\", text: \"Roll any project back to any minute in the last 35 days.\" },\n  { icon: Cpu, title: \"Dedicated compute\", text: \"Isolated build runners sized to your workloads, billed per minute.\" },\n  { icon: Timer, title: \"99.99% uptime SLA\", text: \"Financially backed, with a status page and 15-minute incident response.\" },\n]\n\nexport default function Grid13() {\n  return (\n    <section className=\"w-full bg-foreground py-24 text-background\">\n      <div className=\"mx-auto max-w-7xl px-6\">\n        <div className=\"grid gap-8 border-b border-background/15 pb-12 lg:grid-cols-[1fr_auto] lg:items-end\">\n          <div>\n            <p className=\"font-mono text-xs text-background/60\">Northwind for Enterprise</p>\n            <h2 className=\"mt-3 max-w-2xl text-4xl font-semibold tracking-tight md:text-5xl\">\n              Security your procurement team will actually sign off on.\n            </h2>\n          </div>\n          <a\n            href=\"#\"\n            className=\"inline-flex h-11 items-center justify-center bg-background px-6 text-sm font-medium text-foreground transition-opacity hover:opacity-90\"\n          >\n            Download security whitepaper\n          </a>\n        </div>\n\n        <div className=\"mt-12 grid grid-cols-1 gap-px bg-background/15 sm:grid-cols-2 lg:grid-cols-4\">\n          {features.map((feature) => (\n            <div key={feature.title} className=\"bg-foreground p-6 lg:p-8\">\n              <feature.icon className=\"size-5 text-background/70\" />\n              <h3 className=\"mt-6 font-medium\">{feature.title}</h3>\n              <p className=\"mt-2 text-sm leading-6 text-background/60\">{feature.text}</p>\n            </div>\n          ))}\n        </div>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "750px"
+  },
+  "categories": [
+    "grid"
+  ]
+}

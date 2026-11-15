@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "skeleton-45",
+  "type": "registry:example",
+  "description": "Social feed post placeholder with author header, text, media, and an action bar.",
+  "files": [
+    {
+      "path": "registry/designali/examples/skeleton/skeleton-45.tsx",
+      "content": "import {\n  BookmarkIcon,\n  HeartIcon,\n  MessageCircleIcon,\n  MoreHorizontalIcon,\n  RepeatIcon,\n} from \"lucide-react\"\n\nimport { Skeleton } from \"@workspace/ui/components/skeleton\"\n\nexport default function SocialPostSkeleton() {\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-3 border p-4\">\n      <div className=\"flex items-center gap-2\">\n        <Skeleton className=\"size-9 rounded-full\" />\n        <div className=\"flex flex-1 flex-col gap-1.5\">\n          <Skeleton className=\"h-3 w-28\" />\n          <Skeleton className=\"h-2.5 w-16\" />\n        </div>\n        <MoreHorizontalIcon className=\"size-4 text-muted-foreground/40\" />\n      </div>\n      <Skeleton className=\"h-3 w-full\" />\n      <Skeleton className=\"h-3 w-5/6\" />\n      <Skeleton className=\"aspect-[4/3] w-full\" />\n      <div className=\"flex gap-6 text-muted-foreground/40\">\n        <HeartIcon className=\"size-4\" />\n        <MessageCircleIcon className=\"size-4\" />\n        <RepeatIcon className=\"size-4\" />\n        <BookmarkIcon className=\"ms-auto size-4\" />\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

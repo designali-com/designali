@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toggle-group-35",
+  "type": "registry:example",
+  "description": "Chat message with multi-select reaction toggles that update their counts.",
+  "files": [
+    {
+      "path": "registry/designali/examples/toggle-group/toggle-group-35.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport {\n  HeartIcon,\n  LaughIcon,\n  PartyPopperIcon,\n  ThumbsUpIcon,\n} from \"lucide-react\"\n\nimport { Avatar, AvatarFallback } from \"@workspace/ui/components/avatar\"\nimport {\n  ToggleGroup,\n  ToggleGroupItem,\n} from \"@workspace/ui/components/toggle-group\"\n\nconst reactions = [\n  { value: \"like\", icon: ThumbsUpIcon, base: 4 },\n  { value: \"love\", icon: HeartIcon, base: 2 },\n  { value: \"laugh\", icon: LaughIcon, base: 1 },\n  { value: \"party\", icon: PartyPopperIcon, base: 3 },\n]\n\nexport default function MessageReactionToggleGroup() {\n  const [mine, setMine] = React.useState<string[]>([\"love\"])\n\n  return (\n    <div className=\"flex w-full max-w-sm gap-3\">\n      <Avatar>\n        <AvatarFallback>JK</AvatarFallback>\n      </Avatar>\n      <div className=\"flex flex-col gap-2\">\n        <div className=\"bg-muted px-3 py-2 text-sm\">\n          The staging deploy is green, ship it whenever you&apos;re ready!\n        </div>\n        <ToggleGroup\n          multiple\n          size=\"sm\"\n          variant=\"outline\"\n          spacing={1}\n          value={mine}\n          onValueChange={setMine}\n        >\n          {reactions.map((r) => (\n            <ToggleGroupItem\n              key={r.value}\n              value={r.value}\n              aria-label={r.value}\n              className=\"rounded-full tabular-nums\"\n            >\n              <r.icon data-icon=\"inline-start\" />\n              {r.base + (mine.includes(r.value) ? 1 : 0)}\n            </ToggleGroupItem>\n          ))}\n        </ToggleGroup>\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

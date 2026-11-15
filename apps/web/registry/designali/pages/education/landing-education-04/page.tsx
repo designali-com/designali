@@ -20,7 +20,7 @@ const logos = [
   "Shopify",
   "Deloitte",
   "IBM",
-  "Stripe",
+  "Corvia",
   "Canva",
   "Google",
   "Spotify",

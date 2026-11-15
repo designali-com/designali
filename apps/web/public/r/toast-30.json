@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toast-30",
+  "type": "registry:example",
+  "description": "Uses onClose callbacks to record dismissed notifications in an on-page activity log.",
+  "files": [
+    {
+      "path": "registry/designali/examples/toast/toast-30.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { HistoryIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Toaster, createToastManager } from \"@workspace/ui/components/toast\"\n\nconst notify = createToastManager()\n\nconst events = [\n  \"Ticket SUP-88 assigned to you\",\n  \"Refund of $42.00 approved\",\n  \"New review: 5 stars\",\n]\n\nexport default function ToastActivityLog() {\n  const [log, setLog] = React.useState<string[]>([])\n  const next = React.useRef(0)\n\n  function push() {\n    const text = events[next.current % events.length]!\n    next.current += 1\n    notify.add({\n      title: text,\n      timeout: 3000,\n      onClose: () => setLog((prev) => [text, ...prev].slice(0, 4)),\n    })\n  }\n\n  return (\n    <Toaster toastManager={notify}>\n      <div className=\"flex w-full max-w-xs flex-col gap-3 border p-4\">\n        <Button size=\"sm\" onClick={push}>\n          Push notification\n        </Button>\n        <div className=\"flex flex-col gap-1\">\n          <p className=\"text-xs font-medium text-muted-foreground\">\n            Recently dismissed\n          </p>\n          {log.length === 0 ? (\n            <p className=\"text-xs text-muted-foreground\">Nothing yet</p>\n          ) : (\n            log.map((item, i) => (\n              <p key={i} className=\"flex items-center gap-1.5 text-xs\">\n                <HistoryIcon className=\"size-3 text-muted-foreground\" />\n                {item}\n              </p>\n            ))\n          )}\n        </div>\n      </div>\n    </Toaster>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

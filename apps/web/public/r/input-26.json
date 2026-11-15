@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-26",
+  "type": "registry:example",
+  "description": "Inputs showing neutral, success, warning, and error feedback with matching messages.",
+  "files": [
+    {
+      "path": "registry/designali/examples/input/input-26.tsx",
+      "content": "import { CircleCheckIcon, TriangleAlertIcon } from \"lucide-react\"\n\nimport {\n  Field,\n  FieldDescription,\n  FieldError,\n  FieldGroup,\n  FieldLabel,\n} from \"@workspace/ui/components/field\"\nimport { Input } from \"@workspace/ui/components/input\"\n\nexport default function ValidationFeedbackInputs() {\n  return (\n    <FieldGroup className=\"w-full max-w-sm\">\n      <Field>\n        <FieldLabel htmlFor=\"fb-success\">Subdomain</FieldLabel>\n        <Input\n          id=\"fb-success\"\n          defaultValue=\"harbor\"\n          className=\"border-emerald-600 focus-visible:border-emerald-600 focus-visible:ring-emerald-600/30\"\n        />\n        <FieldDescription className=\"flex items-center gap-1 text-emerald-600\">\n          <CircleCheckIcon className=\"size-3.5\" />\n          harbor.fieldnote.app is available\n        </FieldDescription>\n      </Field>\n      <Field>\n        <FieldLabel htmlFor=\"fb-warning\">Display name</FieldLabel>\n        <Input\n          id=\"fb-warning\"\n          defaultValue=\"HARBOR LABS\"\n          className=\"border-amber-500 focus-visible:border-amber-500 focus-visible:ring-amber-500/30\"\n        />\n        <FieldDescription className=\"flex items-center gap-1 text-amber-600\">\n          <TriangleAlertIcon className=\"size-3.5\" />\n          All caps can look like shouting in notifications.\n        </FieldDescription>\n      </Field>\n      <Field data-invalid>\n        <FieldLabel htmlFor=\"fb-error\">Billing email</FieldLabel>\n        <Input id=\"fb-error\" aria-invalid defaultValue=\"billing@\" />\n        <FieldError>Enter a complete email address.</FieldError>\n      </Field>\n    </FieldGroup>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

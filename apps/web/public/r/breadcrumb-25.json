@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "breadcrumb-25",
+  "type": "registry:example",
+  "description": "Admin console path to a user record with an avatar in the current crumb.",
+  "files": [
+    {
+      "path": "registry/designali/examples/breadcrumb/breadcrumb-25.tsx",
+      "content": "import { UsersIcon } from \"lucide-react\"\n\nimport { Avatar, AvatarFallback } from \"@workspace/ui/components/avatar\"\nimport {\n  Breadcrumb,\n  BreadcrumbItem,\n  BreadcrumbLink,\n  BreadcrumbList,\n  BreadcrumbPage,\n  BreadcrumbSeparator,\n} from \"@workspace/ui/components/breadcrumb\"\n\nexport default function UserProfileBreadcrumb() {\n  return (\n    <Breadcrumb>\n      <BreadcrumbList>\n        <BreadcrumbItem>\n          <BreadcrumbLink href=\"#\" className=\"flex items-center gap-1.5\">\n            <UsersIcon className=\"size-3.5\" />\n            Users\n          </BreadcrumbLink>\n        </BreadcrumbItem>\n        <BreadcrumbSeparator />\n        <BreadcrumbItem>\n          <BreadcrumbLink href=\"#\" className=\"flex items-center gap-1.5\">\n            <Avatar size=\"sm\" className=\"size-5\">\n              <AvatarFallback className=\"text-[9px]\">MO</AvatarFallback>\n            </Avatar>\n            Mira Okafor\n          </BreadcrumbLink>\n        </BreadcrumbItem>\n        <BreadcrumbSeparator />\n        <BreadcrumbItem>\n          <BreadcrumbPage>Permissions</BreadcrumbPage>\n        </BreadcrumbItem>\n      </BreadcrumbList>\n    </Breadcrumb>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

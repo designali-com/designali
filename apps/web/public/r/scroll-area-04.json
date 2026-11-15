@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "scroll-area-04",
+  "type": "registry:example",
+  "description": "Horizontally scrolling row of filter chips with a horizontal scrollbar.",
+  "files": [
+    {
+      "path": "registry/designali/examples/scroll-area/scroll-area-04.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { ScrollArea, ScrollBar } from \"@workspace/ui/components/scroll-area\"\n\nconst categories = [\n  \"All\",\n  \"Design\",\n  \"Engineering\",\n  \"Marketing\",\n  \"Sales\",\n  \"Support\",\n  \"Finance\",\n  \"Legal\",\n  \"People\",\n  \"Operations\",\n  \"Research\",\n]\n\nexport default function HorizontalCategoryChips() {\n  const [active, setActive] = React.useState(\"All\")\n\n  return (\n    <ScrollArea className=\"w-full max-w-sm whitespace-nowrap\">\n      <div className=\"flex w-max gap-2 pb-3\">\n        {categories.map((c) => (\n          <Button\n            key={c}\n            size=\"sm\"\n            variant={active === c ? \"default\" : \"outline\"}\n            onClick={() => setActive(c)}\n          >\n            {c}\n          </Button>\n        ))}\n      </div>\n      <ScrollBar orientation=\"horizontal\" />\n    </ScrollArea>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

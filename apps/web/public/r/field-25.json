@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "field-25",
+  "type": "registry:example",
+  "description": "Money transfer amount with currency prefix and suffix plus a computed fee description.",
+  "files": [
+    {
+      "path": "registry/designali/examples/field/field-25.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport {\n  Field,\n  FieldDescription,\n  FieldLabel,\n} from \"@workspace/ui/components/field\"\nimport {\n  InputGroup,\n  InputGroupAddon,\n  InputGroupInput,\n  InputGroupText,\n} from \"@workspace/ui/components/input-group\"\n\nexport default function TransferAmountField() {\n  const [amount, setAmount] = React.useState(\"250\")\n  const value = Number(amount) || 0\n  const fee = Math.max(0.5, value * 0.004)\n\n  return (\n    <Field className=\"w-full max-w-xs\">\n      <FieldLabel htmlFor=\"transfer-amount\">You send</FieldLabel>\n      <InputGroup>\n        <InputGroupAddon>\n          <InputGroupText>€</InputGroupText>\n        </InputGroupAddon>\n        <InputGroupInput\n          id=\"transfer-amount\"\n          inputMode=\"decimal\"\n          value={amount}\n          onChange={(e) => setAmount(e.target.value.replace(/[^0-9.]/g, \"\"))}\n          className=\"text-base font-semibold tabular-nums\"\n        />\n        <InputGroupAddon align=\"inline-end\">\n          <InputGroupText>EUR</InputGroupText>\n        </InputGroupAddon>\n      </InputGroup>\n      <FieldDescription>\n        Fee €{fee.toFixed(2)} · Recipient gets €\n        {Math.max(0, value - fee).toFixed(2)}\n      </FieldDescription>\n    </Field>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

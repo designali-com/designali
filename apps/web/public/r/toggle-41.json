@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toggle-41",
+  "type": "registry:example",
+  "description": "Large tile toggles for smart home devices with an on count.",
+  "files": [
+    {
+      "path": "registry/designali/examples/toggle/toggle-41.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport {\n  DoorClosedIcon,\n  FanIcon,\n  LightbulbIcon,\n  ThermometerIcon,\n} from \"lucide-react\"\n\nimport { Toggle } from \"@workspace/ui/components/toggle\"\n\nconst devices = [\n  { name: \"Living room\", icon: LightbulbIcon, on: true },\n  { name: \"Ceiling fan\", icon: FanIcon, on: false },\n  { name: \"Heating\", icon: ThermometerIcon, on: true },\n  { name: \"Front door\", icon: DoorClosedIcon, on: false },\n]\n\nexport default function SmartHomeDeviceTiles() {\n  const [state, setState] = React.useState(devices.map((d) => d.on))\n\n  return (\n    <div className=\"flex w-full max-w-xs flex-col gap-2\">\n      <p className=\"text-xs text-muted-foreground\">\n        {state.filter(Boolean).length} of {devices.length} devices on\n      </p>\n      <div className=\"grid grid-cols-2 gap-2\">\n        {devices.map((d, i) => (\n          <Toggle\n            key={d.name}\n            variant=\"outline\"\n            pressed={state[i]}\n            onPressedChange={(on) =>\n              setState((prev) => prev.map((v, j) => (j === i ? on : v)))\n            }\n            className=\"h-auto flex-col items-start gap-3 p-3 aria-pressed:border-primary aria-pressed:bg-primary aria-pressed:text-primary-foreground\"\n          >\n            <d.icon className=\"size-5\" />\n            <span className=\"flex w-full justify-between\">\n              <span>{d.name}</span>\n              <span className=\"opacity-70\">{state[i] ? \"On\" : \"Off\"}</span>\n            </span>\n          </Toggle>\n        ))}\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

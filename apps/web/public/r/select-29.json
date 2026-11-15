@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "select-29",
+  "type": "registry:example",
+  "description": "Sidebar-footer workspace switcher that opens upward with gradient workspace marks.",
+  "files": [
+    {
+      "path": "registry/designali/examples/select/select-29.tsx",
+      "content": "\"use client\"\n\nimport {\n  Select,\n  SelectContent,\n  SelectGroup,\n  SelectItem,\n  SelectLabel,\n  SelectTrigger,\n  SelectValue,\n} from \"@workspace/ui/components/select\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst workspaces = [\n  {\n    label: \"Acme Studio\",\n    value: \"acme\",\n    plan: \"Pro\",\n    gradient: \"from-violet-500 to-fuchsia-500\",\n  },\n  {\n    label: \"Lumen Labs\",\n    value: \"lumen\",\n    plan: \"Free\",\n    gradient: \"from-sky-500 to-cyan-400\",\n  },\n  {\n    label: \"Harbor & Co\",\n    value: \"harbor\",\n    plan: \"Team\",\n    gradient: \"from-amber-500 to-orange-500\",\n  },\n]\n\nexport default function WorkspaceSwitcherSelect() {\n  return (\n    <div className=\"flex h-56 w-full max-w-60 flex-col justify-end border bg-muted/30 p-2\">\n      <Select items={workspaces} defaultValue=\"acme\">\n        <SelectTrigger className=\"h-12 w-full\" aria-label=\"Workspace\">\n          <SelectValue>\n            {(value: string) => {\n              const workspace = workspaces.find((item) => item.value === value)\n              if (!workspace) return null\n              return (\n                <>\n                  <span\n                    className={cn(\n                      \"size-7 shrink-0 bg-linear-to-br\",\n                      workspace.gradient\n                    )}\n                  />\n                  <span className=\"flex flex-col text-start\">\n                    <span className=\"font-medium\">{workspace.label}</span>\n                    <span className=\"text-muted-foreground\">\n                      {workspace.plan} plan\n                    </span>\n                  </span>\n                </>\n              )\n            }}\n          </SelectValue>\n        </SelectTrigger>\n        <SelectContent side=\"top\" alignItemWithTrigger={false}>\n          <SelectGroup>\n            <SelectLabel>Workspaces</SelectLabel>\n            {workspaces.map((item) => (\n              <SelectItem key={item.value} value={item.value}>\n                <span className={cn(\"size-5 bg-linear-to-br\", item.gradient)} />\n                {item.label}\n              </SelectItem>\n            ))}\n          </SelectGroup>\n        </SelectContent>\n      </Select>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

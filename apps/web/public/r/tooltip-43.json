@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tooltip-43",
+  "type": "registry:example",
+  "description": "API reference parameter list where each name shows its type and default in a tooltip.",
+  "files": [
+    {
+      "path": "registry/designali/examples/tooltip/tooltip-43.tsx",
+      "content": "import {\n  Tooltip,\n  TooltipContent,\n  TooltipProvider,\n  TooltipTrigger,\n} from \"@workspace/ui/components/tooltip\"\n\nconst params = [\n  { name: \"limit\", type: \"number\", def: \"20\" },\n  { name: \"cursor\", type: \"string | null\", def: \"null\" },\n  { name: \"expand\", type: \"string[]\", def: \"[]\" },\n]\n\nexport default function ApiParamTypeTooltips() {\n  return (\n    <TooltipProvider>\n      <div className=\"flex w-full max-w-sm flex-col gap-2 border p-3\">\n        <span className=\"font-mono text-xs text-muted-foreground\">\n          GET /v1/invoices\n        </span>\n        <div className=\"flex flex-wrap gap-1.5\">\n          {params.map((p) => (\n            <Tooltip key={p.name}>\n              <TooltipTrigger\n                render={\n                  <code\n                    tabIndex={0}\n                    className=\"cursor-help bg-muted px-1.5 py-0.5 font-mono text-xs\"\n                  />\n                }\n              >\n                {p.name}\n              </TooltipTrigger>\n              <TooltipContent className=\"font-mono\">\n                {p.type} = {p.def}\n              </TooltipContent>\n            </Tooltip>\n          ))}\n        </div>\n      </div>\n    </TooltipProvider>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

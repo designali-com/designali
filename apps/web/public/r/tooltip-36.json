@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tooltip-36",
+  "type": "registry:example",
+  "description": "Header bell button with an unread badge and a tooltip summarizing unread items.",
+  "files": [
+    {
+      "path": "registry/designali/examples/tooltip/tooltip-36.tsx",
+      "content": "import { BellIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  Tooltip,\n  TooltipContent,\n  TooltipTrigger,\n} from \"@workspace/ui/components/tooltip\"\n\nexport default function NotificationBellTooltip() {\n  return (\n    <div className=\"flex w-full max-w-sm items-center justify-between border px-3 py-2\">\n      <span className=\"text-sm font-medium\">Workspace</span>\n      <Tooltip>\n        <TooltipTrigger\n          render={\n            <Button\n              variant=\"ghost\"\n              size=\"icon\"\n              aria-label=\"Notifications, 5 unread\"\n              className=\"relative\"\n            />\n          }\n        >\n          <BellIcon />\n          <span className=\"absolute end-1 top-1 flex size-3.5 items-center justify-center rounded-full bg-destructive text-[9px] text-white\">\n            5\n          </span>\n        </TooltipTrigger>\n        <TooltipContent side=\"bottom\" align=\"end\">\n          5 unread: 3 mentions, 2 approvals\n        </TooltipContent>\n      </Tooltip>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

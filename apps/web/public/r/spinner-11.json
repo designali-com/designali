@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "spinner-11",
+  "type": "registry:example",
+  "description": "Card whose content is dimmed under a centered spinner overlay while refreshing.",
+  "files": [
+    {
+      "path": "registry/designali/examples/spinner/spinner-11.tsx",
+      "content": "import {\n  Card,\n  CardContent,\n  CardDescription,\n  CardHeader,\n  CardTitle,\n} from \"@workspace/ui/components/card\"\nimport { Spinner } from \"@workspace/ui/components/spinner\"\n\nexport default function CardLoadingOverlay() {\n  return (\n    <Card className=\"relative w-full max-w-sm\">\n      <CardHeader>\n        <CardTitle>Revenue</CardTitle>\n        <CardDescription>Last 30 days</CardDescription>\n      </CardHeader>\n      <CardContent className=\"flex flex-col gap-1\">\n        <span className=\"text-3xl font-semibold tabular-nums\">$48,210</span>\n        <span className=\"text-xs text-muted-foreground\">\n          +12.4% from previous period\n        </span>\n      </CardContent>\n      <div className=\"absolute inset-0 flex flex-col items-center justify-center gap-2 bg-background/70 backdrop-blur-[1px]\">\n        <Spinner className=\"size-6\" />\n        <span className=\"text-xs text-muted-foreground\">Refreshing data</span>\n      </div>\n    </Card>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

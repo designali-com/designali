@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "select-12",
+  "type": "registry:example",
+  "description": "Assignee picker showing avatar initials and email for each teammate.",
+  "files": [
+    {
+      "path": "registry/designali/examples/select/select-12.tsx",
+      "content": "\"use client\"\n\nimport { Avatar, AvatarFallback } from \"@workspace/ui/components/avatar\"\nimport { Field, FieldLabel } from \"@workspace/ui/components/field\"\nimport {\n  Select,\n  SelectContent,\n  SelectItem,\n  SelectTrigger,\n  SelectValue,\n} from \"@workspace/ui/components/select\"\n\nconst people = [\n  {\n    label: \"Maya Chen\",\n    value: \"maya\",\n    email: \"maya@northwind.dev\",\n    initials: \"MC\",\n  },\n  {\n    label: \"Jonas Weber\",\n    value: \"jonas\",\n    email: \"jonas@northwind.dev\",\n    initials: \"JW\",\n  },\n  {\n    label: \"Priya Nair\",\n    value: \"priya\",\n    email: \"priya@northwind.dev\",\n    initials: \"PN\",\n  },\n  {\n    label: \"Diego Alvarez\",\n    value: \"diego\",\n    email: \"diego@northwind.dev\",\n    initials: \"DA\",\n  },\n]\n\nexport default function AssigneeAvatarSelect() {\n  return (\n    <Field className=\"w-full max-w-xs\">\n      <FieldLabel htmlFor=\"assignee\">Assignee</FieldLabel>\n      <Select items={people} defaultValue=\"priya\">\n        <SelectTrigger id=\"assignee\" className=\"h-10 w-full\">\n          <SelectValue>\n            {(value: string) => {\n              const person = people.find((item) => item.value === value)\n              if (!person) return null\n              return (\n                <>\n                  <Avatar size=\"sm\">\n                    <AvatarFallback>{person.initials}</AvatarFallback>\n                  </Avatar>\n                  {person.label}\n                </>\n              )\n            }}\n          </SelectValue>\n        </SelectTrigger>\n        <SelectContent>\n          {people.map((item) => (\n            <SelectItem key={item.value} value={item.value}>\n              <Avatar size=\"sm\">\n                <AvatarFallback>{item.initials}</AvatarFallback>\n              </Avatar>\n              <span className=\"flex flex-col\">\n                <span>{item.label}</span>\n                <span className=\"text-muted-foreground\">{item.email}</span>\n              </span>\n            </SelectItem>\n          ))}\n        </SelectContent>\n      </Select>\n    </Field>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

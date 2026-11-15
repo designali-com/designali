@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "spinner-09",
+  "type": "registry:example",
+  "description": "Username input that shows a spinner while checking availability, then a result.",
+  "files": [
+    {
+      "path": "registry/designali/examples/spinner/spinner-09.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { CheckIcon, XIcon } from \"lucide-react\"\n\nimport {\n  Field,\n  FieldDescription,\n  FieldLabel,\n} from \"@workspace/ui/components/field\"\nimport {\n  InputGroup,\n  InputGroupAddon,\n  InputGroupInput,\n  InputGroupText,\n} from \"@workspace/ui/components/input-group\"\nimport { Spinner } from \"@workspace/ui/components/spinner\"\n\nconst taken = [\"admin\", \"maya\", \"support\"]\n\nexport default function UsernameAvailabilityCheck() {\n  const [value, setValue] = React.useState(\"maya.chen\")\n  const [checking, setChecking] = React.useState(false)\n  const timer = React.useRef<ReturnType<typeof setTimeout>>(undefined)\n\n  const handleChange = (next: string) => {\n    setValue(next)\n    clearTimeout(timer.current)\n    setChecking(Boolean(next))\n    timer.current = setTimeout(() => setChecking(false), 700)\n  }\n\n  const available = !taken.includes(value.toLowerCase())\n\n  return (\n    <Field className=\"w-full max-w-sm\">\n      <FieldLabel htmlFor=\"username\">Username</FieldLabel>\n      <InputGroup>\n        <InputGroupAddon>\n          <InputGroupText>@</InputGroupText>\n        </InputGroupAddon>\n        <InputGroupInput\n          id=\"username\"\n          value={value}\n          onChange={(e) => handleChange(e.target.value)}\n        />\n        <InputGroupAddon align=\"inline-end\">\n          {checking ? (\n            <Spinner />\n          ) : value ? (\n            available ? (\n              <CheckIcon className=\"text-emerald-600 dark:text-emerald-400\" />\n            ) : (\n              <XIcon className=\"text-destructive\" />\n            )\n          ) : null}\n        </InputGroupAddon>\n      </InputGroup>\n      <FieldDescription>\n        {checking\n          ? \"Checking availability...\"\n          : value && !available\n            ? \"That username is taken.\"\n            : \"Try typing admin to see a conflict.\"}\n      </FieldDescription>\n    </Field>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

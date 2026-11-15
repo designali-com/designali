@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toggle-group-24",
+  "type": "registry:example",
+  "description": "Sort field and direction groups that reorder a small leaderboard.",
+  "files": [
+    {
+      "path": "registry/designali/examples/toggle-group/toggle-group-24.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { ArrowDownIcon, ArrowUpIcon } from \"lucide-react\"\n\nimport {\n  ToggleGroup,\n  ToggleGroupItem,\n} from \"@workspace/ui/components/toggle-group\"\n\nconst rows = [\n  { name: \"Orbit\", score: 82, date: 3 },\n  { name: \"Juniper\", score: 95, date: 1 },\n  { name: \"Kestrel\", score: 71, date: 2 },\n]\n\nexport default function SortDirectionToggleGroup() {\n  const [field, setField] = React.useState<\"score\" | \"date\">(\"score\")\n  const [dir, setDir] = React.useState(\"desc\")\n  const sorted = [...rows].sort((a, b) =>\n    dir === \"asc\" ? a[field] - b[field] : b[field] - a[field]\n  )\n\n  return (\n    <div className=\"flex w-full max-w-xs flex-col gap-3\">\n      <div className=\"flex items-center justify-between gap-2\">\n        <ToggleGroup\n          size=\"sm\"\n          value={[field]}\n          onValueChange={(next) =>\n            next[0] && setField(next[0] as \"score\" | \"date\")\n          }\n        >\n          <ToggleGroupItem value=\"score\">Score</ToggleGroupItem>\n          <ToggleGroupItem value=\"date\">Newest</ToggleGroupItem>\n        </ToggleGroup>\n        <ToggleGroup\n          size=\"sm\"\n          variant=\"outline\"\n          spacing={0}\n          value={[dir]}\n          onValueChange={(next) => next[0] && setDir(next[0])}\n        >\n          <ToggleGroupItem value=\"asc\" aria-label=\"Ascending\">\n            <ArrowUpIcon />\n          </ToggleGroupItem>\n          <ToggleGroupItem value=\"desc\" aria-label=\"Descending\">\n            <ArrowDownIcon />\n          </ToggleGroupItem>\n        </ToggleGroup>\n      </div>\n      <ol className=\"flex flex-col divide-y border text-sm\">\n        {sorted.map((r) => (\n          <li key={r.name} className=\"flex justify-between px-3 py-2\">\n            {r.name}\n            <span className=\"text-muted-foreground tabular-nums\">\n              {r.score}\n            </span>\n          </li>\n        ))}\n      </ol>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

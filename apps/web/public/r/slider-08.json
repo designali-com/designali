@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "slider-08",
+  "type": "registry:example",
+  "description": "Five vertical sliders forming a graphic equalizer with frequency labels.",
+  "files": [
+    {
+      "path": "registry/designali/examples/slider/slider-08.tsx",
+      "content": "import { Badge } from \"@workspace/ui/components/badge\"\nimport { Slider } from \"@workspace/ui/components/slider\"\n\nconst bands = [\n  { label: \"60\", value: 6 },\n  { label: \"230\", value: 3 },\n  { label: \"910\", value: 0 },\n  { label: \"3.6k\", value: 4 },\n  { label: \"14k\", value: 8 },\n]\n\nexport default function VerticalEqualizer() {\n  return (\n    <div className=\"flex w-full max-w-xs flex-col gap-3 border p-4\">\n      <div className=\"flex items-center justify-between\">\n        <span className=\"text-sm font-medium\">Equalizer</span>\n        <Badge variant=\"secondary\">Custom</Badge>\n      </div>\n      <div className=\"flex h-40 justify-between px-2\">\n        {bands.map((band) => (\n          <div key={band.label} className=\"flex flex-col items-center gap-2\">\n            <Slider\n              orientation=\"vertical\"\n              aria-label={band.label + \" Hz\"}\n              defaultValue={[band.value]}\n              min={-12}\n              max={12}\n            />\n            <span className=\"text-[10px] text-muted-foreground tabular-nums\">\n              {band.label}\n            </span>\n          </div>\n        ))}\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

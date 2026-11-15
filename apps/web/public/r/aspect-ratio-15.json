@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "aspect-ratio-15",
+  "type": "registry:example",
+  "description": "An empty 16:9 dashed dropzone for uploading a cover image.",
+  "files": [
+    {
+      "path": "registry/designali/examples/aspect-ratio/aspect-ratio-15.tsx",
+      "content": "import { ImageUpIcon } from \"lucide-react\"\n\nimport { AspectRatio } from \"@workspace/ui/components/aspect-ratio\"\n\nexport default function UploadDropzoneWide() {\n  return (\n    <div className=\"w-full max-w-md\">\n      <AspectRatio\n        ratio={16 / 9}\n        className=\"border-2 border-dashed bg-muted/30 transition-colors hover:bg-muted/60\"\n      >\n        <label className=\"absolute inset-0 flex cursor-pointer flex-col items-center justify-center gap-2 p-4 text-center\">\n          <div className=\"flex size-10 items-center justify-center bg-background ring-1 ring-border\">\n            <ImageUpIcon className=\"size-5 text-muted-foreground\" />\n          </div>\n          <p className=\"text-sm font-medium\">Drop a cover image here</p>\n          <p className=\"text-xs text-muted-foreground\">\n            PNG or JPG, 1600 x 900 recommended\n          </p>\n          <input type=\"file\" accept=\"image/*\" className=\"sr-only\" />\n        </label>\n      </AspectRatio>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

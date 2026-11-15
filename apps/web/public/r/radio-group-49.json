@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "radio-group-49",
+  "type": "registry:example",
+  "description": "Radio items rendered at small, default, and large sizes.",
+  "files": [
+    {
+      "path": "registry/designali/examples/radio-group/radio-group-49.tsx",
+      "content": "import { Field, FieldLabel } from \"@workspace/ui/components/field\"\nimport {\n  RadioGroup,\n  RadioGroupItem,\n} from \"@workspace/ui/components/radio-group\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst sizes = [\n  {\n    value: \"sm\",\n    label: \"Small\",\n    item: \"size-3.5 [&_[data-slot=radio-group-indicator]]:size-3.5 [&_[data-slot=radio-group-indicator]_span]:size-1.5\",\n    text: \"text-xs\",\n  },\n  { value: \"md\", label: \"Default\", item: \"\", text: \"text-sm\" },\n  {\n    value: \"lg\",\n    label: \"Large\",\n    item: \"size-5 [&_[data-slot=radio-group-indicator]]:size-5 [&_[data-slot=radio-group-indicator]_span]:size-2.5\",\n    text: \"text-base\",\n  },\n]\n\nexport default function RadioItemSizes() {\n  return (\n    <RadioGroup defaultValue=\"md\" className=\"w-fit gap-4\">\n      {sizes.map((s) => (\n        <Field key={s.value} orientation=\"horizontal\">\n          <RadioGroupItem\n            value={s.value}\n            id={\"rsize-\" + s.value}\n            className={s.item}\n          />\n          <FieldLabel\n            htmlFor={\"rsize-\" + s.value}\n            className={cn(\"font-normal\", s.text)}\n          >\n            {s.label}\n          </FieldLabel>\n        </Field>\n      ))}\n    </RadioGroup>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

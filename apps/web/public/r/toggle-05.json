@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toggle-05",
+  "type": "registry:example",
+  "description": "Disabled toggles in off and pressed states next to an enabled one, with a reason.",
+  "files": [
+    {
+      "path": "registry/designali/examples/toggle/toggle-05.tsx",
+      "content": "import { BellIcon, CloudIcon, RefreshCwIcon } from \"lucide-react\"\n\nimport { Toggle } from \"@workspace/ui/components/toggle\"\n\nexport default function DisabledToggleStates() {\n  return (\n    <div className=\"flex w-full max-w-xs flex-col gap-3 border p-4\">\n      <div className=\"flex flex-wrap gap-2\">\n        <Toggle variant=\"outline\" aria-label=\"Notifications\">\n          <BellIcon />\n          Alerts\n        </Toggle>\n        <Toggle variant=\"outline\" disabled aria-label=\"Sync\">\n          <RefreshCwIcon />\n          Sync\n        </Toggle>\n        <Toggle variant=\"outline\" disabled defaultPressed aria-label=\"Backup\">\n          <CloudIcon />\n          Backup\n        </Toggle>\n      </div>\n      <p className=\"text-xs text-muted-foreground\">\n        Sync and Backup are managed by your organization admin.\n      </p>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

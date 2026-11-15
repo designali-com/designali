@@ -80,7 +80,7 @@ export default function Navigation12() {
             <p className="text-xs tracking-widest text-muted-foreground uppercase">
               Step {current + 1} of {steps.length}
             </p>
-            <h2 className="mt-2 text-2xl font-semibold tracking-tight">{steps[current].title}</h2>
+            <h2 className="mt-2 text-2xl font-semibold tracking-tight">{steps[current]!.title}</h2>
             <div className="mt-6 space-y-3">
               <div className="h-10 border bg-muted/30" />
               <div className="grid grid-cols-2 gap-3">
@@ -101,7 +101,7 @@ export default function Navigation12() {
               <Button
                 onClick={() => setCurrent((value) => Math.min(steps.length - 1, value + 1))}
               >
-                {current === steps.length - 1 ? "Place order" : `Continue to ${steps[current + 1].title}`}
+                {current === steps.length - 1 ? "Place order" : `Continue to ${steps[current + 1]!.title}`}
                 <ArrowRight />
               </Button>
             </div>

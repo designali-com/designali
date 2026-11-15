@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "combobox-13",
+  "type": "registry:example",
+  "description": "Customer search combobox with a leading search icon addon and clear button.",
+  "files": [
+    {
+      "path": "registry/designali/examples/combobox/combobox-13.tsx",
+      "content": "\"use client\"\n\nimport { Building2Icon, SearchIcon } from \"lucide-react\"\n\nimport {\n  Combobox,\n  ComboboxContent,\n  ComboboxEmpty,\n  ComboboxInput,\n  ComboboxItem,\n  ComboboxList,\n} from \"@workspace/ui/components/combobox\"\nimport { InputGroupAddon } from \"@workspace/ui/components/input-group\"\n\nconst customers = [\n  \"Bluefin Studio\",\n  \"Kettle & Co.\",\n  \"Orchard Supply\",\n  \"Marlow & Finch\",\n  \"Bright Lane Dental\",\n  \"Halvorsen Labs\",\n]\n\nexport default function CustomerSearchAddon() {\n  return (\n    <div className=\"w-full max-w-xs\">\n      <Combobox items={customers}>\n        <ComboboxInput\n          placeholder=\"Search customers\"\n          showTrigger={false}\n          showClear\n          className=\"w-full\"\n        >\n          <InputGroupAddon>\n            <SearchIcon />\n          </InputGroupAddon>\n        </ComboboxInput>\n        <ComboboxContent>\n          <ComboboxEmpty>No customers match.</ComboboxEmpty>\n          <ComboboxList>\n            {(item: string) => (\n              <ComboboxItem key={item} value={item}>\n                <Building2Icon className=\"text-muted-foreground\" />\n                {item}\n              </ComboboxItem>\n            )}\n          </ComboboxList>\n        </ComboboxContent>\n      </Combobox>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "textarea-08",
+  "type": "registry:example",
+  "description": "Side-by-side textareas showing no resize, vertical resize and fixed rows.",
+  "files": [
+    {
+      "path": "registry/designali/examples/textarea/textarea-08.tsx",
+      "content": "import { Label } from \"@workspace/ui/components/label\"\nimport { Textarea } from \"@workspace/ui/components/textarea\"\n\nconst modes = [\n  { label: \"No resize\", className: \"resize-none\" },\n  { label: \"Vertical\", className: \"resize-y [field-sizing:fixed]\" },\n  {\n    label: \"Fixed 4 rows\",\n    className: \"resize-none [field-sizing:fixed]\",\n    rows: 4,\n  },\n]\n\nexport default function TextareaResizeModes() {\n  return (\n    <div className=\"grid w-full max-w-md gap-3 sm:grid-cols-3\">\n      {modes.map((m) => (\n        <div key={m.label} className=\"grid content-start gap-1.5\">\n          <Label htmlFor={\"ta-\" + m.label}>{m.label}</Label>\n          <Textarea\n            id={\"ta-\" + m.label}\n            rows={m.rows}\n            className={m.className}\n            placeholder=\"Notes\"\n          />\n        </div>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toggle-30",
+  "type": "registry:example",
+  "description": "A video player overlay with a CC toggle that shows or hides subtitles.",
+  "files": [
+    {
+      "path": "registry/designali/examples/toggle/toggle-30.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { CaptionsIcon, PlayCircleIcon, SettingsIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Toggle } from \"@workspace/ui/components/toggle\"\n\nexport default function VideoCaptionsToggle() {\n  const [captions, setCaptions] = React.useState(true)\n\n  return (\n    <div className=\"relative aspect-video w-full max-w-md overflow-hidden bg-gradient-to-br from-slate-800 to-slate-950 text-white\">\n      <div className=\"absolute inset-0 flex items-center justify-center\">\n        <PlayCircleIcon className=\"size-12 opacity-80\" />\n      </div>\n      {captions && (\n        <p className=\"absolute inset-x-6 bottom-12 bg-black/70 px-2 py-1 text-center text-sm\">\n          &quot;Start by measuring the room twice, then cut once.&quot;\n        </p>\n      )}\n      <div className=\"absolute inset-x-0 bottom-0 flex items-center justify-end gap-1 bg-gradient-to-t from-black/70 p-2\">\n        <Toggle\n          size=\"sm\"\n          pressed={captions}\n          onPressedChange={setCaptions}\n          aria-label=\"Captions\"\n          className=\"text-white hover:bg-white/15 hover:text-white aria-pressed:bg-white aria-pressed:text-black\"\n        >\n          <CaptionsIcon />\n        </Toggle>\n        <Button\n          size=\"icon-sm\"\n          variant=\"ghost\"\n          aria-label=\"Settings\"\n          className=\"text-white hover:bg-white/15 hover:text-white\"\n        >\n          <SettingsIcon />\n        </Button>\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

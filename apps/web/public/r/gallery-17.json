@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "gallery-17",
+  "type": "registry:block",
+  "description": "Chronological timeline of yearly photo series with thumbnail rows per year.",
+  "dependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/designali/blocks/gallery/gallery-17.tsx",
+      "content": "const years = [\n  {\n    year: \"2025\",\n    title: \"The road north\",\n    summary: \"Six months documenting the coastal railway before it closes.\",\n    tiles: [\n      \"linear-gradient(135deg, var(--chart-1), var(--chart-2))\",\n      \"linear-gradient(200deg, var(--chart-3), var(--chart-1))\",\n      \"linear-gradient(60deg, var(--chart-2), var(--chart-4))\",\n      \"linear-gradient(300deg, var(--chart-5), var(--chart-2))\",\n    ],\n  },\n  {\n    year: \"2024\",\n    title: \"Kitchens of the valley\",\n    summary: \"Portraits of twelve family restaurants and the people who run them.\",\n    tiles: [\n      \"linear-gradient(160deg, var(--chart-4), var(--chart-5))\",\n      \"linear-gradient(20deg, var(--chart-1), var(--chart-4))\",\n      \"linear-gradient(240deg, var(--chart-3), var(--chart-5))\",\n    ],\n  },\n  {\n    year: \"2023\",\n    title: \"Night shift\",\n    summary: \"Hospitals, bakeries and toll booths between midnight and five.\",\n    tiles: [\n      \"linear-gradient(110deg, var(--chart-2), var(--chart-5))\",\n      \"linear-gradient(190deg, var(--chart-4), var(--chart-3))\",\n      \"linear-gradient(80deg, var(--chart-5), var(--chart-1))\",\n      \"linear-gradient(330deg, var(--chart-3), var(--chart-2))\",\n      \"linear-gradient(40deg, var(--chart-1), var(--chart-3))\",\n    ],\n  },\n]\n\nexport default function Gallery17() {\n  return (\n    <section className=\"w-full bg-background py-20\">\n      <div className=\"mx-auto max-w-7xl px-6\">\n        <h2 className=\"text-3xl font-semibold tracking-tight md:text-4xl\">\n          Ten years of long-form projects\n        </h2>\n        <p className=\"mt-3 max-w-lg text-muted-foreground\">\n          A chronological archive. Each year, one subject, followed until the\n          story was finished.\n        </p>\n        <ol className=\"mt-14 border-l border-border\">\n          {years.map((entry) => (\n            <li key={entry.year} className=\"relative pb-14 pl-8 last:pb-0 md:pl-12\">\n              <span className=\"absolute top-1.5 -left-[5px] size-2.5 bg-foreground\" />\n              <div className=\"grid gap-6 md:grid-cols-[14rem_1fr]\">\n                <div>\n                  <p className=\"font-mono text-sm text-muted-foreground\">{entry.year}</p>\n                  <h3 className=\"mt-1 text-xl font-medium\">{entry.title}</h3>\n                  <p className=\"mt-2 text-sm text-muted-foreground\">{entry.summary}</p>\n                  <a href=\"#\" className=\"mt-3 inline-block text-sm font-medium underline-offset-4 hover:underline\">\n                    Open series\n                  </a>\n                </div>\n                <div className=\"grid grid-cols-3 gap-2 sm:grid-cols-5\">\n                  {entry.tiles.map((bg, i) => (\n                    <div\n                      key={i}\n                      className={`aspect-[3/4] border border-border transition-opacity hover:opacity-80 ${i === 0 ? \"col-span-2 aspect-auto sm:col-span-2\" : \"\"}`}\n                      style={{ background: bg }}\n                    />\n                  ))}\n                </div>\n              </div>\n            </li>\n          ))}\n        </ol>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "1000px"
+  },
+  "categories": [
+    "gallery"
+  ]
+}

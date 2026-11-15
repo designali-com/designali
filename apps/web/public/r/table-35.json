@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "table-35",
+  "type": "registry:example",
+  "description": "A table that hides secondary columns on small screens and folds them under the name.",
+  "files": [
+    {
+      "path": "registry/designali/examples/table/table-35.tsx",
+      "content": "import { Badge } from \"@workspace/ui/components/badge\"\nimport {\n  Table,\n  TableBody,\n  TableCell,\n  TableHead,\n  TableHeader,\n  TableRow,\n} from \"@workspace/ui/components/table\"\n\nconst tasks = [\n  { title: \"Draft Q1 OKRs\", assignee: \"Hiro\", due: \"Dec 2\", priority: \"High\" },\n  {\n    title: \"Review vendor contract\",\n    assignee: \"Ana\",\n    due: \"Dec 5\",\n    priority: \"Medium\",\n  },\n  {\n    title: \"Plan offsite agenda\",\n    assignee: \"Kofi\",\n    due: \"Dec 12\",\n    priority: \"Low\",\n  },\n]\n\nexport default function ResponsiveStackedTable() {\n  return (\n    <div className=\"@container w-full max-w-lg border\">\n      <Table>\n        <TableHeader>\n          <TableRow>\n            <TableHead>Task</TableHead>\n            <TableHead className=\"hidden @md:table-cell\">Assignee</TableHead>\n            <TableHead className=\"hidden @md:table-cell\">Due</TableHead>\n            <TableHead className=\"text-right\">Priority</TableHead>\n          </TableRow>\n        </TableHeader>\n        <TableBody>\n          {tasks.map((task) => (\n            <TableRow key={task.title}>\n              <TableCell>\n                <p className=\"font-medium\">{task.title}</p>\n                <p className=\"text-muted-foreground @md:hidden\">\n                  {task.assignee} · Due {task.due}\n                </p>\n              </TableCell>\n              <TableCell className=\"hidden @md:table-cell\">\n                {task.assignee}\n              </TableCell>\n              <TableCell className=\"hidden text-muted-foreground @md:table-cell\">\n                {task.due}\n              </TableCell>\n              <TableCell className=\"text-right\">\n                <Badge variant=\"outline\">{task.priority}</Badge>\n              </TableCell>\n            </TableRow>\n          ))}\n        </TableBody>\n      </Table>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

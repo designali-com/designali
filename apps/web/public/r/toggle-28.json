@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toggle-28",
+  "type": "registry:example",
+  "description": "A single annual billing toggle that applies a discount to the displayed price.",
+  "files": [
+    {
+      "path": "registry/designali/examples/toggle/toggle-28.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { Badge } from \"@workspace/ui/components/badge\"\nimport { Toggle } from \"@workspace/ui/components/toggle\"\n\nexport default function AnnualBillingToggle() {\n  const [annual, setAnnual] = React.useState(false)\n  const price = annual ? 16 : 20\n\n  return (\n    <div className=\"flex w-full max-w-xs flex-col gap-4 border p-5\">\n      <div className=\"flex items-center justify-between\">\n        <span className=\"text-sm font-medium\">Team plan</span>\n        <Toggle\n          variant=\"outline\"\n          size=\"sm\"\n          pressed={annual}\n          onPressedChange={setAnnual}\n        >\n          Pay yearly\n          <Badge variant={annual ? \"default\" : \"secondary\"} className=\"ms-1\">\n            -20%\n          </Badge>\n        </Toggle>\n      </div>\n      <p>\n        <span className=\"text-3xl font-semibold\">{\"$\" + price}</span>\n        <span className=\"text-sm text-muted-foreground\"> / seat / month</span>\n      </p>\n      <p className=\"text-xs text-muted-foreground\">\n        {annual\n          ? \"Billed $192 per seat each year.\"\n          : \"Billed monthly. Cancel anytime.\"}\n      </p>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

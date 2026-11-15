@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "context-menu-21",
+  "type": "registry:example",
+  "description": "A context menu with controlled open state that reports when it opens and closes.",
+  "files": [
+    {
+      "path": "registry/designali/examples/context-menu/context-menu-21.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { LayoutGridIcon, PlusIcon, RefreshCwIcon } from \"lucide-react\"\n\nimport {\n  ContextMenu,\n  ContextMenuContent,\n  ContextMenuGroup,\n  ContextMenuItem,\n  ContextMenuTrigger,\n} from \"@workspace/ui/components/context-menu\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nexport default function ControlledOpenMenu() {\n  const [open, setOpen] = React.useState(false)\n  const [opens, setOpens] = React.useState(0)\n\n  return (\n    <div className=\"flex w-full max-w-xs flex-col gap-2\">\n      <ContextMenu\n        open={open}\n        onOpenChange={(next) => {\n          setOpen(next)\n          if (next) setOpens((n) => n + 1)\n        }}\n      >\n        <ContextMenuTrigger className=\"flex aspect-video items-center justify-center border border-dashed text-xs text-muted-foreground\">\n          Right-click the dashboard canvas\n        </ContextMenuTrigger>\n        <ContextMenuContent className=\"w-44\">\n          <ContextMenuGroup>\n            <ContextMenuItem>\n              <PlusIcon />\n              Add widget\n            </ContextMenuItem>\n            <ContextMenuItem>\n              <LayoutGridIcon />\n              Auto-arrange\n            </ContextMenuItem>\n            <ContextMenuItem>\n              <RefreshCwIcon />\n              Refresh all\n            </ContextMenuItem>\n          </ContextMenuGroup>\n        </ContextMenuContent>\n      </ContextMenu>\n      <div className=\"flex items-center justify-between text-xs\">\n        <span className=\"flex items-center gap-1.5\">\n          <span\n            className={cn(\n              \"size-2 rounded-full\",\n              open ? \"bg-emerald-500\" : \"bg-muted-foreground/40\"\n            )}\n          />\n          Menu is {open ? \"open\" : \"closed\"}\n        </span>\n        <span className=\"text-muted-foreground\">Opened {opens}×</span>\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

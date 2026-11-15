@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "spinner-42",
+  "type": "registry:example",
+  "description": "Spinner paired with status messages that cycle while a long task runs.",
+  "files": [
+    {
+      "path": "registry/designali/examples/spinner/spinner-42.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { Spinner } from \"@workspace/ui/components/spinner\"\n\nconst messages = [\n  \"Analyzing your spreadsheet\",\n  \"Detecting column types\",\n  \"Matching duplicate rows\",\n  \"Building preview\",\n]\n\nexport default function RotatingStatusMessages() {\n  const [index, setIndex] = React.useState(0)\n\n  React.useEffect(() => {\n    const id = setInterval(\n      () => setIndex((i) => (i + 1) % messages.length),\n      1600\n    )\n    return () => clearInterval(id)\n  }, [])\n\n  return (\n    <div className=\"flex w-full max-w-xs items-center gap-3 border px-4 py-3\">\n      <Spinner className=\"text-primary\" />\n      <span\n        key={index}\n        className=\"animate-in text-sm fade-in slide-in-from-bottom-1\"\n      >\n        {messages[index]}...\n      </span>\n      <span className=\"ml-auto text-xs text-muted-foreground tabular-nums\">\n        {index + 1}/{messages.length}\n      </span>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "progress-04",
+  "type": "registry:example",
+  "description": "Upload queue listing several files, each with its own progress bar and status.",
+  "files": [
+    {
+      "path": "registry/designali/examples/progress/progress-04.tsx",
+      "content": "import { FileIcon } from \"lucide-react\"\n\nimport {\n  Progress,\n  ProgressLabel,\n  ProgressValue,\n} from \"@workspace/ui/components/progress\"\n\nconst files = [\n  { name: \"brand-guidelines.pdf\", size: \"4.2 MB\", value: 100 },\n  { name: \"hero-video.mp4\", size: \"86.1 MB\", value: 64 },\n  { name: \"product-shots.zip\", size: \"212 MB\", value: 18 },\n]\n\nexport default function FileUploadQueue() {\n  return (\n    <div className=\"flex w-full max-w-sm flex-col divide-y border\">\n      {files.map((file) => (\n        <div key={file.name} className=\"flex items-start gap-3 p-3\">\n          <div className=\"flex size-9 shrink-0 items-center justify-center bg-muted\">\n            <FileIcon className=\"size-4 text-muted-foreground\" />\n          </div>\n          <Progress value={file.value} className=\"min-w-0 flex-1 gap-1.5\">\n            <ProgressLabel className=\"truncate text-sm font-medium\">\n              {file.name}\n            </ProgressLabel>\n            <ProgressValue />\n            <span className=\"w-full text-xs text-muted-foreground\">\n              {file.value === 100 ? \"Uploaded\" : file.size}\n            </span>\n          </Progress>\n        </div>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

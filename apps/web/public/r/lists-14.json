@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "lists-14",
+  "type": "registry:block",
+  "description": "Feature request voting list that re-sorts live as items are upvoted.",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/designali/blocks/lists/lists-14.tsx",
+      "content": "\"use client\"\n\nimport { useState } from \"react\"\nimport { ChevronUp, MessageCircle } from \"lucide-react\"\n\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst initial = [\n  { id: 1, title: \"Offline mode for the mobile app\", tag: \"Mobile\", status: \"Planned\", votes: 412, comments: 58 },\n  { id: 2, title: \"Export boards to PDF with comments\", tag: \"Export\", status: \"In progress\", votes: 367, comments: 41 },\n  { id: 3, title: \"Recurring tasks with custom schedules\", tag: \"Tasks\", status: \"Under review\", votes: 298, comments: 33 },\n  { id: 4, title: \"Two-way calendar sync\", tag: \"Integrations\", status: \"Planned\", votes: 254, comments: 27 },\n  { id: 5, title: \"Keyboard-only board navigation\", tag: \"Accessibility\", status: \"Under review\", votes: 189, comments: 12 },\n  { id: 6, title: \"Custom fields on subtasks\", tag: \"Tasks\", status: \"Under review\", votes: 143, comments: 9 },\n]\n\nconst statusTone: Record<string, string> = {\n  Planned: \"text-violet-700 dark:text-violet-300\",\n  \"In progress\": \"text-sky-700 dark:text-sky-300\",\n  \"Under review\": \"text-muted-foreground\",\n}\n\nexport default function Lists14() {\n  const [items, setItems] = useState(initial)\n  const [voted, setVoted] = useState<number[]>([])\n\n  const vote = (id: number) => {\n    const has = voted.includes(id)\n    setVoted((current) => (has ? current.filter((v) => v !== id) : [...current, id]))\n    setItems((current) =>\n      current\n        .map((item) => (item.id === id ? { ...item, votes: item.votes + (has ? -1 : 1) } : item))\n        .sort((a, b) => b.votes - a.votes)\n    )\n  }\n\n  return (\n    <section className=\"w-full bg-background py-24\">\n      <div className=\"mx-auto max-w-3xl px-6\">\n        <div className=\"flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between\">\n          <div>\n            <h2 className=\"text-3xl font-semibold tracking-tight\">Feature requests</h2>\n            <p className=\"mt-2 text-sm text-muted-foreground\">\n              Vote on what we build next. Top requests are reviewed every Monday.\n            </p>\n          </div>\n          <a href=\"#\" className=\"inline-flex h-9 items-center justify-center bg-foreground px-4 text-xs font-medium text-background hover:opacity-90\">\n            Suggest a feature\n          </a>\n        </div>\n\n        <ul className=\"mt-10 divide-y divide-border border-y border-border\">\n          {items.map((item) => {\n            const isVoted = voted.includes(item.id)\n            return (\n              <li key={item.id} className=\"flex items-center gap-4 py-4\">\n                <button\n                  type=\"button\"\n                  aria-pressed={isVoted}\n                  aria-label={`Upvote ${item.title}`}\n                  onClick={() => vote(item.id)}\n                  className={cn(\n                    \"flex w-14 shrink-0 flex-col items-center border py-2 transition-colors\",\n                    isVoted ? \"border-foreground bg-foreground text-background\" : \"border-border hover:border-foreground\"\n                  )}\n                >\n                  <ChevronUp className=\"size-4\" />\n                  <span className=\"font-mono text-xs font-semibold\">{item.votes}</span>\n                </button>\n                <div className=\"min-w-0 flex-1\">\n                  <h3 className=\"text-sm font-medium sm:text-base\">{item.title}</h3>\n                  <div className=\"mt-1.5 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs\">\n                    <span className=\"bg-muted px-1.5 py-0.5 text-muted-foreground\">{item.tag}</span>\n                    <span className={statusTone[item.status]}>{item.status}</span>\n                    <span className=\"inline-flex items-center gap-1 text-muted-foreground\">\n                      <MessageCircle className=\"size-3\" /> {item.comments}\n                    </span>\n                  </div>\n                </div>\n              </li>\n            )\n          })}\n        </ul>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "750px"
+  },
+  "categories": [
+    "lists"
+  ]
+}

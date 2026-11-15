@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "hover-card-41",
+  "type": "registry:example",
+  "description": "A post author card with a cover banner and a follow button that toggles state.",
+  "files": [
+    {
+      "path": "registry/designali/examples/hover-card/hover-card-41.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { Avatar, AvatarFallback } from \"@workspace/ui/components/avatar\"\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  HoverCard,\n  HoverCardContent,\n  HoverCardTrigger,\n} from \"@workspace/ui/components/hover-card\"\n\nexport default function SocialFollowHoverCard() {\n  const [following, setFollowing] = React.useState(false)\n\n  return (\n    <div className=\"w-full max-w-sm border p-3 text-sm\">\n      <HoverCard>\n        <HoverCardTrigger href=\"#\" className=\"font-medium hover:underline\">\n          Noor Al-Sayed\n        </HoverCardTrigger>\n        <HoverCardContent align=\"start\" className=\"w-72 p-0\">\n          <div className=\"h-16 bg-gradient-to-r from-teal-400 to-sky-500\" />\n          <div className=\"-mt-6 px-3 pb-3\">\n            <Avatar size=\"lg\" className=\"ring-2 ring-popover\">\n              <AvatarFallback>NA</AvatarFallback>\n            </Avatar>\n            <div className=\"mt-1 flex items-start justify-between\">\n              <div>\n                <p className=\"text-sm font-semibold\">Noor Al-Sayed</p>\n                <p className=\"text-muted-foreground\">Illustrator · Amman</p>\n              </div>\n              <Button\n                size=\"xs\"\n                variant={following ? \"outline\" : \"default\"}\n                onClick={() => setFollowing((f) => !f)}\n              >\n                {following ? \"Following\" : \"Follow\"}\n              </Button>\n            </div>\n            <p className=\"mt-2 text-muted-foreground\">\n              <strong className=\"text-foreground\">\n                {following ? \"9,402\" : \"9,401\"}\n              </strong>{\" \"}\n              followers\n            </p>\n          </div>\n        </HoverCardContent>\n      </HoverCard>\n      <p className=\"mt-1 text-muted-foreground\">\n        Sketchbook dump from this weekend&apos;s market. Which one should I ink?\n      </p>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

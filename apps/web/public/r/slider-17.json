@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "slider-17",
+  "type": "registry:example",
+  "description": "Team plan seat selector that switches pricing tiers as seats increase.",
+  "files": [
+    {
+      "path": "registry/designali/examples/slider/slider-17.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { UsersIcon } from \"lucide-react\"\n\nimport { Badge } from \"@workspace/ui/components/badge\"\nimport {\n  Card,\n  CardAction,\n  CardContent,\n  CardDescription,\n  CardFooter,\n  CardHeader,\n  CardTitle,\n} from \"@workspace/ui/components/card\"\nimport { Slider } from \"@workspace/ui/components/slider\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nexport default function SeatPricingSlider() {\n  const [seats, setSeats] = React.useState([12])\n  const n = seats[0]!\n  const perSeat = n >= 50 ? 9 : n >= 20 ? 12 : 15\n\n  return (\n    <Card className=\"w-full max-w-sm\">\n      <CardHeader>\n        <CardTitle>Team plan</CardTitle>\n        <CardDescription>Volume discounts apply automatically.</CardDescription>\n        <CardAction>\n          <Badge variant=\"outline\">\n            <UsersIcon />\n            {n} seats\n          </Badge>\n        </CardAction>\n      </CardHeader>\n      <CardContent className=\"flex flex-col gap-4\">\n        <Slider\n          aria-label=\"Seats\"\n          value={seats}\n          onValueChange={(value) => setSeats(value as number[])}\n          min={1}\n          max={100}\n        />\n        <div className=\"grid grid-cols-3 text-center text-xs\">\n          {[\n            { label: \"1-19\", price: 15 },\n            { label: \"20-49\", price: 12 },\n            { label: \"50+\", price: 9 },\n          ].map((tier) => (\n            <div\n              key={tier.label}\n              className={cn(\n                \"border py-2\",\n                tier.price === perSeat\n                  ? \"border-primary bg-primary/5\"\n                  : \"text-muted-foreground\"\n              )}\n            >\n              <div>{tier.label}</div>\n              <div className=\"font-medium\">${tier.price}/seat</div>\n            </div>\n          ))}\n        </div>\n      </CardContent>\n      <CardFooter className=\"justify-between border-t\">\n        <span className=\"text-sm text-muted-foreground\">Billed monthly</span>\n        <span className=\"text-lg font-semibold tabular-nums\">\n          ${(n * perSeat).toLocaleString()}\n        </span>\n      </CardFooter>\n    </Card>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

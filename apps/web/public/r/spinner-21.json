@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "spinner-21",
+  "type": "registry:example",
+  "description": "Floating notice with a spinner for a report export and a cancel action.",
+  "files": [
+    {
+      "path": "registry/designali/examples/spinner/spinner-21.tsx",
+      "content": "import { Button } from \"@workspace/ui/components/button\"\nimport { Spinner } from \"@workspace/ui/components/spinner\"\n\nexport default function ExportingNotice() {\n  return (\n    <div className=\"flex w-full max-w-sm items-center gap-3 border bg-popover p-3 text-popover-foreground shadow-lg\">\n      <div className=\"flex size-8 shrink-0 items-center justify-center bg-muted\">\n        <Spinner />\n      </div>\n      <div className=\"min-w-0 flex-1\">\n        <div className=\"text-sm font-medium\">Exporting Q3 report</div>\n        <div className=\"truncate text-xs text-muted-foreground\">\n          We&apos;ll email you a CSV when it&apos;s ready.\n        </div>\n      </div>\n      <Button variant=\"ghost\" size=\"sm\">\n        Cancel\n      </Button>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "footer-12",
+  "type": "registry:block",
+  "description": "Dense six-column sitemap footer with app download links, a region selector and legal line.",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/designali/blocks/footer/footer-12.tsx",
+      "content": "import { Globe, Smartphone, TabletSmartphone } from \"lucide-react\"\n\nconst columns = [\n  { title: \"Product\", links: [\"Flights\", \"Hotels\", \"Car rental\", \"Trains\", \"Gift cards\"] },\n  { title: \"Explore\", links: [\"City guides\", \"Weekend deals\", \"Travel insurance\", \"Visa checker\", \"Price alerts\"] },\n  { title: \"Business\", links: [\"Wayfare for teams\", \"Expense sync\", \"Travel policy\", \"Partners\", \"Affiliates\"] },\n  { title: \"Company\", links: [\"About\", \"Careers\", \"Press\", \"Sustainability\", \"Investors\"] },\n  { title: \"Support\", links: [\"Help centre\", \"Manage booking\", \"Refunds\", \"Accessibility\", \"Contact\"] },\n  { title: \"Legal\", links: [\"Terms\", \"Privacy\", \"Cookies\", \"Modern slavery\", \"Imprint\"] },\n]\n\nexport default function Footer12() {\n  return (\n    <footer className=\"w-full border-t bg-muted/30\">\n      <div className=\"mx-auto max-w-7xl px-6 py-14\">\n        <div className=\"grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-3 lg:grid-cols-6\">\n          {columns.map((column) => (\n            <div key={column.title}>\n              <p className=\"text-xs font-medium tracking-wide text-muted-foreground uppercase\">\n                {column.title}\n              </p>\n              <ul className=\"mt-4 space-y-2 text-sm\">\n                {column.links.map((link) => (\n                  <li key={link}>\n                    <a href=\"#\" className=\"hover:underline\">\n                      {link}\n                    </a>\n                  </li>\n                ))}\n              </ul>\n            </div>\n          ))}\n        </div>\n\n        <div className=\"mt-14 flex flex-col gap-6 border-t pt-8 md:flex-row md:items-center md:justify-between\">\n          <div className=\"flex flex-wrap gap-3\">\n            <a href=\"#\" className=\"flex items-center gap-2 border bg-background px-3 py-2 text-xs hover:bg-muted\">\n              <Smartphone className=\"size-4\" />\n              Get the iOS app\n            </a>\n            <a href=\"#\" className=\"flex items-center gap-2 border bg-background px-3 py-2 text-xs hover:bg-muted\">\n              <TabletSmartphone className=\"size-4\" />\n              Get the Android app\n            </a>\n          </div>\n          <label className=\"flex w-fit items-center gap-2 border bg-background px-3 py-2 text-xs\">\n            <Globe className=\"size-4 text-muted-foreground\" />\n            <select aria-label=\"Region and language\" className=\"bg-transparent outline-none\">\n              <option>United Kingdom / English</option>\n              <option>Deutschland / Deutsch</option>\n              <option>France / Francais</option>\n              <option>Espana / Espanol</option>\n            </select>\n          </label>\n        </div>\n\n        <div className=\"mt-8 flex flex-col gap-2 text-xs text-muted-foreground sm:flex-row sm:items-center sm:justify-between\">\n          <p className=\"flex items-center gap-2\">\n            <span className=\"font-semibold text-foreground\">Wayfare</span>\n            © 2026 Wayfare Travel Group B.V.\n          </p>\n          <p>Prices shown include taxes and fees. Package holidays are financially protected.</p>\n        </div>\n      </div>\n    </footer>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "560px"
+  },
+  "categories": [
+    "footer"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "switch-09",
+  "type": "registry:example",
+  "description": "Phone-style quick settings tiles where each tile hosts a switch.",
+  "files": [
+    {
+      "path": "registry/designali/examples/switch/switch-09.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport {\n  BluetoothIcon,\n  PlaneIcon,\n  RadioTowerIcon,\n  WifiIcon,\n} from \"lucide-react\"\n\nimport { Switch } from \"@workspace/ui/components/switch\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst tiles = [\n  { id: \"wifi\", label: \"Wi-Fi\", icon: WifiIcon, on: true, detail: \"Home_5G\" },\n  {\n    id: \"bluetooth\",\n    label: \"Bluetooth\",\n    icon: BluetoothIcon,\n    on: true,\n    detail: \"2 devices\",\n  },\n  {\n    id: \"airplane\",\n    label: \"Airplane\",\n    icon: PlaneIcon,\n    on: false,\n    detail: \"Off\",\n  },\n  {\n    id: \"hotspot\",\n    label: \"Hotspot\",\n    icon: RadioTowerIcon,\n    on: false,\n    detail: \"Off\",\n  },\n]\n\nexport default function QuickSettingsTiles() {\n  const [state, setState] = React.useState(() =>\n    Object.fromEntries(tiles.map((tile) => [tile.id, tile.on]))\n  )\n\n  return (\n    <div className=\"grid w-full max-w-xs grid-cols-2 gap-2\">\n      {tiles.map((tile) => (\n        <label\n          key={tile.id}\n          className={cn(\n            \"flex cursor-pointer flex-col gap-3 border p-3 transition-colors\",\n            state[tile.id] ? \"border-primary/40 bg-primary/5\" : \"bg-background\"\n          )}\n        >\n          <div className=\"flex items-center justify-between\">\n            <tile.icon className=\"size-4\" />\n            <Switch\n              size=\"sm\"\n              checked={state[tile.id]}\n              onCheckedChange={(checked) =>\n                setState((s) => ({ ...s, [tile.id]: checked }))\n              }\n            />\n          </div>\n          <div>\n            <p className=\"text-sm font-medium\">{tile.label}</p>\n            <p className=\"text-xs text-muted-foreground\">\n              {state[tile.id] ? tile.detail.replace(\"Off\", \"On\") : \"Off\"}\n            </p>\n          </div>\n        </label>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

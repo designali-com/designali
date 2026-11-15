@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "aspect-ratio-48",
+  "type": "registry:example",
+  "description": "A laptop mockup with a 16:10 screen displaying a metrics dashboard.",
+  "files": [
+    {
+      "path": "registry/designali/examples/aspect-ratio/aspect-ratio-48.tsx",
+      "content": "import { AspectRatio } from \"@workspace/ui/components/aspect-ratio\"\n\nexport default function LaptopScreenMockup() {\n  return (\n    <div className=\"w-full max-w-md\">\n      <div className=\"mx-[6%] rounded-t-lg border-[6px] border-b-0 border-zinc-800 dark:border-zinc-600\">\n        <AspectRatio ratio={16 / 10} className=\"bg-background\">\n          <div className=\"absolute inset-0 grid grid-cols-3 grid-rows-[auto_1fr] gap-1.5 p-2\">\n            {[\"$48k\", \"1,204\", \"3.2%\"].map((stat) => (\n              <div key={stat} className=\"border p-1.5\">\n                <div className=\"h-1 w-1/2 bg-muted\" />\n                <p className=\"mt-1 text-[10px] font-semibold\">{stat}</p>\n              </div>\n            ))}\n            <div className=\"col-span-3 flex items-end gap-1 border p-1.5\">\n              {[40, 65, 50, 80, 60, 90, 75].map((height, i) => (\n                <div\n                  key={i}\n                  className=\"flex-1 bg-primary/70\"\n                  style={{ height: height + \"%\" }}\n                />\n              ))}\n            </div>\n          </div>\n        </AspectRatio>\n      </div>\n      <div className=\"h-3 rounded-b-xl bg-zinc-300 dark:bg-zinc-700\" />\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

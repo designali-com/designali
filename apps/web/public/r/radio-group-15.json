@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "radio-group-15",
+  "type": "registry:example",
+  "description": "Quiz question that reveals correct or incorrect feedback after checking.",
+  "files": [
+    {
+      "path": "registry/designali/examples/radio-group/radio-group-15.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { CheckIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Field, FieldLabel } from \"@workspace/ui/components/field\"\nimport {\n  RadioGroup,\n  RadioGroupItem,\n} from \"@workspace/ui/components/radio-group\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst answers = [\n  { value: \"a\", label: \"Kerning\" },\n  { value: \"b\", label: \"Leading\" },\n  { value: \"c\", label: \"Tracking\" },\n]\nconst correct = \"b\"\n\nexport default function QuizAnswerFeedback() {\n  const [value, setValue] = React.useState<string | null>(null)\n  const [checked, setChecked] = React.useState(false)\n\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-4 border p-4\">\n      <p className=\"text-sm font-medium\">\n        What is the vertical space between lines of text called?\n      </p>\n      <RadioGroup\n        value={value}\n        onValueChange={(v) => {\n          setValue(v as string)\n          setChecked(false)\n        }}\n      >\n        {answers.map((a) => (\n          <Field key={a.value} orientation=\"horizontal\">\n            <RadioGroupItem\n              value={a.value}\n              id={\"quiz-\" + a.value}\n              aria-invalid={\n                (checked && value === a.value && a.value !== correct) ||\n                undefined\n              }\n            />\n            <FieldLabel htmlFor={\"quiz-\" + a.value} className=\"font-normal\">\n              {a.label}\n            </FieldLabel>\n            {checked && a.value === correct && (\n              <CheckIcon className=\"ms-auto size-4 text-emerald-600\" />\n            )}\n          </Field>\n        ))}\n      </RadioGroup>\n      {checked && (\n        <p\n          className={cn(\n            \"text-sm\",\n            value === correct\n              ? \"text-emerald-600 dark:text-emerald-400\"\n              : \"text-destructive\"\n          )}\n        >\n          {value === correct\n            ? \"Correct! Leading comes from strips of lead.\"\n            : \"Not quite. Try again.\"}\n        </p>\n      )}\n      <Button\n        size=\"sm\"\n        className=\"self-start\"\n        disabled={!value}\n        onClick={() => setChecked(true)}\n      >\n        Check answer\n      </Button>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

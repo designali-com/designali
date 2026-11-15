@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "skeleton-07",
+  "type": "registry:example",
+  "description": "Chat conversation placeholder with alternating incoming and outgoing bubbles.",
+  "files": [
+    {
+      "path": "registry/designali/examples/skeleton/skeleton-07.tsx",
+      "content": "import { Skeleton } from \"@workspace/ui/components/skeleton\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst bubbles = [\n  { mine: false, w: \"w-48\" },\n  { mine: false, w: \"w-32\" },\n  { mine: true, w: \"w-56\" },\n  { mine: false, w: \"w-40\" },\n  { mine: true, w: \"w-24\" },\n  { mine: true, w: \"w-44\" },\n]\n\nexport default function ChatMessagesSkeleton() {\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-2 border p-4\">\n      {bubbles.map((b, i) => (\n        <div\n          key={i}\n          className={cn(\"flex items-end gap-2\", b.mine && \"flex-row-reverse\")}\n        >\n          {!b.mine && <Skeleton className=\"size-6 shrink-0 rounded-full\" />}\n          <Skeleton className={cn(\"h-8\", b.w, b.mine && \"bg-primary/20\")} />\n        </div>\n      ))}\n      <div className=\"mt-2 flex gap-2 border-t pt-3\">\n        <Skeleton className=\"h-8 flex-1\" />\n        <Skeleton className=\"size-8\" />\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

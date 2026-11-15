@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "sheet-24",
+  "type": "registry:example",
+  "description": "Sheet showing an empty state with a call to action when there are no saved items.",
+  "files": [
+    {
+      "path": "registry/designali/examples/sheet/sheet-24.tsx",
+      "content": "import { BookmarkIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  Empty,\n  EmptyContent,\n  EmptyDescription,\n  EmptyHeader,\n  EmptyMedia,\n  EmptyTitle,\n} from \"@workspace/ui/components/empty\"\nimport {\n  Sheet,\n  SheetClose,\n  SheetContent,\n  SheetDescription,\n  SheetHeader,\n  SheetTitle,\n  SheetTrigger,\n} from \"@workspace/ui/components/sheet\"\n\nexport default function SavedItemsEmptySheet() {\n  return (\n    <Sheet>\n      <SheetTrigger render={<Button variant=\"outline\" />}>\n        <BookmarkIcon data-icon=\"inline-start\" />\n        Saved\n      </SheetTrigger>\n      <SheetContent>\n        <SheetHeader>\n          <SheetTitle>Saved items</SheetTitle>\n          <SheetDescription>\n            Bookmarks sync across your devices.\n          </SheetDescription>\n        </SheetHeader>\n        <Empty className=\"flex-1\">\n          <EmptyHeader>\n            <EmptyMedia variant=\"icon\">\n              <BookmarkIcon />\n            </EmptyMedia>\n            <EmptyTitle>Nothing saved yet</EmptyTitle>\n            <EmptyDescription>\n              Tap the bookmark on any article to read it later.\n            </EmptyDescription>\n          </EmptyHeader>\n          <EmptyContent>\n            <SheetClose render={<Button size=\"sm\" />}>\n              Browse articles\n            </SheetClose>\n          </EmptyContent>\n        </Empty>\n      </SheetContent>\n    </Sheet>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

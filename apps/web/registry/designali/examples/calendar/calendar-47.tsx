@@ -1,0 +1,86 @@
+"use client"
+
+import * as React from "react"
+import { differenceInCalendarDays } from "date-fns"
+import { MoonIcon, SunIcon } from "lucide-react"
+
+import { Calendar, CalendarDayButton } from "@workspace/ui/components/calendar"
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@workspace/ui/components/card"
+import { cn } from "@workspace/ui/lib/utils"
+
+const rotation = ["D", "D", "N", "N", "-", "-", "-", "-"]
+const anchor = new Date(2026, 0, 1)
+
+const shiftStyles: Record<string, string> = {
+  D: "text-sky-600 dark:text-sky-400",
+  N: "text-violet-600 dark:text-violet-400",
+  "-": "text-muted-foreground",
+}
+
+function shiftFor(date: Date) {
+  const i =
+    ((differenceInCalendarDays(date, anchor) % rotation.length) +
+      rotation.length) %
+    rotation.length
+  return rotation[i]!
+}
+
+function ShiftDayButton({
+  children,
+  day,
+  modifiers,
+  ...props
+}: React.ComponentProps<typeof CalendarDayButton>) {
+  const shift = shiftFor(day.date)
+  return (
+    <CalendarDayButton day={day} modifiers={modifiers} {...props}>
+      {children}
+      {!modifiers.outside ? (
+        <span
+          className={cn(
+            "text-[10px] font-semibold",
+            !modifiers.selected && shiftStyles[shift]
+          )}
+        >
+          {shift === "-" ? "off" : shift}
+        </span>
+      ) : null}
+    </CalendarDayButton>
+  )
+}
+
+export default function ShiftRotaCalendar() {
+  const [date, setDate] = React.useState<undefined | Date>()
+
+  return (
+    <Card className="w-fit">
+      <CardHeader>
+        <CardTitle>Ward 4 · Team C rota</CardTitle>
+        <CardDescription>2 days, 2 nights, 4 off.</CardDescription>
+      </CardHeader>
+      <CardContent className="flex flex-col gap-3">
+        <Calendar
+          mode="single"
+          selected={date}
+          onSelect={setDate}
+          components={{ DayButton: ShiftDayButton }}
+          className="p-0 [--cell-size:--spacing(9)]"
+        />
+        <div className="flex gap-4 text-xs">
+          <span className="flex items-center gap-1.5">
+            <SunIcon className="size-3.5 text-sky-500" /> Day 07-19
+          </span>
+          <span className="flex items-center gap-1.5">
+            <MoonIcon className="size-3.5 text-violet-500" /> Night 19-07
+          </span>
+        </div>
+      </CardContent>
+    </Card>
+  )
+}

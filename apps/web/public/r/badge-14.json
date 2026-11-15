@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "badge-14",
+  "type": "registry:example",
+  "description": "Deployment rows with queued, building, ready, and failed status badges.",
+  "files": [
+    {
+      "path": "registry/designali/examples/badge/badge-14.tsx",
+      "content": "import {\n  CircleCheckIcon,\n  CircleXIcon,\n  ClockIcon,\n  GitBranchIcon,\n} from \"lucide-react\"\n\nimport { Badge } from \"@workspace/ui/components/badge\"\nimport { Spinner } from \"@workspace/ui/components/spinner\"\n\nconst deployments = [\n  { branch: \"main\", commit: \"a1f9c2e\", status: \"Ready\", time: \"2m ago\" },\n  { branch: \"feat/search\", commit: \"77be310\", status: \"Building\", time: \"Now\" },\n  {\n    branch: \"fix/auth-loop\",\n    commit: \"c03d8aa\",\n    status: \"Failed\",\n    time: \"18m ago\",\n  },\n  { branch: \"chore/deps\", commit: \"5e2b1f4\", status: \"Queued\", time: \"Now\" },\n]\n\nexport default function DeploymentStatusList() {\n  return (\n    <div className=\"w-full max-w-md divide-y border\">\n      {deployments.map((deploy) => (\n        <div key={deploy.commit} className=\"flex items-center gap-3 p-3\">\n          <GitBranchIcon className=\"size-4 shrink-0 text-muted-foreground\" />\n          <div className=\"min-w-0 flex-1\">\n            <p className=\"truncate text-sm font-medium\">{deploy.branch}</p>\n            <p className=\"font-mono text-xs text-muted-foreground\">\n              {deploy.commit} · {deploy.time}\n            </p>\n          </div>\n          {deploy.status === \"Ready\" && (\n            <Badge className=\"bg-emerald-50 text-emerald-700 dark:bg-emerald-950 dark:text-emerald-300\">\n              <CircleCheckIcon data-icon=\"inline-start\" />\n              Ready\n            </Badge>\n          )}\n          {deploy.status === \"Building\" && (\n            <Badge variant=\"secondary\">\n              <Spinner data-icon=\"inline-start\" />\n              Building\n            </Badge>\n          )}\n          {deploy.status === \"Failed\" && (\n            <Badge variant=\"destructive\">\n              <CircleXIcon data-icon=\"inline-start\" />\n              Failed\n            </Badge>\n          )}\n          {deploy.status === \"Queued\" && (\n            <Badge variant=\"outline\">\n              <ClockIcon data-icon=\"inline-start\" />\n              Queued\n            </Badge>\n          )}\n        </div>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

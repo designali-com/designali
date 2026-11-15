@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "testimonials-16",
+  "type": "registry:block",
+  "description": "Inverted band with three quotes in columns separated by thin dividers.",
+  "dependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/designali/blocks/testimonials/testimonials-16.tsx",
+      "content": "const quotes = [\n  { quote: \"It feels like the tool was designed by someone who has actually run a kitchen on a Saturday night.\", name: \"Chef Marco Bellini\", place: \"Osteria Nove, Turin\" },\n  { quote: \"Table turns are up 15% and my front-of-house team stopped dreading the booking screen.\", name: \"Aisha Rahman\", place: \"Saffron House, Leeds\" },\n  { quote: \"No-shows fell off a cliff once deposits and reminders were automatic. Best change we made all year.\", name: \"Kenji Mori\", place: \"Kumo Izakaya, Vancouver\" },\n]\n\nexport default function Testimonials16() {\n  return (\n    <section className=\"w-full bg-foreground py-20 text-background md:py-28\">\n      <div className=\"mx-auto max-w-7xl px-6\">\n        <div className=\"flex flex-col justify-between gap-4 md:flex-row md:items-end\">\n          <h2 className=\"max-w-xl text-3xl font-medium tracking-tight md:text-5xl\">\n            Trusted on the busiest night of the week.\n          </h2>\n          <p className=\"text-sm text-background/60\">2,700 restaurants in 19 countries</p>\n        </div>\n        <div className=\"mt-14 grid divide-y divide-background/15 border-y border-background/15 md:grid-cols-3 md:divide-x md:divide-y-0\">\n          {quotes.map((q) => (\n            <figure key={q.name} className=\"flex flex-col justify-between gap-10 py-10 md:px-8 md:first:pl-0 md:last:pr-0\">\n              <blockquote className=\"text-lg leading-relaxed\">&ldquo;{q.quote}&rdquo;</blockquote>\n              <figcaption className=\"flex items-center gap-3\">\n                <span className=\"flex size-10 items-center justify-center rounded-full border border-background/30 text-xs\">\n                  {q.name.replace(\"Chef \", \"\").split(\" \").map((p) => p[0]).join(\"\")}\n                </span>\n                <span className=\"text-sm\">\n                  <span className=\"block font-medium\">{q.name}</span>\n                  <span className=\"text-background/60\">{q.place}</span>\n                </span>\n              </figcaption>\n            </figure>\n          ))}\n        </div>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "560px"
+  },
+  "categories": [
+    "testimonials"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "popover-07",
+  "type": "registry:example",
+  "description": "Date picker field that opens a calendar in a popover and closes on selection.",
+  "files": [
+    {
+      "path": "registry/designali/examples/popover/popover-07.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { CalendarIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Calendar } from \"@workspace/ui/components/calendar\"\nimport { Label } from \"@workspace/ui/components/label\"\nimport {\n  Popover,\n  PopoverContent,\n  PopoverTrigger,\n} from \"@workspace/ui/components/popover\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nexport default function DatePickerPopover() {\n  const [open, setOpen] = React.useState(false)\n  const [date, setDate] = React.useState<undefined | Date>()\n\n  return (\n    <div className=\"flex w-full max-w-xs flex-col gap-1.5\">\n      <Label htmlFor=\"due-date\">Due date</Label>\n      <Popover open={open} onOpenChange={setOpen}>\n        <PopoverTrigger\n          render={\n            <Button\n              id=\"due-date\"\n              variant=\"outline\"\n              className={cn(\n                \"w-full justify-start font-normal\",\n                !date && \"text-muted-foreground\"\n              )}\n            />\n          }\n        >\n          <CalendarIcon data-icon=\"inline-start\" />\n          {date\n            ? date.toLocaleDateString(\"en-US\", { dateStyle: \"medium\" })\n            : \"Pick a date\"}\n        </PopoverTrigger>\n        <PopoverContent className=\"w-auto p-0\" align=\"start\">\n          <Calendar\n            mode=\"single\"\n            selected={date}\n            onSelect={(value) => {\n              setDate(value)\n              setOpen(false)\n            }}\n          />\n        </PopoverContent>\n      </Popover>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

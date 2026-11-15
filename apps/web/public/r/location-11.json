@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "location-11",
+  "type": "registry:block",
+  "description": "Region accordion with continent silhouettes that expands into a grid of office addresses and HQ badges.",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "accordion"
+  ],
+  "files": [
+    {
+      "path": "registry/designali/blocks/location/location-11.tsx",
+      "content": "import { ChevronDown, MapPin } from \"lucide-react\"\n\nimport {\n  Accordion,\n  AccordionContent,\n  AccordionItem,\n  AccordionTrigger,\n} from \"@workspace/ui/components/accordion\"\n\nconst regions = [\n  {\n    name: \"Americas\",\n    shape: \"M10 30 C 20 10, 45 8, 50 22 C 55 34, 40 40, 38 52 C 36 70, 28 90, 22 92 C 18 80, 26 60, 18 48 C 10 42, 6 38, 10 30 Z\",\n    offices: [\n      { city: \"Austin\", address: \"600 Congress Ave, Floor 14\", type: \"Hub\" },\n      { city: \"Vancouver\", address: \"1055 W Georgia St\", type: \"Studio\" },\n      { city: \"Bogotá\", address: \"Cra. 7 #71-21, Torre B\", type: \"Studio\" },\n    ],\n  },\n  {\n    name: \"Europe & Africa\",\n    shape: \"M30 12 C 45 6, 66 10, 70 22 C 72 32, 58 34, 62 46 C 68 62, 60 84, 48 90 C 40 78, 44 62, 34 52 C 26 44, 20 24, 30 12 Z\",\n    offices: [\n      { city: \"Copenhagen\", address: \"Bredgade 34, 1260\", type: \"HQ\" },\n      { city: \"Barcelona\", address: \"Carrer de Pallars 193\", type: \"Hub\" },\n      { city: \"Nairobi\", address: \"Westlands Road, The Mint\", type: \"Studio\" },\n      { city: \"Kraków\", address: \"ul. Lubicz 23\", type: \"Studio\" },\n    ],\n  },\n  {\n    name: \"Asia Pacific\",\n    shape: \"M14 20 C 40 6, 86 10, 90 30 C 92 44, 70 46, 62 56 C 56 64, 44 58, 36 50 C 26 42, 6 34, 14 20 Z M66 72 C 76 66, 90 70, 88 80 C 84 90, 66 88, 66 72 Z\",\n    offices: [\n      { city: \"Singapore\", address: \"79 Anson Rd, #20-01\", type: \"Hub\" },\n      { city: \"Seoul\", address: \"Teheran-ro 427, Gangnam\", type: \"Studio\" },\n      { city: \"Auckland\", address: \"120 Albert St\", type: \"Studio\" },\n    ],\n  },\n]\n\nexport default function Location11() {\n  return (\n    <section className=\"w-full bg-background py-20 md:py-28\">\n      <div className=\"mx-auto max-w-4xl px-6\">\n        <div className=\"flex flex-col justify-between gap-4 md:flex-row md:items-end\">\n          <h2 className=\"text-4xl font-semibold tracking-tight md:text-5xl\">\n            Offices by region\n          </h2>\n          <p className=\"text-sm text-muted-foreground\">\n            10 locations &middot; Fjordline Systems\n          </p>\n        </div>\n\n        <Accordion className=\"mt-10 border-t\" defaultValue={[\"Europe & Africa\"]}>\n          {regions.map((region) => (\n            <AccordionItem key={region.name} value={region.name} className=\"border-b\">\n              <AccordionTrigger className=\"items-center gap-4 py-6 hover:no-underline\">\n                <svg viewBox=\"0 0 100 100\" className=\"size-12 shrink-0 fill-muted-foreground/30\" aria-hidden>\n                  <path d={region.shape} />\n                </svg>\n                <span className=\"flex-1 text-xl font-medium tracking-tight md:text-2xl\">\n                  {region.name}\n                </span>\n                <span className=\"text-sm font-normal text-muted-foreground\">\n                  {region.offices.length}\n                </span>\n                <ChevronDown className=\"size-5 shrink-0 text-muted-foreground transition-transform group-aria-expanded/accordion-trigger:rotate-180\" />\n              </AccordionTrigger>\n              <AccordionContent className=\"pb-6\">\n                <ul className=\"grid gap-px border bg-border sm:grid-cols-2\">\n                  {region.offices.map((office) => (\n                    <li key={office.city} className=\"flex gap-3 bg-background p-5 sm:last:odd:col-span-2\">\n                      <MapPin className=\"mt-0.5 size-4 shrink-0 text-muted-foreground\" />\n                      <div className=\"flex-1 text-sm\">\n                        <p className=\"flex items-center gap-2 font-medium\">\n                          {office.city}\n                          {office.type === \"HQ\" && (\n                            <span className=\"bg-primary px-1.5 py-0.5 text-[10px] text-primary-foreground\">\n                              HQ\n                            </span>\n                          )}\n                        </p>\n                        <p className=\"text-muted-foreground\">{office.address}</p>\n                      </div>\n                      <span className=\"text-xs text-muted-foreground\">{office.type !== \"HQ\" && office.type}</span>\n                    </li>\n                  ))}\n                </ul>\n              </AccordionContent>\n            </AccordionItem>\n          ))}\n        </Accordion>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "760px"
+  },
+  "categories": [
+    "location"
+  ]
+}

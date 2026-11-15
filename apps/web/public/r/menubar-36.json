@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "menubar-36",
+  "type": "registry:example",
+  "description": "The same menubar in small, default and large sizes using className overrides.",
+  "files": [
+    {
+      "path": "registry/designali/examples/menubar/menubar-36.tsx",
+      "content": "import {\n  Menubar,\n  MenubarContent,\n  MenubarGroup,\n  MenubarItem,\n  MenubarMenu,\n  MenubarTrigger,\n} from \"@workspace/ui/components/menubar\"\n\nconst sizes = [\n  { label: \"Small\", bar: \"h-7\", trigger: \"text-[11px] px-1\" },\n  { label: \"Default\", bar: \"\", trigger: \"\" },\n  { label: \"Large\", bar: \"h-10 p-1.5\", trigger: \"text-sm px-2.5 py-1\" },\n]\n\nexport default function MenubarSizeScale() {\n  return (\n    <div className=\"flex flex-col items-start gap-3\">\n      {sizes.map((size) => (\n        <div key={size.label} className=\"flex items-center gap-3\">\n          <span className=\"w-14 text-xs text-muted-foreground\">\n            {size.label}\n          </span>\n          <Menubar className={size.bar}>\n            {[\"File\", \"Edit\", \"View\"].map((menu) => (\n              <MenubarMenu key={menu}>\n                <MenubarTrigger className={size.trigger}>{menu}</MenubarTrigger>\n                <MenubarContent>\n                  <MenubarGroup>\n                    <MenubarItem>{menu} option one</MenubarItem>\n                    <MenubarItem>{menu} option two</MenubarItem>\n                  </MenubarGroup>\n                </MenubarContent>\n              </MenubarMenu>\n            ))}\n          </Menubar>\n        </div>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

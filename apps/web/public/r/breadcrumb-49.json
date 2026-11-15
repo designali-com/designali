@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "breadcrumb-49",
+  "type": "registry:example",
+  "description": "Kanban board header with breadcrumb, member avatars and a view switcher.",
+  "files": [
+    {
+      "path": "registry/designali/examples/breadcrumb/breadcrumb-49.tsx",
+      "content": "import { KanbanIcon } from \"lucide-react\"\n\nimport {\n  Avatar,\n  AvatarFallback,\n  AvatarGroup,\n  AvatarGroupCount,\n} from \"@workspace/ui/components/avatar\"\nimport {\n  Breadcrumb,\n  BreadcrumbItem,\n  BreadcrumbLink,\n  BreadcrumbList,\n  BreadcrumbPage,\n  BreadcrumbSeparator,\n} from \"@workspace/ui/components/breadcrumb\"\n\nconst members = [\"JS\", \"AK\", \"LT\"]\n\nexport default function ProjectBoardBreadcrumb() {\n  return (\n    <div className=\"flex w-full max-w-lg flex-wrap items-center justify-between gap-3\">\n      <Breadcrumb>\n        <BreadcrumbList>\n          <BreadcrumbItem>\n            <BreadcrumbLink href=\"#\">Roadmap</BreadcrumbLink>\n          </BreadcrumbItem>\n          <BreadcrumbSeparator />\n          <BreadcrumbItem>\n            <BreadcrumbLink href=\"#\">Q1 2027</BreadcrumbLink>\n          </BreadcrumbItem>\n          <BreadcrumbSeparator />\n          <BreadcrumbItem>\n            <BreadcrumbPage className=\"flex items-center gap-1.5\">\n              <KanbanIcon className=\"size-3.5\" />\n              Board\n            </BreadcrumbPage>\n          </BreadcrumbItem>\n        </BreadcrumbList>\n      </Breadcrumb>\n      <AvatarGroup>\n        {members.map((member) => (\n          <Avatar key={member} size=\"sm\">\n            <AvatarFallback>{member}</AvatarFallback>\n          </Avatar>\n        ))}\n        <AvatarGroupCount>+4</AvatarGroupCount>\n      </AvatarGroup>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

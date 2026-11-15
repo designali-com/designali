@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "alert-dialog-25",
+  "type": "registry:example",
+  "description": "Team list row where removing a member shows their avatar inside the dialog media slot.",
+  "files": [
+    {
+      "path": "registry/designali/examples/alert-dialog/alert-dialog-25.tsx",
+      "content": "import { UserMinusIcon } from \"lucide-react\"\n\nimport {\n  AlertDialog,\n  AlertDialogAction,\n  AlertDialogCancel,\n  AlertDialogContent,\n  AlertDialogDescription,\n  AlertDialogFooter,\n  AlertDialogHeader,\n  AlertDialogMedia,\n  AlertDialogTitle,\n  AlertDialogTrigger,\n} from \"@workspace/ui/components/alert-dialog\"\nimport { Avatar, AvatarFallback } from \"@workspace/ui/components/avatar\"\nimport { Badge } from \"@workspace/ui/components/badge\"\nimport { Button } from \"@workspace/ui/components/button\"\n\nexport default function RemoveTeamMemberAvatar() {\n  return (\n    <div className=\"flex w-full max-w-sm items-center gap-3 border p-3\">\n      <Avatar>\n        <AvatarFallback>DK</AvatarFallback>\n      </Avatar>\n      <div className=\"min-w-0 flex-1\">\n        <p className=\"text-sm font-medium\">Daniel Kovacs</p>\n        <p className=\"truncate text-xs text-muted-foreground\">\n          daniel@lumenlabs.io\n        </p>\n      </div>\n      <Badge variant=\"secondary\">Editor</Badge>\n      <AlertDialog>\n        <AlertDialogTrigger\n          render={\n            <Button\n              variant=\"ghost\"\n              size=\"icon-sm\"\n              aria-label=\"Remove Daniel Kovacs\"\n            />\n          }\n        >\n          <UserMinusIcon />\n        </AlertDialogTrigger>\n        <AlertDialogContent>\n          <AlertDialogHeader>\n            <AlertDialogMedia className=\"bg-transparent\">\n              <Avatar size=\"lg\">\n                <AvatarFallback>DK</AvatarFallback>\n              </Avatar>\n            </AlertDialogMedia>\n            <AlertDialogTitle>Remove Daniel from Lumen Labs?</AlertDialogTitle>\n            <AlertDialogDescription>\n              Daniel will lose access immediately. Files he owns will be\n              transferred to you.\n            </AlertDialogDescription>\n          </AlertDialogHeader>\n          <AlertDialogFooter>\n            <AlertDialogCancel>Cancel</AlertDialogCancel>\n            <AlertDialogAction variant=\"destructive\">\n              Remove member\n            </AlertDialogAction>\n          </AlertDialogFooter>\n        </AlertDialogContent>\n      </AlertDialog>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

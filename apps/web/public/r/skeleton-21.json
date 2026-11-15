@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "skeleton-21",
+  "type": "registry:example",
+  "description": "File manager grid placeholder with folder and file tiles plus names and sizes.",
+  "files": [
+    {
+      "path": "registry/designali/examples/skeleton/skeleton-21.tsx",
+      "content": "import { Skeleton } from \"@workspace/ui/components/skeleton\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nexport default function FileGridSkeleton() {\n  return (\n    <div className=\"flex w-full max-w-md flex-col gap-3\">\n      <div className=\"flex items-center gap-1.5\">\n        <Skeleton className=\"h-3 w-12\" />\n        <span className=\"text-muted-foreground\">/</span>\n        <Skeleton className=\"h-3 w-20\" />\n      </div>\n      <div className=\"grid grid-cols-3 gap-3 sm:grid-cols-4\">\n        {Array.from({ length: 8 }).map((_, i) => (\n          <div key={i} className=\"flex flex-col items-center gap-2 border p-3\">\n            <Skeleton className={cn(i < 3 ? \"h-8 w-10\" : \"h-10 w-8\")} />\n            <Skeleton className=\"h-2.5 w-14\" />\n            <Skeleton className=\"h-2 w-8\" />\n          </div>\n        ))}\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

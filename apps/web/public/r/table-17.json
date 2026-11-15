@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "table-17",
+  "type": "registry:example",
+  "description": "Project table with an inline progress bar column and due dates.",
+  "files": [
+    {
+      "path": "registry/designali/examples/table/table-17.tsx",
+      "content": "import {\n  Table,\n  TableBody,\n  TableCell,\n  TableHead,\n  TableHeader,\n  TableRow,\n} from \"@workspace/ui/components/table\"\n\nconst projects = [\n  { name: \"Website redesign\", owner: \"Leah\", progress: 82, due: \"Dec 4\" },\n  { name: \"Mobile onboarding\", owner: \"Ravi\", progress: 45, due: \"Dec 18\" },\n  { name: \"Billing migration\", owner: \"Kenji\", progress: 20, due: \"Jan 9\" },\n  { name: \"Help center\", owner: \"Ines\", progress: 100, due: \"Nov 20\" },\n]\n\nexport default function ProgressColumnTable() {\n  return (\n    <div className=\"w-full max-w-xl border\">\n      <Table>\n        <TableHeader>\n          <TableRow>\n            <TableHead>Project</TableHead>\n            <TableHead>Owner</TableHead>\n            <TableHead className=\"w-40\">Progress</TableHead>\n            <TableHead className=\"text-right\">Due</TableHead>\n          </TableRow>\n        </TableHeader>\n        <TableBody>\n          {projects.map((project) => (\n            <TableRow key={project.name}>\n              <TableCell className=\"font-medium\">{project.name}</TableCell>\n              <TableCell>{project.owner}</TableCell>\n              <TableCell>\n                <div className=\"flex items-center gap-2\">\n                  <div className=\"h-1.5 flex-1 bg-muted\">\n                    <div\n                      className=\"h-full bg-primary\"\n                      style={{ width: project.progress + \"%\" }}\n                    />\n                  </div>\n                  <span className=\"w-8 text-right text-muted-foreground tabular-nums\">\n                    {project.progress}%\n                  </span>\n                </div>\n              </TableCell>\n              <TableCell className=\"text-right text-muted-foreground\">\n                {project.due}\n              </TableCell>\n            </TableRow>\n          ))}\n        </TableBody>\n      </Table>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

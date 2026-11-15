@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "switch-44",
+  "type": "registry:example",
+  "description": "A side sheet with notification switches and a save footer.",
+  "files": [
+    {
+      "path": "registry/designali/examples/switch/switch-44.tsx",
+      "content": "import { SettingsIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Label } from \"@workspace/ui/components/label\"\nimport {\n  Sheet,\n  SheetClose,\n  SheetContent,\n  SheetDescription,\n  SheetFooter,\n  SheetHeader,\n  SheetTitle,\n  SheetTrigger,\n} from \"@workspace/ui/components/sheet\"\nimport { Switch } from \"@workspace/ui/components/switch\"\n\nexport default function SettingsSheetSwitches() {\n  return (\n    <Sheet>\n      <SheetTrigger render={<Button variant=\"outline\" />}>\n        <SettingsIcon data-icon=\"inline-start\" />\n        Open settings\n      </SheetTrigger>\n      <SheetContent>\n        <SheetHeader>\n          <SheetTitle>Notifications</SheetTitle>\n          <SheetDescription>\n            Decide how Orbit keeps you in the loop.\n          </SheetDescription>\n        </SheetHeader>\n        <div className=\"flex flex-col gap-4 px-4\">\n          <div className=\"flex items-center justify-between\">\n            <Label htmlFor=\"sheet-desktop\">Desktop alerts</Label>\n            <Switch id=\"sheet-desktop\" defaultChecked />\n          </div>\n          <div className=\"flex items-center justify-between\">\n            <Label htmlFor=\"sheet-mobile\">Mobile push</Label>\n            <Switch id=\"sheet-mobile\" defaultChecked />\n          </div>\n          <div className=\"flex items-center justify-between\">\n            <Label htmlFor=\"sheet-quiet\">Quiet hours (10 PM - 7 AM)</Label>\n            <Switch id=\"sheet-quiet\" />\n          </div>\n        </div>\n        <SheetFooter>\n          <SheetClose render={<Button />}>Save</SheetClose>\n        </SheetFooter>\n      </SheetContent>\n    </Sheet>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

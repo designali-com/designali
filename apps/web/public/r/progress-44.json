@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "progress-44",
+  "type": "registry:example",
+  "description": "Exam result bar with an overlaid pass mark marker.",
+  "files": [
+    {
+      "path": "registry/designali/examples/progress/progress-44.tsx",
+      "content": "import { Badge } from \"@workspace/ui/components/badge\"\nimport { Progress } from \"@workspace/ui/components/progress\"\n\nexport default function ExamScoreWithPassMark() {\n  const score = 81\n  const pass = 70\n\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-3 border p-4\">\n      <div className=\"flex items-center justify-between\">\n        <span className=\"text-sm font-medium\">Certification exam</span>\n        <Badge>Passed</Badge>\n      </div>\n      <div className=\"relative\">\n        <Progress\n          value={score}\n          aria-label=\"Exam score\"\n          className=\"[&_[data-slot=progress-track]]:h-2.5\"\n        />\n        <span\n          className=\"absolute -top-1 h-4.5 w-0.5 bg-foreground\"\n          style={{ left: pass + \"%\" }}\n          aria-hidden\n        />\n      </div>\n      <div className=\"flex justify-between text-xs text-muted-foreground\">\n        <span>\n          Your score:{\" \"}\n          <span className=\"font-medium text-foreground\">{score}%</span>\n        </span>\n        <span>Pass mark: {pass}%</span>\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

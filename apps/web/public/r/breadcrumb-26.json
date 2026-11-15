@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "breadcrumb-26",
+  "type": "registry:example",
+  "description": "Help desk trail to a ticket number followed by priority and status badges.",
+  "files": [
+    {
+      "path": "registry/designali/examples/breadcrumb/breadcrumb-26.tsx",
+      "content": "import { Badge } from \"@workspace/ui/components/badge\"\nimport {\n  Breadcrumb,\n  BreadcrumbItem,\n  BreadcrumbLink,\n  BreadcrumbList,\n  BreadcrumbPage,\n  BreadcrumbSeparator,\n} from \"@workspace/ui/components/breadcrumb\"\n\nexport default function SupportTicketBreadcrumb() {\n  return (\n    <div className=\"flex flex-wrap items-center gap-2\">\n      <Breadcrumb>\n        <BreadcrumbList>\n          <BreadcrumbItem>\n            <BreadcrumbLink href=\"#\">Support</BreadcrumbLink>\n          </BreadcrumbItem>\n          <BreadcrumbSeparator />\n          <BreadcrumbItem>\n            <BreadcrumbLink href=\"#\">Billing queue</BreadcrumbLink>\n          </BreadcrumbItem>\n          <BreadcrumbSeparator />\n          <BreadcrumbItem>\n            <BreadcrumbPage className=\"font-mono\">#4821</BreadcrumbPage>\n          </BreadcrumbItem>\n        </BreadcrumbList>\n      </Breadcrumb>\n      <Badge variant=\"destructive\">Urgent</Badge>\n      <Badge variant=\"outline\">Awaiting reply</Badge>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

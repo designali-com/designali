@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "popover-16",
+  "type": "registry:example",
+  "description": "Help popover listing editor keyboard shortcuts with key caps.",
+  "files": [
+    {
+      "path": "registry/designali/examples/popover/popover-16.tsx",
+      "content": "import { KeyboardIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Kbd, KbdGroup } from \"@workspace/ui/components/kbd\"\nimport {\n  Popover,\n  PopoverContent,\n  PopoverTitle,\n  PopoverTrigger,\n} from \"@workspace/ui/components/popover\"\n\nconst shortcuts = [\n  { label: \"Command menu\", keys: [\"⌘\", \"K\"] },\n  { label: \"New document\", keys: [\"⌘\", \"N\"] },\n  { label: \"Search\", keys: [\"/\"] },\n  { label: \"Toggle sidebar\", keys: [\"⌘\", \"B\"] },\n  { label: \"Duplicate\", keys: [\"⌘\", \"D\"] },\n]\n\nexport default function KeyboardShortcutsPopover() {\n  return (\n    <Popover>\n      <PopoverTrigger\n        render={\n          <Button\n            variant=\"outline\"\n            size=\"icon\"\n            aria-label=\"Keyboard shortcuts\"\n          />\n        }\n      >\n        <KeyboardIcon />\n      </PopoverTrigger>\n      <PopoverContent className=\"w-64\" side=\"top\">\n        <PopoverTitle>Keyboard shortcuts</PopoverTitle>\n        <ul className=\"flex flex-col gap-2\">\n          {shortcuts.map((shortcut) => (\n            <li\n              key={shortcut.label}\n              className=\"flex items-center justify-between text-xs\"\n            >\n              <span className=\"text-muted-foreground\">{shortcut.label}</span>\n              <KbdGroup>\n                {shortcut.keys.map((key) => (\n                  <Kbd key={key}>{key}</Kbd>\n                ))}\n              </KbdGroup>\n            </li>\n          ))}\n        </ul>\n      </PopoverContent>\n    </Popover>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

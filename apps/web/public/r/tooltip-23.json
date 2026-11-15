@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tooltip-23",
+  "type": "registry:example",
+  "description": "Activity feed with relative times that show the exact timestamp on hover.",
+  "files": [
+    {
+      "path": "registry/designali/examples/tooltip/tooltip-23.tsx",
+      "content": "import {\n  Tooltip,\n  TooltipContent,\n  TooltipProvider,\n  TooltipTrigger,\n} from \"@workspace/ui/components/tooltip\"\n\nconst activity = [\n  {\n    who: \"Iris Novak\",\n    what: \"merged #482\",\n    ago: \"3m ago\",\n    exact: \"Jun 12, 2026, 14:07:33\",\n  },\n  {\n    who: \"Kofi Mensah\",\n    what: \"commented on #479\",\n    ago: \"2h ago\",\n    exact: \"Jun 12, 2026, 12:01:09\",\n  },\n  {\n    who: \"Lea Fontaine\",\n    what: \"opened #483\",\n    ago: \"yesterday\",\n    exact: \"Jun 11, 2026, 17:44:50\",\n  },\n]\n\nexport default function RelativeTimestampTooltip() {\n  return (\n    <TooltipProvider>\n      <ul className=\"flex w-full max-w-sm flex-col gap-3 text-sm\">\n        {activity.map((a) => (\n          <li key={a.exact} className=\"flex items-center justify-between gap-2\">\n            <span>\n              <span className=\"font-medium\">{a.who}</span>{\" \"}\n              <span className=\"text-muted-foreground\">{a.what}</span>\n            </span>\n            <Tooltip>\n              <TooltipTrigger\n                render={\n                  <time\n                    tabIndex={0}\n                    className=\"shrink-0 text-xs text-muted-foreground underline decoration-dotted underline-offset-4\"\n                  />\n                }\n              >\n                {a.ago}\n              </TooltipTrigger>\n              <TooltipContent>{a.exact}</TooltipContent>\n            </Tooltip>\n          </li>\n        ))}\n      </ul>\n    </TooltipProvider>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

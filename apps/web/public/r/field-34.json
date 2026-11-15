@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "field-34",
+  "type": "registry:example",
+  "description": "Promo code field with an apply button that shows success or error feedback.",
+  "files": [
+    {
+      "path": "registry/designali/examples/field/field-34.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { BadgePercentIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  Field,\n  FieldDescription,\n  FieldError,\n  FieldLabel,\n} from \"@workspace/ui/components/field\"\nimport { Input } from \"@workspace/ui/components/input\"\n\nexport default function CouponCodeField() {\n  const [code, setCode] = React.useState(\"\")\n  const [result, setResult] = React.useState<\"idle\" | \"ok\" | \"bad\">(\"idle\")\n\n  return (\n    <Field data-invalid={result === \"bad\"} className=\"w-full max-w-xs\">\n      <FieldLabel htmlFor=\"promo-code\">Promo code</FieldLabel>\n      <div className=\"flex gap-2\">\n        <Input\n          id=\"promo-code\"\n          value={code}\n          placeholder=\"SPRING25\"\n          aria-invalid={result === \"bad\"}\n          onChange={(e) => {\n            setCode(e.target.value.toUpperCase())\n            setResult(\"idle\")\n          }}\n          className=\"font-mono\"\n        />\n        <Button\n          variant=\"outline\"\n          disabled={!code}\n          onClick={() => setResult(code === \"SPRING25\" ? \"ok\" : \"bad\")}\n        >\n          Apply\n        </Button>\n      </div>\n      {result === \"ok\" && (\n        <FieldDescription className=\"flex items-center gap-1 text-emerald-600\">\n          <BadgePercentIcon className=\"size-3.5\" />\n          25% off applied to your order.\n        </FieldDescription>\n      )}\n      {result === \"bad\" && (\n        <FieldError>That code is invalid or has expired.</FieldError>\n      )}\n      {result === \"idle\" && <FieldDescription>Try SPRING25.</FieldDescription>}\n    </Field>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

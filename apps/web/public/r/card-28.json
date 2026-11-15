@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "card-28",
+  "type": "registry:example",
+  "description": "Radio group where each option is a selectable card with a highlighted checked state.",
+  "files": [
+    {
+      "path": "registry/designali/examples/card/card-28.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport {\n  Card,\n  CardAction,\n  CardDescription,\n  CardHeader,\n  CardTitle,\n} from \"@workspace/ui/components/card\"\nimport {\n  RadioGroup,\n  RadioGroupItem,\n} from \"@workspace/ui/components/radio-group\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst plans = [\n  {\n    value: \"starter\",\n    name: \"Starter\",\n    price: \"$0\",\n    note: \"1 project, community support\",\n  },\n  {\n    value: \"pro\",\n    name: \"Pro\",\n    price: \"$18\",\n    note: \"Unlimited projects, analytics\",\n  },\n  {\n    value: \"business\",\n    name: \"Business\",\n    price: \"$49\",\n    note: \"SAML SSO, audit logs, SLA\",\n  },\n]\n\nexport default function SelectablePlanCards() {\n  const [plan, setPlan] = React.useState(\"pro\")\n\n  return (\n    <RadioGroup\n      value={plan}\n      onValueChange={(v) => setPlan(v as string)}\n      className=\"grid w-full max-w-sm gap-2\"\n    >\n      {plans.map((p) => (\n        <label key={p.value}>\n          <Card\n            size=\"sm\"\n            className={cn(\n              \"cursor-pointer transition-shadow hover:ring-foreground/30\",\n              plan === p.value &&\n                \"bg-muted/40 ring-2 ring-primary hover:ring-primary\"\n            )}\n          >\n            <CardHeader className=\"grid-cols-[auto_1fr_auto] items-center gap-x-3\">\n              <RadioGroupItem value={p.value} className=\"row-span-2\" />\n              <CardTitle>{p.name}</CardTitle>\n              <CardDescription>{p.note}</CardDescription>\n              <CardAction className=\"col-start-3 self-center\">\n                <span className=\"text-sm font-semibold\">{p.price}</span>\n                <span className=\"text-muted-foreground\">/mo</span>\n              </CardAction>\n            </CardHeader>\n          </Card>\n        </label>\n      ))}\n    </RadioGroup>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

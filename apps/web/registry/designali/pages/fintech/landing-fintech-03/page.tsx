@@ -19,7 +19,7 @@ const navLinks = ["Personal", "Business", "Pricing", "Security", "Help"]
 
 const logos = [
   "Plaid",
-  "Stripe",
+  "Corvia",
   "FDIC member bank",
   "Apple Pay",
   "Google Pay",

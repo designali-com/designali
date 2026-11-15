@@ -16,7 +16,7 @@ const workspaces = [
 
 export default function Authentication20() {
   const [query, setQuery] = useState("")
-  const [selected, setSelected] = useState(workspaces[0].slug)
+  const [selected, setSelected] = useState(workspaces[0]!.slug)
 
   const filtered = workspaces.filter((item) => item.name.toLowerCase().includes(query.toLowerCase()))
 

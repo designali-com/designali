@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "alert-dialog-09",
+  "type": "registry:example",
+  "description": "Confirmation for taking a live website offline.",
+  "files": [
+    {
+      "path": "registry/designali/examples/alert-dialog/alert-dialog-09.tsx",
+      "content": "import { CloudOffIcon, GlobeIcon } from \"lucide-react\"\n\nimport {\n  AlertDialog,\n  AlertDialogAction,\n  AlertDialogCancel,\n  AlertDialogContent,\n  AlertDialogDescription,\n  AlertDialogFooter,\n  AlertDialogHeader,\n  AlertDialogMedia,\n  AlertDialogTitle,\n  AlertDialogTrigger,\n} from \"@workspace/ui/components/alert-dialog\"\nimport { Button } from \"@workspace/ui/components/button\"\n\nexport default function UnpublishSiteDialog() {\n  return (\n    <AlertDialog>\n      <AlertDialogTrigger render={<Button variant=\"outline\" />}>\n        <GlobeIcon data-icon=\"inline-start\" />\n        Unpublish site\n      </AlertDialogTrigger>\n      <AlertDialogContent>\n        <AlertDialogHeader>\n          <AlertDialogMedia>\n            <CloudOffIcon />\n          </AlertDialogMedia>\n          <AlertDialogTitle>Take maple-bakery.site offline?</AlertDialogTitle>\n          <AlertDialogDescription>\n            Visitors will see a placeholder page until you publish again. Your\n            content and settings are kept.\n          </AlertDialogDescription>\n        </AlertDialogHeader>\n        <AlertDialogFooter>\n          <AlertDialogCancel>Cancel</AlertDialogCancel>\n          <AlertDialogAction variant=\"destructive\">Unpublish</AlertDialogAction>\n        </AlertDialogFooter>\n      </AlertDialogContent>\n    </AlertDialog>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

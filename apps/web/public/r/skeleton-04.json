@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "skeleton-04",
+  "type": "registry:example",
+  "description": "Placeholder for a profile header with cover, avatar, name, bio, and follow button.",
+  "files": [
+    {
+      "path": "registry/designali/examples/skeleton/skeleton-04.tsx",
+      "content": "import { Skeleton } from \"@workspace/ui/components/skeleton\"\n\nexport default function ProfileHeaderSkeleton() {\n  return (\n    <div className=\"w-full max-w-md border\">\n      <Skeleton className=\"h-24 w-full\" />\n      <div className=\"flex flex-col gap-3 px-4 pb-4\">\n        <div className=\"-mt-8 flex items-end justify-between\">\n          <Skeleton className=\"size-16 rounded-full border-4 border-background\" />\n          <Skeleton className=\"h-8 w-24\" />\n        </div>\n        <Skeleton className=\"h-5 w-40\" />\n        <Skeleton className=\"h-3 w-24\" />\n        <div className=\"flex flex-col gap-1.5\">\n          <Skeleton className=\"h-3 w-full\" />\n          <Skeleton className=\"h-3 w-4/5\" />\n        </div>\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

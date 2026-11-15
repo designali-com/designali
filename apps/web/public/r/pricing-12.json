@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "pricing-12",
+  "type": "registry:block",
+  "description": "Inverted dark section with a guarantee note beside two contrasting plan cards with arrow CTAs.",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "registry/designali/blocks/pricing/pricing-12.tsx",
+      "content": "import { ArrowRight, Check } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\n\nconst plans = [\n  {\n    name: \"Solo\",\n    price: \"$19\",\n    note: \"per month, billed yearly\",\n    description: \"Everything one designer-developer needs to ship fast.\",\n    features: [\n      \"Full block library\",\n      \"Figma kit\",\n      \"Personal commercial licence\",\n      \"Email support\",\n    ],\n    cta: \"Start 14-day trial\",\n  },\n  {\n    name: \"Agency\",\n    price: \"$79\",\n    note: \"per month, billed yearly\",\n    description: \"For studios delivering sites to many clients at once.\",\n    features: [\n      \"Up to 12 seats\",\n      \"Client handoff workspaces\",\n      \"White-label exports\",\n      \"Priority support in 4h\",\n    ],\n    cta: \"Start 14-day trial\",\n    featured: true,\n  },\n]\n\nexport default function Pricing12() {\n  return (\n    <section className=\"w-full bg-foreground py-20 text-background md:py-28\">\n      <div className=\"mx-auto grid max-w-7xl gap-14 px-6 lg:grid-cols-[1fr_1.6fr] lg:gap-20\">\n        <div className=\"flex flex-col justify-between gap-10\">\n          <div>\n            <p className=\"text-xs tracking-[0.2em] text-background/50 uppercase\">\n              Pricing\n            </p>\n            <h2 className=\"mt-4 text-3xl font-semibold tracking-tight md:text-5xl\">\n              Two plans. Zero surprises.\n            </h2>\n            <p className=\"mt-5 max-w-sm text-base leading-7 text-background/60\">\n              No seat minimums, no usage caps, no feature gates hidden behind a\n              sales call.\n            </p>\n          </div>\n          <div className=\"border-t border-background/15 pt-6\">\n            <p className=\"text-sm font-medium\">60-day money-back guarantee</p>\n            <p className=\"mt-2 text-sm leading-6 text-background/60\">\n              If it doesn&apos;t save you time, email us and we&apos;ll refund\n              every cent. No forms, no retention call.\n            </p>\n          </div>\n        </div>\n        <div className=\"grid gap-px bg-background/15 md:grid-cols-2\">\n          {plans.map((plan) => (\n            <div\n              key={plan.name}\n              className={\n                plan.featured\n                  ? \"flex flex-col bg-background p-8 text-foreground md:p-10\"\n                  : \"flex flex-col bg-foreground p-8 md:p-10\"\n              }\n            >\n              <h3 className=\"text-lg font-medium\">{plan.name}</h3>\n              <p\n                className={\n                  plan.featured\n                    ? \"mt-2 text-sm text-muted-foreground\"\n                    : \"mt-2 text-sm text-background/60\"\n                }\n              >\n                {plan.description}\n              </p>\n              <p className=\"mt-8 text-5xl font-semibold tracking-tight\">\n                {plan.price}\n              </p>\n              <p\n                className={\n                  plan.featured\n                    ? \"mt-1 text-xs text-muted-foreground\"\n                    : \"mt-1 text-xs text-background/50\"\n                }\n              >\n                {plan.note}\n              </p>\n              <ul className=\"mt-8 flex-1 space-y-3 text-sm\">\n                {plan.features.map((feature) => (\n                  <li key={feature} className=\"flex items-center gap-3\">\n                    <Check className=\"size-4 shrink-0\" />\n                    {feature}\n                  </li>\n                ))}\n              </ul>\n              <Button\n                size=\"lg\"\n                className={\n                  plan.featured\n                    ? \"mt-10 w-full\"\n                    : \"mt-10 w-full bg-background text-foreground hover:bg-background/90\"\n                }\n                nativeButton={false}\n                render={<a href=\"#\" />}\n              >\n                {plan.cta}\n                <ArrowRight data-icon=\"inline-end\" />\n              </Button>\n            </div>\n          ))}\n        </div>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "750px"
+  },
+  "categories": [
+    "pricing"
+  ]
+}

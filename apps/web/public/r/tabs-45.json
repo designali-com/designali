@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tabs-45",
+  "type": "registry:example",
+  "description": "Narrow vertical icon rail of tabs beside a tool panel, like a design app sidebar.",
+  "files": [
+    {
+      "path": "registry/designali/examples/tabs/tabs-45.tsx",
+      "content": "import {\n  HistoryIcon,\n  LayersIcon,\n  MessageSquareIcon,\n  ShapesIcon,\n} from \"lucide-react\"\n\nimport { Skeleton } from \"@workspace/ui/components/skeleton\"\nimport {\n  Tabs,\n  TabsContent,\n  TabsList,\n  TabsTrigger,\n} from \"@workspace/ui/components/tabs\"\n\nconst tools = [\n  { value: \"layers\", label: \"Layers\", icon: LayersIcon },\n  { value: \"assets\", label: \"Assets\", icon: ShapesIcon },\n  { value: \"comments\", label: \"Comments\", icon: MessageSquareIcon },\n  { value: \"history\", label: \"History\", icon: HistoryIcon },\n]\n\nexport default function VerticalIconRailTabs() {\n  return (\n    <Tabs\n      defaultValue=\"layers\"\n      orientation=\"vertical\"\n      className=\"h-56 w-full max-w-xs gap-0 border\"\n    >\n      <TabsList className=\"h-full justify-start border-e\">\n        {tools.map((t) => (\n          <TabsTrigger\n            key={t.value}\n            value={t.value}\n            aria-label={t.label}\n            className=\"size-8 flex-none justify-center p-0\"\n          >\n            <t.icon />\n          </TabsTrigger>\n        ))}\n      </TabsList>\n      {tools.map((t) => (\n        <TabsContent key={t.value} value={t.value} className=\"p-3\">\n          <p className=\"mb-2 font-medium\">{t.label}</p>\n          <div className=\"flex flex-col gap-1.5\">\n            <Skeleton className=\"h-3 w-3/4\" />\n            <Skeleton className=\"h-3 w-1/2\" />\n            <Skeleton className=\"h-3 w-2/3\" />\n          </div>\n        </TabsContent>\n      ))}\n    </Tabs>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

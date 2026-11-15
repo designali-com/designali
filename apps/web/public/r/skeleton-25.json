@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "skeleton-25",
+  "type": "registry:example",
+  "description": "Image gallery placeholder with masonry columns of varying tile heights.",
+  "files": [
+    {
+      "path": "registry/designali/examples/skeleton/skeleton-25.tsx",
+      "content": "import { Skeleton } from \"@workspace/ui/components/skeleton\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst columns = [\n  [\"h-32\", \"h-20\", \"h-28\"],\n  [\"h-20\", \"h-36\", \"h-16\"],\n  [\"h-28\", \"h-16\", \"h-32\"],\n]\n\nexport default function MasonryGallerySkeleton() {\n  return (\n    <div className=\"grid w-full max-w-md grid-cols-3 gap-2\">\n      {columns.map((col, c) => (\n        <div key={c} className=\"flex flex-col gap-2\">\n          {col.map((h, i) => (\n            <Skeleton key={i} className={cn(\"w-full\", h)} />\n          ))}\n        </div>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "separator-13",
+  "type": "registry:example",
+  "description": "Destructive-colored separator marking where new unread messages begin.",
+  "files": [
+    {
+      "path": "registry/designali/examples/separator/separator-13.tsx",
+      "content": "import * as React from \"react\"\n\nimport { Separator } from \"@workspace/ui/components/separator\"\n\nconst messages = [\n  { author: \"Kai\", text: \"Pushed the hotfix to staging.\", unread: false },\n  { author: \"Mira\", text: \"Looks good on my end.\", unread: false },\n  { author: \"Kai\", text: \"Production deploy starts in 10.\", unread: true },\n  {\n    author: \"Leo\",\n    text: \"Heads up, the migration takes a minute.\",\n    unread: true,\n  },\n]\n\nexport default function UnreadMessagesDivider() {\n  const firstUnread = messages.findIndex((message) => message.unread)\n\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-2 text-sm\">\n      {messages.map((message, index) => (\n        <React.Fragment key={index}>\n          {index === firstUnread && (\n            <div className=\"flex items-center gap-2 py-1\">\n              <Separator className=\"flex-1 bg-destructive\" />\n              <span className=\"text-[11px] font-medium text-destructive\">\n                New messages\n              </span>\n            </div>\n          )}\n          <div className=\"flex gap-2\">\n            <span className=\"w-10 shrink-0 font-medium\">{message.author}</span>\n            <span className=\"text-muted-foreground\">{message.text}</span>\n          </div>\n        </React.Fragment>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

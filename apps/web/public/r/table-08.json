@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "table-08",
+  "type": "registry:example",
+  "description": "Skeleton placeholder rows shown while table data is loading.",
+  "files": [
+    {
+      "path": "registry/designali/examples/table/table-08.tsx",
+      "content": "import { Skeleton } from \"@workspace/ui/components/skeleton\"\nimport {\n  Table,\n  TableBody,\n  TableCell,\n  TableHead,\n  TableHeader,\n  TableRow,\n} from \"@workspace/ui/components/table\"\n\nexport default function LoadingSkeletonTable() {\n  return (\n    <div className=\"w-full max-w-lg border\" aria-busy=\"true\">\n      <Table>\n        <TableHeader>\n          <TableRow>\n            <TableHead>Customer</TableHead>\n            <TableHead>Plan</TableHead>\n            <TableHead className=\"text-right\">MRR</TableHead>\n          </TableRow>\n        </TableHeader>\n        <TableBody>\n          {Array.from({ length: 5 }).map((_, i) => (\n            <TableRow key={i}>\n              <TableCell>\n                <div className=\"flex items-center gap-2\">\n                  <Skeleton className=\"size-6 rounded-full\" />\n                  <Skeleton className=\"h-3 w-28\" />\n                </div>\n              </TableCell>\n              <TableCell>\n                <Skeleton className=\"h-3 w-16\" />\n              </TableCell>\n              <TableCell>\n                <Skeleton className=\"ms-auto h-3 w-12\" />\n              </TableCell>\n            </TableRow>\n          ))}\n        </TableBody>\n      </Table>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "menubar-50",
+  "type": "registry:example",
+  "description": "Onboarding menubar whose Getting started menu tracks completed setup steps with checkbox items and progress.",
+  "files": [
+    {
+      "path": "registry/designali/examples/menubar/menubar-50.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { RocketIcon } from \"lucide-react\"\n\nimport {\n  Menubar,\n  MenubarCheckboxItem,\n  MenubarContent,\n  MenubarGroup,\n  MenubarItem,\n  MenubarLabel,\n  MenubarMenu,\n  MenubarSeparator,\n  MenubarTrigger,\n} from \"@workspace/ui/components/menubar\"\nimport { Progress } from \"@workspace/ui/components/progress\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst steps = [\n  \"Verify email\",\n  \"Invite teammates\",\n  \"Connect calendar\",\n  \"Create first project\",\n]\n\nexport default function OnboardingChecklistMenubar() {\n  const [done, setDone] = React.useState<string[]>([\"Verify email\"])\n\n  return (\n    <div className=\"flex w-full max-w-xs flex-col gap-2\">\n      <Menubar>\n        <MenubarMenu>\n          <MenubarTrigger className=\"gap-1.5\">\n            <RocketIcon className=\"size-3.5\" /> Getting started\n            <span className=\"text-muted-foreground tabular-nums\">\n              {done.length}/{steps.length}\n            </span>\n          </MenubarTrigger>\n          <MenubarContent className=\"w-56\">\n            <MenubarGroup>\n              <MenubarLabel inset>Setup checklist</MenubarLabel>\n              {steps.map((step) => (\n                <MenubarCheckboxItem\n                  key={step}\n                  closeOnClick={false}\n                  checked={done.includes(step)}\n                  onCheckedChange={(checked) =>\n                    setDone((prev) =>\n                      checked ? [...prev, step] : prev.filter((s) => s !== step)\n                    )\n                  }\n                  className={cn(\n                    done.includes(step) && \"text-muted-foreground line-through\"\n                  )}\n                >\n                  {step}\n                </MenubarCheckboxItem>\n              ))}\n            </MenubarGroup>\n            <MenubarSeparator />\n            <MenubarGroup>\n              <MenubarItem inset>Dismiss checklist</MenubarItem>\n            </MenubarGroup>\n          </MenubarContent>\n        </MenubarMenu>\n      </Menubar>\n      <Progress value={(done.length / steps.length) * 100} />\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

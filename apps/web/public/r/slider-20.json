@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "slider-20",
+  "type": "registry:example",
+  "description": "Slider kept in sync with a numeric input for precise entry.",
+  "files": [
+    {
+      "path": "registry/designali/examples/slider/slider-20.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { Input } from \"@workspace/ui/components/input\"\nimport { Label } from \"@workspace/ui/components/label\"\nimport { Slider } from \"@workspace/ui/components/slider\"\n\nexport default function SliderWithNumberInput() {\n  const [value, setValue] = React.useState(40)\n\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-2\">\n      <Label htmlFor=\"max-upload\">Max upload size (MB)</Label>\n      <div className=\"flex items-center gap-3\">\n        <Slider\n          aria-label=\"Max upload size\"\n          value={[value]}\n          onValueChange={(v) => setValue((v as number[])[0]!)}\n          min={1}\n          max={250}\n        />\n        <Input\n          id=\"max-upload\"\n          type=\"number\"\n          className=\"w-20\"\n          min={1}\n          max={250}\n          value={value}\n          onChange={(e) =>\n            setValue(Math.min(250, Math.max(1, Number(e.target.value) || 1)))\n          }\n        />\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

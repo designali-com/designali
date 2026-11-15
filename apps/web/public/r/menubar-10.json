@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "menubar-10",
+  "type": "registry:example",
+  "description": "Appearance menubar with theme and density radio groups applied to a preview card.",
+  "files": [
+    {
+      "path": "registry/designali/examples/menubar/menubar-10.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { MonitorIcon, MoonIcon, SunIcon } from \"lucide-react\"\n\nimport {\n  Menubar,\n  MenubarContent,\n  MenubarMenu,\n  MenubarRadioGroup,\n  MenubarRadioItem,\n  MenubarTrigger,\n} from \"@workspace/ui/components/menubar\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nexport default function ThemeDensityMenubar() {\n  const [theme, setTheme] = React.useState(\"light\")\n  const [density, setDensity] = React.useState(\"comfortable\")\n\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-3\">\n      <Menubar>\n        <MenubarMenu>\n          <MenubarTrigger>Theme</MenubarTrigger>\n          <MenubarContent>\n            <MenubarRadioGroup value={theme} onValueChange={setTheme}>\n              <MenubarRadioItem value=\"light\">\n                <SunIcon /> Light\n              </MenubarRadioItem>\n              <MenubarRadioItem value=\"dark\">\n                <MoonIcon /> Dark\n              </MenubarRadioItem>\n              <MenubarRadioItem value=\"system\">\n                <MonitorIcon /> System\n              </MenubarRadioItem>\n            </MenubarRadioGroup>\n          </MenubarContent>\n        </MenubarMenu>\n        <MenubarMenu>\n          <MenubarTrigger>Density</MenubarTrigger>\n          <MenubarContent>\n            <MenubarRadioGroup value={density} onValueChange={setDensity}>\n              <MenubarRadioItem value=\"compact\">Compact</MenubarRadioItem>\n              <MenubarRadioItem value=\"comfortable\">\n                Comfortable\n              </MenubarRadioItem>\n              <MenubarRadioItem value=\"spacious\">Spacious</MenubarRadioItem>\n            </MenubarRadioGroup>\n          </MenubarContent>\n        </MenubarMenu>\n      </Menubar>\n      <div\n        className={cn(\n          \"border\",\n          theme === \"dark\" ? \"bg-zinc-900 text-zinc-100\" : \"bg-background\",\n          density === \"compact\" && \"p-2 text-xs\",\n          density === \"comfortable\" && \"p-4 text-sm\",\n          density === \"spacious\" && \"p-6 text-base\"\n        )}\n      >\n        <p className=\"font-medium\">Weekly digest</p>\n        <p className=\"opacity-70\">\n          Theme: {theme}, density: {density}\n        </p>\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

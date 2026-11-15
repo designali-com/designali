@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "scroll-area-22",
+  "type": "registry:example",
+  "description": "Handbook with a table of contents that scrolls to sections inside the scroll area.",
+  "files": [
+    {
+      "path": "registry/designali/examples/scroll-area/scroll-area-22.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { ScrollArea } from \"@workspace/ui/components/scroll-area\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst sections = [\n  { id: \"values\", title: \"Our values\" },\n  { id: \"hours\", title: \"Working hours\" },\n  { id: \"leave\", title: \"Time off\" },\n  { id: \"equipment\", title: \"Equipment\" },\n  { id: \"expenses\", title: \"Expenses\" },\n]\n\nexport default function TableOfContentsJump() {\n  const [active, setActive] = React.useState(\"values\")\n\n  const jump = (id: string) => {\n    const target = document.getElementById(\"handbook-\" + id)\n    const viewport = target?.closest(\"[data-slot=scroll-area-viewport]\") as\n      HTMLElement | null | undefined\n    if (target && viewport)\n      viewport.scrollTo({ top: target.offsetTop - 8, behavior: \"smooth\" })\n    setActive(id)\n  }\n\n  return (\n    <div className=\"flex w-full max-w-md border\">\n      <nav className=\"flex w-32 shrink-0 flex-col gap-0.5 border-r p-2 text-xs\">\n        {sections.map((s) => (\n          <button\n            key={s.id}\n            onClick={() => jump(s.id)}\n            className={cn(\n              \"truncate px-2 py-1 text-left hover:bg-muted\",\n              active === s.id && \"bg-muted font-medium\"\n            )}\n          >\n            {s.title}\n          </button>\n        ))}\n      </nav>\n      <ScrollArea className=\"h-64 flex-1\">\n        <div className=\"relative flex flex-col gap-6 p-4\">\n          {sections.map((s) => (\n            <section\n              key={s.id}\n              id={\"handbook-\" + s.id}\n              className=\"flex flex-col gap-1\"\n            >\n              <h4 className=\"text-sm font-medium\">{s.title}</h4>\n              <p className=\"text-xs leading-relaxed text-muted-foreground\">\n                Everything you need to know about {s.title.toLowerCase()} at\n                Orbit Labs, from day one through your first year. Reach out to\n                the people team with questions.\n              </p>\n            </section>\n          ))}\n        </div>\n      </ScrollArea>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

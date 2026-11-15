@@ -1,0 +1,26 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "footer-11",
+  "type": "registry:block",
+  "description": "Newsletter-first footer with a publication pitch and subscribe form above link columns and an address block.",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button",
+    "input"
+  ],
+  "files": [
+    {
+      "path": "registry/designali/blocks/footer/footer-11.tsx",
+      "content": "\"use client\"\n\nimport { useState } from \"react\"\nimport { ArrowRight, Check } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Input } from \"@workspace/ui/components/input\"\n\nconst columns = [\n  { title: \"Read\", links: [\"Latest issue\", \"Archive\", \"Long reads\", \"Interviews\"] },\n  { title: \"About\", links: [\"Our editors\", \"Ethics policy\", \"Advertise\", \"Careers\"] },\n  { title: \"Help\", links: [\"Manage subscription\", \"Gift a subscription\", \"Contact\", \"Privacy\"] },\n]\n\nexport default function Footer11() {\n  const [email, setEmail] = useState(\"\")\n  const [done, setDone] = useState(false)\n\n  return (\n    <footer className=\"w-full border-t bg-background\">\n      <div className=\"mx-auto max-w-7xl px-6 py-16\">\n        <div className=\"grid gap-10 border-b pb-12 lg:grid-cols-2 lg:items-end\">\n          <div>\n            <p className=\"font-serif text-3xl tracking-tight md:text-4xl\">The Sunday Ledger</p>\n            <p className=\"mt-3 max-w-md text-sm leading-6 text-muted-foreground\">\n              One carefully reported essay on money, work and cities, in your\n              inbox every Sunday at 7am. Read by 140,000 people.\n            </p>\n          </div>\n          {done ? (\n            <p className=\"flex items-center gap-2 text-sm\">\n              <Check className=\"size-4 text-emerald-600 dark:text-emerald-400\" />\n              You are on the list. First issue arrives Sunday.\n            </p>\n          ) : (\n            <form\n              onSubmit={(event) => {\n                event.preventDefault()\n                if (email) setDone(true)\n              }}\n              className=\"flex w-full flex-col gap-2 sm:flex-row lg:justify-self-end\"\n            >\n              <Input\n                type=\"email\"\n                required\n                value={email}\n                onChange={(event) => setEmail(event.target.value)}\n                placeholder=\"you@example.com\"\n                aria-label=\"Email address\"\n                className=\"h-10 sm:w-72\"\n              />\n              <Button type=\"submit\">\n                Subscribe free\n                <ArrowRight />\n              </Button>\n            </form>\n          )}\n        </div>\n        <div className=\"grid grid-cols-2 gap-8 pt-12 sm:grid-cols-4\">\n          {columns.map((column) => (\n            <div key={column.title}>\n              <p className=\"text-sm font-medium\">{column.title}</p>\n              <ul className=\"mt-4 space-y-2.5 text-sm text-muted-foreground\">\n                {column.links.map((link) => (\n                  <li key={link}>\n                    <a href=\"#\" className=\"hover:text-foreground\">\n                      {link}\n                    </a>\n                  </li>\n                ))}\n              </ul>\n            </div>\n          ))}\n          <div className=\"col-span-2 text-xs leading-5 text-muted-foreground sm:col-span-1\">\n            <p>Ledger Media Ltd.</p>\n            <p>12 Clerkenwell Green</p>\n            <p>London EC1R 0DP</p>\n            <p className=\"mt-4\">© 2026 All rights reserved.</p>\n          </div>\n        </div>\n      </div>\n    </footer>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "560px"
+  },
+  "categories": [
+    "footer"
+  ]
+}

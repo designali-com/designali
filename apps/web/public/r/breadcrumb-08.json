@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "breadcrumb-08",
+  "type": "registry:example",
+  "description": "Code repository path with owner, repo, branch badge and monospace file segments.",
+  "files": [
+    {
+      "path": "registry/designali/examples/breadcrumb/breadcrumb-08.tsx",
+      "content": "import { Fragment } from \"react\"\nimport { GitBranchIcon } from \"lucide-react\"\n\nimport { Badge } from \"@workspace/ui/components/badge\"\nimport {\n  Breadcrumb,\n  BreadcrumbItem,\n  BreadcrumbLink,\n  BreadcrumbList,\n  BreadcrumbPage,\n  BreadcrumbSeparator,\n} from \"@workspace/ui/components/breadcrumb\"\n\nconst segments = [\"src\", \"components\", \"checkout\"]\n\nexport default function RepositoryPathBreadcrumb() {\n  return (\n    <div className=\"flex w-full max-w-md flex-col gap-2 border p-3\">\n      <Breadcrumb>\n        <BreadcrumbList>\n          <BreadcrumbItem>\n            <BreadcrumbLink href=\"#\" className=\"font-medium\">\n              lumen-labs\n            </BreadcrumbLink>\n          </BreadcrumbItem>\n          <BreadcrumbSeparator>/</BreadcrumbSeparator>\n          <BreadcrumbItem>\n            <BreadcrumbLink href=\"#\" className=\"font-medium text-foreground\">\n              storefront\n            </BreadcrumbLink>\n          </BreadcrumbItem>\n          <BreadcrumbItem>\n            <Badge variant=\"outline\" className=\"gap-1 font-mono\">\n              <GitBranchIcon />\n              main\n            </Badge>\n          </BreadcrumbItem>\n        </BreadcrumbList>\n      </Breadcrumb>\n      <Breadcrumb>\n        <BreadcrumbList className=\"font-mono\">\n          {segments.map((segment) => (\n            <Fragment key={segment}>\n              <BreadcrumbItem>\n                <BreadcrumbLink href=\"#\">{segment}</BreadcrumbLink>\n              </BreadcrumbItem>\n              <BreadcrumbSeparator>/</BreadcrumbSeparator>\n            </Fragment>\n          ))}\n          <BreadcrumbItem>\n            <BreadcrumbPage>CartSummary.tsx</BreadcrumbPage>\n          </BreadcrumbItem>\n        </BreadcrumbList>\n      </Breadcrumb>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

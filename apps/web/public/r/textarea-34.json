@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "textarea-34",
+  "type": "registry:example",
+  "description": "Feedback textarea that is disabled with a spinner while the submission is in flight.",
+  "files": [
+    {
+      "path": "registry/designali/examples/textarea/textarea-34.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { CircleCheckIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Label } from \"@workspace/ui/components/label\"\nimport { Spinner } from \"@workspace/ui/components/spinner\"\nimport { Textarea } from \"@workspace/ui/components/textarea\"\n\nexport default function SubmittingTextarea() {\n  const [state, setState] = React.useState<\"idle\" | \"sending\" | \"sent\">(\"idle\")\n\n  function submit() {\n    setState(\"sending\")\n    setTimeout(() => setState(\"sent\"), 1500)\n  }\n\n  if (state === \"sent\") {\n    return (\n      <div className=\"flex w-full max-w-sm flex-col items-center gap-2 border p-6 text-center text-xs\">\n        <CircleCheckIcon className=\"size-6 text-emerald-600\" />\n        Thanks! Our team reads every message.\n        <Button variant=\"outline\" size=\"xs\" onClick={() => setState(\"idle\")}>\n          Send another\n        </Button>\n      </div>\n    )\n  }\n\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-2\">\n      <Label htmlFor=\"ta-submit\">Suggest a feature</Label>\n      <Textarea\n        id=\"ta-submit\"\n        disabled={state === \"sending\"}\n        defaultValue=\"Let me snooze reminders for a week.\"\n      />\n      <Button size=\"sm\" onClick={submit} disabled={state === \"sending\"}>\n        {state === \"sending\" && <Spinner data-icon=\"inline-start\" />}\n        {state === \"sending\" ? \"Sending…\" : \"Submit\"}\n      </Button>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

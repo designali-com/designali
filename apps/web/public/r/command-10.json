@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "command-10",
+  "type": "registry:example",
+  "description": "A compact emoji search that filters reactions by name and keyword aliases.",
+  "files": [
+    {
+      "path": "registry/designali/examples/command/command-10.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport {\n  Command,\n  CommandEmpty,\n  CommandGroup,\n  CommandInput,\n  CommandItem,\n  CommandList,\n} from \"@workspace/ui/components/command\"\n\nconst emojis = [\n  { char: \"👍\", name: \"Thumbs up\", keywords: [\"like\", \"approve\", \"yes\"] },\n  {\n    char: \"🎉\",\n    name: \"Party popper\",\n    keywords: [\"celebrate\", \"tada\", \"launch\"],\n  },\n  { char: \"❤️\", name: \"Red heart\", keywords: [\"love\", \"favorite\"] },\n  { char: \"😂\", name: \"Tears of joy\", keywords: [\"funny\", \"lol\", \"laugh\"] },\n  { char: \"👀\", name: \"Eyes\", keywords: [\"look\", \"review\", \"watching\"] },\n  { char: \"🚀\", name: \"Rocket\", keywords: [\"ship\", \"deploy\", \"fast\"] },\n  { char: \"🔥\", name: \"Fire\", keywords: [\"hot\", \"lit\", \"trending\"] },\n  { char: \"✅\", name: \"Check mark\", keywords: [\"done\", \"complete\"] },\n]\n\nexport default function EmojiReactionSearch() {\n  const [picked, setPicked] = React.useState<string[]>([])\n\n  return (\n    <div className=\"flex w-full max-w-xs flex-col gap-2\">\n      <div className=\"flex h-8 items-center gap-1 border px-2 text-sm\">\n        <span className=\"text-xs text-muted-foreground\">Reactions:</span>\n        {picked.map((char, index) => (\n          <span key={char + index}>{char}</span>\n        ))}\n      </div>\n      <Command className=\"border\">\n        <CommandInput placeholder=\"Search emoji (try “ship”)\" />\n        <CommandList className=\"max-h-56\">\n          <CommandEmpty>No emoji found.</CommandEmpty>\n          <CommandGroup heading=\"Frequently used\">\n            {emojis.map((emoji) => (\n              <CommandItem\n                key={emoji.name}\n                value={emoji.name}\n                keywords={emoji.keywords}\n                onSelect={() =>\n                  setPicked((current) => [...current, emoji.char].slice(-8))\n                }\n              >\n                <span className=\"text-base leading-none\">{emoji.char}</span>\n                <span>{emoji.name}</span>\n                <span className=\"ms-auto truncate text-[11px] text-muted-foreground\">\n                  :{emoji.keywords[0]}:\n                </span>\n              </CommandItem>\n            ))}\n          </CommandGroup>\n        </CommandList>\n      </Command>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

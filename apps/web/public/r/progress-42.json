@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "progress-42",
+  "type": "registry:example",
+  "description": "Cart nudge showing how close the order is to free shipping.",
+  "files": [
+    {
+      "path": "registry/designali/examples/progress/progress-42.tsx",
+      "content": "import { PackageIcon } from \"lucide-react\"\n\nimport { Progress } from \"@workspace/ui/components/progress\"\n\nexport default function FreeShippingThreshold() {\n  const subtotal = 63\n  const threshold = 75\n  const remaining = threshold - subtotal\n\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-3 border p-4\">\n      <p className=\"flex items-center gap-2 text-sm\">\n        <PackageIcon className=\"size-4 text-muted-foreground\" />\n        <span>\n          You&apos;re{\" \"}\n          <span className=\"font-semibold\">{\"$\" + remaining.toFixed(2)}</span>{\" \"}\n          away from free shipping\n        </span>\n      </p>\n      <Progress\n        value={subtotal}\n        max={threshold}\n        aria-label=\"Progress to free shipping\"\n        className=\"[&_[data-slot=progress-track]]:h-1.5\"\n      />\n      <div className=\"flex justify-between text-xs text-muted-foreground\">\n        <span>Subtotal {\"$\" + subtotal.toFixed(2)}</span>\n        <span>{\"$\" + threshold} goal</span>\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

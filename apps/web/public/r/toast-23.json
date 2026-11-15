@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toast-23",
+  "type": "registry:example",
+  "description": "A persistent warning toast whose action extends the session and updates the toast.",
+  "files": [
+    {
+      "path": "registry/designali/examples/toast/toast-23.tsx",
+      "content": "\"use client\"\n\nimport { TimerIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Toaster, createToastManager } from \"@workspace/ui/components/toast\"\n\nconst notify = createToastManager()\n\nexport default function SessionExpiringToast() {\n  function warn() {\n    const id = notify.add({\n      type: \"warning\",\n      title: \"Session expiring\",\n      description: \"You will be signed out in 2 minutes.\",\n      timeout: 0,\n      actionProps: {\n        children: \"Stay signed in\",\n        onClick: () =>\n          notify.update(id, {\n            type: \"success\",\n            title: \"Session extended\",\n            description: \"You are good for another 30 minutes.\",\n            actionProps: undefined,\n            timeout: 3000,\n          }),\n      },\n    })\n  }\n\n  return (\n    <Toaster toastManager={notify}>\n      <Button variant=\"outline\" onClick={warn}>\n        <TimerIcon data-icon=\"inline-start\" />\n        Simulate idle timeout\n      </Button>\n    </Toaster>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

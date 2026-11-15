@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "switch-03",
+  "type": "registry:example",
+  "description": "Per-category notification settings with separate email and push switches.",
+  "files": [
+    {
+      "path": "registry/designali/examples/switch/switch-03.tsx",
+      "content": "import { BellIcon, MailIcon } from \"lucide-react\"\n\nimport { Switch } from \"@workspace/ui/components/switch\"\n\nconst categories = [\n  {\n    id: \"mentions\",\n    label: \"Mentions\",\n    hint: \"When someone @mentions you\",\n    email: true,\n    push: true,\n  },\n  {\n    id: \"comments\",\n    label: \"Comments\",\n    hint: \"Replies on your threads\",\n    email: false,\n    push: true,\n  },\n  {\n    id: \"invites\",\n    label: \"Invites\",\n    hint: \"Workspace and project invites\",\n    email: true,\n    push: false,\n  },\n  {\n    id: \"digest\",\n    label: \"Weekly digest\",\n    hint: \"Summary every Monday\",\n    email: true,\n    push: false,\n  },\n]\n\nexport default function NotificationChannelMatrix() {\n  return (\n    <div className=\"w-full max-w-md border\">\n      <div className=\"grid grid-cols-[1fr_auto_auto] items-center gap-x-6 border-b bg-muted/50 px-4 py-2 text-xs font-medium text-muted-foreground\">\n        <span>Activity</span>\n        <span className=\"flex items-center gap-1\">\n          <MailIcon className=\"size-3.5\" />\n          Email\n        </span>\n        <span className=\"flex items-center gap-1\">\n          <BellIcon className=\"size-3.5\" />\n          Push\n        </span>\n      </div>\n      {categories.map((item) => (\n        <div\n          key={item.id}\n          className=\"grid grid-cols-[1fr_auto_auto] items-center gap-x-6 border-b px-4 py-3 last:border-b-0\"\n        >\n          <div className=\"min-w-0\">\n            <p className=\"text-sm font-medium\">{item.label}</p>\n            <p className=\"truncate text-xs text-muted-foreground\">\n              {item.hint}\n            </p>\n          </div>\n          <div className=\"flex w-12 justify-center\">\n            <Switch\n              size=\"sm\"\n              defaultChecked={item.email}\n              aria-label={item.label + \" email\"}\n            />\n          </div>\n          <div className=\"flex w-12 justify-center\">\n            <Switch\n              size=\"sm\"\n              defaultChecked={item.push}\n              aria-label={item.label + \" push\"}\n            />\n          </div>\n        </div>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

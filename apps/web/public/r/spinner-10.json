@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "spinner-10",
+  "type": "registry:example",
+  "description": "Empty state used as a loading placeholder with a spinner as its media.",
+  "files": [
+    {
+      "path": "registry/designali/examples/spinner/spinner-10.tsx",
+      "content": "import { Button } from \"@workspace/ui/components/button\"\nimport {\n  Empty,\n  EmptyContent,\n  EmptyDescription,\n  EmptyHeader,\n  EmptyMedia,\n  EmptyTitle,\n} from \"@workspace/ui/components/empty\"\nimport { Spinner } from \"@workspace/ui/components/spinner\"\n\nexport default function EmptyStateLoading() {\n  return (\n    <Empty className=\"w-full max-w-sm border\">\n      <EmptyHeader>\n        <EmptyMedia variant=\"icon\">\n          <Spinner />\n        </EmptyMedia>\n        <EmptyTitle>Loading your projects</EmptyTitle>\n        <EmptyDescription>\n          Fetching the latest activity from 12 workspaces.\n        </EmptyDescription>\n      </EmptyHeader>\n      <EmptyContent>\n        <Button variant=\"outline\" size=\"sm\">\n          Cancel\n        </Button>\n      </EmptyContent>\n    </Empty>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

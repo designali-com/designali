@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "badge-31",
+  "type": "registry:example",
+  "description": "Tabs whose triggers show item counts in badges.",
+  "files": [
+    {
+      "path": "registry/designali/examples/badge/badge-31.tsx",
+      "content": "import { Badge } from \"@workspace/ui/components/badge\"\nimport {\n  Tabs,\n  TabsContent,\n  TabsList,\n  TabsTrigger,\n} from \"@workspace/ui/components/tabs\"\n\nconst tabs = [\n  { value: \"open\", label: \"Open\", count: 14 },\n  { value: \"review\", label: \"In review\", count: 3 },\n  { value: \"closed\", label: \"Closed\", count: 128 },\n]\n\nexport default function TabsWithCountBadges() {\n  return (\n    <Tabs defaultValue=\"open\" className=\"w-full max-w-md\">\n      <TabsList>\n        {tabs.map((tab) => (\n          <TabsTrigger key={tab.value} value={tab.value}>\n            {tab.label}\n            <Badge\n              variant=\"secondary\"\n              className=\"h-4 px-1.5 text-[10px] tabular-nums\"\n            >\n              {tab.count}\n            </Badge>\n          </TabsTrigger>\n        ))}\n      </TabsList>\n      {tabs.map((tab) => (\n        <TabsContent\n          key={tab.value}\n          value={tab.value}\n          className=\"border p-4 text-sm text-muted-foreground\"\n        >\n          {tab.count} {tab.label.toLowerCase()} pull requests.\n        </TabsContent>\n      ))}\n    </Tabs>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "accordion-08",
+  "type": "registry:example",
+  "description": "Accordion with the multiple prop so several sections stay expanded at once.",
+  "files": [
+    {
+      "path": "registry/designali/examples/accordion/accordion-08.tsx",
+      "content": "import { ChevronDownIcon } from \"lucide-react\"\n\nimport {\n  Accordion,\n  AccordionContent,\n  AccordionItem,\n  AccordionTrigger,\n} from \"@workspace/ui/components/accordion\"\n\nconst sections = [\n  {\n    value: \"overview\",\n    title: \"Overview\",\n    body: \"Quarterly roadmap for the Atlas mobile app, covering offline sync and the redesigned inbox.\",\n  },\n  {\n    value: \"goals\",\n    title: \"Goals\",\n    body: \"Cut cold-start time to under 1.5s and lift weekly retention from 41% to 48%.\",\n  },\n  {\n    value: \"risks\",\n    title: \"Risks\",\n    body: \"The sync engine rewrite depends on two engineers who are also on call this quarter.\",\n  },\n  {\n    value: \"owners\",\n    title: \"Owners\",\n    body: \"Product: Lena Ortiz. Engineering: Marcus Hale. Design: Ivy Tran.\",\n  },\n]\n\nexport default function AccordionMultipleOpen() {\n  return (\n    <div className=\"w-full max-w-md space-y-2\">\n      <p className=\"text-xs text-muted-foreground\">\n        Open as many sections as you like.\n      </p>\n      <Accordion\n        multiple\n        defaultValue={[\"overview\", \"goals\"]}\n        className=\"border px-3\"\n      >\n        {sections.map((section) => (\n          <AccordionItem key={section.value} value={section.value}>\n            <AccordionTrigger>\n              {section.title}\n              <ChevronDownIcon\n                data-slot=\"accordion-trigger-icon\"\n                className=\"transition-transform duration-200 group-aria-expanded/accordion-trigger:rotate-180\"\n              />\n            </AccordionTrigger>\n            <AccordionContent className=\"text-muted-foreground\">\n              {section.body}\n            </AccordionContent>\n          </AccordionItem>\n        ))}\n      </Accordion>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

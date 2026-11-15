@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button-23",
+  "type": "registry:example",
+  "description": "Split button with a primary merge action and a dropdown to pick the merge strategy.",
+  "files": [
+    {
+      "path": "registry/designali/examples/button/button-23.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { ChevronDownIcon, GitMergeIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { ButtonGroup } from \"@workspace/ui/components/button-group\"\nimport {\n  DropdownMenu,\n  DropdownMenuContent,\n  DropdownMenuRadioGroup,\n  DropdownMenuRadioItem,\n  DropdownMenuTrigger,\n} from \"@workspace/ui/components/dropdown-menu\"\n\nconst strategies = {\n  merge: \"Create merge commit\",\n  squash: \"Squash and merge\",\n  rebase: \"Rebase and merge\",\n}\n\nexport default function MergeSplitButton() {\n  const [strategy, setStrategy] = React.useState(\"squash\")\n\n  return (\n    <ButtonGroup>\n      <Button>\n        <GitMergeIcon data-icon=\"inline-start\" />\n        {strategies[strategy as keyof typeof strategies]}\n      </Button>\n      <DropdownMenu>\n        <DropdownMenuTrigger\n          render={\n            <Button\n              size=\"icon\"\n              className=\"h-10 border-l-primary-foreground/20\"\n              aria-label=\"Choose merge strategy\"\n            />\n          }\n        >\n          <ChevronDownIcon />\n        </DropdownMenuTrigger>\n        <DropdownMenuContent align=\"end\" className=\"w-52\">\n          <DropdownMenuRadioGroup value={strategy} onValueChange={setStrategy}>\n            {Object.entries(strategies).map(([value, label]) => (\n              <DropdownMenuRadioItem key={value} value={value}>\n                {label}\n              </DropdownMenuRadioItem>\n            ))}\n          </DropdownMenuRadioGroup>\n        </DropdownMenuContent>\n      </DropdownMenu>\n    </ButtonGroup>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

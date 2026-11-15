@@ -4,6 +4,7 @@ import { components } from "./registry-components"
 import { blocks } from "./registry-blocks"
 import { pages } from "./registry-pages"
 import { examples } from "./registry-examples"
+import { examplesNew } from "./registry-examples-new"
 
 export const registry = {
   homepage: "https://designali.com",
@@ -12,6 +13,7 @@ export const registry = {
     ...blocks, 
     ...pages, 
     ...examples, 
+    ...examplesNew,
     ...(components as Registry["items"])],
   name: "predict design",
 } satisfies Registry

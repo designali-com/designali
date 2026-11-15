@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "location-18",
+  "type": "registry:block",
+  "description": "Dense branch directory table with sticky header, status badges, step-free access column and CSV link.",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "badge"
+  ],
+  "files": [
+    {
+      "path": "registry/designali/blocks/location/location-18.tsx",
+      "content": "import { Accessibility, ArrowUpRight } from \"lucide-react\"\n\nimport { Badge } from \"@workspace/ui/components/badge\"\n\nconst branches = [\n  { city: \"Glasgow\", area: \"Merchant City\", address: \"41 Ingram St, G1 1EJ\", phone: \"0141 555 0170\", hours: \"08:00-18:00\", status: \"Open\", access: true },\n  { city: \"Glasgow\", area: \"West End\", address: \"312 Byres Rd, G12 8UJ\", phone: \"0141 555 0193\", hours: \"09:00-17:30\", status: \"Open\", access: true },\n  { city: \"Edinburgh\", area: \"Leith\", address: \"18 The Shore, EH6 6QW\", phone: \"0131 555 0124\", hours: \"08:30-18:00\", status: \"Open\", access: false },\n  { city: \"Edinburgh\", area: \"Old Town\", address: \"77 Cockburn St, EH1 1BS\", phone: \"0131 555 0158\", hours: \"10:00-16:00\", status: \"Reduced hours\", access: true },\n  { city: \"Aberdeen\", area: \"Union Street\", address: \"205 Union St, AB11 6BB\", phone: \"01224 555 011\", hours: \"09:00-17:00\", status: \"Open\", access: true },\n  { city: \"Dundee\", area: \"Waterfront\", address: \"3 Riverside Dr, DD1 4XA\", phone: \"01382 555 046\", hours: \"-\", status: \"Opening Jan\", access: true },\n  { city: \"Inverness\", area: \"Eastgate\", address: \"9 Academy St, IV1 1JN\", phone: \"01463 555 092\", hours: \"09:00-17:00\", status: \"Open\", access: false },\n]\n\nexport default function Location18() {\n  return (\n    <section className=\"w-full bg-background py-20 md:py-28\">\n      <div className=\"mx-auto max-w-7xl px-6\">\n        <div className=\"flex flex-col justify-between gap-4 md:flex-row md:items-end\">\n          <div>\n            <h2 className=\"text-4xl font-semibold tracking-tight md:text-5xl\">\n              Branch directory\n            </h2>\n            <p className=\"mt-3 text-muted-foreground\">\n              Thistle Mutual &middot; {branches.length} branches across Scotland\n            </p>\n          </div>\n          <a href=\"#\" className=\"inline-flex items-center gap-1 text-sm font-medium hover:underline\">\n            Download as CSV <ArrowUpRight className=\"size-4\" />\n          </a>\n        </div>\n\n        <div className=\"mt-10 max-h-[520px] overflow-auto border\">\n          <table className=\"w-full min-w-[760px] text-sm\">\n            <thead className=\"sticky top-0 z-10 bg-muted text-xs text-muted-foreground\">\n              <tr className=\"[&>th]:px-4 [&>th]:py-3 [&>th]:text-start [&>th]:font-medium\">\n                <th>Branch</th>\n                <th>Address</th>\n                <th>Phone</th>\n                <th>Today</th>\n                <th>Status</th>\n                <th className=\"text-center\">\n                  <Accessibility className=\"mx-auto size-4\" aria-label=\"Step-free access\" />\n                </th>\n              </tr>\n            </thead>\n            <tbody className=\"divide-y\">\n              {branches.map((b) => (\n                <tr key={b.address} className=\"transition-colors hover:bg-muted/40 [&>td]:px-4 [&>td]:py-3.5\">\n                  <td>\n                    <span className=\"block font-medium\">{b.city}</span>\n                    <span className=\"block text-xs text-muted-foreground\">{b.area}</span>\n                  </td>\n                  <td className=\"text-muted-foreground\">{b.address}</td>\n                  <td className=\"tabular-nums\">\n                    <a href=\"#\" className=\"hover:underline\">{b.phone}</a>\n                  </td>\n                  <td className=\"tabular-nums\">{b.hours}</td>\n                  <td>\n                    <Badge\n                      variant={b.status === \"Open\" ? \"secondary\" : \"outline\"}\n                      className={\n                        b.status === \"Open\"\n                          ? \"bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300\"\n                          : undefined\n                      }\n                    >\n                      {b.status}\n                    </Badge>\n                  </td>\n                  <td className=\"text-center\">\n                    {b.access ? (\n                      <span className=\"text-emerald-700 dark:text-emerald-400\">Yes</span>\n                    ) : (\n                      <span className=\"text-muted-foreground\">No</span>\n                    )}\n                  </td>\n                </tr>\n              ))}\n            </tbody>\n          </table>\n        </div>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "760px"
+  },
+  "categories": [
+    "location"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "grid-09",
+  "type": "registry:block",
+  "description": "Asymmetric shop-by-category grid with one feature tile and gradient image tiles.",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/designali/blocks/grid/grid-09.tsx",
+      "content": "import { ArrowRight } from \"lucide-react\"\n\nconst categories = [\n  { name: \"Lighting\", count: 48, tone: \"from-amber-300 via-orange-400 to-rose-500\", className: \"sm:col-span-2 sm:row-span-2\", feature: true },\n  { name: \"Seating\", count: 112, tone: \"from-stone-300 to-stone-500\", className: \"\" },\n  { name: \"Tables\", count: 64, tone: \"from-emerald-300 to-teal-600\", className: \"\" },\n  { name: \"Storage\", count: 39, tone: \"from-sky-300 to-indigo-500\", className: \"sm:col-span-2\" },\n  { name: \"Textiles\", count: 87, tone: \"from-rose-200 to-fuchsia-500\", className: \"\" },\n  { name: \"Objects\", count: 156, tone: \"from-lime-200 to-green-600\", className: \"\" },\n]\n\nexport default function Grid09() {\n  return (\n    <section className=\"w-full bg-background py-24\">\n      <div className=\"mx-auto max-w-7xl px-6\">\n        <div className=\"flex items-end justify-between gap-6\">\n          <h2 className=\"text-4xl font-semibold tracking-tight md:text-5xl\">Shop by room</h2>\n          <a href=\"#\" className=\"hidden items-center gap-2 text-sm text-muted-foreground hover:text-foreground sm:inline-flex\">\n            All 506 pieces <ArrowRight className=\"size-4\" />\n          </a>\n        </div>\n\n        <div className=\"mt-12 grid auto-rows-[200px] grid-cols-1 gap-4 sm:grid-cols-4 md:auto-rows-[220px]\">\n          {categories.map((category) => (\n            <a\n              key={category.name}\n              href=\"#\"\n              className={`group relative flex overflow-hidden border border-border ${category.className}`}\n            >\n              <div\n                className={`absolute inset-0 bg-gradient-to-br ${category.tone} transition-transform duration-500 group-hover:scale-105`}\n              />\n              <div className=\"absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(255,255,255,0.35),transparent_55%)]\" />\n              <div className=\"relative mt-auto flex w-full items-end justify-between gap-4 p-5 text-white\">\n                <div>\n                  <p className=\"text-xs opacity-80\">{category.count} pieces</p>\n                  <h3\n                    className={`font-semibold tracking-tight ${\n                      category.feature ? \"text-4xl md:text-5xl\" : \"text-xl\"\n                    }`}\n                  >\n                    {category.name}\n                  </h3>\n                  {category.feature && (\n                    <p className=\"mt-2 max-w-xs text-sm opacity-90\">\n                      Hand-blown glass pendants and brass task lamps, made in small batches.\n                    </p>\n                  )}\n                </div>\n                <span className=\"flex size-9 shrink-0 items-center justify-center bg-white text-neutral-900 transition-transform group-hover:translate-x-1\">\n                  <ArrowRight className=\"size-4\" />\n                </span>\n              </div>\n            </a>\n          ))}\n        </div>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "750px"
+  },
+  "categories": [
+    "grid"
+  ]
+}

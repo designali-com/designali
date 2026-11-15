@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-otp-47",
+  "type": "registry:example",
+  "description": "Join a team workspace with an invite code, showing the workspace preview card.",
+  "files": [
+    {
+      "path": "registry/designali/examples/input-otp/input-otp-47.tsx",
+      "content": "\"use client\"\n\nimport { REGEXP_ONLY_DIGITS_AND_CHARS } from \"input-otp\"\nimport { BuildingIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Field, FieldLabel } from \"@workspace/ui/components/field\"\nimport {\n  InputOTP,\n  InputOTPGroup,\n  InputOTPSeparator,\n  InputOTPSlot,\n} from \"@workspace/ui/components/input-otp\"\nimport {\n  Item,\n  ItemContent,\n  ItemDescription,\n  ItemMedia,\n  ItemTitle,\n} from \"@workspace/ui/components/item\"\n\nexport default function WorkspaceInviteCode() {\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-4\">\n      <Item variant=\"outline\">\n        <ItemMedia variant=\"icon\">\n          <BuildingIcon />\n        </ItemMedia>\n        <ItemContent>\n          <ItemTitle>Tidewater Studio</ItemTitle>\n          <ItemDescription>38 members · Design team</ItemDescription>\n        </ItemContent>\n      </Item>\n      <Field>\n        <FieldLabel htmlFor=\"invite-code\">Invite code</FieldLabel>\n        <InputOTP\n          id=\"invite-code\"\n          maxLength={6}\n          pattern={REGEXP_ONLY_DIGITS_AND_CHARS}\n        >\n          <InputOTPGroup>\n            <InputOTPSlot index={0} className=\"uppercase\" />\n            <InputOTPSlot index={1} className=\"uppercase\" />\n            <InputOTPSlot index={2} className=\"uppercase\" />\n          </InputOTPGroup>\n          <InputOTPSeparator />\n          <InputOTPGroup>\n            <InputOTPSlot index={3} className=\"uppercase\" />\n            <InputOTPSlot index={4} className=\"uppercase\" />\n            <InputOTPSlot index={5} className=\"uppercase\" />\n          </InputOTPGroup>\n        </InputOTP>\n      </Field>\n      <Button>Join workspace</Button>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

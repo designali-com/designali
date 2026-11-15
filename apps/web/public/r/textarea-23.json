@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "textarea-23",
+  "type": "registry:example",
+  "description": "Textarea with an inline clear button that appears once it has content.",
+  "files": [
+    {
+      "path": "registry/designali/examples/textarea/textarea-23.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { XIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Textarea } from \"@workspace/ui/components/textarea\"\n\nexport default function ClearableTextarea() {\n  const [value, setValue] = React.useState(\n    \"Pick up dry cleaning, buy oat milk, return library books\"\n  )\n\n  return (\n    <div className=\"relative w-full max-w-sm\">\n      <Textarea\n        value={value}\n        onChange={(e) => setValue(e.target.value)}\n        className=\"pe-8\"\n        aria-label=\"Errands\"\n        placeholder=\"Errands for today\"\n      />\n      {value && (\n        <Button\n          variant=\"ghost\"\n          size=\"icon-xs\"\n          aria-label=\"Clear\"\n          onClick={() => setValue(\"\")}\n          className=\"absolute end-1.5 top-1.5\"\n        >\n          <XIcon />\n        </Button>\n      )}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

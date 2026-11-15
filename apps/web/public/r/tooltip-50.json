@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tooltip-50",
+  "type": "registry:example",
+  "description": "A tooltip with a close delay so users can move the pointer into it to select text.",
+  "files": [
+    {
+      "path": "registry/designali/examples/tooltip/tooltip-50.tsx",
+      "content": "import { Badge } from \"@workspace/ui/components/badge\"\nimport {\n  Tooltip,\n  TooltipContent,\n  TooltipTrigger,\n} from \"@workspace/ui/components/tooltip\"\n\nexport default function CloseDelayTooltip() {\n  return (\n    <div className=\"flex items-center gap-2 text-sm\">\n      <span className=\"text-muted-foreground\">Order</span>\n      <Tooltip>\n        <TooltipTrigger\n          closeDelay={400}\n          render={\n            <Badge variant=\"secondary\" tabIndex={0} className=\"font-mono\" />\n          }\n        >\n          #A-20931\n        </TooltipTrigger>\n        <TooltipContent className=\"flex-col items-start gap-0.5 select-text\">\n          <span className=\"opacity-70\">Tracking number</span>\n          <span className=\"font-mono\">1Z 999 AA1 01 2345 6784</span>\n        </TooltipContent>\n      </Tooltip>\n      <span className=\"text-muted-foreground\">shipped today</span>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

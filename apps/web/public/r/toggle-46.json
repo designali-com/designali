@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toggle-46",
+  "type": "registry:example",
+  "description": "A search bar with a private mode toggle that stops saving search history.",
+  "files": [
+    {
+      "path": "registry/designali/examples/toggle/toggle-46.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { SearchIcon, VenetianMaskIcon } from \"lucide-react\"\n\nimport { Input } from \"@workspace/ui/components/input\"\nimport { Toggle } from \"@workspace/ui/components/toggle\"\n\nexport default function IncognitoSearchToggle() {\n  const [privateMode, setPrivateMode] = React.useState(false)\n\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-2\">\n      <div className=\"flex items-center gap-2\">\n        <div className=\"relative flex-1\">\n          <SearchIcon className=\"absolute start-2.5 top-1/2 size-4 -translate-y-1/2 text-muted-foreground\" />\n          <Input placeholder=\"Search docs\" className=\"ps-8\" />\n        </div>\n        <Toggle\n          variant=\"outline\"\n          pressed={privateMode}\n          onPressedChange={setPrivateMode}\n          aria-label=\"Private search\"\n          className=\"h-10 min-w-10\"\n        >\n          <VenetianMaskIcon />\n        </Toggle>\n      </div>\n      <p className=\"text-xs text-muted-foreground\">\n        {privateMode\n          ? \"Private search: nothing you type here is saved.\"\n          : \"Recent searches are saved to this device.\"}\n      </p>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

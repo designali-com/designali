@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "skeleton-37",
+  "type": "registry:example",
+  "description": "Contacts directory placeholder grouped under real alphabetical section headers.",
+  "files": [
+    {
+      "path": "registry/designali/examples/skeleton/skeleton-37.tsx",
+      "content": "import { Skeleton } from \"@workspace/ui/components/skeleton\"\n\nconst sections = [\n  { letter: \"A\", count: 2 },\n  { letter: \"B\", count: 3 },\n  { letter: \"C\", count: 1 },\n]\n\nexport default function ContactsDirectorySkeleton() {\n  return (\n    <div className=\"flex w-full max-w-xs flex-col border\">\n      {sections.map((s) => (\n        <div key={s.letter}>\n          <div className=\"sticky top-0 bg-muted px-3 py-1 text-xs font-medium text-muted-foreground\">\n            {s.letter}\n          </div>\n          {Array.from({ length: s.count }).map((_, i) => (\n            <div key={i} className=\"flex items-center gap-3 px-3 py-2\">\n              <Skeleton className=\"size-8 rounded-full\" />\n              <div className=\"flex flex-col gap-1.5\">\n                <Skeleton className=\"h-3 w-24\" />\n                <Skeleton className=\"h-2.5 w-16\" />\n              </div>\n            </div>\n          ))}\n        </div>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

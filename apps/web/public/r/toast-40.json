@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toast-40",
+  "type": "registry:example",
+  "description": "A debounced editor that shows a quiet Draft saved toast after you stop typing.",
+  "files": [
+    {
+      "path": "registry/designali/examples/toast/toast-40.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { Label } from \"@workspace/ui/components/label\"\nimport { Textarea } from \"@workspace/ui/components/textarea\"\nimport { Toaster, createToastManager } from \"@workspace/ui/components/toast\"\n\nconst notify = createToastManager()\n\nexport default function AutosaveDraftToast() {\n  const [text, setText] = React.useState(\"\")\n\n  React.useEffect(() => {\n    if (!text) return\n    const handle = setTimeout(() => {\n      notify.add({\n        id: \"autosave\",\n        description:\n          \"Draft saved - \" + text.trim().split(/\\s+/).length + \" words\",\n        timeout: 1800,\n      })\n    }, 800)\n    return () => clearTimeout(handle)\n  }, [text])\n\n  return (\n    <Toaster toastManager={notify}>\n      <div className=\"flex w-full max-w-sm flex-col gap-2 border p-4\">\n        <Label htmlFor=\"release-notes\">Release notes</Label>\n        <Textarea\n          id=\"release-notes\"\n          rows={4}\n          placeholder=\"Start typing. Your draft saves automatically.\"\n          value={text}\n          onChange={(e) => setText(e.target.value)}\n        />\n      </div>\n    </Toaster>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

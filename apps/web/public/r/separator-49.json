@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "separator-49",
+  "type": "registry:example",
+  "description": "Review summary with the overall score and star distribution split by a vertical separator.",
+  "files": [
+    {
+      "path": "registry/designali/examples/separator/separator-49.tsx",
+      "content": "import { StarIcon } from \"lucide-react\"\n\nimport { Separator } from \"@workspace/ui/components/separator\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst distribution = [\n  { stars: 5, share: 68 },\n  { stars: 4, share: 21 },\n  { stars: 3, share: 7 },\n  { stars: 2, share: 3 },\n  { stars: 1, share: 1 },\n]\n\nexport default function RatingBreakdownSplit() {\n  return (\n    <div className=\"flex w-full max-w-sm border p-4\">\n      <div className=\"flex w-24 shrink-0 flex-col items-center justify-center gap-1\">\n        <span className=\"text-3xl font-semibold\">4.6</span>\n        <div className=\"flex\">\n          {[0, 1, 2, 3, 4].map((index) => (\n            <StarIcon\n              key={index}\n              className={cn(\n                \"size-3\",\n                index < 4\n                  ? \"fill-amber-400 text-amber-400\"\n                  : \"text-muted-foreground\"\n              )}\n            />\n          ))}\n        </div>\n        <span className=\"text-[11px] text-muted-foreground\">2,318 reviews</span>\n      </div>\n      <Separator orientation=\"vertical\" className=\"mx-4\" />\n      <div className=\"flex flex-1 flex-col gap-1.5\">\n        {distribution.map((row) => (\n          <div key={row.stars} className=\"flex items-center gap-2 text-xs\">\n            <span className=\"w-2 text-muted-foreground\">{row.stars}</span>\n            <div className=\"h-1.5 flex-1 bg-muted\">\n              <div\n                className=\"h-full bg-amber-400\"\n                style={{ width: row.share + \"%\" }}\n              />\n            </div>\n            <span className=\"w-7 text-end text-muted-foreground tabular-nums\">\n              {row.share}%\n            </span>\n          </div>\n        ))}\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

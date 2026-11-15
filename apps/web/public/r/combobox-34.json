@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "combobox-34",
+  "type": "registry:example",
+  "description": "Analytics dashboard date range presets chosen through a button-triggered combobox.",
+  "files": [
+    {
+      "path": "registry/designali/examples/combobox/combobox-34.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { CalendarIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  Card,\n  CardAction,\n  CardDescription,\n  CardHeader,\n  CardTitle,\n} from \"@workspace/ui/components/card\"\nimport {\n  Combobox,\n  ComboboxContent,\n  ComboboxItem,\n  ComboboxList,\n  ComboboxTrigger,\n  ComboboxValue,\n} from \"@workspace/ui/components/combobox\"\n\nconst presets = [\n  \"Today\",\n  \"Yesterday\",\n  \"Last 7 days\",\n  \"Last 30 days\",\n  \"This quarter\",\n  \"Year to date\",\n]\nconst visitors: Record<string, string> = {\n  Today: \"1,204\",\n  Yesterday: \"1,388\",\n  \"Last 7 days\": \"9,870\",\n  \"Last 30 days\": \"41,312\",\n  \"This quarter\": \"96,540\",\n  \"Year to date\": \"402,118\",\n}\n\nexport default function DashboardDatePresets() {\n  const [range, setRange] = React.useState<string | null>(\"Last 7 days\")\n  return (\n    <Card className=\"w-full max-w-xs\" size=\"sm\">\n      <CardHeader>\n        <CardDescription>Unique visitors</CardDescription>\n        <CardTitle className=\"text-2xl\">\n          {range ? visitors[range] : \"-\"}\n        </CardTitle>\n        <CardAction>\n          <Combobox items={presets} value={range} onValueChange={setRange}>\n            <ComboboxTrigger render={<Button variant=\"outline\" size=\"xs\" />}>\n              <CalendarIcon />\n              <ComboboxValue />\n            </ComboboxTrigger>\n            <ComboboxContent className=\"w-40\" align=\"end\">\n              <ComboboxList>\n                {(item: string) => (\n                  <ComboboxItem key={item} value={item}>\n                    {item}\n                  </ComboboxItem>\n                )}\n              </ComboboxList>\n            </ComboboxContent>\n          </Combobox>\n        </CardAction>\n      </CardHeader>\n    </Card>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "field-11",
+  "type": "registry:example",
+  "description": "Two-thumb price range slider paired with read-only min and max inputs for a product filter.",
+  "files": [
+    {
+      "path": "registry/designali/examples/field/field-11.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport {\n  Field,\n  FieldLabel,\n  FieldLegend,\n  FieldSet,\n} from \"@workspace/ui/components/field\"\nimport {\n  InputGroup,\n  InputGroupAddon,\n  InputGroupInput,\n} from \"@workspace/ui/components/input-group\"\nimport { Slider } from \"@workspace/ui/components/slider\"\n\nexport default function PriceRangeField() {\n  const [range, setRange] = React.useState([40, 260])\n\n  return (\n    <FieldSet className=\"w-full max-w-xs\">\n      <FieldLegend variant=\"label\">Price range</FieldLegend>\n      <Slider\n        value={range}\n        onValueChange={(v) => setRange(v as number[])}\n        min={0}\n        max={500}\n        step={10}\n        aria-label=\"Price range\"\n      />\n      <div className=\"grid grid-cols-2 gap-3\">\n        <Field>\n          <FieldLabel htmlFor=\"price-min\" className=\"text-muted-foreground\">\n            Min\n          </FieldLabel>\n          <InputGroup>\n            <InputGroupAddon>$</InputGroupAddon>\n            <InputGroupInput id=\"price-min\" readOnly value={range[0]} />\n          </InputGroup>\n        </Field>\n        <Field>\n          <FieldLabel htmlFor=\"price-max\" className=\"text-muted-foreground\">\n            Max\n          </FieldLabel>\n          <InputGroup>\n            <InputGroupAddon>$</InputGroupAddon>\n            <InputGroupInput id=\"price-max\" readOnly value={range[1]} />\n          </InputGroup>\n        </Field>\n      </div>\n    </FieldSet>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

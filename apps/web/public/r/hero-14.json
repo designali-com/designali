@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "hero-14",
+  "type": "registry:block",
+  "description": "Split hero with avatar-stack rating proof on the left and a staggered stack of customer quote cards on the right.",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "registry/designali/blocks/hero/hero-14.tsx",
+      "content": "import { ArrowRight, Quote, Star } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\n\nconst quotes = [\n  {\n    body: \"We replaced three tools and a spreadsheet. Month-end close went from eight days to three.\",\n    name: \"Priya Raman\",\n    role: \"Controller, Fernhill Foods\",\n    initials: \"PR\",\n    color: \"bg-chart-1\",\n    offset: \"\",\n  },\n  {\n    body: \"The approval flows alone saved my team a full day every week.\",\n    name: \"Diego Alvarez\",\n    role: \"VP Finance, Oakline\",\n    initials: \"DA\",\n    color: \"bg-chart-2\",\n    offset: \"sm:ms-12\",\n  },\n  {\n    body: \"Auditors asked how we got so organised. I just sent them a Ledgerly link.\",\n    name: \"Hana Sato\",\n    role: \"CFO, Brightwater Labs\",\n    initials: \"HS\",\n    color: \"bg-chart-3\",\n    offset: \"sm:ms-4\",\n  },\n]\n\nexport default function Hero14() {\n  return (\n    <section className=\"w-full bg-muted/30 px-6 py-16 md:py-24\">\n      <div className=\"mx-auto grid max-w-7xl items-center gap-14 lg:grid-cols-2\">\n        <div>\n          <div className=\"flex items-center gap-4\">\n            <div className=\"flex -space-x-2\">\n              {[\"bg-chart-1\", \"bg-chart-2\", \"bg-chart-3\", \"bg-chart-4\", \"bg-chart-5\"].map((color, index) => (\n                <span\n                  key={color}\n                  className={`flex size-9 items-center justify-center rounded-full border-2 border-background text-[10px] font-medium text-white ${color}`}\n                >\n                  {[\"JM\", \"KL\", \"RT\", \"SA\", \"BN\"][index]}\n                </span>\n              ))}\n            </div>\n            <div>\n              <div className=\"flex gap-0.5\">\n                {Array.from({ length: 5 }).map((_, index) => (\n                  <Star key={index} className=\"size-3.5 fill-amber-400 text-amber-400\" />\n                ))}\n              </div>\n              <p className=\"mt-1 text-xs text-muted-foreground\">\n                Loved by 6,200 finance teams\n              </p>\n            </div>\n          </div>\n          <h1 className=\"mt-8 text-4xl font-medium tracking-tight md:text-6xl\">\n            Close the books in days, not weeks.\n          </h1>\n          <p className=\"mt-6 max-w-lg text-base leading-7 text-muted-foreground\">\n            Ledgerly automates reconciliation, accruals and approvals so your\n            finance team can spend month-end on analysis instead of chasing\n            receipts.\n          </p>\n          <div className=\"mt-10 flex flex-wrap gap-3\">\n            <Button size=\"lg\" nativeButton={false} render={<a href=\"#\" />}>\n              Start free trial\n              <ArrowRight />\n            </Button>\n            <Button size=\"lg\" variant=\"ghost\" nativeButton={false} render={<a href=\"#\" />}>\n              Read customer stories\n            </Button>\n          </div>\n          <p className=\"mt-6 text-xs text-muted-foreground\">\n            SOC 2 Type II. No credit card required.\n          </p>\n        </div>\n\n        <div className=\"space-y-4\">\n          {quotes.map((quote) => (\n            <figure\n              key={quote.name}\n              className={`border border-border bg-card p-6 shadow-sm ${quote.offset}`}\n            >\n              <Quote className=\"size-4 text-muted-foreground\" />\n              <blockquote className=\"mt-3 text-sm leading-6\">\n                {quote.body}\n              </blockquote>\n              <figcaption className=\"mt-4 flex items-center gap-3\">\n                <span\n                  className={`flex size-8 items-center justify-center rounded-full text-[10px] font-medium text-white ${quote.color}`}\n                >\n                  {quote.initials}\n                </span>\n                <div className=\"text-xs\">\n                  <p className=\"font-medium\">{quote.name}</p>\n                  <p className=\"text-muted-foreground\">{quote.role}</p>\n                </div>\n              </figcaption>\n            </figure>\n          ))}\n        </div>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "760px"
+  },
+  "categories": [
+    "hero"
+  ]
+}

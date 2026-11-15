@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "sheet-31",
+  "type": "registry:example",
+  "description": "Destructive bottom sheet requiring the user to type the project name before deleting.",
+  "files": [
+    {
+      "path": "registry/designali/examples/sheet/sheet-31.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { Trash2Icon, TriangleAlertIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Field, FieldLabel } from \"@workspace/ui/components/field\"\nimport { Input } from \"@workspace/ui/components/input\"\nimport {\n  Sheet,\n  SheetClose,\n  SheetContent,\n  SheetDescription,\n  SheetFooter,\n  SheetHeader,\n  SheetTitle,\n  SheetTrigger,\n} from \"@workspace/ui/components/sheet\"\n\nconst projectName = \"atlas-marketing\"\n\nexport default function DeleteProjectSheet() {\n  const [value, setValue] = React.useState(\"\")\n  return (\n    <Sheet onOpenChange={() => setValue(\"\")}>\n      <SheetTrigger render={<Button variant=\"destructive\" />}>\n        <Trash2Icon data-icon=\"inline-start\" />\n        Delete project\n      </SheetTrigger>\n      <SheetContent side=\"bottom\" className=\"mx-auto max-w-md\">\n        <SheetHeader>\n          <div className=\"mb-1 flex size-9 items-center justify-center bg-destructive/10 text-destructive\">\n            <TriangleAlertIcon className=\"size-4\" />\n          </div>\n          <SheetTitle>Delete {projectName}?</SheetTitle>\n          <SheetDescription>\n            This permanently removes 3 environments, 128 deployments, and all\n            analytics. This cannot be undone.\n          </SheetDescription>\n        </SheetHeader>\n        <div className=\"px-4\">\n          <Field>\n            <FieldLabel htmlFor=\"confirm-name\">\n              Type <span className=\"font-mono\">{projectName}</span> to confirm\n            </FieldLabel>\n            <Input\n              id=\"confirm-name\"\n              value={value}\n              onChange={(e) => setValue(e.target.value)}\n              autoComplete=\"off\"\n            />\n          </Field>\n        </div>\n        <SheetFooter className=\"flex-row\">\n          <SheetClose render={<Button variant=\"outline\" className=\"flex-1\" />}>\n            Cancel\n          </SheetClose>\n          <Button\n            variant=\"destructive\"\n            className=\"flex-1\"\n            disabled={value !== projectName}\n          >\n            Delete forever\n          </Button>\n        </SheetFooter>\n      </SheetContent>\n    </Sheet>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

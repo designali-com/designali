@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "breadcrumb-43",
+  "type": "registry:example",
+  "description": "Onboarding wizard where breadcrumb links are buttons that jump back to earlier steps.",
+  "files": [
+    {
+      "path": "registry/designali/examples/breadcrumb/breadcrumb-43.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport {\n  Breadcrumb,\n  BreadcrumbItem,\n  BreadcrumbLink,\n  BreadcrumbList,\n  BreadcrumbPage,\n  BreadcrumbSeparator,\n} from \"@workspace/ui/components/breadcrumb\"\nimport { Button } from \"@workspace/ui/components/button\"\n\nconst steps = [\"Workspace\", \"Invite team\", \"Connect data\", \"Finish\"]\n\nexport default function WizardStepBreadcrumb() {\n  const [step, setStep] = React.useState(2)\n\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-4 border p-4\">\n      <Breadcrumb>\n        <BreadcrumbList>\n          {steps.slice(0, step + 1).map((label, index) => (\n            <React.Fragment key={label}>\n              <BreadcrumbItem>\n                {index === step ? (\n                  <BreadcrumbPage>{label}</BreadcrumbPage>\n                ) : (\n                  <BreadcrumbLink\n                    render={<button type=\"button\" />}\n                    onClick={() => setStep(index)}\n                  >\n                    {label}\n                  </BreadcrumbLink>\n                )}\n              </BreadcrumbItem>\n              {index < step && <BreadcrumbSeparator />}\n            </React.Fragment>\n          ))}\n        </BreadcrumbList>\n      </Breadcrumb>\n      <div className=\"flex flex-col gap-1\">\n        <h3 className=\"text-sm font-semibold\">{steps[step]}</h3>\n        <p className=\"text-xs text-muted-foreground\">\n          Step {step + 1} of {steps.length}\n        </p>\n      </div>\n      <div className=\"flex justify-end gap-2\">\n        <Button\n          variant=\"outline\"\n          size=\"sm\"\n          disabled={step === 0}\n          onClick={() => setStep(step - 1)}\n        >\n          Back\n        </Button>\n        <Button\n          size=\"sm\"\n          disabled={step === steps.length - 1}\n          onClick={() => setStep(step + 1)}\n        >\n          Continue\n        </Button>\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

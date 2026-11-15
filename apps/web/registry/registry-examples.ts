@@ -492,12 +492,67 @@ export const examples: Registry["items"] = [
     ],
   },
   {
-    name: "button-07",
-    description: "Button custom variant showcase",
+    name: "button-08",
+    description: "Stacked social sign-in buttons with brand-neutral glyphs and an email fallback.",
     type: "registry:example",
     files: [
       {
-        path: "examples/button/button-07.tsx",
+        path: "examples/button/button-08.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "button-09",
+    description: "Buttons showing idle, loading, and success states for an async save action.",
+    type: "registry:example",
+    files: [
+      {
+        path: "examples/button/button-09.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "button-10",
+    description: "Icon-only formatting toolbar for a rich text editor.",
+    type: "registry:example",
+    files: [
+      {
+        path: "examples/button/button-10.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "button-11",
+    description: "Icon and labelled buttons with unread count badges for inbox and notifications.",
+    type: "registry:example",
+    files: [
+      {
+        path: "examples/button/button-11.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "button-12",
+    description: "Pricing call-to-action for the Starter plan with price and supporting note.",
+    type: "registry:example",
+    files: [
+      {
+        path: "examples/button/button-12.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "button-13",
+    description: "Pricing call-to-action for the Pro plan with price and supporting note.",
+    type: "registry:example",
+    files: [
+      {
+        path: "examples/button/button-13.tsx",
         type: "registry:example",
       },
     ],

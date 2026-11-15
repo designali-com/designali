@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tooltip-22",
+  "type": "registry:example",
+  "description": "Inline anchors that preview their destination URL in a tooltip.",
+  "files": [
+    {
+      "path": "registry/designali/examples/tooltip/tooltip-22.tsx",
+      "content": "import { ExternalLinkIcon } from \"lucide-react\"\n\nimport {\n  Tooltip,\n  TooltipContent,\n  TooltipProvider,\n  TooltipTrigger,\n} from \"@workspace/ui/components/tooltip\"\n\nexport default function ExternalLinkTooltip() {\n  return (\n    <TooltipProvider>\n      <p className=\"max-w-sm text-sm leading-relaxed text-muted-foreground\">\n        Read the{\" \"}\n        <Tooltip>\n          <TooltipTrigger\n            render={\n              <a\n                href=\"#\"\n                className=\"font-medium text-foreground underline underline-offset-4\"\n              />\n            }\n          >\n            migration guide\n          </TooltipTrigger>\n          <TooltipContent>\n            <ExternalLinkIcon className=\"size-3\" />\n            docs.fieldnote.app/migrate/v4\n          </TooltipContent>\n        </Tooltip>{\" \"}\n        before upgrading, and check the{\" \"}\n        <Tooltip>\n          <TooltipTrigger\n            render={\n              <a\n                href=\"#\"\n                className=\"font-medium text-foreground underline underline-offset-4\"\n              />\n            }\n          >\n            changelog\n          </TooltipTrigger>\n          <TooltipContent>\n            <ExternalLinkIcon className=\"size-3\" />\n            fieldnote.app/changelog\n          </TooltipContent>\n        </Tooltip>{\" \"}\n        for breaking changes.\n      </p>\n    </TooltipProvider>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

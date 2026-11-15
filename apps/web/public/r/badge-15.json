@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "badge-15",
+  "type": "registry:example",
+  "description": "Issue tracker priority levels from urgent to low with signal icons.",
+  "files": [
+    {
+      "path": "registry/designali/examples/badge/badge-15.tsx",
+      "content": "import {\n  SignalHighIcon,\n  SignalLowIcon,\n  SignalMediumIcon,\n  SirenIcon,\n} from \"lucide-react\"\n\nimport { Badge } from \"@workspace/ui/components/badge\"\n\nconst priorities = [\n  { label: \"Urgent\", icon: SirenIcon, className: \"bg-red-600 text-white\" },\n  {\n    label: \"High\",\n    icon: SignalHighIcon,\n    className:\n      \"bg-orange-50 text-orange-700 dark:bg-orange-950 dark:text-orange-300\",\n  },\n  {\n    label: \"Medium\",\n    icon: SignalMediumIcon,\n    className:\n      \"bg-yellow-50 text-yellow-800 dark:bg-yellow-950 dark:text-yellow-300\",\n  },\n  {\n    label: \"Low\",\n    icon: SignalLowIcon,\n    className: \"bg-muted text-muted-foreground\",\n  },\n]\n\nexport default function IssuePriorityBadges() {\n  return (\n    <div className=\"flex flex-wrap justify-center gap-2\">\n      {priorities.map((priority) => (\n        <Badge key={priority.label} className={priority.className}>\n          <priority.icon data-icon=\"inline-start\" />\n          {priority.label}\n        </Badge>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

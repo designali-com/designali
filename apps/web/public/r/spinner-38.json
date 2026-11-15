@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "spinner-38",
+  "type": "registry:example",
+  "description": "Account item for calendar sync showing a spinner and last-synced time while syncing.",
+  "files": [
+    {
+      "path": "registry/designali/examples/spinner/spinner-38.tsx",
+      "content": "import { CalendarSyncIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  Item,\n  ItemActions,\n  ItemContent,\n  ItemDescription,\n  ItemMedia,\n  ItemTitle,\n} from \"@workspace/ui/components/item\"\nimport { Spinner } from \"@workspace/ui/components/spinner\"\n\nexport default function CalendarSyncItem() {\n  return (\n    <Item variant=\"muted\" className=\"w-full max-w-sm\">\n      <ItemMedia variant=\"icon\">\n        <CalendarSyncIcon />\n      </ItemMedia>\n      <ItemContent>\n        <ItemTitle>Work calendar</ItemTitle>\n        <ItemDescription>Last synced 14 minutes ago</ItemDescription>\n      </ItemContent>\n      <ItemActions>\n        <Button variant=\"outline\" size=\"sm\" disabled>\n          <Spinner data-icon=\"inline-start\" />\n          Syncing\n        </Button>\n      </ItemActions>\n    </Item>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

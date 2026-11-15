@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "hover-card-17",
+  "type": "registry:example",
+  "description": "Pricing plan features with info triggers that explain limits in detail.",
+  "files": [
+    {
+      "path": "registry/designali/examples/hover-card/hover-card-17.tsx",
+      "content": "import { CheckIcon, InfoIcon } from \"lucide-react\"\n\nimport {\n  HoverCard,\n  HoverCardContent,\n  HoverCardTrigger,\n} from \"@workspace/ui/components/hover-card\"\n\nconst features = [\n  {\n    name: \"Unlimited projects\",\n    detail:\n      \"Create as many projects as you need. Archived projects never count toward limits.\",\n  },\n  {\n    name: \"50 GB storage\",\n    detail:\n      \"Shared across your workspace. Extra storage is $2 per 10 GB per month.\",\n  },\n  {\n    name: \"Audit log\",\n    detail: \"Track every sign-in, permission change, and export for 365 days.\",\n  },\n]\n\nexport default function PricingFeatureHoverCard() {\n  return (\n    <div className=\"w-full max-w-xs border p-4\">\n      <p className=\"text-sm font-medium\">Team plan</p>\n      <p className=\"mb-3 text-2xl font-semibold\">\n        $18\n        <span className=\"text-sm font-normal text-muted-foreground\">\n          /seat/mo\n        </span>\n      </p>\n      <ul className=\"flex flex-col gap-2 text-sm\">\n        {features.map((f) => (\n          <li key={f.name} className=\"flex items-center gap-2\">\n            <CheckIcon className=\"size-4 text-emerald-600\" />\n            <span className=\"flex-1\">{f.name}</span>\n            <HoverCard>\n              <HoverCardTrigger\n                delay={100}\n                render={\n                  <button\n                    type=\"button\"\n                    aria-label={\"About \" + f.name}\n                    className=\"text-muted-foreground hover:text-foreground\"\n                  />\n                }\n              >\n                <InfoIcon className=\"size-3.5\" />\n              </HoverCardTrigger>\n              <HoverCardContent side=\"right\" className=\"w-56\">\n                {f.detail}\n              </HoverCardContent>\n            </HoverCard>\n          </li>\n        ))}\n      </ul>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

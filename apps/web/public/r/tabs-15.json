@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tabs-15",
+  "type": "registry:example",
+  "description": "File manager tabs for recent, shared and starred files.",
+  "files": [
+    {
+      "path": "registry/designali/examples/tabs/tabs-15.tsx",
+      "content": "import {\n  ClockIcon,\n  EllipsisIcon,\n  FileImageIcon,\n  FileSpreadsheetIcon,\n  FileTextIcon,\n  FolderIcon,\n  StarIcon,\n  UsersIcon,\n} from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  Tabs,\n  TabsContent,\n  TabsList,\n  TabsTrigger,\n} from \"@workspace/ui/components/tabs\"\n\nconst files = {\n  recent: [\n    {\n      name: \"Q3 forecast.xlsx\",\n      meta: \"Edited 2 min ago\",\n      icon: FileSpreadsheetIcon,\n    },\n    { name: \"Brand guide.pdf\", meta: \"Edited 1 h ago\", icon: FileTextIcon },\n  ],\n  shared: [\n    {\n      name: \"Hiring plan.docx\",\n      meta: \"Shared by Ivo Marsh\",\n      icon: FileTextIcon,\n    },\n    { name: \"Launch assets\", meta: \"Shared by Dana Ruiz\", icon: FolderIcon },\n  ],\n  starred: [\n    {\n      name: \"Roadmap 2027.fig\",\n      meta: \"Starred yesterday\",\n      icon: FileImageIcon,\n    },\n  ],\n}\n\nexport default function FileManagerTabs() {\n  return (\n    <Tabs defaultValue=\"recent\" className=\"w-full max-w-sm\">\n      <TabsList>\n        <TabsTrigger value=\"recent\">\n          <ClockIcon data-icon=\"inline-start\" />\n          Recent\n        </TabsTrigger>\n        <TabsTrigger value=\"shared\">\n          <UsersIcon data-icon=\"inline-start\" />\n          Shared\n        </TabsTrigger>\n        <TabsTrigger value=\"starred\">\n          <StarIcon data-icon=\"inline-start\" />\n          Starred\n        </TabsTrigger>\n      </TabsList>\n      {Object.entries(files).map(([key, list]) => (\n        <TabsContent key={key} value={key} className=\"divide-y border\">\n          {list.map((f) => (\n            <div key={f.name} className=\"flex items-center gap-3 px-3 py-2.5\">\n              <f.icon className=\"size-4 text-muted-foreground\" />\n              <div className=\"min-w-0 flex-1\">\n                <p className=\"truncate font-medium\">{f.name}</p>\n                <p className=\"text-muted-foreground\">{f.meta}</p>\n              </div>\n              <Button variant=\"ghost\" size=\"icon-xs\" aria-label=\"More\">\n                <EllipsisIcon />\n              </Button>\n            </div>\n          ))}\n        </TabsContent>\n      ))}\n    </Tabs>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

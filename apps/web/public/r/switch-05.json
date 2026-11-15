@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "switch-05",
+  "type": "registry:example",
+  "description": "Default and small switch sizes side by side in on and off states.",
+  "files": [
+    {
+      "path": "registry/designali/examples/switch/switch-05.tsx",
+      "content": "import { Label } from \"@workspace/ui/components/label\"\nimport { Switch } from \"@workspace/ui/components/switch\"\n\nexport default function SwitchSizes() {\n  return (\n    <div className=\"grid w-full max-w-xs grid-cols-2 gap-4 border p-4\">\n      <div className=\"flex flex-col gap-3\">\n        <span className=\"text-xs font-medium text-muted-foreground\">\n          Default\n        </span>\n        <div className=\"flex items-center gap-2\">\n          <Switch id=\"size-default-off\" />\n          <Label htmlFor=\"size-default-off\">Off</Label>\n        </div>\n        <div className=\"flex items-center gap-2\">\n          <Switch id=\"size-default-on\" defaultChecked />\n          <Label htmlFor=\"size-default-on\">On</Label>\n        </div>\n      </div>\n      <div className=\"flex flex-col gap-3\">\n        <span className=\"text-xs font-medium text-muted-foreground\">Small</span>\n        <div className=\"flex items-center gap-2\">\n          <Switch id=\"size-sm-off\" size=\"sm\" />\n          <Label htmlFor=\"size-sm-off\" className=\"text-xs\">\n            Off\n          </Label>\n        </div>\n        <div className=\"flex items-center gap-2\">\n          <Switch id=\"size-sm-on\" size=\"sm\" defaultChecked />\n          <Label htmlFor=\"size-sm-on\" className=\"text-xs\">\n            On\n          </Label>\n        </div>\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

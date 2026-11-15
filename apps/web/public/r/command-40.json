@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "command-40",
+  "type": "registry:example",
+  "description": "A settings search whose results show the breadcrumb path to each nested setting.",
+  "files": [
+    {
+      "path": "registry/designali/examples/command/command-40.tsx",
+      "content": "import * as React from \"react\"\nimport {\n  CalendarIcon,\n  ChevronRightIcon,\n  CoinsIcon,\n  MailIcon,\n  MonitorSmartphoneIcon,\n  ShieldCheckIcon,\n} from \"lucide-react\"\n\nimport {\n  Command,\n  CommandEmpty,\n  CommandGroup,\n  CommandInput,\n  CommandItem,\n  CommandList,\n} from \"@workspace/ui/components/command\"\n\nconst settings = [\n  {\n    label: \"Two-factor authentication\",\n    path: [\"Security\", \"Sign-in\"],\n    icon: ShieldCheckIcon,\n  },\n  {\n    label: \"Active sessions\",\n    path: [\"Security\", \"Devices\"],\n    icon: MonitorSmartphoneIcon,\n  },\n  {\n    label: \"Weekly summary email\",\n    path: [\"Notifications\", \"Email\"],\n    icon: MailIcon,\n  },\n  {\n    label: \"Default currency\",\n    path: [\"Workspace\", \"Billing\"],\n    icon: CoinsIcon,\n  },\n  {\n    label: \"Date format\",\n    path: [\"Workspace\", \"Localization\"],\n    icon: CalendarIcon,\n  },\n]\n\nexport default function SettingsDeepLinkSearch() {\n  return (\n    <Command className=\"w-full max-w-sm border\">\n      <CommandInput placeholder=\"Search all settings...\" />\n      <CommandList>\n        <CommandEmpty>No setting found.</CommandEmpty>\n        <CommandGroup heading=\"Settings\">\n          {settings.map((setting) => (\n            <CommandItem\n              key={setting.label}\n              value={setting.label}\n              keywords={setting.path}\n            >\n              <setting.icon />\n              <div className=\"flex min-w-0 flex-col\">\n                <span>{setting.label}</span>\n                <span className=\"flex items-center gap-0.5 text-[11px] text-muted-foreground\">\n                  {setting.path.map((part, index) => (\n                    <React.Fragment key={part}>\n                      {index > 0 ? (\n                        <ChevronRightIcon className=\"size-3\" />\n                      ) : null}\n                      {part}\n                    </React.Fragment>\n                  ))}\n                </span>\n              </div>\n            </CommandItem>\n          ))}\n        </CommandGroup>\n      </CommandList>\n    </Command>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

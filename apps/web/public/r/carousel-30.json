@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "carousel-30",
+  "type": "registry:example",
+  "description": "Weather app hourly forecast strip with free drag and weather icons.",
+  "files": [
+    {
+      "path": "registry/designali/examples/carousel/carousel-30.tsx",
+      "content": "import {\n  CloudIcon,\n  CloudRainIcon,\n  CloudSunIcon,\n  MoonIcon,\n  SunIcon,\n} from \"lucide-react\"\n\nimport {\n  Carousel,\n  CarouselContent,\n  CarouselItem,\n} from \"@workspace/ui/components/carousel\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst hours = [\n  { time: \"Now\", temp: 18, icon: SunIcon },\n  { time: \"1 PM\", temp: 19, icon: SunIcon },\n  { time: \"2 PM\", temp: 19, icon: CloudSunIcon },\n  { time: \"3 PM\", temp: 17, icon: CloudIcon },\n  { time: \"4 PM\", temp: 16, icon: CloudRainIcon },\n  { time: \"5 PM\", temp: 15, icon: CloudRainIcon },\n  { time: \"6 PM\", temp: 14, icon: CloudIcon },\n  { time: \"7 PM\", temp: 13, icon: MoonIcon },\n  { time: \"8 PM\", temp: 12, icon: MoonIcon },\n]\n\nexport default function HourlyForecastStrip() {\n  return (\n    <div className=\"w-full max-w-sm border p-4\">\n      <div className=\"mb-3 flex items-center justify-between\">\n        <span className=\"text-sm font-medium\">Hourly forecast</span>\n        <span className=\"text-xs text-muted-foreground\">Rain from 4 PM</span>\n      </div>\n      <Carousel opts={{ dragFree: true, align: \"start\" }}>\n        <CarouselContent className=\"-ms-2\">\n          {hours.map((hour, index) => (\n            <CarouselItem key={hour.time} className=\"basis-1/5 ps-2\">\n              <div\n                className={cn(\n                  \"flex flex-col items-center gap-2 py-2 text-xs\",\n                  index === 0 && \"bg-muted\"\n                )}\n              >\n                <span className=\"text-muted-foreground\">{hour.time}</span>\n                <hour.icon className=\"size-5\" />\n                <span className=\"font-medium\">{hour.temp}°</span>\n              </div>\n            </CarouselItem>\n          ))}\n        </CarouselContent>\n      </Carousel>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

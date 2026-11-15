@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toggle-group-20",
+  "type": "registry:example",
+  "description": "Switches a small SVG chart between bar and line rendering.",
+  "files": [
+    {
+      "path": "registry/designali/examples/toggle-group/toggle-group-20.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { ChartColumnIcon, ChartLineIcon } from \"lucide-react\"\n\nimport {\n  ToggleGroup,\n  ToggleGroupItem,\n} from \"@workspace/ui/components/toggle-group\"\n\nconst values = [32, 48, 40, 64, 56, 72, 60]\n\nexport default function ChartTypeToggleGroup() {\n  const [type, setType] = React.useState(\"bar\")\n  const points = values.map((v, i) => i * 40 + 20 + \",\" + (100 - v)).join(\" \")\n\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-3 border p-4\">\n      <div className=\"flex items-center justify-between\">\n        <span className=\"text-sm font-medium\">Weekly sign-ups</span>\n        <ToggleGroup\n          size=\"sm\"\n          variant=\"outline\"\n          spacing={0}\n          value={[type]}\n          onValueChange={(next) => next[0] && setType(next[0])}\n        >\n          <ToggleGroupItem value=\"bar\" aria-label=\"Bar chart\">\n            <ChartColumnIcon />\n          </ToggleGroupItem>\n          <ToggleGroupItem value=\"line\" aria-label=\"Line chart\">\n            <ChartLineIcon />\n          </ToggleGroupItem>\n        </ToggleGroup>\n      </div>\n      <svg viewBox=\"0 0 280 100\" className=\"h-28 w-full text-primary\">\n        {type === \"bar\" ? (\n          values.map((v, i) => (\n            <rect\n              key={i}\n              x={i * 40 + 8}\n              y={100 - v}\n              width=\"24\"\n              height={v}\n              className=\"fill-current\"\n            />\n          ))\n        ) : (\n          <polyline\n            points={points}\n            fill=\"none\"\n            stroke=\"currentColor\"\n            strokeWidth=\"2.5\"\n          />\n        )}\n      </svg>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

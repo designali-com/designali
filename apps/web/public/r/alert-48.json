@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "alert-48",
+  "type": "registry:example",
+  "description": "Analytics alert reporting a statistically significant A/B test result with key numbers.",
+  "files": [
+    {
+      "path": "registry/designali/examples/alert/alert-48.tsx",
+      "content": "import { TrendingUpIcon } from \"lucide-react\"\n\nimport {\n  Alert,\n  AlertDescription,\n  AlertTitle,\n} from \"@workspace/ui/components/alert\"\nimport { Button } from \"@workspace/ui/components/button\"\n\nconst stats = [\n  { label: \"Control\", value: \"3.8%\" },\n  { label: \"Variant B\", value: \"4.6%\" },\n  { label: \"Confidence\", value: \"97%\" },\n]\n\nexport default function AlertExperimentResult() {\n  return (\n    <Alert variant=\"success\" className=\"max-w-md\">\n      <TrendingUpIcon />\n      <AlertTitle>Variant B is winning: +21% checkout conversion</AlertTitle>\n      <AlertDescription>\n        <div className=\"my-1.5 grid grid-cols-3 border bg-background\">\n          {stats.map((stat) => (\n            <div key={stat.label} className=\"border-e p-2 last:border-0\">\n              <p>{stat.label}</p>\n              <p className=\"text-sm font-semibold text-foreground\">\n                {stat.value}\n              </p>\n            </div>\n          ))}\n        </div>\n        <Button size=\"xs\">Roll out to 100%</Button>\n      </AlertDescription>\n    </Alert>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

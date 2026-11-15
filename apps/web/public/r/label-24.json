@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "label-24",
+  "type": "registry:example",
+  "description": "Label sitting inside the bordered box above the input text.",
+  "files": [
+    {
+      "path": "registry/designali/examples/label/label-24.tsx",
+      "content": "import { Label } from \"@workspace/ui/components/label\"\n\nexport default function InsetLabelInput() {\n  return (\n    <div className=\"flex w-full max-w-sm flex-col border border-input px-3 py-2 focus-within:border-ring focus-within:ring-1 focus-within:ring-ring/50 dark:bg-input/30\">\n      <Label htmlFor=\"inset-card\" className=\"text-[11px] text-muted-foreground\">\n        Name on card\n      </Label>\n      <input\n        id=\"inset-card\"\n        defaultValue=\"Elena Petrova\"\n        className=\"mt-1 bg-transparent text-sm outline-none\"\n      />\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

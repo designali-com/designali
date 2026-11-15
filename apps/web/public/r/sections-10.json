@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "sections-10",
+  "type": "registry:block",
+  "description": "Careers listing with team filter chips, role rows and an open application card.",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "registry/designali/blocks/sections/sections-10.tsx",
+      "content": "\"use client\"\n\nimport { useState } from \"react\"\nimport { ArrowUpRight } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst roles = [\n  { title: \"Senior Backend Engineer, Ledger\", team: \"Engineering\", location: \"Remote (EU)\", type: \"Full-time\" },\n  { title: \"Staff Engineer, Developer Platform\", team: \"Engineering\", location: \"Berlin\", type: \"Full-time\" },\n  { title: \"Product Designer, Onboarding\", team: \"Design\", location: \"Remote (EU)\", type: \"Full-time\" },\n  { title: \"Brand Designer\", team: \"Design\", location: \"Amsterdam\", type: \"Contract\" },\n  { title: \"Account Executive, DACH\", team: \"Sales\", location: \"Munich\", type: \"Full-time\" },\n  { title: \"Customer Success Lead\", team: \"Sales\", location: \"Remote (EU)\", type: \"Full-time\" },\n  { title: \"People Partner\", team: \"Operations\", location: \"Amsterdam\", type: \"Part-time\" },\n]\n\nconst teams = [\"All\", ...Array.from(new Set(roles.map((role) => role.team)))]\n\nexport default function Sections10() {\n  const [team, setTeam] = useState(\"All\")\n  const visible = team === \"All\" ? roles : roles.filter((role) => role.team === team)\n\n  return (\n    <section className=\"w-full bg-background py-24\">\n      <div className=\"mx-auto max-w-5xl px-6\">\n        <div className=\"flex flex-col gap-6 md:flex-row md:items-end md:justify-between\">\n          <div>\n            <p className=\"font-mono text-xs tracking-widest text-muted-foreground uppercase\">Careers</p>\n            <h2 className=\"mt-4 text-4xl font-semibold tracking-tight md:text-5xl\">\n              {roles.length} open roles\n            </h2>\n          </div>\n          <p className=\"max-w-xs text-sm leading-6 text-muted-foreground\">\n            Salary bands are published on every listing. We reply to every applicant within a week.\n          </p>\n        </div>\n\n        <div className=\"mt-10 flex flex-wrap gap-2\" role=\"tablist\" aria-label=\"Filter by team\">\n          {teams.map((item) => {\n            const count = item === \"All\" ? roles.length : roles.filter((role) => role.team === item).length\n            return (\n              <button\n                key={item}\n                type=\"button\"\n                role=\"tab\"\n                aria-selected={team === item}\n                onClick={() => setTeam(item)}\n                className={cn(\n                  \"flex items-center gap-2 border px-3 py-1.5 text-xs transition-colors\",\n                  team === item ? \"border-foreground bg-foreground text-background\" : \"border-border hover:bg-muted\"\n                )}\n              >\n                {item}\n                <span className=\"font-mono opacity-60\">{count}</span>\n              </button>\n            )\n          })}\n        </div>\n\n        <ul className=\"mt-8 border-t border-border\">\n          {visible.map((role) => (\n            <li key={role.title}>\n              <a\n                href=\"#\"\n                className=\"group grid gap-2 border-b border-border py-5 transition-colors hover:bg-muted/50 sm:grid-cols-[1fr_140px_120px_24px] sm:items-center sm:gap-6 sm:px-3\"\n              >\n                <span>\n                  <span className=\"block text-base font-medium\">{role.title}</span>\n                  <span className=\"text-xs text-muted-foreground\">{role.team}</span>\n                </span>\n                <span className=\"text-sm text-muted-foreground\">{role.location}</span>\n                <span className=\"text-sm text-muted-foreground\">{role.type}</span>\n                <ArrowUpRight className=\"hidden size-4 text-muted-foreground transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-foreground sm:block\" />\n              </a>\n            </li>\n          ))}\n        </ul>\n\n        <div className=\"mt-10 flex flex-col items-start gap-4 border border-dashed border-border p-6 sm:flex-row sm:items-center sm:justify-between\">\n          <p className=\"text-sm text-muted-foreground\">\n            Nothing that fits? Send us a note about what you would build here.\n          </p>\n          <Button variant=\"outline\" nativeButton={false} render={<a href=\"#\" />}>\n            Open application\n          </Button>\n        </div>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "950px"
+  },
+  "categories": [
+    "sections"
+  ]
+}

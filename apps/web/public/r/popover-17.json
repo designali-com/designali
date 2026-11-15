@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "popover-17",
+  "type": "registry:example",
+  "description": "Form field with an inline help icon that opens an explanation and docs link.",
+  "files": [
+    {
+      "path": "registry/designali/examples/popover/popover-17.tsx",
+      "content": "import { CircleHelpIcon, ExternalLinkIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Input } from \"@workspace/ui/components/input\"\nimport { Label } from \"@workspace/ui/components/label\"\nimport {\n  Popover,\n  PopoverContent,\n  PopoverDescription,\n  PopoverHeader,\n  PopoverTitle,\n  PopoverTrigger,\n} from \"@workspace/ui/components/popover\"\n\nexport default function FieldHelpPopover() {\n  return (\n    <div className=\"flex w-full max-w-xs flex-col gap-1.5\">\n      <div className=\"flex items-center gap-1\">\n        <Label htmlFor=\"webhook-secret\">Signing secret</Label>\n        <Popover>\n          <PopoverTrigger\n            render={\n              <Button\n                variant=\"ghost\"\n                size=\"icon-xs\"\n                aria-label=\"What is a signing secret?\"\n              />\n            }\n          >\n            <CircleHelpIcon />\n          </PopoverTrigger>\n          <PopoverContent className=\"w-64\" side=\"right\" align=\"start\">\n            <PopoverHeader>\n              <PopoverTitle>Signing secret</PopoverTitle>\n              <PopoverDescription>\n                We sign every webhook payload with this secret so your server\n                can verify the request came from us.\n              </PopoverDescription>\n            </PopoverHeader>\n            <a\n              href=\"#\"\n              className=\"flex items-center gap-1 text-xs font-medium hover:underline\"\n            >\n              Read the verification guide{\" \"}\n              <ExternalLinkIcon className=\"size-3\" />\n            </a>\n          </PopoverContent>\n        </Popover>\n      </div>\n      <Input id=\"webhook-secret\" type=\"password\" defaultValue=\"whk_demo_2b1c\" />\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

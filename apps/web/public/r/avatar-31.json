@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "avatar-31",
+  "type": "registry:example",
+  "description": "Generated gradient avatars used as playful defaults for new accounts.",
+  "files": [
+    {
+      "path": "registry/designali/examples/avatar/avatar-31.tsx",
+      "content": "import { Avatar, AvatarFallback } from \"@workspace/ui/components/avatar\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst gradients = [\n  { initials: \"ZO\", className: \"from-pink-500 to-orange-400\" },\n  { initials: \"LU\", className: \"from-cyan-500 to-blue-600\" },\n  { initials: \"MA\", className: \"from-lime-400 to-emerald-600\" },\n  { initials: \"FE\", className: \"from-violet-500 to-indigo-700\" },\n  { initials: \"RI\", className: \"from-yellow-400 to-red-500\" },\n]\n\nexport default function GradientAvatarSet() {\n  return (\n    <div className=\"flex flex-wrap items-center justify-center gap-3\">\n      {gradients.map((item) => (\n        <Avatar key={item.initials} size=\"lg\">\n          <AvatarFallback\n            className={cn(\n              \"bg-gradient-to-br font-semibold text-white\",\n              item.className\n            )}\n          >\n            {item.initials}\n          </AvatarFallback>\n        </Avatar>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

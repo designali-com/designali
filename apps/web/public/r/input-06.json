@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-06",
+  "type": "registry:example",
+  "description": "Small, default, medium, and large input heights matched to button sizes.",
+  "files": [
+    {
+      "path": "registry/designali/examples/input/input-06.tsx",
+      "content": "import { Button } from \"@workspace/ui/components/button\"\nimport { Input } from \"@workspace/ui/components/input\"\n\nconst sizes = [\n  { label: \"Small\", input: \"h-7\", button: \"sm\" as const },\n  { label: \"Default\", input: \"h-8\", button: \"default\" as const },\n  { label: \"Medium\", input: \"h-9 text-sm md:text-sm\", button: \"md\" as const },\n  {\n    label: \"Large\",\n    input: \"h-12 px-4 text-base md:text-base\",\n    button: \"lg\" as const,\n  },\n]\n\nexport default function InputSizeScale() {\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-3\">\n      {sizes.map((s) => (\n        <div key={s.label} className=\"flex gap-2\">\n          <Input\n            aria-label={s.label + \" input\"}\n            placeholder={s.label}\n            className={s.input}\n          />\n          <Button size={s.button}>Go</Button>\n        </div>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

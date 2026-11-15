@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "checkbox-45",
+  "type": "registry:example",
+  "description": "Marketing consent card with per-channel checkboxes and legal fine print.",
+  "files": [
+    {
+      "path": "registry/designali/examples/checkbox/checkbox-45.tsx",
+      "content": "import { MailIcon, MessageSquareIcon, PhoneIcon } from \"lucide-react\"\n\nimport {\n  Card,\n  CardContent,\n  CardDescription,\n  CardHeader,\n  CardTitle,\n} from \"@workspace/ui/components/card\"\nimport { Checkbox } from \"@workspace/ui/components/checkbox\"\nimport {\n  Field,\n  FieldContent,\n  FieldDescription,\n  FieldGroup,\n  FieldLabel,\n} from \"@workspace/ui/components/field\"\n\nconst channels = [\n  {\n    id: \"email\",\n    icon: MailIcon,\n    label: \"Email\",\n    description: \"Product news and monthly tips.\",\n  },\n  {\n    id: \"sms\",\n    icon: MessageSquareIcon,\n    label: \"Text messages\",\n    description: \"Order updates and flash sales.\",\n  },\n  {\n    id: \"phone\",\n    icon: PhoneIcon,\n    label: \"Phone calls\",\n    description: \"Occasional account check-ins.\",\n  },\n]\n\nexport default function MarketingConsentCard() {\n  return (\n    <Card className=\"w-full max-w-sm\">\n      <CardHeader>\n        <CardTitle>Stay in touch</CardTitle>\n        <CardDescription>\n          Choose how Juniper Goods may contact you.\n        </CardDescription>\n      </CardHeader>\n      <CardContent className=\"flex flex-col gap-4\">\n        <FieldGroup className=\"gap-3\">\n          {channels.map((channel) => (\n            <Field key={channel.id} orientation=\"horizontal\">\n              <Checkbox\n                id={\"consent-\" + channel.id}\n                name=\"consent\"\n                value={channel.id}\n                defaultChecked={channel.id === \"email\"}\n              />\n              <FieldContent>\n                <FieldLabel htmlFor={\"consent-\" + channel.id}>\n                  <channel.icon className=\"size-3.5\" />\n                  {channel.label}\n                </FieldLabel>\n                <FieldDescription>{channel.description}</FieldDescription>\n              </FieldContent>\n            </Field>\n          ))}\n        </FieldGroup>\n        <p className=\"text-[11px] leading-relaxed text-muted-foreground\">\n          You can withdraw consent at any time from your account settings.\n          Message and data rates may apply.\n        </p>\n      </CardContent>\n    </Card>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

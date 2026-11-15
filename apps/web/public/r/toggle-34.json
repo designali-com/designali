@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toggle-34",
+  "type": "registry:example",
+  "description": "A toggle that can also be flipped with a keyboard shortcut shown in a Kbd hint.",
+  "files": [
+    {
+      "path": "registry/designali/examples/toggle/toggle-34.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { MoonStarIcon } from \"lucide-react\"\n\nimport { Kbd, KbdGroup } from \"@workspace/ui/components/kbd\"\nimport { Toggle } from \"@workspace/ui/components/toggle\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nexport default function KeyboardShortcutToggle() {\n  const [zen, setZen] = React.useState(false)\n\n  React.useEffect(() => {\n    function onKey(e: KeyboardEvent) {\n      if (e.altKey && e.key.toLowerCase() === \"z\") {\n        e.preventDefault()\n        setZen((v) => !v)\n      }\n    }\n    window.addEventListener(\"keydown\", onKey)\n    return () => window.removeEventListener(\"keydown\", onKey)\n  }, [])\n\n  return (\n    <div className=\"flex w-full max-w-xs flex-col gap-3 border p-4\">\n      <div className=\"flex items-center justify-between gap-2\">\n        <Toggle variant=\"outline\" pressed={zen} onPressedChange={setZen}>\n          <MoonStarIcon />\n          Zen mode\n        </Toggle>\n        <KbdGroup>\n          <Kbd>Alt</Kbd>\n          <Kbd>Z</Kbd>\n        </KbdGroup>\n      </div>\n      <p className={cn(\"text-sm transition-opacity\", zen && \"opacity-30\")}>\n        Sidebar, comments and toolbars {zen ? \"are hidden\" : \"are visible\"}.\n      </p>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

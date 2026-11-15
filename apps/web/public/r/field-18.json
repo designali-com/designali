@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "field-18",
+  "type": "registry:example",
+  "description": "Date of birth fieldset with label-style legend and three native selects for day, month, and year.",
+  "files": [
+    {
+      "path": "registry/designali/examples/field/field-18.tsx",
+      "content": "import {\n  Field,\n  FieldDescription,\n  FieldLabel,\n  FieldLegend,\n  FieldSet,\n} from \"@workspace/ui/components/field\"\nimport {\n  NativeSelect,\n  NativeSelectOption,\n} from \"@workspace/ui/components/native-select\"\n\nconst months = [\n  \"January\",\n  \"February\",\n  \"March\",\n  \"April\",\n  \"May\",\n  \"June\",\n  \"July\",\n  \"August\",\n  \"September\",\n  \"October\",\n  \"November\",\n  \"December\",\n]\n\nexport default function DateOfBirthFieldSet() {\n  return (\n    <FieldSet className=\"w-full max-w-sm\">\n      <FieldLegend variant=\"label\">Date of birth</FieldLegend>\n      <div className=\"grid grid-cols-[1fr_2fr_1.4fr] gap-2\">\n        <Field>\n          <FieldLabel htmlFor=\"dob-day\" className=\"sr-only\">\n            Day\n          </FieldLabel>\n          <NativeSelect id=\"dob-day\" defaultValue=\"14\">\n            {Array.from({ length: 31 }, (_, i) => (\n              <NativeSelectOption key={i} value={String(i + 1)}>\n                {i + 1}\n              </NativeSelectOption>\n            ))}\n          </NativeSelect>\n        </Field>\n        <Field>\n          <FieldLabel htmlFor=\"dob-month\" className=\"sr-only\">\n            Month\n          </FieldLabel>\n          <NativeSelect id=\"dob-month\" defaultValue=\"March\">\n            {months.map((m) => (\n              <NativeSelectOption key={m} value={m}>\n                {m}\n              </NativeSelectOption>\n            ))}\n          </NativeSelect>\n        </Field>\n        <Field>\n          <FieldLabel htmlFor=\"dob-year\" className=\"sr-only\">\n            Year\n          </FieldLabel>\n          <NativeSelect id=\"dob-year\" defaultValue=\"1994\">\n            {Array.from({ length: 60 }, (_, i) => 2008 - i).map((y) => (\n              <NativeSelectOption key={y} value={String(y)}>\n                {y}\n              </NativeSelectOption>\n            ))}\n          </NativeSelect>\n        </Field>\n      </div>\n      <FieldDescription>\n        You must be at least 18 to open an account.\n      </FieldDescription>\n    </FieldSet>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

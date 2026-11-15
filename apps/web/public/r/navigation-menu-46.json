@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "navigation-menu-46",
+  "type": "registry:example",
+  "description": "Checkout step navigation built from links with completed, current and upcoming states.",
+  "files": [
+    {
+      "path": "registry/designali/examples/navigation-menu/navigation-menu-46.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { ChevronRightIcon, CircleCheckIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  NavigationMenu,\n  NavigationMenuItem,\n  NavigationMenuLink,\n  NavigationMenuList,\n} from \"@workspace/ui/components/navigation-menu\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst steps = [\"Cart\", \"Shipping\", \"Payment\", \"Review\"]\n\nexport default function CheckoutBreadcrumbNav() {\n  const [current, setCurrent] = React.useState(1)\n\n  return (\n    <div className=\"flex flex-col items-center gap-3\">\n      <NavigationMenu>\n        <NavigationMenuList className=\"gap-1\">\n          {steps.map((step, i) => (\n            <NavigationMenuItem key={step} className=\"flex items-center gap-1\">\n              {i > 0 && (\n                <ChevronRightIcon className=\"size-3 text-muted-foreground\" />\n              )}\n              <NavigationMenuLink\n                href=\"#\"\n                active={i === current}\n                aria-disabled={i > current}\n                onClick={(e) => {\n                  e.preventDefault()\n                  if (i <= current) setCurrent(i)\n                }}\n                className={cn(\n                  \"px-2 py-1\",\n                  i < current && \"text-foreground\",\n                  i > current &&\n                    \"pointer-events-none text-muted-foreground opacity-60\",\n                  i === current && \"font-semibold\"\n                )}\n              >\n                {i < current ? (\n                  <CircleCheckIcon className=\"text-emerald-600 dark:text-emerald-400\" />\n                ) : (\n                  <span className=\"tabular-nums\">{i + 1}.</span>\n                )}\n                {step}\n              </NavigationMenuLink>\n            </NavigationMenuItem>\n          ))}\n        </NavigationMenuList>\n      </NavigationMenu>\n      <Button\n        size=\"sm\"\n        disabled={current === steps.length - 1}\n        onClick={() => setCurrent((c) => c + 1)}\n      >\n        Continue to {steps[Math.min(current + 1, steps.length - 1)]}\n      </Button>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

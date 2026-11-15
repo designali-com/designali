@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "hover-card-20",
+  "type": "registry:example",
+  "description": "A chat channel mention that previews the topic, member count, and a join action.",
+  "files": [
+    {
+      "path": "registry/designali/examples/hover-card/hover-card-20.tsx",
+      "content": "import { HashIcon, UsersIcon } from \"lucide-react\"\n\nimport { Avatar, AvatarFallback } from \"@workspace/ui/components/avatar\"\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  HoverCard,\n  HoverCardContent,\n  HoverCardTrigger,\n} from \"@workspace/ui/components/hover-card\"\n\nexport default function ChannelMentionHoverCard() {\n  return (\n    <div className=\"flex w-full max-w-sm gap-2 text-sm\">\n      <Avatar size=\"sm\">\n        <AvatarFallback>KB</AvatarFallback>\n      </Avatar>\n      <div>\n        <p className=\"font-medium\">\n          Kofi Boateng{\" \"}\n          <span className=\"text-xs font-normal text-muted-foreground\">\n            11:02\n          </span>\n        </p>\n        <p>\n          Release notes are up, discuss in{\" \"}\n          <HoverCard>\n            <HoverCardTrigger\n              href=\"#\"\n              className=\"bg-blue-500/10 px-1 font-medium text-blue-600 dark:text-blue-400\"\n            >\n              #launch-room\n            </HoverCardTrigger>\n            <HoverCardContent className=\"flex flex-col gap-2\">\n              <div className=\"flex items-center gap-1.5 font-medium\">\n                <HashIcon className=\"size-3.5\" />\n                launch-room\n              </div>\n              <p className=\"text-muted-foreground\">\n                Coordination for the v4.0 launch: timelines, blockers, and\n                go/no-go calls.\n              </p>\n              <div className=\"flex items-center justify-between\">\n                <span className=\"flex items-center gap-1 text-muted-foreground\">\n                  <UsersIcon className=\"size-3.5\" />\n                  42 members\n                </span>\n                <Button size=\"xs\">Join channel</Button>\n              </div>\n            </HoverCardContent>\n          </HoverCard>\n        </p>\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

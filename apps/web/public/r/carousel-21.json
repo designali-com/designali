@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "carousel-21",
+  "type": "registry:example",
+  "description": "File manager \"Recent\" row with file-type icons, sizes, and owners.",
+  "files": [
+    {
+      "path": "registry/designali/examples/carousel/carousel-21.tsx",
+      "content": "import {\n  FileArchiveIcon,\n  FileCodeIcon,\n  FileSpreadsheetIcon,\n  FileTextIcon,\n  FileVideoIcon,\n  FolderIcon,\n} from \"lucide-react\"\n\nimport { Avatar, AvatarFallback } from \"@workspace/ui/components/avatar\"\nimport {\n  Carousel,\n  CarouselContent,\n  CarouselItem,\n  CarouselNext,\n  CarouselPrevious,\n} from \"@workspace/ui/components/carousel\"\n\nconst files = [\n  { name: \"Q3 roadmap.pdf\", size: \"2.4 MB\", icon: FileTextIcon, owner: \"MC\" },\n  { name: \"Brand assets\", size: \"18 items\", icon: FolderIcon, owner: \"JP\" },\n  {\n    name: \"Budget 2026.xlsx\",\n    size: \"840 KB\",\n    icon: FileSpreadsheetIcon,\n    owner: \"AL\",\n  },\n  {\n    name: \"Launch video.mp4\",\n    size: \"128 MB\",\n    icon: FileVideoIcon,\n    owner: \"RK\",\n  },\n  {\n    name: \"Interview notes.md\",\n    size: \"12 KB\",\n    icon: FileCodeIcon,\n    owner: \"MC\",\n  },\n  { name: \"Archive.zip\", size: \"56 MB\", icon: FileArchiveIcon, owner: \"TS\" },\n]\n\nexport default function RecentFilesCarousel() {\n  return (\n    <Carousel opts={{ align: \"start\" }} className=\"w-full max-w-md\">\n      <div className=\"mb-2 flex items-center justify-between\">\n        <h3 className=\"text-sm font-medium\">Recent</h3>\n        <div className=\"flex gap-1\">\n          <CarouselPrevious variant=\"ghost\" className=\"static translate-none\" />\n          <CarouselNext variant=\"ghost\" className=\"static translate-none\" />\n        </div>\n      </div>\n      <CarouselContent className=\"-ms-2\">\n        {files.map((file) => (\n          <CarouselItem key={file.name} className=\"basis-1/2 ps-2 sm:basis-1/3\">\n            <button\n              type=\"button\"\n              className=\"flex w-full flex-col gap-3 border p-3 text-start transition-colors hover:bg-muted/60\"\n            >\n              <file.icon className=\"size-6 text-muted-foreground\" />\n              <div className=\"min-w-0\">\n                <p className=\"truncate text-xs font-medium\">{file.name}</p>\n                <p className=\"text-[11px] text-muted-foreground\">{file.size}</p>\n              </div>\n              <Avatar size=\"sm\">\n                <AvatarFallback>{file.owner}</AvatarFallback>\n              </Avatar>\n            </button>\n          </CarouselItem>\n        ))}\n      </CarouselContent>\n    </Carousel>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

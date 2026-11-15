@@ -8,9 +8,9 @@ import { Button } from "@workspace/ui/components/button"
 const COOLDOWN = 45
 
 const providers = [
-  { label: "Open Gmail", href: "#" },
-  { label: "Open Outlook", href: "#" },
-  { label: "Open Proton", href: "#" },
+  { label: "Open web mail", href: "#" },
+  { label: "Open desktop mail", href: "#" },
+  { label: "Open mobile mail", href: "#" },
 ]
 
 export default function Authentication19() {

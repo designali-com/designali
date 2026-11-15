@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-32",
+  "type": "registry:example",
+  "description": "An invite form with email input and role select that builds a pending invite list.",
+  "files": [
+    {
+      "path": "registry/designali/examples/input/input-32.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { Badge } from \"@workspace/ui/components/badge\"\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Input } from \"@workspace/ui/components/input\"\nimport {\n  NativeSelect,\n  NativeSelectOption,\n} from \"@workspace/ui/components/native-select\"\n\nexport default function TeamInviteInput() {\n  const [email, setEmail] = React.useState(\"\")\n  const [role, setRole] = React.useState(\"Member\")\n  const [invites, setInvites] = React.useState([\n    { email: \"kai@harborlabs.io\", role: \"Admin\" },\n  ])\n\n  return (\n    <div className=\"flex w-full max-w-md flex-col gap-3\">\n      <form\n        className=\"flex gap-2\"\n        onSubmit={(e) => {\n          e.preventDefault()\n          if (!email) return\n          setInvites([...invites, { email, role }])\n          setEmail(\"\")\n        }}\n      >\n        <Input\n          type=\"email\"\n          required\n          aria-label=\"Email to invite\"\n          placeholder=\"teammate@company.com\"\n          value={email}\n          onChange={(e) => setEmail(e.target.value)}\n        />\n        <NativeSelect\n          aria-label=\"Role\"\n          value={role}\n          onChange={(e) => setRole(e.target.value)}\n          className=\"w-28\"\n        >\n          <NativeSelectOption>Member</NativeSelectOption>\n          <NativeSelectOption>Admin</NativeSelectOption>\n          <NativeSelectOption>Viewer</NativeSelectOption>\n        </NativeSelect>\n        <Button type=\"submit\">Invite</Button>\n      </form>\n      <ul className=\"divide-y border text-xs\">\n        {invites.map((i) => (\n          <li\n            key={i.email}\n            className=\"flex items-center justify-between px-3 py-2\"\n          >\n            <span>{i.email}</span>\n            <Badge variant=\"outline\">{i.role} · Pending</Badge>\n          </li>\n        ))}\n      </ul>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

@@ -151,7 +151,9 @@ export function buildFile(category: string, ex: Example) {
   }
 
   const lines: string[] = []
-  const client = ex.client ?? needsClient(code)
+  // The input-otp package creates React context at module load, so any file
+  // importing it directly must be a client component.
+  const client = ex.client ?? (needsClient(code) || "input-otp" in (ex.imports ?? {}))
   if (client) lines.push(`"use client"`, "")
   if (/\bReact\./.test(code)) lines.push(`import * as React from "react"`)
   const extra = [...imports.keys()].filter(

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-otp-50",
+  "type": "registry:example",
+  "description": "Sign-in screen offering a passkey first and an OTP code as a fallback under a divider.",
+  "files": [
+    {
+      "path": "registry/designali/examples/input-otp/input-otp-50.tsx",
+      "content": "\"use client\"\n\nimport { REGEXP_ONLY_DIGITS } from \"input-otp\"\nimport { FingerprintIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  InputOTP,\n  InputOTPGroup,\n  InputOTPSlot,\n} from \"@workspace/ui/components/input-otp\"\nimport { Separator } from \"@workspace/ui/components/separator\"\n\nexport default function SecurityKeyFallback() {\n  return (\n    <div className=\"flex w-full max-w-xs flex-col gap-4\">\n      <Button variant=\"outline\">\n        <FingerprintIcon data-icon=\"inline-start\" />\n        Use passkey\n      </Button>\n      <div className=\"flex items-center gap-3 text-xs text-muted-foreground\">\n        <Separator className=\"flex-1\" />\n        or enter a code\n        <Separator className=\"flex-1\" />\n      </div>\n      <InputOTP\n        maxLength={6}\n        pattern={REGEXP_ONLY_DIGITS}\n        containerClassName=\"justify-center\"\n      >\n        <InputOTPGroup>\n          <InputOTPSlot index={0} />\n          <InputOTPSlot index={1} />\n          <InputOTPSlot index={2} />\n          <InputOTPSlot index={3} />\n          <InputOTPSlot index={4} />\n          <InputOTPSlot index={5} />\n        </InputOTPGroup>\n      </InputOTP>\n      <Button>Sign in</Button>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "drawer-35",
+  "type": "registry:example",
+  "description": "Mobile-friendly destructive confirmation presented as a bottom drawer.",
+  "files": [
+    {
+      "path": "registry/designali/examples/drawer/drawer-35.tsx",
+      "content": "import { Trash2Icon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  Drawer,\n  DrawerClose,\n  DrawerContent,\n  DrawerDescription,\n  DrawerTitle,\n  DrawerTrigger,\n} from \"@workspace/ui/components/drawer\"\n\nexport default function ConfirmDeleteBottomDrawer() {\n  return (\n    <Drawer>\n      <DrawerTrigger render={<Button variant=\"destructive\" />}>\n        <Trash2Icon data-icon=\"inline-start\" />\n        Delete playlist\n      </DrawerTrigger>\n      <DrawerContent>\n        <div className=\"mx-auto flex w-full max-w-sm flex-col items-center gap-2 p-4 text-center\">\n          <div className=\"flex size-12 items-center justify-center rounded-full bg-destructive/10 text-destructive\">\n            <Trash2Icon className=\"size-5\" />\n          </div>\n          <DrawerTitle className=\"text-base\">\n            Delete &quot;Late Night Drives&quot;?\n          </DrawerTitle>\n          <DrawerDescription>\n            42 songs will be removed from your library. Followers will lose\n            access.\n          </DrawerDescription>\n          <div className=\"mt-3 flex w-full flex-col gap-2\">\n            <DrawerClose render={<Button variant=\"destructive\" />}>\n              Delete playlist\n            </DrawerClose>\n            <DrawerClose render={<Button variant=\"outline\" />}>\n              Cancel\n            </DrawerClose>\n          </div>\n        </div>\n      </DrawerContent>\n    </Drawer>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

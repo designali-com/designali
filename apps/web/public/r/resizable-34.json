@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "resizable-34",
+  "type": "registry:example",
+  "description": "Vertical split with a bar chart above a channel breakdown list.",
+  "files": [
+    {
+      "path": "registry/designali/examples/resizable/resizable-34.tsx",
+      "content": "import {\n  ResizableHandle,\n  ResizablePanel,\n  ResizablePanelGroup,\n} from \"@workspace/ui/components/resizable\"\n\nconst bars = [32, 48, 41, 66, 58, 72, 80]\nconst channels = [\n  { name: \"Organic search\", value: \"42%\" },\n  { name: \"Direct\", value: \"27%\" },\n  { name: \"Referral\", value: \"18%\" },\n  { name: \"Social\", value: \"13%\" },\n]\n\nexport default function AnalyticsChartAndBreakdown() {\n  return (\n    <ResizablePanelGroup\n      orientation=\"vertical\"\n      className=\"h-80 w-full max-w-lg border\"\n    >\n      <ResizablePanel defaultSize=\"55%\" minSize=\"30%\">\n        <div className=\"flex h-full flex-col gap-2 p-3\">\n          <div className=\"flex items-baseline justify-between\">\n            <span className=\"text-xs font-medium\">Weekly visitors</span>\n            <span className=\"text-sm font-semibold tabular-nums\">18,240</span>\n          </div>\n          <div className=\"flex flex-1 items-end gap-1.5\">\n            {bars.map((value, i) => (\n              <div\n                key={i}\n                className=\"flex-1 bg-primary/80\"\n                style={{ height: value + \"%\" }}\n              />\n            ))}\n          </div>\n        </div>\n      </ResizablePanel>\n      <ResizableHandle withHandle />\n      <ResizablePanel defaultSize=\"45%\" minSize=\"25%\">\n        <div className=\"flex h-full flex-col divide-y\">\n          {channels.map((c) => (\n            <div\n              key={c.name}\n              className=\"flex items-center justify-between px-3 py-2 text-xs\"\n            >\n              <span>{c.name}</span>\n              <span className=\"font-medium tabular-nums\">{c.value}</span>\n            </div>\n          ))}\n        </div>\n      </ResizablePanel>\n    </ResizablePanelGroup>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

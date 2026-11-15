@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "breadcrumb-17",
+  "type": "registry:example",
+  "description": "The same path rendered at small, default and large text sizes.",
+  "files": [
+    {
+      "path": "registry/designali/examples/breadcrumb/breadcrumb-17.tsx",
+      "content": "import {\n  Breadcrumb,\n  BreadcrumbItem,\n  BreadcrumbLink,\n  BreadcrumbList,\n  BreadcrumbPage,\n  BreadcrumbSeparator,\n} from \"@workspace/ui/components/breadcrumb\"\n\nconst sizes = [\n  { label: \"Small\", list: \"text-[11px] gap-1\", icon: \"[&>svg]:size-3\" },\n  { label: \"Default\", list: \"\", icon: \"\" },\n  { label: \"Large\", list: \"text-sm gap-2\", icon: \"[&>svg]:size-4\" },\n]\n\nexport default function SizeScaleBreadcrumb() {\n  return (\n    <div className=\"flex flex-col gap-4\">\n      {sizes.map((size) => (\n        <div key={size.label} className=\"flex flex-col gap-1\">\n          <span className=\"text-[10px] tracking-wide text-muted-foreground uppercase\">\n            {size.label}\n          </span>\n          <Breadcrumb>\n            <BreadcrumbList className={size.list}>\n              <BreadcrumbItem>\n                <BreadcrumbLink href=\"#\">Account</BreadcrumbLink>\n              </BreadcrumbItem>\n              <BreadcrumbSeparator className={size.icon} />\n              <BreadcrumbItem>\n                <BreadcrumbLink href=\"#\">Billing</BreadcrumbLink>\n              </BreadcrumbItem>\n              <BreadcrumbSeparator className={size.icon} />\n              <BreadcrumbItem>\n                <BreadcrumbPage>Invoices</BreadcrumbPage>\n              </BreadcrumbItem>\n            </BreadcrumbList>\n          </Breadcrumb>\n        </div>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

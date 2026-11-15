@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "checkbox-40",
+  "type": "registry:example",
+  "description": "Checkbox that saves to the server on change, showing a spinner and disabling while pending.",
+  "files": [
+    {
+      "path": "registry/designali/examples/checkbox/checkbox-40.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { Checkbox } from \"@workspace/ui/components/checkbox\"\nimport {\n  Field,\n  FieldContent,\n  FieldDescription,\n  FieldLabel,\n} from \"@workspace/ui/components/field\"\nimport { Spinner } from \"@workspace/ui/components/spinner\"\n\nexport default function AsyncSavingCheckbox() {\n  const [checked, setChecked] = React.useState(false)\n  const [saving, setSaving] = React.useState(false)\n  const [savedAt, setSavedAt] = React.useState<string | null>(null)\n\n  const handleChange = (value: boolean) => {\n    setChecked(value)\n    setSaving(true)\n    setTimeout(() => {\n      setSaving(false)\n      setSavedAt(\n        new Date().toLocaleTimeString([], {\n          hour: \"2-digit\",\n          minute: \"2-digit\",\n        })\n      )\n    }, 1200)\n  }\n\n  return (\n    <Field\n      orientation=\"horizontal\"\n      className=\"w-full max-w-xs\"\n      data-disabled={saving || undefined}\n    >\n      <Checkbox\n        id=\"weekly-digest\"\n        checked={checked}\n        disabled={saving}\n        onCheckedChange={handleChange}\n      />\n      <FieldContent>\n        <FieldLabel htmlFor=\"weekly-digest\">Weekly digest email</FieldLabel>\n        <FieldDescription className=\"flex items-center gap-1.5\">\n          {saving ? (\n            <>\n              <Spinner className=\"size-3\" /> Saving...\n            </>\n          ) : savedAt ? (\n            \"Saved at \" + savedAt\n          ) : (\n            \"Changes save automatically.\"\n          )}\n        </FieldDescription>\n      </FieldContent>\n    </Field>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

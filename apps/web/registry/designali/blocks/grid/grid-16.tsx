@@ -15,7 +15,7 @@ const projects = [
 ]
 
 export default function Grid16() {
-  const [open, setOpen] = useState<string | null>(projects[0].name)
+  const [open, setOpen] = useState<string | null>(projects[0]!.name)
 
   return (
     <section className="w-full bg-background py-24">

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "sheet-20",
+  "type": "registry:example",
+  "description": "Sheet without a close button that requires accepting updated terms before continuing.",
+  "files": [
+    {
+      "path": "registry/designali/examples/sheet/sheet-20.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Checkbox } from \"@workspace/ui/components/checkbox\"\nimport { Label } from \"@workspace/ui/components/label\"\nimport {\n  Sheet,\n  SheetContent,\n  SheetDescription,\n  SheetFooter,\n  SheetHeader,\n  SheetTitle,\n  SheetTrigger,\n} from \"@workspace/ui/components/sheet\"\n\nexport default function TermsAcceptanceSheet() {\n  const [open, setOpen] = React.useState(false)\n  const [agreed, setAgreed] = React.useState(false)\n  return (\n    <Sheet open={open} onOpenChange={setOpen}>\n      <SheetTrigger render={<Button variant=\"outline\" />}>\n        Review updated terms\n      </SheetTrigger>\n      <SheetContent\n        side=\"bottom\"\n        showCloseButton={false}\n        className=\"mx-auto max-w-lg\"\n      >\n        <SheetHeader>\n          <SheetTitle>We&apos;ve updated our terms</SheetTitle>\n          <SheetDescription>\n            Effective April 1, 2026. Please review the key changes.\n          </SheetDescription>\n        </SheetHeader>\n        <ul className=\"flex list-disc flex-col gap-1 ps-8 pe-4\">\n          <li>Data retention for deleted projects is now 30 days.</li>\n          <li>Usage-based add-ons are billed at the end of each cycle.</li>\n          <li>Disputes are handled under the laws of your billing region.</li>\n        </ul>\n        <SheetFooter>\n          <Label className=\"gap-2 font-normal\">\n            <Checkbox checked={agreed} onCheckedChange={setAgreed} />I have read\n            and agree to the updated terms\n          </Label>\n          <Button disabled={!agreed} onClick={() => setOpen(false)}>\n            Continue\n          </Button>\n        </SheetFooter>\n      </SheetContent>\n    </Sheet>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

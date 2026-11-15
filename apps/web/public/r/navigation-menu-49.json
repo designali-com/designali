@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "navigation-menu-49",
+  "type": "registry:example",
+  "description": "Navigation menu that shows skeleton placeholders while its Recent projects list loads on open.",
+  "files": [
+    {
+      "path": "registry/designali/examples/navigation-menu/navigation-menu-49.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { FileTextIcon } from \"lucide-react\"\n\nimport {\n  NavigationMenu,\n  NavigationMenuContent,\n  NavigationMenuItem,\n  NavigationMenuLink,\n  NavigationMenuList,\n  NavigationMenuTrigger,\n  navigationMenuTriggerStyle,\n} from \"@workspace/ui/components/navigation-menu\"\nimport { Skeleton } from \"@workspace/ui/components/skeleton\"\n\nconst recent = [\"Q1 roadmap\", \"Partner portal\", \"Pricing experiment\"]\n\nexport default function LoadingContentNav() {\n  const [loaded, setLoaded] = React.useState(false)\n\n  return (\n    <NavigationMenu\n      onValueChange={(value) => {\n        if (value && !loaded) window.setTimeout(() => setLoaded(true), 1200)\n      }}\n    >\n      <NavigationMenuList>\n        <NavigationMenuItem value=\"recent\">\n          <NavigationMenuTrigger>Recent</NavigationMenuTrigger>\n          <NavigationMenuContent>\n            <ul className=\"flex w-56 flex-col gap-1\">\n              {loaded\n                ? recent.map((r) => (\n                    <li key={r}>\n                      <NavigationMenuLink href=\"#\">\n                        <FileTextIcon className=\"text-muted-foreground\" />\n                        {r}\n                      </NavigationMenuLink>\n                    </li>\n                  ))\n                : recent.map((r) => (\n                    <li key={r} className=\"flex items-center gap-2 p-2\">\n                      <Skeleton className=\"size-4\" />\n                      <Skeleton className=\"h-3 flex-1\" />\n                    </li>\n                  ))}\n            </ul>\n          </NavigationMenuContent>\n        </NavigationMenuItem>\n        <NavigationMenuItem>\n          <NavigationMenuLink href=\"#\" className={navigationMenuTriggerStyle()}>\n            Starred\n          </NavigationMenuLink>\n        </NavigationMenuItem>\n      </NavigationMenuList>\n    </NavigationMenu>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

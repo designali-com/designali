@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "features-12",
+  "type": "registry:block",
+  "description": "Stat-led rows pairing a large monospace number with a label and supporting description.",
+  "dependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/designali/blocks/features/features-12.tsx",
+      "content": "const rows = [\n  {\n    value: \"48ms\",\n    label: \"Median cold start\",\n    body: \"Functions boot from a pre-warmed snapshot, so the first request after a deploy feels exactly like the thousandth.\",\n  },\n  {\n    value: \"300+\",\n    label: \"Edge locations\",\n    body: \"Your code runs within 50ms of 95% of the world's internet users, with automatic failover between regions.\",\n  },\n  {\n    value: \"0\",\n    label: \"Servers to patch\",\n    body: \"Runtimes, TLS certificates and OS updates are rolled out by us, tested against your traffic in shadow mode first.\",\n  },\n  {\n    value: \"99.99%\",\n    label: \"Uptime, contractually\",\n    body: \"Backed by a public status page and automatic credits. No support ticket required to claim them.\",\n  },\n]\n\nexport default function Features12() {\n  return (\n    <section className=\"w-full bg-background px-6 py-20 md:py-28\">\n      <div className=\"mx-auto max-w-6xl\">\n        <div className=\"grid gap-6 md:grid-cols-2 md:items-end\">\n          <h2 className=\"text-3xl font-medium tracking-tight md:text-5xl\">\n            The numbers behind Fathom Edge.\n          </h2>\n          <p className=\"text-sm leading-7 text-muted-foreground md:text-right\">\n            Measured across 1.2 billion requests in October 2026.\n          </p>\n        </div>\n        <div className=\"mt-14 border-t border-border\">\n          {rows.map((row) => (\n            <div\n              key={row.label}\n              className=\"grid gap-4 border-b border-border py-8 md:grid-cols-[1fr_1fr_1.4fr] md:items-baseline md:gap-10\"\n            >\n              <div className=\"font-mono text-5xl font-medium tracking-tighter md:text-6xl\">\n                {row.value}\n              </div>\n              <div className=\"text-base font-medium\">{row.label}</div>\n              <p className=\"text-sm leading-7 text-muted-foreground\">{row.body}</p>\n            </div>\n          ))}\n        </div>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "760px"
+  },
+  "categories": [
+    "features"
+  ]
+}

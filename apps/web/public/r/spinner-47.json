@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "spinner-47",
+  "type": "registry:example",
+  "description": "Spinner with a context-specific aria-label and a live region announcing the status.",
+  "files": [
+    {
+      "path": "registry/designali/examples/spinner/spinner-47.tsx",
+      "content": "import { Spinner } from \"@workspace/ui/components/spinner\"\n\nexport default function AccessibleLabelledSpinner() {\n  return (\n    <div\n      className=\"flex w-full max-w-xs items-center gap-3 border p-4\"\n      aria-live=\"polite\"\n    >\n      <Spinner aria-label=\"Loading invoices\" className=\"size-5\" />\n      <div className=\"flex flex-col\">\n        <span className=\"text-sm font-medium\">Loading invoices</span>\n        <span className=\"text-xs text-muted-foreground\">\n          Screen readers announce this status politely.\n        </span>\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

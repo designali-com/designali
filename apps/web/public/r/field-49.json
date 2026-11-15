@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "field-49",
+  "type": "registry:example",
+  "description": "Radio question whose Other choice reveals a text input for a custom answer.",
+  "files": [
+    {
+      "path": "registry/designali/examples/field/field-49.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport {\n  Field,\n  FieldDescription,\n  FieldLabel,\n  FieldLegend,\n  FieldSet,\n} from \"@workspace/ui/components/field\"\nimport { Input } from \"@workspace/ui/components/input\"\nimport {\n  RadioGroup,\n  RadioGroupItem,\n} from \"@workspace/ui/components/radio-group\"\n\nconst reasons = [\n  \"Too expensive\",\n  \"Missing features\",\n  \"Switching to another tool\",\n  \"other\",\n]\n\nexport default function ConditionalOtherOptionField() {\n  const [reason, setReason] = React.useState(\"Missing features\")\n\n  return (\n    <FieldSet className=\"w-full max-w-sm\">\n      <FieldLegend>Why are you canceling?</FieldLegend>\n      <FieldDescription>Your answer helps us improve.</FieldDescription>\n      <RadioGroup value={reason} onValueChange={(v) => setReason(v as string)}>\n        {reasons.map((r, i) => (\n          <Field key={r} orientation=\"horizontal\">\n            <RadioGroupItem value={r} id={\"cancel-\" + i} />\n            <FieldLabel htmlFor={\"cancel-\" + i} className=\"font-normal\">\n              {r === \"other\" ? \"Something else\" : r}\n            </FieldLabel>\n          </Field>\n        ))}\n      </RadioGroup>\n      {reason === \"other\" && (\n        <Field>\n          <FieldLabel htmlFor=\"cancel-other\" className=\"sr-only\">\n            Tell us more\n          </FieldLabel>\n          <Input id=\"cancel-other\" autoFocus placeholder=\"Tell us more...\" />\n        </Field>\n      )}\n    </FieldSet>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

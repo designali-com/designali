@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tabs-34",
+  "type": "registry:example",
+  "description": "HTTP response inspector tabs for preview, headers and raw body.",
+  "files": [
+    {
+      "path": "registry/designali/examples/tabs/tabs-34.tsx",
+      "content": "import * as React from \"react\"\n\nimport {\n  Tabs,\n  TabsContent,\n  TabsList,\n  TabsTrigger,\n} from \"@workspace/ui/components/tabs\"\n\nconst body = {\n  id: \"cus_81Kq\",\n  name: \"Hollis & Co\",\n  balance: 1250,\n  currency: \"eur\",\n}\nconst headers = [\n  [\"content-type\", \"application/json\"],\n  [\"x-request-id\", \"req_7f2a91\"],\n  [\"cache-control\", \"no-store\"],\n]\n\nexport default function ApiResponseTabs() {\n  return (\n    <Tabs defaultValue=\"preview\" className=\"w-full max-w-md gap-0 border\">\n      <div className=\"flex items-center justify-between border-b px-2\">\n        <TabsList variant=\"line\" className=\"h-9\">\n          <TabsTrigger value=\"preview\">Preview</TabsTrigger>\n          <TabsTrigger value=\"headers\">Headers</TabsTrigger>\n          <TabsTrigger value=\"raw\">Raw</TabsTrigger>\n        </TabsList>\n        <span className=\"flex items-center gap-1.5 text-emerald-600\">\n          <span className=\"size-1.5 rounded-full bg-emerald-500\" />\n          200 OK · 84 ms\n        </span>\n      </div>\n      <TabsContent\n        value=\"preview\"\n        className=\"grid grid-cols-[auto_1fr] gap-x-4 gap-y-1 p-3\"\n      >\n        {Object.entries(body).map(([k, v]) => (\n          <React.Fragment key={k}>\n            <span className=\"text-muted-foreground\">{k}</span>\n            <span className=\"font-medium\">{String(v)}</span>\n          </React.Fragment>\n        ))}\n      </TabsContent>\n      <TabsContent value=\"headers\" className=\"p-3 font-mono\">\n        {headers.map(([k, v]) => (\n          <p key={k}>\n            <span className=\"text-muted-foreground\">{k}:</span> {v}\n          </p>\n        ))}\n      </TabsContent>\n      <TabsContent value=\"raw\" className=\"overflow-x-auto p-3\">\n        <pre className=\"font-mono\">{JSON.stringify(body, null, 2)}</pre>\n      </TabsContent>\n    </Tabs>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

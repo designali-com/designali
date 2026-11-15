@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "pagination-47",
+  "type": "registry:example",
+  "description": "Spreadsheet-style pager with an editable page number field between the arrows.",
+  "files": [
+    {
+      "path": "registry/designali/examples/pagination/pagination-47.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { ChevronLeftIcon, ChevronRightIcon } from \"lucide-react\"\n\nimport { Input } from \"@workspace/ui/components/input\"\nimport {\n  Pagination,\n  PaginationContent,\n  PaginationItem,\n  PaginationLink,\n} from \"@workspace/ui/components/pagination\"\n\nconst TOTAL = 37\n\nexport default function InlinePageInputPagination() {\n  const [page, setPage] = React.useState(5)\n  const [draft, setDraft] = React.useState(\"5\")\n\n  const commit = (value: number) => {\n    const next = Math.min(\n      TOTAL,\n      Math.max(1, Number.isNaN(value) ? page : value)\n    )\n    setPage(next)\n    setDraft(String(next))\n  }\n\n  return (\n    <Pagination>\n      <PaginationContent className=\"gap-1\">\n        <PaginationItem>\n          <PaginationLink\n            href=\"#\"\n            aria-label=\"Previous page\"\n            onClick={(event) => {\n              event.preventDefault()\n              commit(page - 1)\n            }}\n          >\n            <ChevronLeftIcon />\n          </PaginationLink>\n        </PaginationItem>\n        <PaginationItem className=\"flex items-center gap-1.5 text-xs text-muted-foreground\">\n          Page\n          <Input\n            aria-label=\"Current page\"\n            inputMode=\"numeric\"\n            value={draft}\n            onChange={(event) => setDraft(event.target.value)}\n            onBlur={() => commit(Number(draft))}\n            onKeyDown={(event) => {\n              if (event.key === \"Enter\") commit(Number(draft))\n            }}\n            className=\"h-7 w-12 text-center tabular-nums\"\n          />\n          of {TOTAL}\n        </PaginationItem>\n        <PaginationItem>\n          <PaginationLink\n            href=\"#\"\n            aria-label=\"Next page\"\n            onClick={(event) => {\n              event.preventDefault()\n              commit(page + 1)\n            }}\n          >\n            <ChevronRightIcon />\n          </PaginationLink>\n        </PaginationItem>\n      </PaginationContent>\n    </Pagination>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

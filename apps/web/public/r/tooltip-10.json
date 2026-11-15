@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tooltip-10",
+  "type": "registry:example",
+  "description": "Form label with an info icon that explains the field in a tooltip.",
+  "files": [
+    {
+      "path": "registry/designali/examples/tooltip/tooltip-10.tsx",
+      "content": "import { InfoIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Input } from \"@workspace/ui/components/input\"\nimport { Label } from \"@workspace/ui/components/label\"\nimport {\n  Tooltip,\n  TooltipContent,\n  TooltipTrigger,\n} from \"@workspace/ui/components/tooltip\"\n\nexport default function FieldInfoTooltip() {\n  return (\n    <div className=\"flex w-full max-w-xs flex-col gap-1.5\">\n      <div className=\"flex items-center gap-1\">\n        <Label htmlFor=\"vat\">VAT number</Label>\n        <Tooltip>\n          <TooltipTrigger\n            render={\n              <Button\n                variant=\"ghost\"\n                size=\"icon-xs\"\n                aria-label=\"About VAT number\"\n              />\n            }\n          >\n            <InfoIcon />\n          </TooltipTrigger>\n          <TooltipContent side=\"right\" className=\"max-w-52\">\n            Required for EU businesses so invoices can be issued without VAT.\n          </TooltipContent>\n        </Tooltip>\n      </div>\n      <Input id=\"vat\" placeholder=\"DE123456789\" />\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

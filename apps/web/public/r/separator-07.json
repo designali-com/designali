@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "separator-07",
+  "type": "registry:example",
+  "description": "Order receipt with dashed separators setting apart line items, fees and total.",
+  "files": [
+    {
+      "path": "registry/designali/examples/separator/separator-07.tsx",
+      "content": "import { Separator } from \"@workspace/ui/components/separator\"\n\nconst lines = [\n  { label: \"Oat flat white\", amount: 4.5 },\n  { label: \"Almond croissant\", amount: 3.75 },\n  { label: \"Sparkling water\", amount: 2.25 },\n]\n\nconst dashed =\n  \"bg-transparent bg-[repeating-linear-gradient(90deg,var(--border)_0_6px,transparent_6px_12px)]\"\n\nexport default function DashedReceiptSeparator() {\n  const subtotal = lines.reduce((sum, line) => sum + line.amount, 0)\n  const tax = subtotal * 0.08\n\n  return (\n    <div className=\"flex w-full max-w-60 flex-col gap-3 border bg-muted/20 p-4 font-mono text-xs\">\n      <div className=\"text-center\">\n        <div className=\"text-sm font-semibold\">CORNER BEANS</div>\n        <div className=\"text-muted-foreground\">Order #2041 - Table 6</div>\n      </div>\n      <Separator className={dashed} />\n      {lines.map((line) => (\n        <div key={line.label} className=\"flex justify-between\">\n          <span>{line.label}</span>\n          <span>{line.amount.toFixed(2)}</span>\n        </div>\n      ))}\n      <Separator className={dashed} />\n      <div className=\"flex justify-between text-muted-foreground\">\n        <span>Tax</span>\n        <span>{tax.toFixed(2)}</span>\n      </div>\n      <div className=\"flex justify-between font-semibold\">\n        <span>Total</span>\n        <span>{(subtotal + tax).toFixed(2)}</span>\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

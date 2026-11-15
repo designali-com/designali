@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "dropdown-menu-08",
+  "type": "registry:example",
+  "description": "Checkbox menu toggling which columns a data table shows, with a live header preview.",
+  "files": [
+    {
+      "path": "registry/designali/examples/dropdown-menu/dropdown-menu-08.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { Columns3Icon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  DropdownMenu,\n  DropdownMenuCheckboxItem,\n  DropdownMenuContent,\n  DropdownMenuGroup,\n  DropdownMenuLabel,\n  DropdownMenuTrigger,\n} from \"@workspace/ui/components/dropdown-menu\"\n\nconst columns = [\"Name\", \"Email\", \"Role\", \"Last active\", \"Status\"]\n\nexport default function TableColumnVisibility() {\n  const [visible, setVisible] = React.useState([\"Name\", \"Email\", \"Status\"])\n\n  const toggle = (column: string, checked: boolean) =>\n    setVisible((prev) =>\n      checked\n        ? columns.filter((c) => prev.includes(c) || c === column)\n        : prev.filter((c) => c !== column)\n    )\n\n  return (\n    <div className=\"flex w-full max-w-md flex-col gap-3\">\n      <div className=\"flex justify-end\">\n        <DropdownMenu>\n          <DropdownMenuTrigger render={<Button variant=\"outline\" size=\"sm\" />}>\n            <Columns3Icon data-icon=\"inline-start\" />\n            Columns\n          </DropdownMenuTrigger>\n          <DropdownMenuContent align=\"end\" className=\"w-44\">\n            <DropdownMenuGroup>\n              <DropdownMenuLabel>Toggle columns</DropdownMenuLabel>\n              {columns.map((column) => (\n                <DropdownMenuCheckboxItem\n                  key={column}\n                  checked={visible.includes(column)}\n                  disabled={column === \"Name\"}\n                  onCheckedChange={(checked) => toggle(column, checked)}\n                >\n                  {column}\n                </DropdownMenuCheckboxItem>\n              ))}\n            </DropdownMenuGroup>\n          </DropdownMenuContent>\n        </DropdownMenu>\n      </div>\n      <div className=\"flex border bg-muted/50 text-xs font-medium text-muted-foreground\">\n        {visible.map((column) => (\n          <div\n            key={column}\n            className=\"flex-1 truncate border-e px-2 py-2 last:border-e-0\"\n          >\n            {column}\n          </div>\n        ))}\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

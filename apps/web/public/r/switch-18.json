@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "switch-18",
+  "type": "registry:example",
+  "description": "Read-only switches whose values are enforced by an organization policy.",
+  "files": [
+    {
+      "path": "registry/designali/examples/switch/switch-18.tsx",
+      "content": "import { BuildingIcon } from \"lucide-react\"\n\nimport {\n  Alert,\n  AlertDescription,\n  AlertTitle,\n} from \"@workspace/ui/components/alert\"\nimport { Label } from \"@workspace/ui/components/label\"\nimport { Switch } from \"@workspace/ui/components/switch\"\n\nexport default function AdminManagedReadOnly() {\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-3 border p-4\">\n      <Alert>\n        <BuildingIcon />\n        <AlertTitle>Managed by Northwind IT</AlertTitle>\n        <AlertDescription>\n          These settings are set by your organization.\n        </AlertDescription>\n      </Alert>\n      <div className=\"flex items-center justify-between gap-4\">\n        <Label htmlFor=\"disk-encryption\">Disk encryption</Label>\n        <Switch id=\"disk-encryption\" defaultChecked readOnly />\n      </div>\n      <div className=\"flex items-center justify-between gap-4\">\n        <Label htmlFor=\"usb-storage\">Allow USB storage</Label>\n        <Switch id=\"usb-storage\" readOnly />\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

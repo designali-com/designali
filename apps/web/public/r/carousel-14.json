@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "carousel-14",
+  "type": "registry:example",
+  "description": "Vertical carousel that auto-advances through product announcements in a single line.",
+  "files": [
+    {
+      "path": "registry/designali/examples/carousel/carousel-14.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { MegaphoneIcon } from \"lucide-react\"\n\nimport { Badge } from \"@workspace/ui/components/badge\"\nimport {\n  Carousel,\n  CarouselContent,\n  CarouselItem,\n  type CarouselApi,\n} from \"@workspace/ui/components/carousel\"\n\nconst announcements = [\n  { tag: \"New\", text: \"Recurring invoices are now available on all plans.\" },\n  { tag: \"Update\", text: \"Exports now include custom fields and tags.\" },\n  {\n    tag: \"Event\",\n    text: \"Join our live Q&A on roadmap priorities this Thursday.\",\n  },\n  { tag: \"Fix\", text: \"Calendar sync no longer duplicates all-day events.\" },\n]\n\nexport default function VerticalAnnouncementTicker() {\n  const [api, setApi] = React.useState<CarouselApi>()\n\n  React.useEffect(() => {\n    if (!api) return\n    const id = setInterval(() => api.scrollNext(), 3000)\n    return () => clearInterval(id)\n  }, [api])\n\n  return (\n    <div className=\"flex w-full max-w-md items-center gap-3 border bg-muted/40 px-3\">\n      <MegaphoneIcon className=\"size-4 shrink-0 text-muted-foreground\" />\n      <Carousel\n        setApi={setApi}\n        orientation=\"vertical\"\n        opts={{ loop: true }}\n        className=\"min-w-0 flex-1\"\n      >\n        <CarouselContent className=\"-mt-0 h-11\">\n          {announcements.map((item) => (\n            <CarouselItem\n              key={item.text}\n              className=\"flex items-center gap-2 pt-0\"\n            >\n              <Badge variant=\"outline\">{item.tag}</Badge>\n              <span className=\"truncate text-xs\">{item.text}</span>\n            </CarouselItem>\n          ))}\n        </CarouselContent>\n      </Carousel>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

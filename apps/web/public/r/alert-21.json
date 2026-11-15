@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "alert-21",
+  "type": "registry:example",
+  "description": "Warning alert presenting two-factor recovery codes with a copy action.",
+  "files": [
+    {
+      "path": "registry/designali/examples/alert/alert-21.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { CheckIcon, CopyIcon, KeyRoundIcon } from \"lucide-react\"\n\nimport {\n  Alert,\n  AlertDescription,\n  AlertTitle,\n} from \"@workspace/ui/components/alert\"\nimport { Button } from \"@workspace/ui/components/button\"\n\nconst codes = [\n  \"4F7K-92QD\",\n  \"M8TZ-1LXA\",\n  \"Q3VB-7HNP\",\n  \"C6RW-0YJE\",\n  \"T2GS-5KMU\",\n  \"H9DN-8PFC\",\n]\n\nexport default function AlertRecoveryCodes() {\n  const [copied, setCopied] = React.useState(false)\n\n  const copy = async () => {\n    await navigator.clipboard?.writeText(codes.join(\"\\n\"))\n    setCopied(true)\n    setTimeout(() => setCopied(false), 1500)\n  }\n\n  return (\n    <Alert variant=\"warning\" className=\"max-w-md\">\n      <KeyRoundIcon />\n      <AlertTitle>Save your recovery codes</AlertTitle>\n      <AlertDescription className=\"space-y-2\">\n        <p>\n          Each code works once. Store them somewhere safe, you won&apos;t see\n          them again.\n        </p>\n        <div className=\"grid grid-cols-2 gap-1 border bg-background p-2 font-mono text-foreground sm:grid-cols-3\">\n          {codes.map((code) => (\n            <span key={code}>{code}</span>\n          ))}\n        </div>\n        <Button size=\"xs\" variant=\"outline\" onClick={copy}>\n          {copied ? (\n            <CheckIcon data-icon=\"inline-start\" />\n          ) : (\n            <CopyIcon data-icon=\"inline-start\" />\n          )}\n          {copied ? \"Copied\" : \"Copy codes\"}\n        </Button>\n      </AlertDescription>\n    </Alert>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

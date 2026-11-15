@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "radio-group-06",
+  "type": "registry:example",
+  "description": "Monthly versus yearly billing selection with a savings badge.",
+  "files": [
+    {
+      "path": "registry/designali/examples/radio-group/radio-group-06.tsx",
+      "content": "import { Badge } from \"@workspace/ui/components/badge\"\nimport {\n  Field,\n  FieldContent,\n  FieldDescription,\n  FieldLabel,\n  FieldTitle,\n} from \"@workspace/ui/components/field\"\nimport {\n  RadioGroup,\n  RadioGroupItem,\n} from \"@workspace/ui/components/radio-group\"\n\nexport default function BillingCycleRadio() {\n  return (\n    <RadioGroup\n      defaultValue=\"yearly\"\n      className=\"grid w-full max-w-sm grid-cols-2\"\n    >\n      <FieldLabel htmlFor=\"cycle-monthly\">\n        <Field orientation=\"horizontal\">\n          <RadioGroupItem value=\"monthly\" id=\"cycle-monthly\" />\n          <FieldContent>\n            <FieldTitle>Monthly</FieldTitle>\n            <FieldDescription>$12 / month</FieldDescription>\n          </FieldContent>\n        </Field>\n      </FieldLabel>\n      <FieldLabel htmlFor=\"cycle-yearly\">\n        <Field orientation=\"horizontal\">\n          <RadioGroupItem value=\"yearly\" id=\"cycle-yearly\" />\n          <FieldContent>\n            <FieldTitle>\n              Yearly\n              <Badge variant=\"secondary\">-20%</Badge>\n            </FieldTitle>\n            <FieldDescription>$115 / year</FieldDescription>\n          </FieldContent>\n        </Field>\n      </FieldLabel>\n    </RadioGroup>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

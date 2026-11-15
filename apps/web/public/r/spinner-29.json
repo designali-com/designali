@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "spinner-29",
+  "type": "registry:example",
+  "description": "Labelled scale of spinner sizes from extra small to extra large.",
+  "files": [
+    {
+      "path": "registry/designali/examples/spinner/spinner-29.tsx",
+      "content": "import { Spinner } from \"@workspace/ui/components/spinner\"\n\nconst sizes = [\n  { label: \"xs\", className: \"size-3\" },\n  { label: \"sm\", className: \"size-4\" },\n  { label: \"md\", className: \"size-6\" },\n  { label: \"lg\", className: \"size-8\" },\n  { label: \"xl\", className: \"size-12\" },\n]\n\nexport default function SpinnerScale() {\n  return (\n    <div className=\"flex items-end gap-6\">\n      {sizes.map((size) => (\n        <div key={size.label} className=\"flex flex-col items-center gap-3\">\n          <Spinner className={size.className} />\n          <code className=\"font-mono text-xs text-muted-foreground\">\n            {size.label}\n          </code>\n        </div>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

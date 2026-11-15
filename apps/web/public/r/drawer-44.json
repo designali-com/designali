@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "drawer-44",
+  "type": "registry:example",
+  "description": "Left drawer table of contents for a long document with the active heading highlighted.",
+  "files": [
+    {
+      "path": "registry/designali/examples/drawer/drawer-44.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { ListTreeIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  Drawer,\n  DrawerClose,\n  DrawerContent,\n  DrawerDescription,\n  DrawerHeader,\n  DrawerTitle,\n  DrawerTrigger,\n} from \"@workspace/ui/components/drawer\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst outline = [\n  { id: \"intro\", title: \"Introduction\", level: 1 },\n  { id: \"goals\", title: \"Goals and non-goals\", level: 2 },\n  { id: \"design\", title: \"Proposed design\", level: 1 },\n  { id: \"api\", title: \"API surface\", level: 2 },\n  { id: \"storage\", title: \"Storage model\", level: 2 },\n  { id: \"migration\", title: \"Migration plan\", level: 1 },\n  { id: \"risks\", title: \"Risks\", level: 2 },\n  { id: \"open\", title: \"Open questions\", level: 1 },\n]\n\nexport default function DocumentOutlineDrawer() {\n  const [active, setActive] = React.useState(\"api\")\n\n  return (\n    <Drawer swipeDirection=\"left\">\n      <DrawerTrigger render={<Button variant=\"outline\" />}>\n        <ListTreeIcon data-icon=\"inline-start\" />\n        Outline\n      </DrawerTrigger>\n      <DrawerContent>\n        <DrawerHeader>\n          <DrawerTitle>RFC-031: Event sourcing</DrawerTitle>\n          <DrawerDescription>8 sections · 14 min read</DrawerDescription>\n        </DrawerHeader>\n        <nav\n          className=\"flex flex-1 flex-col overflow-y-auto p-2 pt-4\"\n          aria-label=\"Document outline\"\n        >\n          {outline.map((item) => (\n            <DrawerClose\n              key={item.id}\n              render={<a href={\"#\" + item.id} />}\n              nativeButton={false}\n              onClick={() => setActive(item.id)}\n              className={cn(\n                \"border-s-2 py-1.5 pe-2 hover:bg-muted\",\n                item.level === 2\n                  ? \"ps-6 text-muted-foreground\"\n                  : \"ps-3 font-medium\",\n                item.id === active\n                  ? \"border-primary bg-muted text-foreground\"\n                  : \"border-transparent\"\n              )}\n            >\n              {item.title}\n            </DrawerClose>\n          ))}\n        </nav>\n      </DrawerContent>\n    </Drawer>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

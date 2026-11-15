@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "hover-card-34",
+  "type": "registry:example",
+  "description": "Profile achievement badges that explain how each one was earned and when.",
+  "files": [
+    {
+      "path": "registry/designali/examples/hover-card/hover-card-34.tsx",
+      "content": "import { BugIcon, GraduationCapIcon, RocketIcon } from \"lucide-react\"\n\nimport {\n  HoverCard,\n  HoverCardContent,\n  HoverCardTrigger,\n} from \"@workspace/ui/components/hover-card\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst badges = [\n  {\n    name: \"First Ship\",\n    icon: RocketIcon,\n    earned: \"Jan 4, 2025\",\n    how: \"Deployed your first project to production.\",\n    tone: \"bg-violet-500/15 text-violet-600\",\n  },\n  {\n    name: \"Bug Hunter\",\n    icon: BugIcon,\n    earned: \"Feb 19, 2025\",\n    how: \"Closed 25 bug reports in a single month.\",\n    tone: \"bg-rose-500/15 text-rose-600\",\n  },\n  {\n    name: \"Mentor\",\n    icon: GraduationCapIcon,\n    earned: \"Mar 2, 2025\",\n    how: \"Reviewed 50 pull requests from new teammates.\",\n    tone: \"bg-emerald-500/15 text-emerald-600\",\n  },\n]\n\nexport default function AchievementBadgeHoverCard() {\n  return (\n    <div className=\"flex gap-3\">\n      {badges.map((b) => (\n        <HoverCard key={b.name}>\n          <HoverCardTrigger\n            render={\n              <span\n                className={cn(\n                  \"flex size-12 cursor-default items-center justify-center rounded-full\",\n                  b.tone\n                )}\n              />\n            }\n          >\n            <b.icon className=\"size-5\" />\n          </HoverCardTrigger>\n          <HoverCardContent side=\"top\" className=\"w-52 text-center\">\n            <p className=\"font-medium\">{b.name}</p>\n            <p className=\"text-muted-foreground\">{b.how}</p>\n            <p className=\"mt-2 text-[10px] tracking-wide text-muted-foreground uppercase\">\n              Earned {b.earned}\n            </p>\n          </HoverCardContent>\n        </HoverCard>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "aspect-ratio-24",
+  "type": "registry:example",
+  "description": "An Open Graph link preview at 1.91:1 as it would appear in a feed.",
+  "files": [
+    {
+      "path": "registry/designali/examples/aspect-ratio/aspect-ratio-24.tsx",
+      "content": "import { AspectRatio } from \"@workspace/ui/components/aspect-ratio\"\n\nexport default function SocialSharePreview() {\n  return (\n    <div className=\"w-full max-w-sm overflow-hidden border\">\n      <AspectRatio\n        ratio={1.91}\n        className=\"bg-linear-to-br from-zinc-950 to-zinc-800\"\n      >\n        <div className=\"absolute inset-0 flex flex-col justify-between p-5 text-white\">\n          <div className=\"flex items-center gap-2 text-xs font-semibold\">\n            <span className=\"size-4 bg-linear-to-br from-lime-300 to-emerald-500\" />\n            Fieldnote\n          </div>\n          <p className=\"text-xl leading-tight font-semibold text-balance\">\n            Ship your changelog in five minutes\n          </p>\n        </div>\n      </AspectRatio>\n      <div className=\"border-t bg-muted/40 p-3\">\n        <p className=\"text-[10px] tracking-wide text-muted-foreground uppercase\">\n          fieldnote.dev\n        </p>\n        <p className=\"truncate text-sm font-medium\">\n          Changelogs your users actually read\n        </p>\n        <p className=\"truncate text-xs text-muted-foreground\">\n          Write once, publish to email, in-app and your site.\n        </p>\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

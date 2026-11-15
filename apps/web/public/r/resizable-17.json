@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "resizable-17",
+  "type": "registry:example",
+  "description": "Vertical SQL console with a query editor above a results table.",
+  "files": [
+    {
+      "path": "registry/designali/examples/resizable/resizable-17.tsx",
+      "content": "import { PlayIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  ResizableHandle,\n  ResizablePanel,\n  ResizablePanelGroup,\n} from \"@workspace/ui/components/resizable\"\nimport {\n  Table,\n  TableBody,\n  TableCell,\n  TableHead,\n  TableHeader,\n  TableRow,\n} from \"@workspace/ui/components/table\"\n\nconst rows = [\n  { id: 1042, email: \"kai@northwind.io\", plan: \"Pro\" },\n  { id: 1043, email: \"rosa@lumen.app\", plan: \"Team\" },\n  { id: 1044, email: \"omar@fieldnote.co\", plan: \"Free\" },\n]\n\nexport default function QueryAndResultsVertical() {\n  return (\n    <ResizablePanelGroup\n      orientation=\"vertical\"\n      className=\"h-80 w-full max-w-xl border\"\n    >\n      <ResizablePanel defaultSize=\"40%\" minSize=\"20%\">\n        <div className=\"flex h-full flex-col\">\n          <div className=\"flex items-center justify-between border-b px-3 py-1.5\">\n            <span className=\"text-xs font-medium\">query.sql</span>\n            <Button size=\"xs\">\n              <PlayIcon data-icon=\"inline-start\" />\n              Run\n            </Button>\n          </div>\n          <pre className=\"flex-1 p-3 font-mono text-xs\">\n            {\n              \"SELECT id, email, plan\\nFROM customers\\nWHERE created_at > now() - interval '7 days';\"\n            }\n          </pre>\n        </div>\n      </ResizablePanel>\n      <ResizableHandle withHandle />\n      <ResizablePanel defaultSize=\"60%\" minSize=\"25%\">\n        <Table>\n          <TableHeader>\n            <TableRow>\n              <TableHead>id</TableHead>\n              <TableHead>email</TableHead>\n              <TableHead>plan</TableHead>\n            </TableRow>\n          </TableHeader>\n          <TableBody>\n            {rows.map((row) => (\n              <TableRow key={row.id}>\n                <TableCell className=\"font-mono\">{row.id}</TableCell>\n                <TableCell>{row.email}</TableCell>\n                <TableCell>{row.plan}</TableCell>\n              </TableRow>\n            ))}\n          </TableBody>\n        </Table>\n      </ResizablePanel>\n    </ResizablePanelGroup>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

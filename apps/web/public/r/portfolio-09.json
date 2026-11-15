@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "portfolio-09",
+  "type": "registry:block",
+  "description": "Vertical year-by-year timeline of client projects with gradient thumbnails and role labels.",
+  "dependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/designali/blocks/portfolio/portfolio-09.tsx",
+      "content": "const years = [\n  {\n    year: \"2026\",\n    projects: [\n      { client: \"Riverbend Library\", work: \"Catalogue search and reading lists\", role: \"Lead designer\" },\n      { client: \"Kestrel Audio\", work: \"Companion app for wireless headphones\", role: \"Product design\" },\n    ],\n  },\n  {\n    year: \"2025\",\n    projects: [\n      { client: \"Granite & Moss\", work: \"Landscape architecture portfolio site\", role: \"Design + build\" },\n      { client: \"Pocket Tutor\", work: \"Homework helper for ages 9 to 14\", role: \"UX research\" },\n      { client: \"Hatch Ventures\", work: \"Investor portal and data room\", role: \"Product design\" },\n    ],\n  },\n  {\n    year: \"2024\",\n    projects: [\n      { client: \"Ember Bakery\", work: \"Identity, packaging and pre-order site\", role: \"Brand designer\" },\n    ],\n  },\n  {\n    year: \"2023\",\n    projects: [\n      { client: \"Openfield Co-op\", work: \"Member dashboard for 3,000 farmers\", role: \"Lead designer\" },\n      { client: \"Lantern Films\", work: \"Festival submission platform\", role: \"UX + UI\" },\n    ],\n  },\n]\n\nexport default function Portfolio09() {\n  return (\n    <section className=\"w-full bg-background py-16 text-foreground md:py-24\">\n      <div className=\"mx-auto max-w-4xl px-6\">\n        <div className=\"text-center\">\n          <p className=\"text-xs tracking-widest text-muted-foreground uppercase\">\n            Timeline\n          </p>\n          <h2 className=\"mt-3 text-3xl font-medium tracking-tight md:text-5xl\">\n            Four years, eight clients\n          </h2>\n          <p className=\"mx-auto mt-3 max-w-md text-muted-foreground\">\n            Every project I have shipped as an independent designer, newest first.\n          </p>\n        </div>\n\n        <ol className=\"relative mt-14 border-l border-border md:ml-24\">\n          {years.map((group) => (\n            <li key={group.year} className=\"relative pb-12 pl-8 last:pb-0\">\n              <span className=\"absolute top-1.5 -left-[5px] size-[9px] rounded-full bg-foreground ring-4 ring-background\" />\n              <p className=\"font-mono text-sm text-muted-foreground md:absolute md:top-0 md:-left-24 md:w-16 md:text-right\">\n                {group.year}\n              </p>\n              <div className=\"mt-3 space-y-3 md:mt-0\">\n                {group.projects.map((project, i) => (\n                  <a\n                    key={project.client}\n                    href=\"#\"\n                    className=\"group flex items-center gap-4 border border-border bg-card p-4 transition-colors hover:bg-muted\"\n                  >\n                    <span\n                      className=\"size-12 shrink-0 border border-border\"\n                      style={{\n                        background: `linear-gradient(${135 + i * 45}deg, var(--chart-${(i % 5) + 1}), transparent)`,\n                      }}\n                    />\n                    <div className=\"min-w-0 flex-1\">\n                      <p className=\"font-medium\">{project.client}</p>\n                      <p className=\"truncate text-sm text-muted-foreground\">{project.work}</p>\n                    </div>\n                    <span className=\"hidden shrink-0 text-xs text-muted-foreground sm:block\">\n                      {project.role}\n                    </span>\n                  </a>\n                ))}\n              </div>\n            </li>\n          ))}\n        </ol>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "1100px"
+  },
+  "categories": [
+    "portfolio"
+  ]
+}

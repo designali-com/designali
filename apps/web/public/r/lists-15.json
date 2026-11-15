@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "lists-15",
+  "type": "registry:block",
+  "description": "Dark restaurant menu in two columns with dotted price leaders.",
+  "dependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/designali/blocks/lists/lists-15.tsx",
+      "content": "const menu = [\n  {\n    course: \"Small plates\",\n    items: [\n      { name: \"Charred leeks\", note: \"Romesco, toasted hazelnut\", price: 11 },\n      { name: \"Burrata\", note: \"Blood orange, fennel pollen\", price: 14, tag: \"V\" },\n      { name: \"Crispy squid\", note: \"Smoked paprika aioli, lime\", price: 13 },\n      { name: \"Sourdough\", note: \"Cultured butter, sea salt\", price: 6, tag: \"V\" },\n    ],\n  },\n  {\n    course: \"Large plates\",\n    items: [\n      { name: \"Hake\", note: \"Brown butter, capers, potato rösti\", price: 26 },\n      { name: \"Lamb shoulder\", note: \"12-hour braise, white beans, salsa verde\", price: 29 },\n      { name: \"Wild mushroom orzo\", note: \"Aged parmesan, thyme\", price: 21, tag: \"V\" },\n      { name: \"Half chicken\", note: \"Piri piri, charred greens\", price: 24 },\n    ],\n  },\n]\n\nexport default function Lists15() {\n  return (\n    <section className=\"w-full bg-stone-950 py-24 text-stone-100\">\n      <div className=\"mx-auto max-w-5xl px-6\">\n        <div className=\"text-center\">\n          <p className=\"font-mono text-xs tracking-[0.3em] text-amber-300/80 uppercase\">Dinner · From 18:00</p>\n          <h2 className=\"mt-4 font-serif text-5xl tracking-tight md:text-6xl\">Salt &amp; Ember</h2>\n          <p className=\"mx-auto mt-4 max-w-md text-sm text-stone-400\">\n            A short menu that changes with the market. Everything is cooked over\n            the wood grill unless it shouldn&apos;t be.\n          </p>\n        </div>\n\n        <div className=\"mt-16 grid gap-14 md:grid-cols-2 md:gap-16\">\n          {menu.map((section) => (\n            <div key={section.course}>\n              <h3 className=\"border-b border-stone-700 pb-3 font-mono text-xs tracking-widest text-amber-300/80 uppercase\">\n                {section.course}\n              </h3>\n              <ul className=\"mt-6 space-y-6\">\n                {section.items.map((item) => (\n                  <li key={item.name}>\n                    <div className=\"flex items-baseline gap-3\">\n                      <span className=\"font-serif text-xl\">{item.name}</span>\n                      {item.tag && (\n                        <span className=\"border border-stone-600 px-1 font-mono text-[9px] text-stone-400\">{item.tag}</span>\n                      )}\n                      <span className=\"min-w-4 flex-1 translate-y-[-4px] border-b border-dotted border-stone-600\" />\n                      <span className=\"font-mono text-sm text-amber-200\">{item.price}</span>\n                    </div>\n                    <p className=\"mt-1 text-sm text-stone-400\">{item.note}</p>\n                  </li>\n                ))}\n              </ul>\n            </div>\n          ))}\n        </div>\n\n        <p className=\"mt-16 border-t border-stone-800 pt-6 text-center text-xs text-stone-500\">\n          V vegetarian · Please tell us about any allergies · A discretionary 12.5% service charge is added\n        </p>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "950px"
+  },
+  "categories": [
+    "lists"
+  ]
+}

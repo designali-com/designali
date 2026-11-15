@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "slider-44",
+  "type": "registry:example",
+  "description": "Video playback speed slider paired with quick preset toggles.",
+  "files": [
+    {
+      "path": "registry/designali/examples/slider/slider-44.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { GaugeIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Slider } from \"@workspace/ui/components/slider\"\n\nconst presets = [0.5, 1, 1.5, 2]\n\nexport default function PlaybackSpeedSlider() {\n  const [speed, setSpeed] = React.useState([1])\n\n  return (\n    <div className=\"flex w-full max-w-xs flex-col gap-3 border p-4\">\n      <div className=\"flex items-center justify-between\">\n        <span className=\"flex items-center gap-2 text-sm\">\n          <GaugeIcon className=\"size-4\" />\n          Playback speed\n        </span>\n        <span className=\"font-mono text-sm tabular-nums\">\n          {speed[0]!.toFixed(2)}x\n        </span>\n      </div>\n      <Slider\n        aria-label=\"Playback speed\"\n        value={speed}\n        onValueChange={(value) => setSpeed(value as number[])}\n        min={0.25}\n        max={2}\n        step={0.25}\n      />\n      <div className=\"grid grid-cols-4 gap-1\">\n        {presets.map((p) => (\n          <Button\n            key={p}\n            size=\"xs\"\n            variant={speed[0] === p ? \"secondary\" : \"ghost\"}\n            onClick={() => setSpeed([p])}\n          >\n            {p}x\n          </Button>\n        ))}\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

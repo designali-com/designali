@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button-29",
+  "type": "registry:example",
+  "description": "Cart quantity stepper with minus and plus icon buttons that disable at the limits.",
+  "files": [
+    {
+      "path": "registry/designali/examples/button/button-29.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { MinusIcon, PlusIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  ButtonGroup,\n  ButtonGroupText,\n} from \"@workspace/ui/components/button-group\"\n\nexport default function QuantityStepperButtons() {\n  const [qty, setQty] = React.useState(1)\n\n  return (\n    <div className=\"flex w-full max-w-xs items-center justify-between gap-3 border p-3\">\n      <div className=\"flex flex-col\">\n        <span className=\"text-sm font-medium\">Ceramic pour-over set</span>\n        <span className=\"text-xs text-muted-foreground\">Max 5 per order</span>\n      </div>\n      <ButtonGroup>\n        <Button\n          variant=\"outline\"\n          size=\"icon-sm\"\n          aria-label=\"Decrease quantity\"\n          disabled={qty <= 1}\n          onClick={() => setQty(qty - 1)}\n        >\n          <MinusIcon />\n        </Button>\n        <ButtonGroupText className=\"h-7 w-9 justify-center tabular-nums\">\n          {qty}\n        </ButtonGroupText>\n        <Button\n          variant=\"outline\"\n          size=\"icon-sm\"\n          aria-label=\"Increase quantity\"\n          disabled={qty >= 5}\n          onClick={() => setQty(qty + 1)}\n        >\n          <PlusIcon />\n        </Button>\n      </ButtonGroup>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

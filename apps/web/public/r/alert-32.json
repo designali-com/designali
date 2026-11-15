@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "alert-32",
+  "type": "registry:example",
+  "description": "Onboarding alert with a step checklist and progress toward finishing setup.",
+  "files": [
+    {
+      "path": "registry/designali/examples/alert/alert-32.tsx",
+      "content": "import { CircleCheckIcon, CircleIcon, RocketIcon } from \"lucide-react\"\n\nimport {\n  Alert,\n  AlertAction,\n  AlertDescription,\n  AlertTitle,\n} from \"@workspace/ui/components/alert\"\nimport { Progress } from \"@workspace/ui/components/progress\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst steps = [\n  { label: \"Verify your domain\", done: true },\n  { label: \"Connect a payment provider\", done: true },\n  { label: \"Add a team member\", done: false },\n  { label: \"Publish your store\", done: false },\n]\n\nexport default function AlertSetupProgress() {\n  const done = steps.filter((s) => s.done).length\n\n  return (\n    <Alert className=\"max-w-md\">\n      <RocketIcon />\n      <AlertTitle>Finish setting up your store</AlertTitle>\n      <AlertDescription className=\"space-y-2\">\n        <Progress\n          value={(done / steps.length) * 100}\n          aria-label=\"Setup progress\"\n        />\n        <ul className=\"space-y-1\">\n          {steps.map((step) => (\n            <li\n              key={step.label}\n              className={cn(\n                \"flex items-center gap-1.5\",\n                step.done && \"line-through\"\n              )}\n            >\n              {step.done ? (\n                <CircleCheckIcon className=\"size-3.5\" />\n              ) : (\n                <CircleIcon className=\"size-3.5\" />\n              )}\n              {step.label}\n            </li>\n          ))}\n        </ul>\n      </AlertDescription>\n      <AlertAction>\n        <span className=\"text-xs text-muted-foreground\">\n          {done}/{steps.length}\n        </span>\n      </AlertAction>\n    </Alert>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "skeleton-06",
+  "type": "registry:example",
+  "description": "Threaded comments placeholder with nested replies and action row stubs.",
+  "files": [
+    {
+      "path": "registry/designali/examples/skeleton/skeleton-06.tsx",
+      "content": "import { Skeleton } from \"@workspace/ui/components/skeleton\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst rows = [\n  { indent: false, lines: 2 },\n  { indent: true, lines: 1 },\n  { indent: true, lines: 2 },\n  { indent: false, lines: 1 },\n]\n\nexport default function CommentListSkeleton() {\n  return (\n    <div className=\"flex w-full max-w-md flex-col gap-5\">\n      {rows.map((row, i) => (\n        <div key={i} className={cn(\"flex gap-3\", row.indent && \"ms-10\")}>\n          <Skeleton className=\"size-8 shrink-0 rounded-full\" />\n          <div className=\"flex flex-1 flex-col gap-2\">\n            <div className=\"flex gap-2\">\n              <Skeleton className=\"h-3 w-24\" />\n              <Skeleton className=\"h-3 w-10\" />\n            </div>\n            {Array.from({ length: row.lines }).map((_, j) => (\n              <Skeleton\n                key={j}\n                className={cn(\"h-3\", j === row.lines - 1 ? \"w-2/3\" : \"w-full\")}\n              />\n            ))}\n            <div className=\"flex gap-3\">\n              <Skeleton className=\"h-2.5 w-8\" />\n              <Skeleton className=\"h-2.5 w-10\" />\n            </div>\n          </div>\n        </div>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

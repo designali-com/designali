@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "alert-dialog-33",
+  "type": "registry:example",
+  "description": "Mobile-style dialog with centered header and full-width stacked actions.",
+  "files": [
+    {
+      "path": "registry/designali/examples/alert-dialog/alert-dialog-33.tsx",
+      "content": "import { BellRingIcon } from \"lucide-react\"\n\nimport {\n  AlertDialog,\n  AlertDialogAction,\n  AlertDialogCancel,\n  AlertDialogContent,\n  AlertDialogDescription,\n  AlertDialogFooter,\n  AlertDialogHeader,\n  AlertDialogMedia,\n  AlertDialogTitle,\n  AlertDialogTrigger,\n} from \"@workspace/ui/components/alert-dialog\"\nimport { Button } from \"@workspace/ui/components/button\"\n\nexport default function StackedFullWidthFooter() {\n  return (\n    <AlertDialog>\n      <AlertDialogTrigger render={<Button />}>\n        Enable notifications\n      </AlertDialogTrigger>\n      <AlertDialogContent>\n        <AlertDialogHeader className=\"place-items-center text-center sm:group-data-[size=default]/alert-dialog-content:place-items-center sm:group-data-[size=default]/alert-dialog-content:text-center\">\n          <AlertDialogMedia className=\"size-12 rounded-full\">\n            <BellRingIcon />\n          </AlertDialogMedia>\n          <AlertDialogTitle>Stay in the loop</AlertDialogTitle>\n          <AlertDialogDescription>\n            Get notified when your order ships, when a driver is nearby, and\n            when it&apos;s delivered.\n          </AlertDialogDescription>\n        </AlertDialogHeader>\n        <AlertDialogFooter className=\"sm:flex-col-reverse sm:justify-stretch\">\n          <AlertDialogCancel variant=\"ghost\" className=\"w-full\">\n            Not now\n          </AlertDialogCancel>\n          <AlertDialogAction className=\"w-full\">\n            Allow notifications\n          </AlertDialogAction>\n        </AlertDialogFooter>\n      </AlertDialogContent>\n    </AlertDialog>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

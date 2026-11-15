@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "command-34",
+  "type": "registry:example",
+  "description": "An issue status picker with colored status icons and number-key shortcuts.",
+  "files": [
+    {
+      "path": "registry/designali/examples/command/command-34.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport {\n  CheckIcon,\n  CircleCheckIcon,\n  CircleDashedIcon,\n  CircleDotIcon,\n  CircleEllipsisIcon,\n  CircleIcon,\n} from \"lucide-react\"\n\nimport {\n  Command,\n  CommandEmpty,\n  CommandGroup,\n  CommandInput,\n  CommandItem,\n  CommandList,\n  CommandShortcut,\n} from \"@workspace/ui/components/command\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst statuses = [\n  {\n    id: \"backlog\",\n    label: \"Backlog\",\n    icon: CircleDashedIcon,\n    color: \"text-muted-foreground\",\n  },\n  { id: \"todo\", label: \"Todo\", icon: CircleIcon, color: \"text-foreground\" },\n  {\n    id: \"progress\",\n    label: \"In progress\",\n    icon: CircleDotIcon,\n    color: \"text-amber-500\",\n  },\n  {\n    id: \"review\",\n    label: \"In review\",\n    icon: CircleEllipsisIcon,\n    color: \"text-violet-500\",\n  },\n  {\n    id: \"done\",\n    label: \"Done\",\n    icon: CircleCheckIcon,\n    color: \"text-emerald-500\",\n  },\n]\n\nexport default function IssueStatusPicker() {\n  const [status, setStatus] = React.useState(\"progress\")\n  const active = statuses.find((s) => s.id === status)!\n\n  return (\n    <div className=\"flex w-full max-w-60 flex-col gap-2\">\n      <div className=\"flex items-center gap-2 text-xs\">\n        <span className=\"font-mono text-muted-foreground\">ENG-482</span>\n        <active.icon className={cn(\"size-3.5\", active.color)} />\n        <span>{active.label}</span>\n      </div>\n      <Command className=\"border\">\n        <CommandInput placeholder=\"Change status...\" />\n        <CommandList>\n          <CommandEmpty>No status.</CommandEmpty>\n          <CommandGroup>\n            {statuses.map((s, index) => (\n              <CommandItem\n                key={s.id}\n                value={s.label}\n                onSelect={() => setStatus(s.id)}\n              >\n                <s.icon className={s.color} />\n                <span>{s.label}</span>\n                {s.id === status ? <CheckIcon className=\"size-3.5\" /> : null}\n                <CommandShortcut>{index + 1}</CommandShortcut>\n              </CommandItem>\n            ))}\n          </CommandGroup>\n        </CommandList>\n      </Command>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

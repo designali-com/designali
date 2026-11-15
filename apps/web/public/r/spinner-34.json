@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "spinner-34",
+  "type": "registry:example",
+  "description": "Checkout summary whose place-order button shows a spinner after it is clicked.",
+  "files": [
+    {
+      "path": "registry/designali/examples/spinner/spinner-34.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { LockIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Separator } from \"@workspace/ui/components/separator\"\nimport { Spinner } from \"@workspace/ui/components/spinner\"\n\nexport default function PlaceOrderButton() {\n  const [placing, setPlacing] = React.useState(false)\n\n  return (\n    <div className=\"flex w-full max-w-xs flex-col gap-3 border p-4\">\n      <div className=\"flex justify-between text-sm\">\n        <span>Ceramic pour-over set</span>\n        <span className=\"tabular-nums\">$64.00</span>\n      </div>\n      <div className=\"flex justify-between text-sm text-muted-foreground\">\n        <span>Shipping</span>\n        <span>Free</span>\n      </div>\n      <Separator />\n      <div className=\"flex justify-between font-medium\">\n        <span>Total</span>\n        <span className=\"tabular-nums\">$64.00</span>\n      </div>\n      <Button\n        size=\"lg\"\n        disabled={placing}\n        onClick={() => {\n          setPlacing(true)\n          setTimeout(() => setPlacing(false), 2000)\n        }}\n      >\n        {placing ? (\n          <Spinner data-icon=\"inline-start\" />\n        ) : (\n          <LockIcon data-icon=\"inline-start\" />\n        )}\n        {placing ? \"Placing order...\" : \"Place order\"}\n      </Button>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

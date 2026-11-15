@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tabs-30",
+  "type": "registry:example",
+  "description": "Large metric tabs above a bar chart, each trigger showing its total.",
+  "files": [
+    {
+      "path": "registry/designali/examples/tabs/tabs-30.tsx",
+      "content": "import {\n  Tabs,\n  TabsContent,\n  TabsList,\n  TabsTrigger,\n} from \"@workspace/ui/components/tabs\"\n\nconst metrics = {\n  revenue: {\n    label: \"Revenue\",\n    total: \"$48.2k\",\n    bars: [40, 55, 48, 70, 62, 80, 74],\n  },\n  orders: {\n    label: \"Orders\",\n    total: \"1,204\",\n    bars: [60, 50, 65, 58, 72, 68, 90],\n  },\n  refunds: { label: \"Refunds\", total: \"23\", bars: [10, 20, 8, 15, 12, 6, 9] },\n}\n\nexport default function ChartMetricTabs() {\n  return (\n    <Tabs defaultValue=\"revenue\" className=\"w-full max-w-md gap-0 border\">\n      <TabsList className=\"h-auto w-full p-0\">\n        {Object.entries(metrics).map(([key, m]) => (\n          <TabsTrigger\n            key={key}\n            value={key}\n            className=\"h-auto flex-col items-start gap-0 border-e px-3 py-2 last:border-e-0\"\n          >\n            <span className=\"text-muted-foreground\">{m.label}</span>\n            <span className=\"text-base font-semibold tabular-nums\">\n              {m.total}\n            </span>\n          </TabsTrigger>\n        ))}\n      </TabsList>\n      {Object.entries(metrics).map(([key, m]) => (\n        <TabsContent\n          key={key}\n          value={key}\n          className=\"flex h-32 items-end gap-2 p-3\"\n        >\n          {m.bars.map((h, i) => (\n            <div\n              key={i}\n              className=\"flex-1 bg-primary/80\"\n              style={{ height: h + \"%\" }}\n            />\n          ))}\n        </TabsContent>\n      ))}\n    </Tabs>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

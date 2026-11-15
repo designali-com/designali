@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "alert-31",
+  "type": "registry:example",
+  "description": "Rate-limit error alert with a retry button that stays disabled during the countdown.",
+  "files": [
+    {
+      "path": "registry/designali/examples/alert/alert-31.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { GaugeIcon } from \"lucide-react\"\n\nimport {\n  Alert,\n  AlertAction,\n  AlertDescription,\n  AlertTitle,\n} from \"@workspace/ui/components/alert\"\nimport { Button } from \"@workspace/ui/components/button\"\n\nexport default function AlertRateLimited() {\n  const [wait, setWait] = React.useState(20)\n\n  React.useEffect(() => {\n    if (wait === 0) return\n    const id = setTimeout(() => setWait((w) => w - 1), 1000)\n    return () => clearTimeout(id)\n  }, [wait])\n\n  return (\n    <Alert variant=\"error\" className=\"max-w-md\">\n      <GaugeIcon />\n      <AlertTitle>Too many requests</AlertTitle>\n      <AlertDescription>\n        You&apos;ve hit the limit of 60 exports per hour.{\" \"}\n        {wait > 0\n          ? \"Try again in \" + wait + \" seconds.\"\n          : \"You can try again now.\"}\n      </AlertDescription>\n      <AlertAction>\n        <Button\n          size=\"xs\"\n          variant=\"outline\"\n          disabled={wait > 0}\n          onClick={() => setWait(20)}\n        >\n          Retry\n        </Button>\n      </AlertAction>\n    </Alert>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

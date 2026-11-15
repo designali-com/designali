@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "skeleton-20",
+  "type": "registry:example",
+  "description": "Month calendar placeholder with weekday headers, day cells, and scattered event bars.",
+  "files": [
+    {
+      "path": "registry/designali/examples/skeleton/skeleton-20.tsx",
+      "content": "import { Skeleton } from \"@workspace/ui/components/skeleton\"\n\nconst eventDays = new Set([3, 8, 9, 15, 22, 26, 30])\n\nexport default function CalendarMonthSkeleton() {\n  return (\n    <div className=\"flex w-full max-w-md flex-col gap-3\">\n      <div className=\"flex items-center justify-between\">\n        <Skeleton className=\"h-5 w-32\" />\n        <div className=\"flex gap-1\">\n          <Skeleton className=\"size-7\" />\n          <Skeleton className=\"size-7\" />\n        </div>\n      </div>\n      <div className=\"grid grid-cols-7 border-s border-t\">\n        {Array.from({ length: 7 }).map((_, i) => (\n          <div\n            key={\"h\" + i}\n            className=\"flex justify-center border-e border-b py-1.5\"\n          >\n            <Skeleton className=\"h-2.5 w-6\" />\n          </div>\n        ))}\n        {Array.from({ length: 35 }).map((_, i) => (\n          <div\n            key={i}\n            className=\"flex h-12 flex-col gap-1 border-e border-b p-1\"\n          >\n            <Skeleton className=\"h-2.5 w-3\" />\n            {eventDays.has(i) && (\n              <Skeleton className=\"h-2 w-full bg-primary/20\" />\n            )}\n          </div>\n        ))}\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

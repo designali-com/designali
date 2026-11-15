@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "avatar-16",
+  "type": "registry:example",
+  "description": "Small, default, and large avatar groups with overflow counts that scale with them.",
+  "files": [
+    {
+      "path": "registry/designali/examples/avatar/avatar-16.tsx",
+      "content": "import {\n  Avatar,\n  AvatarFallback,\n  AvatarGroup,\n  AvatarGroupCount,\n} from \"@workspace/ui/components/avatar\"\n\nconst sizes = [\"sm\", \"default\", \"lg\"] as const\nconst initials = [\"BK\", \"MT\", \"ZA\"]\n\nexport default function AvatarGroupSizeScale() {\n  return (\n    <div className=\"flex flex-col items-start gap-4\">\n      {sizes.map((size) => (\n        <div key={size} className=\"flex items-center gap-4\">\n          <span className=\"w-14 text-xs text-muted-foreground\">{size}</span>\n          <AvatarGroup>\n            {initials.map((value) => (\n              <Avatar key={value} size={size}>\n                <AvatarFallback>{value}</AvatarFallback>\n              </Avatar>\n            ))}\n            <AvatarGroupCount>+8</AvatarGroupCount>\n          </AvatarGroup>\n        </div>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

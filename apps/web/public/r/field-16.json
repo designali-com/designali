@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "field-16",
+  "type": "registry:example",
+  "description": "Read-only API key field with masked value and inline reveal and copy buttons.",
+  "files": [
+    {
+      "path": "registry/designali/examples/field/field-16.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { CheckIcon, CopyIcon, EyeIcon, EyeOffIcon } from \"lucide-react\"\n\nimport {\n  Field,\n  FieldDescription,\n  FieldLabel,\n} from \"@workspace/ui/components/field\"\nimport {\n  InputGroup,\n  InputGroupAddon,\n  InputGroupButton,\n  InputGroupInput,\n} from \"@workspace/ui/components/input-group\"\n\nexport default function ReadOnlyApiKeyField() {\n  const [show, setShow] = React.useState(false)\n  const [copied, setCopied] = React.useState(false)\n  const key = \"pub_demo_93mV\"\n\n  return (\n    <Field className=\"w-full max-w-sm\">\n      <FieldLabel htmlFor=\"api-key\">Publishable key</FieldLabel>\n      <InputGroup>\n        <InputGroupInput\n          id=\"api-key\"\n          readOnly\n          value={show ? key : \"pub_demo_••••••••••••••\"}\n          className=\"font-mono\"\n        />\n        <InputGroupAddon align=\"inline-end\">\n          <InputGroupButton\n            size=\"icon-xs\"\n            aria-label={show ? \"Hide key\" : \"Show key\"}\n            onClick={() => setShow(!show)}\n          >\n            {show ? <EyeOffIcon /> : <EyeIcon />}\n          </InputGroupButton>\n          <InputGroupButton\n            size=\"icon-xs\"\n            aria-label=\"Copy key\"\n            onClick={() => setCopied(true)}\n          >\n            {copied ? <CheckIcon /> : <CopyIcon />}\n          </InputGroupButton>\n        </InputGroupAddon>\n      </InputGroup>\n      <FieldDescription>Safe to use in client-side code.</FieldDescription>\n    </Field>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "select-36",
+  "type": "registry:example",
+  "description": "Table footer pagination with a rows-per-page select and page navigation.",
+  "files": [
+    {
+      "path": "registry/designali/examples/select/select-36.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { ChevronLeftIcon, ChevronRightIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  Select,\n  SelectContent,\n  SelectItem,\n  SelectTrigger,\n  SelectValue,\n} from \"@workspace/ui/components/select\"\n\nconst pageSizes = [\n  { label: \"10\", value: \"10\" },\n  { label: \"25\", value: \"25\" },\n  { label: \"50\", value: \"50\" },\n  { label: \"100\", value: \"100\" },\n]\n\nconst total = 248\n\nexport default function RowsPerPageSelect() {\n  const [size, setSize] = React.useState<string | null>(\"25\")\n  const [page, setPage] = React.useState(1)\n  const perPage = Number(size ?? 25)\n  const pages = Math.ceil(total / perPage)\n\n  return (\n    <div className=\"flex w-full max-w-md flex-wrap items-center justify-between gap-3 border-t pt-3 text-xs\">\n      <div className=\"flex items-center gap-2\">\n        <span className=\"text-muted-foreground\">Rows per page</span>\n        <Select\n          items={pageSizes}\n          value={size}\n          onValueChange={(next) => {\n            setSize(next)\n            setPage(1)\n          }}\n        >\n          <SelectTrigger size=\"sm\" className=\"w-16\" aria-label=\"Rows per page\">\n            <SelectValue />\n          </SelectTrigger>\n          <SelectContent>\n            {pageSizes.map((item) => (\n              <SelectItem key={item.value} value={item.value}>\n                {item.label}\n              </SelectItem>\n            ))}\n          </SelectContent>\n        </Select>\n      </div>\n      <div className=\"flex items-center gap-2\">\n        <span className=\"text-muted-foreground tabular-nums\">\n          Page {page} of {pages}\n        </span>\n        <Button\n          variant=\"outline\"\n          size=\"icon-sm\"\n          aria-label=\"Previous page\"\n          disabled={page === 1}\n          onClick={() => setPage(page - 1)}\n        >\n          <ChevronLeftIcon />\n        </Button>\n        <Button\n          variant=\"outline\"\n          size=\"icon-sm\"\n          aria-label=\"Next page\"\n          disabled={page === pages}\n          onClick={() => setPage(page + 1)}\n        >\n          <ChevronRightIcon />\n        </Button>\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

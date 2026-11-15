@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "badge-19",
+  "type": "registry:example",
+  "description": "Repository issue labels with tinted backgrounds and a matching color swatch.",
+  "files": [
+    {
+      "path": "registry/designali/examples/badge/badge-19.tsx",
+      "content": "import { Badge } from \"@workspace/ui/components/badge\"\n\nconst labels = [\n  { name: \"bug\", color: \"#d73a4a\" },\n  { name: \"enhancement\", color: \"#2563eb\" },\n  { name: \"good first issue\", color: \"#16a34a\" },\n  { name: \"needs triage\", color: \"#ca8a04\" },\n  { name: \"docs\", color: \"#7c3aed\" },\n]\n\nexport default function IssueLabelSet() {\n  return (\n    <div className=\"flex max-w-sm flex-wrap justify-center gap-1.5\">\n      {labels.map((label) => (\n        <Badge\n          key={label.name}\n          variant=\"outline\"\n          className=\"rounded-full\"\n          style={{\n            borderColor: label.color + \"66\",\n            backgroundColor: label.color + \"1a\",\n            color: label.color,\n          }}\n        >\n          {label.name}\n        </Badge>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toggle-group-22",
+  "type": "registry:example",
+  "description": "Settings table where each event row has a multi-select group of delivery channels.",
+  "files": [
+    {
+      "path": "registry/designali/examples/toggle-group/toggle-group-22.tsx",
+      "content": "import { BellIcon, MailIcon, MessageSquareTextIcon } from \"lucide-react\"\n\nimport {\n  ToggleGroup,\n  ToggleGroupItem,\n} from \"@workspace/ui/components/toggle-group\"\n\nconst events = [\n  { name: \"Mentions\", defaults: [\"email\", \"push\"] },\n  { name: \"New comments\", defaults: [\"push\"] },\n  { name: \"Weekly digest\", defaults: [\"email\"] },\n  { name: \"Security alerts\", defaults: [\"email\", \"push\", \"sms\"] },\n]\n\nexport default function NotificationChannelMatrix() {\n  return (\n    <div className=\"flex w-full max-w-md flex-col divide-y border\">\n      {events.map((event) => (\n        <div\n          key={event.name}\n          className=\"flex items-center justify-between gap-3 px-3 py-2\"\n        >\n          <span className=\"text-sm\">{event.name}</span>\n          <ToggleGroup\n            multiple\n            size=\"sm\"\n            variant=\"outline\"\n            spacing={0}\n            defaultValue={event.defaults}\n          >\n            <ToggleGroupItem value=\"email\" aria-label=\"Email\">\n              <MailIcon />\n            </ToggleGroupItem>\n            <ToggleGroupItem value=\"push\" aria-label=\"Push\">\n              <BellIcon />\n            </ToggleGroupItem>\n            <ToggleGroupItem value=\"sms\" aria-label=\"SMS\">\n              <MessageSquareTextIcon />\n            </ToggleGroupItem>\n          </ToggleGroup>\n        </div>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

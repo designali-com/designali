@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "pagination-18",
+  "type": "registry:example",
+  "description": "Pagination that shows a spinner on the requested page while results load.",
+  "files": [
+    {
+      "path": "registry/designali/examples/pagination/pagination-18.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport {\n  Pagination,\n  PaginationContent,\n  PaginationItem,\n  PaginationLink,\n} from \"@workspace/ui/components/pagination\"\nimport { Spinner } from \"@workspace/ui/components/spinner\"\n\nexport default function LoadingPagePagination() {\n  const [page, setPage] = React.useState(1)\n  const [pending, setPending] = React.useState<number | null>(null)\n\n  const go = (event: React.MouseEvent, next: number) => {\n    event.preventDefault()\n    if (pending || next === page) return\n    setPending(next)\n    window.setTimeout(() => {\n      setPage(next)\n      setPending(null)\n    }, 900)\n  }\n\n  return (\n    <div className=\"flex w-full max-w-md flex-col items-center gap-3\">\n      <div className=\"flex h-16 w-full items-center justify-center border border-dashed text-xs text-muted-foreground\">\n        {pending\n          ? \"Fetching page \" + pending + \"...\"\n          : \"Showing results on page \" + page}\n      </div>\n      <Pagination aria-busy={pending !== null}>\n        <PaginationContent>\n          {[1, 2, 3, 4, 5].map((p) => (\n            <PaginationItem key={p}>\n              <PaginationLink\n                href=\"#\"\n                isActive={p === page}\n                onClick={(event) => go(event, p)}\n              >\n                {pending === p ? <Spinner /> : p}\n              </PaginationLink>\n            </PaginationItem>\n          ))}\n        </PaginationContent>\n      </Pagination>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

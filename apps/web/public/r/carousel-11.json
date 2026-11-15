@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "carousel-11",
+  "type": "registry:example",
+  "description": "Free-scrolling rail of story avatars with unseen rings, like a social feed header.",
+  "files": [
+    {
+      "path": "registry/designali/examples/carousel/carousel-11.tsx",
+      "content": "import { PlusIcon } from \"lucide-react\"\n\nimport { Avatar, AvatarFallback } from \"@workspace/ui/components/avatar\"\nimport {\n  Carousel,\n  CarouselContent,\n  CarouselItem,\n} from \"@workspace/ui/components/carousel\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst stories = [\n  { name: \"You\", add: true },\n  { name: \"Mila Novak\", unseen: true },\n  { name: \"Jonah Park\", unseen: true },\n  { name: \"Rosa Diaz\" },\n  { name: \"Eli Brooks\", unseen: true },\n  { name: \"Nora Quinn\" },\n  { name: \"Theo Grant\" },\n  { name: \"Ivy Chen\", unseen: true },\n  { name: \"Omar Haddad\" },\n]\n\nexport default function StoriesAvatarRail() {\n  return (\n    <Carousel\n      opts={{ dragFree: true, align: \"start\" }}\n      className=\"w-full max-w-sm\"\n    >\n      <CarouselContent className=\"-ms-3\">\n        {stories.map((story) => (\n          <CarouselItem key={story.name} className=\"basis-auto ps-3\">\n            <button\n              type=\"button\"\n              className=\"flex w-16 flex-col items-center gap-1.5\"\n            >\n              <span\n                className={cn(\n                  \"relative rounded-full p-0.5\",\n                  story.unseen\n                    ? \"bg-gradient-to-tr from-amber-400 to-fuchsia-500\"\n                    : \"bg-border\"\n                )}\n              >\n                <Avatar size=\"lg\" className=\"ring-2 ring-background\">\n                  <AvatarFallback>\n                    {story.add ? (\n                      <PlusIcon className=\"size-4\" />\n                    ) : (\n                      story.name\n                        .split(\" \")\n                        .map((p) => p[0])\n                        .join(\"\")\n                    )}\n                  </AvatarFallback>\n                </Avatar>\n              </span>\n              <span className=\"w-full truncate text-center text-[11px] text-muted-foreground\">\n                {story.add ? \"Add story\" : story.name.split(\" \")[0]}\n              </span>\n            </button>\n          </CarouselItem>\n        ))}\n      </CarouselContent>\n    </Carousel>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

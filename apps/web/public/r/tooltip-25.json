@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tooltip-25",
+  "type": "registry:example",
+  "description": "Search input group with addon buttons that each describe their action.",
+  "files": [
+    {
+      "path": "registry/designali/examples/tooltip/tooltip-25.tsx",
+      "content": "import { MicIcon, SearchIcon, SlidersHorizontalIcon } from \"lucide-react\"\n\nimport {\n  InputGroup,\n  InputGroupAddon,\n  InputGroupButton,\n  InputGroupInput,\n} from \"@workspace/ui/components/input-group\"\nimport {\n  Tooltip,\n  TooltipContent,\n  TooltipProvider,\n  TooltipTrigger,\n} from \"@workspace/ui/components/tooltip\"\n\nexport default function InputGroupActionTooltips() {\n  return (\n    <TooltipProvider>\n      <InputGroup className=\"max-w-sm\">\n        <InputGroupAddon>\n          <SearchIcon />\n        </InputGroupAddon>\n        <InputGroupInput placeholder=\"Search customers\" />\n        <InputGroupAddon align=\"inline-end\">\n          <Tooltip>\n            <TooltipTrigger\n              render={\n                <InputGroupButton size=\"icon-xs\" aria-label=\"Voice search\" />\n              }\n            >\n              <MicIcon />\n            </TooltipTrigger>\n            <TooltipContent>Voice search</TooltipContent>\n          </Tooltip>\n          <Tooltip>\n            <TooltipTrigger\n              render={<InputGroupButton size=\"icon-xs\" aria-label=\"Filters\" />}\n            >\n              <SlidersHorizontalIcon />\n            </TooltipTrigger>\n            <TooltipContent>Advanced filters</TooltipContent>\n          </Tooltip>\n        </InputGroupAddon>\n      </InputGroup>\n    </TooltipProvider>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

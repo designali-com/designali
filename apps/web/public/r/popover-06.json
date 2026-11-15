@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "popover-06",
+  "type": "registry:example",
+  "description": "Avatar trigger that opens an account card with plan details and quick links.",
+  "files": [
+    {
+      "path": "registry/designali/examples/popover/popover-06.tsx",
+      "content": "import { LogOutIcon, SettingsIcon, UserIcon } from \"lucide-react\"\n\nimport { Avatar, AvatarFallback } from \"@workspace/ui/components/avatar\"\nimport { Badge } from \"@workspace/ui/components/badge\"\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  Popover,\n  PopoverContent,\n  PopoverDescription,\n  PopoverTitle,\n  PopoverTrigger,\n} from \"@workspace/ui/components/popover\"\nimport { Separator } from \"@workspace/ui/components/separator\"\n\nexport default function AccountPopover() {\n  return (\n    <Popover>\n      <PopoverTrigger\n        render={\n          <Button\n            variant=\"ghost\"\n            size=\"icon\"\n            className=\"rounded-full\"\n            aria-label=\"Open account\"\n          />\n        }\n      >\n        <Avatar>\n          <AvatarFallback>EK</AvatarFallback>\n        </Avatar>\n      </PopoverTrigger>\n      <PopoverContent className=\"w-64\" align=\"end\">\n        <div className=\"flex items-center gap-2.5\">\n          <Avatar size=\"lg\">\n            <AvatarFallback>EK</AvatarFallback>\n          </Avatar>\n          <div className=\"flex min-w-0 flex-col\">\n            <PopoverTitle>Elif Kaya</PopoverTitle>\n            <PopoverDescription className=\"truncate\">\n              elif@harborline.io\n            </PopoverDescription>\n          </div>\n        </div>\n        <div className=\"flex items-center justify-between border p-2 text-xs\">\n          <span>Team plan</span>\n          <Badge variant=\"secondary\">8 / 10 seats</Badge>\n        </div>\n        <Separator />\n        <div className=\"flex flex-col\">\n          <Button variant=\"ghost\" size=\"sm\" className=\"justify-start\">\n            <UserIcon data-icon=\"inline-start\" /> Profile\n          </Button>\n          <Button variant=\"ghost\" size=\"sm\" className=\"justify-start\">\n            <SettingsIcon data-icon=\"inline-start\" /> Settings\n          </Button>\n          <Button\n            variant=\"ghost\"\n            size=\"sm\"\n            className=\"justify-start text-destructive\"\n          >\n            <LogOutIcon data-icon=\"inline-start\" /> Sign out\n          </Button>\n        </div>\n      </PopoverContent>\n    </Popover>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

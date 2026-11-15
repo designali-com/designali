@@ -39,7 +39,7 @@ const milestones = [
 
 export default function Sections08() {
   const [active, setActive] = useState(milestones.length - 1)
-  const item = milestones[active]
+  const item = milestones[active]!
 
   return (
     <section className="w-full bg-background py-24">

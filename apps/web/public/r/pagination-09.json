@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "pagination-09",
+  "type": "registry:example",
+  "description": "Icon-only previous and next links around a plain page indicator for tight toolbars.",
+  "files": [
+    {
+      "path": "registry/designali/examples/pagination/pagination-09.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { ChevronLeftIcon, ChevronRightIcon } from \"lucide-react\"\n\nimport {\n  Pagination,\n  PaginationContent,\n  PaginationItem,\n  PaginationLink,\n} from \"@workspace/ui/components/pagination\"\n\nconst TOTAL = 18\n\nexport default function IconOnlyPageIndicator() {\n  const [page, setPage] = React.useState(3)\n\n  return (\n    <div className=\"flex w-full max-w-xs items-center justify-between border px-3 py-1.5\">\n      <span className=\"text-xs font-medium\">Activity</span>\n      <Pagination className=\"mx-0 w-auto\">\n        <PaginationContent className=\"gap-1\">\n          <PaginationItem>\n            <PaginationLink\n              href=\"#\"\n              size=\"icon-sm\"\n              aria-label=\"Previous page\"\n              onClick={(event) => {\n                event.preventDefault()\n                setPage((p) => Math.max(1, p - 1))\n              }}\n            >\n              <ChevronLeftIcon />\n            </PaginationLink>\n          </PaginationItem>\n          <PaginationItem>\n            <span className=\"px-1 text-xs text-muted-foreground tabular-nums\">\n              Page {page} of {TOTAL}\n            </span>\n          </PaginationItem>\n          <PaginationItem>\n            <PaginationLink\n              href=\"#\"\n              size=\"icon-sm\"\n              aria-label=\"Next page\"\n              onClick={(event) => {\n                event.preventDefault()\n                setPage((p) => Math.min(TOTAL, p + 1))\n              }}\n            >\n              <ChevronRightIcon />\n            </PaginationLink>\n          </PaginationItem>\n        </PaginationContent>\n      </Pagination>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

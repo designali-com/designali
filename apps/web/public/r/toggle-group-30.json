@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toggle-group-30",
+  "type": "registry:example",
+  "description": "Grocery checkout delivery slot grid with sold-out windows disabled.",
+  "files": [
+    {
+      "path": "registry/designali/examples/toggle-group/toggle-group-30.tsx",
+      "content": "import {\n  ToggleGroup,\n  ToggleGroupItem,\n} from \"@workspace/ui/components/toggle-group\"\n\nconst slots = [\n  { time: \"8-10 AM\", full: false },\n  { time: \"10-12 PM\", full: true },\n  { time: \"12-2 PM\", full: false },\n  { time: \"2-4 PM\", full: false },\n  { time: \"4-6 PM\", full: true },\n  { time: \"6-8 PM\", full: false },\n]\n\nexport default function DeliverySlotToggleGroup() {\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-2\">\n      <span className=\"text-sm font-medium\">Delivery window - Tomorrow</span>\n      <ToggleGroup\n        variant=\"outline\"\n        spacing={2}\n        defaultValue={[\"2-4 PM\"]}\n        className=\"grid w-full grid-cols-3\"\n      >\n        {slots.map((s) => (\n          <ToggleGroupItem\n            key={s.time}\n            value={s.time}\n            disabled={s.full}\n            className=\"h-auto flex-col py-2\"\n          >\n            <span>{s.time}</span>\n            <span className=\"text-[10px] font-normal text-muted-foreground\">\n              {s.full ? \"Full\" : \"$2.99\"}\n            </span>\n          </ToggleGroupItem>\n        ))}\n      </ToggleGroup>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-15",
+  "type": "registry:example",
+  "description": "A checkout shipping address form laid out in a responsive grid of inputs.",
+  "files": [
+    {
+      "path": "registry/designali/examples/input/input-15.tsx",
+      "content": "import {\n  Field,\n  FieldLabel,\n  FieldLegend,\n  FieldSet,\n} from \"@workspace/ui/components/field\"\nimport { Input } from \"@workspace/ui/components/input\"\n\nexport default function ShippingAddressInputs() {\n  return (\n    <FieldSet className=\"w-full max-w-md\">\n      <FieldLegend>Shipping address</FieldLegend>\n      <div className=\"grid grid-cols-2 gap-3\">\n        <Field className=\"col-span-2\">\n          <FieldLabel htmlFor=\"ship-name\">Full name</FieldLabel>\n          <Input\n            id=\"ship-name\"\n            autoComplete=\"name\"\n            placeholder=\"Jordan Ellis\"\n          />\n        </Field>\n        <Field className=\"col-span-2\">\n          <FieldLabel htmlFor=\"ship-street\">Street address</FieldLabel>\n          <Input\n            id=\"ship-street\"\n            autoComplete=\"address-line1\"\n            placeholder=\"221 Larkspur Ave, Apt 4\"\n          />\n        </Field>\n        <Field>\n          <FieldLabel htmlFor=\"ship-city\">City</FieldLabel>\n          <Input\n            id=\"ship-city\"\n            autoComplete=\"address-level2\"\n            placeholder=\"Portland\"\n          />\n        </Field>\n        <Field>\n          <FieldLabel htmlFor=\"ship-zip\">ZIP code</FieldLabel>\n          <Input\n            id=\"ship-zip\"\n            autoComplete=\"postal-code\"\n            inputMode=\"numeric\"\n            placeholder=\"97205\"\n          />\n        </Field>\n      </div>\n    </FieldSet>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

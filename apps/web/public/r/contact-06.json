@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "contact-06",
+  "type": "registry:block",
+  "description": "Centered email-first contact with a copy-to-clipboard address bar, availability pill and a four-column social links grid.",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/designali/blocks/contact/contact-06.tsx",
+      "content": "\"use client\"\n\nimport { useState } from \"react\"\nimport { ArrowUpRight, Check, Copy } from \"lucide-react\"\n\nconst EMAIL = \"studio@halcyonworks.co\"\n\nconst socials = [\n  { label: \"Instagram\", handle: \"@halcyonworks\", href: \"#\" },\n  { label: \"LinkedIn\", handle: \"Halcyon Works\", href: \"#\" },\n  { label: \"Dribbble\", handle: \"halcyon\", href: \"#\" },\n  { label: \"Read.cv\", handle: \"halcyon.works\", href: \"#\" },\n]\n\nexport default function Contact06() {\n  const [copied, setCopied] = useState(false)\n\n  async function copy() {\n    try {\n      await navigator.clipboard.writeText(EMAIL)\n      setCopied(true)\n      setTimeout(() => setCopied(false), 1800)\n    } catch {\n      setCopied(false)\n    }\n  }\n\n  return (\n    <section className=\"w-full bg-background py-24 md:py-32\">\n      <div className=\"mx-auto flex max-w-5xl flex-col items-center px-6 text-center\">\n        <span className=\"inline-flex items-center gap-2 border px-3 py-1 text-xs text-muted-foreground\">\n          <span className=\"size-1.5 rounded-full bg-emerald-500\" />\n          Booking projects for March 2027\n        </span>\n        <h2 className=\"mt-8 text-4xl font-semibold tracking-tight md:text-6xl\">\n          Say hello.\n        </h2>\n        <p className=\"mt-4 max-w-md text-muted-foreground\">\n          No forms, no funnels. Write to us directly and a designer, not a\n          salesperson, will reply.\n        </p>\n\n        <div className=\"mt-12 flex w-full max-w-2xl flex-col items-stretch border sm:flex-row\">\n          <a\n            href={`mailto:${EMAIL}`}\n            className=\"flex-1 truncate px-6 py-5 text-lg font-medium transition-colors hover:bg-muted sm:text-2xl\"\n          >\n            {EMAIL}\n          </a>\n          <button\n            type=\"button\"\n            onClick={copy}\n            aria-label=\"Copy email address\"\n            className=\"flex items-center justify-center gap-2 border-t px-6 py-4 text-sm transition-colors hover:bg-muted sm:border-t-0 sm:border-s\"\n          >\n            {copied ? (\n              <>\n                <Check className=\"size-4 text-emerald-600 dark:text-emerald-400\" />\n                Copied\n              </>\n            ) : (\n              <>\n                <Copy className=\"size-4\" />\n                Copy\n              </>\n            )}\n          </button>\n        </div>\n\n        <ul className=\"mt-16 grid w-full grid-cols-2 border-t md:grid-cols-4\">\n          {socials.map((social) => (\n            <li key={social.label} className=\"border-b md:border-b-0 [&:nth-child(odd)]:border-e md:[&:not(:last-child)]:border-e\">\n              <a\n                href={social.href}\n                className=\"group flex flex-col items-start gap-1 p-5 text-start transition-colors hover:bg-muted/60\"\n              >\n                <span className=\"flex w-full items-center justify-between text-xs text-muted-foreground\">\n                  {social.label}\n                  <ArrowUpRight className=\"size-3.5 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5\" />\n                </span>\n                <span className=\"text-sm font-medium\">{social.handle}</span>\n              </a>\n            </li>\n          ))}\n        </ul>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "700px"
+  },
+  "categories": [
+    "contact"
+  ]
+}

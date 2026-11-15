@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "select-26",
+  "type": "registry:example",
+  "description": "Uncontrolled select that starts empty and shows a muted placeholder prompt.",
+  "files": [
+    {
+      "path": "registry/designali/examples/select/select-26.tsx",
+      "content": "import { Button } from \"@workspace/ui/components/button\"\nimport {\n  Select,\n  SelectContent,\n  SelectItem,\n  SelectTrigger,\n  SelectValue,\n} from \"@workspace/ui/components/select\"\n\nconst reasons = [\n  { label: \"Too expensive\", value: \"price\" },\n  { label: \"Missing features I need\", value: \"features\" },\n  { label: \"Switching to another tool\", value: \"switching\" },\n  { label: \"Just taking a break\", value: \"break\" },\n  { label: \"Other\", value: \"other\" },\n]\n\nexport default function PlaceholderSelect() {\n  return (\n    <div className=\"flex w-full max-w-xs flex-col gap-3\">\n      <div className=\"flex flex-col gap-1\">\n        <h3 className=\"text-sm font-medium\">Sorry to see you go</h3>\n        <p className=\"text-xs text-muted-foreground\">\n          Tell us why you&apos;re canceling so we can improve.\n        </p>\n      </div>\n      <Select items={reasons}>\n        <SelectTrigger className=\"w-full\" aria-label=\"Cancellation reason\">\n          <SelectValue placeholder=\"Select a reason\" />\n        </SelectTrigger>\n        <SelectContent>\n          {reasons.map((item) => (\n            <SelectItem key={item.value} value={item.value}>\n              {item.label}\n            </SelectItem>\n          ))}\n        </SelectContent>\n      </Select>\n      <Button variant=\"destructive\">Cancel subscription</Button>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

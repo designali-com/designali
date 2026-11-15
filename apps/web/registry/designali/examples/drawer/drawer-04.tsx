@@ -1,0 +1,84 @@
+import {
+  CalendarIcon,
+  ChartColumnIcon,
+  FolderKanbanIcon,
+  HexagonIcon,
+  InboxIcon,
+  LayoutDashboardIcon,
+  LogOutIcon,
+  MenuIcon,
+} from "lucide-react"
+
+import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
+import { Badge } from "@workspace/ui/components/badge"
+import { Button } from "@workspace/ui/components/button"
+import {
+  Drawer,
+  DrawerClose,
+  DrawerContent,
+  DrawerDescription,
+  DrawerFooter,
+  DrawerHeader,
+  DrawerTitle,
+  DrawerTrigger,
+} from "@workspace/ui/components/drawer"
+
+const links = [
+  { label: "Dashboard", icon: LayoutDashboardIcon, active: true },
+  { label: "Projects", icon: FolderKanbanIcon, badge: "12" },
+  { label: "Inbox", icon: InboxIcon, badge: "3" },
+  { label: "Calendar", icon: CalendarIcon },
+  { label: "Reports", icon: ChartColumnIcon },
+]
+
+export default function MobileNavigationDrawer() {
+  return (
+    <Drawer swipeDirection="left">
+      <DrawerTrigger
+        render={<Button variant="outline" size="icon" aria-label="Open menu" />}
+      >
+        <MenuIcon />
+      </DrawerTrigger>
+      <DrawerContent>
+        <DrawerHeader className="flex-row items-center gap-2">
+          <div className="flex size-7 items-center justify-center bg-primary text-primary-foreground">
+            <HexagonIcon className="size-4" />
+          </div>
+          <DrawerTitle>Pinecone HQ</DrawerTitle>
+          <DrawerDescription className="sr-only">
+            Main navigation
+          </DrawerDescription>
+        </DrawerHeader>
+        <nav className="flex flex-1 flex-col gap-1 p-2 pt-4">
+          {links.map((link) => (
+            <DrawerClose
+              key={link.label}
+              render={
+                <Button
+                  variant={link.active ? "secondary" : "ghost"}
+                  className="justify-start"
+                />
+              }
+            >
+              <link.icon data-icon="inline-start" />
+              <span className="flex-1 text-start">{link.label}</span>
+              {link.badge && <Badge variant="outline">{link.badge}</Badge>}
+            </DrawerClose>
+          ))}
+        </nav>
+        <DrawerFooter className="flex-row items-center gap-3 border-t pt-4">
+          <Avatar size="sm">
+            <AvatarFallback>JS</AvatarFallback>
+          </Avatar>
+          <div className="min-w-0 flex-1">
+            <p className="truncate font-medium">Jade Sorensen</p>
+            <p className="truncate text-muted-foreground">jade@pinecone.io</p>
+          </div>
+          <Button variant="ghost" size="icon-sm" aria-label="Sign out">
+            <LogOutIcon />
+          </Button>
+        </DrawerFooter>
+      </DrawerContent>
+    </Drawer>
+  )
+}

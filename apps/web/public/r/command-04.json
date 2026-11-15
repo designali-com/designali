@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "command-04",
+  "type": "registry:example",
+  "description": "An always-visible command menu embedded in a card for launching workspace apps.",
+  "files": [
+    {
+      "path": "registry/designali/examples/command/command-04.tsx",
+      "content": "import {\n  CalendarIcon,\n  FileTextIcon,\n  KanbanIcon,\n  MailIcon,\n  PlusIcon,\n  UserPlusIcon,\n} from \"lucide-react\"\n\nimport {\n  Command,\n  CommandEmpty,\n  CommandGroup,\n  CommandInput,\n  CommandItem,\n  CommandList,\n  CommandSeparator,\n  CommandShortcut,\n} from \"@workspace/ui/components/command\"\n\nexport default function InlineAppLauncher() {\n  return (\n    <Command className=\"w-full max-w-sm border shadow-sm\">\n      <CommandInput placeholder=\"Search apps and actions...\" />\n      <CommandList>\n        <CommandEmpty>No apps match your search.</CommandEmpty>\n        <CommandGroup heading=\"Apps\">\n          <CommandItem>\n            <MailIcon />\n            <span>Mail</span>\n          </CommandItem>\n          <CommandItem>\n            <CalendarIcon />\n            <span>Calendar</span>\n          </CommandItem>\n          <CommandItem>\n            <FileTextIcon />\n            <span>Docs</span>\n          </CommandItem>\n          <CommandItem>\n            <KanbanIcon />\n            <span>Boards</span>\n          </CommandItem>\n        </CommandGroup>\n        <CommandSeparator />\n        <CommandGroup heading=\"Quick actions\">\n          <CommandItem>\n            <PlusIcon />\n            <span>New document</span>\n            <CommandShortcut>⌘N</CommandShortcut>\n          </CommandItem>\n          <CommandItem>\n            <UserPlusIcon />\n            <span>Invite teammate</span>\n            <CommandShortcut>⌘I</CommandShortcut>\n          </CommandItem>\n        </CommandGroup>\n      </CommandList>\n    </Command>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

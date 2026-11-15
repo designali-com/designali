@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "command-26",
+  "type": "registry:example",
+  "description": "A font picker where each option renders in its own typeface style.",
+  "files": [
+    {
+      "path": "registry/designali/examples/command/command-26.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport {\n  Command,\n  CommandEmpty,\n  CommandGroup,\n  CommandInput,\n  CommandItem,\n  CommandList,\n} from \"@workspace/ui/components/command\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst fonts = [\n  { label: \"Inter\", className: \"font-sans\", category: \"Sans serif\" },\n  { label: \"Source Serif\", className: \"font-serif\", category: \"Serif\" },\n  { label: \"JetBrains Mono\", className: \"font-mono\", category: \"Monospace\" },\n  {\n    label: \"Display Bold\",\n    className: \"font-sans font-black tracking-tight\",\n    category: \"Display\",\n  },\n  {\n    label: \"Light Italic\",\n    className: \"font-serif font-light italic\",\n    category: \"Serif\",\n  },\n]\n\nexport default function FontFamilyPicker() {\n  const [font, setFont] = React.useState(\"Inter\")\n  const active = fonts.find((f) => f.label === font)\n\n  return (\n    <div className=\"flex w-full max-w-xs flex-col gap-2\">\n      <p className={cn(\"border p-3 text-lg\", active?.className)}>\n        The quick brown fox\n      </p>\n      <Command className=\"border\">\n        <CommandInput placeholder=\"Search fonts...\" />\n        <CommandList>\n          <CommandEmpty>No font found.</CommandEmpty>\n          <CommandGroup heading=\"Fonts\">\n            {fonts.map((f) => (\n              <CommandItem\n                key={f.label}\n                value={f.label}\n                keywords={[f.category]}\n                data-checked={f.label === font}\n                onSelect={() => setFont(f.label)}\n              >\n                <span className={cn(\"text-sm\", f.className)}>{f.label}</span>\n                <span className=\"text-[11px] text-muted-foreground\">\n                  {f.category}\n                </span>\n              </CommandItem>\n            ))}\n          </CommandGroup>\n        </CommandList>\n      </Command>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "field-33",
+  "type": "registry:example",
+  "description": "Article title field that auto-generates a URL slug until the slug is edited manually.",
+  "files": [
+    {
+      "path": "registry/designali/examples/field/field-33.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { RotateCcwIcon } from \"lucide-react\"\n\nimport {\n  Field,\n  FieldDescription,\n  FieldGroup,\n  FieldLabel,\n} from \"@workspace/ui/components/field\"\nimport { Input } from \"@workspace/ui/components/input\"\nimport {\n  InputGroup,\n  InputGroupAddon,\n  InputGroupButton,\n  InputGroupInput,\n  InputGroupText,\n} from \"@workspace/ui/components/input-group\"\n\nconst slugify = (s: string) =>\n  s\n    .toLowerCase()\n    .replace(/[^a-z0-9]+/g, \"-\")\n    .replace(/^-|-$/g, \"\")\n\nexport default function AutoSlugField() {\n  const [title, setTitle] = React.useState(\"Designing for slow networks\")\n  const [slug, setSlug] = React.useState<string | null>(null)\n  const value = slug ?? slugify(title)\n\n  return (\n    <FieldGroup className=\"w-full max-w-sm\">\n      <Field>\n        <FieldLabel htmlFor=\"post-title\">Title</FieldLabel>\n        <Input\n          id=\"post-title\"\n          value={title}\n          onChange={(e) => setTitle(e.target.value)}\n        />\n      </Field>\n      <Field>\n        <FieldLabel htmlFor=\"post-slug\">URL slug</FieldLabel>\n        <InputGroup>\n          <InputGroupAddon>\n            <InputGroupText>/blog/</InputGroupText>\n          </InputGroupAddon>\n          <InputGroupInput\n            id=\"post-slug\"\n            value={value}\n            onChange={(e) => setSlug(slugify(e.target.value))}\n          />\n          {slug !== null && (\n            <InputGroupAddon align=\"inline-end\">\n              <InputGroupButton\n                size=\"icon-xs\"\n                aria-label=\"Reset slug\"\n                onClick={() => setSlug(null)}\n              >\n                <RotateCcwIcon />\n              </InputGroupButton>\n            </InputGroupAddon>\n          )}\n        </InputGroup>\n        <FieldDescription>\n          {slug === null\n            ? \"Generated from the title.\"\n            : \"Custom slug. Reset to follow the title.\"}\n        </FieldDescription>\n      </Field>\n    </FieldGroup>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

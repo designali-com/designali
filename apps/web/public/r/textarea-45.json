@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "textarea-45",
+  "type": "registry:example",
+  "description": "Textarea with tools to trim whitespace, change case and remove blank lines.",
+  "files": [
+    {
+      "path": "registry/designali/examples/textarea/textarea-45.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Textarea } from \"@workspace/ui/components/textarea\"\n\nconst actions = [\n  {\n    label: \"Trim spaces\",\n    run: (s: string) =>\n      s\n        .split(\"\\n\")\n        .map((l) => l.trim().replace(/\\s{2,}/g, \" \"))\n        .join(\"\\n\"),\n  },\n  {\n    label: \"Remove blank lines\",\n    run: (s: string) =>\n      s\n        .split(\"\\n\")\n        .filter((l) => l.trim())\n        .join(\"\\n\"),\n  },\n  { label: \"lowercase\", run: (s: string) => s.toLowerCase() },\n  { label: \"UPPERCASE\", run: (s: string) => s.toUpperCase() },\n]\n\nexport default function TextCleanupTextarea() {\n  const [text, setText] = React.useState(\n    \"  Apples   x3\\n\\n   Pears    x2  \\n\\nFigs x10\"\n  )\n\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-2\">\n      <Textarea\n        value={text}\n        onChange={(e) => setText(e.target.value)}\n        className=\"min-h-28 font-mono whitespace-pre\"\n        aria-label=\"Text\"\n      />\n      <div className=\"flex flex-wrap gap-1.5\">\n        {actions.map((a) => (\n          <Button\n            key={a.label}\n            variant=\"outline\"\n            size=\"xs\"\n            onClick={() => setText(a.run(text))}\n          >\n            {a.label}\n          </Button>\n        ))}\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

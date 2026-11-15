@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "pagination-36",
+  "type": "registry:example",
+  "description": "Issue tracker tabs where each tab keeps its own independent page state.",
+  "files": [
+    {
+      "path": "registry/designali/examples/pagination/pagination-36.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport {\n  Pagination,\n  PaginationContent,\n  PaginationItem,\n  PaginationLink,\n} from \"@workspace/ui/components/pagination\"\nimport {\n  Tabs,\n  TabsContent,\n  TabsList,\n  TabsTrigger,\n} from \"@workspace/ui/components/tabs\"\n\nconst counts: Record<string, number> = { open: 6, closed: 3 }\n\nexport default function TabsWithPagination() {\n  const [pages, setPages] = React.useState<Record<string, number>>({\n    open: 1,\n    closed: 1,\n  })\n\n  return (\n    <Tabs defaultValue=\"open\" className=\"w-full max-w-sm\">\n      <TabsList>\n        <TabsTrigger value=\"open\">Open</TabsTrigger>\n        <TabsTrigger value=\"closed\">Closed</TabsTrigger>\n      </TabsList>\n      {Object.keys(counts).map((tab) => (\n        <TabsContent\n          key={tab}\n          value={tab}\n          className=\"flex flex-col gap-3 border p-3\"\n        >\n          <p className=\"text-xs text-muted-foreground\">\n            Viewing page {pages[tab]} of {counts[tab]} {tab} issues\n          </p>\n          <Pagination>\n            <PaginationContent>\n              {Array.from({ length: counts[tab]! }, (_, i) => i + 1).map(\n                (p) => (\n                  <PaginationItem key={p}>\n                    <PaginationLink\n                      href=\"#\"\n                      size=\"icon-sm\"\n                      isActive={p === pages[tab]}\n                      onClick={(event) => {\n                        event.preventDefault()\n                        setPages((prev) => ({ ...prev, [tab]: p }))\n                      }}\n                    >\n                      {p}\n                    </PaginationLink>\n                  </PaginationItem>\n                )\n              )}\n            </PaginationContent>\n          </Pagination>\n        </TabsContent>\n      ))}\n    </Tabs>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

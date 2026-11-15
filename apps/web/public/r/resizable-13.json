@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "resizable-13",
+  "type": "registry:example",
+  "description": "A switch that locks the layout by disabling the panel group.",
+  "files": [
+    {
+      "path": "registry/designali/examples/resizable/resizable-13.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { LockIcon, LockOpenIcon } from \"lucide-react\"\n\nimport { Label } from \"@workspace/ui/components/label\"\nimport {\n  ResizableHandle,\n  ResizablePanel,\n  ResizablePanelGroup,\n} from \"@workspace/ui/components/resizable\"\nimport { Switch } from \"@workspace/ui/components/switch\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nexport default function LockableLayout() {\n  const [locked, setLocked] = React.useState(true)\n\n  return (\n    <div className=\"flex w-full max-w-md flex-col gap-3\">\n      <div className=\"flex items-center justify-between\">\n        <Label\n          htmlFor=\"lock-layout\"\n          className=\"flex items-center gap-2 text-xs\"\n        >\n          {locked ? (\n            <LockIcon className=\"size-3.5\" />\n          ) : (\n            <LockOpenIcon className=\"size-3.5\" />\n          )}\n          Lock layout\n        </Label>\n        <Switch id=\"lock-layout\" checked={locked} onCheckedChange={setLocked} />\n      </div>\n      <ResizablePanelGroup\n        orientation=\"horizontal\"\n        disabled={locked}\n        className={cn(\"h-40 border\", locked && \"opacity-80\")}\n      >\n        <ResizablePanel defaultSize=\"40%\">\n          <div className=\"flex h-full items-center justify-center text-xs\">\n            Widgets\n          </div>\n        </ResizablePanel>\n        <ResizableHandle withHandle />\n        <ResizablePanel defaultSize=\"60%\">\n          <div className=\"flex h-full items-center justify-center text-xs text-muted-foreground\">\n            {locked ? \"Unlock to resize\" : \"Drag the handle\"}\n          </div>\n        </ResizablePanel>\n      </ResizablePanelGroup>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

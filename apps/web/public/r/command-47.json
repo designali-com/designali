@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "command-47",
+  "type": "registry:example",
+  "description": "A “create new” menu with item descriptions and single-key shortcuts.",
+  "files": [
+    {
+      "path": "registry/designali/examples/command/command-47.tsx",
+      "content": "import {\n  CircleDotIcon,\n  FilePenIcon,\n  FolderKanbanIcon,\n  NotebookTabsIcon,\n  RefreshCwIcon,\n} from \"lucide-react\"\n\nimport {\n  Command,\n  CommandEmpty,\n  CommandGroup,\n  CommandInput,\n  CommandItem,\n  CommandList,\n  CommandShortcut,\n} from \"@workspace/ui/components/command\"\nimport { Kbd } from \"@workspace/ui/components/kbd\"\n\nconst creatables = [\n  {\n    label: \"Issue\",\n    hint: \"Track a bug or task\",\n    icon: CircleDotIcon,\n    key: \"C\",\n  },\n  {\n    label: \"Document\",\n    hint: \"Write a spec or note\",\n    icon: FilePenIcon,\n    key: \"D\",\n  },\n  {\n    label: \"Project\",\n    hint: \"Group related work\",\n    icon: FolderKanbanIcon,\n    key: \"P\",\n  },\n  {\n    label: \"Cycle\",\n    hint: \"Plan a two-week sprint\",\n    icon: RefreshCwIcon,\n    key: \"Y\",\n  },\n  {\n    label: \"Meeting notes\",\n    hint: \"Start from a template\",\n    icon: NotebookTabsIcon,\n    key: \"M\",\n  },\n]\n\nexport default function QuickCreateMenu() {\n  return (\n    <Command className=\"w-full max-w-xs border shadow-md\">\n      <CommandInput placeholder=\"Create new...\" />\n      <CommandList>\n        <CommandEmpty>Nothing to create.</CommandEmpty>\n        <CommandGroup heading=\"Create\">\n          {creatables.map((item) => (\n            <CommandItem\n              key={item.label}\n              value={item.label}\n              keywords={[item.hint]}\n            >\n              <item.icon />\n              <div className=\"flex flex-col\">\n                <span>{item.label}</span>\n                <span className=\"text-[11px] text-muted-foreground\">\n                  {item.hint}\n                </span>\n              </div>\n              <CommandShortcut>\n                <Kbd>{item.key}</Kbd>\n              </CommandShortcut>\n            </CommandItem>\n          ))}\n        </CommandGroup>\n      </CommandList>\n    </Command>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

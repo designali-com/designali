@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "field-10",
+  "type": "registry:example",
+  "description": "Checkout shipping address with a two-column grid, native country select, and postal code.",
+  "files": [
+    {
+      "path": "registry/designali/examples/field/field-10.tsx",
+      "content": "import {\n  Field,\n  FieldGroup,\n  FieldLabel,\n  FieldLegend,\n  FieldSet,\n} from \"@workspace/ui/components/field\"\nimport { Input } from \"@workspace/ui/components/input\"\nimport {\n  NativeSelect,\n  NativeSelectOption,\n} from \"@workspace/ui/components/native-select\"\n\nexport default function ShippingAddressFields() {\n  return (\n    <FieldSet className=\"w-full max-w-md\">\n      <FieldLegend>Shipping address</FieldLegend>\n      <FieldGroup className=\"gap-4\">\n        <div className=\"grid grid-cols-2 gap-3\">\n          <Field>\n            <FieldLabel htmlFor=\"ship-first\">First name</FieldLabel>\n            <Input\n              id=\"ship-first\"\n              autoComplete=\"given-name\"\n              defaultValue=\"Leah\"\n            />\n          </Field>\n          <Field>\n            <FieldLabel htmlFor=\"ship-last\">Last name</FieldLabel>\n            <Input\n              id=\"ship-last\"\n              autoComplete=\"family-name\"\n              defaultValue=\"Okonkwo\"\n            />\n          </Field>\n        </div>\n        <Field>\n          <FieldLabel htmlFor=\"ship-street\">Street address</FieldLabel>\n          <Input\n            id=\"ship-street\"\n            autoComplete=\"street-address\"\n            placeholder=\"221 Willow Lane, Apt 4\"\n          />\n        </Field>\n        <div className=\"grid grid-cols-2 gap-3\">\n          <Field>\n            <FieldLabel htmlFor=\"ship-country\">Country</FieldLabel>\n            <NativeSelect id=\"ship-country\" defaultValue=\"ca\">\n              <NativeSelectOption value=\"ca\">Canada</NativeSelectOption>\n              <NativeSelectOption value=\"us\">United States</NativeSelectOption>\n              <NativeSelectOption value=\"uk\">United Kingdom</NativeSelectOption>\n              <NativeSelectOption value=\"ie\">Ireland</NativeSelectOption>\n            </NativeSelect>\n          </Field>\n          <Field>\n            <FieldLabel htmlFor=\"ship-postal\">Postal code</FieldLabel>\n            <Input\n              id=\"ship-postal\"\n              autoComplete=\"postal-code\"\n              placeholder=\"M5V 2T6\"\n            />\n          </Field>\n        </div>\n      </FieldGroup>\n    </FieldSet>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

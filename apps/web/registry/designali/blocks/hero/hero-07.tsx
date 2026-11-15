@@ -20,7 +20,7 @@ export default function Hero07() {
             Revenue analytics your finance team will trust.
           </h1>
           <p className="mt-6 max-w-lg text-base leading-7 text-muted-foreground">
-            Connect Stripe, your CRM and your warehouse. Get MRR, churn and
+            Connect Corvia, your CRM and your warehouse. Get MRR, churn and
             cohort reporting that reconciles to the cent, updated hourly.
           </p>
           <div className="mt-10 flex flex-wrap gap-3">

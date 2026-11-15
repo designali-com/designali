@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "card-42",
+  "type": "registry:example",
+  "description": "Job listing card with company glyph, tags, salary range and save and apply actions.",
+  "files": [
+    {
+      "path": "registry/designali/examples/card/card-42.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { BookmarkIcon } from \"lucide-react\"\n\nimport { Badge } from \"@workspace/ui/components/badge\"\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  Card,\n  CardAction,\n  CardContent,\n  CardDescription,\n  CardFooter,\n  CardHeader,\n  CardTitle,\n} from \"@workspace/ui/components/card\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nexport default function JobPostingCard() {\n  const [saved, setSaved] = React.useState(false)\n\n  return (\n    <Card className=\"w-full max-w-sm\">\n      <CardHeader className=\"grid-cols-[auto_1fr_auto] gap-x-3\">\n        <div className=\"row-span-2 flex size-10 items-center justify-center bg-foreground text-sm font-bold text-background\">\n          Q\n        </div>\n        <CardTitle>Senior Frontend Engineer</CardTitle>\n        <CardDescription>Quillstack · Berlin or remote (EU)</CardDescription>\n        <CardAction className=\"col-start-3\">\n          <Button\n            variant=\"ghost\"\n            size=\"icon-sm\"\n            aria-label={saved ? \"Unsave job\" : \"Save job\"}\n            aria-pressed={saved}\n            onClick={() => setSaved(!saved)}\n          >\n            <BookmarkIcon className={cn(saved && \"fill-current\")} />\n          </Button>\n        </CardAction>\n      </CardHeader>\n      <CardContent className=\"grid gap-3\">\n        <div className=\"flex flex-wrap gap-1.5\">\n          <Badge variant=\"secondary\">Full-time</Badge>\n          <Badge variant=\"secondary\">React</Badge>\n          <Badge variant=\"secondary\">TypeScript</Badge>\n          <Badge variant=\"outline\">Visa support</Badge>\n        </div>\n        <p className=\"text-muted-foreground\">\n          Own our editor surface end to end, from collaborative cursors to\n          performance budgets on low-end devices.\n        </p>\n      </CardContent>\n      <CardFooter className=\"justify-between\">\n        <div className=\"grid\">\n          <span className=\"font-medium\">€85k - €105k</span>\n          <span className=\"text-muted-foreground\">Posted 3 days ago</span>\n        </div>\n        <Button size=\"sm\">Apply now</Button>\n      </CardFooter>\n    </Card>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

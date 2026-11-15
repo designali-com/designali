@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "scroll-area-47",
+  "type": "registry:example",
+  "description": "Leaderboard with medal ranks and the current user pinned below.",
+  "files": [
+    {
+      "path": "registry/designali/examples/scroll-area/scroll-area-47.tsx",
+      "content": "import { TrophyIcon } from \"lucide-react\"\n\nimport { ScrollArea } from \"@workspace/ui/components/scroll-area\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst players = [\n  \"Nova\",\n  \"Kestrel\",\n  \"Juniper\",\n  \"Atlas\",\n  \"Wren\",\n  \"Orion\",\n  \"Sable\",\n  \"Indigo\",\n  \"Marlow\",\n  \"Quill\",\n  \"Rhea\",\n  \"Tobin\",\n].map((name, i) => ({ name, points: 9800 - i * 430 - (i % 3) * 55 }))\n\nexport default function LeaderboardRanking() {\n  return (\n    <div className=\"w-full max-w-xs border\">\n      <div className=\"flex items-center gap-2 border-b px-3 py-2 text-sm font-medium\">\n        <TrophyIcon className=\"size-4 text-amber-500\" />\n        Weekly leaderboard\n      </div>\n      <ScrollArea className=\"h-60\">\n        {players.map((p, i) => (\n          <div\n            key={p.name}\n            className=\"flex items-center gap-3 px-3 py-2 text-xs\"\n          >\n            <span\n              className={cn(\n                \"flex size-6 items-center justify-center font-semibold tabular-nums\",\n                i === 0 && \"bg-amber-400 text-amber-950\",\n                i === 1 && \"bg-zinc-300 text-zinc-900\",\n                i === 2 && \"bg-orange-300 text-orange-950\",\n                i > 2 && \"text-muted-foreground\"\n              )}\n            >\n              {i + 1}\n            </span>\n            <span className=\"flex-1 font-medium\">{p.name}</span>\n            <span className=\"tabular-nums\">\n              {p.points.toLocaleString(\"en-US\")}\n            </span>\n          </div>\n        ))}\n      </ScrollArea>\n      <div className=\"flex items-center gap-3 border-t bg-muted/50 px-3 py-2 text-xs\">\n        <span className=\"flex size-6 items-center justify-center font-semibold\">\n          27\n        </span>\n        <span className=\"flex-1 font-medium\">You</span>\n        <span className=\"tabular-nums\">3,120</span>\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

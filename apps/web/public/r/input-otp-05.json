@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-otp-05",
+  "type": "registry:example",
+  "description": "Two-factor sign-in step with a split 3+3 authenticator code and a trust-device checkbox.",
+  "files": [
+    {
+      "path": "registry/designali/examples/input-otp/input-otp-05.tsx",
+      "content": "\"use client\"\n\nimport { REGEXP_ONLY_DIGITS } from \"input-otp\"\nimport { ShieldCheckIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Checkbox } from \"@workspace/ui/components/checkbox\"\nimport {\n  InputOTP,\n  InputOTPGroup,\n  InputOTPSeparator,\n  InputOTPSlot,\n} from \"@workspace/ui/components/input-otp\"\nimport { Label } from \"@workspace/ui/components/label\"\n\nexport default function TwoFactorLoginStep() {\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-5 border bg-background p-6\">\n      <div className=\"flex size-10 items-center justify-center bg-muted\">\n        <ShieldCheckIcon className=\"size-5\" />\n      </div>\n      <div className=\"space-y-1\">\n        <h3 className=\"text-sm font-semibold\">Two-factor authentication</h3>\n        <p className=\"text-xs text-muted-foreground\">\n          Open your authenticator app and enter the code for Lumen.\n        </p>\n      </div>\n      <InputOTP maxLength={6} pattern={REGEXP_ONLY_DIGITS}>\n        <InputOTPGroup>\n          <InputOTPSlot index={0} />\n          <InputOTPSlot index={1} />\n          <InputOTPSlot index={2} />\n        </InputOTPGroup>\n        <InputOTPSeparator />\n        <InputOTPGroup>\n          <InputOTPSlot index={3} />\n          <InputOTPSlot index={4} />\n          <InputOTPSlot index={5} />\n        </InputOTPGroup>\n      </InputOTP>\n      <div className=\"flex items-center gap-2\">\n        <Checkbox id=\"trust-device\" />\n        <Label htmlFor=\"trust-device\">Trust this device for 30 days</Label>\n      </div>\n      <Button>Continue</Button>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

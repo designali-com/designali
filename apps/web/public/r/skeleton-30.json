@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "skeleton-30",
+  "type": "registry:example",
+  "description": "Tabs where the active panel shows skeleton content until its data arrives.",
+  "files": [
+    {
+      "path": "registry/designali/examples/skeleton/skeleton-30.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { Skeleton } from \"@workspace/ui/components/skeleton\"\nimport {\n  Tabs,\n  TabsContent,\n  TabsList,\n  TabsTrigger,\n} from \"@workspace/ui/components/tabs\"\n\nexport default function TabsContentSkeleton() {\n  const [loaded, setLoaded] = React.useState<string[]>([\"overview\"])\n\n  function handleChange(value: unknown) {\n    const tab = String(value)\n    if (loaded.includes(tab)) return\n    setTimeout(() => setLoaded((prev) => [...prev, tab]), 1000)\n  }\n\n  return (\n    <Tabs\n      defaultValue=\"overview\"\n      onValueChange={handleChange}\n      className=\"w-full max-w-sm\"\n    >\n      <TabsList>\n        <TabsTrigger value=\"overview\">Overview</TabsTrigger>\n        <TabsTrigger value=\"usage\">Usage</TabsTrigger>\n        <TabsTrigger value=\"billing\">Billing</TabsTrigger>\n      </TabsList>\n      {[\"overview\", \"usage\", \"billing\"].map((tab) => (\n        <TabsContent key={tab} value={tab} className=\"border p-4\">\n          {loaded.includes(tab) ? (\n            <div className=\"flex flex-col gap-1 text-xs\">\n              <span className=\"font-medium capitalize\">{tab}</span>\n              <span className=\"text-muted-foreground\">\n                Data for the {tab} panel is ready.\n              </span>\n            </div>\n          ) : (\n            <div className=\"flex flex-col gap-2\">\n              <Skeleton className=\"h-3.5 w-24\" />\n              <Skeleton className=\"h-3 w-full\" />\n              <Skeleton className=\"h-3 w-2/3\" />\n            </div>\n          )}\n        </TabsContent>\n      ))}\n    </Tabs>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

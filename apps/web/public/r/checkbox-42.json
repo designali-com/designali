@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "checkbox-42",
+  "type": "registry:example",
+  "description": "Task with nested subtasks where completing every subtask auto-completes the parent.",
+  "files": [
+    {
+      "path": "registry/designali/examples/checkbox/checkbox-42.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { Badge } from \"@workspace/ui/components/badge\"\nimport { Checkbox } from \"@workspace/ui/components/checkbox\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst subtasks = [\n  \"Write API spec\",\n  \"Review with backend\",\n  \"Add rate limits\",\n  \"Update docs\",\n]\n\nexport default function NestedSubtaskTree() {\n  const [done, setDone] = React.useState<string[]>([\"Write API spec\"])\n  const all = done.length === subtasks.length\n\n  return (\n    <div className=\"w-full max-w-xs border p-3\">\n      <label className=\"flex items-center gap-2\">\n        <Checkbox\n          checked={all}\n          indeterminate={done.length > 0 && !all}\n          onCheckedChange={(checked) => setDone(checked ? subtasks : [])}\n          className=\"data-indeterminate:border-primary data-indeterminate:bg-primary data-indeterminate:text-primary-foreground\"\n        />\n        <span\n          className={cn(\n            \"text-sm font-medium\",\n            all && \"text-muted-foreground line-through\"\n          )}\n        >\n          Public API v2\n        </span>\n        <Badge variant=\"secondary\" className=\"ms-auto\">\n          {done.length}/{subtasks.length}\n        </Badge>\n      </label>\n      <div className=\"ms-2 mt-2 flex flex-col gap-2 border-s ps-4\">\n        {subtasks.map((task) => (\n          <label key={task} className=\"flex items-center gap-2 text-xs\">\n            <Checkbox\n              checked={done.includes(task)}\n              onCheckedChange={(checked) =>\n                setDone((list) =>\n                  checked ? [...list, task] : list.filter((t) => t !== task)\n                )\n              }\n            />\n            <span\n              className={cn(\n                done.includes(task) && \"text-muted-foreground line-through\"\n              )}\n            >\n              {task}\n            </span>\n          </label>\n        ))}\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

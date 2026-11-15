@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "aspect-ratio-44",
+  "type": "registry:example",
+  "description": "A two-column masonry board mixing portrait, square and landscape ratios.",
+  "files": [
+    {
+      "path": "registry/designali/examples/aspect-ratio/aspect-ratio-44.tsx",
+      "content": "import { AspectRatio } from \"@workspace/ui/components/aspect-ratio\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst columns = [\n  [\n    { ratio: 3 / 4, className: \"from-rose-300 to-pink-500\" },\n    { ratio: 1, className: \"from-amber-200 to-yellow-500\" },\n  ],\n  [\n    { ratio: 4 / 3, className: \"from-sky-300 to-cyan-600\" },\n    { ratio: 2 / 3, className: \"from-lime-300 to-emerald-600\" },\n  ],\n]\n\nexport default function MasonryMixedRatios() {\n  return (\n    <div className=\"grid w-full max-w-xs grid-cols-2 gap-2\">\n      {columns.map((column, c) => (\n        <div key={c} className=\"flex flex-col gap-2\">\n          {column.map((tile, t) => (\n            <AspectRatio\n              key={t}\n              ratio={tile.ratio}\n              className={cn(\"bg-linear-to-br\", tile.className)}\n            >\n              <span className=\"absolute end-1.5 bottom-1.5 bg-black/40 px-1 font-mono text-[9px] text-white\">\n                {tile.ratio.toFixed(2)}\n              </span>\n            </AspectRatio>\n          ))}\n        </div>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

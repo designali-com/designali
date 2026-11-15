@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-otp-43",
+  "type": "registry:example",
+  "description": "Controlled OTP that tints each slot once it has a digit.",
+  "files": [
+    {
+      "path": "registry/designali/examples/input-otp/input-otp-43.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport {\n  InputOTP,\n  InputOTPGroup,\n  InputOTPSlot,\n} from \"@workspace/ui/components/input-otp\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nexport default function FilledSlotHighlight() {\n  const [value, setValue] = React.useState(\"38\")\n\n  return (\n    <InputOTP maxLength={6} value={value} onChange={setValue}>\n      <InputOTPGroup className=\"gap-1.5\">\n        {[0, 1, 2, 3, 4, 5].map((index) => (\n          <InputOTPSlot\n            key={index}\n            index={index}\n            className={cn(\n              \"size-10 border text-base\",\n              value[index] &&\n                \"border-primary/40 bg-primary/10 dark:bg-primary/15\"\n            )}\n          />\n        ))}\n      </InputOTPGroup>\n    </InputOTP>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

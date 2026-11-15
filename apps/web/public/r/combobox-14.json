@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "combobox-14",
+  "type": "registry:example",
+  "description": "Select-style combobox opened from a button, with the search input inside the popup.",
+  "files": [
+    {
+      "path": "registry/designali/examples/combobox/combobox-14.tsx",
+      "content": "\"use client\"\n\nimport { FolderIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  Combobox,\n  ComboboxContent,\n  ComboboxEmpty,\n  ComboboxInput,\n  ComboboxItem,\n  ComboboxList,\n  ComboboxTrigger,\n  ComboboxValue,\n} from \"@workspace/ui/components/combobox\"\n\nconst projects = [\n  \"Website refresh\",\n  \"Mobile app v2\",\n  \"Brand guidelines\",\n  \"Customer portal\",\n  \"Internal tools\",\n]\n\nexport default function MoveToProjectButton() {\n  return (\n    <Combobox items={projects} defaultValue=\"Mobile app v2\">\n      <ComboboxTrigger\n        render={\n          <Button\n            variant=\"outline\"\n            className=\"w-56 justify-between font-normal\"\n          />\n        }\n      >\n        <span className=\"flex items-center gap-2 truncate\">\n          <FolderIcon className=\"text-muted-foreground\" />\n          <ComboboxValue placeholder=\"Move to project\" />\n        </span>\n      </ComboboxTrigger>\n      <ComboboxContent>\n        <ComboboxInput showTrigger={false} placeholder=\"Search projects\" />\n        <ComboboxEmpty>No projects found.</ComboboxEmpty>\n        <ComboboxList>\n          {(item: string) => (\n            <ComboboxItem key={item} value={item}>\n              {item}\n            </ComboboxItem>\n          )}\n        </ComboboxList>\n      </ComboboxContent>\n    </Combobox>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

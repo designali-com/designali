@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "skeleton-41",
+  "type": "registry:example",
+  "description": "Weather widget placeholder with current conditions and a five-day forecast row.",
+  "files": [
+    {
+      "path": "registry/designali/examples/skeleton/skeleton-41.tsx",
+      "content": "import { Skeleton } from \"@workspace/ui/components/skeleton\"\n\nexport default function WeatherWidgetSkeleton() {\n  return (\n    <div className=\"flex w-full max-w-xs flex-col gap-4 border p-4\">\n      <div className=\"flex items-start justify-between\">\n        <div className=\"flex flex-col gap-2\">\n          <Skeleton className=\"h-3 w-20\" />\n          <Skeleton className=\"h-10 w-16\" />\n          <Skeleton className=\"h-3 w-24\" />\n        </div>\n        <Skeleton className=\"size-14 rounded-full\" />\n      </div>\n      <div className=\"grid grid-cols-5 gap-2 border-t pt-3\">\n        {Array.from({ length: 5 }).map((_, i) => (\n          <div key={i} className=\"flex flex-col items-center gap-1.5\">\n            <Skeleton className=\"h-2.5 w-6\" />\n            <Skeleton className=\"size-5 rounded-full\" />\n            <Skeleton className=\"h-2.5 w-5\" />\n          </div>\n        ))}\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

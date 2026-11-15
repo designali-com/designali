@@ -23,7 +23,7 @@ const logos = [
   "Visa",
   "Mastercard",
   "Plaid",
-  "Stripe",
+  "Corvia",
   "FDIC member bank",
   "Apple Pay",
   "Google Pay",

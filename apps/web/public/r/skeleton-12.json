@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "skeleton-12",
+  "type": "registry:example",
+  "description": "Admin data table placeholder with toolbar, checkbox column, status pills, and pagination.",
+  "files": [
+    {
+      "path": "registry/designali/examples/skeleton/skeleton-12.tsx",
+      "content": "import { Skeleton } from \"@workspace/ui/components/skeleton\"\n\nexport default function DataTableSkeleton() {\n  return (\n    <div className=\"flex w-full max-w-lg flex-col gap-3\">\n      <div className=\"flex justify-between gap-2\">\n        <Skeleton className=\"h-8 w-48\" />\n        <Skeleton className=\"h-8 w-20\" />\n      </div>\n      <div className=\"border\">\n        <div className=\"flex items-center gap-3 border-b bg-muted/40 px-3 py-2.5\">\n          <Skeleton className=\"size-4\" />\n          <Skeleton className=\"h-3 w-24\" />\n          <Skeleton className=\"ms-auto h-3 w-16\" />\n          <Skeleton className=\"h-3 w-12\" />\n        </div>\n        {Array.from({ length: 5 }).map((_, i) => (\n          <div\n            key={i}\n            className=\"flex items-center gap-3 border-b px-3 py-3 last:border-b-0\"\n          >\n            <Skeleton className=\"size-4\" />\n            <Skeleton className=\"size-6 rounded-full\" />\n            <Skeleton className=\"h-3 w-28\" />\n            <Skeleton className=\"ms-auto h-5 w-16\" />\n            <Skeleton className=\"h-3 w-12\" />\n          </div>\n        ))}\n      </div>\n      <div className=\"flex items-center justify-between\">\n        <Skeleton className=\"h-3 w-24\" />\n        <div className=\"flex gap-1\">\n          <Skeleton className=\"size-7\" />\n          <Skeleton className=\"size-7\" />\n        </div>\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "pagination-26",
+  "type": "registry:example",
+  "description": "A-to-Z directory index where letters without entries are disabled.",
+  "files": [
+    {
+      "path": "registry/designali/examples/pagination/pagination-26.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport {\n  Pagination,\n  PaginationContent,\n  PaginationItem,\n  PaginationLink,\n} from \"@workspace/ui/components/pagination\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst letters = \"ABCDEFGHIJKLMNOPQRSTUVWXYZ\".split(\"\")\nconst available = new Set([\n  \"A\",\n  \"B\",\n  \"C\",\n  \"D\",\n  \"F\",\n  \"G\",\n  \"H\",\n  \"J\",\n  \"K\",\n  \"L\",\n  \"M\",\n  \"N\",\n  \"P\",\n  \"R\",\n  \"S\",\n  \"T\",\n  \"V\",\n  \"W\",\n])\n\nexport default function AlphabetPagination() {\n  const [letter, setLetter] = React.useState(\"M\")\n\n  return (\n    <div className=\"flex w-full max-w-md flex-col gap-3\">\n      <Pagination>\n        <PaginationContent className=\"flex-wrap justify-center\">\n          {letters.map((l) => {\n            const disabled = !available.has(l)\n            return (\n              <PaginationItem key={l}>\n                <PaginationLink\n                  href=\"#\"\n                  size=\"icon-xs\"\n                  isActive={l === letter}\n                  aria-disabled={disabled}\n                  className={cn(\n                    \"text-[11px]\",\n                    disabled && \"pointer-events-none opacity-30\"\n                  )}\n                  onClick={(event) => {\n                    event.preventDefault()\n                    setLetter(l)\n                  }}\n                >\n                  {l}\n                </PaginationLink>\n              </PaginationItem>\n            )\n          })}\n        </PaginationContent>\n      </Pagination>\n      <p className=\"text-center text-xs text-muted-foreground\">\n        Showing contacts starting with {letter}\n      </p>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "checkbox-15",
+  "type": "registry:example",
+  "description": "Read-only checkboxes summarising compliance controls that users can see but not change.",
+  "files": [
+    {
+      "path": "registry/designali/examples/checkbox/checkbox-15.tsx",
+      "content": "import { ShieldCheckIcon } from \"lucide-react\"\n\nimport {\n  Card,\n  CardContent,\n  CardDescription,\n  CardHeader,\n  CardTitle,\n} from \"@workspace/ui/components/card\"\nimport { Checkbox } from \"@workspace/ui/components/checkbox\"\nimport { Field, FieldGroup, FieldLabel } from \"@workspace/ui/components/field\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst controls = [\n  { label: \"Data encrypted at rest\", done: true },\n  { label: \"SSO enforced for all members\", done: true },\n  { label: \"Quarterly access review\", done: false },\n  { label: \"Vendor risk assessment\", done: true },\n]\n\nexport default function ReadOnlyComplianceSummary() {\n  return (\n    <Card className=\"w-full max-w-xs\">\n      <CardHeader>\n        <CardTitle className=\"flex items-center gap-2\">\n          <ShieldCheckIcon className=\"size-4\" />\n          Compliance status\n        </CardTitle>\n        <CardDescription>Managed by your workspace admin.</CardDescription>\n      </CardHeader>\n      <CardContent>\n        <FieldGroup className=\"gap-3\">\n          {controls.map((control, index) => (\n            <Field key={control.label} orientation=\"horizontal\">\n              <Checkbox\n                id={\"control-\" + index}\n                checked={control.done}\n                readOnly\n              />\n              <FieldLabel\n                htmlFor={\"control-\" + index}\n                className={cn(\n                  \"font-normal\",\n                  !control.done && \"text-muted-foreground\"\n                )}\n              >\n                {control.label}\n              </FieldLabel>\n            </Field>\n          ))}\n        </FieldGroup>\n      </CardContent>\n    </Card>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

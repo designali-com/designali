@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "alert-dialog-21",
+  "type": "registry:example",
+  "description": "Controlled dialog that shows a spinner while the deletion request runs, then closes.",
+  "files": [
+    {
+      "path": "registry/designali/examples/alert-dialog/alert-dialog-21.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { WebhookIcon } from \"lucide-react\"\n\nimport {\n  AlertDialog,\n  AlertDialogAction,\n  AlertDialogCancel,\n  AlertDialogContent,\n  AlertDialogDescription,\n  AlertDialogFooter,\n  AlertDialogHeader,\n  AlertDialogMedia,\n  AlertDialogTitle,\n  AlertDialogTrigger,\n} from \"@workspace/ui/components/alert-dialog\"\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Spinner } from \"@workspace/ui/components/spinner\"\n\nexport default function AsyncConfirmWithSpinner() {\n  const [open, setOpen] = React.useState(false)\n  const [pending, setPending] = React.useState(false)\n  const [deleted, setDeleted] = React.useState(false)\n\n  function handleConfirm() {\n    setPending(true)\n    setTimeout(() => {\n      setPending(false)\n      setDeleted(true)\n      setOpen(false)\n    }, 1500)\n  }\n\n  return (\n    <div className=\"flex flex-col items-center gap-3\">\n      <AlertDialog\n        open={open}\n        onOpenChange={(next) => !pending && setOpen(next)}\n      >\n        <AlertDialogTrigger\n          render={<Button variant=\"outline\" disabled={deleted} />}\n        >\n          {deleted ? \"Webhook deleted\" : \"Delete webhook\"}\n        </AlertDialogTrigger>\n        <AlertDialogContent>\n          <AlertDialogHeader>\n            <AlertDialogMedia>\n              <WebhookIcon />\n            </AlertDialogMedia>\n            <AlertDialogTitle>Delete webhook endpoint?</AlertDialogTitle>\n            <AlertDialogDescription>\n              Events will no longer be sent to https://hooks.fernway.dev/orders.\n            </AlertDialogDescription>\n          </AlertDialogHeader>\n          <AlertDialogFooter>\n            <AlertDialogCancel disabled={pending}>Cancel</AlertDialogCancel>\n            <AlertDialogAction\n              variant=\"destructive\"\n              onClick={handleConfirm}\n              disabled={pending}\n            >\n              {pending && <Spinner data-icon=\"inline-start\" />}\n              {pending ? \"Deleting...\" : \"Delete\"}\n            </AlertDialogAction>\n          </AlertDialogFooter>\n        </AlertDialogContent>\n      </AlertDialog>\n      {deleted && (\n        <Button variant=\"link\" size=\"sm\" onClick={() => setDeleted(false)}>\n          Reset demo\n        </Button>\n      )}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

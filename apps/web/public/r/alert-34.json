@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "alert-34",
+  "type": "registry:example",
+  "description": "Scheduling warning about overlapping events with reschedule and keep-both choices.",
+  "files": [
+    {
+      "path": "registry/designali/examples/alert/alert-34.tsx",
+      "content": "import { CalendarClockIcon } from \"lucide-react\"\n\nimport {\n  Alert,\n  AlertDescription,\n  AlertTitle,\n} from \"@workspace/ui/components/alert\"\nimport { Button } from \"@workspace/ui/components/button\"\n\nexport default function AlertCalendarConflict() {\n  return (\n    <div className=\"w-full max-w-sm space-y-2\">\n      <div className=\"border p-3 text-xs\">\n        <p className=\"font-medium\">Quarterly planning</p>\n        <p className=\"text-muted-foreground\">\n          Thu, Nov 20 &middot; 14:00 to 15:30\n        </p>\n      </div>\n      <Alert variant=\"warning\">\n        <CalendarClockIcon />\n        <AlertTitle>Conflicts with &ldquo;Design review&rdquo;</AlertTitle>\n        <AlertDescription>\n          <p>Ivy Tran and 2 others are busy from 14:30 to 15:00.</p>\n          <div className=\"mt-2 flex flex-wrap gap-1.5\">\n            <Button size=\"xs\">Find a new time</Button>\n            <Button size=\"xs\" variant=\"ghost\">\n              Keep both\n            </Button>\n          </div>\n        </AlertDescription>\n      </Alert>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

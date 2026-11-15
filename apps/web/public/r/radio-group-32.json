@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "radio-group-32",
+  "type": "registry:example",
+  "description": "Booking page duration picker with time tiles in a single row.",
+  "files": [
+    {
+      "path": "registry/designali/examples/radio-group/radio-group-32.tsx",
+      "content": "import { VideoIcon } from \"lucide-react\"\n\nimport { Avatar, AvatarFallback } from \"@workspace/ui/components/avatar\"\nimport {\n  RadioGroup,\n  RadioGroupItem,\n} from \"@workspace/ui/components/radio-group\"\n\nconst durations = [\"15\", \"30\", \"45\", \"60\"]\n\nexport default function MeetingDurationTiles() {\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-3\">\n      <div className=\"flex items-center gap-3\">\n        <Avatar>\n          <AvatarFallback>EK</AvatarFallback>\n        </Avatar>\n        <div>\n          <p className=\"text-sm font-medium\">Intro call with Elena Kovac</p>\n          <p className=\"flex items-center gap-1 text-xs text-muted-foreground\">\n            <VideoIcon className=\"size-3\" />\n            Video meeting\n          </p>\n        </div>\n      </div>\n      <RadioGroup\n        defaultValue=\"30\"\n        aria-label=\"Duration\"\n        className=\"grid grid-cols-4 gap-2\"\n      >\n        {durations.map((d) => (\n          <label\n            key={d}\n            htmlFor={\"dur-\" + d}\n            className=\"flex h-14 cursor-pointer flex-col items-center justify-center border has-focus-visible:ring-2 has-focus-visible:ring-ring/50 has-data-checked:border-primary has-data-checked:bg-primary/5\"\n          >\n            <RadioGroupItem value={d} id={\"dur-\" + d} className=\"sr-only\" />\n            <span className=\"text-base font-semibold\">{d}</span>\n            <span className=\"text-[11px] text-muted-foreground\">min</span>\n          </label>\n        ))}\n      </RadioGroup>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "footer-14",
+  "type": "registry:block",
+  "description": "Brand footer whose link columns collapse into tap-to-expand accordions on mobile.",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/designali/blocks/footer/footer-14.tsx",
+      "content": "\"use client\"\n\nimport { useState } from \"react\"\nimport { ChevronDown } from \"lucide-react\"\n\nconst columns = [\n  { title: \"Shop\", links: [\"Running\", \"Training\", \"Trail\", \"Recovery\", \"Gift cards\"] },\n  { title: \"Help\", links: [\"Order status\", \"Shipping\", \"Returns\", \"Size guide\", \"Contact us\"] },\n  { title: \"Company\", links: [\"Our story\", \"Materials\", \"Sustainability\", \"Careers\", \"Press\"] },\n  { title: \"Community\", links: [\"Run clubs\", \"Ambassadors\", \"Events\", \"Journal\"] },\n]\n\nexport default function Footer14() {\n  const [open, setOpen] = useState<string | null>(null)\n\n  return (\n    <footer className=\"w-full border-t bg-background\">\n      <div className=\"mx-auto max-w-7xl px-6 py-12 md:py-16\">\n        <div className=\"grid gap-10 md:grid-cols-[1fr_2fr]\">\n          <div>\n            <p className=\"text-xl font-bold tracking-tight italic\">STRIDEWELL</p>\n            <p className=\"mt-3 max-w-xs text-sm leading-6 text-muted-foreground\">\n              Running shoes engineered in Portland and tested on 40,000 miles\n              of real roads before they ship.\n            </p>\n          </div>\n          <div className=\"md:grid md:grid-cols-4 md:gap-8\">\n            {columns.map((column) => {\n              const expanded = open === column.title\n              return (\n                <div key={column.title} className=\"border-b md:border-b-0\">\n                  <button\n                    type=\"button\"\n                    aria-expanded={expanded}\n                    onClick={() => setOpen(expanded ? null : column.title)}\n                    className=\"flex w-full items-center justify-between py-4 text-sm font-medium md:pointer-events-none md:py-0\"\n                  >\n                    {column.title}\n                    <ChevronDown\n                      className={`size-4 transition-transform md:hidden ${expanded ? \"rotate-180\" : \"\"}`}\n                    />\n                  </button>\n                  <ul\n                    className={`space-y-2.5 pb-4 text-sm text-muted-foreground md:mt-4 md:block md:pb-0 ${\n                      expanded ? \"block\" : \"hidden\"\n                    }`}\n                  >\n                    {column.links.map((link) => (\n                      <li key={link}>\n                        <a href=\"#\" className=\"hover:text-foreground\">\n                          {link}\n                        </a>\n                      </li>\n                    ))}\n                  </ul>\n                </div>\n              )\n            })}\n          </div>\n        </div>\n        <div className=\"mt-12 flex flex-col gap-3 text-xs text-muted-foreground sm:flex-row sm:items-center sm:justify-between\">\n          <p>© 2026 Stridewell Athletics Inc.</p>\n          <div className=\"flex flex-wrap gap-x-5 gap-y-2\">\n            <a href=\"#\" className=\"hover:text-foreground\">Privacy</a>\n            <a href=\"#\" className=\"hover:text-foreground\">Terms</a>\n            <a href=\"#\" className=\"hover:text-foreground\">Do not sell my info</a>\n          </div>\n        </div>\n      </div>\n    </footer>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "440px"
+  },
+  "categories": [
+    "footer"
+  ]
+}

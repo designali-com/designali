@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "breadcrumb-28",
+  "type": "registry:example",
+  "description": "Ribbon-style breadcrumb where each item is an arrow-shaped segment.",
+  "files": [
+    {
+      "path": "registry/designali/examples/breadcrumb/breadcrumb-28.tsx",
+      "content": "import {\n  Breadcrumb,\n  BreadcrumbItem,\n  BreadcrumbLink,\n  BreadcrumbList,\n  BreadcrumbPage,\n} from \"@workspace/ui/components/breadcrumb\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst segments = [\"Leads\", \"Qualified\", \"Proposal\"]\n\nexport default function ArrowSegmentBreadcrumb() {\n  return (\n    <Breadcrumb>\n      <BreadcrumbList className=\"gap-0\">\n        {segments.map((segment, index) => (\n          <BreadcrumbItem key={segment} className={cn(index > 0 && \"-ml-2\")}>\n            <BreadcrumbLink\n              href=\"#\"\n              className=\"bg-muted py-1.5 ps-5 pe-4 [clip-path:polygon(0_0,calc(100%-8px)_0,100%_50%,calc(100%-8px)_100%,0_100%,8px_50%)] first:ps-3 hover:bg-muted/70\"\n            >\n              {segment}\n            </BreadcrumbLink>\n          </BreadcrumbItem>\n        ))}\n        <BreadcrumbItem className=\"-ml-2\">\n          <BreadcrumbPage className=\"bg-primary py-1.5 ps-5 pe-4 text-primary-foreground [clip-path:polygon(0_0,calc(100%-8px)_0,100%_50%,calc(100%-8px)_100%,0_100%,8px_50%)]\">\n            Closed won\n          </BreadcrumbPage>\n        </BreadcrumbItem>\n      </BreadcrumbList>\n    </Breadcrumb>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

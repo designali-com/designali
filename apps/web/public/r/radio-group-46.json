@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "radio-group-46",
+  "type": "registry:example",
+  "description": "Retention offer to pause a subscription for one, two, or three months.",
+  "files": [
+    {
+      "path": "registry/designali/examples/radio-group/radio-group-46.tsx",
+      "content": "import { CirclePauseIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  Card,\n  CardContent,\n  CardDescription,\n  CardFooter,\n  CardHeader,\n  CardTitle,\n} from \"@workspace/ui/components/card\"\nimport {\n  Field,\n  FieldContent,\n  FieldDescription,\n  FieldLabel,\n  FieldTitle,\n} from \"@workspace/ui/components/field\"\nimport {\n  RadioGroup,\n  RadioGroupItem,\n} from \"@workspace/ui/components/radio-group\"\n\nconst options = [\n  { value: \"1\", label: \"1 month\", resume: \"Resumes Dec 15\" },\n  { value: \"2\", label: \"2 months\", resume: \"Resumes Jan 15\" },\n  { value: \"3\", label: \"3 months\", resume: \"Resumes Feb 15\" },\n]\n\nexport default function PauseSubscriptionDuration() {\n  return (\n    <Card className=\"w-full max-w-sm\">\n      <CardHeader>\n        <CardTitle>Need a break instead?</CardTitle>\n        <CardDescription>\n          Pause your meal kit deliveries and keep your saved recipes.\n        </CardDescription>\n      </CardHeader>\n      <CardContent>\n        <RadioGroup defaultValue=\"1\" className=\"grid grid-cols-3 gap-2\">\n          {options.map((o) => (\n            <FieldLabel key={o.value} htmlFor={\"pause-\" + o.value}>\n              <Field>\n                <RadioGroupItem value={o.value} id={\"pause-\" + o.value} />\n                <FieldContent>\n                  <FieldTitle>{o.label}</FieldTitle>\n                  <FieldDescription className=\"text-[11px]\">\n                    {o.resume}\n                  </FieldDescription>\n                </FieldContent>\n              </Field>\n            </FieldLabel>\n          ))}\n        </RadioGroup>\n      </CardContent>\n      <CardFooter className=\"flex-col gap-2\">\n        <Button className=\"w-full\">\n          <CirclePauseIcon data-icon=\"inline-start\" />\n          Pause subscription\n        </Button>\n        <Button variant=\"link\" size=\"sm\">\n          No thanks, cancel\n        </Button>\n      </CardFooter>\n    </Card>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "textarea-35",
+  "type": "registry:example",
+  "description": "Small, default and large textarea sizes stacked for comparison.",
+  "files": [
+    {
+      "path": "registry/designali/examples/textarea/textarea-35.tsx",
+      "content": "import { Label } from \"@workspace/ui/components/label\"\nimport { Textarea } from \"@workspace/ui/components/textarea\"\n\nconst sizes = [\n  {\n    label: \"Small\",\n    className: \"min-h-12 px-2 py-1.5 text-[11px] md:text-[11px]\",\n  },\n  { label: \"Default\", className: \"\" },\n  { label: \"Large\", className: \"min-h-24 px-3 py-2.5 text-sm md:text-sm\" },\n]\n\nexport default function TextareaSizes() {\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-3\">\n      {sizes.map((s) => (\n        <div key={s.label} className=\"grid gap-1\">\n          <Label\n            htmlFor={\"ta-size-\" + s.label}\n            className=\"text-muted-foreground\"\n          >\n            {s.label}\n          </Label>\n          <Textarea\n            id={\"ta-size-\" + s.label}\n            className={s.className}\n            placeholder=\"Leave a note for the courier\"\n          />\n        </div>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

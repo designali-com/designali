@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "label-16",
+  "type": "registry:example",
+  "description": "Switch label carrying a Beta badge for an experimental feature.",
+  "files": [
+    {
+      "path": "registry/designali/examples/label/label-16.tsx",
+      "content": "import { SparklesIcon } from \"lucide-react\"\n\nimport { Badge } from \"@workspace/ui/components/badge\"\nimport { Label } from \"@workspace/ui/components/label\"\nimport { Switch } from \"@workspace/ui/components/switch\"\n\nexport default function LabelWithBetaBadge() {\n  return (\n    <div className=\"flex w-full max-w-sm items-center justify-between gap-4 border p-3\">\n      <Label htmlFor=\"ai-summaries\">\n        <SparklesIcon className=\"size-3.5\" />\n        AI meeting summaries\n        <Badge variant=\"secondary\">Beta</Badge>\n      </Label>\n      <Switch id=\"ai-summaries\" />\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

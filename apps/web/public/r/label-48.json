@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "label-48",
+  "type": "registry:example",
+  "description": "A switch that enables a dependent field, with the label dimming while it's off.",
+  "files": [
+    {
+      "path": "registry/designali/examples/label/label-48.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { Label } from \"@workspace/ui/components/label\"\nimport { Switch } from \"@workspace/ui/components/switch\"\nimport { Textarea } from \"@workspace/ui/components/textarea\"\n\nexport default function DependentFieldLabel() {\n  const [enabled, setEnabled] = React.useState(false)\n\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-4 border p-4\">\n      <div className=\"flex items-center gap-2\">\n        <Switch\n          id=\"auto-reply\"\n          checked={enabled}\n          onCheckedChange={setEnabled}\n        />\n        <Label htmlFor=\"auto-reply\">Send an out-of-office reply</Label>\n      </div>\n      <div className=\"group grid gap-2\" data-disabled={!enabled}>\n        <Label htmlFor=\"auto-reply-msg\">Reply message</Label>\n        <Textarea\n          id=\"auto-reply-msg\"\n          disabled={!enabled}\n          defaultValue=\"Thanks for your note. I'm away until Jan 6 and will reply when I'm back.\"\n          className=\"min-h-20\"\n        />\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

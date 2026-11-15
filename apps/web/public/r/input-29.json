@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-29",
+  "type": "registry:example",
+  "description": "A filter input that narrows a list of team members as you type, with an empty state.",
+  "files": [
+    {
+      "path": "registry/designali/examples/input/input-29.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { Avatar, AvatarFallback } from \"@workspace/ui/components/avatar\"\nimport { Input } from \"@workspace/ui/components/input\"\n\nconst people = [\n  \"Ada Morales\",\n  \"Bram de Vries\",\n  \"Chen Wei\",\n  \"Dalia Haddad\",\n  \"Eitan Cohen\",\n  \"Freya Lind\",\n]\n\nexport default function LiveFilterListInput() {\n  const [q, setQ] = React.useState(\"\")\n  const results = people.filter((p) =>\n    p.toLowerCase().includes(q.toLowerCase())\n  )\n\n  return (\n    <div className=\"w-full max-w-xs border\">\n      <div className=\"border-b p-2\">\n        <Input\n          aria-label=\"Filter members\"\n          placeholder=\"Filter members...\"\n          value={q}\n          onChange={(e) => setQ(e.target.value)}\n        />\n      </div>\n      <ul className=\"max-h-48 overflow-auto p-1 text-sm\">\n        {results.map((p) => (\n          <li\n            key={p}\n            className=\"flex items-center gap-2 px-2 py-1.5 hover:bg-muted\"\n          >\n            <Avatar size=\"sm\">\n              <AvatarFallback>\n                {p\n                  .split(\" \")\n                  .map((s) => s[0])\n                  .join(\"\")\n                  .slice(0, 2)}\n              </AvatarFallback>\n            </Avatar>\n            {p}\n          </li>\n        ))}\n        {results.length === 0 && (\n          <li className=\"px-2 py-6 text-center text-xs text-muted-foreground\">\n            No members match &ldquo;{q}&rdquo;\n          </li>\n        )}\n      </ul>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

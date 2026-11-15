@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "progress-25",
+  "type": "registry:example",
+  "description": "Connected devices list with battery level bars and low-battery highlighting.",
+  "files": [
+    {
+      "path": "registry/designali/examples/progress/progress-25.tsx",
+      "content": "import { HeadphonesIcon, KeyboardIcon, MouseIcon } from \"lucide-react\"\n\nimport {\n  Progress,\n  ProgressLabel,\n  ProgressValue,\n} from \"@workspace/ui/components/progress\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst devices = [\n  { name: \"Wireless keyboard\", icon: KeyboardIcon, level: 82 },\n  { name: \"Trackpad\", icon: MouseIcon, level: 46 },\n  { name: \"Earbuds\", icon: HeadphonesIcon, level: 12 },\n]\n\nexport default function DeviceBatteryLevels() {\n  return (\n    <div className=\"flex w-full max-w-sm flex-col divide-y border\">\n      {devices.map((device) => (\n        <div key={device.name} className=\"flex items-center gap-3 p-3\">\n          <device.icon className=\"size-4 shrink-0 text-muted-foreground\" />\n          <Progress\n            value={device.level}\n            className={cn(\n              \"flex-1\",\n              device.level < 20 &&\n                \"[&_[data-slot=progress-indicator]]:bg-destructive\"\n            )}\n          >\n            <ProgressLabel className=\"text-sm\">{device.name}</ProgressLabel>\n            <ProgressValue\n              className={cn(device.level < 20 && \"text-destructive\")}\n            />\n          </Progress>\n        </div>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

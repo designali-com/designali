@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tabs-49",
+  "type": "registry:example",
+  "description": "Conference agenda with a tab per day listing talks and rooms.",
+  "files": [
+    {
+      "path": "registry/designali/examples/tabs/tabs-49.tsx",
+      "content": "import {\n  Tabs,\n  TabsContent,\n  TabsList,\n  TabsTrigger,\n} from \"@workspace/ui/components/tabs\"\n\nconst agenda = {\n  day1: [\n    [\"09:00\", \"Opening keynote\", \"Main hall\"],\n    [\"10:30\", \"Scaling Postgres\", \"Room B\"],\n  ],\n  day2: [\n    [\"09:30\", \"Design tokens at scale\", \"Room A\"],\n    [\"14:00\", \"Edge rendering\", \"Main hall\"],\n  ],\n  day3: [\n    [\"10:00\", \"Hiring for craft\", \"Room C\"],\n    [\"16:00\", \"Closing panel\", \"Main hall\"],\n  ],\n}\n\nexport default function ConferenceScheduleTabs() {\n  return (\n    <Tabs defaultValue=\"day1\" className=\"w-full max-w-sm\">\n      <TabsList className=\"h-auto w-full\">\n        {[\"day1\", \"day2\", \"day3\"].map((d, i) => (\n          <TabsTrigger key={d} value={d} className=\"flex-col gap-0 py-1\">\n            <span>Day {i + 1}</span>\n            <span className=\"text-[10px] text-muted-foreground\">\n              Mar {12 + i}\n            </span>\n          </TabsTrigger>\n        ))}\n      </TabsList>\n      {Object.entries(agenda).map(([key, talks]) => (\n        <TabsContent key={key} value={key} className=\"divide-y border\">\n          {talks.map(([time, title, room]) => (\n            <div key={title} className=\"flex gap-3 px-3 py-2.5\">\n              <span className=\"w-10 font-mono text-muted-foreground\">\n                {time}\n              </span>\n              <div>\n                <p className=\"font-medium\">{title}</p>\n                <p className=\"text-muted-foreground\">{room}</p>\n              </div>\n            </div>\n          ))}\n        </TabsContent>\n      ))}\n    </Tabs>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

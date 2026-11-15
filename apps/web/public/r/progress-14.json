@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "progress-14",
+  "type": "registry:example",
+  "description": "Row of segmented progress bars for a story-style multi-part flow.",
+  "files": [
+    {
+      "path": "registry/designali/examples/progress/progress-14.tsx",
+      "content": "import { Progress } from \"@workspace/ui/components/progress\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst segments = [\n  { label: \"Shipping\", value: 100 },\n  { label: \"Payment\", value: 100 },\n  { label: \"Review\", value: 40 },\n  { label: \"Confirm\", value: 0 },\n]\n\nexport default function SegmentedStepBars() {\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-3\">\n      <div className=\"grid grid-cols-4 gap-1.5\">\n        {segments.map((segment) => (\n          <Progress\n            key={segment.label}\n            value={segment.value}\n            aria-label={segment.label}\n            className=\"gap-1.5\"\n          >\n            <span\n              className={cn(\n                \"text-[11px]\",\n                segment.value > 0 ? \"font-medium\" : \"text-muted-foreground\"\n              )}\n            >\n              {segment.label}\n            </span>\n          </Progress>\n        ))}\n      </div>\n      <p className=\"text-sm text-muted-foreground\">\n        Check your order details before confirming.\n      </p>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

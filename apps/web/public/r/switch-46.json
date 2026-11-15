@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "switch-46",
+  "type": "registry:example",
+  "description": "Incognito switch that auto-disables after a countdown and shows remaining time.",
+  "files": [
+    {
+      "path": "registry/designali/examples/switch/switch-46.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { EyeOffIcon } from \"lucide-react\"\n\nimport { Label } from \"@workspace/ui/components/label\"\nimport { Switch } from \"@workspace/ui/components/switch\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nexport default function PrivacyToggleWithCountdown() {\n  const [seconds, setSeconds] = React.useState(0)\n  const active = seconds > 0\n\n  React.useEffect(() => {\n    if (!active) return\n    const timer = setTimeout(() => setSeconds((s) => s - 1), 1000)\n    return () => clearTimeout(timer)\n  }, [active, seconds])\n\n  return (\n    <div className=\"flex w-full max-w-xs items-center gap-3 border p-4\">\n      <EyeOffIcon\n        className={cn(\n          \"size-5\",\n          active ? \"text-foreground\" : \"text-muted-foreground\"\n        )}\n      />\n      <div className=\"flex-1\">\n        <Label htmlFor=\"incognito\">Pause watch history</Label>\n        <p className=\"text-xs text-muted-foreground tabular-nums\">\n          {active ? \"Resumes in \" + seconds + \"s\" : \"History is being recorded\"}\n        </p>\n      </div>\n      <Switch\n        id=\"incognito\"\n        checked={active}\n        onCheckedChange={(checked) => setSeconds(checked ? 30 : 0)}\n      />\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

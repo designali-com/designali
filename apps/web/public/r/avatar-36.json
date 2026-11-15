@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "avatar-36",
+  "type": "registry:example",
+  "description": "A document header showing who is viewing right now with colored cursor rings.",
+  "files": [
+    {
+      "path": "registry/designali/examples/avatar/avatar-36.tsx",
+      "content": "import { FileTextIcon, Share2Icon } from \"lucide-react\"\n\nimport { Avatar, AvatarFallback } from \"@workspace/ui/components/avatar\"\nimport { Button } from \"@workspace/ui/components/button\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst viewers = [\n  { initials: \"AN\", ring: \"ring-rose-500\", name: \"Ana\" },\n  { initials: \"BO\", ring: \"ring-sky-500\", name: \"Bo\" },\n  { initials: \"CY\", ring: \"ring-emerald-500\", name: \"Cyrus\" },\n]\n\nexport default function LiveCollaboratorsBar() {\n  return (\n    <div className=\"flex w-full max-w-md items-center justify-between border px-3 py-2\">\n      <div className=\"flex items-center gap-2 text-sm\">\n        <FileTextIcon className=\"size-4 text-muted-foreground\" />\n        <span className=\"font-medium\">Q4 Launch Plan</span>\n      </div>\n      <div className=\"flex items-center gap-3\">\n        <div className=\"flex -space-x-1.5\">\n          {viewers.map((viewer) => (\n            <Avatar\n              key={viewer.initials}\n              size=\"sm\"\n              title={viewer.name + \" is viewing\"}\n              className={cn(\"ring-2\", viewer.ring)}\n            >\n              <AvatarFallback>{viewer.initials}</AvatarFallback>\n            </Avatar>\n          ))}\n        </div>\n        <Button size=\"sm\">\n          <Share2Icon data-icon=\"inline-start\" />\n          Share\n        </Button>\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

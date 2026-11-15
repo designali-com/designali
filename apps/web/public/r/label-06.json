@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "label-06",
+  "type": "registry:example",
+  "description": "Labels with leading icons for a compact contact details form.",
+  "files": [
+    {
+      "path": "registry/designali/examples/label/label-06.tsx",
+      "content": "import { GlobeIcon, MailIcon, PhoneIcon } from \"lucide-react\"\n\nimport { Input } from \"@workspace/ui/components/input\"\nimport { Label } from \"@workspace/ui/components/label\"\n\nconst fields = [\n  {\n    id: \"contact-email\",\n    label: \"Email\",\n    icon: MailIcon,\n    placeholder: \"noah@harborline.co\",\n  },\n  {\n    id: \"contact-phone\",\n    label: \"Phone\",\n    icon: PhoneIcon,\n    placeholder: \"(555) 019-3381\",\n  },\n  {\n    id: \"contact-site\",\n    label: \"Website\",\n    icon: GlobeIcon,\n    placeholder: \"harborline.co\",\n  },\n]\n\nexport default function LabelWithLeadingIcon() {\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-4\">\n      {fields.map((field) => (\n        <div key={field.id} className=\"grid gap-2\">\n          <Label htmlFor={field.id}>\n            <field.icon className=\"size-3.5 text-muted-foreground\" />\n            {field.label}\n          </Label>\n          <Input id={field.id} placeholder={field.placeholder} />\n        </div>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

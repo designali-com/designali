@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "slider-40",
+  "type": "registry:example",
+  "description": "Slider using a large step for Page Up and Page Down with keyboard hints.",
+  "files": [
+    {
+      "path": "registry/designali/examples/slider/slider-40.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { Kbd, KbdGroup } from \"@workspace/ui/components/kbd\"\nimport { Label } from \"@workspace/ui/components/label\"\nimport { Slider } from \"@workspace/ui/components/slider\"\n\nexport default function KeyboardLargeStepSlider() {\n  const [value, setValue] = React.useState([400])\n\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-3\">\n      <div className=\"flex justify-between text-sm\">\n        <Label>Monthly email quota</Label>\n        <span className=\"tabular-nums\">{value[0]!.toLocaleString()}</span>\n      </div>\n      <Slider\n        aria-label=\"Monthly email quota\"\n        value={value}\n        onValueChange={(v) => setValue(v as number[])}\n        max={5000}\n        step={10}\n        largeStep={500}\n      />\n      <div className=\"flex flex-wrap gap-x-4 gap-y-1 text-xs text-muted-foreground\">\n        <span className=\"flex items-center gap-1\">\n          <KbdGroup>\n            <Kbd>&larr;</Kbd>\n            <Kbd>&rarr;</Kbd>\n          </KbdGroup>\n          &plusmn;10\n        </span>\n        <span className=\"flex items-center gap-1\">\n          <KbdGroup>\n            <Kbd>PgUp</Kbd>\n            <Kbd>PgDn</Kbd>\n          </KbdGroup>\n          &plusmn;500\n        </span>\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

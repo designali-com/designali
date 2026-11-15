@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "breadcrumb-31",
+  "type": "registry:example",
+  "description": "Help center article trail with level icons and a last-updated note.",
+  "files": [
+    {
+      "path": "registry/designali/examples/breadcrumb/breadcrumb-31.tsx",
+      "content": "import { ClockIcon, CreditCardIcon, LifeBuoyIcon } from \"lucide-react\"\n\nimport {\n  Breadcrumb,\n  BreadcrumbItem,\n  BreadcrumbLink,\n  BreadcrumbList,\n  BreadcrumbPage,\n  BreadcrumbSeparator,\n} from \"@workspace/ui/components/breadcrumb\"\n\nexport default function HelpCenterBreadcrumb() {\n  return (\n    <div className=\"flex w-full max-w-md flex-col gap-2\">\n      <Breadcrumb>\n        <BreadcrumbList>\n          <BreadcrumbItem>\n            <BreadcrumbLink href=\"#\" className=\"flex items-center gap-1.5\">\n              <LifeBuoyIcon className=\"size-3.5\" />\n              Help center\n            </BreadcrumbLink>\n          </BreadcrumbItem>\n          <BreadcrumbSeparator />\n          <BreadcrumbItem>\n            <BreadcrumbLink href=\"#\" className=\"flex items-center gap-1.5\">\n              <CreditCardIcon className=\"size-3.5\" />\n              Payments\n            </BreadcrumbLink>\n          </BreadcrumbItem>\n          <BreadcrumbSeparator />\n          <BreadcrumbItem>\n            <BreadcrumbPage>Request a refund</BreadcrumbPage>\n          </BreadcrumbItem>\n        </BreadcrumbList>\n      </Breadcrumb>\n      <p className=\"flex items-center gap-1 text-[11px] text-muted-foreground\">\n        <ClockIcon className=\"size-3\" />\n        Updated 3 days ago · 4 min read\n      </p>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

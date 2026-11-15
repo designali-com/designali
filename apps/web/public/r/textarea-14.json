@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "textarea-14",
+  "type": "registry:example",
+  "description": "Profile bio textarea with a progress bar showing how much of the limit is used.",
+  "files": [
+    {
+      "path": "registry/designali/examples/textarea/textarea-14.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  Card,\n  CardContent,\n  CardDescription,\n  CardFooter,\n  CardHeader,\n  CardTitle,\n} from \"@workspace/ui/components/card\"\nimport { Progress } from \"@workspace/ui/components/progress\"\nimport { Textarea } from \"@workspace/ui/components/textarea\"\n\nexport default function ProfileBioTextarea() {\n  const [bio, setBio] = React.useState(\n    \"Product designer in Oslo. Into type, trains and tiny apps.\"\n  )\n  const max = 160\n\n  return (\n    <Card className=\"w-full max-w-sm\">\n      <CardHeader>\n        <CardTitle>Bio</CardTitle>\n        <CardDescription>Shown on your public profile.</CardDescription>\n      </CardHeader>\n      <CardContent className=\"flex flex-col gap-2\">\n        <Textarea\n          value={bio}\n          maxLength={max}\n          onChange={(e) => setBio(e.target.value)}\n          aria-label=\"Bio\"\n        />\n        <div className=\"flex items-center gap-2\">\n          <Progress value={(bio.length / max) * 100} className=\"flex-1\" />\n          <span className=\"text-xs text-muted-foreground tabular-nums\">\n            {max - bio.length} left\n          </span>\n        </div>\n      </CardContent>\n      <CardFooter>\n        <Button size=\"sm\">Save</Button>\n      </CardFooter>\n    </Card>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "hover-card-26",
+  "type": "registry:example",
+  "description": "Short commit hashes in a deploy log that preview the commit message and author.",
+  "files": [
+    {
+      "path": "registry/designali/examples/hover-card/hover-card-26.tsx",
+      "content": "import { Avatar, AvatarFallback } from \"@workspace/ui/components/avatar\"\nimport {\n  HoverCard,\n  HoverCardContent,\n  HoverCardTrigger,\n} from \"@workspace/ui/components/hover-card\"\n\nconst deploys = [\n  {\n    sha: \"a3f91c2\",\n    message: \"Cache pricing table on the edge\",\n    author: \"Ines Duarte\",\n    initials: \"ID\",\n    when: \"12 min ago\",\n    env: \"Production\",\n  },\n  {\n    sha: \"7be02d4\",\n    message: \"Bump image optimizer to v3\",\n    author: \"Rafael Moreno\",\n    initials: \"RM\",\n    when: \"1 hr ago\",\n    env: \"Preview\",\n  },\n]\n\nexport default function CommitHashHoverCard() {\n  return (\n    <div className=\"w-full max-w-sm divide-y border text-sm\">\n      {deploys.map((d) => (\n        <div key={d.sha} className=\"flex items-center gap-3 px-3 py-2\">\n          <span className=\"size-2 rounded-full bg-emerald-500\" />\n          <span className=\"flex-1\">{d.env}</span>\n          <HoverCard>\n            <HoverCardTrigger\n              href=\"#\"\n              className=\"bg-muted px-1.5 py-0.5 font-mono text-xs hover:underline\"\n            >\n              {d.sha}\n            </HoverCardTrigger>\n            <HoverCardContent align=\"end\" className=\"w-64\">\n              <p className=\"font-medium\">{d.message}</p>\n              <div className=\"mt-2 flex items-center gap-2 text-muted-foreground\">\n                <Avatar size=\"sm\">\n                  <AvatarFallback>{d.initials}</AvatarFallback>\n                </Avatar>\n                {d.author} committed {d.when}\n              </div>\n            </HoverCardContent>\n          </HoverCard>\n        </div>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

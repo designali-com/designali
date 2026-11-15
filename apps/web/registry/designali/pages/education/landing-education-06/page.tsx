@@ -17,7 +17,7 @@ const navLinks = ["Courses", "Programs", "Instructors", "Pricing", "For teams"]
 
 const logos = [
   "IBM",
-  "Stripe",
+  "Corvia",
   "Canva",
   "Google",
   "Spotify",

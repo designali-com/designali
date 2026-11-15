@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "accordion-10",
+  "type": "registry:example",
+  "description": "Plan-gated feature list where locked items are disabled with a Pro badge.",
+  "files": [
+    {
+      "path": "registry/designali/examples/accordion/accordion-10.tsx",
+      "content": "import { ChevronDownIcon, LockIcon, SparklesIcon } from \"lucide-react\"\n\nimport {\n  Accordion,\n  AccordionContent,\n  AccordionItem,\n  AccordionTrigger,\n} from \"@workspace/ui/components/accordion\"\nimport { Badge } from \"@workspace/ui/components/badge\"\nimport { Button } from \"@workspace/ui/components/button\"\n\nconst features = [\n  {\n    value: \"reports\",\n    title: \"Scheduled reports\",\n    locked: false,\n    body: \"Send a PDF summary of your dashboards every Monday at 9:00.\",\n  },\n  {\n    value: \"alerts\",\n    title: \"Threshold alerts\",\n    locked: false,\n    body: \"Get notified when a metric crosses a value you define.\",\n  },\n  { value: \"sso\", title: \"Single sign-on\", locked: true, body: \"\" },\n  { value: \"audit\", title: \"Audit log\", locked: true, body: \"\" },\n]\n\nexport default function AccordionDisabledItems() {\n  return (\n    <div className=\"w-full max-w-md space-y-3\">\n      <Accordion defaultValue={[\"reports\"]} className=\"border px-3\">\n        {features.map((feature) => (\n          <AccordionItem\n            key={feature.value}\n            value={feature.value}\n            disabled={feature.locked}\n          >\n            <AccordionTrigger className=\"items-center\">\n              <span className=\"flex items-center gap-2\">\n                {feature.locked && (\n                  <LockIcon className=\"size-3.5 text-muted-foreground\" />\n                )}\n                {feature.title}\n                {feature.locked && <Badge variant=\"outline\">Pro</Badge>}\n              </span>\n              <ChevronDownIcon\n                data-slot=\"accordion-trigger-icon\"\n                className=\"transition-transform duration-200 group-aria-expanded/accordion-trigger:rotate-180\"\n              />\n            </AccordionTrigger>\n            <AccordionContent className=\"text-muted-foreground\">\n              {feature.body}\n            </AccordionContent>\n          </AccordionItem>\n        ))}\n      </Accordion>\n      <Button size=\"sm\" className=\"w-full\">\n        <SparklesIcon data-icon=\"inline-start\" />\n        Upgrade to unlock\n      </Button>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

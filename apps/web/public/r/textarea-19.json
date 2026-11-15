@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "textarea-19",
+  "type": "registry:example",
+  "description": "Support reply textarea with saved-reply chips that insert template text.",
+  "files": [
+    {
+      "path": "registry/designali/examples/textarea/textarea-19.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { ZapIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Textarea } from \"@workspace/ui/components/textarea\"\n\nconst templates = [\n  { label: \"Greeting\", text: \"Hi there, thanks for reaching out! \" },\n  {\n    label: \"Refund\",\n    text: \"I've issued a full refund, it should appear within 5 business days. \",\n  },\n  {\n    label: \"Closing\",\n    text: \"Let me know if there's anything else I can help with.\",\n  },\n]\n\nexport default function QuickReplyTemplates() {\n  const [value, setValue] = React.useState(\"\")\n\n  return (\n    <div className=\"flex w-full max-w-md flex-col gap-2\">\n      <div className=\"flex flex-wrap gap-1.5\">\n        {templates.map((t) => (\n          <Button\n            key={t.label}\n            variant=\"outline\"\n            size=\"xs\"\n            onClick={() => setValue(value + t.text)}\n          >\n            <ZapIcon data-icon=\"inline-start\" />\n            {t.label}\n          </Button>\n        ))}\n      </div>\n      <Textarea\n        value={value}\n        onChange={(e) => setValue(e.target.value)}\n        className=\"min-h-24\"\n        placeholder=\"Reply to Hana…\"\n        aria-label=\"Reply\"\n      />\n      <div className=\"flex justify-end\">\n        <Button size=\"sm\" disabled={!value}>\n          Send reply\n        </Button>\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tooltip-38",
+  "type": "registry:example",
+  "description": "Progress dots for an onboarding flow where each dot names its step and status.",
+  "files": [
+    {
+      "path": "registry/designali/examples/tooltip/tooltip-38.tsx",
+      "content": "import { CheckIcon } from \"lucide-react\"\n\nimport {\n  Tooltip,\n  TooltipContent,\n  TooltipProvider,\n  TooltipTrigger,\n} from \"@workspace/ui/components/tooltip\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst steps = [\n  { label: \"Create account\", done: true },\n  { label: \"Invite teammates\", done: true },\n  { label: \"Connect calendar\", done: false },\n  { label: \"Book first meeting\", done: false },\n]\n\nexport default function OnboardingStepTooltips() {\n  return (\n    <TooltipProvider>\n      <div className=\"flex flex-col items-center gap-3\">\n        <span className=\"text-sm text-muted-foreground\">Step 3 of 4</span>\n        <div className=\"flex items-center gap-2\">\n          {steps.map((s, i) => (\n            <Tooltip key={s.label}>\n              <TooltipTrigger\n                render={\n                  <button\n                    type=\"button\"\n                    aria-label={s.label}\n                    className={cn(\n                      \"h-2 transition-all\",\n                      s.done\n                        ? \"w-6 bg-primary\"\n                        : i === 2\n                          ? \"w-10 bg-primary/60\"\n                          : \"w-6 bg-muted\"\n                    )}\n                  />\n                }\n              />\n              <TooltipContent>\n                {s.done ? <CheckIcon className=\"size-3\" /> : null}\n                {s.label}\n              </TooltipContent>\n            </Tooltip>\n          ))}\n        </div>\n      </div>\n    </TooltipProvider>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

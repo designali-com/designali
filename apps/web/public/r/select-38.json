@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "select-38",
+  "type": "registry:example",
+  "description": "Phone number field with a country dialing code select in front of the input.",
+  "files": [
+    {
+      "path": "registry/designali/examples/select/select-38.tsx",
+      "content": "import { ButtonGroup } from \"@workspace/ui/components/button-group\"\nimport {\n  Field,\n  FieldDescription,\n  FieldLabel,\n} from \"@workspace/ui/components/field\"\nimport { Input } from \"@workspace/ui/components/input\"\nimport {\n  Select,\n  SelectContent,\n  SelectItem,\n  SelectTrigger,\n  SelectValue,\n} from \"@workspace/ui/components/select\"\n\nconst codes = [\n  { label: \"+1\", value: \"us\", country: \"United States\" },\n  { label: \"+44\", value: \"uk\", country: \"United Kingdom\" },\n  { label: \"+49\", value: \"de\", country: \"Germany\" },\n  { label: \"+61\", value: \"au\", country: \"Australia\" },\n  { label: \"+81\", value: \"jp\", country: \"Japan\" },\n]\n\nexport default function PhoneCountryCodeSelect() {\n  return (\n    <Field className=\"w-full max-w-xs\">\n      <FieldLabel htmlFor=\"phone\">Phone number</FieldLabel>\n      <ButtonGroup className=\"w-full\">\n        <Select items={codes} defaultValue=\"uk\">\n          <SelectTrigger className=\"w-20\" aria-label=\"Country code\">\n            <SelectValue />\n          </SelectTrigger>\n          <SelectContent\n            alignItemWithTrigger={false}\n            align=\"start\"\n            className=\"min-w-52\"\n          >\n            {codes.map((item) => (\n              <SelectItem key={item.value} value={item.value}>\n                <span className=\"w-8 tabular-nums\">{item.label}</span>\n                <span className=\"text-muted-foreground\">{item.country}</span>\n              </SelectItem>\n            ))}\n          </SelectContent>\n        </Select>\n        <Input\n          id=\"phone\"\n          type=\"tel\"\n          placeholder=\"7700 900123\"\n          className=\"flex-1\"\n        />\n      </ButtonGroup>\n      <FieldDescription>\n        We&apos;ll text a code to verify this number.\n      </FieldDescription>\n    </Field>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

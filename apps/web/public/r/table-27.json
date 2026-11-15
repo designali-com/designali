@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "table-27",
+  "type": "registry:example",
+  "description": "A weekly class timetable with rooms shown as small blocks in each cell.",
+  "files": [
+    {
+      "path": "registry/designali/examples/table/table-27.tsx",
+      "content": "import {\n  Table,\n  TableBody,\n  TableCell,\n  TableHead,\n  TableHeader,\n  TableRow,\n} from \"@workspace/ui/components/table\"\n\nconst days = [\"Mon\", \"Tue\", \"Wed\", \"Thu\", \"Fri\"]\nconst slots = [\n  { time: \"09:00\", classes: [\"Yoga\", \"\", \"Yoga\", \"\", \"Pilates\"] },\n  { time: \"12:00\", classes: [\"\", \"HIIT\", \"\", \"HIIT\", \"\"] },\n  { time: \"18:00\", classes: [\"Spin\", \"Boxing\", \"Spin\", \"Boxing\", \"Spin\"] },\n]\n\nexport default function ScheduleTimetable() {\n  return (\n    <div className=\"w-full max-w-xl border\">\n      <Table className=\"table-fixed\">\n        <TableHeader>\n          <TableRow>\n            <TableHead className=\"w-16\" />\n            {days.map((day) => (\n              <TableHead key={day} className=\"text-center\">\n                {day}\n              </TableHead>\n            ))}\n          </TableRow>\n        </TableHeader>\n        <TableBody>\n          {slots.map((slot) => (\n            <TableRow key={slot.time} className=\"hover:bg-transparent\">\n              <TableCell className=\"font-mono text-muted-foreground\">\n                {slot.time}\n              </TableCell>\n              {slot.classes.map((name, i) => (\n                <TableCell key={days[i]} className=\"p-1\">\n                  {name ? (\n                    <div className=\"truncate bg-primary/10 px-1.5 py-1 text-center font-medium text-primary\">\n                      {name}\n                    </div>\n                  ) : (\n                    <div className=\"h-6\" />\n                  )}\n                </TableCell>\n              ))}\n            </TableRow>\n          ))}\n        </TableBody>\n      </Table>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

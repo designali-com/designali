@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-otp-09",
+  "type": "registry:example",
+  "description": "Disabled OTP input after too many failed attempts, with an alert explaining the lockout.",
+  "files": [
+    {
+      "path": "registry/designali/examples/input-otp/input-otp-09.tsx",
+      "content": "import { LockIcon } from \"lucide-react\"\n\nimport {\n  Alert,\n  AlertDescription,\n  AlertTitle,\n} from \"@workspace/ui/components/alert\"\nimport {\n  InputOTP,\n  InputOTPGroup,\n  InputOTPSlot,\n} from \"@workspace/ui/components/input-otp\"\n\nexport default function LockedAfterAttempts() {\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-4\">\n      <InputOTP maxLength={6} disabled>\n        <InputOTPGroup>\n          <InputOTPSlot index={0} />\n          <InputOTPSlot index={1} />\n          <InputOTPSlot index={2} />\n          <InputOTPSlot index={3} />\n          <InputOTPSlot index={4} />\n          <InputOTPSlot index={5} />\n        </InputOTPGroup>\n      </InputOTP>\n      <Alert variant=\"error\">\n        <LockIcon />\n        <AlertTitle>Too many attempts</AlertTitle>\n        <AlertDescription>\n          For your security, code entry is paused for 15 minutes.\n        </AlertDescription>\n      </Alert>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

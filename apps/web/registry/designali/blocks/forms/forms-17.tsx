@@ -32,7 +32,7 @@ export default function Forms17() {
   const [index, setIndex] = useState(0)
   const [answers, setAnswers] = useState<Record<string, string>>({})
   const done = index >= questions.length
-  const question = questions[Math.min(index, questions.length - 1)]
+  const question = questions[Math.min(index, questions.length - 1)]!
   const value = answers[question.id] ?? ""
   const progress = Math.round((Math.min(index, questions.length) / questions.length) * 100)
 

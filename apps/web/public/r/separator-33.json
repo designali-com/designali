@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "separator-33",
+  "type": "registry:example",
+  "description": "Day agenda where a vertical separator divides the time column from event details.",
+  "files": [
+    {
+      "path": "registry/designali/examples/separator/separator-33.tsx",
+      "content": "import { Separator } from \"@workspace/ui/components/separator\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst events = [\n  {\n    time: \"09:00\",\n    end: \"09:30\",\n    title: \"Standup\",\n    place: \"Huddle room\",\n    tone: \"bg-sky-500\",\n  },\n  {\n    time: \"11:00\",\n    end: \"12:00\",\n    title: \"Client review: Harbor & Co\",\n    place: \"Video call\",\n    tone: \"bg-amber-500\",\n  },\n  {\n    time: \"14:30\",\n    end: \"15:00\",\n    title: \"1:1 with Priya\",\n    place: \"Cafe corner\",\n    tone: \"bg-emerald-500\",\n  },\n]\n\nexport default function AgendaTimeColumn() {\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-1\">\n      <span className=\"mb-2 text-sm font-medium\">Tuesday, March 10</span>\n      {events.map((event) => (\n        <div key={event.time} className=\"flex gap-3 py-2\">\n          <div className=\"flex w-12 shrink-0 flex-col text-xs tabular-nums\">\n            <span>{event.time}</span>\n            <span className=\"text-muted-foreground\">{event.end}</span>\n          </div>\n          <Separator\n            orientation=\"vertical\"\n            className={cn(\"w-0.5\", event.tone)}\n          />\n          <div className=\"flex min-w-0 flex-col text-sm\">\n            <span className=\"truncate font-medium\">{event.title}</span>\n            <span className=\"text-xs text-muted-foreground\">{event.place}</span>\n          </div>\n        </div>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

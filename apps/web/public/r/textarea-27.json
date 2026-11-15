@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "textarea-27",
+  "type": "registry:example",
+  "description": "Checkout delivery-instructions textarea with quick suggestion chips.",
+  "files": [
+    {
+      "path": "registry/designali/examples/textarea/textarea-27.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { TruckIcon } from \"lucide-react\"\n\nimport { Badge } from \"@workspace/ui/components/badge\"\nimport { Textarea } from \"@workspace/ui/components/textarea\"\n\nconst hints = [\n  \"Leave at door\",\n  \"Ring twice\",\n  \"Call on arrival\",\n  \"Side entrance\",\n]\n\nexport default function DeliveryInstructionsTextarea() {\n  const [value, setValue] = React.useState(\"\")\n\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-2 border p-4\">\n      <div className=\"flex items-center gap-2 text-sm font-medium\">\n        <TruckIcon className=\"size-4\" />\n        Delivery instructions\n      </div>\n      <Textarea\n        value={value}\n        onChange={(e) => setValue(e.target.value)}\n        maxLength={200}\n        placeholder=\"Gate code, where to leave the parcel…\"\n        aria-label=\"Delivery instructions\"\n      />\n      <div className=\"flex flex-wrap gap-1.5\">\n        {hints.map((h) => (\n          <Badge\n            key={h}\n            variant=\"outline\"\n            render={<button type=\"button\" />}\n            onClick={() => setValue(value ? value + \". \" + h : h)}\n            className=\"cursor-pointer\"\n          >\n            + {h}\n          </Badge>\n        ))}\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

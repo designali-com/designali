@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "sheet-40",
+  "type": "registry:example",
+  "description": "Appointment booking sheet with day tabs and selectable time slots, including unavailable ones.",
+  "files": [
+    {
+      "path": "registry/designali/examples/sheet/sheet-40.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { CalendarClockIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  Sheet,\n  SheetContent,\n  SheetDescription,\n  SheetFooter,\n  SheetHeader,\n  SheetTitle,\n  SheetTrigger,\n} from \"@workspace/ui/components/sheet\"\n\nconst days = [\"Mon 9\", \"Tue 10\", \"Wed 11\"]\nconst slots = [\n  \"9:00\",\n  \"9:30\",\n  \"10:00\",\n  \"10:30\",\n  \"11:00\",\n  \"13:00\",\n  \"13:30\",\n  \"14:00\",\n  \"15:30\",\n]\nconst taken = new Set([\"9:30\", \"11:00\", \"14:00\"])\n\nexport default function BookingSlotsSheet() {\n  const [day, setDay] = React.useState(days[0]!)\n  const [slot, setSlot] = React.useState<string | null>(null)\n  return (\n    <Sheet>\n      <SheetTrigger render={<Button />}>\n        <CalendarClockIcon data-icon=\"inline-start\" />\n        Book a consultation\n      </SheetTrigger>\n      <SheetContent>\n        <SheetHeader>\n          <SheetTitle>30-min consultation</SheetTitle>\n          <SheetDescription>With Dr. Amara Osei · Video call</SheetDescription>\n        </SheetHeader>\n        <div className=\"flex flex-col gap-4 px-4\">\n          <div className=\"grid grid-cols-3 gap-1\">\n            {days.map((d) => (\n              <Button\n                key={d}\n                variant={d === day ? \"secondary\" : \"ghost\"}\n                onClick={() => {\n                  setDay(d)\n                  setSlot(null)\n                }}\n              >\n                {d}\n              </Button>\n            ))}\n          </div>\n          <div className=\"grid grid-cols-3 gap-2\">\n            {slots.map((s) => (\n              <Button\n                key={s}\n                variant={slot === s ? \"default\" : \"outline\"}\n                disabled={taken.has(s)}\n                onClick={() => setSlot(s)}\n              >\n                {s}\n              </Button>\n            ))}\n          </div>\n        </div>\n        <SheetFooter className=\"border-t\">\n          <span className=\"text-muted-foreground\">\n            {slot ? day + \" at \" + slot : \"Select a time to continue\"}\n          </span>\n          <Button disabled={!slot}>Confirm booking</Button>\n        </SheetFooter>\n      </SheetContent>\n    </Sheet>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

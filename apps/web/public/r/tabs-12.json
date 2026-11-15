@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tabs-12",
+  "type": "registry:example",
+  "description": "Full-width segmented tabs for choosing a transport mode on a trip planner.",
+  "files": [
+    {
+      "path": "registry/designali/examples/tabs/tabs-12.tsx",
+      "content": "import { BikeIcon, CarIcon, FootprintsIcon, TrainFrontIcon } from \"lucide-react\"\n\nimport {\n  Tabs,\n  TabsContent,\n  TabsList,\n  TabsTrigger,\n} from \"@workspace/ui/components/tabs\"\n\nconst modes = [\n  {\n    value: \"drive\",\n    label: \"Drive\",\n    icon: CarIcon,\n    eta: \"24 min\",\n    detail: \"Via Harbor Rd, light traffic\",\n  },\n  {\n    value: \"transit\",\n    label: \"Transit\",\n    icon: TrainFrontIcon,\n    eta: \"31 min\",\n    detail: \"Line 4, then 6 min walk\",\n  },\n  {\n    value: \"bike\",\n    label: \"Bike\",\n    icon: BikeIcon,\n    eta: \"38 min\",\n    detail: \"Mostly protected bike lanes\",\n  },\n  {\n    value: \"walk\",\n    label: \"Walk\",\n    icon: FootprintsIcon,\n    eta: \"1 h 12 min\",\n    detail: \"Flat route along the river\",\n  },\n]\n\nexport default function SegmentedFullWidthTabs() {\n  return (\n    <Tabs defaultValue=\"transit\" className=\"w-full max-w-md\">\n      <TabsList className=\"h-10 w-full\">\n        {modes.map((m) => (\n          <TabsTrigger key={m.value} value={m.value}>\n            <m.icon data-icon=\"inline-start\" />\n            <span className=\"hidden sm:inline\">{m.label}</span>\n          </TabsTrigger>\n        ))}\n      </TabsList>\n      {modes.map((m) => (\n        <TabsContent\n          key={m.value}\n          value={m.value}\n          className=\"flex items-baseline justify-between border p-3\"\n        >\n          <span className=\"text-lg font-semibold\">{m.eta}</span>\n          <span className=\"text-muted-foreground\">{m.detail}</span>\n        </TabsContent>\n      ))}\n    </Tabs>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

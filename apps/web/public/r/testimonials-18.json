@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "testimonials-18",
+  "type": "registry:block",
+  "description": "Auto-advancing quote card with pause control and segmented progress bars per testimonial.",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "registry/designali/blocks/testimonials/testimonials-18.tsx",
+      "content": "\"use client\"\n\nimport { useEffect, useState } from \"react\"\nimport { Pause, Play } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst DURATION = 6000\n\nconst slides = [\n  { quote: \"We moved 40 microservices without a single customer-facing incident. The rollback button never got pressed.\", name: \"Ingrid Haugen\", role: \"Director of Infrastructure, Polaris Bank\" },\n  { quote: \"Our developers got their Fridays back. Deploys are boring now, which is exactly what we wanted.\", name: \"Samuel Okoye\", role: \"Engineering Manager, Trellis\" },\n  { quote: \"Compliance evidence is generated on every release. Our last audit took four days instead of four weeks.\", name: \"Catalina Reyes\", role: \"Head of Security, Verdant Pay\" },\n]\n\nexport default function Testimonials18() {\n  const [index, setIndex] = useState(0)\n  const [playing, setPlaying] = useState(true)\n\n  useEffect(() => {\n    if (!playing) return\n    const id = setTimeout(() => setIndex((i) => (i + 1) % slides.length), DURATION)\n    return () => clearTimeout(id)\n  }, [index, playing])\n\n  const s = slides[index]!\n\n  return (\n    <section className=\"w-full bg-muted/30 py-20 md:py-28\">\n      <style>{`@keyframes t18-progress{from{width:0}to{width:100%}}`}</style>\n      <div className=\"mx-auto max-w-5xl px-6\">\n        <div className=\"border border-border bg-background p-8 md:p-14\">\n          <blockquote\n            key={index}\n            className=\"min-h-[10rem] animate-in text-2xl leading-snug font-medium tracking-tight duration-500 fade-in slide-in-from-bottom-2 md:min-h-[8rem] md:text-3xl\"\n          >\n            &ldquo;{s.quote}&rdquo;\n          </blockquote>\n          <div className=\"mt-10 flex items-center justify-between gap-4\">\n            <div className=\"text-sm\">\n              <div className=\"font-medium\">{s.name}</div>\n              <div className=\"text-muted-foreground\">{s.role}</div>\n            </div>\n            <Button\n              variant=\"outline\"\n              size=\"icon-lg\"\n              aria-label={playing ? \"Pause\" : \"Play\"}\n              onClick={() => setPlaying((p) => !p)}\n            >\n              {playing ? <Pause /> : <Play />}\n            </Button>\n          </div>\n        </div>\n        <div className=\"mt-6 grid grid-cols-3 gap-3\">\n          {slides.map((slide, i) => (\n            <button\n              key={slide.name}\n              type=\"button\"\n              onClick={() => setIndex(i)}\n              className=\"group text-left\"\n              aria-label={`Show testimonial from ${slide.name}`}\n            >\n              <div className=\"h-1 w-full bg-border\">\n                <div\n                  key={i === index ? `${index}-${playing}` : i}\n                  className={cn(\n                    \"h-full bg-foreground\",\n                    i < index && \"w-full\",\n                    i > index && \"w-0\",\n                    i === index && !playing && \"w-full\"\n                  )}\n                  style={\n                    i === index && playing\n                      ? { animation: `t18-progress ${DURATION}ms linear forwards` }\n                      : undefined\n                  }\n                />\n              </div>\n              <div\n                className={cn(\n                  \"mt-3 truncate text-xs transition-colors\",\n                  i === index ? \"text-foreground\" : \"text-muted-foreground group-hover:text-foreground\"\n                )}\n              >\n                {slide.name}\n              </div>\n            </button>\n          ))}\n        </div>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "520px"
+  },
+  "categories": [
+    "testimonials"
+  ]
+}

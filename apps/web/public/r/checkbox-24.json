@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "checkbox-24",
+  "type": "registry:example",
+  "description": "Trip packing checklist that drives a progress bar as items are checked off.",
+  "files": [
+    {
+      "path": "registry/designali/examples/checkbox/checkbox-24.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport {\n  Card,\n  CardContent,\n  CardDescription,\n  CardHeader,\n  CardTitle,\n} from \"@workspace/ui/components/card\"\nimport { Checkbox } from \"@workspace/ui/components/checkbox\"\nimport { Field, FieldGroup, FieldLabel } from \"@workspace/ui/components/field\"\nimport { Progress } from \"@workspace/ui/components/progress\"\n\nconst items = [\n  \"Passport\",\n  \"Phone charger\",\n  \"Rain jacket\",\n  \"Hiking boots\",\n  \"Sunscreen\",\n  \"Travel adapter\",\n]\n\nexport default function PackingChecklistProgress() {\n  const [packed, setPacked] = React.useState<string[]>([\n    \"Passport\",\n    \"Phone charger\",\n  ])\n  const percent = Math.round((packed.length / items.length) * 100)\n\n  return (\n    <Card className=\"w-full max-w-xs\">\n      <CardHeader>\n        <CardTitle>Lisbon trip · Packing</CardTitle>\n        <CardDescription>\n          {packed.length} of {items.length} packed\n        </CardDescription>\n      </CardHeader>\n      <CardContent className=\"flex flex-col gap-4\">\n        <Progress value={percent} aria-label=\"Packing progress\" />\n        <FieldGroup className=\"gap-2.5\">\n          {items.map((item) => (\n            <Field key={item} orientation=\"horizontal\">\n              <Checkbox\n                id={\"pack-\" + item}\n                checked={packed.includes(item)}\n                onCheckedChange={(checked) =>\n                  setPacked((list) =>\n                    checked ? [...list, item] : list.filter((i) => i !== item)\n                  )\n                }\n              />\n              <FieldLabel htmlFor={\"pack-\" + item} className=\"font-normal\">\n                {item}\n              </FieldLabel>\n            </Field>\n          ))}\n        </FieldGroup>\n      </CardContent>\n    </Card>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

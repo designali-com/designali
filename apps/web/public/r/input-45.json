@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-45",
+  "type": "registry:example",
+  "description": "An AI assistant prompt input with a sparkle icon, enter hint, and submit button.",
+  "files": [
+    {
+      "path": "registry/designali/examples/input/input-45.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { ArrowUpIcon, SparklesIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  InputGroup,\n  InputGroupAddon,\n  InputGroupButton,\n  InputGroupInput,\n} from \"@workspace/ui/components/input-group\"\nimport { Kbd } from \"@workspace/ui/components/kbd\"\n\nexport default function AiPromptInput() {\n  const [prompt, setPrompt] = React.useState(\"\")\n\n  return (\n    <div className=\"flex w-full max-w-md flex-col gap-2\">\n      <InputGroup className=\"h-11\">\n        <InputGroupAddon>\n          <SparklesIcon className=\"text-violet-500\" />\n        </InputGroupAddon>\n        <InputGroupInput\n          aria-label=\"Ask the assistant\"\n          placeholder=\"Summarize last week's support tickets...\"\n          value={prompt}\n          onChange={(e) => setPrompt(e.target.value)}\n        />\n        <InputGroupAddon align=\"inline-end\">\n          <Kbd>↵</Kbd>\n          <InputGroupButton\n            size=\"icon-sm\"\n            variant=\"default\"\n            aria-label=\"Submit prompt\"\n            disabled={!prompt.trim()}\n          >\n            <ArrowUpIcon />\n          </InputGroupButton>\n        </InputGroupAddon>\n      </InputGroup>\n      <div className=\"flex flex-wrap gap-1\">\n        {[\"Draft a reply\", \"Find duplicates\", \"Weekly summary\"].map((s) => (\n          <Button\n            key={s}\n            variant=\"outline\"\n            size=\"xs\"\n            onClick={() => setPrompt(s)}\n          >\n            {s}\n          </Button>\n        ))}\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

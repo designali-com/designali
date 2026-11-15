@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "separator-27",
+  "type": "registry:example",
+  "description": "Separator that is horizontal on narrow screens and vertical from the sm breakpoint.",
+  "files": [
+    {
+      "path": "registry/designali/examples/separator/separator-27.tsx",
+      "content": "import { Separator } from \"@workspace/ui/components/separator\"\n\nexport default function ResponsiveOrientationSeparator() {\n  return (\n    <div className=\"flex w-full max-w-md flex-col gap-4 border p-4 sm:flex-row\">\n      <div className=\"flex flex-1 flex-col gap-1\">\n        <span className=\"text-xs text-muted-foreground\">Billing contact</span>\n        <span className=\"text-sm font-medium\">Hana Kobayashi</span>\n        <span className=\"text-xs text-muted-foreground\">hana@orbitcrm.io</span>\n      </div>\n      <Separator className=\"sm:hidden\" />\n      <Separator orientation=\"vertical\" className=\"hidden sm:block\" />\n      <div className=\"flex flex-1 flex-col gap-1\">\n        <span className=\"text-xs text-muted-foreground\">Next invoice</span>\n        <span className=\"text-sm font-medium\">$1,240.00</span>\n        <span className=\"text-xs text-muted-foreground\">Due April 1</span>\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

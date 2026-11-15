@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "slider-22",
+  "type": "registry:example",
+  "description": "Three color-coded channel sliders mixing an RGB color preview.",
+  "files": [
+    {
+      "path": "registry/designali/examples/slider/slider-22.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { Slider } from \"@workspace/ui/components/slider\"\n\nconst channels = [\n  {\n    key: \"r\",\n    label: \"Red\",\n    className: \"[&_[data-slot=slider-range]]:bg-red-500\",\n  },\n  {\n    key: \"g\",\n    label: \"Green\",\n    className: \"[&_[data-slot=slider-range]]:bg-green-500\",\n  },\n  {\n    key: \"b\",\n    label: \"Blue\",\n    className: \"[&_[data-slot=slider-range]]:bg-blue-500\",\n  },\n] as const\n\nexport default function RgbColorMixer() {\n  const [rgb, setRgb] = React.useState({ r: 72, g: 132, b: 220 })\n  const color = \"rgb(\" + rgb.r + \", \" + rgb.g + \", \" + rgb.b + \")\"\n\n  return (\n    <div className=\"flex w-full max-w-sm gap-4 border p-4\">\n      <div className=\"flex w-20 shrink-0 flex-col gap-2\">\n        <div\n          className=\"aspect-square w-full border\"\n          style={{ backgroundColor: color }}\n        />\n        <code className=\"text-center font-mono text-[10px] text-muted-foreground\">\n          {color}\n        </code>\n      </div>\n      <div className=\"flex flex-1 flex-col justify-center gap-4\">\n        {channels.map((channel) => (\n          <div key={channel.key} className=\"flex items-center gap-2\">\n            <span className=\"w-3 text-xs font-medium\">{channel.label[0]}</span>\n            <Slider\n              aria-label={channel.label}\n              className={channel.className}\n              value={[rgb[channel.key]]}\n              onValueChange={(value) =>\n                setRgb((prev) => ({\n                  ...prev,\n                  [channel.key]: (value as number[])[0]!,\n                }))\n              }\n              max={255}\n            />\n            <span className=\"w-7 text-right text-xs text-muted-foreground tabular-nums\">\n              {rgb[channel.key]}\n            </span>\n          </div>\n        ))}\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

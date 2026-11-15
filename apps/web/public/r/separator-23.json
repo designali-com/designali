@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "separator-23",
+  "type": "registry:example",
+  "description": "Two comparison columns split by a vertical separator.",
+  "files": [
+    {
+      "path": "registry/designali/examples/separator/separator-23.tsx",
+      "content": "import { CheckIcon, XIcon } from \"lucide-react\"\n\nimport { Separator } from \"@workspace/ui/components/separator\"\n\nconst before = [\n  \"Manual CSV uploads\",\n  \"Weekly reconciliation\",\n  \"3 tools to switch between\",\n]\nconst after = [\"Live bank sync\", \"Daily auto-matching\", \"One shared ledger\"]\n\nexport default function BeforeAfterComparison() {\n  return (\n    <div className=\"flex w-full max-w-md border p-4 text-sm\">\n      <div className=\"flex flex-1 flex-col gap-2\">\n        <span className=\"text-xs font-medium text-muted-foreground uppercase\">\n          Before\n        </span>\n        {before.map((item) => (\n          <span\n            key={item}\n            className=\"flex items-center gap-2 text-muted-foreground\"\n          >\n            <XIcon className=\"size-3.5\" />\n            {item}\n          </span>\n        ))}\n      </div>\n      <Separator orientation=\"vertical\" className=\"mx-4\" />\n      <div className=\"flex flex-1 flex-col gap-2\">\n        <span className=\"text-xs font-medium text-muted-foreground uppercase\">\n          After\n        </span>\n        {after.map((item) => (\n          <span key={item} className=\"flex items-center gap-2\">\n            <CheckIcon className=\"size-3.5 text-primary\" />\n            {item}\n          </span>\n        ))}\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "aspect-ratio-33",
+  "type": "registry:example",
+  "description": "Presentation editor strip of selectable 16:9 slide thumbnails.",
+  "files": [
+    {
+      "path": "registry/designali/examples/aspect-ratio/aspect-ratio-33.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { AspectRatio } from \"@workspace/ui/components/aspect-ratio\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst slides = [\"Title\", \"Problem\", \"Solution\", \"Market\", \"Team\"]\n\nexport default function SlideThumbnailStrip() {\n  const [active, setActive] = React.useState(1)\n\n  return (\n    <div className=\"flex w-full max-w-40 flex-col gap-2\">\n      {slides.map((slide, index) => (\n        <button\n          key={slide}\n          type=\"button\"\n          onClick={() => setActive(index)}\n          className=\"flex items-start gap-2 text-start\"\n        >\n          <span className=\"w-3 pt-1 text-[10px] text-muted-foreground tabular-nums\">\n            {index + 1}\n          </span>\n          <AspectRatio\n            ratio={16 / 9}\n            className={cn(\n              \"flex-1 border bg-background\",\n              active === index && \"ring-2 ring-primary\"\n            )}\n          >\n            <div className=\"absolute inset-0 flex flex-col gap-1 p-1.5\">\n              <div className=\"h-1 w-1/2 bg-foreground/70\" />\n              <div className=\"h-0.5 w-3/4 bg-muted-foreground/30\" />\n              <div className=\"h-0.5 w-2/3 bg-muted-foreground/30\" />\n              <span className=\"mt-auto text-[8px] text-muted-foreground\">\n                {slide}\n              </span>\n            </div>\n          </AspectRatio>\n        </button>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "dropdown-menu-32",
+  "type": "registry:example",
+  "description": "Four triggers demonstrating the content opening on the top, right, bottom, and left sides.",
+  "files": [
+    {
+      "path": "registry/designali/examples/dropdown-menu/dropdown-menu-32.tsx",
+      "content": "import { Button } from \"@workspace/ui/components/button\"\nimport {\n  DropdownMenu,\n  DropdownMenuContent,\n  DropdownMenuItem,\n  DropdownMenuTrigger,\n} from \"@workspace/ui/components/dropdown-menu\"\n\nconst sides = [\"top\", \"right\", \"bottom\", \"left\"] as const\n\nexport default function MenuSidePlacement() {\n  return (\n    <div className=\"grid grid-cols-2 gap-2\">\n      {sides.map((side) => (\n        <DropdownMenu key={side}>\n          <DropdownMenuTrigger\n            render={<Button variant=\"outline\" className=\"capitalize\" />}\n          >\n            {side}\n          </DropdownMenuTrigger>\n          <DropdownMenuContent side={side} sideOffset={8} className=\"w-36\">\n            <DropdownMenuItem>Rename</DropdownMenuItem>\n            <DropdownMenuItem>Duplicate</DropdownMenuItem>\n            <DropdownMenuItem>Archive</DropdownMenuItem>\n          </DropdownMenuContent>\n        </DropdownMenu>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

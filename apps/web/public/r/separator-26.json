@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "separator-26",
+  "type": "registry:example",
+  "description": "Action menu panel with a separator isolating destructive actions at the bottom.",
+  "files": [
+    {
+      "path": "registry/designali/examples/separator/separator-26.tsx",
+      "content": "import {\n  CopyIcon,\n  FolderInputIcon,\n  PencilIcon,\n  Share2Icon,\n  Trash2Icon,\n} from \"lucide-react\"\n\nimport { Separator } from \"@workspace/ui/components/separator\"\n\nconst actions = [\n  { label: \"Rename\", icon: PencilIcon },\n  { label: \"Duplicate\", icon: CopyIcon },\n  { label: \"Move to folder\", icon: FolderInputIcon },\n  { label: \"Share\", icon: Share2Icon },\n]\n\nexport default function ActionListDangerZone() {\n  return (\n    <div className=\"flex w-full max-w-52 flex-col border p-1 text-sm\">\n      {actions.map((action) => (\n        <button\n          key={action.label}\n          type=\"button\"\n          className=\"flex items-center gap-2 px-2 py-1.5 text-start hover:bg-muted\"\n        >\n          <action.icon className=\"size-4 text-muted-foreground\" />\n          {action.label}\n        </button>\n      ))}\n      <Separator className=\"my-1\" />\n      <button\n        type=\"button\"\n        className=\"flex items-center gap-2 px-2 py-1.5 text-start text-destructive hover:bg-destructive/10\"\n      >\n        <Trash2Icon className=\"size-4\" />\n        Delete\n      </button>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

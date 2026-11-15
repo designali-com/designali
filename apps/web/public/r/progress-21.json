@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "progress-21",
+  "type": "registry:example",
+  "description": "Poll result bars with vote percentages and the leading option highlighted.",
+  "files": [
+    {
+      "path": "registry/designali/examples/progress/progress-21.tsx",
+      "content": "import {\n  Progress,\n  ProgressLabel,\n  ProgressValue,\n} from \"@workspace/ui/components/progress\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst options = [\n  { label: \"Remote first\", votes: 482 },\n  { label: \"Hybrid, 2 days in office\", votes: 351 },\n  { label: \"Fully in office\", votes: 97 },\n]\n\nexport default function PollResults() {\n  const total = options.reduce((sum, option) => sum + option.votes, 0)\n  const top = Math.max(...options.map((option) => option.votes))\n\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-4 border p-4\">\n      <p className=\"text-sm font-medium\">Which work setup do you prefer?</p>\n      {options.map((option) => (\n        <Progress\n          key={option.label}\n          value={option.votes}\n          max={total}\n          className={cn(\n            \"[&_[data-slot=progress-track]]:h-2\",\n            option.votes !== top &&\n              \"[&_[data-slot=progress-indicator]]:bg-muted-foreground/40\"\n          )}\n        >\n          <ProgressLabel\n            className={cn(\"text-sm\", option.votes === top && \"font-medium\")}\n          >\n            {option.label}\n          </ProgressLabel>\n          <ProgressValue />\n        </Progress>\n      ))}\n      <p className=\"text-xs text-muted-foreground\">\n        {total} votes &middot; Poll closed\n      </p>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

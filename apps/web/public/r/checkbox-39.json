@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "checkbox-39",
+  "type": "registry:example",
+  "description": "Uncontrolled checkboxes with name and value submitted through a native form and FormData.",
+  "files": [
+    {
+      "path": "registry/designali/examples/checkbox/checkbox-39.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Checkbox } from \"@workspace/ui/components/checkbox\"\nimport {\n  Field,\n  FieldGroup,\n  FieldLabel,\n  FieldLegend,\n  FieldSet,\n} from \"@workspace/ui/components/field\"\n\nconst integrations = [\n  { value: \"slack\", label: \"Slack\" },\n  { value: \"github\", label: \"GitHub\" },\n  { value: \"linear\", label: \"Linear\" },\n  { value: \"figma\", label: \"Figma\" },\n]\n\nexport default function NativeFormDataSubmit() {\n  const [result, setResult] = React.useState<string[] | null>(null)\n\n  return (\n    <form\n      className=\"flex w-full max-w-xs flex-col gap-4\"\n      onSubmit={(e) => {\n        e.preventDefault()\n        setResult(\n          new FormData(e.currentTarget).getAll(\"integrations\").map(String)\n        )\n      }}\n    >\n      <FieldSet>\n        <FieldLegend variant=\"label\">Connect integrations</FieldLegend>\n        <FieldGroup className=\"gap-3\">\n          {integrations.map((item) => (\n            <Field key={item.value} orientation=\"horizontal\">\n              <Checkbox\n                id={\"int-\" + item.value}\n                name=\"integrations\"\n                value={item.value}\n                defaultChecked={item.value === \"slack\"}\n              />\n              <FieldLabel htmlFor={\"int-\" + item.value} className=\"font-normal\">\n                {item.label}\n              </FieldLabel>\n            </Field>\n          ))}\n        </FieldGroup>\n      </FieldSet>\n      <Button type=\"submit\" size=\"sm\">\n        Save\n      </Button>\n      {result && (\n        <p className=\"font-mono text-xs text-muted-foreground\">\n          integrations = [{result.join(\", \")}]\n        </p>\n      )}\n    </form>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

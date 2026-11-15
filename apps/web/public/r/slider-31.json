@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "slider-31",
+  "type": "registry:example",
+  "description": "Admin security setting for idle session timeout inside a field with description.",
+  "files": [
+    {
+      "path": "registry/designali/examples/slider/slider-31.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { Badge } from \"@workspace/ui/components/badge\"\nimport {\n  Field,\n  FieldDescription,\n  FieldLabel,\n  FieldLegend,\n  FieldSet,\n} from \"@workspace/ui/components/field\"\nimport { Slider } from \"@workspace/ui/components/slider\"\n\nfunction label(minutes: number) {\n  return minutes >= 60 ? minutes / 60 + \" hr\" : minutes + \" min\"\n}\n\nexport default function SessionTimeoutField() {\n  const [minutes, setMinutes] = React.useState([30])\n\n  return (\n    <FieldSet className=\"w-full max-w-sm\">\n      <FieldLegend>Security</FieldLegend>\n      <Field>\n        <div className=\"flex items-center justify-between\">\n          <FieldLabel>Idle session timeout</FieldLabel>\n          <Badge variant=\"outline\">{label(minutes[0]!)}</Badge>\n        </div>\n        <Slider\n          aria-label=\"Idle session timeout\"\n          value={minutes}\n          onValueChange={(value) => setMinutes(value as number[])}\n          min={15}\n          max={240}\n          step={15}\n        />\n        <FieldDescription>\n          Members are signed out after this period of inactivity. Applies to all\n          84 workspace members.\n        </FieldDescription>\n      </Field>\n    </FieldSet>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

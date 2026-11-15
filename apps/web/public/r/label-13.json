@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "label-13",
+  "type": "registry:example",
+  "description": "A wrapper with data-disabled dims its label through the group-data selector.",
+  "files": [
+    {
+      "path": "registry/designali/examples/label/label-13.tsx",
+      "content": "import { Input } from \"@workspace/ui/components/input\"\nimport { Label } from \"@workspace/ui/components/label\"\n\nexport default function GroupDisabledLabel() {\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-4\">\n      <div className=\"group grid gap-2\" data-disabled=\"true\">\n        <Label htmlFor=\"sso-domain\">SSO domain</Label>\n        <Input id=\"sso-domain\" placeholder=\"acme-corp.com\" disabled />\n        <p className=\"text-xs text-muted-foreground\">\n          Available on the Enterprise plan.\n        </p>\n      </div>\n      <div className=\"group grid gap-2\" data-disabled=\"false\">\n        <Label htmlFor=\"team-name\">Team name</Label>\n        <Input id=\"team-name\" defaultValue=\"Platform Squad\" />\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

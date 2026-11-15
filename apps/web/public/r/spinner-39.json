@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "spinner-39",
+  "type": "registry:example",
+  "description": "Spinners framed in a bordered circle, a filled square, and a soft tinted tile.",
+  "files": [
+    {
+      "path": "registry/designali/examples/spinner/spinner-39.tsx",
+      "content": "import { Spinner } from \"@workspace/ui/components/spinner\"\n\nexport default function ContainedSpinners() {\n  return (\n    <div className=\"flex items-center gap-4\">\n      <div className=\"flex size-12 items-center justify-center rounded-full border\">\n        <Spinner className=\"size-5\" />\n      </div>\n      <div className=\"flex size-12 items-center justify-center bg-muted\">\n        <Spinner className=\"size-5 text-muted-foreground\" />\n      </div>\n      <div className=\"flex size-12 items-center justify-center bg-primary/10\">\n        <Spinner className=\"size-5 text-primary\" />\n      </div>\n      <div className=\"flex size-12 items-center justify-center bg-primary text-primary-foreground\">\n        <Spinner className=\"size-5\" />\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

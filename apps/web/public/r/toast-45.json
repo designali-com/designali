@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toast-45",
+  "type": "registry:example",
+  "description": "A confirmation dialog that reports the outcome with a toast after the dialog closes.",
+  "files": [
+    {
+      "path": "registry/designali/examples/toast/toast-45.tsx",
+      "content": "\"use client\"\n\nimport { ArchiveRestoreIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  Dialog,\n  DialogClose,\n  DialogContent,\n  DialogDescription,\n  DialogFooter,\n  DialogHeader,\n  DialogTitle,\n  DialogTrigger,\n} from \"@workspace/ui/components/dialog\"\nimport { Toaster, createToastManager } from \"@workspace/ui/components/toast\"\n\nconst notify = createToastManager()\n\nexport default function ConfirmDialogThenToast() {\n  return (\n    <Toaster toastManager={notify}>\n      <Dialog>\n        <DialogTrigger render={<Button variant=\"outline\" />}>\n          <ArchiveRestoreIcon data-icon=\"inline-start\" />\n          Restore project\n        </DialogTrigger>\n        <DialogContent className=\"sm:max-w-sm\">\n          <DialogHeader>\n            <DialogTitle>Restore &quot;Helios&quot;?</DialogTitle>\n            <DialogDescription>\n              The project and its 14 boards will reappear for all members.\n            </DialogDescription>\n          </DialogHeader>\n          <DialogFooter>\n            <DialogClose render={<Button variant=\"outline\" />}>\n              Cancel\n            </DialogClose>\n            <DialogClose\n              render={<Button />}\n              onClick={() =>\n                notify.add({\n                  type: \"success\",\n                  title: \"Project restored\",\n                  description: \"Helios is back in your sidebar.\",\n                })\n              }\n            >\n              Restore\n            </DialogClose>\n          </DialogFooter>\n        </DialogContent>\n      </Dialog>\n    </Toaster>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

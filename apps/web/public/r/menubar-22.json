@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "menubar-22",
+  "type": "registry:example",
+  "description": "Support desk menubar whose items show ticket count badges and a New badge on a feature.",
+  "files": [
+    {
+      "path": "registry/designali/examples/menubar/menubar-22.tsx",
+      "content": "import {\n  BotIcon,\n  CircleAlertIcon,\n  ClockIcon,\n  InboxIcon,\n  TimerIcon,\n  UserIcon,\n  WorkflowIcon,\n} from \"lucide-react\"\n\nimport { Badge } from \"@workspace/ui/components/badge\"\nimport {\n  Menubar,\n  MenubarContent,\n  MenubarGroup,\n  MenubarItem,\n  MenubarMenu,\n  MenubarTrigger,\n} from \"@workspace/ui/components/menubar\"\n\nexport default function MenubarWithCountBadges() {\n  return (\n    <div className=\"w-full max-w-sm\">\n      <Menubar>\n        <MenubarMenu>\n          <MenubarTrigger>\n            Tickets\n            <Badge className=\"ms-1.5 h-4 px-1 text-[10px]\">24</Badge>\n          </MenubarTrigger>\n          <MenubarContent className=\"w-56\">\n            <MenubarGroup>\n              <MenubarItem>\n                <InboxIcon /> Unassigned\n                <Badge variant=\"secondary\" className=\"ms-auto\">\n                  12\n                </Badge>\n              </MenubarItem>\n              <MenubarItem>\n                <UserIcon /> Assigned to me\n                <Badge variant=\"secondary\" className=\"ms-auto\">\n                  7\n                </Badge>\n              </MenubarItem>\n              <MenubarItem>\n                <ClockIcon /> Awaiting reply\n                <Badge variant=\"secondary\" className=\"ms-auto\">\n                  5\n                </Badge>\n              </MenubarItem>\n              <MenubarItem>\n                <CircleAlertIcon /> SLA breached\n                <Badge variant=\"destructive\" className=\"ms-auto\">\n                  2\n                </Badge>\n              </MenubarItem>\n            </MenubarGroup>\n          </MenubarContent>\n        </MenubarMenu>\n        <MenubarMenu>\n          <MenubarTrigger>Automation</MenubarTrigger>\n          <MenubarContent className=\"w-56\">\n            <MenubarGroup>\n              <MenubarItem>\n                <WorkflowIcon /> Triggers\n              </MenubarItem>\n              <MenubarItem>\n                <BotIcon /> Auto-replies\n                <Badge variant=\"outline\" className=\"ms-auto\">\n                  New\n                </Badge>\n              </MenubarItem>\n              <MenubarItem>\n                <TimerIcon /> SLA policies\n              </MenubarItem>\n            </MenubarGroup>\n          </MenubarContent>\n        </MenubarMenu>\n      </Menubar>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

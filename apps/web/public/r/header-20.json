@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "header-20",
+  "type": "registry:block",
+  "description": "Studio header with live local time, availability pulse and underline CTA, opening a numbered large-type mobile menu.",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/designali/blocks/header/header-20.tsx",
+      "content": "\"use client\"\n\nimport { useEffect, useState } from \"react\"\nimport { ArrowRight, Menu, X } from \"lucide-react\"\n\nconst links = [\"Projects\", \"Approach\", \"Team\", \"Writing\"]\n\nfunction useLocalTime(timeZone: string) {\n  const [time, setTime] = useState<string | null>(null)\n  useEffect(() => {\n    const format = () =>\n      new Intl.DateTimeFormat(\"en-GB\", { hour: \"2-digit\", minute: \"2-digit\", timeZone }).format(new Date())\n    const first = setTimeout(() => setTime(format()), 0)\n    const id = setInterval(() => setTime(format()), 30_000)\n    return () => {\n      clearTimeout(first)\n      clearInterval(id)\n    }\n  }, [timeZone])\n  return time\n}\n\nexport default function Header20() {\n  const [open, setOpen] = useState(false)\n  const time = useLocalTime(\"Europe/Berlin\")\n\n  return (\n    <section className=\"w-full bg-background\">\n      <header className=\"border-b\">\n        <div className=\"mx-auto grid h-16 max-w-7xl grid-cols-[1fr_auto] items-center gap-6 px-6 lg:grid-cols-[1fr_auto_1fr]\">\n          <a href=\"#\" className=\"flex items-baseline gap-2\">\n            <span className=\"text-base font-semibold tracking-tight\">Kollektiv Acht</span>\n            <span className=\"hidden text-xs text-muted-foreground sm:inline\">Berlin, {time ?? \"--:--\"}</span>\n          </a>\n          <nav className=\"hidden gap-8 text-sm lg:flex\">\n            {links.map((link) => (\n              <a key={link} href=\"#\" className=\"text-muted-foreground transition-colors hover:text-foreground\">\n                {link}\n              </a>\n            ))}\n          </nav>\n          <div className=\"flex items-center justify-end gap-6\">\n            <span className=\"hidden items-center gap-2 text-xs md:flex\">\n              <span className=\"relative flex size-2\">\n                <span className=\"absolute inset-0 animate-ping rounded-full bg-emerald-500 opacity-60\" />\n                <span className=\"relative size-2 rounded-full bg-emerald-500\" />\n              </span>\n              Booking projects for Q2\n            </span>\n            <a href=\"#\" className=\"group hidden items-center gap-1.5 border-b border-foreground pb-0.5 text-sm lg:flex\">\n              Start a project\n              <ArrowRight className=\"size-3.5 transition-transform group-hover:translate-x-0.5\" />\n            </a>\n            <button\n              type=\"button\"\n              aria-label=\"Toggle menu\"\n              aria-expanded={open}\n              onClick={() => setOpen(!open)}\n              className=\"flex size-9 items-center justify-center border lg:hidden\"\n            >\n              {open ? <X className=\"size-4\" /> : <Menu className=\"size-4\" />}\n            </button>\n          </div>\n        </div>\n        {open && (\n          <div className=\"border-t lg:hidden\">\n            <nav className=\"mx-auto max-w-7xl px-6 py-4\">\n              {links.map((link, index) => (\n                <a key={link} href=\"#\" className=\"flex items-baseline gap-4 border-b py-4 text-2xl font-medium tracking-tight\">\n                  <span className=\"font-mono text-xs text-muted-foreground\">0{index + 1}</span>\n                  {link}\n                </a>\n              ))}\n            </nav>\n            <div className=\"mx-auto flex max-w-7xl flex-col gap-4 px-6 pb-6\">\n              <span className=\"flex items-center gap-2 text-xs text-muted-foreground\">\n                <span className=\"size-2 rounded-full bg-emerald-500\" />\n                Booking projects for Q2\n              </span>\n              <a href=\"#\" className=\"flex items-center justify-between bg-foreground px-4 py-3 text-sm text-background\">\n                Start a project\n                <ArrowRight className=\"size-4\" />\n              </a>\n            </div>\n          </div>\n        )}\n      </header>\n    </section>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "420px"
+  },
+  "categories": [
+    "header"
+  ]
+}

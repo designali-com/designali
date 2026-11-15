@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "textarea-43",
+  "type": "registry:example",
+  "description": "Survey step with a progress bar, open-ended textarea and navigation buttons.",
+  "files": [
+    {
+      "path": "registry/designali/examples/textarea/textarea-43.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { ArrowLeftIcon, ArrowRightIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Label } from \"@workspace/ui/components/label\"\nimport { Progress } from \"@workspace/ui/components/progress\"\nimport { Textarea } from \"@workspace/ui/components/textarea\"\n\nexport default function SurveyOpenQuestion() {\n  const [answer, setAnswer] = React.useState(\"\")\n\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-3 border p-4\">\n      <div className=\"flex items-center justify-between text-xs text-muted-foreground\">\n        <span>Question 4 of 5</span>\n        <span>80%</span>\n      </div>\n      <Progress value={80} />\n      <Label htmlFor=\"sv-q4\" className=\"text-sm\">\n        What&apos;s one thing that would make you recommend us to a friend?\n      </Label>\n      <Textarea\n        id=\"sv-q4\"\n        value={answer}\n        onChange={(e) => setAnswer(e.target.value)}\n        className=\"min-h-24\"\n        placeholder=\"Your answer\"\n      />\n      <div className=\"flex justify-between\">\n        <Button variant=\"ghost\" size=\"sm\">\n          <ArrowLeftIcon data-icon=\"inline-start\" />\n          Back\n        </Button>\n        <Button size=\"sm\" disabled={!answer.trim()}>\n          Next\n          <ArrowRightIcon data-icon=\"inline-end\" />\n        </Button>\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

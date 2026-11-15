@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "scroll-area-17",
+  "type": "registry:example",
+  "description": "Dark monospace server log console with colored log levels.",
+  "files": [
+    {
+      "path": "registry/designali/examples/scroll-area/scroll-area-17.tsx",
+      "content": "import { ScrollArea } from \"@workspace/ui/components/scroll-area\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst levels = [\"INFO\", \"INFO\", \"WARN\", \"INFO\", \"ERROR\", \"INFO\", \"DEBUG\"]\nconst messages = [\n  \"GET /api/orders 200 32ms\",\n  \"POST /api/checkout 201 118ms\",\n  \"Slow query on invoices (812ms)\",\n  \"Cache warmed: 1,240 keys\",\n  \"Payment provider timeout after 10s\",\n  \"Worker job sync-orders completed\",\n  \"Retrying webhook evt_93a\",\n]\nconst logs = Array.from({ length: 21 }, (_, i) => ({\n  time: \"12:04:\" + String(10 + i).padStart(2, \"0\"),\n  level: levels[i % levels.length]!,\n  text: messages[i % messages.length]!,\n}))\n\nconst tone: Record<string, string> = {\n  INFO: \"text-sky-400\",\n  WARN: \"text-amber-400\",\n  ERROR: \"text-red-400\",\n  DEBUG: \"text-zinc-500\",\n}\n\nexport default function ServerLogConsole() {\n  return (\n    <ScrollArea className=\"h-64 w-full max-w-md border bg-zinc-950 text-zinc-100\">\n      <div className=\"flex flex-col gap-0.5 p-3 font-mono text-[11px]\">\n        {logs.map((log, i) => (\n          <div key={i} className=\"flex gap-2\">\n            <span className=\"text-zinc-500\">{log.time}</span>\n            <span\n              className={cn(\"w-10 shrink-0 font-semibold\", tone[log.level])}\n            >\n              {log.level}\n            </span>\n            <span className=\"truncate\">{log.text}</span>\n          </div>\n        ))}\n      </div>\n    </ScrollArea>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

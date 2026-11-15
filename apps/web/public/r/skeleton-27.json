@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "skeleton-27",
+  "type": "registry:example",
+  "description": "Checkout order summary placeholder with line items, totals, and a pay button.",
+  "files": [
+    {
+      "path": "registry/designali/examples/skeleton/skeleton-27.tsx",
+      "content": "import {\n  Card,\n  CardContent,\n  CardFooter,\n  CardHeader,\n} from \"@workspace/ui/components/card\"\nimport { Separator } from \"@workspace/ui/components/separator\"\nimport { Skeleton } from \"@workspace/ui/components/skeleton\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nexport default function CheckoutSummarySkeleton() {\n  return (\n    <Card className=\"w-full max-w-sm\">\n      <CardHeader>\n        <Skeleton className=\"h-4 w-28\" />\n      </CardHeader>\n      <CardContent className=\"flex flex-col gap-4\">\n        {Array.from({ length: 3 }).map((_, i) => (\n          <div key={i} className=\"flex items-center gap-3\">\n            <Skeleton className=\"size-12 shrink-0\" />\n            <div className=\"flex flex-1 flex-col gap-1.5\">\n              <Skeleton className=\"h-3 w-3/4\" />\n              <Skeleton className=\"h-2.5 w-1/3\" />\n            </div>\n            <Skeleton className=\"h-3 w-12\" />\n          </div>\n        ))}\n        <Separator />\n        {[\"w-16\", \"w-20\", \"w-12\"].map((w, i) => (\n          <div key={i} className=\"flex justify-between\">\n            <Skeleton className={cn(\"h-3\", w)} />\n            <Skeleton className=\"h-3 w-14\" />\n          </div>\n        ))}\n      </CardContent>\n      <CardFooter>\n        <Skeleton className=\"h-10 w-full\" />\n      </CardFooter>\n    </Card>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

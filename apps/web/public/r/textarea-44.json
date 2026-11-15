@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "textarea-44",
+  "type": "registry:example",
+  "description": "Admin setting for custom CSS where the textarea is enabled by a switch.",
+  "files": [
+    {
+      "path": "registry/designali/examples/textarea/textarea-44.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { Label } from \"@workspace/ui/components/label\"\nimport { Switch } from \"@workspace/ui/components/switch\"\nimport { Textarea } from \"@workspace/ui/components/textarea\"\n\nexport default function CustomCssTextarea() {\n  const [enabled, setEnabled] = React.useState(false)\n\n  return (\n    <div className=\"flex w-full max-w-md flex-col gap-3 border p-4\">\n      <div className=\"flex items-start justify-between gap-4\">\n        <div>\n          <Label htmlFor=\"css-switch\">Custom CSS</Label>\n          <p className=\"text-xs text-muted-foreground\">\n            Applied to your public help center only.\n          </p>\n        </div>\n        <Switch\n          id=\"css-switch\"\n          checked={enabled}\n          onCheckedChange={setEnabled}\n        />\n      </div>\n      <Textarea\n        disabled={!enabled}\n        spellCheck={false}\n        aria-label=\"Custom CSS\"\n        className=\"min-h-28 font-mono\"\n        defaultValue={\n          \".hc-header {\\n  background: #0f172a;\\n}\\n.hc-article h2 {\\n  letter-spacing: -0.01em;\\n}\"\n        }\n      />\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

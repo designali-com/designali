@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "combobox-41",
+  "type": "registry:example",
+  "description": "Help centre category combobox with article counts aligned to the right.",
+  "files": [
+    {
+      "path": "registry/designali/examples/combobox/combobox-41.tsx",
+      "content": "\"use client\"\n\nimport {\n  BookOpenIcon,\n  CreditCardIcon,\n  PlugIcon,\n  RocketIcon,\n  ShieldCheckIcon,\n  WrenchIcon,\n} from \"lucide-react\"\n\nimport { Badge } from \"@workspace/ui/components/badge\"\nimport {\n  Combobox,\n  ComboboxContent,\n  ComboboxEmpty,\n  ComboboxInput,\n  ComboboxItem,\n  ComboboxList,\n} from \"@workspace/ui/components/combobox\"\n\ntype Category = { name: string; count: number; icon: typeof BookOpenIcon }\n\nconst categories: Category[] = [\n  { name: \"Getting started\", count: 12, icon: RocketIcon },\n  { name: \"Billing & payments\", count: 18, icon: CreditCardIcon },\n  { name: \"Integrations\", count: 24, icon: PlugIcon },\n  { name: \"Security & privacy\", count: 9, icon: ShieldCheckIcon },\n  { name: \"Troubleshooting\", count: 31, icon: WrenchIcon },\n]\n\nexport default function HelpCenterCategoryCounts() {\n  return (\n    <div className=\"w-full max-w-xs space-y-2\">\n      <p className=\"flex items-center gap-2 text-sm font-semibold\">\n        <BookOpenIcon className=\"size-4\" />\n        Browse articles\n      </p>\n      <Combobox items={categories} itemToStringLabel={(c: Category) => c.name}>\n        <ComboboxInput placeholder=\"Choose a category\" className=\"w-full\" />\n        <ComboboxContent>\n          <ComboboxEmpty>No categories found.</ComboboxEmpty>\n          <ComboboxList>\n            {(c: Category) => (\n              <ComboboxItem key={c.name} value={c}>\n                <c.icon className=\"text-muted-foreground\" />\n                <span className=\"flex-1\">{c.name}</span>\n                <Badge\n                  variant=\"secondary\"\n                  className=\"h-4 px-1.5 text-[10px] tabular-nums\"\n                >\n                  {c.count}\n                </Badge>\n              </ComboboxItem>\n            )}\n          </ComboboxList>\n        </ComboboxContent>\n      </Combobox>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

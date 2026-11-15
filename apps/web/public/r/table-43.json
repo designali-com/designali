@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "table-43",
+  "type": "registry:example",
+  "description": "Class attendance with present, late, and absent toggle groups per student.",
+  "files": [
+    {
+      "path": "registry/designali/examples/table/table-43.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { CheckIcon, ClockIcon, XIcon } from \"lucide-react\"\n\nimport {\n  Table,\n  TableBody,\n  TableCaption,\n  TableCell,\n  TableHead,\n  TableHeader,\n  TableRow,\n} from \"@workspace/ui/components/table\"\nimport {\n  ToggleGroup,\n  ToggleGroupItem,\n} from \"@workspace/ui/components/toggle-group\"\n\nconst students = [\n  \"Aiden Brooks\",\n  \"Bianca Ortiz\",\n  \"Caleb Nguyen\",\n  \"Daria Ivanova\",\n]\n\nexport default function AttendanceCheckTable() {\n  const [marks, setMarks] = React.useState<Record<string, string>>({\n    \"Aiden Brooks\": \"present\",\n  })\n  const present = Object.values(marks).filter((m) => m === \"present\").length\n\n  return (\n    <div className=\"w-full max-w-lg border\">\n      <Table>\n        <TableCaption className=\"mb-3\">\n          {present} present · {students.length - Object.keys(marks).length}{\" \"}\n          unmarked\n        </TableCaption>\n        <TableHeader>\n          <TableRow>\n            <TableHead>Student</TableHead>\n            <TableHead className=\"text-right\">Attendance</TableHead>\n          </TableRow>\n        </TableHeader>\n        <TableBody>\n          {students.map((student) => (\n            <TableRow key={student}>\n              <TableCell className=\"font-medium\">{student}</TableCell>\n              <TableCell>\n                <ToggleGroup\n                  size=\"sm\"\n                  variant=\"outline\"\n                  className=\"ms-auto\"\n                  value={marks[student] ? [marks[student]] : []}\n                  onValueChange={(value) =>\n                    setMarks((m) => ({ ...m, [student]: value[0] as string }))\n                  }\n                >\n                  <ToggleGroupItem value=\"present\" aria-label=\"Present\">\n                    <CheckIcon />\n                  </ToggleGroupItem>\n                  <ToggleGroupItem value=\"late\" aria-label=\"Late\">\n                    <ClockIcon />\n                  </ToggleGroupItem>\n                  <ToggleGroupItem value=\"absent\" aria-label=\"Absent\">\n                    <XIcon />\n                  </ToggleGroupItem>\n                </ToggleGroup>\n              </TableCell>\n            </TableRow>\n          ))}\n        </TableBody>\n      </Table>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "checkbox-18",
+  "type": "registry:example",
+  "description": "Issue label filters with checkboxes tinted to each label's chart colour.",
+  "files": [
+    {
+      "path": "registry/designali/examples/checkbox/checkbox-18.tsx",
+      "content": "import { Checkbox } from \"@workspace/ui/components/checkbox\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst labels = [\n  {\n    name: \"Bug\",\n    color: \"data-checked:bg-chart-1 data-checked:border-chart-1 border-chart-1\",\n  },\n  {\n    name: \"Feature\",\n    color: \"data-checked:bg-chart-2 data-checked:border-chart-2 border-chart-2\",\n  },\n  {\n    name: \"Docs\",\n    color: \"data-checked:bg-chart-3 data-checked:border-chart-3 border-chart-3\",\n  },\n  {\n    name: \"Design\",\n    color: \"data-checked:bg-chart-4 data-checked:border-chart-4 border-chart-4\",\n  },\n  {\n    name: \"Infra\",\n    color: \"data-checked:bg-chart-5 data-checked:border-chart-5 border-chart-5\",\n  },\n]\n\nexport default function LabelColorCheckboxes() {\n  return (\n    <div className=\"flex w-full max-w-[12rem] flex-col gap-1 border p-2\">\n      <span className=\"px-2 py-1 text-xs text-muted-foreground\">\n        Filter by label\n      </span>\n      {labels.map((label, index) => (\n        <label\n          key={label.name}\n          className=\"flex cursor-pointer items-center gap-2 px-2 py-1.5 text-sm hover:bg-muted\"\n        >\n          <Checkbox\n            defaultChecked={index < 2}\n            className={cn(\"data-checked:text-background\", label.color)}\n          />\n          {label.name}\n        </label>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

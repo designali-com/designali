@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "sheet-28",
+  "type": "registry:example",
+  "description": "Reference sheet listing keyboard shortcuts grouped by area using Kbd keys.",
+  "files": [
+    {
+      "path": "registry/designali/examples/sheet/sheet-28.tsx",
+      "content": "import { KeyboardIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Kbd, KbdGroup } from \"@workspace/ui/components/kbd\"\nimport {\n  Sheet,\n  SheetContent,\n  SheetDescription,\n  SheetHeader,\n  SheetTitle,\n  SheetTrigger,\n} from \"@workspace/ui/components/sheet\"\n\nconst sections = [\n  {\n    title: \"General\",\n    items: [\n      { label: \"Command menu\", keys: [\"⌘\", \"K\"] },\n      { label: \"Toggle sidebar\", keys: [\"⌘\", \"B\"] },\n      { label: \"Open settings\", keys: [\"⌘\", \",\"] },\n    ],\n  },\n  {\n    title: \"Editor\",\n    items: [\n      { label: \"Bold\", keys: [\"⌘\", \"B\"] },\n      { label: \"Insert link\", keys: [\"⌘\", \"K\"] },\n      { label: \"Duplicate line\", keys: [\"⇧\", \"⌥\", \"↓\"] },\n    ],\n  },\n]\n\nexport default function KeyboardShortcutsSheet() {\n  return (\n    <Sheet>\n      <SheetTrigger render={<Button variant=\"ghost\" />}>\n        <KeyboardIcon data-icon=\"inline-start\" />\n        Shortcuts\n      </SheetTrigger>\n      <SheetContent>\n        <SheetHeader>\n          <SheetTitle>Keyboard shortcuts</SheetTitle>\n          <SheetDescription>\n            Work faster without leaving the keyboard.\n          </SheetDescription>\n        </SheetHeader>\n        <div className=\"flex flex-col gap-5 px-4\">\n          {sections.map((section) => (\n            <div key={section.title} className=\"flex flex-col gap-2\">\n              <span className=\"font-medium\">{section.title}</span>\n              {section.items.map((item) => (\n                <div\n                  key={item.label}\n                  className=\"flex items-center justify-between\"\n                >\n                  <span className=\"text-muted-foreground\">{item.label}</span>\n                  <KbdGroup>\n                    {item.keys.map((k) => (\n                      <Kbd key={k}>{k}</Kbd>\n                    ))}\n                  </KbdGroup>\n                </div>\n              ))}\n            </div>\n          ))}\n        </div>\n      </SheetContent>\n    </Sheet>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

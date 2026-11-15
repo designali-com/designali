@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "breadcrumb-15",
+  "type": "registry:example",
+  "description": "Hosting dashboard path with an environment badge and a monospace deployment id.",
+  "files": [
+    {
+      "path": "registry/designali/examples/breadcrumb/breadcrumb-15.tsx",
+      "content": "import { Badge } from \"@workspace/ui/components/badge\"\nimport {\n  Breadcrumb,\n  BreadcrumbItem,\n  BreadcrumbLink,\n  BreadcrumbList,\n  BreadcrumbPage,\n  BreadcrumbSeparator,\n} from \"@workspace/ui/components/breadcrumb\"\n\nexport default function DeploymentBreadcrumb() {\n  return (\n    <Breadcrumb>\n      <BreadcrumbList>\n        <BreadcrumbItem>\n          <BreadcrumbLink href=\"#\">pulse-api</BreadcrumbLink>\n        </BreadcrumbItem>\n        <BreadcrumbSeparator />\n        <BreadcrumbItem>\n          <BreadcrumbLink href=\"#\" className=\"flex items-center gap-1.5\">\n            Production\n            <Badge variant=\"secondary\" className=\"gap-1\">\n              <span className=\"size-1.5 rounded-full bg-emerald-500\" />\n              Live\n            </Badge>\n          </BreadcrumbLink>\n        </BreadcrumbItem>\n        <BreadcrumbSeparator />\n        <BreadcrumbItem>\n          <BreadcrumbPage className=\"font-mono\">dpl_8f3k2a</BreadcrumbPage>\n        </BreadcrumbItem>\n      </BreadcrumbList>\n    </Breadcrumb>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

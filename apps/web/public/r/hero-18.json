@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "hero-18",
+  "type": "registry:block",
+  "description": "Split hero with an interactive ROI calculator card driven by a team-size slider.",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "registry/designali/blocks/hero/hero-18.tsx",
+      "content": "\"use client\"\n\nimport { useState } from \"react\"\nimport { ArrowRight, Clock, Wallet } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\n\nconst HOURS_SAVED_PER_REP = 6.5\nconst HOURLY_COST = 48\n\nexport default function Hero18() {\n  const [reps, setReps] = useState(25)\n  const hours = Math.round(reps * HOURS_SAVED_PER_REP * 4.33)\n  const savings = hours * HOURLY_COST * 12\n\n  return (\n    <section className=\"w-full bg-background px-6 py-16 md:py-24\">\n      <div className=\"mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[1.2fr_1fr]\">\n        <div>\n          <p className=\"text-sm text-muted-foreground\">Quoteflow for sales teams</p>\n          <h1 className=\"mt-4 text-4xl font-medium tracking-tight md:text-6xl\">\n            Send accurate quotes in 90 seconds, not 90 minutes.\n          </h1>\n          <p className=\"mt-6 max-w-lg text-base leading-7 text-muted-foreground\">\n            Product catalog, discount rules and e-signature in one flow.\n            Your reps stop building spreadsheets and start closing.\n          </p>\n          <div className=\"mt-10 flex flex-wrap gap-3\">\n            <Button size=\"lg\" nativeButton={false} render={<a href=\"#\" />}>\n              Get a demo\n              <ArrowRight />\n            </Button>\n            <Button size=\"lg\" variant=\"outline\" nativeButton={false} render={<a href=\"#\" />}>\n              See pricing\n            </Button>\n          </div>\n        </div>\n\n        <div className=\"border border-border bg-card p-6 sm:p-8\">\n          <p className=\"text-sm font-medium\">Estimate your savings</p>\n          <label htmlFor=\"hero-18-reps\" className=\"mt-6 flex items-baseline justify-between text-sm\">\n            <span className=\"text-muted-foreground\">Sales reps on your team</span>\n            <span className=\"text-2xl font-medium tabular-nums\">{reps}</span>\n          </label>\n          <input\n            id=\"hero-18-reps\"\n            type=\"range\"\n            min={1}\n            max={200}\n            value={reps}\n            onChange={(event) => setReps(Number(event.target.value))}\n            className=\"mt-3 w-full accent-primary\"\n          />\n          <div className=\"mt-1 flex justify-between text-xs text-muted-foreground\">\n            <span>1</span>\n            <span>200</span>\n          </div>\n          <div className=\"mt-8 grid grid-cols-2 gap-px border border-border bg-border\">\n            <div className=\"bg-card p-4\">\n              <Clock className=\"size-4 text-muted-foreground\" />\n              <p className=\"mt-3 text-2xl font-medium tabular-nums\">\n                {hours.toLocaleString(\"en-US\")}\n              </p>\n              <p className=\"text-xs text-muted-foreground\">hours saved / month</p>\n            </div>\n            <div className=\"bg-card p-4\">\n              <Wallet className=\"size-4 text-muted-foreground\" />\n              <p className=\"mt-3 text-2xl font-medium tabular-nums\">\n                ${(savings / 1000).toLocaleString(\"en-US\", { maximumFractionDigits: 0 })}k\n              </p>\n              <p className=\"text-xs text-muted-foreground\">saved / year</p>\n            </div>\n          </div>\n          <p className=\"mt-4 text-xs leading-5 text-muted-foreground\">\n            Based on 6.5 hours saved per rep each week at a ${HOURLY_COST}/hour\n            loaded cost. Median across 1,400 customers.\n          </p>\n        </div>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "680px"
+  },
+  "categories": [
+    "hero"
+  ]
+}

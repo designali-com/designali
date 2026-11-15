@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "avatar-24",
+  "type": "registry:example",
+  "description": "Calendar event card with attendee avatars marked by RSVP response.",
+  "files": [
+    {
+      "path": "registry/designali/examples/avatar/avatar-24.tsx",
+      "content": "import {\n  Avatar,\n  AvatarBadge,\n  AvatarFallback,\n} from \"@workspace/ui/components/avatar\"\nimport {\n  Card,\n  CardContent,\n  CardDescription,\n  CardHeader,\n  CardTitle,\n} from \"@workspace/ui/components/card\"\n\nconst attendees = [\n  { initials: \"FL\", name: \"Farah Lee\", rsvp: \"yes\" },\n  { initials: \"GM\", name: \"Gabe Moss\", rsvp: \"yes\" },\n  { initials: \"HI\", name: \"Hiro Ito\", rsvp: \"maybe\" },\n  { initials: \"JW\", name: \"Jade Wu\", rsvp: \"no\" },\n]\n\nconst rsvpStyle: Record<string, string> = {\n  yes: \"bg-emerald-500\",\n  maybe: \"bg-amber-500\",\n  no: \"bg-red-500\",\n}\n\nexport default function MeetingAttendeesCard() {\n  return (\n    <Card className=\"w-full max-w-sm\">\n      <CardHeader>\n        <CardTitle>Q3 roadmap review</CardTitle>\n        <CardDescription>Thu, Sep 12 · 10:00 - 11:00 AM</CardDescription>\n      </CardHeader>\n      <CardContent className=\"flex flex-col gap-3\">\n        {attendees.map((person) => (\n          <div key={person.initials} className=\"flex items-center gap-3\">\n            <Avatar size=\"sm\">\n              <AvatarFallback>{person.initials}</AvatarFallback>\n              <AvatarBadge className={rsvpStyle[person.rsvp]} />\n            </Avatar>\n            <span className=\"flex-1 text-sm\">{person.name}</span>\n            <span className=\"text-xs text-muted-foreground capitalize\">\n              {person.rsvp === \"yes\"\n                ? \"Going\"\n                : person.rsvp === \"no\"\n                  ? \"Declined\"\n                  : \"Maybe\"}\n            </span>\n          </div>\n        ))}\n      </CardContent>\n    </Card>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

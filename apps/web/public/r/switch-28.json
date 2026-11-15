@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "switch-28",
+  "type": "registry:example",
+  "description": "Uncontrolled switches with name attributes submitted as form data.",
+  "files": [
+    {
+      "path": "registry/designali/examples/switch/switch-28.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Label } from \"@workspace/ui/components/label\"\nimport { Switch } from \"@workspace/ui/components/switch\"\n\nexport default function FormDataSwitches() {\n  const [result, setResult] = React.useState<string | null>(null)\n\n  return (\n    <form\n      className=\"flex w-full max-w-xs flex-col gap-3 border p-4\"\n      onSubmit={(event) => {\n        event.preventDefault()\n        const data = new FormData(event.currentTarget)\n        setResult(\n          JSON.stringify({\n            newsletter: data.get(\"newsletter\") === \"on\",\n            beta: data.get(\"beta\") === \"on\",\n          })\n        )\n      }}\n    >\n      <div className=\"flex items-center justify-between\">\n        <Label htmlFor=\"form-newsletter\">Product newsletter</Label>\n        <Switch id=\"form-newsletter\" name=\"newsletter\" defaultChecked />\n      </div>\n      <div className=\"flex items-center justify-between\">\n        <Label htmlFor=\"form-beta\">Join beta program</Label>\n        <Switch id=\"form-beta\" name=\"beta\" />\n      </div>\n      <Button type=\"submit\" size=\"sm\">\n        Save preferences\n      </Button>\n      {result && (\n        <pre className=\"overflow-x-auto bg-muted p-2 font-mono text-xs\">\n          {result}\n        </pre>\n      )}\n    </form>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "alert-09",
+  "type": "registry:example",
+  "description": "Error alert for a declined card with update and retry actions below the message.",
+  "files": [
+    {
+      "path": "registry/designali/examples/alert/alert-09.tsx",
+      "content": "import { CreditCardIcon } from \"lucide-react\"\n\nimport {\n  Alert,\n  AlertDescription,\n  AlertTitle,\n} from \"@workspace/ui/components/alert\"\nimport { Button } from \"@workspace/ui/components/button\"\n\nexport default function AlertPaymentFailed() {\n  return (\n    <Alert variant=\"error\" className=\"max-w-md\">\n      <CreditCardIcon />\n      <AlertTitle>Payment declined</AlertTitle>\n      <AlertDescription>\n        <p>\n          We couldn&apos;t charge your Visa ending 4821 for the $48.00 renewal.\n          Your workspace stays active until Nov 22.\n        </p>\n        <div className=\"mt-2 flex gap-1.5\">\n          <Button size=\"xs\">Update card</Button>\n          <Button size=\"xs\" variant=\"outline\">\n            Retry payment\n          </Button>\n        </div>\n      </AlertDescription>\n    </Alert>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

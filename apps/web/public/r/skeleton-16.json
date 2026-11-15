@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "skeleton-16",
+  "type": "registry:example",
+  "description": "Pricing tier placeholders with price, feature list, and a highlighted middle plan.",
+  "files": [
+    {
+      "path": "registry/designali/examples/skeleton/skeleton-16.tsx",
+      "content": "import { Skeleton } from \"@workspace/ui/components/skeleton\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nexport default function PricingCardsSkeleton() {\n  return (\n    <div className=\"grid w-full max-w-2xl grid-cols-1 gap-3 sm:grid-cols-3\">\n      {[0, 1, 2].map((i) => (\n        <div\n          key={i}\n          className={cn(\n            \"flex flex-col gap-4 border p-4\",\n            i === 1 && \"border-primary/40\"\n          )}\n        >\n          <Skeleton className=\"h-4 w-16\" />\n          <div className=\"flex items-end gap-1\">\n            <Skeleton className=\"h-8 w-16\" />\n            <Skeleton className=\"h-3 w-8\" />\n          </div>\n          <div className=\"flex flex-col gap-2\">\n            {Array.from({ length: 4 }).map((_, j) => (\n              <div key={j} className=\"flex items-center gap-2\">\n                <Skeleton className=\"size-3 rounded-full\" />\n                <Skeleton className=\"h-3 flex-1\" />\n              </div>\n            ))}\n          </div>\n          <Skeleton className={cn(\"h-8 w-full\", i === 1 && \"bg-primary/20\")} />\n        </div>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

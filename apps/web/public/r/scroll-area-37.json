@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "scroll-area-37",
+  "type": "registry:example",
+  "description": "Role permissions editor with grouped checkboxes in a scroll area.",
+  "files": [
+    {
+      "path": "registry/designali/examples/scroll-area/scroll-area-37.tsx",
+      "content": "import { Button } from \"@workspace/ui/components/button\"\nimport { Checkbox } from \"@workspace/ui/components/checkbox\"\nimport {\n  Field,\n  FieldLabel,\n  FieldLegend,\n  FieldSet,\n} from \"@workspace/ui/components/field\"\nimport { ScrollArea } from \"@workspace/ui/components/scroll-area\"\n\nconst groups = [\n  {\n    name: \"Projects\",\n    perms: [\"View projects\", \"Create projects\", \"Archive projects\"],\n  },\n  {\n    name: \"Billing\",\n    perms: [\"View invoices\", \"Update payment method\", \"Change plan\"],\n  },\n  {\n    name: \"Members\",\n    perms: [\"Invite members\", \"Remove members\", \"Change roles\"],\n  },\n  { name: \"Integrations\", perms: [\"Connect apps\", \"Manage API keys\"] },\n]\n\nexport default function PermissionsChecklist() {\n  return (\n    <div className=\"flex w-full max-w-sm flex-col border\">\n      <div className=\"border-b px-4 py-3\">\n        <p className=\"text-sm font-medium\">Editor role</p>\n        <p className=\"text-xs text-muted-foreground\">\n          Choose what editors can do.\n        </p>\n      </div>\n      <ScrollArea className=\"h-64\">\n        <div className=\"flex flex-col gap-4 p-4\">\n          {groups.map((g) => (\n            <FieldSet key={g.name} className=\"gap-2\">\n              <FieldLegend variant=\"label\">{g.name}</FieldLegend>\n              {g.perms.map((p, i) => (\n                <Field key={p} orientation=\"horizontal\">\n                  <Checkbox id={p} defaultChecked={i === 0} />\n                  <FieldLabel htmlFor={p} className=\"font-normal\">\n                    {p}\n                  </FieldLabel>\n                </Field>\n              ))}\n            </FieldSet>\n          ))}\n        </div>\n      </ScrollArea>\n      <div className=\"flex justify-end gap-2 border-t p-3\">\n        <Button variant=\"outline\">Cancel</Button>\n        <Button>Save role</Button>\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

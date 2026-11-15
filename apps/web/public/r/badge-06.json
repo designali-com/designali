@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "badge-06",
+  "type": "registry:example",
+  "description": "Order statuses for an e-commerce admin, each with a tinted badge and icon.",
+  "files": [
+    {
+      "path": "registry/designali/examples/badge/badge-06.tsx",
+      "content": "import {\n  ClockIcon,\n  CreditCardIcon,\n  PackageCheckIcon,\n  TruckIcon,\n  Undo2Icon,\n} from \"lucide-react\"\n\nimport { Badge } from \"@workspace/ui/components/badge\"\n\nconst statuses = [\n  {\n    label: \"Pending\",\n    icon: ClockIcon,\n    className:\n      \"bg-amber-50 text-amber-700 dark:bg-amber-950 dark:text-amber-300\",\n  },\n  {\n    label: \"Paid\",\n    icon: CreditCardIcon,\n    className: \"bg-blue-50 text-blue-700 dark:bg-blue-950 dark:text-blue-300\",\n  },\n  {\n    label: \"Shipped\",\n    icon: TruckIcon,\n    className:\n      \"bg-violet-50 text-violet-700 dark:bg-violet-950 dark:text-violet-300\",\n  },\n  {\n    label: \"Delivered\",\n    icon: PackageCheckIcon,\n    className:\n      \"bg-emerald-50 text-emerald-700 dark:bg-emerald-950 dark:text-emerald-300\",\n  },\n  {\n    label: \"Refunded\",\n    icon: Undo2Icon,\n    className: \"bg-muted text-muted-foreground\",\n  },\n]\n\nexport default function OrderStatusBadges() {\n  return (\n    <div className=\"flex flex-wrap justify-center gap-2\">\n      {statuses.map((status) => (\n        <Badge key={status.label} className={status.className}>\n          <status.icon data-icon=\"inline-start\" />\n          {status.label}\n        </Badge>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

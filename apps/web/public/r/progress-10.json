@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "progress-10",
+  "type": "registry:example",
+  "description": "Progress bars tinted for healthy, warning, and critical states.",
+  "files": [
+    {
+      "path": "registry/designali/examples/progress/progress-10.tsx",
+      "content": "import {\n  CircleCheckIcon,\n  OctagonAlertIcon,\n  TriangleAlertIcon,\n} from \"lucide-react\"\n\nimport {\n  Progress,\n  ProgressLabel,\n  ProgressValue,\n} from \"@workspace/ui/components/progress\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst statuses = [\n  {\n    label: \"Healthy\",\n    value: 42,\n    icon: CircleCheckIcon,\n    tone: \"text-emerald-600 dark:text-emerald-400\",\n    bar: \"[&_[data-slot=progress-indicator]]:bg-emerald-500\",\n  },\n  {\n    label: \"Warning\",\n    value: 78,\n    icon: TriangleAlertIcon,\n    tone: \"text-amber-600 dark:text-amber-400\",\n    bar: \"[&_[data-slot=progress-indicator]]:bg-amber-500\",\n  },\n  {\n    label: \"Critical\",\n    value: 96,\n    icon: OctagonAlertIcon,\n    tone: \"text-destructive\",\n    bar: \"[&_[data-slot=progress-indicator]]:bg-destructive\",\n  },\n]\n\nexport default function ProgressStatusTones() {\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-5\">\n      {statuses.map((status) => (\n        <Progress\n          key={status.label}\n          value={status.value}\n          className={cn(\"[&_[data-slot=progress-track]]:h-1.5\", status.bar)}\n        >\n          <ProgressLabel\n            className={cn(\"flex items-center gap-1.5\", status.tone)}\n          >\n            <status.icon className=\"size-3.5\" />\n            {status.label}\n          </ProgressLabel>\n          <ProgressValue />\n        </Progress>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

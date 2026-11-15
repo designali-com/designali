@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "navigation-menu-30",
+  "type": "registry:example",
+  "description": "Docs header with navigation links and a search button showing its keyboard shortcut.",
+  "files": [
+    {
+      "path": "registry/designali/examples/navigation-menu/navigation-menu-30.tsx",
+      "content": "import { SearchIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Kbd, KbdGroup } from \"@workspace/ui/components/kbd\"\nimport {\n  NavigationMenu,\n  NavigationMenuContent,\n  NavigationMenuItem,\n  NavigationMenuLink,\n  NavigationMenuList,\n  NavigationMenuTrigger,\n  navigationMenuTriggerStyle,\n} from \"@workspace/ui/components/navigation-menu\"\n\nexport default function SearchShortcutNav() {\n  return (\n    <div className=\"flex w-full max-w-lg items-center gap-2 border-b pb-2\">\n      <NavigationMenu>\n        <NavigationMenuList>\n          <NavigationMenuItem>\n            <NavigationMenuTrigger>Docs</NavigationMenuTrigger>\n            <NavigationMenuContent>\n              <ul className=\"flex w-52 flex-col gap-1\">\n                {[\"Introduction\", \"Installation\", \"Theming\", \"CLI\"].map((d) => (\n                  <li key={d}>\n                    <NavigationMenuLink href=\"#\">{d}</NavigationMenuLink>\n                  </li>\n                ))}\n              </ul>\n            </NavigationMenuContent>\n          </NavigationMenuItem>\n          <NavigationMenuItem className=\"hidden sm:block\">\n            <NavigationMenuLink\n              href=\"#\"\n              className={navigationMenuTriggerStyle()}\n            >\n              Examples\n            </NavigationMenuLink>\n          </NavigationMenuItem>\n        </NavigationMenuList>\n      </NavigationMenu>\n      <Button\n        variant=\"outline\"\n        size=\"sm\"\n        className=\"ms-auto w-36 justify-start text-muted-foreground sm:w-48\"\n      >\n        <SearchIcon data-icon=\"inline-start\" />\n        Search docs\n        <KbdGroup className=\"ms-auto\">\n          <Kbd>⌘</Kbd>\n          <Kbd>K</Kbd>\n        </KbdGroup>\n      </Button>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

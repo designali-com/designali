@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "skeleton-28",
+  "type": "registry:example",
+  "description": "Vertical activity timeline placeholder with connector line and event nodes.",
+  "files": [
+    {
+      "path": "registry/designali/examples/skeleton/skeleton-28.tsx",
+      "content": "import { Skeleton } from \"@workspace/ui/components/skeleton\"\n\nexport default function TimelineSkeleton() {\n  return (\n    <ol className=\"flex w-full max-w-sm flex-col\">\n      {Array.from({ length: 4 }).map((_, i) => (\n        <li key={i} className=\"relative flex gap-3 pb-6 last:pb-0\">\n          {i < 3 && (\n            <span className=\"absolute start-3 top-7 bottom-0 w-px bg-border\" />\n          )}\n          <Skeleton className=\"size-6 shrink-0 rounded-full\" />\n          <div className=\"flex flex-1 flex-col gap-1.5 pt-0.5\">\n            <Skeleton className=\"h-3 w-3/4\" />\n            <Skeleton className=\"h-2.5 w-20\" />\n          </div>\n        </li>\n      ))}\n    </ol>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

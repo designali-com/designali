@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "faqs-12",
+  "type": "registry:block",
+  "description": "Troubleshooting accordion of bordered cards with Was this helpful? yes/no voting.",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "accordion"
+  ],
+  "files": [
+    {
+      "path": "registry/designali/blocks/faqs/faqs-12.tsx",
+      "content": "\"use client\"\n\nimport { useState } from \"react\"\nimport { Minus, Plus, ThumbsDown, ThumbsUp } from \"lucide-react\"\n\nimport {\n  Accordion,\n  AccordionContent,\n  AccordionItem,\n  AccordionTrigger,\n} from \"@workspace/ui/components/accordion\"\n\nconst faqs = [\n  {\n    q: \"How do I connect my custom domain?\",\n    a: \"Go to Settings, then Domains, and add your domain. Create the CNAME record we show you at your DNS provider. Most domains verify within ten minutes and SSL is issued automatically.\",\n  },\n  {\n    q: \"Why is my site showing an old version?\",\n    a: \"Published changes are cached at the edge for up to 60 seconds. If you still see an old version after that, use Purge cache from the Deployments page or check that you published to production rather than staging.\",\n  },\n  {\n    q: \"Can I restore a deleted page?\",\n    a: \"Deleted pages stay in Trash for 30 days. Open Trash from the sidebar, find the page and choose Restore. It returns with its full version history.\",\n  },\n  {\n    q: \"How do I add a teammate as an editor?\",\n    a: \"Open Members, choose Invite and pick the Editor role. Editors can change content and publish, but cannot manage billing or delete the workspace.\",\n  },\n  {\n    q: \"Is there a limit on form submissions?\",\n    a: \"Free workspaces store 100 submissions per month. Paid plans are unlimited, and you can forward every submission to email, Slack or a webhook.\",\n  },\n]\n\ntype Vote = \"up\" | \"down\"\n\nexport default function Faqs12() {\n  const [votes, setVotes] = useState<Record<number, Vote>>({})\n\n  return (\n    <section className=\"w-full bg-background py-20 md:py-28\">\n      <div className=\"mx-auto max-w-3xl px-6\">\n        <p className=\"text-xs tracking-[0.2em] text-muted-foreground uppercase\">\n          Troubleshooting\n        </p>\n        <h2 className=\"mt-4 text-3xl font-semibold tracking-tight md:text-4xl\">\n          Quick fixes for common issues\n        </h2>\n        <Accordion defaultValue={[0]} className=\"mt-10 gap-3\">\n          {faqs.map((faq, index) => (\n            <AccordionItem\n              key={faq.q}\n              value={index}\n              className=\"border border-border bg-card not-last:border-b\"\n            >\n              <AccordionTrigger className=\"group items-center gap-4 px-5 py-4 text-sm font-medium hover:no-underline md:text-base\">\n                {faq.q}\n                <span className=\"flex size-6 shrink-0 items-center justify-center border border-border\">\n                  <Plus className=\"size-3.5 group-aria-expanded/accordion-trigger:hidden\" />\n                  <Minus className=\"hidden size-3.5 group-aria-expanded/accordion-trigger:block\" />\n                </span>\n              </AccordionTrigger>\n              <AccordionContent className=\"px-5 pb-5\">\n                <p className=\"text-sm leading-6 text-muted-foreground\">\n                  {faq.a}\n                </p>\n                <div className=\"mt-5 flex flex-wrap items-center gap-3 border-t border-border pt-4 text-xs text-muted-foreground\">\n                  {votes[index] ? (\n                    <span>\n                      {votes[index] === \"up\"\n                        ? \"Thanks! Glad that helped.\"\n                        : \"Thanks. We'll improve this answer.\"}\n                    </span>\n                  ) : (\n                    <>\n                      <span>Was this helpful?</span>\n                      {([\"up\", \"down\"] as const).map((vote) => (\n                        <button\n                          key={vote}\n                          type=\"button\"\n                          onClick={() =>\n                            setVotes((current) => ({ ...current, [index]: vote }))\n                          }\n                          className=\"flex items-center gap-1.5 border border-border px-2.5 py-1 transition-colors hover:bg-muted hover:text-foreground\"\n                        >\n                          {vote === \"up\" ? (\n                            <ThumbsUp className=\"size-3.5\" />\n                          ) : (\n                            <ThumbsDown className=\"size-3.5\" />\n                          )}\n                          {vote === \"up\" ? \"Yes\" : \"No\"}\n                        </button>\n                      ))}\n                    </>\n                  )}\n                </div>\n              </AccordionContent>\n            </AccordionItem>\n          ))}\n        </Accordion>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "700px"
+  },
+  "categories": [
+    "faqs"
+  ]
+}

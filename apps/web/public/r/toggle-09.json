@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toggle-09",
+  "type": "registry:example",
+  "description": "A call participant tile with a mute toggle that swaps the icon and status label.",
+  "files": [
+    {
+      "path": "registry/designali/examples/toggle/toggle-09.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { MicIcon, MicOffIcon } from \"lucide-react\"\n\nimport { Avatar, AvatarFallback } from \"@workspace/ui/components/avatar\"\nimport { Toggle } from \"@workspace/ui/components/toggle\"\n\nexport default function MicrophoneMuteToggle() {\n  const [muted, setMuted] = React.useState(false)\n\n  return (\n    <div className=\"flex w-full max-w-xs flex-col items-center gap-3 border bg-muted/30 p-6\">\n      <Avatar size=\"lg\">\n        <AvatarFallback>DK</AvatarFallback>\n      </Avatar>\n      <p className=\"text-sm font-medium\">Dana Kim (you)</p>\n      <Toggle\n        variant=\"outline\"\n        size=\"lg\"\n        pressed={muted}\n        onPressedChange={setMuted}\n        aria-label={muted ? \"Unmute microphone\" : \"Mute microphone\"}\n        className=\"aria-pressed:border-destructive aria-pressed:bg-destructive/10 aria-pressed:text-destructive\"\n      >\n        {muted ? <MicOffIcon /> : <MicIcon />}\n        {muted ? \"Muted\" : \"Mic on\"}\n      </Toggle>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

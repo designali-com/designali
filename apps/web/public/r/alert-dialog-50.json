@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "alert-dialog-50",
+  "type": "registry:example",
+  "description": "Order refund confirmation summarising line totals before issuing the refund.",
+  "files": [
+    {
+      "path": "registry/designali/examples/alert-dialog/alert-dialog-50.tsx",
+      "content": "import { ReceiptIcon } from \"lucide-react\"\n\nimport {\n  AlertDialog,\n  AlertDialogAction,\n  AlertDialogCancel,\n  AlertDialogContent,\n  AlertDialogDescription,\n  AlertDialogFooter,\n  AlertDialogHeader,\n  AlertDialogTitle,\n  AlertDialogTrigger,\n} from \"@workspace/ui/components/alert-dialog\"\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Separator } from \"@workspace/ui/components/separator\"\n\nconst lines = [\n  { label: \"Linen throw blanket\", value: \"$89.00\" },\n  { label: \"Shipping\", value: \"$6.50\" },\n  { label: \"Tax\", value: \"$7.64\" },\n]\n\nexport default function RefundOrderAmount() {\n  return (\n    <AlertDialog>\n      <AlertDialogTrigger render={<Button variant=\"secondary\" />}>\n        <ReceiptIcon data-icon=\"inline-start\" />\n        Refund order #5821\n      </AlertDialogTrigger>\n      <AlertDialogContent>\n        <AlertDialogHeader>\n          <AlertDialogTitle>Issue a full refund?</AlertDialogTitle>\n          <AlertDialogDescription>\n            The customer, Nora Feld, will be refunded to their original payment\n            method.\n          </AlertDialogDescription>\n        </AlertDialogHeader>\n        <dl className=\"flex flex-col gap-1.5 border p-3 text-sm\">\n          {lines.map((line) => (\n            <div key={line.label} className=\"flex justify-between\">\n              <dt className=\"text-muted-foreground\">{line.label}</dt>\n              <dd className=\"tabular-nums\">{line.value}</dd>\n            </div>\n          ))}\n          <Separator className=\"my-1\" />\n          <div className=\"flex justify-between font-medium\">\n            <dt>Refund total</dt>\n            <dd className=\"tabular-nums\">$103.14</dd>\n          </div>\n        </dl>\n        <AlertDialogFooter>\n          <AlertDialogCancel>Cancel</AlertDialogCancel>\n          <AlertDialogAction>Refund $103.14</AlertDialogAction>\n        </AlertDialogFooter>\n      </AlertDialogContent>\n    </AlertDialog>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

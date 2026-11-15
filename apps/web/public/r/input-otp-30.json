@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-otp-30",
+  "type": "registry:example",
+  "description": "Wrong-code flow that counts down remaining attempts and flags the slots invalid.",
+  "files": [
+    {
+      "path": "registry/designali/examples/input-otp/input-otp-30.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { Badge } from \"@workspace/ui/components/badge\"\nimport {\n  InputOTP,\n  InputOTPGroup,\n  InputOTPSlot,\n} from \"@workspace/ui/components/input-otp\"\n\nconst CORRECT = \"246810\"\n\nexport default function AttemptsRemaining() {\n  const [value, setValue] = React.useState(\"\")\n  const [attempts, setAttempts] = React.useState(3)\n  const [invalid, setInvalid] = React.useState(false)\n\n  function handleComplete(code: string) {\n    if (code === CORRECT) return\n    setInvalid(true)\n    setAttempts((a) => Math.max(0, a - 1))\n  }\n\n  return (\n    <div className=\"flex w-full max-w-xs flex-col gap-3\">\n      <div className=\"flex items-center justify-between\">\n        <span className=\"text-xs font-medium\">Security code</span>\n        <Badge variant={attempts <= 1 ? \"destructive\" : \"secondary\"}>\n          {attempts} attempts left\n        </Badge>\n      </div>\n      <InputOTP\n        maxLength={6}\n        value={value}\n        disabled={attempts === 0}\n        onChange={(next) => {\n          setValue(next)\n          setInvalid(false)\n        }}\n        onComplete={handleComplete}\n      >\n        <InputOTPGroup>\n          {[0, 1, 2, 3, 4, 5].map((index) => (\n            <InputOTPSlot\n              key={index}\n              index={index}\n              aria-invalid={invalid || undefined}\n            />\n          ))}\n        </InputOTPGroup>\n      </InputOTP>\n      <p className=\"text-xs text-muted-foreground\">\n        {invalid\n          ? \"Incorrect code. Hint: try 246810.\"\n          : \"Enter the code from your email.\"}\n      </p>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

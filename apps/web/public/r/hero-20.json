@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "hero-20",
+  "type": "registry:block",
+  "description": "Sticky headline column beside a vertical three-step timeline, with a wordmark customer strip below.",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "registry/designali/blocks/hero/hero-20.tsx",
+      "content": "import { ArrowRight, Hammer, Lightbulb, Rocket } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\n\nconst steps = [\n  {\n    icon: Lightbulb,\n    title: \"Describe the workflow\",\n    body: \"Write what should happen in plain English. Tidewater drafts the automation and shows every step before it runs.\",\n    meta: \"about 2 minutes\",\n  },\n  {\n    icon: Hammer,\n    title: \"Connect your tools\",\n    body: \"300+ integrations including your CRM, helpdesk, billing and internal APIs. Credentials stay encrypted in your region.\",\n    meta: \"about 5 minutes\",\n  },\n  {\n    icon: Rocket,\n    title: \"Turn it on\",\n    body: \"Runs on a schedule, a webhook or a button. Every run is logged, replayable and alertable.\",\n    meta: \"instant\",\n  },\n]\n\nconst brands = [\"Halcyon\", \"Northpeak\", \"Ostara\", \"Brindle & Co\", \"Vantage Rail\"]\n\nexport default function Hero20() {\n  return (\n    <section className=\"w-full bg-background px-6 py-16 md:py-24\">\n      <div className=\"mx-auto max-w-7xl\">\n        <div className=\"grid gap-16 lg:grid-cols-2\">\n          <div className=\"lg:sticky lg:top-24 lg:self-start\">\n            <p className=\"font-mono text-xs tracking-widest text-muted-foreground uppercase\">\n              Workflow automation\n            </p>\n            <h1 className=\"mt-6 text-4xl font-medium tracking-tight md:text-6xl\">\n              From idea to running automation before lunch.\n            </h1>\n            <p className=\"mt-6 max-w-lg text-base leading-7 text-muted-foreground\">\n              Tidewater replaces brittle scripts and one-off zaps with\n              workflows your whole ops team can read, review and trust.\n            </p>\n            <div className=\"mt-10 flex flex-wrap gap-3\">\n              <Button size=\"lg\" nativeButton={false} render={<a href=\"#\" />}>\n                Build your first workflow\n                <ArrowRight />\n              </Button>\n            </div>\n          </div>\n\n          <ol className=\"relative\">\n            <span aria-hidden className=\"absolute start-5 top-5 bottom-5 w-px bg-border\" />\n            {steps.map((step, index) => (\n              <li key={step.title} className=\"relative flex gap-6 pb-10 last:pb-0\">\n                <span className=\"relative z-10 flex size-10 shrink-0 items-center justify-center border border-border bg-background\">\n                  <step.icon className=\"size-4\" />\n                </span>\n                <div className=\"pt-1.5\">\n                  <p className=\"font-mono text-xs text-muted-foreground\">\n                    Step {index + 1} / {step.meta}\n                  </p>\n                  <h2 className=\"mt-2 text-xl font-medium\">{step.title}</h2>\n                  <p className=\"mt-2 text-sm leading-6 text-muted-foreground\">{step.body}</p>\n                </div>\n              </li>\n            ))}\n          </ol>\n        </div>\n\n        <div className=\"mt-20 border-t border-border pt-8\">\n          <p className=\"text-center text-xs text-muted-foreground\">\n            Running 4 million workflows a day for operations teams at\n          </p>\n          <ul className=\"mt-6 flex flex-wrap items-center justify-center gap-x-10 gap-y-4\">\n            {brands.map((brand) => (\n              <li key={brand} className=\"text-lg font-semibold tracking-tight text-muted-foreground/70\">\n                {brand}\n              </li>\n            ))}\n          </ul>\n        </div>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "860px"
+  },
+  "categories": [
+    "hero"
+  ]
+}

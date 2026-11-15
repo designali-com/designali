@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "alert-dialog-38",
+  "type": "registry:example",
+  "description": "Release publish confirmation with a pre-flight checklist showing passed and warning checks.",
+  "files": [
+    {
+      "path": "registry/designali/examples/alert-dialog/alert-dialog-38.tsx",
+      "content": "import { CircleAlertIcon, CircleCheckIcon, RocketIcon } from \"lucide-react\"\n\nimport {\n  AlertDialog,\n  AlertDialogAction,\n  AlertDialogCancel,\n  AlertDialogContent,\n  AlertDialogDescription,\n  AlertDialogFooter,\n  AlertDialogHeader,\n  AlertDialogTitle,\n  AlertDialogTrigger,\n} from \"@workspace/ui/components/alert-dialog\"\nimport { Button } from \"@workspace/ui/components/button\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst checks = [\n  { label: \"All 248 tests passed\", ok: true },\n  { label: \"Changelog updated\", ok: true },\n  { label: \"2 open issues tagged for this release\", ok: false },\n]\n\nexport default function PublishReleaseChecklist() {\n  return (\n    <AlertDialog>\n      <AlertDialogTrigger render={<Button />}>\n        <RocketIcon data-icon=\"inline-start\" />\n        Publish v2.4.0\n      </AlertDialogTrigger>\n      <AlertDialogContent>\n        <AlertDialogHeader>\n          <AlertDialogTitle>Publish v2.4.0 to npm?</AlertDialogTitle>\n          <AlertDialogDescription>\n            Published versions can be deprecated but never overwritten.\n          </AlertDialogDescription>\n        </AlertDialogHeader>\n        <ul className=\"flex flex-col gap-2 text-sm\">\n          {checks.map((check) => (\n            <li key={check.label} className=\"flex items-center gap-2\">\n              {check.ok ? (\n                <CircleCheckIcon className=\"size-4 text-emerald-600 dark:text-emerald-400\" />\n              ) : (\n                <CircleAlertIcon className=\"size-4 text-amber-600 dark:text-amber-400\" />\n              )}\n              <span className={cn(!check.ok && \"text-muted-foreground\")}>\n                {check.label}\n              </span>\n            </li>\n          ))}\n        </ul>\n        <AlertDialogFooter>\n          <AlertDialogCancel>Not yet</AlertDialogCancel>\n          <AlertDialogAction>Publish release</AlertDialogAction>\n        </AlertDialogFooter>\n      </AlertDialogContent>\n    </AlertDialog>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

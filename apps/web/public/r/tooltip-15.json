@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tooltip-15",
+  "type": "registry:example",
+  "description": "Contribution heatmap grid with a tooltip for each day's activity count.",
+  "files": [
+    {
+      "path": "registry/designali/examples/tooltip/tooltip-15.tsx",
+      "content": "import {\n  Tooltip,\n  TooltipContent,\n  TooltipProvider,\n  TooltipTrigger,\n} from \"@workspace/ui/components/tooltip\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst weeks = Array.from({ length: 12 }, (_, w) =>\n  Array.from({ length: 7 }, (_, d) => (w * 7 + d * 3) % 9)\n)\nconst shade = (n: number) =>\n  n === 0\n    ? \"bg-muted\"\n    : n < 3\n      ? \"bg-emerald-200 dark:bg-emerald-900\"\n      : n < 6\n        ? \"bg-emerald-400 dark:bg-emerald-700\"\n        : \"bg-emerald-600 dark:bg-emerald-500\"\n\nexport default function ContributionHeatmapTooltip() {\n  return (\n    <TooltipProvider>\n      <div className=\"flex gap-1\">\n        {weeks.map((week, w) => (\n          <div key={w} className=\"flex flex-col gap-1\">\n            {week.map((count, d) => (\n              <Tooltip key={d}>\n                <TooltipTrigger\n                  render={\n                    <button\n                      type=\"button\"\n                      aria-label={count + \" contributions\"}\n                      className={cn(\"size-3.5\", shade(count))}\n                    />\n                  }\n                />\n                <TooltipContent>\n                  {count === 0 ? \"No contributions\" : count + \" contributions\"}{\" \"}\n                  · week {w + 1}\n                </TooltipContent>\n              </Tooltip>\n            ))}\n          </div>\n        ))}\n      </div>\n    </TooltipProvider>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

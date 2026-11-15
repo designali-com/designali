@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "radio-group-10",
+  "type": "registry:example",
+  "description": "Region selector where one option is disabled with a coming-soon badge.",
+  "files": [
+    {
+      "path": "registry/designali/examples/radio-group/radio-group-10.tsx",
+      "content": "import { Badge } from \"@workspace/ui/components/badge\"\nimport {\n  Field,\n  FieldDescription,\n  FieldLabel,\n  FieldLegend,\n  FieldSet,\n} from \"@workspace/ui/components/field\"\nimport {\n  RadioGroup,\n  RadioGroupItem,\n} from \"@workspace/ui/components/radio-group\"\n\nconst regions = [\n  { value: \"us-east\", label: \"US East (Virginia)\", available: true },\n  { value: \"eu-west\", label: \"EU West (Dublin)\", available: true },\n  { value: \"ap-south\", label: \"Asia Pacific (Mumbai)\", available: false },\n]\n\nexport default function ComingSoonOptionDisabled() {\n  return (\n    <FieldSet className=\"w-full max-w-sm\">\n      <FieldLegend variant=\"label\">Data region</FieldLegend>\n      <FieldDescription>Where your workspace data is stored.</FieldDescription>\n      <RadioGroup defaultValue=\"eu-west\">\n        {regions.map((region) => (\n          <Field\n            key={region.value}\n            orientation=\"horizontal\"\n            data-disabled={!region.available || undefined}\n          >\n            <RadioGroupItem\n              value={region.value}\n              id={\"region-\" + region.value}\n              disabled={!region.available}\n            />\n            <FieldLabel\n              htmlFor={\"region-\" + region.value}\n              className=\"font-normal\"\n            >\n              {region.label}\n            </FieldLabel>\n            {!region.available && <Badge variant=\"outline\">Coming soon</Badge>}\n          </Field>\n        ))}\n      </RadioGroup>\n    </FieldSet>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

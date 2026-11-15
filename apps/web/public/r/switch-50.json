@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "switch-50",
+  "type": "registry:example",
+  "description": "Tabbed settings panel with switches grouped under General and Privacy tabs.",
+  "files": [
+    {
+      "path": "registry/designali/examples/switch/switch-50.tsx",
+      "content": "import { Label } from \"@workspace/ui/components/label\"\nimport { Switch } from \"@workspace/ui/components/switch\"\nimport {\n  Tabs,\n  TabsContent,\n  TabsList,\n  TabsTrigger,\n} from \"@workspace/ui/components/tabs\"\n\nexport default function TabbedSettingsSwitches() {\n  return (\n    <Tabs defaultValue=\"general\" className=\"w-full max-w-sm\">\n      <TabsList className=\"w-full\">\n        <TabsTrigger value=\"general\">General</TabsTrigger>\n        <TabsTrigger value=\"privacy\">Privacy</TabsTrigger>\n      </TabsList>\n      <TabsContent value=\"general\" className=\"flex flex-col gap-3 border p-4\">\n        <div className=\"flex items-center justify-between\">\n          <Label htmlFor=\"tab-startup\">Open on startup</Label>\n          <Switch id=\"tab-startup\" defaultChecked />\n        </div>\n        <div className=\"flex items-center justify-between\">\n          <Label htmlFor=\"tab-updates\">Install updates automatically</Label>\n          <Switch id=\"tab-updates\" defaultChecked />\n        </div>\n      </TabsContent>\n      <TabsContent value=\"privacy\" className=\"flex flex-col gap-3 border p-4\">\n        <div className=\"flex items-center justify-between\">\n          <Label htmlFor=\"tab-telemetry\">Share usage data</Label>\n          <Switch id=\"tab-telemetry\" />\n        </div>\n        <div className=\"flex items-center justify-between\">\n          <Label htmlFor=\"tab-crash\">Send crash reports</Label>\n          <Switch id=\"tab-crash\" defaultChecked />\n        </div>\n      </TabsContent>\n    </Tabs>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

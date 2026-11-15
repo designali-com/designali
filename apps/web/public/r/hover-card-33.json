@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "hover-card-33",
+  "type": "registry:example",
+  "description": "Pins on an SVG map that preview venue name, rating, and opening hours.",
+  "files": [
+    {
+      "path": "registry/designali/examples/hover-card/hover-card-33.tsx",
+      "content": "import { MapPinIcon, StarIcon } from \"lucide-react\"\n\nimport {\n  HoverCard,\n  HoverCardContent,\n  HoverCardTrigger,\n} from \"@workspace/ui/components/hover-card\"\n\nconst pins = [\n  {\n    name: \"Copper Kettle Café\",\n    x: \"22%\",\n    y: \"35%\",\n    rating: 4.6,\n    hours: \"Open until 6 PM\",\n  },\n  {\n    name: \"Riverside Books\",\n    x: \"58%\",\n    y: \"60%\",\n    rating: 4.8,\n    hours: \"Open until 9 PM\",\n  },\n  {\n    name: \"Juniper Gym\",\n    x: \"76%\",\n    y: \"25%\",\n    rating: 4.2,\n    hours: \"Open 24 hours\",\n  },\n]\n\nexport default function MapPinHoverCard() {\n  return (\n    <div className=\"relative h-48 w-full max-w-sm overflow-hidden border bg-muted/40\">\n      <svg\n        className=\"absolute inset-0 size-full text-border\"\n        preserveAspectRatio=\"none\"\n        viewBox=\"0 0 100 100\"\n      >\n        <path\n          d=\"M0 70 C30 60 50 80 100 55\"\n          fill=\"none\"\n          stroke=\"currentColor\"\n          strokeWidth=\"6\"\n        />\n        <path\n          d=\"M40 0 L45 100\"\n          fill=\"none\"\n          stroke=\"currentColor\"\n          strokeWidth=\"3\"\n        />\n      </svg>\n      {pins.map((pin) => (\n        <HoverCard key={pin.name}>\n          <HoverCardTrigger\n            render={\n              <button\n                type=\"button\"\n                aria-label={pin.name}\n                className=\"absolute -translate-x-1/2 -translate-y-full text-primary\"\n                style={{ left: pin.x, top: pin.y }}\n              />\n            }\n          >\n            <MapPinIcon className=\"size-6 fill-background\" />\n          </HoverCardTrigger>\n          <HoverCardContent side=\"top\" className=\"w-48\">\n            <p className=\"font-medium\">{pin.name}</p>\n            <p className=\"flex items-center gap-1 text-muted-foreground\">\n              <StarIcon className=\"size-3 fill-amber-400 text-amber-400\" />\n              {pin.rating} · {pin.hours}\n            </p>\n          </HoverCardContent>\n        </HoverCard>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

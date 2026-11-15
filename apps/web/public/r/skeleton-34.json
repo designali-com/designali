@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "skeleton-34",
+  "type": "registry:example",
+  "description": "Skeletons inlined within sentences for values that are still loading.",
+  "files": [
+    {
+      "path": "registry/designali/examples/skeleton/skeleton-34.tsx",
+      "content": "import { Skeleton } from \"@workspace/ui/components/skeleton\"\n\nexport default function InlineTextSkeleton() {\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-3 text-sm\">\n      <p>\n        Your available balance is{\" \"}\n        <Skeleton className=\"inline-block h-4 w-16 align-middle\" />.\n      </p>\n      <p>\n        Next payout of{\" \"}\n        <Skeleton className=\"inline-block h-4 w-12 align-middle\" /> arrives on{\" \"}\n        <Skeleton className=\"inline-block h-4 w-20 align-middle\" />.\n      </p>\n      <p className=\"text-xs text-muted-foreground\">\n        Synced with <Skeleton className=\"inline-block h-3 w-24 align-middle\" />{\" \"}\n        moments ago.\n      </p>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

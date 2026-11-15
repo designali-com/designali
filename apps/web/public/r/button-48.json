@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button-48",
+  "type": "registry:example",
+  "description": "Show more and show less toggle that rotates its chevron as the text expands.",
+  "files": [
+    {
+      "path": "registry/designali/examples/button/button-48.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { ChevronDownIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nexport default function ShowMoreToggleButton() {\n  const [open, setOpen] = React.useState(false)\n\n  return (\n    <div className=\"flex w-full max-w-sm flex-col items-start gap-1\">\n      <p\n        className={cn(\"text-xs text-muted-foreground\", !open && \"line-clamp-2\")}\n      >\n        The Alder cabin sits on a quiet ridge two hours north of the city. It\n        sleeps six across three bedrooms, has a wood-burning stove and a covered\n        deck facing the lake, and is a short walk to hiking trails, a small\n        general store and a public boat launch.\n      </p>\n      <Button\n        variant=\"link\"\n        size=\"xs\"\n        className=\"px-0\"\n        aria-expanded={open}\n        onClick={() => setOpen(!open)}\n      >\n        {open ? \"Show less\" : \"Show more\"}\n        <ChevronDownIcon\n          data-icon=\"inline-end\"\n          className={cn(\"transition-transform\", open && \"rotate-180\")}\n        />\n      </Button>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

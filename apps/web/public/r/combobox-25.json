@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "combobox-25",
+  "type": "registry:example",
+  "description": "Theme editor combobox for choosing a colour token with swatches.",
+  "files": [
+    {
+      "path": "registry/designali/examples/combobox/combobox-25.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport {\n  Combobox,\n  ComboboxContent,\n  ComboboxEmpty,\n  ComboboxInput,\n  ComboboxItem,\n  ComboboxList,\n} from \"@workspace/ui/components/combobox\"\nimport { Field, FieldLabel } from \"@workspace/ui/components/field\"\nimport { InputGroupAddon } from \"@workspace/ui/components/input-group\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\ntype Token = { name: string; className: string }\n\nconst tokens: Token[] = [\n  { name: \"slate-900\", className: \"bg-slate-900\" },\n  { name: \"indigo-600\", className: \"bg-indigo-600\" },\n  { name: \"emerald-500\", className: \"bg-emerald-500\" },\n  { name: \"amber-400\", className: \"bg-amber-400\" },\n  { name: \"rose-500\", className: \"bg-rose-500\" },\n  { name: \"sky-400\", className: \"bg-sky-400\" },\n]\n\nexport default function BrandColorToken() {\n  const [token, setToken] = React.useState<Token | null>(tokens[1]!)\n  return (\n    <Field className=\"w-full max-w-xs\">\n      <FieldLabel htmlFor=\"accent\">Accent colour</FieldLabel>\n      <Combobox\n        items={tokens}\n        value={token}\n        onValueChange={setToken}\n        itemToStringLabel={(t: Token) => t.name}\n      >\n        <ComboboxInput id=\"accent\" className=\"w-full font-mono\">\n          <InputGroupAddon>\n            <span\n              className={cn(\n                \"size-4 border\",\n                token?.className ?? \"bg-transparent\"\n              )}\n            />\n          </InputGroupAddon>\n        </ComboboxInput>\n        <ComboboxContent>\n          <ComboboxEmpty>No tokens found.</ComboboxEmpty>\n          <ComboboxList>\n            {(t: Token) => (\n              <ComboboxItem key={t.name} value={t} className=\"font-mono\">\n                <span className={cn(\"size-4 border\", t.className)} />\n                {t.name}\n              </ComboboxItem>\n            )}\n          </ComboboxList>\n        </ComboboxContent>\n      </Combobox>\n    </Field>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

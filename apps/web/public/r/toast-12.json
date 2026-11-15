@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toast-12",
+  "type": "registry:example",
+  "description": "Reuses a fixed toast id so going offline and back online updates a single toast in place.",
+  "files": [
+    {
+      "path": "registry/designali/examples/toast/toast-12.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { WifiIcon, WifiOffIcon } from \"lucide-react\"\n\nimport { Label } from \"@workspace/ui/components/label\"\nimport { Switch } from \"@workspace/ui/components/switch\"\nimport { Toaster, createToastManager } from \"@workspace/ui/components/toast\"\n\nconst notify = createToastManager()\n\nexport default function ConnectionStatusToast() {\n  const [online, setOnline] = React.useState(true)\n\n  function change(next: boolean) {\n    setOnline(next)\n    notify.add(\n      next\n        ? {\n            id: \"connection\",\n            type: \"success\",\n            title: \"Back online\",\n            description: \"Changes are syncing again.\",\n            timeout: 3000,\n          }\n        : {\n            id: \"connection\",\n            type: \"warning\",\n            title: \"You are offline\",\n            description: \"Edits will be saved locally.\",\n            timeout: 0,\n          }\n    )\n  }\n\n  return (\n    <Toaster toastManager={notify}>\n      <div className=\"flex w-full max-w-xs items-center justify-between gap-4 border p-4\">\n        <div className=\"flex items-center gap-2\">\n          {online ? (\n            <WifiIcon className=\"size-4\" />\n          ) : (\n            <WifiOffIcon className=\"size-4 text-muted-foreground\" />\n          )}\n          <Label htmlFor=\"net\">Network connection</Label>\n        </div>\n        <Switch id=\"net\" checked={online} onCheckedChange={change} />\n      </div>\n    </Toaster>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

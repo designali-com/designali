@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "textarea-21",
+  "type": "registry:example",
+  "description": "Email composer with recipient and subject inputs above a message body textarea.",
+  "files": [
+    {
+      "path": "registry/designali/examples/textarea/textarea-21.tsx",
+      "content": "import { PaperclipIcon, SendIcon, Trash2Icon } from \"lucide-react\"\n\nimport { Badge } from \"@workspace/ui/components/badge\"\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Input } from \"@workspace/ui/components/input\"\nimport { Textarea } from \"@workspace/ui/components/textarea\"\n\nexport default function EmailComposerTextarea() {\n  return (\n    <div className=\"w-full max-w-md border\">\n      <div className=\"flex items-center gap-2 border-b px-3 py-1.5 text-xs\">\n        <span className=\"text-muted-foreground\">To</span>\n        <Badge variant=\"secondary\">liam@greenhouse.studio</Badge>\n      </div>\n      <Input\n        placeholder=\"Subject\"\n        aria-label=\"Subject\"\n        className=\"border-0 border-b focus-visible:ring-0\"\n        defaultValue=\"Revised quote for the spring campaign\"\n      />\n      <Textarea\n        aria-label=\"Message\"\n        className=\"min-h-32 border-0 focus-visible:ring-0\"\n        defaultValue={\n          \"Hi Liam,\\n\\nAttached is the revised quote. The main change is the shorter shoot schedule.\\n\\nBest,\\nAvery\"\n        }\n      />\n      <div className=\"flex items-center justify-between border-t p-2\">\n        <div className=\"flex gap-1\">\n          <Button variant=\"ghost\" size=\"icon-sm\" aria-label=\"Attach\">\n            <PaperclipIcon />\n          </Button>\n          <Button variant=\"ghost\" size=\"icon-sm\" aria-label=\"Discard\">\n            <Trash2Icon />\n          </Button>\n        </div>\n        <Button size=\"sm\">\n          <SendIcon data-icon=\"inline-start\" />\n          Send\n        </Button>\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

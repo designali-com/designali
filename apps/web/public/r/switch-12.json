@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "switch-12",
+  "type": "registry:example",
+  "description": "A master switch that enables or disables a group of dependent switches.",
+  "files": [
+    {
+      "path": "registry/designali/examples/switch/switch-12.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { Label } from \"@workspace/ui/components/label\"\nimport { Switch } from \"@workspace/ui/components/switch\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst children = [\n  { id: \"sound\", label: \"Play sound\" },\n  { id: \"badge\", label: \"Show badge count\" },\n  { id: \"preview\", label: \"Show message preview\" },\n]\n\nexport default function MasterSwitchWithChildren() {\n  const [master, setMaster] = React.useState(true)\n\n  return (\n    <div className=\"w-full max-w-sm border\">\n      <div className=\"flex items-center justify-between gap-4 border-b p-4\">\n        <div>\n          <Label htmlFor=\"allow-notifications\">Allow notifications</Label>\n          <p className=\"text-xs text-muted-foreground\">\n            Turn off to silence everything.\n          </p>\n        </div>\n        <Switch\n          id=\"allow-notifications\"\n          checked={master}\n          onCheckedChange={setMaster}\n        />\n      </div>\n      <div\n        className={cn(\"flex flex-col gap-3 p-4 ps-8\", !master && \"opacity-60\")}\n      >\n        {children.map((child) => (\n          <div\n            key={child.id}\n            className=\"flex items-center justify-between gap-4\"\n          >\n            <Label htmlFor={child.id} className=\"font-normal\">\n              {child.label}\n            </Label>\n            <Switch id={child.id} size=\"sm\" defaultChecked disabled={!master} />\n          </div>\n        ))}\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

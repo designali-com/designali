@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "breadcrumb-46",
+  "type": "registry:example",
+  "description": "API reference breadcrumb with a version selector embedded as one of the levels.",
+  "files": [
+    {
+      "path": "registry/designali/examples/breadcrumb/breadcrumb-46.tsx",
+      "content": "import {\n  Breadcrumb,\n  BreadcrumbItem,\n  BreadcrumbLink,\n  BreadcrumbList,\n  BreadcrumbPage,\n  BreadcrumbSeparator,\n} from \"@workspace/ui/components/breadcrumb\"\nimport {\n  Select,\n  SelectContent,\n  SelectGroup,\n  SelectItem,\n  SelectTrigger,\n  SelectValue,\n} from \"@workspace/ui/components/select\"\n\nexport default function VersionSelectBreadcrumb() {\n  return (\n    <Breadcrumb>\n      <BreadcrumbList>\n        <BreadcrumbItem>\n          <BreadcrumbLink href=\"#\">API reference</BreadcrumbLink>\n        </BreadcrumbItem>\n        <BreadcrumbSeparator />\n        <BreadcrumbItem>\n          <Select defaultValue=\"v3\">\n            <SelectTrigger\n              size=\"sm\"\n              className=\"h-6 gap-1 px-2 text-xs\"\n              aria-label=\"API version\"\n            >\n              <SelectValue />\n            </SelectTrigger>\n            <SelectContent align=\"start\">\n              <SelectGroup>\n                <SelectItem value=\"v3\">v3 (latest)</SelectItem>\n                <SelectItem value=\"v2\">v2</SelectItem>\n                <SelectItem value=\"v1\">v1 (legacy)</SelectItem>\n              </SelectGroup>\n            </SelectContent>\n          </Select>\n        </BreadcrumbItem>\n        <BreadcrumbSeparator />\n        <BreadcrumbItem>\n          <BreadcrumbLink href=\"#\">Payments</BreadcrumbLink>\n        </BreadcrumbItem>\n        <BreadcrumbSeparator />\n        <BreadcrumbItem>\n          <BreadcrumbPage className=\"font-mono\">POST /refunds</BreadcrumbPage>\n        </BreadcrumbItem>\n      </BreadcrumbList>\n    </Breadcrumb>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

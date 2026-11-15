@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "breadcrumb-18",
+  "type": "registry:example",
+  "description": "Breadcrumb items styled as bordered chips with the current page filled.",
+  "files": [
+    {
+      "path": "registry/designali/examples/breadcrumb/breadcrumb-18.tsx",
+      "content": "import {\n  Breadcrumb,\n  BreadcrumbItem,\n  BreadcrumbLink,\n  BreadcrumbList,\n  BreadcrumbPage,\n  BreadcrumbSeparator,\n} from \"@workspace/ui/components/breadcrumb\"\n\nexport default function ChipBreadcrumb() {\n  return (\n    <Breadcrumb>\n      <BreadcrumbList className=\"gap-1\">\n        <BreadcrumbItem>\n          <BreadcrumbLink\n            href=\"#\"\n            className=\"border bg-background px-2 py-1 hover:bg-muted\"\n          >\n            Courses\n          </BreadcrumbLink>\n        </BreadcrumbItem>\n        <BreadcrumbSeparator />\n        <BreadcrumbItem>\n          <BreadcrumbLink\n            href=\"#\"\n            className=\"border bg-background px-2 py-1 hover:bg-muted\"\n          >\n            Data design\n          </BreadcrumbLink>\n        </BreadcrumbItem>\n        <BreadcrumbSeparator />\n        <BreadcrumbItem>\n          <BreadcrumbPage className=\"bg-primary px-2 py-1 text-primary-foreground\">\n            Color scales\n          </BreadcrumbPage>\n        </BreadcrumbItem>\n      </BreadcrumbList>\n    </Breadcrumb>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

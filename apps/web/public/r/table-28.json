@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "table-28",
+  "type": "registry:example",
+  "description": "A two-column specification table with row headers for a product detail page.",
+  "files": [
+    {
+      "path": "registry/designali/examples/table/table-28.tsx",
+      "content": "import {\n  Table,\n  TableBody,\n  TableCaption,\n  TableCell,\n  TableHead,\n  TableRow,\n} from \"@workspace/ui/components/table\"\n\nconst specs = [\n  [\"Dimensions\", \"38 × 26 × 14 cm\"],\n  [\"Weight\", \"1.2 kg\"],\n  [\"Material\", \"Recycled ripstop nylon\"],\n  [\"Capacity\", \"24 liters\"],\n  [\"Laptop sleeve\", \"Fits up to 16 in\"],\n  [\"Warranty\", \"Lifetime\"],\n]\n\nexport default function KeyValueSpecTable() {\n  return (\n    <div className=\"w-full max-w-sm border\">\n      <Table>\n        <TableCaption className=\"mb-3\">\n          Trailhead Daypack specifications\n        </TableCaption>\n        <TableBody>\n          {specs.map(([label, value]) => (\n            <TableRow key={label}>\n              <TableHead\n                scope=\"row\"\n                className=\"w-36 bg-muted/40 text-muted-foreground\"\n              >\n                {label}\n              </TableHead>\n              <TableCell>{value}</TableCell>\n            </TableRow>\n          ))}\n        </TableBody>\n      </Table>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

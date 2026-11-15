@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "switch-17",
+  "type": "registry:example",
+  "description": "Smart home device cards with per-room power switches and live status.",
+  "files": [
+    {
+      "path": "registry/designali/examples/switch/switch-17.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { FanIcon, HeaterIcon, LampIcon, TvIcon } from \"lucide-react\"\n\nimport { Switch } from \"@workspace/ui/components/switch\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst devices = [\n  {\n    id: \"lamp\",\n    name: \"Floor lamp\",\n    room: \"Living room\",\n    icon: LampIcon,\n    on: true,\n  },\n  { id: \"fan\", name: \"Ceiling fan\", room: \"Bedroom\", icon: FanIcon, on: false },\n  {\n    id: \"tv\",\n    name: \"Television\",\n    room: \"Living room\",\n    icon: TvIcon,\n    on: false,\n  },\n  {\n    id: \"heater\",\n    name: \"Space heater\",\n    room: \"Office\",\n    icon: HeaterIcon,\n    on: true,\n  },\n]\n\nexport default function SmartHomeDevices() {\n  const [power, setPower] = React.useState(() =>\n    Object.fromEntries(devices.map((device) => [device.id, device.on]))\n  )\n  const activeCount = Object.values(power).filter(Boolean).length\n\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-2\">\n      <p className=\"text-xs text-muted-foreground\">\n        {activeCount} of {devices.length} devices on\n      </p>\n      {devices.map((device) => (\n        <div key={device.id} className=\"flex items-center gap-3 border p-3\">\n          <div\n            className={cn(\n              \"flex size-9 items-center justify-center\",\n              power[device.id]\n                ? \"bg-primary text-primary-foreground\"\n                : \"bg-muted text-muted-foreground\"\n            )}\n          >\n            <device.icon className=\"size-4\" />\n          </div>\n          <div className=\"flex-1\">\n            <p className=\"text-sm font-medium\">{device.name}</p>\n            <p className=\"text-xs text-muted-foreground\">{device.room}</p>\n          </div>\n          <Switch\n            checked={power[device.id]}\n            onCheckedChange={(checked) =>\n              setPower((p) => ({ ...p, [device.id]: checked }))\n            }\n            aria-label={device.name}\n          />\n        </div>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

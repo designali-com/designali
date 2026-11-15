@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "card-31",
+  "type": "registry:example",
+  "description": "Weather widget card with current conditions and a five-day forecast row.",
+  "files": [
+    {
+      "path": "registry/designali/examples/card/card-31.tsx",
+      "content": "import {\n  CloudIcon,\n  CloudRainIcon,\n  CloudSunIcon,\n  DropletsIcon,\n  MapPinIcon,\n  SunIcon,\n  WindIcon,\n} from \"lucide-react\"\n\nimport {\n  Card,\n  CardAction,\n  CardContent,\n  CardDescription,\n  CardFooter,\n  CardHeader,\n  CardTitle,\n} from \"@workspace/ui/components/card\"\n\nconst forecast = [\n  { day: \"Tue\", icon: SunIcon, high: 21, low: 12 },\n  { day: \"Wed\", icon: CloudSunIcon, high: 19, low: 11 },\n  { day: \"Thu\", icon: CloudRainIcon, high: 15, low: 9 },\n  { day: \"Fri\", icon: CloudIcon, high: 16, low: 10 },\n  { day: \"Sat\", icon: SunIcon, high: 22, low: 13 },\n]\n\nexport default function WeatherForecastCard() {\n  return (\n    <Card className=\"w-full max-w-xs bg-gradient-to-b from-sky-500/10 to-transparent\">\n      <CardHeader>\n        <CardDescription className=\"flex items-center gap-1\">\n          <MapPinIcon className=\"size-3\" />\n          Porto, Portugal\n        </CardDescription>\n        <CardTitle className=\"text-4xl font-light tabular-nums\">18°</CardTitle>\n        <CardAction>\n          <CloudSunIcon className=\"size-12 text-amber-500\" strokeWidth={1.25} />\n        </CardAction>\n      </CardHeader>\n      <CardContent className=\"flex gap-3 text-muted-foreground\">\n        <span className=\"flex items-center gap-1\">\n          <WindIcon className=\"size-3.5\" /> 14 km/h\n        </span>\n        <span className=\"flex items-center gap-1\">\n          <DropletsIcon className=\"size-3.5\" /> 62%\n        </span>\n      </CardContent>\n      <CardFooter className=\"grid grid-cols-5 gap-1 text-center\">\n        {forecast.map((f) => (\n          <div key={f.day} className=\"grid justify-items-center gap-1\">\n            <span className=\"text-muted-foreground\">{f.day}</span>\n            <f.icon className=\"size-4\" />\n            <span className=\"tabular-nums\">\n              {f.high}° <span className=\"text-muted-foreground\">{f.low}°</span>\n            </span>\n          </div>\n        ))}\n      </CardFooter>\n    </Card>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

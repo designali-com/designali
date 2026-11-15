@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "dialog-28",
+  "type": "registry:example",
+  "description": "Compose dialog that fills the screen on mobile and becomes a modal on larger screens.",
+  "files": [
+    {
+      "path": "registry/designali/examples/dialog/dialog-28.tsx",
+      "content": "import { LinkIcon, PaperclipIcon, PenSquareIcon, SendIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  Dialog,\n  DialogClose,\n  DialogContent,\n  DialogFooter,\n  DialogHeader,\n  DialogTitle,\n  DialogTrigger,\n} from \"@workspace/ui/components/dialog\"\nimport { Textarea } from \"@workspace/ui/components/textarea\"\n\nexport default function FullscreenMobileComposeDialog() {\n  return (\n    <Dialog>\n      <DialogTrigger render={<Button />}>\n        <PenSquareIcon data-icon=\"inline-start\" />\n        New message\n      </DialogTrigger>\n      <DialogContent className=\"flex h-dvh max-w-none flex-col ring-0 sm:h-auto sm:max-w-lg sm:ring-1\">\n        <DialogHeader>\n          <DialogTitle>New message</DialogTitle>\n        </DialogHeader>\n        <div className=\"flex flex-col border-y\">\n          <label className=\"flex items-center gap-2 border-b py-2\">\n            <span className=\"w-10 text-muted-foreground\">To</span>\n            <input\n              className=\"flex-1 bg-transparent outline-none\"\n              defaultValue=\"design-team@orbitlabs.io\"\n            />\n          </label>\n          <label className=\"flex items-center gap-2 py-2\">\n            <span className=\"w-10 text-muted-foreground\">Subject</span>\n            <input\n              className=\"flex-1 bg-transparent outline-none\"\n              placeholder=\"Weekly review notes\"\n            />\n          </label>\n        </div>\n        <Textarea\n          className=\"min-h-40 flex-1 resize-none border-0 px-0 shadow-none focus-visible:ring-0\"\n          placeholder=\"Write your message...\"\n          aria-label=\"Message\"\n        />\n        <DialogFooter className=\"flex-row items-center justify-between sm:justify-between\">\n          <div className=\"flex gap-1\">\n            <Button variant=\"ghost\" size=\"icon-sm\" aria-label=\"Attach file\">\n              <PaperclipIcon />\n            </Button>\n            <Button variant=\"ghost\" size=\"icon-sm\" aria-label=\"Insert link\">\n              <LinkIcon />\n            </Button>\n          </div>\n          <DialogClose render={<Button />}>\n            <SendIcon data-icon=\"inline-start\" />\n            Send\n          </DialogClose>\n        </DialogFooter>\n      </DialogContent>\n    </Dialog>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

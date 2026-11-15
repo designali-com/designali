@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "call-to-action-19",
+  "type": "registry:block",
+  "description": "Oversized typographic studio CTA followed by a list of large arrow links and a contact email.",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/designali/blocks/call-to-action/call-to-action-19.tsx",
+      "content": "import { ArrowRight } from \"lucide-react\"\n\nconst links = [\n  [\"Start a project\", \"Tell us what you are building\"],\n  [\"Book a studio visit\", \"Lisbon, Thursdays 10:00 to 16:00\"],\n  [\"Read our process\", \"How we run a six-week sprint\"],\n]\n\nexport default function CallToAction19() {\n  return (\n    <section className=\"w-full overflow-hidden bg-background px-6 py-20 md:py-28\">\n      <div className=\"mx-auto max-w-7xl\">\n        <p className=\"text-xs tracking-[0.2em] text-muted-foreground uppercase\">\n          Atelier Vanta, independent design studio\n        </p>\n        <h2 className=\"mt-6 text-[13vw] leading-[0.9] font-medium tracking-tighter break-words md:text-[9rem]\">\n          Let&apos;s make\n          <br />\n          <span className=\"text-muted-foreground\">something good.</span>\n        </h2>\n        <div className=\"mt-14 border-t border-border\">\n          {links.map(([title, sub]) => (\n            <a\n              key={title}\n              href=\"#\"\n              className=\"group flex items-center justify-between gap-6 border-b border-border py-6 transition-colors hover:bg-muted/40 md:px-4\"\n            >\n              <div className=\"min-w-0\">\n                <div className=\"text-xl font-medium tracking-tight md:text-3xl\">\n                  {title}\n                </div>\n                <div className=\"mt-1 text-sm text-muted-foreground\">{sub}</div>\n              </div>\n              <span className=\"flex size-11 shrink-0 items-center justify-center border border-border transition-colors group-hover:bg-foreground group-hover:text-background\">\n                <ArrowRight className=\"size-5 transition-transform group-hover:-rotate-45\" />\n              </span>\n            </a>\n          ))}\n        </div>\n        <p className=\"mt-8 text-sm text-muted-foreground\">\n          Or write directly to{\" \"}\n          <a href=\"#\" className=\"text-foreground underline underline-offset-4\">\n            hello@ateliervanta.studio\n          </a>\n        </p>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "820px"
+  },
+  "categories": [
+    "call-to-action"
+  ]
+}

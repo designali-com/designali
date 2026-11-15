@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "textarea-37",
+  "type": "registry:example",
+  "description": "SQL query textarea with a run button and a small results table.",
+  "files": [
+    {
+      "path": "registry/designali/examples/textarea/textarea-37.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { PlayIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  Table,\n  TableBody,\n  TableCell,\n  TableHead,\n  TableHeader,\n  TableRow,\n} from \"@workspace/ui/components/table\"\nimport { Textarea } from \"@workspace/ui/components/textarea\"\n\nconst rows = [\n  { plan: \"starter\", users: 1204 },\n  { plan: \"team\", users: 388 },\n  { plan: \"enterprise\", users: 41 },\n]\n\nexport default function SqlQueryTextarea() {\n  const [ran, setRan] = React.useState(false)\n\n  return (\n    <div className=\"w-full max-w-md border\">\n      <Textarea\n        spellCheck={false}\n        defaultValue={\n          \"SELECT plan, count(*) AS users\\nFROM accounts\\nGROUP BY plan\\nORDER BY users DESC;\"\n        }\n        className=\"min-h-24 border-0 font-mono focus-visible:ring-0\"\n        aria-label=\"SQL query\"\n      />\n      <div className=\"flex items-center justify-between border-y bg-muted/40 px-2 py-1\">\n        <span className=\"text-xs text-muted-foreground\">\n          {ran ? \"3 rows · 18 ms\" : \"Not run yet\"}\n        </span>\n        <Button size=\"xs\" onClick={() => setRan(true)}>\n          <PlayIcon data-icon=\"inline-start\" />\n          Run\n        </Button>\n      </div>\n      {ran && (\n        <Table>\n          <TableHeader>\n            <TableRow>\n              <TableHead>plan</TableHead>\n              <TableHead className=\"text-end\">users</TableHead>\n            </TableRow>\n          </TableHeader>\n          <TableBody>\n            {rows.map((r) => (\n              <TableRow key={r.plan}>\n                <TableCell className=\"font-mono\">{r.plan}</TableCell>\n                <TableCell className=\"text-end tabular-nums\">\n                  {r.users}\n                </TableCell>\n              </TableRow>\n            ))}\n          </TableBody>\n        </Table>\n      )}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

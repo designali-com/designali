@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "table-45",
+  "type": "registry:example",
+  "description": "A radio-selectable shipping rates table used during checkout.",
+  "files": [
+    {
+      "path": "registry/designali/examples/table/table-45.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport {\n  RadioGroup,\n  RadioGroupItem,\n} from \"@workspace/ui/components/radio-group\"\nimport {\n  Table,\n  TableBody,\n  TableCell,\n  TableHead,\n  TableHeader,\n  TableRow,\n} from \"@workspace/ui/components/table\"\n\nconst rates = [\n  {\n    id: \"ground\",\n    carrier: \"Parcelway Ground\",\n    eta: \"5-7 business days\",\n    price: 0,\n  },\n  {\n    id: \"two-day\",\n    carrier: \"Parcelway 2-Day\",\n    eta: \"2 business days\",\n    price: 12.5,\n  },\n  {\n    id: \"overnight\",\n    carrier: \"SwiftAir Overnight\",\n    eta: \"Next business day\",\n    price: 29,\n  },\n]\n\nexport default function ShippingRatesTable() {\n  const [rate, setRate] = React.useState(\"two-day\")\n\n  return (\n    <RadioGroup\n      value={rate}\n      onValueChange={(v) => setRate(v as string)}\n      className=\"w-full max-w-lg gap-0 border\"\n    >\n      <Table>\n        <TableHeader>\n          <TableRow>\n            <TableHead className=\"w-8\" />\n            <TableHead>Method</TableHead>\n            <TableHead>Delivery</TableHead>\n            <TableHead className=\"text-right\">Cost</TableHead>\n          </TableRow>\n        </TableHeader>\n        <TableBody>\n          {rates.map((r) => (\n            <TableRow\n              key={r.id}\n              data-state={rate === r.id ? \"selected\" : undefined}\n              className=\"cursor-pointer\"\n              onClick={() => setRate(r.id)}\n            >\n              <TableCell>\n                <RadioGroupItem value={r.id} aria-label={r.carrier} />\n              </TableCell>\n              <TableCell className=\"font-medium\">{r.carrier}</TableCell>\n              <TableCell className=\"text-muted-foreground\">{r.eta}</TableCell>\n              <TableCell className=\"text-right tabular-nums\">\n                {r.price === 0 ? \"Free\" : \"$\" + r.price.toFixed(2)}\n              </TableCell>\n            </TableRow>\n          ))}\n        </TableBody>\n      </Table>\n    </RadioGroup>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

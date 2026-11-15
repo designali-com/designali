@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "table-31",
+  "type": "registry:example",
+  "description": "A fully bordered grid table with vertical cell dividers for a spreadsheet look.",
+  "files": [
+    {
+      "path": "registry/designali/examples/table/table-31.tsx",
+      "content": "import {\n  Table,\n  TableBody,\n  TableCell,\n  TableFooter,\n  TableHead,\n  TableHeader,\n  TableRow,\n} from \"@workspace/ui/components/table\"\n\nconst quarters = [\"Q1\", \"Q2\", \"Q3\", \"Q4\"]\nconst regions = [\n  { name: \"North America\", values: [412, 455, 498, 530] },\n  { name: \"Europe\", values: [301, 322, 340, 365] },\n  { name: \"Asia Pacific\", values: [190, 228, 260, 301] },\n]\n\nexport default function BorderedGridTable() {\n  return (\n    <div className=\"w-full max-w-lg border\">\n      <Table className=\"[&_td]:border-e [&_td:last-child]:border-e-0 [&_th]:border-e [&_th:last-child]:border-e-0\">\n        <TableHeader className=\"bg-muted/50\">\n          <TableRow>\n            <TableHead>Region ($K)</TableHead>\n            {quarters.map((q) => (\n              <TableHead key={q} className=\"text-right\">\n                {q}\n              </TableHead>\n            ))}\n          </TableRow>\n        </TableHeader>\n        <TableBody>\n          {regions.map((region) => (\n            <TableRow key={region.name}>\n              <TableCell className=\"font-medium\">{region.name}</TableCell>\n              {region.values.map((v, i) => (\n                <TableCell\n                  key={quarters[i]}\n                  className=\"text-right tabular-nums\"\n                >\n                  {v}\n                </TableCell>\n              ))}\n            </TableRow>\n          ))}\n        </TableBody>\n        <TableFooter>\n          <TableRow>\n            <TableCell>Total</TableCell>\n            {quarters.map((q, i) => (\n              <TableCell key={q} className=\"text-right tabular-nums\">\n                {regions.reduce((s, r) => s + r.values[i]!, 0)}\n              </TableCell>\n            ))}\n          </TableRow>\n        </TableFooter>\n      </Table>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "spinner-13",
+  "type": "registry:example",
+  "description": "Upload queue where in-progress files show a spinner beside done and failed files.",
+  "files": [
+    {
+      "path": "registry/designali/examples/spinner/spinner-13.tsx",
+      "content": "import { CircleCheckIcon, FileIcon, RotateCwIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  Item,\n  ItemActions,\n  ItemContent,\n  ItemDescription,\n  ItemGroup,\n  ItemMedia,\n  ItemTitle,\n} from \"@workspace/ui/components/item\"\nimport { Spinner } from \"@workspace/ui/components/spinner\"\n\nconst files = [\n  { name: \"brand-guidelines.pdf\", size: \"4.2 MB\", state: \"done\" },\n  { name: \"hero-video.mp4\", size: \"86.1 MB\", state: \"uploading\" },\n  { name: \"pricing-table.xlsx\", size: \"312 KB\", state: \"uploading\" },\n  { name: \"logo-final.sketch\", size: \"18.4 MB\", state: \"failed\" },\n]\n\nexport default function FileUploadQueue() {\n  return (\n    <ItemGroup className=\"w-full max-w-sm border\">\n      {files.map((file) => (\n        <Item key={file.name} size=\"sm\">\n          <ItemMedia variant=\"icon\">\n            <FileIcon />\n          </ItemMedia>\n          <ItemContent>\n            <ItemTitle className=\"truncate\">{file.name}</ItemTitle>\n            <ItemDescription>\n              {file.state === \"failed\" ? \"Upload failed\" : file.size}\n            </ItemDescription>\n          </ItemContent>\n          <ItemActions>\n            {file.state === \"uploading\" && (\n              <Spinner className=\"text-muted-foreground\" />\n            )}\n            {file.state === \"done\" && (\n              <CircleCheckIcon className=\"size-4 text-emerald-600 dark:text-emerald-400\" />\n            )}\n            {file.state === \"failed\" && (\n              <Button variant=\"ghost\" size=\"icon-xs\" aria-label=\"Retry upload\">\n                <RotateCwIcon />\n              </Button>\n            )}\n          </ItemActions>\n        </Item>\n      ))}\n    </ItemGroup>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

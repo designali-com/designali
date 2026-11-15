@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "pagination-32",
+  "type": "registry:example",
+  "description": "Review queue pagination with dots marking pages that contain unread items.",
+  "files": [
+    {
+      "path": "registry/designali/examples/pagination/pagination-32.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport {\n  Pagination,\n  PaginationContent,\n  PaginationItem,\n  PaginationLink,\n} from \"@workspace/ui/components/pagination\"\n\nconst unread = new Set([2, 5])\n\nexport default function UnreadMarkerPagination() {\n  const [page, setPage] = React.useState(1)\n\n  return (\n    <div className=\"flex w-full max-w-md flex-col items-center gap-2\">\n      <Pagination>\n        <PaginationContent>\n          {[1, 2, 3, 4, 5, 6].map((p) => (\n            <PaginationItem key={p}>\n              <PaginationLink\n                href=\"#\"\n                isActive={p === page}\n                className=\"relative\"\n                aria-label={\n                  unread.has(p)\n                    ? \"Page \" + p + \", has unread reviews\"\n                    : \"Page \" + p\n                }\n                onClick={(event) => {\n                  event.preventDefault()\n                  setPage(p)\n                }}\n              >\n                {p}\n                {unread.has(p) && (\n                  <span className=\"absolute end-1 top-1 size-1.5 rounded-full bg-primary\" />\n                )}\n              </PaginationLink>\n            </PaginationItem>\n          ))}\n        </PaginationContent>\n      </Pagination>\n      <p className=\"text-xs text-muted-foreground\">\n        Pages with a dot contain unread reviews\n      </p>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

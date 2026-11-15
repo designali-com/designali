@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "alert-40",
+  "type": "registry:example",
+  "description": "Order tracking page with an info alert about a carrier delay and the revised delivery date.",
+  "files": [
+    {
+      "path": "registry/designali/examples/alert/alert-40.tsx",
+      "content": "import { TruckIcon } from \"lucide-react\"\n\nimport {\n  Alert,\n  AlertDescription,\n  AlertTitle,\n} from \"@workspace/ui/components/alert\"\nimport { Badge } from \"@workspace/ui/components/badge\"\nimport { Button } from \"@workspace/ui/components/button\"\n\nexport default function AlertShippingDelay() {\n  return (\n    <div className=\"w-full max-w-sm space-y-3\">\n      <div className=\"flex items-center justify-between text-xs\">\n        <div>\n          <p className=\"font-medium\">Order #48213</p>\n          <p className=\"text-muted-foreground\">Tracking HX-2209-8841</p>\n        </div>\n        <Badge variant=\"secondary\">In transit</Badge>\n      </div>\n      <Alert variant=\"info\">\n        <TruckIcon />\n        <AlertTitle>Your delivery is running late</AlertTitle>\n        <AlertDescription>\n          Storms in the region slowed the carrier. New estimate:{\" \"}\n          <span className=\"font-medium text-foreground\">Wed, Nov 19</span>{\" \"}\n          <span className=\"line-through\">Mon, Nov 17</span>\n        </AlertDescription>\n      </Alert>\n      <Button size=\"sm\" variant=\"outline\" className=\"w-full\">\n        Track package\n      </Button>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

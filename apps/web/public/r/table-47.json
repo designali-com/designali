@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "table-47",
+  "type": "registry:example",
+  "description": "A before-and-after settings comparison highlighting changed values.",
+  "files": [
+    {
+      "path": "registry/designali/examples/table/table-47.tsx",
+      "content": "import { ArrowRightIcon } from \"lucide-react\"\n\nimport {\n  Table,\n  TableBody,\n  TableCell,\n  TableHead,\n  TableHeader,\n  TableRow,\n} from \"@workspace/ui/components/table\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst changes = [\n  { setting: \"Session timeout\", before: \"30 min\", after: \"15 min\" },\n  { setting: \"Password length\", before: \"8\", after: \"12\" },\n  { setting: \"Allowed domains\", before: \"orbit.dev\", after: \"orbit.dev\" },\n  { setting: \"MFA required\", before: \"Admins only\", after: \"Everyone\" },\n]\n\nexport default function ComparisonDiffTable() {\n  return (\n    <div className=\"w-full max-w-lg border\">\n      <Table>\n        <TableHeader>\n          <TableRow>\n            <TableHead>Setting</TableHead>\n            <TableHead>Current</TableHead>\n            <TableHead className=\"w-6\" />\n            <TableHead>Proposed</TableHead>\n          </TableRow>\n        </TableHeader>\n        <TableBody>\n          {changes.map((c) => {\n            const changed = c.before !== c.after\n            return (\n              <TableRow key={c.setting}>\n                <TableCell className=\"font-medium\">{c.setting}</TableCell>\n                <TableCell\n                  className={cn(\n                    changed\n                      ? \"text-muted-foreground line-through\"\n                      : \"text-muted-foreground\"\n                  )}\n                >\n                  {c.before}\n                </TableCell>\n                <TableCell>\n                  <ArrowRightIcon className=\"size-3 text-muted-foreground\" />\n                </TableCell>\n                <TableCell>\n                  <span\n                    className={cn(\n                      changed &&\n                        \"bg-emerald-500/15 px-1 font-medium text-emerald-700 dark:text-emerald-300\"\n                    )}\n                  >\n                    {c.after}\n                  </span>\n                </TableCell>\n              </TableRow>\n            )\n          })}\n        </TableBody>\n      </Table>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

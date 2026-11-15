@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "progress-37",
+  "type": "registry:example",
+  "description": "Gamified experience bar showing points toward the next level.",
+  "files": [
+    {
+      "path": "registry/designali/examples/progress/progress-37.tsx",
+      "content": "import { TrophyIcon } from \"lucide-react\"\n\nimport { Progress, ProgressLabel } from \"@workspace/ui/components/progress\"\n\nexport default function LevelExperienceBar() {\n  return (\n    <div className=\"flex w-full max-w-sm items-center gap-4 border p-4\">\n      <div className=\"flex size-12 shrink-0 flex-col items-center justify-center bg-primary text-primary-foreground\">\n        <span className=\"text-[10px] uppercase\">Lvl</span>\n        <span className=\"text-lg leading-none font-semibold\">7</span>\n      </div>\n      <Progress\n        value={2340}\n        min={2000}\n        max={3000}\n        className=\"flex-1 [&_[data-slot=progress-track]]:h-2\"\n      >\n        <ProgressLabel className=\"flex items-center gap-1 text-sm font-medium\">\n          <TrophyIcon className=\"size-3.5\" />\n          Trailblazer\n        </ProgressLabel>\n        <span className=\"ms-auto text-xs text-muted-foreground tabular-nums\">\n          660 XP to level 8\n        </span>\n      </Progress>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

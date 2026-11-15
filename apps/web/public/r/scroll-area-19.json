@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "scroll-area-19",
+  "type": "registry:example",
+  "description": "Scroll area that fades its top and bottom edges only when more content exists.",
+  "files": [
+    {
+      "path": "registry/designali/examples/scroll-area/scroll-area-19.tsx",
+      "content": "import { ScrollArea } from \"@workspace/ui/components/scroll-area\"\n\nconst steps = [\n  \"Create your workspace\",\n  \"Invite your team\",\n  \"Connect your calendar\",\n  \"Import existing projects\",\n  \"Set up notifications\",\n  \"Choose a theme\",\n  \"Install the desktop app\",\n  \"Enable two-factor auth\",\n  \"Configure billing\",\n  \"Create your first report\",\n  \"Share a dashboard\",\n  \"Explore integrations\",\n]\n\nexport default function FadeEdgeIndicators() {\n  return (\n    <ScrollArea className=\"group/scroll h-64 w-full max-w-xs border\">\n      <div className=\"pointer-events-none sticky top-0 z-10 -mb-8 h-8 bg-gradient-to-b from-background to-transparent opacity-0 transition-opacity group-data-[overflow-y-start]/scroll:opacity-100\" />\n      <ol className=\"flex flex-col gap-1 p-3\">\n        {steps.map((step, i) => (\n          <li key={step} className=\"flex items-center gap-2 px-2 py-2 text-xs\">\n            <span className=\"flex size-5 shrink-0 items-center justify-center bg-muted font-mono text-[10px]\">\n              {i + 1}\n            </span>\n            {step}\n          </li>\n        ))}\n      </ol>\n      <div className=\"pointer-events-none sticky bottom-0 -mt-8 h-8 bg-gradient-to-t from-background to-transparent opacity-0 transition-opacity group-data-[overflow-y-end]/scroll:opacity-100\" />\n    </ScrollArea>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

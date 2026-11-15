@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "testimonials-07",
+  "type": "registry:block",
+  "description": "Numbered list of large quotes with highlighted key phrases and right-aligned attribution.",
+  "dependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/designali/blocks/testimonials/testimonials-07.tsx",
+      "content": "const quotes = [\n  {\n    before: \"We used to spend Mondays reconciling spreadsheets. Now \",\n    highlight: \"the report is waiting in Slack before standup\",\n    after: \", and nobody has opened Excel in months.\",\n    name: \"Priya Raman\",\n    role: \"Head of Ops, Kestrel Freight\",\n  },\n  {\n    before: \"Switching took one afternoon. \",\n    highlight: \"Our on-call pages dropped by 70%\",\n    after: \" in the first month because alerts finally had context.\",\n    name: \"Tomas Lindqvist\",\n    role: \"Staff SRE, Halcyon Labs\",\n  },\n  {\n    before: \"I have tried every tool in this category. This is \",\n    highlight: \"the first one my whole team actually uses\",\n    after: \" without me nagging them about it.\",\n    name: \"Jordan Ellis\",\n    role: \"Design Director, Paperplane\",\n  },\n]\n\nexport default function Testimonials07() {\n  return (\n    <section className=\"w-full bg-background py-20 md:py-28\">\n      <div className=\"mx-auto max-w-5xl px-6\">\n        <p className=\"text-xs tracking-[0.2em] text-muted-foreground uppercase\">\n          In their words\n        </p>\n        <ol className=\"mt-10 border-t border-border\">\n          {quotes.map((q, i) => (\n            <li\n              key={q.name}\n              className=\"grid gap-6 border-b border-border py-10 md:grid-cols-[80px_1fr_220px] md:gap-10\"\n            >\n              <span className=\"font-mono text-sm text-muted-foreground\">\n                {String(i + 1).padStart(2, \"0\")}\n              </span>\n              <blockquote className=\"text-xl leading-relaxed tracking-tight md:text-2xl\">\n                &ldquo;{q.before}\n                <mark className=\"bg-yellow-200/70 px-1 text-foreground dark:bg-yellow-500/30\">\n                  {q.highlight}\n                </mark>\n                {q.after}&rdquo;\n              </blockquote>\n              <div className=\"text-sm md:text-right\">\n                <div className=\"font-medium\">{q.name}</div>\n                <div className=\"mt-1 text-muted-foreground\">{q.role}</div>\n              </div>\n            </li>\n          ))}\n        </ol>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "720px"
+  },
+  "categories": [
+    "testimonials"
+  ]
+}

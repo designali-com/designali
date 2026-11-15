@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toggle-group-33",
+  "type": "registry:example",
+  "description": "Pricing currency switch that reformats the displayed plan price.",
+  "files": [
+    {
+      "path": "registry/designali/examples/toggle-group/toggle-group-33.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport {\n  ToggleGroup,\n  ToggleGroupItem,\n} from \"@workspace/ui/components/toggle-group\"\n\nconst rates: Record<string, { symbol: string; rate: number }> = {\n  usd: { symbol: \"$\", rate: 1 },\n  eur: { symbol: \"€\", rate: 0.92 },\n  gbp: { symbol: \"£\", rate: 0.79 },\n}\n\nexport default function CurrencyToggleGroup() {\n  const [currency, setCurrency] = React.useState(\"usd\")\n  const { symbol, rate } = rates[currency]!\n\n  return (\n    <div className=\"flex w-full max-w-xs flex-col items-center gap-3 border p-5\">\n      <ToggleGroup\n        size=\"sm\"\n        spacing={0}\n        variant=\"outline\"\n        value={[currency]}\n        onValueChange={(next) => next[0] && setCurrency(next[0])}\n      >\n        {Object.keys(rates).map((c) => (\n          <ToggleGroupItem key={c} value={c} className=\"uppercase\">\n            {c}\n          </ToggleGroupItem>\n        ))}\n      </ToggleGroup>\n      <span className=\"text-3xl font-semibold tabular-nums\">\n        {symbol}\n        {(49 * rate).toFixed(2)}\n      </span>\n      <span className=\"text-xs text-muted-foreground\">\n        Studio plan, per month\n      </span>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

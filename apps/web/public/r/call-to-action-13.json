@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "call-to-action-13",
+  "type": "registry:block",
+  "description": "Three numbered onboarding steps with time estimates in a bordered grid, headed by a get-started button.",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "registry/designali/blocks/call-to-action/call-to-action-13.tsx",
+      "content": "import { ArrowRight } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\n\nconst steps = [\n  {\n    title: \"Create a workspace\",\n    body: \"Sign up with your work email. We import your team from Slack or Google automatically.\",\n    time: \"30 sec\",\n  },\n  {\n    title: \"Connect a repository\",\n    body: \"Pick a GitHub or GitLab repo and Relay maps your services, owners and environments.\",\n    time: \"2 min\",\n  },\n  {\n    title: \"Ship your first preview\",\n    body: \"Open a pull request and get a shareable preview URL with logs, before review even starts.\",\n    time: \"4 min\",\n  },\n]\n\nexport default function CallToAction13() {\n  return (\n    <section className=\"w-full bg-background px-6 py-20 md:py-28\">\n      <div className=\"mx-auto max-w-6xl\">\n        <div className=\"flex flex-col justify-between gap-6 md:flex-row md:items-end\">\n          <h2 className=\"max-w-xl text-3xl font-medium tracking-tight md:text-5xl\">\n            Live in production before your coffee cools.\n          </h2>\n          <Button size=\"lg\" nativeButton={false} render={<a href=\"#\" />}>\n            Start step one\n            <ArrowRight data-icon=\"inline-end\" />\n          </Button>\n        </div>\n        <ol className=\"mt-14 grid gap-px border border-border bg-border md:grid-cols-3\">\n          {steps.map((step, i) => (\n            <li key={step.title} className=\"relative bg-background p-8\">\n              <div className=\"flex items-center justify-between\">\n                <span className=\"flex size-9 items-center justify-center bg-foreground font-mono text-sm text-background\">\n                  {String(i + 1).padStart(2, \"0\")}\n                </span>\n                <span className=\"font-mono text-xs text-muted-foreground\">\n                  ~{step.time}\n                </span>\n              </div>\n              <h3 className=\"mt-8 text-lg font-medium\">{step.title}</h3>\n              <p className=\"mt-2 text-sm leading-6 text-muted-foreground\">\n                {step.body}\n              </p>\n            </li>\n          ))}\n        </ol>\n        <p className=\"mt-6 text-center text-xs text-muted-foreground\">\n          Total time to first deploy: about 6 minutes. Free on the Hobby plan.\n        </p>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "560px"
+  },
+  "categories": [
+    "call-to-action"
+  ]
+}

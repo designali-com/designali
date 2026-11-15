@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toggle-18",
+  "type": "registry:example",
+  "description": "A reading list where each article has a bookmark toggle and a running saved count.",
+  "files": [
+    {
+      "path": "registry/designali/examples/toggle/toggle-18.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { BookmarkIcon } from \"lucide-react\"\n\nimport { Toggle } from \"@workspace/ui/components/toggle\"\n\nconst articles = [\n  { id: \"a\", title: \"Designing calm notifications\", mins: 6 },\n  { id: \"b\", title: \"A field guide to color tokens\", mins: 11 },\n  { id: \"c\", title: \"Why your forms feel slow\", mins: 4 },\n]\n\nexport default function ArticleBookmarkToggles() {\n  const [saved, setSaved] = React.useState<string[]>([\"b\"])\n\n  return (\n    <div className=\"w-full max-w-sm border\">\n      <div className=\"flex justify-between border-b bg-muted/40 px-3 py-2 text-xs text-muted-foreground\">\n        <span>This week</span>\n        <span>{saved.length} saved</span>\n      </div>\n      {articles.map((a) => (\n        <div\n          key={a.id}\n          className=\"flex items-center gap-3 border-b px-3 py-2.5 last:border-b-0\"\n        >\n          <div className=\"min-w-0 flex-1\">\n            <p className=\"truncate text-sm\">{a.title}</p>\n            <p className=\"text-xs text-muted-foreground\">{a.mins} min read</p>\n          </div>\n          <Toggle\n            size=\"sm\"\n            pressed={saved.includes(a.id)}\n            onPressedChange={(on) =>\n              setSaved((prev) =>\n                on ? [...prev, a.id] : prev.filter((x) => x !== a.id)\n              )\n            }\n            aria-label={\"Bookmark \" + a.title}\n          >\n            <BookmarkIcon className=\"group-aria-pressed/toggle:fill-current\" />\n          </Toggle>\n        </div>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "radio-group-27",
+  "type": "registry:example",
+  "description": "Popover with a radio group for choosing a list sort order.",
+  "files": [
+    {
+      "path": "registry/designali/examples/radio-group/radio-group-27.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { ArrowUpDownIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Field, FieldLabel } from \"@workspace/ui/components/field\"\nimport {\n  Popover,\n  PopoverContent,\n  PopoverHeader,\n  PopoverTitle,\n  PopoverTrigger,\n} from \"@workspace/ui/components/popover\"\nimport {\n  RadioGroup,\n  RadioGroupItem,\n} from \"@workspace/ui/components/radio-group\"\n\nconst sorts = [\n  { value: \"recent\", label: \"Most recent\" },\n  { value: \"oldest\", label: \"Oldest first\" },\n  { value: \"name\", label: \"Name A-Z\" },\n  { value: \"size\", label: \"File size\" },\n]\n\nexport default function SortOrderPopover() {\n  const [sort, setSort] = React.useState(\"recent\")\n  const current = sorts.find((s) => s.value === sort)\n\n  return (\n    <Popover>\n      <PopoverTrigger render={<Button variant=\"outline\" size=\"sm\" />}>\n        <ArrowUpDownIcon data-icon=\"inline-start\" />\n        {current?.label}\n      </PopoverTrigger>\n      <PopoverContent className=\"w-52\">\n        <PopoverHeader>\n          <PopoverTitle>Sort files by</PopoverTitle>\n        </PopoverHeader>\n        <RadioGroup\n          value={sort}\n          onValueChange={(v) => setSort(v as string)}\n          className=\"gap-3\"\n        >\n          {sorts.map((s) => (\n            <Field key={s.value} orientation=\"horizontal\">\n              <RadioGroupItem value={s.value} id={\"sort-\" + s.value} />\n              <FieldLabel htmlFor={\"sort-\" + s.value} className=\"font-normal\">\n                {s.label}\n              </FieldLabel>\n            </Field>\n          ))}\n        </RadioGroup>\n      </PopoverContent>\n    </Popover>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

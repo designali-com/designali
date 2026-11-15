@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button-49",
+  "type": "registry:example",
+  "description": "Refresh button whose icon spins while data reloads and that updates a last-synced label.",
+  "files": [
+    {
+      "path": "registry/designali/examples/button/button-49.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { RefreshCwIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nexport default function RefreshDataButton() {\n  const [refreshing, setRefreshing] = React.useState(false)\n  const [synced, setSynced] = React.useState(\"5 minutes ago\")\n\n  function refresh() {\n    setRefreshing(true)\n    setTimeout(() => {\n      setRefreshing(false)\n      setSynced(\"just now\")\n    }, 1000)\n  }\n\n  return (\n    <div className=\"flex items-center gap-3\">\n      <span className=\"text-xs text-muted-foreground\">\n        Last synced {synced}\n      </span>\n      <Button\n        variant=\"outline\"\n        size=\"sm\"\n        disabled={refreshing}\n        onClick={refresh}\n      >\n        <RefreshCwIcon\n          data-icon=\"inline-start\"\n          className={cn(refreshing && \"animate-spin\")}\n        />\n        Refresh\n      </Button>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

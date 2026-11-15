@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "pagination-04",
+  "type": "registry:example",
+  "description": "Stateful pagination that disables Previous and Next at the first and last page.",
+  "files": [
+    {
+      "path": "registry/designali/examples/pagination/pagination-04.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport {\n  Pagination,\n  PaginationContent,\n  PaginationItem,\n  PaginationLink,\n  PaginationNext,\n  PaginationPrevious,\n} from \"@workspace/ui/components/pagination\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst TOTAL = 5\n\nexport default function ControlledPagination() {\n  const [page, setPage] = React.useState(1)\n\n  const go = (event: React.MouseEvent, next: number) => {\n    event.preventDefault()\n    setPage(Math.min(TOTAL, Math.max(1, next)))\n  }\n\n  return (\n    <div className=\"flex w-full max-w-md flex-col items-center gap-3\">\n      <Pagination>\n        <PaginationContent>\n          <PaginationItem>\n            <PaginationPrevious\n              href=\"#\"\n              aria-disabled={page === 1}\n              className={cn(page === 1 && \"pointer-events-none opacity-50\")}\n              onClick={(event) => go(event, page - 1)}\n            />\n          </PaginationItem>\n          {Array.from({ length: TOTAL }, (_, i) => i + 1).map((p) => (\n            <PaginationItem key={p}>\n              <PaginationLink\n                href=\"#\"\n                isActive={p === page}\n                onClick={(event) => go(event, p)}\n              >\n                {p}\n              </PaginationLink>\n            </PaginationItem>\n          ))}\n          <PaginationItem>\n            <PaginationNext\n              href=\"#\"\n              aria-disabled={page === TOTAL}\n              className={cn(page === TOTAL && \"pointer-events-none opacity-50\")}\n              onClick={(event) => go(event, page + 1)}\n            />\n          </PaginationItem>\n        </PaginationContent>\n      </Pagination>\n      <p className=\"text-xs text-muted-foreground\">\n        Page {page} of {TOTAL}\n      </p>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

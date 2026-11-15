@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "menubar-34",
+  "type": "registry:example",
+  "description": "Notifications menubar with closeOnClick disabled so several channel checkboxes can be toggled in one go.",
+  "files": [
+    {
+      "path": "registry/designali/examples/menubar/menubar-34.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { BellIcon, HashIcon, MailIcon, MessageSquareIcon } from \"lucide-react\"\n\nimport {\n  Menubar,\n  MenubarCheckboxItem,\n  MenubarContent,\n  MenubarGroup,\n  MenubarItem,\n  MenubarLabel,\n  MenubarMenu,\n  MenubarTrigger,\n} from \"@workspace/ui/components/menubar\"\n\nconst channels = [\n  { id: \"email\", label: \"Email\", icon: MailIcon },\n  { id: \"push\", label: \"Push\", icon: BellIcon },\n  { id: \"sms\", label: \"SMS\", icon: MessageSquareIcon },\n  { id: \"slack\", label: \"Team chat\", icon: HashIcon },\n]\n\nexport default function NotificationChannelsMenubar() {\n  const [enabled, setEnabled] = React.useState<Record<string, boolean>>({\n    email: true,\n    push: true,\n    sms: false,\n    slack: false,\n  })\n  const active = channels.filter((c) => enabled[c.id]).map((c) => c.label)\n\n  return (\n    <div className=\"flex w-full max-w-xs flex-col gap-2\">\n      <Menubar>\n        <MenubarMenu>\n          <MenubarTrigger>Notifications</MenubarTrigger>\n          <MenubarContent className=\"w-48\">\n            <MenubarGroup>\n              <MenubarLabel inset>Deliver via</MenubarLabel>\n              {channels.map((c) => (\n                <MenubarCheckboxItem\n                  key={c.id}\n                  closeOnClick={false}\n                  checked={enabled[c.id]}\n                  onCheckedChange={(checked) =>\n                    setEnabled((s) => ({ ...s, [c.id]: checked }))\n                  }\n                >\n                  <c.icon /> {c.label}\n                </MenubarCheckboxItem>\n              ))}\n            </MenubarGroup>\n          </MenubarContent>\n        </MenubarMenu>\n        <MenubarMenu>\n          <MenubarTrigger>Schedule</MenubarTrigger>\n          <MenubarContent>\n            <MenubarGroup>\n              <MenubarItem>Pause for 1 hour</MenubarItem>\n              <MenubarItem>Quiet hours...</MenubarItem>\n            </MenubarGroup>\n          </MenubarContent>\n        </MenubarMenu>\n      </Menubar>\n      <p className=\"text-xs text-muted-foreground\">\n        {active.length\n          ? \"Sending to \" + active.join(\", \")\n          : \"All channels are off\"}\n      </p>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

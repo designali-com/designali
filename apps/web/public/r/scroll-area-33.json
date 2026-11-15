@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "scroll-area-33",
+  "type": "registry:example",
+  "description": "Contacts directory with sticky alphabetical group headers.",
+  "files": [
+    {
+      "path": "registry/designali/examples/scroll-area/scroll-area-33.tsx",
+      "content": "import { Avatar, AvatarFallback } from \"@workspace/ui/components/avatar\"\nimport { ScrollArea } from \"@workspace/ui/components/scroll-area\"\n\nconst contacts = [\n  \"Aiko Tanaka\",\n  \"Amara Obi\",\n  \"Ben Okafor\",\n  \"Bianca Ruiz\",\n  \"Carlos Mendes\",\n  \"Chloe Martin\",\n  \"Dev Raman\",\n  \"Dina Kovac\",\n  \"Elif Hansen\",\n  \"Emil Strand\",\n  \"Farah Nasser\",\n  \"Felix Braun\",\n  \"Gia Santos\",\n  \"Hana Sato\",\n  \"Hugo Laurent\",\n]\n\nexport default function StickyAlphabetContacts() {\n  const groups = contacts.reduce<Record<string, string[]>>((acc, name) => {\n    const key = name[0]!\n    ;(acc[key] ??= []).push(name)\n    return acc\n  }, {})\n\n  return (\n    <ScrollArea className=\"h-72 w-full max-w-xs border\">\n      {Object.entries(groups).map(([letter, names]) => (\n        <div key={letter}>\n          <div className=\"sticky top-0 z-10 border-b bg-muted px-3 py-1 text-[11px] font-semibold\">\n            {letter}\n          </div>\n          {names.map((name) => (\n            <div\n              key={name}\n              className=\"flex items-center gap-2 px-3 py-2 text-xs\"\n            >\n              <Avatar className=\"size-6\">\n                <AvatarFallback className=\"text-[10px]\">\n                  {name\n                    .split(\" \")\n                    .map((p) => p[0])\n                    .join(\"\")}\n                </AvatarFallback>\n              </Avatar>\n              {name}\n            </div>\n          ))}\n        </div>\n      ))}\n    </ScrollArea>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

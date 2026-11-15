@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toggle-group-12",
+  "type": "registry:example",
+  "description": "Export quality picker where the 4K option is disabled behind a Pro badge.",
+  "files": [
+    {
+      "path": "registry/designali/examples/toggle-group/toggle-group-12.tsx",
+      "content": "import { Badge } from \"@workspace/ui/components/badge\"\nimport {\n  ToggleGroup,\n  ToggleGroupItem,\n} from \"@workspace/ui/components/toggle-group\"\n\nexport default function DisabledItemToggleGroup() {\n  return (\n    <div className=\"flex flex-col gap-2\">\n      <span className=\"text-sm font-medium\">Export quality</span>\n      <ToggleGroup variant=\"outline\" defaultValue={[\"1080p\"]}>\n        <ToggleGroupItem value=\"720p\">720p</ToggleGroupItem>\n        <ToggleGroupItem value=\"1080p\">1080p</ToggleGroupItem>\n        <ToggleGroupItem value=\"4k\" disabled>\n          4K\n          <Badge className=\"ms-1\">Pro</Badge>\n        </ToggleGroupItem>\n      </ToggleGroup>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

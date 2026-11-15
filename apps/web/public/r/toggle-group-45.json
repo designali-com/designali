@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toggle-group-45",
+  "type": "registry:example",
+  "description": "File manager filter for documents, images, videos and audio with a filtered file list.",
+  "files": [
+    {
+      "path": "registry/designali/examples/toggle-group/toggle-group-45.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport {\n  FileAudioIcon,\n  FileTextIcon,\n  FileVideoIcon,\n  ImageIcon,\n} from \"lucide-react\"\n\nimport {\n  ToggleGroup,\n  ToggleGroupItem,\n} from \"@workspace/ui/components/toggle-group\"\n\nconst files = [\n  { name: \"Q3-report.pdf\", type: \"doc\", size: \"2.4 MB\" },\n  { name: \"hero-banner.png\", type: \"image\", size: \"840 KB\" },\n  { name: \"onboarding.mp4\", type: \"video\", size: \"48 MB\" },\n  { name: \"brand-sting.wav\", type: \"audio\", size: \"3.1 MB\" },\n  { name: \"roadmap.docx\", type: \"doc\", size: \"112 KB\" },\n]\n\nexport default function FileTypeFilterToggleGroup() {\n  const [types, setTypes] = React.useState<string[]>([\"doc\", \"image\"])\n  const shown = files.filter((f) => types.includes(f.type))\n\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-3\">\n      <ToggleGroup\n        multiple\n        size=\"sm\"\n        variant=\"outline\"\n        spacing={0}\n        value={types}\n        onValueChange={setTypes}\n      >\n        <ToggleGroupItem value=\"doc\" aria-label=\"Documents\">\n          <FileTextIcon />\n        </ToggleGroupItem>\n        <ToggleGroupItem value=\"image\" aria-label=\"Images\">\n          <ImageIcon />\n        </ToggleGroupItem>\n        <ToggleGroupItem value=\"video\" aria-label=\"Videos\">\n          <FileVideoIcon />\n        </ToggleGroupItem>\n        <ToggleGroupItem value=\"audio\" aria-label=\"Audio\">\n          <FileAudioIcon />\n        </ToggleGroupItem>\n      </ToggleGroup>\n      <div className=\"flex flex-col divide-y border text-sm\">\n        {shown.length ? (\n          shown.map((f) => (\n            <div key={f.name} className=\"flex justify-between px-3 py-2\">\n              <span className=\"truncate\">{f.name}</span>\n              <span className=\"text-xs text-muted-foreground\">{f.size}</span>\n            </div>\n          ))\n        ) : (\n          <p className=\"px-3 py-6 text-center text-xs text-muted-foreground\">\n            No file types selected.\n          </p>\n        )}\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

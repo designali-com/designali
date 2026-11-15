@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "switch-29",
+  "type": "registry:example",
+  "description": "Editor settings with switches for keyboard shortcuts shown alongside their keys.",
+  "files": [
+    {
+      "path": "registry/designali/examples/switch/switch-29.tsx",
+      "content": "import { Kbd, KbdGroup } from \"@workspace/ui/components/kbd\"\nimport { Label } from \"@workspace/ui/components/label\"\nimport { Switch } from \"@workspace/ui/components/switch\"\n\nconst shortcuts = [\n  { id: \"vim\", label: \"Vim key bindings\", keys: [\"Esc\"], on: false },\n  { id: \"command\", label: \"Command palette\", keys: [\"Ctrl\", \"K\"], on: true },\n  { id: \"zen\", label: \"Focus mode\", keys: [\"Ctrl\", \".\"], on: true },\n]\n\nexport default function KeyboardShortcutToggles() {\n  return (\n    <div className=\"w-full max-w-sm divide-y border\">\n      {shortcuts.map((shortcut) => (\n        <div key={shortcut.id} className=\"flex items-center gap-3 px-4 py-3\">\n          <Label htmlFor={\"kbd-\" + shortcut.id} className=\"flex-1\">\n            {shortcut.label}\n          </Label>\n          <KbdGroup>\n            {shortcut.keys.map((key) => (\n              <Kbd key={key}>{key}</Kbd>\n            ))}\n          </KbdGroup>\n          <Switch\n            id={\"kbd-\" + shortcut.id}\n            size=\"sm\"\n            defaultChecked={shortcut.on}\n          />\n        </div>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "textarea-50",
+  "type": "registry:example",
+  "description": "Code review comment textarea attached to a diff line, with a suggestion insert button.",
+  "files": [
+    {
+      "path": "registry/designali/examples/textarea/textarea-50.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { FileDiffIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Textarea } from \"@workspace/ui/components/textarea\"\n\nexport default function CodeReviewSuggestion() {\n  const [value, setValue] = React.useState(\"\")\n\n  return (\n    <div className=\"w-full max-w-md border font-mono text-xs\">\n      <div className=\"flex bg-rose-500/10\">\n        <span className=\"w-8 shrink-0 text-center text-muted-foreground\">\n          41\n        </span>\n        <span className=\"text-rose-600\">- const total = price * qty</span>\n      </div>\n      <div className=\"flex bg-emerald-500/10\">\n        <span className=\"w-8 shrink-0 text-center text-muted-foreground\">\n          41\n        </span>\n        <span className=\"text-emerald-700 dark:text-emerald-400\">\n          + const total = round(price * qty)\n        </span>\n      </div>\n      <div className=\"flex flex-col gap-2 border-t p-2 font-sans\">\n        <Textarea\n          value={value}\n          onChange={(e) => setValue(e.target.value)}\n          placeholder=\"Leave a comment on line 41\"\n          aria-label=\"Review comment\"\n        />\n        <div className=\"flex items-center justify-between\">\n          <Button\n            variant=\"ghost\"\n            size=\"xs\"\n            onClick={() =>\n              setValue(\n                value +\n                  \"\\n```suggestion\\nconst total = round(price * qty, 2)\\n```\"\n              )\n            }\n          >\n            <FileDiffIcon data-icon=\"inline-start\" />\n            Suggest change\n          </Button>\n          <div className=\"flex gap-1.5\">\n            <Button variant=\"outline\" size=\"xs\">\n              Cancel\n            </Button>\n            <Button size=\"xs\" disabled={!value.trim()}>\n              Add comment\n            </Button>\n          </div>\n        </div>\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

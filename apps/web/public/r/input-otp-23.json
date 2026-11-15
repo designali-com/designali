@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-otp-23",
+  "type": "registry:example",
+  "description": "Destructive account deletion gated behind a confirmation code.",
+  "files": [
+    {
+      "path": "registry/designali/examples/input-otp/input-otp-23.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { Trash2Icon, TriangleAlertIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  InputOTP,\n  InputOTPGroup,\n  InputOTPSlot,\n} from \"@workspace/ui/components/input-otp\"\n\nexport default function DeleteAccountConfirmation() {\n  const [value, setValue] = React.useState(\"\")\n\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-4 border border-destructive/40 p-5\">\n      <div className=\"flex items-center gap-2 text-sm font-semibold text-destructive\">\n        <TriangleAlertIcon className=\"size-4\" />\n        Delete workspace\n      </div>\n      <p className=\"text-xs text-muted-foreground\">\n        This permanently removes 14 projects and 2.3 GB of files. Enter the code\n        we emailed to the owner to continue.\n      </p>\n      <InputOTP maxLength={6} value={value} onChange={setValue}>\n        <InputOTPGroup>\n          <InputOTPSlot index={0} />\n          <InputOTPSlot index={1} />\n          <InputOTPSlot index={2} />\n          <InputOTPSlot index={3} />\n          <InputOTPSlot index={4} />\n          <InputOTPSlot index={5} />\n        </InputOTPGroup>\n      </InputOTP>\n      <Button variant=\"destructive\" disabled={value.length < 6}>\n        <Trash2Icon data-icon=\"inline-start\" />\n        Delete forever\n      </Button>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

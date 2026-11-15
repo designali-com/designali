@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "radio-group-43",
+  "type": "registry:example",
+  "description": "Product page protection plan add-on with no-coverage default.",
+  "files": [
+    {
+      "path": "registry/designali/examples/radio-group/radio-group-43.tsx",
+      "content": "import { ShieldIcon } from \"lucide-react\"\n\nimport { FieldLegend, FieldSet } from \"@workspace/ui/components/field\"\nimport {\n  RadioGroup,\n  RadioGroupItem,\n} from \"@workspace/ui/components/radio-group\"\n\nconst plans = [\n  {\n    value: \"none\",\n    label: \"No protection\",\n    hint: \"Manufacturer warranty only\",\n    price: \"\",\n  },\n  {\n    value: \"1y\",\n    label: \"1-year protection\",\n    hint: \"Accidental damage included\",\n    price: \"$29\",\n  },\n  {\n    value: \"3y\",\n    label: \"3-year protection\",\n    hint: \"Damage, theft, and battery\",\n    price: \"$69\",\n  },\n]\n\nexport default function WarrantyAddOn() {\n  return (\n    <FieldSet className=\"w-full max-w-sm\">\n      <FieldLegend variant=\"label\" className=\"flex items-center gap-1.5\">\n        <ShieldIcon className=\"size-3.5\" />\n        Add protection\n      </FieldLegend>\n      <RadioGroup defaultValue=\"none\" className=\"gap-0 border\">\n        {plans.map((p) => (\n          <label\n            key={p.value}\n            htmlFor={\"warr-\" + p.value}\n            className=\"flex cursor-pointer items-start gap-3 border-b p-3 last:border-b-0 has-data-checked:bg-muted/40\"\n          >\n            <RadioGroupItem\n              value={p.value}\n              id={\"warr-\" + p.value}\n              className=\"mt-0.5\"\n            />\n            <div className=\"flex-1\">\n              <p className=\"text-sm font-medium\">{p.label}</p>\n              <p className=\"text-xs text-muted-foreground\">{p.hint}</p>\n            </div>\n            {p.price && <span className=\"text-sm font-medium\">{p.price}</span>}\n          </label>\n        ))}\n      </RadioGroup>\n    </FieldSet>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

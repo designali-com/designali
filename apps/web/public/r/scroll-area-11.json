@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "scroll-area-11",
+  "type": "registry:example",
+  "description": "Scrollable playlist with track numbers, titles, and durations.",
+  "files": [
+    {
+      "path": "registry/designali/examples/scroll-area/scroll-area-11.tsx",
+      "content": "import { PlayIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { ScrollArea } from \"@workspace/ui/components/scroll-area\"\n\nconst tracks = [\n  [\"Glasshouse\", \"Mira Vale\", \"3:42\"],\n  [\"Low Tide\", \"The Ferns\", \"4:05\"],\n  [\"Paper Moons\", \"Odile\", \"2:58\"],\n  [\"Northbound\", \"Kestrel\", \"3:31\"],\n  [\"Satellite Heart\", \"Juno Ray\", \"3:17\"],\n  [\"Copper Sky\", \"Mira Vale\", \"4:22\"],\n  [\"Night Swim\", \"Halcyon\", \"3:49\"],\n  [\"Static Bloom\", \"The Ferns\", \"2:44\"],\n  [\"Long Weekend\", \"Odile\", \"3:08\"],\n  [\"Lantern\", \"Kestrel\", \"4:11\"],\n]\n\nexport default function PlaylistTracks() {\n  return (\n    <div className=\"w-full max-w-sm border\">\n      <div className=\"flex items-center gap-3 border-b p-3\">\n        <div className=\"size-12 shrink-0 bg-gradient-to-br from-orange-400 via-pink-500 to-violet-600\" />\n        <div className=\"min-w-0 flex-1\">\n          <p className=\"truncate text-sm font-medium\">Late Night Focus</p>\n          <p className=\"text-xs text-muted-foreground\">\n            {tracks.length} songs - 36 min\n          </p>\n        </div>\n        <Button size=\"icon\" aria-label=\"Play\">\n          <PlayIcon />\n        </Button>\n      </div>\n      <ScrollArea className=\"h-60\">\n        {tracks.map(([title, artist, length], i) => (\n          <div\n            key={title}\n            className=\"flex items-center gap-3 px-3 py-2 text-xs hover:bg-muted\"\n          >\n            <span className=\"w-4 text-right text-muted-foreground tabular-nums\">\n              {i + 1}\n            </span>\n            <div className=\"min-w-0 flex-1\">\n              <p className=\"truncate font-medium\">{title}</p>\n              <p className=\"truncate text-muted-foreground\">{artist}</p>\n            </div>\n            <span className=\"text-muted-foreground tabular-nums\">{length}</span>\n          </div>\n        ))}\n      </ScrollArea>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

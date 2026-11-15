@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "accordion-40",
+  "type": "registry:example",
+  "description": "Panels that fetch their content on first open and show skeletons while loading.",
+  "files": [
+    {
+      "path": "registry/designali/examples/accordion/accordion-40.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { ChevronDownIcon } from \"lucide-react\"\n\nimport {\n  Accordion,\n  AccordionContent,\n  AccordionItem,\n  AccordionTrigger,\n} from \"@workspace/ui/components/accordion\"\nimport { Skeleton } from \"@workspace/ui/components/skeleton\"\n\nconst sections = [\n  {\n    value: \"activity\",\n    title: \"Recent activity\",\n    rows: [\n      \"Ava Moreno commented on Q4 plan\",\n      \"Jonah Pike moved Launch checklist to Done\",\n      \"Rhea Kapoor joined the workspace\",\n    ],\n  },\n  {\n    value: \"files\",\n    title: \"Shared files\",\n    rows: [\"brand-guidelines.pdf\", \"pricing-model.xlsx\"],\n  },\n]\n\nexport default function AccordionLazyLoadingPanel() {\n  const [loaded, setLoaded] = React.useState<string[]>([])\n\n  const load = (value: string, open: boolean) => {\n    if (!open || loaded.includes(value)) return\n    setTimeout(() => setLoaded((prev) => [...prev, value]), 1200)\n  }\n\n  return (\n    <Accordion className=\"w-full max-w-md border px-3\">\n      {sections.map((section) => (\n        <AccordionItem\n          key={section.value}\n          value={section.value}\n          onOpenChange={(open) => load(section.value, open)}\n        >\n          <AccordionTrigger>\n            {section.title}\n            <ChevronDownIcon\n              data-slot=\"accordion-trigger-icon\"\n              className=\"transition-transform duration-200 group-aria-expanded/accordion-trigger:rotate-180\"\n            />\n          </AccordionTrigger>\n          <AccordionContent>\n            {loaded.includes(section.value) ? (\n              <ul className=\"space-y-2\">\n                {section.rows.map((row) => (\n                  <li key={row} className=\"text-muted-foreground\">\n                    {row}\n                  </li>\n                ))}\n              </ul>\n            ) : (\n              <div className=\"space-y-2\" aria-busy=\"true\">\n                <Skeleton className=\"h-3 w-4/5\" />\n                <Skeleton className=\"h-3 w-3/5\" />\n                <Skeleton className=\"h-3 w-2/3\" />\n              </div>\n            )}\n          </AccordionContent>\n        </AccordionItem>\n      ))}\n    </Accordion>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

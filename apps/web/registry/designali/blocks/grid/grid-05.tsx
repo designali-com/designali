@@ -4,7 +4,7 @@ const integrations = [
   { name: "GitHub", category: "Code", hue: 0 },
   { name: "Notion", category: "Docs", hue: 40 },
   { name: "Figma", category: "Design", hue: 15 },
-  { name: "Stripe", category: "Payments", hue: 260 },
+  { name: "Corvia", category: "Payments", hue: 260 },
   { name: "Vercel", category: "Hosting", hue: 200 },
   { name: "Sentry", category: "Monitoring", hue: 290 },
   { name: "HubSpot", category: "CRM", hue: 20 },

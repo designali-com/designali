@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "badge-49",
+  "type": "registry:example",
+  "description": "Square icon-only badges listing amenities on a rental listing card.",
+  "files": [
+    {
+      "path": "registry/designali/examples/badge/badge-49.tsx",
+      "content": "import {\n  CarIcon,\n  CoffeeIcon,\n  PawPrintIcon,\n  SnowflakeIcon,\n  WifiIcon,\n} from \"lucide-react\"\n\nimport { Badge } from \"@workspace/ui/components/badge\"\n\nconst amenities = [\n  { label: \"Wi-Fi\", icon: WifiIcon },\n  { label: \"Parking\", icon: CarIcon },\n  { label: \"Coffee\", icon: CoffeeIcon },\n  { label: \"Pets allowed\", icon: PawPrintIcon },\n  { label: \"Air conditioning\", icon: SnowflakeIcon },\n]\n\nexport default function AmenityIconBadges() {\n  return (\n    <div className=\"flex w-full max-w-xs flex-col gap-3 border p-4\">\n      <div>\n        <p className=\"text-sm font-semibold\">Harborview Loft</p>\n        <p className=\"text-xs text-muted-foreground\">\n          2 guests · 1 bedroom · $128 / night\n        </p>\n      </div>\n      <div className=\"flex gap-1.5\">\n        {amenities.map((amenity) => (\n          <Badge\n            key={amenity.label}\n            variant=\"secondary\"\n            className=\"size-7 p-0 [&>svg]:size-3.5!\"\n            title={amenity.label}\n            aria-label={amenity.label}\n          >\n            <amenity.icon />\n          </Badge>\n        ))}\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

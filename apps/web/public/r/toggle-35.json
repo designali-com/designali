@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toggle-35",
+  "type": "registry:example",
+  "description": "An Unread only toggle that carries a count badge and filters notifications.",
+  "files": [
+    {
+      "path": "registry/designali/examples/toggle/toggle-35.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { Badge } from \"@workspace/ui/components/badge\"\nimport { Toggle } from \"@workspace/ui/components/toggle\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst items = [\n  { text: \"Lea commented on Brand refresh\", unread: true },\n  { text: \"Your export finished\", unread: false },\n  { text: \"Sam requested access to Q4 plan\", unread: true },\n  { text: \"Weekly summary is ready\", unread: false },\n]\n\nexport default function UnreadOnlyBadgeToggle() {\n  const [unreadOnly, setUnreadOnly] = React.useState(false)\n  const unread = items.filter((i) => i.unread).length\n  const list = unreadOnly ? items.filter((i) => i.unread) : items\n\n  return (\n    <div className=\"w-full max-w-sm border\">\n      <div className=\"flex items-center justify-between border-b px-3 py-1.5\">\n        <span className=\"text-sm font-medium\">Notifications</span>\n        <Toggle\n          size=\"sm\"\n          variant=\"outline\"\n          pressed={unreadOnly}\n          onPressedChange={setUnreadOnly}\n        >\n          Unread only\n          <Badge className=\"ms-1 h-4 min-w-4 px-1 text-[10px]\">{unread}</Badge>\n        </Toggle>\n      </div>\n      {list.map((i) => (\n        <p\n          key={i.text}\n          className=\"flex items-center gap-2 border-b px-3 py-2 text-sm last:border-b-0\"\n        >\n          <span\n            className={cn(\n              \"size-1.5 shrink-0 rounded-full\",\n              i.unread ? \"bg-primary\" : \"bg-transparent\"\n            )}\n          />\n          {i.text}\n        </p>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

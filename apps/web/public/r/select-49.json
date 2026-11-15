@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "select-49",
+  "type": "registry:example",
+  "description": "Task reminder select with a destructive option separated at the bottom of the list.",
+  "files": [
+    {
+      "path": "registry/designali/examples/select/select-49.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { BellIcon, BellOffIcon } from \"lucide-react\"\n\nimport {\n  Select,\n  SelectContent,\n  SelectItem,\n  SelectSeparator,\n  SelectTrigger,\n  SelectValue,\n} from \"@workspace/ui/components/select\"\n\nconst reminders = [\n  { label: \"At time of due date\", value: \"0\" },\n  { label: \"15 minutes before\", value: \"15\" },\n  { label: \"1 hour before\", value: \"60\" },\n  { label: \"1 day before\", value: \"1440\" },\n  { label: \"No reminder\", value: \"none\" },\n]\n\nexport default function ReminderSelectWithBadge() {\n  const [reminder, setReminder] = React.useState<string | null>(\"60\")\n\n  return (\n    <div className=\"flex w-full max-w-sm items-center gap-3 border p-3\">\n      <div className=\"flex min-w-0 flex-1 flex-col\">\n        <span className=\"truncate text-sm font-medium\">\n          Send contract to Harbor &amp; Co\n        </span>\n        <span className=\"text-xs text-muted-foreground\">\n          Due Friday, 4:00 PM\n        </span>\n      </div>\n      <Select items={reminders} value={reminder} onValueChange={setReminder}>\n        <SelectTrigger size=\"sm\" aria-label=\"Reminder\">\n          {reminder === \"none\" ? (\n            <BellOffIcon className=\"text-muted-foreground\" />\n          ) : (\n            <BellIcon className=\"text-muted-foreground\" />\n          )}\n          <SelectValue className=\"hidden sm:flex\" />\n        </SelectTrigger>\n        <SelectContent\n          align=\"end\"\n          alignItemWithTrigger={false}\n          className=\"min-w-48\"\n        >\n          {reminders.slice(0, 4).map((item) => (\n            <SelectItem key={item.value} value={item.value}>\n              {item.label}\n            </SelectItem>\n          ))}\n          <SelectSeparator />\n          <SelectItem value=\"none\" className=\"text-destructive\">\n            No reminder\n          </SelectItem>\n        </SelectContent>\n      </Select>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

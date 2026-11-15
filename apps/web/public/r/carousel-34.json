@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "carousel-34",
+  "type": "registry:example",
+  "description": "Right-to-left carousel using Embla's direction option for Arabic content.",
+  "files": [
+    {
+      "path": "registry/designali/examples/carousel/carousel-34.tsx",
+      "content": "import { Card, CardContent } from \"@workspace/ui/components/card\"\nimport {\n  Carousel,\n  CarouselContent,\n  CarouselItem,\n  CarouselNext,\n  CarouselPrevious,\n} from \"@workspace/ui/components/carousel\"\n\nconst offers = [\n  { title: \"خصم ٢٠٪\", body: \"على جميع الاشتراكات السنوية\" },\n  { title: \"شحن مجاني\", body: \"للطلبات فوق ٢٠٠ ريال\" },\n  { title: \"هدية ترحيبية\", body: \"عند التسجيل لأول مرة\" },\n  { title: \"نقاط مضاعفة\", body: \"طوال عطلة نهاية الأسبوع\" },\n]\n\nexport default function RtlDirectionCarousel() {\n  return (\n    <div dir=\"rtl\" className=\"w-full max-w-[14rem] sm:max-w-xs\">\n      <Carousel opts={{ direction: \"rtl\" }}>\n        <CarouselContent>\n          {offers.map((offer) => (\n            <CarouselItem key={offer.title}>\n              <Card>\n                <CardContent className=\"flex h-32 flex-col items-start justify-center gap-1\">\n                  <span className=\"text-lg font-semibold\">{offer.title}</span>\n                  <span className=\"text-sm text-muted-foreground\">\n                    {offer.body}\n                  </span>\n                </CardContent>\n              </Card>\n            </CarouselItem>\n          ))}\n        </CarouselContent>\n        <CarouselPrevious />\n        <CarouselNext />\n      </Carousel>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

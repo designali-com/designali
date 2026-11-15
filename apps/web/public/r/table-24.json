@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "table-24",
+  "type": "registry:example",
+  "description": "Rows grouped under section header rows by department.",
+  "files": [
+    {
+      "path": "registry/designali/examples/table/table-24.tsx",
+      "content": "import {\n  Table,\n  TableBody,\n  TableCell,\n  TableHead,\n  TableHeader,\n  TableRow,\n} from \"@workspace/ui/components/table\"\n\nconst groups = [\n  {\n    department: \"Engineering\",\n    people: [\n      [\"Arjun Mehta\", \"Staff engineer\"],\n      [\"Lena Novak\", \"Frontend engineer\"],\n    ],\n  },\n  { department: \"Design\", people: [[\"Sara Kim\", \"Design lead\"]] },\n  {\n    department: \"Support\",\n    people: [\n      [\"Owen Price\", \"Support specialist\"],\n      [\"Maya Patel\", \"Support manager\"],\n    ],\n  },\n]\n\nexport default function GroupedRowsTable() {\n  return (\n    <div className=\"w-full max-w-md border\">\n      <Table>\n        <TableHeader>\n          <TableRow>\n            <TableHead>Name</TableHead>\n            <TableHead>Title</TableHead>\n          </TableRow>\n        </TableHeader>\n        {groups.map((group) => (\n          <TableBody\n            key={group.department}\n            className=\"[&_tr:last-child]:border-b\"\n          >\n            <TableRow className=\"bg-muted/50 hover:bg-muted/50\">\n              <TableCell\n                colSpan={2}\n                className=\"py-1.5 font-medium text-muted-foreground\"\n              >\n                {group.department}{\" \"}\n                <span className=\"font-normal\">({group.people.length})</span>\n              </TableCell>\n            </TableRow>\n            {group.people.map(([name, title]) => (\n              <TableRow key={name}>\n                <TableCell className=\"font-medium\">{name}</TableCell>\n                <TableCell>{title}</TableCell>\n              </TableRow>\n            ))}\n          </TableBody>\n        ))}\n      </Table>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

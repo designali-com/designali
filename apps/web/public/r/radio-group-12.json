@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "radio-group-12",
+  "type": "registry:example",
+  "description": "Required radio group that shows an invalid state when submitted empty.",
+  "files": [
+    {
+      "path": "registry/designali/examples/radio-group/radio-group-12.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  Field,\n  FieldError,\n  FieldLabel,\n  FieldLegend,\n  FieldSet,\n} from \"@workspace/ui/components/field\"\nimport {\n  RadioGroup,\n  RadioGroupItem,\n} from \"@workspace/ui/components/radio-group\"\n\nconst sources = [\n  \"Search engine\",\n  \"Friend or colleague\",\n  \"Podcast\",\n  \"Social media\",\n]\n\nexport default function RequiredRadioValidation() {\n  const [value, setValue] = React.useState<string | null>(null)\n  const [submitted, setSubmitted] = React.useState(false)\n  const invalid = submitted && !value\n\n  return (\n    <form\n      className=\"flex w-full max-w-sm flex-col gap-4\"\n      onSubmit={(event) => {\n        event.preventDefault()\n        setSubmitted(true)\n      }}\n    >\n      <FieldSet data-invalid={invalid || undefined}>\n        <FieldLegend variant=\"label\">How did you hear about us?</FieldLegend>\n        <RadioGroup\n          value={value}\n          onValueChange={(v) => setValue(v as string)}\n          aria-invalid={invalid || undefined}\n        >\n          {sources.map((source) => (\n            <Field key={source} orientation=\"horizontal\">\n              <RadioGroupItem\n                value={source}\n                id={\"src-\" + source}\n                aria-invalid={invalid || undefined}\n              />\n              <FieldLabel htmlFor={\"src-\" + source} className=\"font-normal\">\n                {source}\n              </FieldLabel>\n            </Field>\n          ))}\n        </RadioGroup>\n        {invalid && (\n          <FieldError>Please choose an option to continue.</FieldError>\n        )}\n      </FieldSet>\n      <Button type=\"submit\" className=\"self-start\">\n        {submitted && value ? \"Thanks!\" : \"Submit\"}\n      </Button>\n    </form>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

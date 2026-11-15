@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "badge-29",
+  "type": "registry:example",
+  "description": "Changelog entries tagged as Added, Improved, Fixed, or Removed.",
+  "files": [
+    {
+      "path": "registry/designali/examples/badge/badge-29.tsx",
+      "content": "import { Badge } from \"@workspace/ui/components/badge\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst entries = [\n  { type: \"Added\", text: \"Bulk export for invoices and receipts.\" },\n  { type: \"Improved\", text: \"Search results now load 40% faster.\" },\n  { type: \"Fixed\", text: \"Timezone offset on recurring events.\" },\n  { type: \"Removed\", text: \"Legacy v1 webhooks endpoint.\" },\n]\n\nconst styles: Record<string, string> = {\n  Added:\n    \"bg-emerald-50 text-emerald-700 dark:bg-emerald-950 dark:text-emerald-300\",\n  Improved: \"bg-blue-50 text-blue-700 dark:bg-blue-950 dark:text-blue-300\",\n  Fixed: \"bg-amber-50 text-amber-700 dark:bg-amber-950 dark:text-amber-300\",\n  Removed: \"bg-red-50 text-red-700 dark:bg-red-950 dark:text-red-300\",\n}\n\nexport default function ChangelogTypeBadges() {\n  return (\n    <div className=\"flex w-full max-w-md flex-col gap-3\">\n      <div className=\"flex items-center gap-2\">\n        <span className=\"text-sm font-semibold\">Version 4.8</span>\n        <span className=\"text-xs text-muted-foreground\">November 3</span>\n      </div>\n      {entries.map((entry) => (\n        <div key={entry.text} className=\"flex items-start gap-3\">\n          <Badge className={cn(\"w-18\", styles[entry.type])}>{entry.type}</Badge>\n          <p className=\"text-sm text-muted-foreground\">{entry.text}</p>\n        </div>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

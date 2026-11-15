@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "alert-15",
+  "type": "registry:example",
+  "description": "Default alert for a trial that is ending, with a days-left badge and an upgrade action.",
+  "files": [
+    {
+      "path": "registry/designali/examples/alert/alert-15.tsx",
+      "content": "import { HourglassIcon } from \"lucide-react\"\n\nimport {\n  Alert,\n  AlertAction,\n  AlertDescription,\n  AlertTitle,\n} from \"@workspace/ui/components/alert\"\nimport { Badge } from \"@workspace/ui/components/badge\"\nimport { Button } from \"@workspace/ui/components/button\"\n\nexport default function AlertTrialEnding() {\n  return (\n    <Alert className=\"max-w-md\">\n      <HourglassIcon />\n      <AlertTitle className=\"flex items-center gap-2\">\n        Your trial ends soon\n        <Badge variant=\"secondary\">3 days left</Badge>\n      </AlertTitle>\n      <AlertDescription>\n        Upgrade to keep your 14 boards, automations and guest access.\n      </AlertDescription>\n      <AlertAction>\n        <Button size=\"xs\">Upgrade</Button>\n      </AlertAction>\n    </Alert>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

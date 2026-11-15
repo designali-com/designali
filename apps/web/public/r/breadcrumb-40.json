@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "breadcrumb-40",
+  "type": "registry:example",
+  "description": "Cluster to node to pod trail where each level shows a health status dot.",
+  "files": [
+    {
+      "path": "registry/designali/examples/breadcrumb/breadcrumb-40.tsx",
+      "content": "import { Fragment } from \"react\"\n\nimport {\n  Breadcrumb,\n  BreadcrumbItem,\n  BreadcrumbLink,\n  BreadcrumbList,\n  BreadcrumbPage,\n  BreadcrumbSeparator,\n} from \"@workspace/ui/components/breadcrumb\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst levels = [\n  { label: \"eu-west-1\", status: \"bg-emerald-500\" },\n  { label: \"node-pool-b\", status: \"bg-amber-500\" },\n]\n\nexport default function InfrastructureStatusBreadcrumb() {\n  return (\n    <Breadcrumb>\n      <BreadcrumbList className=\"font-mono\">\n        {levels.map((level) => (\n          <Fragment key={level.label}>\n            <BreadcrumbItem>\n              <BreadcrumbLink href=\"#\" className=\"flex items-center gap-1.5\">\n                <span className={cn(\"size-1.5 rounded-full\", level.status)} />\n                {level.label}\n              </BreadcrumbLink>\n            </BreadcrumbItem>\n            <BreadcrumbSeparator />\n          </Fragment>\n        ))}\n        <BreadcrumbItem>\n          <BreadcrumbPage className=\"flex items-center gap-1.5\">\n            <span className=\"size-1.5 animate-pulse rounded-full bg-destructive\" />\n            checkout-7d9f\n          </BreadcrumbPage>\n        </BreadcrumbItem>\n      </BreadcrumbList>\n    </Breadcrumb>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

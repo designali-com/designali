@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "radio-group-08",
+  "type": "registry:example",
+  "description": "Appearance picker with miniature light, dark, and system previews.",
+  "files": [
+    {
+      "path": "registry/designali/examples/radio-group/radio-group-08.tsx",
+      "content": "import {\n  RadioGroup,\n  RadioGroupItem,\n} from \"@workspace/ui/components/radio-group\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst themes = [\n  {\n    value: \"light\",\n    label: \"Light\",\n    preview: \"bg-white\",\n    bar: \"bg-neutral-200\",\n  },\n  {\n    value: \"dark\",\n    label: \"Dark\",\n    preview: \"bg-neutral-900\",\n    bar: \"bg-neutral-700\",\n  },\n  {\n    value: \"system\",\n    label: \"System\",\n    preview: \"bg-gradient-to-r from-white from-50% to-neutral-900 to-50%\",\n    bar: \"bg-neutral-400\",\n  },\n]\n\nexport default function ThemePreviewRadio() {\n  return (\n    <RadioGroup\n      defaultValue=\"system\"\n      className=\"grid w-full max-w-sm grid-cols-3 gap-3\"\n    >\n      {themes.map((theme) => (\n        <label\n          key={theme.value}\n          htmlFor={\"theme-\" + theme.value}\n          className=\"flex cursor-pointer flex-col gap-2\"\n        >\n          <div\n            className={cn(\n              \"flex h-16 flex-col gap-1.5 border p-2 ring-offset-2 ring-offset-background\",\n              theme.preview\n            )}\n          >\n            <span className={cn(\"h-1.5 w-2/3\", theme.bar)} />\n            <span className={cn(\"h-1.5 w-1/2\", theme.bar)} />\n          </div>\n          <span className=\"flex items-center gap-2 text-sm\">\n            <RadioGroupItem value={theme.value} id={\"theme-\" + theme.value} />\n            {theme.label}\n          </span>\n        </label>\n      ))}\n    </RadioGroup>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

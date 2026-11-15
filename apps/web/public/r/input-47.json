@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-47",
+  "type": "registry:example",
+  "description": "A file rename input that keeps the extension fixed and selects only the base name.",
+  "files": [
+    {
+      "path": "registry/designali/examples/input/input-47.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { FileIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  InputGroup,\n  InputGroupAddon,\n  InputGroupInput,\n  InputGroupText,\n} from \"@workspace/ui/components/input-group\"\n\nexport default function FileRenameInput() {\n  const [name, setName] = React.useState(\"invoice-march-final\")\n\n  return (\n    <div className=\"flex w-full max-w-sm items-center gap-2 border p-2\">\n      <FileIcon className=\"size-5 shrink-0 text-muted-foreground\" />\n      <InputGroup className=\"flex-1\">\n        <InputGroupInput\n          aria-label=\"File name\"\n          value={name}\n          autoFocus\n          onFocus={(e) => e.target.select()}\n          onChange={(e) => setName(e.target.value.replace(/[\\\\/:*?\"<>|]/g, \"\"))}\n        />\n        <InputGroupAddon align=\"inline-end\">\n          <InputGroupText>.pdf</InputGroupText>\n        </InputGroupAddon>\n      </InputGroup>\n      <Button size=\"sm\" disabled={!name.trim()}>\n        Rename\n      </Button>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

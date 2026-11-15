@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "separator-35",
+  "type": "registry:example",
+  "description": "Invoice header with billed-from and billed-to blocks divided by a vertical separator.",
+  "files": [
+    {
+      "path": "registry/designali/examples/separator/separator-35.tsx",
+      "content": "import { Separator } from \"@workspace/ui/components/separator\"\n\nexport default function InvoiceHeaderParties() {\n  return (\n    <div className=\"flex w-full max-w-md flex-col gap-4 border p-4 text-xs\">\n      <div className=\"flex items-baseline justify-between\">\n        <span className=\"text-base font-semibold\">Invoice</span>\n        <span className=\"font-mono text-muted-foreground\">INV-2026-0318</span>\n      </div>\n      <Separator />\n      <div className=\"flex\">\n        <div className=\"flex flex-1 flex-col gap-0.5\">\n          <span className=\"mb-1 text-muted-foreground\">From</span>\n          <span className=\"font-medium\">Lark Studio Ltd</span>\n          <span className=\"text-muted-foreground\">12 Quay Street, Bristol</span>\n        </div>\n        <Separator orientation=\"vertical\" className=\"mx-4\" />\n        <div className=\"flex flex-1 flex-col gap-0.5\">\n          <span className=\"mb-1 text-muted-foreground\">Billed to</span>\n          <span className=\"font-medium\">Orbit CRM GmbH</span>\n          <span className=\"text-muted-foreground\">Torstrasse 88, Berlin</span>\n        </div>\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "pagination-22",
+  "type": "registry:example",
+  "description": "Large pagination with bigger hit areas for touch-first dashboards and kiosks.",
+  "files": [
+    {
+      "path": "registry/designali/examples/pagination/pagination-22.tsx",
+      "content": "import {\n  Pagination,\n  PaginationContent,\n  PaginationItem,\n  PaginationLink,\n  PaginationNext,\n  PaginationPrevious,\n} from \"@workspace/ui/components/pagination\"\n\nexport default function LargeSizePagination() {\n  return (\n    <Pagination>\n      <PaginationContent className=\"gap-1\">\n        <PaginationItem>\n          <PaginationPrevious href=\"#\" size=\"lg\" className=\"text-sm\" />\n        </PaginationItem>\n        {[1, 2, 3].map((p) => (\n          <PaginationItem key={p}>\n            <PaginationLink\n              href=\"#\"\n              size=\"icon-lg\"\n              isActive={p === 1}\n              className=\"text-sm\"\n            >\n              {p}\n            </PaginationLink>\n          </PaginationItem>\n        ))}\n        <PaginationItem>\n          <PaginationNext href=\"#\" size=\"lg\" className=\"text-sm\" />\n        </PaginationItem>\n      </PaginationContent>\n    </Pagination>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

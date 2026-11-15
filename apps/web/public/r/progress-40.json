@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "progress-40",
+  "type": "registry:example",
+  "description": "Product roadmap milestones with progress and target quarter badges.",
+  "files": [
+    {
+      "path": "registry/designali/examples/progress/progress-40.tsx",
+      "content": "import { Badge } from \"@workspace/ui/components/badge\"\nimport {\n  Progress,\n  ProgressLabel,\n  ProgressValue,\n} from \"@workspace/ui/components/progress\"\n\nconst milestones = [\n  { title: \"Offline mode\", quarter: \"Q1\", value: 100 },\n  { title: \"Shared workspaces\", quarter: \"Q2\", value: 72 },\n  { title: \"Public API v2\", quarter: \"Q3\", value: 30 },\n  { title: \"Desktop app\", quarter: \"Q4\", value: 5 },\n]\n\nexport default function QuarterlyMilestones() {\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-4 border p-4\">\n      <p className=\"text-sm font-medium\">2027 roadmap</p>\n      {milestones.map((m) => (\n        <div key={m.title} className=\"flex items-center gap-3\">\n          <Badge\n            variant={m.value === 100 ? \"default\" : \"outline\"}\n            className=\"w-9\"\n          >\n            {m.quarter}\n          </Badge>\n          <Progress value={m.value} className=\"flex-1 gap-1.5\">\n            <ProgressLabel>{m.title}</ProgressLabel>\n            <ProgressValue />\n          </Progress>\n        </div>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

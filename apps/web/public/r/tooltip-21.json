@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tooltip-21",
+  "type": "registry:example",
+  "description": "Timeline scrubber tooltip that follows the cursor horizontally with trackCursorAxis.",
+  "files": [
+    {
+      "path": "registry/designali/examples/tooltip/tooltip-21.tsx",
+      "content": "import {\n  Tooltip,\n  TooltipContent,\n  TooltipTrigger,\n} from \"@workspace/ui/components/tooltip\"\n\nexport default function CursorTrackingTooltip() {\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-2\">\n      <span className=\"text-sm font-medium\">Session replay</span>\n      <Tooltip trackCursorAxis=\"x\">\n        <TooltipTrigger\n          render={\n            <div\n              tabIndex={0}\n              className=\"relative h-10 w-full cursor-crosshair border bg-muted/40\"\n            />\n          }\n        >\n          <div className=\"absolute inset-y-0 start-0 w-2/5 bg-primary/15\" />\n          <div className=\"absolute inset-y-3 start-[18%] w-1 bg-amber-500\" />\n          <div className=\"absolute inset-y-3 start-[63%] w-1 bg-rose-500\" />\n        </TooltipTrigger>\n        <TooltipContent>Hover to scrub the 04:32 recording</TooltipContent>\n      </Tooltip>\n      <div className=\"flex justify-between text-xs text-muted-foreground\">\n        <span>00:00</span>\n        <span>04:32</span>\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

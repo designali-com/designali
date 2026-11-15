@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "calendar-48",
+  "type": "registry:example",
+  "description": "Media-planning calendar using broadcast months, Monday starts and broadcast week numbers.",
+  "files": [
+    {
+      "path": "registry/designali/examples/calendar/calendar-48.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { TvIcon } from \"lucide-react\"\n\nimport { Calendar } from \"@workspace/ui/components/calendar\"\nimport {\n  Card,\n  CardContent,\n  CardDescription,\n  CardHeader,\n  CardTitle,\n} from \"@workspace/ui/components/card\"\n\nexport default function BroadcastMonthCalendar() {\n  const [date, setDate] = React.useState<undefined | Date>()\n\n  return (\n    <Card className=\"w-fit\">\n      <CardHeader>\n        <CardTitle className=\"flex items-center gap-2\">\n          <TvIcon className=\"size-4 text-muted-foreground\" />\n          Campaign flight\n        </CardTitle>\n        <CardDescription>\n          Broadcast months always start on a Monday.\n        </CardDescription>\n      </CardHeader>\n      <CardContent>\n        <Calendar\n          mode=\"single\"\n          broadcastCalendar\n          showWeekNumber\n          selected={date}\n          onSelect={setDate}\n          className=\"p-0\"\n        />\n      </CardContent>\n    </Card>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

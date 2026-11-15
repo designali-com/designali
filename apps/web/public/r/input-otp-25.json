@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-otp-25",
+  "type": "registry:example",
+  "description": "Authenticator app setup with a QR placeholder, manual key, and a code to confirm.",
+  "files": [
+    {
+      "path": "registry/designali/examples/input-otp/input-otp-25.tsx",
+      "content": "\"use client\"\n\nimport { REGEXP_ONLY_DIGITS } from \"input-otp\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  InputOTP,\n  InputOTPGroup,\n  InputOTPSlot,\n} from \"@workspace/ui/components/input-otp\"\n\nexport default function AuthenticatorSetup() {\n  return (\n    <div className=\"flex w-full max-w-md flex-col gap-5 border p-5 sm:flex-row\">\n      <svg\n        viewBox=\"0 0 21 21\"\n        className=\"size-28 shrink-0 self-center bg-white p-2 text-black\"\n        aria-label=\"QR code\"\n      >\n        <path\n          fill=\"currentColor\"\n          d=\"M0 0h7v7H0zM1 1v5h5V1zM2 2h3v3H2zM14 0h7v7h-7zM15 1v5h5V1zM16 2h3v3h-3zM0 14h7v7H0zM1 15v5h5v-5zM2 16h3v3H2zM9 0h2v2H9zM9 3h1v3H9zM11 4h2v2h-2zM8 8h3v2H8zM12 8h2v1h-2zM15 9h3v2h-3zM9 11h2v3H9zM12 12h3v2h-3zM16 13h2v3h-2zM9 16h3v2H9zM13 16h2v5h-2zM18 18h3v3h-3zM0 9h2v2H0zM3 10h3v2H3z\"\n        />\n      </svg>\n      <div className=\"flex flex-1 flex-col gap-3\">\n        <div className=\"space-y-1\">\n          <p className=\"text-sm font-medium\">Scan with your authenticator</p>\n          <p className=\"text-xs text-muted-foreground\">\n            Or enter key{\" \"}\n            <code className=\"bg-muted px-1 font-mono\">JBSW Y3DP EHPK 3PXP</code>\n          </p>\n        </div>\n        <InputOTP maxLength={6} pattern={REGEXP_ONLY_DIGITS}>\n          <InputOTPGroup>\n            <InputOTPSlot index={0} />\n            <InputOTPSlot index={1} />\n            <InputOTPSlot index={2} />\n            <InputOTPSlot index={3} />\n            <InputOTPSlot index={4} />\n            <InputOTPSlot index={5} />\n          </InputOTPGroup>\n        </InputOTP>\n        <Button size=\"sm\" className=\"self-start\">\n          Verify and activate\n        </Button>\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

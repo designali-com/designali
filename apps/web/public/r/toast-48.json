@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toast-48",
+  "type": "registry:example",
+  "description": "Sends a test webhook and reports status code and latency in the resulting toast.",
+  "files": [
+    {
+      "path": "registry/designali/examples/toast/toast-48.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { ZapIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Input } from \"@workspace/ui/components/input\"\nimport { Label } from \"@workspace/ui/components/label\"\nimport { Toaster, createToastManager } from \"@workspace/ui/components/toast\"\n\nconst notify = createToastManager()\n\nexport default function WebhookTestToast() {\n  const [url, setUrl] = React.useState(\"https://hooks.example.dev/orders\")\n\n  function test() {\n    const ms = 80 + Math.round(Math.random() * 200)\n    const ok = url.startsWith(\"https://\")\n    const request = new Promise<number>((resolve, reject) =>\n      setTimeout(() => (ok ? resolve(ms) : reject(new Error())), 900)\n    )\n    notify\n      .promise(request, {\n        loading: \"Sending test event...\",\n        success: (latency: number) => ({\n          title: \"200 OK\",\n          description: \"order.created delivered in \" + latency + \"ms\",\n        }),\n        error: {\n          title: \"Delivery failed\",\n          description: \"Webhook URLs must use HTTPS.\",\n        },\n      })\n      .catch(() => {})\n  }\n\n  return (\n    <Toaster toastManager={notify}>\n      <div className=\"flex w-full max-w-sm flex-col gap-2 border p-4\">\n        <Label htmlFor=\"hook-url\">Endpoint URL</Label>\n        <div className=\"flex gap-2\">\n          <Input\n            id=\"hook-url\"\n            value={url}\n            onChange={(e) => setUrl(e.target.value)}\n            className=\"font-mono text-xs\"\n          />\n          <Button variant=\"outline\" onClick={test}>\n            <ZapIcon data-icon=\"inline-start\" />\n            Test\n          </Button>\n        </div>\n      </div>\n    </Toaster>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

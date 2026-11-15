@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "faqs-20",
+  "type": "registry:block",
+  "description": "Grid of quick Yes/No answer badges with one-line explanations and a full FAQ link.",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "registry/designali/blocks/faqs/faqs-20.tsx",
+      "content": "import { ArrowRight, Check, X } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst answers = [\n  {\n    q: \"Is there a free plan?\",\n    yes: true,\n    note: \"Up to two calendars and 50 bookings a month, free forever.\",\n  },\n  {\n    q: \"Do I need a credit card to start?\",\n    yes: false,\n    note: \"The 14-day Pro trial starts with just your email.\",\n  },\n  {\n    q: \"Can clients book without an account?\",\n    yes: true,\n    note: \"They pick a time and enter their name and email. That's it.\",\n  },\n  {\n    q: \"Does it sync with my existing calendar?\",\n    yes: true,\n    note: \"Two-way sync with any CalDAV or ICS calendar, every 60 seconds.\",\n  },\n  {\n    q: \"Will you charge a fee per booking?\",\n    yes: false,\n    note: \"Plans are flat-rate. Card fees from your payment provider still apply.\",\n  },\n  {\n    q: \"Can I take payments upfront?\",\n    yes: true,\n    note: \"Collect deposits or full payment at the moment of booking.\",\n  },\n  {\n    q: \"Is there a long-term contract?\",\n    yes: false,\n    note: \"Pay monthly and cancel whenever you like from Settings.\",\n  },\n  {\n    q: \"Can I use my own domain?\",\n    yes: true,\n    note: \"Point a subdomain like book.yourstudio.com at your page on Pro.\",\n  },\n  {\n    q: \"Do reminders cost extra?\",\n    yes: false,\n    note: \"Email and SMS reminders are included on every paid plan.\",\n  },\n]\n\nexport default function Faqs20() {\n  return (\n    <section className=\"w-full border-y border-border bg-muted/30 py-20 md:py-28\">\n      <div className=\"mx-auto max-w-7xl px-6\">\n        <div className=\"flex flex-col gap-6 md:flex-row md:items-end md:justify-between\">\n          <div className=\"max-w-xl\">\n            <p className=\"text-xs tracking-[0.2em] text-muted-foreground uppercase\">\n              Quick answers\n            </p>\n            <h2 className=\"mt-4 text-3xl font-semibold tracking-tight md:text-4xl\">\n              Yes or no? Straight answers about Slotwise.\n            </h2>\n          </div>\n          <div className=\"flex items-center gap-4 text-xs text-muted-foreground\">\n            <span className=\"inline-flex items-center gap-1.5\">\n              <span className=\"flex size-4 items-center justify-center bg-foreground text-background\">\n                <Check className=\"size-3\" />\n              </span>\n              Yes\n            </span>\n            <span className=\"inline-flex items-center gap-1.5\">\n              <span className=\"flex size-4 items-center justify-center border border-border bg-background\">\n                <X className=\"size-3\" />\n              </span>\n              No\n            </span>\n          </div>\n        </div>\n        <dl className=\"mt-12 grid gap-px border border-border bg-border sm:grid-cols-2 lg:grid-cols-3\">\n          {answers.map((item) => (\n            <div key={item.q} className=\"flex gap-4 bg-background p-6\">\n              <span\n                className={cn(\n                  \"flex h-7 w-12 shrink-0 items-center justify-center gap-1 text-xs font-semibold\",\n                  item.yes\n                    ? \"bg-foreground text-background\"\n                    : \"border border-border text-muted-foreground\"\n                )}\n              >\n                {item.yes ? (\n                  <Check className=\"size-3.5\" />\n                ) : (\n                  <X className=\"size-3.5\" />\n                )}\n                {item.yes ? \"Yes\" : \"No\"}\n              </span>\n              <div className=\"min-w-0\">\n                <dt className=\"text-sm font-medium\">{item.q}</dt>\n                <dd className=\"mt-1.5 text-sm leading-6 text-muted-foreground\">\n                  {item.note}\n                </dd>\n              </div>\n            </div>\n          ))}\n        </dl>\n        <div className=\"mt-10 flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:justify-between\">\n          <p className=\"text-sm text-muted-foreground\">\n            Got a question that needs more than one word?\n          </p>\n          <Button variant=\"outline\" nativeButton={false} render={<a href=\"#\" />}>\n            Read the full FAQ\n            <ArrowRight data-icon=\"inline-end\" />\n          </Button>\n        </div>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "700px"
+  },
+  "categories": [
+    "faqs"
+  ]
+}

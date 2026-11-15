@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tooltip-18",
+  "type": "registry:example",
+  "description": "A Beta badge next to a feature title that explains its stability on hover.",
+  "files": [
+    {
+      "path": "registry/designali/examples/tooltip/tooltip-18.tsx",
+      "content": "import { Badge } from \"@workspace/ui/components/badge\"\nimport { Switch } from \"@workspace/ui/components/switch\"\nimport {\n  Tooltip,\n  TooltipContent,\n  TooltipTrigger,\n} from \"@workspace/ui/components/tooltip\"\n\nexport default function BetaBadgeTooltip() {\n  return (\n    <div className=\"flex w-full max-w-sm items-center justify-between border p-4\">\n      <div className=\"flex flex-col gap-0.5\">\n        <div className=\"flex items-center gap-2\">\n          <span className=\"text-sm font-medium\">Smart scheduling</span>\n          <Tooltip>\n            <TooltipTrigger render={<Badge variant=\"outline\" tabIndex={0} />}>\n              Beta\n            </TooltipTrigger>\n            <TooltipContent className=\"max-w-56\">\n              Still being refined. Suggestions may change and feedback is\n              welcome.\n            </TooltipContent>\n          </Tooltip>\n        </div>\n        <span className=\"text-xs text-muted-foreground\">\n          Find a slot that works for everyone.\n        </span>\n      </div>\n      <Switch defaultChecked />\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button-28",
+  "type": "registry:example",
+  "description": "Download button that fills with progress and switches to an open action when done.",
+  "files": [
+    {
+      "path": "registry/designali/examples/button/button-28.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { DownloadIcon, FolderOpenIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Spinner } from \"@workspace/ui/components/spinner\"\n\nexport default function DownloadProgressButton() {\n  const [progress, setProgress] = React.useState<number | null>(null)\n\n  React.useEffect(() => {\n    if (progress === null || progress >= 100) return\n    const id = setTimeout(\n      () => setProgress((p) => Math.min((p ?? 0) + 8, 100)),\n      120\n    )\n    return () => clearTimeout(id)\n  }, [progress])\n\n  const downloading = progress !== null && progress < 100\n\n  return (\n    <Button\n      variant=\"outline\"\n      className=\"relative w-52 overflow-hidden\"\n      disabled={downloading}\n      onClick={() => setProgress(progress === 100 ? null : 0)}\n    >\n      {progress !== null && (\n        <span\n          className=\"absolute inset-y-0 left-0 bg-primary/15 transition-[width]\"\n          style={{ width: progress + \"%\" }}\n        />\n      )}\n      <span className=\"relative flex items-center gap-1.5\">\n        {progress === null && <DownloadIcon className=\"size-4\" />}\n        {downloading && <Spinner />}\n        {progress === 100 && <FolderOpenIcon className=\"size-4\" />}\n        {progress === null && \"Download report (4.2 MB)\"}\n        {downloading && \"Downloading \" + progress + \"%\"}\n        {progress === 100 && \"Show in folder\"}\n      </span>\n    </Button>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

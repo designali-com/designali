@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "spinner-18",
+  "type": "registry:example",
+  "description": "Order summary lines with small inline spinners for values still being calculated.",
+  "files": [
+    {
+      "path": "registry/designali/examples/spinner/spinner-18.tsx",
+      "content": "import { Separator } from \"@workspace/ui/components/separator\"\nimport { Spinner } from \"@workspace/ui/components/spinner\"\n\nexport default function InlineCalculatingText() {\n  return (\n    <div className=\"flex w-full max-w-xs flex-col gap-2 border p-4 text-sm\">\n      <div className=\"flex justify-between\">\n        <span className=\"text-muted-foreground\">Subtotal</span>\n        <span className=\"tabular-nums\">$132.00</span>\n      </div>\n      <div className=\"flex justify-between\">\n        <span className=\"text-muted-foreground\">Shipping</span>\n        <span className=\"flex items-center gap-1.5 text-muted-foreground\">\n          <Spinner className=\"size-3\" />\n          Calculating\n        </span>\n      </div>\n      <div className=\"flex justify-between\">\n        <span className=\"text-muted-foreground\">Tax</span>\n        <span className=\"flex items-center gap-1.5 text-muted-foreground\">\n          <Spinner className=\"size-3\" />\n          Calculating\n        </span>\n      </div>\n      <Separator className=\"my-1\" />\n      <div className=\"flex justify-between font-medium\">\n        <span>Total</span>\n        <span className=\"text-muted-foreground\">--</span>\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

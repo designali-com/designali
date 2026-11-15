@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-otp-20",
+  "type": "registry:example",
+  "description": "Checkout card-verification challenge with the issuer, merchant, and amount above the code.",
+  "files": [
+    {
+      "path": "registry/designali/examples/input-otp/input-otp-20.tsx",
+      "content": "\"use client\"\n\nimport { REGEXP_ONLY_DIGITS } from \"input-otp\"\nimport { CreditCardIcon } from \"lucide-react\"\n\nimport { Badge } from \"@workspace/ui/components/badge\"\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  InputOTP,\n  InputOTPGroup,\n  InputOTPSlot,\n} from \"@workspace/ui/components/input-otp\"\n\nexport default function CardPaymentChallenge() {\n  return (\n    <div className=\"w-full max-w-sm border bg-background\">\n      <div className=\"flex items-center justify-between border-b bg-muted/50 px-4 py-3\">\n        <div className=\"flex items-center gap-2 text-xs font-medium\">\n          <CreditCardIcon className=\"size-4\" />\n          Northwind Bank\n        </div>\n        <Badge variant=\"outline\">Secure check</Badge>\n      </div>\n      <div className=\"flex flex-col gap-4 p-4\">\n        <p className=\"text-xs text-muted-foreground\">\n          You&apos;re paying{\" \"}\n          <span className=\"font-medium text-foreground\">$84.20</span> to\n          Fernwood Outfitters with the card ending in 1094.\n        </p>\n        <InputOTP maxLength={6} pattern={REGEXP_ONLY_DIGITS}>\n          <InputOTPGroup>\n            <InputOTPSlot index={0} className=\"size-9\" />\n            <InputOTPSlot index={1} className=\"size-9\" />\n            <InputOTPSlot index={2} className=\"size-9\" />\n            <InputOTPSlot index={3} className=\"size-9\" />\n            <InputOTPSlot index={4} className=\"size-9\" />\n            <InputOTPSlot index={5} className=\"size-9\" />\n          </InputOTPGroup>\n        </InputOTP>\n        <Button className=\"w-full\">Authorize payment</Button>\n        <Button variant=\"ghost\" size=\"sm\" className=\"self-center\">\n          Cancel and return to store\n        </Button>\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

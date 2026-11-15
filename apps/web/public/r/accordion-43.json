@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "accordion-43",
+  "type": "registry:example",
+  "description": "Large marketing-style FAQ with numbered items and generous typography.",
+  "files": [
+    {
+      "path": "registry/designali/examples/accordion/accordion-43.tsx",
+      "content": "import { ArrowDownIcon } from \"lucide-react\"\n\nimport {\n  Accordion,\n  AccordionContent,\n  AccordionItem,\n  AccordionTrigger,\n} from \"@workspace/ui/components/accordion\"\n\nconst faqs = [\n  {\n    value: \"1\",\n    q: \"What makes Tideline different?\",\n    a: \"Tideline turns customer calls into searchable insight in minutes, without manual tagging.\",\n  },\n  {\n    value: \"2\",\n    q: \"Is my data used to train models?\",\n    a: \"Never. Your recordings and transcripts stay in your workspace and are deleted on request.\",\n  },\n  {\n    value: \"3\",\n    q: \"How long does setup take?\",\n    a: \"Most teams connect their calendar and record the first call within ten minutes.\",\n  },\n]\n\nexport default function AccordionLandingFaqLarge() {\n  return (\n    <div className=\"w-full max-w-lg space-y-4\">\n      <h2 className=\"text-2xl font-semibold tracking-tight\">\n        Questions, answered\n      </h2>\n      <Accordion defaultValue={[\"1\"]} className=\"border-t\">\n        {faqs.map((faq) => (\n          <AccordionItem key={faq.value} value={faq.value} className=\"border-b\">\n            <AccordionTrigger className=\"items-center gap-4 py-5 text-base hover:no-underline\">\n              <span className=\"font-mono text-xs text-muted-foreground\">\n                0{faq.value}\n              </span>\n              <span className=\"flex-1\">{faq.q}</span>\n              <ArrowDownIcon className=\"size-4 shrink-0 text-muted-foreground transition-transform group-aria-expanded/accordion-trigger:rotate-180\" />\n            </AccordionTrigger>\n            <AccordionContent className=\"ps-9 pe-8 pb-5 text-sm text-muted-foreground\">\n              {faq.a}\n            </AccordionContent>\n          </AccordionItem>\n        ))}\n      </Accordion>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

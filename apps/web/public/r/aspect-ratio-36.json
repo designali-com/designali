@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "aspect-ratio-36",
+  "type": "registry:example",
+  "description": "A 21:9 promotional hero banner with headline and call to action.",
+  "files": [
+    {
+      "path": "registry/designali/examples/aspect-ratio/aspect-ratio-36.tsx",
+      "content": "import { ArrowRightIcon } from \"lucide-react\"\n\nimport { AspectRatio } from \"@workspace/ui/components/aspect-ratio\"\nimport { Badge } from \"@workspace/ui/components/badge\"\nimport { Button } from \"@workspace/ui/components/button\"\n\nexport default function PromoBannerUltrawide() {\n  return (\n    <AspectRatio\n      ratio={21 / 9}\n      className=\"w-full max-w-lg overflow-hidden bg-linear-to-r from-indigo-600 to-violet-500\"\n    >\n      <div className=\"absolute -end-10 -top-10 size-40 rounded-full border-[24px] border-white/10\" />\n      <div className=\"absolute end-16 -bottom-12 size-28 rounded-full bg-white/10\" />\n      <div className=\"absolute inset-0 flex flex-col items-start justify-center gap-2 p-5 text-white\">\n        <Badge variant=\"secondary\">Spring sale</Badge>\n        <p className=\"max-w-[60%] text-lg leading-tight font-semibold sm:text-xl\">\n          30% off annual plans\n        </p>\n        <Button size=\"sm\" variant=\"secondary\">\n          Claim offer\n          <ArrowRightIcon data-icon=\"inline-end\" />\n        </Button>\n      </div>\n    </AspectRatio>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

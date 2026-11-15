@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tooltip-03",
+  "type": "registry:example",
+  "description": "Icon-only editor toolbar where each button names its action in a tooltip.",
+  "files": [
+    {
+      "path": "registry/designali/examples/tooltip/tooltip-03.tsx",
+      "content": "import {\n  ImagePlusIcon,\n  MessageSquarePlusIcon,\n  Redo2Icon,\n  TableIcon,\n  Undo2Icon,\n} from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  Tooltip,\n  TooltipContent,\n  TooltipProvider,\n  TooltipTrigger,\n} from \"@workspace/ui/components/tooltip\"\n\nconst actions = [\n  { label: \"Undo\", icon: Undo2Icon },\n  { label: \"Redo\", icon: Redo2Icon },\n  { label: \"Insert image\", icon: ImagePlusIcon },\n  { label: \"Insert table\", icon: TableIcon },\n  { label: \"Add comment\", icon: MessageSquarePlusIcon },\n]\n\nexport default function IconToolbarTooltips() {\n  return (\n    <TooltipProvider>\n      <div className=\"flex items-center gap-1 border p-1\">\n        {actions.map((a) => (\n          <Tooltip key={a.label}>\n            <TooltipTrigger\n              render={\n                <Button variant=\"ghost\" size=\"icon-sm\" aria-label={a.label} />\n              }\n            >\n              <a.icon />\n            </TooltipTrigger>\n            <TooltipContent>{a.label}</TooltipContent>\n          </Tooltip>\n        ))}\n      </div>\n    </TooltipProvider>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

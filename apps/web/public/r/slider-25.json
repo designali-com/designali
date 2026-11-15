@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "slider-25",
+  "type": "registry:example",
+  "description": "Investment risk profile slider with discrete labelled levels and an allocation summary.",
+  "files": [
+    {
+      "path": "registry/designali/examples/slider/slider-25.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { Slider } from \"@workspace/ui/components/slider\"\n\nconst profiles = [\n  { label: \"Conservative\", stocks: 20 },\n  { label: \"Cautious\", stocks: 40 },\n  { label: \"Balanced\", stocks: 60 },\n  { label: \"Growth\", stocks: 80 },\n  { label: \"Aggressive\", stocks: 95 },\n]\n\nexport default function RiskToleranceSlider() {\n  const [level, setLevel] = React.useState([2])\n  const profile = profiles[level[0]!]!\n\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-4\">\n      <div className=\"flex items-baseline justify-between\">\n        <span className=\"text-sm font-medium\">Risk tolerance</span>\n        <span className=\"text-sm\">{profile.label}</span>\n      </div>\n      <Slider\n        aria-label=\"Risk tolerance\"\n        value={level}\n        onValueChange={(value) => setLevel(value as number[])}\n        max={profiles.length - 1}\n      />\n      <div className=\"flex h-2 w-full\">\n        <div className=\"bg-primary\" style={{ width: profile.stocks + \"%\" }} />\n        <div className=\"flex-1 bg-muted\" />\n      </div>\n      <div className=\"flex justify-between text-xs text-muted-foreground\">\n        <span>{profile.stocks}% stocks</span>\n        <span>{100 - profile.stocks}% bonds</span>\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

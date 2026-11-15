@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "resizable-25",
+  "type": "registry:example",
+  "description": "Mini month calendar beside a resizable daily agenda.",
+  "files": [
+    {
+      "path": "registry/designali/examples/resizable/resizable-25.tsx",
+      "content": "import {\n  ResizableHandle,\n  ResizablePanel,\n  ResizablePanelGroup,\n} from \"@workspace/ui/components/resizable\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst days = Array.from({ length: 30 }, (_, i) => i + 1)\nconst events = [\n  { time: \"09:00\", title: \"Standup\", tone: \"bg-sky-500\" },\n  { time: \"11:30\", title: \"Design review\", tone: \"bg-violet-500\" },\n  { time: \"14:00\", title: \"Customer call - Hollow Pine\", tone: \"bg-amber-500\" },\n  { time: \"16:30\", title: \"1:1 with Mateo\", tone: \"bg-emerald-500\" },\n]\n\nexport default function CalendarAgendaSplit() {\n  return (\n    <ResizablePanelGroup\n      orientation=\"horizontal\"\n      className=\"h-72 w-full max-w-2xl border\"\n    >\n      <ResizablePanel defaultSize=\"42%\" minSize=\"35%\">\n        <div className=\"flex h-full flex-col gap-2 p-3\">\n          <span className=\"text-xs font-medium\">September</span>\n          <div className=\"grid grid-cols-7 gap-0.5 text-center text-[11px]\">\n            {days.map((day) => (\n              <span\n                key={day}\n                className={cn(\n                  \"py-1 tabular-nums\",\n                  day === 18\n                    ? \"bg-primary text-primary-foreground\"\n                    : \"hover:bg-muted\"\n                )}\n              >\n                {day}\n              </span>\n            ))}\n          </div>\n        </div>\n      </ResizablePanel>\n      <ResizableHandle withHandle />\n      <ResizablePanel defaultSize=\"58%\" minSize=\"35%\">\n        <div className=\"flex h-full flex-col gap-2 p-3\">\n          <span className=\"text-xs font-medium\">Thursday, Sep 18</span>\n          {events.map((event) => (\n            <div\n              key={event.title}\n              className=\"flex items-center gap-2 border p-2 text-xs\"\n            >\n              <span className={cn(\"h-6 w-1 shrink-0\", event.tone)} />\n              <span className=\"w-10 shrink-0 text-muted-foreground tabular-nums\">\n                {event.time}\n              </span>\n              <span className=\"truncate\">{event.title}</span>\n            </div>\n          ))}\n        </div>\n      </ResizablePanel>\n    </ResizablePanelGroup>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

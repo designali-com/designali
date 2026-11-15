@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "radio-group-04",
+  "type": "registry:example",
+  "description": "Checkout shipping options as selectable cards with price and delivery estimate.",
+  "files": [
+    {
+      "path": "registry/designali/examples/radio-group/radio-group-04.tsx",
+      "content": "import {\n  Field,\n  FieldContent,\n  FieldDescription,\n  FieldLabel,\n  FieldTitle,\n} from \"@workspace/ui/components/field\"\nimport {\n  RadioGroup,\n  RadioGroupItem,\n} from \"@workspace/ui/components/radio-group\"\n\nconst methods = [\n  {\n    value: \"standard\",\n    label: \"Standard\",\n    eta: \"4-6 business days\",\n    price: \"Free\",\n  },\n  {\n    value: \"express\",\n    label: \"Express\",\n    eta: \"2-3 business days\",\n    price: \"$9.00\",\n  },\n  {\n    value: \"overnight\",\n    label: \"Overnight\",\n    eta: \"Next business day\",\n    price: \"$24.00\",\n  },\n]\n\nexport default function ShippingMethodCards() {\n  return (\n    <RadioGroup defaultValue=\"standard\" className=\"w-full max-w-sm\">\n      {methods.map((method) => (\n        <FieldLabel key={method.value} htmlFor={\"ship-\" + method.value}>\n          <Field orientation=\"horizontal\">\n            <RadioGroupItem value={method.value} id={\"ship-\" + method.value} />\n            <FieldContent>\n              <FieldTitle>{method.label}</FieldTitle>\n              <FieldDescription>{method.eta}</FieldDescription>\n            </FieldContent>\n            <span className=\"text-sm font-medium\">{method.price}</span>\n          </Field>\n        </FieldLabel>\n      ))}\n    </RadioGroup>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

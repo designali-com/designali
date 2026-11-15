@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toast-38",
+  "type": "registry:example",
+  "description": "Contrasts polite low-priority toasts with urgent high-priority ones for screen readers.",
+  "files": [
+    {
+      "path": "registry/designali/examples/toast/toast-38.tsx",
+      "content": "\"use client\"\n\nimport { Badge } from \"@workspace/ui/components/badge\"\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Toaster, createToastManager } from \"@workspace/ui/components/toast\"\n\nconst notify = createToastManager()\n\nexport default function PriorityAnnouncementToast() {\n  return (\n    <Toaster toastManager={notify}>\n      <div className=\"grid w-full max-w-sm grid-cols-2 gap-3\">\n        <div className=\"flex flex-col gap-2 border p-3\">\n          <Badge variant=\"secondary\">priority: low</Badge>\n          <p className=\"text-xs text-muted-foreground\">\n            Announced politely after the current speech.\n          </p>\n          <Button\n            size=\"sm\"\n            variant=\"outline\"\n            onClick={() =>\n              notify.add({\n                title: \"Comment added\",\n                description: \"Jules replied on Homepage v2.\",\n                priority: \"low\",\n              })\n            }\n          >\n            Polite\n          </Button>\n        </div>\n        <div className=\"flex flex-col gap-2 border p-3\">\n          <Badge variant=\"destructive\">priority: high</Badge>\n          <p className=\"text-xs text-muted-foreground\">\n            Interrupts assistive tech immediately.\n          </p>\n          <Button\n            size=\"sm\"\n            variant=\"destructive\"\n            onClick={() =>\n              notify.add({\n                type: \"error\",\n                title: \"Payment method expired\",\n                description: \"Update it to avoid service interruption.\",\n                priority: \"high\",\n              })\n            }\n          >\n            Urgent\n          </Button>\n        </div>\n      </div>\n    </Toaster>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

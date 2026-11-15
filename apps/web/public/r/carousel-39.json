@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "carousel-39",
+  "type": "registry:example",
+  "description": "Code snippet carousel switching between package manager install commands.",
+  "files": [
+    {
+      "path": "registry/designali/examples/carousel/carousel-39.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { TerminalIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  Carousel,\n  CarouselContent,\n  CarouselItem,\n  type CarouselApi,\n} from \"@workspace/ui/components/carousel\"\n\nconst managers = [\n  { id: \"npm\", cmd: \"npm install @acme/charts\" },\n  { id: \"pnpm\", cmd: \"pnpm add @acme/charts\" },\n  { id: \"yarn\", cmd: \"yarn add @acme/charts\" },\n  { id: \"bun\", cmd: \"bun add @acme/charts\" },\n]\n\nexport default function InstallCommandCarousel() {\n  const [api, setApi] = React.useState<CarouselApi>()\n  const [selected, setSelected] = React.useState(0)\n\n  const handleApi = React.useCallback((next: CarouselApi) => {\n    if (!next) return\n    setApi(next)\n    next.on(\"select\", () => setSelected(next.selectedScrollSnap()))\n  }, [])\n\n  return (\n    <div className=\"w-full max-w-sm border bg-muted/30\">\n      <div className=\"flex items-center gap-1 border-b px-2 py-1.5\">\n        <TerminalIcon className=\"me-1 size-3.5 text-muted-foreground\" />\n        {managers.map((m, index) => (\n          <Button\n            key={m.id}\n            size=\"xs\"\n            variant={selected === index ? \"secondary\" : \"ghost\"}\n            onClick={() => api?.scrollTo(index)}\n          >\n            {m.id}\n          </Button>\n        ))}\n      </div>\n      <Carousel setApi={handleApi} opts={{ duration: 18 }}>\n        <CarouselContent>\n          {managers.map((m) => (\n            <CarouselItem key={m.id}>\n              <pre className=\"overflow-x-auto p-4 font-mono text-xs\">\n                <span className=\"text-muted-foreground\">$ </span>\n                {m.cmd}\n              </pre>\n            </CarouselItem>\n          ))}\n        </CarouselContent>\n      </Carousel>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "calendar-26",
+  "type": "registry:example",
+  "description": "Expense date picker bounded to the April-March fiscal year with a month dropdown.",
+  "files": [
+    {
+      "path": "registry/designali/examples/calendar/calendar-26.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { format } from \"date-fns\"\n\nimport { Badge } from \"@workspace/ui/components/badge\"\nimport { Calendar } from \"@workspace/ui/components/calendar\"\nimport {\n  Card,\n  CardAction,\n  CardContent,\n  CardDescription,\n  CardHeader,\n  CardTitle,\n} from \"@workspace/ui/components/card\"\n\nconst now = new Date()\nconst fyStart = now.getMonth() >= 3 ? now.getFullYear() : now.getFullYear() - 1\nconst start = new Date(fyStart, 3, 1)\nconst end = new Date(fyStart + 1, 2, 31)\n\nexport default function FiscalYearExpenseDate() {\n  const [date, setDate] = React.useState<undefined | Date>()\n\n  return (\n    <Card size=\"sm\" className=\"w-fit\">\n      <CardHeader>\n        <CardTitle>Expense date</CardTitle>\n        <CardDescription>\n          {format(start, \"MMM yyyy\")} - {format(end, \"MMM yyyy\")}\n        </CardDescription>\n        <CardAction>\n          <Badge variant=\"secondary\">FY{String(fyStart + 1).slice(2)}</Badge>\n        </CardAction>\n      </CardHeader>\n      <CardContent>\n        <Calendar\n          mode=\"single\"\n          captionLayout=\"dropdown-months\"\n          selected={date}\n          onSelect={setDate}\n          startMonth={start}\n          endMonth={end}\n          disabled={[{ before: start }, { after: end }]}\n          className=\"p-0\"\n        />\n      </CardContent>\n    </Card>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

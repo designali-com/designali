@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "select-42",
+  "type": "registry:example",
+  "description": "Inventory location select with a leading map pin and stock counts per warehouse.",
+  "files": [
+    {
+      "path": "registry/designali/examples/select/select-42.tsx",
+      "content": "import { MapPinIcon } from \"lucide-react\"\n\nimport { Field, FieldLabel } from \"@workspace/ui/components/field\"\nimport {\n  Select,\n  SelectContent,\n  SelectItem,\n  SelectTrigger,\n  SelectValue,\n} from \"@workspace/ui/components/select\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst warehouses = [\n  { label: \"Rotterdam DC\", value: \"rtm\", stock: 1240 },\n  { label: \"Leeds Hub\", value: \"lds\", stock: 312 },\n  { label: \"Lyon Depot\", value: \"lyn\", stock: 0 },\n  { label: \"Gdansk Port\", value: \"gdn\", stock: 87 },\n]\n\nexport default function WarehouseSelect() {\n  return (\n    <Field className=\"w-full max-w-xs\">\n      <FieldLabel htmlFor=\"warehouse\">Fulfil from</FieldLabel>\n      <Select items={warehouses} defaultValue=\"rtm\">\n        <SelectTrigger id=\"warehouse\" className=\"w-full\">\n          <MapPinIcon className=\"text-muted-foreground\" />\n          <SelectValue />\n        </SelectTrigger>\n        <SelectContent>\n          {warehouses.map((item) => (\n            <SelectItem\n              key={item.value}\n              value={item.value}\n              disabled={item.stock === 0}\n            >\n              {item.label}\n              <span\n                className={cn(\n                  \"ms-auto ps-4 tabular-nums\",\n                  item.stock < 100\n                    ? \"text-amber-600 dark:text-amber-400\"\n                    : \"text-muted-foreground\"\n                )}\n              >\n                {item.stock === 0 ? \"Out of stock\" : item.stock + \" units\"}\n              </span>\n            </SelectItem>\n          ))}\n        </SelectContent>\n      </Select>\n    </Field>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

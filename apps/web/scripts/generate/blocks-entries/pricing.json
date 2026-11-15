@@ -1,0 +1,14 @@
+[
+  ["pricing-09", "pricing", "650px", "Single lifetime-deal panel with an included features list beside a one-time price, strikethrough and refund note."],
+  ["pricing-10", "pricing", "750px", "Audience tabs that swap between pairs of plan cards with a recommended badge and feature checklists."],
+  ["pricing-11", "pricing", "700px", "Checkout-style plan picker with radio rows beside a sticky order summary and monthly/yearly toggle."],
+  ["pricing-12", "pricing", "750px", "Inverted dark section with a guarantee note beside two contrasting plan cards with arrow CTAs."],
+  ["pricing-13", "pricing", "550px", "Pay-as-you-go credit pack selector with per-100 rates, bonus badges and a live total purchase bar."],
+  ["pricing-14", "pricing", "650px", "Core plan card, checkbox add-on list and a sticky dark running monthly total."],
+  ["pricing-15", "pricing", "750px", "Pricing bento with a large featured Pro tile, Free and nonprofit tiles and an Enterprise banner link."],
+  ["pricing-16", "pricing", "650px", "Team size stepper that recommends a plan with features and a calculated monthly total."],
+  ["pricing-17", "pricing", "900px", "Feature comparison table with collapsible category groups and a plan switcher on mobile."],
+  ["pricing-18", "pricing", "650px", "Four-tier pricing row with a yearly billing switch and USD/EUR/GBP currency selector."],
+  ["pricing-19", "pricing", "800px", "Two-column Free vs Pro comparison grid with a highlighted Pro column and signup buttons."],
+  ["pricing-20", "pricing", "650px", "Usage-based calculator with a monthly events input, estimated bill and graduated band breakdown bars."]
+]

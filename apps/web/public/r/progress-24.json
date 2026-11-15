@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "progress-24",
+  "type": "registry:example",
+  "description": "Server dashboard tile with CPU, memory, and disk utilization bars.",
+  "files": [
+    {
+      "path": "registry/designali/examples/progress/progress-24.tsx",
+      "content": "import { CpuIcon, HardDriveIcon, MemoryStickIcon } from \"lucide-react\"\n\nimport { Badge } from \"@workspace/ui/components/badge\"\nimport {\n  Progress,\n  ProgressLabel,\n  ProgressValue,\n} from \"@workspace/ui/components/progress\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst resources = [\n  { label: \"CPU\", value: 38, icon: CpuIcon, detail: \"8 cores\" },\n  { label: \"Memory\", value: 71, icon: MemoryStickIcon, detail: \"22.7 / 32 GB\" },\n  { label: \"Disk\", value: 89, icon: HardDriveIcon, detail: \"445 / 500 GB\" },\n]\n\nexport default function ServerResourceMonitor() {\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-4 border p-4\">\n      <div className=\"flex items-center justify-between\">\n        <span className=\"font-mono text-sm\">api-prod-03</span>\n        <Badge variant=\"outline\">\n          <span className=\"size-1.5 bg-emerald-500\" />\n          Online\n        </Badge>\n      </div>\n      {resources.map((r) => (\n        <Progress\n          key={r.label}\n          value={r.value}\n          className={cn(\n            \"[&_[data-slot=progress-track]]:h-1.5\",\n            r.value > 85 && \"[&_[data-slot=progress-indicator]]:bg-destructive\"\n          )}\n        >\n          <ProgressLabel className=\"flex items-center gap-1.5\">\n            <r.icon className=\"size-3.5 text-muted-foreground\" />\n            {r.label}\n            <span className=\"text-muted-foreground\">{r.detail}</span>\n          </ProgressLabel>\n          <ProgressValue />\n        </Progress>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

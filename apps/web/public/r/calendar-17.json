@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "calendar-17",
+  "type": "registry:example",
+  "description": "Animated calendar that switches between label, dropdown, month-only and year-only captions.",
+  "files": [
+    {
+      "path": "registry/designali/examples/calendar/calendar-17.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { Calendar } from \"@workspace/ui/components/calendar\"\nimport {\n  ToggleGroup,\n  ToggleGroupItem,\n} from \"@workspace/ui/components/toggle-group\"\n\nconst layouts = [\n  { value: \"label\", label: \"Label\" },\n  { value: \"dropdown\", label: \"Both\" },\n  { value: \"dropdown-months\", label: \"Month\" },\n  { value: \"dropdown-years\", label: \"Year\" },\n] as const\n\ntype Layout = (typeof layouts)[number][\"value\"]\n\nexport default function CaptionLayoutSwitcher() {\n  const [layout, setLayout] = React.useState<Layout>(\"dropdown\")\n  const year = new Date().getFullYear()\n\n  return (\n    <div className=\"flex w-full max-w-xs flex-col items-center gap-3\">\n      <ToggleGroup\n        variant=\"outline\"\n        size=\"sm\"\n        value={[layout]}\n        onValueChange={(value) => {\n          if (value[0]) setLayout(value[0] as Layout)\n        }}\n      >\n        {layouts.map((item) => (\n          <ToggleGroupItem key={item.value} value={item.value}>\n            {item.label}\n          </ToggleGroupItem>\n        ))}\n      </ToggleGroup>\n      <Calendar\n        mode=\"single\"\n        animate\n        captionLayout={layout}\n        startMonth={new Date(year - 10, 0)}\n        endMonth={new Date(year + 5, 11)}\n        className=\"border\"\n      />\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

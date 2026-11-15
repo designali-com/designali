@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "select-46",
+  "type": "registry:example",
+  "description": "Select whose values are objects, using itemToStringLabel and isItemEqualToValue.",
+  "files": [
+    {
+      "path": "registry/designali/examples/select/select-46.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { Field, FieldLabel } from \"@workspace/ui/components/field\"\nimport {\n  Select,\n  SelectContent,\n  SelectItem,\n  SelectTrigger,\n  SelectValue,\n} from \"@workspace/ui/components/select\"\n\ntype Reviewer = { id: number; name: string; team: string }\n\nconst reviewers: Reviewer[] = [\n  { id: 1, name: \"Ava Lindqvist\", team: \"Platform\" },\n  { id: 2, name: \"Kofi Mensah\", team: \"Payments\" },\n  { id: 3, name: \"Rina Takahashi\", team: \"Growth\" },\n]\n\nexport default function ObjectValueSelect() {\n  const [reviewer, setReviewer] = React.useState<Reviewer | null>({\n    id: 2,\n    name: \"Kofi Mensah\",\n    team: \"Payments\",\n  })\n\n  return (\n    <div className=\"flex w-full max-w-xs flex-col gap-3\">\n      <Field>\n        <FieldLabel htmlFor=\"reviewer\">Reviewer</FieldLabel>\n        <Select\n          value={reviewer}\n          onValueChange={setReviewer}\n          itemToStringLabel={(item: Reviewer) => item.name}\n          isItemEqualToValue={(item: Reviewer, value: Reviewer) =>\n            item.id === value.id\n          }\n        >\n          <SelectTrigger id=\"reviewer\" className=\"w-full\">\n            <SelectValue placeholder=\"Request a review\" />\n          </SelectTrigger>\n          <SelectContent>\n            {reviewers.map((item) => (\n              <SelectItem key={item.id} value={item}>\n                {item.name}\n                <span className=\"text-muted-foreground\">{item.team}</span>\n              </SelectItem>\n            ))}\n          </SelectContent>\n        </Select>\n      </Field>\n      <pre className=\"bg-muted p-2 font-mono text-[11px]\">\n        {JSON.stringify(reviewer, null, 2)}\n      </pre>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

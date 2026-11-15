@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "field-12",
+  "type": "registry:example",
+  "description": "One-time code field with grouped OTP slots, a description, and a resend countdown.",
+  "files": [
+    {
+      "path": "registry/designali/examples/field/field-12.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  Field,\n  FieldDescription,\n  FieldLabel,\n} from \"@workspace/ui/components/field\"\nimport {\n  InputOTP,\n  InputOTPGroup,\n  InputOTPSeparator,\n  InputOTPSlot,\n} from \"@workspace/ui/components/input-otp\"\n\nexport default function VerificationCodeField() {\n  const [seconds, setSeconds] = React.useState(24)\n\n  React.useEffect(() => {\n    if (seconds <= 0) return\n    const t = setTimeout(() => setSeconds((s) => s - 1), 1000)\n    return () => clearTimeout(t)\n  }, [seconds])\n\n  return (\n    <Field className=\"w-fit\">\n      <FieldLabel htmlFor=\"otp-code\">Verification code</FieldLabel>\n      <FieldDescription>\n        We sent a 6-digit code to +1 ••• ••• 4821.\n      </FieldDescription>\n      <InputOTP id=\"otp-code\" maxLength={6}>\n        <InputOTPGroup>\n          <InputOTPSlot index={0} />\n          <InputOTPSlot index={1} />\n          <InputOTPSlot index={2} />\n        </InputOTPGroup>\n        <InputOTPSeparator />\n        <InputOTPGroup>\n          <InputOTPSlot index={3} />\n          <InputOTPSlot index={4} />\n          <InputOTPSlot index={5} />\n        </InputOTPGroup>\n      </InputOTP>\n      <Button\n        variant=\"link\"\n        size=\"xs\"\n        className=\"w-fit px-0\"\n        disabled={seconds > 0}\n        onClick={() => setSeconds(30)}\n      >\n        {seconds > 0 ? \"Resend code in \" + seconds + \"s\" : \"Resend code\"}\n      </Button>\n    </Field>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

@@ -43,7 +43,7 @@ export const education: CategoryContent = {
     { value: "190", label: "Countries represented" },
     { value: "320", label: "Hiring partners" },
   ],
-  logos: ["Google", "Spotify", "Airbnb", "Shopify", "Deloitte", "IBM", "Stripe", "Canva"],
+  logos: ["Google", "Spotify", "Airbnb", "Shopify", "Deloitte", "IBM", "Corvia", "Canva"],
   testimonials: [
     { quote: "I went from teaching high school chemistry to working as a data analyst in nine months. The projects got me the interview.", name: "Maya Thompson", role: "Data Analyst, career switcher" },
     { quote: "The mentor feedback is the real value. Someone experienced actually read my code and told me how to improve it.", name: "Arjun Mehta", role: "Software Engineer" },

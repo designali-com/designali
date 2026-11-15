@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "spinner-31",
+  "type": "registry:example",
+  "description": "Profile avatar with a spinner overlay while a new photo is uploading.",
+  "files": [
+    {
+      "path": "registry/designali/examples/spinner/spinner-31.tsx",
+      "content": "import { Avatar, AvatarFallback } from \"@workspace/ui/components/avatar\"\nimport { Spinner } from \"@workspace/ui/components/spinner\"\n\nexport default function AvatarUploadSpinner() {\n  return (\n    <div className=\"flex items-center gap-4\">\n      <div className=\"relative\">\n        <Avatar className=\"size-16\">\n          <AvatarFallback className=\"text-lg\">RN</AvatarFallback>\n        </Avatar>\n        <div className=\"absolute inset-0 flex items-center justify-center rounded-full bg-background/60\">\n          <Spinner className=\"size-6\" />\n        </div>\n      </div>\n      <div className=\"flex flex-col gap-1\">\n        <span className=\"text-sm font-medium\">Rosa Navarro</span>\n        <span className=\"text-xs text-muted-foreground\">\n          Uploading new photo...\n        </span>\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

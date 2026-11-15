@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "switch-10",
+  "type": "registry:example",
+  "description": "Admin feature flag list with environment badges and rollout notes.",
+  "files": [
+    {
+      "path": "registry/designali/examples/switch/switch-10.tsx",
+      "content": "import { FlagIcon } from \"lucide-react\"\n\nimport { Badge } from \"@workspace/ui/components/badge\"\nimport { Switch } from \"@workspace/ui/components/switch\"\n\nconst flags = [\n  { key: \"new-checkout\", env: \"Production\", note: \"100% rollout\", on: true },\n  { key: \"ai-summaries\", env: \"Staging\", note: \"Internal testers\", on: true },\n  {\n    key: \"dark-dashboard\",\n    env: \"Production\",\n    note: \"Paused after bug report\",\n    on: false,\n  },\n  {\n    key: \"bulk-export-v2\",\n    env: \"Development\",\n    note: \"Behind QA review\",\n    on: false,\n  },\n]\n\nexport default function FeatureFlagList() {\n  return (\n    <div className=\"w-full max-w-md divide-y border\">\n      {flags.map((flag) => (\n        <div key={flag.key} className=\"flex items-center gap-3 px-4 py-3\">\n          <FlagIcon className=\"size-4 shrink-0 text-muted-foreground\" />\n          <div className=\"min-w-0 flex-1\">\n            <div className=\"flex flex-wrap items-center gap-2\">\n              <code className=\"font-mono text-xs font-medium\">{flag.key}</code>\n              <Badge\n                variant={flag.env === \"Production\" ? \"default\" : \"secondary\"}\n              >\n                {flag.env}\n              </Badge>\n            </div>\n            <p className=\"mt-0.5 text-xs text-muted-foreground\">{flag.note}</p>\n          </div>\n          <Switch defaultChecked={flag.on} aria-label={\"Toggle \" + flag.key} />\n        </div>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

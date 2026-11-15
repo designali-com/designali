@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "carousel-45",
+  "type": "registry:example",
+  "description": "Careers page job cards with location, type badges, and apply links.",
+  "files": [
+    {
+      "path": "registry/designali/examples/carousel/carousel-45.tsx",
+      "content": "import { ArrowUpRightIcon, MapPinIcon } from \"lucide-react\"\n\nimport { Badge } from \"@workspace/ui/components/badge\"\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  Card,\n  CardContent,\n  CardDescription,\n  CardHeader,\n  CardTitle,\n} from \"@workspace/ui/components/card\"\nimport {\n  Carousel,\n  CarouselContent,\n  CarouselItem,\n  CarouselNext,\n  CarouselPrevious,\n} from \"@workspace/ui/components/carousel\"\n\nconst jobs = [\n  {\n    title: \"Senior Frontend Engineer\",\n    team: \"Platform\",\n    location: \"Remote · EU\",\n    type: \"Full-time\",\n  },\n  {\n    title: \"Product Designer\",\n    team: \"Growth\",\n    location: \"Lisbon\",\n    type: \"Full-time\",\n  },\n  {\n    title: \"Support Specialist\",\n    team: \"Customer\",\n    location: \"Remote · US\",\n    type: \"Part-time\",\n  },\n  {\n    title: \"Data Engineer\",\n    team: \"Insights\",\n    location: \"Berlin\",\n    type: \"Contract\",\n  },\n]\n\nexport default function JobListingsCarousel() {\n  return (\n    <Carousel\n      opts={{ align: \"start\" }}\n      className=\"w-full max-w-[15rem] sm:max-w-md\"\n    >\n      <CarouselContent>\n        {jobs.map((job) => (\n          <CarouselItem key={job.title} className=\"sm:basis-1/2\">\n            <Card size=\"sm\" className=\"h-full\">\n              <CardHeader>\n                <CardDescription>{job.team}</CardDescription>\n                <CardTitle>{job.title}</CardTitle>\n              </CardHeader>\n              <CardContent className=\"flex flex-col gap-3\">\n                <div className=\"flex flex-wrap gap-1\">\n                  <Badge variant=\"outline\">\n                    <MapPinIcon />\n                    {job.location}\n                  </Badge>\n                  <Badge variant=\"secondary\">{job.type}</Badge>\n                </div>\n                <Button\n                  size=\"sm\"\n                  variant=\"outline\"\n                  nativeButton={false}\n                  render={<a href=\"#\" />}\n                >\n                  View role\n                  <ArrowUpRightIcon data-icon=\"inline-end\" />\n                </Button>\n              </CardContent>\n            </Card>\n          </CarouselItem>\n        ))}\n      </CarouselContent>\n      <CarouselPrevious />\n      <CarouselNext />\n    </Carousel>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

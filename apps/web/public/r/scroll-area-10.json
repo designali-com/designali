@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "scroll-area-10",
+  "type": "registry:example",
+  "description": "Wide data table with a sticky header that scrolls in both directions.",
+  "files": [
+    {
+      "path": "registry/designali/examples/scroll-area/scroll-area-10.tsx",
+      "content": "import { ScrollArea, ScrollBar } from \"@workspace/ui/components/scroll-area\"\n\nconst columns = [\n  \"Invoice\",\n  \"Customer\",\n  \"Email\",\n  \"Plan\",\n  \"Amount\",\n  \"Status\",\n  \"Issued\",\n  \"Due\",\n]\nconst rows = Array.from({ length: 12 }, (_, i) => [\n  \"INV-\" + (2040 + i),\n  [\"Kai Moreno\", \"Rosa Lind\", \"Omar Aziz\", \"Lena Fox\"][i % 4],\n  [\"kai\", \"rosa\", \"omar\", \"lena\"][i % 4] + \"@example.com\",\n  [\"Pro\", \"Team\", \"Starter\"][i % 3],\n  \"$\" + (49 + i * 12) + \".00\",\n  [\"Paid\", \"Pending\", \"Overdue\"][i % 3],\n  \"Oct \" + (i + 1),\n  \"Nov \" + (i + 1),\n])\n\nexport default function WideDataTable() {\n  return (\n    <ScrollArea className=\"h-72 w-full max-w-md border\">\n      <table className=\"w-max min-w-full text-xs\">\n        <thead className=\"sticky top-0 z-10 bg-muted\">\n          <tr>\n            {columns.map((c) => (\n              <th\n                key={c}\n                className=\"px-3 py-2 text-left font-medium whitespace-nowrap\"\n              >\n                {c}\n              </th>\n            ))}\n          </tr>\n        </thead>\n        <tbody>\n          {rows.map((row) => (\n            <tr key={row[0]} className=\"border-t\">\n              {row.map((cell, i) => (\n                <td key={i} className=\"px-3 py-2 whitespace-nowrap\">\n                  {cell}\n                </td>\n              ))}\n            </tr>\n          ))}\n        </tbody>\n      </table>\n      <ScrollBar orientation=\"horizontal\" />\n    </ScrollArea>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

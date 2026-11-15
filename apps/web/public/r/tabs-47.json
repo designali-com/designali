@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tabs-47",
+  "type": "registry:example",
+  "description": "Ticket tabs showing a comment timeline and a separate history log.",
+  "files": [
+    {
+      "path": "registry/designali/examples/tabs/tabs-47.tsx",
+      "content": "import { HistoryIcon, MessageCircleIcon } from \"lucide-react\"\n\nimport {\n  Tabs,\n  TabsContent,\n  TabsList,\n  TabsTrigger,\n} from \"@workspace/ui/components/tabs\"\n\nconst events = [\n  { who: \"Elif Demir\", what: \"changed priority to High\", when: \"10:42\" },\n  { who: \"Noah Park\", what: \"assigned the ticket to Elif\", when: \"09:15\" },\n  { who: \"System\", what: \"created ticket from email\", when: \"08:58\" },\n]\n\nexport default function ActivityTimelineTabs() {\n  return (\n    <Tabs defaultValue=\"history\" className=\"w-full max-w-sm\">\n      <TabsList variant=\"line\">\n        <TabsTrigger value=\"comments\">\n          <MessageCircleIcon data-icon=\"inline-start\" />\n          Comments\n        </TabsTrigger>\n        <TabsTrigger value=\"history\">\n          <HistoryIcon data-icon=\"inline-start\" />\n          History\n        </TabsTrigger>\n      </TabsList>\n      <TabsContent value=\"comments\" className=\"border p-3\">\n        <p className=\"font-medium\">Elif Demir</p>\n        <p className=\"text-muted-foreground\">\n          Reproduced on Safari 18, looking into it now.\n        </p>\n      </TabsContent>\n      <TabsContent value=\"history\">\n        <ol className=\"relative ms-1.5 border-s\">\n          {events.map((e) => (\n            <li key={e.when} className=\"ms-4 pb-3 last:pb-0\">\n              <span className=\"absolute -start-1 mt-1 size-2 rounded-full bg-muted-foreground\" />\n              <p>\n                <span className=\"font-medium\">{e.who}</span> {e.what}\n              </p>\n              <p className=\"text-muted-foreground\">{e.when}</p>\n            </li>\n          ))}\n        </ol>\n      </TabsContent>\n    </Tabs>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

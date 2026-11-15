@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "dropdown-menu-11",
+  "type": "registry:example",
+  "description": "Checkbox items for notification channels plus a mute-all item that disables the rest.",
+  "files": [
+    {
+      "path": "registry/designali/examples/dropdown-menu/dropdown-menu-11.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { BellIcon, BellOffIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  DropdownMenu,\n  DropdownMenuCheckboxItem,\n  DropdownMenuContent,\n  DropdownMenuGroup,\n  DropdownMenuLabel,\n  DropdownMenuSeparator,\n  DropdownMenuTrigger,\n} from \"@workspace/ui/components/dropdown-menu\"\n\nexport default function NotificationPreferencesMenu() {\n  const [muted, setMuted] = React.useState(false)\n  const [prefs, setPrefs] = React.useState({\n    mentions: true,\n    comments: true,\n    updates: false,\n  })\n\n  return (\n    <DropdownMenu>\n      <DropdownMenuTrigger render={<Button variant=\"outline\" />}>\n        {muted ? (\n          <BellOffIcon data-icon=\"inline-start\" />\n        ) : (\n          <BellIcon data-icon=\"inline-start\" />\n        )}\n        Notifications\n      </DropdownMenuTrigger>\n      <DropdownMenuContent className=\"w-52\">\n        <DropdownMenuGroup>\n          <DropdownMenuLabel>Notify me about</DropdownMenuLabel>\n          <DropdownMenuCheckboxItem\n            checked={prefs.mentions}\n            disabled={muted}\n            onCheckedChange={(checked) =>\n              setPrefs({ ...prefs, mentions: checked })\n            }\n          >\n            Mentions\n          </DropdownMenuCheckboxItem>\n          <DropdownMenuCheckboxItem\n            checked={prefs.comments}\n            disabled={muted}\n            onCheckedChange={(checked) =>\n              setPrefs({ ...prefs, comments: checked })\n            }\n          >\n            Replies to my comments\n          </DropdownMenuCheckboxItem>\n          <DropdownMenuCheckboxItem\n            checked={prefs.updates}\n            disabled={muted}\n            onCheckedChange={(checked) =>\n              setPrefs({ ...prefs, updates: checked })\n            }\n          >\n            Product updates\n          </DropdownMenuCheckboxItem>\n        </DropdownMenuGroup>\n        <DropdownMenuSeparator />\n        <DropdownMenuCheckboxItem checked={muted} onCheckedChange={setMuted}>\n          Mute all for 8 hours\n        </DropdownMenuCheckboxItem>\n      </DropdownMenuContent>\n    </DropdownMenu>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

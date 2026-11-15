@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "aspect-ratio-40",
+  "type": "registry:example",
+  "description": "A before/after comparison where a slider reveals the edited version.",
+  "files": [
+    {
+      "path": "registry/designali/examples/aspect-ratio/aspect-ratio-40.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { AspectRatio } from \"@workspace/ui/components/aspect-ratio\"\nimport { Badge } from \"@workspace/ui/components/badge\"\nimport { Slider } from \"@workspace/ui/components/slider\"\n\nexport default function BeforeAfterSlider() {\n  const [position, setPosition] = React.useState(50)\n\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-3\">\n      <AspectRatio ratio={4 / 3} className=\"overflow-hidden\">\n        <div className=\"absolute inset-0 bg-linear-to-br from-stone-400 to-stone-600 grayscale\" />\n        <div\n          className=\"absolute inset-0 bg-linear-to-br from-orange-300 via-pink-400 to-violet-600\"\n          style={{ clipPath: \"inset(0 0 0 \" + position + \"%)\" }}\n        />\n        <div\n          className=\"absolute inset-y-0 w-0.5 bg-white\"\n          style={{ left: position + \"%\" }}\n        />\n        <Badge variant=\"secondary\" className=\"absolute start-2 top-2\">\n          Before\n        </Badge>\n        <Badge className=\"absolute end-2 top-2\">After</Badge>\n      </AspectRatio>\n      <Slider\n        value={[position]}\n        onValueChange={(value) =>\n          setPosition(Array.isArray(value) ? value[0]! : value)\n        }\n        aria-label=\"Comparison position\"\n      />\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

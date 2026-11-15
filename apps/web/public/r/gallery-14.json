@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "gallery-14",
+  "type": "registry:block",
+  "description": "Expanding accordion panels that widen on hover to reveal category details.",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/designali/blocks/gallery/gallery-14.tsx",
+      "content": "import { ArrowUpRight } from \"lucide-react\"\n\nconst panels = [\n  {\n    title: \"Coastal\",\n    count: \"128 photos\",\n    body: \"Cliffs, harbours and long grey beaches from the Atlantic edge.\",\n    gradient: \"linear-gradient(180deg, var(--chart-2), var(--chart-3))\",\n  },\n  {\n    title: \"Urban\",\n    count: \"214 photos\",\n    body: \"Night streets, stairwells and rooftops across eleven cities.\",\n    gradient: \"linear-gradient(200deg, var(--chart-5), var(--chart-1))\",\n  },\n  {\n    title: \"Alpine\",\n    count: \"96 photos\",\n    body: \"High passes, glacier light and the huts that keep climbers alive.\",\n    gradient: \"linear-gradient(160deg, var(--chart-4), var(--chart-2))\",\n  },\n  {\n    title: \"Desert\",\n    count: \"73 photos\",\n    body: \"Dunes at blue hour and the roads that disappear into them.\",\n    gradient: \"linear-gradient(120deg, var(--chart-1), var(--chart-4))\",\n  },\n  {\n    title: \"Forest\",\n    count: \"151 photos\",\n    body: \"Moss, fog and old growth, mostly shot before seven in the morning.\",\n    gradient: \"linear-gradient(240deg, var(--chart-3), var(--chart-5))\",\n  },\n]\n\nexport default function Gallery14() {\n  return (\n    <section className=\"w-full bg-background py-20\">\n      <div className=\"mx-auto max-w-7xl px-6\">\n        <div className=\"flex flex-wrap items-end justify-between gap-4\">\n          <h2 className=\"text-3xl font-semibold tracking-tight md:text-4xl\">\n            Browse by landscape\n          </h2>\n          <a href=\"#\" className=\"inline-flex items-center gap-1 text-sm font-medium hover:underline\">\n            View all 662 photos <ArrowUpRight className=\"size-4\" />\n          </a>\n        </div>\n        <div className=\"mt-10 flex h-[640px] flex-col gap-2 md:h-[480px] md:flex-row\">\n          {panels.map((panel) => (\n            <a\n              key={panel.title}\n              href=\"#\"\n              className=\"group relative flex min-h-0 flex-1 overflow-hidden border border-border transition-[flex-grow] duration-500 ease-out hover:flex-[3] focus-visible:flex-[3] focus-visible:outline-none\"\n            >\n              <div\n                className=\"absolute inset-0 transition-transform duration-700 group-hover:scale-105\"\n                style={{ background: panel.gradient }}\n              />\n              <div className=\"absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent\" />\n              <div className=\"relative mt-auto w-full p-4 text-white md:p-5\">\n                <div className=\"flex items-center justify-between gap-2\">\n                  <h3 className=\"text-lg font-medium md:[writing-mode:vertical-rl] md:group-hover:[writing-mode:horizontal-tb] md:group-focus-visible:[writing-mode:horizontal-tb]\">\n                    {panel.title}\n                  </h3>\n                  <ArrowUpRight className=\"size-5 shrink-0 opacity-0 transition-opacity group-hover:opacity-100\" />\n                </div>\n                <div className=\"grid grid-rows-[0fr] transition-[grid-template-rows] duration-500 group-hover:grid-rows-[1fr] group-focus-visible:grid-rows-[1fr]\">\n                  <div className=\"overflow-hidden\">\n                    <p className=\"mt-2 max-w-xs text-sm text-white/80\">{panel.body}</p>\n                    <p className=\"mt-2 font-mono text-xs text-white/60\">{panel.count}</p>\n                  </div>\n                </div>\n              </div>\n            </a>\n          ))}\n        </div>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "700px"
+  },
+  "categories": [
+    "gallery"
+  ]
+}

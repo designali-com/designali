@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "spinner-33",
+  "type": "registry:example",
+  "description": "Command-palette style search panel showing a spinner row while results load.",
+  "files": [
+    {
+      "path": "registry/designali/examples/spinner/spinner-33.tsx",
+      "content": "import { SearchIcon } from \"lucide-react\"\n\nimport { Kbd } from \"@workspace/ui/components/kbd\"\nimport { Spinner } from \"@workspace/ui/components/spinner\"\n\nexport default function CommandSearchLoading() {\n  return (\n    <div className=\"w-full max-w-sm border bg-popover text-popover-foreground shadow-md\">\n      <div className=\"flex items-center gap-2 border-b px-3 py-2\">\n        <SearchIcon className=\"size-4 text-muted-foreground\" />\n        <span className=\"flex-1 text-sm\">onboarding checklist</span>\n        <Kbd>Esc</Kbd>\n      </div>\n      <div className=\"flex items-center gap-2 px-3 py-6 text-sm text-muted-foreground\">\n        <Spinner />\n        Searching 1,284 documents...\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

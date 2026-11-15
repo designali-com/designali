@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "progress-13",
+  "type": "registry:example",
+  "description": "Password field with a live strength meter driven by simple rules.",
+  "files": [
+    {
+      "path": "registry/designali/examples/progress/progress-13.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { CheckIcon, XIcon } from \"lucide-react\"\n\nimport { Input } from \"@workspace/ui/components/input\"\nimport { Label } from \"@workspace/ui/components/label\"\nimport { Progress } from \"@workspace/ui/components/progress\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst rules = [\n  { label: \"At least 8 characters\", test: (v: string) => v.length >= 8 },\n  { label: \"An uppercase letter\", test: (v: string) => /[A-Z]/.test(v) },\n  { label: \"A number\", test: (v: string) => /\\d/.test(v) },\n  { label: \"A symbol\", test: (v: string) => /[^A-Za-z0-9]/.test(v) },\n]\nconst labels = [\"Too weak\", \"Weak\", \"Fair\", \"Good\", \"Strong\"]\n\nexport default function PasswordStrengthMeter() {\n  const [password, setPassword] = React.useState(\"\")\n  const score = rules.filter((rule) => rule.test(password)).length\n\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-3\">\n      <Label htmlFor=\"pw-strength\">New password</Label>\n      <Input\n        id=\"pw-strength\"\n        type=\"password\"\n        value={password}\n        onChange={(event) => setPassword(event.target.value)}\n        placeholder=\"Create a password\"\n      />\n      <Progress\n        value={score}\n        max={rules.length}\n        aria-label=\"Password strength\"\n        className={cn(\n          score <= 1 && \"[&_[data-slot=progress-indicator]]:bg-destructive\",\n          score === 2 && \"[&_[data-slot=progress-indicator]]:bg-amber-500\",\n          score >= 3 && \"[&_[data-slot=progress-indicator]]:bg-emerald-500\"\n        )}\n      >\n        <span className=\"text-xs font-medium\">{labels[score]}</span>\n      </Progress>\n      <ul className=\"flex flex-col gap-1 text-xs\">\n        {rules.map((rule) => (\n          <li\n            key={rule.label}\n            className={cn(\n              \"flex items-center gap-1.5\",\n              rule.test(password) ? \"text-foreground\" : \"text-muted-foreground\"\n            )}\n          >\n            {rule.test(password) ? (\n              <CheckIcon className=\"size-3\" />\n            ) : (\n              <XIcon className=\"size-3\" />\n            )}\n            {rule.label}\n          </li>\n        ))}\n      </ul>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

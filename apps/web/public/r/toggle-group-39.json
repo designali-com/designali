@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toggle-group-39",
+  "type": "registry:example",
+  "description": "Icon-only list style toggles where each item explains itself in a tooltip with a shortcut.",
+  "files": [
+    {
+      "path": "registry/designali/examples/toggle-group/toggle-group-39.tsx",
+      "content": "import { ListChecksIcon, ListIcon, ListOrderedIcon } from \"lucide-react\"\n\nimport { Kbd } from \"@workspace/ui/components/kbd\"\nimport {\n  ToggleGroup,\n  ToggleGroupItem,\n} from \"@workspace/ui/components/toggle-group\"\nimport {\n  Tooltip,\n  TooltipContent,\n  TooltipProvider,\n  TooltipTrigger,\n} from \"@workspace/ui/components/tooltip\"\n\nconst items = [\n  { value: \"bullet\", label: \"Bulleted list\", keys: \"⌘⇧8\", icon: ListIcon },\n  {\n    value: \"number\",\n    label: \"Numbered list\",\n    keys: \"⌘⇧7\",\n    icon: ListOrderedIcon,\n  },\n  { value: \"check\", label: \"Checklist\", keys: \"⌘⇧9\", icon: ListChecksIcon },\n]\n\nexport default function ToggleGroupWithTooltips() {\n  return (\n    <TooltipProvider>\n      <ToggleGroup variant=\"outline\" spacing={0} defaultValue={[\"bullet\"]}>\n        {items.map((item) => (\n          <Tooltip key={item.value}>\n            <TooltipTrigger\n              render={\n                <ToggleGroupItem value={item.value} aria-label={item.label} />\n              }\n            >\n              <item.icon />\n            </TooltipTrigger>\n            <TooltipContent>\n              {item.label}\n              <Kbd>{item.keys}</Kbd>\n            </TooltipContent>\n          </Tooltip>\n        ))}\n      </ToggleGroup>\n    </TooltipProvider>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

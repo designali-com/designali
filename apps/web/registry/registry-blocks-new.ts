@@ -1906,4 +1906,5274 @@ export const blocksNew: Registry["items"] = [
       iframeHeight: "800px",
     },
   },
+  {
+    name: "analytics-06",
+    description: "Four KPI cards in a responsive grid, each with a change badge and an inline area sparkline.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/analytics/analytics-06.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["analytics"],
+    meta: {
+      iframeHeight: "650px",
+    },
+  },
+  {
+    name: "analytics-07",
+    description: "Interactive stacked bar chart of signups by channel with toggleable legend chips and hover-to-inspect weekly totals.",
+    type: "registry:block",
+    dependencies: [],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/analytics/analytics-07.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["analytics"],
+    meta: {
+      iframeHeight: "750px",
+    },
+  },
+  {
+    name: "analytics-08",
+    description: "Centered SLO header above three semicircle gauge cards showing value, target and status.",
+    type: "registry:block",
+    dependencies: [],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/analytics/analytics-08.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["analytics"],
+    meta: {
+      iframeHeight: "700px",
+    },
+  },
+  {
+    name: "analytics-09",
+    description: "Split layout with retention narrative and summary stats beside a color-scaled monthly cohort retention table.",
+    type: "registry:block",
+    dependencies: [],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/analytics/analytics-09.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["analytics"],
+    meta: {
+      iframeHeight: "650px",
+    },
+  },
+  {
+    name: "analytics-10",
+    description: "Two-panel geo breakdown with total visitors and continent share bar beside a ranked country list with relative bars.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/analytics/analytics-10.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["analytics"],
+    meta: {
+      iframeHeight: "750px",
+    },
+  },
+  {
+    name: "analytics-11",
+    description: "Inverted live band with pulsing status, ticking visitor counter, auto-updating bar stream and top live pages.",
+    type: "registry:block",
+    dependencies: [],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/analytics/analytics-11.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["analytics"],
+    meta: {
+      iframeHeight: "650px",
+    },
+  },
+  {
+    name: "analytics-12",
+    description: "KPI tab strip that switches a gradient area chart with hover point tooltips across twelve months.",
+    type: "registry:block",
+    dependencies: [],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/analytics/analytics-12.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["analytics"],
+    meta: {
+      iframeHeight: "700px",
+    },
+  },
+  {
+    name: "analytics-13",
+    description: "Period-over-period line chart comparing this month to last (dashed) with axis ticks beside a stacked totals panel.",
+    type: "registry:block",
+    dependencies: [],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/analytics/analytics-13.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["analytics"],
+    meta: {
+      iframeHeight: "650px",
+    },
+  },
+  {
+    name: "analytics-14",
+    description: "GitHub-style activity heatmap of daily deploys over 26 weeks with headline stats and an intensity legend.",
+    type: "registry:block",
+    dependencies: [],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/analytics/analytics-14.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["analytics"],
+    meta: {
+      iframeHeight: "600px",
+    },
+  },
+  {
+    name: "analytics-15",
+    description: "Sticky device-mix summary beside 100% stacked horizontal bars per month with in-bar labels.",
+    type: "registry:block",
+    dependencies: [],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/analytics/analytics-15.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["analytics"],
+    meta: {
+      iframeHeight: "700px",
+    },
+  },
+  {
+    name: "analytics-16",
+    description: "Clickable bubble scatter of campaign spend vs ROAS with a break-even line and a detail panel for the selected campaign.",
+    type: "registry:block",
+    dependencies: [],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/analytics/analytics-16.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["analytics"],
+    meta: {
+      iframeHeight: "750px",
+    },
+  },
+  {
+    name: "analytics-17",
+    description: "Investor-style milestone timeline toward an ARR goal with a horizontal progress track on desktop and vertical list on mobile.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/analytics/analytics-17.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["analytics"],
+    meta: {
+      iframeHeight: "650px",
+    },
+  },
+  {
+    name: "analytics-18",
+    description: "Bento dashboard with a primary DAU hero tile, small stat tiles, a plan donut and segmented feature adoption meters.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/analytics/analytics-18.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["analytics"],
+    meta: {
+      iframeHeight: "850px",
+    },
+  },
+  {
+    name: "analytics-19",
+    description: "Sortable leaderboard table of marketplace apps with initials avatars, numeric columns and inline trend sparklines.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/analytics/analytics-19.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["analytics"],
+    meta: {
+      iframeHeight: "650px",
+    },
+  },
+  {
+    name: "analytics-20",
+    description: "Email-style weekly digest card with a narrative summary using highlighted figures, stat row, biggest movers and CTAs.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/analytics/analytics-20.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["analytics"],
+    meta: {
+      iframeHeight: "1000px",
+    },
+  },
+  {
+    name: "authentication-06",
+    description: "Two-factor setup wizard with an authenticator QR code, 6-digit verification and downloadable backup codes.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button","input"],
+    files: [
+      {
+        path: "blocks/authentication/authentication-06.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["authentication"],
+    meta: {
+      iframeHeight: "800px",
+    },
+  },
+  {
+    name: "authentication-07",
+    description: "Identifier-first sign-in that checks the work email and routes to SSO or a password step.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button","input","label"],
+    files: [
+      {
+        path: "blocks/authentication/authentication-07.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["authentication"],
+    meta: {
+      iframeHeight: "600px",
+    },
+  },
+  {
+    name: "authentication-08",
+    description: "Workspace invitation card showing the inviter, assigned role and accept or decline actions.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/authentication/authentication-08.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["authentication"],
+    meta: {
+      iframeHeight: "600px",
+    },
+  },
+  {
+    name: "authentication-09",
+    description: "Three-step onboarding flow to pick a work type, name the workspace and invite teammates.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button","input","label"],
+    files: [
+      {
+        path: "blocks/authentication/authentication-09.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["authentication"],
+    meta: {
+      iframeHeight: "750px",
+    },
+  },
+  {
+    name: "authentication-10",
+    description: "Account recovery page with a radio list of reset methods beside a help and back to sign in panel.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/authentication/authentication-10.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["authentication"],
+    meta: {
+      iframeHeight: "650px",
+    },
+  },
+  {
+    name: "authentication-11",
+    description: "Centred auth card with a sliding Sign in / Sign up tab switch, name and password fields and terms.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button","checkbox","input","label"],
+    files: [
+      {
+        path: "blocks/authentication/authentication-11.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["authentication"],
+    meta: {
+      iframeHeight: "750px",
+    },
+  },
+  {
+    name: "authentication-12",
+    description: "Account chooser listing saved profiles with avatars, remove buttons and an add account row.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/authentication/authentication-12.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["authentication"],
+    meta: {
+      iframeHeight: "650px",
+    },
+  },
+  {
+    name: "authentication-13",
+    description: "Passkey manager with an explainer beside a list of registered devices and add or remove actions.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/authentication/authentication-13.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["authentication"],
+    meta: {
+      iframeHeight: "600px",
+    },
+  },
+  {
+    name: "authentication-14",
+    description: "Dark lock screen with the user avatar, password unlock field and switch user or sign out links.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/authentication/authentication-14.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["authentication"],
+    meta: {
+      iframeHeight: "700px",
+    },
+  },
+  {
+    name: "authentication-15",
+    description: "Phone number sign-in with a country code picker, one-time code step and an SMS preview mockup.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button","input","label"],
+    files: [
+      {
+        path: "blocks/authentication/authentication-15.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["authentication"],
+    meta: {
+      iframeHeight: "700px",
+    },
+  },
+  {
+    name: "authentication-16",
+    description: "OAuth consent screen listing requested permissions with checkboxes and Allow or Cancel buttons.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button","checkbox"],
+    files: [
+      {
+        path: "blocks/authentication/authentication-16.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["authentication"],
+    meta: {
+      iframeHeight: "700px",
+    },
+  },
+  {
+    name: "authentication-17",
+    description: "CLI device authorization pairing a terminal mockup with a browser code confirmation card.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/authentication/authentication-17.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["authentication"],
+    meta: {
+      iframeHeight: "650px",
+    },
+  },
+  {
+    name: "authentication-18",
+    description: "Security settings with two-factor and alert switches above an active sessions device table.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button","switch"],
+    files: [
+      {
+        path: "blocks/authentication/authentication-18.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["authentication"],
+    meta: {
+      iframeHeight: "750px",
+    },
+  },
+  {
+    name: "authentication-19",
+    description: "Verify your email screen with inbox shortcuts and resend or change email beside delivery tips.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/authentication/authentication-19.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["authentication"],
+    meta: {
+      iframeHeight: "650px",
+    },
+  },
+  {
+    name: "authentication-20",
+    description: "Workspace picker with search, a grid of workspace cards showing role and SSO lock, and a create option.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/authentication/authentication-20.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["authentication"],
+    meta: {
+      iframeHeight: "650px",
+    },
+  },
+  {
+    name: "blog-06",
+    description: "Magazine masthead with a full-width gradient cover story overlay and a three-up row of secondary stories.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/blog/blog-06.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["blog"],
+    meta: {
+      iframeHeight: "1000px",
+    },
+  },
+  {
+    name: "blog-07",
+    description: "Horizontal scroll-snap carousel of post cards with previous and next arrow controls.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/blog/blog-07.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["blog"],
+    meta: {
+      iframeHeight: "600px",
+    },
+  },
+  {
+    name: "blog-08",
+    description: "Minimal archive list grouped by month with sticky month labels and day numbers.",
+    type: "registry:block",
+    dependencies: [],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/blog/blog-08.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["blog"],
+    meta: {
+      iframeHeight: "900px",
+    },
+  },
+  {
+    name: "blog-09",
+    description: "Author selector grid of initials avatars that filters the post list below by writer.",
+    type: "registry:block",
+    dependencies: [],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/blog/blog-09.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["blog"],
+    meta: {
+      iframeHeight: "950px",
+    },
+  },
+  {
+    name: "blog-10",
+    description: "Sidebar search input and topic chips that live-filter a list of engineering posts with result count and empty state.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["input"],
+    files: [
+      {
+        path: "blocks/blog/blog-10.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["blog"],
+    meta: {
+      iframeHeight: "850px",
+    },
+  },
+  {
+    name: "blog-11",
+    description: "Masonry columns mixing post cards of varied image heights, dark pull quotes and dashed studio notes.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/blog/blog-11.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["blog"],
+    meta: {
+      iframeHeight: "1200px",
+    },
+  },
+  {
+    name: "blog-12",
+    description: "Inverted editor's picks band with a large heading and a big-numbered ranked list of posts.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/blog/blog-12.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["blog"],
+    meta: {
+      iframeHeight: "850px",
+    },
+  },
+  {
+    name: "blog-13",
+    description: "Article page with centered header, sticky table of contents with scroll-spy highlighting, body sections and a share rail.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/blog/blog-13.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["blog"],
+    meta: {
+      iframeHeight: "1200px",
+    },
+  },
+  {
+    name: "blog-14",
+    description: "Multi-part series panel with reading progress and CTA beside a stepper list of read, current, upcoming and locked parts.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/blog/blog-14.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["blog"],
+    meta: {
+      iframeHeight: "700px",
+    },
+  },
+  {
+    name: "blog-15",
+    description: "Podcast episode list with gradient play thumbnails that toggle an inline waveform progress row.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/blog/blog-15.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["blog"],
+    meta: {
+      iframeHeight: "800px",
+    },
+  },
+  {
+    name: "blog-16",
+    description: "Tabbed Latest, Most read and Staff picks switcher showing a lead story beside two thumbnail list items.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/blog/blog-16.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["blog"],
+    meta: {
+      iframeHeight: "750px",
+    },
+  },
+  {
+    name: "blog-17",
+    description: "Changelog-style product journal timeline with dates in a left rail, type badges, bullets and a dot marker per entry.",
+    type: "registry:block",
+    dependencies: [],
+    registryDependencies: ["badge"],
+    files: [
+      {
+        path: "blocks/blog/blog-17.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["blog"],
+    meta: {
+      iframeHeight: "1100px",
+    },
+  },
+  {
+    name: "blog-18",
+    description: "Three-column story grid with client-side numbered pagination and newer and older controls.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/blog/blog-18.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["blog"],
+    meta: {
+      iframeHeight: "1000px",
+    },
+  },
+  {
+    name: "blog-19",
+    description: "Post footer with author bio, previous and next article navigation and a keep reading row of related cards.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/blog/blog-19.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["blog"],
+    meta: {
+      iframeHeight: "700px",
+    },
+  },
+  {
+    name: "blog-20",
+    description: "Bento topic directory of category cards with icons, post counts, blurbs and latest titles.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/blog/blog-20.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["blog"],
+    meta: {
+      iframeHeight: "800px",
+    },
+  },
+  {
+    name: "call-to-action-08",
+    description: "Centered newsletter card with inline email form and a confirmation state after submit.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button","input"],
+    files: [
+      {
+        path: "blocks/call-to-action/call-to-action-08.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["call-to-action"],
+    meta: {
+      iframeHeight: "500px",
+    },
+  },
+  {
+    name: "call-to-action-09",
+    description: "Gradient-bordered trial offer card split into pitch with buttons and a checklist of included perks.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/call-to-action/call-to-action-09.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["call-to-action"],
+    meta: {
+      iframeHeight: "520px",
+    },
+  },
+  {
+    name: "call-to-action-10",
+    description: "Split pricing teaser with a monthly or yearly switch that updates the price and savings line.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button","switch"],
+    files: [
+      {
+        path: "blocks/call-to-action/call-to-action-10.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["call-to-action"],
+    meta: {
+      iframeHeight: "560px",
+    },
+  },
+  {
+    name: "call-to-action-11",
+    description: "Split CTA with copy on the left and a browser-window dashboard mockup with KPIs and bar chart.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/call-to-action/call-to-action-11.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["call-to-action"],
+    meta: {
+      iframeHeight: "640px",
+    },
+  },
+  {
+    name: "call-to-action-12",
+    description: "Bold centered headline above an infinitely scrolling marquee of use-case chips and a single button.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/call-to-action/call-to-action-12.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["call-to-action"],
+    meta: {
+      iframeHeight: "520px",
+    },
+  },
+  {
+    name: "call-to-action-13",
+    description: "Three numbered onboarding steps with time estimates in a bordered grid, headed by a get-started button.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/call-to-action/call-to-action-13.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["call-to-action"],
+    meta: {
+      iframeHeight: "560px",
+    },
+  },
+  {
+    name: "call-to-action-14",
+    description: "Talk-to-sales split with team avatars and an interactive day and time-slot picker that enables booking.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/call-to-action/call-to-action-14.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["call-to-action"],
+    meta: {
+      iframeHeight: "600px",
+    },
+  },
+  {
+    name: "call-to-action-15",
+    description: "Inverted primary-colour band with a large headline, two buttons and a row of four headline stats.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/call-to-action/call-to-action-15.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["call-to-action"],
+    meta: {
+      iframeHeight: "520px",
+    },
+  },
+  {
+    name: "call-to-action-16",
+    description: "Floating dismissible promo banner with icon, offer copy, claim button and countdown progress strip.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/call-to-action/call-to-action-16.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["call-to-action"],
+    meta: {
+      iframeHeight: "420px",
+    },
+  },
+  {
+    name: "call-to-action-17",
+    description: "App download card with star rating, store buttons and a CSS-drawn QR code on desktop.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/call-to-action/call-to-action-17.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["call-to-action"],
+    meta: {
+      iframeHeight: "560px",
+    },
+  },
+  {
+    name: "call-to-action-18",
+    description: "Four audience cards for startups, agencies, enterprise and education, each with its own link CTA.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/call-to-action/call-to-action-18.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["call-to-action"],
+    meta: {
+      iframeHeight: "560px",
+    },
+  },
+  {
+    name: "call-to-action-19",
+    description: "Oversized typographic studio CTA followed by a list of large arrow links and a contact email.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/call-to-action/call-to-action-19.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["call-to-action"],
+    meta: {
+      iframeHeight: "820px",
+    },
+  },
+  {
+    name: "call-to-action-20",
+    description: "Dark waitlist section with email capture that reveals queue position and a copyable referral link.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button","input"],
+    files: [
+      {
+        path: "blocks/call-to-action/call-to-action-20.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["call-to-action"],
+    meta: {
+      iframeHeight: "560px",
+    },
+  },
+  {
+    name: "clients-11",
+    description: "Inverted dark band with a headline and two opposing scrolling logo marquee rows faded at the edges.",
+    type: "registry:block",
+    dependencies: [],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/clients/clients-11.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["clients"],
+    meta: {
+      iframeHeight: "500px",
+    },
+  },
+  {
+    name: "clients-12",
+    description: "Customer results stat row beside a headline above a bordered four-column grid of logo marks.",
+    type: "registry:block",
+    dependencies: [],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/clients/clients-12.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["clients"],
+    meta: {
+      iframeHeight: "650px",
+    },
+  },
+  {
+    name: "clients-13",
+    description: "Three case study cards with gradient headers, initials badges, big outcome metrics and read the story links.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/clients/clients-13.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["clients"],
+    meta: {
+      iframeHeight: "750px",
+    },
+  },
+  {
+    name: "clients-14",
+    description: "Tabbed logo grid where selecting a customer swaps in their quote with avatar and role.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/clients/clients-14.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["clients"],
+    meta: {
+      iframeHeight: "600px",
+    },
+  },
+  {
+    name: "clients-15",
+    description: "Split section with headline and CTAs beside three vertically scrolling logo columns.",
+    type: "registry:block",
+    dependencies: [],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/clients/clients-15.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["clients"],
+    meta: {
+      iframeHeight: "650px",
+    },
+  },
+  {
+    name: "clients-16",
+    description: "Logo bento with a dark featured case study tile, a short quote tile and smaller logo tiles.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/clients/clients-16.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["clients"],
+    meta: {
+      iframeHeight: "650px",
+    },
+  },
+  {
+    name: "clients-17",
+    description: "Industry tabs that switch a bordered six-column logo grid and a supporting stat line.",
+    type: "registry:block",
+    dependencies: [],
+    registryDependencies: ["tabs"],
+    files: [
+      {
+        path: "blocks/clients/clients-17.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["clients"],
+    meta: {
+      iframeHeight: "500px",
+    },
+  },
+  {
+    name: "clients-18",
+    description: "Client roster table with initials, industry, start year and result columns that collapses to rows on mobile.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/clients/clients-18.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["clients"],
+    meta: {
+      iframeHeight: "750px",
+    },
+  },
+  {
+    name: "clients-19",
+    description: "Customer spotlight carousel pairing a gradient company panel with stats, a quote and prev/next controls.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/clients/clients-19.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["clients"],
+    meta: {
+      iframeHeight: "700px",
+    },
+  },
+  {
+    name: "clients-20",
+    description: "Compact social proof card with stacked avatar initials, a star rating, customer names and two CTAs.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/clients/clients-20.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["clients"],
+    meta: {
+      iframeHeight: "300px",
+    },
+  },
+  {
+    name: "contact-06",
+    description: "Centered email-first contact with a copy-to-clipboard address bar, availability pill and a four-column social links grid.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/contact/contact-06.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["contact"],
+    meta: {
+      iframeHeight: "700px",
+    },
+  },
+  {
+    name: "contact-07",
+    description: "Three-step sales enquiry wizard with a segmented progress bar, choice tiles, back/continue controls and a success state.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button","input","label","textarea"],
+    files: [
+      {
+        path: "blocks/contact/contact-07.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["contact"],
+    meta: {
+      iframeHeight: "800px",
+    },
+  },
+  {
+    name: "contact-08",
+    description: "Department switcher (sales, support, press) that swaps the info panel, response time and form fields per team.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button","input","textarea"],
+    files: [
+      {
+        path: "blocks/contact/contact-08.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["contact"],
+    meta: {
+      iframeHeight: "760px",
+    },
+  },
+  {
+    name: "contact-09",
+    description: "Inverted dark band listing four named contacts with gradient initials avatars, region labels, emails and phone numbers.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/contact/contact-09.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["contact"],
+    meta: {
+      iframeHeight: "720px",
+    },
+  },
+  {
+    name: "contact-10",
+    description: "Bento grid of support channels with a large live-chat tile, community, phone, hours, uptime status bars and office cards.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/contact/contact-10.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["contact"],
+    meta: {
+      iframeHeight: "820px",
+    },
+  },
+  {
+    name: "contact-11",
+    description: "Split layout pairing an FAQ accordion with a compact enquiry form card that includes check-in and check-out dates.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["accordion","button","input","textarea"],
+    files: [
+      {
+        path: "blocks/contact/contact-11.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["contact"],
+    meta: {
+      iframeHeight: "760px",
+    },
+  },
+  {
+    name: "contact-12",
+    description: "Booking widget with host profile and meeting details beside a weekday picker, time-slot grid and confirm bar.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/contact/contact-12.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["contact"],
+    meta: {
+      iframeHeight: "720px",
+    },
+  },
+  {
+    name: "contact-13",
+    description: "Conversational quote bot with chat bubbles, quick-reply option chips and a final email capture inside a chat window.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/contact/contact-13.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["contact"],
+    meta: {
+      iframeHeight: "720px",
+    },
+  },
+  {
+    name: "contact-14",
+    description: "Support channel comparison table with best-for, response time, hours and plan badges that stacks into cards on mobile.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["badge"],
+    files: [
+      {
+        path: "blocks/contact/contact-14.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["contact"],
+    meta: {
+      iframeHeight: "720px",
+    },
+  },
+  {
+    name: "contact-15",
+    description: "Sticky studio intro beside a numbered editorial index of enquiry topics, each with a description and direct email link.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/contact/contact-15.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["contact"],
+    meta: {
+      iframeHeight: "900px",
+    },
+  },
+  {
+    name: "contact-16",
+    description: "Floating glass form card over blurred colour orbs and a faded grid, with a stat strip and NDA reassurance line.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button","input","label","textarea"],
+    files: [
+      {
+        path: "blocks/contact/contact-16.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["contact"],
+    meta: {
+      iframeHeight: "900px",
+    },
+  },
+  {
+    name: "contact-17",
+    description: "Office grid with live local clocks per timezone, open or closed status and sun/moon indicators plus contact links.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/contact/contact-17.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["contact"],
+    meta: {
+      iframeHeight: "760px",
+    },
+  },
+  {
+    name: "contact-18",
+    description: "Net promoter feedback form with a 0-10 score scale, adaptive follow-up prompt, reason chips and success state.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button","textarea"],
+    files: [
+      {
+        path: "blocks/contact/contact-18.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["contact"],
+    meta: {
+      iframeHeight: "700px",
+    },
+  },
+  {
+    name: "contact-19",
+    description: "Compact warm-toned callback band with country code phone field, preferred time segmented control and ASAP checkbox.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/contact/contact-19.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["contact"],
+    meta: {
+      iframeHeight: "400px",
+    },
+  },
+  {
+    name: "contact-20",
+    description: "Footer-style contact with an oversized animated-underline email headline, studio addresses columns and social links.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/contact/contact-20.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["contact"],
+    meta: {
+      iframeHeight: "720px",
+    },
+  },
+  {
+    name: "ecommerce-06",
+    description: "Product listing with sidebar filters for category, material and price, active filter chips and sorting.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/ecommerce/ecommerce-06.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["ecommerce"],
+    meta: {
+      iframeHeight: "1000px",
+    },
+  },
+  {
+    name: "ecommerce-07",
+    description: "Recommended products scroll-snap carousel with SVG sneakers, colour swatches, sale badges and wishlist toggles.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/ecommerce/ecommerce-07.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["ecommerce"],
+    meta: {
+      iframeHeight: "650px",
+    },
+  },
+  {
+    name: "ecommerce-08",
+    description: "Three-column product comparison table with highlighted popular model, feature checks and add-to-cart row.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/ecommerce/ecommerce-08.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["ecommerce"],
+    meta: {
+      iframeHeight: "900px",
+    },
+  },
+  {
+    name: "ecommerce-09",
+    description: "Multi-step checkout stepper for contact, delivery and payment beside a live order summary.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button","input","label"],
+    files: [
+      {
+        path: "blocks/ecommerce/ecommerce-09.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["ecommerce"],
+    meta: {
+      iframeHeight: "800px",
+    },
+  },
+  {
+    name: "ecommerce-10",
+    description: "Order tracking page with a horizontal progress bar, vertical event timeline, parcel contents and address.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/ecommerce/ecommerce-10.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["ecommerce"],
+    meta: {
+      iframeHeight: "850px",
+    },
+  },
+  {
+    name: "ecommerce-11",
+    description: "Inverted sale banner with a live countdown timer, copyable promo code and stock-claimed progress bar.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/ecommerce/ecommerce-11.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["ecommerce"],
+    meta: {
+      iframeHeight: "600px",
+    },
+  },
+  {
+    name: "ecommerce-12",
+    description: "Reviews section with rating distribution bars that filter a list of verified reviews with helpful votes.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/ecommerce/ecommerce-12.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["ecommerce"],
+    meta: {
+      iframeHeight: "1000px",
+    },
+  },
+  {
+    name: "ecommerce-13",
+    description: "Slide-over cart drawer on a mock storefront with free-shipping progress, quantity steppers and an upsell.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/ecommerce/ecommerce-13.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["ecommerce"],
+    meta: {
+      iframeHeight: "800px",
+    },
+  },
+  {
+    name: "ecommerce-14",
+    description: "Shop-the-room scene with clickable hotspots on an SVG interior linked to a product list and bundle price.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/ecommerce/ecommerce-14.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["ecommerce"],
+    meta: {
+      iframeHeight: "750px",
+    },
+  },
+  {
+    name: "ecommerce-15",
+    description: "Gift card builder with amount, design and message inputs driving a live card preview.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button","input","label","textarea"],
+    files: [
+      {
+        path: "blocks/ecommerce/ecommerce-15.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["ecommerce"],
+    meta: {
+      iframeHeight: "850px",
+    },
+  },
+  {
+    name: "ecommerce-16",
+    description: "Subscribe-and-save product page with purchase type radios, delivery frequency, grind and bag count options.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/ecommerce/ecommerce-16.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["ecommerce"],
+    meta: {
+      iframeHeight: "850px",
+    },
+  },
+  {
+    name: "ecommerce-17",
+    description: "Wishlist rows with price drops, stock status, move-to-bag, notify-me and remove actions.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/ecommerce/ecommerce-17.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["ecommerce"],
+    meta: {
+      iframeHeight: "750px",
+    },
+  },
+  {
+    name: "ecommerce-18",
+    description: "Product spotlight with recolourable SVG speaker, finish swatches, highlight icons and overview/specs tabs.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button","tabs"],
+    files: [
+      {
+        path: "blocks/ecommerce/ecommerce-18.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["ecommerce"],
+    meta: {
+      iframeHeight: "900px",
+    },
+  },
+  {
+    name: "ecommerce-19",
+    description: "Numbered bestseller leaderboard with period switcher, rank movement indicators and quick-add buttons.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/ecommerce/ecommerce-19.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["ecommerce"],
+    meta: {
+      iframeHeight: "750px",
+    },
+  },
+  {
+    name: "ecommerce-20",
+    description: "Account order history with status filter tabs and expandable orders showing items, invoice and buy-again actions.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/ecommerce/ecommerce-20.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["ecommerce"],
+    meta: {
+      iframeHeight: "800px",
+    },
+  },
+  {
+    name: "faqs-08",
+    description: "Category tabs (General, Billing, Technical) that each switch a chevron accordion of questions.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["accordion","tabs"],
+    files: [
+      {
+        path: "blocks/faqs/faqs-08.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["faqs"],
+    meta: {
+      iframeHeight: "650px",
+    },
+  },
+  {
+    name: "faqs-09",
+    description: "Help center topic grid of icon cards with article counts and quick question links.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/faqs/faqs-09.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["faqs"],
+    meta: {
+      iframeHeight: "800px",
+    },
+  },
+  {
+    name: "faqs-10",
+    description: "Chat-style FAQ thread with question bubbles and assistant answers, ending with a chat CTA.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/faqs/faqs-10.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["faqs"],
+    meta: {
+      iframeHeight: "800px",
+    },
+  },
+  {
+    name: "faqs-11",
+    description: "Inverted dark section with a large headline and a numbered three-column Q&A grid.",
+    type: "registry:block",
+    dependencies: [],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/faqs/faqs-11.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["faqs"],
+    meta: {
+      iframeHeight: "750px",
+    },
+  },
+  {
+    name: "faqs-12",
+    description: "Troubleshooting accordion of bordered cards with Was this helpful? yes/no voting.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["accordion"],
+    files: [
+      {
+        path: "blocks/faqs/faqs-12.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["faqs"],
+    meta: {
+      iframeHeight: "700px",
+    },
+  },
+  {
+    name: "faqs-13",
+    description: "FAQ bento with a featured most-asked answer tile, four short answer tiles and a contact channel band.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/faqs/faqs-13.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["faqs"],
+    meta: {
+      iframeHeight: "750px",
+    },
+  },
+  {
+    name: "faqs-14",
+    description: "Masonry grid of tagged collapsible FAQ cards that open independently with plus/minus toggles.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["collapsible"],
+    files: [
+      {
+        path: "blocks/faqs/faqs-14.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["faqs"],
+    meta: {
+      iframeHeight: "900px",
+    },
+  },
+  {
+    name: "faqs-15",
+    description: "Plus-icon accordion beside an ask us a question form card with a sent confirmation state.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["accordion","button","input","label","textarea"],
+    files: [
+      {
+        path: "blocks/faqs/faqs-15.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["faqs"],
+    meta: {
+      iframeHeight: "750px",
+    },
+  },
+  {
+    name: "faqs-16",
+    description: "Customer lifecycle timeline grouping question cards by before buying, onboarding, billing and cancelling.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/faqs/faqs-16.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["faqs"],
+    meta: {
+      iframeHeight: "1100px",
+    },
+  },
+  {
+    name: "faqs-17",
+    description: "One-at-a-time flashcard carousel with tap to reveal answers, progress bar, dots and prev/next.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/faqs/faqs-17.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["faqs"],
+    meta: {
+      iframeHeight: "700px",
+    },
+  },
+  {
+    name: "faqs-18",
+    description: "Long-form FAQ page with a sticky numbered table of contents sidebar and anchored sections.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/faqs/faqs-18.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["faqs"],
+    meta: {
+      iframeHeight: "1200px",
+    },
+  },
+  {
+    name: "faqs-19",
+    description: "Compact chevron FAQ list with an open count and an Expand all / Collapse all toggle.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["accordion","button"],
+    files: [
+      {
+        path: "blocks/faqs/faqs-19.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["faqs"],
+    meta: {
+      iframeHeight: "700px",
+    },
+  },
+  {
+    name: "faqs-20",
+    description: "Grid of quick Yes/No answer badges with one-line explanations and a full FAQ link.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/faqs/faqs-20.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["faqs"],
+    meta: {
+      iframeHeight: "700px",
+    },
+  },
+  {
+    name: "features-11",
+    description: "Accordion list of security features that swaps a live mini-visual in an adjacent panel.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/features/features-11.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["features"],
+    meta: {
+      iframeHeight: "720px",
+    },
+  },
+  {
+    name: "features-12",
+    description: "Stat-led rows pairing a large monospace number with a label and supporting description.",
+    type: "registry:block",
+    dependencies: [],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/features/features-12.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["features"],
+    meta: {
+      iframeHeight: "760px",
+    },
+  },
+  {
+    name: "features-13",
+    description: "Vertical alternating timeline of five workflow steps with icon nodes on a center line.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/features/features-13.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["features"],
+    meta: {
+      iframeHeight: "1000px",
+    },
+  },
+  {
+    name: "features-14",
+    description: "Split integrations section with key points beside a radial hub of connector icons.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/features/features-14.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["features"],
+    meta: {
+      iframeHeight: "640px",
+    },
+  },
+  {
+    name: "features-15",
+    description: "Developer feature list beside a dark code window with language tabs and a copy button.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/features/features-15.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["features"],
+    meta: {
+      iframeHeight: "620px",
+    },
+  },
+  {
+    name: "features-16",
+    description: "Horizontally scrolling snap carousel of tinted feature cards with previous and next buttons.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/features/features-16.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["features"],
+    meta: {
+      iframeHeight: "560px",
+    },
+  },
+  {
+    name: "features-17",
+    description: "Centered phone mockup flanked by two columns of icon features mirrored left and right.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/features/features-17.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["features"],
+    meta: {
+      iframeHeight: "720px",
+    },
+  },
+  {
+    name: "features-18",
+    description: "Before and after toggle that flips a list of pain points into their solved counterparts.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/features/features-18.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["features"],
+    meta: {
+      iframeHeight: "640px",
+    },
+  },
+  {
+    name: "features-19",
+    description: "Dark security section with compliance badge chips and three columns of control checklists.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/features/features-19.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["features"],
+    meta: {
+      iframeHeight: "720px",
+    },
+  },
+  {
+    name: "features-20",
+    description: "Interactive theme playground with accent, font size and spacing controls driving a live preview.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["slider","switch"],
+    files: [
+      {
+        path: "blocks/features/features-20.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["features"],
+    meta: {
+      iframeHeight: "700px",
+    },
+  },
+  {
+    name: "footer-11",
+    description: "Newsletter-first footer with a publication pitch and subscribe form above link columns and an address block.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button","input"],
+    files: [
+      {
+        path: "blocks/footer/footer-11.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["footer"],
+    meta: {
+      iframeHeight: "560px",
+    },
+  },
+  {
+    name: "footer-12",
+    description: "Dense six-column sitemap footer with app download links, a region selector and legal line.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/footer/footer-12.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["footer"],
+    meta: {
+      iframeHeight: "560px",
+    },
+  },
+  {
+    name: "footer-13",
+    description: "Editorial footer with contact prompt and link lists above a giant cropped wordmark.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/footer/footer-13.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["footer"],
+    meta: {
+      iframeHeight: "620px",
+    },
+  },
+  {
+    name: "footer-14",
+    description: "Brand footer whose link columns collapse into tap-to-expand accordions on mobile.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/footer/footer-14.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["footer"],
+    meta: {
+      iframeHeight: "440px",
+    },
+  },
+  {
+    name: "footer-15",
+    description: "Footer with a headline and email above three office location cards with address, phone and timezone.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/footer/footer-15.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["footer"],
+    meta: {
+      iframeHeight: "620px",
+    },
+  },
+  {
+    name: "footer-16",
+    description: "Footer led by an inverted call-to-action card with glow, followed by a single-row brand and link bar.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/footer/footer-16.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["footer"],
+    meta: {
+      iframeHeight: "560px",
+    },
+  },
+  {
+    name: "footer-17",
+    description: "Developer footer in monospace with an install snippet, live system status list and build metadata.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/footer/footer-17.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["footer"],
+    meta: {
+      iframeHeight: "520px",
+    },
+  },
+  {
+    name: "footer-18",
+    description: "Ecommerce footer with a perks strip, brand and review badge, link columns and payment method chips.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/footer/footer-18.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["footer"],
+    meta: {
+      iframeHeight: "600px",
+    },
+  },
+  {
+    name: "footer-19",
+    description: "Minimal personal-site footer with author card, back-to-top button, small nav and icon links.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/footer/footer-19.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["footer"],
+    meta: {
+      iframeHeight: "340px",
+    },
+  },
+  {
+    name: "footer-20",
+    description: "Bento footer grid with a newsletter tile, link tiles, address tile and an inverted social tile.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/footer/footer-20.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["footer"],
+    meta: {
+      iframeHeight: "520px",
+    },
+  },
+  {
+    name: "forms-06",
+    description: "Inverted newsletter band with topic checkboxes and inline email signup.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button","checkbox","input","label"],
+    files: [
+      {
+        path: "blocks/forms/forms-06.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["forms"],
+    meta: {
+      iframeHeight: "600px",
+    },
+  },
+  {
+    name: "forms-07",
+    description: "Centered sign-in card with SSO providers, passkey option and email login.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button","checkbox","input","label"],
+    files: [
+      {
+        path: "blocks/forms/forms-07.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["forms"],
+    meta: {
+      iframeHeight: "850px",
+    },
+  },
+  {
+    name: "forms-08",
+    description: "Split trial sign-up with testimonial panel and live password strength meter.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button","input","label"],
+    files: [
+      {
+        path: "blocks/forms/forms-08.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["forms"],
+    meta: {
+      iframeHeight: "750px",
+    },
+  },
+  {
+    name: "forms-09",
+    description: "Centered two-factor verification with six-digit OTP input and resend countdown.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button","input-otp"],
+    files: [
+      {
+        path: "blocks/forms/forms-09.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["forms"],
+    meta: {
+      iframeHeight: "650px",
+    },
+  },
+  {
+    name: "forms-10",
+    description: "Checkout with stepped contact, shipping and card fields beside a sticky order summary.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button","checkbox","input","label","native-select"],
+    files: [
+      {
+        path: "blocks/forms/forms-10.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["forms"],
+    meta: {
+      iframeHeight: "950px",
+    },
+  },
+  {
+    name: "forms-11",
+    description: "Project cost estimator with type cards, sliders and toggles driving a live price range.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button","input","label","slider","switch"],
+    files: [
+      {
+        path: "blocks/forms/forms-11.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["forms"],
+    meta: {
+      iframeHeight: "850px",
+    },
+  },
+  {
+    name: "forms-12",
+    description: "Job application form with sticky role facts, resume dropzone and portfolio link.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button","input","label","textarea"],
+    files: [
+      {
+        path: "blocks/forms/forms-12.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["forms"],
+    meta: {
+      iframeHeight: "950px",
+    },
+  },
+  {
+    name: "forms-13",
+    description: "Meeting booking widget with host details, date strip and selectable time slots.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/forms/forms-13.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["forms"],
+    meta: {
+      iframeHeight: "650px",
+    },
+  },
+  {
+    name: "forms-14",
+    description: "Support ticket form with icon category cards, segmented priority and details.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button","input","label","textarea"],
+    files: [
+      {
+        path: "blocks/forms/forms-14.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["forms"],
+    meta: {
+      iframeHeight: "950px",
+    },
+  },
+  {
+    name: "forms-15",
+    description: "Centered waitlist signup that swaps to a queue position and referral link on submit.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button","input","label"],
+    files: [
+      {
+        path: "blocks/forms/forms-15.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["forms"],
+    meta: {
+      iframeHeight: "700px",
+    },
+  },
+  {
+    name: "forms-16",
+    description: "Dense delivery address grid with breadcrumb steps and radio shipping methods.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button","input","label","native-select","radio-group"],
+    files: [
+      {
+        path: "blocks/forms/forms-16.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["forms"],
+    meta: {
+      iframeHeight: "1000px",
+    },
+  },
+  {
+    name: "forms-17",
+    description: "One-question-at-a-time conversational form with progress bar and lettered choices.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button","input"],
+    files: [
+      {
+        path: "blocks/forms/forms-17.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["forms"],
+    meta: {
+      iframeHeight: "600px",
+    },
+  },
+  {
+    name: "forms-18",
+    description: "Notification preferences matrix of events by email, push and SMS checkboxes.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button","checkbox"],
+    files: [
+      {
+        path: "blocks/forms/forms-18.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["forms"],
+    meta: {
+      iframeHeight: "850px",
+    },
+  },
+  {
+    name: "forms-19",
+    description: "Product review form with hover star rating, fit selector and tag chips.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button","checkbox","input","label","textarea"],
+    files: [
+      {
+        path: "blocks/forms/forms-19.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["forms"],
+    meta: {
+      iframeHeight: "950px",
+    },
+  },
+  {
+    name: "forms-20",
+    description: "Department-tabbed contact form whose fields change for sales, support and press.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button","input","label","native-select","textarea"],
+    files: [
+      {
+        path: "blocks/forms/forms-20.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["forms"],
+    meta: {
+      iframeHeight: "850px",
+    },
+  },
+  {
+    name: "gallery-08",
+    description: "Horizontal scroll-snap strip of portrait frames with numbered counters and arrow navigation.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/gallery/gallery-08.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["gallery"],
+    meta: {
+      iframeHeight: "800px",
+    },
+  },
+  {
+    name: "gallery-09",
+    description: "Square thumbnail grid that opens a fullscreen lightbox with keyboard and arrow navigation.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/gallery/gallery-09.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["gallery"],
+    meta: {
+      iframeHeight: "700px",
+    },
+  },
+  {
+    name: "gallery-10",
+    description: "Before and after renovation comparison slider beside a selectable project list.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/gallery/gallery-10.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["gallery"],
+    meta: {
+      iframeHeight: "700px",
+    },
+  },
+  {
+    name: "gallery-11",
+    description: "Editorial exhibition layout with a sticky intro panel and a vertical stack of numbered plates.",
+    type: "registry:block",
+    dependencies: [],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/gallery/gallery-11.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["gallery"],
+    meta: {
+      iframeHeight: "1200px",
+    },
+  },
+  {
+    name: "gallery-12",
+    description: "Scattered polaroid-style print collage on a dotted background with hover pick-up.",
+    type: "registry:block",
+    dependencies: [],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/gallery/gallery-12.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["gallery"],
+    meta: {
+      iframeHeight: "1000px",
+    },
+  },
+  {
+    name: "gallery-13",
+    description: "Two opposing infinite marquee rows of project tiles that pause on hover.",
+    type: "registry:block",
+    dependencies: [],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/gallery/gallery-13.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["gallery"],
+    meta: {
+      iframeHeight: "650px",
+    },
+  },
+  {
+    name: "gallery-14",
+    description: "Expanding accordion panels that widen on hover to reveal category details.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/gallery/gallery-14.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["gallery"],
+    meta: {
+      iframeHeight: "700px",
+    },
+  },
+  {
+    name: "gallery-15",
+    description: "Artwork catalogue list with a sticky hover preview of the highlighted piece.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/gallery/gallery-15.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["gallery"],
+    meta: {
+      iframeHeight: "750px",
+    },
+  },
+  {
+    name: "gallery-16",
+    description: "Album overview grid of stacked-deck cards with photo counts and shared avatars.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/gallery/gallery-16.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["gallery"],
+    meta: {
+      iframeHeight: "1000px",
+    },
+  },
+  {
+    name: "gallery-17",
+    description: "Chronological timeline of yearly photo series with thumbnail rows per year.",
+    type: "registry:block",
+    dependencies: [],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/gallery/gallery-17.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["gallery"],
+    meta: {
+      iframeHeight: "1000px",
+    },
+  },
+  {
+    name: "gallery-18",
+    description: "3D coverflow carousel of album covers with a centered focus and controls.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/gallery/gallery-18.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["gallery"],
+    meta: {
+      iframeHeight: "650px",
+    },
+  },
+  {
+    name: "gallery-19",
+    description: "Asset library grid with aspect-ratio, density and detail toggles in a toolbar.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/gallery/gallery-19.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["gallery"],
+    meta: {
+      iframeHeight: "900px",
+    },
+  },
+  {
+    name: "gallery-20",
+    description: "Social profile header with stats, tabbed content and a square post grid with hover counts.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/gallery/gallery-20.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["gallery"],
+    meta: {
+      iframeHeight: "1100px",
+    },
+  },
+  {
+    name: "grid-06",
+    description: "Team member grid with gradient initials portraits and a bio panel that slides up on hover.",
+    type: "registry:block",
+    dependencies: [],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/grid/grid-06.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["grid"],
+    meta: {
+      iframeHeight: "900px",
+    },
+  },
+  {
+    name: "grid-07",
+    description: "Masonry moodboard mixing colour swatches, pull quotes and design notes in CSS columns.",
+    type: "registry:block",
+    dependencies: [],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/grid/grid-07.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["grid"],
+    meta: {
+      iframeHeight: "1200px",
+    },
+  },
+  {
+    name: "grid-08",
+    description: "Bordered KPI grid with big values, trend deltas and inline SVG sparklines.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/grid/grid-08.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["grid"],
+    meta: {
+      iframeHeight: "600px",
+    },
+  },
+  {
+    name: "grid-09",
+    description: "Asymmetric shop-by-category grid with one feature tile and gradient image tiles.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/grid/grid-09.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["grid"],
+    meta: {
+      iframeHeight: "750px",
+    },
+  },
+  {
+    name: "grid-10",
+    description: "Filterable template gallery with segmented category tabs and browser-mockup previews.",
+    type: "registry:block",
+    dependencies: [],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/grid/grid-10.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["grid"],
+    meta: {
+      iframeHeight: "1100px",
+    },
+  },
+  {
+    name: "grid-11",
+    description: "Numbered six-step process grid with durations and a nine-week progress strip.",
+    type: "registry:block",
+    dependencies: [],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/grid/grid-11.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["grid"],
+    meta: {
+      iframeHeight: "750px",
+    },
+  },
+  {
+    name: "grid-12",
+    description: "Month calendar grid with colour-coded events, a legend and dot markers on mobile.",
+    type: "registry:block",
+    dependencies: [],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/grid/grid-12.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["grid"],
+    meta: {
+      iframeHeight: "900px",
+    },
+  },
+  {
+    name: "grid-13",
+    description: "Inverted dark band with an enterprise security feature grid and a whitepaper CTA.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/grid/grid-13.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["grid"],
+    meta: {
+      iframeHeight: "750px",
+    },
+  },
+  {
+    name: "grid-14",
+    description: "Multi-select onboarding card grid with check states and a create workspace footer.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/grid/grid-14.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["grid"],
+    meta: {
+      iframeHeight: "750px",
+    },
+  },
+  {
+    name: "grid-15",
+    description: "Office locations grid paired with a dotted world map showing pulsing hub markers.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/grid/grid-15.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["grid"],
+    meta: {
+      iframeHeight: "950px",
+    },
+  },
+  {
+    name: "grid-16",
+    description: "Project grid where a clicked card expands to two columns with summary and results.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/grid/grid-16.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["grid"],
+    meta: {
+      iframeHeight: "1000px",
+    },
+  },
+  {
+    name: "grid-17",
+    description: "Product bento mixing a bar chart, reviewer avatars, feature flag toggles and a code card.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/grid/grid-17.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["grid"],
+    meta: {
+      iframeHeight: "850px",
+    },
+  },
+  {
+    name: "grid-18",
+    description: "Searchable icon library grid with click-to-copy feedback and an empty state.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/grid/grid-18.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["grid"],
+    meta: {
+      iframeHeight: "750px",
+    },
+  },
+  {
+    name: "grid-19",
+    description: "Photographer portfolio mosaic with spanning gradient frames and hover captions.",
+    type: "registry:block",
+    dependencies: [],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/grid/grid-19.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["grid"],
+    meta: {
+      iframeHeight: "1000px",
+    },
+  },
+  {
+    name: "grid-20",
+    description: "Keyboard shortcut cheat sheet grid of grouped cards with key caps.",
+    type: "registry:block",
+    dependencies: [],
+    registryDependencies: ["kbd"],
+    files: [
+      {
+        path: "blocks/grid/grid-20.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["grid"],
+    meta: {
+      iframeHeight: "850px",
+    },
+  },
+  {
+    name: "header-11",
+    description: "Header with a hover and click mega menu of product cards, resources and a promo tile, plus a mobile accordion menu.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/header/header-11.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["header"],
+    meta: {
+      iframeHeight: "460px",
+    },
+  },
+  {
+    name: "header-12",
+    description: "Floating rounded pill navbar on a soft gradient with a detached dropdown card menu on mobile.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/header/header-12.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["header"],
+    meta: {
+      iframeHeight: "360px",
+    },
+  },
+  {
+    name: "header-13",
+    description: "Docs header with a Ctrl+K command search overlay that filters guides and endpoints, plus a scrollable mobile nav row.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/header/header-13.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["header"],
+    meta: {
+      iframeHeight: "480px",
+    },
+  },
+  {
+    name: "header-14",
+    description: "Ecommerce header with a utility bar, category nav, search, account, wishlist and cart badge, and a slide-in mobile drawer.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/header/header-14.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["header"],
+    meta: {
+      iframeHeight: "300px",
+    },
+  },
+  {
+    name: "header-15",
+    description: "Open-source library header with a version picker, star counter, theme toggle and a two-column mobile grid menu.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/header/header-15.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["header"],
+    meta: {
+      iframeHeight: "300px",
+    },
+  },
+  {
+    name: "header-16",
+    description: "App workspace header with team and project breadcrumb switcher, branch and deploy status, and a tab bar.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/header/header-16.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["header"],
+    meta: {
+      iframeHeight: "320px",
+    },
+  },
+  {
+    name: "header-17",
+    description: "Minimal agency header whose animated Menu button reveals a full-width inverted overlay with large links and contact details.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/header/header-17.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["header"],
+    meta: {
+      iframeHeight: "600px",
+    },
+  },
+  {
+    name: "header-18",
+    description: "Header with a centered segmented nav and sliding active indicator, falling back to scrollable pills on mobile.",
+    type: "registry:block",
+    dependencies: [],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/header/header-18.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["header"],
+    meta: {
+      iframeHeight: "260px",
+    },
+  },
+  {
+    name: "header-19",
+    description: "Checkout header with back link, centered wordmark, secure badge and a four-step progress indicator.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/header/header-19.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["header"],
+    meta: {
+      iframeHeight: "240px",
+    },
+  },
+  {
+    name: "header-20",
+    description: "Studio header with live local time, availability pulse and underline CTA, opening a numbered large-type mobile menu.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/header/header-20.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["header"],
+    meta: {
+      iframeHeight: "420px",
+    },
+  },
+  {
+    name: "hero-10",
+    description: "Developer hero with a tabbed package-manager install command, copy button and a terminal deploy preview.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/hero/hero-10.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["hero"],
+    meta: {
+      iframeHeight: "720px",
+    },
+  },
+  {
+    name: "hero-11",
+    description: "Bento hero with a large headline tile beside metric, avatar, queue and feature tiles.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/hero/hero-11.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["hero"],
+    meta: {
+      iframeHeight: "760px",
+    },
+  },
+  {
+    name: "hero-12",
+    description: "Centered marketplace hero with a two-field search bar, category chips and clickable popular searches over a masked grid.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/hero/hero-12.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["hero"],
+    meta: {
+      iframeHeight: "720px",
+    },
+  },
+  {
+    name: "hero-13",
+    description: "Centered launch hero above a browser-window product mockup with sidebar and roadmap table.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/hero/hero-13.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["hero"],
+    meta: {
+      iframeHeight: "900px",
+    },
+  },
+  {
+    name: "hero-14",
+    description: "Split hero with avatar-stack rating proof on the left and a staggered stack of customer quote cards on the right.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/hero/hero-14.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["hero"],
+    meta: {
+      iframeHeight: "760px",
+    },
+  },
+  {
+    name: "hero-15",
+    description: "Audience-switcher hero whose segmented tabs swap the headline, benefits and preview panel per role.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/hero/hero-15.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["hero"],
+    meta: {
+      iframeHeight: "760px",
+    },
+  },
+  {
+    name: "hero-16",
+    description: "Split hero with an inverted pitch panel and floor-plan sketch beside a sign-up form with success state.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button","input"],
+    files: [
+      {
+        path: "blocks/hero/hero-16.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["hero"],
+    meta: {
+      iframeHeight: "800px",
+    },
+  },
+  {
+    name: "hero-17",
+    description: "Mobile app hero with platform download buttons, rating stats and a CSS phone mockup of the app.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/hero/hero-17.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["hero"],
+    meta: {
+      iframeHeight: "820px",
+    },
+  },
+  {
+    name: "hero-18",
+    description: "Split hero with an interactive ROI calculator card driven by a team-size slider.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/hero/hero-18.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["hero"],
+    meta: {
+      iframeHeight: "680px",
+    },
+  },
+  {
+    name: "hero-19",
+    description: "Conference hero with oversized gradient wordmark, date and venue meta, countdown blocks and speaker cards.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/hero/hero-19.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["hero"],
+    meta: {
+      iframeHeight: "1000px",
+    },
+  },
+  {
+    name: "hero-20",
+    description: "Sticky headline column beside a vertical three-step timeline, with a wordmark customer strip below.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/hero/hero-20.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["hero"],
+    meta: {
+      iframeHeight: "860px",
+    },
+  },
+  {
+    name: "lists-06",
+    description: "Activity feed grouped by day with avatar badges, unread markers and quoted replies.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/lists/lists-06.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["lists"],
+    meta: {
+      iframeHeight: "850px",
+    },
+  },
+  {
+    name: "lists-07",
+    description: "Ranked leaderboard with podium colours, score bars, rank deltas and a pinned you row.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/lists/lists-07.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["lists"],
+    meta: {
+      iframeHeight: "850px",
+    },
+  },
+  {
+    name: "lists-08",
+    description: "Sortable package list with clickable column headers and download bars.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/lists/lists-08.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["lists"],
+    meta: {
+      iframeHeight: "650px",
+    },
+  },
+  {
+    name: "lists-09",
+    description: "Book table of contents with sticky cover, parts and large chapter numbers.",
+    type: "registry:block",
+    dependencies: [],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/lists/lists-09.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["lists"],
+    meta: {
+      iframeHeight: "1100px",
+    },
+  },
+  {
+    name: "lists-10",
+    description: "Order history accordion list that expands into line items and shipping actions.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/lists/lists-10.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["lists"],
+    meta: {
+      iframeHeight: "800px",
+    },
+  },
+  {
+    name: "lists-11",
+    description: "Grouped technical spec sheet as definition lists beside a device illustration.",
+    type: "registry:block",
+    dependencies: [],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/lists/lists-11.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["lists"],
+    meta: {
+      iframeHeight: "800px",
+    },
+  },
+  {
+    name: "lists-12",
+    description: "Conference agenda list with day tabs, time column, track badges and rooms.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/lists/lists-12.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["lists"],
+    meta: {
+      iframeHeight: "950px",
+    },
+  },
+  {
+    name: "lists-13",
+    description: "Searchable people directory with department filter chips and presence dots.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/lists/lists-13.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["lists"],
+    meta: {
+      iframeHeight: "800px",
+    },
+  },
+  {
+    name: "lists-14",
+    description: "Feature request voting list that re-sorts live as items are upvoted.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/lists/lists-14.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["lists"],
+    meta: {
+      iframeHeight: "750px",
+    },
+  },
+  {
+    name: "lists-15",
+    description: "Dark restaurant menu in two columns with dotted price leaders.",
+    type: "registry:block",
+    dependencies: [],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/lists/lists-15.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["lists"],
+    meta: {
+      iframeHeight: "950px",
+    },
+  },
+  {
+    name: "lists-16",
+    description: "Status page service list with 90-day uptime bars and a legend.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/lists/lists-16.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["lists"],
+    meta: {
+      iframeHeight: "1000px",
+    },
+  },
+  {
+    name: "lists-17",
+    description: "Inbox master-detail list with a reading pane and mobile back navigation.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/lists/lists-17.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["lists"],
+    meta: {
+      iframeHeight: "700px",
+    },
+  },
+  {
+    name: "lists-18",
+    description: "Do and don't guideline list in three columns with green and red callouts.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/lists/lists-18.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["lists"],
+    meta: {
+      iframeHeight: "900px",
+    },
+  },
+  {
+    name: "lists-19",
+    description: "Alternating centre-line company milestone timeline that stacks on mobile.",
+    type: "registry:block",
+    dependencies: [],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/lists/lists-19.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["lists"],
+    meta: {
+      iframeHeight: "950px",
+    },
+  },
+  {
+    name: "lists-20",
+    description: "Bank transaction ledger grouped by date with daily net and in/out totals.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/lists/lists-20.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["lists"],
+    meta: {
+      iframeHeight: "850px",
+    },
+  },
+  {
+    name: "location-06",
+    description: "Full-bleed illustrated city map with a dropped pin and an overlaid store card holding address, hours and actions.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/location/location-06.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["location"],
+    meta: {
+      iframeHeight: "680px",
+    },
+  },
+  {
+    name: "location-07",
+    description: "Dot-matrix world map with dashed arcs from headquarters to offices and a city headcount strip below.",
+    type: "registry:block",
+    dependencies: [],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/location/location-07.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["location"],
+    meta: {
+      iframeHeight: "820px",
+    },
+  },
+  {
+    name: "location-08",
+    description: "City tabs that move a pulsing pin across an SVG street map and swap venue, hours, transit and parking details.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/location/location-08.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["location"],
+    meta: {
+      iframeHeight: "720px",
+    },
+  },
+  {
+    name: "location-09",
+    description: "Getting-here planner with transport mode toggles, travel time, step list and an animated route drawn on a grid map.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/location/location-09.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["location"],
+    meta: {
+      iframeHeight: "760px",
+    },
+  },
+  {
+    name: "location-10",
+    description: "Opening hours table that highlights today, beside an illustrated pin map tile and a holiday hours card.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/location/location-10.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["location"],
+    meta: {
+      iframeHeight: "760px",
+    },
+  },
+  {
+    name: "location-11",
+    description: "Region accordion with continent silhouettes that expands into a grid of office addresses and HQ badges.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["accordion"],
+    files: [
+      {
+        path: "blocks/location/location-11.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["location"],
+    meta: {
+      iframeHeight: "760px",
+    },
+  },
+  {
+    name: "location-12",
+    description: "Interactive venue floor plan with numbered zones that highlight from a synced legend list on hover or focus.",
+    type: "registry:block",
+    dependencies: [],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/location/location-12.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["location"],
+    meta: {
+      iframeHeight: "780px",
+    },
+  },
+  {
+    name: "location-13",
+    description: "Delivery zone checker with postcode lookup, result messages and concentric radius rings around a depot map.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button","input"],
+    files: [
+      {
+        path: "blocks/location/location-13.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["location"],
+    meta: {
+      iframeHeight: "700px",
+    },
+  },
+  {
+    name: "location-14",
+    description: "Horizontal snap carousel of location cards with generated street-grid thumbnails and prev/next controls.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/location/location-14.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["location"],
+    meta: {
+      iframeHeight: "640px",
+    },
+  },
+  {
+    name: "location-15",
+    description: "Expansion map of a country silhouette with open, coming soon and planned pins filtered by legend chips.",
+    type: "registry:block",
+    dependencies: [],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/location/location-15.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["location"],
+    meta: {
+      iframeHeight: "800px",
+    },
+  },
+  {
+    name: "location-16",
+    description: "Inverted dark band with oversized GPS coordinates, trail facts grid, route actions and an SVG compass.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/location/location-16.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["location"],
+    meta: {
+      iframeHeight: "720px",
+    },
+  },
+  {
+    name: "location-17",
+    description: "Neighbourhood guide map with toggleable category pins around the venue and a synced list of nearby places.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/location/location-17.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["location"],
+    meta: {
+      iframeHeight: "760px",
+    },
+  },
+  {
+    name: "location-18",
+    description: "Dense branch directory table with sticky header, status badges, step-free access column and CSV link.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["badge"],
+    files: [
+      {
+        path: "blocks/location/location-18.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["location"],
+    meta: {
+      iframeHeight: "760px",
+    },
+  },
+  {
+    name: "location-19",
+    description: "Visitor info bento with an illustrated campus map tile and cards for parking, transit, cycling, airport and access.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/location/location-19.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["location"],
+    meta: {
+      iframeHeight: "760px",
+    },
+  },
+  {
+    name: "location-20",
+    description: "Hiking route hero with a contour-line SVG trail, labelled waypoints, copyable coordinates and a stats bar.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/location/location-20.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["location"],
+    meta: {
+      iframeHeight: "800px",
+    },
+  },
+  {
+    name: "media-07",
+    description: "Cinematic video player with custom controls, seek bar chapter markers, captions and a chapter grid.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/media/media-07.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["media"],
+    meta: {
+      iframeHeight: "850px",
+    },
+  },
+  {
+    name: "media-08",
+    description: "Music player card with album art, transport controls and a clickable tracklist.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/media/media-08.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["media"],
+    meta: {
+      iframeHeight: "800px",
+    },
+  },
+  {
+    name: "media-09",
+    description: "Webinar landing page with agenda, speaker cards and a sticky countdown registration form.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button","input","label"],
+    files: [
+      {
+        path: "blocks/media/media-09.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["media"],
+    meta: {
+      iframeHeight: "900px",
+    },
+  },
+  {
+    name: "media-10",
+    description: "Livestream player with live badges, channel info and an interactive live chat sidebar.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button","input"],
+    files: [
+      {
+        path: "blocks/media/media-10.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["media"],
+    meta: {
+      iframeHeight: "700px",
+    },
+  },
+  {
+    name: "media-11",
+    description: "Podcast episode with a sticky player bar and a clickable, auto-highlighting transcript.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/media/media-11.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["media"],
+    meta: {
+      iframeHeight: "950px",
+    },
+  },
+  {
+    name: "media-12",
+    description: "Horizontal scroll of vertical 9:16 customer video testimonial reels.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/media/media-12.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["media"],
+    meta: {
+      iframeHeight: "800px",
+    },
+  },
+  {
+    name: "media-13",
+    description: "Course lesson player with a progress-tracking curriculum sidebar of collapsible modules.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button","progress"],
+    files: [
+      {
+        path: "blocks/media/media-13.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["media"],
+    meta: {
+      iframeHeight: "750px",
+    },
+  },
+  {
+    name: "media-14",
+    description: "Voice sample list with single-active mini players and progress-filling waveforms.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/media/media-14.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["media"],
+    meta: {
+      iframeHeight: "650px",
+    },
+  },
+  {
+    name: "media-15",
+    description: "Product tour with vertical feature tabs driving a large video preview panel.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/media/media-15.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["media"],
+    meta: {
+      iframeHeight: "750px",
+    },
+  },
+  {
+    name: "media-16",
+    description: "Inverted radio station band with an animated equalizer dial, station grid and schedule.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/media/media-16.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["media"],
+    meta: {
+      iframeHeight: "850px",
+    },
+  },
+  {
+    name: "media-17",
+    description: "Searchable, topic-filtered table of webinar replay recordings.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["badge","input"],
+    files: [
+      {
+        path: "blocks/media/media-17.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["media"],
+    meta: {
+      iframeHeight: "850px",
+    },
+  },
+  {
+    name: "media-18",
+    description: "Album release with a spinning vinyl sliding from its sleeve, side A/B tracklist and pre-order CTA.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/media/media-18.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["media"],
+    meta: {
+      iframeHeight: "750px",
+    },
+  },
+  {
+    name: "media-19",
+    description: "Inverted keynote band with stats and a video thumbnail that opens a modal player.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/media/media-19.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["media"],
+    meta: {
+      iframeHeight: "650px",
+    },
+  },
+  {
+    name: "media-20",
+    description: "Podcast network show cards with a play queue and a slide-up mini player bar.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/media/media-20.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["media"],
+    meta: {
+      iframeHeight: "850px",
+    },
+  },
+  {
+    name: "navigation-06",
+    description: "Boutique storefront header with split links around a centred serif wordmark, search, bag count and a slide-down mobile menu.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/navigation/navigation-06.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["navigation"],
+    meta: {
+      iframeHeight: "500px",
+    },
+  },
+  {
+    name: "navigation-07",
+    description: "Dismissible live event announcement bar above a nav with dropdown links, language picker, log in and CTA.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/navigation/navigation-07.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["navigation"],
+    meta: {
+      iframeHeight: "300px",
+    },
+  },
+  {
+    name: "navigation-08",
+    description: "Collapsible app sidebar that toggles between icon rail and labelled view with badges, counts and active state.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/navigation/navigation-08.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["navigation"],
+    meta: {
+      iframeHeight: "600px",
+    },
+  },
+  {
+    name: "navigation-09",
+    description: "Docs layout with a searchable sidebar of collapsible sections, active page marker and article content.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/navigation/navigation-09.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["navigation"],
+    meta: {
+      iframeHeight: "700px",
+    },
+  },
+  {
+    name: "navigation-10",
+    description: "Studio header whose menu button opens a full-screen inverted overlay with large links and contact details.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/navigation/navigation-10.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["navigation"],
+    meta: {
+      iframeHeight: "700px",
+    },
+  },
+  {
+    name: "navigation-11",
+    description: "Floating pill nav where a sliding highlight follows the pointer and an underline marks the active link.",
+    type: "registry:block",
+    dependencies: [],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/navigation/navigation-11.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["navigation"],
+    meta: {
+      iframeHeight: "300px",
+    },
+  },
+  {
+    name: "navigation-12",
+    description: "Checkout header with a numbered step progress bar, completed checkmarks and back/continue controls.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/navigation/navigation-12.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["navigation"],
+    meta: {
+      iframeHeight: "500px",
+    },
+  },
+  {
+    name: "navigation-13",
+    description: "Table pagination with rows-per-page select and page numbers, plus previous/next chapter article navigation cards.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/navigation/navigation-13.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["navigation"],
+    meta: {
+      iframeHeight: "500px",
+    },
+  },
+  {
+    name: "navigation-14",
+    description: "E-commerce header with delivery bar, location, search field, account, wishlist and cart icons above category tabs.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/navigation/navigation-14.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["navigation"],
+    meta: {
+      iframeHeight: "350px",
+    },
+  },
+  {
+    name: "navigation-15",
+    description: "Mobile menu demo in a phone frame where nested sections slide in as full panels with back buttons.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/navigation/navigation-15.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["navigation"],
+    meta: {
+      iframeHeight: "750px",
+    },
+  },
+  {
+    name: "navigation-16",
+    description: "Report reader with a sticky section index that tracks scroll position and smooth-scrolls to sections.",
+    type: "registry:block",
+    dependencies: [],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/navigation/navigation-16.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["navigation"],
+    meta: {
+      iframeHeight: "650px",
+    },
+  },
+  {
+    name: "navigation-17",
+    description: "App top bar with a workspace switcher, project search and notifications popover panels.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/navigation/navigation-17.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["navigation"],
+    meta: {
+      iframeHeight: "600px",
+    },
+  },
+  {
+    name: "navigation-18",
+    description: "Nav with an industries mega menu showing a list of sectors beside detail links and a proof card.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/navigation/navigation-18.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["navigation"],
+    meta: {
+      iframeHeight: "650px",
+    },
+  },
+  {
+    name: "navigation-19",
+    description: "File browser breadcrumb that collapses middle folders into an overflow button and jumps to any level.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/navigation/navigation-19.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["navigation"],
+    meta: {
+      iframeHeight: "450px",
+    },
+  },
+  {
+    name: "navigation-20",
+    description: "Inverted selected work index list whose hovered entry reveals a gradient preview card beside it.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/navigation/navigation-20.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["navigation"],
+    meta: {
+      iframeHeight: "750px",
+    },
+  },
+  {
+    name: "portfolio-06",
+    description: "Horizontal scroll-snap carousel of tall project cards with numbered counters and previous/next arrow controls.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/portfolio/portfolio-06.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["portfolio"],
+    meta: {
+      iframeHeight: "800px",
+    },
+  },
+  {
+    name: "portfolio-07",
+    description: "Alternating zigzag case studies pairing a framed mockup with summary, headline metric and service tags.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/portfolio/portfolio-07.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["portfolio"],
+    meta: {
+      iframeHeight: "1200px",
+    },
+  },
+  {
+    name: "portfolio-08",
+    description: "Sticky studio introduction with stats on the left beside a vertically scrolling column of large project tiles.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/portfolio/portfolio-08.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["portfolio"],
+    meta: {
+      iframeHeight: "1200px",
+    },
+  },
+  {
+    name: "portfolio-09",
+    description: "Vertical year-by-year timeline of client projects with gradient thumbnails and role labels.",
+    type: "registry:block",
+    dependencies: [],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/portfolio/portfolio-09.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["portfolio"],
+    meta: {
+      iframeHeight: "1100px",
+    },
+  },
+  {
+    name: "portfolio-10",
+    description: "Discipline tabs that swap a featured project panel with artwork, description and deliverables list.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button","tabs"],
+    files: [
+      {
+        path: "blocks/portfolio/portfolio-10.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["portfolio"],
+    meta: {
+      iframeHeight: "750px",
+    },
+  },
+  {
+    name: "portfolio-11",
+    description: "Spreadsheet-style project index table with client, discipline, role, year and highlighted outcome columns.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/portfolio/portfolio-11.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["portfolio"],
+    meta: {
+      iframeHeight: "750px",
+    },
+  },
+  {
+    name: "portfolio-12",
+    description: "Inverted dark band with an infinite marquee of oversized project names above a four-stat grid.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/portfolio/portfolio-12.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["portfolio"],
+    meta: {
+      iframeHeight: "650px",
+    },
+  },
+  {
+    name: "portfolio-13",
+    description: "Before/after redesign comparison with a draggable divider over two UI mockups and result metrics.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/portfolio/portfolio-13.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["portfolio"],
+    meta: {
+      iframeHeight: "900px",
+    },
+  },
+  {
+    name: "portfolio-14",
+    description: "Photographer square grid with hover captions that opens a full-screen keyboard-navigable lightbox.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/portfolio/portfolio-14.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["portfolio"],
+    meta: {
+      iframeHeight: "1000px",
+    },
+  },
+  {
+    name: "portfolio-15",
+    description: "Case study process stepper with progress bars and a detail card for each project phase.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/portfolio/portfolio-15.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["portfolio"],
+    meta: {
+      iframeHeight: "750px",
+    },
+  },
+  {
+    name: "portfolio-16",
+    description: "Awards list with year column beside sidebars for press mentions and speaking engagements.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/portfolio/portfolio-16.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["portfolio"],
+    meta: {
+      iframeHeight: "700px",
+    },
+  },
+  {
+    name: "portfolio-17",
+    description: "Developer profile with a contribution heatmap and open-source repository cards showing stars and language bars.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/portfolio/portfolio-17.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["portfolio"],
+    meta: {
+      iframeHeight: "850px",
+    },
+  },
+  {
+    name: "portfolio-18",
+    description: "Centered featured-project hero over desktop and phone device mockups with a project metadata strip.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/portfolio/portfolio-18.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["portfolio"],
+    meta: {
+      iframeHeight: "1050px",
+    },
+  },
+  {
+    name: "portfolio-19",
+    description: "Expandable accordion list of projects that reveals artwork, summary, key facts and a project link.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/portfolio/portfolio-19.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["portfolio"],
+    meta: {
+      iframeHeight: "900px",
+    },
+  },
+  {
+    name: "portfolio-20",
+    description: "Contact section with oversized copy-to-clipboard email, intro call slot picker and social links list.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/portfolio/portfolio-20.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["portfolio"],
+    meta: {
+      iframeHeight: "900px",
+    },
+  },
+  {
+    name: "pricing-09",
+    description: "Single lifetime-deal panel with an included features list beside a one-time price, strikethrough and refund note.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/pricing/pricing-09.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["pricing"],
+    meta: {
+      iframeHeight: "650px",
+    },
+  },
+  {
+    name: "pricing-10",
+    description: "Audience tabs that swap between pairs of plan cards with a recommended badge and feature checklists.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button","tabs"],
+    files: [
+      {
+        path: "blocks/pricing/pricing-10.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["pricing"],
+    meta: {
+      iframeHeight: "750px",
+    },
+  },
+  {
+    name: "pricing-11",
+    description: "Checkout-style plan picker with radio rows beside a sticky order summary and monthly/yearly toggle.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/pricing/pricing-11.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["pricing"],
+    meta: {
+      iframeHeight: "700px",
+    },
+  },
+  {
+    name: "pricing-12",
+    description: "Inverted dark section with a guarantee note beside two contrasting plan cards with arrow CTAs.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/pricing/pricing-12.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["pricing"],
+    meta: {
+      iframeHeight: "750px",
+    },
+  },
+  {
+    name: "pricing-13",
+    description: "Pay-as-you-go credit pack selector with per-100 rates, bonus badges and a live total purchase bar.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/pricing/pricing-13.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["pricing"],
+    meta: {
+      iframeHeight: "550px",
+    },
+  },
+  {
+    name: "pricing-14",
+    description: "Core plan card, checkbox add-on list and a sticky dark running monthly total.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button","checkbox"],
+    files: [
+      {
+        path: "blocks/pricing/pricing-14.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["pricing"],
+    meta: {
+      iframeHeight: "650px",
+    },
+  },
+  {
+    name: "pricing-15",
+    description: "Pricing bento with a large featured Pro tile, Free and nonprofit tiles and an Enterprise banner link.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/pricing/pricing-15.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["pricing"],
+    meta: {
+      iframeHeight: "750px",
+    },
+  },
+  {
+    name: "pricing-16",
+    description: "Team size stepper that recommends a plan with features and a calculated monthly total.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/pricing/pricing-16.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["pricing"],
+    meta: {
+      iframeHeight: "650px",
+    },
+  },
+  {
+    name: "pricing-17",
+    description: "Feature comparison table with collapsible category groups and a plan switcher on mobile.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button","collapsible"],
+    files: [
+      {
+        path: "blocks/pricing/pricing-17.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["pricing"],
+    meta: {
+      iframeHeight: "900px",
+    },
+  },
+  {
+    name: "pricing-18",
+    description: "Four-tier pricing row with a yearly billing switch and USD/EUR/GBP currency selector.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button","switch"],
+    files: [
+      {
+        path: "blocks/pricing/pricing-18.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["pricing"],
+    meta: {
+      iframeHeight: "650px",
+    },
+  },
+  {
+    name: "pricing-19",
+    description: "Two-column Free vs Pro comparison grid with a highlighted Pro column and signup buttons.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/pricing/pricing-19.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["pricing"],
+    meta: {
+      iframeHeight: "800px",
+    },
+  },
+  {
+    name: "pricing-20",
+    description: "Usage-based calculator with a monthly events input, estimated bill and graduated band breakdown bars.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["input"],
+    files: [
+      {
+        path: "blocks/pricing/pricing-20.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["pricing"],
+    meta: {
+      iframeHeight: "650px",
+    },
+  },
+  {
+    name: "sections-06",
+    description: "Centered mission statement with gradient emphasis, founder byline and three pillars.",
+    type: "registry:block",
+    dependencies: [],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/sections/sections-06.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["sections"],
+    meta: {
+      iframeHeight: "750px",
+    },
+  },
+  {
+    name: "sections-07",
+    description: "Company values bento with one large inverted tile and a full-width closing band.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/sections/sections-07.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["sections"],
+    meta: {
+      iframeHeight: "850px",
+    },
+  },
+  {
+    name: "sections-08",
+    description: "Interactive horizontal story timeline with year markers and a detail panel.",
+    type: "registry:block",
+    dependencies: [],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/sections/sections-08.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["sections"],
+    meta: {
+      iframeHeight: "650px",
+    },
+  },
+  {
+    name: "sections-09",
+    description: "Leadership list with gradient initials and expandable bios via disclosure rows.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/sections/sections-09.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["sections"],
+    meta: {
+      iframeHeight: "750px",
+    },
+  },
+  {
+    name: "sections-10",
+    description: "Careers listing with team filter chips, role rows and an open application card.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/sections/sections-10.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["sections"],
+    meta: {
+      iframeHeight: "950px",
+    },
+  },
+  {
+    name: "sections-11",
+    description: "Before and after comparison of two contrasting cards with a centre arrow.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/sections/sections-11.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["sections"],
+    meta: {
+      iframeHeight: "700px",
+    },
+  },
+  {
+    name: "sections-12",
+    description: "Inverted stats band with oversized figures, units and footnotes in a ruled grid.",
+    type: "registry:block",
+    dependencies: [],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/sections/sections-12.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["sections"],
+    meta: {
+      iframeHeight: "550px",
+    },
+  },
+  {
+    name: "sections-13",
+    description: "Tabbed process stepper with progress-highlighted steps and a deliverables panel.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/sections/sections-13.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["sections"],
+    meta: {
+      iframeHeight: "650px",
+    },
+  },
+  {
+    name: "sections-14",
+    description: "Sticky intro column beside a stacked list of numbered product principles.",
+    type: "registry:block",
+    dependencies: [],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/sections/sections-14.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["sections"],
+    meta: {
+      iframeHeight: "1100px",
+    },
+  },
+  {
+    name: "sections-15",
+    description: "Office locations as gradient map cards with timezone tags and headcount.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/sections/sections-15.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["sections"],
+    meta: {
+      iframeHeight: "850px",
+    },
+  },
+  {
+    name: "sections-16",
+    description: "Culture section with a gradient photo-style mosaic beside rituals and CTA.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/sections/sections-16.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["sections"],
+    meta: {
+      iframeHeight: "750px",
+    },
+  },
+  {
+    name: "sections-17",
+    description: "Awards table by year with result badges next to press pull quotes.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/sections/sections-17.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["sections"],
+    meta: {
+      iframeHeight: "750px",
+    },
+  },
+  {
+    name: "sections-18",
+    description: "Funding rounds timeline with progress bars, investor grid and angel list.",
+    type: "registry:block",
+    dependencies: [],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/sections/sections-18.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["sections"],
+    meta: {
+      iframeHeight: "950px",
+    },
+  },
+  {
+    name: "sections-19",
+    description: "Editorial origin story with drop cap, pull quote, side facts and sticky chart note.",
+    type: "registry:block",
+    dependencies: [],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/sections/sections-19.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["sections"],
+    meta: {
+      iframeHeight: "1100px",
+    },
+  },
+  {
+    name: "sections-20",
+    description: "Benefits grid of eight icon perks closed by an inverted open-roles CTA band.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/sections/sections-20.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["sections"],
+    meta: {
+      iframeHeight: "850px",
+    },
+  },
+  {
+    name: "testimonials-07",
+    description: "Numbered list of large quotes with highlighted key phrases and right-aligned attribution.",
+    type: "registry:block",
+    dependencies: [],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/testimonials/testimonials-07.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["testimonials"],
+    meta: {
+      iframeHeight: "720px",
+    },
+  },
+  {
+    name: "testimonials-08",
+    description: "Two rows of short quote cards scrolling in opposite directions as a marquee.",
+    type: "registry:block",
+    dependencies: [],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/testimonials/testimonials-08.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["testimonials"],
+    meta: {
+      iframeHeight: "560px",
+    },
+  },
+  {
+    name: "testimonials-09",
+    description: "Single centered quote switched by clicking a row of gradient initials avatars.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/testimonials/testimonials-09.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["testimonials"],
+    meta: {
+      iframeHeight: "560px",
+    },
+  },
+  {
+    name: "testimonials-10",
+    description: "Rating summary with score and star distribution bars beside a list of verified reviews.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/testimonials/testimonials-10.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["testimonials"],
+    meta: {
+      iframeHeight: "680px",
+    },
+  },
+  {
+    name: "testimonials-11",
+    description: "Three video testimonial cards with gradient thumbnails, play buttons and durations.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/testimonials/testimonials-11.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["testimonials"],
+    meta: {
+      iframeHeight: "780px",
+    },
+  },
+  {
+    name: "testimonials-12",
+    description: "Case-study cards led by a large result metric, a short quote and a read-more link.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/testimonials/testimonials-12.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["testimonials"],
+    meta: {
+      iframeHeight: "640px",
+    },
+  },
+  {
+    name: "testimonials-13",
+    description: "Tabbed testimonials filtered by team, showing two quote cards per tab.",
+    type: "registry:block",
+    dependencies: [],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/testimonials/testimonials-13.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["testimonials"],
+    meta: {
+      iframeHeight: "560px",
+    },
+  },
+  {
+    name: "testimonials-14",
+    description: "Grid of social-post style testimonials with handles, verified badges and engagement counts.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/testimonials/testimonials-14.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["testimonials"],
+    meta: {
+      iframeHeight: "760px",
+    },
+  },
+  {
+    name: "testimonials-15",
+    description: "Sticky rating headline and CTA on the left with a scrolling stack of quote cards on the right.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/testimonials/testimonials-15.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["testimonials"],
+    meta: {
+      iframeHeight: "900px",
+    },
+  },
+  {
+    name: "testimonials-16",
+    description: "Inverted band with three quotes in columns separated by thin dividers.",
+    type: "registry:block",
+    dependencies: [],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/testimonials/testimonials-16.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["testimonials"],
+    meta: {
+      iframeHeight: "560px",
+    },
+  },
+  {
+    name: "testimonials-17",
+    description: "Results table of customers with before, after and change badges plus a short quote each.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/testimonials/testimonials-17.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["testimonials"],
+    meta: {
+      iframeHeight: "680px",
+    },
+  },
+  {
+    name: "testimonials-18",
+    description: "Auto-advancing quote card with pause control and segmented progress bars per testimonial.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/testimonials/testimonials-18.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["testimonials"],
+    meta: {
+      iframeHeight: "520px",
+    },
+  },
+  {
+    name: "testimonials-19",
+    description: "Grid of fictional typographic wordmarks above a featured quote with a large gradient avatar.",
+    type: "registry:block",
+    dependencies: ["lucide-react"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/testimonials/testimonials-19.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["testimonials"],
+    meta: {
+      iframeHeight: "640px",
+    },
+  },
+  {
+    name: "testimonials-20",
+    description: "Split section with headline beside a chat-thread mockup of customer recommendations as bubbles.",
+    type: "registry:block",
+    dependencies: [],
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/testimonials/testimonials-20.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["testimonials"],
+    meta: {
+      iframeHeight: "620px",
+    },
+  },
 ]

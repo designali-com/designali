@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "resizable-36",
+  "type": "registry:example",
+  "description": "Settings page with a resizable section navigation and preferences form.",
+  "files": [
+    {
+      "path": "registry/designali/examples/resizable/resizable-36.tsx",
+      "content": "import { BellIcon, CreditCardIcon, ShieldIcon, UserIcon } from \"lucide-react\"\n\nimport { Label } from \"@workspace/ui/components/label\"\nimport {\n  ResizableHandle,\n  ResizablePanel,\n  ResizablePanelGroup,\n} from \"@workspace/ui/components/resizable\"\nimport { Switch } from \"@workspace/ui/components/switch\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst sections = [\n  { label: \"Profile\", icon: UserIcon },\n  { label: \"Notifications\", icon: BellIcon },\n  { label: \"Security\", icon: ShieldIcon },\n  { label: \"Billing\", icon: CreditCardIcon },\n]\n\nexport default function SettingsNavLayout() {\n  return (\n    <ResizablePanelGroup\n      orientation=\"horizontal\"\n      className=\"h-72 w-full max-w-2xl border\"\n    >\n      <ResizablePanel defaultSize=\"28%\" minSize=\"20%\" maxSize=\"40%\">\n        <nav className=\"flex h-full flex-col gap-0.5 p-2\">\n          {sections.map((s) => (\n            <a\n              key={s.label}\n              href=\"#\"\n              className={cn(\n                \"flex items-center gap-2 px-2 py-1.5 text-xs hover:bg-muted\",\n                s.label === \"Notifications\" && \"bg-muted font-medium\"\n              )}\n            >\n              <s.icon className=\"size-3.5 shrink-0\" />\n              <span className=\"truncate\">{s.label}</span>\n            </a>\n          ))}\n        </nav>\n      </ResizablePanel>\n      <ResizableHandle />\n      <ResizablePanel defaultSize=\"72%\" minSize=\"50%\">\n        <div className=\"flex h-full flex-col gap-4 p-4\">\n          <div>\n            <h3 className=\"text-sm font-semibold\">Notifications</h3>\n            <p className=\"text-xs text-muted-foreground\">\n              Choose what we email you about.\n            </p>\n          </div>\n          {[\"Product updates\", \"Weekly digest\", \"Security alerts\"].map(\n            (label, i) => (\n              <div\n                key={label}\n                className=\"flex items-center justify-between gap-2\"\n              >\n                <Label htmlFor={\"notify-\" + i} className=\"text-xs\">\n                  {label}\n                </Label>\n                <Switch id={\"notify-\" + i} defaultChecked={i !== 1} />\n              </div>\n            )\n          )}\n        </div>\n      </ResizablePanel>\n    </ResizablePanelGroup>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

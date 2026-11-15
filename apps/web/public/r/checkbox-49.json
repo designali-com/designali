@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "checkbox-49",
+  "type": "registry:example",
+  "description": "License agreement where the acceptance checkbox unlocks only after scrolling to the end.",
+  "files": [
+    {
+      "path": "registry/designali/examples/checkbox/checkbox-49.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Checkbox } from \"@workspace/ui/components/checkbox\"\nimport {\n  Field,\n  FieldContent,\n  FieldDescription,\n  FieldLabel,\n} from \"@workspace/ui/components/field\"\n\nconst clauses = [\n  \"1. You may install the software on up to three devices you own.\",\n  \"2. You may not resell, sublicense, or distribute the software.\",\n  \"3. Updates are provided for twelve months from purchase.\",\n  \"4. We collect anonymous crash reports to improve stability.\",\n  \"5. The software is provided as is, without warranty of any kind.\",\n  \"6. This agreement is governed by the laws of your country of residence.\",\n  \"7. Either party may terminate this agreement with written notice.\",\n]\n\nexport default function ScrollToAcceptAgreement() {\n  const [reachedEnd, setReachedEnd] = React.useState(false)\n  const [accepted, setAccepted] = React.useState(false)\n\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-3\">\n      <div\n        className=\"h-36 overflow-y-auto border bg-muted/30 p-3 text-xs leading-relaxed\"\n        onScroll={(e) => {\n          const el = e.currentTarget\n          if (el.scrollTop + el.clientHeight >= el.scrollHeight - 4)\n            setReachedEnd(true)\n        }}\n      >\n        <p className=\"mb-2 font-medium\">End user license agreement</p>\n        {clauses.map((clause) => (\n          <p key={clause} className=\"mb-2 text-muted-foreground\">\n            {clause}\n          </p>\n        ))}\n      </div>\n      <Field orientation=\"horizontal\" data-disabled={!reachedEnd || undefined}>\n        <Checkbox\n          id=\"eula-accept\"\n          disabled={!reachedEnd}\n          checked={accepted}\n          onCheckedChange={setAccepted}\n        />\n        <FieldContent>\n          <FieldLabel htmlFor=\"eula-accept\">\n            I have read and accept the agreement\n          </FieldLabel>\n          {!reachedEnd && (\n            <FieldDescription>Scroll to the end to continue.</FieldDescription>\n          )}\n        </FieldContent>\n      </Field>\n      <Button disabled={!accepted}>Install</Button>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

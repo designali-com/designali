@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "checkbox-44",
+  "type": "registry:example",
+  "description": "Playlist download picker that totals the storage size of checked tracks.",
+  "files": [
+    {
+      "path": "registry/designali/examples/checkbox/checkbox-44.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { DownloadIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Checkbox } from \"@workspace/ui/components/checkbox\"\n\nconst tracks = [\n  { title: \"Morning Static\", artist: \"June Avenue\", mb: 8.4 },\n  { title: \"Glass Rooms\", artist: \"Mira Sol\", mb: 9.1 },\n  { title: \"Long Way North\", artist: \"Atlas Choir\", mb: 11.6 },\n  { title: \"Paper Boats\", artist: \"Harbor Lights\", mb: 7.2 },\n]\n\nexport default function OfflineDownloadTracks() {\n  const [picked, setPicked] = React.useState<string[]>(\n    tracks.map((t) => t.title)\n  )\n  const size = tracks\n    .filter((t) => picked.includes(t.title))\n    .reduce((s, t) => s + t.mb, 0)\n\n  return (\n    <div className=\"flex w-full max-w-sm flex-col border\">\n      {tracks.map((track, index) => (\n        <label\n          key={track.title}\n          className=\"flex cursor-pointer items-center gap-3 border-b px-3 py-2 hover:bg-muted/50\"\n        >\n          <span className=\"w-4 text-xs text-muted-foreground tabular-nums\">\n            {index + 1}\n          </span>\n          <div className=\"min-w-0 flex-1\">\n            <p className=\"truncate text-sm\">{track.title}</p>\n            <p className=\"truncate text-xs text-muted-foreground\">\n              {track.artist}\n            </p>\n          </div>\n          <span className=\"text-[11px] text-muted-foreground\">\n            {track.mb} MB\n          </span>\n          <Checkbox\n            checked={picked.includes(track.title)}\n            onCheckedChange={(checked) =>\n              setPicked((list) =>\n                checked\n                  ? [...list, track.title]\n                  : list.filter((t) => t !== track.title)\n              )\n            }\n          />\n        </label>\n      ))}\n      <div className=\"flex items-center justify-between p-3\">\n        <span className=\"text-xs text-muted-foreground\">\n          {size.toFixed(1)} MB on device\n        </span>\n        <Button size=\"sm\" disabled={picked.length === 0}>\n          <DownloadIcon data-icon=\"inline-start\" />\n          Download {picked.length}\n        </Button>\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

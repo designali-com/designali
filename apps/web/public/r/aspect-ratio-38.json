@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "aspect-ratio-38",
+  "type": "registry:example",
+  "description": "A checkout QR code rendered in a 1:1 frame for scan-to-pay.",
+  "files": [
+    {
+      "path": "registry/designali/examples/aspect-ratio/aspect-ratio-38.tsx",
+      "content": "import { AspectRatio } from \"@workspace/ui/components/aspect-ratio\"\n\nconst size = 21\nconst cells = Array.from({ length: size * size }, (_, i) => {\n  const x = i % size\n  const y = Math.floor(i / size)\n  const finder = (x < 7 && y < 7) || (x > 13 && y < 7) || (x < 7 && y > 13)\n  if (finder) {\n    const fx = x > 13 ? x - 14 : x\n    const fy = y > 13 ? y - 14 : y\n    return (\n      fx === 0 ||\n      fx === 6 ||\n      fy === 0 ||\n      fy === 6 ||\n      (fx > 1 && fx < 5 && fy > 1 && fy < 5)\n    )\n  }\n  return (x * 7 + y * 13 + x * y) % 5 < 2\n})\n\nexport default function PaymentQrSquare() {\n  return (\n    <div className=\"flex w-full max-w-56 flex-col items-center gap-3 border p-4 text-center\">\n      <p className=\"text-sm font-medium\">Scan to pay $36.50</p>\n      <AspectRatio ratio={1} className=\"w-full bg-white p-3\">\n        <svg\n          viewBox={\"0 0 \" + size + \" \" + size}\n          className=\"size-full\"\n          shapeRendering=\"crispEdges\"\n          aria-label=\"Payment QR code\"\n        >\n          {cells.map((on, i) =>\n            on ? (\n              <rect\n                key={i}\n                x={i % size}\n                y={Math.floor(i / size)}\n                width=\"1\"\n                height=\"1\"\n                fill=\"#111\"\n              />\n            ) : null\n          )}\n        </svg>\n      </AspectRatio>\n      <p className=\"text-xs text-muted-foreground\">\n        Order #A-2291 - expires in 10:00\n      </p>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

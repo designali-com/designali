@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "progress-19",
+  "type": "registry:example",
+  "description": "Survey card with question count progress above a set of answer buttons.",
+  "files": [
+    {
+      "path": "registry/designali/examples/progress/progress-19.tsx",
+      "content": "import { Button } from \"@workspace/ui/components/button\"\nimport {\n  Progress,\n  ProgressLabel,\n  ProgressValue,\n} from \"@workspace/ui/components/progress\"\n\nconst answers = [\"Daily\", \"A few times a week\", \"Weekly\", \"Rarely\"]\n\nexport default function SurveyQuestionProgress() {\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-4 border p-4\">\n      <Progress value={4} max={10} className=\"gap-2\">\n        <ProgressLabel className=\"text-muted-foreground\">\n          Question 4 of 10\n        </ProgressLabel>\n        <ProgressValue />\n      </Progress>\n      <p className=\"text-sm font-medium\">\n        How often do you plan meals for the week ahead?\n      </p>\n      <div className=\"grid grid-cols-2 gap-2\">\n        {answers.map((answer) => (\n          <Button key={answer} variant=\"outline\" size=\"sm\">\n            {answer}\n          </Button>\n        ))}\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

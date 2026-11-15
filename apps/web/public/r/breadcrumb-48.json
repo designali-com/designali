@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "breadcrumb-48",
+  "type": "registry:example",
+  "description": "Breadcrumb with a permission-locked parent level rendered as disabled text with a lock icon.",
+  "files": [
+    {
+      "path": "registry/designali/examples/breadcrumb/breadcrumb-48.tsx",
+      "content": "import { LockIcon } from \"lucide-react\"\n\nimport {\n  Breadcrumb,\n  BreadcrumbItem,\n  BreadcrumbLink,\n  BreadcrumbList,\n  BreadcrumbPage,\n  BreadcrumbSeparator,\n} from \"@workspace/ui/components/breadcrumb\"\n\nexport default function RestrictedLevelBreadcrumb() {\n  return (\n    <Breadcrumb>\n      <BreadcrumbList>\n        <BreadcrumbItem>\n          <BreadcrumbLink href=\"#\">Finance</BreadcrumbLink>\n        </BreadcrumbItem>\n        <BreadcrumbSeparator />\n        <BreadcrumbItem>\n          <span\n            aria-disabled=\"true\"\n            title=\"You don't have access to this folder\"\n            className=\"flex cursor-not-allowed items-center gap-1 text-muted-foreground/50\"\n          >\n            <LockIcon className=\"size-3\" />\n            Payroll\n          </span>\n        </BreadcrumbItem>\n        <BreadcrumbSeparator />\n        <BreadcrumbItem>\n          <BreadcrumbPage>Shared summary</BreadcrumbPage>\n        </BreadcrumbItem>\n      </BreadcrumbList>\n    </Breadcrumb>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

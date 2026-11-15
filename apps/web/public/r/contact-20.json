@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "contact-20",
+  "type": "registry:block",
+  "description": "Footer-style contact with an oversized animated-underline email headline, studio addresses columns and social links.",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/designali/blocks/contact/contact-20.tsx",
+      "content": "import { ArrowUpRight } from \"lucide-react\"\n\nconst studios = [\n  { city: \"Amsterdam\", lines: [\"Keizersgracht 312\", \"1016 EZ Amsterdam\"], phone: \"+31 20 555 0137\" },\n  { city: \"Montreal\", lines: [\"5445 Av. de Gaspé, 9th floor\", \"Montreal QC H2T 3B2\"], phone: \"+1 514 555 0162\" },\n  { city: \"Seoul\", lines: [\"24 Dosan-daero 45-gil\", \"Gangnam-gu, Seoul\"], phone: \"+82 2 555 0184\" },\n]\n\nconst links = [\"Instagram\", \"LinkedIn\", \"Vimeo\", \"Are.na\"]\n\nexport default function Contact20() {\n  return (\n    <section className=\"w-full border-t bg-background pt-20 md:pt-28\">\n      <div className=\"mx-auto max-w-7xl px-6\">\n        <p className=\"text-sm text-muted-foreground\">\n          New projects, collaborations or just a coffee &mdash;\n        </p>\n        <a\n          href=\"mailto:hi@wildeform.com\"\n          className=\"group mt-4 flex items-center gap-4 text-[13vw] leading-none font-semibold tracking-tighter break-all md:text-[9rem]\"\n        >\n          <span className=\"bg-gradient-to-r from-foreground to-foreground bg-[length:0%_4px] bg-left-bottom bg-no-repeat pb-2 transition-[background-size] duration-500 group-hover:bg-[length:100%_4px]\">\n            hi@wildeform\n          </span>\n          <ArrowUpRight className=\"hidden size-20 shrink-0 transition-transform group-hover:rotate-45 md:block\" />\n        </a>\n\n        <div className=\"mt-20 grid gap-10 border-t py-12 sm:grid-cols-2 lg:grid-cols-4\">\n          {studios.map((studio) => (\n            <div key={studio.city} className=\"space-y-3 text-sm\">\n              <p className=\"text-xs tracking-widest text-muted-foreground uppercase\">\n                {studio.city}\n              </p>\n              <address className=\"not-italic\">\n                {studio.lines.map((line) => (\n                  <span key={line} className=\"block\">\n                    {line}\n                  </span>\n                ))}\n              </address>\n              <a href=\"#\" className=\"block text-muted-foreground hover:text-foreground\">\n                {studio.phone}\n              </a>\n            </div>\n          ))}\n          <div className=\"space-y-3 text-sm\">\n            <p className=\"text-xs tracking-widest text-muted-foreground uppercase\">\n              Follow\n            </p>\n            <ul className=\"space-y-1\">\n              {links.map((link) => (\n                <li key={link}>\n                  <a href=\"#\" className=\"group inline-flex items-center gap-1 hover:underline\">\n                    {link}\n                    <ArrowUpRight className=\"size-3.5 text-muted-foreground\" />\n                  </a>\n                </li>\n              ))}\n            </ul>\n          </div>\n        </div>\n\n        <div className=\"flex flex-col gap-2 border-t py-6 text-xs text-muted-foreground sm:flex-row sm:justify-between\">\n          <span>Wilde Form Studio B.V. &middot; KvK 81234567</span>\n          <span>Replies within two working days</span>\n        </div>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "720px"
+  },
+  "categories": [
+    "contact"
+  ]
+}

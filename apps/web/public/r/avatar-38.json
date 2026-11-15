@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "avatar-38",
+  "type": "registry:example",
+  "description": "An avatar stack ending in an add button for inviting more teammates.",
+  "files": [
+    {
+      "path": "registry/designali/examples/avatar/avatar-38.tsx",
+      "content": "import { UserPlusIcon } from \"lucide-react\"\n\nimport {\n  Avatar,\n  AvatarFallback,\n  AvatarGroup,\n} from \"@workspace/ui/components/avatar\"\n\nexport default function InviteTeammatesStack() {\n  return (\n    <div className=\"flex w-full max-w-sm items-center justify-between gap-4 border p-4\">\n      <div>\n        <p className=\"text-sm font-medium\">Design team</p>\n        <p className=\"text-xs text-muted-foreground\">\n          5 members · 2 pending invites\n        </p>\n      </div>\n      <AvatarGroup>\n        <Avatar>\n          <AvatarFallback>LR</AvatarFallback>\n        </Avatar>\n        <Avatar>\n          <AvatarFallback>SM</AvatarFallback>\n        </Avatar>\n        <Avatar>\n          <AvatarFallback>TK</AvatarFallback>\n        </Avatar>\n        <button\n          type=\"button\"\n          aria-label=\"Invite teammate\"\n          className=\"relative flex size-8 shrink-0 items-center justify-center rounded-full border border-dashed border-muted-foreground/50 bg-background text-xs text-muted-foreground ring-2 ring-background hover:bg-muted hover:text-foreground [&>svg]:size-4\"\n        >\n          <UserPlusIcon />\n        </button>\n      </AvatarGroup>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

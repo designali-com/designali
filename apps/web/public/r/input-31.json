@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-31",
+  "type": "registry:example",
+  "description": "A workspace URL input with a domain prefix that sanitizes the slug as you type.",
+  "files": [
+    {
+      "path": "registry/designali/examples/input/input-31.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport {\n  Field,\n  FieldDescription,\n  FieldLabel,\n} from \"@workspace/ui/components/field\"\nimport {\n  InputGroup,\n  InputGroupAddon,\n  InputGroupInput,\n  InputGroupText,\n} from \"@workspace/ui/components/input-group\"\n\nexport default function WorkspaceSlugInput() {\n  const [slug, setSlug] = React.useState(\"harbor-labs\")\n\n  return (\n    <Field className=\"w-full max-w-sm\">\n      <FieldLabel htmlFor=\"slug\">Workspace URL</FieldLabel>\n      <InputGroup>\n        <InputGroupAddon>\n          <InputGroupText>fieldnote.app/</InputGroupText>\n        </InputGroupAddon>\n        <InputGroupInput\n          id=\"slug\"\n          value={slug}\n          onChange={(e) =>\n            setSlug(\n              e.target.value\n                .toLowerCase()\n                .replace(/[^a-z0-9-]+/g, \"-\")\n                .replace(/^-+/, \"\")\n            )\n          }\n          className=\"ps-0.5\"\n        />\n      </InputGroup>\n      <FieldDescription>\n        Lowercase letters, numbers, and dashes.\n      </FieldDescription>\n    </Field>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

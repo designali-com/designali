@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "switch-42",
+  "type": "registry:example",
+  "description": "Experimental labs features with beta badges and feedback links.",
+  "files": [
+    {
+      "path": "registry/designali/examples/switch/switch-42.tsx",
+      "content": "import { FlaskConicalIcon } from \"lucide-react\"\n\nimport { Badge } from \"@workspace/ui/components/badge\"\nimport { Label } from \"@workspace/ui/components/label\"\nimport { Switch } from \"@workspace/ui/components/switch\"\n\nconst labs = [\n  {\n    id: \"canvas\",\n    title: \"Infinite canvas\",\n    description: \"Pan and zoom freely across your notes.\",\n    stage: \"Beta\",\n  },\n  {\n    id: \"voice\",\n    title: \"Voice notes\",\n    description: \"Record and transcribe audio inline.\",\n    stage: \"Alpha\",\n  },\n]\n\nexport default function ExperimentalLabs() {\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-2\">\n      {labs.map((lab) => (\n        <div\n          key={lab.id}\n          className=\"flex flex-col gap-2 border border-dashed p-4\"\n        >\n          <div className=\"flex items-center gap-2\">\n            <FlaskConicalIcon className=\"size-4\" />\n            <Label htmlFor={\"labs-\" + lab.id} className=\"flex-1\">\n              {lab.title}\n              <Badge\n                variant={lab.stage === \"Alpha\" ? \"destructive\" : \"secondary\"}\n              >\n                {lab.stage}\n              </Badge>\n            </Label>\n            <Switch id={\"labs-\" + lab.id} />\n          </div>\n          <p className=\"text-xs text-muted-foreground\">{lab.description}</p>\n          <a href=\"#\" className=\"text-xs underline underline-offset-2\">\n            Send feedback\n          </a>\n        </div>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

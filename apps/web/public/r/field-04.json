@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "field-04",
+  "type": "registry:example",
+  "description": "Profile settings form with display name, prefixed username, and a bio with helper text.",
+  "files": [
+    {
+      "path": "registry/designali/examples/field/field-04.tsx",
+      "content": "import { Button } from \"@workspace/ui/components/button\"\nimport {\n  Field,\n  FieldDescription,\n  FieldGroup,\n  FieldLabel,\n} from \"@workspace/ui/components/field\"\nimport { Input } from \"@workspace/ui/components/input\"\nimport {\n  InputGroup,\n  InputGroupAddon,\n  InputGroupInput,\n  InputGroupText,\n} from \"@workspace/ui/components/input-group\"\nimport { Textarea } from \"@workspace/ui/components/textarea\"\n\nexport default function ProfileSettingsFields() {\n  return (\n    <form className=\"w-full max-w-sm\">\n      <FieldGroup>\n        <Field>\n          <FieldLabel htmlFor=\"profile-name\">Display name</FieldLabel>\n          <Input id=\"profile-name\" defaultValue=\"Maya Lindqvist\" />\n        </Field>\n        <Field>\n          <FieldLabel htmlFor=\"profile-username\">Username</FieldLabel>\n          <InputGroup>\n            <InputGroupAddon>\n              <InputGroupText>fieldnote.app/</InputGroupText>\n            </InputGroupAddon>\n            <InputGroupInput id=\"profile-username\" defaultValue=\"maya\" />\n          </InputGroup>\n          <FieldDescription>\n            Your public profile URL. You can change it once every 30 days.\n          </FieldDescription>\n        </Field>\n        <Field>\n          <FieldLabel htmlFor=\"profile-bio\">Bio</FieldLabel>\n          <Textarea\n            id=\"profile-bio\"\n            rows={3}\n            placeholder=\"Product designer based in Malmö...\"\n            className=\"resize-none\"\n          />\n          <FieldDescription>\n            Shown on your profile and in comments.\n          </FieldDescription>\n        </Field>\n        <Field orientation=\"horizontal\">\n          <Button type=\"submit\">Save profile</Button>\n        </Field>\n      </FieldGroup>\n    </form>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

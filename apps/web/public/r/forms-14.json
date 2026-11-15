@@ -1,0 +1,28 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "forms-14",
+  "type": "registry:block",
+  "description": "Support ticket form with icon category cards, segmented priority and details.",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button",
+    "input",
+    "label",
+    "textarea"
+  ],
+  "files": [
+    {
+      "path": "registry/designali/blocks/forms/forms-14.tsx",
+      "content": "\"use client\"\n\nimport { useState } from \"react\"\nimport { Bug, CreditCard, Lightbulb, UserCog } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Input } from \"@workspace/ui/components/input\"\nimport { Label } from \"@workspace/ui/components/label\"\nimport { Textarea } from \"@workspace/ui/components/textarea\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst categories = [\n  { id: \"bug\", icon: Bug, title: \"Something is broken\", hint: \"Errors, crashes, data issues\" },\n  { id: \"billing\", icon: CreditCard, title: \"Billing\", hint: \"Invoices, plans, refunds\" },\n  { id: \"account\", icon: UserCog, title: \"Account access\", hint: \"SSO, seats, permissions\" },\n  { id: \"idea\", icon: Lightbulb, title: \"Feature request\", hint: \"Tell us what is missing\" },\n]\n\nconst priorities = [\n  { id: \"low\", label: \"Low\", dot: \"bg-sky-500\" },\n  { id: \"normal\", label: \"Normal\", dot: \"bg-emerald-500\" },\n  { id: \"high\", label: \"High\", dot: \"bg-amber-500\" },\n  { id: \"urgent\", label: \"Urgent\", dot: \"bg-red-500\" },\n]\n\nexport default function Forms14() {\n  const [category, setCategory] = useState(\"bug\")\n  const [priority, setPriority] = useState(\"normal\")\n\n  return (\n    <section className=\"w-full bg-muted/40 py-20\">\n      <div className=\"mx-auto max-w-3xl px-6\">\n        <div className=\"flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between\">\n          <h2 className=\"text-3xl font-semibold tracking-tight\">Open a support ticket</h2>\n          <p className=\"text-xs text-muted-foreground\">\n            Median first response: <span className=\"text-foreground\">2h 14m</span>\n          </p>\n        </div>\n\n        <form className=\"mt-10 space-y-8 border border-border bg-background p-6 md:p-8\">\n          <fieldset>\n            <legend className=\"text-sm font-medium\">What do you need help with?</legend>\n            <div className=\"mt-4 grid gap-2 sm:grid-cols-2\">\n              {categories.map((item) => (\n                <button\n                  key={item.id}\n                  type=\"button\"\n                  onClick={() => setCategory(item.id)}\n                  aria-pressed={category === item.id}\n                  className={cn(\n                    \"flex items-start gap-3 border p-4 text-left transition-colors\",\n                    category === item.id\n                      ? \"border-foreground bg-muted\"\n                      : \"border-border hover:bg-muted/60\"\n                  )}\n                >\n                  <item.icon className=\"mt-0.5 size-4 shrink-0\" />\n                  <span>\n                    <span className=\"block text-sm font-medium\">{item.title}</span>\n                    <span className=\"block text-xs text-muted-foreground\">{item.hint}</span>\n                  </span>\n                </button>\n              ))}\n            </div>\n          </fieldset>\n\n          <fieldset>\n            <legend className=\"text-sm font-medium\">Priority</legend>\n            <div className=\"mt-4 grid grid-cols-2 gap-px border border-border bg-border sm:grid-cols-4\">\n              {priorities.map((item) => (\n                <button\n                  key={item.id}\n                  type=\"button\"\n                  onClick={() => setPriority(item.id)}\n                  aria-pressed={priority === item.id}\n                  className={cn(\n                    \"flex items-center justify-center gap-2 py-2.5 text-xs transition-colors\",\n                    priority === item.id ? \"bg-foreground text-background\" : \"bg-background hover:bg-muted\"\n                  )}\n                >\n                  <span className={cn(\"size-1.5 rounded-full\", item.dot)} />\n                  {item.label}\n                </button>\n              ))}\n            </div>\n          </fieldset>\n\n          <div className=\"space-y-2\">\n            <Label htmlFor=\"f14-subject\">Subject</Label>\n            <Input id=\"f14-subject\" placeholder=\"CSV export times out for reports over 50k rows\" className=\"h-10\" />\n          </div>\n          <div className=\"space-y-2\">\n            <Label htmlFor=\"f14-details\">Details</Label>\n            <Textarea\n              id=\"f14-details\"\n              rows={5}\n              placeholder=\"Steps to reproduce, what you expected, and what happened instead.\"\n            />\n          </div>\n\n          <div className=\"flex flex-col gap-4 border-t border-border pt-6 sm:flex-row sm:items-center sm:justify-between\">\n            <p className=\"text-xs text-muted-foreground\">\n              Workspace <span className=\"font-mono text-foreground\">acme-prod</span> will be attached automatically.\n            </p>\n            <Button type=\"submit\" size=\"lg\">Submit ticket</Button>\n          </div>\n        </form>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "950px"
+  },
+  "categories": [
+    "forms"
+  ]
+}

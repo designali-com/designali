@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "dialog-04",
+  "type": "registry:example",
+  "description": "Invite dialog that collects teammate emails and a workspace role.",
+  "files": [
+    {
+      "path": "registry/designali/examples/dialog/dialog-04.tsx",
+      "content": "import { UserPlusIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  Dialog,\n  DialogClose,\n  DialogContent,\n  DialogDescription,\n  DialogFooter,\n  DialogHeader,\n  DialogTitle,\n  DialogTrigger,\n} from \"@workspace/ui/components/dialog\"\nimport {\n  Field,\n  FieldDescription,\n  FieldGroup,\n  FieldLabel,\n} from \"@workspace/ui/components/field\"\nimport {\n  NativeSelect,\n  NativeSelectOption,\n} from \"@workspace/ui/components/native-select\"\nimport { Textarea } from \"@workspace/ui/components/textarea\"\n\nexport default function InviteTeammatesDialog() {\n  return (\n    <Dialog>\n      <DialogTrigger render={<Button />}>\n        <UserPlusIcon data-icon=\"inline-start\" />\n        Invite teammates\n      </DialogTrigger>\n      <DialogContent>\n        <DialogHeader>\n          <DialogTitle>Invite to Northwind Studio</DialogTitle>\n          <DialogDescription>\n            Invitations expire after 7 days. Separate multiple emails with\n            commas.\n          </DialogDescription>\n        </DialogHeader>\n        <FieldGroup>\n          <Field>\n            <FieldLabel htmlFor=\"invite-emails\">Email addresses</FieldLabel>\n            <Textarea\n              id=\"invite-emails\"\n              placeholder=\"lena@northwind.dev, omar@northwind.dev\"\n              className=\"min-h-20\"\n            />\n          </Field>\n          <Field>\n            <FieldLabel htmlFor=\"invite-role\">Role</FieldLabel>\n            <NativeSelect\n              id=\"invite-role\"\n              defaultValue=\"member\"\n              className=\"w-full\"\n            >\n              <NativeSelectOption value=\"admin\">Admin</NativeSelectOption>\n              <NativeSelectOption value=\"member\">Member</NativeSelectOption>\n              <NativeSelectOption value=\"viewer\">Viewer</NativeSelectOption>\n            </NativeSelect>\n            <FieldDescription>\n              Members can create and edit projects.\n            </FieldDescription>\n          </Field>\n        </FieldGroup>\n        <DialogFooter>\n          <DialogClose render={<Button variant=\"outline\" />}>\n            Cancel\n          </DialogClose>\n          <DialogClose render={<Button />}>Send invites</DialogClose>\n        </DialogFooter>\n      </DialogContent>\n    </Dialog>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

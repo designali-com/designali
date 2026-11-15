@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "scroll-area-36",
+  "type": "registry:example",
+  "description": "Design token palette with scrollable color ramps.",
+  "files": [
+    {
+      "path": "registry/designali/examples/scroll-area/scroll-area-36.tsx",
+      "content": "import { ScrollArea } from \"@workspace/ui/components/scroll-area\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst ramps = [\n  {\n    name: \"Slate\",\n    shades: [\n      \"bg-slate-100\",\n      \"bg-slate-300\",\n      \"bg-slate-500\",\n      \"bg-slate-700\",\n      \"bg-slate-900\",\n    ],\n  },\n  {\n    name: \"Sky\",\n    shades: [\n      \"bg-sky-100\",\n      \"bg-sky-300\",\n      \"bg-sky-500\",\n      \"bg-sky-700\",\n      \"bg-sky-900\",\n    ],\n  },\n  {\n    name: \"Emerald\",\n    shades: [\n      \"bg-emerald-100\",\n      \"bg-emerald-300\",\n      \"bg-emerald-500\",\n      \"bg-emerald-700\",\n      \"bg-emerald-900\",\n    ],\n  },\n  {\n    name: \"Amber\",\n    shades: [\n      \"bg-amber-100\",\n      \"bg-amber-300\",\n      \"bg-amber-500\",\n      \"bg-amber-700\",\n      \"bg-amber-900\",\n    ],\n  },\n  {\n    name: \"Rose\",\n    shades: [\n      \"bg-rose-100\",\n      \"bg-rose-300\",\n      \"bg-rose-500\",\n      \"bg-rose-700\",\n      \"bg-rose-900\",\n    ],\n  },\n  {\n    name: \"Violet\",\n    shades: [\n      \"bg-violet-100\",\n      \"bg-violet-300\",\n      \"bg-violet-500\",\n      \"bg-violet-700\",\n      \"bg-violet-900\",\n    ],\n  },\n  {\n    name: \"Fuchsia\",\n    shades: [\n      \"bg-fuchsia-100\",\n      \"bg-fuchsia-300\",\n      \"bg-fuchsia-500\",\n      \"bg-fuchsia-700\",\n      \"bg-fuchsia-900\",\n    ],\n  },\n]\nconst steps = [100, 300, 500, 700, 900]\n\nexport default function ColorPaletteSwatches() {\n  return (\n    <ScrollArea className=\"h-64 w-full max-w-sm border\">\n      <div className=\"flex flex-col gap-3 p-3\">\n        {ramps.map((ramp) => (\n          <div key={ramp.name} className=\"flex flex-col gap-1\">\n            <span className=\"text-xs font-medium\">{ramp.name}</span>\n            <div className=\"grid grid-cols-5 gap-1\">\n              {ramp.shades.map((shade, i) => (\n                <div key={shade} className=\"flex flex-col gap-0.5\">\n                  <div className={cn(\"h-8\", shade)} />\n                  <span className=\"font-mono text-[10px] text-muted-foreground\">\n                    {steps[i]}\n                  </span>\n                </div>\n              ))}\n            </div>\n          </div>\n        ))}\n      </div>\n    </ScrollArea>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

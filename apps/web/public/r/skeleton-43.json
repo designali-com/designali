@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "skeleton-43",
+  "type": "registry:example",
+  "description": "Loaded list items followed by skeleton rows and a spinner for the next page.",
+  "files": [
+    {
+      "path": "registry/designali/examples/skeleton/skeleton-43.tsx",
+      "content": "import { Skeleton } from \"@workspace/ui/components/skeleton\"\nimport { Spinner } from \"@workspace/ui/components/spinner\"\n\nconst loaded = [\n  { title: \"Migrate auth to passkeys\", owner: \"Ola N.\" },\n  { title: \"Archive legacy webhooks\", owner: \"Ben T.\" },\n  { title: \"Audit S3 bucket policies\", owner: \"Rina P.\" },\n]\n\nexport default function InfiniteScrollSkeleton() {\n  return (\n    <div className=\"flex w-full max-w-sm flex-col border\">\n      {loaded.map((item) => (\n        <div\n          key={item.title}\n          className=\"flex items-center justify-between border-b px-3 py-2.5 text-xs\"\n        >\n          <span className=\"font-medium\">{item.title}</span>\n          <span className=\"text-muted-foreground\">{item.owner}</span>\n        </div>\n      ))}\n      {Array.from({ length: 2 }).map((_, i) => (\n        <div\n          key={i}\n          className=\"flex items-center justify-between border-b px-3 py-3\"\n        >\n          <Skeleton className=\"h-3 w-40\" />\n          <Skeleton className=\"h-3 w-12\" />\n        </div>\n      ))}\n      <div className=\"flex items-center justify-center gap-2 py-3 text-xs text-muted-foreground\">\n        <Spinner />\n        Loading more\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

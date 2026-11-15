@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "checkbox-16",
+  "type": "registry:example",
+  "description": "Plan-gated checkboxes that are disabled with a tooltip explaining the upgrade requirement.",
+  "files": [
+    {
+      "path": "registry/designali/examples/checkbox/checkbox-16.tsx",
+      "content": "import { LockIcon } from \"lucide-react\"\n\nimport { Badge } from \"@workspace/ui/components/badge\"\nimport { Checkbox } from \"@workspace/ui/components/checkbox\"\nimport { Field, FieldGroup, FieldLabel } from \"@workspace/ui/components/field\"\nimport {\n  Tooltip,\n  TooltipContent,\n  TooltipTrigger,\n} from \"@workspace/ui/components/tooltip\"\n\nconst options = [\n  { id: \"watermark\", label: \"Remove watermark\", pro: true },\n  { id: \"hd\", label: \"Export in 4K\", pro: true },\n  { id: \"captions\", label: \"Burn in captions\", pro: false },\n]\n\nexport default function DisabledWithUpgradeTooltip() {\n  return (\n    <FieldGroup className=\"w-full max-w-xs gap-3\">\n      {options.map((option) => (\n        <Field\n          key={option.id}\n          orientation=\"horizontal\"\n          data-disabled={option.pro || undefined}\n        >\n          <Checkbox\n            id={\"export-\" + option.id}\n            disabled={option.pro}\n            defaultChecked={!option.pro}\n          />\n          <FieldLabel htmlFor={\"export-\" + option.id} className=\"font-normal\">\n            {option.label}\n          </FieldLabel>\n          {option.pro && (\n            <Tooltip>\n              <TooltipTrigger\n                render={\n                  <Badge variant=\"outline\" className=\"ms-auto cursor-help\">\n                    <LockIcon />\n                    Pro\n                  </Badge>\n                }\n              />\n              <TooltipContent>Available on the Pro plan</TooltipContent>\n            </Tooltip>\n          )}\n        </Field>\n      ))}\n    </FieldGroup>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

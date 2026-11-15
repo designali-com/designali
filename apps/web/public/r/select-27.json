@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "select-27",
+  "type": "registry:example",
+  "description": "Select with a name attribute submitted through native form data.",
+  "files": [
+    {
+      "path": "registry/designali/examples/select/select-27.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Field, FieldLabel } from \"@workspace/ui/components/field\"\nimport {\n  Select,\n  SelectContent,\n  SelectItem,\n  SelectTrigger,\n  SelectValue,\n} from \"@workspace/ui/components/select\"\n\nconst sizes = [\n  { label: \"1-10 employees\", value: \"1-10\" },\n  { label: \"11-50 employees\", value: \"11-50\" },\n  { label: \"51-200 employees\", value: \"51-200\" },\n  { label: \"201+ employees\", value: \"201+\" },\n]\n\nexport default function FormDataSelect() {\n  const [submitted, setSubmitted] = React.useState<string | null>(null)\n\n  return (\n    <form\n      className=\"flex w-full max-w-xs flex-col gap-4\"\n      onSubmit={(event) => {\n        event.preventDefault()\n        const data = new FormData(event.currentTarget)\n        setSubmitted(String(data.get(\"companySize\") ?? \"\"))\n      }}\n    >\n      <Field>\n        <FieldLabel htmlFor=\"company-size\">Company size</FieldLabel>\n        <Select items={sizes} name=\"companySize\" defaultValue=\"11-50\">\n          <SelectTrigger id=\"company-size\" className=\"w-full\">\n            <SelectValue />\n          </SelectTrigger>\n          <SelectContent>\n            {sizes.map((item) => (\n              <SelectItem key={item.value} value={item.value}>\n                {item.label}\n              </SelectItem>\n            ))}\n          </SelectContent>\n        </Select>\n      </Field>\n      <Button type=\"submit\">Save</Button>\n      {submitted !== null && (\n        <p className=\"bg-muted p-2 font-mono text-xs\">\n          companySize = {submitted}\n        </p>\n      )}\n    </form>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

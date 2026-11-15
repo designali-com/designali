@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "gallery-13",
+  "type": "registry:block",
+  "description": "Two opposing infinite marquee rows of project tiles that pause on hover.",
+  "dependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/designali/blocks/gallery/gallery-13.tsx",
+      "content": "const rowA = [\n  \"linear-gradient(135deg, var(--chart-1), var(--chart-2))\",\n  \"linear-gradient(200deg, var(--chart-3), var(--chart-4))\",\n  \"linear-gradient(60deg, var(--chart-5), var(--chart-1))\",\n  \"linear-gradient(160deg, var(--chart-2), var(--chart-5))\",\n  \"linear-gradient(90deg, var(--chart-4), var(--chart-3))\",\n  \"linear-gradient(300deg, var(--chart-1), var(--chart-4))\",\n]\nconst rowB = [\n  \"linear-gradient(20deg, var(--chart-4), var(--chart-2))\",\n  \"linear-gradient(250deg, var(--chart-5), var(--chart-3))\",\n  \"linear-gradient(110deg, var(--chart-2), var(--chart-1))\",\n  \"linear-gradient(180deg, var(--chart-3), var(--chart-5))\",\n  \"linear-gradient(45deg, var(--chart-1), var(--chart-3))\",\n  \"linear-gradient(330deg, var(--chart-4), var(--chart-5))\",\n]\nconst labels = [\"Brand\", \"Editorial\", \"Product\", \"Motion\", \"Packaging\", \"Spatial\"]\n\nfunction Row({ tiles, reverse }: { tiles: string[]; reverse?: boolean }) {\n  return (\n    <div className=\"flex overflow-hidden [mask-image:linear-gradient(90deg,transparent,black_10%,black_90%,transparent)]\">\n      <div\n        className=\"flex shrink-0 gap-4 pr-4 group-hover:[animation-play-state:paused]\"\n        style={{ animation: `g13-marquee 40s linear infinite${reverse ? \" reverse\" : \"\"}` }}\n      >\n        {[...tiles, ...tiles].map((bg, i) => (\n          <div\n            key={i}\n            className=\"relative h-40 w-60 shrink-0 border border-border md:h-52 md:w-80\"\n            style={{ background: bg }}\n            aria-hidden={i >= tiles.length}\n          >\n            <span className=\"absolute bottom-3 left-3 bg-background/85 px-2 py-1 text-xs font-medium backdrop-blur\">\n              {labels[i % labels.length]}\n            </span>\n          </div>\n        ))}\n      </div>\n    </div>\n  )\n}\n\nexport default function Gallery13() {\n  return (\n    <section className=\"group w-full overflow-hidden bg-background py-20\">\n      <style>{`@keyframes g13-marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}@media (prefers-reduced-motion:reduce){[style*=\"g13-marquee\"]{animation:none!important}}`}</style>\n      <div className=\"mx-auto max-w-7xl px-6 text-center\">\n        <h2 className=\"text-3xl font-semibold tracking-tight md:text-5xl\">\n          1,200 projects. One studio.\n        </h2>\n        <p className=\"mx-auto mt-4 max-w-lg text-muted-foreground\">\n          A continuous reel of recent work from Northbound Studio. Hover to\n          pause the wall.\n        </p>\n      </div>\n      <div className=\"mt-12 space-y-4\">\n        <Row tiles={rowA} />\n        <Row tiles={rowB} reverse />\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "650px"
+  },
+  "categories": [
+    "gallery"
+  ]
+}

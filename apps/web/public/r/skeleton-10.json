@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "skeleton-10",
+  "type": "registry:example",
+  "description": "Chart card placeholder with bars of varying height and axis labels.",
+  "files": [
+    {
+      "path": "registry/designali/examples/skeleton/skeleton-10.tsx",
+      "content": "import { Card, CardContent, CardHeader } from \"@workspace/ui/components/card\"\nimport { Skeleton } from \"@workspace/ui/components/skeleton\"\n\nconst heights = [40, 65, 50, 80, 35, 90, 70, 55, 75, 45, 60, 85]\n\nexport default function BarChartSkeleton() {\n  return (\n    <Card className=\"w-full max-w-md\">\n      <CardHeader>\n        <Skeleton className=\"h-4 w-32\" />\n        <Skeleton className=\"h-3 w-48\" />\n      </CardHeader>\n      <CardContent>\n        <div className=\"flex h-40 items-end gap-2 border-s border-b ps-2\">\n          {heights.map((h, i) => (\n            <Skeleton key={i} className=\"flex-1\" style={{ height: h + \"%\" }} />\n          ))}\n        </div>\n        <div className=\"mt-2 flex justify-between ps-2\">\n          {Array.from({ length: 6 }).map((_, i) => (\n            <Skeleton key={i} className=\"h-2.5 w-6\" />\n          ))}\n        </div>\n      </CardContent>\n    </Card>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

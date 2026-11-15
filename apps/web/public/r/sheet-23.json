@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "sheet-23",
+  "type": "registry:example",
+  "description": "Sheet that shows skeleton placeholders while its content loads each time it opens.",
+  "files": [
+    {
+      "path": "registry/designali/examples/sheet/sheet-23.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Progress } from \"@workspace/ui/components/progress\"\nimport {\n  Sheet,\n  SheetContent,\n  SheetDescription,\n  SheetHeader,\n  SheetTitle,\n  SheetTrigger,\n} from \"@workspace/ui/components/sheet\"\nimport { Skeleton } from \"@workspace/ui/components/skeleton\"\n\nexport default function LoadingContentSheet() {\n  const [loading, setLoading] = React.useState(true)\n  const timer = React.useRef<ReturnType<typeof setTimeout> | null>(null)\n\n  function handleOpenChange(open: boolean) {\n    if (timer.current) clearTimeout(timer.current)\n    if (open) {\n      setLoading(true)\n      timer.current = setTimeout(() => setLoading(false), 1200)\n    }\n  }\n\n  React.useEffect(\n    () => () => {\n      if (timer.current) clearTimeout(timer.current)\n    },\n    []\n  )\n\n  return (\n    <Sheet onOpenChange={handleOpenChange}>\n      <SheetTrigger render={<Button variant=\"outline\" />}>\n        Open usage report\n      </SheetTrigger>\n      <SheetContent>\n        <SheetHeader>\n          <SheetTitle>Usage this month</SheetTitle>\n          <SheetDescription>\n            {loading ? \"Fetching the latest numbers…\" : \"Updated just now\"}\n          </SheetDescription>\n        </SheetHeader>\n        <div className=\"flex flex-col gap-4 px-4\">\n          {[\n            { label: \"API requests\", value: \"1.28M\", pct: 64 },\n            { label: \"Storage\", value: \"38 GB\", pct: 38 },\n            { label: \"Bandwidth\", value: \"412 GB\", pct: 82 },\n          ].map((row) =>\n            loading ? (\n              <div key={row.label} className=\"flex flex-col gap-2\">\n                <Skeleton className=\"h-3 w-24\" />\n                <Skeleton className=\"h-1 w-full\" />\n              </div>\n            ) : (\n              <div key={row.label} className=\"flex flex-col gap-2\">\n                <div className=\"flex justify-between\">\n                  <span>{row.label}</span>\n                  <span className=\"font-medium\">{row.value}</span>\n                </div>\n                <Progress value={row.pct} />\n              </div>\n            )\n          )}\n        </div>\n      </SheetContent>\n    </Sheet>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

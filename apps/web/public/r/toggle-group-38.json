@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toggle-group-38",
+  "type": "registry:example",
+  "description": "Form field that marks the toggle group invalid until a team size is chosen.",
+  "files": [
+    {
+      "path": "registry/designali/examples/toggle-group/toggle-group-38.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Field, FieldError, FieldLabel } from \"@workspace/ui/components/field\"\nimport {\n  ToggleGroup,\n  ToggleGroupItem,\n} from \"@workspace/ui/components/toggle-group\"\n\nexport default function RequiredToggleGroupField() {\n  const [size, setSize] = React.useState<string[]>([])\n  const [submitted, setSubmitted] = React.useState(false)\n  const invalid = submitted && size.length === 0\n\n  return (\n    <form\n      className=\"flex w-full max-w-sm flex-col gap-3\"\n      onSubmit={(e) => {\n        e.preventDefault()\n        setSubmitted(true)\n      }}\n    >\n      <Field data-invalid={invalid || undefined}>\n        <FieldLabel>Team size</FieldLabel>\n        <ToggleGroup\n          variant=\"outline\"\n          spacing={0}\n          value={size}\n          onValueChange={setSize}\n        >\n          {[\"1-10\", \"11-50\", \"51-200\", \"200+\"].map((s) => (\n            <ToggleGroupItem\n              key={s}\n              value={s}\n              aria-invalid={invalid || undefined}\n            >\n              {s}\n            </ToggleGroupItem>\n          ))}\n        </ToggleGroup>\n        {invalid ? (\n          <FieldError>Choose a team size to continue.</FieldError>\n        ) : null}\n      </Field>\n      <Button type=\"submit\" size=\"sm\" className=\"self-start\">\n        Continue\n      </Button>\n    </form>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "menubar-25",
+  "type": "registry:example",
+  "description": "Edit menu wired to an undo stack, disabling undo and redo when there is nothing to step through.",
+  "files": [
+    {
+      "path": "registry/designali/examples/menubar/menubar-25.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { Redo2Icon, Undo2Icon } from \"lucide-react\"\n\nimport {\n  Menubar,\n  MenubarContent,\n  MenubarGroup,\n  MenubarItem,\n  MenubarMenu,\n  MenubarShortcut,\n  MenubarTrigger,\n} from \"@workspace/ui/components/menubar\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst steps = [\n  \"Created artboard\",\n  \"Added header\",\n  \"Changed fill to indigo\",\n  \"Grouped layers\",\n]\n\nexport default function UndoHistoryMenubar() {\n  const [position, setPosition] = React.useState(steps.length)\n\n  return (\n    <div className=\"flex w-full max-w-xs flex-col gap-2\">\n      <Menubar>\n        <MenubarMenu>\n          <MenubarTrigger>Edit</MenubarTrigger>\n          <MenubarContent className=\"w-56\">\n            <MenubarGroup>\n              <MenubarItem\n                disabled={position === 0}\n                onClick={() => setPosition((p) => p - 1)}\n              >\n                <Undo2Icon />\n                <span className=\"truncate\">\n                  Undo {position > 0 ? steps[position - 1] : \"\"}\n                </span>\n                <MenubarShortcut>⌘Z</MenubarShortcut>\n              </MenubarItem>\n              <MenubarItem\n                disabled={position === steps.length}\n                onClick={() => setPosition((p) => p + 1)}\n              >\n                <Redo2Icon />\n                <span className=\"truncate\">\n                  Redo {position < steps.length ? steps[position] : \"\"}\n                </span>\n                <MenubarShortcut>⇧⌘Z</MenubarShortcut>\n              </MenubarItem>\n            </MenubarGroup>\n          </MenubarContent>\n        </MenubarMenu>\n      </Menubar>\n      <ol className=\"border text-xs\">\n        {steps.map((step, i) => (\n          <li\n            key={step}\n            className={cn(\n              \"flex items-center gap-2 px-3 py-1.5\",\n              i >= position && \"text-muted-foreground line-through\"\n            )}\n          >\n            <span className=\"w-4 text-muted-foreground tabular-nums\">\n              {i + 1}\n            </span>\n            {step}\n          </li>\n        ))}\n      </ol>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

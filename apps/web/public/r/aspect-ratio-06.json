@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "aspect-ratio-06",
+  "type": "registry:example",
+  "description": "A storefront product card with a square gradient image area and price.",
+  "files": [
+    {
+      "path": "registry/designali/examples/aspect-ratio/aspect-ratio-06.tsx",
+      "content": "import { AspectRatio } from \"@workspace/ui/components/aspect-ratio\"\nimport { Badge } from \"@workspace/ui/components/badge\"\n\nexport default function ProductCardSquare() {\n  return (\n    <div className=\"w-full max-w-56 border\">\n      <AspectRatio\n        ratio={1}\n        className=\"bg-linear-to-br from-amber-200 to-orange-400 dark:from-amber-700 dark:to-orange-900\"\n      >\n        <div className=\"absolute inset-0 flex items-center justify-center\">\n          <div className=\"size-1/2 rounded-full bg-white/40 shadow-2xl ring-8 ring-white/20\" />\n        </div>\n        <Badge className=\"absolute start-2 top-2\">New</Badge>\n      </AspectRatio>\n      <div className=\"flex flex-col gap-1 p-3\">\n        <p className=\"text-sm font-medium\">Stoneware dinner plate</p>\n        <p className=\"text-xs text-muted-foreground\">Set of 4 - Oat glaze</p>\n        <p className=\"mt-1 text-sm font-semibold\">$48.00</p>\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

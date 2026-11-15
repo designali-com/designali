@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "location-06",
+  "type": "registry:block",
+  "description": "Full-bleed illustrated city map with a dropped pin and an overlaid store card holding address, hours and actions.",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "registry/designali/blocks/location/location-06.tsx",
+      "content": "import { Clock, MapPin, Navigation, Phone } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\n\nfunction CityMap() {\n  return (\n    <svg\n      viewBox=\"0 0 1200 640\"\n      preserveAspectRatio=\"xMidYMid slice\"\n      className=\"absolute inset-0 h-full w-full\"\n      aria-hidden\n    >\n      <rect width=\"1200\" height=\"640\" className=\"fill-muted\" />\n      <path\n        d=\"M0 470 C 180 430, 260 520, 420 500 S 700 420, 860 470 S 1100 560, 1200 520 L1200 640 L0 640 Z\"\n        className=\"fill-sky-200/70 dark:fill-sky-900/40\"\n      />\n      <rect x=\"120\" y=\"80\" width=\"220\" height=\"150\" className=\"fill-emerald-200/70 dark:fill-emerald-900/40\" />\n      <rect x=\"880\" y=\"120\" width=\"180\" height=\"120\" className=\"fill-emerald-200/70 dark:fill-emerald-900/40\" />\n      <g className=\"stroke-background\" strokeWidth=\"10\" fill=\"none\" strokeLinecap=\"round\">\n        <path d=\"M0 300 L1200 260\" />\n        <path d=\"M0 140 L1200 110\" />\n        <path d=\"M380 0 L420 640\" />\n        <path d=\"M760 0 L720 640\" />\n        <path d=\"M100 0 L60 460\" />\n        <path d=\"M1040 0 L1080 470\" />\n      </g>\n      <g className=\"stroke-background\" strokeWidth=\"4\" fill=\"none\">\n        {Array.from({ length: 14 }).map((_, i) => (\n          <path key={i} d={`M${i * 90} 0 L${i * 90 + 30} 460`} />\n        ))}\n        {Array.from({ length: 8 }).map((_, i) => (\n          <path key={`h${i}`} d={`M0 ${i * 60 + 20} L1200 ${i * 60 - 10}`} />\n        ))}\n      </g>\n      <path\n        d=\"M0 300 L1200 260\"\n        className=\"stroke-amber-300 dark:stroke-amber-600/70\"\n        strokeWidth=\"6\"\n        fill=\"none\"\n      />\n    </svg>\n  )\n}\n\nexport default function Location06() {\n  return (\n    <section className=\"relative w-full overflow-hidden bg-muted\">\n      <div className=\"relative h-[680px] md:h-[600px]\">\n        <CityMap />\n        <div\n          className=\"absolute -translate-x-1/2 -translate-y-full\"\n          style={{ left: \"62%\", top: \"45%\" }}\n        >\n          <span className=\"flex flex-col items-center\">\n            <span className=\"flex size-12 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-lg ring-8 ring-primary/20\">\n              <MapPin className=\"size-5\" />\n            </span>\n            <span className=\"h-4 w-0.5 bg-primary\" />\n          </span>\n        </div>\n\n        <div className=\"absolute inset-x-0 bottom-0 mx-auto max-w-7xl px-6 pb-6 md:top-1/2 md:bottom-auto md:-translate-y-1/2 md:pb-0\">\n          <div className=\"w-full max-w-sm border bg-background p-6 shadow-xl md:p-8\">\n            <p className=\"text-xs tracking-widest text-muted-foreground uppercase\">\n              Flagship store\n            </p>\n            <h2 className=\"mt-2 text-2xl font-semibold tracking-tight md:text-3xl\">\n              Kettle &amp; Pine, Canal Street\n            </h2>\n            <ul className=\"mt-6 space-y-3 text-sm\">\n              <li className=\"flex gap-3\">\n                <MapPin className=\"mt-0.5 size-4 shrink-0 text-muted-foreground\" />\n                88 Canal Street, Manchester M1 3HE\n              </li>\n              <li className=\"flex gap-3\">\n                <Clock className=\"mt-0.5 size-4 shrink-0 text-muted-foreground\" />\n                Mon&ndash;Sat 9&ndash;19 &middot; Sun 11&ndash;17\n              </li>\n              <li className=\"flex gap-3\">\n                <Phone className=\"mt-0.5 size-4 shrink-0 text-muted-foreground\" />\n                0161 555 0148\n              </li>\n            </ul>\n            <div className=\"mt-6 flex gap-2\">\n              <Button nativeButton={false} render={<a href=\"#\" />} className=\"flex-1\">\n                <Navigation />\n                Directions\n              </Button>\n              <Button variant=\"outline\" nativeButton={false} render={<a href=\"#\" />} className=\"flex-1\">\n                Call store\n              </Button>\n            </div>\n          </div>\n        </div>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "680px"
+  },
+  "categories": [
+    "location"
+  ]
+}

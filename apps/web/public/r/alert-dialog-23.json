@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "alert-dialog-23",
+  "type": "registry:example",
+  "description": "Bulk action bar whose confirmation lists every selected file before deletion.",
+  "files": [
+    {
+      "path": "registry/designali/examples/alert-dialog/alert-dialog-23.tsx",
+      "content": "import { FileIcon, Trash2Icon } from \"lucide-react\"\n\nimport {\n  AlertDialog,\n  AlertDialogAction,\n  AlertDialogCancel,\n  AlertDialogContent,\n  AlertDialogDescription,\n  AlertDialogFooter,\n  AlertDialogHeader,\n  AlertDialogTitle,\n  AlertDialogTrigger,\n} from \"@workspace/ui/components/alert-dialog\"\nimport { Button } from \"@workspace/ui/components/button\"\n\nconst files = [\n  { name: \"q3-roadmap.pdf\", size: \"2.4 MB\" },\n  { name: \"logo-final-v4.svg\", size: \"84 KB\" },\n  { name: \"interview-notes.docx\", size: \"312 KB\" },\n  { name: \"pricing-model.xlsx\", size: \"1.1 MB\" },\n]\n\nexport default function BulkDeleteSelectedFiles() {\n  return (\n    <div className=\"flex w-full max-w-sm items-center justify-between gap-3 border bg-muted/40 px-3 py-2\">\n      <span className=\"text-sm\">{files.length} files selected</span>\n      <AlertDialog>\n        <AlertDialogTrigger render={<Button variant=\"destructive\" size=\"sm\" />}>\n          <Trash2Icon data-icon=\"inline-start\" />\n          Delete\n        </AlertDialogTrigger>\n        <AlertDialogContent>\n          <AlertDialogHeader>\n            <AlertDialogTitle>Delete {files.length} files?</AlertDialogTitle>\n            <AlertDialogDescription>\n              These files will be permanently deleted for everyone.\n            </AlertDialogDescription>\n          </AlertDialogHeader>\n          <ul className=\"divide-y border text-sm\">\n            {files.map((file) => (\n              <li key={file.name} className=\"flex items-center gap-2 px-3 py-2\">\n                <FileIcon className=\"size-4 text-muted-foreground\" />\n                <span className=\"min-w-0 flex-1 truncate\">{file.name}</span>\n                <span className=\"text-xs text-muted-foreground\">\n                  {file.size}\n                </span>\n              </li>\n            ))}\n          </ul>\n          <AlertDialogFooter>\n            <AlertDialogCancel>Cancel</AlertDialogCancel>\n            <AlertDialogAction variant=\"destructive\">\n              Delete files\n            </AlertDialogAction>\n          </AlertDialogFooter>\n        </AlertDialogContent>\n      </AlertDialog>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

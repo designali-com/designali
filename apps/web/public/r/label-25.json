@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "label-25",
+  "type": "registry:example",
+  "description": "Label for an input group with a fixed URL prefix and an availability check.",
+  "files": [
+    {
+      "path": "registry/designali/examples/label/label-25.tsx",
+      "content": "import { CircleCheckIcon } from \"lucide-react\"\n\nimport {\n  InputGroup,\n  InputGroupAddon,\n  InputGroupInput,\n  InputGroupText,\n} from \"@workspace/ui/components/input-group\"\nimport { Label } from \"@workspace/ui/components/label\"\n\nexport default function UrlFieldLabel() {\n  return (\n    <div className=\"grid w-full max-w-sm gap-2\">\n      <Label htmlFor=\"store-url\">Store address</Label>\n      <InputGroup>\n        <InputGroupAddon>\n          <InputGroupText>shopwell.app/</InputGroupText>\n        </InputGroupAddon>\n        <InputGroupInput id=\"store-url\" defaultValue=\"ember-candles\" />\n        <InputGroupAddon align=\"inline-end\">\n          <CircleCheckIcon className=\"text-emerald-600 dark:text-emerald-400\" />\n        </InputGroupAddon>\n      </InputGroup>\n      <p className=\"text-xs text-muted-foreground\">\n        This address is available.\n      </p>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

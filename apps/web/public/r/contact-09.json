@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "contact-09",
+  "type": "registry:block",
+  "description": "Inverted dark band listing four named contacts with gradient initials avatars, region labels, emails and phone numbers.",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/designali/blocks/contact/contact-09.tsx",
+      "content": "import { Mail, Phone } from \"lucide-react\"\n\nconst people = [\n  {\n    name: \"Marta Okonkwo\",\n    role: \"New business\",\n    region: \"North America\",\n    email: \"marta@brightfold.agency\",\n    phone: \"+1 (312) 555-0118\",\n    hue: \"from-amber-300 to-orange-500\",\n  },\n  {\n    name: \"Jonas Lindqvist\",\n    role: \"Partnerships\",\n    region: \"Europe\",\n    email: \"jonas@brightfold.agency\",\n    phone: \"+46 8 555 012 40\",\n    hue: \"from-sky-300 to-indigo-500\",\n  },\n  {\n    name: \"Aiko Tanabe\",\n    role: \"Client services\",\n    region: \"Asia Pacific\",\n    email: \"aiko@brightfold.agency\",\n    phone: \"+81 3 5550 1294\",\n    hue: \"from-emerald-300 to-teal-600\",\n  },\n  {\n    name: \"Rafael Duarte\",\n    role: \"Careers & talent\",\n    region: \"Global\",\n    email: \"rafael@brightfold.agency\",\n    phone: \"+351 21 555 0173\",\n    hue: \"from-rose-300 to-fuchsia-600\",\n  },\n]\n\nfunction initials(name: string) {\n  return name\n    .split(\" \")\n    .map((part) => part[0])\n    .join(\"\")\n}\n\nexport default function Contact09() {\n  return (\n    <section className=\"w-full bg-foreground py-20 text-background md:py-28\">\n      <div className=\"mx-auto max-w-7xl px-6\">\n        <div className=\"grid gap-6 border-b border-background/15 pb-12 md:grid-cols-2 md:items-end\">\n          <h2 className=\"text-4xl font-semibold tracking-tight md:text-6xl\">\n            Skip the inbox. Talk to a human.\n          </h2>\n          <p className=\"text-background/70 md:justify-self-end md:text-end\">\n            Every enquiry goes straight to one of four people. Pick the one\n            closest to what you need.\n          </p>\n        </div>\n\n        <ul className=\"grid sm:grid-cols-2 lg:grid-cols-4\">\n          {people.map((person) => (\n            <li\n              key={person.name}\n              className=\"flex flex-col gap-8 border-b border-background/15 py-10 sm:px-6 sm:[&:nth-child(odd)]:border-e lg:border-b-0 lg:not-last:border-e lg:first:ps-0\"\n            >\n              <div className=\"flex items-center gap-4\">\n                <span\n                  className={`flex size-14 shrink-0 items-center justify-center rounded-full bg-gradient-to-br ${person.hue} text-lg font-semibold text-black/80`}\n                >\n                  {initials(person.name)}\n                </span>\n                <div>\n                  <p className=\"font-medium\">{person.name}</p>\n                  <p className=\"text-sm text-background/60\">{person.role}</p>\n                </div>\n              </div>\n              <p className=\"text-xs tracking-widest text-background/50 uppercase\">\n                {person.region}\n              </p>\n              <div className=\"mt-auto space-y-2 text-sm\">\n                <a\n                  href={`mailto:${person.email}`}\n                  className=\"flex items-center gap-2 break-all text-background/80 hover:text-background\"\n                >\n                  <Mail className=\"size-4 shrink-0\" />\n                  {person.email}\n                </a>\n                <a\n                  href=\"#\"\n                  className=\"flex items-center gap-2 text-background/80 hover:text-background\"\n                >\n                  <Phone className=\"size-4 shrink-0\" />\n                  {person.phone}\n                </a>\n              </div>\n            </li>\n          ))}\n        </ul>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "720px"
+  },
+  "categories": [
+    "contact"
+  ]
+}

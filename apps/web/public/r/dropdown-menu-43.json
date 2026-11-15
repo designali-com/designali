@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "dropdown-menu-43",
+  "type": "registry:example",
+  "description": "App launcher that lays out menu items as a three-column grid of icon tiles.",
+  "files": [
+    {
+      "path": "registry/designali/examples/dropdown-menu/dropdown-menu-43.tsx",
+      "content": "import {\n  CalendarIcon,\n  FileTextIcon,\n  GripIcon,\n  HardDriveIcon,\n  MailIcon,\n  MessageSquareIcon,\n  SheetIcon,\n} from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  DropdownMenu,\n  DropdownMenuContent,\n  DropdownMenuItem,\n  DropdownMenuSeparator,\n  DropdownMenuTrigger,\n} from \"@workspace/ui/components/dropdown-menu\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst apps = [\n  { name: \"Mail\", icon: MailIcon, color: \"text-sky-500\" },\n  { name: \"Calendar\", icon: CalendarIcon, color: \"text-rose-500\" },\n  { name: \"Drive\", icon: HardDriveIcon, color: \"text-amber-500\" },\n  { name: \"Docs\", icon: FileTextIcon, color: \"text-blue-500\" },\n  { name: \"Sheets\", icon: SheetIcon, color: \"text-emerald-500\" },\n  { name: \"Chat\", icon: MessageSquareIcon, color: \"text-violet-500\" },\n]\n\nexport default function AppLauncherGridMenu() {\n  return (\n    <DropdownMenu>\n      <DropdownMenuTrigger\n        render={<Button variant=\"ghost\" size=\"icon\" aria-label=\"Apps\" />}\n      >\n        <GripIcon />\n      </DropdownMenuTrigger>\n      <DropdownMenuContent align=\"end\" className=\"w-64 p-2\">\n        <div className=\"grid grid-cols-3 gap-1\">\n          {apps.map((app) => (\n            <DropdownMenuItem key={app.name} className=\"flex-col gap-1.5 py-3\">\n              <app.icon className={cn(\"size-6!\", app.color)} />\n              {app.name}\n            </DropdownMenuItem>\n          ))}\n        </div>\n        <DropdownMenuSeparator className=\"my-2\" />\n        <DropdownMenuItem className=\"justify-center\">\n          See all apps\n        </DropdownMenuItem>\n      </DropdownMenuContent>\n    </DropdownMenu>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

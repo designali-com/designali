@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "dialog-06",
+  "type": "registry:example",
+  "description": "Reference dialog listing grouped keyboard shortcuts with Kbd keys.",
+  "files": [
+    {
+      "path": "registry/designali/examples/dialog/dialog-06.tsx",
+      "content": "import { KeyboardIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  Dialog,\n  DialogContent,\n  DialogDescription,\n  DialogHeader,\n  DialogTitle,\n  DialogTrigger,\n} from \"@workspace/ui/components/dialog\"\nimport { Kbd, KbdGroup } from \"@workspace/ui/components/kbd\"\n\nconst groups = [\n  {\n    title: \"Navigation\",\n    items: [\n      { label: \"Open command menu\", keys: [\"⌘\", \"K\"] },\n      { label: \"Go to inbox\", keys: [\"G\", \"I\"] },\n      { label: \"Go to projects\", keys: [\"G\", \"P\"] },\n    ],\n  },\n  {\n    title: \"Editing\",\n    items: [\n      { label: \"New issue\", keys: [\"C\"] },\n      { label: \"Assign to me\", keys: [\"I\"] },\n      { label: \"Change status\", keys: [\"S\"] },\n    ],\n  },\n]\n\nexport default function KeyboardShortcutsDialog() {\n  return (\n    <Dialog>\n      <DialogTrigger render={<Button variant=\"outline\" />}>\n        <KeyboardIcon data-icon=\"inline-start\" />\n        Shortcuts\n      </DialogTrigger>\n      <DialogContent>\n        <DialogHeader>\n          <DialogTitle>Keyboard shortcuts</DialogTitle>\n          <DialogDescription>\n            Move faster without leaving the keyboard.\n          </DialogDescription>\n        </DialogHeader>\n        <div className=\"flex flex-col gap-4\">\n          {groups.map((group) => (\n            <div key={group.title} className=\"flex flex-col gap-2\">\n              <p className=\"text-[11px] font-medium tracking-wide text-muted-foreground uppercase\">\n                {group.title}\n              </p>\n              {group.items.map((item) => (\n                <div\n                  key={item.label}\n                  className=\"flex items-center justify-between gap-4\"\n                >\n                  <span>{item.label}</span>\n                  <KbdGroup>\n                    {item.keys.map((key) => (\n                      <Kbd key={key}>{key}</Kbd>\n                    ))}\n                  </KbdGroup>\n                </div>\n              ))}\n            </div>\n          ))}\n        </div>\n      </DialogContent>\n    </Dialog>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

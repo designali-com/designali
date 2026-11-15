@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "field-46",
+  "type": "registry:example",
+  "description": "Compact filter bar using small native selects and inputs with visually hidden labels.",
+  "files": [
+    {
+      "path": "registry/designali/examples/field/field-46.tsx",
+      "content": "import { SearchIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Field, FieldGroup, FieldLabel } from \"@workspace/ui/components/field\"\nimport {\n  InputGroup,\n  InputGroupAddon,\n  InputGroupInput,\n} from \"@workspace/ui/components/input-group\"\nimport {\n  NativeSelect,\n  NativeSelectOption,\n} from \"@workspace/ui/components/native-select\"\n\nexport default function CompactSmallFields() {\n  return (\n    <FieldGroup className=\"w-full max-w-md flex-row flex-wrap items-end gap-2 border p-2\">\n      <Field className=\"w-auto flex-1\">\n        <FieldLabel htmlFor=\"flt-search\" className=\"sr-only\">\n          Search orders\n        </FieldLabel>\n        <InputGroup className=\"h-7\">\n          <InputGroupAddon>\n            <SearchIcon />\n          </InputGroupAddon>\n          <InputGroupInput id=\"flt-search\" placeholder=\"Order # or customer\" />\n        </InputGroup>\n      </Field>\n      <Field className=\"w-auto\">\n        <FieldLabel htmlFor=\"flt-status\" className=\"sr-only\">\n          Status\n        </FieldLabel>\n        <NativeSelect id=\"flt-status\" size=\"sm\" defaultValue=\"all\">\n          <NativeSelectOption value=\"all\">All statuses</NativeSelectOption>\n          <NativeSelectOption value=\"paid\">Paid</NativeSelectOption>\n          <NativeSelectOption value=\"pending\">Pending</NativeSelectOption>\n          <NativeSelectOption value=\"refunded\">Refunded</NativeSelectOption>\n        </NativeSelect>\n      </Field>\n      <Field className=\"w-auto\">\n        <FieldLabel htmlFor=\"flt-channel\" className=\"sr-only\">\n          Channel\n        </FieldLabel>\n        <NativeSelect id=\"flt-channel\" size=\"sm\" defaultValue=\"any\">\n          <NativeSelectOption value=\"any\">Any channel</NativeSelectOption>\n          <NativeSelectOption value=\"web\">Web store</NativeSelectOption>\n          <NativeSelectOption value=\"pos\">In person</NativeSelectOption>\n        </NativeSelect>\n      </Field>\n      <Button size=\"sm\" variant=\"ghost\">\n        Reset\n      </Button>\n    </FieldGroup>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

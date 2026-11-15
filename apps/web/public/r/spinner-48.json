@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "spinner-48",
+  "type": "registry:example",
+  "description": "Profile card skeleton with a spinner badge indicating an active fetch.",
+  "files": [
+    {
+      "path": "registry/designali/examples/spinner/spinner-48.tsx",
+      "content": "import { Skeleton } from \"@workspace/ui/components/skeleton\"\nimport { Spinner } from \"@workspace/ui/components/spinner\"\n\nexport default function SkeletonWithSpinner() {\n  return (\n    <div className=\"relative flex w-full max-w-sm items-center gap-3 border p-4\">\n      <Skeleton className=\"size-10 rounded-full\" />\n      <div className=\"flex flex-1 flex-col gap-2\">\n        <Skeleton className=\"h-3.5 w-2/3\" />\n        <Skeleton className=\"h-3 w-1/2\" />\n      </div>\n      <span className=\"absolute top-2 right-2 flex items-center gap-1 text-[10px] text-muted-foreground\">\n        <Spinner className=\"size-3\" />\n        Fetching\n      </span>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

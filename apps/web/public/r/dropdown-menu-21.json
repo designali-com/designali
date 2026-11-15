@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "dropdown-menu-21",
+  "type": "registry:example",
+  "description": "Marketing nav where product and resource menus open on hover with a short delay.",
+  "files": [
+    {
+      "path": "registry/designali/examples/dropdown-menu/dropdown-menu-21.tsx",
+      "content": "import {\n  ChartLineIcon,\n  ChevronDownIcon,\n  PlugIcon,\n  WorkflowIcon,\n} from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  DropdownMenu,\n  DropdownMenuContent,\n  DropdownMenuItem,\n  DropdownMenuTrigger,\n} from \"@workspace/ui/components/dropdown-menu\"\n\nconst products = [\n  { label: \"Analytics\", hint: \"Dashboards and reports\", icon: ChartLineIcon },\n  { label: \"Automations\", hint: \"Workflows without code\", icon: WorkflowIcon },\n  { label: \"Integrations\", hint: \"Connect your stack\", icon: PlugIcon },\n]\n\nexport default function HoverOpenNavMenu() {\n  return (\n    <nav className=\"flex items-center gap-1 border px-2 py-1\">\n      <span className=\"me-2 text-xs font-semibold\">Quanta</span>\n      <DropdownMenu>\n        <DropdownMenuTrigger\n          openOnHover\n          delay={80}\n          render={<Button variant=\"ghost\" size=\"sm\" />}\n        >\n          Product\n          <ChevronDownIcon data-icon=\"inline-end\" />\n        </DropdownMenuTrigger>\n        <DropdownMenuContent className=\"w-60\">\n          {products.map((p) => (\n            <DropdownMenuItem key={p.label} className=\"items-start\">\n              <p.icon className=\"mt-0.5\" />\n              <span className=\"grid\">\n                <span className=\"font-medium\">{p.label}</span>\n                <span className=\"text-muted-foreground\">{p.hint}</span>\n              </span>\n            </DropdownMenuItem>\n          ))}\n        </DropdownMenuContent>\n      </DropdownMenu>\n      <DropdownMenu>\n        <DropdownMenuTrigger\n          openOnHover\n          delay={80}\n          render={<Button variant=\"ghost\" size=\"sm\" />}\n        >\n          Resources\n          <ChevronDownIcon data-icon=\"inline-end\" />\n        </DropdownMenuTrigger>\n        <DropdownMenuContent className=\"w-44\">\n          <DropdownMenuItem>Documentation</DropdownMenuItem>\n          <DropdownMenuItem>Changelog</DropdownMenuItem>\n          <DropdownMenuItem>Community forum</DropdownMenuItem>\n        </DropdownMenuContent>\n      </DropdownMenu>\n      <Button variant=\"ghost\" size=\"sm\">\n        Pricing\n      </Button>\n    </nav>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-11",
+  "type": "registry:example",
+  "description": "A price input with a currency symbol prefix and currency code suffix.",
+  "files": [
+    {
+      "path": "registry/designali/examples/input/input-11.tsx",
+      "content": "import { Field, FieldLabel } from \"@workspace/ui/components/field\"\nimport {\n  InputGroup,\n  InputGroupAddon,\n  InputGroupInput,\n  InputGroupText,\n} from \"@workspace/ui/components/input-group\"\n\nexport default function CurrencyAmountInput() {\n  return (\n    <Field className=\"w-full max-w-[14rem]\">\n      <FieldLabel htmlFor=\"amount\">Monthly price</FieldLabel>\n      <InputGroup>\n        <InputGroupAddon>\n          <InputGroupText>$</InputGroupText>\n        </InputGroupAddon>\n        <InputGroupInput\n          id=\"amount\"\n          type=\"number\"\n          inputMode=\"decimal\"\n          min={0}\n          step=\"0.01\"\n          defaultValue=\"49.00\"\n          className=\"tabular-nums\"\n        />\n        <InputGroupAddon align=\"inline-end\">\n          <InputGroupText>USD</InputGroupText>\n        </InputGroupAddon>\n      </InputGroup>\n    </Field>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

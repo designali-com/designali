@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "avatar-35",
+  "type": "registry:example",
+  "description": "A kanban task card footer with assignee avatars, due date, and comment count.",
+  "files": [
+    {
+      "path": "registry/designali/examples/avatar/avatar-35.tsx",
+      "content": "import { CalendarIcon, MessageSquareIcon } from \"lucide-react\"\n\nimport {\n  Avatar,\n  AvatarFallback,\n  AvatarGroup,\n} from \"@workspace/ui/components/avatar\"\nimport { Badge } from \"@workspace/ui/components/badge\"\nimport {\n  Card,\n  CardContent,\n  CardDescription,\n  CardHeader,\n  CardTitle,\n} from \"@workspace/ui/components/card\"\n\nexport default function KanbanTaskAssignees() {\n  return (\n    <Card size=\"sm\" className=\"w-full max-w-xs\">\n      <CardHeader>\n        <div className=\"flex gap-1\">\n          <Badge variant=\"secondary\">Design</Badge>\n          <Badge variant=\"outline\">P2</Badge>\n        </div>\n        <CardTitle className=\"mt-1\">Redesign onboarding checklist</CardTitle>\n        <CardDescription>\n          Simplify steps and add progress hints for new teams.\n        </CardDescription>\n      </CardHeader>\n      <CardContent className=\"flex items-center justify-between\">\n        <AvatarGroup>\n          <Avatar size=\"sm\">\n            <AvatarFallback>VP</AvatarFallback>\n          </Avatar>\n          <Avatar size=\"sm\">\n            <AvatarFallback>CE</AvatarFallback>\n          </Avatar>\n        </AvatarGroup>\n        <div className=\"flex items-center gap-3 text-xs text-muted-foreground\">\n          <span className=\"flex items-center gap-1\">\n            <CalendarIcon className=\"size-3\" /> Oct 4\n          </span>\n          <span className=\"flex items-center gap-1\">\n            <MessageSquareIcon className=\"size-3\" /> 6\n          </span>\n        </div>\n      </CardContent>\n    </Card>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

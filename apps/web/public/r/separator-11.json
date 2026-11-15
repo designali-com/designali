@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "separator-11",
+  "type": "registry:example",
+  "description": "Form section heading with a left-aligned label and a separator extending to the edge.",
+  "files": [
+    {
+      "path": "registry/designali/examples/separator/separator-11.tsx",
+      "content": "import { Input } from \"@workspace/ui/components/input\"\nimport { Label } from \"@workspace/ui/components/label\"\nimport { Separator } from \"@workspace/ui/components/separator\"\nimport { Switch } from \"@workspace/ui/components/switch\"\n\nexport default function LabeledSectionDivider() {\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-4\">\n      <div className=\"flex flex-col gap-2\">\n        <Label htmlFor=\"project-name\">Project name</Label>\n        <Input id=\"project-name\" defaultValue=\"Northwind portal\" />\n      </div>\n      <div className=\"flex items-center gap-3\">\n        <span className=\"text-xs font-medium tracking-wide text-muted-foreground uppercase\">\n          Advanced\n        </span>\n        <Separator className=\"flex-1\" />\n      </div>\n      <div className=\"flex items-center justify-between text-sm\">\n        <Label htmlFor=\"preview\">Preview deployments</Label>\n        <Switch id=\"preview\" defaultChecked />\n      </div>\n      <div className=\"flex items-center justify-between text-sm\">\n        <Label htmlFor=\"protect\">Password protection</Label>\n        <Switch id=\"protect\" />\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

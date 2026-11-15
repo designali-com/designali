@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "avatar-26",
+  "type": "registry:example",
+  "description": "A project activity timeline with avatars connected by a vertical rail.",
+  "files": [
+    {
+      "path": "registry/designali/examples/avatar/avatar-26.tsx",
+      "content": "import { Avatar, AvatarFallback } from \"@workspace/ui/components/avatar\"\n\nconst events = [\n  {\n    initials: \"OS\",\n    who: \"Olga Sanz\",\n    action: \"merged pull request #482\",\n    time: \"Just now\",\n  },\n  {\n    initials: \"BT\",\n    who: \"Ben Tran\",\n    action: \"commented on Checkout redesign\",\n    time: \"25 min ago\",\n  },\n  {\n    initials: \"MC\",\n    who: \"Mina Cho\",\n    action: \"moved Billing API to Done\",\n    time: \"1 hour ago\",\n  },\n  {\n    initials: \"OS\",\n    who: \"Olga Sanz\",\n    action: \"created the milestone v2.3\",\n    time: \"Yesterday\",\n  },\n]\n\nexport default function ActivityTimelineAvatars() {\n  return (\n    <ol className=\"relative flex w-full max-w-sm flex-col gap-5 before:absolute before:inset-y-2 before:start-4 before:w-px before:bg-border\">\n      {events.map((event, index) => (\n        <li key={index} className=\"relative flex gap-3\">\n          <Avatar className=\"ring-4 ring-background\">\n            <AvatarFallback>{event.initials}</AvatarFallback>\n          </Avatar>\n          <div className=\"pt-1 text-sm\">\n            <p>\n              <span className=\"font-medium\">{event.who}</span>{\" \"}\n              <span className=\"text-muted-foreground\">{event.action}</span>\n            </p>\n            <p className=\"text-xs text-muted-foreground\">{event.time}</p>\n          </div>\n        </li>\n      ))}\n    </ol>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

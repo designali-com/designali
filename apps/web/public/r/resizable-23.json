@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "resizable-23",
+  "type": "registry:example",
+  "description": "Side-by-side code diff with removed and added lines in resizable columns.",
+  "files": [
+    {
+      "path": "registry/designali/examples/resizable/resizable-23.tsx",
+      "content": "import { FileDiffIcon } from \"lucide-react\"\n\nimport {\n  ResizableHandle,\n  ResizablePanel,\n  ResizablePanelGroup,\n} from \"@workspace/ui/components/resizable\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst before = [\n  { text: \"function total(items) {\", kind: \"same\" },\n  { text: \"  let sum = 0\", kind: \"removed\" },\n  { text: \"  for (const i of items) sum += i.price\", kind: \"removed\" },\n  { text: \"  return sum\", kind: \"removed\" },\n  { text: \"}\", kind: \"same\" },\n]\n\nconst after = [\n  { text: \"function total(items) {\", kind: \"same\" },\n  { text: \"  return items.reduce(\", kind: \"added\" },\n  { text: \"    (sum, i) => sum + i.price * i.qty, 0\", kind: \"added\" },\n  { text: \"  )\", kind: \"added\" },\n  { text: \"}\", kind: \"same\" },\n]\n\nfunction Column({ lines }: { lines: typeof before }) {\n  return (\n    <div className=\"h-full py-2 font-mono text-[11px]\">\n      {lines.map((line, i) => (\n        <div\n          key={i}\n          className={cn(\n            \"truncate px-3 whitespace-pre\",\n            line.kind === \"removed\" &&\n              \"bg-red-500/10 text-red-700 dark:text-red-300\",\n            line.kind === \"added\" &&\n              \"bg-emerald-500/10 text-emerald-700 dark:text-emerald-300\"\n          )}\n        >\n          {line.kind === \"removed\" ? \"- \" : line.kind === \"added\" ? \"+ \" : \"  \"}\n          {line.text}\n        </div>\n      ))}\n    </div>\n  )\n}\n\nexport default function SideBySideDiff() {\n  return (\n    <div className=\"w-full max-w-2xl border\">\n      <div className=\"flex items-center gap-2 border-b px-3 py-2 text-xs\">\n        <FileDiffIcon className=\"size-3.5\" />\n        <span className=\"font-mono\">src/cart/total.ts</span>\n        <span className=\"ml-auto text-emerald-600 dark:text-emerald-400\">\n          +3\n        </span>\n        <span className=\"text-red-600 dark:text-red-400\">-3</span>\n      </div>\n      <ResizablePanelGroup orientation=\"horizontal\" className=\"h-36\">\n        <ResizablePanel defaultSize=\"50%\" minSize=\"25%\">\n          <Column lines={before} />\n        </ResizablePanel>\n        <ResizableHandle withHandle />\n        <ResizablePanel defaultSize=\"50%\" minSize=\"25%\">\n          <Column lines={after} />\n        </ResizablePanel>\n      </ResizablePanelGroup>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "skeleton-33",
+  "type": "registry:example",
+  "description": "Project card where the header is loaded but the metrics and members are still skeletons.",
+  "files": [
+    {
+      "path": "registry/designali/examples/skeleton/skeleton-33.tsx",
+      "content": "import {\n  Card,\n  CardContent,\n  CardDescription,\n  CardHeader,\n  CardTitle,\n} from \"@workspace/ui/components/card\"\nimport { Skeleton } from \"@workspace/ui/components/skeleton\"\n\nexport default function PartialLoadSkeleton() {\n  return (\n    <Card className=\"w-full max-w-sm\">\n      <CardHeader>\n        <CardTitle>Helios redesign</CardTitle>\n        <CardDescription>Marketing site · updated 2h ago</CardDescription>\n      </CardHeader>\n      <CardContent className=\"flex flex-col gap-4\">\n        <div className=\"grid grid-cols-3 gap-3\">\n          {[\"Tasks\", \"Open\", \"Done\"].map((label) => (\n            <div key={label} className=\"flex flex-col gap-1.5\">\n              <span className=\"text-xs text-muted-foreground\">{label}</span>\n              <Skeleton className=\"h-6 w-10\" />\n            </div>\n          ))}\n        </div>\n        <div className=\"flex flex-col gap-2\">\n          <span className=\"text-xs text-muted-foreground\">Members</span>\n          <div className=\"flex -space-x-2\">\n            {Array.from({ length: 4 }).map((_, i) => (\n              <Skeleton\n                key={i}\n                className=\"size-7 rounded-full border-2 border-card\"\n              />\n            ))}\n          </div>\n        </div>\n      </CardContent>\n    </Card>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

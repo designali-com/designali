@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "spinner-45",
+  "type": "registry:example",
+  "description": "Terminal-style build log whose last line shows a spinner for the active step.",
+  "files": [
+    {
+      "path": "registry/designali/examples/spinner/spinner-45.tsx",
+      "content": "import { CheckIcon } from \"lucide-react\"\n\nimport { Spinner } from \"@workspace/ui/components/spinner\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst lines = [\n  { text: \"Resolved 1,248 packages\", ok: true },\n  { text: \"Compiled 342 modules in 8.2s\", ok: true },\n  { text: \"Linted 0 errors, 2 warnings\", ok: true },\n  { text: \"Generating static pages (18/64)\", ok: false },\n]\n\nexport default function BuildLogTerminal() {\n  return (\n    <div className=\"w-full max-w-md bg-zinc-950 p-4 font-mono text-xs text-zinc-300\">\n      <div className=\"mb-2 text-zinc-500\">$ pnpm build</div>\n      {lines.map((line) => (\n        <div key={line.text} className=\"flex items-center gap-2 py-0.5\">\n          {line.ok ? (\n            <CheckIcon className=\"size-3 text-emerald-400\" />\n          ) : (\n            <Spinner className=\"size-3 text-sky-400\" />\n          )}\n          <span className={cn(!line.ok && \"text-zinc-100\")}>{line.text}</span>\n        </div>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "hover-card-19",
+  "type": "registry:example",
+  "description": "Superscript footnote markers in an article that preview the cited source.",
+  "files": [
+    {
+      "path": "registry/designali/examples/hover-card/hover-card-19.tsx",
+      "content": "import {\n  HoverCard,\n  HoverCardContent,\n  HoverCardTrigger,\n} from \"@workspace/ui/components/hover-card\"\n\nconst sources = [\n  {\n    id: 1,\n    title: \"Remote Work and Focus Time\",\n    publisher: \"Halden Institute Review\",\n    year: 2023,\n  },\n  {\n    id: 2,\n    title: \"Meeting Load in Distributed Teams\",\n    publisher: \"Journal of Work Design\",\n    year: 2022,\n  },\n]\n\nexport default function CitationFootnoteHoverCard() {\n  return (\n    <p className=\"max-w-sm text-sm leading-relaxed\">\n      Teams with two no-meeting days report 26% more deep work\n      {sources.map((s) => (\n        <HoverCard key={s.id}>\n          <HoverCardTrigger\n            href=\"#\"\n            className=\"ml-0.5 align-super text-[10px] font-medium text-blue-600 dark:text-blue-400\"\n          >\n            [{s.id}]\n          </HoverCardTrigger>\n          <HoverCardContent side=\"top\" className=\"w-64\">\n            <p className=\"font-medium\">{s.title}</p>\n            <p className=\"text-muted-foreground\">\n              {s.publisher}, {s.year}\n            </p>\n          </HoverCardContent>\n        </HoverCard>\n      ))}\n      , with no measurable drop in collaboration quality.\n    </p>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

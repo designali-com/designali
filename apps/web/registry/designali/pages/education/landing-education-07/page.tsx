@@ -16,7 +16,7 @@ import { Button } from "@workspace/ui/components/button"
 const navLinks = ["Courses", "Programs", "Instructors", "Pricing", "For teams"]
 
 const logos = [
-  "Stripe",
+  "Corvia",
   "Canva",
   "Google",
   "Spotify",

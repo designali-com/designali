@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "label-10",
+  "type": "registry:example",
+  "description": "List of checkboxes with labels for choosing which notifications to receive.",
+  "files": [
+    {
+      "path": "registry/designali/examples/label/label-10.tsx",
+      "content": "import { Checkbox } from \"@workspace/ui/components/checkbox\"\nimport { Label } from \"@workspace/ui/components/label\"\n\nconst options = [\n  { id: \"n-mentions\", label: \"Mentions and replies\", checked: true },\n  { id: \"n-assign\", label: \"Tasks assigned to me\", checked: true },\n  {\n    id: \"n-status\",\n    label: \"Status changes on followed issues\",\n    checked: false,\n  },\n  { id: \"n-billing\", label: \"Billing and invoices\", checked: false },\n]\n\nexport default function NotificationCheckboxList() {\n  return (\n    <fieldset className=\"flex w-full max-w-sm flex-col gap-3\">\n      <legend className=\"mb-2 text-sm font-medium\">Email me about</legend>\n      {options.map((option) => (\n        <div key={option.id} className=\"flex items-center gap-2\">\n          <Checkbox id={option.id} defaultChecked={option.checked} />\n          <Label htmlFor={option.id}>{option.label}</Label>\n        </div>\n      ))}\n    </fieldset>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

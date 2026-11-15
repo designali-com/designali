@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "popover-37",
+  "type": "registry:example",
+  "description": "Storage meter button that opens a usage breakdown by file type with an upgrade link.",
+  "files": [
+    {
+      "path": "registry/designali/examples/popover/popover-37.tsx",
+      "content": "import { HardDriveIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  Popover,\n  PopoverContent,\n  PopoverDescription,\n  PopoverHeader,\n  PopoverTitle,\n  PopoverTrigger,\n} from \"@workspace/ui/components/popover\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst breakdown = [\n  { label: \"Videos\", gb: 41.2, color: \"bg-violet-500\" },\n  { label: \"Images\", gb: 18.6, color: \"bg-sky-500\" },\n  { label: \"Documents\", gb: 7.9, color: \"bg-emerald-500\" },\n  { label: \"Other\", gb: 3.1, color: \"bg-amber-500\" },\n]\nconst LIMIT = 100\nconst used = breakdown.reduce((sum, b) => sum + b.gb, 0)\n\nexport default function StorageUsagePopover() {\n  return (\n    <Popover>\n      <PopoverTrigger render={<Button variant=\"outline\" size=\"sm\" />}>\n        <HardDriveIcon data-icon=\"inline-start\" />\n        {used.toFixed(1)} / {LIMIT} GB\n      </PopoverTrigger>\n      <PopoverContent className=\"w-72\">\n        <PopoverHeader>\n          <PopoverTitle>Storage</PopoverTitle>\n          <PopoverDescription>\n            {(LIMIT - used).toFixed(1)} GB left on your plan.\n          </PopoverDescription>\n        </PopoverHeader>\n        <div className=\"flex h-2 w-full overflow-hidden bg-muted\">\n          {breakdown.map((b) => (\n            <span\n              key={b.label}\n              className={b.color}\n              style={{ width: (b.gb / LIMIT) * 100 + \"%\" }}\n            />\n          ))}\n        </div>\n        <ul className=\"flex flex-col gap-1.5\">\n          {breakdown.map((b) => (\n            <li key={b.label} className=\"flex items-center gap-2 text-xs\">\n              <span className={cn(\"size-2\", b.color)} />\n              <span className=\"flex-1\">{b.label}</span>\n              <span className=\"text-muted-foreground tabular-nums\">\n                {b.gb} GB\n              </span>\n            </li>\n          ))}\n        </ul>\n        <Button size=\"sm\" variant=\"secondary\">\n          Get more storage\n        </Button>\n      </PopoverContent>\n    </Popover>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

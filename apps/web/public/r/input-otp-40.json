@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-otp-40",
+  "type": "registry:example",
+  "description": "Payout confirmation that shows the amount and destination before the security code.",
+  "files": [
+    {
+      "path": "registry/designali/examples/input-otp/input-otp-40.tsx",
+      "content": "\"use client\"\n\nimport { REGEXP_ONLY_DIGITS } from \"input-otp\"\nimport { ClockIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  InputOTP,\n  InputOTPGroup,\n  InputOTPSeparator,\n  InputOTPSlot,\n} from \"@workspace/ui/components/input-otp\"\n\nexport default function PayoutSecurityCode() {\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-4 border p-5\">\n      <div className=\"text-center\">\n        <p className=\"text-xs text-muted-foreground\">\n          Withdraw to Checking •• 2201\n        </p>\n        <p className=\"text-3xl font-semibold tabular-nums\">$12,800.00</p>\n      </div>\n      <InputOTP\n        maxLength={6}\n        pattern={REGEXP_ONLY_DIGITS}\n        containerClassName=\"justify-center\"\n      >\n        <InputOTPGroup>\n          <InputOTPSlot index={0} className=\"size-10\" />\n          <InputOTPSlot index={1} className=\"size-10\" />\n          <InputOTPSlot index={2} className=\"size-10\" />\n        </InputOTPGroup>\n        <InputOTPSeparator />\n        <InputOTPGroup>\n          <InputOTPSlot index={3} className=\"size-10\" />\n          <InputOTPSlot index={4} className=\"size-10\" />\n          <InputOTPSlot index={5} className=\"size-10\" />\n        </InputOTPGroup>\n      </InputOTP>\n      <p className=\"flex items-center justify-center gap-1.5 text-xs text-muted-foreground\">\n        <ClockIcon className=\"size-3.5\" />\n        Funds arrive in 1-2 business days\n      </p>\n      <Button>Confirm payout</Button>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

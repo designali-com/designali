@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "field-42",
+  "type": "registry:example",
+  "description": "Newsletter signup that disables its fields and shows a spinner while submitting.",
+  "files": [
+    {
+      "path": "registry/designali/examples/field/field-42.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  Field,\n  FieldDescription,\n  FieldLabel,\n  FieldLegend,\n  FieldSet,\n} from \"@workspace/ui/components/field\"\nimport { Input } from \"@workspace/ui/components/input\"\nimport { Spinner } from \"@workspace/ui/components/spinner\"\n\nexport default function LoadingSubmitFields() {\n  const [state, setState] = React.useState<\"idle\" | \"loading\" | \"done\">(\"idle\")\n\n  return (\n    <form\n      className=\"w-full max-w-sm\"\n      onSubmit={(e) => {\n        e.preventDefault()\n        setState(\"loading\")\n        setTimeout(() => setState(\"done\"), 1500)\n      }}\n    >\n      <FieldSet disabled={state !== \"idle\"}>\n        <FieldLegend>Get the monthly field notes</FieldLegend>\n        <FieldDescription>\n          Design essays and product updates. No spam.\n        </FieldDescription>\n        <Field orientation=\"horizontal\">\n          <FieldLabel htmlFor=\"news-email\" className=\"sr-only\">\n            Email\n          </FieldLabel>\n          <Input\n            id=\"news-email\"\n            type=\"email\"\n            required\n            placeholder=\"you@example.com\"\n          />\n          <Button type=\"submit\" className=\"w-28\">\n            {state === \"loading\" && <Spinner data-icon=\"inline-start\" />}\n            {state === \"done\"\n              ? \"Subscribed\"\n              : state === \"loading\"\n                ? \"Joining\"\n                : \"Subscribe\"}\n          </Button>\n        </Field>\n      </FieldSet>\n    </form>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

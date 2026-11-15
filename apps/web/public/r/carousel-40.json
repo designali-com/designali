@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "carousel-40",
+  "type": "registry:example",
+  "description": "Dynamic carousel where removing slides re-initialises it and ends in an Empty state.",
+  "files": [
+    {
+      "path": "registry/designali/examples/carousel/carousel-40.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { HeartIcon, XIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  Carousel,\n  CarouselContent,\n  CarouselItem,\n  CarouselNext,\n  CarouselPrevious,\n} from \"@workspace/ui/components/carousel\"\nimport {\n  Empty,\n  EmptyContent,\n  EmptyDescription,\n  EmptyHeader,\n  EmptyMedia,\n  EmptyTitle,\n} from \"@workspace/ui/components/empty\"\n\nconst initial = [\"Linen shirt\", \"Canvas tote\", \"Wool beanie\", \"Leather wallet\"]\n\nexport default function SavedItemsWithEmpty() {\n  const [items, setItems] = React.useState(initial)\n\n  if (items.length === 0) {\n    return (\n      <Empty className=\"w-full max-w-sm border\">\n        <EmptyHeader>\n          <EmptyMedia variant=\"icon\">\n            <HeartIcon />\n          </EmptyMedia>\n          <EmptyTitle>No saved items</EmptyTitle>\n          <EmptyDescription>Items you save will show up here.</EmptyDescription>\n        </EmptyHeader>\n        <EmptyContent>\n          <Button size=\"sm\" variant=\"outline\" onClick={() => setItems(initial)}>\n            Restore items\n          </Button>\n        </EmptyContent>\n      </Empty>\n    )\n  }\n\n  return (\n    <Carousel\n      opts={{ align: \"start\" }}\n      className=\"w-full max-w-[14rem] sm:max-w-sm\"\n    >\n      <CarouselContent>\n        {items.map((item) => (\n          <CarouselItem key={item} className=\"sm:basis-1/2\">\n            <div className=\"flex flex-col gap-2 border p-3\">\n              <div className=\"aspect-square bg-muted\" />\n              <span className=\"text-xs font-medium\">{item}</span>\n              <Button\n                size=\"xs\"\n                variant=\"ghost\"\n                onClick={() =>\n                  setItems((list) => list.filter((i) => i !== item))\n                }\n              >\n                <XIcon data-icon=\"inline-start\" />\n                Remove\n              </Button>\n            </div>\n          </CarouselItem>\n        ))}\n      </CarouselContent>\n      <CarouselPrevious />\n      <CarouselNext />\n    </Carousel>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "progress-28",
+  "type": "registry:example",
+  "description": "Progress value rendered through a render function as completed task counts.",
+  "files": [
+    {
+      "path": "registry/designali/examples/progress/progress-28.tsx",
+      "content": "\"use client\"\n\nimport {\n  Progress,\n  ProgressLabel,\n  ProgressValue,\n} from \"@workspace/ui/components/progress\"\n\nexport default function TaskCountValueRender() {\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-2 border p-4\">\n      <Progress\n        value={12}\n        max={20}\n        className=\"[&_[data-slot=progress-track]]:h-2\"\n      >\n        <ProgressLabel className=\"text-sm font-medium\">\n          Launch checklist\n        </ProgressLabel>\n        <ProgressValue>\n          {(formatted, value) => (\n            <span>\n              <span className=\"font-medium text-foreground\">{value}</span>/20\n              tasks ({formatted})\n            </span>\n          )}\n        </ProgressValue>\n      </Progress>\n      <p className=\"text-xs text-muted-foreground\">\n        8 tasks remaining before the release on Thursday.\n      </p>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

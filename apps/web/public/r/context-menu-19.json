@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "context-menu-19",
+  "type": "registry:example",
+  "description": "A leaderboard whose ordering is controlled by radio items in the context menu.",
+  "files": [
+    {
+      "path": "registry/designali/examples/context-menu/context-menu-19.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport {\n  ContextMenu,\n  ContextMenuContent,\n  ContextMenuLabel,\n  ContextMenuRadioGroup,\n  ContextMenuRadioItem,\n  ContextMenuTrigger,\n} from \"@workspace/ui/components/context-menu\"\n\nconst players = [\n  { name: \"Nova\", score: 9120, joined: 3 },\n  { name: \"Quill\", score: 11840, joined: 1 },\n  { name: \"Juniper\", score: 7600, joined: 4 },\n  { name: \"Atlas\", score: 10230, joined: 2 },\n]\n\nexport default function SortOrderRadioMenu() {\n  const [sort, setSort] = React.useState(\"score\")\n  const sorted = [...players].sort((a, b) =>\n    sort === \"score\"\n      ? b.score - a.score\n      : sort === \"name\"\n        ? a.name.localeCompare(b.name)\n        : a.joined - b.joined\n  )\n\n  return (\n    <ContextMenu>\n      <ContextMenuTrigger className=\"flex w-full max-w-xs flex-col border\">\n        <div className=\"flex items-center justify-between border-b px-3 py-2 text-xs\">\n          <span className=\"font-medium\">Weekly leaderboard</span>\n          <span className=\"text-muted-foreground\">by {sort}</span>\n        </div>\n        {sorted.map((player, index) => (\n          <div\n            key={player.name}\n            className=\"flex items-center gap-2 px-3 py-1.5 text-xs\"\n          >\n            <span className=\"w-4 text-muted-foreground\">{index + 1}</span>\n            <span className=\"flex-1\">{player.name}</span>\n            <span className=\"tabular-nums\">\n              {player.score.toLocaleString()}\n            </span>\n          </div>\n        ))}\n      </ContextMenuTrigger>\n      <ContextMenuContent className=\"w-44\">\n        <ContextMenuRadioGroup value={sort} onValueChange={setSort}>\n          <ContextMenuLabel>Sort by</ContextMenuLabel>\n          <ContextMenuRadioItem value=\"score\">\n            Highest score\n          </ContextMenuRadioItem>\n          <ContextMenuRadioItem value=\"name\">Name (A–Z)</ContextMenuRadioItem>\n          <ContextMenuRadioItem value=\"joined\">\n            First to join\n          </ContextMenuRadioItem>\n        </ContextMenuRadioGroup>\n      </ContextMenuContent>\n    </ContextMenu>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

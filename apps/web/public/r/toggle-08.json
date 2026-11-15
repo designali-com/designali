@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toggle-08",
+  "type": "registry:example",
+  "description": "A repository star toggle joined to a counter with a button group.",
+  "files": [
+    {
+      "path": "registry/designali/examples/toggle/toggle-08.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { StarIcon } from \"lucide-react\"\n\nimport {\n  ButtonGroup,\n  ButtonGroupText,\n} from \"@workspace/ui/components/button-group\"\nimport { Toggle } from \"@workspace/ui/components/toggle\"\n\nexport default function StarRepositoryToggle() {\n  const [starred, setStarred] = React.useState(false)\n\n  return (\n    <div className=\"flex w-full max-w-sm items-center justify-between gap-3 border p-4\">\n      <div className=\"min-w-0\">\n        <p className=\"truncate font-mono text-sm\">lumen/router</p>\n        <p className=\"text-xs text-muted-foreground\">\n          Tiny type-safe routing for the edge\n        </p>\n      </div>\n      <ButtonGroup>\n        <Toggle\n          variant=\"outline\"\n          size=\"sm\"\n          pressed={starred}\n          onPressedChange={setStarred}\n          aria-label=\"Star repository\"\n        >\n          <StarIcon className=\"group-aria-pressed/toggle:fill-amber-400 group-aria-pressed/toggle:text-amber-400\" />\n          {starred ? \"Starred\" : \"Star\"}\n        </Toggle>\n        <ButtonGroupText className=\"h-7 text-xs tabular-nums\">\n          {starred ? \"2.4k\" : \"2.3k\"}\n        </ButtonGroupText>\n      </ButtonGroup>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

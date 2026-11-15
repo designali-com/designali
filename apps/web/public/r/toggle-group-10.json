@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toggle-group-10",
+  "type": "registry:example",
+  "description": "Analytics card whose revenue figure changes with the selected date range preset.",
+  "files": [
+    {
+      "path": "registry/designali/examples/toggle-group/toggle-group-10.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport {\n  ToggleGroup,\n  ToggleGroupItem,\n} from \"@workspace/ui/components/toggle-group\"\n\nconst ranges: Record<string, { revenue: string; delta: string }> = {\n  \"7d\": { revenue: \"$12,480\", delta: \"+4.2%\" },\n  \"30d\": { revenue: \"$51,920\", delta: \"+11.8%\" },\n  \"90d\": { revenue: \"$148,300\", delta: \"+9.1%\" },\n  \"12m\": { revenue: \"$602,450\", delta: \"+23.6%\" },\n}\n\nexport default function DateRangePresetToggleGroup() {\n  const [range, setRange] = React.useState(\"30d\")\n  const data = ranges[range]!\n\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-4 border p-4\">\n      <div className=\"flex items-center justify-between gap-2\">\n        <span className=\"text-sm font-medium\">Revenue</span>\n        <ToggleGroup\n          size=\"sm\"\n          spacing={0}\n          variant=\"outline\"\n          value={[range]}\n          onValueChange={(next) => next[0] && setRange(next[0])}\n        >\n          {Object.keys(ranges).map((key) => (\n            <ToggleGroupItem key={key} value={key}>\n              {key}\n            </ToggleGroupItem>\n          ))}\n        </ToggleGroup>\n      </div>\n      <div className=\"flex items-end gap-2\">\n        <span className=\"text-2xl font-semibold\">{data.revenue}</span>\n        <span className=\"pb-1 text-xs text-emerald-600 dark:text-emerald-400\">\n          {data.delta}\n        </span>\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

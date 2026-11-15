@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "navigation-menu-24",
+  "type": "registry:example",
+  "description": "Product navigation that flags newly launched features with New and Beta badges.",
+  "files": [
+    {
+      "path": "registry/designali/examples/navigation-menu/navigation-menu-24.tsx",
+      "content": "import { Badge } from \"@workspace/ui/components/badge\"\nimport {\n  NavigationMenu,\n  NavigationMenuContent,\n  NavigationMenuItem,\n  NavigationMenuLink,\n  NavigationMenuList,\n  NavigationMenuTrigger,\n  navigationMenuTriggerStyle,\n} from \"@workspace/ui/components/navigation-menu\"\n\nconst items = [\n  { title: \"Docs\", description: \"Collaborative pages and wikis\" },\n  {\n    title: \"Whiteboards\",\n    description: \"Infinite canvas for planning\",\n    badge: \"New\",\n  },\n  { title: \"Forms\", description: \"Collect answers into tables\" },\n  { title: \"AI assistant\", description: \"Summaries and drafts\", badge: \"Beta\" },\n]\n\nexport default function NewFeatureBadgesNav() {\n  return (\n    <NavigationMenu>\n      <NavigationMenuList>\n        <NavigationMenuItem>\n          <NavigationMenuTrigger>\n            Features\n            <span className=\"ms-1.5 size-1.5 rounded-full bg-primary\" />\n          </NavigationMenuTrigger>\n          <NavigationMenuContent>\n            <ul className=\"flex w-72 flex-col gap-1\">\n              {items.map((item) => (\n                <li key={item.title}>\n                  <NavigationMenuLink\n                    href=\"#\"\n                    className=\"flex-col items-start gap-0.5\"\n                  >\n                    <span className=\"flex items-center gap-1.5 font-medium\">\n                      {item.title}\n                      {item.badge && (\n                        <Badge\n                          variant={item.badge === \"New\" ? \"default\" : \"outline\"}\n                        >\n                          {item.badge}\n                        </Badge>\n                      )}\n                    </span>\n                    <span className=\"text-muted-foreground\">\n                      {item.description}\n                    </span>\n                  </NavigationMenuLink>\n                </li>\n              ))}\n            </ul>\n          </NavigationMenuContent>\n        </NavigationMenuItem>\n        <NavigationMenuItem>\n          <NavigationMenuLink href=\"#\" className={navigationMenuTriggerStyle()}>\n            Templates\n          </NavigationMenuLink>\n        </NavigationMenuItem>\n      </NavigationMenuList>\n    </NavigationMenu>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

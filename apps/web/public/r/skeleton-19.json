@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "skeleton-19",
+  "type": "registry:example",
+  "description": "Project board placeholder with columns of task cards in varying counts.",
+  "files": [
+    {
+      "path": "registry/designali/examples/skeleton/skeleton-19.tsx",
+      "content": "import { Skeleton } from \"@workspace/ui/components/skeleton\"\n\nconst columns = [3, 2, 1]\n\nexport default function KanbanBoardSkeleton() {\n  return (\n    <div className=\"grid w-full max-w-2xl grid-cols-3 gap-3\">\n      {columns.map((count, c) => (\n        <div key={c} className=\"flex flex-col gap-2 bg-muted/40 p-2\">\n          <div className=\"flex items-center justify-between px-1 py-1\">\n            <Skeleton className=\"h-3 w-16\" />\n            <Skeleton className=\"h-4 w-5\" />\n          </div>\n          {Array.from({ length: count }).map((_, i) => (\n            <div\n              key={i}\n              className=\"flex flex-col gap-2 border bg-background p-2.5\"\n            >\n              <Skeleton className=\"h-3 w-full\" />\n              <Skeleton className=\"h-3 w-2/3\" />\n              <div className=\"flex items-center justify-between pt-1\">\n                <Skeleton className=\"h-4 w-12\" />\n                <Skeleton className=\"size-5 rounded-full\" />\n              </div>\n            </div>\n          ))}\n        </div>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

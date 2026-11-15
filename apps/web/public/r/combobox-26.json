@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "combobox-26",
+  "type": "registry:example",
+  "description": "Combobox with a name attribute submitted through a native form and read from FormData.",
+  "files": [
+    {
+      "path": "registry/designali/examples/combobox/combobox-26.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  Combobox,\n  ComboboxContent,\n  ComboboxEmpty,\n  ComboboxInput,\n  ComboboxItem,\n  ComboboxList,\n} from \"@workspace/ui/components/combobox\"\nimport { Field, FieldLabel } from \"@workspace/ui/components/field\"\n\nconst cities = [\n  \"Amsterdam\",\n  \"Barcelona\",\n  \"Copenhagen\",\n  \"Lisbon\",\n  \"Prague\",\n  \"Vienna\",\n]\n\nexport default function NativeFormSubmission() {\n  const [result, setResult] = React.useState<string | null>(null)\n  return (\n    <form\n      className=\"flex w-full max-w-xs flex-col gap-3\"\n      onSubmit={(event) => {\n        event.preventDefault()\n        const data = new FormData(event.currentTarget)\n        setResult(String(data.get(\"city\") || \"(empty)\"))\n      }}\n    >\n      <Field>\n        <FieldLabel htmlFor=\"city\">Office location</FieldLabel>\n        <Combobox items={cities} name=\"city\" defaultValue=\"Lisbon\">\n          <ComboboxInput id=\"city\" className=\"w-full\" />\n          <ComboboxContent>\n            <ComboboxEmpty>No cities found.</ComboboxEmpty>\n            <ComboboxList>\n              {(item: string) => (\n                <ComboboxItem key={item} value={item}>\n                  {item}\n                </ComboboxItem>\n              )}\n            </ComboboxList>\n          </ComboboxContent>\n        </Combobox>\n      </Field>\n      <Button type=\"submit\" variant=\"secondary\">\n        Submit\n      </Button>\n      {result && (\n        <code className=\"bg-muted px-2 py-1.5 text-xs\">city = {result}</code>\n      )}\n    </form>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

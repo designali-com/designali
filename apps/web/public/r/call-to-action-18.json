@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "call-to-action-18",
+  "type": "registry:block",
+  "description": "Four audience cards for startups, agencies, enterprise and education, each with its own link CTA.",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/designali/blocks/call-to-action/call-to-action-18.tsx",
+      "content": "import { ArrowUpRight, Briefcase, Building2, GraduationCap, Rocket } from \"lucide-react\"\n\nconst audiences = [\n  {\n    icon: Rocket,\n    title: \"Startups\",\n    body: \"Free credits for your first year if you have raised under $5M.\",\n    cta: \"Apply for credits\",\n  },\n  {\n    icon: Briefcase,\n    title: \"Agencies\",\n    body: \"White-label client workspaces and a 30% partner revenue share.\",\n    cta: \"Join partner program\",\n  },\n  {\n    icon: Building2,\n    title: \"Enterprise\",\n    body: \"SSO, audit logs, data residency and a named account team.\",\n    cta: \"Contact sales\",\n  },\n  {\n    icon: GraduationCap,\n    title: \"Education\",\n    body: \"Unlimited seats for verified students, teachers and classrooms.\",\n    cta: \"Verify your school\",\n  },\n]\n\nexport default function CallToAction18() {\n  return (\n    <section className=\"w-full bg-background px-6 py-20 md:py-28\">\n      <div className=\"mx-auto max-w-6xl\">\n        <div className=\"max-w-2xl\">\n          <h2 className=\"text-3xl font-medium tracking-tight md:text-5xl\">\n            Pick the path that fits your team.\n          </h2>\n          <p className=\"mt-4 text-sm leading-7 text-muted-foreground\">\n            Same product, tailored terms. Choose where you are today and we\n            will set you up accordingly.\n          </p>\n        </div>\n        <div className=\"mt-12 grid gap-px border border-border bg-border sm:grid-cols-2 lg:grid-cols-4\">\n          {audiences.map(({ icon: Icon, title, body, cta }) => (\n            <a\n              key={title}\n              href=\"#\"\n              className=\"group flex flex-col bg-background p-6 transition-colors hover:bg-muted/60 md:p-8\"\n            >\n              <Icon className=\"size-6 text-muted-foreground transition-colors group-hover:text-foreground\" />\n              <h3 className=\"mt-10 text-lg font-medium\">{title}</h3>\n              <p className=\"mt-2 flex-1 text-sm leading-6 text-muted-foreground\">\n                {body}\n              </p>\n              <span className=\"mt-8 inline-flex items-center gap-1 text-sm font-medium\">\n                {cta}\n                <ArrowUpRight className=\"size-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5\" />\n              </span>\n            </a>\n          ))}\n        </div>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "560px"
+  },
+  "categories": [
+    "call-to-action"
+  ]
+}

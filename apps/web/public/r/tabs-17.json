@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tabs-17",
+  "type": "registry:example",
+  "description": "Notification tabs where tabs with unread items show a dot indicator.",
+  "files": [
+    {
+      "path": "registry/designali/examples/tabs/tabs-17.tsx",
+      "content": "import { BellIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  Tabs,\n  TabsContent,\n  TabsList,\n  TabsTrigger,\n} from \"@workspace/ui/components/tabs\"\n\nconst feeds = [\n  {\n    value: \"all\",\n    label: \"All\",\n    unread: true,\n    items: [\"Mira approved your expense report\", \"Build #882 failed on main\"],\n  },\n  {\n    value: \"mentions\",\n    label: \"Mentions\",\n    unread: true,\n    items: [\"Jon mentioned you in Launch plan\"],\n  },\n  {\n    value: \"system\",\n    label: \"System\",\n    unread: false,\n    items: [\"Maintenance window scheduled for Sunday\"],\n  },\n]\n\nexport default function NotificationFeedTabs() {\n  return (\n    <Tabs defaultValue=\"all\" className=\"w-full max-w-sm\">\n      <div className=\"flex items-center justify-between\">\n        <TabsList>\n          {feeds.map((f) => (\n            <TabsTrigger key={f.value} value={f.value}>\n              {f.label}\n              {f.unread && (\n                <span\n                  className=\"size-1.5 rounded-full bg-primary\"\n                  aria-label=\"unread\"\n                />\n              )}\n            </TabsTrigger>\n          ))}\n        </TabsList>\n        <Button variant=\"ghost\" size=\"xs\">\n          Mark all read\n        </Button>\n      </div>\n      {feeds.map((f) => (\n        <TabsContent\n          key={f.value}\n          value={f.value}\n          className=\"flex flex-col gap-2\"\n        >\n          {f.items.map((item) => (\n            <div key={item} className=\"flex gap-2 border p-2.5\">\n              <BellIcon className=\"mt-0.5 size-3.5 text-muted-foreground\" />\n              <span>{item}</span>\n            </div>\n          ))}\n        </TabsContent>\n      ))}\n    </Tabs>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

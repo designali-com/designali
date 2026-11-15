@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "scroll-area-15",
+  "type": "registry:example",
+  "description": "Horizontally scrolling product shelf with gradient thumbnails.",
+  "files": [
+    {
+      "path": "registry/designali/examples/scroll-area/scroll-area-15.tsx",
+      "content": "import { ScrollArea, ScrollBar } from \"@workspace/ui/components/scroll-area\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst products = [\n  { name: \"Linen Shirt\", price: \"$68\", tone: \"from-stone-200 to-stone-400\" },\n  { name: \"Canvas Tote\", price: \"$32\", tone: \"from-amber-200 to-orange-400\" },\n  { name: \"Wool Beanie\", price: \"$24\", tone: \"from-slate-300 to-slate-600\" },\n  {\n    name: \"Trail Sneaker\",\n    price: \"$120\",\n    tone: \"from-emerald-200 to-teal-500\",\n  },\n  { name: \"Rain Shell\", price: \"$145\", tone: \"from-sky-200 to-indigo-500\" },\n  { name: \"Desk Lamp\", price: \"$89\", tone: \"from-rose-200 to-fuchsia-500\" },\n]\n\nexport default function ProductShelfHorizontal() {\n  return (\n    <div className=\"flex w-full max-w-md flex-col gap-2\">\n      <div className=\"flex items-baseline justify-between\">\n        <span className=\"text-sm font-medium\">You might also like</span>\n        <a\n          href=\"#\"\n          className=\"text-xs text-muted-foreground hover:text-foreground\"\n        >\n          View all\n        </a>\n      </div>\n      <ScrollArea className=\"w-full\">\n        <div className=\"flex w-max gap-3 pb-3\">\n          {products.map((p) => (\n            <div key={p.name} className=\"flex w-32 shrink-0 flex-col gap-2\">\n              <div className={cn(\"aspect-[4/5] bg-gradient-to-br\", p.tone)} />\n              <div className=\"text-xs\">\n                <p className=\"truncate font-medium\">{p.name}</p>\n                <p className=\"text-muted-foreground\">{p.price}</p>\n              </div>\n            </div>\n          ))}\n        </div>\n        <ScrollBar orientation=\"horizontal\" />\n      </ScrollArea>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

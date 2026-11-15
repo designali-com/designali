@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "alert-dialog-27",
+  "type": "registry:example",
+  "description": "Downgrade confirmation listing the features the workspace will lose.",
+  "files": [
+    {
+      "path": "registry/designali/examples/alert-dialog/alert-dialog-27.tsx",
+      "content": "import { ArrowDownCircleIcon, XIcon } from \"lucide-react\"\n\nimport {\n  AlertDialog,\n  AlertDialogAction,\n  AlertDialogCancel,\n  AlertDialogContent,\n  AlertDialogDescription,\n  AlertDialogFooter,\n  AlertDialogHeader,\n  AlertDialogMedia,\n  AlertDialogTitle,\n  AlertDialogTrigger,\n} from \"@workspace/ui/components/alert-dialog\"\nimport { Badge } from \"@workspace/ui/components/badge\"\nimport { Button } from \"@workspace/ui/components/button\"\n\nconst losing = [\n  \"Unlimited version history\",\n  \"SSO and SCIM provisioning\",\n  \"Advanced analytics dashboards\",\n  \"Priority support\",\n]\n\nexport default function PlanDowngradeFeatureLoss() {\n  return (\n    <AlertDialog>\n      <AlertDialogTrigger render={<Button variant=\"outline\" />}>\n        Downgrade to Starter\n      </AlertDialogTrigger>\n      <AlertDialogContent>\n        <AlertDialogHeader>\n          <AlertDialogMedia>\n            <ArrowDownCircleIcon />\n          </AlertDialogMedia>\n          <AlertDialogTitle>Downgrade to Starter?</AlertDialogTitle>\n          <AlertDialogDescription>\n            Your Business plan ends on your next billing date, July 1.\n          </AlertDialogDescription>\n        </AlertDialogHeader>\n        <div className=\"flex flex-col gap-2 border bg-muted/40 p-3\">\n          <div className=\"flex items-center justify-between text-xs\">\n            <span className=\"font-medium\">You&apos;ll lose access to</span>\n            <Badge variant=\"destructive\">{losing.length} features</Badge>\n          </div>\n          <ul className=\"flex flex-col gap-1.5 text-xs text-muted-foreground\">\n            {losing.map((feature) => (\n              <li key={feature} className=\"flex items-center gap-2\">\n                <XIcon className=\"size-3.5 text-destructive\" />\n                {feature}\n              </li>\n            ))}\n          </ul>\n        </div>\n        <AlertDialogFooter>\n          <AlertDialogCancel>Keep Business</AlertDialogCancel>\n          <AlertDialogAction variant=\"destructive\">Downgrade</AlertDialogAction>\n        </AlertDialogFooter>\n      </AlertDialogContent>\n    </AlertDialog>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

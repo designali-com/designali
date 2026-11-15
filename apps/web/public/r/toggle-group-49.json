@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toggle-group-49",
+  "type": "registry:example",
+  "description": "Dashboard card header with a metric toggle group inside a Card component.",
+  "files": [
+    {
+      "path": "registry/designali/examples/toggle-group/toggle-group-49.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { ActivityIcon, UndoIcon, UsersIcon } from \"lucide-react\"\n\nimport {\n  Card,\n  CardAction,\n  CardContent,\n  CardDescription,\n  CardHeader,\n  CardTitle,\n} from \"@workspace/ui/components/card\"\nimport {\n  ToggleGroup,\n  ToggleGroupItem,\n} from \"@workspace/ui/components/toggle-group\"\n\nconst metrics: Record<string, { value: string; label: string }> = {\n  visitors: { value: \"48.2k\", label: \"Unique visitors this week\" },\n  sessions: { value: \"71.9k\", label: \"Sessions this week\" },\n  bounce: { value: \"38%\", label: \"Average bounce rate\" },\n}\n\nexport default function CardToolbarToggleGroup() {\n  const [metric, setMetric] = React.useState(\"visitors\")\n\n  return (\n    <Card className=\"w-full max-w-sm\">\n      <CardHeader>\n        <CardTitle>Traffic</CardTitle>\n        <CardDescription>{metrics[metric]!.label}</CardDescription>\n        <CardAction>\n          <ToggleGroup\n            size=\"sm\"\n            value={[metric]}\n            onValueChange={(next) => next[0] && setMetric(next[0])}\n          >\n            <ToggleGroupItem value=\"visitors\" aria-label=\"Visitors\">\n              <UsersIcon />\n            </ToggleGroupItem>\n            <ToggleGroupItem value=\"sessions\" aria-label=\"Sessions\">\n              <ActivityIcon />\n            </ToggleGroupItem>\n            <ToggleGroupItem value=\"bounce\" aria-label=\"Bounce rate\">\n              <UndoIcon />\n            </ToggleGroupItem>\n          </ToggleGroup>\n        </CardAction>\n      </CardHeader>\n      <CardContent>\n        <span className=\"text-3xl font-semibold\">{metrics[metric]!.value}</span>\n      </CardContent>\n    </Card>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

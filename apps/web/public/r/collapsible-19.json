@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "collapsible-19",
+  "type": "registry:example",
+  "description": "Checkout form where unchecking a box reveals a separate billing address form.",
+  "files": [
+    {
+      "path": "registry/designali/examples/collapsible/collapsible-19.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { Checkbox } from \"@workspace/ui/components/checkbox\"\nimport {\n  Collapsible,\n  CollapsibleContent,\n} from \"@workspace/ui/components/collapsible\"\nimport { Field, FieldGroup, FieldLabel } from \"@workspace/ui/components/field\"\nimport { Input } from \"@workspace/ui/components/input\"\nimport { Label } from \"@workspace/ui/components/label\"\n\nexport default function BillingAddressToggle() {\n  const [same, setSame] = React.useState(true)\n  return (\n    <Collapsible\n      open={!same}\n      onOpenChange={(open) => setSame(!open)}\n      className=\"w-full max-w-sm space-y-4\"\n    >\n      <div className=\"flex items-center gap-2\">\n        <Checkbox\n          id=\"same-address\"\n          checked={same}\n          onCheckedChange={(checked) => setSame(checked)}\n        />\n        <Label htmlFor=\"same-address\">\n          Billing address is the same as shipping\n        </Label>\n      </div>\n      <CollapsibleContent className=\"h-(--collapsible-panel-height) overflow-hidden transition-[height] duration-200 ease-out data-ending-style:h-0 data-starting-style:h-0\">\n        <FieldGroup className=\"gap-3 p-px\">\n          <Field>\n            <FieldLabel htmlFor=\"billing-street\">Street address</FieldLabel>\n            <Input id=\"billing-street\" placeholder=\"221 Harbor Lane\" />\n          </Field>\n          <div className=\"grid grid-cols-2 gap-3\">\n            <Field>\n              <FieldLabel htmlFor=\"billing-city\">City</FieldLabel>\n              <Input id=\"billing-city\" placeholder=\"Portsmouth\" />\n            </Field>\n            <Field>\n              <FieldLabel htmlFor=\"billing-zip\">Postal code</FieldLabel>\n              <Input id=\"billing-zip\" placeholder=\"03801\" />\n            </Field>\n          </div>\n        </FieldGroup>\n      </CollapsibleContent>\n    </Collapsible>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

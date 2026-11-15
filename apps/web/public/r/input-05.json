@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-05",
+  "type": "registry:example",
+  "description": "Default, read-only, disabled, and invalid inputs side by side.",
+  "files": [
+    {
+      "path": "registry/designali/examples/input/input-05.tsx",
+      "content": "import {\n  Field,\n  FieldError,\n  FieldGroup,\n  FieldLabel,\n} from \"@workspace/ui/components/field\"\nimport { Input } from \"@workspace/ui/components/input\"\n\nexport default function InputStatesShowcase() {\n  return (\n    <FieldGroup className=\"w-full max-w-sm\">\n      <Field>\n        <FieldLabel htmlFor=\"state-default\">Default</FieldLabel>\n        <Input id=\"state-default\" placeholder=\"Project name\" />\n      </Field>\n      <Field>\n        <FieldLabel htmlFor=\"state-readonly\">Read-only</FieldLabel>\n        <Input\n          id=\"state-readonly\"\n          readOnly\n          defaultValue=\"proj_8f2k19\"\n          className=\"bg-muted/50 font-mono\"\n        />\n      </Field>\n      <Field data-disabled>\n        <FieldLabel htmlFor=\"state-disabled\">Disabled</FieldLabel>\n        <Input\n          id=\"state-disabled\"\n          disabled\n          defaultValue=\"Managed by your organization\"\n        />\n      </Field>\n      <Field data-invalid>\n        <FieldLabel htmlFor=\"state-invalid\">Invalid</FieldLabel>\n        <Input id=\"state-invalid\" aria-invalid defaultValue=\"my project!\" />\n        <FieldError>Only letters, numbers, and dashes are allowed.</FieldError>\n      </Field>\n    </FieldGroup>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

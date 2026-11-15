@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "spinner-06",
+  "type": "registry:example",
+  "description": "Spinners with slow, default, and fast rotation via animation duration.",
+  "files": [
+    {
+      "path": "registry/designali/examples/spinner/spinner-06.tsx",
+      "content": "import { Spinner } from \"@workspace/ui/components/spinner\"\n\nconst speeds = [\n  { label: \"Slow\", duration: \"2s\" },\n  { label: \"Default\", duration: \"1s\" },\n  { label: \"Fast\", duration: \"0.5s\" },\n]\n\nexport default function SpinnerSpeeds() {\n  return (\n    <div className=\"flex items-center gap-10\">\n      {speeds.map((speed) => (\n        <div key={speed.label} className=\"flex flex-col items-center gap-2\">\n          <Spinner\n            className=\"size-6\"\n            style={{ animationDuration: speed.duration }}\n          />\n          <span className=\"text-xs text-muted-foreground\">\n            {speed.label} &middot; {speed.duration}\n          </span>\n        </div>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

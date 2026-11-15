@@ -14,7 +14,7 @@ const leaders = [
 const podium = ["bg-amber-400 text-amber-950", "bg-zinc-300 text-zinc-900", "bg-orange-300 text-orange-950"]
 
 export default function Lists07() {
-  const top = leaders[0].points
+  const top = leaders[0]!.points
 
   return (
     <section className="w-full bg-background py-24">

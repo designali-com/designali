@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "carousel-38",
+  "type": "registry:example",
+  "description": "Multi-currency wallet cards where the selected slide drives the transactions below.",
+  "files": [
+    {
+      "path": "registry/designali/examples/carousel/carousel-38.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { WalletIcon } from \"lucide-react\"\n\nimport {\n  Carousel,\n  CarouselContent,\n  CarouselItem,\n  type CarouselApi,\n} from \"@workspace/ui/components/carousel\"\n\nconst wallets = [\n  {\n    currency: \"USD\",\n    balance: \"$12,480.20\",\n    last: [\"Corvia payout +$2,100\", \"AWS invoice -$412\"],\n  },\n  {\n    currency: \"EUR\",\n    balance: \"€4,902.75\",\n    last: [\"Client Lyon +€1,250\", \"Office rent -€980\"],\n  },\n  {\n    currency: \"GBP\",\n    balance: \"£1,130.00\",\n    last: [\"Refund +£45\", \"Contractor -£600\"],\n  },\n]\n\nexport default function WalletBalancesCarousel() {\n  const [selected, setSelected] = React.useState(0)\n\n  const handleApi = React.useCallback((api: CarouselApi) => {\n    if (!api) return\n    api.on(\"select\", () => setSelected(api.selectedScrollSnap()))\n  }, [])\n\n  return (\n    <div className=\"flex w-full max-w-xs flex-col gap-3\">\n      <Carousel setApi={handleApi} opts={{ align: \"center\" }}>\n        <CarouselContent>\n          {wallets.map((wallet) => (\n            <CarouselItem key={wallet.currency} className=\"basis-[85%]\">\n              <div className=\"flex h-32 flex-col justify-between bg-primary p-4 text-primary-foreground\">\n                <div className=\"flex items-center justify-between text-xs opacity-80\">\n                  <span>{wallet.currency} account</span>\n                  <WalletIcon className=\"size-4\" />\n                </div>\n                <span className=\"text-2xl font-semibold tabular-nums\">\n                  {wallet.balance}\n                </span>\n              </div>\n            </CarouselItem>\n          ))}\n        </CarouselContent>\n      </Carousel>\n      <div className=\"border\">\n        <p className=\"border-b px-3 py-2 text-xs font-medium\">\n          Recent activity\n        </p>\n        {wallets[selected]!.last.map((line) => (\n          <p key={line} className=\"px-3 py-2 text-xs text-muted-foreground\">\n            {line}\n          </p>\n        ))}\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

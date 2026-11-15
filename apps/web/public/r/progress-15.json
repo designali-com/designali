@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "progress-15",
+  "type": "registry:example",
+  "description": "API usage quota nearing its limit with a warning badge and upgrade link.",
+  "files": [
+    {
+      "path": "registry/designali/examples/progress/progress-15.tsx",
+      "content": "\"use client\"\n\nimport { Badge } from \"@workspace/ui/components/badge\"\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  Progress,\n  ProgressLabel,\n  ProgressValue,\n} from \"@workspace/ui/components/progress\"\n\nexport default function ApiQuotaWarning() {\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-3 border p-4\">\n      <div className=\"flex items-center justify-between\">\n        <span className=\"text-sm font-medium\">API requests</span>\n        <Badge variant=\"destructive\">Near limit</Badge>\n      </div>\n      <Progress\n        value={92400}\n        max={100000}\n        className=\"[&_[data-slot=progress-indicator]]:bg-destructive [&_[data-slot=progress-track]]:h-1.5\"\n        format={{ notation: \"compact\" }}\n      >\n        <ProgressLabel className=\"text-muted-foreground\">\n          This billing cycle\n        </ProgressLabel>\n        <ProgressValue>\n          {(_, value) => (value ?? 0).toLocaleString(\"en-US\") + \" / 100,000\"}\n        </ProgressValue>\n      </Progress>\n      <p className=\"text-xs text-muted-foreground\">\n        Resets in 4 days. Requests over the limit return 429.\n      </p>\n      <Button variant=\"outline\" size=\"sm\" className=\"self-start\">\n        Increase limit\n      </Button>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

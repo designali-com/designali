@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "select-21",
+  "type": "registry:example",
+  "description": "Settings panel rows pairing notification channels with frequency selects.",
+  "files": [
+    {
+      "path": "registry/designali/examples/select/select-21.tsx",
+      "content": "import {\n  Field,\n  FieldContent,\n  FieldDescription,\n  FieldGroup,\n  FieldTitle,\n} from \"@workspace/ui/components/field\"\nimport {\n  Select,\n  SelectContent,\n  SelectItem,\n  SelectTrigger,\n  SelectValue,\n} from \"@workspace/ui/components/select\"\n\nconst frequencies = [\n  { label: \"Instantly\", value: \"instant\" },\n  { label: \"Hourly digest\", value: \"hourly\" },\n  { label: \"Daily digest\", value: \"daily\" },\n  { label: \"Never\", value: \"never\" },\n]\n\nconst channels = [\n  {\n    title: \"Mentions\",\n    description: \"When someone @mentions you\",\n    value: \"instant\",\n  },\n  {\n    title: \"Comments\",\n    description: \"Replies on threads you follow\",\n    value: \"hourly\",\n  },\n  {\n    title: \"Product updates\",\n    description: \"New features and changelog\",\n    value: \"never\",\n  },\n]\n\nexport default function NotificationSettingsSelects() {\n  return (\n    <FieldGroup className=\"w-full max-w-md\">\n      {channels.map((channel) => (\n        <Field key={channel.title} orientation=\"horizontal\">\n          <FieldContent>\n            <FieldTitle>{channel.title}</FieldTitle>\n            <FieldDescription>{channel.description}</FieldDescription>\n          </FieldContent>\n          <Select items={frequencies} defaultValue={channel.value}>\n            <SelectTrigger\n              size=\"sm\"\n              className=\"w-32\"\n              aria-label={channel.title + \" frequency\"}\n            >\n              <SelectValue />\n            </SelectTrigger>\n            <SelectContent>\n              {frequencies.map((item) => (\n                <SelectItem key={item.value} value={item.value}>\n                  {item.label}\n                </SelectItem>\n              ))}\n            </SelectContent>\n          </Select>\n        </Field>\n      ))}\n    </FieldGroup>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

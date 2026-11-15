@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "collapsible-45",
+  "type": "registry:example",
+  "description": "Project settings section listing masked environment variables inside a collapsible.",
+  "files": [
+    {
+      "path": "registry/designali/examples/collapsible/collapsible-45.tsx",
+      "content": "import { ChevronRightIcon, EyeIcon, PlusIcon } from \"lucide-react\"\n\nimport { Badge } from \"@workspace/ui/components/badge\"\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  Collapsible,\n  CollapsibleContent,\n  CollapsibleTrigger,\n} from \"@workspace/ui/components/collapsible\"\n\nconst vars = [\n  { key: \"DATABASE_URL\", value: \"postgres://app:••••@db.internal:5432/app\" },\n  { key: \"PAYMENTS_SECRET\", value: \"key_demo_••••••••••••3f9a\" },\n  { key: \"NEXT_PUBLIC_REGION\", value: \"eu-central\" },\n]\n\nexport default function EnvironmentVariables() {\n  return (\n    <Collapsible defaultOpen className=\"w-full max-w-md border\">\n      <div className=\"flex items-center gap-2 px-3 py-2\">\n        <CollapsibleTrigger\n          render={\n            <Button\n              variant=\"ghost\"\n              size=\"sm\"\n              className=\"-ml-1 flex-1 justify-start\"\n            >\n              <ChevronRightIcon className=\"transition-transform group-data-panel-open/button:rotate-90\" />\n              Environment variables\n              <Badge variant=\"outline\">{vars.length}</Badge>\n            </Button>\n          }\n        />\n        <Button size=\"xs\" variant=\"outline\">\n          <PlusIcon />\n          Add\n        </Button>\n      </div>\n      <CollapsibleContent className=\"h-(--collapsible-panel-height) overflow-hidden transition-[height] duration-200 ease-out data-ending-style:h-0 data-starting-style:h-0\">\n        <div className=\"divide-y border-t\">\n          {vars.map((v) => (\n            <div key={v.key} className=\"flex items-center gap-2 px-3 py-2\">\n              <code className=\"w-32 shrink-0 truncate text-xs font-semibold sm:w-40\">\n                {v.key}\n              </code>\n              <code className=\"flex-1 truncate text-xs text-muted-foreground\">\n                {v.value}\n              </code>\n              <Button\n                variant=\"ghost\"\n                size=\"icon-xs\"\n                aria-label={\"Reveal \" + v.key}\n              >\n                <EyeIcon />\n              </Button>\n            </div>\n          ))}\n        </div>\n      </CollapsibleContent>\n    </Collapsible>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

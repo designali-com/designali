@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "slider-09",
+  "type": "registry:example",
+  "description": "Disabled slider for a feature locked behind a higher plan, with an upgrade prompt.",
+  "files": [
+    {
+      "path": "registry/designali/examples/slider/slider-09.tsx",
+      "content": "import { LockIcon } from \"lucide-react\"\n\nimport { Badge } from \"@workspace/ui/components/badge\"\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Slider } from \"@workspace/ui/components/slider\"\n\nexport default function DisabledProSlider() {\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-3 border p-4\">\n      <div className=\"flex items-center justify-between gap-2\">\n        <div className=\"flex items-center gap-2\">\n          <LockIcon className=\"size-3.5 text-muted-foreground\" />\n          <span className=\"text-sm font-medium\">Data retention</span>\n        </div>\n        <Badge>Pro</Badge>\n      </div>\n      <Slider\n        aria-label=\"Data retention\"\n        defaultValue={[30]}\n        max={365}\n        disabled\n      />\n      <div className=\"flex items-center justify-between text-xs text-muted-foreground\">\n        <span>30 days on Starter</span>\n        <Button variant=\"link\" size=\"xs\" className=\"h-auto px-0\">\n          Upgrade for 1 year\n        </Button>\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

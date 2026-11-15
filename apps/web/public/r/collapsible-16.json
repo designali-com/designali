@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "collapsible-16",
+  "type": "registry:example",
+  "description": "Code block preview that fades out and expands to show the full snippet.",
+  "files": [
+    {
+      "path": "registry/designali/examples/collapsible/collapsible-16.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { CopyIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  Collapsible,\n  CollapsibleContent,\n  CollapsibleTrigger,\n} from \"@workspace/ui/components/collapsible\"\n\nconst lines = [\n  \"import { createClient } from './client'\",\n  \"\",\n  \"const client = createClient({\",\n  \"  apiKey: process.env.ACME_KEY,\",\n  \"  region: 'eu-west',\",\n  \"})\",\n  \"\",\n  \"const invoices = await client.invoices.list({\",\n  \"  status: 'open',\",\n  \"  limit: 20,\",\n  \"})\",\n  \"\",\n  \"console.log(invoices.data.length)\",\n]\n\nexport default function CodeSnippetExpand() {\n  const [open, setOpen] = React.useState(false)\n  return (\n    <Collapsible\n      open={open}\n      onOpenChange={setOpen}\n      className=\"w-full max-w-md border bg-muted/40\"\n    >\n      <div className=\"flex items-center justify-between border-b px-3 py-2 text-xs\">\n        <span className=\"font-mono\">list-invoices.ts</span>\n        <Button variant=\"ghost\" size=\"icon-xs\" aria-label=\"Copy code\">\n          <CopyIcon />\n        </Button>\n      </div>\n      <div className=\"relative\">\n        <pre className=\"overflow-x-auto px-3 pt-3 font-mono text-xs leading-5\">\n          {lines.slice(0, 4).join(\"\\n\")}\n        </pre>\n        <CollapsibleContent className=\"h-(--collapsible-panel-height) overflow-hidden transition-[height] duration-200 ease-out data-ending-style:h-0 data-starting-style:h-0\">\n          <pre className=\"overflow-x-auto px-3 font-mono text-xs leading-5\">\n            {lines.slice(4).join(\"\\n\")}\n          </pre>\n        </CollapsibleContent>\n        {!open && (\n          <div className=\"pointer-events-none absolute inset-x-0 bottom-0 h-10 bg-gradient-to-t from-background to-transparent\" />\n        )}\n      </div>\n      <CollapsibleTrigger\n        render={<Button variant=\"ghost\" size=\"sm\" className=\"w-full\" />}\n      >\n        {open ? \"Collapse\" : \"Expand \" + lines.length + \" lines\"}\n      </CollapsibleTrigger>\n    </Collapsible>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

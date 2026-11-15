@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "hover-card-24",
+  "type": "registry:example",
+  "description": "A controlled hover card whose open state is mirrored in the UI and can be toggled by a switch.",
+  "files": [
+    {
+      "path": "registry/designali/examples/hover-card/hover-card-24.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport {\n  HoverCard,\n  HoverCardContent,\n  HoverCardTrigger,\n} from \"@workspace/ui/components/hover-card\"\nimport { Label } from \"@workspace/ui/components/label\"\nimport { Switch } from \"@workspace/ui/components/switch\"\n\nexport default function ControlledHoverCard() {\n  const [open, setOpen] = React.useState(false)\n\n  return (\n    <div className=\"flex flex-col items-center gap-4\">\n      <HoverCard open={open} onOpenChange={setOpen}>\n        <HoverCardTrigger\n          href=\"#\"\n          className=\"text-sm font-medium underline underline-offset-4\"\n        >\n          @release-bot\n        </HoverCardTrigger>\n        <HoverCardContent>\n          <p className=\"font-medium\">Release Bot</p>\n          <p className=\"text-muted-foreground\">\n            Posts changelogs to #announcements every Friday at 4 PM.\n          </p>\n        </HoverCardContent>\n      </HoverCard>\n      <div className=\"flex items-center gap-2 text-xs\">\n        <Switch id=\"hc-open\" checked={open} onCheckedChange={setOpen} />\n        <Label htmlFor=\"hc-open\">Card is {open ? \"open\" : \"closed\"}</Label>\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

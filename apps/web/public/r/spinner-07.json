@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "spinner-07",
+  "type": "registry:example",
+  "description": "Status badges with inline spinners for in-progress background states.",
+  "files": [
+    {
+      "path": "registry/designali/examples/spinner/spinner-07.tsx",
+      "content": "import { Badge } from \"@workspace/ui/components/badge\"\nimport { Spinner } from \"@workspace/ui/components/spinner\"\n\nexport default function BadgeStatusSpinners() {\n  return (\n    <div className=\"flex flex-wrap items-center justify-center gap-2\">\n      <Badge>\n        <Spinner />\n        Deploying\n      </Badge>\n      <Badge variant=\"secondary\">\n        <Spinner />\n        Syncing\n      </Badge>\n      <Badge variant=\"outline\">\n        <Spinner />\n        Indexing 2,140 files\n      </Badge>\n      <Badge variant=\"destructive\">\n        <Spinner />\n        Rolling back\n      </Badge>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

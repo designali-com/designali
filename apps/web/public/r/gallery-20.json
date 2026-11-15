@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "gallery-20",
+  "type": "registry:block",
+  "description": "Social profile header with stats, tabbed content and a square post grid with hover counts.",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "registry/designali/blocks/gallery/gallery-20.tsx",
+      "content": "\"use client\"\n\nimport { useState } from \"react\"\nimport { Bookmark, Grid3x3, Heart, MessageCircle, Play } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst posts = Array.from({ length: 9 }, (_, i) => ({\n  id: i,\n  likes: [1284, 932, 2410, 488, 1760, 3021, 655, 1149, 870][i]!,\n  comments: [86, 41, 203, 17, 94, 312, 28, 77, 45][i]!,\n  video: i === 1 || i === 5,\n  gradient: `linear-gradient(${30 + i * 37}deg, var(--chart-${(i % 5) + 1}), var(--chart-${((i + 2) % 5) + 1}))`,\n}))\n\nconst tabs = [\n  { id: \"posts\", label: \"Posts\", icon: Grid3x3 },\n  { id: \"reels\", label: \"Reels\", icon: Play },\n  { id: \"saved\", label: \"Saved\", icon: Bookmark },\n] as const\n\nexport default function Gallery20() {\n  const [tab, setTab] = useState<(typeof tabs)[number][\"id\"]>(\"posts\")\n  const [following, setFollowing] = useState(false)\n  const visible = tab === \"reels\" ? posts.filter((p) => p.video) : tab === \"saved\" ? posts.slice(2, 6) : posts\n\n  return (\n    <section className=\"w-full bg-background py-16\">\n      <div className=\"mx-auto max-w-4xl px-6\">\n        <div className=\"flex flex-col gap-6 sm:flex-row sm:items-center sm:gap-10\">\n          <div className=\"flex size-24 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-amber-400 via-rose-500 to-violet-600 p-[3px] sm:size-32\">\n            <div className=\"flex size-full items-center justify-center rounded-full bg-background text-2xl font-semibold sm:text-3xl\">\n              LM\n            </div>\n          </div>\n          <div className=\"min-w-0 flex-1\">\n            <div className=\"flex flex-wrap items-center gap-3\">\n              <h2 className=\"text-xl font-semibold\">lena.makes</h2>\n              <Button size=\"sm\" variant={following ? \"outline\" : \"default\"} onClick={() => setFollowing((f) => !f)}>\n                {following ? \"Following\" : \"Follow\"}\n              </Button>\n              <Button size=\"sm\" variant=\"outline\">Message</Button>\n            </div>\n            <dl className=\"mt-4 flex gap-6 text-sm\">\n              <div><dt className=\"sr-only\">Posts</dt><dd><b>214</b> posts</dd></div>\n              <div><dt className=\"sr-only\">Followers</dt><dd><b>{following ? \"48.3k\" : \"48.2k\"}</b> followers</dd></div>\n              <div><dt className=\"sr-only\">Following</dt><dd><b>391</b> following</dd></div>\n            </dl>\n            <p className=\"mt-3 text-sm\">\n              <span className=\"font-medium\">Lena Moritz</span> - ceramicist, Rotterdam. Small-batch tableware, glaze\n              experiments and studio mess. Next kiln opening: 2 Dec.\n            </p>\n          </div>\n        </div>\n\n        <div className=\"mt-10 flex justify-center gap-10 border-t border-border\">\n          {tabs.map((t) => (\n            <button\n              key={t.id}\n              type=\"button\"\n              onClick={() => setTab(t.id)}\n              className={cn(\n                \"-mt-px flex items-center gap-1.5 border-t py-3 text-xs font-medium tracking-wider uppercase\",\n                tab === t.id ? \"border-foreground text-foreground\" : \"border-transparent text-muted-foreground hover:text-foreground\"\n              )}\n            >\n              <t.icon className=\"size-3.5\" />\n              {t.label}\n            </button>\n          ))}\n        </div>\n\n        <div className=\"grid grid-cols-3 gap-1\">\n          {visible.map((post) => (\n            <a key={post.id} href=\"#\" className=\"group relative aspect-square overflow-hidden\">\n              <div className=\"absolute inset-0\" style={{ background: post.gradient }} />\n              {post.video && <Play className=\"absolute top-2 right-2 size-4 fill-white text-white\" />}\n              <div className=\"absolute inset-0 flex items-center justify-center gap-4 bg-black/40 text-xs font-semibold text-white opacity-0 transition-opacity group-hover:opacity-100 sm:text-sm\">\n                <span className=\"flex items-center gap-1\"><Heart className=\"size-4 fill-white\" />{post.likes.toLocaleString()}</span>\n                <span className=\"flex items-center gap-1\"><MessageCircle className=\"size-4 fill-white\" />{post.comments}</span>\n              </div>\n            </a>\n          ))}\n        </div>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "1100px"
+  },
+  "categories": [
+    "gallery"
+  ]
+}

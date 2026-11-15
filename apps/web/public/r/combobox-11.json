@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "combobox-11",
+  "type": "registry:example",
+  "description": "Profile form field pairing a combobox with a label and helper description.",
+  "files": [
+    {
+      "path": "registry/designali/examples/combobox/combobox-11.tsx",
+      "content": "\"use client\"\n\nimport {\n  Combobox,\n  ComboboxContent,\n  ComboboxEmpty,\n  ComboboxInput,\n  ComboboxItem,\n  ComboboxList,\n} from \"@workspace/ui/components/combobox\"\nimport {\n  Field,\n  FieldDescription,\n  FieldGroup,\n  FieldLabel,\n} from \"@workspace/ui/components/field\"\nimport { Input } from \"@workspace/ui/components/input\"\n\nconst titles = [\n  \"Product Designer\",\n  \"Product Manager\",\n  \"Frontend Engineer\",\n  \"Backend Engineer\",\n  \"Data Analyst\",\n  \"Engineering Manager\",\n  \"Customer Success Lead\",\n]\n\nexport default function JobTitleField() {\n  return (\n    <FieldGroup className=\"w-full max-w-xs\">\n      <Field>\n        <FieldLabel htmlFor=\"full-name\">Full name</FieldLabel>\n        <Input id=\"full-name\" defaultValue=\"Hana Okada\" />\n      </Field>\n      <Field>\n        <FieldLabel htmlFor=\"job-title\">Job title</FieldLabel>\n        <Combobox items={titles}>\n          <ComboboxInput\n            id=\"job-title\"\n            placeholder=\"Search titles\"\n            className=\"w-full\"\n          />\n          <ComboboxContent>\n            <ComboboxEmpty>No matching titles.</ComboboxEmpty>\n            <ComboboxList>\n              {(item: string) => (\n                <ComboboxItem key={item} value={item}>\n                  {item}\n                </ComboboxItem>\n              )}\n            </ComboboxList>\n          </ComboboxContent>\n        </Combobox>\n        <FieldDescription>\n          Shown on your profile and in mentions.\n        </FieldDescription>\n      </Field>\n    </FieldGroup>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

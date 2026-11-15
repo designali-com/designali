@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toggle-group-04",
+  "type": "registry:example",
+  "description": "Multi-select formatting group whose pressed marks are applied to a live text preview.",
+  "files": [
+    {
+      "path": "registry/designali/examples/toggle-group/toggle-group-04.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport {\n  BoldIcon,\n  ItalicIcon,\n  StrikethroughIcon,\n  UnderlineIcon,\n} from \"lucide-react\"\n\nimport {\n  ToggleGroup,\n  ToggleGroupItem,\n} from \"@workspace/ui/components/toggle-group\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nexport default function TextFormattingToggleGroup() {\n  const [marks, setMarks] = React.useState<string[]>([\"bold\"])\n\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-3\">\n      <ToggleGroup\n        multiple\n        variant=\"outline\"\n        spacing={0}\n        value={marks}\n        onValueChange={setMarks}\n      >\n        <ToggleGroupItem value=\"bold\" aria-label=\"Bold\">\n          <BoldIcon />\n        </ToggleGroupItem>\n        <ToggleGroupItem value=\"italic\" aria-label=\"Italic\">\n          <ItalicIcon />\n        </ToggleGroupItem>\n        <ToggleGroupItem value=\"underline\" aria-label=\"Underline\">\n          <UnderlineIcon />\n        </ToggleGroupItem>\n        <ToggleGroupItem value=\"strike\" aria-label=\"Strikethrough\">\n          <StrikethroughIcon />\n        </ToggleGroupItem>\n      </ToggleGroup>\n      <p\n        className={cn(\n          \"border bg-muted/30 p-3 text-sm\",\n          marks.includes(\"bold\") && \"font-semibold\",\n          marks.includes(\"italic\") && \"italic\",\n          marks.includes(\"underline\") && \"underline\",\n          marks.includes(\"strike\") && \"line-through\"\n        )}\n      >\n        The quarterly review moves to Thursday at 10:00.\n      </p>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

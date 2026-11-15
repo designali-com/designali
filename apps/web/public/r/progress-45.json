@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "progress-45",
+  "type": "registry:example",
+  "description": "Application form card with completion progress in the card header.",
+  "files": [
+    {
+      "path": "registry/designali/examples/progress/progress-45.tsx",
+      "content": "import { Button } from \"@workspace/ui/components/button\"\nimport {\n  Card,\n  CardAction,\n  CardContent,\n  CardDescription,\n  CardFooter,\n  CardHeader,\n  CardTitle,\n} from \"@workspace/ui/components/card\"\nimport { Input } from \"@workspace/ui/components/input\"\nimport { Label } from \"@workspace/ui/components/label\"\nimport { Progress } from \"@workspace/ui/components/progress\"\n\nexport default function FormSectionCardProgress() {\n  return (\n    <Card className=\"w-full max-w-sm\">\n      <CardHeader>\n        <CardTitle>Rental application</CardTitle>\n        <CardDescription>Section 2: Employment</CardDescription>\n        <CardAction>\n          <span className=\"text-xs text-muted-foreground\">40%</span>\n        </CardAction>\n      </CardHeader>\n      <CardContent className=\"flex flex-col gap-4\">\n        <Progress value={40} aria-label=\"Application progress\" />\n        <div className=\"flex flex-col gap-2\">\n          <Label htmlFor=\"employer-name\">Employer</Label>\n          <Input id=\"employer-name\" placeholder=\"Northwind Studio\" />\n        </div>\n      </CardContent>\n      <CardFooter className=\"justify-end\">\n        <Button size=\"sm\">Save and continue</Button>\n      </CardFooter>\n    </Card>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

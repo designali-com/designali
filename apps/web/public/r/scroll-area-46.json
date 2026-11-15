@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "scroll-area-46",
+  "type": "registry:example",
+  "description": "Scroll area with a custom-colored, wider scrollbar thumb.",
+  "files": [
+    {
+      "path": "registry/designali/examples/scroll-area/scroll-area-46.tsx",
+      "content": "import { ScrollArea } from \"@workspace/ui/components/scroll-area\"\n\nconst entries = Array.from({ length: 16 }, (_, i) => ({\n  day: \"Day \" + (i + 1),\n  note: [\n    \"Ran 5k along the river\",\n    \"Rest day and stretching\",\n    \"Intervals: 6 x 400m\",\n    \"Long ride, 42 km\",\n  ][i % 4],\n}))\n\nexport default function BrandedScrollbarThumb() {\n  return (\n    <ScrollArea className=\"h-64 w-full max-w-xs border [&_[data-slot=scroll-area-scrollbar]]:w-3 [&_[data-slot=scroll-area-thumb]]:rounded-full [&_[data-slot=scroll-area-thumb]]:bg-primary/60 hover:[&_[data-slot=scroll-area-thumb]]:bg-primary\">\n      <div className=\"flex flex-col divide-y pr-2\">\n        {entries.map((e) => (\n          <div key={e.day} className=\"flex flex-col px-3 py-2 text-xs\">\n            <span className=\"font-medium\">{e.day}</span>\n            <span className=\"text-muted-foreground\">{e.note}</span>\n          </div>\n        ))}\n      </div>\n    </ScrollArea>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

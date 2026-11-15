@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "pagination-46",
+  "type": "registry:example",
+  "description": "Pagination for a 200-page document paired with a slider to scrub quickly across pages.",
+  "files": [
+    {
+      "path": "registry/designali/examples/pagination/pagination-46.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport {\n  Pagination,\n  PaginationContent,\n  PaginationEllipsis,\n  PaginationItem,\n  PaginationLink,\n} from \"@workspace/ui/components/pagination\"\nimport { Slider } from \"@workspace/ui/components/slider\"\n\nfunction getPages(current: number, total: number, siblings = 1) {\n  const pages: (number | \"ellipsis\")[] = [1]\n  const start = Math.max(2, current - siblings)\n  const end = Math.min(total - 1, current + siblings)\n  if (start > 2) pages.push(\"ellipsis\")\n  for (let i = start; i <= end; i++) pages.push(i)\n  if (end < total - 1) pages.push(\"ellipsis\")\n  if (total > 1) pages.push(total)\n  return pages\n}\n\nconst TOTAL = 200\n\nexport default function SliderScrubberPagination() {\n  const [page, setPage] = React.useState(86)\n\n  return (\n    <div className=\"flex w-full max-w-md flex-col gap-4\">\n      <div className=\"flex items-center gap-3\">\n        <span className=\"text-xs text-muted-foreground tabular-nums\">1</span>\n        <Slider\n          min={1}\n          max={TOTAL}\n          value={[page]}\n          onValueChange={(value) =>\n            setPage(Array.isArray(value) ? value[0]! : value)\n          }\n          aria-label=\"Scrub pages\"\n        />\n        <span className=\"text-xs text-muted-foreground tabular-nums\">\n          {TOTAL}\n        </span>\n      </div>\n      <Pagination>\n        <PaginationContent>\n          {getPages(page, TOTAL).map((p, index) =>\n            p === \"ellipsis\" ? (\n              <PaginationItem key={\"e\" + index}>\n                <PaginationEllipsis />\n              </PaginationItem>\n            ) : (\n              <PaginationItem key={p}>\n                <PaginationLink\n                  href=\"#\"\n                  isActive={p === page}\n                  className=\"min-w-8 px-1 tabular-nums\"\n                  onClick={(event) => {\n                    event.preventDefault()\n                    setPage(p)\n                  }}\n                >\n                  {p}\n                </PaginationLink>\n              </PaginationItem>\n            )\n          )}\n        </PaginationContent>\n      </Pagination>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

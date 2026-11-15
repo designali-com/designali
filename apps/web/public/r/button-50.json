@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button-50",
+  "type": "registry:example",
+  "description": "Toolbar buttons that show icon-only on narrow screens and add labels from the small breakpoint.",
+  "files": [
+    {
+      "path": "registry/designali/examples/button/button-50.tsx",
+      "content": "import {\n  ArrowUpDownIcon,\n  DownloadIcon,\n  ListFilterIcon,\n  PlusIcon,\n} from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\n\nconst actions = [\n  { label: \"Filter\", icon: ListFilterIcon },\n  { label: \"Sort\", icon: ArrowUpDownIcon },\n  { label: \"Export\", icon: DownloadIcon },\n]\n\nexport default function ResponsiveIconLabelButtons() {\n  return (\n    <div className=\"flex items-center gap-1.5\">\n      {actions.map((action) => (\n        <Button\n          key={action.label}\n          variant=\"outline\"\n          size=\"sm\"\n          aria-label={action.label}\n        >\n          <action.icon data-icon=\"inline-start\" />\n          <span className=\"hidden sm:inline\">{action.label}</span>\n        </Button>\n      ))}\n      <Button size=\"sm\">\n        <PlusIcon data-icon=\"inline-start\" />\n        <span className=\"hidden sm:inline\">New record</span>\n      </Button>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

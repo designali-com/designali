@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "textarea-42",
+  "type": "registry:example",
+  "description": "Read-only description that switches to an editable textarea with save and cancel.",
+  "files": [
+    {
+      "path": "registry/designali/examples/textarea/textarea-42.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { PencilIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Textarea } from \"@workspace/ui/components/textarea\"\n\nexport default function InlineEditTextarea() {\n  const [text, setText] = React.useState(\n    \"Quarterly planning for the mobile team. Goals, staffing and dependencies.\"\n  )\n  const [draft, setDraft] = React.useState(text)\n  const [editing, setEditing] = React.useState(false)\n\n  return (\n    <div className=\"w-full max-w-sm border p-3\">\n      <div className=\"mb-2 flex items-center justify-between\">\n        <p className=\"text-sm font-medium\">Description</p>\n        {!editing && (\n          <Button\n            variant=\"ghost\"\n            size=\"icon-xs\"\n            aria-label=\"Edit description\"\n            onClick={() => {\n              setDraft(text)\n              setEditing(true)\n            }}\n          >\n            <PencilIcon />\n          </Button>\n        )}\n      </div>\n      {editing ? (\n        <div className=\"flex flex-col gap-2\">\n          <Textarea\n            autoFocus\n            value={draft}\n            onChange={(e) => setDraft(e.target.value)}\n            aria-label=\"Description\"\n          />\n          <div className=\"flex justify-end gap-2\">\n            <Button variant=\"ghost\" size=\"xs\" onClick={() => setEditing(false)}>\n              Cancel\n            </Button>\n            <Button\n              size=\"xs\"\n              onClick={() => {\n                setText(draft)\n                setEditing(false)\n              }}\n            >\n              Save\n            </Button>\n          </div>\n        </div>\n      ) : (\n        <p className=\"text-xs text-muted-foreground\">{text}</p>\n      )}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

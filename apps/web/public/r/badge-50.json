@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "badge-50",
+  "type": "registry:example",
+  "description": "A shipment tracking card with a status badge and step badges along the route.",
+  "files": [
+    {
+      "path": "registry/designali/examples/badge/badge-50.tsx",
+      "content": "import { CheckIcon, ChevronRightIcon, TruckIcon } from \"lucide-react\"\n\nimport { Badge } from \"@workspace/ui/components/badge\"\nimport {\n  Card,\n  CardAction,\n  CardContent,\n  CardDescription,\n  CardHeader,\n  CardTitle,\n} from \"@workspace/ui/components/card\"\n\nconst steps = [\"Ordered\", \"Packed\", \"In transit\", \"Delivered\"]\nconst current = 2\n\nexport default function ShippingProgressBadges() {\n  return (\n    <Card className=\"w-full max-w-sm\">\n      <CardHeader>\n        <CardTitle>Order #48213</CardTitle>\n        <CardDescription>Estimated delivery Friday, Apr 11</CardDescription>\n        <CardAction>\n          <Badge className=\"bg-blue-50 text-blue-700 dark:bg-blue-950 dark:text-blue-300\">\n            <TruckIcon data-icon=\"inline-start\" />\n            On the way\n          </Badge>\n        </CardAction>\n      </CardHeader>\n      <CardContent className=\"flex flex-wrap items-center gap-1\">\n        {steps.map((step, index) => (\n          <div key={step} className=\"flex items-center gap-1\">\n            <Badge\n              variant={\n                index < current\n                  ? \"secondary\"\n                  : index === current\n                    ? \"default\"\n                    : \"outline\"\n              }\n            >\n              {index < current && <CheckIcon data-icon=\"inline-start\" />}\n              {step}\n            </Badge>\n            {index < steps.length - 1 && (\n              <ChevronRightIcon className=\"size-3 text-muted-foreground\" />\n            )}\n          </div>\n        ))}\n      </CardContent>\n    </Card>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

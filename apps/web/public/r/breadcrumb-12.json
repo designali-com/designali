@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "breadcrumb-12",
+  "type": "registry:example",
+  "description": "Stateful folder browser where clicking a crumb navigates up and clicking a folder drills down.",
+  "files": [
+    {
+      "path": "registry/designali/examples/breadcrumb/breadcrumb-12.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { FolderIcon } from \"lucide-react\"\n\nimport {\n  Breadcrumb,\n  BreadcrumbItem,\n  BreadcrumbLink,\n  BreadcrumbList,\n  BreadcrumbPage,\n  BreadcrumbSeparator,\n} from \"@workspace/ui/components/breadcrumb\"\nimport { Button } from \"@workspace/ui/components/button\"\n\nconst tree: Record<string, string[]> = {\n  Documents: [\"Invoices\", \"Contracts\"],\n  Invoices: [\"2025\", \"2026\"],\n  Contracts: [\"Vendors\", \"Freelancers\"],\n  \"2025\": [],\n  \"2026\": [],\n  Vendors: [],\n  Freelancers: [],\n}\n\nexport default function InteractiveFolderBreadcrumb() {\n  const [path, setPath] = React.useState([\"Documents\"])\n  const current = path[path.length - 1]!\n  const children = tree[current] ?? []\n\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-3 border p-3\">\n      <Breadcrumb>\n        <BreadcrumbList>\n          {path.map((folder, index) => {\n            const isLast = index === path.length - 1\n            return (\n              <React.Fragment key={folder}>\n                <BreadcrumbItem>\n                  {isLast ? (\n                    <BreadcrumbPage>{folder}</BreadcrumbPage>\n                  ) : (\n                    <BreadcrumbLink\n                      render={<button type=\"button\" />}\n                      onClick={() => setPath(path.slice(0, index + 1))}\n                    >\n                      {folder}\n                    </BreadcrumbLink>\n                  )}\n                </BreadcrumbItem>\n                {!isLast && <BreadcrumbSeparator />}\n              </React.Fragment>\n            )\n          })}\n        </BreadcrumbList>\n      </Breadcrumb>\n      <div className=\"flex flex-col gap-1\">\n        {children.length === 0 ? (\n          <p className=\"py-4 text-center text-xs text-muted-foreground\">\n            This folder is empty\n          </p>\n        ) : (\n          children.map((child) => (\n            <Button\n              key={child}\n              variant=\"ghost\"\n              size=\"sm\"\n              className=\"justify-start\"\n              onClick={() => setPath([...path, child])}\n            >\n              <FolderIcon data-icon=\"inline-start\" />\n              {child}\n            </Button>\n          ))\n        )}\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

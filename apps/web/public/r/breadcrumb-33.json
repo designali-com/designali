@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "breadcrumb-33",
+  "type": "registry:example",
+  "description": "Object storage path with a bucket icon, prefix segments and a copy-path button.",
+  "files": [
+    {
+      "path": "registry/designali/examples/breadcrumb/breadcrumb-33.tsx",
+      "content": "import { Fragment } from \"react\"\nimport { CopyIcon, DatabaseIcon } from \"lucide-react\"\n\nimport {\n  Breadcrumb,\n  BreadcrumbItem,\n  BreadcrumbLink,\n  BreadcrumbList,\n  BreadcrumbPage,\n  BreadcrumbSeparator,\n} from \"@workspace/ui/components/breadcrumb\"\nimport { Button } from \"@workspace/ui/components/button\"\n\nconst prefixes = [\"uploads\", \"2026\", \"11\"]\n\nexport default function StorageBucketBreadcrumb() {\n  return (\n    <div className=\"flex w-full max-w-md items-center gap-2 border bg-muted/40 px-3 py-2\">\n      <DatabaseIcon className=\"size-3.5 shrink-0 text-muted-foreground\" />\n      <Breadcrumb className=\"min-w-0 flex-1\">\n        <BreadcrumbList className=\"font-mono\">\n          <BreadcrumbItem>\n            <BreadcrumbLink href=\"#\" className=\"font-medium text-foreground\">\n              media-assets\n            </BreadcrumbLink>\n          </BreadcrumbItem>\n          {prefixes.map((prefix) => (\n            <Fragment key={prefix}>\n              <BreadcrumbSeparator>/</BreadcrumbSeparator>\n              <BreadcrumbItem>\n                <BreadcrumbLink href=\"#\">{prefix}</BreadcrumbLink>\n              </BreadcrumbItem>\n            </Fragment>\n          ))}\n          <BreadcrumbSeparator>/</BreadcrumbSeparator>\n          <BreadcrumbItem>\n            <BreadcrumbPage>hero-banner.webp</BreadcrumbPage>\n          </BreadcrumbItem>\n        </BreadcrumbList>\n      </Breadcrumb>\n      <Button variant=\"ghost\" size=\"icon-xs\" aria-label=\"Copy path\">\n        <CopyIcon />\n      </Button>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

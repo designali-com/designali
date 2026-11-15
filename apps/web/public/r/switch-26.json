@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "switch-26",
+  "type": "registry:example",
+  "description": "Switch labels paired with info tooltips that explain each setting.",
+  "files": [
+    {
+      "path": "registry/designali/examples/switch/switch-26.tsx",
+      "content": "import { InfoIcon } from \"lucide-react\"\n\nimport { Label } from \"@workspace/ui/components/label\"\nimport { Switch } from \"@workspace/ui/components/switch\"\nimport {\n  Tooltip,\n  TooltipContent,\n  TooltipProvider,\n  TooltipTrigger,\n} from \"@workspace/ui/components/tooltip\"\n\nconst settings = [\n  {\n    id: \"smart-compose\",\n    label: \"Smart compose\",\n    help: \"Suggests sentence endings as you type.\",\n    on: true,\n  },\n  {\n    id: \"nudges\",\n    label: \"Follow-up nudges\",\n    help: \"Reminds you about emails without a reply after 3 days.\",\n    on: false,\n  },\n]\n\nexport default function SwitchWithHelpTooltip() {\n  return (\n    <TooltipProvider>\n      <div className=\"flex w-full max-w-xs flex-col gap-4 border p-4\">\n        {settings.map((setting) => (\n          <div\n            key={setting.id}\n            className=\"flex items-center justify-between gap-4\"\n          >\n            <div className=\"flex items-center gap-1.5\">\n              <Label htmlFor={setting.id}>{setting.label}</Label>\n              <Tooltip>\n                <TooltipTrigger\n                  render={\n                    <button\n                      type=\"button\"\n                      className=\"text-muted-foreground hover:text-foreground\"\n                      aria-label={\"About \" + setting.label}\n                    />\n                  }\n                >\n                  <InfoIcon className=\"size-3.5\" />\n                </TooltipTrigger>\n                <TooltipContent className=\"max-w-56\">\n                  {setting.help}\n                </TooltipContent>\n              </Tooltip>\n            </div>\n            <Switch id={setting.id} defaultChecked={setting.on} />\n          </div>\n        ))}\n      </div>\n    </TooltipProvider>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

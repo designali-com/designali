@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toggle-group-48",
+  "type": "registry:example",
+  "description": "Team poll where the single-select vote reveals a result bar per option.",
+  "files": [
+    {
+      "path": "registry/designali/examples/toggle-group/toggle-group-48.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport {\n  ToggleGroup,\n  ToggleGroupItem,\n} from \"@workspace/ui/components/toggle-group\"\n\nconst options = [\n  { value: \"tue\", label: \"Tuesday offsite\", votes: 6 },\n  { value: \"wed\", label: \"Wednesday offsite\", votes: 9 },\n  { value: \"fri\", label: \"Friday offsite\", votes: 4 },\n]\n\nexport default function PollVoteToggleGroup() {\n  const [vote, setVote] = React.useState<string[]>([])\n  const total = options.reduce((n, o) => n + o.votes, 0) + (vote.length ? 1 : 0)\n\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-3 border p-4\">\n      <span className=\"text-sm font-medium\">\n        When should we hold the Q3 offsite?\n      </span>\n      <ToggleGroup\n        orientation=\"vertical\"\n        variant=\"outline\"\n        spacing={1}\n        value={vote}\n        onValueChange={setVote}\n        className=\"w-full\"\n      >\n        {options.map((o) => {\n          const count = o.votes + (vote[0] === o.value ? 1 : 0)\n          return (\n            <ToggleGroupItem\n              key={o.value}\n              value={o.value}\n              className=\"relative h-9 justify-between overflow-hidden\"\n            >\n              {vote.length ? (\n                <span\n                  className=\"absolute inset-y-0 start-0 bg-primary/10\"\n                  style={{ width: (count / total) * 100 + \"%\" }}\n                />\n              ) : null}\n              <span className=\"relative\">{o.label}</span>\n              {vote.length ? (\n                <span className=\"relative tabular-nums\">\n                  {Math.round((count / total) * 100)}%\n                </span>\n              ) : null}\n            </ToggleGroupItem>\n          )\n        })}\n      </ToggleGroup>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

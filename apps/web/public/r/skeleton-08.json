@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "skeleton-08",
+  "type": "registry:example",
+  "description": "Storefront product grid placeholder with image, title, and price for each card.",
+  "files": [
+    {
+      "path": "registry/designali/examples/skeleton/skeleton-08.tsx",
+      "content": "import { Skeleton } from \"@workspace/ui/components/skeleton\"\n\nexport default function ProductGridSkeleton() {\n  return (\n    <div className=\"grid w-full max-w-md grid-cols-2 gap-4 sm:grid-cols-3\">\n      {Array.from({ length: 6 }).map((_, i) => (\n        <div key={i} className=\"flex flex-col gap-2\">\n          <Skeleton className=\"aspect-square w-full\" />\n          <Skeleton className=\"h-3 w-4/5\" />\n          <Skeleton className=\"h-3 w-1/3\" />\n        </div>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

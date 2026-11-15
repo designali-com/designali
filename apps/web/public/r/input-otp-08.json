@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-otp-08",
+  "type": "registry:example",
+  "description": "OTP slots in an invalid state with a destructive error message underneath.",
+  "files": [
+    {
+      "path": "registry/designali/examples/input-otp/input-otp-08.tsx",
+      "content": "import { Field, FieldError, FieldLabel } from \"@workspace/ui/components/field\"\nimport {\n  InputOTP,\n  InputOTPGroup,\n  InputOTPSlot,\n} from \"@workspace/ui/components/input-otp\"\n\nexport default function InvalidCodeError() {\n  return (\n    <Field className=\"w-fit\" data-invalid>\n      <FieldLabel htmlFor=\"otp-invalid\">Verification code</FieldLabel>\n      <InputOTP id=\"otp-invalid\" maxLength={6} defaultValue=\"482913\">\n        <InputOTPGroup>\n          <InputOTPSlot index={0} aria-invalid />\n          <InputOTPSlot index={1} aria-invalid />\n          <InputOTPSlot index={2} aria-invalid />\n          <InputOTPSlot index={3} aria-invalid />\n          <InputOTPSlot index={4} aria-invalid />\n          <InputOTPSlot index={5} aria-invalid />\n        </InputOTPGroup>\n      </InputOTP>\n      <FieldError>That code is incorrect or has expired.</FieldError>\n    </Field>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "spinner-49",
+  "type": "registry:example",
+  "description": "Chat composer whose send button turns into a spinner while the message sends.",
+  "files": [
+    {
+      "path": "registry/designali/examples/spinner/spinner-49.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { SendIcon } from \"lucide-react\"\n\nimport {\n  InputGroup,\n  InputGroupAddon,\n  InputGroupButton,\n  InputGroupInput,\n} from \"@workspace/ui/components/input-group\"\nimport { Spinner } from \"@workspace/ui/components/spinner\"\n\nexport default function SendMessageButton() {\n  const [value, setValue] = React.useState(\n    \"Running 10 minutes late, start without me\"\n  )\n  const [sending, setSending] = React.useState(false)\n\n  return (\n    <InputGroup className=\"w-full max-w-sm\">\n      <InputGroupInput\n        aria-label=\"Message\"\n        value={value}\n        disabled={sending}\n        onChange={(e) => setValue(e.target.value)}\n      />\n      <InputGroupAddon align=\"inline-end\">\n        <InputGroupButton\n          size=\"icon-xs\"\n          variant=\"default\"\n          aria-label=\"Send message\"\n          disabled={sending || !value}\n          onClick={() => {\n            setSending(true)\n            setTimeout(() => {\n              setSending(false)\n              setValue(\"\")\n            }, 1000)\n          }}\n        >\n          {sending ? <Spinner /> : <SendIcon />}\n        </InputGroupButton>\n      </InputGroupAddon>\n    </InputGroup>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

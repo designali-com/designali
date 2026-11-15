@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "avatar-13",
+  "type": "registry:example",
+  "description": "A document comment thread where each reply is anchored by the author's avatar.",
+  "files": [
+    {
+      "path": "registry/designali/examples/avatar/avatar-13.tsx",
+      "content": "import { Avatar, AvatarFallback } from \"@workspace/ui/components/avatar\"\n\nconst comments = [\n  {\n    author: \"Hana Sato\",\n    initials: \"HS\",\n    time: \"2h ago\",\n    body: \"Can we move the pricing table above the FAQ? It answers most of the questions.\",\n  },\n  {\n    author: \"Leo Martins\",\n    initials: \"LM\",\n    time: \"1h ago\",\n    body: \"Agreed. I'll also shorten the intro paragraph so it fits above the fold.\",\n  },\n  {\n    author: \"Hana Sato\",\n    initials: \"HS\",\n    time: \"12m ago\",\n    body: \"Perfect, marking this as resolved once the draft is updated.\",\n  },\n]\n\nexport default function CommentThreadAvatars() {\n  return (\n    <div className=\"flex w-full max-w-md flex-col gap-4\">\n      {comments.map((comment, index) => (\n        <div key={index} className=\"flex gap-3\">\n          <Avatar size=\"sm\" className=\"mt-0.5\">\n            <AvatarFallback>{comment.initials}</AvatarFallback>\n          </Avatar>\n          <div className=\"flex-1\">\n            <div className=\"flex items-baseline gap-2\">\n              <span className=\"text-sm font-medium\">{comment.author}</span>\n              <span className=\"text-xs text-muted-foreground\">\n                {comment.time}\n              </span>\n            </div>\n            <p className=\"text-sm text-muted-foreground\">{comment.body}</p>\n          </div>\n        </div>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

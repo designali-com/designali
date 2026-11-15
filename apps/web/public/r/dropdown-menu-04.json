@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "dropdown-menu-04",
+  "type": "registry:example",
+  "description": "Avatar trigger opening an account menu with profile header, settings links, and sign out.",
+  "files": [
+    {
+      "path": "registry/designali/examples/dropdown-menu/dropdown-menu-04.tsx",
+      "content": "import {\n  ChevronsUpDownIcon,\n  CreditCardIcon,\n  LogOutIcon,\n  SettingsIcon,\n  UserIcon,\n} from \"lucide-react\"\n\nimport { Avatar, AvatarFallback } from \"@workspace/ui/components/avatar\"\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  DropdownMenu,\n  DropdownMenuContent,\n  DropdownMenuGroup,\n  DropdownMenuItem,\n  DropdownMenuLabel,\n  DropdownMenuSeparator,\n  DropdownMenuShortcut,\n  DropdownMenuTrigger,\n} from \"@workspace/ui/components/dropdown-menu\"\n\nexport default function UserAccountMenu() {\n  return (\n    <DropdownMenu>\n      <DropdownMenuTrigger\n        render={<Button variant=\"ghost\" className=\"h-auto gap-2 px-2 py-1.5\" />}\n      >\n        <Avatar size=\"sm\">\n          <AvatarFallback>NR</AvatarFallback>\n        </Avatar>\n        <span className=\"text-xs font-medium\">Nadia Romero</span>\n        <ChevronsUpDownIcon className=\"text-muted-foreground\" />\n      </DropdownMenuTrigger>\n      <DropdownMenuContent className=\"w-56\">\n        <DropdownMenuGroup>\n          <DropdownMenuLabel className=\"flex items-center gap-2 text-foreground\">\n            <Avatar>\n              <AvatarFallback>NR</AvatarFallback>\n            </Avatar>\n            <div className=\"grid leading-tight\">\n              <span className=\"font-medium\">Nadia Romero</span>\n              <span className=\"text-muted-foreground\">nadia@northwind.dev</span>\n            </div>\n          </DropdownMenuLabel>\n        </DropdownMenuGroup>\n        <DropdownMenuSeparator />\n        <DropdownMenuGroup>\n          <DropdownMenuItem>\n            <UserIcon />\n            Profile\n          </DropdownMenuItem>\n          <DropdownMenuItem>\n            <CreditCardIcon />\n            Billing\n          </DropdownMenuItem>\n          <DropdownMenuItem>\n            <SettingsIcon />\n            Settings\n            <DropdownMenuShortcut>⌘,</DropdownMenuShortcut>\n          </DropdownMenuItem>\n        </DropdownMenuGroup>\n        <DropdownMenuSeparator />\n        <DropdownMenuItem>\n          <LogOutIcon />\n          Sign out\n        </DropdownMenuItem>\n      </DropdownMenuContent>\n    </DropdownMenu>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

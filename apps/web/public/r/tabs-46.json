@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tabs-46",
+  "type": "registry:example",
+  "description": "Plan tabs that list the features included in each tier.",
+  "files": [
+    {
+      "path": "registry/designali/examples/tabs/tabs-46.tsx",
+      "content": "import { CheckIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  Tabs,\n  TabsContent,\n  TabsList,\n  TabsTrigger,\n} from \"@workspace/ui/components/tabs\"\n\nconst plans = {\n  starter: {\n    price: \"$0\",\n    features: [\"3 projects\", \"1 GB storage\", \"Community support\"],\n  },\n  team: {\n    price: \"$24\",\n    features: [\n      \"Unlimited projects\",\n      \"100 GB storage\",\n      \"Priority support\",\n      \"SSO\",\n    ],\n  },\n  enterprise: {\n    price: \"Custom\",\n    features: [\n      \"Everything in Team\",\n      \"Audit logs\",\n      \"Dedicated manager\",\n      \"99.99% SLA\",\n    ],\n  },\n}\n\nexport default function ComparePlanTabs() {\n  return (\n    <Tabs defaultValue=\"team\" className=\"w-full max-w-sm\">\n      <TabsList className=\"w-full\">\n        <TabsTrigger value=\"starter\">Starter</TabsTrigger>\n        <TabsTrigger value=\"team\">Team</TabsTrigger>\n        <TabsTrigger value=\"enterprise\">Enterprise</TabsTrigger>\n      </TabsList>\n      {Object.entries(plans).map(([key, plan]) => (\n        <TabsContent\n          key={key}\n          value={key}\n          className=\"flex flex-col gap-3 border p-4\"\n        >\n          <p className=\"text-2xl font-semibold\">\n            {plan.price}\n            <span className=\"text-xs font-normal text-muted-foreground\">\n              {plan.price.startsWith(\"$\") ? \" / seat / month\" : \"\"}\n            </span>\n          </p>\n          <ul className=\"flex flex-col gap-1.5\">\n            {plan.features.map((f) => (\n              <li key={f} className=\"flex items-center gap-2\">\n                <CheckIcon className=\"size-3.5\" />\n                {f}\n              </li>\n            ))}\n          </ul>\n          <Button size=\"sm\" variant={key === \"team\" ? \"default\" : \"outline\"}>\n            Choose {key}\n          </Button>\n        </TabsContent>\n      ))}\n    </Tabs>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

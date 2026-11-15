@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "radio-group-23",
+  "type": "registry:example",
+  "description": "Flight booking cabin class selector with fares and perks.",
+  "files": [
+    {
+      "path": "registry/designali/examples/radio-group/radio-group-23.tsx",
+      "content": "import { PlaneIcon } from \"lucide-react\"\n\nimport {\n  Field,\n  FieldContent,\n  FieldDescription,\n  FieldLabel,\n  FieldTitle,\n} from \"@workspace/ui/components/field\"\nimport {\n  RadioGroup,\n  RadioGroupItem,\n} from \"@workspace/ui/components/radio-group\"\n\nconst cabins = [\n  { value: \"economy\", label: \"Economy\", fare: \"$412\", perks: \"1 carry-on\" },\n  {\n    value: \"premium\",\n    label: \"Premium economy\",\n    fare: \"$689\",\n    perks: \"Extra legroom, 2 bags\",\n  },\n  {\n    value: \"business\",\n    label: \"Business\",\n    fare: \"$1,940\",\n    perks: \"Lie-flat seat, lounge\",\n  },\n]\n\nexport default function FlightCabinClass() {\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-3\">\n      <div className=\"flex items-center gap-2 text-sm\">\n        <PlaneIcon className=\"size-4\" />\n        <span className=\"font-medium\">Lisbon to Reykjavik</span>\n        <span className=\"text-muted-foreground\">&middot; Dec 4</span>\n      </div>\n      <RadioGroup defaultValue=\"economy\">\n        {cabins.map((c) => (\n          <FieldLabel key={c.value} htmlFor={\"cabin-\" + c.value}>\n            <Field orientation=\"horizontal\">\n              <RadioGroupItem value={c.value} id={\"cabin-\" + c.value} />\n              <FieldContent>\n                <FieldTitle>{c.label}</FieldTitle>\n                <FieldDescription>{c.perks}</FieldDescription>\n              </FieldContent>\n              <span className=\"text-sm font-semibold\">{c.fare}</span>\n            </Field>\n          </FieldLabel>\n        ))}\n      </RadioGroup>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

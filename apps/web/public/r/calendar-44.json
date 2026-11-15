@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "calendar-44",
+  "type": "registry:example",
+  "description": "Formatters customize weekday headers and the caption, switchable between narrow, short and long styles.",
+  "files": [
+    {
+      "path": "registry/designali/examples/calendar/calendar-44.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { format } from \"date-fns\"\n\nimport { Calendar } from \"@workspace/ui/components/calendar\"\nimport {\n  ToggleGroup,\n  ToggleGroupItem,\n} from \"@workspace/ui/components/toggle-group\"\n\nconst styles = {\n  narrow: { weekday: \"EEEEE\", caption: \"MMM ''yy\" },\n  short: { weekday: \"EEEEEE\", caption: \"MMMM yyyy\" },\n  long: { weekday: \"EEE\", caption: \"MMMM, yyyy\" },\n} as const\n\ntype Style = keyof typeof styles\n\nexport default function WeekdayFormatOptions() {\n  const [style, setStyle] = React.useState<Style>(\"narrow\")\n  const current = styles[style]\n\n  return (\n    <div className=\"flex w-full max-w-xs flex-col items-center gap-3\">\n      <ToggleGroup\n        variant=\"outline\"\n        size=\"sm\"\n        value={[style]}\n        onValueChange={(v) => {\n          if (v[0]) setStyle(v[0] as Style)\n        }}\n      >\n        <ToggleGroupItem value=\"narrow\">M</ToggleGroupItem>\n        <ToggleGroupItem value=\"short\">Mo</ToggleGroupItem>\n        <ToggleGroupItem value=\"long\">Mon</ToggleGroupItem>\n      </ToggleGroup>\n      <Calendar\n        mode=\"single\"\n        formatters={{\n          formatWeekdayName: (d) => format(d, current.weekday),\n          formatCaption: (m) => format(m, current.caption),\n        }}\n        className=\"border\"\n      />\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "checkbox-25",
+  "type": "registry:example",
+  "description": "Weekly shift availability grid with a checkbox per day and shift.",
+  "files": [
+    {
+      "path": "registry/designali/examples/checkbox/checkbox-25.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { Checkbox } from \"@workspace/ui/components/checkbox\"\n\nconst days = [\"Mon\", \"Tue\", \"Wed\", \"Thu\", \"Fri\", \"Sat\", \"Sun\"]\nconst shifts = [\"AM\", \"PM\"]\n\nexport default function ShiftAvailabilityGrid() {\n  const [slots, setSlots] = React.useState<string[]>([\n    \"Mon-AM\",\n    \"Tue-AM\",\n    \"Wed-PM\",\n    \"Sat-AM\",\n  ])\n\n  return (\n    <div className=\"w-full max-w-sm\">\n      <p className=\"mb-2 text-sm font-medium\">Your availability</p>\n      <div className=\"grid grid-cols-[2.5rem_repeat(7,1fr)] gap-y-2 border p-3 text-center text-xs\">\n        <span />\n        {days.map((day) => (\n          <span key={day} className=\"text-muted-foreground\">\n            {day}\n          </span>\n        ))}\n        {shifts.map((shift) => (\n          <React.Fragment key={shift}>\n            <span className=\"text-start font-medium\">{shift}</span>\n            {days.map((day) => {\n              const key = day + \"-\" + shift\n              return (\n                <div key={key} className=\"flex justify-center\">\n                  <Checkbox\n                    aria-label={day + \" \" + shift}\n                    checked={slots.includes(key)}\n                    onCheckedChange={(checked) =>\n                      setSlots((list) =>\n                        checked ? [...list, key] : list.filter((s) => s !== key)\n                      )\n                    }\n                  />\n                </div>\n              )\n            })}\n          </React.Fragment>\n        ))}\n      </div>\n      <p className=\"mt-2 text-xs text-muted-foreground\">\n        {slots.length} shifts selected this week\n      </p>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

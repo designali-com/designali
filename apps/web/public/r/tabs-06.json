@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tabs-06",
+  "type": "registry:example",
+  "description": "Tabs whose triggers combine a leading icon with a label.",
+  "files": [
+    {
+      "path": "registry/designali/examples/tabs/tabs-06.tsx",
+      "content": "import { ImageIcon, MusicIcon, VideoIcon } from \"lucide-react\"\n\nimport {\n  Tabs,\n  TabsContent,\n  TabsList,\n  TabsTrigger,\n} from \"@workspace/ui/components/tabs\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nexport default function IconLabelTabs() {\n  return (\n    <Tabs defaultValue=\"photos\" className=\"w-full max-w-sm\">\n      <TabsList>\n        <TabsTrigger value=\"photos\">\n          <ImageIcon data-icon=\"inline-start\" />\n          Photos\n        </TabsTrigger>\n        <TabsTrigger value=\"videos\">\n          <VideoIcon data-icon=\"inline-start\" />\n          Videos\n        </TabsTrigger>\n        <TabsTrigger value=\"audio\">\n          <MusicIcon data-icon=\"inline-start\" />\n          Audio\n        </TabsTrigger>\n      </TabsList>\n      <TabsContent value=\"photos\" className=\"grid grid-cols-3 gap-2\">\n        {[\n          \"from-sky-400 to-indigo-500\",\n          \"from-amber-300 to-rose-500\",\n          \"from-emerald-300 to-teal-600\",\n        ].map((g) => (\n          <div key={g} className={cn(\"aspect-square bg-gradient-to-br\", g)} />\n        ))}\n      </TabsContent>\n      <TabsContent value=\"videos\" className=\"text-muted-foreground\">\n        14 clips, 2.3 GB total.\n      </TabsContent>\n      <TabsContent value=\"audio\" className=\"text-muted-foreground\">\n        No audio uploaded yet.\n      </TabsContent>\n    </Tabs>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

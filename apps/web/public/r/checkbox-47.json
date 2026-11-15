@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "checkbox-47",
+  "type": "registry:example",
+  "description": "Backup source picker with folder sizes and a storage meter that updates as folders are chosen.",
+  "files": [
+    {
+      "path": "registry/designali/examples/checkbox/checkbox-47.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { FolderIcon } from \"lucide-react\"\n\nimport { Checkbox } from \"@workspace/ui/components/checkbox\"\nimport { Progress, ProgressLabel } from \"@workspace/ui/components/progress\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst folders = [\n  { name: \"Documents\", gb: 12.4 },\n  { name: \"Photos\", gb: 48.9 },\n  { name: \"Projects\", gb: 21.3 },\n  { name: \"Downloads\", gb: 9.8 },\n  { name: \"Music\", gb: 6.1 },\n]\nconst QUOTA = 100\n\nexport default function BackupFolderPicker() {\n  const [picked, setPicked] = React.useState<string[]>([\n    \"Documents\",\n    \"Projects\",\n  ])\n  const used = folders\n    .filter((f) => picked.includes(f.name))\n    .reduce((s, f) => s + f.gb, 0)\n  const over = used > QUOTA * 0.8\n\n  return (\n    <div className=\"flex w-full max-w-xs flex-col gap-3\">\n      <div className=\"flex flex-col gap-1 border\">\n        {folders.map((folder) => (\n          <label\n            key={folder.name}\n            className=\"flex cursor-pointer items-center gap-3 px-3 py-2 hover:bg-muted/50\"\n          >\n            <Checkbox\n              checked={picked.includes(folder.name)}\n              onCheckedChange={(checked) =>\n                setPicked((list) =>\n                  checked\n                    ? [...list, folder.name]\n                    : list.filter((n) => n !== folder.name)\n                )\n              }\n            />\n            <FolderIcon className=\"size-4 text-muted-foreground\" />\n            <span className=\"flex-1 text-sm\">{folder.name}</span>\n            <span className=\"text-xs text-muted-foreground tabular-nums\">\n              {folder.gb} GB\n            </span>\n          </label>\n        ))}\n      </div>\n      <Progress value={(used / QUOTA) * 100} aria-label=\"Backup storage\">\n        <ProgressLabel className=\"text-xs\">Cloud storage</ProgressLabel>\n        <span\n          className={cn(\n            \"ms-auto text-xs tabular-nums\",\n            over ? \"text-destructive\" : \"text-muted-foreground\"\n          )}\n        >\n          {used.toFixed(1)} / {QUOTA} GB\n        </span>\n      </Progress>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

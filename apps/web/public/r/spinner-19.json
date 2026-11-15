@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "spinner-19",
+  "type": "registry:example",
+  "description": "Centered app boot loader with a large spinner, product mark, and status line.",
+  "files": [
+    {
+      "path": "registry/designali/examples/spinner/spinner-19.tsx",
+      "content": "import { Spinner } from \"@workspace/ui/components/spinner\"\n\nexport default function FullPageLoader() {\n  return (\n    <div className=\"flex h-64 w-full max-w-md flex-col items-center justify-center gap-4 border bg-muted/30\">\n      <div className=\"flex items-center gap-2\">\n        <div className=\"size-6 bg-gradient-to-br from-indigo-500 to-cyan-400\" />\n        <span className=\"text-sm font-semibold tracking-tight\">Lanternly</span>\n      </div>\n      <Spinner className=\"size-8 text-muted-foreground\" strokeWidth={1.5} />\n      <span className=\"text-xs text-muted-foreground\">\n        Preparing your workspace\n      </span>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "navigation-menu-13",
+  "type": "registry:example",
+  "description": "Learning platform navigation with course topics, lesson counts and a level filter row.",
+  "files": [
+    {
+      "path": "registry/designali/examples/navigation-menu/navigation-menu-13.tsx",
+      "content": "import { ChartBarIcon, CodeIcon, PenToolIcon, UsersIcon } from \"lucide-react\"\n\nimport { Badge } from \"@workspace/ui/components/badge\"\nimport {\n  NavigationMenu,\n  NavigationMenuContent,\n  NavigationMenuItem,\n  NavigationMenuLink,\n  NavigationMenuList,\n  NavigationMenuTrigger,\n  navigationMenuTriggerStyle,\n} from \"@workspace/ui/components/navigation-menu\"\n\nconst topics = [\n  { title: \"Product design\", lessons: 42, icon: PenToolIcon },\n  { title: \"Frontend engineering\", lessons: 68, icon: CodeIcon },\n  { title: \"Data analysis\", lessons: 35, icon: ChartBarIcon },\n  { title: \"Leadership\", lessons: 21, icon: UsersIcon },\n]\n\nexport default function CourseCatalogNav() {\n  return (\n    <NavigationMenu>\n      <NavigationMenuList>\n        <NavigationMenuItem>\n          <NavigationMenuTrigger>Courses</NavigationMenuTrigger>\n          <NavigationMenuContent>\n            <div className=\"flex w-72 flex-col gap-1\">\n              {topics.map((t) => (\n                <NavigationMenuLink key={t.title} href=\"#\">\n                  <t.icon className=\"text-muted-foreground\" />\n                  <span className=\"flex-1 font-medium\">{t.title}</span>\n                  <span className=\"text-muted-foreground tabular-nums\">\n                    {t.lessons} lessons\n                  </span>\n                </NavigationMenuLink>\n              ))}\n              <div className=\"flex gap-1 border-t px-2 pt-2\">\n                {[\"Beginner\", \"Intermediate\", \"Advanced\"].map((level) => (\n                  <Badge key={level} variant=\"outline\">\n                    {level}\n                  </Badge>\n                ))}\n              </div>\n            </div>\n          </NavigationMenuContent>\n        </NavigationMenuItem>\n        <NavigationMenuItem>\n          <NavigationMenuLink href=\"#\" className={navigationMenuTriggerStyle()}>\n            Paths\n          </NavigationMenuLink>\n        </NavigationMenuItem>\n        <NavigationMenuItem>\n          <NavigationMenuLink href=\"#\" className={navigationMenuTriggerStyle()}>\n            For teams\n          </NavigationMenuLink>\n        </NavigationMenuItem>\n      </NavigationMenuList>\n    </NavigationMenu>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

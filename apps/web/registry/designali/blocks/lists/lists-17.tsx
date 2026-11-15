@@ -13,9 +13,9 @@ const messages = [
 ]
 
 export default function Lists17() {
-  const [activeId, setActiveId] = useState(messages[0].id)
+  const [activeId, setActiveId] = useState(messages[0]!.id)
   const [showDetail, setShowDetail] = useState(false)
-  const active = messages.find((m) => m.id === activeId) ?? messages[0]
+  const active = messages.find((m) => m.id === activeId) ?? messages[0]!
 
   return (
     <section className="w-full bg-muted/30 py-24">

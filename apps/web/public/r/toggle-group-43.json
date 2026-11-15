@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toggle-group-43",
+  "type": "registry:example",
+  "description": "Controlled multi-select group with select all and clear actions.",
+  "files": [
+    {
+      "path": "registry/designali/examples/toggle-group/toggle-group-43.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  ToggleGroup,\n  ToggleGroupItem,\n} from \"@workspace/ui/components/toggle-group\"\n\nconst regions = [\"NA\", \"EU\", \"APAC\", \"LATAM\", \"MEA\"]\n\nexport default function SelectAllToggleGroup() {\n  const [selected, setSelected] = React.useState<string[]>([\"EU\"])\n\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-3\">\n      <div className=\"flex items-center justify-between\">\n        <span className=\"text-sm font-medium\">\n          Regions ({selected.length}/{regions.length})\n        </span>\n        <div className=\"flex gap-1\">\n          <Button\n            variant=\"ghost\"\n            size=\"xs\"\n            onClick={() => setSelected(regions)}\n          >\n            Select all\n          </Button>\n          <Button\n            variant=\"ghost\"\n            size=\"xs\"\n            onClick={() => setSelected([])}\n            disabled={!selected.length}\n          >\n            Clear\n          </Button>\n        </div>\n      </div>\n      <ToggleGroup\n        multiple\n        variant=\"outline\"\n        spacing={1}\n        value={selected}\n        onValueChange={setSelected}\n        className=\"flex-wrap\"\n      >\n        {regions.map((r) => (\n          <ToggleGroupItem key={r} value={r}>\n            {r}\n          </ToggleGroupItem>\n        ))}\n      </ToggleGroup>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

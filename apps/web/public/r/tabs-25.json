@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tabs-25",
+  "type": "registry:example",
+  "description": "Vertical line-variant tabs for API reference sections.",
+  "files": [
+    {
+      "path": "registry/designali/examples/tabs/tabs-25.tsx",
+      "content": "import { Badge } from \"@workspace/ui/components/badge\"\nimport {\n  Tabs,\n  TabsContent,\n  TabsList,\n  TabsTrigger,\n} from \"@workspace/ui/components/tabs\"\n\nconst endpoints = [\n  {\n    value: \"list\",\n    label: \"List invoices\",\n    method: \"GET\",\n    path: \"/v1/invoices\",\n  },\n  {\n    value: \"create\",\n    label: \"Create invoice\",\n    method: \"POST\",\n    path: \"/v1/invoices\",\n  },\n  {\n    value: \"void\",\n    label: \"Void invoice\",\n    method: \"POST\",\n    path: \"/v1/invoices/:id/void\",\n  },\n]\n\nexport default function VerticalLineDocsTabs() {\n  return (\n    <Tabs\n      defaultValue=\"list\"\n      orientation=\"vertical\"\n      className=\"w-full max-w-md gap-4\"\n    >\n      <TabsList variant=\"line\" className=\"w-36 shrink-0 items-stretch\">\n        {endpoints.map((e) => (\n          <TabsTrigger key={e.value} value={e.value}>\n            {e.label}\n          </TabsTrigger>\n        ))}\n      </TabsList>\n      {endpoints.map((e) => (\n        <TabsContent\n          key={e.value}\n          value={e.value}\n          className=\"flex flex-col gap-2\"\n        >\n          <div className=\"flex items-center gap-2 font-mono\">\n            <Badge variant={e.method === \"GET\" ? \"secondary\" : \"default\"}>\n              {e.method}\n            </Badge>\n            <span className=\"truncate\">{e.path}</span>\n          </div>\n          <p className=\"text-muted-foreground\">\n            Requires a secret key with the invoices:write scope for writes.\n          </p>\n        </TabsContent>\n      ))}\n    </Tabs>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

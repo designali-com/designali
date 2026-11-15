@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "switch-06",
+  "type": "registry:example",
+  "description": "Disabled switches for features locked behind a higher plan, with an upgrade prompt.",
+  "files": [
+    {
+      "path": "registry/designali/examples/switch/switch-06.tsx",
+      "content": "import { LockIcon, SparklesIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  Card,\n  CardContent,\n  CardDescription,\n  CardFooter,\n  CardHeader,\n  CardTitle,\n} from \"@workspace/ui/components/card\"\nimport { Label } from \"@workspace/ui/components/label\"\nimport { Switch } from \"@workspace/ui/components/switch\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst features = [\n  { id: \"sso\", label: \"Single sign-on (SAML)\", locked: true },\n  { id: \"audit\", label: \"Audit log export\", locked: true },\n  { id: \"guests\", label: \"Guest access\", locked: false },\n]\n\nexport default function PlanLockedSwitches() {\n  return (\n    <Card className=\"w-full max-w-sm\">\n      <CardHeader>\n        <CardTitle>Security</CardTitle>\n        <CardDescription>\n          Some controls require the Business plan.\n        </CardDescription>\n      </CardHeader>\n      <CardContent className=\"flex flex-col gap-4\">\n        {features.map((feature) => (\n          <div\n            key={feature.id}\n            className=\"flex items-center justify-between gap-4\"\n          >\n            <Label\n              htmlFor={feature.id}\n              className={cn(feature.locked && \"text-muted-foreground\")}\n            >\n              {feature.locked && <LockIcon className=\"size-3.5\" />}\n              {feature.label}\n            </Label>\n            <Switch\n              id={feature.id}\n              disabled={feature.locked}\n              defaultChecked={!feature.locked}\n            />\n          </div>\n        ))}\n      </CardContent>\n      <CardFooter>\n        <Button size=\"sm\" className=\"w-full\">\n          <SparklesIcon data-icon=\"inline-start\" />\n          Upgrade to Business\n        </Button>\n      </CardFooter>\n    </Card>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

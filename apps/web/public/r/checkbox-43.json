@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "checkbox-43",
+  "type": "registry:example",
+  "description": "Product list with compare checkboxes capped at three and a sticky compare bar.",
+  "files": [
+    {
+      "path": "registry/designali/examples/checkbox/checkbox-43.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { LaptopIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Checkbox } from \"@workspace/ui/components/checkbox\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst laptops = [\n  { name: \"Aero 14\", price: \"$1,199\" },\n  { name: \"Aero 16\", price: \"$1,499\" },\n  { name: \"Volt Pro\", price: \"$1,899\" },\n  { name: \"Volt Air\", price: \"$999\" },\n]\n\nexport default function CompareProductsBar() {\n  const [compare, setCompare] = React.useState<string[]>([])\n\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-2\">\n      {laptops.map((laptop) => {\n        const checked = compare.includes(laptop.name)\n        const disabled = !checked && compare.length >= 3\n        return (\n          <div key={laptop.name} className=\"flex items-center gap-3 border p-3\">\n            <div className=\"flex size-10 items-center justify-center bg-muted\">\n              <LaptopIcon className=\"size-5 text-muted-foreground\" />\n            </div>\n            <div className=\"flex-1\">\n              <p className=\"text-sm font-medium\">{laptop.name}</p>\n              <p className=\"text-xs text-muted-foreground\">{laptop.price}</p>\n            </div>\n            <label\n              className={cn(\n                \"flex items-center gap-2 text-xs\",\n                disabled && \"opacity-50\"\n              )}\n            >\n              <Checkbox\n                checked={checked}\n                disabled={disabled}\n                onCheckedChange={(value) =>\n                  setCompare((list) =>\n                    value\n                      ? [...list, laptop.name]\n                      : list.filter((n) => n !== laptop.name)\n                  )\n                }\n              />\n              Compare\n            </label>\n          </div>\n        )\n      })}\n      {compare.length > 0 && (\n        <div className=\"flex items-center justify-between bg-primary px-3 py-2 text-primary-foreground\">\n          <span className=\"text-xs\">{compare.length} of 3 selected</span>\n          <Button size=\"xs\" variant=\"secondary\" disabled={compare.length < 2}>\n            Compare now\n          </Button>\n        </div>\n      )}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

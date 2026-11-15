@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "alert-42",
+  "type": "registry:example",
+  "description": "Success alert for a finished backup with metadata and a link-styled action button.",
+  "files": [
+    {
+      "path": "registry/designali/examples/alert/alert-42.tsx",
+      "content": "import { ArrowUpRightIcon, DatabaseBackupIcon } from \"lucide-react\"\n\nimport {\n  Alert,\n  AlertAction,\n  AlertDescription,\n  AlertTitle,\n} from \"@workspace/ui/components/alert\"\nimport { Button } from \"@workspace/ui/components/button\"\n\nexport default function AlertBackupComplete() {\n  return (\n    <Alert variant=\"success\" className=\"max-w-md\">\n      <DatabaseBackupIcon />\n      <AlertTitle>Nightly backup complete</AlertTitle>\n      <AlertDescription>\n        <p>\n          <span className=\"text-foreground\">prod-eu-1</span> &middot; 18.4 GB\n          &middot; finished 03:12 UTC\n        </p>\n      </AlertDescription>\n      <AlertAction>\n        <Button\n          size=\"xs\"\n          variant=\"ghost\"\n          nativeButton={false}\n          render={<a href=\"#\" />}\n        >\n          View logs\n          <ArrowUpRightIcon data-icon=\"inline-end\" />\n        </Button>\n      </AlertAction>\n    </Alert>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

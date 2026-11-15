@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "dropdown-menu-48",
+  "type": "registry:example",
+  "description": "Menu using inset items and labels so plain entries align with icon and checkbox rows.",
+  "files": [
+    {
+      "path": "registry/designali/examples/dropdown-menu/dropdown-menu-48.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { TerminalIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  DropdownMenu,\n  DropdownMenuCheckboxItem,\n  DropdownMenuContent,\n  DropdownMenuGroup,\n  DropdownMenuItem,\n  DropdownMenuLabel,\n  DropdownMenuSeparator,\n  DropdownMenuShortcut,\n  DropdownMenuTrigger,\n} from \"@workspace/ui/components/dropdown-menu\"\n\nexport default function InsetLabelsMenu() {\n  const [wrap, setWrap] = React.useState(true)\n\n  return (\n    <DropdownMenu>\n      <DropdownMenuTrigger render={<Button variant=\"ghost\" />}>\n        View\n      </DropdownMenuTrigger>\n      <DropdownMenuContent className=\"w-52\">\n        <DropdownMenuGroup>\n          <DropdownMenuLabel inset>Editor</DropdownMenuLabel>\n          <DropdownMenuCheckboxItem\n            inset\n            checked={wrap}\n            onCheckedChange={setWrap}\n          >\n            Word wrap\n          </DropdownMenuCheckboxItem>\n          <DropdownMenuItem inset>Toggle minimap</DropdownMenuItem>\n          <DropdownMenuItem>\n            <TerminalIcon />\n            Show terminal\n            <DropdownMenuShortcut>⌃`</DropdownMenuShortcut>\n          </DropdownMenuItem>\n        </DropdownMenuGroup>\n        <DropdownMenuSeparator />\n        <DropdownMenuGroup>\n          <DropdownMenuLabel inset>Appearance</DropdownMenuLabel>\n          <DropdownMenuItem inset>Zoom in</DropdownMenuItem>\n          <DropdownMenuItem inset>Zoom out</DropdownMenuItem>\n          <DropdownMenuItem inset>Reset zoom</DropdownMenuItem>\n        </DropdownMenuGroup>\n      </DropdownMenuContent>\n    </DropdownMenu>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

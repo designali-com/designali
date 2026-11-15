@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "alert-23",
+  "type": "registry:example",
+  "description": "Alert that uses an avatar instead of an icon to surface a teammate mention.",
+  "files": [
+    {
+      "path": "registry/designali/examples/alert/alert-23.tsx",
+      "content": "import {\n  Alert,\n  AlertAction,\n  AlertDescription,\n  AlertTitle,\n} from \"@workspace/ui/components/alert\"\nimport { Avatar, AvatarFallback } from \"@workspace/ui/components/avatar\"\nimport { Button } from \"@workspace/ui/components/button\"\n\nexport default function AlertMentionWithAvatar() {\n  return (\n    <Alert className=\"max-w-md grid-cols-[auto_1fr] gap-x-2.5\">\n      <Avatar className=\"row-span-2\">\n        <AvatarFallback>PS</AvatarFallback>\n      </Avatar>\n      <AlertTitle className=\"col-start-2\">Priya Shah mentioned you</AlertTitle>\n      <AlertDescription className=\"col-start-2\">\n        &ldquo;Can you check the pricing table copy before we publish?&rdquo; in{\" \"}\n        <span className=\"font-medium text-foreground\">Launch plan</span>\n      </AlertDescription>\n      <AlertAction>\n        <Button size=\"xs\" variant=\"outline\">\n          Reply\n        </Button>\n      </AlertAction>\n    </Alert>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

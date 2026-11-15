@@ -26,7 +26,7 @@ const logos = [
   "Shopify",
   "Deloitte",
   "IBM",
-  "Stripe",
+  "Corvia",
 ]
 
 const features = [

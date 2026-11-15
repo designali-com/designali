@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "badge-18",
+  "type": "registry:example",
+  "description": "A product card with discount, low stock, and free shipping badges.",
+  "files": [
+    {
+      "path": "registry/designali/examples/badge/badge-18.tsx",
+      "content": "import { HeadphonesIcon, TruckIcon } from \"lucide-react\"\n\nimport { Badge } from \"@workspace/ui/components/badge\"\nimport {\n  Card,\n  CardContent,\n  CardHeader,\n  CardTitle,\n} from \"@workspace/ui/components/card\"\n\nexport default function ProductCardDealBadges() {\n  return (\n    <Card className=\"w-full max-w-xs pt-0\">\n      <div className=\"relative flex aspect-[4/3] items-center justify-center bg-gradient-to-br from-muted to-muted/40\">\n        <HeadphonesIcon className=\"size-16 text-muted-foreground\" />\n        <div className=\"absolute start-2 top-2 flex flex-col items-start gap-1\">\n          <Badge\n            variant=\"destructive\"\n            className=\"bg-destructive text-white dark:bg-destructive\"\n          >\n            -25%\n          </Badge>\n          <Badge variant=\"secondary\">Only 3 left</Badge>\n        </div>\n      </div>\n      <CardHeader>\n        <CardTitle>Aurora Wireless Headphones</CardTitle>\n        <div className=\"flex items-baseline gap-2\">\n          <span className=\"text-base font-semibold\">$149</span>\n          <span className=\"text-xs text-muted-foreground line-through\">\n            $199\n          </span>\n        </div>\n      </CardHeader>\n      <CardContent>\n        <Badge variant=\"outline\">\n          <TruckIcon data-icon=\"inline-start\" />\n          Free shipping\n        </Badge>\n      </CardContent>\n    </Card>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tabs-42",
+  "type": "registry:example",
+  "description": "Mobile app layout with a bottom tab bar of stacked icon and label triggers.",
+  "files": [
+    {
+      "path": "registry/designali/examples/tabs/tabs-42.tsx",
+      "content": "import { HouseIcon, SearchIcon, ShoppingBagIcon, UserIcon } from \"lucide-react\"\n\nimport {\n  Tabs,\n  TabsContent,\n  TabsList,\n  TabsTrigger,\n} from \"@workspace/ui/components/tabs\"\n\nconst tabs = [\n  { value: \"home\", label: \"Home\", icon: HouseIcon },\n  { value: \"search\", label: \"Search\", icon: SearchIcon },\n  { value: \"orders\", label: \"Orders\", icon: ShoppingBagIcon },\n  { value: \"profile\", label: \"Profile\", icon: UserIcon },\n]\n\nexport default function MobileBottomTabBar() {\n  return (\n    <Tabs\n      defaultValue=\"home\"\n      className=\"h-80 w-full max-w-[280px] gap-0 border\"\n    >\n      {tabs.map((t) => (\n        <TabsContent\n          key={t.value}\n          value={t.value}\n          className=\"flex items-center justify-center text-sm text-muted-foreground\"\n        >\n          {t.label} screen\n        </TabsContent>\n      ))}\n      <TabsList className=\"order-last h-14 w-full border-t\">\n        {tabs.map((t) => (\n          <TabsTrigger\n            key={t.value}\n            value={t.value}\n            className=\"h-full flex-col gap-0.5 text-[10px]\"\n          >\n            <t.icon className=\"size-5\" />\n            {t.label}\n          </TabsTrigger>\n        ))}\n      </TabsList>\n    </Tabs>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

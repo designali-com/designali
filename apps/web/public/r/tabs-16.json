@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tabs-16",
+  "type": "registry:example",
+  "description": "Chat sidebar tabs separating direct messages, channels and mentions.",
+  "files": [
+    {
+      "path": "registry/designali/examples/tabs/tabs-16.tsx",
+      "content": "import { HashIcon } from \"lucide-react\"\n\nimport {\n  Avatar,\n  AvatarBadge,\n  AvatarFallback,\n} from \"@workspace/ui/components/avatar\"\nimport {\n  Tabs,\n  TabsContent,\n  TabsList,\n  TabsTrigger,\n} from \"@workspace/ui/components/tabs\"\n\nconst dms = [\n  { name: \"Priya Anand\", last: \"Sounds good, ship it!\", online: true },\n  { name: \"Tomas Berg\", last: \"Can we sync at 3?\", online: false },\n  { name: \"Lea Fournier\", last: \"Uploaded the new mocks\", online: true },\n]\n\nexport default function ChatSidebarTabs() {\n  return (\n    <Tabs defaultValue=\"direct\" className=\"w-full max-w-xs border p-2\">\n      <TabsList variant=\"line\" className=\"w-full\">\n        <TabsTrigger value=\"direct\">Direct</TabsTrigger>\n        <TabsTrigger value=\"channels\">Channels</TabsTrigger>\n        <TabsTrigger value=\"mentions\">Mentions</TabsTrigger>\n      </TabsList>\n      <TabsContent value=\"direct\" className=\"flex flex-col\">\n        {dms.map((dm) => (\n          <button\n            key={dm.name}\n            type=\"button\"\n            className=\"flex items-center gap-2 px-1 py-2 text-start hover:bg-muted\"\n          >\n            <Avatar size=\"sm\">\n              <AvatarFallback>\n                {dm.name\n                  .split(\" \")\n                  .map((p) => p[0])\n                  .join(\"\")}\n              </AvatarFallback>\n              {dm.online && <AvatarBadge className=\"bg-emerald-500\" />}\n            </Avatar>\n            <div className=\"min-w-0\">\n              <p className=\"font-medium\">{dm.name}</p>\n              <p className=\"truncate text-muted-foreground\">{dm.last}</p>\n            </div>\n          </button>\n        ))}\n      </TabsContent>\n      <TabsContent value=\"channels\" className=\"flex flex-col gap-1 px-1 py-1\">\n        {[\"general\", \"design\", \"releases\"].map((c) => (\n          <span key={c} className=\"flex items-center gap-1.5\">\n            <HashIcon className=\"size-3.5 text-muted-foreground\" />\n            {c}\n          </span>\n        ))}\n      </TabsContent>\n      <TabsContent value=\"mentions\" className=\"px-1 py-2 text-muted-foreground\">\n        No new mentions.\n      </TabsContent>\n    </Tabs>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

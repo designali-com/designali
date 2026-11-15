@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "alert-20",
+  "type": "registry:example",
+  "description": "Security alert about a new sign-in with device details and confirm or secure actions.",
+  "files": [
+    {
+      "path": "registry/designali/examples/alert/alert-20.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { MonitorSmartphoneIcon } from \"lucide-react\"\n\nimport {\n  Alert,\n  AlertDescription,\n  AlertTitle,\n} from \"@workspace/ui/components/alert\"\nimport { Button } from \"@workspace/ui/components/button\"\n\nexport default function AlertNewSignIn() {\n  const [answer, setAnswer] = React.useState<\"me\" | \"secure\" | null>(null)\n\n  return (\n    <Alert\n      variant={answer === \"secure\" ? \"error\" : \"default\"}\n      className=\"max-w-md\"\n    >\n      <MonitorSmartphoneIcon />\n      <AlertTitle>New sign-in to your account</AlertTitle>\n      <AlertDescription>\n        <dl className=\"my-1 grid grid-cols-[auto_1fr] gap-x-3\">\n          <dt>Device</dt>\n          <dd className=\"text-foreground\">Firefox on Windows</dd>\n          <dt>Location</dt>\n          <dd className=\"text-foreground\">Rotterdam, NL</dd>\n          <dt>Time</dt>\n          <dd className=\"text-foreground\">Today at 08:14</dd>\n        </dl>\n        {answer === null ? (\n          <div className=\"mt-2 flex gap-1.5\">\n            <Button size=\"xs\" variant=\"outline\" onClick={() => setAnswer(\"me\")}>\n              This was me\n            </Button>\n            <Button\n              size=\"xs\"\n              variant=\"destructive\"\n              onClick={() => setAnswer(\"secure\")}\n            >\n              Secure account\n            </Button>\n          </div>\n        ) : (\n          <p className=\"mt-2 text-foreground\">\n            {answer === \"me\"\n              ? \"Thanks, we’ll remember this device.\"\n              : \"We signed out all sessions. Check your email to reset your password.\"}\n          </p>\n        )}\n      </AlertDescription>\n    </Alert>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

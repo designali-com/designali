@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "separator-40",
+  "type": "registry:example",
+  "description": "End-of-article author bio introduced by a separator.",
+  "files": [
+    {
+      "path": "registry/designali/examples/separator/separator-40.tsx",
+      "content": "import { Avatar, AvatarFallback } from \"@workspace/ui/components/avatar\"\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Separator } from \"@workspace/ui/components/separator\"\n\nexport default function AuthorBioSeparator() {\n  return (\n    <div className=\"flex w-full max-w-md flex-col gap-5\">\n      <p className=\"text-sm text-muted-foreground\">\n        ...and that is why we now ship every interface change behind a quiet\n        beta flag first. Thanks for reading.\n      </p>\n      <Separator />\n      <div className=\"flex items-start gap-3\">\n        <Avatar size=\"lg\">\n          <AvatarFallback>CW</AvatarFallback>\n        </Avatar>\n        <div className=\"flex flex-1 flex-col gap-1\">\n          <span className=\"text-sm font-medium\">Clara Whitfield</span>\n          <span className=\"text-xs text-muted-foreground\">\n            Design engineer writing about interfaces, motion and calm software.\n          </span>\n        </div>\n        <Button variant=\"outline\" size=\"sm\">\n          Follow\n        </Button>\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

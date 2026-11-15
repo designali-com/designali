@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "resizable-47",
+  "type": "registry:example",
+  "description": "Resizable layout showing skeleton placeholders while data loads.",
+  "files": [
+    {
+      "path": "registry/designali/examples/resizable/resizable-47.tsx",
+      "content": "import {\n  ResizableHandle,\n  ResizablePanel,\n  ResizablePanelGroup,\n} from \"@workspace/ui/components/resizable\"\nimport { Skeleton } from \"@workspace/ui/components/skeleton\"\nimport { Spinner } from \"@workspace/ui/components/spinner\"\n\nexport default function LoadingSkeletonPanels() {\n  return (\n    <ResizablePanelGroup\n      orientation=\"horizontal\"\n      className=\"h-64 w-full max-w-xl border\"\n    >\n      <ResizablePanel defaultSize=\"35%\" minSize=\"25%\">\n        <div className=\"flex h-full flex-col gap-3 p-3\">\n          {[0, 1, 2, 3].map((i) => (\n            <div key={i} className=\"flex items-center gap-2\">\n              <Skeleton className=\"size-8 shrink-0\" />\n              <div className=\"flex flex-1 flex-col gap-1.5\">\n                <Skeleton className=\"h-2.5 w-3/4\" />\n                <Skeleton className=\"h-2 w-1/2\" />\n              </div>\n            </div>\n          ))}\n        </div>\n      </ResizablePanel>\n      <ResizableHandle withHandle />\n      <ResizablePanel defaultSize=\"65%\" minSize=\"40%\">\n        <div className=\"flex h-full flex-col gap-3 p-4\">\n          <div className=\"flex items-center gap-2 text-xs text-muted-foreground\">\n            <Spinner />\n            Loading conversation...\n          </div>\n          <Skeleton className=\"h-4 w-1/2\" />\n          <Skeleton className=\"h-20 w-full\" />\n          <Skeleton className=\"h-3 w-2/3\" />\n        </div>\n      </ResizablePanel>\n    </ResizablePanelGroup>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

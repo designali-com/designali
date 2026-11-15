@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toast-33",
+  "type": "registry:example",
+  "description": "A failing request shows an error toast whose Retry action re-runs it until it succeeds.",
+  "files": [
+    {
+      "path": "registry/designali/examples/toast/toast-33.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { PlugIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Toaster, createToastManager } from \"@workspace/ui/components/toast\"\n\nconst notify = createToastManager()\n\nexport default function RetryOnErrorToast() {\n  const attempts = React.useRef(0)\n\n  function run() {\n    attempts.current += 1\n    const ok = attempts.current >= 2\n    const request = new Promise<void>((resolve, reject) =>\n      setTimeout(() => (ok ? resolve() : reject(new Error(\"timeout\"))), 1200)\n    )\n    notify\n      .promise(request, {\n        loading: \"Connecting to Corvia test account...\",\n        success: {\n          title: \"Connected\",\n          description: \"Payments are ready to accept.\",\n        },\n        error: {\n          title: \"Connection timed out\",\n          description: \"Attempt \" + attempts.current + \" failed.\",\n          actionProps: { children: \"Retry\", onClick: run },\n        },\n      })\n      .catch(() => {})\n  }\n\n  return (\n    <Toaster toastManager={notify}>\n      <div className=\"flex w-full max-w-xs items-center gap-3 border p-4\">\n        <PlugIcon className=\"size-5 text-muted-foreground\" />\n        <p className=\"flex-1 text-sm font-medium\">Payment provider</p>\n        <Button\n          size=\"sm\"\n          onClick={() => {\n            attempts.current = 0\n            run()\n          }}\n        >\n          Connect\n        </Button>\n      </div>\n    </Toaster>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

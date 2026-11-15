@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "calendar-20",
+  "type": "registry:example",
+  "description": "Right-to-left calendar with the Arabic locale and Eastern Arabic numerals.",
+  "files": [
+    {
+      "path": "registry/designali/examples/calendar/calendar-20.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { arSA } from \"react-day-picker/locale\"\n\nimport { Calendar } from \"@workspace/ui/components/calendar\"\n\nexport default function ArabicRtlCalendar() {\n  const [date, setDate] = React.useState<undefined | Date>(() => new Date())\n\n  return (\n    <div className=\"flex w-full max-w-xs flex-col items-center gap-2\">\n      <Calendar\n        mode=\"single\"\n        dir=\"rtl\"\n        locale={arSA}\n        numerals=\"arab\"\n        selected={date}\n        onSelect={setDate}\n        className=\"border\"\n      />\n      <span className=\"text-xs text-muted-foreground\">\n        Right-to-left layout · Arabic numerals\n      </span>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

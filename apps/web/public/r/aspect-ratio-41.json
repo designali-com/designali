@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "aspect-ratio-41",
+  "type": "registry:example",
+  "description": "A carousel whose slides share a consistent 16:9 frame.",
+  "files": [
+    {
+      "path": "registry/designali/examples/aspect-ratio/aspect-ratio-41.tsx",
+      "content": "import { AspectRatio } from \"@workspace/ui/components/aspect-ratio\"\nimport {\n  Carousel,\n  CarouselContent,\n  CarouselItem,\n  CarouselNext,\n  CarouselPrevious,\n} from \"@workspace/ui/components/carousel\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst slides = [\n  { title: \"Plan\", className: \"from-sky-400 to-indigo-600\" },\n  { title: \"Build\", className: \"from-emerald-400 to-teal-700\" },\n  { title: \"Launch\", className: \"from-orange-400 to-rose-600\" },\n]\n\nexport default function AspectRatioCarousel() {\n  return (\n    <Carousel className=\"w-full max-w-xs\">\n      <CarouselContent>\n        {slides.map((slide, index) => (\n          <CarouselItem key={slide.title}>\n            <AspectRatio\n              ratio={16 / 9}\n              className={cn(\"bg-linear-to-br\", slide.className)}\n            >\n              <div className=\"absolute inset-0 flex flex-col items-center justify-center text-white\">\n                <span className=\"font-mono text-xs opacity-70\">\n                  0{index + 1}\n                </span>\n                <span className=\"text-xl font-semibold\">{slide.title}</span>\n              </div>\n            </AspectRatio>\n          </CarouselItem>\n        ))}\n      </CarouselContent>\n      <CarouselPrevious />\n      <CarouselNext />\n    </Carousel>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

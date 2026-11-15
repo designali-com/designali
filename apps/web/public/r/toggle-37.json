@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toggle-37",
+  "type": "registry:example",
+  "description": "A required consent toggle that shows an aria-invalid error state on submit.",
+  "files": [
+    {
+      "path": "registry/designali/examples/toggle/toggle-37.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { SquareCheckIcon, SquareIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Toggle } from \"@workspace/ui/components/toggle\"\n\nexport default function InvalidConsentToggle() {\n  const [agreed, setAgreed] = React.useState(false)\n  const [submitted, setSubmitted] = React.useState(false)\n  const invalid = submitted && !agreed\n\n  return (\n    <form\n      className=\"flex w-full max-w-xs flex-col gap-3 border p-4\"\n      onSubmit={(e) => {\n        e.preventDefault()\n        setSubmitted(true)\n      }}\n    >\n      <p className=\"text-sm font-medium\">Before you publish</p>\n      <Toggle\n        variant=\"outline\"\n        pressed={agreed}\n        onPressedChange={setAgreed}\n        aria-invalid={invalid || undefined}\n        aria-describedby=\"consent-error\"\n        className=\"justify-start\"\n      >\n        {agreed ? <SquareCheckIcon /> : <SquareIcon />}I own the rights to this\n        content\n      </Toggle>\n      {invalid && (\n        <p id=\"consent-error\" className=\"text-xs text-destructive\">\n          You need to confirm this to publish.\n        </p>\n      )}\n      <Button type=\"submit\">\n        {submitted && agreed ? \"Published\" : \"Publish\"}\n      </Button>\n    </form>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

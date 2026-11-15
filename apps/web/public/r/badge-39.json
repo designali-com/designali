@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "badge-39",
+  "type": "registry:example",
+  "description": "File manager rows with color-coded file extension badges.",
+  "files": [
+    {
+      "path": "registry/designali/examples/badge/badge-39.tsx",
+      "content": "import { Badge } from \"@workspace/ui/components/badge\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst files = [\n  {\n    name: \"Quarterly report\",\n    ext: \"PDF\",\n    size: \"2.4 MB\",\n    className: \"bg-red-600 text-white\",\n  },\n  {\n    name: \"Hero banner\",\n    ext: \"PNG\",\n    size: \"880 KB\",\n    className: \"bg-sky-600 text-white\",\n  },\n  {\n    name: \"Customer list\",\n    ext: \"CSV\",\n    size: \"64 KB\",\n    className: \"bg-emerald-600 text-white\",\n  },\n  {\n    name: \"Brand assets\",\n    ext: \"ZIP\",\n    size: \"31 MB\",\n    className: \"bg-zinc-700 text-white\",\n  },\n]\n\nexport default function FileTypeBadges() {\n  return (\n    <div className=\"w-full max-w-sm divide-y border\">\n      {files.map((file) => (\n        <div key={file.name} className=\"flex items-center gap-3 p-3\">\n          <Badge\n            className={cn(\n              \"w-10 font-mono text-[10px] font-bold\",\n              file.className\n            )}\n          >\n            {file.ext}\n          </Badge>\n          <span className=\"flex-1 truncate text-sm\">{file.name}</span>\n          <span className=\"text-xs text-muted-foreground\">{file.size}</span>\n        </div>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

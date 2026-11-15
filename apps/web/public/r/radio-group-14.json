@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "radio-group-14",
+  "type": "registry:example",
+  "description": "Horizontal five-point agreement scale for a survey statement.",
+  "files": [
+    {
+      "path": "registry/designali/examples/radio-group/radio-group-14.tsx",
+      "content": "import { FieldLegend, FieldSet } from \"@workspace/ui/components/field\"\nimport {\n  RadioGroup,\n  RadioGroupItem,\n} from \"@workspace/ui/components/radio-group\"\n\nconst scale = [\n  { value: \"1\", label: \"Strongly disagree\" },\n  { value: \"2\", label: \"Disagree\" },\n  { value: \"3\", label: \"Neutral\" },\n  { value: \"4\", label: \"Agree\" },\n  { value: \"5\", label: \"Strongly agree\" },\n]\n\nexport default function LikertAgreementScale() {\n  return (\n    <FieldSet className=\"w-full max-w-md\">\n      <FieldLegend variant=\"label\">\n        The onboarding made it easy to get started.\n      </FieldLegend>\n      <RadioGroup defaultValue=\"4\" className=\"grid grid-cols-5 gap-1\">\n        {scale.map((s) => (\n          <label\n            key={s.value}\n            htmlFor={\"likert-\" + s.value}\n            className=\"flex cursor-pointer flex-col items-center gap-2 text-center\"\n          >\n            <RadioGroupItem value={s.value} id={\"likert-\" + s.value} />\n            <span className=\"text-[11px] leading-tight text-muted-foreground\">\n              {s.label}\n            </span>\n          </label>\n        ))}\n      </RadioGroup>\n    </FieldSet>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

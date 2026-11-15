@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "progress-07",
+  "type": "registry:example",
+  "description": "Multi-step wizard header where Back and Next update a step progress bar.",
+  "files": [
+    {
+      "path": "registry/designali/examples/progress/progress-07.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Progress, ProgressLabel } from \"@workspace/ui/components/progress\"\n\nconst steps = [\"Account\", \"Profile\", \"Preferences\", \"Review\"]\n\nexport default function StepWizardProgress() {\n  const [step, setStep] = React.useState(1)\n\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-4 border p-4\">\n      <Progress value={((step + 1) / steps.length) * 100}>\n        <ProgressLabel className=\"text-sm font-medium\">\n          {steps[step]}\n        </ProgressLabel>\n        <span className=\"ms-auto text-xs text-muted-foreground\">\n          Step {step + 1} of {steps.length}\n        </span>\n      </Progress>\n      <p className=\"text-sm text-muted-foreground\">\n        Fill in the {steps[step]?.toLowerCase()} details to continue.\n      </p>\n      <div className=\"flex justify-between\">\n        <Button\n          variant=\"outline\"\n          size=\"sm\"\n          disabled={step === 0}\n          onClick={() => setStep((s) => s - 1)}\n        >\n          Back\n        </Button>\n        <Button\n          size=\"sm\"\n          disabled={step === steps.length - 1}\n          onClick={() => setStep((s) => s + 1)}\n        >\n          Next\n        </Button>\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

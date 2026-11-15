@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "table-39",
+  "type": "registry:example",
+  "description": "Long text cells truncated with ellipsis and full text available in a tooltip.",
+  "files": [
+    {
+      "path": "registry/designali/examples/table/table-39.tsx",
+      "content": "import {\n  Table,\n  TableBody,\n  TableCell,\n  TableHead,\n  TableHeader,\n  TableRow,\n} from \"@workspace/ui/components/table\"\nimport {\n  Tooltip,\n  TooltipContent,\n  TooltipProvider,\n  TooltipTrigger,\n} from \"@workspace/ui/components/tooltip\"\n\nconst notes = [\n  {\n    id: 1,\n    title: \"Kickoff notes\",\n    body: \"Agreed on a six-week timeline with weekly demos on Thursdays and a soft launch for beta customers.\",\n    author: \"Imani\",\n  },\n  {\n    id: 2,\n    title: \"Research synthesis\",\n    body: \"Users struggle to find export settings and expect bulk actions to live in the toolbar, not the overflow menu.\",\n    author: \"Colin\",\n  },\n  {\n    id: 3,\n    title: \"Retro\",\n    body: \"Ship smaller PRs, add preview environments for every branch, and rotate on-call more evenly across the team.\",\n    author: \"Dana\",\n  },\n]\n\nexport default function TruncatedCellsTable() {\n  return (\n    <TooltipProvider>\n      <div className=\"w-full max-w-lg border\">\n        <Table className=\"table-fixed\">\n          <TableHeader>\n            <TableRow>\n              <TableHead className=\"w-32\">Title</TableHead>\n              <TableHead>Summary</TableHead>\n              <TableHead className=\"w-20\">Author</TableHead>\n            </TableRow>\n          </TableHeader>\n          <TableBody>\n            {notes.map((note) => (\n              <TableRow key={note.id}>\n                <TableCell className=\"truncate font-medium\">\n                  {note.title}\n                </TableCell>\n                <TableCell>\n                  <Tooltip>\n                    <TooltipTrigger\n                      render={\n                        <span className=\"block cursor-default truncate text-muted-foreground\" />\n                      }\n                    >\n                      {note.body}\n                    </TooltipTrigger>\n                    <TooltipContent className=\"max-w-64\">\n                      {note.body}\n                    </TooltipContent>\n                  </Tooltip>\n                </TableCell>\n                <TableCell>{note.author}</TableCell>\n              </TableRow>\n            ))}\n          </TableBody>\n        </Table>\n      </div>\n    </TooltipProvider>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

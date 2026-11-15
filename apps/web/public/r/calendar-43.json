@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "calendar-43",
+  "type": "registry:example",
+  "description": "Billing settings calendar locked to one month that only allows days 1 to 28 as the renewal day.",
+  "files": [
+    {
+      "path": "registry/designali/examples/calendar/calendar-43.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { addMonths, format, setDate } from \"date-fns\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Calendar } from \"@workspace/ui/components/calendar\"\nimport {\n  Card,\n  CardContent,\n  CardDescription,\n  CardFooter,\n  CardHeader,\n  CardTitle,\n} from \"@workspace/ui/components/card\"\n\nfunction ordinal(n: number) {\n  const s = [\"th\", \"st\", \"nd\", \"rd\"]\n  const v = n % 100\n  return n + (s[(v - 20) % 10] || s[v] || \"th\")\n}\n\nexport default function BillingAnchorDay() {\n  const [month] = React.useState(() => new Date())\n  const [day, setDay] = React.useState(() => setDate(new Date(), 1))\n  const next = setDate(addMonths(month, 1), day.getDate())\n\n  return (\n    <Card className=\"w-fit\">\n      <CardHeader>\n        <CardTitle>Billing date</CardTitle>\n        <CardDescription>\n          Renew on the {ordinal(day.getDate())} of every month.\n        </CardDescription>\n      </CardHeader>\n      <CardContent>\n        <Calendar\n          mode=\"single\"\n          required\n          month={month}\n          disableNavigation\n          showOutsideDays={false}\n          selected={day}\n          onSelect={setDay}\n          disabled={(d) => d.getDate() > 28}\n          formatters={{ formatCaption: () => \"Day of month\" }}\n          className=\"p-0\"\n        />\n      </CardContent>\n      <CardFooter className=\"justify-between gap-3\">\n        <span className=\"text-muted-foreground\">\n          Next charge {format(next, \"MMM d, yyyy\")}\n        </span>\n        <Button size=\"sm\">Update</Button>\n      </CardFooter>\n    </Card>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

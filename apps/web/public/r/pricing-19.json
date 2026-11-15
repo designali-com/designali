@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "pricing-19",
+  "type": "registry:block",
+  "description": "Two-column Free vs Pro comparison grid with a highlighted Pro column and signup buttons.",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "registry/designali/blocks/pricing/pricing-19.tsx",
+      "content": "import { Check, X } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\n\nconst rows: { label: string; free: boolean | string; pro: boolean | string }[] = [\n  { label: \"Notes and documents\", free: \"Unlimited\", pro: \"Unlimited\" },\n  { label: \"File uploads\", free: \"5 MB each\", pro: \"2 GB each\" },\n  { label: \"Page history\", free: \"7 days\", pro: \"Forever\" },\n  { label: \"Offline mode\", free: true, pro: true },\n  { label: \"Guest collaborators\", free: \"2\", pro: \"100\" },\n  { label: \"AI summaries\", free: false, pro: true },\n  { label: \"Custom publishing domain\", free: false, pro: true },\n  { label: \"Priority support\", free: false, pro: true },\n]\n\nfunction Value({ value }: { value: boolean | string }) {\n  if (value === true)\n    return <Check className=\"size-4 text-foreground\" aria-label=\"Included\" />\n  if (value === false)\n    return <X className=\"size-4 text-muted-foreground/60\" aria-label=\"Not included\" />\n  return <span>{value}</span>\n}\n\nexport default function Pricing19() {\n  return (\n    <section className=\"w-full bg-background py-20 md:py-24\">\n      <div className=\"mx-auto max-w-4xl px-6\">\n        <h2 className=\"text-center text-3xl font-semibold tracking-tight md:text-5xl\">\n          Free vs Pro\n        </h2>\n        <p className=\"mt-4 text-center text-muted-foreground\">\n          Free is genuinely useful. Pro is for when your notes become your\n          business.\n        </p>\n        <div className=\"mt-12 grid grid-cols-[1fr_5.5rem_5.5rem] sm:grid-cols-[1fr_10rem_10rem]\">\n          <div />\n          <div className=\"flex flex-col items-center gap-1 border border-b-0 border-border p-3 text-center sm:p-5\">\n            <span className=\"text-sm font-medium\">Free</span>\n            <span className=\"text-xl font-semibold sm:text-3xl\">$0</span>\n          </div>\n          <div className=\"flex flex-col items-center gap-1 border border-b-0 border-l-0 border-foreground bg-foreground p-3 text-center text-background sm:p-5\">\n            <span className=\"text-sm font-medium\">Pro</span>\n            <span className=\"text-xl font-semibold sm:text-3xl\">$8</span>\n          </div>\n          {rows.map((row) => (\n            <div key={row.label} className=\"contents\">\n              <div className=\"flex items-center border-t border-border py-4 pe-3 text-sm\">\n                {row.label}\n              </div>\n              <div className=\"flex items-center justify-center border-t border-l border-border px-2 py-4 text-center text-xs text-muted-foreground sm:text-sm\">\n                <Value value={row.free} />\n              </div>\n              <div className=\"flex items-center justify-center border-t border-l border-border bg-muted/60 px-2 py-4 text-center text-xs font-medium sm:text-sm\">\n                <Value value={row.pro} />\n              </div>\n            </div>\n          ))}\n          <div className=\"border-t border-border\" />\n          <div className=\"border-t border-border p-2 sm:p-4\">\n            <Button\n              variant=\"outline\"\n              className=\"w-full px-2\"\n              nativeButton={false}\n              render={<a href=\"#\" />}\n            >\n              Sign up\n            </Button>\n          </div>\n          <div className=\"border-t border-border bg-muted/60 p-2 sm:p-4\">\n            <Button\n              className=\"w-full px-2\"\n              nativeButton={false}\n              render={<a href=\"#\" />}\n            >\n              Go Pro\n            </Button>\n          </div>\n        </div>\n        <p className=\"mt-6 text-center text-xs text-muted-foreground\">\n          Pro is $8 per month billed yearly, or $10 month to month.\n        </p>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "800px"
+  },
+  "categories": [
+    "pricing"
+  ]
+}

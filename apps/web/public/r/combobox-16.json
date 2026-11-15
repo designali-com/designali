@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "combobox-16",
+  "type": "registry:example",
+  "description": "Issue label multi-select whose chips and options carry colour dots.",
+  "files": [
+    {
+      "path": "registry/designali/examples/combobox/combobox-16.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport {\n  Combobox,\n  ComboboxChip,\n  ComboboxChips,\n  ComboboxChipsInput,\n  ComboboxContent,\n  ComboboxEmpty,\n  ComboboxItem,\n  ComboboxList,\n  ComboboxValue,\n  useComboboxAnchor,\n} from \"@workspace/ui/components/combobox\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\ntype IssueLabel = { name: string; color: string }\n\nconst labels: IssueLabel[] = [\n  { name: \"bug\", color: \"bg-red-500\" },\n  { name: \"feature\", color: \"bg-emerald-500\" },\n  { name: \"design\", color: \"bg-violet-500\" },\n  { name: \"docs\", color: \"bg-sky-500\" },\n  { name: \"performance\", color: \"bg-amber-500\" },\n]\n\nexport default function IssueLabelChips() {\n  const anchor = useComboboxAnchor()\n  return (\n    <div className=\"w-full max-w-xs\">\n      <Combobox\n        multiple\n        items={labels}\n        defaultValue={[labels[0]!, labels[2]!]}\n        itemToStringLabel={(label: IssueLabel) => label.name}\n        isItemEqualToValue={(a, b) => a.name === b.name}\n      >\n        <ComboboxChips ref={anchor}>\n          <ComboboxValue>\n            {(values: IssueLabel[]) => (\n              <React.Fragment>\n                {values.map((label) => (\n                  <ComboboxChip key={label.name}>\n                    <span className={cn(\"size-2 rounded-full\", label.color)} />\n                    {label.name}\n                  </ComboboxChip>\n                ))}\n                <ComboboxChipsInput placeholder=\"Add label\" />\n              </React.Fragment>\n            )}\n          </ComboboxValue>\n        </ComboboxChips>\n        <ComboboxContent anchor={anchor}>\n          <ComboboxEmpty>No labels found.</ComboboxEmpty>\n          <ComboboxList>\n            {(label: IssueLabel) => (\n              <ComboboxItem key={label.name} value={label}>\n                <span className={cn(\"size-2.5 rounded-full\", label.color)} />\n                {label.name}\n              </ComboboxItem>\n            )}\n          </ComboboxList>\n        </ComboboxContent>\n      </Combobox>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

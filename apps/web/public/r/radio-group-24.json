@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "radio-group-24",
+  "type": "registry:example",
+  "description": "Tip percentage selector that computes the tip amount for a bill.",
+  "files": [
+    {
+      "path": "registry/designali/examples/radio-group/radio-group-24.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport {\n  RadioGroup,\n  RadioGroupItem,\n} from \"@workspace/ui/components/radio-group\"\n\nconst tips = [\"15\", \"18\", \"20\", \"25\"]\n\nexport default function RestaurantTipSelector() {\n  const [tip, setTip] = React.useState(\"18\")\n  const bill = 64.4\n\n  return (\n    <div className=\"flex w-full max-w-xs flex-col gap-3 border p-4\">\n      <div className=\"flex justify-between text-sm\">\n        <span className=\"text-muted-foreground\">Bill</span>\n        <span className=\"tabular-nums\">{\"$\" + bill.toFixed(2)}</span>\n      </div>\n      <RadioGroup\n        value={tip}\n        onValueChange={(v) => setTip(v as string)}\n        aria-label=\"Tip\"\n        className=\"grid grid-cols-4 gap-0 border\"\n      >\n        {tips.map((t) => (\n          <label\n            key={t}\n            htmlFor={\"tip-\" + t}\n            className=\"flex h-12 cursor-pointer flex-col items-center justify-center border-e text-sm last:border-e-0 has-data-checked:bg-primary has-data-checked:text-primary-foreground\"\n          >\n            <RadioGroupItem value={t} id={\"tip-\" + t} className=\"sr-only\" />\n            <span className=\"font-medium\">{t}%</span>\n            <span className=\"text-[10px] opacity-70\">\n              {\"$\" + ((bill * Number(t)) / 100).toFixed(2)}\n            </span>\n          </label>\n        ))}\n      </RadioGroup>\n      <div className=\"flex justify-between text-sm font-medium\">\n        <span>Total</span>\n        <span className=\"tabular-nums\">\n          {\"$\" + (bill * (1 + Number(tip) / 100)).toFixed(2)}\n        </span>\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

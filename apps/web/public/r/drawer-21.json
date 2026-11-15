@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "drawer-21",
+  "type": "registry:example",
+  "description": "Mobile date picker drawer with a calendar and a selected date summary.",
+  "files": [
+    {
+      "path": "registry/designali/examples/drawer/drawer-21.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { CalendarIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Calendar } from \"@workspace/ui/components/calendar\"\nimport {\n  Drawer,\n  DrawerClose,\n  DrawerContent,\n  DrawerDescription,\n  DrawerFooter,\n  DrawerHeader,\n  DrawerTitle,\n  DrawerTrigger,\n} from \"@workspace/ui/components/drawer\"\n\nconst initialDate: Date | undefined = new Date(2026, 10, 20)\n\nexport default function DatePickerDrawer() {\n  const [date, setDate] = React.useState(initialDate)\n  const label = date\n    ? date.toLocaleDateString(\"en-US\", {\n        weekday: \"short\",\n        month: \"short\",\n        day: \"numeric\",\n        year: \"numeric\",\n      })\n    : \"Pick a date\"\n\n  return (\n    <Drawer>\n      <DrawerTrigger\n        render={\n          <Button variant=\"outline\" className=\"w-full max-w-60 justify-start\" />\n        }\n      >\n        <CalendarIcon data-icon=\"inline-start\" />\n        {label}\n      </DrawerTrigger>\n      <DrawerContent>\n        <div className=\"mx-auto flex w-full max-w-xs flex-col\">\n          <DrawerHeader>\n            <DrawerTitle>Check-in date</DrawerTitle>\n            <DrawerDescription>Harborview Suites, Porto</DrawerDescription>\n          </DrawerHeader>\n          <div className=\"flex justify-center p-4\">\n            <Calendar\n              mode=\"single\"\n              selected={date}\n              onSelect={setDate}\n              className=\"border\"\n            />\n          </div>\n          <DrawerFooter>\n            <DrawerClose render={<Button disabled={!date} />}>\n              Confirm {date ? label : \"\"}\n            </DrawerClose>\n          </DrawerFooter>\n        </div>\n      </DrawerContent>\n    </Drawer>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

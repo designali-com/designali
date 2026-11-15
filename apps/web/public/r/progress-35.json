@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "progress-35",
+  "type": "registry:example",
+  "description": "Contact import progress with processed rows and skipped-row errors.",
+  "files": [
+    {
+      "path": "registry/designali/examples/progress/progress-35.tsx",
+      "content": "import { CircleAlertIcon, FileSpreadsheetIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  Progress,\n  ProgressLabel,\n  ProgressValue,\n} from \"@workspace/ui/components/progress\"\n\nexport default function CsvImportProgress() {\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-3 border p-4\">\n      <div className=\"flex items-center gap-2\">\n        <FileSpreadsheetIcon className=\"size-4 text-muted-foreground\" />\n        <span className=\"truncate text-sm font-medium\">contacts-2026.csv</span>\n      </div>\n      <Progress value={3820} max={5000}>\n        <ProgressLabel className=\"text-muted-foreground\">\n          3,820 of 5,000 rows\n        </ProgressLabel>\n        <ProgressValue />\n      </Progress>\n      <div className=\"flex items-center gap-1.5 text-xs text-destructive\">\n        <CircleAlertIcon className=\"size-3.5\" />\n        14 rows skipped: missing email address\n      </div>\n      <div className=\"flex gap-2\">\n        <Button variant=\"outline\" size=\"sm\">\n          Download error log\n        </Button>\n        <Button variant=\"ghost\" size=\"sm\">\n          Cancel import\n        </Button>\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

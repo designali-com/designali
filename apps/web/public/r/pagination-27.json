@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "pagination-27",
+  "type": "registry:example",
+  "description": "Month-by-month report navigator with a Today shortcut and month label.",
+  "files": [
+    {
+      "path": "registry/designali/examples/pagination/pagination-27.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { ChevronLeftIcon, ChevronRightIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  Pagination,\n  PaginationContent,\n  PaginationItem,\n  PaginationLink,\n} from \"@workspace/ui/components/pagination\"\n\nconst months = [\n  \"January\",\n  \"February\",\n  \"March\",\n  \"April\",\n  \"May\",\n  \"June\",\n  \"July\",\n  \"August\",\n  \"September\",\n  \"October\",\n  \"November\",\n  \"December\",\n]\n\nexport default function MonthNavigatorPagination() {\n  const [offset, setOffset] = React.useState(10)\n  const year = 2026 + Math.floor(offset / 12)\n  const label = months[((offset % 12) + 12) % 12] + \" \" + year\n\n  return (\n    <div className=\"flex w-full max-w-sm items-center justify-between gap-2 border p-2\">\n      <Button variant=\"outline\" size=\"sm\" onClick={() => setOffset(10)}>\n        Today\n      </Button>\n      <Pagination className=\"mx-0 w-auto\">\n        <PaginationContent>\n          <PaginationItem>\n            <PaginationLink\n              href=\"#\"\n              aria-label=\"Previous month\"\n              onClick={(event) => {\n                event.preventDefault()\n                setOffset((o) => o - 1)\n              }}\n            >\n              <ChevronLeftIcon />\n            </PaginationLink>\n          </PaginationItem>\n          <PaginationItem className=\"w-32 text-center text-sm font-medium\">\n            {label}\n          </PaginationItem>\n          <PaginationItem>\n            <PaginationLink\n              href=\"#\"\n              aria-label=\"Next month\"\n              onClick={(event) => {\n                event.preventDefault()\n                setOffset((o) => o + 1)\n              }}\n            >\n              <ChevronRightIcon />\n            </PaginationLink>\n          </PaginationItem>\n        </PaginationContent>\n      </Pagination>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

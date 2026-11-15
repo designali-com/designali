@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toast-10",
+  "type": "registry:example",
+  "description": "A Toaster with limit={3} so only the three newest toasts stay visible.",
+  "files": [
+    {
+      "path": "registry/designali/examples/toast/toast-10.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { ShoppingBagIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Toaster, createToastManager } from \"@workspace/ui/components/toast\"\n\nconst notify = createToastManager()\n\nexport default function ToastStackLimit() {\n  const count = React.useRef(0)\n\n  return (\n    <Toaster toastManager={notify} limit={3}>\n      <div className=\"flex w-full max-w-xs flex-col items-center gap-2 border p-4 text-center\">\n        <p className=\"text-sm text-muted-foreground\">\n          Click a few times. Older toasts are hidden once more than three are\n          open.\n        </p>\n        <Button\n          onClick={() => {\n            count.current += 1\n            notify.add({\n              title: \"New order #\" + (1040 + count.current),\n              description: \"Paid via Apple Pay\",\n            })\n          }}\n        >\n          <ShoppingBagIcon data-icon=\"inline-start\" />\n          Simulate order\n        </Button>\n      </div>\n    </Toaster>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

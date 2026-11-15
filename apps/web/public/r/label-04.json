@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "label-04",
+  "type": "registry:example",
+  "description": "Label marked as optional with muted helper text beside it.",
+  "files": [
+    {
+      "path": "registry/designali/examples/label/label-04.tsx",
+      "content": "import { Input } from \"@workspace/ui/components/input\"\nimport { Label } from \"@workspace/ui/components/label\"\n\nexport default function OptionalHintLabel() {\n  return (\n    <div className=\"grid w-full max-w-sm gap-2\">\n      <Label htmlFor=\"company\">\n        Company\n        <span className=\"font-normal text-muted-foreground\">(optional)</span>\n      </Label>\n      <Input id=\"company\" placeholder=\"Brightline Labs\" />\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

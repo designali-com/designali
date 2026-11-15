@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "separator-06",
+  "type": "registry:example",
+  "description": "Sign-in form with a labeled 'or continue with' divider between email and social options.",
+  "files": [
+    {
+      "path": "registry/designali/examples/separator/separator-06.tsx",
+      "content": "import { FingerprintIcon, KeyRoundIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Input } from \"@workspace/ui/components/input\"\nimport { Separator } from \"@workspace/ui/components/separator\"\n\nexport default function OrContinueWithDivider() {\n  return (\n    <div className=\"flex w-full max-w-xs flex-col gap-4\">\n      <Input type=\"email\" placeholder=\"you@fieldnote.app\" aria-label=\"Email\" />\n      <Button className=\"w-full\">Continue with email</Button>\n      <div className=\"flex items-center gap-3\">\n        <Separator className=\"flex-1\" />\n        <span className=\"text-xs text-muted-foreground uppercase\">\n          or continue with\n        </span>\n        <Separator className=\"flex-1\" />\n      </div>\n      <div className=\"grid grid-cols-2 gap-2\">\n        <Button variant=\"outline\">\n          <FingerprintIcon data-icon=\"inline-start\" />\n          SSO\n        </Button>\n        <Button variant=\"outline\">\n          <KeyRoundIcon data-icon=\"inline-start\" />\n          Passkey\n        </Button>\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

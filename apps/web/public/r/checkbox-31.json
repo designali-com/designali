@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "checkbox-31",
+  "type": "registry:example",
+  "description": "Admin feature flag table with a checkbox per environment and a disabled production column.",
+  "files": [
+    {
+      "path": "registry/designali/examples/checkbox/checkbox-31.tsx",
+      "content": "import { LockIcon } from \"lucide-react\"\n\nimport { Checkbox } from \"@workspace/ui/components/checkbox\"\nimport {\n  Table,\n  TableBody,\n  TableCell,\n  TableHead,\n  TableHeader,\n  TableRow,\n} from \"@workspace/ui/components/table\"\n\nconst envs = [\"Dev\", \"Staging\", \"Prod\"]\nconst flags = [\n  { key: \"new-checkout\", on: [\"Dev\", \"Staging\"] },\n  { key: \"ai-summaries\", on: [\"Dev\"] },\n  { key: \"dark-mode-v2\", on: [\"Dev\", \"Staging\", \"Prod\"] },\n  { key: \"usage-billing\", on: [] as string[], locked: true },\n]\n\nexport default function FeatureFlagEnvironments() {\n  return (\n    <Table className=\"w-full max-w-md\">\n      <TableHeader>\n        <TableRow>\n          <TableHead>Flag</TableHead>\n          {envs.map((env) => (\n            <TableHead key={env} className=\"w-16 text-center\">\n              {env}\n            </TableHead>\n          ))}\n        </TableRow>\n      </TableHeader>\n      <TableBody>\n        {flags.map((flag) => (\n          <TableRow key={flag.key}>\n            <TableCell className=\"font-mono text-xs\">\n              {flag.key}\n              {flag.locked && (\n                <LockIcon className=\"ms-1 inline size-3 text-muted-foreground\" />\n              )}\n            </TableCell>\n            {envs.map((env) => (\n              <TableCell key={env}>\n                <div className=\"flex justify-center\">\n                  <Checkbox\n                    aria-label={flag.key + \" in \" + env}\n                    defaultChecked={flag.on.includes(env)}\n                    disabled={flag.locked}\n                  />\n                </div>\n              </TableCell>\n            ))}\n          </TableRow>\n        ))}\n      </TableBody>\n    </Table>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "accordion-29",
+  "type": "registry:example",
+  "description": "Tree-style accordion with the chevron on the left that rotates ninety degrees.",
+  "files": [
+    {
+      "path": "registry/designali/examples/accordion/accordion-29.tsx",
+      "content": "import { ChevronRightIcon } from \"lucide-react\"\n\nimport {\n  Accordion,\n  AccordionContent,\n  AccordionItem,\n  AccordionTrigger,\n} from \"@workspace/ui/components/accordion\"\n\nconst groups = [\n  {\n    value: \"inbox\",\n    title: \"Inbox rules\",\n    body: \"Move newsletters to Reading and archive receipts older than 30 days.\",\n  },\n  {\n    value: \"labels\",\n    title: \"Labels\",\n    body: \"Create up to 50 labels. Nested labels inherit the parent colour.\",\n  },\n  {\n    value: \"filters\",\n    title: \"Saved filters\",\n    body: \"Saved filters appear in the sidebar and update in real time.\",\n  },\n]\n\nexport default function AccordionLeadingChevron() {\n  return (\n    <Accordion defaultValue={[\"labels\"]} className=\"w-full max-w-sm\">\n      {groups.map((group) => (\n        <AccordionItem\n          key={group.value}\n          value={group.value}\n          className=\"border-none\"\n        >\n          <AccordionTrigger className=\"justify-start gap-2 hover:no-underline\">\n            <ChevronRightIcon className=\"size-4 text-muted-foreground transition-transform group-aria-expanded/accordion-trigger:rotate-90\" />\n            {group.title}\n          </AccordionTrigger>\n          <AccordionContent className=\"ms-2 border-s ps-4 text-muted-foreground\">\n            {group.body}\n          </AccordionContent>\n        </AccordionItem>\n      ))}\n    </Accordion>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

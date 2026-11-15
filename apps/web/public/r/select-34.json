@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "select-34",
+  "type": "registry:example",
+  "description": "Event editor where the repeat select reveals an end-date note for recurring events.",
+  "files": [
+    {
+      "path": "registry/designali/examples/select/select-34.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { RepeatIcon } from \"lucide-react\"\n\nimport {\n  Select,\n  SelectContent,\n  SelectItem,\n  SelectSeparator,\n  SelectTrigger,\n  SelectValue,\n} from \"@workspace/ui/components/select\"\n\nconst repeats = [\n  { label: \"Does not repeat\", value: \"none\" },\n  { label: \"Every day\", value: \"daily\" },\n  { label: \"Every weekday\", value: \"weekdays\" },\n  { label: \"Every week\", value: \"weekly\" },\n  { label: \"Every month\", value: \"monthly\" },\n]\n\nexport default function EventRepeatSelect() {\n  const [repeat, setRepeat] = React.useState<string | null>(\"weekly\")\n\n  return (\n    <div className=\"flex w-full max-w-xs flex-col gap-3 border p-4\">\n      <div className=\"flex items-center gap-2 text-sm font-medium\">\n        <span className=\"size-2.5 bg-emerald-500\" />\n        Team standup\n      </div>\n      <Select items={repeats} value={repeat} onValueChange={setRepeat}>\n        <SelectTrigger className=\"w-full\" aria-label=\"Repeat\">\n          <RepeatIcon className=\"text-muted-foreground\" />\n          <SelectValue />\n        </SelectTrigger>\n        <SelectContent>\n          {repeats.map((item, index) => (\n            <React.Fragment key={item.value}>\n              {index === 1 && <SelectSeparator />}\n              <SelectItem value={item.value}>{item.label}</SelectItem>\n            </React.Fragment>\n          ))}\n        </SelectContent>\n      </Select>\n      {repeat !== \"none\" && (\n        <p className=\"text-xs text-muted-foreground\">\n          Repeats until you end the series. You can edit single occurrences\n          later.\n        </p>\n      )}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

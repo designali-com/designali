@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "alert-14",
+  "type": "registry:example",
+  "description": "Info alert announcing a maintenance window with the time and an add-to-calendar action.",
+  "files": [
+    {
+      "path": "registry/designali/examples/alert/alert-14.tsx",
+      "content": "import { CalendarPlusIcon, WrenchIcon } from \"lucide-react\"\n\nimport {\n  Alert,\n  AlertDescription,\n  AlertTitle,\n} from \"@workspace/ui/components/alert\"\nimport { Button } from \"@workspace/ui/components/button\"\n\nexport default function AlertScheduledMaintenance() {\n  return (\n    <Alert variant=\"info\" className=\"max-w-md\">\n      <WrenchIcon />\n      <AlertTitle>Scheduled maintenance</AlertTitle>\n      <AlertDescription>\n        <p>\n          Sunday, Nov 23 from <time>02:00</time> to <time>04:00</time> UTC. The\n          dashboard will be read-only; the API stays online.\n        </p>\n        <Button size=\"xs\" variant=\"outline\" className=\"mt-2\">\n          <CalendarPlusIcon data-icon=\"inline-start\" />\n          Add to calendar\n        </Button>\n      </AlertDescription>\n    </Alert>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

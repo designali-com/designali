@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "textarea-36",
+  "type": "registry:example",
+  "description": "Meeting notes textarea with a button that inserts the current timestamp at the cursor.",
+  "files": [
+    {
+      "path": "registry/designali/examples/textarea/textarea-36.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { ClockIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Label } from \"@workspace/ui/components/label\"\nimport { Textarea } from \"@workspace/ui/components/textarea\"\n\nexport default function MeetingNotesTimestamp() {\n  const ref = React.useRef<null | HTMLTextAreaElement>(null)\n  const [notes, setNotes] = React.useState(\"Weekly sync\\n\")\n\n  function stamp() {\n    const el = ref.current\n    const pos = el?.selectionStart ?? notes.length\n    const time = new Date().toLocaleTimeString([], {\n      hour: \"2-digit\",\n      minute: \"2-digit\",\n    })\n    setNotes(notes.slice(0, pos) + \"[\" + time + \"] \" + notes.slice(pos))\n    el?.focus()\n  }\n\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-2\">\n      <div className=\"flex items-center justify-between\">\n        <Label htmlFor=\"ta-meeting\">Notes</Label>\n        <Button variant=\"outline\" size=\"xs\" onClick={stamp}>\n          <ClockIcon data-icon=\"inline-start\" />\n          Timestamp\n        </Button>\n      </div>\n      <Textarea\n        id=\"ta-meeting\"\n        ref={ref}\n        value={notes}\n        onChange={(e) => setNotes(e.target.value)}\n        className=\"min-h-28\"\n      />\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

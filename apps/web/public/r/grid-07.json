@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "grid-07",
+  "type": "registry:block",
+  "description": "Masonry moodboard mixing colour swatches, pull quotes and design notes in CSS columns.",
+  "dependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/designali/blocks/grid/grid-07.tsx",
+      "content": "const notes = [\n  { kind: \"quote\", text: \"Good design is as little design as possible, but never less than the problem needs.\", meta: \"Studio principle 01\" },\n  { kind: \"swatch\", text: \"Terracotta\", meta: \"#C2703D\", tone: \"from-orange-600 to-amber-500\", h: \"h-56\" },\n  { kind: \"note\", text: \"Header type should feel confident at 64px and still behave at 32px. Test both before signing off.\", meta: \"Type review, Nov 12\" },\n  { kind: \"swatch\", text: \"Deep sea\", meta: \"#1F4E6B\", tone: \"from-sky-900 to-cyan-700\", h: \"h-72\" },\n  { kind: \"quote\", text: \"If the grid is invisible, it is working.\", meta: \"Studio principle 04\" },\n  { kind: \"note\", text: \"Motion budget: 160ms for UI feedback, 320ms for page transitions, nothing longer unless it tells a story.\", meta: \"Motion spec v2\" },\n  { kind: \"swatch\", text: \"Sage\", meta: \"#7D9471\", tone: \"from-lime-800 to-emerald-600\", h: \"h-40\" },\n  { kind: \"note\", text: \"Icons are 1.5px stroke, square caps, drawn on a 24px canvas with a 2px safe area.\", meta: \"Iconography\" },\n  { kind: \"swatch\", text: \"Dusk\", meta: \"#6B4E8C\", tone: \"from-violet-800 to-fuchsia-600\", h: \"h-64\" },\n  { kind: \"quote\", text: \"Make the default state beautiful. Most people never change it.\", meta: \"Studio principle 07\" },\n  { kind: \"swatch\", text: \"Sand\", meta: \"#D8C3A5\", tone: \"from-amber-200 to-stone-300\", h: \"h-48\" },\n  { kind: \"note\", text: \"Photography: natural light, real workspaces, no stock handshakes. Crop tight, leave room for type.\", meta: \"Art direction\" },\n]\n\nexport default function Grid07() {\n  return (\n    <section className=\"w-full bg-muted/30 py-24\">\n      <div className=\"mx-auto max-w-7xl px-6\">\n        <div className=\"flex flex-col justify-between gap-4 md:flex-row md:items-end\">\n          <h2 className=\"text-4xl font-semibold tracking-tight md:text-5xl\">Moodboard</h2>\n          <p className=\"max-w-sm text-sm text-muted-foreground\">\n            The references, rules and colours behind the Fieldnote rebrand,\n            pinned in one place.\n          </p>\n        </div>\n\n        <div className=\"mt-12 columns-1 gap-4 sm:columns-2 lg:columns-4\">\n          {notes.map((note) => (\n            <figure\n              key={note.text}\n              className=\"mb-4 break-inside-avoid border border-border bg-background\"\n            >\n              {note.kind === \"swatch\" ? (\n                <>\n                  <div className={`bg-gradient-to-br ${note.tone} ${note.h}`} />\n                  <figcaption className=\"flex items-baseline justify-between p-4\">\n                    <span className=\"text-sm font-medium\">{note.text}</span>\n                    <span className=\"font-mono text-xs text-muted-foreground\">{note.meta}</span>\n                  </figcaption>\n                </>\n              ) : note.kind === \"quote\" ? (\n                <blockquote className=\"p-6\">\n                  <p className=\"text-xl leading-snug font-medium tracking-tight\">\n                    &ldquo;{note.text}&rdquo;\n                  </p>\n                  <footer className=\"mt-4 text-xs text-muted-foreground\">{note.meta}</footer>\n                </blockquote>\n              ) : (\n                <div className=\"border-l-2 border-foreground p-5\">\n                  <p className=\"text-[10px] tracking-widest text-muted-foreground uppercase\">\n                    {note.meta}\n                  </p>\n                  <p className=\"mt-2 text-sm leading-6\">{note.text}</p>\n                </div>\n              )}\n            </figure>\n          ))}\n        </div>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "1200px"
+  },
+  "categories": [
+    "grid"
+  ]
+}

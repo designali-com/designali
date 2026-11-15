@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "separator-19",
+  "type": "registry:example",
+  "description": "Checkout stepper where separators connect steps and fill in as steps complete.",
+  "files": [
+    {
+      "path": "registry/designali/examples/separator/separator-19.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { CheckIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Separator } from \"@workspace/ui/components/separator\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst steps = [\"Cart\", \"Shipping\", \"Payment\", \"Review\"]\n\nexport default function StepperConnectors() {\n  const [current, setCurrent] = React.useState(2)\n\n  return (\n    <div className=\"flex w-full max-w-md flex-col gap-4\">\n      <div className=\"flex items-center\">\n        {steps.map((step, index) => (\n          <React.Fragment key={step}>\n            {index > 0 && (\n              <Separator\n                className={cn(\"mx-2 flex-1\", index <= current && \"bg-primary\")}\n              />\n            )}\n            <div className=\"flex flex-col items-center gap-1\">\n              <span\n                className={cn(\n                  \"flex size-6 items-center justify-center rounded-full border text-[11px]\",\n                  index < current &&\n                    \"border-primary bg-primary text-primary-foreground\",\n                  index === current && \"border-primary text-primary\"\n                )}\n              >\n                {index < current ? <CheckIcon className=\"size-3\" /> : index + 1}\n              </span>\n              <span className=\"text-[11px] text-muted-foreground\">{step}</span>\n            </div>\n          </React.Fragment>\n        ))}\n      </div>\n      <div className=\"flex justify-between\">\n        <Button\n          variant=\"outline\"\n          size=\"sm\"\n          disabled={current === 0}\n          onClick={() => setCurrent(current - 1)}\n        >\n          Back\n        </Button>\n        <Button\n          size=\"sm\"\n          disabled={current === steps.length - 1}\n          onClick={() => setCurrent(current + 1)}\n        >\n          Next\n        </Button>\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

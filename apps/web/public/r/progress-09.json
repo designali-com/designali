@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "progress-09",
+  "type": "registry:example",
+  "description": "Progress bars in extra-small, default, medium, and large track heights.",
+  "files": [
+    {
+      "path": "registry/designali/examples/progress/progress-09.tsx",
+      "content": "import {\n  Progress,\n  ProgressLabel,\n  ProgressValue,\n} from \"@workspace/ui/components/progress\"\n\nconst sizes = [\n  { label: \"Extra small\", className: \"[&_[data-slot=progress-track]]:h-0.5\" },\n  { label: \"Default\", className: \"\" },\n  { label: \"Medium\", className: \"[&_[data-slot=progress-track]]:h-2\" },\n  { label: \"Large\", className: \"[&_[data-slot=progress-track]]:h-3\" },\n]\n\nexport default function ProgressTrackSizes() {\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-5\">\n      {sizes.map((size, index) => (\n        <Progress\n          key={size.label}\n          value={30 + index * 15}\n          className={size.className}\n        >\n          <ProgressLabel>{size.label}</ProgressLabel>\n          <ProgressValue />\n        </Progress>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

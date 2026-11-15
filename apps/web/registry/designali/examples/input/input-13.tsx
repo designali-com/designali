@@ -1,0 +1,42 @@
+"use client"
+
+import * as React from "react"
+import { CircleCheckIcon } from "lucide-react"
+
+import { Button } from "@workspace/ui/components/button"
+import { Input } from "@workspace/ui/components/input"
+
+export default function NewsletterSignupInput() {
+  const [done, setDone] = React.useState(false)
+
+  return (
+    <div className="w-full max-w-sm border p-4">
+      <p className="text-sm font-medium">The Friday Digest</p>
+      <p className="mb-3 text-xs text-muted-foreground">
+        One email a week with product updates and tips.
+      </p>
+      {done ? (
+        <p className="flex items-center gap-2 text-xs text-emerald-600">
+          <CircleCheckIcon className="size-4" />
+          You&apos;re subscribed. Check your inbox to confirm.
+        </p>
+      ) : (
+        <form
+          className="flex gap-2"
+          onSubmit={(e) => {
+            e.preventDefault()
+            setDone(true)
+          }}
+        >
+          <Input
+            type="email"
+            required
+            placeholder="you@example.com"
+            aria-label="Email address"
+          />
+          <Button type="submit">Subscribe</Button>
+        </form>
+      )}
+    </div>
+  )
+}

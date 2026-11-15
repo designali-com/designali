@@ -1,0 +1,27 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "forms-15",
+  "type": "registry:block",
+  "description": "Centered waitlist signup that swaps to a queue position and referral link on submit.",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button",
+    "input",
+    "label"
+  ],
+  "files": [
+    {
+      "path": "registry/designali/blocks/forms/forms-15.tsx",
+      "content": "\"use client\"\n\nimport { useState } from \"react\"\nimport { ArrowRight, Check, Copy } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Input } from \"@workspace/ui/components/input\"\nimport { Label } from \"@workspace/ui/components/label\"\n\nconst initials = [\"AK\", \"LM\", \"RT\", \"SO\", \"BW\"]\n\nexport default function Forms15() {\n  const [email, setEmail] = useState(\"\")\n  const [joined, setJoined] = useState(false)\n  const [copied, setCopied] = useState(false)\n\n  return (\n    <section className=\"relative w-full overflow-hidden bg-background py-28\">\n      <div\n        className=\"absolute inset-x-0 top-0 h-full bg-[radial-gradient(60%_50%_at_50%_0%,var(--muted),transparent)]\"\n        aria-hidden\n      />\n      <div className=\"relative mx-auto flex max-w-2xl flex-col items-center px-6 text-center\">\n        <span className=\"border border-border bg-background px-3 py-1 font-mono text-[10px] tracking-wider text-muted-foreground uppercase\">\n          Private beta · Spring 2027\n        </span>\n        <h2 className=\"mt-8 text-4xl leading-tight font-semibold tracking-tight md:text-6xl\">\n          Notes that write their own follow-ups.\n        </h2>\n        <p className=\"mt-6 max-w-md text-sm leading-6 text-muted-foreground\">\n          Murmur listens to your meetings and drafts the emails, tickets and\n          docs you would have written anyway. Join the list for early access.\n        </p>\n\n        {joined ? (\n          <div className=\"mt-10 w-full max-w-md border border-border bg-card p-6 text-left\" aria-live=\"polite\">\n            <p className=\"flex items-center gap-2 text-sm font-medium\">\n              <Check className=\"size-4 text-emerald-600 dark:text-emerald-400\" />\n              You are #2,418 on the list\n            </p>\n            <p className=\"mt-2 text-xs leading-5 text-muted-foreground\">\n              Move up 100 spots for every friend who joins with your link.\n            </p>\n            <div className=\"mt-4 flex\">\n              <span className=\"flex h-10 min-w-0 flex-1 items-center truncate border border-r-0 border-border bg-muted px-3 font-mono text-xs\">\n                murmur.ai/r/k7f2q\n              </span>\n              <Button\n                variant=\"outline\"\n                onClick={() => {\n                  setCopied(true)\n                  setTimeout(() => setCopied(false), 1500)\n                }}\n              >\n                {copied ? <Check /> : <Copy />}\n                {copied ? \"Copied\" : \"Copy\"}\n              </Button>\n            </div>\n          </div>\n        ) : (\n          <form\n            className=\"mt-10 flex w-full max-w-md flex-col gap-2 sm:flex-row\"\n            onSubmit={(event) => {\n              event.preventDefault()\n              if (email.includes(\"@\")) setJoined(true)\n            }}\n          >\n            <Label htmlFor=\"f15-email\" className=\"sr-only\">Email</Label>\n            <Input\n              id=\"f15-email\"\n              type=\"email\"\n              required\n              value={email}\n              onChange={(event) => setEmail(event.target.value)}\n              placeholder=\"you@company.com\"\n              className=\"h-12 bg-background\"\n            />\n            <Button type=\"submit\" size=\"lg\">\n              Join waitlist\n              <ArrowRight />\n            </Button>\n          </form>\n        )}\n\n        <div className=\"mt-10 flex items-center gap-3\">\n          <div className=\"flex -space-x-2\">\n            {initials.map((item) => (\n              <span\n                key={item}\n                className=\"flex size-8 items-center justify-center border-2 border-background bg-muted text-[10px] font-medium\"\n              >\n                {item}\n              </span>\n            ))}\n          </div>\n          <p className=\"text-xs text-muted-foreground\">\n            <span className=\"text-foreground\">2,417 people</span> already waiting\n          </p>\n        </div>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "700px"
+  },
+  "categories": [
+    "forms"
+  ]
+}

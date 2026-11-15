@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "select-30",
+  "type": "registry:example",
+  "description": "Metric select driving a small inline SVG bar chart on an analytics card.",
+  "files": [
+    {
+      "path": "registry/designali/examples/select/select-30.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { ChartColumnIcon } from \"lucide-react\"\n\nimport {\n  Select,\n  SelectContent,\n  SelectItem,\n  SelectTrigger,\n  SelectValue,\n} from \"@workspace/ui/components/select\"\n\nconst metrics = [\n  { label: \"Revenue\", value: \"revenue\", data: [12, 18, 15, 22, 28, 24, 31] },\n  { label: \"Orders\", value: \"orders\", data: [30, 26, 34, 29, 38, 41, 36] },\n  { label: \"Refunds\", value: \"refunds\", data: [6, 4, 7, 3, 5, 2, 4] },\n]\n\nconst days = [\"M\", \"T\", \"W\", \"T\", \"F\", \"S\", \"S\"]\n\nexport default function ChartMetricSelect() {\n  const [metric, setMetric] = React.useState<string | null>(\"revenue\")\n  const current = metrics.find((item) => item.value === metric) ?? metrics[0]!\n  const max = Math.max(...current.data)\n\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-4 border p-4\">\n      <div className=\"flex items-center justify-between\">\n        <span className=\"text-sm font-medium\">This week</span>\n        <Select items={metrics} value={metric} onValueChange={setMetric}>\n          <SelectTrigger size=\"sm\" aria-label=\"Metric\">\n            <ChartColumnIcon className=\"text-muted-foreground\" />\n            <SelectValue />\n          </SelectTrigger>\n          <SelectContent>\n            {metrics.map((item) => (\n              <SelectItem key={item.value} value={item.value}>\n                {item.label}\n              </SelectItem>\n            ))}\n          </SelectContent>\n        </Select>\n      </div>\n      <div className=\"flex h-28 items-end gap-2\">\n        {current.data.map((point, index) => (\n          <div key={index} className=\"flex flex-1 flex-col items-center gap-1\">\n            <div\n              className=\"w-full bg-primary/80 transition-all\"\n              style={{ height: (point / max) * 96 }}\n            />\n            <span className=\"text-[10px] text-muted-foreground\">\n              {days[index]}\n            </span>\n          </div>\n        ))}\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

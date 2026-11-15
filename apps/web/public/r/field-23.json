@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "field-23",
+  "type": "registry:example",
+  "description": "Net promoter score question using a toggle group of 0–10 with anchor labels.",
+  "files": [
+    {
+      "path": "registry/designali/examples/field/field-23.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport {\n  FieldDescription,\n  FieldLegend,\n  FieldSet,\n} from \"@workspace/ui/components/field\"\nimport {\n  ToggleGroup,\n  ToggleGroupItem,\n} from \"@workspace/ui/components/toggle-group\"\n\nexport default function NpsScoreField() {\n  const [score, setScore] = React.useState<string[]>([])\n\n  return (\n    <FieldSet className=\"w-full max-w-md\">\n      <FieldLegend variant=\"label\">\n        How likely are you to recommend Fieldnote to a friend?\n      </FieldLegend>\n      <ToggleGroup\n        variant=\"outline\"\n        size=\"sm\"\n        value={score}\n        onValueChange={(v) => setScore(v as string[])}\n        className=\"w-full\"\n        aria-label=\"Score from 0 to 10\"\n      >\n        {Array.from({ length: 11 }, (_, i) => (\n          <ToggleGroupItem key={i} value={String(i)} className=\"flex-1 px-0\">\n            {i}\n          </ToggleGroupItem>\n        ))}\n      </ToggleGroup>\n      <div className=\"flex justify-between text-xs text-muted-foreground\">\n        <span>Not likely</span>\n        <span>Extremely likely</span>\n      </div>\n      {score[0] && (\n        <FieldDescription>Thanks — you picked {score[0]}.</FieldDescription>\n      )}\n    </FieldSet>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

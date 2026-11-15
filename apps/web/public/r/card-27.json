@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "card-27",
+  "type": "registry:example",
+  "description": "Widget card in an error state with a message, error code and retry button that shows a spinner.",
+  "files": [
+    {
+      "path": "registry/designali/examples/card/card-27.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { CloudOffIcon, RefreshCwIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  Card,\n  CardContent,\n  CardDescription,\n  CardFooter,\n  CardHeader,\n  CardTitle,\n} from \"@workspace/ui/components/card\"\nimport { Spinner } from \"@workspace/ui/components/spinner\"\n\nexport default function ErrorStateCard() {\n  const [retrying, setRetrying] = React.useState(false)\n\n  return (\n    <Card className=\"w-full max-w-sm ring-destructive/30\">\n      <CardHeader>\n        <CardTitle>Conversion funnel</CardTitle>\n        <CardDescription>Last 30 days</CardDescription>\n      </CardHeader>\n      <CardContent className=\"flex flex-col items-center gap-2 py-6 text-center\">\n        <span className=\"flex size-10 items-center justify-center bg-destructive/10 text-destructive\">\n          <CloudOffIcon className=\"size-5\" />\n        </span>\n        <span className=\"font-medium\">Couldn&apos;t load this chart</span>\n        <span className=\"text-muted-foreground\">\n          The analytics service timed out. Your data is safe.\n        </span>\n        <code className=\"bg-muted px-1.5 py-0.5 font-mono text-[10px] text-muted-foreground\">\n          ERR_TIMEOUT · req_8f2c91\n        </code>\n      </CardContent>\n      <CardFooter className=\"justify-center gap-2\">\n        <Button\n          size=\"sm\"\n          disabled={retrying}\n          onClick={() => {\n            setRetrying(true)\n            setTimeout(() => setRetrying(false), 1500)\n          }}\n        >\n          {retrying ? (\n            <Spinner data-icon=\"inline-start\" />\n          ) : (\n            <RefreshCwIcon data-icon=\"inline-start\" />\n          )}\n          {retrying ? \"Retrying...\" : \"Try again\"}\n        </Button>\n        <Button size=\"sm\" variant=\"ghost\">\n          Status page\n        </Button>\n      </CardFooter>\n    </Card>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

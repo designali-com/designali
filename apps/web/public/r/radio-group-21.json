@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "radio-group-21",
+  "type": "registry:example",
+  "description": "Cancellation survey where choosing Other reveals a free-text field.",
+  "files": [
+    {
+      "path": "registry/designali/examples/radio-group/radio-group-21.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  Field,\n  FieldDescription,\n  FieldLabel,\n  FieldLegend,\n  FieldSet,\n} from \"@workspace/ui/components/field\"\nimport {\n  RadioGroup,\n  RadioGroupItem,\n} from \"@workspace/ui/components/radio-group\"\nimport { Textarea } from \"@workspace/ui/components/textarea\"\n\nconst reasons = [\n  { value: \"price\", label: \"It's too expensive\" },\n  { value: \"features\", label: \"Missing features I need\" },\n  { value: \"switch\", label: \"Switching to another tool\" },\n  { value: \"other\", label: \"Other\" },\n]\n\nexport default function CancellationReasonOther() {\n  const [reason, setReason] = React.useState(\"price\")\n\n  return (\n    <FieldSet className=\"w-full max-w-sm\">\n      <FieldLegend>Why are you cancelling?</FieldLegend>\n      <FieldDescription>Your feedback helps us improve.</FieldDescription>\n      <RadioGroup value={reason} onValueChange={(v) => setReason(v as string)}>\n        {reasons.map((r) => (\n          <Field key={r.value} orientation=\"horizontal\">\n            <RadioGroupItem value={r.value} id={\"cancel-\" + r.value} />\n            <FieldLabel htmlFor={\"cancel-\" + r.value} className=\"font-normal\">\n              {r.label}\n            </FieldLabel>\n          </Field>\n        ))}\n      </RadioGroup>\n      {reason === \"other\" && (\n        <Textarea\n          aria-label=\"Tell us more\"\n          placeholder=\"Tell us a little more...\"\n          className=\"min-h-20\"\n        />\n      )}\n      <Button variant=\"destructive\" className=\"self-start\">\n        Cancel subscription\n      </Button>\n    </FieldSet>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

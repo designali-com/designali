@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "dialog-24",
+  "type": "registry:example",
+  "description": "Security dialog showing a generated QR pattern and a one-time code input.",
+  "files": [
+    {
+      "path": "registry/designali/examples/dialog/dialog-24.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { ShieldCheckIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  Dialog,\n  DialogClose,\n  DialogContent,\n  DialogDescription,\n  DialogFooter,\n  DialogHeader,\n  DialogTitle,\n  DialogTrigger,\n} from \"@workspace/ui/components/dialog\"\nimport {\n  InputOTP,\n  InputOTPGroup,\n  InputOTPSlot,\n} from \"@workspace/ui/components/input-otp\"\n\nconst pattern = Array.from(\n  { length: 121 },\n  (_, index) => (index * 37 + (index % 7) * 11) % 3 === 0\n)\n\nexport default function TwoFactorSetupDialog() {\n  const [code, setCode] = React.useState(\"\")\n\n  return (\n    <Dialog onOpenChange={(open) => !open && setCode(\"\")}>\n      <DialogTrigger render={<Button variant=\"outline\" />}>\n        <ShieldCheckIcon data-icon=\"inline-start\" />\n        Enable two-factor\n      </DialogTrigger>\n      <DialogContent>\n        <DialogHeader>\n          <DialogTitle>Set up authenticator app</DialogTitle>\n          <DialogDescription>\n            Scan the code, then enter the 6-digit code it shows.\n          </DialogDescription>\n        </DialogHeader>\n        <div\n          className=\"mx-auto grid size-36 grid-cols-11 gap-px border bg-background p-2\"\n          aria-hidden=\"true\"\n        >\n          {pattern.map((filled, index) => (\n            <span\n              key={index}\n              className={filled ? \"bg-foreground\" : \"bg-transparent\"}\n            />\n          ))}\n        </div>\n        <p className=\"text-center font-mono text-muted-foreground\">\n          JBSW Y3DP EHPK 3PXP\n        </p>\n        <div className=\"flex justify-center\">\n          <InputOTP maxLength={6} value={code} onChange={setCode}>\n            <InputOTPGroup>\n              {[0, 1, 2, 3, 4, 5].map((index) => (\n                <InputOTPSlot key={index} index={index} />\n              ))}\n            </InputOTPGroup>\n          </InputOTP>\n        </div>\n        <DialogFooter>\n          <DialogClose render={<Button variant=\"outline\" />}>\n            Cancel\n          </DialogClose>\n          <DialogClose render={<Button disabled={code.length < 6} />}>\n            Verify and enable\n          </DialogClose>\n        </DialogFooter>\n      </DialogContent>\n    </Dialog>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "alert-10",
+  "type": "registry:example",
+  "description": "Dismissible info alert with a close button and a way to bring it back.",
+  "files": [
+    {
+      "path": "registry/designali/examples/alert/alert-10.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { MegaphoneIcon, RotateCcwIcon, XIcon } from \"lucide-react\"\n\nimport {\n  Alert,\n  AlertAction,\n  AlertDescription,\n  AlertTitle,\n} from \"@workspace/ui/components/alert\"\nimport { Button } from \"@workspace/ui/components/button\"\n\nexport default function AlertDismissible() {\n  const [open, setOpen] = React.useState(true)\n\n  if (!open) {\n    return (\n      <Button size=\"sm\" variant=\"outline\" onClick={() => setOpen(true)}>\n        <RotateCcwIcon data-icon=\"inline-start\" />\n        Show announcement\n      </Button>\n    )\n  }\n\n  return (\n    <Alert variant=\"info\" className=\"max-w-md\">\n      <MegaphoneIcon />\n      <AlertTitle>Dark mode is here</AlertTitle>\n      <AlertDescription>\n        Switch themes from the avatar menu, or follow your system setting.\n      </AlertDescription>\n      <AlertAction>\n        <Button\n          size=\"icon-xs\"\n          variant=\"ghost\"\n          aria-label=\"Dismiss\"\n          onClick={() => setOpen(false)}\n        >\n          <XIcon />\n        </Button>\n      </AlertAction>\n    </Alert>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "hover-card-31",
+  "type": "registry:example",
+  "description": "Course syllabus lessons that preview duration, resources, and completion progress.",
+  "files": [
+    {
+      "path": "registry/designali/examples/hover-card/hover-card-31.tsx",
+      "content": "import { CircleCheckIcon, PlayCircleIcon } from \"lucide-react\"\n\nimport {\n  HoverCard,\n  HoverCardContent,\n  HoverCardTrigger,\n} from \"@workspace/ui/components/hover-card\"\n\nconst lessons = [\n  { title: \"Intro to layout grids\", minutes: 12, resources: 2, progress: 100 },\n  { title: \"Responsive breakpoints\", minutes: 18, resources: 3, progress: 45 },\n  { title: \"Fluid typography\", minutes: 22, resources: 1, progress: 0 },\n]\n\nexport default function CourseLessonHoverCard() {\n  return (\n    <ol className=\"flex w-full max-w-xs flex-col gap-1 text-sm\">\n      {lessons.map((lesson, i) => (\n        <li key={lesson.title}>\n          <HoverCard>\n            <HoverCardTrigger\n              href=\"#\"\n              className=\"flex items-center gap-2 px-2 py-1.5 hover:bg-muted\"\n            >\n              {lesson.progress === 100 ? (\n                <CircleCheckIcon className=\"size-4 text-emerald-600\" />\n              ) : (\n                <PlayCircleIcon className=\"size-4 text-muted-foreground\" />\n              )}\n              {i + 1}. {lesson.title}\n            </HoverCardTrigger>\n            <HoverCardContent side=\"right\" className=\"flex w-52 flex-col gap-2\">\n              <p className=\"font-medium\">{lesson.title}</p>\n              <div className=\"flex gap-3 text-muted-foreground\">\n                <span>{lesson.minutes} min</span>\n                <span>{lesson.resources} resources</span>\n              </div>\n              <div className=\"h-1.5 bg-muted\">\n                <div\n                  className=\"h-full bg-primary\"\n                  style={{ width: lesson.progress + \"%\" }}\n                />\n              </div>\n              <p className=\"text-muted-foreground\">\n                {lesson.progress}% complete\n              </p>\n            </HoverCardContent>\n          </HoverCard>\n        </li>\n      ))}\n    </ol>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

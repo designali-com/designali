@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-otp-13",
+  "type": "registry:example",
+  "description": "Eight-character alphanumeric recovery code that is uppercased as you type.",
+  "files": [
+    {
+      "path": "registry/designali/examples/input-otp/input-otp-13.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { REGEXP_ONLY_DIGITS_AND_CHARS } from \"input-otp\"\n\nimport {\n  Field,\n  FieldDescription,\n  FieldLabel,\n} from \"@workspace/ui/components/field\"\nimport {\n  InputOTP,\n  InputOTPGroup,\n  InputOTPSeparator,\n  InputOTPSlot,\n} from \"@workspace/ui/components/input-otp\"\n\nexport default function AlphanumericRecoveryCode() {\n  const [value, setValue] = React.useState(\"\")\n\n  return (\n    <Field className=\"w-fit\">\n      <FieldLabel htmlFor=\"recovery-code\">Recovery code</FieldLabel>\n      <InputOTP\n        id=\"recovery-code\"\n        maxLength={8}\n        pattern={REGEXP_ONLY_DIGITS_AND_CHARS}\n        value={value}\n        onChange={(next) => setValue(next.toUpperCase())}\n      >\n        <InputOTPGroup>\n          <InputOTPSlot index={0} className=\"font-mono\" />\n          <InputOTPSlot index={1} className=\"font-mono\" />\n          <InputOTPSlot index={2} className=\"font-mono\" />\n          <InputOTPSlot index={3} className=\"font-mono\" />\n        </InputOTPGroup>\n        <InputOTPSeparator />\n        <InputOTPGroup>\n          <InputOTPSlot index={4} className=\"font-mono\" />\n          <InputOTPSlot index={5} className=\"font-mono\" />\n          <InputOTPSlot index={6} className=\"font-mono\" />\n          <InputOTPSlot index={7} className=\"font-mono\" />\n        </InputOTPGroup>\n      </InputOTP>\n      <FieldDescription>\n        Use one of the codes you saved when enabling 2FA.\n      </FieldDescription>\n    </Field>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

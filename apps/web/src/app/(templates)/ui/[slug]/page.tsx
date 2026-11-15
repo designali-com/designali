@@ -36,7 +36,8 @@ export default async function UIPage({
   }
 
   const components = Object.keys(Index).filter((name) => {
-    return name === `${slug}-variants` || name.startsWith(`${slug}-`)
+    // Exact "<slug>-NN" match, so e.g. "input" doesn't pick up "input-otp-01".
+    return name === `${slug}-variants` || new RegExp(`^${slug}-\\d+$`).test(name)
   })
 
   const Icon = currentCategory.iconName

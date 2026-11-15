@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "select-06",
+  "type": "registry:example",
+  "description": "A disabled select locked behind a plan upgrade, with an explanatory badge.",
+  "files": [
+    {
+      "path": "registry/designali/examples/select/select-06.tsx",
+      "content": "import { LockIcon } from \"lucide-react\"\n\nimport { Badge } from \"@workspace/ui/components/badge\"\nimport {\n  Field,\n  FieldDescription,\n  FieldLabel,\n} from \"@workspace/ui/components/field\"\nimport {\n  Select,\n  SelectContent,\n  SelectItem,\n  SelectTrigger,\n  SelectValue,\n} from \"@workspace/ui/components/select\"\n\nconst retention = [\n  { label: \"30 days\", value: \"30\" },\n  { label: \"90 days\", value: \"90\" },\n  { label: \"1 year\", value: \"365\" },\n]\n\nexport default function DisabledPlanSelect() {\n  return (\n    <Field className=\"w-full max-w-xs\">\n      <div className=\"flex items-center justify-between\">\n        <FieldLabel htmlFor=\"retention\">Log retention</FieldLabel>\n        <Badge variant=\"secondary\">\n          <LockIcon />\n          Pro\n        </Badge>\n      </div>\n      <Select items={retention} defaultValue=\"30\" disabled>\n        <SelectTrigger id=\"retention\" className=\"w-full\">\n          <SelectValue />\n        </SelectTrigger>\n        <SelectContent>\n          {retention.map((item) => (\n            <SelectItem key={item.value} value={item.value}>\n              {item.label}\n            </SelectItem>\n          ))}\n        </SelectContent>\n      </Select>\n      <FieldDescription>\n        Upgrade to Pro to keep logs for up to a year.\n      </FieldDescription>\n    </Field>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

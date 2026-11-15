@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "pagination-39",
+  "type": "registry:example",
+  "description": "Server-rendered style pagination whose links point at ?page= URLs with no client state.",
+  "files": [
+    {
+      "path": "registry/designali/examples/pagination/pagination-39.tsx",
+      "content": "import {\n  Pagination,\n  PaginationContent,\n  PaginationEllipsis,\n  PaginationItem,\n  PaginationLink,\n  PaginationNext,\n  PaginationPrevious,\n} from \"@workspace/ui/components/pagination\"\n\nconst current = 4\nconst total = 9\n\nexport default function QueryStringPagination() {\n  const href = (page: number) => \"?status=active&page=\" + page\n\n  return (\n    <div className=\"flex w-full max-w-md flex-col items-center gap-2\">\n      <Pagination>\n        <PaginationContent>\n          <PaginationItem>\n            <PaginationPrevious href={href(current - 1)} />\n          </PaginationItem>\n          <PaginationItem>\n            <PaginationLink href={href(1)}>1</PaginationLink>\n          </PaginationItem>\n          <PaginationItem>\n            <PaginationEllipsis />\n          </PaginationItem>\n          {[current - 1, current, current + 1].map((p) => (\n            <PaginationItem key={p}>\n              <PaginationLink href={href(p)} isActive={p === current}>\n                {p}\n              </PaginationLink>\n            </PaginationItem>\n          ))}\n          <PaginationItem>\n            <PaginationEllipsis />\n          </PaginationItem>\n          <PaginationItem>\n            <PaginationLink href={href(total)}>{total}</PaginationLink>\n          </PaginationItem>\n          <PaginationItem>\n            <PaginationNext href={href(current + 1)} />\n          </PaginationItem>\n        </PaginationContent>\n      </Pagination>\n      <code className=\"bg-muted px-1.5 py-0.5 font-mono text-[11px] text-muted-foreground\">\n        /orders{href(current)}\n      </code>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "calendar-24",
+  "type": "registry:example",
+  "description": "Small sidebar calendar with tight cells, navigation after the caption and an upcoming list.",
+  "files": [
+    {
+      "path": "registry/designali/examples/calendar/calendar-24.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { Calendar } from \"@workspace/ui/components/calendar\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst upcoming = [\n  { time: \"10:00\", title: \"Standup\", tone: \"bg-sky-500\" },\n  { time: \"13:30\", title: \"Hiring sync\", tone: \"bg-violet-500\" },\n  { time: \"17:00\", title: \"Release go/no-go\", tone: \"bg-amber-500\" },\n]\n\nexport default function CompactSidebarCalendar() {\n  const [date, setDate] = React.useState<undefined | Date>(() => new Date())\n\n  return (\n    <aside className=\"flex w-full max-w-60 flex-col border bg-sidebar text-sidebar-foreground\">\n      <Calendar\n        mode=\"single\"\n        selected={date}\n        onSelect={setDate}\n        navLayout=\"after\"\n        showOutsideDays={false}\n        className=\"w-full bg-transparent [--cell-size:--spacing(6)] [&_.rdp-day]:text-xs\"\n      />\n      <div className=\"grid gap-1.5 border-t p-3\">\n        <span className=\"text-[11px] font-medium tracking-wide text-muted-foreground uppercase\">\n          Today\n        </span>\n        {upcoming.map((u) => (\n          <div key={u.title} className=\"flex items-center gap-2 text-xs\">\n            <span className={cn(\"size-1.5 rounded-full\", u.tone)} />\n            <span className=\"text-muted-foreground tabular-nums\">{u.time}</span>\n            <span className=\"truncate\">{u.title}</span>\n          </div>\n        ))}\n      </div>\n    </aside>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

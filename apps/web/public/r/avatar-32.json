@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "avatar-32",
+  "type": "registry:example",
+  "description": "An AI assistant message distinguished by an icon avatar with a sparkle badge.",
+  "files": [
+    {
+      "path": "registry/designali/examples/avatar/avatar-32.tsx",
+      "content": "import { BotIcon, SparklesIcon } from \"lucide-react\"\n\nimport {\n  Avatar,\n  AvatarBadge,\n  AvatarFallback,\n} from \"@workspace/ui/components/avatar\"\n\nexport default function AssistantBotAvatar() {\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-4\">\n      <div className=\"flex gap-3\">\n        <Avatar>\n          <AvatarFallback className=\"bg-foreground text-background\">\n            <BotIcon className=\"size-4\" />\n          </AvatarFallback>\n          <AvatarBadge className=\"bg-violet-500 text-white\">\n            <SparklesIcon />\n          </AvatarBadge>\n        </Avatar>\n        <div className=\"flex-1 border bg-muted/40 p-3 text-sm\">\n          <p className=\"mb-1 text-xs font-medium text-muted-foreground\">\n            Assistant\n          </p>\n          I found 3 invoices overdue by more than 30 days. Want me to draft\n          reminder emails?\n        </div>\n      </div>\n      <div className=\"flex flex-row-reverse gap-3\">\n        <Avatar>\n          <AvatarFallback>SJ</AvatarFallback>\n        </Avatar>\n        <p className=\"bg-primary px-3 py-2 text-sm text-primary-foreground\">\n          Yes, please.\n        </p>\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

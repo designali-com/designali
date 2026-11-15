@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "pagination-31",
+  "type": "registry:example",
+  "description": "Pagination that also responds to the left and right arrow keys, with key hints.",
+  "files": [
+    {
+      "path": "registry/designali/examples/pagination/pagination-31.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { Kbd } from \"@workspace/ui/components/kbd\"\nimport {\n  Pagination,\n  PaginationContent,\n  PaginationItem,\n  PaginationLink,\n} from \"@workspace/ui/components/pagination\"\n\nconst TOTAL = 8\n\nexport default function KeyboardPagination() {\n  const [page, setPage] = React.useState(1)\n\n  React.useEffect(() => {\n    const onKey = (event: KeyboardEvent) => {\n      const target = event.target as HTMLElement\n      if (target.closest(\"input, textarea\")) return\n      if (event.key === \"ArrowLeft\") setPage((p) => Math.max(1, p - 1))\n      if (event.key === \"ArrowRight\") setPage((p) => Math.min(TOTAL, p + 1))\n    }\n    window.addEventListener(\"keydown\", onKey)\n    return () => window.removeEventListener(\"keydown\", onKey)\n  }, [])\n\n  return (\n    <div className=\"flex w-full max-w-md flex-col items-center gap-3\">\n      <Pagination>\n        <PaginationContent>\n          {Array.from({ length: TOTAL }, (_, i) => i + 1).map((p) => (\n            <PaginationItem key={p}>\n              <PaginationLink\n                href=\"#\"\n                size=\"icon-sm\"\n                isActive={p === page}\n                onClick={(event) => {\n                  event.preventDefault()\n                  setPage(p)\n                }}\n              >\n                {p}\n              </PaginationLink>\n            </PaginationItem>\n          ))}\n        </PaginationContent>\n      </Pagination>\n      <p className=\"flex items-center gap-1.5 text-xs text-muted-foreground\">\n        Use <Kbd>←</Kbd> <Kbd>→</Kbd> to change pages\n      </p>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

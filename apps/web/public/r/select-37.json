@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "select-37",
+  "type": "registry:example",
+  "description": "Numeric input joined with a unit select in a button group for package weight.",
+  "files": [
+    {
+      "path": "registry/designali/examples/select/select-37.tsx",
+      "content": "import { ButtonGroup } from \"@workspace/ui/components/button-group\"\nimport {\n  Field,\n  FieldDescription,\n  FieldLabel,\n} from \"@workspace/ui/components/field\"\nimport { Input } from \"@workspace/ui/components/input\"\nimport {\n  Select,\n  SelectContent,\n  SelectItem,\n  SelectTrigger,\n  SelectValue,\n} from \"@workspace/ui/components/select\"\n\nconst units = [\n  { label: \"kg\", value: \"kg\" },\n  { label: \"lb\", value: \"lb\" },\n  { label: \"oz\", value: \"oz\" },\n]\n\nexport default function WeightUnitSelect() {\n  return (\n    <Field className=\"w-full max-w-60\">\n      <FieldLabel htmlFor=\"weight\">Package weight</FieldLabel>\n      <ButtonGroup className=\"w-full\">\n        <Input\n          id=\"weight\"\n          type=\"number\"\n          defaultValue=\"2.4\"\n          step=\"0.1\"\n          className=\"flex-1\"\n        />\n        <Select items={units} defaultValue=\"kg\">\n          <SelectTrigger className=\"w-20\" aria-label=\"Unit\">\n            <SelectValue />\n          </SelectTrigger>\n          <SelectContent alignItemWithTrigger={false} align=\"end\">\n            {units.map((item) => (\n              <SelectItem key={item.value} value={item.value}>\n                {item.label}\n              </SelectItem>\n            ))}\n          </SelectContent>\n        </Select>\n      </ButtonGroup>\n      <FieldDescription>Include packaging for accurate rates.</FieldDescription>\n    </Field>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

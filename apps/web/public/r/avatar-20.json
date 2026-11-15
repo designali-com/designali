@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "avatar-20",
+  "type": "registry:example",
+  "description": "Icon fallbacks for guests, deleted users, and anonymous viewers.",
+  "files": [
+    {
+      "path": "registry/designali/examples/avatar/avatar-20.tsx",
+      "content": "import { UserIcon, UserXIcon, VenetianMaskIcon } from \"lucide-react\"\n\nimport { Avatar, AvatarFallback } from \"@workspace/ui/components/avatar\"\n\nconst variants = [\n  { label: \"Guest\", icon: UserIcon },\n  { label: \"Deleted user\", icon: UserXIcon },\n  { label: \"Anonymous\", icon: VenetianMaskIcon },\n]\n\nexport default function GuestIconFallback() {\n  return (\n    <div className=\"flex flex-wrap items-center justify-center gap-6\">\n      {variants.map((variant) => (\n        <div key={variant.label} className=\"flex flex-col items-center gap-2\">\n          <Avatar size=\"lg\">\n            <AvatarFallback>\n              <variant.icon className=\"size-5\" />\n            </AvatarFallback>\n          </Avatar>\n          <span className=\"text-xs text-muted-foreground\">{variant.label}</span>\n        </div>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

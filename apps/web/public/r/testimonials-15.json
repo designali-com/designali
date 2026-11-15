@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "testimonials-15",
+  "type": "registry:block",
+  "description": "Sticky rating headline and CTA on the left with a scrolling stack of quote cards on the right.",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "registry/designali/blocks/testimonials/testimonials-15.tsx",
+      "content": "import { ArrowRight, Star } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\n\nconst items = [\n  { quote: \"The only analytics tool where I trust the numbers enough to put them in a board deck.\", name: \"Harriet Cole\", role: \"CEO, Quillfeather\" },\n  { quote: \"We cut our cloud bill by a third once we could see which features actually got used.\", name: \"Leo Varga\", role: \"Head of Platform, Tessellate\" },\n  { quote: \"Setup was a single script tag. Our first insight arrived before lunch.\", name: \"Amara Nwosu\", role: \"Growth PM, Kindling\" },\n  { quote: \"Privacy-friendly by default meant our DPO approved it in one meeting.\", name: \"Jonas Weber\", role: \"Data Protection, Alpenrose\" },\n  { quote: \"Support replies in minutes and the answers come from engineers, not scripts.\", name: \"Sienna Park\", role: \"Founder, Lumo Labs\" },\n]\n\nexport default function Testimonials15() {\n  return (\n    <section className=\"w-full bg-background py-20 md:py-28\">\n      <div className=\"mx-auto grid max-w-6xl gap-12 px-6 lg:grid-cols-[1fr_1.4fr] lg:gap-20\">\n        <div className=\"lg:sticky lg:top-24 lg:self-start\">\n          <div className=\"flex gap-0.5 text-amber-500\">\n            {Array.from({ length: 5 }).map((_, i) => (\n              <Star key={i} className=\"size-5 fill-current\" />\n            ))}\n          </div>\n          <h2 className=\"mt-6 text-3xl font-medium tracking-tight md:text-5xl\">\n            Rated 4.9 by the people who read the numbers.\n          </h2>\n          <p className=\"mt-5 max-w-sm text-sm leading-7 text-muted-foreground\">\n            Over 9,000 companies use Signalwise to understand their product\n            without compromising their users&apos; privacy.\n          </p>\n          <Button className=\"mt-8\" size=\"lg\" nativeButton={false} render={<a href=\"#\" />}>\n            Start free\n            <ArrowRight data-icon=\"inline-end\" />\n          </Button>\n        </div>\n        <div className=\"space-y-4\">\n          {items.map((t, i) => (\n            <figure\n              key={t.name}\n              className={`border border-border p-8 ${i % 2 === 0 ? \"bg-card\" : \"bg-muted/40\"}`}\n            >\n              <blockquote className=\"text-lg leading-relaxed md:text-xl\">\n                &ldquo;{t.quote}&rdquo;\n              </blockquote>\n              <figcaption className=\"mt-6 text-sm\">\n                <span className=\"font-medium\">{t.name}</span>\n                <span className=\"text-muted-foreground\"> &mdash; {t.role}</span>\n              </figcaption>\n            </figure>\n          ))}\n        </div>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "900px"
+  },
+  "categories": [
+    "testimonials"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "portfolio-11",
+  "type": "registry:block",
+  "description": "Spreadsheet-style project index table with client, discipline, role, year and highlighted outcome columns.",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/designali/blocks/portfolio/portfolio-11.tsx",
+      "content": "import { ArrowUpRight } from \"lucide-react\"\n\nconst rows = [\n  { client: \"Juniper Health\", project: \"Clinician scheduling\", type: \"Product\", role: \"Lead\", year: \"2026\", outcome: \"-31% no-shows\" },\n  { client: \"Oxbow Coffee\", project: \"Subscription relaunch\", type: \"E-commerce\", role: \"Design + build\", year: \"2026\", outcome: \"4,200 subscribers\" },\n  { client: \"Stillwater Press\", project: \"Editorial identity\", type: \"Brand\", role: \"Art direction\", year: \"2025\", outcome: \"D&AD shortlist\" },\n  { client: \"Fathom Robotics\", project: \"Operator console\", type: \"Product\", role: \"Lead\", year: \"2025\", outcome: \"2x task speed\" },\n  { client: \"Wren & Finch\", project: \"Lookbook site\", type: \"Web\", role: \"Design\", year: \"2025\", outcome: \"+22% conversion\" },\n  { client: \"Cobalt Energy\", project: \"Annual report\", type: \"Print\", role: \"Design\", year: \"2024\", outcome: \"Printed 12,000\" },\n  { client: \"Meadowlark\", project: \"Kids reading app\", type: \"Product\", role: \"UX research\", year: \"2024\", outcome: \"4.8 App rating\" },\n]\n\nexport default function Portfolio11() {\n  return (\n    <section className=\"w-full bg-background py-16 text-foreground md:py-24\">\n      <div className=\"mx-auto max-w-6xl px-6\">\n        <div className=\"flex flex-col justify-between gap-4 md:flex-row md:items-end\">\n          <div>\n            <h2 className=\"text-3xl font-medium tracking-tight md:text-5xl\">Project index</h2>\n            <p className=\"mt-2 text-sm text-muted-foreground\">\n              {rows.length} selected projects. Full archive available on request.\n            </p>\n          </div>\n          <a href=\"#\" className=\"text-sm underline underline-offset-4\">\n            Download PDF portfolio\n          </a>\n        </div>\n\n        <div className=\"mt-10 border-t border-foreground\">\n          <div className=\"hidden grid-cols-[1.3fr_1.5fr_1fr_1fr_0.6fr_1.2fr_24px] gap-4 border-b border-border py-3 text-xs tracking-wide text-muted-foreground uppercase md:grid\">\n            <span>Client</span>\n            <span>Project</span>\n            <span>Discipline</span>\n            <span>Role</span>\n            <span>Year</span>\n            <span>Outcome</span>\n            <span />\n          </div>\n\n          {rows.map((row) => (\n            <a\n              key={row.client}\n              href=\"#\"\n              className=\"group grid grid-cols-[1fr_auto] gap-x-4 gap-y-1 border-b border-border py-4 transition-colors hover:bg-muted/60 md:grid-cols-[1.3fr_1.5fr_1fr_1fr_0.6fr_1.2fr_24px] md:items-center md:gap-4 md:px-0\"\n            >\n              <span className=\"font-medium\">{row.client}</span>\n              <span className=\"font-mono text-xs text-muted-foreground md:hidden\">{row.year}</span>\n              <span className=\"col-span-2 text-sm text-muted-foreground md:col-span-1 md:text-foreground\">\n                {row.project}\n              </span>\n              <span className=\"hidden text-sm text-muted-foreground md:block\">{row.type}</span>\n              <span className=\"hidden text-sm text-muted-foreground md:block\">{row.role}</span>\n              <span className=\"hidden font-mono text-xs text-muted-foreground md:block\">{row.year}</span>\n              <span className=\"col-span-2 text-sm md:col-span-1\">\n                <span className=\"bg-emerald-500/10 px-1.5 py-0.5 text-emerald-700 dark:text-emerald-400\">\n                  {row.outcome}\n                </span>\n              </span>\n              <ArrowUpRight className=\"hidden size-4 text-muted-foreground transition-colors group-hover:text-foreground md:block\" />\n            </a>\n          ))}\n        </div>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "750px"
+  },
+  "categories": [
+    "portfolio"
+  ]
+}

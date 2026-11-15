@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "field-07",
+  "type": "registry:example",
+  "description": "Radio choice cards for monthly versus yearly billing with prices and a savings badge.",
+  "files": [
+    {
+      "path": "registry/designali/examples/field/field-07.tsx",
+      "content": "import { Badge } from \"@workspace/ui/components/badge\"\nimport {\n  Field,\n  FieldContent,\n  FieldDescription,\n  FieldLabel,\n  FieldLegend,\n  FieldSet,\n  FieldTitle,\n} from \"@workspace/ui/components/field\"\nimport {\n  RadioGroup,\n  RadioGroupItem,\n} from \"@workspace/ui/components/radio-group\"\n\nexport default function BillingIntervalChoiceCards() {\n  return (\n    <FieldSet className=\"w-full max-w-sm\">\n      <FieldLegend variant=\"label\">Billing interval</FieldLegend>\n      <RadioGroup defaultValue=\"yearly\">\n        <FieldLabel htmlFor=\"interval-monthly\">\n          <Field orientation=\"horizontal\">\n            <RadioGroupItem value=\"monthly\" id=\"interval-monthly\" />\n            <FieldContent>\n              <FieldTitle>Monthly</FieldTitle>\n              <FieldDescription>\n                $18 per seat, billed every month\n              </FieldDescription>\n            </FieldContent>\n          </Field>\n        </FieldLabel>\n        <FieldLabel htmlFor=\"interval-yearly\">\n          <Field orientation=\"horizontal\">\n            <RadioGroupItem value=\"yearly\" id=\"interval-yearly\" />\n            <FieldContent>\n              <FieldTitle>\n                Yearly <Badge variant=\"secondary\">Save 20%</Badge>\n              </FieldTitle>\n              <FieldDescription>\n                $172 per seat, billed once a year\n              </FieldDescription>\n            </FieldContent>\n          </Field>\n        </FieldLabel>\n      </RadioGroup>\n    </FieldSet>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

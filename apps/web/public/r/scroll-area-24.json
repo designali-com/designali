@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "scroll-area-24",
+  "type": "registry:example",
+  "description": "Booking widget with a scrollable column of selectable time slots.",
+  "files": [
+    {
+      "path": "registry/designali/examples/scroll-area/scroll-area-24.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { ScrollArea } from \"@workspace/ui/components/scroll-area\"\n\nconst slots = [\n  \"09:00\",\n  \"09:30\",\n  \"10:00\",\n  \"10:30\",\n  \"11:00\",\n  \"11:30\",\n  \"13:00\",\n  \"13:30\",\n  \"14:00\",\n  \"14:30\",\n  \"15:00\",\n  \"15:30\",\n  \"16:00\",\n]\nconst taken = new Set([\"10:00\", \"13:30\", \"15:00\"])\n\nexport default function TimeSlotPicker() {\n  const [slot, setSlot] = React.useState<string | null>(null)\n\n  return (\n    <div className=\"flex w-full max-w-xs flex-col gap-3 border p-3\">\n      <div>\n        <p className=\"text-sm font-medium\">Book a 30 min intro call</p>\n        <p className=\"text-xs text-muted-foreground\">\n          Wednesday, April 9 - CET\n        </p>\n      </div>\n      <ScrollArea className=\"h-52\">\n        <div className=\"flex flex-col gap-1.5 pr-3\">\n          {slots.map((s) => (\n            <Button\n              key={s}\n              variant={slot === s ? \"default\" : \"outline\"}\n              disabled={taken.has(s)}\n              onClick={() => setSlot(s)}\n              className=\"w-full tabular-nums\"\n            >\n              {s}\n            </Button>\n          ))}\n        </div>\n      </ScrollArea>\n      <Button disabled={!slot}>\n        {slot ? \"Confirm \" + slot : \"Select a time\"}\n      </Button>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

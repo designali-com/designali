@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "sheet-30",
+  "type": "registry:example",
+  "description": "Four triggers that open the same sheet content from the top, right, bottom, and left edges.",
+  "files": [
+    {
+      "path": "registry/designali/examples/sheet/sheet-30.tsx",
+      "content": "import { Button } from \"@workspace/ui/components/button\"\nimport {\n  Sheet,\n  SheetClose,\n  SheetContent,\n  SheetDescription,\n  SheetFooter,\n  SheetHeader,\n  SheetTitle,\n  SheetTrigger,\n} from \"@workspace/ui/components/sheet\"\n\nconst sides = [\"top\", \"right\", \"bottom\", \"left\"] as const\n\nexport default function SheetSidesShowcase() {\n  return (\n    <div className=\"grid grid-cols-2 gap-2\">\n      {sides.map((side) => (\n        <Sheet key={side}>\n          <SheetTrigger\n            render={<Button variant=\"outline\" className=\"capitalize\" />}\n          >\n            {side}\n          </SheetTrigger>\n          <SheetContent side={side}>\n            <SheetHeader>\n              <SheetTitle className=\"capitalize\">{side} sheet</SheetTitle>\n              <SheetDescription>\n                Slides in from the {side} edge. Use left/right for navigation\n                and details, top/bottom for quick actions.\n              </SheetDescription>\n            </SheetHeader>\n            <SheetFooter>\n              <SheetClose render={<Button variant=\"outline\" />}>\n                Close\n              </SheetClose>\n            </SheetFooter>\n          </SheetContent>\n        </Sheet>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

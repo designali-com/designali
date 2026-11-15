@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "avatar-14",
+  "type": "registry:example",
+  "description": "Chat bubbles with avatars aligned to the sender's side of the conversation.",
+  "files": [
+    {
+      "path": "registry/designali/examples/avatar/avatar-14.tsx",
+      "content": "import { Avatar, AvatarFallback } from \"@workspace/ui/components/avatar\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst messages = [\n  { from: \"them\", text: \"Hey! Did the new build fix the export bug?\" },\n  { from: \"me\", text: \"Yes, CSV and PDF exports both work now.\" },\n  { from: \"them\", text: \"Amazing, shipping it to beta testers tonight.\" },\n]\n\nexport default function ChatConversationAvatars() {\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-3 border p-4\">\n      {messages.map((message, index) => {\n        const mine = message.from === \"me\"\n        return (\n          <div\n            key={index}\n            className={cn(\"flex items-end gap-2\", mine && \"flex-row-reverse\")}\n          >\n            <Avatar size=\"sm\">\n              <AvatarFallback\n                className={cn(mine && \"bg-primary text-primary-foreground\")}\n              >\n                {mine ? \"ME\" : \"JR\"}\n              </AvatarFallback>\n            </Avatar>\n            <p\n              className={cn(\n                \"max-w-[75%] px-3 py-2 text-sm\",\n                mine ? \"bg-primary text-primary-foreground\" : \"bg-muted\"\n              )}\n            >\n              {message.text}\n            </p>\n          </div>\n        )\n      })}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

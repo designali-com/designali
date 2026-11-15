@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "slider-42",
+  "type": "registry:example",
+  "description": "Field in an invalid state when the chosen replica count is below the required minimum.",
+  "files": [
+    {
+      "path": "registry/designali/examples/slider/slider-42.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport {\n  Field,\n  FieldDescription,\n  FieldError,\n  FieldLabel,\n} from \"@workspace/ui/components/field\"\nimport { Slider } from \"@workspace/ui/components/slider\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nexport default function InvalidReplicaSlider() {\n  const [replicas, setReplicas] = React.useState([1])\n  const invalid = replicas[0]! < 2\n\n  return (\n    <Field data-invalid={invalid} className=\"w-full max-w-sm\">\n      <div className=\"flex items-center justify-between\">\n        <FieldLabel>Replicas</FieldLabel>\n        <span className=\"text-sm tabular-nums\">{replicas[0]}</span>\n      </div>\n      <Slider\n        aria-label=\"Replicas\"\n        aria-invalid={invalid}\n        className={cn(\n          invalid &&\n            \"[&_[data-slot=slider-range]]:bg-destructive [&_[data-slot=slider-thumb]]:border-destructive\"\n        )}\n        value={replicas}\n        onValueChange={(value) => setReplicas(value as number[])}\n        min={1}\n        max={10}\n      />\n      {invalid ? (\n        <FieldError>High availability requires at least 2 replicas.</FieldError>\n      ) : (\n        <FieldDescription>\n          Traffic is balanced across all replicas.\n        </FieldDescription>\n      )}\n    </Field>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

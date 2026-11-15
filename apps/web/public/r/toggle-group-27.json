@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toggle-group-27",
+  "type": "registry:example",
+  "description": "Install snippet whose command changes with the selected package manager.",
+  "files": [
+    {
+      "path": "registry/designali/examples/toggle-group/toggle-group-27.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { TerminalIcon } from \"lucide-react\"\n\nimport {\n  ToggleGroup,\n  ToggleGroupItem,\n} from \"@workspace/ui/components/toggle-group\"\n\nconst commands: Record<string, string> = {\n  npm: \"npm install @acme/charts\",\n  pnpm: \"pnpm add @acme/charts\",\n  yarn: \"yarn add @acme/charts\",\n  bun: \"bun add @acme/charts\",\n}\n\nexport default function PackageManagerToggleGroup() {\n  const [pm, setPm] = React.useState(\"pnpm\")\n\n  return (\n    <div className=\"flex w-full max-w-sm flex-col border\">\n      <ToggleGroup\n        size=\"sm\"\n        spacing={0}\n        value={[pm]}\n        onValueChange={(next) => next[0] && setPm(next[0])}\n        className=\"border-b p-1\"\n      >\n        {Object.keys(commands).map((key) => (\n          <ToggleGroupItem key={key} value={key} className=\"font-mono\">\n            {key}\n          </ToggleGroupItem>\n        ))}\n      </ToggleGroup>\n      <div className=\"flex items-center gap-2 bg-muted/40 px-3 py-3 font-mono text-xs\">\n        <TerminalIcon className=\"size-3.5 text-muted-foreground\" />\n        {commands[pm]}\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

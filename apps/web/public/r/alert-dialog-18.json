@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "alert-dialog-18",
+  "type": "registry:example",
+  "description": "Community moderation dialog confirming a user block.",
+  "files": [
+    {
+      "path": "registry/designali/examples/alert-dialog/alert-dialog-18.tsx",
+      "content": "import { BanIcon } from \"lucide-react\"\n\nimport {\n  AlertDialog,\n  AlertDialogAction,\n  AlertDialogCancel,\n  AlertDialogContent,\n  AlertDialogDescription,\n  AlertDialogFooter,\n  AlertDialogHeader,\n  AlertDialogMedia,\n  AlertDialogTitle,\n  AlertDialogTrigger,\n} from \"@workspace/ui/components/alert-dialog\"\nimport { Button } from \"@workspace/ui/components/button\"\n\nexport default function BlockUserDialog() {\n  return (\n    <AlertDialog>\n      <AlertDialogTrigger render={<Button variant=\"ghost\" />}>\n        <BanIcon data-icon=\"inline-start\" />\n        Block @rowan.k\n      </AlertDialogTrigger>\n      <AlertDialogContent size=\"sm\">\n        <AlertDialogHeader>\n          <AlertDialogMedia className=\"bg-destructive/10 text-destructive\">\n            <BanIcon />\n          </AlertDialogMedia>\n          <AlertDialogTitle>Block @rowan.k?</AlertDialogTitle>\n          <AlertDialogDescription>\n            They won&apos;t be able to message you or see your posts.\n          </AlertDialogDescription>\n        </AlertDialogHeader>\n        <AlertDialogFooter>\n          <AlertDialogCancel>Cancel</AlertDialogCancel>\n          <AlertDialogAction variant=\"destructive\">Block</AlertDialogAction>\n        </AlertDialogFooter>\n      </AlertDialogContent>\n    </AlertDialog>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toggle-03",
+  "type": "registry:example",
+  "description": "The three toggle sizes, sm, default and lg, with icon and label.",
+  "files": [
+    {
+      "path": "registry/designali/examples/toggle/toggle-03.tsx",
+      "content": "import { StarIcon } from \"lucide-react\"\n\nimport { Toggle } from \"@workspace/ui/components/toggle\"\n\nconst sizes = [\"sm\", \"default\", \"lg\"] as const\n\nexport default function ToggleSizeScale() {\n  return (\n    <div className=\"flex flex-wrap items-end justify-center gap-3\">\n      {sizes.map((size) => (\n        <div key={size} className=\"flex flex-col items-center gap-2\">\n          <Toggle size={size} variant=\"outline\" aria-label={\"Star, \" + size}>\n            <StarIcon className=\"group-aria-pressed/toggle:fill-current\" />\n            Star\n          </Toggle>\n          <span className=\"text-xs text-muted-foreground\">{size}</span>\n        </div>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

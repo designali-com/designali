@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "spinner-14",
+  "type": "registry:example",
+  "description": "CI pipeline steps where the running step shows a spinner between completed and queued steps.",
+  "files": [
+    {
+      "path": "registry/designali/examples/spinner/spinner-14.tsx",
+      "content": "import { CircleCheckIcon, CircleIcon } from \"lucide-react\"\n\nimport { Badge } from \"@workspace/ui/components/badge\"\nimport { Spinner } from \"@workspace/ui/components/spinner\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst steps = [\n  { label: \"Install dependencies\", time: \"18s\", state: \"done\" },\n  { label: \"Run tests\", time: \"1m 42s\", state: \"done\" },\n  { label: \"Build production bundle\", time: \"running\", state: \"running\" },\n  { label: \"Upload assets\", time: \"queued\", state: \"queued\" },\n  { label: \"Promote to production\", time: \"queued\", state: \"queued\" },\n]\n\nexport default function DeploymentPipelineSteps() {\n  return (\n    <div className=\"flex w-full max-w-sm flex-col border\">\n      <div className=\"flex items-center justify-between border-b px-4 py-3\">\n        <span className=\"text-sm font-medium\">Deploy #482</span>\n        <Badge variant=\"secondary\">\n          <Spinner />\n          In progress\n        </Badge>\n      </div>\n      <ol className=\"flex flex-col gap-3 p-4\">\n        {steps.map((step) => (\n          <li key={step.label} className=\"flex items-center gap-3 text-sm\">\n            {step.state === \"done\" && (\n              <CircleCheckIcon className=\"size-4 text-emerald-600 dark:text-emerald-400\" />\n            )}\n            {step.state === \"running\" && <Spinner className=\"text-primary\" />}\n            {step.state === \"queued\" && (\n              <CircleIcon className=\"size-4 text-muted-foreground/50\" />\n            )}\n            <span\n              className={cn(\n                \"flex-1\",\n                step.state === \"queued\" && \"text-muted-foreground\"\n              )}\n            >\n              {step.label}\n            </span>\n            <span className=\"font-mono text-xs text-muted-foreground\">\n              {step.time}\n            </span>\n          </li>\n        ))}\n      </ol>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

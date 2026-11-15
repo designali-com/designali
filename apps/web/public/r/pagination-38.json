@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "pagination-38",
+  "type": "registry:example",
+  "description": "Empty state with pagination controls rendered but disabled because there are no results.",
+  "files": [
+    {
+      "path": "registry/designali/examples/pagination/pagination-38.tsx",
+      "content": "import { InboxIcon } from \"lucide-react\"\n\nimport {\n  Pagination,\n  PaginationContent,\n  PaginationItem,\n  PaginationNext,\n  PaginationPrevious,\n} from \"@workspace/ui/components/pagination\"\n\nexport default function EmptyResultsPagination() {\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-3 border p-4\">\n      <div className=\"flex flex-col items-center gap-1 py-4 text-center\">\n        <InboxIcon className=\"size-6 text-muted-foreground\" />\n        <span className=\"text-sm font-medium\">No orders yet</span>\n        <span className=\"text-xs text-muted-foreground\">\n          Orders will appear here once customers check out.\n        </span>\n      </div>\n      <div className=\"flex items-center justify-between border-t pt-3\">\n        <span className=\"text-xs text-muted-foreground\">0 results</span>\n        <Pagination className=\"mx-0 w-auto\">\n          <PaginationContent>\n            <PaginationItem>\n              <PaginationPrevious\n                href=\"#\"\n                aria-disabled\n                tabIndex={-1}\n                className=\"pointer-events-none opacity-50\"\n              />\n            </PaginationItem>\n            <PaginationItem>\n              <PaginationNext\n                href=\"#\"\n                aria-disabled\n                tabIndex={-1}\n                className=\"pointer-events-none opacity-50\"\n              />\n            </PaginationItem>\n          </PaginationContent>\n        </Pagination>\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

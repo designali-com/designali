@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "spinner-20",
+  "type": "registry:example",
+  "description": "Contact import panel pairing a spinner with a progress bar and record counts.",
+  "files": [
+    {
+      "path": "registry/designali/examples/spinner/spinner-20.tsx",
+      "content": "import { Progress } from \"@workspace/ui/components/progress\"\nimport { Spinner } from \"@workspace/ui/components/spinner\"\n\nexport default function ImportWithProgress() {\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-3 border p-4\">\n      <div className=\"flex items-center gap-2\">\n        <Spinner className=\"text-primary\" />\n        <span className=\"text-sm font-medium\">Importing contacts</span>\n        <span className=\"ml-auto text-xs text-muted-foreground tabular-nums\">\n          64%\n        </span>\n      </div>\n      <Progress value={64} />\n      <div className=\"flex justify-between text-xs text-muted-foreground\">\n        <span>3,212 of 5,018 rows</span>\n        <span>About 40s left</span>\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

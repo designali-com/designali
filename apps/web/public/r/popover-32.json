@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "popover-32",
+  "type": "registry:example",
+  "description": "Bar chart where each bar opens a popover with that month's metrics.",
+  "files": [
+    {
+      "path": "registry/designali/examples/popover/popover-32.tsx",
+      "content": "import {\n  Popover,\n  PopoverContent,\n  PopoverTitle,\n  PopoverTrigger,\n} from \"@workspace/ui/components/popover\"\n\nconst data = [\n  { month: \"Jun\", signups: 320, churn: 2.1 },\n  { month: \"Jul\", signups: 410, churn: 1.8 },\n  { month: \"Aug\", signups: 380, churn: 2.4 },\n  { month: \"Sep\", signups: 520, churn: 1.6 },\n  { month: \"Oct\", signups: 610, churn: 1.4 },\n  { month: \"Nov\", signups: 470, churn: 1.9 },\n]\n\nconst max = Math.max(...data.map((d) => d.signups))\n\nexport default function ChartDataPointPopover() {\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-2 border p-4\">\n      <span className=\"text-sm font-medium\">Monthly signups</span>\n      <div className=\"flex h-36 items-end gap-2\">\n        {data.map((d) => (\n          <Popover key={d.month}>\n            <PopoverTrigger\n              render={\n                <button\n                  type=\"button\"\n                  aria-label={d.month + \" details\"}\n                  className=\"flex-1 bg-primary/70 transition-colors hover:bg-primary data-popup-open:bg-primary\"\n                  style={{ height: (d.signups / max) * 100 + \"%\" }}\n                />\n              }\n            />\n            <PopoverContent side=\"top\" className=\"w-40\">\n              <PopoverTitle>{d.month} 2026</PopoverTitle>\n              <div className=\"flex flex-col gap-1 text-xs\">\n                <span className=\"flex justify-between\">\n                  <span className=\"text-muted-foreground\">Signups</span>\n                  <span className=\"tabular-nums\">{d.signups}</span>\n                </span>\n                <span className=\"flex justify-between\">\n                  <span className=\"text-muted-foreground\">Churn</span>\n                  <span className=\"tabular-nums\">{d.churn}%</span>\n                </span>\n              </div>\n            </PopoverContent>\n          </Popover>\n        ))}\n      </div>\n      <div className=\"flex gap-2 text-[11px] text-muted-foreground\">\n        {data.map((d) => (\n          <span key={d.month} className=\"flex-1 text-center\">\n            {d.month}\n          </span>\n        ))}\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

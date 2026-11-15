@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toggle-group-05",
+  "type": "registry:example",
+  "description": "The same view switcher rendered in the sm, default and lg sizes.",
+  "files": [
+    {
+      "path": "registry/designali/examples/toggle-group/toggle-group-05.tsx",
+      "content": "import {\n  ToggleGroup,\n  ToggleGroupItem,\n} from \"@workspace/ui/components/toggle-group\"\n\nconst sizes = [\"sm\", \"default\", \"lg\"] as const\n\nexport default function ToggleGroupSizeScale() {\n  return (\n    <div className=\"flex flex-col items-center gap-3\">\n      {sizes.map((size) => (\n        <div key={size} className=\"flex items-center gap-3\">\n          <span className=\"w-14 text-end text-xs text-muted-foreground\">\n            {size}\n          </span>\n          <ToggleGroup variant=\"outline\" size={size} defaultValue={[\"day\"]}>\n            <ToggleGroupItem value=\"day\">Day</ToggleGroupItem>\n            <ToggleGroupItem value=\"week\">Week</ToggleGroupItem>\n            <ToggleGroupItem value=\"month\">Month</ToggleGroupItem>\n          </ToggleGroup>\n        </div>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

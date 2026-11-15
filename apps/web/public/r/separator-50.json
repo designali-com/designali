@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "separator-50",
+  "type": "registry:example",
+  "description": "Plan usage panel with separators between each metered resource.",
+  "files": [
+    {
+      "path": "registry/designali/examples/separator/separator-50.tsx",
+      "content": "import * as React from \"react\"\n\nimport { Progress } from \"@workspace/ui/components/progress\"\nimport { Separator } from \"@workspace/ui/components/separator\"\n\nconst meters = [\n  { label: \"Seats\", used: 8, limit: 10 },\n  { label: \"Storage\", used: 34, limit: 50, unit: \"GB\" },\n  { label: \"API calls\", used: 92, limit: 100, unit: \"k\" },\n]\n\nexport default function UsageMeterSections() {\n  return (\n    <div className=\"flex w-full max-w-xs flex-col gap-3 border p-4\">\n      <span className=\"text-sm font-medium\">Usage this month</span>\n      {meters.map((meter) => {\n        const pct = Math.round((meter.used / meter.limit) * 100)\n        return (\n          <React.Fragment key={meter.label}>\n            <Separator />\n            <div className=\"flex flex-col gap-1.5 text-xs\">\n              <div className=\"flex justify-between\">\n                <span>{meter.label}</span>\n                <span className=\"text-muted-foreground tabular-nums\">\n                  {meter.used}\n                  {meter.unit} / {meter.limit}\n                  {meter.unit}\n                </span>\n              </div>\n              <Progress value={pct} />\n            </div>\n          </React.Fragment>\n        )\n      })}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

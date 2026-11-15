@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "hover-card-07",
+  "type": "registry:example",
+  "description": "An external link in a document that shows a rich page preview with thumbnail and domain.",
+  "files": [
+    {
+      "path": "registry/designali/examples/hover-card/hover-card-07.tsx",
+      "content": "import { GlobeIcon } from \"lucide-react\"\n\nimport {\n  HoverCard,\n  HoverCardContent,\n  HoverCardTrigger,\n} from \"@workspace/ui/components/hover-card\"\n\nexport default function LinkPreviewHoverCard() {\n  return (\n    <p className=\"max-w-sm text-sm leading-relaxed text-muted-foreground\">\n      For the rollout plan, follow the guide in{\" \"}\n      <HoverCard>\n        <HoverCardTrigger\n          href=\"#\"\n          className=\"text-foreground underline underline-offset-4\"\n        >\n          Shipping feature flags safely\n        </HoverCardTrigger>\n        <HoverCardContent className=\"w-72 p-0\">\n          <div className=\"h-28 w-full bg-gradient-to-br from-violet-500 via-fuchsia-500 to-rose-400\" />\n          <div className=\"flex flex-col gap-1 p-3\">\n            <p className=\"font-medium\">Shipping feature flags safely</p>\n            <p className=\"line-clamp-2 text-muted-foreground\">\n              A practical checklist for gradual rollouts, kill switches, and\n              cleaning up stale flags.\n            </p>\n            <span className=\"mt-1 flex items-center gap-1 text-muted-foreground\">\n              <GlobeIcon className=\"size-3\" />\n              engineering.fernhill.dev\n            </span>\n          </div>\n        </HoverCardContent>\n      </HoverCard>{\" \"}\n      before enabling it for everyone.\n    </p>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

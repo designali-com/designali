@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "slider-05",
+  "type": "registry:example",
+  "description": "Volume slider with a mute toggle whose icon reflects the current level.",
+  "files": [
+    {
+      "path": "registry/designali/examples/slider/slider-05.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { Volume1Icon, Volume2Icon, VolumeXIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Slider } from \"@workspace/ui/components/slider\"\n\nexport default function VolumeControlSlider() {\n  const [volume, setVolume] = React.useState([64])\n  const [muted, setMuted] = React.useState(false)\n  const level = muted ? 0 : volume[0]!\n  const Icon =\n    level === 0 ? VolumeXIcon : level < 50 ? Volume1Icon : Volume2Icon\n\n  return (\n    <div className=\"flex w-full max-w-xs items-center gap-3\">\n      <Button\n        variant=\"ghost\"\n        size=\"icon-sm\"\n        aria-label={muted ? \"Unmute\" : \"Mute\"}\n        onClick={() => setMuted((m) => !m)}\n      >\n        <Icon />\n      </Button>\n      <Slider\n        aria-label=\"Volume\"\n        value={muted ? [0] : volume}\n        onValueChange={(value) => {\n          setMuted(false)\n          setVolume(value as number[])\n        }}\n        max={100}\n      />\n      <span className=\"w-8 text-right text-xs text-muted-foreground tabular-nums\">\n        {level}\n      </span>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

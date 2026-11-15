@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "separator-48",
+  "type": "registry:example",
+  "description": "Page header with title, description and actions above a full-width separator.",
+  "files": [
+    {
+      "path": "registry/designali/examples/separator/separator-48.tsx",
+      "content": "import { DownloadIcon, PlusIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Separator } from \"@workspace/ui/components/separator\"\n\nexport default function PageHeaderDivider() {\n  return (\n    <div className=\"flex w-full max-w-md flex-col gap-4\">\n      <div className=\"flex flex-wrap items-end justify-between gap-3\">\n        <div className=\"flex flex-col gap-1\">\n          <h2 className=\"text-lg font-semibold\">Customers</h2>\n          <p className=\"text-xs text-muted-foreground\">\n            1,482 accounts across 3 regions\n          </p>\n        </div>\n        <div className=\"flex gap-2\">\n          <Button variant=\"outline\" size=\"sm\">\n            <DownloadIcon data-icon=\"inline-start\" />\n            Export\n          </Button>\n          <Button size=\"sm\">\n            <PlusIcon data-icon=\"inline-start\" />\n            Add customer\n          </Button>\n        </div>\n      </div>\n      <Separator />\n      <div className=\"grid grid-cols-3 gap-2\">\n        {[0, 1, 2].map((index) => (\n          <div key={index} className=\"h-12 bg-muted\" />\n        ))}\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

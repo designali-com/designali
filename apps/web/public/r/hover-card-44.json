@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "hover-card-44",
+  "type": "registry:example",
+  "description": "Role badges in a members list that reveal exactly which permissions each role grants.",
+  "files": [
+    {
+      "path": "registry/designali/examples/hover-card/hover-card-44.tsx",
+      "content": "import { CheckIcon, XIcon } from \"lucide-react\"\n\nimport { Badge } from \"@workspace/ui/components/badge\"\nimport {\n  HoverCard,\n  HoverCardContent,\n  HoverCardTrigger,\n} from \"@workspace/ui/components/hover-card\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst permissions = [\n  \"View projects\",\n  \"Edit content\",\n  \"Manage billing\",\n  \"Invite members\",\n]\nconst roles: Record<string, boolean[]> = {\n  Admin: [true, true, true, true],\n  Editor: [true, true, false, true],\n  Viewer: [true, false, false, false],\n}\nconst members = [\n  { name: \"Oliver Grant\", role: \"Admin\" },\n  { name: \"Zara Malik\", role: \"Editor\" },\n  { name: \"Luca Bianchi\", role: \"Viewer\" },\n]\n\nexport default function RolePermissionsHoverCard() {\n  return (\n    <div className=\"w-full max-w-xs divide-y border text-sm\">\n      {members.map((m) => (\n        <div\n          key={m.name}\n          className=\"flex items-center justify-between px-3 py-2\"\n        >\n          <span>{m.name}</span>\n          <HoverCard>\n            <HoverCardTrigger\n              render={<Badge variant=\"outline\" className=\"cursor-default\" />}\n            >\n              {m.role}\n            </HoverCardTrigger>\n            <HoverCardContent align=\"end\" className=\"w-48\">\n              <p className=\"mb-1.5 font-medium\">{m.role} can</p>\n              <ul className=\"flex flex-col gap-1\">\n                {permissions.map((p, i) => (\n                  <li\n                    key={p}\n                    className={cn(\n                      \"flex items-center gap-2\",\n                      !roles[m.role]![i] && \"text-muted-foreground line-through\"\n                    )}\n                  >\n                    {roles[m.role]![i] ? (\n                      <CheckIcon className=\"size-3.5 text-emerald-600\" />\n                    ) : (\n                      <XIcon className=\"size-3.5\" />\n                    )}\n                    {p}\n                  </li>\n                ))}\n              </ul>\n            </HoverCardContent>\n          </HoverCard>\n        </div>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

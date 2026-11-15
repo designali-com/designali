@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "scroll-area-08",
+  "type": "registry:example",
+  "description": "Search input that filters a scrollable list of commands.",
+  "files": [
+    {
+      "path": "registry/designali/examples/scroll-area/scroll-area-08.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport {\n  ArchiveIcon,\n  CreditCardIcon,\n  DownloadIcon,\n  FolderPlusIcon,\n  KeyboardIcon,\n  LifeBuoyIcon,\n  LogOutIcon,\n  MoonIcon,\n  SearchIcon,\n  UploadIcon,\n  UserPlusIcon,\n} from \"lucide-react\"\n\nimport {\n  InputGroup,\n  InputGroupAddon,\n  InputGroupInput,\n} from \"@workspace/ui/components/input-group\"\nimport { ScrollArea } from \"@workspace/ui/components/scroll-area\"\n\nconst commands = [\n  { label: \"Create project\", icon: FolderPlusIcon },\n  { label: \"Invite teammate\", icon: UserPlusIcon },\n  { label: \"Open billing\", icon: CreditCardIcon },\n  { label: \"Toggle dark mode\", icon: MoonIcon },\n  { label: \"View shortcuts\", icon: KeyboardIcon },\n  { label: \"Export data\", icon: DownloadIcon },\n  { label: \"Import CSV\", icon: UploadIcon },\n  { label: \"Archive workspace\", icon: ArchiveIcon },\n  { label: \"Contact support\", icon: LifeBuoyIcon },\n  { label: \"Sign out\", icon: LogOutIcon },\n]\n\nexport default function FilterableCommandList() {\n  const [query, setQuery] = React.useState(\"\")\n  const results = commands.filter((c) =>\n    c.label.toLowerCase().includes(query.toLowerCase())\n  )\n\n  return (\n    <div className=\"w-full max-w-sm border\">\n      <InputGroup className=\"border-0 border-b\">\n        <InputGroupAddon>\n          <SearchIcon />\n        </InputGroupAddon>\n        <InputGroupInput\n          value={query}\n          onChange={(e) => setQuery(e.target.value)}\n          placeholder=\"Search commands...\"\n        />\n      </InputGroup>\n      <ScrollArea className=\"h-56\">\n        <div className=\"flex flex-col p-1\">\n          {results.map((c) => (\n            <button\n              key={c.label}\n              className=\"flex items-center gap-2 px-2 py-1.5 text-left text-xs hover:bg-muted\"\n            >\n              <c.icon className=\"size-3.5 text-muted-foreground\" />\n              {c.label}\n            </button>\n          ))}\n          {results.length === 0 && (\n            <p className=\"py-8 text-center text-xs text-muted-foreground\">\n              No commands match &quot;{query}&quot;\n            </p>\n          )}\n        </div>\n      </ScrollArea>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

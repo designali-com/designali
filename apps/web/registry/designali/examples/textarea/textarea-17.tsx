@@ -1,0 +1,73 @@
+"use client"
+
+import * as React from "react"
+import { ArrowUpIcon, PlusIcon, SparklesIcon } from "lucide-react"
+
+import { Badge } from "@workspace/ui/components/badge"
+import {
+  InputGroup,
+  InputGroupAddon,
+  InputGroupButton,
+  InputGroupText,
+  InputGroupTextarea,
+} from "@workspace/ui/components/input-group"
+import { Kbd, KbdGroup } from "@workspace/ui/components/kbd"
+
+export default function AIPromptTextarea() {
+  const [prompt, setPrompt] = React.useState("")
+  const [sent, setSent] = React.useState<string | null>(null)
+
+  function submit() {
+    if (!prompt.trim()) return
+    setSent(prompt.trim())
+    setPrompt("")
+  }
+
+  return (
+    <div className="flex w-full max-w-md flex-col gap-2">
+      <InputGroup>
+        <InputGroupTextarea
+          value={prompt}
+          onChange={(e) => setPrompt(e.target.value)}
+          onKeyDown={(e) => {
+            if (e.key === "Enter" && (e.metaKey || e.ctrlKey)) {
+              e.preventDefault()
+              submit()
+            }
+          }}
+          placeholder="Ask anything about your sales data…"
+          className="min-h-20"
+        />
+        <InputGroupAddon align="block-end">
+          <InputGroupButton
+            size="icon-xs"
+            variant="outline"
+            aria-label="Add context"
+          >
+            <PlusIcon />
+          </InputGroupButton>
+          <Badge variant="secondary">
+            <SparklesIcon />
+            Quill 2
+          </Badge>
+          <InputGroupText className="ms-auto">
+            <KbdGroup>
+              <Kbd>⌘</Kbd>
+              <Kbd>↵</Kbd>
+            </KbdGroup>
+          </InputGroupText>
+          <InputGroupButton
+            size="icon-xs"
+            variant="default"
+            aria-label="Submit"
+            onClick={submit}
+            disabled={!prompt.trim()}
+          >
+            <ArrowUpIcon />
+          </InputGroupButton>
+        </InputGroupAddon>
+      </InputGroup>
+      {sent && <p className="text-xs text-muted-foreground">Asked: {sent}</p>}
+    </div>
+  )
+}

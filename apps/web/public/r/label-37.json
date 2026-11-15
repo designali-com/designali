@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "label-37",
+  "type": "registry:example",
+  "description": "Search field with a screen-reader-only label and a visible icon.",
+  "files": [
+    {
+      "path": "registry/designali/examples/label/label-37.tsx",
+      "content": "import { SearchIcon } from \"lucide-react\"\n\nimport { Input } from \"@workspace/ui/components/input\"\nimport { Label } from \"@workspace/ui/components/label\"\n\nexport default function VisuallyHiddenSearchLabel() {\n  return (\n    <div className=\"relative w-full max-w-sm\">\n      <Label htmlFor=\"site-search\" className=\"sr-only\">\n        Search files\n      </Label>\n      <SearchIcon className=\"pointer-events-none absolute start-2.5 top-1/2 size-4 -translate-y-1/2 text-muted-foreground\" />\n      <Input\n        id=\"site-search\"\n        type=\"search\"\n        placeholder=\"Search files and folders\"\n        className=\"ps-8\"\n      />\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

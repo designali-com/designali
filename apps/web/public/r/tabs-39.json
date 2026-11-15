@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tabs-39",
+  "type": "registry:example",
+  "description": "Appearance tabs that preview light, dark and system themes as mini mockups.",
+  "files": [
+    {
+      "path": "registry/designali/examples/tabs/tabs-39.tsx",
+      "content": "import { MonitorIcon, MoonIcon, SunIcon } from \"lucide-react\"\n\nimport {\n  Tabs,\n  TabsContent,\n  TabsList,\n  TabsTrigger,\n} from \"@workspace/ui/components/tabs\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nfunction Mock({ dark }: { dark: boolean }) {\n  return (\n    <div\n      className={cn(\n        \"flex h-24 gap-2 border p-2\",\n        dark ? \"bg-zinc-900\" : \"bg-white\"\n      )}\n    >\n      <div className={cn(\"w-1/4\", dark ? \"bg-zinc-800\" : \"bg-zinc-100\")} />\n      <div className=\"flex flex-1 flex-col gap-1.5\">\n        <div\n          className={cn(\"h-2 w-2/3\", dark ? \"bg-zinc-700\" : \"bg-zinc-200\")}\n        />\n        <div\n          className={cn(\"h-2 w-1/2\", dark ? \"bg-zinc-700\" : \"bg-zinc-200\")}\n        />\n        <div className=\"mt-auto h-4 w-12 bg-indigo-500\" />\n      </div>\n    </div>\n  )\n}\n\nexport default function ThemePreviewTabs() {\n  return (\n    <Tabs defaultValue=\"system\" className=\"w-full max-w-xs\">\n      <TabsList className=\"w-full\">\n        <TabsTrigger value=\"light\">\n          <SunIcon data-icon=\"inline-start\" />\n          Light\n        </TabsTrigger>\n        <TabsTrigger value=\"dark\">\n          <MoonIcon data-icon=\"inline-start\" />\n          Dark\n        </TabsTrigger>\n        <TabsTrigger value=\"system\">\n          <MonitorIcon data-icon=\"inline-start\" />\n          System\n        </TabsTrigger>\n      </TabsList>\n      <TabsContent value=\"light\">\n        <Mock dark={false} />\n      </TabsContent>\n      <TabsContent value=\"dark\">\n        <Mock dark />\n      </TabsContent>\n      <TabsContent value=\"system\" className=\"grid grid-cols-2 gap-2\">\n        <Mock dark={false} />\n        <Mock dark />\n      </TabsContent>\n    </Tabs>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

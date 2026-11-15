@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "popover-04",
+  "type": "registry:example",
+  "description": "Share popover with a read-only link field and a copy button that confirms success.",
+  "files": [
+    {
+      "path": "registry/designali/examples/popover/popover-04.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { CheckIcon, CopyIcon, Share2Icon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Input } from \"@workspace/ui/components/input\"\nimport {\n  Popover,\n  PopoverContent,\n  PopoverDescription,\n  PopoverHeader,\n  PopoverTitle,\n  PopoverTrigger,\n} from \"@workspace/ui/components/popover\"\n\nexport default function ShareLinkPopover() {\n  const [copied, setCopied] = React.useState(false)\n  const url = \"https://app.example.com/d/roadmap-q1\"\n\n  return (\n    <Popover>\n      <PopoverTrigger render={<Button variant=\"outline\" />}>\n        <Share2Icon data-icon=\"inline-start\" />\n        Share\n      </PopoverTrigger>\n      <PopoverContent className=\"w-80\" align=\"end\">\n        <PopoverHeader>\n          <PopoverTitle>Share this doc</PopoverTitle>\n          <PopoverDescription>\n            Anyone in Lumen Labs with the link can view.\n          </PopoverDescription>\n        </PopoverHeader>\n        <div className=\"flex gap-2\">\n          <Input\n            readOnly\n            value={url}\n            aria-label=\"Share link\"\n            className=\"h-8 flex-1\"\n          />\n          <Button\n            size=\"icon\"\n            variant=\"outline\"\n            aria-label=\"Copy link\"\n            onClick={() => {\n              void navigator.clipboard?.writeText(url)\n              setCopied(true)\n              window.setTimeout(() => setCopied(false), 1500)\n            }}\n          >\n            {copied ? <CheckIcon /> : <CopyIcon />}\n          </Button>\n        </div>\n      </PopoverContent>\n    </Popover>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

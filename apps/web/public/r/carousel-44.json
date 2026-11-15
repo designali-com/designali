@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "carousel-44",
+  "type": "registry:example",
+  "description": "Continuously advancing looped row of brand-neutral customer logo marks.",
+  "files": [
+    {
+      "path": "registry/designali/examples/carousel/carousel-44.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport {\n  AnchorIcon,\n  CompassIcon,\n  GemIcon,\n  LeafIcon,\n  MountainIcon,\n  OrbitIcon,\n  SunIcon,\n} from \"lucide-react\"\n\nimport {\n  Carousel,\n  CarouselContent,\n  CarouselItem,\n  type CarouselApi,\n} from \"@workspace/ui/components/carousel\"\n\nconst logos = [\n  { name: \"Northwind\", icon: CompassIcon },\n  { name: \"Lumen\", icon: SunIcon },\n  { name: \"Orbit\", icon: OrbitIcon },\n  { name: \"Fernway\", icon: LeafIcon },\n  { name: \"Quartz\", icon: GemIcon },\n  { name: \"Harbor\", icon: AnchorIcon },\n  { name: \"Summit\", icon: MountainIcon },\n]\n\nexport default function LogoMarqueeAutoplay() {\n  const [api, setApi] = React.useState<CarouselApi>()\n\n  React.useEffect(() => {\n    if (!api) return\n    const id = setInterval(() => api.scrollNext(), 1800)\n    return () => clearInterval(id)\n  }, [api])\n\n  return (\n    <div className=\"w-full max-w-md\">\n      <p className=\"mb-3 text-center text-xs text-muted-foreground\">\n        Trusted by 4,000+ teams\n      </p>\n      <Carousel\n        setApi={setApi}\n        opts={{ loop: true, align: \"start\", duration: 40 }}\n        className=\"[mask-image:linear-gradient(to_right,transparent,black_15%,black_85%,transparent)]\"\n      >\n        <CarouselContent>\n          {logos.map((logo) => (\n            <CarouselItem key={logo.name} className=\"basis-1/3 sm:basis-1/4\">\n              <div className=\"flex items-center justify-center gap-1.5 py-2 text-muted-foreground\">\n                <logo.icon className=\"size-4\" />\n                <span className=\"text-sm font-semibold tracking-tight\">\n                  {logo.name}\n                </span>\n              </div>\n            </CarouselItem>\n          ))}\n        </CarouselContent>\n      </Carousel>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

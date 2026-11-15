@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "skeleton-38",
+  "type": "registry:example",
+  "description": "Code editor placeholder with line numbers and indented line skeletons of varying widths.",
+  "files": [
+    {
+      "path": "registry/designali/examples/skeleton/skeleton-38.tsx",
+      "content": "import { Skeleton } from \"@workspace/ui/components/skeleton\"\n\nconst lines = [\n  { indent: 0, w: 40 },\n  { indent: 1, w: 64 },\n  { indent: 2, w: 52 },\n  { indent: 2, w: 72 },\n  { indent: 1, w: 20 },\n  { indent: 0, w: 8 },\n  { indent: 0, w: 0 },\n  { indent: 0, w: 56 },\n]\n\nexport default function CodeBlockSkeleton() {\n  return (\n    <div className=\"w-full max-w-md border bg-muted/30\">\n      <div className=\"flex items-center gap-1.5 border-b px-3 py-2\">\n        <Skeleton className=\"size-2.5 rounded-full\" />\n        <Skeleton className=\"size-2.5 rounded-full\" />\n        <Skeleton className=\"size-2.5 rounded-full\" />\n        <Skeleton className=\"ms-3 h-2.5 w-20\" />\n      </div>\n      <div className=\"flex flex-col gap-2 p-3 font-mono\">\n        {lines.map((line, i) => (\n          <div key={i} className=\"flex items-center gap-3\">\n            <span className=\"w-4 text-end text-[10px] text-muted-foreground tabular-nums\">\n              {i + 1}\n            </span>\n            {line.w > 0 && (\n              <Skeleton\n                className=\"h-3\"\n                style={{\n                  marginInlineStart: line.indent * 16,\n                  width: line.w + \"%\",\n                }}\n              />\n            )}\n          </div>\n        ))}\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

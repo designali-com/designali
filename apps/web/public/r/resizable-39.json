@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "resizable-39",
+  "type": "registry:example",
+  "description": "Code playground with stacked HTML, CSS, and JS editors beside a live preview.",
+  "files": [
+    {
+      "path": "registry/designali/examples/resizable/resizable-39.tsx",
+      "content": "import * as React from \"react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  ResizableHandle,\n  ResizablePanel,\n  ResizablePanelGroup,\n} from \"@workspace/ui/components/resizable\"\n\nconst editors = [\n  { lang: \"HTML\", code: \"<button class='cta'>Buy</button>\" },\n  { lang: \"CSS\", code: \".cta { padding: 8px 16px; }\" },\n  { lang: \"JS\", code: \"cta.onclick = () => checkout()\" },\n]\n\nexport default function CodePlaygroundPreview() {\n  return (\n    <ResizablePanelGroup\n      orientation=\"horizontal\"\n      className=\"h-80 w-full max-w-2xl border\"\n    >\n      <ResizablePanel defaultSize=\"50%\" minSize=\"30%\">\n        <ResizablePanelGroup orientation=\"vertical\">\n          {editors.map((editor, i) => (\n            <React.Fragment key={editor.lang}>\n              {i > 0 && <ResizableHandle />}\n              <ResizablePanel minSize=\"15%\">\n                <div className=\"flex h-full flex-col\">\n                  <span className=\"border-b bg-muted/40 px-2 py-1 text-[10px] font-medium\">\n                    {editor.lang}\n                  </span>\n                  <code className=\"truncate p-2 font-mono text-[11px]\">\n                    {editor.code}\n                  </code>\n                </div>\n              </ResizablePanel>\n            </React.Fragment>\n          ))}\n        </ResizablePanelGroup>\n      </ResizablePanel>\n      <ResizableHandle withHandle />\n      <ResizablePanel defaultSize=\"50%\" minSize=\"25%\">\n        <div className=\"flex h-full items-center justify-center\">\n          <Button>Buy</Button>\n        </div>\n      </ResizablePanel>\n    </ResizablePanelGroup>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

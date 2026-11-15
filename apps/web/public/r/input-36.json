@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-36",
+  "type": "registry:example",
+  "description": "A disabled input locked behind a paid plan, with a lock icon and upgrade prompt.",
+  "files": [
+    {
+      "path": "registry/designali/examples/input/input-36.tsx",
+      "content": "import { LockIcon } from \"lucide-react\"\n\nimport { Badge } from \"@workspace/ui/components/badge\"\nimport {\n  Field,\n  FieldDescription,\n  FieldLabel,\n} from \"@workspace/ui/components/field\"\nimport {\n  InputGroup,\n  InputGroupAddon,\n  InputGroupInput,\n} from \"@workspace/ui/components/input-group\"\n\nexport default function LockedPlanInput() {\n  return (\n    <Field data-disabled className=\"w-full max-w-sm\">\n      <div className=\"flex items-center justify-between\">\n        <FieldLabel htmlFor=\"custom-domain\">Custom domain</FieldLabel>\n        <Badge variant=\"secondary\">Pro</Badge>\n      </div>\n      <InputGroup>\n        <InputGroupAddon>\n          <LockIcon />\n        </InputGroupAddon>\n        <InputGroupInput\n          id=\"custom-domain\"\n          disabled\n          placeholder=\"docs.yourcompany.com\"\n        />\n      </InputGroup>\n      <FieldDescription>\n        Upgrade to Pro to serve your help center from your own domain.{\" \"}\n        <a\n          href=\"#\"\n          className=\"font-medium text-foreground underline underline-offset-4\"\n        >\n          See plans\n        </a>\n      </FieldDescription>\n    </Field>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

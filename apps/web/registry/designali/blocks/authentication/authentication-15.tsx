@@ -23,7 +23,7 @@ function formatPhone(value: string) {
 }
 
 export default function Authentication15() {
-  const [country, setCountry] = useState(countries[0])
+  const [country, setCountry] = useState(countries[0]!)
   const [phone, setPhone] = useState("")
   const [sent, setSent] = useState(false)
   const [code, setCode] = useState("")
@@ -65,7 +65,7 @@ export default function Authentication15() {
                       <span className="sr-only">Country code</span>
                       <select
                         value={country.code}
-                        onChange={(event) => setCountry(countries.find((item) => item.code === event.target.value) ?? countries[0])}
+                        onChange={(event) => setCountry(countries.find((item) => item.code === event.target.value) ?? countries[0]!)}
                         className="h-full appearance-none bg-transparent ps-3 pe-8 text-sm outline-none"
                       >
                         {countries.map((item) => (

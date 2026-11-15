@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "scroll-area-34",
+  "type": "registry:example",
+  "description": "Tab list with many tabs that scrolls horizontally on narrow screens.",
+  "files": [
+    {
+      "path": "registry/designali/examples/scroll-area/scroll-area-34.tsx",
+      "content": "import { ScrollArea, ScrollBar } from \"@workspace/ui/components/scroll-area\"\nimport {\n  Tabs,\n  TabsContent,\n  TabsList,\n  TabsTrigger,\n} from \"@workspace/ui/components/tabs\"\n\nconst tabs = [\n  \"Overview\",\n  \"Analytics\",\n  \"Reports\",\n  \"Customers\",\n  \"Invoices\",\n  \"Integrations\",\n  \"Webhooks\",\n  \"Audit log\",\n  \"Settings\",\n]\n\nexport default function OverflowingTabsBar() {\n  return (\n    <Tabs defaultValue=\"Overview\" className=\"w-full max-w-md\">\n      <ScrollArea className=\"w-full\">\n        <TabsList className=\"mb-3 w-max\">\n          {tabs.map((t) => (\n            <TabsTrigger key={t} value={t}>\n              {t}\n            </TabsTrigger>\n          ))}\n        </TabsList>\n        <ScrollBar orientation=\"horizontal\" />\n      </ScrollArea>\n      {tabs.map((t) => (\n        <TabsContent\n          key={t}\n          value={t}\n          className=\"border p-4 text-xs text-muted-foreground\"\n        >\n          {t} content for the Orbit Labs workspace.\n        </TabsContent>\n      ))}\n    </Tabs>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toggle-21",
+  "type": "registry:example",
+  "description": "A chain-link toggle that keeps width and height proportional while resizing an image.",
+  "files": [
+    {
+      "path": "registry/designali/examples/toggle/toggle-21.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { Link2Icon, Link2OffIcon } from \"lucide-react\"\n\nimport { Input } from \"@workspace/ui/components/input\"\nimport { Label } from \"@workspace/ui/components/label\"\nimport { Toggle } from \"@workspace/ui/components/toggle\"\n\nexport default function AspectRatioLockToggle() {\n  const [locked, setLocked] = React.useState(true)\n  const [size, setSize] = React.useState({ w: 1600, h: 900 })\n  const ratio = 16 / 9\n\n  return (\n    <div className=\"flex w-full max-w-xs items-end gap-2 border p-4\">\n      <div className=\"flex flex-1 flex-col gap-1.5\">\n        <Label htmlFor=\"w\">Width</Label>\n        <Input\n          id=\"w\"\n          type=\"number\"\n          value={size.w}\n          onChange={(e) => {\n            const w = Number(e.target.value)\n            setSize((s) => ({ w, h: locked ? Math.round(w / ratio) : s.h }))\n          }}\n        />\n      </div>\n      <Toggle\n        variant=\"outline\"\n        pressed={locked}\n        onPressedChange={setLocked}\n        aria-label={locked ? \"Unlock aspect ratio\" : \"Lock aspect ratio\"}\n        className=\"h-10 min-w-10\"\n      >\n        {locked ? <Link2Icon /> : <Link2OffIcon />}\n      </Toggle>\n      <div className=\"flex flex-1 flex-col gap-1.5\">\n        <Label htmlFor=\"h\">Height</Label>\n        <Input\n          id=\"h\"\n          type=\"number\"\n          value={size.h}\n          onChange={(e) => {\n            const h = Number(e.target.value)\n            setSize((s) => ({ h, w: locked ? Math.round(h * ratio) : s.w }))\n          }}\n        />\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

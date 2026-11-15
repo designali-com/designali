@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "features-16",
+  "type": "registry:block",
+  "description": "Horizontally scrolling snap carousel of tinted feature cards with previous and next buttons.",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "registry/designali/blocks/features/features-16.tsx",
+      "content": "\"use client\"\n\nimport { useRef } from \"react\"\nimport {\n  Activity,\n  ChevronLeft,\n  ChevronRight,\n  Gauge,\n  Layers,\n  Timer,\n  TrendingUp,\n  Users,\n} from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\n\nconst cards = [\n  { icon: Gauge, title: \"Core Web Vitals\", body: \"Real-user LCP, INP and CLS per route, segmented by device and country.\", tone: \"from-sky-500/15\" },\n  { icon: Timer, title: \"Session replay\", body: \"Watch the exact moment a user rage-clicks, with console and network logs alongside.\", tone: \"from-violet-500/15\" },\n  { icon: TrendingUp, title: \"Funnels\", body: \"Build a funnel from any events in seconds and see where each cohort drops off.\", tone: \"from-emerald-500/15\" },\n  { icon: Users, title: \"Cohorts\", body: \"Group users by behaviour, plan or traits, then compare retention curves side by side.\", tone: \"from-amber-500/15\" },\n  { icon: Activity, title: \"Alerts\", body: \"Get pinged in chat when error rate or latency breaks a threshold you set.\", tone: \"from-rose-500/15\" },\n  { icon: Layers, title: \"Feature flags\", body: \"Roll out to 5% of users, watch the metrics, then ramp up without a redeploy.\", tone: \"from-teal-500/15\" },\n]\n\nexport default function Features16() {\n  const track = useRef<HTMLDivElement>(null)\n  const scroll = (dir: number) =>\n    track.current?.scrollBy({ left: dir * 320, behavior: \"smooth\" })\n\n  return (\n    <section className=\"w-full overflow-hidden bg-background py-20 md:py-28\">\n      <div className=\"mx-auto max-w-7xl px-6\">\n        <div className=\"flex items-end justify-between gap-6\">\n          <h2 className=\"max-w-xl text-3xl font-medium tracking-tight md:text-5xl\">\n            Six tools, one tracking snippet.\n          </h2>\n          <div className=\"flex shrink-0 gap-2\">\n            <Button variant=\"outline\" size=\"icon-lg\" aria-label=\"Previous\" onClick={() => scroll(-1)}>\n              <ChevronLeft />\n            </Button>\n            <Button variant=\"outline\" size=\"icon-lg\" aria-label=\"Next\" onClick={() => scroll(1)}>\n              <ChevronRight />\n            </Button>\n          </div>\n        </div>\n        <div\n          ref={track}\n          className=\"mt-12 flex snap-x snap-mandatory gap-4 overflow-x-auto pb-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden\"\n        >\n          {cards.map(({ icon: Icon, title, body, tone }) => (\n            <article\n              key={title}\n              className={`flex w-[80%] shrink-0 snap-start flex-col border border-border bg-gradient-to-b ${tone} to-transparent p-6 sm:w-[300px]`}\n            >\n              <Icon className=\"size-6\" />\n              <div className=\"mt-16 h-px w-full bg-border\" />\n              <h3 className=\"mt-6 text-lg font-medium\">{title}</h3>\n              <p className=\"mt-2 text-sm leading-6 text-muted-foreground\">{body}</p>\n            </article>\n          ))}\n        </div>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "560px"
+  },
+  "categories": [
+    "features"
+  ]
+}

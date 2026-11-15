@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "switch-38",
+  "type": "registry:example",
+  "description": "Parental controls for a child profile with content and screen time switches.",
+  "files": [
+    {
+      "path": "registry/designali/examples/switch/switch-38.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { ClockIcon } from \"lucide-react\"\n\nimport { Avatar, AvatarFallback } from \"@workspace/ui/components/avatar\"\nimport {\n  Card,\n  CardContent,\n  CardDescription,\n  CardHeader,\n  CardTitle,\n} from \"@workspace/ui/components/card\"\nimport { Label } from \"@workspace/ui/components/label\"\nimport { Switch } from \"@workspace/ui/components/switch\"\n\nexport default function ParentalControls() {\n  const [screenLimit, setScreenLimit] = React.useState(true)\n\n  return (\n    <Card className=\"w-full max-w-sm\">\n      <CardHeader>\n        <div className=\"flex items-center gap-3\">\n          <Avatar>\n            <AvatarFallback>LM</AvatarFallback>\n          </Avatar>\n          <div>\n            <CardTitle>Leo&apos;s profile</CardTitle>\n            <CardDescription>Age 9</CardDescription>\n          </div>\n        </div>\n      </CardHeader>\n      <CardContent className=\"flex flex-col gap-4\">\n        <div className=\"flex items-center justify-between\">\n          <Label htmlFor=\"pc-filter\">Filter mature content</Label>\n          <Switch id=\"pc-filter\" defaultChecked />\n        </div>\n        <div className=\"flex items-center justify-between\">\n          <Label htmlFor=\"pc-purchases\">Require approval for purchases</Label>\n          <Switch id=\"pc-purchases\" defaultChecked />\n        </div>\n        <div className=\"flex flex-col gap-2\">\n          <div className=\"flex items-center justify-between\">\n            <Label htmlFor=\"pc-limit\">Daily screen time limit</Label>\n            <Switch\n              id=\"pc-limit\"\n              checked={screenLimit}\n              onCheckedChange={setScreenLimit}\n            />\n          </div>\n          {screenLimit && (\n            <p className=\"flex items-center gap-1.5 text-xs text-muted-foreground\">\n              <ClockIcon className=\"size-3\" /> 2 hours on school days, 3 hours\n              on weekends\n            </p>\n          )}\n        </div>\n      </CardContent>\n    </Card>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

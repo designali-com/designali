@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "aspect-ratio-11",
+  "type": "registry:example",
+  "description": "A 9:16 social story frame with segmented progress bars and reply input.",
+  "files": [
+    {
+      "path": "registry/designali/examples/aspect-ratio/aspect-ratio-11.tsx",
+      "content": "import { SendIcon } from \"lucide-react\"\n\nimport { AspectRatio } from \"@workspace/ui/components/aspect-ratio\"\nimport { Avatar, AvatarFallback } from \"@workspace/ui/components/avatar\"\n\nexport default function StoryCardPortrait() {\n  return (\n    <AspectRatio\n      ratio={9 / 16}\n      className=\"w-full max-w-44 overflow-hidden bg-linear-to-b from-orange-400 via-rose-500 to-purple-700\"\n    >\n      <div className=\"absolute inset-x-2 top-2 flex gap-1\">\n        {[100, 60, 0].map((value, index) => (\n          <div key={index} className=\"h-0.5 flex-1 bg-white/40\">\n            <div className=\"h-full bg-white\" style={{ width: value + \"%\" }} />\n          </div>\n        ))}\n      </div>\n      <div className=\"absolute inset-x-2 top-5 flex items-center gap-2 text-white\">\n        <Avatar size=\"sm\">\n          <AvatarFallback>LP</AvatarFallback>\n        </Avatar>\n        <span className=\"text-xs font-medium\">lena.paints</span>\n        <span className=\"text-[10px] text-white/70\">2h</span>\n      </div>\n      <p className=\"absolute inset-x-3 top-1/2 -translate-y-1/2 text-center text-lg font-semibold text-white\">\n        Studio open day this Saturday\n      </p>\n      <div className=\"absolute inset-x-2 bottom-2 flex items-center gap-2 border border-white/50 px-2 py-1.5 text-[10px] text-white/80\">\n        Send message\n        <SendIcon className=\"ms-auto size-3\" />\n      </div>\n    </AspectRatio>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "label-28",
+  "type": "registry:example",
+  "description": "Filter chips built from labels wrapping visually hidden checkboxes.",
+  "files": [
+    {
+      "path": "registry/designali/examples/label/label-28.tsx",
+      "content": "import { Checkbox } from \"@workspace/ui/components/checkbox\"\nimport { Label } from \"@workspace/ui/components/label\"\n\nconst tags = [\n  \"Remote\",\n  \"Full-time\",\n  \"Contract\",\n  \"Senior\",\n  \"Design\",\n  \"Engineering\",\n]\n\nexport default function FilterChipLabels() {\n  return (\n    <div className=\"flex w-full max-w-sm flex-wrap gap-2\">\n      {tags.map((tag, i) => (\n        <Label\n          key={tag}\n          htmlFor={\"chip-\" + i}\n          className=\"cursor-pointer border px-3 py-1.5 transition-colors hover:bg-muted has-data-checked:border-primary has-data-checked:bg-primary has-data-checked:text-primary-foreground\"\n        >\n          <Checkbox\n            id={\"chip-\" + i}\n            defaultChecked={i < 2}\n            className=\"sr-only\"\n          />\n          {tag}\n        </Label>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

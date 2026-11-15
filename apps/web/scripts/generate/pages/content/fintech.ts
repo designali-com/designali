@@ -87,7 +87,7 @@ export const fintech: CategoryContent = {
     "Visa",
     "Mastercard",
     "Plaid",
-    "Stripe",
+    "Corvia",
     "FDIC member bank",
     "Apple Pay",
     "Google Pay",

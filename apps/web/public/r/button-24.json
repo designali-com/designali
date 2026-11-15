@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button-24",
+  "type": "registry:example",
+  "description": "Upload button backed by a hidden file input that shows the chosen file name.",
+  "files": [
+    {
+      "path": "registry/designali/examples/button/button-24.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { FileSpreadsheetIcon, UploadIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\n\nexport default function FileUploadButton() {\n  const inputRef = React.useRef<null | HTMLInputElement>(null)\n  const [fileName, setFileName] = React.useState<string | null>(null)\n\n  return (\n    <div className=\"flex w-full max-w-xs flex-col items-start gap-2\">\n      <input\n        ref={inputRef}\n        type=\"file\"\n        accept=\".csv\"\n        className=\"sr-only\"\n        onChange={(event) => setFileName(event.target.files?.[0]?.name ?? null)}\n      />\n      <Button variant=\"outline\" onClick={() => inputRef.current?.click()}>\n        <UploadIcon data-icon=\"inline-start\" />\n        {fileName ? \"Replace file\" : \"Upload CSV\"}\n      </Button>\n      <p className=\"flex items-center gap-1 text-xs text-muted-foreground\">\n        {fileName ? (\n          <>\n            <FileSpreadsheetIcon className=\"size-3.5\" />\n            {fileName}\n          </>\n        ) : (\n          \"Up to 10 MB, comma separated\"\n        )}\n      </p>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

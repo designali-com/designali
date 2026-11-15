@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "dropdown-menu-29",
+  "type": "registry:example",
+  "description": "Breadcrumb trail that collapses middle folders into an ellipsis dropdown.",
+  "files": [
+    {
+      "path": "registry/designali/examples/dropdown-menu/dropdown-menu-29.tsx",
+      "content": "import { ChevronRightIcon, EllipsisIcon, FolderIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  DropdownMenu,\n  DropdownMenuContent,\n  DropdownMenuItem,\n  DropdownMenuTrigger,\n} from \"@workspace/ui/components/dropdown-menu\"\n\nconst hidden = [\"Clients\", \"Northwind\", \"2026 campaigns\"]\n\nexport default function BreadcrumbOverflowMenu() {\n  return (\n    <nav\n      aria-label=\"Breadcrumb\"\n      className=\"flex items-center gap-1 text-xs text-muted-foreground\"\n    >\n      <a href=\"#\" className=\"hover:text-foreground\">\n        Drive\n      </a>\n      <ChevronRightIcon className=\"size-3.5\" />\n      <DropdownMenu>\n        <DropdownMenuTrigger\n          render={\n            <Button\n              variant=\"ghost\"\n              size=\"icon-xs\"\n              aria-label=\"Show hidden folders\"\n            />\n          }\n        >\n          <EllipsisIcon />\n        </DropdownMenuTrigger>\n        <DropdownMenuContent className=\"w-44\">\n          {hidden.map((folder) => (\n            <DropdownMenuItem\n              key={folder}\n              nativeButton={false}\n              render={<a href=\"#\" />}\n            >\n              <FolderIcon />\n              {folder}\n            </DropdownMenuItem>\n          ))}\n        </DropdownMenuContent>\n      </DropdownMenu>\n      <ChevronRightIcon className=\"size-3.5\" />\n      <a href=\"#\" className=\"hover:text-foreground\">\n        Spring launch\n      </a>\n      <ChevronRightIcon className=\"size-3.5\" />\n      <span className=\"font-medium text-foreground\">Hero assets</span>\n    </nav>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

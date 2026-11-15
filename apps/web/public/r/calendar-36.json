@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "calendar-36",
+  "type": "registry:example",
+  "description": "ISO week picker with week numbers where clicking any day selects the whole week.",
+  "files": [
+    {
+      "path": "registry/designali/examples/calendar/calendar-36.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { endOfISOWeek, format, getISOWeek, startOfISOWeek } from \"date-fns\"\nimport { type DateRange } from \"react-day-picker\"\n\nimport { Badge } from \"@workspace/ui/components/badge\"\nimport { Calendar } from \"@workspace/ui/components/calendar\"\nimport {\n  Card,\n  CardAction,\n  CardContent,\n  CardDescription,\n  CardHeader,\n  CardTitle,\n} from \"@workspace/ui/components/card\"\n\nfunction weekOf(date: Date): DateRange {\n  return { from: startOfISOWeek(date), to: endOfISOWeek(date) }\n}\n\nexport default function TimesheetWeekPicker() {\n  const [week, setWeek] = React.useState<DateRange>(() => weekOf(new Date()))\n\n  return (\n    <Card className=\"w-fit\">\n      <CardHeader>\n        <CardTitle>Timesheet</CardTitle>\n        <CardDescription>\n          Week {getISOWeek(week.from!)} · {format(week.from!, \"MMM d\")} -{\" \"}\n          {format(week.to!, \"MMM d\")}\n        </CardDescription>\n        <CardAction>\n          <Badge variant=\"outline\">38.5 h</Badge>\n        </CardAction>\n      </CardHeader>\n      <CardContent>\n        <Calendar\n          mode=\"range\"\n          required\n          ISOWeek\n          showWeekNumber\n          selected={week}\n          onSelect={(_, day) => setWeek(weekOf(day))}\n          className=\"p-0\"\n        />\n      </CardContent>\n    </Card>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "sheet-21",
+  "type": "registry:example",
+  "description": "Sheet with a fixed header and footer around a long scrollable changelog.",
+  "files": [
+    {
+      "path": "registry/designali/examples/sheet/sheet-21.tsx",
+      "content": "import { RssIcon, ScrollTextIcon } from \"lucide-react\"\n\nimport { Badge } from \"@workspace/ui/components/badge\"\nimport { Button } from \"@workspace/ui/components/button\"\nimport { ScrollArea } from \"@workspace/ui/components/scroll-area\"\nimport {\n  Sheet,\n  SheetContent,\n  SheetDescription,\n  SheetFooter,\n  SheetHeader,\n  SheetTitle,\n  SheetTrigger,\n} from \"@workspace/ui/components/sheet\"\n\nconst entries = Array.from({ length: 12 }, (_, i) => ({\n  version: \"3.\" + (12 - i) + \".0\",\n  date: \"Week \" + (48 - i),\n  notes: [\n    \"Improved sync reliability for offline edits\",\n    \"New keyboard shortcuts in the editor\",\n    \"Fixed a crash when importing large spreadsheets\",\n  ].slice(0, (i % 3) + 1),\n}))\n\nexport default function ChangelogScrollSheet() {\n  return (\n    <Sheet>\n      <SheetTrigger render={<Button variant=\"outline\" />}>\n        <ScrollTextIcon data-icon=\"inline-start\" />\n        Changelog\n      </SheetTrigger>\n      <SheetContent>\n        <SheetHeader className=\"border-b\">\n          <SheetTitle>Changelog</SheetTitle>\n          <SheetDescription>\n            Every release from the past quarter.\n          </SheetDescription>\n        </SheetHeader>\n        <ScrollArea className=\"min-h-0 flex-1\">\n          <div className=\"flex flex-col gap-5 p-4\">\n            {entries.map((entry) => (\n              <div key={entry.version} className=\"flex flex-col gap-1\">\n                <div className=\"flex items-center gap-2\">\n                  <Badge variant=\"outline\">v{entry.version}</Badge>\n                  <span className=\"text-muted-foreground\">{entry.date}</span>\n                </div>\n                <ul className=\"list-disc ps-5\">\n                  {entry.notes.map((note) => (\n                    <li key={note}>{note}</li>\n                  ))}\n                </ul>\n              </div>\n            ))}\n          </div>\n        </ScrollArea>\n        <SheetFooter className=\"border-t\">\n          <Button variant=\"outline\">\n            <RssIcon data-icon=\"inline-start\" />\n            Subscribe to updates\n          </Button>\n        </SheetFooter>\n      </SheetContent>\n    </Sheet>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

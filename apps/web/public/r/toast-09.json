@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toast-09",
+  "type": "registry:example",
+  "description": "Lets you choose how long the toast stays visible before auto-dismissing.",
+  "files": [
+    {
+      "path": "registry/designali/examples/toast/toast-09.tsx",
+      "content": "\"use client\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Toaster, createToastManager } from \"@workspace/ui/components/toast\"\n\nconst notify = createToastManager()\n\nconst durations = [\n  { label: \"2s\", value: 2000 },\n  { label: \"5s\", value: 5000 },\n  { label: \"10s\", value: 10000 },\n  { label: \"Sticky\", value: 0 },\n]\n\nexport default function ToastDurationPicker() {\n  return (\n    <Toaster toastManager={notify}>\n      <div className=\"flex w-full max-w-xs flex-col gap-3 border p-4\">\n        <p className=\"text-sm font-medium\">Auto-dismiss after</p>\n        <div className=\"grid grid-cols-4 gap-2\">\n          {durations.map((d) => (\n            <Button\n              key={d.label}\n              variant=\"outline\"\n              size=\"sm\"\n              onClick={() =>\n                notify.add({\n                  title: \"Reminder set\",\n                  description: d.value\n                    ? \"This message closes in \" + d.value / 1000 + \" seconds.\"\n                    : \"This message stays until you close it.\",\n                  timeout: d.value,\n                })\n              }\n            >\n              {d.label}\n            </Button>\n          ))}\n        </div>\n      </div>\n    </Toaster>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

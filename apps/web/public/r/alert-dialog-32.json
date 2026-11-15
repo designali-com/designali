@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "alert-dialog-32",
+  "type": "registry:example",
+  "description": "Confirmation that archives a project and then offers an inline undo.",
+  "files": [
+    {
+      "path": "registry/designali/examples/alert-dialog/alert-dialog-32.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { ArchiveIcon, Undo2Icon } from \"lucide-react\"\n\nimport {\n  AlertDialog,\n  AlertDialogAction,\n  AlertDialogCancel,\n  AlertDialogContent,\n  AlertDialogDescription,\n  AlertDialogFooter,\n  AlertDialogHeader,\n  AlertDialogTitle,\n  AlertDialogTrigger,\n} from \"@workspace/ui/components/alert-dialog\"\nimport { Button } from \"@workspace/ui/components/button\"\n\nexport default function ArchiveWithUndo() {\n  const [archived, setArchived] = React.useState(false)\n\n  if (archived) {\n    return (\n      <div className=\"flex w-full max-w-sm items-center justify-between gap-3 border bg-muted/40 px-3 py-2 text-sm\">\n        <span className=\"flex items-center gap-2\">\n          <ArchiveIcon className=\"size-4 text-muted-foreground\" />\n          &quot;Website refresh&quot; archived\n        </span>\n        <Button variant=\"link\" size=\"sm\" onClick={() => setArchived(false)}>\n          <Undo2Icon data-icon=\"inline-start\" />\n          Undo\n        </Button>\n      </div>\n    )\n  }\n\n  return (\n    <AlertDialog>\n      <AlertDialogTrigger render={<Button variant=\"outline\" />}>\n        <ArchiveIcon data-icon=\"inline-start\" />\n        Archive project\n      </AlertDialogTrigger>\n      <AlertDialogContent size=\"sm\">\n        <AlertDialogHeader>\n          <AlertDialogTitle>\n            Archive &quot;Website refresh&quot;?\n          </AlertDialogTitle>\n          <AlertDialogDescription>\n            It will be hidden from the sidebar for all members.\n          </AlertDialogDescription>\n        </AlertDialogHeader>\n        <AlertDialogFooter>\n          <AlertDialogCancel>Cancel</AlertDialogCancel>\n          <AlertDialogAction onClick={() => setArchived(true)}>\n            Archive\n          </AlertDialogAction>\n        </AlertDialogFooter>\n      </AlertDialogContent>\n    </AlertDialog>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

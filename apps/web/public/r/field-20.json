@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "field-20",
+  "type": "registry:example",
+  "description": "Phone number field combining a country code native select with a number input.",
+  "files": [
+    {
+      "path": "registry/designali/examples/field/field-20.tsx",
+      "content": "import {\n  Field,\n  FieldDescription,\n  FieldLabel,\n} from \"@workspace/ui/components/field\"\nimport { Input } from \"@workspace/ui/components/input\"\nimport {\n  NativeSelect,\n  NativeSelectOption,\n} from \"@workspace/ui/components/native-select\"\n\nconst codes = [\n  { value: \"+1\", label: \"🇺🇸 +1\" },\n  { value: \"+44\", label: \"🇬🇧 +44\" },\n  { value: \"+49\", label: \"🇩🇪 +49\" },\n  { value: \"+61\", label: \"🇦🇺 +61\" },\n]\n\nexport default function PhoneNumberField() {\n  return (\n    <Field className=\"w-full max-w-xs\">\n      <FieldLabel htmlFor=\"phone-number\">Mobile number</FieldLabel>\n      <div className=\"flex gap-2\">\n        <NativeSelect\n          aria-label=\"Country code\"\n          defaultValue=\"+44\"\n          className=\"w-24\"\n        >\n          {codes.map((c) => (\n            <NativeSelectOption key={c.value} value={c.value}>\n              {c.label}\n            </NativeSelectOption>\n          ))}\n        </NativeSelect>\n        <Input\n          id=\"phone-number\"\n          type=\"tel\"\n          inputMode=\"tel\"\n          placeholder=\"7700 900123\"\n          className=\"flex-1\"\n        />\n      </div>\n      <FieldDescription>Used for two-factor sign-in only.</FieldDescription>\n    </Field>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

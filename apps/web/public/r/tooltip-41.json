@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tooltip-41",
+  "type": "registry:example",
+  "description": "Long multi-sentence tooltip content that wraps within a constrained width.",
+  "files": [
+    {
+      "path": "registry/designali/examples/tooltip/tooltip-41.tsx",
+      "content": "import { ShieldAlertIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  Tooltip,\n  TooltipContent,\n  TooltipTrigger,\n} from \"@workspace/ui/components/tooltip\"\n\nexport default function WrappingLongTooltip() {\n  return (\n    <Tooltip>\n      <TooltipTrigger render={<Button variant=\"outline\" />}>\n        <ShieldAlertIcon data-icon=\"inline-start\" />\n        Data retention\n      </TooltipTrigger>\n      <TooltipContent className=\"max-w-64 leading-relaxed\">\n        Messages older than 18 months are permanently deleted on the first day\n        of each month. Files attached to those messages are removed as well,\n        unless they are pinned in a channel.\n      </TooltipContent>\n    </Tooltip>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

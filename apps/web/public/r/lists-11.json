@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "lists-11",
+  "type": "registry:block",
+  "description": "Grouped technical spec sheet as definition lists beside a device illustration.",
+  "dependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/designali/blocks/lists/lists-11.tsx",
+      "content": "const specs = [\n  {\n    group: \"Display\",\n    rows: [\n      [\"Size\", \"14.2 in, 3024 x 1964\"],\n      [\"Panel\", \"Mini-LED, 120Hz adaptive\"],\n      [\"Brightness\", \"1,000 nits sustained, 1,600 peak\"],\n      [\"Coating\", \"Nano-etched anti-glare\"],\n    ],\n  },\n  {\n    group: \"Performance\",\n    rows: [\n      [\"Processor\", \"12-core, 4.1GHz boost\"],\n      [\"Memory\", \"32GB unified, upgradable to 64GB\"],\n      [\"Storage\", \"1TB NVMe, second M.2 slot\"],\n      [\"Graphics\", \"20-core integrated\"],\n    ],\n  },\n  {\n    group: \"Battery & power\",\n    rows: [\n      [\"Capacity\", \"72Wh\"],\n      [\"Video playback\", \"Up to 19 hours\"],\n      [\"Charging\", \"100W USB-C, 50% in 30 min\"],\n    ],\n  },\n  {\n    group: \"Build\",\n    rows: [\n      [\"Weight\", \"1.38 kg\"],\n      [\"Dimensions\", \"312 x 221 x 15.5 mm\"],\n      [\"Chassis\", \"Recycled aluminium, 92%\"],\n      [\"Repairability\", \"Tool-free bottom panel, 10/10 score\"],\n    ],\n  },\n]\n\nexport default function Lists11() {\n  return (\n    <section className=\"w-full bg-background py-24\">\n      <div className=\"mx-auto max-w-6xl px-6\">\n        <div className=\"grid gap-10 md:grid-cols-[1fr_1.4fr]\">\n          <div>\n            <p className=\"font-mono text-xs text-muted-foreground\">Kestrel 14 · Tech specs</p>\n            <h2 className=\"mt-3 text-4xl font-semibold tracking-tight md:text-5xl\">\n              Built to be opened.\n            </h2>\n            <div className=\"mt-8 aspect-[16/10] border border-border bg-gradient-to-b from-muted to-background p-6\">\n              <div className=\"mx-auto h-full w-[86%] border-[6px] border-neutral-800 bg-gradient-to-br from-indigo-500 via-sky-400 to-emerald-300 dark:border-neutral-600\" />\n            </div>\n            <div className=\"mx-auto -mt-px h-2 w-full bg-neutral-300 dark:bg-neutral-700\" />\n          </div>\n\n          <div className=\"divide-y divide-border border-y border-border\">\n            {specs.map((section) => (\n              <div key={section.group} className=\"grid gap-4 py-6 sm:grid-cols-[160px_1fr]\">\n                <h3 className=\"text-sm font-medium\">{section.group}</h3>\n                <dl className=\"space-y-3\">\n                  {section.rows.map(([label, value]) => (\n                    <div key={label} className=\"flex flex-col gap-0.5 sm:flex-row sm:items-baseline sm:gap-4\">\n                      <dt className=\"text-xs text-muted-foreground sm:w-32 sm:shrink-0\">{label}</dt>\n                      <dd className=\"text-sm\">{value}</dd>\n                    </div>\n                  ))}\n                </dl>\n              </div>\n            ))}\n          </div>\n        </div>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "800px"
+  },
+  "categories": [
+    "lists"
+  ]
+}

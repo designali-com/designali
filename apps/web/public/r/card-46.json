@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "card-46",
+  "type": "registry:example",
+  "description": "Side-by-side comparison of the default and small card sizes with identical content.",
+  "files": [
+    {
+      "path": "registry/designali/examples/card/card-46.tsx",
+      "content": "import { Badge } from \"@workspace/ui/components/badge\"\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  Card,\n  CardAction,\n  CardContent,\n  CardDescription,\n  CardFooter,\n  CardHeader,\n  CardTitle,\n} from \"@workspace/ui/components/card\"\n\nconst sizes = [\"default\", \"sm\"] as const\n\nexport default function CardSizeComparison() {\n  return (\n    <div className=\"grid w-full max-w-lg gap-3 sm:grid-cols-2\">\n      {sizes.map((size) => (\n        <Card key={size} size={size}>\n          <CardHeader>\n            <CardTitle>Backup schedule</CardTitle>\n            <CardDescription>Nightly at 02:00 UTC</CardDescription>\n            <CardAction>\n              <Badge variant=\"outline\">{size}</Badge>\n            </CardAction>\n          </CardHeader>\n          <CardContent className=\"text-muted-foreground\">\n            Last backup completed 6 hours ago, 4.1 GB.\n          </CardContent>\n          <CardFooter>\n            <Button size=\"sm\" variant=\"outline\" className=\"w-full\">\n              Run now\n            </Button>\n          </CardFooter>\n        </Card>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

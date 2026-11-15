@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "command-09",
+  "type": "registry:example",
+  "description": "An assignee picker listing teammates with avatar initials and their current workload.",
+  "files": [
+    {
+      "path": "registry/designali/examples/command/command-09.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { UserXIcon } from \"lucide-react\"\n\nimport { Avatar, AvatarFallback } from \"@workspace/ui/components/avatar\"\nimport {\n  Command,\n  CommandEmpty,\n  CommandGroup,\n  CommandInput,\n  CommandItem,\n  CommandList,\n  CommandSeparator,\n} from \"@workspace/ui/components/command\"\n\nconst people = [\n  { name: \"Maya Chen\", role: \"Frontend\", open: 3 },\n  { name: \"Jonah Reyes\", role: \"Backend\", open: 7 },\n  { name: \"Priya Natarajan\", role: \"Design\", open: 2 },\n  { name: \"Elliot Brandt\", role: \"QA\", open: 5 },\n  { name: \"Sofia Laurent\", role: \"Product\", open: 1 },\n]\n\nfunction initialsOf(name: string) {\n  return name\n    .split(\" \")\n    .map((part) => part[0])\n    .join(\"\")\n}\n\nexport default function AssigneePicker() {\n  const [assignee, setAssignee] = React.useState<string | null>(\n    \"Priya Natarajan\"\n  )\n\n  return (\n    <Command className=\"w-full max-w-xs border\">\n      <CommandInput placeholder=\"Assign to...\" />\n      <CommandList>\n        <CommandEmpty>Nobody with that name.</CommandEmpty>\n        <CommandGroup>\n          <CommandItem\n            data-checked={assignee === null}\n            onSelect={() => setAssignee(null)}\n          >\n            <UserXIcon />\n            <span>No assignee</span>\n          </CommandItem>\n        </CommandGroup>\n        <CommandSeparator />\n        <CommandGroup heading=\"Team\">\n          {people.map((person) => (\n            <CommandItem\n              key={person.name}\n              data-checked={assignee === person.name}\n              onSelect={() => setAssignee(person.name)}\n            >\n              <Avatar className=\"size-6\">\n                <AvatarFallback className=\"text-[10px]\">\n                  {initialsOf(person.name)}\n                </AvatarFallback>\n              </Avatar>\n              <div className=\"flex min-w-0 flex-col\">\n                <span className=\"truncate\">{person.name}</span>\n                <span className=\"text-[11px] text-muted-foreground\">\n                  {person.role} · {person.open} open\n                </span>\n              </div>\n            </CommandItem>\n          ))}\n        </CommandGroup>\n      </CommandList>\n    </Command>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "calendar-18",
+  "type": "registry:example",
+  "description": "Regional preference control that changes which weekday the calendar starts on.",
+  "files": [
+    {
+      "path": "registry/designali/examples/calendar/calendar-18.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { Calendar } from \"@workspace/ui/components/calendar\"\nimport {\n  NativeSelect,\n  NativeSelectOption,\n} from \"@workspace/ui/components/native-select\"\n\nconst options = [\n  { value: \"0\", label: \"Sunday\", region: \"United States, Canada\" },\n  { value: \"1\", label: \"Monday\", region: \"Europe, ISO 8601\" },\n  { value: \"6\", label: \"Saturday\", region: \"Middle East\" },\n]\n\nexport default function WeekStartSwitcher() {\n  const [start, setStart] = React.useState(\"1\")\n  const current = options.find((o) => o.value === start)!\n\n  return (\n    <div className=\"flex w-full max-w-xs flex-col gap-3\">\n      <div className=\"flex items-center justify-between gap-2\">\n        <div className=\"grid\">\n          <span className=\"text-xs font-medium\">Week starts on</span>\n          <span className=\"text-xs text-muted-foreground\">\n            {current.region}\n          </span>\n        </div>\n        <NativeSelect\n          size=\"sm\"\n          value={start}\n          onChange={(e) => setStart(e.target.value)}\n          aria-label=\"Week starts on\"\n        >\n          {options.map((o) => (\n            <NativeSelectOption key={o.value} value={o.value}>\n              {o.label}\n            </NativeSelectOption>\n          ))}\n        </NativeSelect>\n      </div>\n      <Calendar\n        mode=\"single\"\n        weekStartsOn={Number(start) as 0 | 1 | 6}\n        className=\"self-center border\"\n      />\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

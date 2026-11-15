@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "textarea-30",
+  "type": "registry:example",
+  "description": "Paste-in textarea for KEY=VALUE environment variables with a parsed preview.",
+  "files": [
+    {
+      "path": "registry/designali/examples/textarea/textarea-30.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { Label } from \"@workspace/ui/components/label\"\nimport { Textarea } from \"@workspace/ui/components/textarea\"\n\nexport default function EnvVariablesTextarea() {\n  const [raw, setRaw] = React.useState(\n    \"DATABASE_URL=postgres://localhost/app\\nPAYMENTS_KEY=key_demo_123\\n# comment\\nPORT=3000\"\n  )\n  const vars = raw\n    .split(\"\\n\")\n    .map((l) => l.trim())\n    .filter((l) => l && !l.startsWith(\"#\") && l.includes(\"=\"))\n    .map(\n      (l) => [l.slice(0, l.indexOf(\"=\")), l.slice(l.indexOf(\"=\") + 1)] as const\n    )\n\n  return (\n    <div className=\"flex w-full max-w-md flex-col gap-2\">\n      <Label htmlFor=\"ta-env\">Environment variables</Label>\n      <Textarea\n        id=\"ta-env\"\n        value={raw}\n        onChange={(e) => setRaw(e.target.value)}\n        spellCheck={false}\n        className=\"min-h-24 font-mono\"\n      />\n      <p className=\"text-xs text-muted-foreground\">\n        {vars.length} variables detected\n      </p>\n      <div className=\"divide-y border font-mono text-xs\">\n        {vars.map(([k, v]) => (\n          <div key={k} className=\"flex justify-between gap-3 px-2.5 py-1.5\">\n            <span className=\"font-medium\">{k}</span>\n            <span className=\"truncate text-muted-foreground\">\n              {k.includes(\"KEY\") ? \"••••••\" : v}\n            </span>\n          </div>\n        ))}\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

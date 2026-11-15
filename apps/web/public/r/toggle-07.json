@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toggle-07",
+  "type": "registry:example",
+  "description": "A heart toggle that fills and updates the like count when pressed.",
+  "files": [
+    {
+      "path": "registry/designali/examples/toggle/toggle-07.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { HeartIcon } from \"lucide-react\"\n\nimport { Toggle } from \"@workspace/ui/components/toggle\"\n\nexport default function FavoriteHeartToggle() {\n  const [liked, setLiked] = React.useState(false)\n  const count = 128 + (liked ? 1 : 0)\n\n  return (\n    <div className=\"flex w-full max-w-xs flex-col gap-3 border p-4\">\n      <p className=\"text-sm\">\n        Sunrise over the Dolomites, shot on a 45mm at f/8.\n      </p>\n      <div className=\"flex items-center gap-2\">\n        <Toggle\n          pressed={liked}\n          onPressedChange={setLiked}\n          aria-label=\"Like post\"\n          className=\"aria-pressed:text-rose-500\"\n        >\n          <HeartIcon className=\"group-aria-pressed/toggle:fill-current\" />\n          <span className=\"tabular-nums\">{count}</span>\n        </Toggle>\n        <span className=\"text-xs text-muted-foreground\">\n          {liked ? \"You and 128 others\" : \"128 likes\"}\n        </span>\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

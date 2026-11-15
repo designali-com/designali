@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "authentication-14",
+  "type": "registry:block",
+  "description": "Dark lock screen with the user avatar, password unlock field and switch user or sign out links.",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/designali/blocks/authentication/authentication-14.tsx",
+      "content": "\"use client\"\n\nimport { useEffect, useState } from \"react\"\nimport { ArrowRight, Lock } from \"lucide-react\"\n\nfunction useClock() {\n  const [now, setNow] = useState<Date | null>(null)\n  useEffect(() => {\n    const first = setTimeout(() => setNow(new Date()), 0)\n    const timer = setInterval(() => setNow(new Date()), 30000)\n    return () => {\n      clearTimeout(first)\n      clearInterval(timer)\n    }\n  }, [])\n  return now\n}\n\nexport default function Authentication14() {\n  const now = useClock()\n  const [password, setPassword] = useState(\"\")\n\n  const time = now ? now.toLocaleTimeString([], { hour: \"2-digit\", minute: \"2-digit\" }) : \"--:--\"\n  const date = now ? now.toLocaleDateString([], { weekday: \"long\", month: \"long\", day: \"numeric\" }) : \"\"\n\n  return (\n    <section className=\"relative flex min-h-[680px] w-full flex-col items-center justify-between overflow-hidden bg-zinc-950 px-6 py-14 text-white\">\n      <div\n        aria-hidden\n        className=\"absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(99,102,241,0.35),transparent_45%),radial-gradient(circle_at_80%_70%,rgba(236,72,153,0.25),transparent_45%)]\"\n      />\n      <div className=\"relative text-center\">\n        <p className=\"text-6xl font-light tracking-tight tabular-nums md:text-7xl\">{time}</p>\n        <p className=\"mt-2 text-sm text-white/60\">{date}</p>\n      </div>\n\n      <form className=\"relative flex w-full max-w-xs flex-col items-center\" onSubmit={(event) => event.preventDefault()}>\n        <span className=\"flex size-20 items-center justify-center rounded-full bg-gradient-to-br from-amber-300 to-rose-500 text-2xl font-semibold text-zinc-950 ring-4 ring-white/10\">\n          KO\n        </span>\n        <p className=\"mt-4 text-lg font-medium\">Kofi Owusu</p>\n        <p className=\"flex items-center gap-1.5 text-xs text-white/60\">\n          <Lock className=\"size-3\" />\n          Locked after 15 minutes of inactivity\n        </p>\n        <label className=\"mt-6 flex h-11 w-full items-center border border-white/20 bg-white/10 backdrop-blur focus-within:border-white/50\">\n          <span className=\"sr-only\">Password</span>\n          <input\n            type=\"password\"\n            value={password}\n            onChange={(event) => setPassword(event.target.value)}\n            placeholder=\"Enter password\"\n            className=\"h-full w-full bg-transparent px-4 text-sm text-white outline-none placeholder:text-white/40\"\n          />\n          <button\n            type=\"submit\"\n            aria-label=\"Unlock\"\n            disabled={!password}\n            className=\"flex size-11 shrink-0 items-center justify-center border-s border-white/20 transition-colors hover:bg-white/10 disabled:opacity-40\"\n          >\n            <ArrowRight className=\"size-4\" />\n          </button>\n        </label>\n        <p className=\"mt-3 text-xs text-white/50\">Your unsaved drafts in Ledgerline are kept while locked.</p>\n      </form>\n\n      <div className=\"relative flex gap-6 text-xs text-white/60\">\n        <a href=\"#\" className=\"hover:text-white\">Switch user</a>\n        <a href=\"#\" className=\"hover:text-white\">Sign out</a>\n        <a href=\"#\" className=\"hover:text-white\">Forgot password</a>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "700px"
+  },
+  "categories": [
+    "authentication"
+  ]
+}

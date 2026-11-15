@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "slider-50",
+  "type": "registry:example",
+  "description": "Range slider that lets thumbs swap past each other, for comparing two benchmark values.",
+  "files": [
+    {
+      "path": "registry/designali/examples/slider/slider-50.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { Slider } from \"@workspace/ui/components/slider\"\n\nexport default function ThumbCollisionSwap() {\n  const [values, setValues] = React.useState([320, 540])\n  const [low, high] = [...values].sort((a, b) => a - b)\n\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-3 border p-4\">\n      <div className=\"text-sm font-medium\">Latency comparison window</div>\n      <Slider\n        aria-label=\"Latency window\"\n        value={values}\n        onValueChange={(value) => setValues(value as number[])}\n        thumbCollisionBehavior=\"swap\"\n        max={1000}\n        step={10}\n      />\n      <div className=\"flex justify-between text-xs tabular-nums\">\n        <span>p50 {low} ms</span>\n        <span className=\"text-muted-foreground\">&Delta; {high! - low!} ms</span>\n        <span>p99 {high} ms</span>\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

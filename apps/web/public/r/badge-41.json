@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "badge-41",
+  "type": "registry:example",
+  "description": "An onboarding checklist with Done, In progress, and Up next step badges.",
+  "files": [
+    {
+      "path": "registry/designali/examples/badge/badge-41.tsx",
+      "content": "import { CheckIcon } from \"lucide-react\"\n\nimport { Badge } from \"@workspace/ui/components/badge\"\nimport {\n  Card,\n  CardContent,\n  CardDescription,\n  CardHeader,\n  CardTitle,\n} from \"@workspace/ui/components/card\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nconst steps = [\n  { title: \"Create your workspace\", state: \"Done\" },\n  { title: \"Invite teammates\", state: \"Done\" },\n  { title: \"Connect a data source\", state: \"In progress\" },\n  { title: \"Publish your first report\", state: \"Up next\" },\n]\n\nexport default function OnboardingStepBadges() {\n  return (\n    <Card className=\"w-full max-w-sm\">\n      <CardHeader>\n        <CardTitle>Get started</CardTitle>\n        <CardDescription>2 of 4 steps complete</CardDescription>\n      </CardHeader>\n      <CardContent className=\"flex flex-col gap-3\">\n        {steps.map((step, index) => (\n          <div key={step.title} className=\"flex items-center gap-3\">\n            <span className=\"flex size-5 items-center justify-center border text-[10px] text-muted-foreground\">\n              {index + 1}\n            </span>\n            <span\n              className={cn(\n                \"flex-1 text-sm\",\n                step.state === \"Done\" && \"text-muted-foreground line-through\"\n              )}\n            >\n              {step.title}\n            </span>\n            <Badge\n              variant={\n                step.state === \"Done\"\n                  ? \"secondary\"\n                  : step.state === \"In progress\"\n                    ? \"default\"\n                    : \"outline\"\n              }\n            >\n              {step.state === \"Done\" && <CheckIcon data-icon=\"inline-start\" />}\n              {step.state}\n            </Badge>\n          </div>\n        ))}\n      </CardContent>\n    </Card>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

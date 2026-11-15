@@ -1,0 +1,15 @@
+[
+  ["faqs-08", "faqs", "650px", "Category tabs (General, Billing, Technical) that each switch a chevron accordion of questions."],
+  ["faqs-09", "faqs", "800px", "Help center topic grid of icon cards with article counts and quick question links."],
+  ["faqs-10", "faqs", "800px", "Chat-style FAQ thread with question bubbles and assistant answers, ending with a chat CTA."],
+  ["faqs-11", "faqs", "750px", "Inverted dark section with a large headline and a numbered three-column Q&A grid."],
+  ["faqs-12", "faqs", "700px", "Troubleshooting accordion of bordered cards with Was this helpful? yes/no voting."],
+  ["faqs-13", "faqs", "750px", "FAQ bento with a featured most-asked answer tile, four short answer tiles and a contact channel band."],
+  ["faqs-14", "faqs", "900px", "Masonry grid of tagged collapsible FAQ cards that open independently with plus/minus toggles."],
+  ["faqs-15", "faqs", "750px", "Plus-icon accordion beside an ask us a question form card with a sent confirmation state."],
+  ["faqs-16", "faqs", "1100px", "Customer lifecycle timeline grouping question cards by before buying, onboarding, billing and cancelling."],
+  ["faqs-17", "faqs", "700px", "One-at-a-time flashcard carousel with tap to reveal answers, progress bar, dots and prev/next."],
+  ["faqs-18", "faqs", "1200px", "Long-form FAQ page with a sticky numbered table of contents sidebar and anchored sections."],
+  ["faqs-19", "faqs", "700px", "Compact chevron FAQ list with an open count and an Expand all / Collapse all toggle."],
+  ["faqs-20", "faqs", "700px", "Grid of quick Yes/No answer badges with one-line explanations and a full FAQ link."]
+]

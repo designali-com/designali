@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "alert-dialog-08",
+  "type": "registry:example",
+  "description": "Neutral archive confirmation for a chat channel.",
+  "files": [
+    {
+      "path": "registry/designali/examples/alert-dialog/alert-dialog-08.tsx",
+      "content": "import { ArchiveIcon } from \"lucide-react\"\n\nimport {\n  AlertDialog,\n  AlertDialogAction,\n  AlertDialogCancel,\n  AlertDialogContent,\n  AlertDialogDescription,\n  AlertDialogFooter,\n  AlertDialogHeader,\n  AlertDialogMedia,\n  AlertDialogTitle,\n  AlertDialogTrigger,\n} from \"@workspace/ui/components/alert-dialog\"\nimport { Button } from \"@workspace/ui/components/button\"\n\nexport default function ArchiveChannelDialog() {\n  return (\n    <AlertDialog>\n      <AlertDialogTrigger render={<Button variant=\"secondary\" />}>\n        <ArchiveIcon data-icon=\"inline-start\" />\n        Archive #launch-week\n      </AlertDialogTrigger>\n      <AlertDialogContent>\n        <AlertDialogHeader>\n          <AlertDialogMedia>\n            <ArchiveIcon />\n          </AlertDialogMedia>\n          <AlertDialogTitle>Archive this channel?</AlertDialogTitle>\n          <AlertDialogDescription>\n            Members can still search its history, but no one will be able to\n            post new messages.\n          </AlertDialogDescription>\n        </AlertDialogHeader>\n        <AlertDialogFooter>\n          <AlertDialogCancel>Cancel</AlertDialogCancel>\n          <AlertDialogAction>\n            <ArchiveIcon data-icon=\"inline-start\" />\n            Archive channel\n          </AlertDialogAction>\n        </AlertDialogFooter>\n      </AlertDialogContent>\n    </AlertDialog>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

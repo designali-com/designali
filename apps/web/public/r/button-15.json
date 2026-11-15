@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button-15",
+  "type": "registry:example",
+  "description": "Destructive delete button that asks for confirmation in an alert dialog.",
+  "files": [
+    {
+      "path": "registry/designali/examples/button/button-15.tsx",
+      "content": "import { Trash2Icon, TriangleAlertIcon } from \"lucide-react\"\n\nimport {\n  AlertDialog,\n  AlertDialogAction,\n  AlertDialogCancel,\n  AlertDialogContent,\n  AlertDialogDescription,\n  AlertDialogFooter,\n  AlertDialogHeader,\n  AlertDialogMedia,\n  AlertDialogTitle,\n  AlertDialogTrigger,\n} from \"@workspace/ui/components/alert-dialog\"\nimport { Button } from \"@workspace/ui/components/button\"\n\nexport default function DeleteConfirmButton() {\n  return (\n    <AlertDialog>\n      <AlertDialogTrigger render={<Button variant=\"destructive\" />}>\n        <Trash2Icon data-icon=\"inline-start\" />\n        Delete project\n      </AlertDialogTrigger>\n      <AlertDialogContent size=\"sm\">\n        <AlertDialogHeader>\n          <AlertDialogMedia>\n            <TriangleAlertIcon className=\"text-destructive\" />\n          </AlertDialogMedia>\n          <AlertDialogTitle>Delete &quot;Harbor CRM&quot;?</AlertDialogTitle>\n          <AlertDialogDescription>\n            All boards, files and 38 automations will be removed permanently.\n          </AlertDialogDescription>\n        </AlertDialogHeader>\n        <AlertDialogFooter>\n          <AlertDialogCancel>Cancel</AlertDialogCancel>\n          <AlertDialogAction variant=\"destructive\">Delete</AlertDialogAction>\n        </AlertDialogFooter>\n      </AlertDialogContent>\n    </AlertDialog>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

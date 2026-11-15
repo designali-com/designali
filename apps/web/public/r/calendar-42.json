@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "calendar-42",
+  "type": "registry:example",
+  "description": "Settings card where a switch enables a range calendar and auto-reply for out-of-office.",
+  "files": [
+    {
+      "path": "registry/designali/examples/calendar/calendar-42.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { format } from \"date-fns\"\nimport { type DateRange } from \"react-day-picker\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Calendar } from \"@workspace/ui/components/calendar\"\nimport {\n  Card,\n  CardAction,\n  CardContent,\n  CardDescription,\n  CardFooter,\n  CardHeader,\n  CardTitle,\n} from \"@workspace/ui/components/card\"\nimport { Switch } from \"@workspace/ui/components/switch\"\nimport { Textarea } from \"@workspace/ui/components/textarea\"\nimport { cn } from \"@workspace/ui/lib/utils\"\n\nexport default function OutOfOfficeSettings() {\n  const [enabled, setEnabled] = React.useState(false)\n  const [range, setRange] = React.useState<DateRange | undefined>()\n\n  return (\n    <Card className=\"w-full max-w-xs\">\n      <CardHeader>\n        <CardTitle>Out of office</CardTitle>\n        <CardDescription>\n          {enabled && range?.from && range?.to\n            ? \"Away \" +\n              format(range.from, \"MMM d\") +\n              \" - \" +\n              format(range.to, \"MMM d\")\n            : \"Let teammates know when you're away.\"}\n        </CardDescription>\n        <CardAction>\n          <Switch\n            checked={enabled}\n            onCheckedChange={setEnabled}\n            aria-label=\"Enable out of office\"\n          />\n        </CardAction>\n      </CardHeader>\n      <CardContent\n        className={cn(\n          \"flex flex-col gap-3 transition-opacity\",\n          !enabled && \"opacity-50\"\n        )}\n      >\n        <Calendar\n          mode=\"range\"\n          selected={range}\n          onSelect={setRange}\n          disabled={!enabled}\n          className=\"self-center p-0\"\n        />\n        <Textarea\n          disabled={!enabled}\n          placeholder=\"I'm away with limited access to email. For urgent issues contact Jonah Reyes.\"\n          className=\"min-h-16 text-xs\"\n        />\n      </CardContent>\n      <CardFooter className=\"justify-end\">\n        <Button size=\"sm\" disabled={!enabled || !range?.to}>\n          Save\n        </Button>\n      </CardFooter>\n    </Card>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

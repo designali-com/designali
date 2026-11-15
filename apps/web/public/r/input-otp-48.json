@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-otp-48",
+  "type": "registry:example",
+  "description": "Read-only OTP used to display a generated code for another device, with a copy button.",
+  "files": [
+    {
+      "path": "registry/designali/examples/input-otp/input-otp-48.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { CheckIcon, CopyIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  InputOTP,\n  InputOTPGroup,\n  InputOTPSeparator,\n  InputOTPSlot,\n} from \"@workspace/ui/components/input-otp\"\n\nexport default function ReadOnlyPairingCodeDisplay() {\n  const [copied, setCopied] = React.useState(false)\n  const code = \"829304\"\n\n  return (\n    <div className=\"flex w-full max-w-xs flex-col items-center gap-3 border p-4 text-center\">\n      <p className=\"text-xs text-muted-foreground\">\n        Enter this code on your other device\n      </p>\n      <InputOTP\n        maxLength={6}\n        value={code}\n        disabled\n        containerClassName=\"has-disabled:opacity-100\"\n      >\n        <InputOTPGroup>\n          <InputOTPSlot\n            index={0}\n            className=\"size-10 bg-muted text-base font-semibold\"\n          />\n          <InputOTPSlot\n            index={1}\n            className=\"size-10 bg-muted text-base font-semibold\"\n          />\n          <InputOTPSlot\n            index={2}\n            className=\"size-10 bg-muted text-base font-semibold\"\n          />\n        </InputOTPGroup>\n        <InputOTPSeparator />\n        <InputOTPGroup>\n          <InputOTPSlot\n            index={3}\n            className=\"size-10 bg-muted text-base font-semibold\"\n          />\n          <InputOTPSlot\n            index={4}\n            className=\"size-10 bg-muted text-base font-semibold\"\n          />\n          <InputOTPSlot\n            index={5}\n            className=\"size-10 bg-muted text-base font-semibold\"\n          />\n        </InputOTPGroup>\n      </InputOTP>\n      <Button\n        variant=\"ghost\"\n        size=\"sm\"\n        onClick={() => {\n          void navigator.clipboard?.writeText(code)\n          setCopied(true)\n        }}\n      >\n        {copied ? (\n          <CheckIcon data-icon=\"inline-start\" />\n        ) : (\n          <CopyIcon data-icon=\"inline-start\" />\n        )}\n        {copied ? \"Copied\" : \"Copy code\"}\n      </Button>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

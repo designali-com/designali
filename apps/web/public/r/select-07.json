@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "select-07",
+  "type": "registry:example",
+  "description": "Required select that shows an invalid state and error message until a value is chosen.",
+  "files": [
+    {
+      "path": "registry/designali/examples/select/select-07.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport { Field, FieldError, FieldLabel } from \"@workspace/ui/components/field\"\nimport {\n  Select,\n  SelectContent,\n  SelectItem,\n  SelectTrigger,\n  SelectValue,\n} from \"@workspace/ui/components/select\"\n\nconst departments = [\n  { label: \"Engineering\", value: \"engineering\" },\n  { label: \"Design\", value: \"design\" },\n  { label: \"Marketing\", value: \"marketing\" },\n  { label: \"Finance\", value: \"finance\" },\n]\n\nexport default function RequiredInvalidSelect() {\n  const [value, setValue] = React.useState<string | null>(null)\n  const [touched, setTouched] = React.useState(false)\n  const invalid = touched && !value\n\n  return (\n    <form\n      className=\"flex w-full max-w-xs flex-col gap-4\"\n      onSubmit={(event) => {\n        event.preventDefault()\n        setTouched(true)\n      }}\n    >\n      <Field data-invalid={invalid}>\n        <FieldLabel htmlFor=\"department\">Department</FieldLabel>\n        <Select\n          items={departments}\n          value={value}\n          onValueChange={setValue}\n          required\n        >\n          <SelectTrigger\n            id=\"department\"\n            className=\"w-full\"\n            aria-invalid={invalid}\n          >\n            <SelectValue placeholder=\"Choose a department\" />\n          </SelectTrigger>\n          <SelectContent>\n            {departments.map((item) => (\n              <SelectItem key={item.value} value={item.value}>\n                {item.label}\n              </SelectItem>\n            ))}\n          </SelectContent>\n        </Select>\n        {invalid && (\n          <FieldError>Please select a department to continue.</FieldError>\n        )}\n      </Field>\n      <Button type=\"submit\">Continue</Button>\n    </form>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

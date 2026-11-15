@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tooltip-11",
+  "type": "registry:example",
+  "description": "Overlapping avatar stack where each person is named in a tooltip, plus an overflow count.",
+  "files": [
+    {
+      "path": "registry/designali/examples/tooltip/tooltip-11.tsx",
+      "content": "import {\n  Avatar,\n  AvatarFallback,\n  AvatarGroup,\n  AvatarGroupCount,\n} from \"@workspace/ui/components/avatar\"\nimport {\n  Tooltip,\n  TooltipContent,\n  TooltipProvider,\n  TooltipTrigger,\n} from \"@workspace/ui/components/tooltip\"\n\nconst people = [\n  { name: \"Noor Haddad\", role: \"Owner\" },\n  { name: \"Elias Berg\", role: \"Editor\" },\n  { name: \"Mina Park\", role: \"Editor\" },\n  { name: \"Owen Clarke\", role: \"Viewer\" },\n]\n\nexport default function AvatarStackTooltips() {\n  return (\n    <TooltipProvider>\n      <AvatarGroup>\n        {people.map((p) => (\n          <Tooltip key={p.name}>\n            <TooltipTrigger\n              render={\n                <Avatar className=\"ring-2 ring-background\">\n                  <AvatarFallback>\n                    {p.name\n                      .split(\" \")\n                      .map((s) => s[0])\n                      .join(\"\")}\n                  </AvatarFallback>\n                </Avatar>\n              }\n            />\n            <TooltipContent>\n              {p.name} · {p.role}\n            </TooltipContent>\n          </Tooltip>\n        ))}\n        <Tooltip>\n          <TooltipTrigger render={<AvatarGroupCount />}>+3</TooltipTrigger>\n          <TooltipContent>Ravi, Sofia and Theo</TooltipContent>\n        </Tooltip>\n      </AvatarGroup>\n    </TooltipProvider>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

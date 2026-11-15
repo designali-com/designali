@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "command-27",
+  "type": "registry:example",
+  "description": "A command palette with a footer bar explaining the keyboard controls.",
+  "files": [
+    {
+      "path": "registry/designali/examples/command/command-27.tsx",
+      "content": "import { BarChart3Icon, HomeIcon, ReceiptIcon, UsersIcon } from \"lucide-react\"\n\nimport {\n  Command,\n  CommandEmpty,\n  CommandGroup,\n  CommandInput,\n  CommandItem,\n  CommandList,\n} from \"@workspace/ui/components/command\"\nimport { Kbd } from \"@workspace/ui/components/kbd\"\n\nexport default function KeyboardHintFooter() {\n  return (\n    <Command className=\"w-full max-w-md border shadow-sm\">\n      <CommandInput placeholder=\"Jump to...\" />\n      <CommandList>\n        <CommandEmpty>No results.</CommandEmpty>\n        <CommandGroup heading=\"Pages\">\n          <CommandItem>\n            <HomeIcon />\n            <span>Overview</span>\n          </CommandItem>\n          <CommandItem>\n            <BarChart3Icon />\n            <span>Reports</span>\n          </CommandItem>\n          <CommandItem>\n            <UsersIcon />\n            <span>Customers</span>\n          </CommandItem>\n          <CommandItem>\n            <ReceiptIcon />\n            <span>Invoices</span>\n          </CommandItem>\n        </CommandGroup>\n      </CommandList>\n      <div className=\"flex flex-wrap items-center gap-3 border-t px-2 py-1.5 text-[11px] text-muted-foreground\">\n        <span className=\"flex items-center gap-1\">\n          <Kbd>↑</Kbd>\n          <Kbd>↓</Kbd>\n          navigate\n        </span>\n        <span className=\"flex items-center gap-1\">\n          <Kbd>↵</Kbd>\n          open\n        </span>\n        <span className=\"flex items-center gap-1\">\n          <Kbd>esc</Kbd>\n          close\n        </span>\n      </div>\n    </Command>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

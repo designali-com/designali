@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "select-23",
+  "type": "registry:example",
+  "description": "Data residency select with unavailable regions disabled and marked coming soon.",
+  "files": [
+    {
+      "path": "registry/designali/examples/select/select-23.tsx",
+      "content": "import { ServerIcon } from \"lucide-react\"\n\nimport { Badge } from \"@workspace/ui/components/badge\"\nimport {\n  Field,\n  FieldDescription,\n  FieldLabel,\n} from \"@workspace/ui/components/field\"\nimport {\n  Select,\n  SelectContent,\n  SelectItem,\n  SelectTrigger,\n  SelectValue,\n} from \"@workspace/ui/components/select\"\n\nconst regions = [\n  { label: \"US East (Virginia)\", value: \"us-east\", available: true },\n  { label: \"US West (Oregon)\", value: \"us-west\", available: true },\n  { label: \"EU Central (Frankfurt)\", value: \"eu-central\", available: true },\n  { label: \"AP South (Mumbai)\", value: \"ap-south\", available: false },\n  { label: \"SA East (Sao Paulo)\", value: \"sa-east\", available: false },\n]\n\nexport default function DataRegionSelect() {\n  return (\n    <Field className=\"w-full max-w-xs\">\n      <FieldLabel htmlFor=\"region\">Data region</FieldLabel>\n      <Select items={regions} defaultValue=\"eu-central\">\n        <SelectTrigger id=\"region\" className=\"w-full\">\n          <ServerIcon className=\"text-muted-foreground\" />\n          <SelectValue />\n        </SelectTrigger>\n        <SelectContent>\n          {regions.map((item) => (\n            <SelectItem\n              key={item.value}\n              value={item.value}\n              disabled={!item.available}\n            >\n              {item.label}\n              {!item.available && (\n                <Badge variant=\"outline\" className=\"ms-auto\">\n                  Soon\n                </Badge>\n              )}\n            </SelectItem>\n          ))}\n        </SelectContent>\n      </Select>\n      <FieldDescription>\n        Region cannot be changed after the project is created.\n      </FieldDescription>\n    </Field>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

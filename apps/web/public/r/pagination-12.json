@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "pagination-12",
+  "type": "registry:example",
+  "description": "Article footer pagination with previous and next post titles instead of page numbers.",
+  "files": [
+    {
+      "path": "registry/designali/examples/pagination/pagination-12.tsx",
+      "content": "import {\n  Pagination,\n  PaginationContent,\n  PaginationItem,\n  PaginationNext,\n  PaginationPrevious,\n} from \"@workspace/ui/components/pagination\"\n\nexport default function BlogPostPrevNext() {\n  return (\n    <Pagination className=\"max-w-md\">\n      <PaginationContent className=\"w-full justify-between gap-4\">\n        <PaginationItem className=\"min-w-0\">\n          <PaginationPrevious href=\"#\" text=\"Previous post\" />\n          <p className=\"truncate ps-2 text-xs text-muted-foreground\">\n            Designing calmer onboarding\n          </p>\n        </PaginationItem>\n        <PaginationItem className=\"min-w-0 text-end\">\n          <PaginationNext href=\"#\" text=\"Next post\" />\n          <p className=\"truncate pe-2 text-xs text-muted-foreground\">\n            Notes on dense data tables\n          </p>\n        </PaginationItem>\n      </PaginationContent>\n    </Pagination>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

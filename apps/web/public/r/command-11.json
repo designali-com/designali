@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "command-11",
+  "type": "registry:example",
+  "description": "A file search menu showing recent files with type icons, folder paths, and edit times.",
+  "files": [
+    {
+      "path": "registry/designali/examples/command/command-11.tsx",
+      "content": "import {\n  FileJsonIcon,\n  FileTextIcon,\n  FileVideoIcon,\n  PaletteIcon,\n  SheetIcon,\n} from \"lucide-react\"\n\nimport {\n  Command,\n  CommandEmpty,\n  CommandGroup,\n  CommandInput,\n  CommandItem,\n  CommandList,\n} from \"@workspace/ui/components/command\"\n\nconst files = [\n  {\n    name: \"Q3 roadmap.pdf\",\n    path: \"Planning / 2026\",\n    edited: \"2m ago\",\n    icon: FileTextIcon,\n  },\n  {\n    name: \"brand-colors.fig\",\n    path: \"Design / Brand\",\n    edited: \"1h ago\",\n    icon: PaletteIcon,\n  },\n  {\n    name: \"revenue-model.xlsx\",\n    path: \"Finance\",\n    edited: \"Yesterday\",\n    icon: SheetIcon,\n  },\n  {\n    name: \"onboarding-flow.mp4\",\n    path: \"Research / Videos\",\n    edited: \"Mon\",\n    icon: FileVideoIcon,\n  },\n  {\n    name: \"api-schema.json\",\n    path: \"Engineering / Specs\",\n    edited: \"Oct 28\",\n    icon: FileJsonIcon,\n  },\n]\n\nexport default function RecentFilesSearch() {\n  return (\n    <Command className=\"w-full max-w-md border shadow-sm\">\n      <CommandInput placeholder=\"Search files by name...\" />\n      <CommandList>\n        <CommandEmpty>No files match.</CommandEmpty>\n        <CommandGroup heading=\"Recent files\">\n          {files.map((file) => (\n            <CommandItem key={file.name} value={file.name + \" \" + file.path}>\n              <div className=\"flex size-8 items-center justify-center bg-muted\">\n                <file.icon />\n              </div>\n              <div className=\"flex min-w-0 flex-col\">\n                <span className=\"truncate font-medium\">{file.name}</span>\n                <span className=\"truncate text-[11px] text-muted-foreground\">\n                  {file.path}\n                </span>\n              </div>\n              <span className=\"ms-auto shrink-0 text-[11px] text-muted-foreground\">\n                {file.edited}\n              </span>\n            </CommandItem>\n          ))}\n        </CommandGroup>\n      </CommandList>\n    </Command>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

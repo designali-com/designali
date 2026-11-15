@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "badge-34",
+  "type": "registry:example",
+  "description": "Settings rows that flag experimental features with Beta and Alpha badges.",
+  "files": [
+    {
+      "path": "registry/designali/examples/badge/badge-34.tsx",
+      "content": "import { Badge } from \"@workspace/ui/components/badge\"\nimport { Switch } from \"@workspace/ui/components/switch\"\n\nconst features = [\n  {\n    id: \"ai\",\n    label: \"AI summaries\",\n    stage: \"Beta\",\n    description: \"Summarize long threads automatically.\",\n  },\n  {\n    id: \"canvas\",\n    label: \"Infinite canvas\",\n    stage: \"Alpha\",\n    description: \"Arrange notes on a freeform board.\",\n  },\n  {\n    id: \"offline\",\n    label: \"Offline mode\",\n    stage: \"Beta\",\n    description: \"Keep working without a connection.\",\n  },\n]\n\nexport default function BetaFeatureSettings() {\n  return (\n    <div className=\"flex w-full max-w-md flex-col gap-4\">\n      {features.map((feature) => (\n        <div\n          key={feature.id}\n          className=\"flex items-start justify-between gap-4\"\n        >\n          <div>\n            <label\n              htmlFor={feature.id}\n              className=\"flex items-center gap-2 text-sm font-medium\"\n            >\n              {feature.label}\n              <Badge\n                variant={\n                  feature.stage === \"Alpha\" ? \"destructive\" : \"secondary\"\n                }\n                className=\"h-4 px-1.5 text-[10px] uppercase\"\n              >\n                {feature.stage}\n              </Badge>\n            </label>\n            <p className=\"text-xs text-muted-foreground\">\n              {feature.description}\n            </p>\n          </div>\n          <Switch id={feature.id} defaultChecked={feature.id === \"ai\"} />\n        </div>\n      ))}\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

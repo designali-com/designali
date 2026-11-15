@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "command-31",
+  "type": "registry:example",
+  "description": "A launcher that shows an instant calculator result as the first item for simple math.",
+  "files": [
+    {
+      "path": "registry/designali/examples/command/command-31.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { CalculatorIcon, NotebookPenIcon, TimerIcon } from \"lucide-react\"\n\nimport {\n  Command,\n  CommandEmpty,\n  CommandGroup,\n  CommandInput,\n  CommandItem,\n  CommandList,\n  CommandShortcut,\n} from \"@workspace/ui/components/command\"\n\nfunction calculate(input: string) {\n  const match = input\n    .replace(/\\s/g, \"\")\n    .match(/^(-?\\d+(?:\\.\\d+)?)([+\\-*/x])(-?\\d+(?:\\.\\d+)?)$/)\n  if (!match) return null\n  const a = Number(match[1])\n  const b = Number(match[3])\n  switch (match[2]) {\n    case \"+\":\n      return a + b\n    case \"-\":\n      return a - b\n    case \"*\":\n    case \"x\":\n      return a * b\n    case \"/\":\n      return b === 0 ? null : a / b\n    default:\n      return null\n  }\n}\n\nexport default function InlineCalculatorResult() {\n  const [query, setQuery] = React.useState(\"128 * 12\")\n  const result = calculate(query)\n\n  return (\n    <Command className=\"w-full max-w-sm border\">\n      <CommandInput\n        value={query}\n        onValueChange={setQuery}\n        placeholder=\"Search or calculate...\"\n      />\n      <CommandList>\n        {result !== null ? (\n          <CommandGroup heading=\"Calculator\">\n            <CommandItem value={query} forceMount>\n              <CalculatorIcon />\n              <span className=\"text-muted-foreground\">{query} =</span>\n              <span className=\"text-sm font-semibold\">\n                {Number(result.toFixed(6)).toLocaleString()}\n              </span>\n              <CommandShortcut>copy</CommandShortcut>\n            </CommandItem>\n          </CommandGroup>\n        ) : null}\n        <CommandEmpty>Type a sum like 42 + 8.</CommandEmpty>\n        <CommandGroup heading=\"Apps\">\n          <CommandItem>\n            <NotebookPenIcon />\n            <span>Notes</span>\n          </CommandItem>\n          <CommandItem>\n            <TimerIcon />\n            <span>Timer</span>\n          </CommandItem>\n        </CommandGroup>\n      </CommandList>\n    </Command>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

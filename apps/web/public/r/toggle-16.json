@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toggle-16",
+  "type": "registry:example",
+  "description": "Independent filter chips that narrow a job listing; any combination can be active.",
+  "files": [
+    {
+      "path": "registry/designali/examples/toggle/toggle-16.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { AwardIcon, BriefcaseIcon, GlobeIcon } from \"lucide-react\"\n\nimport { Toggle } from \"@workspace/ui/components/toggle\"\n\nconst jobs = [\n  {\n    title: \"Senior Product Designer\",\n    remote: true,\n    fullTime: true,\n    senior: true,\n  },\n  { title: \"Frontend Engineer\", remote: true, fullTime: true, senior: false },\n  { title: \"Brand Illustrator\", remote: false, fullTime: false, senior: false },\n  { title: \"Staff Data Engineer\", remote: false, fullTime: true, senior: true },\n]\n\nexport default function FilterChipToggles() {\n  const [remote, setRemote] = React.useState(false)\n  const [fullTime, setFullTime] = React.useState(false)\n  const [senior, setSenior] = React.useState(false)\n  const results = jobs.filter(\n    (j) =>\n      (!remote || j.remote) &&\n      (!fullTime || j.fullTime) &&\n      (!senior || j.senior)\n  )\n\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-3\">\n      <div className=\"flex flex-wrap gap-2\">\n        <Toggle\n          variant=\"outline\"\n          size=\"sm\"\n          pressed={remote}\n          onPressedChange={setRemote}\n        >\n          <GlobeIcon />\n          Remote\n        </Toggle>\n        <Toggle\n          variant=\"outline\"\n          size=\"sm\"\n          pressed={fullTime}\n          onPressedChange={setFullTime}\n        >\n          <BriefcaseIcon />\n          Full-time\n        </Toggle>\n        <Toggle\n          variant=\"outline\"\n          size=\"sm\"\n          pressed={senior}\n          onPressedChange={setSenior}\n        >\n          <AwardIcon />\n          Senior\n        </Toggle>\n      </div>\n      <div className=\"border\">\n        {results.length ? (\n          results.map((j) => (\n            <p\n              key={j.title}\n              className=\"border-b px-3 py-2 text-sm last:border-b-0\"\n            >\n              {j.title}\n            </p>\n          ))\n        ) : (\n          <p className=\"px-3 py-4 text-center text-sm text-muted-foreground\">\n            No roles match these filters.\n          </p>\n        )}\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}
