@@ -431,7 +431,7 @@ export const blocks: Registry["items"] = [
         type: "registry:component",
       },
     ],
-    categories: ["logos", "clients"],
+    categories: ["clients"],
     meta: {
       iframeHeight: "500px",
     },
@@ -448,7 +448,7 @@ export const blocks: Registry["items"] = [
         type: "registry:component",
       },
     ],
-    categories: ["logos", "clients"],
+    categories: ["clients"],
     meta: {
       iframeHeight: "500px",
     },
@@ -465,7 +465,7 @@ export const blocks: Registry["items"] = [
         type: "registry:component",
       },
     ],
-    categories: ["logos", "clients"],
+    categories: ["clients"],
     meta: {
       iframeHeight: "500px",
     },
@@ -482,7 +482,7 @@ export const blocks: Registry["items"] = [
         type: "registry:component",
       },
     ],
-    categories: ["logos", "clients"],
+    categories: ["clients"],
     meta: {
       iframeHeight: "700px",
     },
@@ -499,7 +499,7 @@ export const blocks: Registry["items"] = [
         type: "registry:component",
       },
     ],
-    categories: ["logos", "clients"],
+    categories: ["clients"],
     meta: {
       iframeHeight: "500px",
     },
@@ -532,7 +532,7 @@ export const blocks: Registry["items"] = [
         type: "registry:component",
       },
     ],
-    categories: ["feature", "features"],
+    categories: ["features"],
     meta: {
       iframeHeight: "800px",
     },
@@ -548,7 +548,7 @@ export const blocks: Registry["items"] = [
         type: "registry:component",
       },
     ],
-    categories: ["feature", "features"],
+    categories: ["features"],
     meta: {
       iframeHeight: "800px",
     },
@@ -564,7 +564,7 @@ export const blocks: Registry["items"] = [
         type: "registry:component",
       },
     ],
-    categories: ["feature", "features"],
+    categories: ["features"],
     meta: {
       iframeHeight: "800px",
     },
@@ -580,7 +580,7 @@ export const blocks: Registry["items"] = [
         type: "registry:component",
       },
     ],
-    categories: ["feature", "features"],
+    categories: ["features"],
     meta: {
       iframeHeight: "800px",
     },
@@ -708,7 +708,7 @@ export const blocks: Registry["items"] = [
         type: "registry:component",
       },
     ],
-    categories: ["testimonials", "testimonial"],
+    categories: ["testimonials"],
     meta: {
       iframeHeight: "500px",
     },
