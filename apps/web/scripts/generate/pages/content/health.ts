@@ -1,0 +1,94 @@
+import type { CategoryContent } from "../types"
+
+export const health: CategoryContent = {
+  slug: "health",
+  name: "Health",
+  description:
+    "Landing pages for telehealth services, clinics and digital health products, with booking flows and plans.",
+  iconName: "HeartPulse",
+  visual: "product",
+  navSecondary: "Patient login",
+  navLinks: ["Services", "How it works", "Pricing", "Clinicians", "FAQ"],
+  copy: {
+    featuresEyebrow: "Care",
+    featuresTitle: "Healthcare that fits around your life",
+    featuresBody:
+      "Licensed clinicians, same-day appointments and prescriptions delivered to your door, all from your phone.",
+    showcaseTitle: "What we can help with",
+    showcaseBody:
+      "From everyday illnesses to ongoing conditions, our clinicians treat hundreds of concerns online.",
+    stepsTitle: "Getting care is simple",
+    testimonialsTitle: "Patients who feel heard",
+    pricingTitle: "Clear pricing, with or without insurance",
+    pricingBody:
+      "Most major insurance plans accepted. Self-pay prices are listed upfront, with no surprise bills.",
+    faqTitle: "Common questions",
+    logosLabel: "In network with",
+  },
+  features: [
+    { icon: "Video", title: "Video visits in minutes", description: "See a board-certified clinician by video, usually in under 15 minutes, any time of day." },
+    { icon: "Pill", title: "Prescriptions delivered", description: "Medications are sent to your local pharmacy or delivered free to your door in two days." },
+    { icon: "Stethoscope", title: "Your own care team", description: "Stay with the same doctor and nurse for ongoing care, so you never repeat your history." },
+    { icon: "MessageCircle", title: "Message your clinician", description: "Ask follow-up questions in a secure chat and get a reply within one business day." },
+    { icon: "FlaskConical", title: "At-home lab tests", description: "Order blood work online, collect a sample at home and get results with a doctor's notes." },
+    { icon: "ShieldCheck", title: "Private and secure", description: "HIPAA compliant, end-to-end encrypted, and we never sell your health data. Ever." },
+    { icon: "CalendarCheck", title: "Same-day appointments", description: "Book in-person visits at partner clinics near you, with real-time availability." },
+    { icon: "Activity", title: "Connected monitoring", description: "Sync blood pressure cuffs, glucose monitors and wearables so your team sees trends." },
+  ],
+  stats: [
+    { value: "1.8M", label: "Patients treated" },
+    { value: "14 min", label: "Average wait for a visit" },
+    { value: "4.9/5", label: "Patient satisfaction" },
+    { value: "50", label: "States covered" },
+    { value: "2,300", label: "Licensed clinicians" },
+    { value: "92%", label: "Issues resolved in one visit" },
+  ],
+  logos: ["Aetna", "Cigna", "UnitedHealthcare", "Humana", "Anthem", "Kaiser", "Blue Shield", "Oscar"],
+  testimonials: [
+    { quote: "I had a doctor on screen in ten minutes and a prescription at my pharmacy within the hour. I will never sit in an urgent care waiting room again.", name: "Jasmine Carter", role: "Patient since 2023" },
+    { quote: "Managing my diabetes used to mean a 40-minute drive each month. Now my care team checks my readings and messages me when something changes.", name: "Robert Nguyen", role: "Chronic care member" },
+    { quote: "The therapist I was matched with actually listens. Booking a session takes less time than making coffee.", name: "Amelia Brooks", role: "Mental health member" },
+    { quote: "As a working parent, being able to get my kids seen at 9pm on a Tuesday is genuinely life-changing.", name: "Carlos Rivera", role: "Family plan member" },
+    { quote: "Prices are listed upfront, and the bill matched exactly. That alone made me switch.", name: "Nina Patel", role: "Self-pay patient" },
+    { quote: "We offer this to all 1,200 employees. Sick days dropped and our benefits survey scores went up.", name: "Michael Owens", role: "HR Director" },
+  ],
+  steps: [
+    { title: "Tell us what is going on", description: "Answer a few questions about your symptoms and medical history in about three minutes." },
+    { title: "Meet your clinician", description: "Connect by video or chat with a licensed provider in your state, often within minutes." },
+    { title: "Get your treatment plan", description: "Receive a diagnosis, prescriptions and clear next steps, all saved in your app." },
+    { title: "Follow up any time", description: "Message your care team with questions or book a follow-up with the same clinician." },
+  ],
+  showcase: [
+    { name: "Urgent care", meta: "Colds, flu, infections, rashes", tag: "24/7", price: "$49" },
+    { name: "Mental health", meta: "Therapy and psychiatry", tag: "Popular", price: "$99" },
+    { name: "Women's health", meta: "Birth control, UTIs, menopause", tag: "Same day", price: "$39" },
+    { name: "Chronic care", meta: "Diabetes, hypertension, thyroid", tag: "Ongoing", price: "$29/mo" },
+    { name: "Dermatology", meta: "Acne, eczema, hair loss", tag: "Photo visit", price: "$59" },
+    { name: "Weight care", meta: "Clinician-led programs", tag: "New", price: "$79/mo" },
+  ],
+  tiers: [
+    { name: "Pay per visit", price: "$49", period: "/visit", description: "For occasional care when you need it.", features: ["24/7 urgent care", "Prescriptions sent anywhere", "Visit notes in the app", "No membership"], cta: "Book a visit" },
+    { name: "Membership", price: "$19", period: "/month", description: "For individuals who want a regular care team.", features: ["Unlimited messaging", "$0 urgent care visits", "Dedicated primary care doctor", "Discounted lab tests", "Annual wellness check"], cta: "Become a member" },
+    { name: "Family", price: "$39", period: "/month", description: "Cover up to six people on one plan.", features: ["Everything in Membership", "Pediatric care", "Shared family dashboard", "Up to 6 members", "Priority booking"], cta: "Cover your family" },
+  ],
+  faqs: [
+    { q: "Do you accept insurance?", a: "Yes. We are in network with most major insurers. Enter your plan details at checkout to see your exact cost." },
+    { q: "Can you prescribe medication?", a: "Our clinicians can prescribe most common medications. We do not prescribe controlled substances online." },
+    { q: "Is telehealth as good as an in-person visit?", a: "For most common conditions, yes. If you need an exam in person, we will refer you to a partner clinic nearby." },
+    { q: "Who are your clinicians?", a: "Every clinician is board certified and licensed in your state, with an average of 11 years of experience." },
+    { q: "Is my information private?", a: "Your data is protected under HIPAA, encrypted end to end and never sold or shared for advertising." },
+    { q: "What if I need emergency care?", a: "For emergencies such as chest pain or difficulty breathing, call 911 or go to the nearest emergency room." },
+  ],
+  footer: [
+    { title: "Care", links: ["Urgent care", "Mental health", "Chronic care", "Lab tests"] },
+    { title: "Company", links: ["About", "Clinicians", "Careers", "Press"] },
+    { title: "Support", links: ["Help center", "Insurance", "Privacy", "Contact"] },
+  ],
+  pages: [
+    { brand: "Clearcare", description: "A telehealth landing page with app mockup, services and membership pricing.", eyebrow: "Doctors available now", headline: "See a doctor in minutes, from anywhere", highlight: "in minutes", subheadline: "Clearcare connects you with board-certified clinicians by video, 24 hours a day, with prescriptions sent straight to your pharmacy.", primaryCta: "Start a visit", secondaryCta: "Check insurance", announcement: "Now in network with UnitedHealthcare in all 50 states", tagline: "Healthcare without the waiting room.", ctaHeadline: "Feel better, faster", ctaBody: "Most visits start in under 15 minutes. Pay only $49 without insurance." },
+    { brand: "Mindwell", description: "A mental health therapy landing page with editorial hero and therapist matching.", eyebrow: "Therapy that fits your week", headline: "Talk to someone who truly gets it", highlight: "truly gets it", subheadline: "Mindwell matches you with a licensed therapist in 48 hours, for weekly video sessions and messaging between appointments.", primaryCta: "Get matched", secondaryCta: "Meet our therapists", announcement: "Psychiatry and medication management now available", tagline: "Mental health care, made human.", ctaHeadline: "Your first step can be today", ctaBody: "Take a five-minute assessment and meet your therapist this week." },
+    { brand: "Northside Clinic", description: "A family medical clinic landing page with split hero and same-day booking.", eyebrow: "Accepting new patients", headline: "Family medicine with same-day appointments", highlight: "same-day appointments", subheadline: "Northside Clinic offers primary care, pediatrics and walk-in visits across four neighbourhood locations, open seven days a week.", primaryCta: "Book an appointment", secondaryCta: "Find a location", announcement: "Flu shots available, no appointment needed", tagline: "Your neighbourhood doctor.", ctaHeadline: "Care for every member of the family", ctaBody: "Book online in under a minute. Most insurance plans accepted." },
+    { brand: "Pulsepoint", description: "A remote patient monitoring landing page for chronic care with bento hero.", eyebrow: "Remote monitoring for chronic care", headline: "Chronic care that keeps watch between visits", highlight: "between visits", subheadline: "Pulsepoint pairs connected devices with a dedicated nurse who reviews your readings daily and adjusts your plan with your doctor.", primaryCta: "Check eligibility", secondaryCta: "For providers", announcement: "Medicare covers Pulsepoint for eligible patients", tagline: "Care that never clocks off.", ctaHeadline: "Fewer flare-ups, fewer hospital visits", ctaBody: "Most Medicare patients pay nothing. Check your eligibility in two minutes." },
+    { brand: "Vitalab", description: "An at-home lab testing landing page with dark inverted hero and test catalog.", eyebrow: "Lab tests at home", headline: "Know your numbers without leaving home", highlight: "without leaving home", subheadline: "Vitalab ships doctor-ordered blood tests to your door and delivers results in 48 hours, with a clinician to explain every marker.", primaryCta: "Shop tests", secondaryCta: "How it works", announcement: "New: complete hormone panel for men and women", tagline: "Lab-grade answers, at home.", ctaHeadline: "Your health, measured", ctaBody: "Free shipping both ways and results reviewed by a physician." },
+  ],
+}

@@ -1,0 +1,94 @@
+import type { CategoryContent } from "../types"
+
+export const education: CategoryContent = {
+  slug: "education",
+  name: "Education",
+  description:
+    "Landing pages for online courses, schools, bootcamps and tutoring services, with course catalogs and enrolment.",
+  iconName: "GraduationCap",
+  visual: "visual",
+  navSecondary: "Log in",
+  navLinks: ["Courses", "Programs", "Instructors", "Pricing", "For teams"],
+  copy: {
+    featuresEyebrow: "Learning",
+    featuresTitle: "Learning that actually sticks",
+    featuresBody:
+      "Short lessons, real projects and feedback from experts, designed around how adults really learn.",
+    showcaseTitle: "Popular courses this term",
+    showcaseBody:
+      "Taught by practitioners from leading companies and universities. Start any course today.",
+    stepsTitle: "How learning works here",
+    testimonialsTitle: "Learners who changed their path",
+    pricingTitle: "Plans for every learner",
+    pricingBody:
+      "Learn at your own pace or join a live cohort. Financial aid and student discounts available.",
+    faqTitle: "Questions from learners",
+    logosLabel: "Our graduates work at",
+  },
+  features: [
+    { icon: "PlayCircle", title: "Bite-sized lessons", description: "Video lessons under ten minutes, so you can learn on a commute or a lunch break." },
+    { icon: "FolderKanban", title: "Portfolio projects", description: "Every course ends with a real project you can show employers, reviewed by an expert." },
+    { icon: "Users", title: "Live cohorts", description: "Learn alongside peers with weekly live sessions, study groups and shared deadlines." },
+    { icon: "MessageSquare", title: "Mentor feedback", description: "Get line-by-line feedback from industry mentors within 48 hours of every submission." },
+    { icon: "Award", title: "Recognised certificates", description: "Earn certificates accredited by partner universities and shareable on LinkedIn." },
+    { icon: "Brain", title: "Adaptive practice", description: "Quizzes adapt to what you get wrong, so you spend time where it matters most." },
+    { icon: "Download", title: "Learn offline", description: "Download lessons on the mobile app and keep learning without a connection." },
+    { icon: "Briefcase", title: "Career support", description: "Resume reviews, mock interviews and introductions to our hiring partners." },
+  ],
+  stats: [
+    { value: "2.4M", label: "Learners worldwide" },
+    { value: "860", label: "Expert-led courses" },
+    { value: "87%", label: "Report a career boost" },
+    { value: "4.8/5", label: "Average course rating" },
+    { value: "190", label: "Countries represented" },
+    { value: "320", label: "Hiring partners" },
+  ],
+  logos: ["Google", "Spotify", "Airbnb", "Shopify", "Deloitte", "IBM", "Stripe", "Canva"],
+  testimonials: [
+    { quote: "I went from teaching high school chemistry to working as a data analyst in nine months. The projects got me the interview.", name: "Maya Thompson", role: "Data Analyst, career switcher" },
+    { quote: "The mentor feedback is the real value. Someone experienced actually read my code and told me how to improve it.", name: "Arjun Mehta", role: "Software Engineer" },
+    { quote: "My son's maths grade went from a C to an A minus in one term. His tutor made it click in a way school never did.", name: "Karen Doyle", role: "Parent" },
+    { quote: "Studying with a cohort kept me accountable. I finished every module on time for the first time in my life.", name: "Lucas Moreau", role: "UX Designer" },
+    { quote: "We upskilled 200 analysts in a quarter. Completion rates were three times higher than our old platform.", name: "Sarah Goldberg", role: "Head of L&D" },
+    { quote: "Lessons are short enough that I can do one on the train every morning. Small steps added up fast.", name: "Tomás Silva", role: "Product Manager" },
+  ],
+  steps: [
+    { title: "Pick your path", description: "Take a short quiz and get a course or program matched to your goals and level." },
+    { title: "Learn at your pace", description: "Work through short lessons and practice exercises on any device." },
+    { title: "Build real projects", description: "Apply what you learn to projects reviewed by mentors from the industry." },
+    { title: "Get certified", description: "Earn a certificate and share it with employers, plus access career support." },
+  ],
+  showcase: [
+    { name: "Data Analysis with Python", meta: "12 weeks · 48 lessons", tag: "Bestseller", price: "$249" },
+    { name: "UX Design Fundamentals", meta: "8 weeks · 32 lessons", tag: "Beginner", price: "$199" },
+    { name: "Full-Stack Web Development", meta: "24 weeks · Live cohort", tag: "Program", price: "$2,400" },
+    { name: "Product Management", meta: "10 weeks · 40 lessons", tag: "Popular", price: "$299" },
+    { name: "Machine Learning Foundations", meta: "14 weeks · 56 lessons", tag: "New", price: "$349" },
+    { name: "Business Writing", meta: "4 weeks · 16 lessons", tag: "Short course", price: "$89" },
+  ],
+  tiers: [
+    { name: "Single course", price: "$89", period: "from", description: "Buy one course and keep it forever.", features: ["Lifetime access", "All lessons and quizzes", "Certificate of completion", "Mobile app"], cta: "Browse courses" },
+    { name: "All-access", price: "$39", period: "/month", description: "Unlimited learning across the whole catalog.", features: ["Every course included", "Mentor project reviews", "Live workshops", "Offline downloads", "Cancel any time"], cta: "Start free trial" },
+    { name: "Teams", price: "$29", period: "/seat/month", description: "Upskill your whole organisation.", features: ["Everything in All-access", "Admin dashboard", "Custom learning paths", "SSO and LMS integration", "Dedicated success manager"], cta: "Contact sales" },
+  ],
+  faqs: [
+    { q: "Do I need any prior experience?", a: "No. Every path starts with a beginner track, and our placement quiz suggests where to start." },
+    { q: "How much time should I set aside?", a: "Most learners spend five to eight hours a week. You can pause and resume courses at any time." },
+    { q: "Are the certificates recognised?", a: "Our certificates are co-issued with partner universities and are recognised by more than 300 hiring partners." },
+    { q: "Is financial aid available?", a: "Yes. We offer need-based scholarships and income-share options for full programs." },
+    { q: "Can I get a refund?", a: "You can request a full refund within 14 days of purchase if you have completed less than 20% of the course." },
+    { q: "Do you offer live classes?", a: "Our cohort programs include weekly live sessions with instructors and small-group study rooms." },
+  ],
+  footer: [
+    { title: "Learn", links: ["Courses", "Programs", "Certificates", "Free resources"] },
+    { title: "Community", links: ["Mentors", "Events", "Student stories", "Scholarships"] },
+    { title: "Company", links: ["About", "Careers", "For business", "Contact"] },
+  ],
+  pages: [
+    { brand: "Skillpath", description: "An online course platform landing page with course catalog and subscription pricing.", eyebrow: "800+ courses from experts", headline: "Learn the skills employers are hiring for", highlight: "employers are hiring for", subheadline: "Skillpath offers hands-on courses in data, design and tech, taught by practitioners and backed by real portfolio projects.", primaryCta: "Start learning free", secondaryCta: "Browse courses", announcement: "New AI for Analysts certificate now open", tagline: "Skills that move careers.", ctaHeadline: "Your next career starts with one lesson", ctaBody: "Try All-access free for seven days. Cancel any time." },
+    { brand: "Brightminds", description: "A K-12 tutoring service landing page with split hero and tutor matching.", eyebrow: "One-to-one tutoring", headline: "Tutoring that builds real confidence", highlight: "real confidence", subheadline: "Brightminds matches students with vetted tutors in maths, science and English, for live online sessions that fit around school.", primaryCta: "Book free session", secondaryCta: "Meet our tutors", announcement: "Exam prep packages now available for spring", tagline: "Every student, at their best.", ctaHeadline: "See the difference in one session", ctaBody: "Your first 45-minute lesson is free, with no obligation." },
+    { brand: "Codeforge Academy", description: "A coding bootcamp landing page with dark hero, curriculum steps and outcomes.", eyebrow: "Next cohort starts soon", headline: "Become a software engineer in 24 weeks", highlight: "24 weeks", subheadline: "A live, mentor-led bootcamp with a job guarantee. Build real apps, ship a capstone and graduate with an offer or your money back.", primaryCta: "Apply now", secondaryCta: "Download syllabus", announcement: "Income-share option available for the next cohort", tagline: "From beginner to hired.", ctaHeadline: "Applications close in two weeks", ctaBody: "Apply in ten minutes. Hear back within three business days." },
+    { brand: "Linguo", description: "A language learning app landing page with bento hero and plans.", eyebrow: "Speak with confidence", headline: "Speak a new language in three months", highlight: "three months", subheadline: "Linguo combines daily ten-minute lessons with live conversation practice with native speakers, so you are speaking from week one.", primaryCta: "Try Linguo free", secondaryCta: "See languages", announcement: "Japanese and Korean courses now available", tagline: "Fluency, one day at a time.", ctaHeadline: "Your first conversation is closer than you think", ctaBody: "Start free on iOS, Android or the web. No card required." },
+    { brand: "Oakhill School", description: "An independent school admissions landing page with editorial serif hero.", eyebrow: "Admissions open for next year", headline: "A school where curiosity leads the way", highlight: "curiosity leads the way", subheadline: "Oakhill is an independent day school for ages 4 to 18, with small classes, outdoor learning and a nationally recognised arts program.", primaryCta: "Book a tour", secondaryCta: "Request prospectus", announcement: "Open morning: visit campus and meet our teachers", tagline: "Curious minds, kind hearts.", ctaHeadline: "Come and see Oakhill for yourself", ctaBody: "Join a guided tour or our next open morning to meet students and staff." },
+  ],
+}

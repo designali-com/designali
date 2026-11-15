@@ -1,0 +1,52 @@
+import { Globe } from "lucide-react"
+
+const sitemap = [
+  { title: "Platform", links: ["Overview", "Editor", "Collaboration", "Plugins", "Security"] },
+  { title: "Solutions", links: ["Agencies", "Startups", "Enterprise", "Education"] },
+  { title: "Developers", links: ["Documentation", "API reference", "SDKs", "Status"] },
+  { title: "Company", links: ["About", "Blog", "Careers", "Brand", "Contact"] },
+  { title: "Legal", links: ["Privacy", "Terms", "DPA", "Subprocessors"] },
+]
+
+export default function Footer10() {
+  return (
+    <footer className="w-full bg-muted/40">
+      <div className="mx-auto max-w-7xl border-x border-border">
+        <div className="grid grid-cols-2 gap-px border-b border-border bg-border md:grid-cols-5">
+          {sitemap.map((group) => (
+            <div key={group.title} className="bg-background p-6">
+              <h3 className="text-sm font-medium">{group.title}</h3>
+              <ul className="mt-4 space-y-2.5">
+                {group.links.map((link) => (
+                  <li key={link}>
+                    <a
+                      href="#"
+                      className="text-sm text-muted-foreground hover:text-foreground"
+                    >
+                      {link}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+
+        <div className="flex flex-col gap-4 p-6 text-xs text-muted-foreground md:flex-row md:items-center md:justify-between">
+          <div className="flex items-center gap-4">
+            <span className="text-sm font-semibold text-foreground">Canvasly</span>
+            <span>© 2026 Canvasly, Inc.</span>
+          </div>
+          <div className="flex items-center gap-4">
+            <span className="border border-border px-2 py-1 font-mono">SOC 2 Type II</span>
+            <span className="border border-border px-2 py-1 font-mono">GDPR</span>
+            <a href="#" className="flex items-center gap-1.5 hover:text-foreground">
+              <Globe className="size-3.5" />
+              English (US)
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  )
+}
