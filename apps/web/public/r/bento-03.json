@@ -6,7 +6,7 @@
   "files": [
     {
       "path": "registry/designali/components/bento/bento-03.tsx",
-      "content": "import { BentoGrid, BentoGridItem } from \"@/registry/designali/ui/bento\"\n\nexport default function BentoExample() {\n  return (\n    <BentoGrid rowHeight={{ base: \"60px\", md: \"120px\", lg: \"120px\" }}>\n      <BentoGridItem rowSpan={{ base: 1, md: 3, lg: 3 }}>\n        Full Height Banner\n      </BentoGridItem>\n      <BentoGridItem rowSpan={{ base: 1, lg: 2 }}>Feature 1</BentoGridItem>\n      <BentoGridItem rowSpan={{ base: 1, lg: 2 }}>Feature 1</BentoGridItem>\n\n      <BentoGridItem rowSpan={{ base: 1, lg: 2 }}>Feature 1</BentoGridItem>\n\n      <BentoGridItem rowSpan={{ base: 1, md: 2, lg: 3 }}>\n        Full Height Banner\n      </BentoGridItem>\n      <BentoGridItem colSpan={{ base: 1, lg: 3 }}>Feature 1</BentoGridItem>\n    </BentoGrid>\n  )\n}\n",
+      "content": "import { BentoGrid, BentoGridItem } from \"@/registry/designali/ui/bento\"\n\nexport default function BentoExample() {\n  return (\n    <BentoGrid rowHeight={{ base: \"60px\", md: \"120px\", lg: \"120px\" }}>\n      <BentoGridItem rowSpan={{ base: 1, md: 3, lg: 3 }}>\n        designali studio\n      </BentoGridItem>\n      <BentoGridItem rowSpan={{ base: 1, lg: 2 }}>Brand Identity</BentoGridItem>\n      <BentoGridItem rowSpan={{ base: 1, lg: 2 }}>UI/UX Design</BentoGridItem>\n\n      <BentoGridItem rowSpan={{ base: 1, lg: 2 }}>Design Systems</BentoGridItem>\n\n      <BentoGridItem rowSpan={{ base: 1, md: 2, lg: 3 }}>\n        Next.js Websites\n      </BentoGridItem>\n      <BentoGridItem colSpan={{ base: 1, lg: 3 }}>CGI, 3D & Motion</BentoGridItem>\n    </BentoGrid>\n  )\n}\n",
       "type": "registry:component"
     }
   ]

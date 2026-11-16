@@ -1,0 +1,17 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "extends": ["//"],
+  "tasks": {
+    "build": {
+      "dependsOn": [],
+      "inputs": [
+        "$TURBO_DEFAULT$",
+        ".env*",
+        "$TURBO_ROOT$/packages/icons/src/**",
+        "$TURBO_ROOT$/packages/logos/src/**",
+        "$TURBO_ROOT$/packages/vectors/src/**",
+        "$TURBO_ROOT$/packages/ui/src/**"
+      ]
+    }
+  }
+}

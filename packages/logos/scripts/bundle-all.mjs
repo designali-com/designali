@@ -7,6 +7,7 @@
 import { build } from "tsup"
 import { promises as fs } from "node:fs"
 import path from "node:path"
+import { writeTypes } from "./write-types.mjs"
 
 const root = path.resolve(import.meta.dirname, "..")
 const entry = path.join(root, "src/generated/all.tsx")
@@ -34,6 +35,9 @@ await fs.writeFile(
   path.join(root, "dist/all.d.mts"),
   'export * from "../src/generated/all"\n'
 )
+
+// Light declarations for type-checking apps (see write-types.mjs).
+await writeTypes(root)
 
 const { size } = await fs.stat(outfile)
 console.log(

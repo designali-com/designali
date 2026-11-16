@@ -18,7 +18,8 @@ import {
 type ShowcaseItem = {
   id: string
   entry: {
-    Component: React.ComponentType<React.SVGProps<SVGSVGElement> & { size?: number }>
+    // Icons, logos and vectors differ slightly in their other props.
+    Component: React.ComponentType<{ size?: number }>
     metadata: { viewBox: string; variant?: string }
   }
 }

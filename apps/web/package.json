@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "pnpm run bundles && next dev",
-    "build": "pnpm run bundles && next build",
+    "build": "pnpm run bundles && pnpm run typecheck && next build",
     "start": "next start",
     "registry:build": "tsx --tsconfig ./tsconfig.scripts.json ./scripts/build-registry.mts",
     "showcase:build": "tsx --tsconfig ./tsconfig.scripts.json ./scripts/build-showcase.mts",
@@ -18,8 +18,9 @@
     "email:dev": "email dev",
     "lint": "eslint",
     "format": "prettier --write \"**/*.{ts,tsx}\"",
-    "typecheck": "tsc --noEmit",
-    "bundles": "pnpm --filter @designali/icons --filter @designali/logos --filter @designali/vectors bundle:all"
+    "typecheck": "NODE_OPTIONS=--max-old-space-size=4096 tsc --noEmit -p tsconfig.typecheck.json",
+    "bundles": "pnpm --filter @designali/icons --filter @designali/logos --filter @designali/vectors bundle:all",
+    "clean": "rimraf .next"
   },
   "dependencies": {
     "@base-ui/react": "^1.7.0",

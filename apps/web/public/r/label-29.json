@@ -6,7 +6,7 @@
   "files": [
     {
       "path": "registry/designali/examples/label/label-29.tsx",
-      "content": "import { Label } from \"@workspace/ui/components/label\"\nimport {\n  NativeSelect,\n  NativeSelectOption,\n} from \"@workspace/ui/components/native-select\"\n\nexport default function NativeSelectLabel() {\n  return (\n    <div className=\"grid w-full max-w-sm gap-2\">\n      <Label htmlFor=\"country\">Billing country</Label>\n      <NativeSelect id=\"country\" defaultValue=\"ca\" className=\"w-full\">\n        <NativeSelectOption value=\"us\">United States</NativeSelectOption>\n        <NativeSelectOption value=\"ca\">Canada</NativeSelectOption>\n        <NativeSelectOption value=\"gb\">United Kingdom</NativeSelectOption>\n        <NativeSelectOption value=\"de\">Germany</NativeSelectOption>\n      </NativeSelect>\n    </div>\n  )\n}\n",
+      "content": "import { Label } from \"@workspace/ui/components/label\"\nimport {\n  NativeSelect,\n  NativeSelectOption,\n} from \"@workspace/ui/components/native-select\"\n\nexport default function NativeSelectLabel() {\n  return (\n    <div className=\"grid w-full max-w-sm gap-2\">\n      <Label htmlFor=\"country\">Designali billing country</Label>\n      <NativeSelect id=\"country\" defaultValue=\"ca\" className=\"w-full\">\n        <NativeSelectOption value=\"us\">United States</NativeSelectOption>\n        <NativeSelectOption value=\"ca\">Canada</NativeSelectOption>\n        <NativeSelectOption value=\"gb\">United Kingdom</NativeSelectOption>\n        <NativeSelectOption value=\"de\">Germany</NativeSelectOption>\n      </NativeSelect>\n    </div>\n  )\n}\n",
       "type": "registry:example"
     }
   ]

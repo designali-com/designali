@@ -6,7 +6,7 @@
   "files": [
     {
       "path": "registry/designali/examples/label/label-09.tsx",
-      "content": "import { Label } from \"@workspace/ui/components/label\"\nimport { Switch } from \"@workspace/ui/components/switch\"\n\nexport default function SwitchSettingRow() {\n  return (\n    <div className=\"flex w-full max-w-md items-center justify-between gap-6 border p-4\">\n      <div className=\"grid gap-1.5\">\n        <Label htmlFor=\"weekly-digest\" className=\"text-sm font-medium\">\n          Weekly digest\n        </Label>\n        <p id=\"weekly-digest-desc\" className=\"text-xs text-muted-foreground\">\n          A Monday summary of comments and mentions across your projects.\n        </p>\n      </div>\n      <Switch\n        id=\"weekly-digest\"\n        defaultChecked\n        aria-describedby=\"weekly-digest-desc\"\n      />\n    </div>\n  )\n}\n",
+      "content": "import { Label } from \"@workspace/ui/components/label\"\nimport { Switch } from \"@workspace/ui/components/switch\"\n\nexport default function SwitchSettingRow() {\n  return (\n    <div className=\"flex w-full max-w-md items-center justify-between gap-6 border p-4\">\n      <div className=\"grid gap-1.5\">\n        <Label htmlFor=\"weekly-digest\" className=\"text-sm font-medium\">\n          Weekly digest\n        </Label>\n        <p id=\"weekly-digest-desc\" className=\"text-xs text-muted-foreground\">\n          A Monday summary of new Designali templates, blocks and comments.\n        </p>\n      </div>\n      <Switch\n        id=\"weekly-digest\"\n        defaultChecked\n        aria-describedby=\"weekly-digest-desc\"\n      />\n    </div>\n  )\n}\n",
       "type": "registry:example"
     }
   ]

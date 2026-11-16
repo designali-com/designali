@@ -6,7 +6,7 @@
   "files": [
     {
       "path": "registry/designali/examples/calendar/calendar-09.tsx",
-      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { format } from \"date-fns\"\n\nimport { Calendar } from \"@workspace/ui/components/calendar\"\n\nexport default function PublishDateRequired() {\n  const [date, setDate] = React.useState(() => new Date())\n\n  return (\n    <div className=\"flex w-full max-w-xs flex-col items-center gap-3\">\n      <Calendar\n        mode=\"single\"\n        required\n        selected={date}\n        onSelect={setDate}\n        className=\"border\"\n      />\n      <p className=\"text-center text-xs text-muted-foreground\">\n        Scheduled to publish on{\" \"}\n        <span className=\"font-medium text-foreground\">\n          {format(date, \"EEEE, MMMM d\")}\n        </span>\n      </p>\n    </div>\n  )\n}\n",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { format } from \"date-fns\"\n\nimport { Calendar } from \"@workspace/ui/components/calendar\"\n\nexport default function PublishDateRequired() {\n  const [date, setDate] = React.useState(() => new Date())\n\n  return (\n    <div className=\"flex w-full max-w-xs flex-col items-center gap-3\">\n      <Calendar\n        mode=\"single\"\n        required\n        selected={date}\n        onSelect={setDate}\n        className=\"border\"\n      />\n      <p className=\"text-center text-xs text-muted-foreground\">\n        Designali blog post scheduled to publish on{\" \"}\n        <span className=\"font-medium text-foreground\">\n          {format(date, \"EEEE, MMMM d\")}\n        </span>\n      </p>\n    </div>\n  )\n}\n",
       "type": "registry:example"
     }
   ]

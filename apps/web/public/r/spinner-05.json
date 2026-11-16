@@ -6,7 +6,7 @@
   "files": [
     {
       "path": "registry/designali/examples/spinner/spinner-05.tsx",
-      "content": "import { Spinner } from \"@workspace/ui/components/spinner\"\n\nconst strokes = [1, 1.5, 2, 3]\n\nexport default function SpinnerStrokeWidths() {\n  return (\n    <div className=\"flex items-end gap-8\">\n      {strokes.map((stroke) => (\n        <div key={stroke} className=\"flex flex-col items-center gap-2\">\n          <Spinner className=\"size-8\" strokeWidth={stroke} />\n          <span className=\"font-mono text-xs text-muted-foreground\">\n            {stroke}px\n          </span>\n        </div>\n      ))}\n    </div>\n  )\n}\n",
+      "content": "import { Spinner } from \"@workspace/ui/components/spinner\"\n\nconst strokes = [1, 1.5, 2, 3]\n\nexport default function SpinnerStrokeWidths() {\n  return (\n    <div className=\"flex items-end gap-8\">\n      {strokes.map((stroke) => (\n        <div key={stroke} className=\"flex flex-col items-center gap-2\">\n          <Spinner className=\"size-8\" strokeWidth={stroke} />\n          <span className=\"font-sans text-xs text-muted-foreground\">\n            {stroke}px\n          </span>\n        </div>\n      ))}\n    </div>\n  )\n}\n",
       "type": "registry:example"
     }
   ]

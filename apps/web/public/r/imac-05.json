@@ -6,7 +6,7 @@
   "files": [
     {
       "path": "registry/designali/components/apple/imac/imac-05.tsx",
-      "content": "import { IMac } from \"@/registry/designali/ui/apple/imac\"\n\nexport function IMacSizesDemo() {\n  return (\n    <div className=\"flex flex-col items-center gap-12 p-8\">\n      <IMac size=\"lg\" color=\"blue\">\n        <img\n          src=\"/img/login-1.jpg\"\n          alt=\"App screen\"\n          className=\"h-full w-full object-cover\"\n        />\n      </IMac>\n    </div>\n  );\n}",
+      "content": "import { IMac } from \"@/registry/designali/ui/apple/imac\"\n\nexport function IMacSizesDemo() {\n  return (\n    <div className=\"flex flex-col items-center gap-12 p-8\">\n      <IMac size=\"lg\" color=\"blue\">\n        <img\n          src=\"/img/login-1.jpg\"\n          alt=\"Designali sign-in screen\"\n          className=\"h-full w-full object-cover\"\n        />\n      </IMac>\n    </div>\n  );\n}",
       "type": "registry:component"
     }
   ]

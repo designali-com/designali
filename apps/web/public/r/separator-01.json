@@ -9,7 +9,7 @@
   "files": [
     {
       "path": "registry/designali/examples/separator/separator-01.tsx",
-      "content": "import { Separator } from \"@workspace/ui/components/separator\"\n\nexport function SeparatorDemo() {\n  return (\n    <div className=\"flex max-w-sm flex-col gap-4 text-sm\">\n      <div className=\"flex flex-col gap-1.5\">\n        <div className=\"leading-none font-medium\">shadcn/ui</div>\n        <div className=\"text-muted-foreground\">\n          The Foundation for your Design System\n        </div>\n      </div>\n      <Separator />\n      <div>\n        A set of beautifully designed components that you can customize, extend,\n        and build on.\n      </div>\n    </div>\n  )\n}",
+      "content": "import { Separator } from \"@workspace/ui/components/separator\"\n\nexport function SeparatorDemo() {\n  return (\n    <div className=\"flex max-w-sm flex-col gap-4 text-sm\">\n      <div className=\"flex flex-col gap-1.5\">\n        <div className=\"leading-none font-medium\">designali</div>\n        <div className=\"text-muted-foreground\">\n          Design se code tak\n        </div>\n      </div>\n      <Separator />\n      <div>\n        Where thoughtful design meets production-ready code. Blocks, templates,\n        icons and logos you can customize and build on.\n      </div>\n    </div>\n  )\n}",
       "type": "registry:example"
     }
   ]

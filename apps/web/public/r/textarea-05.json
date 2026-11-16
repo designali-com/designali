@@ -6,7 +6,7 @@
   "files": [
     {
       "path": "registry/designali/examples/textarea/textarea-05.tsx",
-      "content": "import { Field, FieldError, FieldLabel } from \"@workspace/ui/components/field\"\nimport { Textarea } from \"@workspace/ui/components/textarea\"\n\nexport default function InvalidTextarea() {\n  return (\n    <Field data-invalid=\"true\" className=\"w-full max-w-sm\">\n      <FieldLabel htmlFor=\"ta-invalid\">Reason for refund</FieldLabel>\n      <Textarea id=\"ta-invalid\" aria-invalid defaultValue=\"bad\" />\n      <FieldError>\n        Please describe the issue in at least 20 characters.\n      </FieldError>\n    </Field>\n  )\n}\n",
+      "content": "import { Field, FieldError, FieldLabel } from \"@workspace/ui/components/field\"\nimport { Textarea } from \"@workspace/ui/components/textarea\"\n\nexport default function InvalidTextarea() {\n  return (\n    <Field data-invalid=\"true\" className=\"w-full max-w-sm\">\n      <FieldLabel htmlFor=\"ta-invalid\">Reason for template refund</FieldLabel>\n      <Textarea id=\"ta-invalid\" aria-invalid defaultValue=\"bad\" />\n      <FieldError>\n        Please describe the issue in at least 20 characters.\n      </FieldError>\n    </Field>\n  )\n}\n",
       "type": "registry:example"
     }
   ]

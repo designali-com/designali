@@ -6,7 +6,7 @@
   "files": [
     {
       "path": "registry/designali/examples/button/button-19.tsx",
-      "content": "import { RocketIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  Tooltip,\n  TooltipContent,\n  TooltipTrigger,\n} from \"@workspace/ui/components/tooltip\"\n\nexport default function DisabledReasonTooltipButton() {\n  return (\n    <Tooltip>\n      <TooltipTrigger render={<span tabIndex={0} className=\"inline-flex\" />}>\n        <Button disabled>\n          <RocketIcon data-icon=\"inline-start\" />\n          Deploy to production\n        </Button>\n      </TooltipTrigger>\n      <TooltipContent>Waiting for 2 required checks to pass</TooltipContent>\n    </Tooltip>\n  )\n}\n",
+      "content": "import {\n  Rocket as RocketIcon,\n} from \"@designali/icons\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  Tooltip,\n  TooltipContent,\n  TooltipTrigger,\n} from \"@workspace/ui/components/tooltip\"\n\nexport default function DisabledReasonTooltipButton() {\n  return (\n    <Tooltip>\n      <TooltipTrigger render={<span tabIndex={0} className=\"inline-flex\" />}>\n        <Button disabled>\n          <RocketIcon data-icon=\"inline-start\" />\n          Deploy to production\n        </Button>\n      </TooltipTrigger>\n      <TooltipContent>Waiting for 2 required checks to pass</TooltipContent>\n    </Tooltip>\n  )\n}\n",
       "type": "registry:example"
     }
   ]

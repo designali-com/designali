@@ -10,7 +10,7 @@
   "files": [
     {
       "path": "registry/designali/examples/dialog/dialog-02.tsx",
-      "content": "import { Button } from \"@workspace/ui/components/button\"\nimport {\n  Dialog,\n  DialogContent,\n  DialogDescription,\n  DialogHeader,\n  DialogTitle,\n  DialogTrigger,\n} from \"@workspace/ui/components/dialog\"\n\nexport function DialogNoCloseButton() {\n  return (\n    <Dialog>\n      <DialogTrigger render={<Button variant=\"outline\">No Close Button</Button>} />\n      <DialogContent showCloseButton={false}>\n        <DialogHeader>\n          <DialogTitle>No Close Button</DialogTitle>\n          <DialogDescription>\n            This dialog doesn&apos;t have a close button in the top-right\n            corner.\n          </DialogDescription>\n        </DialogHeader>\n      </DialogContent>\n    </Dialog>\n  )\n}",
+      "content": "import { Button } from \"@workspace/ui/components/button\"\nimport {\n  Dialog,\n  DialogContent,\n  DialogDescription,\n  DialogHeader,\n  DialogTitle,\n  DialogTrigger,\n} from \"@workspace/ui/components/dialog\"\n\nexport function DialogNoCloseButton() {\n  return (\n    <Dialog>\n      <DialogTrigger render={<Button variant=\"outline\">Designali Newsletter</Button>} />\n      <DialogContent showCloseButton={false}>\n        <DialogHeader>\n          <DialogTitle>You&apos;re on the Designali list</DialogTitle>\n          <DialogDescription>\n            Ali Imam will send new templates, blocks and icons from\n            designali.com to your inbox. Press Esc or click outside to close.\n          </DialogDescription>\n        </DialogHeader>\n      </DialogContent>\n    </Dialog>\n  )\n}",
       "type": "registry:example"
     }
   ]

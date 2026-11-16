@@ -6,7 +6,7 @@
   "files": [
     {
       "path": "registry/designali/examples/spinner/spinner-27.tsx",
-      "content": "import { ChevronDownIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  ButtonGroup,\n  ButtonGroupSeparator,\n} from \"@workspace/ui/components/button-group\"\nimport { Spinner } from \"@workspace/ui/components/spinner\"\n\nexport default function SplitButtonLoading() {\n  return (\n    <ButtonGroup>\n      <Button disabled>\n        <Spinner data-icon=\"inline-start\" />\n        Publishing\n      </Button>\n      <ButtonGroupSeparator />\n      <Button size=\"icon\" aria-label=\"More publish options\" disabled>\n        <ChevronDownIcon />\n      </Button>\n    </ButtonGroup>\n  )\n}\n",
+      "content": "import {\n  ChevronDown as ChevronDownIcon,\n} from \"@designali/icons\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  ButtonGroup,\n  ButtonGroupSeparator,\n} from \"@workspace/ui/components/button-group\"\nimport { Spinner } from \"@workspace/ui/components/spinner\"\n\nexport default function SplitButtonLoading() {\n  return (\n    <ButtonGroup>\n      <Button disabled>\n        <Spinner data-icon=\"inline-start\" />\n        Publishing\n      </Button>\n      <ButtonGroupSeparator />\n      <Button size=\"icon\" aria-label=\"More publish options\" disabled>\n        <ChevronDownIcon />\n      </Button>\n    </ButtonGroup>\n  )\n}\n",
       "type": "registry:example"
     }
   ]

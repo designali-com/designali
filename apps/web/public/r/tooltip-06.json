@@ -6,7 +6,7 @@
   "files": [
     {
       "path": "registry/designali/examples/tooltip/tooltip-06.tsx",
-      "content": "import { SendIcon } from \"lucide-react\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  Tooltip,\n  TooltipContent,\n  TooltipTrigger,\n} from \"@workspace/ui/components/tooltip\"\n\nexport default function DisabledButtonTooltip() {\n  return (\n    <div className=\"flex items-center gap-2\">\n      <Button variant=\"outline\">Save draft</Button>\n      <Tooltip>\n        <TooltipTrigger render={<span tabIndex={0} className=\"inline-flex\" />}>\n          <Button disabled>\n            <SendIcon data-icon=\"inline-start\" />\n            Publish\n          </Button>\n        </TooltipTrigger>\n        <TooltipContent>Add a cover title before publishing</TooltipContent>\n      </Tooltip>\n    </div>\n  )\n}\n",
+      "content": "import {\n  Send as SendIcon,\n} from \"@designali/icons\"\n\nimport { Button } from \"@workspace/ui/components/button\"\nimport {\n  Tooltip,\n  TooltipContent,\n  TooltipTrigger,\n} from \"@workspace/ui/components/tooltip\"\n\nexport default function DisabledButtonTooltip() {\n  return (\n    <div className=\"flex items-center gap-2\">\n      <Button variant=\"outline\">Save draft</Button>\n      <Tooltip>\n        <TooltipTrigger render={<span tabIndex={0} className=\"inline-flex\" />}>\n          <Button disabled>\n            <SendIcon data-icon=\"inline-start\" />\n            Publish\n          </Button>\n        </TooltipTrigger>\n        <TooltipContent>Add a cover title before publishing to designali.com</TooltipContent>\n      </Tooltip>\n    </div>\n  )\n}\n",
       "type": "registry:example"
     }
   ]

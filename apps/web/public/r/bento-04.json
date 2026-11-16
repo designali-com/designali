@@ -6,7 +6,7 @@
   "files": [
     {
       "path": "registry/designali/components/bento/bento-04.tsx",
-      "content": "import { BentoGrid, BentoGridItem } from \"@/registry/designali/ui/bento\"\n\nexport default function BentoExample() {\n  return (\n    <BentoGrid\n      className=\"border\"\n      gap={0}\n      cols={4}\n      rowHeight={{ base: \"40px\", md: \"90px\", lg: \"180px\" }}\n    >\n      {Array.from({ length: 8 }).map((_, i) => (\n        <BentoGridItem colSpan={{ base: 4, md: 2, lg: 1 }} key={i}>\n          Card {i + 1}\n        </BentoGridItem>\n      ))}\n    </BentoGrid>\n  )\n}\n",
+      "content": "import { BentoGrid, BentoGridItem } from \"@/registry/designali/ui/bento\"\n\nconst products = [\n  \"Templates\",\n  \"Blocks\",\n  \"Landing Pages\",\n  \"UI Designs\",\n  \"Icons\",\n  \"Logos\",\n  \"Illustrations\",\n  \"Components\",\n]\n\nexport default function BentoExample() {\n  return (\n    <BentoGrid\n      className=\"border\"\n      gap={0}\n      cols={4}\n      rowHeight={{ base: \"40px\", md: \"90px\", lg: \"180px\" }}\n    >\n      {products.map((product) => (\n        <BentoGridItem colSpan={{ base: 4, md: 2, lg: 1 }} key={product}>\n          {product}\n        </BentoGridItem>\n      ))}\n    </BentoGrid>\n  )\n}\n",
       "type": "registry:component"
     }
   ]

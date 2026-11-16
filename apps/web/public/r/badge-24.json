@@ -6,7 +6,7 @@
   "files": [
     {
       "path": "registry/designali/examples/badge/badge-24.tsx",
-      "content": "import { ZapIcon } from \"lucide-react\"\n\nimport { Badge } from \"@workspace/ui/components/badge\"\n\nconst sizes = [\n  { label: \"Small\", className: \"h-4 px-1.5 text-[10px]\" },\n  { label: \"Default\", className: \"\" },\n  { label: \"Large\", className: \"h-6 px-2.5 text-sm [&>svg]:size-3.5!\" },\n  { label: \"Extra large\", className: \"h-7 px-3 text-sm [&>svg]:size-4!\" },\n]\n\nexport default function BadgeSizeScale() {\n  return (\n    <div className=\"flex flex-wrap items-center justify-center gap-2\">\n      {sizes.map((size) => (\n        <Badge key={size.label} className={size.className}>\n          <ZapIcon data-icon=\"inline-start\" />\n          {size.label}\n        </Badge>\n      ))}\n    </div>\n  )\n}\n",
+      "content": "import {\n  Zap as ZapIcon,\n} from \"@designali/icons\"\n\nimport { Badge } from \"@workspace/ui/components/badge\"\n\nconst sizes = [\n  { label: \"Small\", className: \"h-4 px-1.5 text-[10px]\" },\n  { label: \"Default\", className: \"\" },\n  { label: \"Large\", className: \"h-6 px-2.5 text-sm [&>svg]:size-3.5!\" },\n  { label: \"Extra large\", className: \"h-7 px-3 text-sm [&>svg]:size-4!\" },\n]\n\nexport default function BadgeSizeScale() {\n  return (\n    <div className=\"flex flex-wrap items-center justify-center gap-2\">\n      {sizes.map((size) => (\n        <Badge key={size.label} className={size.className}>\n          <ZapIcon data-icon=\"inline-start\" />\n          {size.label}\n        </Badge>\n      ))}\n    </div>\n  )\n}\n",
       "type": "registry:example"
     }
   ]

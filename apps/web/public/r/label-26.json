@@ -6,7 +6,7 @@
   "files": [
     {
       "path": "registry/designali/examples/label/label-26.tsx",
-      "content": "import { LockIcon } from \"lucide-react\"\n\nimport { Input } from \"@workspace/ui/components/input\"\nimport { Label } from \"@workspace/ui/components/label\"\n\nexport default function ReadOnlyLockedLabel() {\n  return (\n    <div className=\"grid w-full max-w-sm gap-2\">\n      <Label htmlFor=\"org-id\" className=\"justify-between\">\n        <span>Organization ID</span>\n        <span className=\"flex items-center gap-1 font-normal text-muted-foreground\">\n          <LockIcon className=\"size-3\" />\n          Managed by admin\n        </span>\n      </Label>\n      <Input\n        id=\"org-id\"\n        readOnly\n        value=\"org_8F3kQ2xLm\"\n        className=\"bg-muted font-mono\"\n      />\n    </div>\n  )\n}\n",
+      "content": "import {\n  Lock as LockIcon,\n} from \"@designali/icons\"\n\nimport { Input } from \"@workspace/ui/components/input\"\nimport { Label } from \"@workspace/ui/components/label\"\n\nexport default function ReadOnlyLockedLabel() {\n  return (\n    <div className=\"grid w-full max-w-sm gap-2\">\n      <Label htmlFor=\"org-id\" className=\"justify-between\">\n        <span>Organization ID</span>\n        <span className=\"flex items-center gap-1 font-normal text-muted-foreground\">\n          <LockIcon className=\"size-3\" />\n          Managed by admin\n        </span>\n      </Label>\n      <Input\n        id=\"org-id\"\n        readOnly\n        value=\"org_8F3kQ2xLm\"\n        className=\"bg-muted font-sans\"\n      />\n    </div>\n  )\n}\n",
       "type": "registry:example"
     }
   ]

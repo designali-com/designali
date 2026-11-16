@@ -6,7 +6,7 @@
   "files": [
     {
       "path": "registry/designali/examples/avatar/avatar-01.tsx",
-      "content": "import {\n    Avatar,\n    AvatarFallback,\n    AvatarImage,\n  } from \"@workspace/ui/components/avatar\";\n  \n  export default function AvatarDemo() {\n    return (\n      <Avatar>\n        <AvatarImage\n          src=\"https://github.com/designali-com.png\"\n          alt=\"@designali\"\n        />\n        <AvatarFallback>DA</AvatarFallback>\n      </Avatar>\n    );\n  }",
+      "content": "import {\n    Avatar,\n    AvatarFallback,\n    AvatarImage,\n  } from \"@workspace/ui/components/avatar\";\n  \n  export default function AvatarDemo() {\n    return (\n      <Avatar>\n        <AvatarImage\n          src=\"/ali.jpg\"\n          alt=\"Ali Imam\"\n        />\n        <AvatarFallback>AI</AvatarFallback>\n      </Avatar>\n    );\n  }",
       "type": "registry:example"
     }
   ]

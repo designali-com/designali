@@ -6,7 +6,7 @@
   "files": [
     {
       "path": "registry/designali/examples/separator/separator-44.tsx",
-      "content": "import { Separator } from \"@workspace/ui/components/separator\"\n\nexport default function BlockquoteAccentRule() {\n  return (\n    <figure className=\"flex w-full max-w-md gap-4\">\n      <Separator orientation=\"vertical\" className=\"w-1 bg-primary\" />\n      <div className=\"flex flex-col gap-2 py-1\">\n        <blockquote className=\"text-base leading-snug font-medium\">\n          We cut our weekly reporting from four hours to fifteen minutes, and\n          nobody misses the spreadsheets.\n        </blockquote>\n        <figcaption className=\"text-xs text-muted-foreground\">\n          Daniel Osei, Finance Lead at Kestrel Freight\n        </figcaption>\n      </div>\n    </figure>\n  )\n}\n",
+      "content": "import { Separator } from \"@workspace/ui/components/separator\"\n\nexport default function BlockquoteAccentRule() {\n  return (\n    <figure className=\"flex w-full max-w-md gap-4\">\n      <Separator orientation=\"vertical\" className=\"w-1 bg-primary\" />\n      <div className=\"flex flex-col gap-2 py-1\">\n        <blockquote className=\"text-base leading-snug font-medium\">\n          Designali took us from a rough Figma file to a production-ready\n          Next.js site in two weeks.\n        </blockquote>\n        <figcaption className=\"text-xs text-muted-foreground\">\n          Daniel, Founder · Designali client\n        </figcaption>\n      </div>\n    </figure>\n  )\n}\n",
       "type": "registry:example"
     }
   ]

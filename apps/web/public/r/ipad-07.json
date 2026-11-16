@@ -6,7 +6,7 @@
   "files": [
     {
       "path": "registry/designali/components/apple/ipad/ipad-07.tsx",
-      "content": "import { IPad } from \"@/registry/designali/ui/apple/ipad\"\n\nexport function IPadAirStarlightDemo() {\n  return (\n    <div className=\"flex items-center justify-center p-8\">\n      <IPad\n        variant=\"ipad-air\"\n        color=\"starlight\"\n        orientation=\"landscape\"\n        size=\"xl\"\n      >\n        <img\n          src=\"/img/hero-2.jpg\"\n          alt=\"App screen\"\n          className=\"h-full w-full object-cover\"\n        />\n      </IPad>\n    </div>\n  )\n}",
+      "content": "import { IPad } from \"@/registry/designali/ui/apple/ipad\"\n\nexport function IPadAirStarlightDemo() {\n  return (\n    <div className=\"flex items-center justify-center p-8\">\n      <IPad\n        variant=\"ipad-air\"\n        color=\"starlight\"\n        orientation=\"landscape\"\n        size=\"xl\"\n      >\n        <img\n          src=\"/img/hero-2.jpg\"\n          alt=\"Designali website hero\"\n          className=\"h-full w-full object-cover\"\n        />\n      </IPad>\n    </div>\n  )\n}",
       "type": "registry:component"
     }
   ]

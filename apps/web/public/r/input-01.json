@@ -6,7 +6,7 @@
   "files": [
     {
       "path": "registry/designali/examples/input/input-01.tsx",
-      "content": "import {\n    Field,\n    FieldDescription,\n    FieldLabel,\n  } from \"@workspace/ui/components/field\"\n  import { Input } from \"@workspace/ui/components/input\"\n  \n  export function InputDemo() {\n    return (\n      <Field>\n        <FieldLabel htmlFor=\"input-demo-api-key\">API Key</FieldLabel>\n        <Input id=\"input-demo-api-key\" type=\"password\" placeholder=\"sk-...\" />\n        <FieldDescription>\n          Your API key is encrypted and stored securely.\n        </FieldDescription>\n      </Field>\n    )\n  }",
+      "content": "import {\n    Field,\n    FieldDescription,\n    FieldLabel,\n  } from \"@workspace/ui/components/field\"\n  import { Input } from \"@workspace/ui/components/input\"\n  \n  export function InputDemo() {\n    return (\n      <Field>\n        <FieldLabel htmlFor=\"input-demo-api-key\">Designali API key</FieldLabel>\n        <Input id=\"input-demo-api-key\" type=\"password\" placeholder=\"dsgn_live_...\" />\n        <FieldDescription>\n          Used to pull blocks from designali.com into your Next.js project.\n        </FieldDescription>\n      </Field>\n    )\n  }",
       "type": "registry:example"
     }
   ]

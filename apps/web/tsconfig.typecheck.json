@@ -1,0 +1,24 @@
+{
+  // Used by `pnpm typecheck` and `next build` (see next.config.mjs).
+  //
+  // The icon, logo and vector packages have thousands of generated .tsx files.
+  // Checking them needs more than 2 GB of memory and crashes `tsc`, so here
+  // they resolve to the small declarations written by each package's
+  // `bundle:all` (dist/types.d.ts). Bundling still uses tsconfig.json.
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    // Re-runs only check what changed since the last run.
+    "incremental": true,
+    "tsBuildInfoFile": "node_modules/.cache/tsconfig.typecheck.tsbuildinfo",
+    "paths": {
+      "@/*": ["./*"],
+      "@workspace/ui/*": ["../../packages/ui/src/*"],
+      "@designali/icons": ["../../packages/icons/dist/types.d.ts"],
+      "@designali/logos": ["../../packages/logos/dist/types.d.ts"],
+      "@designali/vectors": ["../../packages/vectors/dist/types.d.ts"],
+      "@designali/icons/all": ["../../packages/icons/dist/types.d.ts"],
+      "@designali/logos/all": ["../../packages/logos/dist/types.d.ts"],
+      "@designali/vectors/all": ["../../packages/vectors/dist/types.d.ts"]
+    }
+  }
+}

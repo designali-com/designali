@@ -6,7 +6,7 @@
   "files": [
     {
       "path": "registry/designali/examples/label/label-03.tsx",
-      "content": "import { Input } from \"@workspace/ui/components/input\"\nimport { Label } from \"@workspace/ui/components/label\"\n\nexport default function RequiredFieldLabel() {\n  return (\n    <div className=\"grid w-full max-w-sm gap-2\">\n      <Label htmlFor=\"work-email\">\n        Work email\n        <span className=\"text-destructive\" aria-hidden=\"true\">\n          *\n        </span>\n      </Label>\n      <Input\n        id=\"work-email\"\n        type=\"email\"\n        placeholder=\"you@company.com\"\n        required\n      />\n    </div>\n  )\n}\n",
+      "content": "import { Input } from \"@workspace/ui/components/input\"\nimport { Label } from \"@workspace/ui/components/label\"\n\nexport default function RequiredFieldLabel() {\n  return (\n    <div className=\"grid w-full max-w-sm gap-2\">\n      <Label htmlFor=\"work-email\">\n        Work email\n        <span className=\"text-destructive\" aria-hidden=\"true\">\n          *\n        </span>\n      </Label>\n      <Input\n        id=\"work-email\"\n        type=\"email\"\n        placeholder=\"you@designali.com\"\n        required\n      />\n    </div>\n  )\n}\n",
       "type": "registry:example"
     }
   ]

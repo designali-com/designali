@@ -6,7 +6,7 @@
   "files": [
     {
       "path": "registry/designali/examples/input/input-02.tsx",
-      "content": " \n  import { Input } from \"@workspace/ui/components/input\"\n  \n  export function InputBasic() {\n    return <Input placeholder=\"Enter text\" />\n  }\n  ",
+      "content": " \n  import { Input } from \"@workspace/ui/components/input\"\n  \n  export function InputBasic() {\n    return <Input placeholder=\"Search Designali blocks...\" />\n  }\n  ",
       "type": "registry:example"
     }
   ]

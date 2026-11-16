@@ -6,7 +6,7 @@
   "files": [
     {
       "path": "registry/designali/examples/alert/alert-45.tsx",
-      "content": "import { GiftIcon } from \"lucide-react\"\n\nimport {\n  Alert,\n  AlertAction,\n  AlertDescription,\n  AlertTitle,\n} from \"@workspace/ui/components/alert\"\nimport { Button } from \"@workspace/ui/components/button\"\n\nexport default function AlertPromoGradient() {\n  return (\n    <Alert className=\"max-w-md border-primary/20 bg-linear-to-r from-primary/10 via-transparent to-primary/5\">\n      <GiftIcon className=\"text-foreground\" />\n      <AlertTitle>Get 2 months free</AlertTitle>\n      <AlertDescription>\n        Switch to yearly billing before Nov 30 and save 17% on every seat.\n      </AlertDescription>\n      <AlertAction>\n        <Button size=\"xs\">Switch to yearly</Button>\n      </AlertAction>\n    </Alert>\n  )\n}\n",
+      "content": "import {\n  Gift as GiftIcon,\n} from \"@designali/icons\"\n\nimport {\n  Alert,\n  AlertAction,\n  AlertDescription,\n  AlertTitle,\n} from \"@workspace/ui/components/alert\"\nimport { Button } from \"@workspace/ui/components/button\"\n\nexport default function AlertPromoGradient() {\n  return (\n    <Alert className=\"max-w-md border-primary/20 bg-linear-to-r from-primary/10 via-transparent to-primary/5\">\n      <GiftIcon className=\"text-foreground\" />\n      <AlertTitle>Get 2 months free</AlertTitle>\n      <AlertDescription>\n        Switch to yearly billing before Nov 30 and save 17% on Designali Pro.\n      </AlertDescription>\n      <AlertAction>\n        <Button size=\"xs\">Switch to yearly</Button>\n      </AlertAction>\n    </Alert>\n  )\n}\n",
       "type": "registry:example"
     }
   ]

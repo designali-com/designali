@@ -6,7 +6,7 @@
   "files": [
     {
       "path": "registry/designali/examples/badge/badge-46.tsx",
-      "content": "import { Badge } from \"@workspace/ui/components/badge\"\n\nconst people = [\n  { name: \"Vera Holm\", initials: \"VH\" },\n  { name: \"Diego Santos\", initials: \"DS\" },\n  { name: \"Aiko Mori\", initials: \"AM\" },\n]\n\nexport default function AssigneeChipBadges() {\n  return (\n    <div className=\"flex flex-wrap justify-center gap-2\">\n      {people.map((person) => (\n        <Badge\n          key={person.name}\n          variant=\"outline\"\n          className=\"h-6 rounded-full ps-0.5 pe-2\"\n        >\n          <span className=\"flex size-5 items-center justify-center rounded-full bg-muted text-[9px] font-semibold\">\n            {person.initials}\n          </span>\n          {person.name}\n        </Badge>\n      ))}\n    </div>\n  )\n}\n",
+      "content": "import { Badge } from \"@workspace/ui/components/badge\"\n\nconst people = [\n  { name: \"Ali Imam\", initials: \"AI\" },\n  { name: \"Sara\", initials: \"SA\" },\n  { name: \"Omar\", initials: \"OM\" },\n]\n\nexport default function AssigneeChipBadges() {\n  return (\n    <div className=\"flex flex-wrap justify-center gap-2\">\n      {people.map((person) => (\n        <Badge\n          key={person.name}\n          variant=\"outline\"\n          className=\"h-6 rounded-full ps-0.5 pe-2\"\n        >\n          <span className=\"flex size-5 items-center justify-center rounded-full bg-muted text-[9px] font-semibold\">\n            {person.initials}\n          </span>\n          {person.name}\n        </Badge>\n      ))}\n    </div>\n  )\n}\n",
       "type": "registry:example"
     }
   ]
