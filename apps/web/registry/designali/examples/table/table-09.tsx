@@ -48,7 +48,7 @@ export default function PaginatedTable() {
         <TableBody>
           {rows.map((tx) => (
             <TableRow key={tx.id}>
-              <TableCell className="font-mono">{tx.id}</TableCell>
+              <TableCell className="font-sans">{tx.id}</TableCell>
               <TableCell>{tx.merchant}</TableCell>
               <TableCell className="text-right tabular-nums">
                 {"$" + tx.amount.toFixed(2)}

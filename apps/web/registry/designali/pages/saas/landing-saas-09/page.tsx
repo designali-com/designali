@@ -238,7 +238,7 @@ export default function LandingSaas09() {
             href="#"
             className="flex items-center gap-2 font-semibold tracking-tight"
           >
-            <span className="flex size-7 items-center justify-center rounded-md bg-fuchsia-600 text-white text-sm">
+            <span className="flex size-7 items-center justify-center rounded-md bg-chart-2 text-white text-sm">
               V
             </span>
             <span className="">Vaultkey</span>
@@ -274,12 +274,12 @@ export default function LandingSaas09() {
         <div className="mx-auto max-w-7xl px-6 py-16 md:py-24">
           <div className="mx-auto max-w-3xl space-y-6 text-center">
             <span className="inline-flex items-center gap-2 rounded-full border bg-background text-muted-foreground px-3 py-1 text-xs font-medium">
-              <Sparkles className="size-3.5 text-fuchsia-600 dark:text-fuchsia-400" />
+              <Sparkles className="size-3.5 text-primary dark:text-primary" />
               SOC 2 Type II certified
             </span>
             <h1 className="text-4xl leading-[1.05] font-semibold tracking-tight text-balance sm:text-5xl md:text-6xl ">
               {"Every team password, "}
-              <span className="text-fuchsia-600 dark:text-fuchsia-400">
+              <span className="text-primary dark:text-primary">
                 secured and shared safely
               </span>
             </h1>
@@ -308,7 +308,7 @@ export default function LandingSaas09() {
               {stats.slice(0, 3).map((stat, i) => (
                 <div
                   key={stat.label}
-                  className={`flex flex-col justify-between rounded-2xl border p-5 ${i === 0 ? "bg-fuchsia-500/10" : "bg-muted/40"} ${i === 2 ? "col-span-2 lg:col-span-1" : ""}`}
+                  className={`flex flex-col justify-between rounded-2xl border p-5 ${i === 0 ? "bg-primary/10" : "bg-muted/40"} ${i === 2 ? "col-span-2 lg:col-span-1" : ""}`}
                 >
                   <div className="text-xs text-muted-foreground">
                     {stat.label}
@@ -342,7 +342,7 @@ export default function LandingSaas09() {
       <section className="border-b">
         <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
           <div className="mx-auto max-w-2xl text-center">
-            <p className="text-sm font-medium text-fuchsia-600 dark:text-fuchsia-400">
+            <p className="text-sm font-medium text-primary dark:text-primary">
               Platform
             </p>
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl  mt-3">
@@ -357,10 +357,10 @@ export default function LandingSaas09() {
             {features.map((feature, i) => (
               <div
                 key={feature.title}
-                className={`group rounded-2xl border p-6 transition-colors hover:bg-muted/40 ${i === 0 ? "bg-fuchsia-500/10 md:col-span-2 md:row-span-2 md:p-10" : ""} ${i === 3 ? "md:col-span-2" : ""}`}
+                className={`group rounded-2xl border p-6 transition-colors hover:bg-muted/40 ${i === 0 ? "bg-primary/10 md:col-span-2 md:row-span-2 md:p-10" : ""} ${i === 3 ? "md:col-span-2" : ""}`}
               >
                 <feature.icon
-                  className={`${i === 0 ? "size-8" : "size-5"} text-fuchsia-600 dark:text-fuchsia-400`}
+                  className={`${i === 0 ? "size-8" : "size-5"} text-primary dark:text-primary`}
                 />
                 <h3
                   className={`mt-6 font-semibold tracking-tight ${i === 0 ? "text-2xl md:text-3xl" : "text-lg"}`}
@@ -409,7 +409,7 @@ export default function LandingSaas09() {
                   <span className="flex size-10 items-center justify-center rounded-lg border bg-muted/50 font-semibold ">
                     {item.name.charAt(0)}
                   </span>
-                  <span className="rounded-full bg-fuchsia-500/10 px-2.5 py-0.5 text-xs font-medium text-fuchsia-600 dark:text-fuchsia-400">
+                  <span className="rounded-full bg-primary/10 px-2.5 py-0.5 text-xs font-medium text-primary dark:text-primary">
                     {item.tag}
                   </span>
                 </div>
@@ -439,7 +439,7 @@ export default function LandingSaas09() {
                 key={t.name}
                 className={`flex flex-col justify-between rounded-2xl border bg-background p-6 ${i === 0 ? "md:col-span-2 md:p-10" : ""}`}
               >
-                <Quote className="size-6 text-fuchsia-600 dark:text-fuchsia-400" />
+                <Quote className="size-6 text-primary dark:text-primary" />
                 <blockquote
                   className={`mt-4 leading-relaxed ${i === 0 ? "text-xl md:text-2xl" : "text-muted-foreground"}`}
                 >
@@ -477,7 +477,7 @@ export default function LandingSaas09() {
                 key={step.title}
                 className="relative border-t-2 border-border pt-6"
               >
-                <span className="text-sm font-medium text-fuchsia-600 dark:text-fuchsia-400">
+                <span className="text-sm font-medium text-primary dark:text-primary">
                   Step {i + 1}
                 </span>
                 <h3 className="mt-2 text-lg font-semibold">{step.title}</h3>
@@ -506,10 +506,10 @@ export default function LandingSaas09() {
               return (
                 <div
                   key={tier.name}
-                  className={`relative flex h-full flex-col rounded-2xl border p-8 ${featured ? "border-transparent ring-2 ring-fuchsia-500 shadow-xl" : ""}`}
+                  className={`relative flex h-full flex-col rounded-2xl border p-8 ${featured ? "border-transparent ring-2 ring-primary shadow-xl" : ""}`}
                 >
                   {featured && (
-                    <span className="absolute -top-3 left-8 rounded-full bg-fuchsia-600 text-white px-3 py-1 text-xs font-medium">
+                    <span className="absolute -top-3 left-8 rounded-full bg-chart-2 text-white px-3 py-1 text-xs font-medium">
                       Most popular
                     </span>
                   )}
@@ -528,7 +528,7 @@ export default function LandingSaas09() {
                   <ul className="mt-8 flex-1 space-y-3 text-sm">
                     {tier.features.map((feature) => (
                       <li key={feature} className="flex gap-3">
-                        <Check className="mt-0.5 size-4 shrink-0 text-fuchsia-600 dark:text-fuchsia-400" />
+                        <Check className="mt-0.5 size-4 shrink-0 text-primary dark:text-primary" />
                         {feature}
                       </li>
                     ))}
@@ -580,8 +580,8 @@ export default function LandingSaas09() {
         </div>
       </section>
       <section className="px-6 py-20 md:py-28">
-        <div className="relative mx-auto max-w-6xl overflow-hidden rounded-3xl border bg-fuchsia-500/10 px-6 py-16 text-center md:py-24">
-          <div className="pointer-events-none absolute -top-24 left-1/2 size-96 -translate-x-1/2 rounded-full bg-gradient-to-b from-fuchsia-500/25 via-purple-500/10 to-transparent blur-3xl" />
+        <div className="relative mx-auto max-w-6xl overflow-hidden rounded-3xl border bg-primary/10 px-6 py-16 text-center md:py-24">
+          <div className="pointer-events-none absolute -top-24 left-1/2 size-96 -translate-x-1/2 rounded-full bg-gradient-to-b from-primary/25 via-primary/10 to-transparent blur-3xl" />
           <div className="relative mx-auto max-w-2xl space-y-6">
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl">
               Offboarding should take one click
@@ -614,7 +614,7 @@ export default function LandingSaas09() {
               href="#"
               className="flex items-center gap-2 font-semibold tracking-tight"
             >
-              <span className="flex size-7 items-center justify-center rounded-md bg-fuchsia-600 text-white text-sm">
+              <span className="flex size-7 items-center justify-center rounded-md bg-chart-2 text-white text-sm">
                 V
               </span>
               <span className="">Vaultkey</span>
@@ -703,7 +703,7 @@ function HeroVisual() {
           <div className="rounded-lg border p-4">
             <div className="mb-4 flex items-center justify-between text-xs">
               <span className="font-medium">Last 12 weeks</span>
-              <span className="text-fuchsia-600 dark:text-fuchsia-400">
+              <span className="text-primary dark:text-primary">
                 +24.6%
               </span>
             </div>
@@ -711,7 +711,7 @@ function HeroVisual() {
               {bars.map((h, i) => (
                 <div
                   key={i}
-                  className={`flex-1 rounded-t-sm ${i === bars.length - 1 ? "bg-fuchsia-600" : "bg-muted-foreground/20"}`}
+                  className={`flex-1 rounded-t-sm ${i === bars.length - 1 ? "bg-chart-2" : "bg-muted-foreground/20"}`}
                   style={{ height: `${h}%` }}
                 />
               ))}
@@ -729,7 +729,7 @@ function HeroVisual() {
                     {item.meta}
                   </div>
                 </div>
-                <span className="shrink-0 rounded-full bg-fuchsia-500/10 px-2 py-0.5 text-[11px] font-medium text-fuchsia-600 dark:text-fuchsia-400">
+                <span className="shrink-0 rounded-full bg-primary/10 px-2 py-0.5 text-[11px] font-medium text-primary dark:text-primary">
                   {item.tag}
                 </span>
               </div>

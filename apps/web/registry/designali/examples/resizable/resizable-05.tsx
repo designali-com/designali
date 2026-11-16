@@ -24,7 +24,7 @@ export default function CodeEditorWithTerminal() {
   return (
     <ResizablePanelGroup
       orientation="horizontal"
-      className="h-80 w-full max-w-2xl border font-mono"
+      className="h-80 w-full max-w-2xl border font-sans"
     >
       <ResizablePanel defaultSize="25%" minSize="15%">
         <div className="flex h-full flex-col gap-0.5 p-2 text-xs">
@@ -65,7 +65,7 @@ export default function CodeEditorWithTerminal() {
             <div className="flex h-full flex-col gap-1 bg-muted/40 p-3 text-xs">
               <span className="text-muted-foreground">$ pnpm dev</span>
               <span>ready - started server on 0.0.0.0:3000</span>
-              <span className="text-emerald-600 dark:text-emerald-400">
+              <span className="text-primary dark:text-primary">
                 compiled successfully in 412ms
               </span>
             </div>

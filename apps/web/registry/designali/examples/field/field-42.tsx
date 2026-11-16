@@ -26,9 +26,9 @@ export default function LoadingSubmitFields() {
       }}
     >
       <FieldSet disabled={state !== "idle"}>
-        <FieldLegend>Get the monthly field notes</FieldLegend>
+        <FieldLegend>Get the Designali newsletter</FieldLegend>
         <FieldDescription>
-          Design essays and product updates. No spam.
+          Design essays from Ali Imam and new Designali blocks. No spam.
         </FieldDescription>
         <Field orientation="horizontal">
           <FieldLabel htmlFor="news-email" className="sr-only">

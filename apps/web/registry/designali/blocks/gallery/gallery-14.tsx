@@ -69,7 +69,7 @@ export default function Gallery14() {
                 <div className="grid grid-rows-[0fr] transition-[grid-template-rows] duration-500 group-hover:grid-rows-[1fr] group-focus-visible:grid-rows-[1fr]">
                   <div className="overflow-hidden">
                     <p className="mt-2 max-w-xs text-sm text-white/80">{panel.body}</p>
-                    <p className="mt-2 font-mono text-xs text-white/60">{panel.count}</p>
+                    <p className="mt-2 font-sans text-xs text-white/60">{panel.count}</p>
                   </div>
                 </div>
               </div>

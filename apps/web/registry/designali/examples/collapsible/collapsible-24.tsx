@@ -23,7 +23,7 @@ const steps = [
 export default function AssistantReasoningTrace() {
   return (
     <div className="flex w-full max-w-md gap-3">
-      <div className="flex size-8 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-violet-500 to-sky-500 text-white">
+      <div className="flex size-8 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-primary to-primary text-white">
         <SparklesIcon className="size-4" />
       </div>
       <div className="flex-1 space-y-2">

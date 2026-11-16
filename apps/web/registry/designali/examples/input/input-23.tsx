@@ -58,7 +58,7 @@ export default function UsernameAvailabilityInput() {
         <InputGroupAddon align="inline-end">
           {status === "checking" && <Spinner />}
           {status === "available" && (
-            <CircleCheckIcon className="text-emerald-600" />
+            <CircleCheckIcon className="text-primary" />
           )}
           {status === "taken" && <CircleXIcon className="text-destructive" />}
         </InputGroupAddon>

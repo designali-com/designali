@@ -5,27 +5,27 @@ const events = [
     time: "09:00",
     title: "Designali studio standup",
     type: "Meeting",
-    className: "bg-blue-50 text-blue-700 dark:bg-blue-950 dark:text-blue-300",
+    className: "bg-primary/5 text-chart-3 dark:bg-primary/10 dark:text-chart-1",
   },
   {
     time: "11:30",
     title: "Focus: new templates",
     type: "Focus",
     className:
-      "bg-violet-50 text-violet-700 dark:bg-violet-950 dark:text-violet-300",
+      "bg-primary/5 text-chart-3 dark:bg-primary/10 dark:text-chart-1",
   },
   {
     time: "13:00",
     title: "Client call with Ali",
     type: "Client",
     className:
-      "bg-emerald-50 text-emerald-700 dark:bg-emerald-950 dark:text-emerald-300",
+      "bg-primary/5 text-chart-3 dark:bg-primary/10 dark:text-chart-1",
   },
   {
     time: "16:00",
     title: "Blocks release",
     type: "Deadline",
-    className: "bg-red-50 text-red-700 dark:bg-red-950 dark:text-red-300",
+    className: "bg-destructive/5 text-destructive dark:bg-destructive/15 dark:text-destructive",
   },
 ]
 
@@ -37,7 +37,7 @@ export default function AgendaEventTypeBadges() {
       </div>
       {events.map((event) => (
         <div key={event.time} className="flex items-center gap-3 px-3 py-2.5">
-          <span className="w-10 font-mono text-xs text-muted-foreground">
+          <span className="w-10 font-sans text-xs text-muted-foreground">
             {event.time}
           </span>
           <span className="flex-1 truncate text-sm">{event.title}</span>

@@ -15,11 +15,11 @@ import { cn } from "@workspace/ui/lib/utils"
 const FREE_SHIPPING = 120
 
 const initial = [
-  { id: 1, name: "Design Agency Template", variant: "Pro license", price: 38, qty: 1, tone: "from-amber-700/60 to-amber-200/40" },
-  { id: 2, name: "Designali Icons Pro", variant: "Personal license", price: 24, qty: 2, tone: "from-lime-600/50 to-lime-100/40" },
+  { id: 1, name: "Design Agency Template", variant: "Pro license", price: 38, qty: 1, image: "/images/templates/design-agency.jpg" },
+  { id: 2, name: "Designali Icons Pro", variant: "Personal license", price: 24, qty: 2, image: "/images/templates/dalim-icons-old.jpg" },
 ]
 
-const upsell = { id: 3, name: "Apple Device Mockups", variant: "iPhone, iPad, MacBook", price: 18, qty: 1, tone: "from-yellow-500/60 to-yellow-100/40" }
+const upsell = { id: 3, name: "Apple Device Mockups", variant: "iPhone, iPad, MacBook", price: 18, qty: 1, image: "/images/templates/aliimam-comp.jpg" }
 
 export default function Ecommerce13() {
   const [open, setOpen] = useState(true)
@@ -66,8 +66,8 @@ export default function Ecommerce13() {
           </header>
 
           <div className="grid grid-cols-2 gap-4 p-5 sm:grid-cols-3">
-            {[0, 1, 2].map((i) => (
-              <div key={i} className="aspect-[4/5] bg-gradient-to-br from-muted to-background" />
+            {["design-agency", "portfolio-simple", "resort"].map((name) => (
+              <img key={name} src={`/images/templates/${name}.jpg`} alt="" className="aspect-[4/5] w-full border border-border object-cover object-top" />
             ))}
           </div>
 
@@ -109,7 +109,7 @@ export default function Ecommerce13() {
               </p>
               <div className="mt-2 h-1 bg-muted">
                 <div
-                  className={cn("h-full transition-all", remaining > 0 ? "bg-foreground" : "bg-emerald-500")}
+                  className={cn("h-full transition-all", remaining > 0 ? "bg-foreground" : "bg-primary")}
                   style={{ width: `${pct}%` }}
                 />
               </div>
@@ -121,7 +121,7 @@ export default function Ecommerce13() {
               )}
               {items.map((item) => (
                 <li key={item.id} className="flex gap-3 border-b border-border py-4">
-                  <span className={cn("size-16 shrink-0 bg-gradient-to-br", item.tone)} />
+                  <img src={item.image} alt={item.name} className="size-16 shrink-0 object-cover object-top" />
                   <div className="flex flex-1 flex-col">
                     <div className="flex justify-between gap-2">
                       <p className="text-sm font-medium">{item.name}</p>
@@ -145,7 +145,7 @@ export default function Ecommerce13() {
                 <li className="py-4">
                   <p className="text-xs tracking-widest text-muted-foreground uppercase">Pairs well with</p>
                   <div className="mt-3 flex items-center gap-3 bg-muted/60 p-3">
-                    <span className={cn("size-12 shrink-0 bg-gradient-to-br", upsell.tone)} />
+                    <img src={upsell.image} alt={upsell.name} className="size-12 shrink-0 object-cover object-top" />
                     <div className="flex-1">
                       <p className="text-sm font-medium">{upsell.name}</p>
                       <p className="text-xs text-muted-foreground">${upsell.price}</p>

@@ -121,7 +121,7 @@ export default function Navigation14() {
                   category === item
                     ? "border-foreground font-medium text-foreground"
                     : "border-transparent text-muted-foreground hover:text-foreground",
-                  item === "Sale" && "text-red-600 dark:text-red-400"
+                  item === "Sale" && "text-destructive dark:text-destructive"
                 )}
               >
                 {item}

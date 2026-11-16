@@ -14,7 +14,7 @@ const members = [
 
 const roleClass: Record<string, string> = {
   Owner: "",
-  Admin: "bg-blue-50 text-blue-700 dark:bg-blue-950 dark:text-blue-300",
+  Admin: "bg-primary/5 text-chart-3 dark:bg-primary/10 dark:text-chart-1",
   Member: "bg-secondary text-secondary-foreground",
   Guest: "border-dashed border-border bg-transparent text-muted-foreground",
 }

@@ -15,12 +15,12 @@ import {
 } from "@workspace/ui/components/field"
 
 const addons = [
-  { id: "backups", title: "Daily backups", hint: "30-day retention", price: 8 },
-  { id: "sso", title: "Single sign-on", hint: "SAML and SCIM", price: 25 },
+  { id: "backups", title: "Figma source files", hint: "Every Designali block in Figma", price: 8 },
+  { id: "sso", title: "Team license", hint: "Share with your studio", price: 25 },
   {
     id: "support",
-    title: "Priority support",
-    hint: "4-hour response time",
+    title: "Priority support from Ali",
+    hint: "Replies from support@designali.com within 4 hours",
     price: 40,
   },
 ]
@@ -35,7 +35,7 @@ export default function AddOnCheckboxCards() {
     <FieldSet className="w-full max-w-sm">
       <FieldLegend>Add-ons</FieldLegend>
       <FieldDescription>
-        Extend your workspace. Cancel any time.
+        Extend your Designali Pro plan. Cancel any time.
       </FieldDescription>
       <FieldGroup className="gap-2">
         {addons.map((a) => (

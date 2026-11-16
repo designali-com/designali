@@ -8,7 +8,7 @@ export default function SpinnerStrokeWidths() {
       {strokes.map((stroke) => (
         <div key={stroke} className="flex flex-col items-center gap-2">
           <Spinner className="size-8" strokeWidth={stroke} />
-          <span className="font-mono text-xs text-muted-foreground">
+          <span className="font-sans text-xs text-muted-foreground">
             {stroke}px
           </span>
         </div>

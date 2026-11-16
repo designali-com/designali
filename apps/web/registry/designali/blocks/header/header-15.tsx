@@ -24,7 +24,7 @@ export default function Header15() {
     <section className="w-full bg-background">
       <header className="sticky top-0 z-20 border-b bg-background/90 backdrop-blur">
         <div className="mx-auto flex h-14 max-w-7xl items-center gap-3 px-6">
-          <a href="#" className="flex items-center gap-2 font-mono text-sm font-semibold">
+          <a href="#" className="flex items-center gap-2 font-sans text-sm font-semibold">
             <span className="text-muted-foreground">~/</span>
             designali
           </a>
@@ -33,7 +33,7 @@ export default function Header15() {
               type="button"
               aria-expanded={versionOpen}
               onClick={() => setVersionOpen(!versionOpen)}
-              className="flex items-center gap-1 border px-2 py-0.5 font-mono text-[11px] text-muted-foreground hover:text-foreground"
+              className="flex items-center gap-1 border px-2 py-0.5 font-sans text-[11px] text-muted-foreground hover:text-foreground"
             >
               {version.split(" ")[0]}
               <ChevronDown className="size-3" />
@@ -48,7 +48,7 @@ export default function Header15() {
                         setVersion(item)
                         setVersionOpen(false)
                       }}
-                      className={`w-full px-3 py-1.5 text-start font-mono text-xs hover:bg-muted ${
+                      className={`w-full px-3 py-1.5 text-start font-sans text-xs hover:bg-muted ${
                         item === version ? "text-foreground" : "text-muted-foreground"
                       }`}
                     >

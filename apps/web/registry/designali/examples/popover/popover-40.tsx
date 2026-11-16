@@ -44,7 +44,7 @@ export default function MentionCardPopover() {
               <Avatar size="lg">
                 <AvatarImage src="/ali.jpg" alt="Ali Imam" />
                 <AvatarFallback>AI</AvatarFallback>
-                <AvatarBadge className="bg-emerald-500" />
+                <AvatarBadge className="bg-primary" />
               </Avatar>
               <div className="flex flex-col">
                 <PopoverTitle>Ali Imam</PopoverTitle>

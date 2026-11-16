@@ -23,7 +23,7 @@ export default function ExpiryCountdownBadges() {
           {item.days === 0 ? (
             <Badge variant="destructive">Expired</Badge>
           ) : item.days <= 3 ? (
-            <Badge className="bg-amber-50 text-amber-700 dark:bg-amber-950 dark:text-amber-300">
+            <Badge className="bg-primary/5 text-chart-3 dark:bg-primary/10 dark:text-chart-1">
               <HourglassIcon data-icon="inline-start" />
               {item.days} days left
             </Badge>

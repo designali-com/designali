@@ -279,7 +279,7 @@ export default function LandingFintech06() {
           <div className="border-x px-6 py-16 md:py-28">
             <h1 className="max-w-5xl text-4xl leading-[1.05] font-semibold tracking-tight text-balance sm:text-5xl md:text-8xl ">
               {"Tax apps, "}
-              <span className="text-violet-600 dark:text-violet-400">
+              <span className="text-primary dark:text-primary">
                 designed to feel simple
               </span>
             </h1>
@@ -345,7 +345,7 @@ export default function LandingFintech06() {
       <section className="border-b">
         <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
           <div className="max-w-2xl">
-            <p className="text-sm font-medium text-violet-600 dark:text-violet-400">
+            <p className="text-sm font-medium text-primary dark:text-primary">
               Services
             </p>
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl  mt-3">
@@ -361,7 +361,7 @@ export default function LandingFintech06() {
                 key={feature.title}
                 className="-mt-px -ml-px border-t border-l p-8"
               >
-                <feature.icon className="size-6 text-violet-600 dark:text-violet-400" />
+                <feature.icon className="size-6 text-primary dark:text-primary" />
                 <h3 className="mt-5 font-semibold">{feature.title}</h3>
                 <p className="mt-2 text-sm leading-6 text-muted-foreground">
                   {feature.description}
@@ -402,7 +402,7 @@ export default function LandingFintech06() {
                   <span className="flex size-10 items-center justify-center rounded-lg border bg-muted/50 font-semibold ">
                     {item.name.charAt(0)}
                   </span>
-                  <span className="rounded-full bg-violet-500/10 px-2.5 py-0.5 text-xs font-medium text-violet-600 dark:text-violet-400">
+                  <span className="rounded-full bg-primary/10 px-2.5 py-0.5 text-xs font-medium text-primary dark:text-primary">
                     {item.tag}
                   </span>
                 </div>
@@ -467,7 +467,7 @@ export default function LandingFintech06() {
                 key={step.title}
                 className="relative border-t-2 border-border pt-6"
               >
-                <span className="text-sm font-medium text-violet-600 dark:text-violet-400">
+                <span className="text-sm font-medium text-primary dark:text-primary">
                   Step {i + 1}
                 </span>
                 <h3 className="mt-2 text-lg font-semibold">{step.title}</h3>
@@ -495,10 +495,10 @@ export default function LandingFintech06() {
               return (
                 <div
                   key={tier.name}
-                  className={`relative flex h-full flex-col rounded-2xl border p-8 ${featured ? "border-transparent ring-2 ring-violet-500 shadow-xl" : ""}`}
+                  className={`relative flex h-full flex-col rounded-2xl border p-8 ${featured ? "border-transparent ring-2 ring-primary shadow-xl" : ""}`}
                 >
                   {featured && (
-                    <span className="absolute -top-3 left-8 rounded-full bg-violet-600 text-white px-3 py-1 text-xs font-medium">
+                    <span className="absolute -top-3 left-8 rounded-full bg-chart-2 text-white px-3 py-1 text-xs font-medium">
                       Most popular
                     </span>
                   )}
@@ -517,7 +517,7 @@ export default function LandingFintech06() {
                   <ul className="mt-8 flex-1 space-y-3 text-sm">
                     {tier.features.map((feature) => (
                       <li key={feature} className="flex gap-3">
-                        <Check className="mt-0.5 size-4 shrink-0 text-violet-600 dark:text-violet-400" />
+                        <Check className="mt-0.5 size-4 shrink-0 text-primary dark:text-primary" />
                         {feature}
                       </li>
                     ))}
@@ -569,8 +569,8 @@ export default function LandingFintech06() {
         </div>
       </section>
       <section className="px-6 py-20 md:py-28">
-        <div className="relative mx-auto max-w-6xl overflow-hidden rounded-3xl border bg-violet-500/10 px-6 py-16 text-center md:py-24">
-          <div className="pointer-events-none absolute -top-24 left-1/2 size-96 -translate-x-1/2 rounded-full bg-gradient-to-b from-violet-500/25 via-fuchsia-500/10 to-transparent blur-3xl" />
+        <div className="relative mx-auto max-w-6xl overflow-hidden rounded-3xl border bg-primary/10 px-6 py-16 text-center md:py-24">
+          <div className="pointer-events-none absolute -top-24 left-1/2 size-96 -translate-x-1/2 rounded-full bg-gradient-to-b from-primary/25 via-primary/10 to-transparent blur-3xl" />
           <div className="relative mx-auto max-w-2xl space-y-6">
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl">
               Stop dreading your product UI
@@ -689,7 +689,7 @@ function HeroVisual() {
           <div className="rounded-lg border p-4">
             <div className="mb-4 flex items-center justify-between text-xs">
               <span className="font-medium">Last 12 weeks</span>
-              <span className="text-violet-600 dark:text-violet-400">
+              <span className="text-primary dark:text-primary">
                 +24.6%
               </span>
             </div>
@@ -697,7 +697,7 @@ function HeroVisual() {
               {bars.map((h, i) => (
                 <div
                   key={i}
-                  className={`flex-1 rounded-t-sm ${i === bars.length - 1 ? "bg-violet-600" : "bg-muted-foreground/20"}`}
+                  className={`flex-1 rounded-t-sm ${i === bars.length - 1 ? "bg-chart-2" : "bg-muted-foreground/20"}`}
                   style={{ height: `${h}%` }}
                 />
               ))}
@@ -715,7 +715,7 @@ function HeroVisual() {
                     {item.meta}
                   </div>
                 </div>
-                <span className="shrink-0 rounded-full bg-violet-500/10 px-2 py-0.5 text-[11px] font-medium text-violet-600 dark:text-violet-400">
+                <span className="shrink-0 rounded-full bg-primary/10 px-2 py-0.5 text-[11px] font-medium text-primary dark:text-primary">
                   {item.tag}
                 </span>
               </div>

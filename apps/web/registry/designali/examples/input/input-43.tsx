@@ -15,15 +15,16 @@ const CAP = 50000
 
 export default function BudgetAllocationInputs() {
   const [budget, setBudget] = React.useState({
-    Marketing: 22000,
-    Engineering: 24000,
-    Events: 7000,
+    Branding: 22000,
+    Development: 24000,
+    Motion: 7000,
   })
   const total = Object.values(budget).reduce((a, b) => a + b, 0)
   const over = total > CAP
 
   return (
     <div className="flex w-full max-w-xs flex-col gap-2">
+      <p className="text-sm font-medium">Designali project budget</p>
       {Object.entries(budget).map(([dept, value]) => (
         <div
           key={dept}

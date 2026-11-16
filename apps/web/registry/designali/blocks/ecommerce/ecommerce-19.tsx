@@ -107,8 +107,8 @@ export default function Ecommerce19() {
                 <span
                   className={cn(
                     "hidden w-10 items-center gap-0.5 text-xs tabular-nums sm:flex",
-                    item.move > 0 && "text-emerald-700 dark:text-emerald-400",
-                    item.move < 0 && "text-red-600 dark:text-red-400",
+                    item.move > 0 && "text-chart-3 dark:text-primary",
+                    item.move < 0 && "text-destructive dark:text-destructive",
                     item.move === 0 && "text-muted-foreground"
                   )}
                   aria-label={item.move === 0 ? "No change" : `${item.move > 0 ? "Up" : "Down"} ${Math.abs(item.move)}`}

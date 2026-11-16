@@ -69,7 +69,7 @@ export default function CouponWalletDrawer() {
                 <div className="min-w-0 flex-1">
                   <p className="font-medium">{coupon.title}</p>
                   <p className="text-muted-foreground">
-                    <span className="font-mono">{coupon.code}</span> ·{" "}
+                    <span className="font-sans">{coupon.code}</span> ·{" "}
                     {coupon.expires}
                   </p>
                 </div>

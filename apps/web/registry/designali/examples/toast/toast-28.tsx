@@ -18,8 +18,8 @@ import { cn } from "@workspace/ui/lib/utils"
 const notify = createToastManager()
 
 const accents: Record<string, string> = {
-  success: "border-s-emerald-500",
-  warning: "border-s-amber-500",
+  success: "border-s-primary",
+  warning: "border-s-primary",
   error: "border-s-destructive",
 }
 

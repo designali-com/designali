@@ -28,7 +28,7 @@ export default function ProductVisibilityList() {
           </div>
           <div className="min-w-0 flex-1">
             <p className="truncate text-sm font-medium">{product.name}</p>
-            <p className="font-mono text-xs text-muted-foreground">
+            <p className="font-sans text-xs text-muted-foreground">
               {product.sku}
             </p>
           </div>

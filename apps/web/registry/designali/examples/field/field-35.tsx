@@ -20,7 +20,7 @@ export default function StorageTierSlider() {
   return (
     <Field className="w-full max-w-sm">
       <div className="flex items-baseline justify-between">
-        <FieldLabel htmlFor="storage-tier">Cloud storage</FieldLabel>
+        <FieldLabel htmlFor="storage-tier">Designali asset storage</FieldLabel>
         <span className="text-sm font-semibold">
           {tier.price ? "$" + tier.price + "/mo" : "Free"}
         </span>

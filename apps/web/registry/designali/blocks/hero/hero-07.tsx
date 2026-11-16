@@ -5,6 +5,8 @@ import {
 
 import { Button } from "@workspace/ui/components/button"
 
+import { CounterNumber } from "@/registry/designali/ui/counter-number"
+
 const bars = [42, 58, 51, 66, 72, 64, 80, 88, 76, 94, 90, 100]
 
 export default function Hero07() {
@@ -42,11 +44,13 @@ export default function Hero07() {
               <p className="text-xs text-muted-foreground">
                 Monthly downloads on designali.com
               </p>
-              <p className="mt-1 text-3xl font-medium tracking-tight">
-                48,190
-              </p>
+              <CounterNumber
+                value={48190}
+                size="lg"
+                className="mt-1 block font-medium tracking-tight"
+              />
             </div>
-            <span className="border border-border px-2 py-0.5 text-xs text-emerald-600 dark:text-emerald-400">
+            <span className="border border-border px-2 py-0.5 text-xs text-primary dark:text-primary">
               +8.4%
             </span>
           </div>
@@ -63,7 +67,7 @@ export default function Hero07() {
               />
             ))}
           </div>
-          <div className="mt-3 flex justify-between font-mono text-[10px] text-muted-foreground">
+          <div className="mt-3 flex justify-between text-[10px] text-muted-foreground">
             <span>Jan</span>
             <span>Jun</span>
             <span>Dec</span>
@@ -71,15 +75,15 @@ export default function Hero07() {
           <div className="mt-6 grid grid-cols-3 border-t border-border pt-4 text-sm">
             <div>
               <p className="text-xs text-muted-foreground">Blocks</p>
-              <p className="mt-1 font-medium">460+</p>
+              <CounterNumber value={460} suffix="+" size="sm" className="mt-1 block font-medium" />
             </div>
             <div>
               <p className="text-xs text-muted-foreground">Pages</p>
-              <p className="mt-1 font-medium">240+</p>
+              <CounterNumber value={240} suffix="+" size="sm" className="mt-1 block font-medium" />
             </div>
             <div>
               <p className="text-xs text-muted-foreground">Icons</p>
-              <p className="mt-1 font-medium">4000+</p>
+              <CounterNumber value={4000} suffix="+" size="sm" className="mt-1 block font-medium" />
             </div>
           </div>
         </div>

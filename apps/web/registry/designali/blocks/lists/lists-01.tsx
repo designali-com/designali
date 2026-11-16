@@ -22,7 +22,7 @@ export default function Lists01() {
               Join Ali Imam and the Designali studio — design se code tak.
             </p>
           </div>
-          <span className="hidden font-mono text-sm text-muted-foreground sm:block">
+          <span className="hidden font-sans text-sm text-muted-foreground sm:block">
             {String(roles.length).padStart(2, "0")} positions
           </span>
         </div>

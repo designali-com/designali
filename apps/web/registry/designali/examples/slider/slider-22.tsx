@@ -8,17 +8,17 @@ const channels = [
   {
     key: "r",
     label: "Red",
-    className: "[&_[data-slot=slider-range]]:bg-red-500",
+    className: "[&_[data-slot=slider-range]]:bg-destructive",
   },
   {
     key: "g",
     label: "Green",
-    className: "[&_[data-slot=slider-range]]:bg-green-500",
+    className: "[&_[data-slot=slider-range]]:bg-primary",
   },
   {
     key: "b",
     label: "Blue",
-    className: "[&_[data-slot=slider-range]]:bg-blue-500",
+    className: "[&_[data-slot=slider-range]]:bg-primary",
   },
 ] as const
 

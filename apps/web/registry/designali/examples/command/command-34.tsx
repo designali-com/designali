@@ -33,19 +33,19 @@ const statuses = [
     id: "progress",
     label: "In progress",
     icon: CircleDotIcon,
-    color: "text-amber-500",
+    color: "text-primary",
   },
   {
     id: "review",
     label: "In review",
     icon: CircleEllipsisIcon,
-    color: "text-violet-500",
+    color: "text-primary",
   },
   {
     id: "done",
     label: "Done",
     icon: CircleCheckIcon,
-    color: "text-emerald-500",
+    color: "text-primary",
   },
 ]
 
@@ -56,7 +56,7 @@ export default function IssueStatusPicker() {
   return (
     <div className="flex w-full max-w-60 flex-col gap-2">
       <div className="flex items-center gap-2 text-xs">
-        <span className="font-mono text-muted-foreground">DSG-482</span>
+        <span className="font-sans text-muted-foreground">DSG-482</span>
         <active.icon className={cn("size-3.5", active.color)} />
         <span>{active.label}</span>
       </div>

@@ -13,14 +13,14 @@ export default function CloseDelayTooltip() {
         <TooltipTrigger
           closeDelay={400}
           render={
-            <Badge variant="secondary" tabIndex={0} className="font-mono" />
+            <Badge variant="secondary" tabIndex={0} className="font-sans" />
           }
         >
           #A-20931
         </TooltipTrigger>
         <TooltipContent className="flex-col items-start gap-0.5 select-text">
           <span className="opacity-70">Tracking number</span>
-          <span className="font-mono">1Z 999 AA1 01 2345 6784</span>
+          <span className="font-sans">1Z 999 AA1 01 2345 6784</span>
         </TooltipContent>
       </Tooltip>
       <span className="text-muted-foreground">shipped today</span>

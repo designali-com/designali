@@ -15,7 +15,7 @@ export default function AvatarUploadLabel() {
       <Label htmlFor="avatar-file" className="group relative cursor-pointer">
         <Avatar size="lg" className="size-16">
           <AvatarImage src="/ali.jpg" alt="Ali Imam" />
-          <AvatarFallback className="bg-gradient-to-br from-sky-400 to-indigo-500 text-lg text-white">
+          <AvatarFallback className="bg-gradient-to-br from-primary to-primary text-lg text-white">
             AI
           </AvatarFallback>
         </Avatar>

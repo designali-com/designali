@@ -6,23 +6,23 @@ const endpoints = [
     method: "GET",
     path: "/v1/templates",
     className:
-      "bg-emerald-50 text-emerald-700 dark:bg-emerald-950 dark:text-emerald-300",
+      "bg-primary/5 text-chart-3 dark:bg-primary/10 dark:text-chart-1",
   },
   {
     method: "POST",
     path: "/v1/templates",
-    className: "bg-blue-50 text-blue-700 dark:bg-blue-950 dark:text-blue-300",
+    className: "bg-primary/5 text-chart-3 dark:bg-primary/10 dark:text-chart-1",
   },
   {
     method: "PATCH",
     path: "/v1/templates/:id",
     className:
-      "bg-amber-50 text-amber-700 dark:bg-amber-950 dark:text-amber-300",
+      "bg-primary/5 text-chart-3 dark:bg-primary/10 dark:text-chart-1",
   },
   {
     method: "DELETE",
     path: "/v1/templates/:id",
-    className: "bg-red-50 text-red-700 dark:bg-red-950 dark:text-red-300",
+    className: "bg-destructive/5 text-destructive dark:bg-destructive/15 dark:text-destructive",
   },
 ]
 
@@ -37,13 +37,13 @@ export default function ApiMethodBadges() {
         >
           <Badge
             className={cn(
-              "w-14 font-mono text-[10px] font-bold",
+              "w-14 font-sans text-[10px] font-bold",
               endpoint.className
             )}
           >
             {endpoint.method}
           </Badge>
-          <span className="truncate font-mono text-xs">{endpoint.path}</span>
+          <span className="truncate font-sans text-xs">{endpoint.path}</span>
         </a>
       ))}
     </div>

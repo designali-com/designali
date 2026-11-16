@@ -13,8 +13,8 @@ import { cn } from "@workspace/ui/lib/utils"
 
 const priorities = [
   { value: "low", label: "Low", dot: "bg-muted-foreground" },
-  { value: "medium", label: "Medium", dot: "bg-sky-500" },
-  { value: "high", label: "High", dot: "bg-amber-500" },
+  { value: "medium", label: "Medium", dot: "bg-primary" },
+  { value: "high", label: "High", dot: "bg-primary" },
   { value: "urgent", label: "Urgent", dot: "bg-destructive" },
 ]
 

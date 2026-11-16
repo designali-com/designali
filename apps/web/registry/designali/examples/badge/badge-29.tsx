@@ -10,10 +10,10 @@ const entries = [
 
 const styles: Record<string, string> = {
   Added:
-    "bg-emerald-50 text-emerald-700 dark:bg-emerald-950 dark:text-emerald-300",
-  Improved: "bg-blue-50 text-blue-700 dark:bg-blue-950 dark:text-blue-300",
-  Fixed: "bg-amber-50 text-amber-700 dark:bg-amber-950 dark:text-amber-300",
-  Removed: "bg-red-50 text-red-700 dark:bg-red-950 dark:text-red-300",
+    "bg-primary/5 text-chart-3 dark:bg-primary/10 dark:text-chart-1",
+  Improved: "bg-primary/5 text-chart-3 dark:bg-primary/10 dark:text-chart-1",
+  Fixed: "bg-primary/5 text-chart-3 dark:bg-primary/10 dark:text-chart-1",
+  Removed: "bg-destructive/5 text-destructive dark:bg-destructive/15 dark:text-destructive",
 }
 
 export default function ChangelogTypeBadges() {

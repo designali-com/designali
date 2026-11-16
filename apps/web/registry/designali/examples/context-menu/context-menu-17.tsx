@@ -32,7 +32,7 @@ export default function DesktopBackgroundMenu() {
 
   return (
     <ContextMenu>
-      <ContextMenuTrigger className="relative flex h-52 w-full max-w-md items-start gap-4 bg-linear-to-br from-indigo-500 via-purple-500 to-pink-400 p-4 text-[11px] text-white">
+      <ContextMenuTrigger className="relative flex h-52 w-full max-w-md items-start gap-4 bg-linear-to-br from-primary via-primary to-primary p-4 text-[11px] text-white">
         {showIcons
           ? ["Designali", "Templates", "Brand kit"].map((name) => (
               <span

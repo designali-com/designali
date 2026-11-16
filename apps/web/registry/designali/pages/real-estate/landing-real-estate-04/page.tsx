@@ -96,42 +96,42 @@ const showcase = [
     meta: "Brand · Website · CGI renders",
     tag: "New project",
     price: "6 wks",
-    tile: "bg-gradient-to-br from-sky-200 via-cyan-300 to-teal-400 dark:from-sky-700 dark:via-cyan-800 dark:to-teal-900",
+    tile: "bg-gradient-to-br from-primary/20 via-chart-1 to-primary dark:from-chart-3 dark:via-chart-4 dark:to-chart-5",
   },
   {
     name: "Riverside Loft Site",
     meta: "Listing site · 12 pages",
     tag: "Website",
     price: "4 wks",
-    tile: "bg-gradient-to-br from-violet-200 via-purple-300 to-fuchsia-400 dark:from-violet-700 dark:via-purple-800 dark:to-fuchsia-900",
+    tile: "bg-gradient-to-br from-primary/20 via-chart-1 to-primary dark:from-chart-3 dark:via-chart-4 dark:to-chart-5",
   },
   {
     name: "Townhouse Brochure",
     meta: "Print · Digital brochure",
     tag: "Brochure",
     price: "5 wks",
-    tile: "bg-gradient-to-br from-emerald-200 via-green-300 to-lime-300 dark:from-emerald-700 dark:via-green-800 dark:to-lime-900",
+    tile: "bg-gradient-to-br from-primary/20 via-chart-1 to-chart-1 dark:from-chart-3 dark:via-chart-4 dark:to-chart-5",
   },
   {
     name: "Penthouse CGI Walkthrough",
     meta: "3D · Motion · 90 seconds",
     tag: "CGI",
     price: "8 wks",
-    tile: "bg-gradient-to-br from-stone-200 via-neutral-300 to-zinc-400 dark:from-stone-700 dark:via-neutral-800 dark:to-zinc-900",
+    tile: "bg-gradient-to-br from-muted via-border to-muted-foreground dark:from-muted dark:via-card dark:to-card",
   },
   {
     name: "Coastal Resort Brand",
     meta: "Identity · Booking site",
     tag: "Brand",
     price: "3 wks",
-    tile: "bg-gradient-to-br from-rose-200 via-pink-300 to-purple-300 dark:from-rose-700 dark:via-pink-800 dark:to-purple-900",
+    tile: "bg-gradient-to-br from-primary/20 via-chart-1 to-chart-1 dark:from-chart-3 dark:via-chart-4 dark:to-chart-5",
   },
   {
     name: "Agency Design System",
     meta: "Components · Docs",
     tag: "System",
     price: "From $2,100/mo",
-    tile: "bg-gradient-to-br from-blue-200 via-indigo-300 to-violet-400 dark:from-blue-700 dark:via-indigo-800 dark:to-violet-900",
+    tile: "bg-gradient-to-br from-primary/20 via-chart-1 to-primary dark:from-chart-3 dark:via-chart-4 dark:to-chart-5",
   },
 ]
 
@@ -244,7 +244,7 @@ export default function LandingRealEstate04() {
             href="#"
             className="flex items-center gap-2 font-semibold tracking-tight"
           >
-            <span className="flex size-7 items-center justify-center rounded-md bg-blue-600 text-white text-sm">
+            <span className="flex size-7 items-center justify-center rounded-md bg-chart-2 text-white text-sm">
               N
             </span>
             <span className="">designali</span>
@@ -280,12 +280,12 @@ export default function LandingRealEstate04() {
         <div className="mx-auto max-w-7xl px-6 py-16 md:py-24">
           <div className="mx-auto max-w-3xl space-y-6 text-center">
             <span className="inline-flex items-center gap-2 rounded-full border bg-background text-muted-foreground px-3 py-1 text-xs font-medium">
-              <Sparkles className="size-3.5 text-blue-600 dark:text-blue-400" />
+              <Sparkles className="size-3.5 text-primary dark:text-primary" />
               Design for new developments
             </span>
             <h1 className="text-4xl leading-[1.05] font-semibold tracking-tight text-balance sm:text-5xl md:text-6xl ">
               {"Launch new homes "}
-              <span className="text-blue-600 dark:text-blue-400">
+              <span className="text-primary dark:text-primary">
                 with CGI
               </span>
               {", before they are built"}
@@ -315,7 +315,7 @@ export default function LandingRealEstate04() {
               {stats.slice(0, 3).map((stat, i) => (
                 <div
                   key={stat.label}
-                  className={`flex flex-col justify-between rounded-2xl border p-5 ${i === 0 ? "bg-blue-500/10" : "bg-muted/40"} ${i === 2 ? "col-span-2 lg:col-span-1" : ""}`}
+                  className={`flex flex-col justify-between rounded-2xl border p-5 ${i === 0 ? "bg-primary/10" : "bg-muted/40"} ${i === 2 ? "col-span-2 lg:col-span-1" : ""}`}
                 >
                   <div className="text-xs text-muted-foreground">
                     {stat.label}
@@ -349,7 +349,7 @@ export default function LandingRealEstate04() {
       <section className="border-b">
         <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
           <div className="mx-auto max-w-2xl text-center">
-            <p className="text-sm font-medium text-blue-600 dark:text-blue-400">
+            <p className="text-sm font-medium text-primary dark:text-primary">
               Why choose Designali
             </p>
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl  mt-3">
@@ -364,10 +364,10 @@ export default function LandingRealEstate04() {
             {features.map((feature, i) => (
               <div
                 key={feature.title}
-                className={`group rounded-2xl border p-6 transition-colors hover:bg-muted/40 ${i === 0 ? "bg-blue-500/10 md:col-span-2 md:row-span-2 md:p-10" : ""} ${i === 3 ? "md:col-span-2" : ""}`}
+                className={`group rounded-2xl border p-6 transition-colors hover:bg-muted/40 ${i === 0 ? "bg-primary/10 md:col-span-2 md:row-span-2 md:p-10" : ""} ${i === 3 ? "md:col-span-2" : ""}`}
               >
                 <feature.icon
-                  className={`${i === 0 ? "size-8" : "size-5"} text-blue-600 dark:text-blue-400`}
+                  className={`${i === 0 ? "size-8" : "size-5"} text-primary dark:text-primary`}
                 />
                 <h3
                   className={`mt-6 font-semibold tracking-tight ${i === 0 ? "text-2xl md:text-3xl" : "text-lg"}`}
@@ -412,7 +412,7 @@ export default function LandingRealEstate04() {
                   className={`relative aspect-[4/3] overflow-hidden rounded-2xl ${item.tile}`}
                 >
                   <div className="absolute inset-0 bg-black/0 transition-colors group-hover:bg-black/10" />
-                  <span className="absolute top-3 left-3 rounded-full bg-white/85 px-2.5 py-1 text-[11px] font-medium text-zinc-900 backdrop-blur">
+                  <span className="absolute top-3 left-3 rounded-full bg-white/85 px-2.5 py-1 text-[11px] font-medium text-foreground backdrop-blur">
                     {item.tag}
                   </span>
                 </div>
@@ -445,7 +445,7 @@ export default function LandingRealEstate04() {
                 key={t.name}
                 className={`flex flex-col justify-between rounded-2xl border bg-background p-6 ${i === 0 ? "md:col-span-2 md:p-10" : ""}`}
               >
-                <Quote className="size-6 text-blue-600 dark:text-blue-400" />
+                <Quote className="size-6 text-primary dark:text-primary" />
                 <blockquote
                   className={`mt-4 leading-relaxed ${i === 0 ? "text-xl md:text-2xl" : "text-muted-foreground"}`}
                 >
@@ -483,7 +483,7 @@ export default function LandingRealEstate04() {
                 key={step.title}
                 className="relative border-t-2 border-border pt-6"
               >
-                <span className="text-sm font-medium text-blue-600 dark:text-blue-400">
+                <span className="text-sm font-medium text-primary dark:text-primary">
                   Step {i + 1}
                 </span>
                 <h3 className="mt-2 text-lg font-semibold">{step.title}</h3>
@@ -512,10 +512,10 @@ export default function LandingRealEstate04() {
               return (
                 <div
                   key={tier.name}
-                  className={`relative flex h-full flex-col rounded-2xl border p-8 ${featured ? "border-transparent ring-2 ring-blue-500 shadow-xl" : ""}`}
+                  className={`relative flex h-full flex-col rounded-2xl border p-8 ${featured ? "border-transparent ring-2 ring-primary shadow-xl" : ""}`}
                 >
                   {featured && (
-                    <span className="absolute -top-3 left-8 rounded-full bg-blue-600 text-white px-3 py-1 text-xs font-medium">
+                    <span className="absolute -top-3 left-8 rounded-full bg-chart-2 text-white px-3 py-1 text-xs font-medium">
                       Most popular
                     </span>
                   )}
@@ -534,7 +534,7 @@ export default function LandingRealEstate04() {
                   <ul className="mt-8 flex-1 space-y-3 text-sm">
                     {tier.features.map((feature) => (
                       <li key={feature} className="flex gap-3">
-                        <Check className="mt-0.5 size-4 shrink-0 text-blue-600 dark:text-blue-400" />
+                        <Check className="mt-0.5 size-4 shrink-0 text-primary dark:text-primary" />
                         {feature}
                       </li>
                     ))}
@@ -586,8 +586,8 @@ export default function LandingRealEstate04() {
         </div>
       </section>
       <section className="px-6 py-20 md:py-28">
-        <div className="relative mx-auto max-w-6xl overflow-hidden rounded-3xl border bg-blue-500/10 px-6 py-16 text-center md:py-24">
-          <div className="pointer-events-none absolute -top-24 left-1/2 size-96 -translate-x-1/2 rounded-full bg-gradient-to-b from-blue-500/25 via-indigo-500/10 to-transparent blur-3xl" />
+        <div className="relative mx-auto max-w-6xl overflow-hidden rounded-3xl border bg-primary/10 px-6 py-16 text-center md:py-24">
+          <div className="pointer-events-none absolute -top-24 left-1/2 size-96 -translate-x-1/2 rounded-full bg-gradient-to-b from-primary/25 via-primary/10 to-transparent blur-3xl" />
           <div className="relative mx-auto max-w-2xl space-y-6">
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl">
               Book a launch package for your next development
@@ -619,7 +619,7 @@ export default function LandingRealEstate04() {
               href="#"
               className="flex items-center gap-2 font-semibold tracking-tight"
             >
-              <span className="flex size-7 items-center justify-center rounded-md bg-blue-600 text-white text-sm">
+              <span className="flex size-7 items-center justify-center rounded-md bg-chart-2 text-white text-sm">
                 N
               </span>
               <span className="">designali</span>
@@ -679,7 +679,7 @@ function HeroVisual() {
           className={`relative overflow-hidden rounded-2xl ${item.tile} ${i === 0 ? "col-span-2 row-span-2 aspect-square md:aspect-auto" : "aspect-[4/3]"}`}
         >
           <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/0 to-black/0" />
-          <span className="absolute top-3 left-3 rounded-full bg-white/85 px-2.5 py-1 text-[11px] font-medium text-zinc-900 backdrop-blur">
+          <span className="absolute top-3 left-3 rounded-full bg-white/85 px-2.5 py-1 text-[11px] font-medium text-foreground backdrop-blur">
             {item.tag}
           </span>
           <div className="absolute inset-x-3 bottom-3 flex items-end justify-between gap-2 text-white">

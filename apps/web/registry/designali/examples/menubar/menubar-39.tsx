@@ -80,7 +80,7 @@ export default function DebuggerMenubar() {
         <span
           className={cn(
             "size-2 rounded-full",
-            running ? "bg-emerald-500" : "bg-muted-foreground/40"
+            running ? "bg-primary" : "bg-muted-foreground/40"
           )}
         />
         {running ? "Debugging api-server" : "Not running"}

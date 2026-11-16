@@ -9,9 +9,9 @@ export default function CompactInlineOtp() {
   return (
     <div className="flex w-full max-w-md flex-wrap items-center justify-between gap-3 border p-3">
       <div>
-        <p className="text-xs font-medium">Confirm new recovery phone</p>
+        <p className="text-xs font-medium">Confirm your Designali sign-in</p>
         <p className="text-xs text-muted-foreground">
-          Code sent to (555) 014-2290
+          Code sent to ali@designali.com
         </p>
       </div>
       <div className="flex items-center gap-2">

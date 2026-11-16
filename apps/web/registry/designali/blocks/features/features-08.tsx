@@ -4,13 +4,17 @@ import { useState } from "react"
 
 import { cn } from "@workspace/ui/lib/utils"
 
+import { CounterNumber } from "@/registry/designali/ui/counter-number"
+
 const tabs = [
   {
     id: "design",
     label: "Design",
     title: "Tokens that sync both ways",
     body: "Designali design tokens live in Figma and code. Change a colour once and every block, template and page stays in sync.",
-    metric: "62%",
+    metric: 62,
+    decimals: 0,
+    suffix: "%",
     metricLabel: "less time spent on handoff",
   },
   {
@@ -18,7 +22,9 @@ const tabs = [
     label: "Build",
     title: "Components with guardrails",
     body: "Accessible components built with React, TypeScript and Tailwind CSS, so you compose new screens without reinventing behaviour.",
-    metric: "3.4x",
+    metric: 3.4,
+    decimals: 1,
+    suffix: "x",
     metricLabel: "faster feature delivery",
   },
   {
@@ -26,7 +32,9 @@ const tabs = [
     label: "Review",
     title: "Shipped on Vercel",
     body: "Ali Imam reviews every page for polish and performance before it ships, so your site looks great and loads fast on every device.",
-    metric: "91%",
+    metric: 91,
+    decimals: 0,
+    suffix: "%",
     metricLabel: "Lighthouse-ready pages",
   },
 ]
@@ -68,9 +76,14 @@ export default function Features08() {
             </p>
           </div>
           <div className="flex flex-col justify-center border-t border-border bg-muted/40 p-8 md:border-t-0 md:border-l">
-            <div className="text-5xl font-medium tracking-tight">
-              {current.metric}
-            </div>
+            <CounterNumber
+              key={current.id}
+              value={current.metric}
+              decimalPlaces={current.decimals}
+              suffix={current.suffix}
+              size="xl"
+              className="font-medium tracking-tight"
+            />
             <div className="mt-2 text-sm text-muted-foreground">
               {current.metricLabel}
             </div>

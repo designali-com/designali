@@ -34,7 +34,7 @@ export default function LiveUpdatesToggle() {
           <span
             className={cn(
               "size-2 rounded-full",
-              live ? "animate-pulse bg-emerald-500" : "bg-muted-foreground"
+              live ? "animate-pulse bg-primary" : "bg-muted-foreground"
             )}
           />
           {live ? "Live" : "Paused"}

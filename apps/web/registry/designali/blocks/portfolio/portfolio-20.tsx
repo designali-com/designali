@@ -47,8 +47,8 @@ export default function Portfolio20() {
       <div className="mx-auto max-w-6xl px-6">
         <div className="flex items-center gap-2 text-sm text-muted-foreground">
           <span className="relative flex size-2">
-            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-500 opacity-60" />
-            <span className="relative inline-flex size-2 rounded-full bg-emerald-500" />
+            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-60" />
+            <span className="relative inline-flex size-2 rounded-full bg-primary" />
           </span>
           Available for selected projects
         </div>
@@ -66,7 +66,7 @@ export default function Portfolio20() {
         >
           {email}
           {copied ? (
-            <Check className="size-5 shrink-0 text-emerald-600 dark:text-emerald-400" />
+            <Check className="size-5 shrink-0 text-primary dark:text-primary" />
           ) : (
             <Copy className="size-5 shrink-0 text-muted-foreground group-hover:text-foreground" />
           )}
@@ -110,7 +110,7 @@ export default function Portfolio20() {
                   type="button"
                   onClick={() => setTime(t)}
                   className={cn(
-                    "border px-4 py-2 font-mono text-sm transition-colors",
+                    "border px-4 py-2 font-sans text-sm transition-colors",
                     time === t ? "border-foreground bg-muted" : "border-border hover:bg-muted"
                   )}
                 >

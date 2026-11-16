@@ -49,15 +49,15 @@ export function MacbookVariantDemo() {
   return (
     <div className="flex flex-col items-center justify-center gap-8 p-8">
       {/* Model Tabs */}
-      <div className="flex flex-wrap items-center justify-center gap-1 rounded-lg bg-gray-100 p-1 dark:bg-zinc-800">
+      <div className="flex flex-wrap items-center justify-center gap-1 rounded-lg bg-muted p-1 dark:bg-card">
         {variants.map((variant) => (
           <button
             key={variant.value}
             onClick={() => handleVariantChange(variant.value)}
             className={`rounded-md px-4 py-2 text-sm font-medium transition-all duration-200 ${
               activeVariant === variant.value
-                ? "bg-white text-black shadow-sm dark:bg-zinc-950 dark:text-white"
-                : "text-gray-500 hover:text-gray-900 dark:text-zinc-400 dark:hover:text-zinc-100"
+                ? "bg-white text-black shadow-sm dark:bg-card dark:text-white"
+                : "text-muted-foreground hover:text-foreground dark:text-muted-foreground dark:hover:text-foreground"
             }`}
           >
             {variant.label}
@@ -66,15 +66,15 @@ export function MacbookVariantDemo() {
       </div>
 
       {/* Color Tabs */}
-      <div className="flex flex-wrap items-center justify-center gap-1 rounded-lg bg-gray-100 p-1 dark:bg-zinc-800">
+      <div className="flex flex-wrap items-center justify-center gap-1 rounded-lg bg-muted p-1 dark:bg-card">
         {currentVariant.colors.map((color) => (
           <button
             key={color}
             onClick={() => setActiveColor(color)}
             className={`rounded-md px-4 py-2 text-sm font-medium capitalize transition-all duration-200 ${
               activeColor === color
-                ? "bg-white text-black shadow-sm dark:bg-zinc-950 dark:text-white"
-                : "text-gray-500 hover:text-gray-900 dark:text-zinc-400 dark:hover:text-zinc-100"
+                ? "bg-white text-black shadow-sm dark:bg-card dark:text-white"
+                : "text-muted-foreground hover:text-foreground dark:text-muted-foreground dark:hover:text-foreground"
             }`}
           >
             {color.replace("-", " ")}

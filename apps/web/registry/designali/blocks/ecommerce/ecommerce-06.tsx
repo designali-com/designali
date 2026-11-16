@@ -8,25 +8,26 @@ import {
 
 import { Button } from "@workspace/ui/components/button"
 import { cn } from "@workspace/ui/lib/utils"
+import { IPad } from "@/registry/designali/ui/apple/ipad"
 
 type Product = {
   name: string
   category: string
   price: number
   material: string
-  tone: string
+  image: string
 }
 
 const products: Product[] = [
-  { name: "Design Agency Template", category: "Templates", price: 79, material: "Next.js", tone: "from-amber-300/70 to-yellow-100/30" },
-  { name: "Hero Blocks Pack", category: "Blocks", price: 39, material: "React", tone: "from-orange-300/60 to-amber-50/30" },
-  { name: "Portfolio Simple Template", category: "Templates", price: 49, material: "Figma", tone: "from-zinc-400/70 to-zinc-100/30" },
-  { name: "Designali Icons Pro", category: "Icons", price: 39, material: "SVG", tone: "from-stone-400/70 to-stone-100/30" },
-  { name: "Blocks Pro Bundle", category: "Blocks", price: 149, material: "Next.js", tone: "from-yellow-700/40 to-amber-100/30" },
-  { name: "Designali Logos Pack", category: "Icons", price: 29, material: "React", tone: "from-slate-500/60 to-slate-200/30" },
-  { name: "Resort Template", category: "Templates", price: 69, material: "Tailwind CSS", tone: "from-rose-300/60 to-orange-100/30" },
-  { name: "Vectors Starter Pack", category: "Icons", price: 19, material: "Figma", tone: "from-lime-700/40 to-lime-100/30" },
-  { name: "Pricing & FAQ Blocks", category: "Blocks", price: 35, material: "Tailwind CSS", tone: "from-amber-900/50 to-orange-200/30" },
+  { name: "Design Agency Template", category: "Templates", price: 79, material: "Next.js", image: "/images/templates/design-agency.jpg" },
+  { name: "Hero Blocks Pack", category: "Blocks", price: 39, material: "React", image: "/images/templates/aliimam-comp.jpg" },
+  { name: "Portfolio Simple Template", category: "Templates", price: 49, material: "Figma", image: "/images/templates/portfolio-simple.jpg" },
+  { name: "Designali Icons Pro", category: "Icons", price: 39, material: "SVG", image: "/images/templates/dalim-icons-old.jpg" },
+  { name: "Blocks Pro Bundle", category: "Blocks", price: 149, material: "Next.js", image: "/images/templates/dalim-ui-old.jpg" },
+  { name: "Designali Logos Pack", category: "Icons", price: 29, material: "React", image: "/images/templates/dalim-graphic-old.jpg" },
+  { name: "Resort Template", category: "Templates", price: 69, material: "Tailwind CSS", image: "/images/templates/resort.jpg" },
+  { name: "Vectors Starter Pack", category: "Icons", price: 19, material: "Figma", image: "/images/templates/dalim-visuals-old.jpg" },
+  { name: "Pricing & FAQ Blocks", category: "Blocks", price: 35, material: "Tailwind CSS", image: "/images/templates/vercel.jpg" },
 ]
 
 const categories = ["Templates", "Blocks", "Icons"]
@@ -186,8 +187,10 @@ export default function Ecommerce06() {
               <div className="grid grid-cols-2 gap-x-4 gap-y-8 md:grid-cols-3">
                 {visible.map((p) => (
                   <a key={p.name} href="#" className="group block">
-                    <div className={cn("relative aspect-square overflow-hidden border border-border bg-gradient-to-br", p.tone)}>
-                      <span className="absolute inset-x-[25%] top-[20%] bottom-[20%] rounded-t-full bg-background/50 transition-transform duration-500 group-hover:scale-105" />
+                    <div className="relative flex aspect-square items-center justify-center overflow-hidden border border-border bg-gradient-to-br from-primary/15 to-muted p-3">
+                      <IPad variant="ipad-pro" color="silver" orientation="landscape" size="sm" className="h-auto! w-full! max-w-full transition-transform duration-500 group-hover:scale-105">
+                        <img src={p.image} alt={p.name} className="size-full object-cover object-top" />
+                      </IPad>
                     </div>
                     <p className="mt-3 text-sm font-medium">{p.name}</p>
                     <p className="mt-0.5 flex justify-between text-xs text-muted-foreground">

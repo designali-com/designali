@@ -54,7 +54,7 @@ export default function NamedRadioFormSubmit() {
           Save preference
         </Button>
         {result && (
-          <span className="font-mono text-xs text-muted-foreground">
+          <span className="font-sans text-xs text-muted-foreground">
             contact=&quot;{result}&quot;
           </span>
         )}

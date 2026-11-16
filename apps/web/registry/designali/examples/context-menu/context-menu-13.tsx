@@ -44,7 +44,7 @@ export default function KanbanCardMenu() {
       </span>
       <ContextMenu>
         <ContextMenuTrigger className="flex flex-col gap-2 border bg-background p-3 shadow-xs data-popup-open:ring-2 data-popup-open:ring-ring/40">
-          <span className="font-mono text-[11px] text-muted-foreground">
+          <span className="font-sans text-[11px] text-muted-foreground">
             WEB-219
           </span>
           <span className="text-sm">

@@ -31,7 +31,7 @@ export default function ApiKeyActionsMenu() {
       <KeyRoundIcon className="size-4 text-muted-foreground" />
       <div className="min-w-0 flex-1">
         <p className="font-medium">designali.com production</p>
-        <p className="truncate font-mono text-muted-foreground">
+        <p className="truncate font-sans text-muted-foreground">
           {revealed ? secret : "key_demo_••••••••" + secret.slice(-4)}
         </p>
       </div>

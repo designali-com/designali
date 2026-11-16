@@ -11,14 +11,14 @@ import {
 import { cn } from "@workspace/ui/lib/utils"
 
 const levels = [
-  { label: "vercel-prod", status: "bg-emerald-500" },
-  { label: "designali-web", status: "bg-amber-500" },
+  { label: "vercel-prod", status: "bg-primary" },
+  { label: "designali-web", status: "bg-primary" },
 ]
 
 export default function InfrastructureStatusBreadcrumb() {
   return (
     <Breadcrumb>
-      <BreadcrumbList className="font-mono">
+      <BreadcrumbList className="font-sans">
         {levels.map((level) => (
           <Fragment key={level.label}>
             <BreadcrumbItem>

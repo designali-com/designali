@@ -54,7 +54,7 @@ export default function ActivityLogMenu() {
           </ContextMenuGroup>
         </ContextMenuContent>
       </ContextMenu>
-      <div className="flex min-h-20 flex-col gap-1 border bg-muted/30 p-2 font-mono text-[11px] text-muted-foreground">
+      <div className="flex min-h-20 flex-col gap-1 border bg-muted/30 p-2 font-sans text-[11px] text-muted-foreground">
         {log.length ? (
           log.map((entry) => <span key={entry}>{entry}</span>)
         ) : (

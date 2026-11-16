@@ -54,7 +54,7 @@ export default function CardWrappedTable() {
             {payouts.map((payout) => (
               <TableRow key={payout.date}>
                 <TableCell>{payout.date}</TableCell>
-                <TableCell className="font-mono text-muted-foreground">
+                <TableCell className="font-sans text-muted-foreground">
                   {payout.account}
                 </TableCell>
                 <TableCell>

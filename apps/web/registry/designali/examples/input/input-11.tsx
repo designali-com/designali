@@ -9,7 +9,7 @@ import {
 export default function CurrencyAmountInput() {
   return (
     <Field className="w-full max-w-[14rem]">
-      <FieldLabel htmlFor="amount">Monthly price</FieldLabel>
+      <FieldLabel htmlFor="amount">Designali Pro monthly price</FieldLabel>
       <InputGroup>
         <InputGroupAddon>
           <InputGroupText>$</InputGroupText>

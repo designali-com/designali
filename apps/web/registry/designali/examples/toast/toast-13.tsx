@@ -16,7 +16,7 @@ export default function AddToCartToast() {
   return (
     <Toaster toastManager={notify}>
       <div className="w-full max-w-xs border">
-        <div className="aspect-[4/3] bg-gradient-to-br from-amber-200 via-orange-300 to-rose-400 dark:from-amber-700 dark:via-orange-800 dark:to-rose-900" />
+        <div className="aspect-[4/3] bg-gradient-to-br from-primary/20 via-chart-1 to-primary dark:from-chart-3 dark:via-chart-4 dark:to-chart-5" />
         <div className="flex flex-col gap-3 p-4">
           <div>
             <p className="text-sm font-medium">Ceramic pour-over set</p>

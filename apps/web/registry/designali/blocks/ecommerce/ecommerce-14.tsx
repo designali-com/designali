@@ -7,6 +7,11 @@ import {
 
 import { Button } from "@workspace/ui/components/button"
 import { cn } from "@workspace/ui/lib/utils"
+import { IPad } from "@/registry/designali/ui/apple/ipad"
+import { IPhone } from "@/registry/designali/ui/apple/iphone"
+import { Macbook } from "@/registry/designali/ui/apple/macbook"
+import { StudioDisplay } from "@/registry/designali/ui/apple/studio-display"
+import { GridPattern } from "@/registry/designali/ui/grid-pattern"
 
 const hotspots = [
   { id: "lamp", name: "iPhone Mockup", price: 19, detail: "PNG + Figma, light and dark", x: 18, y: 38 },
@@ -25,21 +30,28 @@ export default function Ecommerce14() {
     <section className="w-full bg-background py-16 text-foreground md:py-24">
       <div className="mx-auto max-w-6xl px-6">
         <div className="grid gap-8 lg:grid-cols-[1.6fr_1fr]">
-          <div className="relative aspect-[4/3] overflow-hidden border border-border bg-gradient-to-b from-stone-200 to-stone-300 dark:from-stone-800 dark:to-stone-900">
-            {/* Room illustration */}
-            <svg viewBox="0 0 400 300" className="absolute inset-0 h-full w-full" preserveAspectRatio="none" aria-hidden="true">
-              <rect x="0" y="215" width="400" height="85" className="fill-stone-400/60 dark:fill-stone-700/60" />
-              <rect x="170" y="40" width="80" height="60" className="fill-sky-300 stroke-amber-800 dark:fill-sky-800" strokeWidth="4" />
-              <path d="M170 85 Q 200 70 230 82 T 250 78 L250 100 L170 100Z" className="fill-sky-500/70" />
-              <rect x="120" y="160" width="190" height="55" rx="10" className="fill-stone-100 dark:fill-stone-500" />
-              <rect x="110" y="145" width="30" height="70" rx="10" className="fill-stone-50 dark:fill-stone-400" />
-              <rect x="290" y="145" width="30" height="70" rx="10" className="fill-stone-50 dark:fill-stone-400" />
-              <rect x="40" y="150" width="50" height="65" className="fill-amber-800/70" />
-              <path d="M52 150 L 78 150 L 72 118 L 58 118 Z" className="fill-amber-50 dark:fill-amber-200" />
-              <rect x="330" y="175" width="34" height="40" className="fill-orange-700" />
-              <circle cx="347" cy="150" r="28" className="fill-emerald-700/80" />
-              <circle cx="335" cy="132" r="16" className="fill-emerald-600/80" />
-            </svg>
+          <div className="relative aspect-[4/3] overflow-hidden border border-border bg-gradient-to-b from-muted to-border dark:from-card dark:to-card">
+            <GridPattern className="[mask-image:linear-gradient(to_bottom,white,transparent)]" />
+            <div className="absolute top-[4%] left-1/2 w-[46%] -translate-x-1/2">
+              <StudioDisplay color="light" size="sm" className="h-auto! w-full! max-w-full">
+                <img src="/images/templates/design-agency.jpg" alt="Studio Display mockup" className="size-full object-cover object-top" />
+              </StudioDisplay>
+            </div>
+            <div className="absolute bottom-[3%] left-1/2 w-[50%] -translate-x-1/2">
+              <Macbook variant="macbook-pro" color="silver" size="sm" className="w-full! max-w-full">
+                <img src="/img/dashboard-1-light.jpg" alt="MacBook mockup" className="size-full object-cover object-top" />
+              </Macbook>
+            </div>
+            <div className="absolute top-[18%] left-[6%] w-[14%]">
+              <IPhone size="sm" color="silver" className="h-auto! w-full! max-w-full">
+                <img src="/img/chat-1-light.jpg" alt="iPhone mockup" className="size-full object-cover object-top" />
+              </IPhone>
+            </div>
+            <div className="absolute right-[4%] bottom-[12%] w-[22%]">
+              <IPad variant="ipad-pro" color="silver" size="sm" className="h-auto! w-full! max-w-full">
+                <img src="/images/templates/portfolio-simple.jpg" alt="iPad mockup" className="size-full object-cover object-top" />
+              </IPad>
+            </div>
 
             {hotspots.map((h) => (
               <button
@@ -48,7 +60,7 @@ export default function Ecommerce14() {
                 onClick={() => setActive(h.id)}
                 aria-label={`Show ${h.name}`}
                 aria-pressed={active === h.id}
-                className="absolute -translate-x-1/2 -translate-y-1/2"
+                className="absolute z-20 -translate-x-1/2 -translate-y-1/2"
                 style={{ left: `${h.x}%`, top: `${h.y}%` }}
               >
                 <span

@@ -50,7 +50,7 @@ export default function PasswordRequirementsPopover() {
                     )}
                   >
                     {ok ? (
-                      <CircleCheckIcon className="size-3.5 text-emerald-600 dark:text-emerald-400" />
+                      <CircleCheckIcon className="size-3.5 text-primary dark:text-primary" />
                     ) : (
                       <CircleIcon className="size-3.5" />
                     )}

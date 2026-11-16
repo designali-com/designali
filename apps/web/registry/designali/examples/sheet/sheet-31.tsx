@@ -44,7 +44,7 @@ export default function DeleteProjectSheet() {
         <div className="px-4">
           <Field>
             <FieldLabel htmlFor="confirm-name">
-              Type <span className="font-mono">{projectName}</span> to confirm
+              Type <span className="font-sans">{projectName}</span> to confirm
             </FieldLabel>
             <Input
               id="confirm-name"

@@ -45,7 +45,7 @@ export default function CouponOffersCarousel() {
                 <Button
                   variant="outline"
                   size="xs"
-                  className="w-fit font-mono"
+                  className="w-fit font-sans"
                   onClick={() => {
                     navigator.clipboard?.writeText(coupon.code)
                     setCopied(coupon.code)

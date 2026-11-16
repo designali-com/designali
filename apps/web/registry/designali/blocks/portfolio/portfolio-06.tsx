@@ -93,7 +93,7 @@ export default function Portfolio06() {
                   className="absolute inset-0 transition-transform duration-700 group-hover:scale-105"
                   style={{ background: project.background }}
                 />
-                <span className="absolute top-4 left-4 font-mono text-xs text-white/90">
+                <span className="absolute top-4 left-4 font-sans text-xs text-white/90">
                   {String(i + 1).padStart(2, "0")} / {String(projects.length).padStart(2, "0")}
                 </span>
                 <span className="absolute top-4 right-4 bg-background/90 px-2 py-0.5 text-[11px] backdrop-blur">
@@ -105,7 +105,7 @@ export default function Portfolio06() {
               </div>
               <div className="mt-4 flex items-baseline justify-between gap-4">
                 <p className="text-sm text-muted-foreground">{project.client}</p>
-                <span className="font-mono text-xs text-muted-foreground">{project.year}</span>
+                <span className="font-sans text-xs text-muted-foreground">{project.year}</span>
               </div>
               <h3 className="mt-1 text-lg leading-snug font-medium">{project.title}</h3>
             </a>

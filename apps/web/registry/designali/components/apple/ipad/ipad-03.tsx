@@ -11,13 +11,13 @@ export function IPadOrientationDemo() {
 
   return (
     <div className="flex flex-col items-center justify-center gap-10 p-8">
-      <div className="flex items-center gap-1 rounded-lg bg-gray-100 p-1 dark:bg-zinc-800">
+      <div className="flex items-center gap-1 rounded-lg bg-muted p-1 dark:bg-card">
         <button
           onClick={() => setOrientation("portrait")}
           className={`rounded-md px-4 py-2 text-sm font-medium ${
             orientation === "portrait"
-              ? "bg-white text-black shadow-sm dark:bg-zinc-950 dark:text-white"
-              : "text-gray-500"
+              ? "bg-white text-black shadow-sm dark:bg-card dark:text-white"
+              : "text-muted-foreground"
           }`}
         >
           Portrait
@@ -27,8 +27,8 @@ export function IPadOrientationDemo() {
           onClick={() => setOrientation("landscape")}
           className={`rounded-md px-4 py-2 text-sm font-medium ${
             orientation === "landscape"
-              ? "bg-white text-black shadow-sm dark:bg-zinc-950 dark:text-white"
-              : "text-gray-500"
+              ? "bg-white text-black shadow-sm dark:bg-card dark:text-white"
+              : "text-muted-foreground"
           }`}
         >
           Landscape

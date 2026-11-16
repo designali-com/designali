@@ -25,7 +25,7 @@ export default function Forms15() {
         aria-hidden
       />
       <div className="relative mx-auto flex max-w-2xl flex-col items-center px-6 text-center">
-        <span className="border border-border bg-background px-3 py-1 font-mono text-[10px] tracking-wider text-muted-foreground uppercase">
+        <span className="border border-border bg-background px-3 py-1 font-sans text-[10px] tracking-wider text-muted-foreground uppercase">
           Early access · New templates
         </span>
         <h2 className="mt-8 text-4xl leading-tight font-semibold tracking-tight md:text-6xl">
@@ -39,14 +39,14 @@ export default function Forms15() {
         {joined ? (
           <div className="mt-10 w-full max-w-md border border-border bg-card p-6 text-left" aria-live="polite">
             <p className="flex items-center gap-2 text-sm font-medium">
-              <Check className="size-4 text-emerald-600 dark:text-emerald-400" />
+              <Check className="size-4 text-primary dark:text-primary" />
               You are #2,418 on the list
             </p>
             <p className="mt-2 text-xs leading-5 text-muted-foreground">
               Move up 100 spots for every friend who joins with your link.
             </p>
             <div className="mt-4 flex">
-              <span className="flex h-10 min-w-0 flex-1 items-center truncate border border-r-0 border-border bg-muted px-3 font-mono text-xs">
+              <span className="flex h-10 min-w-0 flex-1 items-center truncate border border-r-0 border-border bg-muted px-3 font-sans text-xs">
                 designali.com/r/k7f2q
               </span>
               <Button

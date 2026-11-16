@@ -31,7 +31,7 @@ export default function ScheduleTimetable() {
         <TableBody>
           {slots.map((slot) => (
             <TableRow key={slot.time} className="hover:bg-transparent">
-              <TableCell className="font-mono text-muted-foreground">
+              <TableCell className="font-sans text-muted-foreground">
                 {slot.time}
               </TableCell>
               {slot.classes.map((name, i) => (

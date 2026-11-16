@@ -18,9 +18,9 @@ import {
 import { cn } from "@workspace/ui/lib/utils"
 
 const environments = [
-  { label: "Development", value: "dev", tone: "bg-sky-500" },
-  { label: "Staging", value: "staging", tone: "bg-amber-500" },
-  { label: "Production", value: "prod", tone: "bg-red-500" },
+  { label: "Development", value: "dev", tone: "bg-primary" },
+  { label: "Staging", value: "staging", tone: "bg-primary" },
+  { label: "Production", value: "prod", tone: "bg-destructive" },
 ]
 
 export default function DeployEnvironmentSelect() {
@@ -30,7 +30,7 @@ export default function DeployEnvironmentSelect() {
     <div className="flex w-full max-w-xs flex-col gap-3 border p-4">
       <div className="flex items-center gap-2 text-sm">
         <GitBranchIcon className="size-4 text-muted-foreground" />
-        <span className="font-mono">release/2.8.0</span>
+        <span className="font-sans">release/2.8.0</span>
       </div>
       <Select items={environments} value={env} onValueChange={setEnv}>
         <SelectTrigger className="w-full" aria-label="Environment">

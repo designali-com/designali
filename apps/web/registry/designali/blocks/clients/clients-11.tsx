@@ -1,3 +1,5 @@
+import { Marquee } from "@/registry/designali/ui/marquee"
+
 const rowOne = [
   "Designali",
   "Dalim",
@@ -37,26 +39,17 @@ function Glyph({ index }: { index: number }) {
 
 function Row({ names, reverse }: { names: string[]; reverse?: boolean }) {
   return (
-    <div className="flex gap-(--gap) overflow-hidden [--duration:40s] [--gap:3.5rem]">
-      {[0, 1].map((copy) => (
-        <div
-          key={copy}
-          aria-hidden={copy === 1}
-          className="flex shrink-0 animate-marquee items-center gap-(--gap)"
-          style={reverse ? { animationDirection: "reverse" } : undefined}
+    <Marquee reverse={reverse} gap="3.5rem" speed={40} repeat={4}>
+      {names.map((name, index) => (
+        <span
+          key={name}
+          className="flex items-center gap-2.5 text-xl font-semibold tracking-tight whitespace-nowrap text-background/70 md:text-2xl"
         >
-          {names.map((name, index) => (
-            <span
-              key={name}
-              className="flex items-center gap-2.5 text-xl font-semibold tracking-tight whitespace-nowrap text-background/70 md:text-2xl"
-            >
-              <Glyph index={index + (reverse ? 2 : 0)} />
-              {name}
-            </span>
-          ))}
-        </div>
+          <Glyph index={index + (reverse ? 2 : 0)} />
+          {name}
+        </span>
       ))}
-    </div>
+    </Marquee>
   )
 }
 

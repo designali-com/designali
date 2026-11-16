@@ -31,13 +31,13 @@ const statuses = [
     value: "progress",
     label: "In progress",
     icon: CircleDotIcon,
-    color: "text-amber-500",
+    color: "text-primary",
   },
   {
     value: "done",
     label: "Done",
     icon: CircleCheckIcon,
-    color: "text-emerald-500",
+    color: "text-primary",
   },
   {
     value: "canceled",
@@ -53,7 +53,7 @@ export default function IssueStatusPicker() {
   const [status, setStatus] = React.useState<Status | null>(statuses[2]!)
   return (
     <div className="flex w-full max-w-sm items-center gap-3 border p-3">
-      <span className="font-mono text-xs text-muted-foreground">ENG-412</span>
+      <span className="font-sans text-xs text-muted-foreground">ENG-412</span>
       <span className="flex-1 truncate text-sm">
         Retry failed webhook deliveries
       </span>

@@ -2,9 +2,9 @@ import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
 import { cn } from "@workspace/ui/lib/utils"
 
 const workspaces = [
-  { name: "Designali Studio", short: "DS", tone: "bg-emerald-600" },
-  { name: "Dalim UI", short: "DU", tone: "bg-sky-600" },
-  { name: "Dalim Icons", short: "DI", tone: "bg-orange-600" },
+  { name: "Designali Studio", short: "DS", tone: "bg-chart-2" },
+  { name: "Dalim UI", short: "DU", tone: "bg-chart-2" },
+  { name: "Dalim Icons", short: "DI", tone: "bg-chart-2" },
 ]
 
 export default function SquareWorkspaceAvatars() {

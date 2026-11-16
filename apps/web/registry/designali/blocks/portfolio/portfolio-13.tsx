@@ -14,30 +14,30 @@ const changes = [
 function Screen({ variant }: { variant: "before" | "after" }) {
   if (variant === "before") {
     return (
-      <div className="absolute inset-0 bg-zinc-200 p-6 dark:bg-zinc-800">
-        <div className="h-full border border-zinc-400 bg-zinc-100 p-4 dark:border-zinc-600 dark:bg-zinc-900">
-          <div className="h-3 w-1/3 bg-zinc-400 dark:bg-zinc-600" />
+      <div className="absolute inset-0 bg-muted p-6 dark:bg-card">
+        <div className="h-full border border-border bg-muted p-4 dark:border-border dark:bg-card">
+          <div className="h-3 w-1/3 bg-muted-foreground dark:bg-muted-foreground" />
           <div className="mt-4 grid grid-cols-4 gap-1">
             {Array.from({ length: 16 }).map((_, i) => (
-              <div key={i} className="h-5 bg-zinc-300 dark:bg-zinc-700" />
+              <div key={i} className="h-5 bg-border dark:bg-muted" />
             ))}
           </div>
           <div className="mt-4 space-y-1.5">
             {Array.from({ length: 6 }).map((_, i) => (
-              <div key={i} className="h-2 bg-zinc-300 dark:bg-zinc-700" style={{ width: `${90 - i * 9}%` }} />
+              <div key={i} className="h-2 bg-border dark:bg-muted" style={{ width: `${90 - i * 9}%` }} />
             ))}
           </div>
           <div className="mt-4 flex gap-1">
-            <div className="h-6 w-16 bg-zinc-400 dark:bg-zinc-600" />
-            <div className="h-6 w-16 bg-zinc-300 dark:bg-zinc-700" />
-            <div className="h-6 w-16 bg-zinc-300 dark:bg-zinc-700" />
+            <div className="h-6 w-16 bg-muted-foreground dark:bg-muted-foreground" />
+            <div className="h-6 w-16 bg-border dark:bg-muted" />
+            <div className="h-6 w-16 bg-border dark:bg-muted" />
           </div>
         </div>
       </div>
     )
   }
   return (
-    <div className="absolute inset-0 bg-gradient-to-br from-teal-200 to-sky-300 p-6 dark:from-teal-900 dark:to-sky-950">
+    <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-chart-1 p-6 dark:from-chart-5 dark:to-chart-5">
       <div className="mx-auto flex h-full max-w-sm flex-col bg-background p-5 shadow-2xl">
         <div className="h-3 w-1/2 bg-foreground" />
         <div className="mt-2 h-2 w-2/3 bg-muted-foreground/40" />

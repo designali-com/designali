@@ -30,7 +30,7 @@ export default function CollapsibleTerminalDrawer() {
     <div className="flex w-full max-w-xl flex-col border">
       <ResizablePanelGroup orientation="vertical" className="h-64">
         <ResizablePanel defaultSize="65%" minSize="30%">
-          <div className="flex h-full items-center justify-center p-4 font-mono text-xs text-muted-foreground">
+          <div className="flex h-full items-center justify-center p-4 font-sans text-xs text-muted-foreground">
             editor.tsx
           </div>
         </ResizablePanel>
@@ -42,9 +42,9 @@ export default function CollapsibleTerminalDrawer() {
           collapsible
           onResize={(size) => setOpen(size.asPercentage > 0)}
         >
-          <div className="flex h-full flex-col gap-1 bg-muted/40 p-3 font-mono text-[11px]">
+          <div className="flex h-full flex-col gap-1 bg-muted/40 p-3 font-sans text-[11px]">
             <span>$ pnpm test</span>
-            <span className="text-emerald-600 dark:text-emerald-400">
+            <span className="text-primary dark:text-primary">
               42 passed, 0 failed
             </span>
           </div>

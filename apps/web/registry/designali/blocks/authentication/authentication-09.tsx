@@ -29,7 +29,7 @@ export default function Authentication09() {
   const [step, setStep] = useState(0)
   const [role, setRole] = useState("design")
   const [size, setSize] = useState("2-10")
-  const [workspace, setWorkspace] = useState("Brightfold")
+  const [workspace, setWorkspace] = useState("Designali Studio")
   const [invites, setInvites] = useState<string[]>(["ali@designali.com"])
   const [draft, setDraft] = useState("")
 
@@ -92,7 +92,7 @@ export default function Authentication09() {
                 <Label htmlFor="auth-09-workspace">Workspace name</Label>
                 <Input id="auth-09-workspace" value={workspace} onChange={(event) => setWorkspace(event.target.value)} className="h-11" />
                 <p className="text-xs text-muted-foreground">
-                  taskloom.app/<span className="text-foreground">{slug}</span>
+                  designali.com/<span className="text-foreground">{slug}</span>
                 </p>
               </div>
               <div className="space-y-3">

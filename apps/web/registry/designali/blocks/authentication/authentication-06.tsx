@@ -142,7 +142,7 @@ export default function Authentication06() {
                 value={code}
                 onChange={(event) => setCode(event.target.value.replace(/\D/g, "").slice(0, 6))}
                 placeholder="000000"
-                className="h-14 text-center font-mono text-2xl tracking-[0.5em]"
+                className="h-14 text-center font-sans text-2xl tracking-[0.5em]"
               />
               <div className="flex gap-3">
                 <Button type="button" variant="outline" onClick={() => setStep(0)}>
@@ -163,7 +163,7 @@ export default function Authentication06() {
                   Each code works once. Store them somewhere safe in case you lose your device.
                 </p>
               </div>
-              <ul className="grid grid-cols-2 gap-px border bg-border font-mono text-sm">
+              <ul className="grid grid-cols-2 gap-px border bg-border font-sans text-sm">
                 {backupCodes.map((item) => (
                   <li key={item} className="bg-muted/40 px-4 py-3 text-center tracking-wider">
                     {item}

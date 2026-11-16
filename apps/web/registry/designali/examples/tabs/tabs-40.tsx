@@ -42,7 +42,7 @@ export default function LeaderboardPeriodTabs() {
               <span
                 className={cn(
                   "w-4 font-semibold tabular-nums",
-                  i === 0 && "text-amber-500"
+                  i === 0 && "text-primary"
                 )}
               >
                 {i + 1}

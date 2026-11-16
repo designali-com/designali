@@ -57,7 +57,7 @@ export default function ExportWithLoadingState() {
                 <span className="text-muted-foreground">{f.hint}</span>
               </span>
               {busy === f.id && <Spinner />}
-              {done === f.id && <CheckIcon className="text-emerald-600" />}
+              {done === f.id && <CheckIcon className="text-primary" />}
             </DropdownMenuItem>
           ))}
         </DropdownMenuGroup>

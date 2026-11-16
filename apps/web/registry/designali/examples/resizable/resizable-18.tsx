@@ -75,7 +75,7 @@ export default function DesignToolPanels() {
           </div>
           <div className="flex items-center gap-2">
             <span className="size-4 border bg-primary" />
-            <span className="font-mono">primary</span>
+            <span className="font-sans">primary</span>
           </div>
         </div>
       </ResizablePanel>

@@ -1,3 +1,5 @@
+import { CounterNumber } from "@/registry/designali/ui/counter-number"
+
 const days = Array.from({ length: 30 }, (_, i) => i + 1)
 const current = [212, 240, 228, 265, 290, 180, 172, 254, 281, 276, 302, 318, 205, 198, 296, 322, 314, 340, 352, 231, 219, 335, 361, 348, 377, 389, 260, 248, 372, 401]
 const previous = [190, 205, 214, 230, 241, 160, 151, 222, 238, 236, 251, 262, 178, 169, 248, 259, 266, 271, 280, 190, 182, 270, 284, 279, 291, 298, 205, 199, 286, 302]
@@ -35,7 +37,7 @@ export default function Analytics13() {
             </div>
 
             <div className="mt-8 flex gap-3">
-              <div className="flex h-64 flex-col justify-between text-right font-mono text-[10px] text-muted-foreground">
+              <div className="flex h-64 flex-col justify-between text-right font-sans text-[10px] text-muted-foreground">
                 {ticks.map((t) => (
                   <span key={t} className="-translate-y-1/2 first:translate-y-0 last:translate-y-0">
                     {t}
@@ -72,7 +74,7 @@ export default function Analytics13() {
                 </svg>
               </div>
             </div>
-            <div className="mt-3 ml-9 flex justify-between font-mono text-[10px] text-muted-foreground">
+            <div className="mt-3 ml-9 flex justify-between font-sans text-[10px] text-muted-foreground">
               {days
                 .filter((d) => d === 1 || d % 7 === 0 || d === 30)
                 .map((d) => (
@@ -84,19 +86,26 @@ export default function Analytics13() {
           <div className="flex flex-col gap-px border bg-border">
             <div className="bg-background p-6">
               <p className="text-xs text-muted-foreground">Orders this month</p>
-              <p className="mt-2 text-4xl font-semibold tracking-tight">{sumCur.toLocaleString()}</p>
+              <CounterNumber value={sumCur} className="mt-2 block text-4xl font-semibold tracking-tight" />
             </div>
             <div className="bg-background p-6">
               <p className="text-xs text-muted-foreground">Same period last month</p>
-              <p className="mt-2 text-4xl font-semibold tracking-tight text-muted-foreground">
-                {sumPrev.toLocaleString()}
-              </p>
+              <CounterNumber
+                value={sumPrev}
+                color="secondary"
+                className="mt-2 block text-4xl font-semibold tracking-tight"
+              />
             </div>
             <div className="flex-1 bg-background p-6">
               <p className="text-xs text-muted-foreground">Period-over-period lift</p>
-              <p className="mt-2 text-4xl font-semibold tracking-tight text-emerald-600 dark:text-emerald-400">
-                +{lift.toFixed(1)}%
-              </p>
+              <CounterNumber
+                value={lift}
+                prefix="+"
+                suffix="%"
+                decimalPlaces={1}
+                color="primary"
+                className="mt-2 block text-4xl font-semibold tracking-tight"
+              />
               <p className="mt-3 text-sm text-muted-foreground">
                 Weekend dips are shallower since the free blocks library launched on Oct 28.
               </p>

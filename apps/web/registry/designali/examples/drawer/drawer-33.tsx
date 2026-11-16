@@ -23,9 +23,9 @@ import {
 import { cn } from "@workspace/ui/lib/utils"
 
 const colors = [
-  { value: "olive", label: "Olive", className: "bg-lime-800" },
-  { value: "navy", label: "Navy", className: "bg-blue-900" },
-  { value: "rust", label: "Rust", className: "bg-orange-700" },
+  { value: "olive", label: "Olive", className: "bg-chart-4" },
+  { value: "navy", label: "Navy", className: "bg-chart-5" },
+  { value: "rust", label: "Rust", className: "bg-chart-3" },
 ]
 const sizes = ["S", "M", "L", "XL"]
 
@@ -42,7 +42,7 @@ export default function ProductOptionsDrawer() {
       <DrawerContent>
         <div className="mx-auto flex w-full max-w-sm flex-col">
           <DrawerHeader className="flex-row items-center gap-3 text-start">
-            <div className="size-14 shrink-0 bg-gradient-to-br from-lime-700 to-lime-950" />
+            <div className="size-14 shrink-0 bg-gradient-to-br from-chart-3 to-chart-5" />
             <div>
               <DrawerTitle>Field Jacket</DrawerTitle>
               <DrawerDescription>Waxed cotton · $148</DrawerDescription>

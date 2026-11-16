@@ -13,7 +13,7 @@ export default function CardMediaHeader() {
     <Card className="w-full max-w-xs gap-0 overflow-hidden pt-0">
       <AspectRatio
         ratio={2}
-        className="bg-linear-to-r from-cyan-500 to-blue-600"
+        className="bg-linear-to-r from-primary to-chart-2"
       >
         <svg
           viewBox="0 0 200 100"

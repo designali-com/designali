@@ -12,7 +12,7 @@ export default function PriceRangeFilterInputs() {
 
   return (
     <Field data-invalid={invalid} className="w-full max-w-xs">
-      <FieldLabel>Price range</FieldLabel>
+      <FieldLabel>Template price range</FieldLabel>
       <div className="flex items-center gap-2">
         <Input
           aria-label="Minimum price"

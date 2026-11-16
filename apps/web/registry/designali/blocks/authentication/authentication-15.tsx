@@ -12,6 +12,8 @@ import { Button } from "@workspace/ui/components/button"
 import { Input } from "@workspace/ui/components/input"
 import { Label } from "@workspace/ui/components/label"
 
+import { IPhone } from "@/registry/designali/ui/apple/iphone"
+
 const countries = [
   { code: "US", dial: "+1", flag: "US" },
   { code: "GB", dial: "+44", flag: "GB" },
@@ -38,14 +40,16 @@ export default function Authentication15() {
   return (
     <section className="w-full bg-background">
       <div className="mx-auto grid min-h-[640px] max-w-6xl md:grid-cols-2">
-        <div className="relative hidden overflow-hidden bg-gradient-to-br from-lime-300 via-emerald-400 to-teal-600 md:block">
-          <div className="absolute inset-x-12 top-16 bottom-0 border-8 border-b-0 border-zinc-950 bg-white p-5 text-zinc-950">
-            <p className="text-xs text-zinc-500">Messages &middot; now</p>
-            <div className="mt-4 max-w-[85%] bg-zinc-100 p-3 text-sm">
-              Your Designali code is <span className="font-mono font-semibold">482 913</span>. It expires in 5 minutes. Don&apos;t share it with anyone.
+        <div className="relative hidden items-center justify-center overflow-hidden bg-gradient-to-br from-chart-1 via-primary to-chart-2 md:flex">
+          <IPhone size="lg" color="silver" className="max-h-full">
+            <div className="flex h-full flex-col bg-white p-5 pt-12 text-black">
+              <p className="text-center text-xs text-black/50">Messages &middot; now</p>
+              <div className="mt-4 max-w-[85%] rounded-2xl bg-black/5 p-3 text-sm">
+                Your Designali code is <span className="font-semibold">482 913</span>. It expires in 5 minutes. Don&apos;t share it with anyone.
+              </div>
+              <div className="mt-3 max-w-[70%] rounded-2xl bg-black/5 p-3 text-sm">Designali will never call you for this code.</div>
             </div>
-            <div className="mt-3 max-w-[60%] bg-zinc-100 p-3 text-sm">Designali will never call you for this code.</div>
-          </div>
+          </IPhone>
         </div>
 
         <div className="flex items-center px-6 py-16 md:px-16">
@@ -120,7 +124,7 @@ export default function Authentication15() {
                     autoComplete="one-time-code"
                     value={code}
                     onChange={(event) => setCode(event.target.value.replace(/\D/g, "").slice(0, 6))}
-                    className="h-12 font-mono text-lg tracking-[0.4em]"
+                    className="h-12 font-sans text-lg tracking-[0.4em]"
                   />
                 </div>
                 <Button type="submit" size="lg" className="w-full" disabled={code.length !== 6}>

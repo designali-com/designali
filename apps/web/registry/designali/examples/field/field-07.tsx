@@ -16,7 +16,7 @@ import {
 export default function BillingIntervalChoiceCards() {
   return (
     <FieldSet className="w-full max-w-sm">
-      <FieldLegend variant="label">Billing interval</FieldLegend>
+      <FieldLegend variant="label">Designali Pro billing</FieldLegend>
       <RadioGroup defaultValue="yearly">
         <FieldLabel htmlFor="interval-monthly">
           <Field orientation="horizontal">
@@ -24,7 +24,7 @@ export default function BillingIntervalChoiceCards() {
             <FieldContent>
               <FieldTitle>Monthly</FieldTitle>
               <FieldDescription>
-                $18 per seat, billed every month
+                $18 per seat for templates, blocks and icons
               </FieldDescription>
             </FieldContent>
           </Field>
@@ -37,7 +37,7 @@ export default function BillingIntervalChoiceCards() {
                 Yearly <Badge variant="secondary">Save 20%</Badge>
               </FieldTitle>
               <FieldDescription>
-                $172 per seat, billed once a year
+                $172 per seat, full designali.com library for a year
               </FieldDescription>
             </FieldContent>
           </Field>

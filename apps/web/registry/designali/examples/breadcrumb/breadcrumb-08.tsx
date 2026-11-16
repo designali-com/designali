@@ -32,7 +32,7 @@ export default function RepositoryPathBreadcrumb() {
             </BreadcrumbLink>
           </BreadcrumbItem>
           <BreadcrumbItem>
-            <Badge variant="outline" className="gap-1 font-mono">
+            <Badge variant="outline" className="gap-1 font-sans">
               <GitBranchIcon />
               main
             </Badge>
@@ -40,7 +40,7 @@ export default function RepositoryPathBreadcrumb() {
         </BreadcrumbList>
       </Breadcrumb>
       <Breadcrumb>
-        <BreadcrumbList className="font-mono">
+        <BreadcrumbList className="font-sans">
           {segments.map((segment) => (
             <Fragment key={segment}>
               <BreadcrumbItem>

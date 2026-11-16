@@ -37,13 +37,13 @@ export default function JsonEditorTextarea() {
           setValue(e.target.value)
           setStatus(null)
         }}
-        className="min-h-28 font-mono"
+        className="min-h-28 font-sans"
       />
       <div className="flex items-center justify-between gap-2">
         <span
           className={cn(
             "truncate text-xs",
-            status?.ok ? "text-emerald-600" : "text-destructive"
+            status?.ok ? "text-primary" : "text-destructive"
           )}
         >
           {status?.msg}

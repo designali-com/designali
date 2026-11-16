@@ -4,10 +4,12 @@ import {
 
 import { Button } from "@workspace/ui/components/button"
 
+import { CounterNumber } from "@/registry/designali/ui/counter-number"
+
 const metrics = [
-  { value: "460+", label: "Production-ready blocks" },
-  { value: "240+", label: "Landing pages and templates" },
-  { value: "4000+", label: "Icons in @designali/icons" },
+  { value: 460, label: "Production-ready blocks" },
+  { value: 240, label: "Landing pages and templates" },
+  { value: 4000, label: "Icons in @designali/icons" },
 ]
 
 export default function Hero06() {
@@ -44,9 +46,12 @@ export default function Hero06() {
               key={metric.label}
               className="border-b border-border px-6 py-8 sm:border-b-0 sm:not-last:border-r"
             >
-              <div className="text-3xl font-medium tracking-tight">
-                {metric.value}
-              </div>
+              <CounterNumber
+                value={metric.value}
+                suffix="+"
+                size="lg"
+                className="font-medium tracking-tight"
+              />
               <div className="mt-1 text-sm text-muted-foreground">
                 {metric.label}
               </div>

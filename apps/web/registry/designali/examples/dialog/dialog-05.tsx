@@ -42,7 +42,7 @@ export default function TypeToConfirmDeleteDialog() {
         </DialogHeader>
         <Field>
           <FieldLabel htmlFor="confirm-project">
-            Type <span className="font-mono">{projectName}</span> to confirm
+            Type <span className="font-sans">{projectName}</span> to confirm
           </FieldLabel>
           <Input
             id="confirm-project"

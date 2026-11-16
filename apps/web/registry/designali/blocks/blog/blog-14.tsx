@@ -38,7 +38,7 @@ export default function Blog14() {
             <div>
               <div className="flex items-baseline justify-between text-sm">
                 <span>Your progress</span>
-                <span className="font-mono text-xs text-muted-foreground">
+                <span className="font-sans text-xs text-muted-foreground">
                   {done} of {parts.length} read
                 </span>
               </div>

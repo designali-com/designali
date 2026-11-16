@@ -8,8 +8,8 @@ import {
 } from "@workspace/ui/components/navigation-menu"
 
 const menus = {
-  Explore: ["Trending", "Collections", "Creators"],
-  Create: ["New gallery", "Upload artwork", "Start a challenge"],
+  Explore: ["Designali Templates", "Blocks", "UI Designs"],
+  Studio: ["Work by Ali Imam", "Services", "Contact"],
 }
 
 export default function CenterAlignedNav() {

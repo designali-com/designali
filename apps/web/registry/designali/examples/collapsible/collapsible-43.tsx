@@ -34,7 +34,7 @@ export default function ProfileCardDetails() {
       <Collapsible>
         <CardHeader className="flex items-center gap-3">
           <Avatar size="lg">
-            <AvatarFallback className="bg-gradient-to-br from-teal-400 to-blue-600 text-white">
+            <AvatarFallback className="bg-gradient-to-br from-primary to-chart-2 text-white">
               EV
             </AvatarFallback>
           </Avatar>

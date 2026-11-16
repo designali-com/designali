@@ -23,7 +23,7 @@ export default function RevealApiSecret() {
         <span className="text-xs font-medium">Production secret key</span>
         <Badge variant="outline">Live</Badge>
       </div>
-      <div className="flex items-center gap-2 bg-muted px-3 py-2 font-mono text-xs">
+      <div className="flex items-center gap-2 bg-muted px-3 py-2 font-sans text-xs">
         <KeyRoundIcon className="size-3.5 shrink-0" />
         <span className="truncate">
           {revealed

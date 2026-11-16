@@ -324,10 +324,10 @@ export function Footer() {
         </div>
         <div className="mt-10 flex flex-wrap items-end justify-between gap-6 py-6">
           <Button
-            className="cursor-pointer text-blue-500 hover:text-blue-500"
+            className="cursor-pointer text-primary hover:text-primary"
             variant={"ghost"}
           >
-            <span className="block size-3 rounded-full border border-background bg-blue-500" />
+            <span className="block size-3 rounded-full border border-background bg-primary" />
             All Designali systems normal.
           </Button>
           <ThemeSwitcher />

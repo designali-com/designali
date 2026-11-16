@@ -7,6 +7,8 @@ import {
 } from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
+import { IPhone } from "@/registry/designali/ui/apple/iphone"
+import { Macbook } from "@/registry/designali/ui/apple/macbook"
 
 const perks = [
   { icon: Download, title: "Instant download", text: "Files in your inbox the moment you check out." },
@@ -29,8 +31,16 @@ export default function Ecommerce05() {
     <section className="w-full bg-background py-16 text-foreground md:py-24">
       <div className="mx-auto max-w-6xl px-6">
         <div className="grid border border-border md:grid-cols-[1.2fr_1fr]">
-          <div className="relative min-h-72 overflow-hidden border-b border-border bg-muted md:border-r md:border-b-0">
-            <div className="absolute inset-0 bg-gradient-to-tr from-emerald-500/40 via-transparent to-amber-400/40" />
+          <div className="relative flex min-h-72 items-center justify-center overflow-hidden border-b border-border bg-muted p-6 pt-16 md:border-r md:border-b-0">
+            <div className="absolute inset-0 bg-gradient-to-tr from-primary/40 via-transparent to-primary/40" />
+            <div className="relative flex w-full items-end justify-center">
+              <Macbook variant="macbook-pro" color="black" size="sm" className="w-full! max-w-md">
+                <img src="/images/templates/design-agency.jpg" alt="Design Agency Template" className="size-full object-cover object-top" />
+              </Macbook>
+              <IPhone size="sm" color="black" className="-ml-16 h-auto! w-1/5! max-w-full shrink-0 sm:-ml-20">
+                <img src="/images/templates/dalim-icons-old.jpg" alt="Designali Icons Pro" className="size-full object-cover object-top" />
+              </IPhone>
+            </div>
             <span className="absolute top-6 left-6 bg-primary px-3 py-1 text-xs text-primary-foreground">
               Save 15%
             </span>
@@ -41,7 +51,7 @@ export default function Ecommerce05() {
             </p>
             <h2 className="mt-2 text-3xl font-medium tracking-tight">The Studio Launch Set</h2>
             <p className="mt-2 flex items-center gap-1 text-sm text-muted-foreground">
-              <Star className="size-4 fill-current text-amber-500" />
+              <Star className="size-4 fill-current text-primary" />
               4.9 from 1,204 reviews
             </p>
             <ul className="mt-6 divide-y divide-border border-y border-border text-sm">

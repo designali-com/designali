@@ -61,7 +61,7 @@ export default function DatabaseTablePicker() {
                   onSelect={() => setTable(s.schema + "." + t.name)}
                 >
                   <TableIcon />
-                  <span className="font-mono">{t.name}</span>
+                  <span className="font-sans">{t.name}</span>
                   <span className="text-[11px] text-muted-foreground">
                     {t.rows}
                   </span>

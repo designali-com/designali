@@ -36,7 +36,7 @@ export default function StoreCategoriesNav() {
               ))}
               <NavigationMenuLink
                 href="#"
-                className="col-span-2 flex-col items-start justify-end gap-1 bg-gradient-to-br from-orange-200 to-rose-300 p-3 text-rose-950 sm:col-span-1"
+                className="col-span-2 flex-col items-start justify-end gap-1 bg-gradient-to-br from-primary/20 to-chart-1 p-3 text-chart-5 sm:col-span-1"
               >
                 <span className="text-[11px] font-semibold uppercase">
                   New drop
@@ -58,7 +58,7 @@ export default function StoreCategoriesNav() {
             href="#"
             className={cn(
               navigationMenuTriggerStyle(),
-              "text-red-600 dark:text-red-400"
+              "text-destructive dark:text-destructive"
             )}
           >
             Pricing

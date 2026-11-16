@@ -17,12 +17,12 @@ import { cn } from "@workspace/ui/lib/utils"
 type Token = { name: string; className: string }
 
 const tokens: Token[] = [
-  { name: "slate-900", className: "bg-slate-900" },
-  { name: "indigo-600", className: "bg-indigo-600" },
-  { name: "emerald-500", className: "bg-emerald-500" },
-  { name: "amber-400", className: "bg-amber-400" },
-  { name: "rose-500", className: "bg-rose-500" },
-  { name: "sky-400", className: "bg-sky-400" },
+  { name: "slate-900", className: "bg-foreground" },
+  { name: "indigo-600", className: "bg-chart-2" },
+  { name: "emerald-500", className: "bg-primary" },
+  { name: "amber-400", className: "bg-primary" },
+  { name: "rose-500", className: "bg-primary" },
+  { name: "sky-400", className: "bg-primary" },
 ]
 
 export default function BrandColorToken() {
@@ -36,7 +36,7 @@ export default function BrandColorToken() {
         onValueChange={setToken}
         itemToStringLabel={(t: Token) => t.name}
       >
-        <ComboboxInput id="accent" className="w-full font-mono">
+        <ComboboxInput id="accent" className="w-full font-sans">
           <InputGroupAddon>
             <span
               className={cn(
@@ -50,7 +50,7 @@ export default function BrandColorToken() {
           <ComboboxEmpty>No tokens found.</ComboboxEmpty>
           <ComboboxList>
             {(t: Token) => (
-              <ComboboxItem key={t.name} value={t} className="font-mono">
+              <ComboboxItem key={t.name} value={t} className="font-sans">
                 <span className={cn("size-4 border", t.className)} />
                 {t.name}
               </ComboboxItem>

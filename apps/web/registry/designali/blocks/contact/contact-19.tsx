@@ -25,9 +25,9 @@ export default function Contact19() {
   return (
     <section className="w-full bg-background py-16 md:py-20">
       <div className="mx-auto max-w-7xl px-6">
-        <div className="grid gap-10 border bg-gradient-to-br from-amber-50 to-orange-100 p-6 md:p-10 lg:grid-cols-[1fr_1.4fr] lg:items-center dark:from-amber-950/40 dark:to-orange-950/30">
+        <div className="grid gap-10 border bg-gradient-to-br from-primary/5 to-primary/10 p-6 md:p-10 lg:grid-cols-[1fr_1.4fr] lg:items-center dark:from-chart-5/40 dark:to-chart-5/30">
           <div className="flex gap-5">
-            <span className="flex size-12 shrink-0 items-center justify-center rounded-full bg-orange-500 text-white">
+            <span className="flex size-12 shrink-0 items-center justify-center rounded-full bg-primary text-white">
               <PhoneCall className="size-5" />
             </span>
             <div>
@@ -91,7 +91,7 @@ export default function Contact19() {
                   type="checkbox"
                   checked={asap}
                   onChange={(event) => setAsap(event.target.checked)}
-                  className="size-4 accent-orange-500"
+                  className="size-4 accent-primary"
                 />
                 Call me in the next 15 minutes
               </label>

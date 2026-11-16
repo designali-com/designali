@@ -44,10 +44,10 @@ export default function LeaderboardTable() {
                     className={cn(
                       "size-4",
                       i === 0
-                        ? "text-amber-500"
+                        ? "text-primary"
                         : i === 1
-                          ? "text-zinc-400"
-                          : "text-orange-700"
+                          ? "text-muted-foreground"
+                          : "text-chart-3"
                     )}
                   />
                 ) : (
@@ -60,7 +60,7 @@ export default function LeaderboardTable() {
               </TableCell>
               <TableCell className="text-right">
                 {player.trend > 0 ? (
-                  <TrendingUpIcon className="ms-auto size-4 text-emerald-600" />
+                  <TrendingUpIcon className="ms-auto size-4 text-primary" />
                 ) : player.trend < 0 ? (
                   <TrendingDownIcon className="ms-auto size-4 text-destructive" />
                 ) : (

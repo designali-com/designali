@@ -21,15 +21,15 @@ import { cn } from "@workspace/ui/lib/utils"
 
 const colors = [
   { name: "Default", className: "bg-foreground" },
-  { name: "Gray", className: "bg-zinc-400" },
-  { name: "Red", className: "bg-red-500" },
-  { name: "Orange", className: "bg-orange-500" },
-  { name: "Amber", className: "bg-amber-400" },
-  { name: "Green", className: "bg-emerald-500" },
-  { name: "Teal", className: "bg-teal-500" },
-  { name: "Blue", className: "bg-blue-500" },
-  { name: "Violet", className: "bg-violet-500" },
-  { name: "Pink", className: "bg-pink-500" },
+  { name: "Gray", className: "bg-muted-foreground" },
+  { name: "Red", className: "bg-destructive" },
+  { name: "Orange", className: "bg-primary" },
+  { name: "Amber", className: "bg-primary" },
+  { name: "Green", className: "bg-primary" },
+  { name: "Teal", className: "bg-primary" },
+  { name: "Blue", className: "bg-primary" },
+  { name: "Violet", className: "bg-primary" },
+  { name: "Pink", className: "bg-primary" },
 ]
 
 export default function TextColorSwatchMenu() {

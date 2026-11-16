@@ -2,6 +2,8 @@
 
 import { useEffect, useState } from "react"
 
+import { CounterNumber } from "@/registry/designali/ui/counter-number"
+
 const seed = [38, 42, 40, 45, 51, 48, 53, 57, 55, 60, 58, 62, 66, 63, 61, 67, 70, 68, 72, 69, 74, 71, 76, 79, 77, 81, 78, 83, 86, 84]
 
 const pages = [
@@ -36,15 +38,17 @@ export default function Analytics11() {
           <div>
             <div className="inline-flex items-center gap-2 border border-background/20 px-3 py-1 text-xs">
               <span className="relative flex size-2">
-                <span className="absolute inline-flex size-full animate-ping rounded-full bg-emerald-400 opacity-75" />
-                <span className="relative inline-flex size-2 rounded-full bg-emerald-400" />
+                <span className="absolute inline-flex size-full animate-ping rounded-full bg-primary opacity-75" />
+                <span className="relative inline-flex size-2 rounded-full bg-primary" />
               </span>
               Live, updating every 1.5s
             </div>
             <p className="mt-8 text-sm text-background/60">People on site right now</p>
-            <p className="mt-2 font-mono text-6xl font-light tracking-tighter tabular-nums md:text-8xl">
-              {liveNow.toLocaleString()}
-            </p>
+            <CounterNumber
+              value={liveNow}
+              duration={800}
+              className="mt-2 block text-6xl font-light tracking-tighter text-background md:text-8xl"
+            />
             <p className="mt-4 max-w-sm text-sm text-background/60">
               Designali Icons launch day. Traffic is 4.2x a normal Tuesday and every
               edge region is healthy.
@@ -56,7 +60,7 @@ export default function Analytics11() {
               {series.map((v, i) => (
                 <div
                   key={i}
-                  className="flex-1 bg-background/25 transition-[height] duration-500 last:bg-emerald-400"
+                  className="flex-1 bg-background/25 transition-[height] duration-500 last:bg-primary"
                   style={{ height: `${(v / max) * 100}%` }}
                 />
               ))}
@@ -69,8 +73,8 @@ export default function Analytics11() {
             <ul className="mt-8 divide-y divide-background/15 border-y border-background/15">
               {pages.map((p) => (
                 <li key={p.path} className="flex items-center justify-between gap-4 py-3 text-sm">
-                  <span className="min-w-0 truncate font-mono text-background/80">{p.path}</span>
-                  <span className="font-mono tabular-nums">{p.live}</span>
+                  <span className="min-w-0 truncate font-sans text-background/80">{p.path}</span>
+                  <span className="font-sans tabular-nums">{p.live}</span>
                 </li>
               ))}
             </ul>

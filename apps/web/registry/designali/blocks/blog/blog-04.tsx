@@ -4,6 +4,8 @@ import {
 
 import { Badge } from "@workspace/ui/components/badge"
 
+import { BentoGrid, BentoGridItem } from "@/registry/designali/ui/bento"
+
 const posts = [
   {
     title: "A practical guide to fluid type in Designali templates",
@@ -11,7 +13,8 @@ const posts = [
     tag: "Guide",
     read: 9,
     author: "Ali Imam",
-    span: "md:col-span-2 md:row-span-2",
+    colSpan: 2,
+    rowSpan: 2,
     tone: "bg-primary text-primary-foreground",
   },
   {
@@ -20,7 +23,8 @@ const posts = [
     tag: "Release",
     read: 4,
     author: "Ali Imam",
-    span: "",
+    colSpan: 1,
+    rowSpan: 1,
     tone: "bg-muted",
   },
   {
@@ -29,7 +33,8 @@ const posts = [
     tag: "Interview",
     read: 14,
     author: "Designali Studio",
-    span: "",
+    colSpan: 1,
+    rowSpan: 1,
     tone: "bg-card",
   },
   {
@@ -38,7 +43,8 @@ const posts = [
     tag: "Opinion",
     read: 7,
     author: "Ali Imam",
-    span: "md:col-span-2",
+    colSpan: 2,
+    rowSpan: 1,
     tone: "bg-card",
   },
 ]
@@ -56,12 +62,21 @@ export default function Blog04() {
           </p>
         </div>
 
-        <div className="grid auto-rows-[minmax(220px,auto)] gap-4 md:grid-cols-4">
+        <BentoGrid
+          cols={{ base: 1, md: 4 }}
+          gap={4}
+          rowHeight="minmax(220px,auto)"
+        >
           {posts.map((post) => (
-            <a
+            <BentoGridItem
               key={post.title}
+              colSpan={{ base: 1, md: post.colSpan as 1 | 2 }}
+              rowSpan={{ base: 1, md: post.rowSpan as 1 | 2 }}
+              className={`group border-border p-0 transition-colors hover:border-foreground ${post.tone}`}
+            >
+            <a
               href="#"
-              className={`group flex flex-col justify-between border border-border p-6 transition-colors hover:border-foreground md:p-8 ${post.span} ${post.tone}`}
+              className="flex h-full flex-col justify-between p-6 md:p-8"
             >
               <Badge variant="outline" className="border-current/30 text-current">
                 {post.tag}
@@ -80,8 +95,9 @@ export default function Blog04() {
                 </div>
               </div>
             </a>
+            </BentoGridItem>
           ))}
-        </div>
+        </BentoGrid>
       </div>
     </section>
   )

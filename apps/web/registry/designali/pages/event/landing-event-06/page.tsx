@@ -102,42 +102,42 @@ const showcase = [
     meta: "Design se code tak: the Designali workflow",
     tag: "Keynote",
     price: "Day 1 · 09:30",
-    tile: "bg-gradient-to-br from-emerald-200 via-green-300 to-lime-300 dark:from-emerald-700 dark:via-green-800 dark:to-lime-900",
+    tile: "bg-gradient-to-br from-primary/20 via-chart-1 to-chart-1 dark:from-chart-3 dark:via-chart-4 dark:to-chart-5",
   },
   {
     name: "Brand track · Ali Imam",
     meta: "Building a brand identity from scratch",
     tag: "Brand",
     price: "Day 1 · 11:15",
-    tile: "bg-gradient-to-br from-stone-200 via-neutral-300 to-zinc-400 dark:from-stone-700 dark:via-neutral-800 dark:to-zinc-900",
+    tile: "bg-gradient-to-br from-muted via-border to-muted-foreground dark:from-muted dark:via-card dark:to-card",
   },
   {
     name: "Code track · Ali Imam",
     meta: "From Figma to Next.js without losing detail",
     tag: "Code",
     price: "Day 1 · 14:00",
-    tile: "bg-gradient-to-br from-rose-200 via-pink-300 to-purple-300 dark:from-rose-700 dark:via-pink-800 dark:to-purple-900",
+    tile: "bg-gradient-to-br from-primary/20 via-chart-1 to-chart-1 dark:from-chart-3 dark:via-chart-4 dark:to-chart-5",
   },
   {
     name: "Guest designer",
     meta: "Hands-on: building with Designali blocks",
     tag: "Workshop",
     price: "Day 2 · 10:00",
-    tile: "bg-gradient-to-br from-blue-200 via-indigo-300 to-violet-400 dark:from-blue-700 dark:via-indigo-800 dark:to-violet-900",
+    tile: "bg-gradient-to-br from-primary/20 via-chart-1 to-primary dark:from-chart-3 dark:via-chart-4 dark:to-chart-5",
   },
   {
     name: "Community panel",
     meta: "Design systems with @designali/icons",
     tag: "Design",
     price: "Day 2 · 13:30",
-    tile: "bg-gradient-to-br from-yellow-100 via-amber-200 to-orange-300 dark:from-yellow-700 dark:via-amber-800 dark:to-orange-900",
+    tile: "bg-gradient-to-br from-primary/10 via-primary/20 to-chart-1 dark:from-chart-3 dark:via-chart-4 dark:to-chart-5",
   },
   {
     name: "Ali Imam & guests",
     meta: "Closing session: AI-assisted design workflows",
     tag: "Keynote",
     price: "Day 2 · 16:45",
-    tile: "bg-gradient-to-br from-amber-200 via-orange-300 to-rose-400 dark:from-amber-700 dark:via-orange-800 dark:to-rose-900",
+    tile: "bg-gradient-to-br from-primary/20 via-chart-1 to-primary dark:from-chart-3 dark:via-chart-4 dark:to-chart-5",
   },
 ]
 
@@ -292,7 +292,7 @@ export default function LandingEvent06() {
           <div className="border-x px-6 py-16 md:py-28">
             <h1 className="max-w-5xl text-4xl leading-[1.05] font-semibold tracking-tight text-balance sm:text-5xl md:text-8xl ">
               {"Ship one design a day, "}
-              <span className="text-orange-600 dark:text-orange-400">
+              <span className="text-primary dark:text-primary">
                 with Designali
               </span>
             </h1>
@@ -356,7 +356,7 @@ export default function LandingEvent06() {
       <section className="border-b">
         <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
           <div className="max-w-2xl">
-            <p className="text-sm font-medium text-orange-600 dark:text-orange-400">
+            <p className="text-sm font-medium text-primary dark:text-primary">
               The experience
             </p>
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl  mt-3">
@@ -372,7 +372,7 @@ export default function LandingEvent06() {
                 key={feature.title}
                 className="-mt-px -ml-px border-t border-l p-8"
               >
-                <feature.icon className="size-6 text-orange-600 dark:text-orange-400" />
+                <feature.icon className="size-6 text-primary dark:text-primary" />
                 <h3 className="mt-5 font-semibold">{feature.title}</h3>
                 <p className="mt-2 text-sm leading-6 text-muted-foreground">
                   {feature.description}
@@ -409,7 +409,7 @@ export default function LandingEvent06() {
                   className={`relative aspect-[4/3] overflow-hidden rounded-2xl ${item.tile}`}
                 >
                   <div className="absolute inset-0 bg-black/0 transition-colors group-hover:bg-black/10" />
-                  <span className="absolute top-3 left-3 rounded-full bg-white/85 px-2.5 py-1 text-[11px] font-medium text-zinc-900 backdrop-blur">
+                  <span className="absolute top-3 left-3 rounded-full bg-white/85 px-2.5 py-1 text-[11px] font-medium text-foreground backdrop-blur">
                     {item.tag}
                   </span>
                 </div>
@@ -477,7 +477,7 @@ export default function LandingEvent06() {
                 key={step.title}
                 className="relative border-t-2 border-border pt-6"
               >
-                <span className="text-sm font-medium text-orange-600 dark:text-orange-400">
+                <span className="text-sm font-medium text-primary dark:text-primary">
                   Step {i + 1}
                 </span>
                 <h3 className="mt-2 text-lg font-semibold">{step.title}</h3>
@@ -505,10 +505,10 @@ export default function LandingEvent06() {
               return (
                 <div
                   key={tier.name}
-                  className={`relative flex h-full flex-col rounded-2xl border p-8 ${featured ? "border-transparent ring-2 ring-orange-500 shadow-xl" : ""}`}
+                  className={`relative flex h-full flex-col rounded-2xl border p-8 ${featured ? "border-transparent ring-2 ring-primary shadow-xl" : ""}`}
                 >
                   {featured && (
-                    <span className="absolute -top-3 left-8 rounded-full bg-orange-600 text-white px-3 py-1 text-xs font-medium">
+                    <span className="absolute -top-3 left-8 rounded-full bg-chart-2 text-white px-3 py-1 text-xs font-medium">
                       Most popular
                     </span>
                   )}
@@ -527,7 +527,7 @@ export default function LandingEvent06() {
                   <ul className="mt-8 flex-1 space-y-3 text-sm">
                     {tier.features.map((feature) => (
                       <li key={feature} className="flex gap-3">
-                        <Check className="mt-0.5 size-4 shrink-0 text-orange-600 dark:text-orange-400" />
+                        <Check className="mt-0.5 size-4 shrink-0 text-primary dark:text-primary" />
                         {feature}
                       </li>
                     ))}
@@ -579,8 +579,8 @@ export default function LandingEvent06() {
         </div>
       </section>
       <section className="px-6 py-20 md:py-28">
-        <div className="relative mx-auto max-w-6xl overflow-hidden rounded-3xl border bg-orange-500/10 px-6 py-16 text-center md:py-24">
-          <div className="pointer-events-none absolute -top-24 left-1/2 size-96 -translate-x-1/2 rounded-full bg-gradient-to-b from-orange-500/25 via-amber-500/10 to-transparent blur-3xl" />
+        <div className="relative mx-auto max-w-6xl overflow-hidden rounded-3xl border bg-primary/10 px-6 py-16 text-center md:py-24">
+          <div className="pointer-events-none absolute -top-24 left-1/2 size-96 -translate-x-1/2 rounded-full bg-gradient-to-b from-primary/25 via-primary/10 to-transparent blur-3xl" />
           <div className="relative mx-auto max-w-2xl space-y-6">
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl">
               Your challenge starts here
@@ -669,7 +669,7 @@ function HeroVisual() {
           className={`relative overflow-hidden rounded-2xl ${item.tile} ${i === 0 ? "col-span-2 aspect-[16/10] md:col-span-1 md:aspect-[3/4]" : "aspect-[3/4]"}`}
         >
           <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/0 to-black/0" />
-          <span className="absolute top-3 left-3 rounded-full bg-white/85 px-2.5 py-1 text-[11px] font-medium text-zinc-900 backdrop-blur">
+          <span className="absolute top-3 left-3 rounded-full bg-white/85 px-2.5 py-1 text-[11px] font-medium text-foreground backdrop-blur">
             {item.tag}
           </span>
           <div className="absolute inset-x-3 bottom-3 flex items-end justify-between gap-2 text-white">

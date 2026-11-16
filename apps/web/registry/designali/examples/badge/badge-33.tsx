@@ -7,7 +7,7 @@ import { Badge } from "@workspace/ui/components/badge"
 export default function LiveRecordingBadges() {
   return (
     <div className="flex flex-wrap items-center justify-center gap-3">
-      <Badge className="bg-red-600 font-semibold tracking-wide text-white uppercase">
+      <Badge className="bg-destructive font-semibold tracking-wide text-white uppercase">
         <span className="relative flex size-1.5">
           <span className="absolute inline-flex size-full animate-ping rounded-full bg-white opacity-75" />
           <span className="relative inline-flex size-1.5 rounded-full bg-white" />
@@ -15,7 +15,7 @@ export default function LiveRecordingBadges() {
         Live
       </Badge>
       <Badge variant="outline">
-        <span className="size-1.5 animate-pulse rounded-full bg-red-500" />
+        <span className="size-1.5 animate-pulse rounded-full bg-destructive" />
         Recording · 12:04
       </Badge>
       <Badge variant="secondary">

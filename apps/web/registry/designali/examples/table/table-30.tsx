@@ -61,7 +61,7 @@ export default function StatusFilterTabsTable() {
           <TableBody>
             {rows.map((inv) => (
               <TableRow key={inv.id}>
-                <TableCell className="font-mono">{inv.id}</TableCell>
+                <TableCell className="font-sans">{inv.id}</TableCell>
                 <TableCell>{inv.client}</TableCell>
                 <TableCell
                   className={cn(

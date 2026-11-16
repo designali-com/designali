@@ -7,6 +7,7 @@ import {
 } from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
+import { CounterNumber } from "@/registry/designali/ui/counter-number"
 
 const DURATION = 1000 * 60 * 60 * 38 + 1000 * 60 * 17
 
@@ -46,12 +47,12 @@ export default function Ecommerce11() {
         <div
           aria-hidden="true"
           className="absolute -top-24 -right-24 size-80 rounded-full opacity-40 blur-3xl md:size-[28rem]"
-          style={{ background: "radial-gradient(circle, oklch(0.7 0.2 30), transparent 70%)" }}
+          style={{ background: "radial-gradient(circle, var(--primary), transparent 70%)" }}
         />
         <div
           aria-hidden="true"
           className="absolute -bottom-32 -left-20 size-72 rounded-full opacity-30 blur-3xl"
-          style={{ background: "radial-gradient(circle, oklch(0.7 0.15 250), transparent 70%)" }}
+          style={{ background: "radial-gradient(circle, var(--chart-3), transparent 70%)" }}
         />
 
         <div className="relative grid gap-10 p-8 md:grid-cols-[1.2fr_1fr] md:items-center md:p-14">
@@ -74,7 +75,7 @@ export default function Ecommerce11() {
               <button
                 type="button"
                 onClick={copy}
-                className="flex h-12 items-center gap-2 border border-dashed border-background/40 px-4 font-mono text-sm transition-colors hover:bg-background/10"
+                className="flex h-12 items-center gap-2 border border-dashed border-background/40 px-4 font-sans text-sm transition-colors hover:bg-background/10"
               >
                 {copied ? "Copied" : "WINTER30"}
                 <Copy className="size-3.5" />
@@ -99,7 +100,7 @@ export default function Ecommerce11() {
             <div className="mt-6">
               <div className="flex justify-between text-xs text-background/60">
                 <span>Codes claimed</span>
-                <span>72%</span>
+                <CounterNumber value={72} suffix="%" size="sm" color="default" className="text-xs tracking-normal text-background/60" />
               </div>
               <div className="mt-2 h-1.5 bg-background/15">
                 <div className="h-full w-[72%] bg-background" />

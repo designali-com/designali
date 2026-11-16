@@ -9,18 +9,18 @@ import {
 import { cn } from "@workspace/ui/lib/utils"
 
 const posts = [
-  { title: "A design school for people who hate tutorials", cat: "Design", date: "Nov 14", hue: "from-chart-1/60" },
-  { title: "Twelve hours inside a Figma file", cat: "Code", date: "Nov 12", hue: "from-chart-2/60" },
-  { title: "Inside the Dalim Fonts archive", cat: "Craft", date: "Nov 9", hue: "from-chart-3/60" },
-  { title: "Running a template store with four products", cat: "Business", date: "Nov 7", hue: "from-chart-4/60" },
-  { title: "The designers who ship at 2am", cat: "Design", date: "Nov 4", hue: "from-chart-5/60" },
-  { title: "Redrawing icons as a weekly ritual", cat: "Craft", date: "Nov 1", hue: "from-chart-1/60" },
-  { title: "A walking guide to the Designali work page", cat: "Code", date: "Oct 29", hue: "from-chart-2/60" },
-  { title: "What a template sells in its first week", cat: "Business", date: "Oct 26", hue: "from-chart-3/60" },
-  { title: "Motion design for the impatient", cat: "Design", date: "Oct 22", hue: "from-chart-4/60" },
-  { title: "Sketchbooks of a design engineer", cat: "Craft", date: "Oct 19", hue: "from-chart-5/60" },
-  { title: "Weekend projects you can build with blocks", cat: "Code", date: "Oct 15", hue: "from-chart-1/60" },
-  { title: "The economics of a one-person studio", cat: "Business", date: "Oct 12", hue: "from-chart-2/60" },
+  { title: "A design school for people who hate tutorials", cat: "Design", date: "Nov 14", image: "/img/ask/ask1.jpg" },
+  { title: "Twelve hours inside a Figma file", cat: "Code", date: "Nov 12", image: "/img/ask/ask2.jpg" },
+  { title: "Inside the Dalim Fonts archive", cat: "Craft", date: "Nov 9", image: "/images/templates/dalim-fonts-old.jpg" },
+  { title: "Running a template store with four products", cat: "Business", date: "Nov 7", image: "/images/templates/resort.jpg" },
+  { title: "The designers who ship at 2am", cat: "Design", date: "Nov 4", image: "/img/ask/ask5.jpg" },
+  { title: "Redrawing icons as a weekly ritual", cat: "Craft", date: "Nov 1", image: "/images/templates/dalim-icons-old.jpg" },
+  { title: "A walking guide to the Designali work page", cat: "Code", date: "Oct 29", image: "/images/templates/dalim-works-old.jpg" },
+  { title: "What a template sells in its first week", cat: "Business", date: "Oct 26", image: "/images/templates/portfolio-simple.jpg" },
+  { title: "Motion design for the impatient", cat: "Design", date: "Oct 22", image: "/img/ask/ask7.jpg" },
+  { title: "Sketchbooks of a design engineer", cat: "Craft", date: "Oct 19", image: "/img/ask/ask9.jpg" },
+  { title: "Weekend projects you can build with blocks", cat: "Code", date: "Oct 15", image: "/images/templates/vercel.jpg" },
+  { title: "The economics of a one-person studio", cat: "Business", date: "Oct 12", image: "/stock/strategy.jpg" },
 ]
 
 const perPage = 6
@@ -34,7 +34,7 @@ export default function Blog18() {
     <section className="w-full bg-background py-16 text-foreground md:py-24">
       <div className="mx-auto max-w-7xl px-6">
         <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
-          <h2 className="font-serif text-4xl tracking-tight">Designali magazine</h2>
+          <h2 className="font-sans text-4xl tracking-tight">Designali magazine</h2>
           <p className="text-sm text-muted-foreground">
             Showing {(page - 1) * perPage + 1}–{Math.min(page * perPage, posts.length)} of {posts.length} stories
           </p>
@@ -43,7 +43,13 @@ export default function Blog18() {
         <div className="mt-10 grid gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
           {visible.map((p) => (
             <a key={p.title} href="#" className="group">
-              <div className={cn("aspect-[3/2] bg-gradient-to-t to-transparent border", p.hue)} />
+              <div className="aspect-[3/2] overflow-hidden border bg-muted">
+                <img
+                  src={p.image}
+                  alt=""
+                  className="size-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
               <div className="mt-4 flex items-center gap-2 text-xs text-muted-foreground">
                 <span className="font-medium text-foreground">{p.cat}</span>
                 <span>·</span>

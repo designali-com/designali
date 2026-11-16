@@ -28,7 +28,7 @@ export default function Lists19() {
                   }`}
                 />
                 <div className={right ? "md:col-start-2 md:pl-12" : "md:pr-12 md:text-right"}>
-                  <span className="font-mono text-sm text-muted-foreground">{item.year}</span>
+                  <span className="font-sans text-sm text-muted-foreground">{item.year}</span>
                   <h3 className="mt-1 text-xl font-medium tracking-tight">{item.title}</h3>
                   <p className="mt-2 text-sm leading-6 text-muted-foreground">{item.text}</p>
                 </div>

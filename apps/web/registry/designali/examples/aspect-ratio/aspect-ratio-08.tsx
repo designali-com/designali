@@ -2,12 +2,12 @@ import { AspectRatio } from "@workspace/ui/components/aspect-ratio"
 import { cn } from "@workspace/ui/lib/utils"
 
 const photos = [
-  { title: "Dalim Works", className: "from-amber-300 to-orange-600" },
-  { title: "Dalim UI", className: "from-cyan-300 to-blue-600" },
-  { title: "Dalim Icons", className: "from-lime-300 to-emerald-600" },
-  { title: "Dalim Fonts", className: "from-fuchsia-400 to-indigo-700" },
-  { title: "Dalim Graphic", className: "from-rose-300 to-red-600" },
-  { title: "Dalim Visuals", className: "from-slate-200 to-slate-500" },
+  { title: "Dalim Works", className: "from-chart-1 to-chart-2" },
+  { title: "Dalim UI", className: "from-chart-1 to-chart-2" },
+  { title: "Dalim Icons", className: "from-chart-1 to-chart-2" },
+  { title: "Dalim Fonts", className: "from-primary to-chart-3" },
+  { title: "Dalim Graphic", className: "from-chart-1 to-destructive" },
+  { title: "Dalim Visuals", className: "from-muted to-muted-foreground" },
 ]
 
 export default function PhotoGalleryGrid() {

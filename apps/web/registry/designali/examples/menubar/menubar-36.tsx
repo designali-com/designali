@@ -22,13 +22,13 @@ export default function MenubarSizeScale() {
             {size.label}
           </span>
           <Menubar className={size.bar}>
-            {["File", "Edit", "View"].map((menu) => (
+            {["Templates", "Blocks", "Icons"].map((menu) => (
               <MenubarMenu key={menu}>
                 <MenubarTrigger className={size.trigger}>{menu}</MenubarTrigger>
                 <MenubarContent>
                   <MenubarGroup>
-                    <MenubarItem>{menu} option one</MenubarItem>
-                    <MenubarItem>{menu} option two</MenubarItem>
+                    <MenubarItem>Browse Designali {menu}</MenubarItem>
+                    <MenubarItem>New {menu}</MenubarItem>
                   </MenubarGroup>
                 </MenubarContent>
               </MenubarMenu>

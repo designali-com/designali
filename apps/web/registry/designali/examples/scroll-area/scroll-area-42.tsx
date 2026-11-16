@@ -29,8 +29,8 @@ export default function KpiCardsCarousel() {
               className={cn(
                 "flex items-center gap-1 text-xs",
                 k.up
-                  ? "text-emerald-600 dark:text-emerald-400"
-                  : "text-red-600 dark:text-red-400"
+                  ? "text-primary dark:text-primary"
+                  : "text-destructive dark:text-destructive"
               )}
             >
               {k.up ? (

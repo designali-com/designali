@@ -26,10 +26,10 @@ import {
 import { cn } from "@workspace/ui/lib/utils"
 
 const photos = [
-  { id: "p1", gradient: "from-rose-400 to-orange-300" },
-  { id: "p2", gradient: "from-sky-400 to-emerald-300" },
-  { id: "p3", gradient: "from-violet-500 to-pink-400" },
-  { id: "p4", gradient: "from-amber-300 to-lime-400" },
+  { id: "p1", gradient: "from-primary to-chart-1" },
+  { id: "p2", gradient: "from-primary to-chart-1" },
+  { id: "p3", gradient: "from-primary to-primary" },
+  { id: "p4", gradient: "from-chart-1 to-primary" },
 ]
 
 export default function PhotoGalleryMenu() {

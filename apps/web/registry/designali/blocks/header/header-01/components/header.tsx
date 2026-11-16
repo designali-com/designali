@@ -67,7 +67,7 @@ const Header = () => {
               <Menus />
             </div>
 
-            <div className="shadow-3xl hidden w-full flex-wrap items-center justify-end space-y-8 rounded-sm border p-3 shadow-zinc-300/20 backdrop-blur-2xl in-data-[state=active]:block md:m-0 md:flex md:w-fit md:flex-nowrap md:gap-6 md:space-y-0 md:border-transparent md:bg-transparent md:p-0 md:shadow-none md:in-data-[state=active]:flex dark:shadow-none dark:lg:bg-transparent">
+            <div className="shadow-3xl hidden w-full flex-wrap items-center justify-end space-y-8 rounded-sm border p-3 shadow-border/20 backdrop-blur-2xl in-data-[state=active]:block md:m-0 md:flex md:w-fit md:flex-nowrap md:gap-6 md:space-y-0 md:border-transparent md:bg-transparent md:p-0 md:shadow-none md:in-data-[state=active]:flex dark:shadow-none dark:lg:bg-transparent">
               <div className="block p-3 md:hidden">
                 <ul className="space-y-6 text-base">
                   {menuItems.map((item, index) => (

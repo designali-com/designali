@@ -20,7 +20,7 @@ const taken = new Set(["10:00", "14:30"])
 export default function TimeSlotLabels() {
   return (
     <div className="flex w-full max-w-sm flex-col gap-3">
-      <span className="text-xs font-medium">Thursday, Dec 4</span>
+      <span className="text-xs font-medium">Book a call with Ali Imam - Thursday, Dec 4</span>
       <RadioGroup defaultValue="11:30" className="grid grid-cols-4 gap-2">
         {times.map((time) => (
           <Label

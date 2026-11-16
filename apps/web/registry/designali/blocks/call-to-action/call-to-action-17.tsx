@@ -6,34 +6,14 @@ import {
 
 import { Button } from "@workspace/ui/components/button"
 
-const pattern = [
-  "1111111001011111110",
-  "1000001010001000001",
-  "1011101001101011101",
-  "1011101100101011101",
-  "1011101011001011101",
-  "1000001001101000001",
-  "1111111010101111111",
-  "0000000011000000000",
-  "1101011100111010110",
-  "0110100011010101101",
-  "1011011101101100110",
-  "0000000010110010101",
-  "1111111001011101011",
-  "1000001011100110100",
-  "1011101000111011011",
-  "1011101011010001100",
-  "1011101001101110101",
-  "1000001010011001010",
-  "1111111011101010111",
-]
+import { IPhone } from "@/registry/designali/ui/apple/iphone"
 
 export default function CallToAction17() {
   return (
     <section className="w-full bg-background px-6 py-20 md:py-28">
-      <div className="mx-auto grid max-w-6xl items-center gap-12 border border-border bg-gradient-to-br from-emerald-50 to-background p-8 md:grid-cols-[1fr_auto] md:p-14 dark:from-emerald-950/30">
+      <div className="mx-auto grid max-w-6xl items-center gap-12 border border-border bg-gradient-to-br from-primary/5 to-background p-8 md:grid-cols-[1fr_auto] md:p-14 dark:from-chart-5/30">
         <div>
-          <div className="flex items-center gap-1 text-amber-500">
+          <div className="flex items-center gap-1 text-primary">
             {Array.from({ length: 5 }).map((_, i) => (
               <Star key={i} className="size-4 fill-current" />
             ))}
@@ -64,28 +44,19 @@ export default function CallToAction17() {
             </Button>
           </div>
         </div>
-        <div className="hidden flex-col items-center gap-3 md:flex">
-          <div className="border border-border bg-white p-3">
-            <div
-              className="grid size-40 gap-0"
-              style={{ gridTemplateColumns: "repeat(19, minmax(0, 1fr))" }}
-              aria-hidden
-            >
-              {pattern.flatMap((row, r) =>
-                row
-                  .split("")
-                  .map((c, col) => (
-                    <span
-                      key={`${r}-${col}`}
-                      className={c === "1" ? "bg-neutral-900" : "bg-white"}
-                    />
-                  ))
-              )}
-            </div>
-          </div>
-          <span className="text-xs text-muted-foreground">
-            Scan to download
-          </span>
+        <div className="flex justify-center">
+          <IPhone size="md" color="black" className="max-w-full">
+            <img
+              src="/img/chat-1-light.jpg"
+              alt="Designali on iPhone"
+              className="size-full object-cover object-top dark:hidden"
+            />
+            <img
+              src="/img/chat-1-dark.jpg"
+              alt="Designali on iPhone"
+              className="hidden size-full object-cover object-top dark:block"
+            />
+          </IPhone>
         </div>
       </div>
     </section>

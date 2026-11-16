@@ -103,7 +103,11 @@ export default function PhotoEditorMenubar() {
           </MenubarContent>
         </MenubarMenu>
       </Menubar>
-      <div className="aspect-video w-full bg-gradient-to-br from-amber-300 via-rose-400 to-indigo-500" />
+      <img
+        src="/img/ask/ask3.jpg"
+        alt="Designali artwork in the editor"
+        className="aspect-video w-full bg-muted object-cover"
+      />
     </div>
   )
 }

@@ -17,18 +17,18 @@ import {
 
 const reasons = [
   "Too expensive",
-  "Missing features",
+  "Missing blocks I need",
   "Switching to another tool",
   "other",
 ]
 
 export default function ConditionalOtherOptionField() {
-  const [reason, setReason] = React.useState("Missing features")
+  const [reason, setReason] = React.useState("Missing blocks I need")
 
   return (
     <FieldSet className="w-full max-w-sm">
-      <FieldLegend>Why are you canceling?</FieldLegend>
-      <FieldDescription>Your answer helps us improve.</FieldDescription>
+      <FieldLegend>Why are you canceling Designali Pro?</FieldLegend>
+      <FieldDescription>Your answer helps Ali improve Designali templates and blocks.</FieldDescription>
       <RadioGroup value={reason} onValueChange={(v) => setReason(v as string)}>
         {reasons.map((r, i) => (
           <Field key={r} orientation="horizontal">

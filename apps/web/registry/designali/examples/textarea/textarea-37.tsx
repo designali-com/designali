@@ -32,7 +32,7 @@ export default function SqlQueryTextarea() {
         defaultValue={
           "SELECT plan, count(*) AS users\nFROM accounts\nGROUP BY plan\nORDER BY users DESC;"
         }
-        className="min-h-24 border-0 font-mono focus-visible:ring-0"
+        className="min-h-24 border-0 font-sans focus-visible:ring-0"
         aria-label="SQL query"
       />
       <div className="flex items-center justify-between border-y bg-muted/40 px-2 py-1">
@@ -55,7 +55,7 @@ export default function SqlQueryTextarea() {
           <TableBody>
             {rows.map((r) => (
               <TableRow key={r.plan}>
-                <TableCell className="font-mono">{r.plan}</TableCell>
+                <TableCell className="font-sans">{r.plan}</TableCell>
                 <TableCell className="text-end tabular-nums">
                   {r.users}
                 </TableCell>

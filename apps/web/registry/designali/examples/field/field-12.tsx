@@ -28,7 +28,7 @@ export default function VerificationCodeField() {
     <Field className="w-fit">
       <FieldLabel htmlFor="otp-code">Verification code</FieldLabel>
       <FieldDescription>
-        We sent a 6-digit code to +1 ••• ••• 4821.
+        We sent a 6-digit code to ali@designali.com.
       </FieldDescription>
       <InputOTP id="otp-code" maxLength={6}>
         <InputOTPGroup>

@@ -40,7 +40,7 @@ export default function ReleaseHistoryPagination() {
                 href="#"
                 size="sm"
                 isActive={v === version}
-                className="font-mono"
+                className="font-sans"
                 onClick={(event) => {
                   event.preventDefault()
                   setVersion(v)

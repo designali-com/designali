@@ -14,12 +14,12 @@ import {
 import { cn } from "@workspace/ui/lib/utils"
 
 const labels = [
-  { id: "bug", name: "Bug", color: "bg-red-500" },
-  { id: "feature", name: "Feature", color: "bg-violet-500" },
-  { id: "docs", name: "Documentation", color: "bg-sky-500" },
-  { id: "design", name: "Design", color: "bg-pink-500" },
-  { id: "perf", name: "Performance", color: "bg-amber-500" },
-  { id: "security", name: "Security", color: "bg-emerald-500" },
+  { id: "bug", name: "Bug", color: "bg-destructive" },
+  { id: "feature", name: "Feature", color: "bg-primary" },
+  { id: "docs", name: "Documentation", color: "bg-primary" },
+  { id: "design", name: "Design", color: "bg-primary" },
+  { id: "perf", name: "Performance", color: "bg-primary" },
+  { id: "security", name: "Security", color: "bg-primary" },
 ]
 
 export default function MultiSelectLabels() {

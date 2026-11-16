@@ -24,13 +24,13 @@ export default function LargeCatalogLimit() {
         <ComboboxInput
           id="sku"
           placeholder="Search 30 SKUs"
-          className="w-full font-mono"
+          className="w-full font-sans"
         />
         <ComboboxContent>
           <ComboboxEmpty>No SKUs match.</ComboboxEmpty>
           <ComboboxList>
             {(item: string) => (
-              <ComboboxItem key={item} value={item} className="font-mono">
+              <ComboboxItem key={item} value={item} className="font-sans">
                 {item}
               </ComboboxItem>
             )}

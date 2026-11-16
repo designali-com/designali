@@ -22,11 +22,11 @@ export default function ControlledValueNav() {
         onValueChange={(next) => setValue(next as string | null)}
       >
         <NavigationMenuList>
-          <NavigationMenuItem value="solutions">
-            <NavigationMenuTrigger>Solutions</NavigationMenuTrigger>
+          <NavigationMenuItem value="services">
+            <NavigationMenuTrigger>Services</NavigationMenuTrigger>
             <NavigationMenuContent>
               <ul className="flex w-56 flex-col gap-1">
-                {["For startups", "For agencies", "For enterprise"].map((s) => (
+                {["Brand identity", "UI/UX design", "Web development"].map((s) => (
                   <li key={s}>
                     <NavigationMenuLink href="#">{s}</NavigationMenuLink>
                   </li>
@@ -34,11 +34,11 @@ export default function ControlledValueNav() {
               </ul>
             </NavigationMenuContent>
           </NavigationMenuItem>
-          <NavigationMenuItem value="company">
-            <NavigationMenuTrigger>Company</NavigationMenuTrigger>
+          <NavigationMenuItem value="designali">
+            <NavigationMenuTrigger>Designali</NavigationMenuTrigger>
             <NavigationMenuContent>
               <ul className="flex w-48 flex-col gap-1">
-                {["About", "Careers", "Contact"].map((s) => (
+                {["About Ali Imam", "Work", "Contact"].map((s) => (
                   <li key={s}>
                     <NavigationMenuLink href="#">{s}</NavigationMenuLink>
                   </li>
@@ -52,9 +52,9 @@ export default function ControlledValueNav() {
         <Button
           size="sm"
           variant="outline"
-          onClick={() => setValue("solutions")}
+          onClick={() => setValue("services")}
         >
-          Open Solutions
+          Open Services
         </Button>
         <Button size="sm" variant="ghost" onClick={() => setValue(null)}>
           Close

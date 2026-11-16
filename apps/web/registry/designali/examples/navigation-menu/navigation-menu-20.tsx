@@ -13,12 +13,12 @@ const work = [
   {
     client: "Dalim Agency",
     type: "Brand identity",
-    gradient: "from-stone-400 to-amber-700",
+    gradient: "from-muted-foreground to-chart-3",
   },
   {
     client: "Dalim Fonts",
     type: "Web design",
-    gradient: "from-lime-300 to-emerald-600",
+    gradient: "from-chart-1 to-chart-2",
   },
 ]
 

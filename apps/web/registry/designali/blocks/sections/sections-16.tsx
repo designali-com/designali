@@ -2,19 +2,20 @@ import {
   ArrowRight,
 } from "@designali/icons"
 
+import { DotPattern } from "@/registry/designali/ui/dot-pattern"
 import { Button } from "@workspace/ui/components/button"
 
 const tiles = [
-  { label: "Friday demos", className: "col-span-2 row-span-2 from-amber-300 to-rose-400 dark:from-amber-500/50 dark:to-rose-600/50" },
-  { label: "Offsite, Azores", className: "from-sky-300 to-indigo-400 dark:from-sky-500/50 dark:to-indigo-600/50" },
-  { label: "Book club", className: "from-lime-200 to-emerald-400 dark:from-lime-500/40 dark:to-emerald-600/50" },
-  { label: "Studio lunch", className: "col-span-2 from-fuchsia-300 to-violet-400 dark:from-fuchsia-500/50 dark:to-violet-600/50" },
+  { label: "Brand identity", image: "/stock/design.jpg", className: "col-span-2 row-span-2" },
+  { label: "Web development", image: "/stock/development.jpg", className: "" },
+  { label: "Strategy", image: "/stock/strategy.jpg", className: "" },
+  { label: "CGI, 3D & motion", image: "/img/ask/ask3.jpg", className: "col-span-2" },
 ]
 
 const rituals = [
-  { title: "No-meeting Wednesdays", body: "One full day a week for deep work, protected on every calendar." },
-  { title: "Two offsites a year", body: "The whole company, somewhere none of us live, with nothing to present." },
-  { title: "Demo or it did not happen", body: "Every Friday, anyone can show what they built that week, finished or not." },
+  { title: "Design and code together", body: "The person who designs a screen also builds it, so details survive the handoff." },
+  { title: "Ship small, ship often", body: "Work goes live on Vercel early, so feedback happens on real pages, not static mockups." },
+  { title: "Share what we build", body: "Blocks, icons and templates from client work often become free resources on designali.com." },
 ]
 
 export default function Sections16() {
@@ -25,36 +26,34 @@ export default function Sections16() {
           {tiles.map((tile) => (
             <div
               key={tile.label}
-              className={`relative overflow-hidden bg-gradient-to-br ${tile.className}`}
+              className={`relative overflow-hidden bg-muted ${tile.className}`}
             >
-              <div
-                className="absolute inset-0 opacity-30 mix-blend-overlay"
-                style={{
-                  backgroundImage: "radial-gradient(circle at 1px 1px, white 1px, transparent 0)",
-                  backgroundSize: "10px 10px",
-                }}
-                aria-hidden
+              <img
+                src={tile.image}
+                alt={tile.label}
+                className="absolute inset-0 size-full object-cover"
               />
+              <DotPattern className="text-white opacity-40 mix-blend-overlay" width={10} height={10} />
               <span className="absolute bottom-3 left-3 bg-background/85 px-2 py-1 text-[11px] font-medium backdrop-blur">
                 {tile.label}
               </span>
             </div>
           ))}
           <div className="flex flex-col justify-center bg-foreground p-4 text-background">
-            <p className="text-3xl font-semibold tracking-tight">4.8</p>
-            <p className="text-[11px] leading-4 opacity-70">Glassdoor-style internal score, 2026 survey</p>
+            <p className="text-3xl font-semibold tracking-tight">460+</p>
+            <p className="text-[11px] leading-4 opacity-70">Blocks shared on designali.com</p>
           </div>
         </div>
 
         <div>
-          <p className="font-mono text-xs tracking-widest text-muted-foreground uppercase">Life at Kiln</p>
+          <p className="font-sans text-xs tracking-widest text-muted-foreground uppercase">Life at designali</p>
           <h2 className="mt-4 text-4xl font-semibold tracking-tight md:text-5xl">
-            Serious about the work. Not about ourselves.
+            Serious about the craft. Not about ourselves.
           </h2>
           <p className="mt-6 max-w-lg text-sm leading-7 text-muted-foreground">
-            We are 72 people building tools for ceramic studios and small
-            makers. We keep the company small on purpose, so everyone knows
-            everyone and nobody needs a meeting to find out what is going on.
+            Designali is a small design and development studio led by Ali
+            Imam. We keep it small on purpose, so every project gets senior
+            designers who also write the code.
           </p>
           <dl className="mt-10 divide-y divide-border border-y border-border">
             {rituals.map((ritual) => (
@@ -64,8 +63,8 @@ export default function Sections16() {
               </div>
             ))}
           </dl>
-          <Button className="mt-10" size="lg" nativeButton={false} render={<a href="#" />}>
-            Meet the team
+          <Button className="mt-10" size="lg" nativeButton={false} render={<a href="mailto:hello@designali.com" />}>
+            Work with us
             <ArrowRight />
           </Button>
         </div>

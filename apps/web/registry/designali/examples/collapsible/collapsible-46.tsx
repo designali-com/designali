@@ -46,7 +46,7 @@ export default function ShipmentTrackingHistory() {
       <div className="flex items-center gap-2">
         <TruckIcon className="size-4" />
         <span className="text-sm font-semibold">Launching today</span>
-        <span className="ml-auto font-mono text-xs text-muted-foreground">
+        <span className="ml-auto font-sans text-xs text-muted-foreground">
           #TRK88213
         </span>
       </div>

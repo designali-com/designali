@@ -93,7 +93,7 @@ export default function IssueTrackerMenubar() {
         </MenubarMenu>
       </Menubar>
       <div className="flex items-center gap-2 border p-3 text-xs">
-        <span className="font-mono text-muted-foreground">ENG-412</span>
+        <span className="font-sans text-muted-foreground">ENG-412</span>
         <span className="flex-1 truncate">Pricing block breaks on mobile Safari</span>
         <Badge
           variant={priority === "urgent" ? "destructive" : "secondary"}

@@ -28,7 +28,7 @@ export default function CallToAction08() {
           failed, and the numbers behind both. Written by Ali Imam.
         </p>
         {submitted ? (
-          <div className="mx-auto mt-8 flex max-w-md items-center justify-center gap-3 border border-emerald-600/30 bg-emerald-50 px-4 py-4 text-sm text-emerald-800 dark:bg-emerald-950/40 dark:text-emerald-300">
+          <div className="mx-auto mt-8 flex max-w-md items-center justify-center gap-3 border border-chart-2/30 bg-primary/5 px-4 py-4 text-sm text-chart-4 dark:bg-primary/40 dark:text-chart-1">
             <CheckCircle2 className="size-4 shrink-0" />
             <span>
               Check {email || "your inbox"} to confirm your subscription.

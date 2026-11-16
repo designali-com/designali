@@ -29,7 +29,7 @@ export default function DeploymentPipelineSteps() {
         {steps.map((step) => (
           <li key={step.label} className="flex items-center gap-3 text-sm">
             {step.state === "done" && (
-              <CircleCheckIcon className="size-4 text-emerald-600 dark:text-emerald-400" />
+              <CircleCheckIcon className="size-4 text-primary dark:text-primary" />
             )}
             {step.state === "running" && <Spinner className="text-primary" />}
             {step.state === "queued" && (
@@ -43,7 +43,7 @@ export default function DeploymentPipelineSteps() {
             >
               {step.label}
             </span>
-            <span className="font-mono text-xs text-muted-foreground">
+            <span className="font-sans text-xs text-muted-foreground">
               {step.time}
             </span>
           </li>

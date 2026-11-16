@@ -18,9 +18,9 @@ import {
 import { cn } from "@workspace/ui/lib/utils"
 
 const finishes = [
-  { id: "graphite", label: "Outline", body: "#2b2d31", accent: "#6b7280" },
-  { id: "sage", label: "Duotone", body: "#8a9a83", accent: "#d6dccf" },
-  { id: "clay", label: "Solid", body: "#c4785a", accent: "#f1d3c2" },
+  { id: "graphite", label: "Outline", body: "#000000", accent: "#00A8FF" },
+  { id: "sage", label: "Duotone", body: "#155DFC", accent: "#8EC5FF" },
+  { id: "clay", label: "Solid", body: "#00A8FF", accent: "#FFFFFF" },
 ]
 
 const highlights = [

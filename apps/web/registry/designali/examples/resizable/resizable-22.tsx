@@ -31,15 +31,15 @@ export default function ApiPlaygroundSplit() {
             <Input
               aria-label="Endpoint"
               defaultValue="/v1/orders/ord_8F2kq"
-              className="h-7 font-mono text-xs"
+              className="h-7 font-sans text-xs"
             />
           </div>
           <div className="flex flex-col gap-1 text-xs">
             <span className="font-medium">Headers</span>
-            <span className="font-mono text-muted-foreground">
+            <span className="font-sans text-muted-foreground">
               Authorization: Bearer key_demo_...
             </span>
-            <span className="font-mono text-muted-foreground">
+            <span className="font-sans text-muted-foreground">
               Accept: application/json
             </span>
           </div>

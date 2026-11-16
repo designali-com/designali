@@ -72,7 +72,7 @@ export default function ContactsDirectory() {
                       </AvatarFallback>
                     </Avatar>
                     {contact.online ? (
-                      <span className="absolute -end-0.5 -bottom-0.5 size-2.5 rounded-full bg-emerald-500 ring-2 ring-popover" />
+                      <span className="absolute -end-0.5 -bottom-0.5 size-2.5 rounded-full bg-primary ring-2 ring-popover" />
                     ) : null}
                   </div>
                   <div className="flex min-w-0 flex-col">

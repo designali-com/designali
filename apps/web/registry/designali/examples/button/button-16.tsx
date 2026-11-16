@@ -20,7 +20,7 @@ export default function CopyToClipboardButton() {
 
   return (
     <div className="flex w-full max-w-sm items-center gap-2">
-      <div className="h-8 min-w-0 flex-1 truncate border bg-muted/40 px-2.5 py-2 font-mono text-xs">
+      <div className="h-8 min-w-0 flex-1 truncate border bg-muted/40 px-2.5 py-2 font-sans text-xs">
         {link}
       </div>
       <Button variant="outline" size="sm" onClick={copy} aria-live="polite">

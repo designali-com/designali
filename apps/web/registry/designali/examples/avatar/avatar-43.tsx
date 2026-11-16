@@ -28,7 +28,7 @@ export default function StoryRingAvatars() {
                 ? "border border-dashed border-muted-foreground/50"
                 : story.seen
                   ? "bg-border"
-                  : "bg-gradient-to-tr from-amber-400 via-rose-500 to-fuchsia-600"
+                  : "bg-gradient-to-tr from-primary via-primary to-chart-2"
             )}
           >
             <Avatar size="lg" className="ring-2 ring-background">

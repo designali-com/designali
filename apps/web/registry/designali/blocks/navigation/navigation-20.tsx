@@ -12,31 +12,31 @@ const entries = [
     title: "Dalim Agency",
     kind: "Agency identity",
     year: "Brand",
-    gradient: "from-amber-200 via-orange-300 to-rose-400",
+    gradient: "from-primary/20 via-chart-1 to-primary",
   },
   {
     title: "Dalim Fonts",
     kind: "Type platform",
     year: "Web",
-    gradient: "from-emerald-200 via-teal-300 to-cyan-500",
+    gradient: "from-primary/20 via-chart-1 to-primary",
   },
   {
     title: "Dalim UI",
     kind: "Component library",
     year: "Code",
-    gradient: "from-zinc-300 via-zinc-500 to-zinc-800",
+    gradient: "from-border via-muted-foreground to-foreground",
   },
   {
     title: "Dalim Icons",
     kind: "Icon system",
     year: "Design",
-    gradient: "from-lime-200 via-green-300 to-emerald-500",
+    gradient: "from-primary/20 via-chart-1 to-primary",
   },
   {
     title: "Dalim Visuals",
     kind: "CGI and motion",
     year: "3D",
-    gradient: "from-sky-200 via-blue-400 to-indigo-600",
+    gradient: "from-primary/20 via-primary to-chart-2",
   },
 ]
 
@@ -60,7 +60,7 @@ export default function Navigation20() {
                   onFocus={() => setHovered(index)}
                   className="group grid grid-cols-[2rem_1fr_auto] items-baseline gap-4 py-5 md:grid-cols-[3rem_1fr_200px_4rem]"
                 >
-                  <span className="font-mono text-xs text-background/50 tabular-nums">
+                  <span className="font-sans text-xs text-background/50 tabular-nums">
                     {String(index + 1).padStart(2, "0")}
                   </span>
                   <span
@@ -87,13 +87,13 @@ export default function Navigation20() {
             <div
               key={entry.title}
               className={cn(
-                "absolute inset-0 flex flex-col justify-end bg-gradient-to-br p-6 text-zinc-950 transition-all duration-500",
+                "absolute inset-0 flex flex-col justify-end bg-gradient-to-br p-6 text-foreground transition-all duration-500",
                 entry.gradient,
                 hovered === index ? "scale-100 opacity-100" : "scale-105 opacity-0"
               )}
             >
-              <span className="absolute top-6 left-6 size-24 rounded-full border-2 border-zinc-950/30" />
-              <span className="absolute top-20 right-8 h-40 w-16 bg-zinc-950/10" />
+              <span className="absolute top-6 left-6 size-24 rounded-full border-2 border-foreground/30" />
+              <span className="absolute top-20 right-8 h-40 w-16 bg-foreground/10" />
               <p className="text-xs tracking-widest uppercase opacity-70">{entry.kind}</p>
               <p className="mt-1 text-2xl font-semibold">{entry.title}</p>
             </div>

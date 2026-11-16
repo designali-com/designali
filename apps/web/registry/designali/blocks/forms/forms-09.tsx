@@ -60,7 +60,7 @@ export default function Forms09() {
         <div className="mt-6 text-xs text-muted-foreground">
           {seconds > 0 ? (
             <span>
-              Resend code in <span className="font-mono text-foreground">0:{String(seconds).padStart(2, "0")}</span>
+              Resend code in <span className="font-sans text-foreground">0:{String(seconds).padStart(2, "0")}</span>
             </span>
           ) : (
             <button

@@ -4,13 +4,13 @@ const thresholds = [
   {
     label: "CPU alert",
     value: 45,
-    range: "[&_[data-slot=slider-range]]:bg-emerald-500",
+    range: "[&_[data-slot=slider-range]]:bg-primary",
     note: "Healthy",
   },
   {
     label: "Memory alert",
     value: 72,
-    range: "[&_[data-slot=slider-range]]:bg-amber-500",
+    range: "[&_[data-slot=slider-range]]:bg-primary",
     note: "Warning",
   },
   {

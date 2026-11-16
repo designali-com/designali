@@ -22,10 +22,10 @@ const categories = [
 ]
 
 const priorities = [
-  { id: "low", label: "Low", dot: "bg-sky-500" },
-  { id: "normal", label: "Normal", dot: "bg-emerald-500" },
-  { id: "high", label: "High", dot: "bg-amber-500" },
-  { id: "urgent", label: "Urgent", dot: "bg-red-500" },
+  { id: "low", label: "Low", dot: "bg-primary" },
+  { id: "normal", label: "Normal", dot: "bg-primary" },
+  { id: "high", label: "High", dot: "bg-primary" },
+  { id: "urgent", label: "Urgent", dot: "bg-destructive" },
 ]
 
 export default function Forms14() {
@@ -105,7 +105,7 @@ export default function Forms14() {
 
           <div className="flex flex-col gap-4 border-t border-border pt-6 sm:flex-row sm:items-center sm:justify-between">
             <p className="text-xs text-muted-foreground">
-              Workspace <span className="font-mono text-foreground">designali-pro</span> will be attached automatically.
+              Workspace <span className="font-sans text-foreground">designali-pro</span> will be attached automatically.
             </p>
             <Button type="submit" size="lg">Submit ticket</Button>
           </div>

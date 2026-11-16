@@ -27,7 +27,7 @@ export default function FileTileMenu() {
   return (
     <ContextMenu>
       <ContextMenuTrigger className="flex w-40 flex-col items-center gap-2 border p-4 text-center hover:bg-muted/50 data-popup-open:bg-muted">
-        <FileTextIcon className="size-10 text-sky-500" />
+        <FileTextIcon className="size-10 text-primary" />
         <span className="text-xs font-medium">designali-brand-guide.fig</span>
         <span className="text-[11px] text-muted-foreground">
           284 KB · Edited today

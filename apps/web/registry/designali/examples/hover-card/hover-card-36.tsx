@@ -37,7 +37,7 @@ export default function ChartBarHoverCard() {
               <p
                 className={
                   w.change.startsWith("+")
-                    ? "text-emerald-600"
+                    ? "text-primary"
                     : "text-destructive"
                 }
               >

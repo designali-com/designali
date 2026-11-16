@@ -50,7 +50,7 @@ export default function GroupedScopesMulti() {
             {(values: string[]) => (
               <React.Fragment>
                 {values.map((scope) => (
-                  <ComboboxChip key={scope} className="font-mono">
+                  <ComboboxChip key={scope} className="font-sans">
                     {scope}
                   </ComboboxChip>
                 ))}
@@ -70,7 +70,7 @@ export default function GroupedScopesMulti() {
                     <ComboboxItem
                       key={scope}
                       value={scope}
-                      className="font-mono"
+                      className="font-sans"
                     >
                       <KeyRoundIcon className="text-muted-foreground" />
                       {scope}

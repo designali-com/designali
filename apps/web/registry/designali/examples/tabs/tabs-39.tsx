@@ -17,18 +17,18 @@ function Mock({ dark }: { dark: boolean }) {
     <div
       className={cn(
         "flex h-24 gap-2 border p-2",
-        dark ? "bg-zinc-900" : "bg-white"
+        dark ? "bg-foreground" : "bg-white"
       )}
     >
-      <div className={cn("w-1/4", dark ? "bg-zinc-800" : "bg-zinc-100")} />
+      <div className={cn("w-1/4", dark ? "bg-foreground" : "bg-muted")} />
       <div className="flex flex-1 flex-col gap-1.5">
         <div
-          className={cn("h-2 w-2/3", dark ? "bg-zinc-700" : "bg-zinc-200")}
+          className={cn("h-2 w-2/3", dark ? "bg-foreground" : "bg-muted")}
         />
         <div
-          className={cn("h-2 w-1/2", dark ? "bg-zinc-700" : "bg-zinc-200")}
+          className={cn("h-2 w-1/2", dark ? "bg-foreground" : "bg-muted")}
         />
-        <div className="mt-auto h-4 w-12 bg-indigo-500" />
+        <div className="mt-auto h-4 w-12 bg-primary" />
       </div>
     </div>
   )

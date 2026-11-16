@@ -9,6 +9,8 @@ import {
   Vercel,
 } from "@designali/logos"
 
+import { GridPattern } from "@/registry/designali/ui/grid-pattern"
+
 export default function Logos01() {
   return (
     <section className="relative flex h-screen w-full items-center justify-center overflow-hidden py-20">
@@ -25,19 +27,11 @@ export default function Logos01() {
 
         {/* Grid */}
         <div
-          className="absolute left-[50%] bottom-[-10%] h-[55%] w-full -translate-x-1/2"
-          style={{
-            backgroundImage:
-              "linear-gradient(var(--primary) 1px, transparent 1px), linear-gradient(90deg, var(--primary) 1px, transparent 1px)",
-            backgroundSize: "50px 30px",
-            WebkitMaskImage:
-              "linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 100%)",
-            maskImage:
-              "linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 100%)",
-            transform: "translateX(0%) perspective(300px) rotateX(45deg)",
-            pointerEvents: "none",
-          }}
-        />
+          className="pointer-events-none absolute bottom-[-10%] left-[50%] h-[55%] w-full -translate-x-1/2 [mask-image:linear-gradient(to_bottom,transparent,rgba(0,0,0,0.5))]"
+          style={{ transform: "translateX(0%) perspective(300px) rotateX(45deg)" }}
+        >
+          <GridPattern width={50} height={30} className="stroke-primary" />
+        </div>
       </div>
 
       {/* Content */}

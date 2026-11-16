@@ -10,6 +10,7 @@ import {
   Mail,
   ShieldCheck,
 } from "@designali/icons"
+import { Figma } from "@designali/logos"
 
 import { Button } from "@workspace/ui/components/button"
 import { Checkbox } from "@workspace/ui/components/checkbox"
@@ -33,8 +34,8 @@ export default function Authentication16() {
     <section className="flex min-h-[720px] w-full items-center justify-center bg-muted/40 px-6 py-16">
       <div className="w-full max-w-md border bg-background">
         <div className="flex items-center justify-center gap-4 border-b px-6 py-8">
-          <span className="flex size-14 items-center justify-center bg-gradient-to-br from-orange-400 to-pink-500 text-lg font-bold text-white">
-            Fg
+          <span className="flex size-14 items-center justify-center border bg-background">
+            <Figma className="size-7" />
           </span>
           <ArrowLeftRight className="size-5 text-muted-foreground" />
           <span className="flex size-14 items-center justify-center bg-foreground text-lg font-bold text-background">
@@ -74,7 +75,7 @@ export default function Authentication16() {
           <div className="flex gap-3 bg-muted/50 p-4 text-xs text-muted-foreground">
             <Info className="size-4 shrink-0" />
             <p>
-              Meetmix is a verified app. You can revoke access anytime from{" "}
+              Figma Sync is a verified app. You can revoke access anytime from{" "}
               <a href="#" className="text-foreground underline underline-offset-4">Connected apps</a>. Review its{" "}
               <a href="#" className="text-foreground underline underline-offset-4">privacy policy</a>.
             </p>

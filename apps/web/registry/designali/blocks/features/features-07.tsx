@@ -5,6 +5,8 @@ import {
   Workflow,
 } from "@designali/icons"
 
+import { BentoGrid, BentoGridItem } from "@/registry/designali/ui/bento"
+
 export default function Features07() {
   return (
     <section className="w-full bg-muted/30 px-6 py-20 md:py-28">
@@ -12,10 +14,19 @@ export default function Features07() {
         <h2 className="max-w-2xl text-3xl font-medium tracking-tight md:text-5xl">
           A design-to-code studio that keeps up with how fast you think.
         </h2>
-        <div className="mt-14 grid gap-px border border-border bg-border md:grid-cols-6 md:grid-rows-2">
-          <div className="flex flex-col justify-between bg-background p-8 md:col-span-4 md:row-span-2">
+        <BentoGrid
+          cols={{ base: 1, md: 6 }}
+          gap={2}
+          rowHeight="auto"
+          className="mt-14 h-auto"
+        >
+          <BentoGridItem
+            colSpan={{ base: 1, md: 4 }}
+            rowSpan={{ base: 1, md: 2 }}
+            className="flex flex-col justify-between p-8"
+          >
             <Sparkles className="size-5 text-muted-foreground" />
-            <div className="my-10 space-y-2 border border-border p-4 font-mono text-xs">
+            <div className="my-10 space-y-2 border border-border p-4 font-sans text-xs">
               <p className="text-muted-foreground">/generate hero block</p>
               <p>
                 Hero section created with Next.js, Tailwind CSS and
@@ -29,22 +40,22 @@ export default function Features07() {
                 you ship polished interfaces faster.
               </p>
             </div>
-          </div>
-          <div className="bg-background p-8 md:col-span-2">
+          </BentoGridItem>
+          <BentoGridItem colSpan={{ base: 1, md: 2 }} className="p-8">
             <Command className="size-5 text-muted-foreground" />
             <h3 className="mt-6 font-medium">Copy and paste</h3>
             <p className="mt-2 text-sm leading-6 text-muted-foreground">
               Every block is one copy away from your codebase.
             </p>
-          </div>
-          <div className="bg-background p-8 md:col-span-2">
+          </BentoGridItem>
+          <BentoGridItem colSpan={{ base: 1, md: 2 }} className="p-8">
             <Workflow className="size-5 text-muted-foreground" />
             <h3 className="mt-6 font-medium">Design systems</h3>
             <p className="mt-2 text-sm leading-6 text-muted-foreground">
               Tokens and components that keep Figma and code in sync.
             </p>
-          </div>
-          <div className="flex flex-col gap-6 bg-background p-8 md:col-span-6 md:flex-row md:items-center md:justify-between">
+          </BentoGridItem>
+          <BentoGridItem className="flex flex-col gap-6 p-8 md:col-span-6 md:flex-row md:items-center md:justify-between">
             <div className="flex items-center gap-4">
               <Database className="size-5 text-muted-foreground" />
               <div>
@@ -61,8 +72,8 @@ export default function Features07() {
                 </span>
               ))}
             </div>
-          </div>
-        </div>
+          </BentoGridItem>
+        </BentoGrid>
       </div>
     </section>
   )

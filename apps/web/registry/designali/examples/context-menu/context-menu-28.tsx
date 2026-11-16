@@ -23,6 +23,8 @@ import {
   ContextMenuTrigger,
 } from "@workspace/ui/components/context-menu"
 
+import { CounterNumber } from "@/registry/designali/ui/counter-number"
+
 const data = {
   "7d": [40, 62, 55, 70, 48, 80, 66],
   "30d": [30, 45, 50, 38, 60, 72, 58, 64, 70, 82, 76, 90],
@@ -53,7 +55,7 @@ export default function DashboardWidgetMenu() {
             Last {range}
           </span>
         </div>
-        <span className="text-2xl font-semibold tabular-nums">12,480</span>
+        <CounterNumber value={12480} className="text-2xl font-semibold tracking-normal" />
         <div className="flex h-20 items-end gap-1">
           {data[range].map((value, index) => (
             <div

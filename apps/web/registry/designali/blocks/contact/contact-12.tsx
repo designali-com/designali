@@ -37,7 +37,7 @@ export default function Contact12() {
       <div className="mx-auto grid max-w-6xl border bg-background lg:grid-cols-[1fr_1.6fr]">
         <div className="flex flex-col gap-8 border-b p-8 lg:border-e lg:border-b-0 lg:p-10">
           <div className="flex items-center gap-3">
-            <span className="flex size-11 items-center justify-center rounded-full bg-gradient-to-br from-violet-400 to-indigo-600 text-sm font-semibold text-white">
+            <span className="flex size-11 items-center justify-center rounded-full bg-gradient-to-br from-primary to-chart-2 text-sm font-semibold text-white">
               AI
             </span>
             <div className="text-sm">

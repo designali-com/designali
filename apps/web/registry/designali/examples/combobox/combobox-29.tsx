@@ -24,19 +24,19 @@ const workspaces: Workspace[] = [
     id: "w1",
     name: "Designali",
     plan: "Business",
-    gradient: "from-sky-500 to-indigo-600",
+    gradient: "from-primary to-chart-2",
   },
   {
     id: "w2",
     name: "Dalim Works",
     plan: "Team",
-    gradient: "from-emerald-400 to-teal-600",
+    gradient: "from-primary to-chart-2",
   },
   {
     id: "w3",
     name: "Side projects",
     plan: "Free",
-    gradient: "from-amber-400 to-rose-500",
+    gradient: "from-primary to-primary",
   },
 ]
 

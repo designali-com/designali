@@ -17,22 +17,22 @@ const themes = [
     value: "light",
     label: "Light",
     bg: "bg-white",
-    bar: "bg-zinc-200",
-    line: "bg-zinc-300",
+    bar: "bg-muted",
+    line: "bg-border",
   },
   {
     value: "dark",
     label: "Dark",
-    bg: "bg-zinc-900",
-    bar: "bg-zinc-700",
-    line: "bg-zinc-600",
+    bg: "bg-foreground",
+    bar: "bg-foreground",
+    line: "bg-muted-foreground",
   },
   {
     value: "system",
     label: "System",
-    bg: "bg-gradient-to-r from-white to-zinc-900",
-    bar: "bg-zinc-400",
-    line: "bg-zinc-500",
+    bg: "bg-gradient-to-r from-white to-foreground",
+    bar: "bg-muted-foreground",
+    line: "bg-muted-foreground",
   },
 ]
 
@@ -41,7 +41,7 @@ export default function ThemePreviewChoiceCards() {
     <FieldSet className="w-full max-w-md">
       <FieldLegend>Appearance</FieldLegend>
       <FieldDescription>
-        Choose how the interface looks on this device.
+        Choose how designali.com looks on this device.
       </FieldDescription>
       <RadioGroup defaultValue="system" className="grid grid-cols-3 gap-2">
         {themes.map((t) => (

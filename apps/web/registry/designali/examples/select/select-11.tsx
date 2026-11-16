@@ -24,20 +24,20 @@ const priorities = [
     icon: MinusIcon,
     tone: "text-muted-foreground",
   },
-  { label: "Low", value: "low", icon: SignalLowIcon, tone: "text-sky-500" },
+  { label: "Low", value: "low", icon: SignalLowIcon, tone: "text-primary" },
   {
     label: "Medium",
     value: "medium",
     icon: SignalMediumIcon,
-    tone: "text-amber-500",
+    tone: "text-primary",
   },
   {
     label: "High",
     value: "high",
     icon: SignalHighIcon,
-    tone: "text-orange-500",
+    tone: "text-primary",
   },
-  { label: "Urgent", value: "urgent", icon: SirenIcon, tone: "text-red-500" },
+  { label: "Urgent", value: "urgent", icon: SirenIcon, tone: "text-destructive" },
 ]
 
 export default function PrioritySelectIcons() {

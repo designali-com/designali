@@ -30,8 +30,8 @@ const schedule: Record<string, Session[]> = {
 
 const trackStyle: Record<Session["track"], string> = {
   Keynote: "bg-foreground text-background",
-  Design: "bg-rose-100 text-rose-800 dark:bg-rose-500/15 dark:text-rose-300",
-  Engineering: "bg-sky-100 text-sky-800 dark:bg-sky-500/15 dark:text-sky-300",
+  Design: "bg-primary/10 text-chart-4 dark:bg-primary/15 dark:text-chart-1",
+  Engineering: "bg-primary/10 text-chart-4 dark:bg-primary/15 dark:text-chart-1",
   Break: "bg-muted text-muted-foreground",
 }
 
@@ -44,7 +44,7 @@ export default function Lists12() {
       <div className="mx-auto max-w-4xl px-6">
         <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
           <div>
-            <p className="font-mono text-xs text-muted-foreground">Designali Live · Online</p>
+            <p className="font-sans text-xs text-muted-foreground">Designali Live · Online</p>
             <h2 className="mt-2 text-4xl font-semibold tracking-tight">Schedule</h2>
           </div>
           <div role="tablist" className="grid grid-cols-2 border border-border">
@@ -76,7 +76,7 @@ export default function Lists12() {
                 session.track === "Break" && "bg-muted/30"
               )}
             >
-              <div className="font-mono text-sm">
+              <div className="font-sans text-sm">
                 {session.time}
                 <span className="block text-xs text-muted-foreground">{session.end}</span>
               </div>

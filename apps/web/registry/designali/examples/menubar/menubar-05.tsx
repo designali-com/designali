@@ -100,7 +100,7 @@ export default function SpreadsheetMenubar() {
         <div className="border-e bg-muted px-2 py-1.5 font-medium text-muted-foreground">
           B4
         </div>
-        <div className="px-2 py-1.5 text-end font-mono tabular-nums">
+        <div className="px-2 py-1.5 text-end font-sans tabular-nums">
           {formats[format]}
         </div>
       </div>

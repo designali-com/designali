@@ -14,16 +14,16 @@ const lines = [
 
 export default function BuildLogTerminal() {
   return (
-    <div className="w-full max-w-md bg-zinc-950 p-4 font-mono text-xs text-zinc-300">
-      <div className="mb-2 text-zinc-500">$ pnpm build</div>
+    <div className="w-full max-w-md bg-foreground p-4 font-sans text-xs text-muted-foreground">
+      <div className="mb-2 text-muted-foreground">$ pnpm build</div>
       {lines.map((line) => (
         <div key={line.text} className="flex items-center gap-2 py-0.5">
           {line.ok ? (
-            <CheckIcon className="size-3 text-emerald-400" />
+            <CheckIcon className="size-3 text-primary" />
           ) : (
-            <Spinner className="size-3 text-sky-400" />
+            <Spinner className="size-3 text-primary" />
           )}
-          <span className={cn(!line.ok && "text-zinc-100")}>{line.text}</span>
+          <span className={cn(!line.ok && "text-background")}>{line.text}</span>
         </div>
       ))}
     </div>

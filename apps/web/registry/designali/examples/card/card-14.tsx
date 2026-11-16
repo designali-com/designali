@@ -21,9 +21,9 @@ import {
 import { cn } from "@workspace/ui/lib/utils"
 
 const colors = [
-  { name: "Light", className: "bg-amber-200" },
-  { name: "Accent", className: "bg-emerald-300" },
-  { name: "Dark", className: "bg-slate-500" },
+  { name: "Light", className: "bg-primary/20" },
+  { name: "Accent", className: "bg-chart-1" },
+  { name: "Dark", className: "bg-muted-foreground" },
 ]
 
 export default function ProductCard() {
@@ -31,9 +31,9 @@ export default function ProductCard() {
 
   return (
     <Card className="w-full max-w-64 pt-0">
-      <div className="relative flex aspect-square items-center justify-center bg-gradient-to-br from-amber-100 to-orange-200 dark:from-amber-900/40 dark:to-orange-900/40">
+      <div className="relative flex aspect-square items-center justify-center bg-gradient-to-br from-primary/10 to-primary/20 dark:from-chart-5/40 dark:to-chart-5/40">
         <ShirtIcon
-          className="size-20 text-amber-900/40 dark:text-amber-100/40"
+          className="size-20 text-chart-5/40 dark:text-chart-1/40"
           strokeWidth={1}
         />
         <Badge className="absolute start-3 top-3">-20%</Badge>
@@ -49,7 +49,7 @@ export default function ProductCard() {
       <CardHeader>
         <CardTitle>Portfolio Simple Template</CardTitle>
         <CardDescription className="flex items-center gap-1">
-          <StarIcon className="size-3 fill-amber-400 text-amber-400" /> 4.7 ·
+          <StarIcon className="size-3 fill-primary text-primary" /> 4.7 ·
           312 reviews
         </CardDescription>
       </CardHeader>

@@ -15,9 +15,9 @@ const posts = [
 ]
 
 const tones = [
-  "bg-pink-200 text-pink-900 dark:bg-pink-900 dark:text-pink-100",
-  "bg-sky-200 text-sky-900 dark:bg-sky-900 dark:text-sky-100",
-  "bg-lime-200 text-lime-900 dark:bg-lime-900 dark:text-lime-100",
+  "bg-primary/20 text-chart-5 dark:bg-primary/10 dark:text-chart-1",
+  "bg-primary/20 text-chart-5 dark:bg-primary/10 dark:text-chart-1",
+  "bg-primary/20 text-chart-5 dark:bg-primary/10 dark:text-chart-1",
 ]
 
 export default function Testimonials14() {
@@ -40,7 +40,7 @@ export default function Testimonials14() {
                 <div className="min-w-0 flex-1 text-sm">
                   <div className="flex items-center gap-1 font-medium">
                     <span className="truncate">{p.name}</span>
-                    {p.verified && <BadgeCheck className="size-4 shrink-0 text-sky-500" />}
+                    {p.verified && <BadgeCheck className="size-4 shrink-0 text-primary" />}
                   </div>
                   <div className="truncate text-xs text-muted-foreground">
                     @{p.handle} &middot; {p.time}

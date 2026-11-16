@@ -16,11 +16,11 @@ const rowB = [
 ]
 
 const tones = [
-  "bg-sky-100 text-sky-800 dark:bg-sky-950 dark:text-sky-200",
-  "bg-amber-100 text-amber-800 dark:bg-amber-950 dark:text-amber-200",
-  "bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200",
-  "bg-rose-100 text-rose-800 dark:bg-rose-950 dark:text-rose-200",
-  "bg-violet-100 text-violet-800 dark:bg-violet-950 dark:text-violet-200",
+  "bg-primary/10 text-chart-4 dark:bg-primary/10 dark:text-chart-1",
+  "bg-primary/10 text-chart-4 dark:bg-primary/10 dark:text-chart-1",
+  "bg-primary/10 text-chart-4 dark:bg-primary/10 dark:text-chart-1",
+  "bg-primary/10 text-chart-4 dark:bg-primary/10 dark:text-chart-1",
+  "bg-primary/10 text-chart-4 dark:bg-primary/10 dark:text-chart-1",
 ]
 
 function Row({ items, reverse }: { items: typeof rowA; reverse?: boolean }) {

@@ -12,11 +12,11 @@ import { Button } from "@workspace/ui/components/button"
 import { cn } from "@workspace/ui/lib/utils"
 
 const workspaces = [
-  { name: "Designali Studio", slug: "designali", role: "Owner", members: 42, color: "from-amber-400 to-orange-600", sso: true },
-  { name: "Designali Templates", slug: "designali-templates", role: "Admin", members: 9, color: "from-pink-400 to-rose-600", sso: false },
-  { name: "Dalim Works", slug: "dalim-works", role: "Member", members: 128, color: "from-sky-400 to-blue-700", sso: true },
-  { name: "Ali Imam Portfolio", slug: "aliimam", role: "Owner", members: 3, color: "from-lime-400 to-emerald-600", sso: false },
-  { name: "Client Projects", slug: "clients", role: "Guest", members: 61, color: "from-violet-400 to-indigo-700", sso: false },
+  { name: "Designali Studio", slug: "designali", role: "Owner", members: 42, color: "from-primary to-chart-2", sso: true },
+  { name: "Designali Templates", slug: "designali-templates", role: "Admin", members: 9, color: "from-primary to-chart-2", sso: false },
+  { name: "Dalim Works", slug: "dalim-works", role: "Member", members: 128, color: "from-primary to-chart-3", sso: true },
+  { name: "Ali Imam Portfolio", slug: "aliimam", role: "Owner", members: 3, color: "from-primary to-chart-2", sso: false },
+  { name: "Client Projects", slug: "clients", role: "Guest", members: 61, color: "from-primary to-chart-3", sso: false },
 ]
 
 export default function Authentication20() {
@@ -70,7 +70,7 @@ export default function Authentication20() {
               </span>
               <span className="min-w-0">
                 <span className="block truncate font-medium">{item.name}</span>
-                <span className="block truncate font-mono text-xs text-muted-foreground">{item.slug}.designali.com</span>
+                <span className="block truncate font-sans text-xs text-muted-foreground">{item.slug}.designali.com</span>
               </span>
               <span className="flex w-full justify-between text-xs text-muted-foreground">
                 <span>{item.role}</span>

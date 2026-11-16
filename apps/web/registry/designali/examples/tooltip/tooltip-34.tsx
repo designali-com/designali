@@ -7,11 +7,11 @@ import {
 import { cn } from "@workspace/ui/lib/utils"
 
 const palette = [
-  { name: "designali-ink", hex: "#111827", className: "bg-[#111827]" },
-  { name: "slate-500", hex: "#64748B", className: "bg-[#64748B]" },
-  { name: "coral-400", hex: "#FB7185", className: "bg-[#FB7185]" },
-  { name: "mint-300", hex: "#6EE7B7", className: "bg-[#6EE7B7]" },
-  { name: "sun-200", hex: "#FDE68A", className: "bg-[#FDE68A]" },
+  { name: "designali-blue", hex: "#00A8FF", className: "bg-primary" },
+  { name: "chart-1", hex: "#8EC5FF", className: "bg-chart-1" },
+  { name: "chart-3", hex: "#155DFC", className: "bg-chart-3" },
+  { name: "chart-5", hex: "#193CB8", className: "bg-chart-5" },
+  { name: "designali-ink", hex: "#000000", className: "bg-foreground" },
 ]
 
 export default function ColorPaletteTooltips() {
@@ -34,7 +34,7 @@ export default function ColorPaletteTooltips() {
             />
             <TooltipContent side="bottom">
               <span className="font-medium">{c.name}</span>
-              <span className="font-mono opacity-70">{c.hex}</span>
+              <span className="font-sans opacity-70">{c.hex}</span>
             </TooltipContent>
           </Tooltip>
         ))}

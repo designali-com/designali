@@ -52,7 +52,7 @@ export default function Hero14() {
             <div>
               <div className="flex gap-0.5">
                 {Array.from({ length: 5 }).map((_, index) => (
-                  <Star key={index} className="size-3.5 fill-amber-400 text-amber-400" />
+                  <Star key={index} className="size-3.5 fill-primary text-primary" />
                 ))}
               </div>
               <p className="mt-1 text-xs text-muted-foreground">

@@ -24,13 +24,13 @@ export default function UnsavedChangesTabs() {
         <TabsTrigger value="store">
           Store{" "}
           {storeDirty && (
-            <span className="size-1.5 rounded-full bg-amber-500" />
+            <span className="size-1.5 rounded-full bg-primary" />
           )}
         </TabsTrigger>
         <TabsTrigger value="contact">
           Contact{" "}
           {emailDirty && (
-            <span className="size-1.5 rounded-full bg-amber-500" />
+            <span className="size-1.5 rounded-full bg-primary" />
           )}
         </TabsTrigger>
       </TabsList>

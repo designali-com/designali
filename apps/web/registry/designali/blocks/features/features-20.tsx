@@ -13,16 +13,16 @@ import { Switch } from "@workspace/ui/components/switch"
 import { cn } from "@workspace/ui/lib/utils"
 
 const swatches = [
-  { name: "Ink", className: "bg-neutral-900 dark:bg-neutral-100" },
-  { name: "Ocean", className: "bg-sky-600" },
-  { name: "Moss", className: "bg-emerald-600" },
-  { name: "Ember", className: "bg-orange-500" },
+  { name: "Ink", className: "bg-foreground dark:bg-foreground" },
+  { name: "Ocean", className: "bg-chart-2" },
+  { name: "Moss", className: "bg-chart-2" },
+  { name: "Ember", className: "bg-primary" },
 ]
 const accents: Record<string, string> = {
-  Ink: "bg-neutral-900 text-white dark:bg-neutral-100 dark:text-neutral-900",
-  Ocean: "bg-sky-600 text-white",
-  Moss: "bg-emerald-600 text-white",
-  Ember: "bg-orange-500 text-white",
+  Ink: "bg-foreground text-white dark:bg-foreground dark:text-background",
+  Ocean: "bg-chart-2 text-white",
+  Moss: "bg-chart-2 text-white",
+  Ember: "bg-primary text-white",
 }
 
 export default function Features20() {
@@ -67,7 +67,7 @@ export default function Features20() {
                 <span className="flex items-center gap-2">
                   <Type className="size-4" /> Base font size
                 </span>
-                <span className="font-mono text-xs text-muted-foreground">{size}px</span>
+                <span className="font-sans text-xs text-muted-foreground">{size}px</span>
               </div>
               <Slider
                 className="mt-4"

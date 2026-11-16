@@ -27,8 +27,8 @@ export default function KpiTrendBadges() {
             <Badge
               className={cn(
                 good
-                  ? "bg-emerald-50 text-emerald-700 dark:bg-emerald-950 dark:text-emerald-300"
-                  : "bg-red-50 text-red-700 dark:bg-red-950 dark:text-red-300"
+                  ? "bg-primary/5 text-chart-3 dark:bg-primary/10 dark:text-chart-1"
+                  : "bg-destructive/5 text-destructive dark:bg-destructive/15 dark:text-destructive"
               )}
             >
               {up ? (

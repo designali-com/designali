@@ -8,9 +8,9 @@ import { Button } from "@workspace/ui/components/button"
 import { cn } from "@workspace/ui/lib/utils"
 
 const viewers = [
-  { initials: "AI", ring: "ring-rose-500", name: "Ali" },
-  { initials: "SA", ring: "ring-sky-500", name: "Sara" },
-  { initials: "OM", ring: "ring-emerald-500", name: "Omar" },
+  { initials: "AI", ring: "ring-primary", name: "Ali" },
+  { initials: "SA", ring: "ring-primary", name: "Sara" },
+  { initials: "OM", ring: "ring-primary", name: "Omar" },
 ]
 
 export default function LiveCollaboratorsBar() {

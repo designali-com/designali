@@ -43,7 +43,7 @@ export default function Lists04() {
             <a
               key={letter}
               href={available.has(letter) ? `#glossary-${letter}` : undefined}
-              className={`flex size-9 items-center justify-center border-r border-b border-border font-mono text-xs ${
+              className={`flex size-9 items-center justify-center border-r border-b border-border font-sans text-xs ${
                 available.has(letter)
                   ? "hover:bg-foreground hover:text-background"
                   : "text-muted-foreground/40"

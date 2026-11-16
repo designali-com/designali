@@ -9,10 +9,10 @@ import {
 import { cn } from "@workspace/ui/lib/utils"
 
 const colors = [
-  { value: "graphite", label: "Graphite", className: "bg-zinc-700" },
-  { value: "sand", label: "Sand", className: "bg-amber-200" },
-  { value: "sage", label: "Sage", className: "bg-emerald-300" },
-  { value: "ocean", label: "Ocean", className: "bg-sky-500" },
+  { value: "graphite", label: "Graphite", className: "bg-foreground" },
+  { value: "sand", label: "Sand", className: "bg-primary/20" },
+  { value: "sage", label: "Sage", className: "bg-chart-1" },
+  { value: "ocean", label: "Ocean", className: "bg-primary" },
 ]
 
 export default function ProductColorSwatches() {

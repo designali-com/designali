@@ -67,13 +67,13 @@ export default function CallToAction20() {
           <div className="mx-auto mt-10 max-w-md border border-background/20 p-6 text-left">
             <div className="flex items-baseline justify-between">
               <span className="text-sm text-background/70">Your position</span>
-              <span className="font-mono text-3xl">#12,841</span>
+              <span className="font-sans text-3xl">#12,841</span>
             </div>
             <div className="mt-5 text-xs text-background/60">
               Share your link to jump the queue
             </div>
             <div className="mt-2 flex items-center gap-2 border border-background/20 bg-background/5 py-1 pr-1 pl-3">
-              <span className="min-w-0 flex-1 truncate font-mono text-sm">
+              <span className="min-w-0 flex-1 truncate font-sans text-sm">
                 {referral}
               </span>
               <Button

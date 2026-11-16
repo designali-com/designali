@@ -15,21 +15,21 @@ const initialAccounts = [
     name: "Ali Imam",
     email: "ali@designali.com",
     org: "Designali",
-    color: "from-orange-400 to-rose-500",
+    color: "from-primary to-primary",
     status: "Signed in",
   },
   {
     name: "Ali Imam",
     email: "hello@designali.com",
     org: "Personal",
-    color: "from-sky-400 to-indigo-500",
+    color: "from-primary to-primary",
     status: "Signed out",
   },
   {
     name: "A. Imam",
     email: "ali@example.com",
     org: "Dalim Works",
-    color: "from-emerald-400 to-teal-600",
+    color: "from-primary to-chart-2",
     status: "Session expired",
   },
 ]
@@ -42,7 +42,7 @@ export default function Authentication12() {
     <section className="flex min-h-[640px] w-full items-center justify-center bg-muted/40 px-6 py-16">
       <div className="w-full max-w-md">
         <div className="text-center">
-          <span className="mx-auto flex size-10 items-center justify-center bg-foreground font-mono text-sm font-bold text-background">
+          <span className="mx-auto flex size-10 items-center justify-center bg-foreground font-sans text-sm font-bold text-background">
             ~
           </span>
           <h2 className="mt-5 text-2xl font-semibold tracking-tight">Choose an account</h2>
@@ -74,7 +74,7 @@ export default function Authentication12() {
                     type="button"
                     aria-label={`Remove ${account.email}`}
                     onClick={() => setAccounts(accounts.filter((item) => item.email !== account.email))}
-                    className="flex size-8 items-center justify-center text-muted-foreground hover:text-red-600 dark:hover:text-red-400"
+                    className="flex size-8 items-center justify-center text-muted-foreground hover:text-destructive dark:hover:text-destructive"
                   >
                     <Trash2 className="size-4" />
                   </button>
@@ -83,7 +83,7 @@ export default function Authentication12() {
                     <span
                       className={cn(
                         "hidden text-xs sm:inline",
-                        account.status === "Signed in" ? "text-emerald-700 dark:text-emerald-400" : "text-muted-foreground"
+                        account.status === "Signed in" ? "text-chart-3 dark:text-primary" : "text-muted-foreground"
                       )}
                     >
                       {account.status}

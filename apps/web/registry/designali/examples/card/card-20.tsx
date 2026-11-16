@@ -53,7 +53,7 @@ export default function FileUploadCard() {
               ) : null}
             </div>
             {f.progress === 100 ? (
-              <CircleCheckIcon className="size-4 text-emerald-500" />
+              <CircleCheckIcon className="size-4 text-primary" />
             ) : (
               <Button variant="ghost" size="icon-xs" aria-label="Cancel upload">
                 <XIcon />

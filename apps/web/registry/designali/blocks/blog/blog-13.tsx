@@ -71,9 +71,7 @@ export default function Blog13() {
             How designali.com replaced a 47-minute cron job with incremental builds
           </h1>
           <div className="mt-8 flex items-center justify-center gap-3">
-            <span className="flex size-10 items-center justify-center rounded-full bg-chart-2 text-sm font-semibold text-background">
-              AI
-            </span>
+            <img src="/ali.jpg" alt="Ali Imam" className="size-10 rounded-full object-cover" />
             <div className="text-left text-sm">
               <p className="font-medium">Ali Imam</p>
               <p className="text-xs text-muted-foreground">Founder, Designali · November 11, 2026</p>

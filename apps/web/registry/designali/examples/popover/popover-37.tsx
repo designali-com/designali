@@ -14,10 +14,10 @@ import {
 import { cn } from "@workspace/ui/lib/utils"
 
 const breakdown = [
-  { label: "Videos", gb: 41.2, color: "bg-violet-500" },
-  { label: "Images", gb: 18.6, color: "bg-sky-500" },
-  { label: "Documents", gb: 7.9, color: "bg-emerald-500" },
-  { label: "Other", gb: 3.1, color: "bg-amber-500" },
+  { label: "Videos", gb: 41.2, color: "bg-primary" },
+  { label: "Images", gb: 18.6, color: "bg-primary" },
+  { label: "Documents", gb: 7.9, color: "bg-primary" },
+  { label: "Other", gb: 3.1, color: "bg-primary" },
 ]
 const LIMIT = 100
 const used = breakdown.reduce((sum, b) => sum + b.gb, 0)

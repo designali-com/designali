@@ -54,7 +54,7 @@ export default function OnboardingChecklistCard() {
               )}
             >
               {s.done ? (
-                <CircleCheckIcon className="size-5 text-emerald-500" />
+                <CircleCheckIcon className="size-5 text-primary" />
               ) : (
                 <span className="flex size-5 items-center justify-center rounded-full border text-[10px]">
                   {i + 1}

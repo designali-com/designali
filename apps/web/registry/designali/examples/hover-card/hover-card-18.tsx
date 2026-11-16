@@ -8,6 +8,8 @@ import {
   HoverCardTrigger,
 } from "@workspace/ui/components/hover-card"
 
+import { CounterNumber } from "@/registry/designali/ui/counter-number"
+
 export default function MetricDefinitionHoverCard() {
   return (
     <div className="w-full max-w-xs border p-4">
@@ -31,8 +33,10 @@ export default function MetricDefinitionHoverCard() {
           </p>
         </HoverCardContent>
       </HoverCard>
-      <p className="mt-1 text-3xl font-semibold">112%</p>
-      <p className="text-xs text-emerald-600">+4 pts vs last quarter</p>
+      <p className="mt-1">
+        <CounterNumber value={112} suffix="%" size="lg" className="font-semibold tracking-normal" />
+      </p>
+      <p className="text-xs text-primary">+4 pts vs last quarter</p>
     </div>
   )
 }

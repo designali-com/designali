@@ -13,6 +13,8 @@ import {
   TabsTrigger,
 } from "@workspace/ui/components/tabs"
 
+import { CounterNumber } from "@/registry/designali/ui/counter-number"
+
 interface Plan {
   name: string
   prices: {
@@ -245,9 +247,10 @@ export const Pricing04 = ({
                         $
                       </span>
 
-                      <span className="text-5xl font-semibold tracking-tight">
-                        {price.amount}
-                      </span>
+                      <CounterNumber
+                        value={Number(price.amount)}
+                        className="text-5xl font-semibold tracking-tight"
+                      />
 
                       <span className="self-end pb-1 text-xs text-muted-foreground">
                         {price.suffix}

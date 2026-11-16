@@ -37,7 +37,7 @@ const reviews = [
 
 function Stars({ n, className }: { n: number; className?: string }) {
   return (
-    <div className={`flex gap-0.5 text-amber-500 ${className ?? ""}`}>
+    <div className={`flex gap-0.5 text-primary ${className ?? ""}`}>
       {Array.from({ length: 5 }).map((_, i) => (
         <Star key={i} className={`size-4 ${i < n ? "fill-current" : "text-muted-foreground/30"}`} />
       ))}
@@ -63,7 +63,7 @@ export default function Testimonials10() {
               <div key={stars} className="flex items-center gap-3 text-xs">
                 <span className="w-3 text-muted-foreground">{stars}</span>
                 <div className="h-2 flex-1 bg-muted">
-                  <div className="h-full bg-amber-500" style={{ width: `${pct}%` }} />
+                  <div className="h-full bg-primary" style={{ width: `${pct}%` }} />
                 </div>
                 <span className="w-8 text-right text-muted-foreground">{pct}%</span>
               </div>
@@ -75,7 +75,7 @@ export default function Testimonials10() {
             <article key={r.name} className="py-6">
               <div className="flex flex-wrap items-center justify-between gap-2">
                 <Stars n={r.rating} />
-                <span className="inline-flex items-center gap-1 text-xs text-emerald-700 dark:text-emerald-400">
+                <span className="inline-flex items-center gap-1 text-xs text-chart-3 dark:text-primary">
                   <BadgeCheck className="size-3.5" /> Verified customer
                 </span>
               </div>

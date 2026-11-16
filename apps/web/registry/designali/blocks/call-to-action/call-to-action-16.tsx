@@ -29,7 +29,7 @@ export default function CallToAction16() {
         <div className="mx-auto w-full max-w-4xl border border-border bg-background shadow-lg">
           <div className="flex flex-col gap-4 p-4 sm:flex-row sm:items-center md:p-5">
             <div className="flex items-start gap-3 sm:items-center">
-              <span className="flex size-10 shrink-0 items-center justify-center bg-gradient-to-br from-rose-500 to-orange-400 text-white">
+              <span className="flex size-10 shrink-0 items-center justify-center bg-gradient-to-br from-primary to-primary text-white">
                 <Gift className="size-5" />
               </span>
               <div className="min-w-0">
@@ -61,7 +61,7 @@ export default function CallToAction16() {
             </div>
           </div>
           <div className="h-1 w-full bg-muted">
-            <div className="h-full w-2/3 bg-gradient-to-r from-rose-500 to-orange-400" />
+            <div className="h-full w-2/3 bg-gradient-to-r from-primary to-primary" />
           </div>
         </div>
       )}

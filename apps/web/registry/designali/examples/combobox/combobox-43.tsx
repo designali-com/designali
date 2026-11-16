@@ -16,27 +16,27 @@ type Theme = { name: string; bg: string; fg: string; accent: string }
 const themes: Theme[] = [
   {
     name: "Paper",
-    bg: "bg-stone-50",
-    fg: "text-stone-900",
-    accent: "bg-stone-900",
+    bg: "bg-muted",
+    fg: "text-foreground",
+    accent: "bg-foreground",
   },
   {
     name: "Midnight",
-    bg: "bg-slate-950",
-    fg: "text-slate-100",
-    accent: "bg-indigo-400",
+    bg: "bg-foreground",
+    fg: "text-background",
+    accent: "bg-primary",
   },
   {
     name: "Forest",
-    bg: "bg-emerald-950",
-    fg: "text-emerald-50",
-    accent: "bg-lime-400",
+    bg: "bg-chart-5",
+    fg: "text-chart-1",
+    accent: "bg-primary",
   },
   {
     name: "Sunset",
-    bg: "bg-orange-100",
-    fg: "text-orange-950",
-    accent: "bg-rose-500",
+    bg: "bg-primary/10",
+    fg: "text-chart-5",
+    accent: "bg-primary",
   },
 ]
 

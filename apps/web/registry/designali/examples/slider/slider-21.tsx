@@ -19,7 +19,7 @@ export default function LayerOpacitySlider() {
         }}
       >
         <div
-          className="size-full bg-indigo-500"
+          className="size-full bg-primary"
           style={{ opacity: opacity[0]! / 100 }}
         />
       </div>

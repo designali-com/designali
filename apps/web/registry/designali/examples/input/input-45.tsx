@@ -22,7 +22,7 @@ export default function AiPromptInput() {
     <div className="flex w-full max-w-md flex-col gap-2">
       <InputGroup className="h-11">
         <InputGroupAddon>
-          <SparklesIcon className="text-violet-500" />
+          <SparklesIcon className="text-primary" />
         </InputGroupAddon>
         <InputGroupInput
           aria-label="Ask the assistant"

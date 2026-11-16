@@ -1,7 +1,7 @@
 const notes = [
-  { label: "Founded", value: "Porto, 2015" },
-  { label: "First product", value: "A printed field guide to Atlantic tides" },
-  { label: "Today", value: "Tide and swell forecasts for 2.1M sailors" },
+  { label: "Founder", value: "Ali Imam, design engineer" },
+  { label: "First brand", value: "Dalim — graphics, fonts and icons" },
+  { label: "Today", value: "Designali studio and designali.com" },
 ]
 
 export default function Sections19() {
@@ -9,11 +9,11 @@ export default function Sections19() {
     <section className="w-full bg-background py-24">
       <div className="mx-auto max-w-6xl px-6">
         <header className="border-b border-border pb-10">
-          <p className="font-mono text-xs tracking-widest text-muted-foreground uppercase">
-            Chapter one · How Salt began
+          <p className="text-xs tracking-widest text-muted-foreground uppercase">
+            Chapter one · How designali began
           </p>
-          <h2 className="mt-6 max-w-4xl font-serif text-4xl leading-tight tracking-tight md:text-6xl">
-            It started with a capsized dinghy and a forecast that was wrong by four hours.
+          <h2 className="mt-6 max-w-4xl text-4xl leading-tight tracking-tight md:text-6xl">
+            It started with a design that looked right in Figma and broke in the browser.
           </h2>
         </header>
 
@@ -30,30 +30,30 @@ export default function Sections19() {
           </aside>
 
           <div className="max-w-2xl space-y-6 text-base leading-8 text-muted-foreground">
-            <p className="text-foreground first-letter:float-left first-letter:mt-1 first-letter:mr-3 first-letter:font-serif first-letter:text-7xl first-letter:leading-[0.8] first-letter:font-medium">
-              In the summer of 2014, Inês Barros and her brother Tiago were
-              pulled out of the Douro estuary by a fishing crew who happened to
-              be heading home early. The app they had checked that morning said
-              the tide would turn at three. It turned just before eleven.
+            <p className="text-foreground first-letter:float-left first-letter:mt-1 first-letter:mr-3 first-letter:text-7xl first-letter:leading-[0.8] first-letter:font-medium">
+              Ali Imam started as a designer, making graphics, fonts and icons
+              under the Dalim name. Again and again, the work he handed off
+              came back different: spacing drifted, type changed, and the
+              details that made it feel right were lost.
             </p>
             <p>
-              Tiago, a hydrologist, spent the following winter comparing every
-              public tide model against harbour gauges up and down the coast.
-              The errors were not random. They clustered around river mouths,
-              exactly where small boats spend most of their time.
+              So he learned to build it himself. Next.js, React, TypeScript and
+              Tailwind CSS became part of the design process, not a step after
+              it. The gap between design and code was not a people problem; it
+              was a handoff problem.
             </p>
             <figure className="my-10 border-y border-border py-8">
-              <blockquote className="font-serif text-2xl leading-snug text-foreground md:text-3xl">
-                &ldquo;We did not set out to build a company. We set out to
-                never be rescued again.&rdquo;
+              <blockquote className="text-2xl leading-snug text-foreground md:text-3xl">
+                &ldquo;I design and build digital experiences that look great,
+                feel intuitive and work beautifully.&rdquo;
               </blockquote>
-              <figcaption className="mt-4 text-sm">Inês Barros, co-founder</figcaption>
+              <figcaption className="mt-4 text-sm">Ali Imam, founder of Designali</figcaption>
             </figure>
             <p>
-              The first version of Salt was a 64-page printed booklet, sold
-              from a cafe by the marina. The second was a website. The third,
-              built with two engineers from the university, is the forecasting
-              engine that now runs every Salt product.
+              Dalim Agency, Dalim UI and Dalim Tools followed. Today it is all
+              Designali: a design and development studio, and a library of
+              templates, blocks, icons and logos on designali.com. Design se
+              code tak.
             </p>
           </div>
 
@@ -75,7 +75,7 @@ export default function Sections19() {
                 />
               </svg>
               <p className="mt-4 text-xs leading-5 text-muted-foreground">
-                Predicted (dashed) vs observed tide at Foz do Douro, 14 July 2014.
+                Design (dashed) vs shipped (solid): the gap Designali closes.
               </p>
             </div>
           </aside>

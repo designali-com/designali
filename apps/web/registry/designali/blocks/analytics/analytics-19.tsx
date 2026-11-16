@@ -48,7 +48,7 @@ function Spark({ data }: { data: number[] }) {
         points={pts}
         fill="none"
         strokeWidth="1.5"
-        className={up ? "stroke-emerald-500" : "stroke-rose-500"}
+        className={up ? "stroke-primary" : "stroke-primary"}
       />
     </svg>
   )
@@ -125,7 +125,7 @@ export default function Analytics19() {
             <tbody>
               {sorted.map((r, i) => (
                 <tr key={r.name} className="border-b transition-colors last:border-b-0 hover:bg-muted/40">
-                  <td className="px-4 py-4 font-mono text-xs text-muted-foreground">
+                  <td className="px-4 py-4 font-sans text-xs text-muted-foreground">
                     {String(i + 1).padStart(2, "0")}
                   </td>
                   <td className="px-4 py-4">
@@ -139,9 +139,9 @@ export default function Analytics19() {
                       </div>
                     </div>
                   </td>
-                  <td className="px-4 py-4 text-right font-mono">{r.installs.toLocaleString()}</td>
-                  <td className="px-4 py-4 text-right font-mono">{r.rating.toFixed(1)}</td>
-                  <td className="px-4 py-4 text-right font-mono">${r.revenue.toLocaleString()}</td>
+                  <td className="px-4 py-4 text-right font-sans">{r.installs.toLocaleString()}</td>
+                  <td className="px-4 py-4 text-right font-sans">{r.rating.toFixed(1)}</td>
+                  <td className="px-4 py-4 text-right font-sans">${r.revenue.toLocaleString()}</td>
                   <td className="px-4 py-4">
                     <div className="flex justify-end">
                       <Spark data={r.trend} />

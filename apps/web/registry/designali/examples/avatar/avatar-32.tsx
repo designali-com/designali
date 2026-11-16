@@ -17,7 +17,7 @@ export default function AssistantBotAvatar() {
           <AvatarFallback className="bg-foreground text-background">
             <BotIcon className="size-4" />
           </AvatarFallback>
-          <AvatarBadge className="bg-violet-500 text-white">
+          <AvatarBadge className="bg-primary text-white">
             <SparklesIcon />
           </AvatarBadge>
         </Avatar>

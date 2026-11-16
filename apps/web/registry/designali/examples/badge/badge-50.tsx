@@ -24,7 +24,7 @@ export default function ShippingProgressBadges() {
         <CardTitle>Designali project #48213</CardTitle>
         <CardDescription>Website launch estimated Friday, Apr 11</CardDescription>
         <CardAction>
-          <Badge className="bg-blue-50 text-blue-700 dark:bg-blue-950 dark:text-blue-300">
+          <Badge className="bg-primary/5 text-chart-3 dark:bg-primary/10 dark:text-chart-1">
             <RocketIcon data-icon="inline-start" />
             On track
           </Badge>

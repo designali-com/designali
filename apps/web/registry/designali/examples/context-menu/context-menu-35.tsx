@@ -49,9 +49,9 @@ const initialTodos = [
 ]
 
 const priorityColor: Record<string, string> = {
-  high: "bg-red-500",
-  medium: "bg-amber-500",
-  low: "bg-sky-500",
+  high: "bg-destructive",
+  medium: "bg-primary",
+  low: "bg-primary",
 }
 
 export default function TodoItemMenu() {

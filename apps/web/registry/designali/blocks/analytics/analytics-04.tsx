@@ -63,7 +63,7 @@ export default function Analytics04() {
                         className="absolute inset-y-1 left-0 bg-muted"
                         style={{ width: `${(page.views / maxViews) * 100}%` }}
                       />
-                      <span className="relative font-mono text-xs">{page.path}</span>
+                      <span className="relative font-sans text-xs">{page.path}</span>
                     </td>
                     <td className="py-3 text-right tabular-nums">
                       {page.views.toLocaleString()}

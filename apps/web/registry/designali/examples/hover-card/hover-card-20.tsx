@@ -34,7 +34,7 @@ export default function ChannelMentionHoverCard() {
           <HoverCard>
             <HoverCardTrigger
               href="#"
-              className="bg-blue-500/10 px-1 font-medium text-blue-600 dark:text-blue-400"
+              className="bg-primary/10 px-1 font-medium text-primary dark:text-primary"
             >
               #designali-launch
             </HoverCardTrigger>

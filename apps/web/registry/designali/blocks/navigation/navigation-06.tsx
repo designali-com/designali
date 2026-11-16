@@ -44,7 +44,7 @@ export default function Navigation06() {
           </div>
 
           <a href="#" className="flex flex-col items-center leading-none">
-            <span className="font-serif text-2xl tracking-[0.3em] uppercase">Designali</span>
+            <span className="font-sans text-2xl tracking-[0.3em] uppercase">Designali</span>
             <span className="mt-1 text-[10px] tracking-[0.4em] text-muted-foreground uppercase">
               Design se code tak
             </span>
@@ -94,7 +94,7 @@ export default function Navigation06() {
           <ul className="min-h-0 divide-y px-6">
             {[...left, ...right].map((link) => (
               <li key={link}>
-                <a href="#" className="flex py-4 font-serif text-xl">
+                <a href="#" className="flex py-4 font-sans text-xl">
                   {link}
                 </a>
               </li>
@@ -107,7 +107,7 @@ export default function Navigation06() {
         <p className="text-xs tracking-[0.3em] text-muted-foreground uppercase">
           New template collection
         </p>
-        <p className="mx-auto mt-4 max-w-xl font-serif text-3xl leading-snug md:text-4xl">
+        <p className="mx-auto mt-4 max-w-xl font-sans text-3xl leading-snug md:text-4xl">
           Production-ready templates, designed and coded by Ali Imam.
         </p>
       </div>

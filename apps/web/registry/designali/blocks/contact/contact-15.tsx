@@ -59,7 +59,7 @@ export default function Contact15() {
                 href={`mailto:${topic.email}`}
                 className="group grid gap-4 py-8 sm:grid-cols-[48px_1fr_auto] sm:items-start"
               >
-                <span className="font-mono text-sm text-muted-foreground">
+                <span className="font-sans text-sm text-muted-foreground">
                   {String(index + 1).padStart(2, "0")}
                 </span>
                 <span className="space-y-2">

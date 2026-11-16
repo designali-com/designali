@@ -49,7 +49,7 @@ export default function Grid06() {
               <div className="p-5">
                 <div className="flex items-baseline justify-between gap-3">
                   <h3 className="font-medium">{person.name}</h3>
-                  <span className="font-mono text-[10px] text-muted-foreground uppercase">
+                  <span className="font-sans text-[10px] text-muted-foreground uppercase">
                     {person.city}
                   </span>
                 </div>

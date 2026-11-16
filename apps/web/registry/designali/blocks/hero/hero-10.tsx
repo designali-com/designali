@@ -10,6 +10,8 @@ import {
 
 import { Button } from "@workspace/ui/components/button"
 
+import { CounterNumber } from "@/registry/designali/ui/counter-number"
+
 const managers = [
   { id: "npm", command: "npm install @designali/icons" },
   { id: "pnpm", command: "pnpm add @designali/icons" },
@@ -22,7 +24,7 @@ const output = [
   { text: "Fetching block from designali.com", tone: "text-muted-foreground" },
   { text: "Installing @designali/icons and @designali/logos", tone: "text-muted-foreground" },
   { text: "Writing components/blocks/hero-01.tsx", tone: "text-muted-foreground" },
-  { text: "Done. Design se code tak.", tone: "text-emerald-600 dark:text-emerald-400" },
+  { text: "Done. Design se code tak.", tone: "text-primary dark:text-primary" },
 ]
 
 export default function Hero10() {
@@ -40,7 +42,7 @@ export default function Hero10() {
     <section className="w-full bg-background px-6 py-16 md:py-24">
       <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[1fr_1.1fr]">
         <div className="min-w-0">
-          <p className="inline-flex items-center gap-2 font-mono text-xs text-muted-foreground">
+          <p className="inline-flex items-center gap-2 font-sans text-xs text-muted-foreground">
             <Terminal className="size-3.5" />
             designali / blocks / icons / logos
           </p>
@@ -63,8 +65,8 @@ export default function Hero10() {
                   }}
                   className={
                     manager.id === active
-                      ? "border-b-2 border-foreground px-4 py-2 font-mono text-xs text-foreground"
-                      : "border-b-2 border-transparent px-4 py-2 font-mono text-xs text-muted-foreground hover:text-foreground"
+                      ? "border-b-2 border-foreground px-4 py-2 font-sans text-xs text-foreground"
+                      : "border-b-2 border-transparent px-4 py-2 font-sans text-xs text-muted-foreground hover:text-foreground"
                   }
                 >
                   {manager.id}
@@ -72,7 +74,7 @@ export default function Hero10() {
               ))}
             </div>
             <div className="flex items-center gap-3 bg-muted/40 px-4 py-3">
-              <span className="font-mono text-sm text-muted-foreground">$</span>
+              <span className="font-sans text-sm text-muted-foreground">$</span>
               <code className="min-w-0 flex-1 truncate font-mono text-sm">
                 {current.command}
               </code>
@@ -101,11 +103,11 @@ export default function Hero10() {
             <span className="size-2.5 rounded-full bg-muted-foreground/30" />
             <span className="size-2.5 rounded-full bg-muted-foreground/30" />
             <span className="size-2.5 rounded-full bg-muted-foreground/30" />
-            <span className="ms-3 font-mono text-xs text-muted-foreground">
+            <span className="ms-3 font-sans text-xs text-muted-foreground">
               ~/projects/designali-site
             </span>
           </div>
-          <div className="space-y-2 overflow-x-auto p-5 font-mono text-xs leading-6 sm:text-sm">
+          <div className="space-y-2 overflow-x-auto p-5 font-sans text-xs leading-6 sm:text-sm">
             {output.map((line) => (
               <p key={line.text} className={`whitespace-nowrap ${line.tone}`}>
                 {line.text}
@@ -117,12 +119,12 @@ export default function Hero10() {
           </div>
           <div className="grid grid-cols-3 border-t border-border text-center">
             {[
-              ["460+", "blocks"],
-              ["4000+", "icons"],
-              ["240+", "pages"],
-            ].map(([value, label]) => (
+              { value: 460, label: "blocks" },
+              { value: 4000, label: "icons" },
+              { value: 240, label: "pages" },
+            ].map(({ value, label }) => (
               <div key={label} className="border-e border-border px-2 py-4 last:border-e-0">
-                <p className="text-lg font-medium">{value}</p>
+                <CounterNumber value={value} suffix="+" size="sm" className="block text-lg font-medium" />
                 <p className="text-xs text-muted-foreground">{label}</p>
               </div>
             ))}

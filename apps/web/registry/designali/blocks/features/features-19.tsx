@@ -23,16 +23,16 @@ const groups = [
 
 export default function Features19() {
   return (
-    <section className="w-full bg-neutral-950 px-6 py-20 text-neutral-100 md:py-28">
+    <section className="w-full bg-foreground px-6 py-20 text-background md:py-28">
       <div className="mx-auto max-w-6xl">
         <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
           <div className="max-w-xl">
-            <Shield className="size-8 text-emerald-400" />
+            <Shield className="size-8 text-primary" />
             <h2 className="mt-6 text-3xl font-medium tracking-tight md:text-5xl">
               Production-ready from the first block.
             </h2>
           </div>
-          <p className="max-w-sm text-sm leading-7 text-neutral-400">
+          <p className="max-w-sm text-sm leading-7 text-muted-foreground">
             Every Designali template and block meets the same quality bar,
             on every plan.
           </p>
@@ -41,21 +41,21 @@ export default function Features19() {
           {badges.map((b) => (
             <span
               key={b}
-              className="inline-flex items-center gap-2 border border-neutral-800 bg-neutral-900 px-3 py-2 text-xs"
+              className="inline-flex items-center gap-2 border border-foreground bg-foreground px-3 py-2 text-xs"
             >
-              <BadgeCheck className="size-4 text-emerald-400" />
+              <BadgeCheck className="size-4 text-primary" />
               {b}
             </span>
           ))}
         </div>
-        <div className="mt-12 grid gap-px border border-neutral-800 bg-neutral-800 md:grid-cols-3">
+        <div className="mt-12 grid gap-px border border-foreground bg-foreground md:grid-cols-3">
           {groups.map((g) => (
-            <div key={g.title} className="bg-neutral-950 p-8">
-              <h3 className="text-xs tracking-[0.2em] text-neutral-400 uppercase">{g.title}</h3>
+            <div key={g.title} className="bg-foreground p-8">
+              <h3 className="text-xs tracking-[0.2em] text-muted-foreground uppercase">{g.title}</h3>
               <ul className="mt-6 space-y-4">
                 {g.items.map((item) => (
                   <li key={item} className="flex gap-3 text-sm">
-                    <Check className="mt-0.5 size-4 shrink-0 text-emerald-400" />
+                    <Check className="mt-0.5 size-4 shrink-0 text-primary" />
                     {item}
                   </li>
                 ))}

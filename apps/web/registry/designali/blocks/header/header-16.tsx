@@ -66,12 +66,12 @@ export default function Header16() {
               </ul>
             )}
           </div>
-          <span className="ms-1 hidden items-center gap-1.5 border px-2 py-0.5 font-mono text-[11px] text-muted-foreground md:flex">
+          <span className="ms-1 hidden items-center gap-1.5 border px-2 py-0.5 font-sans text-[11px] text-muted-foreground md:flex">
             <GitBranch className="size-3" />
             main
           </span>
           <span className="hidden items-center gap-1.5 text-xs text-muted-foreground lg:flex">
-            <span className="size-1.5 rounded-full bg-emerald-500" />
+            <span className="size-1.5 rounded-full bg-primary" />
             Ready, 4m ago
           </span>
           <div className="ms-auto flex shrink-0 items-center gap-2">

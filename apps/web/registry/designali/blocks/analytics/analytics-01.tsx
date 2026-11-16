@@ -3,11 +3,13 @@ import {
   ArrowUpRight,
 } from "@designali/icons"
 
+import { CounterNumber } from "@/registry/designali/ui/counter-number"
+
 const stats = [
-  { label: "Template revenue", value: "$184,320", change: "+12.4%", up: true },
-  { label: "Designali Pro members", value: "8,942", change: "+6.1%", up: true },
-  { label: "Refund rate", value: "2.3%", change: "-0.4%", up: false },
-  { label: "Avg. order (blocks & icons)", value: "$64.80", change: "+3.2%", up: true },
+  { label: "Template revenue", value: 184320, prefix: "$", suffix: "", decimals: 0, change: "+12.4%", up: true },
+  { label: "Designali Pro members", value: 8942, prefix: "", suffix: "", decimals: 0, change: "+6.1%", up: true },
+  { label: "Refund rate", value: 2.3, prefix: "", suffix: "%", decimals: 1, change: "-0.4%", up: false },
+  { label: "Avg. order (blocks & icons)", value: 64.8, prefix: "$", suffix: "", decimals: 2, change: "+3.2%", up: true },
 ]
 
 const revenue = [42, 48, 45, 53, 58, 55, 62, 68, 64, 72, 79, 86]
@@ -46,12 +48,16 @@ export default function Analytics01() {
           {stats.map((stat) => (
             <div key={stat.label} className="border-r border-b border-border p-6">
               <p className="text-xs text-muted-foreground">{stat.label}</p>
-              <p className="mt-3 text-2xl font-semibold tracking-tight md:text-3xl">
-                {stat.value}
-              </p>
+              <CounterNumber
+                value={stat.value}
+                prefix={stat.prefix}
+                suffix={stat.suffix}
+                decimalPlaces={stat.decimals}
+                className="mt-3 block text-2xl font-semibold tracking-tight md:text-3xl"
+              />
               <p
                 className={`mt-2 inline-flex items-center gap-1 text-xs ${
-                  stat.up ? "text-emerald-600 dark:text-emerald-400" : "text-rose-600 dark:text-rose-400"
+                  stat.up ? "text-primary dark:text-primary" : "text-primary dark:text-primary"
                 }`}
               >
                 {stat.up ? (

@@ -44,7 +44,7 @@ export default function Forms06() {
                   className="border-background/40 data-checked:border-background data-checked:bg-background data-checked:text-foreground dark:data-checked:bg-background"
                 />
                 <span className="flex-1 text-sm">{topic.title}</span>
-                <span className="font-mono text-[10px] tracking-wider uppercase opacity-60">
+                <span className="font-sans text-[10px] tracking-wider uppercase opacity-60">
                   {topic.cadence}
                 </span>
               </Label>

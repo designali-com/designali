@@ -47,7 +47,7 @@ export default function VerticalLineDocsTabs() {
           value={e.value}
           className="flex flex-col gap-2"
         >
-          <div className="flex items-center gap-2 font-mono">
+          <div className="flex items-center gap-2 font-sans">
             <Badge variant={e.method === "GET" ? "secondary" : "default"}>
               {e.method}
             </Badge>

@@ -21,7 +21,7 @@ export default function ImageAdjustmentsPanel() {
   return (
     <div className="flex w-full max-w-sm flex-col gap-4 border p-4">
       <div
-        className="h-24 w-full bg-gradient-to-r from-teal-400 via-amber-300 to-rose-400"
+        className="h-24 w-full bg-gradient-to-r from-primary via-chart-1 to-primary"
         style={{
           filter:
             "contrast(" +

@@ -29,7 +29,7 @@ export default function CommitOnReleaseSlider() {
       <div className="flex items-center gap-1.5 text-xs text-muted-foreground">
         {live[0] === saved ? (
           <>
-            <CheckIcon className="size-3.5 text-emerald-600 dark:text-emerald-400" />
+            <CheckIcon className="size-3.5 text-primary dark:text-primary" />
             Saved at {saved}%
           </>
         ) : (

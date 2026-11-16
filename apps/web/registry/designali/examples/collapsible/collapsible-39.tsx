@@ -32,7 +32,7 @@ export default function StackedNotificationGroup() {
     <Collapsible className="w-full max-w-sm">
       <div className="relative border bg-background p-3 shadow-sm">
         <div className="flex items-start gap-3">
-          <span className="flex size-8 items-center justify-center bg-emerald-500/15 text-emerald-600">
+          <span className="flex size-8 items-center justify-center bg-primary/15 text-primary">
             <BanknoteIcon className="size-4" />
           </span>
           <div className="flex-1 text-sm">

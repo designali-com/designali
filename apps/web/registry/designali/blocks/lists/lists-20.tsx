@@ -56,11 +56,11 @@ export default function Lists20() {
           <div className="grid grid-cols-2 divide-x divide-border border-b border-border">
             <div className="p-5">
               <p className="text-xs text-muted-foreground">Money in</p>
-              <p className="mt-1 font-mono text-xl font-semibold text-emerald-600 dark:text-emerald-400">{money(income)}</p>
+              <p className="mt-1 font-sans text-xl font-semibold text-primary dark:text-primary">{money(income)}</p>
             </div>
             <div className="p-5">
               <p className="text-xs text-muted-foreground">Money out</p>
-              <p className="mt-1 font-mono text-xl font-semibold">{money(spent)}</p>
+              <p className="mt-1 font-sans text-xl font-semibold">{money(spent)}</p>
             </div>
           </div>
 
@@ -70,7 +70,7 @@ export default function Lists20() {
               <div key={day.date}>
                 <div className="flex items-center justify-between bg-muted/50 px-5 py-2 text-xs">
                   <span className="font-medium">{day.date}</span>
-                  <span className="font-mono text-muted-foreground">{money(net)}</span>
+                  <span className="font-sans text-muted-foreground">{money(net)}</span>
                 </div>
                 <ul className="divide-y divide-border">
                   {day.items.map((txn) => (
@@ -86,14 +86,14 @@ export default function Lists20() {
                       </span>
                       <span className="text-right">
                         <span
-                          className={`block font-mono text-sm ${
-                            txn.amount > 0 ? "text-emerald-600 dark:text-emerald-400" : ""
+                          className={`block font-sans text-sm ${
+                            txn.amount > 0 ? "text-primary dark:text-primary" : ""
                           }`}
                         >
                           {money(txn.amount)}
                         </span>
                         {txn.pending && (
-                          <span className="text-[10px] tracking-wider text-amber-600 uppercase dark:text-amber-400">
+                          <span className="text-[10px] tracking-wider text-primary uppercase dark:text-primary">
                             Pending
                           </span>
                         )}

@@ -21,7 +21,7 @@ export default function StorageBucketBreadcrumb() {
     <div className="flex w-full max-w-md items-center gap-2 border bg-muted/40 px-3 py-2">
       <DatabaseIcon className="size-3.5 shrink-0 text-muted-foreground" />
       <Breadcrumb className="min-w-0 flex-1">
-        <BreadcrumbList className="font-mono">
+        <BreadcrumbList className="font-sans">
           <BreadcrumbItem>
             <BreadcrumbLink href="#" className="font-medium text-foreground">
               media-assets

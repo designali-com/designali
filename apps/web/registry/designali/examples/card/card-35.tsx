@@ -44,7 +44,7 @@ export default function ApiKeyCard() {
           <InputGroupInput
             readOnly
             value={visible ? key : "key_demo_" + "•".repeat(18)}
-            className="font-mono"
+            className="font-sans"
             aria-label="API key"
           />
           <InputGroupAddon align="inline-end">

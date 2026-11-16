@@ -21,7 +21,7 @@ export default function FavoriteHeartToggle() {
           pressed={liked}
           onPressedChange={setLiked}
           aria-label="Like post"
-          className="aria-pressed:text-rose-500"
+          className="aria-pressed:text-primary"
         >
           <HeartIcon className="group-aria-pressed/toggle:fill-current" />
           <span className="tabular-nums">{count}</span>

@@ -1,3 +1,5 @@
+import { Marquee } from "@/registry/designali/ui/marquee"
+
 const row = [
   "Designali",
   "Dalim",
@@ -22,24 +24,16 @@ export default function Clients08() {
         </div>
       </div>
       <div className="relative mt-8 [mask-image:linear-gradient(to_right,transparent,black_15%,black_85%,transparent)]">
-        <div className="flex gap-(--gap) overflow-hidden [--duration:30s] [--gap:4rem]">
-          {[0, 1].map((copy) => (
-            <div
-              key={copy}
-              aria-hidden={copy === 1}
-              className="flex shrink-0 animate-marquee items-center gap-(--gap)"
+        <Marquee gap="4rem" speed={30} repeat={4}>
+          {row.map((name) => (
+            <span
+              key={name}
+              className="text-2xl font-semibold tracking-tight whitespace-nowrap text-muted-foreground/70"
             >
-              {row.map((name) => (
-                <span
-                  key={name}
-                  className="text-2xl font-semibold tracking-tight whitespace-nowrap text-muted-foreground/70"
-                >
-                  {name}
-                </span>
-              ))}
-            </div>
+              {name}
+            </span>
           ))}
-        </div>
+        </Marquee>
       </div>
     </section>
   )

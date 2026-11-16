@@ -44,7 +44,7 @@ export default function EventRsvpDrawer() {
       </DrawerTrigger>
       <DrawerContent>
         <div className="mx-auto flex w-full max-w-sm flex-col">
-          <div className="h-24 bg-gradient-to-r from-orange-300 via-rose-300 to-sky-300 dark:from-orange-700 dark:via-rose-700 dark:to-sky-700" />
+          <div className="h-24 bg-gradient-to-r from-chart-1 via-chart-1 to-chart-1 dark:from-chart-3 dark:via-chart-3 dark:to-chart-3" />
           <DrawerHeader className="text-start">
             <DrawerTitle className="text-base">Design se code tak meetup</DrawerTitle>
             <DrawerDescription>Hosted by Ali Imam</DrawerDescription>

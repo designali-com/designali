@@ -20,17 +20,17 @@ const variantStyles = {
   default: {
     width: 30,
     height: 30,
-    className: "stroke-gray-500/20",
+    className: "stroke-muted-foreground/20",
   },
   small: {
     width: 10,
     height: 10,
-    className: "stroke-gray-500/30",
+    className: "stroke-muted-foreground/30",
   },
   large: {
     width: 60,
     height: 60,
-    className: "fill-gray-500/20 stroke-gray-500/25",
+    className: "fill-muted-foreground/20 stroke-muted-foreground/25",
   },
 }
 

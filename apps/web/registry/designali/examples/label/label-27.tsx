@@ -2,9 +2,9 @@ import { Input } from "@workspace/ui/components/input"
 import { Label } from "@workspace/ui/components/label"
 
 const dims = [
-  { id: "pkg-weight", label: "Weight", unit: "kg", value: "2.4" },
-  { id: "pkg-length", label: "Length", unit: "cm", value: "40" },
-  { id: "pkg-width", label: "Width", unit: "cm", value: "30" },
+  { id: "pkg-weight", label: "Icon size", unit: "px", value: "24" },
+  { id: "pkg-length", label: "Stroke", unit: "px", value: "1.5" },
+  { id: "pkg-width", label: "Padding", unit: "px", value: "4" },
 ]
 
 export default function UnitSuffixLabels() {

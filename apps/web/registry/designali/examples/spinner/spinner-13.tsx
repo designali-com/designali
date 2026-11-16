@@ -42,7 +42,7 @@ export default function FileUploadQueue() {
               <Spinner className="text-muted-foreground" />
             )}
             {file.state === "done" && (
-              <CircleCheckIcon className="size-4 text-emerald-600 dark:text-emerald-400" />
+              <CircleCheckIcon className="size-4 text-primary dark:text-primary" />
             )}
             {file.state === "failed" && (
               <Button variant="ghost" size="icon-xs" aria-label="Retry upload">

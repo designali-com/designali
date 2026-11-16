@@ -49,7 +49,7 @@ export default function PricingPlanCard() {
         <label className="flex items-center gap-2 text-xs">
           <Switch checked={yearly} onCheckedChange={setYearly} />
           Billed yearly{" "}
-          <span className="text-emerald-600 dark:text-emerald-400">
+          <span className="text-primary dark:text-primary">
             save 17%
           </span>
         </label>

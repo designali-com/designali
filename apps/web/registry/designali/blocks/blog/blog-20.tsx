@@ -8,6 +8,8 @@ import {
   Users,
 } from "@designali/icons"
 
+import { BentoGrid, BentoGridItem } from "@/registry/designali/ui/bento"
+
 const topics = [
   {
     name: "Design",
@@ -15,7 +17,7 @@ const topics = [
     count: 84,
     blurb: "Interfaces, type, and color from the Designali studio.",
     latest: ["Spacing scales for 460+ blocks", "Designing designali.com for the second visit"],
-    span: "md:col-span-2",
+    span: 2,
     tone: "bg-chart-1/15",
   },
   {
@@ -24,7 +26,7 @@ const topics = [
     count: 112,
     blurb: "How designali.com is built with Next.js and Vercel.",
     latest: ["Shipping the block registry on Vercel"],
-    span: "",
+    span: 1,
     tone: "bg-chart-2/15",
   },
   {
@@ -33,7 +35,7 @@ const topics = [
     count: 47,
     blurb: "Acquisition experiments, wins and losses.",
     latest: ["The 21st.dev launch that worked"],
-    span: "",
+    span: 1,
     tone: "bg-chart-3/15",
   },
   {
@@ -42,7 +44,7 @@ const topics = [
     count: 63,
     blurb: "Step-by-step tutorials for Designali templates and blocks.",
     latest: ["Install @designali/icons in ten minutes", "Customizing a Designali template"],
-    span: "md:col-span-2",
+    span: 2,
     tone: "bg-chart-4/15",
   },
   {
@@ -51,7 +53,7 @@ const topics = [
     count: 29,
     blurb: "How Ali Imam and the studio work with clients.",
     latest: ["The Designali process, now public"],
-    span: "",
+    span: 1,
     tone: "bg-chart-5/15",
   },
   {
@@ -60,7 +62,7 @@ const topics = [
     count: 38,
     blurb: "Launches and company news.",
     latest: ["Dalim is now Designali"],
-    span: "",
+    span: 1,
     tone: "bg-muted",
   },
 ]
@@ -78,14 +80,23 @@ export default function Blog20() {
           </div>
         </div>
 
-        <div className="mt-10 grid gap-4 md:grid-cols-4">
+        <BentoGrid
+          cols={{ base: 1, md: 4 }}
+          gap={4}
+          rowHeight="auto"
+          className="mt-10"
+        >
           {topics.map((t) => {
             const Icon = t.icon
             return (
-              <a
+              <BentoGridItem
                 key={t.name}
+                colSpan={{ base: 1, md: t.span as 1 | 2 }}
+                className="group p-0 transition-colors hover:border-foreground/40"
+              >
+              <a
                 href="#"
-                className={`group flex flex-col justify-between gap-8 border bg-background p-6 transition-colors hover:border-foreground/40 ${t.span}`}
+                className="flex h-full flex-col justify-between gap-8 p-6"
               >
                 <div className="flex items-start justify-between">
                   <span className={`flex size-11 items-center justify-center ${t.tone}`}>
@@ -96,7 +107,7 @@ export default function Blog20() {
                 <div>
                   <div className="flex items-baseline gap-2">
                     <h3 className="text-xl font-medium">{t.name}</h3>
-                    <span className="font-mono text-xs text-muted-foreground">{t.count}</span>
+                    <span className="font-sans text-xs text-muted-foreground">{t.count}</span>
                   </div>
                   <p className="mt-1 text-sm text-muted-foreground">{t.blurb}</p>
                   <ul className="mt-5 space-y-1.5 border-t pt-4 text-sm">
@@ -109,9 +120,10 @@ export default function Blog20() {
                   </ul>
                 </div>
               </a>
+              </BentoGridItem>
             )
           })}
-        </div>
+        </BentoGrid>
       </div>
     </section>
   )

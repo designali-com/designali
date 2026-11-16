@@ -1,7 +1,9 @@
+import { CounterNumber } from "@/registry/designali/ui/counter-number"
+
 const metrics = [
-  { value: "99.98%", label: "Uptime for designali.com on Vercel", detail: "Last 90 days" },
-  { value: "38ms", label: "Median page response time", detail: "p50, global edge" },
-  { value: "1.2M", label: "Icon & block downloads this month", detail: "Up 18% MoM" },
+  { value: 99.98, decimals: 2, suffix: "%", label: "Uptime for designali.com on Vercel", detail: "Last 90 days" },
+  { value: 38, decimals: 0, suffix: "ms", label: "Median page response time", detail: "p50, global edge" },
+  { value: 1.2, decimals: 1, suffix: "M", label: "Icon & block downloads this month", detail: "Up 18% MoM" },
 ]
 
 const goals = [
@@ -23,9 +25,12 @@ export default function Analytics03() {
         <div className="mt-14 grid divide-y divide-border border-y border-border md:grid-cols-3 md:divide-x md:divide-y-0">
           {metrics.map((metric) => (
             <div key={metric.label} className="py-8 md:px-8 md:first:pl-0">
-              <p className="text-5xl font-light tracking-tighter md:text-6xl">
-                {metric.value}
-              </p>
+              <CounterNumber
+                value={metric.value}
+                decimalPlaces={metric.decimals}
+                suffix={metric.suffix}
+                className="block text-5xl font-light tracking-tighter md:text-6xl"
+              />
               <p className="mt-4 text-sm">{metric.label}</p>
               <p className="mt-1 text-xs text-muted-foreground">{metric.detail}</p>
             </div>
@@ -44,13 +49,13 @@ export default function Analytics03() {
                 <div key={goal.name}>
                   <div className="mb-2 flex items-center justify-between text-sm">
                     <span>{goal.name}</span>
-                    <span className="font-mono text-xs text-muted-foreground">
+                    <span className="font-sans text-xs text-muted-foreground">
                       {goal.current}% / {goal.target}%
                     </span>
                   </div>
                   <div className="relative h-2 w-full bg-muted">
                     <div
-                      className={reached ? "h-full bg-emerald-500" : "h-full bg-primary"}
+                      className={reached ? "h-full bg-primary" : "h-full bg-primary"}
                       style={{ width: `${goal.current}%` }}
                     />
                     <div

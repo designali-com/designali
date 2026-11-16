@@ -40,7 +40,7 @@ export default function MapWithResults() {
       </ResizablePanel>
       <ResizableHandle withHandle />
       <ResizablePanel defaultSize="60%" minSize="35%">
-        <div className="relative h-full bg-emerald-50 bg-[linear-gradient(var(--border)_1px,transparent_1px),linear-gradient(90deg,var(--border)_1px,transparent_1px)] bg-[size:24px_24px] dark:bg-emerald-950/30">
+        <div className="relative h-full bg-primary/5 bg-[linear-gradient(var(--border)_1px,transparent_1px),linear-gradient(90deg,var(--border)_1px,transparent_1px)] bg-[size:24px_24px] dark:bg-primary/30">
           {pins.map((pin, i) => (
             <MapPinIcon
               key={i}

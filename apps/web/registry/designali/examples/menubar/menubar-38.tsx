@@ -60,7 +60,7 @@ export default function GitBranchMenubar() {
             <MenubarLabel inset>Switch to</MenubarLabel>
             <MenubarRadioGroup value={branch} onValueChange={setBranch}>
               {branches.map((b) => (
-                <MenubarRadioItem key={b} value={b} className="font-mono">
+                <MenubarRadioItem key={b} value={b} className="font-sans">
                   {b}
                 </MenubarRadioItem>
               ))}
@@ -77,7 +77,7 @@ export default function GitBranchMenubar() {
           </MenubarGroup>
         </MenubarContent>
       </MenubarMenu>
-      <span className="ms-auto flex min-w-0 items-center gap-1 pe-1 font-mono text-[11px] text-muted-foreground">
+      <span className="ms-auto flex min-w-0 items-center gap-1 pe-1 font-sans text-[11px] text-muted-foreground">
         <GitBranchIcon className="size-3 shrink-0" />
         <span className="truncate">{branch}</span>
       </span>

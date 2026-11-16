@@ -5,11 +5,11 @@ export default function GoldenRatioSpiral() {
     <div className="w-full max-w-sm">
       <AspectRatio
         ratio={1.618}
-        className="border bg-linear-to-br from-amber-100 to-yellow-300 dark:from-amber-900 dark:to-yellow-700"
+        className="border bg-linear-to-br from-primary/10 to-chart-1 dark:from-chart-5 dark:to-chart-3"
       >
         <svg
           viewBox="0 0 161.8 100"
-          className="absolute inset-0 size-full text-amber-900/50 dark:text-amber-100/50"
+          className="absolute inset-0 size-full text-chart-5/50 dark:text-chart-1/50"
           fill="none"
           stroke="currentColor"
           aria-hidden="true"
@@ -24,7 +24,7 @@ export default function GoldenRatioSpiral() {
           />
         </svg>
       </AspectRatio>
-      <p className="mt-2 text-center font-mono text-xs text-muted-foreground">
+      <p className="mt-2 text-center font-sans text-xs text-muted-foreground">
         phi = 1.618 - Designali grid
       </p>
     </div>

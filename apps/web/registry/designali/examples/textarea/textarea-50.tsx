@@ -12,18 +12,18 @@ export default function CodeReviewSuggestion() {
   const [value, setValue] = React.useState("")
 
   return (
-    <div className="w-full max-w-md border font-mono text-xs">
-      <div className="flex bg-rose-500/10">
+    <div className="w-full max-w-md border font-sans text-xs">
+      <div className="flex bg-primary/10">
         <span className="w-8 shrink-0 text-center text-muted-foreground">
           41
         </span>
-        <span className="text-rose-600">- const total = price * qty</span>
+        <span className="text-primary">- const total = price * qty</span>
       </div>
-      <div className="flex bg-emerald-500/10">
+      <div className="flex bg-primary/10">
         <span className="w-8 shrink-0 text-center text-muted-foreground">
           41
         </span>
-        <span className="text-emerald-700 dark:text-emerald-400">
+        <span className="text-chart-3 dark:text-primary">
           + const total = round(price * qty)
         </span>
       </div>

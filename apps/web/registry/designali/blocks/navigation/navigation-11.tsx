@@ -4,6 +4,8 @@ import { useLayoutEffect, useRef, useState } from "react"
 
 import { cn } from "@workspace/ui/lib/utils"
 
+import { Logo } from "@/src/components/logo"
+
 const links = ["Overview", "Blocks", "Changelog", "Pricing", "Docs"]
 
 type Box = { left: number; width: number }
@@ -36,7 +38,7 @@ export default function Navigation11() {
       <div className="mx-auto flex max-w-7xl flex-col items-center gap-10 px-6">
         <header className="flex w-full max-w-3xl items-center justify-between gap-4 border bg-background p-2">
           <a href="#" className="flex shrink-0 items-center gap-2 ps-2 text-sm font-semibold">
-            <span className="size-4 rotate-45 border-2 border-foreground" />
+            <Logo className="h-4 w-auto" />
             <span className="hidden sm:inline">designali</span>
           </a>
           <nav

@@ -27,10 +27,10 @@ export default function Authentication14() {
   const date = now ? now.toLocaleDateString([], { weekday: "long", month: "long", day: "numeric" }) : ""
 
   return (
-    <section className="relative flex min-h-[680px] w-full flex-col items-center justify-between overflow-hidden bg-zinc-950 px-6 py-14 text-white">
+    <section className="relative flex min-h-[680px] w-full flex-col items-center justify-between overflow-hidden bg-foreground px-6 py-14 text-background">
       <div
         aria-hidden
-        className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(99,102,241,0.35),transparent_45%),radial-gradient(circle_at_80%_70%,rgba(236,72,153,0.25),transparent_45%)]"
+        className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,color-mix(in_oklch,var(--primary)_35%,transparent),transparent_45%),radial-gradient(circle_at_80%_70%,color-mix(in_oklch,var(--chart-3)_25%,transparent),transparent_45%)]"
       />
       <div className="relative text-center">
         <p className="text-6xl font-light tracking-tight tabular-nums md:text-7xl">{time}</p>
@@ -38,7 +38,7 @@ export default function Authentication14() {
       </div>
 
       <form className="relative flex w-full max-w-xs flex-col items-center" onSubmit={(event) => event.preventDefault()}>
-        <span className="flex size-20 items-center justify-center rounded-full bg-gradient-to-br from-amber-300 to-rose-500 text-2xl font-semibold text-zinc-950 ring-4 ring-white/10">
+        <span className="flex size-20 items-center justify-center rounded-full bg-gradient-to-br from-chart-1 to-primary text-2xl font-semibold text-foreground ring-4 ring-white/10">
           AI
         </span>
         <p className="mt-4 text-lg font-medium">Ali Imam</p>

@@ -41,7 +41,7 @@ export default function Faqs11() {
         <dl className="grid gap-x-12 gap-y-12 pt-12 sm:grid-cols-2 lg:grid-cols-3">
           {faqs.map((faq, index) => (
             <div key={faq.q}>
-              <span className="font-mono text-sm text-background/40">
+              <span className="font-sans text-sm text-background/40">
                 {String(index + 1).padStart(2, "0")}
               </span>
               <dt className="mt-4 text-lg font-medium tracking-tight">

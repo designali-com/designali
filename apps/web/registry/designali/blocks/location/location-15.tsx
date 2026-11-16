@@ -20,14 +20,14 @@ const sites: { city: string; status: Status; date: string; x: number; y: number 
 
 const legend: { id: Status | "all"; label: string; dot: string }[] = [
   { id: "all", label: "All", dot: "bg-foreground" },
-  { id: "open", label: "Live", dot: "bg-emerald-500" },
-  { id: "soon", label: "Coming soon", dot: "bg-amber-500" },
+  { id: "open", label: "Live", dot: "bg-primary" },
+  { id: "soon", label: "Coming soon", dot: "bg-primary" },
   { id: "planned", label: "Planned", dot: "bg-muted-foreground/50" },
 ]
 
 const dot: Record<Status, string> = {
-  open: "bg-emerald-500 ring-emerald-500/25",
-  soon: "bg-amber-500 ring-amber-500/25",
+  open: "bg-primary ring-primary/25",
+  soon: "bg-primary ring-primary/25",
   planned: "border-2 border-dashed border-muted-foreground bg-background ring-transparent",
 }
 

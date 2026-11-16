@@ -14,7 +14,7 @@ export default function VideoCaptionsToggle() {
   const [captions, setCaptions] = React.useState(true)
 
   return (
-    <div className="relative aspect-video w-full max-w-md overflow-hidden bg-gradient-to-br from-slate-800 to-slate-950 text-white">
+    <div className="relative aspect-video w-full max-w-md overflow-hidden bg-gradient-to-br from-foreground to-foreground text-white">
       <div className="absolute inset-0 flex items-center justify-center">
         <PlayCircleIcon className="size-12 opacity-80" />
       </div>

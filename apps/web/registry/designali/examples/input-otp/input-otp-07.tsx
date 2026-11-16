@@ -50,7 +50,7 @@ export default function AutoSubmitOnComplete() {
         )}
         {status === "done" && (
           <>
-            <CircleCheckIcon className="size-4 text-emerald-600 dark:text-emerald-400" />
+            <CircleCheckIcon className="size-4 text-primary dark:text-primary" />
             Verified. Redirecting...
           </>
         )}

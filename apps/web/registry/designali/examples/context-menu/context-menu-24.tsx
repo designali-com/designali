@@ -39,7 +39,7 @@ export default function ContactCardMenu() {
           <span className="flex items-center gap-1 font-medium">
             Ali Imam
             {favorite ? (
-              <StarIcon className="size-3 fill-amber-400 text-amber-400" />
+              <StarIcon className="size-3 fill-primary text-primary" />
             ) : null}
           </span>
           <span className="text-muted-foreground">

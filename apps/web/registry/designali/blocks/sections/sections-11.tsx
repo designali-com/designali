@@ -34,7 +34,7 @@ export default function Sections11() {
             <ul className="mt-8 space-y-4">
               {before.map((item) => (
                 <li key={item} className="flex gap-3 text-sm text-muted-foreground">
-                  <X className="mt-0.5 size-4 shrink-0 text-red-500 dark:text-red-400" />
+                  <X className="mt-0.5 size-4 shrink-0 text-destructive dark:text-destructive" />
                   {item}
                 </li>
               ))}
@@ -52,7 +52,7 @@ export default function Sections11() {
             <ul className="mt-8 space-y-4">
               {after.map((item) => (
                 <li key={item} className="flex gap-3 text-sm">
-                  <Check className="mt-0.5 size-4 shrink-0 text-emerald-400 dark:text-emerald-600" />
+                  <Check className="mt-0.5 size-4 shrink-0 text-primary dark:text-primary" />
                   {item}
                 </li>
               ))}

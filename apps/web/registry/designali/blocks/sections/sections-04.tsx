@@ -4,12 +4,12 @@ import {
 } from "@designali/icons"
 
 const rows = [
-  { feature: "Unlimited projects", us: true, them: false },
-  { feature: "Offline editing", us: true, them: false },
-  { feature: "Single sign-on on every plan", us: true, them: false },
-  { feature: "Native version control", us: true, them: true },
-  { feature: "Exports without watermarks", us: true, them: false },
-  { feature: "Under 200ms load time", us: true, them: false },
+  { feature: "Design and code from one studio", us: true, them: false },
+  { feature: "Production-ready Next.js code", us: true, them: false },
+  { feature: "Brand identity and design system", us: true, them: false },
+  { feature: "Figma source files included", us: true, them: true },
+  { feature: "460+ blocks to start from", us: true, them: false },
+  { feature: "Deployed on Vercel", us: true, them: false },
 ]
 
 export default function Sections04() {
@@ -21,11 +21,11 @@ export default function Sections04() {
             Compare
           </p>
           <h2 className="mt-4 text-4xl font-semibold tracking-tight md:text-5xl">
-            Why teams are switching
+            Why teams choose designali
           </h2>
           <p className="mx-auto mt-4 max-w-md text-sm text-muted-foreground">
-            A side-by-side look at what you get with Plaintext versus the
-            typical legacy design tool.
+            A side-by-side look at working with Designali versus a typical
+            design-only agency.
           </p>
         </div>
 
@@ -33,10 +33,10 @@ export default function Sections04() {
           <div className="grid grid-cols-[1fr_100px_100px] border-b border-border text-xs font-medium md:grid-cols-[1fr_160px_160px]">
             <div className="p-4 text-muted-foreground">Feature</div>
             <div className="border-l border-border bg-foreground p-4 text-center text-background">
-              Plaintext
+              Designali
             </div>
             <div className="border-l border-border p-4 text-center text-muted-foreground">
-              Others
+              Agencies
             </div>
           </div>
           {rows.map((row) => (

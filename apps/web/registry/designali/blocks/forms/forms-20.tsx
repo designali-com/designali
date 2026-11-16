@@ -85,7 +85,7 @@ export default function Forms20() {
             <div>
               <h3 className="text-2xl font-semibold tracking-tight">{department.heading}</h3>
               <p className="mt-3 text-sm leading-6 text-muted-foreground">{department.blurb}</p>
-              <a href={`mailto:${department.contact}`} className="mt-6 inline-block font-mono text-sm underline underline-offset-4">
+              <a href={`mailto:${department.contact}`} className="mt-6 inline-block font-sans text-sm underline underline-offset-4">
                 {department.contact}
               </a>
             </div>

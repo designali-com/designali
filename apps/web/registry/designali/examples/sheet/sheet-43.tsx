@@ -30,7 +30,7 @@ export default function ProductQuickViewSheet() {
         Quick view
       </SheetTrigger>
       <SheetContent className="sm:max-w-md">
-        <div className="aspect-[4/3] bg-gradient-to-br from-stone-300 via-stone-200 to-stone-400 dark:from-stone-700 dark:via-stone-800 dark:to-stone-600" />
+        <div className="aspect-[4/3] bg-gradient-to-br from-border via-muted to-muted-foreground dark:from-muted dark:via-card dark:to-muted-foreground" />
         <SheetHeader>
           <div className="flex items-start justify-between gap-2">
             <SheetTitle className="text-base">Harbor wool overshirt</SheetTitle>

@@ -26,7 +26,7 @@ export default function NewFeatureBadgesNav() {
       <NavigationMenuList>
         <NavigationMenuItem>
           <NavigationMenuTrigger>
-            Features
+            Designali
             <span className="ms-1.5 size-1.5 rounded-full bg-primary" />
           </NavigationMenuTrigger>
           <NavigationMenuContent>

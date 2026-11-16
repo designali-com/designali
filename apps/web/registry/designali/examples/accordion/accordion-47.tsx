@@ -48,7 +48,7 @@ export default function AccordionSecurityCheckup() {
   return (
     <div className="w-full max-w-md border">
       <div className="flex items-center gap-3 border-b p-3">
-        <ShieldAlertIcon className="size-5 text-amber-600 dark:text-amber-400" />
+        <ShieldAlertIcon className="size-5 text-primary dark:text-primary" />
         <div>
           <p className="text-sm font-medium">{issues} recommendations</p>
           <p className="text-xs text-muted-foreground">
@@ -62,9 +62,9 @@ export default function AccordionSecurityCheckup() {
             <AccordionTrigger className="items-center">
               <span className="flex items-center gap-2">
                 {check.ok ? (
-                  <CircleCheckIcon className="size-4 text-emerald-600 dark:text-emerald-400" />
+                  <CircleCheckIcon className="size-4 text-primary dark:text-primary" />
                 ) : (
-                  <TriangleAlertIcon className="size-4 text-amber-600 dark:text-amber-400" />
+                  <TriangleAlertIcon className="size-4 text-primary dark:text-primary" />
                 )}
                 {check.title}
               </span>

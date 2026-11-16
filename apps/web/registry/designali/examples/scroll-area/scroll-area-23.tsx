@@ -3,14 +3,14 @@ import { cn } from "@workspace/ui/lib/utils"
 
 const hours = Array.from({ length: 13 }, (_, i) => i + 7)
 const events: Record<number, { title: string; tone: string }> = {
-  9: { title: "Standup", tone: "border-sky-500 bg-sky-500/10" },
-  11: { title: "Design review", tone: "border-violet-500 bg-violet-500/10" },
+  9: { title: "Standup", tone: "border-primary bg-primary/10" },
+  11: { title: "Design review", tone: "border-primary bg-primary/10" },
   13: {
     title: "Lunch with Priya",
-    tone: "border-emerald-500 bg-emerald-500/10",
+    tone: "border-primary bg-primary/10",
   },
-  15: { title: "Customer call", tone: "border-amber-500 bg-amber-500/10" },
-  17: { title: "Gym", tone: "border-rose-500 bg-rose-500/10" },
+  15: { title: "Customer call", tone: "border-primary bg-primary/10" },
+  17: { title: "Gym", tone: "border-primary bg-primary/10" },
 }
 
 export default function DayScheduleTimeline() {

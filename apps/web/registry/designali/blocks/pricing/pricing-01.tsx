@@ -5,6 +5,9 @@ import {
 
 import { Button } from "@workspace/ui/components/button"
 
+import { CounterNumber } from "@/registry/designali/ui/counter-number"
+import { GridPattern } from "@/registry/designali/ui/grid-pattern"
+
 export function Pricing() {
     return (
         <section id="pricing" className="scroll-mt-40 flex h-screen relative w-full flex-col items-center px-3 justify-center">
@@ -33,11 +36,11 @@ export function Pricing() {
                                 <h3 className="text-muted-foreground mb-2 text-xs">Included</h3>
                                 <ul className="list-outside space-y-2 text-sm">
                                     <li className="flex items-center gap-2">
-                                        <Check className="size-3 text-green-500" />
+                                        <Check className="size-3 text-primary" />
                                         Access to free all designs
                                     </li>
                                     <li className="flex items-center gap-2">
-                                        <Check className="size-3 text-green-500" />
+                                        <Check className="size-3 text-primary" />
                                         Community forum access
                                     </li>
                                 </ul>
@@ -55,9 +58,12 @@ export function Pricing() {
                             <div>
                                 <h2 className="text-xl font-thin">Business Plan</h2>
                                 <div className="flex items-end gap-1">
-                                    <span className="my-3 block text-7xl font-semibold tracking-tighter">
-                                        $1995
-                                    </span>
+                                    <CounterNumber
+                                        value={1995}
+                                        prefix="$"
+                                        separator=""
+                                        className="my-3 block text-7xl font-semibold tracking-tighter"
+                                    />
                                     <span className="mb-4 block text-xl font-thin">/ Month</span>
                                 </div>
                                 <p className="text-muted-foreground text-sm">
@@ -84,23 +90,23 @@ export function Pricing() {
                                 </h3>
                                 <ul className="list-outside space-y-2 text-sm">
                                     <li className="flex items-center gap-2">
-                                        <Check className="size-3 text-green-500" />I personally
+                                        <Check className="size-3 text-primary" />I personally
                                         handle all design work
                                     </li>
                                     <li className="flex items-center gap-2">
-                                        <Check className="size-3 text-green-500" />
+                                        <Check className="size-3 text-primary" />
                                         Unlimited design revisions
                                     </li>
                                     <li className="flex items-center gap-2">
-                                        <Check className="size-3 text-green-500" />
+                                        <Check className="size-3 text-primary" />
                                         Daily updates on your requests
                                     </li>
                                     <li className="flex items-center gap-2">
-                                        <Check className="size-3 text-green-500" />
+                                        <Check className="size-3 text-primary" />
                                         One active request at a time for better quality
                                     </li>
                                     <li className="flex items-center gap-2">
-                                        <Check className="size-3 text-green-500" />
+                                        <Check className="size-3 text-primary" />
                                         Pause or cancel anytime
                                     </li>
                                 </ul>
@@ -122,19 +128,10 @@ export function Pricing() {
                     opacity: 0.7
                 }}
             >
-                <div
-                    style={{
-                        WebkitMaskImage: 'radial-gradient(ellipse at 50% 50%, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0) 75%)',
-                        backgroundImage: 'linear-gradient(var(--primary) 1px, transparent 1px), linear-gradient(90deg, var(--primary) 1px, transparent 1px)',
-                        backgroundSize: '40px 40px',
-                        height: '100%',
-                        left: '0',
-                        maskImage: 'radial-gradient(ellipse at 50% 50%, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0) 75%)',
-                        pointerEvents: 'none',
-                        position: 'absolute',
-                        top: '0',
-                        width: '100%'
-                    }}
+                <GridPattern
+                    width={40}
+                    height={40}
+                    className="stroke-primary/40 [mask-image:radial-gradient(ellipse_at_center,black_0%,transparent_75%)]"
                 />
             </div>
 

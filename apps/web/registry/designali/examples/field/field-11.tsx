@@ -16,18 +16,18 @@ import {
 import { Slider } from "@workspace/ui/components/slider"
 
 export default function PriceRangeField() {
-  const [range, setRange] = React.useState([40, 260])
+  const [range, setRange] = React.useState([20, 180])
 
   return (
     <FieldSet className="w-full max-w-xs">
-      <FieldLegend variant="label">Price range</FieldLegend>
+      <FieldLegend variant="label">Designali template price</FieldLegend>
       <Slider
         value={range}
         onValueChange={(v) => setRange(v as number[])}
         min={0}
-        max={500}
+        max={300}
         step={10}
-        aria-label="Price range"
+        aria-label="Template price range"
       />
       <div className="grid grid-cols-2 gap-3">
         <Field>

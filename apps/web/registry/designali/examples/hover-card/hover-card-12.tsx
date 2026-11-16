@@ -22,7 +22,7 @@ const checks = [
 export default function PullRequestChecksHoverCard() {
   return (
     <div className="flex w-full max-w-sm items-center gap-2 border p-3 text-sm">
-      <GitPullRequestIcon className="size-4 text-emerald-600" />
+      <GitPullRequestIcon className="size-4 text-primary" />
       <HoverCard>
         <HoverCardTrigger
           href="#"
@@ -38,7 +38,7 @@ export default function PullRequestChecksHoverCard() {
             {checks.map((check) => (
               <li key={check.name} className="flex items-center gap-2">
                 {check.ok ? (
-                  <CircleCheckIcon className="size-3.5 text-emerald-600" />
+                  <CircleCheckIcon className="size-3.5 text-primary" />
                 ) : (
                   <CircleXIcon className="size-3.5 text-destructive" />
                 )}
@@ -47,8 +47,8 @@ export default function PullRequestChecksHoverCard() {
             ))}
           </ul>
           <Separator />
-          <div className="flex gap-3 font-mono">
-            <span className="text-emerald-600">+412</span>
+          <div className="flex gap-3 font-sans">
+            <span className="text-primary">+412</span>
             <span className="text-destructive">−87</span>
             <span className="text-muted-foreground">12 files</span>
           </div>

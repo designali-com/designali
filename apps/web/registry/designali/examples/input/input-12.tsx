@@ -30,7 +30,7 @@ export default function CopyApiKeyInput() {
           id="api-key"
           readOnly
           value={key}
-          className="font-mono"
+          className="font-sans"
         />
         <InputGroupAddon align="inline-end">
           <InputGroupButton

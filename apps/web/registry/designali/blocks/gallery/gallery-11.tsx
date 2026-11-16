@@ -62,7 +62,7 @@ export default function Gallery11() {
                 style={{ background: plate.gradient }}
               />
               <div className="mt-5 grid gap-2 sm:grid-cols-[4rem_1fr]">
-                <span className="font-mono text-sm text-muted-foreground">
+                <span className="font-sans text-sm text-muted-foreground">
                   Pl. {String(i + 1).padStart(2, "0")}
                 </span>
                 <div>

@@ -23,8 +23,8 @@ export default function BackupCodeToggle() {
         </p>
         <p className="text-xs text-muted-foreground">
           {mode === "app"
-            ? "Enter the 6-digit code from your app."
-            : "Enter one of your 10-character backup codes."}
+            ? "Enter the 6-digit Designali code from your app."
+            : "Enter one of your 10-character designali.com backup codes."}
         </p>
       </div>
       <InputOTP
@@ -46,19 +46,19 @@ export default function BackupCodeToggle() {
         ) : (
           <>
             <InputOTPGroup>
-              <InputOTPSlot index={0} className="w-7 font-mono uppercase" />
-              <InputOTPSlot index={1} className="w-7 font-mono uppercase" />
-              <InputOTPSlot index={2} className="w-7 font-mono uppercase" />
-              <InputOTPSlot index={3} className="w-7 font-mono uppercase" />
-              <InputOTPSlot index={4} className="w-7 font-mono uppercase" />
+              <InputOTPSlot index={0} className="w-7 font-sans uppercase" />
+              <InputOTPSlot index={1} className="w-7 font-sans uppercase" />
+              <InputOTPSlot index={2} className="w-7 font-sans uppercase" />
+              <InputOTPSlot index={3} className="w-7 font-sans uppercase" />
+              <InputOTPSlot index={4} className="w-7 font-sans uppercase" />
             </InputOTPGroup>
             <InputOTPSeparator />
             <InputOTPGroup>
-              <InputOTPSlot index={5} className="w-7 font-mono uppercase" />
-              <InputOTPSlot index={6} className="w-7 font-mono uppercase" />
-              <InputOTPSlot index={7} className="w-7 font-mono uppercase" />
-              <InputOTPSlot index={8} className="w-7 font-mono uppercase" />
-              <InputOTPSlot index={9} className="w-7 font-mono uppercase" />
+              <InputOTPSlot index={5} className="w-7 font-sans uppercase" />
+              <InputOTPSlot index={6} className="w-7 font-sans uppercase" />
+              <InputOTPSlot index={7} className="w-7 font-sans uppercase" />
+              <InputOTPSlot index={8} className="w-7 font-sans uppercase" />
+              <InputOTPSlot index={9} className="w-7 font-sans uppercase" />
             </InputOTPGroup>
           </>
         )}

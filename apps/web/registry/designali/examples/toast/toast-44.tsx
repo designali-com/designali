@@ -40,7 +40,7 @@ function PriceToasts() {
             className={cn(
               "flex size-9 shrink-0 items-center justify-center",
               up
-                ? "bg-emerald-500/15 text-emerald-600"
+                ? "bg-primary/15 text-primary"
                 : "bg-destructive/15 text-destructive"
             )}
           >

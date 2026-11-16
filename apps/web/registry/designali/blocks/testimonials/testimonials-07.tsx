@@ -35,12 +35,12 @@ export default function Testimonials07() {
               key={q.name}
               className="grid gap-6 border-b border-border py-10 md:grid-cols-[80px_1fr_220px] md:gap-10"
             >
-              <span className="font-mono text-sm text-muted-foreground">
+              <span className="font-sans text-sm text-muted-foreground">
                 {String(i + 1).padStart(2, "0")}
               </span>
               <blockquote className="text-xl leading-relaxed tracking-tight md:text-2xl">
                 &ldquo;{q.before}
-                <mark className="bg-yellow-200/70 px-1 text-foreground dark:bg-yellow-500/30">
+                <mark className="bg-primary/70 px-1 text-foreground dark:bg-primary/30">
                   {q.highlight}
                 </mark>
                 {q.after}&rdquo;

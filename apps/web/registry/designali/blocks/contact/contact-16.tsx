@@ -18,8 +18,8 @@ export default function Contact16() {
   return (
     <section className="relative w-full overflow-hidden bg-background py-20 md:py-28">
       <div aria-hidden className="absolute inset-0">
-        <div className="absolute -top-24 -left-24 size-[28rem] rounded-full bg-sky-300/40 blur-3xl dark:bg-sky-500/20" />
-        <div className="absolute -right-24 -bottom-32 size-[30rem] rounded-full bg-violet-400/40 blur-3xl dark:bg-violet-600/25" />
+        <div className="absolute -top-24 -left-24 size-[28rem] rounded-full bg-chart-1/40 blur-3xl dark:bg-primary/20" />
+        <div className="absolute -right-24 -bottom-32 size-[30rem] rounded-full bg-primary/40 blur-3xl dark:bg-chart-2/25" />
       </div>
       <div
         aria-hidden

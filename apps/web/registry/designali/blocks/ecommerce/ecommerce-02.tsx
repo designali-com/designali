@@ -12,12 +12,23 @@ import {
 
 import { Button } from "@workspace/ui/components/button"
 import { cn } from "@workspace/ui/lib/utils"
+import { IPad } from "@/registry/designali/ui/apple/ipad"
+import { IPhone } from "@/registry/designali/ui/apple/iphone"
+import { Macbook } from "@/registry/designali/ui/apple/macbook"
+import { StudioDisplay } from "@/registry/designali/ui/apple/studio-display"
 
 const colors = [
-  { name: "Light", value: "#e5e7eb" },
-  { name: "Dark", value: "#1f2937" },
-  { name: "Designali Blue", value: "#00A8FF" },
+  { name: "Light", value: "white" },
+  { name: "Dark", value: "black" },
+  { name: "Designali Blue", value: "var(--primary)" },
 ]
+
+const screen = "/images/templates/design-agency.jpg"
+const views = ["MacBook", "iPad", "iPhone", "Studio Display"]
+
+function Screen() {
+  return <img src={screen} alt="Design Agency Template" className="size-full object-cover object-top" />
+}
 
 const sizes = ["Solo", "Pro", "Team", "Studio", "Agency"]
 
@@ -33,26 +44,49 @@ export default function Ecommerce02() {
       <div className="mx-auto grid max-w-6xl gap-10 px-6 lg:grid-cols-2">
         <div className="flex flex-col-reverse gap-3 sm:flex-row">
           <div className="flex gap-3 sm:flex-col">
-            {[0, 1, 2, 3].map((i) => (
+            {views.map((label, i) => (
               <button
-                key={i}
+                key={label}
                 type="button"
                 onClick={() => setView(i)}
-                aria-label={`Show image ${i + 1}`}
+                aria-label={`Show ${label} preview`}
                 className={cn(
-                  "size-16 shrink-0 border transition-colors",
+                  "size-16 shrink-0 overflow-hidden border transition-colors",
                   view === i ? "border-foreground" : "border-border"
                 )}
                 style={{ background: `linear-gradient(${i * 60}deg, ${swatch}, transparent)` }}
-              />
+              >
+                <img src={screen} alt="" className="size-full object-cover object-top opacity-80" />
+              </button>
             ))}
           </div>
           <div
-            className="aspect-[4/5] flex-1 border border-border transition-colors"
+            className="flex aspect-[4/5] flex-1 items-center justify-center overflow-hidden border border-border p-4 transition-colors"
             style={{
               background: `linear-gradient(${view * 60 + 160}deg, ${swatch} 0%, transparent 90%)`,
             }}
-          />
+          >
+            {view === 0 && (
+              <Macbook variant="macbook-pro" color="silver" size="sm" className="w-full! max-w-full">
+                <Screen />
+              </Macbook>
+            )}
+            {view === 1 && (
+              <IPad variant="ipad-pro" color="silver" size="sm" className="h-auto! w-full! max-w-full">
+                <Screen />
+              </IPad>
+            )}
+            {view === 2 && (
+              <IPhone size="md" color="silver" className="h-auto! w-1/2! max-w-full">
+                <Screen />
+              </IPhone>
+            )}
+            {view === 3 && (
+              <StudioDisplay color="light" size="sm" className="h-auto! w-full! max-w-full">
+                <Screen />
+              </StudioDisplay>
+            )}
+          </div>
         </div>
 
         <div>
@@ -65,7 +99,7 @@ export default function Ecommerce02() {
           <div className="mt-3 flex items-center gap-3 text-sm">
             <span className="text-2xl">$79</span>
             <span className="flex items-center gap-1 text-muted-foreground">
-              <Star className="size-4 fill-current text-amber-500" />
+              <Star className="size-4 fill-current text-primary" />
               4.8 · 326 reviews
             </span>
           </div>

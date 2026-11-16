@@ -16,17 +16,17 @@ export default function HolidayLegendCalendar() {
         modifiers={{ holiday: fullDays, half: halfDays }}
         modifiersClassNames={{
           holiday:
-            "[&>button]:bg-rose-500/15 [&>button]:text-rose-700 dark:[&>button]:text-rose-400",
-          half: "[&>button]:bg-[linear-gradient(135deg,var(--color-amber-500)_50%,transparent_50%)]/20 [&>button]:text-amber-700 dark:[&>button]:text-amber-400",
+            "[&>button]:bg-primary/15 [&>button]:text-chart-3 dark:[&>button]:text-primary",
+          half: "[&>button]:bg-[linear-gradient(135deg,var(--color-primary)_50%,transparent_50%)]/20 [&>button]:text-chart-3 dark:[&>button]:text-primary",
         }}
         className="border"
       />
       <div className="flex w-full justify-center gap-4 text-xs text-muted-foreground">
         <span className="flex items-center gap-1.5">
-          <span className="size-2.5 bg-rose-500/30" /> Studio closed
+          <span className="size-2.5 bg-primary/30" /> Studio closed
         </span>
         <span className="flex items-center gap-1.5">
-          <span className="size-2.5 bg-amber-500/30" /> Half day
+          <span className="size-2.5 bg-primary/30" /> Half day
         </span>
       </div>
     </div>

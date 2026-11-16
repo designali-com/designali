@@ -16,6 +16,8 @@ import {
 } from "@workspace/ui/components/drawer"
 import { cn } from "@workspace/ui/lib/utils"
 
+import { CounterNumber } from "@/registry/designali/ui/counter-number"
+
 const channels = [
   { name: "Organic search", value: 18420, color: "bg-chart-1" },
   { name: "Direct", value: 9310, color: "bg-chart-2" },
@@ -38,10 +40,11 @@ export default function MetricBreakdownDrawer() {
           Visitors · 30 days
           <ChevronRightIcon className="size-4" />
         </span>
-        <span className="font-heading text-2xl font-semibold tabular-nums">
-          {total.toLocaleString("en-US")}
-        </span>
-        <span className="flex items-center gap-1 text-emerald-600 dark:text-emerald-400">
+        <CounterNumber
+          value={total}
+          className="font-heading text-2xl font-semibold tracking-normal"
+        />
+        <span className="flex items-center gap-1 text-primary dark:text-primary">
           <TrendingUpIcon className="size-3.5" />
           +12.4% vs last period
         </span>

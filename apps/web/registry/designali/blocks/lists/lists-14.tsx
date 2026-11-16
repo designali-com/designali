@@ -18,8 +18,8 @@ const initial = [
 ]
 
 const statusTone: Record<string, string> = {
-  Planned: "text-violet-700 dark:text-violet-300",
-  "In progress": "text-sky-700 dark:text-sky-300",
+  Planned: "text-chart-3 dark:text-chart-1",
+  "In progress": "text-chart-3 dark:text-chart-1",
   "Under review": "text-muted-foreground",
 }
 
@@ -68,7 +68,7 @@ export default function Lists14() {
                   )}
                 >
                   <ChevronUp className="size-4" />
-                  <span className="font-mono text-xs font-semibold">{item.votes}</span>
+                  <span className="font-sans text-xs font-semibold">{item.votes}</span>
                 </button>
                 <div className="min-w-0 flex-1">
                   <h3 className="text-sm font-medium sm:text-base">{item.title}</h3>

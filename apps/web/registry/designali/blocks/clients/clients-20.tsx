@@ -5,11 +5,11 @@ import {
 import { Button } from "@workspace/ui/components/button"
 
 const marks = [
-  { initials: "DA", className: "bg-sky-500" },
-  { initials: "DU", className: "bg-violet-500" },
-  { initials: "DI", className: "bg-emerald-500" },
-  { initials: "DF", className: "bg-amber-500" },
-  { initials: "DW", className: "bg-rose-500" },
+  { initials: "DA", className: "bg-primary" },
+  { initials: "DU", className: "bg-primary" },
+  { initials: "DI", className: "bg-primary" },
+  { initials: "DF", className: "bg-primary" },
+  { initials: "DW", className: "bg-primary" },
 ]
 
 const names = ["Designali Blocks", "Designali Icons", "Designali Templates", "Dalim UI", "Dalim Works"]
@@ -35,7 +35,7 @@ export default function Clients20() {
             </div>
             <div>
               <div className="flex items-center gap-2">
-                <div className="flex text-amber-500 dark:text-amber-400">
+                <div className="flex text-primary dark:text-primary">
                   {[0, 1, 2, 3, 4].map((i) => (
                     <Star key={i} className="size-4 fill-current" />
                   ))}

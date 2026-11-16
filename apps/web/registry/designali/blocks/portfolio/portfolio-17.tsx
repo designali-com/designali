@@ -12,8 +12,8 @@ const repos = [
     stars: "8.4k",
     forks: "312",
     languages: [
-      { name: "TypeScript", share: 72, color: "bg-sky-500" },
-      { name: "SVG", share: 28, color: "bg-orange-500" },
+      { name: "TypeScript", share: 72, color: "bg-primary" },
+      { name: "SVG", share: 28, color: "bg-primary" },
     ],
   },
   {
@@ -22,8 +22,8 @@ const repos = [
     stars: "3.1k",
     forks: "148",
     languages: [
-      { name: "TypeScript", share: 91, color: "bg-sky-500" },
-      { name: "CSS", share: 9, color: "bg-violet-500" },
+      { name: "TypeScript", share: 91, color: "bg-primary" },
+      { name: "CSS", share: 9, color: "bg-primary" },
     ],
   },
   {
@@ -32,7 +32,7 @@ const repos = [
     stars: "1.2k",
     forks: "41",
     languages: [
-      { name: "TypeScript", share: 100, color: "bg-sky-500" },
+      { name: "TypeScript", share: 100, color: "bg-primary" },
     ],
   },
   {
@@ -41,8 +41,8 @@ const repos = [
     stars: "960",
     forks: "57",
     languages: [
-      { name: "TypeScript", share: 80, color: "bg-sky-500" },
-      { name: "MDX", share: 20, color: "bg-amber-500" },
+      { name: "TypeScript", share: 80, color: "bg-primary" },
+      { name: "MDX", share: 20, color: "bg-primary" },
     ],
   },
 ]
@@ -56,10 +56,10 @@ const activity = Array.from({ length: 26 * 7 }, (_, i) => {
 
 const levels = [
   "bg-muted",
-  "bg-emerald-200 dark:bg-emerald-900",
-  "bg-emerald-400 dark:bg-emerald-700",
-  "bg-emerald-500 dark:bg-emerald-500",
-  "bg-emerald-700 dark:bg-emerald-300",
+  "bg-primary/20 dark:bg-primary/10",
+  "bg-primary dark:bg-chart-3",
+  "bg-primary dark:bg-primary",
+  "bg-chart-3 dark:bg-chart-1",
 ]
 
 export default function Portfolio17() {
@@ -68,7 +68,7 @@ export default function Portfolio17() {
       <div className="mx-auto max-w-6xl px-6">
         <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
           <div className="flex items-center gap-4">
-            <span className="flex size-14 shrink-0 items-center justify-center bg-foreground font-mono text-lg text-background">
+            <span className="flex size-14 shrink-0 items-center justify-center bg-foreground font-sans text-lg text-background">
               AI
             </span>
             <div>
@@ -111,7 +111,7 @@ export default function Portfolio17() {
               className="group flex flex-col border border-border bg-card p-5 transition-colors hover:border-foreground/40"
             >
               <div className="flex items-start justify-between gap-4">
-                <p className="font-mono text-sm font-medium group-hover:underline">{repo.name}</p>
+                <p className="font-sans text-sm font-medium group-hover:underline">{repo.name}</p>
                 <span className="flex shrink-0 items-center gap-3 text-xs text-muted-foreground">
                   <span className="flex items-center gap-1">
                     <Star className="size-3.5" />

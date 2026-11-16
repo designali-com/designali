@@ -29,7 +29,7 @@ export default function ScreenshotHotspots() {
       <ol className="mt-3 flex flex-col gap-1 text-xs">
         {spots.map((spot) => (
           <li key={spot.id} className="flex gap-2">
-            <span className="font-mono text-muted-foreground">{spot.id}.</span>
+            <span className="font-sans text-muted-foreground">{spot.id}.</span>
             {spot.label}
           </li>
         ))}

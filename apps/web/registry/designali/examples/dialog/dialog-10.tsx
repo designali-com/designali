@@ -53,7 +53,7 @@ export default function CreateApiKeyDialog() {
                 safe.
               </DialogDescription>
             </DialogHeader>
-            <div className="border bg-muted p-3 font-mono break-all">
+            <div className="border bg-muted p-3 font-sans break-all">
               key_demo_4zYk
             </div>
             <DialogFooter>

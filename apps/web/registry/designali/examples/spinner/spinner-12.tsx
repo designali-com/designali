@@ -49,7 +49,7 @@ export default function TableRowStatusSpinner() {
         <TableBody>
           {invoices.map((invoice) => (
             <TableRow key={invoice.id}>
-              <TableCell className="font-mono text-xs">{invoice.id}</TableCell>
+              <TableCell className="font-sans text-xs">{invoice.id}</TableCell>
               <TableCell>{invoice.client}</TableCell>
               <TableCell>
                 {invoice.status === "Processing" ? (
@@ -59,7 +59,7 @@ export default function TableRowStatusSpinner() {
                   </span>
                 ) : (
                   <span className="flex items-center gap-1.5">
-                    <CheckIcon className="size-3 text-emerald-600 dark:text-emerald-400" />
+                    <CheckIcon className="size-3 text-primary dark:text-primary" />
                     Paid
                   </span>
                 )}

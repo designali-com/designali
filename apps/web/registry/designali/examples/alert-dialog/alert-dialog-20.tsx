@@ -43,7 +43,7 @@ export default function TypeToConfirmDelete() {
         <Field>
           <FieldLabel htmlFor="confirm-project">
             Type{" "}
-            <span className="font-mono text-foreground">{projectName}</span> to
+            <span className="font-sans text-foreground">{projectName}</span> to
             confirm
           </FieldLabel>
           <Input

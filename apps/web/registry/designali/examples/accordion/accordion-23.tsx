@@ -41,8 +41,8 @@ const endpoints = [
 ]
 
 const methodClass: Record<string, string> = {
-  GET: "bg-sky-500/15 text-sky-700 dark:text-sky-300",
-  POST: "bg-emerald-500/15 text-emerald-700 dark:text-emerald-300",
+  GET: "bg-primary/15 text-chart-3 dark:text-chart-1",
+  POST: "bg-primary/15 text-chart-3 dark:text-chart-1",
   DELETE: "bg-destructive/15 text-destructive",
 }
 
@@ -51,7 +51,7 @@ export default function AccordionApiEndpoints() {
     <Accordion defaultValue={["list"]} className="w-full max-w-md border px-3">
       {endpoints.map((endpoint) => (
         <AccordionItem key={endpoint.value} value={endpoint.value}>
-          <AccordionTrigger className="items-center font-mono">
+          <AccordionTrigger className="items-center font-sans">
             <span className="flex min-w-0 items-center gap-2">
               <span
                 className={cn(

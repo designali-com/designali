@@ -72,26 +72,26 @@ export default function Contact17() {
                       className={cn(
                         "mt-1 flex items-center gap-1.5 text-xs",
                         info?.open
-                          ? "text-emerald-700 dark:text-emerald-400"
+                          ? "text-chart-3 dark:text-primary"
                           : "text-muted-foreground"
                       )}
                     >
                       <span
                         className={cn(
                           "size-1.5 rounded-full",
-                          info?.open ? "bg-emerald-500" : "bg-muted-foreground/40"
+                          info?.open ? "bg-primary" : "bg-muted-foreground/40"
                         )}
                       />
                       {info ? (info.open ? "Open now" : "Closed") : " "}
                     </p>
                   </div>
                   {info?.open ? (
-                    <Sun className="size-5 text-amber-500" />
+                    <Sun className="size-5 text-primary" />
                   ) : (
                     <Moon className="size-5 text-muted-foreground" />
                   )}
                 </div>
-                <p className="font-mono text-5xl font-light tracking-tight tabular-nums">
+                <p className="font-sans text-5xl font-light tracking-tight tabular-nums">
                   {info?.time ?? "--:--"}
                 </p>
                 <div className="space-y-1 border-t pt-4 text-sm">

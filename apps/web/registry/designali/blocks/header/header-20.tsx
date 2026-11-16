@@ -46,8 +46,8 @@ export default function Header20() {
           <div className="flex items-center justify-end gap-6">
             <span className="hidden items-center gap-2 text-xs md:flex">
               <span className="relative flex size-2">
-                <span className="absolute inset-0 animate-ping rounded-full bg-emerald-500 opacity-60" />
-                <span className="relative size-2 rounded-full bg-emerald-500" />
+                <span className="absolute inset-0 animate-ping rounded-full bg-primary opacity-60" />
+                <span className="relative size-2 rounded-full bg-primary" />
               </span>
               Booking new projects
             </span>
@@ -71,14 +71,14 @@ export default function Header20() {
             <nav className="mx-auto max-w-7xl px-6 py-4">
               {links.map((link, index) => (
                 <a key={link} href="#" className="flex items-baseline gap-4 border-b py-4 text-2xl font-medium tracking-tight">
-                  <span className="font-mono text-xs text-muted-foreground">0{index + 1}</span>
+                  <span className="font-sans text-xs text-muted-foreground">0{index + 1}</span>
                   {link}
                 </a>
               ))}
             </nav>
             <div className="mx-auto flex max-w-7xl flex-col gap-4 px-6 pb-6">
               <span className="flex items-center gap-2 text-xs text-muted-foreground">
-                <span className="size-2 rounded-full bg-emerald-500" />
+                <span className="size-2 rounded-full bg-primary" />
                 Booking new projects
               </span>
               <a href="#" className="flex items-center justify-between bg-foreground px-4 py-3 text-sm text-background">

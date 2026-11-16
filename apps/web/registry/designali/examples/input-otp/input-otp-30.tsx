@@ -25,7 +25,7 @@ export default function AttemptsRemaining() {
   return (
     <div className="flex w-full max-w-xs flex-col gap-3">
       <div className="flex items-center justify-between">
-        <span className="text-xs font-medium">Security code</span>
+        <span className="text-xs font-medium">designali.com security code</span>
         <Badge variant={attempts <= 1 ? "destructive" : "secondary"}>
           {attempts} attempts left
         </Badge>
@@ -53,7 +53,7 @@ export default function AttemptsRemaining() {
       <p className="text-xs text-muted-foreground">
         {invalid
           ? "Incorrect code. Hint: try 246810."
-          : "Enter the code from your email."}
+          : "Enter the code from your Designali email."}
       </p>
     </div>
   )

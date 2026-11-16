@@ -10,9 +10,9 @@ const thread = [
 ]
 
 const avatar: Record<string, string> = {
-  Tess: "bg-rose-200 text-rose-900 dark:bg-rose-900 dark:text-rose-100",
-  Marcus: "bg-sky-200 text-sky-900 dark:bg-sky-900 dark:text-sky-100",
-  Priya: "bg-amber-200 text-amber-900 dark:bg-amber-900 dark:text-amber-100",
+  Tess: "bg-primary/20 text-chart-5 dark:bg-primary/10 dark:text-chart-1",
+  Marcus: "bg-primary/20 text-chart-5 dark:bg-primary/10 dark:text-chart-1",
+  Priya: "bg-primary/20 text-chart-5 dark:bg-primary/10 dark:text-chart-1",
 }
 
 export default function Testimonials20() {

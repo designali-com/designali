@@ -41,7 +41,7 @@ export default function AlertRecoveryCodes() {
           Each code works once. Store them somewhere safe, you won&apos;t see
           them again.
         </p>
-        <div className="grid grid-cols-2 gap-1 border bg-background p-2 font-mono text-foreground sm:grid-cols-3">
+        <div className="grid grid-cols-2 gap-1 border bg-background p-2 font-sans text-foreground sm:grid-cols-3">
           {codes.map((code) => (
             <span key={code}>{code}</span>
           ))}

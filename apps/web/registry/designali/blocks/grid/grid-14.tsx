@@ -38,7 +38,7 @@ export default function Grid14() {
   return (
     <section className="w-full bg-muted/30 py-24">
       <div className="mx-auto max-w-5xl px-6">
-        <p className="font-mono text-xs text-muted-foreground">Step 2 of 3</p>
+        <p className="font-sans text-xs text-muted-foreground">Step 2 of 3</p>
         <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-4xl">
           What will you build with Designali?
         </h2>
@@ -75,7 +75,7 @@ export default function Grid14() {
                   <span className="block font-medium">{option.title}</span>
                   <span className="mt-1 block text-sm leading-6 text-muted-foreground">{option.text}</span>
                 </span>
-                <span className="font-mono text-[10px] tracking-wider text-muted-foreground uppercase">
+                <span className="font-sans text-[10px] tracking-wider text-muted-foreground uppercase">
                   {option.includes}
                 </span>
               </button>

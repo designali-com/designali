@@ -18,8 +18,8 @@ export default function Lists16() {
   return (
     <section className="w-full bg-background py-24">
       <div className="mx-auto max-w-4xl px-6">
-        <div className="flex items-center gap-4 border border-emerald-600/30 bg-emerald-50 p-5 dark:bg-emerald-500/10">
-          <CircleCheck className="size-6 shrink-0 text-emerald-600 dark:text-emerald-400" />
+        <div className="flex items-center gap-4 border border-chart-2/30 bg-primary/5 p-5 dark:bg-primary/10">
+          <CircleCheck className="size-6 shrink-0 text-primary dark:text-primary" />
           <div>
             <h2 className="font-semibold">All Designali systems operational</h2>
             <p className="text-xs text-muted-foreground">Last checked 40 seconds ago</p>
@@ -37,21 +37,21 @@ export default function Lists16() {
               <div className="flex items-center justify-between gap-4">
                 <span className="inline-flex items-center gap-2 text-sm font-medium">
                   {service.incidents.length > 0 ? (
-                    <CircleAlert className="size-4 text-amber-500" />
+                    <CircleAlert className="size-4 text-primary" />
                   ) : (
-                    <CircleCheck className="size-4 text-emerald-600 dark:text-emerald-400" />
+                    <CircleCheck className="size-4 text-primary dark:text-primary" />
                   )}
                   {service.name}
                 </span>
-                <span className="font-mono text-xs text-muted-foreground">{service.uptime.toFixed(2)}%</span>
+                <span className="font-sans text-xs text-muted-foreground">{service.uptime.toFixed(2)}%</span>
               </div>
               <div className="mt-3 flex h-8 gap-px">
                 {Array.from({ length: days }).map((_, day) => {
                   const tone = service.incidents.includes(day)
-                    ? "bg-rose-500"
+                    ? "bg-primary"
                     : service.degraded.includes(day)
-                      ? "bg-amber-400"
-                      : "bg-emerald-500"
+                      ? "bg-primary"
+                      : "bg-primary"
                   return (
                     <span
                       key={day}
@@ -61,7 +61,7 @@ export default function Lists16() {
                   )
                 })}
               </div>
-              <div className="mt-2 flex justify-between font-mono text-[10px] text-muted-foreground">
+              <div className="mt-2 flex justify-between font-sans text-[10px] text-muted-foreground">
                 <span>
                   <span className="sm:hidden">45 days ago</span>
                   <span className="hidden sm:inline">90 days ago</span>
@@ -73,9 +73,9 @@ export default function Lists16() {
         </ul>
 
         <div className="mt-6 flex flex-wrap gap-4 text-xs text-muted-foreground">
-          <span className="inline-flex items-center gap-1.5"><span className="size-2 bg-emerald-500" /> Operational</span>
-          <span className="inline-flex items-center gap-1.5"><span className="size-2 bg-amber-400" /> Degraded</span>
-          <span className="inline-flex items-center gap-1.5"><span className="size-2 bg-rose-500" /> Outage</span>
+          <span className="inline-flex items-center gap-1.5"><span className="size-2 bg-primary" /> Operational</span>
+          <span className="inline-flex items-center gap-1.5"><span className="size-2 bg-primary" /> Degraded</span>
+          <span className="inline-flex items-center gap-1.5"><span className="size-2 bg-primary" /> Outage</span>
         </div>
       </div>
     </section>

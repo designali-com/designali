@@ -14,12 +14,12 @@ export default function PackageVersionHoverCard() {
     <div className="flex w-full max-w-xs items-center justify-between border p-3 text-sm">
       <div className="flex items-center gap-2">
         <PackageIcon className="size-4 text-muted-foreground" />
-        <span className="font-mono">@designali/icons</span>
+        <span className="font-sans">@designali/icons</span>
       </div>
       <HoverCard>
         <HoverCardTrigger
           render={
-            <Badge variant="secondary" className="cursor-default font-mono" />
+            <Badge variant="secondary" className="cursor-default font-sans" />
           }
         >
           2.4.0 → 2.5.1

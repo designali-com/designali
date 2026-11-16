@@ -46,7 +46,7 @@ export default function ChangelogReleases() {
           <CollapsibleTrigger
             render={
               <Button variant="ghost" className="w-full justify-start px-3">
-                <span className="font-mono">{release.version}</span>
+                <span className="font-sans">{release.version}</span>
                 {index === 0 && <Badge>Latest</Badge>}
                 <span className="ml-auto text-xs text-muted-foreground">
                   {release.date}

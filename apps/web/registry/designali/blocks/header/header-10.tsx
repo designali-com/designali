@@ -37,7 +37,7 @@ export default function Header10() {
         <div className="border-b py-8 text-center md:py-10">
           <a
             href="#"
-            className="font-serif text-5xl font-bold tracking-tight md:text-7xl"
+            className="font-sans text-5xl font-bold tracking-tight md:text-7xl"
           >
             designali
           </a>

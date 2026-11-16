@@ -82,7 +82,7 @@ export default function CouponCodePopover() {
           </Popover>
         )}
         {applied && (
-          <span className="text-emerald-600 tabular-nums dark:text-emerald-400">
+          <span className="text-primary tabular-nums dark:text-primary">
             -${discount.toFixed(2)}
           </span>
         )}

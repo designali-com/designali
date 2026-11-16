@@ -2,36 +2,45 @@ import {
   ArrowUpRight,
 } from "@designali/icons"
 
+import { Macbook } from "@/registry/designali/ui/apple/macbook"
+import { CounterNumber } from "@/registry/designali/ui/counter-number"
+
 const cases = [
   {
     company: "Resort Website",
     initials: "RW",
     industry: "Hospitality",
-    metric: "3x",
+    image: "/images/templates/resort.jpg",
+    value: 3,
+    suffix: "x",
     metricLabel: "more direct booking enquiries",
     summary:
       "Brand identity, UI/UX and a Next.js site built from the Designali Resort template.",
-    gradient: "from-emerald-500/20 to-teal-500/5",
+    gradient: "from-primary/20 to-primary/5",
   },
   {
     company: "Design Agency Site",
     initials: "DA",
     industry: "Agency",
-    metric: "-62%",
+    image: "/images/templates/design-agency.jpg",
+    value: -62,
+    suffix: "%",
     metricLabel: "front-end bug reports",
     summary:
       "Case study pages now ship from shared Designali blocks, so the team focuses on the work instead of pixels.",
-    gradient: "from-sky-500/20 to-indigo-500/5",
+    gradient: "from-primary/20 to-primary/5",
   },
   {
     company: "AI Product Launch",
     initials: "AI",
     industry: "AI startup",
-    metric: "11 days",
+    image: "/images/templates/ai.jpg",
+    value: 11,
+    suffix: " days",
     metricLabel: "from brief to launch page",
     summary:
       "A launch page, product UI and motion assets designed and coded in one Designali sprint.",
-    gradient: "from-amber-500/20 to-orange-500/5",
+    gradient: "from-primary/20 to-primary/5",
   },
 ]
 
@@ -59,20 +68,31 @@ export default function Clients13() {
               className="group flex flex-col border border-border bg-background transition-colors hover:border-foreground/40"
             >
               <div
-                className={`relative flex h-36 items-end justify-between bg-gradient-to-br p-6 ${item.gradient}`}
+                className={`relative flex flex-col items-center gap-4 overflow-hidden bg-gradient-to-br px-6 pt-6 ${item.gradient}`}
               >
-                <span className="flex size-12 items-center justify-center border border-border bg-background text-sm font-semibold tracking-tight">
-                  {item.initials}
-                </span>
-                <span className="text-xs tracking-widest text-muted-foreground uppercase">
-                  {item.industry}
-                </span>
+                <div className="flex w-full items-center justify-between">
+                  <span className="flex size-12 items-center justify-center border border-border bg-background text-sm font-semibold tracking-tight">
+                    {item.initials}
+                  </span>
+                  <span className="text-xs tracking-widest text-muted-foreground uppercase">
+                    {item.industry}
+                  </span>
+                </div>
+                <Macbook variant="macbook-air" color="silver" size="sm" className="-mb-8 max-w-full">
+                  <img
+                    src={item.image}
+                    alt={`${item.company} preview`}
+                    className="size-full object-cover object-top"
+                  />
+                </Macbook>
               </div>
               <div className="flex flex-1 flex-col p-6">
                 <p className="text-sm font-medium">{item.company}</p>
-                <p className="mt-6 text-4xl font-semibold tracking-tight">
-                  {item.metric}
-                </p>
+                <CounterNumber
+                  value={item.value}
+                  suffix={item.suffix}
+                  className="mt-6 block text-4xl font-semibold tracking-tight"
+                />
                 <p className="mt-1 text-sm text-muted-foreground">
                   {item.metricLabel}
                 </p>

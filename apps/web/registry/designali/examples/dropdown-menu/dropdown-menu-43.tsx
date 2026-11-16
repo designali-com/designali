@@ -19,12 +19,12 @@ import {
 import { cn } from "@workspace/ui/lib/utils"
 
 const apps = [
-  { name: "Mail", icon: MailIcon, color: "text-sky-500" },
-  { name: "Calendar", icon: CalendarIcon, color: "text-rose-500" },
-  { name: "Drive", icon: HardDriveIcon, color: "text-amber-500" },
-  { name: "Docs", icon: FileTextIcon, color: "text-blue-500" },
-  { name: "Sheets", icon: SheetIcon, color: "text-emerald-500" },
-  { name: "Chat", icon: MessageSquareIcon, color: "text-violet-500" },
+  { name: "Mail", icon: MailIcon, color: "text-primary" },
+  { name: "Calendar", icon: CalendarIcon, color: "text-primary" },
+  { name: "Drive", icon: HardDriveIcon, color: "text-primary" },
+  { name: "Docs", icon: FileTextIcon, color: "text-primary" },
+  { name: "Sheets", icon: SheetIcon, color: "text-primary" },
+  { name: "Chat", icon: MessageSquareIcon, color: "text-primary" },
 ]
 
 export default function AppLauncherGridMenu() {

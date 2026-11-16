@@ -9,7 +9,7 @@ export default function TypingIndicatorAvatar() {
     <div className="flex items-end gap-2">
       <Avatar size="sm">
         <AvatarFallback>AI</AvatarFallback>
-        <AvatarBadge className="bg-emerald-500" />
+        <AvatarBadge className="bg-primary" />
       </Avatar>
       <div
         className="flex items-center gap-1 bg-muted px-3 py-2.5"

@@ -38,7 +38,7 @@ export default function UpgradeLockedFeaturePopover() {
             <LockIcon data-icon="inline-start" /> Business
           </PopoverTrigger>
           <PopoverContent className="w-64" align="end">
-            <div className="flex size-8 items-center justify-center bg-gradient-to-br from-violet-500 to-indigo-500 text-white">
+            <div className="flex size-8 items-center justify-center bg-gradient-to-br from-primary to-primary text-white">
               <SparklesIcon className="size-4" />
             </div>
             <PopoverHeader>

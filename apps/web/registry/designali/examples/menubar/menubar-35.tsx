@@ -67,7 +67,7 @@ export default function ExportProgressMenubar() {
         </MenubarMenu>
       </Menubar>
       {status === "done" && (
-        <p className="flex items-center gap-1.5 text-xs text-emerald-600 dark:text-emerald-400">
+        <p className="flex items-center gap-1.5 text-xs text-primary dark:text-primary">
           <CircleCheckIcon className="size-3.5" /> Export ready to download
         </p>
       )}

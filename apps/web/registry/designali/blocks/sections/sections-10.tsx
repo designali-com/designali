@@ -29,7 +29,7 @@ export default function Sections10() {
       <div className="mx-auto max-w-5xl px-6">
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div>
-            <p className="font-mono text-xs tracking-widest text-muted-foreground uppercase">Careers</p>
+            <p className="font-sans text-xs tracking-widest text-muted-foreground uppercase">Careers</p>
             <h2 className="mt-4 text-4xl font-semibold tracking-tight md:text-5xl">
               {roles.length} open roles
             </h2>
@@ -55,7 +55,7 @@ export default function Sections10() {
                 )}
               >
                 {item}
-                <span className="font-mono opacity-60">{count}</span>
+                <span className="font-sans opacity-60">{count}</span>
               </button>
             )
           })}

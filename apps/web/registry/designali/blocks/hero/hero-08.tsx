@@ -23,7 +23,7 @@ export default function Hero08() {
         }}
       />
       <div className="relative mx-auto flex max-w-3xl flex-col items-center text-center">
-        <p className="font-mono text-xs tracking-widest text-muted-foreground uppercase">
+        <p className="font-sans text-xs tracking-widest text-muted-foreground uppercase">
           Designali newsletter
         </p>
         <h1 className="mt-6 text-5xl font-medium tracking-tight md:text-7xl">

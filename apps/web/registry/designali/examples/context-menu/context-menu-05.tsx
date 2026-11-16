@@ -33,7 +33,7 @@ export default function FolderTreeRowMenu() {
             className="flex items-center gap-2 px-2 py-1.5 text-xs hover:bg-muted data-popup-open:bg-muted"
             style={{ paddingInlineStart: 8 + folder.depth * 16 }}
           >
-            <FolderIcon className="size-4 text-amber-500" />
+            <FolderIcon className="size-4 text-primary" />
             {folder.name}
           </ContextMenuTrigger>
           <ContextMenuContent className="w-48">

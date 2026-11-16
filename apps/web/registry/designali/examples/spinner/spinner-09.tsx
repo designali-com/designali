@@ -52,7 +52,7 @@ export default function UsernameAvailabilityCheck() {
             <Spinner />
           ) : value ? (
             available ? (
-              <CheckIcon className="text-emerald-600 dark:text-emerald-400" />
+              <CheckIcon className="text-primary dark:text-primary" />
             ) : (
               <XIcon className="text-destructive" />
             )

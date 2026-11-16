@@ -10,11 +10,11 @@ import {
 import { cn } from "@workspace/ui/lib/utils"
 
 const statuses = [
-  { label: "Backlog", value: "backlog", color: "bg-neutral-400" },
-  { label: "Todo", value: "todo", color: "bg-sky-500" },
-  { label: "In progress", value: "progress", color: "bg-amber-500" },
-  { label: "Done", value: "done", color: "bg-emerald-500" },
-  { label: "Canceled", value: "canceled", color: "bg-red-500" },
+  { label: "Backlog", value: "backlog", color: "bg-muted-foreground" },
+  { label: "Todo", value: "todo", color: "bg-primary" },
+  { label: "In progress", value: "progress", color: "bg-primary" },
+  { label: "Done", value: "done", color: "bg-primary" },
+  { label: "Canceled", value: "canceled", color: "bg-destructive" },
 ]
 
 export default function IssueStatusSelect() {

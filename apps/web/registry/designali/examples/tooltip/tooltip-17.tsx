@@ -26,7 +26,7 @@ export default function CollapsedSidebarTooltips() {
   return (
     <TooltipProvider>
       <nav className="flex h-72 w-14 flex-col items-center gap-1 border bg-muted/30 py-3">
-        <div className="mb-2 size-7 bg-gradient-to-br from-indigo-500 to-sky-400" />
+        <div className="mb-2 size-7 bg-gradient-to-br from-primary to-primary" />
         {nav.map((item) => (
           <Tooltip key={item.label}>
             <TooltipTrigger

@@ -19,16 +19,16 @@ const config: Record<
 > = {
   Operational: {
     className:
-      "bg-emerald-50 text-emerald-700 dark:bg-emerald-950 dark:text-emerald-300",
+      "bg-primary/5 text-chart-3 dark:bg-primary/10 dark:text-chart-1",
     icon: CircleCheckIcon,
   },
   Degraded: {
     className:
-      "bg-amber-50 text-amber-700 dark:bg-amber-950 dark:text-amber-300",
+      "bg-primary/5 text-chart-3 dark:bg-primary/10 dark:text-chart-1",
     icon: TriangleAlertIcon,
   },
   Outage: {
-    className: "bg-red-50 text-red-700 dark:bg-red-950 dark:text-red-300",
+    className: "bg-destructive/5 text-destructive dark:bg-destructive/15 dark:text-destructive",
     icon: CircleXIcon,
   },
 }

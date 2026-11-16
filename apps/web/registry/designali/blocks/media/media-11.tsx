@@ -39,7 +39,7 @@ export default function Media11() {
     <section className="w-full bg-background py-20">
       <div className="mx-auto max-w-3xl px-6">
         <div className="flex items-center gap-4">
-          <div className="size-16 shrink-0 border border-border" style={{ background: "linear-gradient(135deg, var(--chart-3), var(--chart-5))" }} />
+          <img src="/img/ask/ask5.jpg" alt="Designali Podcast cover art" className="size-16 shrink-0 border border-border object-cover" />
           <div className="min-w-0">
             <p className="text-xs text-muted-foreground">Designali Podcast - Episode 87</p>
             <h2 className="truncate text-xl font-semibold tracking-tight md:text-2xl">Design se code tak, without the handoff</h2>
@@ -62,7 +62,7 @@ export default function Media11() {
               <FastForward className="size-4" />
             </button>
             <div className="flex min-w-0 flex-1 items-center gap-3">
-              <span className="font-mono text-xs tabular-nums">{fmt(time)}</span>
+              <span className="font-sans text-xs tabular-nums">{fmt(time)}</span>
               <input
                 type="range"
                 min={0}
@@ -72,7 +72,7 @@ export default function Media11() {
                 aria-label="Seek"
                 className="h-1 min-w-0 flex-1 cursor-pointer accent-foreground"
               />
-              <span className="hidden font-mono text-xs text-muted-foreground tabular-nums sm:inline">{fmt(DURATION)}</span>
+              <span className="hidden font-sans text-xs text-muted-foreground tabular-nums sm:inline">{fmt(DURATION)}</span>
             </div>
           </div>
         </div>
@@ -90,7 +90,7 @@ export default function Media11() {
                     i > activeIndex && "text-muted-foreground"
                   )}
                 >
-                  <span className="pt-0.5 font-mono text-xs text-muted-foreground tabular-nums">{fmt(s.at)}</span>
+                  <span className="pt-0.5 font-sans text-xs text-muted-foreground tabular-nums">{fmt(s.at)}</span>
                   <span className="hidden text-sm font-medium sm:block">{s.speaker}</span>
                   <span className="text-sm leading-relaxed">
                     <span className="font-medium sm:hidden">{s.speaker}: </span>

@@ -51,7 +51,7 @@ export default function SessionTimeoutCountdown() {
             <AlertDialogTitle>Your designali.com session is about to expire</AlertDialogTitle>
             <AlertDialogDescription>
               For your security, you&apos;ll be signed out in{" "}
-              <span className="font-mono font-medium text-foreground tabular-nums">
+              <span className="font-sans font-medium text-foreground tabular-nums">
                 0:{String(seconds).padStart(2, "0")}
               </span>
               .

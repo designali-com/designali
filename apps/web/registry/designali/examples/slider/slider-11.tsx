@@ -23,8 +23,8 @@ export default function ThermostatSlider() {
       <div
         className={cn(
           "text-4xl font-semibold tabular-nums",
-          mode === "Cooling" && "text-sky-600 dark:text-sky-400",
-          mode === "Heating" && "text-orange-600 dark:text-orange-400"
+          mode === "Cooling" && "text-primary dark:text-primary",
+          mode === "Heating" && "text-primary dark:text-primary"
         )}
       >
         {t.toFixed(1)}&deg;C

@@ -19,9 +19,9 @@ const attendees = [
 ]
 
 const rsvpStyle: Record<string, string> = {
-  yes: "bg-emerald-500",
-  maybe: "bg-amber-500",
-  no: "bg-red-500",
+  yes: "bg-primary",
+  maybe: "bg-primary",
+  no: "bg-destructive",
 }
 
 export default function MeetingAttendeesCard() {

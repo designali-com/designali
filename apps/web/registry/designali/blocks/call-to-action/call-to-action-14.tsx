@@ -11,9 +11,9 @@ import { Button } from "@workspace/ui/components/button"
 import { cn } from "@workspace/ui/lib/utils"
 
 const team = [
-  { initials: "AI", tone: "bg-amber-200 text-amber-900 dark:bg-amber-900 dark:text-amber-100" },
-  { initials: "DS", tone: "bg-sky-200 text-sky-900 dark:bg-sky-900 dark:text-sky-100" },
-  { initials: "DV", tone: "bg-emerald-200 text-emerald-900 dark:bg-emerald-900 dark:text-emerald-100" },
+  { initials: "AI", tone: "bg-primary/20 text-chart-5 dark:bg-primary/10 dark:text-chart-1" },
+  { initials: "DS", tone: "bg-primary/20 text-chart-5 dark:bg-primary/10 dark:text-chart-1" },
+  { initials: "DV", tone: "bg-primary/20 text-chart-5 dark:bg-primary/10 dark:text-chart-1" },
 ]
 
 const days = [
@@ -95,7 +95,7 @@ export default function CallToAction14() {
                 type="button"
                 onClick={() => setSlot(s)}
                 className={cn(
-                  "flex items-center justify-center gap-1.5 border px-2 py-2 font-mono text-xs transition-colors",
+                  "flex items-center justify-center gap-1.5 border px-2 py-2 font-sans text-xs transition-colors",
                   slot === s
                     ? "border-foreground bg-background text-foreground"
                     : "border-border bg-background text-muted-foreground hover:text-foreground"

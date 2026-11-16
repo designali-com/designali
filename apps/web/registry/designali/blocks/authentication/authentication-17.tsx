@@ -8,6 +8,8 @@ import {
 
 import { Button } from "@workspace/ui/components/button"
 
+import { Macbook } from "@/registry/designali/ui/apple/macbook"
+
 function formatCode(value: string) {
   const clean = value.toUpperCase().replace(/[^A-Z0-9]/g, "").slice(0, 8)
   return clean.length > 4 ? `${clean.slice(0, 4)}-${clean.slice(4)}` : clean
@@ -20,30 +22,29 @@ export default function Authentication17() {
   return (
     <section className="w-full bg-background py-20 md:py-28">
       <div className="mx-auto grid max-w-5xl gap-10 px-6 md:grid-cols-2">
-        <div className="overflow-hidden border bg-zinc-950 font-mono text-xs text-zinc-300">
-          <div className="flex items-center gap-1.5 border-b border-zinc-800 px-4 py-3">
-            <span className="size-2.5 rounded-full bg-zinc-700" />
-            <span className="size-2.5 rounded-full bg-zinc-700" />
-            <span className="size-2.5 rounded-full bg-zinc-700" />
-            <span className="ms-3 text-zinc-500">~/projects/designali</span>
-          </div>
-          <div className="space-y-1.5 overflow-x-auto p-5 leading-relaxed">
-            <p><span className="text-emerald-400">$</span> designali login</p>
-            <p className="text-zinc-500">Opening browser to authorize this device...</p>
-            <p>
-              Your one-time code: <span className="bg-zinc-800 px-1.5 py-0.5 text-white">WDJB-MJHT</span>
-            </p>
-            <p className="text-zinc-500">Waiting for confirmation (expires in 15:00)</p>
-            {stage === "done" ? (
-              <>
-                <p className="text-emerald-400">Authenticated as ali@designali.com</p>
-                <p className="text-emerald-400">Token saved to ~/.designali/credentials</p>
-                <p><span className="text-emerald-400">$</span> <span className="animate-pulse">_</span></p>
-              </>
-            ) : (
-              <p className="animate-pulse">|</p>
-            )}
-          </div>
+        <div className="flex items-center justify-center">
+          <Macbook variant="macbook-pro" color="black" size="sm" className="max-w-full">
+            <div className="h-full bg-black text-[10px] text-white/70">
+              <div className="border-b border-white/10 px-3 py-1.5 text-white/50">~/projects/designali</div>
+              <div className="space-y-1 overflow-x-auto p-3 leading-relaxed">
+                <p><span className="text-primary">$</span> designali login</p>
+                <p className="text-white/50">Opening browser to authorize this device...</p>
+                <p>
+                  Your one-time code: <span className="bg-white px-1 py-0.5 text-black">WDJB-MJHT</span>
+                </p>
+                <p className="text-white/50">Waiting for confirmation (expires in 15:00)</p>
+                {stage === "done" ? (
+                  <>
+                    <p className="text-primary">Authenticated as ali@designali.com</p>
+                    <p className="text-primary">Token saved to ~/.designali/credentials</p>
+                    <p><span className="text-primary">$</span> <span className="animate-pulse">_</span></p>
+                  </>
+                ) : (
+                  <p className="animate-pulse">|</p>
+                )}
+              </div>
+            </div>
+          </Macbook>
         </div>
 
         <div className="flex flex-col justify-center">
@@ -70,7 +71,7 @@ export default function Authentication17() {
                 placeholder="XXXX-XXXX"
                 autoComplete="off"
                 spellCheck={false}
-                className="h-14 w-full border bg-transparent text-center font-mono text-2xl tracking-[0.3em] uppercase outline-none placeholder:text-muted-foreground/50 focus:border-foreground"
+                className="h-14 w-full border bg-transparent text-center font-sans text-2xl tracking-[0.3em] uppercase outline-none placeholder:text-muted-foreground/50 focus:border-foreground"
               />
               <Button type="submit" size="lg" className="w-full" disabled={code.length !== 9}>
                 Continue
@@ -111,7 +112,7 @@ export default function Authentication17() {
           {stage === "done" && (
             <div className="mt-6 space-y-4">
               <h2 className="flex items-center gap-2 text-3xl font-semibold tracking-tight">
-                <Check className="size-7 text-emerald-600 dark:text-emerald-400" />
+                <Check className="size-7 text-primary dark:text-primary" />
                 Device connected
               </h2>
               <p className="text-sm text-muted-foreground">You can close this window and return to your terminal.</p>

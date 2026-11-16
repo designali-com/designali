@@ -59,7 +59,7 @@ export default function Authentication07() {
                 className="h-11"
               />
               {match && (
-                <p className="flex items-center gap-2 text-xs text-emerald-700 dark:text-emerald-400">
+                <p className="flex items-center gap-2 text-xs text-chart-3 dark:text-primary">
                   <Building2 className="size-3.5" />
                   {match.org} uses single sign-on
                 </p>
@@ -83,7 +83,7 @@ export default function Authentication07() {
             </button>
             <div className="border">
               <div className="flex items-center gap-4 border-b p-5">
-                <span className="flex size-12 items-center justify-center bg-gradient-to-br from-teal-500 to-emerald-700 text-sm font-semibold text-white">
+                <span className="flex size-12 items-center justify-center bg-gradient-to-br from-primary to-chart-3 text-sm font-semibold text-white">
                   {match.org.split(" ").map((word) => word[0]).join("")}
                 </span>
                 <div>

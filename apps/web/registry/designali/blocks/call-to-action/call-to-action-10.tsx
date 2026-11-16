@@ -48,7 +48,7 @@ export default function CallToAction10() {
               / editor / month
             </span>
           </div>
-          <p className="mt-2 h-5 text-xs text-emerald-700 dark:text-emerald-400">
+          <p className="mt-2 h-5 text-xs text-chart-3 dark:text-primary">
             {yearly ? "Billed $228 yearly. You save $60." : "Switch to yearly and save 20%."}
           </p>
           <Button

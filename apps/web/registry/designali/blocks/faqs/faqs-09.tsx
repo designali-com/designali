@@ -102,7 +102,7 @@ export default function Faqs09() {
                 <span className="flex size-10 items-center justify-center border border-border bg-muted">
                   <topic.icon className="size-5" />
                 </span>
-                <span className="font-mono text-xs text-muted-foreground">
+                <span className="font-sans text-xs text-muted-foreground">
                   {topic.count} articles
                 </span>
               </div>

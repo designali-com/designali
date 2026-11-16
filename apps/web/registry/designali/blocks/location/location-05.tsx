@@ -2,6 +2,8 @@ import {
   ArrowUpRight,
 } from "@designali/icons"
 
+import { DotPattern } from "@/registry/designali/ui/dot-pattern"
+
 const regions = [
   {
     region: "Americas",
@@ -39,18 +41,8 @@ export default function Location05() {
     <section className="w-full bg-foreground py-20 text-background md:py-28">
       <div className="mx-auto max-w-6xl px-6">
         <div className="relative aspect-[2.4/1] w-full border border-background/15">
+          <DotPattern width={22} height={22} cx={11} cy={11} dotSize={1} className="text-background/40" />
           <svg viewBox="0 0 100 42" className="absolute inset-0 h-full w-full">
-            {Array.from({ length: 50 }).map((_, x) =>
-              Array.from({ length: 21 }).map((_, y) => (
-                <circle
-                  key={`${x}-${y}`}
-                  cx={x * 2 + 1}
-                  cy={y * 2 + 1}
-                  r="0.18"
-                  className="fill-background/20"
-                />
-              ))
-            )}
             {dots.map(([x, y]) => (
               <g key={`${x}-${y}`}>
                 <circle cx={x} cy={y * 0.42} r="1.6" className="fill-background/15" />

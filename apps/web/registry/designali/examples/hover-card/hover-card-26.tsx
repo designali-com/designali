@@ -29,12 +29,12 @@ export default function CommitHashHoverCard() {
     <div className="w-full max-w-sm divide-y border text-sm">
       {deploys.map((d) => (
         <div key={d.sha} className="flex items-center gap-3 px-3 py-2">
-          <span className="size-2 rounded-full bg-emerald-500" />
+          <span className="size-2 rounded-full bg-primary" />
           <span className="flex-1">{d.env}</span>
           <HoverCard>
             <HoverCardTrigger
               href="#"
-              className="bg-muted px-1.5 py-0.5 font-mono text-xs hover:underline"
+              className="bg-muted px-1.5 py-0.5 font-sans text-xs hover:underline"
             >
               {d.sha}
             </HoverCardTrigger>

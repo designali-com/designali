@@ -58,7 +58,7 @@ export default function KpiMetricSwitcher() {
       <p
         className={cn(
           "flex items-center gap-1 text-xs",
-          positive ? "text-emerald-600" : "text-destructive"
+          positive ? "text-primary" : "text-destructive"
         )}
       >
         {positive ? (

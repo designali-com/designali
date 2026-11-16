@@ -10,11 +10,13 @@ import {
 
 import { Button } from "@workspace/ui/components/button"
 
+import { DotPattern } from "@/registry/designali/ui/dot-pattern"
+
 const members = [
-  { initials: "AI", color: "from-rose-400 to-orange-400" },
-  { initials: "SD", color: "from-sky-400 to-blue-600" },
-  { initials: "DV", color: "from-emerald-400 to-teal-600" },
-  { initials: "CL", color: "from-violet-400 to-fuchsia-500" },
+  { initials: "AI", color: "from-primary to-primary" },
+  { initials: "SD", color: "from-primary to-chart-2" },
+  { initials: "DV", color: "from-primary to-chart-2" },
+  { initials: "CL", color: "from-primary to-primary" },
 ]
 
 export default function Authentication08() {
@@ -23,14 +25,8 @@ export default function Authentication08() {
   return (
     <section className="flex min-h-[640px] w-full items-center justify-center bg-muted/40 px-6 py-16">
       <div className="w-full max-w-md border bg-background">
-        <div className="relative h-28 overflow-hidden border-b bg-gradient-to-br from-indigo-500 via-violet-500 to-fuchsia-500">
-          <div
-            className="absolute inset-0 opacity-30"
-            style={{
-              backgroundImage: "radial-gradient(white 1px, transparent 1px)",
-              backgroundSize: "14px 14px",
-            }}
-          />
+        <div className="relative h-28 overflow-hidden border-b bg-gradient-to-br from-primary via-primary to-primary">
+          <DotPattern width={14} height={14} dotSize={1} className="text-white/60" />
         </div>
         <div className="-mt-10 px-6 pb-8 sm:px-8">
           <span className="relative flex size-20 items-center justify-center border-4 border-background bg-foreground text-2xl font-bold text-background">

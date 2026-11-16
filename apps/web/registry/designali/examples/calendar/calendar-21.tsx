@@ -13,9 +13,9 @@ import {
 import { cn } from "@workspace/ui/lib/utils"
 
 const levels = [
-  { key: "open", label: "Open", dot: "bg-emerald-500" },
-  { key: "limited", label: "Limited", dot: "bg-amber-500" },
-  { key: "full", label: "Full", dot: "bg-rose-500" },
+  { key: "open", label: "Open", dot: "bg-primary" },
+  { key: "limited", label: "Limited", dot: "bg-primary" },
+  { key: "full", label: "Full", dot: "bg-primary" },
 ]
 
 function levelFor(date: Date) {

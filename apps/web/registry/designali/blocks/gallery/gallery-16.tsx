@@ -37,7 +37,7 @@ export default function Gallery16() {
                   className="absolute inset-0 border border-border shadow-lg transition duration-300 group-hover:-translate-y-2"
                   style={{ background: album.colors[0] }}
                 />
-                <span className="absolute top-3 right-3 bg-background/85 px-2 py-0.5 font-mono text-[11px] tabular-nums backdrop-blur">
+                <span className="absolute top-3 right-3 bg-background/85 px-2 py-0.5 font-sans text-[11px] tabular-nums backdrop-blur">
                   {album.count}
                 </span>
               </div>

@@ -46,15 +46,15 @@ export default function Portfolio11() {
               className="group grid grid-cols-[1fr_auto] gap-x-4 gap-y-1 border-b border-border py-4 transition-colors hover:bg-muted/60 md:grid-cols-[1.3fr_1.5fr_1fr_1fr_0.6fr_1.2fr_24px] md:items-center md:gap-4 md:px-0"
             >
               <span className="font-medium">{row.client}</span>
-              <span className="font-mono text-xs text-muted-foreground md:hidden">{row.year}</span>
+              <span className="font-sans text-xs text-muted-foreground md:hidden">{row.year}</span>
               <span className="col-span-2 text-sm text-muted-foreground md:col-span-1 md:text-foreground">
                 {row.project}
               </span>
               <span className="hidden text-sm text-muted-foreground md:block">{row.type}</span>
               <span className="hidden text-sm text-muted-foreground md:block">{row.role}</span>
-              <span className="hidden font-mono text-xs text-muted-foreground md:block">{row.year}</span>
+              <span className="hidden font-sans text-xs text-muted-foreground md:block">{row.year}</span>
               <span className="col-span-2 text-sm md:col-span-1">
-                <span className="bg-emerald-500/10 px-1.5 py-0.5 text-emerald-700 dark:text-emerald-400">
+                <span className="bg-primary/10 px-1.5 py-0.5 text-chart-3 dark:text-primary">
                   {row.outcome}
                 </span>
               </span>

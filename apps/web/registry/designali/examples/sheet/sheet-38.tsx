@@ -50,7 +50,7 @@ export default function CreateApiKeySheet() {
         {key ? (
           <div className="flex flex-col gap-3 px-4">
             <div className="flex gap-2">
-              <Input readOnly value={key} className="font-mono" />
+              <Input readOnly value={key} className="font-sans" />
               <Button variant="outline" size="icon" aria-label="Copy key">
                 <CopyIcon />
               </Button>
@@ -69,7 +69,7 @@ export default function CreateApiKeySheet() {
             <div className="flex flex-col gap-2">
               <span className="font-medium">Scopes</span>
               {scopes.map((scope, i) => (
-                <Label key={scope} className="gap-2 font-mono font-normal">
+                <Label key={scope} className="gap-2 font-sans font-normal">
                   <Checkbox defaultChecked={i < 2} />
                   {scope}
                 </Label>

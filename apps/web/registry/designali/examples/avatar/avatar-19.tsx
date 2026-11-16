@@ -12,10 +12,10 @@ export default function VerifiedCreatorAvatar() {
   return (
     <div className="flex items-center gap-3">
       <Avatar size="lg">
-        <AvatarFallback className="bg-amber-100 text-amber-800 dark:bg-amber-950 dark:text-amber-300">
+        <AvatarFallback className="bg-primary/10 text-chart-4 dark:bg-primary/10 dark:text-chart-1">
           AI
         </AvatarFallback>
-        <AvatarBadge className="bg-sky-500 text-white">
+        <AvatarBadge className="bg-primary text-white">
           <CheckIcon />
         </AvatarBadge>
       </Avatar>

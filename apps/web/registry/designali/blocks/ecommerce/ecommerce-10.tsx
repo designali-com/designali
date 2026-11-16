@@ -19,9 +19,9 @@ const events = [
 ]
 
 const items = [
-  { name: "Brand identity kit", qty: 1, tone: "from-sky-200 to-sky-50 dark:from-sky-800 dark:to-sky-950" },
-  { name: "Next.js website", qty: 1, tone: "from-zinc-400 to-zinc-100 dark:from-zinc-600 dark:to-zinc-900" },
-  { name: "Social media templates", qty: 2, tone: "from-amber-100 to-orange-50 dark:from-amber-900 dark:to-stone-900" },
+  { name: "Brand identity kit", qty: 1, image: "/images/templates/dalim-agency-old.jpg" },
+  { name: "Next.js website", qty: 1, image: "/images/templates/vercel.jpg" },
+  { name: "Social media templates", qty: 2, image: "/images/templates/dalim-works-old.jpg" },
 ]
 
 export default function Ecommerce10() {
@@ -33,7 +33,7 @@ export default function Ecommerce10() {
       <div className="mx-auto max-w-5xl px-6">
         <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
           <div>
-            <p className="font-mono text-xs text-muted-foreground">Project #DA-58214</p>
+            <p className="font-sans text-xs text-muted-foreground">Project #DA-58214</p>
             <h2 className="mt-2 text-3xl font-medium tracking-tight md:text-4xl">Launching today</h2>
             <p className="mt-1 text-sm text-muted-foreground">Between 12:00 and 14:00 · 3 items</p>
           </div>
@@ -99,7 +99,7 @@ export default function Ecommerce10() {
               <ul className="mt-4 space-y-3">
                 {items.map((item) => (
                   <li key={item.name} className="flex items-center gap-3 text-sm">
-                    <span className={cn("size-10 shrink-0 border border-border bg-gradient-to-br", item.tone)} />
+                    <img src={item.image} alt={item.name} className="size-10 shrink-0 object-cover object-top border border-border" />
                     <span className="flex-1">{item.name}</span>
                     <span className="text-muted-foreground">x{item.qty}</span>
                   </li>

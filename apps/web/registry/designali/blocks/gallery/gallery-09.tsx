@@ -83,7 +83,7 @@ export default function Gallery09() {
           onClick={() => setOpen(null)}
         >
           <div className="flex items-center justify-between text-sm">
-            <span className="font-mono tabular-nums">
+            <span className="font-sans tabular-nums">
               {open + 1} / {photos.length}
             </span>
             <button

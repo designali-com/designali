@@ -13,31 +13,30 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@workspace/ui/components/dialog"
-import { cn } from "@workspace/ui/lib/utils"
 
 const artworks = [
   {
     id: "dawn",
     title: "Colorful Spheres",
-    gradient: "from-amber-300 via-rose-400 to-violet-500",
+    image: "/img/ask/ask1.jpg",
     size: "4000 × 3000",
   },
   {
     id: "tide",
     title: "Abstract Fluid",
-    gradient: "from-sky-300 via-cyan-400 to-emerald-500",
+    image: "/img/ask/ask2.jpg",
     size: "3600 × 2400",
   },
   {
     id: "dusk",
     title: "Brand Identity",
-    gradient: "from-indigo-500 via-purple-500 to-pink-500",
+    image: "/img/ask/ask3.jpg",
     size: "5120 × 2880",
   },
   {
     id: "moss",
     title: "Dalim Visuals",
-    gradient: "from-lime-300 via-green-500 to-teal-600",
+    image: "/img/ask/ask4.jpg",
     size: "3000 × 3000",
   },
 ]
@@ -48,18 +47,16 @@ export default function GalleryPreviewDialog() {
       {artworks.map((art) => (
         <Dialog key={art.id}>
           <DialogTrigger
-            className={cn(
-              "aspect-square bg-gradient-to-br outline-none focus-visible:ring-2 focus-visible:ring-ring",
-              art.gradient
-            )}
+            className="aspect-square overflow-hidden bg-muted outline-none focus-visible:ring-2 focus-visible:ring-ring"
             aria-label={"Preview " + art.title}
-          />
+          >
+            <img src={art.image} alt={art.title} className="size-full object-cover" />
+          </DialogTrigger>
           <DialogContent className="sm:max-w-lg">
-            <div
-              className={cn(
-                "aspect-[4/3] w-full bg-gradient-to-br",
-                art.gradient
-              )}
+            <img
+              src={art.image}
+              alt={art.title}
+              className="aspect-[4/3] w-full bg-muted object-cover"
             />
             <DialogHeader>
               <DialogTitle>{art.title}</DialogTitle>

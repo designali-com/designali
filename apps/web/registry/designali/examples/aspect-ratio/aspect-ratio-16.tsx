@@ -3,10 +3,10 @@ import { cn } from "@workspace/ui/lib/utils"
 
 export default function CropFrameThirds() {
   return (
-    <div className="w-full max-w-sm bg-zinc-900 p-4">
+    <div className="w-full max-w-sm bg-foreground p-4">
       <AspectRatio
         ratio={4 / 5}
-        className="bg-linear-to-br from-teal-500 via-sky-600 to-indigo-800"
+        className="bg-linear-to-br from-primary via-chart-2 to-chart-4"
       >
         <div className="absolute inset-0 grid grid-cols-3 grid-rows-3 border border-white/80">
           {Array.from({ length: 9 }).map((_, index) => (
@@ -22,7 +22,7 @@ export default function CropFrameThirds() {
           <span key={pos} className={cn("absolute size-5 border-white", pos)} />
         ))}
       </AspectRatio>
-      <p className="mt-3 text-center font-mono text-xs text-white/70">
+      <p className="mt-3 text-center font-sans text-xs text-white/70">
         4:5 - 1080 x 1350 - @designali.code
       </p>
     </div>

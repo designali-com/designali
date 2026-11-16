@@ -26,7 +26,7 @@ export default function CourseLessonHoverCard() {
               className="flex items-center gap-2 px-2 py-1.5 hover:bg-muted"
             >
               {lesson.progress === 100 ? (
-                <CircleCheckIcon className="size-4 text-emerald-600" />
+                <CircleCheckIcon className="size-4 text-primary" />
               ) : (
                 <PlayCircleIcon className="size-4 text-muted-foreground" />
               )}

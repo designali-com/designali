@@ -100,7 +100,7 @@ export default function Gallery08() {
                   className="absolute inset-0 transition-transform duration-700 group-hover:scale-105"
                   style={{ background: frame.gradient }}
                 />
-                <span className="absolute top-4 left-4 bg-background/85 px-2 py-1 font-mono text-[11px] tabular-nums backdrop-blur">
+                <span className="absolute top-4 left-4 bg-background/85 px-2 py-1 font-sans text-[11px] tabular-nums backdrop-blur">
                   {String(i + 1).padStart(2, "0")} / {String(frames.length).padStart(2, "0")}
                 </span>
               </div>

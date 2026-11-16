@@ -2,22 +2,30 @@ import {
   ArrowUpRight,
 } from "@designali/icons"
 
+import { CounterNumber } from "@/registry/designali/ui/counter-number"
+
 const cases = [
   {
     client: "Dalim UI",
-    metric: "38%",
+    value: 38,
+    decimals: 0,
+    suffix: "%",
     label: "faster design handoff",
     sector: "UI kit",
   },
   {
     client: "Designali Blocks",
-    metric: "2.4x",
+    value: 2.4,
+    decimals: 1,
+    suffix: "x",
     label: "component reuse",
     sector: "Component library",
   },
   {
     client: "Dalim to Designali",
-    metric: "12 wks",
+    value: 12,
+    decimals: 0,
+    suffix: " wks",
     label: "to full rebrand",
     sector: "Brand identity",
   },
@@ -51,9 +59,12 @@ export default function Clients09() {
                 <ArrowUpRight className="size-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </div>
               <div className="mt-12">
-                <p className="text-5xl font-semibold tracking-tighter">
-                  {item.metric}
-                </p>
+                <CounterNumber
+                  value={item.value}
+                  decimalPlaces={item.decimals}
+                  suffix={item.suffix}
+                  className="block text-5xl font-semibold tracking-tighter"
+                />
                 <p className="mt-2 text-sm text-muted-foreground">
                   {item.label}
                 </p>

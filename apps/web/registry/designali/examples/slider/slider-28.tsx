@@ -51,7 +51,7 @@ export default function ModelParameterSliders() {
         <Field key={param.id}>
           <div className="flex items-center justify-between">
             <FieldLabel>{param.label}</FieldLabel>
-            <span className="border px-1.5 font-mono text-xs tabular-nums">
+            <span className="border px-1.5 font-sans text-xs tabular-nums">
               {values[param.id]}
             </span>
           </div>

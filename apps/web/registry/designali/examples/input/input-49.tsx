@@ -48,8 +48,8 @@ export default function PercentageSliderInput() {
         </InputGroup>
       </div>
       <FieldDescription>
-        Customers pay {"$" + ((99 * (100 - pct)) / 100).toFixed(2)} instead of
-        $99.00.
+        designali.com customers pay {"$" + ((99 * (100 - pct)) / 100).toFixed(2)} instead of
+        $99.00 for Designali Pro.
       </FieldDescription>
     </Field>
   )

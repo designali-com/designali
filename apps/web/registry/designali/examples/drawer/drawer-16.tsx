@@ -49,7 +49,7 @@ export default function TaskDetailsDrawer() {
       </DrawerTrigger>
       <DrawerContent>
         <DrawerHeader>
-          <span className="font-mono text-muted-foreground">DSG-218</span>
+          <span className="font-sans text-muted-foreground">DSG-218</span>
           <DrawerTitle className="text-base">
             Design new pricing blocks
           </DrawerTitle>

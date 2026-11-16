@@ -19,7 +19,7 @@ export default function InputStatesShowcase() {
           id="state-readonly"
           readOnly
           defaultValue="designali_8f2k19"
-          className="bg-muted/50 font-mono"
+          className="bg-muted/50 font-sans"
         />
       </Field>
       <Field data-disabled>

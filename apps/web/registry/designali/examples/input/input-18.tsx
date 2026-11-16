@@ -10,7 +10,7 @@ import { Input } from "@workspace/ui/components/input"
 export default function DateTimeInputs() {
   return (
     <FieldSet className="w-full max-w-sm">
-      <FieldLegend>Schedule post</FieldLegend>
+      <FieldLegend>Schedule Designali blog post</FieldLegend>
       <div className="grid grid-cols-2 gap-3">
         <Field>
           <FieldLabel htmlFor="post-date">Date</FieldLabel>
@@ -21,7 +21,7 @@ export default function DateTimeInputs() {
           <Input id="post-time" type="time" defaultValue="09:30" />
         </Field>
       </div>
-      <FieldDescription>Times are shown in Pacific Time (PT).</FieldDescription>
+      <FieldDescription>Publishes to designali.com/blogs at the selected time.</FieldDescription>
     </FieldSet>
   )
 }

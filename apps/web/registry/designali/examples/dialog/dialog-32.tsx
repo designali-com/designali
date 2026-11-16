@@ -30,7 +30,7 @@ export default function ProductQuickViewDialog() {
 
   return (
     <div className="flex w-full max-w-48 flex-col gap-2">
-      <div className="aspect-square bg-gradient-to-br from-stone-200 to-stone-400 dark:from-stone-700 dark:to-stone-900" />
+      <div className="aspect-square bg-gradient-to-br from-muted to-muted-foreground dark:from-muted dark:to-card" />
       <div className="flex items-center justify-between">
         <span className="font-medium">Merino Crew</span>
         <span className="text-muted-foreground">$89</span>
@@ -42,7 +42,7 @@ export default function ProductQuickViewDialog() {
         </DialogTrigger>
         <DialogContent className="sm:max-w-xl">
           <div className="grid gap-4 sm:grid-cols-2">
-            <div className="aspect-square bg-gradient-to-br from-stone-200 to-stone-400 dark:from-stone-700 dark:to-stone-900" />
+            <div className="aspect-square bg-gradient-to-br from-muted to-muted-foreground dark:from-muted dark:to-card" />
             <div className="flex flex-col gap-3">
               <DialogHeader>
                 <DialogTitle className="text-base">

@@ -5,7 +5,7 @@ export default function InvoiceHeaderParties() {
     <div className="flex w-full max-w-md flex-col gap-4 border p-4 text-xs">
       <div className="flex items-baseline justify-between">
         <span className="text-base font-semibold">Invoice</span>
-        <span className="font-mono text-muted-foreground">INV-2026-0318</span>
+        <span className="font-sans text-muted-foreground">INV-2026-0318</span>
       </div>
       <Separator />
       <div className="flex">

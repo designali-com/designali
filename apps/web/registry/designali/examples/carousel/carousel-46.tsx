@@ -19,19 +19,19 @@ const cards = [
     brand: "Visa",
     last4: "4242",
     exp: "08/27",
-    tone: "from-slate-700 to-slate-900",
+    tone: "from-foreground to-foreground",
   },
   {
     brand: "Mastercard",
     last4: "5100",
     exp: "02/28",
-    tone: "from-indigo-600 to-indigo-900",
+    tone: "from-chart-2 to-chart-5",
   },
   {
     brand: "Amex",
     last4: "0005",
     exp: "11/26",
-    tone: "from-emerald-600 to-emerald-900",
+    tone: "from-chart-2 to-chart-5",
   },
 ]
 
@@ -66,7 +66,7 @@ export default function PaymentCardSelector() {
                     </span>
                   )}
                 </div>
-                <span className="font-mono text-sm tracking-widest">
+                <span className="font-sans text-sm tracking-widest">
                   •••• {c.last4}
                 </span>
                 <div className="flex justify-between text-[11px] opacity-80">

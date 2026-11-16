@@ -91,42 +91,42 @@ const showcase = [
     meta: "Brand · Website · CGI renders",
     tag: "New project",
     price: "6 wks",
-    tile: "bg-gradient-to-br from-emerald-200 via-green-300 to-lime-300 dark:from-emerald-700 dark:via-green-800 dark:to-lime-900",
+    tile: "bg-gradient-to-br from-primary/20 via-chart-1 to-chart-1 dark:from-chart-3 dark:via-chart-4 dark:to-chart-5",
   },
   {
     name: "Riverside Loft Site",
     meta: "Listing site · 12 pages",
     tag: "Website",
     price: "4 wks",
-    tile: "bg-gradient-to-br from-stone-200 via-neutral-300 to-zinc-400 dark:from-stone-700 dark:via-neutral-800 dark:to-zinc-900",
+    tile: "bg-gradient-to-br from-muted via-border to-muted-foreground dark:from-muted dark:via-card dark:to-card",
   },
   {
     name: "Townhouse Brochure",
     meta: "Print · Digital brochure",
     tag: "Brochure",
     price: "5 wks",
-    tile: "bg-gradient-to-br from-rose-200 via-pink-300 to-purple-300 dark:from-rose-700 dark:via-pink-800 dark:to-purple-900",
+    tile: "bg-gradient-to-br from-primary/20 via-chart-1 to-chart-1 dark:from-chart-3 dark:via-chart-4 dark:to-chart-5",
   },
   {
     name: "Penthouse CGI Walkthrough",
     meta: "3D · Motion · 90 seconds",
     tag: "CGI",
     price: "8 wks",
-    tile: "bg-gradient-to-br from-blue-200 via-indigo-300 to-violet-400 dark:from-blue-700 dark:via-indigo-800 dark:to-violet-900",
+    tile: "bg-gradient-to-br from-primary/20 via-chart-1 to-primary dark:from-chart-3 dark:via-chart-4 dark:to-chart-5",
   },
   {
     name: "Coastal Resort Brand",
     meta: "Identity · Booking site",
     tag: "Brand",
     price: "3 wks",
-    tile: "bg-gradient-to-br from-yellow-100 via-amber-200 to-orange-300 dark:from-yellow-700 dark:via-amber-800 dark:to-orange-900",
+    tile: "bg-gradient-to-br from-primary/10 via-primary/20 to-chart-1 dark:from-chart-3 dark:via-chart-4 dark:to-chart-5",
   },
   {
     name: "Agency Design System",
     meta: "Components · Docs",
     tag: "System",
     price: "From $2,100/mo",
-    tile: "bg-gradient-to-br from-amber-200 via-orange-300 to-rose-400 dark:from-amber-700 dark:via-orange-800 dark:to-rose-900",
+    tile: "bg-gradient-to-br from-primary/20 via-chart-1 to-primary dark:from-chart-3 dark:via-chart-4 dark:to-chart-5",
   },
 ]
 
@@ -348,7 +348,7 @@ export default function LandingRealEstate05() {
       <section className="border-b">
         <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
           <div className="max-w-2xl">
-            <p className="text-sm font-medium text-violet-600 dark:text-violet-400">
+            <p className="text-sm font-medium text-primary dark:text-primary">
               Why choose Designali
             </p>
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl  mt-3">
@@ -365,7 +365,7 @@ export default function LandingRealEstate05() {
                 key={feature.title}
                 className="-mt-px -ml-px border-t border-l p-8"
               >
-                <feature.icon className="size-6 text-violet-600 dark:text-violet-400" />
+                <feature.icon className="size-6 text-primary dark:text-primary" />
                 <h3 className="mt-5 font-semibold">{feature.title}</h3>
                 <p className="mt-2 text-sm leading-6 text-muted-foreground">
                   {feature.description}
@@ -403,7 +403,7 @@ export default function LandingRealEstate05() {
                   className={`relative aspect-[4/3] overflow-hidden rounded-2xl ${item.tile}`}
                 >
                   <div className="absolute inset-0 bg-black/0 transition-colors group-hover:bg-black/10" />
-                  <span className="absolute top-3 left-3 rounded-full bg-white/85 px-2.5 py-1 text-[11px] font-medium text-zinc-900 backdrop-blur">
+                  <span className="absolute top-3 left-3 rounded-full bg-white/85 px-2.5 py-1 text-[11px] font-medium text-foreground backdrop-blur">
                     {item.tag}
                   </span>
                 </div>
@@ -436,7 +436,7 @@ export default function LandingRealEstate05() {
                 key={step.title}
                 className="relative border-t-2 border-border pt-6"
               >
-                <span className="text-sm font-medium text-violet-600 dark:text-violet-400">
+                <span className="text-sm font-medium text-primary dark:text-primary">
                   Step {i + 1}
                 </span>
                 <h3 className="mt-2 text-lg font-semibold">{step.title}</h3>
@@ -538,7 +538,7 @@ export default function LandingRealEstate05() {
                           className={
                             featured
                               ? "mt-0.5 size-4 shrink-0"
-                              : "mt-0.5 size-4 shrink-0 text-violet-600 dark:text-violet-400"
+                              : "mt-0.5 size-4 shrink-0 text-primary dark:text-primary"
                           }
                         />
                         {feature}
@@ -693,7 +693,7 @@ function HeroVisual() {
           className={`relative overflow-hidden rounded-2xl ${item.tile} ${i === 0 ? "col-span-2 aspect-[16/10] md:col-span-1 md:aspect-[3/4]" : "aspect-[3/4]"}`}
         >
           <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/0 to-black/0" />
-          <span className="absolute top-3 left-3 rounded-full bg-white/85 px-2.5 py-1 text-[11px] font-medium text-zinc-900 backdrop-blur">
+          <span className="absolute top-3 left-3 rounded-full bg-white/85 px-2.5 py-1 text-[11px] font-medium text-foreground backdrop-blur">
             {item.tag}
           </span>
           <div className="absolute inset-x-3 bottom-3 flex items-end justify-between gap-2 text-white">

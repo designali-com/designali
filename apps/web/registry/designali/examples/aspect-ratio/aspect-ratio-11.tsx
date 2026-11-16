@@ -9,7 +9,7 @@ export default function StoryCardPortrait() {
   return (
     <AspectRatio
       ratio={9 / 16}
-      className="w-full max-w-44 overflow-hidden bg-linear-to-b from-orange-400 via-rose-500 to-purple-700"
+      className="w-full max-w-44 overflow-hidden bg-linear-to-b from-primary via-primary to-chart-3"
     >
       <div className="absolute inset-x-2 top-2 flex gap-1">
         {[100, 60, 0].map((value, index) => (

@@ -6,34 +6,34 @@ import { cn } from "@workspace/ui/lib/utils"
 
 const milestones = [
   {
-    year: "2017",
-    title: "A spreadsheet and a van",
-    body: "Two former chefs start delivering surplus produce from three farms to restaurants in Leeds, tracked in one shared spreadsheet.",
-    stat: "3 farms",
+    year: "Dalim",
+    title: "Where it started",
+    body: "Ali Imam starts Dalim, a home for his design work across graphics, visuals and type.",
+    stat: "Dalim Graphic",
   },
   {
-    year: "2019",
-    title: "The first warehouse",
-    body: "A 400 m² cold store in Bradford lets us hold stock for 48 hours, cutting spoilage from 22% to 7%.",
-    stat: "62 restaurants",
+    year: "Fonts",
+    title: "Type and icons",
+    body: "Dalim Fonts and Dalim Icons turn one-off project assets into tools other designers can use.",
+    stat: "Dalim Icons",
   },
   {
-    year: "2021",
-    title: "Software, by accident",
-    body: "The routing tool we built for our own drivers gets licensed by four other food hubs. Harvestline the platform is born.",
-    stat: "4 licensees",
+    year: "Agency",
+    title: "Client work",
+    body: "Dalim Agency and Dalim Works take on brand identity, UI/UX and web projects for clients.",
+    stat: "Dalim Agency",
   },
   {
-    year: "2024",
-    title: "Series A, still in Yorkshire",
-    body: "We raise £9m to bring the platform to regional food networks across the UK and Ireland. HQ stays in Leeds.",
-    stat: "£9m raised",
+    year: "UI",
+    title: "Design meets code",
+    body: "Dalim UI and Dalim Tools bring the design work into React and Tailwind CSS components.",
+    stat: "Dalim UI",
   },
   {
-    year: "2026",
-    title: "One million kilos",
-    body: "Networks on Harvestline moved one million kilos of produce that would otherwise have gone to waste.",
-    stat: "1M kg saved",
+    year: "Today",
+    title: "designali",
+    body: "Everything comes together as Designali: a design and development studio, plus templates, blocks, icons and logos on designali.com.",
+    stat: "460+ blocks",
   },
 ]
 
@@ -44,9 +44,9 @@ export default function Sections08() {
   return (
     <section className="w-full bg-background py-24">
       <div className="mx-auto max-w-7xl px-6">
-        <p className="font-mono text-xs tracking-widest text-muted-foreground uppercase">Our story</p>
+        <p className="font-sans text-xs tracking-widest text-muted-foreground uppercase">Our story</p>
         <h2 className="mt-4 max-w-2xl text-4xl font-semibold tracking-tight md:text-5xl">
-          Nine years from a van to a platform.
+          From Dalim to designali, design se code tak.
         </h2>
 
         <div className="relative mt-16">
@@ -74,7 +74,7 @@ export default function Sections08() {
                   />
                   <span
                     className={cn(
-                      "font-mono text-xs transition-colors sm:text-sm",
+                      "font-sans text-xs transition-colors sm:text-sm",
                       active === index ? "text-foreground" : "text-muted-foreground"
                     )}
                   >

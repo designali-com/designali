@@ -334,7 +334,7 @@ export default function LandingCrypto05() {
       <section className="border-b">
         <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
           <div className="max-w-2xl">
-            <p className="text-sm font-medium text-sky-600 dark:text-sky-400">
+            <p className="text-sm font-medium text-primary dark:text-primary">
               Services
             </p>
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl  mt-3">
@@ -350,7 +350,7 @@ export default function LandingCrypto05() {
                 key={feature.title}
                 className="-mt-px -ml-px border-t border-l p-8"
               >
-                <feature.icon className="size-6 text-sky-600 dark:text-sky-400" />
+                <feature.icon className="size-6 text-primary dark:text-primary" />
                 <h3 className="mt-5 font-semibold">{feature.title}</h3>
                 <p className="mt-2 text-sm leading-6 text-muted-foreground">
                   {feature.description}
@@ -391,7 +391,7 @@ export default function LandingCrypto05() {
                   <span className="flex size-10 items-center justify-center rounded-lg border bg-muted/50 font-semibold ">
                     {item.name.charAt(0)}
                   </span>
-                  <span className="rounded-full bg-sky-500/10 px-2.5 py-0.5 text-xs font-medium text-sky-600 dark:text-sky-400">
+                  <span className="rounded-full bg-primary/10 px-2.5 py-0.5 text-xs font-medium text-primary dark:text-primary">
                     {item.tag}
                   </span>
                 </div>
@@ -421,7 +421,7 @@ export default function LandingCrypto05() {
                 key={step.title}
                 className="relative border-t-2 border-border pt-6"
               >
-                <span className="text-sm font-medium text-sky-600 dark:text-sky-400">
+                <span className="text-sm font-medium text-primary dark:text-primary">
                   Step {i + 1}
                 </span>
                 <h3 className="mt-2 text-lg font-semibold">{step.title}</h3>
@@ -522,7 +522,7 @@ export default function LandingCrypto05() {
                           className={
                             featured
                               ? "mt-0.5 size-4 shrink-0"
-                              : "mt-0.5 size-4 shrink-0 text-sky-600 dark:text-sky-400"
+                              : "mt-0.5 size-4 shrink-0 text-primary dark:text-primary"
                           }
                         />
                         {feature}
@@ -705,13 +705,13 @@ function HeroVisual() {
           <div className="rounded-lg border p-4">
             <div className="mb-4 flex items-center justify-between text-xs">
               <span className="font-medium">Project progress, last 12 weeks</span>
-              <span className="text-sky-600 dark:text-sky-400">On track</span>
+              <span className="text-primary dark:text-primary">On track</span>
             </div>
             <div className="flex h-32 items-end gap-1.5">
               {bars.map((h, i) => (
                 <div
                   key={i}
-                  className={`flex-1 rounded-t-sm ${i === bars.length - 1 ? "bg-sky-600" : "bg-muted-foreground/20"}`}
+                  className={`flex-1 rounded-t-sm ${i === bars.length - 1 ? "bg-chart-2" : "bg-muted-foreground/20"}`}
                   style={{ height: `${h}%` }}
                 />
               ))}
@@ -729,7 +729,7 @@ function HeroVisual() {
                     {item.meta}
                   </div>
                 </div>
-                <span className="shrink-0 rounded-full bg-sky-500/10 px-2 py-0.5 text-[11px] font-medium text-sky-600 dark:text-sky-400">
+                <span className="shrink-0 rounded-full bg-primary/10 px-2 py-0.5 text-[11px] font-medium text-primary dark:text-primary">
                   {item.tag}
                 </span>
               </div>

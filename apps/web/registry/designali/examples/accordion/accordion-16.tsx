@@ -62,7 +62,7 @@ export default function AccordionOnboardingChecklist() {
             <AccordionTrigger className="items-center">
               <span className="flex items-center gap-2">
                 {step.done ? (
-                  <CircleCheckIcon className="size-4 text-emerald-600 dark:text-emerald-400" />
+                  <CircleCheckIcon className="size-4 text-primary dark:text-primary" />
                 ) : (
                   <CircleIcon className="size-4 text-muted-foreground" />
                 )}

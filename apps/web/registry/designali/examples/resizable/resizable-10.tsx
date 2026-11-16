@@ -38,10 +38,10 @@ export default function LivePanelSizeReadout() {
           >
             <div className="flex h-full flex-col items-center justify-center gap-1">
               <span className="text-xs font-medium">{label}</span>
-              <span className="font-mono text-lg tabular-nums">
+              <span className="font-sans text-lg tabular-nums">
                 {sizes[label]?.pct ?? 33}%
               </span>
-              <span className="font-mono text-[10px] text-muted-foreground tabular-nums">
+              <span className="font-sans text-[10px] text-muted-foreground tabular-nums">
                 {sizes[label]?.px ?? 0}px
               </span>
             </div>

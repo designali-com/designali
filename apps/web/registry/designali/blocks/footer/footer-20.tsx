@@ -36,7 +36,7 @@ export default function Footer20() {
           </div>
           {joined ? (
             <p className="mt-10 flex items-center gap-2 text-sm">
-              <Check className="size-4 text-emerald-600 dark:text-emerald-400" />
+              <Check className="size-4 text-primary dark:text-primary" />
               Thanks, see you next month.
             </p>
           ) : (

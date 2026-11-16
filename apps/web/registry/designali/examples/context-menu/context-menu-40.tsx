@@ -30,12 +30,12 @@ const assets = [
   "icon-set.svg",
 ]
 const tints = [
-  "from-rose-300 to-rose-500",
-  "from-sky-300 to-sky-500",
-  "from-amber-300 to-amber-500",
-  "from-emerald-300 to-emerald-500",
-  "from-violet-300 to-violet-500",
-  "from-zinc-300 to-zinc-500",
+  "from-chart-1 to-primary",
+  "from-chart-1 to-primary",
+  "from-chart-1 to-primary",
+  "from-chart-1 to-primary",
+  "from-chart-1 to-primary",
+  "from-border to-muted-foreground",
 ]
 
 export default function BulkSelectionMenu() {

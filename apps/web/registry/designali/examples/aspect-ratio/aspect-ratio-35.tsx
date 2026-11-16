@@ -14,27 +14,27 @@ const files = [
   {
     name: "designali-brief.pdf",
     icon: FileTextIcon,
-    tone: "bg-red-500/10 text-red-600 dark:text-red-400",
+    tone: "bg-destructive/10 text-destructive dark:text-destructive",
   },
   {
     name: "project-budget.xlsx",
     icon: FileSpreadsheetIcon,
-    tone: "bg-emerald-500/10 text-emerald-600 dark:text-emerald-400",
+    tone: "bg-primary/10 text-primary dark:text-primary",
   },
   {
     name: "cgi-showreel.mp4",
     icon: FileVideoIcon,
-    tone: "bg-violet-500/10 text-violet-600 dark:text-violet-400",
+    tone: "bg-primary/10 text-primary dark:text-primary",
   },
   {
     name: "motion-theme.mp3",
     icon: FileAudioIcon,
-    tone: "bg-amber-500/10 text-amber-600 dark:text-amber-400",
+    tone: "bg-primary/10 text-primary dark:text-primary",
   },
   {
     name: "designali-block.tsx",
     icon: FileCodeIcon,
-    tone: "bg-sky-500/10 text-sky-600 dark:text-sky-400",
+    tone: "bg-primary/10 text-primary dark:text-primary",
   },
   {
     name: "designali-icons.zip",

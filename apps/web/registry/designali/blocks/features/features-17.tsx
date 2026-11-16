@@ -56,13 +56,13 @@ export default function Features17() {
                 (t, i) => (
                   <div key={t} className="flex items-center gap-2 border border-border px-2 py-2 text-xs">
                     <span
-                      className={`size-3 shrink-0 rounded-full border ${i < 2 ? "border-emerald-500 bg-emerald-500" : "border-border"}`}
+                      className={`size-3 shrink-0 rounded-full border ${i < 2 ? "border-primary bg-primary" : "border-border"}`}
                     />
                     <span className={i < 2 ? "text-muted-foreground line-through" : ""}>{t}</span>
                   </div>
                 )
               )}
-              <div className="mt-3 h-24 bg-gradient-to-br from-amber-200 to-rose-200 dark:from-amber-900/60 dark:to-rose-900/60" />
+              <div className="mt-3 h-24 bg-gradient-to-br from-primary/20 to-primary/20 dark:from-chart-5/60 dark:to-chart-5/60" />
             </div>
           </div>
           <Column items={right} align="right" />

@@ -37,7 +37,7 @@ export default function TaskCompleteToggles() {
               )
             }
             aria-label={"Complete " + t.title}
-            className="aria-pressed:bg-transparent aria-pressed:text-emerald-600"
+            className="aria-pressed:bg-transparent aria-pressed:text-primary"
           >
             {t.done ? <CircleCheckIcon /> : <CircleIcon />}
           </Toggle>

@@ -24,7 +24,7 @@ export default function Footer11() {
       <div className="mx-auto max-w-7xl px-6 py-16">
         <div className="grid gap-10 border-b pb-12 lg:grid-cols-2 lg:items-end">
           <div>
-            <p className="font-serif text-3xl tracking-tight md:text-4xl">The Designali Letter</p>
+            <p className="font-sans text-3xl tracking-tight md:text-4xl">The Designali Letter</p>
             <p className="mt-3 max-w-md text-sm leading-6 text-muted-foreground">
               One note from Ali Imam on design, code and craft, plus the newest
               Designali templates and blocks, in your inbox every month.
@@ -32,7 +32,7 @@ export default function Footer11() {
           </div>
           {done ? (
             <p className="flex items-center gap-2 text-sm">
-              <Check className="size-4 text-emerald-600 dark:text-emerald-400" />
+              <Check className="size-4 text-primary dark:text-primary" />
               You are on the list. The next Designali letter is on its way.
             </p>
           ) : (

@@ -26,7 +26,7 @@ export default function ConfirmPayoutDialog() {
       </AlertDialogTrigger>
       <AlertDialogContent>
         <AlertDialogHeader>
-          <AlertDialogMedia className="bg-emerald-500/10 text-emerald-600 dark:text-emerald-400">
+          <AlertDialogMedia className="bg-primary/10 text-primary dark:text-primary">
             <BanknoteIcon />
           </AlertDialogMedia>
           <AlertDialogTitle>Send $2,480.00 to Ali Imam?</AlertDialogTitle>

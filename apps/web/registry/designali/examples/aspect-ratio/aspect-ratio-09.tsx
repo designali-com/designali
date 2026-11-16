@@ -20,14 +20,14 @@ export default function MapEmbedPlaceholder() {
             y="30"
             width="90"
             height="70"
-            className="fill-emerald-500/15"
+            className="fill-primary/15"
           />
           <rect
             x="250"
             y="180"
             width="120"
             height="90"
-            className="fill-sky-500/15"
+            className="fill-primary/15"
           />
           <g stroke="currentColor" strokeWidth="10" fill="none">
             <path d="M0 140 H400" />

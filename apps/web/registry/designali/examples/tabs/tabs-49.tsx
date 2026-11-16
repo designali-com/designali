@@ -37,7 +37,7 @@ export default function ConferenceScheduleTabs() {
         <TabsContent key={key} value={key} className="divide-y border">
           {talks.map(([time, title, room]) => (
             <div key={title} className="flex gap-3 px-3 py-2.5">
-              <span className="w-10 font-mono text-muted-foreground">
+              <span className="w-10 font-sans text-muted-foreground">
                 {time}
               </span>
               <div>

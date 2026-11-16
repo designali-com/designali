@@ -27,7 +27,7 @@ const initialItems = [
     variant: "Next.js · Tailwind CSS",
     price: 22,
     qty: 2,
-    gradient: "from-amber-200 to-orange-400",
+    gradient: "from-primary/20 to-primary",
   },
   {
     id: "tote",
@@ -35,7 +35,7 @@ const initialItems = [
     variant: "4000+ icons",
     price: 35,
     qty: 1,
-    gradient: "from-stone-200 to-stone-400",
+    gradient: "from-muted to-muted-foreground",
   },
   {
     id: "candle",
@@ -43,7 +43,7 @@ const initialItems = [
     variant: "SVG + React",
     price: 28,
     qty: 1,
-    gradient: "from-emerald-200 to-teal-500",
+    gradient: "from-primary/20 to-primary",
   },
 ]
 

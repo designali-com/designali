@@ -54,7 +54,7 @@ export default function CloseableEditorTabs() {
       <TabsList className="h-8 w-full justify-start overflow-x-auto p-0">
         {files.map((f) => (
           <div key={f} className="group flex h-full items-center border-e">
-            <TabsTrigger value={f} className="flex-none px-2.5 font-mono">
+            <TabsTrigger value={f} className="flex-none px-2.5 font-sans">
               <FileCodeIcon data-icon="inline-start" />
               {f}
             </TabsTrigger>
@@ -73,7 +73,7 @@ export default function CloseableEditorTabs() {
         <TabsContent
           key={f}
           value={f}
-          className="p-3 font-mono text-muted-foreground"
+          className="p-3 font-sans text-muted-foreground"
         >
           {"// " + f + " — 42 lines"}
         </TabsContent>

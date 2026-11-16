@@ -18,10 +18,10 @@ function CityMap() {
       <rect width="1200" height="640" className="fill-muted" />
       <path
         d="M0 470 C 180 430, 260 520, 420 500 S 700 420, 860 470 S 1100 560, 1200 520 L1200 640 L0 640 Z"
-        className="fill-sky-200/70 dark:fill-sky-900/40"
+        className="fill-chart-1/70 dark:fill-chart-5/40"
       />
-      <rect x="120" y="80" width="220" height="150" className="fill-emerald-200/70 dark:fill-emerald-900/40" />
-      <rect x="880" y="120" width="180" height="120" className="fill-emerald-200/70 dark:fill-emerald-900/40" />
+      <rect x="120" y="80" width="220" height="150" className="fill-chart-1/70 dark:fill-chart-5/40" />
+      <rect x="880" y="120" width="180" height="120" className="fill-chart-1/70 dark:fill-chart-5/40" />
       <g className="stroke-background" strokeWidth="10" fill="none" strokeLinecap="round">
         <path d="M0 300 L1200 260" />
         <path d="M0 140 L1200 110" />
@@ -40,7 +40,7 @@ function CityMap() {
       </g>
       <path
         d="M0 300 L1200 260"
-        className="stroke-amber-300 dark:stroke-amber-600/70"
+        className="stroke-chart-1 dark:stroke-primary/70"
         strokeWidth="6"
         fill="none"
       />

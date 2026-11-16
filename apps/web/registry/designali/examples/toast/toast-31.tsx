@@ -41,7 +41,7 @@ export default function DeduplicatedToast() {
         >
           <HeartIcon
             data-icon="inline-start"
-            className={cn(likes > 0 && "fill-current text-rose-500")}
+            className={cn(likes > 0 && "fill-current text-primary")}
           />
           {likes}
         </Button>

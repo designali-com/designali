@@ -39,11 +39,12 @@ export default function Media13() {
     <section className="w-full bg-background py-16">
       <div className="mx-auto grid max-w-7xl gap-6 px-6 lg:grid-cols-[1fr_360px]">
         <div className="min-w-0">
-          <div className="relative flex aspect-video items-center justify-center overflow-hidden border border-border" style={{ background: "linear-gradient(135deg, var(--muted), var(--background))" }}>
-            <div className="absolute inset-6 border border-dashed border-border md:inset-12" />
+          <div className="relative flex aspect-video items-center justify-center overflow-hidden border border-border bg-muted">
+            <img src="/img/dashboard-1-light.jpg" alt={lesson.title} className="absolute inset-0 size-full object-cover" />
+            <div className="absolute inset-0 bg-background/40" />
             <div className="relative text-center">
               <PlayCircle className="mx-auto size-14 text-foreground/80" strokeWidth={1.25} />
-              <p className="mt-3 text-xs text-muted-foreground">{lesson.length}</p>
+              <p className="mt-3 text-xs text-foreground">{lesson.length}</p>
             </div>
           </div>
           <div className="mt-6 flex flex-wrap items-start justify-between gap-4">
@@ -65,7 +66,7 @@ export default function Media13() {
             <p className="text-sm font-medium">Designali: Layout for Developers</p>
             <div className="mt-3 flex items-center gap-3">
               <Progress value={pct} className="flex-1" />
-              <span className="font-mono text-xs tabular-nums">{pct}%</span>
+              <span className="font-sans text-xs tabular-nums">{pct}%</span>
             </div>
           </div>
           {modules.map((m, mi) => {
@@ -79,7 +80,7 @@ export default function Media13() {
                   className="flex w-full items-center justify-between gap-3 px-4 py-3 text-left text-sm font-medium hover:bg-muted/50"
                 >
                   <span>
-                    <span className="mr-2 font-mono text-xs text-muted-foreground">0{mi + 1}</span>
+                    <span className="mr-2 font-sans text-xs text-muted-foreground">0{mi + 1}</span>
                     {m.title}
                   </span>
                   <ChevronDown className={cn("size-4 transition-transform", isOpen && "rotate-180")} />
@@ -100,9 +101,9 @@ export default function Media13() {
                               key === current ? "bg-muted font-medium" : "hover:bg-muted/50"
                             )}
                           >
-                            <Icon className={cn("size-4 shrink-0", done.includes(key) && !l.locked ? "text-emerald-600 dark:text-emerald-400" : "text-muted-foreground")} />
+                            <Icon className={cn("size-4 shrink-0", done.includes(key) && !l.locked ? "text-primary dark:text-primary" : "text-muted-foreground")} />
                             <span className="min-w-0 flex-1 truncate">{l.title}</span>
-                            <span className="font-mono text-xs text-muted-foreground">{l.length}</span>
+                            <span className="font-sans text-xs text-muted-foreground">{l.length}</span>
                           </button>
                         </li>
                       )

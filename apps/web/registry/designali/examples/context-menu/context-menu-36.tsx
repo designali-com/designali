@@ -20,10 +20,10 @@ import {
 import { cn } from "@workspace/ui/lib/utils"
 
 const swatches = [
-  { id: "yellow", label: "Lemon", className: "bg-yellow-200 text-yellow-950" },
-  { id: "pink", label: "Bubblegum", className: "bg-pink-200 text-pink-950" },
-  { id: "green", label: "Mint", className: "bg-emerald-200 text-emerald-950" },
-  { id: "blue", label: "Sky", className: "bg-sky-200 text-sky-950" },
+  { id: "yellow", label: "Lemon", className: "bg-primary/20 text-chart-5" },
+  { id: "pink", label: "Bubblegum", className: "bg-primary/20 text-chart-5" },
+  { id: "green", label: "Mint", className: "bg-primary/20 text-chart-5" },
+  { id: "blue", label: "Sky", className: "bg-primary/20 text-chart-5" },
 ]
 
 const initialNotes = [

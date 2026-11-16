@@ -16,19 +16,19 @@ const workspaces = [
     label: "Designali Studio",
     value: "acme",
     plan: "Pro",
-    gradient: "from-violet-500 to-fuchsia-500",
+    gradient: "from-primary to-primary",
   },
   {
     label: "Dalim Works",
     value: "lumen",
     plan: "Free",
-    gradient: "from-sky-500 to-cyan-400",
+    gradient: "from-primary to-primary",
   },
   {
     label: "Client projects",
     value: "harbor",
     plan: "Team",
-    gradient: "from-amber-500 to-orange-500",
+    gradient: "from-primary to-primary",
   },
 ]
 

@@ -1,5 +1,5 @@
 import { cn } from "@workspace/ui/lib/utils"
-import { Card, CardContent } from "@workspace/ui/components/card"
+import { BentoGrid, BentoGridItem } from "@/registry/designali/ui/bento"
 import {
   Copy,
   Sparkles,
@@ -29,15 +29,15 @@ const FeatureCard = ({
   description,
   featured,
 }: FeatureItem) => (
-  <Card
+  <BentoGridItem
+    colSpan={featured ? { base: 1, md: 2, lg: 1 } : 1}
+    rowSpan={featured ? { base: 1, lg: 2 } : 1}
     className={cn(
-      "overflow-hidden shadow-none",
-      featured
-        ? "border-0 bg-foreground text-background md:col-span-2 lg:col-span-1 lg:row-span-2"
-        : "bg-muted/50",
+      "overflow-hidden p-0",
+      featured ? "border-0 bg-foreground text-background" : "bg-muted/50",
     )}
   >
-    <CardContent
+    <div
       className={cn(
         "flex flex-col p-6",
         featured ? "h-full min-h-[360px]" : "gap-5",
@@ -86,8 +86,8 @@ const FeatureCard = ({
           {description}
         </p>
       </div>
-    </CardContent>
-  </Card>
+    </div>
+  </BentoGridItem>
 )
 
 export const Feature08 = ({
@@ -155,11 +155,16 @@ export const Feature08 = ({
     </div>
 
     {/* Features */}
-    <div className="mx-auto mt-12 grid max-w-5xl gap-3 md:grid-cols-2 lg:grid-cols-3">
+    <BentoGrid
+      cols={{ base: 1, md: 2, lg: 3 }}
+      gap={3}
+      rowHeight="auto"
+      className="mt-12 h-auto max-w-5xl"
+    >
       {features.map((feature, index) => (
         <FeatureCard key={index} {...feature} />
       ))}
-    </div>
+    </BentoGrid>
   </section>
 )
  

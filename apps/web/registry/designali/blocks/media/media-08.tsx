@@ -53,9 +53,13 @@ export default function Media08() {
       <div className="mx-auto grid max-w-5xl overflow-hidden border border-border md:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)]">
         <div className="flex flex-col bg-muted/40 p-6 md:p-8">
           <div
-            className={cn("relative aspect-square w-full border border-border transition-transform duration-500", playing && "scale-[1.02]")}
-            style={{ background: "conic-gradient(from 200deg at 60% 40%, var(--chart-1), var(--chart-4), var(--chart-2), var(--chart-1))" }}
+            className={cn("relative aspect-square w-full overflow-hidden border border-border transition-transform duration-500", playing && "scale-[1.02]")}
           >
+            <img
+              src="/img/ask/ask7.jpg"
+              alt="Designali Sessions cover art"
+              className="absolute inset-0 size-full object-cover"
+            />
             <span className="absolute bottom-4 left-4 bg-background/85 px-2 py-1 text-[11px] font-medium tracking-widest uppercase backdrop-blur">
               Designali - Sessions
             </span>
@@ -72,7 +76,7 @@ export default function Media08() {
               onClick={() => setLiked((l) => (l.includes(current) ? l.filter((x) => x !== current) : [...l, current]))}
               className="p-1"
             >
-              <Heart className={cn("size-5", liked.includes(current) ? "fill-rose-500 text-rose-500" : "text-muted-foreground")} />
+              <Heart className={cn("size-5", liked.includes(current) ? "fill-primary text-primary" : "text-muted-foreground")} />
             </button>
           </div>
           <div className="mt-4">
@@ -85,7 +89,7 @@ export default function Media08() {
               aria-label="Seek"
               className="h-1 w-full cursor-pointer accent-foreground"
             />
-            <div className="mt-1 flex justify-between font-mono text-xs text-muted-foreground tabular-nums">
+            <div className="mt-1 flex justify-between font-sans text-xs text-muted-foreground tabular-nums">
               <span>{fmt(time)}</span>
               <span>-{fmt(track.length - time)}</span>
             </div>
@@ -133,10 +137,10 @@ export default function Media08() {
                       ))}
                     </span>
                   ) : (
-                    <span className="font-mono text-xs text-muted-foreground">{i + 1}</span>
+                    <span className="font-sans text-xs text-muted-foreground">{i + 1}</span>
                   )}
                   <span className="truncate">{t.title}</span>
-                  <span className="font-mono text-xs text-muted-foreground tabular-nums">{fmt(t.length)}</span>
+                  <span className="font-sans text-xs text-muted-foreground tabular-nums">{fmt(t.length)}</span>
                 </button>
               </li>
             ))}

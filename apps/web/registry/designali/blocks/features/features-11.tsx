@@ -41,15 +41,15 @@ function Visual({ kind }: { kind: string }) {
   if (kind === "passkey")
     return (
       <div className="flex flex-col items-center gap-4">
-        <div className="flex size-24 items-center justify-center rounded-full border-2 border-dashed border-emerald-500/60">
-          <Fingerprint className="size-12 text-emerald-600 dark:text-emerald-400" />
+        <div className="flex size-24 items-center justify-center rounded-full border-2 border-dashed border-primary/60">
+          <Fingerprint className="size-12 text-primary dark:text-primary" />
         </div>
         <span className="text-xs text-muted-foreground">Your brand, uniquely yours</span>
       </div>
     )
   if (kind === "tokens")
     return (
-      <div className="w-full max-w-xs space-y-2 font-mono text-xs">
+      <div className="w-full max-w-xs space-y-2 font-sans text-xs">
         {[
           ["@designali/icons", "4000+", "new"],
           ["@designali/logos", "brands", "new"],
@@ -58,7 +58,7 @@ function Visual({ kind }: { kind: string }) {
           <div key={id} className="flex items-center justify-between gap-2 border border-border bg-background px-3 py-2">
             <span>{id}</span>
             <span className="text-muted-foreground">{scope}</span>
-            <span className="text-amber-600 dark:text-amber-400">{exp}</span>
+            <span className="text-primary dark:text-primary">{exp}</span>
           </div>
         ))}
       </div>
@@ -67,10 +67,10 @@ function Visual({ kind }: { kind: string }) {
     return (
       <div className="w-full max-w-xs space-y-2 text-xs">
         {[
-          ["Hero block", "Passed", "text-emerald-600 dark:text-emerald-400"],
-          ["Pricing block", "Fix needed", "text-red-600 dark:text-red-400"],
-          ["Footer block", "Passed", "text-emerald-600 dark:text-emerald-400"],
-          ["Header block", "Review", "text-amber-600 dark:text-amber-400"],
+          ["Hero block", "Passed", "text-primary dark:text-primary"],
+          ["Pricing block", "Fix needed", "text-destructive dark:text-destructive"],
+          ["Footer block", "Passed", "text-primary dark:text-primary"],
+          ["Header block", "Review", "text-primary dark:text-primary"],
         ].map(([loc, status, tone], i) => (
           <div key={i} className="flex justify-between border border-border bg-background px-3 py-2">
             <span>{loc}</span>
@@ -80,15 +80,15 @@ function Visual({ kind }: { kind: string }) {
       </div>
     )
   return (
-    <div className="w-full max-w-xs space-y-2 font-mono text-xs">
+    <div className="w-full max-w-xs space-y-2 font-sans text-xs">
       <div className="border border-border bg-background px-3 py-2">
         email: <span className="text-muted-foreground">hello@designali.com</span>
       </div>
       <div className="border border-border bg-background px-3 py-2">
-        primary: <span className="text-sky-600 dark:text-sky-400">var(--primary)</span>
+        primary: <span className="text-primary dark:text-primary">var(--primary)</span>
       </div>
       <div className="border border-border bg-background px-3 py-2">
-        radius: <span className="text-sky-600 dark:text-sky-400">var(--radius)</span>
+        radius: <span className="text-primary dark:text-primary">var(--radius)</span>
       </div>
     </div>
   )

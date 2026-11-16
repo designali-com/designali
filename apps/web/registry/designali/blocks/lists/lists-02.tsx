@@ -49,7 +49,7 @@ export default function Lists02() {
               className="grid gap-6 py-10 md:grid-cols-[200px_1fr]"
             >
               <div className="space-y-2">
-                <p className="font-mono text-sm">{release.version}</p>
+                <p className="font-sans text-sm">{release.version}</p>
                 <p className="text-xs text-muted-foreground">{release.date}</p>
                 <span className="inline-block border border-border px-2 py-0.5 text-[10px] tracking-wider text-muted-foreground uppercase">
                   {release.tag}

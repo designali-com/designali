@@ -39,8 +39,8 @@ export default function PasswordStrengthMeter() {
         aria-label="Password strength"
         className={cn(
           score <= 1 && "[&_[data-slot=progress-indicator]]:bg-destructive",
-          score === 2 && "[&_[data-slot=progress-indicator]]:bg-amber-500",
-          score >= 3 && "[&_[data-slot=progress-indicator]]:bg-emerald-500"
+          score === 2 && "[&_[data-slot=progress-indicator]]:bg-primary",
+          score >= 3 && "[&_[data-slot=progress-indicator]]:bg-primary"
         )}
       >
         <span className="text-xs font-medium">{labels[score]}</span>

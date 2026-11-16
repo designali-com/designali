@@ -14,11 +14,11 @@ export default function PlanTierBadges() {
         <ZapIcon data-icon="inline-start" />
         Pro
       </Badge>
-      <Badge className="bg-gradient-to-r from-sky-500 to-indigo-600 text-white">
+      <Badge className="bg-gradient-to-r from-primary to-chart-2 text-white">
         <UsersIcon data-icon="inline-start" />
         Team
       </Badge>
-      <Badge className="bg-gradient-to-r from-amber-400 via-orange-500 to-rose-500 text-white">
+      <Badge className="bg-gradient-to-r from-primary via-primary to-primary text-white">
         <GemIcon data-icon="inline-start" />
         Enterprise
       </Badge>

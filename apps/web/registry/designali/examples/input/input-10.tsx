@@ -10,14 +10,14 @@ const LIMIT = 60
 
 export default function CharacterLimitInput() {
   const [value, setValue] = React.useState(
-    "Spring sale: 20% off all annual plans"
+    "designali: 460+ blocks, design se code tak"
   )
   const remaining = LIMIT - value.length
 
   return (
     <Field className="w-full max-w-sm">
       <div className="flex items-center justify-between">
-        <FieldLabel htmlFor="headline">Banner headline</FieldLabel>
+        <FieldLabel htmlFor="headline">designali.com banner headline</FieldLabel>
         <span
           className={cn(
             "text-xs tabular-nums",

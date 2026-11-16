@@ -1,8 +1,10 @@
+import { CounterNumber } from "@/registry/designali/ui/counter-number"
+
 const stats = [
-  { value: "4.2", unit: "M", label: "Parcels delivered", note: "Since launch in 2021" },
-  { value: "99.3", unit: "%", label: "On-time rate", note: "Trailing 90 days" },
-  { value: "-41", unit: "%", label: "CO₂ per delivery", note: "vs. diesel van baseline" },
-  { value: "18", unit: "min", label: "Median last mile", note: "Hub to doorstep" },
+  { value: 460, unit: "+", label: "Blocks", note: "designali.com/blocks" },
+  { value: 240, unit: "+", label: "Landing pages", note: "Ready to ship" },
+  { value: 2300, unit: "+", label: "UI designs", note: "designali.com/ui" },
+  { value: 4000, unit: "+", label: "Icons", note: "@designali/icons" },
 ]
 
 export default function Sections12() {
@@ -11,9 +13,9 @@ export default function Sections12() {
       <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
         <div className="grid gap-6 md:grid-cols-[1fr_auto] md:items-end">
           <h2 className="max-w-2xl text-3xl leading-tight font-semibold tracking-tight md:text-5xl">
-            Cargo bikes, not vans. The numbers so far.
+            design se code tak. The Designali library so far.
           </h2>
-          <p className="font-mono text-xs opacity-60">Updated 1 Nov 2026</p>
+          <p className="text-xs opacity-60">designali.com</p>
         </div>
 
         <dl className="mt-16 grid grid-cols-1 gap-px border border-background/15 bg-background/15 sm:grid-cols-2 lg:grid-cols-4">
@@ -24,10 +26,13 @@ export default function Sections12() {
             >
               <dt className="text-sm opacity-70">{stat.label}</dt>
               <dd className="mt-4">
-                <span className="text-6xl font-semibold tracking-tighter md:text-7xl">{stat.value}</span>
+                <CounterNumber
+                  value={stat.value}
+                  className="text-6xl font-semibold tracking-tighter text-background md:text-7xl"
+                />
                 <span className="ml-1 text-2xl font-medium opacity-60">{stat.unit}</span>
               </dd>
-              <dd className="mt-3 font-mono text-[11px] tracking-wide uppercase opacity-50">{stat.note}</dd>
+              <dd className="mt-3 font-sans text-[11px] tracking-wide uppercase opacity-50">{stat.note}</dd>
             </div>
           ))}
         </dl>

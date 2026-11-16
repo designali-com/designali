@@ -26,7 +26,7 @@ export default function CopyableKeyLabel() {
           id="webhook-secret"
           readOnly
           value={secret}
-          className="font-mono"
+          className="font-sans"
         />
         <InputGroupAddon align="inline-end">
           <InputGroupButton

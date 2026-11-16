@@ -11,11 +11,11 @@ import {
 import { cn } from "@workspace/ui/lib/utils"
 
 const colors = [
-  { label: "Graphite", value: "graphite", swatch: "bg-neutral-700" },
-  { label: "Sand", value: "sand", swatch: "bg-amber-200" },
-  { label: "Sage", value: "sage", swatch: "bg-emerald-300" },
-  { label: "Ocean", value: "ocean", swatch: "bg-sky-600" },
-  { label: "Clay", value: "clay", swatch: "bg-orange-400" },
+  { label: "Graphite", value: "graphite", swatch: "bg-foreground" },
+  { label: "Sand", value: "sand", swatch: "bg-primary/20" },
+  { label: "Sage", value: "sage", swatch: "bg-chart-1" },
+  { label: "Ocean", value: "ocean", swatch: "bg-chart-2" },
+  { label: "Clay", value: "clay", swatch: "bg-primary" },
 ]
 
 export default function ColorSwatchSelect() {

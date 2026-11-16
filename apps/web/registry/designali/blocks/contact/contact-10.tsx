@@ -72,8 +72,8 @@ export default function Contact10() {
           <div className="flex flex-col justify-between border bg-muted/50 p-6 md:col-span-3">
             <div className="flex items-center gap-2 text-sm">
               <span className="relative flex size-2">
-                <span className="absolute inline-flex size-full animate-ping rounded-full bg-emerald-500 opacity-60" />
-                <span className="relative inline-flex size-2 rounded-full bg-emerald-500" />
+                <span className="absolute inline-flex size-full animate-ping rounded-full bg-primary opacity-60" />
+                <span className="relative inline-flex size-2 rounded-full bg-primary" />
               </span>
               All systems operational
             </div>
@@ -83,8 +83,8 @@ export default function Contact10() {
                   key={i}
                   className={
                     i === 41
-                      ? "h-5 flex-1 bg-amber-400"
-                      : "h-8 flex-1 bg-emerald-500/70 dark:bg-emerald-400/60"
+                      ? "h-5 flex-1 bg-primary"
+                      : "h-8 flex-1 bg-primary/70 dark:bg-primary/60"
                   }
                 />
               ))}

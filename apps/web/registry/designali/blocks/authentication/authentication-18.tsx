@@ -36,7 +36,7 @@ export default function Authentication18() {
             <p className="text-sm text-muted-foreground">Settings / Security</p>
             <h2 className="mt-1 text-3xl font-semibold tracking-tight">Sign-in and security</h2>
           </div>
-          <p className="flex items-center gap-2 text-sm text-emerald-700 dark:text-emerald-400">
+          <p className="flex items-center gap-2 text-sm text-chart-3 dark:text-primary">
             <ShieldCheck className="size-4" />
             Security checkup complete
           </p>
@@ -116,7 +116,7 @@ export default function Authentication18() {
                   </td>
                   <td className="p-3 text-muted-foreground">
                     {session.location}
-                    <span className="block font-mono text-xs">{session.ip}</span>
+                    <span className="block font-sans text-xs">{session.ip}</span>
                   </td>
                   <td className="p-3 text-muted-foreground">{session.seen}</td>
                   <td className="p-3 text-end">
@@ -124,7 +124,7 @@ export default function Authentication18() {
                       <button
                         type="button"
                         onClick={() => setSessions(sessions.filter((item) => item.id !== session.id))}
-                        className="text-sm text-red-600 hover:underline dark:text-red-400"
+                        className="text-sm text-destructive hover:underline dark:text-destructive"
                       >
                         Revoke
                       </button>

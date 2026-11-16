@@ -11,15 +11,15 @@ import {
 import { cn } from "@workspace/ui/lib/utils"
 
 const events = [
-  { time: "09:00", title: "Design standup", color: "bg-sky-500" },
+  { time: "09:00", title: "Design standup", color: "bg-primary" },
   {
     time: "10:30",
     title: "Client review: brand identity",
-    color: "bg-violet-500",
+    color: "bg-primary",
   },
-  { time: "13:00", title: "Figma handoff with Ali", color: "bg-amber-500" },
-  { time: "15:00", title: "Ship new Designali blocks", color: "bg-emerald-500" },
-  { time: "17:30", title: "Post work on Instagram", color: "bg-rose-500" },
+  { time: "13:00", title: "Figma handoff with Ali", color: "bg-primary" },
+  { time: "15:00", title: "Ship new Designali blocks", color: "bg-primary" },
+  { time: "17:30", title: "Post work on Instagram", color: "bg-primary" },
 ]
 
 export default function AgendaMoreEvents() {

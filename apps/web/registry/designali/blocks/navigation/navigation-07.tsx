@@ -10,6 +10,8 @@ import {
 
 import { Button } from "@workspace/ui/components/button"
 
+import { Logo } from "@/src/components/logo"
+
 const links = ["Templates", "Blocks", "Icons", "Pricing", "Work"]
 
 export default function Navigation07() {
@@ -61,12 +63,7 @@ export default function Navigation07() {
       <nav className="border-b">
         <div className="mx-auto flex h-16 max-w-7xl items-center gap-10 px-6">
           <a href="#" className="flex items-center gap-2 font-semibold tracking-tight">
-            <span className="grid size-6 grid-cols-2 gap-0.5">
-              <span className="bg-foreground" />
-              <span className="bg-foreground/40" />
-              <span className="bg-foreground/40" />
-              <span className="bg-foreground" />
-            </span>
+            <Logo className="h-5 w-auto" />
             designali
           </a>
           <ul className="hidden flex-1 items-center gap-6 lg:flex">

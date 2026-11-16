@@ -56,7 +56,7 @@ export default function ThemeDensityMenubar() {
       <div
         className={cn(
           "border",
-          theme === "dark" ? "bg-zinc-900 text-zinc-100" : "bg-background",
+          theme === "dark" ? "bg-foreground text-background" : "bg-background",
           density === "compact" && "p-2 text-xs",
           density === "comfortable" && "p-4 text-sm",
           density === "spacious" && "p-6 text-base"

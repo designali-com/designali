@@ -15,9 +15,9 @@ import { Separator } from "@workspace/ui/components/separator"
 import { cn } from "@workspace/ui/lib/utils"
 
 const projects = [
-  { name: "designali.com", status: "bg-emerald-500", env: "Production" },
-  { name: "Blocks registry", status: "bg-amber-500", env: "Deploying" },
-  { name: "Icons package", status: "bg-red-500", env: "Failed" },
+  { name: "designali.com", status: "bg-primary", env: "Production" },
+  { name: "Blocks registry", status: "bg-primary", env: "Deploying" },
+  { name: "Icons package", status: "bg-destructive", env: "Failed" },
 ]
 
 export default function DashboardProjectsNav() {

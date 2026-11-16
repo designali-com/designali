@@ -40,7 +40,7 @@ export default function TimezoneLocationHoverCard() {
               {p.city} · {p.offset}
             </p>
             <p className="mt-2 flex items-center gap-1.5">
-              <SunIcon className="size-3.5 text-amber-500" />
+              <SunIcon className="size-3.5 text-primary" />
               {p.overlap} with you
             </p>
           </HoverCardContent>

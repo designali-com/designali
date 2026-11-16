@@ -10,10 +10,10 @@ import { Badge } from "@workspace/ui/components/badge"
 import { cn } from "@workspace/ui/lib/utils"
 
 const frames = [
-  "from-sky-500 to-blue-800",
-  "from-amber-400 to-orange-700",
-  "from-emerald-400 to-green-800",
-  "from-fuchsia-400 to-purple-800",
+  "from-primary to-chart-4",
+  "from-primary to-chart-3",
+  "from-primary to-chart-4",
+  "from-primary to-chart-4",
 ]
 
 export default function CoverThumbnailPicker() {

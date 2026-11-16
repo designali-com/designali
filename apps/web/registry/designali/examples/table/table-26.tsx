@@ -48,7 +48,7 @@ export default function StockInventoryTable() {
                 )}
               >
                 <TableCell className="font-medium">{row.item}</TableCell>
-                <TableCell className="font-mono text-muted-foreground">
+                <TableCell className="font-sans text-muted-foreground">
                   {row.sku}
                 </TableCell>
                 <TableCell className="text-right tabular-nums">
@@ -57,13 +57,13 @@ export default function StockInventoryTable() {
                 <TableCell>
                   <span className="flex items-center gap-1.5">
                     {status === "OK" ? (
-                      <CircleCheckIcon className="size-3.5 text-emerald-600" />
+                      <CircleCheckIcon className="size-3.5 text-primary" />
                     ) : (
                       <TriangleAlertIcon
                         className={cn(
                           "size-3.5",
                           status === "Low"
-                            ? "text-amber-500"
+                            ? "text-primary"
                             : "text-destructive"
                         )}
                       />

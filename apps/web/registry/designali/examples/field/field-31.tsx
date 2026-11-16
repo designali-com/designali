@@ -19,7 +19,7 @@ export default function MeetingTimeRangeFields() {
 
   return (
     <FieldSet className="w-full max-w-xs">
-      <FieldLegend variant="label">Meeting time</FieldLegend>
+      <FieldLegend variant="label">Discovery call with Ali Imam</FieldLegend>
       <div className="grid grid-cols-2 gap-3">
         <Field>
           <FieldLabel htmlFor="meet-start">Starts</FieldLabel>
@@ -44,7 +44,7 @@ export default function MeetingTimeRangeFields() {
       {invalid ? (
         <FieldError>End time must be after the start time.</FieldError>
       ) : (
-        <FieldDescription>All times in Berlin (CET).</FieldDescription>
+        <FieldDescription>Booked through the Designali studio calendar.</FieldDescription>
       )}
     </FieldSet>
   )

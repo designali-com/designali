@@ -5,8 +5,8 @@ const colors = [
   { label: "Foreground", className: "" },
   { label: "Muted", className: "text-muted-foreground" },
   { label: "Primary", className: "text-primary" },
-  { label: "Success", className: "text-emerald-600 dark:text-emerald-400" },
-  { label: "Warning", className: "text-amber-600 dark:text-amber-400" },
+  { label: "Success", className: "text-primary dark:text-primary" },
+  { label: "Warning", className: "text-primary dark:text-primary" },
   { label: "Danger", className: "text-destructive" },
 ]
 

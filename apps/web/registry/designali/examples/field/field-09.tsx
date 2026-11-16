@@ -13,9 +13,9 @@ import {
 const groups = [
   {
     legend: "Email",
-    items: ["Weekly digest", "New comments", "Billing receipts"],
+    items: ["New Designali blocks", "Blog posts from Ali", "Billing receipts"],
   },
-  { legend: "Push", items: ["Direct messages", "Mentions", "Deploy failures"] },
+  { legend: "Push", items: ["Template updates", "Icon releases", "Studio messages"] },
 ]
 
 export default function NotificationChannelsFieldSet() {

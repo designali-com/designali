@@ -56,13 +56,13 @@ export default function ZoomLevelMenubar() {
             </MenubarGroup>
           </MenubarContent>
         </MenubarMenu>
-        <span className="ms-auto pe-1 font-mono text-[11px] text-muted-foreground">
+        <span className="ms-auto pe-1 font-sans text-[11px] text-muted-foreground">
           {zoom}%
         </span>
       </Menubar>
       <div className="flex h-32 items-center justify-center overflow-hidden border bg-muted/40">
         <div
-          className="size-12 bg-gradient-to-br from-indigo-500 to-cyan-400"
+          className="size-12 bg-gradient-to-br from-primary to-primary"
           style={{ transform: "scale(" + zoom / 100 + ")" }}
         />
       </div>

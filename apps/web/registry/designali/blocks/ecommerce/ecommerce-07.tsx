@@ -9,26 +9,27 @@ import {
 
 import { Button } from "@workspace/ui/components/button"
 import { cn } from "@workspace/ui/lib/utils"
+import { Macbook } from "@/registry/designali/ui/apple/macbook"
 
 const products = [
-  { name: "Design Agency Template", brand: "Designali", price: 79, was: 0, swatches: ["#3f4a3c", "#c75d2c", "#1f2937"] },
-  { name: "Portfolio Simple Template", brand: "Designali", price: 39, was: 49, swatches: ["#f5f5f4", "#111827"] },
-  { name: "Resort Template", brand: "Designali", price: 69, was: 0, swatches: ["#7c5a3a", "#374151"] },
-  { name: "AI Startup Template", brand: "Designali", price: 79, was: 0, swatches: ["#64748b", "#e11d48", "#f5f5f4"] },
-  { name: "Dalim UI Kit", brand: "Dalim", price: 29, was: 39, swatches: ["#1e3a8a", "#d6d3d1"] },
-  { name: "Vercel Starter Template", brand: "Designali", price: 59, was: 0, swatches: ["#facc15", "#111827"] },
+  { name: "Design Agency Template", brand: "Designali", price: 79, was: 0, swatches: ["var(--primary)", "black"], image: "/images/templates/design-agency.jpg" },
+  { name: "Portfolio Simple Template", brand: "Designali", price: 39, was: 49, swatches: ["white", "black"], image: "/images/templates/portfolio-simple.jpg" },
+  { name: "Resort Template", brand: "Designali", price: 69, was: 0, swatches: ["var(--primary)", "var(--chart-3)"], image: "/images/templates/resort.jpg" },
+  { name: "AI Startup Template", brand: "Designali", price: 79, was: 0, swatches: ["black", "var(--chart-1)"], image: "/images/templates/ai.jpg" },
+  { name: "Dalim UI Kit", brand: "Dalim", price: 29, was: 39, swatches: ["var(--chart-5)", "white"], image: "/images/templates/dalim-ui-old.jpg" },
+  { name: "Vercel Starter Template", brand: "Designali", price: 59, was: 0, swatches: ["var(--primary)", "white"], image: "/images/templates/vercel.jpg" },
 ]
 
-function Preview({ color }: { color: string }) {
+function Preview({ color, image, name }: { color: string; image: string; name: string }) {
   return (
-    <svg viewBox="0 0 200 120" className="h-auto w-4/5" aria-hidden="true">
-      <rect x="16" y="14" width="168" height="92" rx="6" className="fill-background" />
-      <path d="M16 20 a6 6 0 0 1 6-6 H178 a6 6 0 0 1 6 6 V30 H16 Z" className="fill-foreground/80" />
-      <rect x="30" y="42" width="72" height="10" rx="2" fill={color} />
-      <rect x="30" y="58" width="52" height="6" rx="2" className="fill-foreground/30" />
-      <rect x="30" y="72" width="34" height="12" rx="2" fill={color} />
-      <rect x="114" y="40" width="56" height="52" rx="4" fill={color} opacity="0.6" />
-    </svg>
+    <div
+      className="flex size-full items-center justify-center p-4"
+      style={{ background: `radial-gradient(circle at 50% 60%, ${color}, transparent 75%)` }}
+    >
+      <Macbook variant="macbook-air" color="silver" size="sm" className="w-full! max-w-full">
+        <img src={image} alt={name} className="size-full object-cover object-top" />
+      </Macbook>
+    </div>
   )
 }
 
@@ -67,10 +68,10 @@ export default function Ecommerce07() {
             const isSaved = saved.includes(p.name)
             return (
               <div key={p.name} className="w-[70%] shrink-0 snap-start sm:w-[42%] md:w-[30%] lg:w-[23%]">
-                <div className="relative flex aspect-square items-center justify-center border border-border bg-muted">
-                  <Preview color={p.swatches[swatch] ?? "#888"} />
+                <div className="relative flex aspect-square items-center justify-center overflow-hidden border border-border bg-muted">
+                  <Preview color={p.swatches[swatch] ?? "var(--muted)"} image={p.image} name={p.name} />
                   {p.was > 0 && (
-                    <span className="absolute top-3 left-3 bg-red-600 px-2 py-0.5 text-[10px] font-medium text-white">
+                    <span className="absolute top-3 left-3 bg-destructive px-2 py-0.5 text-[10px] font-medium text-white">
                       -{Math.round((1 - p.price / p.was) * 100)}%
                     </span>
                   )}
@@ -83,7 +84,7 @@ export default function Ecommerce07() {
                     }
                     className="absolute top-3 right-3 flex size-8 items-center justify-center bg-background"
                   >
-                    <Heart className={cn("size-4", isSaved && "fill-red-500 text-red-500")} />
+                    <Heart className={cn("size-4", isSaved && "fill-destructive text-destructive")} />
                   </button>
                 </div>
                 <div className="mt-3 flex gap-1.5">
@@ -106,7 +107,7 @@ export default function Ecommerce07() {
                   {p.name}
                 </a>
                 <p className="mt-1 flex gap-2 text-sm tabular-nums">
-                  <span className={cn(p.was > 0 && "text-red-600 dark:text-red-400")}>${p.price}</span>
+                  <span className={cn(p.was > 0 && "text-destructive dark:text-destructive")}>${p.price}</span>
                   {p.was > 0 && <span className="text-muted-foreground line-through">${p.was}</span>}
                 </p>
               </div>

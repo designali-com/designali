@@ -42,10 +42,10 @@ export default function Lists18() {
 
         <div className="mt-12 hidden grid-cols-[180px_1fr_1fr] gap-6 border-b border-foreground pb-3 text-xs font-medium tracking-widest uppercase md:grid">
           <span className="text-muted-foreground">Topic</span>
-          <span className="inline-flex items-center gap-2 text-emerald-700 dark:text-emerald-400">
+          <span className="inline-flex items-center gap-2 text-chart-3 dark:text-primary">
             <Check className="size-3.5" /> Do
           </span>
-          <span className="inline-flex items-center gap-2 text-rose-700 dark:text-rose-400">
+          <span className="inline-flex items-center gap-2 text-chart-3 dark:text-primary">
             <X className="size-3.5" /> Don&apos;t
           </span>
         </div>
@@ -54,12 +54,12 @@ export default function Lists18() {
           {guidelines.map((item) => (
             <li key={item.topic} className="grid gap-4 py-6 md:grid-cols-[180px_1fr_1fr] md:gap-6">
               <h3 className="font-medium">{item.topic}</h3>
-              <p className="flex gap-3 border-l-2 border-emerald-500 bg-emerald-50 p-4 text-sm leading-6 dark:bg-emerald-500/10">
-                <Check className="mt-1 size-4 shrink-0 text-emerald-600 dark:text-emerald-400" />
+              <p className="flex gap-3 border-l-2 border-primary bg-primary/5 p-4 text-sm leading-6 dark:bg-primary/10">
+                <Check className="mt-1 size-4 shrink-0 text-primary dark:text-primary" />
                 {item.do}
               </p>
-              <p className="flex gap-3 border-l-2 border-rose-500 bg-rose-50 p-4 text-sm leading-6 dark:bg-rose-500/10">
-                <X className="mt-1 size-4 shrink-0 text-rose-600 dark:text-rose-400" />
+              <p className="flex gap-3 border-l-2 border-primary bg-primary/5 p-4 text-sm leading-6 dark:bg-primary/10">
+                <X className="mt-1 size-4 shrink-0 text-primary dark:text-primary" />
                 {item.dont}
               </p>
             </li>

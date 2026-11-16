@@ -1,3 +1,6 @@
+import { Macbook } from "@/registry/designali/ui/apple/macbook"
+import { DotPattern } from "@/registry/designali/ui/dot-pattern"
+
 const featured = {
   category: "Essay",
   title: "Where thoughtful design meets production-ready code",
@@ -20,8 +23,19 @@ export default function Blog02() {
     <section className="w-full bg-background py-16 text-foreground md:py-24">
       <div className="mx-auto grid max-w-6xl gap-12 px-6 lg:grid-cols-[1.6fr_1fr]">
         <article className="border-b border-border pb-10 lg:border-r lg:border-b-0 lg:pr-12 lg:pb-0">
-          <div className="relative aspect-[16/9] overflow-hidden border border-border bg-muted">
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,var(--chart-2),transparent_55%),radial-gradient(circle_at_75%_70%,var(--chart-1),transparent_50%)] opacity-50" />
+          <div className="relative flex aspect-[16/9] items-center justify-center overflow-hidden border border-border bg-muted px-4">
+            <DotPattern className="text-muted-foreground/40" />
+            <Macbook
+              variant="macbook-air"
+              color="midnight"
+              className="relative max-w-full"
+            >
+              <img
+                src="/images/templates/portfolio-simple.jpg"
+                alt="Designali portfolio template"
+                className="size-full object-cover object-top"
+              />
+            </Macbook>
             <span className="absolute top-4 left-4 bg-background px-2 py-1 text-xs">
               {featured.category}
             </span>
@@ -55,7 +69,7 @@ export default function Blog02() {
             {sidebar.map((post, i) => (
               <li key={post.title}>
                 <a href="#" className="group flex gap-5 py-6">
-                  <span className="font-mono text-2xl text-muted-foreground/60">
+                  <span className="font-sans text-2xl text-muted-foreground/60">
                     {String(i + 1).padStart(2, "0")}
                   </span>
                   <div>

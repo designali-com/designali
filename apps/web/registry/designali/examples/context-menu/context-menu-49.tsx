@@ -45,7 +45,7 @@ export default function WorkflowNodeMenu() {
             !enabled && "opacity-50"
           )}
         >
-          <div className="flex size-8 items-center justify-center bg-sky-500/15 text-sky-600">
+          <div className="flex size-8 items-center justify-center bg-primary/15 text-primary">
             <MailIcon className="size-4" />
           </div>
           <div className="flex flex-col">

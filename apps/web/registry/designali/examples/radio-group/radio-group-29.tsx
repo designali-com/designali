@@ -26,7 +26,7 @@ export default function InterfaceLanguageList() {
             htmlFor={"lang-" + lang.value}
             className="flex cursor-pointer items-center gap-3 border-b px-3 py-2 last:border-b-0 hover:bg-muted/50"
           >
-            <span className="w-7 font-mono text-xs text-muted-foreground uppercase">
+            <span className="w-7 font-sans text-xs text-muted-foreground uppercase">
               {lang.value}
             </span>
             <span className="flex-1 text-sm">

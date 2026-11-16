@@ -10,7 +10,7 @@ const people = [
     region: "Founder, Designali",
     email: "ali@designali.com",
     phone: "Book a call",
-    hue: "from-amber-300 to-orange-500",
+    hue: "from-chart-1 to-primary",
   },
   {
     name: "Designali Studio",
@@ -18,7 +18,7 @@ const people = [
     region: "Agencies & studios",
     email: "hello@designali.com",
     phone: "Book a call",
-    hue: "from-sky-300 to-indigo-500",
+    hue: "from-chart-1 to-primary",
   },
   {
     name: "Designali Support",
@@ -26,7 +26,7 @@ const people = [
     region: "All customers",
     email: "support@designali.com",
     phone: "Read the docs",
-    hue: "from-emerald-300 to-teal-600",
+    hue: "from-chart-1 to-chart-2",
   },
   {
     name: "Designali Billing",
@@ -34,7 +34,7 @@ const people = [
     region: "All customers",
     email: "billing@designali.com",
     phone: "View pricing",
-    hue: "from-rose-300 to-fuchsia-600",
+    hue: "from-chart-1 to-chart-2",
   },
 ]
 

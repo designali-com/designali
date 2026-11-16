@@ -13,7 +13,7 @@ export default function AlbumCoverPlayer() {
     <div className="w-full max-w-60 border p-3">
       <AspectRatio
         ratio={1}
-        className="overflow-hidden bg-linear-to-br from-rose-500 to-amber-400"
+        className="overflow-hidden bg-linear-to-br from-primary to-primary"
       >
         <svg
           viewBox="0 0 100 100"

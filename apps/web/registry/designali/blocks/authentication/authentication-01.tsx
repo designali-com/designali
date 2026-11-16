@@ -7,22 +7,31 @@ import { Checkbox } from "@workspace/ui/components/checkbox"
 import { Input } from "@workspace/ui/components/input"
 import { Label } from "@workspace/ui/components/label"
 
+import { Macbook } from "@/registry/designali/ui/apple/macbook"
+import { GridPattern } from "@/registry/designali/ui/grid-pattern"
+
 export default function Authentication01() {
   return (
     <section className="grid min-h-[720px] w-full bg-background lg:grid-cols-2">
       <div className="relative hidden flex-col justify-between overflow-hidden border-e bg-foreground p-12 text-background lg:flex">
-        <div
-          className="absolute inset-0 opacity-20"
-          style={{
-            backgroundImage:
-              "linear-gradient(var(--background) 1px, transparent 1px), linear-gradient(90deg, var(--background) 1px, transparent 1px)",
-            backgroundSize: "56px 56px",
-          }}
+        <GridPattern
+          width={56}
+          height={56}
+          className="stroke-background/20"
         />
         <a href="#" className="relative flex items-center gap-2 font-semibold">
           <span className="size-5 bg-background" />
           designali
         </a>
+        <div className="relative flex justify-center">
+          <Macbook variant="macbook-pro" color="silver" size="sm" className="max-w-full">
+            <img
+              src="/img/dashboard-1-light.jpg"
+              alt="Designali dashboard"
+              className="size-full object-cover"
+            />
+          </Macbook>
+        </div>
         <blockquote className="relative space-y-6">
           <p className="text-3xl leading-snug font-medium tracking-tight">
             &ldquo;Where thoughtful design meets production-ready code.
@@ -71,7 +80,7 @@ export default function Authentication01() {
             </Button>
           </form>
           <p className="text-center text-sm text-muted-foreground">
-            New to Ledgerly?{" "}
+            New to Designali?{" "}
             <a href="#" className="font-medium text-foreground underline-offset-4 hover:underline">
               Create an account
             </a>

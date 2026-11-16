@@ -47,7 +47,7 @@ export default function VersionSelectBreadcrumb() {
         </BreadcrumbItem>
         <BreadcrumbSeparator />
         <BreadcrumbItem>
-          <BreadcrumbPage className="font-mono">@designali/icons</BreadcrumbPage>
+          <BreadcrumbPage className="font-sans">@designali/icons</BreadcrumbPage>
         </BreadcrumbItem>
       </BreadcrumbList>
     </Breadcrumb>

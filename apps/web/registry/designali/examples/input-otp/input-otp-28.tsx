@@ -17,7 +17,7 @@ import {
 export default function StripDashesOnPaste() {
   return (
     <Field className="w-fit">
-      <FieldLabel htmlFor="otp-paste">Paste your code</FieldLabel>
+      <FieldLabel htmlFor="otp-paste">Paste your Designali code</FieldLabel>
       <InputOTP
         id="otp-paste"
         maxLength={6}
@@ -37,7 +37,7 @@ export default function StripDashesOnPaste() {
         </InputOTPGroup>
       </InputOTP>
       <FieldDescription>
-        Dashes and spaces are removed automatically, e.g. 482-913.
+        Paste the code from your hello@designali.com email, e.g. 482-913.
       </FieldDescription>
     </Field>
   )

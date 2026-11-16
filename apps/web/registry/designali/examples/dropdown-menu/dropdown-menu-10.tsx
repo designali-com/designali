@@ -21,14 +21,14 @@ import {
 import { cn } from "@workspace/ui/lib/utils"
 
 const workspaces = [
-  { id: "acme", name: "Designali Studio", plan: "Pro", color: "bg-violet-500" },
+  { id: "acme", name: "Designali Studio", plan: "Pro", color: "bg-primary" },
   {
     id: "orbit",
     name: "Dalim Agency",
     plan: "Team",
-    color: "bg-emerald-500",
+    color: "bg-primary",
   },
-  { id: "side", name: "Dalim UI", plan: "Free", color: "bg-amber-500" },
+  { id: "side", name: "Dalim UI", plan: "Free", color: "bg-primary" },
 ]
 
 export default function WorkspaceSwitcherMenu() {

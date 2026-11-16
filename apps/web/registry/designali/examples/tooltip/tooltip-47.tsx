@@ -38,7 +38,7 @@ export default function StarRatingTooltips() {
                   className={cn(
                     "size-6",
                     i < rating
-                      ? "fill-amber-400 text-amber-400"
+                      ? "fill-primary text-primary"
                       : "text-muted-foreground"
                   )}
                 />

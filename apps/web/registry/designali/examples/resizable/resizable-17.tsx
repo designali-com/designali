@@ -58,7 +58,7 @@ export default function QueryAndResultsVertical() {
           <TableBody>
             {rows.map((row) => (
               <TableRow key={row.id}>
-                <TableCell className="font-mono">{row.id}</TableCell>
+                <TableCell className="font-sans">{row.id}</TableCell>
                 <TableCell>{row.email}</TableCell>
                 <TableCell>{row.plan}</TableCell>
               </TableRow>

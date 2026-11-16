@@ -15,7 +15,7 @@ const perks = [
 export default function CallToAction09() {
   return (
     <section className="w-full bg-background px-6 py-20 md:py-28">
-      <div className="relative mx-auto max-w-5xl bg-gradient-to-br from-violet-500 via-fuchsia-500 to-amber-400 p-px">
+      <div className="relative mx-auto max-w-5xl bg-gradient-to-br from-primary via-primary to-primary p-px">
         <div className="grid gap-10 bg-background p-8 md:grid-cols-[1.2fr_1fr] md:p-14">
           <div>
             <span className="inline-flex border border-border px-2.5 py-1 text-xs text-muted-foreground">

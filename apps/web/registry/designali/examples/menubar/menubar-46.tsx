@@ -76,8 +76,8 @@ export default function AnalyticsRangeMenubar() {
             className={cn(
               "flex items-center gap-1 text-xs",
               current.change >= 0
-                ? "text-emerald-600 dark:text-emerald-400"
-                : "text-red-600 dark:text-red-400"
+                ? "text-primary dark:text-primary"
+                : "text-destructive dark:text-destructive"
             )}
           >
             {current.change >= 0 ? (

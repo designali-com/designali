@@ -9,19 +9,19 @@ const themes = [
     value: "light",
     label: "Light",
     preview: "bg-white",
-    bar: "bg-neutral-200",
+    bar: "bg-muted",
   },
   {
     value: "dark",
     label: "Dark",
-    preview: "bg-neutral-900",
-    bar: "bg-neutral-700",
+    preview: "bg-foreground",
+    bar: "bg-foreground",
   },
   {
     value: "system",
     label: "System",
-    preview: "bg-gradient-to-r from-white from-50% to-neutral-900 to-50%",
-    bar: "bg-neutral-400",
+    preview: "bg-gradient-to-r from-white from-50% to-foreground to-50%",
+    bar: "bg-muted-foreground",
   },
 ]
 

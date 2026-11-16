@@ -8,6 +8,8 @@ import {
 import { Input } from "@workspace/ui/components/input"
 import { cn } from "@workspace/ui/lib/utils"
 
+import { CounterNumber } from "@/registry/designali/ui/counter-number"
+
 const tiers = [
   { upTo: 1_000_000, rate: 0, label: "First 1M" },
   { upTo: 10_000_000, rate: 0.04, label: "1M - 10M" },
@@ -74,9 +76,11 @@ export default function Pricing20() {
               <span className="text-sm text-muted-foreground">
                 Estimated monthly bill
               </span>
-              <span className="text-3xl font-semibold tracking-tight tabular-nums">
-                ${Math.round(cost).toLocaleString("en-US")}
-              </span>
+              <CounterNumber
+                value={Math.round(cost)}
+                prefix="$"
+                className="text-3xl font-semibold tracking-tight tabular-nums"
+              />
             </div>
           </div>
         </div>
@@ -96,7 +100,7 @@ export default function Pricing20() {
               >
                 <div className="flex items-center justify-between gap-4">
                   <span className="text-sm font-medium">{tier.label}</span>
-                  <span className="font-mono text-sm">
+                  <span className="font-sans text-sm">
                     {tier.rate === 0 ? "Free" : `$${tier.rate.toFixed(3)}`}
                   </span>
                 </div>

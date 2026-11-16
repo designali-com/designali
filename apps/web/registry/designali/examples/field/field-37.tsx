@@ -15,12 +15,12 @@ export default function InlineLabelColumnForm() {
           htmlFor="sku-code"
           className="w-24 flex-none text-muted-foreground"
         >
-          SKU
+          Template
         </FieldLabel>
         <Input
           id="sku-code"
           defaultValue="DSG-TPL-PRO-01"
-          className="font-mono"
+          className="font-sans"
         />
       </Field>
       <Field orientation="horizontal">
@@ -28,7 +28,7 @@ export default function InlineLabelColumnForm() {
           htmlFor="sku-stock"
           className="w-24 flex-none text-muted-foreground"
         >
-          Stock
+          Licenses
         </FieldLabel>
         <Input id="sku-stock" type="number" defaultValue={128} />
       </Field>
@@ -37,11 +37,11 @@ export default function InlineLabelColumnForm() {
           htmlFor="sku-weight"
           className="w-24 flex-none text-muted-foreground"
         >
-          Weight
+          Download
         </FieldLabel>
         <InputGroup>
-          <InputGroupInput id="sku-weight" defaultValue="0.24" />
-          <InputGroupAddon align="inline-end">kg</InputGroupAddon>
+          <InputGroupInput id="sku-weight" defaultValue="48" />
+          <InputGroupAddon align="inline-end">MB</InputGroupAddon>
         </InputGroup>
       </Field>
       <Field orientation="horizontal">
@@ -49,7 +49,7 @@ export default function InlineLabelColumnForm() {
           htmlFor="sku-active"
           className="w-24 flex-none text-muted-foreground"
         >
-          Visible
+          On designali.com
         </FieldLabel>
         <Switch id="sku-active" defaultChecked />
       </Field>

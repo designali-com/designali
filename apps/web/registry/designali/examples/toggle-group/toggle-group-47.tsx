@@ -14,7 +14,7 @@ export default function CodeDiffViewToggleGroup() {
   return (
     <div className="flex w-full max-w-md flex-col border">
       <div className="flex items-center justify-between gap-2 border-b px-3 py-2">
-        <span className="truncate font-mono text-xs">
+        <span className="truncate font-sans text-xs">
           src/billing/invoice.ts
         </span>
         <ToggleGroup
@@ -30,14 +30,14 @@ export default function CodeDiffViewToggleGroup() {
       </div>
       <div
         className={cn(
-          "grid font-mono text-[11px]",
+          "grid font-sans text-[11px]",
           view === "split" ? "grid-cols-2 divide-x" : "grid-cols-1"
         )}
       >
-        <div className="bg-rose-500/10 px-3 py-1.5 text-rose-700 dark:text-rose-300">
+        <div className="bg-primary/10 px-3 py-1.5 text-chart-3 dark:text-chart-1">
           - const total = sum(items)
         </div>
-        <div className="bg-emerald-500/10 px-3 py-1.5 text-emerald-700 dark:text-emerald-300">
+        <div className="bg-primary/10 px-3 py-1.5 text-chart-3 dark:text-chart-1">
           + const total = sum(items) + tax
         </div>
       </div>

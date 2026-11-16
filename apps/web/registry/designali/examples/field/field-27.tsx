@@ -35,8 +35,8 @@ export default function TermsAgreementField() {
         <FieldContent>
           <FieldLabel htmlFor="terms-agree">I agree to the terms</FieldLabel>
           <FieldDescription>
-            By creating an account you accept our{" "}
-            <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.
+            By creating a designali.com account you accept the{" "}
+            <a href="https://www.designali.com/docs/legal/terms">Terms of Service</a> and <a href="#">Privacy Policy</a>.
           </FieldDescription>
           {invalid && (
             <FieldError>You need to accept the terms to continue.</FieldError>
@@ -44,7 +44,7 @@ export default function TermsAgreementField() {
         </FieldContent>
       </Field>
       <Button type="submit">
-        {tried && agreed ? "Account created" : "Create account"}
+        {tried && agreed ? "Account created" : "Create Designali account"}
       </Button>
     </form>
   )

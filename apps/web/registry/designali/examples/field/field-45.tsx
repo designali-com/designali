@@ -40,14 +40,14 @@ export default function AccessibilityPreferencesFields() {
           step={1}
         />
         <p style={{ fontSize: size[0] }} className="leading-snug">
-          The quick brown fox jumps.
+          design se code tak.
         </p>
       </Field>
       <FieldSeparator />
       <Field orientation="horizontal">
         <FieldContent>
           <FieldLabel htmlFor="a11y-motion">Reduce motion</FieldLabel>
-          <FieldDescription>Minimize animations and parallax.</FieldDescription>
+          <FieldDescription>Minimize animations across designali.com.</FieldDescription>
         </FieldContent>
         <Switch id="a11y-motion" size="sm" />
       </Field>

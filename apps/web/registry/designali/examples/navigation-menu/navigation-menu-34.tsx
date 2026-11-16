@@ -17,7 +17,7 @@ const menus = [
     ],
   },
   {
-    label: "Studio",
+    label: "Designali Studio",
     groups: [
       {
         heading: "Services",

@@ -16,7 +16,7 @@ import {
 export default function HorizontalPodcastCard() {
   return (
     <Card className="w-full max-w-md flex-row gap-0 py-0">
-      <div className="flex w-28 shrink-0 items-center justify-center bg-gradient-to-b from-orange-400 to-rose-600 sm:w-36">
+      <div className="flex w-28 shrink-0 items-center justify-center bg-gradient-to-b from-primary to-chart-2 sm:w-36">
         <MicIcon className="size-10 text-white/80" strokeWidth={1.5} />
       </div>
       <div className="flex min-w-0 flex-1 flex-col gap-3 py-4">

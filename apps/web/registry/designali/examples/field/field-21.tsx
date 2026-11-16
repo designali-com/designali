@@ -10,8 +10,8 @@ const errors = [
 export default function MultipleErrorsField() {
   return (
     <Field data-invalid="true" className="w-full max-w-xs">
-      <FieldLabel htmlFor="handle-errors">Handle</FieldLabel>
-      <Input id="handle-errors" defaultValue="J_" aria-invalid="true" />
+      <FieldLabel htmlFor="handle-errors">designali.com handle</FieldLabel>
+      <Input id="handle-errors" defaultValue="D_" aria-invalid="true" />
       <FieldError errors={errors} />
     </Field>
   )

@@ -18,7 +18,7 @@ function Stat({
       <span className="text-xs text-muted-foreground">{label}</span>
       <div className="flex items-end justify-between gap-2">
         <span className="text-xl font-semibold tabular-nums">{value}</span>
-        <span className="text-xs text-emerald-600 dark:text-emerald-400">
+        <span className="text-xs text-primary dark:text-primary">
           {delta}
         </span>
       </div>

@@ -53,7 +53,7 @@ export default function Header14() {
           >
             <Menu className="size-5" />
           </button>
-          <a href="#" className="font-serif text-2xl tracking-tight">
+          <a href="#" className="font-sans text-2xl tracking-tight">
             designali
           </a>
           <nav className="ms-8 hidden gap-6 text-sm lg:flex">
@@ -63,7 +63,7 @@ export default function Header14() {
                 href="#"
                 className={
                   category === "Sale"
-                    ? "text-red-600 hover:underline dark:text-red-400"
+                    ? "text-destructive hover:underline dark:text-destructive"
                     : "hover:underline underline-offset-8"
                 }
               >
@@ -108,7 +108,7 @@ export default function Header14() {
           />
           <div className="relative flex h-full w-[85%] max-w-sm flex-col bg-background">
             <div className="flex h-16 items-center justify-between border-b px-6">
-              <span className="font-serif text-xl">designali</span>
+              <span className="font-sans text-xl">designali</span>
               <button type="button" aria-label="Close menu" onClick={() => setOpen(false)}>
                 <X className="size-5" />
               </button>
@@ -120,7 +120,7 @@ export default function Header14() {
                   href="#"
                   className={
                     category === "Sale"
-                      ? "border-b py-4 text-red-600 dark:text-red-400"
+                      ? "border-b py-4 text-destructive dark:text-destructive"
                       : "border-b py-4"
                   }
                 >

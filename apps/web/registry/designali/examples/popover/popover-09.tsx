@@ -14,20 +14,20 @@ import {
 } from "@workspace/ui/components/popover"
 
 const swatches = [
-  "#ef4444",
-  "#f97316",
-  "#eab308",
-  "#22c55e",
-  "#14b8a6",
-  "#3b82f6",
-  "#6366f1",
-  "#a855f7",
-  "#ec4899",
-  "#64748b",
+  "#00A8FF",
+  "#8EC5FF",
+  "#2B7FFF",
+  "#155DFC",
+  "#1447E6",
+  "#193CB8",
+  "#000000",
+  "#525252",
+  "#E5E5E5",
+  "#FFFFFF",
 ]
 
 export default function ColorSwatchPopover() {
-  const [color, setColor] = React.useState("#3b82f6")
+  const [color, setColor] = React.useState("#00A8FF")
 
   return (
     <Popover>
@@ -54,7 +54,7 @@ export default function ColorSwatchPopover() {
             </button>
           ))}
         </div>
-        <div className="flex items-center justify-between border p-1.5 font-mono text-[11px]">
+        <div className="flex items-center justify-between border p-1.5 font-sans text-[11px]">
           <span className="text-muted-foreground">HEX</span>
           <span>{color.toUpperCase()}</span>
         </div>

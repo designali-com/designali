@@ -28,7 +28,7 @@ export default function ExpandableRowToggle() {
         >
           <ChevronRightIcon className="transition-transform group-aria-pressed/toggle:rotate-90" />
         </Toggle>
-        <span className="flex-1 font-mono text-xs">#ORD-7721</span>
+        <span className="flex-1 font-sans text-xs">#ORD-7721</span>
         <Badge variant="secondary">Shipped</Badge>
         <span className="text-sm tabular-nums">$54.00</span>
       </div>

@@ -49,7 +49,7 @@ export default function Faqs04() {
               key={faq.question}
               className="flex gap-6 border-r border-b border-border p-6 md:p-8"
             >
-              <span className="font-mono text-xs text-muted-foreground">
+              <span className="font-sans text-xs text-muted-foreground">
                 {String(index + 1).padStart(2, "0")}
               </span>
               <div>

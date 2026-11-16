@@ -30,7 +30,7 @@ export default function Grid13() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="grid gap-8 border-b border-background/15 pb-12 lg:grid-cols-[1fr_auto] lg:items-end">
           <div>
-            <p className="font-mono text-xs text-background/60">Designali for Teams</p>
+            <p className="font-sans text-xs text-background/60">Designali for Teams</p>
             <h2 className="mt-3 max-w-2xl text-4xl font-semibold tracking-tight md:text-5xl">
               Quality your whole team will actually sign off on.
             </h2>

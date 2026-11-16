@@ -32,7 +32,7 @@ export default function Portfolio16() {
             <div className="flex items-center gap-3">
               <Award className="size-5" />
               <h2 className="text-2xl font-medium tracking-tight md:text-3xl">Milestones</h2>
-              <span className="ml-auto font-mono text-xs text-muted-foreground">
+              <span className="ml-auto font-sans text-xs text-muted-foreground">
                 {awards.length} of 31
               </span>
             </div>
@@ -42,7 +42,7 @@ export default function Portfolio16() {
                   key={award.name + award.year}
                   className="grid grid-cols-[3.5rem_1fr] gap-x-4 gap-y-1 border-b border-border py-5 sm:grid-cols-[4rem_1fr_1fr_auto] sm:items-center"
                 >
-                  <span className="row-span-2 font-mono text-sm text-muted-foreground sm:row-span-1">
+                  <span className="row-span-2 font-sans text-sm text-muted-foreground sm:row-span-1">
                     {award.year}
                   </span>
                   <span className="font-medium">{award.name}</span>

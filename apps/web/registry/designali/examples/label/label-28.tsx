@@ -2,12 +2,12 @@ import { Checkbox } from "@workspace/ui/components/checkbox"
 import { Label } from "@workspace/ui/components/label"
 
 const tags = [
-  "Remote",
-  "Full-time",
-  "Contract",
-  "Senior",
-  "Design",
-  "Engineering",
+  "Blocks",
+  "Templates",
+  "Icons",
+  "Logos",
+  "Illustrations",
+  "UI Designs",
 ]
 
 export default function FilterChipLabels() {

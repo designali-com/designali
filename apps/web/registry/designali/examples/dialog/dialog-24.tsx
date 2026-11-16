@@ -54,7 +54,7 @@ export default function TwoFactorSetupDialog() {
             />
           ))}
         </div>
-        <p className="text-center font-mono text-muted-foreground">
+        <p className="text-center font-sans text-muted-foreground">
           JBSW Y3DP EHPK 3PXP
         </p>
         <div className="flex justify-center">

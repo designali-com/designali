@@ -56,7 +56,7 @@ export default function TableDensityToggleGroup() {
               padding[density]
             )}
           >
-            <span className="font-mono text-xs">{inv.id}</span>
+            <span className="font-sans text-xs">{inv.id}</span>
             <span className="tabular-nums">{inv.amount}</span>
           </div>
         ))}

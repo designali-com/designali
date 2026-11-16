@@ -40,11 +40,11 @@ const sizeClasses: Record<SizeVariant, string> = {
 
 const colorClasses: Record<ColorVariant, string> = {
   default: "text-foreground",
-  primary: "text-blue-600 dark:text-blue-400",
-  secondary: "text-gray-600 dark:text-gray-400",
-  success: "text-green-600 dark:text-green-400",
-  warning: "text-yellow-600 dark:text-yellow-400",
-  error: "text-red-600 dark:text-red-400",
+  primary: "text-primary dark:text-primary",
+  secondary: "text-muted-foreground dark:text-muted-foreground",
+  success: "text-primary dark:text-primary",
+  warning: "text-primary dark:text-primary",
+  error: "text-destructive dark:text-destructive",
 }
 
 export function CounterNumber({
@@ -112,7 +112,7 @@ export function CounterNumber({
     "inline-block tracking-wider tabular-nums transition-all",
     sizeClasses[size],
     colorClasses[color],
-    preserveAspectRatio && "font-mono",
+    preserveAspectRatio && "font-sans",
     className
   )
 

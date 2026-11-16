@@ -32,7 +32,7 @@ export default function FitnessProgramsNav() {
               {programs.map((p) => (
                 <li key={p.title}>
                   <NavigationMenuLink href="#" className="gap-3">
-                    <span className="flex size-8 shrink-0 items-center justify-center bg-orange-500/10 text-orange-600 dark:text-orange-400">
+                    <span className="flex size-8 shrink-0 items-center justify-center bg-primary/10 text-primary dark:text-primary">
                       <p.icon />
                     </span>
                     <span className="flex flex-1 flex-col">
@@ -50,7 +50,7 @@ export default function FitnessProgramsNav() {
                           key={n}
                           className={cn(
                             "h-3 w-1",
-                            n <= p.intensity ? "bg-orange-500" : "bg-muted"
+                            n <= p.intensity ? "bg-primary" : "bg-muted"
                           )}
                         />
                       ))}

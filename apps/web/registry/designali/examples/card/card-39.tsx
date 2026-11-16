@@ -56,7 +56,7 @@ export default function WalletBalanceCard() {
         <svg
           viewBox="0 0 100 40"
           preserveAspectRatio="none"
-          className="h-14 w-full text-emerald-500"
+          className="h-14 w-full text-primary"
           aria-hidden="true"
         >
           <path
@@ -71,7 +71,7 @@ export default function WalletBalanceCard() {
             vectorEffect="non-scaling-stroke"
           />
         </svg>
-        <span className="text-emerald-600 dark:text-emerald-400">
+        <span className="text-primary dark:text-primary">
           +€1,920.10 this month
         </span>
       </CardContent>

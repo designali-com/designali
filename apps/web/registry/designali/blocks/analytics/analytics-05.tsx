@@ -1,3 +1,5 @@
+import { CounterNumber } from "@/registry/designali/ui/counter-number"
+
 const funnel = [
   { step: "Visited designali.com", users: 24800 },
   { step: "Browsed /blocks", users: 6120 },
@@ -84,7 +86,7 @@ export default function Analytics05() {
               })}
             </svg>
             <div className="absolute inset-0 flex flex-col items-center justify-center">
-              <span className="text-3xl font-semibold">742</span>
+              <CounterNumber value={742} className="text-3xl font-semibold" />
               <span className="text-xs text-muted-foreground">accounts</span>
             </div>
           </div>

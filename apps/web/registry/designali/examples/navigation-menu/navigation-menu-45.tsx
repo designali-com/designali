@@ -47,7 +47,7 @@ export default function FileBrowserNav() {
                         <span
                           className={cn(
                             "block h-full",
-                            d.used > 85 ? "bg-red-500" : "bg-primary"
+                            d.used > 85 ? "bg-destructive" : "bg-primary"
                           )}
                           style={{ width: d.used + "%" }}
                         />

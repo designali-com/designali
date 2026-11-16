@@ -17,7 +17,7 @@ const orders: {
   date: string
   status: Status
   total: number
-  items: { name: string; qty: number; price: number; tone: string }[]
+  items: { name: string; qty: number; price: number; image: string }[]
 }[] = [
   {
     id: "DA-30418",
@@ -25,8 +25,8 @@ const orders: {
     status: "Processing",
     total: 86,
     items: [
-      { name: "Portfolio Simple Template", qty: 1, price: 24, tone: "from-amber-100 to-orange-200 dark:from-amber-900 dark:to-orange-950" },
-      { name: "Dalim UI Kit", qty: 2, price: 31, tone: "from-lime-200 to-emerald-100 dark:from-lime-900 dark:to-emerald-950" },
+      { name: "Portfolio Simple Template", qty: 1, price: 24, image: "/images/templates/portfolio-simple.jpg" },
+      { name: "Dalim UI Kit", qty: 2, price: 31, image: "/images/templates/dalim-ui-old.jpg" },
     ],
   },
   {
@@ -35,8 +35,8 @@ const orders: {
     status: "Shipped",
     total: 142,
     items: [
-      { name: "Designali Icons Pro", qty: 2, price: 36, tone: "from-sky-200 to-sky-50 dark:from-sky-900 dark:to-sky-950" },
-      { name: "Apple Device Mockups", qty: 2, price: 35, tone: "from-zinc-200 to-zinc-50 dark:from-zinc-700 dark:to-zinc-900" },
+      { name: "Designali Icons Pro", qty: 2, price: 36, image: "/images/templates/dalim-icons-old.jpg" },
+      { name: "Apple Device Mockups", qty: 2, price: 35, image: "/images/templates/aliimam-comp.jpg" },
     ],
   },
   {
@@ -45,7 +45,7 @@ const orders: {
     status: "Delivered",
     total: 58,
     items: [
-      { name: "Designali Logos Pack", qty: 2, price: 29, tone: "from-emerald-200 to-lime-100 dark:from-emerald-900 dark:to-lime-950" },
+      { name: "Designali Logos Pack", qty: 2, price: 29, image: "/images/templates/dalim-graphic-old.jpg" },
     ],
   },
   {
@@ -54,15 +54,15 @@ const orders: {
     status: "Returned",
     total: 44,
     items: [
-      { name: "Vectors Starter Pack", qty: 4, price: 11, tone: "from-neutral-500 to-neutral-300 dark:from-neutral-700 dark:to-neutral-900" },
+      { name: "Vectors Starter Pack", qty: 4, price: 11, image: "/images/templates/dalim-visuals-old.jpg" },
     ],
   },
 ]
 
 const statusStyle: Record<Status, string> = {
-  Processing: "bg-amber-500/15 text-amber-800 dark:text-amber-300",
-  Shipped: "bg-sky-500/15 text-sky-800 dark:text-sky-300",
-  Delivered: "bg-emerald-500/15 text-emerald-800 dark:text-emerald-300",
+  Processing: "bg-primary/15 text-chart-4 dark:text-chart-1",
+  Shipped: "bg-primary/15 text-chart-4 dark:text-chart-1",
+  Delivered: "bg-primary/15 text-chart-4 dark:text-chart-1",
   Returned: "bg-muted text-muted-foreground",
 }
 
@@ -114,7 +114,7 @@ export default function Ecommerce20() {
                   className="grid w-full grid-cols-[1fr_auto] items-center gap-x-4 gap-y-2 p-4 text-left transition-colors hover:bg-muted/40 sm:grid-cols-[1fr_1fr_1fr_auto_auto] sm:p-5"
                 >
                   <span>
-                    <span className="block font-mono text-sm font-medium">#{order.id}</span>
+                    <span className="block font-sans text-sm font-medium">#{order.id}</span>
                     <span className="block text-xs text-muted-foreground sm:hidden">{order.date}</span>
                   </span>
                   <span className="hidden text-sm text-muted-foreground sm:block">{order.date}</span>
@@ -130,7 +130,7 @@ export default function Ecommerce20() {
                     <ul className="space-y-3">
                       {order.items.map((item) => (
                         <li key={item.name} className="flex items-center gap-3 text-sm">
-                          <span className={cn("size-12 shrink-0 border border-border bg-gradient-to-br", item.tone)} />
+                          <img src={item.image} alt={item.name} className="size-12 shrink-0 object-cover object-top border border-border" />
                           <span className="min-w-0 flex-1">
                             <span className="block truncate">{item.name}</span>
                             <span className="block text-xs text-muted-foreground">Qty {item.qty}</span>

@@ -7,37 +7,37 @@ const items = [
     name: "Portfolio Simple template",
     qty: 2,
     price: 68,
-    tone: "from-stone-200 to-stone-400",
+    tone: "from-muted to-muted-foreground",
   },
   {
     name: "Design Agency template",
     qty: 1,
     price: 32,
-    tone: "from-amber-200 to-orange-400",
+    tone: "from-primary/20 to-primary",
   },
   {
     name: "Resort template",
     qty: 1,
     price: 24,
-    tone: "from-slate-300 to-slate-600",
+    tone: "from-border to-muted-foreground",
   },
   {
     name: "AI template",
     qty: 1,
     price: 120,
-    tone: "from-emerald-200 to-teal-500",
+    tone: "from-primary/20 to-primary",
   },
   {
     name: "Icons Pack",
     qty: 1,
     price: 145,
-    tone: "from-sky-200 to-indigo-500",
+    tone: "from-primary/20 to-primary",
   },
   {
     name: "Logos Pack",
     qty: 3,
     price: 14,
-    tone: "from-rose-200 to-pink-400",
+    tone: "from-primary/20 to-primary",
   },
 ]
 

@@ -40,7 +40,7 @@ export default function FileTreeExplorer() {
               style={{ paddingLeft: 12 + node.depth * 14 }}
             >
               {node.folder ? (
-                <FolderIcon className="size-3.5 shrink-0 text-sky-500" />
+                <FolderIcon className="size-3.5 shrink-0 text-primary" />
               ) : (
                 <FileIcon className="size-3.5 shrink-0 text-muted-foreground" />
               )}

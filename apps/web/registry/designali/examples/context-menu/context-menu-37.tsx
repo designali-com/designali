@@ -28,14 +28,14 @@ const initialCart = [
     name: "Designali Templates Pro",
     price: 28,
     qty: 2,
-    swatch: "from-stone-200 to-stone-400",
+    swatch: "from-muted to-muted-foreground",
   },
   {
     id: "cap",
     name: "Icons Pro license",
     price: 22,
     qty: 1,
-    swatch: "from-emerald-300 to-emerald-600",
+    swatch: "from-chart-1 to-chart-2",
   },
 ]
 

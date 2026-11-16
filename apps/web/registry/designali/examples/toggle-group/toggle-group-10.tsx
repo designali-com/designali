@@ -38,7 +38,7 @@ export default function DateRangePresetToggleGroup() {
       </div>
       <div className="flex items-end gap-2">
         <span className="text-2xl font-semibold">{data.revenue}</span>
-        <span className="pb-1 text-xs text-emerald-600 dark:text-emerald-400">
+        <span className="pb-1 text-xs text-primary dark:text-primary">
           {data.delta}
         </span>
       </div>

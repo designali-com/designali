@@ -30,7 +30,7 @@ export default function RatingDistributionHoverCard() {
               className={cn(
                 "size-4",
                 i < 4
-                  ? "fill-amber-400 text-amber-400"
+                  ? "fill-primary text-primary"
                   : "text-muted-foreground"
               )}
             />
@@ -45,10 +45,10 @@ export default function RatingDistributionHoverCard() {
         {distribution.map((d) => (
           <div key={d.stars} className="flex items-center gap-2">
             <span className="w-3">{d.stars}</span>
-            <StarIcon className="size-3 fill-amber-400 text-amber-400" />
+            <StarIcon className="size-3 fill-primary text-primary" />
             <div className="h-1.5 flex-1 bg-muted">
               <div
-                className="h-full bg-amber-400"
+                className="h-full bg-primary"
                 style={{ width: (d.count / total) * 100 + "%" }}
               />
             </div>

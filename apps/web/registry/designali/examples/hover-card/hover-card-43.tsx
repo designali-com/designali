@@ -31,14 +31,14 @@ const endpoints = [
   },
 ]
 const tone: Record<string, string> = {
-  GET: "text-emerald-600",
-  POST: "text-blue-600",
+  GET: "text-primary",
+  POST: "text-primary",
   DELETE: "text-destructive",
 }
 
 export default function ApiEndpointHoverCard() {
   return (
-    <div className="flex w-full max-w-xs flex-col gap-1 font-mono text-xs">
+    <div className="flex w-full max-w-xs flex-col gap-1 font-sans text-xs">
       {endpoints.map((e) => (
         <HoverCard key={e.method + e.path}>
           <HoverCardTrigger
@@ -51,11 +51,11 @@ export default function ApiEndpointHoverCard() {
             {e.path}
           </HoverCardTrigger>
           <HoverCardContent side="right" className="w-56 font-sans">
-            <p className="font-mono font-medium">{e.path}</p>
+            <p className="font-sans font-medium">{e.path}</p>
             <p className="mt-2 text-muted-foreground">Parameters</p>
             <div className="mt-1 flex flex-wrap gap-1">
               {e.params.map((p) => (
-                <Badge key={p} variant="outline" className="font-mono">
+                <Badge key={p} variant="outline" className="font-sans">
                   {p}
                 </Badge>
               ))}

@@ -14,7 +14,7 @@ export default function DisabledTriggerNav() {
     <NavigationMenu>
       <NavigationMenuList>
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Tools</NavigationMenuTrigger>
+          <NavigationMenuTrigger>Designali Assets</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="flex w-52 flex-col gap-1">
               {["Icons", "Logos", "Illustrations"].map(
@@ -29,18 +29,18 @@ export default function DisabledTriggerNav() {
         </NavigationMenuItem>
         <NavigationMenuItem>
           <NavigationMenuTrigger disabled>
-            Marketplace
+            Dalim Tools
             <Badge variant="outline" className="ms-1.5">
               Soon
             </Badge>
           </NavigationMenuTrigger>
           <NavigationMenuContent>
-            <p className="w-48 p-2 text-xs">Coming in spring.</p>
+            <p className="w-48 p-2 text-xs">Ali Imam is rebuilding Dalim Tools for designali.com.</p>
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
           <NavigationMenuLink href="#" className={navigationMenuTriggerStyle()}>
-            Guides
+            Docs
           </NavigationMenuLink>
         </NavigationMenuItem>
       </NavigationMenuList>

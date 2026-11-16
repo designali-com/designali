@@ -31,7 +31,7 @@ export default function CodeLanguageToolbar() {
   return (
     <div className="w-full max-w-md border">
       <div className="flex items-center gap-2 border-b bg-muted/40 px-2 py-1">
-        <span className="flex-1 font-mono text-xs text-muted-foreground">
+        <span className="flex-1 font-sans text-xs text-muted-foreground">
           snippet-01
         </span>
         <Combobox items={languages} value={lang} onValueChange={setLang}>

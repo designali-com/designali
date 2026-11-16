@@ -21,7 +21,7 @@ export default function PlayerUpNextQueue() {
   return (
     <Collapsible className="w-full max-w-xs border">
       <div className="flex items-center gap-3 p-3">
-        <div className="size-12 shrink-0 bg-gradient-to-br from-orange-400 to-pink-600" />
+        <div className="size-12 shrink-0 bg-gradient-to-br from-primary to-chart-2" />
         <div className="min-w-0 flex-1">
           <p className="truncate text-sm font-medium">Colorful Spheres</p>
           <p className="truncate text-xs text-muted-foreground">Designali Motion</p>

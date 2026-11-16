@@ -12,6 +12,8 @@ import {
 import { Button } from "@workspace/ui/components/button"
 import { cn } from "@workspace/ui/lib/utils"
 
+import { IPhone } from "@/registry/designali/ui/apple/iphone"
+
 const menu = [
   {
     label: "Library",
@@ -45,8 +47,9 @@ export default function Navigation15() {
           </p>
         </div>
 
-        <div className="mx-auto w-full max-w-[340px] overflow-hidden border-8 border-foreground bg-background">
-          <div className="relative h-[560px] overflow-hidden">
+        <div className="flex justify-center">
+          <IPhone variant="18-pro" color="black" size="lg">
+          <div className="relative h-full overflow-hidden bg-background pt-6">
             <header className="flex h-14 items-center justify-between border-b px-4">
               <span className="font-semibold">designali</span>
               <button
@@ -63,14 +66,18 @@ export default function Navigation15() {
             </header>
 
             <div className="space-y-3 p-4">
-              <div className="h-28 bg-gradient-to-br from-muted to-muted-foreground/20" />
+              <img
+                src="/img/hero-1.jpg"
+                alt="Designali template preview"
+                className="h-28 w-full object-cover"
+              />
               <div className="h-3 w-3/4 bg-muted" />
               <div className="h-3 w-1/2 bg-muted" />
             </div>
 
             <div
               className={cn(
-                "absolute inset-x-0 top-14 bottom-0 bg-background transition-transform duration-300",
+                "absolute inset-x-0 top-20 bottom-0 bg-background transition-transform duration-300",
                 open ? "translate-x-0" : "translate-x-full"
               )}
             >
@@ -133,6 +140,7 @@ export default function Navigation15() {
               </div>
             </div>
           </div>
+          </IPhone>
         </div>
       </div>
     </section>

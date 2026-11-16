@@ -30,7 +30,7 @@ export default function Testimonials17() {
               className="grid grid-cols-2 gap-x-6 gap-y-3 border-b border-border px-6 py-6 last:border-b-0 md:grid-cols-[1.4fr_1fr_1fr_1fr_0.7fr] md:items-center"
             >
               <div className="col-span-2 flex items-center gap-3 md:col-span-1">
-                <span className="flex size-10 shrink-0 items-center justify-center border border-border bg-muted font-mono text-xs">
+                <span className="flex size-10 shrink-0 items-center justify-center border border-border bg-muted font-sans text-xs">
                   {r.initials}
                 </span>
                 <div className="min-w-0">
@@ -48,7 +48,7 @@ export default function Testimonials17() {
                 {r.after}
               </div>
               <div className="col-span-2 md:col-span-1 md:text-right">
-                <span className="inline-flex items-center gap-1 bg-emerald-100 px-2 py-1 font-mono text-xs text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300">
+                <span className="inline-flex items-center gap-1 bg-primary/10 px-2 py-1 font-sans text-xs text-chart-4 dark:bg-primary/10 dark:text-chart-1">
                   <TrendingUp className="size-3" />
                   {r.delta}
                 </span>

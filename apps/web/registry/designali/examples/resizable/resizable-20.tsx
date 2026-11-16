@@ -26,7 +26,7 @@ export default function MusicPlayerQueue() {
     >
       <ResizablePanel defaultSize="45%" minSize="35%">
         <div className="flex h-full flex-col items-center justify-center gap-3 p-4">
-          <div className="aspect-square w-24 bg-gradient-to-br from-fuchsia-500 via-violet-500 to-sky-500" />
+          <div className="aspect-square w-24 bg-gradient-to-br from-primary via-primary to-primary" />
           <div className="text-center">
             <p className="text-sm font-medium">Midnight Arcade</p>
             <p className="text-xs text-muted-foreground">Neon Static</p>

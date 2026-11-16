@@ -24,7 +24,7 @@ export default function LeaderboardRanking() {
   return (
     <div className="w-full max-w-xs border">
       <div className="flex items-center gap-2 border-b px-3 py-2 text-sm font-medium">
-        <TrophyIcon className="size-4 text-amber-500" />
+        <TrophyIcon className="size-4 text-primary" />
         Weekly leaderboard
       </div>
       <ScrollArea className="h-60">
@@ -36,9 +36,9 @@ export default function LeaderboardRanking() {
             <span
               className={cn(
                 "flex size-6 items-center justify-center font-semibold tabular-nums",
-                i === 0 && "bg-amber-400 text-amber-950",
-                i === 1 && "bg-zinc-300 text-zinc-900",
-                i === 2 && "bg-orange-300 text-orange-950",
+                i === 0 && "bg-primary text-chart-5",
+                i === 1 && "bg-border text-foreground",
+                i === 2 && "bg-chart-1 text-chart-5",
                 i > 2 && "text-muted-foreground"
               )}
             >

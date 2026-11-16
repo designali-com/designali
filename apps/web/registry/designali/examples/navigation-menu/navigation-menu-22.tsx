@@ -42,7 +42,7 @@ export default function SupportCenterNav() {
                 ))}
               </ul>
               <NavigationMenuLink href="#" className="mt-1 border-t pt-2.5">
-                <span className="size-2 rounded-full bg-emerald-500" />
+                <span className="size-2 rounded-full bg-primary" />
                 All systems operational
                 <ExternalLinkIcon className="ms-auto text-muted-foreground" />
               </NavigationMenuLink>

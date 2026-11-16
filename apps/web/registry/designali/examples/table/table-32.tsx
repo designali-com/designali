@@ -48,8 +48,8 @@ const deployments = [
 ]
 
 const dot: Record<string, string> = {
-  Ready: "bg-emerald-500",
-  Building: "bg-amber-500 animate-pulse",
+  Ready: "bg-primary",
+  Building: "bg-primary animate-pulse",
   Error: "bg-destructive",
 }
 

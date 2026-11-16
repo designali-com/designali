@@ -14,7 +14,7 @@ export default function GradientHeroCta() {
       <div className="flex flex-wrap justify-center gap-2">
         <Button
           size="lg"
-          className="group bg-linear-to-r from-violet-600 to-fuchsia-500 text-white hover:opacity-90"
+          className="group bg-linear-to-r from-chart-2 to-primary text-white hover:opacity-90"
         >
           Start building free
           <ArrowRightIcon

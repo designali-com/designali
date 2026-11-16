@@ -30,7 +30,7 @@ export default function ReadingModeToggle() {
         className={cn(
           "p-4 transition-colors",
           reader &&
-            "bg-amber-50 font-serif text-amber-950 dark:bg-amber-950/30 dark:text-amber-100"
+            "bg-primary/5 font-sans text-chart-5 dark:bg-primary/30 dark:text-chart-1"
         )}
       >
         <h3 className={cn("font-semibold", reader ? "text-lg" : "text-sm")}>

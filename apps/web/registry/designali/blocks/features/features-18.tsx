@@ -46,7 +46,7 @@ export default function Features18() {
               className={cn(
                 "flex items-center gap-4 border p-5 transition-colors",
                 mode === "with"
-                  ? "border-emerald-600/30 bg-background"
+                  ? "border-chart-2/30 bg-background"
                   : "border-border bg-background/50"
               )}
             >
@@ -54,8 +54,8 @@ export default function Features18() {
                 className={cn(
                   "flex size-7 shrink-0 items-center justify-center",
                   mode === "with"
-                    ? "bg-emerald-600 text-white"
-                    : "bg-red-100 text-red-700 dark:bg-red-950 dark:text-red-300"
+                    ? "bg-chart-2 text-white"
+                    : "bg-destructive/10 text-destructive dark:bg-destructive/15 dark:text-destructive"
                 )}
               >
                 {mode === "with" ? <Check className="size-4" /> : <X className="size-4" />}

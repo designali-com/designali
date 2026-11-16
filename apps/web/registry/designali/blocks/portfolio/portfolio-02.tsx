@@ -1,17 +1,47 @@
 "use client"
 
 import { useState } from "react"
-import {
-  ArrowRight,
-} from "@designali/icons"
+import { ArrowRight } from "@designali/icons"
+
+import { IPad } from "@/registry/designali/ui/apple/ipad"
 
 const projects = [
-  { name: "Dalim UI", discipline: "Component library", year: "UI", hue: "var(--chart-1)", image: "/images/templates/dalim-ui-old.jpg" },
-  { name: "Dalim Agency", discipline: "Brand identity", year: "Brand", hue: "var(--chart-2)", image: "/images/templates/dalim-agency-old.jpg" },
-  { name: "Resort", discipline: "Template", year: "Web", hue: "var(--chart-3)", image: "/images/templates/resort.jpg" },
-  { name: "Dalim Tools", discipline: "Designer tools", year: "Web", hue: "var(--chart-4)", image: "/images/templates/dalim-tools-old.jpg" },
-  { name: "Dalim Works", discipline: "Portfolio website", year: "Web", hue: "var(--chart-5)", image: "/images/templates/dalim-works-old.jpg" },
-  { name: "AI Startup", discipline: "Template", year: "Web", hue: "var(--chart-1)", image: "/images/templates/ai.jpg" },
+  {
+    name: "Dalim UI",
+    discipline: "Component library",
+    year: "UI",
+    image: "/images/templates/dalim-ui-old.jpg",
+  },
+  {
+    name: "Dalim Agency",
+    discipline: "Brand identity",
+    year: "Brand",
+    image: "/images/templates/dalim-agency-old.jpg",
+  },
+  {
+    name: "Resort",
+    discipline: "Template",
+    year: "Web",
+    image: "/images/templates/resort.jpg",
+  },
+  {
+    name: "Dalim Tools",
+    discipline: "Designer tools",
+    year: "Web",
+    image: "/images/templates/dalim-tools-old.jpg",
+  },
+  {
+    name: "Dalim Works",
+    discipline: "Portfolio website",
+    year: "Web",
+    image: "/images/templates/dalim-works-old.jpg",
+  },
+  {
+    name: "AI Startup",
+    discipline: "Template",
+    year: "Web",
+    image: "/images/templates/ai.jpg",
+  },
 ]
 
 export default function Portfolio02() {
@@ -36,17 +66,23 @@ export default function Portfolio02() {
                 >
                   <span
                     className={`text-2xl font-medium tracking-tight transition-colors md:text-4xl ${
-                      hovered === i ? "text-foreground" : "text-muted-foreground"
+                      hovered === i
+                        ? "text-foreground"
+                        : "text-muted-foreground"
                     }`}
                   >
                     {project.name}
                   </span>
                   <span className="flex shrink-0 items-center gap-4 text-xs text-muted-foreground">
-                    <span className="hidden sm:inline">{project.discipline}</span>
-                    <span className="font-mono">{project.year}</span>
+                    <span className="hidden sm:inline">
+                      {project.discipline}
+                    </span>
+                    <span className="font-sans">{project.year}</span>
                     <ArrowRight
                       className={`size-4 transition-transform ${
-                        hovered === i ? "translate-x-0 opacity-100" : "-translate-x-2 opacity-0"
+                        hovered === i
+                          ? "translate-x-0 opacity-100"
+                          : "-translate-x-2 opacity-0"
                       }`}
                     />
                   </span>
@@ -57,22 +93,20 @@ export default function Portfolio02() {
         </div>
 
         <div className="hidden lg:block">
-          <div className="sticky top-24 border border-border bg-muted p-3">
-            <div
-              className="aspect-[3/4] w-full overflow-hidden transition-colors duration-500"
-              style={{
-                background: `linear-gradient(160deg, ${current?.hue} 0%, transparent 85%)`,
-              }}
-            >
+          <div className="sticky top-24 flex flex-col items-center">
+            <IPad variant="ipad-pro" size="md" color="black">
               <img
+                key={current?.image}
                 src={current?.image}
                 alt={`${current?.name} by Designali`}
-                className="h-full w-full object-cover"
+                className="size-full animate-in object-cover object-top duration-500 fade-in"
               />
-            </div>
-            <div className="flex items-center justify-between pt-3 text-xs">
+            </IPad>
+            <div className="flex w-full items-center justify-between pt-3 text-xs">
               <span className="font-medium">{current?.name}</span>
-              <span className="text-muted-foreground">{current?.discipline}</span>
+              <span className="text-muted-foreground">
+                {current?.discipline}
+              </span>
             </div>
           </div>
         </div>

@@ -29,7 +29,7 @@ export default function Grid08() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="flex flex-wrap items-end justify-between gap-4">
           <div>
-            <p className="font-mono text-xs text-muted-foreground">Q3 2026 · Designali studio update</p>
+            <p className="font-sans text-xs text-muted-foreground">Q3 2026 · Designali studio update</p>
             <h2 className="mt-2 text-4xl font-semibold tracking-tight">Designali by the numbers</h2>
           </div>
           <p className="text-xs text-muted-foreground">Change vs. previous quarter</p>
@@ -46,10 +46,10 @@ export default function Grid08() {
                 <dd className="flex items-end justify-between gap-4">
                   <span className="text-3xl font-semibold tracking-tight">{metric.value}</span>
                   <span
-                    className={`inline-flex items-center gap-0.5 font-mono text-xs ${
+                    className={`inline-flex items-center gap-0.5 font-sans text-xs ${
                       positive
-                        ? "text-emerald-600 dark:text-emerald-400"
-                        : "text-rose-600 dark:text-rose-400"
+                        ? "text-primary dark:text-primary"
+                        : "text-primary dark:text-primary"
                     }`}
                   >
                     <Arrow className="size-3.5" />
@@ -63,7 +63,7 @@ export default function Grid08() {
                     stroke="currentColor"
                     strokeWidth="1.5"
                     vectorEffect="non-scaling-stroke"
-                    className={positive ? "text-emerald-500" : "text-rose-500"}
+                    className={positive ? "text-primary" : "text-primary"}
                   />
                 </svg>
               </div>

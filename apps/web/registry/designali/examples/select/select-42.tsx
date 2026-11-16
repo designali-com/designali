@@ -40,7 +40,7 @@ export default function WarehouseSelect() {
                 className={cn(
                   "ms-auto ps-4 tabular-nums",
                   item.stock < 100
-                    ? "text-amber-600 dark:text-amber-400"
+                    ? "text-primary dark:text-primary"
                     : "text-muted-foreground"
                 )}
               >

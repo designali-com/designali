@@ -3,12 +3,14 @@ import {
 } from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
+import { Macbook } from "@/registry/designali/ui/apple/macbook"
+import { DotPattern } from "@/registry/designali/ui/dot-pattern"
 
 const collections = [
-  { name: "Templates", count: 84, tone: "from-orange-300/60 to-amber-100/30" },
-  { name: "Blocks", count: 460, tone: "from-emerald-400/50 to-teal-100/30" },
-  { name: "Icon packs", count: 59, tone: "from-sky-400/50 to-indigo-100/30" },
-  { name: "UI kits", count: 37, tone: "from-lime-500/50 to-yellow-100/30" },
+  { name: "Templates", count: 84, image: "/images/templates/design-agency.jpg" },
+  { name: "Blocks", count: 460, image: "/images/templates/aliimam-comp.jpg" },
+  { name: "Icon packs", count: 59, image: "/images/templates/dalim-icons-old.jpg" },
+  { name: "UI kits", count: 37, image: "/images/templates/dalim-ui-old.jpg" },
 ]
 
 export default function Ecommerce04() {
@@ -20,7 +22,13 @@ export default function Ecommerce04() {
             href="#"
             className="group relative flex min-h-[420px] flex-col justify-end overflow-hidden border border-border bg-muted p-8 md:p-10 lg:row-span-2 lg:min-h-full"
           >
-            <div className="absolute inset-0 bg-gradient-to-br from-rose-400/50 via-orange-200/30 to-transparent transition-transform duration-700 group-hover:scale-105" />
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/50 via-primary/30 to-transparent" />
+            <DotPattern className="text-foreground/40 [mask-image:radial-gradient(ellipse_at_top,white,transparent_70%)]" />
+            <div className="relative mb-8 flex justify-center transition-transform duration-700 group-hover:scale-105">
+              <Macbook variant="macbook-pro" color="silver" size="sm" className="w-full! max-w-md">
+                <img src="/images/templates/portfolio-simple.jpg" alt="Portfolio Simple Template" className="size-full object-cover object-top" />
+              </Macbook>
+            </div>
             <div className="relative">
               <span className="bg-background px-2 py-1 text-xs">Designali edit · 2026</span>
               <h2 className="mt-4 text-4xl leading-tight font-medium tracking-tight md:text-5xl">
@@ -45,7 +53,8 @@ export default function Ecommerce04() {
                 href="#"
                 className="group relative flex aspect-square flex-col justify-between overflow-hidden border border-border p-5"
               >
-                <div className={`absolute inset-0 bg-gradient-to-br ${collection.tone} opacity-80 transition-opacity group-hover:opacity-100`} />
+                <img src={collection.image} alt="" className="absolute inset-0 size-full object-cover object-top opacity-70 transition-opacity group-hover:opacity-100" />
+                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
                 <span className="relative self-end text-xs text-muted-foreground">
                   {collection.count} items
                 </span>

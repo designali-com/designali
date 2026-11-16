@@ -60,7 +60,7 @@ function AirportField({
         <ComboboxList>
           {(a: Airport) => (
             <ComboboxItem key={a.code} value={a}>
-              <span className="w-9 font-mono font-semibold">{a.code}</span>
+              <span className="w-9 font-sans font-semibold">{a.code}</span>
               {a.city}
             </ComboboxItem>
           )}

@@ -69,7 +69,7 @@ export default function Pricing13() {
                 ${((item.price / item.credits) * 100).toFixed(2)} per 100
               </span>
               {item.bonus > 0 && (
-                <span className="mt-4 w-fit bg-emerald-500/10 px-2 py-0.5 text-xs font-medium text-emerald-700 dark:text-emerald-400">
+                <span className="mt-4 w-fit bg-primary/10 px-2 py-0.5 text-xs font-medium text-chart-3 dark:text-primary">
                   +{item.bonus}% bonus
                 </span>
               )}

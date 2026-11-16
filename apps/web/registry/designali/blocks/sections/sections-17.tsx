@@ -50,7 +50,7 @@ export default function Sections17() {
               <tbody className="divide-y divide-border">
                 {awards.map((item) => (
                   <tr key={`${item.year}-${item.award}`} className="transition-colors hover:bg-muted/40">
-                    <td className="p-3 align-top font-mono text-xs text-muted-foreground sm:p-4">{item.year}</td>
+                    <td className="p-3 align-top font-sans text-xs text-muted-foreground sm:p-4">{item.year}</td>
                     <td className="p-3 sm:p-4">
                       <span className="block font-medium">{item.award}</span>
                       <span className="text-xs text-muted-foreground">{item.body}</span>

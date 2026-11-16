@@ -33,18 +33,18 @@ export default function RecordingToggle() {
           if (on) setSeconds(0)
           setRecording(on)
         }}
-        className="aria-pressed:border-red-500 aria-pressed:bg-red-500 aria-pressed:text-white"
+        className="aria-pressed:border-destructive aria-pressed:bg-destructive aria-pressed:text-white"
       >
         {recording ? (
           <SquareIcon className="fill-current" />
         ) : (
-          <CircleIcon className="fill-red-500 text-red-500" />
+          <CircleIcon className="fill-destructive text-destructive" />
         )}
         {recording ? "Stop" : "Record"}
       </Toggle>
       <span
         className={cn(
-          "font-mono text-sm tabular-nums",
+          "font-sans text-sm tabular-nums",
           !recording && "text-muted-foreground"
         )}
       >

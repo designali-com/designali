@@ -36,7 +36,7 @@ export default function TextCleanupTextarea() {
       <Textarea
         value={text}
         onChange={(e) => setText(e.target.value)}
-        className="min-h-28 font-mono whitespace-pre"
+        className="min-h-28 font-sans whitespace-pre"
         aria-label="Text"
       />
       <div className="flex flex-wrap gap-1.5">

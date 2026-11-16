@@ -57,8 +57,8 @@ export default function ChatMentionSuggestions() {
                     <span
                       className={cn(
                         "ms-auto size-2 rounded-full",
-                        member.status === "online" && "bg-emerald-500",
-                        member.status === "away" && "bg-amber-500",
+                        member.status === "online" && "bg-primary",
+                        member.status === "away" && "bg-primary",
                         member.status === "offline" && "bg-muted-foreground/40"
                       )}
                     />

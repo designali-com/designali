@@ -12,11 +12,11 @@ import {
 import { cn } from "@workspace/ui/lib/utils"
 
 const categories = [
-  { id: "templates", label: "Templates", icon: LayoutTemplate, color: "bg-amber-500" },
-  { id: "blocks", label: "Blocks", icon: Blocks, color: "bg-rose-500" },
-  { id: "ui", label: "UI designs", icon: Palette, color: "bg-sky-500" },
-  { id: "icons", label: "Icons", icon: PenTool, color: "bg-indigo-500" },
-  { id: "docs", label: "Docs", icon: BookOpen, color: "bg-emerald-500" },
+  { id: "templates", label: "Templates", icon: LayoutTemplate, color: "bg-primary" },
+  { id: "blocks", label: "Blocks", icon: Blocks, color: "bg-primary" },
+  { id: "ui", label: "UI designs", icon: Palette, color: "bg-primary" },
+  { id: "icons", label: "Icons", icon: PenTool, color: "bg-primary" },
+  { id: "docs", label: "Docs", icon: BookOpen, color: "bg-primary" },
 ]
 
 const places = [
@@ -76,7 +76,7 @@ export default function Location17() {
         <div className="mt-10 grid border lg:grid-cols-[1fr_320px]">
           <div className="relative min-h-[380px] overflow-hidden border-b bg-muted lg:min-h-[480px] lg:border-e lg:border-b-0">
             <svg viewBox="0 0 100 100" preserveAspectRatio="none" className="absolute inset-0 h-full w-full" aria-hidden>
-              <rect x="74" y="70" width="26" height="30" className="fill-emerald-200/70 dark:fill-emerald-900/40" />
+              <rect x="74" y="70" width="26" height="30" className="fill-chart-1/70 dark:fill-chart-5/40" />
               <g className="stroke-background" fill="none">
                 <path d="M0 50 L100 46" strokeWidth="3" />
                 <path d="M50 0 L48 100" strokeWidth="3" />
@@ -84,7 +84,7 @@ export default function Location17() {
               </g>
             </svg>
             <span className="absolute top-[48%] left-[49%] flex -translate-x-1/2 -translate-y-1/2 items-center gap-2 bg-foreground px-2.5 py-1.5 text-xs font-medium text-background shadow-lg">
-              <span className="size-2 rounded-full bg-orange-500" />
+              <span className="size-2 rounded-full bg-primary" />
               designali.com
             </span>
             {shown.map((place) => {

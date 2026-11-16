@@ -79,7 +79,7 @@ export default function Contact13() {
 
         <div className="flex h-[520px] flex-col border bg-card">
           <div className="flex items-center gap-3 border-b px-5 py-4">
-            <span className="flex size-9 items-center justify-center rounded-full bg-gradient-to-br from-lime-300 to-emerald-500 text-xs font-semibold text-black/80">
+            <span className="flex size-9 items-center justify-center rounded-full bg-gradient-to-br from-chart-1 to-primary text-xs font-semibold text-black/80">
               P
             </span>
             <div className="text-sm">

@@ -54,7 +54,7 @@ export default function Authentication03() {
                 onKeyDown={(event) => onKeyDown(index, event)}
                 inputMode="numeric"
                 aria-label={`Digit ${index + 1}`}
-                className="size-12 border bg-background text-center font-mono text-xl outline-none focus:border-foreground sm:size-14 dark:bg-input/30"
+                className="size-12 border bg-background text-center font-sans text-xl outline-none focus:border-foreground sm:size-14 dark:bg-input/30"
               />
             ))}
           </div>

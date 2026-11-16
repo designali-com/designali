@@ -150,7 +150,7 @@ export function HeroSection() {
 
           </div>
 
-          <p className="mt-10 max-w-[620px] px-6 text-center text-sm text-nuted-foreground">
+          <p className="mt-10 max-w-[620px] px-6 text-center text-sm text-muted-foreground">
             DESIGNALI CREATES BRAND IDENTITIES, UI/UX DESIGN,
             <br className="hidden sm:block" />
             AND PRODUCTION-READY WEBSITES FOR AMBITIOUS BRANDS.

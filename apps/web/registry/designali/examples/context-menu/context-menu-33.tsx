@@ -45,7 +45,7 @@ export default function SidebarProjectMenu() {
               <HashIcon className="size-3.5 text-muted-foreground" />
               <span className="flex-1 truncate">{project.name}</span>
               {project.favorite ? (
-                <StarIcon className="size-3 fill-amber-400 text-amber-400" />
+                <StarIcon className="size-3 fill-primary text-primary" />
               ) : null}
             </ContextMenuTrigger>
             <ContextMenuContent className="w-48">

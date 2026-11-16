@@ -11,7 +11,7 @@ export default function LiveStreamThumbnail() {
     <div className="w-full max-w-xs">
       <AspectRatio
         ratio={16 / 9}
-        className="overflow-hidden bg-linear-to-br from-emerald-900 via-teal-700 to-cyan-500"
+        className="overflow-hidden bg-linear-to-br from-chart-5 via-chart-3 to-primary"
       >
         <svg
           viewBox="0 0 160 90"
@@ -27,7 +27,7 @@ export default function LiveStreamThumbnail() {
         </svg>
         <Badge
           variant="destructive"
-          className="absolute start-2 top-2 bg-red-600 text-white"
+          className="absolute start-2 top-2 bg-destructive text-white"
         >
           <span className="size-1.5 animate-pulse rounded-full bg-white" />
           LIVE

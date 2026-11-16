@@ -1,10 +1,12 @@
 import {
-  Bell,
   Moon,
   Smartphone,
   Star,
   TabletSmartphone,
 } from "@designali/icons"
+
+import { IPhone } from "@/registry/designali/ui/apple/iphone"
+import { CounterNumber } from "@/registry/designali/ui/counter-number"
 
 export default function Hero17() {
   return (
@@ -12,7 +14,7 @@ export default function Hero17() {
       <div className="mx-auto grid max-w-7xl items-center gap-16 lg:grid-cols-[1.1fr_1fr]">
         <div>
           <div className="flex items-center gap-3 text-sm">
-            <span className="flex size-10 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-500 to-violet-600 text-white">
+            <span className="flex size-10 items-center justify-center rounded-xl bg-gradient-to-br from-primary to-chart-2 text-white">
               <Moon className="size-5" />
             </span>
             <span className="font-medium">Designali</span>
@@ -50,17 +52,22 @@ export default function Hero17() {
           <dl className="mt-12 grid max-w-md grid-cols-3 gap-6 border-t border-border pt-6">
             <div>
               <dt className="text-xs text-muted-foreground">Rating</dt>
-              <dd className="mt-1 flex items-center gap-1 text-lg font-medium">
-                4.8 <Star className="size-4 fill-amber-400 text-amber-400" />
+              <dd className="mt-1 flex items-center gap-1">
+                <CounterNumber value={4.8} decimalPlaces={1} size="sm" className="text-lg font-medium" />
+                <Star className="size-4 fill-primary text-primary" />
               </dd>
             </div>
             <div>
               <dt className="text-xs text-muted-foreground">UI designs</dt>
-              <dd className="mt-1 text-lg font-medium">2300+</dd>
+              <dd className="mt-1">
+                <CounterNumber value={2300} suffix="+" size="sm" className="text-lg font-medium" />
+              </dd>
             </div>
             <div>
               <dt className="text-xs text-muted-foreground">Icons</dt>
-              <dd className="mt-1 text-lg font-medium">4000+</dd>
+              <dd className="mt-1">
+                <CounterNumber value={4000} suffix="+" size="sm" className="text-lg font-medium" />
+              </dd>
             </div>
           </dl>
         </div>
@@ -68,40 +75,21 @@ export default function Hero17() {
         <div className="relative mx-auto w-full max-w-[300px]">
           <div
             aria-hidden
-            className="absolute -inset-16 rounded-full bg-gradient-to-br from-indigo-500/30 to-violet-500/10 blur-3xl"
+            className="absolute -inset-16 rounded-full bg-gradient-to-br from-primary/30 to-primary/10 blur-3xl"
           />
-          <div className="relative rounded-[2.5rem] border-[10px] border-foreground bg-gradient-to-b from-indigo-950 to-slate-950 p-5 text-white shadow-2xl">
-            <div className="mx-auto h-5 w-24 rounded-full bg-foreground" />
-            <p className="mt-8 text-xs text-white/60">Today</p>
-            <p className="text-3xl font-medium">9:30 am</p>
-            <p className="text-xs text-white/60">Design review in 35 min</p>
-            <div className="mt-6 rounded-2xl bg-white/10 p-4">
-              <p className="text-xs text-white/60">Now designing</p>
-              <p className="mt-1 text-sm font-medium">Dalim UI landing page</p>
-              <div className="mt-3 flex h-10 items-end gap-1">
-                {[30, 60, 45, 80, 55, 90, 40, 70, 50, 65, 35, 75].map((height, index) => (
-                  <span
-                    key={index}
-                    className="flex-1 rounded-full bg-white/60"
-                    style={{ height: `${height}%` }}
-                  />
-                ))}
-              </div>
-            </div>
-            <div className="mt-3 grid grid-cols-2 gap-3">
-              <div className="rounded-2xl bg-white/10 p-3">
-                <p className="text-[10px] text-white/60">This week</p>
-                <p className="text-lg font-medium">12 blocks</p>
-              </div>
-              <div className="rounded-2xl bg-white/10 p-3">
-                <p className="text-[10px] text-white/60">Shipped</p>
-                <p className="text-lg font-medium">4 pages</p>
-              </div>
-            </div>
-            <div className="mt-3 flex items-center gap-3 rounded-2xl bg-white/10 p-3 text-xs">
-              <Bell className="size-4" />
-              Client handoff 4:00 to 4:30
-            </div>
+          <div className="relative flex justify-center">
+            <IPhone variant="18-pro" color="black" size="lg">
+              <img
+                src="/img/chat-1-light.jpg"
+                alt="Designali mobile UI design"
+                className="size-full object-cover object-top dark:hidden"
+              />
+              <img
+                src="/img/chat-1-dark.jpg"
+                alt="Designali mobile UI design"
+                className="hidden size-full object-cover object-top dark:block"
+              />
+            </IPhone>
           </div>
         </div>
       </div>

@@ -21,21 +21,21 @@ const events = [
     time: "10:00 – 10:45",
     room: "Designali studio",
     people: ["AI", "BD", "SD"],
-    color: "bg-blue-500/15 border-blue-500",
+    color: "bg-primary/15 border-primary",
   },
   {
     title: "Client kickoff",
     time: "13:00 – 14:00",
     room: "Zoom",
     people: ["AI", "SD"],
-    color: "bg-emerald-500/15 border-emerald-500",
+    color: "bg-primary/15 border-primary",
   },
   {
     title: "1:1 with Ali",
     time: "16:30 – 17:00",
     room: "Café corner",
     people: ["AI"],
-    color: "bg-amber-500/15 border-amber-500",
+    color: "bg-primary/15 border-primary",
   },
 ]
 

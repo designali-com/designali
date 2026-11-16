@@ -7,10 +7,10 @@ import {
 import { cn } from "@workspace/ui/lib/utils"
 
 const segments = [
-  { label: "Photos", gb: 42, className: "bg-sky-500" },
-  { label: "Videos", gb: 28, className: "bg-violet-500" },
-  { label: "Documents", gb: 9, className: "bg-amber-500" },
-  { label: "Backups", gb: 14, className: "bg-emerald-500" },
+  { label: "Photos", gb: 42, className: "bg-primary" },
+  { label: "Videos", gb: 28, className: "bg-primary" },
+  { label: "Documents", gb: 9, className: "bg-primary" },
+  { label: "Backups", gb: 14, className: "bg-primary" },
 ]
 
 export default function StorageBreakdownTooltips() {

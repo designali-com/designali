@@ -35,7 +35,7 @@ export default function ArticleTextMenu() {
           className={cn(
             "text-sm leading-relaxed text-muted-foreground",
             highlighted &&
-              "bg-amber-200/60 text-foreground dark:bg-amber-500/30"
+              "bg-primary/60 text-foreground dark:bg-primary/30"
           )}
         >
           Designali is where thoughtful design meets production-ready code. Ali

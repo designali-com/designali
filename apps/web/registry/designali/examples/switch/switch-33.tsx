@@ -23,12 +23,12 @@ export default function ServiceStatusSwitches() {
           <span
             className={cn(
               "size-2 rounded-full",
-              running[service.id] ? "bg-emerald-500" : "bg-muted-foreground/40"
+              running[service.id] ? "bg-primary" : "bg-muted-foreground/40"
             )}
           />
           <div className="flex-1">
             <p className="text-sm font-medium">{service.name}</p>
-            <p className="font-mono text-xs text-muted-foreground">
+            <p className="font-sans text-xs text-muted-foreground">
               {service.region}
             </p>
           </div>
@@ -36,7 +36,7 @@ export default function ServiceStatusSwitches() {
             {running[service.id] ? "Running" : "Stopped"}
           </span>
           <Switch
-            className="data-checked:bg-emerald-600"
+            className="data-checked:bg-chart-2"
             checked={running[service.id]}
             onCheckedChange={(checked) =>
               setRunning((r) => ({ ...r, [service.id]: checked }))

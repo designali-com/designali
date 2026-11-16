@@ -48,7 +48,7 @@ export default function FormDataSelect() {
       </Field>
       <Button type="submit">Save</Button>
       {submitted !== null && (
-        <p className="bg-muted p-2 font-mono text-xs">
+        <p className="bg-muted p-2 font-sans text-xs">
           companySize = {submitted}
         </p>
       )}

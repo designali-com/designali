@@ -25,7 +25,7 @@ export default function NestedExportSubmenus() {
   return (
     <ContextMenu>
       <ContextMenuTrigger className="flex w-full max-w-xs flex-col gap-2 border p-4">
-        <FileSpreadsheetIcon className="size-6 text-emerald-600" />
+        <FileSpreadsheetIcon className="size-6 text-primary" />
         <span className="text-sm font-medium">Designali 2026 roadmap</span>
         <span className="text-xs text-muted-foreground">
           Spreadsheet · 14 tabs

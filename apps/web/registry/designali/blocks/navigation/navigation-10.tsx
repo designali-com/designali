@@ -76,12 +76,12 @@ export default function Navigation10() {
                       tabIndex={open ? 0 : -1}
                       className="group flex items-baseline gap-4 py-3 md:py-4"
                     >
-                      <span className="font-mono text-xs text-background/50">0{index + 1}</span>
+                      <span className="font-sans text-xs text-background/50">0{index + 1}</span>
                       <span className="text-3xl font-semibold tracking-tight transition-transform group-hover:translate-x-2 md:text-5xl">
                         {link.label}
                       </span>
                       {link.count && (
-                        <sup className="font-mono text-xs text-background/50">{link.count}</sup>
+                        <sup className="font-sans text-xs text-background/50">{link.count}</sup>
                       )}
                       <ArrowUpRight className="ms-auto size-6 self-center opacity-0 transition-opacity group-hover:opacity-100" />
                     </a>

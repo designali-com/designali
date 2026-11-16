@@ -17,6 +17,7 @@ export default function BusinessHoursInputs() {
 
   return (
     <div className="flex w-full max-w-sm flex-col gap-2">
+      <p className="text-sm font-medium">Designali studio hours</p>
       {hours.map((h, i) => {
         const invalid = h.close <= h.open
         return (

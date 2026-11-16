@@ -25,7 +25,7 @@ export default function RatingBreakdownSplit() {
               className={cn(
                 "size-3",
                 index < 4
-                  ? "fill-amber-400 text-amber-400"
+                  ? "fill-primary text-primary"
                   : "text-muted-foreground"
               )}
             />
@@ -40,7 +40,7 @@ export default function RatingBreakdownSplit() {
             <span className="w-2 text-muted-foreground">{row.stars}</span>
             <div className="h-1.5 flex-1 bg-muted">
               <div
-                className="h-full bg-amber-400"
+                className="h-full bg-primary"
                 style={{ width: row.share + "%" }}
               />
             </div>

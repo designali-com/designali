@@ -18,9 +18,9 @@ export default function AlignmentOptionsHoverCard() {
             Align {align}
           </HoverCardTrigger>
           <HoverCardContent side="right" align={align} className="w-44">
-            <p className="font-medium capitalize">{align}</p>
+            <p className="font-medium">Designali Blocks</p>
             <p className="text-muted-foreground">
-              Aligned to the {align} edge of the trigger.
+              460+ blocks, aligned to the {align} edge of the trigger.
             </p>
           </HoverCardContent>
         </HoverCard>

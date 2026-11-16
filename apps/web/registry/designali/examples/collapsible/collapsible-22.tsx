@@ -51,7 +51,7 @@ export default function InvoiceLineItems() {
                   </Button>
                 }
               />
-              <span className="font-mono text-xs">{invoice.id}</span>
+              <span className="font-sans text-xs">{invoice.id}</span>
               <span className="flex-1 truncate">{invoice.customer}</span>
               <Badge
                 variant={

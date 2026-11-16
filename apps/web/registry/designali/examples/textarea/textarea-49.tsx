@@ -23,13 +23,13 @@ export default function PromptVariablesTextarea() {
           id="ta-template"
           value={template}
           onChange={(e) => setTemplate(e.target.value)}
-          className="font-mono"
+          className="font-sans"
         />
       </div>
       <div className="grid gap-2">
         {vars.map((v) => (
           <div key={v} className="flex items-center gap-2">
-            <Badge variant="outline" className="w-20 justify-center font-mono">
+            <Badge variant="outline" className="w-20 justify-center font-sans">
               {v}
             </Badge>
             <Input placeholder={"Value for " + v} aria-label={v} />

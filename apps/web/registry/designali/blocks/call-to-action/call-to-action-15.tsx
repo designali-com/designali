@@ -4,11 +4,13 @@ import {
 
 import { Button } from "@workspace/ui/components/button"
 
+import { CounterNumber } from "@/registry/designali/ui/counter-number"
+
 const stats = [
-  ["460+", "blocks"],
-  ["4,000+", "icons"],
-  ["240+", "landing pages"],
-  ["2,300+", "UI examples"],
+  { value: 460, label: "blocks" },
+  { value: 4000, label: "icons" },
+  { value: 240, label: "landing pages" },
+  { value: 2300, label: "UI examples" },
 ]
 
 export default function CallToAction15() {
@@ -41,11 +43,15 @@ export default function CallToAction15() {
           </div>
         </div>
         <dl className="mt-16 grid grid-cols-2 gap-px border-t border-primary-foreground/20 bg-primary-foreground/20 md:grid-cols-4">
-          {stats.map(([value, label]) => (
+          {stats.map(({ value, label }) => (
             <div key={label} className="bg-primary py-8 pr-4 pl-0 [&:nth-child(even)]:pl-6 md:[&:not(:first-child)]:pl-6">
               <dt className="sr-only">{label}</dt>
-              <dd className="text-3xl font-medium tracking-tight md:text-4xl">
-                {value}
+              <dd>
+                <CounterNumber
+                  value={value}
+                  suffix="+"
+                  className="text-3xl font-medium tracking-tight text-primary-foreground md:text-4xl"
+                />
               </dd>
               <dd className="mt-1 text-sm text-primary-foreground/70">{label}</dd>
             </div>

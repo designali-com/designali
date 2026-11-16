@@ -40,7 +40,7 @@ export default function ManualFilteringResultsCount() {
         <CommandEmpty>No products match “{query}”.</CommandEmpty>
         {results.map((product) => (
           <CommandItem key={product.sku} value={product.sku}>
-            <span className="w-16 font-mono text-[11px] text-muted-foreground">
+            <span className="w-16 font-sans text-[11px] text-muted-foreground">
               {product.sku}
             </span>
             <span className="truncate">{product.name}</span>

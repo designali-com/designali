@@ -40,8 +40,8 @@ export default function MarketsTickerNav() {
                       className={cn(
                         "flex w-16 items-center justify-end gap-0.5 tabular-nums",
                         m.change >= 0
-                          ? "text-emerald-600 dark:text-emerald-400"
-                          : "text-red-600 dark:text-red-400"
+                          ? "text-primary dark:text-primary"
+                          : "text-destructive dark:text-destructive"
                       )}
                     >
                       {m.change >= 0 ? (

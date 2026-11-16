@@ -13,7 +13,7 @@ export default function WidthVariantsHoverCard() {
           Compact
         </HoverCardTrigger>
         <HoverCardContent className="w-40 p-2">
-          Autosave is on.
+          Designali autosave is on.
         </HoverCardContent>
       </HoverCard>
       <HoverCard>
@@ -23,7 +23,7 @@ export default function WidthVariantsHoverCard() {
         <HoverCardContent>
           <p className="font-medium">Version history</p>
           <p className="text-muted-foreground">
-            We keep 30 days of versions for every file in this workspace.
+            We keep 30 days of versions for every file in your Designali workspace.
           </p>
         </HoverCardContent>
       </HoverCard>
@@ -35,13 +35,13 @@ export default function WidthVariantsHoverCard() {
           <div>
             <p className="font-medium">Drafts</p>
             <p className="text-muted-foreground">
-              Only visible to you until published.
+              Only visible to the Designali studio until published.
             </p>
           </div>
           <div>
             <p className="font-medium">Published</p>
             <p className="text-muted-foreground">
-              Visible to everyone with the link.
+              Live on designali.com for everyone.
             </p>
           </div>
         </HoverCardContent>

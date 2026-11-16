@@ -35,7 +35,7 @@ export default function TrackAddToPlaylistMenu() {
 
   return (
     <div className="flex w-full max-w-sm items-center gap-3 border p-2">
-      <span className="flex size-10 items-center justify-center bg-gradient-to-br from-indigo-500 to-cyan-400">
+      <span className="flex size-10 items-center justify-center bg-gradient-to-br from-primary to-primary">
         <MusicIcon className="size-4 text-white" />
       </span>
       <div className="min-w-0 flex-1 text-xs">

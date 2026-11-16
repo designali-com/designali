@@ -19,9 +19,9 @@ const rules = [
 const colors = [
   "bg-destructive",
   "bg-destructive",
-  "bg-amber-500",
-  "bg-lime-500",
-  "bg-emerald-600",
+  "bg-primary",
+  "bg-primary",
+  "bg-chart-2",
 ]
 
 export default function PasswordStrengthInput() {
@@ -56,7 +56,7 @@ export default function PasswordStrengthInput() {
             )}
           >
             {r.test(value) ? (
-              <CheckIcon className="size-3.5 text-emerald-600" />
+              <CheckIcon className="size-3.5 text-primary" />
             ) : (
               <CircleIcon className="size-3.5" />
             )}

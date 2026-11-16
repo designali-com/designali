@@ -15,10 +15,10 @@ import {
 export function DropdownMenuShortcuts() {
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger render={<Button variant="outline">Open</Button>} />
+      <DropdownMenuTrigger render={<Button variant="outline">ali@designali.com</Button>} />
       <DropdownMenuContent>
         <DropdownMenuGroup>
-          <DropdownMenuLabel>My Account</DropdownMenuLabel>
+          <DropdownMenuLabel>Designali Account</DropdownMenuLabel>
           <DropdownMenuItem>
             Profile
             <DropdownMenuShortcut>⇧⌘P</DropdownMenuShortcut>

@@ -19,19 +19,19 @@ type Item = {
   was?: number
   stock: "in" | "low" | "out"
   added: string
-  tone: string
+  image: string
 }
 
 const initial: Item[] = [
-  { id: 1, name: "Blocks Pro Bundle", variant: "Pro license · 460+ blocks", price: 149, was: 199, stock: "in", added: "Added 3 days ago", tone: "from-blue-900/70 to-blue-400/30" },
-  { id: 2, name: "Design Agency Template", variant: "Studio license", price: 179, stock: "low", added: "Added 2 weeks ago", tone: "from-amber-800/70 to-orange-300/30" },
-  { id: 3, name: "Dalim Fonts Collection", variant: "Desktop + web", price: 59, stock: "out", added: "Added 1 month ago", tone: "from-zinc-500/60 to-zinc-200/30" },
-  { id: 4, name: "Apple Device Mockups", variant: "iPhone, iPad, MacBook, iMac", price: 35, stock: "in", added: "Added 1 month ago", tone: "from-yellow-700/50 to-stone-200/30" },
+  { id: 1, name: "Blocks Pro Bundle", variant: "Pro license · 460+ blocks", price: 149, was: 199, stock: "in", added: "Added 3 days ago", image: "/images/templates/aliimam-comp.jpg" },
+  { id: 2, name: "Design Agency Template", variant: "Studio license", price: 179, stock: "low", added: "Added 2 weeks ago", image: "/images/templates/design-agency.jpg" },
+  { id: 3, name: "Dalim Fonts Collection", variant: "Desktop + web", price: 59, stock: "out", added: "Added 1 month ago", image: "/images/templates/dalim-fonts-old.jpg" },
+  { id: 4, name: "Apple Device Mockups", variant: "iPhone, iPad, MacBook, iMac", price: 35, stock: "in", added: "Added 1 month ago", image: "/images/templates/aliimam-comp.jpg" },
 ]
 
 const stockLabel = {
-  in: { text: "In stock", className: "text-emerald-700 dark:text-emerald-400" },
-  low: { text: "Launch price ends soon", className: "text-amber-700 dark:text-amber-400" },
+  in: { text: "In stock", className: "text-chart-3 dark:text-primary" },
+  low: { text: "Launch price ends soon", className: "text-chart-3 dark:text-primary" },
   out: { text: "Coming soon", className: "text-muted-foreground" },
 }
 
@@ -75,12 +75,12 @@ export default function Ecommerce17() {
             const notified = notify.includes(item.id)
             return (
               <li key={item.id} className="grid grid-cols-[80px_1fr] gap-4 border-b border-border py-5 sm:grid-cols-[96px_1fr_auto] sm:items-center">
-                <div className={cn("aspect-square bg-gradient-to-br", item.tone, item.stock === "out" && "opacity-50 grayscale")} />
+                <img src={item.image} alt={item.name} className={cn("aspect-square w-full border border-border object-cover object-top", item.stock === "out" && "opacity-50 grayscale")} />
                 <div className="min-w-0">
                   <a href="#" className="font-medium hover:underline">{item.name}</a>
                   <p className="text-xs text-muted-foreground">{item.variant}</p>
                   <p className="mt-2 flex flex-wrap items-baseline gap-x-2 text-sm tabular-nums">
-                    <span className={cn(item.was && "text-red-600 dark:text-red-400")}>${item.price}</span>
+                    <span className={cn(item.was && "text-destructive dark:text-destructive")}>${item.price}</span>
                     {item.was && <span className="text-xs text-muted-foreground line-through">${item.was}</span>}
                     <span className={cn("text-xs", stockLabel[item.stock].className)}>{stockLabel[item.stock].text}</span>
                   </p>

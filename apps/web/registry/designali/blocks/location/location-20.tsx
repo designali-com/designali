@@ -59,13 +59,13 @@ export default function Location20() {
         </div>
 
         <div className="mt-10 border">
-          <div className="relative aspect-[16/10] overflow-hidden bg-gradient-to-b from-sky-100 to-emerald-50 md:aspect-[21/8] dark:from-sky-950/50 dark:to-emerald-950/40">
+          <div className="relative aspect-[16/10] overflow-hidden bg-gradient-to-b from-primary/10 to-primary/5 md:aspect-[21/8] dark:from-chart-5/50 dark:to-chart-5/40">
             <svg viewBox="0 0 1000 380" preserveAspectRatio="xMidYMid slice" className="absolute inset-0 h-full w-full" aria-hidden>
               {Array.from({ length: 9 }).map((_, i) => (
                 <path
                   key={i}
                   d={`M-20 ${330 - i * 30} C 200 ${300 - i * 34}, 380 ${350 - i * 40}, 560 ${290 - i * 30} S 860 ${200 - i * 18}, 1020 ${240 - i * 22}`}
-                  className="fill-none stroke-emerald-700/15 dark:stroke-emerald-300/15"
+                  className="fill-none stroke-chart-3/15 dark:stroke-chart-1/15"
                   strokeWidth="1.5"
                 />
               ))}
@@ -77,15 +77,15 @@ export default function Location20() {
               />
               <path
                 d="M80 330 C 180 320, 220 270, 320 260 S 460 290, 540 230 S 680 160, 760 150 S 880 110, 920 80"
-                className="fill-none stroke-orange-500"
+                className="fill-none stroke-primary"
                 strokeWidth="4"
                 strokeDasharray="10 8"
                 strokeLinecap="round"
               />
               <circle cx="80" cy="330" r="10" className="fill-background stroke-foreground" strokeWidth="4" />
               <circle cx="540" cy="230" r="6" className="fill-foreground" />
-              <circle cx="920" cy="80" r="16" className="fill-orange-500/25" />
-              <circle cx="920" cy="80" r="8" className="fill-orange-500" />
+              <circle cx="920" cy="80" r="16" className="fill-primary/25" />
+              <circle cx="920" cy="80" r="8" className="fill-primary" />
             </svg>
             <span className="absolute start-[6%] bottom-[4%] bg-background px-2 py-1 text-xs">Start &middot; Discovery call</span>
             <span className="absolute start-[50%] top-[50%] hidden bg-background px-2 py-1 text-xs sm:block">Design review</span>

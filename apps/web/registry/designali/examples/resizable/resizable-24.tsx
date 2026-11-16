@@ -23,14 +23,14 @@ export default function VideoCallWithChat() {
       className="h-72 w-full max-w-2xl border"
     >
       <ResizablePanel defaultSize="68%" minSize="50%">
-        <div className="flex h-full flex-col gap-2 bg-zinc-950 p-2">
+        <div className="flex h-full flex-col gap-2 bg-foreground p-2">
           <div className="grid flex-1 grid-cols-2 gap-2">
             {participants.map((name, i) => (
               <div
                 key={name}
                 className={cn(
-                  "relative flex items-center justify-center bg-zinc-800",
-                  i === 0 && "ring-2 ring-emerald-500"
+                  "relative flex items-center justify-center bg-foreground",
+                  i === 0 && "ring-2 ring-primary"
                 )}
               >
                 <Avatar>

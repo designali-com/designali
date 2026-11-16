@@ -23,12 +23,12 @@ export default function SleepScheduleRange() {
     <div className="flex w-full max-w-sm flex-col gap-4 border p-4">
       <div className="grid grid-cols-2 gap-2">
         <div className="flex items-center gap-2">
-          <MoonIcon className="size-4 text-indigo-500" />
+          <MoonIcon className="size-4 text-primary" />
           <div>
             <div className="text-[10px] text-muted-foreground uppercase">
               Bedtime
             </div>
-            <div className="font-mono text-sm">{clock(range[0]!)}</div>
+            <div className="font-sans text-sm">{clock(range[0]!)}</div>
           </div>
         </div>
         <div className="flex items-center justify-end gap-2 text-right">
@@ -36,14 +36,14 @@ export default function SleepScheduleRange() {
             <div className="text-[10px] text-muted-foreground uppercase">
               Wake up
             </div>
-            <div className="font-mono text-sm">{clock(range[1]!)}</div>
+            <div className="font-sans text-sm">{clock(range[1]!)}</div>
           </div>
-          <SunriseIcon className="size-4 text-amber-500" />
+          <SunriseIcon className="size-4 text-primary" />
         </div>
       </div>
       <Slider
         aria-label="Sleep schedule"
-        className="[&_[data-slot=slider-range]]:bg-indigo-500"
+        className="[&_[data-slot=slider-range]]:bg-primary"
         value={range}
         onValueChange={(value) => setRange(value as number[])}
         min={20}

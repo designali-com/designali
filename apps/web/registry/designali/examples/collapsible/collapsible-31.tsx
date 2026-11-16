@@ -40,7 +40,7 @@ export default function ApiEndpointReference() {
             render={
               <Button
                 variant="ghost"
-                className="w-full justify-start px-3 font-mono"
+                className="w-full justify-start px-3 font-sans"
               >
                 <Badge
                   variant={endpoint.method === "GET" ? "secondary" : "default"}

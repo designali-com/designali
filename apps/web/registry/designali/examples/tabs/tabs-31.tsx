@@ -35,7 +35,7 @@ export default function OrderStatusTabs() {
               className="flex items-center justify-between px-3 py-2"
             >
               <span>
-                <span className="font-mono">{o.id}</span> · {o.customer}
+                <span className="font-sans">{o.id}</span> · {o.customer}
               </span>
               <span className="font-medium tabular-nums">{o.total}</span>
             </div>

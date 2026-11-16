@@ -27,7 +27,7 @@ export default function CreatorProfileCard() {
 
   return (
     <Card className="w-full max-w-xs pt-0">
-      <div className="h-20 bg-gradient-to-br from-violet-500 via-fuchsia-500 to-orange-400" />
+      <div className="h-20 bg-gradient-to-br from-primary via-primary to-primary" />
       <CardHeader className="-mt-10">
         <Avatar className="size-16 ring-4 ring-card">
           <AvatarImage src="/ali.jpg" alt="Ali Imam" />

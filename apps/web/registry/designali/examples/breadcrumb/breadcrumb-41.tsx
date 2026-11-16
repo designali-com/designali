@@ -53,7 +53,7 @@ export default function DocumentTopBarBreadcrumb() {
           onClick={() => setStarred(!starred)}
         >
           <StarIcon
-            className={cn(starred && "fill-amber-400 text-amber-400")}
+            className={cn(starred && "fill-primary text-primary")}
           />
         </Button>
       </div>

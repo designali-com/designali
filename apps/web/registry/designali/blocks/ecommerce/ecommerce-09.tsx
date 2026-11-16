@@ -21,8 +21,8 @@ const deliveryOptions = [
 ]
 
 const items = [
-  { name: "Design Agency Template", variant: "Pro license · Next.js + Figma", price: 79, tone: "from-stone-300 to-stone-100 dark:from-stone-600 dark:to-stone-800" },
-  { name: "Designali Icons Pro", variant: "Personal license", price: 39, tone: "from-stone-200 to-amber-50 dark:from-stone-700 dark:to-stone-900" },
+  { name: "Design Agency Template", variant: "Pro license · Next.js + Figma", price: 79, image: "/images/templates/design-agency.jpg" },
+  { name: "Designali Icons Pro", variant: "Personal license", price: 39, image: "/images/templates/dalim-icons-old.jpg" },
 ]
 
 export default function Ecommerce09() {
@@ -71,7 +71,7 @@ export default function Ecommerce09() {
           <div className="mt-10">
             {placed ? (
               <div className="border border-border p-8 text-center">
-                <span className="mx-auto flex size-12 items-center justify-center rounded-full bg-emerald-500/15 text-emerald-700 dark:text-emerald-400">
+                <span className="mx-auto flex size-12 items-center justify-center rounded-full bg-primary/15 text-chart-3 dark:text-primary">
                   <Check className="size-6" />
                 </span>
                 <h2 className="mt-4 text-2xl font-medium tracking-tight">Order placed</h2>
@@ -183,7 +183,7 @@ export default function Ecommerce09() {
           <ul className="mt-5 space-y-4">
             {items.map((item) => (
               <li key={item.name} className="flex gap-3">
-                <span className={cn("size-14 shrink-0 border border-border bg-gradient-to-br", item.tone)} />
+                <img src={item.image} alt={item.name} className="size-14 shrink-0 object-cover object-top border border-border" />
                 <span className="flex-1">
                   <span className="block text-sm font-medium">{item.name}</span>
                   <span className="block text-xs text-muted-foreground">{item.variant}</span>

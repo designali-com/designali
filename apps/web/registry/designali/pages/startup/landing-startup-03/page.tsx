@@ -249,7 +249,7 @@ export default function LandingStartup03() {
             href="#"
             className="flex items-center gap-2 font-semibold tracking-tight"
           >
-            <span className="flex size-7 items-center justify-center rounded-md bg-indigo-600 text-white text-sm">
+            <span className="flex size-7 items-center justify-center rounded-md bg-chart-2 text-white text-sm">
               R
             </span>
             <span className="">Relay</span>
@@ -285,12 +285,12 @@ export default function LandingStartup03() {
         <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 py-16 md:py-24 lg:grid-cols-2">
           <div className="space-y-7">
             <span className="inline-flex items-center gap-2 rounded-full border bg-background text-muted-foreground px-3 py-1 text-xs font-medium">
-              <Sparkles className="size-3.5 text-indigo-600 dark:text-indigo-400" />
+              <Sparkles className="size-3.5 text-primary dark:text-primary" />
               Fewer meetings, more momentum
             </span>
             <h1 className="text-4xl leading-[1.05] font-semibold tracking-tight text-balance sm:text-5xl md:text-6xl ">
               {"Replace your next meeting with a "}
-              <span className="text-indigo-600 dark:text-indigo-400">
+              <span className="text-primary dark:text-primary">
                 two-minute video
               </span>
             </h1>
@@ -328,7 +328,7 @@ export default function LandingStartup03() {
             </div>
           </div>
           <div className="relative">
-            <div className="absolute -inset-8 -z-10 rounded-full bg-gradient-to-tr from-indigo-500/25 via-violet-500/10 to-transparent blur-3xl" />
+            <div className="absolute -inset-8 -z-10 rounded-full bg-gradient-to-tr from-primary/25 via-primary/10 to-transparent blur-3xl" />
             <HeroVisual />
           </div>
         </div>
@@ -353,7 +353,7 @@ export default function LandingStartup03() {
       <section className="border-b bg-muted/30">
         <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
           <div className="max-w-2xl">
-            <p className="text-sm font-medium text-indigo-600 dark:text-indigo-400">
+            <p className="text-sm font-medium text-primary dark:text-primary">
               Why us
             </p>
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl  mt-3">
@@ -370,8 +370,8 @@ export default function LandingStartup03() {
                 key={feature.title}
                 className="rounded-xl border bg-background p-6 shadow-xs"
               >
-                <span className="flex size-10 items-center justify-center rounded-lg bg-indigo-500/10">
-                  <feature.icon className="size-5 text-indigo-600 dark:text-indigo-400" />
+                <span className="flex size-10 items-center justify-center rounded-lg bg-primary/10">
+                  <feature.icon className="size-5 text-primary dark:text-primary" />
                 </span>
                 <h3 className="mt-5 font-semibold">{feature.title}</h3>
                 <p className="mt-2 text-sm leading-6 text-muted-foreground">
@@ -395,7 +395,7 @@ export default function LandingStartup03() {
                 key={step.title}
                 className="relative border-t-2 border-border pt-6"
               >
-                <span className="text-sm font-medium text-indigo-600 dark:text-indigo-400">
+                <span className="text-sm font-medium text-primary dark:text-primary">
                   Step {i + 1}
                 </span>
                 <h3 className="mt-2 text-lg font-semibold">{step.title}</h3>
@@ -439,7 +439,7 @@ export default function LandingStartup03() {
                   <span className="flex size-10 items-center justify-center rounded-lg border bg-muted/50 font-semibold ">
                     {item.name.charAt(0)}
                   </span>
-                  <span className="rounded-full bg-indigo-500/10 px-2.5 py-0.5 text-xs font-medium text-indigo-600 dark:text-indigo-400">
+                  <span className="rounded-full bg-primary/10 px-2.5 py-0.5 text-xs font-medium text-primary dark:text-primary">
                     {item.tag}
                   </span>
                 </div>
@@ -469,7 +469,7 @@ export default function LandingStartup03() {
                 key={t.name}
                 className={`flex flex-col justify-between rounded-2xl border bg-background p-6 ${i === 0 ? "md:col-span-2 md:p-10" : ""}`}
               >
-                <Quote className="size-6 text-indigo-600 dark:text-indigo-400" />
+                <Quote className="size-6 text-primary dark:text-primary" />
                 <blockquote
                   className={`mt-4 leading-relaxed ${i === 0 ? "text-xl md:text-2xl" : "text-muted-foreground"}`}
                 >
@@ -511,10 +511,10 @@ export default function LandingStartup03() {
               return (
                 <div
                   key={tier.name}
-                  className={`relative flex h-full flex-col rounded-2xl border p-8 ${featured ? "border-transparent ring-2 ring-indigo-500 shadow-xl" : ""}`}
+                  className={`relative flex h-full flex-col rounded-2xl border p-8 ${featured ? "border-transparent ring-2 ring-primary shadow-xl" : ""}`}
                 >
                   {featured && (
-                    <span className="absolute -top-3 left-8 rounded-full bg-indigo-600 text-white px-3 py-1 text-xs font-medium">
+                    <span className="absolute -top-3 left-8 rounded-full bg-chart-2 text-white px-3 py-1 text-xs font-medium">
                       Most popular
                     </span>
                   )}
@@ -533,7 +533,7 @@ export default function LandingStartup03() {
                   <ul className="mt-8 flex-1 space-y-3 text-sm">
                     {tier.features.map((feature) => (
                       <li key={feature} className="flex gap-3">
-                        <Check className="mt-0.5 size-4 shrink-0 text-indigo-600 dark:text-indigo-400" />
+                        <Check className="mt-0.5 size-4 shrink-0 text-primary dark:text-primary" />
                         {feature}
                       </li>
                     ))}
@@ -585,8 +585,8 @@ export default function LandingStartup03() {
         </div>
       </section>
       <section className="px-6 py-20 md:py-28">
-        <div className="relative mx-auto max-w-6xl overflow-hidden rounded-3xl border bg-indigo-500/10 px-6 py-16 text-center md:py-24">
-          <div className="pointer-events-none absolute -top-24 left-1/2 size-96 -translate-x-1/2 rounded-full bg-gradient-to-b from-indigo-500/25 via-violet-500/10 to-transparent blur-3xl" />
+        <div className="relative mx-auto max-w-6xl overflow-hidden rounded-3xl border bg-primary/10 px-6 py-16 text-center md:py-24">
+          <div className="pointer-events-none absolute -top-24 left-1/2 size-96 -translate-x-1/2 rounded-full bg-gradient-to-b from-primary/25 via-primary/10 to-transparent blur-3xl" />
           <div className="relative mx-auto max-w-2xl space-y-6">
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl">
               Take back your calendar
@@ -620,7 +620,7 @@ export default function LandingStartup03() {
               href="#"
               className="flex items-center gap-2 font-semibold tracking-tight"
             >
-              <span className="flex size-7 items-center justify-center rounded-md bg-indigo-600 text-white text-sm">
+              <span className="flex size-7 items-center justify-center rounded-md bg-chart-2 text-white text-sm">
                 R
               </span>
               <span className="">Relay</span>
@@ -709,7 +709,7 @@ function HeroVisual() {
           <div className="rounded-lg border p-4">
             <div className="mb-4 flex items-center justify-between text-xs">
               <span className="font-medium">Last 12 weeks</span>
-              <span className="text-indigo-600 dark:text-indigo-400">
+              <span className="text-primary dark:text-primary">
                 +24.6%
               </span>
             </div>
@@ -717,7 +717,7 @@ function HeroVisual() {
               {bars.map((h, i) => (
                 <div
                   key={i}
-                  className={`flex-1 rounded-t-sm ${i === bars.length - 1 ? "bg-indigo-600" : "bg-muted-foreground/20"}`}
+                  className={`flex-1 rounded-t-sm ${i === bars.length - 1 ? "bg-chart-2" : "bg-muted-foreground/20"}`}
                   style={{ height: `${h}%` }}
                 />
               ))}
@@ -735,7 +735,7 @@ function HeroVisual() {
                     {item.meta}
                   </div>
                 </div>
-                <span className="shrink-0 rounded-full bg-indigo-500/10 px-2 py-0.5 text-[11px] font-medium text-indigo-600 dark:text-indigo-400">
+                <span className="shrink-0 rounded-full bg-primary/10 px-2 py-0.5 text-[11px] font-medium text-primary dark:text-primary">
                   {item.tag}
                 </span>
               </div>

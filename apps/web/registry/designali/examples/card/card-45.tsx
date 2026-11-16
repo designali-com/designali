@@ -40,7 +40,7 @@ export default function ExpandableInvoiceCard() {
         <CardTitle>Invoice INV-2026-0118</CardTitle>
         <CardDescription>Issued Nov 1 · due Nov 15</CardDescription>
         <CardAction>
-          <Badge className="bg-emerald-500/15 text-emerald-700 dark:text-emerald-400">
+          <Badge className="bg-primary/15 text-chart-3 dark:text-primary">
             Paid
           </Badge>
         </CardAction>

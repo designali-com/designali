@@ -32,7 +32,7 @@ export default function SupportTicketWorkspace() {
               )}
             >
               <div className="flex items-center justify-between text-[11px]">
-                <span className="font-mono text-muted-foreground">
+                <span className="font-sans text-muted-foreground">
                   {ticket.id}
                 </span>
                 <Badge

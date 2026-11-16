@@ -35,7 +35,7 @@ export default function CommitHistoryDetails() {
             >
               <GitCommitHorizontalIcon className="size-3.5 shrink-0 text-muted-foreground" />
               <span className="min-w-0 flex-1 truncate">{c.message}</span>
-              <span className="font-mono text-[10px] text-muted-foreground">
+              <span className="font-sans text-[10px] text-muted-foreground">
                 {c.hash}
               </span>
             </div>
@@ -46,18 +46,18 @@ export default function CommitHistoryDetails() {
       <ResizablePanel defaultSize="50%" minSize="30%">
         <div className="flex h-full flex-col gap-2 p-3 text-xs">
           <span className="font-medium">feat: add pricing blocks</span>
-          <span className="font-mono text-[11px] text-muted-foreground">
+          <span className="font-sans text-[11px] text-muted-foreground">
             7b21e0d - Ali Imam - 2h ago
           </span>
           <Separator />
-          <div className="flex flex-col gap-1 font-mono text-[11px]">
+          <div className="flex flex-col gap-1 font-sans text-[11px]">
             <span>
-              <span className="text-emerald-600">+48</span>{" "}
+              <span className="text-primary">+48</span>{" "}
               src/inbox/bulk-actions.ts
             </span>
             <span>
-              <span className="text-emerald-600">+12</span>{" "}
-              <span className="text-red-600">-3</span> src/inbox/toolbar.tsx
+              <span className="text-primary">+12</span>{" "}
+              <span className="text-destructive">-3</span> src/inbox/toolbar.tsx
             </span>
           </div>
         </div>

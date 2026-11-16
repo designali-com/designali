@@ -13,10 +13,10 @@ export function InputField() {
       <Input
         id="input-field-username"
         type="text"
-        placeholder="Enter your username"
+        placeholder="aliimam"
       />
       <FieldDescription>
-        Choose a unique username for your account.
+        Your profile will live at designali.com/@username.
       </FieldDescription>
     </Field>
   )

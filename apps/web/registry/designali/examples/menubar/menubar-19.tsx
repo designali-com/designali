@@ -76,9 +76,9 @@ export default function VideoTimelineMenubar() {
         </span>
       </Menubar>
       <div className="relative flex h-10 gap-0.5 border bg-muted/40 p-1">
-        <div className="w-1/3 bg-sky-500/70" />
-        <div className="w-1/4 bg-violet-500/70" />
-        <div className="flex-1 bg-emerald-500/70" />
+        <div className="w-1/3 bg-primary/70" />
+        <div className="w-1/4 bg-primary/70" />
+        <div className="flex-1 bg-primary/70" />
         <div className="absolute inset-y-0 start-[42%] w-px bg-foreground" />
       </div>
     </div>

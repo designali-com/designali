@@ -15,6 +15,10 @@ import {
 
 import { cn } from "@workspace/ui/lib/utils"
 
+import { CounterNumber } from "@/registry/designali/ui/counter-number"
+import { GridPattern } from "@/registry/designali/ui/grid-pattern"
+import { Logo } from "@/src/components/logo"
+
 const items = [
   { icon: House, label: "Home" },
   { icon: BarChart3, label: "Analytics", badge: "New" },
@@ -38,9 +42,7 @@ export default function Navigation08() {
           )}
         >
           <div className="flex h-16 items-center gap-3 border-b px-4">
-            <span className="flex size-8 shrink-0 items-center justify-center bg-primary text-xs font-bold text-primary-foreground">
-              Da
-            </span>
+            <Logo className="h-6 w-8 shrink-0" />
             {expanded && <span className="truncate font-semibold">Designali Studio</span>}
           </div>
           <nav className="flex-1 space-y-1 p-3">
@@ -113,13 +115,17 @@ export default function Navigation08() {
             {["Projects this week", "Unpaid invoices", "New clients"].map((label, index) => (
               <div key={label} className="border p-5">
                 <p className="text-xs text-muted-foreground">{label}</p>
-                <p className="mt-2 text-2xl font-semibold tabular-nums">
-                  {[38, 6, 12][index]}
-                </p>
+                <CounterNumber
+                  value={[38, 6, 12][index] ?? 0}
+                  size="lg"
+                  className="mt-2 block text-2xl font-semibold"
+                />
               </div>
             ))}
           </div>
-          <div className="mt-4 h-40 border bg-[repeating-linear-gradient(90deg,var(--muted)_0_1px,transparent_1px_48px)]" />
+          <div className="relative mt-4 h-40 overflow-hidden border">
+            <GridPattern width={48} height={48} className="stroke-muted" />
+          </div>
         </div>
       </div>
     </section>

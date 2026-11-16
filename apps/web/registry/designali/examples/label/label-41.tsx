@@ -7,9 +7,9 @@ import { Separator } from "@workspace/ui/components/separator"
 import { Switch } from "@workspace/ui/components/switch"
 
 const items = [
-  { id: "p-status", label: "Show online status" },
-  { id: "p-read", label: "Send read receipts" },
-  { id: "p-typing", label: "Show typing indicator" },
+  { id: "p-status", label: "Show my published blocks" },
+  { id: "p-read", label: "Show my templates" },
+  { id: "p-typing", label: "Show my 21st.dev link" },
 ]
 
 export default function PrivacySwitchGroup() {
@@ -19,7 +19,7 @@ export default function PrivacySwitchGroup() {
     <div className="flex w-full max-w-sm flex-col gap-3 border p-4">
       <div className="flex items-center justify-between">
         <Label htmlFor="p-master" className="text-sm font-medium">
-          Activity visible to others
+          Show my Designali profile publicly
         </Label>
         <Switch id="p-master" checked={visible} onCheckedChange={setVisible} />
       </div>

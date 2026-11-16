@@ -21,7 +21,7 @@ export default function VideoCallParticipants() {
           key={person.name}
           className={cn(
             "relative flex aspect-video items-center justify-center bg-muted",
-            person.speaking && "ring-2 ring-emerald-500"
+            person.speaking && "ring-2 ring-primary"
           )}
         >
           <Avatar className="size-14">

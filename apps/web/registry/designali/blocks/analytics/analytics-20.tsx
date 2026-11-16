@@ -5,10 +5,12 @@ import {
 
 import { Button } from "@workspace/ui/components/button"
 
+import { CounterNumber } from "@/registry/designali/ui/counter-number"
+
 const highlights = [
-  { label: "Revenue", value: "$212,480", change: "+18%", good: true },
-  { label: "Orders", value: "4,906", change: "+11%", good: true },
-  { label: "Refund rate", value: "6.4%", change: "+1.2 pts", good: false },
+  { label: "Revenue", value: 212480, prefix: "$", suffix: "", decimals: 0, change: "+18%", good: true },
+  { label: "Orders", value: 4906, prefix: "", suffix: "", decimals: 0, change: "+11%", good: true },
+  { label: "Refund rate", value: 6.4, prefix: "", suffix: "%", decimals: 1, change: "+1.2 pts", good: false },
 ]
 
 const movers = [
@@ -36,14 +38,14 @@ export default function Analytics20() {
             </h2>
             <p className="mt-6 text-base leading-8 text-muted-foreground">
               designali.com sold{" "}
-              <mark className="bg-emerald-500/15 px-1 text-foreground dark:bg-emerald-400/20">
+              <mark className="bg-primary/15 px-1 text-foreground dark:bg-primary/20">
                 $212,480
               </mark>{" "}
               this week, up 18% on last week. Almost a third of that came from
               the{" "}
               <mark className="bg-chart-2/20 px-1 text-foreground">Designali Icons Pro</mark>,
               which launched on Thursday. Refunds ticked up to{" "}
-              <mark className="bg-rose-500/15 px-1 text-foreground dark:bg-rose-400/20">6.4%</mark>,
+              <mark className="bg-primary/15 px-1 text-foreground dark:bg-primary/20">6.4%</mark>,
               mostly duplicate license purchases.
             </p>
 
@@ -51,12 +53,20 @@ export default function Analytics20() {
               {highlights.map((h) => (
                 <div key={h.label} className="bg-card p-5">
                   <dt className="text-xs text-muted-foreground">{h.label}</dt>
-                  <dd className="mt-2 text-2xl font-semibold tracking-tight">{h.value}</dd>
+                  <dd className="mt-2">
+                    <CounterNumber
+                      value={h.value}
+                      prefix={h.prefix}
+                      suffix={h.suffix}
+                      decimalPlaces={h.decimals}
+                      className="text-2xl font-semibold tracking-tight"
+                    />
+                  </dd>
                   <dd
                     className={
                       h.good
-                        ? "mt-1 text-xs text-emerald-600 dark:text-emerald-400"
-                        : "mt-1 text-xs text-rose-600 dark:text-rose-400"
+                        ? "mt-1 text-xs text-primary dark:text-primary"
+                        : "mt-1 text-xs text-primary dark:text-primary"
                     }
                   >
                     {h.change} week over week
@@ -78,8 +88,8 @@ export default function Analytics20() {
                   <span
                     className={
                       m.delta.startsWith("-")
-                        ? "shrink-0 font-mono text-sm text-rose-600 dark:text-rose-400"
-                        : "shrink-0 font-mono text-sm text-emerald-600 dark:text-emerald-400"
+                        ? "shrink-0 font-sans text-sm text-primary dark:text-primary"
+                        : "shrink-0 font-sans text-sm text-primary dark:text-primary"
                     }
                   >
                     {m.delta}

@@ -30,7 +30,7 @@ export default function CartRemoveItem() {
         </p>
       ) : (
         <div className="flex items-center gap-3">
-          <div className="size-14 shrink-0 bg-linear-to-br from-orange-300 to-rose-400" />
+          <div className="size-14 shrink-0 bg-linear-to-br from-chart-1 to-primary" />
           <div className="min-w-0 flex-1">
             <p className="text-sm font-medium">Design Agency template</p>
             <p className="text-xs text-muted-foreground">Next.js - Personal license</p>

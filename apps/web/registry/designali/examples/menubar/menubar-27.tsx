@@ -16,9 +16,9 @@ import {
 import { cn } from "@workspace/ui/lib/utils"
 
 const profiles: Record<string, string> = {
-  midnight: "bg-zinc-950 text-zinc-100",
-  forest: "bg-emerald-950 text-emerald-100",
-  dusk: "bg-indigo-950 text-indigo-100",
+  midnight: "bg-foreground text-background",
+  forest: "bg-chart-5 text-chart-1",
+  dusk: "bg-chart-5 text-chart-1",
 }
 
 export default function TerminalAppMenubar() {
@@ -65,7 +65,7 @@ export default function TerminalAppMenubar() {
       </Menubar>
       <div
         className={cn(
-          "p-3 font-mono text-[11px] leading-relaxed",
+          "p-3 font-sans text-[11px] leading-relaxed",
           profiles[profile]
         )}
       >

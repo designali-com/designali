@@ -33,15 +33,15 @@ export default function StickyHeaderScrollTable() {
         <TableBody>
           {logs.map((log, i) => (
             <TableRow key={i}>
-              <TableCell className="font-mono text-muted-foreground">
+              <TableCell className="font-sans text-muted-foreground">
                 {log.time}
               </TableCell>
               <TableCell>
                 <span
                   className={cn(
-                    "font-mono font-medium",
+                    "font-sans font-medium",
                     log.level === "ERROR" && "text-destructive",
-                    log.level === "WARN" && "text-amber-600 dark:text-amber-400"
+                    log.level === "WARN" && "text-primary dark:text-primary"
                   )}
                 >
                   {log.level}

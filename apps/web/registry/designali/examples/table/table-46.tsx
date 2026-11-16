@@ -40,8 +40,8 @@ export default function UptimeStatusTable() {
                       className={cn(
                         "h-5 w-1",
                         s.down.includes(day)
-                          ? "bg-amber-500"
-                          : "bg-emerald-500/80"
+                          ? "bg-primary"
+                          : "bg-primary/80"
                       )}
                     />
                   ))}

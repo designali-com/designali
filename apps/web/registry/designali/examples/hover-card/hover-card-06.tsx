@@ -16,14 +16,14 @@ const items = [
     price: "$129.00",
     rating: 4.7,
     stock: "In stock",
-    tone: "from-sky-400 to-indigo-500",
+    tone: "from-primary to-primary",
   },
   {
     name: "Icons Pro license",
     price: "$24.00",
     rating: 4.9,
     stock: "Low stock",
-    tone: "from-amber-300 to-orange-500",
+    tone: "from-chart-1 to-primary",
   },
 ]
 
@@ -57,7 +57,7 @@ export default function ProductQuickViewHoverCard() {
                 </div>
                 <div className="flex items-center justify-between text-muted-foreground">
                   <span className="flex items-center gap-1">
-                    <StarIcon className="size-3.5 fill-amber-400 text-amber-400" />
+                    <StarIcon className="size-3.5 fill-primary text-primary" />
                     {item.rating}
                   </span>
                   <Badge

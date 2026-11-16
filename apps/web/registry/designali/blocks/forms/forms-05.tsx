@@ -79,7 +79,7 @@ export default function Forms05() {
                   className="flex cursor-pointer items-start gap-4 p-4 hover:bg-muted/50"
                 >
                   <Checkbox defaultChecked={session.id === "keynote"} className="mt-0.5" />
-                  <span className="w-12 font-mono text-muted-foreground">
+                  <span className="w-12 font-sans text-muted-foreground">
                     {session.time}
                   </span>
                   <span className="flex-1 text-sm leading-5">{session.title}</span>

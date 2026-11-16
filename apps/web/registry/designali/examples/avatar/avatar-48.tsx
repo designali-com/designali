@@ -14,7 +14,7 @@ export default function TestimonialAuthor() {
       </blockquote>
       <figcaption className="flex items-center gap-3">
         <Avatar size="lg">
-          <AvatarFallback className="bg-gradient-to-br from-emerald-400 to-teal-600 font-medium text-white">
+          <AvatarFallback className="bg-gradient-to-br from-primary to-chart-2 font-medium text-white">
             CL
           </AvatarFallback>
         </Avatar>

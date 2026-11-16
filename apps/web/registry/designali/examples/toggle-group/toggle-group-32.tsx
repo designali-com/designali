@@ -25,7 +25,7 @@ export default function TemperatureUnitToggleGroup() {
     <div className="flex w-full max-w-xs flex-col gap-3 border p-4">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <CloudSunIcon className="size-6 text-amber-500" />
+          <CloudSunIcon className="size-6 text-primary" />
           <span className="text-2xl font-semibold">{fmt(19)}</span>
         </div>
         <ToggleGroup

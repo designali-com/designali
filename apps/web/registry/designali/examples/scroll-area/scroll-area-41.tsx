@@ -24,7 +24,7 @@ function Highlight({ text, query }: { text: string; query: string }) {
   return (
     <>
       {text.slice(0, i)}
-      <mark className="bg-amber-200 text-foreground dark:bg-amber-500/40">
+      <mark className="bg-primary/20 text-foreground dark:bg-primary/40">
         {text.slice(i, i + query.length)}
       </mark>
       {text.slice(i + query.length)}

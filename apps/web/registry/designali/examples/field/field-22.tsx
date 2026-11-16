@@ -23,7 +23,7 @@ export default function ValidateOnSubmitForm() {
         const data = new FormData(e.currentTarget)
         const next: Record<string, string> = {}
         if (!String(data.get("name")).trim())
-          next.name = "Please tell us your name."
+          next.name = "Please tell Ali your name."
         if (!/^\S+@\S+\.\S+$/.test(String(data.get("email"))))
           next.email = "Enter a valid email."
         if (String(data.get("message")).trim().length < 10)
@@ -62,10 +62,10 @@ export default function ValidateOnSubmitForm() {
           <FieldError>{errors.message}</FieldError>
         </Field>
         <Field orientation="horizontal">
-          <Button type="submit">Send message</Button>
+          <Button type="submit">Message Ali</Button>
           {sent && (
-            <span className="text-xs text-emerald-600">
-              Thanks! We&apos;ll reply within a day.
+            <span className="text-xs text-primary">
+              Thanks! Ali will reply from hello@designali.com within a day.
             </span>
           )}
         </Field>

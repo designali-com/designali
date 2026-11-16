@@ -17,7 +17,7 @@ export default function StarRepositoryToggle() {
   return (
     <div className="flex w-full max-w-sm items-center justify-between gap-3 border p-4">
       <div className="min-w-0">
-        <p className="truncate font-mono text-sm">designali/icons</p>
+        <p className="truncate font-sans text-sm">designali/icons</p>
         <p className="text-xs text-muted-foreground">
           4000+ React icons from Designali
         </p>
@@ -30,7 +30,7 @@ export default function StarRepositoryToggle() {
           onPressedChange={setStarred}
           aria-label="Star repository"
         >
-          <StarIcon className="group-aria-pressed/toggle:fill-amber-400 group-aria-pressed/toggle:text-amber-400" />
+          <StarIcon className="group-aria-pressed/toggle:fill-primary group-aria-pressed/toggle:text-primary" />
           {starred ? "Starred" : "Star"}
         </Toggle>
         <ButtonGroupText className="h-7 text-xs tabular-nums">

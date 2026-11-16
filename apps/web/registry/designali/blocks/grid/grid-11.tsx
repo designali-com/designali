@@ -22,11 +22,11 @@ export default function Grid11() {
           {steps.map((step, index) => (
             <li key={step.title} className="relative">
               <div className="flex items-center gap-4">
-                <span className="flex size-12 shrink-0 items-center justify-center border border-foreground font-mono text-sm">
+                <span className="flex size-12 shrink-0 items-center justify-center border border-foreground font-sans text-sm">
                   {String(index + 1).padStart(2, "0")}
                 </span>
                 <span className="h-px flex-1 bg-border" />
-                <span className="font-mono text-[10px] tracking-wider text-muted-foreground uppercase">
+                <span className="font-sans text-[10px] tracking-wider text-muted-foreground uppercase">
                   {step.duration}
                 </span>
               </div>
@@ -40,7 +40,7 @@ export default function Grid11() {
           {Array.from({ length: 9 }).map((_, week) => (
             <div key={week} className="space-y-1.5">
               <div className={`h-1.5 ${week < 3 ? "bg-foreground/40" : week < 6 ? "bg-foreground/70" : "bg-foreground"}`} />
-              <p className="font-mono text-[10px] text-muted-foreground">W{week + 1}</p>
+              <p className="font-sans text-[10px] text-muted-foreground">W{week + 1}</p>
             </div>
           ))}
         </div>

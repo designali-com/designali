@@ -19,11 +19,11 @@ import { cn } from "@workspace/ui/lib/utils"
 type IssueLabel = { name: string; color: string }
 
 const labels: IssueLabel[] = [
-  { name: "bug", color: "bg-red-500" },
-  { name: "feature", color: "bg-emerald-500" },
-  { name: "design", color: "bg-violet-500" },
-  { name: "docs", color: "bg-sky-500" },
-  { name: "performance", color: "bg-amber-500" },
+  { name: "bug", color: "bg-destructive" },
+  { name: "feature", color: "bg-primary" },
+  { name: "design", color: "bg-primary" },
+  { name: "docs", color: "bg-primary" },
+  { name: "performance", color: "bg-primary" },
 ]
 
 export default function IssueLabelChips() {

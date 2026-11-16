@@ -28,7 +28,7 @@ export default function FeaturedCardMegaMenu() {
             <div className="grid w-72 gap-1 sm:w-[30rem] sm:grid-cols-[11rem_1fr]">
               <NavigationMenuLink
                 href="#"
-                className="flex-col items-start justify-end gap-1 bg-gradient-to-br from-indigo-500 to-fuchsia-500 p-4 text-white hover:bg-gradient-to-br hover:opacity-95 focus:bg-gradient-to-br"
+                className="flex-col items-start justify-end gap-1 bg-gradient-to-br from-primary to-primary p-4 text-white hover:bg-gradient-to-br hover:opacity-95 focus:bg-gradient-to-br"
               >
                 <ZapIcon className="size-5" />
                 <span className="text-sm font-semibold">Designali Studio</span>

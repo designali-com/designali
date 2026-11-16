@@ -18,7 +18,7 @@ export default function Testimonials15() {
     <section className="w-full bg-background py-20 md:py-28">
       <div className="mx-auto grid max-w-6xl gap-12 px-6 lg:grid-cols-[1fr_1.4fr] lg:gap-20">
         <div className="lg:sticky lg:top-24 lg:self-start">
-          <div className="flex gap-0.5 text-amber-500">
+          <div className="flex gap-0.5 text-primary">
             {Array.from({ length: 5 }).map((_, i) => (
               <Star key={i} className="size-5 fill-current" />
             ))}

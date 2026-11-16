@@ -30,7 +30,7 @@ export default function DownPaymentSlider() {
         max={50}
       />
       {p < 20 ? (
-        <p className="flex items-center gap-1.5 text-xs text-amber-600 dark:text-amber-400">
+        <p className="flex items-center gap-1.5 text-xs text-primary dark:text-primary">
           <InfoIcon className="size-3.5" />
           Under 20% usually requires mortgage insurance.
         </p>

@@ -37,7 +37,7 @@ export default function DocumentReviewComments() {
             </span>
             <div className="h-1.5 w-full bg-muted" />
             <div className="h-1.5 w-5/6 bg-muted" />
-            <div className="h-1.5 w-full bg-amber-300/60" />
+            <div className="h-1.5 w-full bg-chart-1/60" />
             <div className="h-1.5 w-2/3 bg-muted" />
             <div className="h-1.5 w-full bg-muted" />
           </div>
@@ -66,7 +66,7 @@ export default function DocumentReviewComments() {
                 </Avatar>
                 <span className="truncate font-medium">{c.author}</span>
                 {c.resolved && (
-                  <CheckCircle2Icon className="ml-auto size-3.5 text-emerald-600" />
+                  <CheckCircle2Icon className="ml-auto size-3.5 text-primary" />
                 )}
               </div>
               <p>{c.text}</p>

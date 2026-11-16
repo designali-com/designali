@@ -6,9 +6,9 @@ import { Textarea } from "@workspace/ui/components/textarea"
 import { cn } from "@workspace/ui/lib/utils"
 
 const colors = [
-  { name: "Lemon", className: "bg-yellow-100 dark:bg-yellow-900/40" },
-  { name: "Mint", className: "bg-emerald-100 dark:bg-emerald-900/40" },
-  { name: "Rose", className: "bg-rose-100 dark:bg-rose-900/40" },
+  { name: "Lemon", className: "bg-primary/10 dark:bg-primary/40" },
+  { name: "Mint", className: "bg-primary/10 dark:bg-primary/40" },
+  { name: "Rose", className: "bg-primary/10 dark:bg-primary/40" },
 ]
 
 export default function StickyNoteTextarea() {

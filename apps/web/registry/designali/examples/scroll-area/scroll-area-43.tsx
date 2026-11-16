@@ -45,7 +45,7 @@ export default function MeetingTranscript() {
         <div className="flex flex-col gap-3 p-3">
           {lines.map(([time, speaker, text], i) => (
             <div key={i} className="flex gap-3 text-xs">
-              <span className="w-9 shrink-0 font-mono text-[11px] text-muted-foreground">
+              <span className="w-9 shrink-0 font-sans text-[11px] text-muted-foreground">
                 {time}
               </span>
               <p>

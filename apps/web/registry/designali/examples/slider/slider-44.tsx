@@ -20,7 +20,7 @@ export default function PlaybackSpeedSlider() {
           <GaugeIcon className="size-4" />
           Playback speed
         </span>
-        <span className="font-mono text-sm tabular-nums">
+        <span className="font-sans text-sm tabular-nums">
           {speed[0]!.toFixed(2)}x
         </span>
       </div>

@@ -36,7 +36,7 @@ export default function ChangelogNav() {
                 <NavigationMenuLink key={r.version} href="#">
                   <Badge
                     variant={i === 0 ? "default" : "secondary"}
-                    className="font-mono"
+                    className="font-sans"
                   >
                     v{r.version}
                   </Badge>

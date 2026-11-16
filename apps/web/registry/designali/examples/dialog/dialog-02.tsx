@@ -11,13 +11,13 @@ import {
 export function DialogNoCloseButton() {
   return (
     <Dialog>
-      <DialogTrigger render={<Button variant="outline">No Close Button</Button>} />
+      <DialogTrigger render={<Button variant="outline">Designali Newsletter</Button>} />
       <DialogContent showCloseButton={false}>
         <DialogHeader>
-          <DialogTitle>No Close Button</DialogTitle>
+          <DialogTitle>You&apos;re on the Designali list</DialogTitle>
           <DialogDescription>
-            This dialog doesn&apos;t have a close button in the top-right
-            corner.
+            Ali Imam will send new templates, blocks and icons from
+            designali.com to your inbox. Press Esc or click outside to close.
           </DialogDescription>
         </DialogHeader>
       </DialogContent>

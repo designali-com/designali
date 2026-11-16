@@ -12,13 +12,13 @@ import {
 export function DrawerNonModal() {
   return (
     <Drawer modal={false} disablePointerDismissal swipeDirection="right">
-      <DrawerTrigger render={<Button variant="outline">Non Modal</Button>} />
+      <DrawerTrigger render={<Button variant="outline">Designali Inspector</Button>} />
       <DrawerContent>
         <DrawerHeader>
-          <DrawerTitle>Non Modal Drawer</DrawerTitle>
+          <DrawerTitle>designali.com project inspector</DrawerTitle>
         </DrawerHeader>
         <div className="flex-1 p-4">
-          <div className="rounded-2xl bg-muted group-data-[swipe-axis=x]/drawer-popup:size-full group-data-[swipe-axis=y]/drawer-popup:h-80 group-data-[swipe-axis=y]/drawer-popup:w-full" />
+          <img src="/images/templates/portfolio-simple.jpg" alt="Designali Portfolio Simple template" className="rounded-2xl bg-muted object-cover group-data-[swipe-axis=x]/drawer-popup:size-full group-data-[swipe-axis=y]/drawer-popup:h-80 group-data-[swipe-axis=y]/drawer-popup:w-full" />
         </div>
         <DrawerFooter>
           <DrawerClose render={<Button>Close</Button>} />

@@ -51,7 +51,7 @@ export default function AccordionChangelog() {
         <AccordionItem key={release.value} value={release.value}>
           <AccordionTrigger className="items-center">
             <span className="flex items-center gap-2">
-              <span className="font-mono text-sm">v{release.value}</span>
+              <span className="font-sans text-sm">v{release.value}</span>
               {index === 0 && <Badge variant="secondary">Latest</Badge>}
             </span>
             <span className="ms-auto me-2 font-normal text-muted-foreground">

@@ -36,7 +36,7 @@ export default function FeatureFlagEnvironments() {
       <TableBody>
         {flags.map((flag) => (
           <TableRow key={flag.key}>
-            <TableCell className="font-mono text-xs">
+            <TableCell className="font-sans text-xs">
               {flag.key}
               {flag.locked && (
                 <LockIcon className="ms-1 inline size-3 text-muted-foreground" />

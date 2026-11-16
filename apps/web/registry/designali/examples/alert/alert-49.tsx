@@ -22,10 +22,10 @@ export default function AlertWebhookFailing() {
       <WebhookIcon />
       <AlertTitle>Endpoint failing for 12 minutes</AlertTitle>
       <AlertDescription>
-        <p className="truncate font-mono">
+        <p className="truncate font-sans">
           https://www.designali.com/api/hooks/orders
         </p>
-        <ul className="my-1.5 border bg-background font-mono">
+        <ul className="my-1.5 border bg-background font-sans">
           {attempts.map((attempt) => (
             <li
               key={attempt.time}

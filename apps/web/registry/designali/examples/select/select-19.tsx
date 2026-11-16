@@ -16,8 +16,8 @@ import { cn } from "@workspace/ui/lib/utils"
 
 const fonts = [
   { label: "Sans serif", value: "sans", className: "font-sans" },
-  { label: "Serif", value: "serif", className: "font-serif" },
-  { label: "Monospace", value: "mono", className: "font-mono" },
+  { label: "Serif", value: "serif", className: "font-sans" },
+  { label: "Monospace", value: "mono", className: "font-sans" },
 ]
 
 export default function FontFamilySelect() {

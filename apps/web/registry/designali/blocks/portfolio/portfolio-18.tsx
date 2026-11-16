@@ -17,7 +17,7 @@ export default function Portfolio18() {
       <div className="mx-auto max-w-6xl px-6">
         <div className="mx-auto max-w-3xl text-center">
           <span className="inline-flex items-center gap-2 border border-border px-3 py-1 text-xs">
-            <span className="size-1.5 rounded-full bg-sky-500" />
+            <span className="size-1.5 rounded-full bg-primary" />
             Featured project
           </span>
           <h2 className="mt-6 text-4xl leading-[1.05] font-medium tracking-tight md:text-6xl">
@@ -38,7 +38,7 @@ export default function Portfolio18() {
           </div>
         </div>
 
-        <div className="relative mt-14 border border-border bg-gradient-to-b from-sky-100 to-sky-300/60 px-4 pt-10 sm:px-10 md:pt-16 dark:from-sky-950 dark:to-sky-800/60">
+        <div className="relative mt-14 border border-border bg-gradient-to-b from-primary/10 to-chart-1/60 px-4 pt-10 sm:px-10 md:pt-16 dark:from-chart-5 dark:to-chart-4/60">
           {/* Desktop frame */}
           <div className="mx-auto max-w-3xl border border-b-0 border-border bg-background shadow-2xl">
             <div className="flex items-center gap-1.5 border-b border-border px-3 py-2">
@@ -56,14 +56,14 @@ export default function Portfolio18() {
                   <div className="h-10 border border-border" />
                   <div className="h-10 border border-border" />
                 </div>
-                <div className="h-9 bg-sky-600" />
+                <div className="h-9 bg-chart-2" />
               </div>
-              <div className="relative hidden h-44 overflow-hidden bg-sky-50 sm:block dark:bg-sky-950">
+              <div className="relative hidden h-44 overflow-hidden bg-primary/5 sm:block dark:bg-primary/10">
                 <svg viewBox="0 0 300 160" className="absolute inset-0 h-full w-full" aria-hidden="true">
-                  <path d="M0 110 C 60 90, 90 130, 150 105 S 250 80, 300 100 L300 160 L0 160Z" className="fill-sky-200 dark:fill-sky-900" />
-                  <path d="M40 60 Q 150 20 260 70" className="fill-none stroke-sky-600" strokeWidth="2" strokeDasharray="6 5" />
-                  <circle cx="40" cy="60" r="5" className="fill-sky-600" />
-                  <circle cx="260" cy="70" r="5" className="fill-sky-600" />
+                  <path d="M0 110 C 60 90, 90 130, 150 105 S 250 80, 300 100 L300 160 L0 160Z" className="fill-chart-1 dark:fill-chart-5" />
+                  <path d="M40 60 Q 150 20 260 70" className="fill-none stroke-primary" strokeWidth="2" strokeDasharray="6 5" />
+                  <circle cx="40" cy="60" r="5" className="fill-primary" />
+                  <circle cx="260" cy="70" r="5" className="fill-primary" />
                 </svg>
               </div>
             </div>
@@ -81,7 +81,7 @@ export default function Portfolio18() {
                 ))}
               </div>
             </div>
-            <div className="mt-3 h-6 bg-sky-600" />
+            <div className="mt-3 h-6 bg-chart-2" />
           </div>
         </div>
 

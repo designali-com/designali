@@ -2,16 +2,16 @@ import { ScrollArea, ScrollBar } from "@workspace/ui/components/scroll-area"
 import { cn } from "@workspace/ui/lib/utils"
 
 const products = [
-  { name: "Portfolio Simple", price: "$68", tone: "from-stone-200 to-stone-400" },
-  { name: "Design Agency", price: "$32", tone: "from-amber-200 to-orange-400" },
-  { name: "Resort", price: "$24", tone: "from-slate-300 to-slate-600" },
+  { name: "Portfolio Simple", price: "$68", tone: "from-muted to-muted-foreground" },
+  { name: "Design Agency", price: "$32", tone: "from-primary/20 to-primary" },
+  { name: "Resort", price: "$24", tone: "from-border to-muted-foreground" },
   {
     name: "AI Starter",
     price: "$120",
-    tone: "from-emerald-200 to-teal-500",
+    tone: "from-primary/20 to-primary",
   },
-  { name: "Vercel Starter", price: "$145", tone: "from-sky-200 to-indigo-500" },
-  { name: "Icons Pack", price: "$89", tone: "from-rose-200 to-fuchsia-500" },
+  { name: "Vercel Starter", price: "$145", tone: "from-primary/20 to-primary" },
+  { name: "Icons Pack", price: "$89", tone: "from-primary/20 to-primary" },
 ]
 
 export default function ProductShelfHorizontal() {

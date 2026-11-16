@@ -51,7 +51,7 @@ export default function AuditLogEntryDiff() {
             }
           />
           <CollapsibleContent className="h-(--collapsible-panel-height) overflow-hidden transition-[height] duration-200 ease-out data-ending-style:h-0 data-starting-style:h-0">
-            <div className="grid gap-1 px-3 pb-3 font-mono text-xs">
+            <div className="grid gap-1 px-3 pb-3 font-sans text-xs">
               <p className="bg-destructive/10 px-2 py-1 text-destructive">
                 - {entry.before}
               </p>

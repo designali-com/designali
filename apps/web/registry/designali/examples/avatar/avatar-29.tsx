@@ -15,7 +15,7 @@ const leaders = [
   { name: "Logos", initials: "LG", amount: "$48,010" },
 ]
 
-const medals = ["ring-amber-400", "ring-zinc-400", "ring-orange-700"]
+const medals = ["ring-primary", "ring-border", "ring-chart-3"]
 
 export default function SalesLeaderboard() {
   return (

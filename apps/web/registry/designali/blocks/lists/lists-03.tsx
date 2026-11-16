@@ -30,7 +30,7 @@ export default function Lists03() {
           <header className="border-b border-border p-6">
             <div className="flex items-center justify-between">
               <h2 className="text-xl font-semibold tracking-tight">Designali launch week</h2>
-              <span className="font-mono text-xs text-muted-foreground">
+              <span className="font-sans text-xs text-muted-foreground">
                 {completed}/{tasks.length}
               </span>
             </div>

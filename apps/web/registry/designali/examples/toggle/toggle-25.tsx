@@ -59,7 +59,7 @@ export default function TableColumnVisibilityToggles() {
         <TableBody>
           {rows.map((r) => (
             <TableRow key={r.id}>
-              <TableCell className="font-mono text-xs">{r.id}</TableCell>
+              <TableCell className="font-sans text-xs">{r.id}</TableCell>
               <TableCell>{r.customer}</TableCell>
               {showAmount && (
                 <TableCell className="text-end tabular-nums">

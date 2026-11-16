@@ -1,43 +1,41 @@
-import {
-  Play,
-} from "@designali/icons"
+import { Play } from "@designali/icons"
 
 const videos = [
   {
     title: "Installing your first Designali block",
     duration: "3:24",
     level: "Beginner",
-    hue: "var(--chart-1)",
+    image: "/images/templates/portfolio-simple.jpg",
   },
   {
     title: "Designing with tokens",
     duration: "8:10",
     level: "Intermediate",
-    hue: "var(--chart-2)",
+    image: "/images/templates/design-agency.jpg",
   },
   {
     title: "Theming for dark mode",
     duration: "6:45",
     level: "Intermediate",
-    hue: "var(--chart-3)",
+    image: "/img/dashboard-1-dark.jpg",
   },
   {
     title: "Using @designali/icons and logos",
     duration: "12:02",
     level: "Advanced",
-    hue: "var(--chart-4)",
+    image: "/images/templates/dalim-icons-old.jpg",
   },
   {
     title: "Accessible motion patterns",
     duration: "9:31",
     level: "Advanced",
-    hue: "var(--chart-5)",
+    image: "/images/templates/ai.jpg",
   },
   {
     title: "From Figma to Next.js",
     duration: "5:18",
     level: "Beginner",
-    hue: "var(--chart-2)",
+    image: "/images/templates/vercel.jpg",
   },
 ]
 
@@ -64,12 +62,12 @@ export default function Media04() {
         <div className="mt-8 grid gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
           {videos.map((video, i) => (
             <a key={video.title} href="#" className="group">
-              <div
-                className="relative aspect-video border border-border"
-                style={{
-                  background: `linear-gradient(135deg, ${video.hue}, var(--muted))`,
-                }}
-              >
+              <div className="relative aspect-video overflow-hidden border border-border">
+                <img
+                  src={video.image}
+                  alt={video.title}
+                  className="absolute inset-0 size-full object-cover"
+                />
                 <span className="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity group-hover:opacity-100">
                   <span className="flex size-12 items-center justify-center rounded-full bg-background">
                     <Play className="size-4 fill-current" />

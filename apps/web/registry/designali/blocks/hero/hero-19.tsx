@@ -63,7 +63,7 @@ export default function Hero19() {
           <div className="grid grid-cols-3 border border-border">
             {countdown.map((unit) => (
               <div key={unit.label} className="border-e border-border px-5 py-4 text-center last:border-e-0 sm:px-8">
-                <p className="font-mono text-3xl font-medium tabular-nums sm:text-4xl">{unit.value}</p>
+                <p className="font-sans text-3xl font-medium tabular-nums sm:text-4xl">{unit.value}</p>
                 <p className="mt-1 text-xs text-muted-foreground">{unit.label}</p>
               </div>
             ))}

@@ -2,10 +2,10 @@ import { Badge } from "@workspace/ui/components/badge"
 import { cn } from "@workspace/ui/lib/utils"
 
 const items = [
-  { label: "Active", dot: "bg-emerald-500" },
-  { label: "Paused", dot: "bg-amber-500" },
+  { label: "Active", dot: "bg-primary" },
+  { label: "Paused", dot: "bg-primary" },
   { label: "Archived", dot: "bg-muted-foreground" },
-  { label: "Error", dot: "bg-red-500" },
+  { label: "Error", dot: "bg-destructive" },
 ]
 
 export default function StatusDotBadges() {

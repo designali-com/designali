@@ -22,7 +22,7 @@ export default function CodeEditorViewToggles() {
   return (
     <div className="w-full max-w-md border">
       <div className="flex items-center gap-1 border-b px-2 py-1">
-        <span className="flex-1 font-mono text-xs text-muted-foreground">
+        <span className="flex-1 font-sans text-xs text-muted-foreground">
           price.ts
         </span>
         <Toggle
@@ -44,7 +44,7 @@ export default function CodeEditorViewToggles() {
       </div>
       <pre
         className={cn(
-          "overflow-x-auto p-3 font-mono text-xs leading-5",
+          "overflow-x-auto p-3 font-sans text-xs leading-5",
           wrap && "break-all whitespace-pre-wrap"
         )}
       >

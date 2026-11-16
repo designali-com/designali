@@ -39,7 +39,7 @@ export default function StoriesAvatarRail() {
                 className={cn(
                   "relative rounded-full p-0.5",
                   story.unseen
-                    ? "bg-gradient-to-tr from-amber-400 to-fuchsia-500"
+                    ? "bg-gradient-to-tr from-primary to-primary"
                     : "bg-border"
                 )}
               >

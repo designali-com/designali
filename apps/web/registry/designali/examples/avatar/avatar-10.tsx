@@ -9,10 +9,10 @@ const members = [
     name: "Ali Imam",
     initials: "AI",
     status: "Online",
-    dot: "bg-emerald-500",
+    dot: "bg-primary",
   },
-  { name: "Sara", initials: "SA", status: "Away", dot: "bg-amber-500" },
-  { name: "Omar", initials: "OM", status: "Busy", dot: "bg-red-500" },
+  { name: "Sara", initials: "SA", status: "Away", dot: "bg-primary" },
+  { name: "Omar", initials: "OM", status: "Busy", dot: "bg-destructive" },
   {
     name: "Zara",
     initials: "ZA",

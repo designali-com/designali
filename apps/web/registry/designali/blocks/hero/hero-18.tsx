@@ -9,6 +9,8 @@ import {
 
 import { Button } from "@workspace/ui/components/button"
 
+import { CounterNumber } from "@/registry/designali/ui/counter-number"
+
 const HOURS_SAVED_PER_REP = 6.5
 const HOURLY_COST = 48
 
@@ -62,16 +64,22 @@ export default function Hero18() {
           <div className="mt-8 grid grid-cols-2 gap-px border border-border bg-border">
             <div className="bg-card p-4">
               <Clock className="size-4 text-muted-foreground" />
-              <p className="mt-3 text-2xl font-medium tabular-nums">
-                {hours.toLocaleString("en-US")}
-              </p>
+              <CounterNumber
+                value={hours}
+                size="lg"
+                className="mt-3 block text-2xl font-medium"
+              />
               <p className="text-xs text-muted-foreground">hours saved / month</p>
             </div>
             <div className="bg-card p-4">
               <Wallet className="size-4 text-muted-foreground" />
-              <p className="mt-3 text-2xl font-medium tabular-nums">
-                ${(savings / 1000).toLocaleString("en-US", { maximumFractionDigits: 0 })}k
-              </p>
+              <CounterNumber
+                value={Math.round(savings / 1000)}
+                prefix="$"
+                suffix="k"
+                size="lg"
+                className="mt-3 block text-2xl font-medium"
+              />
               <p className="text-xs text-muted-foreground">saved / year</p>
             </div>
           </div>

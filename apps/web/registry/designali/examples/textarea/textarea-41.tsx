@@ -22,7 +22,7 @@ export default function CommitMessageTextarea() {
           value={summary}
           onChange={(e) => setSummary(e.target.value)}
           aria-label="Summary"
-          className="font-mono"
+          className="font-sans"
         />
         <span
           className={cn(
@@ -38,10 +38,10 @@ export default function CommitMessageTextarea() {
         onChange={(e) => setBody(e.target.value)}
         placeholder="Explain why this change is needed (optional)"
         aria-label="Description"
-        className="min-h-20 font-mono"
+        className="min-h-20 font-sans"
       />
       {longLine && (
-        <p className="text-xs text-amber-600">
+        <p className="text-xs text-primary">
           Some lines are longer than 72 characters.
         </p>
       )}

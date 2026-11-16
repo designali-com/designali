@@ -1,8 +1,10 @@
+import { CounterNumber } from "@/registry/designali/ui/counter-number"
+
 const stats = [
-  { value: "2014", label: "Founded in Copenhagen" },
-  { value: "38", label: "People across 4 disciplines" },
-  { value: "120+", label: "Brands launched" },
-  { value: "9", label: "Design awards this year" },
+  { value: 460, suffix: "+", label: "Blocks on designali.com" },
+  { value: 240, suffix: "+", label: "Landing pages" },
+  { value: 2300, suffix: "+", label: "UI design examples" },
+  { value: 4000, suffix: "+", label: "Icons in @designali/icons" },
 ]
 
 export default function Sections01() {
@@ -16,23 +18,23 @@ export default function Sections01() {
         </div>
         <div className="p-8 md:p-12 lg:col-span-8">
           <p className="text-2xl leading-snug font-medium tracking-tight md:text-4xl">
-            We are an independent design studio working at the intersection of
-            brand, product and space.{" "}
+            Designali is a design and development studio where thoughtful
+            design meets production-ready code.{" "}
             <span className="text-muted-foreground">
-              Our work is quiet, considered and built to last longer than the
-              next trend cycle.
+              design se code tak — from the first sketch to the shipped
+              product.
             </span>
           </p>
           <div className="mt-10 grid gap-6 text-sm leading-6 text-muted-foreground md:grid-cols-2">
             <p>
-              Every engagement starts with a small senior team embedded in your
-              organisation. We listen first, prototype early and make decisions
-              in the open.
+              Founded by Ali Imam, a design engineer who designs and codes.
+              Every engagement covers brand identity, UI/UX design and the
+              Next.js build, so nothing gets lost in handoff.
             </p>
             <p>
-              From identity systems to digital products, we take projects from
-              the first sketch to the final production file, and stay on as
-              long-term partners.
+              Alongside client work we publish templates, blocks, icons, logos
+              and illustrations on designali.com for designers and developers
+              to use in their own products.
             </p>
           </div>
         </div>
@@ -42,7 +44,11 @@ export default function Sections01() {
           <div key={stat.label} className="bg-background p-8">
             <dt className="text-xs text-muted-foreground">{stat.label}</dt>
             <dd className="mt-3 text-4xl font-semibold tracking-tight md:text-5xl">
-              {stat.value}
+              <CounterNumber
+                value={stat.value}
+                suffix={stat.suffix}
+                className="text-4xl font-semibold tracking-tight md:text-5xl"
+              />
             </dd>
           </div>
         ))}

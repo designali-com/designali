@@ -6,18 +6,18 @@ import {
 import { cn } from "@workspace/ui/lib/utils"
 
 const colors = [
-  { value: "indigo", className: "bg-indigo-500" },
-  { value: "emerald", className: "bg-emerald-500" },
-  { value: "amber", className: "bg-amber-500" },
-  { value: "rose", className: "bg-rose-500" },
-  { value: "slate", className: "bg-slate-500" },
+  { value: "designali-blue", className: "bg-primary" },
+  { value: "chart-2", className: "bg-chart-2" },
+  { value: "chart-3", className: "bg-chart-3" },
+  { value: "chart-4", className: "bg-chart-4" },
+  { value: "muted", className: "bg-muted-foreground" },
 ]
 
 export default function ColorSwatchLabels() {
   return (
     <div className="flex flex-col gap-3">
-      <span className="text-xs font-medium">Accent color</span>
-      <RadioGroup defaultValue="indigo" className="flex gap-2">
+      <span className="text-xs font-medium">Designali theme accent</span>
+      <RadioGroup defaultValue="designali-blue" className="flex gap-2">
         {colors.map((color) => (
           <Label
             key={color.value}

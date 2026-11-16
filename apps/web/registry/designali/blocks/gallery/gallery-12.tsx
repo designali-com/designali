@@ -37,8 +37,8 @@ export default function Gallery12() {
             >
               <div className="aspect-square w-full" style={{ background: print.gradient }} />
               <figcaption className="mt-3 flex flex-col gap-0.5 px-1 sm:flex-row sm:items-baseline sm:justify-between">
-                <span className="truncate font-serif text-sm italic">{print.caption}</span>
-                <span className="font-mono text-[11px] text-muted-foreground">{print.date}</span>
+                <span className="truncate font-sans text-sm italic">{print.caption}</span>
+                <span className="font-sans text-[11px] text-muted-foreground">{print.date}</span>
               </figcaption>
             </figure>
           ))}

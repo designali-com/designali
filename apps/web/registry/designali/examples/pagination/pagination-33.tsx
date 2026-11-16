@@ -36,7 +36,7 @@ export default function QuizQuestionPagination() {
                 className={cn(
                   "w-full",
                   answered.has(q) && q !== question && "bg-muted",
-                  flagged.has(q) && "text-amber-600 dark:text-amber-400"
+                  flagged.has(q) && "text-primary dark:text-primary"
                 )}
                 onClick={(event) => {
                   event.preventDefault()
@@ -54,7 +54,7 @@ export default function QuizQuestionPagination() {
           <span className="size-2 bg-muted ring-1 ring-border" /> Answered
         </span>
         <span className="flex items-center gap-1">
-          <FlagIcon className="size-3 text-amber-600 dark:text-amber-400" />{" "}
+          <FlagIcon className="size-3 text-primary dark:text-primary" />{" "}
           Flagged
         </span>
       </div>

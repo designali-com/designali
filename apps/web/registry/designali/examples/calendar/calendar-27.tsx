@@ -50,7 +50,7 @@ export default function PaydayCalendar() {
           modifiers={{ payday: isPayday }}
           modifiersClassNames={{
             payday:
-              "[&>button]:bg-emerald-500/15 [&>button]:font-semibold [&>button]:text-emerald-700 dark:[&>button]:text-emerald-400",
+              "[&>button]:bg-primary/15 [&>button]:font-semibold [&>button]:text-chart-3 dark:[&>button]:text-primary",
           }}
           className="p-0"
         />

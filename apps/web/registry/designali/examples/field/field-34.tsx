@@ -31,7 +31,7 @@ export default function CouponCodeField() {
             setCode(e.target.value.toUpperCase())
             setResult("idle")
           }}
-          className="font-mono"
+          className="font-sans"
         />
         <Button
           variant="outline"
@@ -42,7 +42,7 @@ export default function CouponCodeField() {
         </Button>
       </div>
       {result === "ok" && (
-        <FieldDescription className="flex items-center gap-1 text-emerald-600">
+        <FieldDescription className="flex items-center gap-1 text-primary">
           <BadgePercentIcon className="size-3.5" />
           25% off applied to your order.
         </FieldDescription>

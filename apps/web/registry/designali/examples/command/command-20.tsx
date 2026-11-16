@@ -44,7 +44,7 @@ export default function GitBranchSwitcher() {
             }}
           >
             <GitBranchPlusIcon className="size-4" />
-            Create branch <span className="font-mono">{query}</span> from{" "}
+            Create branch <span className="font-sans">{query}</span> from{" "}
             {current}
           </button>
         </CommandEmpty>
@@ -57,7 +57,7 @@ export default function GitBranchSwitcher() {
               onSelect={() => setCurrent(branch.name)}
             >
               <GitBranchIcon />
-              <span className="font-mono">{branch.name}</span>
+              <span className="font-sans">{branch.name}</span>
               <span className="text-[11px] text-muted-foreground">
                 {branch.meta}
               </span>

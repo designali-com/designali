@@ -101,42 +101,42 @@ const showcase = [
     meta: "Heroes, pricing, footers and more",
     tag: "Blocks",
     price: "460+ blocks",
-    tile: "bg-gradient-to-br from-stone-200 via-neutral-300 to-zinc-400 dark:from-stone-700 dark:via-neutral-800 dark:to-zinc-900",
+    tile: "bg-gradient-to-br from-muted via-border to-muted-foreground dark:from-muted dark:via-card dark:to-card",
   },
   {
     name: "Landing Pages",
     meta: "Full pages for every industry",
     tag: "Pages",
     price: "240+ pages",
-    tile: "bg-gradient-to-br from-rose-200 via-pink-300 to-purple-300 dark:from-rose-700 dark:via-pink-800 dark:to-purple-900",
+    tile: "bg-gradient-to-br from-primary/20 via-chart-1 to-chart-1 dark:from-chart-3 dark:via-chart-4 dark:to-chart-5",
   },
   {
     name: "UI Examples",
     meta: "Dashboards, forms and app screens",
     tag: "UI",
     price: "2300+ examples",
-    tile: "bg-gradient-to-br from-blue-200 via-indigo-300 to-violet-400 dark:from-blue-700 dark:via-indigo-800 dark:to-violet-900",
+    tile: "bg-gradient-to-br from-primary/20 via-chart-1 to-primary dark:from-chart-3 dark:via-chart-4 dark:to-chart-5",
   },
   {
     name: "Icons",
     meta: "@designali/icons for React",
     tag: "Icons",
     price: "4000+ icons",
-    tile: "bg-gradient-to-br from-yellow-100 via-amber-200 to-orange-300 dark:from-yellow-700 dark:via-amber-800 dark:to-orange-900",
+    tile: "bg-gradient-to-br from-primary/10 via-primary/20 to-chart-1 dark:from-chart-3 dark:via-chart-4 dark:to-chart-5",
   },
   {
     name: "Logos",
     meta: "@designali/logos brand marks",
     tag: "Logos",
     price: "Brand marks",
-    tile: "bg-gradient-to-br from-amber-200 via-orange-300 to-rose-400 dark:from-amber-700 dark:via-orange-800 dark:to-rose-900",
+    tile: "bg-gradient-to-br from-primary/20 via-chart-1 to-primary dark:from-chart-3 dark:via-chart-4 dark:to-chart-5",
   },
   {
     name: "Vectors",
     meta: "@designali/vectors shapes",
     tag: "Vectors",
     price: "Abstract shapes",
-    tile: "bg-gradient-to-br from-sky-200 via-cyan-300 to-teal-400 dark:from-sky-700 dark:via-cyan-800 dark:to-teal-900",
+    tile: "bg-gradient-to-br from-primary/20 via-chart-1 to-primary dark:from-chart-3 dark:via-chart-4 dark:to-chart-5",
   },
 ]
 
@@ -252,7 +252,7 @@ export default function LandingNonprofit07() {
             href="#"
             className="flex items-center gap-2 font-semibold tracking-tight"
           >
-            <span className="flex size-7 items-center justify-center rounded-md bg-indigo-600 text-white text-sm">
+            <span className="flex size-7 items-center justify-center rounded-md bg-chart-2 text-white text-sm">
               K
             </span>
             <span className="">designali</span>
@@ -285,7 +285,7 @@ export default function LandingNonprofit07() {
         </div>
       </header>
       <section className="relative isolate overflow-hidden border-b">
-        <div className="pointer-events-none absolute inset-0 -z-10 bg-radial-[ellipse_60%_50%_at_50%_0%] from-indigo-500/25 via-violet-500/10 to-transparent to-70%" />
+        <div className="pointer-events-none absolute inset-0 -z-10 bg-radial-[ellipse_60%_50%_at_50%_0%] from-primary/25 via-primary/10 to-transparent to-70%" />
         <div className="pointer-events-none absolute inset-0 -z-10 bg-[linear-gradient(to_right,var(--border)_1px,transparent_1px),linear-gradient(to_bottom,var(--border)_1px,transparent_1px)] bg-[size:48px_48px] [mask-image:radial-gradient(ellipse_50%_45%_at_50%_0%,#000_60%,transparent_100%)]" />
         <div className="mx-auto max-w-7xl px-6 pt-20 pb-16 md:pt-32">
           <div className="mx-auto max-w-4xl space-y-8 text-center">
@@ -293,7 +293,7 @@ export default function LandingNonprofit07() {
               href="#"
               className="inline-flex items-center gap-2 rounded-full border bg-background/70 py-1 pr-3 pl-1 text-xs backdrop-blur"
             >
-              <span className="rounded-full bg-indigo-600 px-2 py-0.5 font-medium text-white">
+              <span className="rounded-full bg-chart-2 px-2 py-0.5 font-medium text-white">
                 New
               </span>
               <span className="text-muted-foreground">
@@ -302,7 +302,7 @@ export default function LandingNonprofit07() {
             </a>
             <h1 className="text-4xl leading-[1.05] font-semibold tracking-tight text-balance sm:text-5xl md:text-8xl ">
               {"Building something on your own? "}
-              <span className="text-indigo-600 dark:text-indigo-400">
+              <span className="text-primary dark:text-primary">
                 {"You’re not alone"}
               </span>
             </h1>
@@ -326,7 +326,7 @@ export default function LandingNonprofit07() {
             </div>
           </div>
           <div className="relative mx-auto mt-20 max-w-5xl">
-            <div className="absolute inset-x-10 -top-6 -z-10 h-24 rounded-full bg-indigo-500/10 blur-2xl" />
+            <div className="absolute inset-x-10 -top-6 -z-10 h-24 rounded-full bg-primary/10 blur-2xl" />
             <HeroVisual />
           </div>
         </div>
@@ -351,7 +351,7 @@ export default function LandingNonprofit07() {
       <section className="border-b">
         <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
           <div className="mx-auto max-w-2xl text-center">
-            <p className="text-sm font-medium text-indigo-600 dark:text-indigo-400">
+            <p className="text-sm font-medium text-primary dark:text-primary">
               How it works
             </p>
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl  mt-3">
@@ -369,7 +369,7 @@ export default function LandingNonprofit07() {
                 key={feature.title}
                 className="-mt-px -ml-px border-t border-l p-8"
               >
-                <feature.icon className="size-6 text-indigo-600 dark:text-indigo-400" />
+                <feature.icon className="size-6 text-primary dark:text-primary" />
                 <h3 className="mt-5 font-semibold">{feature.title}</h3>
                 <p className="mt-2 text-sm leading-6 text-muted-foreground">
                   {feature.description}
@@ -424,7 +424,7 @@ export default function LandingNonprofit07() {
                   className={`relative aspect-[4/3] overflow-hidden rounded-2xl ${item.tile}`}
                 >
                   <div className="absolute inset-0 bg-black/0 transition-colors group-hover:bg-black/10" />
-                  <span className="absolute top-3 left-3 rounded-full bg-white/85 px-2.5 py-1 text-[11px] font-medium text-zinc-900 backdrop-blur">
+                  <span className="absolute top-3 left-3 rounded-full bg-white/85 px-2.5 py-1 text-[11px] font-medium text-foreground backdrop-blur">
                     {item.tag}
                   </span>
                 </div>
@@ -457,7 +457,7 @@ export default function LandingNonprofit07() {
                 key={step.title}
                 className="relative border-t-2 border-border pt-6"
               >
-                <span className="text-sm font-medium text-indigo-600 dark:text-indigo-400">
+                <span className="text-sm font-medium text-primary dark:text-primary">
                   Step {i + 1}
                 </span>
                 <h3 className="mt-2 text-lg font-semibold">{step.title}</h3>
@@ -521,10 +521,10 @@ export default function LandingNonprofit07() {
               return (
                 <div
                   key={tier.name}
-                  className={`relative flex h-full flex-col rounded-2xl border p-8 ${featured ? "border-transparent ring-2 ring-indigo-500 shadow-xl" : ""}`}
+                  className={`relative flex h-full flex-col rounded-2xl border p-8 ${featured ? "border-transparent ring-2 ring-primary shadow-xl" : ""}`}
                 >
                   {featured && (
-                    <span className="absolute -top-3 left-8 rounded-full bg-indigo-600 text-white px-3 py-1 text-xs font-medium">
+                    <span className="absolute -top-3 left-8 rounded-full bg-chart-2 text-white px-3 py-1 text-xs font-medium">
                       Most popular
                     </span>
                   )}
@@ -543,7 +543,7 @@ export default function LandingNonprofit07() {
                   <ul className="mt-8 flex-1 space-y-3 text-sm">
                     {tier.features.map((feature) => (
                       <li key={feature} className="flex gap-3">
-                        <Check className="mt-0.5 size-4 shrink-0 text-indigo-600 dark:text-indigo-400" />
+                        <Check className="mt-0.5 size-4 shrink-0 text-primary dark:text-primary" />
                         {feature}
                       </li>
                     ))}
@@ -595,8 +595,8 @@ export default function LandingNonprofit07() {
         </div>
       </section>
       <section className="px-6 py-20 md:py-28">
-        <div className="relative mx-auto max-w-6xl overflow-hidden rounded-3xl border bg-indigo-500/10 px-6 py-16 text-center md:py-24">
-          <div className="pointer-events-none absolute -top-24 left-1/2 size-96 -translate-x-1/2 rounded-full bg-gradient-to-b from-indigo-500/25 via-violet-500/10 to-transparent blur-3xl" />
+        <div className="relative mx-auto max-w-6xl overflow-hidden rounded-3xl border bg-primary/10 px-6 py-16 text-center md:py-24">
+          <div className="pointer-events-none absolute -top-24 left-1/2 size-96 -translate-x-1/2 rounded-full bg-gradient-to-b from-primary/25 via-primary/10 to-transparent blur-3xl" />
           <div className="relative mx-auto max-w-2xl space-y-6">
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl">
               Support the docs
@@ -629,7 +629,7 @@ export default function LandingNonprofit07() {
               href="#"
               className="flex items-center gap-2 font-semibold tracking-tight"
             >
-              <span className="flex size-7 items-center justify-center rounded-md bg-indigo-600 text-white text-sm">
+              <span className="flex size-7 items-center justify-center rounded-md bg-chart-2 text-white text-sm">
                 K
               </span>
               <span className="">designali</span>
@@ -688,7 +688,7 @@ function HeroVisual() {
           className={`relative overflow-hidden rounded-2xl ${item.tile} ${i === 0 ? "col-span-2 aspect-[16/10] md:col-span-1 md:aspect-[3/4]" : "aspect-[3/4]"}`}
         >
           <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/0 to-black/0" />
-          <span className="absolute top-3 left-3 rounded-full bg-white/85 px-2.5 py-1 text-[11px] font-medium text-zinc-900 backdrop-blur">
+          <span className="absolute top-3 left-3 rounded-full bg-white/85 px-2.5 py-1 text-[11px] font-medium text-foreground backdrop-blur">
             {item.tag}
           </span>
           <div className="absolute inset-x-3 bottom-3 flex items-end justify-between gap-2 text-white">

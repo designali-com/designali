@@ -6,7 +6,7 @@ export default function UnderlineMinimalInput() {
     <div className="flex w-full max-w-sm flex-col gap-6">
       <div className="flex flex-col gap-1">
         <Label htmlFor="ul-name" className="text-xs text-muted-foreground">
-          What should we call you?
+          What should Ali call you?
         </Label>
         <Input
           id="ul-name"
@@ -16,7 +16,7 @@ export default function UnderlineMinimalInput() {
       </div>
       <div className="flex flex-col gap-1">
         <Label htmlFor="ul-email" className="text-xs text-muted-foreground">
-          Where can we reach you?
+          Where can Designali reach you?
         </Label>
         <Input
           id="ul-email"

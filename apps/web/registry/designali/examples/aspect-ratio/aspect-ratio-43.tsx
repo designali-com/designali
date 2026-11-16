@@ -17,7 +17,7 @@ export default function WidthSliderResponsive() {
             ratio={4 / 3}
             className="border-2 border-primary bg-primary/10"
           >
-            <span className="absolute inset-0 flex items-center justify-center font-mono text-xs">
+            <span className="absolute inset-0 flex items-center justify-center font-sans text-xs">
               4:3 at {width}%
             </span>
           </AspectRatio>

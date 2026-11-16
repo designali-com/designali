@@ -52,7 +52,7 @@ export default function DateOfBirthInputs() {
         ))}
       </div>
       <FieldDescription>
-        You must be 18 or older to open an account.
+        You must be 18 or older to open a designali.com account.
       </FieldDescription>
     </FieldSet>
   )

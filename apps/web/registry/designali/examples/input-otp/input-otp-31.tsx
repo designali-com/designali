@@ -16,9 +16,9 @@ import {
 export default function GiftCardPin() {
   return (
     <div className="flex w-full max-w-sm flex-col gap-4 border p-5">
-      <div className="flex h-24 flex-col justify-between bg-gradient-to-br from-violet-500 to-fuchsia-500 p-3 text-white">
+      <div className="flex h-24 flex-col justify-between bg-gradient-to-br from-primary to-primary p-3 text-white">
         <GiftIcon className="size-5" />
-        <span className="font-mono text-xs tracking-widest">
+        <span className="font-sans text-xs tracking-widest">
           6011 •••• •••• 3307
         </span>
       </div>

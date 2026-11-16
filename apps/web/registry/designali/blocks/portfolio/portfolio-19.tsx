@@ -68,7 +68,7 @@ export default function Portfolio19() {
       <div className="mx-auto max-w-5xl px-6">
         <div className="flex items-end justify-between gap-4">
           <h2 className="text-3xl font-medium tracking-tight md:text-5xl">Selected Designali projects</h2>
-          <span className="font-mono text-xs text-muted-foreground">Dalim · Designali</span>
+          <span className="font-sans text-xs text-muted-foreground">Dalim · Designali</span>
         </div>
 
         <ul className="mt-10 border-t border-border">
@@ -82,7 +82,7 @@ export default function Portfolio19() {
                   aria-expanded={isOpen}
                   className="flex w-full items-center gap-4 py-6 text-left"
                 >
-                  <span className="w-8 shrink-0 font-mono text-xs text-muted-foreground">
+                  <span className="w-8 shrink-0 font-sans text-xs text-muted-foreground">
                     {String(i + 1).padStart(2, "0")}
                   </span>
                   <span className="min-w-0 flex-1">
@@ -94,7 +94,7 @@ export default function Portfolio19() {
                     </span>
                   </span>
                   <span className="hidden text-sm text-muted-foreground md:block">{project.category}</span>
-                  <span className="hidden w-12 text-right font-mono text-xs text-muted-foreground md:block">
+                  <span className="hidden w-12 text-right font-sans text-xs text-muted-foreground md:block">
                     {project.year}
                   </span>
                   <Plus

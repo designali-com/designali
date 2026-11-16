@@ -28,9 +28,9 @@ export default function CustomCssTextarea() {
         disabled={!enabled}
         spellCheck={false}
         aria-label="Custom CSS"
-        className="min-h-28 font-mono"
+        className="min-h-28 font-sans"
         defaultValue={
-          ".hc-header {\n  background: #0f172a;\n}\n.hc-article h2 {\n  letter-spacing: -0.01em;\n}"
+          ".hc-header {\n  background: var(--primary);\n}\n.hc-article h2 {\n  letter-spacing: -0.01em;\n}"
         }
       />
     </div>

@@ -13,7 +13,7 @@ import {
 export default function ProfilePageTabs() {
   return (
     <div className="w-full max-w-sm border">
-      <div className="h-16 bg-gradient-to-r from-violet-500 to-fuchsia-400" />
+      <div className="h-16 bg-gradient-to-r from-primary to-primary" />
       <div className="-mt-6 flex items-end gap-3 px-4">
         <Avatar size="lg" className="ring-4 ring-background">
           <AvatarImage src="/ali.jpg" alt="Ali Imam" />

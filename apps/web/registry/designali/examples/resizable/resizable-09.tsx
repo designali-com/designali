@@ -19,7 +19,7 @@ export default function BeforeAfterCompare() {
           defaultSize="50%"
           onResize={(size) => setSplit(Math.round(size.asPercentage))}
         >
-          <div className="relative h-full bg-gradient-to-br from-zinc-400 to-zinc-600">
+          <div className="relative h-full bg-gradient-to-br from-muted-foreground to-muted-foreground">
             <Badge variant="secondary" className="absolute top-2 left-2">
               Before
             </Badge>
@@ -27,7 +27,7 @@ export default function BeforeAfterCompare() {
         </ResizablePanel>
         <ResizableHandle withHandle className="w-1 bg-background" />
         <ResizablePanel defaultSize="50%">
-          <div className="relative h-full bg-gradient-to-br from-amber-300 via-rose-400 to-violet-500">
+          <div className="relative h-full bg-gradient-to-br from-chart-1 via-primary to-primary">
             <Badge variant="secondary" className="absolute top-2 right-2">
               After
             </Badge>

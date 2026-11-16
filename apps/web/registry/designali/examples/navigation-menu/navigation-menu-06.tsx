@@ -39,13 +39,13 @@ export default function DeveloperSdksNav() {
                     <NavigationMenuLink href="#">
                       <Badge
                         variant="outline"
-                        className="w-7 justify-center font-mono"
+                        className="w-7 justify-center font-sans"
                       >
                         {sdk.tag}
                       </Badge>
                       <span className="flex flex-col">
                         <span className="font-medium">{sdk.name}</span>
-                        <span className="font-mono text-[10px] text-muted-foreground">
+                        <span className="font-sans text-[10px] text-muted-foreground">
                           {sdk.version}
                         </span>
                       </span>

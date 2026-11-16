@@ -92,42 +92,42 @@ const showcase = [
     meta: "Component library and docs site",
     tag: "UI",
     price: "2025",
-    tile: "bg-gradient-to-br from-amber-200 via-orange-300 to-rose-400 dark:from-amber-700 dark:via-orange-800 dark:to-rose-900",
+    tile: "bg-gradient-to-br from-primary/20 via-chart-1 to-primary dark:from-chart-3 dark:via-chart-4 dark:to-chart-5",
   },
   {
     name: "Dalim Agency",
     meta: "Studio website and brand",
     tag: "Web",
     price: "2025",
-    tile: "bg-gradient-to-br from-sky-200 via-cyan-300 to-teal-400 dark:from-sky-700 dark:via-cyan-800 dark:to-teal-900",
+    tile: "bg-gradient-to-br from-primary/20 via-chart-1 to-primary dark:from-chart-3 dark:via-chart-4 dark:to-chart-5",
   },
   {
     name: "Dalim Fonts",
     meta: "Type foundry identity and store",
     tag: "Type",
     price: "2024",
-    tile: "bg-gradient-to-br from-violet-200 via-purple-300 to-fuchsia-400 dark:from-violet-700 dark:via-purple-800 dark:to-fuchsia-900",
+    tile: "bg-gradient-to-br from-primary/20 via-chart-1 to-primary dark:from-chart-3 dark:via-chart-4 dark:to-chart-5",
   },
   {
     name: "Dalim Icons",
     meta: "Icon library and search experience",
     tag: "Product",
     price: "2024",
-    tile: "bg-gradient-to-br from-emerald-200 via-green-300 to-lime-300 dark:from-emerald-700 dark:via-green-800 dark:to-lime-900",
+    tile: "bg-gradient-to-br from-primary/20 via-chart-1 to-chart-1 dark:from-chart-3 dark:via-chart-4 dark:to-chart-5",
   },
   {
     name: "Dalim Visuals",
     meta: "CGI, 3D and motion work",
     tag: "Motion",
     price: "2024",
-    tile: "bg-gradient-to-br from-stone-200 via-neutral-300 to-zinc-400 dark:from-stone-700 dark:via-neutral-800 dark:to-zinc-900",
+    tile: "bg-gradient-to-br from-muted via-border to-muted-foreground dark:from-muted dark:via-card dark:to-card",
   },
   {
     name: "Dalim Works",
     meta: "Portfolio and case-study site",
     tag: "Web",
     price: "2023",
-    tile: "bg-gradient-to-br from-rose-200 via-pink-300 to-purple-300 dark:from-rose-700 dark:via-pink-800 dark:to-purple-900",
+    tile: "bg-gradient-to-br from-primary/20 via-chart-1 to-chart-1 dark:from-chart-3 dark:via-chart-4 dark:to-chart-5",
   },
 ]
 
@@ -341,7 +341,7 @@ export default function LandingAgency05() {
       <section className="border-b">
         <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
           <div className="max-w-2xl">
-            <p className="text-sm font-medium text-blue-600 dark:text-blue-400">
+            <p className="text-sm font-medium text-primary dark:text-primary">
               Services
             </p>
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl  mt-3">
@@ -357,7 +357,7 @@ export default function LandingAgency05() {
                 key={feature.title}
                 className="-mt-px -ml-px border-t border-l p-8"
               >
-                <feature.icon className="size-6 text-blue-600 dark:text-blue-400" />
+                <feature.icon className="size-6 text-primary dark:text-primary" />
                 <h3 className="mt-5 font-semibold">{feature.title}</h3>
                 <p className="mt-2 text-sm leading-6 text-muted-foreground">
                   {feature.description}
@@ -394,7 +394,7 @@ export default function LandingAgency05() {
                   className={`relative aspect-[4/3] overflow-hidden rounded-2xl ${item.tile}`}
                 >
                   <div className="absolute inset-0 bg-black/0 transition-colors group-hover:bg-black/10" />
-                  <span className="absolute top-3 left-3 rounded-full bg-white/85 px-2.5 py-1 text-[11px] font-medium text-zinc-900 backdrop-blur">
+                  <span className="absolute top-3 left-3 rounded-full bg-white/85 px-2.5 py-1 text-[11px] font-medium text-foreground backdrop-blur">
                     {item.tag}
                   </span>
                 </div>
@@ -427,7 +427,7 @@ export default function LandingAgency05() {
                 key={step.title}
                 className="relative border-t-2 border-border pt-6"
               >
-                <span className="text-sm font-medium text-blue-600 dark:text-blue-400">
+                <span className="text-sm font-medium text-primary dark:text-primary">
                   Step {i + 1}
                 </span>
                 <h3 className="mt-2 text-lg font-semibold">{step.title}</h3>
@@ -528,7 +528,7 @@ export default function LandingAgency05() {
                           className={
                             featured
                               ? "mt-0.5 size-4 shrink-0"
-                              : "mt-0.5 size-4 shrink-0 text-blue-600 dark:text-blue-400"
+                              : "mt-0.5 size-4 shrink-0 text-primary dark:text-primary"
                           }
                         />
                         {feature}
@@ -681,7 +681,7 @@ function HeroVisual() {
           className={`relative overflow-hidden rounded-2xl ${item.tile} ${i === 0 ? "col-span-2 aspect-[16/10] md:col-span-1 md:aspect-[3/4]" : "aspect-[3/4]"}`}
         >
           <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/0 to-black/0" />
-          <span className="absolute top-3 left-3 rounded-full bg-white/85 px-2.5 py-1 text-[11px] font-medium text-zinc-900 backdrop-blur">
+          <span className="absolute top-3 left-3 rounded-full bg-white/85 px-2.5 py-1 text-[11px] font-medium text-foreground backdrop-blur">
             {item.tag}
           </span>
           <div className="absolute inset-x-3 bottom-3 flex items-end justify-between gap-2 text-white">

@@ -25,7 +25,7 @@ export default function PanelVisibilityMenubar() {
           <MenubarTrigger>View</MenubarTrigger>
           <MenubarContent className="w-52">
             <MenubarGroup>
-              <MenubarLabel inset>Appearance</MenubarLabel>
+              <MenubarLabel inset>Designali Editor</MenubarLabel>
               <MenubarCheckboxItem
                 checked={sidebar}
                 onCheckedChange={setSidebar}
@@ -65,7 +65,7 @@ export default function PanelVisibilityMenubar() {
         </div>
         {statusBar && (
           <div className="flex items-center justify-between border-t bg-muted px-2 py-1 text-[10px] text-muted-foreground">
-            <span>main</span>
+            <span>designali.com · main</span>
             <span>Ln 12, Col 4</span>
           </div>
         )}

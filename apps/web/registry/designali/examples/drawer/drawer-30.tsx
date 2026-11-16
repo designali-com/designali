@@ -28,16 +28,16 @@ import { Switch } from "@workspace/ui/components/switch"
 import { cn } from "@workspace/ui/lib/utils"
 
 const themes = [
-  { value: "light", label: "Light", className: "bg-white border-neutral-200" },
+  { value: "light", label: "Light", className: "bg-white border-border" },
   {
     value: "dark",
     label: "Dark",
-    className: "bg-neutral-900 border-neutral-700",
+    className: "bg-foreground border-foreground",
   },
   {
     value: "system",
     label: "System",
-    className: "bg-gradient-to-r from-white to-neutral-900 border-neutral-400",
+    className: "bg-gradient-to-r from-white to-foreground border-border",
   },
 ]
 

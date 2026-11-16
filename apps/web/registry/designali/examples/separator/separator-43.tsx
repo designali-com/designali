@@ -16,14 +16,14 @@ const initial = [
     name: "Portfolio Simple template",
     price: 18,
     qty: 2,
-    tone: "from-stone-300 to-stone-500",
+    tone: "from-border to-muted-foreground",
   },
   {
     id: "kettle",
     name: "Icons Pack",
     price: 46,
     qty: 1,
-    tone: "from-zinc-400 to-zinc-700",
+    tone: "from-muted-foreground to-foreground",
   },
 ]
 

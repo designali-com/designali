@@ -44,7 +44,7 @@ export default function CustomRatioInputs() {
           ratio={clamped}
           className="bg-linear-to-br from-primary/20 to-primary/5 ring-1 ring-primary/30"
         >
-          <span className="absolute inset-0 flex items-center justify-center font-mono text-xs">
+          <span className="absolute inset-0 flex items-center justify-center font-sans text-xs">
             {ratio.toFixed(3)} : 1
           </span>
         </AspectRatio>

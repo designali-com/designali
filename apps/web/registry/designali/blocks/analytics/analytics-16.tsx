@@ -44,17 +44,17 @@ export default function Analytics16() {
         <div className="mt-10 grid gap-8 lg:grid-cols-[2fr_1fr]">
           <div className="border p-4 md:p-6">
             <div className="flex gap-2">
-              <div className="flex w-8 shrink-0 flex-col justify-between py-1 text-right font-mono text-[10px] text-muted-foreground">
+              <div className="flex w-8 shrink-0 flex-col justify-between py-1 text-right font-sans text-[10px] text-muted-foreground">
                 {[7, 6, 5, 4, 3, 2, 1, 0].map((t) => (
                   <span key={t}>{t}x</span>
                 ))}
               </div>
               <div className="relative aspect-[4/3] min-w-0 flex-1 border-b border-l sm:aspect-[16/9]">
                 <div
-                  className="absolute inset-x-0 border-t border-dashed border-rose-500/60"
+                  className="absolute inset-x-0 border-t border-dashed border-primary/60"
                   style={{ top: `${100 - (1 / maxRoas) * 100}%` }}
                 >
-                  <span className="absolute -top-5 right-1 text-[10px] text-rose-600 dark:text-rose-400">
+                  <span className="absolute -top-5 right-1 text-[10px] text-primary dark:text-primary">
                     Break-even 1x
                   </span>
                 </div>
@@ -84,7 +84,7 @@ export default function Analytics16() {
                 })}
               </div>
             </div>
-            <div className="mt-2 ml-10 flex justify-between font-mono text-[10px] text-muted-foreground">
+            <div className="mt-2 ml-10 flex justify-between font-sans text-[10px] text-muted-foreground">
               {[0, 15, 30, 45].map((t) => (
                 <span key={t}>${t}k</span>
               ))}
@@ -101,15 +101,15 @@ export default function Analytics16() {
                   <dl className="mt-6 grid grid-cols-3 gap-4">
                     <div>
                       <dt className="text-[10px] text-muted-foreground uppercase">Spend</dt>
-                      <dd className="mt-1 font-mono text-lg">${active.spend}k</dd>
+                      <dd className="mt-1 font-sans text-lg">${active.spend}k</dd>
                     </div>
                     <div>
                       <dt className="text-[10px] text-muted-foreground uppercase">ROAS</dt>
-                      <dd className="mt-1 font-mono text-lg">{active.roas}x</dd>
+                      <dd className="mt-1 font-sans text-lg">{active.roas}x</dd>
                     </div>
                     <div>
                       <dt className="text-[10px] text-muted-foreground uppercase">Orders</dt>
-                      <dd className="mt-1 font-mono text-lg">{active.orders.toLocaleString()}</dd>
+                      <dd className="mt-1 font-sans text-lg">{active.orders.toLocaleString()}</dd>
                     </div>
                   </dl>
                 </>
@@ -122,7 +122,7 @@ export default function Analytics16() {
                 <li key={name} className="flex items-center gap-3">
                   <span className="size-3 rounded-full" style={{ background: color }} />
                   <span className="flex-1">{name}</span>
-                  <span className="font-mono text-xs text-muted-foreground">
+                  <span className="font-sans text-xs text-muted-foreground">
                     {campaigns.filter((c) => c.channel === name).length} campaigns
                   </span>
                 </li>

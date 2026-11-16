@@ -45,7 +45,7 @@ export default function BulkActionToast() {
                 )
               }
             />
-            <span className="font-mono text-xs text-muted-foreground">
+            <span className="font-sans text-xs text-muted-foreground">
               {t.id}
             </span>
             <span className="truncate">{t.title}</span>

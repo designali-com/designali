@@ -45,7 +45,7 @@ export default function NonprofitGetInvolvedNav() {
               {ways.map((w) => (
                 <li key={w.title}>
                   <NavigationMenuLink href="#" className="items-start gap-3">
-                    <w.icon className="mt-0.5 text-emerald-600 dark:text-emerald-400" />
+                    <w.icon className="mt-0.5 text-primary dark:text-primary" />
                     <span className="flex flex-col gap-0.5">
                       <span className="font-medium">{w.title}</span>
                       <span className="text-muted-foreground">
@@ -68,7 +68,7 @@ export default function NonprofitGetInvolvedNav() {
             href="#"
             className={cn(
               navigationMenuTriggerStyle(),
-              "bg-emerald-600 text-white hover:bg-emerald-700 focus:bg-emerald-700"
+              "bg-chart-2 text-white hover:bg-chart-3 focus:bg-chart-3"
             )}
           >
             <HeartIcon /> Support

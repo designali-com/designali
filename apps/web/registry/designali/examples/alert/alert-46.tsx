@@ -18,7 +18,7 @@ export default function AlertMergeConflict() {
       <GitMergeIcon />
       <AlertTitle>This branch has conflicts that must be resolved</AlertTitle>
       <AlertDescription>
-        <ul className="my-1 space-y-0.5 font-mono text-foreground">
+        <ul className="my-1 space-y-0.5 font-sans text-foreground">
           {files.map((file) => (
             <li key={file} className="flex items-center gap-1.5">
               <FileCodeIcon className="size-3" />

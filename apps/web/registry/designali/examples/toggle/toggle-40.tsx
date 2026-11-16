@@ -20,7 +20,7 @@ export default function EncryptionLockToggle() {
         className={cn(
           "flex size-10 shrink-0 items-center justify-center",
           encrypted
-            ? "bg-emerald-500/15 text-emerald-600"
+            ? "bg-primary/15 text-primary"
             : "bg-muted text-muted-foreground"
         )}
       >

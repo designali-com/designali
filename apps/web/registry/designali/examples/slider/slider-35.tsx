@@ -21,7 +21,7 @@ export default function ExposureCompensationSlider() {
           Exposure
         </div>
         <div className="flex items-center gap-1">
-          <span className="font-mono text-xs tabular-nums">
+          <span className="font-sans text-xs tabular-nums">
             {v > 0 ? "+" : ""}
             {v.toFixed(1)} EV
           </span>
@@ -43,7 +43,7 @@ export default function ExposureCompensationSlider() {
         max={3}
         step={0.5}
       />
-      <div className="flex justify-between font-mono text-[10px] text-muted-foreground">
+      <div className="flex justify-between font-sans text-[10px] text-muted-foreground">
         <span>-3</span>
         <span>0</span>
         <span>+3</span>

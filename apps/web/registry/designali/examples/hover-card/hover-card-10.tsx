@@ -29,25 +29,25 @@ export default function StockTickerHoverCard() {
       <HoverCard>
         <HoverCardTrigger
           href="#"
-          className="font-mono font-medium text-foreground hover:underline"
+          className="font-sans font-medium text-foreground hover:underline"
         >
           $DSGN
         </HoverCardTrigger>
         <HoverCardContent className="w-60">
           <div className="flex items-baseline justify-between">
             <span className="font-medium">Designali Templates</span>
-            <span className="font-mono text-muted-foreground">DSGN</span>
+            <span className="font-sans text-muted-foreground">DSGN</span>
           </div>
           <div className="mt-1 flex items-baseline gap-2">
             <span className="text-lg font-semibold">$47.12</span>
-            <span className="flex items-center text-emerald-600 dark:text-emerald-400">
+            <span className="flex items-center text-primary dark:text-primary">
               <TrendingUpIcon className="mr-1 size-3.5" />
               +3.8%
             </span>
           </div>
           <svg
             viewBox="0 0 100 40"
-            className="mt-2 h-12 w-full text-emerald-500"
+            className="mt-2 h-12 w-full text-primary"
             preserveAspectRatio="none"
           >
             <path

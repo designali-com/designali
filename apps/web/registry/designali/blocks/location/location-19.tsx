@@ -40,16 +40,16 @@ const cards = [
 function CampusMap() {
   return (
     <svg viewBox="0 0 300 300" className="absolute inset-0 h-full w-full" aria-hidden>
-      <rect width="300" height="300" className="fill-indigo-50 dark:fill-indigo-950/40" />
+      <rect width="300" height="300" className="fill-chart-1 dark:fill-chart-5/40" />
       <path d="M0 210 C 80 190, 120 240, 300 200" className="fill-none stroke-background" strokeWidth="16" />
       <path d="M90 0 L110 300" className="stroke-background" strokeWidth="10" />
-      <path d="M0 80 L300 70" className="stroke-indigo-300 dark:stroke-indigo-700" strokeWidth="3" strokeDasharray="8 5" />
-      <rect x="140" y="100" width="70" height="50" className="fill-indigo-500" />
-      <rect x="220" y="110" width="50" height="40" className="fill-indigo-300 dark:fill-indigo-700" />
-      <rect x="150" y="160" width="40" height="30" className="fill-indigo-300 dark:fill-indigo-700" />
-      <rect x="20" y="110" width="56" height="60" className="fill-background/80 stroke-indigo-300 dark:stroke-indigo-700" strokeDasharray="3 3" />
-      <text x="48" y="144" textAnchor="middle" className="fill-indigo-500 text-[16px] font-bold dark:fill-indigo-300">D</text>
-      <circle cx="104" cy="74" r="6" className="fill-background stroke-indigo-500" strokeWidth="3" />
+      <path d="M0 80 L300 70" className="stroke-chart-1 dark:stroke-chart-3" strokeWidth="3" strokeDasharray="8 5" />
+      <rect x="140" y="100" width="70" height="50" className="fill-primary" />
+      <rect x="220" y="110" width="50" height="40" className="fill-chart-1 dark:fill-chart-3" />
+      <rect x="150" y="160" width="40" height="30" className="fill-chart-1 dark:fill-chart-3" />
+      <rect x="20" y="110" width="56" height="60" className="fill-background/80 stroke-chart-1 dark:stroke-chart-3" strokeDasharray="3 3" />
+      <text x="48" y="144" textAnchor="middle" className="fill-primary text-[16px] font-bold dark:fill-chart-1">D</text>
+      <circle cx="104" cy="74" r="6" className="fill-background stroke-primary" strokeWidth="3" />
     </svg>
   )
 }

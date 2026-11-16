@@ -19,7 +19,7 @@ export default function ReadOnlyLockedLabel() {
         id="org-id"
         readOnly
         value="org_8F3kQ2xLm"
-        className="bg-muted font-mono"
+        className="bg-muted font-sans"
       />
     </div>
   )

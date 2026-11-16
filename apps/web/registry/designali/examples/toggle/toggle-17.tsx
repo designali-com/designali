@@ -19,7 +19,7 @@ export default function MusicPlayerModeToggles() {
   return (
     <div className="flex w-full max-w-xs flex-col gap-3 border p-4">
       <div className="flex items-center gap-3">
-        <div className="size-12 shrink-0 bg-gradient-to-br from-fuchsia-500 to-cyan-400" />
+        <div className="size-12 shrink-0 bg-gradient-to-br from-primary to-primary" />
         <div className="min-w-0">
           <p className="truncate text-sm font-medium">Night Drive</p>
           <p className="truncate text-xs text-muted-foreground">

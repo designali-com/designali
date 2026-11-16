@@ -13,7 +13,7 @@ function DemoMenu({ label }: { label: string }) {
       <NavigationMenuTrigger>{label}</NavigationMenuTrigger>
       <NavigationMenuContent>
         <ul className="flex w-44 flex-col gap-1">
-          {["Overview", "Features", "FAQ"].map((link) => (
+          {["Designali Overview", "Pricing", "Docs"].map((link) => (
             <li key={link}>
               <NavigationMenuLink href="#">{link}</NavigationMenuLink>
             </li>
@@ -33,8 +33,8 @@ export default function InstantOpenNav() {
         </span>
         <NavigationMenu delay={0} closeDelay={400}>
           <NavigationMenuList>
-            <DemoMenu label="Instant" />
-            <DemoMenu label="Sticky" />
+            <DemoMenu label="Templates" />
+            <DemoMenu label="Blocks" />
           </NavigationMenuList>
         </NavigationMenu>
       </div>
@@ -44,8 +44,8 @@ export default function InstantOpenNav() {
         </span>
         <NavigationMenu>
           <NavigationMenuList>
-            <DemoMenu label="Default" />
-            <DemoMenu label="Menu" />
+            <DemoMenu label="Icons" />
+            <DemoMenu label="Logos" />
           </NavigationMenuList>
         </NavigationMenu>
       </div>

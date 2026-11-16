@@ -7,11 +7,13 @@ import {
 } from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
+import { CounterNumber } from "@/registry/designali/ui/counter-number"
+import { GridPattern } from "@/registry/designali/ui/grid-pattern"
 
 const stats = [
-  { value: "460+", label: "Production-ready blocks" },
-  { value: "240+", label: "Landing pages and templates" },
-  { value: "4000+", label: "Icons in @designali/icons" },
+  { value: 460, label: "Production-ready blocks" },
+  { value: 240, label: "Landing pages and templates" },
+  { value: 4000, label: "Icons in @designali/icons" },
 ]
 
 export default function Media19() {
@@ -28,9 +30,10 @@ export default function Media19() {
     <section className="w-full bg-background py-16">
       <div className="mx-auto max-w-7xl px-6">
         <div className="relative overflow-hidden bg-foreground px-6 py-16 text-background md:px-14 md:py-20">
-          <div
-            className="absolute inset-0 opacity-20"
-            style={{ backgroundImage: "linear-gradient(var(--background) 1px, transparent 1px), linear-gradient(90deg, var(--background) 1px, transparent 1px)", backgroundSize: "48px 48px" }}
+          <GridPattern
+            width={48}
+            height={48}
+            className="stroke-background opacity-20"
           />
           <div className="relative grid gap-12 lg:grid-cols-[1.1fr_1fr] lg:items-center">
             <div>
@@ -43,7 +46,13 @@ export default function Media19() {
                 {stats.map((s) => (
                   <div key={s.label}>
                     <dt className="sr-only">{s.label}</dt>
-                    <dd className="text-xl font-semibold md:text-3xl">{s.value}</dd>
+                    <dd>
+                      <CounterNumber
+                        value={s.value}
+                        suffix="+"
+                        className="text-xl font-semibold tracking-normal text-background md:text-3xl"
+                      />
+                    </dd>
                     <p className="mt-1 text-xs text-background/60">{s.label}</p>
                   </div>
                 ))}
@@ -55,9 +64,10 @@ export default function Media19() {
               aria-label="Play keynote video"
               className="group relative aspect-video w-full overflow-hidden border border-background/20 text-left"
             >
-              <div
-                className="absolute inset-0 transition-transform duration-700 group-hover:scale-105"
-                style={{ background: "radial-gradient(circle at 30% 30%, var(--chart-2), transparent 55%), radial-gradient(circle at 75% 70%, var(--chart-5), transparent 50%), #0b0b0b" }}
+              <img
+                src="/img/hero-2.jpg"
+                alt="Ali Imam presenting the Designali keynote"
+                className="absolute inset-0 size-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
               <span className="absolute top-1/2 left-1/2 flex size-20 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white text-black shadow-2xl transition-transform group-hover:scale-110">
                 <span className="absolute inset-0 animate-ping rounded-full bg-white/40" />
@@ -76,11 +86,11 @@ export default function Media19() {
               <X />
             </Button>
             <div className="relative aspect-video w-full overflow-hidden border border-white/10 bg-black">
-              <div className="absolute inset-0" style={{ background: "radial-gradient(circle at 50% 40%, var(--chart-2), transparent 60%), #000" }} />
+              <img src="/img/hero-2.jpg" alt="" className="absolute inset-0 size-full object-cover" />
               <div className="absolute inset-x-0 bottom-0 flex items-center gap-3 bg-gradient-to-t from-black/90 to-transparent p-4 text-white">
                 <Play className="size-4 fill-current" />
                 <div className="h-1 flex-1 bg-white/25"><div className="h-full w-[6%] bg-white" /></div>
-                <span className="font-mono text-xs tabular-nums">0:14 / 4:06</span>
+                <span className="font-sans text-xs tabular-nums">0:14 / 4:06</span>
               </div>
             </div>
           </div>

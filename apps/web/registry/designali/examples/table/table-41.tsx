@@ -51,7 +51,7 @@ export default function BudgetVarianceTable() {
                     "text-right tabular-nums",
                     variance < 0
                       ? "text-destructive"
-                      : "text-emerald-600 dark:text-emerald-400"
+                      : "text-primary dark:text-primary"
                   )}
                 >
                   {fmt(variance)}

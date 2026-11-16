@@ -5,6 +5,8 @@ import {
 
 import { Button } from "@workspace/ui/components/button"
 
+import { CounterNumber } from "@/registry/designali/ui/counter-number"
+
 const included = [
   "All 460+ blocks and 240+ page templates",
   "Figma source with auto-layout and variables",
@@ -56,7 +58,11 @@ export default function Pricing09() {
               Pay once, own it forever
             </p>
             <p className="flex items-baseline gap-2">
-              <span className="text-6xl font-semibold tracking-tight">$249</span>
+              <CounterNumber
+                value={249}
+                prefix="$"
+                className="text-6xl font-semibold tracking-tight"
+              />
               <span className="text-sm text-muted-foreground line-through">
                 $399
               </span>

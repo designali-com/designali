@@ -18,31 +18,31 @@ const integrations = [
     name: "Figma",
     category: "Design",
     installed: true,
-    color: "from-violet-500 to-fuchsia-500",
+    color: "from-primary to-primary",
   },
   {
     name: "Stripe",
     category: "Payments",
     installed: false,
-    color: "from-emerald-500 to-teal-500",
+    color: "from-primary to-primary",
   },
   {
     name: "Notion",
     category: "Project management",
     installed: true,
-    color: "from-sky-500 to-blue-600",
+    color: "from-primary to-chart-2",
   },
   {
     name: "Vercel",
     category: "Deployments",
     installed: false,
-    color: "from-amber-400 to-orange-500",
+    color: "from-primary to-primary",
   },
   {
     name: "GitHub",
     category: "Code",
     installed: false,
-    color: "from-zinc-500 to-zinc-700",
+    color: "from-muted-foreground to-foreground",
   },
 ]
 

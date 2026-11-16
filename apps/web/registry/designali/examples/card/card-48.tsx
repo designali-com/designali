@@ -42,7 +42,7 @@ export default function TwoFactorSecurityCard() {
     <Card className="w-full max-w-sm">
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
-          <ShieldCheckIcon className="size-4 text-emerald-500" />
+          <ShieldCheckIcon className="size-4 text-primary" />
           Two-factor authentication
         </CardTitle>
         <CardDescription>

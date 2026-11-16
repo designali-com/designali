@@ -32,7 +32,7 @@ export default function VideoPlayerMenu() {
 
   return (
     <ContextMenu>
-      <ContextMenuTrigger className="relative flex aspect-video w-full max-w-md items-center justify-center bg-linear-to-br from-slate-800 to-slate-950 text-white">
+      <ContextMenuTrigger className="relative flex aspect-video w-full max-w-md items-center justify-center bg-linear-to-br from-foreground to-foreground text-white">
         <PlayCircleIcon className="size-12 opacity-80" />
         <div className="absolute inset-x-0 bottom-0 flex items-center gap-2 bg-black/40 px-3 py-1.5 text-[11px]">
           <span>1:24 / 6:10</span>

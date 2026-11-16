@@ -72,7 +72,7 @@ export default function Portfolio15() {
                   />
                 </span>
                 <span className="mt-3 flex items-baseline gap-2">
-                  <span className="font-mono text-xs text-muted-foreground">0{i + 1}</span>
+                  <span className="font-sans text-xs text-muted-foreground">0{i + 1}</span>
                   <span
                     className={cn(
                       "text-sm font-medium transition-colors",

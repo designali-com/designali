@@ -9,18 +9,18 @@ import { ScrollArea } from "@workspace/ui/components/scroll-area"
 import { cn } from "@workspace/ui/lib/utils"
 
 const gradients = [
-  "from-rose-400 to-orange-300",
-  "from-sky-400 to-indigo-500",
-  "from-emerald-300 to-teal-600",
-  "from-fuchsia-500 to-purple-700",
-  "from-amber-200 to-yellow-500",
-  "from-slate-500 to-slate-900",
-  "from-pink-300 to-rose-500",
-  "from-cyan-300 to-blue-600",
-  "from-lime-300 to-green-600",
-  "from-violet-300 to-indigo-700",
-  "from-orange-400 to-red-600",
-  "from-teal-200 to-cyan-500",
+  "from-primary to-chart-1",
+  "from-primary to-primary",
+  "from-chart-1 to-chart-2",
+  "from-primary to-chart-3",
+  "from-primary/20 to-primary",
+  "from-muted-foreground to-foreground",
+  "from-chart-1 to-primary",
+  "from-chart-1 to-chart-2",
+  "from-chart-1 to-chart-2",
+  "from-chart-1 to-chart-3",
+  "from-primary to-destructive",
+  "from-primary/20 to-primary",
 ]
 
 export default function GradientGalleryGrid() {

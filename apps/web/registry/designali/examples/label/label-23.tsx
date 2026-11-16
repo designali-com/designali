@@ -13,7 +13,7 @@ export default function FloatingLabelInput() {
         htmlFor="floating-email"
         className="pointer-events-none absolute start-3 top-1.5 text-[11px] text-muted-foreground transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-xs peer-focus:top-1.5 peer-focus:text-[11px]"
       >
-        Email address
+        Your designali.com email
       </Label>
     </div>
   )

@@ -33,7 +33,7 @@ export default function LargeSkuLookup() {
               .map((bin) => (
                 <CommandItem key={bin.id} value={bin.id}>
                   <WarehouseIcon />
-                  <span className="font-mono">{bin.id}</span>
+                  <span className="font-sans">{bin.id}</span>
                   <span
                     className={cn(
                       "ms-auto text-[11px]",

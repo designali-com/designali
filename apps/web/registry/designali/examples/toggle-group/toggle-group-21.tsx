@@ -18,7 +18,7 @@ export default function MapLayerToggleGroup() {
 
   return (
     <div className="flex w-full max-w-sm flex-col gap-2">
-      <div className="relative h-36 overflow-hidden border bg-gradient-to-br from-emerald-100 via-sky-100 to-amber-50 dark:from-emerald-950 dark:via-sky-950 dark:to-amber-950">
+      <div className="relative h-36 overflow-hidden border bg-gradient-to-br from-primary/10 via-primary/10 to-primary/5 dark:from-chart-5 dark:via-chart-5 dark:to-chart-5">
         <ToggleGroup
           multiple
           size="sm"
@@ -37,7 +37,7 @@ export default function MapLayerToggleGroup() {
             <BikeIcon />
           </ToggleGroupItem>
         </ToggleGroup>
-        <MapPinIcon className="absolute top-1/2 left-1/2 size-6 -translate-x-1/2 -translate-y-1/2 text-rose-500" />
+        <MapPinIcon className="absolute top-1/2 left-1/2 size-6 -translate-x-1/2 -translate-y-1/2 text-primary" />
       </div>
       <span className="text-xs text-muted-foreground">
         Layers: {layers.length ? layers.join(", ") : "none"}

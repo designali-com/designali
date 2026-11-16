@@ -43,7 +43,7 @@ export default function KeyboardShortcutTabs() {
         <TabsContent
           key={p}
           value={p}
-          className="border p-3 font-mono text-muted-foreground"
+          className="border p-3 font-sans text-muted-foreground"
         >
           {p.toLowerCase()} panel ready
         </TabsContent>

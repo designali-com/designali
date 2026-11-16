@@ -48,9 +48,9 @@ export default function CloudInstanceMenu() {
               className={cn(
                 "size-1.5 rounded-full",
                 state === "running"
-                  ? "bg-emerald-500"
+                  ? "bg-primary"
                   : state === "stopped"
-                    ? "bg-amber-500"
+                    ? "bg-primary"
                     : "bg-destructive"
               )}
             />
@@ -63,7 +63,7 @@ export default function CloudInstanceMenu() {
           <dt>Region</dt>
           <dd className="text-foreground">eu-west-2</dd>
           <dt>IP</dt>
-          <dd className="font-mono text-foreground">10.4.18.22</dd>
+          <dd className="font-sans text-foreground">10.4.18.22</dd>
         </dl>
       </ContextMenuTrigger>
       <ContextMenuContent className="w-48">

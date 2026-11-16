@@ -22,17 +22,17 @@ export default function SupportAgentWidget() {
       <CardHeader>
         <AvatarGroup className="mb-2">
           <Avatar size="lg">
-            <AvatarFallback className="bg-teal-100 text-teal-800 dark:bg-teal-950 dark:text-teal-300">
+            <AvatarFallback className="bg-primary/10 text-chart-4 dark:bg-primary/10 dark:text-chart-1">
               AI
             </AvatarFallback>
           </Avatar>
           <Avatar size="lg">
-            <AvatarFallback className="bg-orange-100 text-orange-800 dark:bg-orange-950 dark:text-orange-300">
+            <AvatarFallback className="bg-primary/10 text-chart-4 dark:bg-primary/10 dark:text-chart-1">
               SA
             </AvatarFallback>
           </Avatar>
           <Avatar size="lg">
-            <AvatarFallback className="bg-indigo-100 text-indigo-800 dark:bg-indigo-950 dark:text-indigo-300">
+            <AvatarFallback className="bg-primary/10 text-chart-4 dark:bg-primary/10 dark:text-chart-1">
               OM
             </AvatarFallback>
           </Avatar>

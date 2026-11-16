@@ -30,15 +30,15 @@ export default function BrandColorField() {
           value={color}
           aria-invalid={!valid}
           onChange={(e) => setColor(e.target.value)}
-          className="font-mono uppercase"
+          className="font-sans uppercase"
         />
       </div>
       {valid ? (
         <FieldDescription>
-          Used for buttons, links, and email headers.
+          Designali blue, used for buttons, links, and email headers.
         </FieldDescription>
       ) : (
-        <FieldError>Use a 6-digit hex value like #1A2B3C.</FieldError>
+        <FieldError>Use a 6-digit hex value like #00A8FF.</FieldError>
       )}
     </Field>
   )

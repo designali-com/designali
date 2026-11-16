@@ -23,14 +23,14 @@ export default function CopyableIdBadge() {
       <span className="text-muted-foreground">Customer ID</span>
       <Badge
         variant="outline"
-        className="cursor-pointer font-mono"
+        className="cursor-pointer font-sans"
         render={
           <button type="button" onClick={copy} aria-label="Copy customer ID" />
         }
       >
         {id}
         {copied ? (
-          <CheckIcon data-icon="inline-end" className="text-emerald-600" />
+          <CheckIcon data-icon="inline-end" className="text-primary" />
         ) : (
           <CopyIcon data-icon="inline-end" />
         )}

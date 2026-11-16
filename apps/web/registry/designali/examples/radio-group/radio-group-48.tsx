@@ -17,8 +17,8 @@ const qualities = [
 
 export default function VideoQualitySettings() {
   return (
-    <div className="flex w-full max-w-56 flex-col bg-neutral-950 p-2 text-neutral-100">
-      <p className="flex items-center gap-2 px-2 pb-2 text-xs font-medium text-neutral-400">
+    <div className="flex w-full max-w-56 flex-col bg-foreground p-2 text-background">
+      <p className="flex items-center gap-2 px-2 pb-2 text-xs font-medium text-muted-foreground">
         <SettingsIcon className="size-3.5" />
         Quality
       </p>
@@ -32,11 +32,11 @@ export default function VideoQualitySettings() {
             <RadioGroupItem
               value={q.value}
               id={"vq-" + q.value}
-              className="border-neutral-500 dark:bg-transparent data-checked:border-white data-checked:bg-white dark:data-checked:bg-white [&_[data-slot=radio-group-indicator]_span]:bg-neutral-950"
+              className="border-border dark:bg-transparent data-checked:border-white data-checked:bg-white dark:data-checked:bg-white [&_[data-slot=radio-group-indicator]_span]:bg-foreground"
             />
             <span className="flex-1">{q.label}</span>
             {q.note && (
-              <span className="text-[11px] text-neutral-400">{q.note}</span>
+              <span className="text-[11px] text-muted-foreground">{q.note}</span>
             )}
           </label>
         ))}

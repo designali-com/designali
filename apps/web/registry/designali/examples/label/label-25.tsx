@@ -20,7 +20,7 @@ export default function UrlFieldLabel() {
         </InputGroupAddon>
         <InputGroupInput id="store-url" defaultValue="templates" />
         <InputGroupAddon align="inline-end">
-          <CircleCheckIcon className="text-emerald-600 dark:text-emerald-400" />
+          <CircleCheckIcon className="text-primary dark:text-primary" />
         </InputGroupAddon>
       </InputGroup>
       <p className="text-xs text-muted-foreground">

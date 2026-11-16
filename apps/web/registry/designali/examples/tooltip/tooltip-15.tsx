@@ -13,10 +13,10 @@ const shade = (n: number) =>
   n === 0
     ? "bg-muted"
     : n < 3
-      ? "bg-emerald-200 dark:bg-emerald-900"
+      ? "bg-primary/20 dark:bg-primary/10"
       : n < 6
-        ? "bg-emerald-400 dark:bg-emerald-700"
-        : "bg-emerald-600 dark:bg-emerald-500"
+        ? "bg-primary dark:bg-chart-3"
+        : "bg-chart-2 dark:bg-primary"
 
 export default function ContributionHeatmapTooltip() {
   return (

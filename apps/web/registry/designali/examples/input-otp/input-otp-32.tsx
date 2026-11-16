@@ -24,24 +24,24 @@ export default function LicenseKeyActivation() {
         pattern={REGEXP_ONLY_DIGITS_AND_CHARS}
       >
         <InputOTPGroup>
-          <InputOTPSlot index={0} className="size-6 font-mono uppercase" />
-          <InputOTPSlot index={1} className="size-6 font-mono uppercase" />
-          <InputOTPSlot index={2} className="size-6 font-mono uppercase" />
-          <InputOTPSlot index={3} className="size-6 font-mono uppercase" />
+          <InputOTPSlot index={0} className="size-6 font-sans uppercase" />
+          <InputOTPSlot index={1} className="size-6 font-sans uppercase" />
+          <InputOTPSlot index={2} className="size-6 font-sans uppercase" />
+          <InputOTPSlot index={3} className="size-6 font-sans uppercase" />
         </InputOTPGroup>
         <InputOTPSeparator />
         <InputOTPGroup>
-          <InputOTPSlot index={4} className="size-6 font-mono uppercase" />
-          <InputOTPSlot index={5} className="size-6 font-mono uppercase" />
-          <InputOTPSlot index={6} className="size-6 font-mono uppercase" />
-          <InputOTPSlot index={7} className="size-6 font-mono uppercase" />
+          <InputOTPSlot index={4} className="size-6 font-sans uppercase" />
+          <InputOTPSlot index={5} className="size-6 font-sans uppercase" />
+          <InputOTPSlot index={6} className="size-6 font-sans uppercase" />
+          <InputOTPSlot index={7} className="size-6 font-sans uppercase" />
         </InputOTPGroup>
         <InputOTPSeparator />
         <InputOTPGroup>
-          <InputOTPSlot index={8} className="size-6 font-mono uppercase" />
-          <InputOTPSlot index={9} className="size-6 font-mono uppercase" />
-          <InputOTPSlot index={10} className="size-6 font-mono uppercase" />
-          <InputOTPSlot index={11} className="size-6 font-mono uppercase" />
+          <InputOTPSlot index={8} className="size-6 font-sans uppercase" />
+          <InputOTPSlot index={9} className="size-6 font-sans uppercase" />
+          <InputOTPSlot index={10} className="size-6 font-sans uppercase" />
+          <InputOTPSlot index={11} className="size-6 font-sans uppercase" />
         </InputOTPGroup>
       </InputOTP>
       <FieldDescription>

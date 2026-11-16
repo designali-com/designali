@@ -27,16 +27,16 @@ const after = [
 
 function Column({ lines }: { lines: typeof before }) {
   return (
-    <div className="h-full py-2 font-mono text-[11px]">
+    <div className="h-full py-2 font-sans text-[11px]">
       {lines.map((line, i) => (
         <div
           key={i}
           className={cn(
             "truncate px-3 whitespace-pre",
             line.kind === "removed" &&
-              "bg-red-500/10 text-red-700 dark:text-red-300",
+              "bg-destructive/10 text-destructive dark:text-destructive",
             line.kind === "added" &&
-              "bg-emerald-500/10 text-emerald-700 dark:text-emerald-300"
+              "bg-primary/10 text-chart-3 dark:text-chart-1"
           )}
         >
           {line.kind === "removed" ? "- " : line.kind === "added" ? "+ " : "  "}
@@ -52,11 +52,11 @@ export default function SideBySideDiff() {
     <div className="w-full max-w-2xl border">
       <div className="flex items-center gap-2 border-b px-3 py-2 text-xs">
         <FileDiffIcon className="size-3.5" />
-        <span className="font-mono">src/cart/total.ts</span>
-        <span className="ml-auto text-emerald-600 dark:text-emerald-400">
+        <span className="font-sans">src/cart/total.ts</span>
+        <span className="ml-auto text-primary dark:text-primary">
           +3
         </span>
-        <span className="text-red-600 dark:text-red-400">-3</span>
+        <span className="text-destructive dark:text-destructive">-3</span>
       </div>
       <ResizablePanelGroup orientation="horizontal" className="h-36">
         <ResizablePanel defaultSize="50%" minSize="25%">

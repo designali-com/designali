@@ -48,7 +48,7 @@ export default function FeatureSection() {
               <Dithering
                 className="absolute bottom-0 h-full w-full"
                 colorBack="#00000000"
-                colorFront="#00aaff"
+                colorFront="#00A8FF"
                 shape="ripple"
                 type="8x8"
                 size={2}

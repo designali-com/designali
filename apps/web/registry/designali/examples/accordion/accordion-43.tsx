@@ -37,7 +37,7 @@ export default function AccordionLandingFaqLarge() {
         {faqs.map((faq) => (
           <AccordionItem key={faq.value} value={faq.value} className="border-b">
             <AccordionTrigger className="items-center gap-4 py-5 text-base hover:no-underline">
-              <span className="font-mono text-xs text-muted-foreground">
+              <span className="font-sans text-xs text-muted-foreground">
                 0{faq.value}
               </span>
               <span className="flex-1">{faq.q}</span>

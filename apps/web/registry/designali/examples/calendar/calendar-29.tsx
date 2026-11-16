@@ -27,9 +27,9 @@ function minutesFor(date: Date) {
 function shade(minutes: number | null) {
   if (minutes === null) return ""
   if (minutes === 0) return "bg-muted/40"
-  if (minutes < 30) return "bg-emerald-500/25"
-  if (minutes < 50) return "bg-emerald-500/50"
-  return "bg-emerald-500/80 text-white"
+  if (minutes < 30) return "bg-primary/25"
+  if (minutes < 50) return "bg-primary/50"
+  return "bg-primary/80 text-white"
 }
 
 function HeatmapDayButton({
@@ -55,7 +55,7 @@ export default function WorkoutStreakHeatmap() {
     <Card className="w-fit">
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
-          <FlameIcon className="size-4 text-orange-500" />5 day streak
+          <FlameIcon className="size-4 text-primary" />5 day streak
         </CardTitle>
         <CardDescription>Minutes spent designing in Figma this month.</CardDescription>
       </CardHeader>
@@ -69,9 +69,9 @@ export default function WorkoutStreakHeatmap() {
           Less
           {[
             "bg-muted/40",
-            "bg-emerald-500/25",
-            "bg-emerald-500/50",
-            "bg-emerald-500/80",
+            "bg-primary/25",
+            "bg-primary/50",
+            "bg-primary/80",
           ].map((c) => (
             <span key={c} className={cn("size-3", c)} />
           ))}

@@ -351,7 +351,7 @@ export default function LandingDeveloperTools05() {
       <section className="border-b">
         <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
           <div className="max-w-2xl">
-            <p className="text-sm font-medium text-teal-600 dark:text-teal-400">
+            <p className="text-sm font-medium text-primary dark:text-primary">
               Developer experience
             </p>
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl  mt-3">
@@ -367,7 +367,7 @@ export default function LandingDeveloperTools05() {
                 key={feature.title}
                 className="-mt-px -ml-px border-t border-l p-8"
               >
-                <feature.icon className="size-6 text-teal-600 dark:text-teal-400" />
+                <feature.icon className="size-6 text-primary dark:text-primary" />
                 <h3 className="mt-5 font-semibold">{feature.title}</h3>
                 <p className="mt-2 text-sm leading-6 text-muted-foreground">
                   {feature.description}
@@ -405,14 +405,14 @@ export default function LandingDeveloperTools05() {
                 className="group flex flex-col rounded-xl border p-6 transition-colors hover:bg-muted/40"
               >
                 <div className="flex items-center justify-between">
-                  <span className="flex size-10 items-center justify-center rounded-lg border bg-muted/50 font-semibold font-mono text-sm">
+                  <span className="flex size-10 items-center justify-center rounded-lg border bg-muted/50 font-semibold font-sans text-sm">
                     {item.name.charAt(0)}
                   </span>
-                  <span className="rounded-full bg-teal-500/10 px-2.5 py-0.5 text-xs font-medium text-teal-600 dark:text-teal-400">
+                  <span className="rounded-full bg-primary/10 px-2.5 py-0.5 text-xs font-medium text-primary dark:text-primary">
                     {item.tag}
                   </span>
                 </div>
-                <h3 className="mt-6 font-semibold font-mono text-sm">
+                <h3 className="mt-6 font-semibold font-sans text-sm">
                   {item.name}
                 </h3>
                 <p className="mt-1 flex-1 text-sm text-muted-foreground">
@@ -440,7 +440,7 @@ export default function LandingDeveloperTools05() {
                 key={step.title}
                 className="relative border-t-2 border-border pt-6"
               >
-                <span className="text-sm font-medium text-teal-600 dark:text-teal-400">
+                <span className="text-sm font-medium text-primary dark:text-primary">
                   Step {i + 1}
                 </span>
                 <h3 className="mt-2 text-lg font-semibold">{step.title}</h3>
@@ -541,7 +541,7 @@ export default function LandingDeveloperTools05() {
                           className={
                             featured
                               ? "mt-0.5 size-4 shrink-0"
-                              : "mt-0.5 size-4 shrink-0 text-teal-600 dark:text-teal-400"
+                              : "mt-0.5 size-4 shrink-0 text-primary dark:text-primary"
                           }
                         />
                         {feature}
@@ -687,12 +687,12 @@ export default function LandingDeveloperTools05() {
 
 function HeroVisual() {
   return (
-    <div className="overflow-hidden rounded-xl border border-zinc-800 bg-zinc-950 text-left shadow-2xl">
-      <div className="flex items-center gap-2 border-b border-zinc-800 px-4 py-3">
-        <span className="size-2.5 rounded-full bg-zinc-700" />
-        <span className="size-2.5 rounded-full bg-zinc-700" />
-        <span className="size-2.5 rounded-full bg-zinc-700" />
-        <span className="ml-3 font-mono text-xs text-zinc-500">~/designali</span>
+    <div className="overflow-hidden rounded-xl border border-foreground bg-foreground text-left shadow-2xl">
+      <div className="flex items-center gap-2 border-b border-foreground px-4 py-3">
+        <span className="size-2.5 rounded-full bg-foreground" />
+        <span className="size-2.5 rounded-full bg-foreground" />
+        <span className="size-2.5 rounded-full bg-foreground" />
+        <span className="ml-3 font-sans text-xs text-muted-foreground">~/designali</span>
       </div>
       <pre className="overflow-x-auto p-5 font-mono text-[13px] leading-6">
         {terminal.map((line, i) => (
@@ -700,15 +700,15 @@ function HeroVisual() {
             key={i}
             className={
               line.startsWith("$")
-                ? "text-zinc-100"
+                ? "text-background"
                 : line.startsWith("#")
-                  ? "text-zinc-500"
-                  : "text-zinc-400"
+                  ? "text-muted-foreground"
+                  : "text-muted-foreground"
             }
           >
             {line.startsWith("$") ? (
               <>
-                <span className="text-teal-400">$</span>
+                <span className="text-primary">$</span>
                 {line.slice(1)}
               </>
             ) : (
@@ -716,7 +716,7 @@ function HeroVisual() {
             )}
           </div>
         ))}
-        <span className="inline-block h-4 w-2 translate-y-0.5 animate-pulse bg-zinc-300" />
+        <span className="inline-block h-4 w-2 translate-y-0.5 animate-pulse bg-border" />
       </pre>
     </div>
   )

@@ -14,12 +14,12 @@ import {
 import { cn } from "@workspace/ui/lib/utils"
 
 const tiles = [
-  "from-rose-300 to-orange-200",
-  "from-sky-300 to-indigo-200",
-  "from-emerald-300 to-lime-200",
-  "from-violet-300 to-fuchsia-200",
-  "from-amber-300 to-yellow-200",
-  "from-teal-300 to-cyan-200",
+  "from-chart-1 to-primary/20",
+  "from-chart-1 to-primary/20",
+  "from-chart-1 to-primary/20",
+  "from-chart-1 to-primary/20",
+  "from-chart-1 to-primary/20",
+  "from-chart-1 to-primary/20",
 ]
 const cols: Record<string, string> = {
   "1": "grid-cols-1",

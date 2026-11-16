@@ -65,7 +65,7 @@ export default function OrderSummaryCard() {
             <span>Subtotal</span>
             <span className="tabular-nums">{"$" + subtotal.toFixed(2)}</span>
           </div>
-          <div className="flex justify-between text-emerald-600 dark:text-emerald-400">
+          <div className="flex justify-between text-primary dark:text-primary">
             <span>Discount</span>
             <span className="tabular-nums">{"-$" + discount.toFixed(2)}</span>
           </div>

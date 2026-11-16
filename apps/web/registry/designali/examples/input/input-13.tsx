@@ -18,7 +18,7 @@ export default function NewsletterSignupInput() {
         One email a week with new templates, blocks and design tips.
       </p>
       {done ? (
-        <p className="flex items-center gap-2 text-xs text-emerald-600">
+        <p className="flex items-center gap-2 text-xs text-primary">
           <CircleCheckIcon className="size-4" />
           You&apos;re subscribed. Check your inbox to confirm.
         </p>

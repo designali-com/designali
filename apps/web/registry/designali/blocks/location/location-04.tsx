@@ -47,7 +47,7 @@ export default function Location04() {
           </div>
           <div className="flex flex-col justify-end gap-2 md:items-end md:text-end">
             <p className="text-lg">Online · Remote, worldwide</p>
-            <p className="font-mono text-xs text-muted-foreground">
+            <p className="font-sans text-xs text-muted-foreground">
               designali.com
             </p>
           </div>
@@ -61,7 +61,7 @@ export default function Location04() {
             >
               <div className="flex items-center justify-between">
                 <route.icon className="size-5" />
-                <span className="font-mono text-xs text-muted-foreground">
+                <span className="font-sans text-xs text-muted-foreground">
                   0{index + 1}
                 </span>
               </div>

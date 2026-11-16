@@ -8,11 +8,23 @@ import {
 
 import { Button } from "@workspace/ui/components/button"
 
+import { BentoGrid, BentoGridItem } from "@/registry/designali/ui/bento"
+import { CounterNumber } from "@/registry/designali/ui/counter-number"
+
 export default function Hero11() {
   return (
     <section className="w-full bg-background px-6 py-16 md:py-24">
-      <div className="mx-auto grid max-w-7xl gap-4 md:grid-cols-6 md:grid-rows-[auto_auto]">
-        <div className="flex flex-col justify-between border border-border bg-card p-8 md:col-span-4 md:row-span-2 md:p-12">
+      <BentoGrid
+        className="max-w-7xl"
+        cols={{ base: 1, md: 6 }}
+        gap={4}
+        rowHeight="auto"
+      >
+        <BentoGridItem
+          colSpan={{ base: 1, md: 4 }}
+          rowSpan={{ base: 1, md: 2 }}
+          className="flex flex-col justify-between border-border bg-card p-8 md:p-12"
+        >
           <div>
             <span className="inline-flex items-center gap-2 bg-muted px-2.5 py-1 text-xs">
               <Sparkles className="size-3.5" />
@@ -36,17 +48,28 @@ export default function Hero11() {
               View our work
             </Button>
           </div>
-        </div>
+        </BentoGridItem>
 
-        <div className="border border-border bg-foreground p-6 text-background md:col-span-2">
+        <BentoGridItem
+          colSpan={{ base: 1, md: 2 }}
+          className="border-border bg-foreground p-6 text-background"
+        >
           <Inbox className="size-5" />
-          <p className="mt-6 text-5xl font-medium tracking-tight">460+</p>
+          <CounterNumber
+            value={460}
+            suffix="+"
+            size="xl"
+            className="mt-6 block font-medium tracking-tight text-background"
+          />
           <p className="mt-2 text-sm opacity-70">
             production-ready blocks on designali.com
           </p>
-        </div>
+        </BentoGridItem>
 
-        <div className="border border-border p-6 md:col-span-2">
+        <BentoGridItem
+          colSpan={{ base: 1, md: 2 }}
+          className="border-border p-6"
+        >
           <div className="flex items-center justify-between">
             <Users className="size-5" />
             <div className="flex -space-x-2">
@@ -66,15 +89,18 @@ export default function Hero11() {
           <p className="mt-1 text-sm text-muted-foreground">
             Figma files and React code stay in sync from first draft to launch.
           </p>
-        </div>
+        </BentoGridItem>
 
-        <div className="border border-border p-6 md:col-span-3">
+        <BentoGridItem
+          colSpan={{ base: 1, md: 3 }}
+          className="border-border p-6"
+        >
           <p className="text-xs text-muted-foreground">This week in the studio</p>
           <ul className="mt-4 space-y-3 text-sm">
             {[
-              ["Dalim brand identity refresh", "Branding", "bg-amber-500"],
-              ["Portfolio template, Next.js build", "Development", "bg-sky-500"],
-              ["Dashboard UI kit for designali.com", "UI/UX", "bg-emerald-500"],
+              ["Dalim brand identity refresh", "Branding", "bg-primary"],
+              ["Portfolio template, Next.js build", "Development", "bg-primary"],
+              ["Dashboard UI kit for designali.com", "UI/UX", "bg-primary"],
             ].map(([subject, tag, dot]) => (
               <li key={subject} className="flex items-center gap-3">
                 <span className={`size-2 shrink-0 rounded-full ${dot}`} />
@@ -83,9 +109,12 @@ export default function Hero11() {
               </li>
             ))}
           </ul>
-        </div>
+        </BentoGridItem>
 
-        <div className="flex items-center gap-4 border border-border bg-muted/50 p-6 md:col-span-3">
+        <BentoGridItem
+          colSpan={{ base: 1, md: 3 }}
+          className="flex items-center gap-4 border-border bg-muted/50 p-6"
+        >
           <Calendar className="size-5 shrink-0" />
           <p className="text-sm">
             <span className="font-medium">Remote, worldwide.</span>{" "}
@@ -93,8 +122,8 @@ export default function Hero11() {
               Working with clients across timezones — reach us at hello@designali.com.
             </span>
           </p>
-        </div>
-      </div>
+        </BentoGridItem>
+      </BentoGrid>
     </section>
   )
 }

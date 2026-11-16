@@ -62,7 +62,7 @@ export default function BankTransactionDetails() {
                 <span
                   className={cn(
                     "text-sm",
-                    tx.amount > 0 && "text-emerald-600 dark:text-emerald-400"
+                    tx.amount > 0 && "text-primary dark:text-primary"
                   )}
                 >
                   {tx.amount > 0 ? "+" : "-"}${Math.abs(tx.amount).toFixed(2)}

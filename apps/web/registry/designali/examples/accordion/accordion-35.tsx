@@ -60,7 +60,7 @@ export default function AccordionDeploymentLogs() {
           <AccordionTrigger className="items-center px-3 hover:bg-muted/50 hover:no-underline">
             <span className="flex items-center gap-2">
               {step.status === "success" && (
-                <CircleCheckIcon className="size-4 text-emerald-600 dark:text-emerald-400" />
+                <CircleCheckIcon className="size-4 text-primary dark:text-primary" />
               )}
               {step.status === "failed" && (
                 <CircleXIcon className="size-4 text-destructive" />
@@ -70,7 +70,7 @@ export default function AccordionDeploymentLogs() {
               )}
               {step.title}
             </span>
-            <span className="ms-auto me-2 font-mono font-normal text-muted-foreground">
+            <span className="ms-auto me-2 font-sans font-normal text-muted-foreground">
               {step.duration}
             </span>
             <ChevronDownIcon className="size-4 text-muted-foreground transition-transform group-aria-expanded/accordion-trigger:rotate-180" />

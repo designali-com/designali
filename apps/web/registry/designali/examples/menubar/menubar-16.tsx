@@ -18,9 +18,9 @@ import {
 import { cn } from "@workspace/ui/lib/utils"
 
 const calendars = [
-  { id: "work", label: "Work", color: "bg-sky-500" },
-  { id: "personal", label: "Personal", color: "bg-emerald-500" },
-  { id: "holidays", label: "Holidays", color: "bg-amber-500" },
+  { id: "work", label: "Designali Studio", color: "bg-primary" },
+  { id: "personal", label: "Client Projects", color: "bg-primary" },
+  { id: "holidays", label: "Ali Imam", color: "bg-primary" },
 ]
 
 export default function CalendarAppMenubar() {
@@ -75,7 +75,7 @@ export default function CalendarAppMenubar() {
             </MenubarGroup>
             <MenubarSeparator />
             <MenubarGroup>
-              <MenubarItem inset>New calendar...</MenubarItem>
+              <MenubarItem inset>New Designali calendar...</MenubarItem>
             </MenubarGroup>
           </MenubarContent>
         </MenubarMenu>

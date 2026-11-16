@@ -29,8 +29,8 @@ export default function PasswordStrengthLabel() {
           className={cn(
             "text-xs font-medium",
             score >= 3
-              ? "text-emerald-600 dark:text-emerald-400"
-              : "text-amber-600 dark:text-amber-400"
+              ? "text-primary dark:text-primary"
+              : "text-primary dark:text-primary"
           )}
         >
           {levels[score]}

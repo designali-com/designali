@@ -14,7 +14,7 @@ export default function CallToAction06() {
           </p>
         </div>
         <div className="flex w-full flex-col gap-4 lg:w-auto">
-          <div className="flex items-center justify-between gap-6 border border-background/20 px-4 py-3 font-mono text-sm">
+          <div className="flex items-center justify-between gap-6 border border-background/20 px-4 py-3 font-sans text-sm">
             <span>
               <span className="text-background/50">$ </span>
               npx shadcn add @designali/hero-06

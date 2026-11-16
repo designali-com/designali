@@ -28,7 +28,7 @@ export default function FeedPostPortrait() {
       </div>
       <AspectRatio
         ratio={4 / 5}
-        className="bg-linear-to-b from-sky-300 via-orange-200 to-amber-500 dark:from-sky-800 dark:via-orange-800 dark:to-amber-900"
+        className="bg-linear-to-b from-chart-1 via-primary/20 to-primary dark:from-chart-4 dark:via-chart-4 dark:to-chart-5"
         onDoubleClick={() => setLiked(true)}
       />
       <div className="flex items-center gap-1 p-1.5">
@@ -38,7 +38,7 @@ export default function FeedPostPortrait() {
           aria-label="Like"
           onClick={() => setLiked((value) => !value)}
         >
-          <HeartIcon className={cn(liked && "fill-red-500 text-red-500")} />
+          <HeartIcon className={cn(liked && "fill-destructive text-destructive")} />
         </Button>
         <Button variant="ghost" size="icon-sm" aria-label="Comment">
           <MessageCircleIcon />

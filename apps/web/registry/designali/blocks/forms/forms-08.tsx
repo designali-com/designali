@@ -29,7 +29,7 @@ export default function Forms08() {
       <div className="mx-auto grid max-w-7xl lg:grid-cols-[1fr_1.1fr]">
         <div className="relative flex flex-col justify-between gap-16 overflow-hidden bg-muted p-8 md:p-12">
           <div
-            className="absolute -top-24 -right-24 size-80 rounded-full bg-gradient-to-br from-emerald-300/60 to-sky-400/40 blur-3xl dark:from-emerald-500/30 dark:to-sky-600/20"
+            className="absolute -top-24 -right-24 size-80 rounded-full bg-gradient-to-br from-chart-1/60 to-primary/40 blur-3xl dark:from-primary/30 dark:to-chart-2/20"
             aria-hidden
           />
           <p className="relative text-sm font-semibold">designali</p>
@@ -87,12 +87,12 @@ export default function Forms08() {
                     "h-1 flex-1 bg-muted transition-colors",
                     index < passed &&
                       (passed <= 1
-                        ? "bg-red-500"
+                        ? "bg-destructive"
                         : passed <= 2
-                          ? "bg-amber-500"
+                          ? "bg-primary"
                           : passed <= 3
-                            ? "bg-lime-500"
-                            : "bg-emerald-500")
+                            ? "bg-primary"
+                            : "bg-primary")
                   )}
                 />
               ))}
@@ -112,7 +112,7 @@ export default function Forms08() {
                     )}
                   >
                     {ok ? (
-                      <Check className="size-3.5 text-emerald-600 dark:text-emerald-400" />
+                      <Check className="size-3.5 text-primary dark:text-primary" />
                     ) : (
                       <X className="size-3.5" />
                     )}

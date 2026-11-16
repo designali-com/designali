@@ -82,7 +82,7 @@ export function HeroSection() {
           
           {/* Badge */}
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-border bg-muted/50 px-4 py-1.5 text-xs text-muted-foreground backdrop-blur-md">
-            <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
+            <span className="h-2 w-2 rounded-full bg-primary animate-pulse" />
             Designali Studio · Design se code tak
           </div>
 
@@ -114,7 +114,7 @@ export function HeroSection() {
 
           <div className="mt-12 grid w-full max-w-[650px] md:grid-cols-3 md:border-t border-border/60 pt-7">
             <div className="px-4 text-center">
-              <h3 className="font-serif text-base font-medium">
+              <h3 className="font-sans text-base font-medium">
                 Brand Identity
               </h3>
               <p className="m-2 text-[11px] text-muted-foreground">
@@ -123,7 +123,7 @@ export function HeroSection() {
             </div>
 
             <div className="border-y md:border-y-0 md:border-x border-border/60 p-4 text-center">
-              <h3 className="font-serif text-base font-medium">
+              <h3 className="font-sans text-base font-medium">
                 UI/UX Design
               </h3>
               <p className="m-2 text-[11px] text-muted-foreground">
@@ -132,7 +132,7 @@ export function HeroSection() {
             </div>
 
             <div className="px-4 text-center">
-              <h3 className="font-serif text-base font-medium">
+              <h3 className="font-sans text-base font-medium">
                 Production Code
               </h3>
               <p className="mt-2 text-[11px] text-muted-foreground">

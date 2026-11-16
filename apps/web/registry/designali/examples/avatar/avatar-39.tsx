@@ -27,17 +27,17 @@ export default function ReviewerApprovalStatus() {
           <Avatar>
             <AvatarFallback>{reviewer.initials}</AvatarFallback>
             {reviewer.state === "Approved" && (
-              <AvatarBadge className="bg-emerald-500 text-white">
+              <AvatarBadge className="bg-primary text-white">
                 <CheckIcon />
               </AvatarBadge>
             )}
             {reviewer.state === "Changes requested" && (
-              <AvatarBadge className="bg-red-500 text-white">
+              <AvatarBadge className="bg-destructive text-white">
                 <XIcon />
               </AvatarBadge>
             )}
             {reviewer.state === "Pending" && (
-              <AvatarBadge className="bg-amber-500 text-white">
+              <AvatarBadge className="bg-primary text-white">
                 <ClockIcon />
               </AvatarBadge>
             )}

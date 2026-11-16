@@ -46,7 +46,7 @@ export default function SupportChatCard() {
           <Avatar className="size-8">
             <AvatarImage src="/ali.jpg" alt="Ali Imam" />
             <AvatarFallback>AI</AvatarFallback>
-            <AvatarBadge className="bg-emerald-500" />
+            <AvatarBadge className="bg-primary" />
           </Avatar>
           <div className="grid">
             <CardTitle>Ali Imam</CardTitle>

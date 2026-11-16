@@ -37,7 +37,7 @@ export default function PasswordRequirementsField() {
               key={rule.label}
               className={cn(
                 "flex items-center gap-1.5",
-                ok ? "text-emerald-600" : "text-muted-foreground"
+                ok ? "text-primary" : "text-muted-foreground"
               )}
             >
               {ok ? (

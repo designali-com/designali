@@ -25,7 +25,7 @@ export default function AlertLowStock() {
           <tbody>
             {items.map((item) => (
               <tr key={item.sku} className="border-b last:border-0">
-                <td className="py-1 pe-2 font-mono text-[10px]">{item.sku}</td>
+                <td className="py-1 pe-2 font-sans text-[10px]">{item.sku}</td>
                 <td className="py-1 text-foreground">{item.name}</td>
                 <td className="py-1 text-end font-medium text-foreground">
                   {item.left} left

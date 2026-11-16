@@ -3,7 +3,7 @@ import { AspectRatio } from "@workspace/ui/components/aspect-ratio"
 export default function LaptopScreenMockup() {
   return (
     <div className="w-full max-w-md">
-      <div className="mx-[6%] rounded-t-lg border-[6px] border-b-0 border-zinc-800 dark:border-zinc-600">
+      <div className="mx-[6%] rounded-t-lg border-[6px] border-b-0 border-foreground dark:border-border">
         <AspectRatio ratio={16 / 10} className="bg-background">
           <div className="absolute inset-0 grid grid-cols-3 grid-rows-[auto_1fr] gap-1.5 p-2">
             {["$48k", "1,204", "3.2%"].map((stat) => (
@@ -24,7 +24,7 @@ export default function LaptopScreenMockup() {
           </div>
         </AspectRatio>
       </div>
-      <div className="h-3 rounded-b-xl bg-zinc-300 dark:bg-zinc-700" />
+      <div className="h-3 rounded-b-xl bg-border dark:bg-muted" />
     </div>
   )
 }

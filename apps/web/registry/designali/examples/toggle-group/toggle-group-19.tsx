@@ -48,7 +48,7 @@ export default function ResponsivePreviewToggleGroup() {
           )}
         >
           <div className="h-2 w-1/2 bg-muted" />
-          <div className="h-12 bg-gradient-to-br from-indigo-200 to-sky-200 dark:from-indigo-900 dark:to-sky-900" />
+          <div className="h-12 bg-gradient-to-br from-primary/20 to-primary/20 dark:from-chart-5 dark:to-chart-5" />
           <div className="h-2 bg-muted" />
           <div className="h-2 w-3/4 bg-muted" />
         </div>

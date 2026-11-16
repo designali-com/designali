@@ -5,7 +5,7 @@ export function LabelDemo() {
   return (
     <div className="flex gap-2">
       <Checkbox id="terms" />
-      <Label htmlFor="terms">Accept terms and conditions</Label>
+      <Label htmlFor="terms">Accept Designali terms and conditions</Label>
     </div>
   )
 }

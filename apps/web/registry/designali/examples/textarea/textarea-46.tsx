@@ -30,7 +30,7 @@ export default function CharacterRingComposer() {
             <span
               className={cn(
                 "text-xs tabular-nums",
-                left < 0 ? "text-destructive" : "text-amber-600"
+                left < 0 ? "text-destructive" : "text-primary"
               )}
             >
               {left}
@@ -58,7 +58,7 @@ export default function CharacterRingComposer() {
                 left < 0
                   ? "stroke-destructive"
                   : left <= 20
-                    ? "stroke-amber-500"
+                    ? "stroke-primary"
                     : "stroke-primary"
               )}
             />

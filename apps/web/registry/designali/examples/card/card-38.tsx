@@ -54,7 +54,7 @@ export default function CourseProgressCard() {
                 {m.title}
               </span>
               {m.done === m.lessons ? (
-                <CircleCheckIcon className="size-3.5 text-emerald-500" />
+                <CircleCheckIcon className="size-3.5 text-primary" />
               ) : (
                 <span className="text-muted-foreground">
                   {m.done}/{m.lessons}

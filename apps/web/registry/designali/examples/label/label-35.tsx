@@ -4,20 +4,20 @@ import { Label } from "@workspace/ui/components/label"
 const addOns = [
   {
     id: "addon-wrap",
-    title: "Gift wrapping",
-    desc: "Recycled paper and a handwritten note",
+    title: "Figma source files",
+    desc: "Editable Figma file for your Designali template",
     price: "$4.00",
   },
   {
     id: "addon-insure",
-    title: "Shipping protection",
-    desc: "Covers loss, theft, and damage",
+    title: "Custom logo by Designali",
+    desc: "Brand mark designed by Ali Imam",
     price: "$2.49",
   },
   {
     id: "addon-express",
-    title: "Express delivery",
-    desc: "Arrives in 1-2 business days",
+    title: "Priority setup",
+    desc: "Deployed to Vercel in 1-2 business days",
     price: "$9.00",
   },
 ]

@@ -10,6 +10,8 @@ import { Button } from "@workspace/ui/components/button"
 import { Checkbox } from "@workspace/ui/components/checkbox"
 import { cn } from "@workspace/ui/lib/utils"
 
+import { CounterNumber } from "@/registry/designali/ui/counter-number"
+
 const base = {
   name: "Core workspace",
   price: 39,
@@ -100,9 +102,11 @@ export default function Pricing14() {
             <p className="text-xs tracking-widest text-background/60 uppercase">
               Your monthly total
             </p>
-            <p className="mt-4 text-5xl font-semibold tracking-tight">
-              ${total}
-            </p>
+            <CounterNumber
+              value={total}
+              prefix="$"
+              className="mt-4 block text-5xl font-semibold tracking-tight text-background"
+            />
             <p className="mt-2 text-sm text-background/60">
               Core + {chosen.length} add-on{chosen.length === 1 ? "" : "s"}
             </p>

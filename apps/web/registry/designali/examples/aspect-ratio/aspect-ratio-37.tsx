@@ -46,7 +46,7 @@ export default function AudioWaveformStrip() {
             ))}
           </svg>
         </AspectRatio>
-        <div className="mt-1 flex justify-between font-mono text-[10px] text-muted-foreground">
+        <div className="mt-1 flex justify-between font-sans text-[10px] text-muted-foreground">
           <span>0:27</span>
           <span>1:04</span>
         </div>

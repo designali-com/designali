@@ -15,8 +15,8 @@ export function HoverCardSides() {
           <HoverCardTrigger delay={100} closeDelay={100} render={<Button variant="outline" className="capitalize">{side}</Button>} />
           <HoverCardContent side={side}>
             <div className="flex flex-col gap-1">
-              <h4 className="font-medium">Hover Card</h4>
-              <p>This hover card appears on the {side} side of the trigger.</p>
+              <h4 className="font-medium">@designali_com</h4>
+              <p>Design se code tak by Ali Imam. This card opens on the {side} side.</p>
             </div>
           </HoverCardContent>
         </HoverCard>

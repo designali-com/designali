@@ -24,16 +24,16 @@ export default function ParentalControlsPin() {
     <div className="flex w-full max-w-sm flex-col gap-4 border p-4">
       <div className="flex items-center justify-between gap-4">
         <div>
-          <Label htmlFor="parental">Parental controls</Label>
+          <Label htmlFor="parental">Client approval lock</Label>
           <p className="mt-1 text-xs text-muted-foreground">
-            Require a PIN for mature titles.
+            Require a PIN before Designali files are sent to clients.
           </p>
         </div>
         <Switch id="parental" checked={enabled} onCheckedChange={setEnabled} />
       </div>
       <Separator />
       <Field className="w-fit">
-        <FieldLabel htmlFor="parental-pin">Profile PIN</FieldLabel>
+        <FieldLabel htmlFor="parental-pin">Studio PIN</FieldLabel>
         <InputOTP
           id="parental-pin"
           maxLength={4}
@@ -50,7 +50,7 @@ export default function ParentalControlsPin() {
         <FieldDescription>
           {enabled
             ? "Choose 4 digits you'll remember."
-            : "Turn on controls to set a PIN."}
+            : "Turn on the lock to set a PIN."}
         </FieldDescription>
       </Field>
     </div>

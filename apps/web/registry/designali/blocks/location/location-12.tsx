@@ -5,11 +5,11 @@ import { useState } from "react"
 import { cn } from "@workspace/ui/lib/utils"
 
 const zones = [
-  { id: 1, name: "Main stage", detail: "Keynotes with Ali Imam", x: 20, y: 20, w: 260, h: 150, tone: "fill-violet-200 dark:fill-violet-900/50" },
-  { id: 2, name: "Workshop rooms A-D", detail: "Hands-on Figma and Next.js sessions", x: 300, y: 20, w: 180, h: 150, tone: "fill-sky-200 dark:fill-sky-900/50" },
-  { id: 3, name: "Showcase", detail: "Designali templates, blocks and icons", x: 20, y: 190, w: 300, h: 130, tone: "fill-amber-200 dark:fill-amber-900/50" },
-  { id: 4, name: "Lounge", detail: "Portfolio reviews 12:00-14:00", x: 340, y: 190, w: 140, h: 130, tone: "fill-emerald-200 dark:fill-emerald-900/50" },
-  { id: 5, name: "Registration", detail: "Sign in from 08:00", x: 200, y: 340, w: 120, h: 50, tone: "fill-rose-200 dark:fill-rose-900/50" },
+  { id: 1, name: "Main stage", detail: "Keynotes with Ali Imam", x: 20, y: 20, w: 260, h: 150, tone: "fill-chart-1 dark:fill-chart-5/50" },
+  { id: 2, name: "Workshop rooms A-D", detail: "Hands-on Figma and Next.js sessions", x: 300, y: 20, w: 180, h: 150, tone: "fill-chart-1 dark:fill-chart-5/50" },
+  { id: 3, name: "Showcase", detail: "Designali templates, blocks and icons", x: 20, y: 190, w: 300, h: 130, tone: "fill-chart-1 dark:fill-chart-5/50" },
+  { id: 4, name: "Lounge", detail: "Portfolio reviews 12:00-14:00", x: 340, y: 190, w: 140, h: 130, tone: "fill-chart-1 dark:fill-chart-5/50" },
+  { id: 5, name: "Registration", detail: "Sign in from 08:00", x: 200, y: 340, w: 120, h: 50, tone: "fill-chart-1 dark:fill-chart-5/50" },
 ]
 
 export default function Location12() {

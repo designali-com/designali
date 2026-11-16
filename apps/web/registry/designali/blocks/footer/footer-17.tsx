@@ -21,7 +21,7 @@ const services = [
 
 export default function Footer17() {
   return (
-    <footer className="w-full border-t bg-background font-mono">
+    <footer className="w-full border-t bg-background font-sans">
       <div className="mx-auto grid max-w-7xl gap-10 px-6 py-14 lg:grid-cols-[1fr_1.4fr]">
         <div>
           <p className="flex items-center gap-2 text-sm font-semibold">
@@ -48,7 +48,7 @@ export default function Footer17() {
               {services.map((service) => (
                 <li key={service.name} className="flex items-center justify-between border-b px-4 py-2.5 last:border-b-0">
                   <span className="flex items-center gap-2">
-                    <span className={`size-1.5 rounded-full ${service.ok ? "bg-emerald-500" : "bg-amber-500"}`} />
+                    <span className={`size-1.5 rounded-full ${service.ok ? "bg-primary" : "bg-primary"}`} />
                     {service.name}
                   </span>
                   <span className="text-muted-foreground">

@@ -37,7 +37,7 @@ export default function PackageManagerTabs() {
       <div className="flex items-center justify-between border-b bg-muted/40 pe-1">
         <TabsList variant="line" className="h-9">
           {Object.keys(commands).map((key) => (
-            <TabsTrigger key={key} value={key} className="font-mono">
+            <TabsTrigger key={key} value={key} className="font-sans">
               {key}
             </TabsTrigger>
           ))}
@@ -55,7 +55,7 @@ export default function PackageManagerTabs() {
         </Button>
       </div>
       {Object.entries(commands).map(([key, cmd]) => (
-        <TabsContent key={key} value={key} className="px-3 py-3 font-mono">
+        <TabsContent key={key} value={key} className="px-3 py-3 font-sans">
           <span className="text-muted-foreground">$ </span>
           {cmd}
         </TabsContent>

@@ -11,9 +11,9 @@ const days = Array.from({ length: 30 }, (_, i) => ({
   status: i === 11 ? "outage" : i === 4 || i === 22 ? "degraded" : "ok",
 }))
 const tone: Record<string, string> = {
-  ok: "bg-emerald-500",
-  degraded: "bg-amber-500",
-  outage: "bg-rose-500",
+  ok: "bg-primary",
+  degraded: "bg-primary",
+  outage: "bg-primary",
 }
 const text: Record<string, string> = {
   ok: "No incidents",

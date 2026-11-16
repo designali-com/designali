@@ -17,7 +17,7 @@ export default function AmountLabelWithBalance() {
   return (
     <div className="grid w-full max-w-sm gap-2">
       <div className="flex items-center justify-between">
-        <Label htmlFor="amount">Amount</Label>
+        <Label htmlFor="amount">Designali payout</Label>
         <span className="text-xs text-muted-foreground">
           Available:{" "}
           <span className="font-medium text-foreground">$3,218.40</span>

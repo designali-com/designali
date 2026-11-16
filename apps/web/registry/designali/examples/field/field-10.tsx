@@ -14,7 +14,7 @@ import {
 export default function ShippingAddressFields() {
   return (
     <FieldSet className="w-full max-w-md">
-      <FieldLegend>Shipping address</FieldLegend>
+      <FieldLegend>Billing address for designali.com</FieldLegend>
       <FieldGroup className="gap-4">
         <div className="grid grid-cols-2 gap-3">
           <Field>

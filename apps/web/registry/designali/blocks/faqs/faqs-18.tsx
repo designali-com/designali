@@ -102,7 +102,7 @@ export default function Faqs18() {
                     href={`#${section.id}`}
                     className="-ms-px flex gap-3 border-s border-transparent py-1.5 ps-4 text-sm text-muted-foreground transition-colors hover:border-foreground hover:text-foreground"
                   >
-                    <span className="font-mono text-xs leading-5">
+                    <span className="font-sans text-xs leading-5">
                       {String(index + 1).padStart(2, "0")}
                     </span>
                     {section.title}
@@ -126,7 +126,7 @@ export default function Faqs18() {
                 className="scroll-mt-8"
               >
                 <div className="flex items-baseline gap-3">
-                  <span className="font-mono text-sm text-muted-foreground">
+                  <span className="font-sans text-sm text-muted-foreground">
                     {String(index + 1).padStart(2, "0")}
                   </span>
                   <h3 className="text-2xl font-semibold tracking-tight">

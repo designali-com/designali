@@ -30,7 +30,7 @@ export default function InvoiceStatusList() {
         <div key={invoice.id} className="flex items-center gap-3 p-3">
           <div className="min-w-0 flex-1">
             <p className="truncate text-sm font-medium">{invoice.client}</p>
-            <p className="font-mono text-xs text-muted-foreground">
+            <p className="font-sans text-xs text-muted-foreground">
               {invoice.id}
             </p>
           </div>
@@ -46,7 +46,7 @@ export default function InvoiceStatusList() {
             className={cn(
               "w-20",
               invoice.status === "Paid" &&
-                "bg-emerald-50 text-emerald-700 dark:bg-emerald-950 dark:text-emerald-300"
+                "bg-primary/5 text-chart-3 dark:bg-primary/10 dark:text-chart-1"
             )}
           >
             {invoice.status}

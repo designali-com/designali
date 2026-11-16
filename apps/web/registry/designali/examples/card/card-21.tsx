@@ -14,10 +14,10 @@ import {
 import { cn } from "@workspace/ui/lib/utils"
 
 const segments = [
-  { label: "Figma files", gb: 18.4, className: "bg-sky-500" },
-  { label: "Templates", gb: 31.2, className: "bg-violet-500" },
-  { label: "Motion & CGI", gb: 22.7, className: "bg-amber-500" },
-  { label: "Other", gb: 6.1, className: "bg-zinc-400" },
+  { label: "Figma files", gb: 18.4, className: "bg-primary" },
+  { label: "Templates", gb: 31.2, className: "bg-primary" },
+  { label: "Motion & CGI", gb: 22.7, className: "bg-primary" },
+  { label: "Other", gb: 6.1, className: "bg-muted-foreground" },
 ]
 const total = 100
 

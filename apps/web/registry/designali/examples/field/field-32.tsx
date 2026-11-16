@@ -12,23 +12,23 @@ import {
 } from "@workspace/ui/components/field"
 
 const events = [
-  "invoice.paid",
-  "invoice.failed",
-  "customer.created",
+  "template.purchased",
+  "license.renewed",
+  "block.downloaded",
   "subscription.canceled",
 ]
 
 export default function WebhookEventsSelectAll() {
   const [selected, setSelected] = React.useState([
-    "invoice.paid",
-    "invoice.failed",
+    "template.purchased",
+    "license.renewed",
   ])
   const all = selected.length === events.length
   const some = selected.length > 0 && !all
 
   return (
     <FieldSet className="w-full max-w-xs">
-      <FieldLegend variant="label">Events to send</FieldLegend>
+      <FieldLegend variant="label">Designali webhook events</FieldLegend>
       <Field orientation="horizontal">
         <Checkbox
           id="events-all"
@@ -50,7 +50,7 @@ export default function WebhookEventsSelectAll() {
                 )
               }
             />
-            <FieldLabel htmlFor={"ev-" + ev} className="font-mono font-normal">
+            <FieldLabel htmlFor={"ev-" + ev} className="font-sans font-normal">
               {ev}
             </FieldLabel>
           </Field>

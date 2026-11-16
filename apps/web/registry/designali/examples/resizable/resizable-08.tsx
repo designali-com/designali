@@ -25,7 +25,7 @@ export default function MarkdownEditorPreview() {
           value={text}
           onChange={(event) => setText(event.target.value)}
           aria-label="Markdown source"
-          className="h-full resize-none border-0 font-mono text-xs focus-visible:ring-0"
+          className="h-full resize-none border-0 font-sans text-xs focus-visible:ring-0"
         />
       </ResizablePanel>
       <ResizableHandle withHandle />

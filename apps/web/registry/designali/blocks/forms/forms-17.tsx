@@ -51,7 +51,7 @@ export default function Forms17() {
       <div className="mx-auto flex min-h-[520px] max-w-2xl flex-col justify-center px-6 py-20">
         {done ? (
           <div aria-live="polite">
-            <p className="font-mono text-xs text-muted-foreground">All done</p>
+            <p className="font-sans text-xs text-muted-foreground">All done</p>
             <h2 className="mt-4 text-3xl font-semibold tracking-tight md:text-4xl">
               Thanks, {answers.name || "friend"}. Your plan is on its way.
             </h2>
@@ -70,7 +70,7 @@ export default function Forms17() {
               if (value) next()
             }}
           >
-            <p className="flex items-center gap-2 font-mono text-xs text-muted-foreground">
+            <p className="flex items-center gap-2 font-sans text-xs text-muted-foreground">
               {index + 1} <ArrowRight className="size-3" /> {questions.length}
             </p>
             <h2 className="mt-4 text-3xl leading-tight font-semibold tracking-tight md:text-4xl">
@@ -102,7 +102,7 @@ export default function Forms17() {
                   >
                     <span
                       className={cn(
-                        "flex size-6 items-center justify-center border font-mono text-[10px]",
+                        "flex size-6 items-center justify-center border font-sans text-[10px]",
                         value === option ? "border-foreground bg-foreground text-background" : "border-border"
                       )}
                     >

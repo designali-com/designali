@@ -24,7 +24,7 @@ export default function Pricing15() {
           <div className="relative overflow-hidden border border-foreground bg-background p-8 md:col-span-4 md:row-span-2 md:p-10">
             <div
               aria-hidden="true"
-              className="absolute -right-24 -bottom-24 size-72 rounded-full bg-gradient-to-tr from-indigo-500/25 to-cyan-400/0 blur-2xl"
+              className="absolute -right-24 -bottom-24 size-72 rounded-full bg-gradient-to-tr from-primary/25 to-primary/0 blur-2xl"
             />
             <div className="relative flex h-full flex-col">
               <div className="flex items-center justify-between">

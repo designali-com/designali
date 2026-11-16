@@ -41,7 +41,7 @@ export default function ChangelogTimeline() {
             />
             <div className="flex flex-col gap-0.5">
               <div className="flex items-center gap-2">
-                <span className="font-mono text-xs font-medium">
+                <span className="font-sans text-xs font-medium">
                   v{r.version}
                 </span>
                 {i === 0 && <Badge>Latest</Badge>}

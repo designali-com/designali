@@ -1,7 +1,9 @@
+import { CounterNumber } from "@/registry/designali/ui/counter-number"
+
 const stats = [
-  { value: "48%", label: "Faster design-to-code handoff" },
-  { value: "2.1M", label: "Designali blocks rendered daily" },
-  { value: "99.98%", label: "designali.com uptime last 12 months" },
+  { value: 48, decimals: 0, suffix: "%", label: "Faster design-to-code handoff" },
+  { value: 2.1, decimals: 1, suffix: "M", label: "Designali blocks rendered daily" },
+  { value: 99.98, decimals: 2, suffix: "%", label: "designali.com uptime last 12 months" },
 ]
 
 const logos = [
@@ -65,8 +67,13 @@ export default function Clients12() {
                 className="border-b border-border py-6 sm:border-b-0 sm:border-l sm:px-6 sm:py-0"
               >
                 <dt className="text-sm text-muted-foreground">{stat.label}</dt>
-                <dd className="mt-3 text-4xl font-semibold tracking-tight md:text-5xl">
-                  {stat.value}
+                <dd className="mt-3">
+                  <CounterNumber
+                    value={stat.value}
+                    decimalPlaces={stat.decimals}
+                    suffix={stat.suffix}
+                    className="text-4xl font-semibold tracking-tight md:text-5xl"
+                  />
                 </dd>
               </div>
             ))}

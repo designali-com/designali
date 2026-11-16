@@ -47,14 +47,14 @@ export default function RegionStatusHoverCard() {
             <span
               className={cn(
                 "size-2 rounded-full",
-                r.status === "operational" ? "bg-emerald-500" : "bg-amber-500"
+                r.status === "operational" ? "bg-primary" : "bg-primary"
               )}
             />
             {r.name}
           </HoverCardTrigger>
           <HoverCardContent className="w-56">
             <div className="flex items-center justify-between">
-              <span className="font-mono font-medium">{r.code}</span>
+              <span className="font-sans font-medium">{r.code}</span>
               <Badge
                 variant={
                   r.status === "operational" ? "secondary" : "destructive"
@@ -75,7 +75,7 @@ export default function RegionStatusHoverCard() {
               </div>
             </div>
             {r.status !== "operational" && (
-              <p className="mt-2 flex items-center gap-1.5 text-amber-600">
+              <p className="mt-2 flex items-center gap-1.5 text-primary">
                 <TriangleAlertIcon className="size-3.5" />
                 Elevated error rates on template downloads
               </p>

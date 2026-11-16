@@ -1,3 +1,5 @@
+import { CounterNumber } from "@/registry/designali/ui/counter-number"
+
 const weeks = 26
 const dayLabels = ["Mon", "", "Wed", "", "Fri", "", "Sun"]
 
@@ -15,10 +17,10 @@ function level(week: number, day: number) {
 
 const tones = [
   "bg-muted",
-  "bg-emerald-200 dark:bg-emerald-900",
-  "bg-emerald-400 dark:bg-emerald-700",
-  "bg-emerald-500 dark:bg-emerald-500",
-  "bg-emerald-700 dark:bg-emerald-300",
+  "bg-primary/20 dark:bg-primary/10",
+  "bg-primary dark:bg-chart-3",
+  "bg-primary dark:bg-primary",
+  "bg-chart-3 dark:bg-chart-1",
 ]
 
 const monthLabels = ["Jun", "Jul", "Aug", "Sep", "Oct", "Nov"]
@@ -41,15 +43,15 @@ export default function Analytics14() {
           </div>
           <div className="flex gap-8 text-sm">
             <div>
-              <p className="text-2xl font-semibold">1,906</p>
+              <CounterNumber value={1906} className="block text-2xl font-semibold" />
               <p className="text-xs text-muted-foreground">Deploys</p>
             </div>
             <div>
-              <p className="text-2xl font-semibold">{activeDays}</p>
+              <CounterNumber value={activeDays} className="block text-2xl font-semibold" />
               <p className="text-xs text-muted-foreground">Active days</p>
             </div>
             <div>
-              <p className="text-2xl font-semibold">23</p>
+              <CounterNumber value={23} className="block text-2xl font-semibold" />
               <p className="text-xs text-muted-foreground">Day streak</p>
             </div>
           </div>

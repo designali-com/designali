@@ -15,12 +15,12 @@ import { Input } from "@workspace/ui/components/input"
 type Msg = { user: string; text: string; color: string; host?: boolean }
 
 const initial: Msg[] = [
-  { user: "tomasz_b", text: "audio is crisp today", color: "text-sky-600 dark:text-sky-400" },
-  { user: "hana.k", text: "will the template be shared after?", color: "text-rose-600 dark:text-rose-400" },
+  { user: "tomasz_b", text: "audio is crisp today", color: "text-primary dark:text-primary" },
+  { user: "hana.k", text: "will the template be shared after?", color: "text-primary dark:text-primary" },
   { user: "Designali", text: "Yes! The template link goes out to everyone at the end.", color: "text-foreground", host: true },
-  { user: "ravi_codes", text: "joining from Pune, morning all", color: "text-emerald-600 dark:text-emerald-400" },
-  { user: "mel_w", text: "can you zoom in on the config panel?", color: "text-amber-600 dark:text-amber-400" },
-  { user: "oskar", text: "that keyboard shortcut just saved me an hour", color: "text-violet-600 dark:text-violet-400" },
+  { user: "ravi_codes", text: "joining from Pune, morning all", color: "text-primary dark:text-primary" },
+  { user: "mel_w", text: "can you zoom in on the config panel?", color: "text-primary dark:text-primary" },
+  { user: "oskar", text: "that keyboard shortcut just saved me an hour", color: "text-primary dark:text-primary" },
 ]
 
 export default function Media10() {
@@ -33,12 +33,13 @@ export default function Media10() {
       <div className="mx-auto grid max-w-7xl gap-4 px-6 lg:grid-cols-[1fr_340px]">
         <div className="min-w-0">
           <div className="relative aspect-video w-full overflow-hidden border border-border bg-black">
-            <div
-              className="absolute inset-0"
-              style={{ background: "radial-gradient(ellipse at 50% 40%, var(--chart-2), transparent 60%), linear-gradient(160deg, #111, #000)" }}
+            <img
+              src="/img/dashboard-1-dark.jpg"
+              alt="Ali Imam sharing his screen on Designali Live"
+              className="absolute inset-0 size-full object-cover"
             />
             <div className="absolute top-3 left-3 flex items-center gap-2">
-              <span className="flex items-center gap-1.5 bg-red-600 px-2 py-0.5 text-xs font-semibold text-white">
+              <span className="flex items-center gap-1.5 bg-destructive px-2 py-0.5 text-xs font-semibold text-white">
                 <span className="size-1.5 animate-pulse rounded-full bg-white" /> LIVE
               </span>
               <span className="flex items-center gap-1 bg-black/60 px-2 py-0.5 text-xs text-white backdrop-blur">
@@ -63,7 +64,7 @@ export default function Media10() {
             </div>
             <div className="flex gap-2">
               <Button variant="outline" onClick={() => setHearts((h) => h + 1)}>
-                <Heart className="text-rose-500" /> {hearts.toLocaleString()}
+                <Heart className="text-primary" /> {hearts.toLocaleString()}
               </Button>
               <Button variant="outline"><Share2 /> Share</Button>
               <Button>Follow</Button>

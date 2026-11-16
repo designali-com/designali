@@ -14,7 +14,7 @@ export default function FileUploadInput() {
 
   return (
     <Field className="w-full max-w-sm">
-      <FieldLabel htmlFor="csv-upload">Import contacts</FieldLabel>
+      <FieldLabel htmlFor="csv-upload">Import Designali clients</FieldLabel>
       <Input
         id="csv-upload"
         type="file"
@@ -24,7 +24,7 @@ export default function FileUploadInput() {
       <FieldDescription>
         {file
           ? "Ready to import " + file
-          : "CSV up to 10 MB. First row must contain column headers."}
+          : "CSV up to 10 MB exported from your Designali studio CRM."}
       </FieldDescription>
     </Field>
   )

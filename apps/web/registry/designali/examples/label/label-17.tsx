@@ -3,8 +3,8 @@ import { Kbd, KbdGroup } from "@workspace/ui/components/kbd"
 import { Label } from "@workspace/ui/components/label"
 
 const shortcuts = [
-  { id: "sc-search", label: "Open command menu", keys: ["⌘", "K"] },
-  { id: "sc-new", label: "New document", keys: ["⌘", "N"] },
+  { id: "sc-search", label: "Search designali.com", keys: ["⌘", "K"] },
+  { id: "sc-new", label: "New Designali project", keys: ["⌘", "N"] },
   { id: "sc-side", label: "Toggle sidebar", keys: ["⌘", "B"] },
 ]
 

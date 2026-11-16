@@ -8,6 +8,8 @@ import {
 
 import { Button } from "@workspace/ui/components/button"
 
+import { IPad } from "@/registry/designali/ui/apple/ipad"
+
 const audiences = [
   {
     id: "design",
@@ -15,8 +17,7 @@ const audiences = [
     headline: "Design in Figma, ship with Designali.",
     body: "Designali UI designs, icons and illustrations match the code one to one, so your Figma file and your Next.js app never drift apart.",
     points: ["2300+ UI designs", "4000+ icons and logos", "Semantic design tokens"],
-    preview: ["Hero / Designali", "Pricing / Pro", "Login / Split"],
-    accent: "from-chart-1/40 to-chart-2/10",
+    image: "/img/hero-1.jpg",
   },
   {
     id: "engineering",
@@ -24,8 +25,7 @@ const audiences = [
     headline: "Stop rebuilding the same hero section.",
     body: "Copy typed, accessible Designali blocks into your repo — React, TypeScript and Tailwind CSS, ready for production.",
     points: ["460+ blocks", "Next.js and Tailwind CSS", "@designali/icons included"],
-    preview: ["hero-01.tsx", "pricing-01.tsx", "globals.css"],
-    accent: "from-chart-3/40 to-chart-4/10",
+    image: "/img/dashboard-1-light.jpg",
   },
   {
     id: "leads",
@@ -33,8 +33,7 @@ const audiences = [
     headline: "Launch a product that looks studio-made.",
     body: "Start from a Designali template, or hire the studio to design and build your brand, UI and website end to end.",
     points: ["240+ landing pages", "Brand identity and UI/UX", "Production-ready code"],
-    preview: ["Brand: done", "UI/UX: in review", "Website: building"],
-    accent: "from-chart-5/40 to-chart-1/10",
+    image: "/images/templates/design-agency.jpg",
   },
 ]
 
@@ -79,7 +78,7 @@ export default function Hero15() {
             <ul className="mt-8 space-y-3 text-sm">
               {audience.points.map((point) => (
                 <li key={point} className="flex items-center gap-3">
-                  <Check className="size-4 text-emerald-600 dark:text-emerald-400" />
+                  <Check className="size-4 text-primary dark:text-primary" />
                   {point}
                 </li>
               ))}
@@ -94,28 +93,20 @@ export default function Hero15() {
               </Button>
             </div>
           </div>
-          <div className={`border border-border bg-gradient-to-br p-6 sm:p-10 ${audience.accent}`}>
-            <div className="border border-border bg-background/90 backdrop-blur">
-              <div className="border-b border-border px-4 py-3 text-xs text-muted-foreground">
-                designali / {audience.id}
-              </div>
-              <ul>
-                {audience.preview.map((item, index) => (
-                  <li
-                    key={item}
-                    className="flex items-center justify-between border-b border-border px-4 py-4 text-sm last:border-b-0"
-                  >
-                    <span className="font-mono text-xs sm:text-sm">{item}</span>
-                    <span className="h-2 w-16 bg-muted sm:w-24">
-                      <span
-                        className="block h-full bg-primary"
-                        style={{ width: `${90 - index * 22}%` }}
-                      />
-                    </span>
-                  </li>
-                ))}
-              </ul>
-            </div>
+          <div className="flex justify-center">
+            <IPad
+              variant="ipad-pro"
+              color="silver"
+              size="lg"
+              orientation="landscape"
+              className="h-auto! w-full max-w-2xl"
+            >
+              <img
+                src={audience.image}
+                alt={`Designali ${audience.label.toLowerCase()} preview`}
+                className="size-full object-cover object-top"
+              />
+            </IPad>
           </div>
         </div>
       </div>

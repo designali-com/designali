@@ -80,7 +80,7 @@ export default function AuditLogTable() {
                   {event.action}
                 </span>
               </TableCell>
-              <TableCell className="font-mono text-muted-foreground">
+              <TableCell className="font-sans text-muted-foreground">
                 {event.ip}
               </TableCell>
               <TableCell className="text-right text-muted-foreground tabular-nums">

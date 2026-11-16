@@ -9,6 +9,8 @@ import {
 import { Button } from "@workspace/ui/components/button"
 import { Figma, Nextjs, ClaudeAI } from "@designali/logos"
 
+import { Typewriter } from "@/registry/designali/ui/typewriter"
+
 export function HeroSection() {
   return (
     <section className="relative overflow-hidden h-full w-full text-foreground">
@@ -44,9 +46,12 @@ export function HeroSection() {
           {/* Heading */}
           <h1 className="max-w-xl text-3xl font-medium md:text-7xl">
             The studio for{" "}
-            <span className="text-muted-foreground">
-              what&apos;s next
-            </span>
+            <Typewriter
+              words={["brands", "interfaces", "websites", "what's next"]}
+              speed={90}
+              delayBetweenWords={1800}
+              className="text-muted-foreground"
+            />
           </h1>
 
           {/* Description */}
@@ -70,7 +75,7 @@ export function HeroSection() {
 
           {/* Availability */}
           <div className="mt-5 flex items-center gap-2 text-xs text-muted-foreground">
-            <span className="size-2 rounded-full animate-pulse bg-emerald-500" />
+            <span className="size-2 rounded-full animate-pulse bg-primary" />
             Available for selected projects
           </div>
 

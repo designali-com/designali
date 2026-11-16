@@ -45,7 +45,7 @@ export default function OrderFulfillmentMenu() {
       {orders.map((order) => (
         <ContextMenu key={order.id}>
           <ContextMenuTrigger className="grid grid-cols-[4rem_1fr_auto_auto] items-center gap-3 px-3 py-2 data-popup-open:bg-muted">
-            <span className="font-mono">{order.id}</span>
+            <span className="font-sans">{order.id}</span>
             <span className="truncate">{order.customer}</span>
             <span className="tabular-nums">{order.total}</span>
             <Badge

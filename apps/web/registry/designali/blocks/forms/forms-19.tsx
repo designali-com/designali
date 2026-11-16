@@ -58,7 +58,7 @@ export default function Forms19() {
                     <Star
                       className={cn(
                         "size-8 transition-colors",
-                        value <= shown ? "fill-amber-400 text-amber-400" : "text-muted-foreground/40"
+                        value <= shown ? "fill-primary text-primary" : "text-muted-foreground/40"
                       )}
                     />
                   </button>

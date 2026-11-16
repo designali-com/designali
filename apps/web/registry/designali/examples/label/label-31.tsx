@@ -5,7 +5,7 @@ export default function ShippingAddressLabels() {
   return (
     <div className="grid w-full max-w-md grid-cols-6 gap-3">
       <div className="col-span-6 grid gap-2">
-        <Label htmlFor="addr-street">Street address</Label>
+        <Label htmlFor="addr-street">Ship Designali merch to</Label>
         <Input id="addr-street" defaultValue="218 Willow Bend Rd" />
       </div>
       <div className="col-span-3 grid gap-2">

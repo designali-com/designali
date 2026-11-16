@@ -107,7 +107,7 @@ export default function TableRowDetailsDialog() {
                     {selected.status}
                   </Badge>
                 </div>
-                <DialogDescription className="font-mono">
+                <DialogDescription className="font-sans">
                   {selected.id}
                 </DialogDescription>
               </DialogHeader>

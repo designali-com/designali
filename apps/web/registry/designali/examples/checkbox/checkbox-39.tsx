@@ -54,7 +54,7 @@ export default function NativeFormDataSubmit() {
         Save
       </Button>
       {result && (
-        <p className="font-mono text-xs text-muted-foreground">
+        <p className="font-sans text-xs text-muted-foreground">
           integrations = [{result.join(", ")}]
         </p>
       )}

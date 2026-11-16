@@ -5,11 +5,11 @@ export default function SocialSharePreview() {
     <div className="w-full max-w-sm overflow-hidden border">
       <AspectRatio
         ratio={1.91}
-        className="bg-linear-to-br from-zinc-950 to-zinc-800"
+        className="bg-linear-to-br from-foreground to-foreground"
       >
         <div className="absolute inset-0 flex flex-col justify-between p-5 text-white">
           <div className="flex items-center gap-2 text-xs font-semibold">
-            <span className="size-4 bg-linear-to-br from-lime-300 to-emerald-500" />
+            <span className="size-4 bg-linear-to-br from-chart-1 to-primary" />
             designali
           </div>
           <p className="text-xl leading-tight font-semibold text-balance">

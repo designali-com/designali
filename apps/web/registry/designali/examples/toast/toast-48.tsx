@@ -45,7 +45,7 @@ export default function WebhookTestToast() {
             id="hook-url"
             value={url}
             onChange={(e) => setUrl(e.target.value)}
-            className="font-mono text-xs"
+            className="font-sans text-xs"
           />
           <Button variant="outline" onClick={test}>
             <ZapIcon data-icon="inline-start" />

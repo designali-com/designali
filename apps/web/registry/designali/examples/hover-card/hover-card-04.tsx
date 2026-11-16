@@ -30,7 +30,7 @@ export default function RepositoryPreviewHoverCard() {
           </p>
           <div className="flex items-center gap-4 text-muted-foreground">
             <span className="flex items-center gap-1">
-              <span className="size-2.5 rounded-full bg-blue-500" />
+              <span className="size-2.5 rounded-full bg-primary" />
               TypeScript
             </span>
             <span className="flex items-center gap-1">

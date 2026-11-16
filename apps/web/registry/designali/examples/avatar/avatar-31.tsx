@@ -2,11 +2,11 @@ import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
 import { cn } from "@workspace/ui/lib/utils"
 
 const gradients = [
-  { initials: "AI", className: "from-pink-500 to-orange-400" },
-  { initials: "DA", className: "from-cyan-500 to-blue-600" },
-  { initials: "SA", className: "from-lime-400 to-emerald-600" },
-  { initials: "OM", className: "from-violet-500 to-indigo-700" },
-  { initials: "ZA", className: "from-yellow-400 to-red-500" },
+  { initials: "AI", className: "from-primary to-primary" },
+  { initials: "DA", className: "from-primary to-chart-2" },
+  { initials: "SA", className: "from-primary to-chart-2" },
+  { initials: "OM", className: "from-primary to-chart-3" },
+  { initials: "ZA", className: "from-primary to-destructive" },
 ]
 
 export default function GradientAvatarSet() {

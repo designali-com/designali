@@ -81,7 +81,7 @@ export default function Media14() {
                   ))}
                 </div>
                 <span className="hidden w-24 shrink-0 text-center text-xs text-muted-foreground md:block">{clip.tag}</span>
-                <span className="w-10 shrink-0 text-right font-mono text-xs tabular-nums">0:{String(clip.length).padStart(2, "0")}</span>
+                <span className="w-10 shrink-0 text-right font-sans text-xs tabular-nums">0:{String(clip.length).padStart(2, "0")}</span>
                 <button type="button" aria-label="Download" className="mr-2 hidden p-2 text-muted-foreground hover:text-foreground sm:block">
                   <Download className="size-4" />
                 </button>

@@ -20,9 +20,9 @@ export default function ValidationFeedbackInputs() {
         <Input
           id="fb-success"
           defaultValue="studio"
-          className="border-emerald-600 focus-visible:border-emerald-600 focus-visible:ring-emerald-600/30"
+          className="border-chart-2 focus-visible:border-chart-2 focus-visible:ring-chart-2/30"
         />
-        <FieldDescription className="flex items-center gap-1 text-emerald-600">
+        <FieldDescription className="flex items-center gap-1 text-primary">
           <CircleCheckIcon className="size-3.5" />
           studio.designali.com is available
         </FieldDescription>
@@ -32,9 +32,9 @@ export default function ValidationFeedbackInputs() {
         <Input
           id="fb-warning"
           defaultValue="DESIGNALI STUDIO"
-          className="border-amber-500 focus-visible:border-amber-500 focus-visible:ring-amber-500/30"
+          className="border-primary focus-visible:border-primary focus-visible:ring-primary/30"
         />
-        <FieldDescription className="flex items-center gap-1 text-amber-600">
+        <FieldDescription className="flex items-center gap-1 text-primary">
           <TriangleAlertIcon className="size-3.5" />
           All caps can look like shouting in notifications.
         </FieldDescription>

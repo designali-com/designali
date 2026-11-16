@@ -14,6 +14,7 @@ import { Card } from "@workspace/ui/components/card";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import { Logo } from "@/src/components/logo";
+import { DotPattern } from "@/registry/designali/ui/dot-pattern";
 
 export function HeroSection() {
   const { theme, setTheme } = useTheme();
@@ -31,21 +32,14 @@ export function HeroSection() {
 
           <div className="relative flex h-[150px] items-center overflow-hidden border-b border-border px-8 sm:px-12 lg:px-16">
 
-            <div
-              className="
-                pointer-events-none
-                absolute
-                inset-0
-                opacity-40
-                dark:opacity-20
-              "
-              style={{
-                backgroundImage:
-                  "radial-gradient(circle, currentColor 1.5px, transparent 1.5px)",
-                backgroundSize: "22px 22px",
-              }}
+            <DotPattern
+              width={22}
+              height={22}
+              cx={11}
+              cy={11}
+              dotSize={1.5}
+              className="p-0 text-foreground opacity-60 dark:opacity-30"
             />
-
 
             <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-background/90 via-background/80 to-background" />
 

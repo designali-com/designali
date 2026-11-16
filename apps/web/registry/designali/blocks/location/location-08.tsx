@@ -89,7 +89,7 @@ export default function Location08() {
               </g>
               <path
                 d={city.river}
-                className="stroke-sky-300 transition-all duration-500 dark:stroke-sky-800"
+                className="stroke-chart-1 transition-all duration-500 dark:stroke-chart-4"
                 strokeWidth="7"
                 fill="none"
               />

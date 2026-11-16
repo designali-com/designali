@@ -21,7 +21,7 @@ export default function PaymentSuccessDialog() {
       <DialogTrigger render={<Button />}>Pay $240.00</DialogTrigger>
       <DialogContent showCloseButton={false} className="sm:max-w-xs">
         <div className="flex flex-col items-center gap-3 pt-2 text-center">
-          <div className="flex size-12 items-center justify-center rounded-full bg-emerald-500/15 text-emerald-600 dark:text-emerald-400">
+          <div className="flex size-12 items-center justify-center rounded-full bg-primary/15 text-primary dark:text-primary">
             <CircleCheckBigIcon className="size-6" />
           </div>
           <DialogHeader className="items-center text-center">

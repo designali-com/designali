@@ -61,7 +61,7 @@ export default function TableRowContextActions() {
               <ContextMenuTrigger
                 render={<TableRow className="data-popup-open:bg-muted" />}
               >
-                <TableCell className="font-mono text-xs">
+                <TableCell className="font-sans text-xs">
                   {invoice.id}
                 </TableCell>
                 <TableCell>{invoice.customer}</TableCell>

@@ -47,8 +47,8 @@ const orders = [
 ]
 
 const statusStyle: Record<string, string> = {
-  Processing: "bg-sky-100 text-sky-800 dark:bg-sky-500/15 dark:text-sky-300",
-  Delivered: "bg-emerald-100 text-emerald-800 dark:bg-emerald-500/15 dark:text-emerald-300",
+  Processing: "bg-primary/10 text-chart-4 dark:bg-primary/15 dark:text-chart-1",
+  Delivered: "bg-primary/10 text-chart-4 dark:bg-primary/15 dark:text-chart-1",
   Refunded: "bg-muted text-muted-foreground",
 }
 
@@ -73,7 +73,7 @@ export default function Lists10() {
                   className="grid w-full grid-cols-[1fr_auto] items-center gap-4 p-5 text-left hover:bg-muted/40 sm:grid-cols-[1fr_auto_auto_auto]"
                 >
                   <span>
-                    <span className="block font-mono text-sm">{order.id}</span>
+                    <span className="block font-sans text-sm">{order.id}</span>
                     <span className="text-xs text-muted-foreground">
                       {order.date} · {order.items.length} {order.items.length === 1 ? "item" : "items"}
                     </span>
@@ -81,7 +81,7 @@ export default function Lists10() {
                   <span className={cn("hidden px-2 py-1 text-[11px] font-medium sm:inline-block", statusStyle[order.status])}>
                     {order.status}
                   </span>
-                  <span className="hidden font-mono text-sm sm:block">${order.total}.00</span>
+                  <span className="hidden font-sans text-sm sm:block">${order.total}.00</span>
                   <ChevronDown className={cn("size-4 text-muted-foreground transition-transform", isOpen && "rotate-180")} />
                 </button>
 
@@ -89,13 +89,13 @@ export default function Lists10() {
                   <div className="border-t border-border bg-muted/20 p-5">
                     <div className="mb-4 flex items-center justify-between gap-3 sm:hidden">
                       <span className={cn("px-2 py-1 text-[11px] font-medium", statusStyle[order.status])}>{order.status}</span>
-                      <span className="font-mono text-sm">${order.total}.00</span>
+                      <span className="font-sans text-sm">${order.total}.00</span>
                     </div>
                     <ul className="divide-y divide-border">
                       {order.items.map((item) => (
                         <li key={item.name} className="flex items-center gap-4 py-3">
-                          <span className="flex size-12 shrink-0 items-center justify-center bg-gradient-to-br from-stone-200 to-stone-400 dark:from-stone-700 dark:to-stone-500">
-                            <Package className="size-4 text-stone-700 dark:text-stone-200" />
+                          <span className="flex size-12 shrink-0 items-center justify-center bg-gradient-to-br from-muted to-muted-foreground dark:from-muted dark:to-muted-foreground">
+                            <Package className="size-4 text-foreground dark:text-foreground" />
                           </span>
                           <span className="min-w-0 flex-1">
                             <span className="block truncate text-sm font-medium">{item.name}</span>
@@ -103,7 +103,7 @@ export default function Lists10() {
                               {item.variant} · Qty {item.qty}
                             </span>
                           </span>
-                          <span className="font-mono text-sm">${item.price * item.qty}</span>
+                          <span className="font-sans text-sm">${item.price * item.qty}</span>
                         </li>
                       ))}
                     </ul>

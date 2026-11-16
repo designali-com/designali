@@ -30,7 +30,7 @@ export default function MigrationStepsWithSubProgress() {
             value={table.value}
             className="gap-1.5 [&_[data-slot=progress-indicator]]:bg-primary/60"
           >
-            <ProgressLabel className="font-mono text-muted-foreground">
+            <ProgressLabel className="font-sans text-muted-foreground">
               {table.name}
             </ProgressLabel>
             <ProgressValue />

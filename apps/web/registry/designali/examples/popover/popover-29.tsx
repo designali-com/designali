@@ -23,14 +23,14 @@ const initial = [
     name: "Portfolio Simple template",
     qty: 1,
     price: 38,
-    tone: "from-amber-200 to-orange-300",
+    tone: "from-primary/20 to-chart-1",
   },
   {
     id: "mug",
     name: "Icons Pack",
     qty: 2,
     price: 22,
-    tone: "from-sky-200 to-indigo-300",
+    tone: "from-primary/20 to-chart-1",
   },
 ]
 

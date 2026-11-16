@@ -40,7 +40,7 @@ export default function PhoneNumberField() {
           className="flex-1"
         />
       </div>
-      <FieldDescription>Used for two-factor sign-in only.</FieldDescription>
+      <FieldDescription>Used for two-factor sign-in to designali.com only.</FieldDescription>
     </Field>
   )
 }

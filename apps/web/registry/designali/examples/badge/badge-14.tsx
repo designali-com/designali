@@ -28,12 +28,12 @@ export default function DeploymentStatusList() {
           <GitBranchIcon className="size-4 shrink-0 text-muted-foreground" />
           <div className="min-w-0 flex-1">
             <p className="truncate text-sm font-medium">{deploy.branch}</p>
-            <p className="font-mono text-xs text-muted-foreground">
+            <p className="font-sans text-xs text-muted-foreground">
               {deploy.commit} · {deploy.time}
             </p>
           </div>
           {deploy.status === "Ready" && (
-            <Badge className="bg-emerald-50 text-emerald-700 dark:bg-emerald-950 dark:text-emerald-300">
+            <Badge className="bg-primary/5 text-chart-3 dark:bg-primary/10 dark:text-chart-1">
               <CircleCheckIcon data-icon="inline-start" />
               Ready
             </Badge>

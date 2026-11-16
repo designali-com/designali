@@ -46,7 +46,7 @@ export default function FlightSegmentHoverCard() {
           <HoverCard>
             <HoverCardTrigger
               href="#"
-              className="font-mono text-xs hover:underline"
+              className="font-sans text-xs hover:underline"
             >
               {f.code}
             </HoverCardTrigger>

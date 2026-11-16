@@ -28,7 +28,7 @@ export default function NonModalInspectorDrawer() {
     <div className="flex w-full max-w-sm flex-col items-center gap-4">
       <div className="flex h-40 w-full items-center justify-center border bg-muted/30">
         <div
-          className="size-20 bg-gradient-to-br from-sky-400 to-indigo-500"
+          className="size-20 bg-gradient-to-br from-primary to-primary"
           style={{ borderRadius: radius, opacity: opacity / 100 }}
         />
       </div>

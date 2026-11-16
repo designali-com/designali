@@ -23,10 +23,10 @@ import { cn } from "@workspace/ui/lib/utils"
 
 const colors = [
   { id: "gray", className: "text-muted-foreground" },
-  { id: "blue", className: "text-blue-500" },
-  { id: "green", className: "text-emerald-500" },
-  { id: "amber", className: "text-amber-500" },
-  { id: "red", className: "text-red-500" },
+  { id: "blue", className: "text-primary" },
+  { id: "green", className: "text-primary" },
+  { id: "amber", className: "text-primary" },
+  { id: "red", className: "text-destructive" },
 ]
 
 export default function CreateFolderDialog() {

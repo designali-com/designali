@@ -60,7 +60,7 @@ export default function Contact04() {
                 <p className="text-sm text-muted-foreground">{person.role}</p>
               </div>
               <span className="ms-auto flex items-center gap-1.5 text-xs text-muted-foreground">
-                <span className="size-2 rounded-full bg-emerald-500" />
+                <span className="size-2 rounded-full bg-primary" />
                 Online
               </span>
             </div>

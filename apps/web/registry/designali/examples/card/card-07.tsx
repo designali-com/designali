@@ -64,8 +64,8 @@ export default function KpiStatGrid() {
               className={cn(
                 "text-xs font-medium",
                 s.up
-                  ? "text-emerald-600 dark:text-emerald-400"
-                  : "text-rose-600 dark:text-rose-400"
+                  ? "text-primary dark:text-primary"
+                  : "text-primary dark:text-primary"
               )}
             >
               {s.delta}

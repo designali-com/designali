@@ -219,10 +219,10 @@ export default function LandingStartup02() {
             href="#"
             className="flex items-center gap-2 font-semibold tracking-tight"
           >
-            <span className="flex size-7 items-center justify-center rounded-md bg-sky-600 text-white text-sm">
+            <span className="flex size-7 items-center justify-center rounded-md bg-chart-2 text-white text-sm">
               H
             </span>
-            <span className="font-serif text-lg font-normal">Hatch</span>
+            <span className="font-sans text-lg font-normal">Hatch</span>
           </a>
           <nav className="hidden items-center gap-7 text-sm md:flex">
             {navLinks.map((link) => (
@@ -259,9 +259,9 @@ export default function LandingStartup02() {
               {"The founder's operating system."}
             </span>
           </div>
-          <h1 className="mt-12 max-w-5xl text-4xl leading-[1.05] font-semibold tracking-tight text-balance sm:text-5xl md:text-8xl font-serif font-normal">
+          <h1 className="mt-12 max-w-5xl text-4xl leading-[1.05] font-semibold tracking-tight text-balance sm:text-5xl md:text-8xl font-sans font-normal">
             {"Incorporate, bank and raise "}
-            <span className="text-sky-600 dark:text-sky-400">in one place</span>
+            <span className="text-primary dark:text-primary">in one place</span>
           </h1>
           <div className="mt-12 grid gap-8 md:grid-cols-2 md:items-end">
             <p className="max-w-lg text-lg leading-8 text-muted-foreground">
@@ -297,7 +297,7 @@ export default function LandingStartup02() {
               key={stat.label}
               className={`py-12 ${i > 0 ? "lg:border-l lg:pl-8" : ""} ${i % 2 === 1 ? "border-l pl-6 lg:pl-8" : ""} `}
             >
-              <div className="text-4xl font-semibold tracking-tight md:text-5xl font-serif font-normal">
+              <div className="text-4xl font-semibold tracking-tight md:text-5xl font-sans font-normal">
                 {stat.value}
               </div>
               <div className="mt-2 text-sm text-muted-foreground">
@@ -311,10 +311,10 @@ export default function LandingStartup02() {
         <div className="mx-auto grid max-w-7xl gap-12 px-6 py-20 md:py-28 lg:grid-cols-[1fr_1.4fr]">
           <div className="lg:sticky lg:top-24 lg:self-start">
             <div className="max-w-2xl">
-              <p className="text-sm font-medium text-sky-600 dark:text-sky-400">
+              <p className="text-sm font-medium text-primary dark:text-primary">
                 Why us
               </p>
-              <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl font-serif font-normal mt-3">
+              <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl font-sans font-normal mt-3">
                 Small team, big leverage
               </h2>
               <p className="mt-4 text-lg leading-8 text-muted-foreground">
@@ -329,11 +329,11 @@ export default function LandingStartup02() {
                 key={feature.title}
                 className="grid gap-4 py-8 sm:grid-cols-[4rem_1fr]"
               >
-                <span className="font-mono text-sm text-muted-foreground">
+                <span className="font-sans text-sm text-muted-foreground">
                   {String(i + 1).padStart(2, "0")}
                 </span>
                 <div>
-                  <h3 className="font-serif text-2xl">{feature.title}</h3>
+                  <h3 className="font-sans text-2xl">{feature.title}</h3>
                   <p className="mt-2 leading-7 text-muted-foreground">
                     {feature.description}
                   </p>
@@ -347,7 +347,7 @@ export default function LandingStartup02() {
         <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
           <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
             <div className="max-w-2xl">
-              <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl font-serif font-normal">
+              <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl font-sans font-normal">
                 What shipped recently
               </h2>
               <p className="mt-4 text-lg leading-8 text-muted-foreground">
@@ -375,7 +375,7 @@ export default function LandingStartup02() {
                   <span className="flex size-10 items-center justify-center rounded-lg border bg-muted/50 font-semibold ">
                     {item.name.charAt(0)}
                   </span>
-                  <span className="rounded-full bg-sky-500/10 px-2.5 py-0.5 text-xs font-medium text-sky-600 dark:text-sky-400">
+                  <span className="rounded-full bg-primary/10 px-2.5 py-0.5 text-xs font-medium text-primary dark:text-primary">
                     {item.tag}
                   </span>
                 </div>
@@ -399,7 +399,7 @@ export default function LandingStartup02() {
           </p>
           {testimonials.slice(0, 1).map((t) => (
             <figure key={t.name} className="mt-10">
-              <blockquote className="font-serif text-3xl leading-snug text-balance md:text-5xl">
+              <blockquote className="font-sans text-3xl leading-snug text-balance md:text-5xl">
                 &ldquo;{t.quote}&rdquo;
               </blockquote>
               <figcaption className="mt-10 text-sm">
@@ -428,7 +428,7 @@ export default function LandingStartup02() {
       <section className="border-b">
         <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
           <div className="max-w-2xl">
-            <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl font-serif font-normal">
+            <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl font-sans font-normal">
               How it works
             </h2>
           </div>
@@ -438,7 +438,7 @@ export default function LandingStartup02() {
                 key={step.title}
                 className="relative border-t-2 border-foreground pt-6"
               >
-                <span className="text-sm font-medium text-sky-600 dark:text-sky-400">
+                <span className="text-sm font-medium text-primary dark:text-primary">
                   Step {i + 1}
                 </span>
                 <h3 className="mt-2 text-lg font-semibold">{step.title}</h3>
@@ -453,7 +453,7 @@ export default function LandingStartup02() {
       <section className="border-b">
         <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
           <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl font-serif font-normal">
+            <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl font-sans font-normal">
               Founder-friendly pricing
             </h2>
             <p className="mt-4 text-lg leading-8 text-muted-foreground">
@@ -467,10 +467,10 @@ export default function LandingStartup02() {
               return (
                 <div
                   key={tier.name}
-                  className={`relative flex h-full flex-col rounded-2xl border p-8 ${featured ? "border-transparent ring-2 ring-sky-500 shadow-xl" : ""}`}
+                  className={`relative flex h-full flex-col rounded-2xl border p-8 ${featured ? "border-transparent ring-2 ring-primary shadow-xl" : ""}`}
                 >
                   {featured && (
-                    <span className="absolute -top-3 left-8 rounded-full bg-sky-600 text-white px-3 py-1 text-xs font-medium">
+                    <span className="absolute -top-3 left-8 rounded-full bg-chart-2 text-white px-3 py-1 text-xs font-medium">
                       Most popular
                     </span>
                   )}
@@ -489,7 +489,7 @@ export default function LandingStartup02() {
                   <ul className="mt-8 flex-1 space-y-3 text-sm">
                     {tier.features.map((feature) => (
                       <li key={feature} className="flex gap-3">
-                        <Check className="mt-0.5 size-4 shrink-0 text-sky-600 dark:text-sky-400" />
+                        <Check className="mt-0.5 size-4 shrink-0 text-primary dark:text-primary" />
                         {feature}
                       </li>
                     ))}
@@ -511,7 +511,7 @@ export default function LandingStartup02() {
       <section className="border-b">
         <div className="mx-auto grid max-w-7xl gap-12 px-6 py-20 md:py-28 lg:grid-cols-[1fr_1.5fr]">
           <div className="lg:sticky lg:top-24 lg:self-start">
-            <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl font-serif font-normal">
+            <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl font-sans font-normal">
               Things people ask us
             </h2>
             <p className="mt-4 text-muted-foreground">
@@ -543,7 +543,7 @@ export default function LandingStartup02() {
       <section className="bg-foreground text-background">
         <div className="mx-auto flex max-w-7xl flex-col gap-10 px-6 py-20 md:flex-row md:items-end md:justify-between md:py-28">
           <div className="max-w-2xl">
-            <h2 className="text-4xl font-semibold tracking-tight text-balance md:text-6xl font-serif font-normal">
+            <h2 className="text-4xl font-semibold tracking-tight text-balance md:text-6xl font-sans font-normal">
               Start your company before lunch
             </h2>
             <p className="mt-5 text-lg text-background/65">
@@ -579,10 +579,10 @@ export default function LandingStartup02() {
               href="#"
               className="flex items-center gap-2 font-semibold tracking-tight"
             >
-              <span className="flex size-7 items-center justify-center rounded-md bg-sky-600 text-white text-sm">
+              <span className="flex size-7 items-center justify-center rounded-md bg-chart-2 text-white text-sm">
                 H
               </span>
-              <span className="font-serif text-lg font-normal">Hatch</span>
+              <span className="font-sans text-lg font-normal">Hatch</span>
             </a>
             <p className="max-w-xs text-sm text-muted-foreground">
               {"The founder's operating system."}
@@ -668,13 +668,13 @@ function HeroVisual() {
           <div className="rounded-lg border p-4">
             <div className="mb-4 flex items-center justify-between text-xs">
               <span className="font-medium">Last 12 weeks</span>
-              <span className="text-sky-600 dark:text-sky-400">+24.6%</span>
+              <span className="text-primary dark:text-primary">+24.6%</span>
             </div>
             <div className="flex h-32 items-end gap-1.5">
               {bars.map((h, i) => (
                 <div
                   key={i}
-                  className={`flex-1 rounded-t-sm ${i === bars.length - 1 ? "bg-sky-600" : "bg-muted-foreground/20"}`}
+                  className={`flex-1 rounded-t-sm ${i === bars.length - 1 ? "bg-chart-2" : "bg-muted-foreground/20"}`}
                   style={{ height: `${h}%` }}
                 />
               ))}
@@ -692,7 +692,7 @@ function HeroVisual() {
                     {item.meta}
                   </div>
                 </div>
-                <span className="shrink-0 rounded-full bg-sky-500/10 px-2 py-0.5 text-[11px] font-medium text-sky-600 dark:text-sky-400">
+                <span className="shrink-0 rounded-full bg-primary/10 px-2 py-0.5 text-[11px] font-medium text-primary dark:text-primary">
                   {item.tag}
                 </span>
               </div>

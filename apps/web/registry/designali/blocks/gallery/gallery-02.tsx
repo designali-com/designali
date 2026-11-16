@@ -128,7 +128,7 @@ export function HeroSection() {
 
         {/* Description */}
         <motion.p
-          className="relative z-50 px-10 mt-14 max-w-60 md:max-w-md text-center text-xs leading-relaxed text-neutral-500 sm:text-sm"
+          className="relative z-50 px-10 mt-14 max-w-60 md:max-w-md text-center text-xs leading-relaxed text-muted-foreground sm:text-sm"
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{
@@ -152,14 +152,14 @@ export function HeroSection() {
         >
           <button
             type="button"
-            className="rounded-full bg-neutral-900 px-6 py-3 text-xs font-medium text-white shadow-md transition-all hover:bg-neutral-800"
+            className="rounded-full bg-foreground px-6 py-3 text-xs font-medium text-background shadow-md transition-all hover:bg-foreground"
           >
             Explore Templates
           </button>
 
           <button
             type="button"
-            className="text-xs font-medium text-neutral-700 underline underline-offset-4 transition-colors hover:text-neutral-900"
+            className="text-xs font-medium text-foreground underline underline-offset-4 transition-colors hover:text-foreground"
           >
             View work
           </button>

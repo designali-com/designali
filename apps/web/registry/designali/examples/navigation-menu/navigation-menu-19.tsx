@@ -45,7 +45,7 @@ export default function ConferenceScheduleNav() {
                   </p>
                   {d.sessions.map((s) => (
                     <NavigationMenuLink key={s.title} href="#">
-                      <span className="w-10 font-mono text-muted-foreground">
+                      <span className="w-10 font-sans text-muted-foreground">
                         {s.time}
                       </span>
                       <span className="font-medium">{s.title}</span>

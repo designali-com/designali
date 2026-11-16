@@ -17,16 +17,19 @@ import {
 } from "@workspace/ui/components/context-menu"
 import { cn } from "@workspace/ui/lib/utils"
 
+import { DotPattern } from "@/registry/designali/ui/dot-pattern"
+
 export default function CanvasShapeMenu() {
   const [locked, setLocked] = React.useState(false)
   const [visible, setVisible] = React.useState(true)
 
   return (
-    <div className="relative h-52 w-full max-w-sm border bg-[radial-gradient(circle,var(--color-border)_1px,transparent_1px)] bg-size-[16px_16px]">
+    <div className="relative h-52 w-full max-w-sm border">
+      <DotPattern width={16} height={16} className="p-0 text-muted-foreground" />
       <ContextMenu>
         <ContextMenuTrigger
           className={cn(
-            "absolute top-10 left-10 flex size-28 items-center justify-center bg-linear-to-br from-violet-500 to-indigo-500 text-xs font-medium text-white ring-offset-2 ring-offset-background data-popup-open:ring-2 data-popup-open:ring-primary",
+            "absolute top-10 left-10 flex size-28 items-center justify-center bg-linear-to-br from-primary to-primary text-xs font-medium text-white ring-offset-2 ring-offset-background data-popup-open:ring-2 data-popup-open:ring-primary",
             !visible && "opacity-30"
           )}
         >

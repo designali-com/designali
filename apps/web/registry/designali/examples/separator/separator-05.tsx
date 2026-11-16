@@ -19,7 +19,7 @@ export default function KpiStatsVerticalSeparators() {
             <span className="text-lg font-semibold tabular-nums">
               {kpi.value}
             </span>
-            <span className="text-xs text-emerald-600 dark:text-emerald-400">
+            <span className="text-xs text-primary dark:text-primary">
               {kpi.delta}
             </span>
           </div>

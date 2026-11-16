@@ -14,10 +14,10 @@ import { Card, CardContent } from "@workspace/ui/components/card"
 import { cn } from "@workspace/ui/lib/utils"
 
 const moods = [
-  { icon: LaughIcon, label: "Great", tone: "text-emerald-500" },
-  { icon: SmileIcon, label: "Good", tone: "text-sky-500" },
-  { icon: MehIcon, label: "Okay", tone: "text-amber-500" },
-  { icon: FrownIcon, label: "Low", tone: "text-rose-500" },
+  { icon: LaughIcon, label: "Great", tone: "text-primary" },
+  { icon: SmileIcon, label: "Good", tone: "text-primary" },
+  { icon: MehIcon, label: "Okay", tone: "text-primary" },
+  { icon: FrownIcon, label: "Low", tone: "text-primary" },
 ]
 const today = startOfDay(new Date())
 

@@ -64,7 +64,7 @@ export default function DocumentationNav() {
             <ul className="grid w-64 grid-cols-2 gap-1">
               {reference.map((r) => (
                 <li key={r}>
-                  <NavigationMenuLink href="#" className="font-mono">
+                  <NavigationMenuLink href="#" className="font-sans">
                     <BracesIcon className="text-muted-foreground" />
                     {r.toLowerCase()}
                   </NavigationMenuLink>

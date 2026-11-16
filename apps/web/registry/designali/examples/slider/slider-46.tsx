@@ -20,7 +20,7 @@ export default function StorageAllocationSlider() {
       </div>
       <Slider
         aria-label="System partition size"
-        className="[&_[data-slot=slider-thumb]]:size-4 [&_[data-slot=slider-track]]:h-2! [&_[data-slot=slider-track]]:bg-sky-500/40"
+        className="[&_[data-slot=slider-thumb]]:size-4 [&_[data-slot=slider-track]]:h-2! [&_[data-slot=slider-track]]:bg-primary/40"
         value={system}
         onValueChange={(value) => setSystem(value as number[])}
         min={64}
@@ -33,7 +33,7 @@ export default function StorageAllocationSlider() {
           System: {system[0]} GB
         </div>
         <div className="flex items-center justify-end gap-2">
-          <span className="size-2.5 bg-sky-500/40" />
+          <span className="size-2.5 bg-primary/40" />
           Data: {total - system[0]!} GB
         </div>
       </div>

@@ -5,17 +5,17 @@ import {
 } from "@workspace/ui/components/radio-group"
 
 const methods = [
-  { value: "standard", label: "Standard", eta: "Dec 2 - Dec 5", price: "Free" },
+  { value: "standard", label: "Standard support", eta: "Reply from support@designali.com in 3 days", price: "Free" },
   {
     value: "priority",
-    label: "Priority",
-    eta: "Nov 28 - Nov 30",
+    label: "Priority support",
+    eta: "Reply within 24 hours",
     price: "$7.50",
   },
   {
     value: "overnight",
-    label: "Overnight",
-    eta: "Tomorrow by 10am",
+    label: "Call with Ali Imam",
+    eta: "30-minute design review",
     price: "$24.00",
   },
 ]

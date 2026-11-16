@@ -4,10 +4,12 @@ import {
 
 import { Button } from "@workspace/ui/components/button"
 
+import { CounterNumber } from "@/registry/designali/ui/counter-number"
+
 const stats = [
-  { value: "1,200+", label: "Projects delivered" },
-  { value: "4.9/5", label: "Average client rating" },
-  { value: "48h", label: "Typical first draft" },
+  { value: 460, suffix: "+", label: "Production-ready blocks" },
+  { value: 4000, suffix: "+", label: "Icons in @designali/icons" },
+  { value: 2300, suffix: "+", label: "UI design examples" },
 ]
 
 const initials = ["AI", "DA", "DS", "DV", "CL"]
@@ -19,9 +21,11 @@ export default function CallToAction07() {
         <div className="grid grid-cols-3 divide-x divide-border border-b border-border">
           {stats.map((stat) => (
             <div key={stat.label} className="px-4 py-6 text-center md:py-8">
-              <div className="text-2xl font-medium tracking-tight md:text-4xl">
-                {stat.value}
-              </div>
+              <CounterNumber
+                value={stat.value}
+                suffix={stat.suffix}
+                className="text-2xl font-medium tracking-tight md:text-4xl"
+              />
               <div className="mt-1 text-xs text-muted-foreground">
                 {stat.label}
               </div>

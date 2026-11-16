@@ -42,14 +42,14 @@ export default function Lists11() {
       <div className="mx-auto max-w-6xl px-6">
         <div className="grid gap-10 md:grid-cols-[1fr_1.4fr]">
           <div>
-            <p className="font-mono text-xs text-muted-foreground">Designali Pro · What's included</p>
+            <p className="font-sans text-xs text-muted-foreground">Designali Pro · What's included</p>
             <h2 className="mt-3 text-4xl font-semibold tracking-tight md:text-5xl">
               Built to be copied.
             </h2>
             <div className="mt-8 aspect-[16/10] border border-border bg-gradient-to-b from-muted to-background p-6">
-              <div className="mx-auto h-full w-[86%] border-[6px] border-neutral-800 bg-gradient-to-br from-indigo-500 via-sky-400 to-emerald-300 dark:border-neutral-600" />
+              <div className="mx-auto h-full w-[86%] border-[6px] border-foreground bg-gradient-to-br from-primary via-primary to-chart-1 dark:border-border" />
             </div>
-            <div className="mx-auto -mt-px h-2 w-full bg-neutral-300 dark:bg-neutral-700" />
+            <div className="mx-auto -mt-px h-2 w-full bg-border dark:bg-muted" />
           </div>
 
           <div className="divide-y divide-border border-y border-border">

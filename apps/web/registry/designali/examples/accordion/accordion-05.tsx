@@ -1,16 +1,9 @@
-import { Oswald } from "next/font/google"
-
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@workspace/ui/components/accordion"
-
-const myFont = Oswald({
-  weight: ["400", "700"],
-  subsets: ["latin"],
-})
 
 const items = [
   {
@@ -78,7 +71,7 @@ export default function PricingAccordion() {
                 <div className="border-b flex gap-6 pl-10 w-full h-9">
                 <p className="text-xs">{item.id}</p>
                   <h1
-                    className={`${myFont.className} relative -translate-y-1 text-3xl uppercase md:text-5xl`}
+                    className={`font-sans font-bold relative -translate-y-1 text-3xl uppercase md:text-5xl`}
                   >
                     {item.title}
                   </h1>

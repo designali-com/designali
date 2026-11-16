@@ -55,7 +55,7 @@ export default function Blog12() {
             {picks.map((p, i) => (
               <li key={p.title} className="border-b border-background/20">
                 <a href="#" className="group grid grid-cols-[3rem_1fr_auto] items-start gap-4 py-7 md:grid-cols-[5rem_1fr_auto]">
-                  <span className="font-mono text-3xl font-light opacity-40 transition-opacity group-hover:opacity-100 md:text-5xl">
+                  <span className="font-sans text-3xl font-light opacity-40 transition-opacity group-hover:opacity-100 md:text-5xl">
                     {String(i + 1).padStart(2, "0")}
                   </span>
                   <span className="min-w-0">

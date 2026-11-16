@@ -14,9 +14,9 @@ export default function DesktopWindowMenubar() {
     <div className="w-full max-w-md border bg-background shadow-sm">
       <div className="flex items-center gap-3 border-b bg-muted/50 px-3 py-1.5">
         <div className="flex gap-1.5">
-          <span className="size-2.5 rounded-full bg-red-400" />
-          <span className="size-2.5 rounded-full bg-amber-400" />
-          <span className="size-2.5 rounded-full bg-emerald-400" />
+          <span className="size-2.5 rounded-full bg-destructive" />
+          <span className="size-2.5 rounded-full bg-primary" />
+          <span className="size-2.5 rounded-full bg-primary" />
         </div>
         <Menubar className="h-7 border-0 bg-transparent p-0">
           <MenubarMenu>

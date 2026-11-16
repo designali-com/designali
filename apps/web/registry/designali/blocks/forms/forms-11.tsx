@@ -76,7 +76,7 @@ export default function Forms11() {
             <div className="space-y-4">
               <div className="flex items-center justify-between text-sm">
                 <span className="font-medium">Unique page templates</span>
-                <span className="font-mono">{pages}</span>
+                <span className="font-sans">{pages}</span>
               </div>
               <Slider
                 value={[pages]}
@@ -90,8 +90,8 @@ export default function Forms11() {
             <div className="space-y-4">
               <div className="flex items-center justify-between text-sm">
                 <span className="font-medium">Timeline</span>
-                <span className="font-mono">
-                  {weeks} weeks{weeks < 6 && <span className="ml-2 text-amber-600 dark:text-amber-400">rush</span>}
+                <span className="font-sans">
+                  {weeks} weeks{weeks < 6 && <span className="ml-2 text-primary dark:text-primary">rush</span>}
                 </span>
               </div>
               <Slider

@@ -5,6 +5,8 @@ import {
 
 import { cn } from "@workspace/ui/lib/utils"
 
+import { CounterNumber } from "@/registry/designali/ui/counter-number"
+
 const milestones = [
   { arr: 100, label: "100k downloads", date: "Feb 2025", note: "First Designali templates and Dalim UI kits shipped." },
   { arr: 500, label: "500k downloads", date: "Sep 2025", note: "@designali/icons published with 4,000+ icons." },
@@ -32,7 +34,12 @@ export default function Analytics17() {
             </h2>
           </div>
           <div className="text-left md:text-right">
-            <p className="text-4xl font-semibold tracking-tight">2.87M</p>
+            <CounterNumber
+              value={currentArr / 1000}
+              decimalPlaces={2}
+              suffix="M"
+              className="block text-4xl font-semibold tracking-tight"
+            />
             <p className="text-sm text-muted-foreground">Total downloads, {progress.toFixed(0)}% of goal</p>
           </div>
         </div>

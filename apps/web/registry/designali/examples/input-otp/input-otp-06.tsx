@@ -25,7 +25,7 @@ export default function ControlledOtpValueReadout() {
       </InputOTP>
       <p className="text-xs text-muted-foreground">
         {value.length === 0
-          ? "Enter your one-time password."
+          ? "Enter the code we sent to hello@designali.com."
           : value.length < 6
             ? "You entered " + value + " (" + (6 - value.length) + " left)"
             : "Code complete: " + value}

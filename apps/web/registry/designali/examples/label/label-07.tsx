@@ -8,7 +8,7 @@ import { cn } from "@workspace/ui/lib/utils"
 
 export default function LabelWithCharacterCount() {
   const [bio, setBio] = React.useState(
-    "Product designer who loves type and tiny details."
+    "Ali Imam - design engineer at Designali. Design se code tak."
   )
   const max = 160
 

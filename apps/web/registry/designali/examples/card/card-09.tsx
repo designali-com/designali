@@ -39,7 +39,7 @@ export default function UsageBillingCard() {
                 <span
                   className={cn(
                     "text-muted-foreground tabular-nums",
-                    pct >= 80 && "text-amber-600 dark:text-amber-400"
+                    pct >= 80 && "text-primary dark:text-primary"
                   )}
                 >
                   {m.used.toLocaleString()}

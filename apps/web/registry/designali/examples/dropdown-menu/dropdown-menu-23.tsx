@@ -30,7 +30,7 @@ export default function CalendarEventRsvpMenu() {
   const [rsvp, setRsvp] = React.useState("maybe")
 
   return (
-    <div className="flex w-full max-w-xs border-s-4 border-s-sky-500 bg-muted/40 p-3">
+    <div className="flex w-full max-w-xs border-s-4 border-s-primary bg-muted/40 p-3">
       <div className="flex-1">
         <p className="text-xs font-medium">Designali design critique</p>
         <p className="text-xs text-muted-foreground">

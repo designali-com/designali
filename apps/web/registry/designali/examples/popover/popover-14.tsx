@@ -41,7 +41,7 @@ export default function FeedbackPopover() {
       <PopoverContent className="w-72">
         {sent ? (
           <div className="flex flex-col items-center gap-1.5 py-4 text-center">
-            <CircleCheckIcon className="size-6 text-emerald-600 dark:text-emerald-400" />
+            <CircleCheckIcon className="size-6 text-primary dark:text-primary" />
             <PopoverTitle>Thanks for the feedback!</PopoverTitle>
             <PopoverDescription>We read every message.</PopoverDescription>
           </div>

@@ -57,7 +57,7 @@ export default function Gallery10() {
                 className={`block w-full py-4 text-left transition-colors ${i === active ? "text-foreground" : "text-muted-foreground hover:text-foreground"}`}
               >
                 <span className="flex items-center gap-3 font-medium">
-                  <span className="font-mono text-xs">0{i + 1}</span>
+                  <span className="font-sans text-xs">0{i + 1}</span>
                   {p.name}
                 </span>
                 {i === active && (

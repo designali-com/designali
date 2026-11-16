@@ -32,7 +32,7 @@ export default function PropertyListingCard() {
 
   return (
     <Card className="w-full max-w-xs pt-0">
-      <div className="relative aspect-[4/3] bg-gradient-to-br from-stone-300 via-amber-200 to-emerald-300 dark:from-stone-700 dark:via-amber-900 dark:to-emerald-900">
+      <div className="relative aspect-[4/3] bg-gradient-to-br from-border via-primary/20 to-chart-1 dark:from-muted dark:via-chart-5 dark:to-chart-5">
         <HouseIcon
           className="absolute inset-0 m-auto size-16 text-white/70"
           strokeWidth={1}
@@ -46,7 +46,7 @@ export default function PropertyListingCard() {
           onClick={() => setFav(!fav)}
           className="absolute end-3 top-3"
         >
-          <HeartIcon className={cn(fav && "fill-rose-500 text-rose-500")} />
+          <HeartIcon className={cn(fav && "fill-primary text-primary")} />
         </Button>
       </div>
       <CardHeader>

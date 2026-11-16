@@ -8,21 +8,21 @@ const videos = [
     role: "Owner, Casa Verde Bakery",
     title: "How we doubled weekday orders",
     length: "2:14",
-    tone: "from-amber-300 via-orange-400 to-rose-500",
+    tone: "from-chart-1 via-primary to-primary",
   },
   {
     name: "Theo Brandt",
     role: "Coach, Summit Running Club",
     title: "Running a 400-member club solo",
     length: "3:02",
-    tone: "from-sky-300 via-cyan-400 to-teal-500",
+    tone: "from-chart-1 via-primary to-primary",
   },
   {
     name: "Ines Carvalho",
     role: "Founder, Linho Studio",
     title: "From Instagram DMs to a real store",
     length: "1:48",
-    tone: "from-violet-300 via-fuchsia-400 to-pink-500",
+    tone: "from-chart-1 via-primary to-primary",
   },
 ]
 
@@ -43,10 +43,10 @@ export default function Testimonials11() {
             <a key={v.name} href="#" className="group block">
               <div className={`relative aspect-[4/5] overflow-hidden bg-gradient-to-br ${v.tone}`}>
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.35),transparent_55%)]" />
-                <span className="absolute top-1/2 left-1/2 flex size-16 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-neutral-900 shadow-lg transition-transform group-hover:scale-110">
+                <span className="absolute top-1/2 left-1/2 flex size-16 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-foreground shadow-lg transition-transform group-hover:scale-110">
                   <Play className="ml-1 size-6 fill-current" />
                 </span>
-                <span className="absolute right-3 bottom-3 bg-black/60 px-2 py-0.5 font-mono text-xs text-white">
+                <span className="absolute right-3 bottom-3 bg-black/60 px-2 py-0.5 font-sans text-xs text-white">
                   {v.length}
                 </span>
                 <span className="absolute top-4 left-4 text-5xl font-medium text-white/80">

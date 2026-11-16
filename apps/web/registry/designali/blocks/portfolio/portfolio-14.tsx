@@ -51,7 +51,7 @@ export default function Portfolio14() {
               CGI, 3D and digital artwork from the Designali studio.
             </p>
           </div>
-          <p className="font-mono text-xs text-muted-foreground">{photos.length} frames · Designali</p>
+          <p className="font-sans text-xs text-muted-foreground">{photos.length} frames · Designali</p>
         </div>
 
         <div className="mt-10 grid grid-cols-2 gap-2 md:grid-cols-3 md:gap-3">
@@ -85,7 +85,7 @@ export default function Portfolio14() {
           className="fixed inset-0 z-50 flex flex-col bg-background/95 backdrop-blur"
         >
           <div className="flex items-center justify-between px-6 py-4">
-            <span className="font-mono text-xs text-muted-foreground">
+            <span className="font-sans text-xs text-muted-foreground">
               {open + 1} / {photos.length}
             </span>
             <Button variant="ghost" size="icon-lg" aria-label="Close" onClick={() => setOpen(null)}>

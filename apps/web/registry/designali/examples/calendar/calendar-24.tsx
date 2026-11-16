@@ -6,9 +6,9 @@ import { Calendar } from "@workspace/ui/components/calendar"
 import { cn } from "@workspace/ui/lib/utils"
 
 const upcoming = [
-  { time: "10:00", title: "Studio standup", tone: "bg-sky-500" },
-  { time: "13:30", title: "Icons library sync", tone: "bg-violet-500" },
-  { time: "17:00", title: "Templates release go/no-go", tone: "bg-amber-500" },
+  { time: "10:00", title: "Studio standup", tone: "bg-primary" },
+  { time: "13:30", title: "Icons library sync", tone: "bg-primary" },
+  { time: "17:00", title: "Templates release go/no-go", tone: "bg-primary" },
 ]
 
 export default function CompactSidebarCalendar() {

@@ -14,7 +14,7 @@ export default function PackageVersionBadges() {
           key={item.version}
           className="flex items-center gap-2 border p-2.5"
         >
-          <Badge variant="outline" className="font-mono">
+          <Badge variant="outline" className="font-sans">
             {item.version}
           </Badge>
           <span className="flex-1 text-xs text-muted-foreground">

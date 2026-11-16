@@ -12,9 +12,9 @@ export default function BeforeAfterSlider() {
   return (
     <div className="flex w-full max-w-sm flex-col gap-3">
       <AspectRatio ratio={4 / 3} className="overflow-hidden">
-        <div className="absolute inset-0 bg-linear-to-br from-stone-400 to-stone-600 grayscale" />
+        <div className="absolute inset-0 bg-linear-to-br from-muted-foreground to-muted-foreground grayscale" />
         <div
-          className="absolute inset-0 bg-linear-to-br from-orange-300 via-pink-400 to-violet-600"
+          className="absolute inset-0 bg-linear-to-br from-chart-1 via-primary to-chart-2"
           style={{ clipPath: "inset(0 0 0 " + position + "%)" }}
         />
         <div

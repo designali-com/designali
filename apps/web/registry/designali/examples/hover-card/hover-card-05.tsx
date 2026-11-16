@@ -62,7 +62,7 @@ export default function TeamAvatarStackHoverCards() {
                 <span
                   className={cn(
                     "size-2 rounded-full",
-                    member.online ? "bg-emerald-500" : "bg-muted-foreground"
+                    member.online ? "bg-primary" : "bg-muted-foreground"
                   )}
                 />
                 <span>{member.status}</span>

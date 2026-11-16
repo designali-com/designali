@@ -6,7 +6,7 @@ export default function ProductCardSquare() {
     <div className="w-full max-w-56 border">
       <AspectRatio
         ratio={1}
-        className="bg-linear-to-br from-amber-200 to-orange-400 dark:from-amber-700 dark:to-orange-900"
+        className="bg-linear-to-br from-primary/20 to-primary dark:from-chart-3 dark:to-chart-5"
       >
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="size-1/2 rounded-full bg-white/40 shadow-2xl ring-8 ring-white/20" />

@@ -8,18 +8,18 @@ import {
 import { Badge } from "@workspace/ui/components/badge"
 
 const priorities = [
-  { label: "Urgent", icon: SirenIcon, className: "bg-red-600 text-white" },
+  { label: "Urgent", icon: SirenIcon, className: "bg-destructive text-white" },
   {
     label: "High",
     icon: SignalHighIcon,
     className:
-      "bg-orange-50 text-orange-700 dark:bg-orange-950 dark:text-orange-300",
+      "bg-primary/5 text-chart-3 dark:bg-primary/10 dark:text-chart-1",
   },
   {
     label: "Medium",
     icon: SignalMediumIcon,
     className:
-      "bg-yellow-50 text-yellow-800 dark:bg-yellow-950 dark:text-yellow-300",
+      "bg-primary/5 text-chart-4 dark:bg-primary/10 dark:text-chart-1",
   },
   {
     label: "Low",

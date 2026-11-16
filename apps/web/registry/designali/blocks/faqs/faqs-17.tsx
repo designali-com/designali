@@ -68,7 +68,7 @@ export default function Faqs17() {
         </div>
 
         <div className="mt-10 flex items-center justify-between gap-4 text-xs text-muted-foreground">
-          <span className="font-mono">
+          <span className="font-sans">
             {String(index + 1).padStart(2, "0")} /{" "}
             {String(cards.length).padStart(2, "0")}
           </span>

@@ -21,19 +21,19 @@ const workspaces = [
     id: "acme",
     name: "Designali Studio",
     plan: "Business",
-    tone: "from-indigo-400 to-sky-400",
+    tone: "from-primary to-primary",
   },
   {
     id: "side",
     name: "Dalim Works",
     plan: "Free",
-    tone: "from-amber-400 to-rose-400",
+    tone: "from-primary to-primary",
   },
   {
     id: "client",
     name: "Client projects",
     plan: "Pro",
-    tone: "from-emerald-400 to-teal-400",
+    tone: "from-primary to-primary",
   },
 ]
 

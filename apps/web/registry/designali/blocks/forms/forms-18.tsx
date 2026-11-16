@@ -62,7 +62,7 @@ export default function Forms18() {
             </div>
             {groups.map((group) => (
               <div key={group.title}>
-                <div className="border-b border-border px-3 py-2 font-mono text-[10px] tracking-wider text-muted-foreground uppercase sm:px-4">
+                <div className="border-b border-border px-3 py-2 font-sans text-[10px] tracking-wider text-muted-foreground uppercase sm:px-4">
                   {group.title}
                 </div>
                 {group.rows.map((row) => (

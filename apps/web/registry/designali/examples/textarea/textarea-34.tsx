@@ -21,7 +21,7 @@ export default function SubmittingTextarea() {
   if (state === "sent") {
     return (
       <div className="flex w-full max-w-sm flex-col items-center gap-2 border p-6 text-center text-xs">
-        <CircleCheckIcon className="size-6 text-emerald-600" />
+        <CircleCheckIcon className="size-6 text-primary" />
         Thanks! Ali reads every Designali feature request.
         <Button variant="outline" size="xs" onClick={() => setState("idle")}>
           Send another

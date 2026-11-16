@@ -31,7 +31,7 @@ export default function NowPlayingDrawer() {
         render={<button type="button" />}
         className="flex w-full max-w-xs items-center gap-3 border bg-background p-2 text-start hover:bg-muted"
       >
-        <span className="size-9 shrink-0 bg-gradient-to-br from-pink-500 to-orange-400" />
+        <span className="size-9 shrink-0 bg-gradient-to-br from-primary to-primary" />
         <span className="min-w-0 flex-1">
           <span className="block truncate font-medium">Design se code tak</span>
           <span className="block truncate text-muted-foreground">
@@ -46,7 +46,7 @@ export default function NowPlayingDrawer() {
       </DrawerTrigger>
       <DrawerContent>
         <div className="mx-auto flex w-full max-w-xs flex-col gap-4 p-4">
-          <div className="aspect-square w-full bg-gradient-to-br from-pink-500 via-rose-500 to-orange-400" />
+          <div className="aspect-square w-full bg-gradient-to-br from-primary via-primary to-primary" />
           <DrawerHeader className="p-0 text-start">
             <DrawerTitle className="text-base">Design se code tak</DrawerTitle>
             <DrawerDescription>

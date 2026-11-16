@@ -34,7 +34,7 @@ export default function SpreadsheetCellMenu() {
 
   return (
     <div className="w-full max-w-sm overflow-hidden border text-xs">
-      <div className="border-b bg-muted/40 px-2 py-1 font-mono text-[11px]">
+      <div className="border-b bg-muted/40 px-2 py-1 font-sans text-[11px]">
         {active}
       </div>
       <div className="grid grid-cols-3">

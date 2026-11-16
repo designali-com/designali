@@ -11,10 +11,12 @@ import { Button } from "@workspace/ui/components/button"
 import { Input } from "@workspace/ui/components/input"
 import { cn } from "@workspace/ui/lib/utils"
 
+import { GridPattern } from "@/registry/designali/ui/grid-pattern"
+
 const zones = [
-  { name: "Full overlap", radius: 70, fee: "live calls", time: "Same day", tone: "fill-emerald-500/25 stroke-emerald-500" },
-  { name: "Partial overlap", radius: 120, fee: "morning calls", time: "Next morning", tone: "fill-emerald-500/15 stroke-emerald-500/70" },
-  { name: "Async", radius: 170, fee: "async updates", time: "Within 24 hours", tone: "fill-emerald-500/5 stroke-emerald-500/50" },
+  { name: "Full overlap", radius: 70, fee: "live calls", time: "Same day", tone: "fill-primary/25 stroke-primary" },
+  { name: "Partial overlap", radius: 120, fee: "morning calls", time: "Next morning", tone: "fill-primary/15 stroke-primary/70" },
+  { name: "Async", radius: 170, fee: "async updates", time: "Within 24 hours", tone: "fill-primary/5 stroke-primary/50" },
 ]
 
 const postcodes: Record<string, number> = {
@@ -71,8 +73,8 @@ export default function Location13() {
 
           <div aria-live="polite" className="mt-6 min-h-20 max-w-md">
             {zone && (
-              <div className="flex gap-3 border border-emerald-500/40 bg-emerald-50 p-4 text-sm dark:bg-emerald-950/30">
-                <CircleCheck className="size-5 shrink-0 text-emerald-600 dark:text-emerald-400" />
+              <div className="flex gap-3 border border-primary/40 bg-primary/5 p-4 text-sm dark:bg-primary/30">
+                <CircleCheck className="size-5 shrink-0 text-primary dark:text-primary" />
                 <p>
                   Good news, you&apos;re in <strong>{zone.name}</strong>. We work through{" "}
                   <strong>{zone.fee}</strong> and reply <strong>{zone.time.toLowerCase()}</strong>.
@@ -91,17 +93,10 @@ export default function Location13() {
           </div>
         </div>
 
-        <div className="border bg-muted/40 p-4">
-          <svg viewBox="0 0 400 400" className="h-auto w-full" role="img" aria-label="Designali collaboration zones">
-            <g className="stroke-border" strokeWidth="1">
-              {Array.from({ length: 11 }).map((_, i) => (
-                <path key={`v${i}`} d={`M${i * 40} 0 V400`} />
-              ))}
-              {Array.from({ length: 11 }).map((_, i) => (
-                <path key={`h${i}`} d={`M0 ${i * 40} H400`} />
-              ))}
-            </g>
-            <path d="M0 260 C 90 240, 140 300, 230 250 S 350 200, 400 230" className="fill-none stroke-sky-300 dark:stroke-sky-800" strokeWidth="14" />
+        <div className="relative overflow-hidden border bg-muted/40 p-4">
+          <GridPattern width={40} height={40} className="stroke-border" />
+          <svg viewBox="0 0 400 400" className="relative h-auto w-full" role="img" aria-label="Designali collaboration zones">
+            <path d="M0 260 C 90 240, 140 300, 230 250 S 350 200, 400 230" className="fill-none stroke-chart-1 dark:stroke-chart-4" strokeWidth="14" />
             {[...zones].reverse().map((z, i) => {
               const index = zones.length - 1 - i
               return (

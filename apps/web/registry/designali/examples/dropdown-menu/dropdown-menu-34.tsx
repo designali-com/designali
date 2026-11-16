@@ -51,7 +51,7 @@ export default function RepositoryCloneMenu() {
         <DropdownMenuItem
           closeOnClick={false}
           onClick={() => setCopied(true)}
-          className="mx-1 my-1 border bg-muted/50 font-mono"
+          className="mx-1 my-1 border bg-muted/50 font-sans"
         >
           <span className="flex-1 truncate">{urls[protocol]}</span>
           {copied ? <CheckIcon /> : <CopyIcon />}

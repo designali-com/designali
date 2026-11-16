@@ -27,7 +27,7 @@ export default function LinkPreviewCardMenu() {
     <div className="flex w-full max-w-sm flex-col gap-2">
       <ContextMenu>
         <ContextMenuTrigger className="flex overflow-hidden border data-popup-open:ring-2 data-popup-open:ring-ring/40">
-          <div className="w-24 shrink-0 bg-linear-to-br from-teal-400 to-cyan-600" />
+          <div className="w-24 shrink-0 bg-linear-to-br from-primary to-chart-2" />
           <div className="flex min-w-0 flex-col gap-0.5 p-3 text-xs">
             <span className="text-[11px] text-muted-foreground">
               designali.com/blogs

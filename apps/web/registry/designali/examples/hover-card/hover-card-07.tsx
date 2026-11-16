@@ -20,7 +20,7 @@ export default function LinkPreviewHoverCard() {
           From Figma to Next.js with Designali
         </HoverCardTrigger>
         <HoverCardContent className="w-72 p-0">
-          <div className="h-28 w-full bg-gradient-to-br from-violet-500 via-fuchsia-500 to-rose-400" />
+          <div className="h-28 w-full bg-gradient-to-br from-primary via-primary to-primary" />
           <div className="flex flex-col gap-1 p-3">
             <p className="font-medium">From Figma to Next.js with Designali</p>
             <p className="line-clamp-2 text-muted-foreground">

@@ -3,12 +3,12 @@ import {
 } from "@designali/icons"
 
 const categories = [
-  { name: "Templates", count: 48, tone: "from-amber-300 via-orange-400 to-rose-500", className: "sm:col-span-2 sm:row-span-2", feature: true },
-  { name: "Blocks", count: 460, tone: "from-stone-300 to-stone-500", className: "" },
-  { name: "Landing Pages", count: 240, tone: "from-emerald-300 to-teal-600", className: "" },
-  { name: "Icons", count: 4000, tone: "from-sky-300 to-indigo-500", className: "sm:col-span-2" },
-  { name: "Logos", count: 87, tone: "from-rose-200 to-fuchsia-500", className: "" },
-  { name: "Illustration", count: 159, tone: "from-lime-200 to-green-600", className: "" },
+  { name: "Templates", count: 48, tone: "from-chart-1 via-primary to-primary", className: "sm:col-span-2 sm:row-span-2", feature: true },
+  { name: "Blocks", count: 460, tone: "from-border to-muted-foreground", className: "" },
+  { name: "Landing Pages", count: 240, tone: "from-chart-1 to-chart-2", className: "" },
+  { name: "Icons", count: 4000, tone: "from-chart-1 to-primary", className: "sm:col-span-2" },
+  { name: "Logos", count: 87, tone: "from-primary/20 to-primary", className: "" },
+  { name: "Illustration", count: 159, tone: "from-primary/20 to-chart-2", className: "" },
 ]
 
 export default function Grid09() {
@@ -49,7 +49,7 @@ export default function Grid09() {
                     </p>
                   )}
                 </div>
-                <span className="flex size-9 shrink-0 items-center justify-center bg-white text-neutral-900 transition-transform group-hover:translate-x-1">
+                <span className="flex size-9 shrink-0 items-center justify-center bg-white text-foreground transition-transform group-hover:translate-x-1">
                   <ArrowRight className="size-4" />
                 </span>
               </div>

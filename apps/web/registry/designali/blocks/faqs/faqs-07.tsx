@@ -67,7 +67,7 @@ export default function Faqs07() {
               className="border-b border-border"
             >
               <AccordionTrigger className="group items-center gap-6 py-6 text-base font-medium hover:no-underline md:text-lg">
-                <span className="font-mono text-xs text-muted-foreground">
+                <span className="font-sans text-xs text-muted-foreground">
                   {String(index + 1).padStart(2, "0")}
                 </span>
                 <span className="flex-1">{faq.question}</span>

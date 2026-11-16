@@ -16,7 +16,7 @@ type Passkey = { id: number; name: string; device: "laptop" | "phone"; added: st
 
 const initial: Passkey[] = [
   { id: 1, name: "MacBook Air", device: "laptop", added: "Mar 2, 2025", used: "Today" },
-  { id: 2, name: "Pixel 9", device: "phone", added: "Jan 18, 2025", used: "3 days ago" },
+  { id: 2, name: "iPhone 18 Pro", device: "phone", added: "Jan 18, 2025", used: "3 days ago" },
 ]
 
 export default function Authentication13() {
@@ -49,7 +49,7 @@ export default function Authentication13() {
             <span
               className={cn(
                 "relative flex size-16 items-center justify-center rounded-full transition-colors",
-                state === "done" ? "bg-emerald-600 text-white" : "bg-foreground text-background"
+                state === "done" ? "bg-chart-2 text-white" : "bg-foreground text-background"
               )}
             >
               {state === "done" ? <Check className="size-7" /> : <Fingerprint className="size-7" />}

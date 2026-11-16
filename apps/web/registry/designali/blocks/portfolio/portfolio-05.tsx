@@ -65,7 +65,7 @@ export default function Portfolio05() {
             ))}
           </ul>
           <span className="mt-8 inline-flex items-center gap-2 text-xs">
-            <span className="size-2 rounded-full bg-emerald-500" />
+            <span className="size-2 rounded-full bg-primary" />
             Available for selected projects
           </span>
         </div>

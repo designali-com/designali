@@ -4,6 +4,8 @@ import { useState } from "react"
 
 import { cn } from "@workspace/ui/lib/utils"
 
+import { CounterNumber } from "@/registry/designali/ui/counter-number"
+
 const ranges = {
   "7d": [320, 410, 380, 460, 520, 490, 610],
   "30d": [280, 340, 390, 360, 420, 470, 450, 510, 560, 530, 590, 640, 620, 680],
@@ -33,9 +35,10 @@ export default function Analytics02() {
           <div className="flex flex-wrap items-start justify-between gap-4">
             <div>
               <p className="text-xs text-muted-foreground">Unique visitors on designali.com</p>
-              <p className="mt-1 text-4xl font-semibold tracking-tight">
-                {total.toLocaleString()}
-              </p>
+              <CounterNumber
+                value={total}
+                className="mt-1 block text-4xl font-semibold tracking-tight"
+              />
             </div>
             <div className="flex border border-border">
               {(Object.keys(ranges) as Range[]).map((key) => (
@@ -91,7 +94,7 @@ export default function Analytics02() {
                   <span className="size-2.5" style={{ background: source.color }} />
                   {source.name}
                 </span>
-                <span className="font-mono text-muted-foreground">{source.share}%</span>
+                <span className="font-sans text-muted-foreground">{source.share}%</span>
               </li>
             ))}
           </ul>

@@ -35,10 +35,10 @@ export default function MapPinDropMenu() {
             y: Math.round(((event.clientY - rect.top) / rect.height) * 100),
           })
         }}
-        className="relative h-56 w-full max-w-md overflow-hidden border bg-emerald-50 dark:bg-emerald-950/30"
+        className="relative h-56 w-full max-w-md overflow-hidden border bg-primary/5 dark:bg-primary/30"
       >
         <svg
-          className="absolute inset-0 size-full text-emerald-200 dark:text-emerald-900"
+          className="absolute inset-0 size-full text-chart-1 dark:text-chart-5"
           viewBox="0 0 100 100"
           preserveAspectRatio="none"
         >
@@ -58,7 +58,7 @@ export default function MapPinDropMenu() {
         {pins.map((pin, index) => (
           <MapPinIcon
             key={index}
-            className="absolute size-5 -translate-x-1/2 -translate-y-full fill-red-500 text-red-700"
+            className="absolute size-5 -translate-x-1/2 -translate-y-full fill-destructive text-destructive"
             style={{ left: pin.x + "%", top: pin.y + "%" }}
           />
         ))}
@@ -68,7 +68,7 @@ export default function MapPinDropMenu() {
       </ContextMenuTrigger>
       <ContextMenuContent className="w-52">
         <ContextMenuGroup>
-          <ContextMenuLabel className="font-mono">
+          <ContextMenuLabel className="font-sans">
             {lat}, {lng}
           </ContextMenuLabel>
           <ContextMenuItem onClick={() => setPins((p) => [...p, point])}>

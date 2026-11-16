@@ -28,7 +28,7 @@ export default function ProductSizePicker() {
   return (
     <div className="flex w-full max-w-xs flex-col gap-3 border p-4">
       <div className="flex items-center gap-3">
-        <span className="size-12 bg-gradient-to-br from-slate-300 to-slate-500" />
+        <span className="size-12 bg-gradient-to-br from-border to-muted-foreground" />
         <div>
           <p className="text-xs font-medium">Merino crew sweater</p>
           <p className="text-xs text-muted-foreground">$89.00 · Charcoal</p>

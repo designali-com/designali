@@ -38,9 +38,9 @@ export default function PasswordStrengthBadge() {
             variant={level === "Weak" ? "destructive" : "secondary"}
             className={cn(
               level === "Fair" &&
-                "bg-amber-50 text-amber-700 dark:bg-amber-950 dark:text-amber-300",
+                "bg-primary/5 text-chart-3 dark:bg-primary/10 dark:text-chart-1",
               (level === "Good" || level === "Strong") &&
-                "bg-emerald-50 text-emerald-700 dark:bg-emerald-950 dark:text-emerald-300"
+                "bg-primary/5 text-chart-3 dark:bg-primary/10 dark:text-chart-1"
             )}
           >
             {level}

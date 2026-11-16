@@ -49,13 +49,13 @@ export default function AccordionCodeReviewFiles() {
           value={file.value}
           className="border not-last:border-b"
         >
-          <AccordionTrigger className="items-center bg-muted/50 px-3 font-mono hover:no-underline">
+          <AccordionTrigger className="items-center bg-muted/50 px-3 font-sans hover:no-underline">
             <span className="flex min-w-0 items-center gap-2">
               <FileCodeIcon className="size-3.5 shrink-0 text-muted-foreground" />
               <span className="truncate">{file.path}</span>
             </span>
             <span className="ms-auto me-2 flex gap-1.5">
-              <span className="text-emerald-600 dark:text-emerald-400">
+              <span className="text-primary dark:text-primary">
                 +{file.added}
               </span>
               <span className="text-destructive">-{file.removed}</span>
@@ -69,7 +69,7 @@ export default function AccordionCodeReviewFiles() {
                   key={line.text}
                   className={cn(
                     "px-3 py-0.5",
-                    line.type === "add" && "bg-emerald-500/10",
+                    line.type === "add" && "bg-primary/10",
                     line.type === "remove" && "bg-destructive/10"
                   )}
                 >

@@ -32,7 +32,7 @@ export default function DeploymentCard() {
     <Card className="w-full max-w-sm">
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
-          <span className="size-2 rounded-full bg-emerald-500" />
+          <span className="size-2 rounded-full bg-primary" />
           designali-web
         </CardTitle>
         <CardDescription>Production · deployed 12 minutes ago</CardDescription>

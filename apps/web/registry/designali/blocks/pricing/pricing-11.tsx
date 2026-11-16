@@ -8,6 +8,8 @@ import {
 import { Button } from "@workspace/ui/components/button"
 import { cn } from "@workspace/ui/lib/utils"
 
+import { CounterNumber } from "@/registry/designali/ui/counter-number"
+
 const plans = [
   {
     id: "starter",
@@ -133,7 +135,7 @@ export default function Pricing11() {
               <dd>{annual ? "12 months" : "1 month"}</dd>
             </div>
             {annual && (
-              <div className="flex justify-between text-emerald-600 dark:text-emerald-400">
+              <div className="flex justify-between text-primary dark:text-primary">
                 <dt>Annual saving</dt>
                 <dd>-${(plan.price - monthly) * 12}</dd>
               </div>
@@ -141,9 +143,11 @@ export default function Pricing11() {
           </dl>
           <div className="mt-6 flex items-baseline justify-between border-t border-border pt-6">
             <span className="text-sm font-medium">Due today</span>
-            <span className="text-3xl font-semibold tracking-tight">
-              ${dueToday}
-            </span>
+            <CounterNumber
+              value={dueToday}
+              prefix="$"
+              className="text-3xl font-semibold tracking-tight"
+            />
           </div>
           <Button size="lg" className="mt-6 w-full">
             Continue to payment

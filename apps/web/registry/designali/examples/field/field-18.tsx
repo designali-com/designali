@@ -68,7 +68,7 @@ export default function DateOfBirthFieldSet() {
         </Field>
       </div>
       <FieldDescription>
-        You must be at least 18 to open an account.
+        You must be at least 18 to open a designali.com account.
       </FieldDescription>
     </FieldSet>
   )

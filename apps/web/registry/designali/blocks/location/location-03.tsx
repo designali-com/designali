@@ -9,6 +9,8 @@ import {
 import { Input } from "@workspace/ui/components/input"
 import { cn } from "@workspace/ui/lib/utils"
 
+import { GridPattern } from "@/registry/designali/ui/grid-pattern"
+
 const stores = [
   {
     name: "Americas",
@@ -91,7 +93,7 @@ export default function Location03() {
                       <span
                         className={cn(
                           "mt-2 block text-xs",
-                          store.open ? "text-emerald-600" : "text-muted-foreground"
+                          store.open ? "text-primary" : "text-muted-foreground"
                         )}
                       >
                         {store.open ? "Available now" : "Offline · replies within 24h"}
@@ -112,14 +114,8 @@ export default function Location03() {
           </ul>
         </aside>
 
-        <div
-          className="relative min-h-96 bg-muted"
-          style={{
-            backgroundImage:
-              "linear-gradient(var(--border) 1px, transparent 1px), linear-gradient(90deg, var(--border) 1px, transparent 1px)",
-            backgroundSize: "48px 48px",
-          }}
-        >
+        <div className="relative min-h-96 overflow-hidden bg-muted">
+          <GridPattern width={48} height={48} className="stroke-border" />
           {stores.map((store, index) => (
             <button
               key={store.name}

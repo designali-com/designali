@@ -22,7 +22,7 @@ export default function TopAnnouncementDrawer() {
       </DrawerTrigger>
       <DrawerContent>
         <div className="mx-auto flex w-full max-w-lg flex-col gap-3 p-4 sm:flex-row sm:items-center">
-          <div className="flex size-10 shrink-0 items-center justify-center bg-amber-500/15 text-amber-600 dark:text-amber-400">
+          <div className="flex size-10 shrink-0 items-center justify-center bg-primary/15 text-primary dark:text-primary">
             <WrenchIcon className="size-5" />
           </div>
           <div className="flex-1">

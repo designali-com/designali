@@ -40,7 +40,7 @@ export default function ReadOnlyKeyTextarea() {
         id="ta-key"
         readOnly
         value={key}
-        className="resize-none bg-muted/40 font-mono break-all"
+        className="resize-none bg-muted/40 font-sans break-all"
       />
     </div>
   )

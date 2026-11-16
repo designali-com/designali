@@ -105,7 +105,7 @@ export default function LanguageRegionDialog() {
                   />
                   <FieldLabel
                     htmlFor={"date-" + item.value}
-                    className="font-mono"
+                    className="font-sans"
                   >
                     {item.label}
                   </FieldLabel>

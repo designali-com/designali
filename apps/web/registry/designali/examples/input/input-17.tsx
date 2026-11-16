@@ -39,7 +39,7 @@ export default function PhoneCountryInput() {
           placeholder="(555) 014-2290"
         />
       </div>
-      <FieldDescription>Used for two-factor codes only.</FieldDescription>
+      <FieldDescription>Used for designali.com two-factor codes only.</FieldDescription>
     </Field>
   )
 }

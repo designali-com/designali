@@ -38,7 +38,7 @@ export default function GitBranchSwitcher() {
           <Button
             variant="outline"
             size="sm"
-            className="w-56 justify-between font-mono"
+            className="w-56 justify-between font-sans"
           />
         }
       >
@@ -55,7 +55,7 @@ export default function GitBranchSwitcher() {
         <ComboboxList>
           {(branch: Branch) => (
             <ComboboxItem key={branch.name} value={branch}>
-              <span className="flex-1 truncate font-mono">{branch.name}</span>
+              <span className="flex-1 truncate font-sans">{branch.name}</span>
               {branch.isDefault ? (
                 <Badge variant="secondary" className="h-4 px-1 text-[10px]">
                   default

@@ -32,7 +32,7 @@ export default function DeploymentBuildLogs() {
     <Card className="w-full max-w-md" size="sm">
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
-          <span className="size-2 rounded-full bg-emerald-500" />
+          <span className="size-2 rounded-full bg-primary" />
           Production
         </CardTitle>
         <CardDescription>
@@ -59,7 +59,7 @@ export default function DeploymentBuildLogs() {
             <ChevronDownIcon className="ml-auto transition-transform group-data-panel-open/button:rotate-180" />
           </CollapsibleTrigger>
           <CollapsibleContent className="h-(--collapsible-panel-height) overflow-hidden transition-[height] duration-200 ease-out data-ending-style:h-0 data-starting-style:h-0">
-            <div className="mt-2 bg-muted p-3 font-mono text-[11px] leading-5">
+            <div className="mt-2 bg-muted p-3 font-sans text-[11px] leading-5">
               {logs.map((log) => (
                 <div key={log.time} className="flex gap-3">
                   <span className="text-muted-foreground">{log.time}</span>

@@ -25,7 +25,7 @@ function AchievementToasts() {
   return toasts.map((t) => (
     <Toast key={t.id} toast={t}>
       <ToastContent>
-        <div className="flex size-10 shrink-0 items-center justify-center bg-gradient-to-br from-amber-400 to-orange-600 text-white">
+        <div className="flex size-10 shrink-0 items-center justify-center bg-gradient-to-br from-primary to-chart-2 text-white">
           <TrophyIcon className="size-5" />
         </div>
         <div className="flex min-w-0 flex-1 flex-col gap-0.5">

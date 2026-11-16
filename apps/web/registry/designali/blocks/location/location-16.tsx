@@ -26,7 +26,7 @@ function Compass() {
         )
       })}
       <g transform="rotate(32 100 100)">
-        <path d="M100 34 L110 100 L100 92 L90 100 Z" className="fill-orange-500" />
+        <path d="M100 34 L110 100 L100 92 L90 100 Z" className="fill-primary" />
         <path d="M100 166 L110 100 L100 108 L90 100 Z" className="fill-background/40" />
       </g>
       <circle cx="100" cy="100" r="4" className="fill-background" />
@@ -52,12 +52,12 @@ export default function Location16() {
           <p className="text-xs tracking-widest text-background/60 uppercase">
             Designali studio &middot; design se code tak
           </p>
-          <p className="mt-6 font-mono text-5xl leading-none font-light tracking-tighter sm:text-6xl md:text-8xl">
+          <p className="mt-6 font-sans text-5xl leading-none font-light tracking-tighter sm:text-6xl md:text-8xl">
             Remote
             <br />
             Worldwide
           </p>
-          <p className="mt-6 font-mono text-sm text-background/60">
+          <p className="mt-6 font-sans text-sm text-background/60">
             hello@designali.com &middot; designali.com
           </p>
 

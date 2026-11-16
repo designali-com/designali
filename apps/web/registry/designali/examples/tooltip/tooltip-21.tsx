@@ -18,8 +18,8 @@ export default function CursorTrackingTooltip() {
           }
         >
           <div className="absolute inset-y-0 start-0 w-2/5 bg-primary/15" />
-          <div className="absolute inset-y-3 start-[18%] w-1 bg-amber-500" />
-          <div className="absolute inset-y-3 start-[63%] w-1 bg-rose-500" />
+          <div className="absolute inset-y-3 start-[18%] w-1 bg-primary" />
+          <div className="absolute inset-y-3 start-[63%] w-1 bg-primary" />
         </TooltipTrigger>
         <TooltipContent>Hover to scrub the 04:32 recording</TooltipContent>
       </Tooltip>

@@ -22,7 +22,7 @@ export default function RecordItemsSelect() {
   return (
     <div className="flex w-full max-w-sm flex-col gap-3 border p-4">
       <div className="flex items-center gap-2">
-        <ActivityIcon className="size-4 text-emerald-500" />
+        <ActivityIcon className="size-4 text-primary" />
         <span className="text-sm font-medium">www.designali.com/api/health</span>
       </div>
       <Field orientation="horizontal" className="justify-between">

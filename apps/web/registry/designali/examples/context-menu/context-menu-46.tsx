@@ -25,9 +25,9 @@ export default function ProductCardQuickMenu() {
   return (
     <ContextMenu>
       <ContextMenuTrigger className="flex w-56 flex-col gap-2 border p-2">
-        <div className="relative aspect-4/3 bg-linear-to-br from-orange-200 to-rose-300">
+        <div className="relative aspect-4/3 bg-linear-to-br from-primary/20 to-chart-1">
           {wishlisted ? (
-            <HeartIcon className="absolute end-2 top-2 size-4 fill-rose-500 text-rose-500" />
+            <HeartIcon className="absolute end-2 top-2 size-4 fill-primary text-primary" />
           ) : null}
         </div>
         <div className="flex flex-col gap-0.5 px-1 text-xs">

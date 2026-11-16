@@ -28,7 +28,7 @@ export default function Sections20() {
     <section className="w-full bg-background py-24">
       <div className="mx-auto max-w-7xl px-6">
         <div className="max-w-2xl">
-          <p className="font-mono text-xs tracking-widest text-muted-foreground uppercase">Benefits</p>
+          <p className="font-sans text-xs tracking-widest text-muted-foreground uppercase">Benefits</p>
           <h2 className="mt-4 text-4xl font-semibold tracking-tight md:text-5xl">
             We take care of the basics so you can focus on the work.
           </h2>

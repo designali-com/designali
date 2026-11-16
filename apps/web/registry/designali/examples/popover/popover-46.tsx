@@ -45,7 +45,7 @@ export default function HoverOpenPopover() {
               <GitForkIcon className="size-3" /> 86
             </span>
             <span className="flex items-center gap-1">
-              <span className="size-2 rounded-full bg-sky-500" /> TypeScript
+              <span className="size-2 rounded-full bg-primary" /> TypeScript
             </span>
           </div>
         </PopoverContent>

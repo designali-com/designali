@@ -19,12 +19,12 @@ import { Input } from "@workspace/ui/components/input"
 import { cn } from "@workspace/ui/lib/utils"
 
 const swatches = [
-  { id: "violet", className: "bg-violet-500" },
-  { id: "sky", className: "bg-sky-500" },
-  { id: "emerald", className: "bg-emerald-500" },
-  { id: "amber", className: "bg-amber-500" },
-  { id: "rose", className: "bg-rose-500" },
-  { id: "slate", className: "bg-slate-600" },
+  { id: "violet", className: "bg-primary" },
+  { id: "sky", className: "bg-primary" },
+  { id: "emerald", className: "bg-primary" },
+  { id: "amber", className: "bg-primary" },
+  { id: "rose", className: "bg-primary" },
+  { id: "slate", className: "bg-muted-foreground" },
 ]
 
 export default function AvatarColorPickerDialog() {

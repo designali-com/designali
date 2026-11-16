@@ -65,8 +65,8 @@ export default function AccordionIncidentHistory() {
                 className={cn(
                   "size-2 rounded-full",
                   incident.severity === "major"
-                    ? "bg-orange-500"
-                    : "bg-amber-400"
+                    ? "bg-primary"
+                    : "bg-primary"
                 )}
               />
               {incident.title}

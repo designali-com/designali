@@ -37,7 +37,7 @@ export default function DeploymentPipelineToast() {
         <RocketIcon className="size-5 text-muted-foreground" />
         <div className="min-w-0 flex-1">
           <p className="text-sm font-medium">designali-web</p>
-          <p className="truncate font-mono text-xs text-muted-foreground">
+          <p className="truncate font-sans text-xs text-muted-foreground">
             main @ 4f9c2ab
           </p>
         </div>

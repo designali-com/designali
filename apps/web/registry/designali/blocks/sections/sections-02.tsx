@@ -3,29 +3,29 @@ const steps = [
     phase: "Week 1–2",
     title: "Discovery",
     description:
-      "Stakeholder interviews, competitive audit and a workshop to agree on what success looks like.",
-    deliverables: ["Research report", "Brand audit", "Project brief"],
+      "A call with Ali Imam, a review of your brand and product, and a shared brief for what we design and build.",
+    deliverables: ["Project brief", "Brand audit", "Sitemap"],
   },
   {
     phase: "Week 3–5",
     title: "Direction",
     description:
-      "Three distinct creative routes, each with type, colour and tone of voice explored in context.",
-    deliverables: ["Moodboards", "Route presentations", "Naming shortlist"],
+      "Brand identity and UI/UX directions explored in Figma, with type, color and layout shown in context.",
+    deliverables: ["Moodboards", "Figma directions", "Logo concepts"],
   },
   {
     phase: "Week 6–9",
     title: "Design",
     description:
-      "We refine the chosen route into a complete system and test it across real touchpoints.",
-    deliverables: ["Identity system", "UI kit", "Motion principles"],
+      "The chosen direction becomes a design system and production-ready Next.js, React and Tailwind CSS code.",
+    deliverables: ["Design system", "UI kit", "Next.js build"],
   },
   {
     phase: "Week 10+",
     title: "Delivery",
     description:
-      "Guidelines, production files and a handover session so your team can run with it.",
-    deliverables: ["Brand guidelines", "Asset library", "Team training"],
+      "Launch on Vercel, brand guidelines and a handover so your team can keep shipping.",
+    deliverables: ["Vercel deploy", "Brand guidelines", "Handover session"],
   },
 ]
 
@@ -35,11 +35,11 @@ export default function Sections02() {
       <div className="mx-auto max-w-6xl px-6">
         <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <h2 className="max-w-lg text-4xl font-semibold tracking-tight md:text-5xl">
-            How a project runs, start to finish.
+            How a Designali project runs, design se code tak.
           </h2>
           <p className="max-w-xs text-sm text-muted-foreground">
-            A typical brand engagement takes ten to twelve weeks with weekly
-            check-ins.
+            From brand identity to a live Next.js website, with weekly check-ins
+            along the way.
           </p>
         </div>
 
@@ -49,7 +49,7 @@ export default function Sections02() {
               <span className="absolute top-0 -left-[5px] size-2.5 bg-foreground" />
               <div className="grid gap-6 md:grid-cols-[180px_1fr_220px]">
                 <div>
-                  <p className="font-mono text-xs text-muted-foreground">
+                  <p className="font-sans text-xs text-muted-foreground">
                     {String(index + 1).padStart(2, "0")}
                   </p>
                   <p className="mt-1 text-xs text-muted-foreground">{step.phase}</p>

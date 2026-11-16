@@ -7,24 +7,23 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@workspace/ui/components/navigation-menu"
-import { cn } from "@workspace/ui/lib/utils"
 
 const destinations = [
   {
     city: "Brand identity",
     stays: "Dalim Agency",
-    gradient: "from-amber-300 to-orange-500",
+    image: "/images/templates/dalim-agency-old.jpg",
   },
-  { city: "Web design", stays: "Dalim Works", gradient: "from-rose-300 to-pink-600" },
+  { city: "Web design", stays: "Dalim Works", image: "/images/templates/dalim-works-old.jpg" },
   {
     city: "Icons",
     stays: "Dalim Icons",
-    gradient: "from-sky-300 to-indigo-600",
+    image: "/images/templates/dalim-icons-old.jpg",
   },
   {
     city: "Typography",
     stays: "Dalim Fonts",
-    gradient: "from-emerald-300 to-teal-600",
+    image: "/images/templates/dalim-fonts-old.jpg",
   },
 ]
 
@@ -42,8 +41,10 @@ export default function DestinationTilesNav() {
                     href="#"
                     className="flex-col items-stretch gap-1.5"
                   >
-                    <span
-                      className={cn("h-16 bg-gradient-to-br", d.gradient)}
+                    <img
+                      src={d.image}
+                      alt={d.stays}
+                      className="h-16 w-full bg-muted object-cover"
                     />
                     <span className="font-medium">{d.city}</span>
                     <span className="text-muted-foreground">{d.stays}</span>

@@ -71,7 +71,7 @@ export default function MapPinHoverCard() {
           <HoverCardContent side="top" className="w-48">
             <p className="font-medium">{pin.name}</p>
             <p className="flex items-center gap-1 text-muted-foreground">
-              <StarIcon className="size-3 fill-amber-400 text-amber-400" />
+              <StarIcon className="size-3 fill-primary text-primary" />
               {pin.rating} · {pin.hours}
             </p>
           </HoverCardContent>

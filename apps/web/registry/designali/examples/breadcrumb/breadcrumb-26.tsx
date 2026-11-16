@@ -22,7 +22,7 @@ export default function SupportTicketBreadcrumb() {
           </BreadcrumbItem>
           <BreadcrumbSeparator />
           <BreadcrumbItem>
-            <BreadcrumbPage className="font-mono">#4821</BreadcrumbPage>
+            <BreadcrumbPage className="font-sans">#4821</BreadcrumbPage>
           </BreadcrumbItem>
         </BreadcrumbList>
       </Breadcrumb>

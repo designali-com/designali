@@ -34,7 +34,7 @@ export default function PlaybackQueueSheet() {
           <SheetDescription>{queue.length} songs · 14 min</SheetDescription>
         </SheetHeader>
         <div className="mx-4 flex items-center gap-3 border bg-muted/50 p-3">
-          <div className="size-12 shrink-0 bg-gradient-to-br from-violet-500 to-fuchsia-500" />
+          <div className="size-12 shrink-0 bg-gradient-to-br from-primary to-primary" />
           <div className="flex flex-1 flex-col">
             <span className="text-muted-foreground">Now playing</span>
             <span className="font-medium">Summer Static</span>

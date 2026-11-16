@@ -57,7 +57,7 @@ export default function UploadQueueWidget() {
                 <Progress value={file.progress} />
               </div>
               {file.progress === 100 ? (
-                <CircleCheckIcon className="size-4 text-emerald-600" />
+                <CircleCheckIcon className="size-4 text-primary" />
               ) : (
                 <span className="text-[11px] text-muted-foreground">
                   {file.progress}%

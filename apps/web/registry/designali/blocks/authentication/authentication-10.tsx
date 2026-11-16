@@ -51,7 +51,7 @@ export default function Authentication10() {
     <section className="w-full bg-background py-20 md:py-28">
       <div className="mx-auto grid max-w-5xl gap-12 px-6 md:grid-cols-[1fr_1.3fr]">
         <div className="space-y-4">
-          <p className="font-mono text-xs text-muted-foreground">ACCOUNT RECOVERY</p>
+          <p className="font-sans text-xs text-muted-foreground">ACCOUNT RECOVERY</p>
           <h2 className="text-4xl font-semibold tracking-tight">Let&apos;s get you back in.</h2>
           <p className="text-muted-foreground">
             Choose how you want to verify it&apos;s you. We never ask for your password over email or phone.

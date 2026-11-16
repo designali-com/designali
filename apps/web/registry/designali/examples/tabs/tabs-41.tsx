@@ -44,7 +44,7 @@ export default function CourseProgressTabs() {
           .filter((c) => c.done === 100)
           .map((c) => (
             <div key={c.title} className="flex items-center gap-2">
-              <CircleCheckIcon className="size-4 text-emerald-600" />
+              <CircleCheckIcon className="size-4 text-primary" />
               {c.title}
             </div>
           ))}

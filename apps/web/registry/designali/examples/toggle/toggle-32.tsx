@@ -55,7 +55,7 @@ export default function StarredEmailToggles() {
               )
             }
             aria-label="Star"
-            className="aria-pressed:bg-transparent aria-pressed:text-amber-500"
+            className="aria-pressed:bg-transparent aria-pressed:text-primary"
           >
             <StarIcon className="group-aria-pressed/toggle:fill-current" />
           </Toggle>

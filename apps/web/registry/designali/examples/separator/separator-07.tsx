@@ -14,7 +14,7 @@ export default function DashedReceiptSeparator() {
   const tax = subtotal * 0.08
 
   return (
-    <div className="flex w-full max-w-60 flex-col gap-3 border bg-muted/20 p-4 font-mono text-xs">
+    <div className="flex w-full max-w-60 flex-col gap-3 border bg-muted/20 p-4 font-sans text-xs">
       <div className="text-center">
         <div className="text-sm font-semibold">DESIGNALI</div>
         <div className="text-muted-foreground">Order #2041 · designali.com</div>

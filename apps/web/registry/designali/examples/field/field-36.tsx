@@ -27,7 +27,7 @@ export default function RecurringScheduleFieldSet() {
 
   return (
     <FieldSet className="w-full max-w-sm">
-      <FieldLegend>Repeat</FieldLegend>
+      <FieldLegend>Designali studio check-in</FieldLegend>
       <FieldGroup className="gap-4">
         <Field>
           <FieldLabel htmlFor="repeat-freq">Frequency</FieldLabel>
@@ -64,7 +64,7 @@ export default function RecurringScheduleFieldSet() {
             </ToggleGroup>
             <FieldDescription>
               {picked.length
-                ? "Repeats on " + picked.join(", ")
+                ? "Ali checks in on " + picked.join(", ")
                 : "Pick at least one day."}
             </FieldDescription>
           </Field>

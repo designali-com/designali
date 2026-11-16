@@ -12,15 +12,18 @@ import {
   InputOTPSeparator,
   InputOTPSlot,
 } from "@workspace/ui/components/input-otp"
+import { CounterNumber } from "@/registry/designali/ui/counter-number"
 
 export default function PayoutSecurityCode() {
   return (
     <div className="flex w-full max-w-sm flex-col gap-4 border p-5">
       <div className="text-center">
         <p className="text-xs text-muted-foreground">
-          Withdraw to Checking •• 2201
+          Designali studio payout to Checking •• 2201
         </p>
-        <p className="text-3xl font-semibold tabular-nums">$12,800.00</p>
+        <p className="font-semibold tabular-nums">
+          <CounterNumber value={12800} prefix="$" decimalPlaces={2} size="lg" />
+        </p>
       </div>
       <InputOTP
         maxLength={6}

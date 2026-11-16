@@ -6,9 +6,9 @@ import {
 import { cn } from "@workspace/ui/lib/utils"
 
 const segments = [
-  { label: "Templates", size: 18.4, files: 2310, color: "bg-blue-500" },
-  { label: "Brand assets", size: 31.2, files: 840, color: "bg-violet-500" },
-  { label: "Backups", size: 12.0, files: 14, color: "bg-amber-500" },
+  { label: "Templates", size: 18.4, files: 2310, color: "bg-primary" },
+  { label: "Designali icons", size: 31.2, files: 840, color: "bg-primary" },
+  { label: "Logos", size: 12.0, files: 14, color: "bg-primary" },
 ]
 const capacity = 100
 
@@ -18,7 +18,7 @@ export default function StorageBreakdownHoverCard() {
   return (
     <div className="w-full max-w-sm">
       <div className="mb-2 flex justify-between text-sm">
-        <span className="font-medium">Storage</span>
+        <span className="font-medium">Designali storage</span>
         <span className="text-muted-foreground">
           {used.toFixed(1)} GB of {capacity} GB
         </span>

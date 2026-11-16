@@ -106,7 +106,7 @@ export default function Navigation17() {
               className="relative flex size-9 items-center justify-center hover:bg-muted"
             >
               <Bell className="size-4" />
-              <span className="absolute top-2 right-2 size-2 rounded-full bg-red-500 ring-2 ring-background" />
+              <span className="absolute top-2 right-2 size-2 rounded-full bg-destructive ring-2 ring-background" />
             </button>
             {panel === "notifications" && (
               <div className="absolute end-0 top-full z-20 mt-1 w-[min(20rem,calc(100vw-2rem))] border bg-popover text-sm text-popover-foreground">
@@ -139,7 +139,7 @@ export default function Navigation17() {
               aria-label="Account menu"
               onClick={() => toggle("account")}
               className={cn(
-                "flex size-9 items-center justify-center bg-gradient-to-br from-sky-400 to-indigo-500 text-xs font-semibold text-white",
+                "flex size-9 items-center justify-center bg-gradient-to-br from-primary to-primary text-xs font-semibold text-white",
                 panel === "account" && "ring-2 ring-foreground ring-offset-2 ring-offset-background"
               )}
             >

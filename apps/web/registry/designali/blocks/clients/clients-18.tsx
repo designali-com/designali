@@ -81,7 +81,7 @@ export default function Clients18() {
                   <span className="hidden text-sm text-muted-foreground md:inline">
                     {client.industry}
                   </span>
-                  <span className="hidden font-mono text-sm text-muted-foreground md:inline">
+                  <span className="hidden font-sans text-sm text-muted-foreground md:inline">
                     {client.since}
                   </span>
                   <span className="col-start-2 row-start-2 text-sm text-muted-foreground md:col-auto md:row-auto md:text-foreground">

@@ -24,7 +24,7 @@ export default function AudioScrubberSlider() {
   return (
     <div className="flex w-full max-w-sm flex-col gap-3 border p-4">
       <div className="flex items-center gap-3">
-        <div className="size-10 shrink-0 bg-gradient-to-br from-amber-400 to-rose-500" />
+        <div className="size-10 shrink-0 bg-gradient-to-br from-primary to-primary" />
         <div className="min-w-0 flex-1">
           <div className="truncate text-sm font-medium">
             Episode 48: Design se code tak

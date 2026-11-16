@@ -12,27 +12,27 @@ const colors = [
   {
     value: "Sand",
     className:
-      "bg-amber-200 data-checked:bg-amber-200 dark:data-checked:bg-amber-200",
+      "bg-primary/20 data-checked:bg-primary/20 dark:data-checked:bg-primary/20",
   },
   {
     value: "Sage",
     className:
-      "bg-emerald-300 data-checked:bg-emerald-300 dark:data-checked:bg-emerald-300",
+      "bg-chart-1 data-checked:bg-chart-1 dark:data-checked:bg-chart-1",
   },
   {
     value: "Slate",
     className:
-      "bg-slate-500 data-checked:bg-slate-500 dark:data-checked:bg-slate-500",
+      "bg-muted-foreground data-checked:bg-muted-foreground dark:data-checked:bg-muted-foreground",
   },
   {
     value: "Clay",
     className:
-      "bg-orange-400 data-checked:bg-orange-400 dark:data-checked:bg-orange-400",
+      "bg-primary data-checked:bg-primary dark:data-checked:bg-primary",
   },
   {
     value: "Ink",
     className:
-      "bg-neutral-900 data-checked:bg-neutral-900 dark:data-checked:bg-neutral-900",
+      "bg-foreground data-checked:bg-foreground dark:data-checked:bg-card",
   },
 ]
 

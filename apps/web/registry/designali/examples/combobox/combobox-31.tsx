@@ -78,7 +78,7 @@ export default function PriorityIconOnly() {
       {issues.map((issue) => (
         <li key={issue.id} className="flex items-center gap-2 px-2 py-1">
           <PriorityCell initial={issue.priority} />
-          <span className="font-mono text-xs text-muted-foreground">
+          <span className="font-sans text-xs text-muted-foreground">
             {issue.id}
           </span>
           <span className="truncate text-sm">{issue.title}</span>

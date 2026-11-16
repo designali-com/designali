@@ -20,7 +20,7 @@ export default function ImageZoomSlider() {
     <div className="flex w-full max-w-xs flex-col items-center gap-4">
       <div className="flex size-40 items-center justify-center overflow-hidden border bg-muted">
         <div
-          className="size-24 rounded-full bg-gradient-to-br from-violet-400 to-sky-400 transition-transform"
+          className="size-24 rounded-full bg-gradient-to-br from-primary to-primary transition-transform"
           style={{ transform: "scale(" + zoom[0] + ")" }}
         />
       </div>

@@ -9,12 +9,12 @@ import {
 import { Button } from "@workspace/ui/components/button"
 
 const posts = [
-  { tag: "Research", title: "What 1,200 support emails say about our templates", date: "Nov 13", read: 9, hue: "from-chart-1/50 to-chart-2/20" },
-  { tag: "Engineering", title: "Cutting designali.com load time from 2.1s to 380ms", date: "Nov 8", read: 12, hue: "from-chart-2/50 to-chart-3/20" },
-  { tag: "Design", title: "Dense UI blocks that still breathe", date: "Nov 2", read: 6, hue: "from-chart-3/50 to-chart-4/20" },
-  { tag: "Culture", title: "The Designali writing guide, published in full", date: "Oct 27", read: 15, hue: "from-chart-4/50 to-chart-5/20" },
-  { tag: "Product", title: "Inside the redesign of the icons page", date: "Oct 21", read: 8, hue: "from-chart-5/50 to-chart-1/20" },
-  { tag: "Engineering", title: "Shipping @designali/logos as an npm package", date: "Oct 14", read: 11, hue: "from-chart-1/50 to-chart-3/20" },
+  { tag: "Research", title: "What 1,200 support emails say about our templates", date: "Nov 13", read: 9, image: "/img/ask/ask1.jpg" },
+  { tag: "Engineering", title: "Cutting designali.com load time from 2.1s to 380ms", date: "Nov 8", read: 12, image: "/img/dashboard-1-light.jpg" },
+  { tag: "Design", title: "Dense UI blocks that still breathe", date: "Nov 2", read: 6, image: "/img/ask/ask4.jpg" },
+  { tag: "Culture", title: "The Designali writing guide, published in full", date: "Oct 27", read: 15, image: "/images/templates/portfolio-simple.jpg" },
+  { tag: "Product", title: "Inside the redesign of the icons page", date: "Oct 21", read: 8, image: "/images/templates/dalim-icons-old.jpg" },
+  { tag: "Engineering", title: "Shipping @designali/logos as an npm package", date: "Oct 14", read: 11, image: "/images/templates/vercel.jpg" },
 ]
 
 export default function Blog07() {
@@ -54,7 +54,12 @@ export default function Blog07() {
               href="#"
               className="group flex w-[80%] shrink-0 snap-start flex-col border bg-card sm:w-[340px]"
             >
-              <div className={`relative aspect-[4/3] bg-gradient-to-br ${post.hue}`}>
+              <div className="relative aspect-[4/3] overflow-hidden bg-muted">
+                <img
+                  src={post.image}
+                  alt=""
+                  className="size-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
                 <span className="absolute top-3 left-3 bg-background/90 px-2 py-0.5 text-xs">{post.tag}</span>
               </div>
               <div className="flex flex-1 flex-col p-5">

@@ -13,10 +13,10 @@ export function ContextMenuShortcuts() {
     <ContextMenu>
       <ContextMenuTrigger className="flex aspect-video w-full max-w-xs items-center justify-center rounded-xl border border-dashed text-sm">
         <span className="hidden pointer-fine:inline-block">
-          Right click here
+          Right click the designali.com preview
         </span>
         <span className="hidden pointer-coarse:inline-block">
-          Long press here
+          Long press the designali.com preview
         </span>
       </ContextMenuTrigger>
       <ContextMenuContent>

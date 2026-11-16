@@ -18,7 +18,7 @@ export default function PixelSizedSidebar() {
       >
         <div className="flex h-full flex-col justify-center gap-1 bg-muted/40 p-3">
           <span className="text-xs font-medium">Sidebar</span>
-          <span className="font-mono text-[11px] text-muted-foreground">
+          <span className="font-sans text-[11px] text-muted-foreground">
             120px - 260px
           </span>
         </div>

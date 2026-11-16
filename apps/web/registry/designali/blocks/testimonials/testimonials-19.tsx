@@ -4,8 +4,8 @@ import {
 
 const brands = [
   { name: "northpeak", className: "font-semibold tracking-tight lowercase" },
-  { name: "HALVARD", className: "font-mono tracking-[0.3em]" },
-  { name: "Orchid&Co", className: "font-serif italic" },
+  { name: "HALVARD", className: "font-sans tracking-[0.3em]" },
+  { name: "Orchid&Co", className: "font-sans italic" },
   { name: "ZEPHYRA", className: "font-black tracking-tighter" },
   { name: "lumenstack", className: "font-light tracking-wide" },
   { name: "Brix", className: "font-bold uppercase" },
@@ -30,7 +30,7 @@ export default function Testimonials19() {
         </div>
         <figure className="mx-auto mt-16 grid max-w-5xl items-center gap-10 md:grid-cols-[auto_1fr]">
           <div className="relative mx-auto size-40 shrink-0 md:size-48">
-            <div className="absolute inset-0 bg-gradient-to-br from-indigo-400 via-sky-400 to-emerald-300" />
+            <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary to-chart-1" />
             <span className="absolute inset-0 flex items-center justify-center text-5xl font-medium text-white">
               NR
             </span>

@@ -11,9 +11,9 @@ import { Button } from "@workspace/ui/components/button"
 import { Input } from "@workspace/ui/components/input"
 
 const initialItems = [
-  { id: 1, name: "Designali Icons Pro", variant: "Personal license · 4,000+ icons", price: 39, qty: 1, tone: "from-stone-300/80 to-stone-100/40" },
-  { id: 2, name: "Design Agency Template", variant: "Pro license · Next.js + Figma", price: 79, qty: 1, tone: "from-zinc-700/80 to-zinc-400/40" },
-  { id: 3, name: "Apple Device Mockups", variant: "Team license · 3 seats", price: 35, qty: 3, tone: "from-amber-800/70 to-amber-400/40" },
+  { id: 1, name: "Designali Icons Pro", variant: "Personal license · 4,000+ icons", price: 39, qty: 1, image: "/images/templates/dalim-icons-old.jpg" },
+  { id: 2, name: "Design Agency Template", variant: "Pro license · Next.js + Figma", price: 79, qty: 1, image: "/images/templates/design-agency.jpg" },
+  { id: 3, name: "Apple Device Mockups", variant: "Team license · 3 seats", price: 35, qty: 3, image: "/images/templates/aliimam-comp.jpg" },
 ]
 
 export default function Ecommerce03() {
@@ -48,7 +48,7 @@ export default function Ecommerce03() {
             )}
             {items.map((item) => (
               <li key={item.id} className="flex gap-4 border-b border-border py-6">
-                <div className={`size-24 shrink-0 border border-border bg-gradient-to-br ${item.tone}`} />
+                <img src={item.image} alt={item.name} className="size-24 shrink-0 border border-border object-cover object-top" />
                 <div className="flex flex-1 flex-col justify-between gap-3 sm:flex-row">
                   <div>
                     <p className="font-medium">{item.name}</p>

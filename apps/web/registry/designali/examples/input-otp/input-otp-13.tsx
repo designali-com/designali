@@ -20,7 +20,7 @@ export default function AlphanumericRecoveryCode() {
 
   return (
     <Field className="w-fit">
-      <FieldLabel htmlFor="recovery-code">Recovery code</FieldLabel>
+      <FieldLabel htmlFor="recovery-code">Designali recovery code</FieldLabel>
       <InputOTP
         id="recovery-code"
         maxLength={8}
@@ -29,21 +29,21 @@ export default function AlphanumericRecoveryCode() {
         onChange={(next) => setValue(next.toUpperCase())}
       >
         <InputOTPGroup>
-          <InputOTPSlot index={0} className="font-mono" />
-          <InputOTPSlot index={1} className="font-mono" />
-          <InputOTPSlot index={2} className="font-mono" />
-          <InputOTPSlot index={3} className="font-mono" />
+          <InputOTPSlot index={0} className="font-sans" />
+          <InputOTPSlot index={1} className="font-sans" />
+          <InputOTPSlot index={2} className="font-sans" />
+          <InputOTPSlot index={3} className="font-sans" />
         </InputOTPGroup>
         <InputOTPSeparator />
         <InputOTPGroup>
-          <InputOTPSlot index={4} className="font-mono" />
-          <InputOTPSlot index={5} className="font-mono" />
-          <InputOTPSlot index={6} className="font-mono" />
-          <InputOTPSlot index={7} className="font-mono" />
+          <InputOTPSlot index={4} className="font-sans" />
+          <InputOTPSlot index={5} className="font-sans" />
+          <InputOTPSlot index={6} className="font-sans" />
+          <InputOTPSlot index={7} className="font-sans" />
         </InputOTPGroup>
       </InputOTP>
       <FieldDescription>
-        Use one of the codes you saved when enabling 2FA.
+        Use one of the codes you saved when enabling 2FA on designali.com.
       </FieldDescription>
     </Field>
   )

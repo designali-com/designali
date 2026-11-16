@@ -40,7 +40,7 @@ export default function ProductReviewTextarea() {
               className={cn(
                 "size-5",
                 n <= stars
-                  ? "fill-amber-400 text-amber-400"
+                  ? "fill-primary text-primary"
                   : "text-muted-foreground"
               )}
             />

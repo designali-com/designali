@@ -9,8 +9,8 @@ import {
 } from "@workspace/ui/components/navigation-menu"
 import { cn } from "@workspace/ui/lib/utils"
 
-const primary = ["Home", "Explore"]
-const secondary = ["Library", "Following", "Saved", "History"]
+const primary = ["Designali", "Templates"]
+const secondary = ["Blocks", "UI", "Icons", "Logos"]
 
 export default function ResponsiveOverflowNav() {
   return (

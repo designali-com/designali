@@ -1,14 +1,14 @@
 const events: Record<number, { title: string; tone: string }[]> = {
-  3: [{ title: "Design crit", tone: "bg-sky-500" }],
-  6: [{ title: "Workshop: Design tokens", tone: "bg-violet-500" }],
-  10: [{ title: "Community call", tone: "bg-emerald-500" }],
-  12: [{ title: "Office hours with Ali", tone: "bg-amber-500" }, { title: "New blocks drop", tone: "bg-rose-500" }],
-  17: [{ title: "Design crit", tone: "bg-sky-500" }],
-  19: [{ title: "Live: Figma to Next.js", tone: "bg-emerald-500" }],
-  20: [{ title: "Workshop: Motion", tone: "bg-violet-500" }],
-  24: [{ title: "Community call", tone: "bg-emerald-500" }],
-  26: [{ title: "Office hours", tone: "bg-amber-500" }],
-  30: [{ title: "Designali year in review", tone: "bg-rose-500" }],
+  3: [{ title: "Design crit", tone: "bg-primary" }],
+  6: [{ title: "Workshop: Design tokens", tone: "bg-primary" }],
+  10: [{ title: "Community call", tone: "bg-primary" }],
+  12: [{ title: "Office hours with Ali", tone: "bg-primary" }, { title: "New blocks drop", tone: "bg-primary" }],
+  17: [{ title: "Design crit", tone: "bg-primary" }],
+  19: [{ title: "Live: Figma to Next.js", tone: "bg-primary" }],
+  20: [{ title: "Workshop: Motion", tone: "bg-primary" }],
+  24: [{ title: "Community call", tone: "bg-primary" }],
+  26: [{ title: "Office hours", tone: "bg-primary" }],
+  30: [{ title: "Designali year in review", tone: "bg-primary" }],
 }
 
 const weekdays = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
@@ -17,11 +17,11 @@ const leading = 1
 const daysInMonth = 31
 
 const legend = [
-  { label: "Crit", tone: "bg-sky-500" },
-  { label: "Workshop", tone: "bg-violet-500" },
-  { label: "Community", tone: "bg-emerald-500" },
-  { label: "Office hours", tone: "bg-amber-500" },
-  { label: "Release", tone: "bg-rose-500" },
+  { label: "Crit", tone: "bg-primary" },
+  { label: "Workshop", tone: "bg-primary" },
+  { label: "Community", tone: "bg-primary" },
+  { label: "Office hours", tone: "bg-primary" },
+  { label: "Release", tone: "bg-primary" },
 ]
 
 export default function Grid12() {
@@ -68,7 +68,7 @@ export default function Grid12() {
                   {day && (
                     <>
                       <span
-                        className={`inline-flex size-6 items-center justify-center font-mono text-xs ${
+                        className={`inline-flex size-6 items-center justify-center font-sans text-xs ${
                           day === 12 ? "bg-foreground text-background" : ""
                         }`}
                       >

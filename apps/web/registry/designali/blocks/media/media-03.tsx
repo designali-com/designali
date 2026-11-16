@@ -1,12 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import {
-  Pause,
-  Play,
-  SkipBack,
-  SkipForward,
-} from "@designali/icons"
+import { Pause, Play, SkipBack, SkipForward } from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 
@@ -22,12 +17,10 @@ export default function Media03() {
     <section className="w-full bg-muted/40 py-20">
       <div className="mx-auto max-w-4xl px-6">
         <div className="grid border border-border bg-background md:grid-cols-[220px_1fr]">
-          <div
-            className="aspect-square border-b border-border md:border-r md:border-b-0"
-            style={{
-              background:
-                "conic-gradient(from 90deg, var(--chart-1), var(--chart-2), var(--chart-4), var(--chart-1))",
-            }}
+          <img
+            src="/img/ask/ask3.jpg"
+            alt="Designali Podcast cover art"
+            className="aspect-square size-full border-b border-border object-cover md:border-r md:border-b-0"
           />
           <div className="flex flex-col justify-between gap-6 p-6">
             <div>

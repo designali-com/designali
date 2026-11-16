@@ -3,7 +3,7 @@ import {
 } from "@designali/icons"
 
 type Card =
-  | { kind: "post"; tag: string; title: string; excerpt: string; date: string; art?: string }
+  | { kind: "post"; tag: string; title: string; excerpt: string; date: string; art?: { src: string; ratio: string } }
   | { kind: "quote"; text: string; source: string }
   | { kind: "note"; title: string; date: string }
 
@@ -14,7 +14,7 @@ const cards: Card[] = [
     title: "Rendering the Designali brand in 3D",
     excerpt: "Lighting, materials, and the twelve renders that survived out of eighty.",
     date: "Nov 12",
-    art: "aspect-[4/5] bg-gradient-to-b from-chart-5/60 to-chart-1/20",
+    art: { src: "/img/ask/ask2.jpg", ratio: "aspect-[4/5]" },
   },
   { kind: "note", title: "New Designali templates drop on December 7", date: "Nov 10" },
   {
@@ -28,7 +28,7 @@ const cards: Card[] = [
     title: "Drawing the same icon a hundred times",
     excerpt: "A practice log on consistency, optical balance, and when to stop.",
     date: "Nov 6",
-    art: "aspect-square bg-gradient-to-tr from-chart-2/50 to-chart-3/20",
+    art: { src: "/images/templates/dalim-icons-old.jpg", ratio: "aspect-square" },
   },
   {
     kind: "post",
@@ -43,7 +43,7 @@ const cards: Card[] = [
     title: "A week in the Dalim Visuals archive",
     excerpt: "Notes, sketches, and a very heavy Figma file.",
     date: "Oct 24",
-    art: "aspect-[3/4] bg-gradient-to-br from-chart-4/60 to-chart-2/20",
+    art: { src: "/images/templates/dalim-visuals-old.jpg", ratio: "aspect-[3/4]" },
   },
   { kind: "note", title: "New icon packs are in the Designali store", date: "Oct 20" },
   {
@@ -52,7 +52,7 @@ const cards: Card[] = [
     title: "The design tools we actually reach for",
     excerpt: "Nine tools, from Figma and Cursor to a homemade icon builder.",
     date: "Oct 15",
-    art: "aspect-video bg-gradient-to-r from-chart-1/50 to-chart-4/20",
+    art: { src: "/stock/design.jpg", ratio: "aspect-video" },
   },
 ]
 
@@ -61,7 +61,7 @@ export default function Blog11() {
     <section className="w-full bg-background py-16 text-foreground md:py-24">
       <div className="mx-auto max-w-7xl px-6">
         <div className="mb-12 max-w-xl">
-          <h2 className="font-serif text-4xl tracking-tight md:text-5xl">Designali journal</h2>
+          <h2 className="font-sans text-4xl tracking-tight md:text-5xl">Designali journal</h2>
           <p className="mt-3 text-muted-foreground">
             Long reads, short notes, and things overheard in the studio.
           </p>
@@ -73,7 +73,7 @@ export default function Blog11() {
               return (
                 <figure key={i} className="mb-5 break-inside-avoid bg-foreground p-6 text-background">
                   <Quote className="size-5 opacity-60" />
-                  <blockquote className="mt-4 font-serif text-2xl leading-snug">
+                  <blockquote className="mt-4 font-sans text-2xl leading-snug">
                     {card.text}
                   </blockquote>
                   <figcaption className="mt-4 text-xs opacity-70">{card.source}</figcaption>
@@ -96,7 +96,13 @@ export default function Blog11() {
             }
             return (
               <a key={i} href="#" className="group mb-5 block break-inside-avoid border bg-card">
-                {card.art && <div className={card.art} />}
+                {card.art && (
+                  <img
+                    src={card.art.src}
+                    alt=""
+                    className={`w-full object-cover ${card.art.ratio}`}
+                  />
+                )}
                 <div className="p-5">
                   <p className="text-xs text-muted-foreground">
                     {card.tag} · {card.date}

@@ -41,7 +41,7 @@ export default function Features09() {
           {steps.map((step) => (
             <li key={step.number} className="relative pb-12 pl-10 last:pb-0">
               <span className="absolute top-0 -left-px h-8 w-px bg-foreground" />
-              <span className="font-mono text-sm text-muted-foreground">
+              <span className="font-sans text-sm text-muted-foreground">
                 {step.number}
               </span>
               <h3 className="mt-2 text-xl font-medium">{step.title}</h3>

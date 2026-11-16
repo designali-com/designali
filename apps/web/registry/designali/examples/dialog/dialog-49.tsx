@@ -32,7 +32,7 @@ export default function AnnouncementBannerDialog() {
         See announcement
       </DialogTrigger>
       <DialogContent className="gap-0 overflow-hidden p-0">
-        <div className="relative flex h-32 items-end bg-gradient-to-br from-indigo-500 via-violet-500 to-fuchsia-500 p-4">
+        <div className="relative flex h-32 items-end bg-gradient-to-br from-primary via-primary to-primary p-4">
           <Badge className="bg-white/20 text-white backdrop-blur">
             Launch week
           </Badge>

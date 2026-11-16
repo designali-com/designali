@@ -42,7 +42,7 @@ export default function Gallery15() {
                   className={`group grid grid-cols-[3.5rem_1fr_auto] items-center gap-4 py-5 transition-colors md:grid-cols-[2rem_1fr_10rem_5rem_auto] ${i === hover ? "text-foreground" : "text-muted-foreground"}`}
                 >
                   <div className="aspect-square border border-border md:hidden" style={{ background: work.gradient }} />
-                  <span className="hidden font-mono text-xs md:block">0{i + 1}</span>
+                  <span className="hidden font-sans text-xs md:block">0{i + 1}</span>
                   <div className="min-w-0">
                     <p className="truncate text-lg font-medium text-foreground">{work.title}</p>
                     <p className="truncate text-sm">{work.artist}</p>

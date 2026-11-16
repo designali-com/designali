@@ -23,7 +23,7 @@ export default function Hero16() {
     <section className="w-full bg-background">
       <div className="mx-auto grid max-w-7xl lg:grid-cols-2">
         <div className="bg-foreground px-6 py-16 text-background md:px-12 md:py-24">
-          <p className="font-mono text-xs tracking-widest uppercase opacity-60">
+          <p className="font-sans text-xs tracking-widest uppercase opacity-60">
             Designali / design se code tak
           </p>
           <h1 className="mt-6 text-4xl font-medium tracking-tight md:text-6xl">
@@ -57,7 +57,7 @@ export default function Hero16() {
           <div className="w-full max-w-md">
             {submitted ? (
               <div className="border border-border p-8 text-center">
-                <CheckCircle2 className="mx-auto size-8 text-emerald-600 dark:text-emerald-400" />
+                <CheckCircle2 className="mx-auto size-8 text-primary dark:text-primary" />
                 <p className="mt-4 text-lg font-medium">Check your inbox</p>
                 <p className="mt-2 text-sm text-muted-foreground">
                   We sent a sign-in link. It expires in 15 minutes.

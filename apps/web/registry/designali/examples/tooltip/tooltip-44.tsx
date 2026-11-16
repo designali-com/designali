@@ -18,8 +18,8 @@ const pins = [
 export default function MapPinTooltips() {
   return (
     <TooltipProvider>
-      <div className="relative h-44 w-full max-w-sm overflow-hidden border bg-gradient-to-br from-sky-100 via-emerald-50 to-lime-100 dark:from-sky-950 dark:via-emerald-950 dark:to-lime-950">
-        <div className="absolute inset-x-0 top-2/3 h-3 -rotate-6 bg-sky-300/60 dark:bg-sky-800/60" />
+      <div className="relative h-44 w-full max-w-sm overflow-hidden border bg-gradient-to-br from-primary/10 via-primary/5 to-primary/10 dark:from-chart-5 dark:via-chart-5 dark:to-chart-5">
+        <div className="absolute inset-x-0 top-2/3 h-3 -rotate-6 bg-chart-1/60 dark:bg-primary/60" />
         {pins.map((p) => (
           <Tooltip key={p.name}>
             <TooltipTrigger
@@ -27,12 +27,12 @@ export default function MapPinTooltips() {
                 <button
                   type="button"
                   aria-label={p.name}
-                  className="absolute -translate-x-1/2 -translate-y-full text-rose-500"
+                  className="absolute -translate-x-1/2 -translate-y-full text-primary"
                   style={{ top: p.top, left: p.left }}
                 />
               }
             >
-              <MapPinIcon className="size-6 fill-rose-500/20" />
+              <MapPinIcon className="size-6 fill-primary/20" />
             </TooltipTrigger>
             <TooltipContent>{p.name}</TooltipContent>
           </Tooltip>

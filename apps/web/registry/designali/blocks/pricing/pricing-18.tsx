@@ -72,7 +72,7 @@ export default function Pricing18() {
             <label className="flex items-center gap-3 text-sm">
               <Switch checked={yearly} onCheckedChange={setYearly} />
               Billed yearly
-              <span className="text-xs text-emerald-600 dark:text-emerald-400">
+              <span className="text-xs text-primary dark:text-primary">
                 2 months free
               </span>
             </label>

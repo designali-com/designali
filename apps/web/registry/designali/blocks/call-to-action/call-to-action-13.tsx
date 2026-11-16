@@ -39,10 +39,10 @@ export default function CallToAction13() {
           {steps.map((step, i) => (
             <li key={step.title} className="relative bg-background p-8">
               <div className="flex items-center justify-between">
-                <span className="flex size-9 items-center justify-center bg-foreground font-mono text-sm text-background">
+                <span className="flex size-9 items-center justify-center bg-foreground font-sans text-sm text-background">
                   {String(i + 1).padStart(2, "0")}
                 </span>
-                <span className="font-mono text-xs text-muted-foreground">
+                <span className="font-sans text-xs text-muted-foreground">
                   ~{step.time}
                 </span>
               </div>

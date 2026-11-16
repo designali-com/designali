@@ -46,7 +46,7 @@ export default function Grid10() {
                 }`}
               >
                 {filter}
-                <span className="ml-1.5 font-mono opacity-50">
+                <span className="ml-1.5 font-sans opacity-50">
                   {filter === "All" ? templates.length : templates.filter((t) => t.category === filter).length}
                 </span>
               </button>
@@ -70,12 +70,12 @@ export default function Grid10() {
                     </div>
                     <div className="space-y-2 p-4">
                       <div className="h-2 w-1/3" style={{ background: `oklch(0.55 0.15 ${template.hue})` }} />
-                      <div className="h-4 w-3/4 bg-neutral-800" />
-                      <div className="h-2 w-2/3 bg-neutral-200" />
+                      <div className="h-4 w-3/4 bg-foreground" />
+                      <div className="h-2 w-2/3 bg-muted" />
                       <div className="grid grid-cols-3 gap-2 pt-3">
                         <div className="aspect-square" style={{ background: `oklch(0.85 0.08 ${template.hue})` }} />
-                        <div className="aspect-square bg-neutral-100" />
-                        <div className="aspect-square bg-neutral-100" />
+                        <div className="aspect-square bg-muted" />
+                        <div className="aspect-square bg-muted" />
                       </div>
                     </div>
                   </div>
@@ -87,7 +87,7 @@ export default function Grid10() {
                       {template.category} · {template.pages} pages
                     </p>
                   </div>
-                  <span className="border border-border px-2 py-0.5 font-mono text-xs">{template.price}</span>
+                  <span className="border border-border px-2 py-0.5 font-sans text-xs">{template.price}</span>
                 </div>
               </a>
             </li>

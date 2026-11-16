@@ -3,19 +3,19 @@ import { Badge } from "@workspace/ui/components/badge";
 export default function BadgeCustomColors() {
   return (
     <div className="flex flex-wrap gap-2">
-      <Badge className="bg-blue-50 text-blue-700 dark:bg-blue-950 dark:text-blue-300">
+      <Badge className="bg-primary/5 text-chart-3 dark:bg-primary/10 dark:text-chart-1">
         Blue
       </Badge>
-      <Badge className="bg-green-50 text-green-700 dark:bg-green-950 dark:text-green-300">
+      <Badge className="bg-primary/5 text-chart-3 dark:bg-primary/10 dark:text-chart-1">
         Green
       </Badge>
-      <Badge className="bg-sky-50 text-sky-700 dark:bg-sky-950 dark:text-sky-300">
+      <Badge className="bg-primary/5 text-chart-3 dark:bg-primary/10 dark:text-chart-1">
         Sky
       </Badge>
-      <Badge className="bg-purple-50 text-purple-700 dark:bg-purple-950 dark:text-purple-300">
+      <Badge className="bg-primary/5 text-chart-3 dark:bg-primary/10 dark:text-chart-1">
         Purple
       </Badge>
-      <Badge className="bg-red-50 text-red-700 dark:bg-red-950 dark:text-red-300">
+      <Badge className="bg-destructive/5 text-destructive dark:bg-destructive/15 dark:text-destructive">
         Red
       </Badge>
     </div>

@@ -11,7 +11,7 @@ export default function ColorHexInput() {
 
   return (
     <Field data-invalid={!valid} className="w-full max-w-[16rem]">
-      <FieldLabel htmlFor="brand-hex">Brand color</FieldLabel>
+      <FieldLabel htmlFor="brand-hex">Designali brand color</FieldLabel>
       <div className="flex gap-2">
         <Input
           type="color"
@@ -25,11 +25,11 @@ export default function ColorHexInput() {
           value={color}
           aria-invalid={!valid}
           onChange={(e) => setColor(e.target.value)}
-          className="font-mono uppercase"
+          className="font-sans uppercase"
         />
       </div>
       {!valid && (
-        <FieldError>Use a 6-digit hex value, like #1E40AF.</FieldError>
+        <FieldError>Use a 6-digit hex value, like Designali blue #00A8FF.</FieldError>
       )}
     </Field>
   )

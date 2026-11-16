@@ -19,7 +19,7 @@ export default function ColorSwatchPalette() {
             style={{ backgroundColor: swatch.hex }}
           />
           <span className="truncate text-xs font-medium">{swatch.name}</span>
-          <span className="truncate font-mono text-[10px] text-muted-foreground">
+          <span className="truncate font-sans text-[10px] text-muted-foreground">
             {swatch.hex}
           </span>
         </div>

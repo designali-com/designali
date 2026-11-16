@@ -27,7 +27,7 @@ export default function InvoiceDetailBreadcrumb() {
           </BreadcrumbItem>
           <BreadcrumbSeparator />
           <BreadcrumbItem>
-            <BreadcrumbPage className="font-mono">INV-2026-0117</BreadcrumbPage>
+            <BreadcrumbPage className="font-sans">INV-2026-0117</BreadcrumbPage>
           </BreadcrumbItem>
         </BreadcrumbList>
       </Breadcrumb>

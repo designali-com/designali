@@ -18,7 +18,7 @@ export default function Footer09() {
           ))}
         </nav>
         <div className="flex items-center gap-2 text-xs text-muted-foreground">
-          <span className="size-2 rounded-full bg-emerald-500" />
+          <span className="size-2 rounded-full bg-primary" />
           Booking new projects
         </div>
       </div>

@@ -18,7 +18,7 @@ export default function LikeCounterButton() {
       aria-pressed={liked}
       onClick={() => setLiked(!liked)}
       className={cn(
-        liked && "border-rose-500/40 text-rose-600 dark:text-rose-400"
+        liked && "border-primary/40 text-primary dark:text-primary"
       )}
     >
       <HeartIcon

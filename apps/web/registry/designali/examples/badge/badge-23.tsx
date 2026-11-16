@@ -10,7 +10,7 @@ export default function VerifiedNameBadge() {
     <div className="flex flex-col gap-3">
       <div className="flex items-center gap-2">
         <span className="text-base font-semibold">Ali Imam</span>
-        <Badge className="bg-sky-500 text-white">
+        <Badge className="bg-primary text-white">
           <BadgeCheckIcon data-icon="inline-start" />
           Verified
         </Badge>

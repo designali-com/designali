@@ -25,12 +25,12 @@ export default function ProjectCardMenu() {
     <div className="flex w-full max-w-xs flex-col gap-3 border p-4">
       <div className="flex items-start justify-between gap-2">
         <div className="flex items-center gap-2">
-          <span className="size-8 bg-gradient-to-br from-fuchsia-500 to-orange-400" />
+          <span className="size-8 bg-gradient-to-br from-primary to-primary" />
           <div>
             <p className="flex items-center gap-1 text-xs font-medium">
               Designali website
               {favorite && (
-                <StarIcon className="size-3 fill-amber-400 text-amber-400" />
+                <StarIcon className="size-3 fill-primary text-primary" />
               )}
             </p>
             <p className="text-xs text-muted-foreground">

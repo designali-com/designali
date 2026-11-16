@@ -20,7 +20,7 @@ export default function CodeBlockSkeleton() {
         <Skeleton className="size-2.5 rounded-full" />
         <Skeleton className="ms-3 h-2.5 w-20" />
       </div>
-      <div className="flex flex-col gap-2 p-3 font-mono">
+      <div className="flex flex-col gap-2 p-3 font-sans">
         {lines.map((line, i) => (
           <div key={i} className="flex items-center gap-3">
             <span className="w-4 text-end text-[10px] text-muted-foreground tabular-nums">

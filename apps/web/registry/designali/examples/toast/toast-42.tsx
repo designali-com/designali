@@ -43,7 +43,7 @@ export default function FocusTimerToast() {
   return (
     <Toaster toastManager={notify}>
       <div className="flex w-full max-w-xs flex-col items-center gap-3 border p-6">
-        <span className="font-mono text-4xl tabular-nums">00:0{left ?? 5}</span>
+        <span className="font-sans text-4xl tabular-nums">00:0{left ?? 5}</span>
         <Button onClick={start} disabled={left !== null}>
           <PlayIcon data-icon="inline-start" />
           {left !== null ? "Focusing..." : "Start 5s demo"}

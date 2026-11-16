@@ -103,42 +103,42 @@ const showcase = [
     meta: "Cover art · 12 assets",
     tag: "New",
     price: "4 wks",
-    tile: "bg-gradient-to-br from-emerald-200 via-green-300 to-lime-300 dark:from-emerald-700 dark:via-green-800 dark:to-lime-900",
+    tile: "bg-gradient-to-br from-primary/20 via-chart-1 to-chart-1 dark:from-chart-3 dark:via-chart-4 dark:to-chart-5",
   },
   {
     name: "Single artwork",
     meta: "Cover · Canvas loop",
     tag: "Single",
     price: "1 wk",
-    tile: "bg-gradient-to-br from-stone-200 via-neutral-300 to-zinc-400 dark:from-stone-700 dark:via-neutral-800 dark:to-zinc-900",
+    tile: "bg-gradient-to-br from-muted via-border to-muted-foreground dark:from-muted dark:via-card dark:to-card",
   },
   {
     name: "Live album visuals",
     meta: "Stage visuals · 18 loops",
     tag: "Live",
     price: "6 wks",
-    tile: "bg-gradient-to-br from-rose-200 via-pink-300 to-purple-300 dark:from-rose-700 dark:via-pink-800 dark:to-purple-900",
+    tile: "bg-gradient-to-br from-primary/20 via-chart-1 to-chart-1 dark:from-chart-3 dark:via-chart-4 dark:to-chart-5",
   },
   {
     name: "EP identity",
     meta: "Brand · 5 covers",
     tag: "EP",
     price: "3 wks",
-    tile: "bg-gradient-to-br from-blue-200 via-indigo-300 to-violet-400 dark:from-blue-700 dark:via-indigo-800 dark:to-violet-900",
+    tile: "bg-gradient-to-br from-primary/20 via-chart-1 to-primary dark:from-chart-3 dark:via-chart-4 dark:to-chart-5",
   },
   {
     name: "Label rebrand",
     meta: "Identity · Release templates",
     tag: "Brand",
     price: "5 wks",
-    tile: "bg-gradient-to-br from-yellow-100 via-amber-200 to-orange-300 dark:from-yellow-700 dark:via-amber-800 dark:to-orange-900",
+    tile: "bg-gradient-to-br from-primary/10 via-primary/20 to-chart-1 dark:from-chart-3 dark:via-chart-4 dark:to-chart-5",
   },
   {
     name: "Acoustic sessions",
     meta: "Motion · 7 lyric videos",
     tag: "Motion",
     price: "2 wks",
-    tile: "bg-gradient-to-br from-amber-200 via-orange-300 to-rose-400 dark:from-amber-700 dark:via-orange-800 dark:to-rose-900",
+    tile: "bg-gradient-to-br from-primary/20 via-chart-1 to-primary dark:from-chart-3 dark:via-chart-4 dark:to-chart-5",
   },
 ]
 
@@ -257,7 +257,7 @@ export default function LandingMusic03() {
             href="#"
             className="flex items-center gap-2 font-semibold tracking-tight"
           >
-            <span className="flex size-7 items-center justify-center rounded-md bg-fuchsia-600 text-white text-sm">
+            <span className="flex size-7 items-center justify-center rounded-md bg-chart-2 text-white text-sm">
               T
             </span>
             <span className="">designali</span>
@@ -293,12 +293,12 @@ export default function LandingMusic03() {
         <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 py-16 md:py-24 lg:grid-cols-2">
           <div className="space-y-7">
             <span className="inline-flex items-center gap-2 rounded-full border bg-background text-muted-foreground px-3 py-1 text-xs font-medium">
-              <Sparkles className="size-3.5 text-fuchsia-600 dark:text-fuchsia-400" />
+              <Sparkles className="size-3.5 text-primary dark:text-primary" />
               Design for music apps
             </span>
             <h1 className="text-4xl leading-[1.05] font-semibold tracking-tight text-balance sm:text-5xl md:text-6xl ">
               {"Design smarter, "}
-              <span className="text-fuchsia-600 dark:text-fuchsia-400">
+              <span className="text-primary dark:text-primary">
                 ship better
               </span>
             </h1>
@@ -334,7 +334,7 @@ export default function LandingMusic03() {
             </div>
           </div>
           <div className="relative">
-            <div className="absolute -inset-8 -z-10 rounded-full bg-gradient-to-tr from-fuchsia-500/25 via-purple-500/10 to-transparent blur-3xl" />
+            <div className="absolute -inset-8 -z-10 rounded-full bg-gradient-to-tr from-primary/25 via-primary/10 to-transparent blur-3xl" />
             <HeroVisual />
           </div>
         </div>
@@ -359,7 +359,7 @@ export default function LandingMusic03() {
       <section className="border-b bg-muted/30">
         <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
           <div className="max-w-2xl">
-            <p className="text-sm font-medium text-fuchsia-600 dark:text-fuchsia-400">
+            <p className="text-sm font-medium text-primary dark:text-primary">
               Inside
             </p>
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl  mt-3">
@@ -376,8 +376,8 @@ export default function LandingMusic03() {
                 key={feature.title}
                 className="rounded-xl border bg-background p-6 shadow-xs"
               >
-                <span className="flex size-10 items-center justify-center rounded-lg bg-fuchsia-500/10">
-                  <feature.icon className="size-5 text-fuchsia-600 dark:text-fuchsia-400" />
+                <span className="flex size-10 items-center justify-center rounded-lg bg-primary/10">
+                  <feature.icon className="size-5 text-primary dark:text-primary" />
                 </span>
                 <h3 className="mt-5 font-semibold">{feature.title}</h3>
                 <p className="mt-2 text-sm leading-6 text-muted-foreground">
@@ -401,7 +401,7 @@ export default function LandingMusic03() {
                 key={step.title}
                 className="relative border-t-2 border-border pt-6"
               >
-                <span className="text-sm font-medium text-fuchsia-600 dark:text-fuchsia-400">
+                <span className="text-sm font-medium text-primary dark:text-primary">
                   Step {i + 1}
                 </span>
                 <h3 className="mt-2 text-lg font-semibold">{step.title}</h3>
@@ -441,7 +441,7 @@ export default function LandingMusic03() {
                   className={`relative aspect-[4/3] overflow-hidden rounded-2xl ${item.tile}`}
                 >
                   <div className="absolute inset-0 bg-black/0 transition-colors group-hover:bg-black/10" />
-                  <span className="absolute top-3 left-3 rounded-full bg-white/85 px-2.5 py-1 text-[11px] font-medium text-zinc-900 backdrop-blur">
+                  <span className="absolute top-3 left-3 rounded-full bg-white/85 px-2.5 py-1 text-[11px] font-medium text-foreground backdrop-blur">
                     {item.tag}
                   </span>
                 </div>
@@ -474,7 +474,7 @@ export default function LandingMusic03() {
                 key={t.name}
                 className={`flex flex-col justify-between rounded-2xl border bg-background p-6 ${i === 0 ? "md:col-span-2 md:p-10" : ""}`}
               >
-                <Quote className="size-6 text-fuchsia-600 dark:text-fuchsia-400" />
+                <Quote className="size-6 text-primary dark:text-primary" />
                 <blockquote
                   className={`mt-4 leading-relaxed ${i === 0 ? "text-xl md:text-2xl" : "text-muted-foreground"}`}
                 >
@@ -516,10 +516,10 @@ export default function LandingMusic03() {
               return (
                 <div
                   key={tier.name}
-                  className={`relative flex h-full flex-col rounded-2xl border p-8 ${featured ? "border-transparent ring-2 ring-fuchsia-500 shadow-xl" : ""}`}
+                  className={`relative flex h-full flex-col rounded-2xl border p-8 ${featured ? "border-transparent ring-2 ring-primary shadow-xl" : ""}`}
                 >
                   {featured && (
-                    <span className="absolute -top-3 left-8 rounded-full bg-fuchsia-600 text-white px-3 py-1 text-xs font-medium">
+                    <span className="absolute -top-3 left-8 rounded-full bg-chart-2 text-white px-3 py-1 text-xs font-medium">
                       Most popular
                     </span>
                   )}
@@ -538,7 +538,7 @@ export default function LandingMusic03() {
                   <ul className="mt-8 flex-1 space-y-3 text-sm">
                     {tier.features.map((feature) => (
                       <li key={feature} className="flex gap-3">
-                        <Check className="mt-0.5 size-4 shrink-0 text-fuchsia-600 dark:text-fuchsia-400" />
+                        <Check className="mt-0.5 size-4 shrink-0 text-primary dark:text-primary" />
                         {feature}
                       </li>
                     ))}
@@ -590,8 +590,8 @@ export default function LandingMusic03() {
         </div>
       </section>
       <section className="px-6 py-20 md:py-28">
-        <div className="relative mx-auto max-w-6xl overflow-hidden rounded-3xl border bg-fuchsia-500/10 px-6 py-16 text-center md:py-24">
-          <div className="pointer-events-none absolute -top-24 left-1/2 size-96 -translate-x-1/2 rounded-full bg-gradient-to-b from-fuchsia-500/25 via-purple-500/10 to-transparent blur-3xl" />
+        <div className="relative mx-auto max-w-6xl overflow-hidden rounded-3xl border bg-primary/10 px-6 py-16 text-center md:py-24">
+          <div className="pointer-events-none absolute -top-24 left-1/2 size-96 -translate-x-1/2 rounded-full bg-gradient-to-b from-primary/25 via-primary/10 to-transparent blur-3xl" />
           <div className="relative mx-auto max-w-2xl space-y-6">
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl">
               One discovery call is enough to start
@@ -624,7 +624,7 @@ export default function LandingMusic03() {
               href="#"
               className="flex items-center gap-2 font-semibold tracking-tight"
             >
-              <span className="flex size-7 items-center justify-center rounded-md bg-fuchsia-600 text-white text-sm">
+              <span className="flex size-7 items-center justify-center rounded-md bg-chart-2 text-white text-sm">
                 T
               </span>
               <span className="">designali</span>
@@ -683,7 +683,7 @@ function HeroVisual() {
           className={`relative overflow-hidden rounded-2xl ${item.tile} ${i === 0 ? "col-span-2 aspect-[16/10] md:col-span-1 md:aspect-[3/4]" : "aspect-[3/4]"}`}
         >
           <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/0 to-black/0" />
-          <span className="absolute top-3 left-3 rounded-full bg-white/85 px-2.5 py-1 text-[11px] font-medium text-zinc-900 backdrop-blur">
+          <span className="absolute top-3 left-3 rounded-full bg-white/85 px-2.5 py-1 text-[11px] font-medium text-foreground backdrop-blur">
             {item.tag}
           </span>
           <div className="absolute inset-x-3 bottom-3 flex items-end justify-between gap-2 text-white">

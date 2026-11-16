@@ -9,6 +9,8 @@ import {
 
 import { Button } from "@workspace/ui/components/button"
 
+import { GridPattern } from "@/registry/designali/ui/grid-pattern"
+
 const categories = ["All", "Templates", "Blocks", "Landing pages", "UI designs", "Icons", "Logos"]
 
 const popular = ["Pricing table", "Hero section", "Login page", "Dashboard"]
@@ -19,13 +21,14 @@ export default function Hero12() {
 
   return (
     <section className="relative w-full overflow-hidden bg-background px-6 py-20 md:py-32">
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-0 opacity-[0.35] [background-image:linear-gradient(to_right,var(--border)_1px,transparent_1px),linear-gradient(to_bottom,var(--border)_1px,transparent_1px)] [background-size:48px_48px] [mask-image:radial-gradient(ellipse_at_center,black,transparent_70%)]"
+      <GridPattern
+        width={48}
+        height={48}
+        className="stroke-border [mask-image:radial-gradient(ellipse_at_center,black,transparent_70%)]"
       />
       <div className="relative mx-auto max-w-4xl text-center">
         <p className="inline-flex items-center gap-1.5 text-sm text-muted-foreground">
-          <Star className="size-4 fill-amber-400 text-amber-400" />
+          <Star className="size-4 fill-primary text-primary" />
           Loved by designers and developers on designali.com
         </p>
         <h1 className="mt-6 text-4xl font-medium tracking-tight md:text-6xl">

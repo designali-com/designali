@@ -32,7 +32,7 @@ export default function FormSubmitWithValidation() {
       className="flex w-full max-w-xs flex-col gap-3"
     >
       <Field data-invalid={!!error || undefined}>
-        <FieldLabel htmlFor="otp-form">One-time code</FieldLabel>
+        <FieldLabel htmlFor="otp-form">Verify your designali.com account</FieldLabel>
         <InputOTP
           id="otp-form"
           maxLength={6}
@@ -59,7 +59,7 @@ export default function FormSubmitWithValidation() {
           Press <Kbd>Enter</Kbd> to submit
         </span>
         <Button type="submit" size="sm">
-          {sent ? "Submitted" : "Submit"}
+          {sent ? "Verified" : "Verify"}
         </Button>
       </div>
     </form>

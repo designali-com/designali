@@ -5,28 +5,42 @@ import {
 
 import { cn } from "@workspace/ui/lib/utils"
 
+import { CounterNumber } from "@/registry/designali/ui/counter-number"
+
 const cards = [
   {
     label: "Template sales",
-    value: "$1.28M",
+    value: 1.28,
+    prefix: "$",
+    suffix: "M",
+    decimals: 2,
     change: 14.2,
     data: [12, 14, 13, 17, 16, 19, 22, 21, 24, 26, 25, 29],
   },
   {
     label: "New Designali customers",
-    value: "3,416",
+    value: 3416,
+    prefix: "",
+    suffix: "",
+    decimals: 0,
     change: 8.7,
     data: [30, 28, 33, 31, 36, 35, 38, 41, 39, 44, 43, 47],
   },
   {
     label: "Refund rate",
-    value: "1.9%",
+    value: 1.9,
+    prefix: "",
+    suffix: "%",
+    decimals: 1,
     change: -0.6,
     data: [28, 26, 27, 24, 25, 22, 21, 22, 19, 18, 18, 16],
   },
   {
     label: "Open support tickets",
-    value: "214",
+    value: 214,
+    prefix: "",
+    suffix: "",
+    decimals: 0,
     change: 11.3,
     data: [14, 15, 13, 16, 18, 17, 21, 20, 23, 22, 25, 27],
     inverse: true,
@@ -44,8 +58,8 @@ function Sparkline({ data, positive }: { data: number[]; positive: boolean }) {
     })
     .join(" ")
   const tone = positive
-    ? "fill-emerald-500 stroke-emerald-500"
-    : "fill-rose-500 stroke-rose-500"
+    ? "fill-primary stroke-primary"
+    : "fill-primary stroke-primary"
 
   return (
     <svg viewBox="0 0 100 40" preserveAspectRatio="none" className={`h-12 w-full ${tone}`}>
@@ -88,8 +102,8 @@ export default function Analytics06() {
                     className={cn(
                       "inline-flex items-center gap-0.5 px-1.5 py-0.5 text-xs font-medium",
                       good
-                        ? "bg-emerald-500/10 text-emerald-700 dark:text-emerald-400"
-                        : "bg-rose-500/10 text-rose-700 dark:text-rose-400"
+                        ? "bg-primary/10 text-chart-3 dark:text-primary"
+                        : "bg-primary/10 text-chart-3 dark:text-primary"
                     )}
                   >
                     {card.change > 0 ? (
@@ -100,7 +114,13 @@ export default function Analytics06() {
                     {Math.abs(card.change)}%
                   </span>
                 </div>
-                <p className="mt-3 text-3xl font-semibold tracking-tight">{card.value}</p>
+                <CounterNumber
+                  value={card.value}
+                  prefix={card.prefix}
+                  suffix={card.suffix}
+                  decimalPlaces={card.decimals}
+                  className="mt-3 block text-3xl font-semibold tracking-tight"
+                />
                 <div className="mt-4">
                   <Sparkline data={card.data} positive={good} />
                 </div>

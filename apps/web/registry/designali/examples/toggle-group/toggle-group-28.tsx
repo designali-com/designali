@@ -18,7 +18,7 @@ export default function PlaybackSpeedToggleGroup() {
   return (
     <div className="flex w-full max-w-sm flex-col gap-3 border p-4">
       <div className="flex items-center gap-3">
-        <div className="flex size-10 items-center justify-center bg-gradient-to-br from-violet-500 to-indigo-500 text-white">
+        <div className="flex size-10 items-center justify-center bg-gradient-to-br from-primary to-primary text-white">
           <HeadphonesIcon className="size-5" />
         </div>
         <div className="flex flex-col">

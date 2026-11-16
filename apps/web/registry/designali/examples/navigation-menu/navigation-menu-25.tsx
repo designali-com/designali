@@ -17,7 +17,7 @@ export default function HeaderWithAuthButtons() {
   return (
     <header className="flex w-full max-w-lg items-center justify-between gap-2 border-b pb-2">
       <div className="flex items-center gap-2">
-        <span className="flex size-7 items-center justify-center bg-gradient-to-br from-sky-500 to-indigo-600 text-white">
+        <span className="flex size-7 items-center justify-center bg-gradient-to-br from-primary to-chart-2 text-white">
           <WavesIcon className="size-4" />
         </span>
         <NavigationMenu className="hidden sm:flex">

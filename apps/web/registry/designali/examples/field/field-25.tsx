@@ -15,13 +15,13 @@ import {
 } from "@workspace/ui/components/input-group"
 
 export default function TransferAmountField() {
-  const [amount, setAmount] = React.useState("250")
+  const [amount, setAmount] = React.useState("1200")
   const value = Number(amount) || 0
   const fee = Math.max(0.5, value * 0.004)
 
   return (
     <Field className="w-full max-w-xs">
-      <FieldLabel htmlFor="transfer-amount">You send</FieldLabel>
+      <FieldLabel htmlFor="transfer-amount">Pay Designali studio deposit</FieldLabel>
       <InputGroup>
         <InputGroupAddon>
           <InputGroupText>€</InputGroupText>
@@ -38,7 +38,7 @@ export default function TransferAmountField() {
         </InputGroupAddon>
       </InputGroup>
       <FieldDescription>
-        Fee €{fee.toFixed(2)} · Recipient gets €
+        Fee €{fee.toFixed(2)} · Designali receives €
         {Math.max(0, value - fee).toFixed(2)}
       </FieldDescription>
     </Field>

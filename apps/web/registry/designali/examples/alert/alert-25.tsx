@@ -30,7 +30,7 @@ export default function AlertDangerZoneConfirm() {
       </Alert>
       <div className="space-y-1.5">
         <Label htmlFor="confirm" className="font-normal">
-          Type <span className="font-mono font-medium">{name}</span> to confirm
+          Type <span className="font-sans font-medium">{name}</span> to confirm
         </Label>
         <Input
           id="confirm"

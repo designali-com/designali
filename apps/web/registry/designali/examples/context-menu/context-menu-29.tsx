@@ -32,11 +32,11 @@ export default function TerminalPaneMenu() {
 
   return (
     <ContextMenu>
-      <ContextMenuTrigger className="flex h-40 w-full max-w-md flex-col gap-0.5 overflow-hidden border bg-zinc-950 p-3 font-mono text-[11px] text-zinc-200">
+      <ContextMenuTrigger className="flex h-40 w-full max-w-md flex-col gap-0.5 overflow-hidden border bg-foreground p-3 font-sans text-[11px] text-background">
         {lines.map((line, index) => (
           <span
             key={index}
-            className={line.startsWith("$") ? "text-emerald-400" : undefined}
+            className={line.startsWith("$") ? "text-primary" : undefined}
           >
             {line}
           </span>

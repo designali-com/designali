@@ -22,13 +22,13 @@ export default function NestedTabs() {
             </TabsList>
             <TabsContent
               value="logs"
-              className="font-mono text-muted-foreground"
+              className="font-sans text-muted-foreground"
             >
               [{env}] GET /api/health 200 12ms
             </TabsContent>
             <TabsContent
               value="env"
-              className="font-mono text-muted-foreground"
+              className="font-sans text-muted-foreground"
             >
               DATABASE_URL, REDIS_URL, SENTRY_DSN
             </TabsContent>

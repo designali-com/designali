@@ -75,15 +75,15 @@ export default function Location10() {
         </div>
 
         <div className="flex flex-col gap-6">
-          <div className="relative aspect-square overflow-hidden border bg-amber-50 dark:bg-amber-950/30">
+          <div className="relative aspect-square overflow-hidden border bg-primary/5 dark:bg-primary/30">
             <svg viewBox="0 0 200 200" className="absolute inset-0 h-full w-full" aria-hidden>
-              <circle cx="100" cy="100" r="80" className="fill-none stroke-amber-200 dark:stroke-amber-900" strokeWidth="1" />
-              <circle cx="100" cy="100" r="50" className="fill-none stroke-amber-200 dark:stroke-amber-900" strokeWidth="1" />
+              <circle cx="100" cy="100" r="80" className="fill-none stroke-chart-1 dark:stroke-chart-5" strokeWidth="1" />
+              <circle cx="100" cy="100" r="50" className="fill-none stroke-chart-1 dark:stroke-chart-5" strokeWidth="1" />
               <path d="M0 120 L200 70" className="stroke-background" strokeWidth="10" />
               <path d="M70 0 L120 200" className="stroke-background" strokeWidth="10" />
               <path d="M0 40 C 60 60, 140 20, 200 30" className="stroke-background" strokeWidth="5" fill="none" />
             </svg>
-            <span className="absolute top-1/2 left-1/2 flex size-14 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-amber-500 text-white shadow-lg">
+            <span className="absolute top-1/2 left-1/2 flex size-14 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-primary text-white shadow-lg">
               <MapPin className="size-6" />
             </span>
             <p className="absolute start-4 bottom-4 bg-background px-3 py-2 text-xs">

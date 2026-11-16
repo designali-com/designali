@@ -70,7 +70,7 @@ export default function Portfolio01() {
                   <p className="text-sm text-muted-foreground">{project.client}</p>
                   <h3 className="mt-1 text-xl font-medium">{project.title}</h3>
                 </div>
-                <span className="font-mono text-xs text-muted-foreground">
+                <span className="font-sans text-xs text-muted-foreground">
                   {project.year}
                 </span>
               </div>

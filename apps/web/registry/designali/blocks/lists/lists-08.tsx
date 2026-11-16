@@ -85,17 +85,17 @@ export default function Lists08() {
                 className="grid grid-cols-[1fr_auto_auto] items-center gap-4 px-4 py-3.5 hover:bg-muted/40 sm:grid-cols-[1fr_80px_120px_90px]"
               >
                 <div className="min-w-0">
-                  <p className="truncate font-mono text-sm">{pkg.name}</p>
+                  <p className="truncate font-sans text-sm">{pkg.name}</p>
                   <p className="text-xs text-muted-foreground">v{pkg.version}</p>
                 </div>
-                <span className="hidden text-right font-mono text-xs text-muted-foreground sm:block">{pkg.size} kB</span>
+                <span className="hidden text-right font-sans text-xs text-muted-foreground sm:block">{pkg.size} kB</span>
                 <div className="flex items-center justify-end gap-2">
                   <div className="hidden h-1 w-12 bg-muted sm:block">
                     <div className="h-full bg-foreground" style={{ width: `${(pkg.downloads / maxDownloads) * 100}%` }} />
                   </div>
-                  <span className="font-mono text-xs">{compact(pkg.downloads)}</span>
+                  <span className="font-sans text-xs">{compact(pkg.downloads)}</span>
                 </div>
-                <span className="text-right font-mono text-xs text-muted-foreground">{pkg.updated}d ago</span>
+                <span className="text-right font-sans text-xs text-muted-foreground">{pkg.updated}d ago</span>
               </li>
             ))}
           </ul>

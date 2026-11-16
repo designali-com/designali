@@ -10,6 +10,8 @@ import {
 
 import { cn } from "@workspace/ui/lib/utils"
 
+import { GridPattern } from "@/registry/designali/ui/grid-pattern"
+
 const modes = [
   {
     id: "email",
@@ -113,14 +115,9 @@ export default function Location09() {
           </ol>
         </div>
 
-        <div className="border bg-muted/40">
-          <svg viewBox="0 0 460 340" className="h-auto w-full" aria-label={`${current.label} route`} role="img">
-            <defs>
-              <pattern id="location-09-grid" width="20" height="20" patternUnits="userSpaceOnUse">
-                <path d="M20 0 L0 0 0 20" className="stroke-border" fill="none" />
-              </pattern>
-            </defs>
-            <rect width="460" height="340" fill="url(#location-09-grid)" />
+        <div className="relative overflow-hidden border bg-muted/40">
+          <GridPattern width={20} height={20} className="stroke-border" />
+          <svg viewBox="0 0 460 340" className="relative h-auto w-full" aria-label={`${current.label} route`} role="img">
             <g className="stroke-background" strokeWidth="12" fill="none">
               <path d="M0 300 H460" />
               <path d="M0 220 H460" />
@@ -131,7 +128,7 @@ export default function Location09() {
               <path d="M300 0 V340" />
               <path d="M420 0 V340" />
             </g>
-            <rect x="200" y="240" width="80" height="44" className="fill-emerald-200/70 dark:fill-emerald-900/40" />
+            <rect x="200" y="240" width="80" height="44" className="fill-chart-1/70 dark:fill-chart-5/40" />
             <path
               key={current.id}
               d={current.route}

@@ -46,7 +46,7 @@ export default function PlanFeaturesPopover() {
             <ul className="flex flex-col gap-1.5">
               {features.map((feature) => (
                 <li key={feature} className="flex items-center gap-2 text-xs">
-                  <CheckIcon className="size-3.5 text-emerald-600 dark:text-emerald-400" />
+                  <CheckIcon className="size-3.5 text-primary dark:text-primary" />
                   {feature}
                 </li>
               ))}

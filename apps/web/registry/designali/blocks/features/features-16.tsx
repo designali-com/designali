@@ -15,12 +15,12 @@ import {
 import { Button } from "@workspace/ui/components/button"
 
 const cards = [
-  { icon: Gauge, title: "Templates", body: "Polished Next.js templates for portfolios, agencies and SaaS, ready to customise and ship.", tone: "from-sky-500/15" },
-  { icon: Timer, title: "Blocks", body: "460+ copy-and-paste sections for heroes, pricing, features, footers and more.", tone: "from-violet-500/15" },
-  { icon: TrendingUp, title: "UI Designs", body: "2300+ UI examples showing every component in real-world states.", tone: "from-emerald-500/15" },
-  { icon: Users, title: "Icons", body: "4000+ lucide-compatible icons in @designali/icons, ready for any React project.", tone: "from-amber-500/15" },
-  { icon: Activity, title: "Logos", body: "Brand and tech logos in @designali/logos for stacks, integrations and footers.", tone: "from-rose-500/15" },
-  { icon: Layers, title: "Illustrations", body: "Abstract shapes and vectors from @designali/vectors to give every page character.", tone: "from-teal-500/15" },
+  { icon: Gauge, title: "Templates", body: "Polished Next.js templates for portfolios, agencies and SaaS, ready to customise and ship.", tone: "from-primary/15" },
+  { icon: Timer, title: "Blocks", body: "460+ copy-and-paste sections for heroes, pricing, features, footers and more.", tone: "from-primary/15" },
+  { icon: TrendingUp, title: "UI Designs", body: "2300+ UI examples showing every component in real-world states.", tone: "from-primary/15" },
+  { icon: Users, title: "Icons", body: "4000+ lucide-compatible icons in @designali/icons, ready for any React project.", tone: "from-primary/15" },
+  { icon: Activity, title: "Logos", body: "Brand and tech logos in @designali/logos for stacks, integrations and footers.", tone: "from-primary/15" },
+  { icon: Layers, title: "Illustrations", body: "Abstract shapes and vectors from @designali/vectors to give every page character.", tone: "from-primary/15" },
 ]
 
 export default function Features16() {

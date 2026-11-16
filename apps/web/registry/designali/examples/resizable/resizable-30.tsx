@@ -37,7 +37,7 @@ export default function LayoutChangeLog() {
           </div>
         </ResizablePanel>
       </ResizablePanelGroup>
-      <div className="flex flex-col gap-1 border bg-muted/40 p-2 font-mono text-[11px]">
+      <div className="flex flex-col gap-1 border bg-muted/40 p-2 font-sans text-[11px]">
         {log.length === 0 ? (
           <span className="text-muted-foreground">
             Drag the handle to record changes

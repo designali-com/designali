@@ -33,7 +33,7 @@ export default function ReadOnlyApiKeyField() {
           id="api-key"
           readOnly
           value={show ? key : "pub_demo_••••••••••••••"}
-          className="font-mono"
+          className="font-sans"
         />
         <InputGroupAddon align="inline-end">
           <InputGroupButton

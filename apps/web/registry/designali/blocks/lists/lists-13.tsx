@@ -23,8 +23,8 @@ const people = [
 const departments = ["All", "Leadership", "Design", "Development", "Studio"]
 
 const dot: Record<string, string> = {
-  online: "bg-emerald-500",
-  away: "bg-amber-500",
+  online: "bg-primary",
+  away: "bg-primary",
   offline: "bg-muted-foreground/40",
 }
 
@@ -46,7 +46,7 @@ export default function Lists13() {
           <div className="space-y-4 border-b border-border p-5">
             <div className="flex items-center justify-between gap-4">
               <h2 className="text-xl font-semibold tracking-tight">Designali studio</h2>
-              <span className="font-mono text-xs text-muted-foreground">
+              <span className="font-sans text-xs text-muted-foreground">
                 {visible.length} of {people.length}
               </span>
             </div>

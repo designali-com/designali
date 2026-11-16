@@ -31,13 +31,13 @@ export default function ThemePreviewSelect() {
         className={cn(
           "flex h-24 flex-col gap-2 border p-3",
           theme === "light" && "bg-white",
-          theme === "dark" && "bg-neutral-900",
-          theme === "system" && "bg-linear-to-r from-white to-neutral-900"
+          theme === "dark" && "bg-foreground",
+          theme === "system" && "bg-linear-to-r from-white to-foreground"
         )}
       >
-        <div className="h-2 w-1/2 bg-neutral-400/60" />
-        <div className="h-2 w-3/4 bg-neutral-400/40" />
-        <div className="mt-auto h-5 w-16 bg-neutral-500/70" />
+        <div className="h-2 w-1/2 bg-muted-foreground/60" />
+        <div className="h-2 w-3/4 bg-muted-foreground/40" />
+        <div className="mt-auto h-5 w-16 bg-muted-foreground/70" />
       </div>
       <Select items={themes} value={theme} onValueChange={setTheme}>
         <SelectTrigger className="w-full" aria-label="Theme">

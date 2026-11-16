@@ -2,6 +2,8 @@ import {
   Check,
 } from "@designali/icons"
 
+import { Macbook } from "@/registry/designali/ui/apple/macbook"
+
 const rows = [
   {
     eyebrow: "01 / Discover",
@@ -23,33 +25,22 @@ const rows = [
   },
 ]
 
+const screens = [
+  "/images/templates/design-agency.jpg",
+  "/img/dashboard-1-light.jpg",
+  "/images/templates/portfolio-simple.jpg",
+]
+
 function Visual({ index }: { index: number }) {
   return (
-    <div className="relative aspect-[4/3] w-full border border-border bg-muted/40 p-6">
-      <div className="h-full w-full border border-border bg-background p-4">
-        <div className="flex gap-1.5">
-          <span className="size-2 rounded-full bg-muted-foreground/30" />
-          <span className="size-2 rounded-full bg-muted-foreground/30" />
-          <span className="size-2 rounded-full bg-muted-foreground/30" />
-        </div>
-        <div className="mt-6 space-y-3">
-          {Array.from({ length: 4 }).map((_, i) => (
-            <div
-              key={i}
-              className="h-3 bg-muted"
-              style={{ width: `${90 - ((i + index) % 4) * 18}%` }}
-            />
-          ))}
-        </div>
-        <div className="mt-8 grid grid-cols-3 gap-3">
-          {Array.from({ length: 3 }).map((_, i) => (
-            <div
-              key={i}
-              className={i === index ? "h-16 bg-primary" : "h-16 bg-muted"}
-            />
-          ))}
-        </div>
-      </div>
+    <div className="flex w-full items-center justify-center border border-border bg-muted/40 p-6">
+      <Macbook size="md" className="max-w-full">
+        <img
+          src={screens[index % screens.length]}
+          alt="Designali project preview"
+          className="size-full object-cover object-top"
+        />
+      </Macbook>
     </div>
   )
 }
@@ -64,7 +55,7 @@ export default function Features06() {
             className="grid items-center gap-10 md:grid-cols-2 md:gap-16"
           >
             <div className={index % 2 === 1 ? "md:order-2" : undefined}>
-              <p className="font-mono text-xs text-muted-foreground">
+              <p className="font-sans text-xs text-muted-foreground">
                 {row.eyebrow}
               </p>
               <h3 className="mt-4 text-2xl font-medium tracking-tight md:text-4xl">

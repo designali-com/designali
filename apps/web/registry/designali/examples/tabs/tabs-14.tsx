@@ -57,7 +57,7 @@ export default function DashboardRangeTabs() {
                   className={cn(
                     data.change.startsWith("-")
                       ? "text-destructive"
-                      : "text-emerald-600"
+                      : "text-primary"
                   )}
                 >
                   {data.change}

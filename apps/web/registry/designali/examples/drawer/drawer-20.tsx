@@ -31,7 +31,7 @@ export default function FileDetailsDrawer() {
         render={<button type="button" />}
         className="flex w-full max-w-xs items-center gap-3 border bg-background p-3 text-start hover:bg-muted/50"
       >
-        <FileSpreadsheetIcon className="size-8 text-emerald-600" />
+        <FileSpreadsheetIcon className="size-8 text-primary" />
         <span className="min-w-0 flex-1">
           <span className="block truncate font-medium">
             designali-roadmap-2026.xlsx
@@ -50,8 +50,8 @@ export default function FileDetailsDrawer() {
           <DrawerDescription>Designali / Planning</DrawerDescription>
         </DrawerHeader>
         <div className="flex flex-1 flex-col gap-5 overflow-y-auto p-4">
-          <div className="flex h-32 items-center justify-center bg-emerald-500/10">
-            <FileSpreadsheetIcon className="size-12 text-emerald-600" />
+          <div className="flex h-32 items-center justify-center bg-primary/10">
+            <FileSpreadsheetIcon className="size-12 text-primary" />
           </div>
           <dl className="grid grid-cols-2 gap-y-2">
             <dt className="text-muted-foreground">Type</dt>

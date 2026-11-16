@@ -28,7 +28,7 @@ export default function WebhookTestInput() {
           type="url"
           value={url}
           onChange={(e) => setUrl(e.target.value)}
-          className="font-mono"
+          className="font-sans"
         />
         <Button
           variant="outline"
@@ -48,7 +48,7 @@ export default function WebhookTestInput() {
       </div>
       {state === "ok" && (
         <FieldDescription className="flex items-center gap-2">
-          <Badge variant="secondary" className="font-mono">
+          <Badge variant="secondary" className="font-sans">
             200 OK
           </Badge>
           Delivered in 142 ms

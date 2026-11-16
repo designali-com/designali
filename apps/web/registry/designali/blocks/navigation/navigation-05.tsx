@@ -11,6 +11,8 @@ import {
 
 import { cn } from "@workspace/ui/lib/utils"
 
+import { IPhone } from "@/registry/designali/ui/apple/iphone"
+
 const items = [
   { icon: House, label: "Home" },
   { icon: Compass, label: "Explore" },
@@ -55,13 +57,14 @@ export default function Navigation05() {
           </p>
         </div>
 
-        <div className="mx-auto w-full max-w-xs border bg-muted/40">
-          <div className="flex h-96 flex-col justify-end">
+        <div className="flex justify-center">
+          <IPhone variant="18-pro" color="black" size="md">
+          <div className="flex h-full flex-col justify-end bg-muted/40">
             <div className="m-4 space-y-2">
               <div className="h-3 w-2/3 bg-muted" />
               <div className="h-3 w-1/2 bg-muted" />
             </div>
-            <nav className="grid grid-cols-5 border-t bg-background">
+            <nav className="grid grid-cols-5 border-t bg-background pb-4">
               {items.map((item) => (
                 <button
                   key={item.label}
@@ -86,6 +89,7 @@ export default function Navigation05() {
               ))}
             </nav>
           </div>
+          </IPhone>
         </div>
       </div>
     </section>

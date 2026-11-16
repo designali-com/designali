@@ -33,12 +33,12 @@ export default function NowPlayingCard() {
   return (
     <Card className="w-full max-w-xs">
       <CardHeader className="grid-cols-[auto_1fr_auto] gap-x-3">
-        <div className="row-span-2 size-12 bg-gradient-to-br from-rose-500 via-purple-500 to-indigo-600" />
+        <div className="row-span-2 size-12 bg-gradient-to-br from-primary via-primary to-chart-2" />
         <CardTitle>Design se code tak</CardTitle>
         <CardDescription>Designali Sessions</CardDescription>
         <CardAction className="col-start-3">
           <Button variant="ghost" size="icon-sm" aria-label="Like">
-            <HeartIcon className="fill-rose-500 text-rose-500" />
+            <HeartIcon className="fill-primary text-primary" />
           </Button>
         </CardAction>
       </CardHeader>

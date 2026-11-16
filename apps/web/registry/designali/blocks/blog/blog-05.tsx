@@ -56,7 +56,7 @@ export default function Blog05() {
           {issues.map((issue) => (
             <a key={issue.number} href="#" className="group block p-6 transition-colors hover:bg-muted/60 md:p-8">
               <div className="flex items-center justify-between text-xs text-muted-foreground">
-                <span className="font-mono">Issue #{issue.number}</span>
+                <span className="font-sans">Issue #{issue.number}</span>
                 <span>{issue.date}</span>
               </div>
               <h3 className="mt-3 text-xl font-medium">{issue.title}</h3>

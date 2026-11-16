@@ -5,6 +5,8 @@ import { useState } from "react"
 import { Button } from "@workspace/ui/components/button"
 import { Slider } from "@workspace/ui/components/slider"
 
+import { CounterNumber } from "@/registry/designali/ui/counter-number"
+
 const pricePerSeat = 14
 const included = [
   "All 460+ Designali blocks",
@@ -60,9 +62,11 @@ export default function Pricing07() {
               <p className="text-sm text-muted-foreground">
                 Estimated monthly total
               </p>
-              <p className="mt-2 text-5xl font-semibold tracking-tighter tabular-nums">
-                ${total}
-              </p>
+              <CounterNumber
+                value={total}
+                prefix="$"
+                className="mt-2 block text-5xl font-semibold tracking-tighter tabular-nums"
+              />
               {discount > 0 && (
                 <p className="mt-2 text-xs text-muted-foreground">
                   Includes {discount * 100}% volume discount

@@ -36,7 +36,7 @@ export default function ConfirmDeletePopover() {
     <div className="flex w-full max-w-sm items-center justify-between border p-3">
       <div className="flex items-center gap-2 text-xs">
         <DatabaseIcon className="size-4 text-muted-foreground" />
-        <span className="font-mono">{NAME}</span>
+        <span className="font-sans">{NAME}</span>
       </div>
       <Popover
         open={open}
@@ -52,7 +52,7 @@ export default function ConfirmDeletePopover() {
           <PopoverHeader>
             <PopoverTitle>Delete database?</PopoverTitle>
             <PopoverDescription>
-              Type <span className="font-mono text-foreground">{NAME}</span> to
+              Type <span className="font-sans text-foreground">{NAME}</span> to
               confirm. This cannot be undone.
             </PopoverDescription>
           </PopoverHeader>

@@ -9,7 +9,9 @@ import {
 
 import { cn } from "@workspace/ui/lib/utils"
 
-type Post = { title: string; excerpt: string; author: string; meta: string; tone: string }
+import { Macbook } from "@/registry/designali/ui/apple/macbook"
+
+type Post = { title: string; excerpt: string; author: string; meta: string; image: string }
 
 const tabs: { id: string; label: string; icon: typeof Clock; posts: Post[] }[] = [
   {
@@ -17,9 +19,9 @@ const tabs: { id: string; label: string; icon: typeof Clock; posts: Post[] }[] =
     label: "Latest",
     icon: Clock,
     posts: [
-      { title: "Planning a brand identity for a new studio", excerpt: "Logo, type, color, and the case for starting with one blue.", author: "Ali Imam", meta: "2 hours ago", tone: "from-emerald-300/60 to-emerald-100/20 dark:from-emerald-700/60 dark:to-emerald-900/20" },
-      { title: "Building a landing page in one afternoon", excerpt: "Three Designali blocks, one template, zero custom CSS.", author: "Ali Imam", meta: "Yesterday", tone: "from-amber-300/60 to-amber-100/20 dark:from-amber-700/60 dark:to-amber-900/20" },
-      { title: "New on designali.com this winter", excerpt: "Fourteen new templates, from portfolios to resorts.", author: "Designali Studio", meta: "Nov 12", tone: "from-sky-300/60 to-sky-100/20 dark:from-sky-700/60 dark:to-sky-900/20" },
+      { title: "Planning a brand identity for a new studio", excerpt: "Logo, type, color, and the case for starting with one blue.", author: "Ali Imam", meta: "2 hours ago", image: "/images/templates/design-agency.jpg" },
+      { title: "Building a landing page in one afternoon", excerpt: "Three Designali blocks, one template, zero custom CSS.", author: "Ali Imam", meta: "Yesterday", image: "/images/templates/portfolio-simple.jpg" },
+      { title: "New on designali.com this winter", excerpt: "Fourteen new templates, from portfolios to resorts.", author: "Designali Studio", meta: "Nov 12", image: "/images/templates/resort.jpg" },
     ],
   },
   {
@@ -27,9 +29,9 @@ const tabs: { id: string; label: string; icon: typeof Clock; posts: Post[] }[] =
     label: "Most read",
     icon: Flame,
     posts: [
-      { title: "The only five blocks every landing page needs", excerpt: "Hero, features, pricing, FAQ and a call to action.", author: "Ali Imam", meta: "48k reads", tone: "from-lime-300/60 to-lime-100/20 dark:from-lime-700/60 dark:to-lime-900/20" },
-      { title: "Pixel-perfect handoff is a myth", excerpt: "Design in Figma, ship in code, review in the browser.", author: "Ali Imam", meta: "31k reads", tone: "from-teal-300/60 to-teal-100/20 dark:from-teal-700/60 dark:to-teal-900/20" },
-      { title: "Installing @designali/icons without the mess", excerpt: "One package, 4,000+ icons, and ten calm minutes.", author: "Designali Studio", meta: "27k reads", tone: "from-orange-300/60 to-orange-100/20 dark:from-orange-700/60 dark:to-orange-900/20" },
+      { title: "The only five blocks every landing page needs", excerpt: "Hero, features, pricing, FAQ and a call to action.", author: "Ali Imam", meta: "48k reads", image: "/img/dashboard-1-light.jpg" },
+      { title: "Pixel-perfect handoff is a myth", excerpt: "Design in Figma, ship in code, review in the browser.", author: "Ali Imam", meta: "31k reads", image: "/stock/development.jpg" },
+      { title: "Installing @designali/icons without the mess", excerpt: "One package, 4,000+ icons, and ten calm minutes.", author: "Designali Studio", meta: "27k reads", image: "/images/templates/dalim-icons-old.jpg" },
     ],
   },
   {
@@ -37,9 +39,9 @@ const tabs: { id: string; label: string; icon: typeof Clock; posts: Post[] }[] =
     label: "Staff picks",
     icon: Star,
     posts: [
-      { title: "A year of designing in public", excerpt: "Total output: 460+ blocks. Total cost: less than you think.", author: "Ali Imam", meta: "Pick of the month", tone: "from-rose-300/60 to-rose-100/20 dark:from-rose-700/60 dark:to-rose-900/20" },
-      { title: "Why we stopped designing without code", excerpt: "The workflow, the tools, and what changed our minds.", author: "Designali Studio", meta: "Long read", tone: "from-stone-300/60 to-stone-100/20 dark:from-stone-600/60 dark:to-stone-900/20" },
-      { title: "Design is a conversation", excerpt: "Ali Imam on reading what a client really wants.", author: "Ali Imam", meta: "Interview", tone: "from-violet-300/60 to-violet-100/20 dark:from-violet-700/60 dark:to-violet-900/20" },
+      { title: "A year of designing in public", excerpt: "Total output: 460+ blocks. Total cost: less than you think.", author: "Ali Imam", meta: "Pick of the month", image: "/images/templates/aliimam-comp.jpg" },
+      { title: "Why we stopped designing without code", excerpt: "The workflow, the tools, and what changed our minds.", author: "Designali Studio", meta: "Long read", image: "/stock/strategy.jpg" },
+      { title: "Design is a conversation", excerpt: "Ali Imam on reading what a client really wants.", author: "Ali Imam", meta: "Interview", image: "/ali.jpg" },
     ],
   },
 ]
@@ -81,7 +83,19 @@ export default function Blog16() {
         <div role="tabpanel" className="mt-10 grid gap-8 lg:grid-cols-[1.4fr_1fr]">
           {lead && (
             <a href="#" className="group block">
-              <div className={cn("aspect-[16/10] bg-gradient-to-br", lead.tone)} />
+              <div className="flex aspect-[16/10] items-center justify-center overflow-hidden bg-muted px-4">
+                <Macbook
+                  variant="macbook-air"
+                  color="starlight"
+                  className="max-w-full transition-transform duration-500 group-hover:scale-[1.02]"
+                >
+                  <img
+                    src={lead.image}
+                    alt={lead.title}
+                    className="size-full object-cover object-top"
+                  />
+                </Macbook>
+              </div>
               <p className="mt-5 text-xs text-muted-foreground">
                 {lead.author} · {lead.meta}
               </p>
@@ -94,7 +108,7 @@ export default function Blog16() {
           <div className="flex flex-col gap-8">
             {rest.map((p) => (
               <a key={p.title} href="#" className="group grid grid-cols-[7rem_1fr] gap-4 sm:grid-cols-[9rem_1fr]">
-                <div className={cn("aspect-square bg-gradient-to-br", p.tone)} />
+                <img src={p.image} alt="" className="aspect-square w-full object-cover" />
                 <div className="min-w-0">
                   <p className="text-xs text-muted-foreground">
                     {p.author} · {p.meta}

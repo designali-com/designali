@@ -25,7 +25,7 @@ export default function Clients16() {
           >
             <div
               aria-hidden="true"
-              className="absolute -top-16 -right-16 size-64 rounded-full bg-gradient-to-br from-violet-500/50 to-fuchsia-500/0 blur-2xl"
+              className="absolute -top-16 -right-16 size-64 rounded-full bg-gradient-to-br from-primary/50 to-primary/0 blur-2xl"
             />
             <div className="relative flex items-center gap-2.5">
               <svg

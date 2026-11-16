@@ -26,17 +26,17 @@ const days: { label: string; items: Activity[] }[] = [
   {
     label: "Today",
     items: [
-      { who: "Sara", initials: "SA", tone: "bg-rose-500", icon: AtSign, action: "mentioned you in", target: "Dalim UI landing page", time: "12m", quote: "Can we get the hero copy reviewed before Thursday's design crit?", unread: true },
-      { who: "Ali Imam", initials: "AI", tone: "bg-sky-600", icon: GitMerge, action: "merged", target: "#2184 New pricing blocks", time: "48m", unread: true },
-      { who: "Automation", initials: "⚡", tone: "bg-amber-500", icon: Zap, action: "moved 6 blocks to", target: "Ready for QA", time: "2h" },
+      { who: "Sara", initials: "SA", tone: "bg-primary", icon: AtSign, action: "mentioned you in", target: "Dalim UI landing page", time: "12m", quote: "Can we get the hero copy reviewed before Thursday's design crit?", unread: true },
+      { who: "Ali Imam", initials: "AI", tone: "bg-chart-2", icon: GitMerge, action: "merged", target: "#2184 New pricing blocks", time: "48m", unread: true },
+      { who: "Automation", initials: "⚡", tone: "bg-primary", icon: Zap, action: "moved 6 blocks to", target: "Ready for QA", time: "2h" },
     ],
   },
   {
     label: "Yesterday",
     items: [
-      { who: "Omar", initials: "OM", tone: "bg-violet-600", icon: MessageSquare, action: "replied to", target: "Designali templates roadmap", time: "Tue 16:20", quote: "Agree on shipping the portfolio template first. Let's keep the icon refresh scope tight." },
-      { who: "Nina", initials: "NI", tone: "bg-lime-700", icon: UserPlus, action: "invited 3 people to", target: "Designali brand refresh", time: "Tue 11:02" },
-      { who: "Ali Imam", initials: "AI", tone: "bg-emerald-600", icon: MessageSquare, action: "commented on", target: "@designali/icons v2 spec", time: "Tue 09:45" },
+      { who: "Omar", initials: "OM", tone: "bg-chart-2", icon: MessageSquare, action: "replied to", target: "Designali templates roadmap", time: "Tue 16:20", quote: "Agree on shipping the portfolio template first. Let's keep the icon refresh scope tight." },
+      { who: "Nina", initials: "NI", tone: "bg-chart-3", icon: UserPlus, action: "invited 3 people to", target: "Designali brand refresh", time: "Tue 11:02" },
+      { who: "Ali Imam", initials: "AI", tone: "bg-chart-2", icon: MessageSquare, action: "commented on", target: "@designali/icons v2 spec", time: "Tue 09:45" },
     ],
   },
 ]
@@ -59,7 +59,7 @@ export default function Lists06() {
               <ol className="mt-4 border border-border bg-background">
                 {day.items.map((item) => (
                   <li key={item.target} className="relative flex gap-4 border-b border-border p-5 last:border-b-0">
-                    {item.unread && <span className="absolute top-0 left-0 h-full w-0.5 bg-sky-500" />}
+                    {item.unread && <span className="absolute top-0 left-0 h-full w-0.5 bg-primary" />}
                     <div className="relative shrink-0">
                       <span className={`flex size-9 items-center justify-center rounded-full text-xs font-semibold text-white ${item.tone}`}>
                         {item.initials}
@@ -77,7 +77,7 @@ export default function Lists06() {
                             {item.target}
                           </a>
                         </p>
-                        <time className="shrink-0 font-mono text-[10px] text-muted-foreground">{item.time}</time>
+                        <time className="shrink-0 font-sans text-[10px] text-muted-foreground">{item.time}</time>
                       </div>
                       {item.quote && (
                         <p className="mt-2 border-l-2 border-border pl-3 text-sm leading-6 text-muted-foreground">

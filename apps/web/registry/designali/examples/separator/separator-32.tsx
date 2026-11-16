@@ -17,7 +17,7 @@ const meta = [
 export default function FileDetailsPanel() {
   return (
     <div className="flex w-full max-w-60 flex-col gap-3 border p-3">
-      <div className="flex aspect-video items-center justify-center bg-linear-to-br from-violet-500/30 to-sky-500/30">
+      <div className="flex aspect-video items-center justify-center bg-linear-to-br from-primary/30 to-primary/30">
         <FileIcon className="size-8 text-muted-foreground" />
       </div>
       <span className="truncate text-sm font-medium">

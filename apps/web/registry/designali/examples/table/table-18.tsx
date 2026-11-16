@@ -38,7 +38,7 @@ export default function InlineEditableTable() {
         <TableBody>
           {products.map((product) => (
             <TableRow key={product.sku}>
-              <TableCell className="font-mono text-muted-foreground">
+              <TableCell className="font-sans text-muted-foreground">
                 {product.sku}
               </TableCell>
               <TableCell>{product.name}</TableCell>

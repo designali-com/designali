@@ -30,7 +30,7 @@ export default function RelativeTimestampHoverCard() {
             {zones.map((z) => (
               <div key={z.label} className="flex justify-between gap-3">
                 <span className="text-muted-foreground">{z.label}</span>
-                <span className="font-mono">{z.value}</span>
+                <span className="font-sans">{z.value}</span>
               </div>
             ))}
           </div>

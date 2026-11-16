@@ -9,6 +9,8 @@ import { Button } from "@workspace/ui/components/button"
 import { Switch } from "@workspace/ui/components/switch"
 import { cn } from "@workspace/ui/lib/utils"
 
+import { CounterNumber } from "@/registry/designali/ui/counter-number"
+
 const plans = [
   {
     name: "Starter",
@@ -86,9 +88,11 @@ export default function Pricing05() {
                   {plan.description}
                 </p>
                 <p className="mt-8 flex items-end gap-1">
-                  <span className="text-5xl font-semibold tracking-tighter">
-                    ${price}
-                  </span>
+                  <CounterNumber
+                    value={price}
+                    prefix="$"
+                    className="text-5xl font-semibold tracking-tighter"
+                  />
                   <span className="mb-1 text-sm text-muted-foreground">
                     / month
                   </span>

@@ -39,7 +39,7 @@ export default function Grid02() {
               />
               <div className="mt-3 flex items-baseline justify-between">
                 <span className="text-sm font-medium">{swatch.name}</span>
-                <span className="font-mono text-xs text-muted-foreground">
+                <span className="font-sans text-xs text-muted-foreground">
                   {swatch.hex}
                 </span>
               </div>

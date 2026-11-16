@@ -12,6 +12,8 @@ import {
 
 import { cn } from "@workspace/ui/lib/utils"
 
+import { Logo } from "@/src/components/logo"
+
 const groups = [
   {
     title: "Workspace",
@@ -44,9 +46,7 @@ export default function Navigation02() {
     <section className="flex min-h-[640px] w-full bg-background">
       <aside className="flex w-64 shrink-0 flex-col border-e bg-muted/30">
         <div className="flex h-14 items-center gap-2 border-b px-5 font-semibold">
-          <span className="flex size-6 items-center justify-center bg-primary text-xs text-primary-foreground">
-            D
-          </span>
+          <Logo className="h-5 w-auto" />
           Designali
         </div>
         <nav className="flex-1 space-y-6 p-3">

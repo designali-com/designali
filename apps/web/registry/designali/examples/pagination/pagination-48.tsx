@@ -17,13 +17,13 @@ import { cn } from "@workspace/ui/lib/utils"
 const shots = [
   {
     title: "Colorful spheres (CGI)",
-    tone: "from-orange-300 via-rose-300 to-purple-400",
+    tone: "from-chart-1 via-chart-1 to-primary",
   },
-  { title: "Abstract fluid (motion)", tone: "from-cyan-200 via-sky-300 to-blue-500" },
-  { title: "Dalim Visuals render", tone: "from-emerald-300 via-green-400 to-teal-600" },
+  { title: "Abstract fluid (motion)", tone: "from-primary/20 via-chart-1 to-primary" },
+  { title: "Dalim Visuals render", tone: "from-chart-1 via-primary to-chart-2" },
   {
     title: "Designali brand study",
-    tone: "from-yellow-200 via-amber-300 to-orange-400",
+    tone: "from-primary/20 via-chart-1 to-primary",
   },
 ]
 

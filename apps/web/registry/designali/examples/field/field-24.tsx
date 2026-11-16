@@ -20,13 +20,13 @@ const categories = [
   {
     id: "analytics",
     title: "Analytics",
-    hint: "Help us understand how the app is used.",
+    hint: "Help Designali understand how designali.com is used.",
     locked: false,
   },
   {
     id: "marketing",
     title: "Marketing",
-    hint: "Personalized offers on partner sites.",
+    hint: "Updates on new Designali templates and blocks.",
     locked: false,
   },
 ]
@@ -34,7 +34,7 @@ const categories = [
 export default function PrivacySwitchesWithLocked() {
   return (
     <FieldSet className="w-full max-w-sm">
-      <FieldLegend>Cookie preferences</FieldLegend>
+      <FieldLegend>designali.com cookie preferences</FieldLegend>
       <FieldGroup className="gap-4">
         {categories.map((c) => (
           <Field key={c.id} orientation="horizontal" data-disabled={c.locked}>

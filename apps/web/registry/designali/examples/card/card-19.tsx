@@ -18,28 +18,28 @@ import { cn } from "@workspace/ui/lib/utils"
 const activity = [
   {
     icon: GitPullRequestIcon,
-    tone: "text-violet-500",
+    tone: "text-primary",
     who: "Ali Imam",
     what: "opened PR #482 Add new pricing blocks",
     when: "4m",
   },
   {
     icon: MessageSquareIcon,
-    tone: "text-sky-500",
+    tone: "text-primary",
     who: "Client",
     what: "commented on Portfolio template redesign",
     when: "38m",
   },
   {
     icon: CircleCheckIcon,
-    tone: "text-emerald-500",
+    tone: "text-primary",
     who: "Deploy bot",
     what: "shipped designali.com v2.14.0 to Vercel",
     when: "2h",
   },
   {
     icon: UserPlusIcon,
-    tone: "text-amber-500",
+    tone: "text-primary",
     who: "Designer",
     what: "joined the Designali studio",
     when: "1d",

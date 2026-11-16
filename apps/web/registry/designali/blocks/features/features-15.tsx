@@ -58,7 +58,7 @@ export default function Features15() {
           <ul className="mt-10 space-y-6">
             {features.map(([title, body]) => (
               <li key={title} className="flex gap-4">
-                <Check className="mt-0.5 size-4 shrink-0 text-emerald-600 dark:text-emerald-400" />
+                <Check className="mt-0.5 size-4 shrink-0 text-primary dark:text-primary" />
                 <div>
                   <div className="text-sm font-medium">{title}</div>
                   <p className="mt-1 text-sm leading-6 text-muted-foreground">{body}</p>
@@ -67,8 +67,8 @@ export default function Features15() {
             ))}
           </ul>
         </div>
-        <div className="min-w-0 border border-neutral-800 bg-neutral-950 text-neutral-100">
-          <div className="flex items-center justify-between border-b border-neutral-800">
+        <div className="min-w-0 border border-foreground bg-foreground text-background">
+          <div className="flex items-center justify-between border-b border-foreground">
             <div className="flex overflow-x-auto">
               {langs.map((l) => (
                 <button
@@ -76,8 +76,8 @@ export default function Features15() {
                   type="button"
                   onClick={() => setLang(l)}
                   className={cn(
-                    "border-r border-neutral-800 px-4 py-2.5 text-xs whitespace-nowrap transition-colors",
-                    l === lang ? "bg-neutral-900 text-white" : "text-neutral-400 hover:text-white"
+                    "border-r border-foreground px-4 py-2.5 text-xs whitespace-nowrap transition-colors",
+                    l === lang ? "bg-foreground text-background" : "text-muted-foreground hover:text-white"
                   )}
                 >
                   {l}
@@ -92,7 +92,7 @@ export default function Features15() {
                 setCopied(true)
                 setTimeout(() => setCopied(false), 1500)
               }}
-              className="px-3 text-neutral-400 hover:text-white"
+              className="px-3 text-muted-foreground hover:text-white"
             >
               {copied ? <Check className="size-4" /> : <Copy className="size-4" />}
             </button>

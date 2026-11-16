@@ -36,13 +36,13 @@ export default function KanbanTaskCard() {
           <div className="flex gap-1">
             <Badge
               variant="secondary"
-              className="bg-violet-500/15 text-violet-700 dark:text-violet-300"
+              className="bg-primary/15 text-chart-3 dark:text-chart-1"
             >
               Design
             </Badge>
             <Badge
               variant="secondary"
-              className="bg-sky-500/15 text-sky-700 dark:text-sky-300"
+              className="bg-primary/15 text-chart-3 dark:text-chart-1"
             >
               Web
             </Badge>
@@ -58,7 +58,7 @@ export default function KanbanTaskCard() {
         </CardHeader>
         <CardFooter className="justify-between text-muted-foreground">
           <div className="flex items-center gap-3">
-            <span className="flex items-center gap-1 text-amber-600 dark:text-amber-400">
+            <span className="flex items-center gap-1 text-primary dark:text-primary">
               <SignalHighIcon className="size-3.5" /> High
             </span>
             <span className="flex items-center gap-1">

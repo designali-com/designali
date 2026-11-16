@@ -12,6 +12,7 @@ import {
 } from "@workspace/ui/components/context-menu"
 
 const lines = [
+  "// designali.com/templates — fetch a Designali template",
   "export async function getTemplate(slug: string) {",
   "  const template = await db.template.find(slug)",
   "  if (!template) throw new NotFoundError()",
@@ -22,7 +23,7 @@ const lines = [
 export default function CodeEditorMenu() {
   return (
     <ContextMenu>
-      <ContextMenuTrigger className="w-full max-w-md overflow-hidden border bg-muted/30 py-2 font-mono text-[11px]">
+      <ContextMenuTrigger className="w-full max-w-md overflow-hidden border bg-muted/30 py-2 font-sans text-[11px]">
         {lines.map((line, index) => (
           <div
             key={index}

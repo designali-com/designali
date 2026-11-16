@@ -14,12 +14,12 @@ import {
 import { cn } from "@workspace/ui/lib/utils"
 
 const apps = [
-  { name: "Figma", color: "bg-emerald-500" },
-  { name: "Vercel", color: "bg-violet-500" },
-  { name: "GitHub", color: "bg-sky-500" },
-  { name: "Notion", color: "bg-rose-500" },
-  { name: "Stripe", color: "bg-amber-500" },
-  { name: "Cursor", color: "bg-teal-500" },
+  { name: "Figma", color: "bg-primary" },
+  { name: "Vercel", color: "bg-primary" },
+  { name: "GitHub", color: "bg-primary" },
+  { name: "Notion", color: "bg-primary" },
+  { name: "Stripe", color: "bg-primary" },
+  { name: "Cursor", color: "bg-primary" },
 ]
 
 export default function IntegrationsDirectoryNav() {

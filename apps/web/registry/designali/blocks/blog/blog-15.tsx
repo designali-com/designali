@@ -76,11 +76,11 @@ export default function Blog15() {
                             />
                           ))}
                         </div>
-                        <span className="font-mono text-[10px] text-muted-foreground">12:40</span>
+                        <span className="font-sans text-[10px] text-muted-foreground">12:40</span>
                       </div>
                     )}
                   </div>
-                  <span className="hidden font-mono text-xs text-muted-foreground sm:block">{ep.length}</span>
+                  <span className="hidden font-sans text-xs text-muted-foreground sm:block">{ep.length}</span>
                 </div>
               </li>
             )

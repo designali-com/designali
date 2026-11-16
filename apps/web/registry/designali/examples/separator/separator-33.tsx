@@ -7,21 +7,21 @@ const events = [
     end: "09:30",
     title: "Standup",
     place: "Designali studio",
-    tone: "bg-sky-500",
+    tone: "bg-primary",
   },
   {
     time: "11:00",
     end: "12:00",
     title: "Client review: brand identity",
     place: "Video call",
-    tone: "bg-amber-500",
+    tone: "bg-primary",
   },
   {
     time: "14:30",
     end: "15:00",
     title: "Design crit with Ali",
     place: "Cafe corner",
-    tone: "bg-emerald-500",
+    tone: "bg-primary",
   },
 ]
 

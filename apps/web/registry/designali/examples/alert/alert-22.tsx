@@ -49,7 +49,7 @@ export default function AlertImportResult() {
           <ul className="mt-1 border-t pt-1">
             {skipped.map((item) => (
               <li key={item.row} className="flex justify-between">
-                <span className="font-mono">Row {item.row}</span>
+                <span className="font-sans">Row {item.row}</span>
                 <span>{item.reason}</span>
               </li>
             ))}

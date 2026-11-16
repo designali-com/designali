@@ -34,19 +34,19 @@ const statuses = [
     value: "progress",
     label: "In progress",
     icon: CircleDotIcon,
-    className: "text-amber-500",
+    className: "text-primary",
   },
   {
     value: "review",
     label: "In review",
     icon: CircleEllipsisIcon,
-    className: "text-sky-500",
+    className: "text-primary",
   },
   {
     value: "done",
     label: "Done",
     icon: CircleCheckIcon,
-    className: "text-emerald-500",
+    className: "text-primary",
   },
 ]
 
@@ -57,7 +57,7 @@ export default function IssueStatusPopover() {
 
   return (
     <div className="flex w-full max-w-sm items-center gap-2 border p-3">
-      <span className="font-mono text-xs text-muted-foreground">DSN-318</span>
+      <span className="font-sans text-xs text-muted-foreground">DSN-318</span>
       <span className="flex-1 truncate text-xs">
         Fix dark mode on pricing blocks
       </span>

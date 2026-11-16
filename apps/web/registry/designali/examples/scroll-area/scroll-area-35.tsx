@@ -43,7 +43,7 @@ export default function OnboardingStepsHorizontal() {
               <div className="flex items-center justify-between">
                 <step.icon className="size-4 text-muted-foreground" />
                 {step.done ? (
-                  <CheckCircle2Icon className="size-4 text-emerald-600" />
+                  <CheckCircle2Icon className="size-4 text-primary" />
                 ) : (
                   <CircleIcon className="size-4 text-muted-foreground/50" />
                 )}

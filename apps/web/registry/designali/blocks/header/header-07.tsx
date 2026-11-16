@@ -34,7 +34,7 @@ export default function Header07() {
           {open ? <X /> : <Menu />}
         </Button>
 
-        <a href="#" className="font-serif text-2xl tracking-[0.3em] uppercase">
+        <a href="#" className="font-sans text-2xl tracking-[0.3em] uppercase">
           designali
         </a>
 

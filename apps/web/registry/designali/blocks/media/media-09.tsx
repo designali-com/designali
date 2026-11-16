@@ -14,7 +14,7 @@ import { Input } from "@workspace/ui/components/input"
 import { Label } from "@workspace/ui/components/label"
 
 const speakers = [
-  { name: "Ali Imam", role: "Founder, Designali", initials: "AI" },
+  { name: "Ali Imam", role: "Founder, Designali", initials: "AI", avatar: "/ali.jpg" },
   { name: "Sara", role: "UI/UX Designer, Designali", initials: "SA" },
   { name: "Omar", role: "Next.js Developer, Designali", initials: "OM" },
 ]
@@ -32,7 +32,7 @@ export default function Media09() {
       <div className="mx-auto grid max-w-6xl gap-10 px-6 lg:grid-cols-[1.3fr_1fr]">
         <div>
           <span className="inline-flex items-center gap-2 border border-border px-2.5 py-1 text-xs font-medium">
-            <span className="size-1.5 rounded-full bg-emerald-500" /> Free Designali webinar
+            <span className="size-1.5 rounded-full bg-primary" /> Free Designali webinar
           </span>
           <h2 className="mt-5 text-3xl font-semibold tracking-tight md:text-5xl">
             Shipping a website in 30 days, not 6 months
@@ -47,21 +47,26 @@ export default function Media09() {
           <ol className="mt-3 space-y-3">
             {agenda.map((item, i) => (
               <li key={item} className="flex gap-4 text-sm">
-                <span className="font-mono text-muted-foreground">0{i + 1}</span>
+                <span className="font-sans text-muted-foreground">0{i + 1}</span>
                 <span>{item}</span>
               </li>
             ))}
           </ol>
           <h3 className="mt-10 text-sm font-medium">Speakers</h3>
           <ul className="mt-4 grid gap-3 sm:grid-cols-3">
-            {speakers.map((s, i) => (
+            {speakers.map((s) => (
               <li key={s.name} className="border border-border p-4">
-                <span
-                  className="flex size-11 items-center justify-center rounded-full text-sm font-semibold text-white"
-                  style={{ background: `linear-gradient(135deg, var(--chart-${i + 1}), var(--chart-${i + 3}))` }}
-                >
-                  {s.initials}
-                </span>
+                {"avatar" in s && s.avatar ? (
+                  <img
+                    src={s.avatar}
+                    alt={s.name}
+                    className="size-11 rounded-full object-cover"
+                  />
+                ) : (
+                  <span className="flex size-11 items-center justify-center rounded-full bg-primary text-sm font-semibold text-primary-foreground">
+                    {s.initials}
+                  </span>
+                )}
                 <p className="mt-3 text-sm font-medium">{s.name}</p>
                 <p className="text-xs text-muted-foreground">{s.role}</p>
               </li>
@@ -73,14 +78,14 @@ export default function Media09() {
             <div className="grid grid-cols-4 gap-2 text-center">
               {[["18", "days"], ["06", "hrs"], ["42", "min"], ["09", "sec"]].map(([n, l]) => (
                 <div key={l} className="border border-border py-3">
-                  <p className="font-mono text-2xl font-semibold tabular-nums">{n}</p>
+                  <p className="font-sans text-2xl font-semibold tabular-nums">{n}</p>
                   <p className="text-[11px] text-muted-foreground uppercase">{l}</p>
                 </div>
               ))}
             </div>
             {done ? (
               <div className="mt-6 flex flex-col items-center py-8 text-center">
-                <span className="flex size-12 items-center justify-center rounded-full bg-emerald-500/15 text-emerald-600 dark:text-emerald-400">
+                <span className="flex size-12 items-center justify-center rounded-full bg-primary/15 text-primary dark:text-primary">
                   <Check className="size-6" />
                 </span>
                 <p className="mt-4 font-medium">You&apos;re registered</p>

@@ -30,7 +30,7 @@ export default function GiftMessageTextarea() {
             id="gm-text"
             maxLength={150}
             defaultValue="Happy birthday, Sol! Enjoy the new kettle. Love, Ines"
-            className="font-serif text-sm"
+            className="font-sans text-sm"
           />
           <p className="text-xs text-muted-foreground">
             Prices are hidden on the packing slip.

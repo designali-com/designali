@@ -15,7 +15,7 @@ const LIMIT = 140
 
 export default function CharacterLimitTextarea() {
   const [text, setText] = React.useState(
-    "Shipping a calmer, faster dashboard this week. Huge thanks to everyone who tested the beta!"
+    "Shipping 40 new Designali blocks this week. Huge thanks to everyone who tested the beta!"
   )
   const over = text.length > LIMIT
 
@@ -44,7 +44,7 @@ export default function CharacterLimitTextarea() {
         <FieldError>Trim {text.length - LIMIT} characters to post.</FieldError>
       ) : (
         <FieldDescription>
-          Posted to your team&apos;s activity feed.
+          Posted to the Designali studio feed.
         </FieldDescription>
       )}
     </Field>

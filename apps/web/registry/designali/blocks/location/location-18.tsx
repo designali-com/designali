@@ -64,7 +64,7 @@ export default function Location18() {
                       variant={b.status === "Open" ? "secondary" : "outline"}
                       className={
                         b.status === "Open"
-                          ? "bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300"
+                          ? "bg-primary/10 text-chart-4 dark:bg-primary/10 dark:text-chart-1"
                           : undefined
                       }
                     >
@@ -73,7 +73,7 @@ export default function Location18() {
                   </td>
                   <td className="text-center">
                     {b.access ? (
-                      <span className="text-emerald-700 dark:text-emerald-400">Yes</span>
+                      <span className="text-chart-3 dark:text-primary">Yes</span>
                     ) : (
                       <span className="text-muted-foreground">No</span>
                     )}

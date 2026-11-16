@@ -15,19 +15,19 @@ const roles = [
     initials: "AI",
     role: "Owner",
     icon: CrownIcon,
-    tone: "bg-amber-500 text-white",
+    tone: "bg-primary text-white",
   },
   {
     initials: "SA",
     role: "Admin",
     icon: ShieldIcon,
-    tone: "bg-blue-600 text-white",
+    tone: "bg-chart-2 text-white",
   },
   {
     initials: "OM",
     role: "Moderator",
     icon: StarIcon,
-    tone: "bg-violet-600 text-white",
+    tone: "bg-chart-2 text-white",
   },
 ]
 

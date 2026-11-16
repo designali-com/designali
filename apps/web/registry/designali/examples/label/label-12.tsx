@@ -6,15 +6,15 @@ export default function PeerDisabledLabel() {
     <div className="flex flex-col gap-3">
       <div className="flex items-center gap-2">
         <Checkbox id="export-csv" defaultChecked />
-        <Label htmlFor="export-csv">Export as CSV</Label>
+        <Label htmlFor="export-csv">Export Designali blocks as TSX</Label>
       </div>
       <div className="flex items-center gap-2">
         <Checkbox id="export-pdf" disabled />
-        <Label htmlFor="export-pdf">Export as PDF (Pro plan)</Label>
+        <Label htmlFor="export-pdf">Export as Figma file (Designali Pro)</Label>
       </div>
       <div className="flex items-center gap-2">
         <Checkbox id="export-xlsx" disabled defaultChecked />
-        <Label htmlFor="export-xlsx">Export as Excel (Pro plan)</Label>
+        <Label htmlFor="export-xlsx">Export as Framer (Designali Pro)</Label>
       </div>
     </div>
   )

@@ -17,21 +17,21 @@ const badges = [
     icon: RocketIcon,
     earned: "Jan 4, 2025",
     how: "Shipped your first Designali template to production.",
-    tone: "bg-violet-500/15 text-violet-600",
+    tone: "bg-primary/15 text-primary",
   },
   {
     name: "Bug Hunter",
     icon: BugIcon,
     earned: "Feb 19, 2025",
     how: "Closed 25 bug reports in a single month.",
-    tone: "bg-rose-500/15 text-rose-600",
+    tone: "bg-primary/15 text-primary",
   },
   {
     name: "Mentor",
     icon: GraduationCapIcon,
     earned: "Mar 2, 2025",
     how: "Reviewed 50 pull requests from new teammates.",
-    tone: "bg-emerald-500/15 text-emerald-600",
+    tone: "bg-primary/15 text-primary",
   },
 ]
 

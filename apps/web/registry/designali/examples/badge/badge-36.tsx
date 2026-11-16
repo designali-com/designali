@@ -5,18 +5,18 @@ const envs = [
   {
     name: "Production",
     url: "www.designali.com",
-    className: "bg-red-600 text-white",
+    className: "bg-destructive text-white",
   },
   {
     name: "Staging",
     url: "staging.designali.com",
-    className: "bg-amber-400 text-amber-950",
+    className: "bg-primary text-chart-5",
   },
   {
     name: "Preview",
     url: "designali-pr-812.vercel.app",
     className:
-      "bg-violet-50 text-violet-700 dark:bg-violet-950 dark:text-violet-300",
+      "bg-primary/5 text-chart-3 dark:bg-primary/10 dark:text-chart-1",
   },
   {
     name: "Local",
@@ -33,7 +33,7 @@ export default function EnvironmentBadges() {
           <Badge className={cn("w-20 font-semibold uppercase", env.className)}>
             {env.name}
           </Badge>
-          <span className="truncate font-mono text-xs text-muted-foreground">
+          <span className="truncate font-sans text-xs text-muted-foreground">
             {env.url}
           </span>
         </div>

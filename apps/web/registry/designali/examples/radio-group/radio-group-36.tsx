@@ -18,7 +18,7 @@ export default function FileConflictResolution() {
   return (
     <div className="flex w-full max-w-sm flex-col gap-4 border p-4">
       <div className="flex items-start gap-3">
-        <FileWarningIcon className="mt-0.5 size-5 text-amber-500" />
+        <FileWarningIcon className="mt-0.5 size-5 text-primary" />
         <div>
           <p className="text-sm font-medium">
             &quot;designali-logos.zip&quot; already exists

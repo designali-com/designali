@@ -105,7 +105,7 @@ export default function Blog10() {
                     <p className="mt-1 text-sm text-muted-foreground">{p.excerpt}</p>
                     <div className="mt-3 flex gap-2">
                       {p.tags.map((t) => (
-                        <span key={t} className="bg-background px-2 py-0.5 font-mono text-[10px] text-muted-foreground">
+                        <span key={t} className="bg-background px-2 py-0.5 font-sans text-[10px] text-muted-foreground">
                           #{t.toLowerCase()}
                         </span>
                       ))}

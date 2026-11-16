@@ -63,11 +63,11 @@ export default function Grid15() {
                   </div>
                   <div>
                     <dt className="text-muted-foreground">Projects</dt>
-                    <dd className="mt-1 font-mono">{office.people}</dd>
+                    <dd className="mt-1 font-sans">{office.people}</dd>
                   </div>
                   <div>
                     <dt className="text-muted-foreground">Time</dt>
-                    <dd className="mt-1 font-mono">{office.utc}</dd>
+                    <dd className="mt-1 font-sans">{office.utc}</dd>
                   </div>
                 </dl>
                 <p className="text-xs text-muted-foreground">{office.address}</p>

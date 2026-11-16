@@ -1,6 +1,4 @@
-import {
-  Play,
-} from "@designali/icons"
+import { Play } from "@designali/icons"
 
 const chapters = [
   { time: "00:00", title: "Why design systems fail" },
@@ -13,13 +11,12 @@ export default function Media02() {
   return (
     <section className="w-full bg-background py-20">
       <div className="mx-auto grid max-w-6xl gap-8 px-6 lg:grid-cols-[2fr_1fr]">
-        <div
-          className="group relative aspect-video border border-border"
-          style={{
-            background:
-              "linear-gradient(135deg, var(--chart-1), var(--chart-3) 60%, var(--chart-5))",
-          }}
-        >
+        <div className="group relative aspect-video overflow-hidden border border-border">
+          <img
+            src="/stock/design.jpg"
+            alt="Ali Imam on stage at a Designali talk"
+            className="absolute inset-0 size-full object-cover"
+          />
           <button
             aria-label="Play video"
             className="absolute top-1/2 left-1/2 flex size-20 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-background text-foreground transition-transform group-hover:scale-105"

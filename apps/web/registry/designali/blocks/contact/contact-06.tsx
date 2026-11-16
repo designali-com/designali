@@ -33,7 +33,7 @@ export default function Contact06() {
     <section className="w-full bg-background py-24 md:py-32">
       <div className="mx-auto flex max-w-5xl flex-col items-center px-6 text-center">
         <span className="inline-flex items-center gap-2 border px-3 py-1 text-xs text-muted-foreground">
-          <span className="size-1.5 rounded-full bg-emerald-500" />
+          <span className="size-1.5 rounded-full bg-primary" />
           Booking projects for March 2027
         </span>
         <h2 className="mt-8 text-4xl font-semibold tracking-tight md:text-6xl">
@@ -59,7 +59,7 @@ export default function Contact06() {
           >
             {copied ? (
               <>
-                <Check className="size-4 text-emerald-600 dark:text-emerald-400" />
+                <Check className="size-4 text-primary dark:text-primary" />
                 Copied
               </>
             ) : (

@@ -79,7 +79,7 @@ export default function GitCommitHistoryMenu() {
           </ContextMenuTrigger>
           <ContextMenuContent className="w-52">
             <ContextMenuGroup>
-              <ContextMenuLabel className="font-mono">
+              <ContextMenuLabel className="font-sans">
                 {commit.sha}
               </ContextMenuLabel>
               <ContextMenuItem>

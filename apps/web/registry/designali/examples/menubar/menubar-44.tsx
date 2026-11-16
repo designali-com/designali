@@ -76,22 +76,22 @@ export default function MapLayersMenubar() {
       <div
         className={cn(
           "relative h-36 overflow-hidden border",
-          base === "streets" && "bg-slate-100 dark:bg-slate-800",
+          base === "streets" && "bg-muted dark:bg-card",
           base === "satellite" &&
-            "bg-gradient-to-br from-emerald-900 to-stone-700",
+            "bg-gradient-to-br from-chart-5 to-foreground",
           base === "terrain" &&
-            "bg-gradient-to-br from-lime-100 to-amber-200 dark:from-lime-900 dark:to-amber-900"
+            "bg-gradient-to-br from-primary/10 to-primary/20 dark:from-chart-5 dark:to-chart-5"
         )}
       >
         <div className="absolute inset-x-0 top-1/2 h-1.5 bg-white/80 dark:bg-white/30" />
         <div className="absolute inset-y-0 start-1/3 w-1.5 bg-white/80 dark:bg-white/30" />
         {traffic && (
-          <div className="absolute inset-x-6 top-1/2 h-1.5 bg-gradient-to-r from-emerald-500 via-amber-400 to-red-500" />
+          <div className="absolute inset-x-6 top-1/2 h-1.5 bg-gradient-to-r from-primary via-primary to-destructive" />
         )}
         {transit && (
-          <div className="absolute inset-y-4 start-2/3 w-1 bg-violet-500" />
+          <div className="absolute inset-y-4 start-2/3 w-1 bg-primary" />
         )}
-        <MapPinIcon className="absolute start-1/3 top-1/2 size-5 -translate-x-1/2 -translate-y-full text-red-500" />
+        <MapPinIcon className="absolute start-1/3 top-1/2 size-5 -translate-x-1/2 -translate-y-full text-destructive" />
       </div>
     </div>
   )

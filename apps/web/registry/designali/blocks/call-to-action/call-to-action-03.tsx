@@ -1,24 +1,18 @@
 import { Button } from "@workspace/ui/components/button"
 
+import { GridPattern } from "@/registry/designali/ui/grid-pattern"
+
 export default function CallToAction03() {
   return (
     <section className="relative w-full overflow-hidden bg-background px-6 py-24 md:py-32">
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-0 opacity-60"
-        style={{
-          backgroundImage:
-            "linear-gradient(var(--border) 1px, transparent 1px), linear-gradient(90deg, var(--border) 1px, transparent 1px)",
-          backgroundSize: "48px 48px",
-          maskImage:
-            "radial-gradient(ellipse at center, black 20%, transparent 70%)",
-          WebkitMaskImage:
-            "radial-gradient(ellipse at center, black 20%, transparent 70%)",
-        }}
+      <GridPattern
+        width={48}
+        height={48}
+        className="stroke-border opacity-60 [mask-image:radial-gradient(ellipse_at_center,black_20%,transparent_70%)]"
       />
       <div className="relative mx-auto flex max-w-3xl flex-col items-center text-center">
         <span className="inline-flex items-center gap-2 border border-border bg-background px-3 py-1 text-xs text-muted-foreground">
-          <span className="size-1.5 rounded-full bg-emerald-500" />
+          <span className="size-1.5 rounded-full bg-primary" />
           Free for teams up to five
         </span>
         <h2 className="mt-8 text-4xl font-medium tracking-tight text-foreground md:text-6xl">

@@ -19,10 +19,10 @@ import {
 import { cn } from "@workspace/ui/lib/utils"
 
 const labels = [
-  { name: "Bug", count: 24, color: "bg-red-500" },
-  { name: "Feature", count: 41, color: "bg-violet-500" },
-  { name: "Docs", count: 9, color: "bg-sky-500" },
-  { name: "Performance", count: 6, color: "bg-amber-500" },
+  { name: "Bug", count: 24, color: "bg-destructive" },
+  { name: "Feature", count: 41, color: "bg-primary" },
+  { name: "Docs", count: 9, color: "bg-primary" },
+  { name: "Performance", count: 6, color: "bg-primary" },
 ]
 
 export default function LabelFilterWithCounts() {

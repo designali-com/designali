@@ -20,31 +20,31 @@ export default function VerifiedSuccessState() {
         <InputOTPGroup>
           <InputOTPSlot
             index={0}
-            className="border-emerald-500/60 bg-emerald-500/10 text-emerald-700 dark:text-emerald-300"
+            className="border-primary/60 bg-primary/10 text-chart-3 dark:text-chart-1"
           />
           <InputOTPSlot
             index={1}
-            className="border-emerald-500/60 bg-emerald-500/10 text-emerald-700 dark:text-emerald-300"
+            className="border-primary/60 bg-primary/10 text-chart-3 dark:text-chart-1"
           />
           <InputOTPSlot
             index={2}
-            className="border-emerald-500/60 bg-emerald-500/10 text-emerald-700 dark:text-emerald-300"
+            className="border-primary/60 bg-primary/10 text-chart-3 dark:text-chart-1"
           />
           <InputOTPSlot
             index={3}
-            className="border-emerald-500/60 bg-emerald-500/10 text-emerald-700 dark:text-emerald-300"
+            className="border-primary/60 bg-primary/10 text-chart-3 dark:text-chart-1"
           />
           <InputOTPSlot
             index={4}
-            className="border-emerald-500/60 bg-emerald-500/10 text-emerald-700 dark:text-emerald-300"
+            className="border-primary/60 bg-primary/10 text-chart-3 dark:text-chart-1"
           />
           <InputOTPSlot
             index={5}
-            className="border-emerald-500/60 bg-emerald-500/10 text-emerald-700 dark:text-emerald-300"
+            className="border-primary/60 bg-primary/10 text-chart-3 dark:text-chart-1"
           />
         </InputOTPGroup>
       </InputOTP>
-      <p className="flex items-center gap-1.5 text-xs font-medium text-emerald-700 dark:text-emerald-400">
+      <p className="flex items-center gap-1.5 text-xs font-medium text-chart-3 dark:text-primary">
         <BadgeCheckIcon className="size-4" />
         Email verified
       </p>

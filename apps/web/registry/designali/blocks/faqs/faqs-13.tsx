@@ -37,7 +37,7 @@ export default function Faqs13() {
         </h2>
         <div className="mt-12 grid gap-4 md:grid-cols-4">
           <div className="flex flex-col justify-between border border-border bg-background p-8 md:col-span-2 md:row-span-2">
-            <span className="font-mono text-xs text-muted-foreground">
+            <span className="font-sans text-xs text-muted-foreground">
               Most asked
             </span>
             <div className="mt-10">

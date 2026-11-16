@@ -52,7 +52,7 @@ export default function RequiredFieldsFormInputs() {
             onChange={(e) => setValues({ ...values, vat: e.target.value })}
           />
         </Field>
-        <Button type="submit">Continue to payment</Button>
+        <Button type="submit">Continue to Designali checkout</Button>
       </FieldGroup>
     </form>
   )

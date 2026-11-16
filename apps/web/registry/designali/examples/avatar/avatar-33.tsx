@@ -33,7 +33,7 @@ export default function ContactHoverCard() {
         <HoverCardContent className="flex w-72 gap-3">
           <Avatar size="lg">
             <AvatarFallback>AI</AvatarFallback>
-            <AvatarBadge className="bg-emerald-500" />
+            <AvatarBadge className="bg-primary" />
           </Avatar>
           <div className="flex flex-col gap-1">
             <p className="text-sm font-semibold">Ali Imam</p>

@@ -25,7 +25,7 @@ export default function VerifiedBadgeTooltip() {
                 <button
                   type="button"
                   aria-label="Verified"
-                  className="text-sky-500"
+                  className="text-primary"
                 />
               }
             >

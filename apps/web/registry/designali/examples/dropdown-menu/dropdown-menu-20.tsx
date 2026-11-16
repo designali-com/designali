@@ -19,10 +19,10 @@ export default function ControlledOpenState() {
       <div className="flex items-center gap-2">
         <DropdownMenu open={open} onOpenChange={setOpen}>
           <DropdownMenuTrigger render={<Button variant="outline" />}>
-            Quick actions
+            Designali actions
           </DropdownMenuTrigger>
           <DropdownMenuContent className="w-44">
-            {["New note", "New reminder", "New checklist"].map((action) => (
+            {["New template", "New block", "New icon set"].map((action) => (
               <DropdownMenuItem key={action} onClick={() => setLast(action)}>
                 {action}
               </DropdownMenuItem>

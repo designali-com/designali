@@ -65,7 +65,7 @@ export default function AccordionCourseCurriculum() {
                   className="flex items-center gap-2 border-t px-3 py-2"
                 >
                   {lesson.done ? (
-                    <CircleCheckIcon className="size-4 text-emerald-600 dark:text-emerald-400" />
+                    <CircleCheckIcon className="size-4 text-primary dark:text-primary" />
                   ) : (
                     <CirclePlayIcon className="size-4 text-muted-foreground" />
                   )}

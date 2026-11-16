@@ -15,7 +15,7 @@ import {
 export default function AppHeaderMenubar() {
   return (
     <div className="flex w-full max-w-lg items-center gap-2 border bg-background px-2 py-1.5">
-      <div className="flex size-7 shrink-0 items-center justify-center bg-gradient-to-br from-violet-500 to-pink-500 text-[11px] font-bold text-white">
+      <div className="flex size-7 shrink-0 items-center justify-center bg-gradient-to-br from-primary to-primary text-[11px] font-bold text-white">
         Q
       </div>
       <Menubar className="h-7 border-0 p-0">

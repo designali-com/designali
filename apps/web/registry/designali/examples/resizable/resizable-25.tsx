@@ -7,10 +7,10 @@ import { cn } from "@workspace/ui/lib/utils"
 
 const days = Array.from({ length: 30 }, (_, i) => i + 1)
 const events = [
-  { time: "09:00", title: "Standup", tone: "bg-sky-500" },
-  { time: "11:30", title: "Design review", tone: "bg-violet-500" },
-  { time: "14:00", title: "Client call - brand identity", tone: "bg-amber-500" },
-  { time: "16:30", title: "Design crit with Ali", tone: "bg-emerald-500" },
+  { time: "09:00", title: "Standup", tone: "bg-primary" },
+  { time: "11:30", title: "Design review", tone: "bg-primary" },
+  { time: "14:00", title: "Client call - brand identity", tone: "bg-primary" },
+  { time: "16:30", title: "Design crit with Ali", tone: "bg-primary" },
 ]
 
 export default function CalendarAgendaSplit() {

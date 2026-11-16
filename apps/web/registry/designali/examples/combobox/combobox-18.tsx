@@ -67,7 +67,7 @@ export default function ServerRegionLatency() {
                         className={cn(
                           "ml-auto text-[11px] tabular-nums",
                           region.ms < 50
-                            ? "text-emerald-600 dark:text-emerald-400"
+                            ? "text-primary dark:text-primary"
                             : "text-muted-foreground"
                         )}
                       >

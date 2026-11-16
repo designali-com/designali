@@ -32,7 +32,7 @@ export default function RememberDeviceLogin() {
               id="otp-code"
               inputMode="numeric"
               placeholder="000000"
-              className="font-mono tracking-widest"
+              className="font-sans tracking-widest"
             />
           </Field>
           <Field orientation="horizontal">

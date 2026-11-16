@@ -12,7 +12,7 @@ export default function PodcastEpisodeRow() {
       <div className="w-16 shrink-0">
         <AspectRatio
           ratio={1}
-          className="bg-linear-to-br from-teal-400 to-indigo-700"
+          className="bg-linear-to-br from-primary to-chart-3"
         >
           <MicIcon className="absolute start-1/2 top-1/2 size-6 -translate-x-1/2 -translate-y-1/2 text-white rtl:translate-x-1/2" />
         </AspectRatio>

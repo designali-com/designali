@@ -47,7 +47,7 @@ function Sparkline({ points, up }: { points: number[]; up: boolean }) {
   return (
     <svg
       viewBox="0 0 60 20"
-      className={cn("h-5 w-16", up ? "text-emerald-500" : "text-destructive")}
+      className={cn("h-5 w-16", up ? "text-primary" : "text-destructive")}
       aria-hidden="true"
     >
       <path
@@ -94,7 +94,7 @@ export default function CryptoWatchlistTable() {
                 className={cn(
                   "text-right tabular-nums",
                   a.change >= 0
-                    ? "text-emerald-600 dark:text-emerald-400"
+                    ? "text-primary dark:text-primary"
                     : "text-destructive"
                 )}
               >

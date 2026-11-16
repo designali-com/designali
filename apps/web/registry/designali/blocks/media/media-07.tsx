@@ -50,12 +50,11 @@ export default function Media07() {
           <p className="text-sm text-muted-foreground">A film by Ali Imam</p>
         </div>
         <div className="group relative aspect-video w-full overflow-hidden border border-border bg-black text-white">
-          <div
-            className="absolute inset-0 transition-transform duration-[2000ms]"
-            style={{
-              background: "radial-gradient(circle at 30% 40%, var(--chart-4), transparent 55%), radial-gradient(circle at 75% 65%, var(--chart-1), transparent 50%), #0a0a0a",
-              transform: playing ? "scale(1.04)" : "scale(1)",
-            }}
+          <img
+            src="/stock/wallpaper-1.jpg"
+            alt="Still from The Designali Story"
+            className="absolute inset-0 size-full object-cover transition-transform duration-[2000ms]"
+            style={{ transform: playing ? "scale(1.04)" : "scale(1)" }}
           />
           <button
             type="button"
@@ -105,7 +104,7 @@ export default function Media07() {
               <button type="button" aria-label={muted ? "Unmute" : "Mute"} onClick={() => setMuted((m) => !m)} className="flex size-8 items-center justify-center hover:bg-white/10">
                 {muted ? <VolumeX className="size-4" /> : <Volume2 className="size-4" />}
               </button>
-              <span className="ml-1 font-mono text-xs tabular-nums">{fmt(time)} / {fmt(DURATION)}</span>
+              <span className="ml-1 font-sans text-xs tabular-nums">{fmt(time)} / {fmt(DURATION)}</span>
               <span className="ml-2 hidden truncate text-xs text-white/70 md:inline">- {chapter.label}</span>
               <div className="ml-auto flex items-center gap-1">
                 <button type="button" aria-label="Captions" aria-pressed={cc} onClick={() => setCc((c) => !c)} className={`flex size-8 items-center justify-center hover:bg-white/10 ${cc ? "text-white" : "text-white/50"}`}>
@@ -129,7 +128,7 @@ export default function Media07() {
               onClick={() => setTime(c.at)}
               className={`bg-background p-3 text-left text-sm transition-colors hover:bg-muted ${chapter.at === c.at ? "text-foreground" : "text-muted-foreground"}`}
             >
-              <span className="block font-mono text-xs">{fmt(c.at)}</span>
+              <span className="block font-sans text-xs">{fmt(c.at)}</span>
               <span className="mt-0.5 block truncate font-medium">{c.label}</span>
             </button>
           ))}

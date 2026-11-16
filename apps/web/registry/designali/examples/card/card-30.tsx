@@ -19,7 +19,7 @@ export default function TestimonialCard() {
           {Array.from({ length: 5 }).map((_, i) => (
             <StarIcon
               key={i}
-              className="size-4 fill-amber-400 text-amber-400"
+              className="size-4 fill-primary text-primary"
             />
           ))}
         </div>

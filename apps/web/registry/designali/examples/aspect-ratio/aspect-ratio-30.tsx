@@ -11,12 +11,12 @@ export default function RecipeCardCover() {
     <div className="w-full max-w-xs border">
       <AspectRatio
         ratio={4 / 3}
-        className="overflow-hidden bg-linear-to-br from-lime-200 to-green-400 dark:from-lime-800 dark:to-green-900"
+        className="overflow-hidden bg-linear-to-br from-primary/20 to-primary dark:from-chart-4 dark:to-chart-5"
       >
-        <div className="absolute start-1/2 top-1/2 size-3/5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white shadow-xl rtl:translate-x-1/2 dark:bg-zinc-200">
-          <div className="absolute inset-[18%] rounded-full bg-linear-to-br from-orange-300 to-red-400" />
-          <div className="absolute start-[30%] top-[30%] size-[15%] rounded-full bg-green-600" />
-          <div className="absolute end-[28%] bottom-[32%] size-[12%] rounded-full bg-yellow-200" />
+        <div className="absolute start-1/2 top-1/2 size-3/5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white shadow-xl rtl:translate-x-1/2 dark:bg-foreground">
+          <div className="absolute inset-[18%] rounded-full bg-linear-to-br from-chart-1 to-destructive" />
+          <div className="absolute start-[30%] top-[30%] size-[15%] rounded-full bg-chart-2" />
+          <div className="absolute end-[28%] bottom-[32%] size-[12%] rounded-full bg-primary/20" />
         </div>
       </AspectRatio>
       <div className="p-3">

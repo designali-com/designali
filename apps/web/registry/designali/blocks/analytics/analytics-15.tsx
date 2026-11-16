@@ -1,3 +1,6 @@
+import { IPhone } from "@/registry/designali/ui/apple/iphone"
+import { Macbook } from "@/registry/designali/ui/apple/macbook"
+
 const devices = [
   { key: "desktop", label: "Desktop", color: "var(--chart-1)" },
   { key: "mobile", label: "Mobile", color: "var(--chart-2)" },
@@ -37,12 +40,12 @@ export default function Analytics15() {
                   <li key={d.key} className="flex items-center gap-3 text-sm">
                     <span className="size-3" style={{ background: d.color }} />
                     <span className="flex-1">{d.label}</span>
-                    <span className="font-mono">{last}%</span>
+                    <span className="font-sans">{last}%</span>
                     <span
                       className={
                         delta >= 0
-                          ? "w-12 text-right font-mono text-xs text-emerald-600 dark:text-emerald-400"
-                          : "w-12 text-right font-mono text-xs text-rose-600 dark:text-rose-400"
+                          ? "w-12 text-right font-sans text-xs text-primary dark:text-primary"
+                          : "w-12 text-right font-sans text-xs text-primary dark:text-primary"
                       }
                     >
                       {delta > 0 ? "+" : ""}
@@ -52,6 +55,32 @@ export default function Analytics15() {
                 )
               })}
             </ul>
+            <div className="relative mt-10 flex max-w-full items-end">
+              <Macbook variant="macbook-air" color="silver" size="sm" className="max-w-full">
+                <img
+                  src="/img/dashboard-1-light.jpg"
+                  alt="Designali dashboard on desktop"
+                  className="size-full object-cover object-top dark:hidden"
+                />
+                <img
+                  src="/img/dashboard-1-dark.jpg"
+                  alt="Designali dashboard on desktop"
+                  className="hidden size-full object-cover object-top dark:block"
+                />
+              </Macbook>
+              <IPhone size="sm" color="silver" className="absolute right-0 -bottom-4 h-48!">
+                <img
+                  src="/img/chat-1-light.jpg"
+                  alt="Designali on mobile"
+                  className="size-full object-cover dark:hidden"
+                />
+                <img
+                  src="/img/chat-1-dark.jpg"
+                  alt="Designali on mobile"
+                  className="hidden size-full object-cover dark:block"
+                />
+              </IPhone>
+            </div>
           </div>
 
           <div className="space-y-5 border bg-background p-6 md:p-8">
@@ -74,7 +103,7 @@ export default function Analytics15() {
             ))}
             <div className="grid grid-cols-[5.5rem_1fr] gap-4 pt-2">
               <span />
-              <div className="flex justify-between font-mono text-[10px] text-muted-foreground">
+              <div className="flex justify-between font-sans text-[10px] text-muted-foreground">
                 <span>0%</span>
                 <span>50%</span>
                 <span>100%</span>

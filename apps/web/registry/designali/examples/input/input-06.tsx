@@ -19,7 +19,7 @@ export default function InputSizeScale() {
         <div key={s.label} className="flex gap-2">
           <Input
             aria-label={s.label + " input"}
-            placeholder={s.label}
+            placeholder={s.label + " - search designali.com"}
             className={s.input}
           />
           <Button size={s.button}>Go</Button>

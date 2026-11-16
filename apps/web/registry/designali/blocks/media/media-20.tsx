@@ -13,12 +13,12 @@ import { Button } from "@workspace/ui/components/button"
 import { cn } from "@workspace/ui/lib/utils"
 
 const shows = [
-  { name: "Design se Code Tak", host: "Ali Imam", episode: "From Figma frame to production code", category: "Design", length: 2460, gradient: "linear-gradient(135deg, var(--chart-1), var(--chart-2))" },
-  { name: "Pixel Perfect", host: "Sara", episode: "Why every grid needs a baseline", category: "UI/UX", length: 3120, gradient: "linear-gradient(200deg, var(--chart-3), var(--chart-5))" },
-  { name: "Ship It", host: "Omar", episode: "Next.js for designers", category: "Development", length: 1980, gradient: "linear-gradient(60deg, var(--chart-4), var(--chart-1))" },
-  { name: "Brand Room", host: "Nina", episode: "Logos that last a decade", category: "Brand", length: 2700, gradient: "linear-gradient(160deg, var(--chart-2), var(--chart-4))" },
-  { name: "Motion Notes", host: "Callum", episode: "Easing curves, explained slowly", category: "Motion", length: 2280, gradient: "linear-gradient(300deg, var(--chart-5), var(--chart-3))" },
-  { name: "Small Pages", host: "Ines", episode: "Designing a one-page portfolio", category: "Templates", length: 2040, gradient: "linear-gradient(20deg, var(--chart-1), var(--chart-5))" },
+  { name: "Design se Code Tak", host: "Ali Imam", episode: "From Figma frame to production code", category: "Design", length: 2460, image: "/images/templates/aliimam-comp.jpg" },
+  { name: "Pixel Perfect", host: "Sara", episode: "Why every grid needs a baseline", category: "UI/UX", length: 3120, image: "/images/templates/dalim-ui-old.jpg" },
+  { name: "Ship It", host: "Omar", episode: "Next.js for designers", category: "Development", length: 1980, image: "/images/templates/vercel.jpg" },
+  { name: "Brand Room", host: "Nina", episode: "Logos that last a decade", category: "Brand", length: 2700, image: "/images/templates/dalim-graphic-old.jpg" },
+  { name: "Motion Notes", host: "Callum", episode: "Easing curves, explained slowly", category: "Motion", length: 2280, image: "/images/templates/dalim-visuals-old.jpg" },
+  { name: "Small Pages", host: "Ines", episode: "Designing a one-page portfolio", category: "Templates", length: 2040, image: "/images/templates/portfolio-simple.jpg" },
 ]
 const fmt = (s: number) => `${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}`
 
@@ -66,7 +66,8 @@ export default function Media20() {
             const queued = queue.includes(i)
             return (
               <article key={s.name} className={cn("group flex gap-4 border border-border p-4 transition-colors", isCurrent && "bg-muted/60")}>
-                <div className="relative size-24 shrink-0 border border-border" style={{ background: s.gradient }}>
+                <div className="relative size-24 shrink-0 overflow-hidden border border-border">
+                  <img src={s.image} alt={s.name} className="absolute inset-0 size-full object-cover" />
                   <button
                     type="button"
                     aria-label={isCurrent && playing ? `Pause ${s.name}` : `Play ${s.name}`}
@@ -81,7 +82,7 @@ export default function Media20() {
                   <p className="mt-0.5 truncate font-medium">{s.name}</p>
                   <p className="line-clamp-2 text-sm text-muted-foreground">{s.episode}</p>
                   <div className="mt-auto flex items-center justify-between pt-2">
-                    <span className="font-mono text-xs text-muted-foreground">{Math.round(s.length / 60)} min</span>
+                    <span className="font-sans text-xs text-muted-foreground">{Math.round(s.length / 60)} min</span>
                     <button
                       type="button"
                       disabled={isCurrent}
@@ -106,12 +107,12 @@ export default function Media20() {
               <div className="h-full bg-foreground" style={{ width: `${Math.min(100, (time / show.length) * 100)}%` }} />
             </div>
             <div className="mx-auto flex max-w-7xl items-center gap-3 px-6 py-3">
-              <div className="size-10 shrink-0 border border-border" style={{ background: show.gradient }} />
+              <img src={show.image} alt={show.name} className="size-10 shrink-0 border border-border object-cover" />
               <div className="min-w-0 flex-1">
                 <p className="truncate text-sm font-medium">{show.episode}</p>
                 <p className="truncate text-xs text-muted-foreground">{show.name} - {show.host}</p>
               </div>
-              <span className="hidden font-mono text-xs text-muted-foreground tabular-nums sm:inline">
+              <span className="hidden font-sans text-xs text-muted-foreground tabular-nums sm:inline">
                 {fmt(time)} / {fmt(show.length)}
               </span>
               <Button size="icon-lg" aria-label={playing ? "Pause" : "Play"} onClick={() => setPlaying((p) => !p)}>

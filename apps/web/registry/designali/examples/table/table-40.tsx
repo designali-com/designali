@@ -72,7 +72,7 @@ export default function EmailInboxTable() {
                 >
                   <StarIcon
                     className={cn(
-                      msg.starred && "fill-amber-400 text-amber-400"
+                      msg.starred && "fill-primary text-primary"
                     )}
                   />
                 </Button>

@@ -25,7 +25,7 @@ export default function IntegrationCard() {
   return (
     <Card className="w-full max-w-xs">
       <CardHeader className="grid-cols-[auto_1fr_auto] gap-x-3">
-        <div className="row-span-2 flex size-10 items-center justify-center bg-gradient-to-br from-indigo-500 to-sky-500 text-white">
+        <div className="row-span-2 flex size-10 items-center justify-center bg-gradient-to-br from-primary to-primary text-white">
           <WebhookIcon className="size-5" />
         </div>
         <CardTitle>Figma sync</CardTitle>
@@ -46,7 +46,7 @@ export default function IntegrationCard() {
           <span
             className={cn(
               "size-1.5 rounded-full",
-              connected ? "bg-emerald-500" : "bg-muted-foreground"
+              connected ? "bg-primary" : "bg-muted-foreground"
             )}
           />
           {connected ? "Connected" : "Disconnected"}

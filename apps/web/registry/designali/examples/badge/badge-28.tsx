@@ -49,7 +49,7 @@ export default function IntegrationConnectionBadges() {
                 <span className="text-sm font-medium">{app.name}</span>
                 <Badge
                   variant={on ? "secondary" : "outline"}
-                  className={cn(on && "text-emerald-700 dark:text-emerald-400")}
+                  className={cn(on && "text-chart-3 dark:text-primary")}
                 >
                   {on ? "Connected" : "Not connected"}
                 </Badge>

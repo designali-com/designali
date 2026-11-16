@@ -54,7 +54,7 @@ export default function Header13() {
       <header className="relative border-b">
         <div className="mx-auto flex h-14 max-w-7xl items-center gap-6 px-6">
           <a href="#" className="flex shrink-0 items-center gap-2 text-sm font-semibold">
-            <span className="flex size-6 items-center justify-center bg-foreground font-mono text-[11px] text-background">
+            <span className="flex size-6 items-center justify-center bg-foreground font-sans text-[11px] text-background">
               d/
             </span>
             Designali Docs

@@ -24,7 +24,7 @@ export default function TranslationEditor() {
           </span>
           {strings.map((s) => (
             <div key={s.key} className="flex flex-col gap-0.5 px-3 py-2">
-              <span className="font-mono text-[10px] text-muted-foreground">
+              <span className="font-sans text-[10px] text-muted-foreground">
                 {s.key}
               </span>
               <span className="text-xs">{s.en}</span>

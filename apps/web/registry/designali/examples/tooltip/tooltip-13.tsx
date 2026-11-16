@@ -19,7 +19,7 @@ export default function CopyFeedbackTooltip() {
 
   return (
     <div className="flex w-full max-w-xs items-center gap-2 border px-3 py-1.5">
-      <span className="flex-1 truncate font-mono text-xs">{key}</span>
+      <span className="flex-1 truncate font-sans text-xs">{key}</span>
       <Tooltip onOpenChange={(open) => !open && setCopied(false)}>
         <TooltipTrigger
           closeOnClick={false}

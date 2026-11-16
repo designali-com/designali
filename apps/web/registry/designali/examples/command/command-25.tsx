@@ -14,11 +14,11 @@ import { cn } from "@workspace/ui/lib/utils"
 
 const tokens = [
   { name: "primary", hex: "#00A8FF", className: "bg-primary" },
-  { name: "success", hex: "#16A34A", className: "bg-green-600" },
-  { name: "warning", hex: "#D97706", className: "bg-amber-600" },
-  { name: "danger", hex: "#DC2626", className: "bg-red-600" },
-  { name: "info", hex: "#0284C7", className: "bg-sky-600" },
-  { name: "neutral", hex: "#52525B", className: "bg-zinc-600" },
+  { name: "success", hex: "#16A34A", className: "bg-chart-2" },
+  { name: "warning", hex: "#D97706", className: "bg-chart-2" },
+  { name: "danger", hex: "#DC2626", className: "bg-destructive" },
+  { name: "info", hex: "#0284C7", className: "bg-chart-2" },
+  { name: "neutral", hex: "#52525B", className: "bg-muted-foreground" },
 ]
 
 export default function BrandColorTokenPicker() {
@@ -31,7 +31,7 @@ export default function BrandColorTokenPicker() {
         <span className={cn("size-8", active?.className)} />
         <div className="flex flex-col text-xs">
           <span className="font-medium">color.{token}</span>
-          <span className="font-mono text-muted-foreground">{active?.hex}</span>
+          <span className="font-sans text-muted-foreground">{active?.hex}</span>
         </div>
       </div>
       <Command className="border">
@@ -53,7 +53,7 @@ export default function BrandColorTokenPicker() {
                   )}
                 />
                 <span>{t.name}</span>
-                <span className="font-mono text-[11px] text-muted-foreground">
+                <span className="font-sans text-[11px] text-muted-foreground">
                   {t.hex}
                 </span>
               </CommandItem>

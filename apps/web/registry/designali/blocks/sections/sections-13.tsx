@@ -57,7 +57,7 @@ export default function Sections13() {
     <section className="w-full bg-background py-24">
       <div className="mx-auto max-w-6xl px-6">
         <div className="max-w-2xl">
-          <p className="font-mono text-xs tracking-widest text-muted-foreground uppercase">How it works</p>
+          <p className="font-sans text-xs tracking-widest text-muted-foreground uppercase">How it works</p>
           <h2 className="mt-4 text-4xl font-semibold tracking-tight md:text-5xl">
             From survey to switch-on in about five weeks.
           </h2>
@@ -84,14 +84,14 @@ export default function Sections13() {
               />
               <item.icon className="size-4" />
               <span className="hidden font-medium sm:block">{item.title}</span>
-              <span className="font-mono text-[10px] sm:hidden">0{index + 1}</span>
+              <span className="font-sans text-[10px] sm:hidden">0{index + 1}</span>
             </button>
           ))}
         </div>
 
         <div key={step.title} role="tabpanel" className="grid gap-8 border-x border-b border-border p-6 md:grid-cols-[1.5fr_1fr] md:p-10">
           <div>
-            <p className="font-mono text-xs text-muted-foreground">
+            <p className="font-sans text-xs text-muted-foreground">
               Step 0{active + 1} · {step.duration}
             </p>
             <h3 className="mt-3 text-3xl font-semibold tracking-tight">{step.title}</h3>

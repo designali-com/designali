@@ -2,6 +2,8 @@ import {
   ArrowUpRight,
 } from "@designali/icons"
 
+import { IPad } from "@/registry/designali/ui/apple/ipad"
+
 const posts = [
   {
     category: "Design systems",
@@ -11,7 +13,7 @@ const posts = [
     author: "Ali Imam",
     date: "Nov 12, 2026",
     read: "8 min read",
-    gradient: "from-chart-1/60 to-chart-3/30",
+    image: "/images/templates/aliimam-comp.jpg",
   },
   {
     category: "Engineering",
@@ -21,7 +23,7 @@ const posts = [
     author: "Ali Imam",
     date: "Nov 5, 2026",
     read: "11 min read",
-    gradient: "from-chart-2/60 to-chart-4/30",
+    image: "/img/dashboard-1-light.jpg",
   },
   {
     category: "Process",
@@ -31,7 +33,7 @@ const posts = [
     author: "Ali Imam",
     date: "Oct 29, 2026",
     read: "6 min read",
-    gradient: "from-chart-5/60 to-chart-1/30",
+    image: "/images/templates/design-agency.jpg",
   },
 ]
 
@@ -60,7 +62,20 @@ export default function Blog01() {
         <div className="grid gap-px border border-border bg-border md:grid-cols-3">
           {posts.map((post) => (
             <a key={post.title} href="#" className="group flex flex-col bg-background">
-              <div className={`aspect-[4/3] bg-gradient-to-br ${post.gradient}`} />
+              <div className="relative flex aspect-[4/3] items-end justify-center overflow-hidden bg-muted pt-8">
+                <IPad
+                  size="sm"
+                  orientation="landscape"
+                  color="space-grey"
+                  className="max-w-[90%] translate-y-[12%] transition-transform duration-300 group-hover:translate-y-[8%]"
+                >
+                  <img
+                    src={post.image}
+                    alt={post.title}
+                    className="size-full object-cover object-top"
+                  />
+                </IPad>
+              </div>
               <div className="flex flex-1 flex-col p-6">
                 <span className="text-xs text-muted-foreground">{post.category}</span>
                 <h3 className="mt-3 text-lg leading-snug font-medium group-hover:underline group-hover:underline-offset-4">

@@ -63,7 +63,7 @@ export default function Lists05() {
                   </td>
                   <td className="px-4 py-3.5 text-muted-foreground">{file.owner}</td>
                   <td className="px-4 py-3.5 text-muted-foreground">{file.modified}</td>
-                  <td className="px-4 py-3.5 text-right font-mono text-xs text-muted-foreground">
+                  <td className="px-4 py-3.5 text-right font-sans text-xs text-muted-foreground">
                     {file.size}
                   </td>
                 </tr>

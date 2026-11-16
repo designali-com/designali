@@ -5,71 +5,71 @@ const ramps = [
   {
     name: "Slate",
     shades: [
-      "bg-slate-100",
-      "bg-slate-300",
-      "bg-slate-500",
-      "bg-slate-700",
-      "bg-slate-900",
+      "bg-muted",
+      "bg-border",
+      "bg-muted-foreground",
+      "bg-foreground",
+      "bg-foreground",
     ],
   },
   {
     name: "Sky",
     shades: [
-      "bg-sky-100",
-      "bg-sky-300",
-      "bg-sky-500",
-      "bg-sky-700",
-      "bg-sky-900",
+      "bg-primary/10",
+      "bg-chart-1",
+      "bg-primary",
+      "bg-chart-3",
+      "bg-chart-5",
     ],
   },
   {
     name: "Emerald",
     shades: [
-      "bg-emerald-100",
-      "bg-emerald-300",
-      "bg-emerald-500",
-      "bg-emerald-700",
-      "bg-emerald-900",
+      "bg-primary/10",
+      "bg-chart-1",
+      "bg-primary",
+      "bg-chart-3",
+      "bg-chart-5",
     ],
   },
   {
     name: "Amber",
     shades: [
-      "bg-amber-100",
-      "bg-amber-300",
-      "bg-amber-500",
-      "bg-amber-700",
-      "bg-amber-900",
+      "bg-primary/10",
+      "bg-chart-1",
+      "bg-primary",
+      "bg-chart-3",
+      "bg-chart-5",
     ],
   },
   {
     name: "Rose",
     shades: [
-      "bg-rose-100",
-      "bg-rose-300",
-      "bg-rose-500",
-      "bg-rose-700",
-      "bg-rose-900",
+      "bg-primary/10",
+      "bg-chart-1",
+      "bg-primary",
+      "bg-chart-3",
+      "bg-chart-5",
     ],
   },
   {
     name: "Violet",
     shades: [
-      "bg-violet-100",
-      "bg-violet-300",
-      "bg-violet-500",
-      "bg-violet-700",
-      "bg-violet-900",
+      "bg-primary/10",
+      "bg-chart-1",
+      "bg-primary",
+      "bg-chart-3",
+      "bg-chart-5",
     ],
   },
   {
     name: "Fuchsia",
     shades: [
-      "bg-fuchsia-100",
-      "bg-fuchsia-300",
-      "bg-fuchsia-500",
-      "bg-fuchsia-700",
-      "bg-fuchsia-900",
+      "bg-primary/10",
+      "bg-chart-1",
+      "bg-primary",
+      "bg-chart-3",
+      "bg-chart-5",
     ],
   },
 ]
@@ -86,7 +86,7 @@ export default function ColorPaletteSwatches() {
               {ramp.shades.map((shade, i) => (
                 <div key={shade} className="flex flex-col gap-0.5">
                   <div className={cn("h-8", shade)} />
-                  <span className="font-mono text-[10px] text-muted-foreground">
+                  <span className="font-sans text-[10px] text-muted-foreground">
                     {steps[i]}
                   </span>
                 </div>

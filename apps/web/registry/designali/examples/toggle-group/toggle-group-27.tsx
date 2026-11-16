@@ -30,12 +30,12 @@ export default function PackageManagerToggleGroup() {
         className="border-b p-1"
       >
         {Object.keys(commands).map((key) => (
-          <ToggleGroupItem key={key} value={key} className="font-mono">
+          <ToggleGroupItem key={key} value={key} className="font-sans">
             {key}
           </ToggleGroupItem>
         ))}
       </ToggleGroup>
-      <div className="flex items-center gap-2 bg-muted/40 px-3 py-3 font-mono text-xs">
+      <div className="flex items-center gap-2 bg-muted/40 px-3 py-3 font-sans text-xs">
         <TerminalIcon className="size-3.5 text-muted-foreground" />
         {commands[pm]}
       </div>

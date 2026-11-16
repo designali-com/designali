@@ -8,7 +8,7 @@ import {
 export default function InvalidCodeError() {
   return (
     <Field className="w-fit" data-invalid>
-      <FieldLabel htmlFor="otp-invalid">Verification code</FieldLabel>
+      <FieldLabel htmlFor="otp-invalid">designali.com verification code</FieldLabel>
       <InputOTP id="otp-invalid" maxLength={6} defaultValue="482913">
         <InputOTPGroup>
           <InputOTPSlot index={0} aria-invalid />
@@ -19,7 +19,7 @@ export default function InvalidCodeError() {
           <InputOTPSlot index={5} aria-invalid />
         </InputOTPGroup>
       </InputOTP>
-      <FieldError>That code is incorrect or has expired.</FieldError>
+      <FieldError>That Designali code is incorrect or has expired.</FieldError>
     </Field>
   )
 }

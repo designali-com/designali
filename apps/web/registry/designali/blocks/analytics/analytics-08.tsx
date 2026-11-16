@@ -1,31 +1,16 @@
+import {
+  Gauge,
+  GaugeIndicator,
+  GaugeRange,
+  GaugeTrack,
+  GaugeValueText,
+} from "@/registry/designali/ui/gauge"
+
 const gauges = [
   { name: "designali.com availability", value: 99.97, target: 99.95, unit: "%", min: 99, max: 100 },
   { name: "Checkout latency p95", value: 412, target: 500, unit: "ms", min: 0, max: 800, lowerIsBetter: true },
   { name: "Error budget left", value: 63, target: 25, unit: "%", min: 0, max: 100 },
 ]
-
-function Gauge({ ratio, ok }: { ratio: number; ok: boolean }) {
-  const r = 80
-  const circumference = Math.PI * r
-  const clamped = Math.min(Math.max(ratio, 0), 1)
-  return (
-    <svg viewBox="0 0 200 110" className="w-full max-w-[240px]">
-      <path
-        d="M 20 100 A 80 80 0 0 1 180 100"
-        fill="none"
-        stroke="var(--muted)"
-        strokeWidth="14"
-      />
-      <path
-        d="M 20 100 A 80 80 0 0 1 180 100"
-        fill="none"
-        className={ok ? "stroke-emerald-500" : "stroke-amber-500"}
-        strokeWidth="14"
-        strokeDasharray={`${circumference * clamped} ${circumference}`}
-      />
-    </svg>
-  )
-}
 
 export default function Analytics08() {
   return (
@@ -46,19 +31,29 @@ export default function Analytics08() {
 
         <div className="mt-14 grid gap-6 md:grid-cols-3">
           {gauges.map((g) => {
-            const ratio = (g.value - g.min) / (g.max - g.min)
             const ok = g.lowerIsBetter ? g.value <= g.target : g.value >= g.target
             return (
               <div key={g.name} className="flex flex-col items-center border bg-background p-8">
-                <div className="relative flex w-full justify-center">
-                  <Gauge ratio={ratio} ok={ok} />
-                  <div className="absolute bottom-1 text-center">
-                    <p className="text-3xl font-semibold tracking-tight">
+                <Gauge
+                  value={g.value}
+                  min={g.min}
+                  max={g.max}
+                  size={200}
+                  startAngle={-135}
+                  endAngle={135}
+                  className="max-w-full"
+                >
+                  <GaugeIndicator>
+                    <GaugeTrack />
+                    <GaugeRange className="text-primary" />
+                  </GaugeIndicator>
+                  <GaugeValueText className="flex-col">
+                    <span className="text-3xl font-semibold tracking-tight">
                       {g.value}
                       <span className="text-base font-normal text-muted-foreground">{g.unit}</span>
-                    </p>
-                  </div>
-                </div>
+                    </span>
+                  </GaugeValueText>
+                </Gauge>
                 <div className="mt-2 flex w-full max-w-[240px] justify-between text-[10px] text-muted-foreground">
                   <span>
                     {g.min}
@@ -77,8 +72,8 @@ export default function Analytics08() {
                 <span
                   className={
                     ok
-                      ? "mt-4 bg-emerald-500/10 px-2 py-1 text-xs text-emerald-700 dark:text-emerald-400"
-                      : "mt-4 bg-amber-500/10 px-2 py-1 text-xs text-amber-700 dark:text-amber-400"
+                      ? "mt-4 bg-primary/10 px-2 py-1 text-xs text-chart-3 dark:text-primary"
+                      : "mt-4 bg-primary/10 px-2 py-1 text-xs text-chart-3 dark:text-primary"
                   }
                 >
                   {ok ? "Meeting objective" : "At risk"}

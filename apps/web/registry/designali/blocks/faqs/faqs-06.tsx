@@ -75,7 +75,7 @@ export default function Faqs06() {
         </div>
         <div className="flex flex-col justify-between gap-10 bg-muted/40 p-6 py-16 md:p-12">
           <div>
-            <span className="font-mono text-xs text-muted-foreground">
+            <span className="font-sans text-xs text-muted-foreground">
               {String(selected + 1).padStart(2, "0")} / {String(faqs.length).padStart(2, "0")}
             </span>
             <h3 className="mt-6 text-2xl font-medium tracking-tight">

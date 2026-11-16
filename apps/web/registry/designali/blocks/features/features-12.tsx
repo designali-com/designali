@@ -39,7 +39,7 @@ export default function Features12() {
               key={row.label}
               className="grid gap-4 border-b border-border py-8 md:grid-cols-[1fr_1fr_1.4fr] md:items-baseline md:gap-10"
             >
-              <div className="font-mono text-5xl font-medium tracking-tighter md:text-6xl">
+              <div className="font-sans text-5xl font-medium tracking-tighter md:text-6xl">
                 {row.value}
               </div>
               <div className="text-base font-medium">{row.label}</div>

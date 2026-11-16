@@ -26,7 +26,7 @@ export default function ForcePushWarning() {
       </AlertDialogTrigger>
       <AlertDialogContent>
         <AlertDialogHeader>
-          <AlertDialogMedia className="bg-amber-500/10 text-amber-600 dark:text-amber-400">
+          <AlertDialogMedia className="bg-primary/10 text-primary dark:text-primary">
             <TriangleAlertIcon />
           </AlertDialogMedia>
           <AlertDialogTitle>Force push designali.com to main?</AlertDialogTitle>

@@ -39,7 +39,7 @@ export default function PricingFeatureHelpTooltips() {
         <ul className="flex flex-col gap-2 text-sm">
           {features.map((f) => (
             <li key={f.name} className="flex items-center gap-2">
-              <CheckIcon className="size-4 text-emerald-600" />
+              <CheckIcon className="size-4 text-primary" />
               <span className="flex-1">{f.name}</span>
               <Tooltip>
                 <TooltipTrigger

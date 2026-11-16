@@ -3,10 +3,10 @@ import {
 } from "@designali/icons"
 
 const tiles = [
-  { label: "Brand identity", className: "from-chart-1/60 to-chart-2/30" },
-  { label: "UI/UX design", className: "from-chart-3/60 to-chart-4/30" },
-  { label: "Motion", className: "from-chart-5/60 to-chart-1/30" },
-  { label: "3D and CGI", className: "from-chart-2/60 to-chart-5/30" },
+  { label: "Brand identity", image: "/images/templates/dalim-agency-old.jpg" },
+  { label: "UI/UX design", image: "/images/templates/design-agency.jpg" },
+  { label: "Motion", image: "/images/templates/dalim-visuals-old.jpg" },
+  { label: "3D and CGI", image: "/images/templates/aliimam-comp.jpg" },
 ]
 
 const services = ["Identity", "UI/UX", "Next.js", "Motion", "CGI"]
@@ -43,9 +43,14 @@ export default function Hero09() {
             <a
               key={tile.label}
               href="#"
-              className={`group relative flex aspect-[3/4] flex-col justify-end border border-border bg-gradient-to-br p-4 ${tile.className} ${index % 2 === 1 ? "md:mt-12" : ""}`}
+              className={`group relative flex aspect-[3/4] flex-col justify-end overflow-hidden border border-border bg-muted p-4 ${index % 2 === 1 ? "md:mt-12" : ""}`}
             >
-              <div className="flex items-center justify-between bg-background/80 px-3 py-2 text-sm backdrop-blur">
+              <img
+                src={tile.image}
+                alt={`${tile.label} — Designali project`}
+                className="absolute inset-0 size-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <div className="relative flex items-center justify-between bg-background/80 px-3 py-2 text-sm backdrop-blur">
                 {tile.label}
                 <ArrowUpRight className="size-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </div>

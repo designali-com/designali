@@ -14,19 +14,19 @@ const products = [
     name: "Portfolio Simple template",
     sku: "LS-001",
     stock: 42,
-    tone: "from-stone-300 to-stone-500",
+    tone: "from-border to-muted-foreground",
   },
   {
     name: "Design Agency template",
     sku: "CT-014",
     stock: 8,
-    tone: "from-amber-200 to-orange-400",
+    tone: "from-primary/20 to-primary",
   },
   {
     name: "Resort template",
     sku: "WB-220",
     stock: 0,
-    tone: "from-slate-400 to-slate-700",
+    tone: "from-muted-foreground to-foreground",
   },
 ]
 
@@ -51,7 +51,7 @@ export default function ProductEditorSplit() {
               />
               <div className="flex min-w-0 flex-1 flex-col">
                 <span className="truncate text-xs font-medium">{p.name}</span>
-                <span className="font-mono text-[10px] text-muted-foreground">
+                <span className="font-sans text-[10px] text-muted-foreground">
                   {p.sku}
                 </span>
               </div>

@@ -32,7 +32,7 @@ function MaskedSlot({ index }: { index: number }) {
 export default function MaskedPinSlots() {
   return (
     <Field className="w-fit">
-      <FieldLabel htmlFor="card-pin">Card PIN</FieldLabel>
+      <FieldLabel htmlFor="card-pin">Designali studio door PIN</FieldLabel>
       <InputOTP id="card-pin" maxLength={4} inputMode="numeric">
         <InputOTPGroup>
           {[0, 1, 2, 3].map((index) => (

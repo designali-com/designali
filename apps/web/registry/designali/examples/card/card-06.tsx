@@ -23,7 +23,7 @@ export default function RevenueStatCard() {
         <CardAction>
           <Badge
             variant="outline"
-            className="text-emerald-600 dark:text-emerald-400"
+            className="text-primary dark:text-primary"
           >
             <TrendingUpIcon data-icon="inline-start" />
             +12.4%

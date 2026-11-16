@@ -28,7 +28,7 @@ const forecast = [
 
 export default function WeatherForecastCard() {
   return (
-    <Card className="w-full max-w-xs bg-gradient-to-b from-sky-500/10 to-transparent">
+    <Card className="w-full max-w-xs bg-gradient-to-b from-primary/10 to-transparent">
       <CardHeader>
         <CardDescription className="flex items-center gap-1">
           <MapPinIcon className="size-3" />
@@ -36,7 +36,7 @@ export default function WeatherForecastCard() {
         </CardDescription>
         <CardTitle className="text-4xl font-light tabular-nums">18°</CardTitle>
         <CardAction>
-          <CloudSunIcon className="size-12 text-amber-500" strokeWidth={1.25} />
+          <CloudSunIcon className="size-12 text-primary" strokeWidth={1.25} />
         </CardAction>
       </CardHeader>
       <CardContent className="flex gap-3 text-muted-foreground">

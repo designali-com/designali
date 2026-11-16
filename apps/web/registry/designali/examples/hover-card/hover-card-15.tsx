@@ -21,12 +21,12 @@ export default function PresenceStatusHoverCard() {
         <Avatar size="lg">
           <AvatarImage src="/ali.jpg" alt="Ali Imam" />
           <AvatarFallback>AI</AvatarFallback>
-          <AvatarBadge className="bg-amber-500" />
+          <AvatarBadge className="bg-primary" />
         </Avatar>
       </HoverCardTrigger>
       <HoverCardContent side="top" className="w-60">
         <div className="flex items-center gap-2">
-          <span className="size-2 rounded-full bg-amber-500" />
+          <span className="size-2 rounded-full bg-primary" />
           <span className="font-medium">Ali Imam · Away</span>
         </div>
         <p className="mt-1 text-muted-foreground">

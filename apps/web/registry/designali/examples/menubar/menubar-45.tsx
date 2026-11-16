@@ -40,7 +40,7 @@ export default function PodcastRecordingMenubar() {
               {recording ? (
                 <SquareIcon />
               ) : (
-                <CircleIcon className="fill-red-500 text-red-500" />
+                <CircleIcon className="fill-destructive text-destructive" />
               )}
               {recording ? "Stop recording" : "Start recording"}
               <MenubarShortcut>R</MenubarShortcut>
@@ -77,7 +77,7 @@ export default function PodcastRecordingMenubar() {
         <span
           className={cn(
             "size-2 rounded-full",
-            recording ? "animate-pulse bg-red-500" : "bg-muted-foreground/40"
+            recording ? "animate-pulse bg-destructive" : "bg-muted-foreground/40"
           )}
         />
         {recording ? "REC 00:12:48" : "Ready"}

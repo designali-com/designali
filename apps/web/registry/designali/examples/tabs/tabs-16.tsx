@@ -42,7 +42,7 @@ export default function ChatSidebarTabs() {
                   .map((p) => p[0])
                   .join("")}
               </AvatarFallback>
-              {dm.online && <AvatarBadge className="bg-emerald-500" />}
+              {dm.online && <AvatarBadge className="bg-primary" />}
             </Avatar>
             <div className="min-w-0">
               <p className="font-medium">{dm.name}</p>

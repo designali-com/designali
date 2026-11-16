@@ -79,7 +79,7 @@ export default function Navigation16() {
                     active === section.id ? "text-foreground" : "text-muted-foreground hover:text-foreground"
                   )}
                 >
-                  <span className="font-mono text-xs tabular-nums">0{position + 1}</span>
+                  <span className="font-sans text-xs tabular-nums">0{position + 1}</span>
                   {section.title}
                   {active === section.id && (
                     <span className="ms-auto hidden size-1.5 bg-foreground md:block" />

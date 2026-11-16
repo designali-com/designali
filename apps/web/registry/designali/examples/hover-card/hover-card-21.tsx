@@ -26,7 +26,7 @@ export default function OrderStatusHoverCard() {
           className="flex items-center justify-between px-3 py-2"
         >
           <HoverCard>
-            <HoverCardTrigger href="#" className="font-mono hover:underline">
+            <HoverCardTrigger href="#" className="font-sans hover:underline">
               {order.id}
             </HoverCardTrigger>
             <HoverCardContent side="right" className="w-56">

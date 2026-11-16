@@ -39,7 +39,7 @@ export default function CouponCodeInput() {
             setCode(e.target.value.toUpperCase())
             setResult(null)
           }}
-          className="font-mono uppercase"
+          className="font-sans uppercase"
         />
         <Button
           variant="outline"
@@ -56,7 +56,7 @@ export default function CouponCodeInput() {
         </Button>
       </div>
       {result?.ok && (
-        <FieldDescription className="flex items-center gap-1 text-emerald-600">
+        <FieldDescription className="flex items-center gap-1 text-primary">
           <TicketIcon className="size-3.5" />
           {result.text} applied
         </FieldDescription>

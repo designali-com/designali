@@ -17,7 +17,7 @@ export default function ImageAltTextTextarea() {
   return (
     <div className="flex w-full max-w-md gap-3">
       <div
-        className="aspect-square w-24 shrink-0 bg-gradient-to-br from-orange-300 via-rose-400 to-indigo-600"
+        className="aspect-square w-24 shrink-0 bg-gradient-to-br from-chart-1 via-primary to-chart-2"
         aria-hidden
       />
       <Field>
@@ -29,7 +29,7 @@ export default function ImageAltTextTextarea() {
           className="min-h-16"
         />
         <FieldDescription
-          className={cn(alt.length > recommended && "text-amber-600")}
+          className={cn(alt.length > recommended && "text-primary")}
         >
           {alt.length}/{recommended} recommended. Describe what matters in the
           image.

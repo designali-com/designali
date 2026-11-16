@@ -28,8 +28,8 @@ export default function ApiResponseTabs() {
           <TabsTrigger value="headers">Headers</TabsTrigger>
           <TabsTrigger value="raw">Raw</TabsTrigger>
         </TabsList>
-        <span className="flex items-center gap-1.5 text-emerald-600">
-          <span className="size-1.5 rounded-full bg-emerald-500" />
+        <span className="flex items-center gap-1.5 text-primary">
+          <span className="size-1.5 rounded-full bg-primary" />
           200 OK · 84 ms
         </span>
       </div>
@@ -44,7 +44,7 @@ export default function ApiResponseTabs() {
           </React.Fragment>
         ))}
       </TabsContent>
-      <TabsContent value="headers" className="p-3 font-mono">
+      <TabsContent value="headers" className="p-3 font-sans">
         {headers.map(([k, v]) => (
           <p key={k}>
             <span className="text-muted-foreground">{k}:</span> {v}

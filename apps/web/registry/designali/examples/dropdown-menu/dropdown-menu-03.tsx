@@ -19,28 +19,28 @@ export function DropdownMenuCheckboxes() {
 
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger render={<Button variant="outline">Open</Button>} />
+      <DropdownMenuTrigger render={<Button variant="outline">Designali Editor</Button>} />
       <DropdownMenuContent className="w-40">
         <DropdownMenuGroup>
-          <DropdownMenuLabel>Appearance</DropdownMenuLabel>
+          <DropdownMenuLabel>Workspace View</DropdownMenuLabel>
           <DropdownMenuCheckboxItem
             checked={showStatusBar ?? false}
             onCheckedChange={setShowStatusBar}
           >
-            Status Bar
+            Blocks Panel
           </DropdownMenuCheckboxItem>
           <DropdownMenuCheckboxItem
             checked={showActivityBar}
             onCheckedChange={setShowActivityBar}
             disabled
           >
-            Activity Bar
+            Icons Panel
           </DropdownMenuCheckboxItem>
           <DropdownMenuCheckboxItem
             checked={showPanel}
             onCheckedChange={setShowPanel}
           >
-            Panel
+            Layers
           </DropdownMenuCheckboxItem>
         </DropdownMenuGroup>
       </DropdownMenuContent>

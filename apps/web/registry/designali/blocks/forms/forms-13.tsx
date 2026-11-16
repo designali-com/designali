@@ -97,7 +97,7 @@ export default function Forms13() {
                   onClick={() => setSlot(time)}
                   aria-pressed={slot === time}
                   className={cn(
-                    "border py-2.5 font-mono text-sm transition-colors",
+                    "border py-2.5 font-sans text-sm transition-colors",
                     slot === time
                       ? "border-primary bg-primary text-primary-foreground"
                       : "border-border hover:border-foreground"

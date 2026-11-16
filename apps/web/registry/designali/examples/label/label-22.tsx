@@ -7,8 +7,8 @@ export default function TermsConsentLabel() {
       <Checkbox id="consent" className="mt-0.5" />
       <Label htmlFor="consent" className="block leading-relaxed">
         I agree to the{" "}
-        <a href="#" className="underline underline-offset-4">
-          Terms of Service
+        <a href="/docs/legal/terms" className="underline underline-offset-4">
+          Designali Terms of Service
         </a>{" "}
         and{" "}
         <a href="#" className="underline underline-offset-4">

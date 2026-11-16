@@ -1,3 +1,5 @@
+import { CounterNumber } from "@/registry/designali/ui/counter-number"
+
 const cohorts = [
   { month: "May 2026", size: 1240, retention: [100, 72, 61, 55, 51, 48, 46] },
   { month: "Jun 2026", size: 1385, retention: [100, 74, 63, 57, 53, 50] },
@@ -37,11 +39,15 @@ export default function Analytics09() {
             <dl className="mt-8 grid grid-cols-2 gap-px border bg-border">
               <div className="bg-background p-4">
                 <dt className="text-xs text-muted-foreground">M1 retention</dt>
-                <dd className="mt-1 text-2xl font-semibold">83%</dd>
+                <dd className="mt-1">
+                  <CounterNumber value={83} suffix="%" className="text-2xl font-semibold" />
+                </dd>
               </div>
               <div className="bg-background p-4">
                 <dt className="text-xs text-muted-foreground">M3 retention</dt>
-                <dd className="mt-1 text-2xl font-semibold">62%</dd>
+                <dd className="mt-1">
+                  <CounterNumber value={62} suffix="%" className="text-2xl font-semibold" />
+                </dd>
               </div>
             </dl>
           </div>
@@ -63,7 +69,7 @@ export default function Analytics09() {
                 {cohorts.map((c) => (
                   <tr key={c.month} className="border-b last:border-b-0">
                     <td className="px-3 py-2 font-medium whitespace-nowrap">{c.month}</td>
-                    <td className="px-3 py-2 text-right font-mono text-muted-foreground">
+                    <td className="px-3 py-2 text-right font-sans text-muted-foreground">
                       {c.size.toLocaleString()}
                     </td>
                     {Array.from({ length: periods }, (_, i) => {
@@ -73,7 +79,7 @@ export default function Analytics09() {
                           {v !== undefined ? (
                             <div
                               style={cellStyle(v)}
-                              className="flex h-9 items-center justify-center font-mono text-foreground"
+                              className="flex h-9 items-center justify-center font-sans text-foreground"
                             >
                               {v}%
                             </div>

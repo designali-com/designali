@@ -16,37 +16,37 @@ const events = [
     date: new Date(y, m, 4),
     time: "09:30",
     title: "Design review",
-    tone: "bg-sky-500",
+    tone: "bg-primary",
   },
   {
     date: new Date(y, m, 4),
     time: "14:00",
     title: "1:1 with Ali Imam",
-    tone: "bg-violet-500",
+    tone: "bg-primary",
   },
   {
     date: new Date(y, m, 11),
     time: "11:00",
     title: "Blocks sprint planning",
-    tone: "bg-emerald-500",
+    tone: "bg-primary",
   },
   {
     date: new Date(y, m, 17),
     time: "16:30",
     title: "Client call: brand identity kickoff",
-    tone: "bg-amber-500",
+    tone: "bg-primary",
   },
   {
     date: new Date(y, m, 22),
     time: "10:00",
     title: "designali.com roadmap",
-    tone: "bg-sky-500",
+    tone: "bg-primary",
   },
   {
     date: new Date(y, m, 22),
     time: "13:00",
     title: "Studio lunch",
-    tone: "bg-rose-500",
+    tone: "bg-primary",
   },
 ]
 

@@ -86,7 +86,7 @@ export default function NotificationInboxMenu() {
               <span
                 className={cn(
                   "mt-1.5 size-1.5 shrink-0 rounded-full",
-                  item.unread ? "bg-sky-500" : "bg-transparent"
+                  item.unread ? "bg-primary" : "bg-transparent"
                 )}
               />
               <span className="flex-1">

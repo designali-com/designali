@@ -12,7 +12,7 @@ export default function ProductCardSections() {
 
   return (
     <div className="flex w-full max-w-xs flex-col border">
-      <div className="aspect-4/3 bg-linear-to-br from-amber-200/60 to-rose-300/60" />
+      <div className="aspect-4/3 bg-linear-to-br from-primary/60 to-chart-1/60" />
       <div className="flex items-start justify-between gap-2 p-4">
         <div className="flex flex-col">
           <span className="text-sm font-medium">Design Agency template</span>

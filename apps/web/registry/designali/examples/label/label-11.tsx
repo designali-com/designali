@@ -7,21 +7,21 @@ import {
 const plans = [
   {
     value: "starter",
-    name: "Starter",
+    name: "Designali Free",
     price: "$0",
-    detail: "3 projects, 1 seat",
+    detail: "Free blocks and 4000+ icons",
   },
   {
     value: "team",
-    name: "Team",
+    name: "Designali Pro",
     price: "$24",
-    detail: "Unlimited projects, 10 seats",
+    detail: "All 460+ blocks and templates",
   },
   {
     value: "scale",
-    name: "Scale",
+    name: "Designali Studio",
     price: "$79",
-    detail: "SSO, audit log, 50 seats",
+    detail: "Pro plus custom design by Ali Imam",
   },
 ]
 

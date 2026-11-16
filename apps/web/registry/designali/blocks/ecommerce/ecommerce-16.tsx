@@ -10,6 +10,9 @@ import {
 
 import { Button } from "@workspace/ui/components/button"
 import { cn } from "@workspace/ui/lib/utils"
+import { IPad } from "@/registry/designali/ui/apple/ipad"
+import { IPhone } from "@/registry/designali/ui/apple/iphone"
+import { DotPattern } from "@/registry/designali/ui/dot-pattern"
 
 const PRICE = 22
 
@@ -34,16 +37,16 @@ export default function Ecommerce16() {
   return (
     <section className="w-full bg-background py-16 text-foreground md:py-24">
       <div className="mx-auto grid max-w-6xl gap-10 px-6 md:grid-cols-2 md:gap-14">
-        <div className="relative flex aspect-square items-center justify-center overflow-hidden border border-border bg-gradient-to-br from-orange-100 to-amber-200 dark:from-orange-950 dark:to-amber-900">
-          <svg viewBox="0 0 200 260" className="h-3/4 w-auto drop-shadow-2xl" aria-hidden="true">
-            <path d="M40 30 L160 30 L172 240 L28 240 Z" className="fill-stone-900 dark:fill-stone-200" />
-            <path d="M40 30 L160 30 L156 52 L44 52 Z" className="fill-stone-700 dark:fill-stone-400" />
-            <rect x="58" y="96" width="84" height="100" className="fill-amber-100 dark:fill-amber-50" />
-            <circle cx="100" cy="130" r="18" className="fill-none stroke-stone-900" strokeWidth="3" />
-            <path d="M100 114 Q 92 130 100 146" className="fill-none stroke-stone-900" strokeWidth="3" />
-            <rect x="70" y="160" width="60" height="5" className="fill-stone-900" />
-            <rect x="80" y="172" width="40" height="4" className="fill-stone-500" />
-          </svg>
+        <div className="relative flex aspect-square items-center justify-center overflow-hidden border border-border bg-gradient-to-br from-primary/10 to-primary/20 dark:from-chart-5 dark:to-chart-5">
+          <DotPattern className="text-primary/60 [mask-image:radial-gradient(circle,white,transparent_70%)]" />
+          <div className="relative flex h-3/4 items-end">
+            <IPad variant="ipad-pro" color="silver" size="sm" className="h-full! max-w-full drop-shadow-2xl">
+              <img src="/images/templates/aliimam-comp.jpg" alt="Designali Pro blocks library" className="size-full object-cover object-top" />
+            </IPad>
+            <IPhone size="sm" color="silver" className="-ml-12 h-1/2! max-w-full drop-shadow-2xl">
+              <img src="/img/chat-1-light.jpg" alt="" className="size-full object-cover object-top" />
+            </IPhone>
+          </div>
           <span className="absolute top-4 left-4 bg-background px-2 py-1 text-xs">Updated Monday</span>
         </div>
 
@@ -51,7 +54,7 @@ export default function Ecommerce16() {
           <p className="text-xs tracking-widest text-muted-foreground uppercase">Membership · Designali</p>
           <h2 className="mt-2 text-3xl font-medium tracking-tight md:text-4xl">Designali Pro</h2>
           <p className="mt-2 flex items-center gap-1.5 text-sm text-muted-foreground">
-            <Star className="size-4 fill-amber-400 text-amber-400" />
+            <Star className="size-4 fill-primary text-primary" />
             4.9 · 1,840 reviews · 460+ blocks, 4,000+ icons, every template
           </p>
 
@@ -84,7 +87,7 @@ export default function Ecommerce16() {
                     </span>
                   </span>
                   {p.note && (
-                    <span className="mt-1 block pl-7 text-xs text-emerald-700 dark:text-emerald-400">{p.note}</span>
+                    <span className="mt-1 block pl-7 text-xs text-chart-3 dark:text-primary">{p.note}</span>
                   )}
                   {p.id === "sub" && selected && (
                     <span className="mt-4 block space-y-3 pl-7">

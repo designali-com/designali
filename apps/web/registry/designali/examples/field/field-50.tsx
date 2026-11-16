@@ -24,7 +24,7 @@ export default function WorkingHoursSwitchRows() {
 
   return (
     <FieldSet className="w-full max-w-md">
-      <FieldLegend>Working hours</FieldLegend>
+      <FieldLegend>Designali studio hours</FieldLegend>
       <FieldGroup className="gap-3">
         {days.map((d, i) => (
           <Field key={d.day} orientation="horizontal">

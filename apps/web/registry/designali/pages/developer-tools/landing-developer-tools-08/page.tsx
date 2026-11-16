@@ -302,12 +302,12 @@ export default function LandingDeveloperTools08() {
         <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 py-16 md:py-24 lg:grid-cols-2">
           <div className="space-y-7">
             <span className="inline-flex items-center gap-2 rounded-full border bg-background text-muted-foreground px-3 py-1 text-xs font-medium">
-              <Sparkles className="size-3.5 text-amber-600 dark:text-amber-400" />
+              <Sparkles className="size-3.5 text-primary dark:text-primary" />
               Designali Templates
             </span>
             <h1 className="text-4xl leading-[1.05] font-semibold tracking-tight text-balance sm:text-5xl md:text-6xl ">
               {"Production-ready templates from "}
-              <span className="text-amber-600 dark:text-amber-400">
+              <span className="text-primary dark:text-primary">
                 design to code
               </span>
             </h1>
@@ -344,7 +344,7 @@ export default function LandingDeveloperTools08() {
             </div>
           </div>
           <div className="relative">
-            <div className="absolute -inset-8 -z-10 rounded-full bg-gradient-to-tr from-amber-500/25 via-yellow-500/10 to-transparent blur-3xl" />
+            <div className="absolute -inset-8 -z-10 rounded-full bg-gradient-to-tr from-primary/25 via-primary/10 to-transparent blur-3xl" />
             <HeroVisual />
           </div>
         </div>
@@ -369,7 +369,7 @@ export default function LandingDeveloperTools08() {
       <section className="border-b bg-muted/30">
         <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
           <div className="max-w-2xl">
-            <p className="text-sm font-medium text-amber-600 dark:text-amber-400">
+            <p className="text-sm font-medium text-primary dark:text-primary">
               Developer experience
             </p>
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl  mt-3">
@@ -385,8 +385,8 @@ export default function LandingDeveloperTools08() {
                 key={feature.title}
                 className="rounded-xl border bg-background p-6 shadow-xs"
               >
-                <span className="flex size-10 items-center justify-center rounded-lg bg-amber-500/10">
-                  <feature.icon className="size-5 text-amber-600 dark:text-amber-400" />
+                <span className="flex size-10 items-center justify-center rounded-lg bg-primary/10">
+                  <feature.icon className="size-5 text-primary dark:text-primary" />
                 </span>
                 <h3 className="mt-5 font-semibold">{feature.title}</h3>
                 <p className="mt-2 text-sm leading-6 text-muted-foreground">
@@ -410,7 +410,7 @@ export default function LandingDeveloperTools08() {
                 key={step.title}
                 className="relative border-t-2 border-border pt-6"
               >
-                <span className="text-sm font-medium text-amber-600 dark:text-amber-400">
+                <span className="text-sm font-medium text-primary dark:text-primary">
                   Step {i + 1}
                 </span>
                 <h3 className="mt-2 text-lg font-semibold">{step.title}</h3>
@@ -450,14 +450,14 @@ export default function LandingDeveloperTools08() {
                 className="group flex flex-col rounded-xl border p-6 transition-colors hover:bg-muted/40"
               >
                 <div className="flex items-center justify-between">
-                  <span className="flex size-10 items-center justify-center rounded-lg border bg-muted/50 font-semibold font-mono text-sm">
+                  <span className="flex size-10 items-center justify-center rounded-lg border bg-muted/50 font-semibold font-sans text-sm">
                     {item.name.charAt(0)}
                   </span>
-                  <span className="rounded-full bg-amber-500/10 px-2.5 py-0.5 text-xs font-medium text-amber-600 dark:text-amber-400">
+                  <span className="rounded-full bg-primary/10 px-2.5 py-0.5 text-xs font-medium text-primary dark:text-primary">
                     {item.tag}
                   </span>
                 </div>
-                <h3 className="mt-6 font-semibold font-mono text-sm">
+                <h3 className="mt-6 font-semibold font-sans text-sm">
                   {item.name}
                 </h3>
                 <p className="mt-1 flex-1 text-sm text-muted-foreground">
@@ -485,7 +485,7 @@ export default function LandingDeveloperTools08() {
                 key={t.name}
                 className={`flex flex-col justify-between rounded-2xl border bg-background p-6 ${i === 0 ? "md:col-span-2 md:p-10" : ""}`}
               >
-                <Quote className="size-6 text-amber-600 dark:text-amber-400" />
+                <Quote className="size-6 text-primary dark:text-primary" />
                 <blockquote
                   className={`mt-4 leading-relaxed ${i === 0 ? "text-xl md:text-2xl" : "text-muted-foreground"}`}
                 >
@@ -526,10 +526,10 @@ export default function LandingDeveloperTools08() {
               return (
                 <div
                   key={tier.name}
-                  className={`relative flex h-full flex-col rounded-2xl border p-8 ${featured ? "border-transparent ring-2 ring-amber-500 shadow-xl" : ""}`}
+                  className={`relative flex h-full flex-col rounded-2xl border p-8 ${featured ? "border-transparent ring-2 ring-primary shadow-xl" : ""}`}
                 >
                   {featured && (
-                    <span className="absolute -top-3 left-8 rounded-full bg-amber-600 text-white px-3 py-1 text-xs font-medium">
+                    <span className="absolute -top-3 left-8 rounded-full bg-chart-2 text-white px-3 py-1 text-xs font-medium">
                       Most popular
                     </span>
                   )}
@@ -548,7 +548,7 @@ export default function LandingDeveloperTools08() {
                   <ul className="mt-8 flex-1 space-y-3 text-sm">
                     {tier.features.map((feature) => (
                       <li key={feature} className="flex gap-3">
-                        <Check className="mt-0.5 size-4 shrink-0 text-amber-600 dark:text-amber-400" />
+                        <Check className="mt-0.5 size-4 shrink-0 text-primary dark:text-primary" />
                         {feature}
                       </li>
                     ))}
@@ -600,8 +600,8 @@ export default function LandingDeveloperTools08() {
         </div>
       </section>
       <section className="px-6 py-20 md:py-28">
-        <div className="relative mx-auto max-w-6xl overflow-hidden rounded-3xl border bg-amber-500/10 px-6 py-16 text-center md:py-24">
-          <div className="pointer-events-none absolute -top-24 left-1/2 size-96 -translate-x-1/2 rounded-full bg-gradient-to-b from-amber-500/25 via-yellow-500/10 to-transparent blur-3xl" />
+        <div className="relative mx-auto max-w-6xl overflow-hidden rounded-3xl border bg-primary/10 px-6 py-16 text-center md:py-24">
+          <div className="pointer-events-none absolute -top-24 left-1/2 size-96 -translate-x-1/2 rounded-full bg-gradient-to-b from-primary/25 via-primary/10 to-transparent blur-3xl" />
           <div className="relative mx-auto max-w-2xl space-y-6">
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl">
               Get early access to new templates
@@ -685,12 +685,12 @@ export default function LandingDeveloperTools08() {
 
 function HeroVisual() {
   return (
-    <div className="overflow-hidden rounded-xl border border-zinc-800 bg-zinc-950 text-left shadow-2xl">
-      <div className="flex items-center gap-2 border-b border-zinc-800 px-4 py-3">
-        <span className="size-2.5 rounded-full bg-zinc-700" />
-        <span className="size-2.5 rounded-full bg-zinc-700" />
-        <span className="size-2.5 rounded-full bg-zinc-700" />
-        <span className="ml-3 font-mono text-xs text-zinc-500">~/designali</span>
+    <div className="overflow-hidden rounded-xl border border-foreground bg-foreground text-left shadow-2xl">
+      <div className="flex items-center gap-2 border-b border-foreground px-4 py-3">
+        <span className="size-2.5 rounded-full bg-foreground" />
+        <span className="size-2.5 rounded-full bg-foreground" />
+        <span className="size-2.5 rounded-full bg-foreground" />
+        <span className="ml-3 font-sans text-xs text-muted-foreground">~/designali</span>
       </div>
       <pre className="overflow-x-auto p-5 font-mono text-[13px] leading-6">
         {terminal.map((line, i) => (
@@ -698,15 +698,15 @@ function HeroVisual() {
             key={i}
             className={
               line.startsWith("$")
-                ? "text-zinc-100"
+                ? "text-background"
                 : line.startsWith("#")
-                  ? "text-zinc-500"
-                  : "text-zinc-400"
+                  ? "text-muted-foreground"
+                  : "text-muted-foreground"
             }
           >
             {line.startsWith("$") ? (
               <>
-                <span className="text-amber-400">$</span>
+                <span className="text-primary">$</span>
                 {line.slice(1)}
               </>
             ) : (
@@ -714,7 +714,7 @@ function HeroVisual() {
             )}
           </div>
         ))}
-        <span className="inline-block h-4 w-2 translate-y-0.5 animate-pulse bg-zinc-300" />
+        <span className="inline-block h-4 w-2 translate-y-0.5 animate-pulse bg-border" />
       </pre>
     </div>
   )

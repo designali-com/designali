@@ -53,7 +53,7 @@ export default function ComparisonDiffTable() {
                   <span
                     className={cn(
                       changed &&
-                        "bg-emerald-500/15 px-1 font-medium text-emerald-700 dark:text-emerald-300"
+                        "bg-primary/15 px-1 font-medium text-chart-3 dark:text-chart-1"
                     )}
                   >
                     {c.after}

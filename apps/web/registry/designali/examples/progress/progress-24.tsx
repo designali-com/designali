@@ -22,9 +22,9 @@ export default function ServerResourceMonitor() {
   return (
     <div className="flex w-full max-w-sm flex-col gap-4 border p-4">
       <div className="flex items-center justify-between">
-        <span className="font-mono text-sm">designali-web-01</span>
+        <span className="font-sans text-sm">designali-web-01</span>
         <Badge variant="outline">
-          <span className="size-1.5 bg-emerald-500" />
+          <span className="size-1.5 bg-primary" />
           Online
         </Badge>
       </div>

@@ -46,7 +46,7 @@ export default function CheckoutBreadcrumbNav() {
                 )}
               >
                 {i < current ? (
-                  <CircleCheckIcon className="text-emerald-600 dark:text-emerald-400" />
+                  <CircleCheckIcon className="text-primary dark:text-primary" />
                 ) : (
                   <span className="tabular-nums">{i + 1}.</span>
                 )}

@@ -54,7 +54,7 @@ export default function VideoChapterJump() {
             <CarouselItem key={chapter.title}>
               <div className="relative flex aspect-video items-center justify-center bg-gradient-to-br from-muted to-muted-foreground/30">
                 <PlayCircleIcon className="size-10 text-foreground/70" />
-                <span className="absolute start-2 bottom-2 bg-background/80 px-1.5 py-0.5 font-mono text-[11px]">
+                <span className="absolute start-2 bottom-2 bg-background/80 px-1.5 py-0.5 font-sans text-[11px]">
                   {chapter.time}
                 </span>
                 <span className="absolute end-2 top-2 text-[11px] text-foreground/70">

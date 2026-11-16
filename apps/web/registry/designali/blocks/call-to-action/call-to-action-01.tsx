@@ -4,6 +4,8 @@ import { WhatsApp } from "@designali/logos"
 
 import { Button } from "@workspace/ui/components/button"
 
+import { DotPattern } from "@/registry/designali/ui/dot-pattern"
+
 export function CallToAction() {
   return (
     <section className="relative mx-auto flex h-screen w-full flex-col items-center justify-center overflow-hidden">
@@ -14,19 +16,11 @@ export function CallToAction() {
           opacity: 0.7
         }}
       >
-        <div
-          style={{
-            WebkitMaskImage: 'linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.6) 100%)',
-            backgroundImage: 'radial-gradient(circle, var(--primary) 1px, transparent 1px)',
-            backgroundSize: '32px 32px',
-            bottom: '0',
-            height: '70%',
-            left: '0',
-            maskImage: 'linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.6) 100%)',
-            pointerEvents: 'none',
-            position: 'absolute',
-            width: '100%'
-          }}
+        <DotPattern
+          width={32}
+          height={32}
+          dotSize={1}
+          className="top-auto bottom-0 h-[70%] text-primary [mask-image:linear-gradient(to_bottom,transparent,black)]"
         />
       </div>
       <div className="relative overflow-hidden">

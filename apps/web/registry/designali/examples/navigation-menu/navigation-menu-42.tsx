@@ -11,10 +11,10 @@ import {
 } from "@workspace/ui/components/navigation-menu"
 import { cn } from "@workspace/ui/lib/utils"
 
-const tabs = ["All", "Design", "Engineering", "Sales"]
+const tabs = ["All", "Templates", "Blocks", "Icons"]
 
 export default function PillStyleNav() {
-  const [active, setActive] = React.useState("Design")
+  const [active, setActive] = React.useState("Templates")
 
   return (
     <NavigationMenu className="bg-muted p-1">

@@ -43,9 +43,9 @@ export default function TerminalCommandRunner() {
   ])
 
   return (
-    <div className="flex w-full max-w-md flex-col border font-mono">
+    <div className="flex w-full max-w-md flex-col border font-sans">
       <Command className="border-b">
-        <CommandInput placeholder="> run task" className="font-mono" />
+        <CommandInput placeholder="> run task" className="font-sans" />
         <CommandList className="max-h-44">
           <CommandEmpty>Unknown task.</CommandEmpty>
           <CommandGroup heading="package.json scripts">
@@ -76,7 +76,7 @@ export default function TerminalCommandRunner() {
             className={
               line.startsWith("$")
                 ? "text-muted-foreground"
-                : "text-emerald-600 dark:text-emerald-400"
+                : "text-primary dark:text-primary"
             }
           >
             {line}

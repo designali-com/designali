@@ -32,7 +32,7 @@ export default function StripedDenseTable() {
         <TableBody>
           {rows.map((row) => (
             <TableRow key={row.ticker} className="border-0 even:bg-muted/50">
-              <TableCell className="py-1 font-mono font-medium">
+              <TableCell className="py-1 font-sans font-medium">
                 {row.ticker}
               </TableCell>
               <TableCell className="py-1 text-right tabular-nums">
@@ -42,7 +42,7 @@ export default function StripedDenseTable() {
                 className={cn(
                   "py-1 text-right tabular-nums",
                   row.change >= 0
-                    ? "text-emerald-600 dark:text-emerald-400"
+                    ? "text-primary dark:text-primary"
                     : "text-destructive"
                 )}
               >

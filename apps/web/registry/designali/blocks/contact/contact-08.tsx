@@ -90,7 +90,7 @@ export default function Contact08() {
         <div className="mt-10 grid border lg:grid-cols-[1fr_1.3fr]">
           <div className="flex flex-col justify-between gap-10 border-b bg-muted/40 p-8 lg:border-e lg:border-b-0 lg:p-10">
             <div className="space-y-4">
-              <p className="text-xs text-emerald-700 dark:text-emerald-400">
+              <p className="text-xs text-chart-3 dark:text-primary">
                 {dept.response}
               </p>
               <h3 className="text-2xl font-semibold tracking-tight">

@@ -9,6 +9,7 @@ import {
 
 import { Button } from "@workspace/ui/components/button"
 import { cn } from "@workspace/ui/lib/utils"
+import { CounterNumber } from "@/registry/designali/ui/counter-number"
 
 const distribution = [
   { stars: 5, count: 812 },
@@ -31,7 +32,7 @@ function Stars({ value, className }: { value: number; className?: string }) {
       {[1, 2, 3, 4, 5].map((n) => (
         <Star
           key={n}
-          className={cn("size-3.5", n <= value ? "fill-amber-400 text-amber-400" : "text-muted-foreground/40")}
+          className={cn("size-3.5", n <= value ? "fill-primary text-primary" : "text-muted-foreground/40")}
         />
       ))}
     </span>
@@ -51,10 +52,12 @@ export default function Ecommerce12() {
         <div>
           <h2 className="text-2xl font-medium tracking-tight">Customer reviews</h2>
           <div className="mt-6 flex items-end gap-3">
-            <span className="text-6xl font-semibold tracking-tight">{average.toFixed(1)}</span>
+            <CounterNumber value={average} decimalPlaces={1} size="xl" className="text-6xl font-semibold tracking-tight" />
             <div className="pb-2">
               <Stars value={Math.round(average)} />
-              <p className="mt-1 text-xs text-muted-foreground">{total.toLocaleString()} reviews</p>
+              <p className="mt-1 text-xs text-muted-foreground">
+                <CounterNumber value={total} size="sm" color="secondary" className="text-xs tracking-normal" /> reviews
+              </p>
             </div>
           </div>
 
@@ -75,7 +78,7 @@ export default function Ecommerce12() {
                   >
                     <span className="w-10 text-left text-muted-foreground">{d.stars} star</span>
                     <span className="h-2 flex-1 bg-muted">
-                      <span className="block h-full bg-amber-400" style={{ width: `${pct}%` }} />
+                      <span className="block h-full bg-primary" style={{ width: `${pct}%` }} />
                     </span>
                     <span className="w-10 text-right text-xs text-muted-foreground tabular-nums">{pct}%</span>
                   </button>
@@ -119,7 +122,7 @@ export default function Ecommerce12() {
                     <div className="min-w-0 flex-1">
                       <p className="flex items-center gap-1.5 text-sm font-medium">
                         {r.name}
-                        <BadgeCheck className="size-3.5 text-emerald-600 dark:text-emerald-400" aria-label="Verified buyer" />
+                        <BadgeCheck className="size-3.5 text-primary dark:text-primary" aria-label="Verified buyer" />
                       </p>
                       <p className="text-xs text-muted-foreground">
                         {r.date} · {r.fit}

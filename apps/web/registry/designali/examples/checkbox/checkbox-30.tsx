@@ -51,7 +51,7 @@ export default function ShiftClickRangeSelect() {
               }}
             />
             <ImageIcon className="size-4 text-muted-foreground" />
-            <span className="font-mono text-xs">{photo}</span>
+            <span className="font-sans text-xs">{photo}</span>
           </div>
         ))}
       </div>

@@ -22,7 +22,7 @@ export default function FadeEdgeIndicators() {
       <ol className="flex flex-col gap-1 p-3">
         {steps.map((step, i) => (
           <li key={step} className="flex items-center gap-2 px-2 py-2 text-xs">
-            <span className="flex size-5 shrink-0 items-center justify-center bg-muted font-mono text-[10px]">
+            <span className="flex size-5 shrink-0 items-center justify-center bg-muted font-sans text-[10px]">
               {i + 1}
             </span>
             {step}

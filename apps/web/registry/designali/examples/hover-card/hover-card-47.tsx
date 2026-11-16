@@ -14,19 +14,19 @@ type Tag = { name: string; count: number; description: string }
 const handle = PreviewCard.createHandle<Tag>()
 const tags: Tag[] = [
   {
-    name: "accessibility",
+    name: "templates",
     count: 128,
-    description: "Keyboard, screen reader, and contrast improvements.",
+    description: "Requests and fixes for Designali templates.",
   },
   {
-    name: "performance",
+    name: "blocks",
     count: 94,
-    description: "Load time, bundle size, and rendering speed.",
+    description: "New sections for the 460+ Designali blocks.",
   },
   {
-    name: "onboarding",
+    name: "icons",
     count: 47,
-    description: "First-run experience and activation flows.",
+    description: "Additions to the @designali/icons set.",
   },
 ]
 

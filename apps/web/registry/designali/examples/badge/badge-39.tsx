@@ -6,25 +6,25 @@ const files = [
     name: "Designali brand guidelines",
     ext: "PDF",
     size: "2.4 MB",
-    className: "bg-red-600 text-white",
+    className: "bg-destructive text-white",
   },
   {
     name: "Hero banner",
     ext: "PNG",
     size: "880 KB",
-    className: "bg-sky-600 text-white",
+    className: "bg-chart-2 text-white",
   },
   {
     name: "Icon list",
     ext: "CSV",
     size: "64 KB",
-    className: "bg-emerald-600 text-white",
+    className: "bg-chart-2 text-white",
   },
   {
     name: "Designali logos",
     ext: "ZIP",
     size: "31 MB",
-    className: "bg-zinc-700 text-white",
+    className: "bg-foreground text-background",
   },
 ]
 
@@ -35,7 +35,7 @@ export default function FileTypeBadges() {
         <div key={file.name} className="flex items-center gap-3 p-3">
           <Badge
             className={cn(
-              "w-10 font-mono text-[10px] font-bold",
+              "w-10 font-sans text-[10px] font-bold",
               file.className
             )}
           >

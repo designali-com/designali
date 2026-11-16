@@ -47,8 +47,8 @@ export default function AccordionPropertiesInspector() {
             />
           </AccordionTrigger>
           <AccordionContent className="flex items-center gap-1.5 px-2">
-            <span className="size-5 border bg-linear-to-br from-violet-500 to-sky-400" />
-            <span className="flex-1 font-mono text-[11px]">Gradient</span>
+            <span className="size-5 border bg-linear-to-br from-primary to-primary" />
+            <span className="flex-1 font-sans text-[11px]">Gradient</span>
             <span className="text-[11px] text-muted-foreground">100%</span>
           </AccordionContent>
         </AccordionItem>

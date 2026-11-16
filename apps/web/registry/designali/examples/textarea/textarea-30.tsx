@@ -25,12 +25,12 @@ export default function EnvVariablesTextarea() {
         value={raw}
         onChange={(e) => setRaw(e.target.value)}
         spellCheck={false}
-        className="min-h-24 font-mono"
+        className="min-h-24 font-sans"
       />
       <p className="text-xs text-muted-foreground">
         {vars.length} variables detected
       </p>
-      <div className="divide-y border font-mono text-xs">
+      <div className="divide-y border font-sans text-xs">
         {vars.map(([k, v]) => (
           <div key={k} className="flex justify-between gap-3 px-2.5 py-1.5">
             <span className="font-medium">{k}</span>

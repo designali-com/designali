@@ -87,7 +87,7 @@ export default function Faqs16() {
                 <stage.icon className="size-4" />
               </span>
               <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
-                <span className="font-mono text-xs text-muted-foreground">
+                <span className="font-sans text-xs text-muted-foreground">
                   {String(index + 1).padStart(2, "0")}
                 </span>
                 <h3 className="text-xl font-medium tracking-tight">

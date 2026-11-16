@@ -18,14 +18,14 @@ const styles = [
     icon: CloudCheckIcon,
     text: "All changes saved",
     className:
-      "bg-emerald-600 text-white [&>svg:last-child]:bg-emerald-600 [&>svg:last-child]:fill-emerald-600",
+      "bg-chart-2 text-white [&>svg:last-child]:bg-chart-2 [&>svg:last-child]:fill-primary",
   },
   {
     label: "Pending",
     icon: CloudUploadIcon,
     text: "2 changes waiting to sync",
     className:
-      "bg-amber-500 text-black [&>svg:last-child]:bg-amber-500 [&>svg:last-child]:fill-amber-500",
+      "bg-primary text-black [&>svg:last-child]:bg-primary [&>svg:last-child]:fill-primary",
   },
   {
     label: "Offline",

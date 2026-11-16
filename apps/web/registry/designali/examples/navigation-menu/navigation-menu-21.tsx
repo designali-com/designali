@@ -33,7 +33,7 @@ export default function NewsSectionsNav() {
                 ))}
               </ul>
               <div className="flex flex-col gap-0.5">
-                <p className="px-2 py-1 text-[11px] font-semibold tracking-wide text-red-600 uppercase dark:text-red-400">
+                <p className="px-2 py-1 text-[11px] font-semibold tracking-wide text-destructive uppercase dark:text-destructive">
                   Latest
                 </p>
                 {headlines.map((h) => (

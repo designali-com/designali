@@ -49,7 +49,7 @@ export default function TableRowDeleteConfirm() {
         <TableBody>
           {invoices.map((invoice) => (
             <TableRow key={invoice.id}>
-              <TableCell className="font-mono text-xs">{invoice.id}</TableCell>
+              <TableCell className="font-sans text-xs">{invoice.id}</TableCell>
               <TableCell>{invoice.client}</TableCell>
               <TableCell className="text-end">{invoice.amount}</TableCell>
               <TableCell>

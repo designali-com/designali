@@ -28,7 +28,7 @@ export default function CheckoutStepsBreadcrumb() {
             <BreadcrumbItem>
               {step.status === "done" && (
                 <BreadcrumbLink href="#" className="flex items-center gap-1">
-                  <CircleCheckIcon className="size-3.5 text-emerald-600" />
+                  <CircleCheckIcon className="size-3.5 text-primary" />
                   {step.label}
                 </BreadcrumbLink>
               )}

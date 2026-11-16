@@ -13,7 +13,7 @@ export default function DeploymentPipelineStages() {
   return (
     <div className="flex w-full max-w-sm flex-col gap-4 border p-4">
       <div className="flex items-center justify-between">
-        <span className="font-mono text-xs">main &middot; 4f2a9c1</span>
+        <span className="font-sans text-xs">main &middot; 4f2a9c1</span>
         <Badge variant="secondary">In progress</Badge>
       </div>
       {stages.map((stage) => (

@@ -17,7 +17,7 @@ export default function EmbedCodeSnippet() {
     <div className="flex w-full max-w-sm flex-col gap-2">
       <AspectRatio
         ratio={16 / 9}
-        className="bg-linear-to-br from-zinc-800 to-zinc-950"
+        className="bg-linear-to-br from-foreground to-foreground"
       >
         <div className="absolute inset-0 flex items-center justify-center gap-2 text-white">
           <PlayCircleIcon className="size-8" />

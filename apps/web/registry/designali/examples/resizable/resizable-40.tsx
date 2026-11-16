@@ -26,7 +26,7 @@ export default function ResponsivePreviewWidth() {
     <div className="flex w-full max-w-2xl flex-col gap-2">
       <div className="flex items-center gap-2 text-xs">
         <MonitorSmartphoneIcon className="size-3.5" />
-        <span className="font-mono tabular-nums">{width}px</span>
+        <span className="font-sans tabular-nums">{width}px</span>
         <Badge variant="outline">{breakpoint(width)}</Badge>
       </div>
       <ResizablePanelGroup

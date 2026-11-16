@@ -18,9 +18,7 @@ export default function Blog19() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="flex flex-col gap-6 border-b pb-10 sm:flex-row sm:items-center sm:justify-between">
           <div className="flex items-center gap-4">
-            <span className="flex size-14 items-center justify-center rounded-full bg-foreground text-base font-semibold text-background">
-              AI
-            </span>
+            <img src="/ali.jpg" alt="Ali Imam" className="size-14 rounded-full object-cover" />
             <div>
               <p className="text-xs text-muted-foreground">Written by</p>
               <p className="font-medium">Ali Imam</p>

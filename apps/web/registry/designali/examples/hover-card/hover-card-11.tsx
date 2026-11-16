@@ -16,18 +16,18 @@ import {
 
 export default function IssueReferenceHoverCard() {
   return (
-    <div className="w-full max-w-sm border p-3 font-mono text-xs">
+    <div className="w-full max-w-sm border p-3 font-sans text-xs">
       fix(auth): refresh token before expiry, closes{" "}
       <HoverCard>
         <HoverCardTrigger
           href="#"
-          className="text-blue-600 hover:underline dark:text-blue-400"
+          className="text-primary hover:underline dark:text-primary"
         >
           #482
         </HoverCardTrigger>
         <HoverCardContent className="w-72 font-sans">
           <div className="flex items-start gap-2">
-            <CircleDotIcon className="mt-0.5 size-4 shrink-0 text-emerald-600" />
+            <CircleDotIcon className="mt-0.5 size-4 shrink-0 text-primary" />
             <div className="flex flex-col gap-1.5">
               <p className="font-medium">
                 Session expires while editing a long form

@@ -31,9 +31,9 @@ export default function IconLabelTabs() {
       </TabsList>
       <TabsContent value="photos" className="grid grid-cols-3 gap-2">
         {[
-          "from-sky-400 to-indigo-500",
-          "from-amber-300 to-rose-500",
-          "from-emerald-300 to-teal-600",
+          "from-primary to-primary",
+          "from-chart-1 to-primary",
+          "from-chart-1 to-chart-2",
         ].map((g) => (
           <div key={g} className={cn("aspect-square bg-gradient-to-br", g)} />
         ))}

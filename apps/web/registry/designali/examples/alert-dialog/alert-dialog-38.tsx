@@ -42,9 +42,9 @@ export default function PublishReleaseChecklist() {
           {checks.map((check) => (
             <li key={check.label} className="flex items-center gap-2">
               {check.ok ? (
-                <CircleCheckIcon className="size-4 text-emerald-600 dark:text-emerald-400" />
+                <CircleCheckIcon className="size-4 text-primary dark:text-primary" />
               ) : (
-                <CircleAlertIcon className="size-4 text-amber-600 dark:text-amber-400" />
+                <CircleAlertIcon className="size-4 text-primary dark:text-primary" />
               )}
               <span className={cn(!check.ok && "text-muted-foreground")}>
                 {check.label}

@@ -81,7 +81,7 @@ export default function BulkActionsTable() {
                     aria-label={"Select " + ticket.id}
                   />
                 </TableCell>
-                <TableCell className="font-mono">{ticket.id}</TableCell>
+                <TableCell className="font-sans">{ticket.id}</TableCell>
                 <TableCell>{ticket.subject}</TableCell>
                 <TableCell>{ticket.priority}</TableCell>
               </TableRow>

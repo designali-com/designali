@@ -32,7 +32,7 @@ export default function UpcomingEventCard() {
     <Card className="w-full max-w-sm">
       <CardHeader className="grid-cols-[auto_1fr] gap-x-3">
         <div className="row-span-2 flex size-12 flex-col items-center justify-center border bg-muted/50">
-          <span className="text-[10px] font-medium text-rose-500 uppercase">
+          <span className="text-[10px] font-medium text-primary uppercase">
             Mar
           </span>
           <span className="text-lg leading-none font-semibold">14</span>

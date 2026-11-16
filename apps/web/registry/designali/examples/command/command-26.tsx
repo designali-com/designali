@@ -14,8 +14,8 @@ import { cn } from "@workspace/ui/lib/utils"
 
 const fonts = [
   { label: "Inter", className: "font-sans", category: "Sans serif" },
-  { label: "Source Serif", className: "font-serif", category: "Serif" },
-  { label: "JetBrains Mono", className: "font-mono", category: "Monospace" },
+  { label: "Source Serif", className: "font-sans", category: "Serif" },
+  { label: "JetBrains Mono", className: "font-sans", category: "Monospace" },
   {
     label: "Display Bold",
     className: "font-sans font-black tracking-tight",
@@ -23,7 +23,7 @@ const fonts = [
   },
   {
     label: "Light Italic",
-    className: "font-serif font-light italic",
+    className: "font-sans font-light italic",
     category: "Serif",
   },
 ]

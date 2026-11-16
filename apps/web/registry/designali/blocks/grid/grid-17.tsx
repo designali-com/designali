@@ -7,9 +7,9 @@ import {
 const bars = [42, 58, 51, 66, 72, 64, 81, 77, 88, 94, 86, 98]
 const reviewers = [
   { initials: "AI", tone: "bg-primary" },
-  { initials: "SR", tone: "bg-sky-600" },
-  { initials: "MK", tone: "bg-rose-500" },
-  { initials: "OL", tone: "bg-emerald-600" },
+  { initials: "SR", tone: "bg-chart-2" },
+  { initials: "MK", tone: "bg-primary" },
+  { initials: "OL", tone: "bg-chart-2" },
 ]
 
 export default function Grid17() {
@@ -34,7 +34,7 @@ export default function Grid17() {
                 <h3 className="font-medium">Blocks shipped</h3>
                 <p className="text-sm text-muted-foreground">New Designali blocks per week</p>
               </div>
-              <span className="font-mono text-2xl font-semibold">98</span>
+              <span className="font-sans text-2xl font-semibold">98</span>
             </div>
             <div className="mt-8 flex h-40 items-end gap-1.5 md:gap-2">
               {bars.map((value, index) => (
@@ -79,10 +79,10 @@ export default function Grid17() {
                 ["legacy-dalim-ui", false],
               ].map(([flag, on]) => (
                 <li key={String(flag)} className="flex items-center justify-between gap-4">
-                  <span className="font-mono text-xs">{flag}</span>
+                  <span className="font-sans text-xs">{flag}</span>
                   <span
                     className={`flex h-5 w-9 items-center p-0.5 transition-colors ${
-                      on ? "justify-end bg-emerald-500" : "justify-start bg-muted"
+                      on ? "justify-end bg-primary" : "justify-start bg-muted"
                     }`}
                   >
                     <span className="size-4 bg-white shadow-sm" />
@@ -93,14 +93,14 @@ export default function Grid17() {
           </div>
 
           {/* Code */}
-          <div className="overflow-hidden border border-border bg-neutral-950 p-6 text-neutral-100 md:col-span-2">
-            <p className="text-xs text-neutral-400">designali.config.ts</p>
+          <div className="overflow-hidden border border-border bg-foreground p-6 text-background md:col-span-2">
+            <p className="text-xs text-muted-foreground">designali.config.ts</p>
             <pre className="mt-4 overflow-x-auto font-mono text-xs leading-6">
               <code>
-                <span className="text-violet-300">export default</span> {"{"}
-                {"\n"}  registry: [<span className="text-emerald-300">&quot;blocks&quot;</span>, <span className="text-emerald-300">&quot;ui&quot;</span>],
-                {"\n"}  icons: <span className="text-amber-300">4000</span>,
-                {"\n"}  deploy: <span className="text-sky-300">&quot;vercel&quot;</span>,
+                <span className="text-chart-1">export default</span> {"{"}
+                {"\n"}  registry: [<span className="text-chart-1">&quot;blocks&quot;</span>, <span className="text-chart-1">&quot;ui&quot;</span>],
+                {"\n"}  icons: <span className="text-chart-1">4000</span>,
+                {"\n"}  deploy: <span className="text-chart-1">&quot;vercel&quot;</span>,
                 {"\n"}{"}"}
               </code>
             </pre>
@@ -114,7 +114,7 @@ export default function Grid17() {
             <ul className="space-y-2.5 text-sm text-muted-foreground">
               {["New hero blocks live on designali.com", "3 templates updated, 0 errors", "Dark mode checked on every block"].map((line) => (
                 <li key={line} className="flex gap-2">
-                  <Check className="mt-0.5 size-4 shrink-0 text-emerald-600 dark:text-emerald-400" />
+                  <Check className="mt-0.5 size-4 shrink-0 text-primary dark:text-primary" />
                   {line}
                 </li>
               ))}

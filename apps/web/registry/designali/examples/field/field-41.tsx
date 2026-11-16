@@ -52,7 +52,7 @@ export default function TwoFactorMethodField() {
             inputMode="numeric"
             maxLength={6}
             placeholder="000000"
-            className="w-32 font-mono tracking-widest"
+            className="w-32 font-sans tracking-widest"
           />
         </Field>
       ) : (

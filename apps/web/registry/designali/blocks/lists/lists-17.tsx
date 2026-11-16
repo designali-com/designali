@@ -29,7 +29,7 @@ export default function Lists17() {
           <div className={cn("border-border md:border-r", showDetail && "hidden md:block")}>
             <div className="flex items-center justify-between border-b border-border px-5 py-4">
               <h2 className="font-semibold">Inbox</h2>
-              <span className="font-mono text-xs text-muted-foreground">
+              <span className="font-sans text-xs text-muted-foreground">
                 {messages.filter((m) => m.unread).length} unread
               </span>
             </div>

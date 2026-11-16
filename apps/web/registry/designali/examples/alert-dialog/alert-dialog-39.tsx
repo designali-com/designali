@@ -40,7 +40,7 @@ export default function SwitchToggleConfirmation() {
       <AlertDialog open={open} onOpenChange={setOpen}>
         <AlertDialogContent>
           <AlertDialogHeader>
-            <AlertDialogMedia className="bg-amber-500/10 text-amber-600 dark:text-amber-400">
+            <AlertDialogMedia className="bg-primary/10 text-primary dark:text-primary">
               <ConstructionIcon />
             </AlertDialogMedia>
             <AlertDialogTitle>Turn on maintenance mode?</AlertDialogTitle>

@@ -18,7 +18,7 @@ export default function DeleteConfirmationInput() {
       <p className="text-sm font-medium text-destructive">Delete project</p>
       <p className="mt-1 text-xs text-muted-foreground">
         This permanently removes all deployments and domains. Type{" "}
-        <span className="font-mono font-medium text-foreground">{PROJECT}</span>{" "}
+        <span className="font-sans font-medium text-foreground">{PROJECT}</span>{" "}
         to confirm.
       </p>
       <Input
@@ -26,7 +26,7 @@ export default function DeleteConfirmationInput() {
         value={value}
         onChange={(e) => setValue(e.target.value)}
         placeholder={PROJECT}
-        className="mt-3 font-mono"
+        className="mt-3 font-sans"
         autoComplete="off"
       />
       <Button

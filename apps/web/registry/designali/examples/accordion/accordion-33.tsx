@@ -63,7 +63,7 @@ export default function AccordionEventAgenda() {
               {day.sessions.map((session) => (
                 <li key={session.title} className="relative">
                   <span className="absolute -start-[1.3rem] top-1 size-2 bg-foreground" />
-                  <p className="font-mono text-muted-foreground">
+                  <p className="font-sans text-muted-foreground">
                     {session.time}
                   </p>
                   <p className="font-medium">{session.title}</p>

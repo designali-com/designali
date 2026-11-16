@@ -23,10 +23,10 @@ const statuses = [
   {
     value: "progress",
     label: "In progress",
-    dot: "border-amber-500 bg-amber-500/40",
+    dot: "border-primary bg-primary/40",
   },
-  { value: "review", label: "In review", dot: "border-sky-500 bg-sky-500/40" },
-  { value: "done", label: "Done", dot: "border-emerald-500 bg-emerald-500" },
+  { value: "review", label: "In review", dot: "border-primary bg-primary/40" },
+  { value: "done", label: "Done", dot: "border-primary bg-primary" },
 ]
 
 export default function IssueStatusPicker() {
@@ -35,7 +35,7 @@ export default function IssueStatusPicker() {
 
   return (
     <div className="flex w-full max-w-sm items-center gap-3 border p-3 text-xs">
-      <span className="font-mono text-muted-foreground">DSG-318</span>
+      <span className="font-sans text-muted-foreground">DSG-318</span>
       <span className="flex-1 truncate font-medium">
         Polish empty states on designali.com pricing page
       </span>

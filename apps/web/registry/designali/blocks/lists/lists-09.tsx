@@ -38,9 +38,9 @@ export default function Lists09() {
     <section className="w-full bg-background py-24">
       <div className="mx-auto grid max-w-6xl gap-12 px-6 lg:grid-cols-[360px_1fr]">
         <div className="lg:sticky lg:top-24 lg:self-start">
-          <div className="aspect-[3/4] max-w-[260px] bg-gradient-to-br from-stone-900 to-stone-700 p-6 text-stone-100 shadow-2xl dark:from-stone-200 dark:to-stone-400 dark:text-stone-900">
+          <div className="aspect-[3/4] max-w-[260px] bg-gradient-to-br from-foreground to-foreground p-6 text-background shadow-2xl dark:from-foreground dark:to-muted-foreground dark:text-background">
             <div className="flex h-full flex-col justify-between border border-current/30 p-4">
-              <p className="font-mono text-[10px] tracking-widest uppercase opacity-70">A Designali guide</p>
+              <p className="font-sans text-[10px] tracking-widest uppercase opacity-70">A Designali guide</p>
               <div>
                 <p className="text-3xl leading-tight font-semibold tracking-tight">Design se code tak</p>
                 <p className="mt-2 text-xs opacity-70">Ali Imam</p>
@@ -57,7 +57,7 @@ export default function Lists09() {
           {parts.map((part, partIndex) => (
             <div key={part.title}>
               <div className="flex items-baseline gap-4 border-b border-foreground pb-3">
-                <span className="font-mono text-xs text-muted-foreground uppercase">{part.part}</span>
+                <span className="font-sans text-xs text-muted-foreground uppercase">{part.part}</span>
                 <h3 className="text-xl font-medium tracking-tight">{part.title}</h3>
               </div>
               <ol>
@@ -76,7 +76,7 @@ export default function Lists09() {
                           <span className="block text-base font-medium md:text-lg">{chapter.title}</span>
                           <span className="text-xs text-muted-foreground">{chapter.minutes} min read</span>
                         </span>
-                        <span className="font-mono text-sm text-muted-foreground">p.{chapter.page}</span>
+                        <span className="font-sans text-sm text-muted-foreground">p.{chapter.page}</span>
                       </a>
                     </li>
                   )

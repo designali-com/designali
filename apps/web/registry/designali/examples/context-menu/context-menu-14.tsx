@@ -24,10 +24,10 @@ import {
 import { cn } from "@workspace/ui/lib/utils"
 
 const colors = [
-  { id: "sky", label: "Sky", className: "bg-sky-500" },
-  { id: "emerald", label: "Emerald", className: "bg-emerald-500" },
-  { id: "rose", label: "Rose", className: "bg-rose-500" },
-  { id: "amber", label: "Amber", className: "bg-amber-500" },
+  { id: "sky", label: "Sky", className: "bg-primary" },
+  { id: "emerald", label: "Emerald", className: "bg-primary" },
+  { id: "rose", label: "Rose", className: "bg-primary" },
+  { id: "amber", label: "Amber", className: "bg-primary" },
 ]
 
 export default function CalendarEventMenu() {

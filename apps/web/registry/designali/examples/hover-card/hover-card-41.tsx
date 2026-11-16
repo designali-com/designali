@@ -24,7 +24,7 @@ export default function SocialFollowHoverCard() {
           Ali Imam
         </HoverCardTrigger>
         <HoverCardContent align="start" className="w-72 p-0">
-          <div className="h-16 bg-gradient-to-r from-teal-400 to-sky-500" />
+          <div className="h-16 bg-gradient-to-r from-primary to-primary" />
           <div className="-mt-6 px-3 pb-3">
             <Avatar size="lg" className="ring-2 ring-popover">
               <AvatarImage src="/ali.jpg" alt="Ali Imam" />

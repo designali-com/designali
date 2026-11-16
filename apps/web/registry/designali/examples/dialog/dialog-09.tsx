@@ -31,20 +31,20 @@ export default function ControlledOpenStateDialog() {
           setOpens((count) => count + 1)
         }}
       >
-        Open from outside
+        Open Designali preview
       </Button>
       <Dialog open={open} onOpenChange={setOpen}>
         <DialogContent>
           <DialogHeader>
-            <DialogTitle>Controlled dialog</DialogTitle>
+            <DialogTitle>Designali template preview</DialogTitle>
             <DialogDescription>
-              The parent owns the open state, so any button or event can open or
-              close it.
+              The Portfolio Simple template from designali.com. The parent owns
+              the open state, so any button or event can open or close it.
             </DialogDescription>
           </DialogHeader>
           <DialogFooter>
             <Button variant="outline" onClick={() => setOpen(false)}>
-              Close programmatically
+              Close preview
             </Button>
           </DialogFooter>
         </DialogContent>

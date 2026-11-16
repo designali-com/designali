@@ -43,7 +43,7 @@ export default function CardPaymentInputs() {
             autoComplete="cc-number"
             value={card}
             onChange={(e) => setCard(formatCard(e.target.value))}
-            className="font-mono"
+            className="font-sans"
           />
         </InputGroup>
       </Field>

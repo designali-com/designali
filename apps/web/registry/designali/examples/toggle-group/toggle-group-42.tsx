@@ -6,10 +6,10 @@ import {
 import { cn } from "@workspace/ui/lib/utils"
 
 const priorities = [
-  { value: "low", label: "Low", dot: "bg-slate-400" },
-  { value: "medium", label: "Medium", dot: "bg-sky-500" },
-  { value: "high", label: "High", dot: "bg-amber-500" },
-  { value: "urgent", label: "Urgent", dot: "bg-rose-500" },
+  { value: "low", label: "Low", dot: "bg-muted-foreground" },
+  { value: "medium", label: "Medium", dot: "bg-primary" },
+  { value: "high", label: "High", dot: "bg-primary" },
+  { value: "urgent", label: "Urgent", dot: "bg-primary" },
 ]
 
 export default function TaskPriorityToggleGroup() {

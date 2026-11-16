@@ -32,7 +32,7 @@ export default function Blog08() {
     <section className="w-full bg-background py-16 text-foreground md:py-24">
       <div className="mx-auto max-w-3xl px-6">
         <header className="mb-14">
-          <h2 className="font-serif text-4xl tracking-tight md:text-5xl">Archive</h2>
+          <h2 className="font-sans text-4xl tracking-tight md:text-5xl">Archive</h2>
           <p className="mt-3 text-muted-foreground">
             {total} posts from the Designali studio notebook. Mostly about design,
             occasionally about code.
@@ -49,7 +49,7 @@ export default function Blog08() {
                 {group.posts.map((post) => (
                   <li key={post.title}>
                     <a href="#" className="group flex items-baseline gap-5 py-4">
-                      <span className="w-6 shrink-0 font-mono text-xs text-muted-foreground tabular-nums">
+                      <span className="w-6 shrink-0 font-sans text-xs text-muted-foreground tabular-nums">
                         {post.day}
                       </span>
                       <span className="flex-1 leading-snug transition-colors group-hover:text-muted-foreground">

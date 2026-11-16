@@ -27,7 +27,7 @@ export default function CitationFootnoteHoverCard() {
         <HoverCard key={s.id}>
           <HoverCardTrigger
             href="#"
-            className="ml-0.5 align-super text-[10px] font-medium text-blue-600 dark:text-blue-400"
+            className="ml-0.5 align-super text-[10px] font-medium text-primary dark:text-primary"
           >
             [{s.id}]
           </HoverCardTrigger>

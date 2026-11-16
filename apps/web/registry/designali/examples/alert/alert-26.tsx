@@ -25,7 +25,7 @@ export default function AlertUploadTooLarge() {
         <FileXIcon />
         <AlertTitle>Upload failed</AlertTitle>
         <AlertDescription>
-          <span className="font-mono text-foreground">designali-brand-guide.pdf</span>{" "}
+          <span className="font-sans text-foreground">designali-brand-guide.pdf</span>{" "}
           is 61.4 MB, which is over the 25 MB limit.
         </AlertDescription>
         <AlertAction>

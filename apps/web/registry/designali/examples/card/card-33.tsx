@@ -28,7 +28,7 @@ export default function ServiceStatusCard() {
         <CardDescription>Last 30 days</CardDescription>
         <CardAction>
           <Badge variant="secondary" className="gap-1.5">
-            <span className="size-1.5 animate-pulse rounded-full bg-emerald-500" />
+            <span className="size-1.5 animate-pulse rounded-full bg-primary" />
             Operational
           </Badge>
         </CardAction>
@@ -50,8 +50,8 @@ export default function ServiceStatusCard() {
                   className={cn(
                     "h-6 flex-1",
                     s.incidents.includes(i)
-                      ? "bg-amber-500"
-                      : "bg-emerald-500/70"
+                      ? "bg-primary"
+                      : "bg-primary/70"
                   )}
                 />
               ))}

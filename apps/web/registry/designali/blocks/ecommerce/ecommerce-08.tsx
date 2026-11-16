@@ -5,11 +5,14 @@ import {
 
 import { Button } from "@workspace/ui/components/button"
 import { cn } from "@workspace/ui/lib/utils"
+import { IMac } from "@/registry/designali/ui/apple/imac"
+import { IPhone } from "@/registry/designali/ui/apple/iphone"
+import { Macbook } from "@/registry/designali/ui/apple/macbook"
 
 const models = [
-  { name: "Designali Solo", price: 49, tag: "", tone: "from-zinc-300 to-zinc-100 dark:from-zinc-700 dark:to-zinc-900" },
-  { name: "Designali Pro", price: 149, tag: "Most popular", tone: "from-stone-500 to-stone-200 dark:from-stone-600 dark:to-stone-900" },
-  { name: "Designali Studio", price: 349, tag: "", tone: "from-neutral-800 to-neutral-400 dark:from-neutral-500 dark:to-neutral-900" },
+  { name: "Designali Solo", price: 49, tag: "" },
+  { name: "Designali Pro", price: 149, tag: "Most popular" },
+  { name: "Designali Studio", price: 349, tag: "" },
 ]
 
 const rows: { label: string; values: (string | boolean)[] }[] = [
@@ -23,12 +26,27 @@ const rows: { label: string; values: (string | boolean)[] }[] = [
   { label: "Free updates", values: ["1 year", "2 years", "Lifetime"] },
 ]
 
-function Machine({ tone }: { tone: string }) {
+function Device({ index }: { index: number }) {
+  const screen = (
+    <img src="/images/templates/design-agency.jpg" alt="" className="size-full object-cover object-top" />
+  )
   return (
-    <div className={cn("relative mx-auto aspect-square w-full max-w-36 bg-gradient-to-b", tone)}>
-      <span className="absolute inset-x-[18%] top-[14%] h-[14%] bg-background/40" />
-      <span className="absolute top-[38%] left-1/2 h-[20%] w-[18%] -translate-x-1/2 bg-foreground/70" />
-      <span className="absolute inset-x-[22%] bottom-[10%] h-[6%] bg-foreground/50" />
+    <div className="mx-auto flex aspect-square w-full max-w-36 items-end justify-center">
+      {index === 0 && (
+        <IPhone size="sm" color="silver" className="h-full! max-w-full">
+          {screen}
+        </IPhone>
+      )}
+      {index === 1 && (
+        <Macbook variant="macbook-pro" color="silver" size="sm" className="w-full! max-w-full">
+          {screen}
+        </Macbook>
+      )}
+      {index === 2 && (
+        <IMac size="sm" color="silver" className="w-full! max-w-full">
+          {screen}
+        </IMac>
+      )}
     </div>
   )
 }
@@ -49,7 +67,7 @@ export default function Ecommerce08() {
             <thead>
               <tr>
                 <th className="w-1/4" />
-                {models.map((m) => (
+                {models.map((m, index) => (
                   <th
                     key={m.name}
                     scope="col"
@@ -65,7 +83,7 @@ export default function Ecommerce08() {
                     ) : (
                       <span className="mb-3 inline-block h-5" />
                     )}
-                    <Machine tone={m.tone} />
+                    <Device index={index} />
                     <p className="mt-4 font-medium">{m.name}</p>
                     <p className="mt-1 text-muted-foreground tabular-nums">${m.price}</p>
                   </th>

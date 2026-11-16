@@ -50,7 +50,7 @@ export default function QuizAnswerFeedback() {
               {a.label}
             </FieldLabel>
             {checked && a.value === correct && (
-              <CheckIcon className="ms-auto size-4 text-emerald-600" />
+              <CheckIcon className="ms-auto size-4 text-primary" />
             )}
           </Field>
         ))}
@@ -60,7 +60,7 @@ export default function QuizAnswerFeedback() {
           className={cn(
             "text-sm",
             value === correct
-              ? "text-emerald-600 dark:text-emerald-400"
+              ? "text-primary dark:text-primary"
               : "text-destructive"
           )}
         >

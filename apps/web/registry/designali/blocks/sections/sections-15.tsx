@@ -9,7 +9,7 @@ const offices = [
     address: "5455 Av. de Gaspé, Suite 710",
     people: 64,
     tz: "UTC-5",
-    tone: "from-rose-400 via-orange-300 to-amber-200 dark:from-rose-600/60 dark:via-orange-500/40 dark:to-amber-400/30",
+    tone: "from-primary via-chart-1 to-primary/20 dark:from-chart-2/60 dark:via-primary/40 dark:to-primary/30",
   },
   {
     city: "Oaxaca",
@@ -17,7 +17,7 @@ const offices = [
     address: "Calle de Macedonio Alcalá 403",
     people: 18,
     tz: "UTC-6",
-    tone: "from-emerald-400 via-teal-300 to-cyan-200 dark:from-emerald-600/60 dark:via-teal-500/40 dark:to-cyan-400/30",
+    tone: "from-primary via-chart-1 to-primary/20 dark:from-chart-2/60 dark:via-primary/40 dark:to-primary/30",
   },
   {
     city: "Tallinn",
@@ -25,7 +25,7 @@ const offices = [
     address: "Telliskivi 60a, Building C",
     people: 37,
     tz: "UTC+2",
-    tone: "from-indigo-400 via-sky-300 to-slate-200 dark:from-indigo-600/60 dark:via-sky-500/40 dark:to-slate-400/30",
+    tone: "from-primary via-chart-1 to-muted dark:from-chart-2/60 dark:via-primary/40 dark:to-muted-foreground/30",
   },
 ]
 
@@ -54,7 +54,7 @@ export default function Sections15() {
                   <circle cx="98" cy="118" r="6" className="fill-foreground/70" />
                   <circle cx="98" cy="118" r="18" className="fill-foreground/10" />
                 </svg>
-                <span className="absolute top-4 left-4 bg-background/80 px-2 py-1 font-mono text-[10px] tracking-wider uppercase backdrop-blur">
+                <span className="absolute top-4 left-4 bg-background/80 px-2 py-1 font-sans text-[10px] tracking-wider uppercase backdrop-blur">
                   {office.tz}
                 </span>
                 <span className="absolute right-4 bottom-4 flex size-10 items-center justify-center bg-background transition-transform group-hover:-translate-y-1">

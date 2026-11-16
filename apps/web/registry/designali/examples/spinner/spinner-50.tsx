@@ -24,12 +24,12 @@ export default function VerifyingDomainStatus() {
           key={record.type}
           className="flex items-center gap-3 px-4 py-2.5 text-sm"
         >
-          <Badge variant="outline" className="w-14 justify-center font-mono">
+          <Badge variant="outline" className="w-14 justify-center font-sans">
             {record.type}
           </Badge>
-          <span className="flex-1 font-mono text-xs">{record.host}</span>
+          <span className="flex-1 font-sans text-xs">{record.host}</span>
           {record.state === "verified" ? (
-            <span className="flex items-center gap-1 text-xs text-emerald-600 dark:text-emerald-400">
+            <span className="flex items-center gap-1 text-xs text-primary dark:text-primary">
               <CheckIcon className="size-3.5" />
               Verified
             </span>

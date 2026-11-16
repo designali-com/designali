@@ -22,7 +22,7 @@ export default function PlaylistTracks() {
   return (
     <div className="w-full max-w-sm border">
       <div className="flex items-center gap-3 border-b p-3">
-        <div className="size-12 shrink-0 bg-gradient-to-br from-orange-400 via-pink-500 to-violet-600" />
+        <div className="size-12 shrink-0 bg-gradient-to-br from-primary via-primary to-chart-2" />
         <div className="min-w-0 flex-1">
           <p className="truncate text-sm font-medium">Late Night Focus</p>
           <p className="text-xs text-muted-foreground">

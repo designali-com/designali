@@ -31,7 +31,7 @@ export default function Contact18() {
         <div className="border bg-background p-6 md:p-12">
           {sent ? (
             <div className="flex flex-col items-center py-12 text-center">
-              <Check className="size-8 text-emerald-600 dark:text-emerald-400" />
+              <Check className="size-8 text-primary dark:text-primary" />
               <h2 className="mt-4 text-2xl font-semibold">Feedback received</h2>
               <p className="mt-2 text-sm text-muted-foreground">
                 The Designali studio reads every response on Fridays.
@@ -62,10 +62,10 @@ export default function Contact18() {
                       "h-11 border text-sm font-medium tabular-nums transition-colors",
                       score === n
                         ? n >= 9
-                          ? "border-emerald-600 bg-emerald-600 text-white"
+                          ? "border-chart-2 bg-chart-2 text-white"
                           : n >= 7
-                            ? "border-amber-500 bg-amber-500 text-black"
-                            : "border-rose-600 bg-rose-600 text-white"
+                            ? "border-primary bg-primary text-black"
+                            : "border-chart-2 bg-chart-2 text-white"
                         : "hover:bg-muted"
                     )}
                   >

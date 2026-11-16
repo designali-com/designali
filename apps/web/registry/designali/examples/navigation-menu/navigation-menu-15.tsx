@@ -26,7 +26,7 @@ const services = [
 export default function RestaurantMenuNav() {
   return (
     <div className="flex w-full max-w-md items-center justify-between gap-2">
-      <span className="font-serif text-base italic">designali</span>
+      <span className="font-sans text-base italic">designali</span>
       <div className="flex items-center gap-1">
         <NavigationMenu>
           <NavigationMenuList>

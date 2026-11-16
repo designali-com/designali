@@ -46,7 +46,7 @@ export default function LanguagePreference() {
                 data-checked={l.code === lang}
                 onSelect={() => setLang(l.code)}
               >
-                <span className="w-6 font-mono text-[11px] text-muted-foreground uppercase">
+                <span className="w-6 font-sans text-[11px] text-muted-foreground uppercase">
                   {l.code}
                 </span>
                 <span>{l.native}</span>

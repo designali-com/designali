@@ -10,7 +10,7 @@ export default function PromoBannerUltrawide() {
   return (
     <AspectRatio
       ratio={21 / 9}
-      className="w-full max-w-lg overflow-hidden bg-linear-to-r from-indigo-600 to-violet-500"
+      className="w-full max-w-lg overflow-hidden bg-linear-to-r from-chart-2 to-primary"
     >
       <div className="absolute -end-10 -top-10 size-40 rounded-full border-[24px] border-white/10" />
       <div className="absolute end-16 -bottom-12 size-28 rounded-full bg-white/10" />

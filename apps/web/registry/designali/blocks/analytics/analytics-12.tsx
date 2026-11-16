@@ -82,7 +82,7 @@ export default function Analytics12() {
                   {on && <span className="absolute inset-x-0 top-0 h-0.5 bg-primary" />}
                   <p className="text-xs text-muted-foreground">{m.label}</p>
                   <p className="mt-2 text-2xl font-semibold tracking-tight">{m.value}</p>
-                  <p className="mt-1 text-xs text-emerald-600 dark:text-emerald-400">{m.change}</p>
+                  <p className="mt-1 text-xs text-primary dark:text-primary">{m.change}</p>
                 </button>
               )
             })}

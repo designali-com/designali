@@ -17,10 +17,10 @@ export default function RealEstateListing() {
     <div className="w-full max-w-xs">
       <AspectRatio
         ratio={4 / 3}
-        className="overflow-hidden bg-linear-to-t from-emerald-700 via-sky-300 to-sky-100"
+        className="overflow-hidden bg-linear-to-t from-chart-3 via-chart-1 to-primary/10"
       >
-        <div className="absolute start-[15%] bottom-[20%] h-[40%] w-[45%] bg-stone-100 dark:bg-stone-300">
-          <div className="absolute start-0 -top-6 h-0 w-full border-x-[4.5rem] border-b-[1.5rem] border-x-transparent border-b-stone-500" />
+        <div className="absolute start-[15%] bottom-[20%] h-[40%] w-[45%] bg-muted dark:bg-muted-foreground">
+          <div className="absolute start-0 -top-6 h-0 w-full border-x-[4.5rem] border-b-[1.5rem] border-x-transparent border-b-border" />
         </div>
         <Badge className="absolute start-2 top-2">New template</Badge>
         <Button
@@ -30,7 +30,7 @@ export default function RealEstateListing() {
           className="absolute end-2 top-2 rounded-full"
           onClick={() => setSaved((value) => !value)}
         >
-          <HeartIcon className={cn(saved && "fill-red-500 text-red-500")} />
+          <HeartIcon className={cn(saved && "fill-destructive text-destructive")} />
         </Button>
         <div className="absolute inset-x-0 bottom-2 flex justify-center gap-1">
           {[0, 1, 2, 3].map((i) => (

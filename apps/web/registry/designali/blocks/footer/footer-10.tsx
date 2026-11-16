@@ -40,8 +40,8 @@ export default function Footer10() {
             <span>© 2026 Designali</span>
           </div>
           <div className="flex items-center gap-4">
-            <span className="border border-border px-2 py-1 font-mono">Next.js</span>
-            <span className="border border-border px-2 py-1 font-mono">Tailwind CSS</span>
+            <span className="border border-border px-2 py-1 font-sans">Next.js</span>
+            <span className="border border-border px-2 py-1 font-sans">Tailwind CSS</span>
             <a href="#" className="flex items-center gap-1.5 hover:text-foreground">
               <Globe className="size-3.5" />
               English (US)

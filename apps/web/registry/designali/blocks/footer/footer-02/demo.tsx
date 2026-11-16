@@ -178,11 +178,11 @@ export default function Footer() {
       </div>
 
       <div className="mx-auto mt-10 mb-10 flex flex-col justify-between text-center text-xs md:max-w-7xl">
-        <div className="flex flex-row items-center justify-center gap-1 text-slate-600 dark:text-slate-400">
+        <div className="flex flex-row items-center justify-center gap-1 text-muted-foreground dark:text-muted-foreground">
           <span> © </span>
           <span>{new Date().getFullYear()}</span>
           <span>Made with</span>
-          <Heart className="mx-1 h-4 w-4 animate-pulse text-red-600" />
+          <Heart className="mx-1 h-4 w-4 animate-pulse text-destructive" />
           <span> by </span>
           <span className="hover:text-ali dark:hover:text-ali cursor-pointer text-black dark:text-white">
             <Link
@@ -195,7 +195,7 @@ export default function Footer() {
             </Link>
           </span>
           -
-          <span className="hover:text-ali cursor-pointer text-slate-600 dark:text-slate-400 dark:hover:text-red-600">
+          <span className="hover:text-ali cursor-pointer text-muted-foreground dark:text-muted-foreground dark:hover:text-destructive">
             <Link aria-label="Logo" className="" href="/">
               Designali
             </Link>

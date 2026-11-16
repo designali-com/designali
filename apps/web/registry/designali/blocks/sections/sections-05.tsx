@@ -1,12 +1,12 @@
 const team = [
-  { name: "Amara Osei", role: "Founder, Creative Director", location: "London" },
-  { name: "Tomás Ibarra", role: "Design Director", location: "Mexico City" },
-  { name: "Hana Sato", role: "Head of Product Design", location: "Tokyo" },
-  { name: "Elias Berg", role: "Lead Engineer", location: "Stockholm" },
-  { name: "Priya Raman", role: "Brand Strategist", location: "Bangalore" },
-  { name: "Noah Clarke", role: "Motion Designer", location: "Melbourne" },
-  { name: "Sofia Moretti", role: "Type Designer", location: "Milan" },
-  { name: "Kwame Asante", role: "Producer", location: "Accra" },
+  { name: "Ali Imam", role: "Founder, Design Engineer", location: "Design & Code" },
+  { name: "Sara", role: "Brand Designer", location: "Brand identity" },
+  { name: "Omar", role: "UI/UX Designer", location: "Product design" },
+  { name: "Lena", role: "Frontend Developer", location: "Next.js" },
+  { name: "Ravi", role: "Design Systems", location: "Components" },
+  { name: "Maya", role: "Motion Designer", location: "CGI, 3D & motion" },
+  { name: "Noor", role: "Illustrator", location: "@designali/vectors" },
+  { name: "Sam", role: "Producer", location: "AI workflows" },
 ]
 
 const initials = (name: string) =>
@@ -14,6 +14,7 @@ const initials = (name: string) =>
     .split(" ")
     .map((part) => part[0])
     .join("")
+    .slice(0, 2)
 
 export default function Sections05() {
   return (
@@ -21,14 +22,17 @@ export default function Sections05() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="grid gap-6 border-b border-border pb-10 md:grid-cols-2">
           <h2 className="text-4xl font-semibold tracking-tight md:text-5xl">
-            The people behind the work
+            The people behind designali
           </h2>
           <p className="self-end text-sm leading-6 text-muted-foreground md:justify-self-end md:text-right">
-            A distributed team of 8 across 8 cities.
+            Led by Ali Imam, a studio of designers and developers.
             <br />
-            We are hiring a senior product designer.{" "}
-            <a href="#" className="text-foreground underline underline-offset-4">
-              See the role
+            Want to work with us?{" "}
+            <a
+              href="mailto:hello@designali.com"
+              className="text-foreground underline underline-offset-4"
+            >
+              hello@designali.com
             </a>
           </p>
         </div>
@@ -44,7 +48,7 @@ export default function Sections05() {
               </div>
               <p className="mt-4 text-sm font-medium">{member.name}</p>
               <p className="text-xs text-muted-foreground">{member.role}</p>
-              <p className="mt-3 font-mono text-[10px] tracking-wider text-muted-foreground uppercase">
+              <p className="mt-3 font-sans text-[10px] tracking-wider text-muted-foreground uppercase">
                 {member.location}
               </p>
             </li>

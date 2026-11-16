@@ -21,8 +21,8 @@ const rotation = ["D", "D", "N", "N", "-", "-", "-", "-"]
 const anchor = new Date(2026, 0, 1)
 
 const shiftStyles: Record<string, string> = {
-  D: "text-sky-600 dark:text-sky-400",
-  N: "text-violet-600 dark:text-violet-400",
+  D: "text-primary dark:text-primary",
+  N: "text-primary dark:text-primary",
   "-": "text-muted-foreground",
 }
 
@@ -77,10 +77,10 @@ export default function ShiftRotaCalendar() {
         />
         <div className="flex gap-4 text-xs">
           <span className="flex items-center gap-1.5">
-            <SunIcon className="size-3.5 text-sky-500" /> Day 07-19
+            <SunIcon className="size-3.5 text-primary" /> Day 07-19
           </span>
           <span className="flex items-center gap-1.5">
-            <MoonIcon className="size-3.5 text-violet-500" /> Night 19-07
+            <MoonIcon className="size-3.5 text-primary" /> Night 19-07
           </span>
         </div>
       </CardContent>

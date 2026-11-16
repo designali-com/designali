@@ -20,14 +20,14 @@ export default function DeploymentBreadcrumb() {
           <BreadcrumbLink href="#" className="flex items-center gap-1.5">
             Production
             <Badge variant="secondary" className="gap-1">
-              <span className="size-1.5 rounded-full bg-emerald-500" />
+              <span className="size-1.5 rounded-full bg-primary" />
               Live
             </Badge>
           </BreadcrumbLink>
         </BreadcrumbItem>
         <BreadcrumbSeparator />
         <BreadcrumbItem>
-          <BreadcrumbPage className="font-mono">dpl_8f3k2a</BreadcrumbPage>
+          <BreadcrumbPage className="font-sans">dpl_8f3k2a</BreadcrumbPage>
         </BreadcrumbItem>
       </BreadcrumbList>
     </Breadcrumb>

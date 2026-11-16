@@ -35,7 +35,7 @@ export default function Gallery20() {
     <section className="w-full bg-background py-16">
       <div className="mx-auto max-w-4xl px-6">
         <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:gap-10">
-          <div className="flex size-24 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-amber-400 via-rose-500 to-violet-600 p-[3px] sm:size-32">
+          <div className="flex size-24 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-primary via-primary to-chart-2 p-[3px] sm:size-32">
             <img
               src="/ali.jpg"
               alt="Ali Imam"

@@ -18,7 +18,7 @@ export default function Authentication04() {
     <section className="w-full bg-background py-20 md:py-28">
       <div className="mx-auto grid max-w-5xl border md:grid-cols-2">
         <div className="flex flex-col justify-between gap-12 border-b p-8 md:border-e md:border-b-0 md:p-12">
-          <p className="font-mono text-xs text-muted-foreground">DESIGNALI / SIGN IN</p>
+          <p className="font-sans text-xs text-muted-foreground">DESIGNALI / SIGN IN</p>
           <h2 className="text-4xl leading-tight font-semibold tracking-tight md:text-5xl">
             No passwords.
             <br />

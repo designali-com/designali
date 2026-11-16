@@ -52,7 +52,7 @@ export default function ApparelSizeSelect() {
         </SelectContent>
       </Select>
       {current && current.left <= 3 && (
-        <p className="text-xs text-amber-600 dark:text-amber-400">
+        <p className="text-xs text-primary dark:text-primary">
           Only {current.left} left in {current.label}
         </p>
       )}

@@ -2,6 +2,8 @@ import {
   ArrowRight,
 } from "@designali/icons"
 
+import { Typewriter } from "@/registry/designali/ui/typewriter"
+
 const links = [
   ["Start a project", "Tell us what you are building"],
   ["Book a call", "30 minutes with Ali Imam"],
@@ -18,7 +20,13 @@ export default function CallToAction19() {
         <h2 className="mt-6 text-[13vw] leading-[0.9] font-medium tracking-tighter break-words md:text-[9rem]">
           Let&apos;s make
           <br />
-          <span className="text-muted-foreground">something good.</span>
+          <span className="text-muted-foreground">
+            something{" "}
+            <Typewriter
+              words={["good.", "bold.", "useful.", "beautiful."]}
+              cursorChar="_"
+            />
+          </span>
         </h2>
         <div className="mt-14 border-t border-border">
           {links.map(([title, sub]) => (

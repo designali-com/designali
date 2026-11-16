@@ -13,7 +13,7 @@ const stories = [
   {
     company: "Resort Website",
     tagline: "Booking pages rebuilt for mobile",
-    gradient: "from-sky-500 via-indigo-500 to-violet-600",
+    gradient: "from-primary via-primary to-chart-2",
     stats: [
       { value: "+18%", label: "Mobile enquiries" },
       { value: "5 wks", label: "Time to launch" },
@@ -26,7 +26,7 @@ const stories = [
   {
     company: "Design Agency Site",
     tagline: "One accessible system across 3 platforms",
-    gradient: "from-emerald-500 via-teal-500 to-cyan-600",
+    gradient: "from-primary via-primary to-chart-2",
     stats: [
       { value: "100%", label: "WCAG 2.2 AA pages" },
       { value: "3x", label: "Release frequency" },
@@ -39,7 +39,7 @@ const stories = [
   {
     company: "AI Product Launch",
     tagline: "Product dashboards at startup speed",
-    gradient: "from-amber-500 via-orange-500 to-rose-500",
+    gradient: "from-primary via-primary to-primary",
     stats: [
       { value: "-54%", label: "UI code per feature" },
       { value: "2 days", label: "Onboarding for new devs" },

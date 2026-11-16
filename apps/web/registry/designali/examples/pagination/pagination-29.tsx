@@ -11,11 +11,11 @@ import {
 import { cn } from "@workspace/ui/lib/utils"
 
 const slides = [
-  "from-rose-400 to-orange-300",
-  "from-sky-400 to-indigo-400",
-  "from-emerald-400 to-lime-300",
-  "from-violet-400 to-fuchsia-400",
-  "from-amber-300 to-yellow-200",
+  "from-primary to-chart-1",
+  "from-primary to-primary",
+  "from-primary to-chart-1",
+  "from-primary to-primary",
+  "from-chart-1 to-primary/20",
 ]
 
 export default function GalleryThumbnailPagination() {

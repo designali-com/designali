@@ -26,10 +26,10 @@ import {
 import { cn } from "@workspace/ui/lib/utils"
 
 const statuses = [
-  { value: "online", label: "Online", dot: "bg-emerald-500" },
-  { value: "away", label: "Away", dot: "bg-amber-400" },
-  { value: "dnd", label: "Do not disturb", dot: "bg-red-500" },
-  { value: "invisible", label: "Appear offline", dot: "bg-zinc-400" },
+  { value: "online", label: "Online", dot: "bg-primary" },
+  { value: "away", label: "Away", dot: "bg-primary" },
+  { value: "dnd", label: "Do not disturb", dot: "bg-destructive" },
+  { value: "invisible", label: "Appear offline", dot: "bg-muted-foreground" },
 ]
 
 export default function PresenceStatusMenu() {

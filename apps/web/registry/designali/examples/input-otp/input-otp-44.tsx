@@ -26,7 +26,7 @@ export default function EntryProgressBar() {
       </InputOTP>
       <Progress value={(value.length / 6) * 100} />
       <p className="text-center text-xs text-muted-foreground tabular-nums">
-        {value.length} of 6 digits
+        {value.length} of 6 digits sent to hello@designali.com
       </p>
     </div>
   )

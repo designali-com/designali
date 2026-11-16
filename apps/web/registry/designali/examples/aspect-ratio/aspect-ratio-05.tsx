@@ -12,7 +12,7 @@ export default function VideoPlayerPlaceholder() {
     <div className="w-full max-w-md">
       <AspectRatio
         ratio={16 / 9}
-        className="overflow-hidden bg-linear-to-br from-indigo-500 via-purple-500 to-pink-500"
+        className="overflow-hidden bg-linear-to-br from-primary via-primary to-primary"
       >
         <div className="absolute inset-0 flex items-center justify-center">
           <Button
@@ -25,11 +25,11 @@ export default function VideoPlayerPlaceholder() {
           </Button>
         </div>
         <div className="absolute inset-x-0 bottom-0 flex items-center gap-2 bg-linear-to-t from-black/70 to-transparent px-3 pt-6 pb-2 text-white">
-          <span className="font-mono text-[10px] tabular-nums">0:00</span>
+          <span className="font-sans text-[10px] tabular-nums">0:00</span>
           <div className="h-1 flex-1 bg-white/30">
             <div className="h-full w-1/4 bg-white" />
           </div>
-          <span className="font-mono text-[10px] tabular-nums">12:48</span>
+          <span className="font-sans text-[10px] tabular-nums">12:48</span>
           <Volume2Icon className="size-3.5" />
           <MaximizeIcon className="size-3.5" />
         </div>

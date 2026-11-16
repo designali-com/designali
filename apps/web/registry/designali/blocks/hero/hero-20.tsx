@@ -7,6 +7,8 @@ import {
 
 import { Button } from "@workspace/ui/components/button"
 
+import { Marquee } from "@/registry/designali/ui/marquee"
+
 const steps = [
   {
     icon: Lightbulb,
@@ -36,7 +38,7 @@ export default function Hero20() {
       <div className="mx-auto max-w-7xl">
         <div className="grid gap-16 lg:grid-cols-2">
           <div className="lg:sticky lg:top-24 lg:self-start">
-            <p className="font-mono text-xs tracking-widest text-muted-foreground uppercase">
+            <p className="font-sans text-xs tracking-widest text-muted-foreground uppercase">
               How Designali works
             </p>
             <h1 className="mt-6 text-4xl font-medium tracking-tight md:text-6xl">
@@ -62,7 +64,7 @@ export default function Hero20() {
                   <step.icon className="size-4" />
                 </span>
                 <div className="pt-1.5">
-                  <p className="font-mono text-xs text-muted-foreground">
+                  <p className="font-sans text-xs text-muted-foreground">
                     Step {index + 1} / {step.meta}
                   </p>
                   <h2 className="mt-2 text-xl font-medium">{step.title}</h2>
@@ -77,13 +79,13 @@ export default function Hero20() {
           <p className="text-center text-xs text-muted-foreground">
             The same process behind Designali projects like
           </p>
-          <ul className="mt-6 flex flex-wrap items-center justify-center gap-x-10 gap-y-4">
+          <Marquee className="mt-6" gap="2.5rem" fade pauseOnHover>
             {brands.map((brand) => (
-              <li key={brand} className="text-lg font-semibold tracking-tight text-muted-foreground/70">
+              <span key={brand} className="text-lg font-semibold tracking-tight whitespace-nowrap text-muted-foreground/70">
                 {brand}
-              </li>
+              </span>
             ))}
-          </ul>
+          </Marquee>
         </div>
       </div>
     </section>

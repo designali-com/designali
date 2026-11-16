@@ -36,7 +36,7 @@ export default function InvoicePaySelection() {
             }
           />
           <div className="flex-1">
-            <p className="font-mono text-xs">{invoice.id}</p>
+            <p className="font-sans text-xs">{invoice.id}</p>
             <p
               className={cn(
                 "text-xs",

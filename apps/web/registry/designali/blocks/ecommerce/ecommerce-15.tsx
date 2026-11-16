@@ -15,10 +15,10 @@ import { cn } from "@workspace/ui/lib/utils"
 const amounts = [25, 50, 100, 150]
 
 const designs = [
-  { id: "dusk", label: "Dusk", background: "linear-gradient(135deg, oklch(0.45 0.15 300), oklch(0.7 0.17 20))" },
-  { id: "forest", label: "Forest", background: "linear-gradient(135deg, oklch(0.35 0.07 160), oklch(0.65 0.12 130))" },
-  { id: "sand", label: "Sand", background: "linear-gradient(135deg, oklch(0.75 0.08 70), oklch(0.92 0.04 90))" },
-  { id: "ink", label: "Ink", background: "linear-gradient(135deg, oklch(0.2 0.02 260), oklch(0.4 0.06 250))" },
+  { id: "dusk", label: "Designali Blue", background: "linear-gradient(135deg, var(--primary), var(--chart-5))" },
+  { id: "forest", label: "Deep Blue", background: "linear-gradient(135deg, var(--chart-4), var(--chart-1))" },
+  { id: "sand", label: "Light", background: "linear-gradient(135deg, var(--muted), var(--background))" },
+  { id: "ink", label: "Ink", background: "linear-gradient(135deg, black, var(--chart-5))" },
 ]
 
 export default function Ecommerce15() {
@@ -39,7 +39,7 @@ export default function Ecommerce15() {
           <div
             className={cn(
               "relative aspect-[1.6] w-full overflow-hidden p-6 shadow-2xl transition-all duration-500 sm:p-8",
-              darkText ? "text-stone-900" : "text-white"
+              darkText ? "text-foreground" : "text-white"
             )}
             style={{ background: bg }}
           >

@@ -37,10 +37,10 @@ export default function RatioSwitcherToggle() {
       <div className="flex h-64 w-full items-center justify-center">
         <AspectRatio
           ratio={ratio}
-          className="max-h-full w-full bg-linear-to-br from-sky-400 to-emerald-400 transition-all"
+          className="max-h-full w-full bg-linear-to-br from-primary to-primary transition-all"
           style={{ maxWidth: ratio < 1 ? 256 * ratio : undefined }}
         >
-          <span className="absolute inset-0 flex items-center justify-center font-mono text-sm font-semibold text-white">
+          <span className="absolute inset-0 flex items-center justify-center font-sans text-sm font-semibold text-white">
             {label}
           </span>
         </AspectRatio>

@@ -74,7 +74,7 @@ export default function Grid18() {
               placeholder="Search icons"
               className="w-full bg-transparent text-sm outline-none placeholder:text-muted-foreground"
             />
-            <span className="font-mono text-[10px] text-muted-foreground">{visible.length}</span>
+            <span className="font-sans text-[10px] text-muted-foreground">{visible.length}</span>
           </label>
         </div>
 
@@ -87,11 +87,11 @@ export default function Grid18() {
               className="group flex aspect-square flex-col items-center justify-center gap-3 border-r border-b border-border transition-colors hover:bg-muted"
             >
               {copied === name ? (
-                <Check className="size-6 text-emerald-600 dark:text-emerald-400" />
+                <Check className="size-6 text-primary dark:text-primary" />
               ) : (
                 <Icon className="size-6" strokeWidth={1.5} />
               )}
-              <span className="font-mono text-[10px] text-muted-foreground group-hover:text-foreground">
+              <span className="font-sans text-[10px] text-muted-foreground group-hover:text-foreground">
                 {copied === name ? "copied" : name}
               </span>
             </button>

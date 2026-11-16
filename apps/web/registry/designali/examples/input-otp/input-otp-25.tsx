@@ -24,9 +24,9 @@ export default function AuthenticatorSetup() {
       </svg>
       <div className="flex flex-1 flex-col gap-3">
         <div className="space-y-1">
-          <p className="text-sm font-medium">Scan with your authenticator</p>
+          <p className="text-sm font-medium">Secure your designali.com account</p>
           <p className="text-xs text-muted-foreground">
-            Or enter key{" "}
+            Scan with your authenticator or enter key{" "}
             <code className="bg-muted px-1 font-mono">JBSW Y3DP EHPK 3PXP</code>
           </p>
         </div>

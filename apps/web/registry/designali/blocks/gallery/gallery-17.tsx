@@ -51,7 +51,7 @@ export default function Gallery17() {
               <span className="absolute top-1.5 -left-[5px] size-2.5 bg-foreground" />
               <div className="grid gap-6 md:grid-cols-[14rem_1fr]">
                 <div>
-                  <p className="font-mono text-sm text-muted-foreground">{entry.year}</p>
+                  <p className="font-sans text-sm text-muted-foreground">{entry.year}</p>
                   <h3 className="mt-1 text-xl font-medium">{entry.title}</h3>
                   <p className="mt-2 text-sm text-muted-foreground">{entry.summary}</p>
                   <a href="#" className="mt-3 inline-block text-sm font-medium underline-offset-4 hover:underline">

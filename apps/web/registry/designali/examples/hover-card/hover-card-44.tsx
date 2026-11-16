@@ -55,7 +55,7 @@ export default function RolePermissionsHoverCard() {
                     )}
                   >
                     {roles[m.role]![i] ? (
-                      <CheckIcon className="size-3.5 text-emerald-600" />
+                      <CheckIcon className="size-3.5 text-primary" />
                     ) : (
                       <XIcon className="size-3.5" />
                     )}

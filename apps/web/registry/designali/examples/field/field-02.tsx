@@ -15,7 +15,7 @@ export function FieldInput() {
           <FieldLabel htmlFor="username">Username</FieldLabel>
           <Input id="username" type="text" placeholder="aliimam" />
           <FieldDescription>
-            Choose a unique username for your account.
+            Choose a unique username for your designali.com account.
           </FieldDescription>
         </Field>
         <Field>

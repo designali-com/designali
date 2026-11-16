@@ -16,7 +16,7 @@ export default function ArticleLinkCard() {
   return (
     <a href="#" className="group block w-full max-w-sm outline-none">
       <Card className="pt-0 transition-shadow group-hover:ring-foreground/30 group-focus-visible:ring-2 group-focus-visible:ring-ring">
-        <div className="relative aspect-[2/1] overflow-hidden bg-gradient-to-br from-teal-400 via-cyan-500 to-blue-600">
+        <div className="relative aspect-[2/1] overflow-hidden bg-gradient-to-br from-primary via-primary to-chart-2">
           <svg
             viewBox="0 0 200 100"
             className="absolute inset-0 size-full opacity-30"

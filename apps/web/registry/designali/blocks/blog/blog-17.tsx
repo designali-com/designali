@@ -1,5 +1,8 @@
 import { Badge } from "@workspace/ui/components/badge"
 
+import { Macbook } from "@/registry/designali/ui/apple/macbook"
+import { GridPattern } from "@/registry/designali/ui/grid-pattern"
+
 const entries = [
   {
     date: "Nov 14, 2026",
@@ -44,7 +47,7 @@ export default function Blog17() {
           {entries.map((e, i) => (
             <li key={e.title} className="grid gap-4 md:grid-cols-[180px_1fr] md:gap-10">
               <div className="md:pt-1 md:text-right">
-                <time className="font-mono text-xs text-muted-foreground">{e.date}</time>
+                <time className="font-sans text-xs text-muted-foreground">{e.date}</time>
               </div>
               <div className={i === entries.length - 1 ? "relative border-l pl-8 md:pl-10" : "relative border-l pb-14 pl-8 md:pl-10"}>
                 <span
@@ -72,7 +75,20 @@ export default function Blog17() {
                   </ul>
                 )}
                 {i === 0 && (
-                  <div className="mt-6 aspect-[16/7] border bg-[linear-gradient(135deg,var(--muted)_25%,transparent_25%,transparent_50%,var(--muted)_50%,var(--muted)_75%,transparent_75%)] bg-[length:24px_24px]" />
+                  <div className="relative mt-6 flex aspect-[16/7] items-start justify-center overflow-hidden border bg-muted/40 px-4 pt-6">
+                    <GridPattern className="[mask-image:linear-gradient(to_bottom,black,transparent)]" />
+                    <Macbook
+                      variant="macbook-pro"
+                      color="silver"
+                      className="relative max-w-full"
+                    >
+                      <img
+                        src="/images/templates/dalim-icons-old.jpg"
+                        alt="Designali Icons on designali.com/icons"
+                        className="size-full object-cover object-top"
+                      />
+                    </Macbook>
+                  </div>
                 )}
               </div>
             </li>

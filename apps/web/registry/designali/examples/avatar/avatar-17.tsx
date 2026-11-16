@@ -7,7 +7,7 @@ export default function ProfileCardHeader() {
     <Card className="w-full max-w-xs">
       <CardContent className="flex flex-col items-center gap-3 text-center">
         <Avatar className="size-20">
-          <AvatarFallback className="bg-gradient-to-br from-indigo-500 to-fuchsia-500 text-2xl font-semibold text-white">
+          <AvatarFallback className="bg-gradient-to-br from-primary to-primary text-2xl font-semibold text-white">
             AI
           </AvatarFallback>
         </Avatar>
