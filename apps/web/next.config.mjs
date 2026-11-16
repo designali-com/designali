@@ -25,6 +25,11 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
 
+  // Pages like /blocks/<category> render and highlight 20 blocks each. With
+  // few workers they can pass the default 60s, and Next then throws the work
+  // away and renders them again (up to 3 times). Give them longer locally.
+  staticPageGenerationTimeout: process.env.CI || process.env.VERCEL ? 60 : 300,
+
   transpilePackages: [
     "@workspace/ui",
     "@designali/icons",

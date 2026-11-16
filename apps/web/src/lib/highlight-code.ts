@@ -56,7 +56,25 @@ export const transformers = [
   },
 ] as ShikiTransformer[]
 
-export async function highlightCode(code: string, language: string = "tsx") {
+// The same registry files are highlighted on many pages (/view, /blocks,
+// docs). Highlight each source once per process.
+const highlightCache = new Map<string, Promise<string>>()
+
+export function highlightCode(code: string, language: string = "tsx") {
+  const key = `${language}\0${code}`
+  let html = highlightCache.get(key)
+  if (!html) {
+    // Keep a long-running dev server from growing without limit.
+    if (highlightCache.size >= 5000) highlightCache.clear()
+    html = renderHighlightedCode(code, language)
+    highlightCache.set(key, html)
+    // Don't keep a failed render.
+    html.catch(() => highlightCache.delete(key))
+  }
+  return html
+}
+
+async function renderHighlightedCode(code: string, language: string) {
   const html = await codeToHtml(code, {
     lang: language,
     themes: {

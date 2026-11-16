@@ -45,11 +45,8 @@ export function UIDesignCategory() {
                       <div className="min-w-0">
                         <p className="truncate text-sm font-medium">{category.name}</p>
                       </div>
-
-                      <span className="text-xs text-muted-foreground">
-                        {getCategoryCount(category.slug)}
-                      </span>
-                    </div>
+ 
+                    </div> 
                   </div>
                 </Link>
               ))}

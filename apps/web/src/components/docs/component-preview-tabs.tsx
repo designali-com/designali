@@ -109,7 +109,9 @@ export function ComponentPreviewTabs({
           data-active={tab === "code"}
           data-slot="code"
         >
-          {source}
+          {/* With hideCode the code tab can't be opened, so skip rendering
+              (and highlighting) the source. */}
+          {!hideCode && source}
         </div>
       </div>
     </div>
