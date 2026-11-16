@@ -1,7 +1,11 @@
 "use client"
 
 import { useCallback, useEffect, useState } from "react"
-import { Monitor, Moon, Sun } from "lucide-react"
+import {
+  Monitor,
+  Moon,
+  Sun,
+} from "@designali/icons"
 import { useTheme } from "next-themes"
 
 import { cn } from "@workspace/ui/lib/utils"

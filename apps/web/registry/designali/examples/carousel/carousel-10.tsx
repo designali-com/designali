@@ -1,4 +1,6 @@
-import { CheckIcon } from "lucide-react"
+import {
+  Check as CheckIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import { Button } from "@workspace/ui/components/button"
@@ -18,23 +20,23 @@ import { cn } from "@workspace/ui/lib/utils"
 
 const plans = [
   {
-    name: "Starter",
+    name: "Free",
     price: "$0",
-    note: "For side projects",
-    features: ["1 project", "Community support", "Basic analytics"],
+    note: "For personal projects",
+    features: ["Free blocks", "4000+ icons", "Community support"],
   },
   {
-    name: "Team",
+    name: "Pro",
     price: "$24",
     note: "Per seat / month",
-    features: ["Unlimited projects", "Priority support", "Shared workspaces"],
+    features: ["All 460+ blocks", "Premium templates", "Priority support"],
     featured: true,
   },
   {
-    name: "Business",
+    name: "Studio",
     price: "$59",
     note: "Per seat / month",
-    features: ["SSO and SCIM", "Audit log", "99.9% uptime SLA"],
+    features: ["240+ landing pages", "Figma source files", "Team license"],
   },
 ]
 

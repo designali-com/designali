@@ -1,4 +1,6 @@
-import { ShieldAlertIcon } from "lucide-react"
+import {
+  ShieldAlert as ShieldAlertIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {

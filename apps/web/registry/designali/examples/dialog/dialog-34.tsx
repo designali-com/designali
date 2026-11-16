@@ -1,7 +1,11 @@
 "use client"
 
 import * as React from "react"
-import { ClockIcon, MapPinIcon, VideoIcon } from "lucide-react"
+import {
+  Clock as ClockIcon,
+  MapPin as MapPinIcon,
+  Video as VideoIcon,
+} from "@designali/icons"
 
 import {
   Avatar,
@@ -24,11 +28,11 @@ import {
 } from "@workspace/ui/components/toggle-group"
 
 const attendees = [
-  "Rhea Kapoor",
-  "Luca Bianchi",
-  "Sam Oduya",
-  "Mei Tanaka",
-  "Felix Grün",
+  "Ali Imam",
+  "Studio Designer",
+  "Studio Developer",
+  "Client Lead",
+  "Motion Designer",
 ]
 
 export default function CalendarEventRsvpDialog() {
@@ -42,14 +46,14 @@ export default function CalendarEventRsvpDialog() {
       >
         <span className="font-medium">Design critique</span>
         <span className="text-muted-foreground">
-          2:00 – 3:00 PM · Room Juniper
+          2:00 – 3:00 PM · Designali studio
         </span>
       </DialogTrigger>
       <DialogContent>
         <DialogHeader>
           <DialogTitle>Design critique</DialogTitle>
           <DialogDescription>
-            Weekly review of in-flight product work.
+            Weekly review of in-flight Designali client work.
           </DialogDescription>
         </DialogHeader>
         <div className="flex flex-col gap-2">
@@ -59,11 +63,11 @@ export default function CalendarEventRsvpDialog() {
           </p>
           <p className="flex items-center gap-2">
             <MapPinIcon className="size-4 text-muted-foreground" />
-            Room Juniper, 4th floor
+            Designali studio
           </p>
           <p className="flex items-center gap-2">
             <VideoIcon className="size-4 text-muted-foreground" />
-            meet.orbit.dev/crit-weekly
+            designali.com/contact
           </p>
         </div>
         <div className="flex items-center gap-2">

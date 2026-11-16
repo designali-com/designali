@@ -1,11 +1,18 @@
-import { ArrowUpRight, Mail, MessageSquare, Phone, Ticket, Video } from "lucide-react"
+import {
+  ArrowUpRight,
+  Mail,
+  MessageSquare,
+  Phone,
+  Ticket,
+  Video,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 
 const channels = [
   {
     icon: MessageSquare,
-    name: "In-app chat",
+    name: "Chat on designali.com",
     best: "Quick questions, billing",
     response: "< 5 min",
     hours: "24/7",
@@ -19,33 +26,33 @@ const channels = [
     response: "< 4 hrs",
     hours: "24/7",
     plan: "All plans",
-    href: "#",
+    href: "mailto:support@designali.com",
   },
   {
     icon: Ticket,
     name: "Priority ticket",
-    best: "Outages, data problems",
+    best: "Broken blocks, install problems",
     response: "< 30 min",
     hours: "24/7",
-    plan: "Business",
+    plan: "Pro",
     href: "#",
   },
   {
     icon: Phone,
-    name: "Phone",
-    best: "Urgent account access",
-    response: "Live",
-    hours: "Mon-Fri, 8-18 GMT",
-    plan: "Business",
-    href: "#",
+    name: "Call with Ali",
+    best: "New projects, urgent access",
+    response: "Booked",
+    hours: "Mon-Fri",
+    plan: "Pro",
+    href: "https://cal.com/aliimam/30min",
   },
   {
     icon: Video,
     name: "Screen-share session",
-    best: "Setup, migrations, training",
+    best: "Template setup, design reviews",
     response: "Booked",
     hours: "Mon-Thu",
-    plan: "Enterprise",
+    plan: "Studio",
     href: "#",
   },
 ]
@@ -59,7 +66,7 @@ export default function Contact14() {
             Pick the right channel
           </h2>
           <p className="text-muted-foreground md:text-end">
-            Response times are measured medians for Orbitdesk customers over the
+            Response times are measured medians for Designali customers over the
             last 90 days.
           </p>
         </div>

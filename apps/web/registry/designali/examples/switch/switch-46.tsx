@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { EyeOffIcon } from "lucide-react"
+import {
+  EyeOff as EyeOffIcon,
+} from "@designali/icons"
 
 import { Label } from "@workspace/ui/components/label"
 import { Switch } from "@workspace/ui/components/switch"
@@ -26,9 +28,9 @@ export default function PrivacyToggleWithCountdown() {
         )}
       />
       <div className="flex-1">
-        <Label htmlFor="incognito">Pause watch history</Label>
+        <Label htmlFor="incognito">Pause browsing history</Label>
         <p className="text-xs text-muted-foreground tabular-nums">
-          {active ? "Resumes in " + seconds + "s" : "History is being recorded"}
+          {active ? "Resumes in " + seconds + "s" : "Viewed Designali blocks are being recorded"}
         </p>
       </div>
       <Switch

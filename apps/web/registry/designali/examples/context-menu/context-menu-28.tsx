@@ -1,7 +1,11 @@
 "use client"
 
 import * as React from "react"
-import { DownloadIcon, RefreshCwIcon, XIcon } from "lucide-react"
+import {
+  Download as DownloadIcon,
+  RefreshCw as RefreshCwIcon,
+  X as XIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -44,7 +48,7 @@ export default function DashboardWidgetMenu() {
     <ContextMenu>
       <ContextMenuTrigger className="flex w-full max-w-sm flex-col gap-3 border p-4">
         <div className="flex items-baseline justify-between">
-          <span className="text-xs text-muted-foreground">Active users</span>
+          <span className="text-xs text-muted-foreground">designali.com visitors</span>
           <span className="text-[11px] text-muted-foreground">
             Last {range}
           </span>

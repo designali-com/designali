@@ -1,12 +1,15 @@
-import { ArrowRight, Check } from "lucide-react"
+import {
+  ArrowRight,
+  Check,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 
 const perks = [
   "Unlimited projects and collaborators",
   "Version history for 90 days",
-  "Export to React, Vue and plain HTML",
-  "Priority support from real engineers",
+  "Export to React, Next.js and Tailwind CSS",
+  "Priority support from the Designali studio",
 ]
 
 export default function CallToAction09() {
@@ -19,10 +22,10 @@ export default function CallToAction09() {
               14-day trial, no card
             </span>
             <h2 className="mt-5 text-3xl font-medium tracking-tight md:text-5xl">
-              Everything in Pro, free for two weeks.
+              Everything in Designali Pro, free for two weeks.
             </h2>
             <p className="mt-4 max-w-md text-sm leading-7 text-muted-foreground">
-              Spin up a workspace in under a minute. If Lumen is not saving your
+              Spin up a workspace in under a minute. If Designali is not saving your
               team hours by day fourteen, walk away and keep your exports.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">

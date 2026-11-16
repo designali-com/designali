@@ -1,33 +1,36 @@
 "use client"
 
 import { useState } from "react"
-import { ArrowRight, Play } from "lucide-react"
+import {
+  ArrowRight,
+  Play,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { cn } from "@workspace/ui/lib/utils"
 
 const features = [
   {
-    title: "Draft with AI",
-    body: "Describe the page you need and get a structured first draft in seconds, written in your brand voice.",
+    title: "Pick a template",
+    body: "Start from a Designali template — portfolio, design agency, resort or AI startup — built with Next.js and Tailwind CSS.",
     length: "0:48",
     gradient: "radial-gradient(circle at 20% 30%, var(--chart-1), transparent 55%), linear-gradient(135deg, var(--muted), var(--background))",
   },
   {
-    title: "Review together",
-    body: "Leave comments on any block, assign them to teammates and resolve threads without leaving the editor.",
+    title: "Copy a block",
+    body: "Browse 460+ blocks, copy the React code and drop it into your project. Icons come from @designali/icons.",
     length: "1:12",
     gradient: "radial-gradient(circle at 80% 30%, var(--chart-2), transparent 55%), linear-gradient(200deg, var(--muted), var(--background))",
   },
   {
-    title: "Publish anywhere",
-    body: "Push to your site, export to Markdown, or schedule a release for Monday morning with one click.",
+    title: "Make it yours",
+    body: "Swap semantic design tokens for your brand colours and type. Light and dark mode work out of the box.",
     length: "0:56",
     gradient: "radial-gradient(circle at 50% 80%, var(--chart-4), transparent 55%), linear-gradient(90deg, var(--muted), var(--background))",
   },
   {
-    title: "Measure what works",
-    body: "See read time, scroll depth and conversions per section, so you know which paragraphs earn their place.",
+    title: "Ship it",
+    body: "Deploy on Vercel in minutes. Design se code tak, without rebuilding a single section from scratch.",
     length: "1:05",
     gradient: "radial-gradient(circle at 30% 70%, var(--chart-5), transparent 55%), linear-gradient(300deg, var(--muted), var(--background))",
   },
@@ -41,8 +44,8 @@ export default function Media15() {
     <section className="w-full bg-background py-20">
       <div className="mx-auto max-w-7xl px-6">
         <div className="max-w-2xl">
-          <p className="text-xs tracking-widest text-muted-foreground uppercase">Product tour</p>
-          <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-5xl">Four short videos. The whole of Inkwell.</h2>
+          <p className="text-xs tracking-widest text-muted-foreground uppercase">Designali tour</p>
+          <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-5xl">Four short videos. The whole of Designali.</h2>
         </div>
         <div className="mt-12 grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.6fr)] lg:items-start">
           <div role="tablist" aria-orientation="vertical" className="flex flex-col">
@@ -69,8 +72,8 @@ export default function Media15() {
                 </span>
               </button>
             ))}
-            <Button variant="outline" className="mt-6 self-start" nativeButton={false} render={<a href="#" />}>
-              Start a free workspace <ArrowRight />
+            <Button variant="outline" className="mt-6 self-start" nativeButton={false} render={<a href="/blocks" />}>
+              Browse Designali blocks <ArrowRight />
             </Button>
           </div>
           <div role="tabpanel" className="group relative aspect-video overflow-hidden border border-border">

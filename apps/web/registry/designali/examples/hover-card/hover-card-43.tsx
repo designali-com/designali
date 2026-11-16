@@ -1,4 +1,6 @@
-import { GaugeIcon } from "lucide-react"
+import {
+  Gauge as GaugeIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import {
@@ -11,19 +13,19 @@ import { cn } from "@workspace/ui/lib/utils"
 const endpoints = [
   {
     method: "GET",
-    path: "/v1/invoices",
-    params: ["status", "limit", "cursor"],
+    path: "/v1/templates",
+    params: ["category", "limit", "cursor"],
     rate: "100 req/min",
   },
   {
     method: "POST",
-    path: "/v1/invoices",
-    params: ["customer_id", "items", "due_date"],
+    path: "/v1/templates",
+    params: ["name", "blocks", "framework"],
     rate: "30 req/min",
   },
   {
     method: "DELETE",
-    path: "/v1/invoices/:id",
+    path: "/v1/templates/:id",
     params: ["id"],
     rate: "10 req/min",
   },

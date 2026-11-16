@@ -1,11 +1,16 @@
 "use client"
 
 import { useState } from "react"
-import { ArrowRight, ChevronDown, Globe, X } from "lucide-react"
+import {
+  ArrowRight,
+  ChevronDown,
+  Globe,
+  X,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 
-const links = ["Platform", "Solutions", "Developers", "Pricing", "Company"]
+const links = ["Templates", "Blocks", "Icons", "Pricing", "Work"]
 
 export default function Navigation07() {
   const [banner, setBanner] = useState(true)
@@ -19,7 +24,7 @@ export default function Navigation07() {
               <span className="me-2 border border-background/30 px-1.5 py-0.5 text-[10px] tracking-widest uppercase">
                 Live
               </span>
-              Relay Summit keynote starts Thursday 10:00 PT.{" "}
+              Designali Live with Ali Imam starts Thursday.{" "}
               <a
                 href="#"
                 className="inline-flex items-center gap-1 font-medium underline underline-offset-4"
@@ -42,9 +47,9 @@ export default function Navigation07() {
 
       <div className="hidden border-b bg-muted/40 md:block">
         <div className="mx-auto flex h-9 max-w-7xl items-center justify-end gap-6 px-6 text-xs text-muted-foreground">
-          <a href="#" className="hover:text-foreground">Status: all systems normal</a>
+          <a href="#" className="hover:text-foreground">designali.com: all systems normal</a>
           <a href="#" className="hover:text-foreground">Support</a>
-          <a href="#" className="hover:text-foreground">Contact sales</a>
+          <a href="#" className="hover:text-foreground">hello@designali.com</a>
           <button type="button" className="flex items-center gap-1 hover:text-foreground">
             <Globe className="size-3.5" />
             English
@@ -62,7 +67,7 @@ export default function Navigation07() {
               <span className="bg-foreground/40" />
               <span className="bg-foreground" />
             </span>
-            Relay
+            designali
           </a>
           <ul className="hidden flex-1 items-center gap-6 lg:flex">
             {links.map((link) => (
@@ -81,7 +86,7 @@ export default function Navigation07() {
               Log in
             </Button>
             <Button nativeButton={false} render={<a href="#" />}>
-              Start building
+              Get Designali Pro
             </Button>
           </div>
         </div>

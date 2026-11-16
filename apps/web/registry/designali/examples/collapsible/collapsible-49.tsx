@@ -1,4 +1,8 @@
-import { ChevronDownIcon, Trash2Icon, TriangleAlertIcon } from "lucide-react"
+import {
+  ChevronDown as ChevronDownIcon,
+  Trash2 as Trash2Icon,
+  TriangleAlert as TriangleAlertIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {

@@ -1,12 +1,16 @@
-import { Globe, Smartphone, TabletSmartphone } from "lucide-react"
+import {
+  Globe,
+  Smartphone,
+  TabletSmartphone,
+} from "@designali/icons"
 
 const columns = [
-  { title: "Product", links: ["Flights", "Hotels", "Car rental", "Trains", "Gift cards"] },
-  { title: "Explore", links: ["City guides", "Weekend deals", "Travel insurance", "Visa checker", "Price alerts"] },
-  { title: "Business", links: ["Wayfare for teams", "Expense sync", "Travel policy", "Partners", "Affiliates"] },
-  { title: "Company", links: ["About", "Careers", "Press", "Sustainability", "Investors"] },
-  { title: "Support", links: ["Help centre", "Manage booking", "Refunds", "Accessibility", "Contact"] },
-  { title: "Legal", links: ["Terms", "Privacy", "Cookies", "Modern slavery", "Imprint"] },
+  { title: "Products", links: ["Templates", "Blocks", "UI Designs", "Landing Pages", "Pricing"] },
+  { title: "Assets", links: ["Icons", "Logos", "Illustration", "Bento", "Marquee"] },
+  { title: "Services", links: ["Brand identity", "UI/UX design", "Web development", "Design systems", "CGI & motion"] },
+  { title: "Studio", links: ["Work", "Ali Imam", "Blogs", "Dalim projects", "Contact"] },
+  { title: "Support", links: ["Docs", "Getting started", "Licensing", "Email support", "Contact"] },
+  { title: "Legal", links: ["Terms", "Privacy", "License", "Refunds", "Cookies"] },
 ]
 
 export default function Footer12() {
@@ -36,30 +40,28 @@ export default function Footer12() {
           <div className="flex flex-wrap gap-3">
             <a href="#" className="flex items-center gap-2 border bg-background px-3 py-2 text-xs hover:bg-muted">
               <Smartphone className="size-4" />
-              Get the iOS app
+              iPhone mockups
             </a>
             <a href="#" className="flex items-center gap-2 border bg-background px-3 py-2 text-xs hover:bg-muted">
               <TabletSmartphone className="size-4" />
-              Get the Android app
+              iPad mockups
             </a>
           </div>
           <label className="flex w-fit items-center gap-2 border bg-background px-3 py-2 text-xs">
             <Globe className="size-4 text-muted-foreground" />
             <select aria-label="Region and language" className="bg-transparent outline-none">
-              <option>United Kingdom / English</option>
-              <option>Deutschland / Deutsch</option>
-              <option>France / Francais</option>
-              <option>Espana / Espanol</option>
+              <option>Global / English</option>
+              <option>India / English</option>
             </select>
           </label>
         </div>
 
         <div className="mt-8 flex flex-col gap-2 text-xs text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
           <p className="flex items-center gap-2">
-            <span className="font-semibold text-foreground">Wayfare</span>
-            © 2026 Wayfare Travel Group B.V.
+            <span className="font-semibold text-foreground">designali</span>
+            © 2026 Designali
           </p>
-          <p>Prices shown include taxes and fees. Package holidays are financially protected.</p>
+          <p>Designed and built by Ali Imam. Design se code tak.</p>
         </div>
       </div>
     </footer>

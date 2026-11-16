@@ -1,12 +1,14 @@
 "use client"
 
 import * as React from "react"
-import { XIcon } from "lucide-react"
+import {
+  X as XIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import { Button } from "@workspace/ui/components/button"
 
-const initial = ["Remote", "Full-time", "Senior", "Design", "Europe"]
+const initial = ["Templates", "Blocks", "Next.js", "Tailwind CSS", "Free"]
 
 export default function RemovableFilterChips() {
   const [filters, setFilters] = React.useState(initial)

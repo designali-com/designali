@@ -3,32 +3,32 @@ const releases = [
     version: "v4.2.0",
     date: "Nov 04, 2026",
     tag: "Feature",
-    title: "Multiplayer comments on prototypes",
+    title: "460+ blocks on designali.com",
     items: [
-      "Pin comments to any frame while in presentation mode",
-      "Resolve threads directly from the inbox",
-      "New keyboard shortcut: C to start a comment",
+      "New hero, pricing and testimonial blocks",
+      "Copy any block as React and Tailwind code",
+      "Every block now uses @designali/icons",
     ],
   },
   {
     version: "v4.1.3",
     date: "Oct 21, 2026",
     tag: "Fix",
-    title: "Export and performance fixes",
+    title: "Icon and logo fixes",
     items: [
-      "SVG exports now preserve stroke alignment",
-      "Large files open up to 40% faster",
+      "@designali/icons SVGs now preserve stroke alignment",
+      "@designali/logos wordmarks render sharper at small sizes",
     ],
   },
   {
     version: "v4.1.0",
     date: "Oct 02, 2026",
     tag: "Improvement",
-    title: "Variables, revisited",
+    title: "Templates, revisited",
     items: [
-      "Group variables into collections with modes",
-      "Bulk-rename variables with find and replace",
-      "Variables now sync to the code export",
+      "Portfolio and design agency templates refreshed",
+      "240+ landing pages with dark mode",
+      "Semantic design tokens across every template",
     ],
   },
 ]
@@ -39,7 +39,7 @@ export default function Lists02() {
       <div className="mx-auto max-w-4xl px-6">
         <h2 className="text-4xl font-semibold tracking-tight">Changelog</h2>
         <p className="mt-3 text-sm text-muted-foreground">
-          New updates and improvements, shipped every other week.
+          New Designali templates, blocks and icons, shipped every other week.
         </p>
 
         <div className="mt-14 divide-y divide-border border-y border-border">

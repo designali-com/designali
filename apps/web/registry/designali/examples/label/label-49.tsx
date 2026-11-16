@@ -7,7 +7,7 @@ export default function WrappingLabelImplicit() {
     <form className="flex w-full max-w-sm flex-col gap-4">
       <Label className="flex-col items-start gap-2">
         Display name
-        <Input defaultValue="Wren Abbott" />
+        <Input defaultValue="Ali Imam" />
       </Label>
       <Label className="flex-col items-start gap-2">
         Pronouns

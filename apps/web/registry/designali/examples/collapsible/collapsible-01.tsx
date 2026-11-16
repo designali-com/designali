@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { ChevronsUpDown } from "lucide-react"
+import {
+  ChevronsUpDown,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -20,7 +22,7 @@ export function CollapsibleDemo() {
       className="flex w-[350px] flex-col gap-2"
     >
       <div className="flex items-center justify-between gap-4 px-4">
-        <h4 className="text-sm font-semibold">Order #4189</h4>
+        <h4 className="text-sm font-semibold">Order #DA-4189</h4>
         <CollapsibleTrigger
           render={
             <Button variant="ghost" size="icon" className="size-8">
@@ -32,16 +34,16 @@ export function CollapsibleDemo() {
       </div>
       <div className="flex items-center justify-between border px-4 py-2 text-sm">
         <span className="text-muted-foreground">Status</span>
-        <span className="font-medium">Shipped</span>
+        <span className="font-medium">Delivered</span>
       </div>
       <CollapsibleContent className="flex flex-col gap-2">
         <div className="border px-4 py-2 text-sm">
-          <p className="font-medium">Shipping address</p>
-          <p className="text-muted-foreground">100 Market St, San Francisco</p>
+          <p className="font-medium">Delivered to</p>
+          <p className="text-muted-foreground">client@example.com</p>
         </div>
         <div className="border px-4 py-2 text-sm">
           <p className="font-medium">Items</p>
-          <p className="text-muted-foreground">2x Studio Headphones</p>
+          <p className="text-muted-foreground">1x Designali Pro Template License</p>
         </div>
       </CollapsibleContent>
     </Collapsible>

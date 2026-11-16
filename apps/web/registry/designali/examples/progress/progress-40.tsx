@@ -6,10 +6,10 @@ import {
 } from "@workspace/ui/components/progress"
 
 const milestones = [
-  { title: "Offline mode", quarter: "Q1", value: 100 },
-  { title: "Shared workspaces", quarter: "Q2", value: 72 },
-  { title: "Public API v2", quarter: "Q3", value: 30 },
-  { title: "Desktop app", quarter: "Q4", value: 5 },
+  { title: "More Apple device mockups", quarter: "Q1", value: 100 },
+  { title: "Illustrations library", quarter: "Q2", value: 72 },
+  { title: "Figma kits for every block", quarter: "Q3", value: 30 },
+  { title: "AI workflow templates", quarter: "Q4", value: 5 },
 ]
 
 export default function QuarterlyMilestones() {

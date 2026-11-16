@@ -1,10 +1,10 @@
 import {
-  FileJsonIcon,
-  FileTextIcon,
-  FileVideoIcon,
-  PaletteIcon,
-  SheetIcon,
-} from "lucide-react"
+  FileBraces as FileJsonIcon,
+  FileText as FileTextIcon,
+  FileVideoCamera as FileVideoIcon,
+  Palette as PaletteIcon,
+  Sheet as SheetIcon,
+} from "@designali/icons"
 
 import {
   Command,
@@ -17,32 +17,32 @@ import {
 
 const files = [
   {
-    name: "Q3 roadmap.pdf",
-    path: "Planning / 2026",
+    name: "designali-brief.pdf",
+    path: "Clients / Briefs",
     edited: "2m ago",
     icon: FileTextIcon,
   },
   {
-    name: "brand-colors.fig",
+    name: "designali-brand.fig",
     path: "Design / Brand",
     edited: "1h ago",
     icon: PaletteIcon,
   },
   {
-    name: "revenue-model.xlsx",
-    path: "Finance",
+    name: "template-sales.xlsx",
+    path: "Studio / Finance",
     edited: "Yesterday",
     icon: SheetIcon,
   },
   {
-    name: "onboarding-flow.mp4",
-    path: "Research / Videos",
+    name: "colorful-spheres.mp4",
+    path: "Motion / Videos",
     edited: "Mon",
     icon: FileVideoIcon,
   },
   {
-    name: "api-schema.json",
-    path: "Engineering / Specs",
+    name: "registry.json",
+    path: "Code / Registry",
     edited: "Oct 28",
     icon: FileJsonIcon,
   },

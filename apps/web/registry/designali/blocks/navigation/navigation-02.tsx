@@ -8,7 +8,7 @@ import {
   Settings,
   Star,
   User,
-} from "lucide-react"
+} from "@designali/icons"
 
 import { cn } from "@workspace/ui/lib/utils"
 
@@ -34,9 +34,9 @@ const groups = [
 ]
 
 const projects = [
-  { name: "Website refresh", color: "bg-chart-1" },
-  { name: "Mobile onboarding", color: "bg-chart-2" },
-  { name: "Q3 campaign", color: "bg-chart-3" },
+  { name: "designali.com refresh", color: "bg-chart-1" },
+  { name: "Dalim UI kit", color: "bg-chart-2" },
+  { name: "Portfolio template", color: "bg-chart-3" },
 ]
 
 export default function Navigation02() {
@@ -45,9 +45,9 @@ export default function Navigation02() {
       <aside className="flex w-64 shrink-0 flex-col border-e bg-muted/30">
         <div className="flex h-14 items-center gap-2 border-b px-5 font-semibold">
           <span className="flex size-6 items-center justify-center bg-primary text-xs text-primary-foreground">
-            A
+            D
           </span>
-          Acme Inc.
+          Designali
         </div>
         <nav className="flex-1 space-y-6 p-3">
           {groups.map((group) => (
@@ -97,11 +97,11 @@ export default function Navigation02() {
         </nav>
         <div className="flex items-center gap-3 border-t p-4">
           <span className="flex size-8 items-center justify-center rounded-full bg-muted text-xs font-medium">
-            EN
+            AI
           </span>
           <div className="min-w-0 flex-1 text-sm">
-            <p className="truncate font-medium">Elena Novak</p>
-            <p className="truncate text-xs text-muted-foreground">elena@acme.com</p>
+            <p className="truncate font-medium">Ali Imam</p>
+            <p className="truncate text-xs text-muted-foreground">ali@designali.com</p>
           </div>
           <a href="#" aria-label="Sign out" className="text-muted-foreground hover:text-foreground">
             <LogOut className="size-4" />

@@ -1,16 +1,19 @@
-import { ArrowDownRight, ArrowUpRight } from "lucide-react"
+import {
+  ArrowDownRight,
+  ArrowUpRight,
+} from "@designali/icons"
 
 import { cn } from "@workspace/ui/lib/utils"
 
 const cards = [
   {
-    label: "Net revenue",
+    label: "Template sales",
     value: "$1.28M",
     change: 14.2,
     data: [12, 14, 13, 17, 16, 19, 22, 21, 24, 26, 25, 29],
   },
   {
-    label: "New customers",
+    label: "New Designali customers",
     value: "3,416",
     change: 8.7,
     data: [30, 28, 33, 31, 36, 35, 38, 41, 39, 44, 43, 47],
@@ -22,7 +25,7 @@ const cards = [
     data: [28, 26, 27, 24, 25, 22, 21, 22, 19, 18, 18, 16],
   },
   {
-    label: "Support backlog",
+    label: "Open support tickets",
     value: "214",
     change: 11.3,
     data: [14, 15, 13, 16, 18, 17, 21, 20, 23, 22, 25, 27],
@@ -68,7 +71,7 @@ export default function Analytics06() {
               Last 12 weeks at a glance
             </h2>
             <p className="mt-1 text-sm text-muted-foreground">
-              Lumen Supply Co. storefront, all sales channels combined.
+              designali.com store: templates, blocks, icons and UI kits combined.
             </p>
           </div>
           <span className="text-xs text-muted-foreground">Week 46, 2026</span>

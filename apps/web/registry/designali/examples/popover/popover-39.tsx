@@ -1,7 +1,11 @@
 "use client"
 
 import * as React from "react"
-import { CalendarClockIcon, ChevronDownIcon, SendIcon } from "lucide-react"
+import {
+  CalendarClock as CalendarClockIcon,
+  ChevronDown as ChevronDownIcon,
+  Send as SendIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { ButtonGroup } from "@workspace/ui/components/button-group"

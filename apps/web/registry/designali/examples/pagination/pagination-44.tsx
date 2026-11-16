@@ -2,15 +2,15 @@
 
 import * as React from "react"
 import {
-  ChevronLeftIcon,
-  ChevronRightIcon,
-  FileArchiveIcon,
-  FileAudioIcon,
-  FileSpreadsheetIcon,
-  FileTextIcon,
-  FileVideoIcon,
-  FolderIcon,
-} from "lucide-react"
+  ChevronLeft as ChevronLeftIcon,
+  ChevronRight as ChevronRightIcon,
+  FileArchive as FileArchiveIcon,
+  FileMusic as FileAudioIcon,
+  FileSpreadsheet as FileSpreadsheetIcon,
+  FileText as FileTextIcon,
+  FileVideoCamera as FileVideoIcon,
+  Folder as FolderIcon,
+} from "@designali/icons"
 
 import {
   Pagination,
@@ -20,14 +20,14 @@ import {
 } from "@workspace/ui/components/pagination"
 
 const files = [
-  { name: "brand-guidelines.pdf", size: "4.2 MB", icon: FileTextIcon },
-  { name: "q4-forecast.xlsx", size: "860 KB", icon: FileSpreadsheetIcon },
-  { name: "launch-teaser.mp4", size: "38 MB", icon: FileVideoIcon },
-  { name: "logo-pack.zip", size: "12 MB", icon: FileArchiveIcon },
-  { name: "meeting-notes.md", size: "14 KB", icon: FileTextIcon },
-  { name: "survey-results.csv", size: "220 KB", icon: FileSpreadsheetIcon },
-  { name: "intro-voiceover.wav", size: "9.1 MB", icon: FileAudioIcon },
-  { name: "press-kit.zip", size: "26 MB", icon: FileArchiveIcon },
+  { name: "designali-brand-guidelines.pdf", size: "4.2 MB", icon: FileTextIcon },
+  { name: "project-estimate.xlsx", size: "860 KB", icon: FileSpreadsheetIcon },
+  { name: "colorful-spheres.mp4", size: "38 MB", icon: FileVideoIcon },
+  { name: "designali-logos.zip", size: "12 MB", icon: FileArchiveIcon },
+  { name: "client-kickoff-notes.md", size: "14 KB", icon: FileTextIcon },
+  { name: "icon-usage.csv", size: "220 KB", icon: FileSpreadsheetIcon },
+  { name: "showreel-voiceover.wav", size: "9.1 MB", icon: FileAudioIcon },
+  { name: "designali-press-kit.zip", size: "26 MB", icon: FileArchiveIcon },
 ]
 
 const PAGE_SIZE = 4
@@ -40,9 +40,9 @@ export default function FileManagerPagination() {
   return (
     <div className="flex w-full max-w-sm flex-col border">
       <div className="flex items-center gap-1.5 border-b px-3 py-2 text-xs text-muted-foreground">
-        <FolderIcon className="size-3.5" /> Marketing{" "}
+        <FolderIcon className="size-3.5" /> Designali{" "}
         <ChevronRightIcon className="size-3" />
-        <span className="text-foreground">Launch</span>
+        <span className="text-foreground">Brand assets</span>
       </div>
       <ul className="flex flex-col divide-y">
         {rows.map((file) => (

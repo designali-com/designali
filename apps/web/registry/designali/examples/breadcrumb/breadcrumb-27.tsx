@@ -1,4 +1,8 @@
-import { ArrowRightIcon, ChevronsRightIcon, DotIcon } from "lucide-react"
+import {
+  ArrowRight as ArrowRightIcon,
+  ChevronsRight as ChevronsRightIcon,
+  Dot as DotIcon,
+} from "@designali/icons"
 
 import {
   Breadcrumb,

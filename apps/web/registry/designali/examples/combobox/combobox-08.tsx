@@ -13,26 +13,26 @@ import {
 type Member = { id: string; name: string; email: string; initials: string }
 
 const members: Member[] = [
-  { id: "1", name: "Maya Chen", email: "maya@northwind.test", initials: "MC" },
+  { id: "1", name: "Ali Imam", email: "ali@designali.com", initials: "AI" },
   {
     id: "2",
-    name: "Arjun Patel",
-    email: "arjun@northwind.test",
-    initials: "AP",
+    name: "Sara Designer",
+    email: "sara@designali.com",
+    initials: "SD",
   },
   {
     id: "3",
-    name: "Sofia Martins",
-    email: "sofia@northwind.test",
-    initials: "SM",
+    name: "Omar Developer",
+    email: "omar@designali.com",
+    initials: "OD",
   },
   {
     id: "4",
-    name: "Kwame Asante",
-    email: "kwame@northwind.test",
-    initials: "KA",
+    name: "Nina Motion",
+    email: "nina@designali.com",
+    initials: "NM",
   },
-  { id: "5", name: "Lina Berg", email: "lina@northwind.test", initials: "LB" },
+  { id: "5", name: "Leo Brand", email: "leo@designali.com", initials: "LB" },
 ]
 
 export default function AssigneePicker() {

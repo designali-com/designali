@@ -2,12 +2,12 @@
 
 import * as React from "react"
 import {
-  CopyPlusIcon,
-  FileOutputIcon,
-  RotateCcwIcon,
-  RotateCwIcon,
-  TrashIcon,
-} from "lucide-react"
+  CopyPlus as CopyPlusIcon,
+  FileOutput as FileOutputIcon,
+  RotateCcw as RotateCcwIcon,
+  RotateCw as RotateCwIcon,
+  Trash as TrashIcon,
+} from "@designali/icons"
 
 import {
   ContextMenu,

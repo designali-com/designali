@@ -1,7 +1,15 @@
 "use client"
 
 import { useState } from "react"
-import { ArrowLeftRight, Calendar, Contact, FileText, Info, Mail, ShieldCheck } from "lucide-react"
+import {
+  ArrowLeftRight,
+  Calendar,
+  Contact,
+  FileText,
+  Info,
+  Mail,
+  ShieldCheck,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Checkbox } from "@workspace/ui/components/checkbox"
@@ -10,8 +18,8 @@ import { cn } from "@workspace/ui/lib/utils"
 const scopes = [
   { id: "profile", icon: Contact, label: "View your name and profile photo", required: true },
   { id: "email", icon: Mail, label: "View your email address", required: true },
-  { id: "calendar", icon: Calendar, label: "Read and create events on your calendars", required: false },
-  { id: "files", icon: FileText, label: "Read documents you choose to share", required: false },
+  { id: "calendar", icon: Calendar, label: "Read and update your Designali projects", required: false },
+  { id: "files", icon: FileText, label: "Read templates and UI kits you choose to share", required: false },
 ]
 
 export default function Authentication16() {
@@ -26,18 +34,18 @@ export default function Authentication16() {
       <div className="w-full max-w-md border bg-background">
         <div className="flex items-center justify-center gap-4 border-b px-6 py-8">
           <span className="flex size-14 items-center justify-center bg-gradient-to-br from-orange-400 to-pink-500 text-lg font-bold text-white">
-            Mx
+            Fg
           </span>
           <ArrowLeftRight className="size-5 text-muted-foreground" />
           <span className="flex size-14 items-center justify-center bg-foreground text-lg font-bold text-background">
-            Pl
+            da
           </span>
         </div>
         <div className="space-y-6 p-6 sm:p-8">
           <div className="text-center">
-            <h2 className="text-xl font-semibold tracking-tight">Meetmix wants to access your Plenum account</h2>
+            <h2 className="text-xl font-semibold tracking-tight">Figma Sync wants to access your Designali account</h2>
             <p className="mt-2 text-sm text-muted-foreground">
-              Signed in as <span className="text-foreground">ines.carvalho@plenum.work</span>{" "}
+              Signed in as <span className="text-foreground">ali@designali.com</span>{" "}
               <a href="#" className="underline underline-offset-4">Not you?</a>
             </p>
           </div>
@@ -79,7 +87,7 @@ export default function Authentication16() {
         </div>
         <p className="flex items-center justify-center gap-1.5 border-t p-4 text-xs text-muted-foreground">
           <ShieldCheck className="size-3.5" />
-          You&apos;ll be redirected to meetmix.app
+          You&apos;ll be redirected to figma-sync.example.com
         </p>
       </div>
     </section>

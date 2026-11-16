@@ -1,7 +1,11 @@
 "use client"
 
 import * as React from "react"
-import { MinusIcon, PlusIcon, ReceiptIcon } from "lucide-react"
+import {
+  Minus as MinusIcon,
+  Plus as PlusIcon,
+  Receipt as ReceiptIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -37,7 +41,7 @@ export default function SplitBillDrawer() {
       <DrawerContent>
         <div className="mx-auto flex w-full max-w-sm flex-col">
           <DrawerHeader>
-            <DrawerTitle>Table 12 · Osteria Lupa</DrawerTitle>
+            <DrawerTitle>Designali studio lunch</DrawerTitle>
             <DrawerDescription>
               Bill before tip: {"$" + bill.toFixed(2)}
             </DrawerDescription>

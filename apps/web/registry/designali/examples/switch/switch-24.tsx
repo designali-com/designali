@@ -15,14 +15,14 @@ import { Switch } from "@workspace/ui/components/switch"
 const addOns = [
   {
     id: "gift",
-    label: "Gift wrap",
-    description: "Recycled paper and a handwritten note",
+    label: "Figma source file",
+    description: "Editable Figma file for the template",
     price: 4,
   },
   {
     id: "protection",
-    label: "Shipping protection",
-    description: "Covers loss, theft, and damage",
+    label: "Priority support",
+    description: "Direct help from the Designali team",
     price: 2.5,
   },
 ]

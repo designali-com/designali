@@ -18,7 +18,7 @@ export default function TextareaCharacterCount() {
         value={value}
         maxLength={max}
         onChange={(e) => setValue(e.target.value)}
-        placeholder="What are you working on?"
+        placeholder="What are you designing at Designali today?"
       />
       <p
         className={cn(

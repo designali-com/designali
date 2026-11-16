@@ -2,13 +2,13 @@
 
 import * as React from "react"
 import {
-  CheckIcon,
-  CircleCheckIcon,
-  CircleDashedIcon,
-  CircleDotIcon,
-  CircleEllipsisIcon,
-  CircleIcon,
-} from "lucide-react"
+  Check as CheckIcon,
+  CircleCheck as CircleCheckIcon,
+  CircleDashed as CircleDashedIcon,
+  CircleDot as CircleDotIcon,
+  CircleEllipsis as CircleEllipsisIcon,
+  Circle as CircleIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -57,9 +57,9 @@ export default function IssueStatusPopover() {
 
   return (
     <div className="flex w-full max-w-sm items-center gap-2 border p-3">
-      <span className="font-mono text-xs text-muted-foreground">ENG-318</span>
+      <span className="font-mono text-xs text-muted-foreground">DSN-318</span>
       <span className="flex-1 truncate text-xs">
-        Retry failed invoice webhooks
+        Fix dark mode on pricing blocks
       </span>
       <Popover open={open} onOpenChange={setOpen}>
         <PopoverTrigger render={<Button variant="outline" size="sm" />}>

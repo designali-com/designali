@@ -1,4 +1,6 @@
-import { UserPlusIcon } from "lucide-react"
+import {
+  UserPlus as UserPlusIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -32,7 +34,7 @@ export default function InviteTeammatesDialog() {
       </DialogTrigger>
       <DialogContent>
         <DialogHeader>
-          <DialogTitle>Invite to Northwind Studio</DialogTitle>
+          <DialogTitle>Invite to Designali Studio</DialogTitle>
           <DialogDescription>
             Invitations expire after 7 days. Separate multiple emails with
             commas.
@@ -43,7 +45,7 @@ export default function InviteTeammatesDialog() {
             <FieldLabel htmlFor="invite-emails">Email addresses</FieldLabel>
             <Textarea
               id="invite-emails"
-              placeholder="lena@northwind.dev, omar@northwind.dev"
+              placeholder="ali@designali.com, hello@designali.com"
               className="min-h-20"
             />
           </Field>

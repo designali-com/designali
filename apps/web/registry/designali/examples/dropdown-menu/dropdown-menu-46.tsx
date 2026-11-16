@@ -1,7 +1,11 @@
 "use client"
 
 import * as React from "react"
-import { ArrowUpIcon, ChevronDownIcon, SparklesIcon } from "lucide-react"
+import {
+  ArrowUp as ArrowUpIcon,
+  ChevronDown as ChevronDownIcon,
+  Sparkles as SparklesIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import { Button } from "@workspace/ui/components/button"
@@ -17,20 +21,20 @@ import {
 const models = [
   {
     id: "swift",
-    name: "Swift 2",
-    hint: "Fast answers for everyday tasks",
+    name: "Designali Draft",
+    hint: "Quick copy and layout ideas",
     badge: "Fast",
   },
   {
     id: "atlas",
-    name: "Atlas 4",
-    hint: "Balanced reasoning and speed",
+    name: "Designali Design",
+    hint: "Balanced design-to-code workflow",
     badge: "Default",
   },
   {
     id: "summit",
-    name: "Summit 4 Pro",
-    hint: "Deep analysis and long documents",
+    name: "Designali Pro",
+    hint: "Full pages, blocks and brand systems",
     badge: "Pro",
   },
 ]
@@ -42,7 +46,7 @@ export default function ChatModelPickerMenu() {
   return (
     <div className="flex w-full max-w-md flex-col gap-2 border p-2">
       <textarea
-        placeholder="Ask anything..."
+        placeholder="Ask Designali anything..."
         rows={2}
         className="resize-none bg-transparent px-1 text-xs outline-none placeholder:text-muted-foreground"
       />

@@ -1,4 +1,7 @@
-import { ChevronDownIcon, MessageCircleIcon } from "lucide-react"
+import {
+  ChevronDown as ChevronDownIcon,
+  MessageCircle as MessageCircleIcon,
+} from "@designali/icons"
 
 import {
   Accordion,
@@ -18,17 +21,17 @@ const teams = [
     value: "design",
     name: "Design",
     members: [
-      { name: "Ivy Tran", role: "Design lead" },
-      { name: "Noah Becker", role: "Product designer" },
-      { name: "Sana Malik", role: "Brand designer" },
+      { name: "Ali Imam", role: "Founder & design engineer" },
+      { name: "Sara Khan", role: "UI/UX designer" },
+      { name: "Omar Rahman", role: "Brand designer" },
     ],
   },
   {
     value: "engineering",
-    name: "Engineering",
+    name: "Development",
     members: [
-      { name: "Marcus Hale", role: "Staff engineer" },
-      { name: "Elena Ruiz", role: "Frontend engineer" },
+      { name: "Zaid Ahmed", role: "Next.js developer" },
+      { name: "Nina Das", role: "Creative developer" },
     ],
   },
 ]

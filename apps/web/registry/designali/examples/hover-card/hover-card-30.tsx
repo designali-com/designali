@@ -5,7 +5,7 @@ import {
 } from "@workspace/ui/components/hover-card"
 
 const swatches = [
-  { token: "brand-500", hex: "#6366F1", contrast: "4.6:1 AA" },
+  { token: "brand-500", hex: "#00A8FF", contrast: "2.6:1 Fail" },
   { token: "success-500", hex: "#10B981", contrast: "3.1:1 AA Large" },
   { token: "warning-500", hex: "#F59E0B", contrast: "2.2:1 Fail" },
   { token: "danger-500", hex: "#EF4444", contrast: "3.8:1 AA Large" },

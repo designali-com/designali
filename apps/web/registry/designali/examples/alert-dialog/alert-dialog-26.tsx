@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { Trash2Icon } from "lucide-react"
+import {
+  Trash2 as Trash2Icon,
+} from "@designali/icons"
 
 import {
   AlertDialog,
@@ -25,9 +27,9 @@ import {
 } from "@workspace/ui/components/table"
 
 const initialInvoices = [
-  { id: "INV-1042", client: "Harbor & Pine", amount: "$1,250.00" },
-  { id: "INV-1043", client: "Sunfield Co.", amount: "$860.00" },
-  { id: "INV-1044", client: "Kite Robotics", amount: "$3,400.00" },
+  { id: "INV-1042", client: "Designali client — Brand identity", amount: "$1,250.00" },
+  { id: "INV-1043", client: "Designali client — UI/UX", amount: "$860.00" },
+  { id: "INV-1044", client: "Designali client — Next.js site", amount: "$3,400.00" },
 ]
 
 export default function TableRowDeleteConfirm() {

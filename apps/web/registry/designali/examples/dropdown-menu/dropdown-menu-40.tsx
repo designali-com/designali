@@ -2,13 +2,13 @@
 
 import * as React from "react"
 import {
-  ArrowDownIcon,
-  ArrowUpIcon,
-  ChevronsUpDownIcon,
-  EyeOffIcon,
-  PinIcon,
-  XIcon,
-} from "lucide-react"
+  ArrowDown as ArrowDownIcon,
+  ArrowUp as ArrowUpIcon,
+  ChevronsUpDown as ChevronsUpDownIcon,
+  EyeOff as EyeOffIcon,
+  Pin as PinIcon,
+  X as XIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {

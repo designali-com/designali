@@ -1,7 +1,9 @@
 "use client"
 
 import { REGEXP_ONLY_DIGITS_AND_CHARS } from "input-otp"
-import { BuildingIcon } from "lucide-react"
+import {
+  Building as BuildingIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Field, FieldLabel } from "@workspace/ui/components/field"
@@ -27,7 +29,7 @@ export default function WorkspaceInviteCode() {
           <BuildingIcon />
         </ItemMedia>
         <ItemContent>
-          <ItemTitle>Tidewater Studio</ItemTitle>
+          <ItemTitle>Designali Studio</ItemTitle>
           <ItemDescription>38 members · Design team</ItemDescription>
         </ItemContent>
       </Item>

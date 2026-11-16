@@ -22,7 +22,7 @@ export default function StickyNoteTextarea() {
       )}
     >
       <Textarea
-        defaultValue="Retro Thursday: bring one thing that went well and one thing to change."
+        defaultValue="Designali studio retro: bring one thing that went well and one thing to change."
         className="min-h-32 border-0 bg-transparent text-sm focus-visible:ring-0 dark:bg-transparent"
         aria-label="Sticky note"
       />

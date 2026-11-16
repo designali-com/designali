@@ -1,6 +1,9 @@
 "use client"
 
-import { TrendingDownIcon, TrendingUpIcon } from "lucide-react"
+import {
+  TrendingDown as TrendingDownIcon,
+  TrendingUp as TrendingUpIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -71,7 +74,7 @@ export default function PriceAlertDataToast() {
           variant="outline"
           size="sm"
           onClick={() =>
-            notify.add({ data: { symbol: "NOVA", price: 184.2, change: 4.3 } })
+            notify.add({ data: { symbol: "Designali Pro", price: 49, change: 12 } })
           }
         >
           Rise alert
@@ -80,7 +83,7 @@ export default function PriceAlertDataToast() {
           variant="outline"
           size="sm"
           onClick={() =>
-            notify.add({ data: { symbol: "KITE", price: 22.75, change: -6.1 } })
+            notify.add({ data: { symbol: "Icons Bundle", price: 19, change: -30 } })
           }
         >
           Drop alert

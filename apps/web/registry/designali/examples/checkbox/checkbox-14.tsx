@@ -1,22 +1,26 @@
 "use client"
 
 import * as React from "react"
-import { ArchiveIcon, MailOpenIcon, Trash2Icon } from "lucide-react"
+import {
+  Archive as ArchiveIcon,
+  MailOpen as MailOpenIcon,
+  Trash2 as Trash2Icon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Checkbox } from "@workspace/ui/components/checkbox"
 import { cn } from "@workspace/ui/lib/utils"
 
 const messages = [
-  { id: "1", from: "Rina Patel", subject: "Contract draft v2", time: "9:41" },
-  { id: "2", from: "Billing", subject: "Your November invoice", time: "8:12" },
+  { id: "1", from: "Ali Imam", subject: "Brand identity draft v2", time: "9:41" },
+  { id: "2", from: "Billing", subject: "Your Designali November invoice", time: "8:12" },
   {
     id: "3",
-    from: "Leo Martin",
-    subject: "Lunch on Thursday?",
+    from: "Sara (Designer)",
+    subject: "Figma review on Thursday?",
     time: "Yesterday",
   },
-  { id: "4", from: "Status Bot", subject: "Weekly uptime report", time: "Mon" },
+  { id: "4", from: "Status Bot", subject: "Weekly designali.com uptime report", time: "Mon" },
 ]
 
 export default function InboxBulkActions() {

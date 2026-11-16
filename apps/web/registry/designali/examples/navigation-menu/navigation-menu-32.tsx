@@ -1,4 +1,8 @@
-import { DumbbellIcon, FootprintsIcon, SunriseIcon } from "lucide-react"
+import {
+  PenTool as PenToolIcon,
+  Code as CodeIcon,
+  LayoutTemplate as LayoutTemplateIcon,
+} from "@designali/icons"
 
 import {
   NavigationMenu,
@@ -12,9 +16,9 @@ import {
 import { cn } from "@workspace/ui/lib/utils"
 
 const programs = [
-  { title: "Strength foundations", weeks: 6, intensity: 2, icon: DumbbellIcon },
-  { title: "Morning yoga flow", weeks: 4, intensity: 1, icon: SunriseIcon },
-  { title: "Couch to 10K", weeks: 10, intensity: 3, icon: FootprintsIcon },
+  { title: "Brand identity sprint", weeks: 6, intensity: 2, icon: PenToolIcon },
+  { title: "Figma UI design", weeks: 4, intensity: 1, icon: LayoutTemplateIcon },
+  { title: "Next.js website build", weeks: 10, intensity: 3, icon: CodeIcon },
 ]
 
 export default function FitnessProgramsNav() {
@@ -22,7 +26,7 @@ export default function FitnessProgramsNav() {
     <NavigationMenu>
       <NavigationMenuList>
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Programs</NavigationMenuTrigger>
+          <NavigationMenuTrigger>Engagements</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="flex w-72 flex-col gap-1">
               {programs.map((p) => (
@@ -59,7 +63,7 @@ export default function FitnessProgramsNav() {
         </NavigationMenuItem>
         <NavigationMenuItem>
           <NavigationMenuLink href="#" className={navigationMenuTriggerStyle()}>
-            Coaches
+            Studio
           </NavigationMenuLink>
         </NavigationMenuItem>
       </NavigationMenuList>

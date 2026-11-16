@@ -1,4 +1,7 @@
-import { CodeIcon, CopyIcon } from "lucide-react"
+import {
+  Code as CodeIcon,
+  Copy as CopyIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -28,7 +31,7 @@ export default function TabbedEmbedDialog() {
       </DialogTrigger>
       <DialogContent className="sm:max-w-md">
         <DialogHeader>
-          <DialogTitle>Share &quot;Monthly active users&quot;</DialogTitle>
+          <DialogTitle>Share &quot;designali.com visitors&quot;</DialogTitle>
         </DialogHeader>
         <Tabs defaultValue="link">
           <TabsList className="w-full">
@@ -39,7 +42,7 @@ export default function TabbedEmbedDialog() {
           <TabsContent value="link" className="flex flex-col gap-3 pt-3">
             <Input
               readOnly
-              value="https://charts.metricly.io/s/mau-q4"
+              value="https://www.designali.com/s/visitors-q4"
               aria-label="Public link"
             />
             <Field orientation="horizontal">
@@ -52,7 +55,7 @@ export default function TabbedEmbedDialog() {
           <TabsContent value="embed" className="flex flex-col gap-3 pt-3">
             <pre className="overflow-x-auto border bg-muted p-3 font-mono text-[11px]">
               {
-                '<iframe src="https://charts.metricly.io/e/mau-q4" width="600" height="400"></iframe>'
+                '<iframe src="https://www.designali.com/e/visitors-q4" width="600" height="400"></iframe>'
               }
             </pre>
             <Button variant="outline" size="sm" className="self-start">
@@ -63,7 +66,7 @@ export default function TabbedEmbedDialog() {
           <TabsContent value="email" className="flex flex-col gap-3 pt-3">
             <Input
               type="email"
-              placeholder="colleague@company.com"
+              placeholder="hello@designali.com"
               aria-label="Recipient"
             />
             <Textarea placeholder="Add a note (optional)" aria-label="Note" />

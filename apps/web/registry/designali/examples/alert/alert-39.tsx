@@ -2,12 +2,12 @@
 
 import * as React from "react"
 import {
-  BellIcon,
-  CircleCheckIcon,
-  CircleXIcon,
-  InfoIcon,
-  TriangleAlertIcon,
-} from "lucide-react"
+  Bell as BellIcon,
+  CircleCheck as CircleCheckIcon,
+  CircleX as CircleXIcon,
+  Info as InfoIcon,
+  TriangleAlert as TriangleAlertIcon,
+} from "@designali/icons"
 
 import {
   Alert,
@@ -21,25 +21,25 @@ const variants = [
     value: "default" as const,
     icon: BellIcon,
     title: "Heads up",
-    body: "Your weekly report is ready to view.",
+    body: "Your weekly Designali sales report is ready.",
   },
   {
     value: "info" as const,
     icon: InfoIcon,
     title: "New in reports",
-    body: "You can now schedule exports to your inbox.",
+    body: "You can now email template sales to billing@designali.com.",
   },
   {
     value: "success" as const,
     icon: CircleCheckIcon,
     title: "Report sent",
-    body: "Delivered to 12 recipients.",
+    body: "Delivered to 12 studio teammates.",
   },
   {
     value: "warning" as const,
     icon: TriangleAlertIcon,
     title: "Partial data",
-    body: "Two sources haven’t synced since yesterday.",
+    body: "Two storefronts haven’t synced since yesterday.",
   },
   {
     value: "error" as const,

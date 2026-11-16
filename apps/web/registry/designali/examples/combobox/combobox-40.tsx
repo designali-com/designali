@@ -20,11 +20,11 @@ import {
 } from "@workspace/ui/components/table"
 
 const users = [
-  { name: "Lucía Herrera", email: "lucia@acmecorp.test", role: "Owner" },
-  { name: "Kenji Sato", email: "kenji@acmecorp.test", role: "Admin" },
-  { name: "Nora Quinn", email: "nora@acmecorp.test", role: "Member" },
-  { name: "Ravi Iyer", email: "ravi@acmecorp.test", role: "Member" },
-  { name: "Tess Moller", email: "tess@acmecorp.test", role: "Guest" },
+  { name: "Ali Imam", email: "ali@designali.com", role: "Owner" },
+  { name: "Sara", email: "sara@designali.com", role: "Admin" },
+  { name: "Omar", email: "omar@designali.com", role: "Member" },
+  { name: "Nina", email: "nina@designali.com", role: "Member" },
+  { name: "Client", email: "client@example.com", role: "Guest" },
 ]
 const roles = ["Owner", "Admin", "Member", "Guest"]
 

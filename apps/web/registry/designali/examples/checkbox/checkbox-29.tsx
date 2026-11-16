@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { Columns3Icon } from "lucide-react"
+import {
+  Columns3 as Columns3Icon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Checkbox } from "@workspace/ui/components/checkbox"
@@ -21,14 +23,14 @@ import {
 
 const columns = ["Customer", "Plan", "MRR", "Status"] as const
 const rows = [
-  { Customer: "Bluebird Co", Plan: "Team", MRR: "$480", Status: "Active" },
+  { Customer: "Maya (designali.com)", Plan: "Team", MRR: "$480", Status: "Active" },
   {
-    Customer: "Kestrel Labs",
+    Customer: "Omar (Studio client)",
     Plan: "Business",
     MRR: "$1,250",
     Status: "Trial",
   },
-  { Customer: "Mosaic Inc", Plan: "Starter", MRR: "$0", Status: "Churned" },
+  { Customer: "Lena (Freelancer)", Plan: "Starter", MRR: "$0", Status: "Churned" },
 ]
 
 export default function ColumnVisibilityPopover() {

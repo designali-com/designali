@@ -1,4 +1,7 @@
-import { LogOutIcon, UserRoundCogIcon } from "lucide-react"
+import {
+  LogOut as LogOutIcon,
+  UserRoundCog as UserRoundCogIcon,
+} from "@designali/icons"
 
 import {
   Alert,
@@ -13,7 +16,7 @@ export default function AlertImpersonationBanner() {
     <div className="w-full max-w-md border">
       <Alert variant="warning" className="border-x-0 border-t-0">
         <UserRoundCogIcon />
-        <AlertTitle>Viewing as Sofia Marquez</AlertTitle>
+        <AlertTitle>Viewing as a designali.com customer</AlertTitle>
         <AlertDescription>
           Actions you take are logged and attributed to you.
         </AlertDescription>

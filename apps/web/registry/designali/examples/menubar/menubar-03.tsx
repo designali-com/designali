@@ -1,13 +1,13 @@
 import {
-  BoldIcon,
-  ItalicIcon,
-  LinkIcon,
-  MessageSquareIcon,
-  MinusIcon,
-  RemoveFormattingIcon,
-  TableIcon,
-  UnderlineIcon,
-} from "lucide-react"
+  Bold as BoldIcon,
+  Italic as ItalicIcon,
+  Link as LinkIcon,
+  MessageSquare as MessageSquareIcon,
+  Minus as MinusIcon,
+  RemoveFormatting as RemoveFormattingIcon,
+  Table as TableIcon,
+  Underline as UnderlineIcon,
+} from "@designali/icons"
 
 import {
   Menubar,

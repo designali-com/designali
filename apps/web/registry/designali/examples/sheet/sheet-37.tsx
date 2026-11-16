@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { ListIcon } from "lucide-react"
+import {
+  List as ListIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { ScrollArea } from "@workspace/ui/components/scroll-area"
@@ -35,7 +37,7 @@ export default function DocsOutlineSheet() {
       </SheetTrigger>
       <SheetContent side="left" className="w-72">
         <SheetHeader>
-          <SheetTitle>Documentation</SheetTitle>
+          <SheetTitle>Designali docs</SheetTitle>
           <SheetDescription>v4.2</SheetDescription>
         </SheetHeader>
         <ScrollArea className="min-h-0 flex-1">

@@ -1,4 +1,6 @@
-import { PackageIcon } from "lucide-react"
+import {
+  Package as PackageIcon,
+} from "@designali/icons"
 
 import {
   Alert,
@@ -8,16 +10,16 @@ import {
 import { Button } from "@workspace/ui/components/button"
 
 const items = [
-  { sku: "MUG-SAGE-12", name: "Stoneware mug, sage", left: 4 },
-  { sku: "TEE-BLK-M", name: "Heavyweight tee, M", left: 7 },
-  { sku: "TOTE-NAT", name: "Canvas tote", left: 2 },
+  { sku: "TPL-PORTFOLIO", name: "Portfolio template launch seats", left: 4 },
+  { sku: "TPL-AGENCY", name: "Design agency template seats", left: 7 },
+  { sku: "KIT-BLOCKS", name: "Blocks early-bird licences", left: 2 },
 ]
 
 export default function AlertLowStock() {
   return (
     <Alert variant="warning" className="max-w-md">
       <PackageIcon />
-      <AlertTitle>3 products are running low</AlertTitle>
+      <AlertTitle>3 Designali offers are almost sold out</AlertTitle>
       <AlertDescription>
         <table className="my-1 w-full">
           <tbody>
@@ -33,7 +35,7 @@ export default function AlertLowStock() {
           </tbody>
         </table>
         <Button size="xs" variant="outline" className="mt-1">
-          Create purchase order
+          Add more seats
         </Button>
       </AlertDescription>
     </Alert>

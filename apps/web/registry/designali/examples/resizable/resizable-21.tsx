@@ -44,8 +44,8 @@ export default function DocsWithTableOfContents() {
           </span>
           <h3 className="text-base font-semibold">Receiving webhooks</h3>
           <p className="text-xs leading-relaxed text-muted-foreground">
-            Webhooks notify your server when events happen in your workspace.
-            Each request is signed so you can verify it came from us before
+            Webhooks notify your server when events happen in your designali.com
+            account. Each request is signed so you can verify it came from us before
             processing the payload.
           </p>
           <pre className="bg-muted p-2 font-mono text-[11px]">

@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { FolderGitIcon } from "lucide-react"
+import {
+  FolderGit as FolderGitIcon,
+} from "@designali/icons"
 
 import {
   Field,
@@ -25,10 +27,10 @@ export default function AsyncLoadingSelect() {
   React.useEffect(() => {
     const timer = setTimeout(() => {
       setRepos([
-        { label: "web-app", value: "web-app" },
-        { label: "mobile-client", value: "mobile-client" },
-        { label: "billing-service", value: "billing-service" },
-        { label: "design-tokens", value: "design-tokens" },
+        { label: "designali-web", value: "designali-web" },
+        { label: "designali-blocks", value: "designali-blocks" },
+        { label: "designali-icons", value: "designali-icons" },
+        { label: "designali-logos", value: "designali-logos" },
       ])
     }, 1500)
     return () => clearTimeout(timer)

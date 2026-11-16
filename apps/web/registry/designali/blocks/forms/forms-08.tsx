@@ -1,7 +1,10 @@
 "use client"
 
 import { useState } from "react"
-import { Check, X } from "lucide-react"
+import {
+  Check,
+  X,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Input } from "@workspace/ui/components/input"
@@ -18,7 +21,7 @@ const rules = [
 const strengthLabels = ["Too weak", "Weak", "Fair", "Good", "Strong"]
 
 export default function Forms08() {
-  const [password, setPassword] = useState("Harbour2026")
+  const [password, setPassword] = useState("Designali2026")
   const passed = rules.filter((rule) => rule.test(password)).length
 
   return (
@@ -29,19 +32,20 @@ export default function Forms08() {
             className="absolute -top-24 -right-24 size-80 rounded-full bg-gradient-to-br from-emerald-300/60 to-sky-400/40 blur-3xl dark:from-emerald-500/30 dark:to-sky-600/20"
             aria-hidden
           />
-          <p className="relative text-sm font-semibold">Tidewater</p>
+          <p className="relative text-sm font-semibold">designali</p>
           <figure className="relative">
             <blockquote className="text-2xl leading-snug font-medium tracking-tight md:text-3xl">
-              &ldquo;We moved our whole fleet schedule into Tidewater in a
-              weekend. Dispatch calls dropped by half in the first month.&rdquo;
+              &ldquo;Where thoughtful design meets production-ready code. I
+              design and build digital experiences that look great, feel
+              intuitive, and work beautifully.&rdquo;
             </blockquote>
             <figcaption className="mt-8 flex items-center gap-3">
               <span className="flex size-10 items-center justify-center bg-foreground text-xs font-medium text-background">
-                RK
+                AI
               </span>
               <span className="text-sm">
-                <span className="block font-medium">Rhea Kapoor</span>
-                <span className="text-muted-foreground">Ops Lead, Saltmarsh Freight</span>
+                <span className="block font-medium">Ali Imam</span>
+                <span className="text-muted-foreground">Founder, Designali</span>
               </span>
             </figcaption>
           </figure>
@@ -49,22 +53,22 @@ export default function Forms08() {
 
         <form className="space-y-6 p-8 md:p-12">
           <div>
-            <h2 className="text-3xl font-semibold tracking-tight">Start your 14-day trial</h2>
-            <p className="mt-2 text-sm text-muted-foreground">No card required. Cancel any time.</p>
+            <h2 className="text-3xl font-semibold tracking-tight">Create your Designali account</h2>
+            <p className="mt-2 text-sm text-muted-foreground">Get access to free blocks, templates and icons.</p>
           </div>
           <div className="grid gap-5 sm:grid-cols-2">
             <div className="space-y-2">
               <Label htmlFor="f8-first">First name</Label>
-              <Input id="f8-first" placeholder="Daniel" className="h-10" />
+              <Input id="f8-first" placeholder="First name" className="h-10" />
             </div>
             <div className="space-y-2">
               <Label htmlFor="f8-last">Last name</Label>
-              <Input id="f8-last" placeholder="Achterberg" className="h-10" />
+              <Input id="f8-last" placeholder="Last name" className="h-10" />
             </div>
           </div>
           <div className="space-y-2">
             <Label htmlFor="f8-email">Work email</Label>
-            <Input id="f8-email" type="email" placeholder="daniel@saltmarsh.io" className="h-10" />
+            <Input id="f8-email" type="email" placeholder="you@example.com" className="h-10" />
           </div>
           <div className="space-y-2">
             <Label htmlFor="f8-password">Password</Label>

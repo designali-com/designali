@@ -1,4 +1,8 @@
-import { BookMarkedIcon, GitForkIcon, StarIcon } from "lucide-react"
+import {
+  BookMarked as BookMarkedIcon,
+  GitFork as GitForkIcon,
+  Star as StarIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import {
@@ -13,16 +17,16 @@ export default function RepositoryPreviewHoverCard() {
       <BookMarkedIcon className="size-4 text-muted-foreground" />
       <HoverCard>
         <HoverCardTrigger href="#" className="font-medium hover:underline">
-          lumen-labs/orbit-router
+          designali/designali
         </HoverCardTrigger>
         <HoverCardContent className="flex w-80 flex-col gap-2">
           <div className="flex items-center justify-between">
-            <span className="font-semibold">orbit-router</span>
+            <span className="font-semibold">designali</span>
             <Badge variant="outline">Public</Badge>
           </div>
           <p className="text-muted-foreground">
-            File-based routing with typed params, nested layouts, and streaming
-            loaders.
+            Designali blocks, templates and UI built with Next.js, React and
+            Tailwind CSS.
           </p>
           <div className="flex items-center gap-4 text-muted-foreground">
             <span className="flex items-center gap-1">

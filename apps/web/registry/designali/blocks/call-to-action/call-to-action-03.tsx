@@ -25,15 +25,15 @@ export default function CallToAction03() {
           Design systems your whole team will actually use.
         </h2>
         <p className="mt-6 max-w-xl text-base leading-7 text-muted-foreground">
-          Tokens, components and documentation in one place, synced with your
-          codebase on every merge. Set up takes about ten minutes.
+          Designali blocks, icons and docs in one place, synced with your
+          Next.js codebase on every merge. Set up takes about ten minutes.
         </p>
         <div className="mt-10 flex flex-col gap-3 sm:flex-row">
           <Button size="lg" nativeButton={false} render={<a href="#" />}>
             Start for free
           </Button>
           <Button size="lg" variant="outline" nativeButton={false} render={<a href="#" />}>
-            Talk to sales
+            Talk to Ali
           </Button>
         </div>
         <p className="mt-6 text-xs text-muted-foreground">

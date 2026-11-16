@@ -6,7 +6,7 @@ export function IMacCustomFrameDemo() {
       <IMac size="lg" color="blue">
         <img
           src="/img/hero-1.jpg"
-          alt="App screen"
+          alt="Designali website hero"
           className="h-full w-full object-cover"
         />
       </IMac>

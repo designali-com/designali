@@ -1,4 +1,6 @@
-import { MoreHorizontalIcon } from "lucide-react"
+import {
+  Ellipsis as MoreHorizontalIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -29,7 +31,7 @@ export function TableActions() {
       </TableHeader>
       <TableBody>
         <TableRow>
-          <TableCell className="font-medium">Wireless Mouse</TableCell>
+          <TableCell className="font-medium">Portfolio Template</TableCell>
           <TableCell>$29.99</TableCell>
           <TableCell className="text-right">
             <DropdownMenu>
@@ -46,7 +48,7 @@ export function TableActions() {
           </TableCell>
         </TableRow>
         <TableRow>
-          <TableCell className="font-medium">Mechanical Keyboard</TableCell>
+          <TableCell className="font-medium">Blocks Pro Bundle</TableCell>
           <TableCell>$129.99</TableCell>
           <TableCell className="text-right">
             <DropdownMenu>
@@ -63,7 +65,7 @@ export function TableActions() {
           </TableCell>
         </TableRow>
         <TableRow>
-          <TableCell className="font-medium">USB-C Hub</TableCell>
+          <TableCell className="font-medium">Icons Pro License</TableCell>
           <TableCell>$49.99</TableCell>
           <TableCell className="text-right">
             <DropdownMenu>

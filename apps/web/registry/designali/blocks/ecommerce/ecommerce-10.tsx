@@ -1,20 +1,27 @@
-import { Box, Check, Home, MapPin, PackageCheck, Truck } from "lucide-react"
+import {
+  Check,
+  Eye,
+  FileCode,
+  PackageCheck,
+  Palette,
+  Rocket,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { cn } from "@workspace/ui/lib/utils"
 
 const events = [
-  { icon: Check, title: "Order confirmed", detail: "Payment received", time: "Mon 10 Nov, 09:14", done: true },
-  { icon: Box, title: "Packed", detail: "Tilbury fulfilment centre", time: "Mon 10 Nov, 16:40", done: true },
-  { icon: Truck, title: "In transit", detail: "Left the Midlands hub", time: "Tue 11 Nov, 05:22", done: true },
-  { icon: MapPin, title: "Out for delivery", detail: "With driver, 6 stops away", time: "Today, 08:03", done: true, current: true },
-  { icon: Home, title: "Delivered", detail: "Expected 12:00 - 14:00", time: "Today", done: false },
+  { icon: Check, title: "Brief confirmed", detail: "Kickoff call with Ali Imam", time: "Mon 10 Nov, 09:14", done: true },
+  { icon: Palette, title: "Designed", detail: "Brand identity and UI in Figma", time: "Mon 10 Nov, 16:40", done: true },
+  { icon: FileCode, title: "In development", detail: "Next.js build on Vercel preview", time: "Tue 11 Nov, 05:22", done: true },
+  { icon: Eye, title: "In review", detail: "Final feedback round, 6 items left", time: "Today, 08:03", done: true, current: true },
+  { icon: Rocket, title: "Launched", detail: "Expected 12:00 - 14:00", time: "Today", done: false },
 ]
 
 const items = [
-  { name: "Ceramic Pour-over Set", qty: 1, tone: "from-sky-200 to-sky-50 dark:from-sky-800 dark:to-sky-950" },
-  { name: "Burr Grinder, Hand", qty: 1, tone: "from-zinc-400 to-zinc-100 dark:from-zinc-600 dark:to-zinc-900" },
-  { name: "Filter Papers x100", qty: 2, tone: "from-amber-100 to-orange-50 dark:from-amber-900 dark:to-stone-900" },
+  { name: "Brand identity kit", qty: 1, tone: "from-sky-200 to-sky-50 dark:from-sky-800 dark:to-sky-950" },
+  { name: "Next.js website", qty: 1, tone: "from-zinc-400 to-zinc-100 dark:from-zinc-600 dark:to-zinc-900" },
+  { name: "Social media templates", qty: 2, tone: "from-amber-100 to-orange-50 dark:from-amber-900 dark:to-stone-900" },
 ]
 
 export default function Ecommerce10() {
@@ -26,13 +33,13 @@ export default function Ecommerce10() {
       <div className="mx-auto max-w-5xl px-6">
         <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
           <div>
-            <p className="font-mono text-xs text-muted-foreground">Order #KW-58214</p>
-            <h2 className="mt-2 text-3xl font-medium tracking-tight md:text-4xl">Arriving today</h2>
+            <p className="font-mono text-xs text-muted-foreground">Project #DA-58214</p>
+            <h2 className="mt-2 text-3xl font-medium tracking-tight md:text-4xl">Launching today</h2>
             <p className="mt-1 text-sm text-muted-foreground">Between 12:00 and 14:00 · 3 items</p>
           </div>
           <div className="flex gap-2">
-            <Button variant="outline">Change delivery</Button>
-            <Button>Track on map</Button>
+            <Button variant="outline">Change launch time</Button>
+            <Button>Open preview</Button>
           </div>
         </div>
 
@@ -87,7 +94,7 @@ export default function Ecommerce10() {
             <div className="border border-border p-6">
               <p className="flex items-center gap-2 text-sm font-medium">
                 <PackageCheck className="size-4" />
-                In this parcel
+                In this project
               </p>
               <ul className="mt-4 space-y-3">
                 {items.map((item) => (
@@ -100,13 +107,13 @@ export default function Ecommerce10() {
               </ul>
             </div>
             <div className="bg-muted p-6 text-sm">
-              <p className="font-medium">Delivering to</p>
+              <p className="font-medium">Client</p>
               <p className="mt-2 text-muted-foreground">
-                Priya Natarajan
+                Designali client
                 <br />
-                Flat 4, 22 Alder Road
+                client@example.com
                 <br />
-                Bristol BS6 5AB
+                Hosted on Vercel
               </p>
             </div>
           </div>

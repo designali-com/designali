@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { DatabaseIcon, Trash2Icon } from "lucide-react"
+import {
+  Database as DatabaseIcon,
+  Trash2 as Trash2Icon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Input } from "@workspace/ui/components/input"
@@ -14,7 +17,7 @@ import {
   PopoverTrigger,
 } from "@workspace/ui/components/popover"
 
-const NAME = "staging-db"
+const NAME = "designali-staging"
 
 export default function ConfirmDeletePopover() {
   const [open, setOpen] = React.useState(false)

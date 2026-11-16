@@ -2,12 +2,12 @@
 
 import * as React from "react"
 import {
-  BellIcon,
-  BellOffIcon,
-  CheckCheckIcon,
-  HashIcon,
-  LogOutIcon,
-} from "lucide-react"
+  Bell as BellIcon,
+  BellOff as BellOffIcon,
+  CheckCheck as CheckCheckIcon,
+  Hash as HashIcon,
+  LogOut as LogOutIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import {
@@ -27,9 +27,9 @@ import {
 import { cn } from "@workspace/ui/lib/utils"
 
 const initialChannels = [
-  { name: "general", unread: 4, muted: false, level: "all" },
+  { name: "studio", unread: 4, muted: false, level: "all" },
   { name: "design-crit", unread: 0, muted: false, level: "mentions" },
-  { name: "random", unread: 12, muted: true, level: "none" },
+  { name: "templates", unread: 12, muted: true, level: "none" },
 ]
 
 export default function ChatChannelMenu() {

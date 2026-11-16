@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { LinkIcon, XIcon } from "lucide-react"
+import {
+  Link as LinkIcon,
+  X as XIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import { Button } from "@workspace/ui/components/button"
@@ -21,8 +24,8 @@ import {
 
 export default function InviteTeamCard() {
   const [emails, setEmails] = React.useState([
-    "hugo@fernway.co",
-    "mina@fernway.co",
+    "sam@designali.com",
+    "maya@designali.com",
   ])
   const [draft, setDraft] = React.useState("")
 
@@ -38,7 +41,7 @@ export default function InviteTeamCard() {
       <CardHeader>
         <CardTitle>Invite your team</CardTitle>
         <CardDescription>
-          They&apos;ll get an email with a link to join Fernway.
+          They&apos;ll get an email with a link to join the Designali studio.
         </CardDescription>
       </CardHeader>
       <CardContent className="grid gap-3">

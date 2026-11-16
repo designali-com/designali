@@ -1,7 +1,11 @@
 "use client"
 
 import * as React from "react"
-import { CheckIcon, ClockIcon, XIcon } from "lucide-react"
+import {
+  Check as CheckIcon,
+  Clock as ClockIcon,
+  X as XIcon,
+} from "@designali/icons"
 
 import {
   Table,
@@ -18,15 +22,15 @@ import {
 } from "@workspace/ui/components/toggle-group"
 
 const students = [
-  "Aiden Brooks",
-  "Bianca Ortiz",
-  "Caleb Nguyen",
-  "Daria Ivanova",
+  "Sara Khan",
+  "Omar Ali",
+  "Priya Shah",
+  "Daniel Roy",
 ]
 
 export default function AttendanceCheckTable() {
   const [marks, setMarks] = React.useState<Record<string, string>>({
-    "Aiden Brooks": "present",
+    "Sara Khan": "present",
   })
   const present = Object.values(marks).filter((m) => m === "present").length
 

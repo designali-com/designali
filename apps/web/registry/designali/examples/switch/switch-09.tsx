@@ -2,11 +2,11 @@
 
 import * as React from "react"
 import {
-  BluetoothIcon,
-  PlaneIcon,
-  RadioTowerIcon,
-  WifiIcon,
-} from "lucide-react"
+  Bluetooth as BluetoothIcon,
+  Plane as PlaneIcon,
+  RadioTower as RadioTowerIcon,
+  Wifi as WifiIcon,
+} from "@designali/icons"
 
 import { Switch } from "@workspace/ui/components/switch"
 import { cn } from "@workspace/ui/lib/utils"

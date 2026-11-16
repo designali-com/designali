@@ -1,7 +1,11 @@
 "use client"
 
 import * as React from "react"
-import { CheckIcon, ChevronsUpDownIcon, PlusIcon } from "lucide-react"
+import {
+  Check as CheckIcon,
+  ChevronsUpDown as ChevronsUpDownIcon,
+  Plus as PlusIcon,
+} from "@designali/icons"
 
 import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
 import { Button } from "@workspace/ui/components/button"
@@ -20,21 +24,21 @@ import { cn } from "@workspace/ui/lib/utils"
 const accounts = [
   {
     id: "personal",
-    name: "Clara Novak",
-    email: "clara.novak@mailbox.io",
-    initials: "CN",
+    name: "Ali Imam",
+    email: "ali@designali.com",
+    initials: "AI",
   },
   {
     id: "work",
-    name: "Clara Novak",
-    email: "clara@fernhill.studio",
-    initials: "FH",
+    name: "Designali",
+    email: "hello@designali.com",
+    initials: "DA",
   },
   {
     id: "side",
-    name: "Bookbinding Club",
-    email: "hello@bindclub.org",
-    initials: "BC",
+    name: "Dalim Agency",
+    email: "studio@designali.com",
+    initials: "DL",
   },
 ]
 

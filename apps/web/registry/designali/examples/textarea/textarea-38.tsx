@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { HistoryIcon } from "lucide-react"
+import {
+  History as HistoryIcon,
+} from "@designali/icons"
 
 import {
   Alert,
@@ -14,7 +16,7 @@ import { Textarea } from "@workspace/ui/components/textarea"
 export default function DraftRestoreTextarea() {
   const [restored, setRestored] = React.useState(true)
   const [value, setValue] = React.useState(
-    "Hi Marco, following up on the invoice we discussed last week…"
+    "Hi, following up on the Designali invoice we discussed last week…"
   )
 
   return (

@@ -1,13 +1,16 @@
-import { Check, Flag } from "lucide-react"
+import {
+  Check,
+  Flag,
+} from "@designali/icons"
 
 import { cn } from "@workspace/ui/lib/utils"
 
 const milestones = [
-  { arr: 100, label: "$100k ARR", date: "Feb 2025", note: "First 40 paying teams, all founder-led sales." },
-  { arr: 500, label: "$500k ARR", date: "Sep 2025", note: "Self-serve checkout shipped. Sales cycle cut to 9 days." },
-  { arr: 1000, label: "$1M ARR", date: "Mar 2026", note: "Opened the EU region and hired the first AE." },
-  { arr: 2500, label: "$2.5M ARR", date: "Oct 2026", note: "Enterprise plan with SSO now 31% of new bookings." },
-  { arr: 5000, label: "$5M ARR", date: "Target Q3 2027", note: "Requires 118% net revenue retention to hit plan." },
+  { arr: 100, label: "100k downloads", date: "Feb 2025", note: "First Designali templates and Dalim UI kits shipped." },
+  { arr: 500, label: "500k downloads", date: "Sep 2025", note: "@designali/icons published with 4,000+ icons." },
+  { arr: 1000, label: "1M downloads", date: "Mar 2026", note: "460+ blocks and 240+ landing pages live on designali.com." },
+  { arr: 2500, label: "2.5M downloads", date: "Oct 2026", note: "2,300+ UI examples added to /ui." },
+  { arr: 5000, label: "5M downloads", date: "Target Q3 2027", note: "More templates, logos and vectors for design engineers." },
 ]
 
 const currentArr = 2870
@@ -22,15 +25,15 @@ export default function Analytics17() {
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div>
             <p className="text-xs tracking-widest text-muted-foreground uppercase">
-              Investor update, November 2026
+              Designali update, November 2026
             </p>
             <h2 className="mt-2 text-3xl font-medium tracking-tight md:text-4xl">
-              The road to $5M ARR
+              The road to 5M downloads
             </h2>
           </div>
           <div className="text-left md:text-right">
-            <p className="text-4xl font-semibold tracking-tight">$2.87M</p>
-            <p className="text-sm text-muted-foreground">Current ARR, {progress.toFixed(0)}% of goal</p>
+            <p className="text-4xl font-semibold tracking-tight">2.87M</p>
+            <p className="text-sm text-muted-foreground">Total downloads, {progress.toFixed(0)}% of goal</p>
           </div>
         </div>
 

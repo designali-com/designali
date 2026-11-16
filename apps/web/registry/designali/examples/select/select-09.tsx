@@ -54,7 +54,7 @@ export default function MultipleSkillsSelect() {
         </SelectContent>
       </Select>
       <FieldDescription>
-        Pick everything you use at least weekly.
+        Pick the stack for your Designali project.
       </FieldDescription>
     </Field>
   )

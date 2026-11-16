@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { MinusIcon, PlusIcon } from "lucide-react"
+import {
+  Minus as MinusIcon,
+  Plus as PlusIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -16,9 +19,9 @@ import {
 import { cn } from "@workspace/ui/lib/utils"
 
 const initialCart = [
-  { id: "a", name: "Pour-over kettle", price: 64 },
-  { id: "b", name: "Ceramic dripper", price: 28 },
-  { id: "c", name: "Paper filters (100)", price: 9 },
+  { id: "a", name: "Portfolio template", price: 49 },
+  { id: "b", name: "Icons Pro license", price: 29 },
+  { id: "c", name: "Logos pack", price: 9 },
 ]
 
 export default function CartSummaryTable() {

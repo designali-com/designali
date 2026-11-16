@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { ConstructionIcon } from "lucide-react"
+import {
+  Construction as ConstructionIcon,
+} from "@designali/icons"
 
 import {
   AlertDialog,
@@ -25,7 +27,7 @@ export default function SwitchToggleConfirmation() {
       <div>
         <p className="text-sm font-medium">Maintenance mode</p>
         <p className="text-xs text-muted-foreground">
-          {enabled ? "Visitors see a maintenance page" : "Storefront is live"}
+          {enabled ? "Visitors see a maintenance page" : "designali.com is live"}
         </p>
       </div>
       <Switch
@@ -43,8 +45,8 @@ export default function SwitchToggleConfirmation() {
             </AlertDialogMedia>
             <AlertDialogTitle>Turn on maintenance mode?</AlertDialogTitle>
             <AlertDialogDescription>
-              Customers won&apos;t be able to browse or check out until you turn
-              it off.
+              Customers won&apos;t be able to browse or buy Designali templates
+              until you turn it off.
             </AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>

@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { BadgePercentIcon } from "lucide-react"
+import {
+  BadgePercent as BadgePercentIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -82,7 +84,7 @@ export default function CancelSubscriptionFlowDialog() {
             <DialogHeader>
               <DialogTitle>Before you go: 40% off for 3 months</DialogTitle>
               <DialogDescription>
-                Stay on Pro for $14/mo instead of $24/mo. You can still cancel
+                Stay on Designali Pro for $14/mo instead of $24/mo. You can still cancel
                 later.
               </DialogDescription>
             </DialogHeader>

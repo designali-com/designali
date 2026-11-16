@@ -2,11 +2,11 @@
 
 import * as React from "react"
 import {
-  ArchiveIcon,
-  ChevronLeftIcon,
-  ChevronRightIcon,
-  RefreshCwIcon,
-} from "lucide-react"
+  Archive as ArchiveIcon,
+  ChevronLeft as ChevronLeftIcon,
+  ChevronRight as ChevronRightIcon,
+  RefreshCw as RefreshCwIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {

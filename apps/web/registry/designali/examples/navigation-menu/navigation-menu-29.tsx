@@ -1,11 +1,11 @@
 import {
-  CirclePlayIcon,
-  GraduationCapIcon,
-  HeartPulseIcon,
-  HotelIcon,
-  PhoneIcon,
-  StoreIcon,
-} from "lucide-react"
+  CirclePlay as CirclePlayIcon,
+  GraduationCap as GraduationCapIcon,
+  HeartPulse as HeartPulseIcon,
+  Hotel as HotelIcon,
+  Phone as PhoneIcon,
+  Store as StoreIcon,
+} from "@designali/icons"
 
 import {
   NavigationMenu,
@@ -19,23 +19,23 @@ import {
 
 const solutions = [
   {
-    title: "Retail",
-    description: "Unify in-store and online sales.",
+    title: "Startups",
+    description: "Brand identity and launch sites.",
     icon: StoreIcon,
   },
   {
-    title: "Hospitality",
-    description: "Bookings, tabs and tips.",
+    title: "Agencies",
+    description: "White-label Designali templates.",
     icon: HotelIcon,
   },
   {
-    title: "Healthcare",
-    description: "Compliant patient billing.",
+    title: "Products",
+    description: "UI/UX design and design systems.",
     icon: HeartPulseIcon,
   },
   {
-    title: "Education",
-    description: "Tuition plans and grants.",
+    title: "Creators",
+    description: "Portfolios, CGI and motion.",
     icon: GraduationCapIcon,
   },
 ]
@@ -68,7 +68,7 @@ export default function FooterRowMegaMenu() {
                   <CirclePlayIcon /> Watch demo
                 </NavigationMenuLink>
                 <NavigationMenuLink href="#" className="flex-1 justify-center">
-                  <PhoneIcon /> Contact sales
+                  <PhoneIcon /> Contact Ali
                 </NavigationMenuLink>
               </div>
             </div>

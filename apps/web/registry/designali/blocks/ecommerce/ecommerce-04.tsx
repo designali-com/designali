@@ -1,12 +1,14 @@
-import { ArrowRight } from "lucide-react"
+import {
+  ArrowRight,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 
 const collections = [
-  { name: "Living room", count: 84, tone: "from-orange-300/60 to-amber-100/30" },
-  { name: "Kitchen & dining", count: 126, tone: "from-emerald-400/50 to-teal-100/30" },
-  { name: "Bedroom", count: 59, tone: "from-sky-400/50 to-indigo-100/30" },
-  { name: "Outdoor", count: 37, tone: "from-lime-500/50 to-yellow-100/30" },
+  { name: "Templates", count: 84, tone: "from-orange-300/60 to-amber-100/30" },
+  { name: "Blocks", count: 460, tone: "from-emerald-400/50 to-teal-100/30" },
+  { name: "Icon packs", count: 59, tone: "from-sky-400/50 to-indigo-100/30" },
+  { name: "UI kits", count: 37, tone: "from-lime-500/50 to-yellow-100/30" },
 ]
 
 export default function Ecommerce04() {
@@ -20,14 +22,14 @@ export default function Ecommerce04() {
           >
             <div className="absolute inset-0 bg-gradient-to-br from-rose-400/50 via-orange-200/30 to-transparent transition-transform duration-700 group-hover:scale-105" />
             <div className="relative">
-              <span className="bg-background px-2 py-1 text-xs">Winter edit · 2026</span>
+              <span className="bg-background px-2 py-1 text-xs">Designali edit · 2026</span>
               <h2 className="mt-4 text-4xl leading-tight font-medium tracking-tight md:text-5xl">
-                Slow mornings,
+                Design se
                 <br />
-                warm rooms.
+                code tak.
               </h2>
               <p className="mt-3 max-w-sm text-sm text-muted-foreground">
-                Wool throws, stoneware, and lighting chosen for the darker months.
+                Templates, blocks and icons chosen by Ali Imam for your next launch.
               </p>
               <Button className="mt-6" render={<span />} nativeButton={false}>
                 Shop the edit

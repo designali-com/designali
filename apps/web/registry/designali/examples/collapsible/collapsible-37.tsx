@@ -1,10 +1,10 @@
 import {
-  ChevronDownIcon,
-  CircleCheckIcon,
-  FileIcon,
-  UploadIcon,
-  XIcon,
-} from "lucide-react"
+  ChevronDown as ChevronDownIcon,
+  CircleCheck as CircleCheckIcon,
+  File as FileIcon,
+  Upload as UploadIcon,
+  X as XIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -15,9 +15,9 @@ import {
 import { Progress } from "@workspace/ui/components/progress"
 
 const files = [
-  { name: "brand-kit.zip", size: "48 MB", progress: 100 },
-  { name: "launch-video.mp4", size: "212 MB", progress: 64 },
-  { name: "press-release.docx", size: "1.2 MB", progress: 12 },
+  { name: "designali-brand-kit.zip", size: "48 MB", progress: 100 },
+  { name: "colorful-spheres.mp4", size: "212 MB", progress: 64 },
+  { name: "case-study-dalim.docx", size: "1.2 MB", progress: 12 },
 ]
 
 export default function UploadQueueWidget() {

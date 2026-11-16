@@ -1,7 +1,12 @@
 "use client"
 
 import * as React from "react"
-import { EyeIcon, HeartIcon, Share2Icon, ShoppingCartIcon } from "lucide-react"
+import {
+  Eye as EyeIcon,
+  Heart as HeartIcon,
+  Share2 as Share2Icon,
+  ShoppingCart as ShoppingCartIcon,
+} from "@designali/icons"
 
 import {
   ContextMenu,
@@ -26,8 +31,8 @@ export default function ProductCardQuickMenu() {
           ) : null}
         </div>
         <div className="flex flex-col gap-0.5 px-1 text-xs">
-          <span className="font-medium">Trailhead 2 running shoe</span>
-          <span className="text-muted-foreground">$118.00 · 6 colors</span>
+          <span className="font-medium">Designali Templates Pro</span>
+          <span className="text-muted-foreground">$118.00 · 24 templates</span>
           {compare ? (
             <span className="text-[11px] text-primary">Added to compare</span>
           ) : null}

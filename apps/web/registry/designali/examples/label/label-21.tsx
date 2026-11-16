@@ -1,6 +1,12 @@
-import { CameraIcon } from "lucide-react"
+import {
+  Camera as CameraIcon,
+} from "@designali/icons"
 
-import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from "@workspace/ui/components/avatar"
 import { Label } from "@workspace/ui/components/label"
 
 export default function AvatarUploadLabel() {
@@ -8,8 +14,9 @@ export default function AvatarUploadLabel() {
     <div className="flex items-center gap-4">
       <Label htmlFor="avatar-file" className="group relative cursor-pointer">
         <Avatar size="lg" className="size-16">
+          <AvatarImage src="/ali.jpg" alt="Ali Imam" />
           <AvatarFallback className="bg-gradient-to-br from-sky-400 to-indigo-500 text-lg text-white">
-            RK
+            AI
           </AvatarFallback>
         </Avatar>
         <span className="absolute inset-0 flex items-center justify-center rounded-full bg-black/50 text-white opacity-0 transition-opacity group-hover:opacity-100">

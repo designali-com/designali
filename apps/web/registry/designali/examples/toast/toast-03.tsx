@@ -10,7 +10,7 @@ import { Toaster, createToastManager } from "@workspace/ui/components/toast"
 const notify = createToastManager()
 
 export default function ProfileSavedToast() {
-  const [name, setName] = React.useState("Maya Okafor")
+  const [name, setName] = React.useState("Ali Imam")
 
   function save(event: React.FormEvent<React.ComponentRef<"form">>) {
     event.preventDefault()

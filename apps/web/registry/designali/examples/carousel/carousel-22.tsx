@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { SendIcon, SparklesIcon } from "lucide-react"
+import {
+  Send as SendIcon,
+  Sparkles as SparklesIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -12,12 +15,12 @@ import {
 import { Input } from "@workspace/ui/components/input"
 
 const prompts = [
-  "Summarize this thread",
-  "Draft a polite follow-up",
-  "List open action items",
-  "Translate to Spanish",
-  "Make it shorter",
-  "Suggest a subject line",
+  "Find a pricing block",
+  "Suggest a landing page",
+  "Show icons for analytics",
+  "Generate a hero section",
+  "Convert Figma to Next.js",
+  "Book a call with Ali",
 ]
 
 export default function ChatSuggestedPrompts() {
@@ -45,7 +48,7 @@ export default function ChatSuggestedPrompts() {
         <Input
           value={value}
           onChange={(e) => setValue(e.target.value)}
-          placeholder="Ask the assistant..."
+          placeholder="Ask Designali AI..."
         />
         <Button size="icon" aria-label="Send" disabled={!value}>
           <SendIcon />

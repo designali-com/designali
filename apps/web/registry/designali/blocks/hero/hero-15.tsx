@@ -1,7 +1,10 @@
 "use client"
 
 import { useState } from "react"
-import { ArrowRight, Check } from "lucide-react"
+import {
+  ArrowRight,
+  Check,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 
@@ -9,28 +12,28 @@ const audiences = [
   {
     id: "design",
     label: "For designers",
-    headline: "Hand off designs that build themselves.",
-    body: "Tokens, components and specs stay in sync with production code, so the review is about craft instead of pixel nudging.",
-    points: ["Live token sync", "Auto-generated specs", "Visual diff on every PR"],
-    preview: ["Button / Primary", "Card / Elevated", "Input / Error"],
+    headline: "Design in Figma, ship with Designali.",
+    body: "Designali UI designs, icons and illustrations match the code one to one, so your Figma file and your Next.js app never drift apart.",
+    points: ["2300+ UI designs", "4000+ icons and logos", "Semantic design tokens"],
+    preview: ["Hero / Designali", "Pricing / Pro", "Login / Split"],
     accent: "from-chart-1/40 to-chart-2/10",
   },
   {
     id: "engineering",
     label: "For engineers",
-    headline: "Stop rebuilding the same button.",
-    body: "Pull typed, accessible components straight into your repo and get notified the moment a design decision changes.",
-    points: ["Typed React output", "CLI and Git integration", "Accessibility checks"],
-    preview: ["button.tsx", "card.tsx", "tokens.css"],
+    headline: "Stop rebuilding the same hero section.",
+    body: "Copy typed, accessible Designali blocks into your repo — React, TypeScript and Tailwind CSS, ready for production.",
+    points: ["460+ blocks", "Next.js and Tailwind CSS", "@designali/icons included"],
+    preview: ["hero-01.tsx", "pricing-01.tsx", "globals.css"],
     accent: "from-chart-3/40 to-chart-4/10",
   },
   {
     id: "leads",
-    label: "For product leads",
-    headline: "Know exactly what is consistent and what is not.",
-    body: "Adoption dashboards show where the system is used, where it drifts and which teams need a hand.",
-    points: ["Adoption by team", "Drift alerts", "Quarterly health report"],
-    preview: ["Checkout: 96%", "Settings: 81%", "Onboarding: 64%"],
+    label: "For founders",
+    headline: "Launch a product that looks studio-made.",
+    body: "Start from a Designali template, or hire the studio to design and build your brand, UI and website end to end.",
+    points: ["240+ landing pages", "Brand identity and UI/UX", "Production-ready code"],
+    preview: ["Brand: done", "UI/UX: in review", "Website: building"],
     accent: "from-chart-5/40 to-chart-1/10",
   },
 ]
@@ -82,11 +85,11 @@ export default function Hero15() {
               ))}
             </ul>
             <div className="mt-10 flex flex-wrap gap-3">
-              <Button size="lg" nativeButton={false} render={<a href="#" />}>
-                Start with Facet
+              <Button size="lg" nativeButton={false} render={<a href="/blocks" />}>
+                Start with Designali
                 <ArrowRight />
               </Button>
-              <Button size="lg" variant="outline" nativeButton={false} render={<a href="#" />}>
+              <Button size="lg" variant="outline" nativeButton={false} render={<a href="/contact" />}>
                 Talk to us
               </Button>
             </div>
@@ -94,7 +97,7 @@ export default function Hero15() {
           <div className={`border border-border bg-gradient-to-br p-6 sm:p-10 ${audience.accent}`}>
             <div className="border border-border bg-background/90 backdrop-blur">
               <div className="border-b border-border px-4 py-3 text-xs text-muted-foreground">
-                facet / {audience.id}
+                designali / {audience.id}
               </div>
               <ul>
                 {audience.preview.map((item, index) => (

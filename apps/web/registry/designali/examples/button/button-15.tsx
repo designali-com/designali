@@ -1,4 +1,7 @@
-import { Trash2Icon, TriangleAlertIcon } from "lucide-react"
+import {
+  Trash2 as Trash2Icon,
+  TriangleAlert as TriangleAlertIcon,
+} from "@designali/icons"
 
 import {
   AlertDialog,
@@ -26,7 +29,7 @@ export default function DeleteConfirmButton() {
           <AlertDialogMedia>
             <TriangleAlertIcon className="text-destructive" />
           </AlertDialogMedia>
-          <AlertDialogTitle>Delete &quot;Harbor CRM&quot;?</AlertDialogTitle>
+          <AlertDialogTitle>Delete &quot;Dalim Works&quot;?</AlertDialogTitle>
           <AlertDialogDescription>
             All boards, files and 38 automations will be removed permanently.
           </AlertDialogDescription>

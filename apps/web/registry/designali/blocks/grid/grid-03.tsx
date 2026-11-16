@@ -1,15 +1,17 @@
-import { ArrowUpRight } from "lucide-react"
+import {
+  ArrowUpRight,
+} from "@designali/icons"
 
 const resources = [
-  { type: "Guide", title: "Getting started with tokens", time: "8 min read" },
-  { type: "Video", title: "Building a responsive grid from scratch", time: "14 min" },
-  { type: "Template", title: "Product launch checklist", time: "Notion" },
-  { type: "Guide", title: "Accessible colour contrast in practice", time: "11 min read" },
-  { type: "Case study", title: "How Lumen cut handoff time in half", time: "6 min read" },
-  { type: "Video", title: "Prototyping micro-interactions", time: "22 min" },
-  { type: "Template", title: "Design critique agenda", time: "Google Docs" },
+  { type: "Guide", title: "Getting started with Designali tokens", time: "8 min read" },
+  { type: "Video", title: "Building a responsive grid with Tailwind CSS", time: "14 min" },
+  { type: "Template", title: "Portfolio Simple template", time: "Next.js" },
+  { type: "Guide", title: "Using @designali/icons in React", time: "6 min read" },
+  { type: "Case study", title: "From Dalim Agency to Designali", time: "6 min read" },
+  { type: "Video", title: "Design se code tak: Figma to Next.js", time: "22 min" },
+  { type: "Template", title: "Design Agency template", time: "Next.js" },
   { type: "Guide", title: "Naming components so they last", time: "5 min read" },
-  { type: "Case study", title: "A design system for 40 product teams", time: "12 min read" },
+  { type: "Case study", title: "Building 460+ blocks with one design system", time: "12 min read" },
 ]
 
 const filters = ["All", "Guide", "Video", "Template", "Case study"]
@@ -19,7 +21,7 @@ export default function Grid03() {
     <section className="w-full bg-background py-24">
       <div className="mx-auto max-w-6xl px-6">
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
-          <h2 className="text-4xl font-semibold tracking-tight">Resource library</h2>
+          <h2 className="text-4xl font-semibold tracking-tight">Designali resource library</h2>
           <nav className="flex flex-wrap border border-border">
             {filters.map((filter, index) => (
               <a

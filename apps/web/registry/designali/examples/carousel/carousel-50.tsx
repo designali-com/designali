@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { EyeIcon, ShoppingBagIcon } from "lucide-react"
+import {
+  Eye as EyeIcon,
+  ShoppingBag as ShoppingBagIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -22,9 +25,9 @@ import {
 import { cn } from "@workspace/ui/lib/utils"
 
 const colors = [
-  { name: "Sand", tone: "from-amber-100 to-amber-300" },
-  { name: "Sage", tone: "from-emerald-200 to-emerald-400" },
-  { name: "Slate", tone: "from-slate-300 to-slate-500" },
+  { name: "Light", src: "/img/dashboard-1-light.jpg" },
+  { name: "Dark", src: "/img/dashboard-1-dark.jpg" },
+  { name: "Chat", src: "/img/chat-1-light.jpg" },
 ]
 
 export default function QuickViewDialogGallery() {
@@ -46,20 +49,20 @@ export default function QuickViewDialogGallery() {
       </DialogTrigger>
       <DialogContent className="sm:max-w-sm">
         <DialogHeader>
-          <DialogTitle>Everyday crew sweater</DialogTitle>
-          <DialogDescription>Organic cotton · $68</DialogDescription>
+          <DialogTitle>Designali Dashboard template</DialogTitle>
+          <DialogDescription>Next.js · Tailwind CSS · $68</DialogDescription>
         </DialogHeader>
         <Carousel setApi={handleApi}>
           <CarouselContent>
             {colors.map((color) => (
               <CarouselItem key={color.name}>
-                <div
-                  className={cn(
-                    "flex aspect-square items-end bg-gradient-to-br p-3",
-                    color.tone
-                  )}
-                >
-                  <span className="bg-background/80 px-2 py-0.5 text-xs">
+                <div className="relative flex aspect-square items-end overflow-hidden bg-muted p-3">
+                  <img
+                    src={color.src}
+                    alt={"Dashboard template, " + color.name}
+                    className="absolute inset-0 size-full object-cover"
+                  />
+                  <span className="relative bg-background/80 px-2 py-0.5 text-xs">
                     {color.name}
                   </span>
                 </div>
@@ -75,11 +78,12 @@ export default function QuickViewDialogGallery() {
               aria-label={color.name}
               onClick={() => api?.scrollTo(index)}
               className={cn(
-                "size-6 rounded-full bg-gradient-to-br ring-offset-2 ring-offset-background",
-                color.tone,
+                "size-6 overflow-hidden rounded-full bg-muted ring-offset-2 ring-offset-background",
                 selected === index && "ring-2 ring-primary"
               )}
-            />
+            >
+              <img src={color.src} alt="" className="size-full object-cover" />
+            </button>
           ))}
           <span className="ms-auto text-xs text-muted-foreground">
             {colors[selected]!.name}
@@ -88,7 +92,7 @@ export default function QuickViewDialogGallery() {
         <DialogFooter>
           <Button className="w-full">
             <ShoppingBagIcon data-icon="inline-start" />
-            Add to bag
+            Add to cart
           </Button>
         </DialogFooter>
       </DialogContent>

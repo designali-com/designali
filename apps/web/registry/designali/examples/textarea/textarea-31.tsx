@@ -1,4 +1,6 @@
-import { LanguagesIcon } from "lucide-react"
+import {
+  Languages as LanguagesIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Label } from "@workspace/ui/components/label"
@@ -16,14 +18,14 @@ export default function TranslationSideBySide() {
           id="tr-src"
           readOnly
           className="resize-none bg-muted/40"
-          value="Your order has shipped and will arrive within three days."
+          value="Your Designali template is ready to download from your account."
         />
       </div>
       <div className="grid gap-1.5">
         <Label htmlFor="tr-dst">Spanish</Label>
         <Textarea
           id="tr-dst"
-          defaultValue="Tu pedido ha sido enviado y llegará en tres días."
+          defaultValue="Tu plantilla de Designali está lista para descargar desde tu cuenta."
         />
       </div>
       <div className="flex justify-end gap-2 sm:col-span-2">

@@ -1,4 +1,8 @@
-import { CalendarIcon, ChevronLeftIcon, ChevronRightIcon } from "lucide-react"
+import {
+  Calendar as CalendarIcon,
+  ChevronLeft as ChevronLeftIcon,
+  ChevronRight as ChevronRightIcon,
+} from "@designali/icons"
 
 import {
   Breadcrumb,

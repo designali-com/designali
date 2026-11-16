@@ -1,4 +1,6 @@
-import { ChevronDownIcon } from "lucide-react"
+import {
+  ChevronDown as ChevronDownIcon,
+} from "@designali/icons"
 
 import {
   Accordion,
@@ -10,21 +12,21 @@ import {
 const faqs = [
   {
     value: "refund",
-    question: "Can I get a refund?",
+    question: "Can I get a refund on a Designali template?",
     answer:
-      "Yes. If you cancel within 14 days of purchase we refund the full amount, no questions asked.",
+      "Yes. If a template or block pack isn’t right for you, email support@designali.com within 14 days for a full refund.",
   },
   {
     value: "seats",
-    question: "How are seats counted?",
+    question: "Can I use Designali blocks in client projects?",
     answer:
-      "Every member with edit access uses a seat. Viewers and guests are always free.",
+      "Yes. Every license covers personal and client work — just don’t resell the blocks as-is.",
   },
   {
     value: "export",
-    question: "Can I export my data?",
+    question: "Can I export designs to Figma?",
     answer:
-      "You can export every project as JSON or CSV from Settings at any time, even after cancelling.",
+      "Every template ships with production-ready Next.js code, and most include a matching Figma file.",
   },
 ]
 

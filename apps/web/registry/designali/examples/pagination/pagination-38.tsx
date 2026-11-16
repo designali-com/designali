@@ -1,4 +1,6 @@
-import { InboxIcon } from "lucide-react"
+import {
+  Inbox as InboxIcon,
+} from "@designali/icons"
 
 import {
   Pagination,
@@ -15,7 +17,7 @@ export default function EmptyResultsPagination() {
         <InboxIcon className="size-6 text-muted-foreground" />
         <span className="text-sm font-medium">No orders yet</span>
         <span className="text-xs text-muted-foreground">
-          Orders will appear here once customers check out.
+          Orders will appear here once customers buy a Designali template.
         </span>
       </div>
       <div className="flex items-center justify-between border-t pt-3">

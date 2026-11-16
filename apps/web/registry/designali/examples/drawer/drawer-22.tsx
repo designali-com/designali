@@ -2,12 +2,12 @@
 
 import * as React from "react"
 import {
-  BriefcaseIcon,
-  PlaneIcon,
-  PlusIcon,
-  ShapesIcon,
-  UtensilsIcon,
-} from "lucide-react"
+  Briefcase as BriefcaseIcon,
+  Plane as PlaneIcon,
+  Plus as PlusIcon,
+  Shapes as ShapesIcon,
+  Utensils as UtensilsIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -55,7 +55,7 @@ export default function QuickAddExpenseDrawer() {
           <DrawerHeader>
             <DrawerTitle>New expense</DrawerTitle>
             <DrawerDescription>
-              Charged to Team Offsite budget
+              Charged to Designali studio budget
             </DrawerDescription>
           </DrawerHeader>
           <div className="flex flex-col items-center gap-4 p-4">
@@ -92,7 +92,7 @@ export default function QuickAddExpenseDrawer() {
               ))}
             </ToggleGroup>
             <Input
-              placeholder="Note (e.g. Team lunch at Basil)"
+              placeholder="Note (e.g. Figma license renewal)"
               aria-label="Note"
             />
           </div>

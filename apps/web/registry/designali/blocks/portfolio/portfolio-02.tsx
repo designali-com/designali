@@ -1,15 +1,17 @@
 "use client"
 
 import { useState } from "react"
-import { ArrowRight } from "lucide-react"
+import {
+  ArrowRight,
+} from "@designali/icons"
 
 const projects = [
-  { name: "Halcyon Bank", discipline: "Fintech app", year: "2026", hue: "var(--chart-1)" },
-  { name: "Orbit Studio", discipline: "Brand identity", year: "2026", hue: "var(--chart-2)" },
-  { name: "Wildgrain", discipline: "E-commerce", year: "2025", hue: "var(--chart-3)" },
-  { name: "Meridian Labs", discipline: "Developer docs", year: "2025", hue: "var(--chart-4)" },
-  { name: "Common Ground", discipline: "Non-profit website", year: "2024", hue: "var(--chart-5)" },
-  { name: "Parcel & Co", discipline: "Logistics dashboard", year: "2024", hue: "var(--chart-1)" },
+  { name: "Dalim UI", discipline: "Component library", year: "UI", hue: "var(--chart-1)", image: "/images/templates/dalim-ui-old.jpg" },
+  { name: "Dalim Agency", discipline: "Brand identity", year: "Brand", hue: "var(--chart-2)", image: "/images/templates/dalim-agency-old.jpg" },
+  { name: "Resort", discipline: "Template", year: "Web", hue: "var(--chart-3)", image: "/images/templates/resort.jpg" },
+  { name: "Dalim Tools", discipline: "Designer tools", year: "Web", hue: "var(--chart-4)", image: "/images/templates/dalim-tools-old.jpg" },
+  { name: "Dalim Works", discipline: "Portfolio website", year: "Web", hue: "var(--chart-5)", image: "/images/templates/dalim-works-old.jpg" },
+  { name: "AI Startup", discipline: "Template", year: "Web", hue: "var(--chart-1)", image: "/images/templates/ai.jpg" },
 ]
 
 export default function Portfolio02() {
@@ -21,7 +23,7 @@ export default function Portfolio02() {
       <div className="mx-auto grid max-w-6xl gap-10 px-6 lg:grid-cols-[1fr_380px]">
         <div>
           <p className="mb-6 text-xs tracking-widest text-muted-foreground uppercase">
-            Index of projects
+            Designali projects
           </p>
           <ul className="border-t border-border">
             {projects.map((project, i) => (
@@ -57,11 +59,17 @@ export default function Portfolio02() {
         <div className="hidden lg:block">
           <div className="sticky top-24 border border-border bg-muted p-3">
             <div
-              className="aspect-[3/4] w-full transition-colors duration-500"
+              className="aspect-[3/4] w-full overflow-hidden transition-colors duration-500"
               style={{
                 background: `linear-gradient(160deg, ${current?.hue} 0%, transparent 85%)`,
               }}
-            />
+            >
+              <img
+                src={current?.image}
+                alt={`${current?.name} by Designali`}
+                className="h-full w-full object-cover"
+              />
+            </div>
             <div className="flex items-center justify-between pt-3 text-xs">
               <span className="font-medium">{current?.name}</span>
               <span className="text-muted-foreground">{current?.discipline}</span>

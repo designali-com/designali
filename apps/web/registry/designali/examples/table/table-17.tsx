@@ -8,10 +8,10 @@ import {
 } from "@workspace/ui/components/table"
 
 const projects = [
-  { name: "Website redesign", owner: "Leah", progress: 82, due: "Dec 4" },
-  { name: "Mobile onboarding", owner: "Ravi", progress: 45, due: "Dec 18" },
-  { name: "Billing migration", owner: "Kenji", progress: 20, due: "Jan 9" },
-  { name: "Help center", owner: "Ines", progress: 100, due: "Nov 20" },
+  { name: "designali.com redesign", owner: "Ali", progress: 82, due: "Dec 4" },
+  { name: "Icons 4000+ release", owner: "Sara", progress: 45, due: "Dec 18" },
+  { name: "Logos library", owner: "Omar", progress: 20, due: "Jan 9" },
+  { name: "Docs site", owner: "Priya", progress: 100, due: "Nov 20" },
 ]
 
 export default function ProgressColumnTable() {

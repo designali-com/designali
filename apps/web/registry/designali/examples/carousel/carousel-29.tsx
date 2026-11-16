@@ -1,4 +1,7 @@
-import { MailIcon, MessageSquareIcon } from "lucide-react"
+import {
+  Mail as MailIcon,
+  MessageSquare as MessageSquareIcon,
+} from "@designali/icons"
 
 import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
 import { Badge } from "@workspace/ui/components/badge"
@@ -13,11 +16,11 @@ import {
 } from "@workspace/ui/components/carousel"
 
 const people = [
-  { name: "Hana Ito", role: "Product Designer", status: "Online" },
-  { name: "Marco Bell", role: "Staff Engineer", status: "In a meeting" },
-  { name: "Priya Shah", role: "Data Analyst", status: "Online" },
-  { name: "Jon Weller", role: "Support Lead", status: "Away" },
-  { name: "Sofia Lund", role: "Recruiter", status: "Online" },
+  { name: "Ali Imam", role: "Founder, Design Engineer", status: "Online" },
+  { name: "Sara Khan", role: "Brand Designer", status: "In a meeting" },
+  { name: "Ravi Mehta", role: "Next.js Developer", status: "Online" },
+  { name: "Noor Ahmed", role: "Motion & CGI Artist", status: "Away" },
+  { name: "Kabir Das", role: "Client Success", status: "Online" },
 ]
 
 export default function TeamDirectoryCarousel() {

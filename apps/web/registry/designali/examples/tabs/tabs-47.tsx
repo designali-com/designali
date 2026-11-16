@@ -1,4 +1,7 @@
-import { HistoryIcon, MessageCircleIcon } from "lucide-react"
+import {
+  History as HistoryIcon,
+  MessageCircle as MessageCircleIcon,
+} from "@designali/icons"
 
 import {
   Tabs,
@@ -8,8 +11,8 @@ import {
 } from "@workspace/ui/components/tabs"
 
 const events = [
-  { who: "Elif Demir", what: "changed priority to High", when: "10:42" },
-  { who: "Noah Park", what: "assigned the ticket to Elif", when: "09:15" },
+  { who: "Sara Khan", what: "changed priority to High", when: "10:42" },
+  { who: "Ali Imam", what: "assigned the ticket to Sara", when: "09:15" },
   { who: "System", what: "created ticket from email", when: "08:58" },
 ]
 
@@ -27,9 +30,9 @@ export default function ActivityTimelineTabs() {
         </TabsTrigger>
       </TabsList>
       <TabsContent value="comments" className="border p-3">
-        <p className="font-medium">Elif Demir</p>
+        <p className="font-medium">Sara Khan</p>
         <p className="text-muted-foreground">
-          Reproduced on Safari 18, looking into it now.
+          Reproduced the Designali template bug on Safari 18, looking into it now.
         </p>
       </TabsContent>
       <TabsContent value="history">

@@ -1,46 +1,49 @@
 "use client"
 
 import { useRef } from "react"
-import { ArrowLeft, ArrowRight } from "lucide-react"
+import {
+  ArrowLeft,
+  ArrowRight,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 
 const frames = [
   {
-    title: "Harbour at Dawn",
-    place: "Porto Veil",
+    title: "Designali Agency",
+    place: "Brand and website",
     year: "2025",
-    gradient: "linear-gradient(160deg, var(--chart-1), var(--chart-3))",
+    gradient: 'url("/images/templates/design-agency.jpg") center / cover',
   },
   {
-    title: "Terrace Garden",
-    place: "Casa Lumen",
+    title: "Portfolio Simple",
+    place: "Next.js template",
     year: "2025",
-    gradient: "linear-gradient(200deg, var(--chart-2), var(--chart-4))",
+    gradient: 'url("/images/templates/portfolio-simple.jpg") center / cover',
   },
   {
-    title: "Quarry Light",
-    place: "North Ridge",
+    title: "Ali Imam",
+    place: "Personal site",
     year: "2024",
-    gradient: "linear-gradient(120deg, var(--chart-5), var(--chart-2))",
+    gradient: 'url("/images/templates/aliimam-comp.jpg") center / cover',
   },
   {
-    title: "Glass Pavilion",
-    place: "Atelier Osk",
+    title: "Dalim Agency",
+    place: "Agency website",
     year: "2024",
-    gradient: "linear-gradient(90deg, var(--chart-3), var(--chart-1))",
+    gradient: 'url("/images/templates/dalim-agency-old.jpg") center / cover',
   },
   {
-    title: "Winter Orchard",
-    place: "Valmont Farm",
+    title: "Dalim Visuals",
+    place: "CGI and motion",
     year: "2023",
-    gradient: "linear-gradient(30deg, var(--chart-4), var(--chart-5))",
+    gradient: 'url("/images/templates/dalim-visuals-old.jpg") center / cover',
   },
   {
-    title: "Salt Road",
-    place: "Coastline 9",
+    title: "Dalim Graphic",
+    place: "Graphic design",
     year: "2023",
-    gradient: "linear-gradient(240deg, var(--chart-2), var(--chart-1))",
+    gradient: 'url("/images/templates/dalim-graphic-old.jpg") center / cover',
   },
 ]
 
@@ -58,10 +61,10 @@ export default function Gallery08() {
         <div className="flex flex-wrap items-end justify-between gap-6">
           <div>
             <p className="text-xs tracking-widest text-muted-foreground uppercase">
-              Field journal
+              Designali work
             </p>
             <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-4xl">
-              Places we photographed this year
+              Projects designed and built by Ali Imam
             </h2>
           </div>
           <div className="flex gap-2">

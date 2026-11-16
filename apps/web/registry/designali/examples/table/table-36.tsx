@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { ArrowDownIcon, ArrowUpIcon } from "lucide-react"
+import {
+  ArrowDown as ArrowDownIcon,
+  ArrowUp as ArrowUpIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -14,10 +17,10 @@ import {
 } from "@workspace/ui/components/table"
 
 const initialTracks = [
-  { id: "t1", title: "Morning Static", artist: "Lumen Drive", length: "3:42" },
-  { id: "t2", title: "Glass Harbor", artist: "Okra Sun", length: "4:10" },
-  { id: "t3", title: "Paper Kites", artist: "Velvet Ash", length: "2:58" },
-  { id: "t4", title: "Night Cycle", artist: "Lumen Drive", length: "5:01" },
+  { id: "t1", title: "Colorful Spheres", artist: "Designali Motion", length: "3:42" },
+  { id: "t2", title: "Abstract Fluid", artist: "Designali Motion", length: "4:10" },
+  { id: "t3", title: "Studio Showreel", artist: "Ali Imam", length: "2:58" },
+  { id: "t4", title: "CGI Loop", artist: "Designali Motion", length: "5:01" },
 ]
 
 export default function ReorderableRowsTable() {

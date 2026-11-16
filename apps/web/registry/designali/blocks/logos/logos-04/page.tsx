@@ -17,7 +17,7 @@ export default function Logos04() {
   return (
     <div className="flex min-h-screen flex-col items-center justify-center py-20">
       <h1 className="mb-10 px-20 text-center text-sm font-medium text-muted-foreground">
-        Trusted by the world’s most creative companies.
+        The tools behind every Designali project.
       </h1>
       <div className="mx-auto max-w-5xl px-6">
         <div className="mx-auto grid grid-cols-2 border p-2 sm:grid-cols-4 lg:grid-cols-6">

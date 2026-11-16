@@ -1,7 +1,14 @@
-import { ArrowUpRight } from "lucide-react"
+import {
+  ArrowUpRight,
+} from "@designali/icons"
 
-const links = ["Index", "Work", "Studio", "Journal", "Contact"]
-const social = ["Newsletter", "Reading list", "Showreel", "Press kit"]
+const links = ["Templates", "Blocks", "Work", "Blogs", "Contact"]
+const social = [
+  { label: "Instagram", href: "https://www.instagram.com/designali.code/" },
+  { label: "X", href: "https://x.com/designali_com" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/company/designali-com/" },
+  { label: "21st.dev", href: "https://21st.dev/@designali-in" },
+]
 
 export default function Footer13() {
   return (
@@ -10,13 +17,13 @@ export default function Footer13() {
         <div className="grid gap-10 md:grid-cols-[2fr_1fr_1fr]">
           <div>
             <p className="max-w-sm text-2xl leading-tight font-medium tracking-tight">
-              Have a building, a brand or a book that needs a point of view?
+              Have a brand, a website or a product that needs design and code?
             </p>
             <a
-              href="#"
+              href="mailto:hello@designali.com"
               className="group mt-6 inline-flex items-center gap-2 border-b border-foreground pb-1 text-sm"
             >
-              studio@morrow.works
+              hello@designali.com
               <ArrowUpRight className="size-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </a>
           </div>
@@ -31,24 +38,24 @@ export default function Footer13() {
           </ul>
           <ul className="space-y-2 text-sm">
             {social.map((link) => (
-              <li key={link}>
-                <a href="#" className="text-muted-foreground hover:text-foreground">
-                  {link}
+              <li key={link.label}>
+                <a href={link.href} className="text-muted-foreground hover:text-foreground">
+                  {link.label}
                 </a>
               </li>
             ))}
           </ul>
         </div>
         <div className="mt-14 flex justify-between text-xs text-muted-foreground">
-          <span>© 2026 Morrow Works</span>
-          <span>Rotterdam / Lisbon</span>
+          <span>© 2026 Designali</span>
+          <span>Design se code tak</span>
         </div>
       </div>
       <p
         aria-hidden
         className="mx-auto mt-4 max-w-7xl translate-y-[18%] px-4 text-center text-[24vw] leading-[0.8] font-semibold tracking-tighter text-foreground select-none xl:text-[300px]"
       >
-        morrow
+        designali
       </p>
     </footer>
   )

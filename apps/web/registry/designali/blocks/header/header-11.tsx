@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import {
-  BarChart3,
+  ChartColumn as BarChart3,
   ChevronDown,
   Database,
   LifeBuoy,
@@ -11,20 +11,21 @@ import {
   Workflow,
   X,
   Zap,
-} from "lucide-react"
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
+import { Logo } from "@/src/components/logo"
 
 const products = [
-  { icon: Database, title: "Warehouse", body: "Serverless Postgres with branching" },
-  { icon: Workflow, title: "Pipelines", body: "Sync 200+ sources on a schedule" },
-  { icon: BarChart3, title: "Insights", body: "Dashboards your execs will read" },
-  { icon: Shield, title: "Governance", body: "Lineage, PII tagging and audit logs" },
+  { icon: Database, title: "Templates", body: "Next.js templates ready to ship" },
+  { icon: Workflow, title: "Blocks", body: "460+ copy-and-paste sections" },
+  { icon: BarChart3, title: "UI Designs", body: "2300+ real-world UI examples" },
+  { icon: Shield, title: "Icons", body: "4000+ icons in @designali/icons" },
 ]
 
-const resources = ["Documentation", "API reference", "Templates", "Community forum"]
+const resources = ["Docs", "Blogs", "Logos", "Illustration"]
 
-const links = ["Customers", "Pricing", "Docs"]
+const links = ["Work", "Pricing", "Docs"]
 
 export default function Header11() {
   const [menu, setMenu] = useState(false)
@@ -36,13 +37,8 @@ export default function Header11() {
       <header className="relative border-b" onMouseLeave={() => setMenu(false)}>
         <div className="mx-auto flex h-16 max-w-7xl items-center gap-8 px-6">
           <a href="#" className="flex items-center gap-2 font-semibold tracking-tight">
-            <span className="grid size-6 grid-cols-2 gap-0.5">
-              <span className="bg-foreground" />
-              <span className="bg-foreground/40" />
-              <span className="bg-foreground/40" />
-              <span className="bg-foreground" />
-            </span>
-            Quarry
+            <Logo className="size-6" />
+            designali
           </a>
           <nav className="hidden items-center gap-6 text-sm md:flex">
             <button
@@ -71,7 +67,7 @@ export default function Header11() {
               Sign in
             </Button>
             <Button nativeButton={false} render={<a href="#" />}>
-              Start building
+              Get started
             </Button>
           </div>
           <Button
@@ -117,9 +113,9 @@ export default function Header11() {
               <a href="#" className="flex flex-col justify-between bg-foreground p-5 text-background">
                 <Zap className="size-5" />
                 <span>
-                  <span className="block text-sm font-medium">Quarry Live, June 12</span>
+                  <span className="block text-sm font-medium">New: 460+ blocks</span>
                   <span className="mt-1 block text-xs opacity-70">
-                    Watch the keynote and product launches.
+                    Explore the latest Designali release.
                   </span>
                 </span>
               </a>
@@ -166,7 +162,7 @@ export default function Header11() {
                 Sign in
               </Button>
               <Button nativeButton={false} render={<a href="#" />}>
-                Start building
+                Get started
               </Button>
             </div>
           </div>

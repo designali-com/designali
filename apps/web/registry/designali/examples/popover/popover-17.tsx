@@ -1,4 +1,7 @@
-import { CircleHelpIcon, ExternalLinkIcon } from "lucide-react"
+import {
+  CircleQuestionMark as CircleHelpIcon,
+  ExternalLink as ExternalLinkIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Input } from "@workspace/ui/components/input"

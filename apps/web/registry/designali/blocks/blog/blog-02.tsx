@@ -1,18 +1,18 @@
 const featured = {
   category: "Essay",
-  title: "The quiet interface: designing software that gets out of the way",
+  title: "Where thoughtful design meets production-ready code",
   excerpt:
-    "The best tools we use every day share one trait. They remember what we meant, forgive what we did, and never ask us to admire them. Here is how we try to build that.",
-  author: "Priya Raman",
-  role: "Head of Product Design",
+    "I design and build digital experiences that look great, feel intuitive, and work beautifully. Here is how Designali takes a project from the first Figma frame to a shipped Next.js site.",
+  author: "Ali Imam",
+  role: "Founder, Designali",
   date: "November 14, 2026",
 }
 
 const sidebar = [
-  { title: "Notes on typographic rhythm for dashboards", date: "Nov 10", tag: "Typography" },
-  { title: "How we audit accessibility before every release", date: "Nov 3", tag: "Accessibility" },
-  { title: "A field guide to empty states", date: "Oct 27", tag: "UX patterns" },
-  { title: "Motion budgets: animating less, on purpose", date: "Oct 20", tag: "Motion" },
+  { title: "Notes on typography for Designali UI kits", date: "Nov 10", tag: "Typography" },
+  { title: "How we audit accessibility before every block release", date: "Nov 3", tag: "Accessibility" },
+  { title: "Drawing 4,000+ icons for @designali/icons", date: "Oct 27", tag: "Icons" },
+  { title: "Motion and CGI for the Designali brand", date: "Oct 20", tag: "Motion" },
 ]
 
 export default function Blog02() {
@@ -36,7 +36,7 @@ export default function Blog02() {
           </p>
           <div className="mt-8 flex items-center gap-3">
             <span className="flex size-10 items-center justify-center rounded-full bg-primary text-sm font-medium text-primary-foreground">
-              PR
+              AI
             </span>
             <div className="text-sm">
               <p className="font-medium">{featured.author}</p>

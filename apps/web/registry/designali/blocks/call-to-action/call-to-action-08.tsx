@@ -1,7 +1,11 @@
 "use client"
 
 import { useState } from "react"
-import { ArrowRight, CheckCircle2, Mail } from "lucide-react"
+import {
+  ArrowRight,
+  CircleCheck as CheckCircle2,
+  Mail,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Input } from "@workspace/ui/components/input"
@@ -17,11 +21,11 @@ export default function CallToAction08() {
           <Mail className="size-5" />
         </div>
         <h2 className="mt-6 text-3xl font-medium tracking-tight md:text-4xl">
-          The Thursday Build Notes
+          The Designali Build Notes
         </h2>
         <p className="mx-auto mt-4 max-w-xl text-sm leading-7 text-muted-foreground">
           One email a week with the layouts we shipped, the experiments that
-          failed, and the numbers behind both. Read by 18,400 product builders.
+          failed, and the numbers behind both. Written by Ali Imam.
         </p>
         {submitted ? (
           <div className="mx-auto mt-8 flex max-w-md items-center justify-center gap-3 border border-emerald-600/30 bg-emerald-50 px-4 py-4 text-sm text-emerald-800 dark:bg-emerald-950/40 dark:text-emerald-300">
@@ -43,7 +47,7 @@ export default function CallToAction08() {
               required
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              placeholder="you@company.com"
+              placeholder="you@example.com"
               aria-label="Email address"
               className="h-10 flex-1 text-sm md:text-sm"
             />

@@ -1,4 +1,10 @@
-import { ArrowRight, Building2, Check, GraduationCap, Rocket } from "lucide-react"
+import {
+  ArrowRight,
+  Building2,
+  Check,
+  GraduationCap,
+  Rocket,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 

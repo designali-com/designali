@@ -1,4 +1,6 @@
-import { CheckIcon } from "lucide-react"
+import {
+  Check as CheckIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import {
@@ -11,10 +13,10 @@ import {
 import { cn } from "@workspace/ui/lib/utils"
 
 const steps = [
-  { title: "Create your workspace", state: "Done" },
-  { title: "Invite teammates", state: "Done" },
-  { title: "Connect a data source", state: "In progress" },
-  { title: "Publish your first report", state: "Up next" },
+  { title: "Create your Designali account", state: "Done" },
+  { title: "Pick a template", state: "Done" },
+  { title: "Customize blocks", state: "In progress" },
+  { title: "Deploy to Vercel", state: "Up next" },
 ]
 
 export default function OnboardingStepBadges() {

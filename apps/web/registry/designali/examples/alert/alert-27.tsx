@@ -1,6 +1,10 @@
 "use client"
 
-import { CheckIcon, RefreshCwIcon, SparklesIcon } from "lucide-react"
+import {
+  Check as CheckIcon,
+  RefreshCw as RefreshCwIcon,
+  Sparkles as SparklesIcon,
+} from "@designali/icons"
 
 import {
   Alert,
@@ -11,16 +15,16 @@ import {
 import { Button } from "@workspace/ui/components/button"
 
 const highlights = [
-  "Faster search across all workspaces",
-  "Bulk edit for tasks",
-  "New keyboard shortcuts panel",
+  "Faster search across 4000+ icons",
+  "New Abstract vector shapes",
+  "Copy blocks straight into Next.js",
 ]
 
 export default function AlertUpdateAvailable() {
   return (
     <Alert variant="info" className="max-w-md">
       <SparklesIcon />
-      <AlertTitle>Version 4.2 is ready</AlertTitle>
+      <AlertTitle>Designali 4.2 is ready</AlertTitle>
       <AlertDescription>
         <ul className="my-1 space-y-0.5">
           {highlights.map((item) => (

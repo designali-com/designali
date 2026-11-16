@@ -1,9 +1,15 @@
 "use client"
 
 import * as React from "react"
-import { ClockIcon } from "lucide-react"
+import {
+  Clock as ClockIcon,
+} from "@designali/icons"
 
-import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from "@workspace/ui/components/avatar"
 import { Button } from "@workspace/ui/components/button"
 import {
   DropdownMenu,
@@ -38,7 +44,8 @@ export default function PresenceStatusMenu() {
       >
         <span className="relative">
           <Avatar size="sm">
-            <AvatarFallback>YK</AvatarFallback>
+            <AvatarImage src="/ali.jpg" alt="Ali Imam" />
+            <AvatarFallback>AI</AvatarFallback>
           </Avatar>
           <span
             className={cn(

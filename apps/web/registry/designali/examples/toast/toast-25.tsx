@@ -1,6 +1,8 @@
 "use client"
 
-import { RocketIcon } from "lucide-react"
+import {
+  Rocket as RocketIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Toaster, createToastManager } from "@workspace/ui/components/toast"
@@ -21,7 +23,7 @@ export default function DeploymentPipelineToast() {
         notify.update(id, {
           type: "success",
           title: "Live on production",
-          description: "acme-web deployed in 42s",
+          description: "designali-web deployed in 42s",
           timeout: 5000,
           actionProps: { children: "Visit" },
         }),
@@ -34,7 +36,7 @@ export default function DeploymentPipelineToast() {
       <div className="flex w-full max-w-sm items-center gap-3 border p-4">
         <RocketIcon className="size-5 text-muted-foreground" />
         <div className="min-w-0 flex-1">
-          <p className="text-sm font-medium">acme-web</p>
+          <p className="text-sm font-medium">designali-web</p>
           <p className="truncate font-mono text-xs text-muted-foreground">
             main @ 4f9c2ab
           </p>

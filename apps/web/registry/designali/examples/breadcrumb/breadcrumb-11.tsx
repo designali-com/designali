@@ -1,4 +1,6 @@
-import { PanelLeftIcon } from "lucide-react"
+import {
+  PanelLeft as PanelLeftIcon,
+} from "@designali/icons"
 
 import {
   Breadcrumb,

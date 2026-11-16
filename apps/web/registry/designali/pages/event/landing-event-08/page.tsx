@@ -11,22 +11,23 @@ import {
   Users,
   UtensilsCrossed,
   Video,
-} from "lucide-react"
+} from "@designali/icons"
 
+import { Logo } from "@/src/components/logo"
 import { Button } from "@workspace/ui/components/button"
 import { Input } from "@workspace/ui/components/input"
 
-const navLinks = ["Speakers", "Schedule", "Venue", "Tickets", "Sponsors"]
+const navLinks = ["Host", "Agenda", "Online", "Tickets", "Resources"]
 
 const logos = [
-  "Quartz",
-  "Northwind",
-  "Parallel",
-  "Stackhouse",
-  "Cobalt",
-  "Fieldnote",
-  "Harbor",
-  "Lumen",
+  "@designali/icons",
+  "Next.js",
+  "React",
+  "TypeScript",
+  "Tailwind CSS",
+  "Figma",
+  "Vercel",
+  "shadcn/ui",
 ]
 
 const features = [
@@ -34,109 +35,109 @@ const features = [
     icon: Ticket,
     title: "Fully transferable tickets",
     description:
-      "Cannot make it? Transfer your ticket to a colleague for free until the day before doors open.",
+      "Cannot make it? Transfer your ticket to a teammate for free until the day before the stream starts.",
   },
   {
     icon: Mic,
-    title: "40+ curated talks",
+    title: "Live design-to-code sessions",
     description:
-      "Every session is reviewed by a programme committee and rehearsed with a coach before the event.",
+      "Ali Imam designs in Figma and builds in Next.js live, explaining every decision as he goes.",
   },
   {
     icon: Users,
-    title: "Hallway-track networking",
+    title: "Community chat",
     description:
-      "Matchmaking in the event app pairs you with attendees who share your goals before you arrive.",
+      "A live chat room for questions, feedback and sharing what you are building with other attendees.",
   },
   {
     icon: Presentation,
     title: "Hands-on workshops",
     description:
-      "Small-room sessions capped at 30 people, with materials and laptops-open exercises.",
+      "Small online groups capped at 30 people, with starter files from Designali blocks and templates.",
   },
   {
     icon: Video,
-    title: "Every talk recorded",
+    title: "Every session recorded",
     description:
-      "Ticket holders get lifetime access to recordings, slides and transcripts within 48 hours.",
+      "Ticket holders get recordings, Figma files and source code within 48 hours.",
   },
   {
     icon: UtensilsCrossed,
-    title: "Food that is good",
+    title: "Real project files",
     description:
-      "Local caterers, vegan and allergy-friendly options, and coffee that does not taste like a conference.",
+      "Keep the Figma files, components and code from every session to use in your own projects.",
   },
 ]
 
 const stats = [
-  { value: "60+", label: "Speakers" },
-  { value: "3", label: "Stages" },
-  { value: "28", label: "Countries represented" },
-  { value: "9th", label: "Annual edition" },
+  { value: "20+", label: "Host" },
+  { value: "2", label: "Days, fully online" },
+  { value: "460+", label: "Designali blocks to build with" },
+  { value: "3rd", label: "Online edition" },
 ]
 
 const steps = [
   {
-    title: "Morning keynotes",
+    title: "Opening session",
     description:
-      "Doors open at 8:30 with breakfast. Keynotes run on the main stage from 9:30 until 11:00.",
+      "The stream opens at 9:00. Ali opens with how Designali takes a project from design to code.",
   },
   {
-    title: "Parallel tracks",
+    title: "Design and code tracks",
     description:
-      "Choose between three stages covering strategy, engineering and design through the afternoon.",
+      "Choose between brand and UI design in Figma or building it in Next.js and Tailwind CSS.",
   },
   {
     title: "Workshops",
     description:
-      "Pre-booked small-group workshops run in the studios from 14:00, with limited seats.",
+      "Pre-booked small-group workshops run online from 14:00, with limited seats.",
   },
   {
-    title: "Evening social",
+    title: "Live Q&A",
     description:
-      "Wind down with live music, food trucks and the people you met in the hallway.",
+      "Wrap up with an open Q&A, portfolio feedback and a look at what Designali is shipping next.",
   },
 ]
 
 const showcase = [
   {
-    name: "Amara Okoye",
-    meta: "Designing for the next billion users",
+    name: "Ali Imam",
+    meta: "Design se code tak: the Designali workflow",
     tag: "Keynote",
     price: "Day 1 · 09:30",
     tile: "bg-gradient-to-br from-yellow-100 via-amber-200 to-orange-300 dark:from-yellow-700 dark:via-amber-800 dark:to-orange-900",
   },
   {
-    name: "Lucas Bernard",
-    meta: "Scaling teams without losing culture",
-    tag: "Leadership",
+    name: "Brand track · Ali Imam",
+    meta: "Building a brand identity from scratch",
+    tag: "Brand",
     price: "Day 1 · 11:15",
     tile: "bg-gradient-to-br from-amber-200 via-orange-300 to-rose-400 dark:from-amber-700 dark:via-orange-800 dark:to-rose-900",
   },
   {
-    name: "Ingrid Solberg",
-    meta: "What we learned shipping weekly for 5 years",
-    tag: "Engineering",
+    name: "Code track · Ali Imam",
+    meta: "From Figma to Next.js without losing detail",
+    tag: "Code",
     price: "Day 1 · 14:00",
     tile: "bg-gradient-to-br from-sky-200 via-cyan-300 to-teal-400 dark:from-sky-700 dark:via-cyan-800 dark:to-teal-900",
   },
   {
-    name: "Diego Herrera",
-    meta: "Hands-on: prototyping with real data",
+    name: "Guest designer",
+    meta: "Hands-on: building with Designali blocks",
     tag: "Workshop",
     price: "Day 2 · 10:00",
     tile: "bg-gradient-to-br from-violet-200 via-purple-300 to-fuchsia-400 dark:from-violet-700 dark:via-purple-800 dark:to-fuchsia-900",
   },
   {
-    name: "Yuna Park",
-    meta: "The quiet power of good defaults",
+    name: "Community panel",
+    meta: "Design systems with @designali/icons",
     tag: "Design",
     price: "Day 2 · 13:30",
     tile: "bg-gradient-to-br from-emerald-200 via-green-300 to-lime-300 dark:from-emerald-700 dark:via-green-800 dark:to-lime-900",
   },
   {
-    name: "Samuel Adeyemi",
-    meta: "Closing keynote: building for decades",
+    name: "Ali Imam & guests",
+    meta: "Closing session: AI-assisted design workflows",
     tag: "Keynote",
     price: "Day 2 · 16:45",
     tile: "bg-gradient-to-br from-stone-200 via-neutral-300 to-zinc-400 dark:from-stone-700 dark:via-neutral-800 dark:to-zinc-900",
@@ -146,64 +147,64 @@ const showcase = [
 const testimonials = [
   {
     quote:
-      "The most well-run event I have been to. Sessions started on time and every speaker had something real to say.",
-    name: "Chris Navarro",
-    role: "Engineering Manager",
+      "The clearest design-to-code session I have seen. Every step was practical and the files were ready to use.",
+    name: "Chris N.",
+    role: "Frontend developer",
   },
   {
     quote:
-      "The workshops alone were worth the ticket. I used what I learned on Monday morning.",
-    name: "Mei Tanaka",
-    role: "Product Designer",
+      "The workshop alone was worth the ticket. I used the components in a client project on Monday morning.",
+    name: "Mei T.",
+    role: "Product designer",
   },
   {
     quote:
-      "As a first-time speaker I felt completely supported. The rehearsal coaching made a huge difference.",
-    name: "Oliver Grant",
-    role: "Speaker, 2025",
+      "As a first-time attendee I felt completely welcome. The live Q&A answered questions I had for months.",
+    name: "Oliver G.",
+    role: "Designer, attended online",
   },
 ]
 
 const tiers = [
   {
     name: "Early bird",
-    price: "$349",
+    price: "$29",
     period: "/ticket",
     description: "Limited release for the first 300 attendees.",
     features: [
-      "Both conference days",
-      "All talks and stages",
-      "Lunch and coffee",
-      "Evening social",
+      "Both live session days",
+      "Design and code tracks",
+      "Live chat and Q&A",
+      "Live Q&A",
       "Session recordings",
     ],
     cta: "Buy early bird",
   },
   {
     name: "Full pass",
-    price: "$549",
+    price: "$59",
     period: "/ticket",
     description: "Everything, including workshops.",
     features: [
-      "Both conference days",
+      "Both live session days",
       "Two workshop seats",
-      "Priority seating",
-      "Speaker dinner draw",
+      "Figma files and source code",
+      "Portfolio review with Ali",
       "Recordings and slides",
     ],
     cta: "Get the full pass",
   },
   {
     name: "Team",
-    price: "$449",
+    price: "$45",
     period: "/person",
-    description: "For groups of five or more.",
+    description: "For teams of five or more.",
     features: [
       "Full pass benefits",
       "Single invoice",
-      "Reserved team table",
+      "Private team Q&A",
       "Flexible name changes",
-      "Dedicated contact",
+      "Email support from Designali",
     ],
     cta: "Book for your team",
   },
@@ -212,35 +213,35 @@ const tiers = [
 const faqs = [
   {
     q: "Can I get a refund?",
-    a: "Tickets are refundable up to 30 days before the event. After that you can transfer your ticket to someone else for free.",
+    a: "Tickets are refundable up to 7 days before the event. After that you can transfer your ticket to someone else for free.",
   },
   {
     q: "Is there a code of conduct?",
-    a: "Yes. Every attendee, speaker and sponsor agrees to our code of conduct, and a safety team is on site at all times.",
+    a: "Yes. Every attendee agrees to the Designali code of conduct, and the chat is moderated throughout.",
   },
   {
-    q: "Will the talks be streamed?",
-    a: "Talks are recorded and shared with ticket holders within 48 hours. There is no public livestream.",
+    q: "Will the sessions be recorded?",
+    a: "Yes. Recordings, Figma files and code are shared with ticket holders within 48 hours.",
   },
   {
-    q: "Do you offer diversity tickets?",
-    a: "We fund over 100 free tickets each year for people from under-represented groups. Applications open in spring.",
+    q: "Do you offer free tickets?",
+    a: "Yes. A number of free tickets are set aside for students. Email hello@designali.com to apply.",
   },
   {
-    q: "Can my company sponsor?",
-    a: "Yes. Download the sponsorship deck or email our partnerships team for available packages.",
+    q: "Can my team join together?",
+    a: "Yes. Team tickets include a private Q&A. Email hello@designali.com for details.",
   },
 ]
 
 const footer = [
-  { title: "Event", links: ["Speakers", "Schedule", "Workshops", "Tickets"] },
+  { title: "Event", links: ["Host", "Agenda", "Workshops", "Tickets"] },
   {
-    title: "Attend",
-    links: ["Venue", "Travel and hotels", "Accessibility", "Code of conduct"],
+    title: "Agenda",
+    links: ["Online", "Workshops", "Accessibility", "Code of conduct"],
   },
   {
-    title: "Get involved",
-    links: ["Call for speakers", "Sponsorship", "Volunteer", "Contact"],
+    title: "Designali",
+    links: ["Templates", "Blocks", "Blog", "Contact"],
   },
 ]
 
@@ -252,7 +253,7 @@ export default function LandingEvent08() {
           href="#"
           className="inline-flex items-center gap-1.5 hover:underline"
         >
-          Applications open next month
+          Applications for Designali Buildnight open next month
           <ArrowRight className="size-3.5" />
         </a>
       </div>
@@ -262,10 +263,8 @@ export default function LandingEvent08() {
             href="#"
             className="flex items-center gap-2 font-semibold tracking-tight"
           >
-            <span className="flex size-7 items-center justify-center rounded-md bg-teal-600 text-white text-sm">
-              B
-            </span>
-            <span className="">Buildnight</span>
+            <Logo className="h-5 w-auto" />
+            <span className="">designali</span>
           </a>
           <nav className="hidden items-center gap-7 text-sm md:flex">
             {navLinks.map((link) => (
@@ -289,7 +288,7 @@ export default function LandingEvent08() {
               Log in
             </Button>
             <Button size="sm" nativeButton={false} render={<a href="#" />}>
-              Apply to hack
+              Apply to build
             </Button>
           </div>
         </div>
@@ -299,7 +298,7 @@ export default function LandingEvent08() {
           <div className="space-y-7">
             <span className="inline-flex items-center gap-2 rounded-full border bg-background text-muted-foreground px-3 py-1 text-xs font-medium">
               <Sparkles className="size-3.5 text-teal-600 dark:text-teal-400" />
-              48 hours · $50k in prizes
+              48 hours · Online
             </span>
             <h1 className="text-4xl leading-[1.05] font-semibold tracking-tight text-balance sm:text-5xl md:text-6xl ">
               {"Build something wild in "}
@@ -308,8 +307,7 @@ export default function LandingEvent08() {
               </span>
             </h1>
             <p className="max-w-xl text-lg leading-8 text-muted-foreground">
-              Buildnight gathers 600 developers, designers and founders to ship
-              projects with mentors, free food and prizes for the best teams.
+              Designali Buildnight is an online weekend where developers, designers and founders ship projects with Designali blocks, templates and live mentoring from Ali Imam.
             </p>
             <form
               action="#"
@@ -318,12 +316,12 @@ export default function LandingEvent08() {
               <Input
                 type="email"
                 required
-                placeholder="you@company.com"
+                placeholder="you@example.com"
                 aria-label="Email address"
                 className="h-10 bg-background"
               />
               <Button type="submit" size="lg">
-                Apply to hack
+                Apply to build
                 <ArrowRight />
               </Button>
             </form>
@@ -349,7 +347,7 @@ export default function LandingEvent08() {
       <section className="border-b">
         <div className="mx-auto max-w-7xl px-6 py-12">
           <p className="text-center text-sm text-muted-foreground">
-            Supported by our partners
+            Built live with
           </p>
           <div className="mt-8 grid grid-cols-2 items-center gap-x-8 gap-y-6 sm:grid-cols-4 lg:grid-cols-8">
             {logos.map((logo) => (
@@ -370,11 +368,10 @@ export default function LandingEvent08() {
               The experience
             </p>
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl  mt-3">
-              Two days designed to be worth the trip
+              Two days designed to be worth your time
             </h2>
             <p className="mt-4 text-lg leading-8 text-muted-foreground">
-              Talks, workshops and conversations you cannot get from a
-              livestream, in a venue built for meeting the right people.
+              Live sessions, workshops and Q&A where thoughtful design meets production-ready code.
             </p>
           </div>
           <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -425,11 +422,10 @@ export default function LandingEvent08() {
           <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
             <div className="max-w-2xl">
               <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl">
-                Speakers and sessions
+                Sessions
               </h2>
               <p className="mt-4 text-lg leading-8 text-muted-foreground">
-                Practitioners, founders and researchers sharing what they have
-                actually built, not what they plan to build.
+                Ali Imam and guests sharing what they have actually designed and shipped, not slides about it.
               </p>
             </div>
             <Button
@@ -513,8 +509,7 @@ export default function LandingEvent08() {
               Get your ticket
             </h2>
             <p className="mt-4 text-lg leading-8 text-muted-foreground">
-              Prices rise as each release sells out. Group discounts apply
-              automatically for five or more tickets.
+              Prices rise as each release sells out. Team discounts apply automatically for five or more tickets.
             </p>
           </div>
           <div className="mx-auto mt-14 grid max-w-6xl items-start gap-6 lg:grid-cols-3">
@@ -576,7 +571,7 @@ export default function LandingEvent08() {
                 href="#"
                 className="font-medium text-foreground underline underline-offset-4"
               >
-                Get in touch
+                Email hello@designali.com
               </a>
               .
             </p>
@@ -604,8 +599,7 @@ export default function LandingEvent08() {
               Get notified when applications open
             </h2>
             <p className="text-lg text-muted-foreground">
-              Join the list for early application access, sponsor perks and the
-              theme reveal.
+              Join the list for early application access, starter files and the theme reveal.
             </p>
             <form
               action="#"
@@ -614,12 +608,12 @@ export default function LandingEvent08() {
               <Input
                 type="email"
                 required
-                placeholder="you@company.com"
+                placeholder="you@example.com"
                 aria-label="Email address"
                 className="h-10 bg-background"
               />
               <Button type="submit" size="lg">
-                Apply to hack
+                Apply to build
                 <ArrowRight />
               </Button>
             </form>
@@ -633,10 +627,8 @@ export default function LandingEvent08() {
               href="#"
               className="flex items-center gap-2 font-semibold tracking-tight"
             >
-              <span className="flex size-7 items-center justify-center rounded-md bg-teal-600 text-white text-sm">
-                B
-              </span>
-              <span className="">Buildnight</span>
+              <Logo className="h-5 w-auto" />
+              <span className="">designali</span>
             </a>
             <p className="max-w-xs text-sm text-muted-foreground">
               Ship it by Sunday.
@@ -663,7 +655,7 @@ export default function LandingEvent08() {
         <div className="border-t ">
           <div className="mx-auto flex max-w-7xl flex-col justify-between gap-4 px-6 py-6 text-xs text-muted-foreground sm:flex-row">
             <span>
-              © {new Date().getFullYear()} Buildnight. All rights reserved.
+              © {new Date().getFullYear()} Designali. All rights reserved.
             </span>
             <div className="flex gap-6">
               <a href="#" className="hover:text-foreground">

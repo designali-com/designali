@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { FileIcon } from "lucide-react"
+import {
+  File as FileIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -12,7 +14,7 @@ import {
 } from "@workspace/ui/components/input-group"
 
 export default function FileRenameInput() {
-  const [name, setName] = React.useState("invoice-march-final")
+  const [name, setName] = React.useState("designali-invoice-march")
 
   return (
     <div className="flex w-full max-w-sm items-center gap-2 border p-2">

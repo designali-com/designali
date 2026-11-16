@@ -2,12 +2,12 @@
 
 import * as React from "react"
 import {
-  ArrowDownWideNarrowIcon,
-  FolderIcon,
-  FolderPlusIcon,
-  InfoIcon,
-  WallpaperIcon,
-} from "lucide-react"
+  ArrowDownWideNarrow as ArrowDownWideNarrowIcon,
+  Folder as FolderIcon,
+  FolderPlus as FolderPlusIcon,
+  Info as InfoIcon,
+  Wallpaper as WallpaperIcon,
+} from "@designali/icons"
 
 import {
   ContextMenu,
@@ -34,7 +34,7 @@ export default function DesktopBackgroundMenu() {
     <ContextMenu>
       <ContextMenuTrigger className="relative flex h-52 w-full max-w-md items-start gap-4 bg-linear-to-br from-indigo-500 via-purple-500 to-pink-400 p-4 text-[11px] text-white">
         {showIcons
-          ? ["Projects", "Screenshots", "Taxes 2026"].map((name) => (
+          ? ["Designali", "Templates", "Brand kit"].map((name) => (
               <span
                 key={name}
                 className="flex w-16 flex-col items-center gap-1 text-center"

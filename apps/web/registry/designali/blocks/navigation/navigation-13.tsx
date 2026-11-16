@@ -1,7 +1,12 @@
 "use client"
 
 import { useState } from "react"
-import { ArrowLeft, ArrowRight, ChevronLeft, ChevronRight } from "lucide-react"
+import {
+  ArrowLeft,
+  ArrowRight,
+  ChevronLeft,
+  ChevronRight,
+} from "@designali/icons"
 
 import { cn } from "@workspace/ui/lib/utils"
 
@@ -28,7 +33,7 @@ export default function Navigation13() {
           <div className="flex flex-col gap-4 border p-4 sm:flex-row sm:items-center sm:justify-between">
             <p className="text-sm text-muted-foreground">
               Showing <span className="text-foreground tabular-nums">{start}-{end}</span> of{" "}
-              <span className="text-foreground tabular-nums">468</span> invoices
+              <span className="text-foreground tabular-nums">468</span> Designali blocks
             </p>
             <div className="flex items-center gap-4">
               <label className="hidden items-center gap-2 text-sm text-muted-foreground md:flex">
@@ -100,14 +105,14 @@ export default function Navigation13() {
                 <ArrowLeft className="size-3.5 transition-transform group-hover:-translate-x-1" />
                 Chapter 3
               </span>
-              <span className="text-lg font-medium">Pricing for the first hundred customers</span>
+              <span className="text-lg font-medium">Designing the block in Figma</span>
             </a>
             <a href="#" className="group flex flex-col items-end gap-3 p-6 text-end transition-colors hover:bg-muted/50">
               <span className="flex items-center gap-2 text-xs text-muted-foreground">
                 Chapter 5
                 <ArrowRight className="size-3.5 transition-transform group-hover:translate-x-1" />
               </span>
-              <span className="text-lg font-medium">Hiring before you feel ready</span>
+              <span className="text-lg font-medium">Shipping it with Next.js</span>
             </a>
           </nav>
           <div className="flex items-center gap-3">

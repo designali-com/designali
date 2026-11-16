@@ -1,4 +1,6 @@
-import { SearchIcon } from "lucide-react"
+import {
+  Search as SearchIcon,
+} from "@designali/icons"
 
 import {
   InputGroup,
@@ -13,7 +15,7 @@ export default function SearchInputSpinner() {
       <InputGroupAddon>
         <SearchIcon />
       </InputGroupAddon>
-      <InputGroupInput placeholder="Search customers" defaultValue="harbor" />
+      <InputGroupInput placeholder="Search templates" defaultValue="portfolio" />
       <InputGroupAddon align="inline-end">
         <Spinner />
       </InputGroupAddon>

@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { Columns3Icon } from "lucide-react"
+import {
+  Columns3 as Columns3Icon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Checkbox } from "@workspace/ui/components/checkbox"
@@ -29,20 +31,20 @@ const columns = [
 
 const rows = [
   {
-    name: "Ines Duarte",
-    email: "ines@quill.dev",
+    name: "Ali Imam",
+    email: "ali@designali.com",
     role: "Owner",
     lastSeen: "Now",
   },
   {
-    name: "Kofi Mensah",
-    email: "kofi@quill.dev",
+    name: "Kofi",
+    email: "kofi@designali.com",
     role: "Member",
     lastSeen: "2h ago",
   },
   {
-    name: "Aiko Mori",
-    email: "aiko@quill.dev",
+    name: "Aiko",
+    email: "aiko@designali.com",
     role: "Member",
     lastSeen: "Yesterday",
   },

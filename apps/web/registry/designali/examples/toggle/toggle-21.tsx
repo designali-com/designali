@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { Link2Icon, Link2OffIcon } from "lucide-react"
+import {
+  Link2 as Link2Icon,
+  Link2Off as Link2OffIcon,
+} from "@designali/icons"
 
 import { Input } from "@workspace/ui/components/input"
 import { Label } from "@workspace/ui/components/label"

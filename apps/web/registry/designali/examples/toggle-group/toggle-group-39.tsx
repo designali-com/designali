@@ -1,4 +1,8 @@
-import { ListChecksIcon, ListIcon, ListOrderedIcon } from "lucide-react"
+import {
+  ListChecks as ListChecksIcon,
+  List as ListIcon,
+  ListOrdered as ListOrderedIcon,
+} from "@designali/icons"
 
 import { Kbd } from "@workspace/ui/components/kbd"
 import {

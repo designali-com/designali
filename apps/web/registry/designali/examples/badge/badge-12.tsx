@@ -1,4 +1,6 @@
-import { SparklesIcon } from "lucide-react"
+import {
+  Sparkles as SparklesIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import { Button } from "@workspace/ui/components/button"
@@ -18,9 +20,9 @@ export default function PopularPlanBadge() {
         Most popular
       </Badge>
       <CardHeader>
-        <CardTitle>Growth</CardTitle>
+        <CardTitle>Designali Pro</CardTitle>
         <CardDescription>
-          For teams scaling past their first 1,000 customers.
+          All templates, 460+ blocks and 2300+ UI designs.
         </CardDescription>
       </CardHeader>
       <CardContent className="flex flex-col gap-3">
@@ -28,7 +30,7 @@ export default function PopularPlanBadge() {
           <span className="text-3xl font-semibold">$49</span>
           <span className="text-muted-foreground"> / month</span>
         </p>
-        <Button className="w-full">Start 14-day trial</Button>
+        <Button className="w-full">Get Designali Pro</Button>
       </CardContent>
     </Card>
   )

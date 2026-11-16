@@ -10,20 +10,20 @@ import {
 
 const menus = [
   {
-    label: "Admissions",
+    label: "Products",
     groups: [
-      { heading: "Apply", links: ["Undergraduate", "Graduate", "Transfer"] },
-      { heading: "Afford", links: ["Tuition & fees", "Scholarships"] },
+      { heading: "Design", links: ["Templates", "UI Designs", "Landing pages"] },
+      { heading: "Assets", links: ["Icons & logos", "Illustrations"] },
     ],
   },
   {
-    label: "Academics",
+    label: "Studio",
     groups: [
       {
-        heading: "Schools",
-        links: ["Engineering", "Arts & Sciences", "Business"],
+        heading: "Services",
+        links: ["Brand identity", "Web development", "CGI & motion"],
       },
-      { heading: "Resources", links: ["Library", "Academic calendar"] },
+      { heading: "Resources", links: ["Docs", "Blog"] },
     ],
   },
 ]
@@ -59,7 +59,7 @@ export default function UniversityNav() {
         ))}
         <NavigationMenuItem>
           <NavigationMenuLink href="#" className={navigationMenuTriggerStyle()}>
-            Visit
+            Contact
           </NavigationMenuLink>
         </NavigationMenuItem>
       </NavigationMenuList>

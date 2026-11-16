@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { FilterIcon } from "lucide-react"
+import {
+  Funnel as FilterIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import { Button } from "@workspace/ui/components/button"
@@ -23,7 +25,7 @@ import {
   SheetTrigger,
 } from "@workspace/ui/components/sheet"
 
-const categories = ["Jackets", "Knitwear", "Shirts", "Trousers", "Accessories"]
+const categories = ["Templates", "Blocks", "Icons", "Logos", "Illustrations"]
 const sorts = [
   { value: "featured", label: "Featured" },
   { value: "newest", label: "Newest" },
@@ -32,7 +34,7 @@ const sorts = [
 ]
 
 export default function ProductFiltersSheet() {
-  const [selected, setSelected] = React.useState<string[]>(["Knitwear"])
+  const [selected, setSelected] = React.useState<string[]>(["Blocks"])
 
   function toggle(category: string, checked: boolean) {
     setSelected((prev) =>
@@ -49,7 +51,7 @@ export default function ProductFiltersSheet() {
       </SheetTrigger>
       <SheetContent>
         <SheetHeader>
-          <SheetTitle>Filter products</SheetTitle>
+          <SheetTitle>Filter Designali products</SheetTitle>
           <SheetDescription>Narrow down 248 results.</SheetDescription>
         </SheetHeader>
         <div className="flex flex-1 flex-col gap-6 overflow-y-auto px-4">

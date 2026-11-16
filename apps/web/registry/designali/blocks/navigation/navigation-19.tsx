@@ -1,13 +1,19 @@
 "use client"
 
 import { useState } from "react"
-import { ChevronRight, Folder, FolderOpen, HardDrive, MoreHorizontal } from "lucide-react"
+import {
+  ChevronRight,
+  Folder,
+  FolderOpen,
+  HardDrive,
+  Ellipsis as MoreHorizontal,
+} from "@designali/icons"
 
 import { cn } from "@workspace/ui/lib/utils"
 
-const path = ["Shared drive", "Clients", "Bramble Foods", "2025 rebrand", "Packaging", "Final exports"]
+const path = ["Designali drive", "Clients", "Dalim Agency", "Brand refresh", "Website", "Final exports"]
 
-const folders = ["Cartons", "Labels", "Shipping boxes", "Mockups"]
+const folders = ["Logos", "Figma files", "Next.js build", "Mockups"]
 
 export default function Navigation19() {
   const [depth, setDepth] = useState(path.length - 1)

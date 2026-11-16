@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { CircleCheckIcon, CircleIcon } from "lucide-react"
+import {
+  CircleCheck as CircleCheckIcon,
+  Circle as CircleIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -22,21 +25,21 @@ const steps = [
   {
     id: "profile",
     title: "Complete your profile",
-    body: "Add a photo and job title so teammates recognise you.",
+    body: "Add a photo and role so the Designali studio recognises you.",
     cta: "Edit profile",
     done: true,
   },
   {
     id: "invite",
     title: "Invite your team",
-    body: "Workspaces with three or more members ship twice as fast.",
+    body: "Share templates, blocks and icons with your whole team.",
     cta: "Send invites",
     done: false,
   },
   {
     id: "connect",
-    title: "Connect a calendar",
-    body: "Sync meetings so focus time is blocked automatically.",
+    title: "Connect Figma",
+    body: "Sync your Figma files so designs move to code faster.",
     cta: "Connect",
     done: false,
   },

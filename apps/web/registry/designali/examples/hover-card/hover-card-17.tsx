@@ -1,4 +1,7 @@
-import { CheckIcon, InfoIcon } from "lucide-react"
+import {
+  Check as CheckIcon,
+  Info as InfoIcon,
+} from "@designali/icons"
 
 import {
   HoverCard,
@@ -8,18 +11,18 @@ import {
 
 const features = [
   {
-    name: "Unlimited projects",
+    name: "All templates",
     detail:
-      "Create as many projects as you need. Archived projects never count toward limits.",
+      "Every Designali template, block and landing page, with future updates.",
   },
   {
-    name: "50 GB storage",
+    name: "4000+ icons",
     detail:
-      "Shared across your workspace. Extra storage is $2 per 10 GB per month.",
+      "The full @designali/icons set plus @designali/logos for React.",
   },
   {
-    name: "Audit log",
-    detail: "Track every sign-in, permission change, and export for 365 days.",
+    name: "Figma files",
+    detail: "Source design files for every block, ready to customize.",
   },
 ]
 

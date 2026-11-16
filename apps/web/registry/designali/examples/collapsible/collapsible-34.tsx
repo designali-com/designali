@@ -1,4 +1,8 @@
-import { FileTextIcon, SearchIcon, UserIcon } from "lucide-react"
+import {
+  FileText as FileTextIcon,
+  Search as SearchIcon,
+  User as UserIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -17,17 +21,17 @@ const groups = [
     label: "Documents",
     icon: FileTextIcon,
     results: [
-      "Q4 roadmap",
-      "Hiring plan 2027",
-      "Brand voice guide",
-      "Offsite agenda",
-      "Security policy",
+      "Designali product roadmap",
+      "Brand identity proposal",
+      "Icon grid & rotation guide",
+      "Prototype handoff notes",
+      "Rounded logo marks",
     ],
   },
   {
     label: "People",
     icon: UserIcon,
-    results: ["Rosa Delgado", "Rohan Mehta", "Ruth Adeyemi", "Rafael Sousa"],
+    results: ["Rohan · Designer", "Rosa · Client", "Ronit · Developer", "Rory · Motion"],
   },
 ]
 

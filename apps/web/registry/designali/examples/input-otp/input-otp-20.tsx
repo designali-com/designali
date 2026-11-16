@@ -1,7 +1,9 @@
 "use client"
 
 import { REGEXP_ONLY_DIGITS } from "input-otp"
-import { CreditCardIcon } from "lucide-react"
+import {
+  CreditCard as CreditCardIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import { Button } from "@workspace/ui/components/button"
@@ -17,7 +19,7 @@ export default function CardPaymentChallenge() {
       <div className="flex items-center justify-between border-b bg-muted/50 px-4 py-3">
         <div className="flex items-center gap-2 text-xs font-medium">
           <CreditCardIcon className="size-4" />
-          Northwind Bank
+          Designali Checkout
         </div>
         <Badge variant="outline">Secure check</Badge>
       </div>
@@ -25,7 +27,7 @@ export default function CardPaymentChallenge() {
         <p className="text-xs text-muted-foreground">
           You&apos;re paying{" "}
           <span className="font-medium text-foreground">$84.20</span> to
-          Fernwood Outfitters with the card ending in 1094.
+          Designali for Templates Pro with the card ending in 1094.
         </p>
         <InputOTP maxLength={6} pattern={REGEXP_ONLY_DIGITS}>
           <InputOTPGroup>

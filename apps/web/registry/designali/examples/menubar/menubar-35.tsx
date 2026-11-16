@@ -2,12 +2,12 @@
 
 import * as React from "react"
 import {
-  CircleCheckIcon,
-  DownloadIcon,
-  FileImageIcon,
-  FileSpreadsheetIcon,
-  FileTextIcon,
-} from "lucide-react"
+  CircleCheck as CircleCheckIcon,
+  Download as DownloadIcon,
+  FileImage as FileImageIcon,
+  FileSpreadsheet as FileSpreadsheetIcon,
+  FileText as FileTextIcon,
+} from "@designali/icons"
 
 import {
   Menubar,

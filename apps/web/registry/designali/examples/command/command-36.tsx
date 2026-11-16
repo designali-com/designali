@@ -2,11 +2,11 @@
 
 import * as React from "react"
 import {
-  PackageIcon,
-  RotateCcwIcon,
-  SearchIcon,
-  TrendingUpIcon,
-} from "lucide-react"
+  Package as PackageIcon,
+  RotateCcw as RotateCcwIcon,
+  Search as SearchIcon,
+  TrendingUp as TrendingUpIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -40,27 +40,27 @@ export default function MobileSearchSheet() {
         }
       >
         <SearchIcon data-icon="inline-start" />
-        Search the store...
+        Search designali.com...
       </SheetTrigger>
       <SheetContent side="bottom" className="h-[70vh] gap-0 p-0">
         <SheetHeader className="border-b">
           <SheetTitle>Search</SheetTitle>
           <SheetDescription>
-            Find products, orders, and help articles.
+            Find templates, blocks, orders, and help articles.
           </SheetDescription>
         </SheetHeader>
         <Command className="flex-1">
-          <CommandInput placeholder="Running shoes, order #, returns..." />
+          <CommandInput placeholder="Templates, icons, order #..." />
           <CommandList className="max-h-none flex-1">
             <CommandEmpty>No results.</CommandEmpty>
             <CommandGroup heading="Trending">
               <CommandItem onSelect={() => setOpen(false)}>
                 <TrendingUpIcon />
-                <span>Trail running shoes</span>
+                <span>Portfolio templates</span>
               </CommandItem>
               <CommandItem onSelect={() => setOpen(false)}>
                 <TrendingUpIcon />
-                <span>Waterproof jackets</span>
+                <span>Designali icon pack</span>
               </CommandItem>
             </CommandGroup>
             <CommandGroup heading="Your orders">
@@ -68,14 +68,14 @@ export default function MobileSearchSheet() {
                 <PackageIcon />
                 <span>Order #48213</span>
                 <span className="ms-auto text-[11px] text-muted-foreground">
-                  Out for delivery
+                  Ready to download
                 </span>
               </CommandItem>
             </CommandGroup>
             <CommandGroup heading="Help">
               <CommandItem onSelect={() => setOpen(false)}>
                 <RotateCcwIcon />
-                <span>Start a return</span>
+                <span>Request a refund</span>
               </CommandItem>
             </CommandGroup>
           </CommandList>

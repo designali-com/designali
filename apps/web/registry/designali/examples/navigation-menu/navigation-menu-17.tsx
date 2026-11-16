@@ -1,14 +1,14 @@
 import {
-  BuildingIcon,
-  CreditCardIcon,
-  HouseIcon,
-  LandmarkIcon,
-  LockIcon,
-  PiggyBankIcon,
-  StoreIcon,
-  UsersIcon,
-  WalletIcon,
-} from "lucide-react"
+  Building as BuildingIcon,
+  CreditCard as CreditCardIcon,
+  House as HouseIcon,
+  Landmark as LandmarkIcon,
+  Lock as LockIcon,
+  PiggyBank as PiggyBankIcon,
+  Store as StoreIcon,
+  Users as UsersIcon,
+  Wallet as WalletIcon,
+} from "@designali/icons"
 
 import {
   NavigationMenu,
@@ -21,17 +21,17 @@ import {
 } from "@workspace/ui/components/navigation-menu"
 
 const products = {
-  Personal: [
-    { title: "Checking", icon: WalletIcon },
-    { title: "Savings", icon: PiggyBankIcon },
-    { title: "Credit cards", icon: CreditCardIcon },
-    { title: "Mortgages", icon: HouseIcon },
+  Products: [
+    { title: "Pricing", icon: WalletIcon },
+    { title: "Free blocks", icon: PiggyBankIcon },
+    { title: "Templates Pro", icon: CreditCardIcon },
+    { title: "Templates", icon: HouseIcon },
   ],
-  Business: [
-    { title: "Business accounts", icon: BuildingIcon },
-    { title: "Payroll", icon: UsersIcon },
-    { title: "Merchant services", icon: StoreIcon },
-    { title: "Lending", icon: LandmarkIcon },
+  Studio: [
+    { title: "Brand identity", icon: BuildingIcon },
+    { title: "Team license", icon: UsersIcon },
+    { title: "Web development", icon: StoreIcon },
+    { title: "Design systems", icon: LandmarkIcon },
   ],
 }
 

@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { ShoppingCartIcon } from "lucide-react"
+import {
+  ShoppingCart as ShoppingCartIcon,
+} from "@designali/icons"
 
 import {
   AlertDialog,
@@ -30,8 +32,8 @@ export default function CartRemoveItem() {
         <div className="flex items-center gap-3">
           <div className="size-14 shrink-0 bg-linear-to-br from-orange-300 to-rose-400" />
           <div className="min-w-0 flex-1">
-            <p className="text-sm font-medium">Ceramic pour-over set</p>
-            <p className="text-xs text-muted-foreground">Sand - Qty 1</p>
+            <p className="text-sm font-medium">Design Agency template</p>
+            <p className="text-xs text-muted-foreground">Next.js - Personal license</p>
             <p className="mt-1 text-sm font-semibold">$64.00</p>
           </div>
           <AlertDialog>
@@ -45,7 +47,7 @@ export default function CartRemoveItem() {
                 </AlertDialogMedia>
                 <AlertDialogTitle>Remove from cart?</AlertDialogTitle>
                 <AlertDialogDescription>
-                  Only 3 left in stock.
+                  Launch pricing ends soon.
                 </AlertDialogDescription>
               </AlertDialogHeader>
               <AlertDialogFooter>

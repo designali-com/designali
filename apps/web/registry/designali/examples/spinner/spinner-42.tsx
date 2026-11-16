@@ -5,9 +5,9 @@ import * as React from "react"
 import { Spinner } from "@workspace/ui/components/spinner"
 
 const messages = [
-  "Analyzing your spreadsheet",
-  "Detecting column types",
-  "Matching duplicate rows",
+  "Analyzing your Figma file",
+  "Detecting design tokens",
+  "Matching Designali blocks",
   "Building preview",
 ]
 

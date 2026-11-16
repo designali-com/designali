@@ -5,9 +5,9 @@ import {
 } from "@workspace/ui/components/avatar"
 
 const inbox = [
-  { initials: "TF", unread: 3 },
-  { initials: "MO", unread: 12 },
-  { initials: "RS", unread: 0 },
+  { initials: "AI", unread: 3 },
+  { initials: "DA", unread: 12 },
+  { initials: "SA", unread: 0 },
 ]
 
 export default function UnreadCountAvatarBadge() {

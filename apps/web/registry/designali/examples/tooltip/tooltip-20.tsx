@@ -1,4 +1,6 @@
-import { CalendarClockIcon } from "lucide-react"
+import {
+  CalendarClock as CalendarClockIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {

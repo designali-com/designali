@@ -1,4 +1,6 @@
-import { BanknoteIcon } from "lucide-react"
+import {
+  Banknote as BanknoteIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -10,17 +12,17 @@ import {
 const alerts = [
   {
     title: "Payment received",
-    body: "Orchard Supply paid INV-3310 ($1,240).",
+    body: "Brand identity client paid INV-3310 ($1,240).",
     time: "2m",
   },
   {
     title: "Payment received",
-    body: "Bright Lane paid INV-3308 ($980).",
+    body: "Templates customer paid INV-3308 ($980).",
     time: "18m",
   },
   {
     title: "Payment received",
-    body: "Marlow & Finch paid INV-3301 ($2,115).",
+    body: "Web development client paid INV-3301 ($2,115).",
     time: "1h",
   },
 ]

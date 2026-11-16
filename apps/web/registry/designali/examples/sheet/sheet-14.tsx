@@ -1,9 +1,9 @@
 import {
-  DownloadIcon,
-  FileTextIcon,
-  HistoryIcon,
-  Share2Icon,
-} from "lucide-react"
+  Download as DownloadIcon,
+  FileText as FileTextIcon,
+  History as HistoryIcon,
+  Share2 as Share2Icon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Separator } from "@workspace/ui/components/separator"
@@ -18,9 +18,9 @@ import {
 } from "@workspace/ui/components/sheet"
 
 const versions = [
-  { label: "v3 · current", by: "Elif Demir", when: "Today, 10:42" },
-  { label: "v2", by: "Sam Okafor", when: "Mar 2" },
-  { label: "v1", by: "Elif Demir", when: "Feb 27" },
+  { label: "v3 · current", by: "Ali Imam", when: "Today, 10:42" },
+  { label: "v2", by: "Sam", when: "Mar 2" },
+  { label: "v1", by: "Ali Imam", when: "Feb 27" },
 ]
 
 export default function FileDetailsSheet() {
@@ -28,11 +28,11 @@ export default function FileDetailsSheet() {
     <Sheet>
       <SheetTrigger render={<Button variant="outline" />}>
         <FileTextIcon data-icon="inline-start" />
-        brand-guidelines.pdf
+        designali-brand-guidelines.pdf
       </SheetTrigger>
       <SheetContent>
         <SheetHeader>
-          <SheetTitle>brand-guidelines.pdf</SheetTitle>
+          <SheetTitle>designali-brand-guidelines.pdf</SheetTitle>
           <SheetDescription>PDF document · 4.2 MB</SheetDescription>
         </SheetHeader>
         <div className="flex flex-1 flex-col gap-4 overflow-y-auto px-4">
@@ -41,9 +41,9 @@ export default function FileDetailsSheet() {
           </div>
           <dl className="grid grid-cols-2 gap-y-1.5">
             <dt className="text-muted-foreground">Owner</dt>
-            <dd>Elif Demir</dd>
+            <dd>Ali Imam</dd>
             <dt className="text-muted-foreground">Location</dt>
-            <dd>Marketing / Brand</dd>
+            <dd>Designali / Brand</dd>
             <dt className="text-muted-foreground">Modified</dt>
             <dd>Today, 10:42</dd>
           </dl>

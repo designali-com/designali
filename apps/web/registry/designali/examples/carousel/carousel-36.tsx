@@ -1,7 +1,11 @@
 "use client"
 
 import * as React from "react"
-import { CheckIcon, CopyIcon, TicketPercentIcon } from "lucide-react"
+import {
+  Check as CheckIcon,
+  Copy as CopyIcon,
+  TicketPercent as TicketPercentIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -13,9 +17,9 @@ import {
 } from "@workspace/ui/components/carousel"
 
 const coupons = [
-  { code: "WELCOME10", title: "10% off first order", expires: "Ends Dec 31" },
-  { code: "FREESHIP", title: "Free standard shipping", expires: "Ends Nov 30" },
-  { code: "BUNDLE25", title: "$25 off bundles", expires: "Ends Dec 15" },
+  { code: "DESIGNALI10", title: "10% off your first template", expires: "Ends Dec 31" },
+  { code: "ICONS20", title: "20% off the icon pack", expires: "Ends Nov 30" },
+  { code: "BLOCKS25", title: "$25 off the blocks bundle", expires: "Ends Dec 15" },
 ]
 
 export default function CouponOffersCarousel() {

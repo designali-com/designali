@@ -1,13 +1,13 @@
 import {
-  ClockIcon,
-  EllipsisIcon,
-  FileImageIcon,
-  FileSpreadsheetIcon,
-  FileTextIcon,
-  FolderIcon,
-  StarIcon,
-  UsersIcon,
-} from "lucide-react"
+  Clock as ClockIcon,
+  Ellipsis as EllipsisIcon,
+  FileImage as FileImageIcon,
+  FileSpreadsheet as FileSpreadsheetIcon,
+  FileText as FileTextIcon,
+  Folder as FolderIcon,
+  Star as StarIcon,
+  Users as UsersIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -20,23 +20,23 @@ import {
 const files = {
   recent: [
     {
-      name: "Q3 forecast.xlsx",
+      name: "Designali invoices.xlsx",
       meta: "Edited 2 min ago",
       icon: FileSpreadsheetIcon,
     },
-    { name: "Brand guide.pdf", meta: "Edited 1 h ago", icon: FileTextIcon },
+    { name: "Designali brand guide.pdf", meta: "Edited 1 h ago", icon: FileTextIcon },
   ],
   shared: [
     {
-      name: "Hiring plan.docx",
-      meta: "Shared by Ivo Marsh",
+      name: "Client brief.docx",
+      meta: "Shared by Ali Imam",
       icon: FileTextIcon,
     },
-    { name: "Launch assets", meta: "Shared by Dana Ruiz", icon: FolderIcon },
+    { name: "Launch assets", meta: "Shared by Designer", icon: FolderIcon },
   ],
   starred: [
     {
-      name: "Roadmap 2027.fig",
+      name: "Designali blocks.fig",
       meta: "Starred yesterday",
       icon: FileImageIcon,
     },

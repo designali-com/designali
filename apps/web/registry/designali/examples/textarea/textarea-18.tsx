@@ -27,7 +27,7 @@ export default function JsonEditorTextarea() {
 
   return (
     <div className="grid w-full max-w-sm gap-2">
-      <Label htmlFor="ta-json">Webhook config</Label>
+      <Label htmlFor="ta-json">designali.com webhook config</Label>
       <Textarea
         id="ta-json"
         value={value}

@@ -1,14 +1,15 @@
 import {
-  CalendarIcon,
-  EllipsisIcon,
-  MessageSquareIcon,
-  SignalHighIcon,
-} from "lucide-react"
+  Calendar as CalendarIcon,
+  Ellipsis as EllipsisIcon,
+  MessageSquare as MessageSquareIcon,
+  SignalHigh as SignalHighIcon,
+} from "@designali/icons"
 
 import {
   Avatar,
   AvatarFallback,
   AvatarGroup,
+  AvatarImage,
 } from "@workspace/ui/components/avatar"
 import { Badge } from "@workspace/ui/components/badge"
 import { Button } from "@workspace/ui/components/button"
@@ -47,7 +48,7 @@ export default function KanbanTaskCard() {
             </Badge>
           </div>
           <CardTitle className="mt-1">
-            Redesign empty states for the inbox
+            Redesign empty states for Designali blocks
           </CardTitle>
           <CardAction>
             <Button variant="ghost" size="icon-xs" aria-label="Task options">
@@ -69,10 +70,11 @@ export default function KanbanTaskCard() {
           </div>
           <AvatarGroup>
             <Avatar size="sm">
-              <AvatarFallback>EK</AvatarFallback>
+              <AvatarImage src="/ali.jpg" alt="Ali Imam" />
+              <AvatarFallback>AI</AvatarFallback>
             </Avatar>
             <Avatar size="sm">
-              <AvatarFallback>LR</AvatarFallback>
+              <AvatarFallback>DS</AvatarFallback>
             </Avatar>
           </AvatarGroup>
         </CardFooter>

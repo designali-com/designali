@@ -2,12 +2,12 @@
 
 import * as React from "react"
 import {
-  CopyIcon,
-  PinIcon,
-  ReplyIcon,
-  SmilePlusIcon,
-  TrashIcon,
-} from "lucide-react"
+  Copy as CopyIcon,
+  Pin as PinIcon,
+  Reply as ReplyIcon,
+  SmilePlus as SmilePlusIcon,
+  Trash as TrashIcon,
+} from "@designali/icons"
 
 import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
 import {
@@ -31,16 +31,16 @@ export default function ChatMessageMenu() {
   return (
     <div className="flex w-full max-w-sm items-start gap-2">
       <Avatar className="size-8">
-        <AvatarFallback>LM</AvatarFallback>
+        <AvatarFallback>AI</AvatarFallback>
       </Avatar>
       <div className="flex flex-col gap-1">
         <span className="text-xs text-muted-foreground">
-          Leo Martins · 10:42 AM {pinned ? "· Pinned" : ""}
+          Ali Imam · 10:42 AM {pinned ? "· Pinned" : ""}
         </span>
         <ContextMenu>
           <ContextMenuTrigger className="w-fit max-w-64 bg-muted px-3 py-2 text-sm data-popup-open:ring-2 data-popup-open:ring-ring/40">
-            The staging deploy is green. Can someone run the checkout smoke
-            tests before 2pm?
+            The designali.com preview deploy is green. Can someone review the
+            new blocks before 2pm?
           </ContextMenuTrigger>
           <ContextMenuContent className="w-48">
             <ContextMenuGroup>

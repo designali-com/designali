@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { ArchiveIcon, PlusIcon } from "lucide-react"
+import {
+  Archive as ArchiveIcon,
+  Plus as PlusIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import {

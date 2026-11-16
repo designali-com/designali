@@ -1,4 +1,6 @@
-import { WarehouseIcon } from "lucide-react"
+import {
+  Warehouse as WarehouseIcon,
+} from "@designali/icons"
 
 import {
   Command,

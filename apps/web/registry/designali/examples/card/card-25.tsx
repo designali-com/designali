@@ -1,4 +1,8 @@
-import { FilterIcon, FolderOpenIcon, PlusIcon } from "lucide-react"
+import {
+  Funnel as FilterIcon,
+  FolderOpen as FolderOpenIcon,
+  Plus as PlusIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -37,8 +41,8 @@ export default function EmptyProjectsCard() {
             </EmptyMedia>
             <EmptyTitle>No projects yet</EmptyTitle>
             <EmptyDescription>
-              Projects group your boards, docs and files. Create one or import
-              from a template.
+              Projects group your Designali blocks, icons and Figma files. Create
+              one or start from a template.
             </EmptyDescription>
           </EmptyHeader>
           <EmptyContent className="flex-row justify-center gap-2">

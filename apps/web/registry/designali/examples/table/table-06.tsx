@@ -11,26 +11,26 @@ import {
 
 const members = [
   {
-    name: "Priya Raman",
-    email: "priya@lumen.app",
+    name: "Ali Imam",
+    email: "ali@designali.com",
     role: "Owner",
     active: "Now",
   },
   {
-    name: "Tomás Herrera",
-    email: "tomas@lumen.app",
+    name: "Sara Khan",
+    email: "sara@designali.com",
     role: "Admin",
     active: "2h ago",
   },
   {
-    name: "Grace Liu",
-    email: "grace@lumen.app",
+    name: "Omar Ali",
+    email: "omar@designali.com",
     role: "Editor",
     active: "Yesterday",
   },
   {
-    name: "Noah Fischer",
-    email: "noah@lumen.app",
+    name: "Priya Shah",
+    email: "priya@designali.com",
     role: "Viewer",
     active: "5d ago",
   },

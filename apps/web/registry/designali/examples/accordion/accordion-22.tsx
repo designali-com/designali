@@ -2,11 +2,11 @@
 
 import * as React from "react"
 import {
-  ChevronDownIcon,
-  MailIcon,
-  MessageSquareIcon,
-  SmartphoneIcon,
-} from "lucide-react"
+  ChevronDown as ChevronDownIcon,
+  Mail as MailIcon,
+  MessageSquare as MessageSquareIcon,
+  Smartphone as SmartphoneIcon,
+} from "@designali/icons"
 
 import {
   Accordion,

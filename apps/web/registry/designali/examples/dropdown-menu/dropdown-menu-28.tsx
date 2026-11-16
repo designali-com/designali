@@ -2,12 +2,12 @@
 
 import * as React from "react"
 import {
-  LogOutIcon,
-  MoreHorizontalIcon,
-  SettingsIcon,
-  StarIcon,
-  UserPlusIcon,
-} from "lucide-react"
+  LogOut as LogOutIcon,
+  Ellipsis as MoreHorizontalIcon,
+  Settings as SettingsIcon,
+  Star as StarIcon,
+  UserPlus as UserPlusIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -28,7 +28,7 @@ export default function ProjectCardMenu() {
           <span className="size-8 bg-gradient-to-br from-fuchsia-500 to-orange-400" />
           <div>
             <p className="flex items-center gap-1 text-xs font-medium">
-              Mobile checkout
+              Designali website
               {favorite && (
                 <StarIcon className="size-3 fill-amber-400 text-amber-400" />
               )}

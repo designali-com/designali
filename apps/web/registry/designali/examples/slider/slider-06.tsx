@@ -11,7 +11,7 @@ export default function PriceRangeFilter() {
     <div className="flex w-full max-w-sm flex-col gap-4 border p-4">
       <div className="flex items-center justify-between">
         <span className="text-sm font-medium">Price</span>
-        <span className="text-xs text-muted-foreground">218 products</span>
+        <span className="text-xs text-muted-foreground">218 templates</span>
       </div>
       <Slider
         aria-label="Price range"

@@ -1,17 +1,20 @@
 "use client"
 
 import { useState } from "react"
-import { ChevronUp, MessageCircle } from "lucide-react"
+import {
+  ChevronUp,
+  MessageCircle,
+} from "@designali/icons"
 
 import { cn } from "@workspace/ui/lib/utils"
 
 const initial = [
-  { id: 1, title: "Offline mode for the mobile app", tag: "Mobile", status: "Planned", votes: 412, comments: 58 },
-  { id: 2, title: "Export boards to PDF with comments", tag: "Export", status: "In progress", votes: 367, comments: 41 },
-  { id: 3, title: "Recurring tasks with custom schedules", tag: "Tasks", status: "Under review", votes: 298, comments: 33 },
-  { id: 4, title: "Two-way calendar sync", tag: "Integrations", status: "Planned", votes: 254, comments: 27 },
-  { id: 5, title: "Keyboard-only board navigation", tag: "Accessibility", status: "Under review", votes: 189, comments: 12 },
-  { id: 6, title: "Custom fields on subtasks", tag: "Tasks", status: "Under review", votes: 143, comments: 9 },
+  { id: 1, title: "Mobile app UI kit for iPhone and Android", tag: "UI designs", status: "Planned", votes: 412, comments: 58 },
+  { id: 2, title: "Figma files for every block", tag: "Blocks", status: "In progress", votes: 367, comments: 41 },
+  { id: 3, title: "More e-commerce templates", tag: "Templates", status: "Under review", votes: 298, comments: 33 },
+  { id: 4, title: "Animated variants in @designali/icons", tag: "Icons", status: "Planned", votes: 254, comments: 27 },
+  { id: 5, title: "Keyboard navigation in every block", tag: "Accessibility", status: "Under review", votes: 189, comments: 12 },
+  { id: 6, title: "3D illustrations in @designali/vectors", tag: "Illustrations", status: "Under review", votes: 143, comments: 9 },
 ]
 
 const statusTone: Record<string, string> = {
@@ -41,7 +44,7 @@ export default function Lists14() {
           <div>
             <h2 className="text-3xl font-semibold tracking-tight">Feature requests</h2>
             <p className="mt-2 text-sm text-muted-foreground">
-              Vote on what we build next. Top requests are reviewed every Monday.
+              Vote on what Designali builds next. Ali reviews the top requests every Monday.
             </p>
           </div>
           <a href="#" className="inline-flex h-9 items-center justify-center bg-foreground px-4 text-xs font-medium text-background hover:opacity-90">

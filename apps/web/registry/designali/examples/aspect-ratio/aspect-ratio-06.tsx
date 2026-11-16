@@ -14,8 +14,8 @@ export default function ProductCardSquare() {
         <Badge className="absolute start-2 top-2">New</Badge>
       </AspectRatio>
       <div className="flex flex-col gap-1 p-3">
-        <p className="text-sm font-medium">Stoneware dinner plate</p>
-        <p className="text-xs text-muted-foreground">Set of 4 - Oat glaze</p>
+        <p className="text-sm font-medium">Portfolio Simple template</p>
+        <p className="text-xs text-muted-foreground">Next.js - Tailwind CSS</p>
         <p className="mt-1 text-sm font-semibold">$48.00</p>
       </div>
     </div>

@@ -1,4 +1,6 @@
-import { NotebookIcon } from "lucide-react"
+import {
+  Notebook as NotebookIcon,
+} from "@designali/icons"
 
 import {
   ResizableHandle,
@@ -9,9 +11,9 @@ import { cn } from "@workspace/ui/lib/utils"
 
 const notebooks = ["Personal", "Work", "Recipes", "Travel"]
 const notes = [
-  { title: "Lisbon itinerary", preview: "Day 1: Alfama walk, tram 28..." },
-  { title: "Packing list", preview: "Adapters, light jacket, sandals" },
-  { title: "Restaurants", preview: "Taberna da Rua, Cervejaria..." },
+  { title: "Client project notes", preview: "Day 1: Brand discovery, moodboards..." },
+  { title: "Deliverables", preview: "Logo, Figma file, Next.js site" },
+  { title: "Stack", preview: "Next.js, Tailwind CSS, Vercel..." },
 ]
 
 export default function NotesAppThreePane() {
@@ -55,11 +57,11 @@ export default function NotesAppThreePane() {
       <ResizableHandle withHandle />
       <ResizablePanel defaultSize="48%" minSize="30%">
         <div className="flex h-full flex-col gap-2 p-4">
-          <h3 className="text-sm font-semibold">Lisbon itinerary</h3>
+          <h3 className="text-sm font-semibold">Client project notes</h3>
           <ul className="flex list-disc flex-col gap-1 pl-4 text-xs">
-            <li>Day 1: Alfama walk, tram 28, sunset at Miradouro</li>
-            <li>Day 2: Belem and the riverside</li>
-            <li>Day 3: Day trip to Sintra</li>
+            <li>Day 1: Brand discovery and moodboards</li>
+            <li>Day 2: UI/UX design in Figma</li>
+            <li>Day 3: Build and deploy with Next.js</li>
           </ul>
         </div>
       </ResizablePanel>

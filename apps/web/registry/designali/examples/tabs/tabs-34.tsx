@@ -8,8 +8,8 @@ import {
 } from "@workspace/ui/components/tabs"
 
 const body = {
-  id: "cus_81Kq",
-  name: "Hollis & Co",
+  id: "client_81Kq",
+  name: "Designali client",
   balance: 1250,
   currency: "eur",
 }

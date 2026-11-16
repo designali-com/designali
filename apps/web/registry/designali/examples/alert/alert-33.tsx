@@ -1,4 +1,7 @@
-import { SendIcon, ShieldAlertIcon } from "lucide-react"
+import {
+  Send as SendIcon,
+  ShieldAlert as ShieldAlertIcon,
+} from "@designali/icons"
 
 import {
   Alert,
@@ -15,10 +18,10 @@ export default function AlertChatModeration() {
       <div className="space-y-2 p-3 text-xs">
         <div className="flex gap-2">
           <Avatar size="sm">
-            <AvatarFallback>KO</AvatarFallback>
+            <AvatarFallback>SK</AvatarFallback>
           </Avatar>
           <p className="bg-muted px-2.5 py-1.5">
-            Does anyone have the venue address for Friday?
+            Is there a Figma file for the Designali dashboard blocks?
           </p>
         </div>
       </div>
@@ -27,8 +30,8 @@ export default function AlertChatModeration() {
           <ShieldAlertIcon />
           <AlertTitle>Message held for review</AlertTitle>
           <AlertDescription>
-            It looks like it contains a phone number. Community rules don&apos;t
-            allow sharing personal contact details.
+            It looks like it contains a phone number. Designali community rules
+            don&apos;t allow sharing personal contact details.
           </AlertDescription>
         </Alert>
         <div className="flex gap-2">

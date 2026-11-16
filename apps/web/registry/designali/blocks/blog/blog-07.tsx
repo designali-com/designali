@@ -1,17 +1,20 @@
 "use client"
 
 import { useRef } from "react"
-import { ArrowLeft, ArrowRight } from "lucide-react"
+import {
+  ArrowLeft,
+  ArrowRight,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 
 const posts = [
-  { tag: "Research", title: "What 1,200 support tickets say about onboarding", date: "Nov 13", read: 9, hue: "from-chart-1/50 to-chart-2/20" },
-  { tag: "Engineering", title: "Cutting our cold start from 2.1s to 380ms", date: "Nov 8", read: 12, hue: "from-chart-2/50 to-chart-3/20" },
-  { tag: "Design", title: "Dense tables that still breathe", date: "Nov 2", read: 6, hue: "from-chart-3/50 to-chart-4/20" },
-  { tag: "Culture", title: "Our writing guide, published in full", date: "Oct 27", read: 15, hue: "from-chart-4/50 to-chart-5/20" },
-  { tag: "Product", title: "Inside the redesign of recurring invoices", date: "Oct 21", read: 8, hue: "from-chart-5/50 to-chart-1/20" },
-  { tag: "Engineering", title: "Postgres row-level security, two years on", date: "Oct 14", read: 11, hue: "from-chart-1/50 to-chart-3/20" },
+  { tag: "Research", title: "What 1,200 support emails say about our templates", date: "Nov 13", read: 9, hue: "from-chart-1/50 to-chart-2/20" },
+  { tag: "Engineering", title: "Cutting designali.com load time from 2.1s to 380ms", date: "Nov 8", read: 12, hue: "from-chart-2/50 to-chart-3/20" },
+  { tag: "Design", title: "Dense UI blocks that still breathe", date: "Nov 2", read: 6, hue: "from-chart-3/50 to-chart-4/20" },
+  { tag: "Culture", title: "The Designali writing guide, published in full", date: "Oct 27", read: 15, hue: "from-chart-4/50 to-chart-5/20" },
+  { tag: "Product", title: "Inside the redesign of the icons page", date: "Oct 21", read: 8, hue: "from-chart-5/50 to-chart-1/20" },
+  { tag: "Engineering", title: "Shipping @designali/logos as an npm package", date: "Oct 14", read: 11, hue: "from-chart-1/50 to-chart-3/20" },
 ]
 
 export default function Blog07() {
@@ -28,8 +31,8 @@ export default function Blog07() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="flex items-end justify-between gap-6">
           <div>
-            <p className="text-xs tracking-widest text-muted-foreground uppercase">Tallyhall blog</p>
-            <h2 className="mt-2 text-3xl font-medium tracking-tight md:text-4xl">Fresh from the team</h2>
+            <p className="text-xs tracking-widest text-muted-foreground uppercase">Designali blog</p>
+            <h2 className="mt-2 text-3xl font-medium tracking-tight md:text-4xl">Fresh from the studio</h2>
           </div>
           <div className="flex gap-2">
             <Button variant="outline" size="icon-lg" aria-label="Previous posts" onClick={() => scroll(-1)}>

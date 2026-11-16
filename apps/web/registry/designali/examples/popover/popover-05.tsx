@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { BellIcon } from "lucide-react"
+import {
+  Bell as BellIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -13,9 +15,9 @@ import {
 import { cn } from "@workspace/ui/lib/utils"
 
 const initial = [
-  { id: 1, title: "Priya commented on Pricing v2", time: "2m", unread: true },
-  { id: 2, title: "Deploy to production succeeded", time: "18m", unread: true },
-  { id: 3, title: "Marco invited you to Atlas", time: "1h", unread: false },
+  { id: 1, title: "Priya commented on Pricing block v2", time: "2m", unread: true },
+  { id: 2, title: "designali.com deploy succeeded", time: "18m", unread: true },
+  { id: 3, title: "Marco invited you to Dalim Works", time: "1h", unread: false },
 ]
 
 export default function NotificationsPopover() {

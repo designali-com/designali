@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { MinusIcon, PlusIcon } from "lucide-react"
+import {
+  Minus as MinusIcon,
+  Plus as PlusIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -15,7 +18,7 @@ export default function QuantityStepperButtons() {
   return (
     <div className="flex w-full max-w-xs items-center justify-between gap-3 border p-3">
       <div className="flex flex-col">
-        <span className="text-sm font-medium">Ceramic pour-over set</span>
+        <span className="text-sm font-medium">Portfolio template license</span>
         <span className="text-xs text-muted-foreground">Max 5 per order</span>
       </div>
       <ButtonGroup>

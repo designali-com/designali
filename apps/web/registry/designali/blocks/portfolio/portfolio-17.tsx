@@ -1,21 +1,24 @@
-import { GitFork, Star } from "lucide-react"
+import {
+  GitFork,
+  Star,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 
 const repos = [
   {
-    name: "tidepool",
-    description: "Offline-first sync engine for SQLite on the edge.",
+    name: "@designali/icons",
+    description: "4000+ lucide-compatible icons as typed React components.",
     stars: "8.4k",
     forks: "312",
     languages: [
-      { name: "Rust", share: 72, color: "bg-orange-500" },
-      { name: "TypeScript", share: 28, color: "bg-sky-500" },
+      { name: "TypeScript", share: 72, color: "bg-sky-500" },
+      { name: "SVG", share: 28, color: "bg-orange-500" },
     ],
   },
   {
-    name: "quiet-forms",
-    description: "Accessible form primitives with zero runtime styles.",
+    name: "@designali/logos",
+    description: "Brand logos and wordmarks as React components.",
     stars: "3.1k",
     forks: "148",
     languages: [
@@ -24,17 +27,17 @@ const repos = [
     ],
   },
   {
-    name: "glyphwatch",
-    description: "CLI that flags unused icons and fonts in your bundle.",
+    name: "@designali/vectors",
+    description: "Abstract shapes and illustrations for Designali blocks.",
     stars: "1.2k",
     forks: "41",
     languages: [
-      { name: "Go", share: 100, color: "bg-cyan-500" },
+      { name: "TypeScript", share: 100, color: "bg-sky-500" },
     ],
   },
   {
-    name: "lattice-ui",
-    description: "Layout components for dense data-heavy dashboards.",
+    name: "designali-blocks",
+    description: "460+ production-ready blocks for Next.js and Tailwind CSS.",
     stars: "960",
     forks: "57",
     languages: [
@@ -66,17 +69,17 @@ export default function Portfolio17() {
         <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
           <div className="flex items-center gap-4">
             <span className="flex size-14 shrink-0 items-center justify-center bg-foreground font-mono text-lg text-background">
-              RK
+              AI
             </span>
             <div>
-              <h2 className="text-2xl font-medium tracking-tight md:text-3xl">Rafael Kowal</h2>
+              <h2 className="text-2xl font-medium tracking-tight md:text-3xl">Ali Imam</h2>
               <p className="text-sm text-muted-foreground">
-                Systems engineer. Maintainer of tidepool and quiet-forms.
+                Design engineer. Maintainer of @designali/icons and @designali/logos.
               </p>
             </div>
           </div>
-          <Button variant="outline" nativeButton={false} render={<a href="#" />}>
-            Sponsor my work
+          <Button variant="outline" nativeButton={false} render={<a href="https://21st.dev/@designali-in" />}>
+            View on 21st.dev
           </Button>
         </div>
 

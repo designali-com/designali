@@ -20,15 +20,15 @@ export default function ProfileSettingsFields() {
       <FieldGroup>
         <Field>
           <FieldLabel htmlFor="profile-name">Display name</FieldLabel>
-          <Input id="profile-name" defaultValue="Maya Lindqvist" />
+          <Input id="profile-name" defaultValue="Ali Imam" />
         </Field>
         <Field>
           <FieldLabel htmlFor="profile-username">Username</FieldLabel>
           <InputGroup>
             <InputGroupAddon>
-              <InputGroupText>fieldnote.app/</InputGroupText>
+              <InputGroupText>designali.com/</InputGroupText>
             </InputGroupAddon>
-            <InputGroupInput id="profile-username" defaultValue="maya" />
+            <InputGroupInput id="profile-username" defaultValue="aliimam" />
           </InputGroup>
           <FieldDescription>
             Your public profile URL. You can change it once every 30 days.
@@ -39,7 +39,7 @@ export default function ProfileSettingsFields() {
           <Textarea
             id="profile-bio"
             rows={3}
-            placeholder="Product designer based in Malmö..."
+            placeholder="Design engineer building Designali..."
             className="resize-none"
           />
           <FieldDescription>

@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { RocketIcon } from "lucide-react"
+import {
+  Rocket as RocketIcon,
+} from "@designali/icons"
 
 import {
   Menubar,
@@ -21,7 +23,7 @@ const steps = [
   "Verify email",
   "Invite teammates",
   "Connect calendar",
-  "Create first project",
+  "Add first Designali block",
 ]
 
 export default function OnboardingChecklistMenubar() {

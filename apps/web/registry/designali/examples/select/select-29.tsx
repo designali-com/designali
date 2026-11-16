@@ -13,19 +13,19 @@ import { cn } from "@workspace/ui/lib/utils"
 
 const workspaces = [
   {
-    label: "Acme Studio",
+    label: "Designali Studio",
     value: "acme",
     plan: "Pro",
     gradient: "from-violet-500 to-fuchsia-500",
   },
   {
-    label: "Lumen Labs",
+    label: "Dalim Works",
     value: "lumen",
     plan: "Free",
     gradient: "from-sky-500 to-cyan-400",
   },
   {
-    label: "Harbor & Co",
+    label: "Client projects",
     value: "harbor",
     plan: "Team",
     gradient: "from-amber-500 to-orange-500",

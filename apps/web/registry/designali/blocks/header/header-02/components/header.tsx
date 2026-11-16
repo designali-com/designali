@@ -1,7 +1,10 @@
 "use client"
 
 import { useState } from "react"
-import { ArrowRight, Equal } from "lucide-react"
+import {
+  ArrowRight,
+  Equal,
+} from "@designali/icons"
 
 import { Search } from "@/registry/designali/blocks/header/header-02/components/search"
 import { ModeToggle } from "@/registry/designali/blocks/header/header-02/components/theme-switch"
@@ -28,64 +31,64 @@ export function Header() {
 
   const navItems = [
     {
-      label: "Overview",
-      href: "#",
+      label: "Templates",
+      href: "/templates",
       active: true,
     },
     {
-      label: "Design Systems",
-      href: "#",
+      label: "Blocks",
+      href: "/blocks",
     },
     {
-      label: "UI Kits",
-      href: "#",
+      label: "UI Designs",
+      href: "/ui",
     },
     {
-      label: "Brand Assets",
-      href: "#",
+      label: "Icons",
+      href: "/icons",
     },
     {
-      label: "Templates",
-      href: "#",
+      label: "Logos",
+      href: "/logos",
     },
     {
-      label: "Workshops",
-      href: "#",
+      label: "Illustration",
+      href: "/illustration",
     },
     {
-      label: "Design Labs",
-      href: "#",
+      label: "Pricing",
+      href: "/pricing",
     },
     {
-      label: "Case Studies",
-      href: "#",
+      label: "Docs",
+      href: "/docs",
     },
     {
-      label: "Resources",
-      href: "#",
+      label: "Blogs",
+      href: "/blogs",
     },
   ]
 
   const properties = [
     {
-      location: "Design Hub – India",
+      location: "Studio",
       venues: [
         {
-          name: "Creative Studio",
-          href: "#",
+          name: "Work",
+          href: "/work",
         },
       ],
     },
     {
-      location: "Design Hub – Global",
+      location: "Get in touch",
       venues: [
         {
-          name: "UI/UX Studio",
-          href: "#",
+          name: "Contact",
+          href: "/contact",
         },
         {
-          name: "Branding Lab",
-          href: "#",
+          name: "hello@designali.com",
+          href: "mailto:hello@designali.com",
         },
       ],
     },
@@ -141,10 +144,10 @@ export function Header() {
                     <AccordionItem value="navigation" className="border-none">
                       <AccordionTrigger className="rounded-lg bg-accent px-4 hover:bg-accent/80 hover:no-underline">
                         <div className="text-left">
-                          <div className="font-medium">Design Hub</div>
+                          <div className="font-medium">designali</div>
 
                           <div className="text-sm text-muted-foreground">
-                            / Overview
+                            / Templates
                           </div>
                         </div>
                       </AccordionTrigger>

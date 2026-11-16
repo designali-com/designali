@@ -1,4 +1,6 @@
-import { SettingsIcon } from "lucide-react"
+import {
+  Settings as SettingsIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -25,7 +27,7 @@ export default function NestedConfirmDialog() {
         <DialogHeader>
           <DialogTitle>Slack integration</DialogTitle>
           <DialogDescription>
-            Connected to #product-updates by Hana Ito.
+            Connected to #designali-updates by Ali Imam.
           </DialogDescription>
         </DialogHeader>
         <Field orientation="horizontal">
@@ -45,7 +47,7 @@ export default function NestedConfirmDialog() {
               <DialogHeader>
                 <DialogTitle>Disconnect Slack?</DialogTitle>
                 <DialogDescription>
-                  Notifications to #product-updates will stop immediately.
+                  Notifications to #designali-updates will stop immediately.
                 </DialogDescription>
               </DialogHeader>
               <DialogFooter>

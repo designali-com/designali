@@ -8,12 +8,12 @@ import {
 } from "@workspace/ui/components/table"
 
 const specs = [
-  ["Dimensions", "38 × 26 × 14 cm"],
-  ["Weight", "1.2 kg"],
-  ["Material", "Recycled ripstop nylon"],
-  ["Capacity", "24 liters"],
-  ["Laptop sleeve", "Fits up to 16 in"],
-  ["Warranty", "Lifetime"],
+  ["Framework", "Next.js"],
+  ["Language", "TypeScript"],
+  ["Styling", "Tailwind CSS"],
+  ["Design files", "Figma"],
+  ["Icons", "@designali/icons"],
+  ["Deploy", "Vercel"],
 ]
 
 export default function KeyValueSpecTable() {
@@ -21,7 +21,7 @@ export default function KeyValueSpecTable() {
     <div className="w-full max-w-sm border">
       <Table>
         <TableCaption className="mb-3">
-          Trailhead Daypack specifications
+          Designali portfolio template specifications
         </TableCaption>
         <TableBody>
           {specs.map(([label, value]) => (

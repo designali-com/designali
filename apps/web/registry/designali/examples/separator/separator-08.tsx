@@ -1,13 +1,13 @@
 import * as React from "react"
 import {
-  BoldIcon,
-  CodeIcon,
-  ItalicIcon,
-  LinkIcon,
-  ListIcon,
-  ListOrderedIcon,
-  UnderlineIcon,
-} from "lucide-react"
+  Bold as BoldIcon,
+  Code as CodeIcon,
+  Italic as ItalicIcon,
+  Link as LinkIcon,
+  List as ListIcon,
+  ListOrdered as ListOrderedIcon,
+  Underline as UnderlineIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Separator } from "@workspace/ui/components/separator"

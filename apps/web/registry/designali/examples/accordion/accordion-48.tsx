@@ -9,17 +9,17 @@ const steps = [
   {
     value: "research",
     title: "Research",
-    body: "Interview eight customers and summarise the top three pains.",
+    body: "Talk to the client, audit their brand and map the goals for the new designali build.",
   },
   {
     value: "concept",
     title: "Concept",
-    body: "Sketch two directions and review them with engineering for feasibility.",
+    body: "Explore two directions in Figma and pick one with the client before any code.",
   },
   {
     value: "build",
     title: "Build",
-    body: "Ship behind a flag to 10% of workspaces and watch activation.",
+    body: "Build it in Next.js and Tailwind CSS, then ship to Vercel — design se code tak.",
   },
 ]
 

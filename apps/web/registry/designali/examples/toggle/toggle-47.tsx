@@ -1,7 +1,11 @@
 "use client"
 
 import * as React from "react"
-import { ALargeSmallIcon, ContrastIcon, PauseCircleIcon } from "lucide-react"
+import {
+  ALargeSmall as ALargeSmallIcon,
+  Contrast as ContrastIcon,
+  CirclePause as PauseCircleIcon,
+} from "@designali/icons"
 
 import { Toggle } from "@workspace/ui/components/toggle"
 import { cn } from "@workspace/ui/lib/utils"
@@ -49,7 +53,7 @@ export default function AccessibilityPreferenceToggles() {
         )}
       >
         <p className={cn("font-medium", large ? "text-lg" : "text-sm")}>
-          Your appointment is confirmed
+          Your Designali call is confirmed
         </p>
         <p
           className={cn(
@@ -57,7 +61,7 @@ export default function AccessibilityPreferenceToggles() {
             contrast ? "text-background" : "text-muted-foreground"
           )}
         >
-          Tue, 14 Nov at 09:15 with Dr. Alvarez
+          Tue, 14 Nov at 09:15 with Ali Imam
         </p>
         <div
           className={cn(

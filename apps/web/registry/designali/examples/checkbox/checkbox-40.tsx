@@ -43,7 +43,7 @@ export default function AsyncSavingCheckbox() {
         onCheckedChange={handleChange}
       />
       <FieldContent>
-        <FieldLabel htmlFor="weekly-digest">Weekly digest email</FieldLabel>
+        <FieldLabel htmlFor="weekly-digest">Weekly Designali digest email</FieldLabel>
         <FieldDescription className="flex items-center gap-1.5">
           {saving ? (
             <>

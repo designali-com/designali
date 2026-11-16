@@ -1,6 +1,8 @@
 "use client"
 
-import { CpuIcon } from "lucide-react"
+import {
+  Cpu as CpuIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import {

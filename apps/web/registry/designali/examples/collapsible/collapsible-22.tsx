@@ -1,4 +1,6 @@
-import { ChevronRightIcon } from "lucide-react"
+import {
+  ChevronRight as ChevronRightIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import { Button } from "@workspace/ui/components/button"
@@ -11,21 +13,21 @@ import {
 const invoices = [
   {
     id: "INV-2041",
-    customer: "Bluefin Studio",
+    customer: "Brand identity client",
     status: "Paid",
     lines: [
-      { label: "Design retainer, October", amount: 3200 },
-      { label: "Stock illustrations", amount: 180 },
+      { label: "Brand identity, October", amount: 3200 },
+      { label: "Designali illustration pack", amount: 180 },
     ],
   },
   {
     id: "INV-2042",
-    customer: "Kettle & Co.",
+    customer: "Web development client",
     status: "Overdue",
     lines: [
-      { label: "Website audit", amount: 950 },
-      { label: "Analytics setup", amount: 400 },
-      { label: "Hosting, 12 months", amount: 240 },
+      { label: "UI/UX audit", amount: 950 },
+      { label: "Next.js build", amount: 400 },
+      { label: "Designali Pro license, 12 months", amount: 240 },
     ],
   },
 ]

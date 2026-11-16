@@ -1,10 +1,10 @@
 import {
-  CalendarIcon,
-  FolderIcon,
-  LayoutDashboardIcon,
-  MessageSquareIcon,
-  SettingsIcon,
-} from "lucide-react"
+  Calendar as CalendarIcon,
+  Folder as FolderIcon,
+  LayoutDashboard as LayoutDashboardIcon,
+  MessageSquare as MessageSquareIcon,
+  Settings as SettingsIcon,
+} from "@designali/icons"
 
 import {
   NavigationMenu,

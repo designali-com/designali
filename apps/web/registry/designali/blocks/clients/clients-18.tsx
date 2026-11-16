@@ -1,40 +1,42 @@
-import { ArrowUpRight } from "lucide-react"
+import {
+  ArrowUpRight,
+} from "@designali/icons"
 
 const clients = [
   {
-    name: "Halcyon",
-    initials: "HA",
-    industry: "Insurance",
-    since: "2021",
-    result: "Unified 7 brands on one token set",
+    name: "Dalim Agency",
+    initials: "DA",
+    industry: "Brand identity",
+    since: "Figma",
+    result: "One identity across 7 sub-brands",
   },
   {
-    name: "Parallax Freight",
-    initials: "PF",
-    industry: "Logistics",
-    since: "2022",
-    result: "Dispatch app rebuilt in 9 weeks",
+    name: "Dalim UI",
+    initials: "DU",
+    industry: "Design systems",
+    since: "React",
+    result: "UI kit rebuilt in 9 weeks",
   },
   {
-    name: "Mosswood",
-    initials: "MW",
-    industry: "Retail",
-    since: "2022",
-    result: "+18% mobile checkout conversion",
+    name: "Dalim Fonts",
+    initials: "DF",
+    industry: "Web design",
+    since: "Next.js",
+    result: "Type specimen site, fully responsive",
   },
   {
-    name: "Helix Bio",
-    initials: "HB",
-    industry: "Life sciences",
-    since: "2023",
-    result: "WCAG 2.2 AA across 40 lab tools",
+    name: "Dalim Visuals",
+    initials: "DV",
+    industry: "CGI, 3D & motion",
+    since: "Blender",
+    result: "3D product renders and motion reels",
   },
   {
-    name: "Stackway",
-    initials: "SW",
-    industry: "Developer tools",
-    since: "2024",
-    result: "Docs site load time down 41%",
+    name: "Designali",
+    initials: "DS",
+    industry: "Web development",
+    since: "Vercel",
+    result: "460+ blocks, 4,000+ icons, 2,300+ UI examples",
   },
 ]
 
@@ -44,17 +46,17 @@ export default function Clients18() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="grid gap-6 md:grid-cols-2 md:items-end">
           <h2 className="text-3xl font-semibold tracking-tight md:text-4xl">
-            Client roster
+            Project roster
           </h2>
           <p className="text-sm leading-6 text-muted-foreground md:text-end">
-            A selection of long-term partners. Full list available under NDA.
+            A selection of brands and products designed and built by Ali Imam.
           </p>
         </div>
         <div className="mt-10 border-t border-border">
           <div className="hidden grid-cols-[2fr_1fr_0.6fr_2fr_auto] gap-6 border-b border-border py-3 text-xs tracking-widest text-muted-foreground uppercase md:grid">
-            <span>Client</span>
-            <span>Industry</span>
-            <span>Since</span>
+            <span>Project</span>
+            <span>Service</span>
+            <span>Stack</span>
             <span>Result</span>
             <span className="w-4" />
           </div>

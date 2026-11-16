@@ -1,16 +1,18 @@
-import { Star } from "lucide-react"
+import {
+  Star,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 
 const marks = [
-  { initials: "NW", className: "bg-sky-500" },
-  { initials: "HC", className: "bg-violet-500" },
-  { initials: "KL", className: "bg-emerald-500" },
-  { initials: "OB", className: "bg-amber-500" },
-  { initials: "FN", className: "bg-rose-500" },
+  { initials: "DA", className: "bg-sky-500" },
+  { initials: "DU", className: "bg-violet-500" },
+  { initials: "DI", className: "bg-emerald-500" },
+  { initials: "DF", className: "bg-amber-500" },
+  { initials: "DW", className: "bg-rose-500" },
 ]
 
-const names = ["Northwind", "Halcyon", "Kestrel Labs", "Orbital", "Fieldnote"]
+const names = ["Designali Blocks", "Designali Icons", "Designali Templates", "Dalim UI", "Dalim Works"]
 
 export default function Clients20() {
   return (
@@ -41,7 +43,7 @@ export default function Clients20() {
                 <span className="text-sm font-medium">4.9 / 5</span>
               </div>
               <p className="mt-1 text-sm text-muted-foreground">
-                Rated by 4,200+ teams at{" "}
+                Rated by 4,200+ designers and developers using{" "}
                 <span className="text-foreground">{names.join(", ")}</span>{" "}
                 and more.
               </p>

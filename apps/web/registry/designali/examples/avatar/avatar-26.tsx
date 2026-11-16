@@ -2,27 +2,27 @@ import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
 
 const events = [
   {
-    initials: "OS",
-    who: "Olga Sanz",
-    action: "merged pull request #482",
+    initials: "AI",
+    who: "Ali Imam",
+    action: "merged pull request #482 on designali/blocks",
     time: "Just now",
   },
   {
-    initials: "BT",
-    who: "Ben Tran",
-    action: "commented on Checkout redesign",
+    initials: "SA",
+    who: "Sara",
+    action: "commented on Pricing page redesign",
     time: "25 min ago",
   },
   {
-    initials: "MC",
-    who: "Mina Cho",
-    action: "moved Billing API to Done",
+    initials: "OM",
+    who: "Omar",
+    action: "moved Icons package to Done",
     time: "1 hour ago",
   },
   {
-    initials: "OS",
-    who: "Olga Sanz",
-    action: "created the milestone v2.3",
+    initials: "AI",
+    who: "Ali Imam",
+    action: "created the milestone Templates v2.3",
     time: "Yesterday",
   },
 ]

@@ -1,4 +1,9 @@
-import { ArrowRight, Mail, MapPin, Phone } from "lucide-react"
+import {
+  ArrowRight,
+  Mail,
+  CalendarDays,
+  Globe,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Input } from "@workspace/ui/components/input"
@@ -9,20 +14,20 @@ const details = [
   {
     icon: Mail,
     label: "Email",
-    value: "hello@northwind.studio",
-    href: "mailto:hello@northwind.studio",
+    value: "hello@designali.com",
+    href: "mailto:hello@designali.com",
   },
   {
-    icon: Phone,
-    label: "Phone",
-    value: "+1 (415) 555-0132",
-    href: "tel:+14155550132",
+    icon: CalendarDays,
+    label: "Book a call",
+    value: "30 minutes with Ali Imam",
+    href: "https://cal.com/aliimam/30min",
   },
   {
-    icon: MapPin,
+    icon: Globe,
     label: "Studio",
-    value: "214 Valencia St, San Francisco, CA",
-    href: "#",
+    value: "www.designali.com",
+    href: "https://www.designali.com",
   },
 ]
 
@@ -36,11 +41,11 @@ export default function Contact01() {
               Contact
             </p>
             <h2 className="text-4xl font-semibold tracking-tight md:text-5xl">
-              Let&apos;s build something worth talking about.
+              Let&apos;s design and build something together.
             </h2>
             <p className="max-w-md text-muted-foreground">
-              Tell us about your product, timeline and budget. A partner from
-              our team replies within one business day.
+              Tell us about your product, timeline and budget. Ali Imam
+              replies within one business day.
             </p>
           </div>
 
@@ -67,13 +72,13 @@ export default function Contact01() {
           <div className="grid gap-5 sm:grid-cols-2">
             <div className="space-y-2">
               <Label htmlFor="contact-01-first">First name</Label>
-              <Input id="contact-01-first" placeholder="Ada" className="h-10" />
+              <Input id="contact-01-first" placeholder="Ali" className="h-10" />
             </div>
             <div className="space-y-2">
               <Label htmlFor="contact-01-last">Last name</Label>
               <Input
                 id="contact-01-last"
-                placeholder="Lovelace"
+                placeholder="Imam"
                 className="h-10"
               />
             </div>
@@ -83,7 +88,7 @@ export default function Contact01() {
             <Input
               id="contact-01-email"
               type="email"
-              placeholder="ada@company.com"
+              placeholder="you@example.com"
               className="h-10"
             />
           </div>
@@ -91,7 +96,7 @@ export default function Contact01() {
             <Label htmlFor="contact-01-message">Project details</Label>
             <Textarea
               id="contact-01-message"
-              placeholder="We're redesigning our onboarding flow and need help with..."
+              placeholder="We need a brand identity and a Next.js website for..."
               className="min-h-36"
             />
           </div>

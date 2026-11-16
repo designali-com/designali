@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { ClockIcon } from "lucide-react"
+import {
+  Clock as ClockIcon,
+} from "@designali/icons"
 
 import { Slider } from "@workspace/ui/components/slider"
 

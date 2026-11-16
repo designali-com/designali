@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { UserPlusIcon } from "lucide-react"
+import {
+  UserPlus as UserPlusIcon,
+} from "@designali/icons"
 
 import {
   Avatar,
@@ -19,11 +21,11 @@ import {
 } from "@workspace/ui/components/dropdown-menu"
 
 const people = [
-  "Priya Natarajan",
-  "Owen Clarke",
-  "Sofia Marin",
-  "Kenji Watanabe",
-  "Lena Hoffmann",
+  "Ali Imam",
+  "Brand Designer",
+  "Design Engineer",
+  "Motion Designer",
+  "Studio Developer",
 ]
 
 const initialsOf = (name: string) =>
@@ -34,8 +36,8 @@ const initialsOf = (name: string) =>
 
 export default function AssigneeMultiSelectMenu() {
   const [selected, setSelected] = React.useState([
-    "Priya Natarajan",
-    "Sofia Marin",
+    "Ali Imam",
+    "Design Engineer",
   ])
 
   return (

@@ -24,7 +24,7 @@ export default function TextareaSizes() {
           <Textarea
             id={"ta-size-" + s.label}
             className={s.className}
-            placeholder="Leave a note for the courier"
+            placeholder="Leave a note for the Designali studio"
           />
         </div>
       ))}

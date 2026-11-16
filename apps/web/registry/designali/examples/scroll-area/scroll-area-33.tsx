@@ -2,21 +2,21 @@ import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
 import { ScrollArea } from "@workspace/ui/components/scroll-area"
 
 const contacts = [
-  "Aiko Tanaka",
-  "Amara Obi",
-  "Ben Okafor",
-  "Bianca Ruiz",
-  "Carlos Mendes",
-  "Chloe Martin",
-  "Dev Raman",
-  "Dina Kovac",
-  "Elif Hansen",
-  "Emil Strand",
-  "Farah Nasser",
-  "Felix Braun",
-  "Gia Santos",
-  "Hana Sato",
-  "Hugo Laurent",
+  "Aiko",
+  "Ali Imam",
+  "Ben",
+  "Bianca",
+  "Carlos",
+  "Chloe",
+  "Dev",
+  "Dina",
+  "Elif",
+  "Emil",
+  "Farah",
+  "Felix",
+  "Gia",
+  "Hana",
+  "Hugo",
 ]
 
 export default function StickyAlphabetContacts() {

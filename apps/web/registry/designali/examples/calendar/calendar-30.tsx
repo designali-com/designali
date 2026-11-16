@@ -43,7 +43,7 @@ export default function TimeSlotBooking() {
   return (
     <Card className="w-fit max-w-full">
       <CardHeader>
-        <CardTitle>Book a 30 min intro call</CardTitle>
+        <CardTitle>Book a 30 min intro call with Ali</CardTitle>
         <CardDescription>
           All times are in your local time zone.
         </CardDescription>

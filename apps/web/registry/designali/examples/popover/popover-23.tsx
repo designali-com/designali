@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { TypeIcon } from "lucide-react"
+import {
+  Type as TypeIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -20,7 +22,7 @@ export default function ReaderSettingsPopover() {
     <div className="flex w-full max-w-sm flex-col gap-3 border p-4">
       <div className="flex items-center justify-between">
         <span className="text-xs font-medium text-muted-foreground">
-          Field Notes · 6 min read
+          Designali Blog · 6 min read
         </span>
         <Popover>
           <PopoverTrigger
@@ -69,8 +71,8 @@ export default function ReaderSettingsPopover() {
         </Popover>
       </div>
       <p style={{ fontSize: size, lineHeight: leading }}>
-        The tide came in slowly that morning, folding the harbor into a single
-        sheet of grey light.
+        Every Designali block starts in Figma and ships as production-ready
+        code, design se code tak.
       </p>
     </div>
   )

@@ -1,4 +1,9 @@
-import { ArrowRight, BarChart3, Bell, Search } from "lucide-react"
+import {
+  ArrowRight,
+  ChartColumn as BarChart3,
+  Bell,
+  Search,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 
@@ -13,12 +18,12 @@ export default function CallToAction11() {
             See every metric that matters, in one tab.
           </h2>
           <p className="mt-5 max-w-lg text-base leading-7 text-muted-foreground">
-            Northwind pipes revenue, retention and product usage into a single
-            live dashboard your whole team can read without a SQL course.
+            Designali dashboard blocks turn revenue, retention and product usage into
+            a single live view your whole team can read without a SQL course.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Button size="lg" nativeButton={false} render={<a href="#" />}>
-              Connect your data
+              Browse dashboard blocks
               <ArrowRight data-icon="inline-end" />
             </Button>
             <Button
@@ -31,7 +36,7 @@ export default function CallToAction11() {
             </Button>
           </div>
           <p className="mt-6 text-xs text-muted-foreground">
-            Setup takes 6 minutes on average. 40+ native connectors.
+            Built with Next.js, React and Tailwind CSS. Copy, paste, ship.
           </p>
         </div>
         <div className="relative">
@@ -43,7 +48,7 @@ export default function CallToAction11() {
               <span className="size-2.5 rounded-full bg-emerald-400" />
               <div className="ml-4 flex flex-1 items-center gap-2 bg-muted px-3 py-1 text-xs text-muted-foreground">
                 <Search className="size-3" />
-                app.northwind.io/overview
+                designali.com/blocks/analytics
               </div>
               <Bell className="ml-2 hidden size-4 text-muted-foreground sm:block" />
             </div>

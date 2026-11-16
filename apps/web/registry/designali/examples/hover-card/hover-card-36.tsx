@@ -17,7 +17,7 @@ export default function ChartBarHoverCard() {
 
   return (
     <div className="w-full max-w-xs">
-      <p className="mb-3 text-sm font-medium">Weekly signups</p>
+      <p className="mb-3 text-sm font-medium">Weekly designali.com signups</p>
       <div className="flex h-36 items-end gap-3 border-b">
         {weeks.map((w) => (
           <HoverCard key={w.label}>

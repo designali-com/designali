@@ -7,7 +7,7 @@ import { Textarea } from "@workspace/ui/components/textarea"
 
 export default function KeyboardSubmitNotes() {
   const [notes, setNotes] = React.useState<string[]>([
-    "Ask design for the empty state",
+    "Design the empty state for Designali blocks",
   ])
   const [draft, setDraft] = React.useState("")
 

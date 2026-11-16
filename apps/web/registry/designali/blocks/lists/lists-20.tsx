@@ -4,34 +4,37 @@ import {
   Briefcase,
   Car,
   Coffee,
-  type LucideIcon,
   ShoppingBag,
   Wifi,
-} from "lucide-react"
+} from "@designali/icons"
 
-type Txn = { merchant: string; category: string; icon: LucideIcon; amount: number; method: string; pending?: boolean }
+import type * as React from "react"
+
+type IconComponent = React.ComponentType<React.SVGProps<SVGSVGElement> & { size?: number | string; strokeWidth?: number }>
+
+type Txn = { merchant: string; category: string; icon: IconComponent; amount: number; method: string; pending?: boolean }
 
 const ledger: { date: string; items: Txn[] }[] = [
   {
     date: "Today, Nov 15",
     items: [
-      { merchant: "Ferry Street Roasters", category: "Coffee", icon: Coffee, amount: -4.8, method: "•• 4021", pending: true },
-      { merchant: "Lumen Studio Ltd", category: "Client payment", icon: Briefcase, amount: 3200, method: "Transfer" },
+      { merchant: "Studio coffee", category: "Coffee", icon: Coffee, amount: -4.8, method: "•• 4021", pending: true },
+      { merchant: "Designali client, brand identity", category: "Client payment", icon: Briefcase, amount: 3200, method: "Transfer" },
     ],
   },
   {
     date: "Thu, Nov 13",
     items: [
-      { merchant: "Hightide Grocers", category: "Groceries", icon: ShoppingBag, amount: -86.42, method: "•• 4021" },
-      { merchant: "Cityride", category: "Transport", icon: Car, amount: -18.5, method: "•• 4021" },
-      { merchant: "Fibrelink Broadband", category: "Utilities", icon: Wifi, amount: -42, method: "Direct debit" },
+      { merchant: "Template sales, designali.com", category: "Sales", icon: ShoppingBag, amount: 86.42, method: "•• 4021" },
+      { merchant: "Travel to client workshop", category: "Transport", icon: Car, amount: -18.5, method: "•• 4021" },
+      { merchant: "Studio broadband", category: "Utilities", icon: Wifi, amount: -42, method: "Direct debit" },
     ],
   },
   {
     date: "Tue, Nov 11",
     items: [
       { merchant: "Transfer from Savings", category: "Internal", icon: ArrowDownLeft, amount: 500, method: "Pot" },
-      { merchant: "Northbank Rent", category: "Housing", icon: ArrowUpRight, amount: -1450, method: "Standing order" },
+      { merchant: "Studio rent", category: "Workspace", icon: ArrowUpRight, amount: -1450, method: "Standing order" },
     ],
   },
 ]

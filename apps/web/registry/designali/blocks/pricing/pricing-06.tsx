@@ -1,20 +1,23 @@
-import { Check, Minus } from "lucide-react"
+import {
+  Check,
+  Minus,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 
-const plans = ["Basic", "Studio", "Enterprise"]
+const plans = ["Free", "Pro", "Team"]
 
 const rows: { feature: string; values: (boolean | string)[] }[] = [
-  { feature: "Projects", values: ["3", "Unlimited", "Unlimited"] },
+  { feature: "Designali blocks", values: ["40", "460+", "460+"] },
   { feature: "Team members", values: ["1", "Up to 15", "Unlimited"] },
-  { feature: "Block library", values: [true, true, true] },
+  { feature: "@designali/icons and logos", values: [true, true, true] },
   { feature: "Figma source files", values: [false, true, true] },
   { feature: "Private registry", values: [false, true, true] },
-  { feature: "SSO and SCIM", values: [false, false, true] },
-  { feature: "Audit log", values: [false, false, true] },
+  { feature: "Landing pages and templates", values: [false, true, true] },
+  { feature: "Custom blocks from the studio", values: [false, false, true] },
   {
     feature: "Support",
-    values: ["Community", "Email, 24h", "Dedicated manager"],
+    values: ["Community", "support@designali.com, 24h", "Direct with Ali Imam"],
   },
 ]
 
@@ -26,7 +29,7 @@ export default function Pricing06() {
           Compare plans
         </h2>
         <p className="mt-3 text-muted-foreground">
-          Every plan includes free updates for life.
+          Every Designali plan includes free updates for life.
         </p>
         <div className="mt-10 overflow-x-auto border border-border">
           <table className="w-full min-w-[640px] text-sm">

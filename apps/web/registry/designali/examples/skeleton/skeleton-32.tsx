@@ -1,4 +1,6 @@
-import { MapPinIcon } from "lucide-react"
+import {
+  MapPin as MapPinIcon,
+} from "@designali/icons"
 
 import { Skeleton } from "@workspace/ui/components/skeleton"
 

@@ -1,4 +1,8 @@
-import { CircleCheckIcon, FileIcon, RotateCwIcon } from "lucide-react"
+import {
+  CircleCheck as CircleCheckIcon,
+  File as FileIcon,
+  RotateCw as RotateCwIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -13,10 +17,10 @@ import {
 import { Spinner } from "@workspace/ui/components/spinner"
 
 const files = [
-  { name: "brand-guidelines.pdf", size: "4.2 MB", state: "done" },
-  { name: "hero-video.mp4", size: "86.1 MB", state: "uploading" },
-  { name: "pricing-table.xlsx", size: "312 KB", state: "uploading" },
-  { name: "logo-final.sketch", size: "18.4 MB", state: "failed" },
+  { name: "designali-brand-guidelines.pdf", size: "4.2 MB", state: "done" },
+  { name: "colorful-spheres.mp4", size: "86.1 MB", state: "uploading" },
+  { name: "designali-pricing.xlsx", size: "312 KB", state: "uploading" },
+  { name: "designali-logo.fig", size: "18.4 MB", state: "failed" },
 ]
 
 export default function FileUploadQueue() {

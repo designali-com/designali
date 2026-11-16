@@ -2,13 +2,13 @@
 
 import * as React from "react"
 import {
-  HeartIcon,
-  ListPlusIcon,
-  MoreHorizontalIcon,
-  MusicIcon,
-  PlusIcon,
-  Share2Icon,
-} from "lucide-react"
+  Heart as HeartIcon,
+  ListPlus as ListPlusIcon,
+  Ellipsis as MoreHorizontalIcon,
+  Music as MusicIcon,
+  Plus as PlusIcon,
+  Share2 as Share2Icon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -24,14 +24,14 @@ import {
 } from "@workspace/ui/components/dropdown-menu"
 
 const playlists = [
-  "Morning focus",
-  "Late night drives",
-  "Workout mix",
-  "Rainy Sundays",
+  "Studio focus",
+  "Late night builds",
+  "Motion design",
+  "CGI & 3D",
 ]
 
 export default function TrackAddToPlaylistMenu() {
-  const [added, setAdded] = React.useState<string[]>(["Late night drives"])
+  const [added, setAdded] = React.useState<string[]>(["Late night builds"])
 
   return (
     <div className="flex w-full max-w-sm items-center gap-3 border p-2">
@@ -39,9 +39,9 @@ export default function TrackAddToPlaylistMenu() {
         <MusicIcon className="size-4 text-white" />
       </span>
       <div className="min-w-0 flex-1 text-xs">
-        <p className="truncate font-medium">Paper Lanterns</p>
+        <p className="truncate font-medium">Design se code tak</p>
         <p className="truncate text-muted-foreground">
-          The Quiet Harbors · 3:41
+          Designali · 3:41
         </p>
       </div>
       <DropdownMenu>

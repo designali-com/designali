@@ -1,9 +1,9 @@
 import {
-  CircleCheckIcon,
-  GitPullRequestIcon,
-  MessageSquareIcon,
-  UserPlusIcon,
-} from "lucide-react"
+  CircleCheck as CircleCheckIcon,
+  GitPullRequest as GitPullRequestIcon,
+  MessageSquare as MessageSquareIcon,
+  UserPlus as UserPlusIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -19,29 +19,29 @@ const activity = [
   {
     icon: GitPullRequestIcon,
     tone: "text-violet-500",
-    who: "Iris Chen",
-    what: "opened PR #482 Add usage alerts",
+    who: "Ali Imam",
+    what: "opened PR #482 Add new pricing blocks",
     when: "4m",
   },
   {
     icon: MessageSquareIcon,
     tone: "text-sky-500",
-    who: "Marco Bianchi",
-    what: "commented on Billing page redesign",
+    who: "Client",
+    what: "commented on Portfolio template redesign",
     when: "38m",
   },
   {
     icon: CircleCheckIcon,
     tone: "text-emerald-500",
     who: "Deploy bot",
-    what: "shipped v2.14.0 to production",
+    what: "shipped designali.com v2.14.0 to Vercel",
     when: "2h",
   },
   {
     icon: UserPlusIcon,
     tone: "text-amber-500",
-    who: "Hana Sato",
-    what: "joined the Platform team",
+    who: "Designer",
+    what: "joined the Designali studio",
     when: "1d",
   },
 ]

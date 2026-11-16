@@ -1,4 +1,7 @@
-import { ArrowUpRightIcon, DatabaseBackupIcon } from "lucide-react"
+import {
+  ArrowUpRight as ArrowUpRightIcon,
+  DatabaseBackup as DatabaseBackupIcon,
+} from "@designali/icons"
 
 import {
   Alert,
@@ -15,7 +18,7 @@ export default function AlertBackupComplete() {
       <AlertTitle>Nightly backup complete</AlertTitle>
       <AlertDescription>
         <p>
-          <span className="text-foreground">prod-eu-1</span> &middot; 18.4 GB
+          <span className="text-foreground">designali-prod</span> &middot; 18.4 GB
           &middot; finished 03:12 UTC
         </p>
       </AlertDescription>

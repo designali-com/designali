@@ -1,4 +1,6 @@
-import { TrophyIcon } from "lucide-react"
+import {
+  Trophy as TrophyIcon,
+} from "@designali/icons"
 
 import { ScrollArea } from "@workspace/ui/components/scroll-area"
 import { cn } from "@workspace/ui/lib/utils"

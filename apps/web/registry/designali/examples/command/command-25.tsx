@@ -13,7 +13,7 @@ import {
 import { cn } from "@workspace/ui/lib/utils"
 
 const tokens = [
-  { name: "primary", hex: "#4F46E5", className: "bg-indigo-600" },
+  { name: "primary", hex: "#00A8FF", className: "bg-primary" },
   { name: "success", hex: "#16A34A", className: "bg-green-600" },
   { name: "warning", hex: "#D97706", className: "bg-amber-600" },
   { name: "danger", hex: "#DC2626", className: "bg-red-600" },

@@ -7,8 +7,8 @@ import { Switch } from "@workspace/ui/components/switch"
 import { cn } from "@workspace/ui/lib/utils"
 
 const plans = [
-  { name: "Starter", monthly: 12 },
-  { name: "Team", monthly: 29 },
+  { name: "Designali Pro", monthly: 12 },
+  { name: "Designali Team", monthly: 29 },
 ]
 
 export default function BillingCycleSwitch() {

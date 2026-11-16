@@ -13,7 +13,7 @@ export default function RequiredFieldLabel() {
       <Input
         id="work-email"
         type="email"
-        placeholder="you@company.com"
+        placeholder="you@designali.com"
         required
       />
     </div>

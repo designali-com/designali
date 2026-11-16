@@ -1,7 +1,12 @@
 "use client"
 
 import * as React from "react"
-import { CalendarIcon, ClockIcon, MapPinIcon, VideoIcon } from "lucide-react"
+import {
+  Calendar as CalendarIcon,
+  Clock as ClockIcon,
+  MapPin as MapPinIcon,
+  Video as VideoIcon,
+} from "@designali/icons"
 
 import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
 import { Button } from "@workspace/ui/components/button"
@@ -17,10 +22,10 @@ import {
 } from "@workspace/ui/components/sheet"
 
 const attendees = [
-  { name: "Clara Moss", status: "Going" },
-  { name: "Idris Bello", status: "Maybe" },
-  { name: "Yuki Tan", status: "Going" },
-  { name: "Felix Gray", status: "Pending" },
+  { name: "Ali Imam", status: "Going" },
+  { name: "Idris", status: "Maybe" },
+  { name: "Yuki", status: "Going" },
+  { name: "Felix", status: "Pending" },
 ]
 
 export default function CalendarEventSheet() {
@@ -35,7 +40,7 @@ export default function CalendarEventSheet() {
         <SheetHeader>
           <div className="mb-1 h-1 w-10 bg-primary" />
           <SheetTitle>Design critique</SheetTitle>
-          <SheetDescription>Weekly · hosted by Clara Moss</SheetDescription>
+          <SheetDescription>Weekly · hosted by Ali Imam</SheetDescription>
         </SheetHeader>
         <div className="flex flex-col gap-3 px-4">
           <div className="flex items-center gap-2">
@@ -44,11 +49,11 @@ export default function CalendarEventSheet() {
           </div>
           <div className="flex items-center gap-2">
             <MapPinIcon className="size-4 text-muted-foreground" />
-            Studio B, 3rd floor
+            Designali studio
           </div>
           <div className="flex items-center gap-2">
             <VideoIcon className="size-4 text-muted-foreground" />
-            meet.example/crit-weekly
+            designali.com/crit-weekly
           </div>
           <Separator />
           <span className="font-medium">{attendees.length} guests</span>

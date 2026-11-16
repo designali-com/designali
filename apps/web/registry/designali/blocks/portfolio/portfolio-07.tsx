@@ -1,4 +1,6 @@
-import { ArrowRight } from "lucide-react"
+import {
+  ArrowRight,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { cn } from "@workspace/ui/lib/utils"
@@ -6,35 +8,35 @@ import { cn } from "@workspace/ui/lib/utils"
 const projects = [
   {
     index: "01",
-    client: "Tern Outdoor",
-    title: "An online store that sells the trail, not just the tent",
+    client: "Dalim Icons",
+    title: "An icon set that grew into @designali/icons",
     summary:
-      "We rebuilt Tern's storefront around route guides written by their own staff. Product pages now link to the trips they were tested on.",
-    metric: "+58%",
-    metricLabel: "Average order value",
-    services: ["E-commerce", "Content strategy", "Shopify"],
+      "Dalim Icons started as a personal icon set. We redrew it on one grid and one stroke, then shipped it as a typed React package.",
+    metric: "4000+",
+    metricLabel: "Icons in @designali/icons",
+    services: ["Icon design", "Design system", "React"],
     tone: "from-emerald-700 via-emerald-500 to-lime-300",
   },
   {
     index: "02",
-    client: "Ledgerly",
-    title: "Invoicing for freelancers who hate invoicing",
+    client: "Dalim UI",
+    title: "Components for designers who code",
     summary:
-      "A three-screen flow replaced a twelve-field form. Freelancers send their first invoice in under two minutes, on average.",
-    metric: "1m 48s",
-    metricLabel: "Time to first invoice",
-    services: ["Product design", "Prototyping"],
+      "Dalim UI became the Designali block library: copy-paste sections built with Next.js, TypeScript and Tailwind CSS.",
+    metric: "460+",
+    metricLabel: "Blocks in the Designali library",
+    services: ["UI/UX", "Next.js", "Tailwind CSS"],
     tone: "from-indigo-700 via-violet-500 to-fuchsia-300",
   },
   {
     index: "03",
-    client: "Marrow Kitchen",
-    title: "A restaurant group with one voice across six venues",
+    client: "Dalim Agency",
+    title: "One studio voice across every Dalim brand",
     summary:
-      "Naming, menus and signage for a group that had grown venue by venue. Each site keeps its character inside a shared system.",
-    metric: "6",
-    metricLabel: "Venues rebranded in 9 weeks",
-    services: ["Identity", "Print", "Signage"],
+      "Dalim, Dalim Fonts, Dalim Graphic and Dalim Visuals grew one by one. A shared identity system brought them together under Designali.",
+    metric: "9",
+    metricLabel: "Dalim brands, one system",
+    services: ["Identity", "Brand system", "Web"],
     tone: "from-orange-700 via-amber-500 to-yellow-200",
   },
 ]
@@ -45,10 +47,10 @@ export default function Portfolio07() {
       <div className="mx-auto max-w-6xl px-6">
         <div className="max-w-2xl">
           <h2 className="text-3xl font-medium tracking-tight md:text-5xl">
-            Case studies
+            Designali case studies
           </h2>
           <p className="mt-3 text-muted-foreground">
-            Long-term partnerships where design moved a number someone cared about.
+            Dalim projects that became Designali — design se code tak.
           </p>
         </div>
 
@@ -98,7 +100,7 @@ export default function Portfolio07() {
                     </span>
                   ))}
                 </div>
-                <Button variant="link" className="mt-4 px-0" nativeButton={false} render={<a href="#" />}>
+                <Button variant="link" className="mt-4 px-0" nativeButton={false} render={<a href="/work" />}>
                   Read case study
                   <ArrowRight />
                 </Button>

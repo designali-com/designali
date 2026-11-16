@@ -1,7 +1,11 @@
 "use client"
 
 import * as React from "react"
-import { CheckIcon, CopyIcon, KeyRoundIcon } from "lucide-react"
+import {
+  Check as CheckIcon,
+  Copy as CopyIcon,
+  KeyRound as KeyRoundIcon,
+} from "@designali/icons"
 
 import {
   Alert,
@@ -31,7 +35,7 @@ export default function AlertRecoveryCodes() {
   return (
     <Alert variant="warning" className="max-w-md">
       <KeyRoundIcon />
-      <AlertTitle>Save your recovery codes</AlertTitle>
+      <AlertTitle>Save your designali.com recovery codes</AlertTitle>
       <AlertDescription className="space-y-2">
         <p>
           Each code works once. Store them somewhere safe, you won&apos;t see

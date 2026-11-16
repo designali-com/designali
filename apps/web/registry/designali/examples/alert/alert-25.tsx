@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { TrashIcon } from "lucide-react"
+import {
+  Trash as TrashIcon,
+} from "@designali/icons"
 
 import {
   Alert,
@@ -14,7 +16,7 @@ import { Label } from "@workspace/ui/components/label"
 
 export default function AlertDangerZoneConfirm() {
   const [value, setValue] = React.useState("")
-  const name = "acme-marketing"
+  const name = "designali-client-site"
 
   return (
     <div className="w-full max-w-sm space-y-3">
@@ -22,7 +24,7 @@ export default function AlertDangerZoneConfirm() {
         <TrashIcon />
         <AlertTitle>Delete this workspace</AlertTitle>
         <AlertDescription>
-          All 42 projects, files and member access will be permanently removed.
+          All 42 Figma files, Next.js builds and client access will be permanently removed.
           This cannot be undone.
         </AlertDescription>
       </Alert>

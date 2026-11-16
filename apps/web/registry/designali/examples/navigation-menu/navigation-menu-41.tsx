@@ -1,4 +1,6 @@
-import { RssIcon } from "lucide-react"
+import {
+  Rss as RssIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import {
@@ -12,9 +14,9 @@ import {
 } from "@workspace/ui/components/navigation-menu"
 
 const releases = [
-  { version: "3.8", title: "Recurring invoices", date: "Nov 4" },
-  { version: "3.7", title: "Dark mode for reports", date: "Oct 21" },
-  { version: "3.6", title: "Bulk CSV import", date: "Oct 2" },
+  { version: "3.8", title: "40 new pricing blocks", date: "Nov 4" },
+  { version: "3.7", title: "Dark mode for templates", date: "Oct 21" },
+  { version: "3.6", title: "@designali/logos package", date: "Oct 2" },
 ]
 
 export default function ChangelogNav() {

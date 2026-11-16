@@ -12,7 +12,7 @@ import {
 } from "@workspace/ui/components/breadcrumb"
 import { Button } from "@workspace/ui/components/button"
 
-const steps = ["Workspace", "Invite team", "Connect data", "Finish"]
+const steps = ["Project brief", "Invite client", "Share Figma", "Finish"]
 
 export default function WizardStepBreadcrumb() {
   const [step, setStep] = React.useState(2)

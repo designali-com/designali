@@ -15,10 +15,10 @@ const roles = [
 ]
 
 const members = [
-  { name: "Lena Ortiz", email: "lena@fieldnote.app", role: "owner" },
-  { name: "Sam Okafor", email: "sam@fieldnote.app", role: "admin" },
-  { name: "Iris Novak", email: "iris@fieldnote.app", role: "editor" },
-  { name: "Theo Laurent", email: "theo@fieldnote.app", role: "viewer" },
+  { name: "Ali Imam", email: "ali@designali.com", role: "owner" },
+  { name: "Sam", email: "sam@designali.com", role: "admin" },
+  { name: "Iris", email: "iris@designali.com", role: "editor" },
+  { name: "Theo", email: "theo@designali.com", role: "viewer" },
 ]
 
 export default function TeamRoleSelect() {

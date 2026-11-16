@@ -1,16 +1,20 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { Download, Pause, Play } from "lucide-react"
+import {
+  Download,
+  Pause,
+  Play,
+} from "@designali/icons"
 
 import { cn } from "@workspace/ui/lib/utils"
 
 const clips = [
-  { title: "Warm narrator - product intro", voice: "Elio", tag: "Narration", length: 24 },
-  { title: "Calm support agent greeting", voice: "Maren", tag: "Conversational", length: 11 },
-  { title: "Energetic trailer read", voice: "Dex", tag: "Promo", length: 18 },
-  { title: "Audiobook, chapter opening", voice: "Odette", tag: "Long-form", length: 32 },
-  { title: "Meditation guide, slow pace", voice: "Sol", tag: "Wellness", length: 27 },
+  { title: "UI interaction", voice: "Soft click", tag: "Interface", length: 24 },
+  { title: "Page transition", voice: "Whoosh", tag: "Motion", length: 11 },
+  { title: "Brand reveal", voice: "Logo sting", tag: "Brand", length: 18 },
+  { title: "Showreel background", voice: "Ambient pad", tag: "Long-form", length: 32 },
+  { title: "Success state", voice: "Glass chime", tag: "Interface", length: 27 },
 ]
 
 function bars(seed: number) {
@@ -43,10 +47,10 @@ export default function Media14() {
   return (
     <section className="w-full bg-background py-20">
       <div className="mx-auto max-w-4xl px-6">
-        <p className="text-xs tracking-widest text-muted-foreground uppercase">Voice library</p>
-        <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-4xl">Hear every voice before you choose</h2>
+        <p className="text-xs tracking-widest text-muted-foreground uppercase">Designali sound library</p>
+        <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-4xl">Hear every sound before you choose</h2>
         <p className="mt-3 max-w-xl text-muted-foreground">
-          Five of our 120 studio voices, generated with Vocalis 3. Each sample is unedited output from a single prompt.
+          Five of the sounds Designali uses in CGI, 3D and motion projects. Each sample is an unedited preview.
         </p>
         <ul className="mt-10 divide-y divide-border border-y border-border">
           {clips.map((clip, i) => {

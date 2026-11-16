@@ -1,7 +1,9 @@
 "use client"
 
 import { useState } from "react"
-import { ArrowRight } from "lucide-react"
+import {
+  ArrowRight,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Input } from "@workspace/ui/components/input"
@@ -22,15 +24,14 @@ export default function Hero08() {
       />
       <div className="relative mx-auto flex max-w-3xl flex-col items-center text-center">
         <p className="font-mono text-xs tracking-widest text-muted-foreground uppercase">
-          Private beta, spring 2027
+          Designali newsletter
         </p>
         <h1 className="mt-6 text-5xl font-medium tracking-tight md:text-7xl">
-          Notes that write their own follow-ups.
+          New templates, blocks and icons in your inbox.
         </h1>
         <p className="mt-6 max-w-xl text-base leading-7 text-muted-foreground">
-          Drift listens to your meetings, drafts the recap and files action
-          items in the tools your team already uses. Join the waitlist to get
-          early access.
+          Get Ali Imam's notes on design and code, plus early access to new
+          Designali templates, blocks and UI kits before they hit designali.com.
         </p>
         <form
           className="mt-10 flex w-full max-w-md flex-col gap-2 sm:flex-row"
@@ -42,19 +43,19 @@ export default function Hero08() {
           <Input
             type="email"
             required
-            placeholder="name@company.com"
+            placeholder="you@example.com"
             aria-label="Email address"
             value={email}
             onChange={(event) => setEmail(event.target.value)}
             className="h-11 bg-background text-sm"
           />
           <Button type="submit" size="lg" className="h-11" disabled={joined}>
-            {joined ? "You're in" : "Join waitlist"}
+            {joined ? "You're in" : "Subscribe"}
             {!joined && <ArrowRight />}
           </Button>
         </form>
         <p className="mt-4 text-xs text-muted-foreground">
-          3,412 people ahead of you. We invite a new group every Friday.
+          One email when something new ships. Unsubscribe anytime.
         </p>
       </div>
     </section>

@@ -1,7 +1,11 @@
 "use client"
 
 import * as React from "react"
-import { Volume1Icon, Volume2Icon, VolumeXIcon } from "lucide-react"
+import {
+  Volume1 as Volume1Icon,
+  Volume2 as Volume2Icon,
+  VolumeX as VolumeXIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Slider } from "@workspace/ui/components/slider"

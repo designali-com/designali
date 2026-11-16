@@ -1,12 +1,14 @@
-import { PlusIcon } from "lucide-react"
+import {
+  Plus as PlusIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 
 const notes = [
-  "Grocery run",
-  "Call the landlord",
-  "Book dentist",
-  "Gift ideas for Sam",
+  "Client brief for Dalim Fonts",
+  "Export the new icon set",
+  "Review landing page blocks",
+  "Ideas for the next template",
 ]
 
 export default function FloatingActionButton() {

@@ -33,7 +33,7 @@ export default function CardWrappedTable() {
     <Card className="w-full max-w-lg">
       <CardHeader>
         <CardTitle>Payouts</CardTitle>
-        <CardDescription>Transfers to your bank account.</CardDescription>
+        <CardDescription>Designali store sales transferred to your bank account.</CardDescription>
         <CardAction>
           <Button variant="outline" size="sm">
             View all

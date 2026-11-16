@@ -1,4 +1,7 @@
-import { CircleCheckIcon, XIcon } from "lucide-react"
+import {
+  CircleCheck as CircleCheckIcon,
+  X as XIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -13,10 +16,10 @@ import { Progress } from "@workspace/ui/components/progress"
 import { cn } from "@workspace/ui/lib/utils"
 
 const steps = [
-  { title: "Create your workspace", done: true },
-  { title: "Invite your teammates", done: true },
-  { title: "Connect a data source", done: false, cta: "Connect" },
-  { title: "Publish your first dashboard", done: false, cta: "Start" },
+  { title: "Create your designali account", done: true },
+  { title: "Install @designali/icons", done: true },
+  { title: "Copy your first block", done: false, cta: "Browse" },
+  { title: "Deploy a template to Vercel", done: false, cta: "Start" },
 ]
 
 export default function OnboardingChecklistCard() {
@@ -26,7 +29,7 @@ export default function OnboardingChecklistCard() {
   return (
     <Card className="w-full max-w-sm">
       <CardHeader>
-        <CardTitle>Get started</CardTitle>
+        <CardTitle>Get started with Designali</CardTitle>
         <CardDescription>
           {done} of {steps.length} steps complete
         </CardDescription>

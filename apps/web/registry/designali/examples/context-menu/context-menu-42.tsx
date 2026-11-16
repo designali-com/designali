@@ -1,13 +1,13 @@
 import {
-  DownloadIcon,
-  ExternalLinkIcon,
-  FileSpreadsheetIcon,
-  HistoryIcon,
-  LinkIcon,
-  SendIcon,
-  Share2Icon,
-  UsersIcon,
-} from "lucide-react"
+  Download as DownloadIcon,
+  ExternalLink as ExternalLinkIcon,
+  FileSpreadsheet as FileSpreadsheetIcon,
+  History as HistoryIcon,
+  Link as LinkIcon,
+  Send as SendIcon,
+  Share2 as Share2Icon,
+  Users as UsersIcon,
+} from "@designali/icons"
 
 import {
   ContextMenu,
@@ -26,7 +26,7 @@ export default function NestedExportSubmenus() {
     <ContextMenu>
       <ContextMenuTrigger className="flex w-full max-w-xs flex-col gap-2 border p-4">
         <FileSpreadsheetIcon className="size-6 text-emerald-600" />
-        <span className="text-sm font-medium">2026 Budget forecast</span>
+        <span className="text-sm font-medium">Designali 2026 roadmap</span>
         <span className="text-xs text-muted-foreground">
           Spreadsheet · 14 tabs
         </span>
@@ -76,7 +76,7 @@ export default function NestedExportSubmenus() {
                 <ContextMenuSubContent className="w-40">
                   <ContextMenuGroup>
                     <ContextMenuItem>Email</ContextMenuItem>
-                    <ContextMenuItem>#finance channel</ContextMenuItem>
+                    <ContextMenuItem>#studio channel</ContextMenuItem>
                   </ContextMenuGroup>
                 </ContextMenuSubContent>
               </ContextMenuSub>

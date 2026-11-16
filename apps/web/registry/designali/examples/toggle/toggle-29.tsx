@@ -1,15 +1,18 @@
 "use client"
 
 import * as React from "react"
-import { GitCompareIcon, LaptopIcon } from "lucide-react"
+import {
+  GitCompare as GitCompareIcon,
+  Laptop as LaptopIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Toggle } from "@workspace/ui/components/toggle"
 
 const laptops = [
-  { id: "air", name: "Nimbus Air 13", price: "$999" },
-  { id: "pro", name: "Nimbus Pro 14", price: "$1,599" },
-  { id: "max", name: "Nimbus Max 16", price: "$2,399" },
+  { id: "air", name: "MacBook mockup", price: "$19" },
+  { id: "pro", name: "iMac mockup", price: "$29" },
+  { id: "max", name: "Studio Display mockup", price: "$39" },
 ]
 
 export default function ProductCompareToggle() {

@@ -1,4 +1,6 @@
-import { CircleCheckIcon } from "lucide-react"
+import {
+  CircleCheck as CircleCheckIcon,
+} from "@designali/icons"
 
 import { Progress } from "@workspace/ui/components/progress"
 import {
@@ -9,10 +11,10 @@ import {
 } from "@workspace/ui/components/tabs"
 
 const courses = [
-  { title: "Intro to TypeScript", done: 72 },
-  { title: "Design systems 101", done: 35 },
-  { title: "Accessible forms", done: 100 },
-  { title: "Git fundamentals", done: 100 },
+  { title: "Designali: Next.js basics", done: 72 },
+  { title: "Designali: Design systems 101", done: 35 },
+  { title: "Designali: Figma to code", done: 100 },
+  { title: "Designali: Tailwind CSS", done: 100 },
 ]
 
 export default function CourseProgressTabs() {

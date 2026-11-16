@@ -1,4 +1,4 @@
-import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
+import { Avatar, AvatarFallback, AvatarImage } from "@workspace/ui/components/avatar"
 import { Button } from "@workspace/ui/components/button"
 import { Separator } from "@workspace/ui/components/separator"
 
@@ -6,18 +6,19 @@ export default function AuthorBioSeparator() {
   return (
     <div className="flex w-full max-w-md flex-col gap-5">
       <p className="text-sm text-muted-foreground">
-        ...and that is why we now ship every interface change behind a quiet
-        beta flag first. Thanks for reading.
+        ...and that is why every Designali block starts in Figma and ships as
+        production-ready code. Thanks for reading.
       </p>
       <Separator />
       <div className="flex items-start gap-3">
         <Avatar size="lg">
-          <AvatarFallback>CW</AvatarFallback>
+          <AvatarImage src="/ali.jpg" alt="Ali Imam" />
+          <AvatarFallback>AI</AvatarFallback>
         </Avatar>
         <div className="flex flex-1 flex-col gap-1">
-          <span className="text-sm font-medium">Clara Whitfield</span>
+          <span className="text-sm font-medium">Ali Imam</span>
           <span className="text-xs text-muted-foreground">
-            Design engineer writing about interfaces, motion and calm software.
+            Founder of Designali. Designing and coding digital experiences.
           </span>
         </div>
         <Button variant="outline" size="sm">

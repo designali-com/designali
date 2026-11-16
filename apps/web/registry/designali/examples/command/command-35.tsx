@@ -2,13 +2,13 @@
 
 import * as React from "react"
 import {
-  AlarmClockIcon,
-  CalendarDaysIcon,
-  CalendarIcon,
-  CoffeeIcon,
-  SunriseIcon,
-  SunsetIcon,
-} from "lucide-react"
+  AlarmClock as AlarmClockIcon,
+  CalendarDays as CalendarDaysIcon,
+  Calendar as CalendarIcon,
+  Coffee as CoffeeIcon,
+  Sunrise as SunriseIcon,
+  Sunset as SunsetIcon,
+} from "@designali/icons"
 
 import {
   Command,

@@ -17,7 +17,7 @@ export default function DisabledTriggerNav() {
           <NavigationMenuTrigger>Tools</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="flex w-52 flex-col gap-1">
-              {["Invoice generator", "Expense tracker", "Tax estimator"].map(
+              {["Icons", "Logos", "Illustrations"].map(
                 (t) => (
                   <li key={t}>
                     <NavigationMenuLink href="#">{t}</NavigationMenuLink>

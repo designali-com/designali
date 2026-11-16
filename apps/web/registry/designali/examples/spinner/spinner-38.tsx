@@ -1,4 +1,6 @@
-import { CalendarSyncIcon } from "lucide-react"
+import {
+  CalendarSync as CalendarSyncIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -18,7 +20,7 @@ export default function CalendarSyncItem() {
         <CalendarSyncIcon />
       </ItemMedia>
       <ItemContent>
-        <ItemTitle>Work calendar</ItemTitle>
+        <ItemTitle>Designali studio calendar</ItemTitle>
         <ItemDescription>Last synced 14 minutes ago</ItemDescription>
       </ItemContent>
       <ItemActions>

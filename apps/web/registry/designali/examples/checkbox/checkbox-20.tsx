@@ -26,7 +26,7 @@ export default function BillingSameAsShipping() {
       </Field>
       {same ? (
         <p className="border bg-muted/40 p-3 text-xs text-muted-foreground">
-          Nadia Brooks, 48 Larkspur Lane, Portland, OR 97205
+          Ali Imam · Designali · billing@designali.com
         </p>
       ) : (
         <FieldGroup className="gap-3">

@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { CloudOffIcon, RefreshCwIcon } from "lucide-react"
+import {
+  CloudOff as CloudOffIcon,
+  RefreshCw as RefreshCwIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -20,7 +23,7 @@ export default function ErrorStateCard() {
   return (
     <Card className="w-full max-w-sm ring-destructive/30">
       <CardHeader>
-        <CardTitle>Conversion funnel</CardTitle>
+        <CardTitle>designali.com conversion funnel</CardTitle>
         <CardDescription>Last 30 days</CardDescription>
       </CardHeader>
       <CardContent className="flex flex-col items-center gap-2 py-6 text-center">

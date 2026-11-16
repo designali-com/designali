@@ -1,7 +1,11 @@
 "use client"
 
 import * as React from "react"
-import { LayoutGridIcon, PlusIcon, RefreshCwIcon } from "lucide-react"
+import {
+  LayoutGrid as LayoutGridIcon,
+  Plus as PlusIcon,
+  RefreshCw as RefreshCwIcon,
+} from "@designali/icons"
 
 import {
   ContextMenu,

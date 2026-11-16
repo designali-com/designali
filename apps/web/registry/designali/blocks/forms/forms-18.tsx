@@ -1,4 +1,8 @@
-import { Bell, Mail, MessageSquare } from "lucide-react"
+import {
+  Bell,
+  Mail,
+  MessageSquare,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Checkbox } from "@workspace/ui/components/checkbox"
@@ -13,24 +17,24 @@ const groups = [
   {
     title: "Activity",
     rows: [
-      { id: "mentions", label: "Mentions and replies", defaults: ["email", "push"] },
-      { id: "assigned", label: "Tasks assigned to me", defaults: ["email", "push", "sms"] },
-      { id: "status", label: "Status changes on followed tasks", defaults: ["push"] },
+      { id: "mentions", label: "Comments on my Designali projects", defaults: ["email", "push"] },
+      { id: "assigned", label: "Design reviews from Ali Imam", defaults: ["email", "push", "sms"] },
+      { id: "status", label: "Project status changes", defaults: ["push"] },
     ],
   },
   {
     title: "Workspace",
     rows: [
-      { id: "invites", label: "New members join", defaults: ["email"] },
+      { id: "invites", label: "New teammates join", defaults: ["email"] },
       { id: "billing", label: "Billing and invoices", defaults: ["email"] },
       { id: "security", label: "New sign-in from unknown device", defaults: ["email", "sms"] },
     ],
   },
   {
-    title: "From us",
+    title: "From Designali",
     rows: [
-      { id: "product", label: "Product announcements", defaults: [] as string[] },
-      { id: "tips", label: "Tips for getting more done", defaults: [] as string[] },
+      { id: "product", label: "New templates and blocks", defaults: [] as string[] },
+      { id: "tips", label: "Design se code tak tips", defaults: [] as string[] },
     ],
   },
 ]

@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { Columns3Icon } from "lucide-react"
+import {
+  Columns3 as Columns3Icon,
+} from "@designali/icons"
 
 import {
   Table,
@@ -14,9 +16,9 @@ import {
 import { Toggle } from "@workspace/ui/components/toggle"
 
 const rows = [
-  { id: "INV-301", customer: "Fable & Co", amount: "$1,240", due: "Oct 30" },
-  { id: "INV-302", customer: "Orbit Labs", amount: "$860", due: "Nov 04" },
-  { id: "INV-303", customer: "Pine Studio", amount: "$3,100", due: "Nov 12" },
+  { id: "INV-301", customer: "Brand identity", amount: "$1,240", due: "Oct 30" },
+  { id: "INV-302", customer: "UI/UX design", amount: "$860", due: "Nov 04" },
+  { id: "INV-303", customer: "Next.js website", amount: "$3,100", due: "Nov 12" },
 ]
 
 export default function TableColumnVisibilityToggles() {
@@ -49,7 +51,7 @@ export default function TableColumnVisibilityToggles() {
         <TableHeader>
           <TableRow>
             <TableHead>Invoice</TableHead>
-            <TableHead>Customer</TableHead>
+            <TableHead>Service</TableHead>
             {showAmount && <TableHead className="text-end">Amount</TableHead>}
             {showDue && <TableHead>Due</TableHead>}
           </TableRow>

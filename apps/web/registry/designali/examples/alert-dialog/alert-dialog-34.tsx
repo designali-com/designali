@@ -26,7 +26,7 @@ export default function KeyboardShortcutHints() {
         <AlertDialogHeader>
           <AlertDialogTitle>Close with unsaved changes?</AlertDialogTitle>
           <AlertDialogDescription>
-            &quot;onboarding-copy.md&quot; has edits that haven&apos;t been
+            &quot;designali-homepage-copy.md&quot; has edits that haven&apos;t been
             saved.
           </AlertDialogDescription>
         </AlertDialogHeader>

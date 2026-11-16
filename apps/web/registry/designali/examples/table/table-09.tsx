@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { ChevronLeftIcon, ChevronRightIcon } from "lucide-react"
+import {
+  ChevronLeft as ChevronLeftIcon,
+  ChevronRight as ChevronRightIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -16,11 +19,11 @@ import {
 const transactions = Array.from({ length: 23 }, (_, i) => ({
   id: "TX-" + (1040 + i),
   merchant: [
-    "Brightside Coffee",
-    "Metro Transit",
-    "Paperleaf Books",
-    "Greenway Market",
-    "Cloudnine Hosting",
+    "Vercel",
+    "Figma",
+    "GitHub",
+    "Notion",
+    "Cursor",
   ][i % 5],
   amount: ((i * 37) % 180) + 4.75,
 }))

@@ -1,7 +1,11 @@
 "use client"
 
 import * as React from "react"
-import { SearchIcon, UserRoundIcon, UserXIcon } from "lucide-react"
+import {
+  Search as SearchIcon,
+  UserRound as UserRoundIcon,
+  UserX as UserXIcon,
+} from "@designali/icons"
 
 import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
 import { Button } from "@workspace/ui/components/button"
@@ -18,10 +22,10 @@ import {
 import { Separator } from "@workspace/ui/components/separator"
 
 const team = [
-  { name: "Maya Chen", role: "Design" },
-  { name: "Dario Mendes", role: "Engineering" },
-  { name: "Hana Sato", role: "Engineering" },
-  { name: "Owen Brandt", role: "Product" },
+  { name: "Ali Imam", role: "Design" },
+  { name: "Dario", role: "Engineering" },
+  { name: "Hana", role: "Engineering" },
+  { name: "Owen", role: "Product" },
 ]
 
 const initials = (name: string) =>
@@ -31,7 +35,7 @@ const initials = (name: string) =>
     .join("")
 
 export default function AssigneePickerPopover() {
-  const [assignee, setAssignee] = React.useState<string | null>("Hana Sato")
+  const [assignee, setAssignee] = React.useState<string | null>("Hana")
   const [open, setOpen] = React.useState(false)
   const [query, setQuery] = React.useState("")
   const results = team.filter((m) =>

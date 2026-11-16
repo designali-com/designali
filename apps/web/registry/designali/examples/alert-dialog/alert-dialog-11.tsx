@@ -1,4 +1,6 @@
-import { PhoneOffIcon } from "lucide-react"
+import {
+  PhoneOff as PhoneOffIcon,
+} from "@designali/icons"
 
 import {
   AlertDialog,
@@ -26,7 +28,7 @@ export default function EndMeetingForAll() {
           <AlertDialogMedia className="bg-destructive/10 text-destructive">
             <PhoneOffIcon />
           </AlertDialogMedia>
-          <AlertDialogTitle>End meeting for all?</AlertDialogTitle>
+          <AlertDialogTitle>End the Designali client call for all?</AlertDialogTitle>
           <AlertDialogDescription>
             All 9 participants will be disconnected.
           </AlertDialogDescription>

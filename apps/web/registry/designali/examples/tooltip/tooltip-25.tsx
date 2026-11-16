@@ -1,4 +1,8 @@
-import { MicIcon, SearchIcon, SlidersHorizontalIcon } from "lucide-react"
+import {
+  Mic as MicIcon,
+  Search as SearchIcon,
+  SlidersHorizontal as SlidersHorizontalIcon,
+} from "@designali/icons"
 
 import {
   InputGroup,

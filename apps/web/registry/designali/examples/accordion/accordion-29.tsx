@@ -1,4 +1,6 @@
-import { ChevronRightIcon } from "lucide-react"
+import {
+  ChevronRight as ChevronRightIcon,
+} from "@designali/icons"
 
 import {
   Accordion,
@@ -10,18 +12,18 @@ import {
 const groups = [
   {
     value: "inbox",
-    title: "Inbox rules",
-    body: "Move newsletters to Reading and archive receipts older than 30 days.",
+    title: "Client requests",
+    body: "New Designali project briefs land here and are sorted by service.",
   },
   {
     value: "labels",
-    title: "Labels",
-    body: "Create up to 50 labels. Nested labels inherit the parent colour.",
+    title: "Tags",
+    body: "Tag work as Brand, UI/UX, Web or Motion. Nested tags inherit the parent colour.",
   },
   {
     value: "filters",
     title: "Saved filters",
-    body: "Saved filters appear in the sidebar and update in real time.",
+    body: "Saved filters like “Next.js builds” appear in the sidebar and update in real time.",
   },
 ]
 

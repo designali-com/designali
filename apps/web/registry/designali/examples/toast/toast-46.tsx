@@ -1,12 +1,12 @@
 "use client"
 
 import {
-  CopyIcon,
-  FileTextIcon,
-  HistoryIcon,
-  MoreVerticalIcon,
-  PinIcon,
-} from "lucide-react"
+  Copy as CopyIcon,
+  FileText as FileTextIcon,
+  History as HistoryIcon,
+  EllipsisVertical as MoreVerticalIcon,
+  Pin as PinIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -25,7 +25,7 @@ export default function DropdownActionsToast() {
       <div className="flex w-full max-w-xs items-center gap-3 border p-3">
         <FileTextIcon className="size-5 text-muted-foreground" />
         <span className="flex-1 truncate text-sm">
-          Partnership proposal.docx
+          Designali project proposal.docx
         </span>
         <DropdownMenu>
           <DropdownMenuTrigger

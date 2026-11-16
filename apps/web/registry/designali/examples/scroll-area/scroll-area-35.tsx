@@ -1,13 +1,13 @@
 import {
-  CheckCircle2Icon,
-  CircleIcon,
-  LandmarkIcon,
-  MailCheckIcon,
-  PiggyBankIcon,
-  RocketIcon,
-  UserIcon,
-  UsersIcon,
-} from "lucide-react"
+  CircleCheck as CheckCircle2Icon,
+  Circle as CircleIcon,
+  Landmark as LandmarkIcon,
+  MailCheck as MailCheckIcon,
+  PiggyBank as PiggyBankIcon,
+  Rocket as RocketIcon,
+  User as UserIcon,
+  Users as UsersIcon,
+} from "@designali/icons"
 
 import { ScrollArea, ScrollBar } from "@workspace/ui/components/scroll-area"
 import { cn } from "@workspace/ui/lib/utils"
@@ -15,9 +15,9 @@ import { cn } from "@workspace/ui/lib/utils"
 const steps = [
   { title: "Create account", done: true, icon: UserIcon },
   { title: "Verify email", done: true, icon: MailCheckIcon },
-  { title: "Connect bank", done: false, icon: LandmarkIcon },
+  { title: "Install @designali/icons", done: false, icon: LandmarkIcon },
   { title: "Add team", done: false, icon: UsersIcon },
-  { title: "Set budget", done: false, icon: PiggyBankIcon },
+  { title: "Pick a template", done: false, icon: PiggyBankIcon },
   { title: "Go live", done: false, icon: RocketIcon },
 ]
 

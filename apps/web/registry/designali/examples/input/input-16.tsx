@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { CreditCardIcon } from "lucide-react"
+import {
+  CreditCard as CreditCardIcon,
+} from "@designali/icons"
 
 import { Field, FieldLabel } from "@workspace/ui/components/field"
 import { Input } from "@workspace/ui/components/input"

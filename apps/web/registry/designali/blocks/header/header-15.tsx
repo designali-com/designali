@@ -1,9 +1,17 @@
 "use client"
 
 import { useState } from "react"
-import { ChevronDown, GitFork, Menu, Moon, Star, Sun, X } from "lucide-react"
+import {
+  ChevronDown,
+  GitFork,
+  Menu,
+  Moon,
+  Star,
+  Sun,
+  X,
+} from "@designali/icons"
 
-const links = ["Docs", "Components", "Examples", "Blog"]
+const links = ["Docs", "Components", "Blocks", "Blogs"]
 const versions = ["v5.1 (latest)", "v5.0", "v4.x"]
 
 export default function Header15() {
@@ -18,7 +26,7 @@ export default function Header15() {
         <div className="mx-auto flex h-14 max-w-7xl items-center gap-3 px-6">
           <a href="#" className="flex items-center gap-2 font-mono text-sm font-semibold">
             <span className="text-muted-foreground">~/</span>
-            loomkit
+            designali
           </a>
           <div className="relative">
             <button
@@ -66,7 +74,7 @@ export default function Header15() {
             <a
               href="#"
               className="hidden h-8 items-center border text-xs sm:flex"
-              aria-label="Star the loomkit repository"
+              aria-label="Star the designali repository"
             >
               <span className="flex h-full items-center gap-1.5 border-e px-2.5">
                 <GitFork className="size-3.5" />
@@ -74,7 +82,7 @@ export default function Header15() {
               </span>
               <span className="flex h-full items-center gap-1 px-2.5 tabular-nums text-muted-foreground">
                 <Star className="size-3" />
-                18.4k
+                2.1k
               </span>
             </a>
             <button
@@ -106,7 +114,7 @@ export default function Header15() {
             ))}
             <a href="#" className="col-span-2 flex items-center gap-2 bg-background px-6 py-4 text-sm text-muted-foreground">
               <GitFork className="size-4" />
-              Source code / 18.4k stars
+              Source code / 2.1k stars
             </a>
           </nav>
         )}

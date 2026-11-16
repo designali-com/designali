@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { ListFilterIcon } from "lucide-react"
+import {
+  ListFilter as ListFilterIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import { Button } from "@workspace/ui/components/button"
@@ -25,7 +27,7 @@ import {
 } from "@workspace/ui/components/field"
 import { Slider } from "@workspace/ui/components/slider"
 
-const categories = ["Jackets", "Knitwear", "Shirts", "Trousers", "Accessories"]
+const categories = ["Templates", "Blocks", "Icons", "Logos", "Illustrations"]
 
 export default function ProductFiltersDrawer() {
   const [selected, setSelected] = React.useState<string[]>(["Knitwear"])

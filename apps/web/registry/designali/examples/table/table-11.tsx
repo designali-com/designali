@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { ChevronRightIcon } from "lucide-react"
+import {
+  ChevronRight as ChevronRightIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -17,26 +19,26 @@ import { cn } from "@workspace/ui/lib/utils"
 const orders = [
   {
     id: "SO-881",
-    customer: "Harbor Cafe",
+    customer: "Sara Khan",
     total: 412.5,
     items: [
-      ["Espresso beans 5kg", 2],
-      ["Oat milk case", 4],
+      ["Portfolio template", 2],
+      ["Icons Pro license", 4],
     ],
   },
   {
     id: "SO-882",
-    customer: "Pine & Co",
+    customer: "Omar Ali",
     total: 96.0,
-    items: [["Paper cups 1k", 1]],
+    items: [["Blocks Pro bundle", 1]],
   },
   {
     id: "SO-883",
-    customer: "Lantern Bakery",
+    customer: "Priya Shah",
     total: 238.2,
     items: [
-      ["Flour 25kg", 3],
-      ["Butter 10kg", 1],
+      ["Logos pack", 3],
+      ["Vectors pack", 1],
     ],
   },
 ] as const

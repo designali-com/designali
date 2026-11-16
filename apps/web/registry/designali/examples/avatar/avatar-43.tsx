@@ -1,14 +1,16 @@
-import { PlusIcon } from "lucide-react"
+import {
+  Plus as PlusIcon,
+} from "@designali/icons"
 
 import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
 import { cn } from "@workspace/ui/lib/utils"
 
 const stories = [
   { name: "You", initials: "+", seen: false, add: true },
-  { name: "felix", initials: "FX", seen: false, add: false },
-  { name: "june", initials: "JN", seen: false, add: false },
-  { name: "rami", initials: "RA", seen: true, add: false },
-  { name: "tess", initials: "TE", seen: true, add: false },
+  { name: "aliimam", initials: "AI", seen: false, add: false },
+  { name: "designali", initials: "DA", seen: false, add: false },
+  { name: "sara", initials: "SA", seen: true, add: false },
+  { name: "omar", initials: "OM", seen: true, add: false },
 ]
 
 export default function StoryRingAvatars() {

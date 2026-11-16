@@ -1,4 +1,7 @@
-import { FileTextIcon, LockIcon } from "lucide-react"
+import {
+  FileText as FileTextIcon,
+  Lock as LockIcon,
+} from "@designali/icons"
 
 import {
   Avatar,
@@ -9,12 +12,12 @@ import {
 
 const files = [
   {
-    name: "Brand guidelines.pdf",
+    name: "Designali brand guidelines.pdf",
     size: "4.2 MB",
-    shared: ["KL", "PO", "RA", "TS", "UV"],
+    shared: ["AI", "SA", "OM", "ZA", "KA"],
   },
-  { name: "Launch budget.xlsx", size: "860 KB", shared: ["KL", "PO"] },
-  { name: "Interview notes.docx", size: "120 KB", shared: [] as string[] },
+  { name: "Templates pricing.xlsx", size: "860 KB", shared: ["AI", "SA"] },
+  { name: "Client brief.docx", size: "120 KB", shared: [] as string[] },
 ]
 
 export default function SharedFileAccessRow() {

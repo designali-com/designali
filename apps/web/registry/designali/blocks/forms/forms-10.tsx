@@ -1,4 +1,7 @@
-import { CreditCard, Lock } from "lucide-react"
+import {
+  CreditCard,
+  Lock,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Checkbox } from "@workspace/ui/components/checkbox"
@@ -10,8 +13,8 @@ import {
 } from "@workspace/ui/components/native-select"
 
 const items = [
-  { name: "Field Jacket, Waxed Cotton", meta: "Olive / M", price: 248, tone: "from-lime-700 to-stone-700" },
-  { name: "Merino Crew, 18.5 micron", meta: "Charcoal / M", price: 96, tone: "from-zinc-500 to-zinc-800" },
+  { name: "Designali Pro, All Templates", meta: "Personal licence", price: 149, tone: "from-primary to-chart-2" },
+  { name: "Designali Icons Pro", meta: "4000+ icons / Figma + React", price: 49, tone: "from-chart-3 to-chart-5" },
 ]
 
 const subtotal = items.reduce((sum, item) => sum + item.price, 0)
@@ -26,7 +29,7 @@ export default function Forms10() {
           <div>
             <h2 className="text-3xl font-semibold tracking-tight">Checkout</h2>
             <p className="mt-2 text-sm text-muted-foreground">
-              Orders over $150 ship free from our Portland workshop.
+              Instant download from designali.com right after payment.
             </p>
           </div>
 
@@ -34,21 +37,21 @@ export default function Forms10() {
             <legend className="mb-4 text-sm font-medium">1. Contact</legend>
             <div className="space-y-2">
               <Label htmlFor="f10-email">Email</Label>
-              <Input id="f10-email" type="email" placeholder="ana.ruiz@mail.com" className="h-10" />
+              <Input id="f10-email" type="email" placeholder="you@example.com" className="h-10" />
             </div>
           </fieldset>
 
           <fieldset className="space-y-5 border-t border-border pt-8">
-            <legend className="sr-only">Shipping</legend>
-            <p className="text-sm font-medium">2. Shipping address</p>
+            <legend className="sr-only">Billing</legend>
+            <p className="text-sm font-medium">2. Billing address</p>
             <div className="grid gap-5 sm:grid-cols-2">
               <div className="space-y-2 sm:col-span-2">
                 <Label htmlFor="f10-address">Street address</Label>
-                <Input id="f10-address" placeholder="1420 SE Belmont St, Apt 3" className="h-10" />
+                <Input id="f10-address" placeholder="Street address" className="h-10" />
               </div>
               <div className="space-y-2">
                 <Label htmlFor="f10-city">City</Label>
-                <Input id="f10-city" placeholder="Portland" className="h-10" />
+                <Input id="f10-city" placeholder="City" className="h-10" />
               </div>
               <div className="grid grid-cols-2 gap-3">
                 <div className="space-y-2">
@@ -61,7 +64,7 @@ export default function Forms10() {
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="f10-zip">ZIP</Label>
-                  <Input id="f10-zip" inputMode="numeric" placeholder="97214" className="h-10" />
+                  <Input id="f10-zip" inputMode="numeric" placeholder="ZIP" className="h-10" />
                 </div>
               </div>
             </div>
@@ -95,7 +98,7 @@ export default function Forms10() {
             </div>
             <Label className="flex items-center gap-2 text-xs font-normal text-muted-foreground">
               <Checkbox defaultChecked />
-              Billing address is the same as shipping
+              Email me a copy of the invoice
             </Label>
           </fieldset>
         </form>
@@ -125,7 +128,7 @@ export default function Forms10() {
               <dd>${subtotal}.00</dd>
             </div>
             <div className="flex justify-between">
-              <dt className="text-muted-foreground">Shipping</dt>
+              <dt className="text-muted-foreground">Delivery</dt>
               <dd>{shipping === 0 ? "Free" : `$${shipping}`}</dd>
             </div>
             <div className="flex justify-between">

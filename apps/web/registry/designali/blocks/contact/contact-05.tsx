@@ -1,31 +1,39 @@
 "use client"
 
 import { useState } from "react"
-import { Check, Copy, Mail, Phone } from "lucide-react"
+import {
+  Check,
+  Copy,
+  ExternalLink,
+  Mail,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 
 const offices = [
   {
-    city: "London",
-    timezone: "GMT",
-    email: "london@fieldwork.co",
-    phone: "+44 20 7946 0958",
-    address: ["48 Shoreditch High St", "London E1 6PG"],
+    city: "Studio",
+    timezone: "New projects",
+    email: "hello@designali.com",
+    link: "Book a call",
+    href: "https://cal.com/aliimam/30min",
+    address: ["Brand identity, UI/UX design", "Web design and Next.js development"],
   },
   {
-    city: "New York",
-    timezone: "EST",
-    email: "nyc@fieldwork.co",
-    phone: "+1 212 555 0187",
-    address: ["101 Greene St, Floor 4", "New York, NY 10012"],
+    city: "Support",
+    timezone: "Templates & blocks",
+    email: "support@designali.com",
+    link: "Read the docs",
+    href: "https://www.designali.com/docs",
+    address: ["Help with templates, blocks", "@designali/icons and logos"],
   },
   {
-    city: "Singapore",
-    timezone: "SGT",
-    email: "sg@fieldwork.co",
-    phone: "+65 6555 0143",
-    address: ["8 Club St, #03-01", "Singapore 069472"],
+    city: "Billing",
+    timezone: "Orders & licenses",
+    email: "billing@designali.com",
+    link: "View pricing",
+    href: "https://www.designali.com/pricing",
+    address: ["Invoices, refunds and", "Designali Pro licenses"],
   },
 ]
 
@@ -43,13 +51,13 @@ export default function Contact05() {
       <div className="mx-auto max-w-6xl px-6">
         <div className="flex flex-col justify-between gap-6 border-b pb-10 md:flex-row md:items-end">
           <h2 className="text-4xl font-semibold tracking-tight md:text-5xl">
-            Three studios,
+            Three desks,
             <br />
-            one team.
+            one studio.
           </h2>
           <p className="max-w-sm text-muted-foreground">
-            Reach the office closest to you. Every studio handles new business,
-            press and careers.
+            Reach the right desk at Designali. Every email lands with Ali Imam
+            and the studio team.
           </p>
         </div>
 
@@ -87,10 +95,10 @@ export default function Contact05() {
                 <Button
                   variant="ghost"
                   nativeButton={false}
-                  render={<a href={`tel:${office.phone}`} />}
+                  render={<a href={office.href} />}
                 >
-                  <Phone />
-                  {office.phone}
+                  <ExternalLink />
+                  {office.link}
                 </Button>
               </div>
             </div>

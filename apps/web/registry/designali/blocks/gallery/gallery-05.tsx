@@ -1,31 +1,34 @@
 "use client"
 
 import { useState } from "react"
-import { ChevronLeft, ChevronRight } from "lucide-react"
+import {
+  ChevronLeft,
+  ChevronRight,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { cn } from "@workspace/ui/lib/utils"
 
 const slides = [
   {
-    title: "Morning, Lisbon",
-    caption: "Shot on 35mm, April",
-    gradient: "linear-gradient(120deg, var(--chart-4), var(--chart-1))",
+    title: "Designali Agency",
+    caption: "Brand and website, design se code tak",
+    gradient: 'url("/images/templates/design-agency.jpg") center / cover',
   },
   {
-    title: "Concrete Garden",
-    caption: "Barbican Estate, London",
-    gradient: "linear-gradient(200deg, var(--chart-2), var(--chart-5))",
+    title: "Portfolio Simple",
+    caption: "Next.js portfolio template",
+    gradient: 'url("/images/templates/portfolio-simple.jpg") center / cover',
   },
   {
-    title: "Salt Flats",
-    caption: "Bonneville, Utah",
-    gradient: "linear-gradient(160deg, var(--chart-3), var(--chart-2))",
+    title: "Resort",
+    caption: "Landing page template",
+    gradient: 'url("/images/templates/resort.jpg") center / cover',
   },
   {
-    title: "Night Market",
-    caption: "Taipei, Taiwan",
-    gradient: "linear-gradient(60deg, var(--chart-5), var(--chart-4))",
+    title: "AI",
+    caption: "AI product template",
+    gradient: 'url("/images/templates/ai.jpg") center / cover',
   },
 ]
 

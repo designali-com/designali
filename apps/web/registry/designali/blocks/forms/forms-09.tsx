@@ -1,7 +1,10 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { ArrowLeft, ShieldCheck } from "lucide-react"
+import {
+  ArrowLeft,
+  ShieldCheck,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -27,10 +30,10 @@ export default function Forms09() {
         <div className="flex size-14 items-center justify-center border border-border bg-muted">
           <ShieldCheck className="size-6" />
         </div>
-        <h2 className="mt-8 text-3xl font-semibold tracking-tight">Check your phone</h2>
+        <h2 className="mt-8 text-3xl font-semibold tracking-tight">Check your email</h2>
         <p className="mt-3 text-sm leading-6 text-muted-foreground">
           We sent a 6-digit code to{" "}
-          <span className="font-medium text-foreground">+44 •••• ••• 318</span>.
+          <span className="font-medium text-foreground">a•••@designali.com</span>.
           It expires in 10 minutes.
         </p>
 

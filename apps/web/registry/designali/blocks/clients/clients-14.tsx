@@ -1,58 +1,60 @@
 "use client"
 
 import { useState } from "react"
-import { Quote } from "lucide-react"
+import {
+  Quote,
+} from "@designali/icons"
 
 import { cn } from "@workspace/ui/lib/utils"
 
 const clients = [
   {
-    name: "Brightline",
-    person: "Maya Okafor",
-    role: "Head of Design",
-    initials: "MO",
+    name: "Portfolio client",
+    person: "Sara",
+    role: "Independent Designer",
+    initials: "SA",
     quote:
-      "We cut our component backlog from 140 tickets to 12 in a single quarter. Designers finally spend their week on product problems.",
+      "Ali turned a messy Figma file into a portfolio site I am proud of. It looks great, feels intuitive and was live in two weeks.",
   },
   {
-    name: "Ferro Systems",
-    person: "Lukas Brandt",
-    role: "Staff Engineer",
-    initials: "LB",
-    quote:
-      "The blocks are boring in the best way: typed, accessible and predictable. Our on-call channel stopped getting CSS regressions.",
-  },
-  {
-    name: "Vantage Travel",
-    person: "Priya Raman",
-    role: "VP Product",
-    initials: "PR",
-    quote:
-      "We rebuilt the booking flow in five weeks. Conversion on mobile went up 18% and nobody had to argue about button padding.",
-  },
-  {
-    name: "Mosswood",
-    person: "Theo Lindqvist",
+    name: "SaaS startup",
+    person: "Omar",
     role: "Founder",
-    initials: "TL",
+    initials: "OM",
     quote:
-      "As a three-person team we look like we have a design department. That alone helped us close our seed round.",
+      "The Designali blocks are boring in the best way: typed, accessible and predictable. We stopped shipping CSS regressions.",
   },
   {
-    name: "Quarry",
-    person: "Ana Ferreira",
+    name: "Resort brand",
+    person: "Lena",
+    role: "Marketing Lead",
+    initials: "LE",
+    quote:
+      "Designali rebuilt our booking pages in five weeks. Mobile enquiries went up and nobody had to argue about button padding.",
+  },
+  {
+    name: "Design agency",
+    person: "Rohan",
+    role: "Creative Director",
+    initials: "RO",
+    quote:
+      "As a small team we now look like we have a full design department. Designali templates did the heavy lifting.",
+  },
+  {
+    name: "Product team",
+    person: "Mina",
     role: "Design Systems Lead",
-    initials: "AF",
+    initials: "MI",
     quote:
-      "Theming across our four sub-brands used to take a sprint. Now it is a token file and an afternoon of review.",
+      "Theming across our sub-brands used to take a sprint. With Designali tokens it is one file and an afternoon of review.",
   },
   {
-    name: "Helix Bio",
-    person: "Daniel Cho",
+    name: "AI startup",
+    person: "Daniel",
     role: "Engineering Manager",
-    initials: "DC",
+    initials: "DA",
     quote:
-      "Our scientists use internal tools all day. Consistent tables and forms reduced support requests by almost half.",
+      "Ali designs and codes, so the handoff simply disappeared. Design se code tak is exactly how it felt.",
   },
 ]
 

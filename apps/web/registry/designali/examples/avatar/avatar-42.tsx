@@ -30,13 +30,13 @@ export default function ProfileCompletionRing() {
           />
         </svg>
         <Avatar className="absolute inset-1.5 size-auto">
-          <AvatarFallback className="font-medium">RB</AvatarFallback>
+          <AvatarFallback className="font-medium">AI</AvatarFallback>
         </Avatar>
       </div>
       <div>
         <p className="text-sm font-medium">Profile {percent}% complete</p>
         <p className="text-xs text-muted-foreground">
-          Add a bio and timezone to finish setup.
+          Add a bio and portfolio link to your Designali profile.
         </p>
       </div>
     </div>

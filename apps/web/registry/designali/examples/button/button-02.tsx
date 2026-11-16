@@ -1,4 +1,7 @@
-import { GitBranchIcon, GitForkIcon } from "lucide-react";
+import {
+  GitBranch as GitBranchIcon,
+  GitFork as GitForkIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button";
 

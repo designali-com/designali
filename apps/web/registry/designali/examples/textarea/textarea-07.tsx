@@ -4,7 +4,7 @@ import { Textarea } from "@workspace/ui/components/textarea"
 export default function AutoGrowTextarea() {
   return (
     <div className="grid w-full max-w-sm gap-1.5">
-      <Label htmlFor="ta-grow">Meeting agenda</Label>
+      <Label htmlFor="ta-grow">Design review agenda</Label>
       <Textarea
         id="ta-grow"
         rows={1}

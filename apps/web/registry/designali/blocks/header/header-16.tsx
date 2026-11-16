@@ -1,11 +1,18 @@
 "use client"
 
 import { useState } from "react"
-import { Check, ChevronsUpDown, GitBranch, Rocket, Slash } from "lucide-react"
+import {
+  Check,
+  ChevronsUpDown,
+  GitBranch,
+  Rocket,
+  Slash,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
+import { Logo } from "@/src/components/logo"
 
-const projects = ["storefront-web", "checkout-api", "admin-console"]
+const projects = ["designali-web", "portfolio-template", "dalim-ui"]
 const tabs = ["Overview", "Deployments", "Logs", "Analytics", "Settings"]
 
 export default function Header16() {
@@ -17,17 +24,15 @@ export default function Header16() {
     <section className="w-full bg-background">
       <header className="border-b">
         <div className="mx-auto flex h-14 max-w-7xl items-center gap-2 px-6">
-          <a href="#" aria-label="Home" className="flex size-7 shrink-0 items-center justify-center bg-foreground">
-            <svg viewBox="0 0 24 24" className="size-4" aria-hidden>
-              <path d="M12 3 22 20H2z" className="fill-background" />
-            </svg>
+          <a href="#" aria-label="Designali home" className="flex size-7 shrink-0 items-center justify-center bg-foreground">
+            <Logo className="size-5" />
           </a>
           <Slash className="size-4 shrink-0 -rotate-12 text-muted-foreground/50" />
           <a href="#" className="hidden items-center gap-2 text-sm sm:flex">
             <span className="flex size-5 items-center justify-center rounded-full bg-gradient-to-br from-chart-2 to-chart-4 text-[9px] font-medium text-white">
-              NM
+              DS
             </span>
-            Nomad Supply
+            Designali Studio
           </a>
           <Slash className="hidden size-4 shrink-0 -rotate-12 text-muted-foreground/50 sm:block" />
           <div className="relative min-w-0">
@@ -78,7 +83,7 @@ export default function Header16() {
               <span className="hidden sm:inline">Deploy</span>
             </Button>
             <span className="flex size-8 items-center justify-center rounded-full bg-gradient-to-br from-chart-1 to-chart-5 text-[10px] font-medium text-white">
-              EV
+              AI
             </span>
           </div>
         </div>

@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { ShoppingCartIcon, TruckIcon } from "lucide-react"
+import {
+  ShoppingCart as ShoppingCartIcon,
+  Truck as TruckIcon,
+} from "@designali/icons"
 
 import {
   Menubar,
@@ -35,13 +38,13 @@ export default function CheckoutStepsMenubar() {
           <MenubarContent className="w-56">
             <MenubarGroup>
               <MenubarItem>
-                Linen throw blanket{" "}
+                Designali Templates Pro{" "}
                 <span className="ms-auto text-muted-foreground tabular-nums">
                   $96
                 </span>
               </MenubarItem>
               <MenubarItem>
-                Stoneware mug set{" "}
+                Icons Pro license{" "}
                 <span className="ms-auto text-muted-foreground tabular-nums">
                   $52
                 </span>

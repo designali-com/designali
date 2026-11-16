@@ -1,7 +1,10 @@
 "use client"
 
 import { useState } from "react"
-import { ChevronRight, Search } from "lucide-react"
+import {
+  ChevronRight,
+  Search,
+} from "@designali/icons"
 
 import { cn } from "@workspace/ui/lib/utils"
 
@@ -12,23 +15,23 @@ const tree = [
   },
   {
     title: "Core concepts",
-    pages: ["Queues", "Workers", "Retries and backoff", "Scheduling"],
+    pages: ["Blocks", "Theming", "Icons", "Logos"],
   },
   {
     title: "Guides",
-    pages: ["Deploy to containers", "Observability", "Migrating from v2"],
+    pages: ["Deploy to Vercel", "Dark mode", "Using with Figma"],
   },
   {
-    title: "API reference",
-    pages: ["Client", "Job", "Events"],
+    title: "Packages",
+    pages: ["@designali/icons", "@designali/logos", "@designali/vectors"],
   },
 ]
 
-const toc = ["Defining a worker", "Concurrency limits", "Graceful shutdown", "Next steps"]
+const toc = ["Semantic tokens", "Brand colour", "Dark mode", "Next steps"]
 
 export default function Navigation09() {
   const [openGroups, setOpenGroups] = useState<string[]>(["Getting started", "Core concepts"])
-  const [page, setPage] = useState("Workers")
+  const [page, setPage] = useState("Theming")
 
   function toggle(title: string) {
     setOpenGroups((current) =>
@@ -90,28 +93,29 @@ export default function Navigation09() {
         </aside>
 
         <article className="min-w-0 p-6 md:p-10">
-          <p className="text-sm text-muted-foreground">Queuekit docs</p>
+          <p className="text-sm text-muted-foreground">Designali docs</p>
           <h2 className="mt-2 text-3xl font-semibold tracking-tight">{page}</h2>
           <p className="mt-4 max-w-2xl text-muted-foreground">
-            Workers pull jobs from one or more queues and run your handler. Each
-            worker process manages its own pool and reports heartbeats so stalled
-            jobs can be picked up elsewhere.
+            Every Designali block uses semantic design tokens like bg-background
+            and text-primary, so you can rebrand a whole site by changing a few
+            CSS variables. Light and dark mode come for free.
           </p>
           <pre className="mt-6 overflow-x-auto border bg-muted/50 p-4 font-mono text-xs leading-relaxed">
-            {`import { Worker } from "queuekit"
+            {`import { ArrowRight } from "@designali/icons"
+import { Button } from "@workspace/ui/components/button"
 
-const worker = new Worker("emails", async (job) => {
-  await sendReceipt(job.data.orderId)
-}, { concurrency: 8 })`}
+export function Cta() {
+  return <Button>Start a project <ArrowRight /></Button>
+}`}
           </pre>
           <div className="mt-10 flex flex-col gap-3 border-t pt-6 sm:flex-row sm:justify-between">
             <a href="#" className="border p-4 text-sm hover:bg-muted/50 sm:w-64">
               <span className="block text-xs text-muted-foreground">Previous</span>
-              Queues
+              Blocks
             </a>
             <a href="#" className="border p-4 text-end text-sm hover:bg-muted/50 sm:w-64">
               <span className="block text-xs text-muted-foreground">Next</span>
-              Retries and backoff
+              Icons
             </a>
           </div>
         </article>

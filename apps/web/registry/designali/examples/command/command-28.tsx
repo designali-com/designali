@@ -1,4 +1,8 @@
-import { ExternalLinkIcon, FileQuestionIcon, LifeBuoyIcon } from "lucide-react"
+import {
+  ExternalLink as ExternalLinkIcon,
+  FileQuestionMark as FileQuestionIcon,
+  LifeBuoy as LifeBuoyIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -35,7 +39,7 @@ export default function HelpCenterSearch() {
       <div className="flex flex-col gap-0.5">
         <h3 className="text-sm font-semibold">How can we help?</h3>
         <p className="text-xs text-muted-foreground">
-          Search 120+ articles from our help center.
+          Search the Designali docs and help center.
         </p>
       </div>
       <Command className="border">

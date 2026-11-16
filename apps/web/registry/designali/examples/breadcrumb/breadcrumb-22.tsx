@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { CheckIcon, LinkIcon } from "lucide-react"
+import {
+  Check as CheckIcon,
+  Link as LinkIcon,
+} from "@designali/icons"
 
 import {
   Breadcrumb,

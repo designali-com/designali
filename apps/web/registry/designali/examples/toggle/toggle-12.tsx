@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { UserCheckIcon, UserPlusIcon } from "lucide-react"
+import {
+  UserCheck as UserCheckIcon,
+  UserPlus as UserPlusIcon,
+} from "@designali/icons"
 
 import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
 import { Toggle } from "@workspace/ui/components/toggle"
@@ -12,12 +15,12 @@ export default function FollowToggleButton() {
   return (
     <div className="flex w-full max-w-xs items-center gap-3 border p-4">
       <Avatar>
-        <AvatarFallback>IR</AvatarFallback>
+        <AvatarFallback>AI</AvatarFallback>
       </Avatar>
       <div className="min-w-0 flex-1">
-        <p className="text-sm font-medium">Iris Moreau</p>
+        <p className="text-sm font-medium">Ali Imam</p>
         <p className="truncate text-xs text-muted-foreground">
-          Writes about typography
+          Design engineer at Designali
         </p>
       </div>
       <Toggle
@@ -25,7 +28,7 @@ export default function FollowToggleButton() {
         size="sm"
         pressed={following}
         onPressedChange={setFollowing}
-        aria-label="Follow Iris Moreau"
+        aria-label="Follow Ali Imam"
       >
         {following ? <UserCheckIcon /> : <UserPlusIcon />}
         {following ? "Following" : "Follow"}

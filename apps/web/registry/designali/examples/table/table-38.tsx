@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { PauseIcon, PlayIcon } from "lucide-react"
+import {
+  Pause as PauseIcon,
+  Play as PlayIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import { Button } from "@workspace/ui/components/button"
@@ -17,21 +20,21 @@ import {
 const initialSubs = [
   {
     id: "s1",
-    customer: "Fieldnote Press",
+    customer: "Sara Khan",
     plan: "Annual Pro",
     renews: "Mar 3, 2027",
     status: "Active",
   },
   {
     id: "s2",
-    customer: "Quarry Hill Farm",
+    customer: "Omar Ali",
     plan: "Monthly Basic",
     renews: "Dec 1, 2026",
     status: "Paused",
   },
   {
     id: "s3",
-    customer: "Tidewater Clinic",
+    customer: "Priya Shah",
     plan: "Monthly Pro",
     renews: "Nov 28, 2026",
     status: "Active",

@@ -1,31 +1,33 @@
-import { ArrowUpRight } from "lucide-react"
+import {
+  ArrowUpRight,
+} from "@designali/icons"
 
 const cover = {
   kicker: "Cover story",
-  title: "The last mile is a design problem",
-  dek: "Couriers, lockers, and a stubborn front-door buzzer: what six months of riding along with delivery crews taught our product team about the hardest screen we ship.",
-  author: "Inés Moreau",
+  title: "Design se code tak",
+  dek: "From Dalim to Designali: how Ali Imam turned a decade of brand identity, UI/UX and CGI work into a studio that designs and ships production-ready websites.",
+  author: "Ali Imam",
   date: "November 2026 issue",
   read: "18 min read",
 }
 
 const secondary = [
   {
-    section: "Field report",
-    title: "Mapping a city by its loading zones",
-    author: "Kwame Asante",
+    section: "Case study",
+    title: "Rebuilding Dalim Works as a Next.js site",
+    author: "Ali Imam",
     gradient: "from-chart-3/70 via-chart-3/20 to-transparent",
   },
   {
     section: "Interview",
-    title: "A dispatcher on why the map is always wrong",
-    author: "Ruth Calloway",
+    title: "Why every Designali block starts in Figma",
+    author: "Designali Studio",
     gradient: "from-chart-1/70 via-chart-1/20 to-transparent",
   },
   {
     section: "Essay",
-    title: "Against the estimated arrival time",
-    author: "Jonah Feld",
+    title: "AI workflows in a design studio",
+    author: "Ali Imam",
     gradient: "from-chart-5/70 via-chart-5/20 to-transparent",
   },
 ]
@@ -36,7 +38,7 @@ export default function Blog06() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="mb-6 flex items-center justify-between border-b-2 border-foreground pb-3">
           <span className="font-serif text-xl font-semibold tracking-tight md:text-2xl">
-            Waypoint Quarterly
+            Designali Quarterly
           </span>
           <span className="text-xs text-muted-foreground">Issue 14</span>
         </div>

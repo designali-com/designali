@@ -1,4 +1,6 @@
-import { FolderIcon } from "lucide-react"
+import {
+  Folder as FolderIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Input } from "@workspace/ui/components/input"
@@ -11,12 +13,12 @@ export default function TruncatedPathLabel() {
         <FolderIcon className="size-3.5 shrink-0 text-muted-foreground" />
         <span
           className="truncate text-muted-foreground"
-          title="Shared / Marketing / 2026 Campaigns / Spring Launch / Assets"
+          title="Shared / Designali / 2026 Projects / Brand Identity / Assets"
         >
-          Shared / Marketing / 2026 Campaigns / Spring Launch / Assets
+          Shared / Designali / 2026 Projects / Brand Identity / Assets
         </span>
       </Label>
-      <Input id="rename-file" defaultValue="hero-banner-final-v3.fig" />
+      <Input id="rename-file" defaultValue="designali-hero-final-v3.fig" />
       <div className="flex justify-end gap-2">
         <Button variant="ghost" size="sm">
           Cancel

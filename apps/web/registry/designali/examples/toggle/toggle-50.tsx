@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { BookOpenIcon } from "lucide-react"
+import {
+  BookOpen as BookOpenIcon,
+} from "@designali/icons"
 
 import { Toggle } from "@workspace/ui/components/toggle"
 import { cn } from "@workspace/ui/lib/utils"
@@ -32,7 +34,7 @@ export default function ReadingModeToggle() {
         )}
       >
         <h3 className={cn("font-semibold", reader ? "text-lg" : "text-sm")}>
-          The case for slow mornings
+          Design se code tak
         </h3>
         <p
           className={cn(
@@ -40,8 +42,8 @@ export default function ReadingModeToggle() {
             reader ? "text-base" : "text-xs text-muted-foreground"
           )}
         >
-          Before the inbox, before the news, there is a quiet half hour that
-          belongs only to you.
+          Where thoughtful design meets production-ready code. I design and
+          build digital experiences that look great and work beautifully.
         </p>
       </article>
     </div>

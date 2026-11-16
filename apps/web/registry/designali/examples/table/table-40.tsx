@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { StarIcon } from "lucide-react"
+import {
+  Star as StarIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import { Button } from "@workspace/ui/components/button"
@@ -16,8 +18,8 @@ import { cn } from "@workspace/ui/lib/utils"
 const initialMail = [
   {
     id: "m1",
-    from: "Clara Jensen",
-    subject: "Contract draft for review",
+    from: "Ali Imam",
+    subject: "Brand identity proposal for review",
     label: "Legal",
     time: "9:14 AM",
     unread: true,
@@ -25,7 +27,7 @@ const initialMail = [
   },
   {
     id: "m2",
-    from: "Billing",
+    from: "Designali Billing",
     subject: "Your November receipt",
     label: "Finance",
     time: "8:02 AM",
@@ -34,8 +36,8 @@ const initialMail = [
   },
   {
     id: "m3",
-    from: "Marco Bellini",
-    subject: "Re: Offsite venue options",
+    from: "Sara Khan",
+    subject: "Re: Homepage hero options",
     label: "Team",
     time: "Yesterday",
     unread: false,

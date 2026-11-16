@@ -1,4 +1,7 @@
-import { ChevronDownIcon, GitMergeIcon } from "lucide-react"
+import {
+  ChevronDown as ChevronDownIcon,
+  GitMerge as GitMergeIcon,
+} from "@designali/icons"
 
 import { Separator } from "@workspace/ui/components/separator"
 

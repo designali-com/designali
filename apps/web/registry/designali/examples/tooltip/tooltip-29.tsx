@@ -1,4 +1,6 @@
-import { InfoIcon } from "lucide-react"
+import {
+  Info as InfoIcon,
+} from "@designali/icons"
 
 import {
   Tooltip,
@@ -11,7 +13,7 @@ const kpis = [
   {
     label: "Activation",
     value: "62%",
-    help: "Signed-up users who created a first project within 7 days.",
+    help: "designali.com users who downloaded a first template within 7 days.",
   },
   {
     label: "Net revenue",

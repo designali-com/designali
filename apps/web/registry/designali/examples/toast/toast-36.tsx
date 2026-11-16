@@ -1,7 +1,11 @@
 "use client"
 
 import * as React from "react"
-import { CircleCheckIcon, CircleIcon, TruckIcon } from "lucide-react"
+import {
+  CircleCheck as CircleCheckIcon,
+  Circle as CircleIcon,
+  Truck as TruckIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Toaster, createToastManager } from "@workspace/ui/components/toast"
@@ -10,11 +14,11 @@ import { cn } from "@workspace/ui/lib/utils"
 const notify = createToastManager()
 
 const steps = [
-  "Order placed",
-  "Packed",
-  "Shipped",
-  "Out for delivery",
-  "Delivered",
+  "Brief received",
+  "Designing",
+  "In review",
+  "Building",
+  "Launched",
 ]
 
 export default function OrderShippedToast() {
@@ -26,9 +30,9 @@ export default function OrderShippedToast() {
     notify.add({
       id: "order",
       type: next === steps.length - 1 ? "success" : "info",
-      title: "Order #A-3391: " + steps[next],
+      title: "Project #A-3391: " + steps[next],
       description:
-        next === 2 ? "Tracking number 1Z 999 AA1 01 2345 6784" : undefined,
+        next === 2 ? "Figma file shared with client" : undefined,
       actionProps: next === 2 ? { children: "Track" } : undefined,
     })
   }

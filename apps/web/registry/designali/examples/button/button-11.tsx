@@ -1,4 +1,7 @@
-import { BellIcon, InboxIcon } from "lucide-react"
+import {
+  Bell as BellIcon,
+  Inbox as InboxIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import { Button } from "@workspace/ui/components/button"

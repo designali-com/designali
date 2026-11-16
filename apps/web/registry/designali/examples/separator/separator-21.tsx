@@ -1,13 +1,13 @@
 import * as React from "react"
 import {
-  ChartPieIcon,
-  CircleCheckIcon,
-  FolderIcon,
-  InboxIcon,
-  LogOutIcon,
-  SettingsIcon,
-  UsersIcon,
-} from "lucide-react"
+  ChartPie as ChartPieIcon,
+  CircleCheck as CircleCheckIcon,
+  Folder as FolderIcon,
+  Inbox as InboxIcon,
+  LogOut as LogOutIcon,
+  Settings as SettingsIcon,
+  Users as UsersIcon,
+} from "@designali/icons"
 
 import { Separator } from "@workspace/ui/components/separator"
 

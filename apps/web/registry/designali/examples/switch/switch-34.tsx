@@ -1,4 +1,6 @@
-import { ArrowRightIcon } from "lucide-react"
+import {
+  ArrowRight as ArrowRightIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -29,7 +31,7 @@ const prefs = [
   {
     id: "sample",
     label: "Add sample project",
-    description: "A pre-filled board to play with.",
+    description: "A pre-filled Designali landing page to play with.",
     on: true,
   },
   {
@@ -46,7 +48,7 @@ export default function OnboardingPreferencesStep() {
       <CardHeader>
         <p className="text-xs text-muted-foreground">Step 2 of 3</p>
         <Progress value={66} aria-label="Onboarding progress" />
-        <CardTitle className="pt-2">Set up your workspace</CardTitle>
+        <CardTitle className="pt-2">Set up your Designali workspace</CardTitle>
         <CardDescription>
           You can change these anytime in settings.
         </CardDescription>

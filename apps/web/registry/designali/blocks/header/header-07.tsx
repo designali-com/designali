@@ -1,12 +1,15 @@
 "use client"
 
 import { useState } from "react"
-import { Menu, X } from "lucide-react"
+import {
+  Menu,
+  X,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 
-const left = ["Shop", "Collections", "Journal"]
-const right = ["About", "Stores"]
+const left = ["Templates", "Blocks", "UI Designs"]
+const right = ["Pricing", "Docs"]
 
 export default function Header07() {
   const [open, setOpen] = useState(false)
@@ -32,7 +35,7 @@ export default function Header07() {
         </Button>
 
         <a href="#" className="font-serif text-2xl tracking-[0.3em] uppercase">
-          Atelier
+          designali
         </a>
 
         <div className="flex items-center justify-end gap-8 text-sm">
@@ -44,7 +47,7 @@ export default function Header07() {
             ))}
           </nav>
           <a href="#" className="border-b border-foreground pb-0.5">
-            Bag (2)
+            Cart (2)
           </a>
         </div>
       </header>

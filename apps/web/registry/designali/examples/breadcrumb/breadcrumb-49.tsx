@@ -1,4 +1,6 @@
-import { KanbanIcon } from "lucide-react"
+import {
+  Kanban as KanbanIcon,
+} from "@designali/icons"
 
 import {
   Avatar,

@@ -37,7 +37,7 @@ export default function IssueStatusPicker() {
     <div className="flex w-full max-w-sm items-center gap-3 border p-3 text-xs">
       <span className="font-mono text-muted-foreground">DSG-318</span>
       <span className="flex-1 truncate font-medium">
-        Polish empty states on billing page
+        Polish empty states on designali.com pricing page
       </span>
       <DropdownMenu>
         <DropdownMenuTrigger render={<Button variant="outline" size="sm" />}>

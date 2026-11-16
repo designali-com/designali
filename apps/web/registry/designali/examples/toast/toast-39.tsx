@@ -14,7 +14,7 @@ export default function FollowUserToast() {
   function follow() {
     setFollowing(true)
     const id = notify.add({
-      title: "Following Theo Nakamura",
+      title: "Following Ali Imam",
       description: "You will see their posts in your feed.",
       actionProps: {
         children: "Unfollow",
@@ -30,12 +30,12 @@ export default function FollowUserToast() {
     <Toaster toastManager={notify}>
       <div className="flex w-full max-w-xs items-center gap-3 border p-4">
         <Avatar>
-          <AvatarFallback>TN</AvatarFallback>
+          <AvatarFallback>AI</AvatarFallback>
         </Avatar>
         <div className="min-w-0 flex-1">
-          <p className="text-sm font-medium">Theo Nakamura</p>
+          <p className="text-sm font-medium">Ali Imam</p>
           <p className="truncate text-xs text-muted-foreground">
-            Motion designer - 2.4k followers
+            Design engineer at Designali
           </p>
         </div>
         <Button

@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { TimerIcon } from "lucide-react"
+import {
+  Timer as TimerIcon,
+} from "@designali/icons"
 
 import {
   AlertDialog,
@@ -46,7 +48,7 @@ export default function SessionTimeoutCountdown() {
             <AlertDialogMedia>
               <TimerIcon />
             </AlertDialogMedia>
-            <AlertDialogTitle>Your session is about to expire</AlertDialogTitle>
+            <AlertDialogTitle>Your designali.com session is about to expire</AlertDialogTitle>
             <AlertDialogDescription>
               For your security, you&apos;ll be signed out in{" "}
               <span className="font-mono font-medium text-foreground tabular-nums">

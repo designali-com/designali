@@ -17,23 +17,23 @@ import { Switch } from "@workspace/ui/components/switch"
 const apps = [
   {
     id: "calendar",
-    name: "Calendly Lite",
+    name: "Designali Calendar",
     category: "Scheduling",
-    initials: "CL",
+    initials: "DC",
     on: true,
   },
   {
     id: "chat",
-    name: "Chatterbox",
+    name: "Designali Chat",
     category: "Messaging",
-    initials: "CB",
+    initials: "DH",
     on: true,
   },
   {
     id: "crm",
-    name: "Pipewise CRM",
+    name: "Designali Clients",
     category: "Sales",
-    initials: "PW",
+    initials: "DL",
     on: false,
   },
 ]

@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { ZoomInIcon, ZoomOutIcon } from "lucide-react"
+import {
+  ZoomIn as ZoomInIcon,
+  ZoomOut as ZoomOutIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Slider } from "@workspace/ui/components/slider"

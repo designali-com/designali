@@ -9,7 +9,7 @@ import {
   PaginationLink,
 } from "@workspace/ui/components/pagination"
 
-const slides = ["Title", "Problem", "Solution", "Market", "Roadmap", "Team"]
+const slides = ["designali", "Brand identity", "UI/UX design", "Web development", "CGI & motion", "AI workflows"]
 
 export default function SlideDeckPagination() {
   const [active, setActive] = React.useState(2)

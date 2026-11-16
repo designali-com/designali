@@ -1,10 +1,10 @@
 import {
-  CaptionsIcon,
-  HandIcon,
-  MonitorUpIcon,
-  PhoneOffIcon,
-  VideoIcon,
-} from "lucide-react"
+  Captions as CaptionsIcon,
+  Hand as HandIcon,
+  MonitorUp as MonitorUpIcon,
+  PhoneOff as PhoneOffIcon,
+  Video as VideoIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Separator } from "@workspace/ui/components/separator"

@@ -1,7 +1,11 @@
 "use client"
 
 import * as React from "react"
-import { ScanIcon, ZoomInIcon, ZoomOutIcon } from "lucide-react"
+import {
+  Scan as ScanIcon,
+  ZoomIn as ZoomInIcon,
+  ZoomOut as ZoomOutIcon,
+} from "@designali/icons"
 
 import {
   Menubar,

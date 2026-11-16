@@ -1,4 +1,7 @@
-import { ArrowRightLeftIcon, TriangleAlertIcon } from "lucide-react"
+import {
+  ArrowRightLeft as ArrowRightLeftIcon,
+  TriangleAlert as TriangleAlertIcon,
+} from "@designali/icons"
 
 import {
   Alert,
@@ -24,9 +27,9 @@ import {
 } from "@workspace/ui/components/native-select"
 
 const members = [
-  { value: "kai", label: "Kai Moreno — Admin" },
-  { value: "ines", label: "Inês Duarte — Admin" },
-  { value: "tom", label: "Tomasz Nowak — Member" },
+  { value: "ali", label: "Ali Imam — Admin" },
+  { value: "designer", label: "Studio Designer — Admin" },
+  { value: "developer", label: "Studio Developer — Member" },
 ]
 
 export default function TransferOwnershipDialog() {

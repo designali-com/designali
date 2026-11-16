@@ -2,12 +2,12 @@
 
 import * as React from "react"
 import {
-  FileSignatureIcon,
-  LockIcon,
-  MessageSquareIcon,
-  PencilIcon,
-  SendIcon,
-} from "lucide-react"
+  Signature as FileSignatureIcon,
+  Lock as LockIcon,
+  MessageSquare as MessageSquareIcon,
+  Pencil as PencilIcon,
+  Send as SendIcon,
+} from "@designali/icons"
 
 import {
   ContextMenu,
@@ -42,7 +42,7 @@ export default function LockedDocumentMenu() {
             ) : (
               <FileSignatureIcon className="size-3.5" />
             )}
-            Master services agreement
+            Designali project agreement
           </span>
           <span className="text-muted-foreground">
             {locked

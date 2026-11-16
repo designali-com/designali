@@ -1,4 +1,6 @@
-import { SearchIcon } from "lucide-react"
+import {
+  Search as SearchIcon,
+} from "@designali/icons"
 
 import {
   Breadcrumb,

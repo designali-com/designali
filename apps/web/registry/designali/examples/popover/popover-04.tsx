@@ -1,7 +1,11 @@
 "use client"
 
 import * as React from "react"
-import { CheckIcon, CopyIcon, Share2Icon } from "lucide-react"
+import {
+  Check as CheckIcon,
+  Copy as CopyIcon,
+  Share2 as Share2Icon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Input } from "@workspace/ui/components/input"
@@ -16,7 +20,7 @@ import {
 
 export default function ShareLinkPopover() {
   const [copied, setCopied] = React.useState(false)
-  const url = "https://app.example.com/d/roadmap-q1"
+  const url = "https://www.designali.com/blocks"
 
   return (
     <Popover>
@@ -28,7 +32,7 @@ export default function ShareLinkPopover() {
         <PopoverHeader>
           <PopoverTitle>Share this doc</PopoverTitle>
           <PopoverDescription>
-            Anyone in Lumen Labs with the link can view.
+            Anyone at Designali with the link can view.
           </PopoverDescription>
         </PopoverHeader>
         <div className="flex gap-2">

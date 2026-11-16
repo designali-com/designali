@@ -1,7 +1,11 @@
 "use client"
 
 import * as React from "react"
-import { FolderIcon, LayoutGridIcon, ListIcon } from "lucide-react"
+import {
+  Folder as FolderIcon,
+  LayoutGrid as LayoutGridIcon,
+  List as ListIcon,
+} from "@designali/icons"
 
 import {
   ToggleGroup,
@@ -10,10 +14,10 @@ import {
 import { cn } from "@workspace/ui/lib/utils"
 
 const projects = [
-  "Atlas redesign",
-  "Billing v2",
-  "Mobile onboarding",
-  "Search revamp",
+  "Designali templates",
+  "Dalim Icons",
+  "Dalim UI",
+  "Dalim Works",
 ]
 
 export default function ProjectViewModeSwitcher() {

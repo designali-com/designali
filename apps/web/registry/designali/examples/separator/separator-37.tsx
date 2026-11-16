@@ -5,18 +5,18 @@ import * as React from "react"
 import { Button } from "@workspace/ui/components/button"
 import { Separator } from "@workspace/ui/components/separator"
 
-const sizes = ["S", "M", "L", "XL"]
+const sizes = ["Solo", "Team", "Studio", "Agency"]
 
 export default function ProductCardSections() {
-  const [size, setSize] = React.useState("M")
+  const [size, setSize] = React.useState("Team")
 
   return (
     <div className="flex w-full max-w-xs flex-col border">
       <div className="aspect-4/3 bg-linear-to-br from-amber-200/60 to-rose-300/60" />
       <div className="flex items-start justify-between gap-2 p-4">
         <div className="flex flex-col">
-          <span className="text-sm font-medium">Linen overshirt</span>
-          <span className="text-xs text-muted-foreground">Washed olive</span>
+          <span className="text-sm font-medium">Design Agency template</span>
+          <span className="text-xs text-muted-foreground">Next.js · Tailwind CSS · Figma</span>
         </div>
         <span className="text-sm font-semibold">$74</span>
       </div>
@@ -36,7 +36,7 @@ export default function ProductCardSections() {
       </div>
       <Separator />
       <div className="p-4">
-        <Button className="w-full">Add to cart</Button>
+        <Button className="w-full">Buy template</Button>
       </div>
     </div>
   )

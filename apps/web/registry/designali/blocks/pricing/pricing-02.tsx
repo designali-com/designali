@@ -1,7 +1,9 @@
 "use client"
 
 import { useState } from "react"
-import { CircleCheck } from "lucide-react"
+import {
+  CircleCheck,
+} from "@designali/icons"
 import { cn } from "@workspace/ui/lib/utils"
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -54,7 +56,7 @@ export const Pricing01 = ({
       ],
       cta: {
         text: "Get Started",
-        url: "#",
+        url: "/blocks",
       },
     },
     {
@@ -75,7 +77,7 @@ export const Pricing01 = ({
       ],
       cta: {
         text: "Start Building",
-        url: "#",
+        url: "/pricing",
       },
     },
     {
@@ -95,7 +97,7 @@ export const Pricing01 = ({
       ],
       cta: {
         text: "Contact Sales",
-        url: "#",
+        url: "/contact",
       },
     },
   ],

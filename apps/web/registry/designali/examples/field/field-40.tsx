@@ -1,4 +1,8 @@
-import { GlobeIcon, LockIcon, UsersIcon } from "lucide-react"
+import {
+  Globe as GlobeIcon,
+  Lock as LockIcon,
+  Users as UsersIcon,
+} from "@designali/icons"
 
 import {
   Field,

@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { DownloadIcon, FolderOpenIcon } from "lucide-react"
+import {
+  Download as DownloadIcon,
+  FolderOpen as FolderOpenIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Spinner } from "@workspace/ui/components/spinner"
@@ -37,7 +40,7 @@ export default function DownloadProgressButton() {
         {progress === null && <DownloadIcon className="size-4" />}
         {downloading && <Spinner />}
         {progress === 100 && <FolderOpenIcon className="size-4" />}
-        {progress === null && "Download report (4.2 MB)"}
+        {progress === null && "Download icon pack (4.2 MB)"}
         {downloading && "Downloading " + progress + "%"}
         {progress === 100 && "Show in folder"}
       </span>

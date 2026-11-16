@@ -2,15 +2,19 @@
 
 import * as React from "react"
 import {
-  CheckIcon,
-  CircleCheckIcon,
-  LinkIcon,
-  PencilIcon,
-  ReplyIcon,
-  TrashIcon,
-} from "lucide-react"
+  Check as CheckIcon,
+  CircleCheck as CircleCheckIcon,
+  Link as LinkIcon,
+  Pencil as PencilIcon,
+  Reply as ReplyIcon,
+  Trash as TrashIcon,
+} from "@designali/icons"
 
-import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from "@workspace/ui/components/avatar"
 import { Badge } from "@workspace/ui/components/badge"
 import {
   ContextMenu,
@@ -35,9 +39,10 @@ export default function CommentThreadMenu() {
       >
         <div className="flex items-center gap-2">
           <Avatar className="size-6">
-            <AvatarFallback className="text-[10px]">PN</AvatarFallback>
+            <AvatarImage src="/ali.jpg" alt="Ali Imam" />
+            <AvatarFallback className="text-[10px]">AI</AvatarFallback>
           </Avatar>
-          <span className="font-medium">Priya Natarajan</span>
+          <span className="font-medium">Ali Imam</span>
           <span className="text-muted-foreground">2h ago</span>
           {resolved ? (
             <Badge variant="secondary" className="ms-auto">
@@ -47,8 +52,8 @@ export default function CommentThreadMenu() {
           ) : null}
         </div>
         <p className="text-muted-foreground">
-          Can we bump the contrast on the secondary button? It fails AA on the
-          dark hero.
+          Can we bump the contrast on the secondary button in the Designali
+          template? It fails AA on the dark hero.
         </p>
       </ContextMenuTrigger>
       <ContextMenuContent className="w-48">

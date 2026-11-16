@@ -24,7 +24,7 @@ export default function KeepMountedFormTabs() {
         <TabsContent value="event" keepMounted className="flex flex-col gap-2">
           <Input
             name="title"
-            placeholder="Event title"
+            placeholder="Designali workshop title"
             aria-label="Event title"
           />
           <Input name="date" type="date" aria-label="Date" />

@@ -1,11 +1,14 @@
-import { CheckIcon, CircleAlertIcon } from "lucide-react"
+import {
+  Check as CheckIcon,
+  CircleAlert as CircleAlertIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 
 const sections = [
-  { name: "Company details", errors: 0 },
-  { name: "Billing address", errors: 2 },
-  { name: "Tax information", errors: 1 },
+  { name: "Project brief", errors: 0 },
+  { name: "Brand assets", errors: 2 },
+  { name: "Billing details", errors: 1 },
 ]
 
 export default function FormErrorCountBadges() {

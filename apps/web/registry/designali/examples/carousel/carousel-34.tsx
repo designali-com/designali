@@ -8,10 +8,10 @@ import {
 } from "@workspace/ui/components/carousel"
 
 const offers = [
-  { title: "خصم ٢٠٪", body: "على جميع الاشتراكات السنوية" },
-  { title: "شحن مجاني", body: "للطلبات فوق ٢٠٠ ريال" },
-  { title: "هدية ترحيبية", body: "عند التسجيل لأول مرة" },
-  { title: "نقاط مضاعفة", body: "طوال عطلة نهاية الأسبوع" },
+  { title: "خصم ٢٠٪", body: "على جميع قوالب Designali" },
+  { title: "+٤٦٠ بلوك", body: "جاهزة للنسخ واللصق في Next.js" },
+  { title: "+٤٠٠٠ أيقونة", body: "مع حزمة @designali/icons" },
+  { title: "من التصميم إلى الكود", body: "مع علي إمام" },
 ]
 
 export default function RtlDirectionCarousel() {

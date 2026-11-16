@@ -1,4 +1,7 @@
-import { ChevronDown, MapPin } from "lucide-react"
+import {
+  ChevronDown,
+  MapPin,
+} from "@designali/icons"
 
 import {
   Accordion,
@@ -12,28 +15,28 @@ const regions = [
     name: "Americas",
     shape: "M10 30 C 20 10, 45 8, 50 22 C 55 34, 40 40, 38 52 C 36 70, 28 90, 22 92 C 18 80, 26 60, 18 48 C 10 42, 6 38, 10 30 Z",
     offices: [
-      { city: "Austin", address: "600 Congress Ave, Floor 14", type: "Hub" },
-      { city: "Vancouver", address: "1055 W Georgia St", type: "Studio" },
-      { city: "Bogotá", address: "Cra. 7 #71-21, Torre B", type: "Studio" },
+      { city: "Brand identity", address: "Remote · async with the Americas", type: "Service" },
+      { city: "Web development", address: "Next.js and Tailwind CSS builds", type: "Service" },
+      { city: "Templates", address: "Available on designali.com", type: "Online" },
     ],
   },
   {
     name: "Europe & Africa",
     shape: "M30 12 C 45 6, 66 10, 70 22 C 72 32, 58 34, 62 46 C 68 62, 60 84, 48 90 C 40 78, 44 62, 34 52 C 26 44, 20 24, 30 12 Z",
     offices: [
-      { city: "Copenhagen", address: "Bredgade 34, 1260", type: "HQ" },
-      { city: "Barcelona", address: "Carrer de Pallars 193", type: "Hub" },
-      { city: "Nairobi", address: "Westlands Road, The Mint", type: "Studio" },
-      { city: "Kraków", address: "ul. Lubicz 23", type: "Studio" },
+      { city: "UI/UX design", address: "Remote · live calls across Europe", type: "Service" },
+      { city: "Design systems", address: "Tokens, components and docs", type: "Service" },
+      { city: "CGI and 3D", address: "Renders and motion for brands", type: "Service" },
+      { city: "Blocks", address: "460+ blocks on designali.com", type: "Online" },
     ],
   },
   {
     name: "Asia Pacific",
     shape: "M14 20 C 40 6, 86 10, 90 30 C 92 44, 70 46, 62 56 C 56 64, 44 58, 36 50 C 26 42, 6 34, 14 20 Z M66 72 C 76 66, 90 70, 88 80 C 84 90, 66 88, 66 72 Z",
     offices: [
-      { city: "Singapore", address: "79 Anson Rd, #20-01", type: "Hub" },
-      { city: "Seoul", address: "Teheran-ro 427, Gangnam", type: "Studio" },
-      { city: "Auckland", address: "120 Albert St", type: "Studio" },
+      { city: "Digital products", address: "Remote · design and code end to end", type: "Service" },
+      { city: "AI workflows", address: "AI-assisted design and development", type: "Service" },
+      { city: "Icons", address: "4000+ in @designali/icons", type: "Online" },
     ],
   },
 ]
@@ -44,10 +47,10 @@ export default function Location11() {
       <div className="mx-auto max-w-4xl px-6">
         <div className="flex flex-col justify-between gap-4 md:flex-row md:items-end">
           <h2 className="text-4xl font-semibold tracking-tight md:text-5xl">
-            Offices by region
+            Services by region
           </h2>
           <p className="text-sm text-muted-foreground">
-            10 locations &middot; Fjordline Systems
+            10 services &middot; Designali, remote worldwide
           </p>
         </div>
 

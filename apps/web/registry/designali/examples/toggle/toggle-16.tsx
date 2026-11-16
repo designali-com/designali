@@ -1,20 +1,24 @@
 "use client"
 
 import * as React from "react"
-import { AwardIcon, BriefcaseIcon, GlobeIcon } from "lucide-react"
+import {
+  Award as AwardIcon,
+  Briefcase as BriefcaseIcon,
+  Globe as GlobeIcon,
+} from "@designali/icons"
 
 import { Toggle } from "@workspace/ui/components/toggle"
 
 const jobs = [
   {
-    title: "Senior Product Designer",
+    title: "Senior UI/UX Designer",
     remote: true,
     fullTime: true,
     senior: true,
   },
-  { title: "Frontend Engineer", remote: true, fullTime: true, senior: false },
-  { title: "Brand Illustrator", remote: false, fullTime: false, senior: false },
-  { title: "Staff Data Engineer", remote: false, fullTime: true, senior: true },
+  { title: "Next.js Developer", remote: true, fullTime: true, senior: false },
+  { title: "Brand Identity Designer", remote: false, fullTime: false, senior: false },
+  { title: "Motion & 3D Artist", remote: false, fullTime: true, senior: true },
 ]
 
 export default function FilterChipToggles() {

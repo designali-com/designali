@@ -10,10 +10,10 @@ import {
   FieldSet,
 } from "@workspace/ui/components/field"
 
-const toppings = ["Mushrooms", "Olives", "Peppers", "Red onion"]
+const toppings = ["Logo", "Color palette", "Typography", "Brand guidelines"]
 
 export default function SelectAllIndeterminate() {
-  const [selected, setSelected] = React.useState<string[]>(["Olives"])
+  const [selected, setSelected] = React.useState<string[]>(["Color palette"])
   const all = selected.length === toppings.length
   const some = selected.length > 0 && !all
 
@@ -27,7 +27,7 @@ export default function SelectAllIndeterminate() {
           onCheckedChange={(checked) => setSelected(checked ? toppings : [])}
           className="data-indeterminate:border-primary data-indeterminate:bg-primary data-indeterminate:text-primary-foreground"
         />
-        <FieldLabel htmlFor="toppings-all">All toppings</FieldLabel>
+        <FieldLabel htmlFor="toppings-all">All brand identity deliverables</FieldLabel>
       </Field>
       <FieldGroup className="gap-3 ps-6">
         {toppings.map((topping) => (

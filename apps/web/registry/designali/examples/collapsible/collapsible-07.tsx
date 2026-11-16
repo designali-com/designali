@@ -17,19 +17,19 @@ export default function ReadMoreDescription() {
       onOpenChange={setOpen}
       className="w-full max-w-sm space-y-2"
     >
-      <h3 className="text-base font-semibold">Halden desk lamp</h3>
+      <h3 className="text-base font-semibold">Designali Portfolio template</h3>
       <p className="text-sm text-muted-foreground">
-        A warm, dimmable desk lamp machined from a single block of aluminium,
-        with a weighted base that stays put.
+        A clean, production-ready portfolio template built with Next.js,
+        React, TypeScript and Tailwind CSS.
       </p>
       <CollapsibleContent className="h-(--collapsible-panel-height) overflow-hidden transition-[height] duration-200 ease-out data-ending-style:h-0 data-starting-style:h-0">
         <div className="space-y-2 text-sm text-muted-foreground">
           <p>
-            The head pivots 270 degrees and the arm locks at any angle. Three
-            colour temperatures let you move from focused work to evening
-            reading without swapping bulbs.
+            Every section is composed from Designali blocks, so you can swap
+            the hero, work grid and contact page without touching the layout.
+            Icons come from @designali/icons and deploy to Vercel in one click.
           </p>
-          <p>Includes a braided USB-C cable and a two-year warranty.</p>
+          <p>Includes the Figma source file and free lifetime updates.</p>
         </div>
       </CollapsibleContent>
       <CollapsibleTrigger

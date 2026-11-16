@@ -26,7 +26,7 @@ export default function FormSectionCardProgress() {
         <Progress value={40} aria-label="Application progress" />
         <div className="flex flex-col gap-2">
           <Label htmlFor="employer-name">Employer</Label>
-          <Input id="employer-name" placeholder="Northwind Studio" />
+          <Input id="employer-name" placeholder="Designali" />
         </div>
       </CardContent>
       <CardFooter className="justify-end">

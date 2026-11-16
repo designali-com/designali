@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { HeartIcon } from "lucide-react"
+import {
+  Heart as HeartIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Input } from "@workspace/ui/components/input"

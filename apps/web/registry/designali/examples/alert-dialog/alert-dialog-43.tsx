@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { CalendarXIcon } from "lucide-react"
+import {
+  CalendarX as CalendarXIcon,
+} from "@designali/icons"
 
 import {
   AlertDialog,
@@ -31,7 +33,7 @@ export default function CancelEventNotifyGuests() {
       <AlertDialogContent>
         <AlertDialogHeader>
           <AlertDialogTitle>
-            Cancel &quot;Quarterly planning&quot;?
+            Cancel &quot;Designali client kickoff&quot;?
           </AlertDialogTitle>
           <AlertDialogDescription>
             Thu, Sep 12 - 10:00-11:30 AM - 12 guests
@@ -53,7 +55,7 @@ export default function CancelEventNotifyGuests() {
               <FieldLabel htmlFor="cancel-note">Message (optional)</FieldLabel>
               <Textarea
                 id="cancel-note"
-                placeholder="We'll reschedule after the offsite."
+                placeholder="We'll reschedule after the Figma review."
                 className="min-h-16"
               />
             </Field>

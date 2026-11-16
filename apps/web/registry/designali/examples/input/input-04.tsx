@@ -11,7 +11,7 @@ import {
 import { Input } from "@workspace/ui/components/input"
 
 export default function EmailValidationInput() {
-  const [value, setValue] = React.useState("maya@northwind")
+  const [value, setValue] = React.useState("ali@designali")
   const [touched, setTouched] = React.useState(true)
   const invalid = touched && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)
 
@@ -28,7 +28,7 @@ export default function EmailValidationInput() {
       />
       {invalid ? (
         <FieldError>
-          Enter a valid email address, like name@company.com.
+          Enter a valid email address, like hello@designali.com.
         </FieldError>
       ) : (
         <FieldDescription>

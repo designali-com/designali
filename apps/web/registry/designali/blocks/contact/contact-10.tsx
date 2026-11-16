@@ -2,10 +2,10 @@ import {
   ArrowUpRight,
   Clock,
   Users,
-  MapPin,
+  Globe,
   MessageCircle,
   Phone,
-} from "lucide-react"
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 
@@ -18,7 +18,7 @@ export default function Contact10() {
             Support
           </p>
           <h2 className="mt-3 text-4xl font-semibold tracking-tight md:text-5xl">
-            Every way to reach Quillstack
+            Every way to reach Designali
           </h2>
         </div>
 
@@ -28,10 +28,10 @@ export default function Contact10() {
             <MessageCircle className="size-8" />
             <div className="relative space-y-4">
               <h3 className="text-3xl font-semibold tracking-tight">
-                Live chat with engineers
+                Live chat with the studio
               </h3>
               <p className="max-w-sm text-primary-foreground/80">
-                Our support team is made of the people who build the product.
+                Support comes from the people who design and build Designali.
                 Median first reply: 4 minutes.
               </p>
               <Button variant="secondary" size="lg" nativeButton={false} render={<a href="#" />}>
@@ -40,15 +40,15 @@ export default function Contact10() {
             </div>
           </div>
 
-          <a href="#" className="group flex flex-col justify-between border bg-card p-6 transition-colors hover:bg-muted md:col-span-2">
+          <a href="https://x.com/designali_com" className="group flex flex-col justify-between border bg-card p-6 transition-colors hover:bg-muted md:col-span-2">
             <div className="flex items-center justify-between">
               <Users className="size-5" />
               <ArrowUpRight className="size-4 text-muted-foreground transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
             </div>
             <div>
-              <p className="font-medium">Community discussions</p>
+              <p className="font-medium">Designali community</p>
               <p className="mt-1 text-sm text-muted-foreground">
-                12,400 developers sharing plugins, recipes and fixes.
+                Designers and developers sharing blocks, icons and fixes on X.
               </p>
             </div>
           </a>
@@ -56,16 +56,16 @@ export default function Contact10() {
           <div className="flex flex-col justify-between border bg-card p-6">
             <Phone className="size-5" />
             <div>
-              <p className="font-medium">+1 (206) 555-0167</p>
-              <p className="mt-1 text-sm text-muted-foreground">Enterprise plans</p>
+              <p className="font-medium">Book a call</p>
+              <p className="mt-1 text-sm text-muted-foreground">30 minutes with Ali Imam</p>
             </div>
           </div>
 
           <div className="flex flex-col justify-between border bg-card p-6">
             <Clock className="size-5" />
             <div>
-              <p className="font-medium">Mon&ndash;Fri, 6am&ndash;8pm PT</p>
-              <p className="mt-1 text-sm text-muted-foreground">Weekend on-call for P1</p>
+              <p className="font-medium">Mon&ndash;Fri, studio hours</p>
+              <p className="mt-1 text-sm text-muted-foreground">Weekend replies for Designali Pro</p>
             </div>
           </div>
 
@@ -90,16 +90,16 @@ export default function Contact10() {
               ))}
             </div>
             <p className="mt-2 text-xs text-muted-foreground">
-              99.98% uptime over the last 60 days
+              designali.com: 99.98% uptime over the last 60 days
             </p>
           </div>
 
           <div className="flex flex-col justify-between border bg-card p-6">
-            <MapPin className="size-5" />
+            <Globe className="size-5" />
             <div>
-              <p className="font-medium">Seattle, WA</p>
+              <p className="font-medium">www.designali.com</p>
               <p className="mt-1 text-sm text-muted-foreground">
-                1520 Western Ave, Suite 4
+                Docs, templates, blocks and icons
               </p>
             </div>
           </div>

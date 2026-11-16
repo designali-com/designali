@@ -9,19 +9,19 @@ const emails = [
     unread: true,
   },
   {
-    from: "Maya Chen",
+    from: "Ali Imam",
     subject: "Roadmap feedback",
-    preview: "Left a few comments on the Q3 doc",
+    preview: "Left a few comments on the blocks roadmap",
     unread: true,
   },
   {
-    from: "Fieldnote",
+    from: "Designali",
     subject: "Weekly digest",
-    preview: "12 new notes across 4 projects",
+    preview: "12 new blocks across 4 categories",
     unread: false,
   },
   {
-    from: "Leo Park",
+    from: "Leo",
     subject: "Invoice #2041",
     preview: "Payment received, thanks!",
     unread: false,
@@ -29,11 +29,11 @@ const emails = [
   {
     from: "Security",
     subject: "New sign-in",
-    preview: "Firefox on macOS from Lisbon",
+    preview: "Firefox on macOS",
     unread: true,
   },
   {
-    from: "Ines Duarte",
+    from: "Ines",
     subject: "Crit notes",
     preview: "Summary from today's design crit",
     unread: false,

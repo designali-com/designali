@@ -1,4 +1,6 @@
-import { SparklesIcon } from "lucide-react"
+import {
+  Sparkles as SparklesIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import { Label } from "@workspace/ui/components/label"

@@ -1,4 +1,7 @@
-import { FileXIcon, UploadIcon } from "lucide-react"
+import {
+  FileX as FileXIcon,
+  Upload as UploadIcon,
+} from "@designali/icons"
 
 import {
   Alert,
@@ -22,7 +25,7 @@ export default function AlertUploadTooLarge() {
         <FileXIcon />
         <AlertTitle>Upload failed</AlertTitle>
         <AlertDescription>
-          <span className="font-mono text-foreground">site-survey-raw.pdf</span>{" "}
+          <span className="font-mono text-foreground">designali-brand-guide.pdf</span>{" "}
           is 61.4 MB, which is over the 25 MB limit.
         </AlertDescription>
         <AlertAction>

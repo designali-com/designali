@@ -1,9 +1,9 @@
 import {
-  GiftIcon,
-  HandHelpingIcon,
-  HandshakeIcon,
-  HeartIcon,
-} from "lucide-react"
+  Gift as GiftIcon,
+  HandHelping as HandHelpingIcon,
+  Handshake as HandshakeIcon,
+  Heart as HeartIcon,
+} from "@designali/icons"
 
 import {
   NavigationMenu,
@@ -18,18 +18,18 @@ import { cn } from "@workspace/ui/lib/utils"
 
 const ways = [
   {
-    title: "Volunteer",
-    description: "Join a weekend river cleanup.",
+    title: "Hire Designali",
+    description: "Start a brand or website project.",
     icon: HandHelpingIcon,
   },
   {
-    title: "Fundraise",
-    description: "Start a page for your birthday.",
+    title: "Contribute",
+    description: "Share feedback on Designali blocks.",
     icon: GiftIcon,
   },
   {
     title: "Partner with us",
-    description: "Corporate matching programs.",
+    description: "Agency and white-label partnerships.",
     icon: HandshakeIcon,
   },
 ]
@@ -60,7 +60,7 @@ export default function NonprofitGetInvolvedNav() {
         </NavigationMenuItem>
         <NavigationMenuItem>
           <NavigationMenuLink href="#" className={navigationMenuTriggerStyle()}>
-            Our impact
+            Our work
           </NavigationMenuLink>
         </NavigationMenuItem>
         <NavigationMenuItem>
@@ -71,7 +71,7 @@ export default function NonprofitGetInvolvedNav() {
               "bg-emerald-600 text-white hover:bg-emerald-700 focus:bg-emerald-700"
             )}
           >
-            <HeartIcon /> Donate
+            <HeartIcon /> Support
           </NavigationMenuLink>
         </NavigationMenuItem>
       </NavigationMenuList>

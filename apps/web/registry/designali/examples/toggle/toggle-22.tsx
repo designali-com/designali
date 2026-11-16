@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { Grid3x3Icon, MagnetIcon } from "lucide-react"
+import {
+  Grid3x3 as Grid3x3Icon,
+  Magnet as MagnetIcon,
+} from "@designali/icons"
 
 import { Toggle } from "@workspace/ui/components/toggle"
 import { cn } from "@workspace/ui/lib/utils"

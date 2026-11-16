@@ -1,24 +1,26 @@
-import { AudioLinesIcon } from "lucide-react"
+import {
+  AudioLines as AudioLinesIcon,
+} from "@designali/icons"
 
 import { ScrollArea } from "@workspace/ui/components/scroll-area"
 
 const lines = [
   [
     "00:12",
-    "Sana",
+    "Ali",
     "Thanks everyone for joining. Let's start with the launch status.",
   ],
   [
     "00:31",
     "Jonas",
-    "Checkout is feature complete. QA found two minor issues.",
+    "The pricing page is feature complete. QA found two minor issues.",
   ],
   [
     "01:05",
     "Priya",
     "Marketing assets are ready; the landing page goes live Tuesday.",
   ],
-  ["01:42", "Sana", "Do we have a rollback plan if conversions drop?"],
+  ["01:42", "Ali", "Do we have a rollback plan if conversions drop?"],
   ["02:10", "Jonas", "Yes, the flag lets us revert to the old flow instantly."],
   [
     "02:38",
@@ -26,7 +28,7 @@ const lines = [
     "Support has macros prepared for the most likely questions.",
   ],
   ["03:04", "Priya", "I'll share the launch email draft by end of day."],
-  ["03:30", "Sana", "Great. Let's reconvene Thursday for a go or no-go."],
+  ["03:30", "Ali", "Great. Let's reconvene Thursday for a go or no-go."],
 ]
 
 export default function MeetingTranscript() {
@@ -35,7 +37,7 @@ export default function MeetingTranscript() {
       <div className="flex items-center justify-between border-b px-3 py-2">
         <span className="flex items-center gap-2 text-sm font-medium">
           <AudioLinesIcon className="size-4" />
-          Launch sync
+          designali.com launch sync
         </span>
         <span className="text-xs text-muted-foreground">32 min</span>
       </div>

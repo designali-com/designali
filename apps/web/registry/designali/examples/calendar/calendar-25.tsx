@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { HandIcon } from "lucide-react"
+import {
+  Hand as HandIcon,
+} from "@designali/icons"
 
 import { Calendar } from "@workspace/ui/components/calendar"
 
@@ -20,7 +22,7 @@ export default function TouchFriendlyCalendar() {
       />
       <span className="flex items-center gap-1.5 text-xs text-muted-foreground">
         <HandIcon className="size-3.5" />
-        44px targets for kiosk and tablet check-in
+        44px targets for booking a Designali session on tablet
       </span>
     </div>
   )

@@ -1,4 +1,6 @@
-import { MessageCircleIcon } from "lucide-react"
+import {
+  MessageCircle as MessageCircleIcon,
+} from "@designali/icons"
 
 import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
 import {
@@ -12,32 +14,32 @@ import {
 
 const contacts = [
   {
-    name: "Ava Thompson",
-    email: "ava@northwind.dev",
-    dept: "Sales",
+    name: "Ali Imam",
+    email: "ali@designali.com",
+    dept: "Design",
     online: true,
   },
   {
-    name: "Leo Martins",
-    email: "leo@northwind.dev",
+    name: "Omar",
+    email: "omar@designali.com",
     dept: "Engineering",
     online: false,
   },
   {
-    name: "Noor Haddad",
-    email: "noor@northwind.dev",
+    name: "Sara",
+    email: "support@designali.com",
     dept: "Support",
     online: true,
   },
   {
-    name: "Kai Okafor",
-    email: "kai@northwind.dev",
+    name: "Kabir",
+    email: "kabir@designali.com",
     dept: "Engineering",
     online: true,
   },
   {
-    name: "Ines Moreau",
-    email: "ines@northwind.dev",
+    name: "Zara",
+    email: "billing@designali.com",
     dept: "Finance",
     online: false,
   },

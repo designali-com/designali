@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { MonitorSmartphoneIcon } from "lucide-react"
+import {
+  MonitorSmartphone as MonitorSmartphoneIcon,
+} from "@designali/icons"
 
 import {
   Alert,
@@ -19,13 +21,13 @@ export default function AlertNewSignIn() {
       className="max-w-md"
     >
       <MonitorSmartphoneIcon />
-      <AlertTitle>New sign-in to your account</AlertTitle>
+      <AlertTitle>New sign-in to your designali.com account</AlertTitle>
       <AlertDescription>
         <dl className="my-1 grid grid-cols-[auto_1fr] gap-x-3">
           <dt>Device</dt>
           <dd className="text-foreground">Firefox on Windows</dd>
           <dt>Location</dt>
-          <dd className="text-foreground">Rotterdam, NL</dd>
+          <dd className="text-foreground">New Delhi, IN</dd>
           <dt>Time</dt>
           <dd className="text-foreground">Today at 08:14</dd>
         </dl>

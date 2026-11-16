@@ -6,12 +6,12 @@ export default function TabletReadingView() {
       <AspectRatio ratio={3 / 4} className="bg-amber-50 dark:bg-zinc-900">
         <div className="absolute inset-0 flex flex-col p-4 font-serif text-amber-950 dark:text-amber-100">
           <p className="text-[10px] tracking-widest uppercase opacity-60">
-            Chapter 4
+            Designali journal
           </p>
-          <p className="mt-1 text-sm font-semibold">The Lighthouse Keeper</p>
+          <p className="mt-1 text-sm font-semibold">Design se code tak</p>
           <p className="mt-2 text-[10px] leading-relaxed opacity-80">
-            The fog arrived before the boats did, rolling in from the north like
-            a slow tide of wool. Marit lit the lamp an hour early and waited.
+            Every Designali project starts in Figma and ends in production-ready
+            Next.js code. Thoughtful design meets code that ships.
           </p>
           <div className="mt-auto flex items-center justify-between text-[9px] opacity-60">
             <span>Page 82 of 310</span>

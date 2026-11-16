@@ -8,24 +8,24 @@ export default function ProfileCardHeader() {
       <CardContent className="flex flex-col items-center gap-3 text-center">
         <Avatar className="size-20">
           <AvatarFallback className="bg-gradient-to-br from-indigo-500 to-fuchsia-500 text-2xl font-semibold text-white">
-            GB
+            AI
           </AvatarFallback>
         </Avatar>
         <div>
-          <p className="text-base font-semibold">Greta Bauer</p>
+          <p className="text-base font-semibold">Ali Imam</p>
           <p className="text-xs text-muted-foreground">
-            Product designer at Lumen Labs
+            Design engineer at Designali
           </p>
         </div>
         <div className="flex gap-6 text-xs">
           <div>
-            <span className="block text-sm font-semibold">248</span>Posts
+            <span className="block text-sm font-semibold">460</span>Blocks
           </div>
           <div>
-            <span className="block text-sm font-semibold">12.4k</span>Followers
+            <span className="block text-sm font-semibold">2.3k</span>UI designs
           </div>
           <div>
-            <span className="block text-sm font-semibold">310</span>Following
+            <span className="block text-sm font-semibold">4k</span>Icons
           </div>
         </div>
         <Button className="w-full">Follow</Button>

@@ -8,7 +8,7 @@ export default function OptionalHintLabel() {
         Company
         <span className="font-normal text-muted-foreground">(optional)</span>
       </Label>
-      <Input id="company" placeholder="Brightline Labs" />
+      <Input id="company" placeholder="Designali" />
     </div>
   )
 }

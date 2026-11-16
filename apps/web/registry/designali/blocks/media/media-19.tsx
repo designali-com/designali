@@ -1,14 +1,17 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { Play, X } from "lucide-react"
+import {
+  Play,
+  X,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 
 const stats = [
-  { value: "2m 14s", label: "Average time to first deploy" },
-  { value: "38%", label: "Fewer rollbacks after switching" },
-  { value: "11k", label: "Teams shipping with Relay" },
+  { value: "460+", label: "Production-ready blocks" },
+  { value: "240+", label: "Landing pages and templates" },
+  { value: "4000+", label: "Icons in @designali/icons" },
 ]
 
 export default function Media19() {
@@ -31,10 +34,10 @@ export default function Media19() {
           />
           <div className="relative grid gap-12 lg:grid-cols-[1.1fr_1fr] lg:items-center">
             <div>
-              <p className="text-xs tracking-widest text-background/60 uppercase">Keynote replay - Relay Summit</p>
+              <p className="text-xs tracking-widest text-background/60 uppercase">Keynote replay - Designali Live</p>
               <h2 className="mt-4 text-3xl font-semibold tracking-tight md:text-5xl">Watch the launch in 4 minutes.</h2>
               <p className="mt-4 max-w-md text-background/70">
-                Preview environments, instant rollbacks and the new edge runtime, demoed live on stage by the people who built them.
+                New Designali blocks, templates and icons, demoed live by Ali Imam — design se code tak, in real time.
               </p>
               <dl className="mt-10 grid grid-cols-3 gap-4 border-t border-background/20 pt-6">
                 {stats.map((s) => (

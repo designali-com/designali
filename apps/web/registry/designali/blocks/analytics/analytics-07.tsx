@@ -5,9 +5,9 @@ import { useState } from "react"
 import { cn } from "@workspace/ui/lib/utils"
 
 const channels = [
-  { key: "organic", label: "Organic", color: "var(--chart-1)" },
-  { key: "paid", label: "Paid ads", color: "var(--chart-2)" },
-  { key: "partner", label: "Partners", color: "var(--chart-3)" },
+  { key: "organic", label: "Search", color: "var(--chart-1)" },
+  { key: "paid", label: "Social", color: "var(--chart-2)" },
+  { key: "partner", label: "21st.dev", color: "var(--chart-3)" },
 ] as const
 
 type ChannelKey = (typeof channels)[number]["key"]
@@ -51,7 +51,7 @@ export default function Analytics07() {
         <div className="border bg-card p-6 md:p-8">
           <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
             <div>
-              <p className="text-sm text-muted-foreground">Signups by acquisition channel</p>
+              <p className="text-sm text-muted-foreground">designali.com signups by channel</p>
               <p className="mt-1 text-3xl font-semibold tracking-tight">
                 {(active
                   ? enabled.reduce((s, k) => s + active[k], 0)

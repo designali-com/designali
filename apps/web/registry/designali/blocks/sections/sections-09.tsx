@@ -1,4 +1,6 @@
-import { Plus } from "lucide-react"
+import {
+  Plus,
+} from "@designali/icons"
 
 const leaders = [
   {

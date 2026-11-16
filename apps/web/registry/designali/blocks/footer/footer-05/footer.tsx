@@ -1,55 +1,47 @@
 import Link from "next/link"
-import {
-  Adobe,
-  Facebook,
-  Instagram,
-  LinkedIn,
-  Threads,
-  X,
-} from "@designali/logos"
+import { Instagram, LinkedIn, X } from "@designali/logos"
+import { Logo } from "@/src/components/logo"
 
 const links = [
   {
     group: "Studio",
     items: [
-      { title: "Our Work", href: "#" },
-      { title: "Case Studies", href: "#" },
-      { title: "Services", href: "#" },
-      { title: "Pricing", href: "#" },
-      { title: "Process", href: "#" },
-      { title: "Why Choose Us", href: "#" },
+      { title: "Work", href: "/work" },
+      { title: "Case Studies", href: "/work" },
+      { title: "Pricing", href: "/pricing" },
+      { title: "Contact", href: "/contact" },
+      { title: "Ali Imam", href: "https://www.linkedin.com/in/aliimam-in/" },
     ],
   },
   {
     group: "Services",
     items: [
-      { title: "Brand Identity", href: "#" },
-      { title: "UI/UX Design", href: "#" },
-      { title: "Web Design", href: "#" },
-      { title: "Logo Design", href: "#" },
-      { title: "Social Media Design", href: "#" },
-      { title: "Motion Graphics", href: "#" },
-      { title: "Design Systems", href: "#" },
+      { title: "Brand Identity", href: "/work" },
+      { title: "UI/UX Design", href: "/work" },
+      { title: "Web Design", href: "/work" },
+      { title: "Web Development", href: "/work" },
+      { title: "Design Systems", href: "/work" },
+      { title: "CGI & Motion", href: "/work" },
+      { title: "AI Workflows", href: "/work" },
     ],
   },
   {
     group: "Resources",
     items: [
-      { title: "Design Blog", href: "#" },
-      { title: "Free Assets", href: "#" },
-      { title: "Templates", href: "#" },
-      { title: "Guides", href: "#" },
-      { title: "Tutorials", href: "#" },
-      { title: "Help Center", href: "#" },
+      { title: "Templates", href: "/templates" },
+      { title: "Blocks", href: "/blocks" },
+      { title: "UI Designs", href: "/ui" },
+      { title: "Icons", href: "/icons" },
+      { title: "Logos", href: "/logos" },
+      { title: "Illustration", href: "/illustration" },
     ],
   },
   {
     group: "Legal",
     items: [
-      { title: "Terms of Service", href: "#" },
-      { title: "Privacy Policy", href: "#" },
-      { title: "Licensing", href: "#" },
-      { title: "Cookie Policy", href: "#" },
+      { title: "Terms", href: "/docs/legal/terms" },
+      { title: "Docs", href: "/docs" },
+      { title: "Blogs", href: "/blogs" },
     ],
   },
 ]
@@ -60,8 +52,8 @@ export default function FooterSection() {
       <div className="mx-auto max-w-5xl px-6">
         <div className="grid gap-12 md:grid-cols-5">
           <div className="md:col-span-2">
-            <Link href="#" aria-label="go home" className="block size-fit">
-              <Adobe />
+            <Link href="/" aria-label="Designali home" className="block size-fit">
+              <Logo className="h-8 w-auto" />
             </Link>
           </div>
 
@@ -84,20 +76,20 @@ export default function FooterSection() {
         </div>
         <div className="mt-12 flex flex-wrap items-end justify-between gap-6 border-t py-6">
           <span className="order-last block text-center text-sm text-muted-foreground md:order-first">
-            © {2026} Ali Imam, All rights reserved
+            © {2026} Designali by Ali Imam. All rights reserved
           </span>
           <div className="order-first flex flex-wrap items-center justify-center gap-8 text-sm md:order-last">
             <Link
-              href="#"
+              href="https://x.com/designali_com"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="X/Twitter"
+              aria-label="X"
               className="block text-muted-foreground hover:text-primary"
             >
               <X className="h-5" />
             </Link>
             <Link
-              href="#"
+              href="https://www.linkedin.com/company/designali-com/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
@@ -106,25 +98,7 @@ export default function FooterSection() {
               <LinkedIn className="h-5" />
             </Link>
             <Link
-              href="#"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Facebook"
-              className="block text-muted-foreground hover:text-primary"
-            >
-              <Facebook className="h-5" />
-            </Link>
-            <Link
-              href="#"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Threads"
-              className="block text-muted-foreground hover:text-primary"
-            >
-              <Threads className="h-5" />
-            </Link>
-            <Link
-              href="#"
+              href="https://www.instagram.com/designali.code/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"

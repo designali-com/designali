@@ -1,4 +1,7 @@
-import { ShieldCheckIcon, ShieldOffIcon } from "lucide-react"
+import {
+  ShieldCheck as ShieldCheckIcon,
+  ShieldOff as ShieldOffIcon,
+} from "@designali/icons"
 
 import {
   AlertDialog,

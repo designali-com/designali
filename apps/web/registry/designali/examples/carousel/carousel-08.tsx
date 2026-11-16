@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { QuoteIcon } from "lucide-react"
+import {
+  Quote as QuoteIcon,
+} from "@designali/icons"
 
 import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
 import { Card, CardContent } from "@workspace/ui/components/card"
@@ -16,21 +18,21 @@ import { cn } from "@workspace/ui/lib/utils"
 const testimonials = [
   {
     quote:
-      "We cut our onboarding time in half within the first month. The team actually enjoys using it.",
-    name: "Lena Ortiz",
-    role: "Head of Ops, Brightpath",
+      "Ali turned our rough Figma file into a production-ready Next.js site in two weeks. Design se code tak, exactly as promised.",
+    name: "Sara",
+    role: "Founder, Designali client",
   },
   {
     quote:
-      "Reporting used to take a full day every Friday. Now it is a ten minute review over coffee.",
-    name: "Tomas Reyes",
-    role: "Finance Lead, Northwind Labs",
+      "The Designali blocks saved us weeks. We shipped our landing page with Tailwind and shadcn-style UI in a weekend.",
+    name: "Daniel",
+    role: "Developer, designali.com customer",
   },
   {
     quote:
-      "Support answered every question within the hour. That alone made the switch worth it.",
-    name: "Aisha Karim",
-    role: "Founder, Pebble Studio",
+      "A brand identity and a design system that actually feel like us. Working with the studio was effortless.",
+    name: "Meera",
+    role: "Marketing Lead, Designali client",
   },
 ]
 

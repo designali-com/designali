@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { WalletIcon } from "lucide-react"
+import {
+  Wallet as WalletIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {

@@ -1,4 +1,7 @@
-import { ReceiptIcon, TruckIcon } from "lucide-react"
+import {
+  Receipt as ReceiptIcon,
+  Truck as TruckIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import { Button } from "@workspace/ui/components/button"
@@ -13,9 +16,9 @@ import {
 } from "@workspace/ui/components/dialog"
 
 const items = [
-  { name: "Ceramic pour-over set", qty: 1, price: 64 },
-  { name: "Single-origin beans, 250g", qty: 2, price: 18.5 },
-  { name: "Paper filters (100)", qty: 1, price: 6 },
+  { name: "Designali Templates Pro", qty: 1, price: 64 },
+  { name: "Icons Pro license", qty: 2, price: 18.5 },
+  { name: "Logo pack", qty: 1, price: 6 },
 ]
 
 export default function OrderReceiptDialog() {
@@ -35,7 +38,7 @@ export default function OrderReceiptDialog() {
             <Badge variant="secondary">Shipped</Badge>
           </div>
           <DialogDescription>
-            Placed Nov 9, 2026 · Delivered to Rotterdam, NL
+            Placed Nov 9, 2026 · Delivered to hello@designali.com
           </DialogDescription>
         </DialogHeader>
         <div className="flex flex-col divide-y border-y">

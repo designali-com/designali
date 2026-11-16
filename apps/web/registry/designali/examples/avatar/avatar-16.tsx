@@ -6,7 +6,7 @@ import {
 } from "@workspace/ui/components/avatar"
 
 const sizes = ["sm", "default", "lg"] as const
-const initials = ["BK", "MT", "ZA"]
+const initials = ["AI", "DA", "SA"]
 
 export default function AvatarGroupSizeScale() {
   return (

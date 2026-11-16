@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { ArrowLeftIcon } from "lucide-react"
+import {
+  ArrowLeft as ArrowLeftIcon,
+} from "@designali/icons"
 
 import {
   AlertDialog,
@@ -52,7 +54,7 @@ export default function UnsavedChangesThreeActions() {
           <AlertDialogHeader>
             <AlertDialogTitle>Save changes before leaving?</AlertDialogTitle>
             <AlertDialogDescription>
-              Your edits to this team will be lost if you don&apos;t save them.
+              Your edits to this Designali team will be lost if you don&apos;t save them.
             </AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>

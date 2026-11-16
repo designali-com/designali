@@ -1,7 +1,11 @@
 "use client"
 
 import * as React from "react"
-import { ActivityIcon, UndoIcon, UsersIcon } from "lucide-react"
+import {
+  Activity as ActivityIcon,
+  Undo as UndoIcon,
+  Users as UsersIcon,
+} from "@designali/icons"
 
 import {
   Card,
@@ -17,7 +21,7 @@ import {
 } from "@workspace/ui/components/toggle-group"
 
 const metrics: Record<string, { value: string; label: string }> = {
-  visitors: { value: "48.2k", label: "Unique visitors this week" },
+  visitors: { value: "48.2k", label: "designali.com visitors this week" },
   sessions: { value: "71.9k", label: "Sessions this week" },
   bounce: { value: "38%", label: "Average bounce rate" },
 }

@@ -1,7 +1,11 @@
 "use client"
 
 import * as React from "react"
-import { PaperclipIcon, SendIcon, SmileIcon } from "lucide-react"
+import {
+  Paperclip as PaperclipIcon,
+  Send as SendIcon,
+  Smile as SmileIcon,
+} from "@designali/icons"
 
 import {
   InputGroup,

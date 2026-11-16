@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { SendIcon } from "lucide-react"
+import {
+  Send as SendIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Input } from "@workspace/ui/components/input"
@@ -28,11 +30,11 @@ export default function TeamInviteToast() {
   return (
     <Toaster toastManager={notify}>
       <div className="flex w-full max-w-sm flex-col gap-2 border p-4">
-        <p className="text-sm font-medium">Invite to Northwind Studio</p>
+        <p className="text-sm font-medium">Invite to Designali Studio</p>
         <div className="flex gap-2">
           <Input
             type="email"
-            placeholder="teammate@example.com"
+            placeholder="teammate@designali.com"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />

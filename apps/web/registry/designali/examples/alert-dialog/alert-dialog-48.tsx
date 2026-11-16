@@ -1,4 +1,7 @@
-import { GlobeLockIcon, MapPinIcon } from "lucide-react"
+import {
+  GlobeLock as GlobeLockIcon,
+  MapPin as MapPinIcon,
+} from "@designali/icons"
 
 import {
   AlertDialog,
@@ -26,7 +29,7 @@ export default function DescriptionWithLearnMoreLink() {
           <AlertDialogMedia>
             <GlobeLockIcon />
           </AlertDialogMedia>
-          <AlertDialogTitle>Migrate workspace to Frankfurt?</AlertDialogTitle>
+          <AlertDialogTitle>Migrate your Designali workspace to the EU?</AlertDialogTitle>
           <AlertDialogDescription>
             Migration runs overnight and the workspace is read-only for up to 2
             hours. <a href="#">Learn how data residency works</a>.

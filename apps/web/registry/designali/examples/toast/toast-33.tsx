@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { PlugIcon } from "lucide-react"
+import {
+  Plug as PlugIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Toaster, createToastManager } from "@workspace/ui/components/toast"
@@ -19,7 +21,7 @@ export default function RetryOnErrorToast() {
     )
     notify
       .promise(request, {
-        loading: "Connecting to Corvia test account...",
+        loading: "Connecting Designali to Stripe test account...",
         success: {
           title: "Connected",
           description: "Payments are ready to accept.",

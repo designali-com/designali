@@ -1,4 +1,7 @@
-import { CheckIcon, ChevronDownIcon } from "lucide-react"
+import {
+  Check as CheckIcon,
+  ChevronDown as ChevronDownIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -16,18 +19,18 @@ import {
 } from "@workspace/ui/components/collapsible"
 
 const features = [
-  "Unlimited projects",
-  "Up to 25 collaborators",
-  "Version history for 90 days",
+  "All 460+ Designali blocks",
+  "2300+ UI examples",
+  "4000+ icons from @designali/icons",
+  "Figma source files",
   "Priority email support",
-  "Custom domains",
 ]
 
 export default function PlanFeaturesDefaultOpen() {
   return (
     <Card className="w-full max-w-xs">
       <CardHeader>
-        <CardDescription>Team</CardDescription>
+        <CardDescription>Designali Pro</CardDescription>
         <CardTitle className="text-3xl">
           $24
           <span className="text-sm font-normal text-muted-foreground">

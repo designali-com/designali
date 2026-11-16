@@ -1,39 +1,39 @@
 const tiles = [
   {
-    title: "Dune Study",
-    meta: "Series 01",
+    title: "Designali Agency",
+    meta: "Brand identity",
     span: "md:col-span-2 md:row-span-2",
-    gradient: "linear-gradient(135deg, var(--chart-1), var(--chart-2))",
+    gradient: 'url("/images/templates/design-agency.jpg") center / cover',
   },
   {
-    title: "Low Tide",
-    meta: "Series 02",
+    title: "Dalim UI",
+    meta: "UI design",
     span: "",
-    gradient: "linear-gradient(160deg, var(--chart-2), var(--chart-4))",
+    gradient: 'url("/images/templates/dalim-ui-old.jpg") center / cover',
   },
   {
-    title: "Signal",
-    meta: "Series 03",
+    title: "Dalim Icons",
+    meta: "Icon system",
     span: "",
-    gradient: "linear-gradient(200deg, var(--chart-3), var(--chart-5))",
+    gradient: 'url("/images/templates/dalim-icons-old.jpg") center / cover',
   },
   {
-    title: "Monolith",
-    meta: "Series 04",
+    title: "Portfolio Simple",
+    meta: "Template",
     span: "md:row-span-2",
-    gradient: "linear-gradient(180deg, var(--chart-4), var(--chart-1))",
+    gradient: 'url("/images/templates/portfolio-simple.jpg") center / cover',
   },
   {
-    title: "Afterglow",
-    meta: "Series 05",
+    title: "Dalim Works",
+    meta: "Case study",
     span: "md:col-span-2",
-    gradient: "linear-gradient(90deg, var(--chart-5), var(--chart-3))",
+    gradient: 'url("/images/templates/dalim-works-old.jpg") center / cover',
   },
   {
-    title: "Field",
-    meta: "Series 06",
+    title: "Dalim Fonts",
+    meta: "Typography",
     span: "",
-    gradient: "linear-gradient(45deg, var(--chart-2), var(--chart-5))",
+    gradient: 'url("/images/templates/dalim-fonts-old.jpg") center / cover',
   },
 ]
 
@@ -43,10 +43,10 @@ export default function Gallery03() {
       <div className="mx-auto max-w-6xl px-6">
         <div className="flex flex-wrap items-end justify-between gap-4">
           <h2 className="text-3xl font-semibold tracking-tight md:text-4xl">
-            Selected frames
+            Selected Designali work
           </h2>
           <p className="text-sm text-muted-foreground">
-            Six studies in color and light, 2025
+            Six projects by Ali Imam, design se code tak
           </p>
         </div>
         <div className="mt-10 grid auto-rows-[180px] grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-4">

@@ -1,14 +1,14 @@
 const events: Record<number, { title: string; tone: string }[]> = {
   3: [{ title: "Design crit", tone: "bg-sky-500" }],
-  6: [{ title: "Workshop: Tokens", tone: "bg-violet-500" }],
+  6: [{ title: "Workshop: Design tokens", tone: "bg-violet-500" }],
   10: [{ title: "Community call", tone: "bg-emerald-500" }],
-  12: [{ title: "Office hours", tone: "bg-amber-500" }, { title: "Release v4.3", tone: "bg-rose-500" }],
+  12: [{ title: "Office hours with Ali", tone: "bg-amber-500" }, { title: "New blocks drop", tone: "bg-rose-500" }],
   17: [{ title: "Design crit", tone: "bg-sky-500" }],
-  19: [{ title: "Meetup: Lisbon", tone: "bg-emerald-500" }],
+  19: [{ title: "Live: Figma to Next.js", tone: "bg-emerald-500" }],
   20: [{ title: "Workshop: Motion", tone: "bg-violet-500" }],
   24: [{ title: "Community call", tone: "bg-emerald-500" }],
   26: [{ title: "Office hours", tone: "bg-amber-500" }],
-  30: [{ title: "Year in review", tone: "bg-rose-500" }],
+  30: [{ title: "Designali year in review", tone: "bg-rose-500" }],
 }
 
 const weekdays = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
@@ -33,7 +33,7 @@ export default function Grid12() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div>
-            <p className="text-xs tracking-widest text-muted-foreground uppercase">Events calendar</p>
+            <p className="text-xs tracking-widest text-muted-foreground uppercase">Designali events calendar</p>
             <h2 className="mt-3 text-4xl font-semibold tracking-tight">December 2026</h2>
           </div>
           <ul className="flex flex-wrap gap-x-4 gap-y-2">

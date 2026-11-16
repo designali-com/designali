@@ -1,4 +1,7 @@
-import { FileIcon, Trash2Icon } from "lucide-react"
+import {
+  File as FileIcon,
+  Trash2 as Trash2Icon,
+} from "@designali/icons"
 
 import {
   AlertDialog,
@@ -14,10 +17,10 @@ import {
 import { Button } from "@workspace/ui/components/button"
 
 const files = [
-  { name: "q3-roadmap.pdf", size: "2.4 MB" },
-  { name: "logo-final-v4.svg", size: "84 KB" },
-  { name: "interview-notes.docx", size: "312 KB" },
-  { name: "pricing-model.xlsx", size: "1.1 MB" },
+  { name: "designali-roadmap.pdf", size: "2.4 MB" },
+  { name: "designali-logo-v4.svg", size: "84 KB" },
+  { name: "client-brief.docx", size: "312 KB" },
+  { name: "template-pricing.xlsx", size: "1.1 MB" },
 ]
 
 export default function BulkDeleteSelectedFiles() {

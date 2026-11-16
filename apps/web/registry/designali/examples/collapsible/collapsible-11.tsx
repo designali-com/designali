@@ -1,4 +1,7 @@
-import { ChevronRightIcon, CircleAlertIcon } from "lucide-react"
+import {
+  ChevronRight as ChevronRightIcon,
+  CircleAlert as CircleAlertIcon,
+} from "@designali/icons"
 
 import {
   Alert,

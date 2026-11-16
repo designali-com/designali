@@ -1,7 +1,12 @@
 "use client"
 
 import { useState } from "react"
-import { Moon, Palette, SlidersHorizontal, Type } from "lucide-react"
+import {
+  Moon,
+  Palette,
+  SlidersHorizontal,
+  Type,
+} from "@designali/icons"
 
 import { Slider } from "@workspace/ui/components/slider"
 import { Switch } from "@workspace/ui/components/switch"
@@ -32,8 +37,8 @@ export default function Features20() {
           Make it yours without writing CSS.
         </h2>
         <p className="mt-4 max-w-xl text-sm leading-7 text-muted-foreground">
-          Every Folio theme exposes the same handful of controls. Try them
-          below; the preview updates the way your live site would.
+          Every Designali template exposes the same handful of controls. Try
+          them below; the preview updates the way your live site would.
         </p>
         <div className="mt-12 grid gap-px border border-border bg-border lg:grid-cols-[1fr_1.3fr]">
           <div className="space-y-8 bg-background p-6 md:p-8">
@@ -89,17 +94,17 @@ export default function Features20() {
               style={{ fontSize: size }}
             >
               <span className={cn("inline-block px-2 py-0.5 text-[0.7em]", accents[accent])}>
-                New essay
+                New blog
               </span>
               <h3 className={cn("font-medium tracking-tight", compact ? "mt-2" : "mt-4")} style={{ fontSize: "1.6em", lineHeight: 1.2 }}>
-                Notes on slow software
+                Design se code tak
               </h3>
               <p className={cn("leading-relaxed text-muted-foreground", compact ? "mt-2" : "mt-4")}>
-                Why the tools I keep coming back to are the ones that never
-                ask for my attention.
+                How I design and build digital experiences at Designali, from
+                Figma to production-ready code.
               </p>
               <button type="button" className={cn("px-4 py-2 text-[0.85em]", compact ? "mt-3" : "mt-6", accents[accent])}>
-                Read the essay
+                Read on Designali
               </button>
             </div>
           </div>

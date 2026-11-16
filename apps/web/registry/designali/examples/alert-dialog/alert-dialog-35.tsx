@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { ScrollTextIcon } from "lucide-react"
+import {
+  ScrollText as ScrollTextIcon,
+} from "@designali/icons"
 
 import {
   AlertDialog,
@@ -20,11 +22,11 @@ import { Field, FieldLabel } from "@workspace/ui/components/field"
 import { ScrollArea } from "@workspace/ui/components/scroll-area"
 
 const changes = [
-  "We now process payments through a new regional provider in the EU.",
-  "Data retention for deleted workspaces is reduced from 90 to 30 days.",
-  "Usage-based add-ons are billed at the end of each billing period.",
+  "Designali templates and blocks can be used in unlimited client projects.",
+  "Data for deleted designali.com accounts is kept for 30 days.",
+  "Studio services are billed per project, separately from plans.",
   "You can export your full account data at any time from Settings.",
-  "Disputes are handled under the laws of the state of Oregon.",
+  "The full terms live at designali.com/docs/legal/terms.",
 ]
 
 export default function TermsAcceptanceScroll() {
@@ -39,7 +41,7 @@ export default function TermsAcceptanceScroll() {
       <AlertDialogContent>
         <AlertDialogHeader>
           <AlertDialogTitle>
-            We&apos;ve updated our Terms of Service
+            We&apos;ve updated the Designali Terms of Service
           </AlertDialogTitle>
           <AlertDialogDescription>
             Please review the summary below. The changes take effect on May 1.

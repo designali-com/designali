@@ -1,15 +1,20 @@
 "use client"
 
 import { useState } from "react"
-import { Check, Clock, Users, X } from "lucide-react"
+import {
+  Check,
+  Clock,
+  Users,
+  X,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 
 const members = [
-  { initials: "JM", color: "from-rose-400 to-orange-400" },
-  { initials: "TK", color: "from-sky-400 to-blue-600" },
-  { initials: "AO", color: "from-emerald-400 to-teal-600" },
-  { initials: "RS", color: "from-violet-400 to-fuchsia-500" },
+  { initials: "AI", color: "from-rose-400 to-orange-400" },
+  { initials: "SD", color: "from-sky-400 to-blue-600" },
+  { initials: "DV", color: "from-emerald-400 to-teal-600" },
+  { initials: "CL", color: "from-violet-400 to-fuchsia-500" },
 ]
 
 export default function Authentication08() {
@@ -29,15 +34,15 @@ export default function Authentication08() {
         </div>
         <div className="-mt-10 px-6 pb-8 sm:px-8">
           <span className="relative flex size-20 items-center justify-center border-4 border-background bg-foreground text-2xl font-bold text-background">
-            Hx
+            da
           </span>
 
           {status === "pending" && (
             <>
               <p className="mt-5 text-sm text-muted-foreground">
-                <span className="font-medium text-foreground">Jonah Mercer</span> invited you to join
+                <span className="font-medium text-foreground">Ali Imam</span> invited you to join
               </p>
-              <h2 className="mt-1 text-2xl font-semibold tracking-tight">Helix Research workspace</h2>
+              <h2 className="mt-1 text-2xl font-semibold tracking-tight">Designali Studio workspace</h2>
 
               <dl className="mt-6 grid grid-cols-2 border text-sm">
                 <div className="border-e p-4">
@@ -46,7 +51,7 @@ export default function Authentication08() {
                 </div>
                 <div className="p-4">
                   <dt className="text-xs text-muted-foreground">Invited as</dt>
-                  <dd className="mt-1 truncate font-medium">sam@helixlab.bio</dd>
+                  <dd className="mt-1 truncate font-medium">you@designali.com</dd>
                 </div>
               </dl>
 
@@ -63,7 +68,7 @@ export default function Authentication08() {
                 </div>
                 <p className="flex items-center gap-1.5 text-sm text-muted-foreground">
                   <Users className="size-4" />
-                  18 members
+                  18 studio members
                 </p>
               </div>
 
@@ -92,8 +97,8 @@ export default function Authentication08() {
               </h2>
               <p className="text-sm text-muted-foreground">
                 {status === "accepted"
-                  ? "Helix Research is now in your workspace switcher. We've let Jonah know you joined."
-                  : "Jonah won't be notified. You can ask for a new invite any time."}
+                  ? "Designali Studio is now in your workspace switcher. We've let Ali know you joined."
+                  : "Ali won't be notified. You can ask for a new invite any time."}
               </p>
               <div className="flex gap-3">
                 {status === "accepted" && <Button>Open workspace</Button>}

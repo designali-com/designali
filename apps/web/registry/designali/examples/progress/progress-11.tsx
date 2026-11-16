@@ -1,4 +1,6 @@
-import { HeartIcon } from "lucide-react"
+import {
+  Heart as HeartIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Progress } from "@workspace/ui/components/progress"
@@ -11,7 +13,7 @@ export default function FundraisingGoal() {
     <div className="flex w-full max-w-sm flex-col gap-4 border p-4">
       <div>
         <p className="text-xs text-muted-foreground">
-          Community garden rebuild
+          Open-source @designali/icons
         </p>
         <p className="text-2xl font-semibold tabular-nums">
           {"$" + raised.toLocaleString("en-US")}

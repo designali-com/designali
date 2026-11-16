@@ -35,7 +35,7 @@ export default function AtLeastOneRequired() {
       }}
     >
       <FieldSet data-invalid={invalid || undefined}>
-        <FieldLegend>Why are you cancelling?</FieldLegend>
+        <FieldLegend>Why are you cancelling Designali Pro?</FieldLegend>
         <FieldDescription>Select at least one reason.</FieldDescription>
         <FieldGroup className="gap-3">
           {reasons.map((reason) => (

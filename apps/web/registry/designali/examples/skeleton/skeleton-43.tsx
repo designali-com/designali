@@ -2,9 +2,9 @@ import { Skeleton } from "@workspace/ui/components/skeleton"
 import { Spinner } from "@workspace/ui/components/spinner"
 
 const loaded = [
-  { title: "Migrate auth to passkeys", owner: "Ola N." },
-  { title: "Archive legacy webhooks", owner: "Ben T." },
-  { title: "Audit S3 bucket policies", owner: "Rina P." },
+  { title: "Ship new pricing blocks", owner: "Ola" },
+  { title: "Add 200 icons to @designali/icons", owner: "Ben" },
+  { title: "Review client brand identity", owner: "Rina" },
 ]
 
 export default function InfiniteScrollSkeleton() {

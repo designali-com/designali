@@ -13,9 +13,9 @@ import {
 } from "@workspace/ui/components/table"
 
 const members = [
-  { id: "m1", name: "Ava Lindqvist", email: "ava@fernwood.io" },
-  { id: "m2", name: "Jonah Mbeki", email: "jonah@fernwood.io" },
-  { id: "m3", name: "Rosa Delgado", email: "rosa@fernwood.io" },
+  { id: "m1", name: "Ali Imam", email: "ali@designali.com" },
+  { id: "m2", name: "Jonah", email: "jonah@designali.com" },
+  { id: "m3", name: "Rosa", email: "rosa@designali.com" },
 ]
 
 export default function PrimaryOwnerTable() {

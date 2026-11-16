@@ -14,7 +14,7 @@ export default function BadgeStatusSpinners() {
       </Badge>
       <Badge variant="outline">
         <Spinner />
-        Indexing 2,140 files
+        Indexing 4,000 icons
       </Badge>
       <Badge variant="destructive">
         <Spinner />

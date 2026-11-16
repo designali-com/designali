@@ -1,6 +1,15 @@
-import { BellIcon, LogOutIcon, SettingsIcon, UserIcon } from "lucide-react"
+import {
+  Bell as BellIcon,
+  LogOut as LogOutIcon,
+  Settings as SettingsIcon,
+  User as UserIcon,
+} from "@designali/icons"
 
-import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from "@workspace/ui/components/avatar"
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -28,16 +37,17 @@ export default function EndAlignedAccountNav() {
           <NavigationMenuItem>
             <NavigationMenuTrigger className="gap-2">
               <Avatar className="size-6">
-                <AvatarFallback className="text-[10px]">NB</AvatarFallback>
+                <AvatarImage src="/ali.jpg" alt="Ali Imam" />
+                <AvatarFallback className="text-[10px]">AI</AvatarFallback>
               </Avatar>
-              Nadia
+              Ali
             </NavigationMenuTrigger>
             <NavigationMenuContent>
               <div className="flex w-56 flex-col gap-1">
                 <div className="px-2 py-1.5">
-                  <p className="text-xs font-medium">Nadia Bakr</p>
+                  <p className="text-xs font-medium">Ali Imam</p>
                   <p className="text-xs text-muted-foreground">
-                    nadia@fieldnote.app
+                    ali@designali.com
                   </p>
                 </div>
                 <Separator />

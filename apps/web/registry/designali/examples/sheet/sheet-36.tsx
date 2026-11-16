@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { CheckIcon, MessageSquareIcon } from "lucide-react"
+import {
+  Check as CheckIcon,
+  MessageSquare as MessageSquareIcon,
+} from "@designali/icons"
 
 import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
 import { Button } from "@workspace/ui/components/button"
@@ -18,12 +21,12 @@ import { Textarea } from "@workspace/ui/components/textarea"
 
 const initial = [
   {
-    name: "Ines Duarte",
+    name: "Ines",
     text: "Can we tighten the intro? It runs long on mobile.",
     when: "10:02",
   },
   {
-    name: "Kwame Asante",
+    name: "Ali Imam",
     text: "Agreed — I'll cut the second paragraph.",
     when: "10:15",
   },
@@ -42,12 +45,12 @@ export default function CommentsThreadSheet() {
         <SheetHeader className="border-b">
           <SheetTitle>Comments</SheetTitle>
           <SheetDescription>
-            On &quot;Launch blog post — draft 3&quot;
+            On &quot;Designali launch post — draft 3&quot;
           </SheetDescription>
         </SheetHeader>
         <div className="flex flex-1 flex-col gap-4 overflow-y-auto p-4">
           <blockquote className="border-s-2 ps-3 text-muted-foreground italic">
-            Today we&apos;re introducing a faster way to plan your week…
+            Today we&apos;re launching 460+ blocks on designali.com…
           </blockquote>
           {comments.map((c, i) => (
             <div key={i} className="flex gap-2">

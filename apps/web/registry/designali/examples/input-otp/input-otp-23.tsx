@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { Trash2Icon, TriangleAlertIcon } from "lucide-react"
+import {
+  Trash2 as Trash2Icon,
+  TriangleAlert as TriangleAlertIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {

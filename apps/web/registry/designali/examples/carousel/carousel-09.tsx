@@ -2,11 +2,11 @@
 
 import * as React from "react"
 import {
-  ArrowRightIcon,
-  BellIcon,
-  FolderIcon,
-  SparklesIcon,
-} from "lucide-react"
+  ArrowRight as ArrowRightIcon,
+  Bell as BellIcon,
+  Folder as FolderIcon,
+  Sparkles as SparklesIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Card, CardContent, CardFooter } from "@workspace/ui/components/card"
@@ -20,18 +20,18 @@ import {
 const steps = [
   {
     icon: SparklesIcon,
-    title: "Welcome to Fieldnote",
-    body: "Capture ideas, tasks, and meeting notes in one calm workspace.",
+    title: "Welcome to Designali",
+    body: "Templates, blocks, icons, and UI designs to go from design to code.",
   },
   {
     icon: FolderIcon,
-    title: "Organize with spaces",
-    body: "Group notes by project or client and share a space with your team.",
+    title: "Save your favorite blocks",
+    body: "Collect blocks and landing pages into collections for each project.",
   },
   {
     icon: BellIcon,
-    title: "Never miss a follow-up",
-    body: "Turn any line into a reminder and get nudged at the right time.",
+    title: "Get notified on new drops",
+    body: "Be the first to know when new templates and icons ship.",
   },
 ]
 

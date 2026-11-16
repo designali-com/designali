@@ -13,11 +13,11 @@ const ranges = {
 type Range = keyof typeof ranges
 
 const sources = [
-  { name: "Organic search", share: 42, color: "var(--chart-1)" },
+  { name: "Google search", share: 42, color: "var(--chart-1)" },
   { name: "Direct", share: 24, color: "var(--chart-2)" },
-  { name: "Referral", share: 18, color: "var(--chart-3)" },
-  { name: "Social", share: 11, color: "var(--chart-4)" },
-  { name: "Email", share: 5, color: "var(--chart-5)" },
+  { name: "21st.dev", share: 18, color: "var(--chart-3)" },
+  { name: "Instagram & X", share: 11, color: "var(--chart-4)" },
+  { name: "Newsletter", share: 5, color: "var(--chart-5)" },
 ]
 
 export default function Analytics02() {
@@ -32,7 +32,7 @@ export default function Analytics02() {
         <div className="bg-background p-6 md:p-8 lg:col-span-2">
           <div className="flex flex-wrap items-start justify-between gap-4">
             <div>
-              <p className="text-xs text-muted-foreground">Unique visitors</p>
+              <p className="text-xs text-muted-foreground">Unique visitors on designali.com</p>
               <p className="mt-1 text-4xl font-semibold tracking-tight">
                 {total.toLocaleString()}
               </p>
@@ -75,7 +75,7 @@ export default function Analytics02() {
         </div>
 
         <div className="bg-background p-6 md:p-8">
-          <p className="text-sm font-medium">Traffic sources</p>
+          <p className="text-sm font-medium">Where visitors come from</p>
           <div className="mt-6 flex h-3 w-full">
             {sources.map((source) => (
               <div

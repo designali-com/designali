@@ -1,27 +1,30 @@
 "use client"
 
 import * as React from "react"
-import { PinIcon, PinOffIcon } from "lucide-react"
+import {
+  Pin as PinIcon,
+  PinOff as PinOffIcon,
+} from "@designali/icons"
 
 import { Toggle } from "@workspace/ui/components/toggle"
 
 const initialNotes = [
   {
     id: 1,
-    title: "Grocery run",
-    body: "Oat milk, lemons, basil",
+    title: "Client kickoff",
+    body: "Brand identity brief, moodboard, timeline",
     pinned: false,
   },
   {
     id: 2,
-    title: "Wi-Fi guest",
-    body: "Network: Lantern / pass: amber-42",
+    title: "Release checklist",
+    body: "Ship 20 new blocks to designali.com/blocks",
     pinned: true,
   },
   {
     id: 3,
-    title: "Book club",
-    body: "Finish chapter 9 by Friday",
+    title: "Icon set review",
+    body: "Review @designali/icons additions by Friday",
     pinned: false,
   },
 ]

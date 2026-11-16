@@ -1,4 +1,8 @@
-import { FolderGit2Icon, GitForkIcon, StarIcon } from "lucide-react"
+import {
+  FolderGit2 as FolderGit2Icon,
+  GitFork as GitForkIcon,
+  Star as StarIcon,
+} from "@designali/icons"
 
 import {
   Popover,
@@ -23,15 +27,15 @@ export default function HoverOpenPopover() {
             />
           }
         >
-          northwind/ledger
+          designali/blocks
         </PopoverTrigger>
         <PopoverContent className="w-64" align="start">
           <div className="flex items-center gap-2">
             <FolderGit2Icon className="size-4" />
-            <PopoverTitle>northwind/ledger</PopoverTitle>
+            <PopoverTitle>designali/blocks</PopoverTitle>
           </div>
           <PopoverDescription>
-            Double-entry accounting service for invoices and payouts.
+            460+ production-ready blocks built with Next.js and Tailwind CSS.
           </PopoverDescription>
           <div className="flex gap-3 text-[11px] text-muted-foreground">
             <span className="flex items-center gap-1">

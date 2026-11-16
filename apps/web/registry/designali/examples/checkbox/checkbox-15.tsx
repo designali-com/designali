@@ -1,4 +1,6 @@
-import { ShieldCheckIcon } from "lucide-react"
+import {
+  ShieldCheck as ShieldCheckIcon,
+} from "@designali/icons"
 
 import {
   Card,
@@ -26,7 +28,7 @@ export default function ReadOnlyComplianceSummary() {
           <ShieldCheckIcon className="size-4" />
           Compliance status
         </CardTitle>
-        <CardDescription>Managed by your workspace admin.</CardDescription>
+        <CardDescription>Managed by the Designali workspace admin.</CardDescription>
       </CardHeader>
       <CardContent>
         <FieldGroup className="gap-3">

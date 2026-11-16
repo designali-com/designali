@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { UserPlusIcon } from "lucide-react"
+import {
+  UserPlus as UserPlusIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import { Button } from "@workspace/ui/components/button"
@@ -33,7 +35,7 @@ export default function InviteMembersPopover() {
   const [email, setEmail] = React.useState("")
   const [role, setRole] = React.useState("editor")
   const [invites, setInvites] = React.useState([
-    { email: "sora@finchwork.io", role: "viewer" },
+    { email: "sora@designali.com", role: "viewer" },
   ])
   const valid = /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)
 
@@ -45,13 +47,13 @@ export default function InviteMembersPopover() {
       </PopoverTrigger>
       <PopoverContent className="w-80" align="end">
         <PopoverHeader>
-          <PopoverTitle>Invite to Finchwork</PopoverTitle>
+          <PopoverTitle>Invite to Designali</PopoverTitle>
           <PopoverDescription>Invites expire after 7 days.</PopoverDescription>
         </PopoverHeader>
         <div className="flex gap-2">
           <Input
             type="email"
-            placeholder="name@company.com"
+            placeholder="name@designali.com"
             value={email}
             onChange={(event) => setEmail(event.target.value)}
             className="h-8 flex-1"

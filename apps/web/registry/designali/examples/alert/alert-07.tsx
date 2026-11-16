@@ -1,4 +1,6 @@
-import { CircleAlertIcon } from "lucide-react";
+import {
+  CircleAlert as CircleAlertIcon,
+} from "@designali/icons"
 import {
   Alert,
   AlertDescription,

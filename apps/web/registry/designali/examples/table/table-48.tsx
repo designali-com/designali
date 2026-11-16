@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { PlusIcon } from "lucide-react"
+import {
+  Plus as PlusIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Input } from "@workspace/ui/components/input"
@@ -21,8 +23,8 @@ import {
 
 export default function AddRowFormTable() {
   const [guests, setGuests] = React.useState([
-    { name: "Imogen Clarke", meal: "Vegetarian" },
-    { name: "Rafael Costa", meal: "Fish" },
+    { name: "Sara Khan", meal: "Vegetarian" },
+    { name: "Omar Ali", meal: "Fish" },
   ])
   const [name, setName] = React.useState("")
   const [meal, setMeal] = React.useState("Chicken")

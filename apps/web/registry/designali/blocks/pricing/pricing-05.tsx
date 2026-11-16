@@ -1,7 +1,9 @@
 "use client"
 
 import { useState } from "react"
-import { Check } from "lucide-react"
+import {
+  Check,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Switch } from "@workspace/ui/components/switch"
@@ -12,14 +14,14 @@ const plans = [
     name: "Starter",
     monthly: 0,
     description: "For individuals exploring the library.",
-    features: ["40 free blocks", "Community support", "Personal projects"],
+    features: ["40 free Designali blocks", "Free icons and logos", "Personal projects"],
   },
   {
     name: "Pro",
     monthly: 24,
     description: "For freelancers shipping client work.",
     features: [
-      "All 300+ blocks",
+      "All 460+ Designali blocks",
       "Figma source files",
       "Commercial license",
       "Priority updates",
@@ -34,7 +36,7 @@ const plans = [
       "Everything in Pro",
       "10 seats included",
       "Private registry",
-      "Dedicated Slack channel",
+      "Direct line to Ali Imam",
     ],
   },
 ]
@@ -47,7 +49,7 @@ export default function Pricing05() {
       <div className="mx-auto max-w-6xl px-6">
         <div className="text-center">
           <h2 className="text-3xl font-semibold tracking-tight md:text-5xl">
-            Simple, honest pricing
+            Simple, honest Designali pricing
           </h2>
           <div className="mt-6 inline-flex items-center gap-3 text-sm">
             <span className={cn(!yearly && "font-medium")}>Monthly</span>

@@ -1,4 +1,6 @@
-import { UserXIcon } from "lucide-react"
+import {
+  UserX as UserXIcon,
+} from "@designali/icons"
 
 import {
   HoverCard,

@@ -1,4 +1,8 @@
-import { Bold, Italic, Underline } from "lucide-react"
+import {
+  Bold,
+  Italic,
+  Underline,
+} from "@designali/icons"
 
 import {
   ToggleGroup,

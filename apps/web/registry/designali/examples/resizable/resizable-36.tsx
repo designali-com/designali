@@ -1,4 +1,9 @@
-import { BellIcon, CreditCardIcon, ShieldIcon, UserIcon } from "lucide-react"
+import {
+  Bell as BellIcon,
+  CreditCard as CreditCardIcon,
+  Shield as ShieldIcon,
+  User as UserIcon,
+} from "@designali/icons"
 
 import { Label } from "@workspace/ui/components/label"
 import {

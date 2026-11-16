@@ -1,4 +1,8 @@
-import { ClockIcon, CreditCardIcon, LifeBuoyIcon } from "lucide-react"
+import {
+  Clock as ClockIcon,
+  CreditCard as CreditCardIcon,
+  LifeBuoy as LifeBuoyIcon,
+} from "@designali/icons"
 
 import {
   Breadcrumb,

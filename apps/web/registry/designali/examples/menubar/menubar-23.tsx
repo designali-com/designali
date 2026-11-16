@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { FileTextIcon } from "lucide-react"
+import {
+  FileText as FileTextIcon,
+} from "@designali/icons"
 
 import {
   Menubar,
@@ -18,10 +20,10 @@ import {
 } from "@workspace/ui/components/menubar"
 
 const initialRecent = [
-  "Q3 board deck.key",
-  "Hiring plan.docx",
-  "Pricing model.xlsx",
-  "Launch checklist.md",
+  "Designali pitch deck.key",
+  "Brand identity brief.docx",
+  "Templates pricing.xlsx",
+  "Blocks launch checklist.md",
 ]
 
 export default function OpenRecentMenubar() {

@@ -1,18 +1,20 @@
-import { ArrowRight } from "lucide-react"
+import {
+  ArrowRight,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 
 const results = [
-  { value: "+41%", label: "Checkout conversion" },
-  { value: "-63%", label: "Support tickets about billing" },
-  { value: "4.8", label: "App Store rating, up from 3.9" },
+  { value: "460+", label: "Production-ready blocks shipped" },
+  { value: "4000+", label: "Icons in @designali/icons" },
+  { value: "240+", label: "Landing pages and templates" },
 ]
 
 const details = [
-  { label: "Client", value: "Halcyon Bank" },
+  { label: "Client", value: "Designali (in-house)" },
   { label: "Timeline", value: "14 weeks" },
-  { label: "Team", value: "2 designers, 3 engineers" },
-  { label: "Services", value: "Research, product design, design system" },
+  { label: "Team", value: "Ali Imam, design and code" },
+  { label: "Services", value: "UI/UX, design system, Next.js" },
 ]
 
 export default function Portfolio03() {
@@ -43,12 +45,12 @@ export default function Portfolio03() {
               Case study
             </p>
             <h2 className="mt-4 text-3xl leading-tight font-medium tracking-tight md:text-4xl">
-              Rebuilding trust in a mobile bank after a difficult migration
+              Turning Dalim UI into the Designali block library
             </h2>
             <p className="mt-4 text-muted-foreground">
-              Halcyon moved 900,000 customers to a new core banking system. We
-              redesigned onboarding, payments, and statements so the change felt
-              like an upgrade rather than a disruption.
+              Dalim UI started as a set of components for designers who code. We
+              rebuilt it as Designali — templates, blocks and icons with
+              production-ready React and Tailwind CSS. Design se code tak.
             </p>
 
             <dl className="mt-8 grid grid-cols-2 gap-x-6 gap-y-4 border-t border-border pt-6 text-sm">
@@ -61,7 +63,7 @@ export default function Portfolio03() {
             </dl>
 
             <div className="mt-auto pt-8">
-              <Button nativeButton={false} render={<a href="#" />}>
+              <Button nativeButton={false} render={<a href="/work" />}>
                 Read the case study
                 <ArrowRight />
               </Button>

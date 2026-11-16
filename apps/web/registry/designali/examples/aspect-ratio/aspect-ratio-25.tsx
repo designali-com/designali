@@ -10,13 +10,13 @@ export default function EventPosterPaper() {
       <div className="absolute -start-6 top-28 size-20 bg-indigo-600" />
       <div className="absolute inset-0 flex flex-col justify-end p-4">
         <p className="text-[10px] font-semibold tracking-[0.2em] uppercase">
-          Riverside Hall
+          Designali Studio
         </p>
         <p className="text-2xl leading-none font-black uppercase">
-          Night Market
+          Open Studio
         </p>
         <p className="mt-2 text-[10px]">
-          Fri 18 Oct - 6pm till late - Free entry
+          Design se code tak - Free entry
         </p>
       </div>
     </AspectRatio>

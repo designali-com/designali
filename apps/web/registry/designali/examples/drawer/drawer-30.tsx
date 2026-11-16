@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { PaletteIcon } from "lucide-react"
+import {
+  Palette as PaletteIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -53,7 +55,7 @@ export default function AppearanceSettingsDrawer() {
         <DrawerHeader>
           <DrawerTitle>Appearance</DrawerTitle>
           <DrawerDescription>
-            Customize how Readwell looks on this device.
+            Customize how Designali looks on this device.
           </DrawerDescription>
         </DrawerHeader>
         <FieldGroup className="flex-1 overflow-y-auto p-4">
@@ -97,7 +99,7 @@ export default function AppearanceSettingsDrawer() {
               className="border bg-muted/40 p-3"
               style={{ fontSize: textSize }}
             >
-              The quick brown fox reads every chapter.
+              Design se code tak, one block at a time.
             </p>
           </Field>
           <Field orientation="horizontal">

@@ -1,7 +1,9 @@
 "use client"
 
 import { useState } from "react"
-import { Check } from "lucide-react"
+import {
+  Check,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Input } from "@workspace/ui/components/input"
@@ -38,7 +40,7 @@ export default function Contact03() {
           Start a project
         </h2>
         <p className="mt-4 text-muted-foreground">
-          A few quick details help us put the right people on your brief.
+          A few quick details help Ali Imam and the Designali studio scope your brief.
         </p>
 
         <form className="mt-12 space-y-10">

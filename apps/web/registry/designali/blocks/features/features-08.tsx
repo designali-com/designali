@@ -9,7 +9,7 @@ const tabs = [
     id: "design",
     label: "Design",
     title: "Tokens that sync both ways",
-    body: "Edit a colour in Figma and open a pull request with the change. Merge it, and every product surface updates on the next deploy.",
+    body: "Designali design tokens live in Figma and code. Change a colour once and every block, template and page stays in sync.",
     metric: "62%",
     metricLabel: "less time spent on handoff",
   },
@@ -17,17 +17,17 @@ const tabs = [
     id: "build",
     label: "Build",
     title: "Components with guardrails",
-    body: "Accessible primitives ship with tests, stories and usage docs, so teams compose new screens without reinventing behaviour.",
+    body: "Accessible components built with React, TypeScript and Tailwind CSS, so you compose new screens without reinventing behaviour.",
     metric: "3.4x",
     metricLabel: "faster feature delivery",
   },
   {
     id: "review",
     label: "Review",
-    title: "Visual diffs on every change",
-    body: "Pixel-level comparisons run against your component library, flagging unintended changes before a reviewer ever opens the branch.",
+    title: "Shipped on Vercel",
+    body: "Ali Imam reviews every page for polish and performance before it ships, so your site looks great and loads fast on every device.",
     metric: "91%",
-    metricLabel: "of regressions caught pre-merge",
+    metricLabel: "Lighthouse-ready pages",
   },
 ]
 
@@ -39,7 +39,7 @@ export default function Features08() {
     <section className="w-full bg-background px-6 py-20 md:py-28">
       <div className="mx-auto max-w-5xl">
         <h2 className="text-center text-3xl font-medium tracking-tight md:text-5xl">
-          One system across the whole lifecycle
+          Design se code tak — one system, start to finish
         </h2>
         <div className="mx-auto mt-10 flex w-fit border border-border">
           {tabs.map((tab) => (

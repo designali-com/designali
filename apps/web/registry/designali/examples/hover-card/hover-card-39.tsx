@@ -13,7 +13,7 @@ const zones = [
 export default function RelativeTimestampHoverCard() {
   return (
     <p className="text-sm text-muted-foreground">
-      Last edited by Grace Liu{" "}
+      Last edited by Ali Imam{" "}
       <HoverCard>
         <HoverCardTrigger
           render={

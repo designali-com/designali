@@ -23,7 +23,7 @@ export default function FormSubmitSliderName() {
     >
       <Field>
         <FieldLabel>
-          Story points for &quot;Bulk invoice export&quot;
+          Story points for &quot;Pricing block redesign&quot;
         </FieldLabel>
         <Slider
           name="effort"

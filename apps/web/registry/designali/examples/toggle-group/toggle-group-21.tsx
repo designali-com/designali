@@ -1,7 +1,12 @@
 "use client"
 
 import * as React from "react"
-import { BikeIcon, CarIcon, MapPinIcon, TrainFrontIcon } from "lucide-react"
+import {
+  Bike as BikeIcon,
+  Car as CarIcon,
+  MapPin as MapPinIcon,
+  TrainFront as TrainFrontIcon,
+} from "@designali/icons"
 
 import {
   ToggleGroup,

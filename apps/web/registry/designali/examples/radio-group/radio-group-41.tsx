@@ -1,4 +1,6 @@
-import { InfoIcon } from "lucide-react"
+import {
+  Info as InfoIcon,
+} from "@designali/icons"
 
 import { Field, FieldLabel, FieldTitle } from "@workspace/ui/components/field"
 import {

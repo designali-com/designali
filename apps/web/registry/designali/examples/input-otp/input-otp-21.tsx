@@ -1,7 +1,9 @@
 "use client"
 
 import { REGEXP_ONLY_DIGITS_AND_CHARS } from "input-otp"
-import { TvIcon } from "lucide-react"
+import {
+  Tv as TvIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -20,7 +22,7 @@ export default function TvPairingCode() {
       <div className="space-y-1">
         <h3 className="text-sm font-semibold">Connect your TV</h3>
         <p className="text-xs text-muted-foreground">
-          Enter the code shown on your TV to sign in to Reelhouse.
+          Enter the code shown on your TV to sign in to Designali.
         </p>
       </div>
       <InputOTP maxLength={8} pattern={REGEXP_ONLY_DIGITS_AND_CHARS}>

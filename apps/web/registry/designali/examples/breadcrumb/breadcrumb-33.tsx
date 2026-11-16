@@ -1,5 +1,8 @@
 import { Fragment } from "react"
-import { CopyIcon, DatabaseIcon } from "lucide-react"
+import {
+  Copy as CopyIcon,
+  Database as DatabaseIcon,
+} from "@designali/icons"
 
 import {
   Breadcrumb,

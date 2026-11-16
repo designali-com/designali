@@ -1,8 +1,10 @@
-import { Play } from "lucide-react"
+import {
+  Play,
+} from "@designali/icons"
 
 const videos = [
   {
-    title: "Setting up your first workspace",
+    title: "Installing your first Designali block",
     duration: "3:24",
     level: "Beginner",
     hue: "var(--chart-1)",
@@ -20,7 +22,7 @@ const videos = [
     hue: "var(--chart-3)",
   },
   {
-    title: "Publishing a component registry",
+    title: "Using @designali/icons and logos",
     duration: "12:02",
     level: "Advanced",
     hue: "var(--chart-4)",
@@ -32,7 +34,7 @@ const videos = [
     hue: "var(--chart-5)",
   },
   {
-    title: "Handoff without friction",
+    title: "From Figma to Next.js",
     duration: "5:18",
     level: "Beginner",
     hue: "var(--chart-2)",
@@ -46,7 +48,7 @@ export default function Media04() {
         <div className="flex flex-wrap items-end justify-between gap-4 border-b border-border pb-6">
           <div>
             <h2 className="text-3xl font-semibold tracking-tight">
-              Video tutorials
+              Designali video tutorials
             </h2>
             <p className="mt-2 text-sm text-muted-foreground">
               Six lessons, under an hour in total.

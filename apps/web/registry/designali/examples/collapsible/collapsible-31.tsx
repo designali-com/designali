@@ -1,4 +1,6 @@
-import { ChevronDownIcon } from "lucide-react"
+import {
+  ChevronDown as ChevronDownIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import { Button } from "@workspace/ui/components/button"

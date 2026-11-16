@@ -13,10 +13,10 @@ import {
 } from "@workspace/ui/components/tabs"
 
 export default function UnsavedChangesTabs() {
-  const [store, setStore] = React.useState("Kettle & Crumb")
-  const [email, setEmail] = React.useState("hello@kettlecrumb.shop")
-  const storeDirty = store !== "Kettle & Crumb"
-  const emailDirty = email !== "hello@kettlecrumb.shop"
+  const [store, setStore] = React.useState("Designali")
+  const [email, setEmail] = React.useState("hello@designali.com")
+  const storeDirty = store !== "Designali"
+  const emailDirty = email !== "hello@designali.com"
 
   return (
     <Tabs defaultValue="store" className="w-full max-w-sm">
@@ -56,8 +56,8 @@ export default function UnsavedChangesTabs() {
           size="sm"
           disabled={!storeDirty && !emailDirty}
           onClick={() => {
-            setStore("Kettle & Crumb")
-            setEmail("hello@kettlecrumb.shop")
+            setStore("Designali")
+            setEmail("hello@designali.com")
           }}
         >
           Discard

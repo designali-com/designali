@@ -16,33 +16,33 @@ import { cn } from "@workspace/ui/lib/utils"
 const pages = [
   [
     {
-      author: "Rhea Kapoor",
+      author: "Rhea",
       time: "2h ago",
-      body: "The new export flow is so much faster.",
+      body: "The new icon search on designali.com is so much faster.",
     },
     {
-      author: "Dario Mendes",
+      author: "Dario",
       time: "3h ago",
-      body: "Can we get CSV headers localized too?",
+      body: "Can we get Figma files for the landing pages too?",
     },
   ],
   [
     {
-      author: "Hana Sato",
+      author: "Hana",
       time: "Yesterday",
-      body: "Filed the date-format bug on the tracker.",
+      body: "Filed a dark mode issue on the pricing block.",
     },
     {
-      author: "Owen Brandt",
+      author: "Owen",
       time: "Yesterday",
-      body: "Thanks for shipping the dark mode fix!",
+      body: "Thanks for shipping the Apple device mockups!",
     },
   ],
   [
     {
-      author: "Lucia Romero",
+      author: "Lucia",
       time: "2 days ago",
-      body: "First! Looking forward to the beta.",
+      body: "First! Looking forward to the next template drop.",
     },
   ],
 ]

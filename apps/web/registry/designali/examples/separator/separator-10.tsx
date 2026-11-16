@@ -9,7 +9,7 @@ export default function SiteFooterSeparators() {
     <footer className="flex w-full max-w-md flex-col gap-4">
       <Separator />
       <div className="flex flex-wrap items-center justify-between gap-3 text-xs text-muted-foreground">
-        <span>&copy; 2026 Fieldnote Labs</span>
+        <span>&copy; 2026 Designali</span>
         <nav className="flex h-3.5 items-center gap-3">
           {links.map((link, index) => (
             <React.Fragment key={link}>

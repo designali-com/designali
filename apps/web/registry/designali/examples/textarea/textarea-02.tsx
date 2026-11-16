@@ -9,8 +9,8 @@ export function TextareaField() {
   return (
     <Field>
       <FieldLabel htmlFor="textarea-message">Message</FieldLabel>
-      <FieldDescription>Enter your message below.</FieldDescription>
-      <Textarea id="textarea-message" placeholder="Type your message here." />
+      <FieldDescription>Tell us what Designali should design or build.</FieldDescription>
+      <Textarea id="textarea-message" placeholder="Tell Designali about your project." />
     </Field>
   )
 }

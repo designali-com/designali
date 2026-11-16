@@ -1,6 +1,12 @@
-import { CircleDotIcon } from "lucide-react"
+import {
+  CircleDot as CircleDotIcon,
+} from "@designali/icons"
 
-import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from "@workspace/ui/components/avatar"
 import { Badge } from "@workspace/ui/components/badge"
 import {
   HoverCard,
@@ -27,7 +33,7 @@ export default function IssueReferenceHoverCard() {
                 Session expires while editing a long form
               </p>
               <p className="text-muted-foreground">
-                #482 opened 3 days ago by tomas.r
+                #482 opened 3 days ago by designali
               </p>
               <div className="flex flex-wrap gap-1">
                 <Badge variant="destructive">bug</Badge>
@@ -36,9 +42,10 @@ export default function IssueReferenceHoverCard() {
               </div>
               <div className="flex items-center gap-1.5 text-muted-foreground">
                 <Avatar size="sm">
-                  <AvatarFallback>EH</AvatarFallback>
+                  <AvatarImage src="/ali.jpg" alt="Ali Imam" />
+            <AvatarFallback>AI</AvatarFallback>
                 </Avatar>
-                Assigned to Elif Hansen
+                Assigned to Ali Imam
               </div>
             </div>
           </div>

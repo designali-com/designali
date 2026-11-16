@@ -13,7 +13,7 @@ export default function LabelWithForgotLink() {
           Forgot password?
         </a>
       </div>
-      <Input id="login-password" type="password" defaultValue="hunter-2-tide" />
+      <Input id="login-password" type="password" defaultValue="designali-2-code" />
     </div>
   )
 }

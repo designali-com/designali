@@ -1,9 +1,9 @@
 import {
-  ClipboardPasteIcon,
-  CopyIcon,
-  ScissorsIcon,
-  TrashIcon,
-} from "lucide-react"
+  ClipboardPaste as ClipboardPasteIcon,
+  Copy as CopyIcon,
+  Scissors as ScissorsIcon,
+  Trash as TrashIcon,
+} from "@designali/icons"
 
 import {
   ContextMenu,

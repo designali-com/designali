@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { FocusIcon, SpellCheckIcon } from "lucide-react"
+import {
+  Focus as FocusIcon,
+  SpellCheck as SpellCheckIcon,
+} from "@designali/icons"
 
 import { Toggle } from "@workspace/ui/components/toggle"
 import {

@@ -73,7 +73,7 @@ export default function ExpenseCategorySelectField() {
             id="exp-note"
             rows={2}
             className="resize-none"
-            placeholder="Client dinner with Brightside team"
+            placeholder="Figma license for Designali studio"
           />
           <FieldDescription>Required for expenses over $100.</FieldDescription>
         </Field>

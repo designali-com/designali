@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { CircleIcon, SquareIcon } from "lucide-react"
+import {
+  Circle as CircleIcon,
+  Square as SquareIcon,
+} from "@designali/icons"
 
 import { Toggle } from "@workspace/ui/components/toggle"
 import { cn } from "@workspace/ui/lib/utils"

@@ -1,4 +1,6 @@
-import { ArrowRightIcon } from "lucide-react"
+import {
+  ArrowRight as ArrowRightIcon,
+} from "@designali/icons"
 
 import {
   NavigationMenu,
@@ -12,12 +14,12 @@ import {
 import { cn } from "@workspace/ui/lib/utils"
 
 const apps = [
-  { name: "Ledgerly", color: "bg-emerald-500" },
-  { name: "Chatterbox", color: "bg-violet-500" },
-  { name: "Taskflow", color: "bg-sky-500" },
-  { name: "Mailroom", color: "bg-rose-500" },
-  { name: "Drivebox", color: "bg-amber-500" },
-  { name: "Formly", color: "bg-teal-500" },
+  { name: "Figma", color: "bg-emerald-500" },
+  { name: "Vercel", color: "bg-violet-500" },
+  { name: "GitHub", color: "bg-sky-500" },
+  { name: "Notion", color: "bg-rose-500" },
+  { name: "Stripe", color: "bg-amber-500" },
+  { name: "Cursor", color: "bg-teal-500" },
 ]
 
 export default function IntegrationsDirectoryNav() {

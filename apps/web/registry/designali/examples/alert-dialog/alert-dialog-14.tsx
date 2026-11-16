@@ -1,4 +1,7 @@
-import { FolderIcon, FolderXIcon } from "lucide-react"
+import {
+  Folder as FolderIcon,
+  FolderX as FolderXIcon,
+} from "@designali/icons"
 
 import {
   AlertDialog,
@@ -21,7 +24,7 @@ export default function DeleteFolderDialog() {
         <FolderIcon className="size-4" />
       </div>
       <div className="min-w-0 flex-1">
-        <p className="text-sm font-medium">Brand assets</p>
+        <p className="text-sm font-medium">Designali brand assets</p>
         <p className="text-xs text-muted-foreground">38 files - 214 MB</p>
       </div>
       <AlertDialog>
@@ -38,7 +41,7 @@ export default function DeleteFolderDialog() {
               <FolderXIcon />
             </AlertDialogMedia>
             <AlertDialogTitle>
-              Delete &quot;Brand assets&quot;?
+              Delete &quot;Designali brand assets&quot;?
             </AlertDialogTitle>
             <AlertDialogDescription>
               The folder and its 38 files will move to Trash and be permanently

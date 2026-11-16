@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { SquareCheckIcon, SquareIcon } from "lucide-react"
+import {
+  SquareCheck as SquareCheckIcon,
+  Square as SquareIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import {

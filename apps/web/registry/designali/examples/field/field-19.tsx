@@ -1,4 +1,6 @@
-import { KeyRoundIcon } from "lucide-react"
+import {
+  KeyRound as KeyRoundIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -23,7 +25,7 @@ export default function SignInWithSeparator() {
         <FieldSeparator>Or continue with email</FieldSeparator>
         <Field>
           <FieldLabel htmlFor="signin-email">Email</FieldLabel>
-          <Input id="signin-email" type="email" placeholder="you@studio.com" />
+          <Input id="signin-email" type="email" placeholder="ali@designali.com" />
         </Field>
         <Field>
           <div className="flex items-center justify-between">

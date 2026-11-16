@@ -4,11 +4,11 @@ import { Button } from "@workspace/ui/components/button"
 import * as React from "react"
 
 const images = [
-  { src: "/img/hero-1.jpg", alt: "Hero 1" },
-  { src: "/img/chat-1-light.jpg", alt: "Chat UI" },
-  { src: "/img/hero-2.jpg", alt: "Hero 2" },
-  { src: "/img/dashboard-1-dark.jpg", alt: "Dashboard" },
-  { src: "/img/login-1.jpg", alt: "Login Screen" },
+  { src: "/img/hero-1.jpg", alt: "Designali hero template" },
+  { src: "/img/chat-1-light.jpg", alt: "Designali chat UI design" },
+  { src: "/img/hero-2.jpg", alt: "Designali landing page" },
+  { src: "/img/dashboard-1-dark.jpg", alt: "Designali dashboard UI" },
+  { src: "/img/login-1.jpg", alt: "Designali login screen" },
 ]
 
 function createCSS(id: string) {
@@ -48,14 +48,14 @@ export function HeroSection() {
             <div className="relative z-10 flex flex-col items-center justify-center pt-10">
               <div className="select-none text-center">
                 <h1 className="text-4xl md:text-7xl font-medium tracking-tighter">
-                  Ideas into impact <br /> Design with AI
+                  Design se code tak <br /> Designali
                 </h1>
               </div>
 
               <p className="mt-10 max-w-xl lowercase px-6 text-center text-sm leading-6 text-muted-foreground">
-                WE BUILD BOLD BRANDS, DIGITAL EXPERIENCES,
-                AND VISUAL SYSTEMS DESIGNED TO MAKE AN IMPACT.
-                STRATEGY, CREATIVITY, AND TECHNOLOGY - IN ONE PLACE.
+                WHERE THOUGHTFUL DESIGN MEETS PRODUCTION-READY CODE.
+                BRAND IDENTITY, UI/UX DESIGN, WEBSITES AND DIGITAL
+                PRODUCTS — DESIGNED AND BUILT BY DESIGNALI.
               </p>
 
               <div className="mt-8 flex flex-wrap items-center justify-center gap-3">

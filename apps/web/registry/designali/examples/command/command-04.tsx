@@ -1,11 +1,11 @@
 import {
-  CalendarIcon,
-  FileTextIcon,
-  KanbanIcon,
-  MailIcon,
-  PlusIcon,
-  UserPlusIcon,
-} from "lucide-react"
+  Calendar as CalendarIcon,
+  FileText as FileTextIcon,
+  Kanban as KanbanIcon,
+  Mail as MailIcon,
+  Plus as PlusIcon,
+  UserPlus as UserPlusIcon,
+} from "@designali/icons"
 
 import {
   Command,
@@ -35,18 +35,18 @@ export default function InlineAppLauncher() {
           </CommandItem>
           <CommandItem>
             <FileTextIcon />
-            <span>Docs</span>
+            <span>Designali Docs</span>
           </CommandItem>
           <CommandItem>
             <KanbanIcon />
-            <span>Boards</span>
+            <span>Project boards</span>
           </CommandItem>
         </CommandGroup>
         <CommandSeparator />
         <CommandGroup heading="Quick actions">
           <CommandItem>
             <PlusIcon />
-            <span>New document</span>
+            <span>New client brief</span>
             <CommandShortcut>⌘N</CommandShortcut>
           </CommandItem>
           <CommandItem>

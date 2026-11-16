@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { TicketIcon } from "lucide-react"
+import {
+  Ticket as TicketIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -30,7 +32,7 @@ export default function CouponCodeInput() {
       <div className="flex gap-2">
         <Input
           id="coupon"
-          placeholder="SPRING20"
+          placeholder="DESIGNALI20"
           value={code}
           aria-invalid={result?.ok === false}
           onChange={(e) => {

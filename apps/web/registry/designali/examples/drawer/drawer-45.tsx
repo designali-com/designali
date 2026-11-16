@@ -1,7 +1,12 @@
 "use client"
 
 import * as React from "react"
-import { LockIcon, WifiHighIcon, WifiIcon, WifiLowIcon } from "lucide-react"
+import {
+  Lock as LockIcon,
+  WifiHigh as WifiHighIcon,
+  Wifi as WifiIcon,
+  WifiLow as WifiLowIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -17,9 +22,9 @@ import { Input } from "@workspace/ui/components/input"
 import { cn } from "@workspace/ui/lib/utils"
 
 const networks = [
-  { ssid: "Hearth-5G", signal: "high", secured: true },
-  { ssid: "Hearth-Guest", signal: "medium", secured: false },
-  { ssid: "Café Borealis", signal: "medium", secured: true },
+  { ssid: "Designali-5G", signal: "high", secured: true },
+  { ssid: "Designali-Guest", signal: "medium", secured: false },
+  { ssid: "Studio-Lounge", signal: "medium", secured: true },
   { ssid: "Printer-3F", signal: "low", secured: true },
 ]
 

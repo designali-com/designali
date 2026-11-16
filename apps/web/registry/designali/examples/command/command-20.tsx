@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { GitBranchIcon, GitBranchPlusIcon } from "lucide-react"
+import {
+  GitBranch as GitBranchIcon,
+  GitBranchPlus as GitBranchPlusIcon,
+} from "@designali/icons"
 
 import {
   Command,
@@ -14,13 +17,13 @@ import {
 
 const branches = [
   { name: "main", meta: "default" },
-  { name: "feat/billing-portal", meta: "2 days ago" },
-  { name: "fix/session-timeout", meta: "5 hours ago" },
-  { name: "chore/upgrade-deps", meta: "last week" },
+  { name: "feat/icons-v2", meta: "2 days ago" },
+  { name: "fix/blocks-preview", meta: "5 hours ago" },
+  { name: "chore/update-templates", meta: "last week" },
 ]
 
 export default function GitBranchSwitcher() {
-  const [current, setCurrent] = React.useState("feat/billing-portal")
+  const [current, setCurrent] = React.useState("feat/icons-v2")
   const [query, setQuery] = React.useState("")
 
   return (

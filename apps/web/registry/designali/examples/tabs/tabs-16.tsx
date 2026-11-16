@@ -1,4 +1,6 @@
-import { HashIcon } from "lucide-react"
+import {
+  Hash as HashIcon,
+} from "@designali/icons"
 
 import {
   Avatar,
@@ -13,9 +15,9 @@ import {
 } from "@workspace/ui/components/tabs"
 
 const dms = [
-  { name: "Priya Anand", last: "Sounds good, ship it!", online: true },
-  { name: "Tomas Berg", last: "Can we sync at 3?", online: false },
-  { name: "Lea Fournier", last: "Uploaded the new mocks", online: true },
+  { name: "Ali Imam", last: "Sounds good, ship the new blocks!", online: true },
+  { name: "Sara Khan", last: "Can we sync on the client brief at 3?", online: false },
+  { name: "Omar Ali", last: "Uploaded the new Designali mockups", online: true },
 ]
 
 export default function ChatSidebarTabs() {

@@ -1,4 +1,6 @@
-import { ChevronDownIcon } from "lucide-react"
+import {
+  ChevronDown as ChevronDownIcon,
+} from "@designali/icons"
 
 import {
   Accordion,
@@ -10,18 +12,18 @@ import {
 const questions = [
   {
     value: "trial",
-    q: "Do I need a card to start the trial?",
-    a: "No. The 14 day trial starts without any payment details.",
+    q: "Are there free Designali blocks?",
+    a: "Yes. Many blocks and all icons are free to copy from designali.com — no card needed.",
   },
   {
     value: "switch",
     q: "Can I switch plans later?",
-    a: "Upgrade or downgrade any time. We prorate the difference on your next invoice.",
+    a: "Upgrade or downgrade any time from designali.com/pricing. We prorate the difference.",
   },
   {
     value: "discount",
-    q: "Do you offer nonprofit pricing?",
-    a: "Registered nonprofits get 50% off any paid plan. Contact us with your registration number.",
+    q: "Can I hire Designali for a custom project?",
+    a: "Yes. Ali and the studio take on brand, UI/UX and Next.js projects — email hello@designali.com.",
   },
 ]
 

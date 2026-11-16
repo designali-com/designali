@@ -1,15 +1,19 @@
 "use client"
 
 import { useState } from "react"
-import { ArrowUpRight, Check, Copy } from "lucide-react"
+import {
+  ArrowUpRight,
+  Check,
+  Copy,
+} from "@designali/icons"
 
-const EMAIL = "studio@halcyonworks.co"
+const EMAIL = "hello@designali.com"
 
 const socials = [
-  { label: "Instagram", handle: "@halcyonworks", href: "#" },
-  { label: "LinkedIn", handle: "Halcyon Works", href: "#" },
-  { label: "Dribbble", handle: "halcyon", href: "#" },
-  { label: "Read.cv", handle: "halcyon.works", href: "#" },
+  { label: "Instagram", handle: "@designali.code", href: "https://www.instagram.com/designali.code/" },
+  { label: "X", handle: "@designali_com", href: "https://x.com/designali_com" },
+  { label: "LinkedIn", handle: "Designali", href: "https://www.linkedin.com/company/designali-com/" },
+  { label: "21st.dev", handle: "@designali-in", href: "https://21st.dev/@designali-in" },
 ]
 
 export default function Contact06() {
@@ -36,7 +40,7 @@ export default function Contact06() {
           Say hello.
         </h2>
         <p className="mt-4 max-w-md text-muted-foreground">
-          No forms, no funnels. Write to us directly and a designer, not a
+          No forms, no funnels. Write to us directly and Ali Imam, not a
           salesperson, will reply.
         </p>
 

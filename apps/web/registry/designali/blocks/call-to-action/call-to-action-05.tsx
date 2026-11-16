@@ -1,4 +1,6 @@
-import { ArrowUpRight } from "lucide-react"
+import {
+  ArrowUpRight,
+} from "@designali/icons"
 
 const paths = [
   {
@@ -27,8 +29,8 @@ export default function CallToAction05() {
             Pick the way you want to work with us.
           </h2>
           <p className="max-w-sm text-sm text-muted-foreground">
-            Every engagement starts with a 30-minute call. No decks, no
-            pressure.
+            Every Designali engagement starts with a 30-minute call with Ali
+            Imam. No decks, no pressure.
           </p>
         </div>
         <div className="mt-12 grid border-t border-l border-border md:grid-cols-3">

@@ -1,4 +1,6 @@
-import { SparkleIcon } from "lucide-react"
+import {
+  Sparkle as SparkleIcon,
+} from "@designali/icons"
 
 import { Separator } from "@workspace/ui/components/separator"
 
@@ -6,8 +8,8 @@ export default function IconCenteredDivider() {
   return (
     <div className="flex w-full max-w-sm flex-col gap-4 text-center">
       <p className="text-sm text-muted-foreground italic">
-        &ldquo;The best tool is the one your team actually opens every
-        morning.&rdquo;
+        &ldquo;I design and build digital experiences that look great, feel
+        intuitive, and work beautifully.&rdquo;
       </p>
       <div className="flex items-center gap-3">
         <Separator className="flex-1" />
@@ -15,7 +17,7 @@ export default function IconCenteredDivider() {
         <Separator className="flex-1" />
       </div>
       <span className="text-xs text-muted-foreground">
-        Rosa Delgado, Head of Ops at Lumen Labs
+        Ali Imam, Founder of Designali
       </span>
     </div>
   )

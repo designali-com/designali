@@ -26,7 +26,7 @@ export default function ServiceStatusTooltips() {
     <TooltipProvider>
       <div className="flex w-full max-w-sm flex-col gap-2">
         <div className="flex justify-between text-sm">
-          <span className="font-medium">API Gateway</span>
+          <span className="font-medium">designali.com</span>
           <span className="text-muted-foreground">99.91% uptime</span>
         </div>
         <div className="flex h-8 gap-0.5">

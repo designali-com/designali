@@ -1,7 +1,12 @@
 "use client"
 
 import { useState } from "react"
-import { Check, Eye, EyeOff, KeyRound } from "lucide-react"
+import {
+  Check,
+  Eye,
+  EyeOff,
+  KeyRound,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Input } from "@workspace/ui/components/input"
@@ -28,7 +33,7 @@ export default function Authentication05() {
         <KeyRound className="size-6" />
         <h2 className="mt-6 text-3xl font-semibold tracking-tight">Set a new password</h2>
         <p className="mt-2 text-sm text-muted-foreground">
-          Choose something you haven&apos;t used on this account before.
+          Choose something you haven&apos;t used on your Designali account before.
         </p>
 
         <form className="mt-8 space-y-5">

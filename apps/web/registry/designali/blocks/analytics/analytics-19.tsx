@@ -1,7 +1,11 @@
 "use client"
 
 import { useMemo, useState } from "react"
-import { ArrowDown, ArrowUp, ChevronsUpDown } from "lucide-react"
+import {
+  ArrowDown,
+  ArrowUp,
+  ChevronsUpDown,
+} from "@designali/icons"
 
 import { cn } from "@workspace/ui/lib/utils"
 
@@ -15,12 +19,12 @@ type Row = {
 }
 
 const rows: Row[] = [
-  { name: "Inkwell Forms", owner: "Studio Parallel", installs: 18420, rating: 4.8, revenue: 42300, trend: [4, 5, 5, 6, 7, 8, 9] },
-  { name: "Quietmail", owner: "Low Tide Labs", installs: 12980, rating: 4.6, revenue: 31750, trend: [6, 6, 7, 6, 7, 7, 8] },
-  { name: "Ledgerline", owner: "Brightfold", installs: 9340, rating: 4.9, revenue: 58900, trend: [3, 4, 4, 5, 6, 6, 7] },
-  { name: "Shiftboard", owner: "Northpaw", installs: 21760, rating: 4.2, revenue: 19400, trend: [9, 8, 8, 7, 7, 6, 6] },
-  { name: "Pixel Tally", owner: "Orchard Works", installs: 6210, rating: 4.7, revenue: 12800, trend: [2, 2, 3, 3, 4, 5, 6] },
-  { name: "Docket AI", owner: "Fieldstone", installs: 15530, rating: 4.4, revenue: 37600, trend: [5, 6, 6, 6, 7, 6, 7] },
+  { name: "Portfolio Simple", owner: "Designali", installs: 18420, rating: 4.8, revenue: 42300, trend: [4, 5, 5, 6, 7, 8, 9] },
+  { name: "Design Agency", owner: "Designali", installs: 12980, rating: 4.6, revenue: 31750, trend: [6, 6, 7, 6, 7, 7, 8] },
+  { name: "Resort", owner: "Designali", installs: 9340, rating: 4.9, revenue: 58900, trend: [3, 4, 4, 5, 6, 6, 7] },
+  { name: "Designali Icons", owner: "Designali", installs: 21760, rating: 4.2, revenue: 19400, trend: [9, 8, 8, 7, 7, 6, 6] },
+  { name: "Dalim UI", owner: "Ali Imam", installs: 6210, rating: 4.7, revenue: 12800, trend: [2, 2, 3, 3, 4, 5, 6] },
+  { name: "AI Template", owner: "Designali", installs: 15530, rating: 4.4, revenue: 37600, trend: [5, 6, 6, 6, 7, 6, 7] },
 ]
 
 type SortKey = "installs" | "rating" | "revenue"
@@ -75,12 +79,12 @@ export default function Analytics19() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="mb-8 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
           <div>
-            <h2 className="text-2xl font-medium tracking-tight md:text-3xl">Marketplace leaderboard</h2>
+            <h2 className="text-2xl font-medium tracking-tight md:text-3xl">Templates leaderboard</h2>
             <p className="mt-1 text-sm text-muted-foreground">
-              Top Plotline integrations, last 30 days. Click a column to sort.
+              Top Designali templates, last 30 days. Click a column to sort.
             </p>
           </div>
-          <span className="text-xs text-muted-foreground">{rows.length} apps</span>
+          <span className="text-xs text-muted-foreground">{rows.length} templates</span>
         </div>
 
         <div className="overflow-x-auto border">
@@ -88,7 +92,7 @@ export default function Analytics19() {
             <thead className="border-b bg-muted/50 text-xs text-muted-foreground">
               <tr>
                 <th className="w-12 px-4 py-3 text-left font-medium">#</th>
-                <th className="px-4 py-3 text-left font-medium">App</th>
+                <th className="px-4 py-3 text-left font-medium">Template</th>
                 {columns.map((c) => {
                   const on = sort.key === c.key
                   return (

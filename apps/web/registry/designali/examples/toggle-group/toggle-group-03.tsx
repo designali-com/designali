@@ -1,9 +1,9 @@
 import {
-  AlignCenterIcon,
-  AlignJustifyIcon,
-  AlignLeftIcon,
-  AlignRightIcon,
-} from "lucide-react"
+  TextAlignCenter as AlignCenterIcon,
+  TextAlignJustify as AlignJustifyIcon,
+  TextAlignStart as AlignLeftIcon,
+  TextAlignEnd as AlignRightIcon,
+} from "@designali/icons"
 
 import {
   ToggleGroup,

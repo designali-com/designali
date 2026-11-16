@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { ArrowUpIcon, SparklesIcon } from "lucide-react"
+import {
+  ArrowUp as ArrowUpIcon,
+  Sparkles as SparklesIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -23,7 +26,7 @@ export default function AiPromptInput() {
         </InputGroupAddon>
         <InputGroupInput
           aria-label="Ask the assistant"
-          placeholder="Summarize last week's support tickets..."
+          placeholder="Summarize last week's Designali support tickets..."
           value={prompt}
           onChange={(e) => setPrompt(e.target.value)}
         />

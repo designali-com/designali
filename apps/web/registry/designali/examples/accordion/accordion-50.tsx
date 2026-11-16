@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { ChevronDownIcon, CircleCheckIcon } from "lucide-react"
+import {
+  ChevronDown as ChevronDownIcon,
+  CircleCheck as CircleCheckIcon,
+} from "@designali/icons"
 
 import {
   Accordion,
@@ -13,8 +16,8 @@ import { Button } from "@workspace/ui/components/button"
 import { Spinner } from "@workspace/ui/components/spinner"
 
 const sections = [
-  { value: "contacts", title: "Contacts", count: "2,481" },
-  { value: "deals", title: "Deals", count: "318" },
+  { value: "contacts", title: "Clients", count: "2,481" },
+  { value: "deals", title: "Projects", count: "318" },
   { value: "notes", title: "Notes", count: "1,067" },
 ]
 

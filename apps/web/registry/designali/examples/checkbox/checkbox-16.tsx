@@ -1,4 +1,6 @@
-import { LockIcon } from "lucide-react"
+import {
+  Lock as LockIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import { Checkbox } from "@workspace/ui/components/checkbox"
@@ -42,7 +44,7 @@ export default function DisabledWithUpgradeTooltip() {
                   </Badge>
                 }
               />
-              <TooltipContent>Available on the Pro plan</TooltipContent>
+              <TooltipContent>Available on the Designali Pro plan</TooltipContent>
             </Tooltip>
           )}
         </Field>

@@ -1,22 +1,24 @@
-import { ArrowRight } from "lucide-react"
+import {
+  ArrowRight,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 
 const work = [
-  "Saltmarsh Wines",
-  "Quillfeather",
-  "Brightwater Trust",
-  "Hollow Oak Games",
-  "Copperline Rail",
-  "Ember Bakery",
-  "Fernhill Observatory",
+  "Dalim",
+  "Dalim Agency",
+  "Dalim Fonts",
+  "Dalim Graphic",
+  "Dalim Icons",
+  "Dalim UI",
+  "Dalim Visuals",
 ]
 
 const stats = [
-  { value: "12", label: "Years in practice" },
-  { value: "186", label: "Projects shipped" },
-  { value: "31", label: "Industry awards" },
-  { value: "94%", label: "Clients who return" },
+  { value: "460+", label: "Blocks shipped" },
+  { value: "240+", label: "Landing pages" },
+  { value: "2300+", label: "UI designs" },
+  { value: "4000+", label: "Icons" },
 ]
 
 export default function Portfolio12() {
@@ -25,10 +27,10 @@ export default function Portfolio12() {
       <div className="mx-auto max-w-6xl px-6">
         <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
           <p className="max-w-md text-sm text-background/70">
-            Ostra is an independent design practice. We work with founders and
-            cultural institutions on identity, digital products and print.
+            Designali is a design and development studio by Ali Imam. We work on
+            brand identity, UI/UX, websites and digital products — design se code tak.
           </p>
-          <Button variant="secondary" nativeButton={false} render={<a href="#" />}>
+          <Button variant="secondary" nativeButton={false} render={<a href="/work" />}>
             View full portfolio
             <ArrowRight />
           </Button>

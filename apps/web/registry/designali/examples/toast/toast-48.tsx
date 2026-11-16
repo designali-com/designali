@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { ZapIcon } from "lucide-react"
+import {
+  Zap as ZapIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Input } from "@workspace/ui/components/input"
@@ -11,7 +13,7 @@ import { Toaster, createToastManager } from "@workspace/ui/components/toast"
 const notify = createToastManager()
 
 export default function WebhookTestToast() {
-  const [url, setUrl] = React.useState("https://hooks.example.dev/orders")
+  const [url, setUrl] = React.useState("https://www.designali.com/api/webhooks/orders")
 
   function test() {
     const ms = 80 + Math.round(Math.random() * 200)

@@ -1,7 +1,11 @@
 "use client"
 
 import { useState } from "react"
-import { ChevronDown, ChevronsDownUp, ChevronsUpDown } from "lucide-react"
+import {
+  ChevronDown,
+  ChevronsDownUp,
+  ChevronsUpDown,
+} from "@designali/icons"
 
 import {
   Accordion,

@@ -20,10 +20,10 @@ import {
 } from "@workspace/ui/components/table"
 
 const users = [
-  { name: "Ava Lindqvist", role: "Owner", status: "Active" },
-  { name: "Ben Okafor", role: "Admin", status: "Active" },
-  { name: "Chloe Martin", role: "Member", status: "Invited" },
-  { name: "Dev Raman", role: "Member", status: "Suspended" },
+  { name: "Ali Imam", role: "Owner", status: "Active" },
+  { name: "Ben", role: "Admin", status: "Active" },
+  { name: "Chloe", role: "Member", status: "Invited" },
+  { name: "Dev", role: "Member", status: "Suspended" },
 ]
 
 export default function TableWithInspector() {

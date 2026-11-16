@@ -1,4 +1,6 @@
-import { Play } from "lucide-react"
+import {
+  Play,
+} from "@designali/icons"
 
 const videos = [
   {

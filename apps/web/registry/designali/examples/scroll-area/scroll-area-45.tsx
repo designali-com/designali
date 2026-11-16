@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { CheckIcon } from "lucide-react"
+import {
+  Check as CheckIcon,
+} from "@designali/icons"
 
 import { ScrollArea } from "@workspace/ui/components/scroll-area"
 import { cn } from "@workspace/ui/lib/utils"

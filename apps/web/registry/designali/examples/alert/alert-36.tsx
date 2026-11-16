@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { PencilIcon } from "lucide-react"
+import {
+  Pencil as PencilIcon,
+} from "@designali/icons"
 
 import {
   Alert,
@@ -12,7 +14,7 @@ import { Button } from "@workspace/ui/components/button"
 import { Label } from "@workspace/ui/components/label"
 import { Textarea } from "@workspace/ui/components/textarea"
 
-const initial = "Weekly product updates for the Atlas team."
+const initial = "Weekly Designali updates: new blocks, templates and icons."
 
 export default function AlertUnsavedChanges() {
   const [saved, setSaved] = React.useState(initial)

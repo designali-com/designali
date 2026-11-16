@@ -7,7 +7,7 @@ import {
 import { cn } from "@workspace/ui/lib/utils"
 
 const palette = [
-  { name: "ink-900", hex: "#111827", className: "bg-[#111827]" },
+  { name: "designali-ink", hex: "#111827", className: "bg-[#111827]" },
   { name: "slate-500", hex: "#64748B", className: "bg-[#64748B]" },
   { name: "coral-400", hex: "#FB7185", className: "bg-[#FB7185]" },
   { name: "mint-300", hex: "#6EE7B7", className: "bg-[#6EE7B7]" },

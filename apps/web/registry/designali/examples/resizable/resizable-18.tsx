@@ -1,4 +1,9 @@
-import { FrameIcon, ShapesIcon, SquareIcon, TypeIcon } from "lucide-react"
+import {
+  Frame as FrameIcon,
+  Shapes as ShapesIcon,
+  Square as SquareIcon,
+  Type as TypeIcon,
+} from "@designali/icons"
 
 import { Input } from "@workspace/ui/components/input"
 import {

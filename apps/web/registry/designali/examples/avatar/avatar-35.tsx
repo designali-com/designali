@@ -1,4 +1,7 @@
-import { CalendarIcon, MessageSquareIcon } from "lucide-react"
+import {
+  Calendar as CalendarIcon,
+  MessageSquare as MessageSquareIcon,
+} from "@designali/icons"
 
 import {
   Avatar,
@@ -22,18 +25,18 @@ export default function KanbanTaskAssignees() {
           <Badge variant="secondary">Design</Badge>
           <Badge variant="outline">P2</Badge>
         </div>
-        <CardTitle className="mt-1">Redesign onboarding checklist</CardTitle>
+        <CardTitle className="mt-1">Redesign Designali templates page</CardTitle>
         <CardDescription>
-          Simplify steps and add progress hints for new teams.
+          Simplify the grid and add filters for templates, blocks and UI designs.
         </CardDescription>
       </CardHeader>
       <CardContent className="flex items-center justify-between">
         <AvatarGroup>
           <Avatar size="sm">
-            <AvatarFallback>VP</AvatarFallback>
+            <AvatarFallback>AI</AvatarFallback>
           </Avatar>
           <Avatar size="sm">
-            <AvatarFallback>CE</AvatarFallback>
+            <AvatarFallback>SA</AvatarFallback>
           </Avatar>
         </AvatarGroup>
         <div className="flex items-center gap-3 text-xs text-muted-foreground">

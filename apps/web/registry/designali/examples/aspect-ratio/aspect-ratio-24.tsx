@@ -10,22 +10,22 @@ export default function SocialSharePreview() {
         <div className="absolute inset-0 flex flex-col justify-between p-5 text-white">
           <div className="flex items-center gap-2 text-xs font-semibold">
             <span className="size-4 bg-linear-to-br from-lime-300 to-emerald-500" />
-            Fieldnote
+            designali
           </div>
           <p className="text-xl leading-tight font-semibold text-balance">
-            Ship your changelog in five minutes
+            Where thoughtful design meets production-ready code
           </p>
         </div>
       </AspectRatio>
       <div className="border-t bg-muted/40 p-3">
         <p className="text-[10px] tracking-wide text-muted-foreground uppercase">
-          fieldnote.dev
+          designali.com
         </p>
         <p className="truncate text-sm font-medium">
-          Changelogs your users actually read
+          Designali — design se code tak
         </p>
         <p className="truncate text-xs text-muted-foreground">
-          Write once, publish to email, in-app and your site.
+          Brand identity, UI/UX design and production-ready websites.
         </p>
       </div>
     </div>

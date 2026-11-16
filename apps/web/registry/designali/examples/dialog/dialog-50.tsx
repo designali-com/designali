@@ -1,10 +1,10 @@
 import {
-  LogOutIcon,
-  MicIcon,
-  MonitorUpIcon,
-  PhoneOffIcon,
-  VideoIcon,
-} from "lucide-react"
+  LogOut as LogOutIcon,
+  Mic as MicIcon,
+  MonitorUp as MonitorUpIcon,
+  PhoneOff as PhoneOffIcon,
+  Video as VideoIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -39,7 +39,7 @@ export default function LeaveMeetingDialog() {
         </DialogTrigger>
         <DialogContent className="sm:max-w-xs">
           <DialogHeader>
-            <DialogTitle>Leave &quot;Sprint planning&quot;?</DialogTitle>
+            <DialogTitle>Leave &quot;Designali client kickoff&quot;?</DialogTitle>
             <DialogDescription>
               You&apos;re the host. 6 people are still in the call.
             </DialogDescription>

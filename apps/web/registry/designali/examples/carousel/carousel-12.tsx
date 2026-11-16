@@ -13,15 +13,15 @@ import {
 
 const categories = [
   "All",
-  "Design",
-  "Engineering",
-  "Marketing",
-  "Sales",
-  "Support",
-  "Finance",
-  "People",
-  "Legal",
-  "Operations",
+  "Templates",
+  "Blocks",
+  "Landing pages",
+  "UI Designs",
+  "Icons",
+  "Logos",
+  "Illustrations",
+  "Components",
+  "Mockups",
 ]
 
 export default function CategoryChipScroller() {

@@ -2,10 +2,10 @@ import { Typewriter } from "@/registry/designali/ui/typewriter"
 
 export default function DemoOne() {
   const words = [
-    "Welcome to Typewriter",
-    "Create beautiful effects",
-    "With React & Tailwind",
-    "Type away!",
+    "Welcome to designali",
+    "Thoughtful digital experiences",
+    "Built with Next.js & Tailwind",
+    "design se code tak",
   ]
 
   return (

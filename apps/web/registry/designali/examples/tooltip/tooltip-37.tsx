@@ -1,9 +1,9 @@
 import {
-  Link2Icon,
-  MailIcon,
-  MessageCircleIcon,
-  QrCodeIcon,
-} from "lucide-react"
+  Link2 as Link2Icon,
+  Mail as MailIcon,
+  MessageCircle as MessageCircleIcon,
+  QrCode as QrCodeIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -25,7 +25,7 @@ export default function ShareActionTooltips() {
     <TooltipProvider>
       <div className="flex w-full max-w-xs flex-col gap-3 border p-4">
         <span className="text-sm font-medium">
-          Share &quot;Trip to Lisbon&quot;
+          Share &quot;Designali Templates&quot;
         </span>
         <div className="flex gap-2">
           {actions.map((a) => (

@@ -78,7 +78,7 @@ export default function AccentBorderToasts() {
           onClick={() =>
             notify.add({
               type: "error",
-              title: "Webhook failed",
+              title: "designali.com webhook failed",
               description: "Endpoint returned 502.",
             })
           }

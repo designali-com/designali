@@ -1,7 +1,13 @@
 "use client"
 
 import { useState } from "react"
-import { ArrowRight, KeySquare, LifeBuoy, Mail, MessageSquareText } from "lucide-react"
+import {
+  ArrowRight,
+  KeySquare,
+  LifeBuoy,
+  Mail,
+  MessageSquareText,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { cn } from "@workspace/ui/lib/utils"
@@ -11,7 +17,7 @@ const methods = [
     id: "email",
     icon: Mail,
     title: "Email a reset link",
-    detail: "To r*****@quarry.dev",
+    detail: "To a*****@designali.com",
     eta: "Usually under a minute",
   },
   {
@@ -32,7 +38,7 @@ const methods = [
     id: "admin",
     icon: LifeBuoy,
     title: "Ask your workspace admin",
-    detail: "Quarry Labs admins can reset your access",
+    detail: "Designali studio admins can reset your access",
     eta: "Depends on your admin",
   },
 ]

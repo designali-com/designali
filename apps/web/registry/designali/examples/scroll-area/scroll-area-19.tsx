@@ -1,17 +1,17 @@
 import { ScrollArea } from "@workspace/ui/components/scroll-area"
 
 const steps = [
-  "Create your workspace",
+  "Create your designali account",
   "Invite your team",
-  "Connect your calendar",
-  "Import existing projects",
+  "Install @designali/icons",
+  "Pick a template",
   "Set up notifications",
   "Choose a theme",
-  "Install the desktop app",
+  "Install @designali/logos",
   "Enable two-factor auth",
   "Configure billing",
-  "Create your first report",
-  "Share a dashboard",
+  "Ship your first block",
+  "Deploy to Vercel",
   "Explore integrations",
 ]
 

@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { PanelLeftIcon, PanelRightIcon } from "lucide-react"
+import {
+  PanelLeft as PanelLeftIcon,
+  PanelRight as PanelRightIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -39,7 +42,7 @@ export default function DualCollapsiblePanels() {
         >
           <PanelLeftIcon />
         </Button>
-        <span className="text-xs font-medium">landing-page.fig</span>
+        <span className="text-xs font-medium">designali-landing-page.fig</span>
         <Button
           size="icon-sm"
           variant="ghost"

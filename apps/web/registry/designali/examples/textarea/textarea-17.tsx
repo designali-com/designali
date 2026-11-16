@@ -1,7 +1,11 @@
 "use client"
 
 import * as React from "react"
-import { ArrowUpIcon, PlusIcon, SparklesIcon } from "lucide-react"
+import {
+  ArrowUp as ArrowUpIcon,
+  Plus as PlusIcon,
+  Sparkles as SparklesIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import {
@@ -35,7 +39,7 @@ export default function AIPromptTextarea() {
               submit()
             }
           }}
-          placeholder="Ask anything about your sales data…"
+          placeholder="Ask anything about Designali blocks and templates…"
           className="min-h-20"
         />
         <InputGroupAddon align="block-end">
@@ -48,7 +52,7 @@ export default function AIPromptTextarea() {
           </InputGroupButton>
           <Badge variant="secondary">
             <SparklesIcon />
-            Quill 2
+            Designali AI
           </Badge>
           <InputGroupText className="ms-auto">
             <KbdGroup>

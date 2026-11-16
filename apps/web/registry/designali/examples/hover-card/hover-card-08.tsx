@@ -1,4 +1,7 @@
-import { ClockIcon, MapPinIcon } from "lucide-react"
+import {
+  Clock as ClockIcon,
+  MapPin as MapPinIcon,
+} from "@designali/icons"
 
 import {
   Avatar,
@@ -16,22 +19,22 @@ const events = [
   {
     title: "Design critique",
     time: "10:00 – 10:45",
-    room: "Room Atlas",
-    people: ["NK", "RB", "TS"],
+    room: "Designali studio",
+    people: ["AI", "BD", "SD"],
     color: "bg-blue-500/15 border-blue-500",
   },
   {
-    title: "Sprint planning",
+    title: "Client kickoff",
     time: "13:00 – 14:00",
     room: "Zoom",
-    people: ["AP", "JW"],
+    people: ["AI", "SD"],
     color: "bg-emerald-500/15 border-emerald-500",
   },
   {
-    title: "1:1 with Priya",
+    title: "1:1 with Ali",
     time: "16:30 – 17:00",
     room: "Café corner",
-    people: ["PD"],
+    people: ["AI"],
     color: "bg-amber-500/15 border-amber-500",
   },
 ]

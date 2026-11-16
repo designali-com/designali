@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { ClipboardPasteIcon } from "lucide-react"
+import {
+  ClipboardPaste as ClipboardPasteIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {

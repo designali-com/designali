@@ -1,6 +1,8 @@
 "use client"
 
-import { FolderIcon } from "lucide-react"
+import {
+  Folder as FolderIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -15,16 +17,16 @@ import {
 } from "@workspace/ui/components/combobox"
 
 const projects = [
-  "Website refresh",
-  "Mobile app v2",
-  "Brand guidelines",
-  "Customer portal",
-  "Internal tools",
+  "designali.com refresh",
+  "Templates v2",
+  "Brand identity",
+  "Icons library",
+  "Dalim UI",
 ]
 
 export default function MoveToProjectButton() {
   return (
-    <Combobox items={projects} defaultValue="Mobile app v2">
+    <Combobox items={projects} defaultValue="Templates v2">
       <ComboboxTrigger
         render={
           <Button

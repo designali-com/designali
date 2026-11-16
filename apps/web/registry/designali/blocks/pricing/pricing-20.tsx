@@ -1,7 +1,9 @@
 "use client"
 
 import { useState } from "react"
-import { Activity } from "lucide-react"
+import {
+  Activity,
+} from "@designali/icons"
 
 import { Input } from "@workspace/ui/components/input"
 import { cn } from "@workspace/ui/lib/utils"

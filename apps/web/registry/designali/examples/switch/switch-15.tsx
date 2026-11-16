@@ -25,7 +25,7 @@ export default function AutoReplySwitch() {
       {enabled && (
         <Textarea
           aria-label="Auto-reply message"
-          defaultValue="Thanks for your note! I'm away until Monday, Dec 2 with limited access to email. For urgent issues, reach Priya Raman."
+          defaultValue="Thanks for reaching out to Designali! I'm away until Monday, Dec 2 with limited access to email. For urgent project questions, write to hello@designali.com. - Ali Imam"
           className="min-h-24"
         />
       )}

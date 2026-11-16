@@ -1,22 +1,29 @@
 "use client"
 
 import { useState } from "react"
-import { Heart, Minus, Plus, RotateCcw, Star, Truck } from "lucide-react"
+import {
+  Heart,
+  Minus,
+  Plus,
+  RotateCcw,
+  Star,
+  Truck,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { cn } from "@workspace/ui/lib/utils"
 
 const colors = [
-  { name: "Oat", value: "#d8cbb3" },
-  { name: "Slate", value: "#5b6470" },
-  { name: "Moss", value: "#5f6f4e" },
+  { name: "Light", value: "#e5e7eb" },
+  { name: "Dark", value: "#1f2937" },
+  { name: "Designali Blue", value: "#00A8FF" },
 ]
 
-const sizes = ["XS", "S", "M", "L", "XL"]
+const sizes = ["Solo", "Pro", "Team", "Studio", "Agency"]
 
 export default function Ecommerce02() {
   const [color, setColor] = useState(colors[0]?.name ?? "")
-  const [size, setSize] = useState("M")
+  const [size, setSize] = useState("Pro")
   const [quantity, setQuantity] = useState(1)
   const [view, setView] = useState(0)
   const swatch = colors.find((c) => c.name === color)?.value
@@ -50,21 +57,21 @@ export default function Ecommerce02() {
 
         <div>
           <p className="text-xs tracking-widest text-muted-foreground uppercase">
-            Outerwear
+            Templates
           </p>
           <h2 className="mt-2 text-3xl font-medium tracking-tight md:text-4xl">
-            Quilted Liner Jacket
+            Design Agency Template
           </h2>
           <div className="mt-3 flex items-center gap-3 text-sm">
-            <span className="text-2xl">$189</span>
+            <span className="text-2xl">$79</span>
             <span className="flex items-center gap-1 text-muted-foreground">
               <Star className="size-4 fill-current text-amber-500" />
               4.8 · 326 reviews
             </span>
           </div>
           <p className="mt-6 leading-7 text-muted-foreground">
-            A lightweight layer filled with recycled insulation. Wear it alone in
-            early autumn or under a shell when the temperature drops.
+            A Next.js, React and Tailwind CSS template with a matching Figma file.
+            Launch a studio site in a day and customise every block.
           </p>
 
           <div className="mt-8">
@@ -90,9 +97,9 @@ export default function Ecommerce02() {
 
           <div className="mt-6">
             <div className="flex items-center justify-between text-sm">
-              <span>Size</span>
+              <span>License</span>
               <a href="#" className="text-xs text-muted-foreground underline underline-offset-4">
-                Size guide
+                Compare licenses
               </a>
             </div>
             <div className="mt-3 grid grid-cols-5 border-t border-l border-border">
@@ -133,11 +140,11 @@ export default function Ecommerce02() {
           <ul className="mt-8 divide-y divide-border border-y border-border text-sm">
             <li className="flex items-center gap-3 py-3">
               <Truck className="size-4 text-muted-foreground" />
-              Free shipping on orders over $150
+              Instant download after checkout
             </li>
             <li className="flex items-center gap-3 py-3">
               <RotateCcw className="size-4 text-muted-foreground" />
-              Free returns and exchanges for 30 days
+              Free updates for 12 months
             </li>
           </ul>
         </div>

@@ -1,14 +1,16 @@
 "use client"
 
 import { useState } from "react"
-import { ArrowRight } from "lucide-react"
+import {
+  ArrowRight,
+} from "@designali/icons"
 
 const works = [
-  { title: "Interval No. 3", artist: "Mara Lindqvist", medium: "Oil on linen", year: "2024", price: "$8,400", gradient: "linear-gradient(135deg, var(--chart-1), var(--chart-5))" },
-  { title: "Field Recording", artist: "Tomas Ehrle", medium: "Cyanotype", year: "2023", price: "$2,100", gradient: "linear-gradient(200deg, var(--chart-2), var(--chart-3))" },
-  { title: "A Room Facing North", artist: "Odile Marchetti", medium: "Gouache", year: "2025", price: "$3,650", gradient: "linear-gradient(60deg, var(--chart-4), var(--chart-2))" },
-  { title: "Soft Infrastructure", artist: "Kenji Arao", medium: "Archival pigment print", year: "2024", price: "$1,800", gradient: "linear-gradient(170deg, var(--chart-3), var(--chart-1))" },
-  { title: "Untitled (Ochre)", artist: "Femi Adeyemi", medium: "Acrylic on panel", year: "2025", price: "$5,900", gradient: "linear-gradient(300deg, var(--chart-5), var(--chart-4))" },
+  { title: "Portfolio Simple", artist: "Ali Imam", medium: "Next.js template", year: "2025", price: "$49", gradient: 'url("/images/templates/portfolio-simple.jpg") center / cover' },
+  { title: "Design Agency", artist: "Ali Imam", medium: "Agency template", year: "2025", price: "$79", gradient: 'url("/images/templates/design-agency.jpg") center / cover' },
+  { title: "Resort", artist: "Ali Imam", medium: "Landing page", year: "2025", price: "$49", gradient: 'url("/images/templates/resort.jpg") center / cover' },
+  { title: "AI", artist: "Ali Imam", medium: "SaaS template", year: "2024", price: "$79", gradient: 'url("/images/templates/ai.jpg") center / cover' },
+  { title: "Vercel Style", artist: "Ali Imam", medium: "Product template", year: "2024", price: "$59", gradient: 'url("/images/templates/vercel.jpg") center / cover' },
 ]
 
 export default function Gallery15() {
@@ -21,13 +23,13 @@ export default function Gallery15() {
         <div className="flex flex-wrap items-end justify-between gap-4 border-b border-border pb-6">
           <div>
             <p className="text-xs tracking-widest text-muted-foreground uppercase">
-              Available works
+              Available templates
             </p>
             <h2 className="mt-2 text-3xl font-semibold tracking-tight md:text-4xl">
-              Spring catalogue
+              Designali templates
             </h2>
           </div>
-          <p className="text-sm text-muted-foreground">Gallery Sorrel - 5 works</p>
+          <p className="text-sm text-muted-foreground">Designali - 5 templates</p>
         </div>
         <div className="grid gap-10 lg:grid-cols-[1.4fr_1fr]">
           <ul className="divide-y divide-border">

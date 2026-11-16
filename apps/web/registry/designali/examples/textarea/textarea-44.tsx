@@ -15,7 +15,7 @@ export default function CustomCssTextarea() {
         <div>
           <Label htmlFor="css-switch">Custom CSS</Label>
           <p className="text-xs text-muted-foreground">
-            Applied to your public help center only.
+            Applied to your Designali docs pages only.
           </p>
         </div>
         <Switch

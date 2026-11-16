@@ -11,28 +11,28 @@ import {
 const orders = [
   {
     id: "#3210",
-    customer: "Olivia Martin",
+    customer: "Sara Khan",
     date: "Nov 12",
     status: "Fulfilled",
     total: 129.0,
   },
   {
     id: "#3209",
-    customer: "Jackson Lee",
+    customer: "Omar Ali",
     date: "Nov 12",
     status: "Processing",
     total: 39.5,
   },
   {
     id: "#3208",
-    customer: "Isabella Nguyen",
+    customer: "Priya Shah",
     date: "Nov 11",
     status: "Refunded",
     total: 299.0,
   },
   {
     id: "#3207",
-    customer: "William Kim",
+    customer: "Daniel Roy",
     date: "Nov 10",
     status: "Fulfilled",
     total: 74.25,

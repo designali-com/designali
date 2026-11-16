@@ -27,11 +27,11 @@ export default function Analytics09() {
               Retention
             </p>
             <h2 className="mt-2 text-3xl font-medium tracking-tight">
-              Monthly cohorts are sticking longer
+              Designali Pro members are sticking longer
             </h2>
             <p className="mt-4 text-sm leading-6 text-muted-foreground">
-              Since the guided onboarding launched in July, month-one retention
-              has climbed from 72% to 83%. Each row is the share of a signup
+              Since the new /docs onboarding launched in July, month-one retention
+              has climbed from 72% to 83%. Each row is the share of a Designali Pro
               cohort still active after N months.
             </p>
             <dl className="mt-8 grid grid-cols-2 gap-px border bg-border">
@@ -51,7 +51,7 @@ export default function Analytics09() {
               <thead>
                 <tr className="border-b bg-muted/50 text-muted-foreground">
                   <th className="px-3 py-3 text-left font-medium">Cohort</th>
-                  <th className="px-3 py-3 text-right font-medium">Users</th>
+                  <th className="px-3 py-3 text-right font-medium">Members</th>
                   {Array.from({ length: periods }, (_, i) => (
                     <th key={i} className="px-1 py-3 text-center font-medium">
                       M{i}

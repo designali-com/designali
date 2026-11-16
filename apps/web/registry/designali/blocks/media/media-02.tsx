@@ -1,10 +1,12 @@
-import { Play } from "lucide-react"
+import {
+  Play,
+} from "@designali/icons"
 
 const chapters = [
   { time: "00:00", title: "Why design systems fail" },
   { time: "04:12", title: "Tokens before components" },
-  { time: "11:38", title: "Shipping in public" },
-  { time: "18:05", title: "Q&A with the team" },
+  { time: "11:38", title: "Design se code tak" },
+  { time: "18:05", title: "Q&A with Ali Imam" },
 ]
 
 export default function Media02() {
@@ -30,10 +32,10 @@ export default function Media02() {
         </div>
         <div className="flex flex-col">
           <p className="text-xs tracking-widest text-muted-foreground uppercase">
-            Keynote
+            Designali talk
           </p>
           <h2 className="mt-3 text-2xl font-semibold tracking-tight">
-            Building systems that outlive the team that made them
+            Building design systems that ship as production-ready code
           </h2>
           <ol className="mt-6 divide-y divide-border border-y border-border">
             {chapters.map((chapter) => (

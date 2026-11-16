@@ -16,7 +16,7 @@ export default function ShippingAddressInputs() {
           <Input
             id="ship-name"
             autoComplete="name"
-            placeholder="Jordan Ellis"
+            placeholder="Ali Imam"
           />
         </Field>
         <Field className="col-span-2">

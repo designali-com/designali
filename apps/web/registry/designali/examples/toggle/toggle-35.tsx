@@ -7,10 +7,10 @@ import { Toggle } from "@workspace/ui/components/toggle"
 import { cn } from "@workspace/ui/lib/utils"
 
 const items = [
-  { text: "Lea commented on Brand refresh", unread: true },
-  { text: "Your export finished", unread: false },
-  { text: "Sam requested access to Q4 plan", unread: true },
-  { text: "Weekly summary is ready", unread: false },
+  { text: "Ali commented on Designali brand refresh", unread: true },
+  { text: "Your icon export finished", unread: false },
+  { text: "A client requested access to the Figma file", unread: true },
+  { text: "Weekly studio summary is ready", unread: false },
 ]
 
 export default function UnreadOnlyBadgeToggle() {

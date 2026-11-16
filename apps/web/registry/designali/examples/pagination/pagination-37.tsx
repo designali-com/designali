@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { SearchIcon } from "lucide-react"
+import {
+  Search as SearchIcon,
+} from "@designali/icons"
 
 import {
   InputGroup,
@@ -16,20 +18,20 @@ import {
 } from "@workspace/ui/components/pagination"
 
 const people = [
-  "Ava Lindqvist",
-  "Ben Osei",
-  "Cara Novak",
-  "Dev Malhotra",
-  "Eli Brooks",
-  "Fatima Zahir",
-  "Gus Moreau",
-  "Hiro Tanaka",
-  "Isla Grant",
-  "Jae Park",
-  "Kira Volkov",
-  "Liam Doyle",
-  "Mina Rahimi",
-  "Nico Bauer",
+  "Ali Imam",
+  "Ben",
+  "Cara",
+  "Dev",
+  "Eli",
+  "Fatima",
+  "Gus",
+  "Hiro",
+  "Isla",
+  "Jae",
+  "Kira",
+  "Liam",
+  "Mina",
+  "Nico",
 ]
 
 const PAGE_SIZE = 4
@@ -50,7 +52,7 @@ export default function FilteredListPagination() {
           <SearchIcon />
         </InputGroupAddon>
         <InputGroupInput
-          placeholder="Filter teammates"
+          placeholder="Filter Designali teammates"
           value={query}
           onChange={(event) => {
             setQuery(event.target.value)

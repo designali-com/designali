@@ -1,5 +1,8 @@
 /* eslint-disable react/jsx-key */
-import { Minus, Plus } from "lucide-react"
+import {
+  Minus,
+  Plus,
+} from "@designali/icons"
 
 import { cn } from "@workspace/ui/lib/utils"
 import {

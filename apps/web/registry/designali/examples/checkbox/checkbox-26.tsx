@@ -1,14 +1,18 @@
 "use client"
 
 import * as React from "react"
-import { CalendarIcon, EyeIcon, EyeOffIcon } from "lucide-react"
+import {
+  Calendar as CalendarIcon,
+  Eye as EyeIcon,
+  EyeOff as EyeOffIcon,
+} from "@designali/icons"
 
 import { Checkbox } from "@workspace/ui/components/checkbox"
 import { cn } from "@workspace/ui/lib/utils"
 
 const calendars = [
   {
-    name: "Work",
+    name: "Designali studio",
     tone: "border-chart-1 data-checked:border-chart-1 data-checked:bg-chart-1",
   },
   {
@@ -16,7 +20,7 @@ const calendars = [
     tone: "border-chart-2 data-checked:border-chart-2 data-checked:bg-chart-2",
   },
   {
-    name: "Team offsite",
+    name: "Client projects",
     tone: "border-chart-3 data-checked:border-chart-3 data-checked:bg-chart-3",
   },
   {
@@ -27,7 +31,7 @@ const calendars = [
 
 export default function CalendarVisibilityList() {
   const [visible, setVisible] = React.useState<string[]>([
-    "Work",
+    "Designali studio",
     "Personal",
     "Holidays",
   ])

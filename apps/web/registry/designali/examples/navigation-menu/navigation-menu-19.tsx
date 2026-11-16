@@ -1,4 +1,6 @@
-import { TicketIcon } from "lucide-react"
+import {
+  Ticket as TicketIcon,
+} from "@designali/icons"
 
 import {
   NavigationMenu,
@@ -15,14 +17,14 @@ const days = [
   {
     day: "Day 1 · Mar 12",
     sessions: [
-      { time: "09:30", title: "Opening keynote" },
+      { time: "09:30", title: "Ali Imam: Design se code tak" },
       { time: "11:00", title: "Design tokens at scale" },
     ],
   },
   {
     day: "Day 2 · Mar 13",
     sessions: [
-      { time: "10:00", title: "Edge rendering in practice" },
+      { time: "10:00", title: "Shipping Designali blocks with Next.js" },
       { time: "14:30", title: "Closing panel" },
     ],
   },

@@ -1,7 +1,11 @@
 "use client"
 
 import * as React from "react"
-import { CopyPlusIcon, PaletteIcon, TrashIcon } from "lucide-react"
+import {
+  CopyPlus as CopyPlusIcon,
+  Palette as PaletteIcon,
+  Trash as TrashIcon,
+} from "@designali/icons"
 
 import {
   ContextMenu,
@@ -46,10 +50,10 @@ export default function CalendarEventMenu() {
         >
           <span className="flex items-center gap-1.5 font-medium">
             <span className={cn("size-2 rounded-full", active.className)} />
-            Quarterly business review
+            Designali client kickoff
           </span>
           <span className="text-muted-foreground">
-            10:00 – 11:30 · Room Kestrel
+            10:00 – 11:30 · Studio call
           </span>
           <span className="text-muted-foreground capitalize">RSVP: {rsvp}</span>
         </ContextMenuTrigger>

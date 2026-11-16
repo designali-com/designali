@@ -1,10 +1,10 @@
 import {
-  ChartPieIcon,
-  FolderKanbanIcon,
-  HouseIcon,
-  InboxIcon,
-  SettingsIcon,
-} from "lucide-react"
+  ChartPie as ChartPieIcon,
+  FolderKanban as FolderKanbanIcon,
+  House as HouseIcon,
+  Inbox as InboxIcon,
+  Settings as SettingsIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {

@@ -1,7 +1,10 @@
 "use client"
 
 import { useState } from "react"
-import { ArrowRight, MessageCircle } from "lucide-react"
+import {
+  ArrowRight,
+  MessageCircle,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { cn } from "@workspace/ui/lib/utils"

@@ -1,4 +1,9 @@
-import { DownloadIcon, FileIcon, PencilIcon, Trash2Icon } from "lucide-react"
+import {
+  Download as DownloadIcon,
+  File as FileIcon,
+  Pencil as PencilIcon,
+  Trash2 as Trash2Icon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -9,8 +14,8 @@ import {
 } from "@workspace/ui/components/tooltip"
 
 const files = [
-  { name: "Invoice-0423.pdf", size: "184 KB" },
-  { name: "Team-photo.png", size: "2.1 MB" },
+  { name: "Designali-Invoice-0423.pdf", size: "184 KB" },
+  { name: "Designali-hero.png", size: "2.1 MB" },
 ]
 
 export default function FileRowActionTooltips() {

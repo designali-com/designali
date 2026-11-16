@@ -1,23 +1,23 @@
 import {
-  CircleCheckIcon,
-  CircleXIcon,
-  ClockIcon,
-  GitBranchIcon,
-} from "lucide-react"
+  CircleCheck as CircleCheckIcon,
+  CircleX as CircleXIcon,
+  Clock as ClockIcon,
+  GitBranch as GitBranchIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import { Spinner } from "@workspace/ui/components/spinner"
 
 const deployments = [
   { branch: "main", commit: "a1f9c2e", status: "Ready", time: "2m ago" },
-  { branch: "feat/search", commit: "77be310", status: "Building", time: "Now" },
+  { branch: "feat/templates", commit: "77be310", status: "Building", time: "Now" },
   {
-    branch: "fix/auth-loop",
+    branch: "fix/icons-export",
     commit: "c03d8aa",
     status: "Failed",
     time: "18m ago",
   },
-  { branch: "chore/deps", commit: "5e2b1f4", status: "Queued", time: "Now" },
+  { branch: "chore/blocks", commit: "5e2b1f4", status: "Queued", time: "Now" },
 ]
 
 export default function DeploymentStatusList() {

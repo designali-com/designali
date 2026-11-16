@@ -20,7 +20,7 @@ export default function ChartPanelWide() {
       <div className="mb-3 flex items-baseline justify-between">
         <div>
           <p className="text-xs text-muted-foreground">
-            Monthly recurring revenue
+            designali.com template revenue
           </p>
           <p className="text-xl font-semibold tabular-nums">$92.4k</p>
         </div>

@@ -9,8 +9,8 @@ const days = Array.from({ length: 30 }, (_, i) => i + 1)
 const events = [
   { time: "09:00", title: "Standup", tone: "bg-sky-500" },
   { time: "11:30", title: "Design review", tone: "bg-violet-500" },
-  { time: "14:00", title: "Customer call - Hollow Pine", tone: "bg-amber-500" },
-  { time: "16:30", title: "1:1 with Mateo", tone: "bg-emerald-500" },
+  { time: "14:00", title: "Client call - brand identity", tone: "bg-amber-500" },
+  { time: "16:30", title: "Design crit with Ali", tone: "bg-emerald-500" },
 ]
 
 export default function CalendarAgendaSplit() {

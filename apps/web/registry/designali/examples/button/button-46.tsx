@@ -1,4 +1,8 @@
-import { CopyIcon, PencilIcon, Trash2Icon } from "lucide-react"
+import {
+  Copy as CopyIcon,
+  Pencil as PencilIcon,
+  Trash2 as Trash2Icon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {

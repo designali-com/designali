@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { CrownIcon } from "lucide-react"
+import {
+  Crown as CrownIcon,
+} from "@designali/icons"
 
 import {
   AlertDialog,
@@ -26,9 +28,9 @@ import {
 
 const admins = [
   { value: null, label: "Choose an admin" },
-  { value: "amara", label: "Amara Osei" },
-  { value: "tomas", label: "Tomas Lindqvist" },
-  { value: "keiko", label: "Keiko Tanaka" },
+  { value: "ali", label: "Ali Imam" },
+  { value: "sara", label: "Sara Khan" },
+  { value: "zaid", label: "Zaid Ahmed" },
 ]
 
 export default function TransferOwnershipSelect() {
@@ -42,7 +44,7 @@ export default function TransferOwnershipSelect() {
       </AlertDialogTrigger>
       <AlertDialogContent>
         <AlertDialogHeader>
-          <AlertDialogTitle>Transfer workspace ownership</AlertDialogTitle>
+          <AlertDialogTitle>Transfer Designali workspace ownership</AlertDialogTitle>
           <AlertDialogDescription>
             The new owner gets full billing and admin control. You&apos;ll
             become an admin.

@@ -8,9 +8,9 @@ import {
 } from "@workspace/ui/components/resizable"
 
 const columns = [
-  { title: "To do", tasks: ["Audit onboarding emails", "Draft pricing FAQ"] },
-  { title: "In progress", tasks: ["Billing page redesign", "Webhook retries"] },
-  { title: "Done", tasks: ["SSO for Teams plan"] },
+  { title: "To do", tasks: ["Audit icon naming", "Draft Designali pricing FAQ"] },
+  { title: "In progress", tasks: ["Portfolio template redesign", "Logos package release"] },
+  { title: "Done", tasks: ["Apple device mockups"] },
 ]
 
 export default function KanbanResizableColumns() {

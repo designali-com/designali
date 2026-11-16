@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { TvIcon } from "lucide-react"
+import {
+  Tv as TvIcon,
+} from "@designali/icons"
 
 import { Calendar } from "@workspace/ui/components/calendar"
 import {
@@ -20,7 +22,7 @@ export default function BroadcastMonthCalendar() {
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
           <TvIcon className="size-4 text-muted-foreground" />
-          Campaign flight
+          Designali launch campaign
         </CardTitle>
         <CardDescription>
           Broadcast months always start on a Monday.

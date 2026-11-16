@@ -15,7 +15,7 @@ export default function CardFooterActionsSeparator() {
       <CardHeader>
         <CardTitle>Delete project</CardTitle>
         <CardDescription>
-          Removing Orbit CRM deletes 14 environments and all deployment history.
+          Removing Dalim Works deletes 14 environments and all deployment history.
         </CardDescription>
       </CardHeader>
       <CardContent className="text-sm text-muted-foreground">

@@ -11,66 +11,66 @@ import {
   Shapes,
   Sparkles,
   Wand,
-} from "lucide-react"
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 
 const navLinks = ["Work", "About", "Services", "Writing", "Contact"]
 
 const logos = [
-  "Orchard",
-  "Waypoint",
-  "Kindred",
-  "Lumen Bank",
-  "Studio Kiln",
-  "Parcel",
-  "Moonrise",
-  "Fable Health",
+  "Dalim Agency",
+  "Dalim Works",
+  "designali.com",
+  "Dalim UI",
+  "Dalim Fonts",
+  "Dalim Icons",
+  "Dalim Visuals",
+  "Dalim Tools",
 ]
 
 const features = [
   {
     icon: Code,
-    title: "Front-end development",
+    title: "Web development",
     description:
-      "Production-ready React and TypeScript, with accessible components and smooth interactions.",
+      "Production-ready Next.js, React and TypeScript, with accessible components and smooth interactions.",
   },
   {
     icon: Shapes,
     title: "Brand identity",
     description:
-      "Logos, typography and colour systems for early-stage companies finding their voice.",
+      "Logos, typography and colour systems for studios and startups finding their voice.",
   },
   {
     icon: LayoutTemplate,
     title: "Design systems",
     description:
-      "Reusable component libraries in Figma and code that keep products consistent as they grow.",
+      "Reusable component libraries in Figma and code, like the blocks and UI on designali.com.",
   },
   {
     icon: Search,
-    title: "User research",
+    title: "CGI, 3D & motion",
     description:
-      "Interviews, usability tests and analytics reviews that ground design decisions in evidence.",
+      "Product renders, motion loops and visuals that make launches and landing pages stand out.",
   },
   {
     icon: Wand,
     title: "Prototyping",
     description:
-      "Interactive prototypes that let you test ideas with customers and investors before building.",
+      "Interactive prototypes that let you test ideas with customers before building.",
   },
   {
     icon: Presentation,
     title: "Workshops",
     description:
-      "Facilitated sessions to align teams on vision, priorities and the problems worth solving.",
+      "Focused sessions to align teams on vision, priorities and the problems worth solving.",
   },
 ]
 
 const stats = [
-  { value: "60+", label: "Products shipped" },
-  { value: "12", label: "Startups helped to launch" },
-  { value: "4", label: "Design awards" },
+  { value: "50+", label: "Projects shipped" },
+  { value: "10+", label: "Product libraries launched" },
+  { value: "4", label: "Icon and logo libraries" },
   { value: "100%", label: "Projects delivered on time" },
 ]
 
@@ -99,67 +99,73 @@ const steps = [
 
 const showcase = [
   {
-    name: "Kindred",
-    meta: "Mobile app for family caregivers",
+    name: "designali.com",
+    meta: "Templates, blocks, UI and icons",
     tag: "Product",
     price: "2025",
     tile: "bg-gradient-to-br from-stone-200 via-neutral-300 to-zinc-400 dark:from-stone-700 dark:via-neutral-800 dark:to-zinc-900",
+    image: "/images/templates/design-agency.jpg",
   },
   {
-    name: "Lumen Bank",
-    meta: "Onboarding redesign for a neobank",
-    tag: "UX",
+    name: "Dalim UI",
+    meta: "Component library for React",
+    tag: "UI",
     price: "2025",
     tile: "bg-gradient-to-br from-rose-200 via-pink-300 to-purple-300 dark:from-rose-700 dark:via-pink-800 dark:to-purple-900",
+    image: "/images/templates/dalim-ui-old.jpg",
   },
   {
-    name: "Studio Kiln",
-    meta: "Identity and site for a ceramics studio",
-    tag: "Brand",
+    name: "Dalim Fonts",
+    meta: "Type and lettering experiments",
+    tag: "Type",
     price: "2024",
     tile: "bg-gradient-to-br from-blue-200 via-indigo-300 to-violet-400 dark:from-blue-700 dark:via-indigo-800 dark:to-violet-900",
+    image: "/images/templates/dalim-fonts-old.jpg",
   },
   {
-    name: "Parcel",
-    meta: "Design system for a logistics platform",
-    tag: "System",
+    name: "Dalim Icons",
+    meta: "Icon system for products",
+    tag: "Icons",
     price: "2024",
     tile: "bg-gradient-to-br from-yellow-100 via-amber-200 to-orange-300 dark:from-yellow-700 dark:via-amber-800 dark:to-orange-900",
+    image: "/images/templates/dalim-icons-old.jpg",
   },
   {
-    name: "Waypoint",
-    meta: "Trip planning web app",
+    name: "Dalim Works",
+    meta: "Portfolio and studio site",
     tag: "Web",
     price: "2023",
     tile: "bg-gradient-to-br from-amber-200 via-orange-300 to-rose-400 dark:from-amber-700 dark:via-orange-800 dark:to-rose-900",
+    image: "/images/templates/dalim-works-old.jpg",
   },
   {
-    name: "Moonrise",
-    meta: "Sleep tracking dashboard",
-    tag: "Data",
+    name: "Dalim Visuals",
+    meta: "CGI and 3D visual series",
+    tag: "CGI",
     price: "2023",
     tile: "bg-gradient-to-br from-sky-200 via-cyan-300 to-teal-400 dark:from-sky-700 dark:via-cyan-800 dark:to-teal-900",
+    image: "/images/templates/dalim-visuals-old.jpg",
   },
 ]
 
 const testimonials = [
   {
     quote:
-      "Clear communication, thoughtful questions and pixel-perfect delivery. I would hire them again tomorrow.",
-    name: "James O'Neill",
-    role: "Product Lead, Waypoint",
+      "Clear communication, thoughtful questions and pixel-perfect delivery. I would hire Ali again tomorrow.",
+    name: "James",
+    role: "Product lead, Designali client",
   },
   {
     quote:
-      "They took our messy MVP and turned it into something investors immediately understood. We closed our seed round a month later.",
-    name: "Aisha Bello",
-    role: "CEO, Fable Health",
+      "Ali took our messy MVP and turned it into something our users immediately understood. Launch week went smoothly.",
+    name: "Aisha",
+    role: "Founder, early-stage startup",
   },
   {
     quote:
-      "The design system they built is still the backbone of our app two years later. Every new hire loves it.",
-    name: "Pedro Alves",
-    role: "Engineering Manager, Parcel",
+      "The design system Ali built is still the backbone of our product. Every new teammate picks it up in a day.",
+    name: "Pedro",
+    role: "Engineering manager, Designali client",
   },
 ]
 
@@ -185,7 +191,7 @@ const tiers = [
     features: [
       "Discovery and strategy",
       "Full visual design",
-      "Production front-end code",
+      "Next.js front-end code",
       "Two rounds of revisions",
       "30 days of support",
     ],
@@ -199,7 +205,7 @@ const tiers = [
     features: [
       "Two days per week",
       "Design and code",
-      "Slack access",
+      "Shared Slack channel",
       "Pause or cancel any time",
     ],
     cta: "Check availability",
@@ -213,15 +219,15 @@ const faqs = [
   },
   {
     q: "Do you work with agencies?",
-    a: "Yes, I regularly collaborate with agencies as a white-label designer or front-end developer.",
+    a: "Yes, I regularly collaborate with agencies as a designer and front-end developer.",
   },
   {
     q: "Which tools do you use?",
-    a: "Figma for design, React, Next.js and Tailwind CSS for code, and Linear or Notion to keep projects organised.",
+    a: "Figma for design, Next.js, React, TypeScript and Tailwind CSS for code, and Vercel for deployment.",
   },
   {
     q: "Can you work in my time zone?",
-    a: "I am based in Lisbon and overlap comfortably with both European and US East Coast working hours.",
+    a: "I work remotely with clients across time zones and schedule calls at hours that suit both sides.",
   },
   {
     q: "How do payments work?",
@@ -231,7 +237,7 @@ const faqs = [
 
 const footer = [
   { title: "Sitemap", links: ["Work", "About", "Services", "Writing"] },
-  { title: "Elsewhere", links: ["Dribbble", "GitHub", "LinkedIn", "Read.cv"] },
+  { title: "Elsewhere", links: ["Instagram", "X", "LinkedIn", "21st.dev"] },
   {
     title: "Contact",
     links: ["Email me", "Book a call", "Newsletter", "Resume"],
@@ -246,7 +252,7 @@ export default function LandingPortfolio02() {
           href="#"
           className="inline-flex items-center gap-1.5 hover:underline"
         >
-          My open-source motion library just passed 5k stars
+          460+ blocks and 2300+ UI examples now live on designali.com
           <ArrowRight className="size-3.5" />
         </a>
       </div>
@@ -259,7 +265,7 @@ export default function LandingPortfolio02() {
             <span className="flex size-7 items-center justify-center rounded-md bg-emerald-600 text-white text-sm">
               N
             </span>
-            <span className="">Noah Park</span>
+            <span className="">Ali Imam</span>
           </a>
           <nav className="hidden items-center gap-7 text-sm md:flex">
             {navLinks.map((link) => (
@@ -302,7 +308,7 @@ export default function LandingPortfolio02() {
               </span>
             </h1>
             <p className="max-w-xl text-lg leading-8 text-muted-foreground">
-              I am Noah, a front-end developer specialising in motion, WebGL and
+              I am Ali Imam, a design engineer building motion, interactive UI and
               design systems for brands that care about craft.
             </p>
             <div className="flex flex-wrap gap-3 ">
@@ -316,7 +322,7 @@ export default function LandingPortfolio02() {
                 nativeButton={false}
                 render={<a href="#" />}
               >
-                View GitHub
+                View 21st.dev
               </Button>
             </div>
             <div className="flex flex-wrap gap-x-8 gap-y-3 pt-2">
@@ -341,7 +347,7 @@ export default function LandingPortfolio02() {
       <section className="border-b">
         <div className="mx-auto max-w-7xl px-6 py-12">
           <p className="text-center text-sm text-muted-foreground">
-            Previously worked with
+            Projects I have built
           </p>
           <div className="mt-8 grid grid-cols-2 items-center gap-x-8 gap-y-6 sm:grid-cols-4 lg:grid-cols-8">
             {logos.map((logo) => (
@@ -365,8 +371,8 @@ export default function LandingPortfolio02() {
               Design and code from first sketch to shipped product
             </h2>
             <p className="mt-4 text-lg leading-8 text-muted-foreground">
-              I help founders and teams turn fuzzy ideas into products people
-              enjoy using, handling everything from research to production code.
+              I design and build digital experiences that look great, feel intuitive
+              and work beautifully, handling everything from brand to production code.
             </p>
           </div>
           <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -420,7 +426,7 @@ export default function LandingPortfolio02() {
                 Selected projects
               </h2>
               <p className="mt-4 text-lg leading-8 text-muted-foreground">
-                A handful of recent projects I am proud of. Full case studies
+                From designali.com to the Dalim projects that came before it. Full case studies
                 are available on request.
               </p>
             </div>
@@ -439,6 +445,7 @@ export default function LandingPortfolio02() {
                 <div
                   className={`relative aspect-[4/3] overflow-hidden rounded-2xl ${item.tile}`}
                 >
+                  <img src={item.image} alt={item.name} className="absolute inset-0 size-full object-cover" />
                   <div className="absolute inset-0 bg-black/0 transition-colors group-hover:bg-black/10" />
                   <span className="absolute top-3 left-3 rounded-full bg-white/85 px-2.5 py-1 text-[11px] font-medium text-zinc-900 backdrop-blur">
                     {item.tag}
@@ -596,7 +603,7 @@ export default function LandingPortfolio02() {
               Let us build something people talk about
             </h2>
             <p className="text-lg text-muted-foreground">
-              I take on three projects per quarter. Tell me about yours.
+              I take on a few projects each quarter. Tell me about yours.
             </p>
             <div className="flex flex-wrap gap-3 justify-center">
               <Button size="lg" nativeButton={false} render={<a href="#" />}>
@@ -609,7 +616,7 @@ export default function LandingPortfolio02() {
                 nativeButton={false}
                 render={<a href="#" />}
               >
-                View GitHub
+                View 21st.dev
               </Button>
             </div>
           </div>
@@ -625,10 +632,10 @@ export default function LandingPortfolio02() {
               <span className="flex size-7 items-center justify-center rounded-md bg-emerald-600 text-white text-sm">
                 N
               </span>
-              <span className="">Noah Park</span>
+              <span className="">Ali Imam</span>
             </a>
             <p className="max-w-xs text-sm text-muted-foreground">
-              Creative front-end development.
+              Creative development by Designali.
             </p>
           </div>
           {footer.map((column) => (
@@ -652,7 +659,7 @@ export default function LandingPortfolio02() {
         <div className="border-t ">
           <div className="mx-auto flex max-w-7xl flex-col justify-between gap-4 px-6 py-6 text-xs text-muted-foreground sm:flex-row">
             <span>
-              © {new Date().getFullYear()} Noah Park. All rights reserved.
+              © {new Date().getFullYear()} Ali Imam. All rights reserved.
             </span>
             <div className="flex gap-6">
               <a href="#" className="hover:text-foreground">
@@ -680,6 +687,7 @@ function HeroVisual() {
           key={item.name}
           className={`relative overflow-hidden rounded-2xl ${item.tile} ${i === 0 ? "col-span-2 aspect-[16/10] md:col-span-1 md:aspect-[3/4]" : "aspect-[3/4]"}`}
         >
+          <img src={item.image} alt={item.name} className="absolute inset-0 size-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/0 to-black/0" />
           <span className="absolute top-3 left-3 rounded-full bg-white/85 px-2.5 py-1 text-[11px] font-medium text-zinc-900 backdrop-blur">
             {item.tag}

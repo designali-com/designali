@@ -1,9 +1,9 @@
 import {
-  ChevronDownIcon,
-  CircleCheckIcon,
-  ShieldAlertIcon,
-  TriangleAlertIcon,
-} from "lucide-react"
+  ChevronDown as ChevronDownIcon,
+  CircleCheck as CircleCheckIcon,
+  ShieldAlert as ShieldAlertIcon,
+  TriangleAlert as TriangleAlertIcon,
+} from "@designali/icons"
 
 import {
   Accordion,
@@ -18,7 +18,7 @@ const checks = [
     value: "password",
     title: "Strong password",
     ok: true,
-    body: "Your password was changed 2 months ago and is not found in known breaches.",
+    body: "Your designali.com password was changed 2 months ago and is not found in known breaches.",
   },
   {
     value: "2fa",
@@ -38,7 +38,7 @@ const checks = [
     value: "recovery",
     title: "Recovery email",
     ok: true,
-    body: "Recovery codes will be sent to r***@hollow.example.",
+    body: "Recovery codes will be sent to a***@designali.com.",
   },
 ]
 

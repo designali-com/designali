@@ -1,4 +1,8 @@
-import { CalendarDays, Mail, MessageSquare } from "lucide-react"
+import {
+  CalendarDays,
+  Mail,
+  MessageSquare,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 

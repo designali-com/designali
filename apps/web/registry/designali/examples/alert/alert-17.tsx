@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { WifiIcon, WifiOffIcon } from "lucide-react"
+import {
+  Wifi as WifiIcon,
+  WifiOff as WifiOffIcon,
+} from "@designali/icons"
 
 import {
   Alert,
@@ -24,7 +27,7 @@ export default function AlertOfflineStatus() {
         <Alert variant="success">
           <WifiIcon />
           <AlertTitle>Back online</AlertTitle>
-          <AlertDescription>3 queued changes were synced.</AlertDescription>
+          <AlertDescription>3 queued edits to your Designali project were synced.</AlertDescription>
         </Alert>
       ) : (
         <Alert variant="warning">

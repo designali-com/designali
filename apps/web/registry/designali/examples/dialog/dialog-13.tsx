@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { PencilIcon } from "lucide-react"
+import {
+  Pencil as PencilIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -50,7 +52,7 @@ export default function RenameFileValidationDialog() {
           {error ? (
             <FieldError>{error}</FieldError>
           ) : (
-            <FieldDescription>Saved to /Marketing/Brand</FieldDescription>
+            <FieldDescription>Saved to /Designali/Brand</FieldDescription>
           )}
         </Field>
         <DialogFooter>

@@ -1,26 +1,28 @@
 "use client"
 
 import { useState } from "react"
-import { MoveHorizontal } from "lucide-react"
+import {
+  MoveHorizontal,
+} from "@designali/icons"
 
 const projects = [
   {
-    name: "Kitchen, Elm Street",
-    note: "Opened the wall to the dining room and replaced the dark oak with limewashed ash.",
-    before: "linear-gradient(135deg, oklch(0.35 0.03 60), oklch(0.25 0.02 40))",
-    after: "linear-gradient(135deg, oklch(0.93 0.03 90), oklch(0.8 0.06 70))",
+    name: "Dalim Agency to Designali",
+    note: "Rebuilt the agency site with a new brand identity, Next.js and Tailwind CSS.",
+    before: 'url("/images/templates/dalim-agency-old.jpg") center / cover',
+    after: 'url("/images/templates/design-agency.jpg") center / cover',
   },
   {
-    name: "Loft, Mill Quarter",
-    note: "Exposed the original brick, added a steel mezzanine and north-facing skylights.",
-    before: "linear-gradient(200deg, oklch(0.4 0.02 250), oklch(0.28 0.02 260))",
-    after: "linear-gradient(200deg, oklch(0.85 0.08 220), oklch(0.7 0.1 30))",
+    name: "Ali Imam portfolio",
+    note: "Refreshed the personal portfolio with a cleaner layout and production-ready components.",
+    before: 'url("/images/templates/aliimam-old.jpg") center / cover',
+    after: 'url("/images/templates/aliimam-comp.jpg") center / cover',
   },
   {
-    name: "Courtyard, Old Town",
-    note: "Removed the concrete slab, planted olive and lavender, laid reclaimed stone.",
-    before: "linear-gradient(90deg, oklch(0.5 0.01 100), oklch(0.38 0.01 100))",
-    after: "linear-gradient(90deg, oklch(0.75 0.12 140), oklch(0.6 0.1 160))",
+    name: "Dalim UI to Designali Blocks",
+    note: "Evolved the Dalim UI kit into 460+ Designali blocks with semantic design tokens.",
+    before: 'url("/images/templates/dalim-ui-old.jpg") center / cover',
+    after: 'url("/img/dashboard-1-light.jpg") center / cover',
   },
 ]
 
@@ -37,11 +39,11 @@ export default function Gallery10() {
             Before / After
           </p>
           <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-4xl">
-            Renovations by Hollow &amp; Pine
+            Redesigns by Designali
           </h2>
           <p className="mt-4 text-muted-foreground">
-            Drag the handle to compare. Every project below was delivered on
-            schedule and within the agreed budget.
+            Drag the handle to compare. Earlier Dalim projects by Ali Imam,
+            redesigned and rebuilt at Designali.
           </p>
           <div className="mt-8 divide-y divide-border border-y border-border">
             {projects.map((p, i) => (

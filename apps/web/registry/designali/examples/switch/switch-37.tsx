@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { SearchIcon } from "lucide-react"
+import {
+  Search as SearchIcon,
+} from "@designali/icons"
 
 import {
   InputGroup,

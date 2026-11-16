@@ -47,9 +47,9 @@ export default function StudioAvailabilityDots() {
   return (
     <Card className="w-fit">
       <CardHeader>
-        <CardTitle>Studio B rental</CardTitle>
+        <CardTitle>Designali studio sessions</CardTitle>
         <CardDescription>
-          Dots show how many hourly slots remain.
+          Dots show how many design review slots remain.
         </CardDescription>
       </CardHeader>
       <CardContent className="flex flex-col items-center gap-3">

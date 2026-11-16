@@ -1,7 +1,11 @@
 "use client"
 
 import * as React from "react"
-import { LayersIcon, MapPinIcon, NavigationIcon } from "lucide-react"
+import {
+  Layers as LayersIcon,
+  MapPin as MapPinIcon,
+  Navigation as NavigationIcon,
+} from "@designali/icons"
 
 import {
   Menubar,

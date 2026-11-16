@@ -24,7 +24,7 @@ export default function WeekDayPickerStrip() {
 
   return (
     <div className="w-full max-w-sm">
-      <p className="mb-2 text-sm font-medium">Pick a delivery date</p>
+      <p className="mb-2 text-sm font-medium">Book a discovery call with Ali</p>
       <Carousel opts={{ slidesToScroll: 7, align: "start" }} className="px-8">
         <CarouselContent className="-ms-1">
           {dates.map((d) => (
@@ -50,7 +50,7 @@ export default function WeekDayPickerStrip() {
         <CarouselNext variant="ghost" className="end-0" />
       </Carousel>
       <p className="mt-2 text-xs text-muted-foreground">
-        Greyed out days are fully booked.
+        Greyed out days are fully booked at the Designali studio.
       </p>
     </div>
   )

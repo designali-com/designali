@@ -1,13 +1,13 @@
 import {
-  BoldIcon,
-  ChevronRightIcon,
-  CodeIcon,
-  HighlighterIcon,
-  ItalicIcon,
-  StrikethroughIcon,
-  SubscriptIcon,
-  UnderlineIcon,
-} from "lucide-react"
+  Bold as BoldIcon,
+  ChevronRight as ChevronRightIcon,
+  Code as CodeIcon,
+  Highlighter as HighlighterIcon,
+  Italic as ItalicIcon,
+  Strikethrough as StrikethroughIcon,
+  Subscript as SubscriptIcon,
+  Underline as UnderlineIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {

@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { BellIcon, CheckCheckIcon } from "lucide-react"
+import {
+  Bell as BellIcon,
+  CheckCheck as CheckCheckIcon,
+} from "@designali/icons"
 
 import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
 import { Button } from "@workspace/ui/components/button"
@@ -18,36 +21,36 @@ import { cn } from "@workspace/ui/lib/utils"
 const initial = [
   {
     id: 1,
-    who: "Rosa Lindgren",
-    what: "commented on Homepage redesign",
+    who: "Ali Imam",
+    what: "commented on designali.com redesign",
     when: "2m",
     unread: true,
   },
   {
     id: 2,
-    who: "Theo Park",
-    what: "assigned you Fix checkout bug",
+    who: "Studio Designer",
+    what: "assigned you Fix pricing block bug",
     when: "18m",
     unread: true,
   },
   {
     id: 3,
     who: "Billing",
-    what: "Invoice INV-0042 was paid",
+    what: "Designali invoice INV-0042 was paid",
     when: "1h",
     unread: true,
   },
   {
     id: 4,
-    who: "Nadia Haddad",
+    who: "Client Lead",
     what: "mentioned you in #design",
     when: "3h",
     unread: false,
   },
   {
     id: 5,
-    who: "Ivo Petrov",
-    what: "shared Q4 OKRs with you",
+    who: "Designali",
+    what: "shared the brand identity guide with you",
     when: "Yesterday",
     unread: false,
   },

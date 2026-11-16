@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { ChevronDownIcon, GitMergeIcon } from "lucide-react"
+import {
+  ChevronDown as ChevronDownIcon,
+  GitMerge as GitMergeIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { ButtonGroup } from "@workspace/ui/components/button-group"

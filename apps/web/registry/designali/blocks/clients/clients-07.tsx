@@ -1,10 +1,10 @@
 const logos = [
-  { name: "Arcwell", shape: "circle" },
-  { name: "Prism", shape: "triangle" },
-  { name: "Blockhaus", shape: "square" },
-  { name: "Driftwave", shape: "wave" },
-  { name: "Quanta", shape: "diamond" },
-  { name: "Tessel", shape: "grid" },
+  { name: "Dalim", shape: "circle" },
+  { name: "Dalim Agency", shape: "triangle" },
+  { name: "Dalim UI", shape: "square" },
+  { name: "Dalim Fonts", shape: "wave" },
+  { name: "Dalim Works", shape: "diamond" },
+  { name: "Dalim Visuals", shape: "grid" },
 ] as const
 
 function Mark({ shape }: { shape: (typeof logos)[number]["shape"] }) {
@@ -32,17 +32,17 @@ export default function Clients07() {
       <div className="mx-auto grid max-w-6xl gap-12 px-6 lg:grid-cols-[1fr_2fr] lg:items-center">
         <div>
           <h2 className="text-3xl font-semibold tracking-tight">
-            1,200+ studios ship with us
+            One studio, many brands
           </h2>
           <p className="mt-4 text-sm leading-6 text-muted-foreground">
-            From two-person agencies to global design orgs, teams rely on our
-            system to keep every surface consistent.
+            From Dalim to Designali, Ali Imam has designed and coded every
+            brand, website and product in this family.
           </p>
           <a
             href="#"
             className="mt-6 inline-block text-sm font-medium underline underline-offset-4"
           >
-            Read customer stories
+            See our work
           </a>
         </div>
         <div className="grid grid-cols-2 gap-px border border-border bg-border sm:grid-cols-3">

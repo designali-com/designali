@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { MapPinIcon } from "lucide-react"
+import {
+  MapPin as MapPinIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Checkbox } from "@workspace/ui/components/checkbox"
@@ -49,7 +51,7 @@ export default function ShippingAddressSheet() {
           <FieldGroup className="gap-4 px-4">
             <Field>
               <FieldLabel htmlFor="ship-name">Full name</FieldLabel>
-              <Input id="ship-name" defaultValue="Selin Arslan" />
+              <Input id="ship-name" defaultValue="Ali Imam" />
             </Field>
             <Field data-invalid={invalid || undefined}>
               <FieldLabel htmlFor="ship-street">Street address</FieldLabel>

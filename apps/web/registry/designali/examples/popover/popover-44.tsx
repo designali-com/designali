@@ -1,4 +1,7 @@
-import { LockIcon, SparklesIcon } from "lucide-react"
+import {
+  Lock as LockIcon,
+  Sparkles as SparklesIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {

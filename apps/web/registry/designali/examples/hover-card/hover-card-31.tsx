@@ -1,4 +1,7 @@
-import { CircleCheckIcon, PlayCircleIcon } from "lucide-react"
+import {
+  CircleCheck as CircleCheckIcon,
+  CirclePlay as PlayCircleIcon,
+} from "@designali/icons"
 
 import {
   HoverCard,

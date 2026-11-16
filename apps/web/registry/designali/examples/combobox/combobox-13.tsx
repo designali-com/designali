@@ -1,6 +1,9 @@
 "use client"
 
-import { Building2Icon, SearchIcon } from "lucide-react"
+import {
+  Building2 as Building2Icon,
+  Search as SearchIcon,
+} from "@designali/icons"
 
 import {
   Combobox,
@@ -13,12 +16,12 @@ import {
 import { InputGroupAddon } from "@workspace/ui/components/input-group"
 
 const customers = [
-  "Bluefin Studio",
-  "Kettle & Co.",
-  "Orchard Supply",
-  "Marlow & Finch",
-  "Bright Lane Dental",
-  "Halvorsen Labs",
+  "Dalim Agency",
+  "Dalim Fonts",
+  "Dalim Graphic",
+  "Dalim Icons",
+  "Dalim Tools",
+  "Dalim Works",
 ]
 
 export default function CustomerSearchAddon() {

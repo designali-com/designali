@@ -1,12 +1,16 @@
 import {
-  ChevronsUpDownIcon,
-  CreditCardIcon,
-  LogOutIcon,
-  SettingsIcon,
-  UserIcon,
-} from "lucide-react"
+  ChevronsUpDown as ChevronsUpDownIcon,
+  CreditCard as CreditCardIcon,
+  LogOut as LogOutIcon,
+  Settings as SettingsIcon,
+  User as UserIcon,
+} from "@designali/icons"
 
-import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from "@workspace/ui/components/avatar"
 import { Button } from "@workspace/ui/components/button"
 import {
   DropdownMenu,
@@ -26,20 +30,22 @@ export default function UserAccountMenu() {
         render={<Button variant="ghost" className="h-auto gap-2 px-2 py-1.5" />}
       >
         <Avatar size="sm">
-          <AvatarFallback>NR</AvatarFallback>
+          <AvatarImage src="/ali.jpg" alt="Ali Imam" />
+            <AvatarFallback>AI</AvatarFallback>
         </Avatar>
-        <span className="text-xs font-medium">Nadia Romero</span>
+        <span className="text-xs font-medium">Ali Imam</span>
         <ChevronsUpDownIcon className="text-muted-foreground" />
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-56">
         <DropdownMenuGroup>
           <DropdownMenuLabel className="flex items-center gap-2 text-foreground">
             <Avatar>
-              <AvatarFallback>NR</AvatarFallback>
+              <AvatarImage src="/ali.jpg" alt="Ali Imam" />
+            <AvatarFallback>AI</AvatarFallback>
             </Avatar>
             <div className="grid leading-tight">
-              <span className="font-medium">Nadia Romero</span>
-              <span className="text-muted-foreground">nadia@northwind.dev</span>
+              <span className="font-medium">Ali Imam</span>
+              <span className="text-muted-foreground">ali@designali.com</span>
             </div>
           </DropdownMenuLabel>
         </DropdownMenuGroup>

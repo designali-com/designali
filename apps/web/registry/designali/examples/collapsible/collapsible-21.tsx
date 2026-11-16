@@ -1,4 +1,7 @@
-import { ChevronDownIcon, HistoryIcon } from "lucide-react"
+import {
+  ChevronDown as ChevronDownIcon,
+  History as HistoryIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -9,14 +12,14 @@ import {
 
 const entries = [
   {
-    actor: "Maya Chen",
+    actor: "Ali Imam",
     action: "updated billing email",
     time: "Today, 09:41",
-    before: "finance@northwind.test",
-    after: "billing@northwind.test",
+    before: "finance@designali.com",
+    after: "billing@designali.com",
   },
   {
-    actor: "Arjun Patel",
+    actor: "Sara Designer",
     action: "changed member role",
     time: "Yesterday, 17:02",
     before: "role: viewer",

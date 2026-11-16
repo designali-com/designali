@@ -1,7 +1,11 @@
 "use client"
 
 import * as React from "react"
-import { PlayIcon, RotateCcwIcon, SquareIcon } from "lucide-react"
+import {
+  Play as PlayIcon,
+  RotateCcw as RotateCcwIcon,
+  Square as SquareIcon,
+} from "@designali/icons"
 
 import { Kbd, KbdGroup } from "@workspace/ui/components/kbd"
 import {

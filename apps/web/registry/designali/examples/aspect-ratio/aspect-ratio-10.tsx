@@ -12,12 +12,12 @@ export default function BlogPostCover() {
             Engineering
           </Badge>
           <h3 className="text-lg leading-tight font-semibold text-balance">
-            How we cut cold starts by 70% with lazy hydration
+            How Designali takes a design from Figma to Next.js
           </h3>
         </div>
       </AspectRatio>
       <p className="mt-2 text-xs text-muted-foreground">
-        Ines Moreau - 8 min read - Mar 18
+        Ali Imam - 8 min read - Mar 18
       </p>
     </article>
   )

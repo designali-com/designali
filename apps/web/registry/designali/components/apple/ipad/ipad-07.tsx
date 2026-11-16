@@ -11,7 +11,7 @@ export function IPadAirStarlightDemo() {
       >
         <img
           src="/img/hero-2.jpg"
-          alt="App screen"
+          alt="Designali website hero"
           className="h-full w-full object-cover"
         />
       </IPad>

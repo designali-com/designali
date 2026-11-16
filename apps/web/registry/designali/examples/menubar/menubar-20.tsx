@@ -1,7 +1,11 @@
 "use client"
 
 import * as React from "react"
-import { BellOffIcon, LogOutIcon, SearchIcon } from "lucide-react"
+import {
+  BellOff as BellOffIcon,
+  LogOut as LogOutIcon,
+  Search as SearchIcon,
+} from "@designali/icons"
 
 import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
 import {
@@ -85,11 +89,11 @@ export default function ChatConversationMenubar() {
       </div>
       <div className="space-y-2 p-3 text-xs">
         <p>
-          <span className="font-medium">Priya:</span> Tokens are merged, please
+          <span className="font-medium">Ali:</span> Designali tokens are merged, please
           review the spacing scale.
         </p>
         <p>
-          <span className="font-medium">Jonas:</span> On it after standup.
+          <span className="font-medium">Designer:</span> On it after standup.
         </p>
       </div>
     </div>

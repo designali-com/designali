@@ -9,21 +9,21 @@ import {
 import { ScrollArea } from "@workspace/ui/components/scroll-area"
 
 const members = [
-  ["Ava Lindqvist", "ava@orbit.dev", "Owner"],
-  ["Ben Okafor", "ben@orbit.dev", "Admin"],
-  ["Chloe Martin", "chloe@orbit.dev", "Member"],
-  ["Dev Raman", "dev@orbit.dev", "Member"],
-  ["Elif Hansen", "elif@orbit.dev", "Admin"],
-  ["Felix Braun", "felix@orbit.dev", "Viewer"],
-  ["Gia Santos", "gia@orbit.dev", "Member"],
-  ["Hugo Laurent", "hugo@orbit.dev", "Viewer"],
+  ["Ali Imam", "ali@designali.com", "Owner"],
+  ["Ben", "ben@designali.com", "Admin"],
+  ["Chloe", "chloe@designali.com", "Member"],
+  ["Dev", "dev@designali.com", "Member"],
+  ["Elif", "elif@designali.com", "Admin"],
+  ["Felix", "felix@designali.com", "Viewer"],
+  ["Gia", "gia@designali.com", "Member"],
+  ["Hugo", "hugo@designali.com", "Viewer"],
 ]
 
 export default function TeamMembersRoles() {
   return (
     <Card className="w-full max-w-md gap-0 py-0">
       <CardHeader className="border-b py-4">
-        <CardTitle>Team members</CardTitle>
+        <CardTitle>Designali team</CardTitle>
         <CardDescription>
           {members.length} people have access to this workspace.
         </CardDescription>

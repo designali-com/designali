@@ -1,7 +1,11 @@
 "use client"
 
 import * as React from "react"
-import { BellRingIcon, FlameIcon, ListChecksIcon } from "lucide-react"
+import {
+  BellRing as BellRingIcon,
+  Flame as FlameIcon,
+  ListChecks as ListChecksIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -16,18 +20,18 @@ import { cn } from "@workspace/ui/lib/utils"
 
 const steps = [
   {
-    title: "Track every habit",
-    body: "Add the routines you want to build and pick the days that matter.",
+    title: "Browse Designali blocks",
+    body: "Pick from 460+ blocks and 240+ landing pages built with Next.js.",
     icon: ListChecksIcon,
   },
   {
-    title: "Get gentle nudges",
-    body: "Choose when we remind you. You can always snooze.",
+    title: "Grab icons and logos",
+    body: "Install @designali/icons and @designali/logos in one command.",
     icon: BellRingIcon,
   },
   {
-    title: "Watch your streaks",
-    body: "See progress over weeks and celebrate the small wins.",
+    title: "Ship your site",
+    body: "Deploy to Vercel and go from design to code.",
     icon: FlameIcon,
   },
 ]

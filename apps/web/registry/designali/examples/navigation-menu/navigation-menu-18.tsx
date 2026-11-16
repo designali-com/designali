@@ -1,4 +1,6 @@
-import { StethoscopeIcon } from "lucide-react"
+import {
+  Users as UsersIcon,
+} from "@designali/icons"
 
 import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
 import {
@@ -13,9 +15,9 @@ import {
 import { Separator } from "@workspace/ui/components/separator"
 
 const doctors = [
-  { name: "Dr. Amara Osei", specialty: "Cardiology" },
-  { name: "Dr. Tomas Lindqvist", specialty: "Dermatology" },
-  { name: "Dr. Rina Patel", specialty: "Pediatrics" },
+  { name: "Ali Imam", specialty: "Founder · Design engineer" },
+  { name: "Brand Designer", specialty: "Brand identity" },
+  { name: "Motion Designer", specialty: "CGI & motion" },
 ]
 
 export default function ClinicDoctorsNav() {
@@ -23,7 +25,7 @@ export default function ClinicDoctorsNav() {
     <NavigationMenu>
       <NavigationMenuList>
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Find a doctor</NavigationMenuTrigger>
+          <NavigationMenuTrigger>Meet the studio</NavigationMenuTrigger>
           <NavigationMenuContent>
             <div className="flex w-64 flex-col gap-1">
               {doctors.map((d) => (
@@ -32,7 +34,6 @@ export default function ClinicDoctorsNav() {
                     <AvatarFallback>
                       {d.name
                         .split(" ")
-                        .slice(1)
                         .map((n) => n[0])
                         .join("")}
                     </AvatarFallback>
@@ -45,14 +46,14 @@ export default function ClinicDoctorsNav() {
               ))}
               <Separator className="my-1" />
               <NavigationMenuLink href="#">
-                <StethoscopeIcon /> Browse all specialties
+                <UsersIcon /> Browse all services
               </NavigationMenuLink>
             </div>
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
           <NavigationMenuLink href="#" className={navigationMenuTriggerStyle()}>
-            Locations
+            Contact
           </NavigationMenuLink>
         </NavigationMenuItem>
       </NavigationMenuList>

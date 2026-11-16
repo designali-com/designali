@@ -1,4 +1,6 @@
-import { ArrowRightIcon } from "lucide-react"
+import {
+  ArrowRight as ArrowRightIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Spinner } from "@workspace/ui/components/spinner"
@@ -13,7 +15,7 @@ export default function LinkButtonNavigating() {
         render={<a href="#" />}
       >
         <Spinner data-icon="inline-start" />
-        Opening API reference
+        Opening Designali docs
       </Button>
       <Button
         variant="link"

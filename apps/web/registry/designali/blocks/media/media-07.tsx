@@ -11,13 +11,13 @@ import {
   Settings,
   Volume2,
   VolumeX,
-} from "lucide-react"
+} from "@designali/icons"
 
 const DURATION = 754
 const chapters = [
   { at: 0, label: "Cold open" },
-  { at: 128, label: "The workshop" },
-  { at: 342, label: "First prototype" },
+  { at: 128, label: "The first sketch" },
+  { at: 342, label: "First Designali block" },
   { at: 560, label: "Launch day" },
 ]
 
@@ -45,9 +45,9 @@ export default function Media07() {
         <div className="mb-6 flex flex-wrap items-end justify-between gap-3">
           <div>
             <p className="text-xs tracking-widest text-muted-foreground uppercase">Documentary - 12 min</p>
-            <h2 className="mt-2 text-2xl font-semibold tracking-tight md:text-3xl">Made by Hand: The Kettle Works Story</h2>
+            <h2 className="mt-2 text-2xl font-semibold tracking-tight md:text-3xl">Made by Design: The Designali Story</h2>
           </div>
-          <p className="text-sm text-muted-foreground">Directed by Noor Vance</p>
+          <p className="text-sm text-muted-foreground">A film by Ali Imam</p>
         </div>
         <div className="group relative aspect-video w-full overflow-hidden border border-border bg-black text-white">
           <div
@@ -71,7 +71,7 @@ export default function Media07() {
           </button>
           {cc && (
             <p className="pointer-events-none absolute inset-x-0 bottom-20 mx-auto w-fit max-w-[85%] bg-black/70 px-3 py-1 text-center text-xs md:bottom-24 md:text-base">
-              &ldquo;We never set out to build a company. We just wanted a kettle that lasted.&rdquo;
+              &ldquo;Where thoughtful design meets production-ready code.&rdquo;
             </p>
           )}
           <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 to-transparent px-3 pt-10 pb-3 transition-opacity md:px-5 md:pb-4">

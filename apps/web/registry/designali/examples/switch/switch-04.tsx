@@ -12,7 +12,7 @@ export default function ControlledSwitchStatus() {
   return (
     <div className="flex w-full max-w-xs flex-col gap-3 border p-4">
       <div className="flex items-center justify-between gap-4">
-        <Label htmlFor="vacation-mode">Vacation mode</Label>
+        <Label htmlFor="vacation-mode">Studio booking pause</Label>
         <Switch
           id="vacation-mode"
           checked={enabled}
@@ -21,8 +21,8 @@ export default function ControlledSwitchStatus() {
       </div>
       <p className="text-xs text-muted-foreground" aria-live="polite">
         {enabled
-          ? "Your store is paused. Customers can browse but can't check out."
-          : "Your store is open and accepting orders."}
+          ? "Designali is paused for new projects. Clients can browse but can't book."
+          : "Designali is open and accepting new projects."}
       </p>
       <Button variant="outline" size="sm" onClick={() => setEnabled((v) => !v)}>
         Toggle from outside

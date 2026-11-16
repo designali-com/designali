@@ -10,22 +10,22 @@ import { cn } from "@workspace/ui/lib/utils"
 
 const assets = [
   {
-    symbol: "LMN",
-    name: "Lumen",
+    symbol: "ICN",
+    name: "Icons",
     price: 1.284,
     change: 4.2,
     points: [4, 5, 4, 6, 7, 6, 8],
   },
   {
-    symbol: "QRZ",
-    name: "Quartz",
+    symbol: "LGO",
+    name: "Logos",
     price: 0.0912,
     change: -2.8,
     points: [8, 7, 7, 6, 5, 6, 4],
   },
   {
-    symbol: "TDL",
-    name: "Tidal",
+    symbol: "BLK",
+    name: "Blocks",
     price: 42.17,
     change: 0.6,
     points: [5, 5, 6, 5, 6, 6, 6],
@@ -67,7 +67,7 @@ export default function CryptoWatchlistTable() {
       <Table>
         <TableHeader>
           <TableRow>
-            <TableHead>Asset</TableHead>
+            <TableHead>Product</TableHead>
             <TableHead className="text-right">Price</TableHead>
             <TableHead className="text-right">24h</TableHead>
             <TableHead className="text-right">7d</TableHead>

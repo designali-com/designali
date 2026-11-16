@@ -20,7 +20,7 @@ export default function HorizontalSettingsTextarea() {
         <Textarea
           id="ta-welcome"
           className="sm:min-w-56"
-          defaultValue="Welcome aboard! Start in #introductions and say hi."
+          defaultValue="Welcome to the Designali studio! Start in #introductions and say hi."
         />
       </Field>
       <Field orientation="responsive">

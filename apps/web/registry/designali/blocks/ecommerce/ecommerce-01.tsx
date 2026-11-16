@@ -1,16 +1,19 @@
-import { Plus, Star } from "lucide-react"
+import {
+  Plus,
+  Star,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 
 const products = [
-  { name: "Linen Overshirt", color: "Sand", price: 128, rating: 4.8, reviews: 214, badge: "New", tone: "from-amber-200/70 to-stone-300/40" },
-  { name: "Merino Crew", color: "Charcoal", price: 96, rating: 4.9, reviews: 532, badge: "", tone: "from-zinc-500/60 to-zinc-300/30" },
-  { name: "Canvas Tote", color: "Olive", price: 54, rating: 4.7, reviews: 98, badge: "Low stock", tone: "from-lime-700/50 to-lime-200/30" },
-  { name: "Wool Beanie", color: "Rust", price: 38, rating: 4.6, reviews: 167, badge: "", tone: "from-orange-700/50 to-orange-200/30" },
-  { name: "Selvedge Denim", color: "Indigo", price: 168, rating: 4.9, reviews: 408, badge: "Bestseller", tone: "from-indigo-800/60 to-indigo-300/30" },
-  { name: "Leather Card Case", color: "Tan", price: 46, rating: 4.8, reviews: 76, badge: "", tone: "from-yellow-800/50 to-amber-200/30" },
-  { name: "Cotton Socks, 3-pack", color: "Mixed", price: 28, rating: 4.5, reviews: 301, badge: "", tone: "from-rose-400/50 to-sky-200/30" },
-  { name: "Waxed Field Jacket", color: "Forest", price: 245, rating: 4.9, reviews: 129, badge: "New", tone: "from-emerald-900/60 to-emerald-400/30" },
+  { name: "Portfolio Simple Template", color: "Next.js + Figma", price: 49, rating: 4.8, reviews: 214, badge: "New", tone: "from-amber-200/70 to-stone-300/40" },
+  { name: "Design Agency Template", color: "Next.js + Figma", price: 79, rating: 4.9, reviews: 532, badge: "", tone: "from-zinc-500/60 to-zinc-300/30" },
+  { name: "Designali Icons Pro", color: "4,000+ icons", price: 39, rating: 4.7, reviews: 98, badge: "Popular", tone: "from-lime-700/50 to-lime-200/30" },
+  { name: "Designali Logos Pack", color: "SVG + React", price: 29, rating: 4.6, reviews: 167, badge: "", tone: "from-orange-700/50 to-orange-200/30" },
+  { name: "Blocks Pro Bundle", color: "460+ blocks", price: 149, rating: 4.9, reviews: 408, badge: "Bestseller", tone: "from-indigo-800/60 to-indigo-300/30" },
+  { name: "Apple Device Mockups", color: "iPhone, iPad, MacBook", price: 35, rating: 4.8, reviews: 76, badge: "", tone: "from-yellow-800/50 to-amber-200/30" },
+  { name: "Vectors Starter Pack", color: "@designali/vectors", price: 19, rating: 4.5, reviews: 301, badge: "", tone: "from-rose-400/50 to-sky-200/30" },
+  { name: "Designali Pro, Lifetime", color: "Everything included", price: 249, rating: 4.9, reviews: 129, badge: "New", tone: "from-emerald-900/60 to-emerald-400/30" },
 ]
 
 export default function Ecommerce01() {
@@ -19,9 +22,9 @@ export default function Ecommerce01() {
       <div className="mx-auto max-w-6xl px-6">
         <div className="mb-8 flex items-end justify-between gap-4">
           <div>
-            <h2 className="text-3xl font-medium tracking-tight">Autumn essentials</h2>
+            <h2 className="text-3xl font-medium tracking-tight">Designali essentials</h2>
             <p className="mt-1 text-sm text-muted-foreground">
-              Made in small batches from natural fibres. Free returns within 30 days.
+              Templates, blocks and icon packs from the Designali studio. Free updates for 12 months.
             </p>
           </div>
           <a href="#" className="hidden text-sm underline-offset-4 hover:underline sm:block">

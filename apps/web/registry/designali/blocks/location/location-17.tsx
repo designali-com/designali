@@ -1,31 +1,37 @@
 "use client"
 
 import { useState } from "react"
-import { BedDouble, Coffee, ParkingCircle, TreePine, UtensilsCrossed } from "lucide-react"
+import {
+  Blocks,
+  BookOpen,
+  LayoutTemplate,
+  Palette,
+  PenTool,
+} from "@designali/icons"
 
 import { cn } from "@workspace/ui/lib/utils"
 
 const categories = [
-  { id: "coffee", label: "Coffee", icon: Coffee, color: "bg-amber-500" },
-  { id: "food", label: "Food", icon: UtensilsCrossed, color: "bg-rose-500" },
-  { id: "hotel", label: "Hotels", icon: BedDouble, color: "bg-sky-500" },
-  { id: "parking", label: "Parking", icon: ParkingCircle, color: "bg-indigo-500" },
-  { id: "park", label: "Parks", icon: TreePine, color: "bg-emerald-500" },
+  { id: "templates", label: "Templates", icon: LayoutTemplate, color: "bg-amber-500" },
+  { id: "blocks", label: "Blocks", icon: Blocks, color: "bg-rose-500" },
+  { id: "ui", label: "UI designs", icon: Palette, color: "bg-sky-500" },
+  { id: "icons", label: "Icons", icon: PenTool, color: "bg-indigo-500" },
+  { id: "docs", label: "Docs", icon: BookOpen, color: "bg-emerald-500" },
 ]
 
 const places = [
-  { name: "Ground Floor Espresso", cat: "coffee", walk: "2 min", x: 58, y: 34 },
-  { name: "Third Wave Kiosk", cat: "coffee", walk: "6 min", x: 22, y: 62 },
-  { name: "Osteria Nove", cat: "food", walk: "4 min", x: 70, y: 60 },
-  { name: "Hawker Lane", cat: "food", walk: "7 min", x: 30, y: 24 },
-  { name: "The Mercer Hotel", cat: "hotel", walk: "5 min", x: 78, y: 22 },
-  { name: "Northgate Inn", cat: "hotel", walk: "9 min", x: 14, y: 40 },
-  { name: "Garage P3", cat: "parking", walk: "1 min", x: 44, y: 66 },
-  { name: "Riverside Gardens", cat: "park", walk: "8 min", x: 84, y: 78 },
+  { name: "Portfolio template", cat: "templates", walk: "/templates", x: 58, y: 34 },
+  { name: "Design agency template", cat: "templates", walk: "/templates", x: 22, y: 62 },
+  { name: "Hero blocks", cat: "blocks", walk: "/blocks", x: 70, y: 60 },
+  { name: "Pricing blocks", cat: "blocks", walk: "/blocks", x: 30, y: 24 },
+  { name: "Dashboard UI", cat: "ui", walk: "/ui", x: 78, y: 22 },
+  { name: "Chat UI", cat: "ui", walk: "/ui", x: 14, y: 40 },
+  { name: "@designali/icons", cat: "icons", walk: "/icons", x: 44, y: 66 },
+  { name: "Getting started", cat: "docs", walk: "/docs", x: 84, y: 78 },
 ]
 
 export default function Location17() {
-  const [active, setActive] = useState<string[]>(["coffee", "food"])
+  const [active, setActive] = useState<string[]>(["templates", "blocks"])
 
   function toggle(id: string) {
     setActive((a) => (a.includes(id) ? a.filter((x) => x !== id) : [...a, id]))
@@ -39,10 +45,10 @@ export default function Location17() {
         <div className="grid gap-6 md:grid-cols-2 md:items-end">
           <div>
             <p className="text-xs font-medium tracking-widest text-muted-foreground uppercase">
-              Neighbourhood guide
+              Site guide
             </p>
             <h2 className="mt-3 text-4xl font-semibold tracking-tight md:text-5xl">
-              Around the Assembly Rooms
+              Around designali.com
             </h2>
           </div>
           <div className="flex flex-wrap gap-2 md:justify-end">
@@ -79,7 +85,7 @@ export default function Location17() {
             </svg>
             <span className="absolute top-[48%] left-[49%] flex -translate-x-1/2 -translate-y-1/2 items-center gap-2 bg-foreground px-2.5 py-1.5 text-xs font-medium text-background shadow-lg">
               <span className="size-2 rounded-full bg-orange-500" />
-              Assembly Rooms
+              designali.com
             </span>
             {shown.map((place) => {
               const cat = categories.find((c) => c.id === place.cat)!
@@ -102,7 +108,7 @@ export default function Location17() {
           <ul className="max-h-[480px] divide-y overflow-y-auto">
             {shown.length === 0 && (
               <li className="p-6 text-sm text-muted-foreground">
-                Choose a category to see nearby places.
+                Choose a category to see Designali resources.
               </li>
             )}
             {shown.map((place) => {

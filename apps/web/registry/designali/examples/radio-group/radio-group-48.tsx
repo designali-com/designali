@@ -1,4 +1,6 @@
-import { SettingsIcon } from "lucide-react"
+import {
+  Settings as SettingsIcon,
+} from "@designali/icons"
 
 import {
   RadioGroup,

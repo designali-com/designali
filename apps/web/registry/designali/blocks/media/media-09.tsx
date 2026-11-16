@@ -1,21 +1,27 @@
 "use client"
 
 import { useState } from "react"
-import { CalendarDays, Check, Clock, Globe, Users } from "lucide-react"
+import {
+  CalendarDays,
+  Check,
+  Clock,
+  Globe,
+  Users,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Input } from "@workspace/ui/components/input"
 import { Label } from "@workspace/ui/components/label"
 
 const speakers = [
-  { name: "Priya Nandakumar", role: "Head of Data, Kestrel Bank", initials: "PN" },
-  { name: "Marcus Oyelaran", role: "Staff Engineer, Lumen Health", initials: "MO" },
-  { name: "Elise Fournier", role: "Product Lead, Driftline", initials: "EF" },
+  { name: "Ali Imam", role: "Founder, Designali", initials: "AI" },
+  { name: "Sara", role: "UI/UX Designer, Designali", initials: "SA" },
+  { name: "Omar", role: "Next.js Developer, Designali", initials: "OM" },
 ]
 const agenda = [
-  "Why most analytics migrations stall in month three",
-  "Live demo: modelling events without a data team",
-  "Panel Q&A with audience questions",
+  "Why most website redesigns stall in month three",
+  "Live demo: building a landing page with Designali blocks",
+  "Q&A with Ali Imam and the studio",
 ]
 
 export default function Media09() {
@@ -26,10 +32,10 @@ export default function Media09() {
       <div className="mx-auto grid max-w-6xl gap-10 px-6 lg:grid-cols-[1.3fr_1fr]">
         <div>
           <span className="inline-flex items-center gap-2 border border-border px-2.5 py-1 text-xs font-medium">
-            <span className="size-1.5 rounded-full bg-emerald-500" /> Free live webinar
+            <span className="size-1.5 rounded-full bg-emerald-500" /> Free Designali webinar
           </span>
           <h2 className="mt-5 text-3xl font-semibold tracking-tight md:text-5xl">
-            Shipping analytics in 30 days, not 6 months
+            Shipping a website in 30 days, not 6 months
           </h2>
           <div className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-sm text-muted-foreground">
             <span className="flex items-center gap-2"><CalendarDays className="size-4" /> Thu, 4 Dec 2025</span>
@@ -90,11 +96,11 @@ export default function Media09() {
               >
                 <div className="space-y-1.5">
                   <Label htmlFor="m09-name">Full name</Label>
-                  <Input id="m09-name" required placeholder="Jordan Ellis" />
+                  <Input id="m09-name" required placeholder="Jordan" />
                 </div>
                 <div className="space-y-1.5">
                   <Label htmlFor="m09-email">Work email</Label>
-                  <Input id="m09-email" type="email" required placeholder="jordan@company.com" />
+                  <Input id="m09-email" type="email" required placeholder="you@example.com" />
                 </div>
                 <div className="space-y-1.5">
                   <Label htmlFor="m09-company">Company</Label>

@@ -2,14 +2,14 @@
 
 import * as React from "react"
 import {
-  HeartIcon,
-  PauseIcon,
-  PlayIcon,
-  RepeatIcon,
-  ShuffleIcon,
-  SkipBackIcon,
-  SkipForwardIcon,
-} from "lucide-react"
+  Heart as HeartIcon,
+  Pause as PauseIcon,
+  Play as PlayIcon,
+  Repeat as RepeatIcon,
+  Shuffle as ShuffleIcon,
+  SkipBack as SkipBackIcon,
+  SkipForward as SkipForwardIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -34,8 +34,8 @@ export default function NowPlayingCard() {
     <Card className="w-full max-w-xs">
       <CardHeader className="grid-cols-[auto_1fr_auto] gap-x-3">
         <div className="row-span-2 size-12 bg-gradient-to-br from-rose-500 via-purple-500 to-indigo-600" />
-        <CardTitle>Low Tide Lights</CardTitle>
-        <CardDescription>The Paper Harbors</CardDescription>
+        <CardTitle>Design se code tak</CardTitle>
+        <CardDescription>Designali Sessions</CardDescription>
         <CardAction className="col-start-3">
           <Button variant="ghost" size="icon-sm" aria-label="Like">
             <HeartIcon className="fill-rose-500 text-rose-500" />

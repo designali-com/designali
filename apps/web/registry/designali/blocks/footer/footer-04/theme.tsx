@@ -1,7 +1,10 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { MoonIcon, SunIcon } from "lucide-react"
+import {
+  Moon as MoonIcon,
+  Sun as SunIcon,
+} from "@designali/icons"
 import { useTheme } from "next-themes"
 
 import { Switch } from "@workspace/ui/components/switch"

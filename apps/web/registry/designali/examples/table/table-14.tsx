@@ -12,10 +12,10 @@ const logs = Array.from({ length: 18 }, (_, i) => ({
   time: "14:" + String(10 + i).padStart(2, "0") + ":0" + (i % 10),
   level: i % 7 === 0 ? "ERROR" : i % 3 === 0 ? "WARN" : "INFO",
   message: [
-    "Request completed",
-    "Cache miss for user profile",
+    "Deployed designali.com",
+    "Cache miss for /icons",
     "Retrying webhook delivery",
-    "Job queued",
+    "Template download queued",
   ][i % 4],
 }))
 

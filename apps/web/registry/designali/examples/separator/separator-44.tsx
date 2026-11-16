@@ -6,11 +6,11 @@ export default function BlockquoteAccentRule() {
       <Separator orientation="vertical" className="w-1 bg-primary" />
       <div className="flex flex-col gap-2 py-1">
         <blockquote className="text-base leading-snug font-medium">
-          We cut our weekly reporting from four hours to fifteen minutes, and
-          nobody misses the spreadsheets.
+          Designali took us from a rough Figma file to a production-ready
+          Next.js site in two weeks.
         </blockquote>
         <figcaption className="text-xs text-muted-foreground">
-          Daniel Osei, Finance Lead at Kestrel Freight
+          Daniel, Founder · Designali client
         </figcaption>
       </div>
     </figure>

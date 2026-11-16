@@ -21,7 +21,7 @@ export default function PriorityAnnouncementToast() {
             onClick={() =>
               notify.add({
                 title: "Comment added",
-                description: "Jules replied on Homepage v2.",
+                description: "Ali Imam replied on Designali Homepage v2.",
                 priority: "low",
               })
             }

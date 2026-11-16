@@ -1,4 +1,7 @@
-import { GitBranchIcon, TriangleAlertIcon } from "lucide-react"
+import {
+  GitBranch as GitBranchIcon,
+  TriangleAlert as TriangleAlertIcon,
+} from "@designali/icons"
 
 import {
   AlertDialog,
@@ -26,7 +29,7 @@ export default function ForcePushWarning() {
           <AlertDialogMedia className="bg-amber-500/10 text-amber-600 dark:text-amber-400">
             <TriangleAlertIcon />
           </AlertDialogMedia>
-          <AlertDialogTitle>Force push to main?</AlertDialogTitle>
+          <AlertDialogTitle>Force push designali.com to main?</AlertDialogTitle>
           <AlertDialogDescription>
             This rewrites history on a shared branch. 3 teammates have commits
             that will be overwritten.

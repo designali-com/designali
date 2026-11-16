@@ -4,7 +4,9 @@ import { Calendar } from "@workspace/ui/components/calendar"
 import * as React from "react" 
 import { Card, CardContent, CardFooter } from "@workspace/ui/components/card"
  
-import { Clock2Icon } from "lucide-react"
+import {
+  Clock2 as Clock2Icon,
+} from "@designali/icons"
   
 import { Field, FieldGroup, FieldLabel } from "@workspace/ui/components/field"
 import {

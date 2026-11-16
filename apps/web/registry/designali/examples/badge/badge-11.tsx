@@ -1,12 +1,14 @@
 "use client"
 
 import * as React from "react"
-import { XIcon } from "lucide-react"
+import {
+  X as XIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 
 export default function TagInputBadges() {
-  const [tags, setTags] = React.useState(["onboarding", "billing"])
+  const [tags, setTags] = React.useState(["templates", "icons"])
   const [draft, setDraft] = React.useState("")
 
   function addTag() {

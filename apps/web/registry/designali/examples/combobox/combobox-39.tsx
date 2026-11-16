@@ -12,13 +12,13 @@ import { InputGroupAddon } from "@workspace/ui/components/input-group"
 import { Kbd } from "@workspace/ui/components/kbd"
 
 const pages = [
-  "Dashboard",
-  "Customers",
-  "Invoices",
-  "Subscriptions",
-  "Reports",
-  "Settings",
-  "API keys",
+  "Templates",
+  "Blocks",
+  "UI Designs",
+  "Icons",
+  "Logos",
+  "Pricing",
+  "Docs",
 ]
 
 export default function KeyboardHintFooter() {

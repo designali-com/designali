@@ -1,23 +1,28 @@
 "use client"
 
 import { useState } from "react"
-import { ArrowRight, Check, Copy, Terminal } from "lucide-react"
+import {
+  ArrowRight,
+  Check,
+  Copy,
+  Terminal,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 
 const managers = [
-  { id: "npm", command: "npm install @relay/cli" },
-  { id: "pnpm", command: "pnpm add @relay/cli" },
-  { id: "bun", command: "bun add @relay/cli" },
-  { id: "brew", command: "brew install relay" },
+  { id: "npm", command: "npm install @designali/icons" },
+  { id: "pnpm", command: "pnpm add @designali/icons" },
+  { id: "bun", command: "bun add @designali/icons" },
+  { id: "shadcn", command: "npx shadcn add designali/hero-01" },
 ]
 
 const output = [
-  { text: "$ relay deploy --prod", tone: "text-foreground" },
-  { text: "Bundling 214 modules in 0.8s", tone: "text-muted-foreground" },
-  { text: "Uploading to 31 edge regions", tone: "text-muted-foreground" },
-  { text: "Running health checks... passed", tone: "text-muted-foreground" },
-  { text: "Live at https://acme-shop.relay.run", tone: "text-emerald-600 dark:text-emerald-400" },
+  { text: "$ npx shadcn add designali/hero-01", tone: "text-foreground" },
+  { text: "Fetching block from designali.com", tone: "text-muted-foreground" },
+  { text: "Installing @designali/icons and @designali/logos", tone: "text-muted-foreground" },
+  { text: "Writing components/blocks/hero-01.tsx", tone: "text-muted-foreground" },
+  { text: "Done. Design se code tak.", tone: "text-emerald-600 dark:text-emerald-400" },
 ]
 
 export default function Hero10() {
@@ -37,14 +42,14 @@ export default function Hero10() {
         <div className="min-w-0">
           <p className="inline-flex items-center gap-2 font-mono text-xs text-muted-foreground">
             <Terminal className="size-3.5" />
-            relay v4.2 / open source / MIT
+            designali / blocks / icons / logos
           </p>
           <h1 className="mt-6 text-4xl font-medium tracking-tight md:text-6xl">
-            Ship to the edge with one command.
+            Add a Designali block with one command.
           </h1>
           <p className="mt-6 max-w-lg text-base leading-7 text-muted-foreground">
-            Relay turns any Node, Deno or static project into a globally
-            distributed deployment. No YAML, no dashboards, no cold starts.
+            Install Designali icons, logos and 460+ production-ready blocks
+            straight into your Next.js and Tailwind project. Copy, paste, ship.
           </p>
           <div className="mt-8 max-w-lg border border-border">
             <div className="flex overflow-x-auto border-b border-border">
@@ -82,12 +87,12 @@ export default function Hero10() {
             </div>
           </div>
           <div className="mt-8 flex flex-wrap gap-3">
-            <Button size="lg" nativeButton={false} render={<a href="#" />}>
-              Read the quickstart
+            <Button size="lg" nativeButton={false} render={<a href="/docs" />}>
+              Read the docs
               <ArrowRight />
             </Button>
-            <Button size="lg" variant="outline" nativeButton={false} render={<a href="#" />}>
-              Browse the source
+            <Button size="lg" variant="outline" nativeButton={false} render={<a href="/blocks" />}>
+              Browse blocks
             </Button>
           </div>
         </div>
@@ -97,7 +102,7 @@ export default function Hero10() {
             <span className="size-2.5 rounded-full bg-muted-foreground/30" />
             <span className="size-2.5 rounded-full bg-muted-foreground/30" />
             <span className="ms-3 font-mono text-xs text-muted-foreground">
-              ~/projects/acme-shop
+              ~/projects/designali-site
             </span>
           </div>
           <div className="space-y-2 overflow-x-auto p-5 font-mono text-xs leading-6 sm:text-sm">
@@ -112,9 +117,9 @@ export default function Hero10() {
           </div>
           <div className="grid grid-cols-3 border-t border-border text-center">
             {[
-              ["31", "regions"],
-              ["12ms", "p50 latency"],
-              ["0", "config files"],
+              ["460+", "blocks"],
+              ["4000+", "icons"],
+              ["240+", "pages"],
             ].map(([value, label]) => (
               <div key={label} className="border-e border-border px-2 py-4 last:border-e-0">
                 <p className="text-lg font-medium">{value}</p>

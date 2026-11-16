@@ -1,13 +1,13 @@
 import {
-  FileArchiveIcon,
-  FileIcon,
-  FileImageIcon,
-  FileSpreadsheetIcon,
-  FileTextIcon,
-  FileVideoIcon,
-  FolderIcon,
-  FolderOpenIcon,
-} from "lucide-react"
+  FileArchive as FileArchiveIcon,
+  File as FileIcon,
+  FileImage as FileImageIcon,
+  FileSpreadsheet as FileSpreadsheetIcon,
+  FileText as FileTextIcon,
+  FileVideoCamera as FileVideoIcon,
+  Folder as FolderIcon,
+  FolderOpen as FolderOpenIcon,
+} from "@designali/icons"
 
 import {
   ResizableHandle,
@@ -24,12 +24,12 @@ const tree = [
 ]
 
 const items = [
-  { name: "Q3-report.pdf", icon: FileTextIcon },
-  { name: "budget.xlsx", icon: FileSpreadsheetIcon },
+  { name: "brand-guidelines.pdf", icon: FileTextIcon },
+  { name: "project-estimate.xlsx", icon: FileSpreadsheetIcon },
   { name: "logo.svg", icon: FileImageIcon },
   { name: "notes.md", icon: FileIcon },
   { name: "archive.zip", icon: FileArchiveIcon },
-  { name: "intro.mp4", icon: FileVideoIcon },
+  { name: "colorful-spheres.mp4", icon: FileVideoIcon },
 ]
 
 export default function FileManagerSplit() {

@@ -1,7 +1,9 @@
 "use client"
 
 import { REGEXP_ONLY_DIGITS } from "input-otp"
-import { GiftIcon } from "lucide-react"
+import {
+  Gift as GiftIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Field, FieldLabel } from "@workspace/ui/components/field"

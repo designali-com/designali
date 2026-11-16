@@ -36,7 +36,7 @@ export default function MilestoneCountdown() {
   return (
     <Card className="w-fit">
       <CardHeader>
-        <CardTitle>Beta launch</CardTitle>
+        <CardTitle>Designali Blocks launch</CardTitle>
         <CardDescription>
           {date ? format(date, "EEEE, MMMM d, yyyy") : "Set a target date"}
         </CardDescription>

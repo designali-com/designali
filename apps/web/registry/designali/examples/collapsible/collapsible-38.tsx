@@ -1,4 +1,8 @@
-import { ChevronUpIcon, ListMusicIcon, PauseIcon } from "lucide-react"
+import {
+  ChevronUp as ChevronUpIcon,
+  ListMusic as ListMusicIcon,
+  Pause as PauseIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -8,9 +12,9 @@ import {
 } from "@workspace/ui/components/collapsible"
 
 const queue = [
-  { title: "Low Tide", artist: "Marisol Vey", length: "3:42" },
-  { title: "Paper Lanterns", artist: "The Quiet Hours", length: "4:05" },
-  { title: "Northbound", artist: "Elm & Ash", length: "2:58" },
+  { title: "Abstract Fluid", artist: "Designali Motion", length: "0:42" },
+  { title: "CGI Product Reel", artist: "Designali Motion", length: "1:05" },
+  { title: "Brand Identity Teaser", artist: "Ali Imam", length: "0:58" },
 ]
 
 export default function PlayerUpNextQueue() {
@@ -19,8 +23,8 @@ export default function PlayerUpNextQueue() {
       <div className="flex items-center gap-3 p-3">
         <div className="size-12 shrink-0 bg-gradient-to-br from-orange-400 to-pink-600" />
         <div className="min-w-0 flex-1">
-          <p className="truncate text-sm font-medium">Glass Harbor</p>
-          <p className="truncate text-xs text-muted-foreground">Marisol Vey</p>
+          <p className="truncate text-sm font-medium">Colorful Spheres</p>
+          <p className="truncate text-xs text-muted-foreground">Designali Motion</p>
         </div>
         <Button size="icon" aria-label="Pause">
           <PauseIcon />

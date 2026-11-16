@@ -1,12 +1,16 @@
 "use client"
 
 import { useState } from "react"
-import { Check, Copy, Users } from "lucide-react"
+import {
+  Check,
+  Copy,
+  Users,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Input } from "@workspace/ui/components/input"
 
-const referral = "orbit.app/r/kx42-maple"
+const referral = "designali.com/r/kx42-ali"
 
 export default function CallToAction20() {
   const [joined, setJoined] = useState(false)
@@ -30,10 +34,10 @@ export default function CallToAction20() {
           12,840 people waiting
         </span>
         <h2 className="mt-6 text-4xl font-medium tracking-tight md:text-6xl">
-          Orbit opens in March.
+          Designali Pro opens in March.
         </h2>
         <p className="mx-auto mt-5 max-w-lg text-sm leading-7 text-background/70">
-          A calendar that schedules your deep work first. Join the waitlist
+          Every template, block and icon pack in one membership. Join the waitlist
           and move up three spots for every friend who signs up.
         </p>
 
@@ -48,7 +52,7 @@ export default function CallToAction20() {
             <Input
               type="email"
               required
-              placeholder="you@email.com"
+              placeholder="you@example.com"
               aria-label="Email"
               className="h-11 flex-1 border-background/20 bg-background/5 text-sm text-background placeholder:text-background/40 md:text-sm dark:bg-background/5"
             />

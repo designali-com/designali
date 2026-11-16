@@ -1,4 +1,6 @@
-import { ArrowUpRightIcon } from "lucide-react";
+import {
+  ArrowUpRight as ArrowUpRightIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button";
 

@@ -1,13 +1,13 @@
 import {
-  DownloadIcon,
-  EllipsisIcon,
-  FileSpreadsheetIcon,
-  FileTextIcon,
-  FileVideoIcon,
-  FolderIcon,
-  PencilIcon,
-  Trash2Icon,
-} from "lucide-react"
+  Download as DownloadIcon,
+  Ellipsis as EllipsisIcon,
+  FileSpreadsheet as FileSpreadsheetIcon,
+  FileText as FileTextIcon,
+  FileVideoCamera as FileVideoIcon,
+  Folder as FolderIcon,
+  Pencil as PencilIcon,
+  Trash2 as Trash2Icon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -30,19 +30,19 @@ import { cn } from "@workspace/ui/lib/utils"
 const files = [
   { name: "Brand assets", kind: "folder", size: "—", modified: "Nov 14" },
   {
-    name: "pitch-deck-v4.pdf",
+    name: "designali-brand-guidelines.pdf",
     kind: "pdf",
     size: "8.2 MB",
     modified: "Nov 13",
   },
   {
-    name: "budget-2027.xlsx",
+    name: "project-estimates-2027.xlsx",
     kind: "sheet",
     size: "412 KB",
     modified: "Nov 9",
   },
   {
-    name: "intro-clip.mp4",
+    name: "designali-showreel.mp4",
     kind: "video",
     size: "96.4 MB",
     modified: "Oct 30",

@@ -1,4 +1,7 @@
-import { CheckIcon, GlobeIcon } from "lucide-react"
+import {
+  Check as CheckIcon,
+  Globe as GlobeIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import { Spinner } from "@workspace/ui/components/spinner"
@@ -14,7 +17,7 @@ export default function VerifyingDomainStatus() {
     <div className="flex w-full max-w-sm flex-col border">
       <div className="flex items-center gap-2 border-b px-4 py-3">
         <GlobeIcon className="size-4" />
-        <span className="text-sm font-medium">mail.fernwood.app</span>
+        <span className="text-sm font-medium">designali.com</span>
       </div>
       {records.map((record) => (
         <div

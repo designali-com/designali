@@ -1,15 +1,19 @@
 "use client"
 
 import { useState } from "react"
-import { Minus, Plus, X } from "lucide-react"
+import {
+  Minus,
+  Plus,
+  X,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Input } from "@workspace/ui/components/input"
 
 const initialItems = [
-  { id: 1, name: "Stoneware Mug", variant: "Speckled white · 350ml", price: 32, qty: 2, tone: "from-stone-300/80 to-stone-100/40" },
-  { id: 2, name: "Pour-over Kettle", variant: "Matte black · 1L", price: 89, qty: 1, tone: "from-zinc-700/80 to-zinc-400/40" },
-  { id: 3, name: "Single Origin Beans", variant: "Ethiopia Guji · 250g", price: 18, qty: 3, tone: "from-amber-800/70 to-amber-400/40" },
+  { id: 1, name: "Designali Icons Pro", variant: "Personal license · 4,000+ icons", price: 39, qty: 1, tone: "from-stone-300/80 to-stone-100/40" },
+  { id: 2, name: "Design Agency Template", variant: "Pro license · Next.js + Figma", price: 79, qty: 1, tone: "from-zinc-700/80 to-zinc-400/40" },
+  { id: 3, name: "Apple Device Mockups", variant: "Team license · 3 seats", price: 35, qty: 3, tone: "from-amber-800/70 to-amber-400/40" },
 ]
 
 export default function Ecommerce03() {
@@ -86,7 +90,7 @@ export default function Ecommerce03() {
                 <dd className="tabular-nums">${subtotal.toFixed(2)}</dd>
               </div>
               <div className="flex justify-between">
-                <dt className="text-muted-foreground">Shipping</dt>
+                <dt className="text-muted-foreground">Processing</dt>
                 <dd className="tabular-nums">{shipping === 0 ? "Free" : `$${shipping.toFixed(2)}`}</dd>
               </div>
               <div className="flex justify-between">
@@ -106,7 +110,7 @@ export default function Ecommerce03() {
               Checkout
             </Button>
             <p className="mt-3 text-center text-xs text-muted-foreground">
-              Free shipping on orders over $100
+              No processing fee on orders over $100
             </p>
           </aside>
         </div>

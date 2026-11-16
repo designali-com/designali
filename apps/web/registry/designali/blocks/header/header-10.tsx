@@ -1,14 +1,16 @@
-import { Search } from "lucide-react"
+import {
+  Search,
+} from "@designali/icons"
 
 const sections = [
-  "World",
-  "Business",
-  "Technology",
   "Design",
-  "Culture",
-  "Science",
-  "Opinion",
-  "Podcasts",
+  "Development",
+  "Branding",
+  "UI/UX",
+  "Icons",
+  "Templates",
+  "AI Workflows",
+  "Case Studies",
 ]
 
 export default function Header10() {
@@ -37,10 +39,10 @@ export default function Header10() {
             href="#"
             className="font-serif text-5xl font-bold tracking-tight md:text-7xl"
           >
-            The Meridian
+            designali
           </a>
           <p className="mt-2 text-xs tracking-[0.25em] text-muted-foreground uppercase">
-            Independent journalism since 1987
+            Design se code tak — the Designali blog
           </p>
         </div>
 

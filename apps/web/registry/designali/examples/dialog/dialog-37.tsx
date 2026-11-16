@@ -2,12 +2,12 @@
 
 import * as React from "react"
 import {
-  BlocksIcon,
-  CalendarIcon,
-  GitBranchIcon,
-  HardDriveIcon,
-  MessagesSquareIcon,
-} from "lucide-react"
+  Blocks as BlocksIcon,
+  Calendar as CalendarIcon,
+  GitBranch as GitBranchIcon,
+  HardDrive as HardDriveIcon,
+  MessagesSquare as MessagesSquareIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import { Button } from "@workspace/ui/components/button"
@@ -32,25 +32,25 @@ import {
 const apps = [
   {
     id: "calendar",
-    name: "Calendar Sync",
-    description: "Two-way event sync",
+    name: "Figma",
+    description: "Sync designs and components",
     icon: CalendarIcon,
   },
   {
     id: "storage",
-    name: "Cloud Storage",
-    description: "Attach files from your drive",
+    name: "Vercel",
+    description: "Deploy previews for every block",
     icon: HardDriveIcon,
   },
   {
     id: "chat",
-    name: "Team Chat",
+    name: "Studio Chat",
     description: "Post updates to channels",
     icon: MessagesSquareIcon,
   },
   {
     id: "git",
-    name: "Git Provider",
+    name: "GitHub",
     description: "Link commits to tasks",
     icon: GitBranchIcon,
   },
@@ -80,7 +80,7 @@ export default function IntegrationsDirectoryDialog() {
         <DialogHeader>
           <DialogTitle>Integrations</DialogTitle>
           <DialogDescription>
-            Connect the tools your team already uses.
+            Connect the tools Designali builds with.
           </DialogDescription>
         </DialogHeader>
         <ItemGroup className="gap-2">

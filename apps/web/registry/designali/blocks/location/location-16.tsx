@@ -1,4 +1,6 @@
-import { ArrowUpRight } from "lucide-react"
+import {
+  ArrowUpRight,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 
@@ -48,22 +50,22 @@ export default function Location16() {
       <div className="mx-auto grid max-w-7xl items-center gap-16 px-6 lg:grid-cols-[1.5fr_1fr]">
         <div>
           <p className="text-xs tracking-widest text-background/60 uppercase">
-            Base camp &middot; Refugio Altavista
+            Designali studio &middot; design se code tak
           </p>
           <p className="mt-6 font-mono text-5xl leading-none font-light tracking-tighter sm:text-6xl md:text-8xl">
-            28.2754&deg; N
+            Remote
             <br />
-            16.6386&deg; W
+            Worldwide
           </p>
           <p className="mt-6 font-mono text-sm text-background/60">
-            Elevation 3,260 m &middot; Teide National Park, Tenerife
+            hello@designali.com &middot; designali.com
           </p>
 
           <dl className="mt-12 grid grid-cols-2 gap-px border border-background/15 bg-background/15 sm:grid-cols-3">
             {[
-              ["Trailhead", "Montaña Blanca, km 40"],
-              ["Hike in", "3h 30m, 1,100 m gain"],
-              ["Check-in", "From 16:00"],
+              ["Replies", "Within 24 hours"],
+              ["Kickoff", "About 1 week"],
+              ["Hours", "Mon–Fri, async"],
             ].map(([k, v]) => (
               <div key={k} className="bg-foreground p-4 last:col-span-2 sm:last:col-span-1">
                 <dt className="text-xs text-background/50">{k}</dt>
@@ -73,17 +75,17 @@ export default function Location16() {
           </dl>
 
           <div className="mt-8 flex flex-wrap gap-3">
-            <Button variant="secondary" size="lg" nativeButton={false} render={<a href="#" />}>
-              Download GPX route
+            <Button variant="secondary" size="lg" nativeButton={false} render={<a href="/contact" />}>
+              Start a project
             </Button>
             <Button
               size="lg"
               variant="ghost"
               nativeButton={false}
-              render={<a href="#" />}
+              render={<a href="/work" />}
               className="text-background hover:bg-background/10 hover:text-background"
             >
-              Permit information
+              View our work
               <ArrowUpRight />
             </Button>
           </div>

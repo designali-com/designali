@@ -1,11 +1,16 @@
 "use client"
 
 import { useState } from "react"
-import { ArrowUpRight, Menu, X } from "lucide-react"
+import {
+  ArrowUpRight,
+  Menu,
+  X,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
+import { Logo } from "@/src/components/logo"
 
-const links = ["Features", "Integrations", "Pricing", "Changelog"]
+const links = ["Templates", "Blocks", "Icons", "Pricing"]
 
 export default function Header12() {
   const [open, setOpen] = useState(false)
@@ -15,8 +20,8 @@ export default function Header12() {
       <header className="relative mx-auto max-w-5xl">
         <div className="flex h-14 items-center gap-6 rounded-full border bg-background/80 ps-5 pe-2 shadow-sm backdrop-blur">
           <a href="#" className="flex items-center gap-2 text-sm font-semibold">
-            <span className="size-5 rounded-full bg-gradient-to-br from-chart-1 to-chart-3" />
-            Orbitly
+            <Logo className="size-5" />
+            designali
           </a>
           <nav className="mx-auto hidden items-center gap-1 text-sm md:flex">
             {links.map((link) => (
@@ -34,7 +39,7 @@ export default function Header12() {
               Log in
             </a>
             <Button className="hidden rounded-full sm:inline-flex" nativeButton={false} render={<a href="#" />}>
-              Get Orbitly
+              Get Designali
               <ArrowUpRight />
             </Button>
             <Button
@@ -62,7 +67,7 @@ export default function Header12() {
               </a>
             </nav>
             <Button className="mt-2 w-full rounded-full" nativeButton={false} render={<a href="#" />}>
-              Get Orbitly
+              Get Designali
               <ArrowUpRight />
             </Button>
           </div>

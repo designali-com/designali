@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { TicketIcon, TicketPercentIcon } from "lucide-react"
+import {
+  Ticket as TicketIcon,
+  TicketPercent as TicketPercentIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -17,14 +20,14 @@ import { cn } from "@workspace/ui/lib/utils"
 
 const coupons = [
   {
-    code: "AUTUMN20",
-    title: "20% off outerwear",
+    code: "DESIGNALI20",
+    title: "20% off Templates Pro",
     expires: "Ends Nov 30",
     expired: false,
   },
   {
-    code: "SHIPFREE",
-    title: "Free express shipping",
+    code: "ICONSFREE",
+    title: "Free Icons Pro upgrade",
     expires: "Ends Dec 15",
     expired: false,
   },

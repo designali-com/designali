@@ -28,7 +28,7 @@ export function SwitchChoiceCard() {
           <FieldContent>
             <FieldTitle>Enable notifications</FieldTitle>
             <FieldDescription>
-              Receive notifications when focus mode is enabled or disabled.
+              Get notified when a new Designali block or template drops.
             </FieldDescription>
           </FieldContent>
           <Switch id="switch-notifications" defaultChecked />

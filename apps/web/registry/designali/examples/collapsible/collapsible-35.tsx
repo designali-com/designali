@@ -1,4 +1,8 @@
-import { ArrowDownLeftIcon, ArrowUpRightIcon, ReceiptIcon } from "lucide-react"
+import {
+  ArrowDownLeft as ArrowDownLeftIcon,
+  ArrowUpRight as ArrowUpRightIcon,
+  Receipt as ReceiptIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -11,27 +15,27 @@ import { cn } from "@workspace/ui/lib/utils"
 const transactions = [
   {
     id: "t1",
-    merchant: "Corner Bakery",
-    category: "Food",
+    merchant: "Figma subscription",
+    category: "Software",
     amount: -8.4,
     date: "Nov 14",
-    ref: "POS 4471 · Card ending 2290",
+    ref: "Card ending 2290 · Design tools",
   },
   {
     id: "t2",
-    merchant: "Salary · Fernway Ltd",
+    merchant: "Client payment · Brand identity",
     category: "Income",
     amount: 4250,
     date: "Nov 13",
-    ref: "BACS · Ref NOV-PAYROLL",
+    ref: "Bank transfer · Ref DA-INV-3310",
   },
   {
     id: "t3",
-    merchant: "City Transit",
-    category: "Transport",
+    merchant: "Vercel Pro",
+    category: "Hosting",
     amount: -32,
     date: "Nov 12",
-    ref: "Monthly pass · Auto top-up",
+    ref: "designali.com hosting · Auto renew",
   },
 ]
 

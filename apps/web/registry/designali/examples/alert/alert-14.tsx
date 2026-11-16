@@ -1,4 +1,7 @@
-import { CalendarPlusIcon, WrenchIcon } from "lucide-react"
+import {
+  CalendarPlus as CalendarPlusIcon,
+  Wrench as WrenchIcon,
+} from "@designali/icons"
 
 import {
   Alert,
@@ -15,7 +18,7 @@ export default function AlertScheduledMaintenance() {
       <AlertDescription>
         <p>
           Sunday, Nov 23 from <time>02:00</time> to <time>04:00</time> UTC. The
-          dashboard will be read-only; the API stays online.
+          designali.com dashboard will be read-only; downloads stay online.
         </p>
         <Button size="xs" variant="outline" className="mt-2">
           <CalendarPlusIcon data-icon="inline-start" />

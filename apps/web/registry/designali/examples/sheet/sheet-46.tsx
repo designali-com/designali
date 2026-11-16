@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { ChevronRightIcon } from "lucide-react"
+import {
+  ChevronRight as ChevronRightIcon,
+} from "@designali/icons"
 
 import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
 import { Button } from "@workspace/ui/components/button"
@@ -17,24 +19,24 @@ import {
 const customers = [
   {
     id: "C-301",
-    name: "Rosa Lindgren",
-    email: "rosa@lindgren.example",
+    name: "Rosa",
+    email: "rosa@example.com",
     spend: "$2,410",
     orders: 18,
     since: "2023",
   },
   {
     id: "C-302",
-    name: "Dev Malhotra",
-    email: "dev@malhotra.example",
+    name: "Dev",
+    email: "dev@example.com",
     spend: "$860",
     orders: 6,
     since: "2024",
   },
   {
     id: "C-303",
-    name: "Chiara Bruno",
-    email: "chiara@bruno.example",
+    name: "Chiara",
+    email: "chiara@example.com",
     spend: "$5,120",
     orders: 41,
     since: "2021",

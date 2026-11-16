@@ -1,4 +1,6 @@
-import { ImageUpIcon } from "lucide-react"
+import {
+  ImageUp as ImageUpIcon,
+} from "@designali/icons"
 
 import { AspectRatio } from "@workspace/ui/components/aspect-ratio"
 
@@ -13,7 +15,7 @@ export default function UploadDropzoneWide() {
           <div className="flex size-10 items-center justify-center bg-background ring-1 ring-border">
             <ImageUpIcon className="size-5 text-muted-foreground" />
           </div>
-          <p className="text-sm font-medium">Drop a cover image here</p>
+          <p className="text-sm font-medium">Drop a Designali project cover here</p>
           <p className="text-xs text-muted-foreground">
             PNG or JPG, 1600 x 900 recommended
           </p>

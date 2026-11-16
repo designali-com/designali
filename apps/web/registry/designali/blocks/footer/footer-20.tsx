@@ -1,11 +1,19 @@
 "use client"
 
 import { useState } from "react"
-import { ArrowRight, AtSign, Check, Clock, MapPin, MessageCircle, Rss } from "lucide-react"
+import {
+  ArrowRight,
+  AtSign,
+  Check,
+  Clock,
+  Mail,
+  MessageCircle,
+  Rss,
+} from "@designali/icons"
 
 const groups = [
-  { title: "Product", links: ["Overview", "Pricing", "Integrations", "Roadmap"] },
-  { title: "Company", links: ["About", "Careers", "Press kit", "Contact"] },
+  { title: "Products", links: ["Templates", "Blocks", "Icons", "Pricing"] },
+  { title: "Studio", links: ["Work", "Blogs", "Docs", "Contact"] },
 ]
 
 export default function Footer20() {
@@ -18,12 +26,12 @@ export default function Footer20() {
         <div className="flex flex-col justify-between border bg-background p-6 md:col-span-2 md:row-span-2">
           <div>
             <p className="flex items-center gap-2 text-lg font-semibold tracking-tight">
-              <span className="size-4 rotate-45 bg-foreground" />
-              Pebble
+              <span className="size-4 rotate-45 bg-primary" />
+              designali
             </p>
             <p className="mt-3 max-w-sm text-sm leading-6 text-muted-foreground">
-              Calm project management for small studios. One monthly email
-              with product updates and nothing else.
+              Design and development studio by Ali Imam. One monthly email
+              with new templates, blocks and nothing else.
             </p>
           </div>
           {joined ? (
@@ -76,12 +84,12 @@ export default function Footer20() {
 
         <div className="border bg-background p-6 text-sm">
           <p className="flex items-start gap-2 text-muted-foreground">
-            <MapPin className="mt-0.5 size-4 shrink-0" />
-            Kanalstraat 18, Utrecht
+            <Mail className="mt-0.5 size-4 shrink-0" />
+            hello@designali.com
           </p>
           <p className="mt-3 flex items-center gap-2 text-muted-foreground">
             <Clock className="size-4 shrink-0" />
-            Support 9:00 to 18:00 CET
+            Support via support@designali.com
           </p>
         </div>
 
@@ -89,13 +97,13 @@ export default function Footer20() {
           <p className="text-sm">Follow along</p>
           <div className="flex gap-1">
             {[
-              { label: "Community chat", icon: MessageCircle },
-              { label: "Social profile", icon: AtSign },
-              { label: "Blog feed", icon: Rss },
+              { label: "Designali on Instagram", icon: MessageCircle, href: "https://www.instagram.com/designali.code/" },
+              { label: "Designali on X", icon: AtSign, href: "https://x.com/designali_com" },
+              { label: "Designali blogs", icon: Rss, href: "/blogs" },
             ].map((item) => (
               <a
                 key={item.label}
-                href="#"
+                href={item.href}
                 aria-label={item.label}
                 className="flex size-9 items-center justify-center border border-background/20 transition-colors hover:bg-background/10"
               >
@@ -106,11 +114,11 @@ export default function Footer20() {
         </div>
       </div>
       <div className="mx-auto flex max-w-7xl flex-col gap-2 px-6 pb-8 text-xs text-muted-foreground sm:flex-row sm:justify-between">
-        <p>© 2026 Pebble Software B.V.</p>
+        <p>© 2026 Designali</p>
         <div className="flex gap-5">
-          <a href="#" className="hover:text-foreground">Privacy</a>
-          <a href="#" className="hover:text-foreground">Terms</a>
-          <a href="#" className="hover:text-foreground">Cookies</a>
+          <a href="/contact" className="hover:text-foreground">Contact</a>
+          <a href="/docs/legal/terms" className="hover:text-foreground">Terms</a>
+          <a href="/pricing" className="hover:text-foreground">Pricing</a>
         </div>
       </div>
     </footer>

@@ -15,16 +15,16 @@ import {
 
 const panels = {
   shipping: {
-    title: "Shipping policy",
-    body: "Orders ship within 2 business days. Free standard shipping on orders over $75.",
+    title: "Delivery",
+    body: "Designali templates and blocks are delivered as instant downloads from your designali.com account.",
   },
   returns: {
-    title: "Returns",
-    body: "Return unworn items within 30 days for a full refund. Return labels are free.",
+    title: "Support",
+    body: "Questions about a purchase? Email support@designali.com and Ali's studio will help.",
   },
   sizing: {
-    title: "Size guide",
-    body: "Our knitwear runs true to size. If you're between sizes, size up for a relaxed fit.",
+    title: "License",
+    body: "See designali.com/docs/legal/terms for the full license details.",
   },
 }
 

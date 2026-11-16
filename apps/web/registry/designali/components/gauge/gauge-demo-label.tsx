@@ -23,7 +23,7 @@ export function GaugeDemoLabel() {
         <GaugeValueText />
       </Gauge>
 
-      <GaugeLabel>Muscle Health</GaugeLabel>
+      <GaugeLabel>Design System Coverage</GaugeLabel>
     </div>
   )
 }

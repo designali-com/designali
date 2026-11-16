@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { CloudSunIcon } from "lucide-react"
+import {
+  CloudSun as CloudSunIcon,
+} from "@designali/icons"
 
 import {
   ToggleGroup,

@@ -1,4 +1,6 @@
-import { InfoIcon } from "lucide-react"
+import {
+  Info as InfoIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Input } from "@workspace/ui/components/input"

@@ -1,13 +1,15 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { ArrowUpRight } from "lucide-react"
+import {
+  ArrowUpRight,
+} from "@designali/icons"
 
 const links = [
   { label: "Work", count: "24" },
   { label: "Studio", count: "" },
-  { label: "Services", count: "6" },
-  { label: "Journal", count: "41" },
+  { label: "Services", count: "8" },
+  { label: "Blogs", count: "41" },
   { label: "Contact", count: "" },
 ]
 
@@ -30,7 +32,7 @@ export default function Header17() {
             href="#"
             className={`text-lg font-semibold tracking-tight transition-colors ${open ? "text-background" : ""}`}
           >
-            Atelier Nord
+            designali
           </a>
           <button
             type="button"
@@ -80,22 +82,26 @@ export default function Header17() {
             <div>
               <p className="opacity-50">New business</p>
               <a href="#" tabIndex={open ? 0 : -1} className="mt-1 block hover:underline">
-                hello@ateliernord.studio
+                hello@designali.com
               </a>
             </div>
             <div>
-              <p className="opacity-50">Studio</p>
+              <p className="opacity-50">Founder</p>
               <p className="mt-1 leading-6">
-                Vesterbrogade 41
+                Ali Imam
                 <br />
-                1620 Copenhagen
+                Design engineer
               </p>
             </div>
             <div>
               <p className="opacity-50">Follow</p>
               <div className="mt-1 flex gap-4">
-                {["Newsletter", "Showreel", "Press kit"].map((item) => (
-                  <a key={item} href="#" tabIndex={open ? 0 : -1} className="hover:underline">
+                {[
+                  ["Instagram", "https://www.instagram.com/designali.code/"],
+                  ["X", "https://x.com/designali_com"],
+                  ["LinkedIn", "https://www.linkedin.com/company/designali-com/"],
+                ].map(([item, href]) => (
+                  <a key={item} href={href} tabIndex={open ? 0 : -1} className="hover:underline">
                     {item}
                   </a>
                 ))}
@@ -107,7 +113,7 @@ export default function Header17() {
 
       <div className="mx-auto max-w-7xl px-6 pt-10 pb-24">
         <p className="max-w-2xl text-3xl font-medium tracking-tight text-muted-foreground md:text-5xl">
-          Identity and digital design for cultural institutions.
+          Brand identity, UI/UX and production-ready websites. Design se code tak.
         </p>
       </div>
     </section>

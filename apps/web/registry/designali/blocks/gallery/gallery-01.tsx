@@ -66,7 +66,7 @@ export function HeroSection() {
                   <div className="h-30 w-full aspect-video overflow-hidden border border-white/10 shadow-2xl">
                     <img
                       src={src}
-                      alt={`Gallery ${index + 1}`}
+                      alt={`Designali work ${index + 1}`}
                       draggable={false}
                       className="h-full w-full object-cover"
                     />
@@ -83,17 +83,17 @@ export function HeroSection() {
           {/* Badge */}
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-border bg-muted/50 px-4 py-1.5 text-xs text-muted-foreground backdrop-blur-md">
             <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
-            Next-Gen AI Image Generator v2.0
+            Designali Studio · Design se code tak
           </div>
 
           <h1 className="max-w-[700px] text-4xl font-normal tracking-[-0.04em] md:text-6xl">
-             Your Imagination
+             Your Brand Ideas
             <br />
-            To Life With AI
+            To Life With Designali
           </h1>
 
           <p className="mt-5 max-w-[520px] text-sm leading-6 text-muted-foreground">
-            Generate photorealistic assets, conceptual artwork, and stunning designs instantly using our advanced multi-model neural engine.
+            Brand identity, UI/UX design and production-ready websites by Ali Imam. Thoughtful design meets production-ready code.
           </p>
 
           <div className="mt-7 flex flex-col sm:flex-row items-center gap-3">
@@ -101,42 +101,42 @@ export function HeroSection() {
               type="button"
               className="flex items-center gap-3 rounded-full bg-foreground px-6 py-3 text-sm font-medium text-background transition-transform active:scale-95"
             >
-              Start Creating Free
+              Start a Project
               
             </button>
             <button
               type="button"
               className="flex items-center gap-2 rounded-full border border-border bg-background px-6 py-3 text-sm font-medium text-foreground hover:bg-muted/50"
             >
-              Explore Showcase
+              Explore Work
             </button>
           </div>
 
           <div className="mt-12 grid w-full max-w-[650px] md:grid-cols-3 md:border-t border-border/60 pt-7">
             <div className="px-4 text-center">
               <h3 className="font-serif text-base font-medium">
-                4K Resolution
+                Brand Identity
               </h3>
               <p className="m-2 text-[11px] text-muted-foreground">
-                Crisp, ultra-high-definition exports ready for print.
+                Logos, type and colour systems that stand out.
               </p>
             </div>
 
             <div className="border-y md:border-y-0 md:border-x border-border/60 p-4 text-center">
               <h3 className="font-serif text-base font-medium">
-                Sub-Second Gen
+                UI/UX Design
               </h3>
               <p className="m-2 text-[11px] text-muted-foreground">
-                Lightning fast rendering powered by optimized pipelines.
+                Interfaces that look great and feel intuitive.
               </p>
             </div>
 
             <div className="px-4 text-center">
               <h3 className="font-serif text-base font-medium">
-                Full Control
+                Production Code
               </h3>
               <p className="mt-2 text-[11px] text-muted-foreground">
-                Fine-tune prompts, styles, and aspect ratios effortlessly.
+                Fast Next.js sites built with Tailwind CSS.
               </p>
             </div>
           </div>

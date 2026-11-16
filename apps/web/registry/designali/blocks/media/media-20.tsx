@@ -1,18 +1,24 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { Pause, Play, Plus, SkipForward, X } from "lucide-react"
+import {
+  Pause,
+  Play,
+  Plus,
+  SkipForward,
+  X,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { cn } from "@workspace/ui/lib/utils"
 
 const shows = [
-  { name: "Margin Notes", host: "Ruth Achebe", episode: "Why every book needs an index", category: "Books", length: 2460, gradient: "linear-gradient(135deg, var(--chart-1), var(--chart-2))" },
-  { name: "Dead Reckoning", host: "Pavel & Tess", episode: "Navigating without GPS", category: "Science", length: 3120, gradient: "linear-gradient(200deg, var(--chart-3), var(--chart-5))" },
-  { name: "Mise en Place", host: "Chef Lin Okoro", episode: "The case for fewer knives", category: "Food", length: 1980, gradient: "linear-gradient(60deg, var(--chart-4), var(--chart-1))" },
-  { name: "Quiet Money", host: "Nadia Hal", episode: "Index funds, explained slowly", category: "Finance", length: 2700, gradient: "linear-gradient(160deg, var(--chart-2), var(--chart-4))" },
-  { name: "Night Bus", host: "Callum Reyes", episode: "Stories from the 2am route", category: "Society", length: 2280, gradient: "linear-gradient(300deg, var(--chart-5), var(--chart-3))" },
-  { name: "Small Rooms", host: "Ines Dubois", episode: "Designing a 28 square metre flat", category: "Design", length: 2040, gradient: "linear-gradient(20deg, var(--chart-1), var(--chart-5))" },
+  { name: "Design se Code Tak", host: "Ali Imam", episode: "From Figma frame to production code", category: "Design", length: 2460, gradient: "linear-gradient(135deg, var(--chart-1), var(--chart-2))" },
+  { name: "Pixel Perfect", host: "Sara", episode: "Why every grid needs a baseline", category: "UI/UX", length: 3120, gradient: "linear-gradient(200deg, var(--chart-3), var(--chart-5))" },
+  { name: "Ship It", host: "Omar", episode: "Next.js for designers", category: "Development", length: 1980, gradient: "linear-gradient(60deg, var(--chart-4), var(--chart-1))" },
+  { name: "Brand Room", host: "Nina", episode: "Logos that last a decade", category: "Brand", length: 2700, gradient: "linear-gradient(160deg, var(--chart-2), var(--chart-4))" },
+  { name: "Motion Notes", host: "Callum", episode: "Easing curves, explained slowly", category: "Motion", length: 2280, gradient: "linear-gradient(300deg, var(--chart-5), var(--chart-3))" },
+  { name: "Small Pages", host: "Ines", episode: "Designing a one-page portfolio", category: "Templates", length: 2040, gradient: "linear-gradient(20deg, var(--chart-1), var(--chart-5))" },
 ]
 const fmt = (s: number) => `${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}`
 
@@ -49,7 +55,7 @@ export default function Media20() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="flex flex-wrap items-end justify-between gap-4">
           <div>
-            <p className="text-xs tracking-widest text-muted-foreground uppercase">Hearth Audio network</p>
+            <p className="text-xs tracking-widest text-muted-foreground uppercase">Designali Audio</p>
             <h2 className="mt-2 text-3xl font-semibold tracking-tight md:text-4xl">New this week</h2>
           </div>
           <p className="text-sm text-muted-foreground">{queue.length} in your queue</p>

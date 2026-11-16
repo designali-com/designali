@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { ChevronRightIcon } from "lucide-react"
+import {
+  ChevronRight as ChevronRightIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import { Button } from "@workspace/ui/components/button"
@@ -25,7 +27,7 @@ import {
 const customers = [
   {
     id: "cus_8F2",
-    name: "Marta Kowal",
+    name: "Brand identity client",
     plan: "Team",
     mrr: 590,
     status: "Active",
@@ -33,7 +35,7 @@ const customers = [
   },
   {
     id: "cus_3K9",
-    name: "Dev Patel",
+    name: "Templates customer",
     plan: "Pro",
     mrr: 24,
     status: "Past due",
@@ -41,7 +43,7 @@ const customers = [
   },
   {
     id: "cus_1Q4",
-    name: "Yara Haddad",
+    name: "Icons Pro customer",
     plan: "Pro",
     mrr: 48,
     status: "Active",

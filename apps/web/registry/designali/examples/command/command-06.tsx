@@ -1,7 +1,11 @@
 "use client"
 
 import * as React from "react"
-import { ChevronsUpDownIcon, FolderKanbanIcon, PlusIcon } from "lucide-react"
+import {
+  ChevronsUpDown as ChevronsUpDownIcon,
+  FolderKanban as FolderKanbanIcon,
+  Plus as PlusIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -20,10 +24,10 @@ import {
 } from "@workspace/ui/components/popover"
 
 const projects = [
-  { id: "atlas", name: "Atlas Redesign", team: "Design" },
-  { id: "orbit", name: "Orbit API", team: "Platform" },
-  { id: "harbor", name: "Harbor Mobile", team: "Mobile" },
-  { id: "lumen", name: "Lumen Analytics", team: "Data" },
+  { id: "atlas", name: "designali.com", team: "Web" },
+  { id: "orbit", name: "Designali Blocks", team: "UI" },
+  { id: "harbor", name: "Designali Icons", team: "Icons" },
+  { id: "lumen", name: "Dalim Agency", team: "Brand" },
 ]
 
 export default function ProjectSwitcherPopover() {

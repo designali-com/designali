@@ -1,4 +1,7 @@
-import { PackageIcon, TruckIcon } from "lucide-react"
+import {
+  Package as PackageIcon,
+  Truck as TruckIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import { Button } from "@workspace/ui/components/button"
@@ -14,8 +17,8 @@ import {
 } from "@workspace/ui/components/sheet"
 
 const lines = [
-  { name: "Trail runner shoe", qty: 1, price: 129 },
-  { name: "Merino socks (3 pack)", qty: 2, price: 24 },
+  { name: "Design Agency template", qty: 1, price: 129 },
+  { name: "Client license (3 pack)", qty: 2, price: 24 },
 ]
 
 export default function OrderDetailsAdminSheet() {
@@ -36,9 +39,9 @@ export default function OrderDetailsAdminSheet() {
         </SheetHeader>
         <div className="flex flex-1 flex-col gap-4 overflow-y-auto px-4">
           <div className="flex flex-col gap-1 border p-3">
-            <span className="font-medium">Noor Abbasi</span>
+            <span className="font-medium">Noor</span>
             <span className="text-muted-foreground">
-              noor.abbasi@mail.example
+              noor@example.com
             </span>
             <span className="text-muted-foreground">
               21 Harbor Lane, Portland, OR 97201

@@ -9,7 +9,7 @@ export default function CallToAction06() {
             Stop rebuilding the same button.
           </h2>
           <p className="mt-6 text-base leading-7 text-background/70">
-            Install 400+ production-ready blocks with one command and own the
+            Install 460+ production-ready Designali blocks with one command and own the
             code from day one.
           </p>
         </div>
@@ -25,7 +25,7 @@ export default function CallToAction06() {
             <Button
               size="lg"
               className="flex-1 bg-background text-foreground hover:bg-background/90"
-              nativeButton={false} render={<a href="#" />}
+              nativeButton={false} render={<a href="https://www.designali.com/blocks" />}
             >
               Browse blocks
             </Button>
@@ -33,7 +33,7 @@ export default function CallToAction06() {
               size="lg"
               variant="ghost"
               className="flex-1 border-background/20 text-background hover:bg-background/10 hover:text-background"
-              nativeButton={false} render={<a href="#" />}
+              nativeButton={false} render={<a href="https://www.designali.com/docs" />}
             >
               Read the docs
             </Button>

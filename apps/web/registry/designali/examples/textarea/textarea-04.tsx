@@ -1,4 +1,6 @@
-import { LockIcon } from "lucide-react"
+import {
+  Lock as LockIcon,
+} from "@designali/icons"
 
 import {
   Field,
@@ -14,7 +16,7 @@ export default function DisabledTextarea() {
       <Textarea
         id="ta-disabled"
         disabled
-        defaultValue="Payment is due within 30 days of invoice. Late payments incur a 1.5% monthly fee."
+        defaultValue="Designali studio invoices are due within 30 days. Design files are handed over once the final invoice is paid."
       />
       <FieldDescription className="flex items-center gap-1">
         <LockIcon className="size-3" />

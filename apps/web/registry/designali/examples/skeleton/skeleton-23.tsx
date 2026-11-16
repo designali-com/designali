@@ -2,7 +2,7 @@
 
 import * as React from "react"
 
-import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
+import { Avatar, AvatarFallback, AvatarImage } from "@workspace/ui/components/avatar"
 import { Badge } from "@workspace/ui/components/badge"
 import { Label } from "@workspace/ui/components/label"
 import { Skeleton } from "@workspace/ui/components/skeleton"
@@ -33,12 +33,13 @@ export default function LoadingToggleSkeleton() {
         ) : (
           <>
             <Avatar>
-              <AvatarFallback>ZA</AvatarFallback>
+              <AvatarImage src="/ali.jpg" alt="Ali Imam" />
+              <AvatarFallback>AI</AvatarFallback>
             </Avatar>
             <div className="flex flex-1 flex-col">
-              <span className="text-sm font-medium">Zara Ahmed</span>
+              <span className="text-sm font-medium">Ali Imam</span>
               <span className="text-xs text-muted-foreground">
-                Staff engineer · Platform
+                Design engineer · Designali
               </span>
             </div>
             <Badge variant="secondary">Online</Badge>

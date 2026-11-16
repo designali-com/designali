@@ -1,10 +1,10 @@
 import {
-  BanIcon,
-  HistoryIcon,
-  KeyRoundIcon,
-  ShieldCheckIcon,
-  VenetianMaskIcon,
-} from "lucide-react"
+  Ban as BanIcon,
+  History as HistoryIcon,
+  KeyRound as KeyRoundIcon,
+  ShieldCheck as ShieldCheckIcon,
+  VenetianMask as VenetianMaskIcon,
+} from "@designali/icons"
 
 import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
 import { Badge } from "@workspace/ui/components/badge"
@@ -23,12 +23,12 @@ export default function AdminUserActions() {
     <Command className="w-full max-w-sm border">
       <div className="flex items-center gap-3 border-b p-3">
         <Avatar>
-          <AvatarFallback>RK</AvatarFallback>
+          <AvatarFallback>Z</AvatarFallback>
         </Avatar>
         <div className="flex min-w-0 flex-col">
-          <span className="text-sm font-medium">Rina Kowalski</span>
+          <span className="text-sm font-medium">Zara</span>
           <span className="truncate text-xs text-muted-foreground">
-            rina@fieldnote.io · Admin
+            zara@designali.com · Admin
           </span>
         </div>
         <Badge variant="outline" className="ms-auto">

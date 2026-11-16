@@ -4,37 +4,37 @@ import { cn } from "@workspace/ui/lib/utils"
 
 const items = [
   {
-    name: "Linen Shirt",
+    name: "Portfolio Simple template",
     qty: 2,
     price: 68,
     tone: "from-stone-200 to-stone-400",
   },
   {
-    name: "Canvas Tote",
+    name: "Design Agency template",
     qty: 1,
     price: 32,
     tone: "from-amber-200 to-orange-400",
   },
   {
-    name: "Wool Beanie",
+    name: "Resort template",
     qty: 1,
     price: 24,
     tone: "from-slate-300 to-slate-600",
   },
   {
-    name: "Trail Sneaker",
+    name: "AI template",
     qty: 1,
     price: 120,
     tone: "from-emerald-200 to-teal-500",
   },
   {
-    name: "Rain Shell",
+    name: "Icons Pack",
     qty: 1,
     price: 145,
     tone: "from-sky-200 to-indigo-500",
   },
   {
-    name: "Merino Socks",
+    name: "Logos Pack",
     qty: 3,
     price: 14,
     tone: "from-rose-200 to-pink-400",

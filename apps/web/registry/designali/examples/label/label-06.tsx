@@ -1,4 +1,8 @@
-import { GlobeIcon, MailIcon, PhoneIcon } from "lucide-react"
+import {
+  Globe as GlobeIcon,
+  Mail as MailIcon,
+  Phone as PhoneIcon,
+} from "@designali/icons"
 
 import { Input } from "@workspace/ui/components/input"
 import { Label } from "@workspace/ui/components/label"
@@ -8,7 +12,7 @@ const fields = [
     id: "contact-email",
     label: "Email",
     icon: MailIcon,
-    placeholder: "noah@harborline.co",
+    placeholder: "hello@designali.com",
   },
   {
     id: "contact-phone",
@@ -20,7 +24,7 @@ const fields = [
     id: "contact-site",
     label: "Website",
     icon: GlobeIcon,
-    placeholder: "harborline.co",
+    placeholder: "designali.com",
   },
 ]
 

@@ -1,4 +1,7 @@
-import { ChevronDownIcon, SearchIcon } from "lucide-react"
+import {
+  ChevronDown as ChevronDownIcon,
+  Search as SearchIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {

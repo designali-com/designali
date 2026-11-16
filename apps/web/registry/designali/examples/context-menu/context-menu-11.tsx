@@ -12,10 +12,10 @@ import {
 } from "@workspace/ui/components/context-menu"
 
 const lines = [
-  "export async function getInvoice(id: string) {",
-  "  const invoice = await db.invoice.find(id)",
-  "  if (!invoice) throw new NotFoundError()",
-  "  return serialize(invoice)",
+  "export async function getTemplate(slug: string) {",
+  "  const template = await db.template.find(slug)",
+  "  if (!template) throw new NotFoundError()",
+  "  return serialize(template)",
   "}",
 ]
 

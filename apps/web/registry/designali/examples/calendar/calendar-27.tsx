@@ -7,7 +7,9 @@ import {
   format,
   isLastDayOfMonth,
 } from "date-fns"
-import { BanknoteIcon } from "lucide-react"
+import {
+  Banknote as BanknoteIcon,
+} from "@designali/icons"
 
 import { Calendar } from "@workspace/ui/components/calendar"
 import {
@@ -40,7 +42,7 @@ export default function PaydayCalendar() {
           Pay schedule
         </CardTitle>
         <CardDescription>
-          Paid on the 15th and the last day of each month.
+          Designali studio pays on the 15th and the last day of each month.
         </CardDescription>
       </CardHeader>
       <CardContent>

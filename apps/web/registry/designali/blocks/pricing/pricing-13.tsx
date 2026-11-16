@@ -1,7 +1,11 @@
 "use client"
 
 import { useState } from "react"
-import { Coins, Infinity as InfinityIcon, Sparkles } from "lucide-react"
+import {
+  Coins,
+  Infinity as InfinityIcon,
+  Sparkles,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { cn } from "@workspace/ui/lib/utils"

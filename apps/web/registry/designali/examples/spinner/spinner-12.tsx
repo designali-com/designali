@@ -1,4 +1,6 @@
-import { CheckIcon } from "lucide-react"
+import {
+  Check as CheckIcon,
+} from "@designali/icons"
 
 import { Spinner } from "@workspace/ui/components/spinner"
 import {
@@ -13,23 +15,23 @@ import {
 const invoices = [
   {
     id: "INV-2051",
-    client: "Northwind Studio",
+    client: "Brand identity",
     amount: "$1,240.00",
     status: "Paid",
   },
   {
     id: "INV-2052",
-    client: "Pine Hollow",
+    client: "UI/UX design",
     amount: "$860.00",
     status: "Processing",
   },
   {
     id: "INV-2053",
-    client: "Orbit Labs",
+    client: "Next.js website",
     amount: "$3,100.00",
     status: "Processing",
   },
-  { id: "INV-2054", client: "Fernwood", amount: "$420.00", status: "Paid" },
+  { id: "INV-2054", client: "Design system", amount: "$420.00", status: "Paid" },
 ]
 
 export default function TableRowStatusSpinner() {
@@ -39,7 +41,7 @@ export default function TableRowStatusSpinner() {
         <TableHeader>
           <TableRow>
             <TableHead>Invoice</TableHead>
-            <TableHead>Client</TableHead>
+            <TableHead>Project</TableHead>
             <TableHead>Status</TableHead>
             <TableHead className="text-right">Amount</TableHead>
           </TableRow>

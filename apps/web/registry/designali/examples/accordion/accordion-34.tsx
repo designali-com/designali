@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { ChevronDownIcon, ShieldIcon } from "lucide-react"
+import {
+  ChevronDown as ChevronDownIcon,
+  Shield as ShieldIcon,
+} from "@designali/icons"
 
 import {
   Accordion,
@@ -15,7 +18,7 @@ import { Label } from "@workspace/ui/components/label"
 const resources = [
   {
     value: "projects",
-    title: "Projects",
+    title: "Client projects",
     actions: ["View", "Create", "Edit", "Delete"],
   },
   {
@@ -49,7 +52,7 @@ export default function AccordionRolePermissions() {
     <div className="w-full max-w-sm space-y-2">
       <div className="flex items-center gap-2">
         <ShieldIcon className="size-4" />
-        <span className="text-sm font-medium">Editor role</span>
+        <span className="text-sm font-medium">Designali studio editor role</span>
       </div>
       <Accordion defaultValue={["projects"]} className="border px-3">
         {resources.map((resource) => (

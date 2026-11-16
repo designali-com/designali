@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { CircleCheckIcon } from "lucide-react"
+import {
+  CircleCheck as CircleCheckIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -59,7 +61,7 @@ export default function AsyncSaveDialog() {
                 <FieldLabel htmlFor="store-name">Store name</FieldLabel>
                 <Input
                   id="store-name"
-                  defaultValue="Juniper & Co."
+                  defaultValue="Designali"
                   disabled={saving}
                 />
               </Field>
@@ -68,7 +70,7 @@ export default function AsyncSaveDialog() {
                 <Input
                   id="store-email"
                   type="email"
-                  defaultValue="hello@juniperco.shop"
+                  defaultValue="support@designali.com"
                   disabled={saving}
                 />
               </Field>

@@ -1,4 +1,6 @@
-import { CheckIcon } from "lucide-react"
+import {
+  Check as CheckIcon,
+} from "@designali/icons"
 
 import { Spinner } from "@workspace/ui/components/spinner"
 import { cn } from "@workspace/ui/lib/utils"

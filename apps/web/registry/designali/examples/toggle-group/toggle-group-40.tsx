@@ -1,14 +1,14 @@
 import {
-  AlignCenterIcon,
-  AlignLeftIcon,
-  BoldIcon,
-  CodeIcon,
-  Heading1Icon,
-  Heading2Icon,
-  ItalicIcon,
-  LinkIcon,
-  PilcrowIcon,
-} from "lucide-react"
+  TextAlignCenter as AlignCenterIcon,
+  TextAlignStart as AlignLeftIcon,
+  Bold as BoldIcon,
+  Code as CodeIcon,
+  Heading1 as Heading1Icon,
+  Heading2 as Heading2Icon,
+  Italic as ItalicIcon,
+  Link as LinkIcon,
+  Pilcrow as PilcrowIcon,
+} from "@designali/icons"
 
 import { Separator } from "@workspace/ui/components/separator"
 import {

@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { HistoryIcon, SearchIcon } from "lucide-react"
+import {
+  History as HistoryIcon,
+  Search as SearchIcon,
+} from "@designali/icons"
 
 import {
   InputGroup,
@@ -23,7 +26,7 @@ export default function RecentSearchesInput() {
         </InputGroupAddon>
         <InputGroupInput
           aria-label="Search"
-          placeholder="Search your drive"
+          placeholder="Search Designali files"
           value={q}
           onChange={(e) => setQ(e.target.value)}
           onFocus={() => setFocused(true)}

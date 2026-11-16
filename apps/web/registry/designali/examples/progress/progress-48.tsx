@@ -1,6 +1,8 @@
 "use client"
 
-import { BookOpenIcon } from "lucide-react"
+import {
+  BookOpen as BookOpenIcon,
+} from "@designali/icons"
 
 import {
   Progress,

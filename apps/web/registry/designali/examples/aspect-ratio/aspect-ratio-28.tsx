@@ -1,4 +1,6 @@
-import { EyeIcon } from "lucide-react"
+import {
+  Eye as EyeIcon,
+} from "@designali/icons"
 
 import { AspectRatio } from "@workspace/ui/components/aspect-ratio"
 import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
@@ -37,14 +39,14 @@ export default function LiveStreamThumbnail() {
       </AspectRatio>
       <div className="mt-2 flex gap-2">
         <Avatar size="sm">
-          <AvatarFallback>QV</AvatarFallback>
+          <AvatarFallback>AI</AvatarFallback>
         </Avatar>
         <div className="min-w-0">
           <p className="truncate text-sm font-medium">
-            Speedrunning the new climbing map
+            Live: building a Designali block in Next.js
           </p>
           <p className="text-xs text-muted-foreground">
-            quinnvale - Ridge Runner
+            designali - Design se code tak
           </p>
         </div>
       </div>

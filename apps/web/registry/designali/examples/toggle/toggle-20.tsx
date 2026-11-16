@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { EyeIcon } from "lucide-react"
+import {
+  Eye as EyeIcon,
+} from "@designali/icons"
 
 import { Textarea } from "@workspace/ui/components/textarea"
 import { Toggle } from "@workspace/ui/components/toggle"
@@ -9,7 +11,7 @@ import { Toggle } from "@workspace/ui/components/toggle"
 export default function MarkdownPreviewToggle() {
   const [preview, setPreview] = React.useState(false)
   const [text, setText] = React.useState(
-    "Looks great! Just one nit: rename **fetchAll** to **listInvoices**."
+    "Looks great! Just one nit: rename **HeroBlock** to **DesignaliHero**."
   )
 
   return (

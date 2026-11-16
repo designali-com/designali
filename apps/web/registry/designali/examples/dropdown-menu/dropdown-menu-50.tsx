@@ -2,14 +2,14 @@
 
 import * as React from "react"
 import {
-  BanIcon,
-  CopyIcon,
-  EyeIcon,
-  EyeOffIcon,
-  KeyRoundIcon,
-  MoreVerticalIcon,
-  RefreshCwIcon,
-} from "lucide-react"
+  Ban as BanIcon,
+  Copy as CopyIcon,
+  Eye as EyeIcon,
+  EyeOff as EyeOffIcon,
+  KeyRound as KeyRoundIcon,
+  EllipsisVertical as MoreVerticalIcon,
+  RefreshCw as RefreshCwIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import { Button } from "@workspace/ui/components/button"
@@ -30,7 +30,7 @@ export default function ApiKeyActionsMenu() {
     <div className="flex w-full max-w-md items-center gap-3 border p-3 text-xs">
       <KeyRoundIcon className="size-4 text-muted-foreground" />
       <div className="min-w-0 flex-1">
-        <p className="font-medium">Production server</p>
+        <p className="font-medium">designali.com production</p>
         <p className="truncate font-mono text-muted-foreground">
           {revealed ? secret : "key_demo_••••••••" + secret.slice(-4)}
         </p>

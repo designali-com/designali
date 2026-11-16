@@ -1,4 +1,7 @@
-import { CheckIcon, XIcon } from "lucide-react"
+import {
+  Check as CheckIcon,
+  X as XIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import {
@@ -20,9 +23,9 @@ const roles: Record<string, boolean[]> = {
   Viewer: [true, false, false, false],
 }
 const members = [
-  { name: "Oliver Grant", role: "Admin" },
-  { name: "Zara Malik", role: "Editor" },
-  { name: "Luca Bianchi", role: "Viewer" },
+  { name: "Ali Imam", role: "Admin" },
+  { name: "Studio Designer", role: "Editor" },
+  { name: "Client Reviewer", role: "Viewer" },
 ]
 
 export default function RolePermissionsHoverCard() {

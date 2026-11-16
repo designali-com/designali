@@ -26,8 +26,8 @@ import {
             <CardHeader>
               <CardTitle>Overview</CardTitle>
               <CardDescription>
-                View your key metrics and recent project activity. Track progress
-                across all your active projects.
+                View your key metrics and recent Designali project activity. Track
+                progress across all your active client projects.
               </CardDescription>
             </CardHeader>
             <CardContent className="text-sm text-muted-foreground">
@@ -40,12 +40,12 @@ import {
             <CardHeader>
               <CardTitle>Analytics</CardTitle>
               <CardDescription>
-                Track performance and user engagement metrics. Monitor trends and
-                identify growth opportunities.
+                Track designali.com traffic and template downloads. Monitor trends
+                and identify growth opportunities.
               </CardDescription>
             </CardHeader>
             <CardContent className="text-sm text-muted-foreground">
-              Page views are up 25% compared to last month.
+              Block page views are up 25% compared to last month.
             </CardContent>
           </Card>
         </TabsContent>
@@ -54,7 +54,7 @@ import {
             <CardHeader>
               <CardTitle>Reports</CardTitle>
               <CardDescription>
-                Generate and download your detailed reports. Export data in
+                Generate and download studio reports. Export project data in
                 multiple formats for analysis.
               </CardDescription>
             </CardHeader>

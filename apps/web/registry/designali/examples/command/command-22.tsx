@@ -12,11 +12,11 @@ import {
 } from "@workspace/ui/components/command"
 
 const products = [
-  { sku: "TS-1001", name: "Organic cotton tee", stock: 42 },
-  { sku: "HD-2040", name: "Fleece zip hoodie", stock: 8 },
-  { sku: "CP-3300", name: "Canvas baseball cap", stock: 0 },
-  { sku: "BG-4120", name: "Recycled tote bag", stock: 120 },
-  { sku: "SK-5005", name: "Merino crew socks", stock: 17 },
+  { sku: "TP-1001", name: "Portfolio Simple template", stock: 42 },
+  { sku: "TP-2040", name: "Design Agency template", stock: 8 },
+  { sku: "TP-3300", name: "Resort template", stock: 0 },
+  { sku: "IC-4120", name: "Designali icon pack", stock: 120 },
+  { sku: "LG-5005", name: "Designali logo library", stock: 17 },
 ]
 
 export default function ManualFilteringResultsCount() {

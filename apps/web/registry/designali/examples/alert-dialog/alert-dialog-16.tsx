@@ -1,4 +1,7 @@
-import { BanknoteIcon, SendIcon } from "lucide-react"
+import {
+  Banknote as BanknoteIcon,
+  Send as SendIcon,
+} from "@designali/icons"
 
 import {
   AlertDialog,
@@ -26,7 +29,7 @@ export default function ConfirmPayoutDialog() {
           <AlertDialogMedia className="bg-emerald-500/10 text-emerald-600 dark:text-emerald-400">
             <BanknoteIcon />
           </AlertDialogMedia>
-          <AlertDialogTitle>Send $2,480.00 to Lena Ortiz?</AlertDialogTitle>
+          <AlertDialogTitle>Send $2,480.00 to Ali Imam?</AlertDialogTitle>
           <AlertDialogDescription>
             Funds will arrive in the account ending 4421 within 1-2 business
             days.

@@ -1,8 +1,10 @@
-import { ArrowRight } from "lucide-react"
+import {
+  ArrowRight,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 
-const links = ["Product", "Templates", "Pricing", "Security", "Docs", "Status"]
+const links = ["Templates", "Blocks", "Icons", "Pricing", "Docs", "Blogs"]
 
 export default function Footer16() {
   return (
@@ -16,16 +18,16 @@ export default function Footer16() {
           <div className="relative grid gap-10 lg:grid-cols-[1.5fr_1fr] lg:items-end">
             <div>
               <h2 className="text-3xl font-medium tracking-tight md:text-5xl">
-                Your next form is two minutes away.
+                Your next website is a copy away.
               </h2>
               <p className="mt-4 max-w-lg text-sm leading-6 opacity-70">
-                Start from 400 templates or a blank page. Free for up to 1,000
-                responses a month, forever.
+                Start from 460+ Designali blocks and 240+ landing pages, or work
+                with Ali Imam on a custom design and build.
               </p>
             </div>
             <div className="flex flex-col gap-3 sm:flex-row lg:justify-end">
               <Button size="lg" variant="secondary" nativeButton={false} render={<a href="#" />}>
-                Create a form
+                Browse blocks
                 <ArrowRight />
               </Button>
               <Button
@@ -35,7 +37,7 @@ export default function Footer16() {
                 nativeButton={false}
                 render={<a href="#" />}
               >
-                Contact sales
+                Start a project
               </Button>
             </div>
           </div>
@@ -44,9 +46,9 @@ export default function Footer16() {
         <div className="flex flex-col gap-6 py-10 md:flex-row md:items-center md:justify-between">
           <a href="#" className="flex items-center gap-2 text-sm font-semibold">
             <span className="flex size-6 items-center justify-center border-2 border-foreground text-[10px]">
-              F
+              D
             </span>
-            Formwell
+            designali
           </a>
           <nav className="flex flex-wrap gap-x-6 gap-y-3 text-sm text-muted-foreground">
             {links.map((link) => (
@@ -55,7 +57,7 @@ export default function Footer16() {
               </a>
             ))}
           </nav>
-          <p className="text-xs text-muted-foreground">© 2026 Formwell Inc.</p>
+          <p className="text-xs text-muted-foreground">© 2026 Designali</p>
         </div>
       </div>
     </footer>

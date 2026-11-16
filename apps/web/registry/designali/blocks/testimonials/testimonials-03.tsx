@@ -1,4 +1,6 @@
-import { Star } from "lucide-react"
+import {
+  Star,
+} from "@designali/icons"
 
 const reviews = [
   {

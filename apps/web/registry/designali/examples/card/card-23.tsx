@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { Settings2Icon, WebhookIcon } from "lucide-react"
+import {
+  Settings2 as Settings2Icon,
+  Webhook as WebhookIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import { Button } from "@workspace/ui/components/button"
@@ -25,13 +28,13 @@ export default function IntegrationCard() {
         <div className="row-span-2 flex size-10 items-center justify-center bg-gradient-to-br from-indigo-500 to-sky-500 text-white">
           <WebhookIcon className="size-5" />
         </div>
-        <CardTitle>Relaybox</CardTitle>
-        <CardDescription>Sync form submissions to your CRM.</CardDescription>
+        <CardTitle>Figma sync</CardTitle>
+        <CardDescription>Sync Designali components with your Figma library.</CardDescription>
         <CardAction className="col-start-3">
           <Switch
             checked={connected}
             onCheckedChange={setConnected}
-            aria-label="Enable Relaybox"
+            aria-label="Enable Figma sync"
           />
         </CardAction>
       </CardHeader>

@@ -10,17 +10,17 @@ import {
 } from "@workspace/ui/components/combobox"
 
 const frameworks = [
-  "Next.js",
-  "SvelteKit",
-  "Nuxt.js",
-  "Remix",
-  "Astro",
+  "Templates",
+  "Blocks",
+  "UI Designs",
+  "Icons",
+  "Logos",
 ] as const
 
 export function ComboboxWithClear() {
   return (
     <Combobox items={frameworks} defaultValue={frameworks[0]}>
-      <ComboboxInput placeholder="Select a framework" showClear />
+      <ComboboxInput placeholder="Select a Designali product" showClear />
       <ComboboxContent>
         <ComboboxEmpty>No items found.</ComboboxEmpty>
         <ComboboxList>

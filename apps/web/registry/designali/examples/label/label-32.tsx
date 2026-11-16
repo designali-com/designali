@@ -1,14 +1,16 @@
 "use client"
 
 import * as React from "react"
-import { CheckIcon } from "lucide-react"
+import {
+  Check as CheckIcon,
+} from "@designali/icons"
 
 import { Input } from "@workspace/ui/components/input"
 import { Label } from "@workspace/ui/components/label"
 import { Spinner } from "@workspace/ui/components/spinner"
 
 export default function AutosaveStatusLabel() {
-  const [title, setTitle] = React.useState("Q4 roadmap review")
+  const [title, setTitle] = React.useState("Designali roadmap review")
   const [saving, setSaving] = React.useState(false)
   const timer = React.useRef<number | undefined>(undefined)
 

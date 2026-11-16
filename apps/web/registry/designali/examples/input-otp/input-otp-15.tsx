@@ -1,7 +1,9 @@
 "use client"
 
 import { REGEXP_ONLY_DIGITS } from "input-otp"
-import { SmartphoneIcon } from "lucide-react"
+import {
+  Smartphone as SmartphoneIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {

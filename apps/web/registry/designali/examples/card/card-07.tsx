@@ -1,4 +1,9 @@
-import { ReceiptIcon, TargetIcon, TimerIcon, UsersIcon } from "lucide-react"
+import {
+  Receipt as ReceiptIcon,
+  Target as TargetIcon,
+  Timer as TimerIcon,
+  Users as UsersIcon,
+} from "@designali/icons"
 
 import {
   Card,
@@ -11,28 +16,28 @@ import { cn } from "@workspace/ui/lib/utils"
 
 const stats = [
   {
-    label: "Active users",
+    label: "designali.com visitors",
     value: "12,480",
     delta: "+8.1%",
     up: true,
     icon: UsersIcon,
   },
   {
-    label: "Conversion",
+    label: "Pro conversion",
     value: "3.42%",
     delta: "+0.4%",
     up: true,
     icon: TargetIcon,
   },
   {
-    label: "Avg. session",
+    label: "Avg. time on /blocks",
     value: "4m 12s",
     delta: "-6.0%",
     up: false,
     icon: TimerIcon,
   },
   {
-    label: "Refunds",
+    label: "Template refunds",
     value: "$1,204",
     delta: "-2.3%",
     up: true,

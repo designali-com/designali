@@ -34,7 +34,7 @@ export default function TabsWithCountBadges() {
           value={tab.value}
           className="border p-4 text-sm text-muted-foreground"
         >
-          {tab.count} {tab.label.toLowerCase()} pull requests.
+          {tab.count} {tab.label.toLowerCase()} Designali pull requests.
         </TabsContent>
       ))}
     </Tabs>

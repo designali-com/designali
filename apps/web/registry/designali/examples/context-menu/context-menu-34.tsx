@@ -1,7 +1,11 @@
 "use client"
 
 import * as React from "react"
-import { MailIcon, ShieldIcon, UserMinusIcon } from "lucide-react"
+import {
+  Mail as MailIcon,
+  Shield as ShieldIcon,
+  UserMinus as UserMinusIcon,
+} from "@designali/icons"
 
 import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
 import { Badge } from "@workspace/ui/components/badge"
@@ -20,10 +24,10 @@ import {
 } from "@workspace/ui/components/context-menu"
 
 const initialMembers = [
-  { name: "Maya Chen", email: "maya@fieldnote.io", role: "owner" },
-  { name: "Jonah Reyes", email: "jonah@fieldnote.io", role: "admin" },
-  { name: "Elliot Brandt", email: "elliot@fieldnote.io", role: "member" },
-  { name: "Sofia Laurent", email: "sofia@fieldnote.io", role: "viewer" },
+  { name: "Ali Imam", email: "ali@designali.com", role: "owner" },
+  { name: "Studio Designer", email: "design@designali.com", role: "admin" },
+  { name: "Studio Developer", email: "dev@designali.com", role: "member" },
+  { name: "Client Reviewer", email: "client@example.com", role: "viewer" },
 ]
 
 export default function TeamMemberRoleMenu() {

@@ -4,17 +4,17 @@ import { useState } from "react"
 
 import { cn } from "@workspace/ui/lib/utils"
 
-const filters = ["All", "Branding", "Product", "Motion"] as const
+const filters = ["All", "Branding", "Product", "Web"] as const
 
 const items = [
-  { title: "Kestrel identity", tag: "Branding", hue: "var(--chart-1)" },
-  { title: "Orbital app", tag: "Product", hue: "var(--chart-2)" },
-  { title: "Launch film", tag: "Motion", hue: "var(--chart-3)" },
-  { title: "Sable packaging", tag: "Branding", hue: "var(--chart-4)" },
-  { title: "Quanta dashboard", tag: "Product", hue: "var(--chart-5)" },
-  { title: "Title sequence", tag: "Motion", hue: "var(--chart-1)" },
-  { title: "Fieldnote type", tag: "Branding", hue: "var(--chart-3)" },
-  { title: "Tessel onboarding", tag: "Product", hue: "var(--chart-4)" },
+  { title: "Dalim Agency", tag: "Branding", image: "/images/templates/dalim-agency-old.jpg" },
+  { title: "Dalim UI", tag: "Product", image: "/images/templates/dalim-ui-old.jpg" },
+  { title: "Portfolio Simple", tag: "Web", image: "/images/templates/portfolio-simple.jpg" },
+  { title: "Dalim Graphic", tag: "Branding", image: "/images/templates/dalim-graphic-old.jpg" },
+  { title: "Dalim Tools", tag: "Product", image: "/images/templates/dalim-tools-old.jpg" },
+  { title: "Resort template", tag: "Web", image: "/images/templates/resort.jpg" },
+  { title: "Dalim Fonts", tag: "Branding", image: "/images/templates/dalim-fonts-old.jpg" },
+  { title: "AI template", tag: "Product", image: "/images/templates/ai.jpg" },
 ]
 
 export default function Gallery04() {
@@ -27,7 +27,7 @@ export default function Gallery04() {
     <section className="w-full bg-background py-20">
       <div className="mx-auto max-w-6xl px-6">
         <div className="flex flex-col gap-6 border-b border-border pb-6 md:flex-row md:items-end md:justify-between">
-          <h2 className="text-3xl font-semibold tracking-tight">Archive</h2>
+          <h2 className="text-3xl font-semibold tracking-tight">Designali archive</h2>
           <div className="flex flex-wrap gap-1">
             {filters.map((filter) => (
               <button
@@ -51,7 +51,7 @@ export default function Gallery04() {
               <div
                 className="aspect-[4/5] border border-border"
                 style={{
-                  background: `radial-gradient(circle at 30% 30%, ${item.hue}, transparent 70%), var(--muted)`,
+                  background: `url("${item.image}") center / cover, var(--muted)`,
                 }}
               />
               <figcaption className="mt-2 flex justify-between text-xs">

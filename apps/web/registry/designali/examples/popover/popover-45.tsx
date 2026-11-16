@@ -1,7 +1,11 @@
 "use client"
 
 import * as React from "react"
-import { CheckIcon, ChevronRightIcon, FilterIcon } from "lucide-react"
+import {
+  Check as CheckIcon,
+  ChevronRight as ChevronRightIcon,
+  Funnel as FilterIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import { Button } from "@workspace/ui/components/button"

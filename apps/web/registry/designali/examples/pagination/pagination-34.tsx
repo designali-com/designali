@@ -45,7 +45,7 @@ export default function InvoiceListPagination() {
     <Card className="w-full max-w-sm">
       <CardHeader>
         <CardTitle>Invoices</CardTitle>
-        <CardDescription>Billing history for Northwind Studio</CardDescription>
+        <CardDescription>Billing history for your designali.com account</CardDescription>
       </CardHeader>
       <CardContent className="flex flex-col divide-y">
         {rows.map((invoice) => (

@@ -1,13 +1,15 @@
-import { HashIcon } from "lucide-react"
+import {
+  Hash as HashIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 
 const topics = [
-  "react",
-  "performance",
-  "server-components",
-  "caching",
-  "web-vitals",
+  "designali",
+  "nextjs",
+  "tailwindcss",
+  "design-systems",
+  "ui-ux",
 ]
 
 export default function TopicLinkBadges() {

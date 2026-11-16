@@ -1,4 +1,8 @@
-import { ArrowRight, Check, X } from "lucide-react"
+import {
+  ArrowRight,
+  Check,
+  X,
+} from "@designali/icons"
 
 const before = [
   "Quotes built in a spreadsheet, emailed as PDFs",

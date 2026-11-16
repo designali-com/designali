@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { StarIcon } from "lucide-react"
+import {
+  Star as StarIcon,
+} from "@designali/icons"
 
 import {
   Tooltip,
@@ -20,7 +22,7 @@ export default function StarRatingTooltips() {
     <TooltipProvider>
       <div className="flex flex-col items-center gap-2">
         <span className="text-sm font-medium">
-          Rate your stay at Casa Aurora
+          Rate your Designali experience
         </span>
         <div className="flex">
           {labels.map((label, i) => (

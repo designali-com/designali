@@ -2,13 +2,13 @@
 
 import * as React from "react"
 import {
-  PauseIcon,
-  PlayIcon,
-  RepeatIcon,
-  ShuffleIcon,
-  SkipBackIcon,
-  SkipForwardIcon,
-} from "lucide-react"
+  Pause as PauseIcon,
+  Play as PlayIcon,
+  Repeat as RepeatIcon,
+  Shuffle as ShuffleIcon,
+  SkipBack as SkipBackIcon,
+  SkipForward as SkipForwardIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -33,9 +33,9 @@ export default function NowPlayingDrawer() {
       >
         <span className="size-9 shrink-0 bg-gradient-to-br from-pink-500 to-orange-400" />
         <span className="min-w-0 flex-1">
-          <span className="block truncate font-medium">Paper Lanterns</span>
+          <span className="block truncate font-medium">Design se code tak</span>
           <span className="block truncate text-muted-foreground">
-            The Quiet Harbors
+            Designali
           </span>
         </span>
         {playing ? (
@@ -48,9 +48,9 @@ export default function NowPlayingDrawer() {
         <div className="mx-auto flex w-full max-w-xs flex-col gap-4 p-4">
           <div className="aspect-square w-full bg-gradient-to-br from-pink-500 via-rose-500 to-orange-400" />
           <DrawerHeader className="p-0 text-start">
-            <DrawerTitle className="text-base">Paper Lanterns</DrawerTitle>
+            <DrawerTitle className="text-base">Design se code tak</DrawerTitle>
             <DrawerDescription>
-              The Quiet Harbors · Low Light (2026)
+              Designali · Studio Sessions (2026)
             </DrawerDescription>
           </DrawerHeader>
           <div className="flex flex-col gap-1">

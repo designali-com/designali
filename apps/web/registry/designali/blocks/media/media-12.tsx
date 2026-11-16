@@ -1,11 +1,14 @@
-import { Play, Quote } from "lucide-react"
+import {
+  Play,
+  Quote,
+} from "@designali/icons"
 
 const reels = [
-  { name: "Dana Whitfield", role: "Founder, Pebble & Pine", quote: "We replaced three tools in a week.", length: "0:42", gradient: "linear-gradient(180deg, var(--chart-1), var(--chart-3))" },
-  { name: "Kwame Asante", role: "Ops Lead, Northgate", quote: "Our onboarding time dropped by half.", length: "0:58", gradient: "linear-gradient(200deg, var(--chart-2), var(--chart-5))" },
-  { name: "Lucia Romero", role: "CTO, Fieldnote", quote: "The API is genuinely a pleasure.", length: "1:04", gradient: "linear-gradient(160deg, var(--chart-4), var(--chart-1))" },
-  { name: "Sam Okafor", role: "Designer, Halfmoon", quote: "It finally feels like one product.", length: "0:37", gradient: "linear-gradient(220deg, var(--chart-3), var(--chart-2))" },
-  { name: "Mei Tanaka", role: "PM, Orbitline", quote: "Support replies in minutes, not days.", length: "0:51", gradient: "linear-gradient(140deg, var(--chart-5), var(--chart-4))" },
+  { name: "Dana", role: "Founder, Designali client", quote: "Designali built our brand and site in weeks.", length: "0:42", gradient: "linear-gradient(180deg, var(--chart-1), var(--chart-3))" },
+  { name: "Kwame", role: "Frontend developer", quote: "The blocks cut our build time in half.", length: "0:58", gradient: "linear-gradient(200deg, var(--chart-2), var(--chart-5))" },
+  { name: "Lucia", role: "Product designer", quote: "The Figma files match the code exactly.", length: "1:04", gradient: "linear-gradient(160deg, var(--chart-4), var(--chart-1))" },
+  { name: "Sam", role: "Studio client", quote: "Ali designs and codes. It shows.", length: "0:37", gradient: "linear-gradient(220deg, var(--chart-3), var(--chart-2))" },
+  { name: "Mei", role: "Designali Pro member", quote: "4000+ icons and every one is consistent.", length: "0:51", gradient: "linear-gradient(140deg, var(--chart-5), var(--chart-4))" },
 ]
 
 export default function Media12() {
@@ -14,11 +17,11 @@ export default function Media12() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="grid gap-6 md:grid-cols-2 md:items-end">
           <h2 className="text-3xl font-semibold tracking-tight md:text-4xl">
-            Customers, in their own words
+            Designali clients, in their own words
           </h2>
           <p className="text-muted-foreground md:text-right">
-            Unscripted, one-minute clips recorded on phones by the teams who use
-            Fieldwork every day.
+            Unscripted, one-minute clips recorded by the people who build with
+            Designali every day.
           </p>
         </div>
         <div className="-mx-6 mt-10 flex snap-x snap-mandatory gap-4 overflow-x-auto px-6 pb-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">

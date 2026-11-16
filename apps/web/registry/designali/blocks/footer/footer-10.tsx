@@ -1,11 +1,13 @@
-import { Globe } from "lucide-react"
+import {
+  Globe,
+} from "@designali/icons"
 
 const sitemap = [
-  { title: "Platform", links: ["Overview", "Editor", "Collaboration", "Plugins", "Security"] },
-  { title: "Solutions", links: ["Agencies", "Startups", "Enterprise", "Education"] },
-  { title: "Developers", links: ["Documentation", "API reference", "SDKs", "Status"] },
-  { title: "Company", links: ["About", "Blog", "Careers", "Brand", "Contact"] },
-  { title: "Legal", links: ["Privacy", "Terms", "DPA", "Subprocessors"] },
+  { title: "Products", links: ["Templates", "Blocks", "UI Designs", "Landing Pages", "Pricing"] },
+  { title: "Assets", links: ["Icons", "Logos", "Illustration", "Device Mockups"] },
+  { title: "Developers", links: ["Docs", "Components", "@designali/icons", "@designali/logos"] },
+  { title: "Studio", links: ["Work", "Blogs", "Services", "Ali Imam", "Contact"] },
+  { title: "Legal", links: ["Terms", "License", "Privacy"] },
 ]
 
 export default function Footer10() {
@@ -34,12 +36,12 @@ export default function Footer10() {
 
         <div className="flex flex-col gap-4 p-6 text-xs text-muted-foreground md:flex-row md:items-center md:justify-between">
           <div className="flex items-center gap-4">
-            <span className="text-sm font-semibold text-foreground">Canvasly</span>
-            <span>© 2026 Canvasly, Inc.</span>
+            <span className="text-sm font-semibold text-foreground">designali</span>
+            <span>© 2026 Designali</span>
           </div>
           <div className="flex items-center gap-4">
-            <span className="border border-border px-2 py-1 font-mono">SOC 2 Type II</span>
-            <span className="border border-border px-2 py-1 font-mono">GDPR</span>
+            <span className="border border-border px-2 py-1 font-mono">Next.js</span>
+            <span className="border border-border px-2 py-1 font-mono">Tailwind CSS</span>
             <a href="#" className="flex items-center gap-1.5 hover:text-foreground">
               <Globe className="size-3.5" />
               English (US)

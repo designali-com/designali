@@ -69,9 +69,9 @@ export function CardSpacing() {
       </ToggleGroup>
       <Card className={selectedSpacing?.className}>
         <CardHeader>
-          <CardTitle>Login to your account</CardTitle>
+          <CardTitle>Sign in to designali</CardTitle>
           <CardDescription>
-            Enter your email below to login to your account
+            Enter your email to access your templates, blocks and icons
           </CardDescription>
           <CardAction>
             <Button variant="link">Sign Up</Button>
@@ -85,7 +85,7 @@ export function CardSpacing() {
                 <Input
                   id="email-spacing"
                   type="email"
-                  placeholder="m@example.com"
+                  placeholder="you@designali.com"
                   required
                 />
               </div>

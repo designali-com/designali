@@ -13,17 +13,17 @@ import {
   GaugeValueText,
 } from "@/registry/designali/ui/gauge"
 
-const biomarkers = [
+const projectScores = [
   {
-    label: "Muscle Health",
+    label: "Design Quality",
     value: 82,
   },
   {
-    label: "Metabolic Health",
+    label: "Code Performance",
     value: 74,
   },
   {
-    label: "Recovery",
+    label: "Accessibility",
     value: 61,
   },
 ]
@@ -31,7 +31,7 @@ const biomarkers = [
 export function GaugeDemoBiomarker() {
   return (
     <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
-      {biomarkers.map((item) => (
+      {projectScores.map((item) => (
         <Card key={item.label} className="pt-0">
           <CardContent className="flex flex-col items-center gap-4 pt-6">
             <Gauge value={item.value} size={160}>

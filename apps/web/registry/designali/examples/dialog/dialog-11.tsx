@@ -1,7 +1,11 @@
 "use client"
 
 import * as React from "react"
-import { BellRingIcon, LayoutDashboardIcon, UsersIcon } from "lucide-react"
+import {
+  BellRing as BellRingIcon,
+  LayoutDashboard as LayoutDashboardIcon,
+  Users as UsersIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -19,18 +23,18 @@ import { Progress } from "@workspace/ui/components/progress"
 const steps = [
   {
     icon: LayoutDashboardIcon,
-    title: "Build your dashboard",
-    body: "Drag widgets onto the canvas to track the metrics your team cares about.",
+    title: "Browse Designali blocks",
+    body: "Pick from 460+ production-ready blocks built with Next.js and Tailwind CSS.",
   },
   {
     icon: UsersIcon,
-    title: "Bring your team",
-    body: "Invite collaborators and assign owners to every report.",
+    title: "Grab icons and logos",
+    body: "Install @designali/icons and @designali/logos in one command.",
   },
   {
     icon: BellRingIcon,
-    title: "Stay in the loop",
-    body: "Set alerts so you hear about spikes before your customers do.",
+    title: "Ship your site",
+    body: "Deploy to Vercel and go from design to code in a day.",
   },
 ]
 

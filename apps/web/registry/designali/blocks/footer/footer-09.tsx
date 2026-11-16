@@ -1,4 +1,4 @@
-const links = ["Work", "Services", "Journal", "About", "Contact"]
+const links = ["Templates", "Blocks", "Pricing", "Docs", "Blogs"]
 
 export default function Footer09() {
   return (
@@ -6,9 +6,9 @@ export default function Footer09() {
       <div className="mx-auto flex max-w-6xl flex-col items-center gap-8 px-6 py-12 md:flex-row md:justify-between">
         <a href="#" className="flex items-center gap-2 text-sm font-semibold">
           <span className="flex size-6 items-center justify-center bg-foreground text-[10px] text-background">
-            L
+            D
           </span>
-          Lumen
+          designali
         </a>
         <nav className="flex flex-wrap justify-center gap-x-8 gap-y-3 text-sm text-muted-foreground">
           {links.map((link) => (
@@ -19,11 +19,11 @@ export default function Footer09() {
         </nav>
         <div className="flex items-center gap-2 text-xs text-muted-foreground">
           <span className="size-2 rounded-full bg-emerald-500" />
-          All systems operational
+          Booking new projects
         </div>
       </div>
       <p className="border-t border-border py-4 text-center text-xs text-muted-foreground">
-        © 2026 Lumen Labs. Made with care in Lisbon.
+        © 2026 Designali. Designed and built by Ali Imam.
       </p>
     </footer>
   )

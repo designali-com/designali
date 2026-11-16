@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { SlidersHorizontalIcon, XIcon } from "lucide-react"
+import {
+  SlidersHorizontal as SlidersHorizontalIcon,
+  X as XIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {

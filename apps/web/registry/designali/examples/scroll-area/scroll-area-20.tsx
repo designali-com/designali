@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { ArrowUpIcon } from "lucide-react"
+import {
+  ArrowUp as ArrowUpIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { ScrollArea } from "@workspace/ui/components/scroll-area"
@@ -47,7 +49,7 @@ export default function ScrollToTopButton() {
             <section key={s} className="flex flex-col gap-1">
               <h4 className="text-sm font-medium">{s}</h4>
               <p className="text-xs leading-relaxed text-muted-foreground">
-                Learn how {s.toLowerCase()} works in Fieldnote, including
+                Learn how {s.toLowerCase()} works in Designali, including
                 defaults, limits, and the settings admins can change.
               </p>
             </section>

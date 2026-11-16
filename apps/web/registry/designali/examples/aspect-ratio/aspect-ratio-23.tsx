@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { HeartIcon } from "lucide-react"
+import {
+  Heart as HeartIcon,
+} from "@designali/icons"
 
 import { AspectRatio } from "@workspace/ui/components/aspect-ratio"
 import { Badge } from "@workspace/ui/components/badge"
@@ -20,11 +22,11 @@ export default function RealEstateListing() {
         <div className="absolute start-[15%] bottom-[20%] h-[40%] w-[45%] bg-stone-100 dark:bg-stone-300">
           <div className="absolute start-0 -top-6 h-0 w-full border-x-[4.5rem] border-b-[1.5rem] border-x-transparent border-b-stone-500" />
         </div>
-        <Badge className="absolute start-2 top-2">Open house Sun</Badge>
+        <Badge className="absolute start-2 top-2">New template</Badge>
         <Button
           size="icon-sm"
           variant="secondary"
-          aria-label={saved ? "Remove from saved" : "Save listing"}
+          aria-label={saved ? "Remove from saved" : "Save template"}
           className="absolute end-2 top-2 rounded-full"
           onClick={() => setSaved((value) => !value)}
         >
@@ -44,12 +46,12 @@ export default function RealEstateListing() {
       </AspectRatio>
       <div className="mt-2 flex items-start justify-between gap-2">
         <div>
-          <p className="text-sm font-semibold">$645,000</p>
+          <p className="text-sm font-semibold">Resort template - $59</p>
           <p className="text-xs text-muted-foreground">
-            3 bd - 2 ba - 1,840 sqft
+            12 pages - Next.js - Figma file
           </p>
           <p className="text-xs text-muted-foreground">
-            41 Juniper Lane, Ashford
+            designali.com/templates
           </p>
         </div>
       </div>

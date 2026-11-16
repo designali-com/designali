@@ -1,4 +1,7 @@
-import { HeartIcon, MessageSquareIcon } from "lucide-react"
+import {
+  Heart as HeartIcon,
+  MessageSquare as MessageSquareIcon,
+} from "@designali/icons"
 
 import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
 import { Button } from "@workspace/ui/components/button"
@@ -20,31 +23,31 @@ import {
 
 const comments = [
   {
-    name: "Ines Laurent",
+    name: "Brand Designer",
     time: "2h",
-    text: "The color grading in the last shot is unreal.",
+    text: "The color grading in the last sphere is unreal.",
     likes: 48,
   },
   {
-    name: "Kwame Asante",
+    name: "Motion Designer",
     time: "1h",
-    text: "What lens did you use for the street scenes?",
+    text: "Which 3D tool did you use for the CGI scenes?",
     likes: 12,
   },
   {
-    name: "Hana Kobayashi",
+    name: "Design Engineer",
     time: "54m",
-    text: "Saving this for my Lisbon trip next month!",
+    text: "Saving this for my next landing page hero!",
     likes: 9,
   },
   {
-    name: "Mateo Silva",
+    name: "Client",
     time: "20m",
-    text: "The tram at 0:42 is perfectly timed.",
+    text: "The loop at 0:42 is perfectly timed.",
     likes: 5,
   },
   {
-    name: "Zoe Fischer",
+    name: "Developer",
     time: "4m",
     text: "Need a part two of this series.",
     likes: 2,
@@ -62,7 +65,7 @@ export default function CommentsBottomSheet() {
         <DrawerHeader>
           <DrawerTitle>Comments</DrawerTitle>
           <DrawerDescription className="sr-only">
-            Comments on Lisbon in motion
+            Comments on Designali colorful spheres reel
           </DrawerDescription>
         </DrawerHeader>
         <div className="mx-auto flex w-full max-w-md flex-1 flex-col gap-4 overflow-y-auto p-4">

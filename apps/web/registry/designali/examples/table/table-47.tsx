@@ -1,4 +1,6 @@
-import { ArrowRightIcon } from "lucide-react"
+import {
+  ArrowRight as ArrowRightIcon,
+} from "@designali/icons"
 
 import {
   Table,
@@ -13,7 +15,7 @@ import { cn } from "@workspace/ui/lib/utils"
 const changes = [
   { setting: "Session timeout", before: "30 min", after: "15 min" },
   { setting: "Password length", before: "8", after: "12" },
-  { setting: "Allowed domains", before: "orbit.dev", after: "orbit.dev" },
+  { setting: "Allowed domains", before: "designali.com", after: "designali.com" },
   { setting: "MFA required", before: "Admins only", after: "Everyone" },
 ]
 

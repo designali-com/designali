@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { StarIcon } from "lucide-react"
+import {
+  Star as StarIcon,
+} from "@designali/icons"
 
 import {
   ButtonGroup,
@@ -15,9 +17,9 @@ export default function StarRepositoryToggle() {
   return (
     <div className="flex w-full max-w-sm items-center justify-between gap-3 border p-4">
       <div className="min-w-0">
-        <p className="truncate font-mono text-sm">lumen/router</p>
+        <p className="truncate font-mono text-sm">designali/icons</p>
         <p className="text-xs text-muted-foreground">
-          Tiny type-safe routing for the edge
+          4000+ React icons from Designali
         </p>
       </div>
       <ButtonGroup>

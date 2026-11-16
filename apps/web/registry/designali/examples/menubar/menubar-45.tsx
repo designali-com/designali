@@ -2,13 +2,13 @@
 
 import * as React from "react"
 import {
-  CircleIcon,
-  HeadphonesIcon,
-  LaptopIcon,
-  MicIcon,
-  PauseIcon,
-  SquareIcon,
-} from "lucide-react"
+  Circle as CircleIcon,
+  Headphones as HeadphonesIcon,
+  Laptop as LaptopIcon,
+  Mic as MicIcon,
+  Pause as PauseIcon,
+  Square as SquareIcon,
+} from "@designali/icons"
 
 import {
   Menubar,

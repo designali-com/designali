@@ -6,8 +6,8 @@ import {
 import { cn } from "@workspace/ui/lib/utils"
 
 const segments = [
-  { label: "Documents", size: 18.4, files: 2310, color: "bg-blue-500" },
-  { label: "Media", size: 31.2, files: 840, color: "bg-violet-500" },
+  { label: "Templates", size: 18.4, files: 2310, color: "bg-blue-500" },
+  { label: "Brand assets", size: 31.2, files: 840, color: "bg-violet-500" },
   { label: "Backups", size: 12.0, files: 14, color: "bg-amber-500" },
 ]
 const capacity = 100

@@ -1,4 +1,8 @@
-import { ClockIcon, FlameIcon, UsersIcon } from "lucide-react"
+import {
+  Clock as ClockIcon,
+  Flame as FlameIcon,
+  Users as UsersIcon,
+} from "@designali/icons"
 
 import { AspectRatio } from "@workspace/ui/components/aspect-ratio"
 
@@ -16,7 +20,7 @@ export default function RecipeCardCover() {
         </div>
       </AspectRatio>
       <div className="p-3">
-        <p className="text-sm font-medium">Roasted tomato & basil soup</p>
+        <p className="text-sm font-medium">Designali workshop: Figma to Next.js</p>
         <div className="mt-2 flex gap-3 text-xs text-muted-foreground">
           <span className="flex items-center gap-1">
             <ClockIcon className="size-3.5" />
@@ -24,11 +28,11 @@ export default function RecipeCardCover() {
           </span>
           <span className="flex items-center gap-1">
             <UsersIcon className="size-3.5" />
-            Serves 4
+            4 lessons
           </span>
           <span className="flex items-center gap-1">
             <FlameIcon className="size-3.5" />
-            Easy
+            Beginner
           </span>
         </div>
       </div>

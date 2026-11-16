@@ -1,7 +1,12 @@
 "use client"
 
 import * as React from "react"
-import { BikeIcon, BusIcon, CarIcon, FootprintsIcon } from "lucide-react"
+import {
+  Bike as BikeIcon,
+  Bus as BusIcon,
+  Car as CarIcon,
+  Footprints as FootprintsIcon,
+} from "@designali/icons"
 
 import {
   ToggleGroup,
@@ -47,7 +52,7 @@ export default function TravelModeToggleGroup() {
         <span className="text-xs text-muted-foreground">{active.distance}</span>
       </div>
       <span className="text-xs text-muted-foreground">
-        Harbor St to Lindell Market
+        Home to Designali studio
       </span>
     </div>
   )

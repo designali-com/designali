@@ -1,4 +1,8 @@
-import { CircleXIcon, GitBranchIcon, TriangleAlertIcon } from "lucide-react"
+import {
+  CircleX as CircleXIcon,
+  GitBranch as GitBranchIcon,
+  TriangleAlert as TriangleAlertIcon,
+} from "@designali/icons"
 
 import { Separator } from "@workspace/ui/components/separator"
 

@@ -1,35 +1,37 @@
-import { ArrowUpRight } from "lucide-react"
+import {
+  ArrowUpRight,
+} from "@designali/icons"
 
 const panels = [
   {
-    title: "Coastal",
-    count: "128 photos",
-    body: "Cliffs, harbours and long grey beaches from the Atlantic edge.",
-    gradient: "linear-gradient(180deg, var(--chart-2), var(--chart-3))",
+    title: "Templates",
+    count: "8 templates",
+    body: "Next.js templates for portfolios, agencies, resorts and AI products.",
+    gradient: 'url("/images/templates/portfolio-simple.jpg") center / cover',
   },
   {
-    title: "Urban",
-    count: "214 photos",
-    body: "Night streets, stairwells and rooftops across eleven cities.",
-    gradient: "linear-gradient(200deg, var(--chart-5), var(--chart-1))",
+    title: "Blocks",
+    count: "460+ blocks",
+    body: "Copy-and-paste sections for heroes, features, pricing and footers.",
+    gradient: 'url("/img/hero-1.jpg") center / cover',
   },
   {
-    title: "Alpine",
-    count: "96 photos",
-    body: "High passes, glacier light and the huts that keep climbers alive.",
-    gradient: "linear-gradient(160deg, var(--chart-4), var(--chart-2))",
+    title: "UI Designs",
+    count: "2300+ examples",
+    body: "Every component shown in real-world states, light and dark.",
+    gradient: 'url("/img/dashboard-1-dark.jpg") center / cover',
   },
   {
-    title: "Desert",
-    count: "73 photos",
-    body: "Dunes at blue hour and the roads that disappear into them.",
-    gradient: "linear-gradient(120deg, var(--chart-1), var(--chart-4))",
+    title: "Visuals",
+    count: "CGI and 3D",
+    body: "CGI, 3D and motion studies by Ali Imam for Designali brand work.",
+    gradient: 'url("/img/ask/ask5.jpg") center / cover',
   },
   {
-    title: "Forest",
-    count: "151 photos",
-    body: "Moss, fog and old growth, mostly shot before seven in the morning.",
-    gradient: "linear-gradient(240deg, var(--chart-3), var(--chart-5))",
+    title: "Illustration",
+    count: "Vectors",
+    body: "Abstract shapes and vectors from @designali/vectors.",
+    gradient: 'url("/stock/wallpaper-1.jpg") center / cover',
   },
 ]
 
@@ -39,10 +41,10 @@ export default function Gallery14() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="flex flex-wrap items-end justify-between gap-4">
           <h2 className="text-3xl font-semibold tracking-tight md:text-4xl">
-            Browse by landscape
+            Browse Designali
           </h2>
-          <a href="#" className="inline-flex items-center gap-1 text-sm font-medium hover:underline">
-            View all 662 photos <ArrowUpRight className="size-4" />
+          <a href="/blocks" className="inline-flex items-center gap-1 text-sm font-medium hover:underline">
+            View all blocks <ArrowUpRight className="size-4" />
           </a>
         </div>
         <div className="mt-10 flex h-[640px] flex-col gap-2 md:h-[480px] md:flex-row">

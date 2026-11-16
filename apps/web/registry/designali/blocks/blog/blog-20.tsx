@@ -1,12 +1,20 @@
-import { ArrowUpRight, BookOpen, Code2, Megaphone, Palette, Rocket, Users } from "lucide-react"
+import {
+  ArrowUpRight,
+  BookOpen,
+  CodeXml as Code2,
+  Megaphone,
+  Palette,
+  Rocket,
+  Users,
+} from "@designali/icons"
 
 const topics = [
   {
     name: "Design",
     icon: Palette,
     count: 84,
-    blurb: "Interfaces, type, and color for product teams.",
-    latest: ["Spacing scales that survive dense UIs", "Designing for the second visit"],
+    blurb: "Interfaces, type, and color from the Designali studio.",
+    latest: ["Spacing scales for 460+ blocks", "Designing designali.com for the second visit"],
     span: "md:col-span-2",
     tone: "bg-chart-1/15",
   },
@@ -14,8 +22,8 @@ const topics = [
     name: "Engineering",
     icon: Code2,
     count: 112,
-    blurb: "How Beacon is built and run.",
-    latest: ["Zero-downtime deploys on a budget"],
+    blurb: "How designali.com is built with Next.js and Vercel.",
+    latest: ["Shipping the block registry on Vercel"],
     span: "",
     tone: "bg-chart-2/15",
   },
@@ -24,7 +32,7 @@ const topics = [
     icon: Rocket,
     count: 47,
     blurb: "Acquisition experiments, wins and losses.",
-    latest: ["The referral program we shut down"],
+    latest: ["The 21st.dev launch that worked"],
     span: "",
     tone: "bg-chart-3/15",
   },
@@ -32,8 +40,8 @@ const topics = [
     name: "Guides",
     icon: BookOpen,
     count: 63,
-    blurb: "Step-by-step tutorials for Beacon customers.",
-    latest: ["Set up SSO in ten minutes", "Importing from spreadsheets"],
+    blurb: "Step-by-step tutorials for Designali templates and blocks.",
+    latest: ["Install @designali/icons in ten minutes", "Customizing a Designali template"],
     span: "md:col-span-2",
     tone: "bg-chart-4/15",
   },
@@ -41,8 +49,8 @@ const topics = [
     name: "Team",
     icon: Users,
     count: 29,
-    blurb: "Hiring, remote work, and how we operate.",
-    latest: ["Our handbook, now public"],
+    blurb: "How Ali Imam and the studio work with clients.",
+    latest: ["The Designali process, now public"],
     span: "",
     tone: "bg-chart-5/15",
   },
@@ -51,7 +59,7 @@ const topics = [
     icon: Megaphone,
     count: 38,
     blurb: "Launches and company news.",
-    latest: ["Beacon 4.0 is available today"],
+    latest: ["Dalim is now Designali"],
     span: "",
     tone: "bg-muted",
   },
@@ -66,7 +74,7 @@ export default function Blog20() {
         <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <div>
             <h2 className="text-3xl font-medium tracking-tight md:text-5xl">Browse by topic</h2>
-            <p className="mt-3 text-muted-foreground">{total} posts across six sections of the Beacon blog.</p>
+            <p className="mt-3 text-muted-foreground">{total} posts across six sections of the Designali blog.</p>
           </div>
         </div>
 

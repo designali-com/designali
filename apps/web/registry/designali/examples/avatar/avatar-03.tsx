@@ -1,4 +1,6 @@
-import { PlusIcon } from "lucide-react";
+import {
+  Plus as PlusIcon,
+} from "@designali/icons"
 
 import {
   Avatar,
@@ -10,8 +12,8 @@ import {
 export default function AvatarBadgeIconExample() {
   return (
     <Avatar>
-      <AvatarImage src="https://github.com/designali-com.png" alt="@designali" />
-      <AvatarFallback>DA</AvatarFallback>
+      <AvatarImage src="/ali.jpg" alt="Ali Imam" />
+      <AvatarFallback>AI</AvatarFallback>
       <AvatarBadge>
         <PlusIcon />
       </AvatarBadge>

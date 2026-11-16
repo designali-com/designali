@@ -5,13 +5,13 @@ import {
   AvatarGroupCount,
 } from "@workspace/ui/components/avatar"
 
-const readers = ["AB", "CF", "DG", "EH", "IJ", "KM"]
+const readers = ["AI", "SA", "OM", "ZA", "KA", "NA"]
 
 export default function SeenByReceipts() {
   return (
     <div className="flex w-full max-w-xs flex-col items-end gap-1.5">
       <p className="bg-primary px-3 py-2 text-sm text-primary-foreground">
-        Standup moved to 9:30 tomorrow.
+        Designali studio standup moved to 9:30 tomorrow.
       </p>
       <div className="flex items-center gap-2">
         <span className="text-[11px] text-muted-foreground">Seen by</span>

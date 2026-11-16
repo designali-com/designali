@@ -6,7 +6,7 @@ export default function IPhone01() {
       <Macbook variant="macbook-pro">
         <img
           src="/img/login-1.jpg"
-          alt="App screen"
+          alt="Designali sign-in screen"
           className="h-full w-full object-cover"
         />
       </Macbook>

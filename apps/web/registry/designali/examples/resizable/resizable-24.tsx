@@ -1,4 +1,8 @@
-import { MicIcon, PhoneOffIcon, VideoIcon } from "lucide-react"
+import {
+  Mic as MicIcon,
+  PhoneOff as PhoneOffIcon,
+  Video as VideoIcon,
+} from "@designali/icons"
 
 import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
 import { Button } from "@workspace/ui/components/button"
@@ -10,7 +14,7 @@ import {
 } from "@workspace/ui/components/resizable"
 import { cn } from "@workspace/ui/lib/utils"
 
-const participants = ["Sana Iqbal", "Jonas Weber", "Priya Nair", "Luca Romano"]
+const participants = ["Ali Imam", "Jonas", "Priya", "Luca"]
 
 export default function VideoCallWithChat() {
   return (
@@ -67,7 +71,7 @@ export default function VideoCallWithChat() {
               <span className="font-medium">Jonas:</span> Sharing my screen next
             </p>
             <p>
-              <span className="font-medium">Priya:</span> Link to the doc is in
+              <span className="font-medium">Priya:</span> Link to the Figma file is in
               the agenda
             </p>
           </div>

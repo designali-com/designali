@@ -1,11 +1,11 @@
 import {
-  ArchiveIcon,
-  ClockIcon,
-  FolderOpenIcon,
-  HardDriveIcon,
-  Trash2Icon,
-  UsersIcon,
-} from "lucide-react"
+  Archive as ArchiveIcon,
+  Clock as ClockIcon,
+  FolderOpen as FolderOpenIcon,
+  HardDrive as HardDriveIcon,
+  Trash2 as Trash2Icon,
+  Users as UsersIcon,
+} from "@designali/icons"
 
 import {
   NavigationMenu,

@@ -2,11 +2,11 @@
 
 import * as React from "react"
 import {
-  CalendarIcon,
-  ChevronDownIcon,
-  CircleCheckIcon,
-  Trash2Icon,
-} from "lucide-react"
+  Calendar as CalendarIcon,
+  ChevronDown as ChevronDownIcon,
+  CircleCheck as CircleCheckIcon,
+  Trash2 as Trash2Icon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Checkbox } from "@workspace/ui/components/checkbox"
@@ -18,9 +18,9 @@ import {
 } from "@workspace/ui/components/dropdown-menu"
 
 const tasks = [
-  "Write release notes",
-  "Update onboarding emails",
-  "Audit color contrast",
+  "Write Designali release notes",
+  "Update template docs",
+  "Audit block color contrast",
 ]
 
 export default function DisabledTriggerMenu() {

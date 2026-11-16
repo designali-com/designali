@@ -1,27 +1,32 @@
-import { ArrowUpRight, Headphones, LifeBuoy, MessageSquare } from "lucide-react"
+import {
+  ArrowUpRight,
+  Headphones,
+  LifeBuoy,
+  MessageSquare,
+} from "@designali/icons"
 
 const channels = [
   {
     icon: MessageSquare,
-    title: "Talk to sales",
+    title: "Start a project",
     description:
-      "Planning a rollout for more than 50 seats? Get a tailored demo and volume pricing.",
-    action: "Book a demo",
+      "Need a brand identity, UI/UX design or a Next.js website? Book a call with Ali Imam.",
+    action: "Book a call",
     meta: "Avg. reply in 2 hours",
   },
   {
     icon: LifeBuoy,
-    title: "Product support",
+    title: "Templates & blocks support",
     description:
-      "Stuck on an integration or seeing something unexpected? Our engineers can help.",
+      "Stuck installing a Designali block, icon or template? The studio can help.",
     action: "Open a ticket",
-    meta: "24/7 for Pro plans",
+    meta: "Priority for Designali Pro",
   },
   {
     icon: Headphones,
     title: "Partnerships",
     description:
-      "Agencies, resellers and technology partners: let's grow something together.",
+      "Agencies and studios: white-label design, CGI, motion and front-end builds.",
     action: "Become a partner",
     meta: "partners@relay.so",
   },

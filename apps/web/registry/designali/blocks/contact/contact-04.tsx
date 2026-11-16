@@ -1,12 +1,16 @@
-import { ArrowRight, Clock, Mail } from "lucide-react"
+import {
+  ArrowRight,
+  Clock,
+  Mail,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Input } from "@workspace/ui/components/input"
 
 const team = [
-  { initials: "MO", name: "Maya Okafor", role: "Head of Partnerships" },
-  { initials: "JL", name: "Jonas Lindqvist", role: "Solutions Engineer" },
-  { initials: "PR", name: "Priya Raman", role: "Customer Success" },
+  { initials: "AI", name: "Ali Imam", role: "Founder & design engineer" },
+  { initials: "SD", name: "Studio Designer", role: "UI/UX design" },
+  { initials: "DV", name: "Studio Developer", role: "Next.js development" },
 ]
 
 export default function Contact04() {
@@ -24,7 +28,7 @@ export default function Contact04() {
               <Mail className="absolute start-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground" />
               <Input
                 type="email"
-                placeholder="you@company.com"
+                placeholder="you@example.com"
                 className="h-12 ps-9 text-sm"
               />
             </div>

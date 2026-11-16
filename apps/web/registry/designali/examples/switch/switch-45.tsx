@@ -2,9 +2,9 @@ import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
 import { Switch } from "@workspace/ui/components/switch"
 
 const members = [
-  { name: "Ava Thompson", email: "ava@orbit.dev", role: "Owner" },
-  { name: "Marcus Lee", email: "marcus@orbit.dev", role: "Admin" },
-  { name: "Sofia Alvarez", email: "sofia@orbit.dev", role: "Member" },
+  { name: "Ali Imam", email: "ali@designali.com", role: "Owner" },
+  { name: "Sara", email: "sara@designali.com", role: "Admin" },
+  { name: "Omar", email: "omar@designali.com", role: "Member" },
 ]
 
 export default function TeamMemberAdminAccess() {

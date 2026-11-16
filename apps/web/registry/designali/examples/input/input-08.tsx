@@ -1,4 +1,6 @@
-import { SearchIcon } from "lucide-react"
+import {
+  Search as SearchIcon,
+} from "@designali/icons"
 
 import {
   InputGroup,
@@ -13,7 +15,7 @@ export default function SearchShortcutInput() {
       <InputGroupAddon>
         <SearchIcon />
       </InputGroupAddon>
-      <InputGroupInput placeholder="Search docs, issues, people..." />
+      <InputGroupInput placeholder="Search templates, blocks, icons..." />
       <InputGroupAddon align="inline-end">
         <KbdGroup>
           <Kbd>⌘</Kbd>

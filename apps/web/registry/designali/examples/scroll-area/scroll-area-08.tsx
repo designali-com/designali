@@ -2,18 +2,18 @@
 
 import * as React from "react"
 import {
-  ArchiveIcon,
-  CreditCardIcon,
-  DownloadIcon,
-  FolderPlusIcon,
-  KeyboardIcon,
-  LifeBuoyIcon,
-  LogOutIcon,
-  MoonIcon,
-  SearchIcon,
-  UploadIcon,
-  UserPlusIcon,
-} from "lucide-react"
+  Archive as ArchiveIcon,
+  CreditCard as CreditCardIcon,
+  Download as DownloadIcon,
+  FolderPlus as FolderPlusIcon,
+  Keyboard as KeyboardIcon,
+  LifeBuoy as LifeBuoyIcon,
+  LogOut as LogOutIcon,
+  Moon as MoonIcon,
+  Search as SearchIcon,
+  Upload as UploadIcon,
+  UserPlus as UserPlusIcon,
+} from "@designali/icons"
 
 import {
   InputGroup,

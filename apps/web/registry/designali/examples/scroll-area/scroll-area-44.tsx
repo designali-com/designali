@@ -1,4 +1,6 @@
-import { SquarePenIcon } from "lucide-react"
+import {
+  SquarePen as SquarePenIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { ScrollArea } from "@workspace/ui/components/scroll-area"

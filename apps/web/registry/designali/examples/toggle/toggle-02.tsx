@@ -1,4 +1,7 @@
-import { BoldIcon, ItalicIcon } from "lucide-react"
+import {
+  Bold as BoldIcon,
+  Italic as ItalicIcon,
+} from "@designali/icons"
 
 import { Toggle } from "@workspace/ui/components/toggle"
 

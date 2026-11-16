@@ -1,7 +1,11 @@
 "use client"
 
 import * as React from "react"
-import { MonitorIcon, MoonIcon, SunIcon } from "lucide-react"
+import {
+  Monitor as MonitorIcon,
+  Moon as MoonIcon,
+  Sun as SunIcon,
+} from "@designali/icons"
 
 import {
   Menubar,

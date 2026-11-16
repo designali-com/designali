@@ -1,4 +1,9 @@
-import { CircleCheckIcon, FileIcon, UploadCloudIcon, XIcon } from "lucide-react"
+import {
+  CircleCheck as CircleCheckIcon,
+  File as FileIcon,
+  CloudUpload as UploadCloudIcon,
+  X as XIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -11,15 +16,15 @@ import {
 import { Progress } from "@workspace/ui/components/progress"
 
 const files = [
-  { name: "brand-guidelines.pdf", size: "4.2 MB", progress: 100 },
-  { name: "hero-video.mp4", size: "86.1 MB", progress: 64 },
+  { name: "designali-brand-guidelines.pdf", size: "4.2 MB", progress: 100 },
+  { name: "colorful-spheres.mp4", size: "86.1 MB", progress: 64 },
 ]
 
 export default function FileUploadCard() {
   return (
     <Card className="w-full max-w-sm">
       <CardHeader>
-        <CardTitle>Upload assets</CardTitle>
+        <CardTitle>Upload Designali assets</CardTitle>
         <CardDescription>PDF, PNG, SVG or MP4 up to 200 MB.</CardDescription>
       </CardHeader>
       <CardContent className="grid gap-3">

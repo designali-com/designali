@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { ShoppingCartIcon } from "lucide-react"
+import {
+  ShoppingCart as ShoppingCartIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Toaster, createToastManager } from "@workspace/ui/components/toast"
@@ -26,7 +28,7 @@ export default function AddToCartToast() {
               notify.add({
                 type: "success",
                 title: "Added to cart",
-                description: "Ceramic pour-over set x1",
+                description: "Portfolio Simple template x1",
                 actionProps: { children: "View cart (" + (cart + 1) + ")" },
               })
             }}

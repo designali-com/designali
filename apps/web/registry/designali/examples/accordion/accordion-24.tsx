@@ -1,4 +1,7 @@
-import { ChevronDownIcon, WrenchIcon } from "lucide-react"
+import {
+  ChevronDown as ChevronDownIcon,
+  Wrench as WrenchIcon,
+} from "@designali/icons"
 
 import {
   Accordion,
@@ -11,20 +14,20 @@ import { Kbd, KbdGroup } from "@workspace/ui/components/kbd"
 const issues = [
   {
     value: "frozen",
-    title: "The editor stops responding",
+    title: "A Designali block won’t render",
     steps: [
       { text: "Save your work with", keys: ["Ctrl", "S"] },
       { text: "Reload the window with", keys: ["Ctrl", "Shift", "R"] },
-      { text: "If it persists, disable extensions from Settings." },
+      { text: "If it persists, reinstall the block from designali.com/blocks." },
     ],
   },
   {
     value: "sync",
-    title: "Changes are not syncing",
+    title: "Icons are not showing",
     steps: [
-      { text: "Check the status dot in the bottom bar is green." },
+      { text: "Check @designali/icons is installed in package.json." },
       { text: "Open the command menu with", keys: ["Ctrl", "K"] },
-      { text: "Run Force sync and wait for the confirmation." },
+      { text: "Search the icon name and copy the import again." },
     ],
   },
 ]

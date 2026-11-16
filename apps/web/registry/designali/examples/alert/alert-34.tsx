@@ -1,4 +1,6 @@
-import { CalendarClockIcon } from "lucide-react"
+import {
+  CalendarClock as CalendarClockIcon,
+} from "@designali/icons"
 
 import {
   Alert,
@@ -11,16 +13,16 @@ export default function AlertCalendarConflict() {
   return (
     <div className="w-full max-w-sm space-y-2">
       <div className="border p-3 text-xs">
-        <p className="font-medium">Quarterly planning</p>
+        <p className="font-medium">Designali client kickoff</p>
         <p className="text-muted-foreground">
           Thu, Nov 20 &middot; 14:00 to 15:30
         </p>
       </div>
       <Alert variant="warning">
         <CalendarClockIcon />
-        <AlertTitle>Conflicts with &ldquo;Design review&rdquo;</AlertTitle>
+        <AlertTitle>Conflicts with &ldquo;Figma handoff review&rdquo;</AlertTitle>
         <AlertDescription>
-          <p>Ivy Tran and 2 others are busy from 14:30 to 15:00.</p>
+          <p>Ali Imam and 2 others are busy from 14:30 to 15:00.</p>
           <div className="mt-2 flex flex-wrap gap-1.5">
             <Button size="xs">Find a new time</Button>
             <Button size="xs" variant="ghost">

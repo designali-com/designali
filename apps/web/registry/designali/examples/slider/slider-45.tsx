@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { BrushIcon } from "lucide-react"
+import {
+  Brush as BrushIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {

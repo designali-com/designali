@@ -1,4 +1,7 @@
-import { MapPinIcon, SearchIcon } from "lucide-react"
+import {
+  MapPin as MapPinIcon,
+  Search as SearchIcon,
+} from "@designali/icons"
 
 import {
   NavigationMenu,
@@ -11,29 +14,29 @@ import {
 } from "@workspace/ui/components/navigation-menu"
 
 const areas = [
-  "Harbor District",
-  "Old Town",
-  "Riverside",
-  "Maple Heights",
-  "Westgate",
-  "Cedar Park",
+  "Portfolio",
+  "Design agency",
+  "SaaS",
+  "AI",
+  "Resort",
+  "Landing pages",
 ]
 
 export default function RealEstateNav() {
   return (
     <NavigationMenu>
       <NavigationMenuList>
-        {["Buy", "Rent"].map((mode) => (
+        {["Templates", "Blocks"].map((mode) => (
           <NavigationMenuItem key={mode}>
             <NavigationMenuTrigger>{mode}</NavigationMenuTrigger>
             <NavigationMenuContent>
               <div className="flex w-64 flex-col gap-1">
                 <NavigationMenuLink href="#" className="font-medium">
                   <SearchIcon />{" "}
-                  {mode === "Buy" ? "Homes for sale" : "Homes for rent"}
+                  {mode === "Templates" ? "Browse all templates" : "Browse all blocks"}
                 </NavigationMenuLink>
                 <p className="px-2 pt-1 text-[11px] font-semibold tracking-wide text-muted-foreground uppercase">
-                  Popular areas
+                  Popular categories
                 </p>
                 <ul className="grid grid-cols-2">
                   {areas.map((area) => (
@@ -51,7 +54,7 @@ export default function RealEstateNav() {
         ))}
         <NavigationMenuItem>
           <NavigationMenuLink href="#" className={navigationMenuTriggerStyle()}>
-            Sell
+            Pricing
           </NavigationMenuLink>
         </NavigationMenuItem>
       </NavigationMenuList>

@@ -1,15 +1,18 @@
 "use client"
 
 import { useState } from "react"
-import { ArrowRight, Check } from "lucide-react"
+import {
+  ArrowRight,
+  Check,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Input } from "@workspace/ui/components/input"
 
 const columns = [
-  { title: "Read", links: ["Latest issue", "Archive", "Long reads", "Interviews"] },
-  { title: "About", links: ["Our editors", "Ethics policy", "Advertise", "Careers"] },
-  { title: "Help", links: ["Manage subscription", "Gift a subscription", "Contact", "Privacy"] },
+  { title: "Read", links: ["Latest issue", "Blogs", "Case studies", "Docs"] },
+  { title: "Explore", links: ["Templates", "Blocks", "Icons", "Logos"] },
+  { title: "Help", links: ["Manage subscription", "Pricing", "Contact", "Terms"] },
 ]
 
 export default function Footer11() {
@@ -21,16 +24,16 @@ export default function Footer11() {
       <div className="mx-auto max-w-7xl px-6 py-16">
         <div className="grid gap-10 border-b pb-12 lg:grid-cols-2 lg:items-end">
           <div>
-            <p className="font-serif text-3xl tracking-tight md:text-4xl">The Sunday Ledger</p>
+            <p className="font-serif text-3xl tracking-tight md:text-4xl">The Designali Letter</p>
             <p className="mt-3 max-w-md text-sm leading-6 text-muted-foreground">
-              One carefully reported essay on money, work and cities, in your
-              inbox every Sunday at 7am. Read by 140,000 people.
+              One note from Ali Imam on design, code and craft, plus the newest
+              Designali templates and blocks, in your inbox every month.
             </p>
           </div>
           {done ? (
             <p className="flex items-center gap-2 text-sm">
               <Check className="size-4 text-emerald-600 dark:text-emerald-400" />
-              You are on the list. First issue arrives Sunday.
+              You are on the list. The next Designali letter is on its way.
             </p>
           ) : (
             <form
@@ -72,10 +75,10 @@ export default function Footer11() {
             </div>
           ))}
           <div className="col-span-2 text-xs leading-5 text-muted-foreground sm:col-span-1">
-            <p>Ledger Media Ltd.</p>
-            <p>12 Clerkenwell Green</p>
-            <p>London EC1R 0DP</p>
-            <p className="mt-4">© 2026 All rights reserved.</p>
+            <p>Designali</p>
+            <p>Design se code tak</p>
+            <p>hello@designali.com</p>
+            <p className="mt-4">© 2026 Designali. All rights reserved.</p>
           </div>
         </div>
       </div>

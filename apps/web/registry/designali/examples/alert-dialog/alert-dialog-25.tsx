@@ -1,4 +1,6 @@
-import { UserMinusIcon } from "lucide-react"
+import {
+  UserMinus as UserMinusIcon,
+} from "@designali/icons"
 
 import {
   AlertDialog,
@@ -20,12 +22,12 @@ export default function RemoveTeamMemberAvatar() {
   return (
     <div className="flex w-full max-w-sm items-center gap-3 border p-3">
       <Avatar>
-        <AvatarFallback>DK</AvatarFallback>
+        <AvatarFallback>SK</AvatarFallback>
       </Avatar>
       <div className="min-w-0 flex-1">
-        <p className="text-sm font-medium">Daniel Kovacs</p>
+        <p className="text-sm font-medium">Sara Khan</p>
         <p className="truncate text-xs text-muted-foreground">
-          daniel@lumenlabs.io
+          sara@designali.com
         </p>
       </div>
       <Badge variant="secondary">Editor</Badge>
@@ -35,7 +37,7 @@ export default function RemoveTeamMemberAvatar() {
             <Button
               variant="ghost"
               size="icon-sm"
-              aria-label="Remove Daniel Kovacs"
+              aria-label="Remove Sara Khan"
             />
           }
         >
@@ -45,12 +47,12 @@ export default function RemoveTeamMemberAvatar() {
           <AlertDialogHeader>
             <AlertDialogMedia className="bg-transparent">
               <Avatar size="lg">
-                <AvatarFallback>DK</AvatarFallback>
+                <AvatarFallback>SK</AvatarFallback>
               </Avatar>
             </AlertDialogMedia>
-            <AlertDialogTitle>Remove Daniel from Lumen Labs?</AlertDialogTitle>
+            <AlertDialogTitle>Remove Sara from the Designali studio?</AlertDialogTitle>
             <AlertDialogDescription>
-              Daniel will lose access immediately. Files he owns will be
+              Sara will lose access immediately. Files she owns will be
               transferred to you.
             </AlertDialogDescription>
           </AlertDialogHeader>

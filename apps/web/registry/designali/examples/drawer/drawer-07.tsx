@@ -1,7 +1,11 @@
 "use client"
 
 import * as React from "react"
-import { MapPinIcon, StarIcon, UtensilsIcon } from "lucide-react"
+import {
+  MapPin as MapPinIcon,
+  Star as StarIcon,
+  Utensils as UtensilsIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -14,12 +18,12 @@ import {
 } from "@workspace/ui/components/drawer"
 
 const places = [
-  { name: "Café Lumière", type: "Coffee", distance: "120 m", rating: 4.7 },
-  { name: "Hanami Ramen", type: "Japanese", distance: "300 m", rating: 4.5 },
-  { name: "Green Fork", type: "Vegetarian", distance: "450 m", rating: 4.6 },
-  { name: "Old Town Bakery", type: "Bakery", distance: "600 m", rating: 4.8 },
-  { name: "Brasa Grill", type: "Portuguese", distance: "850 m", rating: 4.3 },
-  { name: "Lotus Tea House", type: "Tea", distance: "1.1 km", rating: 4.4 },
+  { name: "Bento", type: "Component", distance: "120 KB", rating: 4.7 },
+  { name: "Number Counter", type: "Component", distance: "300 KB", rating: 4.5 },
+  { name: "Marquee", type: "Component", distance: "450 KB", rating: 4.6 },
+  { name: "Portfolio Simple", type: "Template", distance: "600 KB", rating: 4.8 },
+  { name: "Design Agency", type: "Template", distance: "850 KB", rating: 4.3 },
+  { name: "Dot Pattern", type: "Component", distance: "1.1 MB", rating: 4.4 },
 ]
 
 const snapPoints = ["160px", "360px", 1]
@@ -42,7 +46,7 @@ export default function SnapPointsNearbyDrawer() {
       </DrawerTrigger>
       <DrawerContent>
         <DrawerHeader>
-          <DrawerTitle>6 places near you</DrawerTitle>
+          <DrawerTitle>6 Designali picks for you</DrawerTitle>
           <DrawerDescription>Drag up to see more</DrawerDescription>
         </DrawerHeader>
         <div className="flex flex-col gap-1 overflow-y-auto p-4">

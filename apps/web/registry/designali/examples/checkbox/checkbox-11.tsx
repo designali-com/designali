@@ -15,20 +15,20 @@ import {
 const addons = [
   {
     id: "backup",
-    title: "Daily backups",
-    description: "30-day retention",
+    title: "Icon pack",
+    description: "4000+ icons from @designali/icons",
     price: 8,
   },
   {
     id: "domain",
-    title: "Custom domain",
-    description: "Includes SSL",
+    title: "Logo library",
+    description: "Brand logos from @designali/logos",
     price: 4,
   },
   {
     id: "support",
     title: "Priority support",
-    description: "1-hour response",
+    description: "1-hour response from the Designali team",
     price: 19,
   },
 ]

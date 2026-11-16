@@ -1,19 +1,21 @@
-import { FlagIcon } from "lucide-react"
+import {
+  Flag as FlagIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import { Switch } from "@workspace/ui/components/switch"
 
 const flags = [
-  { key: "new-checkout", env: "Production", note: "100% rollout", on: true },
-  { key: "ai-summaries", env: "Staging", note: "Internal testers", on: true },
+  { key: "templates-checkout", env: "Production", note: "100% rollout", on: true },
+  { key: "ai-block-generator", env: "Staging", note: "Internal testers", on: true },
   {
-    key: "dark-dashboard",
+    key: "icons-dark-preview",
     env: "Production",
     note: "Paused after bug report",
     on: false,
   },
   {
-    key: "bulk-export-v2",
+    key: "logos-bulk-export",
     env: "Development",
     note: "Behind QA review",
     on: false,

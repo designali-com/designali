@@ -13,21 +13,21 @@ import {
 } from "@workspace/ui/components/field"
 
 const filters: Record<string, [string, number][]> = {
-  Brand: [
-    ["Northpeak", 42],
-    ["Aster", 18],
-    ["Field & Co", 27],
+  Category: [
+    ["Templates", 42],
+    ["Blocks", 18],
+    ["Landing pages", 27],
   ],
-  Size: [
-    ["S", 30],
-    ["M", 54],
-    ["L", 41],
-    ["XL", 0],
+  Stack: [
+    ["Next.js", 30],
+    ["React", 54],
+    ["Tailwind CSS", 41],
+    ["Vue", 0],
   ],
 }
 
 export default function ProductFilterSidebar() {
-  const [active, setActive] = React.useState<string[]>(["M"])
+  const [active, setActive] = React.useState<string[]>(["React"])
 
   const toggle = (value: string, checked: boolean) =>
     setActive((list) =>

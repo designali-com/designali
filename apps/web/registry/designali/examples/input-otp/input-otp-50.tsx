@@ -1,7 +1,9 @@
 "use client"
 
 import { REGEXP_ONLY_DIGITS } from "input-otp"
-import { FingerprintIcon } from "lucide-react"
+import {
+  FingerprintPattern as FingerprintIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {

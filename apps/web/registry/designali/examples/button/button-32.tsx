@@ -6,13 +6,13 @@ import { Button } from "@workspace/ui/components/button"
 import { Spinner } from "@workspace/ui/components/spinner"
 
 const all = [
-  "Lena merged PR #204",
-  "Omar commented on Pricing page",
+  "Ali merged PR #204 in designali-web",
+  "A client commented on the Pricing page",
   "Deploy #88 succeeded",
-  "Ivy invited 2 teammates",
-  "Billing plan changed to Team",
-  "Noah closed issue #61",
-  "Weekly report generated",
+  "Ali invited 2 studio teammates",
+  "Designali plan changed to Team",
+  "Ali closed issue #61 in @designali/icons",
+  "Weekly studio report generated",
 ]
 
 export default function LoadMoreButton() {

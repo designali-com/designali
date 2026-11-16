@@ -5,9 +5,9 @@ import {
 } from "@workspace/ui/components/toggle-group"
 
 const members = [
-  { name: "Lena Ortiz", email: "lena@fieldnote.app", role: "edit" },
-  { name: "Tomás Reyes", email: "tomas@fieldnote.app", role: "comment" },
-  { name: "Hana Sato", email: "hana@fieldnote.app", role: "view" },
+  { name: "Ali Imam", email: "ali@designali.com", role: "edit" },
+  { name: "Sara", email: "sara@designali.com", role: "comment" },
+  { name: "Client", email: "client@example.com", role: "view" },
 ]
 
 export default function MemberPermissionToggleGroup() {

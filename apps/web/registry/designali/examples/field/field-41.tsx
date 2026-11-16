@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { MessageSquareIcon, SmartphoneIcon } from "lucide-react"
+import {
+  MessageSquare as MessageSquareIcon,
+  Smartphone as SmartphoneIcon,
+} from "@designali/icons"
 
 import {
   Field,

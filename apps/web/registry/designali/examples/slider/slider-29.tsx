@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { ScissorsIcon } from "lucide-react"
+import {
+  Scissors as ScissorsIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import { Slider } from "@workspace/ui/components/slider"

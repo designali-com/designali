@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { MessageCircleIcon } from "lucide-react"
+import {
+  MessageCircle as MessageCircleIcon,
+} from "@designali/icons"
 
 import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
 import { Button } from "@workspace/ui/components/button"
@@ -22,11 +24,11 @@ const notify = createToastManager()
 
 const messages = [
   {
-    from: "Ava Lindqvist",
-    text: "Can you review the onboarding copy before 3pm?",
+    from: "Ali Imam",
+    text: "Can you review the new Designali landing page before 3pm?",
   },
-  { from: "Marco Bellini", text: "Pushed the fix for the checkout bug." },
-  { from: "Sana Iqbal", text: "Lunch at the usual place?" },
+  { from: "Studio Developer", text: "Pushed the fix for the blocks preview bug." },
+  { from: "Studio Designer", text: "New icon set is ready for review." },
 ]
 
 function initials(name: string) {

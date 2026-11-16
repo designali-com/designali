@@ -9,7 +9,7 @@ import { Textarea } from "@workspace/ui/components/textarea"
 
 export default function PromptVariablesTextarea() {
   const [template, setTemplate] = React.useState(
-    "Write a {{tone}} reply to {{customer}} about their {{topic}}."
+    "Write a {{tone}} reply to a Designali {{customer}} about their {{topic}}."
   )
   const vars = [
     ...new Set([...template.matchAll(/\{\{(\w+)\}\}/g)].map((m) => m[1]!)),

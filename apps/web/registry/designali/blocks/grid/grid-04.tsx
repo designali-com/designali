@@ -1,8 +1,8 @@
 const tiles = [
-  { label: "Typography", value: "Söhne", className: "col-span-2 row-span-2", tone: "bg-foreground text-background" },
+  { label: "Typography", value: "Aa", className: "col-span-2 row-span-2", tone: "bg-foreground text-background" },
   { label: "Spacing", value: "4pt", className: "", tone: "bg-muted" },
   { label: "Radius", value: "0", className: "", tone: "bg-background" },
-  { label: "Columns", value: "12", className: "row-span-2", tone: "bg-[var(--chart-1)] text-white" },
+  { label: "Columns", value: "12", className: "row-span-2", tone: "bg-primary text-primary-foreground" },
   { label: "Breakpoints", value: "5", className: "", tone: "bg-background" },
   { label: "Motion", value: "160ms", className: "col-span-2", tone: "bg-muted" },
   { label: "Icons", value: "1.5px", className: "", tone: "bg-background" },
@@ -14,17 +14,17 @@ export default function Grid04() {
       <div className="mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-[320px_1fr]">
         <div className="lg:sticky lg:top-24 lg:self-start">
           <p className="text-xs tracking-widest text-muted-foreground uppercase">
-            Foundations
+            Designali foundations
           </p>
           <h2 className="mt-4 text-4xl font-semibold tracking-tight">
             The system at a glance
           </h2>
           <p className="mt-4 text-sm leading-6 text-muted-foreground">
-            Seven decisions underpin every screen we ship. Change one token and
-            it ripples through 1,400 components.
+            Seven decisions underpin every Designali block. Change one token and
+            it ripples through 460+ blocks and 240+ pages.
           </p>
           <a
-            href="#"
+            href="/docs"
             className="mt-6 inline-block border-b border-foreground pb-0.5 text-sm"
           >
             Read the foundations doc

@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { LockIcon } from "lucide-react"
+import {
+  Lock as LockIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Separator } from "@workspace/ui/components/separator"
@@ -13,7 +15,7 @@ export default function PlaceOrderButton() {
   return (
     <div className="flex w-full max-w-xs flex-col gap-3 border p-4">
       <div className="flex justify-between text-sm">
-        <span>Ceramic pour-over set</span>
+        <span>Designali Portfolio Template</span>
         <span className="tabular-nums">$64.00</span>
       </div>
       <div className="flex justify-between text-sm text-muted-foreground">

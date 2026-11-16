@@ -23,9 +23,9 @@ export function MenubarRadio() {
         <MenubarTrigger>Profiles</MenubarTrigger>
         <MenubarContent>
           <MenubarRadioGroup value={user} onValueChange={setUser}>
-            <MenubarRadioItem value="andy">Andy</MenubarRadioItem>
-            <MenubarRadioItem value="benoit">Benoit</MenubarRadioItem>
-            <MenubarRadioItem value="luis">Luis</MenubarRadioItem>
+            <MenubarRadioItem value="andy">Ali Imam</MenubarRadioItem>
+            <MenubarRadioItem value="benoit">Designer</MenubarRadioItem>
+            <MenubarRadioItem value="luis">Developer</MenubarRadioItem>
           </MenubarRadioGroup>
           <MenubarSeparator />
           <MenubarItem inset>Edit...</MenubarItem>

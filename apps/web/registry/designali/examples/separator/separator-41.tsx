@@ -7,13 +7,13 @@ const releases = [
   {
     version: "2.8.0",
     date: "Mar 12",
-    notes: ["Bulk edit for tasks", "Faster search indexing"],
+    notes: ["460+ new blocks", "Faster icon search"],
   },
-  { version: "2.7.2", date: "Feb 27", notes: ["Fixed calendar sync drift"] },
+  { version: "2.7.2", date: "Feb 27", notes: ["Fixed dark mode in pricing blocks"] },
   {
     version: "2.7.0",
     date: "Feb 18",
-    notes: ["Dark mode for embeds", "New CSV importer"],
+    notes: ["Apple device mockups", "New @designali/logos package"],
   },
 ]
 

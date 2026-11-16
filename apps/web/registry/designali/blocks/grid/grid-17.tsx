@@ -1,11 +1,15 @@
-import { Check, GitPullRequest, Sparkles } from "lucide-react"
+import {
+  Check,
+  GitPullRequest,
+  Sparkles,
+} from "@designali/icons"
 
 const bars = [42, 58, 51, 66, 72, 64, 81, 77, 88, 94, 86, 98]
 const reviewers = [
-  { initials: "AO", tone: "bg-orange-500" },
-  { initials: "TI", tone: "bg-sky-600" },
-  { initials: "HS", tone: "bg-rose-500" },
-  { initials: "NC", tone: "bg-emerald-600" },
+  { initials: "AI", tone: "bg-primary" },
+  { initials: "SR", tone: "bg-sky-600" },
+  { initials: "MK", tone: "bg-rose-500" },
+  { initials: "OL", tone: "bg-emerald-600" },
 ]
 
 export default function Grid17() {
@@ -14,10 +18,10 @@ export default function Grid17() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-4xl font-semibold tracking-tight md:text-5xl">
-            Your whole release, in one window.
+            How Designali ships, in one window.
           </h2>
           <p className="mt-4 text-sm text-muted-foreground">
-            Shipyard pulls builds, reviews, flags and metrics into a single view
+            Every Designali block moves from Figma to production in one flow,
             so nobody has to ask &ldquo;is it out yet?&rdquo;
           </p>
         </div>
@@ -27,8 +31,8 @@ export default function Grid17() {
           <div className="flex flex-col border border-border bg-card p-6 md:col-span-4">
             <div className="flex items-start justify-between gap-4">
               <div>
-                <h3 className="font-medium">Deploy frequency</h3>
-                <p className="text-sm text-muted-foreground">Production deploys per week</p>
+                <h3 className="font-medium">Blocks shipped</h3>
+                <p className="text-sm text-muted-foreground">New Designali blocks per week</p>
               </div>
               <span className="font-mono text-2xl font-semibold">98</span>
             </div>
@@ -48,7 +52,7 @@ export default function Grid17() {
             <div>
               <GitPullRequest className="size-5 text-muted-foreground" />
               <h3 className="mt-4 font-medium">Review in parallel</h3>
-              <p className="mt-1 text-sm text-muted-foreground">Median time to approval: 42 minutes.</p>
+              <p className="mt-1 text-sm text-muted-foreground">Every block is reviewed by Ali Imam.</p>
             </div>
             <div className="flex items-center">
               {reviewers.map((reviewer) => (
@@ -70,9 +74,9 @@ export default function Grid17() {
             <h3 className="font-medium">Feature flags</h3>
             <ul className="mt-5 space-y-3">
               {[
-                ["new-checkout", true],
-                ["ai-summaries", true],
-                ["legacy-export", false],
+                ["dark-mode", true],
+                ["new-hero-blocks", true],
+                ["legacy-dalim-ui", false],
               ].map(([flag, on]) => (
                 <li key={String(flag)} className="flex items-center justify-between gap-4">
                   <span className="font-mono text-xs">{flag}</span>
@@ -90,13 +94,13 @@ export default function Grid17() {
 
           {/* Code */}
           <div className="overflow-hidden border border-border bg-neutral-950 p-6 text-neutral-100 md:col-span-2">
-            <p className="text-xs text-neutral-400">shipyard.config.ts</p>
+            <p className="text-xs text-neutral-400">designali.config.ts</p>
             <pre className="mt-4 overflow-x-auto font-mono text-xs leading-6">
               <code>
                 <span className="text-violet-300">export default</span> {"{"}
-                {"\n"}  regions: [<span className="text-emerald-300">&quot;fra&quot;</span>, <span className="text-emerald-300">&quot;iad&quot;</span>],
-                {"\n"}  canary: <span className="text-amber-300">0.05</span>,
-                {"\n"}  rollback: <span className="text-sky-300">&quot;auto&quot;</span>,
+                {"\n"}  registry: [<span className="text-emerald-300">&quot;blocks&quot;</span>, <span className="text-emerald-300">&quot;ui&quot;</span>],
+                {"\n"}  icons: <span className="text-amber-300">4000</span>,
+                {"\n"}  deploy: <span className="text-sky-300">&quot;vercel&quot;</span>,
                 {"\n"}{"}"}
               </code>
             </pre>
@@ -108,7 +112,7 @@ export default function Grid17() {
               <Sparkles className="size-4" /> Release summary
             </div>
             <ul className="space-y-2.5 text-sm text-muted-foreground">
-              {["Checkout v2 live for 5% of EU traffic", "3 migrations applied, 0 errors", "Error rate flat at 0.02%"].map((line) => (
+              {["New hero blocks live on designali.com", "3 templates updated, 0 errors", "Dark mode checked on every block"].map((line) => (
                 <li key={line} className="flex gap-2">
                   <Check className="mt-0.5 size-4 shrink-0 text-emerald-600 dark:text-emerald-400" />
                   {line}

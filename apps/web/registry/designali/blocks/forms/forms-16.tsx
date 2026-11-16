@@ -1,4 +1,8 @@
-import { Package, Truck, Zap } from "lucide-react"
+import {
+  Package,
+  Truck,
+  Zap,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Input } from "@workspace/ui/components/input"
@@ -10,12 +14,12 @@ import {
 import { RadioGroup, RadioGroupItem } from "@workspace/ui/components/radio-group"
 
 const methods = [
-  { id: "standard", icon: Package, title: "Standard", eta: "Thu 26 - Mon 30 Nov", price: "Free" },
-  { id: "express", icon: Truck, title: "Express", eta: "Tue 24 Nov", price: "€9.50" },
-  { id: "same-day", icon: Zap, title: "Same day courier", eta: "Today before 21:00", price: "€19.00" },
+  { id: "standard", icon: Package, title: "Instant download", eta: "Available right after payment", price: "Free" },
+  { id: "express", icon: Truck, title: "Figma source files", eta: "Sent to your email", price: "$19.00" },
+  { id: "same-day", icon: Zap, title: "Setup call with Ali Imam", eta: "30-minute onboarding call", price: "$99.00" },
 ]
 
-const countries = ["Netherlands", "Belgium", "Germany", "France", "Denmark"]
+const countries = ["India", "United States", "United Kingdom", "Germany", "Canada"]
 
 export default function Forms16() {
   return (
@@ -24,25 +28,25 @@ export default function Forms16() {
         <ol className="flex items-center gap-3 text-xs text-muted-foreground">
           <li>Cart</li>
           <li aria-hidden>/</li>
-          <li className="font-medium text-foreground">Delivery</li>
+          <li className="font-medium text-foreground">Details</li>
           <li aria-hidden>/</li>
           <li>Payment</li>
         </ol>
-        <h2 className="mt-6 text-3xl font-semibold tracking-tight">Where should we send it?</h2>
+        <h2 className="mt-6 text-3xl font-semibold tracking-tight">Where should we send your Designali files?</h2>
 
         <form className="mt-10 space-y-10">
           <div className="grid grid-cols-6 gap-x-4 gap-y-5">
             <div className="col-span-6 space-y-2 sm:col-span-3">
               <Label htmlFor="f16-first">First name</Label>
-              <Input id="f16-first" autoComplete="given-name" placeholder="Sanne" className="h-10" />
+              <Input id="f16-first" autoComplete="given-name" placeholder="First name" className="h-10" />
             </div>
             <div className="col-span-6 space-y-2 sm:col-span-3">
               <Label htmlFor="f16-last">Last name</Label>
-              <Input id="f16-last" autoComplete="family-name" placeholder="de Vries" className="h-10" />
+              <Input id="f16-last" autoComplete="family-name" placeholder="Last name" className="h-10" />
             </div>
             <div className="col-span-6 space-y-2">
               <Label htmlFor="f16-country">Country</Label>
-              <NativeSelect id="f16-country" className="w-full" defaultValue="Netherlands">
+              <NativeSelect id="f16-country" className="w-full" defaultValue="United States">
                 {countries.map((country) => (
                   <NativeSelectOption key={country} value={country}>{country}</NativeSelectOption>
                 ))}
@@ -50,28 +54,28 @@ export default function Forms16() {
             </div>
             <div className="col-span-4 space-y-2">
               <Label htmlFor="f16-street">Street</Label>
-              <Input id="f16-street" autoComplete="address-line1" placeholder="Prinsengracht" className="h-10" />
+              <Input id="f16-street" autoComplete="address-line1" placeholder="Street" className="h-10" />
             </div>
             <div className="col-span-2 space-y-2">
               <Label htmlFor="f16-number">No.</Label>
-              <Input id="f16-number" placeholder="263" className="h-10" />
+              <Input id="f16-number" placeholder="No." className="h-10" />
             </div>
             <div className="col-span-3 space-y-2 sm:col-span-2">
               <Label htmlFor="f16-postal">Postcode</Label>
-              <Input id="f16-postal" autoComplete="postal-code" placeholder="1016 GV" className="h-10" />
+              <Input id="f16-postal" autoComplete="postal-code" placeholder="Postcode" className="h-10" />
             </div>
             <div className="col-span-3 space-y-2 sm:col-span-4">
               <Label htmlFor="f16-city">City</Label>
-              <Input id="f16-city" autoComplete="address-level2" placeholder="Amsterdam" className="h-10" />
+              <Input id="f16-city" autoComplete="address-level2" placeholder="City" className="h-10" />
             </div>
             <div className="col-span-6 space-y-2">
-              <Label htmlFor="f16-phone">Phone, for the courier</Label>
-              <Input id="f16-phone" type="tel" autoComplete="tel" placeholder="+31 6 1234 5678" className="h-10" />
+              <Label htmlFor="f16-phone">Phone (optional)</Label>
+              <Input id="f16-phone" type="tel" autoComplete="tel" placeholder="Phone number" className="h-10" />
             </div>
           </div>
 
           <fieldset>
-            <legend className="text-sm font-medium">Delivery method</legend>
+            <legend className="text-sm font-medium">Delivery options</legend>
             <RadioGroup defaultValue="express" className="mt-4 gap-0 divide-y divide-border border border-border">
               {methods.map((method) => (
                 <Label

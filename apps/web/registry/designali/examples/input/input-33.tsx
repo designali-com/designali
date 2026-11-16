@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { CheckIcon, CircleIcon } from "lucide-react"
+import {
+  Check as CheckIcon,
+  Circle as CircleIcon,
+} from "@designali/icons"
 
 import { Field, FieldLabel } from "@workspace/ui/components/field"
 import { Input } from "@workspace/ui/components/input"
@@ -22,7 +25,7 @@ const colors = [
 ]
 
 export default function PasswordStrengthInput() {
-  const [value, setValue] = React.useState("Harbor2025")
+  const [value, setValue] = React.useState("Designali2025")
   const score = rules.filter((r) => r.test(value)).length
 
   return (

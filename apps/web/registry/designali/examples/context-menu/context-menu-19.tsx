@@ -12,10 +12,10 @@ import {
 } from "@workspace/ui/components/context-menu"
 
 const players = [
-  { name: "Nova", score: 9120, joined: 3 },
-  { name: "Quill", score: 11840, joined: 1 },
-  { name: "Juniper", score: 7600, joined: 4 },
-  { name: "Atlas", score: 10230, joined: 2 },
+  { name: "Templates", score: 9120, joined: 3 },
+  { name: "Blocks", score: 11840, joined: 1 },
+  { name: "Icons", score: 7600, joined: 4 },
+  { name: "Logos", score: 10230, joined: 2 },
 ]
 
 export default function SortOrderRadioMenu() {
@@ -32,7 +32,7 @@ export default function SortOrderRadioMenu() {
     <ContextMenu>
       <ContextMenuTrigger className="flex w-full max-w-xs flex-col border">
         <div className="flex items-center justify-between border-b px-3 py-2 text-xs">
-          <span className="font-medium">Weekly leaderboard</span>
+          <span className="font-medium">Top Designali products</span>
           <span className="text-muted-foreground">by {sort}</span>
         </div>
         {sorted.map((player, index) => (

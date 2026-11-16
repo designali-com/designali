@@ -1,7 +1,11 @@
 "use client"
 
 import { useState } from "react"
-import { Clock, Globe, Video } from "lucide-react"
+import {
+  Clock,
+  Globe,
+  Video,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { cn } from "@workspace/ui/lib/utils"
@@ -33,21 +37,23 @@ export default function Forms13() {
       <div className="mx-auto max-w-5xl px-6">
         <div className="grid border border-border md:grid-cols-[280px_1fr]">
           <div className="space-y-6 border-b border-border p-6 md:border-r md:border-b-0 md:p-8">
-            <span className="flex size-12 items-center justify-center bg-gradient-to-br from-violet-500 to-fuchsia-500 text-sm font-semibold text-white">
-              JM
-            </span>
+            <img
+              src="/ali.jpg"
+              alt="Ali Imam"
+              className="size-12 object-cover"
+            />
             <div>
-              <p className="text-xs text-muted-foreground">Juno Marlowe, Solutions</p>
-              <h2 className="mt-1 text-2xl font-semibold tracking-tight">Product walkthrough</h2>
+              <p className="text-xs text-muted-foreground">Ali Imam, Founder of Designali</p>
+              <h2 className="mt-1 text-2xl font-semibold tracking-tight">Intro call</h2>
             </div>
             <ul className="space-y-3 text-sm text-muted-foreground">
               <li className="flex items-center gap-3"><Clock className="size-4" /> 30 minutes</li>
               <li className="flex items-center gap-3"><Video className="size-4" /> Video call, link by email</li>
-              <li className="flex items-center gap-3"><Globe className="size-4" /> Central European Time</li>
+              <li className="flex items-center gap-3"><Globe className="size-4" /> India Standard Time</li>
             </ul>
             <p className="text-sm leading-6 text-muted-foreground">
-              A tailored tour of Quarry for your team, with time for questions
-              about migration and pricing.
+              A 30-minute call with Ali Imam to talk about your brand, website
+              or product, and how Designali can help.
             </p>
           </div>
 

@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { ChevronsLeftIcon, ChevronsRightIcon } from "lucide-react"
+import {
+  ChevronsLeft as ChevronsLeftIcon,
+  ChevronsRight as ChevronsRightIcon,
+} from "@designali/icons"
 
 import {
   Pagination,

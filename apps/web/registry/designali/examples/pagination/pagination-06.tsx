@@ -20,17 +20,17 @@ import {
 } from "@workspace/ui/components/table"
 
 const customers = [
-  { name: "Maya Chen", plan: "Pro", seats: 12 },
-  { name: "Jonah Okafor", plan: "Starter", seats: 3 },
-  { name: "Priya Raman", plan: "Business", seats: 48 },
-  { name: "Leo Varga", plan: "Pro", seats: 9 },
-  { name: "Ines Duarte", plan: "Starter", seats: 2 },
-  { name: "Tomas Lind", plan: "Business", seats: 31 },
-  { name: "Aiko Mori", plan: "Pro", seats: 15 },
-  { name: "Sam Whitfield", plan: "Starter", seats: 1 },
-  { name: "Noor Haddad", plan: "Pro", seats: 7 },
-  { name: "Elena Petrova", plan: "Business", seats: 64 },
-  { name: "Kofi Mensah", plan: "Starter", seats: 4 },
+  { name: "Maya", plan: "Pro", seats: 12 },
+  { name: "Jonah", plan: "Starter", seats: 3 },
+  { name: "Priya", plan: "Business", seats: 48 },
+  { name: "Leo", plan: "Pro", seats: 9 },
+  { name: "Ines", plan: "Starter", seats: 2 },
+  { name: "Tomas", plan: "Business", seats: 31 },
+  { name: "Aiko", plan: "Pro", seats: 15 },
+  { name: "Sam", plan: "Starter", seats: 1 },
+  { name: "Noor", plan: "Pro", seats: 7 },
+  { name: "Elena", plan: "Business", seats: 64 },
+  { name: "Kofi", plan: "Starter", seats: 4 },
 ]
 
 const PAGE_SIZE = 4

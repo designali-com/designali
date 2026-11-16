@@ -1,7 +1,11 @@
 "use client"
 
 import * as React from "react"
-import { ChevronDownIcon, DownloadIcon, MailIcon } from "lucide-react"
+import {
+  ChevronDown as ChevronDownIcon,
+  Download as DownloadIcon,
+  Mail as MailIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import { Button } from "@workspace/ui/components/button"
@@ -22,8 +26,8 @@ import {
 import { cn } from "@workspace/ui/lib/utils"
 
 const lines = [
-  { label: "Pro plan · 12 seats", amount: "$216.00" },
-  { label: "Extra storage · 200 GB", amount: "$20.00" },
+  { label: "Designali Pro · 12 seats", amount: "$216.00" },
+  { label: "Icons add-on · 4000+ icons", amount: "$20.00" },
   { label: "VAT (21%)", amount: "$49.56" },
 ]
 

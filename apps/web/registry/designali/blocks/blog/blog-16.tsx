@@ -1,7 +1,11 @@
 "use client"
 
 import { useState } from "react"
-import { Flame, Clock, Star } from "lucide-react"
+import {
+  Flame,
+  Clock,
+  Star,
+} from "@designali/icons"
 
 import { cn } from "@workspace/ui/lib/utils"
 
@@ -13,9 +17,9 @@ const tabs: { id: string; label: string; icon: typeof Clock; posts: Post[] }[] =
     label: "Latest",
     icon: Clock,
     posts: [
-      { title: "Planning a garden for a north-facing balcony", excerpt: "Ferns, mint, and the case for giving up on tomatoes.", author: "Lotte Brandt", meta: "2 hours ago", tone: "from-emerald-300/60 to-emerald-100/20 dark:from-emerald-700/60 dark:to-emerald-900/20" },
-      { title: "Composting in a studio apartment", excerpt: "A bokashi bin, a freezer bag, and zero smell.", author: "Kofi Mensah", meta: "Yesterday", tone: "from-amber-300/60 to-amber-100/20 dark:from-amber-700/60 dark:to-amber-900/20" },
-      { title: "Seed swaps near you this winter", excerpt: "Fourteen community events from Leeds to Lisbon.", author: "Greenstep editors", meta: "Nov 12", tone: "from-sky-300/60 to-sky-100/20 dark:from-sky-700/60 dark:to-sky-900/20" },
+      { title: "Planning a brand identity for a new studio", excerpt: "Logo, type, color, and the case for starting with one blue.", author: "Ali Imam", meta: "2 hours ago", tone: "from-emerald-300/60 to-emerald-100/20 dark:from-emerald-700/60 dark:to-emerald-900/20" },
+      { title: "Building a landing page in one afternoon", excerpt: "Three Designali blocks, one template, zero custom CSS.", author: "Ali Imam", meta: "Yesterday", tone: "from-amber-300/60 to-amber-100/20 dark:from-amber-700/60 dark:to-amber-900/20" },
+      { title: "New on designali.com this winter", excerpt: "Fourteen new templates, from portfolios to resorts.", author: "Designali Studio", meta: "Nov 12", tone: "from-sky-300/60 to-sky-100/20 dark:from-sky-700/60 dark:to-sky-900/20" },
     ],
   },
   {
@@ -23,9 +27,9 @@ const tabs: { id: string; label: string; icon: typeof Clock; posts: Post[] }[] =
     label: "Most read",
     icon: Flame,
     posts: [
-      { title: "The only five houseplants you cannot kill", excerpt: "Tested by our most neglectful editor over a full year.", author: "Ivy Paterson", meta: "48k reads", tone: "from-lime-300/60 to-lime-100/20 dark:from-lime-700/60 dark:to-lime-900/20" },
-      { title: "Watering schedules are a myth", excerpt: "Check the soil, not the calendar. Here is how.", author: "Marco Bellini", meta: "31k reads", tone: "from-teal-300/60 to-teal-100/20 dark:from-teal-700/60 dark:to-teal-900/20" },
-      { title: "Repotting without the mess", excerpt: "A newspaper, a spoon, and ten calm minutes.", author: "Ana Duarte", meta: "27k reads", tone: "from-orange-300/60 to-orange-100/20 dark:from-orange-700/60 dark:to-orange-900/20" },
+      { title: "The only five blocks every landing page needs", excerpt: "Hero, features, pricing, FAQ and a call to action.", author: "Ali Imam", meta: "48k reads", tone: "from-lime-300/60 to-lime-100/20 dark:from-lime-700/60 dark:to-lime-900/20" },
+      { title: "Pixel-perfect handoff is a myth", excerpt: "Design in Figma, ship in code, review in the browser.", author: "Ali Imam", meta: "31k reads", tone: "from-teal-300/60 to-teal-100/20 dark:from-teal-700/60 dark:to-teal-900/20" },
+      { title: "Installing @designali/icons without the mess", excerpt: "One package, 4,000+ icons, and ten calm minutes.", author: "Designali Studio", meta: "27k reads", tone: "from-orange-300/60 to-orange-100/20 dark:from-orange-700/60 dark:to-orange-900/20" },
     ],
   },
   {
@@ -33,9 +37,9 @@ const tabs: { id: string; label: string; icon: typeof Clock; posts: Post[] }[] =
     label: "Staff picks",
     icon: Star,
     posts: [
-      { title: "A year growing food on a 2m² rooftop", excerpt: "Total harvest: 41kg. Total cost: less than you think.", author: "Yusuf Demir", meta: "Pick of the month", tone: "from-rose-300/60 to-rose-100/20 dark:from-rose-700/60 dark:to-rose-900/20" },
-      { title: "Why we stopped recommending peat", excerpt: "The science, the alternatives, and what changed our minds.", author: "Greenstep editors", meta: "Long read", tone: "from-stone-300/60 to-stone-100/20 dark:from-stone-600/60 dark:to-stone-900/20" },
-      { title: "Pruning is a conversation", excerpt: "A gardener of forty years on reading what a plant wants.", author: "June Hargreaves", meta: "Interview", tone: "from-violet-300/60 to-violet-100/20 dark:from-violet-700/60 dark:to-violet-900/20" },
+      { title: "A year of designing in public", excerpt: "Total output: 460+ blocks. Total cost: less than you think.", author: "Ali Imam", meta: "Pick of the month", tone: "from-rose-300/60 to-rose-100/20 dark:from-rose-700/60 dark:to-rose-900/20" },
+      { title: "Why we stopped designing without code", excerpt: "The workflow, the tools, and what changed our minds.", author: "Designali Studio", meta: "Long read", tone: "from-stone-300/60 to-stone-100/20 dark:from-stone-600/60 dark:to-stone-900/20" },
+      { title: "Design is a conversation", excerpt: "Ali Imam on reading what a client really wants.", author: "Ali Imam", meta: "Interview", tone: "from-violet-300/60 to-violet-100/20 dark:from-violet-700/60 dark:to-violet-900/20" },
     ],
   },
 ]
@@ -49,7 +53,7 @@ export default function Blog16() {
     <section className="w-full bg-background py-16 text-foreground md:py-24">
       <div className="mx-auto max-w-7xl px-6">
         <div className="flex flex-col gap-6 border-b md:flex-row md:items-end md:justify-between">
-          <h2 className="pb-0 text-3xl font-medium tracking-tight md:pb-4 md:text-4xl">Greenstep stories</h2>
+          <h2 className="pb-0 text-3xl font-medium tracking-tight md:pb-4 md:text-4xl">Designali stories</h2>
           <div role="tablist" className="-mb-px flex overflow-x-auto">
             {tabs.map((t) => {
               const on = t.id === active

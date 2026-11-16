@@ -1,7 +1,11 @@
 "use client"
 
 import * as React from "react"
-import { AtSignIcon, CircleCheckIcon, CircleXIcon } from "lucide-react"
+import {
+  AtSign as AtSignIcon,
+  CircleCheck as CircleCheckIcon,
+  CircleX as CircleXIcon,
+} from "@designali/icons"
 
 import {
   Field,
@@ -19,7 +23,7 @@ import { Spinner } from "@workspace/ui/components/spinner"
 const taken = ["admin", "maya", "support"]
 
 export default function UsernameAvailabilityInput() {
-  const [value, setValue] = React.useState("maya")
+  const [value, setValue] = React.useState("ali")
   const [status, setStatus] = React.useState<
     "idle" | "checking" | "available" | "taken"
   >("taken")

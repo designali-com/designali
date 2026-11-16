@@ -5,7 +5,7 @@ import * as React from "react"
 import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
 import { Textarea } from "@workspace/ui/components/textarea"
 
-const people = ["Amara Osei", "Bruno Costa", "Chloe Martin", "Diego Alvarez"]
+const people = ["Ali Imam", "Aisha Designer", "Arjun Developer", "Chris Client"]
 
 export default function MentionSuggestionsTextarea() {
   const [value, setValue] = React.useState("Thanks for the review ")
@@ -48,7 +48,7 @@ export default function MentionSuggestionsTextarea() {
           ))}
         </div>
       )}
-      <p className="mt-1.5 text-xs text-muted-foreground">Try typing @ch</p>
+      <p className="mt-1.5 text-xs text-muted-foreground">Try typing @a</p>
     </div>
   )
 }

@@ -1,4 +1,7 @@
-import { BadgeCheck, BookmarkIcon } from "lucide-react";
+import {
+  BadgeCheck,
+  Bookmark as BookmarkIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge";
 

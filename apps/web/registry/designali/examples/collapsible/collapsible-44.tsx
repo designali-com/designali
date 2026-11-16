@@ -1,4 +1,7 @@
-import { ChevronDownIcon, TrendingUpIcon } from "lucide-react"
+import {
+  ChevronDown as ChevronDownIcon,
+  TrendingUp as TrendingUpIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import { Button } from "@workspace/ui/components/button"

@@ -1,4 +1,6 @@
-import { ArrowRight } from "lucide-react"
+import {
+  ArrowRight,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 
@@ -17,15 +19,15 @@ export default function CallToAction02() {
         <div className="flex flex-col justify-end gap-8 px-6 py-16 md:px-12 md:py-24">
           <p className="text-sm leading-7 text-muted-foreground">
             Bring a brief, a deadline, or just a rough idea. We scope it in
-            one call, share a fixed quote within 48 hours, and start the
+            one call with Ali, share a fixed quote within 48 hours, and start the
             following Monday.
           </p>
           <div className="flex flex-wrap gap-3">
-            <Button size="lg" nativeButton={false} render={<a href="#" />}>
+            <Button size="lg" nativeButton={false} render={<a href="https://cal.com/aliimam/30min" />}>
               Book a scoping call
               <ArrowRight />
             </Button>
-            <Button size="lg" variant="outline" nativeButton={false} render={<a href="#" />}>
+            <Button size="lg" variant="outline" nativeButton={false} render={<a href="https://www.designali.com/work" />}>
               See our process
             </Button>
           </div>

@@ -1,4 +1,6 @@
-import { LockIcon } from "lucide-react"
+import {
+  Lock as LockIcon,
+} from "@designali/icons"
 
 import { Checkbox } from "@workspace/ui/components/checkbox"
 import {
@@ -12,8 +14,8 @@ import {
 
 const envs = ["Dev", "Staging", "Prod"]
 const flags = [
-  { key: "new-checkout", on: ["Dev", "Staging"] },
-  { key: "ai-summaries", on: ["Dev"] },
+  { key: "templates-checkout", on: ["Dev", "Staging"] },
+  { key: "ai-workflows", on: ["Dev"] },
   { key: "dark-mode-v2", on: ["Dev", "Staging", "Prod"] },
   { key: "usage-billing", on: [] as string[], locked: true },
 ]

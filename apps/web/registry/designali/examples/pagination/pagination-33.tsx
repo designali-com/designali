@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { FlagIcon } from "lucide-react"
+import {
+  Flag as FlagIcon,
+} from "@designali/icons"
 
 import {
   Pagination,

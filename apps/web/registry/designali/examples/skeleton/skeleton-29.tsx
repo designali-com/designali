@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { FileTextIcon, SearchIcon } from "lucide-react"
+import {
+  FileText as FileTextIcon,
+  Search as SearchIcon,
+} from "@designali/icons"
 
 import {
   InputGroup,
@@ -11,9 +14,9 @@ import {
 import { Skeleton } from "@workspace/ui/components/skeleton"
 
 const pages = [
-  "Quarterly planning template",
-  "Quality assurance checklist",
-  "Quick start for new hires",
+  "Portfolio Simple template",
+  "Pricing page blocks",
+  "Project kickoff checklist",
 ]
 
 export default function SearchResultsSkeleton() {
@@ -42,7 +45,7 @@ export default function SearchResultsSkeleton() {
             setQuery(e.target.value)
             setPending(e.target.value.length > 0)
           }}
-          placeholder="Type to search, e.g. qu"
+          placeholder="Type to search, e.g. po"
         />
       </InputGroup>
       <div className="flex flex-col gap-1 border p-2" aria-busy={pending}>

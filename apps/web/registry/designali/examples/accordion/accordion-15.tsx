@@ -1,10 +1,10 @@
 import {
-  ChevronRightIcon,
-  FileIcon,
-  FolderIcon,
-  FolderOpenIcon,
-  FolderPlusIcon,
-} from "lucide-react"
+  ChevronRight as ChevronRightIcon,
+  File as FileIcon,
+  Folder as FolderIcon,
+  FolderOpen as FolderOpenIcon,
+  FolderPlus as FolderPlusIcon,
+} from "@designali/icons"
 
 import {
   Accordion,
@@ -18,17 +18,17 @@ const folders = [
   {
     value: "brand",
     name: "Brand assets",
-    files: ["logo-primary.svg", "logo-mono.svg", "palette.pdf"],
+    files: ["designali-logo.svg", "designali-logo-black.svg", "palette.pdf"],
   },
   {
     value: "contracts",
-    name: "Contracts",
-    files: ["msa-northwind.pdf", "nda-template.docx"],
+    name: "Client projects",
+    files: ["design-agency-template.fig", "proposal-designali.pdf"],
   },
   {
     value: "research",
-    name: "User research",
-    files: ["interview-notes.md", "survey-results.csv", "personas.fig"],
+    name: "Dalim archive",
+    files: ["dalim-icons.fig", "dalim-ui-notes.md", "dalim-works.pdf"],
   },
 ]
 

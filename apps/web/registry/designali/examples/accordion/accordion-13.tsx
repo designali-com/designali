@@ -1,4 +1,6 @@
-import { ChevronDownIcon } from "lucide-react"
+import {
+  ChevronDown as ChevronDownIcon,
+} from "@designali/icons"
 
 import {
   Accordion,
@@ -15,9 +17,9 @@ const groups = [
     title: "Notifications",
     hint: "Email and push",
     options: [
-      { id: "mentions", label: "Mentions and replies", on: true },
-      { id: "digest", label: "Weekly digest", on: false },
-      { id: "push", label: "Push notifications", on: true },
+      { id: "mentions", label: "Client feedback on designs", on: true },
+      { id: "digest", label: "Weekly Designali digest", on: false },
+      { id: "push", label: "New blocks & templates", on: true },
     ],
   },
   {
@@ -25,7 +27,7 @@ const groups = [
     title: "Privacy",
     hint: "Visibility and data",
     options: [
-      { id: "profile", label: "Public profile", on: false },
+      { id: "profile", label: "Show my work on designali.com", on: false },
       { id: "status", label: "Show online status", on: true },
     ],
   },

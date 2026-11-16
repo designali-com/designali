@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { GiftIcon } from "lucide-react"
+import {
+  Gift as GiftIcon,
+} from "@designali/icons"
 
 import { Label } from "@workspace/ui/components/label"
 import { Switch } from "@workspace/ui/components/switch"

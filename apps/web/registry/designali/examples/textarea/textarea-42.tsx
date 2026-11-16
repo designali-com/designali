@@ -1,14 +1,16 @@
 "use client"
 
 import * as React from "react"
-import { PencilIcon } from "lucide-react"
+import {
+  Pencil as PencilIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Textarea } from "@workspace/ui/components/textarea"
 
 export default function InlineEditTextarea() {
   const [text, setText] = React.useState(
-    "Quarterly planning for the mobile team. Goals, staffing and dependencies."
+    "Quarterly planning for the Designali studio. New templates, blocks and icons."
   )
   const [draft, setDraft] = React.useState(text)
   const [editing, setEditing] = React.useState(false)

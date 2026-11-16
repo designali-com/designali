@@ -1,8 +1,8 @@
 const works = [
-  { title: "Bloom", year: "2025", medium: "Generative print", shape: "circle" },
-  { title: "Fold", year: "2025", medium: "Paper study", shape: "fold" },
-  { title: "Orbit", year: "2024", medium: "Animated loop", shape: "rings" },
-  { title: "Stack", year: "2024", medium: "Risograph", shape: "bars" },
+  { title: "Bloom", year: "2025", medium: "Vector study", shape: "circle" },
+  { title: "Fold", year: "2025", medium: "Brand shape", shape: "fold" },
+  { title: "Orbit", year: "2024", medium: "Motion loop", shape: "rings" },
+  { title: "Stack", year: "2024", medium: "Illustration", shape: "bars" },
 ] as const
 
 function Artwork({ shape }: { shape: (typeof works)[number]["shape"] }) {
@@ -68,8 +68,8 @@ export default function Gallery07() {
           ))}
         </div>
         <p className="mt-6 text-sm text-muted-foreground">
-          Exhibited at Lumen Gallery, Rotterdam. All works available as limited
-          editions of 25.
+          Shape studies from the Designali illustration library. Explore more
+          vectors in @designali/vectors.
         </p>
       </div>
     </section>

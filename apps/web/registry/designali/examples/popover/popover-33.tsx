@@ -1,5 +1,9 @@
 import * as React from "react"
-import { FileTextIcon, InfoIcon, UsersIcon } from "lucide-react"
+import {
+  FileText as FileTextIcon,
+  Info as InfoIcon,
+  Users as UsersIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -13,9 +17,9 @@ import { Separator } from "@workspace/ui/components/separator"
 const details = [
   { label: "Type", value: "PDF document" },
   { label: "Size", value: "4.2 MB" },
-  { label: "Owner", value: "Noor Haddad" },
+  { label: "Owner", value: "Ali Imam" },
   { label: "Modified", value: "Nov 12, 2026" },
-  { label: "Location", value: "Marketing / Launch" },
+  { label: "Location", value: "Designali / Brand" },
 ]
 
 export default function FileDetailsPopover() {
@@ -24,7 +28,7 @@ export default function FileDetailsPopover() {
       <FileTextIcon className="size-5 text-muted-foreground" />
       <div className="flex min-w-0 flex-1 flex-col">
         <span className="truncate text-xs font-medium">
-          brand-guidelines.pdf
+          designali-brand-guidelines.pdf
         </span>
         <span className="text-[11px] text-muted-foreground">
           Edited 3 days ago

@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { PlayIcon } from "lucide-react"
+import {
+  Play as PlayIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -15,9 +17,9 @@ import {
 import { Textarea } from "@workspace/ui/components/textarea"
 
 const rows = [
-  { plan: "starter", users: 1204 },
-  { plan: "team", users: 388 },
-  { plan: "enterprise", users: 41 },
+  { plan: "free", users: 1204 },
+  { plan: "pro", users: 388 },
+  { plan: "studio", users: 41 },
 ]
 
 export default function SqlQueryTextarea() {

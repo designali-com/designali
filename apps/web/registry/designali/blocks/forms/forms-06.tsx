@@ -1,4 +1,7 @@
-import { ArrowRight, Mail } from "lucide-react"
+import {
+  ArrowRight,
+  Mail,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Checkbox } from "@workspace/ui/components/checkbox"
@@ -6,9 +9,9 @@ import { Input } from "@workspace/ui/components/input"
 import { Label } from "@workspace/ui/components/label"
 
 const topics = [
-  { id: "craft", title: "Craft notes", cadence: "Weekly", checked: true },
-  { id: "teardowns", title: "Interface teardowns", cadence: "Biweekly", checked: true },
-  { id: "jobs", title: "Hand-picked design jobs", cadence: "Monthly", checked: false },
+  { id: "craft", title: "New blocks and templates", cadence: "Weekly", checked: true },
+  { id: "teardowns", title: "Design se code tak notes", cadence: "Biweekly", checked: true },
+  { id: "jobs", title: "Icons, logos and vectors drops", cadence: "Monthly", checked: false },
 ]
 
 export default function Forms06() {
@@ -20,11 +23,11 @@ export default function Forms06() {
             <Mail className="size-4" />
           </div>
           <h2 className="mt-8 text-4xl leading-tight font-semibold tracking-tight md:text-6xl">
-            The Margin Letter
+            The Designali Letter
           </h2>
           <p className="mt-6 max-w-md text-sm leading-6 opacity-70">
-            Short, opinionated essays on product design, written by people who
-            ship it. Read by 31,400 designers and engineers. No sponsors, ever.
+            Short notes from Ali Imam on design and code, plus the newest
+            Designali templates, blocks and resources. No sponsors, ever.
           </p>
         </div>
 
@@ -55,7 +58,7 @@ export default function Forms06() {
               id="f6-email"
               type="email"
               required
-              placeholder="you@studio.com"
+              placeholder="you@example.com"
               className="h-12 border-background/20 bg-transparent text-background placeholder:text-background/50 dark:bg-transparent"
             />
             <Button

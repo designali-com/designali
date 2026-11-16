@@ -1,16 +1,20 @@
 "use client"
 
 import { useMemo, useState } from "react"
-import { ArrowDown, ArrowUp, ArrowUpDown } from "lucide-react"
+import {
+  ArrowDown,
+  ArrowUp,
+  ArrowUpDown,
+} from "@designali/icons"
 
 const packages = [
-  { name: "@fieldkit/core", version: "4.2.1", size: 18.4, downloads: 1_240_000, updated: 2 },
-  { name: "@fieldkit/react", version: "4.2.0", size: 9.1, downloads: 980_400, updated: 5 },
-  { name: "@fieldkit/icons", version: "2.8.3", size: 142.6, downloads: 612_900, updated: 12 },
-  { name: "@fieldkit/motion", version: "1.4.0", size: 22.7, downloads: 301_250, updated: 1 },
-  { name: "@fieldkit/forms", version: "3.0.5", size: 14.2, downloads: 288_700, updated: 21 },
-  { name: "@fieldkit/charts", version: "0.9.2", size: 64.0, downloads: 97_430, updated: 34 },
-  { name: "@fieldkit/cli", version: "2.1.7", size: 3.8, downloads: 54_100, updated: 9 },
+  { name: "@designali/icons", version: "4.2.1", size: 18.4, downloads: 1_240_000, updated: 2 },
+  { name: "@designali/logos", version: "4.2.0", size: 9.1, downloads: 980_400, updated: 5 },
+  { name: "@designali/vectors", version: "2.8.3", size: 142.6, downloads: 612_900, updated: 12 },
+  { name: "designali/marquee", version: "1.4.0", size: 22.7, downloads: 301_250, updated: 1 },
+  { name: "designali/number-counter", version: "3.0.5", size: 14.2, downloads: 288_700, updated: 21 },
+  { name: "designali/gauge", version: "0.9.2", size: 64.0, downloads: 97_430, updated: 34 },
+  { name: "designali/dot-pattern", version: "2.1.7", size: 3.8, downloads: 54_100, updated: 9 },
 ]
 
 type Key = "name" | "size" | "downloads" | "updated"
@@ -51,7 +55,7 @@ export default function Lists08() {
       <div className="mx-auto max-w-4xl px-6">
         <h2 className="text-3xl font-semibold tracking-tight">Packages</h2>
         <p className="mt-2 text-sm text-muted-foreground">
-          Seven packages, one monorepo. Sort by any column.
+          Designali packages and components, all in one monorepo. Sort by any column.
         </p>
 
         <div className="mt-8 border border-border">

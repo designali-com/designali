@@ -1,4 +1,7 @@
-import { LeafIcon, TruckIcon } from "lucide-react"
+import {
+  Leaf as LeafIcon,
+  Truck as TruckIcon,
+} from "@designali/icons"
 
 import { Switch } from "@workspace/ui/components/switch"
 

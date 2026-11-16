@@ -1,14 +1,18 @@
 "use client"
 
 import { useRef } from "react"
-import { ArrowLeft, ArrowRight, MapPin } from "lucide-react"
+import {
+  ArrowLeft,
+  ArrowRight,
+  LayoutTemplate,
+} from "@designali/icons"
 
 const spots = [
-  { name: "Harbourfront", city: "Halifax", address: "1869 Upper Water St", rooms: 42, tone: "from-sky-300 to-blue-600", angle: 12 },
-  { name: "Old Port", city: "Montreal", address: "410 Rue Saint-Paul O", rooms: 68, tone: "from-amber-300 to-rose-500", angle: -8 },
-  { name: "Distillery", city: "Toronto", address: "55 Mill Street", rooms: 54, tone: "from-emerald-300 to-teal-600", angle: 20 },
-  { name: "Gastown", city: "Vancouver", address: "12 Water Street", rooms: 38, tone: "from-violet-300 to-indigo-600", angle: -16 },
-  { name: "Exchange", city: "Winnipeg", address: "211 Bannatyne Ave", rooms: 26, tone: "from-orange-300 to-red-500", angle: 4 },
+  { name: "Portfolio", city: "Template", address: "Next.js · Tailwind CSS", rooms: 42, tone: "from-sky-300 to-blue-600", angle: 12 },
+  { name: "Design Agency", city: "Template", address: "Next.js · Framer-style motion", rooms: 68, tone: "from-amber-300 to-rose-500", angle: -8 },
+  { name: "Resort", city: "Template", address: "Next.js · Booking flows", rooms: 54, tone: "from-emerald-300 to-teal-600", angle: 20 },
+  { name: "AI Startup", city: "Template", address: "Next.js · Dashboard UI", rooms: 38, tone: "from-violet-300 to-indigo-600", angle: -16 },
+  { name: "Dalim UI", city: "Case study", address: "React · Component library", rooms: 26, tone: "from-orange-300 to-red-500", angle: 4 },
 ]
 
 function Thumb({ tone, angle }: { tone: string; angle: number }) {
@@ -31,7 +35,7 @@ function Thumb({ tone, angle }: { tone: string; angle: number }) {
         }}
       />
       <span className="absolute top-1/2 left-1/2 flex size-10 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white text-black shadow-lg">
-        <MapPin className="size-4" />
+        <LayoutTemplate className="size-4" />
       </span>
     </div>
   )
@@ -52,16 +56,16 @@ export default function Location14() {
         <div className="flex items-end justify-between gap-6">
           <div>
             <p className="text-xs font-medium tracking-widest text-muted-foreground uppercase">
-              Stay with Larch
+              Designali templates
             </p>
             <h2 className="mt-3 text-4xl font-semibold tracking-tight md:text-5xl">
-              Five hotels, coast to coast
+              Five templates, ready to ship
             </h2>
           </div>
           <div className="hidden gap-2 md:flex">
             <button
               type="button"
-              aria-label="Previous hotels"
+              aria-label="Previous templates"
               onClick={() => scroll(-1)}
               className="flex size-10 items-center justify-center border transition-colors hover:bg-muted"
             >
@@ -69,7 +73,7 @@ export default function Location14() {
             </button>
             <button
               type="button"
-              aria-label="Next hotels"
+              aria-label="Next templates"
               onClick={() => scroll(1)}
               className="flex size-10 items-center justify-center border transition-colors hover:bg-muted"
             >
@@ -85,18 +89,18 @@ export default function Location14() {
           className="flex snap-x snap-mandatory gap-4 overflow-x-auto scroll-smooth px-6 pb-4 [scrollbar-width:thin]">
           {spots.map((spot) => (
             <li key={spot.name} className="w-[78%] shrink-0 snap-start sm:w-[46%] lg:w-[31%]">
-              <a href="#" className="group block border bg-card">
+              <a href="/templates" className="group block border bg-card">
                 <Thumb tone={spot.tone} angle={spot.angle} />
                 <div className="space-y-1 p-5">
                   <p className="text-xs tracking-widest text-muted-foreground uppercase">
                     {spot.city}
                   </p>
-                  <p className="text-lg font-medium">Larch {spot.name}</p>
+                  <p className="text-lg font-medium">Designali {spot.name}</p>
                   <p className="text-sm text-muted-foreground">{spot.address}</p>
                   <div className="flex items-center justify-between pt-4 text-sm">
-                    <span>{spot.rooms} rooms</span>
+                    <span>{spot.rooms} blocks</span>
                     <span className="inline-flex items-center gap-1 font-medium group-hover:underline">
-                      View hotel <ArrowRight className="size-3.5" />
+                      View template <ArrowRight className="size-3.5" />
                     </span>
                   </div>
                 </div>

@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { ChevronRightIcon, CircleCheckIcon } from "lucide-react"
+import {
+  ChevronRight as ChevronRightIcon,
+  CircleCheck as CircleCheckIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {

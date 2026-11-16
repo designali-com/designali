@@ -10,14 +10,14 @@ import {
 } from "@workspace/ui/components/navigation-menu"
 
 const items = [
-  { title: "Docs", description: "Collaborative pages and wikis" },
+  { title: "Blocks", description: "460+ production-ready sections" },
   {
-    title: "Whiteboards",
-    description: "Infinite canvas for planning",
+    title: "Landing pages",
+    description: "240+ pages ready to ship",
     badge: "New",
   },
-  { title: "Forms", description: "Collect answers into tables" },
-  { title: "AI assistant", description: "Summaries and drafts", badge: "Beta" },
+  { title: "Icons", description: "4000+ icons for React" },
+  { title: "AI workflows", description: "From design to code", badge: "Beta" },
 ]
 
 export default function NewFeatureBadgesNav() {

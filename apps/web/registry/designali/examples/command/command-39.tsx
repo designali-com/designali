@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { ChevronRightIcon } from "lucide-react"
+import {
+  ChevronRight as ChevronRightIcon,
+} from "@designali/icons"
 
 import {
   Command,

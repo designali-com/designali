@@ -1,4 +1,6 @@
-import { UserPlusIcon } from "lucide-react"
+import {
+  UserPlus as UserPlusIcon,
+} from "@designali/icons"
 
 import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
 import { Badge } from "@workspace/ui/components/badge"
@@ -20,9 +22,9 @@ import {
 } from "@workspace/ui/components/sheet"
 
 const members = [
-  { name: "Ava Lindqvist", email: "ava@corelab.io", role: "Owner" },
-  { name: "Mateo Ruiz", email: "mateo@corelab.io", role: "Admin" },
-  { name: "Hana Sato", email: "hana@corelab.io", role: "Member" },
+  { name: "Ali Imam", email: "ali@designali.com", role: "Owner" },
+  { name: "Mateo", email: "mateo@designali.com", role: "Admin" },
+  { name: "Hana", email: "hana@designali.com", role: "Member" },
 ]
 
 export default function InviteMembersSheet() {
@@ -36,7 +38,7 @@ export default function InviteMembersSheet() {
         <SheetHeader>
           <SheetTitle>Invite teammates</SheetTitle>
           <SheetDescription>
-            They&apos;ll get an email to join Corelab.
+            They&apos;ll get an email to join Designali.
           </SheetDescription>
         </SheetHeader>
         <div className="flex flex-col gap-4 px-4">
@@ -45,7 +47,7 @@ export default function InviteMembersSheet() {
             <Input
               id="invite-email"
               type="email"
-              placeholder="name@corelab.io"
+              placeholder="name@designali.com"
             />
           </Field>
           <Field>

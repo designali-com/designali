@@ -1,4 +1,7 @@
-import { MinusIcon, PlusIcon } from "lucide-react"
+import {
+  Minus as MinusIcon,
+  Plus as PlusIcon,
+} from "@designali/icons"
 
 import {
   Accordion,
@@ -10,18 +13,18 @@ import {
 const items = [
   {
     value: "where",
-    q: "Where do you ship?",
-    a: "We ship to 38 countries across Europe, North America and Oceania.",
+    q: "How do I receive my template?",
+    a: "Downloads are instant — your template is in your designali.com account right after checkout.",
   },
   {
     value: "duties",
-    q: "Are duties included?",
-    a: "Yes, all prices include duties and taxes at checkout, so there are no surprise fees.",
+    q: "Are taxes included?",
+    a: "Yes, prices on designali.com/pricing include taxes at checkout, so there are no surprise fees.",
   },
   {
     value: "track",
-    q: "How do I track my parcel?",
-    a: "A tracking link is emailed as soon as your order leaves the warehouse.",
+    q: "How do I get updates?",
+    a: "We email you whenever a template you own gets a new version.",
   },
 ]
 

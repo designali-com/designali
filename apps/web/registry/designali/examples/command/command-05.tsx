@@ -2,11 +2,11 @@
 
 import * as React from "react"
 import {
-  LayoutDashboardIcon,
-  LogOutIcon,
-  PanelLeftIcon,
-  SettingsIcon,
-} from "lucide-react"
+  LayoutDashboard as LayoutDashboardIcon,
+  LogOut as LogOutIcon,
+  PanelLeft as PanelLeftIcon,
+  Settings as SettingsIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {

@@ -12,13 +12,13 @@ import {
 } from "@workspace/ui/components/popover"
 
 const members = [
-  { name: "Rhea Kapoor", role: "Owner" },
-  { name: "Dario Mendes", role: "Editor" },
-  { name: "Hana Sato", role: "Editor" },
-  { name: "Owen Brandt", role: "Viewer" },
-  { name: "Grace Liu", role: "Viewer" },
-  { name: "Ben Adler", role: "Viewer" },
-  { name: "Farah Idris", role: "Editor" },
+  { name: "Ali Imam", role: "Owner" },
+  { name: "Dario", role: "Editor" },
+  { name: "Hana", role: "Editor" },
+  { name: "Owen", role: "Viewer" },
+  { name: "Grace", role: "Viewer" },
+  { name: "Ben", role: "Viewer" },
+  { name: "Farah", role: "Editor" },
 ]
 
 const initials = (name: string) =>

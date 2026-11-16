@@ -26,23 +26,23 @@ export default function BillingAddressToggle() {
           onCheckedChange={(checked) => setSame(checked)}
         />
         <Label htmlFor="same-address">
-          Billing address is the same as shipping
+          Billing address is the same as studio address
         </Label>
       </div>
       <CollapsibleContent className="h-(--collapsible-panel-height) overflow-hidden transition-[height] duration-200 ease-out data-ending-style:h-0 data-starting-style:h-0">
         <FieldGroup className="gap-3 p-px">
           <Field>
             <FieldLabel htmlFor="billing-street">Street address</FieldLabel>
-            <Input id="billing-street" placeholder="221 Harbor Lane" />
+            <Input id="billing-street" placeholder="Street and number" />
           </Field>
           <div className="grid grid-cols-2 gap-3">
             <Field>
               <FieldLabel htmlFor="billing-city">City</FieldLabel>
-              <Input id="billing-city" placeholder="Portsmouth" />
+              <Input id="billing-city" placeholder="City" />
             </Field>
             <Field>
               <FieldLabel htmlFor="billing-zip">Postal code</FieldLabel>
-              <Input id="billing-zip" placeholder="03801" />
+              <Input id="billing-zip" placeholder="Postal code" />
             </Field>
           </div>
         </FieldGroup>

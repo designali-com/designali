@@ -1,12 +1,14 @@
-import { CrownIcon } from "lucide-react"
+import {
+  Crown as CrownIcon,
+} from "@designali/icons"
 
 import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
 import { Badge } from "@workspace/ui/components/badge"
 
 const members = [
-  { name: "Lucia Ferrer", initials: "LF", role: "Owner" },
-  { name: "Ahmed Saleh", initials: "AS", role: "Admin" },
-  { name: "Bea Grant", initials: "BG", role: "Member" },
+  { name: "Ali Imam", initials: "AI", role: "Owner" },
+  { name: "Sara", initials: "SA", role: "Admin" },
+  { name: "Omar", initials: "OM", role: "Member" },
   { name: "Contractor", initials: "CT", role: "Guest" },
 ]
 

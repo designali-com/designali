@@ -1,4 +1,6 @@
-import { BellIcon } from "lucide-react"
+import {
+  Bell as BellIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -13,19 +15,19 @@ const feeds = [
     value: "all",
     label: "All",
     unread: true,
-    items: ["Mira approved your expense report", "Build #882 failed on main"],
+    items: ["Ali approved your Designali invoice", "designali.com build #882 failed on main"],
   },
   {
     value: "mentions",
     label: "Mentions",
     unread: true,
-    items: ["Jon mentioned you in Launch plan"],
+    items: ["Sara mentioned you in Templates launch plan"],
   },
   {
     value: "system",
     label: "System",
     unread: false,
-    items: ["Maintenance window scheduled for Sunday"],
+    items: ["designali.com maintenance scheduled for Sunday"],
   },
 ]
 

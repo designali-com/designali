@@ -1,10 +1,13 @@
 "use client"
 
 import Link from "next/link"
-import { ArrowDown, Sparkles } from "lucide-react"
+import {
+  ArrowDown,
+  Sparkles,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
-import { Github, Apple, Nike } from "@designali/logos"
+import { Figma, Nextjs, ClaudeAI } from "@designali/logos"
 
 export function HeroSection() {
   return (
@@ -76,7 +79,7 @@ export function HeroSection() {
               {/* Feature 1 */}
               <div className="group p-6 text-left transition-colors hover:bg-muted/50">
                 <div className="mb-4 flex items-center gap-2">
-                  <Apple className="size-6 text-muted-foreground" />
+                  <Figma className="size-6 text-muted-foreground" />
 
                   <span className="text-sm font-medium">
                     Creative
@@ -92,7 +95,7 @@ export function HeroSection() {
               {/* Feature 2 */}
               <div className="group p-6 text-left transition-colors hover:bg-muted/50">
                 <div className="mb-4 flex items-center gap-2">
-                  <Github className="size-6 text-muted-foreground" />
+                  <Nextjs className="size-6 text-muted-foreground" />
 
                   <span className="text-sm font-medium">
                     Development
@@ -108,7 +111,7 @@ export function HeroSection() {
               {/* Feature 3 */}
               <div className="group p-6 text-left transition-colors hover:bg-muted/50">
                 <div className="mb-4 flex items-center gap-2">
-                  <Nike className="size-6 text-muted-foreground" />
+                  <ClaudeAI className="size-6 text-muted-foreground" />
 
                   <span className="text-sm font-medium">
                     Intelligence

@@ -1,4 +1,6 @@
-import { LockIcon } from "lucide-react"
+import {
+  Lock as LockIcon,
+} from "@designali/icons"
 
 import { AspectRatio } from "@workspace/ui/components/aspect-ratio"
 
@@ -13,7 +15,7 @@ export default function BrowserWindowPreview() {
         </div>
         <div className="mx-auto flex items-center gap-1 bg-background px-3 py-0.5 text-[10px] text-muted-foreground">
           <LockIcon className="size-2.5" />
-          tidewater.app
+          designali.com
         </div>
       </div>
       <AspectRatio ratio={16 / 10} className="bg-background">

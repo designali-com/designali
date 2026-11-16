@@ -1,30 +1,30 @@
 const years = [
   {
-    year: "2026",
+    year: "Now",
     projects: [
-      { client: "Riverbend Library", work: "Catalogue search and reading lists", role: "Lead designer" },
-      { client: "Kestrel Audio", work: "Companion app for wireless headphones", role: "Product design" },
+      { client: "Designali", work: "460+ blocks, templates and icons", role: "Design + build", image: "/images/templates/design-agency.jpg" },
+      { client: "Ali Imam portfolio", work: "Personal site built with Next.js", role: "Design + build", image: "/images/templates/aliimam-comp.jpg" },
     ],
   },
   {
-    year: "2025",
+    year: "UI",
     projects: [
-      { client: "Granite & Moss", work: "Landscape architecture portfolio site", role: "Design + build" },
-      { client: "Pocket Tutor", work: "Homework helper for ages 9 to 14", role: "UX research" },
-      { client: "Hatch Ventures", work: "Investor portal and data room", role: "Product design" },
+      { client: "Dalim UI", work: "Component library for designers who code", role: "UI/UX + code", image: "/images/templates/dalim-ui-old.jpg" },
+      { client: "Dalim Icons", work: "Icon set that became @designali/icons", role: "Icon design", image: "/images/templates/dalim-icons-old.jpg" },
+      { client: "Dalim Tools", work: "Small tools for designers", role: "Design + build", image: "/images/templates/dalim-tools-old.jpg" },
     ],
   },
   {
-    year: "2024",
+    year: "Brand",
     projects: [
-      { client: "Ember Bakery", work: "Identity, packaging and pre-order site", role: "Brand designer" },
+      { client: "Dalim Agency", work: "Identity and agency website", role: "Brand designer", image: "/images/templates/dalim-agency-old.jpg" },
     ],
   },
   {
-    year: "2023",
+    year: "Dalim",
     projects: [
-      { client: "Openfield Co-op", work: "Member dashboard for 3,000 farmers", role: "Lead designer" },
-      { client: "Lantern Films", work: "Festival submission platform", role: "UX + UI" },
+      { client: "Dalim", work: "The first Ali Imam brand", role: "Design + build", image: "/images/templates/dalim-old.jpg" },
+      { client: "Dalim Fonts", work: "Type foundry website", role: "UX + UI", image: "/images/templates/dalim-fonts-old.jpg" },
     ],
   },
 ]
@@ -38,10 +38,10 @@ export default function Portfolio09() {
             Timeline
           </p>
           <h2 className="mt-3 text-3xl font-medium tracking-tight md:text-5xl">
-            Four years, eight clients
+            From Dalim to Designali
           </h2>
           <p className="mx-auto mt-3 max-w-md text-muted-foreground">
-            Every project I have shipped as an independent designer, newest first.
+            Every project Ali Imam has shipped under the Dalim and Designali names, newest first.
           </p>
         </div>
 
@@ -62,7 +62,7 @@ export default function Portfolio09() {
                     <span
                       className="size-12 shrink-0 border border-border"
                       style={{
-                        background: `linear-gradient(${135 + i * 45}deg, var(--chart-${(i % 5) + 1}), transparent)`,
+                        background: `url(${project.image}) center / cover, linear-gradient(${135 + i * 45}deg, var(--chart-${(i % 5) + 1}), transparent)`,
                       }}
                     />
                     <div className="min-w-0 flex-1">

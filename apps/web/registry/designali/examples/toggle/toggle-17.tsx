@@ -2,13 +2,13 @@
 
 import * as React from "react"
 import {
-  PauseIcon,
-  PlayIcon,
-  Repeat1Icon,
-  ShuffleIcon,
-  SkipBackIcon,
-  SkipForwardIcon,
-} from "lucide-react"
+  Pause as PauseIcon,
+  Play as PlayIcon,
+  Repeat1 as Repeat1Icon,
+  Shuffle as ShuffleIcon,
+  SkipBack as SkipBackIcon,
+  SkipForward as SkipForwardIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Toggle } from "@workspace/ui/components/toggle"

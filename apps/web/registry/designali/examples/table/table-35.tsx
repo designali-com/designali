@@ -9,16 +9,16 @@ import {
 } from "@workspace/ui/components/table"
 
 const tasks = [
-  { title: "Draft Q1 OKRs", assignee: "Hiro", due: "Dec 2", priority: "High" },
+  { title: "Draft Q1 content plan", assignee: "Ali", due: "Dec 2", priority: "High" },
   {
-    title: "Review vendor contract",
-    assignee: "Ana",
+    title: "Review client brief",
+    assignee: "Sara",
     due: "Dec 5",
     priority: "Medium",
   },
   {
-    title: "Plan offsite agenda",
-    assignee: "Kofi",
+    title: "Plan icons launch",
+    assignee: "Omar",
     due: "Dec 12",
     priority: "Low",
   },

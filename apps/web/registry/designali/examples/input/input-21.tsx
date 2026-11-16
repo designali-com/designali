@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { XIcon } from "lucide-react"
+import {
+  X as XIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import {

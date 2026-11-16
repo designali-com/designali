@@ -9,9 +9,9 @@ import {
 
 const days = ["Mon", "Tue", "Wed", "Thu", "Fri"]
 const slots = [
-  { time: "09:00", classes: ["Yoga", "", "Yoga", "", "Pilates"] },
-  { time: "12:00", classes: ["", "HIIT", "", "HIIT", ""] },
-  { time: "18:00", classes: ["Spin", "Boxing", "Spin", "Boxing", "Spin"] },
+  { time: "09:00", classes: ["Standup", "", "Standup", "", "Demo"] },
+  { time: "12:00", classes: ["", "Design review", "", "Client call", ""] },
+  { time: "18:00", classes: ["Build", "Code review", "Build", "Code review", "Ship"] },
 ]
 
 export default function ScheduleTimetable() {

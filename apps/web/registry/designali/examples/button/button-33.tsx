@@ -1,4 +1,7 @@
-import { ArrowRightIcon, PlayIcon } from "lucide-react"
+import {
+  ArrowRight as ArrowRightIcon,
+  Play as PlayIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 

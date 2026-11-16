@@ -1,4 +1,7 @@
-import { DatabaseIcon, EraserIcon } from "lucide-react"
+import {
+  Database as DatabaseIcon,
+  Eraser as EraserIcon,
+} from "@designali/icons"
 
 import {
   AlertDialog,
@@ -22,7 +25,7 @@ export default function ClearBuildCacheDialog() {
       </div>
       <div className="min-w-0 flex-1">
         <p className="text-sm font-medium">Build cache</p>
-        <p className="text-xs text-muted-foreground">1.8 GB across 42 builds</p>
+        <p className="text-xs text-muted-foreground">1.8 GB across 42 designali.com builds</p>
       </div>
       <AlertDialog>
         <AlertDialogTrigger render={<Button variant="secondary" size="sm" />}>

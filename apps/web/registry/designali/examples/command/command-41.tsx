@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { LanguagesIcon } from "lucide-react"
+import {
+  Languages as LanguagesIcon,
+} from "@designali/icons"
 
 import {
   Command,

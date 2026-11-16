@@ -1,12 +1,12 @@
 import {
-  ArchiveIcon,
-  ForwardIcon,
-  InboxIcon,
-  ReplyIcon,
-  SendIcon,
-  StarIcon,
-  Trash2Icon,
-} from "lucide-react"
+  Archive as ArchiveIcon,
+  Forward as ForwardIcon,
+  Inbox as InboxIcon,
+  Reply as ReplyIcon,
+  Send as SendIcon,
+  Star as StarIcon,
+  Trash2 as Trash2Icon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -25,10 +25,10 @@ const folders = [
 ]
 
 const messages = [
-  { from: "Maya Chen", subject: "Q3 roadmap review", time: "9:41" },
-  { from: "Leo Park", subject: "Invoice #2041 paid", time: "8:12" },
-  { from: "Ines Duarte", subject: "Design crit notes", time: "Yesterday" },
-  { from: "Tomas Reyes", subject: "Offsite logistics", time: "Mon" },
+  { from: "Ali Imam", subject: "Designali blocks roadmap", time: "9:41" },
+  { from: "Leo", subject: "Invoice #2041 paid", time: "8:12" },
+  { from: "Ines", subject: "Design crit notes", time: "Yesterday" },
+  { from: "Tomas", subject: "Client kickoff: brand identity", time: "Mon" },
 ]
 
 export default function MailClientLayout() {
@@ -85,10 +85,10 @@ export default function MailClientLayout() {
         <article className="flex h-full flex-col gap-3 p-4">
           <div>
             <h3 className="text-sm font-semibold">Q3 roadmap review</h3>
-            <p className="text-xs text-muted-foreground">Maya Chen to you</p>
+            <p className="text-xs text-muted-foreground">Ali Imam to you</p>
           </div>
           <p className="text-xs leading-relaxed">
-            Hi team, I&apos;ve attached the draft roadmap for next quarter.
+            Hi team, I&apos;ve attached the draft roadmap for the next block drop.
             Please leave comments on the priorities before Thursday so we can
             lock scope in the planning session.
           </p>

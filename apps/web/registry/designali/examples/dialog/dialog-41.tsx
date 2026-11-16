@@ -1,7 +1,11 @@
 "use client"
 
 import * as React from "react"
-import { CircleIcon, FolderIcon, FolderPlusIcon } from "lucide-react"
+import {
+  Circle as CircleIcon,
+  Folder as FolderIcon,
+  FolderPlus as FolderPlusIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -39,7 +43,7 @@ export default function CreateFolderDialog() {
       <DialogContent className="sm:max-w-xs">
         <DialogHeader>
           <DialogTitle>New folder</DialogTitle>
-          <DialogDescription>Inside Projects / 2026</DialogDescription>
+          <DialogDescription>Inside Designali / Projects</DialogDescription>
         </DialogHeader>
         <div className="flex items-center gap-3">
           <FolderIcon

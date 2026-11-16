@@ -1,8 +1,8 @@
 import {
-  CircleCheckIcon,
-  OctagonAlertIcon,
-  TriangleAlertIcon,
-} from "lucide-react"
+  CircleCheck as CircleCheckIcon,
+  OctagonAlert as OctagonAlertIcon,
+  TriangleAlert as TriangleAlertIcon,
+} from "@designali/icons"
 
 import {
   Progress,

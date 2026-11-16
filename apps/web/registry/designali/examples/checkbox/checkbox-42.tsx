@@ -7,14 +7,14 @@ import { Checkbox } from "@workspace/ui/components/checkbox"
 import { cn } from "@workspace/ui/lib/utils"
 
 const subtasks = [
-  "Write API spec",
-  "Review with backend",
-  "Add rate limits",
-  "Update docs",
+  "Design hero block",
+  "Review with Ali",
+  "Add dark mode",
+  "Update Designali docs",
 ]
 
 export default function NestedSubtaskTree() {
-  const [done, setDone] = React.useState<string[]>(["Write API spec"])
+  const [done, setDone] = React.useState<string[]>(["Design hero block"])
   const all = done.length === subtasks.length
 
   return (

@@ -1,23 +1,23 @@
 const steps = [
   {
     number: "01",
-    title: "Connect your repository",
-    body: "Authorise GitHub or GitLab and pick the projects you want to track. Nothing is copied until you say so.",
+    title: "Share your brief",
+    body: "Tell Designali about your brand, goals and timeline at hello@designali.com. Ali Imam reviews every brief personally.",
   },
   {
     number: "02",
-    title: "Define your checks",
-    body: "Choose from 40 built-in rules for accessibility, performance and consistency, or write your own in TypeScript.",
+    title: "Shape the brand",
+    body: "We define positioning, brand identity and creative direction so your product has a clear and confident voice.",
   },
   {
     number: "03",
-    title: "Review in context",
-    body: "Results appear as inline comments on the pull request with a suggested fix you can apply in one click.",
+    title: "Design in Figma",
+    body: "UI/UX screens and a reusable design system are designed in Figma and reviewed with you at every step.",
   },
   {
     number: "04",
-    title: "Track progress over time",
-    body: "A weekly report shows which teams are improving and where the debt is quietly growing.",
+    title: "Build and launch",
+    body: "Designs become production-ready Next.js code with Tailwind CSS, deployed on Vercel. Design se code tak.",
   },
 ]
 
@@ -30,11 +30,11 @@ export default function Features09() {
             How it works
           </p>
           <h2 className="mt-4 text-3xl font-medium tracking-tight md:text-5xl">
-            Quality checks that run themselves.
+            From first brief to launched product.
           </h2>
           <p className="mt-6 text-sm leading-7 text-muted-foreground">
-            Most teams are fully set up in an afternoon. Here is what the first
-            week looks like.
+            How a Designali project moves from idea to production-ready
+            website.
           </p>
         </div>
         <ol className="border-l border-border">

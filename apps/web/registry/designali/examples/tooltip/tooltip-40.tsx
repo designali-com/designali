@@ -1,9 +1,9 @@
 import {
-  MicIcon,
-  PaperclipIcon,
-  SendHorizontalIcon,
-  SmileIcon,
-} from "lucide-react"
+  Mic as MicIcon,
+  Paperclip as PaperclipIcon,
+  SendHorizontal as SendHorizontalIcon,
+  Smile as SmileIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Kbd } from "@workspace/ui/components/kbd"
@@ -20,7 +20,7 @@ export default function ChatComposerTooltips() {
     <TooltipProvider>
       <div className="flex w-full max-w-md flex-col gap-2 border p-2">
         <Textarea
-          placeholder="Message #design-review"
+          placeholder="Message #designali-review"
           className="min-h-14 resize-none border-0 shadow-none focus-visible:ring-0"
         />
         <div className="flex items-center gap-1">

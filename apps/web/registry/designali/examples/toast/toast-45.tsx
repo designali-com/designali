@@ -1,6 +1,8 @@
 "use client"
 
-import { ArchiveRestoreIcon } from "lucide-react"
+import {
+  ArchiveRestore as ArchiveRestoreIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -42,7 +44,7 @@ export default function ConfirmDialogThenToast() {
                 notify.add({
                   type: "success",
                   title: "Project restored",
-                  description: "Helios is back in your sidebar.",
+                  description: "Dalim Works is back in your sidebar.",
                 })
               }
             >

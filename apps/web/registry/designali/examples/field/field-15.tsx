@@ -1,4 +1,6 @@
-import { LockIcon } from "lucide-react"
+import {
+  Lock as LockIcon,
+} from "@designali/icons"
 
 import {
   Field,
@@ -18,7 +20,7 @@ export default function DisabledLockedField() {
         </FieldLabel>
         <Input
           id="locked-domain"
-          defaultValue="northwind.fieldnote.app"
+          defaultValue="studio.designali.com"
           disabled
         />
         <FieldDescription>

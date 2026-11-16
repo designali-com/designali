@@ -1,7 +1,13 @@
 "use client"
 
 import { useState } from "react"
-import { Eye, Heart, Send, Share2, Signal } from "lucide-react"
+import {
+  Eye,
+  Heart,
+  Send,
+  Share2,
+  Signal,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Input } from "@workspace/ui/components/input"
@@ -11,7 +17,7 @@ type Msg = { user: string; text: string; color: string; host?: boolean }
 const initial: Msg[] = [
   { user: "tomasz_b", text: "audio is crisp today", color: "text-sky-600 dark:text-sky-400" },
   { user: "hana.k", text: "will the template be shared after?", color: "text-rose-600 dark:text-rose-400" },
-  { user: "Driftline", text: "Yes! Link goes out to everyone at the end.", color: "text-foreground", host: true },
+  { user: "Designali", text: "Yes! The template link goes out to everyone at the end.", color: "text-foreground", host: true },
   { user: "ravi_codes", text: "joining from Pune, morning all", color: "text-emerald-600 dark:text-emerald-400" },
   { user: "mel_w", text: "can you zoom in on the config panel?", color: "text-amber-600 dark:text-amber-400" },
   { user: "oskar", text: "that keyboard shortcut just saved me an hour", color: "text-violet-600 dark:text-violet-400" },
@@ -44,14 +50,14 @@ export default function Media10() {
             </span>
             <div className="absolute bottom-3 left-3 bg-black/60 px-3 py-2 text-white backdrop-blur">
               <p className="text-xs text-white/70">Now presenting</p>
-              <p className="text-sm font-medium">Ines Calder - Building a design system in a weekend</p>
+              <p className="text-sm font-medium">Ali Imam - Building a design system in a weekend</p>
             </div>
           </div>
           <div className="mt-4 flex flex-wrap items-center justify-between gap-4">
             <div className="flex items-center gap-3">
-              <span className="flex size-10 items-center justify-center rounded-full bg-foreground text-sm font-semibold text-background">DL</span>
+              <span className="flex size-10 items-center justify-center rounded-full bg-foreground text-sm font-semibold text-background">DA</span>
               <div>
-                <p className="font-medium">Driftline Live</p>
+                <p className="font-medium">Designali Live</p>
                 <p className="text-xs text-muted-foreground">Started 42 minutes ago - 38.1k followers</p>
               </div>
             </div>

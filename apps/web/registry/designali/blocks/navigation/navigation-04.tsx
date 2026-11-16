@@ -1,7 +1,14 @@
 "use client"
 
 import { useState } from "react"
-import { ArrowRight, Command, FileText, Search, Settings, Users } from "lucide-react"
+import {
+  ArrowRight,
+  Command,
+  FileText,
+  Search,
+  Settings,
+  Users,
+} from "@designali/icons"
 
 import { cn } from "@workspace/ui/lib/utils"
 
@@ -9,9 +16,9 @@ const results = [
   {
     group: "Pages",
     items: [
-      { icon: FileText, label: "Getting started", hint: "Docs" },
-      { icon: FileText, label: "API reference", hint: "Docs" },
-      { icon: FileText, label: "Pricing", hint: "Marketing" },
+      { icon: FileText, label: "Getting started with Designali", hint: "Docs" },
+      { icon: FileText, label: "@designali/icons", hint: "Docs" },
+      { icon: FileText, label: "Pricing", hint: "designali.com" },
     ],
   },
   {
@@ -52,7 +59,7 @@ export default function Navigation04() {
                 setQuery(event.target.value)
                 setHighlight(0)
               }}
-              placeholder="Search pages and actions..."
+              placeholder="Search Designali blocks, docs and actions..."
               className="h-14 flex-1 bg-transparent text-sm outline-none placeholder:text-muted-foreground"
             />
             <kbd className="border px-1.5 py-0.5 font-mono text-[10px] text-muted-foreground">

@@ -2,13 +2,13 @@
 
 import * as React from "react"
 import {
-  ChartLineIcon,
-  ChartPieIcon,
-  CreditCardIcon,
-  FileTextIcon,
-  SearchIcon,
-  UsersIcon,
-} from "lucide-react"
+  ChartLine as ChartLineIcon,
+  ChartPie as ChartPieIcon,
+  CreditCard as CreditCardIcon,
+  FileText as FileTextIcon,
+  Search as SearchIcon,
+  Users as UsersIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -21,11 +21,11 @@ import {
 import { Kbd } from "@workspace/ui/components/kbd"
 
 const pages = [
-  { title: "Billing settings", section: "Settings", icon: CreditCardIcon },
-  { title: "Team members", section: "Settings", icon: UsersIcon },
-  { title: "Revenue overview", section: "Reports", icon: ChartLineIcon },
-  { title: "Churn analysis", section: "Reports", icon: ChartPieIcon },
-  { title: "Onboarding checklist", section: "Docs", icon: FileTextIcon },
+  { title: "Templates", section: "Products", icon: CreditCardIcon },
+  { title: "Blocks", section: "Products", icon: UsersIcon },
+  { title: "Icons", section: "Products", icon: ChartLineIcon },
+  { title: "Pricing", section: "Designali", icon: ChartPieIcon },
+  { title: "Getting started", section: "Docs", icon: FileTextIcon },
 ]
 
 export default function QuickSearchDialog() {

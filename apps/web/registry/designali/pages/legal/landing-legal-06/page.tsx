@@ -9,139 +9,139 @@ import {
   MessageSquare,
   Plus,
   Receipt,
-} from "lucide-react"
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 
 const navLinks = [
-  "Practice areas",
-  "Attorneys",
-  "Results",
-  "Insights",
+  "Licenses",
+  "Policies",
+  "Terms",
+  "Docs",
   "Contact",
 ]
 
 const logos = [
-  "Law360",
-  "The American Lawyer",
-  "Benchmark Litigation",
-  "Chambers USA",
-  "Best Lawyers",
-  "Super Lawyers",
-  "Legal 500",
-  "Martindale-Hubbell",
+  "Tailwind CSS",
+  "Figma",
+  "Vercel",
+  "shadcn-style UI",
+  "Designali",
+  "Next.js",
+  "React",
+  "TypeScript",
 ]
 
 const features = [
   {
     icon: Receipt,
-    title: "Fixed-fee options",
+    title: "One license for Pro",
     description:
-      "Many matters are offered on a fixed fee, so you know the cost before we start.",
+      "A single Pro license covers every Pro resource, so you never count projects or seats for personal use.",
   },
   {
     icon: Languages,
-    title: "Multilingual team",
+    title: "Plain-language summaries",
     description:
-      "We advise in English, Spanish, Mandarin and Arabic, with certified translation when needed.",
+      "Every policy starts with a short summary in plain English before the full text.",
   },
   {
     icon: Building,
-    title: "Offices in three cities",
+    title: "One license, every project",
     description:
-      "Meet in person in New York, Chicago or Austin, or by video from anywhere.",
+      "Use Pro resources in every product and client site you build, as described in the terms.",
   },
   {
     icon: Gavel,
-    title: "Trial-ready litigators",
+    title: "Plain-language terms",
     description:
-      "Our attorneys prepare every case as if it will go to trial, which is why opponents settle on better terms.",
+      "Our terms for templates, blocks, UI, icons and vectors are written so designers and developers can read them in minutes.",
   },
   {
     icon: MessageSquare,
-    title: "Plain-language advice",
+    title: "Clear licensing",
     description:
-      "No jargon. You will understand your options, the risks and the likely costs at every stage.",
+      "Know exactly what Free and Pro licenses allow, from personal projects to commercial client work.",
   },
   {
     icon: Clock,
-    title: "Same-day responses",
+    title: "Fast answers",
     description:
-      "Every client has a named attorney who returns calls and emails within one business day.",
+      "Questions about a license or an invoice? Email support@designali.com and expect a reply within one business day.",
   },
 ]
 
 const stats = [
-  { value: "24 hr", label: "Response guarantee" },
-  { value: "$410M+", label: "Recovered for clients" },
-  { value: "35 yrs", label: "Of practice" },
-  { value: "2,800", label: "Matters resolved" },
+  { value: "24 hr", label: "Response time" },
+  { value: "4000+", label: "Resources covered by one license" },
+  { value: "Policies kept up to date", label: "Policies kept up to date" },
+  { value: "2300+", label: "Questions answered" },
 ]
 
 const steps = [
   {
-    title: "Free consultation",
+    title: "Read the summary",
     description:
-      "Tell us about your situation in a confidential 30-minute call with an attorney.",
+      "Start with the plain-language overview of what you can and cannot do with Designali resources.",
   },
   {
-    title: "Clear plan and fee",
+    title: "Pick the right license",
     description:
-      "We outline your options, the strategy we recommend and the cost, in writing.",
+      "Choose Free for personal and open projects, or Pro for commercial and client work.",
   },
   {
-    title: "We get to work",
+    title: "Build with confidence",
     description:
-      "Your named attorney leads the matter with regular updates through the client portal.",
+      "Use templates, blocks, icons and vectors in your projects, following the attribution and redistribution rules.",
   },
   {
-    title: "Resolution",
+    title: "Ask when unsure",
     description:
-      "We negotiate, litigate or close, and stay available for whatever comes next.",
+      "If a use case is not covered, email hello@designali.com and we will clarify it in writing.",
   },
 ]
 
 const showcase = [
   {
-    name: "Corporate and M&A",
-    meta: "Formation, financing, acquisitions",
-    tag: "Business",
-    price: "Fixed or hourly",
+    name: "Templates license",
+    meta: "Websites, landing pages, client sites",
+    tag: "Templates",
+    price: "Free & Pro",
     tile: "bg-gradient-to-br from-amber-200 via-orange-300 to-rose-400 dark:from-amber-700 dark:via-orange-800 dark:to-rose-900",
   },
   {
-    name: "Commercial litigation",
-    meta: "Contract, partnership and IP disputes",
-    tag: "Disputes",
-    price: "Hourly",
+    name: "Blocks & UI license",
+    meta: "460+ blocks, 2300+ UI examples",
+    tag: "Components",
+    price: "Pro",
     tile: "bg-gradient-to-br from-sky-200 via-cyan-300 to-teal-400 dark:from-sky-700 dark:via-cyan-800 dark:to-teal-900",
   },
   {
-    name: "Employment law",
-    meta: "Policies, terminations, discrimination",
-    tag: "Employers",
-    price: "From $450",
+    name: "Icons license",
+    meta: "@designali/icons, 4000+ icons",
+    tag: "Icons",
+    price: "Pro license",
     tile: "bg-gradient-to-br from-violet-200 via-purple-300 to-fuchsia-400 dark:from-violet-700 dark:via-purple-800 dark:to-fuchsia-900",
   },
   {
-    name: "Family law",
-    meta: "Divorce, custody, prenuptial agreements",
-    tag: "Private clients",
-    price: "Fixed fee",
+    name: "Logos & brand marks",
+    meta: "Third-party logos, trademarks",
+    tag: "Brand assets",
+    price: "Included",
     tile: "bg-gradient-to-br from-emerald-200 via-green-300 to-lime-300 dark:from-emerald-700 dark:via-green-800 dark:to-lime-900",
   },
   {
-    name: "Estate planning",
-    meta: "Wills, trusts, probate",
-    tag: "Private clients",
-    price: "From $1,800",
+    name: "Client project terms",
+    meta: "Ownership, handover, revisions",
+    tag: "Brand assets",
+    price: "Studio work",
     tile: "bg-gradient-to-br from-stone-200 via-neutral-300 to-zinc-400 dark:from-stone-700 dark:via-neutral-800 dark:to-zinc-900",
   },
   {
-    name: "Immigration",
-    meta: "Visas, green cards, citizenship",
-    tag: "Individuals",
-    price: "Fixed fee",
+    name: "Privacy policy",
+    meta: "Accounts, analytics, cookies",
+    tag: "Everyone",
+    price: "Included",
     tile: "bg-gradient-to-br from-rose-200 via-pink-300 to-purple-300 dark:from-rose-700 dark:via-pink-800 dark:to-purple-900",
   },
 ]
@@ -149,100 +149,100 @@ const showcase = [
 const testimonials = [
   {
     quote:
-      "The fixed fee for our estate plan meant no anxiety about the bill. Thorough and kind.",
-    name: "Linda and Paul Archer",
-    role: "Estate planning clients",
+      "The client project agreement made ownership and handover crystal clear. No surprises at the end.",
+    name: "Linda and Paul",
+    role: "Designali clients",
   },
   {
     quote:
-      "They explained every step and never made me feel rushed. The settlement was more than double the first offer.",
-    name: "Robert Chen",
-    role: "Personal injury client",
+      "The license page answered every question I had about using the templates for client work. Clear and short.",
+    name: "Chris",
+    role: "Freelance web designer",
   },
   {
     quote:
-      "Our acquisition closed on schedule because the team anticipated every issue before the other side raised it.",
-    name: "Sarah Whitfield",
-    role: "CEO, manufacturing company",
+      "We shipped three client sites on Designali blocks. Knowing the Pro license covered commercial work made it easy.",
+    name: "Sara",
+    role: "Founder, small design agency",
   },
 ]
 
 const tiers = [
   {
-    name: "Consultation",
+    name: "Free",
     price: "Free",
     period: "",
-    description: "A confidential first conversation.",
+    description: "For personal, learning and open projects.",
     features: [
-      "30 minutes with an attorney",
-      "Case assessment",
-      "Options explained",
-      "No obligation",
+      "Free and Pro explained",
+      "Free blocks and UI examples",
+      "Personal and open-source use",
+      "No credit card required",
     ],
-    cta: "Book a consultation",
+    cta: "Browse free resources",
   },
   {
-    name: "Fixed fee",
-    price: "From $1,800",
-    period: "/matter",
-    description: "Defined matters at a set price.",
+    name: "Included",
+    price: "Studio work",
+    period: "/year",
+    description: "For commercial and client work.",
     features: [
-      "Wills and trusts",
-      "Uncontested divorce",
-      "Visa applications",
-      "Company formation",
-      "Price agreed up front",
+      "Commercial projects",
+      "Unlimited client sites",
+      "All Pro templates and blocks",
+      "Pro icons and vectors",
+      "One simple license",
     ],
-    cta: "Get a fixed quote",
+    cta: "View Pro pricing",
   },
   {
-    name: "Retainer",
+    name: "Studio",
     price: "Custom",
     period: "",
-    description: "Ongoing counsel for businesses.",
+    description: "For teams and studio partnerships.",
     features: [
-      "Named outside counsel",
-      "Monthly hours included",
-      "Contract review",
-      "Priority response",
-      "Quarterly legal health check",
+      "Team seats",
+      "Custom project terms",
+      "Design and development work",
+      "Priority support",
+      "Invoice billing",
     ],
-    cta: "Discuss a retainer",
+    cta: "Contact the studio",
   },
 ]
 
 const faqs = [
   {
-    q: "Is what I tell you confidential?",
-    a: "Yes. Everything you share in a consultation is protected by attorney-client privilege, even if you do not hire us.",
+    q: "Is my account data private?",
+    a: "Yes. We use your data only to run your account and downloads, as described in the privacy policy, and never sell it.",
   },
   {
-    q: "Is the first consultation really free?",
-    a: "Yes. Your first 30-minute consultation is free and confidential, with no obligation to instruct us.",
+    q: "Can I use free resources in commercial projects?",
+    a: "Free resources can be used in personal and many commercial projects. Check the license summary in /docs/legal/terms for attribution rules.",
   },
   {
-    q: "How are your fees structured?",
-    a: "Depending on the matter we offer fixed fees, hourly rates, contingency arrangements or monthly retainers. We agree it in writing first.",
+    q: "What does the Pro license add?",
+    a: "Pro unlocks the full library of templates, blocks, UI, icons and vectors for commercial and client work, with no per-project fees.",
   },
   {
-    q: "Do you take cases on contingency?",
-    a: "For personal injury and some employment claims we work on contingency, which means no fee unless we recover compensation.",
+    q: "Can I resell or redistribute the files?",
+    a: "No. You can use resources inside your own products and client projects, but you cannot resell them as templates or icon packs.",
   },
   {
-    q: "Who will handle my matter?",
-    a: "You will have a named lead attorney supported by a small team. You will never be passed around.",
+    q: "Who owns custom studio work?",
+    a: "For client projects, ownership and handover terms are agreed in writing before work begins. This page is a summary, not legal advice.",
   },
 ]
 
 const footer = [
   {
-    title: "Practice",
-    links: ["Business", "Litigation", "Private clients", "Immigration"],
+    title: "Licenses",
+    links: ["Templates", "Templates", "Brand assets", "Privacy policy"],
   },
-  { title: "Firm", links: ["Attorneys", "Results", "Careers", "Pro bono"] },
+  { title: "Designali", links: ["Policies", "Terms", "About", "Contact"] },
   {
     title: "Contact",
-    links: ["New York", "Chicago", "Austin", "Client portal"],
+    links: ["Terms", "Privacy", "Licensing", "Docs"],
   },
 ]
 
@@ -258,7 +258,7 @@ export default function LandingLegal06() {
             <span className="flex size-7 items-center justify-center rounded-md bg-amber-600 text-white text-sm">
               K
             </span>
-            <span className="">Keystone Estate Law</span>
+            <span className="">designali</span>
           </a>
           <nav className="hidden items-center gap-7 text-sm md:flex">
             {navLinks.map((link) => (
@@ -279,10 +279,10 @@ export default function LandingLegal06() {
               nativeButton={false}
               render={<a href="#" />}
             >
-              Client portal
+              Sign in
             </Button>
             <Button size="sm" nativeButton={false} render={<a href="#" />}>
-              Book a free call
+              Contact the studio
             </Button>
           </div>
         </div>
@@ -290,27 +290,27 @@ export default function LandingLegal06() {
       <section className="border-b">
         <div className="mx-auto max-w-7xl px-6">
           <div className="flex items-center justify-between border-x border-b px-6 py-3 text-xs text-muted-foreground">
-            <span>Wills, trusts and estates</span>
+            <span>Ownership and IP for client work</span>
             <span className="hidden sm:inline">
-              Peace of mind, put in writing.
+              Ownership, put in writing.
             </span>
           </div>
           <div className="border-x px-6 py-16 md:py-28">
             <h1 className="max-w-5xl text-4xl leading-[1.05] font-semibold tracking-tight text-balance sm:text-5xl md:text-8xl ">
-              {"Protect your family with "}
+              {"Know who owns "}
               <span className="text-amber-600 dark:text-amber-400">
-                a plan that holds
+                what we create
               </span>
             </h1>
             <div className="mt-12 flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
               <p className="max-w-md text-base leading-7 text-muted-foreground">
-                Keystone Estate Law prepares wills, living trusts and powers of
-                attorney at flat fees, explained in plain English from the first
-                meeting.
+                For studio projects, Designali sets out ownership of designs, code and
+                source files in a written agreement, explained in plain English from the first
+                call.
               </p>
               <div className="flex flex-wrap gap-3 ">
                 <Button size="lg" nativeButton={false} render={<a href="#" />}>
-                  Book a free call
+                  Contact the studio
                   <ArrowRight />
                 </Button>
                 <Button
@@ -319,7 +319,7 @@ export default function LandingLegal06() {
                   nativeButton={false}
                   render={<a href="#" />}
                 >
-                  See flat fees
+                  See project terms
                 </Button>
               </div>
             </div>
@@ -347,7 +347,7 @@ export default function LandingLegal06() {
       <section className="border-b">
         <div className="mx-auto max-w-7xl px-6 py-12">
           <p className="text-center text-sm text-muted-foreground">
-            Recognised by
+            Built with
           </p>
           <div className="mt-8 grid grid-cols-2 items-center gap-x-8 gap-y-6 sm:grid-cols-4 lg:grid-cols-8">
             {logos.map((logo) => (
@@ -365,14 +365,14 @@ export default function LandingLegal06() {
         <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
           <div className="max-w-2xl">
             <p className="text-sm font-medium text-amber-600 dark:text-amber-400">
-              Why clients choose us
+              Why creators trust our terms
             </p>
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl  mt-3">
-              Counsel that is clear, responsive and relentless
+              Terms that are clear, fair and readable
             </h2>
             <p className="mt-4 text-lg leading-8 text-muted-foreground">
-              We combine the depth of a large firm with the attention of a
-              boutique, and we explain every option in plain language.
+              We combine the coverage of a proper license with the tone of a
+              friendly studio, and explain every rule in plain language.
             </p>
           </div>
           <div className="mt-14 grid overflow-hidden rounded-2xl border sm:grid-cols-2 lg:grid-cols-3">
@@ -396,11 +396,11 @@ export default function LandingLegal06() {
           <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
             <div className="max-w-2xl">
               <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl">
-                Practice areas
+                License topics
               </h2>
               <p className="mt-4 text-lg leading-8 text-muted-foreground">
-                Experienced attorneys focused on the matters that affect your
-                business, your family and your future.
+                Plain-language guides to the rules that affect your projects,
+                your clients and your products.
               </p>
             </div>
             <Button
@@ -443,7 +443,7 @@ export default function LandingLegal06() {
         <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl">
-              What our clients say
+              What creators say
             </h2>
           </div>
           <div className="mt-14 grid gap-6 md:grid-cols-3">
@@ -478,7 +478,7 @@ export default function LandingLegal06() {
         <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl">
-              How we work with you
+              How licensing works
             </h2>
           </div>
           <ol className="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
@@ -503,11 +503,11 @@ export default function LandingLegal06() {
         <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl">
-              Transparent fees
+              Transparent plans
             </h2>
             <p className="mt-4 text-lg leading-8 text-muted-foreground">
-              No surprise invoices. We agree the fee structure in writing before
-              any work begins.
+              No hidden fees. Free and Pro licenses are explained in full before
+              you download anything.
             </p>
           </div>
           <div className="mx-auto mt-14 grid max-w-6xl items-start gap-6 lg:grid-cols-3">
@@ -569,7 +569,7 @@ export default function LandingLegal06() {
                 href="#"
                 className="font-medium text-foreground underline underline-offset-4"
               >
-                Get in touch
+                Contact us
               </a>
               .
             </p>
@@ -594,15 +594,15 @@ export default function LandingLegal06() {
           <div className="pointer-events-none absolute -top-24 left-1/2 size-96 -translate-x-1/2 rounded-full bg-gradient-to-b from-amber-500/25 via-yellow-500/10 to-transparent blur-3xl" />
           <div className="relative mx-auto max-w-2xl space-y-6">
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl">
-              Put your plan in place this month
+              Start your project this month
             </h2>
             <p className="text-lg text-muted-foreground">
-              Flat fees, no hourly surprises, and documents signed in as little
-              as two weeks.
+              Clear terms, no hidden clauses, and every agreement reviewed with you
+              before work begins.
             </p>
             <div className="flex flex-wrap gap-3 justify-center">
               <Button size="lg" nativeButton={false} render={<a href="#" />}>
-                Book a free call
+                Contact the studio
                 <ArrowRight />
               </Button>
               <Button
@@ -611,7 +611,7 @@ export default function LandingLegal06() {
                 nativeButton={false}
                 render={<a href="#" />}
               >
-                See flat fees
+                See project terms
               </Button>
             </div>
           </div>
@@ -627,10 +627,10 @@ export default function LandingLegal06() {
               <span className="flex size-7 items-center justify-center rounded-md bg-amber-600 text-white text-sm">
                 K
               </span>
-              <span className="">Keystone Estate Law</span>
+              <span className="">designali</span>
             </a>
             <p className="max-w-xs text-sm text-muted-foreground">
-              Peace of mind, put in writing.
+              Ownership, put in writing.
             </p>
           </div>
           {footer.map((column) => (
@@ -654,7 +654,7 @@ export default function LandingLegal06() {
         <div className="border-t ">
           <div className="mx-auto flex max-w-7xl flex-col justify-between gap-4 px-6 py-6 text-xs text-muted-foreground sm:flex-row">
             <span>
-              © {new Date().getFullYear()} Keystone Estate Law. All rights
+              © {new Date().getFullYear()} designali. All rights
               reserved.
             </span>
             <div className="flex gap-6">

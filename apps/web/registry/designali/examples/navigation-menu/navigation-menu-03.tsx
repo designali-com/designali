@@ -1,4 +1,6 @@
-import { ZapIcon } from "lucide-react"
+import {
+  Zap as ZapIcon,
+} from "@designali/icons"
 
 import {
   NavigationMenu,
@@ -11,9 +13,9 @@ import {
 } from "@workspace/ui/components/navigation-menu"
 
 const links = [
-  { title: "Customer portal", description: "Let clients self-serve invoices." },
-  { title: "Usage billing", description: "Meter and charge per API call." },
-  { title: "Tax engine", description: "Automatic rates in 40+ regions." },
+  { title: "Brand identity", description: "Logos, type and visual systems." },
+  { title: "UI/UX design", description: "Interfaces that feel intuitive." },
+  { title: "Web development", description: "Production-ready Next.js sites." },
 ]
 
 export default function FeaturedCardMegaMenu() {
@@ -21,7 +23,7 @@ export default function FeaturedCardMegaMenu() {
     <NavigationMenu>
       <NavigationMenuList>
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Platform</NavigationMenuTrigger>
+          <NavigationMenuTrigger>Services</NavigationMenuTrigger>
           <NavigationMenuContent>
             <div className="grid w-72 gap-1 sm:w-[30rem] sm:grid-cols-[11rem_1fr]">
               <NavigationMenuLink
@@ -29,9 +31,9 @@ export default function FeaturedCardMegaMenu() {
                 className="flex-col items-start justify-end gap-1 bg-gradient-to-br from-indigo-500 to-fuchsia-500 p-4 text-white hover:bg-gradient-to-br hover:opacity-95 focus:bg-gradient-to-br"
               >
                 <ZapIcon className="size-5" />
-                <span className="text-sm font-semibold">Tallyo Billing</span>
+                <span className="text-sm font-semibold">Designali Studio</span>
                 <span className="text-white/80">
-                  Everything you need to charge customers, in one API.
+                  Where thoughtful design meets production-ready code.
                 </span>
               </NavigationMenuLink>
               <ul className="flex flex-col gap-1">
@@ -54,7 +56,7 @@ export default function FeaturedCardMegaMenu() {
         </NavigationMenuItem>
         <NavigationMenuItem>
           <NavigationMenuLink href="#" className={navigationMenuTriggerStyle()}>
-            Customers
+            Work
           </NavigationMenuLink>
         </NavigationMenuItem>
       </NavigationMenuList>

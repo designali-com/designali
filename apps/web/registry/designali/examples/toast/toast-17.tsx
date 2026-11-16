@@ -1,6 +1,8 @@
 "use client"
 
-import { CalendarDaysIcon } from "lucide-react"
+import {
+  CalendarDays as CalendarDaysIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Toaster, createToastManager } from "@workspace/ui/components/toast"
@@ -26,7 +28,7 @@ export default function EventCreatedToast() {
               onClick={() =>
                 notify.add({
                   title: "Meeting scheduled",
-                  description: "Design sync - Thu, Oct 23 at " + time,
+                  description: "Designali design sync - Thu, Oct 23 at " + time,
                   actionProps: { children: "Open" },
                 })
               }

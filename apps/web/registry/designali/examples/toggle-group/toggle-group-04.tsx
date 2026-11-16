@@ -2,11 +2,11 @@
 
 import * as React from "react"
 import {
-  BoldIcon,
-  ItalicIcon,
-  StrikethroughIcon,
-  UnderlineIcon,
-} from "lucide-react"
+  Bold as BoldIcon,
+  Italic as ItalicIcon,
+  Strikethrough as StrikethroughIcon,
+  Underline as UnderlineIcon,
+} from "@designali/icons"
 
 import {
   ToggleGroup,
@@ -48,7 +48,7 @@ export default function TextFormattingToggleGroup() {
           marks.includes("strike") && "line-through"
         )}
       >
-        The quarterly review moves to Thursday at 10:00.
+        Designali: design se code tak.
       </p>
     </div>
   )

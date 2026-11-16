@@ -1,7 +1,11 @@
 "use client"
 
 import * as React from "react"
-import { CheckIcon, PlusIcon, TagIcon } from "lucide-react"
+import {
+  Check as CheckIcon,
+  Plus as PlusIcon,
+  Tag as TagIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import { Button } from "@workspace/ui/components/button"

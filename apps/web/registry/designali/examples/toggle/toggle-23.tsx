@@ -1,10 +1,15 @@
-import { EyeIcon, EyeOffIcon, LayersIcon, LockIcon } from "lucide-react"
+import {
+  Eye as EyeIcon,
+  EyeOff as EyeOffIcon,
+  Layers as LayersIcon,
+  Lock as LockIcon,
+} from "@designali/icons"
 
 import { Toggle } from "@workspace/ui/components/toggle"
 
 const layers = [
   { name: "Header", visible: true, locked: false },
-  { name: "Hero image", visible: true, locked: true },
+  { name: "Designali hero", visible: true, locked: true },
   { name: "Pricing table", visible: false, locked: false },
   { name: "Footer", visible: true, locked: false },
 ]

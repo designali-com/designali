@@ -1,4 +1,6 @@
-import { Trash2Icon } from "lucide-react"
+import {
+  Trash2 as Trash2Icon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -23,7 +25,7 @@ export default function ConfirmDeleteBottomDrawer() {
             <Trash2Icon className="size-5" />
           </div>
           <DrawerTitle className="text-base">
-            Delete &quot;Late Night Drives&quot;?
+            Delete &quot;Studio Focus&quot;?
           </DrawerTitle>
           <DrawerDescription>
             42 songs will be removed from your library. Followers will lose

@@ -11,7 +11,7 @@ export default function BetaBadgeTooltip() {
     <div className="flex w-full max-w-sm items-center justify-between border p-4">
       <div className="flex flex-col gap-0.5">
         <div className="flex items-center gap-2">
-          <span className="text-sm font-medium">Smart scheduling</span>
+          <span className="text-sm font-medium">AI workflows</span>
           <Tooltip>
             <TooltipTrigger render={<Badge variant="outline" tabIndex={0} />}>
               Beta
@@ -23,7 +23,7 @@ export default function BetaBadgeTooltip() {
           </Tooltip>
         </div>
         <span className="text-xs text-muted-foreground">
-          Find a slot that works for everyone.
+          Designali AI-assisted design se code tak.
         </span>
       </div>
       <Switch defaultChecked />

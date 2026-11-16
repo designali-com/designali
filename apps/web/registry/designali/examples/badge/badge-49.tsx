@@ -1,10 +1,10 @@
 import {
-  CarIcon,
-  CoffeeIcon,
-  PawPrintIcon,
-  SnowflakeIcon,
-  WifiIcon,
-} from "lucide-react"
+  Car as CarIcon,
+  Coffee as CoffeeIcon,
+  PawPrint as PawPrintIcon,
+  Snowflake as SnowflakeIcon,
+  Wifi as WifiIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 
@@ -20,9 +20,9 @@ export default function AmenityIconBadges() {
   return (
     <div className="flex w-full max-w-xs flex-col gap-3 border p-4">
       <div>
-        <p className="text-sm font-semibold">Harborview Loft</p>
+        <p className="text-sm font-semibold">Resort template · Demo listing</p>
         <p className="text-xs text-muted-foreground">
-          2 guests · 1 bedroom · $128 / night
+          Designali template sample · $128 / night
         </p>
       </div>
       <div className="flex gap-1.5">

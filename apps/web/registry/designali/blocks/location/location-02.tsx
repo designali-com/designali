@@ -1,31 +1,33 @@
-import { ArrowRight } from "lucide-react"
+import {
+  ArrowRight,
+} from "@designali/icons"
 
 const locations = [
   {
-    city: "Berlin",
-    country: "Germany",
-    address: "Torstraße 109, 10119",
+    city: "Americas",
+    country: "Remote · async",
+    address: "Brand identity and web projects",
     team: 42,
     gradient: "from-chart-1/40 to-chart-1/5",
   },
   {
-    city: "Lisbon",
-    country: "Portugal",
-    address: "Rua da Boavista 69, 1200-066",
+    city: "Europe",
+    country: "Remote · async",
+    address: "UI/UX and design systems",
     team: 18,
     gradient: "from-chart-2/40 to-chart-2/5",
   },
   {
-    city: "Toronto",
-    country: "Canada",
-    address: "220 King St W, M5H 1K4",
+    city: "Middle East",
+    country: "Remote · async",
+    address: "Next.js websites and products",
     team: 27,
     gradient: "from-chart-3/40 to-chart-3/5",
   },
   {
-    city: "Tokyo",
-    country: "Japan",
-    address: "2-11-3 Jingumae, Shibuya",
+    city: "Asia Pacific",
+    country: "Remote · async",
+    address: "CGI, 3D and motion",
     team: 15,
     gradient: "from-chart-4/40 to-chart-4/5",
   },
@@ -37,11 +39,11 @@ export default function Location02() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="mb-12 flex flex-col justify-between gap-4 md:flex-row md:items-end">
           <h2 className="text-4xl font-semibold tracking-tight md:text-5xl">
-            Where we work
+            Where our clients are
           </h2>
           <p className="max-w-md text-muted-foreground">
-            102 people across four hubs. Remote-friendly, but we still love a
-            good whiteboard.
+            Designali is a remote studio working with clients worldwide. Reach
+            us anytime at hello@designali.com.
           </p>
         </div>
         <div className="grid gap-px border bg-border sm:grid-cols-2 lg:grid-cols-4">
@@ -68,7 +70,7 @@ export default function Location02() {
                 </p>
                 <p className="mt-4 text-sm">{location.address}</p>
                 <p className="mt-auto pt-4 text-xs text-muted-foreground">
-                  {location.team} team members
+                  {location.team} projects delivered
                 </p>
               </div>
             </a>

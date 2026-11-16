@@ -1,23 +1,25 @@
-import { Check } from "lucide-react"
+import {
+  Check,
+} from "@designali/icons"
 
 const rows = [
   {
-    eyebrow: "01 / Capture",
-    title: "Collect feedback where it happens",
-    body: "Pin comments directly on live pages, screenshots or Figma frames. Context travels with every note, so nobody asks which button again.",
-    points: ["Browser extension", "Figma plugin", "Slack shortcut"],
+    eyebrow: "01 / Discover",
+    title: "Start with strategy and brand",
+    body: "Every Designali project begins with your goals, audience and positioning, so the brand identity and UI direction are grounded from day one.",
+    points: ["Brand identity", "Positioning", "Moodboards"],
   },
   {
-    eyebrow: "02 / Organise",
-    title: "Turn noise into a prioritised backlog",
-    body: "Duplicate requests are grouped automatically and scored by reach and effort, giving you a ranked list every Monday morning.",
-    points: ["Smart grouping", "Impact scoring", "Custom fields"],
+    eyebrow: "02 / Design",
+    title: "Design interfaces in Figma",
+    body: "Ali Imam designs the UI/UX in Figma with a reusable design system, so every screen feels intuitive and consistent.",
+    points: ["UI/UX design", "Design systems", "Prototypes"],
   },
   {
-    eyebrow: "03 / Close the loop",
-    title: "Tell people when it ships",
-    body: "When an issue is resolved, everyone who asked for it gets a short update. Customers notice, and they keep sending feedback.",
-    points: ["Release notes", "Email digests", "Public roadmap"],
+    eyebrow: "03 / Build",
+    title: "Ship production-ready code",
+    body: "Designs are turned into fast, responsive Next.js sites with Tailwind CSS and deployed on Vercel. Design se code tak.",
+    points: ["Next.js", "Tailwind CSS", "Vercel"],
   },
 ]
 

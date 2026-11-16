@@ -14,7 +14,7 @@ export default function IndeterminateExport() {
         className="[&_[data-slot=progress-indicator]]:w-1/3 [&_[data-slot=progress-indicator]]:animate-pulse"
       />
       <p className="text-xs text-muted-foreground">
-        Q3 revenue report &middot; We&apos;ll email you when it&apos;s ready.
+        Designali icons pack &middot; We&apos;ll email you when it&apos;s ready.
       </p>
     </div>
   )

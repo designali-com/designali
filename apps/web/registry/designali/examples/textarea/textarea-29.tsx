@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { SendIcon } from "lucide-react"
+import {
+  Send as SendIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import { Button } from "@workspace/ui/components/button"
@@ -10,7 +12,7 @@ import { Textarea } from "@workspace/ui/components/textarea"
 
 export default function BulkInviteTextarea() {
   const [raw, setRaw] = React.useState(
-    "maya@loom.dev, kenji@loom.dev\nnot-an-email\nzara@loom.dev"
+    "maya@designali.com, kenji@designali.com\nnot-an-email\nzara@designali.com"
   )
   const entries = raw.split(/[\s,;]+/).filter(Boolean)
   const isValid = (e: string) => /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(e)

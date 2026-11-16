@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { GlobeIcon, VolumeXIcon } from "lucide-react"
+import {
+  Globe as GlobeIcon,
+  VolumeX as VolumeXIcon,
+} from "@designali/icons"
 
 import {
   ContextMenu,
@@ -16,9 +19,9 @@ import {
 import { cn } from "@workspace/ui/lib/utils"
 
 const initialTabs = [
-  { id: 1, title: "Inbox (12)", pinned: true, muted: false },
-  { id: 2, title: "Sprint board", pinned: false, muted: false },
-  { id: 3, title: "Lo-fi beats", pinned: false, muted: true },
+  { id: 1, title: "designali.com", pinned: true, muted: false },
+  { id: 2, title: "Designali Blocks", pinned: false, muted: false },
+  { id: 3, title: "Figma: brand kit", pinned: false, muted: true },
 ]
 
 export default function BrowserTabStripMenu() {

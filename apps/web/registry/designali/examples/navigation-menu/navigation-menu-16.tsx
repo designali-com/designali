@@ -11,19 +11,19 @@ import { cn } from "@workspace/ui/lib/utils"
 
 const destinations = [
   {
-    city: "Lisbon",
-    stays: "1,240 stays",
+    city: "Brand identity",
+    stays: "Dalim Agency",
     gradient: "from-amber-300 to-orange-500",
   },
-  { city: "Kyoto", stays: "860 stays", gradient: "from-rose-300 to-pink-600" },
+  { city: "Web design", stays: "Dalim Works", gradient: "from-rose-300 to-pink-600" },
   {
-    city: "Reykjavik",
-    stays: "410 stays",
+    city: "Icons",
+    stays: "Dalim Icons",
     gradient: "from-sky-300 to-indigo-600",
   },
   {
-    city: "Cape Town",
-    stays: "720 stays",
+    city: "Typography",
+    stays: "Dalim Fonts",
     gradient: "from-emerald-300 to-teal-600",
   },
 ]
@@ -33,7 +33,7 @@ export default function DestinationTilesNav() {
     <NavigationMenu>
       <NavigationMenuList>
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Destinations</NavigationMenuTrigger>
+          <NavigationMenuTrigger>Work</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-72 grid-cols-2 gap-1 sm:w-96">
               {destinations.map((d) => (
@@ -55,12 +55,12 @@ export default function DestinationTilesNav() {
         </NavigationMenuItem>
         <NavigationMenuItem>
           <NavigationMenuLink href="#" className={navigationMenuTriggerStyle()}>
-            Deals
+            Pricing
           </NavigationMenuLink>
         </NavigationMenuItem>
         <NavigationMenuItem>
           <NavigationMenuLink href="#" className={navigationMenuTriggerStyle()}>
-            Trips
+            Blog
           </NavigationMenuLink>
         </NavigationMenuItem>
       </NavigationMenuList>

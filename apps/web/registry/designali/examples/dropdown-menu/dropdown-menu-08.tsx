@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { Columns3Icon } from "lucide-react"
+import {
+  Columns3 as Columns3Icon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {

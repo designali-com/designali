@@ -1,4 +1,8 @@
-import { MapPinIcon, PencilIcon, PlusIcon } from "lucide-react"
+import {
+  MapPin as MapPinIcon,
+  Pencil as PencilIcon,
+  Plus as PlusIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {

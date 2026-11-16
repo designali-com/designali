@@ -1,4 +1,7 @@
-import { LogOutIcon, MonitorSmartphoneIcon } from "lucide-react"
+import {
+  LogOut as LogOutIcon,
+  MonitorSmartphone as MonitorSmartphoneIcon,
+} from "@designali/icons"
 
 import {
   AlertDialog,
@@ -21,8 +24,8 @@ export default function SignOutAllDevices() {
         <MonitorSmartphoneIcon className="size-4" />
       </div>
       <div className="min-w-0 flex-1">
-        <p className="text-sm font-medium">Active sessions</p>
-        <p className="text-xs text-muted-foreground">4 devices are signed in</p>
+        <p className="text-sm font-medium">Designali sessions</p>
+        <p className="text-xs text-muted-foreground">4 devices are signed in to designali.com</p>
       </div>
       <AlertDialog>
         <AlertDialogTrigger render={<Button variant="outline" size="sm" />}>

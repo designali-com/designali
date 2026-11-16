@@ -7,19 +7,19 @@ import {
 
 const activity = [
   {
-    who: "Iris Novak",
+    who: "Ali Imam",
     what: "merged #482",
     ago: "3m ago",
     exact: "Jun 12, 2026, 14:07:33",
   },
   {
-    who: "Kofi Mensah",
+    who: "Studio Designer",
     what: "commented on #479",
     ago: "2h ago",
     exact: "Jun 12, 2026, 12:01:09",
   },
   {
-    who: "Lea Fontaine",
+    who: "Designali Client",
     what: "opened #483",
     ago: "yesterday",
     exact: "Jun 11, 2026, 17:44:50",

@@ -1,7 +1,11 @@
 "use client"
 
 import * as React from "react"
-import { CalendarPlusIcon, MoreVerticalIcon, PencilIcon } from "lucide-react"
+import {
+  CalendarPlus as CalendarPlusIcon,
+  EllipsisVertical as MoreVerticalIcon,
+  Pencil as PencilIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import { Button } from "@workspace/ui/components/button"
@@ -28,9 +32,9 @@ export default function CalendarEventRsvpMenu() {
   return (
     <div className="flex w-full max-w-xs border-s-4 border-s-sky-500 bg-muted/40 p-3">
       <div className="flex-1">
-        <p className="text-xs font-medium">Design critique</p>
+        <p className="text-xs font-medium">Designali design critique</p>
         <p className="text-xs text-muted-foreground">
-          Thu, 14:00 – 15:00 · Room Juniper
+          Thu, 14:00 – 15:00 · Designali studio
         </p>
         <Badge variant="outline" className="mt-2">
           {rsvpLabels[rsvp]}

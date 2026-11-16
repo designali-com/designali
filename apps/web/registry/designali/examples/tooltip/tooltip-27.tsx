@@ -1,4 +1,8 @@
-import { CloudCheckIcon, CloudOffIcon, CloudUploadIcon } from "lucide-react"
+import {
+  CloudCheck as CloudCheckIcon,
+  CloudOff as CloudOffIcon,
+  CloudUpload as CloudUploadIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {

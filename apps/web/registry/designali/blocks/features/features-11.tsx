@@ -1,33 +1,38 @@
 "use client"
 
 import { useState } from "react"
-import { Fingerprint, KeyRound, Lock, Shield } from "lucide-react"
+import {
+  FingerprintPattern as Fingerprint,
+  KeyRound,
+  Lock,
+  Shield,
+} from "@designali/icons"
 
 import { cn } from "@workspace/ui/lib/utils"
 
 const items = [
   {
     icon: Fingerprint,
-    title: "Passkeys by default",
-    body: "Customers sign in with Face ID or a hardware key. Passwords become an optional fallback you can switch off per tenant.",
+    title: "A brand that is yours",
+    body: "Designali crafts a unique brand identity — logo, type and colour — so your product is instantly recognisable.",
     visual: "passkey",
   },
   {
     icon: KeyRound,
-    title: "Scoped API tokens",
-    body: "Issue tokens limited to a single project, environment and set of verbs. Expiry and rotation reminders are built in.",
+    title: "Packages you can install",
+    body: "Icons, logos and vectors ship as npm packages, so the same assets work across every Designali template and block.",
     visual: "tokens",
   },
   {
     icon: Shield,
-    title: "Anomaly detection",
-    body: "Impossible-travel and credential-stuffing patterns are blocked in real time, with a review queue for anything borderline.",
+    title: "Reviewed before release",
+    body: "Every block is checked for accessibility, responsiveness and dark mode before it lands on designali.com.",
     visual: "anomaly",
   },
   {
     icon: Lock,
-    title: "Field-level encryption",
-    body: "Mark any column as sensitive and Keystone encrypts it with a per-tenant key before it ever reaches your database.",
+    title: "Design tokens built in",
+    body: "Semantic tokens keep colour, spacing and type consistent, so switching themes never breaks your layout.",
     visual: "encryption",
   },
 ]
@@ -39,16 +44,16 @@ function Visual({ kind }: { kind: string }) {
         <div className="flex size-24 items-center justify-center rounded-full border-2 border-dashed border-emerald-500/60">
           <Fingerprint className="size-12 text-emerald-600 dark:text-emerald-400" />
         </div>
-        <span className="text-xs text-muted-foreground">Touch sensor to continue</span>
+        <span className="text-xs text-muted-foreground">Your brand, uniquely yours</span>
       </div>
     )
   if (kind === "tokens")
     return (
       <div className="w-full max-w-xs space-y-2 font-mono text-xs">
         {[
-          ["ks_live_9f2a", "read:orders", "30d"],
-          ["ks_live_c71e", "write:users", "7d"],
-          ["ks_test_04bd", "*", "1d"],
+          ["@designali/icons", "4000+", "new"],
+          ["@designali/logos", "brands", "new"],
+          ["@designali/vectors", "shapes", "new"],
         ].map(([id, scope, exp]) => (
           <div key={id} className="flex items-center justify-between gap-2 border border-border bg-background px-3 py-2">
             <span>{id}</span>
@@ -62,10 +67,10 @@ function Visual({ kind }: { kind: string }) {
     return (
       <div className="w-full max-w-xs space-y-2 text-xs">
         {[
-          ["Berlin, DE", "Allowed", "text-emerald-600 dark:text-emerald-400"],
-          ["Sao Paulo, BR", "Blocked", "text-red-600 dark:text-red-400"],
-          ["Berlin, DE", "Allowed", "text-emerald-600 dark:text-emerald-400"],
-          ["Unknown proxy", "Review", "text-amber-600 dark:text-amber-400"],
+          ["Hero block", "Passed", "text-emerald-600 dark:text-emerald-400"],
+          ["Pricing block", "Fix needed", "text-red-600 dark:text-red-400"],
+          ["Footer block", "Passed", "text-emerald-600 dark:text-emerald-400"],
+          ["Header block", "Review", "text-amber-600 dark:text-amber-400"],
         ].map(([loc, status, tone], i) => (
           <div key={i} className="flex justify-between border border-border bg-background px-3 py-2">
             <span>{loc}</span>
@@ -77,13 +82,13 @@ function Visual({ kind }: { kind: string }) {
   return (
     <div className="w-full max-w-xs space-y-2 font-mono text-xs">
       <div className="border border-border bg-background px-3 py-2">
-        email: <span className="text-muted-foreground">ada@lumen.dev</span>
+        email: <span className="text-muted-foreground">hello@designali.com</span>
       </div>
       <div className="border border-border bg-background px-3 py-2">
-        ssn: <span className="text-sky-600 dark:text-sky-400">enc:AES256:Zm9v...q8=</span>
+        primary: <span className="text-sky-600 dark:text-sky-400">var(--primary)</span>
       </div>
       <div className="border border-border bg-background px-3 py-2">
-        card: <span className="text-sky-600 dark:text-sky-400">enc:AES256:YmFy...p1=</span>
+        radius: <span className="text-sky-600 dark:text-sky-400">var(--radius)</span>
       </div>
     </div>
   )
@@ -96,7 +101,7 @@ export default function Features11() {
     <section className="w-full bg-background px-6 py-20 md:py-28">
       <div className="mx-auto max-w-6xl">
         <h2 className="max-w-2xl text-3xl font-medium tracking-tight md:text-5xl">
-          Security your auditors will actually enjoy reading about.
+          Craft and quality built into every Designali release.
         </h2>
         <div className="mt-14 grid gap-8 lg:grid-cols-2 lg:gap-14">
           <div className="border-t border-border">

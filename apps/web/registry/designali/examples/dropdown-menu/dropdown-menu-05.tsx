@@ -1,10 +1,10 @@
 import {
-  ArchiveIcon,
-  CopyIcon,
-  MoreHorizontalIcon,
-  PencilIcon,
-  Trash2Icon,
-} from "lucide-react"
+  Archive as ArchiveIcon,
+  Copy as CopyIcon,
+  Ellipsis as MoreHorizontalIcon,
+  Pencil as PencilIcon,
+  Trash2 as Trash2Icon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -16,9 +16,9 @@ import {
 } from "@workspace/ui/components/dropdown-menu"
 
 const invoices = [
-  { id: "INV-2041", customer: "Harbor Studio", amount: "$1,240.00" },
-  { id: "INV-2042", customer: "Pinecrest Labs", amount: "$860.50" },
-  { id: "INV-2043", customer: "Atlas & Finch", amount: "$3,120.00" },
+  { id: "INV-2041", customer: "Brand identity project", amount: "$1,240.00" },
+  { id: "INV-2042", customer: "Designali Templates", amount: "$860.50" },
+  { id: "INV-2043", customer: "Next.js website build", amount: "$3,120.00" },
 ]
 
 export default function TableRowActions() {

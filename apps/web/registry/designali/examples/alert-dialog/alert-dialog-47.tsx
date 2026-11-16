@@ -1,4 +1,6 @@
-import { Trash2Icon } from "lucide-react"
+import {
+  Trash2 as Trash2Icon,
+} from "@designali/icons"
 
 import {
   AlertDialog,
@@ -32,7 +34,7 @@ export default function EmptyTrashCountBadge() {
           </AlertDialogMedia>
           <AlertDialogTitle>Permanently delete 57 items?</AlertDialogTitle>
           <AlertDialogDescription>
-            This frees up 3.6 GB. Items in Trash can&apos;t be recovered once
+            This frees up 3.6 GB of Designali assets. Items in Trash can&apos;t be recovered once
             deleted.
           </AlertDialogDescription>
         </AlertDialogHeader>

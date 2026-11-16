@@ -7,21 +7,21 @@ import { cn } from "@workspace/ui/lib/utils"
 type Status = "open" | "soon" | "planned"
 
 const sites: { city: string; status: Status; date: string; x: number; y: number }[] = [
-  { city: "Leeds", status: "open", date: "Since 2021", x: 54, y: 38 },
-  { city: "Manchester", status: "open", date: "Since 2022", x: 47, y: 42 },
-  { city: "Bristol", status: "open", date: "Since 2023", x: 40, y: 68 },
-  { city: "Edinburgh", status: "open", date: "Since 2024", x: 48, y: 14 },
-  { city: "Birmingham", status: "soon", date: "Feb 2027", x: 50, y: 55 },
-  { city: "Cardiff", status: "soon", date: "Apr 2027", x: 34, y: 66 },
-  { city: "Newcastle", status: "planned", date: "2028", x: 56, y: 25 },
-  { city: "Brighton", status: "planned", date: "2028", x: 62, y: 78 },
-  { city: "Norwich", status: "planned", date: "2028", x: 74, y: 55 },
+  { city: "Templates", status: "open", date: "Live", x: 54, y: 38 },
+  { city: "Blocks", status: "open", date: "Live", x: 47, y: 42 },
+  { city: "Icons", status: "open", date: "Live", x: 40, y: 68 },
+  { city: "Logos", status: "open", date: "Live", x: 48, y: 14 },
+  { city: "Mobile UI kit", status: "soon", date: "Soon", x: 50, y: 55 },
+  { city: "3D illustrations", status: "soon", date: "Soon", x: 34, y: 66 },
+  { city: "Motion presets", status: "planned", date: "Planned", x: 56, y: 25 },
+  { city: "Figma plugin", status: "planned", date: "Planned", x: 62, y: 78 },
+  { city: "AI workflows", status: "planned", date: "Planned", x: 74, y: 55 },
 ]
 
 const legend: { id: Status | "all"; label: string; dot: string }[] = [
   { id: "all", label: "All", dot: "bg-foreground" },
-  { id: "open", label: "Open", dot: "bg-emerald-500" },
-  { id: "soon", label: "Opening soon", dot: "bg-amber-500" },
+  { id: "open", label: "Live", dot: "bg-emerald-500" },
+  { id: "soon", label: "Coming soon", dot: "bg-amber-500" },
   { id: "planned", label: "Planned", dot: "bg-muted-foreground/50" },
 ]
 
@@ -40,14 +40,14 @@ export default function Location15() {
       <div className="mx-auto grid max-w-6xl gap-12 px-6 md:grid-cols-[1fr_1.1fr] md:items-center">
         <div>
           <p className="text-xs font-medium tracking-widest text-muted-foreground uppercase">
-            Expansion
+            Roadmap
           </p>
           <h2 className="mt-3 text-4xl font-semibold tracking-tight md:text-5xl">
-            Bouldering walls, coming to a city near you
+            What Designali ships next
           </h2>
           <p className="mt-4 text-muted-foreground">
-            Crux Climbing opened four gyms in four years. Here&apos;s where we
-            are heading next.
+            Templates, blocks, icons and logos are live on designali.com.
+            Here&apos;s what we are building next.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-2">

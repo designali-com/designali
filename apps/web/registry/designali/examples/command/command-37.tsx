@@ -2,12 +2,12 @@
 
 import * as React from "react"
 import {
-  BracesIcon,
-  DownloadIcon,
-  RocketIcon,
-  SearchIcon,
-  WebhookIcon,
-} from "lucide-react"
+  Braces as BracesIcon,
+  Download as DownloadIcon,
+  Rocket as RocketIcon,
+  Search as SearchIcon,
+  Webhook as WebhookIcon,
+} from "@designali/icons"
 
 import {
   Command,
@@ -25,7 +25,7 @@ export default function NavbarSearchTrigger() {
 
   return (
     <div className="flex w-full max-w-md items-center gap-3 border px-3 py-2">
-      <span className="text-sm font-semibold">Fieldnote Docs</span>
+      <span className="text-sm font-semibold">Designali Docs</span>
       <button
         type="button"
         onClick={() => setOpen(true)}
@@ -42,7 +42,7 @@ export default function NavbarSearchTrigger() {
         open={open}
         onOpenChange={setOpen}
         title="Search documentation"
-        description="Search guides, API reference, and changelog"
+        description="Search guides, components, and changelog"
         showCloseButton
       >
         <Command>
@@ -59,14 +59,14 @@ export default function NavbarSearchTrigger() {
                 <span>Installation</span>
               </CommandItem>
             </CommandGroup>
-            <CommandGroup heading="API reference">
+            <CommandGroup heading="Components">
               <CommandItem onSelect={() => setOpen(false)}>
                 <BracesIcon />
-                <span>REST endpoints</span>
+                <span>Icons</span>
               </CommandItem>
               <CommandItem onSelect={() => setOpen(false)}>
                 <WebhookIcon />
-                <span>Webhook events</span>
+                <span>Logos</span>
               </CommandItem>
             </CommandGroup>
           </CommandList>

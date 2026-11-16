@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { TagIcon } from "lucide-react"
+import {
+  Tag as TagIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import { Button } from "@workspace/ui/components/button"
@@ -35,7 +37,7 @@ export default function NestedSheets() {
             <FieldLabel htmlFor="issue-title">Title</FieldLabel>
             <Input
               id="issue-title"
-              defaultValue="Billing page crashes on Safari 17"
+              defaultValue="Pricing block crashes on Safari 17"
             />
           </Field>
           <div className="flex items-center justify-between">

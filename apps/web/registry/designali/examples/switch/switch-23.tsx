@@ -20,7 +20,7 @@ export default function AccessibilityPreview() {
         )}
       >
         <p className={cn("font-medium", largeText ? "text-lg" : "text-sm")}>
-          Your order has shipped
+          Your Designali template is ready
         </p>
         <p
           className={cn(
@@ -35,7 +35,7 @@ export default function AccessibilityPreview() {
               underlineLinks && "underline underline-offset-2"
             )}
           >
-            orders page
+            downloads page
           </span>
           .
         </p>

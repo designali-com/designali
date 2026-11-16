@@ -1,4 +1,6 @@
-import { CheckIcon } from "lucide-react"
+import {
+  Check as CheckIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -9,11 +11,11 @@ import {
 } from "@workspace/ui/components/popover"
 
 const features = [
-  "Unlimited projects",
-  "10 GB file storage",
-  "Version history (90 days)",
+  "All templates & blocks",
+  "4000+ icons",
+  "Figma source files",
   "Priority email support",
-  "SAML single sign-on",
+  "Commercial license",
 ]
 
 export default function PlanFeaturesPopover() {
@@ -29,7 +31,7 @@ export default function PlanFeaturesPopover() {
         </span>
       </div>
       <p className="text-xs text-muted-foreground">
-        For teams scaling their workflows.
+        For studios shipping client work.
       </p>
       <div className="flex items-center gap-2">
         <Button size="sm" className="flex-1">

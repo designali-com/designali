@@ -1,10 +1,10 @@
 import {
-  CreditCardIcon,
-  ExternalLinkIcon,
-  RocketIcon,
-  ShieldIcon,
-  WrenchIcon,
-} from "lucide-react"
+  CreditCard as CreditCardIcon,
+  ExternalLink as ExternalLinkIcon,
+  Rocket as RocketIcon,
+  Shield as ShieldIcon,
+  Wrench as WrenchIcon,
+} from "@designali/icons"
 
 import {
   NavigationMenu,

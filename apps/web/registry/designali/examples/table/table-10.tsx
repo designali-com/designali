@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { SearchIcon } from "lucide-react"
+import {
+  Search as SearchIcon,
+} from "@designali/icons"
 
 import {
   InputGroup,
@@ -18,11 +20,11 @@ import {
 } from "@workspace/ui/components/table"
 
 const contacts = [
-  { name: "Amelia Chen", company: "Northwind Studio", city: "Seattle" },
-  { name: "Ben Carter", company: "Bluefin Logistics", city: "Austin" },
-  { name: "Chloe Dubois", company: "Fernhill Labs", city: "Montreal" },
-  { name: "Daniel Park", company: "Oakridge Partners", city: "Denver" },
-  { name: "Elena Rossi", company: "Silverline Media", city: "Chicago" },
+  { name: "Ali Imam", company: "Designali", city: "Founder" },
+  { name: "Sara Khan", company: "Brand identity", city: "Client" },
+  { name: "Omar Ali", company: "Next.js website", city: "Client" },
+  { name: "Priya Shah", company: "Design system", city: "Client" },
+  { name: "Daniel Roy", company: "CGI & motion", city: "Client" },
 ]
 
 export default function SearchFilterTable() {
@@ -49,8 +51,8 @@ export default function SearchFilterTable() {
           <TableHeader>
             <TableRow>
               <TableHead>Name</TableHead>
-              <TableHead>Company</TableHead>
-              <TableHead>City</TableHead>
+              <TableHead>Project</TableHead>
+              <TableHead>Role</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>

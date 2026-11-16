@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { TicketPercentIcon } from "lucide-react"
+import {
+  TicketPercent as TicketPercentIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import { Button } from "@workspace/ui/components/button"

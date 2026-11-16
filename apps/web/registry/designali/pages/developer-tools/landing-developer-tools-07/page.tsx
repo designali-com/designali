@@ -9,241 +9,242 @@ import {
   Plus,
   Puzzle,
   Terminal,
-} from "lucide-react"
+} from "@designali/icons"
 
+import { Logo } from "@/src/components/logo"
 import { Button } from "@workspace/ui/components/button"
 
-const navLinks = ["Docs", "Pricing", "Changelog", "Blog", "GitHub"]
+const navLinks = ["Docs", "Pricing", "Icons", "Blocks", "Templates"]
 
 const logos = [
-  "Runloop",
-  "Gridline",
-  "Stackwise",
-  "Byteforge",
-  "Cloudnest",
-  "Parsec",
-  "Quantra",
-  "Hexagon",
+  "Vercel",
+  "Radix UI",
+  "Next.js",
+  "React",
+  "TypeScript",
+  "Tailwind CSS",
+  "shadcn/ui",
+  "Figma",
 ]
 
 const features = [
   {
     icon: Puzzle,
-    title: "Extensible with plugins",
+    title: "Lucide-compatible names",
     description:
-      "Hook into every build and deploy step with a simple plugin API and a growing ecosystem.",
+      "Icon names match the ones you already know, so migrating an existing project takes minutes.",
   },
   {
     icon: GitFork,
-    title: "Open source core",
+    title: "Built by a design engineer",
     description:
-      "The runtime is MIT licensed, with 40K stars and over 600 contributors on GitHub.",
+      "Ali Imam designs every asset in Figma and codes every component, so design and code never drift apart.",
   },
   {
     icon: Terminal,
-    title: "A CLI that gets out of the way",
+    title: "Install in one command",
     description:
-      "One command to scaffold, test and deploy, with readable errors and helpful suggestions.",
+      "Add @designali/icons, logos or vectors with pnpm, npm or yarn and import only what you use.",
   },
   {
     icon: GitBranch,
-    title: "Preview every pull request",
+    title: "Copy, paste, ship",
     description:
-      "Each branch gets its own isolated environment and URL, torn down automatically on merge.",
+      "Every block and page is plain React and Tailwind CSS you own, with no runtime lock-in.",
   },
   {
     icon: Code,
-    title: "Fully typed SDKs",
+    title: "Fully typed packages",
     description:
-      "End-to-end type safety for TypeScript, Python, Go and Rust, generated from one OpenAPI spec.",
+      "Every icon, logo and vector ships as a typed React component with size and className props.",
   },
   {
     icon: Gauge,
-    title: "Edge-fast by default",
+    title: "Tree-shakeable by default",
     description:
-      "Requests are served from 31 regions with a median latency under 40 ms worldwide.",
+      "Named exports mean your bundle only includes the icons and shapes you actually import.",
   },
 ]
 
 const stats = [
-  { value: "40K", label: "GitHub stars" },
-  { value: "180K", label: "Developers building" },
-  { value: "38ms", label: "Median global latency" },
-  { value: "4.2B", label: "Requests served monthly" },
+  { value: "4000+", label: "Icons in @designali/icons" },
+  { value: "460+", label: "Ready-made blocks" },
+  { value: "240+", label: "Landing pages" },
+  { value: "2300+", label: "UI design examples" },
 ]
 
 const steps = [
   {
-    title: "Install the CLI",
+    title: "Install a package",
     description:
-      "One npm, brew or curl command. Works on macOS, Linux and Windows.",
+      "Run pnpm add @designali/icons in any React or Next.js project.",
   },
   {
-    title: "Connect your repo",
+    title: "Import what you need",
     description:
-      "Link GitHub, GitLab or Bitbucket and we detect your framework automatically.",
+      "Use named imports like ArrowRight or Github and style them with Tailwind classes.",
   },
   {
-    title: "Push to deploy",
+    title: "Copy a block",
     description:
-      "Every push builds, tests and deploys, with preview URLs for every branch.",
+      "Browse designali.com/blocks, copy the code and drop it straight into your app.",
   },
   {
-    title: "Observe and scale",
+    title: "Ship and customise",
     description:
-      "Watch logs and traces in real time while traffic scales automatically.",
+      "Adjust tokens, copy and layout freely. It is your code from the moment you paste it.",
   },
 ]
 
 const showcase = [
   {
-    name: "@acme/sdk",
-    meta: "TypeScript · Node, Deno and Bun",
-    tag: "Official",
-    price: "v4.2.0",
+    name: "@designali/icons",
+    meta: "4000+ icons · React and TypeScript",
+    tag: "Package",
+    price: "4000+",
   },
   {
-    name: "acme-python",
-    meta: "Python 3.9+ · Async support",
-    tag: "Official",
-    price: "v3.8.1",
+    name: "@designali/logos",
+    meta: "Brand and tech logos · React",
+    tag: "Package",
+    price: "Logos",
   },
   {
-    name: "acme-go",
-    meta: "Go 1.21+ · Zero dependencies",
-    tag: "Official",
-    price: "v2.5.0",
+    name: "@designali/vectors",
+    meta: "Abstract shapes and illustrations",
+    tag: "Package",
+    price: "Vectors",
   },
   {
-    name: "Next.js starter",
-    meta: "Template · App Router and auth",
+    name: "Next.js templates",
+    meta: "Portfolio, agency and SaaS starters",
     tag: "Template",
     price: "1-click",
   },
   {
-    name: "acme-rs",
-    meta: "Rust · Tokio and async-std",
-    tag: "Community",
-    price: "v1.3.4",
+    name: "Apple device mockups",
+    meta: "iPhone, iPad, MacBook and iMac frames",
+    tag: "Component",
+    price: "Mockups",
   },
   {
-    name: "GitHub Action",
-    meta: "CI · Deploy on every push",
-    tag: "Integration",
-    price: "v2",
+    name: "Blocks library",
+    meta: "460+ sections · Copy and paste",
+    tag: "Blocks",
+    price: "460+",
   },
 ]
 
 const testimonials = [
   {
     quote:
-      "We moved our whole platform over in a week. Deploys went from twelve minutes to under thirty seconds.",
-    name: "Alex Novak",
-    role: "Platform Lead, Byteforge",
+      "We swapped our icon set for @designali/icons in an afternoon. Same names, cleaner strokes, smaller bundle.",
+    name: "Alex N.",
+    role: "Frontend developer",
   },
   {
     quote:
-      "The TypeScript SDK is the best I have used. Autocomplete for every endpoint and errors that explain themselves.",
-    name: "Mei Lin",
-    role: "Senior Engineer, Parsec",
+      "The typed components are a joy. Autocomplete finds every icon and the size prop just works.",
+    name: "Mei L.",
+    role: "Design engineer",
   },
   {
     quote:
-      "Preview environments changed our review culture. Designers and PMs actually test PRs before they merge.",
-    name: "Jake Thornton",
-    role: "CTO, Runloop",
+      "Designali blocks gave our landing page a real design system. Designers and developers finally work from the same pieces.",
+    name: "Jake T.",
+    role: "Startup founder",
   },
 ]
 
 const tiers = [
   {
-    name: "Hobby",
+    name: "Free",
     price: "$0",
-    period: "/month",
-    description: "For side projects and experiments.",
+    period: "/forever",
+    description: "For side projects and learning.",
     features: [
-      "100 GB bandwidth",
-      "1M requests",
-      "Preview deployments",
-      "Community support",
+      "@designali/icons, logos and vectors",
+      "Free blocks and UI examples",
+      "Docs and install guides",
+      "Personal and commercial use",
     ],
-    cta: "Start building",
+    cta: "Browse free",
   },
   {
     name: "Pro",
-    price: "$20",
-    period: "/month + usage",
-    description: "For production apps and small teams.",
+    price: "$49",
+    period: "/one-time",
+    description: "For developers shipping client and product work.",
     features: [
-      "1 TB bandwidth included",
-      "10M requests included",
-      "Unlimited team members",
+      "All 460+ blocks",
+      "240+ landing pages",
+      "Premium Next.js templates",
       "7-day log retention",
-      "Email support",
+      "Lifetime updates",
     ],
-    cta: "Upgrade to Pro",
+    cta: "Get Pro",
   },
   {
-    name: "Enterprise",
+    name: "Studio",
     price: "Custom",
     period: "",
-    description: "For teams with scale and compliance needs.",
+    description: "For teams that want Designali to design and build with them.",
     features: [
-      "Dedicated infrastructure",
-      "SSO and audit logs",
-      "SOC 2 and HIPAA",
-      "99.99% SLA",
-      "24/7 engineering support",
+      "Custom design system",
+      "Brand identity and UI/UX",
+      "Next.js development",
+      "Figma source files",
+      "Direct access to Ali Imam",
     ],
-    cta: "Contact sales",
+    cta: "Contact Designali",
   },
 ]
 
 const faqs = [
   {
-    q: "Which languages and frameworks are supported?",
-    a: "Node, Python, Go, Rust and Ruby runtimes, with zero-config support for Next.js, Remix, Astro, Django and Rails.",
+    q: "Which frameworks are supported?",
+    a: "Everything is built for React and Next.js with TypeScript and Tailwind CSS. The icon, logo and vector packages work in any React app.",
   },
   {
-    q: "Can I self-host?",
-    a: "Yes. The open source runtime can be self-hosted with Docker or Kubernetes. Enterprise includes support for self-hosted setups.",
+    q: "Can I use the assets in client projects?",
+    a: "Yes. Free and Pro assets can be used in personal and commercial projects. See designali.com/docs/legal/terms for details.",
   },
   {
-    q: "How does usage billing work?",
-    a: "Each plan includes a monthly allowance. Above that you pay per GB and per million requests, with spend limits you control.",
+    q: "How do updates work?",
+    a: "Packages update through npm. Pro blocks and templates get new versions on designali.com that you can copy any time.",
   },
   {
-    q: "Is there vendor lock-in?",
-    a: "No. Your code stays standard, configuration is a single portable file and you can export everything at any time.",
+    q: "Is there any lock-in?",
+    a: "No. Blocks are plain React and Tailwind CSS that live in your repo. Change or remove anything you like.",
   },
   {
-    q: "Do you have a status page?",
-    a: "Yes, with real-time status for every region and a full incident history going back three years.",
+    q: "Do the icons match Lucide names?",
+    a: "Yes. @designali/icons uses Lucide-compatible names, so most imports only need a new package path.",
   },
 ]
 
 const footer = [
   {
-    title: "Developers",
-    links: ["Documentation", "API reference", "CLI", "Status"],
+    title: "Resources",
+    links: ["Documentation", "Icons", "Logos", "Illustrations"],
   },
   {
-    title: "Open source",
-    links: ["GitHub", "Contributing", "Roadmap", "Changelog"],
+    title: "Library",
+    links: ["Templates", "Blocks", "Templates", "Icons"],
   },
-  { title: "Company", links: ["About", "Blog", "Careers", "Security"] },
+  { title: "Designali", links: ["About", "Blocks", "Work", "Contact"] },
 ]
 
 const terminal = [
-  "# install the CLI",
-  "$ npm install -g @acme/cli",
+  "# install Designali icons",
+  "$ pnpm add @designali/icons",
   "added 1 package in 2.1s",
-  "$ acme init my-app --template next",
-  "Created my-app with 14 files",
-  "$ acme deploy --prod",
-  "Building... done in 8.4s",
-  "Uploading 212 assets to 31 regions",
-  "Deployed to https://my-app.acme.dev",
+  "$ pnpm add @designali/logos @designali/vectors",
+  "added 2 packages in 3.4s",
+  "$ pnpm dev",
+  "Ready in 1.2s",
+  "Compiled with 4000+ icons available",
+  "Local: http://localhost:3000",
 ]
 
 export default function LandingDeveloperTools07() {
@@ -255,10 +256,8 @@ export default function LandingDeveloperTools07() {
             href="#"
             className="flex items-center gap-2 font-semibold tracking-tight"
           >
-            <span className="flex size-7 items-center justify-center rounded-md bg-indigo-600 text-white text-sm">
-              C
-            </span>
-            <span className="">Cronhook</span>
+            <Logo className="h-5 w-auto" />
+            <span className="">designali</span>
           </a>
           <nav className="hidden items-center gap-7 text-sm md:flex">
             {navLinks.map((link) => (
@@ -282,7 +281,7 @@ export default function LandingDeveloperTools07() {
               Sign in
             </Button>
             <Button size="sm" nativeButton={false} render={<a href="#" />}>
-              Run your first job
+              Browse vectors
             </Button>
           </div>
         </div>
@@ -300,23 +299,21 @@ export default function LandingDeveloperTools07() {
                 New
               </span>
               <span className="text-muted-foreground">
-                New: step-level replays for every workflow run
+                New: more abstract shapes in @designali/vectors
               </span>
             </a>
             <h1 className="text-4xl leading-[1.05] font-semibold tracking-tight text-balance sm:text-5xl md:text-8xl ">
-              {"Background jobs that "}
+              {"Illustrations that "}
               <span className="text-indigo-600 dark:text-indigo-400">
-                never get lost
+                never look generic
               </span>
             </h1>
             <p className="mx-auto max-w-2xl text-lg leading-8 text-muted-foreground">
-              Cronhook runs your queues, cron schedules and long workflows with
-              automatic retries, so a failed step resumes instead of starting
-              over.
+              @designali/vectors brings abstract shapes and illustrations to React as sized, themeable components, perfect for heroes, empty states and backgrounds.
             </p>
             <div className="flex flex-wrap gap-3 justify-center">
               <Button size="lg" nativeButton={false} render={<a href="#" />}>
-                Run your first job
+                Browse vectors
                 <ArrowRight />
               </Button>
               <Button
@@ -338,7 +335,7 @@ export default function LandingDeveloperTools07() {
       <section className="border-b">
         <div className="mx-auto max-w-7xl px-6 py-12">
           <p className="text-center text-sm text-muted-foreground">
-            Powering engineering teams at
+            Built for the stack you already use
           </p>
           <div className="mt-8 grid grid-cols-2 items-center gap-x-8 gap-y-6 sm:grid-cols-4 lg:grid-cols-8">
             {logos.map((logo) => (
@@ -359,11 +356,10 @@ export default function LandingDeveloperTools07() {
               Developer experience
             </p>
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl  mt-3">
-              Built by developers, for developers
+              Designed by a design engineer, for developers
             </h2>
             <p className="mt-4 text-lg leading-8 text-muted-foreground">
-              Sensible defaults, zero config and an escape hatch for everything.
-              Spend your time on your product, not your plumbing.
+              Where thoughtful design meets production-ready code. Spend your time on your product, not on pushing pixels.
             </p>
           </div>
           <div className="mt-14 grid overflow-hidden rounded-2xl border sm:grid-cols-2 lg:grid-cols-3">
@@ -404,11 +400,10 @@ export default function LandingDeveloperTools07() {
           <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
             <div className="max-w-2xl">
               <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl">
-                SDKs, templates and packages
+                Packages, blocks and templates
               </h2>
               <p className="mt-4 text-lg leading-8 text-muted-foreground">
-                First-class libraries for every major language and framework,
-                all open source and fully typed.
+                Everything on designali.com is typed, themeable and ready to drop into a Next.js app.
               </p>
             </div>
             <Button
@@ -454,7 +449,7 @@ export default function LandingDeveloperTools07() {
         <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl">
-              From zero to production
+              From install to production
             </h2>
           </div>
           <ol className="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
@@ -479,7 +474,7 @@ export default function LandingDeveloperTools07() {
         <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl">
-              Loved by engineers
+              Loved by developers
             </h2>
           </div>
           <div className="mt-14 grid gap-6 md:grid-cols-3">
@@ -514,11 +509,10 @@ export default function LandingDeveloperTools07() {
         <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl">
-              Pay for what you use
+              Start free, upgrade when you ship
             </h2>
             <p className="mt-4 text-lg leading-8 text-muted-foreground">
-              A generous free tier for side projects and transparent usage
-              pricing once you scale. No seat fees, ever.
+              Free packages and blocks for everyone, a one-time Pro license for the full library and a studio plan for custom work.
             </p>
           </div>
           <div className="mx-auto mt-14 grid max-w-6xl items-start gap-6 lg:grid-cols-3">
@@ -580,7 +574,7 @@ export default function LandingDeveloperTools07() {
                 href="#"
                 className="font-medium text-foreground underline underline-offset-4"
               >
-                Get in touch
+                Email hello@designali.com
               </a>
               .
             </p>
@@ -605,15 +599,14 @@ export default function LandingDeveloperTools07() {
           <div className="pointer-events-none absolute -top-24 left-1/2 size-96 -translate-x-1/2 rounded-full bg-gradient-to-b from-indigo-500/25 via-violet-500/10 to-transparent blur-3xl" />
           <div className="relative mx-auto max-w-2xl space-y-6">
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl">
-              Stop babysitting your job queue
+              Stop drawing placeholder shapes
             </h2>
             <p className="text-lg text-muted-foreground">
-              Write jobs in plain TypeScript or Python and run 50,000 steps a
-              month free.
+              Import any shape by name and set its size prop. Free to use in your projects.
             </p>
             <div className="flex flex-wrap gap-3 justify-center">
               <Button size="lg" nativeButton={false} render={<a href="#" />}>
-                Run your first job
+                Browse vectors
                 <ArrowRight />
               </Button>
               <Button
@@ -635,13 +628,11 @@ export default function LandingDeveloperTools07() {
               href="#"
               className="flex items-center gap-2 font-semibold tracking-tight"
             >
-              <span className="flex size-7 items-center justify-center rounded-md bg-indigo-600 text-white text-sm">
-                C
-              </span>
-              <span className="">Cronhook</span>
+              <Logo className="h-5 w-auto" />
+              <span className="">designali</span>
             </a>
             <p className="max-w-xs text-sm text-muted-foreground">
-              Reliable jobs for busy apps.
+              Vectors for modern apps.
             </p>
           </div>
           {footer.map((column) => (
@@ -665,7 +656,7 @@ export default function LandingDeveloperTools07() {
         <div className="border-t ">
           <div className="mx-auto flex max-w-7xl flex-col justify-between gap-4 px-6 py-6 text-xs text-muted-foreground sm:flex-row">
             <span>
-              © {new Date().getFullYear()} Cronhook. All rights reserved.
+              © {new Date().getFullYear()} Designali. All rights reserved.
             </span>
             <div className="flex gap-6">
               <a href="#" className="hover:text-foreground">
@@ -692,7 +683,7 @@ function HeroVisual() {
         <span className="size-2.5 rounded-full bg-zinc-700" />
         <span className="size-2.5 rounded-full bg-zinc-700" />
         <span className="size-2.5 rounded-full bg-zinc-700" />
-        <span className="ml-3 font-mono text-xs text-zinc-500">~/projects</span>
+        <span className="ml-3 font-mono text-xs text-zinc-500">~/designali</span>
       </div>
       <pre className="overflow-x-auto p-5 font-mono text-[13px] leading-6">
         {terminal.map((line, i) => (

@@ -2,11 +2,11 @@
 
 import * as React from "react"
 import {
-  CreditCardIcon,
-  LandmarkIcon,
-  LockIcon,
-  WalletIcon,
-} from "lucide-react"
+  CreditCard as CreditCardIcon,
+  Landmark as LandmarkIcon,
+  Lock as LockIcon,
+  Wallet as WalletIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {

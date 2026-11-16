@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { CloudCheckIcon } from "lucide-react"
+import {
+  CloudCheck as CloudCheckIcon,
+} from "@designali/icons"
 
 import { Spinner } from "@workspace/ui/components/spinner"
 import { Textarea } from "@workspace/ui/components/textarea"

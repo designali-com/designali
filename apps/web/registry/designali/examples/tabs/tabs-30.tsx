@@ -12,7 +12,7 @@ const metrics = {
     bars: [40, 55, 48, 70, 62, 80, 74],
   },
   orders: {
-    label: "Orders",
+    label: "Template sales",
     total: "1,204",
     bars: [60, 50, 65, 58, 72, 68, 90],
   },

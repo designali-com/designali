@@ -1,12 +1,12 @@
 import {
-  CodeIcon,
-  Heading1Icon,
-  ListChecksIcon,
-  ListIcon,
-  MegaphoneIcon,
-  PlusIcon,
-  TableIcon,
-} from "lucide-react"
+  Code as CodeIcon,
+  Heading1 as Heading1Icon,
+  ListChecks as ListChecksIcon,
+  List as ListIcon,
+  Megaphone as MegaphoneIcon,
+  Plus as PlusIcon,
+  Table as TableIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {

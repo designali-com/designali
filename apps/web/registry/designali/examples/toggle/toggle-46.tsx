@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { SearchIcon, VenetianMaskIcon } from "lucide-react"
+import {
+  Search as SearchIcon,
+  VenetianMask as VenetianMaskIcon,
+} from "@designali/icons"
 
 import { Input } from "@workspace/ui/components/input"
 import { Toggle } from "@workspace/ui/components/toggle"

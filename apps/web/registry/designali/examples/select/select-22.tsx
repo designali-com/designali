@@ -33,7 +33,7 @@ export default function BillingCycleSelect() {
     <Card className="w-full max-w-xs">
       <CardHeader>
         <CardTitle>Studio plan</CardTitle>
-        <CardDescription>For small creative teams.</CardDescription>
+        <CardDescription>For small creative studios using Designali.</CardDescription>
       </CardHeader>
       <CardContent className="flex flex-col gap-3">
         <div className="flex items-baseline gap-1">

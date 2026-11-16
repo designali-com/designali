@@ -1,4 +1,6 @@
-import { LockIcon } from "lucide-react"
+import {
+  Lock as LockIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -18,9 +20,9 @@ import {
 import { Separator } from "@workspace/ui/components/separator"
 
 const items = [
-  { name: "Ceramic pour-over set", qty: 1, price: 64 },
-  { name: "Single-origin beans, 250g", qty: 2, price: 18 },
-  { name: "Gooseneck kettle", qty: 1, price: 89 },
+  { name: "Design Agency Template", qty: 1, price: 64 },
+  { name: "Designali Icons license", qty: 2, price: 18 },
+  { name: "Blocks Pro bundle", qty: 1, price: 89 },
 ]
 
 export default function OrderSummaryCard() {
@@ -52,7 +54,7 @@ export default function OrderSummaryCard() {
         <InputGroup>
           <InputGroupInput
             placeholder="Discount code"
-            defaultValue="WELCOME10"
+            defaultValue="DESIGNALI10"
           />
           <InputGroupAddon align="inline-end">
             <InputGroupButton>Apply</InputGroupButton>
@@ -68,8 +70,8 @@ export default function OrderSummaryCard() {
             <span className="tabular-nums">{"-$" + discount.toFixed(2)}</span>
           </div>
           <div className="flex justify-between">
-            <span>Shipping</span>
-            <span>Free</span>
+            <span>Delivery</span>
+            <span>Instant download</span>
           </div>
         </div>
       </CardContent>

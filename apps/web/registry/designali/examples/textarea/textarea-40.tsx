@@ -14,20 +14,20 @@ import { Field, FieldLabel } from "@workspace/ui/components/field"
 import { Textarea } from "@workspace/ui/components/textarea"
 
 const options = [
-  "Early check-in",
-  "Late checkout",
-  "High floor",
-  "Extra pillows",
+  "Dark mode",
+  "Motion design",
+  "Figma source",
+  "Extra revisions",
 ]
 
 export default function BookingSpecialRequests() {
-  const [picked, setPicked] = React.useState<string[]>(["Late checkout"])
+  const [picked, setPicked] = React.useState<string[]>(["Motion design"])
 
   return (
     <Card className="w-full max-w-sm">
       <CardHeader>
         <CardTitle>Special requests</CardTitle>
-        <CardDescription>Seaview Suites · Nov 21–24</CardDescription>
+        <CardDescription>Designali website project · Nov 21–24</CardDescription>
       </CardHeader>
       <CardContent className="flex flex-col gap-3">
         <div className="grid grid-cols-2 gap-2">
@@ -47,7 +47,7 @@ export default function BookingSpecialRequests() {
           ))}
         </div>
         <Textarea
-          placeholder="Anything else? e.g. celebrating an anniversary"
+          placeholder="Anything else? e.g. a 3D hero for the homepage"
           aria-label="Other requests"
         />
         <p className="text-xs text-muted-foreground">

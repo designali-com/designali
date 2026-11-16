@@ -2,7 +2,9 @@
 
 import * as React from "react"
 import { differenceInYears, format } from "date-fns"
-import { CakeIcon } from "lucide-react"
+import {
+  Cake as CakeIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Calendar } from "@workspace/ui/components/calendar"

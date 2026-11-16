@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { CalendarClockIcon } from "lucide-react"
+import {
+  CalendarClock as CalendarClockIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -26,11 +28,11 @@ export default function ScheduleCallDialog() {
     <Dialog>
       <DialogTrigger render={<Button />}>
         <CalendarClockIcon data-icon="inline-start" />
-        Book a demo
+        Book a call
       </DialogTrigger>
       <DialogContent className="sm:max-w-md">
         <DialogHeader>
-          <DialogTitle>Book a 30-minute demo</DialogTitle>
+          <DialogTitle>Book a 30-minute call with Ali</DialogTitle>
           <DialogDescription>
             Times shown in Central European Time.
           </DialogDescription>

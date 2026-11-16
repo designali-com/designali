@@ -3,26 +3,26 @@ import { cn } from "@workspace/ui/lib/utils"
 
 const chats = [
   {
-    name: "Product squad",
-    preview: "Ines: shipping the beta today",
+    name: "Designali studio",
+    preview: "Ali: shipping the new templates today",
     unread: 5,
     muted: false,
   },
   {
-    name: "Ravi Chandra",
+    name: "Ali Imam",
     preview: "Sounds good, see you then",
     unread: 1,
     muted: false,
   },
   {
-    name: "Random",
-    preview: "Lunch spot recommendations?",
+    name: "Client feedback",
+    preview: "Can we tweak the logo colors?",
     unread: 42,
     muted: true,
   },
   {
-    name: "Ola Nilsen",
-    preview: "Thanks for the notes!",
+    name: "Sara · Designer",
+    preview: "Thanks for the Figma notes!",
     unread: 0,
     muted: false,
   },

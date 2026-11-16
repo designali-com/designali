@@ -22,8 +22,8 @@ export default function AvatarDropdown() {
           render={
             <Button variant="ghost" size="icon" className="rounded-full">
               <Avatar>
-                <AvatarImage src="https://github.com/designali-com.png" alt="@designali" />
-                <AvatarFallback>DA</AvatarFallback>
+                <AvatarImage src="/ali.jpg" alt="Ali Imam" />
+                <AvatarFallback>AI</AvatarFallback>
               </Avatar>
             </Button>
           }

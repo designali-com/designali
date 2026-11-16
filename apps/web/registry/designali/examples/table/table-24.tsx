@@ -11,16 +11,16 @@ const groups = [
   {
     department: "Engineering",
     people: [
-      ["Arjun Mehta", "Staff engineer"],
-      ["Lena Novak", "Frontend engineer"],
+      ["Ali Imam", "Founder & design engineer"],
+      ["Omar Ali", "Frontend engineer"],
     ],
   },
-  { department: "Design", people: [["Sara Kim", "Design lead"]] },
+  { department: "Design", people: [["Sara Khan", "UI/UX designer"]] },
   {
-    department: "Support",
+    department: "Client success",
     people: [
-      ["Owen Price", "Support specialist"],
-      ["Maya Patel", "Support manager"],
+      ["Priya Shah", "Support specialist"],
+      ["Daniel Roy", "Support manager"],
     ],
   },
 ]

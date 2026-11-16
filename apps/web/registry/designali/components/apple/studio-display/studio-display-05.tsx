@@ -6,7 +6,7 @@ export default function IPhone01() {
        <StudioDisplay size="md">
        <img
           src="/img/hero-1.jpg"
-          alt="App screen"
+          alt="Designali website hero"
           className="h-full w-full object-cover"
         />
        </StudioDisplay>

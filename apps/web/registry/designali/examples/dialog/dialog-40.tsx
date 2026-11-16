@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { ArrowRightIcon, PartyPopperIcon } from "lucide-react"
+import {
+  ArrowRight as ArrowRightIcon,
+  PartyPopper as PartyPopperIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -50,7 +53,7 @@ export default function WaitlistSignupDialog() {
             }}
           >
             <DialogHeader>
-              <DialogTitle>Get early access to Halcyon</DialogTitle>
+              <DialogTitle>Get early access to Designali Pro</DialogTitle>
               <DialogDescription>
                 We&apos;re letting in a new group every Friday.
               </DialogDescription>
@@ -60,7 +63,7 @@ export default function WaitlistSignupDialog() {
               <Input
                 id="waitlist-email"
                 type="email"
-                placeholder="you@company.com"
+                placeholder="you@example.com"
                 value={email}
                 onChange={(event) => setEmail(event.target.value)}
               />

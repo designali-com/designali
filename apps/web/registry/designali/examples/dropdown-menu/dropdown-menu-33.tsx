@@ -1,12 +1,12 @@
 import {
-  ArchiveIcon,
-  FolderIcon,
-  FolderInputIcon,
-  InboxIcon,
-  ReceiptIcon,
-  ShieldAlertIcon,
-  Trash2Icon,
-} from "lucide-react"
+  Archive as ArchiveIcon,
+  Folder as FolderIcon,
+  FolderInput as FolderInputIcon,
+  Inbox as InboxIcon,
+  Receipt as ReceiptIcon,
+  ShieldAlert as ShieldAlertIcon,
+  Trash2 as Trash2Icon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -45,16 +45,16 @@ export default function EmailMoveToNestedMenu() {
               Projects
             </DropdownMenuSubTrigger>
             <DropdownMenuSubContent className="w-40">
-              <DropdownMenuItem>Harbor redesign</DropdownMenuItem>
+              <DropdownMenuItem>Designali redesign</DropdownMenuItem>
               <DropdownMenuSub>
                 <DropdownMenuSubTrigger>Clients</DropdownMenuSubTrigger>
                 <DropdownMenuSubContent className="w-36">
-                  <DropdownMenuItem>Willow & Co</DropdownMenuItem>
-                  <DropdownMenuItem>Brightside</DropdownMenuItem>
-                  <DropdownMenuItem>Kestrel Labs</DropdownMenuItem>
+                  <DropdownMenuItem>Brand identity</DropdownMenuItem>
+                  <DropdownMenuItem>Next.js website</DropdownMenuItem>
+                  <DropdownMenuItem>CGI &amp; motion</DropdownMenuItem>
                 </DropdownMenuSubContent>
               </DropdownMenuSub>
-              <DropdownMenuItem>Internal</DropdownMenuItem>
+              <DropdownMenuItem>Designali Studio</DropdownMenuItem>
             </DropdownMenuSubContent>
           </DropdownMenuSub>
           <DropdownMenuItem>

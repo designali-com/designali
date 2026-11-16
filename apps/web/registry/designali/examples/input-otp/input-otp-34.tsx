@@ -1,7 +1,9 @@
 "use client"
 
 import { REGEXP_ONLY_DIGITS } from "input-otp"
-import { ArrowLeftIcon } from "lucide-react"
+import {
+  ArrowLeft as ArrowLeftIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -24,7 +26,7 @@ export default function OnboardingVerifyStep() {
       <div className="space-y-1">
         <h3 className="text-base font-semibold">Confirm it&apos;s you</h3>
         <p className="text-xs text-muted-foreground">
-          Enter the code we sent to priya@orbitlabs.co
+          Enter the code we sent to hello@designali.com
         </p>
       </div>
       <InputOTP maxLength={6} pattern={REGEXP_ONLY_DIGITS}>

@@ -1,4 +1,6 @@
-import { TrendingUpIcon } from "lucide-react"
+import {
+  TrendingUp as TrendingUpIcon,
+} from "@designali/icons"
 
 import {
   Alert,
@@ -17,7 +19,7 @@ export default function AlertExperimentResult() {
   return (
     <Alert variant="success" className="max-w-md">
       <TrendingUpIcon />
-      <AlertTitle>Variant B is winning: +21% checkout conversion</AlertTitle>
+      <AlertTitle>Variant B is winning: +21% template checkout conversion</AlertTitle>
       <AlertDescription>
         <div className="my-1.5 grid grid-cols-3 border bg-background">
           {stats.map((stat) => (

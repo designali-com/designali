@@ -1,4 +1,6 @@
-import { Globe } from "lucide-react"
+import {
+  Globe,
+} from "@designali/icons"
 
 const regions = [
   { code: "US", name: "United States", visitors: 182400, change: 6.2 },
@@ -31,9 +33,9 @@ export default function Analytics10() {
             <span className="flex size-10 items-center justify-center border">
               <Globe className="size-4" />
             </span>
-            <h2 className="mt-6 text-3xl font-medium tracking-tight">Where readers come from</h2>
+            <h2 className="mt-6 text-3xl font-medium tracking-tight">Where designali.com readers come from</h2>
             <p className="mt-3 text-sm text-muted-foreground">
-              Field Notes audience by country, October 2026. Visitors are
+              Designali blog audience by country, October 2026. Visitors are
               deduplicated per device across the month.
             </p>
           </div>

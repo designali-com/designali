@@ -1,7 +1,11 @@
 "use client"
 
 import * as React from "react"
-import { FolderIcon, FolderInputIcon, FolderOpenIcon } from "lucide-react"
+import {
+  Folder as FolderIcon,
+  FolderInput as FolderInputIcon,
+  FolderOpen as FolderOpenIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -17,12 +21,12 @@ import {
 import { cn } from "@workspace/ui/lib/utils"
 
 const folders = [
-  { id: "root", name: "My Drive", depth: 0 },
+  { id: "root", name: "Designali", depth: 0 },
   { id: "clients", name: "Clients", depth: 1 },
-  { id: "acme", name: "Bluefin Retail", depth: 2 },
-  { id: "kestrel", name: "Kestrel Health", depth: 2 },
-  { id: "internal", name: "Internal", depth: 1 },
-  { id: "hiring", name: "Hiring", depth: 2 },
+  { id: "acme", name: "Brand identity", depth: 2 },
+  { id: "kestrel", name: "Next.js website", depth: 2 },
+  { id: "internal", name: "Studio", depth: 1 },
+  { id: "hiring", name: "Templates", depth: 2 },
   { id: "archive", name: "Archive", depth: 1 },
 ]
 

@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { UserPlusIcon, UserSearchIcon } from "lucide-react"
+import {
+  UserPlus as UserPlusIcon,
+  UserSearch as UserSearchIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -13,7 +16,7 @@ import {
   ComboboxList,
 } from "@workspace/ui/components/combobox"
 
-const teammates = ["Ada Morgan", "Bilal Khan", "Chloe Dubois", "Diego Alvarez"]
+const teammates = ["Ali Imam", "Bilal", "Chloe", "Diego"]
 
 export default function EmptyStateInvite() {
   const [query, setQuery] = React.useState("")

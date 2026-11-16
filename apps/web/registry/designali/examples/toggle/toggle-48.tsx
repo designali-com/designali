@@ -1,9 +1,11 @@
-import { FilterIcon } from "lucide-react"
+import {
+  Funnel as FilterIcon,
+} from "@designali/icons"
 
 import { Toggle } from "@workspace/ui/components/toggle"
 
 const searches = [
-  { label: "Open bugs", count: 14 },
+  { label: "Open block requests", count: 14 },
   { label: "Assigned to me", count: 6 },
   { label: "Due this week", count: 3 },
 ]

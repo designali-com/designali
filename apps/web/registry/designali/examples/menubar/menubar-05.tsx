@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { ChartColumnIcon, SigmaIcon } from "lucide-react"
+import {
+  ChartColumn as ChartColumnIcon,
+  Sigma as SigmaIcon,
+} from "@designali/icons"
 
 import {
   Menubar,

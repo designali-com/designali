@@ -18,19 +18,19 @@ import {
 const rates = [
   {
     id: "ground",
-    carrier: "Parcelway Ground",
+    carrier: "Standard turnaround",
     eta: "5-7 business days",
     price: 0,
   },
   {
     id: "two-day",
-    carrier: "Parcelway 2-Day",
+    carrier: "Priority turnaround",
     eta: "2 business days",
     price: 12.5,
   },
   {
     id: "overnight",
-    carrier: "SwiftAir Overnight",
+    carrier: "Rush turnaround",
     eta: "Next business day",
     price: 29,
   },

@@ -1,33 +1,35 @@
-import { ArrowUpRight } from "lucide-react"
+import {
+  ArrowUpRight,
+} from "@designali/icons"
 
 const projects = [
   {
-    client: "Northwind Coffee",
-    title: "A retail identity built around the roast",
-    services: ["Brand identity", "Packaging"],
-    year: "2026",
-    gradient: "from-amber-900/80 via-amber-700/50 to-orange-300/40",
+    client: "Dalim Agency",
+    title: "An agency site where design meets production-ready code",
+    services: ["Brand identity", "Web design"],
+    year: "Case study",
+    image: "/images/templates/dalim-agency-old.jpg",
   },
   {
-    client: "Lumen Health",
-    title: "Patient app redesign for 2M monthly users",
-    services: ["Product design", "Research"],
-    year: "2026",
-    gradient: "from-sky-900/80 via-sky-600/50 to-cyan-200/40",
+    client: "Dalim UI",
+    title: "A component library for designers who code",
+    services: ["UI/UX", "Design system"],
+    year: "Case study",
+    image: "/images/templates/dalim-ui-old.jpg",
   },
   {
-    client: "Atlas Mobility",
-    title: "Fleet dashboard for electric delivery vans",
-    services: ["UX", "Data visualization"],
-    year: "2025",
-    gradient: "from-emerald-900/80 via-emerald-600/50 to-lime-200/40",
+    client: "Designali",
+    title: "Design agency template built with Next.js",
+    services: ["Template", "Development"],
+    year: "Template",
+    image: "/images/templates/design-agency.jpg",
   },
   {
-    client: "Folio Press",
-    title: "Editorial platform for independent publishers",
+    client: "Dalim Fonts",
+    title: "A type foundry website for custom typefaces",
     services: ["Web design", "Development"],
-    year: "2025",
-    gradient: "from-rose-900/80 via-rose-600/50 to-pink-200/40",
+    year: "Case study",
+    image: "/images/templates/dalim-fonts-old.jpg",
   },
 ]
 
@@ -40,8 +42,8 @@ export default function Portfolio01() {
             Selected work
           </h2>
           <p className="text-muted-foreground md:text-right">
-            Brand, product, and digital work for teams who care about the details.
-            <br className="hidden md:block" /> 2023 – present.
+            Brand, UI/UX and web work by Designali — design se code tak.
+            <br className="hidden md:block" /> Dalim projects and Designali templates.
           </p>
         </div>
 
@@ -53,8 +55,11 @@ export default function Portfolio01() {
               className={`group block ${i % 2 === 1 ? "md:mt-24" : ""}`}
             >
               <div className="relative aspect-[4/5] overflow-hidden border border-border bg-muted">
-                <div
-                  className={`absolute inset-0 bg-gradient-to-br ${project.gradient} transition-transform duration-500 group-hover:scale-105`}
+                <img
+                  src={project.image}
+                  alt={`${project.client} project by Designali`}
+                  loading="lazy"
+                  className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <span className="absolute right-4 bottom-4 flex size-10 items-center justify-center bg-background opacity-0 transition-opacity group-hover:opacity-100">
                   <ArrowUpRight className="size-4" />

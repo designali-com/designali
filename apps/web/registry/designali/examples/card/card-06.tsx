@@ -1,4 +1,6 @@
-import { TrendingUpIcon } from "lucide-react"
+import {
+  TrendingUp as TrendingUpIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import {
@@ -14,7 +16,7 @@ export default function RevenueStatCard() {
   return (
     <Card className="w-full max-w-xs">
       <CardHeader>
-        <CardDescription>Monthly recurring revenue</CardDescription>
+        <CardDescription>Designali Pro recurring revenue</CardDescription>
         <CardTitle className="text-2xl font-semibold tabular-nums">
           $48,290
         </CardTitle>
@@ -33,7 +35,7 @@ export default function RevenueStatCard() {
           Up $5,340 from last month <TrendingUpIcon className="size-3.5" />
         </span>
         <span className="text-muted-foreground">
-          142 new subscriptions, 9 churned
+          142 new Pro licenses, 9 churned
         </span>
       </CardFooter>
     </Card>

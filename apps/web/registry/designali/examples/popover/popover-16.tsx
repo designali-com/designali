@@ -1,4 +1,6 @@
-import { KeyboardIcon } from "lucide-react"
+import {
+  Keyboard as KeyboardIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Kbd, KbdGroup } from "@workspace/ui/components/kbd"

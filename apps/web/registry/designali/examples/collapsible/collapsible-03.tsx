@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { MaximizeIcon, MinimizeIcon } from "lucide-react"
+import {
+  Maximize as MaximizeIcon,
+  Minimize as MinimizeIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {

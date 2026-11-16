@@ -1,12 +1,14 @@
-import { ArrowRight } from "lucide-react"
+import {
+  ArrowRight,
+} from "@designali/icons"
 
 const small = [
-  "Kestrel",
-  "Orbital",
-  "Fieldnote",
-  "Tessel",
-  "Arcwell",
-  "Quarry",
+  "Dalim",
+  "Dalim UI",
+  "Dalim Fonts",
+  "Dalim Icons",
+  "Dalim Works",
+  "Dalim Visuals",
 ]
 
 export default function Clients16() {
@@ -14,7 +16,7 @@ export default function Clients16() {
     <section className="w-full bg-background py-20 md:py-24">
       <div className="mx-auto max-w-7xl px-6">
         <h2 className="max-w-2xl text-3xl font-semibold tracking-tight md:text-4xl">
-          From seed-stage startups to public companies.
+          From Dalim to Designali, one studio and many brands.
         </h2>
         <div className="mt-12 grid grid-cols-2 gap-4 md:grid-cols-4 md:grid-rows-[repeat(3,minmax(0,8rem))]">
           <a
@@ -35,16 +37,16 @@ export default function Clients16() {
                 <path d="M12 2 22 20H2Z" />
               </svg>
               <span className="text-xl font-semibold tracking-tight">
-                Meridian
+                Designali
               </span>
             </div>
             <div className="relative">
               <p className="text-5xl font-semibold tracking-tight md:text-6xl">
-                $4.2M
+                460+
               </p>
               <p className="mt-2 max-w-xs text-sm text-background/70">
-                saved in agency fees after moving 14 product teams onto one
-                shared library.
+                production-ready blocks, designed in Figma and shipped in
+                Next.js on designali.com.
               </p>
               <span className="mt-6 inline-flex items-center gap-1 text-sm font-medium">
                 Read case study
@@ -54,10 +56,10 @@ export default function Clients16() {
           </a>
           <div className="col-span-2 flex flex-col justify-center border border-border bg-muted/50 p-6">
             <p className="text-sm leading-6">
-              &ldquo;Our first redesign in five years shipped in six weeks.&rdquo;
+              &ldquo;Where thoughtful design meets production-ready code.&rdquo;
             </p>
             <p className="mt-3 text-xs text-muted-foreground">
-              Ines Walker, CPO at Halcyon
+              Ali Imam, Founder of Designali
             </p>
           </div>
           {small.map((name) => (

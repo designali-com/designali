@@ -1,7 +1,11 @@
 "use client"
 
 import * as React from "react"
-import { Columns2Icon, Columns3Icon, SquareIcon } from "lucide-react"
+import {
+  Columns2 as Columns2Icon,
+  Columns3 as Columns3Icon,
+  Square as SquareIcon,
+} from "@designali/icons"
 
 import {
   ToggleGroup,

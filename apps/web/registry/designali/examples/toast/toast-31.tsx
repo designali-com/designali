@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { HeartIcon } from "lucide-react"
+import {
+  Heart as HeartIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Toaster, createToastManager } from "@workspace/ui/components/toast"
@@ -19,7 +21,7 @@ export default function DeduplicatedToast() {
       id: "likes",
       title: "Liked",
       description:
-        "You liked this post " + next + (next === 1 ? " time" : " times") + ".",
+        "You liked this Designali block " + next + (next === 1 ? " time" : " times") + ".",
       timeout: 2000,
     })
   }

@@ -1,12 +1,12 @@
 import {
-  BotIcon,
-  CircleAlertIcon,
-  ClockIcon,
-  InboxIcon,
-  TimerIcon,
-  UserIcon,
-  WorkflowIcon,
-} from "lucide-react"
+  Bot as BotIcon,
+  CircleAlert as CircleAlertIcon,
+  Clock as ClockIcon,
+  Inbox as InboxIcon,
+  Timer as TimerIcon,
+  User as UserIcon,
+  Workflow as WorkflowIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import {

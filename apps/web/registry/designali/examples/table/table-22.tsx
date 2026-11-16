@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { CheckIcon, CopyIcon } from "lucide-react"
+import {
+  Check as CheckIcon,
+  Copy as CopyIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -15,13 +18,13 @@ import {
 
 const keys = [
   {
-    name: "Production server",
+    name: "designali.com production",
     prefix: "key_demo_4f9a",
     created: "Aug 2",
     lastUsed: "2 min ago",
   },
   {
-    name: "CI pipeline",
+    name: "Registry CI pipeline",
     prefix: "key_demo_b21c",
     created: "Sep 18",
     lastUsed: "1 day ago",

@@ -12,10 +12,10 @@ import {
 } from "@workspace/ui/components/card"
 
 const attendees = [
-  { initials: "FL", name: "Farah Lee", rsvp: "yes" },
-  { initials: "GM", name: "Gabe Moss", rsvp: "yes" },
-  { initials: "HI", name: "Hiro Ito", rsvp: "maybe" },
-  { initials: "JW", name: "Jade Wu", rsvp: "no" },
+  { initials: "AI", name: "Ali Imam", rsvp: "yes" },
+  { initials: "SA", name: "Sara", rsvp: "yes" },
+  { initials: "OM", name: "Omar", rsvp: "maybe" },
+  { initials: "CL", name: "Client", rsvp: "no" },
 ]
 
 const rsvpStyle: Record<string, string> = {
@@ -28,7 +28,7 @@ export default function MeetingAttendeesCard() {
   return (
     <Card className="w-full max-w-sm">
       <CardHeader>
-        <CardTitle>Q3 roadmap review</CardTitle>
+        <CardTitle>Designali brand review</CardTitle>
         <CardDescription>Thu, Sep 12 · 10:00 - 11:00 AM</CardDescription>
       </CardHeader>
       <CardContent className="flex flex-col gap-3">

@@ -11,10 +11,10 @@ import {
 } from "@workspace/ui/components/tooltip"
 
 const collaborators = [
-  { name: "Iris Novak", initials: "IN" },
-  { name: "Kofi Mensah", initials: "KM" },
-  { name: "Sofia Reyes", initials: "SR" },
-  { name: "Arjun Patel", initials: "AP" },
+  { name: "Ali Imam", initials: "AI" },
+  { name: "Sara · Designer", initials: "SA" },
+  { name: "Omar · Developer", initials: "OM" },
+  { name: "Zara · Motion", initials: "ZA" },
 ]
 
 export default function AvatarGroupWithTooltips() {

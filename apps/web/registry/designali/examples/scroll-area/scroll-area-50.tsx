@@ -34,7 +34,7 @@ const sections = [
   ],
   [
     "Contact",
-    "Email privacy@fieldnote.app with any questions about this policy.",
+    "Email hello@designali.com with any questions about this policy.",
   ],
 ]
 

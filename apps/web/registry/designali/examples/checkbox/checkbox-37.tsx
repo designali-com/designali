@@ -25,7 +25,7 @@ export default function SurveyOtherOption() {
 
   return (
     <FieldSet className="w-full max-w-xs">
-      <FieldLegend>How did you hear about us?</FieldLegend>
+      <FieldLegend>How did you hear about Designali?</FieldLegend>
       <FieldDescription>Select all that apply.</FieldDescription>
       <FieldGroup className="gap-3">
         {options.map((option) => (

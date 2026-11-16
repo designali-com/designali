@@ -1,13 +1,15 @@
 "use client"
 
 import { useState } from "react"
-import { ChevronDown } from "lucide-react"
+import {
+  ChevronDown,
+} from "@designali/icons"
 
 const columns = [
-  { title: "Shop", links: ["Running", "Training", "Trail", "Recovery", "Gift cards"] },
-  { title: "Help", links: ["Order status", "Shipping", "Returns", "Size guide", "Contact us"] },
-  { title: "Company", links: ["Our story", "Materials", "Sustainability", "Careers", "Press"] },
-  { title: "Community", links: ["Run clubs", "Ambassadors", "Events", "Journal"] },
+  { title: "Shop", links: ["Templates", "Blocks", "UI Designs", "Icons", "Logos"] },
+  { title: "Help", links: ["Docs", "Pricing", "Licensing", "Downloads", "Contact us"] },
+  { title: "Studio", links: ["Work", "Ali Imam", "Services", "Case studies", "Terms"] },
+  { title: "Community", links: ["Instagram", "X", "LinkedIn", "Blogs"] },
 ]
 
 export default function Footer14() {
@@ -18,10 +20,10 @@ export default function Footer14() {
       <div className="mx-auto max-w-7xl px-6 py-12 md:py-16">
         <div className="grid gap-10 md:grid-cols-[1fr_2fr]">
           <div>
-            <p className="text-xl font-bold tracking-tight italic">STRIDEWELL</p>
+            <p className="text-xl font-bold tracking-tight italic">DESIGNALI</p>
             <p className="mt-3 max-w-xs text-sm leading-6 text-muted-foreground">
-              Running shoes engineered in Portland and tested on 40,000 miles
-              of real roads before they ship.
+              Templates, blocks and design resources crafted by Ali Imam and
+              tested in real projects before they ship.
             </p>
           </div>
           <div className="md:grid md:grid-cols-4 md:gap-8">
@@ -59,11 +61,11 @@ export default function Footer14() {
           </div>
         </div>
         <div className="mt-12 flex flex-col gap-3 text-xs text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
-          <p>© 2026 Stridewell Athletics Inc.</p>
+          <p>© 2026 Designali</p>
           <div className="flex flex-wrap gap-x-5 gap-y-2">
-            <a href="#" className="hover:text-foreground">Privacy</a>
-            <a href="#" className="hover:text-foreground">Terms</a>
-            <a href="#" className="hover:text-foreground">Do not sell my info</a>
+            <a href="/contact" className="hover:text-foreground">Contact</a>
+            <a href="/docs/legal/terms" className="hover:text-foreground">Terms</a>
+            <a href="/docs" className="hover:text-foreground">Docs</a>
           </div>
         </div>
       </div>

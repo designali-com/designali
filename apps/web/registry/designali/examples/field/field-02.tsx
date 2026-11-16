@@ -13,7 +13,7 @@ export function FieldInput() {
       <FieldGroup>
         <Field>
           <FieldLabel htmlFor="username">Username</FieldLabel>
-          <Input id="username" type="text" placeholder="Max Leiter" />
+          <Input id="username" type="text" placeholder="aliimam" />
           <FieldDescription>
             Choose a unique username for your account.
           </FieldDescription>

@@ -1,15 +1,15 @@
 import {
-  AppWindowIcon,
-  ContrastIcon,
-  CropIcon,
-  DropletIcon,
-  FlipHorizontalIcon,
-  PaletteIcon,
-  RotateCwIcon,
-  ScalingIcon,
-  SunIcon,
-  WandSparklesIcon,
-} from "lucide-react"
+  AppWindow as AppWindowIcon,
+  Contrast as ContrastIcon,
+  Crop as CropIcon,
+  Droplet as DropletIcon,
+  FlipHorizontal2 as FlipHorizontalIcon,
+  Palette as PaletteIcon,
+  RotateCw as RotateCwIcon,
+  Scaling as ScalingIcon,
+  Sun as SunIcon,
+  WandSparkles as WandSparklesIcon,
+} from "@designali/icons"
 
 import {
   Menubar,

@@ -1,4 +1,8 @@
-import { Check, Lock, Play } from "lucide-react"
+import {
+  Check,
+  Lock,
+  Play,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { cn } from "@workspace/ui/lib/utils"
@@ -9,7 +13,7 @@ const parts = [
   { n: 3, title: "Building the first ten components", read: 14, status: "current" },
   { n: 4, title: "Documentation people open on purpose", read: 9, status: "upcoming" },
   { n: 5, title: "Versioning, deprecation, and saying no", read: 12, status: "upcoming" },
-  { n: 6, title: "Measuring adoption without surveillance", read: 8, status: "locked" },
+  { n: 6, title: "Shipping it as Designali blocks", read: 8, status: "locked" },
 ] as const
 
 export default function Blog14() {
@@ -27,7 +31,7 @@ export default function Blog14() {
                 Design systems from zero
               </h2>
               <p className="mt-4 text-sm leading-6 text-muted-foreground">
-                A practical series from the Gridline team on starting, shipping, and
+                A practical series from Ali Imam on starting, shipping, and
                 maintaining a design system when you are the only person doing it.
               </p>
             </div>

@@ -33,7 +33,7 @@ export default function SettingsSideNavSplit() {
       <div className="flex flex-1 flex-col gap-1 p-4">
         <span className="text-sm font-medium">{active}</span>
         <span className="text-xs text-muted-foreground">
-          Manage {active.toLowerCase()} preferences for the Fieldnote workspace.
+          Manage {active.toLowerCase()} preferences for the Designali workspace.
         </span>
       </div>
     </div>

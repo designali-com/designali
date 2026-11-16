@@ -1,4 +1,6 @@
-import { ArrowRightIcon } from "lucide-react"
+import {
+  ArrowRight as ArrowRightIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import {

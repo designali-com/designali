@@ -2,13 +2,13 @@
 
 import * as React from "react"
 import {
-  CopyIcon,
-  HighlighterIcon,
-  LanguagesIcon,
-  MessageSquarePlusIcon,
-  SearchIcon,
-  Volume2Icon,
-} from "lucide-react"
+  Copy as CopyIcon,
+  Highlighter as HighlighterIcon,
+  Languages as LanguagesIcon,
+  MessageSquarePlus as MessageSquarePlusIcon,
+  Search as SearchIcon,
+  Volume2 as Volume2Icon,
+} from "@designali/icons"
 
 import {
   ContextMenu,
@@ -30,7 +30,7 @@ export default function ArticleTextMenu() {
   return (
     <ContextMenu>
       <ContextMenuTrigger className="w-full max-w-md select-text">
-        <h3 className="mb-1 text-sm font-semibold">Why tide pools matter</h3>
+        <h3 className="mb-1 text-sm font-semibold">Design se code tak</h3>
         <p
           className={cn(
             "text-sm leading-relaxed text-muted-foreground",
@@ -38,9 +38,9 @@ export default function ArticleTextMenu() {
               "bg-amber-200/60 text-foreground dark:bg-amber-500/30"
           )}
         >
-          Tide pools are miniature ecosystems that rebuild themselves twice a
-          day. Sea stars, anemones, and hermit crabs survive crashing waves and
-          hours of sun by adapting in ways scientists are still uncovering.
+          Designali is where thoughtful design meets production-ready code. Ali
+          Imam designs and builds digital experiences that look great, feel
+          intuitive, and work beautifully, from brand identity to Next.js.
         </p>
       </ContextMenuTrigger>
       <ContextMenuContent className="w-52">

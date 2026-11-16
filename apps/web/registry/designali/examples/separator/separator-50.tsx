@@ -4,9 +4,9 @@ import { Progress } from "@workspace/ui/components/progress"
 import { Separator } from "@workspace/ui/components/separator"
 
 const meters = [
-  { label: "Seats", used: 8, limit: 10 },
-  { label: "Storage", used: 34, limit: 50, unit: "GB" },
-  { label: "API calls", used: 92, limit: 100, unit: "k" },
+  { label: "Team seats", used: 8, limit: 10 },
+  { label: "Template downloads", used: 34, limit: 50, unit: "" },
+  { label: "Icon exports", used: 92, limit: 100, unit: "k" },
 ]
 
 export default function UsageMeterSections() {

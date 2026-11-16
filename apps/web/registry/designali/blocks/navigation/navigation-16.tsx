@@ -8,27 +8,27 @@ const sections = [
   {
     id: "summary",
     title: "Summary",
-    body: "Harborline processes 2.4 million shipping events per day across 11 regional hubs. This report covers reliability, latency and cost for Q3.",
+    body: "designali.com serves 460+ blocks, 240+ landing pages and 4000+ icons to designers and developers worldwide. This report covers reliability, speed and cost for Q3.",
   },
   {
     id: "reliability",
     title: "Reliability",
-    body: "Event delivery success held at 99.982% across the quarter. Two incidents in August accounted for most missed deliveries, both traced to a misconfigured retry budget.",
+    body: "Uptime held at 99.98% across the quarter. Two incidents in August accounted for most failed downloads, both traced to a misconfigured cache rule.",
   },
   {
     id: "latency",
     title: "Latency",
-    body: "Median end-to-end latency dropped from 410ms to 260ms after moving label generation onto edge workers. The 99th percentile is now under 1.2 seconds.",
+    body: "Median page load dropped from 410ms to 260ms after moving block previews onto the edge. The 99th percentile is now under 1.2 seconds.",
   },
   {
     id: "cost",
     title: "Cost",
-    body: "Compute spend fell 18% quarter over quarter. Storage grew 9% as we extended raw event retention from 30 to 90 days for audit requirements.",
+    body: "Hosting spend fell 18% quarter over quarter. Storage grew 9% as we added new templates, UI designs and Figma source files.",
   },
   {
     id: "next",
     title: "Next quarter",
-    body: "Priorities are multi-region failover for the Rotterdam hub, a public status page, and replacing the legacy carrier adapter for rail freight.",
+    body: "Priorities are a public status page, faster icon search, and a new mobile UI kit for the Designali library.",
   },
 ]
 
@@ -61,7 +61,7 @@ export default function Navigation16() {
     <section className="w-full bg-background py-16">
       <div className="mx-auto grid max-w-5xl gap-8 px-6 md:grid-cols-[200px_1fr]">
         <nav aria-label="Report sections" className="md:sticky md:top-6 md:h-fit">
-          <p className="text-xs tracking-widest text-muted-foreground uppercase">Q3 platform report</p>
+          <p className="text-xs tracking-widest text-muted-foreground uppercase">Designali Q3 report</p>
           <div className="mt-3 h-0.5 bg-muted">
             <div
               className="h-full bg-foreground transition-all duration-300"

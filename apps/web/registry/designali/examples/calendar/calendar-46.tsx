@@ -2,7 +2,9 @@
 
 import * as React from "react"
 import { format, isValid } from "date-fns"
-import { CalendarIcon } from "lucide-react"
+import {
+  Calendar as CalendarIcon,
+} from "@designali/icons"
 
 import { Calendar } from "@workspace/ui/components/calendar"
 import {
@@ -34,7 +36,7 @@ export default function TypedDateInput() {
 
   return (
     <Field data-invalid={invalid || undefined} className="w-full max-w-60">
-      <FieldLabel htmlFor="typed-date">Follow-up date</FieldLabel>
+      <FieldLabel htmlFor="typed-date">Client follow-up date</FieldLabel>
       <InputGroup>
         <InputGroupInput
           id="typed-date"

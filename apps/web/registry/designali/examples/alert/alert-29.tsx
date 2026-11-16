@@ -1,4 +1,6 @@
-import { CalendarXIcon } from "lucide-react"
+import {
+  CalendarX as CalendarXIcon,
+} from "@designali/icons"
 
 import {
   Alert,
@@ -19,7 +21,7 @@ export default function AlertExpiredCardInCard() {
     <Card className="w-full max-w-sm">
       <CardHeader>
         <CardTitle>Payment method</CardTitle>
-        <CardDescription>Used for your Team plan renewal.</CardDescription>
+        <CardDescription>Used for your Designali Pro renewal.</CardDescription>
       </CardHeader>
       <CardContent className="space-y-3">
         <Alert variant="error">

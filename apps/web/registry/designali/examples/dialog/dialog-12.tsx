@@ -1,7 +1,12 @@
 "use client"
 
 import * as React from "react"
-import { FrownIcon, MehIcon, MessageSquareIcon, SmileIcon } from "lucide-react"
+import {
+  Frown as FrownIcon,
+  Meh as MehIcon,
+  MessageSquare as MessageSquareIcon,
+  Smile as SmileIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -38,9 +43,9 @@ export default function ProductFeedbackDialog() {
       </DialogTrigger>
       <DialogContent>
         <DialogHeader>
-          <DialogTitle>How was the new editor?</DialogTitle>
+          <DialogTitle>How are the new Designali blocks?</DialogTitle>
           <DialogDescription>
-            Your answer goes straight to the product team.
+            Your answer goes straight to Ali Imam.
           </DialogDescription>
         </DialogHeader>
         <ToggleGroup

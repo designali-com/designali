@@ -2,14 +2,14 @@
 
 import * as React from "react"
 import {
-  ArchiveIcon,
-  ChevronRightIcon,
-  FolderIcon,
-  FolderKanbanIcon,
-  PlusIcon,
-  SettingsIcon,
-  UsersIcon,
-} from "lucide-react"
+  Archive as ArchiveIcon,
+  ChevronRight as ChevronRightIcon,
+  Folder as FolderIcon,
+  FolderKanban as FolderKanbanIcon,
+  Plus as PlusIcon,
+  Settings as SettingsIcon,
+  Users as UsersIcon,
+} from "@designali/icons"
 
 import {
   Command,
@@ -20,7 +20,7 @@ import {
   CommandList,
 } from "@workspace/ui/components/command"
 
-const projects = ["Atlas Redesign", "Orbit API", "Harbor Mobile"]
+const projects = ["designali.com", "Designali Blocks", "Dalim Agency"]
 
 export default function NestedCommandPages() {
   const [pages, setPages] = React.useState<string[]>([])

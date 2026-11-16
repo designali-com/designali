@@ -1,4 +1,6 @@
-import { ChevronDownIcon } from "lucide-react"
+import {
+  ChevronDown as ChevronDownIcon,
+} from "@designali/icons"
 
 import {
   Accordion,
@@ -12,17 +14,17 @@ const terms = [
   {
     value: "cancellation",
     title: "Cancellation",
-    body: "You may cancel at any time. Access continues until the end of the current billing period.",
+    body: "You may cancel your Designali plan at any time. Access continues until the end of the current billing period.",
   },
   {
     value: "liability",
     title: "Limitation of liability",
-    body: "Our total liability is limited to the fees you paid in the twelve months before the claim.",
+    body: "Designali’s total liability is limited to the fees you paid in the twelve months before the claim.",
   },
   {
     value: "governing",
     title: "Governing law",
-    body: "These terms are governed by the laws of the jurisdiction where Fernhill Software is registered.",
+    body: "These terms are governed by the laws of the jurisdiction where Designali is registered. See designali.com/docs/legal/terms.",
   },
 ]
 

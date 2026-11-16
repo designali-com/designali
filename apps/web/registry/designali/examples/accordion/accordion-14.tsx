@@ -1,4 +1,7 @@
-import { ChevronDownIcon, PlusIcon } from "lucide-react"
+import {
+  ChevronDown as ChevronDownIcon,
+  Plus as PlusIcon,
+} from "@designali/icons"
 
 import {
   Accordion,
@@ -10,33 +13,33 @@ import {
 const chapters = [
   {
     value: "guides",
-    title: "Guides",
+    title: "Designali docs",
     sections: [
       {
         value: "routing",
         title: "Routing",
-        body: "Files inside the routes folder map directly to URLs.",
+        body: "Every Designali template uses the Next.js app router — folders map to URLs.",
       },
       {
         value: "data",
-        title: "Data fetching",
-        body: "Load data on the server and stream it to the page as it resolves.",
+        title: "Theming",
+        body: "Change the primary token once and every block picks up your brand colour.",
       },
     ],
   },
   {
     value: "reference",
-    title: "API reference",
+    title: "Components",
     sections: [
       {
         value: "config",
-        title: "Config file",
-        body: "All options live in a single typed config file at the project root.",
+        title: "Icons",
+        body: "Import any icon from @designali/icons — over 4000 to choose from.",
       },
       {
         value: "cli",
-        title: "CLI commands",
-        body: "dev, build, start and lint cover the full local workflow.",
+        title: "Logos",
+        body: "Brand logos from @designali/logos work as React components with a size prop.",
       },
     ],
   },

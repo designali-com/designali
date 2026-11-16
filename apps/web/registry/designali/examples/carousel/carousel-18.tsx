@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { BookmarkIcon, ClockIcon } from "lucide-react"
+import {
+  Bookmark as BookmarkIcon,
+  Code as CodeIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import { Button } from "@workspace/ui/components/button"
@@ -22,33 +25,33 @@ import { cn } from "@workspace/ui/lib/utils"
 
 const recipes = [
   {
-    title: "Charred corn tacos",
-    time: "25 min",
-    level: "Easy",
-    tone: "from-yellow-300 to-orange-500",
+    title: "Portfolio Simple",
+    time: "Next.js",
+    level: "Free",
+    src: "/images/templates/portfolio-simple.jpg",
   },
   {
-    title: "Miso glazed salmon",
-    time: "35 min",
-    level: "Medium",
-    tone: "from-orange-300 to-rose-500",
+    title: "Design Agency",
+    time: "Next.js",
+    level: "Pro",
+    src: "/images/templates/design-agency.jpg",
   },
   {
-    title: "Herb lentil salad",
-    time: "20 min",
-    level: "Easy",
-    tone: "from-lime-300 to-emerald-600",
+    title: "AI Startup",
+    time: "Next.js",
+    level: "Pro",
+    src: "/images/templates/ai.jpg",
   },
   {
-    title: "Slow roasted ragù",
-    time: "3 hr",
-    level: "Hard",
-    tone: "from-red-400 to-red-800",
+    title: "Resort",
+    time: "Next.js",
+    level: "Pro",
+    src: "/images/templates/resort.jpg",
   },
 ]
 
 export default function RecipeCardsCarousel() {
-  const [saved, setSaved] = React.useState<string[]>(["Herb lentil salad"])
+  const [saved, setSaved] = React.useState<string[]>(["AI Startup"])
 
   return (
     <Carousel
@@ -61,13 +64,16 @@ export default function RecipeCardsCarousel() {
           return (
             <CarouselItem key={recipe.title} className="sm:basis-1/2">
               <Card className="pt-0">
-                <div
-                  className={cn("relative h-28 bg-gradient-to-br", recipe.tone)}
-                >
+                <div className="relative h-28 overflow-hidden bg-muted">
+                  <img
+                    src={recipe.src}
+                    alt={recipe.title + " template"}
+                    className="absolute inset-0 size-full object-cover"
+                  />
                   <Button
                     size="icon-sm"
                     variant="secondary"
-                    aria-label={isSaved ? "Remove from saved" : "Save recipe"}
+                    aria-label={isSaved ? "Remove from saved" : "Save template"}
                     className="absolute end-2 top-2"
                     onClick={() =>
                       setSaved((list) =>
@@ -83,7 +89,7 @@ export default function RecipeCardsCarousel() {
                 <CardHeader>
                   <CardTitle>{recipe.title}</CardTitle>
                   <CardDescription className="flex items-center gap-2">
-                    <ClockIcon className="size-3" /> {recipe.time}
+                    <CodeIcon className="size-3" /> {recipe.time}
                     <Badge variant="outline">{recipe.level}</Badge>
                   </CardDescription>
                 </CardHeader>

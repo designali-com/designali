@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { SquareCheckIcon, SquareIcon } from "lucide-react"
+import {
+  SquareCheck as SquareCheckIcon,
+  Square as SquareIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Toggle } from "@workspace/ui/components/toggle"

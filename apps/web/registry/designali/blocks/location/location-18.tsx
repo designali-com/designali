@@ -1,15 +1,18 @@
-import { Accessibility, ArrowUpRight } from "lucide-react"
+import {
+  Accessibility,
+  ArrowUpRight,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 
 const branches = [
-  { city: "Glasgow", area: "Merchant City", address: "41 Ingram St, G1 1EJ", phone: "0141 555 0170", hours: "08:00-18:00", status: "Open", access: true },
-  { city: "Glasgow", area: "West End", address: "312 Byres Rd, G12 8UJ", phone: "0141 555 0193", hours: "09:00-17:30", status: "Open", access: true },
-  { city: "Edinburgh", area: "Leith", address: "18 The Shore, EH6 6QW", phone: "0131 555 0124", hours: "08:30-18:00", status: "Open", access: false },
-  { city: "Edinburgh", area: "Old Town", address: "77 Cockburn St, EH1 1BS", phone: "0131 555 0158", hours: "10:00-16:00", status: "Reduced hours", access: true },
-  { city: "Aberdeen", area: "Union Street", address: "205 Union St, AB11 6BB", phone: "01224 555 011", hours: "09:00-17:00", status: "Open", access: true },
-  { city: "Dundee", area: "Waterfront", address: "3 Riverside Dr, DD1 4XA", phone: "01382 555 046", hours: "-", status: "Opening Jan", access: true },
-  { city: "Inverness", area: "Eastgate", address: "9 Academy St, IV1 1JN", phone: "01463 555 092", hours: "09:00-17:00", status: "Open", access: false },
+  { city: "Studio", area: "New projects", address: "hello@designali.com", phone: "/contact", hours: "09:00-18:00", status: "Open", access: true },
+  { city: "Ali Imam", area: "Founder", address: "ali@designali.com", phone: "LinkedIn", hours: "09:00-17:30", status: "Open", access: true },
+  { city: "Support", area: "Templates and blocks", address: "support@designali.com", phone: "/docs", hours: "08:30-18:00", status: "Open", access: true },
+  { city: "Billing", area: "Plans and invoices", address: "billing@designali.com", phone: "/pricing", hours: "10:00-16:00", status: "Reduced hours", access: true },
+  { city: "Social", area: "X", address: "@designali_com", phone: "x.com/designali_com", hours: "09:00-17:00", status: "Open", access: true },
+  { city: "Live", area: "Workshops", address: "events@designali.com", phone: "/blogs", hours: "-", status: "Opening Jan", access: true },
+  { city: "Social", area: "Instagram", address: "@designali.code", phone: "instagram.com/designali.code", hours: "09:00-17:00", status: "Open", access: false },
 ]
 
 export default function Location18() {
@@ -19,10 +22,10 @@ export default function Location18() {
         <div className="flex flex-col justify-between gap-4 md:flex-row md:items-end">
           <div>
             <h2 className="text-4xl font-semibold tracking-tight md:text-5xl">
-              Branch directory
+              Contact directory
             </h2>
             <p className="mt-3 text-muted-foreground">
-              Thistle Mutual &middot; {branches.length} branches across Scotland
+              Designali &middot; {branches.length} ways to reach the studio, remote worldwide
             </p>
           </div>
           <a href="#" className="inline-flex items-center gap-1 text-sm font-medium hover:underline">
@@ -34,13 +37,13 @@ export default function Location18() {
           <table className="w-full min-w-[760px] text-sm">
             <thead className="sticky top-0 z-10 bg-muted text-xs text-muted-foreground">
               <tr className="[&>th]:px-4 [&>th]:py-3 [&>th]:text-start [&>th]:font-medium">
-                <th>Branch</th>
-                <th>Address</th>
-                <th>Phone</th>
+                <th>Team</th>
+                <th>Contact</th>
+                <th>Link</th>
                 <th>Today</th>
                 <th>Status</th>
                 <th className="text-center">
-                  <Accessibility className="mx-auto size-4" aria-label="Step-free access" />
+                  <Accessibility className="mx-auto size-4" aria-label="Accessible support" />
                 </th>
               </tr>
             </thead>

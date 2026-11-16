@@ -1,4 +1,7 @@
-import { CreditCardIcon, PlusIcon } from "lucide-react"
+import {
+  CreditCard as CreditCardIcon,
+  Plus as PlusIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {

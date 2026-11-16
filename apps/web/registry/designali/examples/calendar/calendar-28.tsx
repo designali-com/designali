@@ -23,7 +23,7 @@ export default function HolidayLegendCalendar() {
       />
       <div className="flex w-full justify-center gap-4 text-xs text-muted-foreground">
         <span className="flex items-center gap-1.5">
-          <span className="size-2.5 bg-rose-500/30" /> Office closed
+          <span className="size-2.5 bg-rose-500/30" /> Studio closed
         </span>
         <span className="flex items-center gap-1.5">
           <span className="size-2.5 bg-amber-500/30" /> Half day

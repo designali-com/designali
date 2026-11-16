@@ -52,7 +52,7 @@ export default function TableOfContentsJump() {
               <h4 className="text-sm font-medium">{s.title}</h4>
               <p className="text-xs leading-relaxed text-muted-foreground">
                 Everything you need to know about {s.title.toLowerCase()} at
-                Orbit Labs, from day one through your first year. Reach out to
+                Designali, from day one through your first year. Reach out to
                 the people team with questions.
               </p>
             </section>

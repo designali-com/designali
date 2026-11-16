@@ -1,4 +1,7 @@
-import { ChevronDownIcon, KeyboardIcon } from "lucide-react"
+import {
+  ChevronDown as ChevronDownIcon,
+  Keyboard as KeyboardIcon,
+} from "@designali/icons"
 
 import {
   Accordion,
@@ -14,7 +17,7 @@ const groups = [
     title: "General",
     shortcuts: [
       { action: "Open command menu", keys: ["Ctrl", "K"] },
-      { action: "Search", keys: ["/"] },
+      { action: "Search blocks", keys: ["/"] },
       { action: "Show shortcuts", keys: ["?"] },
     ],
   },
@@ -31,7 +34,7 @@ const groups = [
     value: "navigation",
     title: "Navigation",
     shortcuts: [
-      { action: "Go to inbox", keys: ["G", "I"] },
+      { action: "Go to icons", keys: ["G", "I"] },
       { action: "Next item", keys: ["J"] },
     ],
   },

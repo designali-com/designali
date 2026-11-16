@@ -13,9 +13,9 @@ import {
 } from "@workspace/ui/components/pagination"
 
 const results = [
-  { title: "Rotating API keys safely", path: "docs / security" },
-  { title: "Key scopes and permissions", path: "docs / access" },
-  { title: "Revoking a leaked key", path: "guides / incidents" },
+  { title: "Installing @designali/icons", path: "docs / icons" },
+  { title: "Using brand logos from @designali/logos", path: "docs / logos" },
+  { title: "Customizing Designali blocks with Tailwind", path: "docs / blocks" },
 ]
 
 export default function SearchResultsPagination() {
@@ -24,7 +24,7 @@ export default function SearchResultsPagination() {
   return (
     <div className="flex w-full max-w-md flex-col gap-4">
       <p className="text-xs text-muted-foreground">
-        About 1,240 results for &quot;api keys&quot;
+        About 1,240 results for &quot;designali icons&quot;
       </p>
       <ul className="flex flex-col gap-3">
         {results.map((result) => (

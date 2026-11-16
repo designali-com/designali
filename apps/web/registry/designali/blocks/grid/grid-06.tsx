@@ -1,12 +1,12 @@
 const team = [
-  { name: "Amara Osei", role: "Founder & CEO", city: "Accra", hue: 25, bio: "Previously led product at two design-tool startups. Writes the Friday memo." },
-  { name: "Tomás Ibarra", role: "Head of Engineering", city: "Madrid", hue: 200, bio: "Rendering nerd. Rebuilt our canvas engine twice and would do it again." },
-  { name: "Hana Sato", role: "Design Lead", city: "Tokyo", hue: 330, bio: "Runs crits, owns the type system, keeps a sketchbook for every release." },
-  { name: "Noah Clarke", role: "Staff Engineer", city: "Toronto", hue: 150, bio: "Collaboration and sync. Can explain CRDTs with a deck of cards." },
-  { name: "Priya Raman", role: "Product Manager", city: "Bengaluru", hue: 270, bio: "Turns 400 customer calls a year into a roadmap people actually read." },
-  { name: "Lukas Weber", role: "Brand Designer", city: "Berlin", hue: 60, bio: "Illustration, motion and the occasional very long email about kerning." },
-  { name: "Zara Malik", role: "Customer Success", city: "London", hue: 0, bio: "First call for our largest teams. Knows every workspace by name." },
-  { name: "Mateo Rossi", role: "Developer Advocate", city: "Milan", hue: 100, bio: "Writes the docs, records the videos, answers the forum at 2am." },
+  { name: "Ali Imam", role: "Founder & Design Engineer", city: "Studio", hue: 230, bio: "Designs and codes every Designali product. Design se code tak." },
+  { name: "Sara", role: "Brand Designer", city: "Brand", hue: 200, bio: "Logos, type and colour systems for Designali client projects." },
+  { name: "Rohan", role: "UI/UX Designer", city: "Product", hue: 330, bio: "Turns briefs into intuitive interfaces and clickable prototypes in Figma." },
+  { name: "Mei", role: "Frontend Developer", city: "Web", hue: 150, bio: "Ships Next.js and Tailwind CSS builds with clean, typed components." },
+  { name: "Omar", role: "Motion Designer", city: "CGI", hue: 270, bio: "CGI, 3D and motion for brand launches and landing page heroes." },
+  { name: "Lina", role: "Design Systems", city: "Systems", hue: 60, bio: "Keeps tokens, components and Figma libraries in sync across 460+ blocks." },
+  { name: "Dev", role: "Client Success", city: "Clients", hue: 0, bio: "First point of contact for Designali clients at hello@designali.com." },
+  { name: "Noor", role: "Content Designer", city: "Blogs", hue: 100, bio: "Writes the docs and the Designali blog, and answers support emails." },
 ]
 
 function initials(name: string) {
@@ -22,14 +22,14 @@ export default function Grid06() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="grid gap-6 md:grid-cols-2 md:items-end">
           <div>
-            <p className="text-xs tracking-widest text-muted-foreground uppercase">The team</p>
+            <p className="text-xs tracking-widest text-muted-foreground uppercase">The Designali team</p>
             <h2 className="mt-3 text-4xl font-semibold tracking-tight md:text-5xl">
-              Small team, eight time zones.
+              Small studio, design se code tak.
             </h2>
           </div>
           <p className="max-w-md text-sm leading-6 text-muted-foreground md:justify-self-end">
-            We are a fully remote crew of designers and engineers. Hover a card
-            to meet the people behind the product.
+            Founded by Ali Imam, Designali is a small studio of designers and
+            developers. Hover a card to meet the people behind the work.
           </p>
         </div>
 

@@ -24,14 +24,14 @@ export default function JobApplicationSections() {
           <div className="grid grid-cols-2 gap-3">
             <Field>
               <FieldLabel htmlFor="job-name">Full name</FieldLabel>
-              <Input id="job-name" placeholder="Rafael Ortiz" />
+              <Input id="job-name" placeholder="Ali Imam" />
             </Field>
             <Field>
               <FieldLabel htmlFor="job-email">Email</FieldLabel>
               <Input
                 id="job-email"
                 type="email"
-                placeholder="rafael@mail.com"
+                placeholder="ali@designali.com"
               />
             </Field>
           </div>
@@ -65,7 +65,7 @@ export default function JobApplicationSections() {
           <FieldLegend>Links</FieldLegend>
           <Field>
             <FieldLabel htmlFor="job-portfolio">Portfolio</FieldLabel>
-            <Input id="job-portfolio" type="url" placeholder="https://" />
+            <Input id="job-portfolio" type="url" placeholder="https://www.designali.com" />
             <FieldDescription>
               A site, case study, or repository.
             </FieldDescription>

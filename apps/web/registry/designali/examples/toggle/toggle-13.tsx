@@ -1,4 +1,6 @@
-import { HeartIcon } from "lucide-react"
+import {
+  Heart as HeartIcon,
+} from "@designali/icons"
 
 import { Toggle } from "@workspace/ui/components/toggle"
 

@@ -1,7 +1,16 @@
 "use client"
 
 import { useState } from "react"
-import { ArrowLeft, ArrowRight, Check, Code2, Megaphone, Palette, Plus, X } from "lucide-react"
+import {
+  ArrowLeft,
+  ArrowRight,
+  Check,
+  CodeXml as Code2,
+  Megaphone,
+  Palette,
+  Plus,
+  X,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Input } from "@workspace/ui/components/input"
@@ -9,9 +18,9 @@ import { Label } from "@workspace/ui/components/label"
 import { cn } from "@workspace/ui/lib/utils"
 
 const roles = [
-  { id: "design", icon: Palette, label: "Design", text: "Mockups, prototypes, brand" },
-  { id: "engineering", icon: Code2, label: "Engineering", text: "Specs, tickets, releases" },
-  { id: "marketing", icon: Megaphone, label: "Marketing", text: "Campaigns and content" },
+  { id: "design", icon: Palette, label: "Design", text: "UI/UX, brand identity, Figma" },
+  { id: "engineering", icon: Code2, label: "Engineering", text: "Next.js, React, Tailwind CSS" },
+  { id: "marketing", icon: Megaphone, label: "Marketing", text: "Launches, blogs and socials" },
 ]
 
 const sizes = ["Just me", "2-10", "11-50", "51-200", "200+"]
@@ -21,7 +30,7 @@ export default function Authentication09() {
   const [role, setRole] = useState("design")
   const [size, setSize] = useState("2-10")
   const [workspace, setWorkspace] = useState("Brightfold")
-  const [invites, setInvites] = useState<string[]>(["maya@brightfold.co"])
+  const [invites, setInvites] = useState<string[]>(["ali@designali.com"])
   const [draft, setDraft] = useState("")
 
   const total = 3
@@ -34,7 +43,7 @@ export default function Authentication09() {
       </div>
       <div className="mx-auto flex min-h-[680px] max-w-xl flex-col px-6 py-12">
         <div className="flex items-center justify-between text-sm text-muted-foreground">
-          <span className="font-semibold text-foreground">Taskloom</span>
+          <span className="font-semibold text-foreground">Designali</span>
           <span className="tabular-nums">Step {step + 1} of {total}</span>
         </div>
 
@@ -43,7 +52,7 @@ export default function Authentication09() {
             <div className="space-y-8">
               <div>
                 <h2 className="text-3xl font-semibold tracking-tight">What kind of work do you do?</h2>
-                <p className="mt-2 text-muted-foreground">We&apos;ll set up templates that fit how you work.</p>
+                <p className="mt-2 text-muted-foreground">We&apos;ll pick Designali templates and blocks that fit how you work.</p>
               </div>
               <div className="grid gap-3">
                 {roles.map((item) => (
@@ -111,7 +120,7 @@ export default function Authentication09() {
             <div className="space-y-8">
               <div>
                 <h2 className="text-3xl font-semibold tracking-tight">Invite your teammates</h2>
-                <p className="mt-2 text-muted-foreground">Taskloom works best with your whole team. You can skip this.</p>
+                <p className="mt-2 text-muted-foreground">Designali works best with your whole team. You can skip this.</p>
               </div>
               <form
                 className="flex gap-2"
@@ -121,7 +130,7 @@ export default function Authentication09() {
                   setDraft("")
                 }}
               >
-                <Input type="email" value={draft} onChange={(event) => setDraft(event.target.value)} placeholder="name@company.com" className="h-11" />
+                <Input type="email" value={draft} onChange={(event) => setDraft(event.target.value)} placeholder="name@designali.com" className="h-11" />
                 <Button type="submit" variant="outline" className="h-11">
                   <Plus />
                   Add

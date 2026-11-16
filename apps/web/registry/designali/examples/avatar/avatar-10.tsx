@@ -6,16 +6,16 @@ import {
 
 const members = [
   {
-    name: "Ava Lindqvist",
-    initials: "AL",
+    name: "Ali Imam",
+    initials: "AI",
     status: "Online",
     dot: "bg-emerald-500",
   },
-  { name: "Ravi Menon", initials: "RM", status: "Away", dot: "bg-amber-500" },
-  { name: "Clara Dubois", initials: "CD", status: "Busy", dot: "bg-red-500" },
+  { name: "Sara", initials: "SA", status: "Away", dot: "bg-amber-500" },
+  { name: "Omar", initials: "OM", status: "Busy", dot: "bg-red-500" },
   {
-    name: "Owen Park",
-    initials: "OP",
+    name: "Zara",
+    initials: "ZA",
     status: "Offline",
     dot: "bg-muted-foreground",
   },

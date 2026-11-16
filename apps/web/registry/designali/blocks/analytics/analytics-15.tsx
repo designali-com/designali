@@ -25,8 +25,8 @@ export default function Analytics15() {
               Mobile overtook desktop in September
             </h2>
             <p className="mt-4 text-sm leading-6 text-muted-foreground">
-              Share of sessions on Parcel &amp; Pine by device. The native app has
-              more than doubled since the June release of saved carts.
+              Share of sessions on designali.com by device. The native app has
+              more than doubled since the June release of the Designali Icons app.
             </p>
             <ul className="mt-8 space-y-3">
               {devices.map((d) => {

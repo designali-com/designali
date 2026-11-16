@@ -3,8 +3,9 @@
 import { useState } from "react"
 
 import { Button } from "@workspace/ui/components/button"
+import { Logo } from "@/src/components/logo"
 
-const links = ["Home", "Product", "Pricing", "Customers", "Company"]
+const links = ["Home", "Templates", "Blocks", "Pricing", "Docs"]
 
 export default function Header18() {
   const [active, setActive] = useState(0)
@@ -14,11 +15,8 @@ export default function Header18() {
       <header className="border-b">
         <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-6">
           <a href="#" className="flex items-center gap-2 text-sm font-semibold">
-            <svg viewBox="0 0 24 24" className="size-6" aria-hidden>
-              <circle cx="8" cy="12" r="6" className="fill-foreground" />
-              <circle cx="16" cy="12" r="6" className="fill-foreground/40" />
-            </svg>
-            Tandem
+            <Logo className="size-6" />
+            designali
           </a>
           <nav className="relative hidden border bg-muted/50 p-1 md:block">
             <span

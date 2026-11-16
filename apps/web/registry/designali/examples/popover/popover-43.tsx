@@ -1,7 +1,11 @@
 "use client"
 
 import * as React from "react"
-import { InboxIcon, PlusIcon, SearchIcon } from "lucide-react"
+import {
+  Inbox as InboxIcon,
+  Plus as PlusIcon,
+  Search as SearchIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {

@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { ChevronLeftIcon } from "lucide-react"
+import {
+  ChevronLeft as ChevronLeftIcon,
+} from "@designali/icons"
 
 import {
   Avatar,
@@ -10,7 +12,7 @@ import {
 } from "@workspace/ui/components/avatar"
 import { cn } from "@workspace/ui/lib/utils"
 
-const contributors = ["AH", "BC", "DE", "FG", "HJ", "KL", "MN", "PQ", "RS"]
+const contributors = ["AI", "DA", "SA", "OM", "ZA", "KA", "NA", "RE", "MA"]
 
 export default function ExpandableContributorStack() {
   const [expanded, setExpanded] = React.useState(false)

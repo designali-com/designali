@@ -8,7 +8,7 @@ export default function AccessibleSkeleton() {
       aria-live="polite"
       className="flex w-full max-w-sm flex-col gap-3 border p-4"
     >
-      <span className="sr-only">Loading your recent invoices…</span>
+      <span className="sr-only">Loading your recent Designali invoices…</span>
       <div aria-hidden="true" className="flex flex-col gap-3">
         {Array.from({ length: 3 }).map((_, i) => (
           <div key={i} className="flex items-center justify-between">

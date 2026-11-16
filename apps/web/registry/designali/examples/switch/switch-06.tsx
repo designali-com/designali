@@ -1,4 +1,7 @@
-import { LockIcon, SparklesIcon } from "lucide-react"
+import {
+  Lock as LockIcon,
+  Sparkles as SparklesIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -25,7 +28,7 @@ export default function PlanLockedSwitches() {
       <CardHeader>
         <CardTitle>Security</CardTitle>
         <CardDescription>
-          Some controls require the Business plan.
+          Some controls require the Designali Pro plan.
         </CardDescription>
       </CardHeader>
       <CardContent className="flex flex-col gap-4">
@@ -52,7 +55,7 @@ export default function PlanLockedSwitches() {
       <CardFooter>
         <Button size="sm" className="w-full">
           <SparklesIcon data-icon="inline-start" />
-          Upgrade to Business
+          Upgrade to Pro
         </Button>
       </CardFooter>
     </Card>

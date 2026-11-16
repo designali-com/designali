@@ -1,34 +1,36 @@
-import { ArrowUpRight } from "lucide-react"
+import {
+  ArrowUpRight,
+} from "@designali/icons"
 
 const picks = [
   {
-    title: "The case for slower software",
-    why: "The essay our whole engineering team argued about for a week.",
-    author: "Oren Blackwood",
+    title: "The case for thoughtful design",
+    why: "The essay that shaped how Designali approaches every project.",
+    author: "Ali Imam",
     read: 14,
   },
   {
     title: "Pricing pages are product pages",
-    why: "Rewrote how we think about the most visited page on the site.",
-    author: "Sunita Rao",
+    why: "Rewrote how we think about designali.com/pricing.",
+    author: "Ali Imam",
     read: 9,
   },
   {
-    title: "A beginner's map of color science",
-    why: "Clearest explanation of perceptual color spaces we have found.",
-    author: "Theo Lindqvist",
+    title: "A beginner's map of the Designali color system",
+    why: "How #00A8FF became the brand accent across every block.",
+    author: "Designali Studio",
     read: 21,
   },
   {
-    title: "Interviewing users who hate your product",
-    why: "Practical scripts, plus what to do with the anger afterwards.",
-    author: "Zara Mensah",
+    title: "Interviewing clients before the first sketch",
+    why: "Practical scripts, plus what to do with the feedback afterwards.",
+    author: "Ali Imam",
     read: 11,
   },
   {
-    title: "What we learned shipping in nine languages",
-    why: "Every localization mistake we made, so you can skip them.",
-    author: "Paulo Ferreira",
+    title: "What we learned shipping 2,300+ UI examples",
+    why: "Every naming mistake we made, so you can skip them.",
+    author: "Designali Studio",
     read: 16,
   },
 ]
@@ -44,7 +46,7 @@ export default function Blog12() {
               Five posts worth your whole afternoon
             </h2>
             <p className="mt-6 max-w-sm text-sm leading-6 opacity-70">
-              Chosen by the Openline editorial team from 214 posts published
+              Chosen by Ali Imam from the posts published on the Designali blog
               this year. No algorithm, just arguments in a shared doc.
             </p>
           </div>

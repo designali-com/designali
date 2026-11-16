@@ -6,8 +6,8 @@ import { Spinner } from "@workspace/ui/components/spinner"
 import { Tabs, TabsList, TabsTrigger } from "@workspace/ui/components/tabs"
 
 const content: Record<string, string> = {
-  overview: "14 open issues, 3 merged pull requests this week.",
-  activity: "Mira commented on #482 and closed #479.",
+  overview: "14 open issues, 3 merged pull requests in designali/blocks this week.",
+  activity: "Ali Imam commented on #482 and closed #479.",
   settings: "Branch protection is enabled for main.",
 }
 

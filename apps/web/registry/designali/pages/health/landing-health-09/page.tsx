@@ -10,222 +10,222 @@ import {
   Sparkles,
   Stethoscope,
   Video,
-} from "lucide-react"
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 
-const navLinks = ["Services", "How it works", "Pricing", "Clinicians", "FAQ"]
+const navLinks = ["Services", "Process", "Pricing", "Work", "FAQ"]
 
 const logos = [
-  "Aetna",
-  "Cigna",
-  "UnitedHealthcare",
-  "Humana",
-  "Anthem",
-  "Kaiser",
-  "Blue Shield",
-  "Oscar",
+  "Brand identity",
+  "UI/UX design",
+  "Web design",
+  "Next.js",
+  "Design systems",
+  "Booking flows",
+  "Accessibility",
+  "Motion",
 ]
 
 const features = [
   {
     icon: Video,
-    title: "Video visits in minutes",
+    title: "Patient-friendly websites",
     description:
-      "See a board-certified clinician by video, usually in under 15 minutes, any time of day.",
+      "Calm, accessible Next.js sites that explain your services clearly and help people book without friction.",
   },
   {
     icon: Pill,
-    title: "Prescriptions delivered",
+    title: "Booking & intake flows",
     description:
-      "Medications are sent to your local pharmacy or delivered free to your door in two days.",
+      "Appointment, intake and onboarding flows designed to be short, clear and easy to complete on any phone.",
   },
   {
     icon: Stethoscope,
-    title: "Your own care team",
+    title: "Brand identity for care",
     description:
-      "Stay with the same doctor and nurse for ongoing care, so you never repeat your history.",
+      "Logo, colour and type systems that feel warm and trustworthy, from your clinic sign to your app icon.",
   },
   {
     icon: MessageCircle,
-    title: "Message your clinician",
+    title: "App UI design",
     description:
-      "Ask follow-up questions in a secure chat and get a reply within one business day.",
+      "Mobile and web app interfaces for health and wellness products, designed in Figma and ready for development.",
   },
   {
     icon: FlaskConical,
-    title: "At-home lab tests",
+    title: "Design systems",
     description:
-      "Order blood work online, collect a sample at home and get results with a doctor's notes.",
+      "Tokens, components and documentation so your website, app and patient portal stay consistent as you grow.",
   },
 ]
 
 const stats = [
-  { value: "4.9/5", label: "Patient satisfaction" },
-  { value: "50", label: "States covered" },
-  { value: "2,300", label: "Licensed clinicians" },
-  { value: "92%", label: "Issues resolved in one visit" },
+  { value: "4.9/5", label: "Client satisfaction" },
+  { value: "6", label: "Weeks to a launch-ready site" },
+  { value: "2300+", label: "Pages and templates shipped" },
+  { value: "92%", label: "Projects delivered on schedule" },
 ]
 
 const steps = [
   {
-    title: "Tell us what is going on",
+    title: "Tell us about your practice",
     description:
-      "Answer a few questions about your symptoms and medical history in about three minutes.",
+      "Share your services, audience and goals in a short brief. It takes about ten minutes.",
   },
   {
-    title: "Meet your clinician",
+    title: "Meet Ali Imam",
     description:
-      "Connect by video or chat with a licensed provider in your state, often within minutes.",
+      "A discovery call to understand your patients, your team and what the project needs to achieve.",
   },
   {
-    title: "Get your treatment plan",
+    title: "Get your design plan",
     description:
-      "Receive a diagnosis, prescriptions and clear next steps, all saved in your app.",
+      "Receive a scope, timeline and fixed price, with clear deliverables for brand, UI and code.",
   },
   {
-    title: "Follow up any time",
+    title: "Launch and grow",
     description:
-      "Message your care team with questions or book a follow-up with the same clinician.",
+      "We ship in Next.js, hand over Figma files and stay available for updates after launch.",
   },
 ]
 
 const showcase = [
   {
-    name: "Urgent care",
-    meta: "Colds, flu, infections, rashes",
+    name: "Clinic websites",
+    meta: "Services, team pages, booking",
     tag: "24/7",
-    price: "$49",
+    price: "$2,400",
   },
   {
-    name: "Mental health",
-    meta: "Therapy and psychiatry",
+    name: "Wellness studios",
+    meta: "Brand, class schedules, memberships",
     tag: "Popular",
-    price: "$99",
+    price: "$4,800",
   },
   {
-    name: "Women's health",
-    meta: "Birth control, UTIs, menopause",
-    tag: "Same day",
-    price: "$39",
+    name: "Health startups",
+    meta: "MVP app UI, landing page",
+    tag: "Fast",
+    price: "$1,200",
   },
   {
-    name: "Chronic care",
-    meta: "Diabetes, hypertension, thyroid",
+    name: "Patient portals",
+    meta: "Dashboards, records, messaging",
     tag: "Ongoing",
-    price: "$29/mo",
+    price: "From $900",
   },
   {
-    name: "Dermatology",
-    meta: "Acne, eczema, hair loss",
-    tag: "Photo visit",
-    price: "$59",
+    name: "Dental & eye care",
+    meta: "Brand refresh, booking site",
+    tag: "Refresh",
+    price: "$1,800",
   },
   {
-    name: "Weight care",
-    meta: "Clinician-led programs",
+    name: "Nutrition & fitness",
+    meta: "Programs, onboarding, app UI",
     tag: "New",
-    price: "$79/mo",
+    price: "From $2,400",
   },
 ]
 
 const testimonials = [
   {
     quote:
-      "The therapist I was matched with actually listens. Booking a session takes less time than making coffee.",
-    name: "Amelia Brooks",
-    role: "Mental health member",
+      "Our wellness app finally looks and feels like our brand. The Figma handoff made development quick and painless.",
+    name: "Amelia",
+    role: "Founder, wellness startup",
   },
   {
     quote:
-      "As a working parent, being able to get my kids seen at 9pm on a Tuesday is genuinely life-changing.",
-    name: "Carlos Rivera",
-    role: "Family plan member",
+      "Our new site works beautifully on phones, which is where most of our clients find us. Ali made the whole process easy.",
+    name: "Carlos",
+    role: "Founder, physio studio",
   },
   {
     quote:
-      "Prices are listed upfront, and the bill matched exactly. That alone made me switch.",
-    name: "Nina Patel",
-    role: "Self-pay patient",
+      "The quote was clear and the final invoice matched it exactly. That alone made working with Designali easy.",
+    name: "Nina",
+    role: "Director, wellness clinic",
   },
 ]
 
 const tiers = [
   {
-    name: "Pay per visit",
-    price: "$49",
-    period: "/visit",
-    description: "For occasional care when you need it.",
+    name: "Website Sprint",
+    price: "$2,400",
+    period: "/project",
+    description: "For practices that need a clear, modern site.",
     features: [
       "24/7 urgent care",
-      "Prescriptions sent anywhere",
-      "Visit notes in the app",
-      "No membership",
+      "Next.js site, up to 6 pages",
+      "Booking and contact flow",
+      "Accessible components",
     ],
-    cta: "Book a visit",
+    cta: "Start a project",
   },
   {
-    name: "Membership",
-    price: "$19",
+    name: "Care Brand",
+    price: "$900",
     period: "/month",
-    description: "For individuals who want a regular care team.",
+    description: "For clinics and studios that want a full brand and site.",
     features: [
-      "Unlimited messaging",
-      "$0 urgent care visits",
-      "Dedicated primary care doctor",
-      "Discounted lab tests",
-      "Annual wellness check",
+      "Brand identity and guidelines",
+      "Website with booking flow",
+      "App or portal UI concepts",
+      "Figma source files",
+      "Monthly design support",
     ],
-    cta: "Become a member",
+    cta: "Book Care Brand",
   },
   {
-    name: "Family",
-    price: "$39",
+    name: "Product Team",
+    price: "$1,200",
     period: "/month",
-    description: "Cover up to six people on one plan.",
+    description: "For health startups building an app or platform.",
     features: [
-      "Everything in Membership",
-      "Pediatric care",
-      "Shared family dashboard",
-      "Up to 6 members",
-      "Priority booking",
+      "Everything in Care Brand",
+      "Full app UI design",
+      "Design system and docs",
+      "Up to 3 product areas",
+      "Priority support",
     ],
-    cta: "Cover your family",
+    cta: "Book Product Team",
   },
 ]
 
 const faqs = [
   {
-    q: "Is telehealth as good as an in-person visit?",
-    a: "For most common conditions, yes. If you need an exam in person, we will refer you to a partner clinic nearby.",
+    q: "Do you handle accessibility?",
+    a: "Accessibility is part of every project, with readable type, strong contrast and keyboard-friendly components.",
   },
   {
-    q: "Who are your clinicians?",
-    a: "Every clinician is board certified and licensed in your state, with an average of 11 years of experience.",
+    q: "Who will I work with?",
+    a: "You work directly with Ali Imam, founder and design engineer at Designali, from first call to launch.",
   },
   {
-    q: "Is my information private?",
-    a: "Your data is protected under HIPAA, encrypted end to end and never sold or shared for advertising.",
+    q: "What about patient data and compliance?",
+    a: "We design the experience. Data handling and compliance stay with your own technical and legal advisers.",
   },
   {
-    q: "What if I need emergency care?",
-    a: "For emergencies such as chest pain or difficulty breathing, call 911 or go to the nearest emergency room.",
+    q: "Do you offer ongoing support?",
+    a: "Yes. Monthly design support covers new pages, campaign graphics and small UI updates after launch.",
   },
   {
-    q: "Do you accept insurance?",
-    a: "Yes. We are in network with most major insurers. Enter your plan details at checkout to see your exact cost.",
+    q: "Do you work with clinics and health startups?",
+    a: "Yes. Designali designs for clinics, wellness studios and health startups. We focus on design and code, not medical advice.",
   },
 ]
 
 const footer = [
   {
-    title: "Care",
-    links: ["Urgent care", "Mental health", "Chronic care", "Lab tests"],
+    title: "Studio",
+    links: ["Clinic websites", "Wellness studios", "Patient portals", "Templates"],
   },
-  { title: "Company", links: ["About", "Clinicians", "Careers", "Press"] },
+  { title: "Designali", links: ["About", "Work", "Work", "Blog"] },
   {
     title: "Support",
-    links: ["Help center", "Insurance", "Privacy", "Contact"],
+    links: ["Docs", "Contact", "Licensing", "Contact"],
   },
 ]
 
@@ -241,7 +241,7 @@ export default function LandingHealth09() {
             <span className="flex size-7 items-center justify-center rounded-md bg-violet-600 text-white text-sm">
               S
             </span>
-            <span className="">Sleepwise</span>
+            <span className="">designali</span>
           </a>
           <nav className="hidden items-center gap-7 text-sm md:flex">
             {navLinks.map((link) => (
@@ -262,10 +262,10 @@ export default function LandingHealth09() {
               nativeButton={false}
               render={<a href="#" />}
             >
-              Patient login
+              Client login
             </Button>
             <Button size="sm" nativeButton={false} render={<a href="#" />}>
-              Take the sleep quiz
+              Take the project quiz
             </Button>
           </div>
         </div>
@@ -275,21 +275,21 @@ export default function LandingHealth09() {
           <div className="mx-auto max-w-3xl space-y-6 text-center">
             <span className="inline-flex items-center gap-2 rounded-full border bg-background text-muted-foreground px-3 py-1 text-xs font-medium">
               <Sparkles className="size-3.5 text-violet-600 dark:text-violet-400" />
-              Sleep medicine at home
+              Design for sleep and recovery apps
             </span>
             <h1 className="text-4xl leading-[1.05] font-semibold tracking-tight text-balance sm:text-5xl md:text-6xl ">
-              {"Finally sleep through the "}
+              {"Finally ship a product that feels "}
               <span className="text-violet-600 dark:text-violet-400">
-                whole night
+                calm and restful
               </span>
             </h1>
             <p className="mx-auto max-w-2xl text-lg leading-8 text-muted-foreground">
-              Sleepwise diagnoses sleep apnea with a home test and treats
-              insomnia with a proven programme led by sleep specialists.
+              Designali designs onboarding, tracking and coaching screens for sleep
+              and recovery apps, with soft visuals and clear daily routines.
             </p>
             <div className="flex flex-wrap gap-3 justify-center">
               <Button size="lg" nativeButton={false} render={<a href="#" />}>
-                Take the sleep quiz
+                Take the project quiz
                 <ArrowRight />
               </Button>
               <Button
@@ -298,7 +298,7 @@ export default function LandingHealth09() {
                 nativeButton={false}
                 render={<a href="#" />}
               >
-                Order a home test
+                See app work
               </Button>
             </div>
           </div>
@@ -325,7 +325,7 @@ export default function LandingHealth09() {
       <section className="border-b">
         <div className="mx-auto max-w-7xl px-6 py-12">
           <p className="text-center text-sm text-muted-foreground">
-            In network with
+            Services include
           </p>
           <div className="mt-8 grid grid-cols-2 items-center gap-x-8 gap-y-6 sm:grid-cols-4 lg:grid-cols-8">
             {logos.map((logo) => (
@@ -346,11 +346,11 @@ export default function LandingHealth09() {
               Care
             </p>
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl  mt-3">
-              Healthcare that fits around your life
+              Design that fits around your patients
             </h2>
             <p className="mt-4 text-lg leading-8 text-muted-foreground">
-              Licensed clinicians, same-day appointments and prescriptions
-              delivered to your door, all from your phone.
+              Clear interfaces, simple booking and accessible components,
+              all designed and built by one studio.
             </p>
           </div>
           <div className="mt-14 grid gap-3 md:grid-cols-3">
@@ -382,11 +382,11 @@ export default function LandingHealth09() {
           <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
             <div className="max-w-2xl">
               <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl">
-                What we can help with
+                Who we design for
               </h2>
               <p className="mt-4 text-lg leading-8 text-muted-foreground">
-                From everyday illnesses to ongoing conditions, our clinicians
-                treat hundreds of concerns online.
+                From neighbourhood clinics to health startups, Designali designs
+                brands, sites and apps that people trust.
               </p>
             </div>
             <Button
@@ -394,7 +394,7 @@ export default function LandingHealth09() {
               nativeButton={false}
               render={<a href="#" />}
             >
-              View all
+              View all work
               <ArrowUpRight />
             </Button>
           </div>
@@ -430,7 +430,7 @@ export default function LandingHealth09() {
         <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl">
-              Patients who feel heard
+              Clients who feel heard
             </h2>
           </div>
           <div className="mt-14 grid gap-4 md:grid-cols-3">
@@ -468,7 +468,7 @@ export default function LandingHealth09() {
         <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl">
-              Getting care is simple
+              How a project works
             </h2>
           </div>
           <ol className="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
@@ -493,11 +493,11 @@ export default function LandingHealth09() {
         <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl">
-              Clear pricing, with or without insurance
+              Clear pricing for every stage
             </h2>
             <p className="mt-4 text-lg leading-8 text-muted-foreground">
-              Most major insurance plans accepted. Self-pay prices are listed
-              upfront, with no surprise bills.
+              Fixed prices for brand, website and product design, listed
+              upfront, with no surprise invoices.
             </p>
           </div>
           <div className="mx-auto mt-14 grid max-w-6xl items-start gap-6 lg:grid-cols-3">
@@ -559,7 +559,7 @@ export default function LandingHealth09() {
                 href="#"
                 className="font-medium text-foreground underline underline-offset-4"
               >
-                Get in touch
+                Contact us
               </a>
               .
             </p>
@@ -584,15 +584,15 @@ export default function LandingHealth09() {
           <div className="pointer-events-none absolute -top-24 left-1/2 size-96 -translate-x-1/2 rounded-full bg-gradient-to-b from-violet-500/25 via-fuchsia-500/10 to-transparent blur-3xl" />
           <div className="relative mx-auto max-w-2xl space-y-6">
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl">
-              Wake up feeling like yourself again
+              Ship a product people return to
             </h2>
             <p className="text-lg text-muted-foreground">
-              Most patients start treatment within two weeks of their first
-              visit.
+              Most app design sprints start within two weeks of the first
+              call.
             </p>
             <div className="flex flex-wrap gap-3 justify-center">
               <Button size="lg" nativeButton={false} render={<a href="#" />}>
-                Take the sleep quiz
+                Take the project quiz
                 <ArrowRight />
               </Button>
               <Button
@@ -601,7 +601,7 @@ export default function LandingHealth09() {
                 nativeButton={false}
                 render={<a href="#" />}
               >
-                Order a home test
+                See app work
               </Button>
             </div>
           </div>
@@ -617,10 +617,10 @@ export default function LandingHealth09() {
               <span className="flex size-7 items-center justify-center rounded-md bg-violet-600 text-white text-sm">
                 S
               </span>
-              <span className="">Sleepwise</span>
+              <span className="">designali</span>
             </a>
             <p className="max-w-xs text-sm text-muted-foreground">
-              Rest, properly restored.
+              Rest, properly designed.
             </p>
           </div>
           {footer.map((column) => (
@@ -644,7 +644,7 @@ export default function LandingHealth09() {
         <div className="border-t ">
           <div className="mx-auto flex max-w-7xl flex-col justify-between gap-4 px-6 py-6 text-xs text-muted-foreground sm:flex-row">
             <span>
-              © {new Date().getFullYear()} Sleepwise. All rights reserved.
+              © {new Date().getFullYear()} designali. All rights reserved.
             </span>
             <div className="flex gap-6">
               <a href="#" className="hover:text-foreground">
@@ -673,7 +673,7 @@ function HeroVisual() {
         <span className="size-2.5 rounded-full bg-muted-foreground/30" />
         <span className="size-2.5 rounded-full bg-muted-foreground/30" />
         <span className="ml-3 hidden rounded-md bg-muted px-3 py-0.5 text-[11px] text-muted-foreground sm:inline">
-          app.sleepwise.com
+          designali.com/work/sleep
         </span>
       </div>
       <div className="grid md:grid-cols-[180px_1fr]">

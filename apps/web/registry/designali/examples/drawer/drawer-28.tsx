@@ -2,13 +2,13 @@
 
 import * as React from "react"
 import {
-  BanknoteIcon,
-  FilePlusIcon,
-  KeyRoundIcon,
-  SearchIcon,
-  UserPlusIcon,
-  UsersIcon,
-} from "lucide-react"
+  Banknote as BanknoteIcon,
+  FilePlus as FilePlusIcon,
+  KeyRound as KeyRoundIcon,
+  Search as SearchIcon,
+  UserPlus as UserPlusIcon,
+  Users as UsersIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {

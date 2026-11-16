@@ -1,7 +1,11 @@
 "use client"
 
 import * as React from "react"
-import { MonitorIcon, SmartphoneIcon, TabletIcon } from "lucide-react"
+import {
+  Monitor as MonitorIcon,
+  Smartphone as SmartphoneIcon,
+  Tablet as TabletIcon,
+} from "@designali/icons"
 
 import {
   ToggleGroup,

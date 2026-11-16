@@ -1,4 +1,7 @@
-import { CheckIcon, PackageIcon } from "lucide-react"
+import {
+  Check as CheckIcon,
+  Package as PackageIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import {
@@ -12,15 +15,15 @@ import {
 import { cn } from "@workspace/ui/lib/utils"
 
 const steps = [
-  { label: "Order placed", detail: "Nov 14, 09:12", done: true },
-  { label: "Packed", detail: "Nov 14, 16:40", done: true },
+  { label: "Brief received", detail: "Nov 14, 09:12", done: true },
+  { label: "Moodboard approved", detail: "Nov 14, 16:40", done: true },
   {
-    label: "In transit",
-    detail: "Arrived at Rotterdam hub",
+    label: "In design",
+    detail: "Logo concepts in review",
     done: true,
     current: true,
   },
-  { label: "Out for delivery", detail: "Expected Nov 18" },
+  { label: "Development", detail: "Expected Nov 18" },
   { label: "Delivered", detail: "" },
 ]
 
@@ -30,11 +33,11 @@ export default function ShipmentTrackingCard() {
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
           <PackageIcon className="size-4 text-muted-foreground" />
-          Order #10482
+          Project #10482
         </CardTitle>
-        <CardDescription>Tracking NL 4482 9910 22</CardDescription>
+        <CardDescription>Designali brand identity project</CardDescription>
         <CardAction>
-          <Badge variant="secondary">In transit</Badge>
+          <Badge variant="secondary">In design</Badge>
         </CardAction>
       </CardHeader>
       <CardContent>

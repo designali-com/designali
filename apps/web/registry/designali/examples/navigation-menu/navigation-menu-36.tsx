@@ -1,9 +1,9 @@
 import {
-  CalculatorIcon,
-  ClipboardListIcon,
-  IdCardIcon,
-  UserCheckIcon,
-} from "lucide-react"
+  Calculator as CalculatorIcon,
+  ClipboardList as ClipboardListIcon,
+  IdCard as IdCardIcon,
+  UserCheck as UserCheckIcon,
+} from "@designali/icons"
 
 import {
   NavigationMenu,
@@ -17,23 +17,23 @@ import {
 
 const roles = [
   {
-    role: "HR teams",
-    value: "Automate onboarding and reviews",
+    role: "Designers",
+    value: "Figma files for every Designali block",
     icon: ClipboardListIcon,
   },
   {
-    role: "Managers",
-    value: "Approve time off in one click",
+    role: "Developers",
+    value: "Copy-paste Next.js and Tailwind CSS code",
     icon: UserCheckIcon,
   },
   {
-    role: "Employees",
-    value: "Payslips and benefits in one place",
+    role: "Founders",
+    value: "Launch a landing page in a day",
     icon: IdCardIcon,
   },
   {
-    role: "Finance",
-    value: "Sync payroll with your ledger",
+    role: "Agencies",
+    value: "Ship client work faster with templates",
     icon: CalculatorIcon,
   },
 ]
@@ -63,7 +63,7 @@ export default function RoleBasedSolutionsNav() {
         </NavigationMenuItem>
         <NavigationMenuItem>
           <NavigationMenuLink href="#" className={navigationMenuTriggerStyle()}>
-            Customers
+            Work
           </NavigationMenuLink>
         </NavigationMenuItem>
       </NavigationMenuList>

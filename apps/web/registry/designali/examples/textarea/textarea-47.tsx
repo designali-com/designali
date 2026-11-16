@@ -21,9 +21,9 @@ export default function ModerationRejectReason() {
   return (
     <Card className="w-full max-w-sm">
       <CardHeader>
-        <CardTitle>Listing: Vintage oak chair</CardTitle>
+        <CardTitle>Template: Portfolio Simple</CardTitle>
         <CardDescription>
-          Submitted by Pell Furniture · awaiting review
+          Submitted to Designali Templates · awaiting review
         </CardDescription>
       </CardHeader>
       <CardContent className="flex flex-col gap-2">

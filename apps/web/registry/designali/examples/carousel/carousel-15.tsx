@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { PauseIcon, PlayIcon } from "lucide-react"
+import {
+  Pause as PauseIcon,
+  Play as PlayIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -14,19 +17,19 @@ import { cn } from "@workspace/ui/lib/utils"
 
 const slides = [
   {
-    title: "Spring collection",
-    body: "Lightweight layers for changing weather.",
-    tone: "from-emerald-500 to-teal-700",
+    title: "design se code tak",
+    body: "Brand identity, UI/UX and production-ready websites.",
+    src: "/stock/design.jpg",
   },
   {
-    title: "Free shipping weekend",
-    body: "On every order over $50, through Sunday.",
-    tone: "from-indigo-500 to-violet-700",
+    title: "460+ blocks",
+    body: "Copy, paste and ship with Next.js and Tailwind CSS.",
+    src: "/stock/development.jpg",
   },
   {
-    title: "Members save 15%",
-    body: "Join free and unlock early access drops.",
-    tone: "from-orange-400 to-rose-600",
+    title: "Work with Designali",
+    body: "From strategy to launch, designed and built by Ali Imam.",
+    src: "/stock/strategy.jpg",
   },
 ]
 
@@ -56,14 +59,14 @@ export default function AutoplayHeroWithPause() {
       <CarouselContent>
         {slides.map((slide) => (
           <CarouselItem key={slide.title}>
-            <div
-              className={cn(
-                "flex h-44 flex-col justify-end gap-1 bg-gradient-to-br p-5 text-white",
-                slide.tone
-              )}
-            >
-              <h3 className="text-lg font-semibold">{slide.title}</h3>
-              <p className="text-sm text-white/80">{slide.body}</p>
+            <div className="relative flex h-44 flex-col justify-end gap-1 overflow-hidden bg-muted p-5 text-white">
+              <img
+                src={slide.src}
+                alt={slide.title}
+                className="absolute inset-0 size-full object-cover brightness-50"
+              />
+              <h3 className="relative text-lg font-semibold">{slide.title}</h3>
+              <p className="relative text-sm text-white/80">{slide.body}</p>
             </div>
           </CarouselItem>
         ))}

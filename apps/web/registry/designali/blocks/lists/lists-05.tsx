@@ -3,22 +3,25 @@ import {
   FileText,
   Film,
   Folder,
-  ImageIcon,
-  type LucideIcon,
-} from "lucide-react"
+  Image as ImageIcon,
+} from "@designali/icons"
+
+import type * as React from "react"
+
+type IconComponent = React.ComponentType<React.SVGProps<SVGSVGElement> & { size?: number | string; strokeWidth?: number }>
 
 const files: {
   name: string
-  icon: LucideIcon
+  icon: IconComponent
   size: string
   modified: string
   owner: string
 }[] = [
-  { name: "Brand guidelines 2026.pdf", icon: FileText, size: "18.4 MB", modified: "2 hours ago", owner: "Amara Osei" },
-  { name: "Logo package", icon: Folder, size: "42 files", modified: "Yesterday", owner: "Tomás Ibarra" },
-  { name: "Campaign hero.png", icon: ImageIcon, size: "6.1 MB", modified: "Nov 10", owner: "Hana Sato" },
-  { name: "Launch film final.mp4", icon: Film, size: "312 MB", modified: "Nov 08", owner: "Noah Clarke" },
-  { name: "Tone of voice.pdf", icon: FileText, size: "2.3 MB", modified: "Oct 29", owner: "Priya Raman" },
+  { name: "Designali brand guidelines.pdf", icon: FileText, size: "18.4 MB", modified: "2 hours ago", owner: "Ali Imam" },
+  { name: "Designali logo package", icon: Folder, size: "42 files", modified: "Yesterday", owner: "Ali Imam" },
+  { name: "Templates hero.png", icon: ImageIcon, size: "6.1 MB", modified: "Nov 10", owner: "Sara" },
+  { name: "Colorful spheres motion.mp4", icon: Film, size: "312 MB", modified: "Nov 08", owner: "Omar" },
+  { name: "Design se code tak - tone of voice.pdf", icon: FileText, size: "2.3 MB", modified: "Oct 29", owner: "Nina" },
 ]
 
 export default function Lists05() {
@@ -28,7 +31,7 @@ export default function Lists05() {
         <div className="flex flex-wrap items-center justify-between gap-4">
           <div>
             <p className="text-xs text-muted-foreground">Shared with you</p>
-            <h2 className="mt-1 text-3xl font-semibold tracking-tight">Brand assets</h2>
+            <h2 className="mt-1 text-3xl font-semibold tracking-tight">Designali brand assets</h2>
           </div>
           <a
             href="#"

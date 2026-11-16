@@ -2,19 +2,19 @@
 
 import * as React from "react"
 import {
-  CalendarIcon,
-  CheckIcon,
-  CloudIcon,
-  MessageSquareIcon,
-  RefreshCwIcon,
-} from "lucide-react"
+  Calendar as CalendarIcon,
+  Check as CheckIcon,
+  Cloud as CloudIcon,
+  MessageSquare as MessageSquareIcon,
+  RefreshCw as RefreshCwIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 
 const initial = [
-  { name: "Calendar sync", icon: CalendarIcon, status: "connected" },
-  { name: "Team chat", icon: MessageSquareIcon, status: "disconnected" },
-  { name: "Cloud storage", icon: CloudIcon, status: "error" },
+  { name: "Figma sync", icon: CalendarIcon, status: "connected" },
+  { name: "Studio chat", icon: MessageSquareIcon, status: "disconnected" },
+  { name: "Vercel deploys", icon: CloudIcon, status: "error" },
 ]
 
 export default function IntegrationConnectButtons() {

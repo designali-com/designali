@@ -1,4 +1,6 @@
-import { ArchiveIcon } from "lucide-react"
+import {
+  Archive as ArchiveIcon,
+} from "@designali/icons"
 
 import {
   AlertDialog,
@@ -19,7 +21,7 @@ export default function ArchiveChannelDialog() {
     <AlertDialog>
       <AlertDialogTrigger render={<Button variant="secondary" />}>
         <ArchiveIcon data-icon="inline-start" />
-        Archive #launch-week
+        Archive #blocks-launch
       </AlertDialogTrigger>
       <AlertDialogContent>
         <AlertDialogHeader>

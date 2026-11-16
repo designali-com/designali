@@ -1,4 +1,6 @@
-import { BracesIcon } from "lucide-react"
+import {
+  Braces as BracesIcon,
+} from "@designali/icons"
 
 import {
   NavigationMenu,
@@ -13,23 +15,23 @@ import {
 const guides = [
   {
     title: "Quickstart",
-    description: "Send your first request in five minutes.",
+    description: "Add your first Designali block in five minutes.",
   },
   {
-    title: "Authentication",
-    description: "API keys, OAuth and scoped tokens.",
+    title: "Installation",
+    description: "Next.js, Tailwind CSS and TypeScript setup.",
   },
-  { title: "Webhooks", description: "Receive and verify event payloads." },
-  { title: "Rate limits", description: "Quotas, headers and retry strategy." },
+  { title: "Theming", description: "Semantic tokens and dark mode." },
+  { title: "Icons", description: "Use @designali/icons in React." },
 ]
 
 const reference = [
-  "Customers",
-  "Payments",
-  "Subscriptions",
-  "Invoices",
-  "Events",
-  "Files",
+  "Templates",
+  "Blocks",
+  "Icons",
+  "Logos",
+  "Vectors",
+  "Components",
 ]
 
 export default function DocumentationNav() {
@@ -57,7 +59,7 @@ export default function DocumentationNav() {
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuTrigger>API reference</NavigationMenuTrigger>
+          <NavigationMenuTrigger>Library</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-64 grid-cols-2 gap-1">
               {reference.map((r) => (

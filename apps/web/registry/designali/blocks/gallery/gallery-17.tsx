@@ -1,35 +1,35 @@
 const years = [
   {
     year: "2025",
-    title: "The road north",
-    summary: "Six months documenting the coastal railway before it closes.",
+    title: "Designali",
+    summary: "460+ blocks, 240+ landing pages and new templates. Design se code tak.",
     tiles: [
-      "linear-gradient(135deg, var(--chart-1), var(--chart-2))",
-      "linear-gradient(200deg, var(--chart-3), var(--chart-1))",
-      "linear-gradient(60deg, var(--chart-2), var(--chart-4))",
-      "linear-gradient(300deg, var(--chart-5), var(--chart-2))",
+      'url("/images/templates/design-agency.jpg") center / cover',
+      'url("/images/templates/portfolio-simple.jpg") center / cover',
+      'url("/images/templates/resort.jpg") center / cover',
+      'url("/images/templates/ai.jpg") center / cover',
     ],
   },
   {
     year: "2024",
-    title: "Kitchens of the valley",
-    summary: "Portraits of twelve family restaurants and the people who run them.",
+    title: "Dalim UI and Dalim Icons",
+    summary: "Component kits and icon sets that grew into the Designali library.",
     tiles: [
-      "linear-gradient(160deg, var(--chart-4), var(--chart-5))",
-      "linear-gradient(20deg, var(--chart-1), var(--chart-4))",
-      "linear-gradient(240deg, var(--chart-3), var(--chart-5))",
+      'url("/images/templates/dalim-ui-old.jpg") center / cover',
+      'url("/images/templates/dalim-icons-old.jpg") center / cover',
+      'url("/images/templates/dalim-tools-old.jpg") center / cover',
     ],
   },
   {
     year: "2023",
-    title: "Night shift",
-    summary: "Hospitals, bakeries and toll booths between midnight and five.",
+    title: "Dalim Agency",
+    summary: "Brand identity, graphic design and CGI work for the first Dalim studio.",
     tiles: [
-      "linear-gradient(110deg, var(--chart-2), var(--chart-5))",
-      "linear-gradient(190deg, var(--chart-4), var(--chart-3))",
-      "linear-gradient(80deg, var(--chart-5), var(--chart-1))",
-      "linear-gradient(330deg, var(--chart-3), var(--chart-2))",
-      "linear-gradient(40deg, var(--chart-1), var(--chart-3))",
+      'url("/images/templates/dalim-agency-old.jpg") center / cover',
+      'url("/images/templates/dalim-graphic-old.jpg") center / cover',
+      'url("/images/templates/dalim-visuals-old.jpg") center / cover',
+      'url("/images/templates/dalim-fonts-old.jpg") center / cover',
+      'url("/images/templates/dalim-works-old.jpg") center / cover',
     ],
   },
 ]
@@ -39,11 +39,11 @@ export default function Gallery17() {
     <section className="w-full bg-background py-20">
       <div className="mx-auto max-w-7xl px-6">
         <h2 className="text-3xl font-semibold tracking-tight md:text-4xl">
-          Ten years of long-form projects
+          Years of Designali and Dalim projects
         </h2>
         <p className="mt-3 max-w-lg text-muted-foreground">
-          A chronological archive. Each year, one subject, followed until the
-          story was finished.
+          A chronological archive of work by Ali Imam, from Dalim to
+          Designali.
         </p>
         <ol className="mt-14 border-l border-border">
           {years.map((entry) => (
@@ -55,7 +55,7 @@ export default function Gallery17() {
                   <h3 className="mt-1 text-xl font-medium">{entry.title}</h3>
                   <p className="mt-2 text-sm text-muted-foreground">{entry.summary}</p>
                   <a href="#" className="mt-3 inline-block text-sm font-medium underline-offset-4 hover:underline">
-                    Open series
+                    Open project
                   </a>
                 </div>
                 <div className="grid grid-cols-3 gap-2 sm:grid-cols-5">

@@ -8,16 +8,16 @@ import { Kbd, KbdGroup } from "@workspace/ui/components/kbd"
 const tips = [
   {
     title: "Quick search",
-    body: "Open search from anywhere to jump to any record.",
+    body: "Search 4000+ Designali icons from anywhere.",
   },
-  { title: "Command menu", body: "Run actions without leaving the keyboard." },
+  { title: "Command menu", body: "Jump to templates, blocks and UI without the mouse." },
   {
-    title: "Inline editing",
-    body: "Press Enter on any cell to start editing.",
+    title: "Copy code",
+    body: "Press Enter on any block to copy its source.",
   },
   {
-    title: "Undo everything",
-    body: "Every change in a session can be reverted.",
+    title: "Preview themes",
+    body: "Toggle light and dark mode on every Designali block.",
   },
 ]
 
@@ -26,7 +26,7 @@ export default function KeyboardHintCarousel() {
     <div className="flex w-full max-w-xs flex-col items-center gap-3">
       <Carousel
         tabIndex={0}
-        aria-label="Product tips"
+        aria-label="Designali tips"
         className="w-full outline-none focus-visible:ring-2 focus-visible:ring-ring/50"
       >
         <CarouselContent>

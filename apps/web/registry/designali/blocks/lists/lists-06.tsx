@@ -1,10 +1,20 @@
-import { AtSign, GitMerge, type LucideIcon, MessageSquare, UserPlus, Zap } from "lucide-react"
+import {
+  AtSign,
+  GitMerge,
+  MessageSquare,
+  UserPlus,
+  Zap,
+} from "@designali/icons"
+
+import type * as React from "react"
+
+type IconComponent = React.ComponentType<React.SVGProps<SVGSVGElement> & { size?: number | string; strokeWidth?: number }>
 
 type Activity = {
   who: string
   initials: string
   tone: string
-  icon: LucideIcon
+  icon: IconComponent
   action: string
   target: string
   time: string
@@ -16,17 +26,17 @@ const days: { label: string; items: Activity[] }[] = [
   {
     label: "Today",
     items: [
-      { who: "Hana Sato", initials: "HS", tone: "bg-rose-500", icon: AtSign, action: "mentioned you in", target: "Onboarding flow v3", time: "12m", quote: "Can we get the empty state copy reviewed before Thursday's crit?", unread: true },
-      { who: "Tomás Ibarra", initials: "TI", tone: "bg-sky-600", icon: GitMerge, action: "merged", target: "#2184 Canvas zoom fixes", time: "48m", unread: true },
-      { who: "Automation", initials: "⚡", tone: "bg-amber-500", icon: Zap, action: "moved 6 issues to", target: "Ready for QA", time: "2h" },
+      { who: "Sara", initials: "SA", tone: "bg-rose-500", icon: AtSign, action: "mentioned you in", target: "Dalim UI landing page", time: "12m", quote: "Can we get the hero copy reviewed before Thursday's design crit?", unread: true },
+      { who: "Ali Imam", initials: "AI", tone: "bg-sky-600", icon: GitMerge, action: "merged", target: "#2184 New pricing blocks", time: "48m", unread: true },
+      { who: "Automation", initials: "⚡", tone: "bg-amber-500", icon: Zap, action: "moved 6 blocks to", target: "Ready for QA", time: "2h" },
     ],
   },
   {
     label: "Yesterday",
     items: [
-      { who: "Priya Raman", initials: "PR", tone: "bg-violet-600", icon: MessageSquare, action: "replied to", target: "Q1 roadmap draft", time: "Tue 16:20", quote: "Agree on pushing exports to Q2. Let's keep the AI summaries scope tight." },
-      { who: "Lukas Weber", initials: "LW", tone: "bg-lime-700", icon: UserPlus, action: "invited 3 people to", target: "Brand refresh", time: "Tue 11:02" },
-      { who: "Zara Malik", initials: "ZM", tone: "bg-emerald-600", icon: MessageSquare, action: "commented on", target: "Enterprise SSO spec", time: "Tue 09:45" },
+      { who: "Omar", initials: "OM", tone: "bg-violet-600", icon: MessageSquare, action: "replied to", target: "Designali templates roadmap", time: "Tue 16:20", quote: "Agree on shipping the portfolio template first. Let's keep the icon refresh scope tight." },
+      { who: "Nina", initials: "NI", tone: "bg-lime-700", icon: UserPlus, action: "invited 3 people to", target: "Designali brand refresh", time: "Tue 11:02" },
+      { who: "Ali Imam", initials: "AI", tone: "bg-emerald-600", icon: MessageSquare, action: "commented on", target: "@designali/icons v2 spec", time: "Tue 09:45" },
     ],
   },
 ]

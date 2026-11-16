@@ -1,12 +1,12 @@
 import {
-  ArrowLeftRightIcon,
-  CherryIcon,
-  CopyIcon,
-  GitBranchPlusIcon,
-  GitCommitHorizontalIcon,
-  GitCompareIcon,
-  Undo2Icon,
-} from "lucide-react"
+  ArrowLeftRight as ArrowLeftRightIcon,
+  Cherry as CherryIcon,
+  Copy as CopyIcon,
+  GitBranchPlus as GitBranchPlusIcon,
+  GitCommitHorizontal as GitCommitHorizontalIcon,
+  GitCompare as GitCompareIcon,
+  Undo2 as Undo2Icon,
+} from "@designali/icons"
 
 import {
   ContextMenu,
@@ -22,26 +22,26 @@ import { cn } from "@workspace/ui/lib/utils"
 const commits = [
   {
     sha: "a41f9c2",
-    message: "Add usage-based billing tiers",
-    author: "MC",
+    message: "Add 40 new pricing blocks",
+    author: "AI",
     time: "2h",
   },
   {
     sha: "7be03d1",
-    message: "Fix race in webhook retries",
-    author: "JR",
+    message: "Fix dark mode tokens in templates",
+    author: "AI",
     time: "5h",
   },
   {
     sha: "c9921aa",
-    message: "Bump date library to v4",
-    author: "EB",
+    message: "Bump @designali/icons to v2",
+    author: "AI",
     time: "1d",
   },
   {
     sha: "15e7f40",
-    message: "Refactor invoice PDF renderer",
-    author: "PN",
+    message: "Refactor landing page hero",
+    author: "AI",
     time: "2d",
   },
 ]

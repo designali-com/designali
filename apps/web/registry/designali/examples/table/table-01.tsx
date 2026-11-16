@@ -57,7 +57,7 @@ import {
   export function TableDemo() {
     return (
       <Table>
-        <TableCaption>A list of your recent invoices.</TableCaption>
+        <TableCaption>Recent invoices for Designali studio projects.</TableCaption>
         <TableHeader>
           <TableRow>
             <TableHead className="w-[100px]">Invoice</TableHead>

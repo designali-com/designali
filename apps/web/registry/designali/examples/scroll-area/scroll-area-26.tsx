@@ -6,31 +6,31 @@ import { cn } from "@workspace/ui/lib/utils"
 
 const comments = [
   {
-    name: "Hana Sato",
+    name: "Hana",
     text: "Can we tighten the hero copy? It feels long on mobile.",
     reply: false,
   },
   {
-    name: "Victor Lund",
+    name: "Ali Imam",
     text: "Agreed, I'll cut the second sentence.",
     reply: true,
   },
   {
-    name: "Nadia Alvarez",
+    name: "Nadia",
     text: "Also the CTA contrast fails AA in dark mode.",
     reply: false,
   },
   {
-    name: "Hana Sato",
+    name: "Hana",
     text: "Good catch. Let's use the primary token there.",
     reply: true,
   },
   {
-    name: "Mateo Cruz",
+    name: "Mateo",
     text: "Pushed both fixes to the preview branch.",
     reply: false,
   },
-  { name: "Nadia Alvarez", text: "Looks great now, approving.", reply: true },
+  { name: "Nadia", text: "Looks great now, approving.", reply: true },
 ]
 
 export default function CommentThreadPanel() {

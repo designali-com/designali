@@ -1,23 +1,28 @@
 "use client"
 
 import { useState } from "react"
-import { Disc3, ExternalLink, Pause, Play } from "lucide-react"
+import {
+  Disc3,
+  ExternalLink,
+  Pause,
+  Play,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { cn } from "@workspace/ui/lib/utils"
 
 const sides = {
   A: [
-    { title: "Open Water", length: "4:12" },
-    { title: "Kingfisher", length: "3:48" },
-    { title: "Salt in the Wiring", length: "5:20" },
-    { title: "Halfway House", length: "4:01" },
+    { title: "Blank Canvas", length: "4:12" },
+    { title: "Grid Lines", length: "3:48" },
+    { title: "Tokens in the Wiring", length: "5:20" },
+    { title: "Halfway Handoff", length: "4:01" },
   ],
   B: [
-    { title: "Lantern Season", length: "3:56" },
-    { title: "The Long Field", length: "6:14" },
-    { title: "Weatherglass", length: "4:33" },
-    { title: "Home by Ferry", length: "5:02" },
+    { title: "Dark Mode", length: "3:56" },
+    { title: "The Long Build", length: "6:14" },
+    { title: "Design se Code Tak", length: "4:33" },
+    { title: "Ship It", length: "5:02" },
   ],
 } as const
 type Side = keyof typeof sides
@@ -49,19 +54,19 @@ export default function Media18() {
             className="relative flex aspect-square w-[88%] flex-col justify-between border border-border p-6 shadow-2xl"
             style={{ background: "linear-gradient(160deg, var(--chart-4), var(--chart-1) 60%, var(--chart-2))" }}
           >
-            <span className="text-xs font-semibold tracking-[0.3em] text-white uppercase">Weatherglass</span>
-            <span className="text-4xl leading-none font-semibold text-white md:text-5xl">The<br />Marram<br />Grass</span>
+            <span className="text-xs font-semibold tracking-[0.3em] text-white uppercase">Designali</span>
+            <span className="text-4xl leading-none font-semibold text-white md:text-5xl">Design<br />se Code<br />Tak</span>
           </div>
         </div>
 
         <div>
           <p className="flex items-center gap-2 text-xs tracking-widest text-muted-foreground uppercase">
-            <Disc3 className="size-3.5" /> New album - Out 21 Nov
+            <Disc3 className="size-3.5" /> Designali Sessions - Out 21 Nov
           </p>
-          <h2 className="mt-3 text-4xl font-semibold tracking-tight md:text-5xl">Weatherglass</h2>
+          <h2 className="mt-3 text-4xl font-semibold tracking-tight md:text-5xl">Design se Code Tak</h2>
           <p className="mt-3 text-muted-foreground">
-            The third record from The Marram Grass. Eight songs recorded live to tape in a lighthouse on the north coast over
-            nine winter days.
+            A soundtrack from the Designali studio. Eight tracks made for long design and code sessions, from the first
+            sketch to the final deploy.
           </p>
           <div className="mt-8 flex items-center justify-between border-b border-border">
             <div className="flex">
@@ -112,8 +117,8 @@ export default function Media18() {
               {playing ? <Pause className="fill-current" /> : <Play className="fill-current" />}
               {playing ? "Pause preview" : "Play preview"}
             </Button>
-            <Button size="lg" variant="outline" nativeButton={false} render={<a href="#" />}>
-              Pre-order vinyl - $32 <ExternalLink />
+            <Button size="lg" variant="outline" nativeButton={false} render={<a href="/blogs" />}>
+              Listen on designali.com <ExternalLink />
             </Button>
           </div>
         </div>

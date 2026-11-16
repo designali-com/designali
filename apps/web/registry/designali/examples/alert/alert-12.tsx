@@ -1,6 +1,8 @@
 "use client"
 
-import { CircleAlertIcon } from "lucide-react"
+import {
+  CircleAlert as CircleAlertIcon,
+} from "@designali/icons"
 
 import {
   Alert,
@@ -37,7 +39,7 @@ export default function AlertFormErrorSummary() {
       </Alert>
       <div className="space-y-1.5">
         <Label htmlFor="email">Work email</Label>
-        <Input id="email" defaultValue="lena@" aria-invalid />
+        <Input id="email" defaultValue="sara@" aria-invalid />
       </div>
       <div className="space-y-1.5">
         <Label htmlFor="password">Password</Label>
@@ -49,7 +51,7 @@ export default function AlertFormErrorSummary() {
         />
       </div>
       <Button type="submit" className="w-full">
-        Create account
+        Create Designali account
       </Button>
     </form>
   )

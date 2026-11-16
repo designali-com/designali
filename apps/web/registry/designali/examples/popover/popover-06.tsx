@@ -1,6 +1,10 @@
-import { LogOutIcon, SettingsIcon, UserIcon } from "lucide-react"
+import {
+  LogOut as LogOutIcon,
+  Settings as SettingsIcon,
+  User as UserIcon,
+} from "@designali/icons"
 
-import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
+import { Avatar, AvatarFallback, AvatarImage } from "@workspace/ui/components/avatar"
 import { Badge } from "@workspace/ui/components/badge"
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -26,23 +30,25 @@ export default function AccountPopover() {
         }
       >
         <Avatar>
-          <AvatarFallback>EK</AvatarFallback>
+          <AvatarImage src="/ali.jpg" alt="Ali Imam" />
+          <AvatarFallback>AI</AvatarFallback>
         </Avatar>
       </PopoverTrigger>
       <PopoverContent className="w-64" align="end">
         <div className="flex items-center gap-2.5">
           <Avatar size="lg">
-            <AvatarFallback>EK</AvatarFallback>
+            <AvatarImage src="/ali.jpg" alt="Ali Imam" />
+            <AvatarFallback>AI</AvatarFallback>
           </Avatar>
           <div className="flex min-w-0 flex-col">
-            <PopoverTitle>Elif Kaya</PopoverTitle>
+            <PopoverTitle>Ali Imam</PopoverTitle>
             <PopoverDescription className="truncate">
-              elif@harborline.io
+              ali@designali.com
             </PopoverDescription>
           </div>
         </div>
         <div className="flex items-center justify-between border p-2 text-xs">
-          <span>Team plan</span>
+          <span>Designali studio</span>
           <Badge variant="secondary">8 / 10 seats</Badge>
         </div>
         <Separator />

@@ -1,4 +1,6 @@
-import { FileIcon } from "lucide-react"
+import {
+  File as FileIcon,
+} from "@designali/icons"
 
 import {
   Progress,
@@ -7,9 +9,9 @@ import {
 } from "@workspace/ui/components/progress"
 
 const files = [
-  { name: "brand-guidelines.pdf", size: "4.2 MB", value: 100 },
-  { name: "hero-video.mp4", size: "86.1 MB", value: 64 },
-  { name: "product-shots.zip", size: "212 MB", value: 18 },
+  { name: "designali-brand-guidelines.pdf", size: "4.2 MB", value: 100 },
+  { name: "colorful-spheres.mp4", size: "86.1 MB", value: 64 },
+  { name: "dalim-visuals-renders.zip", size: "212 MB", value: 18 },
 ]
 
 export default function FileUploadQueue() {

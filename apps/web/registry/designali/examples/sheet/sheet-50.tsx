@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { NotebookPenIcon } from "lucide-react"
+import {
+  NotebookPen as NotebookPenIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -17,7 +19,7 @@ import { Textarea } from "@workspace/ui/components/textarea"
 
 export default function NonModalNotesSheet() {
   const [notes, setNotes] = React.useState(
-    "Follow up with Lior about the Q2 budget."
+    "Follow up with the client about the brand identity brief."
   )
   return (
     <div className="flex flex-col items-center gap-2">

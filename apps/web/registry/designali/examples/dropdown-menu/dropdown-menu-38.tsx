@@ -2,11 +2,11 @@
 
 import * as React from "react"
 import {
-  BaselineIcon,
-  BoldIcon,
-  ChevronDownIcon,
-  ItalicIcon,
-} from "lucide-react"
+  Baseline as BaselineIcon,
+  Bold as BoldIcon,
+  ChevronDown as ChevronDownIcon,
+  Italic as ItalicIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {

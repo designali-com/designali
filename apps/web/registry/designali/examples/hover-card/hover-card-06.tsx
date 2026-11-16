@@ -1,4 +1,6 @@
-import { StarIcon } from "lucide-react"
+import {
+  Star as StarIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import {
@@ -10,14 +12,14 @@ import { cn } from "@workspace/ui/lib/utils"
 
 const items = [
   {
-    name: "Aero Running Shoe",
+    name: "Designali Templates Pro",
     price: "$129.00",
     rating: 4.7,
     stock: "In stock",
     tone: "from-sky-400 to-indigo-500",
   },
   {
-    name: "Trail Merino Socks",
+    name: "Icons Pro license",
     price: "$24.00",
     rating: 4.9,
     stock: "Low stock",

@@ -35,14 +35,14 @@ export default function CardMediaHeader() {
         </svg>
       </AspectRatio>
       <CardHeader className="pt-4">
-        <CardTitle>Harbor Analytics</CardTitle>
+        <CardTitle>Designali Dashboard</CardTitle>
         <CardDescription>
-          Track shipments and dwell time across all ports in one view.
+          Track template sales, block downloads and client projects in one view.
         </CardDescription>
       </CardHeader>
       <CardFooter className="pt-4">
         <Button size="sm" className="w-full">
-          Open workspace
+          Open dashboard
         </Button>
       </CardFooter>
     </Card>

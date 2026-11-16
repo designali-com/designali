@@ -1,7 +1,11 @@
 "use client"
 
 import { useState } from "react"
-import { Check, CreditCard, Lock } from "lucide-react"
+import {
+  Check,
+  CreditCard,
+  Lock,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Input } from "@workspace/ui/components/input"
@@ -11,14 +15,14 @@ import { cn } from "@workspace/ui/lib/utils"
 const steps = ["Contact", "Delivery", "Payment"]
 
 const deliveryOptions = [
-  { id: "standard", label: "Standard", detail: "3-5 working days", price: 0 },
-  { id: "express", label: "Express", detail: "Next working day", price: 9 },
-  { id: "pickup", label: "Collect in store", detail: "Ready in 2 hours, Mercer St", price: 0 },
+  { id: "standard", label: "Instant download", detail: "Files and license by email", price: 0 },
+  { id: "express", label: "Setup help", detail: "Designali installs it on your Vercel", price: 9 },
+  { id: "pickup", label: "GitHub access", detail: "Private repo invite in 2 hours", price: 0 },
 ]
 
 const items = [
-  { name: "Linen Duvet Cover", variant: "King · Stone", price: 148, tone: "from-stone-300 to-stone-100 dark:from-stone-600 dark:to-stone-800" },
-  { name: "Pillowcases, pair", variant: "Standard · Stone", price: 42, tone: "from-stone-200 to-amber-50 dark:from-stone-700 dark:to-stone-900" },
+  { name: "Design Agency Template", variant: "Pro license · Next.js + Figma", price: 79, tone: "from-stone-300 to-stone-100 dark:from-stone-600 dark:to-stone-800" },
+  { name: "Designali Icons Pro", variant: "Personal license", price: 39, tone: "from-stone-200 to-amber-50 dark:from-stone-700 dark:to-stone-900" },
 ]
 
 export default function Ecommerce09() {
@@ -72,7 +76,7 @@ export default function Ecommerce09() {
                 </span>
                 <h2 className="mt-4 text-2xl font-medium tracking-tight">Order placed</h2>
                 <p className="mt-2 text-sm text-muted-foreground">
-                  Confirmation #HL-20931 is on its way to your inbox.
+                  Confirmation #DA-20931 is on its way to your inbox.
                 </p>
               </div>
             ) : step === 0 ? (

@@ -2,11 +2,11 @@
 
 import * as React from "react"
 import {
-  LayoutGridIcon,
-  ListIcon,
-  Rows3Icon,
-  SlidersHorizontalIcon,
-} from "lucide-react"
+  LayoutGrid as LayoutGridIcon,
+  List as ListIcon,
+  Rows3 as Rows3Icon,
+  SlidersHorizontal as SlidersHorizontalIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {

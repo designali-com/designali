@@ -9,9 +9,9 @@ import {
 } from "@workspace/ui/components/table"
 
 const projects = [
-  { name: "Mobile app redesign", owner: "Lena Ortiz", value: 82 },
-  { name: "Billing migration", owner: "Sam Okafor", value: 45 },
-  { name: "Help center", owner: "Priya Nair", value: 20 },
+  { name: "Dalim Agency redesign", owner: "Ali Imam", value: 82 },
+  { name: "Designali icons v2", owner: "Sam", value: 45 },
+  { name: "Portfolio Simple template", owner: "Priya", value: 20 },
 ]
 
 export default function ProjectsTableProgress() {

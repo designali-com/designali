@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { GaugeIcon } from "lucide-react"
+import {
+  Gauge as GaugeIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Slider } from "@workspace/ui/components/slider"

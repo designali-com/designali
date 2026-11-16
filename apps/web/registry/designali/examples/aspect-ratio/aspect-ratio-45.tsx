@@ -1,4 +1,7 @@
-import { MicIcon, PlayIcon } from "lucide-react"
+import {
+  Mic as MicIcon,
+  Play as PlayIcon,
+} from "@designali/icons"
 
 import { AspectRatio } from "@workspace/ui/components/aspect-ratio"
 import { Button } from "@workspace/ui/components/button"
@@ -19,10 +22,10 @@ export default function PodcastEpisodeRow() {
           Ep. 112 - May 3
         </p>
         <p className="truncate text-sm font-medium">
-          Pricing is a product decision
+          Design se code tak
         </p>
         <p className="truncate text-xs text-muted-foreground">
-          Small Batch with Ruth Adeyemi
+          The Designali podcast with Ali Imam
         </p>
       </div>
       <Button

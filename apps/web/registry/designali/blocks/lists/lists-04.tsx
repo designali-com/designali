@@ -36,7 +36,7 @@ export default function Lists04() {
   return (
     <section className="w-full bg-background py-24">
       <div className="mx-auto max-w-5xl px-6">
-        <h2 className="text-4xl font-semibold tracking-tight md:text-5xl">Design glossary</h2>
+        <h2 className="text-4xl font-semibold tracking-tight md:text-5xl">Designali design glossary</h2>
 
         <nav className="mt-8 flex flex-wrap border-t border-l border-border">
           {alphabet.map((letter) => (

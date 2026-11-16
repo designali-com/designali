@@ -2,7 +2,9 @@
 
 import * as React from "react"
 import { addMonths, isSameMonth } from "date-fns"
-import { CalendarX2Icon } from "lucide-react"
+import {
+  CalendarX2 as CalendarX2Icon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Calendar } from "@workspace/ui/components/calendar"
@@ -38,8 +40,8 @@ export default function FullyBookedMonth() {
             <EmptyMedia variant="icon">
               <CalendarX2Icon />
             </EmptyMedia>
-            <EmptyTitle>Fully booked this month</EmptyTitle>
-            <EmptyDescription>Openings start next month.</EmptyDescription>
+            <EmptyTitle>Designali is fully booked this month</EmptyTitle>
+            <EmptyDescription>New project slots open next month.</EmptyDescription>
           </EmptyHeader>
           <EmptyContent>
             <Button size="sm" onClick={() => setMonth(addMonths(today, 1))}>

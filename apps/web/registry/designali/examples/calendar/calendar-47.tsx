@@ -2,7 +2,10 @@
 
 import * as React from "react"
 import { differenceInCalendarDays } from "date-fns"
-import { MoonIcon, SunIcon } from "lucide-react"
+import {
+  Moon as MoonIcon,
+  Sun as SunIcon,
+} from "@designali/icons"
 
 import { Calendar, CalendarDayButton } from "@workspace/ui/components/calendar"
 import {
@@ -61,8 +64,8 @@ export default function ShiftRotaCalendar() {
   return (
     <Card className="w-fit">
       <CardHeader>
-        <CardTitle>Ward 4 · Team C rota</CardTitle>
-        <CardDescription>2 days, 2 nights, 4 off.</CardDescription>
+        <CardTitle>Designali support rota</CardTitle>
+        <CardDescription>2 days, 2 late shifts, 4 off.</CardDescription>
       </CardHeader>
       <CardContent className="flex flex-col gap-3">
         <Calendar

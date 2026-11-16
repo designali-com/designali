@@ -1,7 +1,13 @@
 "use client"
 
 import { useState } from "react"
-import { CheckCircle2, ChevronDown, Circle, Lock, PlayCircle } from "lucide-react"
+import {
+  CircleCheck as CheckCircle2,
+  ChevronDown,
+  Circle,
+  Lock,
+  CirclePlay as PlayCircle,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Progress } from "@workspace/ui/components/progress"
@@ -9,7 +15,7 @@ import { cn } from "@workspace/ui/lib/utils"
 
 type Lesson = { title: string; length: string; locked?: boolean }
 const modules: { title: string; lessons: Lesson[] }[] = [
-  { title: "Foundations", lessons: [{ title: "Welcome and course map", length: "3:12" }, { title: "Setting up your workspace", length: "8:40" }, { title: "Your first layout", length: "12:05" }] },
+  { title: "Foundations", lessons: [{ title: "Welcome and course map", length: "3:12" }, { title: "Installing Designali blocks", length: "8:40" }, { title: "Your first layout", length: "12:05" }] },
   { title: "Typography systems", lessons: [{ title: "Choosing a type scale", length: "9:18" }, { title: "Line length and rhythm", length: "7:52" }, { title: "Pairing typefaces", length: "11:30" }] },
   { title: "Colour and contrast", lessons: [{ title: "Building a palette from one hue", length: "10:44", locked: true }, { title: "Accessible contrast in practice", length: "8:21", locked: true }] },
 ]
@@ -50,13 +56,13 @@ export default function Media13() {
             </Button>
           </div>
           <p className="mt-4 max-w-2xl text-sm text-muted-foreground">
-            In this lesson we work through a real landing page and rebuild its hierarchy using only type. Download the
+            In this lesson Ali Imam works through a real Designali landing page and rebuilds its hierarchy using only type. Download the
             starter file from the resources tab and follow along at your own pace.
           </p>
         </div>
         <aside className="border border-border lg:self-start">
           <div className="border-b border-border p-4">
-            <p className="text-sm font-medium">Layout for Developers</p>
+            <p className="text-sm font-medium">Designali: Layout for Developers</p>
             <div className="mt-3 flex items-center gap-3">
               <Progress value={pct} className="flex-1" />
               <span className="font-mono text-xs tabular-nums">{pct}%</span>

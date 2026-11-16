@@ -1,4 +1,6 @@
-import { TriangleAlertIcon } from "lucide-react";
+import {
+  TriangleAlert as TriangleAlertIcon,
+} from "@designali/icons"
 import {
   Alert,
   AlertDescription,

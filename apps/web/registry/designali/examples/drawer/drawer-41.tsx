@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { SmilePlusIcon } from "lucide-react"
+import {
+  SmilePlus as SmilePlusIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {

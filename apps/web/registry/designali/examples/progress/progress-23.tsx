@@ -1,4 +1,4 @@
-import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
+import { Avatar, AvatarFallback, AvatarImage } from "@workspace/ui/components/avatar"
 import {
   Progress,
   ProgressLabel,
@@ -17,12 +17,13 @@ export default function ProfileSkillLevels() {
     <div className="flex w-full max-w-sm flex-col gap-4 border p-4">
       <div className="flex items-center gap-3">
         <Avatar>
-          <AvatarFallback>NR</AvatarFallback>
+          <AvatarImage src="/ali.jpg" alt="Ali Imam" />
+          <AvatarFallback>AI</AvatarFallback>
         </Avatar>
         <div>
-          <p className="text-sm font-medium">Noor Rahimi</p>
+          <p className="text-sm font-medium">Ali Imam</p>
           <p className="text-xs text-muted-foreground">
-            Product designer &middot; 8 yrs
+            Design engineer &middot; Designali
           </p>
         </div>
       </div>

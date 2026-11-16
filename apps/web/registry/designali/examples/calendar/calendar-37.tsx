@@ -2,7 +2,10 @@
 
 import * as React from "react"
 import { addMonths, format, isSameMonth, subMonths } from "date-fns"
-import { ChevronLeftIcon, ChevronRightIcon } from "lucide-react"
+import {
+  ChevronLeft as ChevronLeftIcon,
+  ChevronRight as ChevronRightIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Calendar } from "@workspace/ui/components/calendar"

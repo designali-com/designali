@@ -1,4 +1,6 @@
-import { TruckIcon } from "lucide-react"
+import {
+  Truck as TruckIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -9,10 +11,10 @@ import {
 import { cn } from "@workspace/ui/lib/utils"
 
 const events = [
-  { status: "Out for delivery", place: "Leeds depot", time: "Today, 07:12" },
-  { status: "Arrived at depot", place: "Leeds", time: "Yesterday, 22:40" },
-  { status: "In transit", place: "Birmingham hub", time: "Yesterday, 14:05" },
-  { status: "Picked up", place: "Bristol", time: "Nov 12, 18:30" },
+  { status: "Deploying to Vercel", place: "designali.com", time: "Today, 07:12" },
+  { status: "Client approved", place: "Design review", time: "Yesterday, 22:40" },
+  { status: "In development", place: "Next.js build", time: "Yesterday, 14:05" },
+  { status: "Design started", place: "Figma", time: "Nov 12, 18:30" },
 ]
 
 function Event({
@@ -43,7 +45,7 @@ export default function ShipmentTrackingHistory() {
     <Collapsible className="w-full max-w-xs space-y-3 border p-4">
       <div className="flex items-center gap-2">
         <TruckIcon className="size-4" />
-        <span className="text-sm font-semibold">Arriving today</span>
+        <span className="text-sm font-semibold">Launching today</span>
         <span className="ml-auto font-mono text-xs text-muted-foreground">
           #TRK88213
         </span>

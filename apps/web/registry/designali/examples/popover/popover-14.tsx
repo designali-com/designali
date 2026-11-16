@@ -2,12 +2,12 @@
 
 import * as React from "react"
 import {
-  CircleCheckIcon,
-  FrownIcon,
-  MehIcon,
-  MessageSquareIcon,
-  SmileIcon,
-} from "lucide-react"
+  CircleCheck as CircleCheckIcon,
+  Frown as FrownIcon,
+  Meh as MehIcon,
+  MessageSquare as MessageSquareIcon,
+  Smile as SmileIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -48,7 +48,7 @@ export default function FeedbackPopover() {
         ) : (
           <>
             <PopoverHeader>
-              <PopoverTitle>How is the new editor?</PopoverTitle>
+              <PopoverTitle>How are the new Designali blocks?</PopoverTitle>
             </PopoverHeader>
             <div className="flex gap-1">
               {moods.map((m) => (

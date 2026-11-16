@@ -2,7 +2,11 @@
 
 import * as React from "react"
 import { REGEXP_ONLY_DIGITS } from "input-otp"
-import { MailIcon, MessageSquareIcon, PhoneIcon } from "lucide-react"
+import {
+  Mail as MailIcon,
+  MessageSquare as MessageSquareIcon,
+  Phone as PhoneIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {

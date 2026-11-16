@@ -1,4 +1,6 @@
-import { UsersIcon } from "lucide-react"
+import {
+  Users as UsersIcon,
+} from "@designali/icons"
 
 import {
   Carousel,
@@ -9,12 +11,12 @@ import {
 } from "@workspace/ui/components/carousel"
 
 const spaces = [
-  { name: "Studio loft", seats: 8 },
-  { name: "Quiet room", seats: 2 },
-  { name: "Board room", seats: 14 },
-  { name: "Phone booth", seats: 1 },
-  { name: "Workshop", seats: 20 },
-  { name: "Lounge", seats: 10 },
+  { name: "Brand identity", seats: 8, src: "/img/ask/ask1.jpg" },
+  { name: "UI/UX design", seats: 2, src: "/img/ask/ask2.jpg" },
+  { name: "Web development", seats: 14, src: "/img/ask/ask3.jpg" },
+  { name: "Design systems", seats: 1, src: "/img/ask/ask4.jpg" },
+  { name: "CGI/3D & motion", seats: 20, src: "/img/ask/ask5.jpg" },
+  { name: "AI workflows", seats: 10, src: "/img/ask/ask6.jpg" },
 ]
 
 export default function EdgeFadeOverlayControls() {
@@ -26,11 +28,16 @@ export default function EdgeFadeOverlayControls() {
             key={space.name}
             className="basis-1/2 ps-2 sm:basis-1/3"
           >
-            <div className="flex aspect-[3/4] flex-col justify-end gap-0.5 bg-muted p-3">
-              <span className="text-sm font-medium">{space.name}</span>
-              <span className="flex items-center gap-1 text-xs text-muted-foreground">
+            <div className="relative flex aspect-[3/4] flex-col justify-end gap-0.5 overflow-hidden bg-muted p-3">
+              <img
+                src={space.src}
+                alt={space.name + " by Designali"}
+                className="absolute inset-0 size-full object-cover opacity-40"
+              />
+              <span className="relative text-sm font-medium">{space.name}</span>
+              <span className="relative flex items-center gap-1 text-xs text-muted-foreground">
                 <UsersIcon className="size-3" />
-                {space.seats} seats
+                {space.seats} clients
               </span>
             </div>
           </CarouselItem>

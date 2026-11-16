@@ -1,11 +1,11 @@
 import {
-  ChartBarIcon,
-  LayoutDashboardIcon,
-  LifeBuoyIcon,
-  MenuIcon,
-  ShoppingBagIcon,
-  UsersIcon,
-} from "lucide-react"
+  ChartBar as ChartBarIcon,
+  LayoutDashboard as LayoutDashboardIcon,
+  LifeBuoy as LifeBuoyIcon,
+  Menu as MenuIcon,
+  ShoppingBag as ShoppingBagIcon,
+  Users as UsersIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -19,7 +19,7 @@ import { cn } from "@workspace/ui/lib/utils"
 
 const links = [
   { label: "Dashboard", icon: LayoutDashboardIcon, active: true },
-  { label: "Orders", icon: ShoppingBagIcon, active: false },
+  { label: "Templates", icon: ShoppingBagIcon, active: false },
   { label: "Customers", icon: UsersIcon, active: false },
   { label: "Reports", icon: ChartBarIcon, active: false },
 ]
@@ -27,7 +27,7 @@ const links = [
 export default function MobileHamburgerMenu() {
   return (
     <header className="flex w-full max-w-xs items-center justify-between border px-3 py-2">
-      <span className="text-xs font-semibold">Fernway Admin</span>
+      <span className="text-xs font-semibold">Designali Admin</span>
       <DropdownMenu>
         <DropdownMenuTrigger
           render={

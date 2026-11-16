@@ -24,7 +24,7 @@ export default function DependentFieldLabel() {
         <Textarea
           id="auto-reply-msg"
           disabled={!enabled}
-          defaultValue="Thanks for your note. I'm away until Jan 6 and will reply when I'm back."
+          defaultValue="Thanks for reaching out to Designali. I'm away until Jan 6 and will reply when I'm back. – Ali"
           className="min-h-20"
         />
       </div>

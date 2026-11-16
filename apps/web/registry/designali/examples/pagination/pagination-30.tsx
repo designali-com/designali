@@ -22,7 +22,7 @@ export default function CursorPagination() {
   return (
     <div className="flex w-full max-w-sm flex-col gap-3 border p-3">
       <div className="flex items-center justify-between text-xs">
-        <span className="font-medium">Webhook events</span>
+        <span className="font-medium">designali.com webhook events</span>
         <code className="bg-muted px-1.5 py-0.5 font-mono text-[11px]">
           after={current}
         </code>

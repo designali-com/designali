@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { ArrowRightIcon } from "lucide-react"
+import {
+  ArrowRight as ArrowRightIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Field, FieldLabel } from "@workspace/ui/components/field"
@@ -22,13 +24,13 @@ const steps = [
   {
     title: "Name your workspace",
     field: "Workspace name",
-    placeholder: "Acorn Analytics",
+    placeholder: "Designali Studio",
   },
-  { title: "Pick a URL", field: "Workspace URL", placeholder: "acorn" },
+  { title: "Pick a URL", field: "Workspace URL", placeholder: "designali" },
   {
     title: "Invite your team",
     field: "Teammate emails",
-    placeholder: "kai@acorn.example, rosa@acorn.example",
+    placeholder: "kai@designali.com, rosa@designali.com",
   },
 ]
 

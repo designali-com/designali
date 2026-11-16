@@ -1,7 +1,12 @@
 "use client"
 
 import { useState } from "react"
-import { ArrowRight, Building2, LifeBuoy, Newspaper } from "lucide-react"
+import {
+  ArrowRight,
+  Building2,
+  LifeBuoy,
+  Newspaper,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Input } from "@workspace/ui/components/input"
@@ -16,33 +21,33 @@ import { cn } from "@workspace/ui/lib/utils"
 const departments = [
   {
     id: "sales",
-    label: "Sales",
+    label: "Projects",
     icon: Building2,
-    heading: "Talk to our sales team",
-    blurb: "Volume pricing, security reviews and custom contracts for teams of 50+.",
-    contact: "sales@brightwater.dev",
+    heading: "Start a project with Designali",
+    blurb: "Brand identity, UI/UX design and Next.js development for brands that want to stand out.",
+    contact: "hello@designali.com",
   },
   {
     id: "support",
     label: "Support",
     icon: LifeBuoy,
-    heading: "Get help from an engineer",
-    blurb: "Real engineers answer every ticket, 24/5. Paid plans get a 4-hour SLA.",
-    contact: "help@brightwater.dev",
+    heading: "Get help with templates and blocks",
+    blurb: "Questions about installing or customising Designali products? We are happy to help.",
+    contact: "support@designali.com",
   },
   {
     id: "press",
-    label: "Press",
+    label: "Billing",
     icon: Newspaper,
-    heading: "Press and media",
-    blurb: "Interviews, brand assets and commentary on developer tooling.",
-    contact: "press@brightwater.dev",
+    heading: "Billing and licences",
+    blurb: "Invoices, plan changes and licence questions for designali.com purchases.",
+    contact: "billing@designali.com",
   },
 ]
 
 const offices = [
-  { city: "Toronto", address: "220 King St W, Floor 9" },
-  { city: "Lisbon", address: "Rua da Prata 80, 3D" },
+  { city: "Instagram", address: "@designali.code" },
+  { city: "X", address: "@designali_com" },
 ]
 
 export default function Forms20() {
@@ -53,7 +58,7 @@ export default function Forms20() {
     <section className="w-full bg-background py-20">
       <div className="mx-auto max-w-7xl px-6">
         <h2 className="max-w-2xl text-4xl font-semibold tracking-tight md:text-5xl">
-          How can we help?
+          How can Designali help?
         </h2>
 
         <div className="mt-10 grid grid-cols-3 border border-border" role="tablist" aria-label="Department">
@@ -80,7 +85,7 @@ export default function Forms20() {
             <div>
               <h3 className="text-2xl font-semibold tracking-tight">{department.heading}</h3>
               <p className="mt-3 text-sm leading-6 text-muted-foreground">{department.blurb}</p>
-              <a href="#" className="mt-6 inline-block font-mono text-sm underline underline-offset-4">
+              <a href={`mailto:${department.contact}`} className="mt-6 inline-block font-mono text-sm underline underline-offset-4">
                 {department.contact}
               </a>
             </div>
@@ -98,11 +103,11 @@ export default function Forms20() {
             <div className="grid gap-5 sm:grid-cols-2">
               <div className="space-y-2">
                 <Label htmlFor="f20-name">Name</Label>
-                <Input id="f20-name" placeholder="Kofi Mensah" className="h-10" />
+                <Input id="f20-name" placeholder="Your name" className="h-10" />
               </div>
               <div className="space-y-2">
                 <Label htmlFor="f20-email">Email</Label>
-                <Input id="f20-email" type="email" placeholder="kofi@lumenhq.com" className="h-10" />
+                <Input id="f20-email" type="email" placeholder="you@example.com" className="h-10" />
               </div>
             </div>
 
@@ -110,7 +115,7 @@ export default function Forms20() {
               <div className="grid gap-5 sm:grid-cols-2">
                 <div className="space-y-2">
                   <Label htmlFor="f20-company">Company</Label>
-                  <Input id="f20-company" placeholder="Lumen HQ" className="h-10" />
+                  <Input id="f20-company" placeholder="Your company" className="h-10" />
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="f20-size">Team size</Label>
@@ -126,20 +131,20 @@ export default function Forms20() {
 
             {active === "support" && (
               <div className="space-y-2">
-                <Label htmlFor="f20-workspace">Workspace URL</Label>
+                <Label htmlFor="f20-workspace">Your site URL</Label>
                 <div className="flex">
                   <span className="flex h-10 items-center border border-r-0 border-input bg-muted px-3 text-xs text-muted-foreground">
                     https://
                   </span>
-                  <Input id="f20-workspace" placeholder="lumen.brightwater.dev" className="h-10" />
+                  <Input id="f20-workspace" placeholder="your-site.vercel.app" className="h-10" />
                 </div>
               </div>
             )}
 
             {active === "press" && (
               <div className="space-y-2">
-                <Label htmlFor="f20-outlet">Publication</Label>
-                <Input id="f20-outlet" placeholder="The Compile Weekly" className="h-10" />
+                <Label htmlFor="f20-outlet">Invoice number</Label>
+                <Input id="f20-outlet" placeholder="INV-2026-0042" className="h-10" />
               </div>
             )}
 

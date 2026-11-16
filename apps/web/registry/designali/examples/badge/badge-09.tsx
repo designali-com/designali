@@ -17,7 +17,7 @@ export default function CappedCountBadges() {
           className="flex items-center justify-between px-2 py-1.5 hover:bg-muted"
         >
           <span className="text-sm">
-            {["Mentions", "Direct messages", "Updates", "Followers"][index]}
+            {["Mentions", "Client messages", "Template updates", "Followers"][index]}
           </span>
           <Badge variant="secondary" className="min-w-6 tabular-nums">
             {format(count)}

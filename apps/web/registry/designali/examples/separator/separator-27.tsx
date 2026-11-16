@@ -5,8 +5,8 @@ export default function ResponsiveOrientationSeparator() {
     <div className="flex w-full max-w-md flex-col gap-4 border p-4 sm:flex-row">
       <div className="flex flex-1 flex-col gap-1">
         <span className="text-xs text-muted-foreground">Billing contact</span>
-        <span className="text-sm font-medium">Hana Kobayashi</span>
-        <span className="text-xs text-muted-foreground">hana@orbitcrm.io</span>
+        <span className="text-sm font-medium">Hana · Designali client</span>
+        <span className="text-xs text-muted-foreground">billing@designali.com</span>
       </div>
       <Separator className="sm:hidden" />
       <Separator orientation="vertical" className="hidden sm:block" />

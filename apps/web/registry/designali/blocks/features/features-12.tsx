@@ -1,23 +1,23 @@
 const rows = [
   {
-    value: "48ms",
-    label: "Median cold start",
-    body: "Functions boot from a pre-warmed snapshot, so the first request after a deploy feels exactly like the thousandth.",
+    value: "460+",
+    label: "Blocks",
+    body: "Copy-and-paste sections for heroes, features, pricing, footers and dashboards, built with Next.js and Tailwind CSS.",
   },
   {
-    value: "300+",
-    label: "Edge locations",
-    body: "Your code runs within 50ms of 95% of the world's internet users, with automatic failover between regions.",
+    value: "240+",
+    label: "Landing pages",
+    body: "Complete page layouts you can launch as-is or remix into your own Designali-powered product.",
   },
   {
-    value: "0",
-    label: "Servers to patch",
-    body: "Runtimes, TLS certificates and OS updates are rolled out by us, tested against your traffic in shadow mode first.",
+    value: "2300+",
+    label: "UI examples",
+    body: "Every component shown in real-world states, so you can see exactly how it behaves before you use it.",
   },
   {
-    value: "99.99%",
-    label: "Uptime, contractually",
-    body: "Backed by a public status page and automatic credits. No support ticket required to claim them.",
+    value: "4000+",
+    label: "Icons",
+    body: "Lucide-compatible icons in @designali/icons, plus brand logos in @designali/logos.",
   },
 ]
 
@@ -27,10 +27,10 @@ export default function Features12() {
       <div className="mx-auto max-w-6xl">
         <div className="grid gap-6 md:grid-cols-2 md:items-end">
           <h2 className="text-3xl font-medium tracking-tight md:text-5xl">
-            The numbers behind Fathom Edge.
+            The numbers behind Designali.
           </h2>
           <p className="text-sm leading-7 text-muted-foreground md:text-right">
-            Measured across 1.2 billion requests in October 2026.
+            Designed and built by Ali Imam. Design se code tak.
           </p>
         </div>
         <div className="mt-14 border-t border-border">

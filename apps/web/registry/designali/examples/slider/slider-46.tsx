@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { HardDriveIcon } from "lucide-react"
+import {
+  HardDrive as HardDriveIcon,
+} from "@designali/icons"
 
 import { Slider } from "@workspace/ui/components/slider"
 

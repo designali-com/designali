@@ -1,11 +1,16 @@
 "use client"
 
 import { useState } from "react"
-import { ArrowRight, Menu, X } from "lucide-react"
+import {
+  ArrowRight,
+  Menu,
+  X,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
+import { Logo } from "@/src/components/logo"
 
-const links = ["Platform", "Solutions", "Developers", "Pricing", "Company"]
+const links = ["Templates", "Blocks", "Icons", "Pricing", "Docs"]
 
 export default function Header08() {
   const [open, setOpen] = useState(false)
@@ -18,7 +23,7 @@ export default function Header08() {
           <div className="mx-auto flex max-w-7xl items-center justify-center gap-3 px-6 py-2.5 text-xs sm:text-sm">
             <span className="hidden bg-background/15 px-2 py-0.5 text-xs sm:inline">New</span>
             <a href="#" className="flex items-center gap-1.5 hover:underline">
-              Realtime sync is now generally available
+              460+ blocks are now live on Designali
               <ArrowRight className="size-3.5" />
             </a>
             <button
@@ -35,11 +40,8 @@ export default function Header08() {
       <header className="relative border-b">
         <div className="mx-auto flex h-16 max-w-7xl items-center gap-10 px-6">
           <a href="#" className="flex items-center gap-2 font-semibold tracking-tight">
-            <svg viewBox="0 0 24 24" className="size-6" aria-hidden>
-              <path d="M2 12 12 2l10 10-10 10z" className="fill-foreground" />
-              <path d="M7 12l5-5 5 5-5 5z" className="fill-background" />
-            </svg>
-            Stratus
+            <Logo className="size-6" />
+            designali
           </a>
           <nav className="hidden gap-6 text-sm lg:flex">
             {links.map((link) => (
@@ -50,8 +52,8 @@ export default function Header08() {
           </nav>
           <div className="ms-auto hidden items-center gap-2 lg:flex">
             <Button variant="ghost">Log in</Button>
-            <Button variant="outline">Contact sales</Button>
-            <Button>Start free</Button>
+            <Button variant="outline">Contact</Button>
+            <Button>Get started</Button>
           </div>
           <Button
             variant="outline"
@@ -74,7 +76,7 @@ export default function Header08() {
             </nav>
             <div className="grid grid-cols-2 gap-2 px-6 pb-6">
               <Button variant="outline">Log in</Button>
-              <Button>Start free</Button>
+              <Button>Get started</Button>
             </div>
           </div>
         )}

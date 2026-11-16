@@ -1,4 +1,7 @@
-import { ArrowRightIcon, TerminalIcon } from "lucide-react"
+import {
+  ArrowRight as ArrowRightIcon,
+  Terminal as TerminalIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import {
@@ -13,10 +16,10 @@ import {
 import { Separator } from "@workspace/ui/components/separator"
 
 const sdks = [
-  { name: "Node.js", version: "v6.2.0", tag: "TS" },
-  { name: "Python", version: "v4.8.1", tag: "PY" },
-  { name: "Go", version: "v2.3.0", tag: "GO" },
-  { name: "Ruby", version: "v3.1.4", tag: "RB" },
+  { name: "@designali/icons", version: "v6.2.0", tag: "TS" },
+  { name: "@designali/logos", version: "v4.8.1", tag: "TS" },
+  { name: "@designali/vectors", version: "v2.3.0", tag: "TS" },
+  { name: "Designali blocks", version: "v3.1.4", tag: "UI" },
 ]
 
 export default function DeveloperSdksNav() {
@@ -28,7 +31,7 @@ export default function DeveloperSdksNav() {
           <NavigationMenuContent>
             <div className="flex w-72 flex-col gap-1">
               <p className="px-2 pt-1 text-[11px] font-semibold tracking-wide text-muted-foreground uppercase">
-                SDKs
+                Packages
               </p>
               <ul className="grid grid-cols-2 gap-1">
                 {sdks.map((sdk) => (

@@ -1,4 +1,6 @@
-import { PackageIcon } from "lucide-react"
+import {
+  Package as PackageIcon,
+} from "@designali/icons"
 
 import { Progress } from "@workspace/ui/components/progress"
 

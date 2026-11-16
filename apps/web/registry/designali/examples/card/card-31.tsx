@@ -1,12 +1,12 @@
 import {
-  CloudIcon,
-  CloudRainIcon,
-  CloudSunIcon,
-  DropletsIcon,
-  MapPinIcon,
-  SunIcon,
-  WindIcon,
-} from "lucide-react"
+  Cloud as CloudIcon,
+  CloudRain as CloudRainIcon,
+  CloudSun as CloudSunIcon,
+  Droplets as DropletsIcon,
+  MapPin as MapPinIcon,
+  Sun as SunIcon,
+  Wind as WindIcon,
+} from "@designali/icons"
 
 import {
   Card,
@@ -32,7 +32,7 @@ export default function WeatherForecastCard() {
       <CardHeader>
         <CardDescription className="flex items-center gap-1">
           <MapPinIcon className="size-3" />
-          Porto, Portugal
+          Designali studio
         </CardDescription>
         <CardTitle className="text-4xl font-light tabular-nums">18°</CardTitle>
         <CardAction>

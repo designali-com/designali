@@ -1,7 +1,11 @@
 "use client"
 
 import * as React from "react"
-import { ChevronDownIcon, ThumbsDownIcon, ThumbsUpIcon } from "lucide-react"
+import {
+  ChevronDown as ChevronDownIcon,
+  ThumbsDown as ThumbsDownIcon,
+  ThumbsUp as ThumbsUpIcon,
+} from "@designali/icons"
 
 import {
   Accordion,
@@ -14,13 +18,13 @@ import { Button } from "@workspace/ui/components/button"
 const answers = [
   {
     value: "late",
-    q: "My payout is late. What should I do?",
+    q: "My template sale payout is late. What should I do?",
     a: "Payouts can take up to 3 business days after the scheduled date. Check your bank details under Settings, Payouts.",
   },
   {
     value: "fees",
     q: "What fees are deducted?",
-    a: "We deduct a 2.9% processing fee plus 30 cents per transaction before each payout.",
+    a: "Designali deducts a 2.9% processing fee plus 30 cents per sale before each payout.",
   },
   {
     value: "currency",

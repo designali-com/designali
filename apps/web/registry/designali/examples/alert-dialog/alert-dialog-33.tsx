@@ -1,4 +1,6 @@
-import { BellRingIcon } from "lucide-react"
+import {
+  BellRing as BellRingIcon,
+} from "@designali/icons"
 
 import {
   AlertDialog,
@@ -27,8 +29,8 @@ export default function StackedFullWidthFooter() {
           </AlertDialogMedia>
           <AlertDialogTitle>Stay in the loop</AlertDialogTitle>
           <AlertDialogDescription>
-            Get notified when your order ships, when a driver is nearby, and
-            when it&apos;s delivered.
+            Get notified when Designali drops new blocks, templates and icon
+            packs.
           </AlertDialogDescription>
         </AlertDialogHeader>
         <AlertDialogFooter className="sm:flex-col-reverse sm:justify-stretch">

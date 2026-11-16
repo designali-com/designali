@@ -34,7 +34,7 @@ export default function UnderlineTabsBaseline() {
       </div>
       <Separator />
       <p className="pt-3 text-sm text-muted-foreground">
-        Showing {active.toLowerCase()} for Orbit CRM.
+        Showing {active.toLowerCase()} for designali.com.
       </p>
     </div>
   )

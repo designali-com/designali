@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { PencilIcon } from "lucide-react"
+import {
+  Pencil as PencilIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Input } from "@workspace/ui/components/input"
@@ -14,7 +16,7 @@ import {
 
 export default function ControlledRenamePopover() {
   const [open, setOpen] = React.useState(false)
-  const [name, setName] = React.useState("Atlas Redesign")
+  const [name, setName] = React.useState("Dalim Agency Redesign")
   const [draft, setDraft] = React.useState(name)
 
   return (

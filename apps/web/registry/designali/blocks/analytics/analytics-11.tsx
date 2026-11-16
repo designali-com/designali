@@ -5,10 +5,10 @@ import { useEffect, useState } from "react"
 const seed = [38, 42, 40, 45, 51, 48, 53, 57, 55, 60, 58, 62, 66, 63, 61, 67, 70, 68, 72, 69, 74, 71, 76, 79, 77, 81, 78, 83, 86, 84]
 
 const pages = [
-  { path: "/launch/aurora-2", live: 412 },
+  { path: "/icons", live: 412 },
   { path: "/pricing", live: 188 },
-  { path: "/docs/quickstart", live: 141 },
-  { path: "/changelog", live: 76 },
+  { path: "/docs", live: 141 },
+  { path: "/blocks", live: 76 },
 ]
 
 export default function Analytics11() {
@@ -46,7 +46,7 @@ export default function Analytics11() {
               {liveNow.toLocaleString()}
             </p>
             <p className="mt-4 max-w-sm text-sm text-background/60">
-              Aurora 2 launch day. Traffic is 4.2x a normal Tuesday and every
+              Designali Icons launch day. Traffic is 4.2x a normal Tuesday and every
               edge region is healthy.
             </p>
           </div>

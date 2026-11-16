@@ -2,12 +2,12 @@
 
 import * as React from "react"
 import {
-  BookmarkIcon,
-  EllipsisIcon,
-  HeartIcon,
-  MessageCircleIcon,
-  SendIcon,
-} from "lucide-react"
+  Bookmark as BookmarkIcon,
+  Ellipsis as EllipsisIcon,
+  Heart as HeartIcon,
+  MessageCircle as MessageCircleIcon,
+  Send as SendIcon,
+} from "@designali/icons"
 
 import { AspectRatio } from "@workspace/ui/components/aspect-ratio"
 import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
@@ -21,9 +21,9 @@ export default function FeedPostPortrait() {
     <div className="w-full max-w-xs border">
       <div className="flex items-center gap-2 p-2.5">
         <Avatar size="sm">
-          <AvatarFallback>MW</AvatarFallback>
+          <AvatarFallback>AI</AvatarFallback>
         </Avatar>
-        <span className="text-xs font-medium">mira.walks</span>
+        <span className="text-xs font-medium">designali.code</span>
         <EllipsisIcon className="ms-auto size-4 text-muted-foreground" />
       </div>
       <AspectRatio

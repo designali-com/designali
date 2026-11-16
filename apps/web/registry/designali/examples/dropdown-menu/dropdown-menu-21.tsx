@@ -1,9 +1,9 @@
 import {
-  ChartLineIcon,
-  ChevronDownIcon,
-  PlugIcon,
-  WorkflowIcon,
-} from "lucide-react"
+  ChartLine as ChartLineIcon,
+  ChevronDown as ChevronDownIcon,
+  Plug as PlugIcon,
+  Workflow as WorkflowIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -14,15 +14,15 @@ import {
 } from "@workspace/ui/components/dropdown-menu"
 
 const products = [
-  { label: "Analytics", hint: "Dashboards and reports", icon: ChartLineIcon },
-  { label: "Automations", hint: "Workflows without code", icon: WorkflowIcon },
-  { label: "Integrations", hint: "Connect your stack", icon: PlugIcon },
+  { label: "Templates", hint: "Production-ready Next.js sites", icon: ChartLineIcon },
+  { label: "Blocks", hint: "460+ copy-paste sections", icon: WorkflowIcon },
+  { label: "Icons", hint: "4000+ icons in @designali/icons", icon: PlugIcon },
 ]
 
 export default function HoverOpenNavMenu() {
   return (
     <nav className="flex items-center gap-1 border px-2 py-1">
-      <span className="me-2 text-xs font-semibold">Quanta</span>
+      <span className="me-2 text-xs font-semibold">designali</span>
       <DropdownMenu>
         <DropdownMenuTrigger
           openOnHover

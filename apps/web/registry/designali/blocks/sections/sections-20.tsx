@@ -4,11 +4,11 @@ import {
   BookOpen,
   HeartPulse,
   Laptop,
-  Palmtree,
+  TreePalm as Palmtree,
   PiggyBank,
   Plane,
   Sprout,
-} from "lucide-react"
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 

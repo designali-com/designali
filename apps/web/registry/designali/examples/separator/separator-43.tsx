@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { MinusIcon, PlusIcon } from "lucide-react"
+import {
+  Minus as MinusIcon,
+  Plus as PlusIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Separator } from "@workspace/ui/components/separator"
@@ -10,14 +13,14 @@ import { cn } from "@workspace/ui/lib/utils"
 const initial = [
   {
     id: "mug",
-    name: "Stoneware mug",
+    name: "Portfolio Simple template",
     price: 18,
     qty: 2,
     tone: "from-stone-300 to-stone-500",
   },
   {
     id: "kettle",
-    name: "Pour-over kettle",
+    name: "Icons Pack",
     price: 46,
     qty: 1,
     tone: "from-zinc-400 to-zinc-700",

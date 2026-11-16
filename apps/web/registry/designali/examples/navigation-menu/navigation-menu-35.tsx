@@ -1,4 +1,7 @@
-import { ArrowDownRightIcon, ArrowUpRightIcon } from "lucide-react"
+import {
+  ArrowDownRight as ArrowDownRightIcon,
+  ArrowUpRight as ArrowUpRightIcon,
+} from "@designali/icons"
 
 import {
   NavigationMenu,
@@ -12,10 +15,10 @@ import {
 import { cn } from "@workspace/ui/lib/utils"
 
 const markets = [
-  { name: "Global 100", value: "4,812.30", change: 0.84 },
-  { name: "Tech Leaders", value: "17,204.11", change: -0.42 },
-  { name: "Green Energy", value: "1,093.57", change: 2.15 },
-  { name: "Bond Index", value: "102.48", change: -0.05 },
+  { name: "Templates", value: "4,812.30", change: 0.84 },
+  { name: "Blocks", value: "17,204.11", change: -0.42 },
+  { name: "Icons", value: "1,093.57", change: 2.15 },
+  { name: "Logos", value: "102.48", change: -0.05 },
 ]
 
 export default function MarketsTickerNav() {
@@ -23,7 +26,7 @@ export default function MarketsTickerNav() {
     <NavigationMenu>
       <NavigationMenuList>
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Markets</NavigationMenuTrigger>
+          <NavigationMenuTrigger>Downloads</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="flex w-64 flex-col gap-1">
               {markets.map((m) => (
@@ -56,12 +59,12 @@ export default function MarketsTickerNav() {
         </NavigationMenuItem>
         <NavigationMenuItem>
           <NavigationMenuLink href="#" className={navigationMenuTriggerStyle()}>
-            Portfolio
+            Work
           </NavigationMenuLink>
         </NavigationMenuItem>
         <NavigationMenuItem>
           <NavigationMenuLink href="#" className={navigationMenuTriggerStyle()}>
-            Watchlist
+            Saved
           </NavigationMenuLink>
         </NavigationMenuItem>
       </NavigationMenuList>

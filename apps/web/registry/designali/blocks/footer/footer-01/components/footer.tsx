@@ -1,6 +1,10 @@
 import Link from "next/link"
-import { ChevronDown, SquareArrowOutUpRight } from "lucide-react"
-import { Github, LinkedIn, Vercel, X, YouTube } from "@designali/logos"
+import {
+  ChevronDown,
+  SquareArrowOutUpRight,
+} from "@designali/icons"
+import { Instagram, LinkedIn, X } from "@designali/logos"
+import { Logo } from "@/src/components/logo"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -14,47 +18,47 @@ import { ThemeSwitcher } from "./theme"
 
 const linksPro = [
   {
-    group: "Product",
+    group: "Products",
     items: [
       {
-        title: "AI",
-        href: "#",
+        title: "Templates",
+        href: "/templates",
       },
       {
-        title: "Enterprise",
-        href: "#",
+        title: "Blocks",
+        href: "/blocks",
       },
       {
-        title: "Fluid Compute",
-        href: "#",
+        title: "Landing Pages",
+        href: "/blocks",
       },
       {
-        title: "Next.js",
-        href: "#",
+        title: "UI Designs",
+        href: "/ui",
       },
       {
-        title: "Observability",
-        href: "#",
+        title: "Icons",
+        href: "/icons",
       },
       {
-        title: "Previews",
-        href: "#",
+        title: "Logos",
+        href: "/logos",
       },
       {
-        title: "Rendering",
-        href: "#",
+        title: "Illustration",
+        href: "/illustration",
       },
       {
-        title: "Security",
-        href: "#",
+        title: "Bento",
+        href: "/ui",
       },
       {
-        title: "Turbo",
-        href: "#",
+        title: "Marquee",
+        href: "/ui",
       },
       {
-        title: "Domains",
-        href: "#",
+        title: "Device Mockups",
+        href: "/ui",
       },
     ],
   },
@@ -66,43 +70,43 @@ const linksRes = [
     items: [
       {
         title: "Docs",
-        href: "#",
+        href: "/docs",
       },
       {
-        title: "Guides",
-        href: "#",
-      },
-      {
-        title: "Academy",
-        href: "#",
-      },
-      {
-        title: "Help",
-        href: "#",
-      },
-      {
-        title: "Integrations",
-        href: "#",
+        title: "Blogs",
+        href: "/blogs",
       },
       {
         title: "Pricing",
-        href: "#",
+        href: "/pricing",
       },
       {
-        title: "Resources",
-        href: "#",
+        title: "Getting Started",
+        href: "/docs",
       },
       {
-        title: "Solution Partners",
-        href: "#",
+        title: "Components",
+        href: "/docs",
       },
       {
-        title: "Startups",
-        href: "#",
+        title: "@designali/icons",
+        href: "/icons",
       },
       {
-        title: "Templates",
-        href: "#",
+        title: "@designali/logos",
+        href: "/logos",
+      },
+      {
+        title: "@designali/vectors",
+        href: "/illustration",
+      },
+      {
+        title: "Next.js",
+        href: "/docs",
+      },
+      {
+        title: "Tailwind CSS",
+        href: "/docs",
       },
     ],
   },
@@ -110,47 +114,47 @@ const linksRes = [
 
 const linksCom = [
   {
-    group: "Company",
+    group: "Studio",
     items: [
       {
-        title: "About",
-        href: "#",
+        title: "Work",
+        href: "/work",
       },
       {
-        title: "Blog",
-        href: "#",
+        title: "Contact",
+        href: "/contact",
       },
       {
-        title: "Careers",
-        href: "#",
+        title: "Brand Identity",
+        href: "/work",
       },
       {
-        title: "Changelog",
-        href: "#",
+        title: "UI/UX Design",
+        href: "/work",
       },
       {
-        title: "Contact Us",
-        href: "#",
+        title: "Web Development",
+        href: "/work",
       },
       {
-        title: "Customers",
-        href: "#",
+        title: "Design Systems",
+        href: "/work",
       },
       {
-        title: "Events",
-        href: "#",
+        title: "CGI & Motion",
+        href: "/work",
       },
       {
-        title: "Partners",
-        href: "#",
+        title: "AI Workflows",
+        href: "/work",
       },
       {
-        title: "Shipped",
-        href: "#",
+        title: "hello@designali.com",
+        href: "mailto:hello@designali.com",
       },
       {
-        title: "Privacy Policy",
-        href: "#",
+        title: "Terms",
+        href: "/docs/legal/terms",
       },
     ],
   },
@@ -176,10 +180,10 @@ export function Footer() {
                     </Link>
                   ))}
                   <Link
-                    href={"#"}
+                    href="https://21st.dev/@designali-in"
                     className="flex items-center gap-1 text-sm text-muted-foreground duration-150 hover:text-primary"
                   >
-                    v0
+                    21st.dev
                     <SquareArrowOutUpRight strokeWidth={2} size={16} />
                   </Link>
                 </div>
@@ -190,7 +194,7 @@ export function Footer() {
                 <div key={index} className="space-y-3 text-sm">
                   <span className="block font-medium">{link.group}</span>
                   <Link
-                    href={"#"}
+                    href="https://www.instagram.com/designali.code/"
                     className="flex items-center gap-1 text-sm text-muted-foreground duration-150 hover:text-primary"
                   >
                     Community
@@ -207,7 +211,7 @@ export function Footer() {
                   ))}
                   <DropdownMenu>
                     <DropdownMenuTrigger className="flex items-center gap-1 text-sm text-muted-foreground hover:text-primary">
-                      SDKs by Vercel <ChevronDown strokeWidth={2} size={16} />
+                      Packages <ChevronDown strokeWidth={2} size={16} />
                     </DropdownMenuTrigger>
                     <DropdownMenuContent
                       side="top"
@@ -215,19 +219,19 @@ export function Footer() {
                       className="w-60 p-1"
                     >
                       <DropdownMenuItem className="h-10 px-4">
-                        AI SDK{" "}
+                        @designali/icons{" "}
                         <SquareArrowOutUpRight strokeWidth={2} size={16} />
                       </DropdownMenuItem>
                       <DropdownMenuItem className="h-10 px-4">
-                        Flags SDK{" "}
+                        @designali/logos{" "}
                         <SquareArrowOutUpRight strokeWidth={2} size={16} />
                       </DropdownMenuItem>
                       <DropdownMenuItem className="h-10 px-4">
-                        Chat SDK{" "}
+                        @designali/vectors{" "}
                         <SquareArrowOutUpRight strokeWidth={2} size={16} />
                       </DropdownMenuItem>
                       <DropdownMenuItem className="h-10 px-4">
-                        Streamdown AI{" "}
+                        @workspace/ui{" "}
                         <SquareArrowOutUpRight strokeWidth={2} size={16} />
                       </DropdownMenuItem>
                     </DropdownMenuContent>
@@ -259,52 +263,13 @@ export function Footer() {
                       className="w-60 p-1"
                     >
                       <DropdownMenuItem className="h-10 px-4">
-                        Cookie Policy
+                        Terms of Use
                       </DropdownMenuItem>
                       <DropdownMenuItem className="h-10 px-4">
-                        Cookie Preferences
-                      </DropdownMenuItem>
-                      <DropdownMenuItem className="h-10 px-4">
-                        DMCA Policy
-                      </DropdownMenuItem>
-                      <DropdownMenuItem className="h-10 px-4">
-                        DORA Addendum
-                      </DropdownMenuItem>
-                      <DropdownMenuItem className="h-10 px-4">
-                        DPA
-                      </DropdownMenuItem>
-                      <DropdownMenuItem className="h-16 px-4">
-                        Domain Name Registration and Services Terms
-                      </DropdownMenuItem>
-                      <DropdownMenuItem className="h-10 px-4">
-                        Event Code of Conduct
-                      </DropdownMenuItem>
-                      <DropdownMenuItem className="h-10 px-4">
-                        Event Terms and Conditions
-                      </DropdownMenuItem>
-                      <DropdownMenuItem className="h-10 px-4">
-                        Inactivity Policy
-                      </DropdownMenuItem>
-                      <DropdownMenuItem className="h-10 px-4">
-                        Job Applicant Privacy Notice
+                        License
                       </DropdownMenuItem>
                       <DropdownMenuItem className="h-10 px-4">
                         Privacy Policy
-                      </DropdownMenuItem>
-                      <DropdownMenuItem className="h-10 px-4">
-                        SLA
-                      </DropdownMenuItem>
-                      <DropdownMenuItem className="h-10 px-4">
-                        Sub-processors
-                      </DropdownMenuItem>
-                      <DropdownMenuItem className="h-10 px-4">
-                        Support Terms
-                      </DropdownMenuItem>
-                      <DropdownMenuItem className="h-10 px-4">
-                        Terms of Service
-                      </DropdownMenuItem>
-                      <DropdownMenuItem className="h-10 px-4">
-                        Trademark Policy
                       </DropdownMenuItem>
                     </DropdownMenuContent>
                   </DropdownMenu>
@@ -315,16 +280,16 @@ export function Footer() {
               <div className="space-y-3 text-sm">
                 <span className="block font-medium">Social</span>
                 <Link
-                  href="#"
+                  href="https://www.instagram.com/designali.code/"
                   className="block text-muted-foreground duration-150 hover:text-primary"
                 >
                   <span className="flex items-center gap-2">
-                    <Github size={14} />
-                    Github
+                    <Instagram size={14} />
+                    Instagram
                   </span>
                 </Link>
                 <Link
-                  href="#"
+                  href="https://www.linkedin.com/company/designali-com/"
                   className="block text-muted-foreground duration-150 hover:text-primary"
                 >
                   <span className="flex items-center gap-2">
@@ -333,27 +298,27 @@ export function Footer() {
                   </span>
                 </Link>
                 <Link
-                  href="#"
+                  href="https://x.com/designali_com"
                   className="block text-muted-foreground duration-150 hover:text-primary"
                 >
                   <span className="flex items-center gap-2">
                     <X size={14} />
-                    Twitter
+                    X
                   </span>
                 </Link>
                 <Link
-                  href="#"
+                  href="https://www.linkedin.com/in/aliimam-in/"
                   className="block text-muted-foreground duration-150 hover:text-primary"
                 >
                   <span className="flex items-center gap-2">
-                    <YouTube className="grayscale" size={14} />
-                    YouTube
+                    <LinkedIn className="grayscale" size={14} />
+                    Ali Imam
                   </span>
                 </Link>
               </div>
             </div>
             <div className="flex justify-end">
-              <Vercel size={18} />
+              <Logo className="h-5 w-auto" />
             </div>
           </div>
         </div>
@@ -363,7 +328,7 @@ export function Footer() {
             variant={"ghost"}
           >
             <span className="block size-3 rounded-full border border-background bg-blue-500" />
-            All systems normal.
+            All Designali systems normal.
           </Button>
           <ThemeSwitcher />
         </div>

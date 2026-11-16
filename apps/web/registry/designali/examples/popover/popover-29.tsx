@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { ShoppingBagIcon, XIcon } from "lucide-react"
+import {
+  ShoppingBag as ShoppingBagIcon,
+  X as XIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import { Button } from "@workspace/ui/components/button"
@@ -17,14 +20,14 @@ import { cn } from "@workspace/ui/lib/utils"
 const initial = [
   {
     id: "tote",
-    name: "Linen Tote",
+    name: "Portfolio Simple template",
     qty: 1,
     price: 38,
     tone: "from-amber-200 to-orange-300",
   },
   {
     id: "mug",
-    name: "Clay Mug",
+    name: "Icons Pack",
     qty: 2,
     price: 22,
     tone: "from-sky-200 to-indigo-300",

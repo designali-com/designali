@@ -2,14 +2,14 @@
 
 import * as React from "react"
 import {
-  CameraIcon,
-  PlayIcon,
-  PowerOffIcon,
-  RotateCwIcon,
-  ServerIcon,
-  SquareIcon,
-  TerminalIcon,
-} from "lucide-react"
+  Camera as CameraIcon,
+  Play as PlayIcon,
+  PowerOff as PowerOffIcon,
+  RotateCw as RotateCwIcon,
+  Server as ServerIcon,
+  Square as SquareIcon,
+  Terminal as TerminalIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import {
@@ -33,7 +33,7 @@ export default function CloudInstanceMenu() {
         <div className="flex items-center justify-between">
           <span className="flex items-center gap-2 font-medium">
             <ServerIcon className="size-4" />
-            web-worker-03
+            designali-web-03
           </span>
           <Badge
             variant={

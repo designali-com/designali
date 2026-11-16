@@ -11,150 +11,151 @@ import {
   Plus,
   Quote,
   Sparkles,
-} from "lucide-react"
+} from "@designali/icons"
 
+import { Logo } from "@/src/components/logo"
 import { Button } from "@workspace/ui/components/button"
 import { Input } from "@workspace/ui/components/input"
 
-const navLinks = ["Product", "Models", "Pricing", "Research", "Docs"]
+const navLinks = ["Workflows", "Tools", "Pricing", "Work", "Docs"]
 
 const logos = [
-  "Nimbus",
-  "Parallax",
-  "Meridian",
-  "Cobalt Health",
-  "Fernway",
-  "Quanta",
-  "Silverpine",
-  "Atlas Freight",
+  "Notion",
+  "Figma",
+  "Cursor",
+  "Claude",
+  "OpenAI",
+  "v0",
+  "Vercel",
+  "Next.js",
 ]
 
 const features = [
   {
     icon: Languages,
-    title: "Multilingual",
+    title: "Multilingual content",
     description:
-      "Understand and reply in more than 40 languages with consistent tone and terminology.",
+      "Draft UI copy and landing pages in many languages, then polish them with a human eye.",
   },
   {
     icon: Database,
-    title: "Grounded in your data",
+    title: "Grounded in your brand",
     description:
-      "Connect docs, tickets and wikis. Every answer cites its sources so reviewers can verify in one click.",
+      "AI drafts start from your brand guidelines, tokens and components, so every output already looks like you.",
   },
   {
     icon: Bot,
-    title: "Custom agents",
+    title: "Prompt-to-prototype",
     description:
-      "Give agents tools, instructions and guardrails, then let them handle multi-step tasks end to end.",
+      "Turn a written brief into clickable Next.js prototypes built from Designali blocks in a day.",
   },
   {
     icon: Lock,
-    title: "Private by design",
+    title: "Human-crafted finish",
     description:
-      "Your data is never used to train models. Zero data retention options and customer-managed keys.",
+      "AI speeds up exploration, but Ali Imam reviews, refines and hand-codes every final detail.",
   },
   {
     icon: Gauge,
-    title: "Low-latency inference",
+    title: "Faster iterations",
     description:
-      "Streaming responses start in under 300ms, served from regions close to your users.",
+      "Explore dozens of layout and visual directions in hours instead of weeks.",
   },
   {
     icon: FlaskConical,
-    title: "Built-in evaluations",
+    title: "Design QA with AI",
     description:
-      "Test prompts against golden datasets and catch regressions before they reach customers.",
+      "Automated checks for spacing, contrast and copy catch issues before a review call.",
   },
 ]
 
 const stats = [
-  { value: "280ms", label: "Median time to first token" },
-  { value: "61%", label: "Average cost reduction" },
-  { value: "9,000+", label: "Companies building with us" },
-  { value: "40+", label: "Languages supported" },
+  { value: "2300+", label: "UI examples as references" },
+  { value: "3x", label: "Faster first concepts" },
+  { value: "4000+", label: "Icons in @designali/icons" },
+  { value: "240+", label: "Landing pages to start from" },
 ]
 
 const steps = [
   {
-    title: "Connect your sources",
+    title: "Share your brief",
     description:
-      "Sync Google Drive, Notion, Confluence, Zendesk and more with permission-aware connectors.",
+      "Send goals, references and brand assets. We turn them into a structured AI-ready brief.",
   },
   {
-    title: "Design the assistant",
+    title: "Explore with AI",
     description:
-      "Write instructions, choose tools and set guardrails in a visual builder or in code.",
+      "Generate moodboards, layouts and copy directions fast, then pick the strongest routes together.",
   },
   {
-    title: "Evaluate before launch",
+    title: "Refine by hand",
     description:
-      "Run test suites against real questions and compare models side by side on quality and cost.",
+      "Ali refines the chosen direction in Figma, with real type, spacing and motion decisions.",
   },
   {
-    title: "Deploy anywhere",
+    title: "Ship production code",
     description:
-      "Ship to Slack, your help center, your app or the API, and monitor every conversation live.",
+      "We build it in Next.js, TypeScript and Tailwind CSS and deploy it on Vercel.",
   },
 ]
 
 const showcase = [
   {
-    name: "Support Copilot",
-    meta: "Drafts replies from your help center",
+    name: "Moodboard sprint",
+    meta: "AI-generated visual directions",
     tag: "Popular",
-    price: "2 min setup",
+    price: "1 day",
   },
   {
-    name: "Research Agent",
-    meta: "Summarises accounts before sales calls",
-    tag: "Sales",
-    price: "5 min setup",
+    name: "Brief to wireframe",
+    meta: "Structured flows from a written brief",
+    tag: "UX",
+    price: "2 days",
   },
   {
-    name: "Contract Reviewer",
-    meta: "Flags risky clauses against your playbook",
-    tag: "Legal",
-    price: "10 min setup",
+    name: "Design QA pass",
+    meta: "Checks contrast, spacing and consistency",
+    tag: "QA",
+    price: "3 days",
   },
   {
-    name: "Data Analyst",
-    meta: "Answers questions in plain English with SQL",
+    name: "Prompt to prototype",
+    meta: "Clickable Next.js prototype from blocks",
     tag: "New",
-    price: "8 min setup",
+    price: "5 days",
   },
   {
-    name: "Meeting Notes",
-    meta: "Action items and decisions after every call",
+    name: "Copy drafts",
+    meta: "On-brand UI and landing page copy",
     tag: "Popular",
-    price: "1 min setup",
+    price: "Same day",
   },
   {
-    name: "Onboarding Guide",
-    meta: "Answers new-hire questions from your wiki",
-    tag: "HR",
-    price: "3 min setup",
+    name: "CGI concepts",
+    meta: "AI-assisted 3D and render explorations",
+    tag: "3D",
+    price: "2 days",
   },
 ]
 
 const testimonials = [
   {
     quote:
-      "We evaluated six vendors. This was the only one where evals, routing and logging were first-class instead of an afterthought.",
-    name: "Rafael Ortiz",
-    role: "ML Platform Lead, Quanta",
+      "Ali uses AI to move fast, not to cut corners. Every component in the final build was clean and typed.",
+    name: "Rafael O.",
+    role: "Engineering lead, Designali client",
   },
   {
     quote:
-      "Legal approved the rollout in a week because of zero retention and the audit trail. That is unheard of here.",
-    name: "Grace Whitfield",
-    role: "General Counsel, Cobalt Health",
+      "We went from a one-page brief to a working prototype in three days. Our investors thought it was live.",
+    name: "Grace W.",
+    role: "Product lead, Designali client",
   },
   {
     quote:
-      "Model routing cut our monthly inference bill by more than half without any drop in answer quality.",
-    name: "Kenji Watanabe",
-    role: "CTO, Silverpine",
+      "The AI-assisted workflow cut our design timeline in half without any drop in quality.",
+    name: "Kenji W.",
+    role: "CTO, Designali client",
   },
 ]
 
@@ -163,74 +164,74 @@ const tiers = [
     name: "Free",
     price: "$0",
     period: "/month",
-    description: "For individuals exploring what AI can do.",
+    description: "For makers exploring AI-assisted design.",
     features: [
-      "100 messages per day",
-      "Standard models",
-      "3 connected sources",
-      "Community support",
+      "Free Designali blocks",
+      "Free @designali/icons",
+      "Starter prompt library",
+      "Docs and blog guides",
     ],
     cta: "Start for free",
   },
   {
-    name: "Team",
-    price: "$25",
-    period: "/user/month",
-    description: "For teams deploying assistants to real workflows.",
+    name: "Pro",
+    price: "$29",
+    period: "/month",
+    description: "For designers and developers shipping with AI every day.",
     features: [
-      "Unlimited messages",
-      "Frontier models and routing",
-      "Unlimited sources",
-      "Custom agents",
-      "Evaluations and analytics",
+      "All blocks and templates",
+      "Full AI prompt library",
+      "All 2300+ UI examples",
+      "Prompt-to-prototype",
+      "New releases every month",
     ],
-    cta: "Start 14-day trial",
+    cta: "Get Pro",
   },
   {
-    name: "Enterprise",
+    name: "Studio",
     price: "Custom",
     period: "",
-    description: "For organisations with strict governance needs.",
+    description: "An AI-assisted design and build project with Ali Imam.",
     features: [
-      "Zero data retention",
-      "Customer-managed keys",
-      "SSO, SCIM and audit logs",
-      "Private deployment options",
-      "Dedicated solutions engineer",
+      "Custom AI workflow setup",
+      "Brand-trained prompt library",
+      "Design system in code",
+      "Next.js build on Vercel",
+      "Weekly calls with Ali",
     ],
-    cta: "Contact sales",
+    cta: "Start a project",
   },
 ]
 
 const faqs = [
   {
-    q: "Which models do you support?",
-    a: "We support leading frontier and open-weight models, and automatically route each request to the best fit for quality, latency and cost.",
+    q: "Which AI tools do you use?",
+    a: "We pick the right tool per task, such as Claude, Cursor and image models, alongside Figma and Next.js.",
   },
   {
-    q: "How do you prevent hallucinations?",
-    a: "Answers are grounded in your connected sources with inline citations, and evaluations let you measure accuracy before and after every change.",
+    q: "How do you keep AI output on-brand?",
+    a: "Prompts start from your brand guidelines and components, and every output goes through a human design review.",
   },
   {
-    q: "Can we bring our own model?",
-    a: "Yes. Enterprise plans can connect fine-tuned or self-hosted models through a standard OpenAI-compatible endpoint.",
+    q: "Can you set up AI workflows for our team?",
+    a: "Yes. Studio projects can include a documented prompt library and workflow your team keeps using after launch.",
   },
   {
-    q: "How is usage billed?",
-    a: "Team plans include generous usage per seat. Heavy API workloads are billed per million tokens with volume discounts.",
+    q: "How is the work billed?",
+    a: "Pro is a simple monthly plan. Studio projects are quoted as a fixed price after a discovery call.",
   },
   {
-    q: "Is there an on-premise option?",
-    a: "We offer single-tenant VPC deployments on AWS, Azure and GCP for customers with data residency or regulatory requirements.",
+    q: "Will our files be kept private?",
+    a: "Yes. Your assets are only used for your project, and you own every Figma file and line of code we produce.",
   },
 ]
 
 const footer = [
-  { title: "Product", links: ["Assistants", "Agents", "API", "Pricing"] },
-  { title: "Company", links: ["About", "Research", "Careers", "Contact"] },
+  { title: "Workflows", links: ["Moodboards", "Prototypes", "Design QA", "Pricing"] },
+  { title: "Studio", links: ["About", "Work", "Blog", "Contact"] },
   {
-    title: "Trust",
-    links: ["Security", "Privacy", "Responsible AI", "Status"],
+    title: "Follow",
+    links: ["Instagram", "X", "LinkedIn", "21st.dev"],
   },
 ]
 
@@ -242,7 +243,7 @@ export default function LandingAi08() {
           href="#"
           className="inline-flex items-center gap-1.5 hover:underline"
         >
-          Early access opens for GCSE and A-level students
+          Early access: Designali AI design course
           <ArrowRight className="size-3.5" />
         </a>
       </div>
@@ -252,10 +253,8 @@ export default function LandingAi08() {
             href="#"
             className="flex items-center gap-2 font-semibold tracking-tight"
           >
-            <span className="flex size-7 items-center justify-center rounded-md bg-orange-600 text-white text-sm">
-              T
-            </span>
-            <span className="">Tutorly</span>
+            <Logo className="h-5 w-auto" />
+            <span className="">designali</span>
           </a>
           <nav className="hidden items-center gap-7 text-sm md:flex">
             {navLinks.map((link) => (
@@ -276,7 +275,7 @@ export default function LandingAi08() {
               nativeButton={false}
               render={<a href="#" />}
             >
-              Log in
+              View work
             </Button>
             <Button size="sm" nativeButton={false} render={<a href="#" />}>
               Join the waitlist
@@ -289,18 +288,16 @@ export default function LandingAi08() {
           <div className="space-y-7">
             <span className="inline-flex items-center gap-2 rounded-full border bg-background text-muted-foreground px-3 py-1 text-xs font-medium">
               <Sparkles className="size-3.5 text-orange-600 dark:text-orange-400" />
-              AI tutor for students
+              Designali AI design lessons
             </span>
             <h1 className="text-4xl leading-[1.05] font-semibold tracking-tight text-balance sm:text-5xl md:text-6xl ">
-              {"A patient tutor for "}
+              {"Learn AI-assisted design for "}
               <span className="text-orange-600 dark:text-orange-400">
-                every homework question
+                every designer
               </span>
             </h1>
             <p className="max-w-xl text-lg leading-8 text-muted-foreground">
-              Tutorly explains maths, science and essays step by step, adapting
-              to how each student learns instead of just handing over the
-              answer.
+              Ali Imam explains how to design and code with AI step by step, from prompting to polishing, using real Designali projects.
             </p>
             <form
               action="#"
@@ -309,7 +306,7 @@ export default function LandingAi08() {
               <Input
                 type="email"
                 required
-                placeholder="you@company.com"
+                placeholder="you@example.com"
                 aria-label="Email address"
                 className="h-10 bg-background"
               />
@@ -340,7 +337,7 @@ export default function LandingAi08() {
       <section className="border-b">
         <div className="mx-auto max-w-7xl px-6 py-12">
           <p className="text-center text-sm text-muted-foreground">
-            Powering AI workflows at
+            Our AI-assisted workflow runs on
           </p>
           <div className="mt-8 grid grid-cols-2 items-center gap-x-8 gap-y-6 sm:grid-cols-4 lg:grid-cols-8">
             {logos.map((logo) => (
@@ -361,11 +358,10 @@ export default function LandingAi08() {
               Capabilities
             </p>
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl  mt-3">
-              AI that works where your team already works
+              AI that speeds up design without replacing craft
             </h2>
             <p className="mt-4 text-lg leading-8 text-muted-foreground">
-              Grounded in your own data, governed by your own policies, and fast
-              enough to feel like part of the interface.
+              Where thoughtful design meets production-ready code, with AI handling the busywork in between.
             </p>
           </div>
           <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -416,11 +412,10 @@ export default function LandingAi08() {
           <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
             <div className="max-w-2xl">
               <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl">
-                Ready-made agents for every team
+                Ready-made AI workflows
               </h2>
               <p className="mt-4 text-lg leading-8 text-muted-foreground">
-                Start from a tested template, connect your sources and deploy in
-                minutes. Every agent can be customised and audited.
+                Start from a tested Designali workflow, add your brand and get results fast. Every step is reviewed by a human.
               </p>
             </div>
             <Button
@@ -464,7 +459,7 @@ export default function LandingAi08() {
         <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl">
-              Loved by teams putting AI to real work
+              Loved by teams shipping with Designali
             </h2>
           </div>
           <div className="mt-14 grid gap-4 md:grid-cols-3">
@@ -502,11 +497,10 @@ export default function LandingAi08() {
         <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl">
-              Pay for what you use
+              Simple, transparent pricing
             </h2>
             <p className="mt-4 text-lg leading-8 text-muted-foreground">
-              Transparent per-seat and usage pricing. No minimums on self-serve
-              plans and volume discounts as you grow.
+              Free resources, a simple Pro plan, or a custom AI-assisted project with Ali Imam.
             </p>
           </div>
           <div className="mx-auto mt-14 grid max-w-6xl items-start gap-6 lg:grid-cols-3">
@@ -568,7 +562,7 @@ export default function LandingAi08() {
                 href="#"
                 className="font-medium text-foreground underline underline-offset-4"
               >
-                Get in touch
+                Email hello@designali.com
               </a>
               .
             </p>
@@ -593,11 +587,10 @@ export default function LandingAi08() {
           <div className="pointer-events-none absolute -top-24 left-1/2 size-96 -translate-x-1/2 rounded-full bg-gradient-to-b from-orange-500/25 via-amber-500/10 to-transparent blur-3xl" />
           <div className="relative mx-auto max-w-2xl space-y-6">
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl">
-              Get early access for your family
+              Get early access to the course
             </h2>
             <p className="text-lg text-muted-foreground">
-              Leave your email and we will send an invite as soon as your year
-              group opens.
+              Leave your email and we will send an invite as soon as the first lessons open.
             </p>
             <form
               action="#"
@@ -606,7 +599,7 @@ export default function LandingAi08() {
               <Input
                 type="email"
                 required
-                placeholder="you@company.com"
+                placeholder="you@example.com"
                 aria-label="Email address"
                 className="h-10 bg-background"
               />
@@ -625,10 +618,8 @@ export default function LandingAi08() {
               href="#"
               className="flex items-center gap-2 font-semibold tracking-tight"
             >
-              <span className="flex size-7 items-center justify-center rounded-md bg-orange-600 text-white text-sm">
-                T
-              </span>
-              <span className="">Tutorly</span>
+              <Logo className="h-5 w-auto" />
+              <span className="">designali</span>
             </a>
             <p className="max-w-xs text-sm text-muted-foreground">
               Learning that meets you where you are.
@@ -655,7 +646,7 @@ export default function LandingAi08() {
         <div className="border-t ">
           <div className="mx-auto flex max-w-7xl flex-col justify-between gap-4 px-6 py-6 text-xs text-muted-foreground sm:flex-row">
             <span>
-              © {new Date().getFullYear()} Tutorly. All rights reserved.
+              © {new Date().getFullYear()} Designali. All rights reserved.
             </span>
             <div className="flex gap-6">
               <a href="#" className="hover:text-foreground">
@@ -684,7 +675,7 @@ function HeroVisual() {
         <span className="size-2.5 rounded-full bg-muted-foreground/30" />
         <span className="size-2.5 rounded-full bg-muted-foreground/30" />
         <span className="ml-3 hidden rounded-md bg-muted px-3 py-0.5 text-[11px] text-muted-foreground sm:inline">
-          app.tutorly.com
+          designali.com/ai
         </span>
       </div>
       <div className="grid md:grid-cols-[180px_1fr]">

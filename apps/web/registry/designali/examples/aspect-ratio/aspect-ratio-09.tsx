@@ -1,4 +1,7 @@
-import { MapPinIcon, NavigationIcon } from "lucide-react"
+import {
+  MapPin as MapPinIcon,
+  Navigation as NavigationIcon,
+} from "@designali/icons"
 
 import { AspectRatio } from "@workspace/ui/components/aspect-ratio"
 import { Button } from "@workspace/ui/components/button"
@@ -44,9 +47,9 @@ export default function MapEmbedPlaceholder() {
       </AspectRatio>
       <div className="flex items-center justify-between gap-2 p-3">
         <div>
-          <p className="text-sm font-medium">Fern & Ember Coffee</p>
+          <p className="text-sm font-medium">Designali Studio</p>
           <p className="text-xs text-muted-foreground">
-            218 Alder Street - 0.4 mi
+            Design & development studio
           </p>
         </div>
         <Button size="sm" variant="outline">

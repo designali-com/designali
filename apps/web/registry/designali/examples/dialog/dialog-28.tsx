@@ -1,4 +1,9 @@
-import { LinkIcon, PaperclipIcon, PenSquareIcon, SendIcon } from "lucide-react"
+import {
+  Link as LinkIcon,
+  Paperclip as PaperclipIcon,
+  SquarePen as PenSquareIcon,
+  Send as SendIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -28,14 +33,14 @@ export default function FullscreenMobileComposeDialog() {
             <span className="w-10 text-muted-foreground">To</span>
             <input
               className="flex-1 bg-transparent outline-none"
-              defaultValue="design-team@orbitlabs.io"
+              defaultValue="hello@designali.com"
             />
           </label>
           <label className="flex items-center gap-2 py-2">
             <span className="w-10 text-muted-foreground">Subject</span>
             <input
               className="flex-1 bg-transparent outline-none"
-              placeholder="Weekly review notes"
+              placeholder="Brand identity project brief"
             />
           </label>
         </div>

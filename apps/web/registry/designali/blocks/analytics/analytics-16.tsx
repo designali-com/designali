@@ -5,15 +5,15 @@ import { useState } from "react"
 import { cn } from "@workspace/ui/lib/utils"
 
 const campaigns = [
-  { name: "Winter capsule launch", channel: "Social", spend: 18, roas: 4.6, orders: 1240 },
-  { name: "Brand search", channel: "Search", spend: 32, roas: 6.1, orders: 3120 },
-  { name: "Retargeting carousel", channel: "Social", spend: 12, roas: 3.2, orders: 610 },
-  { name: "Podcast sponsorship", channel: "Audio", spend: 24, roas: 1.4, orders: 280 },
-  { name: "Gift guide affiliates", channel: "Affiliate", spend: 9, roas: 5.3, orders: 720 },
-  { name: "Generic search", channel: "Search", spend: 41, roas: 2.2, orders: 1450 },
-  { name: "Creator bundles", channel: "Social", spend: 15, roas: 2.8, orders: 530 },
+  { name: "Designali Icons launch", channel: "Social", spend: 18, roas: 4.6, orders: 1240 },
+  { name: "Designali brand search", channel: "Search", spend: 32, roas: 6.1, orders: 3120 },
+  { name: "Templates carousel", channel: "Social", spend: 12, roas: 3.2, orders: 610 },
+  { name: "Design podcast spot", channel: "Audio", spend: 24, roas: 1.4, orders: 280 },
+  { name: "21st.dev affiliates", channel: "Affiliate", spend: 9, roas: 5.3, orders: 720 },
+  { name: "UI blocks search", channel: "Search", spend: 41, roas: 2.2, orders: 1450 },
+  { name: "UI kit bundles", channel: "Social", spend: 15, roas: 2.8, orders: 530 },
   { name: "Newsletter swap", channel: "Affiliate", spend: 5, roas: 3.9, orders: 210 },
-  { name: "Connected TV test", channel: "Audio", spend: 36, roas: 0.9, orders: 190 },
+  { name: "YouTube pre-roll test", channel: "Audio", spend: 36, roas: 0.9, orders: 190 },
 ]
 
 const channelColor: Record<string, string> = {
@@ -27,7 +27,7 @@ const maxSpend = 45
 const maxRoas = 7
 
 export default function Analytics16() {
-  const [selected, setSelected] = useState<string | null>("Brand search")
+  const [selected, setSelected] = useState<string | null>("Designali brand search")
   const active = campaigns.find((c) => c.name === selected)
 
   return (
@@ -36,7 +36,7 @@ export default function Analytics16() {
         <div className="max-w-2xl">
           <h2 className="text-3xl font-medium tracking-tight">Spend vs. return by campaign</h2>
           <p className="mt-3 text-sm text-muted-foreground">
-            Q4 paid media for Ember &amp; Oak. Bubble size reflects attributed
+            Q4 paid media for Designali. Bubble size reflects attributed
             orders. Anything below the break-even line is losing money.
           </p>
         </div>

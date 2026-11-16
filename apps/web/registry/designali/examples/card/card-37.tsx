@@ -2,13 +2,13 @@
 
 import * as React from "react"
 import {
-  AngryIcon,
-  FrownIcon,
-  HeartHandshakeIcon,
-  LaughIcon,
-  MehIcon,
-  SmileIcon,
-} from "lucide-react"
+  Angry as AngryIcon,
+  Frown as FrownIcon,
+  HeartHandshake as HeartHandshakeIcon,
+  Laugh as LaughIcon,
+  Meh as MehIcon,
+  Smile as SmileIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -62,7 +62,7 @@ export default function FeedbackCard() {
   return (
     <Card className="w-full max-w-sm">
       <CardHeader>
-        <CardTitle>How was your export experience?</CardTitle>
+        <CardTitle>How was your Designali template download?</CardTitle>
         <CardDescription>Takes 10 seconds. Helps a lot.</CardDescription>
       </CardHeader>
       <CardContent className="grid gap-3">

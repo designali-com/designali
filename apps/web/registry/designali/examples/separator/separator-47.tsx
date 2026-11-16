@@ -1,10 +1,12 @@
-import { CircleCheckIcon } from "lucide-react"
+import {
+  CircleCheck as CircleCheckIcon,
+} from "@designali/icons"
 
 import { Separator } from "@workspace/ui/components/separator"
 
 const posts = [
-  { title: "Sprint 14 retro notes", meta: "Posted by Ana - 2h" },
-  { title: "New brand colors are live", meta: "Posted by Ravi - 5h" },
+  { title: "Designali sprint 14 retro notes", meta: "Posted by Ana - 2h" },
+  { title: "New Designali brand colors are live", meta: "Posted by Ravi - 5h" },
 ]
 
 export default function FeedEndDivider() {

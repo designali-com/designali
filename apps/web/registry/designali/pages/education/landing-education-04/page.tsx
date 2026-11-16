@@ -10,127 +10,128 @@ import {
   Plus,
   Quote,
   Sparkles,
-} from "lucide-react"
+} from "@designali/icons"
 
+import { Logo } from "@/src/components/logo"
 import { Button } from "@workspace/ui/components/button"
 
-const navLinks = ["Courses", "Programs", "Instructors", "Pricing", "For teams"]
+const navLinks = ["Courses", "Resources", "Blog", "Pricing", "For teams"]
 
 const logos = [
-  "Shopify",
-  "Deloitte",
-  "IBM",
-  "Corvia",
-  "Canva",
-  "Google",
-  "Spotify",
-  "Airbnb",
+  "TypeScript",
+  "Tailwind CSS",
+  "Vercel",
+  "shadcn/ui",
+  "Blender",
+  "Figma",
+  "Next.js",
+  "React",
 ]
 
 const features = [
   {
     icon: MessageSquare,
-    title: "Mentor feedback",
+    title: "Design feedback",
     description:
-      "Get line-by-line feedback from industry mentors within 48 hours of every submission.",
+      "Get honest feedback on your Figma files and code from a working design engineer.",
   },
   {
     icon: Award,
-    title: "Recognised certificates",
+    title: "Real source files",
     description:
-      "Earn certificates accredited by partner universities and shareable on LinkedIn.",
+      "Every lesson comes with the Figma file and the finished code, so nothing is left as theory.",
   },
   {
     icon: Brain,
-    title: "Adaptive practice",
+    title: "Hands-on practice",
     description:
-      "Quizzes adapt to what you get wrong, so you spend time where it matters most.",
+      "Rebuild real Designali blocks step by step, from layout and tokens to responsive details.",
   },
   {
     icon: Download,
-    title: "Learn offline",
+    title: "Free blog and guides",
     description:
-      "Download lessons on the mobile app and keep learning without a connection.",
+      "Read free articles on design systems, Tailwind CSS and AI workflows on designali.com/blogs.",
   },
   {
     icon: Briefcase,
-    title: "Career support",
+    title: "Portfolio reviews",
     description:
-      "Resume reviews, mock interviews and introductions to our hiring partners.",
+      "One-to-one reviews of your portfolio and case studies, with clear next steps.",
   },
 ]
 
 const stats = [
-  { value: "4.8/5", label: "Average course rating" },
-  { value: "190", label: "Countries represented" },
-  { value: "320", label: "Hiring partners" },
-  { value: "2.4M", label: "Learners worldwide" },
+  { value: "4.8/5", label: "Average lesson rating" },
+  { value: "2300+", label: "UI design examples" },
+  { value: "1:1", label: "Mentoring with Ali Imam" },
+  { value: "460+", label: "Blocks to learn from" },
 ]
 
 const steps = [
   {
     title: "Pick your path",
     description:
-      "Take a short quiz and get a course or program matched to your goals and level.",
+      "Choose design, code or the full design-to-code track based on where you are today.",
   },
   {
     title: "Learn at your pace",
     description:
-      "Work through short lessons and practice exercises on any device.",
+      "Work through short lessons and exercises built around real Designali components.",
   },
   {
     title: "Build real projects",
     description:
-      "Apply what you learn to projects reviewed by mentors from the industry.",
+      "Design in Figma, build in Next.js and ship a project you are proud to share.",
   },
   {
-    title: "Get certified",
+    title: "Share your work",
     description:
-      "Earn a certificate and share it with employers, plus access career support.",
+      "Publish your project, share it on LinkedIn or X and get feedback from the community.",
   },
 ]
 
 const showcase = [
   {
-    name: "Data Analysis with Python",
-    meta: "12 weeks · 48 lessons",
+    name: "Design to Code with Next.js",
+    meta: "12 modules · 48 lessons",
     tag: "Bestseller",
-    price: "$249",
+    price: "$149",
     tile: "bg-gradient-to-br from-blue-200 via-indigo-300 to-violet-400 dark:from-blue-700 dark:via-indigo-800 dark:to-violet-900",
   },
   {
-    name: "UX Design Fundamentals",
-    meta: "8 weeks · 32 lessons",
+    name: "UI/UX Design Fundamentals",
+    meta: "8 modules · 32 lessons",
     tag: "Beginner",
-    price: "$199",
+    price: "$99",
     tile: "bg-gradient-to-br from-yellow-100 via-amber-200 to-orange-300 dark:from-yellow-700 dark:via-amber-800 dark:to-orange-900",
   },
   {
-    name: "Full-Stack Web Development",
-    meta: "24 weeks · Live cohort",
-    tag: "Program",
-    price: "$2,400",
+    name: "Design Engineering Track",
+    meta: "Live sessions with Ali",
+    tag: "Track",
+    price: "$499",
     tile: "bg-gradient-to-br from-amber-200 via-orange-300 to-rose-400 dark:from-amber-700 dark:via-orange-800 dark:to-rose-900",
   },
   {
-    name: "Product Management",
-    meta: "10 weeks · 40 lessons",
+    name: "Design Systems in Figma",
+    meta: "10 modules · 40 lessons",
     tag: "Popular",
-    price: "$299",
+    price: "$129",
     tile: "bg-gradient-to-br from-sky-200 via-cyan-300 to-teal-400 dark:from-sky-700 dark:via-cyan-800 dark:to-teal-900",
   },
   {
-    name: "Machine Learning Foundations",
-    meta: "14 weeks · 56 lessons",
+    name: "AI-Assisted Design Workflows",
+    meta: "6 modules · 24 lessons",
     tag: "New",
-    price: "$349",
+    price: "$119",
     tile: "bg-gradient-to-br from-violet-200 via-purple-300 to-fuchsia-400 dark:from-violet-700 dark:via-purple-800 dark:to-fuchsia-900",
   },
   {
-    name: "Business Writing",
-    meta: "4 weeks · 16 lessons",
+    name: "Tailwind CSS for Designers",
+    meta: "4 modules · 16 lessons",
     tag: "Short course",
-    price: "$89",
+    price: "$49",
     tile: "bg-gradient-to-br from-emerald-200 via-green-300 to-lime-300 dark:from-emerald-700 dark:via-green-800 dark:to-lime-900",
   },
 ]
@@ -138,101 +139,101 @@ const showcase = [
 const testimonials = [
   {
     quote:
-      "Studying with a cohort kept me accountable. I finished every module on time for the first time in my life.",
-    name: "Lucas Moreau",
-    role: "UX Designer",
+      "The live sessions kept me accountable. I finished every module and shipped my design system.",
+    name: "Lucas M.",
+    role: "UX designer",
   },
   {
     quote:
-      "We upskilled 200 analysts in a quarter. Completion rates were three times higher than our old platform.",
-    name: "Sarah Goldberg",
-    role: "Head of L&D",
+      "Our whole design team took the design systems course together. We now share one token set across Figma and code.",
+    name: "Sarah G.",
+    role: "Design lead",
   },
   {
     quote:
-      "Lessons are short enough that I can do one on the train every morning. Small steps added up fast.",
-    name: "Tomás Silva",
-    role: "Product Manager",
+      "Lessons are short enough that I can do one every morning. Small steps added up fast.",
+    name: "Tomás S.",
+    role: "Product manager",
   },
 ]
 
 const tiers = [
   {
     name: "Single course",
-    price: "$89",
+    price: "$49",
     period: "from",
     description: "Buy one course and keep it forever.",
     features: [
       "Lifetime access",
-      "All lessons and quizzes",
-      "Certificate of completion",
-      "Mobile app",
+      "All lessons and exercises",
+      "Figma and code source files",
+      "Learn on any device",
     ],
     cta: "Browse courses",
   },
   {
     name: "All-access",
-    price: "$39",
+    price: "$19",
     period: "/month",
-    description: "Unlimited learning across the whole catalog.",
+    description: "Every Designali course and resource, updated monthly.",
     features: [
       "Every course included",
-      "Mentor project reviews",
-      "Live workshops",
-      "Offline downloads",
+      "Project reviews from Ali",
+      "Live design-to-code sessions",
+      "Pro blocks for practice",
       "Cancel any time",
     ],
-    cta: "Start free trial",
+    cta: "Start learning",
   },
   {
     name: "Teams",
-    price: "$29",
+    price: "$15",
     period: "/seat/month",
-    description: "Upskill your whole organisation.",
+    description: "Level up your design and dev team together.",
     features: [
       "Everything in All-access",
-      "Admin dashboard",
-      "Custom learning paths",
-      "SSO and LMS integration",
-      "Dedicated success manager",
+      "Team progress overview",
+      "Custom workshop with Ali",
+      "Design system review",
+      "Priority email support",
     ],
-    cta: "Contact sales",
+    cta: "Contact Designali",
   },
 ]
 
 const faqs = [
   {
-    q: "Is financial aid available?",
-    a: "Yes. We offer need-based scholarships and income-share options for full programs.",
+    q: "Are there free resources?",
+    a: "Yes. The Designali blog, docs and free blocks are open to everyone on designali.com.",
   },
   {
     q: "Can I get a refund?",
-    a: "You can request a full refund within 14 days of purchase if you have completed less than 20% of the course.",
+    a: "See designali.com/docs/legal/terms for the refund policy, or email support@designali.com with any questions.",
   },
   {
     q: "Do you offer live classes?",
-    a: "Our cohort programs include weekly live sessions with instructors and small-group study rooms.",
+    a: "Yes. The Design Engineering Track includes live sessions with Ali Imam and small-group reviews.",
   },
   {
     q: "Do I need any prior experience?",
-    a: "No. Every path starts with a beginner track, and our placement quiz suggests where to start.",
+    a: "No. Each track starts with the basics, whether you are a designer learning code or a developer learning design.",
   },
   {
     q: "How much time should I set aside?",
-    a: "Most learners spend five to eight hours a week. You can pause and resume courses at any time.",
+    a: "Most learners spend three to five hours a week. Lessons are self-paced, so pause whenever you need.",
   },
 ]
 
 const footer = [
   {
     title: "Learn",
-    links: ["Courses", "Programs", "Certificates", "Free resources"],
+    links: ["Courses", "Resources", "Blog", "Free resources"],
   },
   {
     title: "Community",
-    links: ["Mentors", "Events", "Student stories", "Scholarships"],
+    links: ["Templates", "Blocks", "Instagram", "X"],
   },
-  { title: "Company", links: ["About", "Careers", "For business", "Contact"] },
+  { title: "Designali", links: ["About", "Work", "LinkedIn", "Contact"] },
 ]
 
 export default function LandingEducation04() {
@@ -244,10 +245,8 @@ export default function LandingEducation04() {
             href="#"
             className="flex items-center gap-2 font-semibold tracking-tight"
           >
-            <span className="flex size-7 items-center justify-center rounded-md bg-violet-600 text-white text-sm">
-              L
-            </span>
-            <span className="">Linguo</span>
+            <Logo className="h-5 w-auto" />
+            <span className="">designali</span>
           </a>
           <nav className="hidden items-center gap-7 text-sm md:flex">
             {navLinks.map((link) => (
@@ -271,7 +270,7 @@ export default function LandingEducation04() {
               Log in
             </Button>
             <Button size="sm" nativeButton={false} render={<a href="#" />}>
-              Try Linguo free
+              Start free
             </Button>
           </div>
         </div>
@@ -281,21 +280,20 @@ export default function LandingEducation04() {
           <div className="mx-auto max-w-3xl space-y-6 text-center">
             <span className="inline-flex items-center gap-2 rounded-full border bg-background text-muted-foreground px-3 py-1 text-xs font-medium">
               <Sparkles className="size-3.5 text-violet-600 dark:text-violet-400" />
-              Speak with confidence
+              Tailwind CSS for Designers
             </span>
             <h1 className="text-4xl leading-[1.05] font-semibold tracking-tight text-balance sm:text-5xl md:text-6xl ">
-              {"Speak a new language in "}
+              {"Speak the language of Tailwind in "}
               <span className="text-violet-600 dark:text-violet-400">
-                three months
+                four weeks
               </span>
             </h1>
             <p className="mx-auto max-w-2xl text-lg leading-8 text-muted-foreground">
-              Linguo combines daily ten-minute lessons with live conversation
-              practice with native speakers, so you are speaking from week one.
+              Designali teaches designers Tailwind CSS through daily ten-minute lessons and real blocks, so you are writing utility classes from week one.
             </p>
             <div className="flex flex-wrap gap-3 justify-center">
               <Button size="lg" nativeButton={false} render={<a href="#" />}>
-                Try Linguo free
+                Start free
                 <ArrowRight />
               </Button>
               <Button
@@ -304,7 +302,7 @@ export default function LandingEducation04() {
                 nativeButton={false}
                 render={<a href="#" />}
               >
-                See languages
+                See lessons
               </Button>
             </div>
           </div>
@@ -331,7 +329,7 @@ export default function LandingEducation04() {
       <section className="border-b">
         <div className="mx-auto max-w-7xl px-6 py-12">
           <p className="text-center text-sm text-muted-foreground">
-            Our graduates work at
+            Tools you will learn
           </p>
           <div className="mt-8 grid grid-cols-2 items-center gap-x-8 gap-y-6 sm:grid-cols-4 lg:grid-cols-8">
             {logos.map((logo) => (
@@ -352,11 +350,10 @@ export default function LandingEducation04() {
               Learning
             </p>
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl  mt-3">
-              Learning that actually sticks
+              Learning that actually ships
             </h2>
             <p className="mt-4 text-lg leading-8 text-muted-foreground">
-              Short lessons, real projects and feedback from experts, designed
-              around how adults really learn.
+              Short lessons, real projects and honest feedback, designed around how designers and developers really work.
             </p>
           </div>
           <div className="mt-14 grid gap-3 md:grid-cols-3">
@@ -388,11 +385,10 @@ export default function LandingEducation04() {
           <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
             <div className="max-w-2xl">
               <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl">
-                Popular courses this term
+                Popular Designali courses
               </h2>
               <p className="mt-4 text-lg leading-8 text-muted-foreground">
-                Taught by practitioners from leading companies and universities.
-                Start any course today.
+                Taught by Ali Imam, who designs and codes everything on designali.com. Start any course today.
               </p>
             </div>
             <Button
@@ -435,7 +431,7 @@ export default function LandingEducation04() {
         <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl">
-              Learners who changed their path
+              Learners who shipped their work
             </h2>
           </div>
           <div className="mt-14 grid gap-4 md:grid-cols-3">
@@ -501,8 +497,7 @@ export default function LandingEducation04() {
               Plans for every learner
             </h2>
             <p className="mt-4 text-lg leading-8 text-muted-foreground">
-              Learn at your own pace or join a live cohort. Financial aid and
-              student discounts available.
+              Learn at your own pace or join live sessions. Free resources are always available on the blog.
             </p>
           </div>
           <div className="mx-auto mt-14 grid max-w-6xl items-start gap-6 lg:grid-cols-3">
@@ -564,7 +559,7 @@ export default function LandingEducation04() {
                 href="#"
                 className="font-medium text-foreground underline underline-offset-4"
               >
-                Get in touch
+                Email hello@designali.com
               </a>
               .
             </p>
@@ -589,14 +584,14 @@ export default function LandingEducation04() {
           <div className="pointer-events-none absolute -top-24 left-1/2 size-96 -translate-x-1/2 rounded-full bg-gradient-to-b from-violet-500/25 via-fuchsia-500/10 to-transparent blur-3xl" />
           <div className="relative mx-auto max-w-2xl space-y-6">
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl">
-              Your first conversation is closer than you think
+              Your first coded design is closer than you think
             </h2>
             <p className="text-lg text-muted-foreground">
-              Start free on iOS, Android or the web. No card required.
+              Start with free lessons on designali.com. No card required.
             </p>
             <div className="flex flex-wrap gap-3 justify-center">
               <Button size="lg" nativeButton={false} render={<a href="#" />}>
-                Try Linguo free
+                Start free
                 <ArrowRight />
               </Button>
               <Button
@@ -605,7 +600,7 @@ export default function LandingEducation04() {
                 nativeButton={false}
                 render={<a href="#" />}
               >
-                See languages
+                See lessons
               </Button>
             </div>
           </div>
@@ -618,13 +613,11 @@ export default function LandingEducation04() {
               href="#"
               className="flex items-center gap-2 font-semibold tracking-tight"
             >
-              <span className="flex size-7 items-center justify-center rounded-md bg-violet-600 text-white text-sm">
-                L
-              </span>
-              <span className="">Linguo</span>
+              <Logo className="h-5 w-auto" />
+              <span className="">designali</span>
             </a>
             <p className="max-w-xs text-sm text-muted-foreground">
-              Fluency, one day at a time.
+              Fluency, one class at a time.
             </p>
           </div>
           {footer.map((column) => (
@@ -648,7 +641,7 @@ export default function LandingEducation04() {
         <div className="border-t ">
           <div className="mx-auto flex max-w-7xl flex-col justify-between gap-4 px-6 py-6 text-xs text-muted-foreground sm:flex-row">
             <span>
-              © {new Date().getFullYear()} Linguo. All rights reserved.
+              © {new Date().getFullYear()} Designali. All rights reserved.
             </span>
             <div className="flex gap-6">
               <a href="#" className="hover:text-foreground">

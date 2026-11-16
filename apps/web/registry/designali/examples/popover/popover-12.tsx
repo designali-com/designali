@@ -1,7 +1,11 @@
 "use client"
 
 import * as React from "react"
-import { ArrowDownIcon, ArrowUpDownIcon, ArrowUpIcon } from "lucide-react"
+import {
+  ArrowDown as ArrowDownIcon,
+  ArrowUpDown as ArrowUpDownIcon,
+  ArrowUp as ArrowUpIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Label } from "@workspace/ui/components/label"

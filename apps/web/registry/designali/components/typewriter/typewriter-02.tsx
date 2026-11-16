@@ -1,7 +1,7 @@
 import { Typewriter } from "@/registry/designali/ui/typewriter"
 
 export default function DemoOne() {
-  const words = ["Design", "Without", "Limits"]
+  const words = ["Design", "Se", "Code", "Tak"]
 
   return (
     <main className="flex h-80 items-center justify-center">

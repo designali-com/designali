@@ -6,7 +6,7 @@ export function IMacSizesDemo() {
       <IMac size="lg" color="blue">
         <img
           src="/img/login-1.jpg"
-          alt="App screen"
+          alt="Designali sign-in screen"
           className="h-full w-full object-cover"
         />
       </IMac>

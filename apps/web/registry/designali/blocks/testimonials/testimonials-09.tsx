@@ -1,7 +1,9 @@
 "use client"
 
 import { useState } from "react"
-import { Quote } from "lucide-react"
+import {
+  Quote,
+} from "@designali/icons"
 
 import { cn } from "@workspace/ui/lib/utils"
 

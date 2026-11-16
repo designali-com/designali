@@ -2,12 +2,12 @@
 
 import * as React from "react"
 import {
-  CheckSquareIcon,
-  DownloadIcon,
-  FolderInputIcon,
-  TagIcon,
-  TrashIcon,
-} from "lucide-react"
+  SquareCheck as CheckSquareIcon,
+  Download as DownloadIcon,
+  FolderInput as FolderInputIcon,
+  Tag as TagIcon,
+  Trash as TrashIcon,
+} from "@designali/icons"
 
 import {
   ContextMenu,
@@ -22,12 +22,12 @@ import {
 import { cn } from "@workspace/ui/lib/utils"
 
 const assets = [
-  "hero.png",
-  "logo.svg",
-  "banner.jpg",
-  "avatar.png",
-  "promo.mp4",
-  "icon.svg",
+  "designali-hero.png",
+  "designali-logo.svg",
+  "brand-banner.jpg",
+  "ali-imam.jpg",
+  "colorful-spheres.mp4",
+  "icon-set.svg",
 ]
 const tints = [
   "from-rose-300 to-rose-500",
@@ -40,8 +40,8 @@ const tints = [
 
 export default function BulkSelectionMenu() {
   const [selected, setSelected] = React.useState<string[]>([
-    "hero.png",
-    "banner.jpg",
+    "designali-hero.png",
+    "brand-banner.jpg",
   ])
   const toggle = (name: string) =>
     setSelected((s) =>

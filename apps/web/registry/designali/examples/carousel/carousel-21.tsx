@@ -1,11 +1,11 @@
 import {
-  FileArchiveIcon,
-  FileCodeIcon,
-  FileSpreadsheetIcon,
-  FileTextIcon,
-  FileVideoIcon,
-  FolderIcon,
-} from "lucide-react"
+  FileArchive as FileArchiveIcon,
+  FileCode as FileCodeIcon,
+  FileSpreadsheet as FileSpreadsheetIcon,
+  FileText as FileTextIcon,
+  FileVideoCamera as FileVideoIcon,
+  Folder as FolderIcon,
+} from "@designali/icons"
 
 import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
 import {
@@ -17,27 +17,27 @@ import {
 } from "@workspace/ui/components/carousel"
 
 const files = [
-  { name: "Q3 roadmap.pdf", size: "2.4 MB", icon: FileTextIcon, owner: "MC" },
-  { name: "Brand assets", size: "18 items", icon: FolderIcon, owner: "JP" },
+  { name: "Brand guidelines.pdf", size: "2.4 MB", icon: FileTextIcon, owner: "AI" },
+  { name: "Designali logos", size: "18 items", icon: FolderIcon, owner: "AI" },
   {
-    name: "Budget 2026.xlsx",
+    name: "Project estimate.xlsx",
     size: "840 KB",
     icon: FileSpreadsheetIcon,
-    owner: "AL",
+    owner: "DS",
   },
   {
-    name: "Launch video.mp4",
+    name: "CGI showreel.mp4",
     size: "128 MB",
     icon: FileVideoIcon,
-    owner: "RK",
+    owner: "AI",
   },
   {
-    name: "Interview notes.md",
+    name: "hero-block.tsx",
     size: "12 KB",
     icon: FileCodeIcon,
-    owner: "MC",
+    owner: "DV",
   },
-  { name: "Archive.zip", size: "56 MB", icon: FileArchiveIcon, owner: "TS" },
+  { name: "designali-icons.zip", size: "56 MB", icon: FileArchiveIcon, owner: "AI" },
 ]
 
 export default function RecentFilesCarousel() {

@@ -1,6 +1,14 @@
-import { CheckIcon, PhoneIcon, TruckIcon } from "lucide-react"
+import {
+  Check as CheckIcon,
+  Phone as PhoneIcon,
+  Truck as TruckIcon,
+} from "@designali/icons"
 
-import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from "@workspace/ui/components/avatar"
 import { Button } from "@workspace/ui/components/button"
 import {
   Drawer,
@@ -14,15 +22,15 @@ import {
 import { cn } from "@workspace/ui/lib/utils"
 
 const steps = [
-  { label: "Order confirmed", time: "Nov 13, 09:12", done: true },
-  { label: "Packed at warehouse", time: "Nov 13, 16:40", done: true },
+  { label: "Brief confirmed", time: "Nov 13, 09:12", done: true },
+  { label: "Design approved", time: "Nov 13, 16:40", done: true },
   {
-    label: "Out for delivery",
+    label: "In development",
     time: "Today, 08:05",
     done: true,
     current: true,
   },
-  { label: "Delivered", time: "Expected by 14:00", done: false },
+  { label: "Launched", time: "Expected by 14:00", done: false },
 ]
 
 export default function OrderTrackingDrawer() {
@@ -35,8 +43,8 @@ export default function OrderTrackingDrawer() {
       <DrawerContent>
         <div className="mx-auto flex w-full max-w-sm flex-col">
           <DrawerHeader>
-            <DrawerTitle>Arriving today</DrawerTitle>
-            <DrawerDescription>Order #88213 · 3 items</DrawerDescription>
+            <DrawerTitle>Launching today</DrawerTitle>
+            <DrawerDescription>Project #88213 · 3 pages</DrawerDescription>
           </DrawerHeader>
           <ol className="flex flex-col p-4">
             {steps.map((step, index) => (
@@ -77,11 +85,12 @@ export default function OrderTrackingDrawer() {
           </ol>
           <DrawerFooter className="flex-row items-center gap-3 border-t pt-4">
             <Avatar>
-              <AvatarFallback>DM</AvatarFallback>
+              <AvatarImage src="/ali.jpg" alt="Ali Imam" />
+              <AvatarFallback>AI</AvatarFallback>
             </Avatar>
             <div className="flex-1">
-              <p className="font-medium">Diego Martín</p>
-              <p className="text-muted-foreground">Your courier</p>
+              <p className="font-medium">Ali Imam</p>
+              <p className="text-muted-foreground">Your designer</p>
             </div>
             <Button variant="outline" size="icon" aria-label="Call courier">
               <PhoneIcon />

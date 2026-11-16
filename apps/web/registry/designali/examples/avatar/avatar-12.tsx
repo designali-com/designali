@@ -13,27 +13,27 @@ import { cn } from "@workspace/ui/lib/utils"
 
 const team = [
   {
-    name: "Elena Rossi",
-    email: "elena@fieldnotes.app",
-    initials: "ER",
+    name: "Ali Imam",
+    email: "ali@designali.com",
+    initials: "AI",
     role: "Owner",
   },
   {
-    name: "Marcus Webb",
-    email: "marcus@fieldnotes.app",
-    initials: "MW",
+    name: "Sara",
+    email: "sara@designali.com",
+    initials: "SA",
     role: "Admin",
   },
   {
-    name: "Yuki Tanaka",
-    email: "yuki@fieldnotes.app",
-    initials: "YT",
+    name: "Omar",
+    email: "omar@designali.com",
+    initials: "OM",
     role: "Editor",
   },
   {
-    name: "Daniel Osei",
-    email: "daniel@fieldnotes.app",
-    initials: "DO",
+    name: "Client reviewer",
+    email: "client@example.com",
+    initials: "CR",
     role: "Viewer",
   },
 ]

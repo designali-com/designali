@@ -12,28 +12,28 @@ import {
 
 const people = [
   {
-    label: "Maya Chen",
+    label: "Ali Imam",
     value: "maya",
-    email: "maya@northwind.dev",
-    initials: "MC",
+    email: "ali@designali.com",
+    initials: "AI",
   },
   {
-    label: "Jonas Weber",
+    label: "Jonas",
     value: "jonas",
-    email: "jonas@northwind.dev",
-    initials: "JW",
+    email: "jonas@designali.com",
+    initials: "J",
   },
   {
-    label: "Priya Nair",
+    label: "Priya",
     value: "priya",
-    email: "priya@northwind.dev",
-    initials: "PN",
+    email: "priya@designali.com",
+    initials: "P",
   },
   {
-    label: "Diego Alvarez",
+    label: "Diego",
     value: "diego",
-    email: "diego@northwind.dev",
-    initials: "DA",
+    email: "diego@designali.com",
+    initials: "D",
   },
 ]
 

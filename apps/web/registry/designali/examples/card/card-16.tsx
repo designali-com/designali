@@ -1,4 +1,7 @@
-import { NfcIcon, ShieldCheckIcon } from "lucide-react"
+import {
+  Nfc as NfcIcon,
+  ShieldCheck as ShieldCheckIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -16,7 +19,7 @@ export default function PaymentMethodCard() {
     <Card className="w-full max-w-sm">
       <CardHeader>
         <CardTitle>Payment method</CardTitle>
-        <CardDescription>Charged on the 1st of every month.</CardDescription>
+        <CardDescription>Your Designali Pro plan renews on the 1st of every month.</CardDescription>
         <CardAction>
           <Button variant="outline" size="sm">
             Replace
@@ -28,14 +31,14 @@ export default function PaymentMethodCard() {
           <div className="absolute -end-10 -top-10 size-32 rounded-full bg-white/10" />
           <div className="flex items-center justify-between">
             <NfcIcon className="size-5 opacity-80" />
-            <span className="text-xs font-semibold tracking-widest">NOVA</span>
+            <span className="text-xs font-semibold tracking-widest">DESIGNALI</span>
           </div>
           <div className="grid gap-2">
             <span className="font-mono text-sm tracking-widest">
               •••• •••• •••• 4821
             </span>
             <div className="flex justify-between text-[10px] uppercase opacity-80">
-              <span>Daniel Kovac</span>
+              <span>Ali Imam</span>
               <span>09/28</span>
             </div>
           </div>

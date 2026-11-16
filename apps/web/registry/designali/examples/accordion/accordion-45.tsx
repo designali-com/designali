@@ -1,4 +1,6 @@
-import { ReplyIcon } from "lucide-react"
+import {
+  Reply as ReplyIcon,
+} from "@designali/icons"
 
 import {
   Accordion,
@@ -13,26 +15,26 @@ import { Button } from "@workspace/ui/components/button"
 const threads = [
   {
     value: "t1",
-    author: "Maya Chen",
-    topic: "Launch copy review",
+    author: "Ali Imam",
+    topic: "Blocks launch copy review",
     unread: 2,
     replies: [
       {
-        author: "Leo Park",
+        author: "Sara Khan",
         text: "Headline works. Can we shorten the subhead?",
       },
-      { author: "Maya Chen", text: "Updated. Take a look at v3 in the doc." },
+      { author: "Ali Imam", text: "Updated. Take a look at v3 in Figma." },
     ],
   },
   {
     value: "t2",
-    author: "Dev Patel",
-    topic: "Staging is down",
+    author: "Zaid Ahmed",
+    topic: "Preview deploy is down",
     unread: 0,
     replies: [
       {
-        author: "Ana Silva",
-        text: "Restarted the worker, should be back now.",
+        author: "Ali Imam",
+        text: "Redeployed on Vercel, should be back now.",
       },
     ],
   },

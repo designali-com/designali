@@ -1,9 +1,9 @@
 import { Badge } from "@workspace/ui/components/badge"
 
 const people = [
-  { name: "Vera Holm", initials: "VH" },
-  { name: "Diego Santos", initials: "DS" },
-  { name: "Aiko Mori", initials: "AM" },
+  { name: "Ali Imam", initials: "AI" },
+  { name: "Sara", initials: "SA" },
+  { name: "Omar", initials: "OM" },
 ]
 
 export default function AssigneeChipBadges() {

@@ -3,12 +3,12 @@ import { Separator } from "@workspace/ui/components/separator"
 
 const replies = [
   {
-    name: "Elif Demir",
+    name: "Elif",
     initials: "ED",
     text: "Agreed, the contrast on hover is too low.",
   },
   {
-    name: "Tom Becker",
+    name: "Tom",
     initials: "TB",
     text: "I'll bump it to the 600 shade and re-check.",
   },
@@ -25,9 +25,9 @@ export default function CommentThreadLine() {
       </div>
       <div className="flex flex-1 flex-col gap-3">
         <div className="flex flex-col gap-0.5">
-          <span className="font-medium">Julia Santos</span>
+          <span className="font-medium">Julia</span>
           <span className="text-muted-foreground">
-            Should the secondary buttons darken on hover?
+            Should the secondary buttons in the Designali blocks darken on hover?
           </span>
         </div>
         {replies.map((reply) => (

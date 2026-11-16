@@ -1,4 +1,7 @@
-import { EyeIcon, LockOpenIcon } from "lucide-react"
+import {
+  Eye as EyeIcon,
+  LockOpen as LockOpenIcon,
+} from "@designali/icons"
 
 import {
   AlertDialog,
@@ -26,7 +29,7 @@ export default function MakeRepositoryPublic() {
           <AlertDialogMedia>
             <LockOpenIcon />
           </AlertDialogMedia>
-          <AlertDialogTitle>Make atlas-api public?</AlertDialogTitle>
+          <AlertDialogTitle>Make designali-blocks public?</AlertDialogTitle>
           <AlertDialogDescription>
             Anyone on the internet will be able to see this repository,
             including its full commit history.

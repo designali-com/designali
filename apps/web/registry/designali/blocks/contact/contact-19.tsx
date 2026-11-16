@@ -1,7 +1,9 @@
 "use client"
 
 import { useState } from "react"
-import { PhoneCall } from "lucide-react"
+import {
+  PhoneCall,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { cn } from "@workspace/ui/lib/utils"
@@ -33,7 +35,7 @@ export default function Contact19() {
                 Rather talk it through?
               </h2>
               <p className="mt-2 text-sm text-muted-foreground">
-                Leave your number and a Hearthline energy advisor will call
+                Leave your number and Ali Imam from Designali will call
                 you, free of charge, at a time that suits.
               </p>
             </div>
@@ -55,7 +57,7 @@ export default function Contact19() {
                 </select>
                 <input
                   type="tel"
-                  placeholder="7700 900 123"
+                  placeholder="Your number"
                   className="min-w-0 flex-1 bg-transparent px-3 text-sm outline-none"
                 />
               </div>

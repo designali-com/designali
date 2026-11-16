@@ -6,12 +6,12 @@ import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
 import { Input } from "@workspace/ui/components/input"
 
 const people = [
-  "Ada Morales",
-  "Bram de Vries",
-  "Chen Wei",
-  "Dalia Haddad",
-  "Eitan Cohen",
-  "Freya Lind",
+  "Ali Imam",
+  "Brand Designer",
+  "Client Lead",
+  "Design Engineer",
+  "Motion Designer",
+  "Studio Developer",
 ]
 
 export default function LiveFilterListInput() {

@@ -29,7 +29,7 @@ export function GaugeDemoCombined() {
         </GaugeValueText>
       </Gauge>
 
-      <GaugeLabel>Overall Health Score</GaugeLabel>
+      <GaugeLabel>Designali Project Score</GaugeLabel>
     </div>
   )
 }

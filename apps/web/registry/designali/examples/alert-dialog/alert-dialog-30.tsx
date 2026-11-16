@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { LandmarkIcon } from "lucide-react"
+import {
+  Landmark as LandmarkIcon,
+} from "@designali/icons"
 
 import {
   AlertDialog,
@@ -29,14 +31,14 @@ export default function WireTransferOtpConfirm() {
     <AlertDialog onOpenChange={(open) => !open && setCode("")}>
       <AlertDialogTrigger render={<Button />}>
         <LandmarkIcon data-icon="inline-start" />
-        Confirm wire transfer
+        Confirm studio payment
       </AlertDialogTrigger>
       <AlertDialogContent>
         <AlertDialogHeader>
           <AlertDialogTitle>Send $18,000.00?</AlertDialogTitle>
           <AlertDialogDescription>
             Enter the code we sent to your phone ending in 07 to authorize this
-            transfer to Brightline Supply.
+            transfer to the Designali studio account.
           </AlertDialogDescription>
         </AlertDialogHeader>
         <div className="flex justify-center">

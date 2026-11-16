@@ -1,7 +1,11 @@
 "use client"
 
 import { useState } from "react"
-import { ArrowLeft, ArrowRight, Check } from "lucide-react"
+import {
+  ArrowLeft,
+  ArrowRight,
+  Check,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Input } from "@workspace/ui/components/input"
@@ -10,7 +14,7 @@ import { cn } from "@workspace/ui/lib/utils"
 
 const steps = ["Account", "Workspace", "Invite team"]
 
-const roles = ["Designer", "Engineer", "Product", "Founder"]
+const roles = ["Designer", "Developer", "Design engineer", "Founder"]
 
 export default function Forms02() {
   const [step, setStep] = useState(0)
@@ -47,11 +51,11 @@ export default function Forms02() {
           {step === 0 && (
             <div className="space-y-5">
               <h2 className="text-2xl font-semibold tracking-tight">
-                Create your account
+                Create your Designali account
               </h2>
               <div className="space-y-2">
                 <Label htmlFor="f2-email">Email</Label>
-                <Input id="f2-email" type="email" placeholder="you@company.com" className="h-10" />
+                <Input id="f2-email" type="email" placeholder="you@example.com" className="h-10" />
               </div>
               <div className="space-y-2">
                 <Label htmlFor="f2-password">Password</Label>
@@ -63,15 +67,15 @@ export default function Forms02() {
           {step === 1 && (
             <div className="space-y-5">
               <h2 className="text-2xl font-semibold tracking-tight">
-                Set up your workspace
+                Set up your Designali workspace
               </h2>
               <div className="space-y-2">
                 <Label htmlFor="f2-workspace">Workspace name</Label>
                 <div className="flex">
                   <span className="flex h-10 items-center border border-r-0 border-input bg-muted px-3 text-xs text-muted-foreground">
-                    app.loom.so/
+                    designali.com/
                   </span>
-                  <Input id="f2-workspace" placeholder="acme" className="h-10" />
+                  <Input id="f2-workspace" placeholder="your-studio" className="h-10" />
                 </div>
               </div>
               <div className="space-y-2">
@@ -102,12 +106,12 @@ export default function Forms02() {
               <h2 className="text-2xl font-semibold tracking-tight">
                 Invite your teammates
               </h2>
-              {["ana@acme.com", "dev@acme.com", ""].map((email, index) => (
+              {["sara@example.com", "dev@example.com", ""].map((email, index) => (
                 <Input
                   key={index}
                   type="email"
                   defaultValue={email}
-                  placeholder="teammate@acme.com"
+                  placeholder="teammate@example.com"
                   className="h-10"
                 />
               ))}

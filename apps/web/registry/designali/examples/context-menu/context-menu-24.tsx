@@ -2,15 +2,19 @@
 
 import * as React from "react"
 import {
-  MailIcon,
-  MessageCircleIcon,
-  PhoneIcon,
-  StarIcon,
-  UserXIcon,
-  VideoIcon,
-} from "lucide-react"
+  Mail as MailIcon,
+  MessageCircle as MessageCircleIcon,
+  Phone as PhoneIcon,
+  Star as StarIcon,
+  UserX as UserXIcon,
+  Video as VideoIcon,
+} from "@designali/icons"
 
-import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from "@workspace/ui/components/avatar"
 import {
   ContextMenu,
   ContextMenuCheckboxItem,
@@ -28,17 +32,18 @@ export default function ContactCardMenu() {
     <ContextMenu>
       <ContextMenuTrigger className="flex w-full max-w-xs items-center gap-3 border p-3 data-popup-open:bg-muted/50">
         <Avatar className="size-10">
-          <AvatarFallback>NH</AvatarFallback>
+          <AvatarImage src="/ali.jpg" alt="Ali Imam" />
+          <AvatarFallback>AI</AvatarFallback>
         </Avatar>
         <div className="flex min-w-0 flex-col text-xs">
           <span className="flex items-center gap-1 font-medium">
-            Noor Haddad
+            Ali Imam
             {favorite ? (
               <StarIcon className="size-3 fill-amber-400 text-amber-400" />
             ) : null}
           </span>
           <span className="text-muted-foreground">
-            Customer Success · Lisbon
+            Founder · Designali
           </span>
           <span className="text-muted-foreground">+351 912 345 678</span>
         </div>

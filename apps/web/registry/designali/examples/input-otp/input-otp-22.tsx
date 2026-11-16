@@ -1,7 +1,11 @@
 "use client"
 
 import * as React from "react"
-import { DeleteIcon, LockKeyholeIcon, XIcon } from "lucide-react"
+import {
+  Delete as DeleteIcon,
+  LockKeyhole as LockKeyholeIcon,
+  X as XIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {

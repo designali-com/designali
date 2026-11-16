@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { PauseIcon } from "lucide-react"
+import {
+  Pause as PauseIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import { Calendar } from "@workspace/ui/components/calendar"
@@ -22,7 +24,7 @@ export default function BookingsPausedToggle() {
   return (
     <Card className="w-fit">
       <CardHeader>
-        <CardTitle>Public booking page</CardTitle>
+        <CardTitle>designali.com/contact booking page</CardTitle>
         <CardDescription>
           {paused
             ? "Guests can't pick a date right now."

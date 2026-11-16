@@ -54,7 +54,7 @@ export default function VerticalLineDocsTabs() {
             <span className="truncate">{e.path}</span>
           </div>
           <p className="text-muted-foreground">
-            Requires a secret key with the invoices:write scope for writes.
+            Requires a Designali API key with the invoices:write scope for writes.
           </p>
         </TabsContent>
       ))}

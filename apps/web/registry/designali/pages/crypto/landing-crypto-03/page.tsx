@@ -8,207 +8,208 @@ import {
   Plus,
   Wallet,
   Zap,
-} from "lucide-react"
+} from "@designali/icons"
 
+import { Logo } from "@/src/components/logo"
 import { Button } from "@workspace/ui/components/button"
 
-const navLinks = ["Markets", "Earn", "Security", "Developers", "Learn"]
+const navLinks = ["Work", "Services", "Process", "Pricing", "Blog"]
 
 const features = [
   {
     icon: Zap,
-    title: "Sub-second execution",
+    title: "Fast front ends",
     description:
-      "Our matching engine handles 1.4 million orders per second with a median latency under 4ms.",
+      "Next.js and TypeScript front ends that stay smooth with live prices, charts and order books.",
   },
   {
     icon: Coins,
-    title: "Earn on idle assets",
+    title: "Dashboards and data",
     description:
-      "Stake ETH, SOL and ATOM directly from your account, with rewards paid out daily and no lock-ups.",
+      "Portfolio, staking and analytics dashboards with charts and tables designed for clarity.",
   },
   {
     icon: ChartCandlestick,
-    title: "Pro trading tools",
+    title: "Design systems",
     description:
-      "Advanced charting, limit, stop and OCO orders, plus a FIX and WebSocket API for algorithmic traders.",
+      "A component library and tokens for trading screens, dapps and docs, ready for your developers.",
   },
   {
     icon: Wallet,
-    title: "Self-custody wallet",
+    title: "Brand identity",
     description:
-      "Move to a non-custodial wallet with one tap and connect to thousands of decentralised apps.",
+      "Logos, motion and 3D visuals that help a web3 product feel credible from the first glance.",
   },
   {
     icon: Landmark,
-    title: "Fiat on and off ramps",
+    title: "CGI and motion",
     description:
-      "Deposit and withdraw in USD, EUR and GBP by bank transfer, card or Apple Pay, with same-day settlement.",
+      "3D renders and motion loops for launches, token pages and social, without generic stock visuals.",
   },
 ]
 
 const stats = [
-  { value: "312", label: "Supported assets" },
-  { value: "0.08%", label: "Lowest maker fee" },
-  { value: "98%", label: "Assets held in cold storage" },
-  { value: "0", label: "Security breaches since 2017" },
+  { value: "2300+", label: "UI examples on designali.com" },
+  { value: "4.9", label: "Average client rating" },
+  { value: "4000+", label: "Icons in @designali/icons" },
+  { value: "1:1", label: "Figma to code parity on every hand-off" },
 ]
 
 const steps = [
   {
-    title: "Create your account",
+    title: "Book a discovery call",
     description:
-      "Sign up with email and set up two-factor authentication in under a minute.",
+      "A 30-minute call with Ali to understand your product, users and launch plans.",
   },
   {
-    title: "Verify your identity",
+    title: "Get a clear proposal",
     description:
-      "Upload an ID and a selfie. Most verifications are approved in under five minutes.",
+      "Scope, timeline and a fixed price, usually within 48 hours of the call.",
   },
   {
-    title: "Fund your wallet",
+    title: "Design in Figma",
     description:
-      "Deposit by bank transfer, card or crypto from another wallet or exchange.",
+      "Flows, screens and components designed and reviewed with your team every week.",
   },
   {
-    title: "Trade and earn",
+    title: "Ship in code",
     description:
-      "Buy, sell, swap or stake from one balance, with clear fees on every screen.",
+      "Production-ready Next.js, React and Tailwind CSS, connected to your contracts and APIs.",
   },
 ]
 
 const showcase = [
   {
-    name: "Bitcoin",
-    meta: "BTC · Market cap $1.3T",
-    tag: "+2.4%",
-    price: "$67,420",
+    name: "Exchange dashboard",
+    meta: "UI/UX · Trading screens",
+    tag: "Product",
+    price: "10 weeks",
   },
   {
-    name: "Ethereum",
-    meta: "ETH · Staking 3.8% APY",
-    tag: "+1.9%",
-    price: "$3,512",
+    name: "Staking app",
+    meta: "Next.js · Dashboard",
+    tag: "Web",
+    price: "8 weeks",
   },
   {
-    name: "Solana",
-    meta: "SOL · Staking 6.7% APY",
-    tag: "+5.1%",
-    price: "$172.30",
+    name: "Wallet onboarding",
+    meta: "UX · Mobile flows",
+    tag: "UX",
+    price: "6 weeks",
   },
   {
-    name: "USD Coin",
-    meta: "USDC · Fully reserved",
-    tag: "Stable",
-    price: "$1.00",
+    name: "Protocol rebrand",
+    meta: "Identity · Motion",
+    tag: "Brand",
+    price: "5 weeks",
   },
   {
-    name: "Chainlink",
-    meta: "LINK · Oracle network",
+    name: "Developer docs",
+    meta: "Docs · Design system",
     tag: "-0.6%",
-    price: "$18.04",
+    price: "4 weeks",
   },
-  { name: "Arbitrum", meta: "ARB · Layer 2", tag: "New", price: "$1.12" },
+  { name: "Launch visuals", meta: "CGI · 3D renders", tag: "New", price: "3 weeks" },
 ]
 
 const testimonials = [
   {
     quote:
-      "I bought my first Bitcoin here. The interface explained everything without ever making me feel stupid.",
-    name: "Laura Mendes",
-    role: "Retail investor",
+      "Our wallet onboarding finally explains everything without ever making new users feel stupid.",
+    name: "Laura M.",
+    role: "Founder, wallet app",
   },
   {
     quote:
-      "Staking rewards land every day and I can unstake whenever I want. It just works the way it should.",
-    name: "Omar Haddad",
-    role: "Long-term holder",
+      "Design files land every week and the code matches them exactly. It just works the way it should.",
+    name: "Omar H.",
+    role: "Founder, Designali client",
   },
   {
     quote:
-      "Proof of reserves was the deciding factor for our fund. Transparency is not optional any more.",
-    name: "Grace Liu",
-    role: "Partner, Node Capital",
+      "The new dashboard design was the deciding factor for our launch. Clarity is not optional any more.",
+    name: "Grace L.",
+    role: "Head of product, web3 team",
   },
 ]
 
 const tiers = [
   {
-    name: "Standard",
-    price: "0.40%",
-    period: "per trade",
-    description: "For everyday buying and selling.",
+    name: "Sprint",
+    price: "$2,400",
+    period: "per project",
+    description: "One landing page or token page, designed and coded.",
     features: [
-      "Instant buy and sell",
-      "Recurring purchases",
-      "Staking rewards",
-      "Email support",
+      "One page in Next.js",
+      "Built from Designali blocks",
+      "Responsive and accessible",
+      "Delivered in two weeks",
     ],
-    cta: "Create account",
+    cta: "Start a sprint",
   },
   {
-    name: "Advanced",
-    price: "0.10%",
-    period: "maker fee",
-    description: "For active traders who want pro tools.",
+    name: "Product",
+    price: "$4,500",
+    period: "/month",
+    description: "Ongoing UI/UX and front-end work for your dapp.",
     features: [
-      "Full order book",
-      "Limit, stop and OCO orders",
-      "Advanced charting",
-      "API access",
-      "Priority support",
+      "Unlimited design requests",
+      "Next.js development included",
+      "Dashboards and charts",
+      "Design system upkeep",
+      "Pause or cancel any time",
     ],
-    cta: "Start trading",
+    cta: "Work with Designali",
   },
   {
-    name: "Institutional",
+    name: "Partner",
     price: "Custom",
     period: "",
-    description: "For funds, treasuries and market makers.",
+    description: "For protocols and platforms with a long roadmap.",
     features: [
-      "Dedicated custody",
-      "OTC desk",
-      "FIX API",
-      "Sub-accounts",
-      "Named account manager",
+      "Brand and product together",
+      "Ali embedded in your team",
+      "Docs and developer portal",
+      "CGI and launch motion",
+      "Weekly roadmap check-ins",
     ],
-    cta: "Contact sales",
+    cta: "Talk to Ali",
   },
 ]
 
 const faqs = [
   {
-    q: "How long do withdrawals take?",
-    a: "Crypto withdrawals are processed within minutes. Bank withdrawals usually arrive the same or next business day.",
+    q: "How long does a project take?",
+    a: "A landing page usually takes two weeks. A full product UI and front end takes eight to twelve weeks.",
   },
   {
-    q: "Can I withdraw to my own wallet?",
-    a: "Yes. You can withdraw to any address you control, and we support every major network for each asset.",
+    q: "Can you work with our smart contract developers?",
+    a: "Yes. We design around your contracts and APIs and pair with your engineers on wallet and data integration.",
   },
   {
-    q: "How are staking rewards paid?",
-    a: "Rewards are calculated daily and credited to your balance automatically. You can unstake at any time.",
+    q: "Will we own the design and code?",
+    a: "Yes. You get the Figma files and the full codebase, ready to deploy on Vercel or your own infrastructure.",
   },
   {
-    q: "Do you report to tax authorities?",
-    a: "We provide downloadable tax reports and comply with local reporting rules in each country where we operate.",
+    q: "Do you sign NDAs before launch?",
+    a: "Always. Unreleased products stay private, and we only share work publicly with your permission.",
   },
   {
-    q: "Is my crypto insured?",
-    a: "Assets in hot storage are covered by a $320M crime insurance policy, and 98% of customer funds are held offline in cold storage.",
+    q: "Do you give financial or token advice?",
+    a: "No. Designali designs and builds interfaces and brands. Token, legal and financial decisions stay with your team.",
   },
 ]
 
 const footer = [
   {
-    title: "Products",
-    links: ["Exchange", "Wallet", "Staking", "Institutional"],
+    title: "Services",
+    links: ["Web3 UI", "Brand identity", "Dashboards", "Partner"],
   },
   {
-    title: "Company",
-    links: ["About", "Careers", "Proof of reserves", "Press"],
+    title: "Studio",
+    links: ["About", "Work", "Trust-first UI", "Contact"],
   },
-  { title: "Support", links: ["Help center", "Fees", "API docs", "Status"] },
+  { title: "Resources", links: ["Docs", "Pricing", "Blocks", "Icons"] },
 ]
 
 export default function LandingCrypto03() {
@@ -220,10 +221,8 @@ export default function LandingCrypto03() {
             href="#"
             className="flex items-center gap-2 font-semibold tracking-tight"
           >
-            <span className="flex size-7 items-center justify-center rounded-md bg-fuchsia-600 text-white text-sm">
-              Y
-            </span>
-            <span className="font-serif text-lg font-normal">Yieldra</span>
+            <Logo className="h-5 w-auto" />
+            <span className="font-serif text-lg font-normal">designali</span>
           </a>
           <nav className="hidden items-center gap-7 text-sm md:flex">
             {navLinks.map((link) => (
@@ -244,10 +243,10 @@ export default function LandingCrypto03() {
               nativeButton={false}
               render={<a href="#" />}
             >
-              Log in
+              View work
             </Button>
             <Button size="sm" nativeButton={false} render={<a href="#" />}>
-              Launch app
+              Start a project
             </Button>
           </div>
         </div>
@@ -255,13 +254,13 @@ export default function LandingCrypto03() {
       <section className="border-b">
         <div className="mx-auto max-w-7xl px-6 pt-16 pb-12 md:pt-28">
           <div className="flex items-center justify-between border-b pb-4 text-xs tracking-widest text-muted-foreground uppercase">
-            <span>Audited by three firms</span>
+            <span>Designali for DeFi dashboards</span>
             <span className="hidden sm:inline">
-              Automated, audited, onchain.
+              Designed, coded, shipped.
             </span>
           </div>
           <h1 className="mt-12 max-w-5xl text-4xl leading-[1.05] font-semibold tracking-tight text-balance sm:text-5xl md:text-8xl font-serif font-normal">
-            {"Onchain yield "}
+            {"DeFi dashboards "}
             <span className="text-fuchsia-600 dark:text-fuchsia-400">
               without the guesswork
             </span>
@@ -275,7 +274,7 @@ export default function LandingCrypto03() {
             <div className="md:justify-self-end">
               <div className="flex flex-wrap gap-3 ">
                 <Button size="lg" nativeButton={false} render={<a href="#" />}>
-                  Launch app
+                  Start a project
                   <ArrowRight />
                 </Button>
                 <Button
@@ -316,14 +315,13 @@ export default function LandingCrypto03() {
           <div className="lg:sticky lg:top-24 lg:self-start">
             <div className="max-w-2xl">
               <p className="text-sm font-medium text-fuchsia-600 dark:text-fuchsia-400">
-                Why us
+                Services
               </p>
               <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl font-serif font-normal mt-3">
-                Built for people who take custody seriously
+                Built for teams who take UX seriously
               </h2>
               <p className="mt-4 text-lg leading-8 text-muted-foreground">
-                Institutional-grade infrastructure with an interface simple
-                enough for your first trade.
+                Where thoughtful design meets production-ready code, simple enough for a first-time user.
               </p>
             </div>
           </div>
@@ -352,11 +350,10 @@ export default function LandingCrypto03() {
           <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
             <div className="max-w-2xl">
               <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl font-serif font-normal">
-                Markets moving right now
+                Selected web3 work
               </h2>
               <p className="mt-4 text-lg leading-8 text-muted-foreground">
-                Trade more than 300 assets with deep liquidity, transparent fees
-                and real-time order books.
+                Exchanges, wallets, dashboards and launch visuals, all designed and built by Designali.
               </p>
             </div>
             <Button
@@ -364,7 +361,7 @@ export default function LandingCrypto03() {
               nativeButton={false}
               render={<a href="#" />}
             >
-              View all
+              View all work
               <ArrowUpRight />
             </Button>
           </div>
@@ -399,7 +396,7 @@ export default function LandingCrypto03() {
       <section className="border-b">
         <div className="mx-auto max-w-5xl px-6 py-20 text-center md:py-28">
           <p className="text-sm tracking-widest text-muted-foreground uppercase">
-            Trusted by traders, builders and treasuries
+            What web3 teams say
           </p>
           {testimonials.slice(0, 1).map((t) => (
             <figure key={t.name} className="mt-10">
@@ -433,7 +430,7 @@ export default function LandingCrypto03() {
         <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
           <div className="max-w-2xl">
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl font-serif font-normal">
-              From sign-up to first trade in minutes
+              From first call to first release
             </h2>
           </div>
           <ol className="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
@@ -458,11 +455,10 @@ export default function LandingCrypto03() {
         <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl font-serif font-normal">
-              Transparent fees, no surprises
+              Transparent pricing, no surprises
             </h2>
             <p className="mt-4 text-lg leading-8 text-muted-foreground">
-              Pay less as you trade more. Every tier includes cold storage,
-              proof of reserves and 24/7 support.
+              Fixed-price sprints or a monthly plan. Every option includes Figma files and production-ready code you own.
             </p>
           </div>
           <div className="mx-auto mt-14 grid max-w-6xl items-start gap-6 lg:grid-cols-3">
@@ -524,7 +520,7 @@ export default function LandingCrypto03() {
                 href="#"
                 className="font-medium text-foreground underline underline-offset-4"
               >
-                Get in touch
+                Email hello@designali.com
               </a>
               .
             </p>
@@ -548,11 +544,10 @@ export default function LandingCrypto03() {
         <div className="mx-auto flex max-w-7xl flex-col gap-10 px-6 py-20 md:flex-row md:items-end md:justify-between md:py-28">
           <div className="max-w-2xl">
             <h2 className="text-4xl font-semibold tracking-tight text-balance md:text-6xl font-serif font-normal">
-              Put your stablecoins to work
+              Put your dashboard to work
             </h2>
             <p className="mt-5 text-lg text-background/65">
-              Connect a wallet and start earning in two clicks. Withdraw any
-              time.
+              Book a call and get a dashboard review in two days.
             </p>
           </div>
           <div className="flex flex-wrap gap-3 ">
@@ -562,7 +557,7 @@ export default function LandingCrypto03() {
               nativeButton={false}
               render={<a href="#" />}
             >
-              Launch app
+              Start a project
               <ArrowRight />
             </Button>
             <Button
@@ -584,13 +579,11 @@ export default function LandingCrypto03() {
               href="#"
               className="flex items-center gap-2 font-semibold tracking-tight"
             >
-              <span className="flex size-7 items-center justify-center rounded-md bg-fuchsia-600 text-white text-sm">
-                Y
-              </span>
-              <span className="font-serif text-lg font-normal">Yieldra</span>
+              <Logo className="h-5 w-auto" />
+              <span className="font-serif text-lg font-normal">designali</span>
             </a>
             <p className="max-w-xs text-sm text-muted-foreground">
-              Automated, audited, onchain.
+              Designed, coded, shipped.
             </p>
           </div>
           {footer.map((column) => (
@@ -614,7 +607,7 @@ export default function LandingCrypto03() {
         <div className="border-t ">
           <div className="mx-auto flex max-w-7xl flex-col justify-between gap-4 px-6 py-6 text-xs text-muted-foreground sm:flex-row">
             <span>
-              © {new Date().getFullYear()} Yieldra. All rights reserved.
+              © {new Date().getFullYear()} Designali. All rights reserved.
             </span>
             <div className="flex gap-6">
               <a href="#" className="hover:text-foreground">
@@ -643,7 +636,7 @@ function HeroVisual() {
         <span className="size-2.5 rounded-full bg-muted-foreground/30" />
         <span className="size-2.5 rounded-full bg-muted-foreground/30" />
         <span className="ml-3 hidden rounded-md bg-muted px-3 py-0.5 text-[11px] text-muted-foreground sm:inline">
-          app.yieldra.com
+          designali.com/blocks
         </span>
       </div>
       <div className="grid md:grid-cols-[180px_1fr]">
@@ -672,9 +665,9 @@ function HeroVisual() {
           </div>
           <div className="rounded-lg border p-4">
             <div className="mb-4 flex items-center justify-between text-xs">
-              <span className="font-medium">Last 12 weeks</span>
+              <span className="font-medium">Project progress, last 12 weeks</span>
               <span className="text-fuchsia-600 dark:text-fuchsia-400">
-                +24.6%
+                On track
               </span>
             </div>
             <div className="flex h-32 items-end gap-1.5">

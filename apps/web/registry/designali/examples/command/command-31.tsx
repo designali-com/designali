@@ -1,7 +1,11 @@
 "use client"
 
 import * as React from "react"
-import { CalculatorIcon, NotebookPenIcon, TimerIcon } from "lucide-react"
+import {
+  Calculator as CalculatorIcon,
+  NotebookPen as NotebookPenIcon,
+  Timer as TimerIcon,
+} from "@designali/icons"
 
 import {
   Command,

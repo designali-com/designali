@@ -11,11 +11,11 @@ import {
 import { cn } from "@workspace/ui/lib/utils"
 
 const shots = [
-  { label: "Front", from: "from-sky-400", to: "to-indigo-500" },
-  { label: "Side", from: "from-emerald-400", to: "to-teal-600" },
-  { label: "Back", from: "from-amber-300", to: "to-orange-500" },
-  { label: "Detail", from: "from-rose-400", to: "to-fuchsia-500" },
-  { label: "In use", from: "from-slate-400", to: "to-slate-700" },
+  { label: "Portfolio", src: "/images/templates/portfolio-simple.jpg" },
+  { label: "Design Agency", src: "/images/templates/design-agency.jpg" },
+  { label: "Resort", src: "/images/templates/resort.jpg" },
+  { label: "AI Startup", src: "/images/templates/ai.jpg" },
+  { label: "Vercel", src: "/images/templates/vercel.jpg" },
 ]
 
 export default function ProductGalleryThumbnails() {
@@ -35,14 +35,13 @@ export default function ProductGalleryThumbnails() {
         <CarouselContent>
           {shots.map((shot) => (
             <CarouselItem key={shot.label}>
-              <div
-                className={cn(
-                  "flex aspect-square items-end bg-gradient-to-br p-4",
-                  shot.from,
-                  shot.to
-                )}
-              >
-                <span className="bg-background/80 px-2 py-1 text-xs font-medium">
+              <div className="relative flex aspect-square items-end overflow-hidden bg-muted p-4">
+                <img
+                  src={shot.src}
+                  alt={shot.label + " template by Designali"}
+                  className="absolute inset-0 size-full object-cover"
+                />
+                <span className="relative bg-background/80 px-2 py-1 text-xs font-medium">
                   {shot.label}
                 </span>
               </div>
@@ -58,14 +57,18 @@ export default function ProductGalleryThumbnails() {
             aria-label={"Show " + shot.label}
             onClick={() => api?.scrollTo(index)}
             className={cn(
-              "aspect-square bg-gradient-to-br ring-offset-2 ring-offset-background transition-opacity",
-              shot.from,
-              shot.to,
+              "aspect-square overflow-hidden bg-muted ring-offset-2 ring-offset-background transition-opacity",
               selected === index
                 ? "ring-2 ring-primary"
                 : "opacity-50 hover:opacity-80"
             )}
-          />
+          >
+            <img
+              src={shot.src}
+              alt=""
+              className="size-full object-cover"
+            />
+          </button>
         ))}
       </div>
     </div>

@@ -18,10 +18,10 @@ import {
 type Contact = { name: string; email: string }
 
 const contacts: Contact[] = [
-  { name: "Grace Liu", email: "grace@fernway.test" },
-  { name: "Omar Haddad", email: "omar@fernway.test" },
-  { name: "Ines Moreau", email: "ines@fernway.test" },
-  { name: "Theo Walsh", email: "theo@fernway.test" },
+  { name: "Ali Imam", email: "ali@designali.com" },
+  { name: "Designali Support", email: "support@designali.com" },
+  { name: "Designali Billing", email: "billing@designali.com" },
+  { name: "Client Team", email: "client@example.com" },
 ]
 
 const initialsOf = (name: string) =>

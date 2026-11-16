@@ -1,7 +1,11 @@
 "use client"
 
 import { useState } from "react"
-import { ArrowLeft, ArrowRight, Check } from "lucide-react"
+import {
+  ArrowLeft,
+  ArrowRight,
+  Check,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Input } from "@workspace/ui/components/input"
@@ -15,7 +19,7 @@ const sizes = ["1-10", "11-50", "51-200", "200+"]
 const goals = [
   "Launch a new product",
   "Redesign an existing app",
-  "Scale a design system",
+  "Build a design system",
   "Something else",
 ]
 
@@ -32,7 +36,7 @@ export default function Contact07() {
       <div className="mx-auto max-w-2xl px-6">
         <div className="text-center">
           <p className="text-xs font-medium tracking-widest text-muted-foreground uppercase">
-            Talk to sales
+            Talk to Designali
           </p>
           <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-5xl">
             Get a tailored walkthrough
@@ -71,7 +75,7 @@ export default function Contact07() {
               </span>
               <h3 className="mt-6 text-xl font-semibold">Request received</h3>
               <p className="mt-2 max-w-sm text-sm text-muted-foreground">
-                A solutions engineer will email you within 24 hours to find a
+                Ali Imam will email you within 24 hours to find a
                 time that works.
               </p>
             </div>
@@ -88,7 +92,7 @@ export default function Contact07() {
                 <div className="space-y-6">
                   <div className="space-y-2">
                     <Label htmlFor="contact-07-company">Company name</Label>
-                    <Input id="contact-07-company" placeholder="Fernhill Labs" className="h-11" />
+                    <Input id="contact-07-company" placeholder="Your company" className="h-11" />
                   </div>
                   <fieldset className="space-y-3">
                     <legend className="text-sm font-medium">Team size</legend>
@@ -154,18 +158,18 @@ export default function Contact07() {
                 <div className="grid gap-6 sm:grid-cols-2">
                   <div className="space-y-2">
                     <Label htmlFor="contact-07-name">Full name</Label>
-                    <Input id="contact-07-name" placeholder="Priya Raman" className="h-11" />
+                    <Input id="contact-07-name" placeholder="Your name" className="h-11" />
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="contact-07-role">Role</Label>
-                    <Input id="contact-07-role" placeholder="Head of Product" className="h-11" />
+                    <Input id="contact-07-role" placeholder="Founder" className="h-11" />
                   </div>
                   <div className="space-y-2 sm:col-span-2">
                     <Label htmlFor="contact-07-email">Work email</Label>
                     <Input
                       id="contact-07-email"
                       type="email"
-                      placeholder="priya@fernhill.io"
+                      placeholder="you@example.com"
                       className="h-11"
                     />
                   </div>

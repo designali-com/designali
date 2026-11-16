@@ -36,7 +36,7 @@ export default function Analytics14() {
           <div>
             <h2 className="text-2xl font-medium tracking-tight md:text-3xl">Deploy activity</h2>
             <p className="mt-1 text-sm text-muted-foreground">
-              Production deploys for the Harbor platform team, last 26 weeks.
+              Production deploys for the designali.com studio, last 26 weeks.
             </p>
           </div>
           <div className="flex gap-8 text-sm">

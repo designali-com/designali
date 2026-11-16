@@ -11,14 +11,14 @@ export default function InvoiceHeaderParties() {
       <div className="flex">
         <div className="flex flex-1 flex-col gap-0.5">
           <span className="mb-1 text-muted-foreground">From</span>
-          <span className="font-medium">Lark Studio Ltd</span>
-          <span className="text-muted-foreground">12 Quay Street, Bristol</span>
+          <span className="font-medium">Designali</span>
+          <span className="text-muted-foreground">hello@designali.com</span>
         </div>
         <Separator orientation="vertical" className="mx-4" />
         <div className="flex flex-1 flex-col gap-0.5">
           <span className="mb-1 text-muted-foreground">Billed to</span>
-          <span className="font-medium">Orbit CRM GmbH</span>
-          <span className="text-muted-foreground">Torstrasse 88, Berlin</span>
+          <span className="font-medium">Designali client</span>
+          <span className="text-muted-foreground">client@example.com</span>
         </div>
       </div>
     </div>

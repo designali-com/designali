@@ -14,7 +14,7 @@ export default function SignInFormInputs() {
     <Card className="w-full max-w-sm">
       <CardHeader>
         <CardTitle>Welcome back</CardTitle>
-        <CardDescription>Sign in to your Fieldnote workspace.</CardDescription>
+        <CardDescription>Sign in to your Designali workspace.</CardDescription>
       </CardHeader>
       <CardContent>
         <FieldGroup>
@@ -24,7 +24,7 @@ export default function SignInFormInputs() {
               id="signin-email"
               type="email"
               autoComplete="email"
-              placeholder="you@company.com"
+              placeholder="you@example.com"
             />
           </Field>
           <Field>

@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { Trash2Icon, TriangleAlertIcon } from "lucide-react"
+import {
+  Trash2 as Trash2Icon,
+  TriangleAlert as TriangleAlertIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -15,7 +18,7 @@ import {
 import { Field, FieldLabel } from "@workspace/ui/components/field"
 import { Input } from "@workspace/ui/components/input"
 
-const workspace = "acme-marketing"
+const workspace = "designali-studio"
 
 export default function DangerZoneCard() {
   const [value, setValue] = React.useState("")
@@ -28,7 +31,7 @@ export default function DangerZoneCard() {
           Delete workspace
         </CardTitle>
         <CardDescription>
-          This permanently removes 38 projects, 1,204 files and all member
+          This permanently removes 38 Designali projects, 1,204 design files and all member
           access. This can&apos;t be undone.
         </CardDescription>
       </CardHeader>

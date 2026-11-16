@@ -1,4 +1,10 @@
-import { Compass, Feather, Handshake, Hourglass, Scale } from "lucide-react"
+import {
+  Compass,
+  Feather,
+  Handshake,
+  Hourglass,
+  Scale,
+} from "@designali/icons"
 
 export default function Sections07() {
   return (

@@ -8,11 +8,11 @@ import {
 
 const orders = {
   pending: [
-    { id: "#4821", customer: "Lina Vos", total: "$82.00" },
-    { id: "#4822", customer: "Omar Haddad", total: "$19.50" },
+    { id: "#4821", customer: "Brand identity client", total: "$82.00" },
+    { id: "#4822", customer: "Template buyer", total: "$19.50" },
   ],
-  shipped: [{ id: "#4810", customer: "Sam Reyes", total: "$240.00" }],
-  issues: [{ id: "#4799", customer: "Ivy Chen", total: "$56.10" }],
+  shipped: [{ id: "#4810", customer: "Web design client", total: "$240.00" }],
+  issues: [{ id: "#4799", customer: "Icons Pro buyer", total: "$56.10" }],
 }
 
 export default function OrderStatusTabs() {

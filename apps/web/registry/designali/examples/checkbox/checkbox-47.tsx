@@ -1,25 +1,27 @@
 "use client"
 
 import * as React from "react"
-import { FolderIcon } from "lucide-react"
+import {
+  Folder as FolderIcon,
+} from "@designali/icons"
 
 import { Checkbox } from "@workspace/ui/components/checkbox"
 import { Progress, ProgressLabel } from "@workspace/ui/components/progress"
 import { cn } from "@workspace/ui/lib/utils"
 
 const folders = [
-  { name: "Documents", gb: 12.4 },
-  { name: "Photos", gb: 48.9 },
-  { name: "Projects", gb: 21.3 },
-  { name: "Downloads", gb: 9.8 },
-  { name: "Music", gb: 6.1 },
+  { name: "Templates", gb: 12.4 },
+  { name: "CGI renders", gb: 48.9 },
+  { name: "Client projects", gb: 21.3 },
+  { name: "Icons", gb: 9.8 },
+  { name: "Motion", gb: 6.1 },
 ]
 const QUOTA = 100
 
 export default function BackupFolderPicker() {
   const [picked, setPicked] = React.useState<string[]>([
-    "Documents",
-    "Projects",
+    "Templates",
+    "Client projects",
   ])
   const used = folders
     .filter((f) => picked.includes(f.name))

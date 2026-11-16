@@ -1,4 +1,8 @@
-import { BoldIcon, CodeIcon, LinkIcon } from "lucide-react"
+import {
+  Bold as BoldIcon,
+  Code as CodeIcon,
+  Link as LinkIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {

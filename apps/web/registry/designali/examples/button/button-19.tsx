@@ -1,4 +1,6 @@
-import { RocketIcon } from "lucide-react"
+import {
+  Rocket as RocketIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {

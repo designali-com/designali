@@ -6,136 +6,137 @@ import {
   Check,
   Download,
   FolderKanban,
-  PlayCircle,
+  CirclePlay as PlayCircle,
   Plus,
   Users,
-} from "lucide-react"
+} from "@designali/icons"
 
+import { Logo } from "@/src/components/logo"
 import { Button } from "@workspace/ui/components/button"
 
-const navLinks = ["Courses", "Programs", "Instructors", "Pricing", "For teams"]
+const navLinks = ["Courses", "Resources", "Blog", "Pricing", "For teams"]
 
 const logos = [
-  "IBM",
-  "Corvia",
-  "Canva",
-  "Google",
-  "Spotify",
-  "Airbnb",
-  "Shopify",
-  "Deloitte",
+  "Vercel",
+  "shadcn/ui",
+  "Blender",
+  "Figma",
+  "Next.js",
+  "React",
+  "TypeScript",
+  "Tailwind CSS",
 ]
 
 const features = [
   {
     icon: Brain,
-    title: "Adaptive practice",
+    title: "Hands-on practice",
     description:
-      "Quizzes adapt to what you get wrong, so you spend time where it matters most.",
+      "Rebuild real Designali blocks step by step, from layout and tokens to responsive details.",
   },
   {
     icon: Download,
-    title: "Learn offline",
+    title: "Free blog and guides",
     description:
-      "Download lessons on the mobile app and keep learning without a connection.",
+      "Read free articles on design systems, Tailwind CSS and AI workflows on designali.com/blogs.",
   },
   {
     icon: Briefcase,
-    title: "Career support",
+    title: "Portfolio reviews",
     description:
-      "Resume reviews, mock interviews and introductions to our hiring partners.",
+      "One-to-one reviews of your portfolio and case studies, with clear next steps.",
   },
   {
     icon: PlayCircle,
     title: "Bite-sized lessons",
     description:
-      "Video lessons under ten minutes, so you can learn on a commute or a lunch break.",
+      "Short lessons on design and code, so you can learn between client work or on a lunch break.",
   },
   {
     icon: FolderKanban,
     title: "Portfolio projects",
     description:
-      "Every course ends with a real project you can show employers, reviewed by an expert.",
+      "Every course ends with a real Next.js project you can deploy to Vercel and add to your portfolio.",
   },
   {
     icon: Users,
-    title: "Live cohorts",
+    title: "Live sessions",
     description:
-      "Learn alongside peers with weekly live sessions, study groups and shared deadlines.",
+      "Join live design-to-code sessions with Ali Imam and learn alongside other designers and developers.",
   },
 ]
 
 const stats = [
-  { value: "320", label: "Hiring partners" },
-  { value: "2.4M", label: "Learners worldwide" },
-  { value: "860", label: "Expert-led courses" },
-  { value: "87%", label: "Report a career boost" },
+  { value: "1:1", label: "Mentoring with Ali Imam" },
+  { value: "460+", label: "Blocks to learn from" },
+  { value: "240+", label: "Landing pages to study" },
+  { value: "4000+", label: "Icons in @designali/icons" },
 ]
 
 const steps = [
   {
     title: "Pick your path",
     description:
-      "Take a short quiz and get a course or program matched to your goals and level.",
+      "Choose design, code or the full design-to-code track based on where you are today.",
   },
   {
     title: "Learn at your pace",
     description:
-      "Work through short lessons and practice exercises on any device.",
+      "Work through short lessons and exercises built around real Designali components.",
   },
   {
     title: "Build real projects",
     description:
-      "Apply what you learn to projects reviewed by mentors from the industry.",
+      "Design in Figma, build in Next.js and ship a project you are proud to share.",
   },
   {
-    title: "Get certified",
+    title: "Share your work",
     description:
-      "Earn a certificate and share it with employers, plus access career support.",
+      "Publish your project, share it on LinkedIn or X and get feedback from the community.",
   },
 ]
 
 const showcase = [
   {
-    name: "Data Analysis with Python",
-    meta: "12 weeks · 48 lessons",
+    name: "Design to Code with Next.js",
+    meta: "12 modules · 48 lessons",
     tag: "Bestseller",
-    price: "$249",
+    price: "$149",
     tile: "bg-gradient-to-br from-violet-200 via-purple-300 to-fuchsia-400 dark:from-violet-700 dark:via-purple-800 dark:to-fuchsia-900",
   },
   {
-    name: "UX Design Fundamentals",
-    meta: "8 weeks · 32 lessons",
+    name: "UI/UX Design Fundamentals",
+    meta: "8 modules · 32 lessons",
     tag: "Beginner",
-    price: "$199",
+    price: "$99",
     tile: "bg-gradient-to-br from-emerald-200 via-green-300 to-lime-300 dark:from-emerald-700 dark:via-green-800 dark:to-lime-900",
   },
   {
-    name: "Full-Stack Web Development",
-    meta: "24 weeks · Live cohort",
-    tag: "Program",
-    price: "$2,400",
+    name: "Design Engineering Track",
+    meta: "Live sessions with Ali",
+    tag: "Track",
+    price: "$499",
     tile: "bg-gradient-to-br from-stone-200 via-neutral-300 to-zinc-400 dark:from-stone-700 dark:via-neutral-800 dark:to-zinc-900",
   },
   {
-    name: "Product Management",
-    meta: "10 weeks · 40 lessons",
+    name: "Design Systems in Figma",
+    meta: "10 modules · 40 lessons",
     tag: "Popular",
-    price: "$299",
+    price: "$129",
     tile: "bg-gradient-to-br from-rose-200 via-pink-300 to-purple-300 dark:from-rose-700 dark:via-pink-800 dark:to-purple-900",
   },
   {
-    name: "Machine Learning Foundations",
-    meta: "14 weeks · 56 lessons",
+    name: "AI-Assisted Design Workflows",
+    meta: "6 modules · 24 lessons",
     tag: "New",
-    price: "$349",
+    price: "$119",
     tile: "bg-gradient-to-br from-blue-200 via-indigo-300 to-violet-400 dark:from-blue-700 dark:via-indigo-800 dark:to-violet-900",
   },
   {
-    name: "Business Writing",
-    meta: "4 weeks · 16 lessons",
+    name: "Tailwind CSS for Designers",
+    meta: "4 modules · 16 lessons",
     tag: "Short course",
-    price: "$89",
+    price: "$49",
     tile: "bg-gradient-to-br from-yellow-100 via-amber-200 to-orange-300 dark:from-yellow-700 dark:via-amber-800 dark:to-orange-900",
   },
 ]
@@ -143,101 +144,101 @@ const showcase = [
 const testimonials = [
   {
     quote:
-      "Lessons are short enough that I can do one on the train every morning. Small steps added up fast.",
-    name: "Tomás Silva",
-    role: "Product Manager",
+      "Lessons are short enough that I can do one every morning. Small steps added up fast.",
+    name: "Tomás S.",
+    role: "Product manager",
   },
   {
     quote:
-      "I went from teaching high school chemistry to working as a data analyst in nine months. The projects got me the interview.",
-    name: "Maya Thompson",
-    role: "Data Analyst, career switcher",
+      "I was a designer who could not code. After the Next.js course I shipped my own portfolio site in a weekend.",
+    name: "Maya T.",
+    role: "Product designer",
   },
   {
     quote:
-      "The mentor feedback is the real value. Someone experienced actually read my code and told me how to improve it.",
-    name: "Arjun Mehta",
-    role: "Software Engineer",
+      "The feedback is the real value. Ali actually read my code and showed me how to make the layout cleaner.",
+    name: "Arjun M.",
+    role: "Frontend developer",
   },
 ]
 
 const tiers = [
   {
     name: "Single course",
-    price: "$89",
+    price: "$49",
     period: "from",
     description: "Buy one course and keep it forever.",
     features: [
       "Lifetime access",
-      "All lessons and quizzes",
-      "Certificate of completion",
-      "Mobile app",
+      "All lessons and exercises",
+      "Figma and code source files",
+      "Learn on any device",
     ],
     cta: "Browse courses",
   },
   {
     name: "All-access",
-    price: "$39",
+    price: "$19",
     period: "/month",
-    description: "Unlimited learning across the whole catalog.",
+    description: "Every Designali course and resource, updated monthly.",
     features: [
       "Every course included",
-      "Mentor project reviews",
-      "Live workshops",
-      "Offline downloads",
+      "Project reviews from Ali",
+      "Live design-to-code sessions",
+      "Pro blocks for practice",
       "Cancel any time",
     ],
-    cta: "Start free trial",
+    cta: "Start learning",
   },
   {
     name: "Teams",
-    price: "$29",
+    price: "$15",
     period: "/seat/month",
-    description: "Upskill your whole organisation.",
+    description: "Level up your design and dev team together.",
     features: [
       "Everything in All-access",
-      "Admin dashboard",
-      "Custom learning paths",
-      "SSO and LMS integration",
-      "Dedicated success manager",
+      "Team progress overview",
+      "Custom workshop with Ali",
+      "Design system review",
+      "Priority email support",
     ],
-    cta: "Contact sales",
+    cta: "Contact Designali",
   },
 ]
 
 const faqs = [
   {
     q: "Do you offer live classes?",
-    a: "Our cohort programs include weekly live sessions with instructors and small-group study rooms.",
+    a: "Yes. The Design Engineering Track includes live sessions with Ali Imam and small-group reviews.",
   },
   {
     q: "Do I need any prior experience?",
-    a: "No. Every path starts with a beginner track, and our placement quiz suggests where to start.",
+    a: "No. Each track starts with the basics, whether you are a designer learning code or a developer learning design.",
   },
   {
     q: "How much time should I set aside?",
-    a: "Most learners spend five to eight hours a week. You can pause and resume courses at any time.",
+    a: "Most learners spend three to five hours a week. Lessons are self-paced, so pause whenever you need.",
   },
   {
-    q: "Are the certificates recognised?",
-    a: "Our certificates are co-issued with partner universities and are recognised by more than 300 hiring partners.",
+    q: "Do I get a certificate?",
+    a: "Designali focuses on real work instead of certificates. You finish with deployed projects you can show anyone.",
   },
   {
-    q: "Is financial aid available?",
-    a: "Yes. We offer need-based scholarships and income-share options for full programs.",
+    q: "Are there free resources?",
+    a: "Yes. The Designali blog, docs and free blocks are open to everyone on designali.com.",
   },
 ]
 
 const footer = [
   {
     title: "Learn",
-    links: ["Courses", "Programs", "Certificates", "Free resources"],
+    links: ["Courses", "Resources", "Blog", "Free resources"],
   },
   {
     title: "Community",
-    links: ["Mentors", "Events", "Student stories", "Scholarships"],
+    links: ["Templates", "Blocks", "Instagram", "X"],
   },
-  { title: "Company", links: ["About", "Careers", "For business", "Contact"] },
+  { title: "Designali", links: ["About", "Work", "LinkedIn", "Contact"] },
 ]
 
 export default function LandingEducation06() {
@@ -249,10 +250,8 @@ export default function LandingEducation06() {
             href="#"
             className="flex items-center gap-2 font-semibold tracking-tight"
           >
-            <span className="flex size-7 items-center justify-center rounded-md bg-fuchsia-600 text-white text-sm">
-              M
-            </span>
-            <span className="">Mathloop</span>
+            <Logo className="h-5 w-auto" />
+            <span className="">designali</span>
           </a>
           <nav className="hidden items-center gap-7 text-sm md:flex">
             {navLinks.map((link) => (
@@ -276,7 +275,7 @@ export default function LandingEducation06() {
               Log in
             </Button>
             <Button size="sm" nativeButton={false} render={<a href="#" />}>
-              Start free trial
+              Start free
             </Button>
           </div>
         </div>
@@ -284,24 +283,23 @@ export default function LandingEducation06() {
       <section className="border-b">
         <div className="mx-auto max-w-7xl px-6">
           <div className="flex items-center justify-between border-x border-b px-6 py-3 text-xs text-muted-foreground">
-            <span>Ages 5 to 11</span>
-            <span className="hidden sm:inline">Confident with numbers.</span>
+            <span>Daily design challenges</span>
+            <span className="hidden sm:inline">Confident with every pixel.</span>
           </div>
           <div className="border-x px-6 py-16 md:py-28">
             <h1 className="max-w-5xl text-4xl leading-[1.05] font-semibold tracking-tight text-balance sm:text-5xl md:text-8xl ">
-              {"Daily maths practice kids "}
+              {"Daily design challenges you "}
               <span className="text-fuchsia-600 dark:text-fuchsia-400">
                 actually enjoy
               </span>
             </h1>
             <div className="mt-12 flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
               <p className="max-w-md text-base leading-7 text-muted-foreground">
-                Mathloop adapts to each child with ten-minute puzzles and games,
-                and sends parents a weekly progress report.
+                Designali sends a ten-minute UI challenge every day, from spacing and type to layout, with a reference solution built in code.
               </p>
               <div className="flex flex-wrap gap-3 ">
                 <Button size="lg" nativeButton={false} render={<a href="#" />}>
-                  Start free trial
+                  Start free
                   <ArrowRight />
                 </Button>
                 <Button
@@ -338,7 +336,7 @@ export default function LandingEducation06() {
       <section className="border-b">
         <div className="mx-auto max-w-7xl px-6 py-12">
           <p className="text-center text-sm text-muted-foreground">
-            Our graduates work at
+            Tools you will learn
           </p>
           <div className="mt-8 grid grid-cols-2 items-center gap-x-8 gap-y-6 sm:grid-cols-4 lg:grid-cols-8">
             {logos.map((logo) => (
@@ -359,11 +357,10 @@ export default function LandingEducation06() {
               Learning
             </p>
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl  mt-3">
-              Learning that actually sticks
+              Learning that actually ships
             </h2>
             <p className="mt-4 text-lg leading-8 text-muted-foreground">
-              Short lessons, real projects and feedback from experts, designed
-              around how adults really learn.
+              Short lessons, real projects and honest feedback, designed around how designers and developers really work.
             </p>
           </div>
           <div className="mt-14 grid overflow-hidden rounded-2xl border sm:grid-cols-2 lg:grid-cols-3">
@@ -387,11 +384,10 @@ export default function LandingEducation06() {
           <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
             <div className="max-w-2xl">
               <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl">
-                Popular courses this term
+                Popular Designali courses
               </h2>
               <p className="mt-4 text-lg leading-8 text-muted-foreground">
-                Taught by practitioners from leading companies and universities.
-                Start any course today.
+                Taught by Ali Imam, who designs and codes everything on designali.com. Start any course today.
               </p>
             </div>
             <Button
@@ -434,7 +430,7 @@ export default function LandingEducation06() {
         <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl">
-              Learners who changed their path
+              Learners who shipped their work
             </h2>
           </div>
           <div className="mt-14 grid gap-6 md:grid-cols-3">
@@ -497,8 +493,7 @@ export default function LandingEducation06() {
               Plans for every learner
             </h2>
             <p className="mt-4 text-lg leading-8 text-muted-foreground">
-              Learn at your own pace or join a live cohort. Financial aid and
-              student discounts available.
+              Learn at your own pace or join live sessions. Free resources are always available on the blog.
             </p>
           </div>
           <div className="mx-auto mt-14 grid max-w-6xl items-start gap-6 lg:grid-cols-3">
@@ -560,7 +555,7 @@ export default function LandingEducation06() {
                 href="#"
                 className="font-medium text-foreground underline underline-offset-4"
               >
-                Get in touch
+                Email hello@designali.com
               </a>
               .
             </p>
@@ -588,11 +583,11 @@ export default function LandingEducation06() {
               Ten minutes a day makes the difference
             </h2>
             <p className="text-lg text-muted-foreground">
-              Try Mathloop free for 14 days with up to four children.
+              Try the daily challenges free for 14 days.
             </p>
             <div className="flex flex-wrap gap-3 justify-center">
               <Button size="lg" nativeButton={false} render={<a href="#" />}>
-                Start free trial
+                Start free
                 <ArrowRight />
               </Button>
               <Button
@@ -614,13 +609,11 @@ export default function LandingEducation06() {
               href="#"
               className="flex items-center gap-2 font-semibold tracking-tight"
             >
-              <span className="flex size-7 items-center justify-center rounded-md bg-fuchsia-600 text-white text-sm">
-                M
-              </span>
-              <span className="">Mathloop</span>
+              <Logo className="h-5 w-auto" />
+              <span className="">designali</span>
             </a>
             <p className="max-w-xs text-sm text-muted-foreground">
-              Confident with numbers.
+              Confident with every pixel.
             </p>
           </div>
           {footer.map((column) => (
@@ -644,7 +637,7 @@ export default function LandingEducation06() {
         <div className="border-t ">
           <div className="mx-auto flex max-w-7xl flex-col justify-between gap-4 px-6 py-6 text-xs text-muted-foreground sm:flex-row">
             <span>
-              © {new Date().getFullYear()} Mathloop. All rights reserved.
+              © {new Date().getFullYear()} Designali. All rights reserved.
             </span>
             <div className="flex gap-6">
               <a href="#" className="hover:text-foreground">

@@ -1,10 +1,10 @@
 import {
-  KeyRoundIcon,
-  RadarIcon,
-  ScrollTextIcon,
-  ShieldCheckIcon,
-  VaultIcon,
-} from "lucide-react"
+  KeyRound as KeyRoundIcon,
+  Radar as RadarIcon,
+  ScrollText as ScrollTextIcon,
+  ShieldCheck as ShieldCheckIcon,
+  Vault as VaultIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import {
@@ -18,10 +18,10 @@ import {
 } from "@workspace/ui/components/navigation-menu"
 
 const capabilities = [
-  { title: "Threat detection", icon: RadarIcon },
-  { title: "Access control", icon: KeyRoundIcon },
-  { title: "Secrets vault", icon: VaultIcon },
-  { title: "Audit trail", icon: ScrollTextIcon },
+  { title: "Design tokens", icon: RadarIcon },
+  { title: "Accessible components", icon: KeyRoundIcon },
+  { title: "Dark mode", icon: VaultIcon },
+  { title: "Docs", icon: ScrollTextIcon },
 ]
 
 export default function SecurityPlatformNav() {
@@ -44,7 +44,7 @@ export default function SecurityPlatformNav() {
               </ul>
               <div className="flex flex-wrap items-center gap-1 border-t px-2 pt-2">
                 <ShieldCheckIcon className="size-3.5 text-muted-foreground" />
-                {["SOC 2", "ISO 27001", "GDPR"].map((b) => (
+                {["Next.js", "Tailwind CSS", "TypeScript"].map((b) => (
                   <Badge key={b} variant="secondary">
                     {b}
                   </Badge>
@@ -55,7 +55,7 @@ export default function SecurityPlatformNav() {
         </NavigationMenuItem>
         <NavigationMenuItem>
           <NavigationMenuLink href="#" className={navigationMenuTriggerStyle()}>
-            Trust center
+            Docs
           </NavigationMenuLink>
         </NavigationMenuItem>
       </NavigationMenuList>

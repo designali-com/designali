@@ -1,18 +1,22 @@
 import * as React from "react"
-import { MailIcon, MapPinIcon, PhoneIcon } from "lucide-react"
+import {
+  Mail as MailIcon,
+  AtSign as AtSignIcon,
+  Globe as GlobeIcon,
+} from "@designali/icons"
 
 import { Separator } from "@workspace/ui/components/separator"
 
 const details = [
-  { icon: MailIcon, text: "hello@larkstudio.co" },
-  { icon: PhoneIcon, text: "+44 20 7946 0958" },
-  { icon: MapPinIcon, text: "Bristol, UK" },
+  { icon: MailIcon, text: "hello@designali.com" },
+  { icon: GlobeIcon, text: "www.designali.com" },
+  { icon: AtSignIcon, text: "@designali_com" },
 ]
 
 export default function ContactDetailsInline() {
   return (
     <div className="flex w-full max-w-md flex-col gap-3">
-      <span className="text-sm font-medium">Lark Studio</span>
+      <span className="text-sm font-medium">Designali</span>
       <div className="flex flex-col gap-2 text-xs text-muted-foreground sm:h-4 sm:flex-row sm:items-center sm:gap-3">
         {details.map((detail, index) => (
           <React.Fragment key={detail.text}>

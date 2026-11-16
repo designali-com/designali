@@ -1,7 +1,11 @@
 "use client"
 
 import * as React from "react"
-import { CheckIcon, ChevronsUpDownIcon, PlusIcon } from "lucide-react"
+import {
+  Check as CheckIcon,
+  ChevronsUpDown as ChevronsUpDownIcon,
+  Plus as PlusIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -19,19 +23,19 @@ import { cn } from "@workspace/ui/lib/utils"
 const workspaces = [
   {
     id: "acme",
-    name: "Juniper Health",
+    name: "Designali Studio",
     plan: "Enterprise",
     color: "from-emerald-500 to-teal-600",
   },
   {
     id: "kite",
-    name: "Kite Mobility",
+    name: "Dalim Works",
     plan: "Team",
     color: "from-sky-500 to-indigo-600",
   },
   {
     id: "ember",
-    name: "Ember Coffee Co.",
+    name: "Client projects",
     plan: "Starter",
     color: "from-amber-500 to-rose-600",
   },
@@ -50,7 +54,7 @@ export default function WorkspaceSwitcherSheet() {
       <SheetContent side="left" className="w-72">
         <SheetHeader>
           <SheetTitle>Workspaces</SheetTitle>
-          <SheetDescription>Signed in as rhea@mail.example</SheetDescription>
+          <SheetDescription>Signed in as ali@designali.com</SheetDescription>
         </SheetHeader>
         <div className="flex flex-col gap-1 px-2">
           {workspaces.map((w) => (

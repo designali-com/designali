@@ -1,4 +1,6 @@
-import { GiftIcon } from "lucide-react"
+import {
+  Gift as GiftIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import { Button } from "@workspace/ui/components/button"
@@ -18,29 +20,29 @@ const releases = [
     version: "2.8.0",
     date: "Nov 12",
     tag: "New",
-    title: "Shared views",
-    body: "Save filters and share them with your whole workspace.",
+    title: "40 new blocks",
+    body: "Pricing, hero and footer blocks built with Next.js and Tailwind CSS.",
   },
   {
     version: "2.7.3",
     date: "Nov 4",
     tag: "Improved",
-    title: "Faster search",
-    body: "Results now appear 3× faster on large workspaces.",
+    title: "Faster icon search",
+    body: "Find any of the 4000+ Designali icons 3× faster.",
   },
   {
     version: "2.7.1",
     date: "Oct 28",
     tag: "Fixed",
-    title: "Timezone offsets",
-    body: "Due dates no longer shift for teams east of UTC.",
+    title: "Dark mode tokens",
+    body: "Templates now respect semantic tokens in dark mode.",
   },
   {
     version: "2.7.0",
     date: "Oct 20",
     tag: "New",
-    title: "Recurring tasks",
-    body: "Repeat tasks daily, weekly or on custom schedules.",
+    title: "Logos package",
+    body: "Brand logos ship as @designali/logos React components.",
   },
 ]
 
@@ -54,7 +56,7 @@ export default function ChangelogDialog() {
       </DialogTrigger>
       <DialogContent className="sm:max-w-md">
         <DialogHeader>
-          <DialogTitle>What&apos;s new in Trellis</DialogTitle>
+          <DialogTitle>What&apos;s new in Designali</DialogTitle>
           <DialogDescription>Updates from the last 30 days.</DialogDescription>
         </DialogHeader>
         <ScrollArea className="-mx-4 h-64 px-4">

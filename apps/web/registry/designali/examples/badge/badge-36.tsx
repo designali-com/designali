@@ -4,17 +4,17 @@ import { cn } from "@workspace/ui/lib/utils"
 const envs = [
   {
     name: "Production",
-    url: "app.quillstack.io",
+    url: "www.designali.com",
     className: "bg-red-600 text-white",
   },
   {
     name: "Staging",
-    url: "staging.quillstack.io",
+    url: "staging.designali.com",
     className: "bg-amber-400 text-amber-950",
   },
   {
     name: "Preview",
-    url: "pr-812.quillstack.dev",
+    url: "designali-pr-812.vercel.app",
     className:
       "bg-violet-50 text-violet-700 dark:bg-violet-950 dark:text-violet-300",
   },

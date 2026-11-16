@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { MailIcon } from "lucide-react"
+import {
+  Mail as MailIcon,
+} from "@designali/icons"
 
 import {
   Alert,
@@ -27,9 +29,9 @@ export default function AlertVerifyEmail() {
       <AlertDescription>
         We sent a link to{" "}
         <span className="font-medium text-foreground">
-          jonah@fieldnote.example
+          sara@example.com
         </span>
-        . Check your inbox to unlock sharing.
+        . Check your inbox to unlock your Designali downloads.
       </AlertDescription>
       <AlertAction>
         <Button

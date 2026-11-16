@@ -1,6 +1,8 @@
 "use client"
 
-import { LockIcon } from "lucide-react"
+import {
+  Lock as LockIcon,
+} from "@designali/icons"
 
 import {
   Combobox,

@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { PaperclipIcon, SendIcon } from "lucide-react"
+import {
+  Paperclip as PaperclipIcon,
+  Send as SendIcon,
+} from "@designali/icons"
 
 import {
   InputGroup,
@@ -13,7 +16,7 @@ import { cn } from "@workspace/ui/lib/utils"
 
 export default function ChatComposerTextarea() {
   const [messages, setMessages] = React.useState([
-    "Hey! Are we still on for the demo at 4?",
+    "Hi Ali! Are we still on for the homepage design review at 4?",
   ])
   const [draft, setDraft] = React.useState("")
 
@@ -50,7 +53,7 @@ export default function ChatComposerTextarea() {
               send()
             }
           }}
-          placeholder="Message Theo…"
+          placeholder="Message Ali Imam…"
           className="max-h-32"
         />
         <InputGroupAddon align="block-end">

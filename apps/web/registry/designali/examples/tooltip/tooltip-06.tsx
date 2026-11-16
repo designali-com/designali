@@ -1,4 +1,6 @@
-import { SendIcon } from "lucide-react"
+import {
+  Send as SendIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -18,7 +20,7 @@ export default function DisabledButtonTooltip() {
             Publish
           </Button>
         </TooltipTrigger>
-        <TooltipContent>Add a cover title before publishing</TooltipContent>
+        <TooltipContent>Add a cover title before publishing to designali.com</TooltipContent>
       </Tooltip>
     </div>
   )

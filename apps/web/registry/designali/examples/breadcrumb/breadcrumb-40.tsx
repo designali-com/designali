@@ -11,8 +11,8 @@ import {
 import { cn } from "@workspace/ui/lib/utils"
 
 const levels = [
-  { label: "eu-west-1", status: "bg-emerald-500" },
-  { label: "node-pool-b", status: "bg-amber-500" },
+  { label: "vercel-prod", status: "bg-emerald-500" },
+  { label: "designali-web", status: "bg-amber-500" },
 ]
 
 export default function InfrastructureStatusBreadcrumb() {
@@ -33,7 +33,7 @@ export default function InfrastructureStatusBreadcrumb() {
         <BreadcrumbItem>
           <BreadcrumbPage className="flex items-center gap-1.5">
             <span className="size-1.5 animate-pulse rounded-full bg-destructive" />
-            checkout-7d9f
+            blocks-build-7d9f
           </BreadcrumbPage>
         </BreadcrumbItem>
       </BreadcrumbList>

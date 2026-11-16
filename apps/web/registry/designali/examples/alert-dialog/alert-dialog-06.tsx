@@ -1,4 +1,7 @@
-import { KeyRoundIcon, Trash2Icon } from "lucide-react"
+import {
+  KeyRound as KeyRoundIcon,
+  Trash2 as Trash2Icon,
+} from "@designali/icons"
 
 import {
   AlertDialog,
@@ -20,9 +23,9 @@ export default function RevokeApiKeyIconTrigger() {
         <KeyRoundIcon className="size-4" />
       </div>
       <div className="min-w-0 flex-1">
-        <p className="text-sm font-medium">Production key</p>
+        <p className="text-sm font-medium">designali.com API key</p>
         <p className="text-xs text-muted-foreground">
-          key_demo_...4f9a - created Mar 2
+          dsgn_demo_...4f9a - created Mar 2
         </p>
       </div>
       <AlertDialog>

@@ -21,31 +21,31 @@ const events = [
   {
     date: new Date(y, m, 4),
     time: "14:00",
-    title: "1:1 with Priya",
+    title: "1:1 with Ali Imam",
     tone: "bg-violet-500",
   },
   {
     date: new Date(y, m, 11),
     time: "11:00",
-    title: "Sprint planning",
+    title: "Blocks sprint planning",
     tone: "bg-emerald-500",
   },
   {
     date: new Date(y, m, 17),
     time: "16:30",
-    title: "Customer call: Northwind",
+    title: "Client call: brand identity kickoff",
     tone: "bg-amber-500",
   },
   {
     date: new Date(y, m, 22),
     time: "10:00",
-    title: "Quarterly roadmap",
+    title: "designali.com roadmap",
     tone: "bg-sky-500",
   },
   {
     date: new Date(y, m, 22),
     time: "13:00",
-    title: "Team lunch",
+    title: "Studio lunch",
     tone: "bg-rose-500",
   },
 ]

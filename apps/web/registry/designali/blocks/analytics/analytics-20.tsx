@@ -1,17 +1,20 @@
-import { ArrowRight, Sparkles } from "lucide-react"
+import {
+  ArrowRight,
+  Sparkles,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 
 const highlights = [
   { label: "Revenue", value: "$212,480", change: "+18%", good: true },
   { label: "Orders", value: "4,906", change: "+11%", good: true },
-  { label: "Return rate", value: "6.4%", change: "+1.2 pts", good: false },
+  { label: "Refund rate", value: "6.4%", change: "+1.2 pts", good: false },
 ]
 
 const movers = [
-  { item: "Merino travel hoodie", note: "Sold out in size M on Thursday", delta: "+214%" },
-  { item: "Canvas weekender bag", note: "Featured in the Sunday newsletter", delta: "+96%" },
-  { item: "Linen shirt, oat", note: "Seasonal drop-off as expected", delta: "-38%" },
+  { item: "Designali Icons Pro", note: "Top seller after Thursday launch", delta: "+214%" },
+  { item: "Portfolio Simple template", note: "Featured in the Sunday newsletter", delta: "+96%" },
+  { item: "Dalim UI kit", note: "Older kit, drop-off as expected", delta: "-38%" },
 ]
 
 export default function Analytics20() {
@@ -29,19 +32,19 @@ export default function Analytics20() {
 
           <div className="px-6 py-10 md:px-10">
             <h2 className="text-2xl leading-snug font-medium tracking-tight md:text-3xl">
-              Your best week since launch, carried by one hoodie.
+              Your best week since launch, carried by one icon pack.
             </h2>
             <p className="mt-6 text-base leading-8 text-muted-foreground">
-              Wildmoor sold{" "}
+              designali.com sold{" "}
               <mark className="bg-emerald-500/15 px-1 text-foreground dark:bg-emerald-400/20">
                 $212,480
               </mark>{" "}
               this week, up 18% on last week. Almost a third of that came from
               the{" "}
-              <mark className="bg-chart-2/20 px-1 text-foreground">Merino travel hoodie</mark>,
-              which sold through medium sizes by Thursday. Returns ticked up to{" "}
+              <mark className="bg-chart-2/20 px-1 text-foreground">Designali Icons Pro</mark>,
+              which launched on Thursday. Refunds ticked up to{" "}
               <mark className="bg-rose-500/15 px-1 text-foreground dark:bg-rose-400/20">6.4%</mark>,
-              mostly sizing exchanges on outerwear.
+              mostly duplicate license purchases.
             </p>
 
             <dl className="mt-10 grid grid-cols-1 gap-px border bg-border sm:grid-cols-3">
@@ -91,7 +94,7 @@ export default function Analytics20() {
                 <ArrowRight data-icon="inline-end" />
               </Button>
               <Button variant="outline" nativeButton={false} render={<a href="#" />}>
-                Restock hoodie
+                View icon pack
               </Button>
             </div>
           </div>

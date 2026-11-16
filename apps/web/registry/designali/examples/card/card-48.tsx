@@ -1,9 +1,9 @@
 import {
-  KeyRoundIcon,
-  MessageSquareIcon,
-  ShieldCheckIcon,
-  SmartphoneIcon,
-} from "lucide-react"
+  KeyRound as KeyRoundIcon,
+  MessageSquare as MessageSquareIcon,
+  ShieldCheck as ShieldCheckIcon,
+  Smartphone as SmartphoneIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import { Button } from "@workspace/ui/components/button"
@@ -46,7 +46,7 @@ export default function TwoFactorSecurityCard() {
           Two-factor authentication
         </CardTitle>
         <CardDescription>
-          Your account is protected with 2 methods.
+          Your designali account is protected with 2 methods.
         </CardDescription>
       </CardHeader>
       <CardContent className="grid gap-2">

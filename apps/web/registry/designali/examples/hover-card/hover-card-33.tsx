@@ -1,4 +1,7 @@
-import { MapPinIcon, StarIcon } from "lucide-react"
+import {
+  MapPin as MapPinIcon,
+  Star as StarIcon,
+} from "@designali/icons"
 
 import {
   HoverCard,
@@ -8,21 +11,21 @@ import {
 
 const pins = [
   {
-    name: "Copper Kettle Café",
+    name: "Designali Studio",
     x: "22%",
     y: "35%",
     rating: 4.6,
     hours: "Open until 6 PM",
   },
   {
-    name: "Riverside Books",
+    name: "Design meetup",
     x: "58%",
     y: "60%",
     rating: 4.8,
     hours: "Open until 9 PM",
   },
   {
-    name: "Juniper Gym",
+    name: "Client office",
     x: "76%",
     y: "25%",
     rating: 4.2,

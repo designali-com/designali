@@ -1,4 +1,6 @@
-import { SendIcon } from "lucide-react"
+import {
+  Send as SendIcon,
+} from "@designali/icons"
 
 import { AspectRatio } from "@workspace/ui/components/aspect-ratio"
 import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
@@ -18,13 +20,13 @@ export default function StoryCardPortrait() {
       </div>
       <div className="absolute inset-x-2 top-5 flex items-center gap-2 text-white">
         <Avatar size="sm">
-          <AvatarFallback>LP</AvatarFallback>
+          <AvatarFallback>AI</AvatarFallback>
         </Avatar>
-        <span className="text-xs font-medium">lena.paints</span>
+        <span className="text-xs font-medium">designali.code</span>
         <span className="text-[10px] text-white/70">2h</span>
       </div>
       <p className="absolute inset-x-3 top-1/2 -translate-y-1/2 text-center text-lg font-semibold text-white">
-        Studio open day this Saturday
+        New Designali blocks drop this Saturday
       </p>
       <div className="absolute inset-x-2 bottom-2 flex items-center gap-2 border border-white/50 px-2 py-1.5 text-[10px] text-white/80">
         Send message

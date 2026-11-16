@@ -1,36 +1,39 @@
-import { Mail, Phone } from "lucide-react"
+import {
+  Mail,
+  Phone,
+} from "@designali/icons"
 
 const people = [
   {
-    name: "Marta Okonkwo",
-    role: "New business",
-    region: "North America",
-    email: "marta@brightfold.agency",
-    phone: "+1 (312) 555-0118",
+    name: "Ali Imam",
+    role: "New projects",
+    region: "Founder, Designali",
+    email: "ali@designali.com",
+    phone: "Book a call",
     hue: "from-amber-300 to-orange-500",
   },
   {
-    name: "Jonas Lindqvist",
+    name: "Designali Studio",
     role: "Partnerships",
-    region: "Europe",
-    email: "jonas@brightfold.agency",
-    phone: "+46 8 555 012 40",
+    region: "Agencies & studios",
+    email: "hello@designali.com",
+    phone: "Book a call",
     hue: "from-sky-300 to-indigo-500",
   },
   {
-    name: "Aiko Tanabe",
-    role: "Client services",
-    region: "Asia Pacific",
-    email: "aiko@brightfold.agency",
-    phone: "+81 3 5550 1294",
+    name: "Designali Support",
+    role: "Templates & blocks",
+    region: "All customers",
+    email: "support@designali.com",
+    phone: "Read the docs",
     hue: "from-emerald-300 to-teal-600",
   },
   {
-    name: "Rafael Duarte",
-    role: "Careers & talent",
-    region: "Global",
-    email: "rafael@brightfold.agency",
-    phone: "+351 21 555 0173",
+    name: "Designali Billing",
+    role: "Orders & licenses",
+    region: "All customers",
+    email: "billing@designali.com",
+    phone: "View pricing",
     hue: "from-rose-300 to-fuchsia-600",
   },
 ]
@@ -51,8 +54,8 @@ export default function Contact09() {
             Skip the inbox. Talk to a human.
           </h2>
           <p className="text-background/70 md:justify-self-end md:text-end">
-            Every enquiry goes straight to one of four people. Pick the one
-            closest to what you need.
+            Every enquiry goes straight to Ali Imam or the Designali studio.
+            Pick the desk closest to what you need.
           </p>
         </div>
 
@@ -85,7 +88,7 @@ export default function Contact09() {
                   {person.email}
                 </a>
                 <a
-                  href="#"
+                  href="https://cal.com/aliimam/30min"
                   className="flex items-center gap-2 text-background/80 hover:text-background"
                 >
                   <Phone className="size-4 shrink-0" />

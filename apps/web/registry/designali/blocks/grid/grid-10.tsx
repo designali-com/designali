@@ -3,15 +3,15 @@
 import { useState } from "react"
 
 const templates = [
-  { name: "Atlas", category: "Portfolio", pages: 6, price: "Free", hue: 210 },
-  { name: "Harbor", category: "SaaS", pages: 12, price: "$49", hue: 160 },
-  { name: "Juniper", category: "Blog", pages: 5, price: "Free", hue: 120 },
-  { name: "Meridian", category: "SaaS", pages: 14, price: "$79", hue: 260 },
-  { name: "Pebble", category: "Store", pages: 9, price: "$59", hue: 30 },
-  { name: "Quill", category: "Blog", pages: 7, price: "$29", hue: 350 },
-  { name: "Solace", category: "Portfolio", pages: 4, price: "$19", hue: 290 },
-  { name: "Tandem", category: "Store", pages: 11, price: "$69", hue: 60 },
-  { name: "Vessel", category: "SaaS", pages: 10, price: "Free", hue: 190 },
+  { name: "Portfolio Simple", category: "Portfolio", pages: 6, price: "Free", hue: 210 },
+  { name: "AI", category: "SaaS", pages: 12, price: "$49", hue: 160 },
+  { name: "Designali Blog", category: "Blog", pages: 5, price: "Free", hue: 120 },
+  { name: "Vercel Style", category: "SaaS", pages: 14, price: "$79", hue: 260 },
+  { name: "Resort", category: "Store", pages: 9, price: "$59", hue: 30 },
+  { name: "Design Notes", category: "Blog", pages: 7, price: "$29", hue: 350 },
+  { name: "Design Agency", category: "Portfolio", pages: 4, price: "$19", hue: 290 },
+  { name: "Icon Store", category: "Store", pages: 11, price: "$69", hue: 60 },
+  { name: "Dashboard", category: "SaaS", pages: 10, price: "Free", hue: 190 },
 ]
 
 const filters = ["All", "SaaS", "Portfolio", "Store", "Blog"]
@@ -24,9 +24,9 @@ export default function Grid10() {
     <section className="w-full bg-background py-24">
       <div className="mx-auto max-w-7xl px-6">
         <div className="text-center">
-          <h2 className="text-4xl font-semibold tracking-tight md:text-5xl">Start from a template</h2>
+          <h2 className="text-4xl font-semibold tracking-tight md:text-5xl">Start from a Designali template</h2>
           <p className="mx-auto mt-4 max-w-md text-sm text-muted-foreground">
-            Every template is responsive, accessible and ships with light and dark themes.
+            Every Designali template is built with Next.js and Tailwind CSS, responsive, accessible and ships with light and dark themes.
           </p>
         </div>
 

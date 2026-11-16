@@ -1,14 +1,16 @@
-import { Download } from "lucide-react"
+import {
+  Download,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 
 const pages = [
   { path: "/pricing", views: 48210, bounce: 32, time: "2m 41s" },
-  { path: "/blog/design-tokens-at-scale", views: 31877, bounce: 41, time: "4m 12s" },
+  { path: "/blogs/design-to-code-with-nextjs", views: 31877, bounce: 41, time: "4m 12s" },
   { path: "/templates", views: 27304, bounce: 28, time: "3m 05s" },
-  { path: "/docs/getting-started", views: 19982, bounce: 22, time: "5m 37s" },
-  { path: "/changelog", views: 12450, bounce: 47, time: "1m 58s" },
-  { path: "/about", views: 8761, bounce: 55, time: "1m 12s" },
+  { path: "/docs", views: 19982, bounce: 22, time: "5m 37s" },
+  { path: "/icons", views: 12450, bounce: 47, time: "1m 58s" },
+  { path: "/work", views: 8761, bounce: 55, time: "1m 12s" },
 ]
 
 const days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
@@ -31,7 +33,7 @@ export default function Analytics04() {
       <div className="mx-auto max-w-6xl px-6">
         <div className="mb-8 flex flex-col justify-between gap-4 border-b border-border pb-6 sm:flex-row sm:items-center">
           <div>
-            <h2 className="text-2xl font-medium tracking-tight">Content report</h2>
+            <h2 className="text-2xl font-medium tracking-tight">designali.com content report</h2>
             <p className="text-sm text-muted-foreground">
               Top pages and visit patterns for November 1 – 14
             </p>

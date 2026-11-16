@@ -10,11 +10,11 @@ export default function CinemaScopeStill() {
         <div className="absolute inset-x-0 bottom-0 h-1/3 bg-linear-to-t from-zinc-950 to-transparent" />
         <div className="absolute start-[20%] bottom-[30%] size-10 rounded-full bg-amber-100/90 blur-[1px]" />
         <p className="absolute inset-x-0 bottom-2 text-center text-xs text-white">
-          We never made it to the coast that summer.
+          A Designali CGI &amp; motion still.
         </p>
       </AspectRatio>
       <figcaption className="mt-2 text-center font-mono text-[10px] tracking-widest text-white/60">
-        2.39 : 1 - ANAMORPHIC
+        2.39 : 1 - DESIGNALI CGI
       </figcaption>
     </figure>
   )

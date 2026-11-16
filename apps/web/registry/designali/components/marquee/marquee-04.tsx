@@ -2,14 +2,14 @@ import { Marquee } from "@/registry/designali/ui/marquee"
 import { Badge } from "@workspace/ui/components/badge"
 
 const technologies = [
-  { name: "React", color: "bg-blue-500" },
+  { name: "Designali Blocks", color: "bg-blue-500" },
   { name: "Next.js", color: "bg-black" },
   { name: "TypeScript", color: "bg-blue-600" },
   { name: "Tailwind CSS", color: "bg-cyan-500" },
-  { name: "Framer Motion", color: "bg-pink-500" },
-  { name: "Radix UI", color: "bg-green-500" },
-  { name: "Lucide Icons", color: "bg-orange-500" },
-  { name: "shadcn/ui", color: "bg-purple-500" },
+  { name: "Figma", color: "bg-pink-500" },
+  { name: "Vercel", color: "bg-green-500" },
+  { name: "@designali/icons", color: "bg-orange-500" },
+  { name: "@designali/logos", color: "bg-purple-500" },
 ]
 
 export default function DemoOne() {

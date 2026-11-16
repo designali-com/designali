@@ -1,4 +1,7 @@
-import { CircleCheckIcon, TriangleAlertIcon } from "lucide-react"
+import {
+  CircleCheck as CircleCheckIcon,
+  TriangleAlert as TriangleAlertIcon,
+} from "@designali/icons"
 
 import {
   Field,
@@ -16,19 +19,19 @@ export default function ValidationFeedbackInputs() {
         <FieldLabel htmlFor="fb-success">Subdomain</FieldLabel>
         <Input
           id="fb-success"
-          defaultValue="harbor"
+          defaultValue="studio"
           className="border-emerald-600 focus-visible:border-emerald-600 focus-visible:ring-emerald-600/30"
         />
         <FieldDescription className="flex items-center gap-1 text-emerald-600">
           <CircleCheckIcon className="size-3.5" />
-          harbor.fieldnote.app is available
+          studio.designali.com is available
         </FieldDescription>
       </Field>
       <Field>
         <FieldLabel htmlFor="fb-warning">Display name</FieldLabel>
         <Input
           id="fb-warning"
-          defaultValue="HARBOR LABS"
+          defaultValue="DESIGNALI STUDIO"
           className="border-amber-500 focus-visible:border-amber-500 focus-visible:ring-amber-500/30"
         />
         <FieldDescription className="flex items-center gap-1 text-amber-600">
@@ -38,7 +41,7 @@ export default function ValidationFeedbackInputs() {
       </Field>
       <Field data-invalid>
         <FieldLabel htmlFor="fb-error">Billing email</FieldLabel>
-        <Input id="fb-error" aria-invalid defaultValue="billing@" />
+        <Input id="fb-error" aria-invalid defaultValue="billing@designali" />
         <FieldError>Enter a complete email address.</FieldError>
       </Field>
     </FieldGroup>

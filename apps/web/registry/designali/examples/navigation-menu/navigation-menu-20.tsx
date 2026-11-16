@@ -11,18 +11,18 @@ import { cn } from "@workspace/ui/lib/utils"
 
 const work = [
   {
-    client: "Pinecone Coffee",
+    client: "Dalim Agency",
     type: "Brand identity",
     gradient: "from-stone-400 to-amber-700",
   },
   {
-    client: "Volta Bikes",
-    type: "E-commerce",
+    client: "Dalim Fonts",
+    type: "Web design",
     gradient: "from-lime-300 to-emerald-600",
   },
 ]
 
-const services = ["Brand strategy", "Web design", "Motion", "Product design"]
+const services = ["Brand identity", "UI/UX design", "Web development", "CGI & motion"]
 
 export default function AgencyWorkNav() {
   return (

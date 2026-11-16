@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { TrophyIcon } from "lucide-react"
+import {
+  Trophy as TrophyIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -33,7 +35,7 @@ export default function LeaderboardPagination() {
     <div className="flex w-full max-w-sm flex-col gap-3 border p-3">
       <div className="flex items-center justify-between">
         <span className="flex items-center gap-1.5 text-sm font-medium">
-          <TrophyIcon className="size-4" /> Season leaderboard
+          <TrophyIcon className="size-4" /> Top Designali contributors
         </span>
         <Button
           variant="outline"

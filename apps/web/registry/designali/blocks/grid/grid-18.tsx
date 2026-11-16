@@ -20,7 +20,6 @@ import {
   Heart,
   Key,
   Leaf,
-  type LucideIcon,
   Map as MapIcon,
   Moon,
   Music,
@@ -30,9 +29,13 @@ import {
   Sun,
   Umbrella,
   Zap,
-} from "lucide-react"
+} from "@designali/icons"
 
-const icons: [string, LucideIcon][] = [
+import type * as React from "react"
+
+type IconComponent = React.ComponentType<React.SVGProps<SVGSVGElement> & { size?: number | string; strokeWidth?: number }>
+
+const icons: [string, IconComponent][] = [
   ["anchor", Anchor], ["archive", Archive], ["bell", Bell], ["bike", Bike],
   ["bookmark", Bookmark], ["camera", Camera], ["cloud", Cloud], ["coffee", Coffee],
   ["compass", Compass], ["feather", Feather], ["flag", Flag], ["flame", Flame],
@@ -58,9 +61,9 @@ export default function Grid18() {
       <div className="mx-auto max-w-6xl px-6">
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div>
-            <h2 className="text-4xl font-semibold tracking-tight">Linework icons</h2>
+            <h2 className="text-4xl font-semibold tracking-tight">Designali icons</h2>
             <p className="mt-2 text-sm text-muted-foreground">
-              1.5px stroke, 24px grid. Click any icon to copy its name.
+              A preview of 4000+ icons in @designali/icons. Click any icon to copy its name.
             </p>
           </div>
           <label className="flex h-10 w-full items-center gap-2 border border-border bg-background px-3 focus-within:border-foreground md:w-72">

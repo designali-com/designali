@@ -15,7 +15,7 @@ export function FieldTextarea() {
           <FieldLabel htmlFor="feedback">Feedback</FieldLabel>
           <Textarea
             id="feedback"
-            placeholder="Your feedback helps us improve..."
+            placeholder="Your feedback helps Designali improve..."
             rows={4}
           />
           <FieldDescription>

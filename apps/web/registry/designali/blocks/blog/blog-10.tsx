@@ -1,19 +1,22 @@
 "use client"
 
 import { useState } from "react"
-import { Search, X } from "lucide-react"
+import {
+  Search,
+  X,
+} from "@designali/icons"
 
 import { Input } from "@workspace/ui/components/input"
 import { cn } from "@workspace/ui/lib/utils"
 
 const posts = [
-  { title: "Migrating 40 million rows without downtime", tags: ["Postgres", "Migrations"], excerpt: "Dual writes, backfills, and the checklist we now use for every schema change." },
-  { title: "Rate limiting at the edge with token buckets", tags: ["Edge", "Performance"], excerpt: "A per-tenant limiter that costs us under a millisecond per request." },
-  { title: "Choosing between queues and cron for billing", tags: ["Billing", "Architecture"], excerpt: "When a nightly job is fine and when it quietly loses money." },
-  { title: "Typed SQL without an ORM", tags: ["Postgres", "TypeScript"], excerpt: "Generating types from migrations and keeping queries readable." },
-  { title: "Observability for a team of three", tags: ["Monitoring", "Architecture"], excerpt: "The five dashboards we actually open, and the forty we deleted." },
-  { title: "Speeding up CI with remote caching", tags: ["CI", "Performance"], excerpt: "From 19 minutes to 4 on every pull request." },
-  { title: "Designing idempotent webhooks", tags: ["Billing", "Edge"], excerpt: "Retries are guaranteed. Duplicate charges should not be." },
+  { title: "Migrating 460 blocks to a new registry", tags: ["Registry", "Migrations"], excerpt: "Codemods, backfills, and the checklist we now use for every block change." },
+  { title: "Serving icons from the edge on Vercel", tags: ["Edge", "Performance"], excerpt: "How designali.com serves 4,000+ SVG icons in under a millisecond." },
+  { title: "Choosing a checkout for Designali templates", tags: ["Billing", "Architecture"], excerpt: "When a simple payment link is fine and when you need more." },
+  { title: "Typed registry items without codegen", tags: ["Registry", "TypeScript"], excerpt: "Keeping 2,300+ UI examples type-safe and readable." },
+  { title: "Observability for a small studio", tags: ["Monitoring", "Architecture"], excerpt: "The five dashboards we actually open, and the forty we deleted." },
+  { title: "Speeding up the Designali monorepo CI", tags: ["CI", "Performance"], excerpt: "From 19 minutes to 4 on every pull request." },
+  { title: "Designing idempotent license webhooks", tags: ["Billing", "Edge"], excerpt: "Retries are guaranteed. Duplicate charges should not be." },
 ]
 
 const allTags = Array.from(new Set(posts.flatMap((p) => p.tags))).sort()
@@ -34,7 +37,7 @@ export default function Blog10() {
       <div className="mx-auto grid max-w-7xl gap-10 px-6 lg:grid-cols-[280px_1fr]">
         <aside className="lg:sticky lg:top-24 lg:self-start">
           <h2 className="text-2xl font-medium tracking-tight">Engineering notes</h2>
-          <p className="mt-2 text-sm text-muted-foreground">Search the Coldframe engineering blog.</p>
+          <p className="mt-2 text-sm text-muted-foreground">Search the Designali engineering blog.</p>
           <div className="relative mt-6">
             <Search className="pointer-events-none absolute top-1/2 left-3 size-4 -translate-y-1/2 text-muted-foreground" />
             <Input

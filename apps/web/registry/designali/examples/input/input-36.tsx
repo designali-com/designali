@@ -1,4 +1,6 @@
-import { LockIcon } from "lucide-react"
+import {
+  Lock as LockIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import {
@@ -26,7 +28,7 @@ export default function LockedPlanInput() {
         <InputGroupInput
           id="custom-domain"
           disabled
-          placeholder="docs.yourcompany.com"
+          placeholder="docs.designali.com"
         />
       </InputGroup>
       <FieldDescription>

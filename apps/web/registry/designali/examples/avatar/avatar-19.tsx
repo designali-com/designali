@@ -1,4 +1,6 @@
-import { CheckIcon } from "lucide-react"
+import {
+  Check as CheckIcon,
+} from "@designali/icons"
 
 import {
   Avatar,
@@ -11,7 +13,7 @@ export default function VerifiedCreatorAvatar() {
     <div className="flex items-center gap-3">
       <Avatar size="lg">
         <AvatarFallback className="bg-amber-100 text-amber-800 dark:bg-amber-950 dark:text-amber-300">
-          PV
+          AI
         </AvatarFallback>
         <AvatarBadge className="bg-sky-500 text-white">
           <CheckIcon />
@@ -19,10 +21,10 @@ export default function VerifiedCreatorAvatar() {
       </Avatar>
       <div>
         <p className="flex items-center gap-1 text-sm font-medium">
-          Pablo Vega
+          Ali Imam
         </p>
         <p className="text-xs text-muted-foreground">
-          Verified creator · 84k subscribers
+          Verified creator · Founder of Designali
         </p>
       </div>
     </div>

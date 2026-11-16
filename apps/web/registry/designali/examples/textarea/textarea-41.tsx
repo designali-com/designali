@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { GitCommitHorizontalIcon } from "lucide-react"
+import {
+  GitCommitHorizontal as GitCommitHorizontalIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Input } from "@workspace/ui/components/input"
@@ -9,7 +11,7 @@ import { Textarea } from "@workspace/ui/components/textarea"
 import { cn } from "@workspace/ui/lib/utils"
 
 export default function CommitMessageTextarea() {
-  const [summary, setSummary] = React.useState("Fix rounding in cart totals")
+  const [summary, setSummary] = React.useState("Add new Designali pricing blocks")
   const [body, setBody] = React.useState("")
   const longLine = body.split("\n").some((l) => l.length > 72)
 

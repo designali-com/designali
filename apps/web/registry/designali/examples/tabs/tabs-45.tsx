@@ -1,9 +1,9 @@
 import {
-  HistoryIcon,
-  LayersIcon,
-  MessageSquareIcon,
-  ShapesIcon,
-} from "lucide-react"
+  History as HistoryIcon,
+  Layers as LayersIcon,
+  MessageSquare as MessageSquareIcon,
+  Shapes as ShapesIcon,
+} from "@designali/icons"
 
 import { Skeleton } from "@workspace/ui/components/skeleton"
 import {

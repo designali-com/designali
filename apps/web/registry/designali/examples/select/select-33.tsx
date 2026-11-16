@@ -1,4 +1,7 @@
-import { ArrowUpIcon, SparklesIcon } from "lucide-react"
+import {
+  ArrowUp as ArrowUpIcon,
+  Sparkles as SparklesIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -20,7 +23,7 @@ export default function ChatModelSelect() {
     <div className="flex w-full max-w-md flex-col gap-2 border p-2">
       <textarea
         className="min-h-16 resize-none bg-transparent p-1 text-sm outline-none placeholder:text-muted-foreground"
-        placeholder="Ask about your project..."
+        placeholder="Ask about your Designali project..."
         aria-label="Message"
       />
       <div className="flex items-center justify-between">

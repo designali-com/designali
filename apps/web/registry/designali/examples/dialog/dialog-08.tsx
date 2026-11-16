@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { SparklesIcon } from "lucide-react"
+import {
+  Sparkles as SparklesIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import { Button } from "@workspace/ui/components/button"
@@ -32,19 +34,19 @@ const plans = [
     id: "starter",
     name: "Starter",
     price: 0,
-    detail: "3 projects, community support",
+    detail: "Free blocks and icons, community support",
   },
   {
     id: "pro",
     name: "Pro",
     price: 24,
-    detail: "Unlimited projects, 50 GB storage",
+    detail: "All templates, blocks and UI designs",
   },
   {
     id: "team",
     name: "Team",
     price: 59,
-    detail: "SSO, audit log, priority support",
+    detail: "Team license, Figma files, priority support",
   },
 ]
 

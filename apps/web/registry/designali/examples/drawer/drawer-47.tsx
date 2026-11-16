@@ -1,6 +1,8 @@
 "use client"
 
-import { MapPinIcon } from "lucide-react"
+import {
+  MapPin as MapPinIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Checkbox } from "@workspace/ui/components/checkbox"
@@ -64,7 +66,7 @@ export default function ShippingAddressDrawer() {
               <Input
                 id="sa-name"
                 autoComplete="name"
-                placeholder="Hugo Bergström"
+                placeholder="Ali Imam"
               />
             </Field>
             <Field>

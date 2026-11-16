@@ -1,11 +1,11 @@
 import {
-  CalendarIcon,
-  EyeIcon,
-  GanttChartIcon,
-  KanbanIcon,
-  ListIcon,
-  TableIcon,
-} from "lucide-react"
+  Calendar as CalendarIcon,
+  Eye as EyeIcon,
+  ChartGantt as GanttChartIcon,
+  Kanban as KanbanIcon,
+  List as ListIcon,
+  Table as TableIcon,
+} from "@designali/icons"
 
 import {
   NavigationMenu,

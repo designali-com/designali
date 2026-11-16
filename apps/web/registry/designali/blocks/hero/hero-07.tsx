@@ -1,4 +1,7 @@
-import { ArrowRight, Play } from "lucide-react"
+import {
+  ArrowRight,
+  Play,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 
@@ -13,23 +16,23 @@ export default function Hero07() {
             href="#"
             className="inline-flex items-center gap-2 border border-border px-3 py-1 text-xs text-muted-foreground transition-colors hover:text-foreground"
           >
-            New: forecasting with confidence intervals
+            New: 460+ blocks for Next.js and Tailwind
             <ArrowRight className="size-3" />
           </a>
           <h1 className="mt-8 text-4xl font-medium tracking-tight md:text-6xl">
-            Revenue analytics your finance team will trust.
+            Design se code tak, with Designali Pro.
           </h1>
           <p className="mt-6 max-w-lg text-base leading-7 text-muted-foreground">
-            Connect Corvia, your CRM and your warehouse. Get MRR, churn and
-            cohort reporting that reconciles to the cent, updated hourly.
+            Get every Designali template, block, landing page and icon in one
+            library. Copy the code, drop it into your Next.js app and ship.
           </p>
           <div className="mt-10 flex flex-wrap gap-3">
             <Button size="lg" nativeButton={false} render={<a href="#" />}>
-              Start 14-day trial
+              Get Designali Pro
             </Button>
             <Button size="lg" variant="ghost" nativeButton={false} render={<a href="#" />}>
               <Play />
-              Watch 2-minute demo
+              Watch the walkthrough
             </Button>
           </div>
         </div>
@@ -37,10 +40,10 @@ export default function Hero07() {
           <div className="flex items-start justify-between">
             <div>
               <p className="text-xs text-muted-foreground">
-                Monthly recurring revenue
+                Monthly downloads on designali.com
               </p>
               <p className="mt-1 text-3xl font-medium tracking-tight">
-                $482,190
+                48,190
               </p>
             </div>
             <span className="border border-border px-2 py-0.5 text-xs text-emerald-600 dark:text-emerald-400">
@@ -67,16 +70,16 @@ export default function Hero07() {
           </div>
           <div className="mt-6 grid grid-cols-3 border-t border-border pt-4 text-sm">
             <div>
-              <p className="text-xs text-muted-foreground">Churn</p>
-              <p className="mt-1 font-medium">1.9%</p>
+              <p className="text-xs text-muted-foreground">Blocks</p>
+              <p className="mt-1 font-medium">460+</p>
             </div>
             <div>
-              <p className="text-xs text-muted-foreground">ARPA</p>
-              <p className="mt-1 font-medium">$214</p>
+              <p className="text-xs text-muted-foreground">Pages</p>
+              <p className="mt-1 font-medium">240+</p>
             </div>
             <div>
-              <p className="text-xs text-muted-foreground">NRR</p>
-              <p className="mt-1 font-medium">118%</p>
+              <p className="text-xs text-muted-foreground">Icons</p>
+              <p className="mt-1 font-medium">4000+</p>
             </div>
           </div>
         </div>

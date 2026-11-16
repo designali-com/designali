@@ -13,11 +13,11 @@ import {
 } from "@workspace/ui/components/breadcrumb"
 
 const path = [
-  "Home",
-  "Teams",
+  "Designali",
+  "Studio",
   "Design",
   "Research",
-  "Interviews",
+  "Client interviews",
   "Round 2",
   "Session notes",
 ]

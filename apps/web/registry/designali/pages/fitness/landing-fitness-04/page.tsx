@@ -9,127 +9,128 @@ import {
   Sparkles,
   Timer,
   Users,
-} from "lucide-react"
+} from "@designali/icons"
 
+import { Logo } from "@/src/components/logo"
 import { Button } from "@workspace/ui/components/button"
 
-const navLinks = ["Classes", "Coaches", "Membership", "Locations", "App"]
+const navLinks = ["Work", "Services", "Pricing", "Process", "Contact"]
 
 const logos = [
-  "Shape",
-  "GQ",
-  "Women's Health",
-  "Vogue",
-  "Wired",
-  "Men's Health",
-  "Runner's World",
-  "Outside",
+  "Tailwind CSS",
+  "Figma",
+  "Vercel",
+  "shadcn/ui",
+  "@designali/icons",
+  "Next.js",
+  "React",
+  "TypeScript",
 ]
 
 const features = [
   {
     icon: HeartPulse,
-    title: "Heart-rate tracking",
+    title: "Live data screens",
     description:
-      "See your effort zones live on the screens and get a summary after every class.",
+      "Dashboards and in-studio displays for effort zones, leaderboards and progress, built with clear data design.",
   },
   {
     icon: Apple,
-    title: "Nutrition coaching",
+    title: "Content & motion",
     description:
-      "Simple, sustainable meal guidance from registered dietitians, built around foods you enjoy.",
+      "Social templates, CGI and motion loops so every launch, challenge and class drop looks on-brand.",
   },
   {
     icon: Users,
-    title: "A real community",
+    title: "Design systems",
     description:
-      "Monthly challenges, member socials and a crew that notices when you skip a week.",
+      "A shared component library and tokens, so your team can ship new pages without breaking the brand.",
   },
   {
     icon: Timer,
-    title: "Workouts that fit",
+    title: "Fast, accessible builds",
     description:
-      "Sessions from 30 to 60 minutes, so training fits before work, at lunch or after dinner.",
+      "Typed, responsive and accessible code on Next.js and Tailwind CSS, deployed on Vercel.",
   },
   {
     icon: Sparkles,
-    title: "Recovery suite",
+    title: "AI-assisted workflows",
     description:
-      "Sauna, cold plunge and compression boots included with every unlimited membership.",
+      "AI helps us explore directions and draft content faster, while every final decision stays hand-crafted.",
   },
 ]
 
 const stats = [
-  { value: "86%", label: "Hit their 12-week goal" },
-  { value: "45", label: "Certified coaches" },
-  { value: "9", label: "Studios citywide" },
-  { value: "18,000", label: "Active members" },
+  { value: "92%", label: "Launched within 8 weeks" },
+  { value: "4000+", label: "Icons in @designali/icons" },
+  { value: "2300+", label: "UI examples on designali.com" },
+  { value: "40+", label: "Fitness projects shipped" },
 ]
 
 const steps = [
   {
-    title: "Book a free intro",
+    title: "Book a discovery call",
     description:
-      "Meet a coach for a 30-minute session to talk goals, history and any injuries.",
+      "A 30-minute call with Ali to talk about your members, your goals and what is not working today.",
   },
   {
-    title: "Get your plan",
+    title: "Get a clear proposal",
     description:
-      "We recommend classes and a weekly schedule based on your experience and goals.",
+      "You receive scope, timeline and a fixed price, with no surprises once the work begins.",
   },
   {
-    title: "Train consistently",
+    title: "Design and build",
     description:
-      "Show up two to four times a week. The app reminds you and tracks your progress.",
+      "Weekly check-ins in Figma, then production-ready code you can preview from the first sprint.",
   },
   {
-    title: "Retest and level up",
+    title: "Launch and grow",
     description:
-      "Every 12 weeks we retest your benchmarks and set the next target together.",
+      "We launch, measure sign-ups and bookings, and keep improving the experience together.",
   },
 ]
 
 const showcase = [
   {
-    name: "Strength Foundations",
-    meta: "Barbell basics · 50 min",
-    tag: "Beginner",
-    price: "6:30 AM",
+    name: "Strength gym rebrand",
+    meta: "Brand identity · Website",
+    tag: "Identity",
+    price: "6 weeks",
     tile: "bg-gradient-to-br from-sky-200 via-cyan-300 to-teal-400 dark:from-sky-700 dark:via-cyan-800 dark:to-teal-900",
   },
   {
-    name: "Hybrid Conditioning",
-    meta: "Rower, sled, kettlebell · 45 min",
-    tag: "Popular",
-    price: "7:15 AM",
+    name: "Hybrid training site",
+    meta: "Next.js · Booking flow",
+    tag: "Web",
+    price: "8 weeks",
     tile: "bg-gradient-to-br from-violet-200 via-purple-300 to-fuchsia-400 dark:from-violet-700 dark:via-purple-800 dark:to-fuchsia-900",
   },
   {
-    name: "Power Yoga",
-    meta: "Heated flow · 60 min",
-    tag: "All levels",
-    price: "12:00 PM",
+    name: "Pilates studio brand",
+    meta: "Identity · Social templates",
+    tag: "Brand",
+    price: "4 weeks",
     tile: "bg-gradient-to-br from-emerald-200 via-green-300 to-lime-300 dark:from-emerald-700 dark:via-green-800 dark:to-lime-900",
   },
   {
-    name: "Ride 45",
-    meta: "Indoor cycling intervals · 45 min",
-    tag: "Cardio",
-    price: "5:45 PM",
+    name: "Cycling studio launch",
+    meta: "Motion · Landing page",
+    tag: "Motion",
+    price: "5 weeks",
     tile: "bg-gradient-to-br from-stone-200 via-neutral-300 to-zinc-400 dark:from-stone-700 dark:via-neutral-800 dark:to-zinc-900",
   },
   {
-    name: "Olympic Lifting",
-    meta: "Snatch and clean technique · 60 min",
-    tag: "Advanced",
-    price: "6:30 PM",
+    name: "Coaching app UI",
+    meta: "UI/UX · Design system",
+    tag: "Product",
+    price: "10 weeks",
     tile: "bg-gradient-to-br from-rose-200 via-pink-300 to-purple-300 dark:from-rose-700 dark:via-pink-800 dark:to-purple-900",
   },
   {
-    name: "Mobility Reset",
-    meta: "Stretch and breathwork · 30 min",
-    tag: "Recovery",
-    price: "8:00 PM",
+    name: "Recovery studio CGI",
+    meta: "CGI · 3D product renders",
+    tag: "3D",
+    price: "3 weeks",
     tile: "bg-gradient-to-br from-blue-200 via-indigo-300 to-violet-400 dark:from-blue-700 dark:via-indigo-800 dark:to-violet-900",
   },
 ]
@@ -137,103 +138,103 @@ const showcase = [
 const testimonials = [
   {
     quote:
-      "Lost 9kg, dropped my blood pressure and actually look forward to Monday mornings now.",
-    name: "Daniel Russo",
-    role: "12-week program graduate",
+      "We got a full design system, not just screens. Our team ships new class pages in an afternoon now.",
+    name: "Daniel R.",
+    role: "Head of product, fitness app",
   },
   {
     quote:
-      "The recovery suite alone is worth the membership. Sauna after a hard session is my favourite hour of the week.",
-    name: "Chloe Martin",
-    role: "Unlimited member",
+      "The 3D renders and motion loops Designali made for our launch still outperform every other post we publish.",
+    name: "Chloe M.",
+    role: "Marketing lead, recovery studio",
   },
   {
     quote:
-      "My coach rebuilt my training around a knee injury. I am running again, pain free, for the first time in years.",
-    name: "Ben Adeyemi",
-    role: "Personal training client",
+      "Design se code tak is real. We went from moodboard to a live Next.js site without ever switching agencies.",
+    name: "Ben A.",
+    role: "Personal trainer, Designali client",
   },
 ]
 
 const tiers = [
   {
-    name: "Flex",
-    price: "$25",
-    period: "/class",
-    description: "Drop in whenever your schedule allows.",
+    name: "Sprint",
+    price: "$2,400",
+    period: "/project",
+    description: "A focused landing page for a launch, challenge or new location.",
     features: [
-      "Any class, any studio",
-      "Book 7 days ahead",
-      "Free towel and lockers",
-      "No commitment",
+      "One landing page, designed and coded",
+      "Built from Designali blocks",
+      "Responsive and accessible",
+      "Delivered in two weeks",
     ],
-    cta: "Book a class",
+    cta: "Start a sprint",
   },
   {
-    name: "Unlimited",
-    price: "$169",
+    name: "Studio",
+    price: "$4,500",
     period: "/month",
-    description: "For members training three or more times a week.",
+    description: "Ongoing design and development for growing fitness brands.",
     features: [
-      "Unlimited classes",
-      "Recovery suite access",
-      "Quarterly progress testing",
-      "Bring a friend monthly",
-      "Book 14 days ahead",
+      "Unlimited design requests",
+      "Next.js development included",
+      "Monthly performance review",
+      "Social and motion templates",
+      "Pause or cancel any time",
     ],
-    cta: "Join now",
+    cta: "Work with Designali",
   },
   {
-    name: "Personal",
-    price: "$399",
+    name: "Partner",
+    price: "$8,000",
     period: "/month",
-    description: "One-to-one coaching with a dedicated trainer.",
+    description: "Ali Imam as your embedded design engineer, every week.",
     features: [
-      "8 private sessions",
-      "Custom program",
-      "Nutrition coaching",
-      "Unlimited classes",
-      "Weekly check-ins",
+      "Dedicated design engineer",
+      "Product UI and code",
+      "Content & motion",
+      "Unlimited design requests",
+      "Weekly check-ins with Ali",
     ],
-    cta: "Meet a coach",
+    cta: "Book a call",
   },
 ]
 
 const faqs = [
   {
-    q: "How early should I arrive?",
-    a: "Arrive ten minutes early for your first visit so a coach can show you around and set up your equipment.",
+    q: "How long does a project take?",
+    a: "Most landing pages take two weeks and a full brand plus website takes six to eight weeks.",
   },
   {
-    q: "Is there a minimum contract?",
-    a: "No. Memberships are month to month and can be cancelled with 30 days notice.",
+    q: "Will I own the design and code?",
+    a: "Yes. You get the Figma files and the full Next.js codebase, ready to host on Vercel or anywhere you like.",
   },
   {
-    q: "Do you offer corporate memberships?",
-    a: "Yes. Teams of five or more get discounted rates and a dedicated onboarding session.",
+    q: "Do you work with multi-location brands?",
+    a: "Yes. We build design systems that scale across locations, apps and campaigns without losing consistency.",
   },
   {
-    q: "I am a complete beginner. Is that okay?",
-    a: "Absolutely. Around a third of our members had never lifted a weight before joining. Every class has scaled options.",
+    q: "We are a new fitness brand. Is that okay?",
+    a: "Absolutely. Many projects start with nothing but a name. We shape the identity first, then design and build around it.",
   },
   {
-    q: "What should I bring to my first class?",
-    a: "Comfortable clothes, trainers and a water bottle. Towels, lockers and showers are provided.",
+    q: "What do you need from us to get started?",
+    a: "Your goals, any existing brand assets, photos of your space and a few sites you like. We handle the rest.",
   },
 ]
 
 const footer = [
   {
-    title: "Train",
-    links: ["Classes", "Personal training", "Online coaching", "Schedule"],
+    title: "Studio",
+    links: ["Work", "Services", "Process", "Contact"],
   },
   {
-    title: "Studios",
-    links: ["Downtown", "Riverside", "North Park", "All locations"],
+    title: "Resources",
+    links: ["Templates", "Blocks", "Icons", "Docs"],
   },
   {
-    title: "About",
-    links: ["Our coaches", "Careers", "Gift cards", "Contact"],
+    title: "Follow",
+    links: ["Instagram", "X", "LinkedIn", "21st.dev"],
   },
 ]
 
@@ -246,10 +247,8 @@ export default function LandingFitness04() {
             href="#"
             className="flex items-center gap-2 font-semibold tracking-tight"
           >
-            <span className="flex size-7 items-center justify-center rounded-md bg-rose-600 text-white text-sm">
-              P
-            </span>
-            <span className="">Pulse Ride</span>
+            <Logo className="h-5 w-auto" />
+            <span className="">designali</span>
           </a>
           <nav className="hidden items-center gap-7 text-sm md:flex">
             {navLinks.map((link) => (
@@ -270,10 +269,10 @@ export default function LandingFitness04() {
               nativeButton={false}
               render={<a href="#" />}
             >
-              Member login
+              View work
             </Button>
             <Button size="sm" nativeButton={false} render={<a href="#" />}>
-              Book a ride
+              Start a project
             </Button>
           </div>
         </div>
@@ -283,21 +282,20 @@ export default function LandingFitness04() {
           <div className="mx-auto max-w-3xl space-y-6 text-center">
             <span className="inline-flex items-center gap-2 rounded-full border bg-background text-muted-foreground px-3 py-1 text-xs font-medium">
               <Sparkles className="size-3.5 text-rose-600 dark:text-rose-400" />
-              Rhythm cycling, 45 minutes
+              Designali for cycling studios
             </span>
             <h1 className="text-4xl leading-[1.05] font-semibold tracking-tight text-balance sm:text-5xl md:text-6xl ">
               <span className="text-rose-600 dark:text-rose-400">
-                Ride to the beat.
+                Design to the beat.
               </span>
-              {" Leave it all behind."}
+              {" Then we build it."}
             </h1>
             <p className="mx-auto max-w-2xl text-lg leading-8 text-muted-foreground">
-              Pulse Ride is a candlelit cycling studio where live DJs and expert
-              instructors turn cardio into the best part of your day.
+              Designali gives cycling and cardio studios bold identities, motion graphics and booking sites that feel as energetic as the class itself.
             </p>
             <div className="flex flex-wrap gap-3 justify-center">
               <Button size="lg" nativeButton={false} render={<a href="#" />}>
-                Book a ride
+                Start a project
                 <ArrowRight />
               </Button>
               <Button
@@ -333,7 +331,7 @@ export default function LandingFitness04() {
       <section className="border-b">
         <div className="mx-auto max-w-7xl px-6 py-12">
           <p className="text-center text-sm text-muted-foreground">
-            As featured in
+            Designed in Figma, built with
           </p>
           <div className="mt-8 grid grid-cols-2 items-center gap-x-8 gap-y-6 sm:grid-cols-4 lg:grid-cols-8">
             {logos.map((logo) => (
@@ -351,14 +349,13 @@ export default function LandingFitness04() {
         <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
           <div className="mx-auto max-w-2xl text-center">
             <p className="text-sm font-medium text-rose-600 dark:text-rose-400">
-              Training
+              Services
             </p>
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl  mt-3">
-              Everything you need to get stronger
+              Everything a fitness brand needs to grow
             </h2>
             <p className="mt-4 text-lg leading-8 text-muted-foreground">
-              Expert coaching, smart programming and a community that shows up,
-              whether you train with us in person or at home.
+              Where thoughtful design meets production-ready code. From the first logo sketch to the live booking flow.
             </p>
           </div>
           <div className="mt-14 grid gap-3 md:grid-cols-3">
@@ -390,11 +387,10 @@ export default function LandingFitness04() {
           <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
             <div className="max-w-2xl">
               <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl">
-                Find your class
+                Selected fitness work
               </h2>
               <p className="mt-4 text-lg leading-8 text-muted-foreground">
-                More than 120 sessions a week, from sunrise strength to
-                late-night mobility. Book in two taps.
+                Identities, websites, apps and motion for gyms, studios and coaches, all designed and built by Designali.
               </p>
             </div>
             <Button
@@ -402,7 +398,7 @@ export default function LandingFitness04() {
               nativeButton={false}
               render={<a href="#" />}
             >
-              View all
+              View all work
               <ArrowUpRight />
             </Button>
           </div>
@@ -437,7 +433,7 @@ export default function LandingFitness04() {
         <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl">
-              Real members, real results
+              What fitness clients say
             </h2>
           </div>
           <div className="mt-14 grid gap-4 md:grid-cols-3">
@@ -475,7 +471,7 @@ export default function LandingFitness04() {
         <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl">
-              How to get started
+              How we work together
             </h2>
           </div>
           <ol className="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
@@ -500,11 +496,10 @@ export default function LandingFitness04() {
         <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl">
-              Memberships for every routine
+              Simple pricing for fitness brands
             </h2>
             <p className="mt-4 text-lg leading-8 text-muted-foreground">
-              No joining fee, no long contracts. Freeze or cancel your
-              membership any time from the app.
+              Fixed-price projects or a monthly studio plan. No hidden fees and you own everything we make.
             </p>
           </div>
           <div className="mx-auto mt-14 grid max-w-6xl items-start gap-6 lg:grid-cols-3">
@@ -558,7 +553,7 @@ export default function LandingFitness04() {
         <div className="mx-auto grid max-w-7xl gap-12 px-6 py-20 md:py-28 lg:grid-cols-[1fr_1.5fr]">
           <div className="lg:sticky lg:top-24 lg:self-start">
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl">
-              Before your first session
+              Before we start
             </h2>
             <p className="mt-4 text-muted-foreground">
               Still curious?{" "}
@@ -566,7 +561,7 @@ export default function LandingFitness04() {
                 href="#"
                 className="font-medium text-foreground underline underline-offset-4"
               >
-                Get in touch
+                Email hello@designali.com
               </a>
               .
             </p>
@@ -591,14 +586,14 @@ export default function LandingFitness04() {
           <div className="pointer-events-none absolute -top-24 left-1/2 size-96 -translate-x-1/2 rounded-full bg-gradient-to-b from-rose-500/25 via-pink-500/10 to-transparent blur-3xl" />
           <div className="relative mx-auto max-w-2xl space-y-6">
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl">
-              Your first ride is free
+              Your first call is free
             </h2>
             <p className="text-lg text-muted-foreground">
-              Shoes and water included. Just bring your energy.
+              Bring your idea. Ali brings the design and the code.
             </p>
             <div className="flex flex-wrap gap-3 justify-center">
               <Button size="lg" nativeButton={false} render={<a href="#" />}>
-                Book a ride
+                Start a project
                 <ArrowRight />
               </Button>
               <Button
@@ -620,13 +615,11 @@ export default function LandingFitness04() {
               href="#"
               className="flex items-center gap-2 font-semibold tracking-tight"
             >
-              <span className="flex size-7 items-center justify-center rounded-md bg-rose-600 text-white text-sm">
-                P
-              </span>
-              <span className="">Pulse Ride</span>
+              <Logo className="h-5 w-auto" />
+              <span className="">designali</span>
             </a>
             <p className="max-w-xs text-sm text-muted-foreground">
-              Cardio with a pulse.
+              Brands with a pulse.
             </p>
           </div>
           {footer.map((column) => (
@@ -650,7 +643,7 @@ export default function LandingFitness04() {
         <div className="border-t ">
           <div className="mx-auto flex max-w-7xl flex-col justify-between gap-4 px-6 py-6 text-xs text-muted-foreground sm:flex-row">
             <span>
-              © {new Date().getFullYear()} Pulse Ride. All rights reserved.
+              © {new Date().getFullYear()} Designali. All rights reserved.
             </span>
             <div className="flex gap-6">
               <a href="#" className="hover:text-foreground">

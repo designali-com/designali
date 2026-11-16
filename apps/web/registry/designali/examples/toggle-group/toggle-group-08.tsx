@@ -38,7 +38,7 @@ export default function BillingCycleToggleGroup() {
         </p>
         <p className="text-xs text-muted-foreground">
           {cycle === "yearly"
-            ? "Billed $192 per seat annually"
+            ? "Designali Pro billed $192 per seat annually"
             : "Billed monthly, cancel anytime"}
         </p>
       </div>

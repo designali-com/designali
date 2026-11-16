@@ -1,23 +1,29 @@
 "use client"
 
 import { useState } from "react"
-import { ArrowLeft, ChevronRight, Menu, Moon, X } from "lucide-react"
+import {
+  ArrowLeft,
+  ChevronRight,
+  Menu,
+  Moon,
+  X,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { cn } from "@workspace/ui/lib/utils"
 
 const menu = [
   {
-    label: "Products",
-    children: ["Checking accounts", "Savings", "Credit cards", "Business banking"],
+    label: "Library",
+    children: ["Templates", "Blocks", "Landing pages", "UI designs"],
   },
   {
-    label: "Borrow",
-    children: ["Personal loans", "Mortgages", "Auto refinancing"],
+    label: "Assets",
+    children: ["Icons", "Logos", "Illustrations"],
   },
-  { label: "Invest", children: ["Robo portfolios", "Retirement", "Crypto"] },
-  { label: "Learn" },
-  { label: "Help center" },
+  { label: "Studio", children: ["Brand identity", "UI/UX design", "Web development"] },
+  { label: "Blog" },
+  { label: "Contact" },
 ]
 
 export default function Navigation15() {
@@ -34,15 +40,15 @@ export default function Navigation15() {
             Nested menus that slide instead of stacking.
           </h2>
           <p className="text-muted-foreground">
-            Each parent opens a full panel with a back button, so deep trees stay
-            readable on a small screen.
+            Each parent opens a full panel with a back button, so the whole
+            Designali library stays readable on a small screen.
           </p>
         </div>
 
         <div className="mx-auto w-full max-w-[340px] overflow-hidden border-8 border-foreground bg-background">
           <div className="relative h-[560px] overflow-hidden">
             <header className="flex h-14 items-center justify-between border-b px-4">
-              <span className="font-semibold">Pennant</span>
+              <span className="font-semibold">designali</span>
               <button
                 type="button"
                 aria-label={open ? "Close menu" : "Open menu"}
@@ -93,7 +99,7 @@ export default function Navigation15() {
                     <Moon className="size-4" />
                     Dark mode
                   </button>
-                  <Button className="w-full">Open an account</Button>
+                  <Button className="w-full">Get Designali Pro</Button>
                   <Button variant="outline" className="w-full">Log in</Button>
                 </div>
               </div>

@@ -1,6 +1,8 @@
 "use client"
 
-import { UploadCloudIcon } from "lucide-react"
+import {
+  CloudUpload as UploadCloudIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Toaster, createToastManager } from "@workspace/ui/components/toast"
@@ -26,7 +28,7 @@ export default function PromiseUploadToast() {
             notify.promise(fakeUpload(), {
               loading: {
                 title: "Uploading...",
-                description: "Sending file to Shared Drive",
+                description: "Sending file to the Designali studio drive",
               },
               success: (file: string) => ({
                 title: "Upload complete",

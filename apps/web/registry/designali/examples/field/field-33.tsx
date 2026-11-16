@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { RotateCcwIcon } from "lucide-react"
+import {
+  RotateCcw as RotateCcwIcon,
+} from "@designali/icons"
 
 import {
   Field,
@@ -25,7 +27,7 @@ const slugify = (s: string) =>
     .replace(/^-|-$/g, "")
 
 export default function AutoSlugField() {
-  const [title, setTitle] = React.useState("Designing for slow networks")
+  const [title, setTitle] = React.useState("Design se code tak")
   const [slug, setSlug] = React.useState<string | null>(null)
   const value = slug ?? slugify(title)
 
@@ -43,7 +45,7 @@ export default function AutoSlugField() {
         <FieldLabel htmlFor="post-slug">URL slug</FieldLabel>
         <InputGroup>
           <InputGroupAddon>
-            <InputGroupText>/blog/</InputGroupText>
+            <InputGroupText>/blogs/</InputGroupText>
           </InputGroupAddon>
           <InputGroupInput
             id="post-slug"

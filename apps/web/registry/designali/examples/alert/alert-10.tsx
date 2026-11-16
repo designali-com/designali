@@ -1,7 +1,11 @@
 "use client"
 
 import * as React from "react"
-import { MegaphoneIcon, RotateCcwIcon, XIcon } from "lucide-react"
+import {
+  Megaphone as MegaphoneIcon,
+  RotateCcw as RotateCcwIcon,
+  X as XIcon,
+} from "@designali/icons"
 
 import {
   Alert,
@@ -26,9 +30,9 @@ export default function AlertDismissible() {
   return (
     <Alert variant="info" className="max-w-md">
       <MegaphoneIcon />
-      <AlertTitle>Dark mode is here</AlertTitle>
+      <AlertTitle>Dark mode is live on designali.com</AlertTitle>
       <AlertDescription>
-        Switch themes from the avatar menu, or follow your system setting.
+        Preview every block and template in dark mode from the avatar menu, or follow your system setting.
       </AlertDescription>
       <AlertAction>
         <Button

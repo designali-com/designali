@@ -2,10 +2,10 @@
 
 import * as React from "react"
 import {
-  ArrowUpDownIcon,
-  PlaneLandingIcon,
-  PlaneTakeoffIcon,
-} from "lucide-react"
+  ArrowUpDown as ArrowUpDownIcon,
+  PlaneLanding as PlaneLandingIcon,
+  PlaneTakeoff as PlaneTakeoffIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {

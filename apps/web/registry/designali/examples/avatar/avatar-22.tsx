@@ -1,4 +1,7 @@
-import { ChevronsUpDownIcon, PlusIcon } from "lucide-react"
+import {
+  ChevronsUpDown as ChevronsUpDownIcon,
+  Plus as PlusIcon,
+} from "@designali/icons"
 
 import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
 import { Button } from "@workspace/ui/components/button"
@@ -13,9 +16,9 @@ import {
 } from "@workspace/ui/components/dropdown-menu"
 
 const workspaces = [
-  { name: "Harbor Analytics", plan: "Pro", short: "HA" },
-  { name: "Pinecrest Design", plan: "Team", short: "PD" },
-  { name: "Side Project", plan: "Free", short: "SP" },
+  { name: "Designali Studio", plan: "Pro", short: "DS" },
+  { name: "Designali Clients", plan: "Team", short: "DC" },
+  { name: "Dalim Works", plan: "Free", short: "DW" },
 ]
 
 export default function WorkspaceSwitcherMenu() {
@@ -28,10 +31,10 @@ export default function WorkspaceSwitcherMenu() {
       >
         <Avatar size="sm" className="rounded-none after:rounded-none">
           <AvatarFallback className="rounded-none bg-primary text-primary-foreground">
-            HA
+            DS
           </AvatarFallback>
         </Avatar>
-        <span className="flex-1 text-left">Harbor Analytics</span>
+        <span className="flex-1 text-left">Designali Studio</span>
         <ChevronsUpDownIcon className="text-muted-foreground" />
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-56">

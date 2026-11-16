@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { BellIcon } from "lucide-react"
+import {
+  Bell as BellIcon,
+} from "@designali/icons"
 
 import { Slider } from "@workspace/ui/components/slider"
 import { cn } from "@workspace/ui/lib/utils"

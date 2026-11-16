@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { CalendarClockIcon } from "lucide-react"
+import {
+  CalendarClock as CalendarClockIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -40,7 +42,7 @@ export default function BookingSlotsSheet() {
       <SheetContent>
         <SheetHeader>
           <SheetTitle>30-min consultation</SheetTitle>
-          <SheetDescription>With Dr. Amara Osei · Video call</SheetDescription>
+          <SheetDescription>With Ali Imam · Video call</SheetDescription>
         </SheetHeader>
         <div className="flex flex-col gap-4 px-4">
           <div className="grid grid-cols-3 gap-1">

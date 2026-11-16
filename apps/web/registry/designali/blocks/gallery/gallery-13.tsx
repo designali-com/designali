@@ -1,20 +1,20 @@
 const rowA = [
-  "linear-gradient(135deg, var(--chart-1), var(--chart-2))",
-  "linear-gradient(200deg, var(--chart-3), var(--chart-4))",
-  "linear-gradient(60deg, var(--chart-5), var(--chart-1))",
-  "linear-gradient(160deg, var(--chart-2), var(--chart-5))",
-  "linear-gradient(90deg, var(--chart-4), var(--chart-3))",
-  "linear-gradient(300deg, var(--chart-1), var(--chart-4))",
+  'url("/images/templates/portfolio-simple.jpg") center / cover',
+  'url("/images/templates/design-agency.jpg") center / cover',
+  'url("/images/templates/resort.jpg") center / cover',
+  'url("/images/templates/ai.jpg") center / cover',
+  'url("/images/templates/vercel.jpg") center / cover',
+  'url("/images/templates/aliimam-comp.jpg") center / cover',
 ]
 const rowB = [
-  "linear-gradient(20deg, var(--chart-4), var(--chart-2))",
-  "linear-gradient(250deg, var(--chart-5), var(--chart-3))",
-  "linear-gradient(110deg, var(--chart-2), var(--chart-1))",
-  "linear-gradient(180deg, var(--chart-3), var(--chart-5))",
-  "linear-gradient(45deg, var(--chart-1), var(--chart-3))",
-  "linear-gradient(330deg, var(--chart-4), var(--chart-5))",
+  'url("/images/templates/dalim-agency-old.jpg") center / cover',
+  'url("/images/templates/dalim-fonts-old.jpg") center / cover',
+  'url("/images/templates/dalim-graphic-old.jpg") center / cover',
+  'url("/images/templates/dalim-icons-old.jpg") center / cover',
+  'url("/images/templates/dalim-tools-old.jpg") center / cover',
+  'url("/images/templates/dalim-works-old.jpg") center / cover',
 ]
-const labels = ["Brand", "Editorial", "Product", "Motion", "Packaging", "Spatial"]
+const labels = ["Brand", "Web", "Product", "Templates", "Icons", "Motion"]
 
 function Row({ tiles, reverse }: { tiles: string[]; reverse?: boolean }) {
   return (
@@ -46,10 +46,10 @@ export default function Gallery13() {
       <style>{`@keyframes g13-marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}@media (prefers-reduced-motion:reduce){[style*="g13-marquee"]{animation:none!important}}`}</style>
       <div className="mx-auto max-w-7xl px-6 text-center">
         <h2 className="text-3xl font-semibold tracking-tight md:text-5xl">
-          1,200 projects. One studio.
+          Many projects. One studio.
         </h2>
         <p className="mx-auto mt-4 max-w-lg text-muted-foreground">
-          A continuous reel of recent work from Northbound Studio. Hover to
+          A continuous reel of Designali and Dalim work by Ali Imam. Hover to
           pause the wall.
         </p>
       </div>

@@ -1,4 +1,7 @@
-import { FileIcon, FolderIcon } from "lucide-react"
+import {
+  File as FileIcon,
+  Folder as FolderIcon,
+} from "@designali/icons"
 
 import { ScrollArea } from "@workspace/ui/components/scroll-area"
 

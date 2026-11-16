@@ -1,7 +1,11 @@
 "use client"
 
 import * as React from "react"
-import { DownloadIcon, PauseIcon, PlayIcon } from "lucide-react"
+import {
+  Download as DownloadIcon,
+  Pause as PauseIcon,
+  Play as PlayIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -29,7 +33,7 @@ export default function PausableDownload() {
       </div>
       <Progress value={value} className="min-w-0 flex-1 gap-1.5">
         <ProgressLabel className="truncate text-sm font-medium">
-          studio-assets-v2.dmg
+          designali-templates-v2.zip
         </ProgressLabel>
         <ProgressValue />
         <span className="w-full text-xs text-muted-foreground">

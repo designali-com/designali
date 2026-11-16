@@ -2,11 +2,11 @@
 
 import * as React from "react"
 import {
-  PlusIcon,
-  RotateCwIcon,
-  ScrollTextIcon,
-  ServerIcon,
-} from "lucide-react"
+  Plus as PlusIcon,
+  RotateCw as RotateCwIcon,
+  ScrollText as ScrollTextIcon,
+  Server as ServerIcon,
+} from "@designali/icons"
 
 import {
   ContextMenu,
@@ -31,7 +31,7 @@ export default function ActivityLogMenu() {
             <ServerIcon className="size-5" />
           </div>
           <div className="flex flex-col text-xs">
-            <span className="font-medium">api-gateway-prod</span>
+            <span className="font-medium">designali-web-prod</span>
             <span className="text-muted-foreground">
               us-east-1 · 3 replicas
             </span>

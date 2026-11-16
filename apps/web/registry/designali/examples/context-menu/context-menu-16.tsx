@@ -1,7 +1,11 @@
 "use client"
 
 import * as React from "react"
-import { ArrowUpDownIcon, CopyIcon, ScissorsIcon } from "lucide-react"
+import {
+  ArrowUpDown as ArrowUpDownIcon,
+  Copy as CopyIcon,
+  Scissors as ScissorsIcon,
+} from "@designali/icons"
 
 import {
   ContextMenu,
@@ -19,10 +23,10 @@ import {
 import { cn } from "@workspace/ui/lib/utils"
 
 const rows = [
-  ["Region", "Q3", "Q4"],
-  ["North", "$42k", "$51k"],
-  ["South", "$38k", "$36k"],
-  ["West", "$57k", "$64k"],
+  ["Product", "Q3", "Q4"],
+  ["Templates", "$42k", "$51k"],
+  ["Blocks", "$38k", "$36k"],
+  ["Icons", "$57k", "$64k"],
 ]
 
 export default function SpreadsheetCellMenu() {

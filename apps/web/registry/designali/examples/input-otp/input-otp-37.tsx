@@ -2,9 +2,15 @@
 
 import * as React from "react"
 import { REGEXP_ONLY_DIGITS } from "input-otp"
-import { TicketIcon } from "lucide-react"
+import {
+  Ticket as TicketIcon,
+} from "@designali/icons"
 
-import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from "@workspace/ui/components/avatar"
 import { Badge } from "@workspace/ui/components/badge"
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -44,10 +50,11 @@ export default function EventCheckInDesk() {
         {found ? (
           <>
             <Avatar size="sm">
-              <AvatarFallback>LM</AvatarFallback>
+              <AvatarImage src="/ali.jpg" alt="Ali Imam" />
+              <AvatarFallback>AI</AvatarFallback>
             </Avatar>
             <div className="flex-1">
-              <p className="font-medium">Lena Moreau</p>
+              <p className="font-medium">Ali Imam</p>
               <p className="text-muted-foreground">Speaker pass</p>
             </div>
             <Button size="sm">Check in</Button>

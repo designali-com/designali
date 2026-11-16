@@ -2,11 +2,11 @@ import { ScrollArea } from "@workspace/ui/components/scroll-area"
 import { Spinner } from "@workspace/ui/components/spinner"
 
 const events = [
-  "Lena merged feature/billing-portal",
-  "Omar opened issue #812",
+  "Ali Imam merged feature/pricing-page",
+  "Sara opened issue #812 in designali/icons",
   "CI passed on main",
-  "Sana requested review on #809",
-  "Release v2.14.0 published",
+  "Omar requested review on #809",
+  "@designali/icons v2.14.0 published",
 ]
 
 export default function InfiniteScrollFooter() {

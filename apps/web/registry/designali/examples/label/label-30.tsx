@@ -1,4 +1,6 @@
-import { CalendarIcon } from "lucide-react"
+import {
+  Calendar as CalendarIcon,
+} from "@designali/icons"
 
 import { Input } from "@workspace/ui/components/input"
 import { Label } from "@workspace/ui/components/label"

@@ -1,4 +1,6 @@
-import { ExternalLinkIcon } from "lucide-react"
+import {
+  ExternalLink as ExternalLinkIcon,
+} from "@designali/icons"
 
 import {
   Tooltip,
@@ -25,7 +27,7 @@ export default function ExternalLinkTooltip() {
           </TooltipTrigger>
           <TooltipContent>
             <ExternalLinkIcon className="size-3" />
-            docs.fieldnote.app/migrate/v4
+            designali.com/docs
           </TooltipContent>
         </Tooltip>{" "}
         before upgrading, and check the{" "}
@@ -42,7 +44,7 @@ export default function ExternalLinkTooltip() {
           </TooltipTrigger>
           <TooltipContent>
             <ExternalLinkIcon className="size-3" />
-            fieldnote.app/changelog
+            designali.com/blogs
           </TooltipContent>
         </Tooltip>{" "}
         for breaking changes.

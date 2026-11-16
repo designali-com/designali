@@ -18,7 +18,7 @@ export default function EmptyStateLoading() {
         </EmptyMedia>
         <EmptyTitle>Loading your projects</EmptyTitle>
         <EmptyDescription>
-          Fetching the latest activity from 12 workspaces.
+          Fetching the latest Designali studio projects and client briefs.
         </EmptyDescription>
       </EmptyHeader>
       <EmptyContent>

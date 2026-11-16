@@ -1,4 +1,6 @@
-import { ReceiptIcon } from "lucide-react"
+import {
+  Receipt as ReceiptIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import {
@@ -13,15 +15,15 @@ const invoices = [
     id: "INV-0092",
     date: "Mar 1, 2025",
     lines: [
-      ["Team plan × 8 seats", "$144.00"],
-      ["Extra storage", "$6.00"],
+      ["Designali Team × 8 seats", "$144.00"],
+      ["Icons Pro add-on", "$6.00"],
     ],
     total: "$150.00",
   },
   {
     id: "INV-0081",
     date: "Feb 1, 2025",
-    lines: [["Team plan × 6 seats", "$108.00"]],
+    lines: [["Designali Team × 6 seats", "$108.00"]],
     total: "$108.00",
   },
 ]

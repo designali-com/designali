@@ -14,7 +14,7 @@ export default function SupportTicketBreadcrumb() {
       <Breadcrumb>
         <BreadcrumbList>
           <BreadcrumbItem>
-            <BreadcrumbLink href="#">Support</BreadcrumbLink>
+            <BreadcrumbLink href="#">Designali support</BreadcrumbLink>
           </BreadcrumbItem>
           <BreadcrumbSeparator />
           <BreadcrumbItem>

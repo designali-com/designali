@@ -1,4 +1,6 @@
-import { MailOpenIcon } from "lucide-react"
+import {
+  MailOpen as MailOpenIcon,
+} from "@designali/icons"
 
 import {
   Empty,
@@ -23,7 +25,7 @@ export default function ReadingPaneEmptyState() {
         <div className="flex h-full flex-col divide-y">
           {[
             "Weekly sync notes",
-            "Your receipt from Parcel",
+            "Your receipt from Designali",
             "New login from Chrome",
           ].map((subject) => (
             <div key={subject} className="p-3 text-xs">

@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { CircleCheckIcon } from "lucide-react"
+import {
+  CircleCheck as CircleCheckIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Label } from "@workspace/ui/components/label"
@@ -20,7 +22,7 @@ export default function SubmittingTextarea() {
     return (
       <div className="flex w-full max-w-sm flex-col items-center gap-2 border p-6 text-center text-xs">
         <CircleCheckIcon className="size-6 text-emerald-600" />
-        Thanks! Our team reads every message.
+        Thanks! Ali reads every Designali feature request.
         <Button variant="outline" size="xs" onClick={() => setState("idle")}>
           Send another
         </Button>
@@ -34,7 +36,7 @@ export default function SubmittingTextarea() {
       <Textarea
         id="ta-submit"
         disabled={state === "sending"}
-        defaultValue="Let me snooze reminders for a week."
+        defaultValue="Add more pricing page blocks to Designali."
       />
       <Button size="sm" onClick={submit} disabled={state === "sending"}>
         {state === "sending" && <Spinner data-icon="inline-start" />}

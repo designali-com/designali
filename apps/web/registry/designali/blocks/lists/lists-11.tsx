@@ -1,37 +1,37 @@
 const specs = [
   {
-    group: "Display",
+    group: "Library",
     rows: [
-      ["Size", "14.2 in, 3024 x 1964"],
-      ["Panel", "Mini-LED, 120Hz adaptive"],
-      ["Brightness", "1,000 nits sustained, 1,600 peak"],
-      ["Coating", "Nano-etched anti-glare"],
+      ["Blocks", "460+ production-ready blocks"],
+      ["Pages", "240+ landing pages"],
+      ["UI designs", "2300+ UI examples"],
+      ["Icons", "4000+ in @designali/icons"],
     ],
   },
   {
-    group: "Performance",
+    group: "Stack",
     rows: [
-      ["Processor", "12-core, 4.1GHz boost"],
-      ["Memory", "32GB unified, upgradable to 64GB"],
-      ["Storage", "1TB NVMe, second M.2 slot"],
-      ["Graphics", "20-core integrated"],
+      ["Framework", "Next.js and React"],
+      ["Language", "TypeScript, strict mode"],
+      ["Styling", "Tailwind CSS, semantic tokens"],
+      ["Components", "shadcn-style UI"],
     ],
   },
   {
-    group: "Battery & power",
+    group: "License",
     rows: [
-      ["Capacity", "72Wh"],
-      ["Video playback", "Up to 19 hours"],
-      ["Charging", "100W USB-C, 50% in 30 min"],
+      ["Use", "Personal and commercial projects"],
+      ["Updates", "New blocks every other week"],
+      ["Support", "support@designali.com"],
     ],
   },
   {
-    group: "Build",
+    group: "Design",
     rows: [
-      ["Weight", "1.38 kg"],
-      ["Dimensions", "312 x 221 x 15.5 mm"],
-      ["Chassis", "Recycled aluminium, 92%"],
-      ["Repairability", "Tool-free bottom panel, 10/10 score"],
+      ["Source", "Figma files included"],
+      ["Themes", "Light and dark mode"],
+      ["Logos", "@designali/logos"],
+      ["Illustrations", "@designali/vectors"],
     ],
   },
 ]
@@ -42,9 +42,9 @@ export default function Lists11() {
       <div className="mx-auto max-w-6xl px-6">
         <div className="grid gap-10 md:grid-cols-[1fr_1.4fr]">
           <div>
-            <p className="font-mono text-xs text-muted-foreground">Kestrel 14 · Tech specs</p>
+            <p className="font-mono text-xs text-muted-foreground">Designali Pro · What's included</p>
             <h2 className="mt-3 text-4xl font-semibold tracking-tight md:text-5xl">
-              Built to be opened.
+              Built to be copied.
             </h2>
             <div className="mt-8 aspect-[16/10] border border-border bg-gradient-to-b from-muted to-background p-6">
               <div className="mx-auto h-full w-[86%] border-[6px] border-neutral-800 bg-gradient-to-br from-indigo-500 via-sky-400 to-emerald-300 dark:border-neutral-600" />

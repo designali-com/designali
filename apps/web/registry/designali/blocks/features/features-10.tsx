@@ -1,12 +1,15 @@
-import { Check, Minus } from "lucide-react"
+import {
+  Check,
+  Minus,
+} from "@designali/icons"
 
 const rows = [
-  { feature: "Unlimited projects", us: true, them: false },
-  { feature: "Real-time collaboration", us: true, them: true },
-  { feature: "Version history", us: "Forever", them: "30 days" },
-  { feature: "Code export", us: "React, Vue, HTML", them: "HTML only" },
-  { feature: "Self-hosting option", us: true, them: false },
-  { feature: "Priority support", us: "Included", them: "Add-on" },
+  { feature: "460+ copy-paste blocks", us: true, them: false },
+  { feature: "Tailwind CSS styling", us: true, them: true },
+  { feature: "Updates", us: "Lifetime", them: "1 year" },
+  { feature: "Code", us: "Next.js, React, TS", them: "HTML only" },
+  { feature: "4000+ icons included", us: true, them: false },
+  { feature: "Support from Ali Imam", us: "Included", them: "Add-on" },
 ]
 
 function Cell({ value }: { value: boolean | string }) {
@@ -21,11 +24,11 @@ export default function Features10() {
     <section className="w-full bg-background px-6 py-20 md:py-28">
       <div className="mx-auto max-w-4xl">
         <h2 className="text-3xl font-medium tracking-tight md:text-5xl">
-          Why teams switch to Canvas
+          Why designers switch to Designali
         </h2>
         <p className="mt-4 max-w-xl text-sm leading-7 text-muted-foreground">
-          A side-by-side look at what you get compared with the typical
-          design tool most teams start with.
+          A side-by-side look at what you get with Designali compared
+          with a typical UI kit.
         </p>
         <div className="mt-12 overflow-x-auto border border-border">
           <table className="w-full min-w-[520px] text-sm">
@@ -33,10 +36,10 @@ export default function Features10() {
               <tr className="border-b border-border bg-muted/40 text-left">
                 <th className="px-6 py-4 font-medium">Feature</th>
                 <th className="w-40 px-6 py-4 text-center font-medium">
-                  Canvas
+                  Designali
                 </th>
                 <th className="w-40 px-6 py-4 text-center font-medium text-muted-foreground">
-                  Typical tool
+                  Typical UI kit
                 </th>
               </tr>
             </thead>

@@ -1,7 +1,12 @@
 "use client"
 
 import { useState } from "react"
-import { CircleCheck, Clock, Plus, Send } from "lucide-react"
+import {
+  CircleCheck,
+  Clock,
+  Plus,
+  Send,
+} from "@designali/icons"
 
 import {
   Accordion,

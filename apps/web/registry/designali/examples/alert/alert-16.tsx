@@ -1,4 +1,8 @@
-import { CircleCheckIcon, CircleXIcon, TriangleAlertIcon } from "lucide-react"
+import {
+  CircleCheck as CircleCheckIcon,
+  CircleX as CircleXIcon,
+  TriangleAlert as TriangleAlertIcon,
+} from "@designali/icons"
 
 import {
   Alert,
@@ -11,19 +15,19 @@ const checks = [
     variant: "success" as const,
     icon: CircleCheckIcon,
     title: "Build passed",
-    body: "Compiled in 48s with no warnings.",
+    body: "designali.com compiled on Vercel in 48s with no warnings.",
   },
   {
     variant: "warning" as const,
     icon: TriangleAlertIcon,
     title: "Bundle size grew 14%",
-    body: "The checkout route is now 212 kB gzipped.",
+    body: "The /templates route is now 212 kB gzipped.",
   },
   {
     variant: "error" as const,
     icon: CircleXIcon,
     title: "2 tests failing",
-    body: "auth/session.test.ts and billing/tax.test.ts",
+    body: "blocks/pricing.test.ts and icons/export.test.ts",
   },
 ]
 

@@ -5,21 +5,21 @@ import { useState } from "react"
 import { cn } from "@workspace/ui/lib/utils"
 
 const authors = [
-  { id: "nk", name: "Nadia Kurt", role: "Staff engineer", initials: "NK", tone: "bg-chart-1" },
-  { id: "bo", name: "Ben Osei", role: "Design lead", initials: "BO", tone: "bg-chart-2" },
-  { id: "ml", name: "Mei Lin", role: "Data scientist", initials: "ML", tone: "bg-chart-3" },
-  { id: "rv", name: "Rafa Vidal", role: "Product manager", initials: "RV", tone: "bg-chart-4" },
+  { id: "nk", name: "Ali Imam", role: "Founder & design engineer", initials: "AI", tone: "bg-chart-1" },
+  { id: "bo", name: "Studio Designer", role: "UI/UX design", initials: "SD", tone: "bg-chart-2" },
+  { id: "ml", name: "Studio Developer", role: "Next.js development", initials: "DV", tone: "bg-chart-3" },
+  { id: "rv", name: "Motion Artist", role: "CGI, 3D & motion", initials: "MA", tone: "bg-chart-4" },
 ]
 
 const posts = [
-  { author: "nk", title: "Incremental builds for a 900-package monorepo", date: "Nov 12", read: 13 },
-  { author: "bo", title: "Designing an empty state that sells", date: "Nov 10", read: 5 },
-  { author: "ml", title: "Why our churn model ignores login frequency", date: "Nov 4", read: 10 },
-  { author: "rv", title: "Writing PRDs that fit on one screen", date: "Oct 30", read: 6 },
-  { author: "nk", title: "Feature flags are a liability, manage them like one", date: "Oct 22", read: 8 },
+  { author: "nk", title: "Incremental builds for the Designali monorepo", date: "Nov 12", read: 13 },
+  { author: "bo", title: "Designing a landing page that sells templates", date: "Nov 10", read: 5 },
+  { author: "ml", title: "Server components for the /blocks registry", date: "Nov 4", read: 10 },
+  { author: "rv", title: "Rendering Apple device mockups in 3D", date: "Oct 30", read: 6 },
+  { author: "nk", title: "Design se code tak, in practice", date: "Oct 22", read: 8 },
   { author: "bo", title: "A color system with exactly eleven tokens", date: "Oct 16", read: 7 },
-  { author: "ml", title: "Holdout groups for tiny teams", date: "Oct 9", read: 9 },
-  { author: "rv", title: "The roadmap is a list of bets", date: "Oct 1", read: 4 },
+  { author: "ml", title: "Typed registry JSON with TypeScript", date: "Oct 9", read: 9 },
+  { author: "rv", title: "Motion design for the Designali brand", date: "Oct 1", read: 4 },
 ]
 
 export default function Blog09() {
@@ -30,7 +30,7 @@ export default function Blog09() {
     <section className="w-full bg-background py-16 text-foreground md:py-24">
       <div className="mx-auto max-w-7xl px-6">
         <div className="text-center">
-          <h2 className="text-3xl font-medium tracking-tight md:text-4xl">Written by the people who build Brightwell</h2>
+          <h2 className="text-3xl font-medium tracking-tight md:text-4xl">Written by the people who build Designali</h2>
           <p className="mt-3 text-muted-foreground">Pick a writer to see only their posts.</p>
         </div>
 

@@ -1,16 +1,22 @@
-import { CreditCard, Headphones, RotateCcw, ShieldCheck, Truck } from "lucide-react"
+import {
+  CreditCard,
+  Headphones,
+  RotateCcw,
+  ShieldCheck,
+  Download,
+} from "@designali/icons"
 
 const perks = [
-  { icon: Truck, title: "Free delivery", body: "On orders over $60" },
-  { icon: RotateCcw, title: "100-night trial", body: "Return it, no questions" },
-  { icon: ShieldCheck, title: "10-year warranty", body: "On every frame" },
-  { icon: Headphones, title: "Sleep experts", body: "7 days a week, 8am to 10pm" },
+  { icon: Download, title: "Instant download", body: "Right after checkout" },
+  { icon: RotateCcw, title: "Regular updates", body: "New blocks and templates" },
+  { icon: ShieldCheck, title: "Production-ready", body: "Next.js, React and Tailwind" },
+  { icon: Headphones, title: "Direct support", body: "From Ali Imam and the studio" },
 ]
 
 const columns = [
-  { title: "Shop", links: ["Mattresses", "Bed frames", "Pillows", "Bedding", "Bundles"] },
-  { title: "Support", links: ["Track order", "Delivery", "Returns", "Warranty", "FAQ"] },
-  { title: "About", links: ["Our materials", "Showrooms", "Reviews", "Careers"] },
+  { title: "Shop", links: ["Templates", "Blocks", "UI Designs", "Icons", "Logos"] },
+  { title: "Support", links: ["Docs", "Downloads", "Licensing", "Pricing", "FAQ"] },
+  { title: "About", links: ["Work", "Ali Imam", "Blogs", "Contact"] },
 ]
 
 const payments = ["Credit card", "Debit card", "Bank transfer", "Pay in 4", "Mobile wallet", "Gift card"]
@@ -34,14 +40,14 @@ export default function Footer18() {
 
       <div className="mx-auto grid max-w-7xl gap-10 px-6 py-14 lg:grid-cols-[1.3fr_2fr]">
         <div>
-          <p className="text-2xl font-semibold tracking-tight">Drowse</p>
+          <p className="text-2xl font-semibold tracking-tight">designali</p>
           <p className="mt-3 max-w-xs text-sm leading-6 text-muted-foreground">
-            Mattresses made in North Carolina from natural latex, wool and
-            organic cotton.
+            Templates, blocks and design resources crafted by Ali Imam. Design
+            se code tak.
           </p>
           <div className="mt-6 inline-flex items-center gap-2 border px-3 py-2 text-xs">
             <span className="flex gap-0.5 text-amber-500">{"★★★★★"}</span>
-            4.8 from 21,400 reviews
+            Loved by designers and developers
           </div>
         </div>
         <div className="grid grid-cols-2 gap-8 sm:grid-cols-3">
@@ -64,7 +70,7 @@ export default function Footer18() {
 
       <div className="border-t">
         <div className="mx-auto flex max-w-7xl flex-col gap-4 px-6 py-6 md:flex-row md:items-center md:justify-between">
-          <p className="text-xs text-muted-foreground">© 2026 Drowse Sleep Co. All prices in USD.</p>
+          <p className="text-xs text-muted-foreground">© 2026 Designali. All prices in USD.</p>
           <ul className="flex flex-wrap items-center gap-2" aria-label="Accepted payment methods">
             <li className="text-muted-foreground">
               <CreditCard className="size-4" />

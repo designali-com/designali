@@ -1,16 +1,20 @@
 "use client"
 
 import { useState } from "react"
-import { Headphones, Pause, Play } from "lucide-react"
+import {
+  Headphones,
+  Pause,
+  Play,
+} from "@designali/icons"
 
 import { cn } from "@workspace/ui/lib/utils"
 
 const episodes = [
-  { n: 48, title: "Selling to procurement without losing your soul", guest: "Mira Castellano, Ledgerly", length: "52:14", date: "Nov 13", hue: "from-chart-1 to-chart-3" },
-  { n: 47, title: "The founder who fired herself as CEO", guest: "Helena Achterberg, Quayside", length: "47:08", date: "Nov 6", hue: "from-chart-2 to-chart-4" },
-  { n: 46, title: "Open-sourcing your core product, two years later", guest: "Diego Saldana, Tilework", length: "1:03:41", date: "Oct 30", hue: "from-chart-3 to-chart-5" },
-  { n: 45, title: "Hiring your first designer when you cannot judge design", guest: "Amani Clarke, Bramble", length: "39:22", date: "Oct 23", hue: "from-chart-4 to-chart-1" },
-  { n: 44, title: "Pricing in public: every change we made and why", guest: "Ravi Menon, Countbook", length: "58:50", date: "Oct 16", hue: "from-chart-5 to-chart-2" },
+  { n: 48, title: "Design se code tak: the story of Designali", guest: "Ali Imam, Designali", length: "52:14", date: "Nov 13", hue: "from-chart-1 to-chart-3" },
+  { n: 47, title: "From Dalim to Designali", guest: "Ali Imam, Designali", length: "47:08", date: "Nov 6", hue: "from-chart-2 to-chart-4" },
+  { n: 46, title: "Open-sourcing 4,000+ icons, one year later", guest: "Ali Imam, Designali", length: "1:03:41", date: "Oct 30", hue: "from-chart-3 to-chart-5" },
+  { n: 45, title: "Hiring a design studio when you cannot judge design", guest: "A Designali client", length: "39:22", date: "Oct 23", hue: "from-chart-4 to-chart-1" },
+  { n: 44, title: "Pricing templates in public: every change we made", guest: "The Designali studio", length: "58:50", date: "Oct 16", hue: "from-chart-5 to-chart-2" },
 ]
 
 export default function Blog15() {
@@ -26,10 +30,10 @@ export default function Blog15() {
           </div>
           <div>
             <p className="text-xs tracking-widest text-muted-foreground uppercase">Podcast · Weekly</p>
-            <h2 className="mt-2 text-3xl font-medium tracking-tight md:text-4xl">Second Customer</h2>
+            <h2 className="mt-2 text-3xl font-medium tracking-tight md:text-4xl">Design se Code</h2>
             <p className="mt-2 max-w-xl text-sm text-muted-foreground">
-              Conversations with founders about the messy stretch between the first
-              sale and the first hundred. {latest ? `Latest: episode ${latest.n}.` : ""}
+              Ali Imam on design, code, and building the Designali studio, from the
+              first Figma frame to production. {latest ? `Latest: episode ${latest.n}.` : ""}
             </p>
           </div>
         </div>

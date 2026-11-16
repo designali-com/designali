@@ -1,4 +1,6 @@
-import { UserPlusIcon } from "lucide-react"
+import {
+  UserPlus as UserPlusIcon,
+} from "@designali/icons"
 
 import {
   Avatar,
@@ -10,20 +12,20 @@ export default function InviteTeammatesStack() {
   return (
     <div className="flex w-full max-w-sm items-center justify-between gap-4 border p-4">
       <div>
-        <p className="text-sm font-medium">Design team</p>
+        <p className="text-sm font-medium">Designali studio</p>
         <p className="text-xs text-muted-foreground">
           5 members · 2 pending invites
         </p>
       </div>
       <AvatarGroup>
         <Avatar>
-          <AvatarFallback>LR</AvatarFallback>
+          <AvatarFallback>AI</AvatarFallback>
         </Avatar>
         <Avatar>
-          <AvatarFallback>SM</AvatarFallback>
+          <AvatarFallback>SA</AvatarFallback>
         </Avatar>
         <Avatar>
-          <AvatarFallback>TK</AvatarFallback>
+          <AvatarFallback>OM</AvatarFallback>
         </Avatar>
         <button
           type="button"

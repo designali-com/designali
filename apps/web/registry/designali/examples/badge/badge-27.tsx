@@ -1,4 +1,8 @@
-import { GemIcon, UsersIcon, ZapIcon } from "lucide-react"
+import {
+  Gem as GemIcon,
+  Users as UsersIcon,
+  Zap as ZapIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 

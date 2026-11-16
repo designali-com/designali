@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { TableIcon } from "lucide-react"
+import {
+  Table as TableIcon,
+} from "@designali/icons"
 
 import {
   Command,
@@ -17,15 +19,15 @@ const schemas = [
     schema: "public",
     tables: [
       { name: "users", rows: "48.2k" },
-      { name: "organizations", rows: "3.1k" },
-      { name: "subscriptions", rows: "5.7k" },
+      { name: "templates", rows: "3.1k" },
+      { name: "licenses", rows: "5.7k" },
     ],
   },
   {
     schema: "analytics",
     tables: [
       { name: "events", rows: "12.4M" },
-      { name: "page_views", rows: "8.9M" },
+      { name: "icon_downloads", rows: "8.9M" },
     ],
   },
   {

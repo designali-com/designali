@@ -1,7 +1,12 @@
 "use client"
 
 import { useState } from "react"
-import { ArrowDown, ArrowUp, Minus, Plus } from "lucide-react"
+import {
+  ArrowDown,
+  ArrowUp,
+  Minus,
+  Plus,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { cn } from "@workspace/ui/lib/utils"
@@ -10,28 +15,28 @@ const periods = ["This week", "This month", "All time"] as const
 
 const ranking: Record<(typeof periods)[number], { name: string; maker: string; price: number; sold: string; move: number; hue: number }[]> = {
   "This week": [
-    { name: "Miso Caramel Sauce", maker: "Kobu Pantry", price: 12, sold: "2,140", move: 3, hue: 60 },
-    { name: "Chilli Crisp, Hot", maker: "Red Lantern", price: 9, sold: "1,980", move: 0, hue: 25 },
-    { name: "Smoked Sea Salt", maker: "Cliffside", price: 7, sold: "1,610", move: -1, hue: 230 },
-    { name: "Cold Brew Concentrate", maker: "Northbound", price: 16, sold: "1,402", move: 4, hue: 40 },
-    { name: "Sourdough Starter Kit", maker: "Rise Bakehouse", price: 24, sold: "1,155", move: -2, hue: 85 },
-    { name: "Yuzu Kosho", maker: "Kobu Pantry", price: 11, sold: "980", move: 1, hue: 110 },
+    { name: "Designali Icons Pro", maker: "Designali", price: 39, sold: "2,140", move: 3, hue: 60 },
+    { name: "Design Agency Template", maker: "Designali", price: 79, sold: "1,980", move: 0, hue: 25 },
+    { name: "Blocks Pro Bundle", maker: "Designali", price: 149, sold: "1,610", move: -1, hue: 230 },
+    { name: "Apple Device Mockups", maker: "Designali", price: 35, sold: "1,402", move: 4, hue: 40 },
+    { name: "Portfolio Simple Template", maker: "Designali", price: 49, sold: "1,155", move: -2, hue: 85 },
+    { name: "Dalim UI Kit", maker: "Dalim", price: 29, sold: "980", move: 1, hue: 110 },
   ],
   "This month": [
-    { name: "Chilli Crisp, Hot", maker: "Red Lantern", price: 9, sold: "8,420", move: 1, hue: 25 },
-    { name: "Smoked Sea Salt", maker: "Cliffside", price: 7, sold: "7,960", move: -1, hue: 230 },
-    { name: "Miso Caramel Sauce", maker: "Kobu Pantry", price: 12, sold: "6,880", move: 5, hue: 60 },
-    { name: "Wildflower Honey", maker: "Ashby Apiary", price: 14, sold: "5,210", move: 0, hue: 75 },
-    { name: "Sourdough Starter Kit", maker: "Rise Bakehouse", price: 24, sold: "4,730", move: 2, hue: 85 },
-    { name: "Cold Brew Concentrate", maker: "Northbound", price: 16, sold: "4,010", move: -3, hue: 40 },
+    { name: "Design Agency Template", maker: "Designali", price: 79, sold: "8,420", move: 1, hue: 25 },
+    { name: "Blocks Pro Bundle", maker: "Designali", price: 149, sold: "7,960", move: -1, hue: 230 },
+    { name: "Designali Icons Pro", maker: "Designali", price: 39, sold: "6,880", move: 5, hue: 60 },
+    { name: "Designali Logos Pack", maker: "Designali", price: 29, sold: "5,210", move: 0, hue: 75 },
+    { name: "Portfolio Simple Template", maker: "Designali", price: 49, sold: "4,730", move: 2, hue: 85 },
+    { name: "Apple Device Mockups", maker: "Designali", price: 35, sold: "4,010", move: -3, hue: 40 },
   ],
   "All time": [
-    { name: "Smoked Sea Salt", maker: "Cliffside", price: 7, sold: "184k", move: 0, hue: 230 },
-    { name: "Chilli Crisp, Hot", maker: "Red Lantern", price: 9, sold: "161k", move: 0, hue: 25 },
-    { name: "Wildflower Honey", maker: "Ashby Apiary", price: 14, sold: "122k", move: 0, hue: 75 },
-    { name: "Extra Virgin Olive Oil", maker: "Terraza", price: 21, sold: "98k", move: 1, hue: 120 },
-    { name: "Sourdough Starter Kit", maker: "Rise Bakehouse", price: 24, sold: "87k", move: -1, hue: 85 },
-    { name: "Miso Caramel Sauce", maker: "Kobu Pantry", price: 12, sold: "64k", move: 2, hue: 60 },
+    { name: "Blocks Pro Bundle", maker: "Designali", price: 149, sold: "184k", move: 0, hue: 230 },
+    { name: "Design Agency Template", maker: "Designali", price: 79, sold: "161k", move: 0, hue: 25 },
+    { name: "Designali Logos Pack", maker: "Designali", price: 29, sold: "122k", move: 0, hue: 75 },
+    { name: "Resort Template", maker: "Designali", price: 69, sold: "98k", move: 1, hue: 120 },
+    { name: "Portfolio Simple Template", maker: "Designali", price: 49, sold: "87k", move: -1, hue: 85 },
+    { name: "Designali Icons Pro", maker: "Designali", price: 39, sold: "64k", move: 2, hue: 60 },
   ],
 }
 
@@ -55,8 +60,8 @@ export default function Ecommerce19() {
       <div className="mx-auto max-w-4xl px-6">
         <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
           <div>
-            <h2 className="text-3xl font-medium tracking-tight md:text-4xl">Pantry top sellers</h2>
-            <p className="mt-1 text-sm text-muted-foreground">Ranked by units sold across all stores</p>
+            <h2 className="text-3xl font-medium tracking-tight md:text-4xl">Designali top sellers</h2>
+            <p className="mt-1 text-sm text-muted-foreground">Ranked by downloads sold on designali.com</p>
           </div>
           <div className="inline-flex w-fit border border-border p-0.5" role="tablist">
             {periods.map((p) => (

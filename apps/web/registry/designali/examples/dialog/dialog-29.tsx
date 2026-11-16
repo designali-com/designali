@@ -2,11 +2,11 @@
 
 import * as React from "react"
 import {
-  BellIcon,
-  SettingsIcon,
-  ShieldIcon,
-  SlidersHorizontalIcon,
-} from "lucide-react"
+  Bell as BellIcon,
+  Settings as SettingsIcon,
+  Shield as ShieldIcon,
+  SlidersHorizontal as SlidersHorizontalIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -63,17 +63,17 @@ export default function SettingsSidebarDialog() {
               <FieldGroup>
                 <Field>
                   <FieldLabel htmlFor="ws-name">Workspace name</FieldLabel>
-                  <Input id="ws-name" defaultValue="Harbor Analytics" />
+                  <Input id="ws-name" defaultValue="Designali Studio" />
                 </Field>
                 <Field>
                   <FieldLabel htmlFor="ws-url">Workspace URL</FieldLabel>
-                  <Input id="ws-url" defaultValue="harbor" />
+                  <Input id="ws-url" defaultValue="designali" />
                 </Field>
               </FieldGroup>
             )}
             {active === "notifications" && (
               <FieldGroup>
-                {["Weekly summary", "New comments", "Failed payments"].map(
+                {["Weekly summary", "New comments", "New template releases"].map(
                   (label) => (
                     <Field key={label} orientation="horizontal">
                       <FieldLabel htmlFor={label}>{label}</FieldLabel>
@@ -92,7 +92,7 @@ export default function SettingsSidebarDialog() {
                   <FieldContent>
                     <FieldLabel htmlFor="sso">Require SSO</FieldLabel>
                     <FieldDescription>
-                      Members must sign in with Okta.
+                      Members must sign in with single sign-on.
                     </FieldDescription>
                   </FieldContent>
                   <Switch id="sso" />

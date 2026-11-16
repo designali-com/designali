@@ -1,4 +1,7 @@
-import { CheckIcon, ChevronDownIcon } from "lucide-react"
+import {
+  Check as CheckIcon,
+  ChevronDown as ChevronDownIcon,
+} from "@designali/icons"
 
 import {
   Accordion,
@@ -14,7 +17,7 @@ const plans = [
     value: "starter",
     name: "Starter",
     price: 0,
-    features: ["3 projects", "1 GB storage", "Community support"],
+    features: ["Free blocks", "@designali/icons", "Community support"],
   },
   {
     value: "team",
@@ -22,9 +25,9 @@ const plans = [
     price: 24,
     popular: true,
     features: [
-      "Unlimited projects",
-      "50 GB storage",
-      "Shared workspaces",
+      "All 460+ blocks",
+      "240+ landing pages",
+      "Premium templates",
       "Priority support",
     ],
   },
@@ -34,9 +37,9 @@ const plans = [
     price: 79,
     features: [
       "Everything in Team",
-      "SAML single sign-on",
-      "Audit log",
-      "99.9% uptime SLA",
+      "Figma source files",
+      "Client project license",
+      "Direct access to Ali",
     ],
   },
 ]

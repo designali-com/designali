@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { CalendarIcon } from "lucide-react"
+import {
+  Calendar as CalendarIcon,
+} from "@designali/icons"
 
 import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
 import { Badge } from "@workspace/ui/components/badge"
@@ -23,10 +25,10 @@ import { Progress } from "@workspace/ui/components/progress"
 import { cn } from "@workspace/ui/lib/utils"
 
 const subtasks = [
-  { id: "s1", label: "Audit current onboarding emails", done: true },
-  { id: "s2", label: "Draft new welcome sequence", done: true },
-  { id: "s3", label: "Review copy with legal", done: false },
-  { id: "s4", label: "Schedule A/B test", done: false },
+  { id: "s1", label: "Audit current pricing blocks", done: true },
+  { id: "s2", label: "Design new layouts in Figma", done: true },
+  { id: "s3", label: "Build components in Next.js", done: false },
+  { id: "s4", label: "Publish to designali.com/blocks", done: false },
 ]
 
 export default function TaskDetailsDrawer() {
@@ -39,7 +41,7 @@ export default function TaskDetailsDrawer() {
         render={<button type="button" />}
         className="flex w-full max-w-xs flex-col gap-2 border bg-background p-3 text-start hover:bg-muted/50"
       >
-        <span className="font-medium">Refresh onboarding emails</span>
+        <span className="font-medium">Design new pricing blocks</span>
         <span className="flex items-center gap-2 text-muted-foreground">
           <Badge variant="secondary">In progress</Badge>
           {done}/{items.length} subtasks
@@ -47,11 +49,11 @@ export default function TaskDetailsDrawer() {
       </DrawerTrigger>
       <DrawerContent>
         <DrawerHeader>
-          <span className="font-mono text-muted-foreground">GRW-218</span>
+          <span className="font-mono text-muted-foreground">DSG-218</span>
           <DrawerTitle className="text-base">
-            Refresh onboarding emails
+            Design new pricing blocks
           </DrawerTitle>
-          <DrawerDescription>Lifecycle · Growth team</DrawerDescription>
+          <DrawerDescription>Blocks · Designali studio</DrawerDescription>
         </DrawerHeader>
         <div className="flex flex-1 flex-col gap-5 overflow-y-auto p-4">
           <dl className="grid grid-cols-[6rem_1fr] items-center gap-y-3">
@@ -75,9 +77,9 @@ export default function TaskDetailsDrawer() {
             <dt className="text-muted-foreground">Assignee</dt>
             <dd className="flex items-center gap-2">
               <Avatar size="sm">
-                <AvatarFallback>OK</AvatarFallback>
+                <AvatarFallback>AI</AvatarFallback>
               </Avatar>
-              Olu Kalu
+              Ali Imam
             </dd>
             <dt className="text-muted-foreground">Due</dt>
             <dd className="flex items-center gap-1">

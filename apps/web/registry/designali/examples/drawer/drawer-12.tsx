@@ -1,4 +1,7 @@
-import { MegaphoneIcon, WrenchIcon } from "lucide-react"
+import {
+  Megaphone as MegaphoneIcon,
+  Wrench as WrenchIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -25,7 +28,7 @@ export default function TopAnnouncementDrawer() {
           <div className="flex-1">
             <DrawerTitle>Scheduled maintenance on Sunday</DrawerTitle>
             <DrawerDescription>
-              The API will be read-only from 02:00 to 03:30 UTC. Webhooks will
+              designali.com downloads will be paused from 02:00 to 03:30 UTC. Webhooks will
               be queued and delivered after.
             </DrawerDescription>
           </div>

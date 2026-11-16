@@ -20,7 +20,7 @@ export default function WordLimitEssayTextarea() {
   return (
     <Field data-invalid={over || undefined} className="w-full max-w-sm">
       <FieldLabel htmlFor="ta-essay">
-        Why do you want to join the residency?
+        Why do you want to work with Designali?
       </FieldLabel>
       <Textarea
         id="ta-essay"

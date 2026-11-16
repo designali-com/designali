@@ -1,4 +1,6 @@
-import { PlayIcon } from "lucide-react"
+import {
+  Play as PlayIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -16,9 +18,9 @@ import {
 } from "@workspace/ui/components/table"
 
 const rows = [
-  { id: 1042, email: "kai@northwind.io", plan: "Pro" },
-  { id: 1043, email: "rosa@lumen.app", plan: "Team" },
-  { id: 1044, email: "omar@fieldnote.co", plan: "Free" },
+  { id: 1042, email: "kai@example.com", plan: "Pro" },
+  { id: 1043, email: "rosa@example.com", plan: "Team" },
+  { id: 1044, email: "omar@example.com", plan: "Free" },
 ]
 
 export default function QueryAndResultsVertical() {

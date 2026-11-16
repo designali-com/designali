@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { InfoIcon } from "lucide-react"
+import {
+  Info as InfoIcon,
+} from "@designali/icons"
 
 import { Label } from "@workspace/ui/components/label"
 import { Slider } from "@workspace/ui/components/slider"

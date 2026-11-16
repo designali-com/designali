@@ -1,22 +1,26 @@
-import { Award, Mic, Newspaper } from "lucide-react"
+import {
+  Award,
+  Mic,
+  Newspaper,
+} from "@designali/icons"
 
 const awards = [
-  { year: "2026", name: "Type Directors Club", detail: "Certificate of Excellence", project: "Stillwater Press" },
-  { year: "2026", name: "Awwwards", detail: "Site of the Day", project: "Tidewater Festival" },
-  { year: "2025", name: "European Design Awards", detail: "Gold, Packaging", project: "Saltmarsh Wines" },
-  { year: "2025", name: "Webby Awards", detail: "Honoree, Health", project: "Canopy Clinics" },
-  { year: "2024", name: "D&AD", detail: "Wood Pencil, Branding", project: "Ember Bakery" },
+  { year: "Now", name: "460+ blocks", detail: "Live on designali.com", project: "Designali" },
+  { year: "Now", name: "4000+ icons", detail: "Published as @designali/icons", project: "Designali" },
+  { year: "Live", name: "240+ landing pages", detail: "Templates for Next.js", project: "Designali" },
+  { year: "Live", name: "2300+ UI designs", detail: "UI examples to remix", project: "Designali" },
+  { year: "Archive", name: "Dalim UI", detail: "Became the Designali block library", project: "Dalim" },
 ]
 
 const press = [
-  { outlet: "Grain & Grid Journal", title: "The studios redesigning civic software" },
-  { outlet: "Printmaker Quarterly", title: "Why the label still matters" },
-  { outlet: "Northern Design Review", title: "Ten studios to watch in 2026" },
+  { outlet: "Designali Blog", title: "Design se code tak: why I design and code" },
+  { outlet: "Designali Blog", title: "Building 460+ blocks with Next.js and Tailwind" },
+  { outlet: "Designali Blog", title: "From Dalim to Designali" },
 ]
 
 const talks = [
-  { event: "Interface North", city: "Leeds", topic: "Designing for bad signal" },
-  { event: "Typefest", city: "Ghent", topic: "Archives as raw material" },
+  { event: "Designali Live", city: "Online", topic: "Design systems that ship as code" },
+  { event: "Designali Live", city: "Online", topic: "Icons on one grid, one stroke" },
 ]
 
 export default function Portfolio16() {
@@ -27,7 +31,7 @@ export default function Portfolio16() {
           <div>
             <div className="flex items-center gap-3">
               <Award className="size-5" />
-              <h2 className="text-2xl font-medium tracking-tight md:text-3xl">Recognition</h2>
+              <h2 className="text-2xl font-medium tracking-tight md:text-3xl">Milestones</h2>
               <span className="ml-auto font-mono text-xs text-muted-foreground">
                 {awards.length} of 31
               </span>
@@ -55,7 +59,7 @@ export default function Portfolio16() {
             <div>
               <div className="flex items-center gap-3">
                 <Newspaper className="size-4" />
-                <h3 className="text-sm font-medium">In the press</h3>
+                <h3 className="text-sm font-medium">On the blog</h3>
               </div>
               <ul className="mt-4 space-y-4">
                 {press.map((item) => (

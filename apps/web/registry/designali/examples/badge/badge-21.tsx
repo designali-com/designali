@@ -9,10 +9,10 @@ import {
 } from "@workspace/ui/components/table"
 
 const rows = [
-  { customer: "Juniper Foods", plan: "Business", status: "Active" },
-  { customer: "Halcyon Travel", plan: "Starter", status: "Trialing" },
-  { customer: "Marrow & Co", plan: "Business", status: "Past due" },
-  { customer: "Tidewater Inc", plan: "Enterprise", status: "Canceled" },
+  { customer: "Studio client", plan: "Designali Pro", status: "Active" },
+  { customer: "Freelance designer", plan: "Starter", status: "Trialing" },
+  { customer: "Agency team", plan: "Designali Pro", status: "Past due" },
+  { customer: "Startup founder", plan: "Team", status: "Canceled" },
 ]
 
 const variants = {

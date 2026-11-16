@@ -1,12 +1,14 @@
-import { CheckIcon } from "lucide-react"
+import {
+  Check as CheckIcon,
+} from "@designali/icons"
 
 import { Spinner } from "@workspace/ui/components/spinner"
 
 const jobs = [
   { name: "Nightly backup", detail: "Started 2m ago", running: true },
-  { name: "Thumbnail generation", detail: "418 of 1,200", running: true },
+  { name: "Template thumbnails", detail: "418 of 1,200", running: true },
   { name: "Search reindex", detail: "Finished in 3m 12s", running: false },
-  { name: "Email digest", detail: "Finished in 48s", running: false },
+  { name: "Designali newsletter", detail: "Finished in 48s", running: false },
 ]
 
 export default function BackgroundJobsList() {

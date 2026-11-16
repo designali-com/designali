@@ -1,14 +1,16 @@
 "use client"
 
 import * as React from "react"
-import { BookmarkIcon } from "lucide-react"
+import {
+  Bookmark as BookmarkIcon,
+} from "@designali/icons"
 
 import { Toggle } from "@workspace/ui/components/toggle"
 
 const articles = [
-  { id: "a", title: "Designing calm notifications", mins: 6 },
-  { id: "b", title: "A field guide to color tokens", mins: 11 },
-  { id: "c", title: "Why your forms feel slow", mins: 4 },
+  { id: "a", title: "Design se code tak: our workflow", mins: 6 },
+  { id: "b", title: "Building blocks with Tailwind CSS", mins: 11 },
+  { id: "c", title: "Using @designali/icons in Next.js", mins: 4 },
 ]
 
 export default function ArticleBookmarkToggles() {

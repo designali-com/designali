@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { BellIcon, BellOffIcon } from "lucide-react"
+import {
+  Bell as BellIcon,
+  BellOff as BellOffIcon,
+} from "@designali/icons"
 
 import {
   Select,
@@ -27,7 +30,7 @@ export default function ReminderSelectWithBadge() {
     <div className="flex w-full max-w-sm items-center gap-3 border p-3">
       <div className="flex min-w-0 flex-1 flex-col">
         <span className="truncate text-sm font-medium">
-          Send contract to Harbor &amp; Co
+          Send project proposal to Designali client
         </span>
         <span className="text-xs text-muted-foreground">
           Due Friday, 4:00 PM

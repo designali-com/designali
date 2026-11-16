@@ -2,12 +2,12 @@
 
 import * as React from "react"
 import {
-  LaptopIcon,
-  LogOutIcon,
-  MonitorIcon,
-  ShieldCheckIcon,
-  SmartphoneIcon,
-} from "lucide-react"
+  Laptop as LaptopIcon,
+  LogOut as LogOutIcon,
+  Monitor as MonitorIcon,
+  ShieldCheck as ShieldCheckIcon,
+  Smartphone as SmartphoneIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import { Button } from "@workspace/ui/components/button"

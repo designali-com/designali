@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { CheckIcon, XIcon } from "lucide-react"
+import {
+  Check as CheckIcon,
+  X as XIcon,
+} from "@designali/icons"
 
 import {
   Field,

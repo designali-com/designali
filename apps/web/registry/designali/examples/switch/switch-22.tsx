@@ -1,17 +1,19 @@
 "use client"
 
 import * as React from "react"
-import { WebhookIcon } from "lucide-react"
+import {
+  Webhook as WebhookIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import { Switch } from "@workspace/ui/components/switch"
 
 const events = [
-  { name: "order.created", on: true },
-  { name: "order.refunded", on: true },
-  { name: "customer.updated", on: false },
+  { name: "template.purchased", on: true },
+  { name: "template.refunded", on: true },
+  { name: "client.updated", on: false },
   { name: "invoice.payment_failed", on: true },
-  { name: "subscription.canceled", on: false },
+  { name: "pro_plan.canceled", on: false },
 ]
 
 export default function WebhookEventSubscriptions() {

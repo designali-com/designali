@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { CalendarIcon } from "lucide-react"
+import {
+  Calendar as CalendarIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import { Checkbox } from "@workspace/ui/components/checkbox"
@@ -13,9 +15,9 @@ import {
 import { cn } from "@workspace/ui/lib/utils"
 
 const initial = [
-  { id: 1, title: "Prepare launch checklist", done: true, due: "Today" },
+  { id: 1, title: "Prepare designali.com launch checklist", done: true, due: "Today" },
   { id: 2, title: "Review onboarding copy", done: false, due: "Tomorrow" },
-  { id: 3, title: "QA mobile checkout", done: false, due: "Fri" },
+  { id: 3, title: "QA mobile pricing page", done: false, due: "Fri" },
 ]
 
 export default function TaskListWithDetail() {

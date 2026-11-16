@@ -8,19 +8,19 @@ import { cn } from "@workspace/ui/lib/utils"
 
 const boards = {
   week: [
-    ["Mateo Silva", 1840],
-    ["Hana Mori", 1710],
-    ["Aziz Karimi", 1505],
+    ["Sara Khan", 1840],
+    ["Omar Ali", 1710],
+    ["Zara Noor", 1505],
   ],
   month: [
-    ["Hana Mori", 7420],
-    ["Grace Liu", 6990],
-    ["Mateo Silva", 6610],
+    ["Omar Ali", 7420],
+    ["Ali Imam", 6990],
+    ["Sara Khan", 6610],
   ],
   all: [
-    ["Grace Liu", 88210],
-    ["Aziz Karimi", 80150],
-    ["Hana Mori", 79020],
+    ["Ali Imam", 88210],
+    ["Zara Noor", 80150],
+    ["Omar Ali", 79020],
   ],
 } as const
 

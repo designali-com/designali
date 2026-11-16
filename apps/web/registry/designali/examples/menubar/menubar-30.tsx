@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { SquareIcon } from "lucide-react"
+import {
+  Square as SquareIcon,
+} from "@designali/icons"
 
 import {
   Menubar,
@@ -77,7 +79,7 @@ export default function NotesFormatMenubar() {
           {checklist && (
             <SquareIcon className="size-3.5 shrink-0 text-muted-foreground" />
           )}
-          Pick up film from the lab on Friday
+          Send Designali brand concepts on Friday
         </p>
       </div>
     </div>

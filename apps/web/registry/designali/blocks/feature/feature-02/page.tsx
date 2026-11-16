@@ -1,4 +1,6 @@
-import { ArrowUpRight } from "lucide-react"
+import {
+  ArrowUpRight,
+} from "@designali/icons"
 import { cn } from "@workspace/ui/lib/utils"
 import {
   Card,
@@ -25,8 +27,8 @@ interface Feature01Props {
 }
 
 export const Feature02 = ({
-  title = "You need to build faster",
-  description = "Production-ready components and resources designed for modern Design Engineers.",
+  title = "Build faster with Designali",
+  description = "460+ blocks, templates, and design resources by Ali Imam, made for modern design engineers.",
   features = [
     {
       img: "/img/ask/ask7.jpg",

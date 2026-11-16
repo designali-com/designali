@@ -1,4 +1,7 @@
-import { CircleCheckIcon, TriangleAlertIcon } from "lucide-react"
+import {
+  CircleCheck as CircleCheckIcon,
+  TriangleAlert as TriangleAlertIcon,
+} from "@designali/icons"
 
 import {
   Table,
@@ -11,10 +14,10 @@ import {
 import { cn } from "@workspace/ui/lib/utils"
 
 const inventory = [
-  { item: "Ceramic planter (M)", sku: "PL-220", stock: 142, reorder: 40 },
-  { item: "Hanging macramé", sku: "PL-305", stock: 18, reorder: 25 },
-  { item: "Terracotta saucer", sku: "PL-118", stock: 0, reorder: 30 },
-  { item: "Plant mister", sku: "AC-042", stock: 64, reorder: 20 },
+  { item: "Portfolio template license", sku: "TPL-220", stock: 142, reorder: 40 },
+  { item: "Design agency template license", sku: "TPL-305", stock: 18, reorder: 25 },
+  { item: "Resort template license", sku: "TPL-118", stock: 0, reorder: 30 },
+  { item: "AI template license", sku: "TPL-042", stock: 64, reorder: 20 },
 ]
 
 export default function StockInventoryTable() {

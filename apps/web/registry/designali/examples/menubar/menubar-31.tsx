@@ -2,18 +2,18 @@
 
 import * as React from "react"
 import {
-  AlignCenterHorizontalIcon,
-  AlignCenterVerticalIcon,
-  AlignEndHorizontalIcon,
-  AlignEndVerticalIcon,
-  AlignStartHorizontalIcon,
-  AlignStartVerticalIcon,
-  EyeOffIcon,
-  FrameIcon,
-  GroupIcon,
-  LockIcon,
-  SquareIcon,
-} from "lucide-react"
+  AlignCenterHorizontal as AlignCenterHorizontalIcon,
+  AlignCenterVertical as AlignCenterVerticalIcon,
+  AlignEndHorizontal as AlignEndHorizontalIcon,
+  AlignEndVertical as AlignEndVerticalIcon,
+  AlignStartHorizontal as AlignStartHorizontalIcon,
+  AlignStartVertical as AlignStartVerticalIcon,
+  EyeOff as EyeOffIcon,
+  Frame as FrameIcon,
+  Group as GroupIcon,
+  Lock as LockIcon,
+  Square as SquareIcon,
+} from "@designali/icons"
 
 import {
   Menubar,
@@ -99,7 +99,7 @@ export default function DesignArrangeMenubar() {
       </Menubar>
       <div className="flex items-center gap-2 border px-3 py-2 text-xs">
         <SquareIcon className="size-3.5 text-muted-foreground" />
-        <span className="flex-1">Hero card</span>
+        <span className="flex-1">Designali hero</span>
         {locked && <LockIcon className="size-3.5 text-muted-foreground" />}
         {hidden && <EyeOffIcon className="size-3.5 text-muted-foreground" />}
       </div>

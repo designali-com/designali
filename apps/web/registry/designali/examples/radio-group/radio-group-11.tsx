@@ -1,4 +1,6 @@
-import { LockIcon } from "lucide-react"
+import {
+  Lock as LockIcon,
+} from "@designali/icons"
 
 import {
   Field,
@@ -29,7 +31,7 @@ export default function AdminLockedRadioGroup() {
         <Field orientation="horizontal" data-disabled>
           <RadioGroupItem value="org" id="share-org" />
           <FieldLabel htmlFor="share-org" className="font-normal">
-            People in Fernwood Labs
+            People in Designali
           </FieldLabel>
         </Field>
         <Field orientation="horizontal" data-disabled>

@@ -1,4 +1,6 @@
-import { GraduationCapIcon } from "lucide-react"
+import {
+  GraduationCap as GraduationCapIcon,
+} from "@designali/icons"
 
 import {
   Breadcrumb,
@@ -18,7 +20,7 @@ export default function CourseLessonBreadcrumb() {
           <BreadcrumbItem>
             <BreadcrumbLink href="#" className="flex items-center gap-1.5">
               <GraduationCapIcon className="size-3.5" />
-              Product analytics
+              Design to code
             </BreadcrumbLink>
           </BreadcrumbItem>
           <BreadcrumbSeparator />
@@ -27,7 +29,7 @@ export default function CourseLessonBreadcrumb() {
           </BreadcrumbItem>
           <BreadcrumbSeparator />
           <BreadcrumbItem>
-            <BreadcrumbPage>Lesson 2: Funnels</BreadcrumbPage>
+            <BreadcrumbPage>Lesson 2: Figma to Next.js</BreadcrumbPage>
           </BreadcrumbItem>
         </BreadcrumbList>
       </Breadcrumb>

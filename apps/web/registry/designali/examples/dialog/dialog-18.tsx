@@ -1,6 +1,10 @@
 "use client"
 
-import { CreditCardIcon, LockIcon, PlusIcon } from "lucide-react"
+import {
+  CreditCard as CreditCardIcon,
+  Lock as LockIcon,
+  Plus as PlusIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Checkbox } from "@workspace/ui/components/checkbox"
@@ -42,7 +46,7 @@ export default function AddPaymentMethodDialog() {
         >
           <Field>
             <FieldLabel htmlFor="card-name">Name on card</FieldLabel>
-            <Input id="card-name" placeholder="Elena Vasquez" />
+            <Input id="card-name" placeholder="Ali Imam" />
           </Field>
           <Field>
             <FieldLabel htmlFor="card-number">Card number</FieldLabel>

@@ -18,10 +18,10 @@ import {
 } from "@workspace/ui/components/tabs"
 
 const users = [
-  { name: "Ada Brooks", email: "ada@northwind.dev", status: "active" },
-  { name: "Ben Ito", email: "ben@northwind.dev", status: "active" },
-  { name: "Cleo Park", email: "cleo@northwind.dev", status: "invited" },
-  { name: "Dev Raman", email: "dev@northwind.dev", status: "suspended" },
+  { name: "Ali Imam", email: "ali@designali.com", status: "active" },
+  { name: "Sara Khan", email: "sara@designali.com", status: "active" },
+  { name: "Omar Ali", email: "omar@designali.com", status: "invited" },
+  { name: "Zara Noor", email: "zara@designali.com", status: "suspended" },
 ]
 
 export default function AdminUserStatusTabs() {

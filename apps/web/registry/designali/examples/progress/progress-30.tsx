@@ -1,4 +1,7 @@
-import { ChevronRightIcon, PlusIcon } from "lucide-react"
+import {
+  ChevronRight as ChevronRightIcon,
+  Plus as PlusIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Progress, ProgressLabel } from "@workspace/ui/components/progress"

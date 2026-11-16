@@ -13,9 +13,9 @@ import {
 } from "@workspace/ui/components/table"
 
 const customers = [
-  { id: "c1", name: "Rosa Delgado", plan: "Pro", seats: 12, since: "2023" },
-  { id: "c2", name: "Felix Wagner", plan: "Team", seats: 48, since: "2021" },
-  { id: "c3", name: "Nina Patel", plan: "Starter", seats: 3, since: "2025" },
+  { id: "c1", name: "Sara Khan", plan: "Pro", seats: 12, since: "2023" },
+  { id: "c2", name: "Omar Ali", plan: "Team", seats: 48, since: "2021" },
+  { id: "c3", name: "Priya Shah", plan: "Starter", seats: 3, since: "2025" },
 ]
 
 export default function ClickableRowsDetailTable() {

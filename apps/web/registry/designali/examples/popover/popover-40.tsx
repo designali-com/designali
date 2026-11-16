@@ -1,9 +1,13 @@
-import { ClockIcon, MessageCircleIcon } from "lucide-react"
+import {
+  Clock as ClockIcon,
+  MessageCircle as MessageCircleIcon,
+} from "@designali/icons"
 
 import {
   Avatar,
   AvatarBadge,
   AvatarFallback,
+  AvatarImage,
 } from "@workspace/ui/components/avatar"
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -18,10 +22,10 @@ export default function MentionCardPopover() {
   return (
     <div className="flex w-full max-w-sm gap-2 border p-3">
       <Avatar size="sm">
-        <AvatarFallback>LR</AvatarFallback>
+        <AvatarFallback>L</AvatarFallback>
       </Avatar>
       <p className="text-xs leading-relaxed">
-        <span className="font-medium">Lucia Romero</span>
+        <span className="font-medium">Lucia</span>
         <br />
         Can{" "}
         <Popover>
@@ -33,18 +37,19 @@ export default function MentionCardPopover() {
               />
             }
           >
-            @tomas
+            @aliimam
           </PopoverTrigger>
           <PopoverContent className="w-64" align="start">
             <div className="flex items-center gap-2.5">
               <Avatar size="lg">
-                <AvatarFallback>TL</AvatarFallback>
+                <AvatarImage src="/ali.jpg" alt="Ali Imam" />
+                <AvatarFallback>AI</AvatarFallback>
                 <AvatarBadge className="bg-emerald-500" />
               </Avatar>
               <div className="flex flex-col">
-                <PopoverTitle>Tomas Lind</PopoverTitle>
+                <PopoverTitle>Ali Imam</PopoverTitle>
                 <PopoverDescription>
-                  Staff Engineer · Platform
+                  Founder &amp; design engineer · Designali
                 </PopoverDescription>
               </div>
             </div>

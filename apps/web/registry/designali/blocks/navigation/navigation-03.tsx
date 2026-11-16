@@ -1,12 +1,14 @@
 "use client"
 
 import { useState } from "react"
-import { ChevronRight } from "lucide-react"
+import {
+  ChevronRight,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { cn } from "@workspace/ui/lib/utils"
 
-const crumbs = ["Acme", "Projects", "Marketing site"]
+const crumbs = ["Designali", "Projects", "designali.com"]
 
 const tabs = [
   { label: "Overview" },
@@ -42,7 +44,7 @@ export default function Navigation03() {
               </ol>
             </nav>
             <h2 className="flex items-center gap-3 text-2xl font-semibold tracking-tight">
-              Marketing site
+              designali.com
               <span className="flex items-center gap-1.5 border px-2 py-0.5 text-xs font-normal text-muted-foreground">
                 <span className="size-1.5 rounded-full bg-emerald-500" />
                 Production

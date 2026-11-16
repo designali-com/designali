@@ -28,7 +28,7 @@ export default function TimeSlotPicker() {
   return (
     <div className="flex w-full max-w-xs flex-col gap-3 border p-3">
       <div>
-        <p className="text-sm font-medium">Book a 30 min intro call</p>
+        <p className="text-sm font-medium">Book a 30 min intro call with Ali</p>
         <p className="text-xs text-muted-foreground">
           Wednesday, April 9 - CET
         </p>

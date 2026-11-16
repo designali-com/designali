@@ -1,12 +1,15 @@
-import { ArrowLeft, ArrowRight } from "lucide-react"
+import {
+  ArrowLeft,
+  ArrowRight,
+} from "@designali/icons"
 
-const prev = { title: "Why we sunset our mobile app", date: "Oct 30" }
-const next = { title: "A pricing page teardown, line by line", date: "Nov 18" }
+const prev = { title: "Why we retired the old Dalim sites", date: "Oct 30" }
+const next = { title: "The designali.com pricing page, line by line", date: "Nov 18" }
 
 const related = [
-  { tag: "Strategy", title: "Saying no to the feature your biggest customer wants", read: 7, initials: "CL", tone: "bg-chart-1" },
-  { tag: "Research", title: "The interview questions that changed our roadmap", read: 10, initials: "DM", tone: "bg-chart-2" },
-  { tag: "Strategy", title: "Killing a product line with grace", read: 8, initials: "SP", tone: "bg-chart-4" },
+  { tag: "Strategy", title: "Saying no to a client feature, kindly", read: 7, initials: "AI", tone: "bg-chart-1" },
+  { tag: "Research", title: "The client questions that shape every Designali project", read: 10, initials: "DS", tone: "bg-chart-2" },
+  { tag: "Strategy", title: "Retiring a product line with grace", read: 8, initials: "AI", tone: "bg-chart-4" },
 ]
 
 export default function Blog19() {
@@ -16,16 +19,16 @@ export default function Blog19() {
         <div className="flex flex-col gap-6 border-b pb-10 sm:flex-row sm:items-center sm:justify-between">
           <div className="flex items-center gap-4">
             <span className="flex size-14 items-center justify-center rounded-full bg-foreground text-base font-semibold text-background">
-              EW
+              AI
             </span>
             <div>
               <p className="text-xs text-muted-foreground">Written by</p>
-              <p className="font-medium">Elif Wren</p>
-              <p className="text-sm text-muted-foreground">Head of Product at Mosswood. Writes about saying no.</p>
+              <p className="font-medium">Ali Imam</p>
+              <p className="text-sm text-muted-foreground">Founder of Designali. Writes about design, code and saying no.</p>
             </div>
           </div>
           <a href="#" className="text-sm underline underline-offset-4 hover:text-muted-foreground">
-            More from Elif
+            More from Ali
           </a>
         </div>
 

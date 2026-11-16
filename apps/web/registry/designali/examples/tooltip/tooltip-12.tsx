@@ -1,4 +1,6 @@
-import { FileIcon } from "lucide-react"
+import {
+  File as FileIcon,
+} from "@designali/icons"
 
 import {
   Tooltip,
@@ -8,9 +10,9 @@ import {
 } from "@workspace/ui/components/tooltip"
 
 const files = [
-  "2026-Q2-board-meeting-financial-summary-final-v3.pdf",
-  "customer-interviews-transcripts-northwind-batch.docx",
-  "brand-refresh-moodboard-exploration.fig",
+  "designali-brand-identity-guidelines-final-v3.pdf",
+  "designali-client-website-project-brief-batch.docx",
+  "designali-brand-refresh-moodboard-exploration.fig",
 ]
 
 export default function TruncatedFileNameTooltip() {

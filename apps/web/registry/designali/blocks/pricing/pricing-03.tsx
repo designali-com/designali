@@ -1,4 +1,6 @@
-import { Check } from "lucide-react"
+import {
+  Check,
+} from "@designali/icons"
 import { cn } from "@workspace/ui/lib/utils"
 import { Button } from "@workspace/ui/components/button"
 
@@ -34,7 +36,7 @@ export const Pricing02 = ({
       price: "$0",
       cta: {
         text: "Get Started",
-        url: "#",
+        url: "/blocks",
       },
     },
     {
@@ -43,7 +45,7 @@ export const Pricing02 = ({
       popular: true,
       cta: {
         text: "Start Building",
-        url: "#",
+        url: "/pricing",
       },
     },
     {
@@ -51,7 +53,7 @@ export const Pricing02 = ({
       price: "$49",
       cta: {
         text: "Get Started",
-        url: "#",
+        url: "/blocks",
       },
     },
     {
@@ -59,18 +61,18 @@ export const Pricing02 = ({
       price: "$99",
       cta: {
         text: "Contact Sales",
-        url: "#",
+        url: "/contact",
       },
     },
   ],
   features = [
     {
       name: "Components",
-      values: ["50+", "200+", "500+", "Unlimited"],
+      values: ["50+", "460+", "460+", "460+ & custom"],
     },
     {
       name: "Templates",
-      values: ["5", "20+", "50+", "Unlimited"],
+      values: ["5", "240+", "240+", "240+ & custom"],
     },
     {
       name: "Support",

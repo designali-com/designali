@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { ChevronRightIcon } from "lucide-react"
+import {
+  ChevronRight as ChevronRightIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Checkbox } from "@workspace/ui/components/checkbox"
@@ -15,10 +17,10 @@ import { Progress } from "@workspace/ui/components/progress"
 import { cn } from "@workspace/ui/lib/utils"
 
 const initial = [
-  { id: "copy", label: "Write onboarding copy", done: true },
-  { id: "illus", label: "Draft empty-state illustrations", done: true },
+  { id: "copy", label: "Write template docs copy", done: true },
+  { id: "illus", label: "Draft empty-state illustrations in Figma", done: true },
   { id: "qa", label: "QA on small screens", done: false },
-  { id: "ship", label: "Ship behind feature flag", done: false },
+  { id: "ship", label: "Deploy to designali.com", done: false },
 ]
 
 export default function TaskSubtasks() {
@@ -35,7 +37,7 @@ export default function TaskSubtasks() {
           }
         />
         <div className="flex-1 space-y-1.5">
-          <p className="text-sm font-medium">Redesign onboarding flow</p>
+          <p className="text-sm font-medium">Redesign Designali templates page</p>
           <Progress value={(done / tasks.length) * 100} />
         </div>
         <span className="text-xs text-muted-foreground">

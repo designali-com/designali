@@ -1,24 +1,27 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { CalendarX, MapPin } from "lucide-react"
+import {
+  CalendarX,
+  MapPin,
+} from "@designali/icons"
 
 import { cn } from "@workspace/ui/lib/utils"
 
 const hours = [
-  { day: "Monday", open: "07:00", close: "19:00" },
-  { day: "Tuesday", open: "07:00", close: "19:00" },
-  { day: "Wednesday", open: "07:00", close: "21:00", note: "Late opening" },
-  { day: "Thursday", open: "07:00", close: "19:00" },
-  { day: "Friday", open: "07:00", close: "20:00" },
-  { day: "Saturday", open: "08:00", close: "18:00" },
+  { day: "Monday", open: "09:00", close: "18:00" },
+  { day: "Tuesday", open: "09:00", close: "18:00" },
+  { day: "Wednesday", open: "09:00", close: "21:00", note: "Late calls for the Americas" },
+  { day: "Thursday", open: "09:00", close: "18:00" },
+  { day: "Friday", open: "09:00", close: "17:00" },
+  { day: "Saturday", open: "10:00", close: "14:00" },
   { day: "Sunday", open: null, close: null },
 ]
 
 const closures = [
-  { date: "24 Dec", label: "Closes at 14:00" },
+  { date: "24 Dec", label: "Replies by email only" },
   { date: "25-26 Dec", label: "Closed" },
-  { date: "1 Jan", label: "Opens at 10:00" },
+  { date: "1 Jan", label: "Back at 10:00" },
 ]
 
 export default function Location10() {
@@ -34,10 +37,10 @@ export default function Location10() {
       <div className="mx-auto grid max-w-6xl gap-12 px-6 md:grid-cols-[1.3fr_1fr]">
         <div>
           <h2 className="text-4xl font-semibold tracking-tight md:text-5xl">
-            Opening hours
+            Studio hours
           </h2>
           <p className="mt-3 text-muted-foreground">
-            Fieldwork Bakery &middot; Gorton Road
+            Designali studio &middot; Remote, worldwide
           </p>
 
           <table className="mt-10 w-full text-sm">
@@ -84,7 +87,7 @@ export default function Location10() {
               <MapPin className="size-6" />
             </span>
             <p className="absolute start-4 bottom-4 bg-background px-3 py-2 text-xs">
-              212 Gorton Road, Leeds LS6 2PQ
+              Remote · Worldwide · hello@designali.com
             </p>
           </div>
 

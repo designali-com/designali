@@ -1,18 +1,18 @@
 import {
-  ArchiveIcon,
-  FileTextIcon,
-  ForwardIcon,
-  InboxIcon,
-  MailIcon,
-  MailOpenIcon,
-  ReplyAllIcon,
-  ReplyIcon,
-  SendIcon,
-  ShieldAlertIcon,
-  StarIcon,
-  TagIcon,
-  Trash2Icon,
-} from "lucide-react"
+  Archive as ArchiveIcon,
+  FileText as FileTextIcon,
+  Forward as ForwardIcon,
+  Inbox as InboxIcon,
+  Mail as MailIcon,
+  MailOpen as MailOpenIcon,
+  ReplyAll as ReplyAllIcon,
+  Reply as ReplyIcon,
+  Send as SendIcon,
+  ShieldAlert as ShieldAlertIcon,
+  Star as StarIcon,
+  Tag as TagIcon,
+  Trash2 as Trash2Icon,
+} from "@designali/icons"
 
 import {
   Menubar,

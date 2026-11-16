@@ -3,9 +3,9 @@ import { Checkbox } from "@workspace/ui/components/checkbox"
 import { Label } from "@workspace/ui/components/label"
 
 const people = [
-  { id: "as-1", name: "Dana Whitfield", role: "Design", initials: "DW" },
-  { id: "as-2", name: "Kofi Mensah", role: "Frontend", initials: "KM" },
-  { id: "as-3", name: "Ines Duarte", role: "QA", initials: "ID" },
+  { id: "as-1", name: "Ali Imam", role: "Design", initials: "AI" },
+  { id: "as-2", name: "Studio Developer", role: "Frontend", initials: "SD" },
+  { id: "as-3", name: "Brand Designer", role: "Brand", initials: "BD" },
 ]
 
 export default function AssigneeCheckboxLabels() {

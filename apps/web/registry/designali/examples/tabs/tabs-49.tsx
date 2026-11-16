@@ -7,15 +7,15 @@ import {
 
 const agenda = {
   day1: [
-    ["09:00", "Opening keynote", "Main hall"],
-    ["10:30", "Scaling Postgres", "Room B"],
+    ["09:00", "Designali: design se code tak", "Main hall"],
+    ["10:30", "Building blocks with Next.js", "Room B"],
   ],
   day2: [
     ["09:30", "Design tokens at scale", "Room A"],
-    ["14:00", "Edge rendering", "Main hall"],
+    ["14:00", "Icons at scale", "Main hall"],
   ],
   day3: [
-    ["10:00", "Hiring for craft", "Room C"],
+    ["10:00", "CGI and motion design", "Room C"],
     ["16:00", "Closing panel", "Main hall"],
   ],
 }

@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { GlobeIcon } from "lucide-react"
+import {
+  Globe as GlobeIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Label } from "@workspace/ui/components/label"

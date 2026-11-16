@@ -1,4 +1,9 @@
-import { Clock, MapPin, Navigation, Phone } from "lucide-react"
+import {
+  Clock,
+  MapPin,
+  Mail,
+  Navigation,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 
@@ -63,32 +68,32 @@ export default function Location06() {
         <div className="absolute inset-x-0 bottom-0 mx-auto max-w-7xl px-6 pb-6 md:top-1/2 md:bottom-auto md:-translate-y-1/2 md:pb-0">
           <div className="w-full max-w-sm border bg-background p-6 shadow-xl md:p-8">
             <p className="text-xs tracking-widest text-muted-foreground uppercase">
-              Flagship store
+              The studio
             </p>
             <h2 className="mt-2 text-2xl font-semibold tracking-tight md:text-3xl">
-              Kettle &amp; Pine, Canal Street
+              Designali, design se code tak
             </h2>
             <ul className="mt-6 space-y-3 text-sm">
               <li className="flex gap-3">
                 <MapPin className="mt-0.5 size-4 shrink-0 text-muted-foreground" />
-                88 Canal Street, Manchester M1 3HE
+                Remote · Worldwide
               </li>
               <li className="flex gap-3">
                 <Clock className="mt-0.5 size-4 shrink-0 text-muted-foreground" />
-                Mon&ndash;Sat 9&ndash;19 &middot; Sun 11&ndash;17
+                Mon&ndash;Fri 9&ndash;18 &middot; async across time zones
               </li>
               <li className="flex gap-3">
-                <Phone className="mt-0.5 size-4 shrink-0 text-muted-foreground" />
-                0161 555 0148
+                <Mail className="mt-0.5 size-4 shrink-0 text-muted-foreground" />
+                hello@designali.com
               </li>
             </ul>
             <div className="mt-6 flex gap-2">
-              <Button nativeButton={false} render={<a href="#" />} className="flex-1">
+              <Button nativeButton={false} render={<a href="/contact" />} className="flex-1">
                 <Navigation />
-                Directions
+                Book a call
               </Button>
-              <Button variant="outline" nativeButton={false} render={<a href="#" />} className="flex-1">
-                Call store
+              <Button variant="outline" nativeButton={false} render={<a href="mailto:hello@designali.com" />} className="flex-1">
+                Email us
               </Button>
             </div>
           </div>

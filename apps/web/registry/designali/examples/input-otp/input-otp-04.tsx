@@ -25,7 +25,7 @@ export default function EmailVerificationCard() {
         <CardDescription>
           We sent a 6-digit code to{" "}
           <span className="font-medium text-foreground">
-            maya.chen@lumen.app
+            ali@designali.com
           </span>
           .
         </CardDescription>

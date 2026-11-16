@@ -1,10 +1,10 @@
 import {
-  FilePlusIcon,
-  FolderIcon,
-  FolderPlusIcon,
-  PencilIcon,
-  TrashIcon,
-} from "lucide-react"
+  FilePlus as FilePlusIcon,
+  Folder as FolderIcon,
+  FolderPlus as FolderPlusIcon,
+  Pencil as PencilIcon,
+  Trash as TrashIcon,
+} from "@designali/icons"
 
 import {
   ContextMenu,
@@ -18,10 +18,10 @@ import {
 
 const folders = [
   { name: "Clients", depth: 0 },
-  { name: "Brightside Bakery", depth: 1 },
-  { name: "Northwind Travel", depth: 1 },
-  { name: "Internal", depth: 0 },
-  { name: "Hiring", depth: 1 },
+  { name: "Brand identity", depth: 1 },
+  { name: "Next.js website", depth: 1 },
+  { name: "Designali", depth: 0 },
+  { name: "Templates", depth: 1 },
 ]
 
 export default function FolderTreeRowMenu() {

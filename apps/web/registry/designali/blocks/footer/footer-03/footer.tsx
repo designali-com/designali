@@ -4,28 +4,28 @@ import Link from "next/link"
 
 const links = [
   {
-    title: "Features",
-    href: "#",
+    title: "Templates",
+    href: "/templates",
   },
   {
-    title: "Solution",
-    href: "#",
+    title: "Blocks",
+    href: "/blocks",
   },
   {
-    title: "Brands",
-    href: "#",
+    title: "Icons",
+    href: "/icons",
   },
   {
     title: "Pricing",
-    href: "#",
+    href: "/pricing",
   },
   {
-    title: "Design",
-    href: "#",
+    title: "Docs",
+    href: "/docs",
   },
   {
-    title: "AI",
-    href: "#",
+    title: "Blogs",
+    href: "/blogs",
   },
 ]
 
@@ -36,7 +36,7 @@ export default function Footer() {
         <div className="mx-auto max-w-5xl px-6">
           <div className="flex flex-wrap justify-between gap-6">
             <span className="order-last block text-center text-sm text-muted-foreground md:order-first">
-              © {2026} Ali Imam, All rights reserved
+              © {2026} Designali by Ali Imam. All rights reserved
             </span>
             <div className="order-first flex flex-wrap justify-center gap-6 text-sm md:order-last">
               {links.map((link, index) => (

@@ -1,7 +1,12 @@
 "use client"
 
 import { useState } from "react"
-import { BatteryFull, Bluetooth, Droplets, Weight } from "lucide-react"
+import {
+  Code,
+  Download,
+  Layers,
+  Zap,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -13,27 +18,27 @@ import {
 import { cn } from "@workspace/ui/lib/utils"
 
 const finishes = [
-  { id: "graphite", label: "Graphite", body: "#2b2d31", accent: "#6b7280" },
-  { id: "sage", label: "Sage", body: "#8a9a83", accent: "#d6dccf" },
-  { id: "clay", label: "Clay", body: "#c4785a", accent: "#f1d3c2" },
+  { id: "graphite", label: "Outline", body: "#2b2d31", accent: "#6b7280" },
+  { id: "sage", label: "Duotone", body: "#8a9a83", accent: "#d6dccf" },
+  { id: "clay", label: "Solid", body: "#c4785a", accent: "#f1d3c2" },
 ]
 
 const highlights = [
-  { icon: BatteryFull, label: "40 hr battery" },
-  { icon: Droplets, label: "IP67 rated" },
-  { icon: Bluetooth, label: "Bluetooth 5.4" },
-  { icon: Weight, label: "540 g" },
+  { icon: Layers, label: "4,000+ icons" },
+  { icon: Zap, label: "Tree-shakeable" },
+  { icon: Code, label: "React + SVG" },
+  { icon: Download, label: "Figma file" },
 ]
 
 const specs = [
-  { label: "Drivers", value: "2 x 48mm full-range, passive radiator" },
-  { label: "Frequency response", value: "55 Hz - 20 kHz" },
-  { label: "Charging", value: "USB-C, 0 - 100% in 2.5 hrs" },
-  { label: "Dimensions", value: "182 x 74 x 70 mm" },
-  { label: "Pairing", value: "Stereo pair with a second Drift" },
+  { label: "Icons", value: "4,000+ in outline and solid" },
+  { label: "Formats", value: "SVG, React, Figma" },
+  { label: "Install", value: "npm i @designali/icons" },
+  { label: "Grid", value: "24 x 24 px, 1.5px stroke" },
+  { label: "Pairs with", value: "@designali/logos and @designali/vectors" },
 ]
 
-const inBox = ["Drift speaker", "USB-C cable, braided, 1m", "Carry strap", "Quick start guide"]
+const inBox = ["@designali/icons package", "Figma library", "SVG source files", "Quick start guide"]
 
 export default function Ecommerce18() {
   const [finish, setFinish] = useState(finishes[0]!)
@@ -61,10 +66,10 @@ export default function Ecommerce18() {
           </div>
 
           <div className="p-6 pt-0 md:p-10 lg:pt-10 lg:pl-0">
-            <p className="text-xs tracking-widest text-muted-foreground uppercase">Portable speaker</p>
+            <p className="text-xs tracking-widest text-muted-foreground uppercase">Icon pack</p>
             <div className="mt-2 flex items-baseline justify-between gap-4">
-              <h2 className="text-3xl font-medium tracking-tight md:text-4xl">Fjord Drift</h2>
-              <span className="text-2xl tabular-nums">$179</span>
+              <h2 className="text-3xl font-medium tracking-tight md:text-4xl">Designali Icons Pro</h2>
+              <span className="text-2xl tabular-nums">$39</span>
             </div>
 
             <div className="mt-6">
@@ -102,12 +107,12 @@ export default function Ecommerce18() {
               <TabsList variant="line" className="w-full justify-start gap-5 border-b border-border">
                 <TabsTrigger value="overview" className="flex-none px-0 text-sm">Overview</TabsTrigger>
                 <TabsTrigger value="specs" className="flex-none px-0 text-sm">Specs</TabsTrigger>
-                <TabsTrigger value="box" className="flex-none px-0 text-sm">In the box</TabsTrigger>
+                <TabsTrigger value="box" className="flex-none px-0 text-sm">What&apos;s included</TabsTrigger>
               </TabsList>
               <TabsContent value="overview" className="pt-4 text-sm leading-6 text-muted-foreground">
-                Drift is built for wet decks and sandy bags. A sealed aluminium frame,
-                a strap that clips to anything, and enough battery for a long weekend
-                without the charger.
+                Designali Icons Pro is built for design engineers. Lucide-compatible names,
+                a Figma library that matches the code, and enough icons for every
+                product you ship.
               </TabsContent>
               <TabsContent value="specs" className="pt-2 text-sm">
                 <dl className="divide-y divide-border">
@@ -132,7 +137,7 @@ export default function Ecommerce18() {
             </Tabs>
 
             <Button size="lg" className="mt-8 w-full">
-              Add {finish.label} Drift to bag
+              Add {finish.label} Designali Icons to cart
             </Button>
           </div>
         </div>

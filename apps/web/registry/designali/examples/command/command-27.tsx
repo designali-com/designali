@@ -1,4 +1,9 @@
-import { BarChart3Icon, HomeIcon, ReceiptIcon, UsersIcon } from "lucide-react"
+import {
+  ChartColumn as BarChart3Icon,
+  House as HomeIcon,
+  Receipt as ReceiptIcon,
+  Users as UsersIcon,
+} from "@designali/icons"
 
 import {
   Command,

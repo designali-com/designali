@@ -25,15 +25,15 @@ export default function LoadingPreviewHoverCard() {
         href="#"
         className="text-sm underline underline-offset-4"
       >
-        docs.pinecrest.dev/webhooks
+        designali.com/docs/installation
       </HoverCardTrigger>
       <HoverCardContent className="w-72">
         {loaded ? (
           <div className="flex flex-col gap-1">
-            <p className="font-medium">Webhooks · Pinecrest Docs</p>
+            <p className="font-medium">Installation · Designali Docs</p>
             <p className="text-muted-foreground">
-              Receive signed HTTP callbacks whenever a payment, refund, or
-              dispute changes state.
+              Add Designali blocks, icons and logos to your Next.js project
+              in a few minutes.
             </p>
           </div>
         ) : (

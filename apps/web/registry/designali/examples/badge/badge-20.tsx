@@ -6,11 +6,11 @@ import { Badge } from "@workspace/ui/components/badge"
 
 const categories = [
   "All",
-  "Design",
-  "Engineering",
-  "Marketing",
-  "Sales",
-  "Support",
+  "Templates",
+  "Blocks",
+  "UI Designs",
+  "Icons",
+  "Logos",
 ]
 
 export default function SelectableCategoryBadges() {

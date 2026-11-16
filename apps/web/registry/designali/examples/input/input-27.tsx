@@ -1,7 +1,7 @@
 import { Input } from "@workspace/ui/components/input"
 
 const fields = [
-  { id: "fl-first", label: "First name", value: "Talia" },
+  { id: "fl-first", label: "First name", value: "Ali" },
   { id: "fl-last", label: "Last name", value: "" },
 ]
 

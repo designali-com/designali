@@ -9,7 +9,7 @@ import {
   ProgressValue,
 } from "@workspace/ui/components/progress"
 
-const team = ["Maya Chen", "Theo Park", "Iris Vale"]
+const team = ["Ali Imam", "Theo", "Iris"]
 
 export default function SprintProgressCard() {
   return (
@@ -17,7 +17,7 @@ export default function SprintProgressCard() {
       <div className="flex items-start justify-between gap-2">
         <div>
           <p className="text-sm font-medium">
-            Sprint 24 &middot; Checkout revamp
+            Sprint 24 &middot; designali.com pricing revamp
           </p>
           <p className="text-xs text-muted-foreground">Ends Friday, Nov 21</p>
         </div>

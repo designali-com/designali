@@ -2,12 +2,12 @@
 
 import * as React from "react"
 import {
-  ChevronDownIcon,
-  PackageCheckIcon,
-  PrinterIcon,
-  RotateCcwIcon,
-  TruckIcon,
-} from "lucide-react"
+  ChevronDown as ChevronDownIcon,
+  PackageCheck as PackageCheckIcon,
+  Printer as PrinterIcon,
+  RotateCcw as RotateCcwIcon,
+  Truck as TruckIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import { Button } from "@workspace/ui/components/button"
@@ -37,7 +37,7 @@ export default function OrderStatusActions() {
   return (
     <div className="flex w-full max-w-md items-center gap-3 border p-3 text-xs">
       <div className="flex-1">
-        <p className="font-medium">#10482 · Elena Vasquez</p>
+        <p className="font-medium">#10482 · Designali customer</p>
         <p className="text-muted-foreground">3 items · $214.30</p>
       </div>
       <Badge variant={statusVariant[status]}>{status}</Badge>

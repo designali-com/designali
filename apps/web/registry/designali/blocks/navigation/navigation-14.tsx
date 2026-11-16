@@ -1,23 +1,30 @@
 "use client"
 
 import { useState } from "react"
-import { Heart, MapPin, Search, ShoppingCart, Truck, User } from "lucide-react"
+import {
+  Heart,
+  Globe,
+  Search,
+  ShoppingCart,
+  Sparkles,
+  User,
+} from "@designali/icons"
 
 import { cn } from "@workspace/ui/lib/utils"
 
 const categories = [
   "New in",
-  "Kitchen",
-  "Living",
-  "Bedroom",
-  "Outdoor",
-  "Lighting",
-  "Storage",
-  "Gifts",
+  "Templates",
+  "Blocks",
+  "Landing pages",
+  "UI designs",
+  "Icons",
+  "Logos",
+  "Illustrations",
   "Sale",
 ]
 
-const suggestions = ["linen duvet set", "oak side table", "cast iron skillet", "terracotta planter"]
+const suggestions = ["portfolio template", "pricing block", "dashboard ui", "icon pack"]
 
 export default function Navigation14() {
   const [query, setQuery] = useState("")
@@ -31,12 +38,12 @@ export default function Navigation14() {
       <div className="bg-muted/60 text-xs text-muted-foreground">
         <div className="mx-auto flex h-9 max-w-7xl items-center justify-between gap-4 px-6">
           <span className="flex items-center gap-1.5 truncate">
-            <Truck className="size-3.5 shrink-0" />
-            Free delivery on orders over $75
+            <Sparkles className="size-3.5 shrink-0" />
+            Free updates on every Designali template
           </span>
           <a href="#" className="hidden items-center gap-1.5 hover:text-foreground sm:flex">
-            <MapPin className="size-3.5" />
-            Deliver to 94107
+            <Globe className="size-3.5" />
+            Remote · Worldwide
           </a>
         </div>
       </div>
@@ -44,7 +51,7 @@ export default function Navigation14() {
       <div className="border-b">
         <div className="mx-auto grid max-w-7xl grid-cols-[auto_1fr] items-center gap-x-6 gap-y-3 px-6 py-4 md:grid-cols-[auto_1fr_auto]">
           <a href="#" className="text-xl font-bold tracking-tight">
-            hearth<span className="text-muted-foreground">&amp;</span>home
+            design<span className="text-muted-foreground">ali</span>
           </a>
 
           <div className="relative col-span-2 row-start-2 md:col-span-1 md:row-start-auto">
@@ -55,7 +62,7 @@ export default function Navigation14() {
                 onChange={(event) => setQuery(event.target.value)}
                 onFocus={() => setFocused(true)}
                 onBlur={() => setFocused(false)}
-                placeholder="Search 12,000+ home goods"
+                placeholder="Search 2300+ UI designs"
                 className="w-full bg-transparent text-sm outline-none placeholder:text-muted-foreground"
               />
             </label>

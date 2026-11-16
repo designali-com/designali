@@ -1,5 +1,8 @@
 import { Fragment } from "react"
-import { FileTextIcon, FolderIcon } from "lucide-react"
+import {
+  FileText as FileTextIcon,
+  Folder as FolderIcon,
+} from "@designali/icons"
 
 import {
   Breadcrumb,
@@ -10,7 +13,7 @@ import {
   BreadcrumbSeparator,
 } from "@workspace/ui/components/breadcrumb"
 
-const folders = ["My Drive", "Clients", "Northwind Studio"]
+const folders = ["My Drive", "Clients", "Dalim Agency"]
 
 export default function FileManagerBreadcrumb() {
   return (

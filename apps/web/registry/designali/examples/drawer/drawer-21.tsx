@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { CalendarIcon } from "lucide-react"
+import {
+  Calendar as CalendarIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Calendar } from "@workspace/ui/components/calendar"
@@ -42,8 +44,8 @@ export default function DatePickerDrawer() {
       <DrawerContent>
         <div className="mx-auto flex w-full max-w-xs flex-col">
           <DrawerHeader>
-            <DrawerTitle>Check-in date</DrawerTitle>
-            <DrawerDescription>Harborview Suites, Porto</DrawerDescription>
+            <DrawerTitle>Kickoff date</DrawerTitle>
+            <DrawerDescription>Designali project kickoff</DrawerDescription>
           </DrawerHeader>
           <div className="flex justify-center p-4">
             <Calendar

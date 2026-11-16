@@ -1,14 +1,22 @@
 "use client"
 
 import { useState } from "react"
-import { Fingerprint, Globe, KeyRound, Laptop, ShieldCheck, Smartphone, Tablet } from "lucide-react"
+import {
+  FingerprintPattern as Fingerprint,
+  Globe,
+  KeyRound,
+  Laptop,
+  ShieldCheck,
+  Smartphone,
+  Tablet,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Switch } from "@workspace/ui/components/switch"
 
 const initialSessions = [
   { id: 1, icon: Laptop, device: "Chrome on macOS", location: "Toronto, CA", ip: "142.112.8.20", seen: "Active now", current: true },
-  { id: 2, icon: Smartphone, device: "Brindle app on iPhone", location: "Toronto, CA", ip: "142.112.8.41", seen: "2 hours ago", current: false },
+  { id: 2, icon: Smartphone, device: "Designali app on iPhone", location: "Toronto, CA", ip: "142.112.8.41", seen: "2 hours ago", current: false },
   { id: 3, icon: Tablet, device: "Safari on iPad", location: "Montreal, CA", ip: "70.81.3.112", seen: "4 days ago", current: false },
   { id: 4, icon: Globe, device: "Firefox on Windows", location: "Lisbon, PT", ip: "85.240.19.7", seen: "12 days ago", current: false },
 ]

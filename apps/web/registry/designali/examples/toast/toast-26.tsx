@@ -1,6 +1,8 @@
 "use client"
 
-import { AlarmClockIcon } from "lucide-react"
+import {
+  AlarmClock as AlarmClockIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Toaster, createToastManager } from "@workspace/ui/components/toast"
@@ -10,8 +12,8 @@ const notify = createToastManager()
 function remind() {
   const id = notify.add({
     type: "info",
-    title: "Stand-up in 5 minutes",
-    description: "Platform team - Room 4B",
+    title: "Designali stand-up in 5 minutes",
+    description: "Design & Code studio - Studio call",
     timeout: 0,
     actionProps: {
       children: "Snooze 5s",

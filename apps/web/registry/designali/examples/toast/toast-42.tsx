@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { PlayIcon } from "lucide-react"
+import {
+  Play as PlayIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Toaster, createToastManager } from "@workspace/ui/components/toast"

@@ -1,4 +1,6 @@
-import { HardDriveIcon } from "lucide-react"
+import {
+  HardDrive as HardDriveIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {

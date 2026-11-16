@@ -22,7 +22,7 @@ export default function LiveUpdatesToggle() {
     <div className="flex w-full max-w-xs flex-col gap-2 border p-4">
       <div className="flex items-center justify-between">
         <span className="text-xs font-medium text-muted-foreground">
-          Visitors right now
+          designali.com visitors
         </span>
         <Toggle
           size="sm"

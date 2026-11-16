@@ -1,4 +1,6 @@
-import { ChevronDownIcon } from "lucide-react"
+import {
+  ChevronDown as ChevronDownIcon,
+} from "@designali/icons"
 
 import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
 import { Button } from "@workspace/ui/components/button"
@@ -13,23 +15,23 @@ const agenda = [
   {
     id: "a1",
     title: "Review last sprint",
-    owner: "KM",
+    owner: "AI",
     minutes: 10,
-    notes: "Velocity up 12%. Two carry-over tickets.",
+    notes: "Velocity up 12%. Two carry-over block tickets.",
   },
   {
     id: "a2",
-    title: "Pricing page experiment",
+    title: "designali.com pricing experiment",
     owner: "DR",
     minutes: 15,
     notes: "Variant B lifted trials by 6%. Decide on rollout.",
   },
   {
     id: "a3",
-    title: "Hiring update",
+    title: "New blocks release",
     owner: "SL",
     minutes: 5,
-    notes: "Two final-round candidates next week.",
+    notes: "40 new blocks ready for /blocks next week.",
   },
 ]
 
@@ -37,7 +39,7 @@ export default function MeetingAgendaNotes() {
   return (
     <div className="w-full max-w-md border">
       <div className="flex items-center justify-between border-b px-3 py-2">
-        <span className="text-sm font-semibold">Weekly product sync</span>
+        <span className="text-sm font-semibold">Weekly Designali studio sync</span>
         <span className="text-xs text-muted-foreground">30 min</span>
       </div>
       {agenda.map((item) => (

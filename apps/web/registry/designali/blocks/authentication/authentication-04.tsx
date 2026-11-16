@@ -1,7 +1,11 @@
 "use client"
 
 import { useState } from "react"
-import { ArrowLeft, Fingerprint, Mail } from "lucide-react"
+import {
+  ArrowLeft,
+  FingerprintPattern as Fingerprint,
+  Mail,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Input } from "@workspace/ui/components/input"
@@ -14,15 +18,15 @@ export default function Authentication04() {
     <section className="w-full bg-background py-20 md:py-28">
       <div className="mx-auto grid max-w-5xl border md:grid-cols-2">
         <div className="flex flex-col justify-between gap-12 border-b p-8 md:border-e md:border-b-0 md:p-12">
-          <p className="font-mono text-xs text-muted-foreground">NOTEWELL / SIGN IN</p>
+          <p className="font-mono text-xs text-muted-foreground">DESIGNALI / SIGN IN</p>
           <h2 className="text-4xl leading-tight font-semibold tracking-tight md:text-5xl">
             No passwords.
             <br />
             <span className="text-muted-foreground">Just you.</span>
           </h2>
           <p className="text-sm text-muted-foreground">
-            Sign in with a passkey stored on this device, or get a one-time link
-            sent to your email.
+            Sign in to designali.com with a passkey stored on this device, or get
+            a one-time link sent to your email.
           </p>
         </div>
 

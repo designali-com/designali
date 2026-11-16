@@ -1,7 +1,9 @@
 "use client"
 
 import { useState } from "react"
-import { Check } from "lucide-react"
+import {
+  Check,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Switch } from "@workspace/ui/components/switch"

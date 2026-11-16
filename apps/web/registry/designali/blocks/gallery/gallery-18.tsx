@@ -1,19 +1,22 @@
 "use client"
 
 import { useState } from "react"
-import { ChevronLeft, ChevronRight } from "lucide-react"
+import {
+  ChevronLeft,
+  ChevronRight,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { cn } from "@workspace/ui/lib/utils"
 
 const covers = [
-  { title: "Meridian", artist: "Hal & The Tides", gradient: "linear-gradient(135deg, var(--chart-1), var(--chart-3))" },
-  { title: "Paper Moons", artist: "Ivy Calder", gradient: "linear-gradient(200deg, var(--chart-2), var(--chart-5))" },
-  { title: "Slow Engines", artist: "Northwake", gradient: "linear-gradient(60deg, var(--chart-4), var(--chart-1))" },
-  { title: "Glasshouse", artist: "Ruben Ost", gradient: "linear-gradient(160deg, var(--chart-3), var(--chart-2))" },
-  { title: "Low Orbit", artist: "Selah Moreno", gradient: "linear-gradient(300deg, var(--chart-5), var(--chart-4))" },
-  { title: "Undertow", artist: "The Quiet Year", gradient: "linear-gradient(20deg, var(--chart-2), var(--chart-1))" },
-  { title: "Fernweh", artist: "Ada Kline", gradient: "linear-gradient(240deg, var(--chart-4), var(--chart-3))" },
+  { title: "Portfolio Simple", artist: "Designali template", gradient: 'url("/images/templates/portfolio-simple.jpg") center / cover' },
+  { title: "Design Agency", artist: "Designali template", gradient: 'url("/images/templates/design-agency.jpg") center / cover' },
+  { title: "Resort", artist: "Designali template", gradient: 'url("/images/templates/resort.jpg") center / cover' },
+  { title: "AI", artist: "Designali template", gradient: 'url("/images/templates/ai.jpg") center / cover' },
+  { title: "Vercel Style", artist: "Designali template", gradient: 'url("/images/templates/vercel.jpg") center / cover' },
+  { title: "Ali Imam", artist: "Designali template", gradient: 'url("/images/templates/aliimam-comp.jpg") center / cover' },
+  { title: "Dalim Agency", artist: "Designali template", gradient: 'url("/images/templates/dalim-agency-old.jpg") center / cover' },
 ]
 
 export default function Gallery18() {
@@ -24,9 +27,9 @@ export default function Gallery18() {
   return (
     <section className="w-full overflow-hidden bg-background py-20">
       <div className="mx-auto max-w-7xl px-6 text-center">
-        <p className="text-xs tracking-widest text-muted-foreground uppercase">Staff picks</p>
+        <p className="text-xs tracking-widest text-muted-foreground uppercase">Ali&apos;s picks</p>
         <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-4xl">
-          Records of the season
+          Templates of the season
         </h2>
       </div>
       <div className="relative mt-14 h-64 [perspective:1200px] sm:h-80">

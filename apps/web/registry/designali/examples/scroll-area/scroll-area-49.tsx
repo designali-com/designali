@@ -9,15 +9,15 @@ import {
 } from "@workspace/ui/components/table"
 
 const events = [
-  ["Ava L.", "Changed role", "Ben O. to Admin", "2m"],
+  ["Ali I.", "Changed role", "Ben O. to Admin", "2m"],
   ["Ben O.", "Created API key", "ci-deploy", "18m"],
   ["System", "Rotated secret", "webhook signing", "1h"],
   ["Chloe M.", "Exported data", "customers.csv", "3h"],
-  ["Ava L.", "Enabled SSO", "Okta SAML", "5h"],
+  ["Ali I.", "Enabled SSO", "Okta SAML", "5h"],
   ["Dev R.", "Deleted project", "old-landing", "1d"],
   ["System", "Blocked login", "IP 203.0.113.9", "1d"],
   ["Elif H.", "Updated billing", "Visa ending 4242", "2d"],
-  ["Ben O.", "Invited member", "gia@orbit.dev", "3d"],
+  ["Ben O.", "Invited member", "gia@designali.com", "3d"],
 ]
 
 export default function AuditLogTable() {

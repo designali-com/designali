@@ -8,7 +8,7 @@ import {
   ChevronsLeftRight,
   Equal,
   X,
-} from "lucide-react"
+} from "@designali/icons"
 
 import { ModeToggle } from "@/registry/designali/blocks/header/header-03/components/theme-switch"
 
@@ -40,89 +40,89 @@ import { Logo } from "@workspace/ui/designali/logo"
 
 const services = [
   {
+    name: "Brand Identity",
+    href: "/work",
+  },
+  {
     name: "UI/UX Design",
-    href: "/services/ui-ux-design",
+    href: "/work",
   },
   {
-    name: "Graphic Design",
-    href: "/services/graphic-design",
+    name: "Web Development",
+    href: "/work",
   },
   {
-    name: "Web Design",
-    href: "/services/web-design",
-  },
-  {
-    name: "Branding",
-    href: "/services/branding",
+    name: "Design Systems",
+    href: "/work",
   },
 ]
 
 const industries = [
   {
-    name: "Technology",
-    href: "/industries/technology",
+    name: "Templates",
+    href: "/templates",
   },
   {
-    name: "E-commerce",
-    href: "/industries/e-commerce",
+    name: "Blocks",
+    href: "/blocks",
   },
   {
-    name: "Healthcare",
-    href: "/industries/healthcare",
+    name: "UI Designs",
+    href: "/ui",
   },
   {
-    name: "Education",
-    href: "/industries/education",
+    name: "Icons",
+    href: "/icons",
   },
   {
-    name: "Finance",
-    href: "/industries/finance",
+    name: "Logos",
+    href: "/logos",
   },
   {
-    name: "Entertainment",
-    href: "/industries/entertainment",
+    name: "Illustration",
+    href: "/illustration",
   },
   {
-    name: "Retail",
-    href: "/industries/retail",
+    name: "Pricing",
+    href: "/pricing",
   },
   {
-    name: "Hospitality",
-    href: "/industries/hospitality",
+    name: "Docs",
+    href: "/docs",
   },
 ]
 
 const insights = [
   {
-    name: "Design Trends",
-    href: "/insights/design-trends",
+    name: "Blogs",
+    href: "/blogs",
+  },
+  {
+    name: "Docs",
+    href: "/docs",
   },
   {
     name: "Case Studies",
-    href: "/insights/case-studies",
+    href: "/work",
   },
   {
-    name: "Design Tips",
-    href: "/insights/design-tips",
-  },
-  {
-    name: "Podcast Hub",
-    href: "/insights/podcasts",
+    name: "Terms",
+    href: "/docs/legal/terms",
   },
 ]
 
 const aboutUs = [
   {
-    name: "Our Team",
-    href: "/about/team",
+    name: "Ali Imam",
+    href: "https://www.linkedin.com/in/aliimam-in/",
   },
   {
-    name: "Portfolio",
-    href: "/about/portfolio",
+    name: "Work",
+    href: "/work",
   },
   {
-    name: "Careers",
-    href: "/careers",
+    name: "Contact",
+    href: "/contact",
   },
 ]
 
@@ -181,7 +181,7 @@ export function Header() {
 
               <NavigationMenuItem>
                 <NavigationMenuTrigger className={"h-14 border px-6"}>
-                  Industries
+                  Products
                 </NavigationMenuTrigger>
 
                 <NavigationMenuContent>
@@ -203,7 +203,7 @@ export function Header() {
 
               <NavigationMenuItem>
                 <NavigationMenuTrigger className={"h-14 border px-6"}>
-                  Insights
+                  Resources
                 </NavigationMenuTrigger>
 
                 <NavigationMenuContent>
@@ -225,7 +225,7 @@ export function Header() {
 
               <NavigationMenuItem>
                 <NavigationMenuTrigger className={"h-14 border px-6"}>
-                  About Us
+                  About
                 </NavigationMenuTrigger>
 
                 <NavigationMenuContent>
@@ -329,7 +329,7 @@ export function Header() {
 
                     <AccordionItem value="industries">
                       <AccordionTrigger className="text-lg font-semibold">
-                        Industries
+                        Products
                       </AccordionTrigger>
 
                       <AccordionContent>
@@ -355,7 +355,7 @@ export function Header() {
 
                     <AccordionItem value="insights">
                       <AccordionTrigger className="text-lg font-semibold">
-                        Insights
+                        Resources
                       </AccordionTrigger>
 
                       <AccordionContent>
@@ -381,7 +381,7 @@ export function Header() {
 
                     <AccordionItem value="about">
                       <AccordionTrigger className="text-lg font-semibold">
-                        About Us
+                        About
                       </AccordionTrigger>
 
                       <AccordionContent>

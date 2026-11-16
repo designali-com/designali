@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { ThermometerIcon } from "lucide-react"
+import {
+  Thermometer as ThermometerIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import { Slider } from "@workspace/ui/components/slider"

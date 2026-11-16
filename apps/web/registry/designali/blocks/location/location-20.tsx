@@ -1,17 +1,24 @@
 "use client"
 
 import { useState } from "react"
-import { Check, Copy, Footprints, Mountain, Navigation, Timer } from "lucide-react"
+import {
+  Check,
+  Copy,
+  Footprints,
+  Mountain,
+  Navigation,
+  Timer,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 
-const coords = "46.5547, 7.9708"
+const coords = "hello@designali.com"
 
 const stats = [
-  { icon: Footprints, label: "Distance", value: "6.4 km" },
-  { icon: Timer, label: "Walking time", value: "1h 50m" },
-  { icon: Mountain, label: "Elevation gain", value: "+412 m" },
-  { icon: Navigation, label: "From", value: "Grindelwald station" },
+  { icon: Footprints, label: "Phases", value: "4 steps" },
+  { icon: Timer, label: "Typical timeline", value: "4–8 weeks" },
+  { icon: Mountain, label: "Scope", value: "Brand to code" },
+  { icon: Navigation, label: "From", value: "Discovery call" },
 ]
 
 export default function Location20() {
@@ -33,10 +40,10 @@ export default function Location20() {
         <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
           <div>
             <p className="text-xs font-medium tracking-widest text-muted-foreground uppercase">
-              The route
+              The process
             </p>
             <h2 className="mt-3 text-4xl font-semibold tracking-tight md:text-5xl">
-              Walk up to Berghaus Edelweiss
+              From first call to launch
             </h2>
           </div>
           <div className="flex flex-wrap gap-2">
@@ -44,9 +51,9 @@ export default function Location20() {
               {copied ? <Check /> : <Copy />}
               {copied ? "Copied" : coords}
             </Button>
-            <Button nativeButton={false} render={<a href="#" />}>
+            <Button nativeButton={false} render={<a href="/contact" />}>
               <Navigation />
-              Open in maps
+              Start a project
             </Button>
           </div>
         </div>
@@ -80,10 +87,10 @@ export default function Location20() {
               <circle cx="920" cy="80" r="16" className="fill-orange-500/25" />
               <circle cx="920" cy="80" r="8" className="fill-orange-500" />
             </svg>
-            <span className="absolute start-[6%] bottom-[4%] bg-background px-2 py-1 text-xs">Start &middot; 1,034 m</span>
-            <span className="absolute start-[50%] top-[50%] hidden bg-background px-2 py-1 text-xs sm:block">Bort viewpoint</span>
+            <span className="absolute start-[6%] bottom-[4%] bg-background px-2 py-1 text-xs">Start &middot; Discovery call</span>
+            <span className="absolute start-[50%] top-[50%] hidden bg-background px-2 py-1 text-xs sm:block">Design review</span>
             <span className="absolute end-[4%] top-[6%] bg-foreground px-2 py-1 text-xs font-medium text-background">
-              Berghaus &middot; 1,446 m
+              Launch &middot; designali.com
             </span>
           </div>
 

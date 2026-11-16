@@ -1,7 +1,11 @@
 "use client"
 
 import * as React from "react"
-import { CalendarPlusIcon, ClockIcon, ListIcon } from "lucide-react"
+import {
+  CalendarPlus as CalendarPlusIcon,
+  Clock as ClockIcon,
+  List as ListIcon,
+} from "@designali/icons"
 
 import {
   ContextMenu,

@@ -24,7 +24,7 @@ export default function FontSizePreviewSlider() {
         className="border bg-muted/40 p-4 leading-relaxed"
         style={{ fontSize: size[0] }}
       >
-        The ferry left the harbor just after dawn, carrying the morning mail.
+        Where thoughtful design meets production-ready code.
       </p>
       <span className="text-xs text-muted-foreground tabular-nums">
         {size[0]}px

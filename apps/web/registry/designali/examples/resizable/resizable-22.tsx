@@ -1,4 +1,6 @@
-import { SendIcon } from "lucide-react"
+import {
+  Send as SendIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import { Button } from "@workspace/ui/components/button"

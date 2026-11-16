@@ -42,7 +42,7 @@ export default function DecisionResultTracking() {
           <AlertDialogHeader>
             <AlertDialogTitle>Reset analytics?</AlertDialogTitle>
             <AlertDialogDescription>
-              Page views and events from the last 90 days will be cleared.
+              designali.com page views and events from the last 90 days will be cleared.
             </AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>

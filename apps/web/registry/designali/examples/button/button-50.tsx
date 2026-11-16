@@ -1,9 +1,9 @@
 import {
-  ArrowUpDownIcon,
-  DownloadIcon,
-  ListFilterIcon,
-  PlusIcon,
-} from "lucide-react"
+  ArrowUpDown as ArrowUpDownIcon,
+  Download as DownloadIcon,
+  ListFilter as ListFilterIcon,
+  Plus as PlusIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 

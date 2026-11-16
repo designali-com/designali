@@ -1,10 +1,15 @@
-import { ArrowUpRight, Clock, MapPin, Phone } from "lucide-react"
+import {
+  ArrowUpRight,
+  Clock,
+  Mail,
+  MapPin,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 
 const hours = [
-  { day: "Monday – Friday", time: "7:00 – 18:00" },
-  { day: "Saturday", time: "8:00 – 16:00" },
+  { day: "Monday – Friday", time: "9:00 – 18:00, your timezone" },
+  { day: "Saturday", time: "By appointment" },
   { day: "Sunday", time: "Closed" },
 ]
 
@@ -43,26 +48,26 @@ export default function Location01() {
         <div className="flex flex-col gap-8 p-8 md:p-10">
           <div className="space-y-3">
             <p className="text-xs tracking-widest text-muted-foreground uppercase">
-              Visit the roastery
+              Work with the studio
             </p>
             <h2 className="text-3xl font-semibold tracking-tight md:text-4xl">
-              Common Ground Coffee
+              Designali
             </h2>
           </div>
           <div className="space-y-4 text-sm">
             <p className="flex gap-3">
               <MapPin className="mt-0.5 size-4 shrink-0 text-muted-foreground" />
-              1180 Mission Street, Portland, OR 97209
+              Remote · Worldwide
             </p>
             <p className="flex gap-3">
-              <Phone className="mt-0.5 size-4 shrink-0 text-muted-foreground" />
-              (503) 555-0174
+              <Mail className="mt-0.5 size-4 shrink-0 text-muted-foreground" />
+              hello@designali.com
             </p>
           </div>
           <div className="border-t pt-6">
             <p className="mb-3 flex items-center gap-2 text-sm font-medium">
               <Clock className="size-4" />
-              Opening hours
+              Studio hours
             </p>
             <dl className="space-y-2 text-sm">
               {hours.map((row) => (
@@ -74,7 +79,7 @@ export default function Location01() {
             </dl>
           </div>
           <Button size="lg" className="mt-auto w-full">
-            Get directions
+            Book a call
             <ArrowUpRight />
           </Button>
         </div>
@@ -82,7 +87,7 @@ export default function Location01() {
           <MapIllustration />
           <div className="absolute top-[38%] left-[52%] flex -translate-x-1/2 -translate-y-full flex-col items-center">
             <span className="bg-foreground px-3 py-1.5 text-xs font-medium text-background">
-              Common Ground
+              Designali
             </span>
             <span className="h-6 w-px bg-foreground" />
             <span className="size-3 rounded-full border-2 border-background bg-foreground ring-4 ring-foreground/20" />

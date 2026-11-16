@@ -1,4 +1,7 @@
-import { ArrowRight, Play } from "lucide-react"
+import {
+  ArrowRight,
+  Play,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 
@@ -15,14 +18,14 @@ export default function Media01() {
       <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-6 py-24 lg:grid-cols-2">
         <div>
           <p className="text-xs tracking-widest text-muted-foreground uppercase">
-            Product film
+            Designali showreel
           </p>
           <h2 className="mt-4 text-4xl font-semibold tracking-tight md:text-5xl">
-            See the whole workflow in ninety seconds.
+            Design se code tak, in ninety seconds.
           </h2>
           <p className="mt-5 max-w-md text-muted-foreground">
-            From a blank canvas to a published, themed component library. No
-            cuts, no voice-over, just the product doing its job.
+            Ali Imam takes a project from a blank Figma canvas to a deployed
+            Next.js site. No cuts, no voice-over, just design and code.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Button size="lg">
@@ -30,7 +33,7 @@ export default function Media01() {
               Watch the film
             </Button>
             <Button size="lg" variant="outline">
-              Start free trial
+              Browse templates
               <ArrowRight />
             </Button>
           </div>

@@ -22,10 +22,10 @@ export default function CourseLessonThumbnail() {
         </div>
       </AspectRatio>
       <p className="mt-2 text-sm font-medium">
-        Lesson 3: Designing with constraints
+        Lesson 3: From Figma to Next.js
       </p>
       <p className="text-xs text-muted-foreground">
-        Interface Systems - 65% watched
+        Designali Design Engineering - 65% watched
       </p>
     </div>
   )

@@ -1,4 +1,8 @@
-import { MapPinIcon, StoreIcon, TruckIcon } from "lucide-react"
+import {
+  MapPin as MapPinIcon,
+  Store as StoreIcon,
+  Truck as TruckIcon,
+} from "@designali/icons"
 
 import { Input } from "@workspace/ui/components/input"
 import { Label } from "@workspace/ui/components/label"
@@ -36,7 +40,7 @@ export default function CheckoutDeliveryTabs() {
       <TabsContent value="pickup" className="flex items-start gap-3 border p-3">
         <MapPinIcon className="mt-0.5 size-4" />
         <div>
-          <p className="font-medium">Northgate store</p>
+          <p className="font-medium">Designali studio</p>
           <p className="text-muted-foreground">Ready in 2 hours · Free</p>
         </div>
       </TabsContent>

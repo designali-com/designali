@@ -1,7 +1,12 @@
 "use client"
 
 import * as React from "react"
-import { FileIcon, FolderIcon, FolderPlusIcon, UploadIcon } from "lucide-react"
+import {
+  File as FileIcon,
+  Folder as FolderIcon,
+  FolderPlus as FolderPlusIcon,
+  Upload as UploadIcon,
+} from "@designali/icons"
 
 import {
   Menubar,
@@ -19,8 +24,8 @@ import {
 } from "@workspace/ui/components/menubar"
 
 const files = [
-  { name: "budget-2026.xlsx", size: 48, modified: 3 },
-  { name: "brand-guide.pdf", size: 2210, modified: 12 },
+  { name: "designali-roadmap-2026.xlsx", size: 48, modified: 3 },
+  { name: "designali-brand-guide.pdf", size: 2210, modified: 12 },
   { name: ".env.local", size: 1, modified: 1, hidden: true },
   { name: "invoices", size: 940, modified: 6 },
   { name: "roadmap.md", size: 6, modified: 9 },

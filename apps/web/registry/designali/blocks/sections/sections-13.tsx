@@ -1,7 +1,13 @@
 "use client"
 
 import { useState } from "react"
-import { ClipboardList, PencilRuler, Rocket, Search, Wrench } from "lucide-react"
+import {
+  ClipboardList,
+  PencilRuler,
+  Rocket,
+  Search,
+  Wrench,
+} from "@designali/icons"
 
 import { cn } from "@workspace/ui/lib/utils"
 

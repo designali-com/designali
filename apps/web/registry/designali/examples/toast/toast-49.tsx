@@ -1,6 +1,8 @@
 "use client"
 
-import { ClockIcon } from "lucide-react"
+import {
+  Clock as ClockIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import { Button } from "@workspace/ui/components/button"

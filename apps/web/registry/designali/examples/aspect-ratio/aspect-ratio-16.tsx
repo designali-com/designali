@@ -23,7 +23,7 @@ export default function CropFrameThirds() {
         ))}
       </AspectRatio>
       <p className="mt-3 text-center font-mono text-xs text-white/70">
-        4:5 - 1080 x 1350
+        4:5 - 1080 x 1350 - @designali.code
       </p>
     </div>
   )

@@ -2,9 +2,9 @@ import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
 import { Separator } from "@workspace/ui/components/separator"
 
 const reports = [
-  { name: "Ivo Petrov", role: "Platform", initials: "IP" },
-  { name: "Leah Moss", role: "Payments", initials: "LM" },
-  { name: "Arjun Rao", role: "Growth", initials: "AR" },
+  { name: "Ivo", role: "Brand identity", initials: "I" },
+  { name: "Leah", role: "UI/UX design", initials: "L" },
+  { name: "Arjun", role: "Web development", initials: "A" },
 ]
 
 export default function OrgChartConnectors() {
@@ -12,11 +12,11 @@ export default function OrgChartConnectors() {
     <div className="flex w-full max-w-md flex-col items-center">
       <div className="flex items-center gap-2 border px-3 py-2">
         <Avatar size="sm">
-          <AvatarFallback>SM</AvatarFallback>
+          <AvatarFallback>AI</AvatarFallback>
         </Avatar>
         <div className="flex flex-col text-xs">
-          <span className="font-medium">Selin Muller</span>
-          <span className="text-muted-foreground">VP Engineering</span>
+          <span className="font-medium">Ali Imam</span>
+          <span className="text-muted-foreground">Founder, Designali</span>
         </div>
       </div>
       <Separator orientation="vertical" className="h-4" />

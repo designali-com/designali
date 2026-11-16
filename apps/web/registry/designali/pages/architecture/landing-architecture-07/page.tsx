@@ -9,132 +9,133 @@ import {
   Ruler,
   Sofa,
   Sun,
-} from "lucide-react"
+} from "@designali/icons"
 
+import { Logo } from "@/src/components/logo"
 import { Button } from "@workspace/ui/components/button"
 
-const navLinks = ["Projects", "Studio", "Services", "Process", "Journal"]
+const navLinks = ["Case studies", "Studio", "Services", "Process", "Blog"]
 
 const logos = [
-  "Domus",
-  "Mies Prize",
-  "RIBA",
-  "Dezeen",
-  "Wallpaper",
-  "ArchDaily",
-  "AJ Awards",
-  "Frame",
+  "Figma",
+  "Vercel",
+  "Blender-style CGI",
+  "@designali/icons",
+  "Next.js",
+  "React",
+  "TypeScript",
+  "Tailwind CSS",
 ]
 
 const features = [
   {
     icon: Box,
-    title: "3D and VR walkthroughs",
+    title: "3D walkthroughs",
     description:
-      "Walk through your building in virtual reality before a single foundation is poured.",
+      "Animated CGI walkthroughs let clients experience a building before a single foundation is poured.",
   },
   {
     icon: Sun,
-    title: "Daylight modelling",
+    title: "Light and material studies",
     description:
-      "Detailed sun-path and daylight studies to place every window where it matters most.",
+      "Renders that show timber, stone and daylight exactly as your team imagines them.",
   },
   {
     icon: Compass,
-    title: "Site-led design",
+    title: "Brand identity",
     description:
-      "Every project begins with weeks of study on the site: its light, its climate, its history and its neighbours.",
+      "Logos, type and colour systems that feel as considered as the buildings your practice designs.",
   },
   {
     icon: Leaf,
-    title: "Low-carbon by default",
+    title: "Portfolio websites",
     description:
-      "Timber structures, passive strategies and reclaimed materials to minimise embodied and operational carbon.",
+      "Fast Next.js sites with large imagery, project filters and case studies that load in a blink.",
   },
   {
     icon: Ruler,
     title: "Detail obsessed",
     description:
-      "We draw every junction, joint and handle, so the finished building is as precise as the drawings.",
+      "Every grid, margin and hover state is designed in Figma and matched exactly in code.",
   },
   {
     icon: Sofa,
-    title: "Interiors included",
+    title: "CGI and 3D visualisation",
     description:
-      "Architecture and interiors designed by one team, down to the joinery, lighting and furniture.",
+      "Photoreal renders, material studies and motion fly-throughs for interiors and unbuilt projects.",
   },
 ]
 
 const stats = [
-  { value: "140+", label: "Projects completed" },
-  { value: "96%", label: "Planning approval rate" },
-  { value: "22", label: "Design awards" },
-  { value: "18", label: "Years in practice" },
+  { value: "60+", label: "Studio projects shipped" },
+  { value: "98%", label: "Delivered on schedule" },
+  { value: "460+", label: "Blocks to build from" },
+  { value: "2300+", label: "UI examples on designali.com" },
 ]
 
 const steps = [
   {
-    title: "Brief and feasibility",
+    title: "Discovery call",
     description:
-      "We study the site, test options and agree a clear brief, budget and programme.",
+      "We talk through your practice, your audience and the work you want to win, then agree a clear brief.",
   },
   {
-    title: "Concept design",
+    title: "Concept and direction",
     description:
-      "Sketches, models and 3D views explore the big ideas before we refine one direction.",
+      "Moodboards, type studies and early 3D views explore ideas before we refine one direction.",
   },
   {
-    title: "Planning and technical",
+    title: "Design and build",
     description:
-      "We prepare the planning application, then detailed drawings for tender and construction.",
+      "Ali designs every page in Figma, then builds it in Next.js, TypeScript and Tailwind CSS.",
   },
   {
-    title: "Construction and handover",
+    title: "Launch and handover",
     description:
-      "Weekly site visits, contractor coordination and a careful handover with a building manual.",
+      "Weekly check-ins, a smooth launch on Vercel and a handover guide so your team can update everything.",
   },
 ]
 
 const showcase = [
   {
-    name: "Hillside House",
-    meta: "Residential · Cotswolds · 320 m²",
-    tag: "Award winner",
+    name: "Residential studio rebrand",
+    meta: "Brand identity · Website",
+    tag: "Featured",
     price: "2025",
     tile: "bg-gradient-to-br from-yellow-100 via-amber-200 to-orange-300 dark:from-yellow-700 dark:via-amber-800 dark:to-orange-900",
   },
   {
-    name: "Nordform HQ",
-    meta: "Workplace · Copenhagen · 4,800 m²",
-    tag: "Workplace",
+    name: "Workplace architects site",
+    meta: "Next.js · Project archive",
+    tag: "Web",
     price: "2024",
     tile: "bg-gradient-to-br from-amber-200 via-orange-300 to-rose-400 dark:from-amber-700 dark:via-orange-800 dark:to-rose-900",
   },
   {
-    name: "The Old Mill",
-    meta: "Heritage retrofit · Yorkshire",
-    tag: "Listed",
+    name: "Heritage practice identity",
+    meta: "Identity · Print",
+    tag: "Brand",
     price: "2024",
     tile: "bg-gradient-to-br from-sky-200 via-cyan-300 to-teal-400 dark:from-sky-700 dark:via-cyan-800 dark:to-teal-900",
   },
   {
-    name: "City Library",
-    meta: "Civic · 6,200 m² · CLT structure",
-    tag: "Public",
+    name: "Civic project renders",
+    meta: "CGI · 3D visualisation",
+    tag: "3D",
     price: "2023",
     tile: "bg-gradient-to-br from-violet-200 via-purple-300 to-fuchsia-400 dark:from-violet-700 dark:via-purple-800 dark:to-fuchsia-900",
   },
   {
-    name: "Garden Apartment",
-    meta: "Interiors · London · 140 m²",
+    name: "Interior studio portfolio",
+    meta: "UI/UX · Website",
     tag: "Interiors",
     price: "2025",
     tile: "bg-gradient-to-br from-emerald-200 via-green-300 to-lime-300 dark:from-emerald-700 dark:via-green-800 dark:to-lime-900",
   },
   {
-    name: "Coastal Cabins",
-    meta: "Hospitality · 12 cabins",
-    tag: "Timber",
+    name: "Cabin collection launch",
+    meta: "Motion · Landing page",
+    tag: "Motion",
     price: "2026",
     tile: "bg-gradient-to-br from-stone-200 via-neutral-300 to-zinc-400 dark:from-stone-700 dark:via-neutral-800 dark:to-zinc-900",
   },
@@ -143,100 +144,100 @@ const showcase = [
 const testimonials = [
   {
     quote:
-      "They listened to how we actually live and designed a home around it. Five years later it still surprises us with the light.",
-    name: "Catherine and Paul Ashby",
-    role: "Clients, Hillside House",
+      "Designali understood our work better than we expected. The new site finally feels like walking through one of our buildings.",
+    name: "Catherine A.",
+    role: "Founding partner, Designali client",
   },
   {
     quote:
-      "Our new headquarters changed how the company works. People want to come into the office again.",
-    name: "Jonas Lindqvist",
-    role: "CEO, Nordform",
+      "Our project archive used to be a PDF. Now it is a fast, filterable site that clients actually browse.",
+    name: "Jonas L.",
+    role: "Director, architecture studio",
   },
   {
     quote:
-      "They took a difficult listed building through planning without a single objection. Remarkable work.",
-    name: "Margaret Osei",
-    role: "Trustee, Old Mill Trust",
+      "Ali designed and coded everything himself. No hand-off gaps, just a brand that feels considered end to end.",
+    name: "Margaret O.",
+    role: "Practice manager, Designali client",
   },
 ]
 
 const tiers = [
   {
-    name: "Feasibility",
-    price: "$4,500",
+    name: "Starter",
+    price: "$2,400",
     period: "fixed fee",
-    description: "Understand what is possible on your site.",
+    description: "A focused portfolio landing page for a new studio or project.",
     features: [
-      "Site visit and analysis",
-      "Three design options",
-      "Planning appraisal",
-      "Cost guidance",
+      "Discovery call with Ali",
+      "Two design directions",
+      "Built with Designali blocks",
+      "Responsive and accessible",
     ],
-    cta: "Book a feasibility study",
+    cta: "Start a starter project",
   },
   {
-    name: "Full Service",
-    price: "12%",
-    period: "of build cost",
-    description: "Complete architecture from concept to handover.",
+    name: "Studio",
+    price: "$9,800",
+    period: "per project",
+    description: "Brand identity and full website, from concept to launch.",
     features: [
-      "Concept and planning",
-      "Technical drawings",
-      "Contractor tender",
-      "Weekly site visits",
-      "Interior design included",
+      "Logo, type and colour system",
+      "Full Next.js website",
+      "Project archive and filters",
+      "Weekly check-ins",
+      "CMS-ready content",
     ],
     cta: "Start a project",
   },
   {
     name: "Interiors",
-    price: "$180",
-    period: "/m²",
-    description: "Interior design for new or existing spaces.",
+    price: "$3,200",
+    period: "/render set",
+    description: "CGI and 3D visuals for unbuilt or interior projects.",
     features: [
-      "Space planning",
-      "Joinery design",
-      "Lighting scheme",
-      "Furniture sourcing",
-      "Installation management",
+      "Five photoreal stills",
+      "Material and light studies",
+      "Short motion fly-through",
+      "Social-ready crops",
+      "Two rounds of revisions",
     ],
-    cta: "Discuss interiors",
+    cta: "Discuss renders",
   },
 ]
 
 const faqs = [
   {
-    q: "What size projects do you take on?",
-    a: "We work on everything from single-room extensions over $150,000 to civic buildings, with a dedicated team for each scale.",
+    q: "What size practices do you work with?",
+    a: "Everyone from solo architects to multi-office studios. The process scales, and Ali stays involved on every project.",
   },
   {
-    q: "How long does a typical house project take?",
-    a: "A new home usually takes 18 to 30 months from first meeting to moving in, including planning and construction.",
+    q: "How long does a typical project take?",
+    a: "A landing page usually takes two weeks, and a full brand plus website takes six to eight weeks.",
   },
   {
-    q: "Do you work outside the country?",
-    a: "Yes. We have completed projects in nine countries and partner with local architects where required.",
+    q: "Do you work with studios worldwide?",
+    a: "Yes. Designali works remotely with clients anywhere, with calls scheduled around your time zone.",
   },
   {
-    q: "Can you help us find a contractor?",
-    a: "We run a competitive tender with trusted contractors and help you choose on quality, programme and price.",
+    q: "Can you photograph our buildings?",
+    a: "We do not shoot photography, but CGI renders can fill gaps for projects that are unbuilt or hard to photograph.",
   },
   {
-    q: "How do you approach sustainability?",
-    a: "We measure whole-life carbon on every project and target net zero operational energy wherever the brief allows.",
+    q: "Will we own the design and code?",
+    a: "Yes. You get the Figma files and the full Next.js codebase, ready to host on Vercel or anywhere you like.",
   },
 ]
 
 const footer = [
-  { title: "Studio", links: ["About", "Team", "Awards", "Careers"] },
+  { title: "Studio", links: ["About", "Ali Imam", "Templates", "Blocks"] },
   {
     title: "Work",
-    links: ["Residential", "Workplace", "Cultural", "Interiors"],
+    links: ["Brand identity", "Web", "CGI and 3D", "Interiors"],
   },
   {
     title: "Contact",
-    links: ["New projects", "Press", "Instagram", "Newsletter"],
+    links: ["hello@designali.com", "LinkedIn", "Instagram", "X"],
   },
 ]
 
@@ -249,10 +250,8 @@ export default function LandingArchitecture07() {
             href="#"
             className="flex items-center gap-2 font-semibold tracking-tight"
           >
-            <span className="flex size-7 items-center justify-center rounded-md bg-emerald-600 text-white text-sm">
-              G
-            </span>
-            <span className="">Groundwork</span>
+            <Logo className="h-5 w-auto" />
+            <span className="">designali</span>
           </a>
           <nav className="hidden items-center gap-7 text-sm md:flex">
             {navLinks.map((link) => (
@@ -276,7 +275,7 @@ export default function LandingArchitecture07() {
               Start a project
             </Button>
             <Button size="sm" nativeButton={false} render={<a href="#" />}>
-              Start a landscape project
+              Start a project
             </Button>
           </div>
         </div>
@@ -294,22 +293,21 @@ export default function LandingArchitecture07() {
                 New
               </span>
               <span className="text-muted-foreground">
-                New pocket park opens on Harbour Street this spring
+                New: landscape studio case study on designali.com
               </span>
             </a>
             <h1 className="text-4xl leading-[1.05] font-semibold tracking-tight text-balance sm:text-5xl md:text-8xl ">
-              {"Landscapes that "}
+              {"Landscape studio brands that "}
               <span className="text-emerald-600 dark:text-emerald-400">
-                bring people outside
+                bring clients in
               </span>
             </h1>
             <p className="mx-auto max-w-2xl text-lg leading-8 text-muted-foreground">
-              We design parks, gardens and streetscapes with native planting,
-              sustainable drainage and spaces that work in every season.
+              Designali designs brands, websites and seasonal CGI for landscape architects, so parks and gardens look their best online.
             </p>
             <div className="flex flex-wrap gap-3 justify-center">
               <Button size="lg" nativeButton={false} render={<a href="#" />}>
-                Start a landscape project
+                Start a project
                 <ArrowRight />
               </Button>
               <Button
@@ -318,7 +316,7 @@ export default function LandingArchitecture07() {
                 nativeButton={false}
                 render={<a href="#" />}
               >
-                See landscapes
+                See case studies
               </Button>
             </div>
           </div>
@@ -331,7 +329,7 @@ export default function LandingArchitecture07() {
       <section className="border-b">
         <div className="mx-auto max-w-7xl px-6 py-12">
           <p className="text-center text-sm text-muted-foreground">
-            Recognised by
+            Designed in Figma, built with
           </p>
           <div className="mt-8 grid grid-cols-2 items-center gap-x-8 gap-y-6 sm:grid-cols-4 lg:grid-cols-8">
             {logos.map((logo) => (
@@ -349,14 +347,13 @@ export default function LandingArchitecture07() {
         <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
           <div className="mx-auto max-w-2xl text-center">
             <p className="text-sm font-medium text-emerald-600 dark:text-emerald-400">
-              Practice
+              Services
             </p>
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl  mt-3">
-              Buildings shaped by place, light and people
+              Brands shaped by your buildings
             </h2>
             <p className="mt-4 text-lg leading-8 text-muted-foreground">
-              We design homes, workplaces and public spaces that respond to
-              their site, last for generations and are a pleasure to live in.
+              Where thoughtful design meets production-ready code. Identity, web and 3D for practices that care about craft.
             </p>
           </div>
           <div className="mt-14 grid overflow-hidden rounded-2xl border sm:grid-cols-2 lg:grid-cols-3">
@@ -397,11 +394,10 @@ export default function LandingArchitecture07() {
           <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
             <div className="max-w-2xl">
               <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl">
-                Selected projects
+                Selected architecture work
               </h2>
               <p className="mt-4 text-lg leading-8 text-muted-foreground">
-                Residential, cultural and workplace projects completed over the
-                last decade, from small extensions to civic buildings.
+                Identities, websites and CGI for residential, workplace and civic practices, all designed and built by Designali.
               </p>
             </div>
             <Button
@@ -409,7 +405,7 @@ export default function LandingArchitecture07() {
               nativeButton={false}
               render={<a href="#" />}
             >
-              View all
+              View all work
               <ArrowUpRight />
             </Button>
           </div>
@@ -444,7 +440,7 @@ export default function LandingArchitecture07() {
         <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl">
-              From first sketch to handover
+              From first sketch to launch
             </h2>
           </div>
           <ol className="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
@@ -504,11 +500,10 @@ export default function LandingArchitecture07() {
         <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl">
-              Ways to work with us
+              Ways to work with Designali
             </h2>
             <p className="mt-4 text-lg leading-8 text-muted-foreground">
-              Fees are agreed upfront for each stage, so you always know what
-              comes next and what it costs.
+              Fees are agreed upfront, so you always know what comes next and what it costs. You own everything we make.
             </p>
           </div>
           <div className="mx-auto mt-14 grid max-w-6xl items-start gap-6 lg:grid-cols-3">
@@ -570,7 +565,7 @@ export default function LandingArchitecture07() {
                 href="#"
                 className="font-medium text-foreground underline underline-offset-4"
               >
-                Get in touch
+                Email hello@designali.com
               </a>
               .
             </p>
@@ -595,15 +590,14 @@ export default function LandingArchitecture07() {
           <div className="pointer-events-none absolute -top-24 left-1/2 size-96 -translate-x-1/2 rounded-full bg-gradient-to-b from-emerald-500/25 via-teal-500/10 to-transparent blur-3xl" />
           <div className="relative mx-auto max-w-2xl space-y-6">
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl">
-              {"Let's shape the space around your building"}
+              {"Let us shape the brand around your work"}
             </h2>
             <p className="text-lg text-muted-foreground">
-              Share your site plan and we will send initial ideas within two
-              weeks.
+              Share your brief and we will send initial ideas within two weeks.
             </p>
             <div className="flex flex-wrap gap-3 justify-center">
               <Button size="lg" nativeButton={false} render={<a href="#" />}>
-                Start a landscape project
+                Start a project
                 <ArrowRight />
               </Button>
               <Button
@@ -612,7 +606,7 @@ export default function LandingArchitecture07() {
                 nativeButton={false}
                 render={<a href="#" />}
               >
-                See landscapes
+                See case studies
               </Button>
             </div>
           </div>
@@ -625,13 +619,11 @@ export default function LandingArchitecture07() {
               href="#"
               className="flex items-center gap-2 font-semibold tracking-tight"
             >
-              <span className="flex size-7 items-center justify-center rounded-md bg-emerald-600 text-white text-sm">
-                G
-              </span>
-              <span className="">Groundwork</span>
+              <Logo className="h-5 w-auto" />
+              <span className="">designali</span>
             </a>
             <p className="max-w-xs text-sm text-muted-foreground">
-              Outdoor spaces with purpose.
+              Design with purpose.
             </p>
           </div>
           {footer.map((column) => (
@@ -655,7 +647,7 @@ export default function LandingArchitecture07() {
         <div className="border-t ">
           <div className="mx-auto flex max-w-7xl flex-col justify-between gap-4 px-6 py-6 text-xs text-muted-foreground sm:flex-row">
             <span>
-              © {new Date().getFullYear()} Groundwork. All rights reserved.
+              © {new Date().getFullYear()} Designali. All rights reserved.
             </span>
             <div className="flex gap-6">
               <a href="#" className="hover:text-foreground">

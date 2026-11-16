@@ -1,4 +1,6 @@
-import { InfoIcon } from "lucide-react"
+import {
+  Info as InfoIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import {
@@ -13,16 +15,16 @@ import {
 import { cn } from "@workspace/ui/lib/utils"
 
 const services = [
-  { name: "API", uptime: "99.98%", incidents: [12] },
-  { name: "Dashboard", uptime: "100%", incidents: [] as number[] },
-  { name: "Webhooks", uptime: "99.71%", incidents: [4, 5, 22] },
+  { name: "designali.com", uptime: "99.98%", incidents: [12] },
+  { name: "Icons CDN", uptime: "100%", incidents: [] as number[] },
+  { name: "Template downloads", uptime: "99.71%", incidents: [4, 5, 22] },
 ]
 
 export default function ServiceStatusCard() {
   return (
     <Card className="w-full max-w-sm">
       <CardHeader>
-        <CardTitle>System status</CardTitle>
+        <CardTitle>Designali status</CardTitle>
         <CardDescription>Last 30 days</CardDescription>
         <CardAction>
           <Badge variant="secondary" className="gap-1.5">
@@ -59,7 +61,7 @@ export default function ServiceStatusCard() {
       </CardContent>
       <CardFooter className="gap-2 text-muted-foreground">
         <InfoIcon className="size-3.5 shrink-0" />
-        Webhook delays on Nov 4-5 were resolved within 40 minutes.
+        Download delays on Nov 4-5 were resolved within 40 minutes.
       </CardFooter>
     </Card>
   )

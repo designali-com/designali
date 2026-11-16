@@ -1,4 +1,7 @@
-import { PlusIcon, VideoIcon } from "lucide-react"
+import {
+  Plus as PlusIcon,
+  Video as VideoIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -15,19 +18,19 @@ const meetings = [
   {
     time: "09:00",
     end: "09:15",
-    title: "Daily standup",
+    title: "Designali studio standup",
     room: "Zoom",
     past: true,
   },
   {
     time: "10:30",
     end: "11:30",
-    title: "Pricing page critique",
-    room: "Room Atlas",
+    title: "Designali pricing page critique",
+    room: "Figma",
     now: true,
   },
-  { time: "13:00", end: "13:30", title: "1:1 with Grace", room: "Zoom" },
-  { time: "15:00", end: "16:00", title: "Roadmap review", room: "Room Nova" },
+  { time: "13:00", end: "13:30", title: "Client brand identity review", room: "Zoom" },
+  { time: "15:00", end: "16:00", title: "Blocks roadmap review", room: "Studio" },
 ]
 
 export default function TodayScheduleCard() {

@@ -13,13 +13,13 @@ export default function BlogPostPrevNext() {
         <PaginationItem className="min-w-0">
           <PaginationPrevious href="#" text="Previous post" />
           <p className="truncate ps-2 text-xs text-muted-foreground">
-            Designing calmer onboarding
+            Shipping 460+ designali blocks
           </p>
         </PaginationItem>
         <PaginationItem className="min-w-0 text-end">
           <PaginationNext href="#" text="Next post" />
           <p className="truncate pe-2 text-xs text-muted-foreground">
-            Notes on dense data tables
+            Design se code tak: Figma to Next.js
           </p>
         </PaginationItem>
       </PaginationContent>

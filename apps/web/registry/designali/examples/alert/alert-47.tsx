@@ -1,7 +1,12 @@
 "use client"
 
 import * as React from "react"
-import { CheckIcon, ShieldCheckIcon, ShieldIcon, XIcon } from "lucide-react"
+import {
+  Check as CheckIcon,
+  ShieldCheck as ShieldCheckIcon,
+  Shield as ShieldIcon,
+  X as XIcon,
+} from "@designali/icons"
 
 import {
   Alert,
@@ -20,7 +25,7 @@ const rules = [
 ]
 
 export default function AlertPasswordRequirements() {
-  const [value, setValue] = React.useState("harbour7")
+  const [value, setValue] = React.useState("designali7")
   const passed = rules.filter((rule) => rule.test(value)).length
   const ok = passed === rules.length
 

@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { CheckIcon, CopyIcon } from "lucide-react"
+import {
+  Check as CheckIcon,
+  Copy as CopyIcon,
+} from "@designali/icons"
 
 import {
   Alert,
@@ -13,7 +16,7 @@ import { Spinner } from "@workspace/ui/components/spinner"
 
 export default function AlertDnsPending() {
   const [copied, setCopied] = React.useState(false)
-  const record = "verify=lmn-7c21f9a4e0"
+  const record = "verify=designali-7c21f9a4e0"
 
   return (
     <Alert className="max-w-md">
@@ -23,7 +26,7 @@ export default function AlertDnsPending() {
         <p>
           Add this TXT record to{" "}
           <span className="font-medium text-foreground">
-            shop.harbourline.example
+            studio.designali.com
           </span>
           . Changes can take up to 24 hours.
         </p>

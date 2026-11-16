@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { QuoteIcon } from "lucide-react"
+import {
+  Quote as QuoteIcon,
+} from "@designali/icons"
 
 import {
   Pagination,
@@ -13,20 +15,20 @@ import { cn } from "@workspace/ui/lib/utils"
 
 const quotes = [
   {
-    text: "We closed our books two days faster.",
-    who: "Farah Idris, Finance Lead",
+    text: "Our launch site went live in a weekend with a Designali template.",
+    who: "Farah, Founder · Designali client",
   },
   {
-    text: "Onboarding new hires is finally painless.",
-    who: "Mateo Silva, Ops Manager",
+    text: "The blocks drop straight into our Next.js app.",
+    who: "Mateo, Frontend Developer",
   },
   {
-    text: "The reports basically write themselves.",
-    who: "Grace Liu, Analyst",
+    text: "Ali turned our Figma file into production-ready code.",
+    who: "Grace, Product Designer",
   },
   {
-    text: "Support answers within minutes, every time.",
-    who: "Ben Adler, Founder",
+    text: "Thoughtful design, and the code just works.",
+    who: "Ben, Startup Founder",
   },
 ]
 

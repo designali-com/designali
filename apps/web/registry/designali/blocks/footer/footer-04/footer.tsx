@@ -1,8 +1,10 @@
 "use client"
 
 import Link from "next/link"
-import { Nike } from "@designali/logos"
-import { Send } from "lucide-react"
+import { Logo } from "@/src/components/logo"
+import {
+  Send,
+} from "@designali/icons"
 
 import { ThemeSwitch } from "@/registry/designali/blocks/footer/footer-04/theme"
 import { Button } from "@workspace/ui/components/button"
@@ -17,11 +19,11 @@ import {
 } from "@workspace/ui/components/select"
 
 const navLinks = [
-  { label: "About", href: "#" },
-  { label: "Pricing", href: "#" },
-  { label: "Blogs", href: "#" },
-  { label: "Docs", href: "#" },
-  { label: "Contact", href: "#" },
+  { label: "Templates", href: "/templates" },
+  { label: "Blocks", href: "/blocks" },
+  { label: "Pricing", href: "/pricing" },
+  { label: "Docs", href: "/docs" },
+  { label: "Blogs", href: "/blogs" },
 ]
 
 export default function Footer() {
@@ -30,12 +32,12 @@ export default function Footer() {
       <div className="p-10">
         <div className="-my-6 grid gap-12 rounded-md border bg-background p-10 md:-my-4 md:grid-cols-2 lg:grid-cols-4">
           <div className="relative">
-            <Nike />
+            <Logo className="h-8 w-auto" />
             <h2 className="mt-6 mb-2 text-2xl font-semibold tracking-tight">
               Stay Connected
             </h2>
             <p className="mb-4 text-muted-foreground">
-              Join our newsletter for the latest updates and exclusive offers.
+              Join the Designali newsletter for new templates, blocks and design resources.
             </p>
             <form className="relative">
               <Input
@@ -72,19 +74,14 @@ export default function Footer() {
             <div className="">
               <h3 className="mb-4 text-lg font-semibold">Contact Us</h3>
               <div className="grid space-y-2 text-muted-foreground transition-colors hover:text-foreground">
-                <a
-                  href="https://www.google.com/maps/place/Dalim/@23.6407561,86.1020664,19z/data=!3m1!4b1!4m6!3m5!1s0x39f42309f0f5d0b5:0xb7e835eb8fe26ca3!8m2!3d23.6407549!4d86.1027101!16s%2Fg%2F11xftydckp"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:underline"
-                >
-                  Bokaro, India
+                <a href="/contact" className="hover:underline">
+                  Contact page
                 </a>
-                <a href="tel:+11234567890" className="hover:underline">
-                  Phone
+                <a href="mailto:hello@designali.com" className="hover:underline">
+                  hello@designali.com
                 </a>
-                <a href="mailto:contact@dalim.in" className="hover:underline">
-                  Email
+                <a href="mailto:support@designali.com" className="hover:underline">
+                  support@designali.com
                 </a>
               </div>
             </div>
@@ -108,21 +105,21 @@ export default function Footer() {
             <h3 className="mb-4 text-lg font-semibold">Follow Us</h3>
             <div className="mb-6 flex gap-6">
               <Link
-                href={"https://www.linkedin.com/aliimam"}
+                href={"https://www.linkedin.com/company/designali-com/"}
                 target="_blank"
                 className="text-muted-foreground transition-colors hover:text-foreground"
               >
                 LinkedIn
               </Link>
               <Link
-                href={"https://x.com/aliimam_in"}
+                href={"https://x.com/designali_com"}
                 target="_blank"
                 className="text-muted-foreground transition-colors hover:text-foreground"
               >
                  X
               </Link>
               <Link
-                href={"https://www.instagram.com/aliimam.in/"}
+                href={"https://www.instagram.com/designali.code/"}
                 target="_blank"
                 className="text-muted-foreground transition-colors hover:text-foreground"
               >
@@ -134,13 +131,13 @@ export default function Footer() {
         </div>
         <div className="mt-3 flex flex-col items-center justify-between gap-3 py-4 text-center md:flex-row">
           <p className="text-sm text-muted-foreground">
-            © 2026 AI. All rights reserved.
+            © 2026 Designali. All rights reserved.
           </p>
           <nav className="flex gap-4 text-sm">
-            <Link href="#" className="text-foreground/60 hover:text-foreground">
-              Privacy Policy
+            <Link href="/contact" className="text-foreground/60 hover:text-foreground">
+              Contact
             </Link>
-            <Link href="#" className="text-foreground/60 hover:text-foreground">
+            <Link href="/docs/legal/terms" className="text-foreground/60 hover:text-foreground">
               Terms of Service
             </Link>
           </nav>

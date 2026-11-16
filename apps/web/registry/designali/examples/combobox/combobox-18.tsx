@@ -1,6 +1,8 @@
 "use client"
 
-import { ServerIcon } from "lucide-react"
+import {
+  Server as ServerIcon,
+} from "@designali/icons"
 
 import {
   Combobox,

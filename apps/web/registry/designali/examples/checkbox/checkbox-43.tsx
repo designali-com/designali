@@ -1,17 +1,19 @@
 "use client"
 
 import * as React from "react"
-import { LaptopIcon } from "lucide-react"
+import {
+  Laptop as LaptopIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Checkbox } from "@workspace/ui/components/checkbox"
 import { cn } from "@workspace/ui/lib/utils"
 
 const laptops = [
-  { name: "Aero 14", price: "$1,199" },
-  { name: "Aero 16", price: "$1,499" },
-  { name: "Volt Pro", price: "$1,899" },
-  { name: "Volt Air", price: "$999" },
+  { name: "Portfolio Simple", price: "$49" },
+  { name: "Design Agency", price: "$79" },
+  { name: "Resort", price: "$59" },
+  { name: "AI Starter", price: "$69" },
 ]
 
 export default function CompareProductsBar() {

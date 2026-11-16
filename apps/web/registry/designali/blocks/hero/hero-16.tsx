@@ -1,15 +1,19 @@
 "use client"
 
 import { useState } from "react"
-import { ArrowRight, CheckCircle2, Lock } from "lucide-react"
+import {
+  ArrowRight,
+  CircleCheck as CheckCircle2,
+  Lock,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Input } from "@workspace/ui/components/input"
 
 const benefits = [
-  "Unlimited projects on the free plan",
-  "Invite up to 5 collaborators",
-  "Export to PDF, PNG and SVG",
+  "Free blocks, icons and logos",
+  "Copy-paste React and Tailwind code",
+  "Figma-ready UI designs",
 ]
 
 export default function Hero16() {
@@ -20,14 +24,14 @@ export default function Hero16() {
       <div className="mx-auto grid max-w-7xl lg:grid-cols-2">
         <div className="bg-foreground px-6 py-16 text-background md:px-12 md:py-24">
           <p className="font-mono text-xs tracking-widest uppercase opacity-60">
-            Blueprint / floor plans
+            Designali / design se code tak
           </p>
           <h1 className="mt-6 text-4xl font-medium tracking-tight md:text-6xl">
-            Draw a floor plan before your coffee gets cold.
+            Build your next site before your coffee gets cold.
           </h1>
           <p className="mt-6 max-w-md text-base leading-7 opacity-70">
-            Drag walls, drop furniture and get accurate square footage in
-            the browser. Used by 90,000 renovators, agents and architects.
+            Pick a Designali template, drop in blocks and ship a production-ready
+            Next.js site. Made for designers, developers and founders.
           </p>
           <ul className="mt-10 space-y-3 text-sm">
             {benefits.map((benefit) => (
@@ -43,9 +47,9 @@ export default function Hero16() {
             <line x1="130" y1="80" x2="210" y2="80" stroke="currentColor" strokeWidth="2" />
             <line x1="240" y1="2" x2="240" y2="118" stroke="currentColor" strokeWidth="2" />
             <path d="M130 80 A30 30 0 0 1 160 110" fill="none" stroke="currentColor" strokeDasharray="3 3" />
-            <text x="40" y="60" fill="currentColor" fontSize="10">Living 18m2</text>
-            <text x="150" y="40" fill="currentColor" fontSize="10">Kitchen</text>
-            <text x="254" y="60" fill="currentColor" fontSize="10">Bed</text>
+            <text x="40" y="60" fill="currentColor" fontSize="10">Hero</text>
+            <text x="150" y="40" fill="currentColor" fontSize="10">Blocks</text>
+            <text x="254" y="60" fill="currentColor" fontSize="10">CTA</text>
           </svg>
         </div>
 
@@ -69,11 +73,11 @@ export default function Hero16() {
               >
                 <div>
                   <h2 className="text-2xl font-medium tracking-tight">
-                    Create your free account
+                    Create your free Designali account
                   </h2>
                   <p className="mt-2 text-sm text-muted-foreground">
                     Already have one?{" "}
-                    <a href="#" className="text-foreground underline underline-offset-4">
+                    <a href="/login" className="text-foreground underline underline-offset-4">
                       Sign in
                     </a>
                   </p>
@@ -81,24 +85,24 @@ export default function Hero16() {
                 <div className="grid gap-4 sm:grid-cols-2">
                   <label className="space-y-1.5 text-sm">
                     <span>First name</span>
-                    <Input required placeholder="Maya" />
+                    <Input required placeholder="Ali" />
                   </label>
                   <label className="space-y-1.5 text-sm">
                     <span>Last name</span>
-                    <Input required placeholder="Okafor" />
+                    <Input required placeholder="Imam" />
                   </label>
                 </div>
                 <label className="block space-y-1.5 text-sm">
                   <span>Work email</span>
-                  <Input required type="email" placeholder="maya@studio.co" />
+                  <Input required type="email" placeholder="you@example.com" />
                 </label>
                 <label className="block space-y-1.5 text-sm">
                   <span>I am a...</span>
                   <select className="h-9 w-full border border-input bg-transparent px-3 text-sm">
-                    <option>Homeowner</option>
-                    <option>Real estate agent</option>
-                    <option>Architect or designer</option>
-                    <option>Contractor</option>
+                    <option>Designer</option>
+                    <option>Developer</option>
+                    <option>Founder</option>
+                    <option>Agency or studio</option>
                   </select>
                 </label>
                 <Button type="submit" size="lg" className="w-full">

@@ -35,7 +35,7 @@ export default function EventTicketTiersFieldSet() {
     <FieldSet className="w-full max-w-sm">
       <FieldLegend>Tickets</FieldLegend>
       <FieldDescription>
-        Design Systems Summit · Lisbon · March 12
+        Designali design se code tak meetup · March 12
       </FieldDescription>
       <FieldGroup className="gap-3">
         {tiers.map((t) => (

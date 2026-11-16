@@ -1,11 +1,11 @@
 import {
-  BrainIcon,
-  CalculatorIcon,
-  ChevronDownIcon,
-  FileTextIcon,
-  SearchIcon,
-  SparklesIcon,
-} from "lucide-react"
+  Brain as BrainIcon,
+  Calculator as CalculatorIcon,
+  ChevronDown as ChevronDownIcon,
+  FileText as FileTextIcon,
+  Search as SearchIcon,
+  Sparkles as SparklesIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -15,9 +15,9 @@ import {
 } from "@workspace/ui/components/collapsible"
 
 const steps = [
-  { icon: SearchIcon, text: 'Searched workspace for "Q3 churn"' },
-  { icon: FileTextIcon, text: "Read retention-report-q3.pdf" },
-  { icon: CalculatorIcon, text: "Compared churn against Q2 baseline" },
+  { icon: SearchIcon, text: 'Searched designali.com for "template sales"' },
+  { icon: FileTextIcon, text: "Read designali-q3-report.pdf" },
+  { icon: CalculatorIcon, text: "Compared Q3 template sales against Q2" },
 ]
 
 export default function AssistantReasoningTrace() {
@@ -53,8 +53,8 @@ export default function AssistantReasoningTrace() {
           </CollapsibleContent>
         </Collapsible>
         <p className="text-sm">
-          Churn in Q3 was 3.1%, down from 4.4% in Q2. Most of the improvement
-          came from annual plans after the new onboarding emails launched.
+          Template sales grew 18% in Q3 compared with Q2. Most of the growth
+          came from the new Designali blocks and landing page bundles.
         </p>
       </div>
     </div>

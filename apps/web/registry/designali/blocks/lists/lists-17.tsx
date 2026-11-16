@@ -1,15 +1,20 @@
 "use client"
 
 import { useState } from "react"
-import { Archive, ArrowLeft, Reply, Star } from "lucide-react"
+import {
+  Archive,
+  ArrowLeft,
+  Reply,
+  Star,
+} from "@designali/icons"
 
 import { cn } from "@workspace/ui/lib/utils"
 
 const messages = [
-  { id: 1, from: "Hana Sato", initials: "HS", hue: 330, subject: "Crit notes: onboarding v3", preview: "Overall the flow is much tighter. Three things I'd still push on...", time: "09:42", unread: true, body: ["Overall the flow is much tighter than last week. Three things I'd still push on:", "1. The workspace name step feels optional but reads as required. Let's add a 'skip' link.", "2. The invite screen needs an empty state for people joining alone.", "3. Progress dots should reflect the real number of steps, not a fixed five.", "Happy to pair on any of these this afternoon."] },
-  { id: 2, from: "Billing", initials: "B", hue: 160, subject: "Your November invoice is ready", preview: "Invoice #4021 for $1,240.00 is available to download.", time: "08:15", unread: true, body: ["Invoice #4021 for $1,240.00 is now available.", "It covers 31 seats on the Team plan from Nov 1 to Nov 30, 2026. Payment will be taken from the card ending 4242 on Dec 1."] },
-  { id: 3, from: "Tomás Ibarra", initials: "TI", hue: 200, subject: "Re: canvas perf regression", preview: "Bisected it to the shadow change. Fix is in #2190, needs one review.", time: "Yesterday", unread: false, body: ["Bisected it to the shadow change in 4.2.0. Every layer was re-rasterising on zoom.", "Fix is in #2190. It needs one review and I'd like it in Thursday's release."] },
-  { id: 4, from: "Priya Raman", initials: "PR", hue: 270, subject: "Q1 planning doc, first draft", preview: "Shared the draft. Comments open until Friday, then we lock scope.", time: "Mon", unread: false, body: ["I've shared the first draft of the Q1 planning doc.", "Comments are open until Friday. After that we lock scope and I'll send the summary to leadership."] },
+  { id: 1, from: "Sara", initials: "SA", hue: 330, subject: "Crit notes: Dalim UI landing page", preview: "Overall the page is much tighter. Three things I'd still push on...", time: "09:42", unread: true, body: ["Overall the landing page is much tighter than last week. Three things I'd still push on:", "1. The hero subline reads long. Let's lead with 'design se code tak'.", "2. The blocks grid needs an empty state for filters with no results.", "3. The pricing toggle should match the Designali Pro plan names.", "Happy to pair on any of these this afternoon."] },
+  { id: 2, from: "Designali Billing", initials: "B", hue: 160, subject: "Your November invoice is ready", preview: "Invoice #4021 for $1,240.00 is available to download.", time: "08:15", unread: true, body: ["Invoice #4021 for $1,240.00 is now available.", "It covers 31 seats on the Designali Team plan from Nov 1 to Nov 30, 2026. Questions? Reply to billing@designali.com."] },
+  { id: 3, from: "Omar", initials: "OM", hue: 200, subject: "Re: hero block perf regression", preview: "Bisected it to the shadow change. Fix is in #2190, needs one review.", time: "Yesterday", unread: false, body: ["Bisected it to the shadow change in the hero blocks. Every card was repainting on scroll.", "Fix is in #2190. It needs one review and I'd like it in Thursday's designali.com release."] },
+  { id: 4, from: "Ali Imam", initials: "AI", hue: 270, subject: "Q1 templates roadmap, first draft", preview: "Shared the draft. Comments open until Friday, then we lock scope.", time: "Mon", unread: false, body: ["I've shared the first draft of the Q1 Designali templates roadmap.", "Comments are open until Friday. After that we lock scope and I'll post the summary to the studio."] },
 ]
 
 export default function Lists17() {

@@ -1,4 +1,6 @@
-import { FolderIcon } from "lucide-react"
+import {
+  Folder as FolderIcon,
+} from "@designali/icons"
 
 import {
   Breadcrumb,

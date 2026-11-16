@@ -1,4 +1,6 @@
-import { Quote } from "lucide-react"
+import {
+  Quote,
+} from "@designali/icons"
 
 export default function Testimonials02() {
   return (

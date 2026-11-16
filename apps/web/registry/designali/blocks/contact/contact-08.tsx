@@ -1,7 +1,13 @@
 "use client"
 
 import { useState } from "react"
-import { Briefcase, LifeBuoy, Mail, Newspaper, Phone } from "lucide-react"
+import {
+  Briefcase,
+  LifeBuoy,
+  Mail,
+  Newspaper,
+  Phone,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Input } from "@workspace/ui/components/input"
@@ -11,35 +17,35 @@ import { cn } from "@workspace/ui/lib/utils"
 const departments = [
   {
     id: "sales",
-    label: "Sales",
+    label: "Projects",
     icon: Briefcase,
-    title: "Plan a rollout with our sales team",
-    body: "Volume pricing, security reviews and procurement paperwork for teams of 50 or more.",
-    email: "sales@ledgerline.app",
-    phone: "+1 (646) 555-0190",
-    placeholder: "We have 120 finance users across 3 entities and need SSO...",
+    title: "Start a project with Designali",
+    body: "Brand identity, UI/UX design, web design and Next.js development, scoped by Ali Imam.",
+    email: "hello@designali.com",
+    phone: "Book a 30-minute call",
+    placeholder: "We need a brand identity and a Next.js website for our launch in...",
     response: "Replies in ~2 hours",
   },
   {
     id: "support",
     label: "Support",
     icon: LifeBuoy,
-    title: "Get help from a product specialist",
-    body: "Stuck on an import, a sync or a report? Include your workspace URL so we can look right away.",
-    email: "help@ledgerline.app",
-    phone: "+1 (646) 555-0144",
-    placeholder: "Our bank feed stopped syncing on Tuesday and shows error 4021...",
+    title: "Get help with templates and blocks",
+    body: "Stuck installing a block, an icon pack or a template? Include the page URL so we can look right away.",
+    email: "support@designali.com",
+    phone: "Read the docs",
+    placeholder: "The hero block from /blocks is not picking up my Tailwind CSS theme...",
     response: "Replies in ~30 minutes",
   },
   {
     id: "press",
     label: "Press",
     icon: Newspaper,
-    title: "Media and analyst enquiries",
-    body: "Interviews, data requests and brand assets. We aim to respond before your deadline.",
-    email: "press@ledgerline.app",
-    phone: "+1 (646) 555-0102",
-    placeholder: "I'm writing a piece on small business cash flow and would like...",
+    title: "Media and interview enquiries",
+    body: "Interviews with Ali Imam, Designali brand assets and project features. We aim to respond before your deadline.",
+    email: "ali@designali.com",
+    phone: "Download brand assets",
+    placeholder: "I'm writing a piece on design engineering and would like...",
     response: "Replies same business day",
   },
 ]
@@ -97,7 +103,7 @@ export default function Contact08() {
                 <Mail className="size-4 text-muted-foreground" />
                 {dept.email}
               </a>
-              <a href="#" className="flex items-center gap-3 hover:underline">
+              <a href="https://cal.com/aliimam/30min" className="flex items-center gap-3 hover:underline">
                 <Phone className="size-4 text-muted-foreground" />
                 {dept.phone}
               </a>
@@ -112,11 +118,11 @@ export default function Contact08() {
             {dept.id === "sales" && (
               <div className="grid gap-4 sm:grid-cols-2">
                 <Input placeholder="Company" className="h-11" />
-                <Input placeholder="Number of seats" inputMode="numeric" className="h-11" />
+                <Input placeholder="Budget (USD)" inputMode="numeric" className="h-11" />
               </div>
             )}
             {dept.id === "support" && (
-              <Input placeholder="Workspace URL, e.g. acme.ledgerline.app" className="h-11" />
+              <Input placeholder="Page URL, e.g. designali.com/blocks/hero" className="h-11" />
             )}
             {dept.id === "press" && (
               <div className="grid gap-4 sm:grid-cols-2">

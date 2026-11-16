@@ -1,4 +1,8 @@
-import { CreditCardIcon, LandmarkIcon, WalletIcon } from "lucide-react"
+import {
+  CreditCard as CreditCardIcon,
+  Landmark as LandmarkIcon,
+  Wallet as WalletIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Input } from "@workspace/ui/components/input"
@@ -40,7 +44,7 @@ export default function PaymentMethodTabs() {
       </TabsContent>
       <TabsContent value="bank" className="text-muted-foreground">
         Transfer to IBAN DE00 1234 5678 9000 using reference{" "}
-        <span className="font-mono text-foreground">ORD-5531</span>.
+        <span className="font-mono text-foreground">DA-5531</span>.
       </TabsContent>
       <TabsContent value="wallet" className="text-muted-foreground">
         You&apos;ll be redirected to confirm the payment in your wallet app.

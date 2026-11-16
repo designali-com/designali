@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { Trash2Icon } from "lucide-react"
+import {
+  Trash2 as Trash2Icon,
+} from "@designali/icons"
 
 import {
   AlertDialog,
@@ -18,7 +20,7 @@ import { Button } from "@workspace/ui/components/button"
 import { Field, FieldLabel } from "@workspace/ui/components/field"
 import { Input } from "@workspace/ui/components/input"
 
-const projectName = "orbit-dashboard"
+const projectName = "designali-portfolio"
 
 export default function TypeToConfirmDelete() {
   const [value, setValue] = React.useState("")

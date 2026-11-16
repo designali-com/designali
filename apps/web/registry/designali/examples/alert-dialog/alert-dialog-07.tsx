@@ -1,4 +1,6 @@
-import { CreditCardIcon } from "lucide-react"
+import {
+  CreditCard as CreditCardIcon,
+} from "@designali/icons"
 
 import {
   AlertDialog,
@@ -25,10 +27,10 @@ export default function CancelSubscriptionDialog() {
           <AlertDialogMedia>
             <CreditCardIcon />
           </AlertDialogMedia>
-          <AlertDialogTitle>Cancel your Pro plan?</AlertDialogTitle>
+          <AlertDialogTitle>Cancel your Designali Pro plan?</AlertDialogTitle>
           <AlertDialogDescription>
-            You&apos;ll keep Pro features until June 30. After that your
-            workspace moves to the Free plan.
+            You&apos;ll keep Pro templates and blocks until June 30. After that
+            your account moves to the Free plan.
           </AlertDialogDescription>
         </AlertDialogHeader>
         <AlertDialogFooter>

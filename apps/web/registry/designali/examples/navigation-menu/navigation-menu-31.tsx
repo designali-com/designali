@@ -1,4 +1,8 @@
-import { AwardIcon, CalendarDaysIcon, MessagesSquareIcon } from "lucide-react"
+import {
+  Award as AwardIcon,
+  CalendarDays as CalendarDaysIcon,
+  MessagesSquare as MessagesSquareIcon,
+} from "@designali/icons"
 
 import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
 import {

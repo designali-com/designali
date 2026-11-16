@@ -1,11 +1,11 @@
 import {
-  CopyIcon,
-  EllipsisVerticalIcon,
-  EyeOffIcon,
-  FolderPlusIcon,
-  PencilIcon,
-  Trash2Icon,
-} from "lucide-react"
+  Copy as CopyIcon,
+  EllipsisVertical as EllipsisVerticalIcon,
+  EyeOff as EyeOffIcon,
+  FolderPlus as FolderPlusIcon,
+  Pencil as PencilIcon,
+  Trash2 as Trash2Icon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -39,7 +39,7 @@ export default function ActionSheetDrawer() {
         <div className="mx-auto flex w-full max-w-sm flex-col gap-2 p-3">
           <div className="flex flex-col overflow-hidden border bg-popover">
             <DrawerHeader className="border-b pb-3">
-              <DrawerTitle>IMG_2041.heic</DrawerTitle>
+              <DrawerTitle>designali-hero.jpg</DrawerTitle>
               <DrawerDescription>Taken Oct 3 · 4.1 MB</DrawerDescription>
             </DrawerHeader>
             {actions.map((action) => (

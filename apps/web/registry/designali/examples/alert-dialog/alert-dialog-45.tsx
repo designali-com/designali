@@ -1,4 +1,6 @@
-import { Trash2Icon } from "lucide-react"
+import {
+  Trash2 as Trash2Icon,
+} from "@designali/icons"
 
 import {
   AlertDialog,
@@ -34,7 +36,7 @@ export default function ChatDeleteMessageScope() {
             <AlertDialogHeader>
               <AlertDialogTitle>Delete message?</AlertDialogTitle>
               <AlertDialogDescription>
-                Deleting for everyone removes it from Jonah&apos;s chat too.
+                Deleting for everyone removes it from Ali&apos;s chat too.
               </AlertDialogDescription>
             </AlertDialogHeader>
             <AlertDialogFooter>
@@ -49,7 +51,7 @@ export default function ChatDeleteMessageScope() {
           </AlertDialogContent>
         </AlertDialog>
         <div className="max-w-60 bg-primary px-3 py-2 text-sm text-primary-foreground">
-          Sending the venue deposit now, can you double-check the date?
+          Sending the Figma file now, can you double-check the hero section?
         </div>
       </div>
       <span className="text-[10px] text-muted-foreground">

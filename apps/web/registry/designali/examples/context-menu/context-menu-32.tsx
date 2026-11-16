@@ -2,13 +2,13 @@
 
 import * as React from "react"
 import {
-  GaugeIcon,
-  LinkIcon,
-  PictureInPicture2Icon,
-  PlayCircleIcon,
-  RepeatIcon,
-  SlidersHorizontalIcon,
-} from "lucide-react"
+  Gauge as GaugeIcon,
+  Link as LinkIcon,
+  PictureInPicture2 as PictureInPicture2Icon,
+  CirclePlay as PlayCircleIcon,
+  Repeat as RepeatIcon,
+  SlidersHorizontal as SlidersHorizontalIcon,
+} from "@designali/icons"
 
 import {
   ContextMenu,

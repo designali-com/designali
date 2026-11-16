@@ -2,13 +2,13 @@
 
 import * as React from "react"
 import {
-  ClipboardPasteIcon,
-  Columns2Icon,
-  CopyIcon,
-  EraserIcon,
-  Rows2Icon,
-  SquareIcon,
-} from "lucide-react"
+  ClipboardPaste as ClipboardPasteIcon,
+  Columns2 as Columns2Icon,
+  Copy as CopyIcon,
+  Eraser as EraserIcon,
+  Rows2 as Rows2Icon,
+  Square as SquareIcon,
+} from "@designali/icons"
 
 import {
   ContextMenu,
@@ -23,7 +23,7 @@ import {
 const initialLines = [
   "$ pnpm dev",
   "▲ Next.js ready on http://localhost:3000",
-  "✓ Compiled /dashboard in 412ms",
+  "✓ Compiled /templates in 412ms",
   "GET /api/health 200 in 8ms",
 ]
 

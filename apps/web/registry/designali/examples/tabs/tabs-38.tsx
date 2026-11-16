@@ -1,9 +1,9 @@
 import {
-  LaptopIcon,
-  MonitorSmartphoneIcon,
-  ShieldCheckIcon,
-  SmartphoneIcon,
-} from "lucide-react"
+  Laptop as LaptopIcon,
+  MonitorSmartphone as MonitorSmartphoneIcon,
+  ShieldCheck as ShieldCheckIcon,
+  Smartphone as SmartphoneIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import { Button } from "@workspace/ui/components/button"

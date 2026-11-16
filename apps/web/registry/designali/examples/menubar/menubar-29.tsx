@@ -1,16 +1,16 @@
 import {
-  BoxesIcon,
-  DownloadIcon,
-  ListFilterIcon,
-  PackageIcon,
-  PlusIcon,
-  ShoppingBagIcon,
-  TagsIcon,
-  TicketPercentIcon,
-  TruckIcon,
-  UserPlusIcon,
-  UsersIcon,
-} from "lucide-react"
+  Boxes as BoxesIcon,
+  Download as DownloadIcon,
+  ListFilter as ListFilterIcon,
+  Package as PackageIcon,
+  Plus as PlusIcon,
+  ShoppingBag as ShoppingBagIcon,
+  Tags as TagsIcon,
+  TicketPercent as TicketPercentIcon,
+  Truck as TruckIcon,
+  UserPlus as UserPlusIcon,
+  Users as UsersIcon,
+} from "@designali/icons"
 
 import {
   Menubar,

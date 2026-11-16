@@ -1,4 +1,8 @@
-import { CircleAlertIcon, CircleCheckIcon, RocketIcon } from "lucide-react"
+import {
+  CircleAlert as CircleAlertIcon,
+  CircleCheck as CircleCheckIcon,
+  Rocket as RocketIcon,
+} from "@designali/icons"
 
 import {
   AlertDialog,
@@ -29,7 +33,7 @@ export default function PublishReleaseChecklist() {
       </AlertDialogTrigger>
       <AlertDialogContent>
         <AlertDialogHeader>
-          <AlertDialogTitle>Publish v2.4.0 to npm?</AlertDialogTitle>
+          <AlertDialogTitle>Publish @designali/icons v2.4.0 to npm?</AlertDialogTitle>
           <AlertDialogDescription>
             Published versions can be deprecated but never overwritten.
           </AlertDialogDescription>

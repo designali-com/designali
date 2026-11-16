@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { PlusIcon, XIcon } from "lucide-react"
+import {
+  Plus as PlusIcon,
+  X as XIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -25,7 +28,7 @@ export default function TeamInviteRows() {
     <FieldSet className="w-full max-w-md">
       <FieldLegend>Invite teammates</FieldLegend>
       <FieldDescription>
-        They&apos;ll get an email with a link to join Orbit Analytics.
+        They&apos;ll get an email with a link to join Designali Studio.
       </FieldDescription>
       <FieldGroup className="gap-2">
         {rows.map((row, index) => (
@@ -36,7 +39,7 @@ export default function TeamInviteRows() {
             <Input
               id={"invite-" + row.id}
               type="email"
-              placeholder="name@company.com"
+              placeholder="name@designali.com"
               className="flex-1"
             />
             <NativeSelect

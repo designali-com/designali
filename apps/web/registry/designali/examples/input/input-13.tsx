@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { CircleCheckIcon } from "lucide-react"
+import {
+  CircleCheck as CircleCheckIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Input } from "@workspace/ui/components/input"
@@ -11,9 +13,9 @@ export default function NewsletterSignupInput() {
 
   return (
     <div className="w-full max-w-sm border p-4">
-      <p className="text-sm font-medium">The Friday Digest</p>
+      <p className="text-sm font-medium">Designali Notes</p>
       <p className="mb-3 text-xs text-muted-foreground">
-        One email a week with product updates and tips.
+        One email a week with new templates, blocks and design tips.
       </p>
       {done ? (
         <p className="flex items-center gap-2 text-xs text-emerald-600">

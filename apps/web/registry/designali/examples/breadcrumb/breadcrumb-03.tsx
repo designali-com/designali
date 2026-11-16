@@ -1,5 +1,8 @@
 import Link from "next/link";
-import { ChevronDownIcon, DotIcon } from "lucide-react";
+import {
+  ChevronDown as ChevronDownIcon,
+  Dot as DotIcon,
+} from "@designali/icons"
 
 import {
   Breadcrumb,

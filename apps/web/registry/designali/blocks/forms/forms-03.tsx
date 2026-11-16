@@ -13,17 +13,17 @@ import { Textarea } from "@workspace/ui/components/textarea"
 const notifications = [
   {
     title: "Product updates",
-    description: "Release notes and new features, once a month.",
+    description: "New Designali templates, blocks and icons, once a month.",
     enabled: true,
   },
   {
     title: "Comment mentions",
-    description: "When someone mentions you in a file or thread.",
+    description: "When Ali Imam or a teammate mentions you on a project.",
     enabled: true,
   },
   {
     title: "Weekly digest",
-    description: "A summary of activity across your projects.",
+    description: "A summary of activity across your Designali projects.",
     enabled: false,
   },
 ]
@@ -35,7 +35,7 @@ export default function Forms03() {
         <div className="mb-10 border-b border-border pb-6">
           <h2 className="text-3xl font-semibold tracking-tight">Settings</h2>
           <p className="mt-2 text-sm text-muted-foreground">
-            Manage your public profile and how we contact you.
+            Manage your Designali profile and how we contact you.
           </p>
         </div>
 
@@ -51,11 +51,11 @@ export default function Forms03() {
               <div className="grid gap-5 sm:grid-cols-2">
                 <div className="space-y-2">
                   <Label htmlFor="f3-first">First name</Label>
-                  <Input id="f3-first" defaultValue="Jonah" className="h-10" />
+                  <Input id="f3-first" defaultValue="Ali" className="h-10" />
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="f3-last">Last name</Label>
-                  <Input id="f3-last" defaultValue="Okafor" className="h-10" />
+                  <Input id="f3-last" defaultValue="Imam" className="h-10" />
                 </div>
               </div>
               <div className="space-y-2">
@@ -63,14 +63,14 @@ export default function Forms03() {
                 <Textarea
                   id="f3-bio"
                   rows={4}
-                  defaultValue="Type designer and brand consultant based in Lagos. Currently working on a variable grotesk for West African languages."
+                  defaultValue="Design engineer and founder of Designali. I design and build digital experiences that look great, feel intuitive, and work beautifully."
                 />
               </div>
               <div className="space-y-2">
                 <Label htmlFor="f3-timezone">Timezone</Label>
-                <NativeSelect id="f3-timezone" className="w-full" defaultValue="wat">
+                <NativeSelect id="f3-timezone" className="w-full" defaultValue="ist">
                   <NativeSelectOption value="gmt">GMT (London)</NativeSelectOption>
-                  <NativeSelectOption value="wat">WAT (Lagos)</NativeSelectOption>
+                  <NativeSelectOption value="ist">IST (Kolkata)</NativeSelectOption>
                   <NativeSelectOption value="est">EST (New York)</NativeSelectOption>
                   <NativeSelectOption value="jst">JST (Tokyo)</NativeSelectOption>
                 </NativeSelect>

@@ -2,13 +2,13 @@
 
 import * as React from "react"
 import {
-  AsteriskIcon,
-  ExternalLinkIcon,
-  KeyRoundIcon,
-  RefreshCwIcon,
-  TrashIcon,
-  UserIcon,
-} from "lucide-react"
+  Asterisk as AsteriskIcon,
+  ExternalLink as ExternalLinkIcon,
+  KeyRound as KeyRoundIcon,
+  RefreshCw as RefreshCwIcon,
+  Trash as TrashIcon,
+  User as UserIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import {
@@ -22,9 +22,9 @@ import {
 } from "@workspace/ui/components/context-menu"
 
 const entries = [
-  { site: "Ledgerly", user: "finance@fieldnote.io", strength: "Strong" },
-  { site: "Trackwise", user: "maya.chen", strength: "Weak" },
-  { site: "Mailroom", user: "maya@fieldnote.io", strength: "Strong" },
+  { site: "Figma", user: "ali@designali.com", strength: "Strong" },
+  { site: "Vercel", user: "designali", strength: "Weak" },
+  { site: "GitHub", user: "hello@designali.com", strength: "Strong" },
 ]
 
 export default function PasswordVaultMenu() {

@@ -1,7 +1,10 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { ChevronLeft, ChevronRight } from "lucide-react"
+import {
+  ChevronLeft,
+  ChevronRight,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 

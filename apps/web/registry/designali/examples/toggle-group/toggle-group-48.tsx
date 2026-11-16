@@ -8,9 +8,9 @@ import {
 } from "@workspace/ui/components/toggle-group"
 
 const options = [
-  { value: "tue", label: "Tuesday offsite", votes: 6 },
-  { value: "wed", label: "Wednesday offsite", votes: 9 },
-  { value: "fri", label: "Friday offsite", votes: 4 },
+  { value: "tue", label: "Tuesday studio day", votes: 6 },
+  { value: "wed", label: "Wednesday studio day", votes: 9 },
+  { value: "fri", label: "Friday studio day", votes: 4 },
 ]
 
 export default function PollVoteToggleGroup() {
@@ -20,7 +20,7 @@ export default function PollVoteToggleGroup() {
   return (
     <div className="flex w-full max-w-sm flex-col gap-3 border p-4">
       <span className="text-sm font-medium">
-        When should we hold the Q3 offsite?
+        When should the Designali team meet?
       </span>
       <ToggleGroup
         orientation="vertical"

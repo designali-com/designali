@@ -1,10 +1,10 @@
 import {
-  ClockIcon,
-  CreditCardIcon,
-  PackageCheckIcon,
-  TruckIcon,
-  Undo2Icon,
-} from "lucide-react"
+  Clock as ClockIcon,
+  CreditCard as CreditCardIcon,
+  PackageCheck as PackageCheckIcon,
+  Palette as PaletteIcon,
+  Undo2 as Undo2Icon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 
@@ -21,8 +21,8 @@ const statuses = [
     className: "bg-blue-50 text-blue-700 dark:bg-blue-950 dark:text-blue-300",
   },
   {
-    label: "Shipped",
-    icon: TruckIcon,
+    label: "In design",
+    icon: PaletteIcon,
     className:
       "bg-violet-50 text-violet-700 dark:bg-violet-950 dark:text-violet-300",
   },

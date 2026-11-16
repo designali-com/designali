@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { ChevronDownIcon, FileCheckIcon } from "lucide-react"
+import {
+  ChevronDown as ChevronDownIcon,
+  FileCheck as FileCheckIcon,
+} from "@designali/icons"
 
 import {
   Alert,
@@ -12,9 +15,9 @@ import { Button } from "@workspace/ui/components/button"
 import { cn } from "@workspace/ui/lib/utils"
 
 const skipped = [
-  { row: 14, reason: "Missing email" },
+  { row: 14, reason: "Missing SVG path" },
   { row: 87, reason: "Duplicate of row 12" },
-  { row: 203, reason: "Invalid phone number" },
+  { row: 203, reason: "Invalid icon name" },
 ]
 
 export default function AlertImportResult() {
@@ -23,11 +26,11 @@ export default function AlertImportResult() {
   return (
     <Alert variant="success" className="max-w-md">
       <FileCheckIcon />
-      <AlertTitle>Imported 1,248 contacts</AlertTitle>
+      <AlertTitle>Imported 1,248 icons into @designali/icons</AlertTitle>
       <AlertDescription>
         <p>
           {skipped.length} rows were skipped and can be fixed in your
-          spreadsheet.
+          icon manifest.
         </p>
         <Button
           size="xs"

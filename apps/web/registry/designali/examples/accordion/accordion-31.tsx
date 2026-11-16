@@ -1,4 +1,8 @@
-import { ChevronDownIcon, CircleCheckIcon, CirclePlayIcon } from "lucide-react"
+import {
+  ChevronDown as ChevronDownIcon,
+  CircleCheck as CircleCheckIcon,
+  CirclePlay as CirclePlayIcon,
+} from "@designali/icons"
 
 import {
   Accordion,
@@ -10,19 +14,19 @@ import {
 const modules = [
   {
     value: "m1",
-    title: "Foundations of typography",
+    title: "Designali: design se code tak",
     lessons: [
-      { title: "Anatomy of a typeface", minutes: 8, done: true },
-      { title: "Pairing fonts", minutes: 12, done: true },
-      { title: "Measure and rhythm", minutes: 10, done: false },
+      { title: "Typography in UI design", minutes: 8, done: true },
+      { title: "Brand identity basics", minutes: 12, done: true },
+      { title: "Designing in Figma", minutes: 10, done: false },
     ],
   },
   {
     value: "m2",
-    title: "Layout and grids",
+    title: "From Figma to Next.js",
     lessons: [
-      { title: "Column grids", minutes: 14, done: false },
-      { title: "Baseline grids", minutes: 9, done: false },
+      { title: "Building blocks with Tailwind CSS", minutes: 14, done: false },
+      { title: "Shipping to Vercel", minutes: 9, done: false },
     ],
   },
 ]

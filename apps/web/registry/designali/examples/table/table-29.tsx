@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { Columns3Icon } from "lucide-react"
+import {
+  Columns3 as Columns3Icon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -27,20 +29,20 @@ const columns = [
 
 const users = [
   {
-    name: "Ivy Chen",
-    email: "ivy@mapleworks.co",
+    name: "Sara Khan",
+    email: "sara@example.com",
     country: "Canada",
     plan: "Pro",
   },
   {
-    name: "Jonas Berg",
-    email: "jonas@fjord.studio",
+    name: "Omar Ali",
+    email: "omar@example.com",
     country: "Norway",
     plan: "Free",
   },
   {
-    name: "Lina Haddad",
-    email: "lina@cedar.dev",
+    name: "Priya Shah",
+    email: "priya@example.com",
     country: "Lebanon",
     plan: "Team",
   },

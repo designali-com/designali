@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { MoonStarIcon } from "lucide-react"
+import {
+  MoonStar as MoonStarIcon,
+} from "@designali/icons"
 
 import { Kbd, KbdGroup } from "@workspace/ui/components/kbd"
 import { Toggle } from "@workspace/ui/components/toggle"

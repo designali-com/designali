@@ -1,4 +1,6 @@
-import { FileDiffIcon } from "lucide-react"
+import {
+  FileDiff as FileDiffIcon,
+} from "@designali/icons"
 
 import {
   ResizableHandle,

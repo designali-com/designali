@@ -1,4 +1,7 @@
-import { FolderOpenIcon, PlusIcon } from "lucide-react"
+import {
+  FolderOpen as FolderOpenIcon,
+  Plus as PlusIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -39,7 +42,7 @@ export default function EmptyStateTable() {
                   </EmptyMedia>
                   <EmptyTitle>No projects yet</EmptyTitle>
                   <EmptyDescription>
-                    Create a project to start tracking work.
+                    Create a Designali project to start tracking design and code work.
                   </EmptyDescription>
                 </EmptyHeader>
                 <EmptyContent>

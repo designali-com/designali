@@ -1,6 +1,8 @@
 "use client"
 
-import { FileSpreadsheetIcon } from "lucide-react"
+import {
+  FileSpreadsheet as FileSpreadsheetIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Toaster, createToastManager } from "@workspace/ui/components/toast"
@@ -29,7 +31,7 @@ export default function CsvImportResultToast() {
           onClick={() =>
             notify.promise(importRows(), {
               loading: {
-                title: "Importing customers",
+                title: "Importing Designali customers",
                 description: "Matching columns...",
               },
               success: (r: { imported: number; skipped: number }) => ({

@@ -1,4 +1,7 @@
-import { FileCodeIcon, GitMergeIcon } from "lucide-react"
+import {
+  FileCode as FileCodeIcon,
+  GitMerge as GitMergeIcon,
+} from "@designali/icons"
 
 import {
   Alert,
@@ -7,7 +10,7 @@ import {
 } from "@workspace/ui/components/alert"
 import { Button } from "@workspace/ui/components/button"
 
-const files = ["src/routes/checkout.tsx", "src/lib/pricing.ts"]
+const files = ["app/templates/page.tsx", "registry/blocks/pricing.tsx"]
 
 export default function AlertMergeConflict() {
   return (

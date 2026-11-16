@@ -1,4 +1,6 @@
-import { DoorOpenIcon } from "lucide-react"
+import {
+  DoorOpen as DoorOpenIcon,
+} from "@designali/icons"
 
 import {
   AlertDialog,
@@ -26,9 +28,9 @@ export default function LeaveWorkspaceDialog() {
           <AlertDialogMedia className="bg-destructive/10 text-destructive">
             <DoorOpenIcon />
           </AlertDialogMedia>
-          <AlertDialogTitle>Leave Northwind Studio?</AlertDialogTitle>
+          <AlertDialogTitle>Leave the Designali studio workspace?</AlertDialogTitle>
           <AlertDialogDescription>
-            You will lose access to 12 projects and 3 shared boards. An admin
+            You will lose access to 12 client projects and 3 shared Figma boards. An admin
             will need to invite you again.
           </AlertDialogDescription>
         </AlertDialogHeader>

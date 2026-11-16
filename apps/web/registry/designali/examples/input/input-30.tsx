@@ -6,7 +6,7 @@ import { Field, FieldError, FieldLabel } from "@workspace/ui/components/field"
 import { Input } from "@workspace/ui/components/input"
 
 export default function ColorHexInput() {
-  const [color, setColor] = React.useState("#6366f1")
+  const [color, setColor] = React.useState("#00a8ff")
   const valid = /^#[0-9a-f]{6}$/i.test(color)
 
   return (

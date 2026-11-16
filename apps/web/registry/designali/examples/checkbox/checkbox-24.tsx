@@ -14,31 +14,31 @@ import { Field, FieldGroup, FieldLabel } from "@workspace/ui/components/field"
 import { Progress } from "@workspace/ui/components/progress"
 
 const items = [
-  "Passport",
-  "Phone charger",
-  "Rain jacket",
-  "Hiking boots",
-  "Sunscreen",
-  "Travel adapter",
+  "Figma file",
+  "Next.js build",
+  "Preview images",
+  "Docs page",
+  "Changelog",
+  "Pricing update",
 ]
 
 export default function PackingChecklistProgress() {
   const [packed, setPacked] = React.useState<string[]>([
-    "Passport",
-    "Phone charger",
+    "Figma file",
+    "Next.js build",
   ])
   const percent = Math.round((packed.length / items.length) * 100)
 
   return (
     <Card className="w-full max-w-xs">
       <CardHeader>
-        <CardTitle>Lisbon trip · Packing</CardTitle>
+        <CardTitle>Designali template · Launch</CardTitle>
         <CardDescription>
-          {packed.length} of {items.length} packed
+          {packed.length} of {items.length} done
         </CardDescription>
       </CardHeader>
       <CardContent className="flex flex-col gap-4">
-        <Progress value={percent} aria-label="Packing progress" />
+        <Progress value={percent} aria-label="Launch progress" />
         <FieldGroup className="gap-2.5">
           {items.map((item) => (
             <Field key={item} orientation="horizontal">

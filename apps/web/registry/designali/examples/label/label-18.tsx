@@ -1,4 +1,6 @@
-import { UploadCloudIcon } from "lucide-react"
+import {
+  CloudUpload as UploadCloudIcon,
+} from "@designali/icons"
 
 import { Label } from "@workspace/ui/components/label"
 

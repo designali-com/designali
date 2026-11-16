@@ -1,7 +1,9 @@
 "use client"
 
 import { REGEXP_ONLY_DIGITS } from "input-otp"
-import { CircleHelpIcon } from "lucide-react"
+import {
+  CircleQuestionMark as CircleHelpIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Field, FieldLabel } from "@workspace/ui/components/field"

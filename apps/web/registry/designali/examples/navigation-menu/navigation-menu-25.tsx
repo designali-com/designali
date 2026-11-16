@@ -1,4 +1,6 @@
-import { WavesIcon } from "lucide-react"
+import {
+  Waves as WavesIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -24,7 +26,7 @@ export default function HeaderWithAuthButtons() {
               <NavigationMenuTrigger>Product</NavigationMenuTrigger>
               <NavigationMenuContent>
                 <ul className="flex w-52 flex-col gap-1">
-                  {["Inbox", "Automations", "Reports"].map((p) => (
+                  {["Templates", "Blocks", "Icons"].map((p) => (
                     <li key={p}>
                       <NavigationMenuLink href="#">{p}</NavigationMenuLink>
                     </li>

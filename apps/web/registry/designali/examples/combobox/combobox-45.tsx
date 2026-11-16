@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { MapPinIcon } from "lucide-react"
+import {
+  MapPin as MapPinIcon,
+} from "@designali/icons"
 
 import {
   Combobox,
@@ -31,7 +33,7 @@ export default function AddressAutocomplete() {
   const [address, setAddress] = React.useState<Address | null>(null)
   return (
     <Field className="w-full max-w-sm">
-      <FieldLabel htmlFor="address">Delivery address</FieldLabel>
+      <FieldLabel htmlFor="address">Billing address for your Designali invoice</FieldLabel>
       <Combobox
         items={addresses}
         value={address}

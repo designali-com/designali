@@ -2,14 +2,14 @@
 
 import * as React from "react"
 import {
-  BellOffIcon,
-  CalendarIcon,
-  CheckCheckIcon,
-  GitPullRequestIcon,
-  MessageSquareIcon,
-  SettingsIcon,
-  XIcon,
-} from "lucide-react"
+  BellOff as BellOffIcon,
+  Calendar as CalendarIcon,
+  CheckCheck as CheckCheckIcon,
+  GitPullRequest as GitPullRequestIcon,
+  MessageSquare as MessageSquareIcon,
+  Settings as SettingsIcon,
+  X as XIcon,
+} from "@designali/icons"
 
 import {
   ContextMenu,
@@ -29,19 +29,19 @@ const items = [
   {
     id: 1,
     icon: GitPullRequestIcon,
-    text: "Maya requested your review on #1284",
+    text: "Ali requested your review on Blocks #1284",
     time: "4m",
   },
   {
     id: 2,
     icon: MessageSquareIcon,
-    text: "Jonah replied in Pricing page copy",
+    text: "A client replied in Brand identity feedback",
     time: "1h",
   },
   {
     id: 3,
     icon: CalendarIcon,
-    text: "Design crit moved to 3:30 PM",
+    text: "Designali design crit moved to 3:30 PM",
     time: "3h",
   },
 ]

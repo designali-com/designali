@@ -1,7 +1,12 @@
 "use client"
 
 import * as React from "react"
-import { BellIcon, HashIcon, MailIcon, MessageSquareIcon } from "lucide-react"
+import {
+  Bell as BellIcon,
+  Hash as HashIcon,
+  Mail as MailIcon,
+  MessageSquare as MessageSquareIcon,
+} from "@designali/icons"
 
 import {
   Menubar,

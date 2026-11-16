@@ -1,13 +1,15 @@
-import { ArrowUpRight } from "lucide-react"
+import {
+  ArrowUpRight,
+} from "@designali/icons"
 
 const rows = [
-  { client: "Juniper Health", project: "Clinician scheduling", type: "Product", role: "Lead", year: "2026", outcome: "-31% no-shows" },
-  { client: "Oxbow Coffee", project: "Subscription relaunch", type: "E-commerce", role: "Design + build", year: "2026", outcome: "4,200 subscribers" },
-  { client: "Stillwater Press", project: "Editorial identity", type: "Brand", role: "Art direction", year: "2025", outcome: "D&AD shortlist" },
-  { client: "Fathom Robotics", project: "Operator console", type: "Product", role: "Lead", year: "2025", outcome: "2x task speed" },
-  { client: "Wren & Finch", project: "Lookbook site", type: "Web", role: "Design", year: "2025", outcome: "+22% conversion" },
-  { client: "Cobalt Energy", project: "Annual report", type: "Print", role: "Design", year: "2024", outcome: "Printed 12,000" },
-  { client: "Meadowlark", project: "Kids reading app", type: "Product", role: "UX research", year: "2024", outcome: "4.8 App rating" },
+  { client: "Designali", project: "Block library", type: "Product", role: "Design + build", year: "Live", outcome: "460+ blocks" },
+  { client: "Designali", project: "Icon library", type: "Product", role: "Icon design", year: "Live", outcome: "4000+ icons" },
+  { client: "Dalim Agency", project: "Agency identity", type: "Brand", role: "Art direction", year: "Archive", outcome: "Brand system" },
+  { client: "Dalim UI", project: "Component library", type: "Product", role: "UI/UX + code", year: "Archive", outcome: "Became Designali" },
+  { client: "Dalim Works", project: "Portfolio site", type: "Web", role: "Design", year: "Archive", outcome: "Next.js build" },
+  { client: "Dalim Graphic", project: "Graphic resources", type: "Graphic", role: "Design", year: "Archive", outcome: "Free downloads" },
+  { client: "Dalim Fonts", project: "Type foundry site", type: "Web", role: "UX + UI", year: "Archive", outcome: "Custom typefaces" },
 ]
 
 export default function Portfolio11() {
@@ -16,13 +18,13 @@ export default function Portfolio11() {
       <div className="mx-auto max-w-6xl px-6">
         <div className="flex flex-col justify-between gap-4 md:flex-row md:items-end">
           <div>
-            <h2 className="text-3xl font-medium tracking-tight md:text-5xl">Project index</h2>
+            <h2 className="text-3xl font-medium tracking-tight md:text-5xl">Designali project index</h2>
             <p className="mt-2 text-sm text-muted-foreground">
-              {rows.length} selected projects. Full archive available on request.
+              {rows.length} selected projects. Full archive on designali.com/work.
             </p>
           </div>
-          <a href="#" className="text-sm underline underline-offset-4">
-            Download PDF portfolio
+          <a href="/work" className="text-sm underline underline-offset-4">
+            View all work
           </a>
         </div>
 
@@ -32,7 +34,7 @@ export default function Portfolio11() {
             <span>Project</span>
             <span>Discipline</span>
             <span>Role</span>
-            <span>Year</span>
+            <span>Status</span>
             <span>Outcome</span>
             <span />
           </div>

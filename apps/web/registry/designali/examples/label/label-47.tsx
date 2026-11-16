@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { FileTextIcon } from "lucide-react"
+import {
+  FileText as FileTextIcon,
+} from "@designali/icons"
 
 import { Checkbox } from "@workspace/ui/components/checkbox"
 import { Label } from "@workspace/ui/components/label"

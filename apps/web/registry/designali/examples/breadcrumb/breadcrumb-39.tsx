@@ -16,7 +16,7 @@ export default function UnderlineActiveBreadcrumb() {
             href="#"
             className="underline-offset-4 hover:underline"
           >
-            Journal
+            Blogs
           </BreadcrumbLink>
         </BreadcrumbItem>
         <BreadcrumbSeparator />
@@ -25,13 +25,13 @@ export default function UnderlineActiveBreadcrumb() {
             href="#"
             className="underline-offset-4 hover:underline"
           >
-            Travel
+            Design
           </BreadcrumbLink>
         </BreadcrumbItem>
         <BreadcrumbSeparator />
         <BreadcrumbItem>
           <BreadcrumbPage className="border-b-2 border-primary pb-0.5 font-medium">
-            Three days in Kyoto
+            Design se code tak
           </BreadcrumbPage>
         </BreadcrumbItem>
       </BreadcrumbList>

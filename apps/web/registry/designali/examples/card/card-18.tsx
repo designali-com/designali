@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { PlusIcon } from "lucide-react"
+import {
+  Plus as PlusIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -19,10 +21,10 @@ import { Progress } from "@workspace/ui/components/progress"
 import { cn } from "@workspace/ui/lib/utils"
 
 const initial = [
-  { id: 1, label: "Review onboarding copy", done: true },
-  { id: 2, label: "Export icons for Android", done: false },
-  { id: 3, label: "QA checkout on Safari", done: false },
-  { id: 4, label: "Write release notes", done: false },
+  { id: 1, label: "Review Designali landing page copy", done: true },
+  { id: 2, label: "Export @designali/icons SVG set", done: false },
+  { id: 3, label: "QA template checkout on Safari", done: false },
+  { id: 4, label: "Write blocks release notes", done: false },
 ]
 
 export default function TaskChecklistCard() {

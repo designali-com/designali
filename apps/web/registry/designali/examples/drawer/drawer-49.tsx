@@ -1,4 +1,9 @@
-import { CameraIcon, MicIcon, ShieldCheckIcon, VideoIcon } from "lucide-react"
+import {
+  Camera as CameraIcon,
+  Mic as MicIcon,
+  ShieldCheck as ShieldCheckIcon,
+  Video as VideoIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -16,7 +21,7 @@ const reasons = [
   {
     icon: CameraIcon,
     title: "Camera",
-    text: "So teammates can see you during standups.",
+    text: "So the Designali team can see you during client calls.",
   },
   {
     icon: MicIcon,

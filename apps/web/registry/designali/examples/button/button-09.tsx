@@ -1,4 +1,7 @@
-import { CheckIcon, SaveIcon } from "lucide-react"
+import {
+  Check as CheckIcon,
+  Save as SaveIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Spinner } from "@workspace/ui/components/spinner"

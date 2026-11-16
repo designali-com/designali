@@ -1,7 +1,11 @@
 "use client"
 
 import * as React from "react"
-import { ChartColumnIcon, InboxIcon, WorkflowIcon } from "lucide-react"
+import {
+  ChartColumn as ChartColumnIcon,
+  Inbox as InboxIcon,
+  Workflow as WorkflowIcon,
+} from "@designali/icons"
 
 import {
   Carousel,
@@ -17,21 +21,21 @@ import {
 const features = [
   {
     id: "inbox",
-    label: "Inbox",
+    label: "Requests",
     icon: InboxIcon,
-    body: "Every request from email, chat, and forms lands in one shared queue.",
+    body: "Every Designali project brief from hello@designali.com lands in one queue.",
   },
   {
     id: "rules",
-    label: "Rules",
+    label: "Workflow",
     icon: WorkflowIcon,
-    body: "Route, tag, and assign conversations automatically based on content.",
+    body: "Move work from Figma design to Next.js code with AI-assisted workflows.",
   },
   {
     id: "reports",
     label: "Reports",
     icon: ChartColumnIcon,
-    body: "Track response times and satisfaction across every channel.",
+    body: "Track template sales, block usage and icon downloads in one place.",
   },
 ]
 

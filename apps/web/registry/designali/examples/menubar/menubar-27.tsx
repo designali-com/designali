@@ -69,9 +69,9 @@ export default function TerminalAppMenubar() {
           profiles[profile]
         )}
       >
-        <p>~/projects/harbor $ pnpm test</p>
+        <p>~/projects/designali $ pnpm test</p>
         <p className="opacity-70">✓ 128 tests passed in 4.2s</p>
-        <p>~/projects/harbor $ _</p>
+        <p>~/projects/designali $ _</p>
       </div>
     </div>
   )

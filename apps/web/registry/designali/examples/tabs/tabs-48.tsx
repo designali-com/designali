@@ -1,4 +1,9 @@
-import { CloudIcon, CloudRainIcon, CloudSunIcon, SunIcon } from "lucide-react"
+import {
+  Cloud as CloudIcon,
+  CloudRain as CloudRainIcon,
+  CloudSun as CloudSunIcon,
+  Sun as SunIcon,
+} from "@designali/icons"
 
 import {
   Tabs,

@@ -5,7 +5,7 @@ export default function AssistantThinkingMessage() {
   return (
     <div className="flex w-full max-w-sm flex-col gap-3">
       <div className="ml-auto max-w-[80%] bg-primary px-3 py-2 text-sm text-primary-foreground">
-        Can you summarize last week&apos;s support tickets?
+        Can you summarize last week&apos;s designali.com support tickets?
       </div>
       <div className="flex items-start gap-2">
         <Avatar className="size-7">

@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { TerminalIcon } from "lucide-react"
+import {
+  Terminal as TerminalIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -12,10 +14,10 @@ import {
 } from "@workspace/ui/components/carousel"
 
 const managers = [
-  { id: "npm", cmd: "npm install @acme/charts" },
-  { id: "pnpm", cmd: "pnpm add @acme/charts" },
-  { id: "yarn", cmd: "yarn add @acme/charts" },
-  { id: "bun", cmd: "bun add @acme/charts" },
+  { id: "npm", cmd: "npm install @designali/icons" },
+  { id: "pnpm", cmd: "pnpm add @designali/icons" },
+  { id: "yarn", cmd: "yarn add @designali/icons" },
+  { id: "bun", cmd: "bun add @designali/icons" },
 ]
 
 export default function InstallCommandCarousel() {

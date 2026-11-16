@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { WebhookIcon } from "lucide-react"
+import {
+  Webhook as WebhookIcon,
+} from "@designali/icons"
 
 import {
   AlertDialog,
@@ -50,7 +52,7 @@ export default function AsyncConfirmWithSpinner() {
             </AlertDialogMedia>
             <AlertDialogTitle>Delete webhook endpoint?</AlertDialogTitle>
             <AlertDialogDescription>
-              Events will no longer be sent to https://hooks.fernway.dev/orders.
+              Events will no longer be sent to https://www.designali.com/api/hooks/orders.
             </AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>

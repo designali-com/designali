@@ -10,21 +10,21 @@ import {
 
 const projects = [
   {
-    project: "Mobile app",
-    owner: "Rhea Kapoor",
-    initials: "RK",
+    project: "Designali templates",
+    owner: "Ali Imam",
+    initials: "AI",
     updated: "2h ago",
   },
   {
-    project: "Marketing site",
-    owner: "Gus Lindgren",
-    initials: "GL",
+    project: "designali.com",
+    owner: "Sara",
+    initials: "SA",
     updated: "Yesterday",
   },
   {
-    project: "Data pipeline",
-    owner: "Amara Obi",
-    initials: "AO",
+    project: "@designali/icons",
+    owner: "Omar",
+    initials: "OM",
     updated: "Mar 14",
   },
 ]

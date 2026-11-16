@@ -68,12 +68,12 @@ import {
           </ContextMenuGroup>
           <ContextMenuSeparator />
           <ContextMenuGroup>
-            <ContextMenuRadioGroup value="pedro">
-              <ContextMenuLabel>People</ContextMenuLabel>
-              <ContextMenuRadioItem value="pedro">
-                Pedro Duarte
+            <ContextMenuRadioGroup value="ali">
+              <ContextMenuLabel>Designali team</ContextMenuLabel>
+              <ContextMenuRadioItem value="ali">
+                Ali Imam
               </ContextMenuRadioItem>
-              <ContextMenuRadioItem value="colm">Colm Tuite</ContextMenuRadioItem>
+              <ContextMenuRadioItem value="designer">Designer</ContextMenuRadioItem>
             </ContextMenuRadioGroup>
           </ContextMenuGroup>
         </ContextMenuContent>

@@ -2,10 +2,10 @@
 
 import * as React from "react"
 import {
-  ChevronRightIcon,
-  ChevronsDownUpIcon,
-  ChevronsUpDownIcon,
-} from "lucide-react"
+  ChevronRight as ChevronRightIcon,
+  ChevronsDownUp as ChevronsDownUpIcon,
+  ChevronsUpDown as ChevronsUpDownIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -18,17 +18,17 @@ const sections = [
   {
     id: "overview",
     title: "Overview",
-    body: "Kickoff is scheduled for March 3 with the full product team.",
+    body: "Kickoff with the client and Ali Imam is scheduled for March 3.",
   },
   {
     id: "scope",
     title: "Scope",
-    body: "Covers the checkout, account and order history screens.",
+    body: "Covers brand identity, UI/UX design and a Next.js website.",
   },
   {
     id: "risks",
     title: "Risks",
-    body: "Payment provider migration may slip by one sprint.",
+    body: "Content delivery from the client may slip by one week.",
   },
 ]
 

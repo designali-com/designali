@@ -1,5 +1,7 @@
 import { Fragment } from "react"
-import { GitBranchIcon } from "lucide-react"
+import {
+  GitBranch as GitBranchIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import {

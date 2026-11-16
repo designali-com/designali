@@ -21,7 +21,7 @@ export default function Analytics13() {
         <div className="grid gap-8 lg:grid-cols-[2.2fr_1fr]">
           <div className="border p-6 md:p-8">
             <div className="flex flex-wrap items-center justify-between gap-4">
-              <h2 className="text-lg font-medium">Orders per day: November vs October</h2>
+              <h2 className="text-lg font-medium">designali.com orders per day: November vs October</h2>
               <div className="flex items-center gap-5 text-xs text-muted-foreground">
                 <span className="flex items-center gap-2">
                   <span className="h-0.5 w-5 bg-chart-1" />
@@ -98,7 +98,7 @@ export default function Analytics13() {
                 +{lift.toFixed(1)}%
               </p>
               <p className="mt-3 text-sm text-muted-foreground">
-                Weekend dips are shallower since free returns launched on Oct 28.
+                Weekend dips are shallower since the free blocks library launched on Oct 28.
               </p>
             </div>
           </div>

@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { WandSparklesIcon } from "lucide-react"
+import {
+  WandSparkles as WandSparklesIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -21,7 +23,7 @@ export default function FeatureDiscoveryTooltip() {
           Auto layout
         </TooltipTrigger>
         <TooltipContent className="gap-2">
-          New: arrange frames in one click
+          New in Designali: arrange blocks in one click
           <Button size="xs" variant="secondary" onClick={() => setOpen(false)}>
             Got it
           </Button>

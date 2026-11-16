@@ -5,14 +5,14 @@ export default function GradientFadeSeparator() {
     <div className="flex w-full max-w-md flex-col items-center gap-6 text-center">
       <div className="flex flex-col gap-1">
         <span className="text-xs tracking-widest text-muted-foreground uppercase">
-          Chapter two
+          Case study
         </span>
-        <h3 className="text-xl font-semibold">The long way home</h3>
+        <h3 className="text-xl font-semibold">Dalim Agency, rebuilt</h3>
       </div>
       <Separator className="bg-transparent bg-linear-to-r from-transparent via-foreground/40 to-transparent" />
       <p className="text-sm text-muted-foreground">
-        By the time the train reached the coast, the storm had already passed
-        and the harbour lights were coming on one by one.
+        The old Dalim Agency site became a fast Next.js build, with a fresh
+        brand identity and a reusable design system behind it.
       </p>
     </div>
   )

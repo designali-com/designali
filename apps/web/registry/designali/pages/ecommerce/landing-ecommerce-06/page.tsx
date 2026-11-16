@@ -9,21 +9,22 @@ import {
   RotateCcw,
   Tag,
   Truck,
-} from "lucide-react"
+} from "@designali/icons"
 
+import { Logo } from "@/src/components/logo"
 import { Button } from "@workspace/ui/components/button"
 
-const navLinks = ["Shop", "New arrivals", "Bestsellers", "Our story", "Journal"]
+const navLinks = ["Store", "Templates", "Blocks", "Work", "Blog"]
 
 const logos = [
-  "Kinfolk",
-  "Dezeen",
-  "Elle Decor",
-  "Vogue",
-  "GQ",
-  "Wired",
-  "The Guardian",
-  "Monocle",
+  "Vercel",
+  "Stripe",
+  "shadcn/ui",
+  "Next.js",
+  "React",
+  "TypeScript",
+  "Tailwind CSS",
+  "Figma",
 ]
 
 const features = [
@@ -31,111 +32,111 @@ const features = [
     icon: Tag,
     title: "Fair, transparent prices",
     description:
-      "We show the true cost of every product, from materials to labour to shipping.",
+      "Fixed project quotes and simple one-time prices in the Designali store. No hidden fees.",
   },
   {
     icon: Headphones,
     title: "Real human support",
     description:
-      "Chat with our customer care team seven days a week. Average reply time is eight minutes.",
+      "Questions about a template or a project go straight to Ali at support@designali.com.",
   },
   {
     icon: Gift,
-    title: "Gift wrapping",
+    title: "Instant download",
     description:
-      "Add a handwritten note and gift wrap at checkout for any occasion, completely free.",
+      "Store purchases are available right away, with code, docs and Figma files in one place.",
   },
   {
     icon: Truck,
-    title: "Free shipping over $75",
+    title: "Store design and build",
     description:
-      "Fast, carbon-neutral delivery to your door, usually within two to four working days.",
+      "Designali designs and codes fast Next.js storefronts with product pages, carts and checkout flows that convert.",
   },
   {
     icon: RotateCcw,
-    title: "60-day returns",
+    title: "Own every file",
     description:
-      "Not quite right? Send it back within 60 days for a full refund, no questions asked.",
+      "You get the Figma files and the full codebase, with no platform lock-in and no monthly theme fees.",
   },
   {
     icon: Leaf,
-    title: "Responsibly sourced",
+    title: "Brand identity",
     description:
-      "Organic and recycled materials from certified suppliers we visit in person every year.",
+      "Logos, packaging graphics, colour and type that make a product brand feel premium from the first click.",
   },
 ]
 
 const stats = [
-  { value: "1%", label: "Of revenue to climate projects" },
-  { value: "250k+", label: "Happy customers" },
-  { value: "4.9/5", label: "From 18,000 reviews" },
-  { value: "48h", label: "Average dispatch time" },
+  { value: "240+", label: "Landing pages" },
+  { value: "460+", label: "Blocks in the store" },
+  { value: "4.9/5", label: "Average customer rating" },
+  { value: "48h", label: "Typical project reply time" },
 ]
 
 const steps = [
   {
-    title: "Designed in house",
+    title: "Designed in Figma",
     description:
-      "Our small design team develops every product over months of testing and refinement.",
+      "Every template, block and store starts as a carefully considered design by Ali Imam.",
   },
   {
-    title: "Made by experts",
+    title: "Coded in Next.js",
     description:
-      "Crafted by family-run workshops we have partnered with for years, paid fairly for their skill.",
+      "Designs become typed React and Tailwind CSS code, using semantic tokens and accessible components.",
   },
   {
     title: "Checked by hand",
     description:
-      "Every piece is inspected before it leaves our warehouse, so only the best reaches you.",
+      "Every page is reviewed on real devices in light and dark mode before it ships.",
   },
   {
     title: "Delivered to you",
     description:
-      "Packed in plastic-free materials and shipped carbon-neutral, with tracking from door to door.",
+      "Download from designali.com or receive your finished store, ready to deploy on Vercel.",
   },
 ]
 
 const showcase = [
   {
-    name: "The Everyday Tote",
-    meta: "Waxed canvas, 3 colours",
+    name: "Portfolio Template",
+    meta: "Next.js · Light and dark",
     tag: "Bestseller",
-    price: "$98",
+    price: "$49",
     tile: "bg-gradient-to-br from-sky-200 via-cyan-300 to-teal-400 dark:from-sky-700 dark:via-cyan-800 dark:to-teal-900",
   },
   {
-    name: "Merino Crew Sweater",
-    meta: "Extra-fine merino, 6 colours",
+    name: "Design Agency Template",
+    meta: "Next.js · Figma file included",
     tag: "New",
-    price: "$120",
+    price: "$79",
     tile: "bg-gradient-to-br from-violet-200 via-purple-300 to-fuchsia-400 dark:from-violet-700 dark:via-purple-800 dark:to-fuchsia-900",
   },
   {
-    name: "Ceramic Pour-Over Set",
-    meta: "Hand-glazed stoneware",
-    tag: "Limited",
-    price: "$64",
+    name: "Pro Blocks Bundle",
+    meta: "460+ copy-paste sections",
+    tag: "Bundle",
+    price: "$99",
     tile: "bg-gradient-to-br from-emerald-200 via-green-300 to-lime-300 dark:from-emerald-700 dark:via-green-800 dark:to-lime-900",
   },
   {
-    name: "Linen Bedding Bundle",
-    meta: "Stonewashed European flax",
+    name: "AI Startup Template",
+    meta: "Next.js · Tailwind CSS",
     tag: "Bestseller",
-    price: "$240",
+    price: "$69",
     tile: "bg-gradient-to-br from-stone-200 via-neutral-300 to-zinc-400 dark:from-stone-700 dark:via-neutral-800 dark:to-zinc-900",
   },
   {
-    name: "Leather Card Wallet",
-    meta: "Vegetable-tanned leather",
-    tag: "Gift idea",
-    price: "$45",
+    name: "Apple Device Mockups",
+    meta: "iPhone, iPad, MacBook and iMac",
+    tag: "Component",
+    price: "$29",
     tile: "bg-gradient-to-br from-rose-200 via-pink-300 to-purple-300 dark:from-rose-700 dark:via-pink-800 dark:to-purple-900",
   },
   {
-    name: "Wool Throw Blanket",
-    meta: "Woven in Portugal",
-    tag: "Back in stock",
-    price: "$135",
+    name: "Resort Template",
+    meta: "Hospitality landing page",
+    tag: "Updated",
+    price: "$59",
     tile: "bg-gradient-to-br from-blue-200 via-indigo-300 to-violet-400 dark:from-blue-700 dark:via-indigo-800 dark:to-violet-900",
   },
 ]
@@ -143,99 +144,99 @@ const showcase = [
 const testimonials = [
   {
     quote:
-      "Customer service sorted a delivery issue in minutes over chat. Genuinely the best experience I have had online.",
-    name: "Sophie Laurent",
-    role: "Verified buyer",
+      "The CGI product renders Designali made for our launch looked better than any photo shoot we had done.",
+    name: "Sophie L.",
+    role: "Verified designali.com customer",
   },
   {
     quote:
-      "The quality is unreal for the price. I bought one and came back a week later for three more in different colours.",
-    name: "Emily Watson",
-    role: "Verified buyer",
+      "The quality is unreal for the price. I bought one template and came back a week later for the full blocks bundle.",
+    name: "Emily W.",
+    role: "Verified designali.com customer",
   },
   {
     quote:
-      "Arrived in two days in the most beautiful packaging. It has become my go-to gift for friends.",
-    name: "Carlos Mendes",
-    role: "Verified buyer",
+      "Designali rebuilt our online store in Next.js. Pages load instantly and the checkout finally feels like our brand.",
+    name: "Carlos M.",
+    role: "Verified designali.com customer",
   },
 ]
 
 const tiers = [
   {
-    name: "Guest",
-    price: "Free",
+    name: "Free",
+    price: "$0",
     period: "",
-    description: "Shop any time, no account needed.",
+    description: "Free blocks and UI examples, no account needed.",
     features: [
-      "Free shipping over $75",
-      "60-day returns",
-      "Order tracking",
+      "Store design and build",
+      "Own every file",
+      "Free blocks and icons",
       "Email support",
     ],
-    cta: "Start shopping",
+    cta: "Browse free",
   },
   {
-    name: "Member",
-    price: "$49",
-    period: "/year",
-    description: "For people who shop with us often.",
+    name: "Pro",
+    price: "$149",
+    period: "/one-time",
+    description: "The full Designali library for your own and client projects.",
     features: [
-      "10% off every order",
-      "Free shipping on everything",
+      "All 460+ blocks",
+      "All premium templates",
       "Early access to new drops",
-      "Free returns for life",
-      "Birthday gift",
+      "Lifetime updates",
+      "Figma source files",
     ],
-    cta: "Become a member",
+    cta: "Get Pro",
   },
   {
-    name: "Wholesale",
+    name: "Store build",
     price: "Custom",
     period: "",
-    description: "For retailers, hotels and corporate gifting.",
+    description: "A custom online store designed and built by Designali.",
     features: [
-      "Volume pricing",
-      "Custom branding",
-      "Dedicated account manager",
-      "Net-30 payment terms",
+      "Brand identity and UI/UX",
+      "Next.js storefront",
+      "Work directly with Ali Imam",
+      "Launch support on Vercel",
     ],
-    cta: "Enquire now",
+    cta: "Start a project",
   },
 ]
 
 const faqs = [
   {
-    q: "Do you offer gift cards?",
-    a: "Digital gift cards are available from $25 to $500 and never expire.",
+    q: "Can I use templates for client work?",
+    a: "Yes. Pro licenses cover personal and commercial projects, including work you deliver to clients.",
   },
   {
-    q: "How long does shipping take?",
-    a: "Orders are dispatched within 48 hours. Domestic delivery takes two to four working days and international seven to ten.",
+    q: "How fast do I get my files?",
+    a: "Store purchases are instant. A custom store build usually takes six to ten weeks from kickoff to launch.",
   },
   {
-    q: "What is your return policy?",
-    a: "You can return any unused item within 60 days for a full refund. Return labels are free for members.",
+    q: "What is your refund policy?",
+    a: "Digital products are covered by the terms at designali.com/docs/legal/terms. If something is broken, we fix it.",
   },
   {
-    q: "Do you ship internationally?",
-    a: "We ship to 32 countries. Duties and taxes are calculated at checkout so there are no surprises on delivery.",
+    q: "Do you work with brands worldwide?",
+    a: "Yes. Designali works remotely with product brands anywhere, with calls scheduled around your time zone.",
   },
   {
-    q: "How do I care for my products?",
-    a: "Every order includes a care card, and detailed guides for each material are available in our journal.",
+    q: "How do I customise a template?",
+    a: "Every template includes docs, and detailed guides for theming and components are on designali.com/docs.",
   },
 ]
 
 const footer = [
   {
-    title: "Shop",
-    links: ["New arrivals", "Bestsellers", "Gift cards", "Sale"],
+    title: "Store",
+    links: ["Templates", "Blocks", "Pages", "Icons"],
   },
-  { title: "Help", links: ["Shipping", "Returns", "Size guide", "Contact us"] },
+  { title: "Help", links: ["Docs", "Licensing", "Pricing", "Contact us"] },
   {
     title: "About",
-    links: ["Our story", "Makers", "Sustainability", "Journal"],
+    links: ["Work", "Ali Imam", "Instagram", "Blog"],
   },
 ]
 
@@ -248,10 +249,8 @@ export default function LandingEcommerce06() {
             href="#"
             className="flex items-center gap-2 font-semibold tracking-tight"
           >
-            <span className="flex size-7 items-center justify-center rounded-md bg-teal-600 text-white text-sm">
-              P
-            </span>
-            <span className="">{"Petal & Stem"}</span>
+            <Logo className="h-5 w-auto" />
+            <span className="">{"Designali"}</span>
           </a>
           <nav className="hidden items-center gap-7 text-sm md:flex">
             {navLinks.map((link) => (
@@ -275,7 +274,7 @@ export default function LandingEcommerce06() {
               Cart (0)
             </Button>
             <Button size="sm" nativeButton={false} render={<a href="#" />}>
-              Send flowers
+              Start a project
             </Button>
           </div>
         </div>
@@ -283,28 +282,28 @@ export default function LandingEcommerce06() {
       <section className="border-b">
         <div className="mx-auto max-w-7xl px-6">
           <div className="flex items-center justify-between border-x border-b px-6 py-3 text-xs text-muted-foreground">
-            <span>Next-day delivery, farm fresh</span>
+            <span>Designali for florists</span>
             <span className="hidden sm:inline">
-              Flowers from the field, not the warehouse.
+              Stores from the studio, not a theme shop.
             </span>
           </div>
           <div className="border-x px-6 py-16 md:py-28">
             <h1 className="max-w-5xl text-4xl leading-[1.05] font-semibold tracking-tight text-balance sm:text-5xl md:text-8xl ">
-              {"Seasonal flowers, "}
+              {"Florist stores, "}
               <span className="text-teal-600 dark:text-teal-400">
-                picked this week
+                designed with care
               </span>
-              {" for you"}
+              {" by Designali"}
             </h1>
             <div className="mt-12 flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
               <p className="max-w-md text-base leading-7 text-muted-foreground">
                 {
-                  "Petal & Stem works with small growers to deliver hand-tied bouquets that last longer, wrapped without plastic."
+                  "Designali designs and builds delivery-first stores for florists, with subscriptions, gift notes and same-week scheduling built in."
                 }
               </p>
               <div className="flex flex-wrap gap-3 ">
                 <Button size="lg" nativeButton={false} render={<a href="#" />}>
-                  Send flowers
+                  Start a project
                   <ArrowRight />
                 </Button>
                 <Button
@@ -313,7 +312,7 @@ export default function LandingEcommerce06() {
                   nativeButton={false}
                   render={<a href="#" />}
                 >
-                  Flower subscriptions
+                  See templates
                 </Button>
               </div>
             </div>
@@ -341,7 +340,7 @@ export default function LandingEcommerce06() {
       <section className="border-b">
         <div className="mx-auto max-w-7xl px-6 py-12">
           <p className="text-center text-sm text-muted-foreground">
-            As featured in
+            Designed in Figma, built with
           </p>
           <div className="mt-8 grid grid-cols-2 items-center gap-x-8 gap-y-6 sm:grid-cols-4 lg:grid-cols-8">
             {logos.map((logo) => (
@@ -359,14 +358,13 @@ export default function LandingEcommerce06() {
         <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
           <div className="max-w-2xl">
             <p className="text-sm font-medium text-teal-600 dark:text-teal-400">
-              Why shop with us
+              Why work with Designali
             </p>
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl  mt-3">
-              Made better, delivered faster
+              Designed better, shipped faster
             </h2>
             <p className="mt-4 text-lg leading-8 text-muted-foreground">
-              We work directly with the makers, skip the middlemen and pass the
-              savings on, without ever cutting corners on quality.
+              Where thoughtful design meets production-ready code. One studio from brand to checkout, without hand-off gaps.
             </p>
           </div>
           <div className="mt-14 grid overflow-hidden rounded-2xl border sm:grid-cols-2 lg:grid-cols-3">
@@ -390,11 +388,10 @@ export default function LandingEcommerce06() {
           <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
             <div className="max-w-2xl">
               <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl">
-                Bestsellers this week
+                Bestsellers in the Designali store
               </h2>
               <p className="mt-4 text-lg leading-8 text-muted-foreground">
-                The pieces our customers keep coming back for. Free shipping on
-                every order over $75.
+                The templates and bundles developers and founders keep coming back for. Instant download.
               </p>
             </div>
             <Button
@@ -437,7 +434,7 @@ export default function LandingEcommerce06() {
         <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl">
-              Thousands of five-star reviews
+              What customers and clients say
             </h2>
           </div>
           <div className="mt-14 grid gap-6 md:grid-cols-3">
@@ -472,7 +469,7 @@ export default function LandingEcommerce06() {
         <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl">
-              From our workshop to your door
+              From Figma to your storefront
             </h2>
           </div>
           <ol className="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
@@ -497,11 +494,10 @@ export default function LandingEcommerce06() {
         <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl">
-              Join the members club
+              Pick your plan
             </h2>
             <p className="mt-4 text-lg leading-8 text-muted-foreground">
-              Members save on every order, get early access to drops and enjoy
-              free returns for life.
+              Start with free blocks, unlock the full library with Pro or have Designali build your store.
             </p>
           </div>
           <div className="mx-auto mt-14 grid max-w-6xl items-start gap-6 lg:grid-cols-3">
@@ -555,7 +551,7 @@ export default function LandingEcommerce06() {
         <div className="mx-auto grid max-w-7xl gap-12 px-6 py-20 md:py-28 lg:grid-cols-[1fr_1.5fr]">
           <div className="lg:sticky lg:top-24 lg:self-start">
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl">
-              Shipping, returns and more
+              Downloads, licensing and projects
             </h2>
             <p className="mt-4 text-muted-foreground">
               Still curious?{" "}
@@ -563,7 +559,7 @@ export default function LandingEcommerce06() {
                 href="#"
                 className="font-medium text-foreground underline underline-offset-4"
               >
-                Get in touch
+                Email hello@designali.com
               </a>
               .
             </p>
@@ -588,14 +584,14 @@ export default function LandingEcommerce06() {
           <div className="pointer-events-none absolute -top-24 left-1/2 size-96 -translate-x-1/2 rounded-full bg-gradient-to-b from-teal-500/25 via-emerald-500/10 to-transparent blur-3xl" />
           <div className="relative mx-auto max-w-2xl space-y-6">
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl">
-              {"Brighten someone's week"}
+              {"Brighten your storefront"}
             </h2>
             <p className="text-lg text-muted-foreground">
-              Start a flower subscription and save 15% on every delivery.
+              Book a free call and get a plan for your flower store.
             </p>
             <div className="flex flex-wrap gap-3 justify-center">
               <Button size="lg" nativeButton={false} render={<a href="#" />}>
-                Send flowers
+                Start a project
                 <ArrowRight />
               </Button>
               <Button
@@ -604,7 +600,7 @@ export default function LandingEcommerce06() {
                 nativeButton={false}
                 render={<a href="#" />}
               >
-                Flower subscriptions
+                See templates
               </Button>
             </div>
           </div>
@@ -617,13 +613,11 @@ export default function LandingEcommerce06() {
               href="#"
               className="flex items-center gap-2 font-semibold tracking-tight"
             >
-              <span className="flex size-7 items-center justify-center rounded-md bg-teal-600 text-white text-sm">
-                P
-              </span>
-              <span className="">{"Petal & Stem"}</span>
+              <Logo className="h-5 w-auto" />
+              <span className="">{"Designali"}</span>
             </a>
             <p className="max-w-xs text-sm text-muted-foreground">
-              Flowers from the field, not the warehouse.
+              Stores from the studio, not a theme shop.
             </p>
           </div>
           {footer.map((column) => (
@@ -647,7 +641,7 @@ export default function LandingEcommerce06() {
         <div className="border-t ">
           <div className="mx-auto flex max-w-7xl flex-col justify-between gap-4 px-6 py-6 text-xs text-muted-foreground sm:flex-row">
             <span>
-              © {new Date().getFullYear()} {"Petal & Stem"}. All rights
+              © {new Date().getFullYear()} {"Designali"}. All rights
               reserved.
             </span>
             <div className="flex gap-6">

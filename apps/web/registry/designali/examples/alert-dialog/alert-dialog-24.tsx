@@ -1,7 +1,12 @@
 "use client"
 
 import * as React from "react"
-import { CopyIcon, EllipsisIcon, PencilIcon, Trash2Icon } from "lucide-react"
+import {
+  Copy as CopyIcon,
+  Ellipsis as EllipsisIcon,
+  Pencil as PencilIcon,
+  Trash2 as Trash2Icon,
+} from "@designali/icons"
 
 import {
   AlertDialog,
@@ -28,7 +33,7 @@ export default function DropdownMenuDeleteAction() {
   return (
     <div className="flex w-full max-w-sm items-center justify-between border p-3">
       <div>
-        <p className="text-sm font-medium">Spring campaign</p>
+        <p className="text-sm font-medium">Designali blocks launch newsletter</p>
         <p className="text-xs text-muted-foreground">Scheduled for Apr 14</p>
       </div>
       <DropdownMenu>
@@ -37,7 +42,7 @@ export default function DropdownMenuDeleteAction() {
             <Button
               variant="ghost"
               size="icon-sm"
-              aria-label="Campaign actions"
+              aria-label="Newsletter actions"
             />
           }
         >
@@ -62,9 +67,9 @@ export default function DropdownMenuDeleteAction() {
       <AlertDialog open={open} onOpenChange={setOpen}>
         <AlertDialogContent size="sm">
           <AlertDialogHeader>
-            <AlertDialogTitle>Delete campaign?</AlertDialogTitle>
+            <AlertDialogTitle>Delete newsletter?</AlertDialogTitle>
             <AlertDialogDescription>
-              The scheduled send to 4,210 subscribers will be cancelled.
+              The scheduled send to 4,210 Designali subscribers will be cancelled.
             </AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>

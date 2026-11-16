@@ -1,7 +1,11 @@
 "use client"
 
 import * as React from "react"
-import { CheckIcon, PackageIcon, PlusIcon } from "lucide-react"
+import {
+  Check as CheckIcon,
+  Package as PackageIcon,
+  Plus as PlusIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -13,11 +17,11 @@ import {
 } from "@workspace/ui/components/carousel"
 
 const addons = [
-  { name: "Travel case", price: 19 },
-  { name: "Extra cable", price: 12 },
-  { name: "Screen cloth", price: 6 },
-  { name: "2-year cover", price: 29 },
-  { name: "Gift wrap", price: 4 },
+  { name: "Figma source files", price: 19 },
+  { name: "Icon pack", price: 12 },
+  { name: "Logo pack", price: 6 },
+  { name: "Extended license", price: 29 },
+  { name: "Setup call with Ali", price: 49 },
 ]
 
 export default function CheckoutUpsellCarousel() {

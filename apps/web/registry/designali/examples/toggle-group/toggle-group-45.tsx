@@ -2,11 +2,11 @@
 
 import * as React from "react"
 import {
-  FileAudioIcon,
-  FileTextIcon,
-  FileVideoIcon,
-  ImageIcon,
-} from "lucide-react"
+  FileMusic as FileAudioIcon,
+  FileText as FileTextIcon,
+  FileVideoCamera as FileVideoIcon,
+  Image as ImageIcon,
+} from "@designali/icons"
 
 import {
   ToggleGroup,
@@ -14,11 +14,11 @@ import {
 } from "@workspace/ui/components/toggle-group"
 
 const files = [
-  { name: "Q3-report.pdf", type: "doc", size: "2.4 MB" },
-  { name: "hero-banner.png", type: "image", size: "840 KB" },
-  { name: "onboarding.mp4", type: "video", size: "48 MB" },
-  { name: "brand-sting.wav", type: "audio", size: "3.1 MB" },
-  { name: "roadmap.docx", type: "doc", size: "112 KB" },
+  { name: "designali-brand-guide.pdf", type: "doc", size: "2.4 MB" },
+  { name: "designali-hero.png", type: "image", size: "840 KB" },
+  { name: "colorful-spheres.mp4", type: "video", size: "48 MB" },
+  { name: "designali-sting.wav", type: "audio", size: "3.1 MB" },
+  { name: "studio-roadmap.docx", type: "doc", size: "112 KB" },
 ]
 
 export default function FileTypeFilterToggleGroup() {

@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { Trash2Icon, TriangleAlertIcon } from "lucide-react"
+import {
+  Trash2 as Trash2Icon,
+  TriangleAlert as TriangleAlertIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -16,7 +19,7 @@ import { Checkbox } from "@workspace/ui/components/checkbox"
 import { Field, FieldGroup, FieldLabel } from "@workspace/ui/components/field"
 
 const acknowledgements = [
-  "All projects and files will be permanently deleted.",
+  "All Designali projects and files will be permanently deleted.",
   "Active subscriptions will be cancelled without refund.",
   "This action cannot be undone.",
 ]

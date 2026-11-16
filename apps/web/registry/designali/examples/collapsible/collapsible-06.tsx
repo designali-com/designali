@@ -1,4 +1,8 @@
-import { ChevronDownIcon, PackageIcon, ShoppingBagIcon } from "lucide-react"
+import {
+  ChevronDown as ChevronDownIcon,
+  Package as PackageIcon,
+  ShoppingBag as ShoppingBagIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -9,9 +13,9 @@ import {
 import { Separator } from "@workspace/ui/components/separator"
 
 const items = [
-  { name: "Linen overshirt", qty: 1, price: 89 },
-  { name: "Merino crew socks", qty: 3, price: 14 },
-  { name: "Canvas tote", qty: 1, price: 32 },
+  { name: "Portfolio template", qty: 1, price: 89 },
+  { name: "Icon pack license", qty: 3, price: 14 },
+  { name: "Blocks bundle", qty: 1, price: 32 },
 ]
 
 export default function CheckoutOrderSummary() {
@@ -53,7 +57,7 @@ export default function CheckoutOrderSummary() {
             <span>${subtotal}.00</span>
           </div>
           <div className="flex justify-between text-muted-foreground">
-            <span>Shipping</span>
+            <span>Tax</span>
             <span>${shipping}.00</span>
           </div>
         </div>

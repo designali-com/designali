@@ -1,4 +1,6 @@
-import { StarIcon } from "lucide-react"
+import {
+  Star as StarIcon,
+} from "@designali/icons"
 
 import { Separator } from "@workspace/ui/components/separator"
 import { cn } from "@workspace/ui/lib/utils"

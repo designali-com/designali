@@ -1,4 +1,6 @@
-import { PinIcon } from "lucide-react"
+import {
+  Pin as PinIcon,
+} from "@designali/icons"
 
 import { Toggle } from "@workspace/ui/components/toggle"
 

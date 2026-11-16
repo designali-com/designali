@@ -1,4 +1,6 @@
-import { CheckIcon } from "lucide-react"
+import {
+  Check as CheckIcon,
+} from "@designali/icons"
 
 import {
   Tooltip,
@@ -11,8 +13,8 @@ import { cn } from "@workspace/ui/lib/utils"
 const steps = [
   { label: "Create account", done: true },
   { label: "Invite teammates", done: true },
-  { label: "Connect calendar", done: false },
-  { label: "Book first meeting", done: false },
+  { label: "Install @designali/icons", done: false },
+  { label: "Book a call with Ali", done: false },
 ]
 
 export default function OnboardingStepTooltips() {

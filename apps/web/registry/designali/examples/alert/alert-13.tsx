@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { CircleCheckIcon } from "lucide-react"
+import {
+  CircleCheck as CircleCheckIcon,
+} from "@designali/icons"
 
 import {
   Alert,
@@ -27,7 +29,7 @@ export default function AlertSaveFeedback() {
         <Label htmlFor="workspace">Workspace name</Label>
         <Input
           id="workspace"
-          defaultValue="Northwind Studio"
+          defaultValue="Designali Studio"
           onChange={() => setState("idle")}
         />
       </div>
@@ -40,7 +42,7 @@ export default function AlertSaveFeedback() {
           <CircleCheckIcon />
           <AlertTitle>Changes saved</AlertTitle>
           <AlertDescription>
-            Everyone in the workspace will see the new name.
+            Everyone on the Designali studio team will see the new name.
           </AlertDescription>
         </Alert>
       )}

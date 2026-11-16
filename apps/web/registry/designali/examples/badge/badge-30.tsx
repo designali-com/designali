@@ -1,12 +1,16 @@
-import { CircleCheckIcon, CircleXIcon, TriangleAlertIcon } from "lucide-react"
+import {
+  CircleCheck as CircleCheckIcon,
+  CircleX as CircleXIcon,
+  TriangleAlert as TriangleAlertIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 
 const services = [
-  { name: "API", status: "Operational" },
-  { name: "Dashboard", status: "Operational" },
-  { name: "Webhooks", status: "Degraded" },
-  { name: "Email delivery", status: "Outage" },
+  { name: "designali.com", status: "Operational" },
+  { name: "Templates downloads", status: "Operational" },
+  { name: "Icons CDN", status: "Degraded" },
+  { name: "hello@designali.com email", status: "Outage" },
 ]
 
 const config: Record<

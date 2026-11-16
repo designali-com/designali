@@ -1,4 +1,7 @@
-import { SunDimIcon, SunIcon } from "lucide-react"
+import {
+  SunDim as SunDimIcon,
+  Sun as SunIcon,
+} from "@designali/icons"
 
 import { Label } from "@workspace/ui/components/label"
 import { Slider } from "@workspace/ui/components/slider"

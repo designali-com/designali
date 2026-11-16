@@ -1,9 +1,11 @@
 "use client"
 
 import * as React from "react"
-import { MessageCircleIcon } from "lucide-react"
+import {
+  MessageCircle as MessageCircleIcon,
+} from "@designali/icons"
 
-import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
+import { Avatar, AvatarFallback, AvatarImage } from "@workspace/ui/components/avatar"
 import { Button } from "@workspace/ui/components/button"
 import {
   Card,
@@ -15,7 +17,7 @@ import {
 } from "@workspace/ui/components/card"
 
 const stats = [
-  { label: "Posts", value: "214" },
+  { label: "Projects", value: "214" },
   { label: "Followers", value: "18.2k" },
   { label: "Following", value: "391" },
 ]
@@ -28,12 +30,12 @@ export default function CreatorProfileCard() {
       <div className="h-20 bg-gradient-to-br from-violet-500 via-fuchsia-500 to-orange-400" />
       <CardHeader className="-mt-10">
         <Avatar className="size-16 ring-4 ring-card">
-          <AvatarFallback className="text-base">LM</AvatarFallback>
+          <AvatarImage src="/ali.jpg" alt="Ali Imam" />
+          <AvatarFallback className="text-base">AI</AvatarFallback>
         </Avatar>
-        <CardTitle className="mt-2 text-base">Lena Moreau</CardTitle>
+        <CardTitle className="mt-2 text-base">Ali Imam</CardTitle>
         <CardDescription>
-          Type designer in Lyon. Making variable fonts and sharing process
-          notes.
+          Design engineer and founder of Designali. Design se code tak.
         </CardDescription>
       </CardHeader>
       <CardContent className="grid grid-cols-3 divide-x border-y py-3 text-center">

@@ -1,5 +1,8 @@
 import * as React from "react"
-import { MapPinIcon, VideoIcon } from "lucide-react"
+import {
+  MapPin as MapPinIcon,
+  Video as VideoIcon,
+} from "@designali/icons"
 
 import {
   Avatar,
@@ -16,7 +19,7 @@ import {
   PopoverTrigger,
 } from "@workspace/ui/components/popover"
 
-const attendees = ["Rhea Kapoor", "Leo Varga", "Aiko Mori", "Sam Whitfield"]
+const attendees = ["Ali Imam", "Leo", "Aiko", "Sam"]
 
 export default function CalendarEventPopover() {
   return (
@@ -49,7 +52,7 @@ export default function CalendarEventPopover() {
                   <div className="flex flex-col gap-1.5 text-xs">
                     <span className="flex items-center gap-2">
                       <MapPinIcon className="size-3.5 text-muted-foreground" />{" "}
-                      Room 4B · Juniper
+                      Designali studio
                     </span>
                     <span className="flex items-center gap-2">
                       <VideoIcon className="size-3.5 text-muted-foreground" />{" "}

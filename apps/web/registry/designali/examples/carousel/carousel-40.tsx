@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { HeartIcon, XIcon } from "lucide-react"
+import {
+  Heart as HeartIcon,
+  X as XIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -20,7 +23,14 @@ import {
   EmptyTitle,
 } from "@workspace/ui/components/empty"
 
-const initial = ["Linen shirt", "Canvas tote", "Wool beanie", "Leather wallet"]
+const initial = ["Portfolio Simple", "Design Agency", "Resort", "AI Startup"]
+
+const covers: Record<string, string> = {
+  "Portfolio Simple": "/images/templates/portfolio-simple.jpg",
+  "Design Agency": "/images/templates/design-agency.jpg",
+  Resort: "/images/templates/resort.jpg",
+  "AI Startup": "/images/templates/ai.jpg",
+}
 
 export default function SavedItemsWithEmpty() {
   const [items, setItems] = React.useState(initial)
@@ -32,12 +42,12 @@ export default function SavedItemsWithEmpty() {
           <EmptyMedia variant="icon">
             <HeartIcon />
           </EmptyMedia>
-          <EmptyTitle>No saved items</EmptyTitle>
-          <EmptyDescription>Items you save will show up here.</EmptyDescription>
+          <EmptyTitle>No saved templates</EmptyTitle>
+          <EmptyDescription>Designali templates you save will show up here.</EmptyDescription>
         </EmptyHeader>
         <EmptyContent>
           <Button size="sm" variant="outline" onClick={() => setItems(initial)}>
-            Restore items
+            Restore templates
           </Button>
         </EmptyContent>
       </Empty>
@@ -53,7 +63,11 @@ export default function SavedItemsWithEmpty() {
         {items.map((item) => (
           <CarouselItem key={item} className="sm:basis-1/2">
             <div className="flex flex-col gap-2 border p-3">
-              <div className="aspect-square bg-muted" />
+              <img
+                src={covers[item]}
+                alt={item + " template"}
+                className="aspect-square w-full bg-muted object-cover"
+              />
               <span className="text-xs font-medium">{item}</span>
               <Button
                 size="xs"

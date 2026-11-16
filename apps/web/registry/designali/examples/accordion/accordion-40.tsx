@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { ChevronDownIcon } from "lucide-react"
+import {
+  ChevronDown as ChevronDownIcon,
+} from "@designali/icons"
 
 import {
   Accordion,
@@ -16,15 +18,15 @@ const sections = [
     value: "activity",
     title: "Recent activity",
     rows: [
-      "Ava Moreno commented on Q4 plan",
-      "Jonah Pike moved Launch checklist to Done",
-      "Rhea Kapoor joined the workspace",
+      "Ali Imam commented on Design Agency v2",
+      "Sara moved Icons release to Done",
+      "A new client joined the Designali studio",
     ],
   },
   {
     value: "files",
     title: "Shared files",
-    rows: ["brand-guidelines.pdf", "pricing-model.xlsx"],
+    rows: ["designali-brand-guidelines.pdf", "client-proposal.fig"],
   },
 ]
 

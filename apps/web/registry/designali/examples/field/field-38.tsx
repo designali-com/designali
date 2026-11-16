@@ -24,7 +24,7 @@ export default function RequiredAndOptionalLabels() {
           id="ro-company"
           required
           aria-required="true"
-          placeholder="Kestrel Labs"
+          placeholder="Designali"
         />
       </Field>
       <Field>

@@ -1,4 +1,7 @@
-import { RefreshCwIcon, WebhookIcon } from "lucide-react"
+import {
+  RefreshCw as RefreshCwIcon,
+  Webhook as WebhookIcon,
+} from "@designali/icons"
 
 import {
   Alert,
@@ -20,7 +23,7 @@ export default function AlertWebhookFailing() {
       <AlertTitle>Endpoint failing for 12 minutes</AlertTitle>
       <AlertDescription>
         <p className="truncate font-mono">
-          https://hooks.parcelpoint.example/orders
+          https://www.designali.com/api/hooks/orders
         </p>
         <ul className="my-1.5 border bg-background font-mono">
           {attempts.map((attempt) => (

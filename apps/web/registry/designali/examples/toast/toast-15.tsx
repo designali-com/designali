@@ -27,7 +27,7 @@ export default function FormValidationErrorToast() {
     notify.add({
       type: "success",
       title: "Request sent",
-      description: "Our team will reply within one business day.",
+      description: "Designali will reply within one business day.",
     })
   }
 

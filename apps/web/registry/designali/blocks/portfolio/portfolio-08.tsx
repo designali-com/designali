@@ -1,31 +1,33 @@
-import { ArrowUpRight } from "lucide-react"
+import {
+  ArrowUpRight,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 
 const projects = [
   {
-    title: "Fernhill Observatory",
-    kind: "Museum website and ticketing",
-    year: "2026",
-    background: "radial-gradient(circle at 30% 20%, oklch(0.7 0.12 250), oklch(0.25 0.06 270))",
+    title: "Portfolio Simple",
+    kind: "Portfolio template for designers",
+    year: "Template",
+    background: "url(/images/templates/portfolio-simple.jpg) center / cover",
   },
   {
-    title: "Pebble Pay",
-    kind: "Point-of-sale app for market traders",
-    year: "2026",
-    background: "radial-gradient(circle at 70% 30%, oklch(0.85 0.12 150), oklch(0.45 0.1 170))",
+    title: "Design Agency",
+    kind: "Studio website template",
+    year: "Template",
+    background: "url(/images/templates/design-agency.jpg) center / cover",
   },
   {
-    title: "Northlight Books",
-    kind: "Cover series for a poetry imprint",
-    year: "2025",
-    background: "radial-gradient(circle at 50% 80%, oklch(0.8 0.13 75), oklch(0.5 0.14 35))",
+    title: "Dalim Fonts",
+    kind: "Type foundry website",
+    year: "Case study",
+    background: "url(/images/templates/dalim-fonts-old.jpg) center / cover",
   },
   {
-    title: "Canopy Clinics",
-    kind: "Booking flow and patient portal",
-    year: "2025",
-    background: "radial-gradient(circle at 20% 70%, oklch(0.82 0.1 190), oklch(0.4 0.08 220))",
+    title: "Dalim Visuals",
+    kind: "CGI and motion showcase",
+    year: "Case study",
+    background: "url(/images/templates/dalim-visuals-old.jpg) center / cover",
   },
 ]
 
@@ -36,30 +38,30 @@ export default function Portfolio08() {
         <div>
           <div className="lg:sticky lg:top-24">
             <p className="text-xs tracking-widest text-muted-foreground uppercase">
-              Studio Halden
+              Designali
             </p>
             <h2 className="mt-4 text-4xl leading-[1.05] font-medium tracking-tight md:text-6xl">
               Work that earns a second look.
             </h2>
             <p className="mt-6 max-w-sm leading-7 text-muted-foreground">
-              We are a four-person studio in Rotterdam designing websites,
-              products and printed matter for cultural and civic clients.
+              A design and development studio by Ali Imam, designing brands,
+              websites and digital products. Remote, worldwide.
             </p>
             <dl className="mt-8 grid max-w-sm grid-cols-3 gap-4 border-t border-border pt-6">
               <div>
-                <dt className="text-xs text-muted-foreground">Founded</dt>
-                <dd className="mt-1 text-lg font-medium">2016</dd>
+                <dt className="text-xs text-muted-foreground">Blocks</dt>
+                <dd className="mt-1 text-lg font-medium">460+</dd>
               </div>
               <div>
-                <dt className="text-xs text-muted-foreground">Projects</dt>
-                <dd className="mt-1 text-lg font-medium">140+</dd>
+                <dt className="text-xs text-muted-foreground">Pages</dt>
+                <dd className="mt-1 text-lg font-medium">240+</dd>
               </div>
               <div>
-                <dt className="text-xs text-muted-foreground">Awards</dt>
-                <dd className="mt-1 text-lg font-medium">23</dd>
+                <dt className="text-xs text-muted-foreground">Icons</dt>
+                <dd className="mt-1 text-lg font-medium">4000+</dd>
               </div>
             </dl>
-            <Button className="mt-8" nativeButton={false} render={<a href="#" />}>
+            <Button className="mt-8" nativeButton={false} render={<a href="/contact" />}>
               Start a project
             </Button>
           </div>

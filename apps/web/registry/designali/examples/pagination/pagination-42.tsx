@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { CalendarDaysIcon } from "lucide-react"
+import {
+  CalendarDays as CalendarDaysIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import {

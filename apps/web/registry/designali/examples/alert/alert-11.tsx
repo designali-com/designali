@@ -1,4 +1,6 @@
-import { HardDriveIcon } from "lucide-react"
+import {
+  HardDrive as HardDriveIcon,
+} from "@designali/icons"
 
 import {
   Alert,
@@ -18,8 +20,8 @@ export default function AlertStorageUsage() {
       <AlertTitle>You&apos;re almost out of storage</AlertTitle>
       <AlertDescription className="space-y-2">
         <p>
-          {used} GB of {limit} GB used. Uploads will pause when you reach the
-          limit.
+          {used} GB of {limit} GB used. Figma and asset uploads to your
+          Designali project will pause at the limit.
         </p>
         <Progress value={(used / limit) * 100} aria-label="Storage used" />
         <Button size="xs" variant="outline">

@@ -3,7 +3,10 @@
 import * as React from "react"
 import { format, subDays } from "date-fns"
 import { type DateRange } from "react-day-picker"
-import { CalendarRangeIcon, ChevronDownIcon } from "lucide-react"
+import {
+  CalendarRange as CalendarRangeIcon,
+  ChevronDown as ChevronDownIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Calendar } from "@workspace/ui/components/calendar"

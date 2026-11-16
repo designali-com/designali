@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { CircleCheckIcon, TicketPercentIcon } from "lucide-react"
+import {
+  CircleCheck as CircleCheckIcon,
+  TicketPercent as TicketPercentIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -23,8 +26,8 @@ import {
 import { Input } from "@workspace/ui/components/input"
 
 const validCodes: Record<string, string> = {
-  WELCOME10: "10% off your first order",
-  FREESHIP: "Free standard shipping",
+  WELCOME10: "10% off your first Designali template",
+  FREESHIP: "Free Icons Pro upgrade",
 }
 
 export default function RedeemCouponDialog() {

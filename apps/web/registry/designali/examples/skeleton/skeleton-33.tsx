@@ -11,8 +11,8 @@ export default function PartialLoadSkeleton() {
   return (
     <Card className="w-full max-w-sm">
       <CardHeader>
-        <CardTitle>Helios redesign</CardTitle>
-        <CardDescription>Marketing site · updated 2h ago</CardDescription>
+        <CardTitle>Dalim Agency redesign</CardTitle>
+        <CardDescription>designali.com project · updated 2h ago</CardDescription>
       </CardHeader>
       <CardContent className="flex flex-col gap-4">
         <div className="grid grid-cols-3 gap-3">

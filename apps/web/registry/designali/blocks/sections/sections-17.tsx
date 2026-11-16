@@ -1,4 +1,6 @@
-import { Award } from "lucide-react"
+import {
+  Award,
+} from "@designali/icons"
 
 const awards = [
   { year: "2026", award: "Product of the Year", body: "Interface Awards", project: "Atlas Maps 4.0", level: "Gold" },

@@ -2,22 +2,22 @@ import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
 
 const comments = [
   {
-    author: "Hana Sato",
-    initials: "HS",
+    author: "Ali Imam",
+    initials: "AI",
     time: "2h ago",
-    body: "Can we move the pricing table above the FAQ? It answers most of the questions.",
+    body: "Can we move the pricing table above the FAQ on the Designali templates page? It answers most of the questions.",
   },
   {
-    author: "Leo Martins",
-    initials: "LM",
+    author: "Sara",
+    initials: "SA",
     time: "1h ago",
-    body: "Agreed. I'll also shorten the intro paragraph so it fits above the fold.",
+    body: "Agreed. I'll also shorten the hero copy so it fits above the fold.",
   },
   {
-    author: "Hana Sato",
-    initials: "HS",
+    author: "Ali Imam",
+    initials: "AI",
     time: "12m ago",
-    body: "Perfect, marking this as resolved once the draft is updated.",
+    body: "Perfect, marking this as resolved once the Figma file is updated.",
   },
 ]
 

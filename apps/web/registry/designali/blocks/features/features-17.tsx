@@ -1,14 +1,21 @@
-import { Bell, Heart, MessageCircle, Repeat2, Search, Smartphone } from "lucide-react"
+import {
+  Bell,
+  Heart,
+  MessageCircle,
+  Repeat2,
+  Search,
+  Smartphone,
+} from "@designali/icons"
 
 const left = [
-  { icon: Search, title: "Instant search", body: "Find any note by phrase, tag or the photo text inside it." },
-  { icon: Bell, title: "Gentle nudges", body: "Reminders that wait until you are back at your desk." },
-  { icon: Smartphone, title: "Offline first", body: "Everything works on a plane and syncs when you land." },
+  { icon: Search, title: "Instant search", body: "Find any Designali block, template or icon in seconds." },
+  { icon: Bell, title: "Release updates", body: "Get notified when new blocks and templates drop." },
+  { icon: Smartphone, title: "Mobile first", body: "Every layout is responsive from phone to Studio Display." },
 ]
 const right = [
-  { icon: Repeat2, title: "Daily review", body: "A two-minute recap of what you captured yesterday." },
-  { icon: MessageCircle, title: "Shared spaces", body: "Invite a partner to a list without sharing everything." },
-  { icon: Heart, title: "Habit streaks", body: "Quiet progress tracking with no guilt-trip badges." },
+  { icon: Repeat2, title: "Copy and remix", body: "Copy any block and remix it into your own design." },
+  { icon: MessageCircle, title: "Direct support", body: "Questions go straight to Ali Imam and the studio." },
+  { icon: Heart, title: "Crafted with care", body: "Thoughtful details in every pixel and every line of code." },
 ]
 
 function Column({ items, align }: { items: typeof left; align: "left" | "right" }) {
@@ -37,15 +44,15 @@ export default function Features17() {
     <section className="w-full bg-background px-6 py-20 md:py-28">
       <div className="mx-auto max-w-6xl">
         <h2 className="mx-auto max-w-2xl text-center text-3xl font-medium tracking-tight md:text-5xl">
-          A notebook that fits the way you think.
+          Designali fits the way you design and build.
         </h2>
         <div className="mt-16 grid items-center gap-12 lg:grid-cols-[1fr_auto_1fr] lg:gap-14">
           <Column items={left} align="left" />
           <div className="mx-auto w-56 rounded-[2.5rem] border-8 border-foreground bg-background p-3 shadow-2xl">
             <div className="mx-auto h-4 w-16 rounded-full bg-foreground" />
             <div className="mt-5 space-y-2 px-1">
-              <div className="text-sm font-medium">Today</div>
-              {["Call the landlord", "Draft Q1 goals", "Book dentist", "Order birthday gift"].map(
+              <div className="text-sm font-medium">Launch list</div>
+              {["Brand identity", "UI/UX in Figma", "Build in Next.js", "Deploy on Vercel"].map(
                 (t, i) => (
                   <div key={t} className="flex items-center gap-2 border border-border px-2 py-2 text-xs">
                     <span

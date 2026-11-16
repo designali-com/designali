@@ -1,30 +1,34 @@
 "use client"
 
 import { useState } from "react"
-import { ChevronRight, Plus, Trash2 } from "lucide-react"
+import {
+  ChevronRight,
+  Plus,
+  Trash2,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { cn } from "@workspace/ui/lib/utils"
 
 const initialAccounts = [
   {
-    name: "Elena Vasquez",
-    email: "elena@cobaltworks.io",
-    org: "Cobalt Works",
+    name: "Ali Imam",
+    email: "ali@designali.com",
+    org: "Designali",
     color: "from-orange-400 to-rose-500",
     status: "Signed in",
   },
   {
-    name: "Elena Vasquez",
-    email: "evasquez@personal.me",
+    name: "Ali Imam",
+    email: "hello@designali.com",
     org: "Personal",
     color: "from-sky-400 to-indigo-500",
     status: "Signed out",
   },
   {
-    name: "E. Vasquez",
-    email: "elena.v@harborclinic.org",
-    org: "Harbor Clinic",
+    name: "A. Imam",
+    email: "ali@example.com",
+    org: "Dalim Works",
     color: "from-emerald-400 to-teal-600",
     status: "Session expired",
   },
@@ -42,7 +46,7 @@ export default function Authentication12() {
             ~
           </span>
           <h2 className="mt-5 text-2xl font-semibold tracking-tight">Choose an account</h2>
-          <p className="mt-1 text-sm text-muted-foreground">to continue to Tilde Notes</p>
+          <p className="mt-1 text-sm text-muted-foreground">to continue to designali.com</p>
         </div>
 
         <ul className="mt-8 divide-y border bg-background">

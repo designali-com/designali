@@ -1,4 +1,9 @@
-import { CameraIcon, ContactIcon, MicIcon, NavigationIcon } from "lucide-react"
+import {
+  Camera as CameraIcon,
+  Contact as ContactIcon,
+  Mic as MicIcon,
+  Navigation as NavigationIcon,
+} from "@designali/icons"
 
 import { Label } from "@workspace/ui/components/label"
 import { Switch } from "@workspace/ui/components/switch"
@@ -38,7 +43,7 @@ export default function AppPermissions() {
   return (
     <div className="w-full max-w-xs border">
       <div className="border-b px-4 py-3">
-        <p className="text-sm font-medium">Trailmate permissions</p>
+        <p className="text-sm font-medium">Designali app permissions</p>
         <p className="text-xs text-muted-foreground">
           Control what this app can access.
         </p>

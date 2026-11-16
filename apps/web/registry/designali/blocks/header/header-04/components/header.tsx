@@ -2,7 +2,10 @@
 
 import React from "react"
 import Link from "next/link"
-import { Menu, X } from "lucide-react"
+import {
+  Menu,
+  X,
+} from "@designali/icons"
 import { useScroll } from "motion/react"
 
 import { cn } from "@workspace/ui/lib/utils"
@@ -14,11 +17,11 @@ import { ModeToggle } from "./theme-switch"
 import { Logo } from "@workspace/ui/designali/logo"
 
 const menuItems = [
-  { name: "Features", href: "#link" },
-  { name: "Solution", href: "#link" },
-  { name: "Pricing", href: "#link" },
-  { name: "About", href: "#link" },
-  { name: "Contact", href: "#link" },
+  { name: "Templates", href: "/templates" },
+  { name: "Blocks", href: "/blocks" },
+  { name: "Icons", href: "/icons" },
+  { name: "Pricing", href: "/pricing" },
+  { name: "Docs", href: "/docs" },
 ]
 
 export const Header = () => {
@@ -47,8 +50,8 @@ export const Header = () => {
           <div className="relative flex h-full flex-wrap items-center justify-between gap-3 lg:gap-0">
             <div className="flex h-full w-full items-center justify-between gap-6 lg:w-auto">
               <a
-                href="#"
-                aria-label="home"
+                href="/"
+                aria-label="Designali home"
                 className="-mr-3 flex items-center gap-2 whitespace-nowrap"
               >
                 <Logo className="size-8" />
@@ -103,13 +106,13 @@ export const Header = () => {
               <Separator orientation="vertical" />
               <div className="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit">
                 <Button variant="outline" size="sm">
-                  <Link href="#">
+                  <Link href="/login">
                     <span>Login</span>
                   </Link>
                 </Button>
                 <Button size="sm">
-                  <Link href="#">
-                    <span>Sign Up</span>
+                  <Link href="/pricing">
+                    <span>Get Designali</span>
                   </Link>
                 </Button>
               </div>

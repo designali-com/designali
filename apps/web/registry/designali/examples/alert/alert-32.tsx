@@ -1,4 +1,8 @@
-import { CircleCheckIcon, CircleIcon, RocketIcon } from "lucide-react"
+import {
+  CircleCheck as CircleCheckIcon,
+  Circle as CircleIcon,
+  Rocket as RocketIcon,
+} from "@designali/icons"
 
 import {
   Alert,
@@ -10,10 +14,10 @@ import { Progress } from "@workspace/ui/components/progress"
 import { cn } from "@workspace/ui/lib/utils"
 
 const steps = [
-  { label: "Verify your domain", done: true },
-  { label: "Connect a payment provider", done: true },
-  { label: "Add a team member", done: false },
-  { label: "Publish your store", done: false },
+  { label: "Pick a Designali template", done: true },
+  { label: "Customize brand colors", done: true },
+  { label: "Connect your domain", done: false },
+  { label: "Deploy to Vercel", done: false },
 ]
 
 export default function AlertSetupProgress() {
@@ -22,7 +26,7 @@ export default function AlertSetupProgress() {
   return (
     <Alert className="max-w-md">
       <RocketIcon />
-      <AlertTitle>Finish setting up your store</AlertTitle>
+      <AlertTitle>Finish launching your Designali site</AlertTitle>
       <AlertDescription className="space-y-2">
         <Progress
           value={(done / steps.length) * 100}

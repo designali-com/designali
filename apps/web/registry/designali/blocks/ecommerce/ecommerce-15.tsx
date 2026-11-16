@@ -1,7 +1,10 @@
 "use client"
 
 import { useState } from "react"
-import { Gift, Mail } from "lucide-react"
+import {
+  Gift,
+  Mail,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Input } from "@workspace/ui/components/input"
@@ -43,7 +46,7 @@ export default function Ecommerce15() {
             <div className="absolute -right-12 -bottom-12 size-48 rounded-full border-[24px] border-current opacity-10" />
             <div className="relative flex h-full flex-col justify-between">
               <div className="flex items-start justify-between">
-                <span className="text-sm font-semibold tracking-tight">Larder & Lane</span>
+                <span className="text-sm font-semibold tracking-tight">designali</span>
                 <Gift className="size-5 opacity-80" />
               </div>
               <div>
@@ -65,7 +68,7 @@ export default function Ecommerce15() {
 
         <div>
           <h2 className="text-3xl font-medium tracking-tight md:text-4xl">Send a gift card</h2>
-          <p className="mt-2 text-muted-foreground">Good across our shop, cafe and cookery school.</p>
+          <p className="mt-2 text-muted-foreground">Good across Designali templates, blocks and icon packs.</p>
 
           <fieldset className="mt-8">
             <legend className="text-sm font-medium">Amount</legend>
@@ -145,7 +148,7 @@ export default function Ecommerce15() {
               maxLength={120}
               value={message}
               onChange={(e) => setMessage(e.target.value)}
-              placeholder="Happy birthday! Lunch is on me."
+              placeholder="Happy launch day! Your next template is on me."
             />
           </div>
 

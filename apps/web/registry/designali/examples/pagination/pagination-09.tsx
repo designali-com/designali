@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { ChevronLeftIcon, ChevronRightIcon } from "lucide-react"
+import {
+  ChevronLeft as ChevronLeftIcon,
+  ChevronRight as ChevronRightIcon,
+} from "@designali/icons"
 
 import {
   Pagination,
@@ -17,7 +20,7 @@ export default function IconOnlyPageIndicator() {
 
   return (
     <div className="flex w-full max-w-xs items-center justify-between border px-3 py-1.5">
-      <span className="text-xs font-medium">Activity</span>
+      <span className="text-xs font-medium">Studio activity</span>
       <Pagination className="mx-0 w-auto">
         <PaginationContent className="gap-1">
           <PaginationItem>

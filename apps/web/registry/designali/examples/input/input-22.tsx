@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { SearchIcon, XIcon } from "lucide-react"
+import {
+  Search as SearchIcon,
+  X as XIcon,
+} from "@designali/icons"
 
 import {
   InputGroup,
@@ -11,7 +14,7 @@ import {
 } from "@workspace/ui/components/input-group"
 
 export default function ClearableSearchInput() {
-  const [query, setQuery] = React.useState("quarterly report")
+  const [query, setQuery] = React.useState("brand guidelines")
 
   return (
     <InputGroup className="w-full max-w-sm">

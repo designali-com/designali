@@ -1,13 +1,15 @@
 "use client"
 
 import * as React from "react"
-import { ImageIcon } from "lucide-react"
+import {
+  Image as ImageIcon,
+} from "@designali/icons"
 
 import { Checkbox } from "@workspace/ui/components/checkbox"
 
 const photos = Array.from(
   { length: 7 },
-  (_, i) => "IMG_" + (2041 + i) + ".heic"
+  (_, i) => "designali-render-" + (2041 + i) + ".jpg"
 )
 
 export default function ShiftClickRangeSelect() {

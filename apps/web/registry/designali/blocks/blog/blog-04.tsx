@@ -1,41 +1,43 @@
-import { Clock } from "lucide-react"
+import {
+  Clock,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 
 const posts = [
   {
-    title: "A practical guide to fluid type scales",
+    title: "A practical guide to fluid type in Designali templates",
     excerpt: "Clamp-based sizing that stays readable from 320px phones to 4K monitors.",
     tag: "Guide",
     read: 9,
-    author: "Tomás Silva",
+    author: "Ali Imam",
     span: "md:col-span-2 md:row-span-2",
     tone: "bg-primary text-primary-foreground",
   },
   {
-    title: "Our 2026 icon set, redrawn on a 20px grid",
-    excerpt: "Four hundred glyphs, two stroke weights, one optical baseline.",
+    title: "@designali/icons, redrawn on a 24px grid",
+    excerpt: "Four thousand icons, lucide-compatible names, one optical baseline.",
     tag: "Release",
     read: 4,
-    author: "Hana Kim",
+    author: "Ali Imam",
     span: "",
     tone: "bg-muted",
   },
   {
-    title: "Interview: running design ops at a 40-person startup",
-    excerpt: "Process that scales down as well as it scales up.",
+    title: "Interview: Ali Imam on running a one-person design studio",
+    excerpt: "How Designali ships brand, UI and code without a big team.",
     tag: "Interview",
     read: 14,
-    author: "Owen Clarke",
+    author: "Designali Studio",
     span: "",
     tone: "bg-card",
   },
   {
-    title: "Measuring design debt like engineering debt",
+    title: "Measuring design debt in 2,300+ UI examples",
     excerpt: "A scoring rubric your roadmap can actually use.",
     tag: "Opinion",
     read: 7,
-    author: "Amara Diallo",
+    author: "Ali Imam",
     span: "md:col-span-2",
     tone: "bg-card",
   },
@@ -50,7 +52,7 @@ export default function Blog04() {
             Read, then build
           </h2>
           <p className="mx-auto mt-4 max-w-md text-muted-foreground">
-            Hand-picked articles from our editors, published every Thursday.
+            Hand-picked articles from the Designali blog, published every Thursday.
           </p>
         </div>
 

@@ -1,4 +1,6 @@
-import { ChevronDownIcon } from "lucide-react"
+import {
+  ChevronDown as ChevronDownIcon,
+} from "@designali/icons"
 
 import {
   Accordion,
@@ -13,25 +15,25 @@ const releases = [
     value: "3.4.0",
     date: "Nov 12, 2026",
     changes: [
-      { type: "New", text: "Bulk edit for tasks across boards" },
-      { type: "Improved", text: "Search results now load 40% faster" },
-      { type: "Fixed", text: "Due dates shifting across time zones" },
+      { type: "New", text: "60 new marketing blocks on designali.com" },
+      { type: "Improved", text: "Icon search on /icons is now 40% faster" },
+      { type: "Fixed", text: "Dark mode tokens in the pricing blocks" },
     ],
   },
   {
     value: "3.3.2",
     date: "Oct 28, 2026",
     changes: [
-      { type: "Fixed", text: "Attachments failing on files over 20 MB" },
-      { type: "Fixed", text: "Sidebar flicker when switching workspaces" },
+      { type: "Fixed", text: "Logo sizes in @designali/logos wordmarks" },
+      { type: "Fixed", text: "Sidebar flicker in the docs on mobile" },
     ],
   },
   {
     value: "3.3.0",
     date: "Oct 14, 2026",
     changes: [
-      { type: "New", text: "Timeline view with drag to reschedule" },
-      { type: "Improved", text: "Keyboard navigation in the command menu" },
+      { type: "New", text: "Apple device mockups: iPhone, iPad and MacBook" },
+      { type: "Improved", text: "Keyboard navigation in the blocks search" },
     ],
   },
 ]

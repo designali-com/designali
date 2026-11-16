@@ -1,9 +1,9 @@
 import {
-  MedalIcon,
-  MinusIcon,
-  TrendingDownIcon,
-  TrendingUpIcon,
-} from "lucide-react"
+  Medal as MedalIcon,
+  Minus as MinusIcon,
+  TrendingDown as TrendingDownIcon,
+  TrendingUp as TrendingUpIcon,
+} from "@designali/icons"
 
 import {
   Table,
@@ -16,11 +16,11 @@ import {
 import { cn } from "@workspace/ui/lib/utils"
 
 const players = [
-  { name: "Kira Volkov", score: 9820, trend: 2 },
-  { name: "Mateo Silva", score: 9415, trend: -1 },
-  { name: "Aisha Bello", score: 9102, trend: 1 },
-  { name: "Lucas Moreau", score: 8760, trend: 0 },
-  { name: "Yuna Choi", score: 8544, trend: -2 },
+  { name: "Sara Khan", score: 9820, trend: 2 },
+  { name: "Omar Ali", score: 9415, trend: -1 },
+  { name: "Priya Shah", score: 9102, trend: 1 },
+  { name: "Daniel Roy", score: 8760, trend: 0 },
+  { name: "Zara Malik", score: 8544, trend: -2 },
 ]
 
 export default function LeaderboardTable() {
@@ -30,7 +30,7 @@ export default function LeaderboardTable() {
         <TableHeader>
           <TableRow>
             <TableHead className="w-12">Rank</TableHead>
-            <TableHead>Player</TableHead>
+            <TableHead>Designer</TableHead>
             <TableHead className="text-right">Score</TableHead>
             <TableHead className="w-12 text-right">Trend</TableHead>
           </TableRow>

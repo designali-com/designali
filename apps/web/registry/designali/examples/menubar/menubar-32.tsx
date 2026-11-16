@@ -1,4 +1,8 @@
-import { BookmarkIcon, BookmarkPlusIcon, FolderIcon } from "lucide-react"
+import {
+  Bookmark as BookmarkIcon,
+  BookmarkPlus as BookmarkPlusIcon,
+  Folder as FolderIcon,
+} from "@designali/icons"
 
 import {
   Menubar,

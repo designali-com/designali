@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { UploadCloudIcon } from "lucide-react"
+import {
+  CloudUpload as UploadCloudIcon,
+} from "@designali/icons"
 
 import {
   Field,

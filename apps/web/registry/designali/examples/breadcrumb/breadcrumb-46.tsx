@@ -20,7 +20,7 @@ export default function VersionSelectBreadcrumb() {
     <Breadcrumb>
       <BreadcrumbList>
         <BreadcrumbItem>
-          <BreadcrumbLink href="#">API reference</BreadcrumbLink>
+          <BreadcrumbLink href="#">Docs</BreadcrumbLink>
         </BreadcrumbItem>
         <BreadcrumbSeparator />
         <BreadcrumbItem>
@@ -43,11 +43,11 @@ export default function VersionSelectBreadcrumb() {
         </BreadcrumbItem>
         <BreadcrumbSeparator />
         <BreadcrumbItem>
-          <BreadcrumbLink href="#">Payments</BreadcrumbLink>
+          <BreadcrumbLink href="#">Icons</BreadcrumbLink>
         </BreadcrumbItem>
         <BreadcrumbSeparator />
         <BreadcrumbItem>
-          <BreadcrumbPage className="font-mono">POST /refunds</BreadcrumbPage>
+          <BreadcrumbPage className="font-mono">@designali/icons</BreadcrumbPage>
         </BreadcrumbItem>
       </BreadcrumbList>
     </Breadcrumb>

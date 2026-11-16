@@ -1,4 +1,7 @@
-import { PlaneIcon, PlaneTakeoffIcon } from "lucide-react"
+import {
+  Plane as PlaneIcon,
+  PlaneTakeoff as PlaneTakeoffIcon,
+} from "@designali/icons"
 
 import {
   HoverCard,

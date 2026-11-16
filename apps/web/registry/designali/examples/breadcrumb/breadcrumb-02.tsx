@@ -1,5 +1,7 @@
 import Link from "next/link";
-import { DotIcon } from "lucide-react";
+import {
+  Dot as DotIcon,
+} from "@designali/icons"
 
 import {
   Breadcrumb,

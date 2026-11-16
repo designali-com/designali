@@ -1,14 +1,19 @@
 "use client"
 
 import { useState } from "react"
-import { ArrowLeft, ArrowRight, Check, Lock } from "lucide-react"
+import {
+  ArrowLeft,
+  ArrowRight,
+  Check,
+  Lock,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { cn } from "@workspace/ui/lib/utils"
 
 const steps = [
-  { title: "Cart", detail: "3 items" },
-  { title: "Shipping", detail: "Address and method" },
+  { title: "Cart", detail: "3 templates" },
+  { title: "License", detail: "Personal or commercial" },
   { title: "Payment", detail: "Card or wallet" },
   { title: "Review", detail: "Confirm order" },
 ]
@@ -21,7 +26,7 @@ export default function Navigation12() {
       <header className="border-b">
         <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
           <a href="#" className="font-semibold tracking-tight">
-            Northbay Supply
+            designali
           </a>
           <span className="flex items-center gap-2 text-xs text-muted-foreground">
             <Lock className="size-3.5" />
@@ -110,7 +115,7 @@ export default function Navigation12() {
             <p className="font-medium">Order summary</p>
             <dl className="mt-4 space-y-2 text-muted-foreground">
               <div className="flex justify-between"><dt>Subtotal</dt><dd className="tabular-nums">$184.00</dd></div>
-              <div className="flex justify-between"><dt>Shipping</dt><dd className="tabular-nums">$9.00</dd></div>
+              <div className="flex justify-between"><dt>Tax</dt><dd className="tabular-nums">$9.00</dd></div>
               <div className="flex justify-between border-t pt-2 font-medium text-foreground"><dt>Total</dt><dd className="tabular-nums">$193.00</dd></div>
             </dl>
           </aside>

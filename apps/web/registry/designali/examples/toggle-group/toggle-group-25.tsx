@@ -1,4 +1,8 @@
-import { CircleCheckIcon, CircleDashedIcon, CircleDotIcon } from "lucide-react"
+import {
+  CircleCheck as CircleCheckIcon,
+  CircleDashed as CircleDashedIcon,
+  CircleDot as CircleDotIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import {

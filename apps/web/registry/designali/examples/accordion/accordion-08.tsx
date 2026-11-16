@@ -1,4 +1,6 @@
-import { ChevronDownIcon } from "lucide-react"
+import {
+  ChevronDown as ChevronDownIcon,
+} from "@designali/icons"
 
 import {
   Accordion,
@@ -11,22 +13,22 @@ const sections = [
   {
     value: "overview",
     title: "Overview",
-    body: "Quarterly roadmap for the Atlas mobile app, covering offline sync and the redesigned inbox.",
+    body: "Quarterly roadmap for designali.com, covering new blocks, the icon library and the redesigned docs.",
   },
   {
     value: "goals",
     title: "Goals",
-    body: "Cut cold-start time to under 1.5s and lift weekly retention from 41% to 48%.",
+    body: "Ship 60 new blocks, reach 4000+ icons in @designali/icons and keep every page above 95 on Lighthouse.",
   },
   {
     value: "risks",
     title: "Risks",
-    body: "The sync engine rewrite depends on two engineers who are also on call this quarter.",
+    body: "Client work and product work share the same small studio team this quarter.",
   },
   {
     value: "owners",
     title: "Owners",
-    body: "Product: Lena Ortiz. Engineering: Marcus Hale. Design: Ivy Tran.",
+    body: "Design & code: Ali Imam. Studio: Designali.",
   },
 ]
 

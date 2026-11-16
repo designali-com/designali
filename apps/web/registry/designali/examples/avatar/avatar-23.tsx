@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { CheckIcon } from "lucide-react"
+import {
+  Check as CheckIcon,
+} from "@designali/icons"
 
 import {
   Avatar,
@@ -11,15 +13,15 @@ import {
 import { cn } from "@workspace/ui/lib/utils"
 
 const people = [
-  { id: "am", name: "Alma Moreau" },
-  { id: "bj", name: "Bilal Jaber" },
-  { id: "cw", name: "Cora Whitfield" },
-  { id: "dn", name: "Dev Nair" },
-  { id: "ek", name: "Emi Kowal" },
+  { id: "ai", name: "Ali Imam" },
+  { id: "sa", name: "Sara · Designer" },
+  { id: "om", name: "Omar · Developer" },
+  { id: "za", name: "Zara · Motion" },
+  { id: "ka", name: "Kabir · Brand" },
 ]
 
 export default function AssigneeToggleSelector() {
-  const [selected, setSelected] = React.useState<string[]>(["bj"])
+  const [selected, setSelected] = React.useState<string[]>(["ai"])
 
   function toggle(id: string) {
     setSelected((current) =>

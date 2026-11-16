@@ -27,7 +27,7 @@ export default function TermsRequiredInvalid() {
     >
       <Field>
         <FieldLabel htmlFor="signup-email">Work email</FieldLabel>
-        <Input id="signup-email" type="email" placeholder="you@company.com" />
+        <Input id="signup-email" type="email" placeholder="you@example.com" />
       </Field>
       <Field orientation="horizontal" data-invalid={invalid || undefined}>
         <Checkbox
@@ -38,14 +38,14 @@ export default function TermsRequiredInvalid() {
         />
         <FieldContent>
           <FieldLabel htmlFor="signup-terms">
-            I agree to the Terms of Service
+            I agree to the Designali Terms of Service
           </FieldLabel>
           {invalid && (
             <FieldError>You must accept the terms to continue.</FieldError>
           )}
         </FieldContent>
       </Field>
-      <Button type="submit">Create account</Button>
+      <Button type="submit">Create Designali account</Button>
       {submitted && accepted && (
         <p className="text-xs text-muted-foreground">
           Account created. Check your inbox.

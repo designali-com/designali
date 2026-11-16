@@ -1,7 +1,9 @@
 "use client"
 
 import { useState } from "react"
-import { SendHorizontal } from "lucide-react"
+import {
+  SendHorizontal,
+} from "@designali/icons"
 
 import { cn } from "@workspace/ui/lib/utils"
 
@@ -9,15 +11,15 @@ type Message = { from: "bot" | "user"; text: string }
 
 const flow = [
   {
-    question: "Hi there! I'm Pip from Marlow Print Co. What are you hoping to print?",
-    options: ["Business cards", "Packaging", "Posters", "Something custom"],
+    question: "Hi there! I'm Ali's assistant at Designali. What are you hoping to build?",
+    options: ["Brand identity", "Website", "UI/UX design", "Something custom"],
   },
   {
-    question: "Lovely. Roughly how many pieces do you need?",
-    options: ["Under 250", "250 - 1,000", "1,000 - 5,000", "5,000+"],
+    question: "Lovely. Roughly what is your budget?",
+    options: ["Under $2k", "$2k - $5k", "$5k - $15k", "$15k+"],
   },
   {
-    question: "And when do you need them in hand?",
+    question: "And when do you need it live?",
     options: ["This week", "Within 2 weeks", "Next month", "Flexible"],
   },
 ]
@@ -36,7 +38,7 @@ export default function Contact13() {
     else
       reply.push({
         from: "bot",
-        text: "Perfect. Where should I send your quote? A real person checks it before it goes out.",
+        text: "Perfect. Where should I send your quote? Ali Imam checks it before it goes out.",
       })
     setMessages((m) => [...m, ...reply])
     setStep(next)
@@ -70,8 +72,8 @@ export default function Contact13() {
             Three questions. One honest price.
           </h2>
           <p className="mt-4 max-w-md text-muted-foreground">
-            Answer a few quick prompts and we&apos;ll put together a quote with
-            paper samples, turnaround and shipping included.
+            Answer a few quick prompts and we&apos;ll put together a Designali
+            quote with scope, timeline and deliverables included.
           </p>
         </div>
 
@@ -81,8 +83,8 @@ export default function Contact13() {
               P
             </span>
             <div className="text-sm">
-              <p className="font-medium">Pip</p>
-              <p className="text-xs text-muted-foreground">Marlow Print Co. &middot; online</p>
+              <p className="font-medium">Designali</p>
+              <p className="text-xs text-muted-foreground">Ali&apos;s assistant &middot; online</p>
             </div>
           </div>
 

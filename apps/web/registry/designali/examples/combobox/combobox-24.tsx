@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { TypeIcon } from "lucide-react"
+import {
+  Type as TypeIcon,
+} from "@designali/icons"
 
 import {
   Combobox,

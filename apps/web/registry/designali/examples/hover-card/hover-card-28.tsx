@@ -1,6 +1,12 @@
-import { CalendarIcon } from "lucide-react"
+import {
+  Calendar as CalendarIcon,
+} from "@designali/icons"
 
-import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from "@workspace/ui/components/avatar"
 import { Badge } from "@workspace/ui/components/badge"
 import {
   HoverCard,
@@ -23,8 +29,8 @@ export default function KanbanTaskHoverCard() {
             <div className="cursor-grab border bg-background p-3 text-sm shadow-xs" />
           }
         >
-          <p className="font-medium">Migrate invoices to new PDF engine</p>
-          <p className="mt-1 text-xs text-muted-foreground">FIN-218</p>
+          <p className="font-medium">Migrate Designali templates to Next.js 16</p>
+          <p className="mt-1 text-xs text-muted-foreground">DSG-218</p>
         </HoverCardTrigger>
         <HoverCardContent
           side="right"
@@ -32,12 +38,13 @@ export default function KanbanTaskHoverCard() {
           className="flex w-60 flex-col gap-2"
         >
           <div className="flex items-center justify-between">
-            <span className="font-medium">FIN-218</span>
+            <span className="font-medium">DSG-218</span>
             <Badge variant="destructive">High</Badge>
           </div>
           <div className="flex items-center gap-2">
             <Avatar size="sm">
-              <AvatarFallback>CL</AvatarFallback>
+              <AvatarImage src="/ali.jpg" alt="Ali Imam" />
+              <AvatarFallback>AI</AvatarFallback>
             </Avatar>
             Chloé Laurent
           </div>

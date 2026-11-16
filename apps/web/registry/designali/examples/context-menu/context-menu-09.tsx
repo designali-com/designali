@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { LockIcon } from "lucide-react"
+import {
+  Lock as LockIcon,
+} from "@designali/icons"
 
 import {
   ContextMenu,
@@ -28,7 +30,7 @@ export default function CanvasShapeMenu() {
             !visible && "opacity-30"
           )}
         >
-          {locked ? <LockIcon className="size-4" /> : "Hero card"}
+          {locked ? <LockIcon className="size-4" /> : "designali"}
         </ContextMenuTrigger>
         <ContextMenuContent className="w-52">
           <ContextMenuGroup>

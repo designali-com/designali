@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { CopyIcon } from "lucide-react"
+import {
+  Copy as CopyIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -14,7 +16,7 @@ const lines = [
   "import { createClient } from './client'",
   "",
   "const client = createClient({",
-  "  apiKey: process.env.ACME_KEY,",
+  "  apiKey: process.env.DESIGNALI_KEY,",
   "  region: 'eu-west',",
   "})",
   "",

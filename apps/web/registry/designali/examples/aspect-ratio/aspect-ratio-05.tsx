@@ -1,4 +1,8 @@
-import { MaximizeIcon, PlayIcon, Volume2Icon } from "lucide-react"
+import {
+  Maximize as MaximizeIcon,
+  Play as PlayIcon,
+  Volume2 as Volume2Icon,
+} from "@designali/icons"
 
 import { AspectRatio } from "@workspace/ui/components/aspect-ratio"
 import { Button } from "@workspace/ui/components/button"
@@ -14,7 +18,7 @@ export default function VideoPlayerPlaceholder() {
           <Button
             size="icon-lg"
             variant="secondary"
-            aria-label="Play video"
+            aria-label="Play Designali showreel"
             className="rounded-full"
           >
             <PlayIcon className="fill-current" />

@@ -1,10 +1,10 @@
 import {
-  BellIcon,
-  CreditCardIcon,
-  KeyRoundIcon,
-  ShieldIcon,
-  UsersIcon,
-} from "lucide-react"
+  Bell as BellIcon,
+  CreditCard as CreditCardIcon,
+  KeyRound as KeyRoundIcon,
+  Shield as ShieldIcon,
+  Users as UsersIcon,
+} from "@designali/icons"
 
 import {
   Command,

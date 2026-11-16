@@ -2,25 +2,25 @@ const archive = [
   {
     month: "November 2026",
     posts: [
-      { day: "14", title: "Release notes are a product surface" },
-      { day: "06", title: "Choosing boring technology for a payments queue" },
-      { day: "02", title: "The spreadsheet that runs our hiring" },
+      { day: "14", title: "Changelogs for 460+ blocks" },
+      { day: "06", title: "Choosing Next.js, React and Tailwind CSS" },
+      { day: "02", title: "The spreadsheet that runs our client projects" },
     ],
   },
   {
     month: "October 2026",
     posts: [
-      { day: "28", title: "How we price a feature nobody asked for" },
-      { day: "19", title: "One year of four-day weeks, by the numbers" },
-      { day: "11", title: "Accessibility audits we now run on every PR" },
-      { day: "03", title: "What a museum taught me about wayfinding" },
+      { day: "28", title: "How we price Designali templates" },
+      { day: "19", title: "One year of designali.com, by the numbers" },
+      { day: "11", title: "Accessibility audits we now run on every block" },
+      { day: "03", title: "What CGI and 3D taught me about UI" },
     ],
   },
   {
     month: "September 2026",
     posts: [
-      { day: "24", title: "Notes from rewriting our onboarding emails" },
-      { day: "09", title: "A short history of our logo, in twelve drafts" },
+      { day: "24", title: "Notes from rewriting the Designali docs" },
+      { day: "09", title: "A short history of the Designali logo, in twelve drafts" },
     ],
   },
 ]
@@ -34,8 +34,8 @@ export default function Blog08() {
         <header className="mb-14">
           <h2 className="font-serif text-4xl tracking-tight md:text-5xl">Archive</h2>
           <p className="mt-3 text-muted-foreground">
-            {total} posts from the Halftone studio notebook. Mostly about craft,
-            occasionally about money.
+            {total} posts from the Designali studio notebook. Mostly about design,
+            occasionally about code.
           </p>
         </header>
 

@@ -1,4 +1,8 @@
-import { ChevronDownIcon, LockIcon, SparklesIcon } from "lucide-react"
+import {
+  ChevronDown as ChevronDownIcon,
+  Lock as LockIcon,
+  Sparkles as SparklesIcon,
+} from "@designali/icons"
 
 import {
   Accordion,
@@ -12,18 +16,18 @@ import { Button } from "@workspace/ui/components/button"
 const features = [
   {
     value: "reports",
-    title: "Scheduled reports",
+    title: "Free blocks",
     locked: false,
-    body: "Send a PDF summary of your dashboards every Monday at 9:00.",
+    body: "Copy any free Designali block straight into your Next.js project.",
   },
   {
     value: "alerts",
-    title: "Threshold alerts",
+    title: "Icons & logos",
     locked: false,
-    body: "Get notified when a metric crosses a value you define.",
+    body: "Use @designali/icons and @designali/logos in every project.",
   },
-  { value: "sso", title: "Single sign-on", locked: true, body: "" },
-  { value: "audit", title: "Audit log", locked: true, body: "" },
+  { value: "sso", title: "Premium templates", locked: true, body: "" },
+  { value: "audit", title: "Figma source files", locked: true, body: "" },
 ]
 
 export default function AccordionDisabledItems() {

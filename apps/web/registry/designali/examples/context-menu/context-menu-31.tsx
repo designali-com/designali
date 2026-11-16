@@ -1,7 +1,12 @@
 "use client"
 
 import * as React from "react"
-import { PrinterIcon, TruckIcon, UndoIcon, UserIcon } from "lucide-react"
+import {
+  Printer as PrinterIcon,
+  Truck as TruckIcon,
+  Undo as UndoIcon,
+  User as UserIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import {
@@ -17,14 +22,14 @@ import {
 const initialOrders = [
   {
     id: "#48211",
-    customer: "Ines Moreau",
+    customer: "Designali Templates",
     total: "$84.00",
     status: "Unfulfilled",
   },
-  { id: "#48212", customer: "Kai Okafor", total: "$129.50", status: "Shipped" },
+  { id: "#48212", customer: "Designali Blocks", total: "$129.50", status: "Shipped" },
   {
     id: "#48213",
-    customer: "Hana Sato",
+    customer: "Icons Pro",
     total: "$42.25",
     status: "Unfulfilled",
   },

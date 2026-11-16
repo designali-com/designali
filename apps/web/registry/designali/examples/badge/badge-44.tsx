@@ -1,10 +1,13 @@
-import { CalendarIcon, HourglassIcon } from "lucide-react"
+import {
+  Calendar as CalendarIcon,
+  Hourglass as HourglassIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 
 const items = [
-  { label: "Pro trial", days: 12 },
-  { label: "SPRING25 coupon", days: 2 },
+  { label: "Designali Pro trial", days: 12 },
+  { label: "DESIGNALI25 coupon", days: 2 },
   { label: "API key key_demo_...4f", days: 0 },
 ]
 

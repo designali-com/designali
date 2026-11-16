@@ -1,4 +1,6 @@
-import { SparklesIcon } from "lucide-react"
+import {
+  Sparkles as SparklesIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Progress } from "@workspace/ui/components/progress"
@@ -15,7 +17,7 @@ export default function TrialDaysRemaining() {
       </div>
       <Progress value={5} max={14} aria-label="Trial days used" />
       <p className="text-xs text-muted-foreground">
-        Upgrade before Nov 24 to keep unlimited projects and version history.
+        Upgrade before Nov 24 to keep every template, block and icon.
       </p>
       <Button size="sm" className="self-start">
         Upgrade to Pro

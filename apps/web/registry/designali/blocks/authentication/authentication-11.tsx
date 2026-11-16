@@ -1,7 +1,9 @@
 "use client"
 
 import { useState } from "react"
-import { ArrowRight } from "lucide-react"
+import {
+  ArrowRight,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Checkbox } from "@workspace/ui/components/checkbox"
@@ -19,7 +21,7 @@ export default function Authentication11() {
       <div className="w-full max-w-sm">
         <div className="mb-8 flex items-center justify-center gap-2 text-lg font-semibold">
           <span className="size-6 rounded-full border-[6px] border-foreground" />
-          Loopwise
+          designali
         </div>
 
         <div role="tablist" className="relative grid grid-cols-2 border p-1">
@@ -53,17 +55,17 @@ export default function Authentication11() {
             <div className="grid grid-cols-2 gap-3">
               <div className="space-y-2">
                 <Label htmlFor="auth-11-first">First name</Label>
-                <Input id="auth-11-first" placeholder="Nora" className="h-10" />
+                <Input id="auth-11-first" placeholder="Ali" className="h-10" />
               </div>
               <div className="space-y-2">
                 <Label htmlFor="auth-11-last">Last name</Label>
-                <Input id="auth-11-last" placeholder="Okafor" className="h-10" />
+                <Input id="auth-11-last" placeholder="Imam" className="h-10" />
               </div>
             </div>
           )}
           <div className="space-y-2">
             <Label htmlFor="auth-11-email">Email</Label>
-            <Input id="auth-11-email" type="email" placeholder="nora@loopwise.app" className="h-10" />
+            <Input id="auth-11-email" type="email" placeholder="you@designali.com" className="h-10" />
           </div>
           <div className="space-y-2">
             <div className="flex items-center justify-between">
@@ -82,7 +84,7 @@ export default function Authentication11() {
           {mode === "signup" && (
             <Label className="items-start text-sm leading-snug font-normal text-muted-foreground">
               <Checkbox className="mt-0.5" />
-              Send me product updates, roughly once a month.
+              Send me new Designali blocks, icons and templates, roughly once a month.
             </Label>
           )}
           <Button type="submit" size="lg" className="w-full">
@@ -95,7 +97,7 @@ export default function Authentication11() {
           {mode === "signin" ? (
             <>Protected by device checks. <a href="#" className="underline underline-offset-4">Learn more</a></>
           ) : (
-            <>By signing up you agree to our <a href="#" className="underline underline-offset-4">Terms</a> and <a href="#" className="underline underline-offset-4">Privacy Policy</a>.</>
+            <>By signing up you agree to our <a href="https://www.designali.com/docs/legal/terms" className="underline underline-offset-4">Terms</a> and <a href="#" className="underline underline-offset-4">Privacy Policy</a>.</>
           )}
         </p>
       </div>

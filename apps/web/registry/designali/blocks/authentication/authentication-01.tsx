@@ -1,4 +1,6 @@
-import { ArrowRight } from "lucide-react"
+import {
+  ArrowRight,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Checkbox } from "@workspace/ui/components/checkbox"
@@ -19,15 +21,15 @@ export default function Authentication01() {
         />
         <a href="#" className="relative flex items-center gap-2 font-semibold">
           <span className="size-5 bg-background" />
-          Ledgerly
+          designali
         </a>
         <blockquote className="relative space-y-6">
           <p className="text-3xl leading-snug font-medium tracking-tight">
-            &ldquo;We closed our books four days faster in the first month.
-            Finance finally gets weekends back.&rdquo;
+            &ldquo;Where thoughtful design meets production-ready code.
+            Design se code tak.&rdquo;
           </p>
           <footer className="text-sm text-background/60">
-            Sofia Martins &middot; Controller, Brightline Logistics
+            Ali Imam &middot; Founder, Designali
           </footer>
         </blockquote>
       </div>
@@ -37,7 +39,7 @@ export default function Authentication01() {
           <div className="space-y-2">
             <h2 className="text-3xl font-semibold tracking-tight">Welcome back</h2>
             <p className="text-sm text-muted-foreground">
-              Sign in to your Ledgerly workspace.
+              Sign in to your Designali account.
             </p>
           </div>
           <form className="space-y-5">
@@ -46,7 +48,7 @@ export default function Authentication01() {
               <Input
                 id="auth-01-email"
                 type="email"
-                placeholder="name@company.com"
+                placeholder="you@designali.com"
                 className="h-10"
               />
             </div>

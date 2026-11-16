@@ -1,11 +1,13 @@
-import { ArrowRightIcon } from "lucide-react"
+import {
+  ArrowRight as ArrowRightIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 
 const plan = {
   plan: "Pro",
   price: "$24",
-  note: "Per seat, billed annually",
+  note: "All Designali templates and blocks, billed annually",
   cta: "Start 14-day trial",
 }
 

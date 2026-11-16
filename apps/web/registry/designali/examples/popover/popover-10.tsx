@@ -1,9 +1,11 @@
 "use client"
 
 import * as React from "react"
-import { SmilePlusIcon } from "lucide-react"
+import {
+  SmilePlus as SmilePlusIcon,
+} from "@designali/icons"
 
-import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
+import { Avatar, AvatarFallback, AvatarImage } from "@workspace/ui/components/avatar"
 import { Badge } from "@workspace/ui/components/badge"
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -24,12 +26,13 @@ export default function EmojiReactionPopover() {
     <div className="flex w-full max-w-sm flex-col gap-2 border p-3">
       <div className="flex gap-2">
         <Avatar size="sm">
-          <AvatarFallback>JO</AvatarFallback>
+          <AvatarImage src="/ali.jpg" alt="Ali Imam" />
+          <AvatarFallback>AI</AvatarFallback>
         </Avatar>
         <div className="flex flex-col gap-0.5">
-          <span className="text-xs font-medium">Jonah Okafor</span>
+          <span className="text-xs font-medium">Ali Imam</span>
           <p className="text-xs text-muted-foreground">
-            The new onboarding flow is live for everyone!
+            460+ new blocks are live on designali.com!
           </p>
         </div>
       </div>

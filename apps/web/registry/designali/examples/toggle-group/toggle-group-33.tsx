@@ -37,7 +37,7 @@ export default function CurrencyToggleGroup() {
         {(49 * rate).toFixed(2)}
       </span>
       <span className="text-xs text-muted-foreground">
-        Studio plan, per month
+        Designali Pro, per month
       </span>
     </div>
   )

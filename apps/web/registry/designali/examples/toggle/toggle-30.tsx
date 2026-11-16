@@ -1,7 +1,11 @@
 "use client"
 
 import * as React from "react"
-import { CaptionsIcon, PlayCircleIcon, SettingsIcon } from "lucide-react"
+import {
+  Captions as CaptionsIcon,
+  CirclePlay as PlayCircleIcon,
+  Settings as SettingsIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Toggle } from "@workspace/ui/components/toggle"

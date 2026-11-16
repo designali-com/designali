@@ -1,7 +1,11 @@
 "use client"
 
 import * as React from "react"
-import { CopyIcon, KeyIcon, TriangleAlertIcon } from "lucide-react"
+import {
+  Copy as CopyIcon,
+  Key as KeyIcon,
+  TriangleAlert as TriangleAlertIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Checkbox } from "@workspace/ui/components/checkbox"

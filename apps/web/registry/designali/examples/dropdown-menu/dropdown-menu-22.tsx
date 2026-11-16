@@ -2,14 +2,18 @@
 
 import * as React from "react"
 import {
-  CopyIcon,
-  MoreHorizontalIcon,
-  PinIcon,
-  ReplyIcon,
-  Trash2Icon,
-} from "lucide-react"
+  Copy as CopyIcon,
+  Ellipsis as MoreHorizontalIcon,
+  Pin as PinIcon,
+  Reply as ReplyIcon,
+  Trash2 as Trash2Icon,
+} from "@designali/icons"
 
-import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from "@workspace/ui/components/avatar"
 import { Button } from "@workspace/ui/components/button"
 import {
   DropdownMenu,
@@ -27,16 +31,17 @@ export default function ChatMessageActions() {
   return (
     <div className="group flex w-full max-w-sm items-start gap-2">
       <Avatar size="sm">
-        <AvatarFallback>TM</AvatarFallback>
+        <AvatarImage src="/ali.jpg" alt="Ali Imam" />
+        <AvatarFallback>AI</AvatarFallback>
       </Avatar>
       <div className="flex-1">
         <div className="flex items-center gap-2 text-xs">
-          <span className="font-medium">Tomás Medina</span>
+          <span className="font-medium">Ali Imam</span>
           <span className="text-muted-foreground">10:42</span>
         </div>
         <p className="mt-1 bg-muted px-3 py-2 text-xs">
-          The new onboarding flow is live on staging. Can someone run through it
-          before lunch?
+          The new Designali blocks are live on staging. Can someone run through
+          them before lunch?
         </p>
         {reaction && (
           <span className="mt-1 inline-flex border px-1.5 text-xs">

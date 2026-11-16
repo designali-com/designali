@@ -1,4 +1,6 @@
-import { HardDriveIcon } from "lucide-react"
+import {
+  HardDrive as HardDriveIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -12,9 +14,9 @@ import {
 import { cn } from "@workspace/ui/lib/utils"
 
 const segments = [
-  { label: "Documents", gb: 18.4, className: "bg-sky-500" },
-  { label: "Photos", gb: 31.2, className: "bg-violet-500" },
-  { label: "Videos", gb: 22.7, className: "bg-amber-500" },
+  { label: "Figma files", gb: 18.4, className: "bg-sky-500" },
+  { label: "Templates", gb: 31.2, className: "bg-violet-500" },
+  { label: "Motion & CGI", gb: 22.7, className: "bg-amber-500" },
   { label: "Other", gb: 6.1, className: "bg-zinc-400" },
 ]
 const total = 100
@@ -27,7 +29,7 @@ export default function StorageUsageCard() {
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
           <HardDriveIcon className="size-4 text-muted-foreground" />
-          Storage
+          Designali storage
         </CardTitle>
         <CardDescription>
           {used.toFixed(1)} GB of {total} GB used

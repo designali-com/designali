@@ -33,7 +33,7 @@ export default function NestedTabs() {
               DATABASE_URL, REDIS_URL, SENTRY_DSN
             </TabsContent>
             <TabsContent value="domains" className="text-muted-foreground">
-              {env === "production" ? "app.lumen.dev" : "staging.lumen.dev"}
+              {env === "production" ? "www.designali.com" : "staging.designali.com"}
             </TabsContent>
           </Tabs>
         </TabsContent>

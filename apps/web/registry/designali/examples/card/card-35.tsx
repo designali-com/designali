@@ -2,12 +2,12 @@
 
 import * as React from "react"
 import {
-  CheckIcon,
-  CopyIcon,
-  EyeIcon,
-  EyeOffIcon,
-  RefreshCwIcon,
-} from "lucide-react"
+  Check as CheckIcon,
+  Copy as CopyIcon,
+  Eye as EyeIcon,
+  EyeOff as EyeOffIcon,
+  RefreshCw as RefreshCwIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -34,7 +34,7 @@ export default function ApiKeyCard() {
   return (
     <Card className="w-full max-w-sm">
       <CardHeader>
-        <CardTitle>Secret key</CardTitle>
+        <CardTitle>Designali API key</CardTitle>
         <CardDescription>
           Use this key on your server only. Never expose it in client code.
         </CardDescription>

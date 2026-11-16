@@ -1,7 +1,13 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { Check, Fingerprint, Laptop, Smartphone, Trash2 } from "lucide-react"
+import {
+  Check,
+  FingerprintPattern as Fingerprint,
+  Laptop,
+  Smartphone,
+  Trash2,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { cn } from "@workspace/ui/lib/utils"
@@ -57,7 +63,7 @@ export default function Authentication13() {
             </h2>
             <p className="mt-2 text-sm text-muted-foreground">
               {state === "idle" &&
-                "Sign in to Parcel with your fingerprint, face or screen lock. Passkeys can't be phished or reused."}
+                "Sign in to Designali with your fingerprint, face or screen lock. Passkeys can't be phished or reused."}
               {state === "waiting" && "Follow the prompt from your browser or operating system to confirm."}
               {state === "done" && "Next time, just choose your passkey on the sign-in screen."}
             </p>

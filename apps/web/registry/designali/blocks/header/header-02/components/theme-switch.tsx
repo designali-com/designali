@@ -2,7 +2,10 @@
 
 import * as React from "react"
 import { useEffect, useState } from "react"
-import { Moon, Sun } from "lucide-react"
+import {
+  Moon,
+  Sun,
+} from "@designali/icons"
 import { useTheme } from "next-themes"
 
 import { Toggle } from "@workspace/ui/components/toggle"

@@ -1,13 +1,13 @@
 "use client"
 
 import {
-  BookOpenIcon,
-  CreditCardIcon,
-  PlugIcon,
-  RocketIcon,
-  ShieldCheckIcon,
-  WrenchIcon,
-} from "lucide-react"
+  BookOpen as BookOpenIcon,
+  CreditCard as CreditCardIcon,
+  Plug as PlugIcon,
+  Rocket as RocketIcon,
+  ShieldCheck as ShieldCheckIcon,
+  Wrench as WrenchIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import {

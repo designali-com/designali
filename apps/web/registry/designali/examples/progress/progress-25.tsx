@@ -1,4 +1,8 @@
-import { HeadphonesIcon, KeyboardIcon, MouseIcon } from "lucide-react"
+import {
+  Headphones as HeadphonesIcon,
+  Keyboard as KeyboardIcon,
+  Mouse as MouseIcon,
+} from "@designali/icons"
 
 import {
   Progress,

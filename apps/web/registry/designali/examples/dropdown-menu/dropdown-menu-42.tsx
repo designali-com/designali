@@ -1,9 +1,16 @@
 "use client"
 
 import * as React from "react"
-import { ChevronDownIcon, UserMinusIcon } from "lucide-react"
+import {
+  ChevronDown as ChevronDownIcon,
+  UserMinus as UserMinusIcon,
+} from "@designali/icons"
 
-import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from "@workspace/ui/components/avatar"
 import { Button } from "@workspace/ui/components/button"
 import {
   DropdownMenu,
@@ -27,11 +34,12 @@ export default function MemberRoleMenu() {
   return (
     <div className="flex w-full max-w-sm items-center gap-3 border p-3">
       <Avatar>
-        <AvatarFallback>JO</AvatarFallback>
+        <AvatarImage src="/ali.jpg" alt="Ali Imam" />
+        <AvatarFallback>AI</AvatarFallback>
       </Avatar>
       <div className="flex-1 text-xs">
-        <p className="font-medium">Jonah Okafor</p>
-        <p className="text-muted-foreground">jonah@fieldnote.app</p>
+        <p className="font-medium">Ali Imam</p>
+        <p className="text-muted-foreground">ali@designali.com</p>
       </div>
       <DropdownMenu>
         <DropdownMenuTrigger

@@ -3,12 +3,12 @@ import * as React from "react"
 import { Separator } from "@workspace/ui/components/separator"
 
 const messages = [
-  { author: "Kai", text: "Pushed the hotfix to staging.", unread: false },
+  { author: "Kai", text: "Pushed the new pricing block to staging.", unread: false },
   { author: "Mira", text: "Looks good on my end.", unread: false },
-  { author: "Kai", text: "Production deploy starts in 10.", unread: true },
+  { author: "Kai", text: "designali.com deploy to Vercel starts in 10.", unread: true },
   {
     author: "Leo",
-    text: "Heads up, the migration takes a minute.",
+    text: "Heads up, the icons build takes a minute.",
     unread: true,
   },
 ]

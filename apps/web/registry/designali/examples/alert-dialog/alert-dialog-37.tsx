@@ -1,4 +1,6 @@
-import { ServerOffIcon } from "lucide-react"
+import {
+  ServerOff as ServerOffIcon,
+} from "@designali/icons"
 
 import {
   AlertDialog,
@@ -29,7 +31,7 @@ export default function EnvironmentImpactSummary() {
       </AlertDialogTrigger>
       <AlertDialogContent>
         <AlertDialogHeader>
-          <AlertDialogTitle>Delete the staging environment?</AlertDialogTitle>
+          <AlertDialogTitle>Delete the designali.com staging environment?</AlertDialogTitle>
           <AlertDialogDescription>
             The following resources will be destroyed and cannot be restored.
           </AlertDialogDescription>

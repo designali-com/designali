@@ -1,6 +1,9 @@
 "use client"
 
-import { ClockIcon, UsersIcon } from "lucide-react"
+import {
+  Clock as ClockIcon,
+  Users as UsersIcon,
+} from "@designali/icons"
 
 import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
 import { Button } from "@workspace/ui/components/button"
@@ -24,16 +27,16 @@ import {
 } from "@workspace/ui/components/input-group"
 
 const groups = [
-  { label: "Recent", items: ["Hamid Rahimi", "Julia Novak"] },
+  { label: "Recent", items: ["Ali Imam", "Julia"] },
   {
     label: "All contacts",
     items: [
-      "Aiko Tanaka",
-      "Bruno Silva",
-      "Hamid Rahimi",
-      "Julia Novak",
-      "Marta Kowalski",
-      "Sean O'Neill",
+      "Aiko",
+      "Bruno",
+      "Ali Imam",
+      "Julia",
+      "Marta",
+      "Sean",
     ],
   },
 ]

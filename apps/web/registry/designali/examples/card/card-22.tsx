@@ -1,12 +1,15 @@
 "use client"
 
 import * as React from "react"
-import { SendIcon } from "lucide-react"
+import {
+  Send as SendIcon,
+} from "@designali/icons"
 
 import {
   Avatar,
   AvatarBadge,
   AvatarFallback,
+  AvatarImage,
 } from "@workspace/ui/components/avatar"
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -23,9 +26,9 @@ import { cn } from "@workspace/ui/lib/utils"
 const initial = [
   {
     from: "agent",
-    text: "Hi Noor! I see your export failed last night. Want me to re-run it?",
+    text: "Hi! I see your template download failed last night. Want me to resend it?",
   },
-  { from: "me", text: "Yes please, the Q3 report for the finance workspace." },
+  { from: "me", text: "Yes please, the Design Agency template with Figma files." },
   {
     from: "agent",
     text: "Done. It should land in your inbox within 5 minutes.",
@@ -41,13 +44,14 @@ export default function SupportChatCard() {
       <CardHeader className="border-b">
         <div className="flex items-center gap-2.5">
           <Avatar className="size-8">
-            <AvatarFallback>EV</AvatarFallback>
+            <AvatarImage src="/ali.jpg" alt="Ali Imam" />
+            <AvatarFallback>AI</AvatarFallback>
             <AvatarBadge className="bg-emerald-500" />
           </Avatar>
           <div className="grid">
-            <CardTitle>Elliot Vance</CardTitle>
+            <CardTitle>Ali Imam</CardTitle>
             <CardDescription>
-              Support · usually replies in 2 min
+              Designali support · usually replies in 2 min
             </CardDescription>
           </div>
         </div>

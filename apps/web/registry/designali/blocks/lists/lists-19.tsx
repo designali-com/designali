@@ -1,10 +1,10 @@
 const milestones = [
-  { year: "2019", title: "Two people, one spare room", text: "Lena and Marcus quit their agency jobs to build the scheduling tool they wished they had." },
-  { year: "2020", title: "First 1,000 teams", text: "A launch on a Tuesday afternoon brought more sign-ups in a week than we had planned for the year." },
-  { year: "2021", title: "Seed round & first hires", text: "Raised $4M and grew to 12 people across Copenhagen and Lisbon." },
-  { year: "2023", title: "Calendar 2.0", text: "Rebuilt the core on a local-first sync engine. Load times dropped from 2.4s to 180ms." },
-  { year: "2025", title: "Profitable", text: "Crossed $12M ARR with a team of 58, without spending on paid acquisition." },
-  { year: "2026", title: "100,000 teams", text: "From two-person studios to hospitals with 9,000 staff, all running on Weekfold." },
+  { year: "Start", title: "One designer, one laptop", text: "Ali Imam starts designing brands and interfaces, and teaches himself to code them too." },
+  { year: "Dalim", title: "Dalim and Dalim Agency", text: "The first brand line: identity, graphic design and websites for clients under the Dalim name." },
+  { year: "Fonts", title: "Dalim Fonts, Graphic and Visuals", text: "Typefaces, graphic resources and visual work grow into their own Dalim projects." },
+  { year: "UI", title: "Dalim UI, Icons and Tools", text: "Design meets code: UI components, icon sets and tools for designers and developers." },
+  { year: "Designali", title: "Designali", text: "Everything comes together as one design and development studio — design se code tak." },
+  { year: "Today", title: "460+ blocks and counting", text: "Templates, 240+ landing pages, 2300+ UI designs and 4000+ icons on designali.com." },
 ]
 
 export default function Lists19() {
@@ -13,7 +13,7 @@ export default function Lists19() {
       <div className="mx-auto max-w-5xl px-6">
         <div className="text-center">
           <p className="text-xs tracking-widest text-muted-foreground uppercase">Our story</p>
-          <h2 className="mt-3 text-4xl font-semibold tracking-tight md:text-5xl">Seven years, one calendar.</h2>
+          <h2 className="mt-3 text-4xl font-semibold tracking-tight md:text-5xl">Design se code tak.</h2>
         </div>
 
         <ol className="relative mt-16">

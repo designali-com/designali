@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { MapPinIcon } from "lucide-react"
+import {
+  MapPin as MapPinIcon,
+} from "@designali/icons"
 
 import { Label } from "@workspace/ui/components/label"
 import {

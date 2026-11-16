@@ -1,4 +1,7 @@
-import { ArrowRightIcon, QuoteIcon } from "lucide-react"
+import {
+  ArrowRight as ArrowRightIcon,
+  Quote as QuoteIcon,
+} from "@designali/icons"
 
 import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
 import {
@@ -13,14 +16,14 @@ import {
 
 const stories = [
   {
-    quote: "We closed our books four days faster.",
-    name: "Leah Morgan",
-    company: "Brightline Freight",
+    quote: "Designali blocks cut our launch time in half.",
+    name: "Startup Founder",
+    company: "Designali client",
   },
   {
-    quote: "Support tickets dropped by a third.",
-    name: "Kenji Watanabe",
-    company: "Sola Health",
+    quote: "The templates feel production-ready out of the box.",
+    name: "Agency Designer",
+    company: "designali.com customer",
   },
 ]
 

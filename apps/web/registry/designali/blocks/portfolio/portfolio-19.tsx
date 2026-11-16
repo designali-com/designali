@@ -1,59 +1,62 @@
 "use client"
 
 import { useState } from "react"
-import { ArrowUpRight, Plus } from "lucide-react"
+import {
+  ArrowUpRight,
+  Plus,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { cn } from "@workspace/ui/lib/utils"
 
 const projects = [
   {
-    name: "Bramble Bikes",
-    category: "Brand + E-commerce",
-    year: "2026",
+    name: "Dalim Agency",
+    category: "Brand + Website",
+    year: "Brand",
     summary:
-      "A cargo bike maker selling to families, not cyclists. We cut the jargon, photographed real school runs and rebuilt the configurator around how people actually ride.",
-    facts: [
-      { label: "Timeline", value: "16 weeks" },
-      { label: "Result", value: "+64% test rides booked" },
-    ],
-    background: "linear-gradient(120deg, oklch(0.6 0.14 140), oklch(0.85 0.1 100))",
-  },
-  {
-    name: "Calder Archive",
-    category: "Digital collection",
-    year: "2025",
-    summary:
-      "Forty thousand drawings, letters and photographs put online with a search that understands dates, places and people rather than file names.",
-    facts: [
-      { label: "Timeline", value: "9 months" },
-      { label: "Result", value: "1.2M visits in year one" },
-    ],
-    background: "linear-gradient(120deg, oklch(0.35 0.03 60), oklch(0.75 0.05 70))",
-  },
-  {
-    name: "Overture Health",
-    category: "Product design",
-    year: "2025",
-    summary:
-      "A symptom tracker for people with chronic migraine, co-designed with a patient panel who used every prototype for a fortnight.",
-    facts: [
-      { label: "Timeline", value: "20 weeks" },
-      { label: "Result", value: "62% 90-day retention" },
-    ],
-    background: "linear-gradient(120deg, oklch(0.55 0.15 300), oklch(0.82 0.08 340))",
-  },
-  {
-    name: "Kiln Street Market",
-    category: "Identity + Signage",
-    year: "2024",
-    summary:
-      "A weekend market in a former brickworks. The identity uses the stamp marks from the original bricks, now pressed into every sign and stall flag.",
+      "An agency identity and website for the Dalim family of brands. One system for logos, type, colour and every page of the site.",
     facts: [
       { label: "Timeline", value: "8 weeks" },
-      { label: "Result", value: "96 traders onboarded" },
+      { label: "Result", value: "One brand system" },
     ],
-    background: "linear-gradient(120deg, oklch(0.55 0.15 35), oklch(0.8 0.1 60))",
+    background: "url(/images/templates/dalim-agency-old.jpg) center / cover",
+  },
+  {
+    name: "Dalim Icons",
+    category: "Icon system",
+    year: "Icons",
+    summary:
+      "A personal icon set redrawn on one grid and one stroke, then published as @designali/icons for React.",
+    facts: [
+      { label: "Timeline", value: "Ongoing" },
+      { label: "Result", value: "4000+ icons" },
+    ],
+    background: "url(/images/templates/dalim-icons-old.jpg) center / cover",
+  },
+  {
+    name: "Dalim UI",
+    category: "Product design",
+    year: "UI",
+    summary:
+      "A component library for designers who code. Every Figma component paired with production-ready React and Tailwind CSS.",
+    facts: [
+      { label: "Timeline", value: "Ongoing" },
+      { label: "Result", value: "460+ Designali blocks" },
+    ],
+    background: "url(/images/templates/dalim-ui-old.jpg) center / cover",
+  },
+  {
+    name: "Dalim Visuals",
+    category: "CGI + Motion",
+    year: "3D",
+    summary:
+      "CGI, 3D renders and motion loops for brands and launches, from art direction to the final frame.",
+    facts: [
+      { label: "Timeline", value: "Per project" },
+      { label: "Result", value: "Showreel and loops" },
+    ],
+    background: "url(/images/templates/dalim-visuals-old.jpg) center / cover",
   },
 ]
 
@@ -64,8 +67,8 @@ export default function Portfolio19() {
     <section className="w-full bg-background py-16 text-foreground md:py-24">
       <div className="mx-auto max-w-5xl px-6">
         <div className="flex items-end justify-between gap-4">
-          <h2 className="text-3xl font-medium tracking-tight md:text-5xl">Selected projects</h2>
-          <span className="font-mono text-xs text-muted-foreground">2024–2026</span>
+          <h2 className="text-3xl font-medium tracking-tight md:text-5xl">Selected Designali projects</h2>
+          <span className="font-mono text-xs text-muted-foreground">Dalim · Designali</span>
         </div>
 
         <ul className="mt-10 border-t border-border">
@@ -125,7 +128,7 @@ export default function Portfolio19() {
                             variant="outline"
                             nativeButton={false}
                             tabIndex={isOpen ? undefined : -1}
-                            render={<a href="#" />}
+                            render={<a href="/work" />}
                           >
                             View project
                             <ArrowUpRight />

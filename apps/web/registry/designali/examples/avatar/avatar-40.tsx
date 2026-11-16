@@ -1,4 +1,6 @@
-import { MessageCircleIcon } from "lucide-react"
+import {
+  MessageCircle as MessageCircleIcon,
+} from "@designali/icons"
 
 import {
   Avatar,
@@ -21,23 +23,23 @@ export default function SupportAgentWidget() {
         <AvatarGroup className="mb-2">
           <Avatar size="lg">
             <AvatarFallback className="bg-teal-100 text-teal-800 dark:bg-teal-950 dark:text-teal-300">
-              LN
+              AI
             </AvatarFallback>
           </Avatar>
           <Avatar size="lg">
             <AvatarFallback className="bg-orange-100 text-orange-800 dark:bg-orange-950 dark:text-orange-300">
-              PK
+              SA
             </AvatarFallback>
           </Avatar>
           <Avatar size="lg">
             <AvatarFallback className="bg-indigo-100 text-indigo-800 dark:bg-indigo-950 dark:text-indigo-300">
-              DY
+              OM
             </AvatarFallback>
           </Avatar>
         </AvatarGroup>
-        <CardTitle>Questions? Chat with us</CardTitle>
+        <CardTitle>Questions? Chat with Designali</CardTitle>
         <CardDescription>
-          Lina, Pedro, and Dana typically reply in under 5 minutes.
+          Ali, Sara, and Omar typically reply in under 5 minutes.
         </CardDescription>
       </CardHeader>
       <CardContent>

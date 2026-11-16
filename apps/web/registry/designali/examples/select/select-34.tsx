@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { RepeatIcon } from "lucide-react"
+import {
+  Repeat as RepeatIcon,
+} from "@designali/icons"
 
 import {
   Select,
@@ -27,7 +29,7 @@ export default function EventRepeatSelect() {
     <div className="flex w-full max-w-xs flex-col gap-3 border p-4">
       <div className="flex items-center gap-2 text-sm font-medium">
         <span className="size-2.5 bg-emerald-500" />
-        Team standup
+        Designali studio standup
       </div>
       <Select items={repeats} value={repeat} onValueChange={setRepeat}>
         <SelectTrigger className="w-full" aria-label="Repeat">

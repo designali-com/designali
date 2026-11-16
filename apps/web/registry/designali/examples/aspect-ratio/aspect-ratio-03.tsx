@@ -7,8 +7,8 @@ export default function AspectRatioPortrait() {
       className="w-full max-w-[10rem] rounded-lg bg-muted"
     >
       <img
-        src="https://images.unsplash.com/photo-1588345921523-c2dcdb7f1dcd?w=800&dpr=2&q=80"
-        alt="Designali portrait preview"
+        src="/ali.jpg"
+        alt="Ali Imam, founder of Designali"
         className="absolute inset-0 h-full w-full rounded-lg object-cover"
       />
     </AspectRatio>

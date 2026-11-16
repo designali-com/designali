@@ -14,7 +14,7 @@ export default function TeamInviteInput() {
   const [email, setEmail] = React.useState("")
   const [role, setRole] = React.useState("Member")
   const [invites, setInvites] = React.useState([
-    { email: "kai@harborlabs.io", role: "Admin" },
+    { email: "ali@designali.com", role: "Admin" },
   ])
 
   return (
@@ -32,7 +32,7 @@ export default function TeamInviteInput() {
           type="email"
           required
           aria-label="Email to invite"
-          placeholder="teammate@company.com"
+          placeholder="teammate@designali.com"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />

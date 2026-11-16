@@ -1,7 +1,9 @@
 "use client"
 
 import { useState } from "react"
-import { ArrowRight } from "lucide-react"
+import {
+  ArrowRight,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Input } from "@workspace/ui/components/input"
@@ -40,7 +42,7 @@ export default function Forms11() {
         <div className="max-w-2xl">
           <p className="text-xs tracking-widest text-muted-foreground uppercase">Project estimator</p>
           <h2 className="mt-4 text-4xl font-semibold tracking-tight md:text-5xl">
-            Get a ballpark in under a minute.
+            Estimate your Designali project in a minute.
           </h2>
         </div>
 
@@ -112,7 +114,7 @@ export default function Forms11() {
               <Label className="flex items-center justify-between gap-4 p-4">
                 <span>
                   <span className="block text-sm font-medium">Copywriting</span>
-                  <span className="text-xs font-normal text-muted-foreground">Written by our in-house editor</span>
+                  <span className="text-xs font-normal text-muted-foreground">Brand voice and website copy</span>
                 </span>
                 <Switch checked={copy} onCheckedChange={setCopy} />
               </Label>
@@ -128,8 +130,8 @@ export default function Forms11() {
                 ${high.toLocaleString()}
               </p>
               <p className="mt-4 text-sm leading-6 opacity-70">
-                Based on similar projects we shipped in the last 18 months.
-                Final quotes follow a 30-minute scoping call.
+                Based on similar Designali projects. Final quotes follow a
+                30-minute scoping call with Ali Imam.
               </p>
             </div>
             <div className="space-y-3">
@@ -140,7 +142,7 @@ export default function Forms11() {
                 <Input
                   id="f11-email"
                   type="email"
-                  placeholder="you@company.com"
+                  placeholder="you@example.com"
                   className="h-11 border-background/20 bg-transparent text-background placeholder:text-background/50 dark:bg-transparent"
                 />
                 <Button size="lg" className="bg-background text-foreground hover:bg-background/90">

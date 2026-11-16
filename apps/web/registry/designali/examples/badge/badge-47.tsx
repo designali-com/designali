@@ -1,4 +1,6 @@
-import { FilterIcon } from "lucide-react"
+import {
+  Funnel as FilterIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import { Button } from "@workspace/ui/components/button"
@@ -8,7 +10,7 @@ export default function InlineHeadingCountBadges() {
     <div className="flex w-full max-w-sm flex-col gap-4">
       <div className="flex items-center justify-between">
         <h3 className="flex items-center gap-2 text-base font-semibold">
-          Pending approvals
+          Pending client approvals
           <Badge variant="secondary" className="tabular-nums">
             8
           </Badge>

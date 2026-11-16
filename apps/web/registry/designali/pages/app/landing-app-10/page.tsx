@@ -8,206 +8,207 @@ import {
   Plus,
   RefreshCw,
   Watch,
-} from "lucide-react"
+} from "@designali/icons"
 
+import { Logo } from "@/src/components/logo"
 import { Button } from "@workspace/ui/components/button"
 
-const navLinks = ["Features", "How it works", "Reviews", "Pricing", "Support"]
+const navLinks = ["Services", "Process", "Work", "Pricing", "Contact"]
 
 const features = [
   {
     icon: Bell,
-    title: "Gentle reminders",
+    title: "UX flows and prototypes",
     description:
-      "Notifications that respect focus modes and never nag. Snooze, reschedule or skip with a swipe.",
+      "Clickable Figma prototypes for onboarding, notifications and every key journey.",
   },
   {
     icon: Lock,
-    title: "Private by default",
+    title: "Native-feeling UI",
     description:
-      "Your data stays on your device and is end-to-end encrypted when it syncs. We never sell it.",
+      "Interfaces that respect iOS and Android conventions while still feeling like your brand.",
   },
   {
     icon: RefreshCw,
-    title: "Seamless sync",
+    title: "Web app development",
     description:
-      "Start on your phone and pick up on your tablet or laptop. Changes appear in under a second.",
+      "Companion web apps and dashboards built in Next.js, TypeScript and Tailwind CSS.",
   },
   {
     icon: Watch,
-    title: "Apple Watch and Wear OS",
+    title: "Widgets and watch UI",
     description:
-      "Glanceable complications and quick actions right on your wrist.",
+      "Glanceable widgets, complications and quick actions designed for small screens.",
   },
   {
     icon: Moon,
-    title: "Beautiful dark mode",
+    title: "Light and dark themes",
     description:
-      "Hand-tuned themes for day and night, plus custom app icons and accent colours.",
+      "Hand-tuned tokens for day and night, plus custom app icons from @designali/icons.",
   },
 ]
 
 const stats = [
-  { value: "42", label: "Languages supported" },
-  { value: "#1", label: "In 18 countries" },
-  { value: "11 min", label: "Saved per user daily" },
-  { value: "3.2M", label: "Downloads" },
+  { value: "4000+", label: "Icons in @designali/icons" },
+  { value: "5", label: "Apple device mockups" },
+  { value: "6 weeks", label: "Typical app design sprint" },
+  { value: "2300+", label: "UI examples on designali.com" },
 ]
 
 const steps = [
   {
-    title: "Download the app",
+    title: "Book a call",
     description:
-      "Free on the App Store and Google Play. No account needed to try it.",
+      "A free 30-minute call with Ali Imam to talk through your app idea and users.",
   },
   {
-    title: "Pick your goals",
+    title: "Map the flows",
     description:
-      "Answer three quick questions and we tailor the experience to you.",
+      "We define the core journeys, screens and edge cases together.",
   },
   {
-    title: "Add your first item",
+    title: "Design the UI",
     description:
-      "Use the quick-add button, a widget, Siri or a share sheet from any app.",
+      "Weekly Figma reviews take the app from wireframes to polished, on-brand screens.",
   },
   {
-    title: "Build the habit",
+    title: "Build and launch",
     description:
-      "Weekly insights show your progress and keep you gently on track.",
+      "We hand off real components or build the web app in Next.js and help you launch.",
   },
 ]
 
 const showcase = [
   {
-    name: "Home screen widgets",
-    meta: "Small, medium and large sizes",
+    name: "Habit tracker app",
+    meta: "UI/UX and widget design",
     tag: "iOS and Android",
-    price: "Free",
+    price: "Starter",
   },
   {
-    name: "Lock screen glance",
-    meta: "See today at a glance",
-    tag: "iOS 17+",
-    price: "Free",
+    name: "Finance app dashboard",
+    meta: "Product design and web app",
+    tag: "Next.js",
+    price: "Starter",
   },
   {
-    name: "Watch app",
-    meta: "Quick actions on your wrist",
+    name: "Fitness watch app",
+    meta: "Watch and companion UI",
     tag: "watchOS",
-    price: "Premium",
+    price: "Design",
   },
   {
-    name: "Siri and Shortcuts",
-    meta: "Hands-free logging",
+    name: "Voice journaling app",
+    meta: "Conversation flows and UI",
     tag: "Voice",
-    price: "Free",
+    price: "Starter",
   },
   {
-    name: "Weekly insights",
-    meta: "Trends and streaks",
-    tag: "Insights",
-    price: "Premium",
+    name: "Analytics dashboard",
+    meta: "Data design and charts",
+    tag: "Data",
+    price: "Design",
   },
   {
-    name: "Family spaces",
-    meta: "Share with up to five people",
-    tag: "Family",
-    price: "Family",
+    name: "Shared planner app",
+    meta: "Collaboration flows",
+    tag: "Design + Build",
+    price: "Design + Build",
   },
 ]
 
 const testimonials = [
   {
     quote:
-      "Our whole family uses the shared space. It replaced a fridge full of sticky notes.",
-    name: "Carlos Mendes",
-    role: "Family plan user",
+      "The design system Designali built means our small team ships new screens every week without breaking anything.",
+    name: "Carlos M.",
+    role: "CTO, Designali client",
   },
   {
     quote:
-      "I love that it works offline. I use it on the subway every morning without a hiccup.",
-    name: "Emily Shaw",
-    role: "App Store review",
+      "Having one person design and code the web app meant zero hand-off gaps. It just worked.",
+    name: "Emily S.",
+    role: "App founder, Designali client",
   },
   {
     quote:
-      "Small details everywhere. You can tell the team obsesses over making it feel right.",
-    name: "Andre Silva",
-    role: "Designer, longtime user",
+      "Small details everywhere. You can tell Ali obsesses over making every interaction feel right.",
+    name: "Andre S.",
+    role: "Founder, Designali client",
   },
 ]
 
 const tiers = [
   {
-    name: "Free",
+    name: "Starter",
     price: "$0",
     period: "",
-    description: "Everything you need to get started.",
+    description: "Free Designali resources to start your app.",
     features: [
-      "Core features",
-      "Sync across 2 devices",
-      "Home screen widgets",
-      "Dark mode",
+      "Free blocks and UI examples",
+      "Free @designali/icons",
+      "Habit tracker app",
+      "Device mockups",
     ],
-    cta: "Download free",
+    cta: "Browse free",
   },
   {
-    name: "Premium",
-    price: "$4.99",
+    name: "Design",
+    price: "$4,500",
     period: "/month",
-    description: "For people who want the full experience.",
+    description: "Ongoing app design with Ali Imam.",
     features: [
-      "Unlimited devices",
-      "Weekly insights",
-      "Watch app",
-      "Custom themes and icons",
-      "Priority support",
+      "Unlimited design requests",
+      "Analytics dashboard",
+      "Fitness watch app",
+      "Custom icons and themes",
+      "Weekly Figma reviews",
     ],
-    cta: "Try 7 days free",
+    cta: "Start designing",
   },
   {
-    name: "Family",
-    price: "$7.99",
+    name: "Design + Build",
+    price: "$8,000",
     period: "/month",
-    description: "Premium for up to six people.",
+    description: "Design plus web app development in code.",
     features: [
-      "Everything in Premium",
-      "Up to 6 members",
-      "Shared spaces",
-      "Parental controls",
-      "One simple bill",
+      "Everything in Design",
+      "Next.js web app build",
+      "Shared component library",
+      "Deploy on Vercel",
+      "One simple monthly fee",
     ],
-    cta: "Start family plan",
+    cta: "Book a call",
   },
 ]
 
 const faqs = [
   {
-    q: "Do you sell my data?",
-    a: "Never. We make money from subscriptions, not advertising. Your data is encrypted and stays yours.",
+    q: "Do you build native apps too?",
+    a: "We design native iOS and Android apps and hand off clean specs, and we build web apps and dashboards in code.",
   },
   {
-    q: "Can I use it without an account?",
-    a: "Yes. Accounts are only needed to sync between devices or share with family members.",
+    q: "Can I start with just an idea?",
+    a: "Yes. Many projects start with a sketch or a note. We shape the flows with you on the first call.",
   },
   {
-    q: "How do I cancel Premium?",
-    a: "Cancel any time from your App Store or Google Play subscription settings. You keep Premium until the period ends.",
+    q: "How do I cancel a plan?",
+    a: "Email hello@designali.com any time. Your plan stays active until the end of the current month.",
   },
   {
-    q: "Is the app really free?",
-    a: "Yes. The free plan has no ads and no time limit. Premium adds advanced features for people who want more.",
+    q: "Are the free resources really free?",
+    a: "Yes. Designali blocks, icons and UI examples are free to explore. Paid plans add hands-on design and code.",
   },
   {
-    q: "Which devices are supported?",
-    a: "iPhone and iPad on iOS 16 or later, Android 10 or later, Apple Watch, Wear OS and any modern web browser.",
+    q: "Which platforms do you design for?",
+    a: "iPhone, iPad, Android, Apple Watch, Wear OS and the web, with responsive web apps built in Next.js.",
   },
 ]
 
 const footer = [
-  { title: "App", links: ["Features", "Premium", "Download", "What is new"] },
-  { title: "Company", links: ["About", "Blog", "Press kit", "Careers"] },
-  { title: "Help", links: ["Support", "Privacy", "Terms", "Contact"] },
+  { title: "Studio", links: ["Services", "Design", "Work", "Services"] },
+  { title: "Resources", links: ["Templates", "Blocks", "Icons", "Docs"] },
+  { title: "Help", links: ["Contact", "Privacy", "Terms", "Contact"] },
 ]
 
 export default function LandingApp10() {
@@ -219,10 +220,8 @@ export default function LandingApp10() {
             href="#"
             className="flex items-center gap-2 font-semibold tracking-tight"
           >
-            <span className="flex size-7 items-center justify-center rounded-md bg-fuchsia-600 text-white text-sm">
-              P
-            </span>
-            <span className="font-serif text-lg font-normal">Pagecraft</span>
+            <Logo className="h-5 w-auto" />
+            <span className="font-serif text-lg font-normal">designali</span>
           </a>
           <nav className="hidden items-center gap-7 text-sm md:flex">
             {navLinks.map((link) => (
@@ -243,10 +242,10 @@ export default function LandingApp10() {
               nativeButton={false}
               render={<a href="#" />}
             >
-              Log in
+              View work
             </Button>
             <Button size="sm" nativeButton={false} render={<a href="#" />}>
-              Get the app
+              Start a project
             </Button>
           </div>
         </div>
@@ -254,26 +253,25 @@ export default function LandingApp10() {
       <section className="border-b">
         <div className="mx-auto max-w-7xl px-6 pt-16 pb-12 md:pt-28">
           <div className="flex items-center justify-between border-b pb-4 text-xs tracking-widest text-muted-foreground uppercase">
-            <span>For people who love books</span>
+            <span>Designali for reading and community apps</span>
             <span className="hidden sm:inline">
-              A home for your reading life.
+              A home for your next app.
             </span>
           </div>
           <h1 className="mt-12 max-w-5xl text-4xl leading-[1.05] font-semibold tracking-tight text-balance sm:text-5xl md:text-8xl font-serif font-normal">
-            {"Read more books and "}
+            {"Reading apps people "}
             <span className="text-fuchsia-600 dark:text-fuchsia-400">
-              remember them
+              come back to
             </span>
           </h1>
           <div className="mt-12 grid gap-8 md:grid-cols-2 md:items-end">
             <p className="max-w-lg text-lg leading-8 text-muted-foreground">
-              Pagecraft tracks your reading, saves highlights and quotes, and
-              brings small book clubs together around one shared shelf.
+              Designali designs reading, notes and community apps with highlights, shared shelves and social features people come back to.
             </p>
             <div className="md:justify-self-end">
               <div className="flex flex-wrap gap-3 ">
                 <Button size="lg" nativeButton={false} render={<a href="#" />}>
-                  Get the app
+                  Start a project
                   <ArrowRight />
                 </Button>
                 <Button
@@ -282,7 +280,7 @@ export default function LandingApp10() {
                   nativeButton={false}
                   render={<a href="#" />}
                 >
-                  Start a book club
+                  Start a project
                 </Button>
               </div>
             </div>
@@ -314,14 +312,13 @@ export default function LandingApp10() {
           <div className="lg:sticky lg:top-24 lg:self-start">
             <div className="max-w-2xl">
               <p className="text-sm font-medium text-fuchsia-600 dark:text-fuchsia-400">
-                Features
+                Services
               </p>
               <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl font-serif font-normal mt-3">
-                Designed to fit into your day, not take it over
+                App design that fits your users, not the other way round
               </h2>
               <p className="mt-4 text-lg leading-8 text-muted-foreground">
-                Thoughtful features, quick to learn and fast to use, on iPhone,
-                Android and the web.
+                Thoughtful flows, quick to learn and fast to use, on iPhone, Android and the web.
               </p>
             </div>
           </div>
@@ -350,11 +347,10 @@ export default function LandingApp10() {
           <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
             <div className="max-w-2xl">
               <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl font-serif font-normal">
-                Made for every moment
+                Selected app work
               </h2>
               <p className="mt-4 text-lg leading-8 text-muted-foreground">
-                Widgets, watch complications and shortcuts put the most useful
-                parts one tap away.
+                Apps, widgets and dashboards designed by Designali, each one built around a real user need.
               </p>
             </div>
             <Button
@@ -397,7 +393,7 @@ export default function LandingApp10() {
       <section className="border-b">
         <div className="mx-auto max-w-5xl px-6 py-20 text-center md:py-28">
           <p className="text-sm tracking-widest text-muted-foreground uppercase">
-            Loved by people who hate most apps
+            Loved by founders and product teams
           </p>
           {testimonials.slice(0, 1).map((t) => (
             <figure key={t.name} className="mt-10">
@@ -431,7 +427,7 @@ export default function LandingApp10() {
         <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
           <div className="max-w-2xl">
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl font-serif font-normal">
-              Get started in three minutes
+              How we design your app
             </h2>
           </div>
           <ol className="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
@@ -456,11 +452,10 @@ export default function LandingApp10() {
         <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl font-serif font-normal">
-              Free to start. Premium when you want more.
+              Free to start. Hands-on when you want more.
             </h2>
             <p className="mt-4 text-lg leading-8 text-muted-foreground">
-              The core app is free forever. Premium unlocks advanced features
-              and supports an independent team.
+              Designali resources are free to explore. Paid plans add Ali Imam designing and building your app.
             </p>
           </div>
           <div className="mx-auto mt-14 grid max-w-6xl items-start gap-6 lg:grid-cols-3">
@@ -522,7 +517,7 @@ export default function LandingApp10() {
                 href="#"
                 className="font-medium text-foreground underline underline-offset-4"
               >
-                Get in touch
+                Email hello@designali.com
               </a>
               .
             </p>
@@ -546,11 +541,10 @@ export default function LandingApp10() {
         <div className="mx-auto flex max-w-7xl flex-col gap-10 px-6 py-20 md:flex-row md:items-end md:justify-between md:py-28">
           <div className="max-w-2xl">
             <h2 className="text-4xl font-semibold tracking-tight text-balance md:text-6xl font-serif font-normal">
-              Your next great book is one tap away
+              Your next great app is one call away
             </h2>
             <p className="mt-5 text-lg text-background/65">
-              Free on iOS and Android. Import your shelf from Goodreads in a
-              minute.
+              Designed for iOS and Android, built for the web. Email hello@designali.com to begin.
             </p>
           </div>
           <div className="flex flex-wrap gap-3 ">
@@ -560,7 +554,7 @@ export default function LandingApp10() {
               nativeButton={false}
               render={<a href="#" />}
             >
-              Get the app
+              Start a project
               <ArrowRight />
             </Button>
             <Button
@@ -570,7 +564,7 @@ export default function LandingApp10() {
               nativeButton={false}
               render={<a href="#" />}
             >
-              Start a book club
+              Start a project
             </Button>
           </div>
         </div>
@@ -582,13 +576,11 @@ export default function LandingApp10() {
               href="#"
               className="flex items-center gap-2 font-semibold tracking-tight"
             >
-              <span className="flex size-7 items-center justify-center rounded-md bg-fuchsia-600 text-white text-sm">
-                P
-              </span>
-              <span className="font-serif text-lg font-normal">Pagecraft</span>
+              <Logo className="h-5 w-auto" />
+              <span className="font-serif text-lg font-normal">designali</span>
             </a>
             <p className="max-w-xs text-sm text-muted-foreground">
-              A home for your reading life.
+              A home for your next app.
             </p>
           </div>
           {footer.map((column) => (
@@ -612,7 +604,7 @@ export default function LandingApp10() {
         <div className="border-t ">
           <div className="mx-auto flex max-w-7xl flex-col justify-between gap-4 px-6 py-6 text-xs text-muted-foreground sm:flex-row">
             <span>
-              © {new Date().getFullYear()} Pagecraft. All rights reserved.
+              © {new Date().getFullYear()} Designali. All rights reserved.
             </span>
             <div className="flex gap-6">
               <a href="#" className="hover:text-foreground">
@@ -641,7 +633,7 @@ function HeroVisual() {
         <span className="size-2.5 rounded-full bg-muted-foreground/30" />
         <span className="size-2.5 rounded-full bg-muted-foreground/30" />
         <span className="ml-3 hidden rounded-md bg-muted px-3 py-0.5 text-[11px] text-muted-foreground sm:inline">
-          app.pagecraft.com
+          designali.com/work
         </span>
       </div>
       <div className="grid md:grid-cols-[180px_1fr]">

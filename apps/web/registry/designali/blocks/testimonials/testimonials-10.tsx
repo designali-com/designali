@@ -1,4 +1,7 @@
-import { BadgeCheck, Star } from "lucide-react"
+import {
+  BadgeCheck,
+  Star,
+} from "@designali/icons"
 
 const distribution = [
   [5, 86],

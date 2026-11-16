@@ -1,21 +1,25 @@
 "use client"
 
 import { useMemo, useState } from "react"
-import { Clock, PlayCircle, Search } from "lucide-react"
+import {
+  Clock,
+  CirclePlay as PlayCircle,
+  Search,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import { Input } from "@workspace/ui/components/input"
 import { cn } from "@workspace/ui/lib/utils"
 
-const topics = ["All", "Engineering", "Design", "Growth", "Leadership"] as const
+const topics = ["All", "Development", "Design", "Brand", "Motion"] as const
 const recordings = [
-  { title: "Scaling Postgres past the first billion rows", speaker: "Hana Lindgren", topic: "Engineering", date: "Oct 28", length: "52 min", views: "3.1k" },
-  { title: "Design critiques that don't hurt", speaker: "Theo Marsh", topic: "Design", date: "Oct 21", length: "38 min", views: "2.4k" },
-  { title: "Pricing pages that convert in 2025", speaker: "Amara Obi", topic: "Growth", date: "Oct 14", length: "45 min", views: "4.8k" },
-  { title: "Your first 90 days as an engineering manager", speaker: "Jonas Pereira", topic: "Leadership", date: "Oct 07", length: "61 min", views: "5.2k" },
-  { title: "Motion design for product teams", speaker: "Yuki Sato", topic: "Design", date: "Sep 30", length: "29 min", views: "1.9k" },
-  { title: "Feature flags without the mess", speaker: "Carla Benn", topic: "Engineering", date: "Sep 23", length: "41 min", views: "2.7k" },
-  { title: "Lifecycle email, from zero to useful", speaker: "Omar Haddad", topic: "Growth", date: "Sep 16", length: "36 min", views: "2.2k" },
+  { title: "Building Designali blocks with Next.js", speaker: "Ali Imam", topic: "Development", date: "Oct 28", length: "52 min", views: "3.1k" },
+  { title: "Design critiques that don't hurt", speaker: "Sara", topic: "Design", date: "Oct 21", length: "38 min", views: "2.4k" },
+  { title: "Brand identity from a blank page", speaker: "Nina", topic: "Brand", date: "Oct 14", length: "45 min", views: "4.8k" },
+  { title: "Design se code tak: one person, full stack", speaker: "Ali Imam", topic: "Development", date: "Oct 07", length: "61 min", views: "5.2k" },
+  { title: "Motion design for product teams", speaker: "Yuki", topic: "Motion", date: "Sep 30", length: "29 min", views: "1.9k" },
+  { title: "Tailwind CSS tokens without the mess", speaker: "Omar", topic: "Development", date: "Sep 23", length: "41 min", views: "2.7k" },
+  { title: "Logos that last, with @designali/logos", speaker: "Nina", topic: "Brand", date: "Sep 16", length: "36 min", views: "2.2k" },
 ]
 
 export default function Media17() {
@@ -38,7 +42,7 @@ export default function Media17() {
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div>
             <h2 className="text-3xl font-semibold tracking-tight md:text-4xl">Webinar replays</h2>
-            <p className="mt-2 text-muted-foreground">Every session from the Builders Hour series, free to watch.</p>
+            <p className="mt-2 text-muted-foreground">Every session from the Designali Live series, free to watch.</p>
           </div>
           <div className="relative w-full md:w-72">
             <Search className="pointer-events-none absolute top-1/2 left-3 size-4 -translate-y-1/2 text-muted-foreground" />

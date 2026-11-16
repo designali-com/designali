@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { CheckIcon } from "lucide-react"
+import {
+  Check as CheckIcon,
+} from "@designali/icons"
 
 import { AspectRatio } from "@workspace/ui/components/aspect-ratio"
 import { Badge } from "@workspace/ui/components/badge"

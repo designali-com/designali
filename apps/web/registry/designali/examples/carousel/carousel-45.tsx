@@ -1,4 +1,7 @@
-import { ArrowUpRightIcon, MapPinIcon } from "lucide-react"
+import {
+  ArrowUpRight as ArrowUpRightIcon,
+  MapPin as MapPinIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import { Button } from "@workspace/ui/components/button"
@@ -19,27 +22,27 @@ import {
 
 const jobs = [
   {
-    title: "Senior Frontend Engineer",
-    team: "Platform",
+    title: "Design Engineer (Next.js)",
+    team: "Development",
     location: "Remote · EU",
     type: "Full-time",
   },
   {
-    title: "Product Designer",
-    team: "Growth",
-    location: "Lisbon",
+    title: "UI/UX Designer",
+    team: "Design",
+    location: "Remote",
     type: "Full-time",
   },
   {
-    title: "Support Specialist",
-    team: "Customer",
+    title: "Motion & CGI Artist",
+    team: "Creative",
     location: "Remote · US",
     type: "Part-time",
   },
   {
-    title: "Data Engineer",
-    team: "Insights",
-    location: "Berlin",
+    title: "Brand Designer",
+    team: "Identity",
+    location: "Remote",
     type: "Contract",
   },
 ]
@@ -70,7 +73,7 @@ export default function JobListingsCarousel() {
                   size="sm"
                   variant="outline"
                   nativeButton={false}
-                  render={<a href="#" />}
+                  render={<a href="/contact" />}
                 >
                   View role
                   <ArrowUpRightIcon data-icon="inline-end" />

@@ -11,15 +11,15 @@ const heights = [
 ]
 
 const photos = [
-  "Harbour at dusk",
-  "Glass atrium",
-  "Coastal road",
-  "Studio portrait",
-  "Paper texture",
-  "Stairwell",
-  "Orchard rows",
-  "Neon arcade",
-  "Desert bloom",
+  "CGI study",
+  "3D render",
+  "Motion frame",
+  "Abstract form",
+  "Colour study",
+  "Light study",
+  "Texture study",
+  "Shape study",
+  "Gradient study",
 ]
 
 const palette = [
@@ -36,10 +36,10 @@ export default function Gallery06() {
       <div className="mx-auto max-w-6xl px-6">
         <div className="mb-10 max-w-xl">
           <p className="text-xs tracking-widest text-muted-foreground uppercase">
-            Field journal
+            Designali visuals
           </p>
           <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-4xl">
-            A year of looking closely
+            CGI, 3D and motion by Ali Imam
           </h2>
         </div>
         <div className="columns-1 gap-4 sm:columns-2 lg:columns-3">
@@ -51,7 +51,7 @@ export default function Gallery06() {
               <div
                 className={heights[i]}
                 style={{
-                  background: `linear-gradient(${i * 40}deg, ${palette[i % 5]}, ${palette[(i + 2) % 5]})`,
+                  background: `url("/img/ask/ask${i + 1}.jpg") center / cover, linear-gradient(${i * 40}deg, ${palette[i % 5]}, ${palette[(i + 2) % 5]})`,
                 }}
               />
               <figcaption className="flex justify-between px-1 pt-2 text-xs">

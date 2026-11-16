@@ -1,4 +1,7 @@
-import { ArrowRight, ShieldCheck } from "lucide-react"
+import {
+  ArrowRight,
+  ShieldCheck,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Input } from "@workspace/ui/components/input"
@@ -7,7 +10,7 @@ import { Textarea } from "@workspace/ui/components/textarea"
 
 const stats = [
   { value: "1 day", label: "Median reply" },
-  { value: "340+", label: "Products shipped" },
+  { value: "460+", label: "Blocks shipped" },
   { value: "4.9/5", label: "Client rating" },
 ]
 
@@ -29,7 +32,7 @@ export default function Contact16() {
             Tell us what you&apos;re building
           </h2>
           <p className="mt-3 text-sm text-muted-foreground">
-            Lumen Collective partners with seed to Series B teams on product,
+            Designali partners with founders and teams on product design,
             brand and engineering.
           </p>
 
@@ -45,7 +48,7 @@ export default function Contact16() {
           <form className="mt-8 space-y-5">
             <div className="space-y-2">
               <Label htmlFor="contact-16-email">Email</Label>
-              <Input id="contact-16-email" type="email" placeholder="theo@kitebase.dev" className="h-11" />
+              <Input id="contact-16-email" type="email" placeholder="you@example.com" className="h-11" />
             </div>
             <div className="space-y-2">
               <Label htmlFor="contact-16-link">Website or pitch deck</Label>
@@ -55,7 +58,7 @@ export default function Contact16() {
               <Label htmlFor="contact-16-brief">The short version</Label>
               <Textarea
                 id="contact-16-brief"
-                placeholder="We're a 6-person team building scheduling software for clinics..."
+                placeholder="We're a small team launching a SaaS product and need a brand and website..."
                 className="min-h-28"
               />
             </div>

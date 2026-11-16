@@ -2,14 +2,14 @@
 
 import * as React from "react"
 import {
-  AnchorIcon,
-  CompassIcon,
-  GemIcon,
-  LeafIcon,
-  MountainIcon,
-  OrbitIcon,
-  SunIcon,
-} from "lucide-react"
+  Figma,
+  Github,
+  Nextjs,
+  Notion,
+  TailwindCSS,
+  TypeScript,
+  Vercel,
+} from "@designali/logos"
 
 import {
   Carousel,
@@ -19,13 +19,13 @@ import {
 } from "@workspace/ui/components/carousel"
 
 const logos = [
-  { name: "Northwind", icon: CompassIcon },
-  { name: "Lumen", icon: SunIcon },
-  { name: "Orbit", icon: OrbitIcon },
-  { name: "Fernway", icon: LeafIcon },
-  { name: "Quartz", icon: GemIcon },
-  { name: "Harbor", icon: AnchorIcon },
-  { name: "Summit", icon: MountainIcon },
+  { name: "Next.js", icon: Nextjs },
+  { name: "Vercel", icon: Vercel },
+  { name: "Figma", icon: Figma },
+  { name: "Tailwind", icon: TailwindCSS },
+  { name: "TypeScript", icon: TypeScript },
+  { name: "GitHub", icon: Github },
+  { name: "Notion", icon: Notion },
 ]
 
 export default function LogoMarqueeAutoplay() {
@@ -40,7 +40,7 @@ export default function LogoMarqueeAutoplay() {
   return (
     <div className="w-full max-w-md">
       <p className="mb-3 text-center text-xs text-muted-foreground">
-        Trusted by 4,000+ teams
+        Designali builds with
       </p>
       <Carousel
         setApi={setApi}
@@ -51,7 +51,7 @@ export default function LogoMarqueeAutoplay() {
           {logos.map((logo) => (
             <CarouselItem key={logo.name} className="basis-1/3 sm:basis-1/4">
               <div className="flex items-center justify-center gap-1.5 py-2 text-muted-foreground">
-                <logo.icon className="size-4" />
+                <logo.icon size={16} />
                 <span className="text-sm font-semibold tracking-tight">
                   {logo.name}
                 </span>

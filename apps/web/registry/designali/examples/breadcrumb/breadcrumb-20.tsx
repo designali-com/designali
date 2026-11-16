@@ -1,4 +1,6 @@
-import { ChevronLeftIcon } from "lucide-react"
+import {
+  ChevronLeft as ChevronLeftIcon,
+} from "@designali/icons"
 
 import {
   Breadcrumb,
@@ -20,7 +22,7 @@ export default function ResponsiveBackBreadcrumb() {
           </BreadcrumbLink>
         </BreadcrumbItem>
         <BreadcrumbItem className="hidden sm:inline-flex">
-          <BreadcrumbLink href="#">Company</BreadcrumbLink>
+          <BreadcrumbLink href="#">Designali</BreadcrumbLink>
         </BreadcrumbItem>
         <BreadcrumbSeparator className="hidden sm:block" />
         <BreadcrumbItem className="hidden sm:inline-flex">
@@ -28,7 +30,7 @@ export default function ResponsiveBackBreadcrumb() {
         </BreadcrumbItem>
         <BreadcrumbSeparator className="hidden sm:block" />
         <BreadcrumbItem className="hidden sm:inline-flex">
-          <BreadcrumbPage>Priya Raman</BreadcrumbPage>
+          <BreadcrumbPage>Ali Imam</BreadcrumbPage>
         </BreadcrumbItem>
       </BreadcrumbList>
     </Breadcrumb>

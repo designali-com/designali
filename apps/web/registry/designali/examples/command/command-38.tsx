@@ -2,12 +2,12 @@
 
 import * as React from "react"
 import {
-  AtSignIcon,
-  LinkIcon,
-  PipetteIcon,
-  TerminalIcon,
-  TextIcon,
-} from "lucide-react"
+  AtSign as AtSignIcon,
+  Link as LinkIcon,
+  Pipette as PipetteIcon,
+  Terminal as TerminalIcon,
+  TextInitial as TextIcon,
+} from "@designali/icons"
 
 import {
   Command,
@@ -19,18 +19,18 @@ import {
 } from "@workspace/ui/components/command"
 
 const clips = [
-  { id: 1, text: "support@fieldnote.io", kind: "Email", pinned: true },
-  { id: 2, text: "#4F46E5", kind: "Color", pinned: true },
+  { id: 1, text: "support@designali.com", kind: "Email", pinned: true },
+  { id: 2, text: "#00A8FF", kind: "Color", pinned: true },
   {
     id: 3,
-    text: "https://fieldnote.io/changelog/2026-11",
+    text: "https://www.designali.com/blogs",
     kind: "Link",
     pinned: false,
   },
-  { id: 4, text: "pnpm dlx shadcn add command", kind: "Code", pinned: false },
+  { id: 4, text: "pnpm add @designali/icons", kind: "Code", pinned: false },
   {
     id: 5,
-    text: "Thanks for the quick turnaround on this!",
+    text: "Thanks Ali, the new brand identity looks great!",
     kind: "Text",
     pinned: false,
   },

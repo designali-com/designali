@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { MoonIcon, SunriseIcon } from "lucide-react"
+import {
+  Moon as MoonIcon,
+  Sunrise as SunriseIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import { Slider } from "@workspace/ui/components/slider"

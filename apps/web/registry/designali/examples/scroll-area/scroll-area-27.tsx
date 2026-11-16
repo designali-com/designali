@@ -1,4 +1,7 @@
-import { DownloadIcon, ReceiptIcon } from "lucide-react"
+import {
+  Download as DownloadIcon,
+  Receipt as ReceiptIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import { Button } from "@workspace/ui/components/button"

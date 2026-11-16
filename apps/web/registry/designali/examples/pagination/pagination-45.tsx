@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { HistoryIcon } from "lucide-react"
+import {
+  History as HistoryIcon,
+} from "@designali/icons"
 
 import {
   Pagination,
@@ -12,12 +14,12 @@ import {
 
 const versions = ["2.0", "2.1", "2.2", "2.3", "2.4", "2.5"]
 const notes: Record<string, string> = {
-  "2.0": "New sync engine and offline mode.",
-  "2.1": "Shared folders and granular permissions.",
-  "2.2": "Faster search with typo tolerance.",
-  "2.3": "Two-factor recovery codes.",
-  "2.4": "Bulk edit for tags and owners.",
-  "2.5": "Workspace analytics dashboard.",
+  "2.0": "460+ new blocks across every category.",
+  "2.1": "240 landing pages ready to ship.",
+  "2.2": "2300+ UI examples on designali.com/ui.",
+  "2.3": "4000+ icons in @designali/icons.",
+  "2.4": "Brand logos in @designali/logos.",
+  "2.5": "Apple device mockups: iPhone, iPad, MacBook.",
 }
 
 export default function ReleaseHistoryPagination() {

@@ -5,15 +5,15 @@ import * as React from "react"
 import { motion } from "framer-motion"
 
 const images = [
-  "/img/hero-1.jpg",
-  "/img/chat-1-light.jpg",
-  "/img/hero-2.jpg",
-  "/img/dashboard-1-dark.jpg",
-  "/img/login-1.jpg",
-  "/img/hero-1.jpg",
-  "/img/chat-1-light.jpg",
-  "/img/hero-2.jpg",
-  "/img/dashboard-1-dark.jpg",
+  "/images/templates/portfolio-simple.jpg",
+  "/images/templates/design-agency.jpg",
+  "/images/templates/resort.jpg",
+  "/images/templates/ai.jpg",
+  "/images/templates/vercel.jpg",
+  "/images/templates/aliimam-comp.jpg",
+  "/images/templates/dalim-agency-old.jpg",
+  "/images/templates/dalim-ui-old.jpg",
+  "/images/templates/dalim-works-old.jpg",
 ]
 
 export function HeroSection() {
@@ -36,7 +36,7 @@ export function HeroSection() {
           }}
         >
           A place to <br /> display  <br />
-          <span className="font-semibold">your masterpiece.</span>
+          <span className="font-semibold">designali work.</span>
         </motion.h1>
 
         {/* Circular Gallery */}
@@ -116,7 +116,7 @@ export function HeroSection() {
                 <div className="h-36 w-48 overflow-hidden border-4 rounded-xl border-foreground bg-background shadow-xl md:h-40 md:w-56">
                   <img
                     src={src}
-                    alt={`Masterpiece ${index + 1}`}
+                    alt={`Designali project ${index + 1}`}
                     className="h-full w-full select-none object-cover"
                     draggable={false}
                   />
@@ -136,8 +136,8 @@ export function HeroSection() {
             duration: 0.6,
           }}
         >
-          Artists can display their masterpieces, and buyers can discover and
-          purchase works that resonate with them.
+          Templates, websites and brand projects designed and built by Ali
+          Imam at Designali. Design se code tak.
         </motion.p>
 
         {/* Buttons */}
@@ -154,14 +154,14 @@ export function HeroSection() {
             type="button"
             className="rounded-full bg-neutral-900 px-6 py-3 text-xs font-medium text-white shadow-md transition-all hover:bg-neutral-800"
           >
-            Join for $9.99/m
+            Explore Templates
           </button>
 
           <button
             type="button"
             className="text-xs font-medium text-neutral-700 underline underline-offset-4 transition-colors hover:text-neutral-900"
           >
-            Read more
+            View work
           </button>
         </motion.div>
       </div>

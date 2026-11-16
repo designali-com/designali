@@ -1,4 +1,7 @@
-import { CircleAlertIcon, FileSpreadsheetIcon } from "lucide-react"
+import {
+  CircleAlert as CircleAlertIcon,
+  FileSpreadsheet as FileSpreadsheetIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -12,7 +15,7 @@ export default function CsvImportProgress() {
     <div className="flex w-full max-w-sm flex-col gap-3 border p-4">
       <div className="flex items-center gap-2">
         <FileSpreadsheetIcon className="size-4 text-muted-foreground" />
-        <span className="truncate text-sm font-medium">contacts-2026.csv</span>
+        <span className="truncate text-sm font-medium">designali-customers.csv</span>
       </div>
       <Progress value={3820} max={5000}>
         <ProgressLabel className="text-muted-foreground">

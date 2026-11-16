@@ -1,4 +1,7 @@
-import { MapIcon, XIcon } from "lucide-react"
+import {
+  Map as MapIcon,
+  X as XIcon,
+} from "@designali/icons"
 
 import {
   AlertDialog,
@@ -31,7 +34,7 @@ export default function ExitOnboardingDialog() {
           </AlertDialogMedia>
           <AlertDialogTitle>Skip setup for now?</AlertDialogTitle>
           <AlertDialogDescription>
-            You can finish onboarding anytime from Settings.
+            You can finish setting up your Designali account anytime from Settings.
           </AlertDialogDescription>
         </AlertDialogHeader>
         <AlertDialogFooter>

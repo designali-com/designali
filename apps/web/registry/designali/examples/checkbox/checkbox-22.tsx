@@ -2,28 +2,28 @@
 
 import * as React from "react"
 import {
-  FileAudioIcon,
-  FileCodeIcon,
-  FileImageIcon,
-  FileTextIcon,
-  FolderIcon,
-  SheetIcon,
-} from "lucide-react"
+  FileMusic as FileAudioIcon,
+  FileCode as FileCodeIcon,
+  FileImage as FileImageIcon,
+  FileText as FileTextIcon,
+  Folder as FolderIcon,
+  Sheet as SheetIcon,
+} from "@designali/icons"
 
 import { Checkbox } from "@workspace/ui/components/checkbox"
 import { cn } from "@workspace/ui/lib/utils"
 
 const files = [
-  { name: "Invoice-0412.pdf", icon: FileTextIcon },
-  { name: "Moodboard.fig", icon: FileImageIcon },
-  { name: "Q4 forecast.xlsx", icon: SheetIcon },
-  { name: "Recording.mp3", icon: FileAudioIcon },
-  { name: "Readme.md", icon: FileCodeIcon },
-  { name: "Assets", icon: FolderIcon },
+  { name: "designali-invoice-0412.pdf", icon: FileTextIcon },
+  { name: "designali-moodboard.fig", icon: FileImageIcon },
+  { name: "client-projects.xlsx", icon: SheetIcon },
+  { name: "brand-reel-voiceover.mp3", icon: FileAudioIcon },
+  { name: "blocks-readme.md", icon: FileCodeIcon },
+  { name: "Logos", icon: FolderIcon },
 ]
 
 export default function FileGridSelection() {
-  const [selected, setSelected] = React.useState<string[]>(["Moodboard.fig"])
+  const [selected, setSelected] = React.useState<string[]>(["designali-moodboard.fig"])
 
   return (
     <div className="flex w-full max-w-sm flex-col gap-2">

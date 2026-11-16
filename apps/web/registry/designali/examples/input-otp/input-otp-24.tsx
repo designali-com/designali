@@ -1,7 +1,9 @@
 "use client"
 
 import { REGEXP_ONLY_DIGITS } from "input-otp"
-import { ShieldIcon } from "lucide-react"
+import {
+  Shield as ShieldIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {

@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { UserXIcon } from "lucide-react"
+import {
+  UserX as UserXIcon,
+} from "@designali/icons"
 
 import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
 import {
@@ -15,11 +17,11 @@ import {
 } from "@workspace/ui/components/command"
 
 const people = [
-  { name: "Maya Chen", role: "Frontend", open: 3 },
-  { name: "Jonah Reyes", role: "Backend", open: 7 },
-  { name: "Priya Natarajan", role: "Design", open: 2 },
-  { name: "Elliot Brandt", role: "QA", open: 5 },
-  { name: "Sofia Laurent", role: "Product", open: 1 },
+  { name: "Ali Imam", role: "Design engineer", open: 3 },
+  { name: "Sara", role: "UI designer", open: 7 },
+  { name: "Omar", role: "Developer", open: 2 },
+  { name: "Zara", role: "Motion designer", open: 5 },
+  { name: "Kabir", role: "Brand designer", open: 1 },
 ]
 
 function initialsOf(name: string) {
@@ -31,7 +33,7 @@ function initialsOf(name: string) {
 
 export default function AssigneePicker() {
   const [assignee, setAssignee] = React.useState<string | null>(
-    "Priya Natarajan"
+    "Ali Imam"
   )
 
   return (

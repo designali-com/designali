@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { EyeIcon, EyeOffIcon } from "lucide-react"
+import {
+  Eye as EyeIcon,
+  EyeOff as EyeOffIcon,
+} from "@designali/icons"
 
 import { Toggle } from "@workspace/ui/components/toggle"
 import { cn } from "@workspace/ui/lib/utils"
@@ -30,8 +33,8 @@ export default function SpoilerRevealToggle() {
         )}
         aria-hidden={!revealed}
       >
-        The gardener was the narrator all along, and the final chapter rewinds
-        the whole story from the orchard&apos;s point of view.
+        The next Designali drop ships 50 new blocks and a fresh set of
+        @designali/icons for the dashboard templates.
       </p>
     </div>
   )

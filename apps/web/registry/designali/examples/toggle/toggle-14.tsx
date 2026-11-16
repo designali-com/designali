@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { BellOffIcon, BellRingIcon } from "lucide-react"
+import {
+  BellOff as BellOffIcon,
+  BellRing as BellRingIcon,
+} from "@designali/icons"
 
 import { Toggle } from "@workspace/ui/components/toggle"
 
@@ -13,10 +16,10 @@ export default function ThreadSubscribeToggle() {
       <div className="flex items-start justify-between gap-3">
         <div>
           <p className="text-sm font-medium">
-            Migrate billing to usage-based pricing
+            Redesign the designali.com pricing page
           </p>
           <p className="text-xs text-muted-foreground">
-            RFC-0142 - 23 comments
+            DES-142 - 23 comments
           </p>
         </div>
         <Toggle

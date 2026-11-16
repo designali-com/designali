@@ -38,8 +38,8 @@ export default function ReaderFontSizeToggleGroup() {
         </ToggleGroup>
       </div>
       <p className={cn("leading-relaxed text-muted-foreground", sizes[size])}>
-        The tide came in faster than the map suggested, and by noon the old
-        causeway was a ribbon of silver water.
+        Where thoughtful design meets production-ready code. Designali designs
+        and builds digital experiences that look great and feel intuitive.
       </p>
     </div>
   )

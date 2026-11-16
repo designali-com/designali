@@ -10,10 +10,10 @@ import {
 } from "@workspace/ui/components/combobox"
 import { Field, FieldLabel } from "@workspace/ui/components/field"
 
-const colors = ["Black", "White", "Navy", "Olive", "Sand", "Rust"]
-const sizes = ["XS", "S", "M", "L", "XL"]
+const colors = ["Template", "Block", "Icons", "Logos", "Vectors", "Pages"]
+const sizes = ["SOLO", "TEAM", "PRO", "AGENCY", "LIFETIME"]
 const skus = colors.flatMap((color) =>
-  sizes.map((size) => "TEE-" + color.toUpperCase() + "-" + size)
+  sizes.map((size) => "DA-" + color.toUpperCase() + "-" + size)
 )
 
 export default function LargeCatalogLimit() {

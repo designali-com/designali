@@ -7,10 +7,10 @@ import {
 
 const events: Record<number, string[]> = {
   3: ["Sprint planning"],
-  9: ["Dentist 9:30", "Team lunch"],
-  14: ["Board review"],
-  21: ["Offsite day 1", "Offsite day 2", "Dinner"],
-  27: ["Launch party"],
+  9: ["Client call 9:30", "Studio lunch"],
+  14: ["Brand identity review"],
+  21: ["Figma design day", "Next.js build day", "Vercel deploy"],
+  27: ["designali.com launch"],
 }
 
 export default function CalendarEventDotTooltips() {

@@ -1,10 +1,10 @@
 import {
-  CircleCheckIcon,
-  CloudUploadIcon,
-  FileIcon,
-  UploadIcon,
-  XIcon,
-} from "lucide-react"
+  CircleCheck as CircleCheckIcon,
+  CloudUpload as CloudUploadIcon,
+  File as FileIcon,
+  Upload as UploadIcon,
+  X as XIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -20,9 +20,9 @@ import {
 import { Progress } from "@workspace/ui/components/progress"
 
 const files = [
-  { name: "hero-banner.fig", size: "4.2 MB", progress: 100 },
-  { name: "pitch-deck-final.pdf", size: "12.8 MB", progress: 64 },
-  { name: "brand-voice.docx", size: "860 KB", progress: 18 },
+  { name: "designali-hero.fig", size: "4.2 MB", progress: 100 },
+  { name: "brand-identity-guide.pdf", size: "12.8 MB", progress: 64 },
+  { name: "project-brief.docx", size: "860 KB", progress: 18 },
 ]
 
 export default function UploadFilesDialog() {
@@ -34,7 +34,7 @@ export default function UploadFilesDialog() {
       </DialogTrigger>
       <DialogContent className="sm:max-w-md">
         <DialogHeader>
-          <DialogTitle>Upload to Shared Drive</DialogTitle>
+          <DialogTitle>Upload to Designali Studio</DialogTitle>
           <DialogDescription>Max 100 MB per file.</DialogDescription>
         </DialogHeader>
         <label className="flex cursor-pointer flex-col items-center gap-2 border border-dashed bg-muted/30 px-4 py-8 text-center hover:bg-muted/60">

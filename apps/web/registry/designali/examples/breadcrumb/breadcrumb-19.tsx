@@ -15,8 +15,8 @@ import {
 } from "@workspace/ui/components/tooltip"
 
 const items = [
-  "Quarterly planning for the customer success organization",
-  "Retention experiments and onboarding improvements",
+  "Designali brand identity refresh for the studio website",
+  "Landing page blocks and template launch",
 ]
 
 export default function TruncatedTooltipBreadcrumb() {
@@ -45,7 +45,7 @@ export default function TruncatedTooltipBreadcrumb() {
         ))}
         <BreadcrumbItem className="min-w-0">
           <BreadcrumbPage className="block truncate">
-            Week 3 notes
+            Sprint 3 notes
           </BreadcrumbPage>
         </BreadcrumbItem>
       </BreadcrumbList>

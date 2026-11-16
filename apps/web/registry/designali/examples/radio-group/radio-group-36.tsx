@@ -1,4 +1,6 @@
-import { FileWarningIcon } from "lucide-react"
+import {
+  FileExclamationPoint as FileWarningIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -19,9 +21,9 @@ export default function FileConflictResolution() {
         <FileWarningIcon className="mt-0.5 size-5 text-amber-500" />
         <div>
           <p className="text-sm font-medium">
-            &quot;budget-2027.xlsx&quot; already exists
+            &quot;designali-logos.zip&quot; already exists
           </p>
-          <p className="text-xs text-muted-foreground">in Finance / Planning</p>
+          <p className="text-xs text-muted-foreground">in Brand / Assets</p>
         </div>
       </div>
       <RadioGroup defaultValue="keep" className="gap-3">
@@ -37,7 +39,7 @@ export default function FileConflictResolution() {
           <FieldContent>
             <FieldLabel htmlFor="conflict-keep">Keep both</FieldLabel>
             <FieldDescription>
-              Save as &quot;budget-2027 (1).xlsx&quot;.
+              Save as &quot;designali-logos (1).zip&quot;.
             </FieldDescription>
           </FieldContent>
         </Field>

@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { CheckIcon } from "lucide-react"
+import {
+  Check as CheckIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import { Button } from "@workspace/ui/components/button"
@@ -17,11 +19,11 @@ import {
 import { Switch } from "@workspace/ui/components/switch"
 
 const features = [
-  "Unlimited projects",
-  "Up to 25 editors",
-  "Version history (90 days)",
-  "Priority email support",
-  "SSO with Google and Okta",
+  "All 460+ blocks and 240+ pages",
+  "Up to 25 team seats",
+  "4000+ icons and logos",
+  "Priority support from Ali Imam",
+  "Figma source files",
 ]
 
 export default function PricingPlanCard() {
@@ -31,8 +33,8 @@ export default function PricingPlanCard() {
   return (
     <Card className="w-full max-w-xs ring-2 ring-primary">
       <CardHeader>
-        <CardTitle>Team</CardTitle>
-        <CardDescription>For growing product teams.</CardDescription>
+        <CardTitle>Designali Team</CardTitle>
+        <CardDescription>For studios shipping design to code.</CardDescription>
         <CardAction>
           <Badge>Most popular</Badge>
         </CardAction>
@@ -42,7 +44,7 @@ export default function PricingPlanCard() {
           <span className="text-3xl font-semibold tabular-nums">
             {"$" + price}
           </span>
-          <span className="pb-1 text-muted-foreground">per editor / month</span>
+          <span className="pb-1 text-muted-foreground">per seat / month</span>
         </div>
         <label className="flex items-center gap-2 text-xs">
           <Switch checked={yearly} onCheckedChange={setYearly} />

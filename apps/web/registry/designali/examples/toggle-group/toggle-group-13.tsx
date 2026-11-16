@@ -1,7 +1,11 @@
 "use client"
 
 import * as React from "react"
-import { CreditCardIcon, ShieldIcon, UserIcon } from "lucide-react"
+import {
+  CreditCard as CreditCardIcon,
+  Shield as ShieldIcon,
+  User as UserIcon,
+} from "@designali/icons"
 
 import {
   ToggleGroup,

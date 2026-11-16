@@ -1,7 +1,9 @@
 "use client"
 
 import { useState } from "react"
-import { ArrowRight } from "lucide-react"
+import {
+  ArrowRight,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Switch } from "@workspace/ui/components/switch"
@@ -22,7 +24,7 @@ export default function CallToAction10() {
           </h2>
           <p className="mt-5 max-w-md text-sm leading-7 text-muted-foreground">
             No seat minimums, no add-on menus, no sales calls. Pay per editor
-            and invite as many viewers as you like.
+            and get every Designali template, block and icon.
           </p>
         </div>
         <div className="border border-border bg-background p-8 md:p-10">
@@ -59,7 +61,7 @@ export default function CallToAction10() {
             <ArrowRight data-icon="inline-end" />
           </Button>
           <p className="mt-4 text-center text-xs text-muted-foreground">
-            Free for teams under 3 editors.
+            Free blocks and icons are always free on designali.com.
           </p>
         </div>
       </div>

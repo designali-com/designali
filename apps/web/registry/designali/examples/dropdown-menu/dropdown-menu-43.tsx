@@ -1,12 +1,12 @@
 import {
-  CalendarIcon,
-  FileTextIcon,
-  GripIcon,
-  HardDriveIcon,
-  MailIcon,
-  MessageSquareIcon,
-  SheetIcon,
-} from "lucide-react"
+  Calendar as CalendarIcon,
+  FileText as FileTextIcon,
+  Grip as GripIcon,
+  HardDrive as HardDriveIcon,
+  Mail as MailIcon,
+  MessageSquare as MessageSquareIcon,
+  Sheet as SheetIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {

@@ -1,9 +1,9 @@
 import { Badge } from "@workspace/ui/components/badge"
 
 const versions = [
-  { version: "v3.2.0", tag: "latest", note: "Released Oct 2" },
-  { version: "v3.3.0-rc.1", tag: "next", note: "Release candidate" },
-  { version: "v2.9.4", tag: "deprecated", note: "Security fixes only" },
+  { version: "v3.2.0", tag: "latest", note: "@designali/icons · Released Oct 2" },
+  { version: "v3.3.0-rc.1", tag: "next", note: "@designali/icons · Release candidate" },
+  { version: "v2.9.4", tag: "deprecated", note: "@designali/icons · Fixes only" },
 ]
 
 export default function PackageVersionBadges() {

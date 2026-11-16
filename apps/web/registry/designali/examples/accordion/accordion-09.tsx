@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { ChevronDownIcon } from "lucide-react"
+import {
+  ChevronDown as ChevronDownIcon,
+} from "@designali/icons"
 
 import {
   Accordion,
@@ -14,23 +16,23 @@ import { Button } from "@workspace/ui/components/button"
 const topics = [
   {
     value: "install",
-    title: "Installing the CLI",
-    body: "Run the installer for your platform, then restart your terminal so the binary is on your PATH.",
+    title: "Installing a Designali block",
+    body: "Copy the install command from designali.com/blocks and run it inside your Next.js project.",
   },
   {
     value: "auth",
-    title: "Authenticating",
-    body: "Run the login command and paste the one-time code shown in your browser.",
+    title: "Adding icons",
+    body: "Install @designali/icons and import any of the 4000+ icons by name.",
   },
   {
     value: "deploy",
     title: "Your first deploy",
-    body: "From your project folder, run deploy. The CLI detects the framework and uploads a build.",
+    body: "Push to GitHub and import the repo on Vercel — Next.js is detected automatically.",
   },
   {
     value: "rollback",
     title: "Rolling back",
-    body: "Open Deployments, pick a previous build and choose Promote to production.",
+    body: "Open Deployments on Vercel, pick a previous build and choose Promote to production.",
   },
 ]
 
@@ -41,7 +43,7 @@ export default function AccordionExpandCollapseAll() {
   return (
     <div className="w-full max-w-md space-y-3">
       <div className="flex items-center justify-between">
-        <p className="text-sm font-medium">Getting started</p>
+        <p className="text-sm font-medium">Getting started with Designali</p>
         <div className="flex gap-1">
           <Button
             size="xs"

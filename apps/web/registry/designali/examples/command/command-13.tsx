@@ -1,7 +1,11 @@
 "use client"
 
 import * as React from "react"
-import { HashIcon, PlusIcon, TagIcon } from "lucide-react"
+import {
+  Hash as HashIcon,
+  Plus as PlusIcon,
+  Tag as TagIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -16,9 +20,9 @@ import {
 export default function CreateFromEmptyState() {
   const [query, setQuery] = React.useState("")
   const [tags, setTags] = React.useState([
-    "marketing",
-    "q4-launch",
-    "customer-research",
+    "brand-identity",
+    "templates",
+    "client-research",
   ])
 
   const create = () => {

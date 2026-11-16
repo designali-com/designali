@@ -1,7 +1,11 @@
 "use client"
 
 import * as React from "react"
-import { CircleXIcon, GitMergeIcon, GitPullRequestIcon } from "lucide-react"
+import {
+  CircleX as CircleXIcon,
+  GitMerge as GitMergeIcon,
+  GitPullRequest as GitPullRequestIcon,
+} from "@designali/icons"
 
 import { Skeleton } from "@workspace/ui/components/skeleton"
 import {
@@ -12,9 +16,9 @@ import {
 } from "@workspace/ui/components/tabs"
 
 const content: Record<string, string[]> = {
-  open: ["Fix checkout rounding", "Add CSV export", "Audit log filters"],
-  merged: ["Upgrade router", "Drop legacy auth"],
-  closed: ["Experimental grid layout"],
+  open: ["Add 20 new hero blocks", "Fix icons search", "Logos dark variants"],
+  merged: ["Upgrade to Next.js 16", "Drop legacy Dalim UI"],
+  closed: ["Experimental bento layout"],
 }
 
 export default function LazyLoadingTabs() {

@@ -1,6 +1,8 @@
 "use client"
 
-import { ZapIcon } from "lucide-react"
+import {
+  Zap as ZapIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import { Button } from "@workspace/ui/components/button"

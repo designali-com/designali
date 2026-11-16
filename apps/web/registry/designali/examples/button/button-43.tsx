@@ -1,7 +1,11 @@
 "use client"
 
 import * as React from "react"
-import { MicIcon, PaperclipIcon, SendIcon } from "lucide-react"
+import {
+  Mic as MicIcon,
+  Paperclip as PaperclipIcon,
+  Send as SendIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Textarea } from "@workspace/ui/components/textarea"

@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { ChevronDownIcon, ShieldIcon } from "lucide-react"
+import {
+  ChevronDown as ChevronDownIcon,
+  Shield as ShieldIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Checkbox } from "@workspace/ui/components/checkbox"

@@ -1,7 +1,11 @@
 "use client"
 
 import { useState } from "react"
-import { ArrowLeft, ArrowRight, CornerDownLeft } from "lucide-react"
+import {
+  ArrowLeft,
+  ArrowRight,
+  CornerDownLeft,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Input } from "@workspace/ui/components/input"
@@ -16,16 +20,16 @@ const questions: Question[] = [
   {
     id: "team",
     kind: "choice",
-    prompt: "How big is the team that will use Ferrybox?",
+    prompt: "How big is the team working with Designali?",
     options: ["Just me", "2 - 10", "11 - 50", "51 - 250", "250+"],
   },
   {
     id: "goal",
     kind: "choice",
-    prompt: "What is the main thing you want to fix?",
-    options: ["Scattered files", "Slow approvals", "Version confusion", "Client handoff"],
+    prompt: "What do you need help with first?",
+    options: ["Brand identity", "UI/UX design", "Next.js website", "Design system"],
   },
-  { id: "email", kind: "text", prompt: "Where can we send your setup plan?", placeholder: "name@company.com" },
+  { id: "email", kind: "text", prompt: "Where can Ali Imam send your project plan?", placeholder: "you@example.com" },
 ]
 
 export default function Forms17() {
@@ -52,8 +56,8 @@ export default function Forms17() {
               Thanks, {answers.name || "friend"}. Your plan is on its way.
             </h2>
             <p className="mt-4 text-sm leading-6 text-muted-foreground">
-              We will email {answers.email || "you"} a setup checklist tailored
-              to a {answers.team || "small"} person team within a few minutes.
+              Designali will email {answers.email || "you"} a project plan tailored
+              to a {answers.team || "small"} person team.
             </p>
             <Button variant="outline" className="mt-8" onClick={() => setIndex(0)}>
               Start over

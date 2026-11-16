@@ -2,16 +2,16 @@
 
 import * as React from "react"
 import {
-  CopyPlusIcon,
-  HourglassIcon,
-  MailIcon,
-  MessageSquareIcon,
-  PencilIcon,
-  PlusIcon,
-  SplitIcon,
-  TrashIcon,
-  ZapIcon,
-} from "lucide-react"
+  CopyPlus as CopyPlusIcon,
+  Hourglass as HourglassIcon,
+  Mail as MailIcon,
+  MessageSquare as MessageSquareIcon,
+  Pencil as PencilIcon,
+  Plus as PlusIcon,
+  Split as SplitIcon,
+  Trash as TrashIcon,
+  Zap as ZapIcon,
+} from "@designali/icons"
 
 import {
   ContextMenu,
@@ -35,7 +35,7 @@ export default function WorkflowNodeMenu() {
     <div className="flex w-full max-w-xs flex-col items-center gap-2">
       <div className="flex w-full items-center gap-2 border border-dashed p-2 text-xs text-muted-foreground">
         <ZapIcon className="size-4" />
-        When a form is submitted
+        When the designali.com contact form is submitted
       </div>
       <span className="h-4 w-px bg-border" />
       <ContextMenu>
@@ -88,7 +88,7 @@ export default function WorkflowNodeMenu() {
                   <SplitIcon />
                   Condition
                 </ContextMenuItem>
-                <ContextMenuItem onClick={() => setNext("Post to #signups")}>
+                <ContextMenuItem onClick={() => setNext("Post to #studio")}>
                   <MessageSquareIcon />
                   Send message
                 </ContextMenuItem>

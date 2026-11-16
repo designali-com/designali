@@ -1,8 +1,8 @@
 import { AspectRatio } from "@workspace/ui/components/aspect-ratio"
 
 const swatches = [
-  { name: "Ink", hex: "#1E1B4B" },
-  { name: "Iris", hex: "#6366F1" },
+  { name: "Designali Ink", hex: "#1E1B4B" },
+  { name: "Designali Blue", hex: "#00A8FF" },
   { name: "Mint", hex: "#34D399" },
   { name: "Sand", hex: "#FDE68A" },
   { name: "Coral", hex: "#FB7185" },

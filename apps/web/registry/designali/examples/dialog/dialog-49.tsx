@@ -1,4 +1,9 @@
-import { BotIcon, ChartColumnIcon, MegaphoneIcon, ZapIcon } from "lucide-react"
+import {
+  Bot as BotIcon,
+  ChartColumn as ChartColumnIcon,
+  Megaphone as MegaphoneIcon,
+  Zap as ZapIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import { Button } from "@workspace/ui/components/button"
@@ -14,9 +19,9 @@ import {
 } from "@workspace/ui/components/dialog"
 
 const features = [
-  { icon: ZapIcon, text: "Automations that run on any event" },
-  { icon: BotIcon, text: "An assistant that drafts replies for you" },
-  { icon: ChartColumnIcon, text: "Live dashboards with no setup" },
+  { icon: ZapIcon, text: "460+ production-ready blocks" },
+  { icon: BotIcon, text: "AI workflows that go from design to code" },
+  { icon: ChartColumnIcon, text: "4000+ icons in @designali/icons" },
 ]
 
 export default function AnnouncementBannerDialog() {
@@ -34,9 +39,9 @@ export default function AnnouncementBannerDialog() {
         </div>
         <div className="flex flex-col gap-4 p-4">
           <DialogHeader>
-            <DialogTitle className="text-base">Meet Relay 3.0</DialogTitle>
+            <DialogTitle className="text-base">Meet Designali 3.0</DialogTitle>
             <DialogDescription>
-              Everything your support team asked for this year, in one release.
+              Everything Ali Imam shipped this year, in one release.
             </DialogDescription>
           </DialogHeader>
           <ul className="flex flex-col gap-2">

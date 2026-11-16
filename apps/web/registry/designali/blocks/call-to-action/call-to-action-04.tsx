@@ -1,7 +1,9 @@
 "use client"
 
 import { useState } from "react"
-import { Check } from "lucide-react"
+import {
+  Check,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Input } from "@workspace/ui/components/input"
@@ -21,11 +23,11 @@ export default function CallToAction04() {
       <div className="mx-auto grid max-w-5xl gap-12 border border-border bg-background p-8 md:grid-cols-2 md:p-14">
         <div>
           <h2 className="text-3xl font-medium tracking-tight text-foreground md:text-4xl">
-            The Friday Brief
+            The Designali Brief
           </h2>
           <p className="mt-4 text-sm leading-7 text-muted-foreground">
-            Join 24,000 designers and engineers who get a short, useful note
-            on interface craft, tooling and process every week.
+            Join designers and engineers who get a short, useful note from
+            Ali Imam on design, code and new Designali releases every week.
           </p>
           <ul className="mt-8 space-y-3">
             {perks.map((perk) => (
@@ -50,7 +52,7 @@ export default function CallToAction04() {
             id="cta-04-email"
             type="email"
             required
-            placeholder="you@company.com"
+            placeholder="you@example.com"
             value={email}
             onChange={(event) => setEmail(event.target.value)}
             className="h-11 text-sm"

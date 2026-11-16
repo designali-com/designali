@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { ChartColumnIcon, ChartLineIcon } from "lucide-react"
+import {
+  ChartColumn as ChartColumnIcon,
+  ChartLine as ChartLineIcon,
+} from "@designali/icons"
 
 import {
   ToggleGroup,
@@ -17,7 +20,7 @@ export default function ChartTypeToggleGroup() {
   return (
     <div className="flex w-full max-w-sm flex-col gap-3 border p-4">
       <div className="flex items-center justify-between">
-        <span className="text-sm font-medium">Weekly sign-ups</span>
+        <span className="text-sm font-medium">Weekly designali.com sign-ups</span>
         <ToggleGroup
           size="sm"
           variant="outline"

@@ -1,4 +1,7 @@
-import { ArchiveIcon, ChevronDownIcon } from "lucide-react"
+import {
+  Archive as ArchiveIcon,
+  ChevronDown as ChevronDownIcon,
+} from "@designali/icons"
 
 import {
   Accordion,
@@ -12,9 +15,9 @@ const groups = [
   {
     value: "active",
     title: "Active",
-    projects: ["Website relaunch", "Mobile onboarding", "Partner portal"],
+    projects: ["designali.com relaunch", "Icons v2", "Client brand identity"],
   },
-  { value: "paused", title: "Paused", projects: ["Loyalty programme"] },
+  { value: "paused", title: "Paused", projects: ["Dalim Fonts revival"] },
   { value: "archived", title: "Archived", projects: [] as string[] },
 ]
 

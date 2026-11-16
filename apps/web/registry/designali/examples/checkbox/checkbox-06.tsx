@@ -15,26 +15,26 @@ import {
 const tableData = [
   {
     id: "1",
-    name: "Sarah Chen",
-    email: "sarah.chen@example.com",
+    name: "Ali Imam",
+    email: "ali@designali.com",
     role: "Admin",
   },
   {
     id: "2",
-    name: "Marcus Rodriguez",
-    email: "marcus.rodriguez@example.com",
+    name: "Sara (Designer)",
+    email: "sara@designali.com",
     role: "User",
   },
   {
     id: "3",
-    name: "Priya Patel",
-    email: "priya.patel@example.com",
+    name: "Omar (Developer)",
+    email: "omar@designali.com",
     role: "User",
   },
   {
     id: "4",
-    name: "David Kim",
-    email: "david.kim@example.com",
+    name: "Lena (Client)",
+    email: "lena@example.com",
     role: "Editor",
   },
 ]

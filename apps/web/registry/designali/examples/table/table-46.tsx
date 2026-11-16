@@ -9,9 +9,9 @@ import {
 import { cn } from "@workspace/ui/lib/utils"
 
 const services = [
-  { name: "Web app", uptime: 99.98, down: [12] },
-  { name: "API", uptime: 99.71, down: [4, 5, 21] },
-  { name: "Webhooks", uptime: 100, down: [] as number[] },
+  { name: "designali.com", uptime: 99.98, down: [12] },
+  { name: "Registry", uptime: 99.71, down: [4, 5, 21] },
+  { name: "Docs", uptime: 100, down: [] as number[] },
 ]
 
 export default function UptimeStatusTable() {

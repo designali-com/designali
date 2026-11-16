@@ -18,7 +18,7 @@ export default function CommentBoxWithAvatar() {
         <Textarea
           value={text}
           onChange={(e) => setText(e.target.value)}
-          placeholder="Add a comment…"
+          placeholder="Add a comment on this Designali block…"
           aria-label="Comment"
         />
         <div className="flex justify-end gap-2">

@@ -7,26 +7,26 @@ import { Checkbox } from "@workspace/ui/components/checkbox"
 import { cn } from "@workspace/ui/lib/utils"
 
 const topics = [
-  "Product",
+  "Templates",
   "Design systems",
-  "AI",
-  "Startups",
-  "Productivity",
-  "Remote work",
-  "Hiring",
-  "Data",
-  "Writing",
+  "AI workflows",
+  "Brand identity",
+  "UI/UX",
+  "Motion",
+  "CGI & 3D",
+  "Next.js",
+  "Tailwind CSS",
 ]
 
 export default function InterestChipCheckboxes() {
-  const [picked, setPicked] = React.useState<string[]>(["AI", "Design systems"])
+  const [picked, setPicked] = React.useState<string[]>(["AI workflows", "Design systems"])
 
   return (
     <div className="flex w-full max-w-sm flex-col gap-4">
       <div>
         <h3 className="text-sm font-semibold">What are you into?</h3>
         <p className="text-xs text-muted-foreground">
-          Pick at least three to personalise your feed.
+          Pick at least three to personalise your Designali feed.
         </p>
       </div>
       <div className="flex flex-wrap gap-2">

@@ -1,11 +1,13 @@
-import { ArrowRight } from "lucide-react"
+import {
+  ArrowRight,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 
 const metrics = [
-  { value: "38%", label: "Average lift in trial signups" },
-  { value: "12 days", label: "From kickoff to launch" },
-  { value: "140+", label: "Brands shipped since 2019" },
+  { value: "460+", label: "Production-ready blocks" },
+  { value: "240+", label: "Landing pages and templates" },
+  { value: "4000+", label: "Icons in @designali/icons" },
 ]
 
 export default function Hero06() {
@@ -13,24 +15,24 @@ export default function Hero06() {
     <section className="w-full border-b border-border bg-background">
       <div className="mx-auto max-w-7xl px-6">
         <div className="flex items-center justify-between border-x border-b border-border px-6 py-3 text-xs text-muted-foreground">
-          <span>Independent studio, Lisbon and remote</span>
-          <span className="hidden sm:inline">Booking projects for Q1</span>
+          <span>Designali studio · Remote, worldwide</span>
+          <span className="hidden sm:inline">hello@designali.com</span>
         </div>
         <div className="border-x border-border px-6 py-20 md:py-32">
           <h1 className="max-w-5xl text-5xl leading-[1.02] font-medium tracking-tight md:text-8xl">
-            Websites that turn attention into revenue.
+            Where thoughtful design meets production-ready code.
           </h1>
           <div className="mt-12 flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
             <p className="max-w-md text-base leading-7 text-muted-foreground">
-              We design and build marketing sites for software companies, with
-              copy, motion and analytics handled by one small senior team.
+              Designali designs and builds brand identities, UI/UX and Next.js
+              websites, with design and code handled end to end by Ali Imam.
             </p>
             <div className="flex flex-wrap gap-3">
-              <Button size="lg" nativeButton={false} render={<a href="#" />}>
+              <Button size="lg" nativeButton={false} render={<a href="/contact" />}>
                 Start a project
                 <ArrowRight />
               </Button>
-              <Button size="lg" variant="outline" nativeButton={false} render={<a href="#" />}>
+              <Button size="lg" variant="outline" nativeButton={false} render={<a href="/work" />}>
                 View case studies
               </Button>
             </div>

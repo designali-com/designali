@@ -8,10 +8,10 @@ import {
     return (
       <Avatar>
         <AvatarImage
-          src="https://github.com/designali-com.png"
-          alt="@designali"
+          src="/ali.jpg"
+          alt="Ali Imam"
         />
-        <AvatarFallback>DA</AvatarFallback>
+        <AvatarFallback>AI</AvatarFallback>
       </Avatar>
     );
   }

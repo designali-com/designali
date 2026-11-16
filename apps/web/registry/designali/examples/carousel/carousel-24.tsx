@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { StarIcon } from "lucide-react"
+import {
+  Star as StarIcon,
+} from "@designali/icons"
 
 import {
   Card,
@@ -20,10 +22,10 @@ import {
 import { cn } from "@workspace/ui/lib/utils"
 
 const photos = [
-  "from-sky-300 to-blue-600",
-  "from-amber-200 to-amber-600",
-  "from-emerald-200 to-emerald-700",
-  "from-stone-300 to-stone-600",
+  "/images/templates/dalim-agency-old.jpg",
+  "/images/templates/dalim-fonts-old.jpg",
+  "/images/templates/dalim-graphic-old.jpg",
+  "/images/templates/dalim-icons-old.jpg",
 ]
 
 export default function ListingPhotoCarousel() {
@@ -38,15 +40,14 @@ export default function ListingPhotoCarousel() {
     <Card className="w-full max-w-xs pt-0">
       <Carousel setApi={handleApi} className="group/listing">
         <CarouselContent className="-ms-0">
-          {photos.map((tone, index) => (
-            <CarouselItem key={tone} className="ps-0">
-              <div
-                className={cn(
-                  "flex aspect-[4/3] items-center justify-center bg-gradient-to-br text-xs text-white/80",
-                  tone
-                )}
-              >
-                Photo {index + 1}
+          {photos.map((src, index) => (
+            <CarouselItem key={src} className="ps-0">
+              <div className="flex aspect-[4/3] items-center justify-center overflow-hidden bg-muted">
+                <img
+                  src={src}
+                  alt={"Dalim case study screen " + (index + 1)}
+                  className="size-full object-cover"
+                />
               </div>
             </CarouselItem>
           ))}
@@ -73,12 +74,12 @@ export default function ListingPhotoCarousel() {
       </Carousel>
       <CardHeader>
         <CardTitle className="flex items-center justify-between">
-          Lakeside cabin, Harrow Bay
+          Dalim Agency case study
           <span className="flex items-center gap-1 text-xs font-normal">
             <StarIcon className="size-3 fill-current" /> 4.92
           </span>
         </CardTitle>
-        <CardDescription>2 guests · 1 bedroom · $148 night</CardDescription>
+        <CardDescription>Brand identity · Web design · Next.js</CardDescription>
       </CardHeader>
     </Card>
   )

@@ -1,12 +1,16 @@
 "use client"
 
 import * as React from "react"
-import { MessageCircleIcon, SendIcon } from "lucide-react"
+import {
+  MessageCircle as MessageCircleIcon,
+  Send as SendIcon,
+} from "@designali/icons"
 
 import {
   Avatar,
   AvatarBadge,
   AvatarFallback,
+  AvatarImage,
 } from "@workspace/ui/components/avatar"
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -30,13 +34,13 @@ const initialMessages = [
   {
     id: 1,
     from: "agent",
-    text: "Hi Marco! I see your order #5521 is delayed. Want me to check on it?",
+    text: "Hi there! I see your Templates Pro download link expired. Want me to resend it?",
   },
-  { id: 2, from: "me", text: "Yes please, it was due yesterday." },
+  { id: 2, from: "me", text: "Yes please, it expired yesterday." },
   {
     id: 3,
     from: "agent",
-    text: "It left our warehouse this morning and should arrive Thursday.",
+    text: "Done! A fresh link is on its way to your inbox from support@designali.com.",
   },
 ]
 
@@ -62,11 +66,12 @@ export default function ChatThreadDrawer() {
       <DrawerContent>
         <DrawerHeader className="flex-row items-center gap-3 border-b pb-4">
           <Avatar>
-            <AvatarFallback>SO</AvatarFallback>
+            <AvatarImage src="/ali.jpg" alt="Ali Imam" />
+            <AvatarFallback>AI</AvatarFallback>
             <AvatarBadge className="bg-emerald-500" />
           </Avatar>
           <div>
-            <DrawerTitle>Sofia from Parcelwise</DrawerTitle>
+            <DrawerTitle>Ali from Designali</DrawerTitle>
             <DrawerDescription>
               Typically replies in 2 minutes
             </DrawerDescription>

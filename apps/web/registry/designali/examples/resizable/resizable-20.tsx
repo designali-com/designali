@@ -1,4 +1,8 @@
-import { PauseIcon, SkipBackIcon, SkipForwardIcon } from "lucide-react"
+import {
+  Pause as PauseIcon,
+  SkipBack as SkipBackIcon,
+  SkipForward as SkipForwardIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {

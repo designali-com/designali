@@ -9,7 +9,7 @@ import {
   BreadcrumbSeparator,
 } from "@workspace/ui/components/breadcrumb"
 
-const trail = ["Shop", "Outdoor", "Footwear"]
+const trail = ["Designali", "Templates", "Portfolio"]
 
 export default function StoreCategoryBreadcrumb() {
   return (
@@ -25,13 +25,13 @@ export default function StoreCategoryBreadcrumb() {
             </Fragment>
           ))}
           <BreadcrumbItem>
-            <BreadcrumbPage>Trail running</BreadcrumbPage>
+            <BreadcrumbPage>Minimal</BreadcrumbPage>
           </BreadcrumbItem>
         </BreadcrumbList>
       </Breadcrumb>
       <div className="flex items-baseline justify-between gap-2">
-        <h2 className="text-lg font-semibold">Trail running shoes</h2>
-        <span className="text-xs text-muted-foreground">128 results</span>
+        <h2 className="text-lg font-semibold">Minimal portfolio templates</h2>
+        <span className="text-xs text-muted-foreground">24 results</span>
       </div>
     </div>
   )

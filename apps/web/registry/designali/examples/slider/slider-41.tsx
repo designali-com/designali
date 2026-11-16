@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { CheckIcon, PencilIcon } from "lucide-react"
+import {
+  Check as CheckIcon,
+  Pencil as PencilIcon,
+} from "@designali/icons"
 
 import { Slider } from "@workspace/ui/components/slider"
 

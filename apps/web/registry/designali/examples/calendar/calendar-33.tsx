@@ -40,7 +40,7 @@ export default function RecurringClassSchedule() {
   return (
     <Card className="w-fit">
       <CardHeader>
-        <CardTitle>Evening pottery class</CardTitle>
+        <CardTitle>Designali Figma workshop</CardTitle>
         <CardDescription>
           {days.length
             ? "Every " + days.map((d) => names[Number(d)]).join(", ")

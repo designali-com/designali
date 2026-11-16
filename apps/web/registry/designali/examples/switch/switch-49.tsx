@@ -10,7 +10,7 @@ const initial = { autoplay: true, captions: false, hd: true }
 type Prefs = typeof initial
 
 const labels: Record<keyof Prefs, string> = {
-  autoplay: "Autoplay next episode",
+  autoplay: "Autoplay next Designali tutorial",
   captions: "Always show captions",
   hd: "Stream in HD",
 }

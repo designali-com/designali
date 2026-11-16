@@ -8,7 +8,7 @@ import { cn } from "@workspace/ui/lib/utils"
 
 export default function CharacterRingComposer() {
   const [text, setText] = React.useState(
-    "Just shipped keyboard shortcuts for the whole app"
+    "Just shipped 460+ new blocks on designali.com"
   )
   const max = 140
   const pct = Math.min(1, text.length / max)

@@ -1,7 +1,11 @@
 "use client"
 
 import * as React from "react"
-import { ChevronDownIcon, TrendingDownIcon, TrendingUpIcon } from "lucide-react"
+import {
+  ChevronDown as ChevronDownIcon,
+  TrendingDown as TrendingDownIcon,
+  TrendingUp as TrendingUpIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -15,7 +19,7 @@ import { cn } from "@workspace/ui/lib/utils"
 
 const metrics = [
   { id: "revenue", label: "Revenue", value: "$48,210", trend: "+12.4%" },
-  { id: "orders", label: "Orders", value: "1,932", trend: "+4.1%" },
+  { id: "orders", label: "Template sales", value: "1,932", trend: "+4.1%" },
   { id: "aov", label: "Avg. order value", value: "$24.95", trend: "-1.8%" },
   { id: "refunds", label: "Refund rate", value: "2.3%", trend: "-0.4%" },
 ]

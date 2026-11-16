@@ -1,14 +1,17 @@
-import { CircleCheckIcon, CircleIcon } from "lucide-react"
+import {
+  CircleCheck as CircleCheckIcon,
+  Circle as CircleIcon,
+} from "@designali/icons"
 
 import { Progress, ProgressLabel } from "@workspace/ui/components/progress"
 import { cn } from "@workspace/ui/lib/utils"
 
 const tasks = [
-  { label: "Create your workspace", done: true },
+  { label: "Create your designali account", done: true },
   { label: "Invite teammates", done: true },
-  { label: "Connect a calendar", done: true },
-  { label: "Import your first project", done: false },
-  { label: "Set up notifications", done: false },
+  { label: "Install @designali/icons", done: true },
+  { label: "Pick your first template", done: false },
+  { label: "Deploy to Vercel", done: false },
 ]
 
 export default function OnboardingChecklistProgress() {

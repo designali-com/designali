@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { FileCodeIcon, XIcon } from "lucide-react"
+import {
+  FileCode as FileCodeIcon,
+  X as XIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -11,7 +14,7 @@ import {
   TabsTrigger,
 } from "@workspace/ui/components/tabs"
 
-const initial = ["index.ts", "router.ts", "styles.css", "README.md"]
+const initial = ["page.tsx", "hero-block.tsx", "globals.css", "README.md"]
 
 export default function CloseableEditorTabs() {
   const [files, setFiles] = React.useState(initial)

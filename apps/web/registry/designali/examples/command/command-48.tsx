@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { MapPinIcon, PlusIcon } from "lucide-react"
+import {
+  MapPin as MapPinIcon,
+  Plus as PlusIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -15,13 +18,13 @@ import {
 } from "@workspace/ui/components/command"
 
 const addresses = [
-  { id: "home", label: "Home", line: "48 Willow Lane, Portland, OR 97205" },
+  { id: "home", label: "Ali Imam", line: "ali@designali.com" },
   {
     id: "work",
     label: "Studio",
-    line: "210 Market St, Suite 4, Portland, OR 97204",
+    line: "Designali · billing@designali.com",
   },
-  { id: "parents", label: "Mom & Dad", line: "9 Orchard Rd, Boise, ID 83702" },
+  { id: "parents", label: "Client", line: "client@example.com" },
 ]
 
 export default function CheckoutAddressPicker() {
@@ -30,13 +33,13 @@ export default function CheckoutAddressPicker() {
   return (
     <div className="flex w-full max-w-sm flex-col gap-2">
       <div className="flex items-center justify-between">
-        <h3 className="text-sm font-semibold">Ship to</h3>
+        <h3 className="text-sm font-semibold">Bill to</h3>
         <span className="text-xs text-muted-foreground">Step 2 of 3</span>
       </div>
       <Command className="border">
-        <CommandInput placeholder="Search saved addresses..." />
+        <CommandInput placeholder="Search billing contacts..." />
         <CommandList>
-          <CommandEmpty>No saved address matches.</CommandEmpty>
+          <CommandEmpty>No billing contact matches.</CommandEmpty>
           <CommandGroup>
             {addresses.map((address) => (
               <CommandItem
@@ -59,7 +62,7 @@ export default function CheckoutAddressPicker() {
           <CommandGroup>
             <CommandItem value="add-address">
               <PlusIcon />
-              <span>Add a new address</span>
+              <span>Add a billing contact</span>
             </CommandItem>
           </CommandGroup>
         </CommandList>

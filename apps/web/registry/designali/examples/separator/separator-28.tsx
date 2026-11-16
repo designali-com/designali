@@ -1,4 +1,6 @@
-import { PlaneIcon } from "lucide-react"
+import {
+  Plane as PlaneIcon,
+} from "@designali/icons"
 
 import { Separator } from "@workspace/ui/components/separator"
 

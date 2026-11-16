@@ -1,4 +1,6 @@
-import { GitBranchIcon } from "lucide-react"
+import {
+  GitBranch as GitBranchIcon,
+} from "@designali/icons"
 
 import {
   Table,
@@ -14,7 +16,7 @@ const deployments = [
   {
     id: "dpl_8f2a",
     status: "Ready",
-    commit: "Fix checkout tax rounding",
+    commit: "Fix /templates grid on mobile",
     branch: "main",
     duration: "48s",
     ago: "5m",
@@ -22,8 +24,8 @@ const deployments = [
   {
     id: "dpl_7c1d",
     status: "Building",
-    commit: "Add bulk export endpoint",
-    branch: "feat/export",
+    commit: "Add 120 new icons",
+    branch: "feat/icons",
     duration: "—",
     ago: "1m",
   },

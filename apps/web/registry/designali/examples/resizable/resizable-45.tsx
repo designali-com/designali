@@ -1,7 +1,12 @@
 "use client"
 
 import * as React from "react"
-import { CalendarIcon, HomeIcon, InboxIcon, UsersIcon } from "lucide-react"
+import {
+  Calendar as CalendarIcon,
+  House as HomeIcon,
+  Inbox as InboxIcon,
+  Users as UsersIcon,
+} from "@designali/icons"
 
 import {
   ResizableHandle,

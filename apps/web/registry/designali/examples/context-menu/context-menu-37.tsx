@@ -1,7 +1,11 @@
 "use client"
 
 import * as React from "react"
-import { BookmarkIcon, HashIcon, TrashIcon } from "lucide-react"
+import {
+  Bookmark as BookmarkIcon,
+  Hash as HashIcon,
+  Trash as TrashIcon,
+} from "@designali/icons"
 
 import {
   ContextMenu,
@@ -21,14 +25,14 @@ import { cn } from "@workspace/ui/lib/utils"
 const initialCart = [
   {
     id: "tee",
-    name: "Organic cotton tee",
+    name: "Designali Templates Pro",
     price: 28,
     qty: 2,
     swatch: "from-stone-200 to-stone-400",
   },
   {
     id: "cap",
-    name: "Canvas baseball cap",
+    name: "Icons Pro license",
     price: 22,
     qty: 1,
     swatch: "from-emerald-300 to-emerald-600",

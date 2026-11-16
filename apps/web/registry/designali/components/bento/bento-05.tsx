@@ -7,17 +7,17 @@ export default function BentoExample() {
       rowHeight={{ base: "60px", md: "80px", lg: "120px" }}
     >
       <BentoGridItem colSpan={2} rowSpan={2}>
-        Hero Card
+        designali — design se code tak
       </BentoGridItem>
-      <BentoGridItem>Stats 1</BentoGridItem>
-      <BentoGridItem>Stats 2</BentoGridItem>
+      <BentoGridItem>460+ Blocks</BentoGridItem>
+      <BentoGridItem>4000+ Icons</BentoGridItem>
 
       <BentoGridItem rowSpan={2} colSpan={2}>
-        Wide Card
+        2300+ UI Examples
       </BentoGridItem>
 
-      <BentoGridItem>Small</BentoGridItem>
-      <BentoGridItem>Small</BentoGridItem>
+      <BentoGridItem>Templates</BentoGridItem>
+      <BentoGridItem>Logos</BentoGridItem>
     </BentoGrid>
   )
 }

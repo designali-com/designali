@@ -1,14 +1,14 @@
 import {
-  DollarSignIcon,
-  TrendingDownIcon,
-  TrendingUpIcon,
-  UsersIcon,
-} from "lucide-react"
+  DollarSign as DollarSignIcon,
+  TrendingDown as TrendingDownIcon,
+  TrendingUp as TrendingUpIcon,
+  Users as UsersIcon,
+} from "@designali/icons"
 
 import { Spinner } from "@workspace/ui/components/spinner"
 
 const stats = [
-  { label: "Active users", value: "12,483", icon: UsersIcon },
+  { label: "Template downloads", value: "12,483", icon: UsersIcon },
   { label: "Conversion", value: null, icon: TrendingUpIcon },
   { label: "MRR", value: "$84.2k", icon: DollarSignIcon },
   { label: "Churn", value: null, icon: TrendingDownIcon },

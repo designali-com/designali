@@ -1,17 +1,22 @@
 "use client"
 
 import { useState } from "react"
-import { ArrowRight, Lock, Plus, Search } from "lucide-react"
+import {
+  ArrowRight,
+  Lock,
+  Plus,
+  Search,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { cn } from "@workspace/ui/lib/utils"
 
 const workspaces = [
-  { name: "Ridgeway Partners", slug: "ridgeway", role: "Owner", members: 42, color: "from-amber-400 to-orange-600", sso: true },
-  { name: "Ridgeway Design", slug: "ridgeway-design", role: "Admin", members: 9, color: "from-pink-400 to-rose-600", sso: false },
-  { name: "Openfield Collective", slug: "openfield", role: "Member", members: 128, color: "from-sky-400 to-blue-700", sso: true },
-  { name: "Weekend Builds", slug: "weekend-builds", role: "Owner", members: 3, color: "from-lime-400 to-emerald-600", sso: false },
-  { name: "Cinder Robotics", slug: "cinder", role: "Guest", members: 61, color: "from-violet-400 to-indigo-700", sso: false },
+  { name: "Designali Studio", slug: "designali", role: "Owner", members: 42, color: "from-amber-400 to-orange-600", sso: true },
+  { name: "Designali Templates", slug: "designali-templates", role: "Admin", members: 9, color: "from-pink-400 to-rose-600", sso: false },
+  { name: "Dalim Works", slug: "dalim-works", role: "Member", members: 128, color: "from-sky-400 to-blue-700", sso: true },
+  { name: "Ali Imam Portfolio", slug: "aliimam", role: "Owner", members: 3, color: "from-lime-400 to-emerald-600", sso: false },
+  { name: "Client Projects", slug: "clients", role: "Guest", members: 61, color: "from-violet-400 to-indigo-700", sso: false },
 ]
 
 export default function Authentication20() {
@@ -25,7 +30,7 @@ export default function Authentication20() {
       <div className="mx-auto max-w-4xl px-6">
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div>
-            <p className="text-sm text-muted-foreground">Signed in as morgan@ridgeway.co</p>
+            <p className="text-sm text-muted-foreground">Signed in as ali@designali.com</p>
             <h2 className="mt-1 text-3xl font-semibold tracking-tight">Pick a workspace</h2>
           </div>
           <label className="flex h-10 items-center gap-2 border px-3 md:w-64">
@@ -65,7 +70,7 @@ export default function Authentication20() {
               </span>
               <span className="min-w-0">
                 <span className="block truncate font-medium">{item.name}</span>
-                <span className="block truncate font-mono text-xs text-muted-foreground">{item.slug}.trellis.app</span>
+                <span className="block truncate font-mono text-xs text-muted-foreground">{item.slug}.designali.com</span>
               </span>
               <span className="flex w-full justify-between text-xs text-muted-foreground">
                 <span>{item.role}</span>

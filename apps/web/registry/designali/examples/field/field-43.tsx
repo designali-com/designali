@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { Trash2Icon } from "lucide-react"
+import {
+  Trash2 as Trash2Icon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -13,7 +15,7 @@ import {
 } from "@workspace/ui/components/field"
 import { Input } from "@workspace/ui/components/input"
 
-const NAME = "orbit-analytics"
+const NAME = "designali-studio"
 
 export default function DeleteAccountConfirmField() {
   const [value, setValue] = React.useState("")

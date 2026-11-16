@@ -1,4 +1,7 @@
-import { FileVideoIcon, RefreshCwIcon } from "lucide-react"
+import {
+  FileVideoCamera as FileVideoIcon,
+  RefreshCw as RefreshCwIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -18,7 +21,7 @@ export default function FailedUploadRetry() {
         className="min-w-0 flex-1 gap-1.5 [&_[data-slot=progress-indicator]]:bg-destructive"
       >
         <ProgressLabel className="truncate text-sm font-medium">
-          keynote-recording.mov
+          designali-showreel.mov
         </ProgressLabel>
         <ProgressValue className="text-destructive" />
         <span className="w-full text-xs text-destructive">

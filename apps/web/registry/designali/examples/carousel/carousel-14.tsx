@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { MegaphoneIcon } from "lucide-react"
+import {
+  Megaphone as MegaphoneIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import {
@@ -12,13 +14,13 @@ import {
 } from "@workspace/ui/components/carousel"
 
 const announcements = [
-  { tag: "New", text: "Recurring invoices are now available on all plans." },
-  { tag: "Update", text: "Exports now include custom fields and tags." },
+  { tag: "New", text: "460+ blocks are now live on designali.com/blocks." },
+  { tag: "Update", text: "@designali/icons now ships 4000+ icons." },
   {
     tag: "Event",
-    text: "Join our live Q&A on roadmap priorities this Thursday.",
+    text: "Join Ali Imam for a live design-to-code session this Thursday.",
   },
-  { tag: "Fix", text: "Calendar sync no longer duplicates all-day events." },
+  { tag: "Fix", text: "Logo downloads from /logos now keep their SVG names." },
 ]
 
 export default function VerticalAnnouncementTicker() {

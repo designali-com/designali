@@ -9,9 +9,9 @@ import {
 import { cn } from "@workspace/ui/lib/utils"
 
 const rows = [
-  { team: "Platform", openP1: 2, openP2: 7, closedP1: 11, closedP2: 34 },
-  { team: "Mobile", openP1: 0, openP2: 4, closedP1: 6, closedP2: 22 },
-  { team: "Growth", openP1: 1, openP2: 9, closedP1: 3, closedP2: 17 },
+  { team: "Web", openP1: 2, openP2: 7, closedP1: 11, closedP2: 34 },
+  { team: "Design", openP1: 0, openP2: 4, closedP1: 6, closedP2: 22 },
+  { team: "Motion", openP1: 1, openP2: 9, closedP1: 3, closedP2: 17 },
 ]
 
 export default function MultiLevelHeaderTable() {

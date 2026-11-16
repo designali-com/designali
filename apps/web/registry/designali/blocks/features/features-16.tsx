@@ -10,17 +10,17 @@ import {
   Timer,
   TrendingUp,
   Users,
-} from "lucide-react"
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 
 const cards = [
-  { icon: Gauge, title: "Core Web Vitals", body: "Real-user LCP, INP and CLS per route, segmented by device and country.", tone: "from-sky-500/15" },
-  { icon: Timer, title: "Session replay", body: "Watch the exact moment a user rage-clicks, with console and network logs alongside.", tone: "from-violet-500/15" },
-  { icon: TrendingUp, title: "Funnels", body: "Build a funnel from any events in seconds and see where each cohort drops off.", tone: "from-emerald-500/15" },
-  { icon: Users, title: "Cohorts", body: "Group users by behaviour, plan or traits, then compare retention curves side by side.", tone: "from-amber-500/15" },
-  { icon: Activity, title: "Alerts", body: "Get pinged in chat when error rate or latency breaks a threshold you set.", tone: "from-rose-500/15" },
-  { icon: Layers, title: "Feature flags", body: "Roll out to 5% of users, watch the metrics, then ramp up without a redeploy.", tone: "from-teal-500/15" },
+  { icon: Gauge, title: "Templates", body: "Polished Next.js templates for portfolios, agencies and SaaS, ready to customise and ship.", tone: "from-sky-500/15" },
+  { icon: Timer, title: "Blocks", body: "460+ copy-and-paste sections for heroes, pricing, features, footers and more.", tone: "from-violet-500/15" },
+  { icon: TrendingUp, title: "UI Designs", body: "2300+ UI examples showing every component in real-world states.", tone: "from-emerald-500/15" },
+  { icon: Users, title: "Icons", body: "4000+ lucide-compatible icons in @designali/icons, ready for any React project.", tone: "from-amber-500/15" },
+  { icon: Activity, title: "Logos", body: "Brand and tech logos in @designali/logos for stacks, integrations and footers.", tone: "from-rose-500/15" },
+  { icon: Layers, title: "Illustrations", body: "Abstract shapes and vectors from @designali/vectors to give every page character.", tone: "from-teal-500/15" },
 ]
 
 export default function Features16() {
@@ -33,7 +33,7 @@ export default function Features16() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="flex items-end justify-between gap-6">
           <h2 className="max-w-xl text-3xl font-medium tracking-tight md:text-5xl">
-            Six tools, one tracking snippet.
+            Six Designali libraries, one design language.
           </h2>
           <div className="flex shrink-0 gap-2">
             <Button variant="outline" size="icon-lg" aria-label="Previous" onClick={() => scroll(-1)}>

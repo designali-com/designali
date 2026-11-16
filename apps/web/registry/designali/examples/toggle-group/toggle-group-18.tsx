@@ -15,7 +15,7 @@ export default function NpsScoreToggleGroup() {
   return (
     <div className="flex w-full max-w-md flex-col gap-3">
       <span className="text-sm font-medium">
-        How likely are you to recommend Fieldnote to a friend?
+        How likely are you to recommend Designali to a friend?
       </span>
       <ToggleGroup
         variant="outline"

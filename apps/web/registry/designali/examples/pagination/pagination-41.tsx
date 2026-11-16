@@ -13,12 +13,12 @@ import { Progress } from "@workspace/ui/components/progress"
 import { cn } from "@workspace/ui/lib/utils"
 
 const chapters = [
-  "The Harbor",
-  "Salt and Iron",
-  "A Quiet Ledger",
-  "North Wind",
-  "Lanterns",
-  "Homecoming",
+  "Introduction",
+  "Installation",
+  "Icons",
+  "Logos",
+  "Blocks",
+  "Templates",
 ]
 
 export default function ChapterReaderPagination() {

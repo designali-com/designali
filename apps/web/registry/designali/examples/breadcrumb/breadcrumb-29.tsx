@@ -21,7 +21,7 @@ export default function CardHeaderBreadcrumb() {
         <Breadcrumb>
           <BreadcrumbList>
             <BreadcrumbItem>
-              <BreadcrumbLink href="#">Reports</BreadcrumbLink>
+              <BreadcrumbLink href="#">designali.com</BreadcrumbLink>
             </BreadcrumbItem>
             <BreadcrumbSeparator />
             <BreadcrumbItem>

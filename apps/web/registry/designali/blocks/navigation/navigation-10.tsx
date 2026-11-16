@@ -1,7 +1,11 @@
 "use client"
 
 import { useState } from "react"
-import { ArrowUpRight, Menu, X } from "lucide-react"
+import {
+  ArrowUpRight,
+  Menu,
+  X,
+} from "@designali/icons"
 
 import { cn } from "@workspace/ui/lib/utils"
 
@@ -9,11 +13,11 @@ const links = [
   { label: "Work", count: "24" },
   { label: "Studio", count: "" },
   { label: "Services", count: "06" },
-  { label: "Journal", count: "41" },
+  { label: "Blog", count: "41" },
   { label: "Contact", count: "" },
 ]
 
-const socials = ["Instagram", "Dribbble", "LinkedIn"]
+const socials = ["Instagram", "X", "LinkedIn"]
 
 export default function Navigation10() {
   const [open, setOpen] = useState(false)
@@ -29,7 +33,7 @@ export default function Navigation10() {
               open && "text-background"
             )}
           >
-            Fieldwork&reg;
+            designali
           </a>
           <button
             type="button"
@@ -47,11 +51,11 @@ export default function Navigation10() {
 
         <div className="mx-auto max-w-7xl px-6 pt-16">
           <h2 className="max-w-3xl text-4xl leading-tight font-semibold tracking-tight md:text-6xl">
-            Brand systems for companies that make physical things.
+            Brand, UI/UX and websites — design se code tak.
           </h2>
           <p className="mt-6 max-w-md text-muted-foreground">
-            An independent design studio in Lisbon working with manufacturers,
-            hardware startups and craft producers.
+            A design and development studio by Ali Imam, working remotely with
+            brands, startups and agencies worldwide.
           </p>
         </div>
 
@@ -89,7 +93,7 @@ export default function Navigation10() {
               <div>
                 <p className="text-background/50">New business</p>
                 <a href="#" tabIndex={open ? 0 : -1} className="mt-1 block">
-                  hello@fieldwork.studio
+                  hello@designali.com
                 </a>
               </div>
               <ul className="space-y-1">

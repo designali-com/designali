@@ -1,11 +1,11 @@
 import {
-  BoldIcon,
-  ItalicIcon,
-  LinkIcon,
-  ListIcon,
-  QuoteIcon,
-  UnderlineIcon,
-} from "lucide-react"
+  Bold as BoldIcon,
+  Italic as ItalicIcon,
+  Link as LinkIcon,
+  List as ListIcon,
+  Quote as QuoteIcon,
+  Underline as UnderlineIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 

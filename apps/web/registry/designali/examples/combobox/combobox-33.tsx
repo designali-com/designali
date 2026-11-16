@@ -2,16 +2,16 @@
 
 import * as React from "react"
 import {
-  BellIcon,
-  CameraIcon,
-  GiftIcon,
-  HeartIcon,
-  LeafIcon,
-  RocketIcon,
-  ShapesIcon,
-  StarIcon,
-  ZapIcon,
-} from "lucide-react"
+  Bell as BellIcon,
+  Camera as CameraIcon,
+  Gift as GiftIcon,
+  Heart as HeartIcon,
+  Leaf as LeafIcon,
+  Rocket as RocketIcon,
+  Shapes as ShapesIcon,
+  Star as StarIcon,
+  Zap as ZapIcon,
+} from "@designali/icons"
 
 import {
   Combobox,

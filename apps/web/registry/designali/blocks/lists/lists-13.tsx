@@ -1,23 +1,26 @@
 "use client"
 
 import { useState } from "react"
-import { Mail, Search } from "lucide-react"
+import {
+  Mail,
+  Search,
+} from "@designali/icons"
 
 import { cn } from "@workspace/ui/lib/utils"
 
 const people = [
-  { name: "Amara Osei", title: "CEO", dept: "Leadership", email: "amara@larkwell.co", status: "online", hue: 25 },
-  { name: "Ben Hollis", title: "Account Executive", dept: "Sales", email: "ben@larkwell.co", status: "away", hue: 200 },
-  { name: "Chiara Bassi", title: "Product Designer", dept: "Design", email: "chiara@larkwell.co", status: "online", hue: 330 },
-  { name: "Dev Kapoor", title: "Backend Engineer", dept: "Engineering", email: "dev@larkwell.co", status: "offline", hue: 150 },
-  { name: "Elena Novak", title: "Design Lead", dept: "Design", email: "elena@larkwell.co", status: "online", hue: 280 },
-  { name: "Femi Adeyemi", title: "Sales Lead", dept: "Sales", email: "femi@larkwell.co", status: "online", hue: 60 },
-  { name: "Grace Liu", title: "Frontend Engineer", dept: "Engineering", email: "grace@larkwell.co", status: "away", hue: 0 },
-  { name: "Henrik Dahl", title: "SRE", dept: "Engineering", email: "henrik@larkwell.co", status: "online", hue: 230 },
-  { name: "Isla Moreau", title: "COO", dept: "Leadership", email: "isla@larkwell.co", status: "offline", hue: 100 },
+  { name: "Ali Imam", title: "Founder, Design Engineer", dept: "Leadership", email: "ali@designali.com", status: "online", hue: 25 },
+  { name: "Ben", title: "Client Partner", dept: "Studio", email: "ben@designali.com", status: "away", hue: 200 },
+  { name: "Chiara", title: "UI/UX Designer", dept: "Design", email: "chiara@designali.com", status: "online", hue: 330 },
+  { name: "Dev", title: "Next.js Developer", dept: "Development", email: "dev@designali.com", status: "offline", hue: 150 },
+  { name: "Elena", title: "Brand Designer", dept: "Design", email: "elena@designali.com", status: "online", hue: 280 },
+  { name: "Femi", title: "Project Manager", dept: "Studio", email: "femi@designali.com", status: "online", hue: 60 },
+  { name: "Grace", title: "Frontend Developer", dept: "Development", email: "grace@designali.com", status: "away", hue: 0 },
+  { name: "Henrik", title: "Creative Developer", dept: "Development", email: "henrik@designali.com", status: "online", hue: 230 },
+  { name: "Isla", title: "Support Lead", dept: "Studio", email: "support@designali.com", status: "offline", hue: 100 },
 ]
 
-const departments = ["All", "Leadership", "Design", "Engineering", "Sales"]
+const departments = ["All", "Leadership", "Design", "Development", "Studio"]
 
 const dot: Record<string, string> = {
   online: "bg-emerald-500",
@@ -42,7 +45,7 @@ export default function Lists13() {
         <div className="border border-border bg-background">
           <div className="space-y-4 border-b border-border p-5">
             <div className="flex items-center justify-between gap-4">
-              <h2 className="text-xl font-semibold tracking-tight">People</h2>
+              <h2 className="text-xl font-semibold tracking-tight">Designali studio</h2>
               <span className="font-mono text-xs text-muted-foreground">
                 {visible.length} of {people.length}
               </span>

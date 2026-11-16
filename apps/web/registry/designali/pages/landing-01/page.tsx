@@ -6,11 +6,11 @@ export default function Landing01() {
             <ThemeSwitcher />
             <main className="flex-1">
                 <section className="flex h-screen items-center justify-center">
-                    <h1 className="text-4xl font-bold">Hero</h1>
+                    <h1 className="text-4xl font-bold">designali — design se code tak</h1>
                 </section>
 
                 <section className="flex h-screen items-center justify-center">
-                    <h1 className="text-4xl font-bold">Section</h1>
+                    <h1 className="text-4xl font-bold">Thoughtful design meets production-ready code</h1>
                 </section>
             </main>
         </div>

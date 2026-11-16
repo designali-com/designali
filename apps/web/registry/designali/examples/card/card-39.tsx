@@ -2,11 +2,11 @@
 
 import * as React from "react"
 import {
-  ArrowDownLeftIcon,
-  ArrowUpRightIcon,
-  EyeIcon,
-  EyeOffIcon,
-} from "lucide-react"
+  ArrowDownLeft as ArrowDownLeftIcon,
+  ArrowUpRight as ArrowUpRightIcon,
+  Eye as EyeIcon,
+  EyeOff as EyeOffIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -37,7 +37,7 @@ export default function WalletBalanceCard() {
   return (
     <Card className="w-full max-w-xs">
       <CardHeader>
-        <CardDescription>Main account · EUR</CardDescription>
+        <CardDescription>Designali studio · EUR</CardDescription>
         <CardTitle className="text-2xl font-semibold tabular-nums">
           {hidden ? "€ ••••••" : "€ 12,840.55"}
         </CardTitle>

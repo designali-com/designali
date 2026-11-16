@@ -1,4 +1,7 @@
-import { MailIcon, PhoneIcon } from "lucide-react"
+import {
+  Mail as MailIcon,
+  Phone as PhoneIcon,
+} from "@designali/icons"
 
 import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
 import { Badge } from "@workspace/ui/components/badge"
@@ -18,22 +21,22 @@ import {
 
 const customers = [
   {
-    name: "Riya Kapoor",
-    email: "riya@brightfold.io",
+    name: "Brand identity client",
+    email: "brand@example.com",
     phone: "+1 415 555 0132",
     plan: "Business",
     mrr: "$480",
   },
   {
-    name: "Owen Gallagher",
-    email: "owen@tallpine.co",
+    name: "Templates customer",
+    email: "templates@example.com",
     phone: "+44 20 7946 0012",
     plan: "Starter",
     mrr: "$29",
   },
   {
-    name: "Mei Tanaka",
-    email: "mei@kitecloud.jp",
+    name: "Icons Pro customer",
+    email: "icons@example.com",
     phone: "+81 3 5550 1180",
     plan: "Pro",
     mrr: "$99",

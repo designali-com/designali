@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { AccessibilityIcon } from "lucide-react"
+import {
+  Accessibility as AccessibilityIcon,
+} from "@designali/icons"
 
 import {
   Menubar,
@@ -63,7 +65,7 @@ export default function AccessibilityOptionsMenubar() {
         )}
       >
         <p className={cn("font-medium", !motion && "animate-pulse")}>
-          Your order has shipped
+          Your Designali template is ready
         </p>
         <p
           className={cn(
@@ -71,7 +73,7 @@ export default function AccessibilityOptionsMenubar() {
             "text-[0.85em]"
           )}
         >
-          Arrives Thursday between 9am and 1pm.
+          Download it from your designali.com account.
         </p>
       </div>
     </div>

@@ -1,4 +1,6 @@
-import { TrendingUpIcon } from "lucide-react"
+import {
+  TrendingUp as TrendingUpIcon,
+} from "@designali/icons"
 
 import {
   HoverCard,
@@ -29,12 +31,12 @@ export default function StockTickerHoverCard() {
           href="#"
           className="font-mono font-medium text-foreground hover:underline"
         >
-          $NOVA
+          $DSGN
         </HoverCardTrigger>
         <HoverCardContent className="w-60">
           <div className="flex items-baseline justify-between">
-            <span className="font-medium">Novagrid Energy</span>
-            <span className="font-mono text-muted-foreground">NOVA</span>
+            <span className="font-medium">Designali Templates</span>
+            <span className="font-mono text-muted-foreground">DSGN</span>
           </div>
           <div className="mt-1 flex items-baseline gap-2">
             <span className="text-lg font-semibold">$47.12</span>

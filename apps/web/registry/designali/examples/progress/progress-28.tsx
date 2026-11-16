@@ -15,7 +15,7 @@ export default function TaskCountValueRender() {
         className="[&_[data-slot=progress-track]]:h-2"
       >
         <ProgressLabel className="text-sm font-medium">
-          Launch checklist
+          designali.com launch checklist
         </ProgressLabel>
         <ProgressValue>
           {(formatted, value) => (

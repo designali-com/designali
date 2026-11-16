@@ -1,7 +1,12 @@
 "use client"
 
 import * as React from "react"
-import { BookmarkIcon, CopyIcon, ScissorsIcon, UnlinkIcon } from "lucide-react"
+import {
+  Bookmark as BookmarkIcon,
+  Copy as CopyIcon,
+  Scissors as ScissorsIcon,
+  Unlink as UnlinkIcon,
+} from "@designali/icons"
 
 import {
   Menubar,

@@ -8,17 +8,17 @@ import {
 const deploys = [
   {
     sha: "a3f91c2",
-    message: "Cache pricing table on the edge",
-    author: "Ines Duarte",
-    initials: "ID",
+    message: "Cache pricing blocks on the edge",
+    author: "Ali Imam",
+    initials: "AI",
     when: "12 min ago",
     env: "Production",
   },
   {
     sha: "7be02d4",
     message: "Bump image optimizer to v3",
-    author: "Rafael Moreno",
-    initials: "RM",
+    author: "Studio Developer",
+    initials: "SD",
     when: "1 hr ago",
     env: "Preview",
   },

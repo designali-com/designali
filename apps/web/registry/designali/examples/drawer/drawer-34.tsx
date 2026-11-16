@@ -1,4 +1,8 @@
-import { DownloadIcon, ReceiptTextIcon, SendIcon } from "lucide-react"
+import {
+  Download as DownloadIcon,
+  ReceiptText as ReceiptTextIcon,
+  Send as SendIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import { Button } from "@workspace/ui/components/button"
@@ -21,8 +25,8 @@ import {
 } from "@workspace/ui/components/table"
 
 const lines = [
-  { item: "Pro plan · 12 seats", amount: 288 },
-  { item: "Additional storage · 200 GB", amount: 40 },
+  { item: "Designali Pro · 12 seats", amount: 288 },
+  { item: "Icons Pro add-on", amount: 40 },
   { item: "Priority support", amount: 99 },
 ]
 
@@ -48,8 +52,8 @@ export default function InvoicePreviewDrawer() {
           <div className="grid grid-cols-2 gap-3">
             <div>
               <p className="text-muted-foreground">Billed to</p>
-              <p className="font-medium">Quarry Labs B.V.</p>
-              <p className="text-muted-foreground">Utrecht, NL</p>
+              <p className="font-medium">Brand identity client</p>
+              <p className="text-muted-foreground">client@example.com</p>
             </div>
             <div>
               <p className="text-muted-foreground">Amount due</p>

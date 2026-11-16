@@ -17,20 +17,20 @@ const notes = [
   {
     id: 1,
     title: "Kickoff notes",
-    body: "Agreed on a six-week timeline with weekly demos on Thursdays and a soft launch for beta customers.",
-    author: "Imani",
+    body: "Agreed on a six-week timeline for the brand identity and Next.js site, with weekly demos on Thursdays.",
+    author: "Ali",
   },
   {
     id: 2,
     title: "Research synthesis",
-    body: "Users struggle to find export settings and expect bulk actions to live in the toolbar, not the overflow menu.",
-    author: "Colin",
+    body: "Users struggle to find SVG export on /icons and expect copy actions to live in the toolbar, not the overflow menu.",
+    author: "Sara",
   },
   {
     id: 3,
     title: "Retro",
-    body: "Ship smaller PRs, add preview environments for every branch, and rotate on-call more evenly across the team.",
-    author: "Dana",
+    body: "Ship smaller PRs, add Vercel previews for every branch, and rotate on-call more evenly across the team.",
+    author: "Omar",
   },
 ]
 

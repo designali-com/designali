@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { TypeIcon } from "lucide-react"
+import {
+  Type as TypeIcon,
+} from "@designali/icons"
 
 import {
   Select,
@@ -47,8 +49,8 @@ export default function FontFamilySelect() {
           current.className
         )}
       >
-        The quiet harbour town woke slowly, its lanterns fading as the first
-        ferries pushed out into the grey morning.
+        Where thoughtful design meets production-ready code. Designali designs
+        and builds digital experiences that work beautifully.
       </p>
     </div>
   )

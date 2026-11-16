@@ -1,7 +1,12 @@
 "use client"
 
 import * as React from "react"
-import { PauseIcon, PlayIcon, RotateCcwIcon, RotateCwIcon } from "lucide-react"
+import {
+  Pause as PauseIcon,
+  Play as PlayIcon,
+  RotateCcw as RotateCcwIcon,
+  RotateCw as RotateCwIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Progress } from "@workspace/ui/components/progress"
@@ -33,9 +38,9 @@ export default function PodcastPlayerScrubber() {
         <div className="size-12 shrink-0 bg-gradient-to-br from-primary/80 to-primary/20" />
         <div className="min-w-0">
           <p className="truncate text-sm font-medium">
-            Ep. 41 &middot; Designing for slow internet
+            Ep. 41 &middot; Design se code tak
           </p>
-          <p className="text-xs text-muted-foreground">Margins &amp; Grids</p>
+          <p className="text-xs text-muted-foreground">designali</p>
         </div>
       </div>
       <Progress

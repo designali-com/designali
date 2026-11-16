@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { KeyRoundIcon } from "lucide-react"
+import {
+  KeyRound as KeyRoundIcon,
+} from "@designali/icons"
 
 import {
   Combobox,

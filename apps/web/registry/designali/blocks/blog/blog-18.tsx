@@ -1,23 +1,26 @@
 "use client"
 
 import { useState } from "react"
-import { ChevronLeft, ChevronRight } from "lucide-react"
+import {
+  ChevronLeft,
+  ChevronRight,
+} from "@designali/icons"
 
 import { cn } from "@workspace/ui/lib/utils"
 
 const posts = [
-  { title: "A cooking school for people who hate recipes", cat: "Food", date: "Nov 14", hue: "from-chart-1/60" },
-  { title: "Twelve hours on the night train to Split", cat: "Travel", date: "Nov 12", hue: "from-chart-2/60" },
-  { title: "Inside the last letterpress shop in town", cat: "Craft", date: "Nov 9", hue: "from-chart-3/60" },
-  { title: "Running a bookshop with four shelves", cat: "Business", date: "Nov 7", hue: "from-chart-4/60" },
-  { title: "The bakers who start at 2am", cat: "Food", date: "Nov 4", hue: "from-chart-5/60" },
-  { title: "Mending clothes as a weekly ritual", cat: "Craft", date: "Nov 1", hue: "from-chart-1/60" },
-  { title: "A walking guide to the old harbor", cat: "Travel", date: "Oct 29", hue: "from-chart-2/60" },
-  { title: "What a flower market sells at closing time", cat: "Business", date: "Oct 26", hue: "from-chart-3/60" },
-  { title: "Fermentation for the impatient", cat: "Food", date: "Oct 22", hue: "from-chart-4/60" },
-  { title: "Sketchbooks of a ferry captain", cat: "Craft", date: "Oct 19", hue: "from-chart-5/60" },
-  { title: "Weekend cabins you can reach by bus", cat: "Travel", date: "Oct 15", hue: "from-chart-1/60" },
-  { title: "The economics of a corner cafe", cat: "Business", date: "Oct 12", hue: "from-chart-2/60" },
+  { title: "A design school for people who hate tutorials", cat: "Design", date: "Nov 14", hue: "from-chart-1/60" },
+  { title: "Twelve hours inside a Figma file", cat: "Code", date: "Nov 12", hue: "from-chart-2/60" },
+  { title: "Inside the Dalim Fonts archive", cat: "Craft", date: "Nov 9", hue: "from-chart-3/60" },
+  { title: "Running a template store with four products", cat: "Business", date: "Nov 7", hue: "from-chart-4/60" },
+  { title: "The designers who ship at 2am", cat: "Design", date: "Nov 4", hue: "from-chart-5/60" },
+  { title: "Redrawing icons as a weekly ritual", cat: "Craft", date: "Nov 1", hue: "from-chart-1/60" },
+  { title: "A walking guide to the Designali work page", cat: "Code", date: "Oct 29", hue: "from-chart-2/60" },
+  { title: "What a template sells in its first week", cat: "Business", date: "Oct 26", hue: "from-chart-3/60" },
+  { title: "Motion design for the impatient", cat: "Design", date: "Oct 22", hue: "from-chart-4/60" },
+  { title: "Sketchbooks of a design engineer", cat: "Craft", date: "Oct 19", hue: "from-chart-5/60" },
+  { title: "Weekend projects you can build with blocks", cat: "Code", date: "Oct 15", hue: "from-chart-1/60" },
+  { title: "The economics of a one-person studio", cat: "Business", date: "Oct 12", hue: "from-chart-2/60" },
 ]
 
 const perPage = 6
@@ -31,7 +34,7 @@ export default function Blog18() {
     <section className="w-full bg-background py-16 text-foreground md:py-24">
       <div className="mx-auto max-w-7xl px-6">
         <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
-          <h2 className="font-serif text-4xl tracking-tight">Small Hours magazine</h2>
+          <h2 className="font-serif text-4xl tracking-tight">Designali magazine</h2>
           <p className="text-sm text-muted-foreground">
             Showing {(page - 1) * perPage + 1}–{Math.min(page * perPage, posts.length)} of {posts.length} stories
           </p>

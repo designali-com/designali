@@ -29,11 +29,11 @@ export function DialogDemo() {
           <FieldGroup>
             <Field>
               <Label htmlFor="name-1">Name</Label>
-              <Input id="name-1" name="name" defaultValue="Pedro Duarte" />
+              <Input id="name-1" name="name" defaultValue="Ali Imam" />
             </Field>
             <Field>
               <Label htmlFor="username-1">Username</Label>
-              <Input id="username-1" name="username" defaultValue="@peduarte" />
+              <Input id="username-1" name="username" defaultValue="@designali_com" />
             </Field>
           </FieldGroup>
           <DialogFooter>

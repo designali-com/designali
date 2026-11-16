@@ -1,12 +1,15 @@
-import { MicIcon, MicOffIcon } from "lucide-react"
+import {
+  Mic as MicIcon,
+  MicOff as MicOffIcon,
+} from "@designali/icons"
 
 import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
 import { cn } from "@workspace/ui/lib/utils"
 
 const participants = [
-  { name: "Yara Haddad", initials: "YH", muted: false, speaking: true },
-  { name: "Jon Sterling", initials: "JS", muted: true, speaking: false },
-  { name: "Mei Lin", initials: "ML", muted: false, speaking: false },
+  { name: "Ali Imam", initials: "AI", muted: false, speaking: true },
+  { name: "Sara", initials: "SA", muted: true, speaking: false },
+  { name: "Client", initials: "CL", muted: false, speaking: false },
   { name: "You", initials: "ME", muted: true, speaking: false },
 ]
 

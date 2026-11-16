@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { RefreshCwIcon } from "lucide-react"
+import {
+  RefreshCw as RefreshCwIcon,
+} from "@designali/icons"
 
 import {
   Breadcrumb,
@@ -42,11 +44,11 @@ export default function LoadingSkeletonBreadcrumb() {
               </BreadcrumbItem>
               <BreadcrumbSeparator />
               <BreadcrumbItem>
-                <BreadcrumbLink href="#">Fernwood Bakery</BreadcrumbLink>
+                <BreadcrumbLink href="#">Dalim Fonts</BreadcrumbLink>
               </BreadcrumbItem>
               <BreadcrumbSeparator />
               <BreadcrumbItem>
-                <BreadcrumbPage>Contract renewal</BreadcrumbPage>
+                <BreadcrumbPage>Brand identity</BreadcrumbPage>
               </BreadcrumbItem>
             </>
           )}

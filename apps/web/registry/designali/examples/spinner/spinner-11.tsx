@@ -11,7 +11,7 @@ export default function CardLoadingOverlay() {
   return (
     <Card className="relative w-full max-w-sm">
       <CardHeader>
-        <CardTitle>Revenue</CardTitle>
+        <CardTitle>Template sales</CardTitle>
         <CardDescription>Last 30 days</CardDescription>
       </CardHeader>
       <CardContent className="flex flex-col gap-1">

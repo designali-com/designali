@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { LightbulbIcon } from "lucide-react"
+import {
+  Lightbulb as LightbulbIcon,
+} from "@designali/icons"
 
 import {
   Alert,
@@ -34,7 +36,7 @@ export default function AlertShortcutTip() {
           <Kbd>Ctrl</Kbd>
           <Kbd>K</Kbd>
         </KbdGroup>
-        to jump anywhere
+        to search Designali blocks
       </AlertTitle>
       <AlertDescription>
         <div className="mt-1 flex items-center justify-between gap-2">

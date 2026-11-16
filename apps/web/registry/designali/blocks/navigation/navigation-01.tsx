@@ -10,26 +10,28 @@ import {
   LayoutGrid,
   Sparkles,
   Users,
-} from "lucide-react"
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { cn } from "@workspace/ui/lib/utils"
 
+import { Logo } from "@/src/components/logo"
+
 const menus = [
   {
-    label: "Product",
+    label: "Library",
     items: [
-      { icon: LayoutGrid, title: "Canvas", text: "An infinite board for every idea." },
-      { icon: Layers, title: "Components", text: "Reusable parts, synced everywhere." },
-      { icon: Sparkles, title: "AI Assist", text: "Draft layouts from a single prompt." },
-      { icon: Users, title: "Multiplayer", text: "Design together in real time." },
+      { icon: LayoutGrid, title: "Blocks", text: "460+ production-ready sections." },
+      { icon: Layers, title: "Templates", text: "Full sites built with Next.js." },
+      { icon: Sparkles, title: "Icons", text: "4000+ icons in @designali/icons." },
+      { icon: Users, title: "UI Designs", text: "2300+ UI examples to remix." },
     ],
   },
   {
     label: "Resources",
     items: [
-      { icon: BookOpen, title: "Guides", text: "Step-by-step tutorials and playbooks." },
-      { icon: FileText, title: "Changelog", text: "Everything we shipped this month." },
+      { icon: BookOpen, title: "Docs", text: "Install and customise Designali blocks." },
+      { icon: FileText, title: "Blog", text: "Notes on design and code from Ali Imam." },
     ],
   },
 ]
@@ -42,8 +44,8 @@ export default function Navigation01() {
     <section className="relative w-full border-b bg-background" onMouseLeave={() => setOpen(null)}>
       <nav className="mx-auto flex h-16 max-w-7xl items-center gap-8 px-6">
         <a href="#" className="flex items-center gap-2 font-semibold tracking-tight">
-          <span className="size-5 bg-foreground" />
-          Planar
+          <Logo className="h-4 w-auto" />
+          designali
         </a>
         <ul className="hidden items-center gap-1 md:flex">
           {menus.map((menu) => (
@@ -64,7 +66,7 @@ export default function Navigation01() {
               </button>
             </li>
           ))}
-          {["Pricing", "Customers"].map((link) => (
+          {["Pricing", "Work"].map((link) => (
             <li key={link}>
               <a
                 href="#"
@@ -106,9 +108,9 @@ export default function Navigation01() {
             </div>
             <a href="#" className="group flex flex-col justify-end gap-2 bg-muted p-6">
               <span className="text-xs tracking-widest text-muted-foreground uppercase">New</span>
-              <span className="font-medium">Planar 3.0 is here</span>
+              <span className="font-medium">460+ Designali blocks are live</span>
               <span className="flex items-center gap-1 text-sm text-muted-foreground group-hover:text-foreground">
-                Read the announcement
+                Browse the blocks
                 <ArrowRight className="size-3.5" />
               </span>
             </a>

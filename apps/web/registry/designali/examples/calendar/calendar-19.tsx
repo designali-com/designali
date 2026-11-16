@@ -2,7 +2,9 @@
 
 import * as React from "react"
 import { de, enUS, es, fr, ja } from "react-day-picker/locale"
-import { LanguagesIcon } from "lucide-react"
+import {
+  Languages as LanguagesIcon,
+} from "@designali/icons"
 
 import { Calendar } from "@workspace/ui/components/calendar"
 import {

@@ -1,4 +1,6 @@
-import { ChevronRightIcon } from "lucide-react"
+import {
+  ChevronRight as ChevronRightIcon,
+} from "@designali/icons"
 
 import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
 import { Badge } from "@workspace/ui/components/badge"
@@ -12,21 +14,21 @@ import {
 type Person = { name: string; role: string; reports?: Person[] }
 
 const org: Person = {
-  name: "Ava Lindqvist",
-  role: "VP Engineering",
+  name: "Ali Imam",
+  role: "Founder & Design Engineer",
   reports: [
     {
-      name: "Noah Kim",
-      role: "Platform Lead",
+      name: "Omar",
+      role: "Development Lead",
       reports: [
-        { name: "Sara Haddad", role: "Backend Engineer" },
-        { name: "Leo Brandt", role: "SRE" },
+        { name: "Rohan", role: "Next.js Developer" },
+        { name: "Leo", role: "Creative Developer" },
       ],
     },
     {
-      name: "Mira Costa",
-      role: "Product Lead",
-      reports: [{ name: "Ian Wells", role: "Frontend Engineer" }],
+      name: "Sara",
+      role: "Design Lead",
+      reports: [{ name: "Nina", role: "Motion Designer" }],
     },
   ],
 }

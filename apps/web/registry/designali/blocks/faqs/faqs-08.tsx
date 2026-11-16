@@ -1,6 +1,8 @@
 "use client"
 
-import { ChevronDown } from "lucide-react"
+import {
+  ChevronDown,
+} from "@designali/icons"
 
 import {
   Accordion,

@@ -1,4 +1,8 @@
-import { MailIcon, MessageSquareIcon, PhoneIcon } from "lucide-react"
+import {
+  Mail as MailIcon,
+  MessageSquare as MessageSquareIcon,
+  Phone as PhoneIcon,
+} from "@designali/icons"
 
 import {
   Card,
@@ -21,13 +25,13 @@ const channels = [
     id: "email",
     icon: MailIcon,
     label: "Email",
-    description: "Product news and monthly tips.",
+    description: "Designali news and monthly design tips.",
   },
   {
     id: "sms",
     icon: MessageSquareIcon,
     label: "Text messages",
-    description: "Order updates and flash sales.",
+    description: "Project updates and template launches.",
   },
   {
     id: "phone",
@@ -43,7 +47,7 @@ export default function MarketingConsentCard() {
       <CardHeader>
         <CardTitle>Stay in touch</CardTitle>
         <CardDescription>
-          Choose how Juniper Goods may contact you.
+          Choose how Designali may contact you.
         </CardDescription>
       </CardHeader>
       <CardContent className="flex flex-col gap-4">

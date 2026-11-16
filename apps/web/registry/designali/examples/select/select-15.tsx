@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { ArrowUpDownIcon } from "lucide-react"
+import {
+  ArrowUpDown as ArrowUpDownIcon,
+} from "@designali/icons"
 
 import {
   Select,
@@ -19,9 +21,9 @@ const sorts = [
 ]
 
 const products = [
-  { name: "Canvas tote", price: 32, rank: 2 },
-  { name: "Wool beanie", price: 24, rank: 1 },
-  { name: "Trail bottle", price: 18, rank: 3 },
+  { name: "Portfolio Simple template", price: 32, rank: 2 },
+  { name: "Design Agency template", price: 24, rank: 1 },
+  { name: "Resort template", price: 18, rank: 3 },
 ]
 
 export default function ProductSortSelect() {

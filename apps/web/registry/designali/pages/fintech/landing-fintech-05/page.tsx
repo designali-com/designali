@@ -10,212 +10,213 @@ import {
   Plus,
   Receipt,
   Sparkles,
-} from "lucide-react"
+} from "@designali/icons"
 
+import { Logo } from "@/src/components/logo"
 import { Button } from "@workspace/ui/components/button"
 
-const navLinks = ["Personal", "Business", "Pricing", "Security", "Help"]
+const navLinks = ["Work", "Studio", "Pricing", "Process", "Contact"]
 
 const features = [
   {
     icon: ChartPie,
-    title: "Smart budgeting",
+    title: "Design systems",
     description:
-      "Automatic categories and spending insights help you see where every dollar goes.",
+      "Tokens, components and docs so your product team ships new features without breaking consistency.",
   },
   {
     icon: Receipt,
-    title: "Automatic receipts",
+    title: "Production-ready code",
     description:
-      "Snap receipts or forward emails and they match to transactions automatically.",
+      "Next.js, React and Tailwind CSS front ends, accessible and ready to connect to your APIs.",
   },
   {
     icon: Bell,
-    title: "Real-time alerts",
+    title: "Marketing websites",
     description:
-      "Get notified the moment money moves, with merchant names you can actually recognise.",
+      "Fast, conversion-focused sites that explain your product clearly and turn visitors into sign-ups.",
   },
   {
     icon: FileSpreadsheet,
-    title: "Accounting sync",
+    title: "AI-assisted workflows",
     description:
-      "Connect QuickBooks, Xero or NetSuite and keep your books reconciled without manual entry.",
+      "AI helps explore layouts and draft content faster, while every final screen is hand-crafted by Ali Imam.",
   },
   {
     icon: CreditCard,
-    title: "Instant virtual cards",
+    title: "Banking app UI",
     description:
-      "Create cards for every subscription or team member and freeze them with a single tap.",
+      "Card, account and transfer flows designed in Figma and built as real, typed components.",
   },
   {
     icon: ArrowLeftRight,
-    title: "Global transfers",
+    title: "Payments dashboards",
     description:
-      "Send money to 70 countries at the real exchange rate with a small, upfront fee.",
+      "Clear charts, tables and transaction views that make complex money data easy to scan.",
   },
 ]
 
 const stats = [
-  { value: "1.2s", label: "Average card authorisation" },
-  { value: "$0", label: "Monthly fee on Standard" },
-  { value: "$18B", label: "Processed annually" },
-  { value: "3.4M", label: "Customers worldwide" },
+  { value: "4000+", label: "Icons in @designali/icons" },
+  { value: "1:1", label: "Work directly with Ali Imam" },
+  { value: "25+", label: "Fintech screens designed" },
+  { value: "460+", label: "Designali blocks" },
 ]
 
 const steps = [
   {
-    title: "Download the app",
+    title: "Book a discovery call",
     description:
-      "Available on iOS and Android, or sign up on the web in a couple of minutes.",
+      "A 30-minute call with Ali Imam to understand your product, users and goals.",
   },
   {
-    title: "Verify your identity",
+    title: "Get a clear proposal",
     description:
-      "Scan your ID and take a quick selfie. Most accounts are approved in under five minutes.",
+      "Scope, timeline and a fixed price, delivered within 48 hours of the call.",
   },
   {
-    title: "Add money",
+    title: "Design in Figma",
     description:
-      "Top up by bank transfer, card or Apple Pay, or switch your salary with one form.",
+      "Weekly reviews of flows and screens, with a clickable prototype you can test with users.",
   },
   {
-    title: "Start spending",
+    title: "Ship to production",
     description:
-      "Use your virtual card instantly while your physical card ships to you for free.",
+      "The same designs built in Next.js and deployed on Vercel, ready for your engineers to extend.",
   },
 ]
 
 const showcase = [
   {
-    name: "Current account",
-    meta: "Spend and get paid with no monthly fee",
-    tag: "Everyday",
-    price: "$0/mo",
+    name: "Banking app redesign",
+    meta: "UI/UX · Design system",
+    tag: "Product",
+    price: "10 weeks",
   },
   {
-    name: "Savings vault",
-    meta: "Instant access, interest paid daily",
-    tag: "4.1% AER",
-    price: "$0/mo",
+    name: "Savings app onboarding",
+    meta: "Onboarding · Prototype",
+    tag: "4 weeks",
+    price: "10 weeks",
   },
   {
-    name: "Business account",
-    meta: "Invoices, cards and accounting sync",
-    tag: "Business",
-    price: "$15/mo",
+    name: "Payments dashboard",
+    meta: "Dashboard UI · Next.js",
+    tag: "Studio",
+    price: "8 weeks",
   },
   {
-    name: "Metal card",
-    meta: "Stainless steel with 1% cashback",
-    tag: "Premium",
-    price: "$12/mo",
+    name: "Card and brand identity",
+    meta: "Identity · Card design",
+    tag: "Brand",
+    price: "6 weeks",
   },
   {
-    name: "Global transfers",
-    meta: "Real exchange rate to 70 countries",
-    tag: "Low fee",
-    price: "From 0.4%",
+    name: "Payments dashboards",
+    meta: "Marketing site · Next.js",
+    tag: "Web",
+    price: "5 weeks",
   },
   {
-    name: "Investing",
-    meta: "Stocks and ETFs from $1",
+    name: "Investing app UI",
+    meta: "UI/UX · Motion",
     tag: "New",
-    price: "No commission",
+    price: "7 weeks",
   },
 ]
 
 const testimonials = [
   {
     quote:
-      "The budgeting insights finally made me realise how much I was spending on takeaway. Saved over $3,000 this year.",
-    name: "Tariq Hussain",
-    role: "Personal customer",
+      "The dashboard charts are so clear that our support tickets about transactions dropped noticeably.",
+    name: "Tariq H.",
+    role: "Product lead, Designali client",
   },
   {
     quote:
-      "Support actually picks up. A real person sorted a blocked payment in four minutes on a Sunday.",
-    name: "Linda Johansson",
-    role: "E-commerce founder",
+      "Ali actually picks up. Feedback on a Friday became updated screens by Monday morning.",
+    name: "Linda J.",
+    role: "Founder, Designali client",
   },
   {
     quote:
-      "I moved my business account over in an afternoon. Virtual cards for every vendor have saved us from at least two fraud attempts.",
-    name: "Olivia Hart",
-    role: "Founder, Hart Interiors",
+      "Designali redesigned our onboarding and our completion rate went up within the first month. The flows just make sense now.",
+    name: "Olivia H.",
+    role: "Founder, fintech startup",
   },
 ]
 
 const tiers = [
   {
-    name: "Standard",
-    price: "$0",
+    name: "Sprint",
+    price: "$2,400",
     period: "/month",
-    description: "Everything you need for everyday banking.",
+    description: "One focused page or flow redesign each month, designed and coded.",
     features: [
-      "Free current account",
-      "Virtual and physical card",
-      "Fee-free spending abroad",
-      "Instant notifications",
+      "One page or flow",
+      "Figma file and Next.js code",
+      "Built from Designali blocks",
+      "Pause or cancel any time",
     ],
-    cta: "Open free account",
+    cta: "Start a sprint",
   },
   {
-    name: "Plus",
-    price: "$7",
+    name: "Product",
+    price: "$6,000",
     period: "/month",
-    description: "Earn more and pay less on every transaction.",
+    description: "Full product UI and design system, billed monthly.",
     features: [
-      "4.1% AER on savings",
-      "1% cashback on card spend",
-      "Unlimited free transfers",
-      "Priority 24/7 support",
-      "Purchase protection",
+      "End-to-end UX and UI",
+      "Design system and tokens",
+      "Clickable prototype",
+      "Weekly check-ins with Ali",
+      "Production-ready front end",
     ],
-    cta: "Get Plus",
+    cta: "Start a product project",
   },
   {
-    name: "Business",
-    price: "$15",
+    name: "Studio",
+    price: "$4,500",
     period: "/month",
-    description: "For freelancers, founders and growing teams.",
+    description: "Ongoing design and development, billed monthly.",
     features: [
-      "Unlimited team cards",
-      "Invoicing and payment links",
-      "Accounting integrations",
-      "Spend controls and approvals",
-      "Multi-currency accounts",
+      "Unlimited design requests",
+      "Next.js development included",
+      "Brand and marketing design",
+      "Flexible monthly scope",
+      "Priority support",
     ],
-    cta: "Open business account",
+    cta: "Work with Designali",
   },
 ]
 
 const faqs = [
   {
-    q: "What happens if I lose my card?",
-    a: "Freeze it instantly in the app, then order a replacement. Your virtual card keeps working in the meantime.",
+    q: "Will I own the design and code?",
+    a: "Yes. You get the Figma files and the full codebase, ready for your engineers to extend.",
   },
   {
-    q: "Do you report to credit bureaus?",
-    a: "Our credit-builder feature reports on-time payments to all three major bureaus to help improve your score.",
+    q: "Can you work with our existing design system?",
+    a: "Yes. We can extend and document your current system, or migrate it to Tailwind CSS and shadcn-style components.",
   },
   {
-    q: "Is my money safe?",
-    a: "Yes. Deposits are held with FDIC-insured partner banks and protected up to $250,000 per depositor.",
+    q: "Do you understand fintech compliance?",
+    a: "We design within the requirements your compliance team sets, and make disclosures and consent flows clear for users. We do not give legal or financial advice.",
   },
   {
-    q: "How long does it take to open an account?",
-    a: "Most people are verified and ready to spend in under five minutes. Business accounts usually take one working day.",
+    q: "How long does a project take?",
+    a: "A sprint takes about two weeks. A full product UI and design system usually takes eight to ten weeks.",
   },
   {
     q: "Are there any hidden fees?",
-    a: "No. Every fee is listed on our pricing page and shown in the app before you confirm a transaction.",
+    a: "No. You get a fixed price before we start, and every plan is listed on designali.com/pricing.",
   },
 ]
 
 const footer = [
-  { title: "Products", links: ["Personal", "Business", "Savings", "Cards"] },
-  { title: "Company", links: ["About", "Careers", "Press", "Blog"] },
-  { title: "Legal", links: ["Privacy", "Terms", "Licences", "Complaints"] },
+  { title: "Studio", links: ["Work", "Studio", "Services", "Work"] },
+  { title: "Resources", links: ["Templates", "Blocks", "Icons", "Blog"] },
+  { title: "Follow", links: ["Instagram", "X", "LinkedIn", "21st.dev"] },
 ]
 
 export default function LandingFintech05() {
@@ -226,7 +227,7 @@ export default function LandingFintech05() {
           href="#"
           className="inline-flex items-center gap-1.5 hover:underline"
         >
-          Your first transfer is fee-free
+          New: transfer flow templates on designali.com
           <ArrowRight className="size-3.5" />
         </a>
       </div>
@@ -236,10 +237,8 @@ export default function LandingFintech05() {
             href="#"
             className="flex items-center gap-2 font-semibold tracking-tight"
           >
-            <span className="flex size-7 items-center justify-center rounded-md bg-background text-foreground text-sm">
-              R
-            </span>
-            <span className="">Remitly Go</span>
+            <Logo className="h-5 w-auto" />
+            <span className="">designali</span>
           </a>
           <nav className="hidden items-center gap-7 text-sm md:flex">
             {navLinks.map((link) => (
@@ -260,7 +259,7 @@ export default function LandingFintech05() {
               nativeButton={false}
               render={<a href="#" />}
             >
-              Log in
+              View work
             </Button>
             <Button
               size="sm"
@@ -268,7 +267,7 @@ export default function LandingFintech05() {
               nativeButton={false}
               render={<a href="#" />}
             >
-              Send money now
+              Start a project
             </Button>
           </div>
         </div>
@@ -279,15 +278,14 @@ export default function LandingFintech05() {
           <div className="max-w-4xl space-y-7">
             <span className="inline-flex items-center gap-2 rounded-full border border-background/20 text-background/80 px-3 py-1 text-xs font-medium">
               <Sparkles className="size-3.5 " />
-              Send money home
+              Designali for transfer apps
             </span>
             <h1 className="text-4xl leading-[1.05] font-semibold tracking-tight text-balance sm:text-5xl md:text-7xl ">
-              {"Send money to family in "}
-              <span className="text-background/60">seconds, not days</span>
+              {"Transfer flows that feel like "}
+              <span className="text-background/60">seconds, not steps</span>
             </h1>
             <p className="max-w-2xl text-lg leading-8 text-background/65">
-              Remitly Go delivers money to bank accounts, mobile wallets and
-              cash pickup points in 70 countries at the real exchange rate.
+              Designali designs and builds international transfer flows, recipient management and status tracking screens that people can finish without help.
             </p>
             <div className="flex flex-wrap gap-3 ">
               <Button
@@ -296,7 +294,7 @@ export default function LandingFintech05() {
                 nativeButton={false}
                 render={<a href="#" />}
               >
-                Send money now
+                Start a project
                 <ArrowRight />
               </Button>
               <Button
@@ -306,7 +304,7 @@ export default function LandingFintech05() {
                 nativeButton={false}
                 render={<a href="#" />}
               >
-                Check rates
+                See pricing
               </Button>
             </div>
           </div>
@@ -336,14 +334,13 @@ export default function LandingFintech05() {
         <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
           <div className="max-w-2xl">
             <p className="text-sm font-medium text-blue-600 dark:text-blue-400">
-              Features
+              Services
             </p>
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl  mt-3">
-              Money tools that work as hard as you do
+              Design and code that work as hard as you do
             </h2>
             <p className="mt-4 text-lg leading-8 text-muted-foreground">
-              Accounts, cards and payments built on modern infrastructure, with
-              fees you can understand at a glance.
+              Where thoughtful design meets production-ready code, for accounts, cards, payments and everything in between.
             </p>
           </div>
           <div className="mt-14 grid overflow-hidden rounded-2xl border sm:grid-cols-2 lg:grid-cols-3">
@@ -367,11 +364,10 @@ export default function LandingFintech05() {
           <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
             <div className="max-w-2xl">
               <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl">
-                Plans and products
+                Selected fintech work
               </h2>
               <p className="mt-4 text-lg leading-8 text-muted-foreground">
-                Everything you need to spend, save and move money, available in
-                one app and one login.
+                Apps, dashboards, brands and sites for money products, all designed and built by Designali.
               </p>
             </div>
             <Button
@@ -379,7 +375,7 @@ export default function LandingFintech05() {
               nativeButton={false}
               render={<a href="#" />}
             >
-              View all
+              View all work
               <ArrowUpRight />
             </Button>
           </div>
@@ -415,7 +411,7 @@ export default function LandingFintech05() {
         <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl">
-              Open an account in minutes
+              How we work together
             </h2>
           </div>
           <ol className="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
@@ -440,7 +436,7 @@ export default function LandingFintech05() {
         <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl">
-              Trusted with millions every day
+              What fintech clients say
             </h2>
           </div>
           <div className="mt-14 grid gap-6 md:grid-cols-3">
@@ -475,11 +471,10 @@ export default function LandingFintech05() {
         <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl">
-              Transparent fees, no fine print
+              Transparent pricing, no fine print
             </h2>
             <p className="mt-4 text-lg leading-8 text-muted-foreground">
-              Pick the plan that fits how you use money. Switch or cancel at any
-              time with no penalty.
+              Pick a fixed-price project or a monthly studio plan. You own everything we make.
             </p>
           </div>
           <div className="mx-auto mt-14 grid max-w-6xl items-start gap-6 lg:grid-cols-3">
@@ -563,7 +558,7 @@ export default function LandingFintech05() {
                 href="#"
                 className="font-medium text-foreground underline underline-offset-4"
               >
-                Get in touch
+                Email hello@designali.com
               </a>
               .
             </p>
@@ -587,11 +582,10 @@ export default function LandingFintech05() {
         <div className="mx-auto flex max-w-7xl flex-col gap-10 px-6 py-20 md:flex-row md:items-end md:justify-between md:py-28">
           <div className="max-w-2xl">
             <h2 className="text-4xl font-semibold tracking-tight text-balance md:text-6xl ">
-              Get more money to the people you love
+              Get more users through your flows
             </h2>
             <p className="mt-5 text-lg text-background/65">
-              Download the app, add a recipient and send your first transfer
-              with zero fees.
+              Share your current flows and Ali will send back a free UX review.
             </p>
           </div>
           <div className="flex flex-wrap gap-3 ">
@@ -601,7 +595,7 @@ export default function LandingFintech05() {
               nativeButton={false}
               render={<a href="#" />}
             >
-              Send money now
+              Start a project
               <ArrowRight />
             </Button>
             <Button
@@ -611,7 +605,7 @@ export default function LandingFintech05() {
               nativeButton={false}
               render={<a href="#" />}
             >
-              Check rates
+              See pricing
             </Button>
           </div>
         </div>
@@ -623,13 +617,11 @@ export default function LandingFintech05() {
               href="#"
               className="flex items-center gap-2 font-semibold tracking-tight"
             >
-              <span className="flex size-7 items-center justify-center rounded-md bg-background text-foreground text-sm">
-                R
-              </span>
-              <span className="">Remitly Go</span>
+              <Logo className="h-5 w-auto" />
+              <span className="">designali</span>
             </a>
             <p className="max-w-xs text-sm text-background/60">
-              Fast, fair international transfers.
+              Fast, fair product design.
             </p>
           </div>
           {footer.map((column) => (
@@ -653,7 +645,7 @@ export default function LandingFintech05() {
         <div className="border-t border-background/10">
           <div className="mx-auto flex max-w-7xl flex-col justify-between gap-4 px-6 py-6 text-xs text-background/60 sm:flex-row">
             <span>
-              © {new Date().getFullYear()} Remitly Go. All rights reserved.
+              © {new Date().getFullYear()} Designali. All rights reserved.
             </span>
             <div className="flex gap-6">
               <a href="#" className="hover:text-background">
@@ -682,7 +674,7 @@ function HeroVisual() {
         <span className="size-2.5 rounded-full bg-muted-foreground/30" />
         <span className="size-2.5 rounded-full bg-muted-foreground/30" />
         <span className="ml-3 hidden rounded-md bg-muted px-3 py-0.5 text-[11px] text-muted-foreground sm:inline">
-          app.remitlygo.com
+          designali.com/work
         </span>
       </div>
       <div className="grid md:grid-cols-[180px_1fr]">

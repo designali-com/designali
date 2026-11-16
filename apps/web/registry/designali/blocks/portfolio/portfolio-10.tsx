@@ -1,6 +1,9 @@
 "use client"
 
-import { ArrowRight, Check } from "lucide-react"
+import {
+  ArrowRight,
+  Check,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -14,38 +17,38 @@ const disciplines = [
   {
     id: "brand",
     label: "Brand",
-    project: "Ashgrove Distillery",
-    headline: "A heritage gin brand that finally looks its age",
-    body: "Ashgrove had been distilling since 1891 but looked like a startup. We dug through the archive and built an identity from their original copper still drawings.",
-    deliverables: ["Logotype and monogram", "Bottle and label system", "Visitor centre signage"],
-    background: "linear-gradient(135deg, oklch(0.42 0.07 160), oklch(0.75 0.08 95))",
+    project: "Dalim Agency",
+    headline: "One identity for a growing family of Dalim brands",
+    body: "Dalim Agency, Fonts, Graphic and Visuals grew one by one. We built a shared identity so every brand feels part of the same studio.",
+    deliverables: ["Logotype and monogram", "Brand guidelines", "Agency website"],
+    background: "url(/images/templates/dalim-agency-old.jpg) center / cover",
   },
   {
     id: "product",
     label: "Product",
-    project: "Shiftboard",
-    headline: "Rota planning for nurses, designed on night shifts",
-    body: "We spent six night shifts on two hospital wards before drawing a single screen. Swaps that took a week of messages now take two taps.",
-    deliverables: ["Mobile app for iOS and Android", "Manager web dashboard", "Component library"],
-    background: "linear-gradient(135deg, oklch(0.45 0.12 255), oklch(0.8 0.08 200))",
+    project: "Dalim UI",
+    headline: "Components for designers who code",
+    body: "Dalim UI paired every Figma component with production-ready React. It grew into the Designali library of 460+ blocks.",
+    deliverables: ["Figma UI kit", "React and Tailwind components", "Design tokens"],
+    background: "url(/images/templates/dalim-ui-old.jpg) center / cover",
   },
   {
     id: "web",
     label: "Web",
-    project: "Tidewater Festival",
-    headline: "A festival site that holds up on a field with one bar of signal",
-    body: "Line-ups, maps and timetables load in under a second on 3G and work offline once visited. The ticket page sold out 40,000 passes in a morning.",
-    deliverables: ["Marketing site", "Offline timetable", "Ticketing integration"],
-    background: "linear-gradient(135deg, oklch(0.55 0.16 20), oklch(0.85 0.1 70))",
+    project: "Resort template",
+    headline: "A resort site that loads fast on any connection",
+    body: "Rooms, galleries and a booking flow built with Next.js and Tailwind CSS. Copy it from designali.com and make it yours.",
+    deliverables: ["Marketing site", "Booking flow", "Dark mode"],
+    background: "url(/images/templates/resort.jpg) center / cover",
   },
   {
     id: "motion",
     label: "Motion",
-    project: "Vantage Optics",
-    headline: "Launch films for a lens that shoots in the dark",
-    body: "Three product films and a library of short loops for social, rendered entirely from CAD files before the first lens came off the line.",
-    deliverables: ["Two-minute launch film", "28 social loops", "Retail display content"],
-    background: "linear-gradient(135deg, oklch(0.3 0.05 290), oklch(0.65 0.16 320))",
+    project: "Dalim Visuals",
+    headline: "CGI, 3D and motion for brands that move",
+    body: "Product renders, abstract loops and launch visuals, from art direction to final frame. The same motion work powers Designali heroes.",
+    deliverables: ["3D renders", "Motion loops", "Showreel"],
+    background: "url(/images/templates/dalim-visuals-old.jpg) center / cover",
   },
 ]
 
@@ -92,7 +95,7 @@ export default function Portfolio10() {
                     ))}
                   </ul>
                   <div className="mt-8">
-                    <Button variant="outline" nativeButton={false} render={<a href="#" />}>
+                    <Button variant="outline" nativeButton={false} render={<a href="/work" />}>
                       See all {d.label.toLowerCase()} work
                       <ArrowRight />
                     </Button>

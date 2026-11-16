@@ -23,20 +23,20 @@ const groups = [
   {
     title: "Navigation",
     shortcuts: [
-      { action: "Go to inbox", keys: ["G", "I"] },
-      { action: "Go to projects", keys: ["G", "P"] },
+      { action: "Go to icons", keys: ["G", "I"] },
+      { action: "Go to pricing", keys: ["G", "P"] },
       { action: "Next item", keys: ["J"] },
       { action: "Previous item", keys: ["K"] },
     ],
   },
   {
-    title: "Issues",
+    title: "Blocks",
     shortcuts: [
-      { action: "New issue", keys: ["C"] },
-      { action: "Assign to me", keys: ["I"] },
-      { action: "Change status", keys: ["S"] },
-      { action: "Set priority", keys: ["P"] },
-      { action: "Copy issue link", keys: ["⌘", "⇧", "C"] },
+      { action: "New block", keys: ["C"] },
+      { action: "Copy code", keys: ["Y"] },
+      { action: "Toggle theme", keys: ["T"] },
+      { action: "Open preview", keys: ["P"] },
+      { action: "Copy block link", keys: ["⌘", "⇧", "C"] },
     ],
   },
   {
@@ -65,7 +65,7 @@ export default function Grid20() {
           <div>
             <h2 className="text-4xl font-semibold tracking-tight">Keyboard shortcuts</h2>
             <p className="mt-2 text-sm text-muted-foreground">
-              Never reach for the mouse. Press <Kbd>?</Kbd> anywhere in Tracklane to open this sheet.
+              Never reach for the mouse. Press <Kbd>?</Kbd> anywhere on Designali to open this sheet.
             </p>
           </div>
           <span className="text-xs text-muted-foreground">macOS · Windows uses Ctrl for ⌘</span>

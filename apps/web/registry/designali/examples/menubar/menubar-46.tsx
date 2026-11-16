@@ -2,10 +2,10 @@
 
 import * as React from "react"
 import {
-  CalendarRangeIcon,
-  TrendingDownIcon,
-  TrendingUpIcon,
-} from "lucide-react"
+  CalendarRange as CalendarRangeIcon,
+  TrendingDown as TrendingDownIcon,
+  TrendingUp as TrendingUpIcon,
+} from "@designali/icons"
 
 import {
   Menubar,
@@ -67,7 +67,7 @@ export default function AnalyticsRangeMenubar() {
         </MenubarMenu>
       </Menubar>
       <div className="border p-3">
-        <p className="text-xs text-muted-foreground">Unique visitors</p>
+        <p className="text-xs text-muted-foreground">designali.com unique visitors</p>
         <p className="text-2xl font-semibold tabular-nums">
           {current.visitors}
         </p>

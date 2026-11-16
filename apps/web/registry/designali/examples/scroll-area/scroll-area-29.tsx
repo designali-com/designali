@@ -1,19 +1,22 @@
 "use client"
 
 import * as React from "react"
-import { MinusIcon, PlusIcon } from "lucide-react"
+import {
+  Minus as MinusIcon,
+  Plus as PlusIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import { Button } from "@workspace/ui/components/button"
 import { ScrollArea } from "@workspace/ui/components/scroll-area"
 
 const initial = [
-  { id: 1, name: "Pour-over Kettle", price: 54, qty: 1 },
-  { id: 2, name: "Ceramic Dripper", price: 28, qty: 1 },
-  { id: 3, name: "Paper Filters (100)", price: 9, qty: 2 },
-  { id: 4, name: "Single Origin - Kenya", price: 19, qty: 1 },
-  { id: 5, name: "Burr Grinder", price: 139, qty: 1 },
-  { id: 6, name: "Glass Server", price: 32, qty: 1 },
+  { id: 1, name: "Portfolio Simple template", price: 54, qty: 1 },
+  { id: 2, name: "Design Agency template", price: 28, qty: 1 },
+  { id: 3, name: "Client license", price: 9, qty: 2 },
+  { id: 4, name: "Logos Pack", price: 19, qty: 1 },
+  { id: 5, name: "All templates bundle", price: 139, qty: 1 },
+  { id: 6, name: "Device Mockups", price: 32, qty: 1 },
 ]
 
 export default function CartItemsQuantity() {

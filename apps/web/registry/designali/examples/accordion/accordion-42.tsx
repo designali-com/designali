@@ -1,4 +1,6 @@
-import { ChevronDownIcon } from "lucide-react"
+import {
+  ChevronDown as ChevronDownIcon,
+} from "@designali/icons"
 
 import {
   Accordion,
@@ -11,7 +13,7 @@ export default function AccordionPropertiesInspector() {
   return (
     <div className="w-full max-w-60 border bg-background">
       <div className="border-b px-2 py-1.5 text-[11px] font-medium">
-        Rectangle 12
+        Designali hero card
       </div>
       <Accordion multiple defaultValue={["layout", "fill"]}>
         <AccordionItem value="layout">

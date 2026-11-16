@@ -1,5 +1,9 @@
 import * as React from "react"
-import { CircleCheckIcon, MessageSquareIcon, UserPlusIcon } from "lucide-react"
+import {
+  CircleCheck as CircleCheckIcon,
+  MessageSquare as MessageSquareIcon,
+  UserPlus as UserPlusIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Separator } from "@workspace/ui/components/separator"
@@ -7,10 +11,10 @@ import { Separator } from "@workspace/ui/components/separator"
 const notifications = [
   {
     icon: MessageSquareIcon,
-    text: "Ines replied to your comment on Pricing page",
+    text: "Ines replied to your comment on Pricing block",
     time: "2m",
   },
-  { icon: UserPlusIcon, text: "Marco joined the Design workspace", time: "1h" },
+  { icon: UserPlusIcon, text: "Marco joined the Designali studio workspace", time: "1h" },
   { icon: CircleCheckIcon, text: "Invoice #1042 was paid", time: "3h" },
 ]
 

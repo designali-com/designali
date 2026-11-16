@@ -11,7 +11,7 @@ import { Textarea } from "@workspace/ui/components/textarea"
 import { cn } from "@workspace/ui/lib/utils"
 
 export default function ImageAltTextTextarea() {
-  const [alt, setAlt] = React.useState("Two hikers on a ridge at sunset")
+  const [alt, setAlt] = React.useState("Colorful 3D render from the Designali CGI series")
   const recommended = 125
 
   return (

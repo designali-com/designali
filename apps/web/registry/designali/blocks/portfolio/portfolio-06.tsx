@@ -1,45 +1,49 @@
 "use client"
 
 import { useRef } from "react"
-import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react"
+import {
+  ArrowLeft,
+  ArrowRight,
+  ArrowUpRight,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 
 const projects = [
   {
-    client: "Saltmarsh Wines",
-    title: "Label system for a coastal vineyard",
-    tag: "Packaging",
-    year: "2026",
-    background: "linear-gradient(160deg, oklch(0.55 0.12 20), oklch(0.82 0.06 60))",
+    client: "Dalim Graphic",
+    title: "Graphic resources for designers",
+    tag: "Graphic",
+    year: "Case study",
+    background: "url(/images/templates/dalim-graphic-old.jpg) center / cover",
   },
   {
-    client: "Quillfeather",
-    title: "Writing app for long-form journalists",
-    tag: "Product",
-    year: "2026",
-    background: "linear-gradient(200deg, oklch(0.45 0.1 260), oklch(0.78 0.08 220))",
+    client: "Designali",
+    title: "AI startup template with Next.js",
+    tag: "Template",
+    year: "Template",
+    background: "url(/images/templates/ai.jpg) center / cover",
   },
   {
-    client: "Brightwater Trust",
-    title: "Donation flow that doubled monthly givers",
+    client: "Dalim Works",
+    title: "A portfolio site for studio work",
     tag: "Web",
-    year: "2025",
-    background: "linear-gradient(140deg, oklch(0.5 0.1 170), oklch(0.85 0.08 130))",
+    year: "Case study",
+    background: "url(/images/templates/dalim-works-old.jpg) center / cover",
   },
   {
-    client: "Hollow Oak Games",
-    title: "Studio identity and launch trailer kit",
-    tag: "Brand",
-    year: "2025",
-    background: "linear-gradient(180deg, oklch(0.35 0.08 300), oklch(0.7 0.14 340))",
+    client: "Dalim Visuals",
+    title: "CGI, 3D and motion visuals for brands",
+    tag: "CGI",
+    year: "Case study",
+    background: "url(/images/templates/dalim-visuals-old.jpg) center / cover",
   },
   {
-    client: "Copperline Rail",
-    title: "Wayfinding for twelve regional stations",
-    tag: "Environmental",
-    year: "2024",
-    background: "linear-gradient(120deg, oklch(0.55 0.13 50), oklch(0.88 0.07 90))",
+    client: "Designali",
+    title: "Resort template with booking flows",
+    tag: "Template",
+    year: "Template",
+    background: "url(/images/templates/resort.jpg) center / cover",
   },
 ]
 
@@ -58,10 +62,10 @@ export default function Portfolio06() {
         <div className="flex items-end justify-between gap-6">
           <div>
             <p className="text-xs tracking-widest text-muted-foreground uppercase">
-              Recent work
+              Designali work
             </p>
             <h2 className="mt-3 max-w-xl text-3xl font-medium tracking-tight md:text-5xl">
-              Five projects from the last two years
+              Five projects, design se code tak
             </h2>
           </div>
           <div className="flex shrink-0 gap-2">

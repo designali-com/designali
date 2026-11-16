@@ -5,21 +5,21 @@ const columns = [
   {
     title: "Backlog",
     cards: [
-      "Audit email templates",
+      "Audit icon names",
       "Pricing FAQ",
       "Referral program brief",
-      "Update logo assets",
+      "Update @designali/logos",
       "Localize checkout",
     ],
   },
   {
     title: "In progress",
-    cards: ["Billing redesign", "Webhook retries", "Mobile nav polish"],
+    cards: ["Pricing page redesign", "Marquee component", "Mobile nav polish"],
   },
-  { title: "Review", cards: ["SSO for Teams", "Usage-based invoices"] },
+  { title: "Review", cards: ["Bento blocks", "Number Counter"] },
   {
     title: "Done",
-    cards: ["Dark mode", "CSV export", "Saved filters", "Activity feed"],
+    cards: ["Dark mode", "Gauge component", "Dot Pattern", "Grid Pattern"],
   },
 ]
 

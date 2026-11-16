@@ -1,79 +1,74 @@
 "use client"
 
 import Link from "next/link"
-import { Heart, Mail } from "lucide-react"
 import {
-  Apple,
-  Instagram,
-  LinkedIn,
-  Threads,
-  Facebook,
-  WhatsApp, 
-  X,
-  YouTube,
-} from "@designali/logos"
+  Heart,
+  Mail,
+} from "@designali/icons"
+import { Instagram, LinkedIn, X } from "@designali/logos"
+import { Logo } from "@/src/components/logo"
 
 import { Theme } from "@/registry/designali/blocks/footer/footer-02/theme"
 
 const navigation = {
   categories: [
     {
-      id: "women",
-      name: "Women",
+      id: "designali",
+      name: "Designali",
 
       sections: [
         {
           id: "about",
           name: "About",
           items: [
-            { name: "About", href: "/about" },
-            { name: "Works", href: "/agency/works" },
+            { name: "Work", href: "/work" },
             { name: "Pricing", href: "/pricing" },
+            { name: "Contact", href: "/contact" },
           ],
         },
         {
           id: "features",
           name: "Features",
           items: [
-            { name: "Products", href: "/products" },
-            { name: "Agency", href: "/agency" },
-            { name: "Dashboard", href: "/dashboard" },
+            { name: "Templates", href: "/templates" },
+            { name: "Blocks", href: "/blocks" },
+            { name: "UI Designs", href: "/ui" },
           ],
         },
         {
           id: "products",
           name: "Products",
           items: [
-            { name: "DIcons", href: "/products/dicons" },
-            { name: "DShapes", href: "/products/dshapes" },
-            { name: "Graaadients", href: "/products/graaadients" },
+            { name: "Icons", href: "/icons" },
+            { name: "Logos", href: "/logos" },
+            { name: "Illustration", href: "/illustration" },
           ],
         },
         {
           id: "designs",
           name: "Designs",
           items: [
-            { name: "Design", href: "/designs" },
-            { name: "Components", href: "/components" },
-            { name: "Blogs", href: "/blogs" },
+            { name: "Bento", href: "/ui" },
+            { name: "Marquee", href: "/ui" },
+            { name: "Device Mockups", href: "/ui" },
           ],
         },
         {
           id: "other",
           name: "Others",
           items: [
-            { name: "Graphic", href: "/graphic" },
-            { name: "3D Icons", href: "/products/3dicons" },
-            { name: "Colors", href: "/products/colors/generate" },
+            { name: "Docs", href: "/docs" },
+            { name: "Blogs", href: "/blogs" },
+            { name: "21st.dev", href: "https://21st.dev/@designali-in" },
           ],
         },
         {
           id: "company",
           name: "Company",
           items: [
-            { name: "Contact", href: "/contact" },
-            { name: "Terms", href: "/terms" },
-            { name: "Privacy", href: "/privacy" },
+            { name: "Ali Imam", href: "https://www.linkedin.com/in/aliimam-in/" },
+            { name: "Terms", href: "/docs/legal/terms" },
+            { name: "Email", href: "mailto:hello@designali.com" },
           ],
         },
       ],
@@ -89,7 +84,7 @@ export default function Footer() {
       <div className="relative mx-auto grid max-w-7xl items-center justify-center gap-6 p-10 pb-0 md:flex">
         <Link href="/">
           <p className="flex items-center justify-center rounded-full">
-            <Apple className="w-8" />
+            <Logo className="h-8 w-auto" />
           </p>
         </Link>
         <p className="text-center text-xs leading-4 text-muted-foreground md:text-left">
@@ -143,8 +138,8 @@ export default function Footer() {
       <div className="flex flex-wrap justify-center gap-y-6">
         <div className="flex flex-wrap items-center justify-center gap-6 gap-y-4 px-6">
           <Link
-            aria-label="Logo"
-            href="mailto:contact@designali.in"
+            aria-label="Email Designali"
+            href="mailto:hello@designali.com"
             rel="noreferrer"
             target="_blank"
             className={Underline}
@@ -152,8 +147,8 @@ export default function Footer() {
             <Mail strokeWidth={1.5} className="h-5 w-5" />
           </Link>
           <Link
-            aria-label="Logo"
-            href="https://x.com/designali_in"
+            aria-label="Designali on X"
+            href="https://x.com/designali_com"
             rel="noreferrer"
             target="_blank"
             className={Underline}
@@ -161,8 +156,8 @@ export default function Footer() {
             <X className="h-5 w-5" />
           </Link>
           <Link
-            aria-label="Logo"
-            href="https://www.instagram.com/designali.in/"
+            aria-label="Designali on Instagram"
+            href="https://www.instagram.com/designali.code/"
             rel="noreferrer"
             target="_blank"
             className={Underline}
@@ -170,49 +165,13 @@ export default function Footer() {
             <Instagram className="h-5 w-5" />
           </Link>
           <Link
-            aria-label="Logo"
-            href="https://www.threads.net/designali.in"
-            rel="noreferrer"
-            target="_blank"
-            className={Underline}
-          >
-            <Threads className="h-5 w-5" />
-          </Link>
-          <Link
-            aria-label="Logo"
-            href="https://chat.whatsapp.com/LWsNPcz5BlWDVOha41vzuh"
-            rel="noreferrer"
-            target="_blank"
-            className={Underline}
-          >
-            <WhatsApp className="h-5 w-5" />
-          </Link> 
-          <Link
-            aria-label="Logo"
-            href="https://www.facebook.com/designali.agency"
-            rel="noreferrer"
-            target="_blank"
-            className={Underline}
-          >
-            <Facebook className="h-5 w-5" />
-          </Link>
-          <Link
-            aria-label="Logo"
-            href="https://www.linkedin.com/company/designali"
+            aria-label="Designali on LinkedIn"
+            href="https://www.linkedin.com/company/designali-com/"
             rel="noreferrer"
             target="_blank"
             className={Underline}
           >
             <LinkedIn className="h-5 w-5" />
-          </Link>
-          <Link
-            aria-label="Logo"
-            href="https://www.youtube.com/@designali-in"
-            rel="noreferrer"
-            target="_blank"
-            className={Underline}
-          >
-            <YouTube className="h-5 w-5" />
           </Link>
         </div>
         <Theme />
@@ -229,7 +188,7 @@ export default function Footer() {
             <Link
               aria-label="Logo"
               className="font-bold"
-              href="https://www.instagram.com/aliimam.in/"
+              href="https://www.linkedin.com/in/aliimam-in/"
               target="_blank"
             >
               Ali Imam {""}

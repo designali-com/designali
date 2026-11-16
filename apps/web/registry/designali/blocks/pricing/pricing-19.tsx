@@ -1,4 +1,7 @@
-import { Check, X } from "lucide-react"
+import {
+  Check,
+  X,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 

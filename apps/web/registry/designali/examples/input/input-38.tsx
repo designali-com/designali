@@ -20,7 +20,7 @@ import {
 import { Input } from "@workspace/ui/components/input"
 
 export default function ProfileSettingsCardInputs() {
-  const initial = { name: "Lena Fischer", title: "Product Designer" }
+  const initial = { name: "Ali Imam", title: "Founder, Design Engineer" }
   const [form, setForm] = React.useState(initial)
   const dirty = form.name !== initial.name || form.title !== initial.title
 
@@ -52,7 +52,7 @@ export default function ProfileSettingsCardInputs() {
           </Field>
           <Field data-disabled>
             <FieldLabel htmlFor="pf-email">Email</FieldLabel>
-            <Input id="pf-email" disabled value="lena@harborlabs.io" />
+            <Input id="pf-email" disabled value="ali@designali.com" />
             <FieldDescription>
               Managed by your identity provider.
             </FieldDescription>

@@ -1,4 +1,6 @@
-import { CookieIcon } from "lucide-react"
+import {
+  Cookie as CookieIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -52,7 +54,7 @@ export default function CookiePreferencesDialog() {
         <DialogHeader>
           <DialogTitle>Cookie preferences</DialogTitle>
           <DialogDescription>
-            Choose which cookies Fernway can store on this device.
+            Choose which cookies Designali can store on this device.
           </DialogDescription>
         </DialogHeader>
         <FieldGroup className="gap-3">

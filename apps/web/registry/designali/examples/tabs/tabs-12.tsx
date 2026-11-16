@@ -1,4 +1,9 @@
-import { BikeIcon, CarIcon, FootprintsIcon, TrainFrontIcon } from "lucide-react"
+import {
+  Bike as BikeIcon,
+  Car as CarIcon,
+  Footprints as FootprintsIcon,
+  TrainFront as TrainFrontIcon,
+} from "@designali/icons"
 
 import {
   Tabs,

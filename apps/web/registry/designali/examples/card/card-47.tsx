@@ -1,4 +1,8 @@
-import { ListPlusIcon, MicIcon, PlayIcon } from "lucide-react"
+import {
+  ListPlus as ListPlusIcon,
+  Mic as MicIcon,
+  Play as PlayIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -19,12 +23,12 @@ export default function HorizontalPodcastCard() {
         <CardHeader>
           <CardDescription>Episode 87 · 42 min</CardDescription>
           <CardTitle className="line-clamp-2">
-            Designing for the second time a user opens your app
+            Design se code tak: shipping a design system with Next.js
           </CardTitle>
         </CardHeader>
         <CardContent className="line-clamp-2 text-muted-foreground">
-          Adaeze and Tom talk retention loops, empty states that teach, and why
-          the first week matters more than the first minute.
+          Ali Imam talks design tokens, Figma handoff, and turning Designali
+          blocks into production-ready code.
         </CardContent>
         <div className="flex items-center gap-2 px-(--card-spacing)">
           <Button size="sm">

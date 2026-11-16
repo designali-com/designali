@@ -6,7 +6,7 @@ import {
   Rocket,
   ShieldCheck,
   Users,
-} from "lucide-react"
+} from "@designali/icons"
 
 const topics = [
   {

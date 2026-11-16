@@ -1,4 +1,9 @@
-import { BadgeCheck, Heart, MessageCircle, Repeat2 } from "lucide-react"
+import {
+  BadgeCheck,
+  Heart,
+  MessageCircle,
+  Repeat2,
+} from "@designali/icons"
 
 const posts = [
   { name: "Maya Fontaine", handle: "mayabuilds", body: "Shipped my side project's landing page in 40 minutes with @driftkit. The pricing block alone saved me a weekend.", likes: 412, replies: 23, time: "2h", verified: true },

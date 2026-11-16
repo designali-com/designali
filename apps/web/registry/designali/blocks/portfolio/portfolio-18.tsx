@@ -1,12 +1,14 @@
-import { ArrowRight } from "lucide-react"
+import {
+  ArrowRight,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 
 const meta = [
-  { label: "Client", value: "Harbourline Ferries" },
-  { label: "Sector", value: "Transport" },
-  { label: "Scope", value: "App, web, kiosks" },
-  { label: "Launched", value: "March 2026" },
+  { label: "Client", value: "Designali (template)" },
+  { label: "Sector", value: "Hospitality" },
+  { label: "Scope", value: "Web, mobile, booking" },
+  { label: "Status", value: "Live on designali.com" },
 ]
 
 export default function Portfolio18() {
@@ -19,18 +21,18 @@ export default function Portfolio18() {
             Featured project
           </span>
           <h2 className="mt-6 text-4xl leading-[1.05] font-medium tracking-tight md:text-6xl">
-            Ticketing for 9 million crossings a year
+            A booking flow that works on every screen
           </h2>
           <p className="mx-auto mt-5 max-w-xl text-muted-foreground">
-            A single booking system for Harbourline&apos;s app, website and
-            dockside kiosks, so a ticket bought anywhere works everywhere.
+            The Designali Resort template ships one booking flow for desktop,
+            tablet and mobile — designed in Figma, built with Next.js.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
-            <Button size="lg" nativeButton={false} render={<a href="#" />}>
-              Read the case study
+            <Button size="lg" nativeButton={false} render={<a href="/templates" />}>
+              View the template
               <ArrowRight />
             </Button>
-            <Button size="lg" variant="outline" nativeButton={false} render={<a href="#" />}>
+            <Button size="lg" variant="outline" nativeButton={false} render={<a href="/work" />}>
               Next project
             </Button>
           </div>

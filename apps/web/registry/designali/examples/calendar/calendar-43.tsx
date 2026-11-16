@@ -30,7 +30,7 @@ export default function BillingAnchorDay() {
       <CardHeader>
         <CardTitle>Billing date</CardTitle>
         <CardDescription>
-          Renew on the {ordinal(day.getDate())} of every month.
+          Your Designali Pro plan renews on the {ordinal(day.getDate())} of every month.
         </CardDescription>
       </CardHeader>
       <CardContent>

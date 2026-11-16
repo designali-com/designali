@@ -8,11 +8,11 @@ import {
   navigationMenuTriggerStyle,
 } from "@workspace/ui/components/navigation-menu"
 
-const sections = ["World", "Business", "Science", "Culture", "Sport"]
+const sections = ["Design", "Development", "Branding", "Motion", "AI"]
 const headlines = [
-  { title: "City council approves new tram line", time: "12 min ago" },
-  { title: "Researchers map deep-sea coral reef", time: "48 min ago" },
-  { title: "Local bakery wins national award", time: "2 h ago" },
+  { title: "From Figma to Next.js: design se code tak", time: "12 min ago" },
+  { title: "Building 460+ blocks with Tailwind CSS", time: "48 min ago" },
+  { title: "Designing the Designali icon set", time: "2 h ago" },
 ]
 
 export default function NewsSectionsNav() {
@@ -52,7 +52,7 @@ export default function NewsSectionsNav() {
         </NavigationMenuItem>
         <NavigationMenuItem>
           <NavigationMenuLink href="#" className={navigationMenuTriggerStyle()}>
-            Opinion
+            Docs
           </NavigationMenuLink>
         </NavigationMenuItem>
         <NavigationMenuItem>

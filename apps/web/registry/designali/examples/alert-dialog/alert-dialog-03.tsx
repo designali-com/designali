@@ -1,4 +1,7 @@
-import { FileXIcon, PenLineIcon } from "lucide-react"
+import {
+  FileX as FileXIcon,
+  PenLine as PenLineIcon,
+} from "@designali/icons"
 
 import {
   AlertDialog,
@@ -28,7 +31,7 @@ export default function DiscardDraftDialog() {
           </AlertDialogMedia>
           <AlertDialogTitle>Discard this draft?</AlertDialogTitle>
           <AlertDialogDescription>
-            Your note to the design team will be lost. This can&apos;t be
+            Your note to the Designali studio will be lost. This can&apos;t be
             recovered.
           </AlertDialogDescription>
         </AlertDialogHeader>

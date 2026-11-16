@@ -35,9 +35,9 @@ export default function FramedArtwork() {
         </AspectRatio>
       </div>
       <figcaption className="mt-3 text-xs">
-        <span className="font-medium">Grid Study No. 7</span>
+        <span className="font-medium">Dot Pattern Study No. 7</span>
         <span className="block text-muted-foreground">
-          Hanne Solberg, 2024 - Pigment print
+          Ali Imam, 2024 - Designali Dot Pattern
         </span>
       </figcaption>
     </figure>

@@ -4,24 +4,27 @@ import { useState } from "react"
 import {
   BookOpen,
   Check,
-  KanbanSquare,
-  type LucideIcon,
+  SquareKanban as KanbanSquare,
   Megaphone,
   Palette,
   Rocket,
   Users,
-} from "lucide-react"
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { cn } from "@workspace/ui/lib/utils"
 
-const options: { id: string; icon: LucideIcon; title: string; text: string; includes: string }[] = [
-  { id: "product", icon: Rocket, title: "Product launch", text: "Roadmap, launch checklist and release notes in one board.", includes: "4 views · 32 tasks" },
-  { id: "design", icon: Palette, title: "Design system", text: "Component inventory, token tracker and review queue.", includes: "3 views · 18 tasks" },
-  { id: "marketing", icon: Megaphone, title: "Campaign planner", text: "Content calendar with channels, owners and budgets.", includes: "5 views · 40 tasks" },
-  { id: "sprint", icon: KanbanSquare, title: "Engineering sprints", text: "Two-week cycles, backlog grooming and burndown.", includes: "4 views · 26 tasks" },
-  { id: "hiring", icon: Users, title: "Hiring pipeline", text: "Candidate stages, scorecards and interview loops.", includes: "3 views · 12 tasks" },
-  { id: "wiki", icon: BookOpen, title: "Team wiki", text: "Onboarding docs, rituals and decision records.", includes: "2 views · 24 pages" },
+import type * as React from "react"
+
+type IconComponent = React.ComponentType<React.SVGProps<SVGSVGElement> & { size?: number | string; strokeWidth?: number }>
+
+const options: { id: string; icon: IconComponent; title: string; text: string; includes: string }[] = [
+  { id: "product", icon: Rocket, title: "Product launch", text: "Landing page, pricing and launch blocks in one starter.", includes: "4 pages · 32 blocks" },
+  { id: "design", icon: Palette, title: "Design system", text: "Tokens, components and a Figma library kept in sync.", includes: "3 pages · 18 blocks" },
+  { id: "marketing", icon: Megaphone, title: "Brand identity", text: "Logo, colour and type guidelines for your brand.", includes: "5 pages · 40 assets" },
+  { id: "sprint", icon: KanbanSquare, title: "Web app", text: "Dashboard, auth and settings screens built with Next.js.", includes: "4 pages · 26 blocks" },
+  { id: "hiring", icon: Users, title: "Portfolio", text: "A personal site to show your work, like Ali Imam's.", includes: "3 pages · 12 blocks" },
+  { id: "wiki", icon: BookOpen, title: "Docs site", text: "Guides, components and changelog pages.", includes: "2 pages · 24 blocks" },
 ]
 
 export default function Grid14() {
@@ -37,10 +40,10 @@ export default function Grid14() {
       <div className="mx-auto max-w-5xl px-6">
         <p className="font-mono text-xs text-muted-foreground">Step 2 of 3</p>
         <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-4xl">
-          What will your team use Plotline for?
+          What will you build with Designali?
         </h2>
         <p className="mt-3 text-sm text-muted-foreground">
-          Pick as many as you like. We&apos;ll set up starter spaces so nobody faces a blank page.
+          Pick as many as you like. We&apos;ll set up starter blocks so nobody faces a blank page.
         </p>
 
         <div className="mt-10 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
@@ -84,7 +87,7 @@ export default function Grid14() {
           <Button variant="ghost">Skip for now</Button>
           <div className="flex items-center justify-between gap-4 sm:justify-end">
             <span className="text-xs text-muted-foreground">{selected.length} selected</span>
-            <Button disabled={selected.length === 0}>Create workspace</Button>
+            <Button disabled={selected.length === 0}>Create project</Button>
           </div>
         </div>
       </div>

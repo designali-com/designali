@@ -43,7 +43,7 @@ export default function Logos01() {
       {/* Content */}
       <div className="relative z-10 w-full max-w-2xl px-6">
         <h1 className="mb-10 text-center text-sm font-medium text-muted-foreground">
-          Trusted by the world’s most creative companies.
+          The tools behind every Designali project.
         </h1>
 
         <div className="mx-auto max-w-md">

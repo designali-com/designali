@@ -1,6 +1,8 @@
 "use client"
 
-import { TrophyIcon } from "lucide-react"
+import {
+  Trophy as TrophyIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Progress } from "@workspace/ui/components/progress"
@@ -43,7 +45,7 @@ export default function AchievementUnlockedToast() {
     <ToastProvider toastManager={notify}>
       <div className="flex w-full max-w-xs flex-col gap-3 border p-4">
         <div className="flex justify-between text-sm">
-          <span>Daily streak</span>
+          <span>Designali shipping streak</span>
           <span className="font-medium">6 / 7 days</span>
         </div>
         <Progress value={86} />
@@ -52,11 +54,11 @@ export default function AchievementUnlockedToast() {
           onClick={() =>
             notify.add({
               title: "Week warrior",
-              description: "Practiced 7 days in a row. +50 XP",
+              description: "Shipped new blocks 7 days in a row. +50 XP",
             })
           }
         >
-          Complete today&apos;s lesson
+          Ship today&apos;s block
         </Button>
       </div>
       <ToastPortal>

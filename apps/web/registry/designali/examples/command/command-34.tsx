@@ -2,13 +2,13 @@
 
 import * as React from "react"
 import {
-  CheckIcon,
-  CircleCheckIcon,
-  CircleDashedIcon,
-  CircleDotIcon,
-  CircleEllipsisIcon,
-  CircleIcon,
-} from "lucide-react"
+  Check as CheckIcon,
+  CircleCheck as CircleCheckIcon,
+  CircleDashed as CircleDashedIcon,
+  CircleDot as CircleDotIcon,
+  CircleEllipsis as CircleEllipsisIcon,
+  Circle as CircleIcon,
+} from "@designali/icons"
 
 import {
   Command,
@@ -56,7 +56,7 @@ export default function IssueStatusPicker() {
   return (
     <div className="flex w-full max-w-60 flex-col gap-2">
       <div className="flex items-center gap-2 text-xs">
-        <span className="font-mono text-muted-foreground">ENG-482</span>
+        <span className="font-mono text-muted-foreground">DSG-482</span>
         <active.icon className={cn("size-3.5", active.color)} />
         <span>{active.label}</span>
       </div>

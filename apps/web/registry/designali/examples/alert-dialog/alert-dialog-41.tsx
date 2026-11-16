@@ -1,4 +1,8 @@
-import { CircleXIcon, RefreshCwIcon, RefreshCwOffIcon } from "lucide-react"
+import {
+  CircleX as CircleXIcon,
+  RefreshCw as RefreshCwIcon,
+  RefreshCwOff as RefreshCwOffIcon,
+} from "@designali/icons"
 
 import {
   AlertDialog,
@@ -26,7 +30,7 @@ export default function SyncErrorRetry() {
           <AlertDialogMedia className="bg-destructive/10 text-destructive">
             <CircleXIcon />
           </AlertDialogMedia>
-          <AlertDialogTitle>Couldn&apos;t sync your calendar</AlertDialogTitle>
+          <AlertDialogTitle>Couldn&apos;t sync your Figma files</AlertDialogTitle>
           <AlertDialogDescription>
             The provider rejected our request. Check your connection or{" "}
             <a href="#">reconnect the account</a>.

@@ -1,4 +1,7 @@
-import { CircleCheckIcon, CircleIcon } from "lucide-react"
+import {
+  CircleCheck as CircleCheckIcon,
+  Circle as CircleIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import { Spinner } from "@workspace/ui/components/spinner"
@@ -9,7 +12,7 @@ const steps = [
   { label: "Run tests", time: "1m 42s", state: "done" },
   { label: "Build production bundle", time: "running", state: "running" },
   { label: "Upload assets", time: "queued", state: "queued" },
-  { label: "Promote to production", time: "queued", state: "queued" },
+  { label: "Deploy designali.com to Vercel", time: "queued", state: "queued" },
 ]
 
 export default function DeploymentPipelineSteps() {

@@ -1,4 +1,6 @@
-import { HistoryIcon } from "lucide-react"
+import {
+  History as HistoryIcon,
+} from "@designali/icons"
 
 import {
   AlertDialog,
@@ -21,9 +23,9 @@ export default function RestoreVersionDialog() {
         <HistoryIcon className="size-4" />
       </div>
       <div className="min-w-0 flex-1">
-        <p className="text-sm font-medium">Version 14</p>
+        <p className="text-sm font-medium">Design Agency template — Version 14</p>
         <p className="text-xs text-muted-foreground">
-          Edited by Priya Nair - 2 days ago
+          Edited by Ali Imam - 2 days ago
         </p>
       </div>
       <AlertDialog>

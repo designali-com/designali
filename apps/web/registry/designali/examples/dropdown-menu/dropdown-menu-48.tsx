@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { TerminalIcon } from "lucide-react"
+import {
+  Terminal as TerminalIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {

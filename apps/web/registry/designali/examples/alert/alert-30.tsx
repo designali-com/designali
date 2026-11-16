@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { CircleCheckIcon, LinkIcon } from "lucide-react"
+import {
+  CircleCheck as CircleCheckIcon,
+  Link as LinkIcon,
+} from "@designali/icons"
 
 import {
   Alert,
@@ -42,7 +45,7 @@ export default function AlertAutoHide() {
           <CircleCheckIcon />
           <AlertTitle>Invite link copied</AlertTitle>
           <AlertDescription>
-            Anyone with the link can join as a viewer.
+            Anyone with the link can view this Designali client project.
           </AlertDescription>
           <span
             aria-hidden

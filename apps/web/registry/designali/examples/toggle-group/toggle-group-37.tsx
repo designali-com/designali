@@ -2,12 +2,12 @@
 
 import * as React from "react"
 import {
-  FishIcon,
-  LeafIcon,
-  MilkOffIcon,
-  SproutIcon,
-  WheatOffIcon,
-} from "lucide-react"
+  Fish as FishIcon,
+  Leaf as LeafIcon,
+  MilkOff as MilkOffIcon,
+  Sprout as SproutIcon,
+  WheatOff as WheatOffIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {

@@ -1,9 +1,9 @@
 import { ScrollArea, ScrollBar } from "@workspace/ui/components/scroll-area"
 
 const code = [
-  "import { createClient } from '@fieldnote/sdk'",
+  "import { createClient } from '@/lib/store'",
   "",
-  "const client = createClient({ apiKey: process.env.FIELDNOTE_API_KEY, region: 'eu-west-1', timeout: 10_000 })",
+  "const client = createClient({ apiKey: process.env.STORE_API_KEY, region: 'eu-west-1', timeout: 10_000 })",
   "",
   "export async function syncOrders(since: Date) {",
   "  const orders = await client.orders.list({ updatedAfter: since.toISOString(), limit: 100, expand: ['customer', 'items'] })",

@@ -1,4 +1,6 @@
-import { HourglassIcon } from "lucide-react"
+import {
+  Hourglass as HourglassIcon,
+} from "@designali/icons"
 
 import {
   Alert,
@@ -18,7 +20,7 @@ export default function AlertTrialEnding() {
         <Badge variant="secondary">3 days left</Badge>
       </AlertTitle>
       <AlertDescription>
-        Upgrade to keep your 14 boards, automations and guest access.
+        Upgrade to Designali Pro to keep access to 460+ blocks, templates and Figma files.
       </AlertDescription>
       <AlertAction>
         <Button size="xs">Upgrade</Button>

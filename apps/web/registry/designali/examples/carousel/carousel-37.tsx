@@ -9,21 +9,21 @@ import {
 
 const articles = [
   {
-    category: "Climate",
-    title: "Coastal towns test floating flood barriers",
+    category: "Design",
+    title: "How I build a brand identity from scratch",
     read: 6,
   },
   {
-    category: "Tech",
-    title: "Why small models are winning on-device",
+    category: "Code",
+    title: "From Figma to Next.js: design se code tak",
     read: 4,
   },
   {
-    category: "Culture",
-    title: "The quiet return of the neighborhood cinema",
+    category: "Motion",
+    title: "Adding CGI and 3D to a product launch",
     read: 8,
   },
-  { category: "Science", title: "A new map of the deep ocean floor", read: 5 },
+  { category: "AI", title: "AI-assisted workflows at Designali", read: 5 },
 ]
 
 export default function NewsHeadlinesCarousel() {
@@ -36,7 +36,7 @@ export default function NewsHeadlinesCarousel() {
         {articles.map((article) => (
           <CarouselItem key={article.title} className="sm:basis-1/2">
             <a
-              href="#"
+              href="/blogs"
               className="flex h-full flex-col gap-2 border p-4 transition-colors hover:bg-muted/50"
             >
               <Badge variant="secondary">{article.category}</Badge>

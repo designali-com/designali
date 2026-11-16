@@ -1,9 +1,9 @@
 import { Separator } from "@workspace/ui/components/separator"
 
 const lines = [
-  { label: "Oat flat white", amount: 4.5 },
-  { label: "Almond croissant", amount: 3.75 },
-  { label: "Sparkling water", amount: 2.25 },
+  { label: "Portfolio Simple template", amount: 4.5 },
+  { label: "Icons Pack", amount: 3.75 },
+  { label: "Logos Pack", amount: 2.25 },
 ]
 
 const dashed =
@@ -16,8 +16,8 @@ export default function DashedReceiptSeparator() {
   return (
     <div className="flex w-full max-w-60 flex-col gap-3 border bg-muted/20 p-4 font-mono text-xs">
       <div className="text-center">
-        <div className="text-sm font-semibold">CORNER BEANS</div>
-        <div className="text-muted-foreground">Order #2041 - Table 6</div>
+        <div className="text-sm font-semibold">DESIGNALI</div>
+        <div className="text-muted-foreground">Order #2041 · designali.com</div>
       </div>
       <Separator className={dashed} />
       {lines.map((line) => (

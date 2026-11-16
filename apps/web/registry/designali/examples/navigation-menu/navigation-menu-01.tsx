@@ -3,10 +3,10 @@
 import * as React from "react"
 import Link from "next/link"
 import {
-  CircleAlertIcon,
-  CircleCheckIcon,
-  CircleDashedIcon,
-} from "lucide-react"
+  CircleAlert as CircleAlertIcon,
+  CircleCheck as CircleCheckIcon,
+  CircleDashed as CircleDashedIcon,
+} from "@designali/icons"
 
 import {
   NavigationMenu,
@@ -20,39 +20,39 @@ import {
 
 const components: { title: string; href: string; description: string }[] = [
   {
-    title: "Alert Dialog",
-    href: "/docs/primitives/alert-dialog",
+    title: "Bento",
+    href: "/docs/components/bento",
     description:
-      "A modal dialog that interrupts the user with important content and expects a response.",
+      "A Designali bento grid for showcasing products, features and work.",
   },
   {
-    title: "Hover Card",
-    href: "/docs/primitives/hover-card",
+    title: "Number Counter",
+    href: "/docs/components/number-counter",
     description:
-      "For sighted users to preview content available behind a link.",
+      "Animated counters for stats like 460+ blocks and 4000+ icons.",
   },
   {
-    title: "Progress",
-    href: "/docs/primitives/progress",
+    title: "Gauge",
+    href: "/docs/components/gauge",
     description:
-      "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
+      "A radial gauge for showing progress, scores and metrics in Designali dashboards.",
   },
   {
-    title: "Scroll-area",
-    href: "/docs/primitives/scroll-area",
-    description: "Visually or semantically separates content.",
+    title: "Dot Pattern",
+    href: "/docs/components/dot-pattern",
+    description: "A subtle dot background for heroes and sections.",
   },
   {
-    title: "Tabs",
-    href: "/docs/primitives/tabs",
+    title: "Marquee",
+    href: "/docs/components/marquee",
     description:
-      "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
+      "An infinite scrolling row for logos, testimonials and Designali work.",
   },
   {
-    title: "Tooltip",
-    href: "/docs/primitives/tooltip",
+    title: "Typewriter",
+    href: "/docs/components/typewriter",
     description:
-      "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
+      "Types out headlines letter by letter, like design se code tak.",
   },
 ]
 
@@ -65,13 +65,13 @@ export function NavigationMenuDemo() {
           <NavigationMenuContent>
             <ul className="w-96">
               <ListItem href="/docs" title="Introduction">
-                Re-usable components built with Tailwind CSS.
+                Designali blocks and components built with Tailwind CSS.
               </ListItem>
               <ListItem href="/docs/installation" title="Installation">
                 How to install dependencies and structure your app.
               </ListItem>
-              <ListItem href="/docs/primitives/typography" title="Typography">
-                Styles for headings, paragraphs, lists...etc
+              <ListItem href="/icons" title="Icons">
+                4000+ icons from @designali/icons.
               </ListItem>
             </ul>
           </NavigationMenuContent>

@@ -2,11 +2,11 @@
 
 import * as React from "react"
 import {
-  CropIcon,
-  FlipHorizontalIcon,
-  RotateCwIcon,
-  SunMediumIcon,
-} from "lucide-react"
+  Crop as CropIcon,
+  FlipHorizontal2 as FlipHorizontalIcon,
+  RotateCw as RotateCwIcon,
+  SunMedium as SunMediumIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Switch } from "@workspace/ui/components/switch"

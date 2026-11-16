@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { ConstructionIcon } from "lucide-react"
+import {
+  Construction as ConstructionIcon,
+} from "@designali/icons"
 
 import {
   Alert,
@@ -19,7 +21,7 @@ export default function MaintenanceModeSwitch() {
       {maintenance && (
         <Alert variant="warning">
           <ConstructionIcon />
-          <AlertTitle>Site is in maintenance mode</AlertTitle>
+          <AlertTitle>designali.com is in maintenance mode</AlertTitle>
           <AlertDescription>
             Visitors see a &quot;back soon&quot; page.
           </AlertDescription>
@@ -29,7 +31,7 @@ export default function MaintenanceModeSwitch() {
         <div>
           <Label htmlFor="maintenance">Maintenance mode</Label>
           <p className="text-xs text-muted-foreground">
-            Only admins can access the storefront.
+            Only admins can access the Designali store.
           </p>
         </div>
         <Switch

@@ -1,15 +1,22 @@
-import { Activity, BookOpen, Code2, GitCommitHorizontal, Rss, Terminal } from "lucide-react"
+import {
+  Activity,
+  BookOpen,
+  CodeXml as Code2,
+  GitCommitHorizontal,
+  Rss,
+  Terminal,
+} from "@designali/icons"
 
 const columns = [
-  { title: "Build", icon: Code2, links: ["Quickstart", "SDKs", "CLI", "Webhooks"] },
-  { title: "Reference", icon: BookOpen, links: ["REST API", "GraphQL", "Error codes", "Rate limits"] },
-  { title: "Stay current", icon: Rss, links: ["Changelog", "Deprecations", "RSS feed", "Status history"] },
+  { title: "Build", icon: Code2, links: ["Quickstart", "Blocks", "Templates", "Components"] },
+  { title: "Reference", icon: BookOpen, links: ["@designali/icons", "@designali/logos", "@designali/vectors", "Theming"] },
+  { title: "Stay current", icon: Rss, links: ["Blogs", "New blocks", "Instagram", "X"] },
 ]
 
 const services = [
-  { name: "API", uptime: "99.998%", ok: true },
-  { name: "Dashboard", uptime: "99.991%", ok: true },
-  { name: "Webhooks", uptime: "99.94%", ok: false },
+  { name: "designali.com", uptime: "99.99%", ok: true },
+  { name: "Docs", uptime: "99.98%", ok: true },
+  { name: "Downloads", uptime: "99.94%", ok: false },
 ]
 
 export default function Footer17() {
@@ -19,12 +26,12 @@ export default function Footer17() {
         <div>
           <p className="flex items-center gap-2 text-sm font-semibold">
             <Terminal className="size-4" />
-            vectorbase
+            designali
           </p>
           <div className="mt-6 border bg-muted/40 p-4 text-xs leading-6">
-            <p className="text-muted-foreground"># install the client</p>
+            <p className="text-muted-foreground"># install the icons</p>
             <p className="truncate">
-              <span className="text-muted-foreground">$</span> pip install vectorbase
+              <span className="text-muted-foreground">$</span> npm install @designali/icons
             </p>
           </div>
           <div className="mt-6 border">
@@ -34,7 +41,7 @@ export default function Footer17() {
                 System status
               </span>
               <a href="#" className="text-muted-foreground hover:text-foreground">
-                status.vectorbase.dev
+                www.designali.com
               </a>
             </div>
             <ul className="text-xs">
@@ -74,10 +81,10 @@ export default function Footer17() {
       </div>
       <div className="border-t">
         <div className="mx-auto flex max-w-7xl flex-col gap-2 px-6 py-4 text-[11px] text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
-          <p>© 2026 Vectorbase, Inc. / Apache-2.0 SDKs</p>
+          <p>© 2026 Designali / Design se code tak</p>
           <p className="flex items-center gap-1.5">
             <GitCommitHorizontal className="size-3.5" />
-            api v2026-10-01 / build 8f3c2a1
+            registry v2026-11 / 460+ blocks
           </p>
         </div>
       </div>

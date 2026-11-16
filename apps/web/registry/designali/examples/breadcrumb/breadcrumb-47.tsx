@@ -1,5 +1,9 @@
 import { Fragment } from "react"
-import { FolderKanbanIcon, HomeIcon, LayoutTemplateIcon } from "lucide-react"
+import {
+  FolderKanban as FolderKanbanIcon,
+  House as HomeIcon,
+  LayoutTemplate as LayoutTemplateIcon,
+} from "@designali/icons"
 
 import {
   Breadcrumb,

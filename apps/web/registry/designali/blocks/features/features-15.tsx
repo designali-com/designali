@@ -1,45 +1,43 @@
 "use client"
 
 import { useState } from "react"
-import { Check, Copy } from "lucide-react"
+import {
+  Check,
+  Copy,
+} from "@designali/icons"
 
 import { cn } from "@workspace/ui/lib/utils"
 
 const snippets: Record<string, string> = {
-  TypeScript: `import { Ledger } from "@tallyhq/sdk"
+  Icons: `// npm install @designali/icons
+import { ArrowRight } from "@designali/icons"
 
-const ledger = new Ledger(process.env.TALLY_KEY)
+export function Cta() {
+  return <ArrowRight className="size-4" />
+}`,
+  Logos: `// npm install @designali/logos
+import { Github, Vercel } from "@designali/logos"
 
-await ledger.charges.create({
-  amount: 4200,
-  currency: "eur",
-  customer: "cus_8fK2",
-  idempotencyKey: order.id,
-})`,
-  Python: `from tally import Ledger
+export function Stack() {
+  return (
+    <>
+      <Github size={24} />
+      <Vercel size={24} />
+    </>
+  )
+}`,
+  Vectors: `// npm install @designali/vectors
+import { Abstract12Shapes } from "@designali/vectors"
 
-ledger = Ledger(os.environ["TALLY_KEY"])
-
-ledger.charges.create(
-    amount=4200,
-    currency="eur",
-    customer="cus_8fK2",
-    idempotency_key=order.id,
-)`,
-  Go: `client := tally.New(os.Getenv("TALLY_KEY"))
-
-_, err := client.Charges.Create(ctx, &tally.ChargeParams{
-    Amount:         4200,
-    Currency:       "eur",
-    Customer:       "cus_8fK2",
-    IdempotencyKey: order.ID,
-})`,
+export function Hero() {
+  return <Abstract12Shapes size={160} />
+}`,
 }
 
 const features = [
-  ["Typed end to end", "Generated SDKs with autocomplete for every field and error code."],
-  ["Safe retries", "Idempotency keys on every write, so a flaky network never double-charges."],
-  ["Test clocks", "Fast-forward subscriptions through a year of billing in seconds."],
+  ["Typed end to end", "Every Designali package ships with TypeScript types and autocomplete."],
+  ["Tree-shakable", "Import only the icons, logos and vectors you use. Nothing more."],
+  ["4000+ icons", "Lucide-compatible names, so switching to @designali/icons is painless."],
 ]
 
 export default function Features15() {
@@ -55,7 +53,7 @@ export default function Features15() {
             For developers
           </p>
           <h2 className="mt-4 text-3xl font-medium tracking-tight md:text-5xl">
-            Charge a card in eight lines.
+            Add Designali assets in three lines.
           </h2>
           <ul className="mt-10 space-y-6">
             {features.map(([title, body]) => (

@@ -1,4 +1,6 @@
-import { Share2Icon } from "lucide-react"
+import {
+  Share2 as Share2Icon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {

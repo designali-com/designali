@@ -1,4 +1,8 @@
-import { ArrowUpIcon, CopyIcon, SparklesIcon } from "lucide-react"
+import {
+  ArrowUp as ArrowUpIcon,
+  Copy as CopyIcon,
+  Sparkles as SparklesIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {

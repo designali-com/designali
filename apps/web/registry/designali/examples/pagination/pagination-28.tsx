@@ -1,4 +1,7 @@
-import { ArrowLeftIcon, ArrowRightIcon } from "lucide-react"
+import {
+  ArrowLeft as ArrowLeftIcon,
+  ArrowRight as ArrowRightIcon,
+} from "@designali/icons"
 
 import {
   Pagination,

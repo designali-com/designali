@@ -5,16 +5,16 @@ import {
 } from "@workspace/ui/components/radio-group"
 
 const people = [
-  { value: "dk", name: "Dara Kim", role: "Frontend", status: "Available" },
+  { value: "dk", name: "Dara", role: "Frontend", status: "Available" },
   {
     value: "lm",
-    name: "Luca Moretti",
+    name: "Luca",
     role: "Platform",
     status: "2 reviews pending",
   },
   {
     value: "hs",
-    name: "Hana Sato",
+    name: "Hana",
     role: "Design systems",
     status: "Out until Monday",
   },

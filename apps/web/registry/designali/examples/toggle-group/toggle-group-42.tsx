@@ -15,7 +15,7 @@ const priorities = [
 export default function TaskPriorityToggleGroup() {
   return (
     <div className="flex w-full max-w-sm flex-col gap-3 border p-4">
-      <Input placeholder="Task title" defaultValue="Migrate billing webhooks" />
+      <Input placeholder="Task title" defaultValue="Ship new Designali blocks" />
       <div className="flex flex-col gap-1.5">
         <span className="text-xs font-medium text-muted-foreground">
           Priority

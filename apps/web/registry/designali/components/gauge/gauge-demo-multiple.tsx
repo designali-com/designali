@@ -12,19 +12,19 @@ import {
 
 const metrics = [
   {
-    label: "Strength",
+    label: "Brand",
     value: 86,
   },
   {
-    label: "Mobility",
+    label: "UI/UX",
     value: 72,
   },
   {
-    label: "Balance",
+    label: "Web Dev",
     value: 64,
   },
   {
-    label: "Recovery",
+    label: "Motion",
     value: 91,
   },
 ]

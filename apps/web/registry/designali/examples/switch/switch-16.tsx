@@ -1,4 +1,6 @@
-import { CookieIcon } from "lucide-react"
+import {
+  Cookie as CookieIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import { Button } from "@workspace/ui/components/button"

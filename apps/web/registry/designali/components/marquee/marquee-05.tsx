@@ -1,22 +1,11 @@
-import {
-  ClaudeAI,
-  Cursor,
-  Github,
-  GoogleWordmark,
-  Grok,
-  OpenAI,
-  Replicate,
-} from "@designali/logos"
-
 import { Marquee } from "@/registry/designali/ui/marquee"
-import { Badge } from "@workspace/ui/components/badge"
 
 const technologies = [
-  { name: "chat", image: "/img/chat-1-light.jpg" },
-  { name: "dashboard", image: "/img/dashboard-1-dark.jpg" },
-  { name: "hero1", image: "/img/hero-1.jpg" },
-  { name: "login", image: "/img/login-1.jpg" },
-  { name: "hero2", image: "/img/hero-2.jpg" },
+  { name: "Designali chat UI", image: "/img/chat-1-light.jpg" },
+  { name: "Designali dashboard", image: "/img/dashboard-1-dark.jpg" },
+  { name: "Designali website hero", image: "/img/hero-1.jpg" },
+  { name: "Designali sign-in screen", image: "/img/login-1.jpg" },
+  { name: "Designali landing page", image: "/img/hero-2.jpg" },
 ]
 
 

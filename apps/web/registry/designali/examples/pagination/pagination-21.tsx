@@ -10,7 +10,7 @@ import {
 export default function SmallSizePagination() {
   return (
     <div className="flex w-full max-w-xs flex-col gap-2 border p-3">
-      <span className="text-xs font-medium">Recent deployments</span>
+      <span className="text-xs font-medium">Recent designali.com deployments</span>
       <Pagination>
         <PaginationContent>
           <PaginationItem>

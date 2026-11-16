@@ -1,4 +1,7 @@
-import { ChevronDownIcon, TrendingUpIcon } from "lucide-react"
+import {
+  ChevronDown as ChevronDownIcon,
+  TrendingUp as TrendingUpIcon,
+} from "@designali/icons"
 
 import {
   Accordion,
@@ -22,9 +25,9 @@ const metrics = [
     total: "$48,210",
     delta: "+12.4%",
     breakdown: [
-      { name: "Subscriptions", pct: 72 },
-      { name: "Add-ons", pct: 20 },
-      { name: "Services", pct: 8 },
+      { name: "Templates", pct: 72 },
+      { name: "Blocks", pct: 20 },
+      { name: "Studio services", pct: 8 },
     ],
   },
   {
@@ -44,7 +47,7 @@ export default function AccordionInDashboardCard() {
   return (
     <Card className="w-full max-w-sm">
       <CardHeader>
-        <CardTitle>This month</CardTitle>
+        <CardTitle>designali.com this month</CardTitle>
         <CardDescription>Nov 1 to Nov 15</CardDescription>
       </CardHeader>
       <CardContent>

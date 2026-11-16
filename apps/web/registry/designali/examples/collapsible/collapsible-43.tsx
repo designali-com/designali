@@ -1,10 +1,10 @@
 import {
-  BriefcaseIcon,
-  ChevronDownIcon,
-  MailIcon,
-  MapPinIcon,
-  PhoneIcon,
-} from "lucide-react"
+  Briefcase as BriefcaseIcon,
+  ChevronDown as ChevronDownIcon,
+  Mail as MailIcon,
+  MapPin as MapPinIcon,
+  Globe as GlobeIcon,
+} from "@designali/icons"
 
 import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
 import { Button } from "@workspace/ui/components/button"
@@ -22,10 +22,10 @@ import {
 } from "@workspace/ui/components/collapsible"
 
 const details = [
-  { icon: MailIcon, label: "elena.varga@northwind.test" },
-  { icon: PhoneIcon, label: "+44 20 7946 0321" },
-  { icon: MapPinIcon, label: "Lisbon · GMT+0" },
-  { icon: BriefcaseIcon, label: "Joined March 2023" },
+  { icon: MailIcon, label: "ali@designali.com" },
+  { icon: GlobeIcon, label: "www.designali.com" },
+  { icon: MapPinIcon, label: "Designali studio" },
+  { icon: BriefcaseIcon, label: "Design & development" },
 ]
 
 export default function ProfileCardDetails() {
@@ -39,8 +39,8 @@ export default function ProfileCardDetails() {
             </AvatarFallback>
           </Avatar>
           <div className="flex-1">
-            <CardTitle>Elena Varga</CardTitle>
-            <CardDescription>Staff Product Designer</CardDescription>
+            <CardTitle>Ali Imam</CardTitle>
+            <CardDescription>Founder & Design Engineer</CardDescription>
           </div>
           <CollapsibleTrigger
             render={

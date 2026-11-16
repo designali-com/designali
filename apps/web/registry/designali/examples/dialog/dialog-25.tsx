@@ -29,7 +29,7 @@ const swatches = [
 
 export default function AvatarColorPickerDialog() {
   const [color, setColor] = React.useState(swatches[0]!)
-  const [name, setName] = React.useState("Noah Lindqvist")
+  const [name, setName] = React.useState("Ali Imam")
   const letters = name
     .split(" ")
     .filter(Boolean)

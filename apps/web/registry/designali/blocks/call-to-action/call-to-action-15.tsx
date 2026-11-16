@@ -1,12 +1,14 @@
-import { ArrowRight } from "lucide-react"
+import {
+  ArrowRight,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 
 const stats = [
-  ["2.1M", "invoices sent"],
-  ["$4.8B", "processed in 2025"],
-  ["38", "currencies"],
-  ["11 days", "faster payouts"],
+  ["460+", "blocks"],
+  ["4,000+", "icons"],
+  ["240+", "landing pages"],
+  ["2,300+", "UI examples"],
 ]
 
 export default function CallToAction15() {
@@ -15,7 +17,7 @@ export default function CallToAction15() {
       <div className="mx-auto max-w-6xl">
         <div className="grid gap-10 lg:grid-cols-[1.3fr_1fr] lg:items-end">
           <h2 className="text-4xl font-medium tracking-tight md:text-6xl">
-            Get paid like the companies ten times your size.
+            Ship like a studio ten times your size.
           </h2>
           <div className="flex flex-col gap-3 sm:flex-row lg:justify-end">
             <Button
@@ -24,7 +26,7 @@ export default function CallToAction15() {
               nativeButton={false}
               render={<a href="#" />}
             >
-              Open a free account
+              Browse Designali blocks
               <ArrowRight data-icon="inline-end" />
             </Button>
             <Button

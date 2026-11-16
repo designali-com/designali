@@ -1,4 +1,10 @@
-import { ArrowRight, Calendar, Inbox, Sparkles, Users } from "lucide-react"
+import {
+  ArrowRight,
+  Calendar,
+  Inbox,
+  Sparkles,
+  Users,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 
@@ -10,33 +16,33 @@ export default function Hero11() {
           <div>
             <span className="inline-flex items-center gap-2 bg-muted px-2.5 py-1 text-xs">
               <Sparkles className="size-3.5" />
-              Spring release
+              Designali studio
             </span>
             <h1 className="mt-8 max-w-2xl text-4xl font-medium tracking-tight md:text-6xl">
-              The shared inbox your support team actually wants to open.
+              One studio for your brand, product and website.
             </h1>
             <p className="mt-6 max-w-xl text-base leading-7 text-muted-foreground">
-              Hearth routes every email, chat and DM into one calm queue,
-              assigns it to the right person and drafts a reply in your
-              team&apos;s voice.
+              Designali takes your project from brand identity and UI/UX
+              design to a production-ready Next.js build — design se code
+              tak, handled end to end by Ali Imam.
             </p>
           </div>
           <div className="mt-10 flex flex-wrap gap-3">
-            <Button size="lg" nativeButton={false} render={<a href="#" />}>
-              Try Hearth free
+            <Button size="lg" nativeButton={false} render={<a href="/contact" />}>
+              Start a project
               <ArrowRight />
             </Button>
-            <Button size="lg" variant="outline" nativeButton={false} render={<a href="#" />}>
-              Book a walkthrough
+            <Button size="lg" variant="outline" nativeButton={false} render={<a href="/work" />}>
+              View our work
             </Button>
           </div>
         </div>
 
         <div className="border border-border bg-foreground p-6 text-background md:col-span-2">
           <Inbox className="size-5" />
-          <p className="mt-6 text-5xl font-medium tracking-tight">-41%</p>
+          <p className="mt-6 text-5xl font-medium tracking-tight">460+</p>
           <p className="mt-2 text-sm opacity-70">
-            median first response time after 30 days
+            production-ready blocks on designali.com
           </p>
         </div>
 
@@ -44,7 +50,7 @@ export default function Hero11() {
           <div className="flex items-center justify-between">
             <Users className="size-5" />
             <div className="flex -space-x-2">
-              {["MO", "JT", "AS", "RB"].map((initials, index) => (
+              {["AI", "SR", "MK", "NJ"].map((initials, index) => (
                 <span
                   key={initials}
                   className={`flex size-8 items-center justify-center rounded-full border-2 border-background text-[10px] font-medium text-white ${
@@ -56,19 +62,19 @@ export default function Hero11() {
               ))}
             </div>
           </div>
-          <p className="mt-6 text-sm font-medium">Collision detection</p>
+          <p className="mt-6 text-sm font-medium">Design and code, together</p>
           <p className="mt-1 text-sm text-muted-foreground">
-            See who is replying in real time. No more double answers.
+            Figma files and React code stay in sync from first draft to launch.
           </p>
         </div>
 
         <div className="border border-border p-6 md:col-span-3">
-          <p className="text-xs text-muted-foreground">Today&apos;s queue</p>
+          <p className="text-xs text-muted-foreground">This week in the studio</p>
           <ul className="mt-4 space-y-3 text-sm">
             {[
-              ["Refund for order #4821", "Billing", "bg-amber-500"],
-              ["Cannot connect calendar", "Integrations", "bg-sky-500"],
-              ["Bulk pricing question", "Sales", "bg-emerald-500"],
+              ["Dalim brand identity refresh", "Branding", "bg-amber-500"],
+              ["Portfolio template, Next.js build", "Development", "bg-sky-500"],
+              ["Dashboard UI kit for designali.com", "UI/UX", "bg-emerald-500"],
             ].map(([subject, tag, dot]) => (
               <li key={subject} className="flex items-center gap-3">
                 <span className={`size-2 shrink-0 rounded-full ${dot}`} />
@@ -82,9 +88,9 @@ export default function Hero11() {
         <div className="flex items-center gap-4 border border-border bg-muted/50 p-6 md:col-span-3">
           <Calendar className="size-5 shrink-0" />
           <p className="text-sm">
-            <span className="font-medium">SLA timers that respect weekends.</span>{" "}
+            <span className="font-medium">Remote, worldwide.</span>{" "}
             <span className="text-muted-foreground">
-              Business hours per team, per timezone, per holiday calendar.
+              Working with clients across timezones — reach us at hello@designali.com.
             </span>
           </p>
         </div>

@@ -1,15 +1,21 @@
 "use client"
 
 import { useState } from "react"
-import { ArrowLeft, ArrowRight, Building2, KeyRound, ShieldCheck } from "lucide-react"
+import {
+  ArrowLeft,
+  ArrowRight,
+  Building2,
+  KeyRound,
+  ShieldCheck,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Input } from "@workspace/ui/components/input"
 import { Label } from "@workspace/ui/components/label"
 
 const ssoDomains: Record<string, { org: string; provider: string }> = {
-  "meridianhealth.org": { org: "Meridian Health", provider: "Okta" },
-  "copperline.com": { org: "Copperline Logistics", provider: "Microsoft Entra ID" },
+  "designali.com": { org: "Designali Studio", provider: "Google Workspace" },
+  "example.com": { org: "Example Client", provider: "Okta" },
 }
 
 export default function Authentication07() {
@@ -24,7 +30,7 @@ export default function Authentication07() {
       <div className="mx-auto max-w-md px-6">
         <div className="flex items-center gap-2 font-semibold">
           <ShieldCheck className="size-5" />
-          Vaultline
+          designali
         </div>
 
         {stage === "email" && (
@@ -49,7 +55,7 @@ export default function Authentication07() {
                 type="email"
                 value={email}
                 onChange={(event) => setEmail(event.target.value)}
-                placeholder="you@meridianhealth.org"
+                placeholder="you@designali.com"
                 className="h-11"
               />
               {match && (
@@ -64,7 +70,7 @@ export default function Authentication07() {
               <ArrowRight />
             </Button>
             <p className="text-xs text-muted-foreground">
-              Try <button type="button" className="underline underline-offset-4" onClick={() => setEmail("lena@meridianhealth.org")}>lena@meridianhealth.org</button> to see the SSO flow.
+              Try <button type="button" className="underline underline-offset-4" onClick={() => setEmail("ali@designali.com")}>ali@designali.com</button> to see the SSO flow.
             </p>
           </form>
         )}

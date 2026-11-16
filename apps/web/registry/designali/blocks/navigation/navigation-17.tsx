@@ -11,20 +11,20 @@ import {
   Search,
   Settings,
   User,
-} from "lucide-react"
+} from "@designali/icons"
 
 import { cn } from "@workspace/ui/lib/utils"
 
 const workspaces = [
-  { name: "Lumen Labs", plan: "Team", initials: "LL" },
+  { name: "Designali Studio", plan: "Team", initials: "DS" },
   { name: "Side project", plan: "Free", initials: "SP" },
-  { name: "Orbit Agency", plan: "Business", initials: "OA" },
+  { name: "Dalim Agency", plan: "Pro", initials: "DA" },
 ]
 
 const notifications = [
-  { who: "Dana K.", what: "commented on Onboarding v3", when: "2m" },
-  { who: "Build bot", what: "deployed web@4f2a1c to production", when: "18m" },
-  { who: "Marco P.", what: "invited you to Growth experiments", when: "1h" },
+  { who: "Sara", what: "commented on Dalim UI landing page", when: "2m" },
+  { who: "Build bot", what: "deployed designali.com@4f2a1c to production", when: "18m" },
+  { who: "Omar", what: "invited you to Portfolio template", when: "1h" },
 ]
 
 type Panel = "workspace" | "notifications" | "account" | null
@@ -143,13 +143,13 @@ export default function Navigation17() {
                 panel === "account" && "ring-2 ring-foreground ring-offset-2 ring-offset-background"
               )}
             >
-              AR
+              AI
             </button>
             {panel === "account" && (
               <div className="absolute end-0 top-full z-20 mt-1 w-56 border bg-popover p-1 text-sm text-popover-foreground">
                 <div className="px-2 py-2">
-                  <p className="font-medium">Ada Reyes</p>
-                  <p className="text-xs text-muted-foreground">ada@lumenlabs.dev</p>
+                  <p className="font-medium">Ali Imam</p>
+                  <p className="text-xs text-muted-foreground">ali@designali.com</p>
                 </div>
                 <div className="my-1 h-px bg-border" />
                 {[

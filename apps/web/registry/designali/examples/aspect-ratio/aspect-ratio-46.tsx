@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { ImageOffIcon, RefreshCwIcon } from "lucide-react"
+import {
+  ImageOff as ImageOffIcon,
+  RefreshCw as RefreshCwIcon,
+} from "@designali/icons"
 
 import { AspectRatio } from "@workspace/ui/components/aspect-ratio"
 import { Button } from "@workspace/ui/components/button"
@@ -21,7 +24,7 @@ export default function MediaErrorFallback() {
         <ImageOffIcon className="size-6 text-muted-foreground" />
         <p className="text-sm font-medium">Preview unavailable</p>
         <p className="text-xs text-muted-foreground">
-          We couldn&apos;t load this media. Check your connection.
+          We couldn&apos;t load this Designali preview. Check your connection.
         </p>
         <Button size="sm" variant="outline" onClick={retry} disabled={loading}>
           {loading ? (

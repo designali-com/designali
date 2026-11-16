@@ -1,4 +1,7 @@
-import { MapPinIcon, SunIcon } from "lucide-react"
+import {
+  MapPin as MapPinIcon,
+  Sun as SunIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import {

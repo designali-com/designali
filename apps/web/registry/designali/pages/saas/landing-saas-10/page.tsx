@@ -8,7 +8,7 @@ import {
   ShieldCheck,
   Users,
   Workflow,
-} from "lucide-react"
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 

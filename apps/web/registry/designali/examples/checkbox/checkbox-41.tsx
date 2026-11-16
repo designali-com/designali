@@ -52,12 +52,12 @@ export default function AccessibilityPreviewToggles() {
       >
         <p className="font-medium">Preview</p>
         <p className={cn(!prefs.contrast && "text-muted-foreground")}>
-          Your order has shipped.{" "}
+          Your Designali template is ready.{" "}
           <a
             href="#"
             className={cn("font-medium", prefs.underline && "underline")}
           >
-            Track package
+            Download files
           </a>
         </p>
       </div>

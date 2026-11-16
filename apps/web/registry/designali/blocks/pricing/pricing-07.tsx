@@ -7,8 +7,8 @@ import { Slider } from "@workspace/ui/components/slider"
 
 const pricePerSeat = 14
 const included = [
-  "Unlimited projects",
-  "Shared component library",
+  "All 460+ Designali blocks",
+  "Shared Figma and code library",
   "Version history",
   "Role-based permissions",
 ]
@@ -24,10 +24,10 @@ export default function Pricing07() {
         <div className="grid border border-border bg-background lg:grid-cols-[3fr_2fr]">
           <div className="p-8 md:p-12">
             <p className="text-xs tracking-widest text-muted-foreground uppercase">
-              Usage-based
+              Designali Team
             </p>
             <h2 className="mt-3 text-3xl font-semibold tracking-tight">
-              Pay only for the seats you use
+              Pay only for the designers and developers you add
             </h2>
             <p className="mt-3 text-sm text-muted-foreground">
               ${pricePerSeat} per seat each month. Volume discounts apply
@@ -75,7 +75,7 @@ export default function Pricing07() {
               </ul>
             </div>
             <Button size="lg" className="w-full">
-              Start 14-day trial
+              Start with Designali Team
             </Button>
           </div>
         </div>

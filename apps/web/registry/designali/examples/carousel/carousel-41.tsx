@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { RefreshCwIcon } from "lucide-react"
+import {
+  RefreshCw as RefreshCwIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -13,10 +15,10 @@ import { Skeleton } from "@workspace/ui/components/skeleton"
 import { cn } from "@workspace/ui/lib/utils"
 
 const events = [
-  { title: "Design critique", when: "Today, 2:00 PM" },
-  { title: "Sprint planning", when: "Tomorrow, 10:00 AM" },
-  { title: "Customer call", when: "Thu, 4:30 PM" },
-  { title: "Team lunch", when: "Fri, 12:30 PM" },
+  { title: "Brand identity review", when: "Today, 2:00 PM" },
+  { title: "Blocks release planning", when: "Tomorrow, 10:00 AM" },
+  { title: "Client call with Ali", when: "Thu, 4:30 PM" },
+  { title: "Deploy to Vercel", when: "Fri, 12:30 PM" },
 ]
 
 export default function LoadingSkeletonCarousel() {

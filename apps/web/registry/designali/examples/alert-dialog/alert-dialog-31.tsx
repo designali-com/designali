@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { UserXIcon } from "lucide-react"
+import {
+  UserX as UserXIcon,
+} from "@designali/icons"
 
 import {
   AlertDialog,
@@ -48,9 +50,9 @@ export default function PasswordReauthDelete() {
           <AlertDialogMedia className="bg-destructive/10 text-destructive">
             <UserXIcon />
           </AlertDialogMedia>
-          <AlertDialogTitle>Delete your account?</AlertDialogTitle>
+          <AlertDialogTitle>Delete your Designali account?</AlertDialogTitle>
           <AlertDialogDescription>
-            All your data will be erased within 14 days. Confirm with your
+            Your downloads, licenses and data will be erased within 14 days. Confirm with your
             password.
           </AlertDialogDescription>
         </AlertDialogHeader>

@@ -1,7 +1,10 @@
 "use client"
 
 import { useState } from "react"
-import { Check, Terminal } from "lucide-react"
+import {
+  Check,
+  Terminal,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 
@@ -22,10 +25,10 @@ export default function Authentication17() {
             <span className="size-2.5 rounded-full bg-zinc-700" />
             <span className="size-2.5 rounded-full bg-zinc-700" />
             <span className="size-2.5 rounded-full bg-zinc-700" />
-            <span className="ms-3 text-zinc-500">~/projects/atlas</span>
+            <span className="ms-3 text-zinc-500">~/projects/designali</span>
           </div>
           <div className="space-y-1.5 overflow-x-auto p-5 leading-relaxed">
-            <p><span className="text-emerald-400">$</span> forge login</p>
+            <p><span className="text-emerald-400">$</span> designali login</p>
             <p className="text-zinc-500">Opening browser to authorize this device...</p>
             <p>
               Your one-time code: <span className="bg-zinc-800 px-1.5 py-0.5 text-white">WDJB-MJHT</span>
@@ -33,8 +36,8 @@ export default function Authentication17() {
             <p className="text-zinc-500">Waiting for confirmation (expires in 15:00)</p>
             {stage === "done" ? (
               <>
-                <p className="text-emerald-400">Authenticated as ravi@atlaslabs.dev</p>
-                <p className="text-emerald-400">Token saved to ~/.forge/credentials</p>
+                <p className="text-emerald-400">Authenticated as ali@designali.com</p>
+                <p className="text-emerald-400">Token saved to ~/.designali/credentials</p>
                 <p><span className="text-emerald-400">$</span> <span className="animate-pulse">_</span></p>
               </>
             ) : (
@@ -57,7 +60,7 @@ export default function Authentication17() {
               }}
             >
               <div>
-                <h2 className="text-3xl font-semibold tracking-tight">Connect the Forge CLI</h2>
+                <h2 className="text-3xl font-semibold tracking-tight">Connect the Designali CLI</h2>
                 <p className="mt-2 text-sm text-muted-foreground">Enter the code shown in your terminal.</p>
               </div>
               <input
@@ -83,14 +86,14 @@ export default function Authentication17() {
               <div>
                 <h2 className="text-3xl font-semibold tracking-tight">Authorize this device?</h2>
                 <p className="mt-2 text-sm text-muted-foreground">
-                  Only continue if you just ran <code className="bg-muted px-1">forge login</code> yourself.
+                  Only continue if you just ran <code className="bg-muted px-1">designali login</code> yourself.
                 </p>
               </div>
               <dl className="divide-y border text-sm">
                 {[
                   ["Device", "MacBook Pro, macOS 15"],
                   ["Location", "Bengaluru, IN (approx.)"],
-                  ["Access", "Deploy and manage projects"],
+                  ["Access", "Install blocks, icons and templates"],
                 ].map(([term, value]) => (
                   <div key={term} className="flex justify-between gap-4 p-3">
                     <dt className="text-muted-foreground">{term}</dt>

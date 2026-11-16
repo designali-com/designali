@@ -2,13 +2,13 @@
 
 import * as React from "react"
 import {
-  CheckIcon,
-  CodeIcon,
-  FileDownIcon,
-  LinkIcon,
-  MailIcon,
-  Share2Icon,
-} from "lucide-react"
+  Check as CheckIcon,
+  Code as CodeIcon,
+  FileDown as FileDownIcon,
+  Link as LinkIcon,
+  Mail as MailIcon,
+  Share2 as Share2Icon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {

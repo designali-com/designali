@@ -1,12 +1,12 @@
 const swatches = [
-  { name: "Ink", hex: "#111111", tone: "bg-neutral-950" },
-  { name: "Paper", hex: "#F5F3EE", tone: "bg-stone-100" },
-  { name: "Clay", hex: "#C2703D", tone: "bg-orange-700" },
-  { name: "Moss", hex: "#4A5D3A", tone: "bg-lime-900" },
-  { name: "Tide", hex: "#2F5D7C", tone: "bg-sky-800" },
-  { name: "Dune", hex: "#D8C3A5", tone: "bg-amber-200" },
-  { name: "Slate", hex: "#5B6470", tone: "bg-slate-500" },
-  { name: "Bloom", hex: "#D9A5B3", tone: "bg-rose-300" },
+  { name: "Designali Blue", hex: "#00A8FF", tone: "bg-primary" },
+  { name: "Ink", hex: "--foreground", tone: "bg-foreground" },
+  { name: "Paper", hex: "--background", tone: "bg-background" },
+  { name: "Muted", hex: "--muted", tone: "bg-muted" },
+  { name: "Card", hex: "--card", tone: "bg-card" },
+  { name: "Chart 1", hex: "--chart-1", tone: "bg-chart-1" },
+  { name: "Chart 2", hex: "--chart-2", tone: "bg-chart-2" },
+  { name: "Chart 3", hex: "--chart-3", tone: "bg-chart-3" },
 ]
 
 export default function Grid02() {
@@ -16,13 +16,13 @@ export default function Grid02() {
         <div className="flex flex-col justify-between gap-4 border-b border-border pb-8 md:flex-row md:items-end">
           <div>
             <p className="text-xs tracking-widest text-muted-foreground uppercase">
-              Brand guidelines · 03
+              Designali brand guidelines · 03
             </p>
             <h2 className="mt-3 text-4xl font-semibold tracking-tight">Colour palette</h2>
           </div>
           <p className="max-w-sm text-sm text-muted-foreground">
-            Eight colours drawn from natural materials. Ink and Paper carry
-            most layouts; accents are used sparingly.
+            Designali Blue leads every layout, with Ink and Paper carrying the
+            rest. Every colour is a semantic token that adapts to dark mode.
           </p>
         </div>
 

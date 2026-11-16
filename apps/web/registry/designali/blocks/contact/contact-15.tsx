@@ -1,30 +1,32 @@
-import { ArrowRight } from "lucide-react"
+import {
+  ArrowRight,
+} from "@designali/icons"
 
 const topics = [
   {
-    title: "Commission a piece",
-    body: "Private and corporate commissions, from single sculptures to site-specific installations.",
-    email: "commissions@ossianatelier.com",
+    title: "Start a project",
+    body: "Brand identity, UI/UX design, web design and Next.js development, from a single page to a full product.",
+    email: "hello@designali.com",
   },
   {
-    title: "Exhibitions & loans",
-    body: "Curators and institutions requesting works, condition reports or loan agreements.",
-    email: "exhibitions@ossianatelier.com",
+    title: "Templates & blocks",
+    body: "Questions about Designali templates, blocks, @designali/icons, logos or vectors.",
+    email: "support@designali.com",
   },
   {
-    title: "Studio visits",
-    body: "Collectors and students who would like to see the foundry. Visits run on Thursdays.",
-    email: "visits@ossianatelier.com",
+    title: "Orders & licenses",
+    body: "Invoices, refunds and Designali Pro licenses for you or your team.",
+    email: "billing@designali.com",
   },
   {
-    title: "Press & publications",
-    body: "Interviews, high-resolution photography and catalogue essays.",
-    email: "press@ossianatelier.com",
+    title: "Press & interviews",
+    body: "Interviews with Ali Imam, brand assets and features on Designali projects.",
+    email: "ali@designali.com",
   },
   {
-    title: "Residencies",
-    body: "Applications for the three-month summer residency open each January.",
-    email: "residency@ossianatelier.com",
+    title: "Collaborations",
+    body: "Agencies and studios looking for white-label design, CGI, motion and front-end builds.",
+    email: "hello@designali.com",
   },
 ]
 
@@ -34,19 +36,19 @@ export default function Contact15() {
       <div className="mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-[1fr_1.6fr] lg:gap-20">
         <div className="lg:sticky lg:top-24 lg:self-start">
           <p className="text-xs font-medium tracking-widest text-muted-foreground uppercase">
-            Ossian Atelier
+            Designali
           </p>
           <h2 className="mt-4 text-4xl font-semibold tracking-tight md:text-6xl">
             Write to the right desk.
           </h2>
           <p className="mt-6 max-w-sm text-muted-foreground">
-            We are a small studio. Sending your note to the right address means
+            Designali is a small studio. Sending your note to the right address means
             it reaches the person who can actually answer it.
           </p>
           <div className="mt-10 space-y-1 text-sm">
             <p className="font-medium">Studio</p>
-            <p className="text-muted-foreground">Unit 7, Ropewalk Yard</p>
-            <p className="text-muted-foreground">Bristol BS1 6XN</p>
+            <p className="text-muted-foreground">www.designali.com</p>
+            <p className="text-muted-foreground">Design se code tak</p>
           </div>
         </div>
 

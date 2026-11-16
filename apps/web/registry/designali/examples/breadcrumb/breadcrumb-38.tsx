@@ -1,4 +1,6 @@
-import { CornerDownRightIcon } from "lucide-react"
+import {
+  CornerDownRight as CornerDownRightIcon,
+} from "@designali/icons"
 
 import {
   Breadcrumb,
@@ -8,7 +10,7 @@ import {
   BreadcrumbPage,
 } from "@workspace/ui/components/breadcrumb"
 
-const levels = ["Acme Wiki", "Engineering", "Runbooks", "Database failover"]
+const levels = ["Designali Wiki", "Studio", "Playbooks", "Design to code handoff"]
 
 export default function VerticalTreeBreadcrumb() {
   return (

@@ -1,7 +1,11 @@
 "use client"
 
 import { useState } from "react"
-import { ArrowRight, Check, Copy } from "lucide-react"
+import {
+  ArrowRight,
+  Check,
+  Copy,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Input } from "@workspace/ui/components/input"
@@ -22,14 +26,14 @@ export default function Forms15() {
       />
       <div className="relative mx-auto flex max-w-2xl flex-col items-center px-6 text-center">
         <span className="border border-border bg-background px-3 py-1 font-mono text-[10px] tracking-wider text-muted-foreground uppercase">
-          Private beta · Spring 2027
+          Early access · New templates
         </span>
         <h2 className="mt-8 text-4xl leading-tight font-semibold tracking-tight md:text-6xl">
-          Notes that write their own follow-ups.
+          Be first to get new Designali templates.
         </h2>
         <p className="mt-6 max-w-md text-sm leading-6 text-muted-foreground">
-          Murmur listens to your meetings and drafts the emails, tickets and
-          docs you would have written anyway. Join the list for early access.
+          New templates, blocks and icon packs from Ali Imam land here first.
+          Join the list for early access.
         </p>
 
         {joined ? (
@@ -43,7 +47,7 @@ export default function Forms15() {
             </p>
             <div className="mt-4 flex">
               <span className="flex h-10 min-w-0 flex-1 items-center truncate border border-r-0 border-border bg-muted px-3 font-mono text-xs">
-                murmur.ai/r/k7f2q
+                designali.com/r/k7f2q
               </span>
               <Button
                 variant="outline"
@@ -72,7 +76,7 @@ export default function Forms15() {
               required
               value={email}
               onChange={(event) => setEmail(event.target.value)}
-              placeholder="you@company.com"
+              placeholder="you@example.com"
               className="h-12 bg-background"
             />
             <Button type="submit" size="lg">

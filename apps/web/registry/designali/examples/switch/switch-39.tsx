@@ -1,15 +1,17 @@
 "use client"
 
 import * as React from "react"
-import { PackageIcon } from "lucide-react"
+import {
+  Package as PackageIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import { Switch } from "@workspace/ui/components/switch"
 
 const products = [
-  { id: "p1", name: "Linen throw blanket", sku: "HM-1042", live: true },
-  { id: "p2", name: "Stoneware mug set", sku: "KT-2210", live: true },
-  { id: "p3", name: "Walnut serving board", sku: "KT-2234", live: false },
+  { id: "p1", name: "Portfolio Simple template", sku: "DA-1042", live: true },
+  { id: "p2", name: "Design Agency template", sku: "DA-2210", live: true },
+  { id: "p3", name: "Resort template", sku: "DA-2234", live: false },
 ]
 
 export default function ProductVisibilityList() {

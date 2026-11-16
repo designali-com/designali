@@ -1,14 +1,18 @@
-import { Crown, TrendingDown, TrendingUp } from "lucide-react"
+import {
+  Crown,
+  TrendingDown,
+  TrendingUp,
+} from "@designali/icons"
 
 const leaders = [
-  { name: "Ines Duarte", team: "Lisbon", points: 12840, delta: 3 },
-  { name: "Kwame Asante", team: "Accra", points: 12215, delta: 1 },
-  { name: "Mei Lin", team: "Singapore", points: 11980, delta: -1 },
-  { name: "Oskar Lund", team: "Stockholm", points: 10422, delta: 2 },
-  { name: "Ravi Menon", team: "Bengaluru", points: 9870, delta: 0 },
-  { name: "Clara Vogel", team: "Vienna", points: 9315, delta: -2 },
-  { name: "Diego Ferrer", team: "Valencia", points: 8760, delta: 4 },
-  { name: "Aiko Tanaka", team: "Osaka", points: 8104, delta: -1 },
+  { name: "Ines", team: "UI designer", points: 12840, delta: 3 },
+  { name: "Kwame", team: "Next.js developer", points: 12215, delta: 1 },
+  { name: "Mei", team: "Icon designer", points: 11980, delta: -1 },
+  { name: "Oskar", team: "Motion designer", points: 10422, delta: 2 },
+  { name: "Ravi", team: "Design engineer", points: 9870, delta: 0 },
+  { name: "Clara", team: "Brand designer", points: 9315, delta: -2 },
+  { name: "Diego", team: "Frontend developer", points: 8760, delta: 4 },
+  { name: "Aiko", team: "3D artist", points: 8104, delta: -1 },
 ]
 
 const podium = ["bg-amber-400 text-amber-950", "bg-zinc-300 text-zinc-900", "bg-orange-300 text-orange-950"]
@@ -21,8 +25,8 @@ export default function Lists07() {
       <div className="mx-auto max-w-3xl px-6">
         <div className="flex flex-wrap items-end justify-between gap-4">
           <div>
-            <p className="font-mono text-xs text-muted-foreground">Season 4 · Week 11</p>
-            <h2 className="mt-2 text-4xl font-semibold tracking-tight">Leaderboard</h2>
+            <p className="font-mono text-xs text-muted-foreground">Designali community · Week 11</p>
+            <h2 className="mt-2 text-4xl font-semibold tracking-tight">Top block builders</h2>
           </div>
           <p className="text-xs text-muted-foreground">Resets in 3 days, 14 hours</p>
         </div>

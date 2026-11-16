@@ -31,7 +31,7 @@ export default function RequiredConsentSwitch() {
             Accept data processing agreement
           </FieldLabel>
           <FieldDescription>
-            Required before inviting teammates.
+            Required before inviting Designali studio teammates.
           </FieldDescription>
           {invalid && (
             <FieldError>

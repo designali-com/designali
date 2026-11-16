@@ -1,9 +1,9 @@
 import {
-  ArrowDownIcon,
-  ArrowLeftIcon,
-  ArrowRightIcon,
-  ArrowUpIcon,
-} from "lucide-react"
+  ArrowDown as ArrowDownIcon,
+  ArrowLeft as ArrowLeftIcon,
+  ArrowRight as ArrowRightIcon,
+  ArrowUp as ArrowUpIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {

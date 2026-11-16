@@ -10,7 +10,7 @@ import {
   Sparkles,
   Workflow,
   Zap,
-} from "lucide-react"
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 

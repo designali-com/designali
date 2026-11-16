@@ -1,4 +1,6 @@
-import { SearchIcon } from "lucide-react"
+import {
+  Search as SearchIcon,
+} from "@designali/icons"
 
 import { Input } from "@workspace/ui/components/input"
 import { Label } from "@workspace/ui/components/label"
@@ -13,7 +15,7 @@ export default function VisuallyHiddenSearchLabel() {
       <Input
         id="site-search"
         type="search"
-        placeholder="Search files and folders"
+        placeholder="Search Designali files and folders"
         className="ps-8"
       />
     </div>

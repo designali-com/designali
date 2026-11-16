@@ -1,4 +1,8 @@
-import { PaperclipIcon, SendIcon, Trash2Icon } from "lucide-react"
+import {
+  Paperclip as PaperclipIcon,
+  Send as SendIcon,
+  Trash2 as Trash2Icon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import { Button } from "@workspace/ui/components/button"
@@ -10,19 +14,19 @@ export default function EmailComposerTextarea() {
     <div className="w-full max-w-md border">
       <div className="flex items-center gap-2 border-b px-3 py-1.5 text-xs">
         <span className="text-muted-foreground">To</span>
-        <Badge variant="secondary">liam@greenhouse.studio</Badge>
+        <Badge variant="secondary">client@example.com</Badge>
       </div>
       <Input
         placeholder="Subject"
         aria-label="Subject"
         className="border-0 border-b focus-visible:ring-0"
-        defaultValue="Revised quote for the spring campaign"
+        defaultValue="Revised quote for your brand identity project"
       />
       <Textarea
         aria-label="Message"
         className="min-h-32 border-0 focus-visible:ring-0"
         defaultValue={
-          "Hi Liam,\n\nAttached is the revised quote. The main change is the shorter shoot schedule.\n\nBest,\nAvery"
+          "Hi there,\n\nAttached is the revised Designali quote. The main change is a shorter UI/UX design phase before we start the Next.js build.\n\nBest,\nAli Imam"
         }
       />
       <div className="flex items-center justify-between border-t p-2">

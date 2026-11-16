@@ -1,4 +1,7 @@
-import { DownloadIcon, HeartIcon } from "lucide-react"
+import {
+  Download as DownloadIcon,
+  Heart as HeartIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -15,25 +18,25 @@ import { cn } from "@workspace/ui/lib/utils"
 const artworks = [
   {
     id: "dawn",
-    title: "Dawn Over Harbor",
+    title: "Colorful Spheres",
     gradient: "from-amber-300 via-rose-400 to-violet-500",
     size: "4000 × 3000",
   },
   {
     id: "tide",
-    title: "Low Tide",
+    title: "Abstract Fluid",
     gradient: "from-sky-300 via-cyan-400 to-emerald-500",
     size: "3600 × 2400",
   },
   {
     id: "dusk",
-    title: "Dusk Ridge",
+    title: "Brand Identity",
     gradient: "from-indigo-500 via-purple-500 to-pink-500",
     size: "5120 × 2880",
   },
   {
     id: "moss",
-    title: "Moss Garden",
+    title: "Dalim Visuals",
     gradient: "from-lime-300 via-green-500 to-teal-600",
     size: "3000 × 3000",
   },
@@ -61,7 +64,7 @@ export default function GalleryPreviewDialog() {
             <DialogHeader>
               <DialogTitle>{art.title}</DialogTitle>
               <DialogDescription>
-                {art.size} px · Uploaded by Mira Solberg
+                {art.size} px · Uploaded by Ali Imam
               </DialogDescription>
             </DialogHeader>
             <DialogFooter>

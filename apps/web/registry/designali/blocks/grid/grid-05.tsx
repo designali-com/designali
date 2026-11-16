@@ -1,16 +1,16 @@
 const integrations = [
-  { name: "Slack", category: "Messaging", hue: 330 },
-  { name: "Linear", category: "Issues", hue: 250 },
-  { name: "GitHub", category: "Code", hue: 0 },
-  { name: "Notion", category: "Docs", hue: 40 },
+  { name: "Next.js", category: "Framework", hue: 0 },
+  { name: "React", category: "UI library", hue: 220 },
+  { name: "TypeScript", category: "Language", hue: 250 },
+  { name: "Tailwind CSS", category: "Styling", hue: 200 },
   { name: "Figma", category: "Design", hue: 15 },
-  { name: "Corvia", category: "Payments", hue: 260 },
-  { name: "Vercel", category: "Hosting", hue: 200 },
-  { name: "Sentry", category: "Monitoring", hue: 290 },
-  { name: "HubSpot", category: "CRM", hue: 20 },
-  { name: "Zapier", category: "Automation", hue: 25 },
-  { name: "Intercom", category: "Support", hue: 210 },
-  { name: "Segment", category: "Data", hue: 160 },
+  { name: "Vercel", category: "Hosting", hue: 260 },
+  { name: "GitHub", category: "Code", hue: 290 },
+  { name: "Notion", category: "Docs", hue: 40 },
+  { name: "Cursor", category: "Editor", hue: 160 },
+  { name: "Claude", category: "AI workflows", hue: 30 },
+  { name: "OpenAI", category: "AI workflows", hue: 150 },
+  { name: "Stripe", category: "Payments", hue: 270 },
 ]
 
 export default function Grid05() {
@@ -18,11 +18,11 @@ export default function Grid05() {
     <section className="w-full border-y border-border bg-muted/30 py-24">
       <div className="mx-auto max-w-6xl px-6 text-center">
         <h2 className="text-4xl font-semibold tracking-tight md:text-5xl">
-          Plays well with your stack
+          The stack behind Designali
         </h2>
         <p className="mx-auto mt-4 max-w-md text-sm text-muted-foreground">
-          Two-way sync with the tools your team already lives in. Set up in
-          minutes, no engineering ticket required.
+          Every Designali block and template is designed and built with the
+          tools modern teams already use.
         </p>
 
         <ul className="mt-14 grid grid-cols-2 gap-px border border-border bg-border text-left sm:grid-cols-3 lg:grid-cols-6">
@@ -46,10 +46,10 @@ export default function Grid05() {
         </ul>
 
         <a
-          href="#"
+          href="/docs"
           className="mt-8 inline-block text-sm text-muted-foreground underline-offset-4 hover:text-foreground hover:underline"
         >
-          Browse all 84 integrations
+          See the Designali docs
         </a>
       </div>
     </section>

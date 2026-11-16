@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { CircleCheckIcon } from "lucide-react"
+import {
+  CircleCheck as CircleCheckIcon,
+} from "@designali/icons"
 
 import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
 import { Toggle } from "@workspace/ui/components/toggle"
@@ -19,9 +21,9 @@ export default function ResolveCommentToggle() {
     >
       <div className="flex items-center gap-2">
         <Avatar size="sm">
-          <AvatarFallback>GW</AvatarFallback>
+          <AvatarFallback>AI</AvatarFallback>
         </Avatar>
-        <span className="flex-1 text-sm font-medium">Grace Wu</span>
+        <span className="flex-1 text-sm font-medium">Ali Imam</span>
         <Toggle
           size="sm"
           variant="outline"
@@ -34,7 +36,7 @@ export default function ResolveCommentToggle() {
       </div>
       {!resolved && (
         <p className="text-sm text-muted-foreground">
-          The empty state copy feels too long on mobile. Could we cut the second
+          The Designali hero copy feels too long on mobile. Could we cut the second
           sentence?
         </p>
       )}

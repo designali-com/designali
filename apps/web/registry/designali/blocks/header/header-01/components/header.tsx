@@ -1,7 +1,10 @@
 "use client"
 
 import React from "react"
-import { Equal, X } from "lucide-react"
+import {
+  Equal,
+  X,
+} from "@designali/icons"
 
 import { Menus } from "@/registry/designali/blocks/header/header-01/components/menus"
 import { ModeToggle } from "@/registry/designali/blocks/header/header-01/components/theme-switch"
@@ -10,9 +13,10 @@ import { Button } from "@workspace/ui/components/button"
 import { Logo } from "@/src/components/logo"
 
 const menuItems = [
-  { name: "Components", href: "#" },
-  { name: "Pricing", href: "#" },
-  { name: "Contact", href: "#" },
+  { name: "Templates", href: "/templates" },
+  { name: "Blocks", href: "/blocks" },
+  { name: "Pricing", href: "/pricing" },
+  { name: "Docs", href: "/docs" },
 ]
 
 const Header = () => {
@@ -44,7 +48,7 @@ const Header = () => {
         >
           <div className="relative flex flex-wrap items-center justify-between gap-3 py-1">
             <div className="flex w-full justify-between md:w-auto">
-              <a href="#" aria-label="home" className="flex items-center gap-2">
+              <a href="/" aria-label="Designali home" className="flex items-center gap-2">
                 <Logo className="ml-3 size-8" />
               </a>
               <div className="flex gap-2">

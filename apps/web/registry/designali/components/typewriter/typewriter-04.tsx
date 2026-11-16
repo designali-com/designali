@@ -4,7 +4,7 @@ export default function DemoOne() {
   return (
     <main className="flex h-80 items-center justify-center">
       <Typewriter
-        words={["Custom Cursor", "Looks cool!"]}
+        words={["designali", "design se code tak"]}
         cursorChar="_"
         className="text-4xl"
       />

@@ -1,7 +1,9 @@
 "use client"
 
 import { useState } from "react"
-import { MoveHorizontal } from "lucide-react"
+import {
+  MoveHorizontal,
+} from "@designali/icons"
 
 const changes = [
   { label: "Steps to book", before: "7", after: "3" },
@@ -68,10 +70,10 @@ export default function Portfolio13() {
         <div className="grid gap-6 md:grid-cols-[1fr_auto] md:items-end">
           <div>
             <p className="text-xs tracking-widest text-muted-foreground uppercase">
-              Redesign · Pinewood Physio
+              Redesign · Designali Resort template
             </p>
             <h2 className="mt-3 max-w-2xl text-3xl font-medium tracking-tight md:text-5xl">
-              From a wall of options to a booking you can finish on the bus
+              From a wall of options to a booking you can finish on the go
             </h2>
           </div>
           <p className="text-xs text-muted-foreground">Drag to compare</p>

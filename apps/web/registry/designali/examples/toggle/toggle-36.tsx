@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { EyeOffIcon, GlobeIcon } from "lucide-react"
+import {
+  EyeOff as EyeOffIcon,
+  Globe as GlobeIcon,
+} from "@designali/icons"
 
 import { Spinner } from "@workspace/ui/components/spinner"
 import { Toggle } from "@workspace/ui/components/toggle"

@@ -13,10 +13,10 @@ import { Textarea } from "@workspace/ui/components/textarea"
 import { cn } from "@workspace/ui/lib/utils"
 
 const members = [
-  { handle: "maya", name: "Maya Chen", status: "online" },
-  { handle: "jonah", name: "Jonah Reyes", status: "away" },
-  { handle: "priya", name: "Priya Natarajan", status: "online" },
-  { handle: "elliot", name: "Elliot Brandt", status: "offline" },
+  { handle: "ali", name: "Ali Imam", status: "online" },
+  { handle: "sara", name: "Sara", status: "away" },
+  { handle: "omar", name: "Omar", status: "online" },
+  { handle: "zara", name: "Zara", status: "offline" },
 ]
 
 export default function ChatMentionSuggestions() {

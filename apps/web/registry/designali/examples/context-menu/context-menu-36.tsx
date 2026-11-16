@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { CopyPlusIcon, TrashIcon } from "lucide-react"
+import {
+  CopyPlus as CopyPlusIcon,
+  Trash as TrashIcon,
+} from "@designali/icons"
 
 import {
   ContextMenu,
@@ -26,11 +29,11 @@ const swatches = [
 const initialNotes = [
   {
     id: 1,
-    text: "Users want CSV export from the reports page",
+    text: "Customers want Figma files with every template",
     color: "yellow",
   },
-  { id: 2, text: "Onboarding step 3 is confusing", color: "pink" },
-  { id: 3, text: "Dark mode toggle in the header?", color: "blue" },
+  { id: 2, text: "Docs install step for @designali/icons is unclear", color: "pink" },
+  { id: 3, text: "Dark mode previews on /blocks?", color: "blue" },
 ]
 
 export default function StickyNoteColorMenu() {

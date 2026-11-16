@@ -1,21 +1,23 @@
-import { ArrowRight } from "lucide-react"
+import {
+  ArrowRight,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 
 const steps = [
   {
-    title: "Create a workspace",
-    body: "Sign up with your work email. We import your team from Slack or Google automatically.",
+    title: "Pick a Designali template",
+    body: "Browse /templates and pick a starting point, from portfolios to design agencies.",
     time: "30 sec",
   },
   {
-    title: "Connect a repository",
-    body: "Pick a GitHub or GitLab repo and Relay maps your services, owners and environments.",
+    title: "Add blocks and icons",
+    body: "Install Designali blocks and @designali/icons into your Next.js repo with one command.",
     time: "2 min",
   },
   {
-    title: "Ship your first preview",
-    body: "Open a pull request and get a shareable preview URL with logs, before review even starts.",
+    title: "Ship to Vercel",
+    body: "Push to GitHub and get a production-ready site on Vercel, before your coffee cools.",
     time: "4 min",
   },
 ]
@@ -52,7 +54,7 @@ export default function CallToAction13() {
           ))}
         </ol>
         <p className="mt-6 text-center text-xs text-muted-foreground">
-          Total time to first deploy: about 6 minutes. Free on the Hobby plan.
+          Total time to first deploy: about 6 minutes. Free blocks included.
         </p>
       </div>
     </section>

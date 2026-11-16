@@ -12,7 +12,7 @@ import { Textarea } from "@workspace/ui/components/textarea"
 
 const reasons = [
   "Too expensive",
-  "Missing features",
+  "Missing blocks I need",
   "Switching to another tool",
   "Other",
 ]
@@ -42,7 +42,7 @@ export default function CancellationReasonTextarea() {
         />
       )}
       <Button variant="destructive" size="sm">
-        Cancel subscription
+        Cancel Designali Pro
       </Button>
     </div>
   )

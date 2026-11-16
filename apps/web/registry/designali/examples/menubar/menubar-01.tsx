@@ -117,9 +117,9 @@ import {
           <MenubarTrigger>Profiles</MenubarTrigger>
           <MenubarContent>
             <MenubarRadioGroup value="benoit">
-              <MenubarRadioItem value="andy">Andy</MenubarRadioItem>
-              <MenubarRadioItem value="benoit">Benoit</MenubarRadioItem>
-              <MenubarRadioItem value="Luis">Luis</MenubarRadioItem>
+              <MenubarRadioItem value="andy">Ali Imam</MenubarRadioItem>
+              <MenubarRadioItem value="benoit">Designer</MenubarRadioItem>
+              <MenubarRadioItem value="Luis">Developer</MenubarRadioItem>
             </MenubarRadioGroup>
             <MenubarSeparator />
             <MenubarGroup>

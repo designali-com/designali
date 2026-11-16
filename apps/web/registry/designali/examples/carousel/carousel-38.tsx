@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { WalletIcon } from "lucide-react"
+import {
+  Wallet as WalletIcon,
+} from "@designali/icons"
 
 import {
   Carousel,
@@ -14,17 +16,17 @@ const wallets = [
   {
     currency: "USD",
     balance: "$12,480.20",
-    last: ["Corvia payout +$2,100", "AWS invoice -$412"],
+    last: ["Template sales +$2,100", "Vercel invoice -$412"],
   },
   {
     currency: "EUR",
     balance: "€4,902.75",
-    last: ["Client Lyon +€1,250", "Office rent -€980"],
+    last: ["Brand identity project +€1,250", "Studio rent -€980"],
   },
   {
     currency: "GBP",
     balance: "£1,130.00",
-    last: ["Refund +£45", "Contractor -£600"],
+    last: ["Icon pack refund +£45", "Motion freelancer -£600"],
   },
 ]
 

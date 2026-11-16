@@ -1,14 +1,16 @@
 "use client"
 
 import * as React from "react"
-import { XIcon } from "lucide-react"
+import {
+  X as XIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Textarea } from "@workspace/ui/components/textarea"
 
 export default function ClearableTextarea() {
   const [value, setValue] = React.useState(
-    "Pick up dry cleaning, buy oat milk, return library books"
+    "Export logo files, update the icons package, publish new blocks"
   )
 
   return (
@@ -17,8 +19,8 @@ export default function ClearableTextarea() {
         value={value}
         onChange={(e) => setValue(e.target.value)}
         className="pe-8"
-        aria-label="Errands"
-        placeholder="Errands for today"
+        aria-label="Studio tasks"
+        placeholder="Designali tasks for today"
       />
       {value && (
         <Button

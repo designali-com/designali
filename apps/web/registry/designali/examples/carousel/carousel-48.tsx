@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { PlayCircleIcon } from "lucide-react"
+import {
+  CirclePlay as PlayCircleIcon,
+} from "@designali/icons"
 
 import {
   Carousel,
@@ -15,11 +17,11 @@ import {
 } from "@workspace/ui/components/native-select"
 
 const chapters = [
-  { title: "Introduction", time: "0:00" },
-  { title: "Setting up the project", time: "2:14" },
-  { title: "Writing the first query", time: "7:40" },
-  { title: "Handling errors", time: "13:05" },
-  { title: "Deploying", time: "18:22" },
+  { title: "Intro with Ali Imam", time: "0:00" },
+  { title: "Designing in Figma", time: "2:14" },
+  { title: "Setting up Next.js", time: "7:40" },
+  { title: "Adding Designali blocks", time: "13:05" },
+  { title: "Deploying to Vercel", time: "18:22" },
 ]
 
 export default function VideoChapterJump() {

@@ -1,4 +1,6 @@
-import { ChevronDownIcon } from "lucide-react"
+import {
+  ChevronDown as ChevronDownIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Checkbox } from "@workspace/ui/components/checkbox"
@@ -12,10 +14,10 @@ import { Label } from "@workspace/ui/components/label"
 const facets = [
   {
     title: "Category",
-    options: ["Jackets", "Knitwear", "Trousers", "Accessories"],
+    options: ["Templates", "Blocks", "Icons", "Logos"],
   },
-  { title: "Size", options: ["XS", "S", "M", "L", "XL"] },
-  { title: "Material", options: ["Wool", "Cotton", "Linen"] },
+  { title: "Stack", options: ["Next.js", "React", "TypeScript", "Tailwind", "Figma"] },
+  { title: "License", options: ["Personal", "Commercial", "Team"] },
 ]
 
 export default function ShopFilterFacets() {

@@ -5,51 +5,54 @@ import {
   Globe,
   KeyRound,
   Layers,
-  type LucideIcon,
-} from "lucide-react"
+} from "@designali/icons"
+
+import type * as React from "react"
+
+type IconComponent = React.ComponentType<React.SVGProps<SVGSVGElement> & { size?: number | string; strokeWidth?: number }>
 
 const cells: {
-  icon: LucideIcon
+  icon: IconComponent
   title: string
   description: string
   className: string
 }[] = [
   {
     icon: Gauge,
-    title: "Edge rendering",
+    title: "Production-ready blocks",
     description:
-      "Pages render in the region closest to your visitor, with a median TTFB of 38ms worldwide.",
+      "Designali ships 460+ copy-and-paste blocks built with Next.js, React and Tailwind CSS.",
     className: "md:col-span-2 md:row-span-2",
   },
   {
     icon: GitBranch,
-    title: "Preview branches",
-    description: "Every pull request gets its own live URL.",
+    title: "Templates",
+    description: "Launch-ready Next.js templates for any brand.",
     className: "",
   },
   {
     icon: KeyRound,
-    title: "Secrets vault",
-    description: "Encrypted environment variables per stage.",
+    title: "Icons",
+    description: "4000+ icons in @designali/icons.",
     className: "",
   },
   {
     icon: Globe,
-    title: "Custom domains",
-    description: "Automatic TLS and apex support.",
+    title: "Deploy on Vercel",
+    description: "Ship your site in minutes.",
     className: "",
   },
   {
     icon: Layers,
-    title: "Instant rollbacks",
-    description: "Revert any deploy in a single click.",
+    title: "Design systems",
+    description: "Semantic tokens for light and dark.",
     className: "",
   },
   {
     icon: Blocks,
-    title: "Integrations",
+    title: "Logos and vectors",
     description:
-      "Connect your CMS, analytics and error tracking from a library of 60+ first-party integrations.",
+      "Brand logos from @designali/logos and abstract shapes from @designali/vectors, ready for any page.",
     className: "md:col-span-2",
   },
 ]
@@ -59,7 +62,7 @@ export default function Grid01() {
     <section className="w-full bg-background py-24">
       <div className="mx-auto max-w-6xl px-6">
         <h2 className="max-w-xl text-4xl font-semibold tracking-tight md:text-5xl">
-          Everything you need to ship, nothing you have to maintain.
+          Everything you need to ship with Designali, design se code tak.
         </h2>
 
         <div className="mt-14 grid auto-rows-[minmax(180px,auto)] grid-cols-1 gap-px border border-border bg-border md:grid-cols-4">
@@ -72,9 +75,9 @@ export default function Grid01() {
               {index === 0 && (
                 <div className="my-8 flex items-end gap-2">
                   <span className="text-7xl font-semibold tracking-tighter md:text-8xl">
-                    38
+                    460+
                   </span>
-                  <span className="mb-3 text-sm text-muted-foreground">ms median TTFB</span>
+                  <span className="mb-3 text-sm text-muted-foreground">Designali blocks</span>
                 </div>
               )}
               <div>

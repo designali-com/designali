@@ -1,4 +1,8 @@
-import { CircleCheckIcon, CircleXIcon, GitPullRequestIcon } from "lucide-react"
+import {
+  CircleCheck as CircleCheckIcon,
+  CircleX as CircleXIcon,
+  GitPullRequest as GitPullRequestIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import {
@@ -24,7 +28,7 @@ export default function PullRequestChecksHoverCard() {
           href="#"
           className="flex-1 truncate font-medium hover:underline"
         >
-          Add bulk export to reports
+          Add pricing blocks to Designali registry
         </HoverCardTrigger>
         <HoverCardContent align="start" className="flex w-64 flex-col gap-2">
           <div className="flex items-center justify-between">

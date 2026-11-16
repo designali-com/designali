@@ -2,7 +2,9 @@
 
 import * as React from "react"
 import { isAfter, startOfDay } from "date-fns"
-import { FlameIcon } from "lucide-react"
+import {
+  Flame as FlameIcon,
+} from "@designali/icons"
 
 import { Calendar, CalendarDayButton } from "@workspace/ui/components/calendar"
 import {
@@ -55,7 +57,7 @@ export default function WorkoutStreakHeatmap() {
         <CardTitle className="flex items-center gap-2">
           <FlameIcon className="size-4 text-orange-500" />5 day streak
         </CardTitle>
-        <CardDescription>Minutes trained this month.</CardDescription>
+        <CardDescription>Minutes spent designing in Figma this month.</CardDescription>
       </CardHeader>
       <CardContent className="flex flex-col gap-3">
         <Calendar

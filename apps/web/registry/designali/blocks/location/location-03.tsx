@@ -1,40 +1,43 @@
 "use client"
 
 import { useState } from "react"
-import { MapPin, Search } from "lucide-react"
+import {
+  MapPin,
+  Search,
+} from "@designali/icons"
 
 import { Input } from "@workspace/ui/components/input"
 import { cn } from "@workspace/ui/lib/utils"
 
 const stores = [
   {
-    name: "Hayes Valley",
-    address: "455 Hayes St, San Francisco",
-    distance: "0.4 mi",
+    name: "Americas",
+    address: "Remote · UTC−8 to UTC−3",
+    distance: "Async",
     open: true,
     x: 38,
     y: 42,
   },
   {
-    name: "Mission District",
-    address: "2101 Mission St, San Francisco",
-    distance: "1.2 mi",
+    name: "Europe",
+    address: "Remote · UTC to UTC+3",
+    distance: "Live",
     open: true,
     x: 46,
     y: 66,
   },
   {
-    name: "North Beach",
-    address: "1450 Grant Ave, San Francisco",
-    distance: "2.1 mi",
+    name: "Middle East",
+    address: "Remote · UTC+3 to UTC+4",
+    distance: "Live",
     open: false,
     x: 64,
     y: 18,
   },
   {
-    name: "Sunset",
-    address: "1830 Irving St, San Francisco",
-    distance: "3.6 mi",
+    name: "Asia Pacific",
+    address: "Remote · UTC+5:30 to UTC+10",
+    distance: "Live",
     open: true,
     x: 16,
     y: 56,
@@ -54,14 +57,14 @@ export default function Location03() {
         <aside className="flex flex-col border-b md:border-e md:border-b-0">
           <div className="space-y-4 border-b p-6">
             <h2 className="text-2xl font-semibold tracking-tight">
-              Find a store
+              Designali time zones
             </h2>
             <div className="relative">
               <Search className="absolute start-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground" />
               <Input
                 value={query}
                 onChange={(event) => setQuery(event.target.value)}
-                placeholder="Search by neighborhood"
+                placeholder="Search by region"
                 className="h-10 ps-9"
               />
             </div>
@@ -91,7 +94,7 @@ export default function Location03() {
                           store.open ? "text-emerald-600" : "text-muted-foreground"
                         )}
                       >
-                        {store.open ? "Open now" : "Closed · opens 8am"}
+                        {store.open ? "Available now" : "Offline · replies within 24h"}
                       </span>
                     </span>
                     <span className="text-xs text-muted-foreground">
@@ -103,7 +106,7 @@ export default function Location03() {
             })}
             {results.length === 0 && (
               <li className="p-6 text-sm text-muted-foreground">
-                No stores match &ldquo;{query}&rdquo;.
+                No regions match &ldquo;{query}&rdquo;.
               </li>
             )}
           </ul>

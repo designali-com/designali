@@ -1,7 +1,12 @@
 "use client"
 
 import * as React from "react"
-import { PlayIcon, Volume1Icon, Volume2Icon, VolumeXIcon } from "lucide-react"
+import {
+  Play as PlayIcon,
+  Volume1 as Volume1Icon,
+  Volume2 as Volume2Icon,
+  VolumeX as VolumeXIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -23,7 +28,7 @@ export default function VolumePopover() {
       </Button>
       <div className="flex min-w-0 flex-1 flex-col">
         <span className="truncate text-xs font-medium">
-          Ep. 42 · Building in public
+          Ep. 42 · Design se code tak
         </span>
         <span className="text-[11px] text-muted-foreground">12:08 / 48:30</span>
       </div>

@@ -10,27 +10,27 @@ import {
 const industries = [
   {
     id: "fintech",
-    label: "Fintech",
-    stat: "240+ financial teams",
-    names: ["Nimbus Bank", "Ledgerly", "Coinpath", "Truecap", "Fairway Pay", "Minted"],
+    label: "Templates",
+    stat: "240+ landing pages",
+    names: ["Portfolio Simple", "Design Agency", "Resort", "AI", "Vercel", "Ali Imam Portfolio"],
   },
   {
     id: "health",
-    label: "Healthcare",
-    stat: "90+ care providers",
-    names: ["Oakmont Health", "Helix Bio", "Carewell", "Pulsewise", "Medara", "Lumen Clinics"],
+    label: "Blocks",
+    stat: "460+ blocks",
+    names: ["Hero", "Pricing", "FAQs", "Contact", "Analytics", "Authentication"],
   },
   {
     id: "commerce",
-    label: "Commerce",
-    stat: "410+ storefronts",
-    names: ["Mosswood", "Threadline", "Bask & Co", "Parcelo", "Goodform", "Rally Goods"],
+    label: "Components",
+    stat: "Bento to Marquee",
+    names: ["Bento", "Number Counter", "Gauge", "Dot Pattern", "Marquee", "Typewriter"],
   },
   {
     id: "devtools",
-    label: "Developer tools",
-    stat: "180+ dev platforms",
-    names: ["Ferro", "Stackway", "Deployr", "Quarry", "Bytewise", "Tessel"],
+    label: "Libraries",
+    stat: "4,000+ icons",
+    names: ["@designali/icons", "@designali/logos", "@designali/vectors", "Dalim UI", "Dalim Icons", "Dalim Fonts"],
   },
 ]
 
@@ -42,10 +42,10 @@ export default function Clients17() {
           <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
             <div>
               <h2 className="text-3xl font-semibold tracking-tight md:text-4xl">
-                Built for your industry
+                Built for every part of your site
               </h2>
               <p className="mt-3 text-sm text-muted-foreground">
-                See who already ships with us in your space.
+                See what ships from the Designali studio.
               </p>
             </div>
             <div className="-mx-6 overflow-x-auto px-6 md:mx-0 md:px-0">
@@ -78,7 +78,7 @@ export default function Clients17() {
                 <span className="font-medium text-foreground">
                   {industry.stat}
                 </span>{" "}
-                rely on our blocks for regulated, high-traffic surfaces.
+                ship from the same Designali design system.
               </p>
             </TabsContent>
           ))}

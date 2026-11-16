@@ -1,15 +1,19 @@
 "use client"
 
 import { useState } from "react"
-import { Calendar, Check, Clock } from "lucide-react"
+import {
+  Calendar,
+  Check,
+  Clock,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { cn } from "@workspace/ui/lib/utils"
 
 const team = [
-  { initials: "RK", tone: "bg-amber-200 text-amber-900 dark:bg-amber-900 dark:text-amber-100" },
-  { initials: "MS", tone: "bg-sky-200 text-sky-900 dark:bg-sky-900 dark:text-sky-100" },
-  { initials: "JO", tone: "bg-emerald-200 text-emerald-900 dark:bg-emerald-900 dark:text-emerald-100" },
+  { initials: "AI", tone: "bg-amber-200 text-amber-900 dark:bg-amber-900 dark:text-amber-100" },
+  { initials: "DS", tone: "bg-sky-200 text-sky-900 dark:bg-sky-900 dark:text-sky-100" },
+  { initials: "DV", tone: "bg-emerald-200 text-emerald-900 dark:bg-emerald-900 dark:text-emerald-100" },
 ]
 
 const days = [
@@ -32,9 +36,9 @@ export default function CallToAction14() {
               Talk to someone who has done this before.
             </h2>
             <p className="mt-4 max-w-md text-sm leading-7 text-muted-foreground">
-              A 25-minute call with a solutions engineer. We will look at your
+              A 25-minute call with Ali Imam. We will look at your
               current stack, estimate migration effort, and tell you honestly
-              if Canopy is the wrong fit.
+              if Designali is the wrong fit.
             </p>
           </div>
           <div className="flex items-center gap-4">

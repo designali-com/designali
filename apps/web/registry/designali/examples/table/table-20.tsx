@@ -1,4 +1,7 @@
-import { CheckIcon, MinusIcon } from "lucide-react"
+import {
+  Check as CheckIcon,
+  Minus as MinusIcon,
+} from "@designali/icons"
 
 import {
   Table,
@@ -12,9 +15,9 @@ import { cn } from "@workspace/ui/lib/utils"
 
 const plans = ["Free", "Pro", "Team"]
 const features = [
-  { name: "Projects", values: ["3", "Unlimited", "Unlimited"] },
-  { name: "Custom domains", values: [false, true, true] },
-  { name: "Version history", values: ["7 days", "90 days", "Unlimited"] },
+  { name: "Blocks", values: ["50", "460+", "460+"] },
+  { name: "Figma source files", values: [false, true, true] },
+  { name: "Template updates", values: ["7 days", "90 days", "Unlimited"] },
   { name: "SSO", values: [false, false, true] },
   { name: "Priority support", values: [false, true, true] },
 ]

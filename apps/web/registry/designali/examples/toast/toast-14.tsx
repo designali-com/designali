@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { FileIcon, Trash2Icon } from "lucide-react"
+import {
+  File as FileIcon,
+  Trash2 as Trash2Icon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Toaster, createToastManager } from "@workspace/ui/components/toast"
@@ -9,8 +12,8 @@ import { Toaster, createToastManager } from "@workspace/ui/components/toast"
 const notify = createToastManager()
 
 const initialFiles = [
-  { name: "Q3-forecast.xlsx", size: "182 KB" },
-  { name: "offsite-agenda.docx", size: "48 KB" },
+  { name: "designali-brand-guide.pdf", size: "182 KB" },
+  { name: "studio-retro-notes.docx", size: "48 KB" },
   { name: "logo-final-v4.svg", size: "12 KB" },
 ]
 

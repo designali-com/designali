@@ -1,7 +1,12 @@
 "use client"
 
 import { useState } from "react"
-import { Check, Copy, Download, Smartphone } from "lucide-react"
+import {
+  Check,
+  Copy,
+  Download,
+  Smartphone,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Input } from "@workspace/ui/components/input"
@@ -108,7 +113,7 @@ export default function Authentication06() {
                       {copied ? <Check className="size-4" /> : <Copy className="size-4" />}
                     </button>
                   </div>
-                  <p className="text-xs text-muted-foreground">Account: dev@kestrelcloud.io &middot; Kestrel Cloud</p>
+                  <p className="text-xs text-muted-foreground">Account: ali@designali.com &middot; Designali</p>
                 </div>
               </div>
               <Button className="w-full" onClick={() => setStep(1)}>
@@ -128,7 +133,7 @@ export default function Authentication06() {
               <div>
                 <h2 className="text-2xl font-semibold tracking-tight">Enter the 6-digit code</h2>
                 <p className="mt-2 text-sm text-muted-foreground">
-                  Type the code your authenticator app shows for Kestrel Cloud.
+                  Type the code your authenticator app shows for Designali.
                 </p>
               </div>
               <Input

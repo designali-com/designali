@@ -3,10 +3,10 @@ import { Card, CardContent } from "@workspace/ui/components/card"
 import {
   Copy,
   Sparkles,
-  Code2,
+  CodeXml as Code2,
   LayoutTemplate,
   Gauge,
-} from "lucide-react"
+} from "@designali/icons"
 
 interface FeatureItem {
   icon: React.ReactNode
@@ -92,8 +92,8 @@ const FeatureCard = ({
 
 export const Feature08 = ({
   label = "Features",
-  title = "You need to build faster",
-  description = "A modern toolkit of components, templates, and resources built for Design Engineers.",
+  title = "Everything you need to ship with Designali",
+  description = "A modern toolkit of blocks, templates, icons, and logos by Designali, built for design engineers.",
   features = [
     {
       icon: <Copy className="size-5" />,

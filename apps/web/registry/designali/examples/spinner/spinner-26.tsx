@@ -1,4 +1,9 @@
-import { ArchiveIcon, InboxIcon, SendIcon, StarIcon } from "lucide-react"
+import {
+  Archive as ArchiveIcon,
+  Inbox as InboxIcon,
+  Send as SendIcon,
+  Star as StarIcon,
+} from "@designali/icons"
 
 import { Spinner } from "@workspace/ui/components/spinner"
 import { cn } from "@workspace/ui/lib/utils"

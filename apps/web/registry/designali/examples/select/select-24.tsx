@@ -1,4 +1,6 @@
-import { ClockIcon } from "lucide-react"
+import {
+  Clock as ClockIcon,
+} from "@designali/icons"
 
 import { Field, FieldLabel } from "@workspace/ui/components/field"
 import {
@@ -25,7 +27,7 @@ export default function MeetingTimeSelect() {
   return (
     <div className="flex w-full max-w-xs flex-col gap-3 border p-4">
       <div className="flex flex-col">
-        <span className="text-sm font-medium">Design review</span>
+        <span className="text-sm font-medium">Designali design review</span>
         <span className="text-xs text-muted-foreground">
           Thursday, March 12 - 45 min
         </span>

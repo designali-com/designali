@@ -1,4 +1,7 @@
-import { Check, Minus } from "lucide-react"
+import {
+  Check,
+  Minus,
+} from "@designali/icons"
 
 const rows = [
   { feature: "Unlimited projects", us: true, them: false },

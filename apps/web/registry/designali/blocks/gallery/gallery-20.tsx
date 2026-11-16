@@ -1,7 +1,13 @@
 "use client"
 
 import { useState } from "react"
-import { Bookmark, Grid3x3, Heart, MessageCircle, Play } from "lucide-react"
+import {
+  Bookmark,
+  Grid3x3,
+  Heart,
+  MessageCircle,
+  Play,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { cn } from "@workspace/ui/lib/utils"
@@ -11,7 +17,7 @@ const posts = Array.from({ length: 9 }, (_, i) => ({
   likes: [1284, 932, 2410, 488, 1760, 3021, 655, 1149, 870][i]!,
   comments: [86, 41, 203, 17, 94, 312, 28, 77, 45][i]!,
   video: i === 1 || i === 5,
-  gradient: `linear-gradient(${30 + i * 37}deg, var(--chart-${(i % 5) + 1}), var(--chart-${((i + 2) % 5) + 1}))`,
+  gradient: `url("/img/ask/ask${i + 1}.jpg") center / cover`,
 }))
 
 const tabs = [
@@ -30,13 +36,15 @@ export default function Gallery20() {
       <div className="mx-auto max-w-4xl px-6">
         <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:gap-10">
           <div className="flex size-24 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-amber-400 via-rose-500 to-violet-600 p-[3px] sm:size-32">
-            <div className="flex size-full items-center justify-center rounded-full bg-background text-2xl font-semibold sm:text-3xl">
-              LM
-            </div>
+            <img
+              src="/ali.jpg"
+              alt="Ali Imam"
+              className="size-full rounded-full border-2 border-background object-cover"
+            />
           </div>
           <div className="min-w-0 flex-1">
             <div className="flex flex-wrap items-center gap-3">
-              <h2 className="text-xl font-semibold">lena.makes</h2>
+              <h2 className="text-xl font-semibold">designali.code</h2>
               <Button size="sm" variant={following ? "outline" : "default"} onClick={() => setFollowing((f) => !f)}>
                 {following ? "Following" : "Follow"}
               </Button>
@@ -48,8 +56,8 @@ export default function Gallery20() {
               <div><dt className="sr-only">Following</dt><dd><b>391</b> following</dd></div>
             </dl>
             <p className="mt-3 text-sm">
-              <span className="font-medium">Lena Moritz</span> - ceramicist, Rotterdam. Small-batch tableware, glaze
-              experiments and studio mess. Next kiln opening: 2 Dec.
+              <span className="font-medium">Designali</span> - design and development studio by Ali Imam. Brand
+              identity, UI/UX, CGI and production-ready code. Design se code tak.
             </p>
           </div>
         </div>
@@ -73,7 +81,7 @@ export default function Gallery20() {
 
         <div className="grid grid-cols-3 gap-1">
           {visible.map((post) => (
-            <a key={post.id} href="#" className="group relative aspect-square overflow-hidden">
+            <a key={post.id} href="https://www.instagram.com/designali.code/" className="group relative aspect-square overflow-hidden">
               <div className="absolute inset-0" style={{ background: post.gradient }} />
               {post.video && <Play className="absolute top-2 right-2 size-4 fill-white text-white" />}
               <div className="absolute inset-0 flex items-center justify-center gap-4 bg-black/40 text-xs font-semibold text-white opacity-0 transition-opacity group-hover:opacity-100 sm:text-sm">

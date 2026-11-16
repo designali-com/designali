@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { HashIcon, MessageSquareIcon } from "lucide-react"
+import {
+  Hash as HashIcon,
+  MessageSquare as MessageSquareIcon,
+} from "@designali/icons"
 
 import {
   Combobox,

@@ -2,11 +2,11 @@
 
 import * as React from "react"
 import {
-  BookOpenIcon,
-  CircleHelpIcon,
-  KeyboardIcon,
-  LifeBuoyIcon,
-} from "lucide-react"
+  BookOpen as BookOpenIcon,
+  CircleQuestionMark as CircleHelpIcon,
+  Keyboard as KeyboardIcon,
+  LifeBuoy as LifeBuoyIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {

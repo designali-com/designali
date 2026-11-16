@@ -20,12 +20,12 @@ export default function ControlledHoverCard() {
           href="#"
           className="text-sm font-medium underline underline-offset-4"
         >
-          @release-bot
+          @designali-bot
         </HoverCardTrigger>
         <HoverCardContent>
-          <p className="font-medium">Release Bot</p>
+          <p className="font-medium">Designali Bot</p>
           <p className="text-muted-foreground">
-            Posts changelogs to #announcements every Friday at 4 PM.
+            Posts new Designali templates to #announcements every Friday at 4 PM.
           </p>
         </HoverCardContent>
       </HoverCard>

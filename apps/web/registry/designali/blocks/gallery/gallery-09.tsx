@@ -1,19 +1,24 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { ChevronLeft, ChevronRight, Expand, X } from "lucide-react"
+import {
+  ChevronLeft,
+  ChevronRight,
+  Expand,
+  X,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 
 const photos = [
-  { title: "Copper Hills", camera: "f/2.8 - 1/250s", gradient: "linear-gradient(135deg, var(--chart-1), var(--chart-4))" },
-  { title: "Still Water", camera: "f/4 - 1/125s", gradient: "linear-gradient(180deg, var(--chart-2), var(--chart-3))" },
-  { title: "Ash Forest", camera: "f/5.6 - 1/60s", gradient: "linear-gradient(210deg, var(--chart-3), var(--chart-5))" },
-  { title: "Red Canyon", camera: "f/8 - 1/500s", gradient: "linear-gradient(60deg, var(--chart-5), var(--chart-1))" },
-  { title: "Pale Shore", camera: "f/2 - 1/1000s", gradient: "linear-gradient(100deg, var(--chart-4), var(--chart-2))" },
-  { title: "Night Bloom", camera: "f/1.8 - 1/30s", gradient: "linear-gradient(300deg, var(--chart-2), var(--chart-5))" },
-  { title: "Iron Bridge", camera: "f/11 - 1/200s", gradient: "linear-gradient(20deg, var(--chart-3), var(--chart-1))" },
-  { title: "Fog Line", camera: "f/4 - 1/80s", gradient: "linear-gradient(160deg, var(--chart-4), var(--chart-3))" },
+  { title: "Glass Spheres", camera: "CGI render", gradient: 'url("/img/ask/ask1.jpg") center / cover' },
+  { title: "Liquid Chrome", camera: "3D study", gradient: 'url("/img/ask/ask2.jpg") center / cover' },
+  { title: "Soft Light", camera: "Motion frame", gradient: 'url("/img/ask/ask3.jpg") center / cover' },
+  { title: "Folded Form", camera: "Abstract render", gradient: 'url("/img/ask/ask4.jpg") center / cover' },
+  { title: "Pale Shore", camera: "Colour study", gradient: 'url("/img/ask/ask5.jpg") center / cover' },
+  { title: "Night Bloom", camera: "CGI render", gradient: 'url("/img/ask/ask6.jpg") center / cover' },
+  { title: "Iron Bridge", camera: "3D study", gradient: 'url("/img/ask/ask7.jpg") center / cover' },
+  { title: "Fog Line", camera: "Motion frame", gradient: 'url("/img/ask/ask8.jpg") center / cover' },
 ]
 
 export default function Gallery09() {
@@ -44,10 +49,10 @@ export default function Gallery09() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="max-w-xl">
           <h2 className="text-3xl font-semibold tracking-tight md:text-4xl">
-            The Long Exposure Collection
+            The Designali Visuals Collection
           </h2>
           <p className="mt-3 text-muted-foreground">
-            Eight prints from a month on the road. Click any frame to view it
+            Eight CGI and 3D pieces by Ali Imam. Click any frame to view it
             full screen, use the arrow keys to move between them.
           </p>
         </div>

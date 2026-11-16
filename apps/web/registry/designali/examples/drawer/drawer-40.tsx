@@ -1,10 +1,10 @@
 import {
-  ChevronDownIcon,
-  CloudUploadIcon,
-  ExternalLinkIcon,
-  FileVideoIcon,
-  PauseIcon,
-} from "lucide-react"
+  ChevronDown as ChevronDownIcon,
+  CloudUpload as CloudUploadIcon,
+  ExternalLink as ExternalLinkIcon,
+  FileVideoCamera as FileVideoIcon,
+  Pause as PauseIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -19,9 +19,9 @@ import {
 import { Progress } from "@workspace/ui/components/progress"
 
 const queue = [
-  { name: "wedding-highlights.mp4", size: "1.2 GB", progress: 72 },
-  { name: "ceremony-raw-01.mov", size: "3.4 GB", progress: 24 },
-  { name: "speech-audio.wav", size: "180 MB", progress: 100 },
+  { name: "colorful-spheres.mp4", size: "1.2 GB", progress: 72 },
+  { name: "abstract-fluid.mov", size: "3.4 GB", progress: 24 },
+  { name: "brand-reel-audio.wav", size: "180 MB", progress: 100 },
 ]
 
 export default function UploadQueueNonModalDrawer() {

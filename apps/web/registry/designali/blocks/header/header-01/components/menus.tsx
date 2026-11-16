@@ -4,12 +4,12 @@ import * as React from "react"
 import Link from "next/link"
 
 import {
-  ArrowUpRightIcon,
-  BlocksIcon,
-  Code2Icon,
-  ComponentIcon,
-  SwatchBookIcon,
-} from "lucide-react"
+  ArrowUpRight as ArrowUpRightIcon,
+  Blocks as BlocksIcon,
+  CodeXml as Code2Icon,
+  Component as ComponentIcon,
+  SwatchBook as SwatchBookIcon,
+} from "@designali/icons"
 
 import { cn } from "@workspace/ui/lib/utils"
 
@@ -37,10 +37,10 @@ const designResources = [
       "Build complete sections and interfaces with flexible UI blocks.",
   },
   {
-    title: "Colors",
-    href: "/colors",
+    title: "Icons",
+    href: "/icons",
     description:
-      "Explore accessible colors, gradients, and modern color combinations.",
+      "4000+ lucide-compatible icons from @designali/icons.",
   },
   {
     title: "Design System",
@@ -154,11 +154,11 @@ export function Menus() {
               </IconListItem>
 
               <IconListItem
-                href="/colors"
+                href="/illustration"
                 icon={<SwatchBookIcon />}
-                title="Color System"
+                title="Illustrations"
               >
-                Colors, gradients, and accessible design foundations.
+                Abstract shapes and vectors from @designali/vectors.
               </IconListItem>
             </div>
           </NavigationMenuContent>
@@ -168,7 +168,7 @@ export function Menus() {
         <NavigationMenuItem>
           <NavigationMenuLink
             className={navigationMenuTriggerStyle()}
-            render={<Link href="/showcase">Showcase</Link>}
+            render={<Link href="/pricing">Pricing</Link>}
           />
         </NavigationMenuItem>
 
@@ -176,7 +176,7 @@ export function Menus() {
         <NavigationMenuItem>
           <NavigationMenuLink
             className={navigationMenuTriggerStyle()}
-            render={<Link href="/contact">Contact</Link>}
+            render={<Link href="/blogs">Blogs</Link>}
           />
         </NavigationMenuItem>
       </NavigationMenuList>

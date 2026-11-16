@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { TimerIcon } from "lucide-react"
+import {
+  Timer as TimerIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Progress } from "@workspace/ui/components/progress"

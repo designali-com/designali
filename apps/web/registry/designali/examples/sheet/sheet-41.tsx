@@ -1,4 +1,8 @@
-import { GripVerticalIcon, ListMusicIcon, PauseIcon } from "lucide-react"
+import {
+  GripVertical as GripVerticalIcon,
+  ListMusic as ListMusicIcon,
+  Pause as PauseIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {

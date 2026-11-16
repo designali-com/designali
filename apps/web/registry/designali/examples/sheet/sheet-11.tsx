@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { CalendarIcon } from "lucide-react"
+import {
+  Calendar as CalendarIcon,
+} from "@designali/icons"
 
 import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
 import { Badge } from "@workspace/ui/components/badge"
@@ -20,10 +22,10 @@ import {
 import { cn } from "@workspace/ui/lib/utils"
 
 const initialSubtasks = [
-  { id: "a", label: "Draft API contract", done: true },
-  { id: "b", label: "Review with platform team", done: true },
-  { id: "c", label: "Add rate limiting", done: false },
-  { id: "d", label: "Write migration guide", done: false },
+  { id: "a", label: "Draft block API", done: true },
+  { id: "b", label: "Review with Ali", done: true },
+  { id: "c", label: "Add dark mode variants", done: false },
+  { id: "d", label: "Write usage docs", done: false },
 ]
 
 export default function TaskDetailSheet() {
@@ -33,12 +35,12 @@ export default function TaskDetailSheet() {
   return (
     <Sheet>
       <SheetTrigger render={<Button variant="outline" />}>
-        Open task ENG-482
+        Open task DSN-482
       </SheetTrigger>
       <SheetContent className="sm:max-w-md">
         <SheetHeader>
-          <span className="text-muted-foreground">ENG-482</span>
-          <SheetTitle>Public webhooks API</SheetTitle>
+          <span className="text-muted-foreground">DSN-482</span>
+          <SheetTitle>Bento blocks release</SheetTitle>
         </SheetHeader>
         <div className="flex flex-col gap-4 px-4">
           <dl className="grid grid-cols-[96px_1fr] gap-y-2">
@@ -49,9 +51,9 @@ export default function TaskDetailSheet() {
             <dt className="text-muted-foreground">Assignee</dt>
             <dd className="flex items-center gap-1.5">
               <Avatar size="sm">
-                <AvatarFallback>RK</AvatarFallback>
+                <AvatarFallback>R</AvatarFallback>
               </Avatar>
-              Rui Kato
+              Rui
             </dd>
             <dt className="text-muted-foreground">Due</dt>
             <dd className="flex items-center gap-1.5">

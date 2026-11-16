@@ -1,4 +1,6 @@
-import { FileCodeIcon } from "lucide-react"
+import {
+  FileCode as FileCodeIcon,
+} from "@designali/icons"
 
 import {
   ResizableHandle,

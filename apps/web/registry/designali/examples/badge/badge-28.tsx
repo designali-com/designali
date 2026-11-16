@@ -1,7 +1,11 @@
 "use client"
 
 import * as React from "react"
-import { CalendarIcon, CloudIcon, MessageSquareIcon } from "lucide-react"
+import {
+  Calendar as CalendarIcon,
+  Cloud as CloudIcon,
+  MessageSquare as MessageSquareIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import { Switch } from "@workspace/ui/components/switch"
@@ -10,20 +14,20 @@ import { cn } from "@workspace/ui/lib/utils"
 const apps = [
   {
     id: "chat",
-    name: "Team chat",
-    description: "Post alerts to a channel",
+    name: "Studio chat",
+    description: "Post Designali client updates to a channel",
     icon: MessageSquareIcon,
   },
   {
     id: "calendar",
     name: "Calendar sync",
-    description: "Mirror due dates",
+    description: "Mirror project milestones",
     icon: CalendarIcon,
   },
   {
     id: "storage",
-    name: "Cloud storage",
-    description: "Attach shared files",
+    name: "Figma files",
+    description: "Attach design files to projects",
     icon: CloudIcon,
   },
 ]

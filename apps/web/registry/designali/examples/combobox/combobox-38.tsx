@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { SendIcon } from "lucide-react"
+import {
+  Send as SendIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -27,12 +29,12 @@ import {
 } from "@workspace/ui/components/combobox"
 
 const people = [
-  "Amara Obi",
-  "Ben Carter",
-  "Chen Wei",
-  "Dara Flynn",
-  "Eva Novak",
-  "Felix Grün",
+  "Ali Imam",
+  "Ben",
+  "Chen",
+  "Dara",
+  "Eva",
+  "Felix",
 ]
 const roles = ["Can view", "Can comment", "Can edit"]
 
@@ -42,7 +44,7 @@ export default function ShareDialogInvite() {
   return (
     <Card className="w-full max-w-md" size="sm">
       <CardHeader>
-        <CardTitle>Share &quot;Q4 launch plan&quot;</CardTitle>
+        <CardTitle>Share &quot;Designali brand guidelines&quot;</CardTitle>
         <CardDescription>
           Invite people to collaborate on this doc.
         </CardDescription>

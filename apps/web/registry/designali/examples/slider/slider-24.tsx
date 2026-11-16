@@ -1,7 +1,11 @@
 "use client"
 
 import * as React from "react"
-import { FrownIcon, MehIcon, SmileIcon } from "lucide-react"
+import {
+  Frown as FrownIcon,
+  Meh as MehIcon,
+  Smile as SmileIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Slider } from "@workspace/ui/components/slider"
@@ -14,7 +18,7 @@ export default function SatisfactionScoreSlider() {
   return (
     <div className="flex w-full max-w-sm flex-col gap-4 border p-4">
       <p className="text-sm font-medium">
-        How likely are you to recommend Harbor Notes to a colleague?
+        How likely are you to recommend Designali to a colleague?
       </p>
       <div className="flex items-center gap-3">
         <Icon className="size-6 shrink-0 text-muted-foreground" />

@@ -1,17 +1,26 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { Heart, ListMusic, Pause, Play, Repeat, Shuffle, SkipBack, SkipForward } from "lucide-react"
+import {
+  Heart,
+  ListMusic,
+  Pause,
+  Play,
+  Repeat,
+  Shuffle,
+  SkipBack,
+  SkipForward,
+} from "@designali/icons"
 
 import { cn } from "@workspace/ui/lib/utils"
 
 const tracks = [
-  { title: "Harbour Lights", length: 214 },
-  { title: "Paper Kites", length: 187 },
-  { title: "A Slow Return", length: 263 },
-  { title: "Coastline (Interlude)", length: 92 },
-  { title: "Everything Hums", length: 231 },
-  { title: "Last Train South", length: 298 },
+  { title: "Design se Code Tak", length: 214 },
+  { title: "Pixel Rain", length: 187 },
+  { title: "Grid Lines", length: 263 },
+  { title: "Dark Mode (Interlude)", length: 92 },
+  { title: "Tailwind Drift", length: 231 },
+  { title: "Ship It", length: 298 },
 ]
 const fmt = (s: number) => `${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}`
 
@@ -48,13 +57,13 @@ export default function Media08() {
             style={{ background: "conic-gradient(from 200deg at 60% 40%, var(--chart-1), var(--chart-4), var(--chart-2), var(--chart-1))" }}
           >
             <span className="absolute bottom-4 left-4 bg-background/85 px-2 py-1 text-[11px] font-medium tracking-widest uppercase backdrop-blur">
-              Tidewater - LP
+              Designali - Sessions
             </span>
           </div>
           <div className="mt-6 flex items-start justify-between gap-4">
             <div className="min-w-0">
               <p className="truncate text-lg font-semibold">{track.title}</p>
-              <p className="text-sm text-muted-foreground">Juniper Vale</p>
+              <p className="text-sm text-muted-foreground">Designali Studio</p>
             </div>
             <button
               type="button"
@@ -132,7 +141,7 @@ export default function Media08() {
               </li>
             ))}
           </ol>
-          <p className="mt-auto pt-6 text-xs text-muted-foreground">Released 3 Oct 2025 - Lowfield Records</p>
+          <p className="mt-auto pt-6 text-xs text-muted-foreground">A Designali playlist for deep design and code work</p>
         </div>
       </div>
     </section>

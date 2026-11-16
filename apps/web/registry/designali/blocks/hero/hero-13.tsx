@@ -1,19 +1,26 @@
-import { ArrowRight, CircleDot, FileText, Folder, Hash, Search } from "lucide-react"
+import {
+  ArrowRight,
+  CircleDot,
+  FileText,
+  Folder,
+  Hash,
+  Search,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 
 const sidebar = [
-  { icon: Folder, label: "Roadmap", active: true },
-  { icon: FileText, label: "Specs" },
+  { icon: Folder, label: "Projects", active: true },
+  { icon: FileText, label: "Briefs" },
   { icon: Hash, label: "Design reviews" },
-  { icon: CircleDot, label: "Bugs" },
+  { icon: CircleDot, label: "Dev tasks" },
 ]
 
 const rows = [
-  { id: "PLN-412", title: "Offline mode for field reports", status: "In progress", owner: "DK", width: "w-3/4" },
-  { id: "PLN-409", title: "SSO with SCIM provisioning", status: "Review", owner: "AL", width: "w-1/2" },
-  { id: "PLN-398", title: "Bulk edit for custom fields", status: "Planned", owner: "MS", width: "w-1/4" },
-  { id: "PLN-391", title: "Audit log export to S3", status: "Done", owner: "TR", width: "w-full" },
+  { id: "DSG-412", title: "Dalim UI landing page redesign", status: "In progress", owner: "AI", width: "w-3/4" },
+  { id: "DSG-409", title: "Portfolio template in Next.js", status: "Review", owner: "SR", width: "w-1/2" },
+  { id: "DSG-398", title: "New icon set for @designali/icons", status: "Planned", owner: "MK", width: "w-1/4" },
+  { id: "DSG-391", title: "Design agency template launch", status: "Done", owner: "AI", width: "w-full" },
 ]
 
 export default function Hero13() {
@@ -24,23 +31,23 @@ export default function Hero13() {
           href="#"
           className="inline-flex items-center gap-2 border border-border bg-muted/50 px-3 py-1 text-xs text-muted-foreground hover:text-foreground"
         >
-          <span className="font-medium text-foreground">Plinth 3.0</span>
-          Rebuilt from scratch, 4x faster
+          <span className="font-medium text-foreground">Designali</span>
+          460+ blocks now live
           <ArrowRight className="size-3" />
         </a>
         <h1 className="mt-8 text-4xl font-medium tracking-tight md:text-6xl">
-          Plan the roadmap where the work happens.
+          From Figma file to shipped website.
         </h1>
         <p className="mx-auto mt-6 max-w-xl text-base leading-7 text-muted-foreground">
-          Specs, issues and releases in one keyboard-first workspace. Built
-          for product teams who would rather ship than update status pages.
+          Designali plans, designs and builds every project in one flow —
+          brand, UI/UX and production-ready Next.js code. Design se code tak.
         </p>
         <div className="mt-10 flex flex-wrap justify-center gap-3">
-          <Button size="lg" nativeButton={false} render={<a href="#" />}>
-            Get started
+          <Button size="lg" nativeButton={false} render={<a href="/contact" />}>
+            Start a project
           </Button>
-          <Button size="lg" variant="outline" nativeButton={false} render={<a href="#" />}>
-            See the changelog
+          <Button size="lg" variant="outline" nativeButton={false} render={<a href="/work" />}>
+            See the work
           </Button>
         </div>
       </div>
@@ -57,12 +64,12 @@ export default function Hero13() {
             <span className="size-2.5 rounded-full bg-emerald-400" />
             <div className="mx-auto flex w-full max-w-xs items-center gap-2 bg-muted px-3 py-1 text-xs text-muted-foreground">
               <Search className="size-3" />
-              app.plinth.so/roadmap
+              designali.com/work
             </div>
           </div>
           <div className="grid md:grid-cols-[200px_1fr]">
             <aside className="hidden border-e border-border p-3 md:block">
-              <p className="px-2 py-1 text-xs font-medium">Northbeam Inc.</p>
+              <p className="px-2 py-1 text-xs font-medium">Designali Studio</p>
               <ul className="mt-3 space-y-0.5 text-sm">
                 {sidebar.map((item) => (
                   <li
@@ -81,7 +88,7 @@ export default function Hero13() {
             </aside>
             <div className="min-w-0">
               <div className="flex items-center justify-between border-b border-border px-4 py-3">
-                <p className="text-sm font-medium">Q3 Roadmap</p>
+                <p className="text-sm font-medium">Studio projects</p>
                 <span className="text-xs text-muted-foreground">24 items</span>
               </div>
               <ul>

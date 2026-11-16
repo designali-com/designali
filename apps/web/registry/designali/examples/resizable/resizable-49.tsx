@@ -1,5 +1,9 @@
 import * as React from "react"
-import { BoldIcon, ItalicIcon, PercentIcon } from "lucide-react"
+import {
+  Bold as BoldIcon,
+  Italic as ItalicIcon,
+  Percent as PercentIcon,
+} from "@designali/icons"
 
 import {
   ResizableHandle,

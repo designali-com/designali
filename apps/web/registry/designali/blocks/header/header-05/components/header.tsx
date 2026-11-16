@@ -4,7 +4,10 @@
 
 import React from "react"
 
-import { Equal, ShoppingBag } from "lucide-react"
+import {
+  Equal,
+  ShoppingBag,
+} from "@designali/icons"
 
 import { Menus } from "@/registry/designali/blocks/header/header-05/components/menus"
 import { PhoneMenu } from "@/registry/designali/blocks/header/header-05/components/phone-menus"
@@ -25,8 +28,8 @@ const Header = () => {
         <div className="flex w-full items-center justify-between">
           {/* Logo */}
           <a
-            href="#"
-            aria-label="home"
+            href="/"
+            aria-label="Designali home"
             className="flex items-center gap-2 px-6 whitespace-nowrap"
           >
             <Logo className="size-8" />
@@ -43,7 +46,7 @@ const Header = () => {
               {/* Shopping Bag */}
               <button
                 type="button"
-                aria-label="Shopping bag"
+                aria-label="Designali cart"
                 className="relative flex h-9 w-9 items-center justify-center text-background hover:text-background/80"
               >
                 <ShoppingBag className="h-4 w-4" />

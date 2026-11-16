@@ -1,7 +1,12 @@
 "use client"
 
 import { useState } from "react"
-import { Pause, Play, SkipBack, SkipForward } from "lucide-react"
+import {
+  Pause,
+  Play,
+  SkipBack,
+  SkipForward,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 
@@ -27,10 +32,10 @@ export default function Media03() {
           <div className="flex flex-col justify-between gap-6 p-6">
             <div>
               <p className="text-xs text-muted-foreground">
-                Episode 42 &middot; The Design Room
+                Episode 42 &middot; Designali Podcast
               </p>
               <h2 className="mt-2 text-xl font-semibold tracking-tight">
-                Typography as interface, with Elena Rossi
+                Typography as interface, with Ali Imam
               </h2>
             </div>
             <div className="flex h-16 items-end gap-0.5">

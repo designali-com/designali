@@ -1,4 +1,7 @@
-import { Building2Icon, MailIcon } from "lucide-react"
+import {
+  Building2 as Building2Icon,
+  Mail as MailIcon,
+} from "@designali/icons"
 
 import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
 import {
@@ -9,18 +12,18 @@ import {
 
 const emails = [
   {
-    from: "Elena Petrova",
-    initials: "EP",
-    org: "Brightwater Legal",
-    subject: "Contract redlines attached",
-    threads: ["NDA follow-up", "Q2 retainer"],
+    from: "Ali Imam",
+    initials: "AI",
+    org: "Designali",
+    subject: "Brand identity concepts attached",
+    threads: ["Logo feedback", "Q2 retainer"],
   },
   {
-    from: "Sam Whitfield",
-    initials: "SW",
-    org: "Ironleaf Supply",
-    subject: "Shipment ETA moved to Monday",
-    threads: ["PO #5521", "Pallet count"],
+    from: "Designali Support",
+    initials: "DS",
+    org: "support@designali.com",
+    subject: "Your Templates Pro download is ready",
+    threads: ["Order #5521", "License"],
   },
 ]
 

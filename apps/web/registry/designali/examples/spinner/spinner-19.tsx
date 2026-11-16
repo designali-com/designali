@@ -9,7 +9,7 @@ export default function FullPageLoader() {
       </div>
       <Spinner className="size-8 text-muted-foreground" strokeWidth={1.5} />
       <span className="text-xs text-muted-foreground">
-        Preparing your workspace
+        Preparing your Designali workspace
       </span>
     </div>
   )

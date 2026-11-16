@@ -8,7 +8,7 @@ export function ToastTypes() {
     <div className="flex flex-wrap gap-2">
       <Button
         variant="outline"
-        onClick={() => toast.add({ description: "Event has been created." })}
+        onClick={() => toast.add({ description: "Designali design review has been scheduled." })}
       >
         Default
       </Button>
@@ -17,7 +17,7 @@ export function ToastTypes() {
         onClick={() =>
           toast.add({
             type: "success",
-            description: "Event has been created.",
+            description: "Designali design review has been scheduled.",
           })
         }
       >
@@ -28,7 +28,7 @@ export function ToastTypes() {
         onClick={() =>
           toast.add({
             type: "info",
-            description: "Arrive 10 minutes before the event.",
+            description: "Bring the latest Figma file to the review.",
           })
         }
       >
@@ -39,7 +39,7 @@ export function ToastTypes() {
         onClick={() =>
           toast.add({
             type: "warning",
-            description: "The event cannot start before 8:00 AM.",
+            description: "The review cannot start before studio hours (8:00 AM).",
           })
         }
       >
@@ -50,7 +50,7 @@ export function ToastTypes() {
         onClick={() =>
           toast.add({
             type: "error",
-            description: "The event could not be created.",
+            description: "The design review could not be scheduled.",
             priority: "high",
           })
         }

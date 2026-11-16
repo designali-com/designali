@@ -1,10 +1,10 @@
 import {
-  CopyIcon,
-  DownloadIcon,
-  EyeIcon,
-  PencilIcon,
-  Trash2Icon,
-} from "lucide-react"
+  Copy as CopyIcon,
+  Download as DownloadIcon,
+  Eye as EyeIcon,
+  Pencil as PencilIcon,
+  Trash2 as Trash2Icon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import {

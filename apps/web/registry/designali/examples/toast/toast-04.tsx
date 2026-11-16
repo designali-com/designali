@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { ArchiveIcon } from "lucide-react"
+import {
+  Archive as ArchiveIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Toaster, createToastManager } from "@workspace/ui/components/toast"
@@ -9,9 +11,9 @@ import { Toaster, createToastManager } from "@workspace/ui/components/toast"
 const notify = createToastManager()
 
 const initialThreads = [
-  { id: "t1", from: "Priya Raman", subject: "Q3 roadmap review notes" },
-  { id: "t2", from: "Jonas Weber", subject: "Invoice #4821 is ready" },
-  { id: "t3", from: "Lena Ortiz", subject: "Design crit moved to Thursday" },
+  { id: "t1", from: "Ali Imam", subject: "Designali blocks roadmap notes" },
+  { id: "t2", from: "Designali Billing", subject: "Invoice #4821 is ready" },
+  { id: "t3", from: "Studio Designer", subject: "Brand identity crit moved to Thursday" },
 ]
 
 export default function UndoArchiveToast() {

@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { ChevronDownIcon } from "lucide-react"
+import {
+  ChevronDown as ChevronDownIcon,
+} from "@designali/icons"
 
 import {
   Accordion,
@@ -18,19 +20,19 @@ const filters = [
   {
     value: "category",
     title: "Category",
-    options: ["Jackets", "Knitwear", "Shirts", "Trousers"],
+    options: ["Templates", "Blocks", "Icons", "Logos"],
   },
-  { value: "size", title: "Size", options: ["XS", "S", "M", "L", "XL"] },
+  { value: "size", title: "Stack", options: ["Next.js", "React", "Tailwind", "Figma"] },
   {
     value: "color",
-    title: "Colour",
-    options: ["Black", "Navy", "Olive", "Stone"],
+    title: "Style",
+    options: ["Minimal", "Bold", "Dark", "3D"],
   },
 ]
 
 export default function AccordionFilterSidebar() {
   const [selected, setSelected] = React.useState<Record<string, string[]>>({
-    category: ["Knitwear"],
+    category: ["Blocks"],
     size: [],
     color: [],
   })

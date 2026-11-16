@@ -1,4 +1,6 @@
-import { PlayIcon } from "lucide-react"
+import {
+  Play as PlayIcon,
+} from "@designali/icons"
 
 import { Skeleton } from "@workspace/ui/components/skeleton"
 

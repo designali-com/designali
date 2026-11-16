@@ -2,19 +2,19 @@
 
 import * as React from "react"
 import {
-  DoorClosedIcon,
-  FanIcon,
-  LightbulbIcon,
-  ThermometerIcon,
-} from "lucide-react"
+  DoorClosed as DoorClosedIcon,
+  Fan as FanIcon,
+  Lightbulb as LightbulbIcon,
+  Thermometer as ThermometerIcon,
+} from "@designali/icons"
 
 import { Toggle } from "@workspace/ui/components/toggle"
 
 const devices = [
-  { name: "Living room", icon: LightbulbIcon, on: true },
-  { name: "Ceiling fan", icon: FanIcon, on: false },
+  { name: "Studio lights", icon: LightbulbIcon, on: true },
+  { name: "Studio fan", icon: FanIcon, on: false },
   { name: "Heating", icon: ThermometerIcon, on: true },
-  { name: "Front door", icon: DoorClosedIcon, on: false },
+  { name: "Studio door", icon: DoorClosedIcon, on: false },
 ]
 
 export default function SmartHomeDeviceTiles() {

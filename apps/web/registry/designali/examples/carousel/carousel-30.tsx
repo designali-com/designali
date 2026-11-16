@@ -1,10 +1,10 @@
 import {
-  CloudIcon,
-  CloudRainIcon,
-  CloudSunIcon,
-  MoonIcon,
-  SunIcon,
-} from "lucide-react"
+  Cloud as CloudIcon,
+  CloudRain as CloudRainIcon,
+  CloudSun as CloudSunIcon,
+  Moon as MoonIcon,
+  Sun as SunIcon,
+} from "@designali/icons"
 
 import {
   Carousel,

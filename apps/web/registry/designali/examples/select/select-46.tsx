@@ -14,15 +14,15 @@ import {
 type Reviewer = { id: number; name: string; team: string }
 
 const reviewers: Reviewer[] = [
-  { id: 1, name: "Ava Lindqvist", team: "Platform" },
-  { id: 2, name: "Kofi Mensah", team: "Payments" },
-  { id: 3, name: "Rina Takahashi", team: "Growth" },
+  { id: 1, name: "Ali Imam", team: "Design engineering" },
+  { id: 2, name: "Kofi", team: "Web development" },
+  { id: 3, name: "Rina", team: "Brand identity" },
 ]
 
 export default function ObjectValueSelect() {
   const [reviewer, setReviewer] = React.useState<Reviewer | null>({
     id: 2,
-    name: "Kofi Mensah",
+    name: "Kofi",
     team: "Payments",
   })
 

@@ -1,4 +1,6 @@
-import { MapPinIcon } from "lucide-react"
+import {
+  MapPin as MapPinIcon,
+} from "@designali/icons"
 
 import {
   ResizableHandle,

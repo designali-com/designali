@@ -1,4 +1,6 @@
-import { BugIcon } from "lucide-react"
+import {
+  Bug as BugIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Checkbox } from "@workspace/ui/components/checkbox"
@@ -38,7 +40,7 @@ export default function ReportBugDialog() {
         <DialogHeader>
           <DialogTitle>Report a bug</DialogTitle>
           <DialogDescription>
-            We read every report. Thanks for helping us improve.
+            We read every report. Thanks for helping us improve Designali.
           </DialogDescription>
         </DialogHeader>
         <FieldGroup>

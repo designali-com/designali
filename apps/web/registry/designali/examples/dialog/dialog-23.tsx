@@ -20,11 +20,11 @@ import { ScrollArea } from "@workspace/ui/components/scroll-area"
 const sections = [
   {
     title: "1. Your account",
-    body: "You are responsible for activity under your account and for keeping your credentials secure.",
+    body: "You are responsible for activity under your designali.com account and for keeping your credentials secure.",
   },
   {
     title: "2. Acceptable use",
-    body: "Don't use the service to send spam, scrape other users, or interfere with the platform's operation.",
+    body: "Don't resell Designali templates, blocks or icons as-is, or interfere with the platform's operation.",
   },
   {
     title: "3. Data retention",

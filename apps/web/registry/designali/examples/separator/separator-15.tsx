@@ -19,8 +19,8 @@ const settings = [
   },
   {
     id: "marketing",
-    title: "Product news",
-    description: "Launches and tips",
+    title: "Designali drops",
+    description: "New blocks, templates and icons",
     on: false,
   },
 ]

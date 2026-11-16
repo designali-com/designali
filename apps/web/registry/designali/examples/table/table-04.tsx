@@ -15,21 +15,21 @@ import {
 const people = [
   {
     id: "u1",
-    name: "Hannah Brooks",
-    email: "hannah@acme-labs.io",
+    name: "Ali Imam",
+    email: "ali@designali.com",
     role: "Designer",
   },
   {
     id: "u2",
-    name: "Diego Ramos",
-    email: "diego@acme-labs.io",
+    name: "Sara Khan",
+    email: "sara@designali.com",
     role: "Engineer",
   },
-  { id: "u3", name: "Mei Tanaka", email: "mei@acme-labs.io", role: "Product" },
+  { id: "u3", name: "Omar Ali", email: "omar@designali.com", role: "Product" },
   {
     id: "u4",
-    name: "Samuel Okafor",
-    email: "samuel@acme-labs.io",
+    name: "Priya Shah",
+    email: "priya@designali.com",
     role: "Engineer",
   },
 ]

@@ -1,4 +1,6 @@
-import { GlobeIcon } from "lucide-react"
+import {
+  Globe as GlobeIcon,
+} from "@designali/icons"
 
 import {
   HoverCard,
@@ -15,15 +17,15 @@ export default function LinkPreviewHoverCard() {
           href="#"
           className="text-foreground underline underline-offset-4"
         >
-          Shipping feature flags safely
+          From Figma to Next.js with Designali
         </HoverCardTrigger>
         <HoverCardContent className="w-72 p-0">
           <div className="h-28 w-full bg-gradient-to-br from-violet-500 via-fuchsia-500 to-rose-400" />
           <div className="flex flex-col gap-1 p-3">
-            <p className="font-medium">Shipping feature flags safely</p>
+            <p className="font-medium">From Figma to Next.js with Designali</p>
             <p className="line-clamp-2 text-muted-foreground">
-              A practical checklist for gradual rollouts, kill switches, and
-              cleaning up stale flags.
+              A practical checklist for turning designs into production-ready
+              Designali blocks.
             </p>
             <span className="mt-1 flex items-center gap-1 text-muted-foreground">
               <GlobeIcon className="size-3" />
@@ -32,7 +34,7 @@ export default function LinkPreviewHoverCard() {
           </div>
         </HoverCardContent>
       </HoverCard>{" "}
-      before enabling it for everyone.
+      before shipping it to designali.com.
     </p>
   )
 }

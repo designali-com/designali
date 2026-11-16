@@ -1,28 +1,30 @@
-import { ArrowUpRight } from "lucide-react"
+import {
+  ArrowUpRight,
+} from "@designali/icons"
 
 const regions = [
   {
     region: "Americas",
     cities: [
-      { city: "San Francisco", type: "HQ" },
-      { city: "Austin", type: "Engineering" },
-      { city: "São Paulo", type: "Sales" },
+      { city: "Brand identity", type: "Remote" },
+      { city: "Web development", type: "Remote" },
+      { city: "UI/UX design", type: "Remote" },
     ],
   },
   {
     region: "Europe",
     cities: [
-      { city: "Amsterdam", type: "EMEA HQ" },
-      { city: "Dublin", type: "Support" },
-      { city: "Warsaw", type: "Engineering" },
+      { city: "Design systems", type: "Remote" },
+      { city: "Templates", type: "Online" },
+      { city: "Next.js builds", type: "Remote" },
     ],
   },
   {
     region: "Asia Pacific",
     cities: [
-      { city: "Sydney", type: "APAC HQ" },
-      { city: "Bengaluru", type: "Engineering" },
-      { city: "Seoul", type: "Sales" },
+      { city: "CGI and 3D", type: "Remote" },
+      { city: "Motion design", type: "Remote" },
+      { city: "AI workflows", type: "Remote" },
     ],
   },
 ]
@@ -57,7 +59,7 @@ export default function Location05() {
             ))}
           </svg>
           <p className="absolute start-4 top-4 text-xs tracking-widest text-background/60 uppercase">
-            9 offices &middot; 3 regions
+            Designali &middot; Remote, worldwide
           </p>
         </div>
 

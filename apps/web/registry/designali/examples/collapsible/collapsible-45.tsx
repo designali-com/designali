@@ -1,4 +1,8 @@
-import { ChevronRightIcon, EyeIcon, PlusIcon } from "lucide-react"
+import {
+  ChevronRight as ChevronRightIcon,
+  Eye as EyeIcon,
+  Plus as PlusIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import { Button } from "@workspace/ui/components/button"
@@ -9,9 +13,9 @@ import {
 } from "@workspace/ui/components/collapsible"
 
 const vars = [
-  { key: "DATABASE_URL", value: "postgres://app:••••@db.internal:5432/app" },
+  { key: "DATABASE_URL", value: "postgres://designali:••••@db.internal:5432/designali" },
   { key: "PAYMENTS_SECRET", value: "key_demo_••••••••••••3f9a" },
-  { key: "NEXT_PUBLIC_REGION", value: "eu-central" },
+  { key: "NEXT_PUBLIC_SITE_URL", value: "https://www.designali.com" },
 ]
 
 export default function EnvironmentVariables() {

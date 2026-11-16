@@ -1,12 +1,12 @@
 const clients = [
-  "Northwind",
-  "Lumen & Co",
-  "Halcyon",
-  "Vertex Labs",
-  "Orbital",
-  "Kestrel",
-  "Monolith",
-  "Fieldnote",
+  "Dalim",
+  "Dalim Agency",
+  "Dalim Fonts",
+  "Dalim Graphic",
+  "Dalim Icons",
+  "Dalim UI",
+  "Dalim Works",
+  "Dalim Visuals",
 ]
 
 export default function Clients06() {
@@ -14,7 +14,7 @@ export default function Clients06() {
     <section className="w-full border-y border-border bg-background py-16">
       <div className="mx-auto max-w-6xl px-6">
         <p className="text-center text-xs tracking-[0.2em] text-muted-foreground uppercase">
-          Trusted by product teams at
+          Brands designed and built by Designali
         </p>
         <div className="mt-10 grid grid-cols-2 border-t border-l border-border sm:grid-cols-4">
           {clients.map((client) => (

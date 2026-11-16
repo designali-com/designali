@@ -1,7 +1,11 @@
 "use client"
 
 import * as React from "react"
-import { CreditCardIcon, SlidersHorizontalIcon, UsersIcon } from "lucide-react"
+import {
+  CreditCard as CreditCardIcon,
+  SlidersHorizontal as SlidersHorizontalIcon,
+  Users as UsersIcon,
+} from "@designali/icons"
 
 import {
   NavigationMenu,

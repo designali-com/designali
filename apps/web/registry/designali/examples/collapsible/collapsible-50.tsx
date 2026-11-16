@@ -1,4 +1,6 @@
-import { ChevronRightIcon } from "lucide-react"
+import {
+  ChevronRight as ChevronRightIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import { Button } from "@workspace/ui/components/button"
@@ -13,16 +15,16 @@ const days = [
   {
     label: "Today",
     versions: [
-      { time: "4:12 PM", author: "Nadia Brooks", current: true },
-      { time: "11:03 AM", author: "Owen Hale", current: false },
+      { time: "4:12 PM", author: "Ali Imam", current: true },
+      { time: "11:03 AM", author: "Sara", current: false },
     ],
   },
   {
     label: "November 13",
     versions: [
-      { time: "6:47 PM", author: "Nadia Brooks", current: false },
-      { time: "2:20 PM", author: "Priya Shah", current: false },
-      { time: "9:15 AM", author: "Owen Hale", current: false },
+      { time: "6:47 PM", author: "Ali Imam", current: false },
+      { time: "2:20 PM", author: "Omar", current: false },
+      { time: "9:15 AM", author: "Sara", current: false },
     ],
   },
 ]

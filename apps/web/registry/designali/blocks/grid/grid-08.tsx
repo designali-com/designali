@@ -1,14 +1,17 @@
-import { ArrowDownRight, ArrowUpRight } from "lucide-react"
+import {
+  ArrowDownRight,
+  ArrowUpRight,
+} from "@designali/icons"
 
 const metrics = [
-  { label: "Monthly recurring revenue", value: "$482.1k", change: 12.4, points: [12, 14, 13, 17, 19, 18, 22, 25, 24, 28] },
-  { label: "Active workspaces", value: "18,240", change: 6.8, points: [20, 21, 21, 23, 22, 24, 25, 25, 27, 28] },
-  { label: "Net revenue retention", value: "124%", change: 2.1, points: [18, 19, 18, 20, 21, 20, 21, 22, 22, 23] },
-  { label: "Churn", value: "1.9%", change: -0.4, points: [26, 24, 25, 22, 21, 22, 19, 18, 17, 16] },
-  { label: "Avg. seats per account", value: "11.3", change: 4.2, points: [14, 15, 15, 16, 17, 17, 18, 19, 19, 21] },
-  { label: "Support CSAT", value: "97.2", change: 0.6, points: [22, 23, 22, 23, 24, 23, 24, 24, 25, 25] },
-  { label: "Time to first value", value: "4m 12s", change: -18.0, points: [28, 26, 25, 23, 21, 19, 18, 16, 15, 13] },
-  { label: "Trial conversion", value: "21.6%", change: 3.3, points: [15, 14, 16, 17, 16, 18, 19, 18, 20, 22] },
+  { label: "Blocks", value: "460+", change: 12.4, points: [12, 14, 13, 17, 19, 18, 22, 25, 24, 28] },
+  { label: "Landing pages", value: "240+", change: 6.8, points: [20, 21, 21, 23, 22, 24, 25, 25, 27, 28] },
+  { label: "UI examples", value: "2,300+", change: 2.1, points: [18, 19, 18, 20, 21, 20, 21, 22, 22, 23] },
+  { label: "Bounce rate", value: "1.9%", change: -0.4, points: [26, 24, 25, 22, 21, 22, 19, 18, 17, 16] },
+  { label: "Icons", value: "4,000+", change: 4.2, points: [14, 15, 15, 16, 17, 17, 18, 19, 19, 21] },
+  { label: "Client CSAT", value: "97.2", change: 0.6, points: [22, 23, 22, 23, 24, 23, 24, 24, 25, 25] },
+  { label: "Avg. page load", value: "0.8s", change: -18.0, points: [28, 26, 25, 23, 21, 19, 18, 16, 15, 13] },
+  { label: "Template downloads", value: "18,240", change: 3.3, points: [15, 14, 16, 17, 16, 18, 19, 18, 20, 22] },
 ]
 
 function sparkline(points: number[]) {
@@ -26,15 +29,15 @@ export default function Grid08() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="flex flex-wrap items-end justify-between gap-4">
           <div>
-            <p className="font-mono text-xs text-muted-foreground">Q3 2026 · Investor update</p>
-            <h2 className="mt-2 text-4xl font-semibold tracking-tight">By the numbers</h2>
+            <p className="font-mono text-xs text-muted-foreground">Q3 2026 · Designali studio update</p>
+            <h2 className="mt-2 text-4xl font-semibold tracking-tight">Designali by the numbers</h2>
           </div>
           <p className="text-xs text-muted-foreground">Change vs. previous quarter</p>
         </div>
 
         <dl className="mt-12 grid grid-cols-1 gap-px border border-border bg-border sm:grid-cols-2 lg:grid-cols-4">
           {metrics.map((metric) => {
-            const goodWhenDown = metric.label === "Churn" || metric.label === "Time to first value"
+            const goodWhenDown = metric.label === "Bounce rate" || metric.label === "Avg. page load"
             const positive = goodWhenDown ? metric.change < 0 : metric.change > 0
             const Arrow = metric.change > 0 ? ArrowUpRight : ArrowDownRight
             return (

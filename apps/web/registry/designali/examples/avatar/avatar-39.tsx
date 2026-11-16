@@ -1,4 +1,8 @@
-import { CheckIcon, ClockIcon, XIcon } from "lucide-react"
+import {
+  Check as CheckIcon,
+  Clock as ClockIcon,
+  X as XIcon,
+} from "@designali/icons"
 
 import {
   Avatar,
@@ -7,9 +11,9 @@ import {
 } from "@workspace/ui/components/avatar"
 
 const reviewers = [
-  { name: "Ilse Ward", initials: "IW", state: "Approved" },
-  { name: "Mateo Cruz", initials: "MC", state: "Changes requested" },
-  { name: "Oona Fitz", initials: "OF", state: "Pending" },
+  { name: "Ali Imam", initials: "AI", state: "Approved" },
+  { name: "Sara", initials: "SA", state: "Changes requested" },
+  { name: "Client", initials: "CL", state: "Pending" },
 ]
 
 export default function ReviewerApprovalStatus() {

@@ -25,7 +25,7 @@ export default function GoldenRatioSpiral() {
         </svg>
       </AspectRatio>
       <p className="mt-2 text-center font-mono text-xs text-muted-foreground">
-        phi = 1.618
+        phi = 1.618 - Designali grid
       </p>
     </div>
   )

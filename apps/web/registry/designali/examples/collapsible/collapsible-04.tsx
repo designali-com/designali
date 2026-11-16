@@ -1,4 +1,8 @@
-import { ChevronRightIcon, FileIcon, FolderIcon } from "lucide-react"
+import {
+  ChevronRight as ChevronRightIcon,
+  File as FileIcon,
+  Folder as FolderIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Card, CardContent, CardHeader } from "@workspace/ui/components/card"

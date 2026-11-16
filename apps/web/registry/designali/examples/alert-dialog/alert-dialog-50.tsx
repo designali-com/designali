@@ -1,4 +1,6 @@
-import { ReceiptIcon } from "lucide-react"
+import {
+  Receipt as ReceiptIcon,
+} from "@designali/icons"
 
 import {
   AlertDialog,
@@ -15,8 +17,8 @@ import { Button } from "@workspace/ui/components/button"
 import { Separator } from "@workspace/ui/components/separator"
 
 const lines = [
-  { label: "Linen throw blanket", value: "$89.00" },
-  { label: "Shipping", value: "$6.50" },
+  { label: "Design Agency template", value: "$89.00" },
+  { label: "Extended license", value: "$6.50" },
   { label: "Tax", value: "$7.64" },
 ]
 
@@ -31,7 +33,7 @@ export default function RefundOrderAmount() {
         <AlertDialogHeader>
           <AlertDialogTitle>Issue a full refund?</AlertDialogTitle>
           <AlertDialogDescription>
-            The customer, Nora Feld, will be refunded to their original payment
+            The designali.com customer will be refunded to their original payment
             method.
           </AlertDialogDescription>
         </AlertDialogHeader>

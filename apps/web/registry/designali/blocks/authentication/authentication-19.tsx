@@ -1,7 +1,11 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { MailCheck, Pencil, RotateCw } from "lucide-react"
+import {
+  MailCheck,
+  Pencil,
+  RotateCw,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 
@@ -35,7 +39,7 @@ export default function Authentication19() {
           <h2 className="mt-8 text-4xl font-semibold tracking-tight">Verify your email</h2>
           <p className="mt-3 max-w-md text-muted-foreground">
             We sent a confirmation link to{" "}
-            <span className="font-medium text-foreground">theo.lindqvist@marrow.so</span>. Click it to activate your Marrow account.
+            <span className="font-medium text-foreground">you@designali.com</span>. Click it to activate your Designali account.
           </p>
           <button type="button" className="mt-3 flex w-fit items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground">
             <Pencil className="size-3.5" />
@@ -56,7 +60,7 @@ export default function Authentication19() {
             <p className="text-sm font-medium">Didn&apos;t get the email?</p>
             <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
               <li>Check your spam or promotions folder.</li>
-              <li>Search your inbox for &ldquo;Marrow&rdquo;.</li>
+              <li>Search your inbox for &ldquo;Designali&rdquo;.</li>
               <li>Corporate filters can delay mail by a few minutes.</li>
             </ul>
           </div>

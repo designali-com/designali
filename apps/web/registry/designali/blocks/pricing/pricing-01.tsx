@@ -1,5 +1,7 @@
 import Link from "next/link"
-import { Check } from "lucide-react"
+import {
+  Check,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 

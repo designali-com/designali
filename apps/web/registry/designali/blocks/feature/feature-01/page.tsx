@@ -10,7 +10,7 @@ export default function FeatureSection() {
         {/* Heading */}
         <div>
           <h1 className="mx-auto mb-10 max-w-xs px-6 text-center text-xl md:max-w-full md:text-3xl">
-            Design, built to make your brand stand out.
+            designali — design se code tak, built to make your brand stand out.
           </h1>
         </div>
 
@@ -92,20 +92,20 @@ export default function FeatureSection() {
         <div className="relative mt-3 h-full w-full border border-dashed">
           <div className="grid w-full grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
             <div className="border-b border-dashed py-10 md:border-r lg:border-b-0 lg:border-r">
-              <p className="text-center text-sm">48 Hours Delivery</p>
+              <p className="text-center text-sm">Brand identity</p>
             </div>
 
             <div className="border-b border-dashed py-10 lg:border-b-0 lg:border-r">
-              <p className="text-center text-sm">Access to Design Portal</p>
+              <p className="text-center text-sm">UI/UX design</p>
             </div>
 
             <div className="border-b border-dashed py-10 md:border-r md:border-b-0 lg:border-r">
-              <p className="text-center text-sm">Top-notch quality</p>
+              <p className="text-center text-sm">Next.js development</p>
             </div>
 
             <div className="py-10">
               <p className="text-center text-sm">
-                Unlimited Design Requests
+                Design systems
               </p>
             </div>
           </div>

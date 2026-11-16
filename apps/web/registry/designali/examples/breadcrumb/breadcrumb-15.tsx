@@ -13,7 +13,7 @@ export default function DeploymentBreadcrumb() {
     <Breadcrumb>
       <BreadcrumbList>
         <BreadcrumbItem>
-          <BreadcrumbLink href="#">pulse-api</BreadcrumbLink>
+          <BreadcrumbLink href="#">designali-web</BreadcrumbLink>
         </BreadcrumbItem>
         <BreadcrumbSeparator />
         <BreadcrumbItem>

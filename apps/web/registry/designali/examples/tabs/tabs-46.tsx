@@ -1,4 +1,6 @@
-import { CheckIcon } from "lucide-react"
+import {
+  Check as CheckIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -11,13 +13,13 @@ import {
 const plans = {
   starter: {
     price: "$0",
-    features: ["3 projects", "1 GB storage", "Community support"],
+    features: ["Free Designali blocks", "Free icons", "Community support"],
   },
   team: {
     price: "$24",
     features: [
-      "Unlimited projects",
-      "100 GB storage",
+      "All Designali templates",
+      "460+ blocks",
       "Priority support",
       "SSO",
     ],
@@ -27,7 +29,7 @@ const plans = {
     features: [
       "Everything in Team",
       "Audit logs",
-      "Dedicated manager",
+      "Custom Designali design work",
       "99.99% SLA",
     ],
   },

@@ -1,4 +1,7 @@
-import { ArrowRightIcon, BookmarkIcon } from "lucide-react"
+import {
+  ArrowRight as ArrowRightIcon,
+  Bookmark as BookmarkIcon,
+} from "@designali/icons"
 
 import {
   NavigationMenu,
@@ -30,7 +33,7 @@ export default function EmptyStateMenuNav() {
               </span>
               <p className="text-sm font-medium">No saved items yet</p>
               <p className="text-xs text-muted-foreground">
-                Bookmark listings to compare them later.
+                Bookmark Designali templates to compare them later.
               </p>
               <NavigationMenuLink href="#" className="mt-1 border px-3">
                 Start browsing <ArrowRightIcon />

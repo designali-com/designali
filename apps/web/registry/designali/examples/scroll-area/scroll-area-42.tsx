@@ -1,4 +1,7 @@
-import { TrendingDownIcon, TrendingUpIcon } from "lucide-react"
+import {
+  TrendingDown as TrendingDownIcon,
+  TrendingUp as TrendingUpIcon,
+} from "@designali/icons"
 
 import { ScrollArea, ScrollBar } from "@workspace/ui/components/scroll-area"
 import { cn } from "@workspace/ui/lib/utils"

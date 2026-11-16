@@ -13,12 +13,12 @@ import {
 import { cn } from "@workspace/ui/lib/utils"
 
 const tickets = [
-  { id: 4821, subject: "Cannot reset password", priority: "High" },
-  { id: 4819, subject: "Invoice shows wrong VAT", priority: "Medium" },
-  { id: 4815, subject: "SSO login loop", priority: "High" },
-  { id: 4810, subject: "Export stuck at 90%", priority: "Low" },
-  { id: 4804, subject: "Add teammate limit", priority: "Low" },
-  { id: 4799, subject: "Webhook retries failing", priority: "Medium" },
+  { id: 4821, subject: "Template download link expired", priority: "High" },
+  { id: 4819, subject: "Icons package install fails", priority: "Medium" },
+  { id: 4815, subject: "License for a client project", priority: "High" },
+  { id: 4810, subject: "Figma file missing from bundle", priority: "Low" },
+  { id: 4804, subject: "Add teammate to Pro plan", priority: "Low" },
+  { id: 4799, subject: "Block looks off in dark mode", priority: "Medium" },
 ]
 
 const PAGE_SIZE = 3

@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { LockIcon, LockOpenIcon } from "lucide-react"
+import {
+  Lock as LockIcon,
+  LockOpen as LockOpenIcon,
+} from "@designali/icons"
 
 import { Label } from "@workspace/ui/components/label"
 import {

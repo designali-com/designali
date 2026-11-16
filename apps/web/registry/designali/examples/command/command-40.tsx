@@ -1,12 +1,12 @@
 import * as React from "react"
 import {
-  CalendarIcon,
-  ChevronRightIcon,
-  CoinsIcon,
-  MailIcon,
-  MonitorSmartphoneIcon,
-  ShieldCheckIcon,
-} from "lucide-react"
+  Calendar as CalendarIcon,
+  ChevronRight as ChevronRightIcon,
+  Coins as CoinsIcon,
+  Mail as MailIcon,
+  MonitorSmartphone as MonitorSmartphoneIcon,
+  ShieldCheck as ShieldCheckIcon,
+} from "@designali/icons"
 
 import {
   Command,

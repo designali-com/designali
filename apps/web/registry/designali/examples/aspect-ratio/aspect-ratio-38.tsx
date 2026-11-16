@@ -22,7 +22,7 @@ const cells = Array.from({ length: size * size }, (_, i) => {
 export default function PaymentQrSquare() {
   return (
     <div className="flex w-full max-w-56 flex-col items-center gap-3 border p-4 text-center">
-      <p className="text-sm font-medium">Scan to pay $36.50</p>
+      <p className="text-sm font-medium">Scan to pay $36.50 to Designali</p>
       <AspectRatio ratio={1} className="w-full bg-white p-3">
         <svg
           viewBox={"0 0 " + size + " " + size}
@@ -45,7 +45,7 @@ export default function PaymentQrSquare() {
         </svg>
       </AspectRatio>
       <p className="text-xs text-muted-foreground">
-        Order #A-2291 - expires in 10:00
+        designali.com order #A-2291 - expires in 10:00
       </p>
     </div>
   )

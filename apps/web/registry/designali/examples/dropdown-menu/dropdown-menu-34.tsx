@@ -2,13 +2,13 @@
 
 import * as React from "react"
 import {
-  CheckIcon,
-  ChevronDownIcon,
-  CodeIcon,
-  CopyIcon,
-  FileArchiveIcon,
-  MonitorIcon,
-} from "lucide-react"
+  Check as CheckIcon,
+  ChevronDown as ChevronDownIcon,
+  Code as CodeIcon,
+  Copy as CopyIcon,
+  FileArchive as FileArchiveIcon,
+  Monitor as MonitorIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -23,8 +23,8 @@ import {
 } from "@workspace/ui/components/dropdown-menu"
 
 const urls: Record<string, string> = {
-  https: "https://git.example.dev/lumen/web-app.git",
-  ssh: "git@git.example.dev:lumen/web-app.git",
+  https: "https://github.com/designali/designali.git",
+  ssh: "git@github.com:designali/designali.git",
 }
 
 export default function RepositoryCloneMenu() {

@@ -1,4 +1,7 @@
-import { CheckIcon, CircleHelpIcon } from "lucide-react"
+import {
+  Check as CheckIcon,
+  CircleQuestionMark as CircleHelpIcon,
+} from "@designali/icons"
 
 import {
   Tooltip,
@@ -9,8 +12,8 @@ import {
 
 const features = [
   {
-    name: "Unlimited projects",
-    help: "No cap on active or archived projects.",
+    name: "All Designali templates",
+    help: "Every template, block and landing page on designali.com.",
   },
   {
     name: "SSO & SCIM",

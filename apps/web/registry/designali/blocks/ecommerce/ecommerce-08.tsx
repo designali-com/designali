@@ -1,23 +1,26 @@
-import { Check, Minus } from "lucide-react"
+import {
+  Check,
+  Minus,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { cn } from "@workspace/ui/lib/utils"
 
 const models = [
-  { name: "Brewline Mini", price: 249, tag: "", tone: "from-zinc-300 to-zinc-100 dark:from-zinc-700 dark:to-zinc-900" },
-  { name: "Brewline Pro", price: 449, tag: "Most popular", tone: "from-stone-500 to-stone-200 dark:from-stone-600 dark:to-stone-900" },
-  { name: "Brewline Dual", price: 799, tag: "", tone: "from-neutral-800 to-neutral-400 dark:from-neutral-500 dark:to-neutral-900" },
+  { name: "Designali Solo", price: 49, tag: "", tone: "from-zinc-300 to-zinc-100 dark:from-zinc-700 dark:to-zinc-900" },
+  { name: "Designali Pro", price: 149, tag: "Most popular", tone: "from-stone-500 to-stone-200 dark:from-stone-600 dark:to-stone-900" },
+  { name: "Designali Studio", price: 349, tag: "", tone: "from-neutral-800 to-neutral-400 dark:from-neutral-500 dark:to-neutral-900" },
 ]
 
 const rows: { label: string; values: (string | boolean)[] }[] = [
-  { label: "Boiler", values: ["Thermoblock", "Single boiler", "Dual boiler"] },
-  { label: "Heat-up time", values: ["3 sec", "45 sec", "4 min"] },
-  { label: "Built-in grinder", values: [false, true, true] },
-  { label: "PID temperature control", values: [false, true, true] },
-  { label: "Steam wand", values: ["Auto", "Manual", "Manual, pro"] },
-  { label: "Water tank", values: ["1.0 L", "1.8 L", "2.5 L"] },
-  { label: "Shot timer", values: [false, false, true] },
-  { label: "Warranty", values: ["2 years", "3 years", "5 years"] },
+  { label: "Templates", values: ["1 template", "All templates", "All templates"] },
+  { label: "Seats", values: ["1 seat", "1 seat", "10 seats"] },
+  { label: "460+ blocks", values: [false, true, true] },
+  { label: "Designali Icons Pro", values: [false, true, true] },
+  { label: "Figma files", values: ["Template only", "Included", "Included, editable"] },
+  { label: "Projects", values: ["1 project", "Unlimited", "Unlimited"] },
+  { label: "Call with Ali Imam", values: [false, false, true] },
+  { label: "Free updates", values: ["1 year", "2 years", "Lifetime"] },
 ]
 
 function Machine({ tone }: { tone: string }) {
@@ -35,9 +38,9 @@ export default function Ecommerce08() {
     <section className="w-full bg-background py-16 text-foreground md:py-24">
       <div className="mx-auto max-w-6xl px-6">
         <div className="text-center">
-          <h2 className="text-3xl font-medium tracking-tight md:text-4xl">Compare espresso machines</h2>
+          <h2 className="text-3xl font-medium tracking-tight md:text-4xl">Compare Designali licenses</h2>
           <p className="mt-2 text-sm text-muted-foreground">
-            Every machine ships with a tamper, two baskets and a 30-day home trial.
+            Every license includes Next.js, React and Tailwind CSS source code and a 14-day refund window.
           </p>
         </div>
 

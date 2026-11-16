@@ -1,4 +1,6 @@
-import { HomeIcon } from "lucide-react"
+import {
+  House as HomeIcon,
+} from "@designali/icons"
 
 import {
   Breadcrumb,
@@ -24,7 +26,7 @@ export default function HomeIconBreadcrumb() {
         </BreadcrumbItem>
         <BreadcrumbSeparator />
         <BreadcrumbItem>
-          <BreadcrumbPage>Saved playlists</BreadcrumbPage>
+          <BreadcrumbPage>Saved templates</BreadcrumbPage>
         </BreadcrumbItem>
       </BreadcrumbList>
     </Breadcrumb>

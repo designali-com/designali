@@ -1,4 +1,7 @@
-import { BellIcon, MailIcon } from "lucide-react"
+import {
+  Bell as BellIcon,
+  Mail as MailIcon,
+} from "@designali/icons"
 
 import { Switch } from "@workspace/ui/components/switch"
 
@@ -20,14 +23,14 @@ const categories = [
   {
     id: "invites",
     label: "Invites",
-    hint: "Workspace and project invites",
+    hint: "Designali project invites",
     email: true,
     push: false,
   },
   {
     id: "digest",
     label: "Weekly digest",
-    hint: "Summary every Monday",
+    hint: "New designali.com blocks every Monday",
     email: true,
     push: false,
   },

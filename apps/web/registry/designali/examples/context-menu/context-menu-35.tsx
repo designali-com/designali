@@ -1,7 +1,11 @@
 "use client"
 
 import * as React from "react"
-import { CalendarIcon, CircleCheckIcon, TrashIcon } from "lucide-react"
+import {
+  Calendar as CalendarIcon,
+  CircleCheck as CircleCheckIcon,
+  Trash as TrashIcon,
+} from "@designali/icons"
 
 import { Checkbox } from "@workspace/ui/components/checkbox"
 import {
@@ -23,21 +27,21 @@ import { cn } from "@workspace/ui/lib/utils"
 const initialTodos = [
   {
     id: 1,
-    title: "Renew domain for fieldnote.io",
+    title: "Renew domain for designali.com",
     done: false,
     due: "Today",
     priority: "high",
   },
   {
     id: 2,
-    title: "Send W-9 to accountant",
+    title: "Send brand identity concepts to client",
     done: false,
     due: "Tomorrow",
     priority: "medium",
   },
   {
     id: 3,
-    title: "Book flights for offsite",
+    title: "Publish new Designali templates",
     done: true,
     due: "Next week",
     priority: "low",

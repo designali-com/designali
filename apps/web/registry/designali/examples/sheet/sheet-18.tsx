@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { CreditCardIcon, LockIcon } from "lucide-react"
+import {
+  CreditCard as CreditCardIcon,
+  Lock as LockIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Field, FieldLabel } from "@workspace/ui/components/field"

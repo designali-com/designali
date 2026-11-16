@@ -1,4 +1,8 @@
-import { ChevronDownIcon, DownloadIcon, ReceiptIcon } from "lucide-react"
+import {
+  ChevronDown as ChevronDownIcon,
+  Download as DownloadIcon,
+  Receipt as ReceiptIcon,
+} from "@designali/icons"
 
 import {
   Accordion,
@@ -15,8 +19,8 @@ const invoices = [
     status: "Due Dec 1",
     amount: 312,
     lines: [
-      { label: "Team plan, 12 seats", amount: 288 },
-      { label: "Extra storage, 200 GB", amount: 24 },
+      { label: "Designali Team plan, 12 seats", amount: 288 },
+      { label: "Premium template add-on", amount: 24 },
     ],
   },
   {
@@ -24,14 +28,14 @@ const invoices = [
     month: "October 2026",
     status: "Paid",
     amount: 288,
-    lines: [{ label: "Team plan, 12 seats", amount: 288 }],
+    lines: [{ label: "Designali Team plan, 12 seats", amount: 288 }],
   },
   {
     value: "sep",
     month: "September 2026",
     status: "Paid",
     amount: 264,
-    lines: [{ label: "Team plan, 11 seats", amount: 264 }],
+    lines: [{ label: "Designali Team plan, 11 seats", amount: 264 }],
   },
 ]
 

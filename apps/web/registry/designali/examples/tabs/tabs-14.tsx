@@ -24,7 +24,7 @@ export default function DashboardRangeTabs() {
     <Card className="w-full max-w-sm">
       <Tabs defaultValue="7d">
         <CardHeader>
-          <CardTitle>Store performance</CardTitle>
+          <CardTitle>Designali store performance</CardTitle>
           <CardAction>
             <TabsList>
               {Object.keys(ranges).map((r) => (

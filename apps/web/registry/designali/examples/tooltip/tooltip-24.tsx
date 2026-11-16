@@ -33,7 +33,7 @@ export default function GlossaryTermTooltips() {
   return (
     <TooltipProvider>
       <p className="max-w-sm text-sm leading-relaxed text-muted-foreground">
-        Our <Term id="MRR" /> grew 14% this quarter while <Term id="churn" />{" "}
+        Designali <Term id="MRR" /> grew 14% this quarter while <Term id="churn" />{" "}
         held at 2.1%, pushing average <Term id="LTV" /> above $4,800.
       </p>
     </TooltipProvider>

@@ -1,4 +1,6 @@
-import { MailIcon } from "lucide-react"
+import {
+  Mail as MailIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import {
@@ -14,8 +16,8 @@ const folders = [
     label: "All",
     count: 128,
     items: [
-      "Quarterly review moved to Friday",
-      "Design crit notes",
+      "Brand identity review moved to Friday",
+      "Designali design crit notes",
       "Invoice #2041 paid",
     ],
   },
@@ -23,13 +25,13 @@ const folders = [
     value: "unread",
     label: "Unread",
     count: 6,
-    items: ["Design crit notes", "Can you check the launch copy?"],
+    items: ["Designali design crit notes", "Can you check the templates launch copy?"],
   },
   {
     value: "archived",
     label: "Archived",
     count: 940,
-    items: ["Offsite logistics", "Welcome to the team"],
+    items: ["Studio offsite logistics", "Welcome to Designali"],
   },
 ]
 

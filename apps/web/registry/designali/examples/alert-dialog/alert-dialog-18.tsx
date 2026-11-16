@@ -1,4 +1,6 @@
-import { BanIcon } from "lucide-react"
+import {
+  Ban as BanIcon,
+} from "@designali/icons"
 
 import {
   AlertDialog,
@@ -19,14 +21,14 @@ export default function BlockUserDialog() {
     <AlertDialog>
       <AlertDialogTrigger render={<Button variant="ghost" />}>
         <BanIcon data-icon="inline-start" />
-        Block @rowan.k
+        Block @spam.bot
       </AlertDialogTrigger>
       <AlertDialogContent size="sm">
         <AlertDialogHeader>
           <AlertDialogMedia className="bg-destructive/10 text-destructive">
             <BanIcon />
           </AlertDialogMedia>
-          <AlertDialogTitle>Block @rowan.k?</AlertDialogTitle>
+          <AlertDialogTitle>Block @spam.bot?</AlertDialogTitle>
           <AlertDialogDescription>
             They won&apos;t be able to message you or see your posts.
           </AlertDialogDescription>

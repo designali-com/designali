@@ -1,4 +1,8 @@
-import { ImageIcon, MusicIcon, VideoIcon } from "lucide-react"
+import {
+  Image as ImageIcon,
+  Music as MusicIcon,
+  Video as VideoIcon,
+} from "@designali/icons"
 
 import {
   Tabs,
@@ -35,7 +39,7 @@ export default function IconLabelTabs() {
         ))}
       </TabsContent>
       <TabsContent value="videos" className="text-muted-foreground">
-        14 clips, 2.3 GB total.
+        14 Designali motion clips, 2.3 GB total.
       </TabsContent>
       <TabsContent value="audio" className="text-muted-foreground">
         No audio uploaded yet.

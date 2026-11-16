@@ -1,15 +1,18 @@
 "use client"
 
 import { useState } from "react"
-import { Check, X } from "lucide-react"
+import {
+  Check,
+  X,
+} from "@designali/icons"
 
 import { cn } from "@workspace/ui/lib/utils"
 
 const rows = [
-  { without: "Expenses chased over email for two weeks", with: "Receipts snapped and matched in seconds" },
-  { without: "Month-end close takes 9 working days", with: "Books close on day two, automatically reconciled" },
-  { without: "Cards shared across the whole team", with: "Virtual cards per vendor with hard limits" },
-  { without: "Approvals stuck in someone's inbox", with: "Policy-based approvals routed in chat" },
+  { without: "Designing every section from a blank canvas", with: "460+ ready-made blocks to start from" },
+  { without: "Hand-off files lost between design and code", with: "Figma designs shipped as production-ready Next.js" },
+  { without: "Mixing icon sets from five different sources", with: "4000+ consistent icons in @designali/icons" },
+  { without: "Weeks spent on a landing page", with: "240+ landing pages you can launch today" },
 ]
 
 export default function Features18() {
@@ -19,7 +22,7 @@ export default function Features18() {
     <section className="w-full bg-muted/30 px-6 py-20 md:py-28">
       <div className="mx-auto max-w-4xl">
         <h2 className="text-center text-3xl font-medium tracking-tight md:text-5xl">
-          Finance ops, before and after Ledgerly.
+          Building websites, before and after Designali.
         </h2>
         <div className="mx-auto mt-10 grid w-full max-w-xs grid-cols-2 border border-border bg-background p-1">
           {(["without", "with"] as const).map((m) => (
@@ -32,7 +35,7 @@ export default function Features18() {
                 mode === m ? "bg-foreground text-background" : "text-muted-foreground hover:text-foreground"
               )}
             >
-              {m === "with" ? "With Ledgerly" : "Without"}
+              {m === "with" ? "With Designali" : "Without"}
             </button>
           ))}
         </div>
@@ -64,7 +67,7 @@ export default function Features18() {
           ))}
         </ul>
         <p className="mt-8 text-center text-xs text-muted-foreground">
-          Based on median results from 640 finance teams in their first quarter.
+          Design se code tak — from first idea to launch.
         </p>
       </div>
     </section>

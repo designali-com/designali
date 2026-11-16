@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { EllipsisIcon, UserMinusIcon } from "lucide-react"
+import {
+  Ellipsis as EllipsisIcon,
+  UserMinus as UserMinusIcon,
+} from "@designali/icons"
 
 import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
 import { Badge } from "@workspace/ui/components/badge"
@@ -17,9 +20,9 @@ import { Toaster, createToastManager } from "@workspace/ui/components/toast"
 const notify = createToastManager()
 
 const initialMembers = [
-  { name: "Rina Patel", role: "Admin" },
-  { name: "Oskar Lund", role: "Editor" },
-  { name: "Mei Tanaka", role: "Viewer" },
+  { name: "Ali Imam", role: "Admin" },
+  { name: "Studio Designer", role: "Editor" },
+  { name: "Client", role: "Viewer" },
 ]
 
 export default function RemoveMemberToast() {

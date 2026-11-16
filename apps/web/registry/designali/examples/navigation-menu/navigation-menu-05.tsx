@@ -10,8 +10,8 @@ import {
 import { cn } from "@workspace/ui/lib/utils"
 
 const columns = [
-  { heading: "Clothing", links: ["Jackets", "Knitwear", "Shirts", "Trousers"] },
-  { heading: "Shoes", links: ["Sneakers", "Boots", "Sandals"] },
+  { heading: "Templates", links: ["Portfolio", "Agency", "SaaS", "AI"] },
+  { heading: "Assets", links: ["Icons", "Logos", "Illustrations"] },
 ]
 
 export default function StoreCategoriesNav() {
@@ -19,7 +19,7 @@ export default function StoreCategoriesNav() {
     <NavigationMenu>
       <NavigationMenuList>
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Women</NavigationMenuTrigger>
+          <NavigationMenuTrigger>Products</NavigationMenuTrigger>
           <NavigationMenuContent>
             <div className="grid w-72 grid-cols-2 gap-3 p-2 sm:w-[30rem] sm:grid-cols-3">
               {columns.map((col) => (
@@ -39,10 +39,10 @@ export default function StoreCategoriesNav() {
                 className="col-span-2 flex-col items-start justify-end gap-1 bg-gradient-to-br from-orange-200 to-rose-300 p-3 text-rose-950 sm:col-span-1"
               >
                 <span className="text-[11px] font-semibold uppercase">
-                  Autumn edit
+                  New drop
                 </span>
                 <span className="text-sm font-semibold">
-                  Up to 30% off coats
+                  Fresh Designali templates
                 </span>
               </NavigationMenuLink>
             </div>
@@ -50,7 +50,7 @@ export default function StoreCategoriesNav() {
         </NavigationMenuItem>
         <NavigationMenuItem>
           <NavigationMenuLink href="#" className={navigationMenuTriggerStyle()}>
-            Men
+            Services
           </NavigationMenuLink>
         </NavigationMenuItem>
         <NavigationMenuItem>
@@ -61,7 +61,7 @@ export default function StoreCategoriesNav() {
               "text-red-600 dark:text-red-400"
             )}
           >
-            Sale
+            Pricing
           </NavigationMenuLink>
         </NavigationMenuItem>
       </NavigationMenuList>

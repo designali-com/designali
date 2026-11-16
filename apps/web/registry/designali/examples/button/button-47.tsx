@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { CalendarRangeIcon } from "lucide-react"
+import {
+  CalendarRange as CalendarRangeIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 

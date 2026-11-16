@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { ContactIcon, RefreshCwIcon } from "lucide-react"
+import {
+  Contact as ContactIcon,
+  RefreshCw as RefreshCwIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Toaster, createToastManager } from "@workspace/ui/components/toast"
@@ -16,14 +19,14 @@ export default function LoadingToSuccessUpdate() {
     setBusy(true)
     const id = notify.add({
       type: "loading",
-      title: "Syncing contacts",
+      title: "Syncing Designali clients",
       description: "Fetching 1,284 records...",
       timeout: 0,
     })
     setTimeout(() => {
       notify.update(id, {
         type: "success",
-        title: "Contacts synced",
+        title: "Clients synced",
         description: "42 new, 7 updated.",
         timeout: 4000,
       })

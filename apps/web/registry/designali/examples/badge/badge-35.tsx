@@ -8,11 +8,11 @@ const skills = [
   "Figma",
   "TypeScript",
   "Design systems",
-  "Accessibility",
+  "Next.js",
   "Prototyping",
-  "User research",
+  "Tailwind CSS",
   "Motion",
-  "Copywriting",
+  "CGI / 3D",
 ]
 
 export default function SkillTagsOverflow() {

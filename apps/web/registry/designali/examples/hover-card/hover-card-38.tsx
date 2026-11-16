@@ -1,4 +1,6 @@
-import { TriangleAlertIcon } from "lucide-react"
+import {
+  TriangleAlert as TriangleAlertIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import {
@@ -75,7 +77,7 @@ export default function RegionStatusHoverCard() {
             {r.status !== "operational" && (
               <p className="mt-2 flex items-center gap-1.5 text-amber-600">
                 <TriangleAlertIcon className="size-3.5" />
-                Elevated error rates on uploads
+                Elevated error rates on template downloads
               </p>
             )}
           </HoverCardContent>

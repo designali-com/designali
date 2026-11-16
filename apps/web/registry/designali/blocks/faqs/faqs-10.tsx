@@ -1,4 +1,6 @@
-import { Sparkles } from "lucide-react"
+import {
+  Sparkles,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 

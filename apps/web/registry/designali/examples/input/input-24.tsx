@@ -1,12 +1,15 @@
 "use client"
 
 import * as React from "react"
-import { FileTextIcon, PencilIcon } from "lucide-react"
+import {
+  FileText as FileTextIcon,
+  Pencil as PencilIcon,
+} from "@designali/icons"
 
 import { Input } from "@workspace/ui/components/input"
 
 export default function InlineEditTitleInput() {
-  const [title, setTitle] = React.useState("Q2 hiring plan")
+  const [title, setTitle] = React.useState("Designali roadmap")
   const [editing, setEditing] = React.useState(false)
 
   return (

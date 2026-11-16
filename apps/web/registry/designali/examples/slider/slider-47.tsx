@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { RotateCcwIcon } from "lucide-react"
+import {
+  RotateCcw as RotateCcwIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Slider } from "@workspace/ui/components/slider"

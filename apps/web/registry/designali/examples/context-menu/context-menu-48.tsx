@@ -2,12 +2,12 @@
 
 import * as React from "react"
 import {
-  ArrowDownIcon,
-  ArrowUpIcon,
-  EyeIcon,
-  EyeOffIcon,
-  PinIcon,
-} from "lucide-react"
+  ArrowDown as ArrowDownIcon,
+  ArrowUp as ArrowUpIcon,
+  Eye as EyeIcon,
+  EyeOff as EyeOffIcon,
+  Pin as PinIcon,
+} from "@designali/icons"
 
 import {
   ContextMenu,
@@ -22,11 +22,11 @@ import {
 } from "@workspace/ui/components/context-menu"
 import { cn } from "@workspace/ui/lib/utils"
 
-const columns = ["Name", "Plan", "MRR"]
+const columns = ["Product", "Plan", "MRR"]
 const rows = [
-  ["Brightside Bakery", "Growth", 420],
-  ["Northwind Travel", "Scale", 1280],
-  ["Lumen Studio", "Starter", 49],
+  ["Templates", "Pro", 420],
+  ["Blocks", "Team", 1280],
+  ["Icons", "Starter", 49],
 ]
 
 export default function TableColumnHeaderMenu() {

@@ -39,7 +39,7 @@ export default function CurrencyConverterSelect() {
     <div className="flex w-full max-w-xs items-center justify-between gap-3 border p-4">
       <div className="flex flex-col">
         <span className="text-xs text-muted-foreground">
-          Team plan, monthly
+          Designali Pro, monthly
         </span>
         <span className="text-2xl font-semibold tabular-nums">
           {currency.symbol}

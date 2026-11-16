@@ -23,11 +23,11 @@ export default function AvatarLoadingSkeleton() {
         ) : (
           <>
             <Avatar size="lg">
-              <AvatarFallback>EV</AvatarFallback>
+              <AvatarFallback>AI</AvatarFallback>
             </Avatar>
             <div className="flex-1">
-              <p className="text-sm font-medium">Esme Vance</p>
-              <p className="text-xs text-muted-foreground">Joined 3 days ago</p>
+              <p className="text-sm font-medium">Ali Imam</p>
+              <p className="text-xs text-muted-foreground">Founder · Designali</p>
             </div>
           </>
         )}

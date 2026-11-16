@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { EyeIcon, EyeOffIcon } from "lucide-react"
+import {
+  Eye as EyeIcon,
+  EyeOff as EyeOffIcon,
+} from "@designali/icons"
 
 import { Field, FieldLabel } from "@workspace/ui/components/field"
 import {

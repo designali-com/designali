@@ -1,9 +1,9 @@
 import { AspectRatio } from "@workspace/ui/components/aspect-ratio"
 
 const spots = [
-  { id: 1, x: "18%", y: "22%", label: "Workspace switcher" },
-  { id: 2, x: "62%", y: "14%", label: "Global search" },
-  { id: 3, x: "48%", y: "64%", label: "Activity feed" },
+  { id: 1, x: "18%", y: "22%", label: "Blocks library" },
+  { id: 2, x: "62%", y: "14%", label: "Icon search" },
+  { id: 3, x: "48%", y: "64%", label: "Template preview" },
 ]
 
 export default function ScreenshotHotspots() {

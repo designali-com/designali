@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { GaugeIcon } from "lucide-react"
+import {
+  Gauge as GaugeIcon,
+} from "@designali/icons"
 
 import {
   Alert,
@@ -25,7 +27,7 @@ export default function AlertRateLimited() {
       <GaugeIcon />
       <AlertTitle>Too many requests</AlertTitle>
       <AlertDescription>
-        You&apos;ve hit the limit of 60 exports per hour.{" "}
+        You&apos;ve hit the limit of 60 icon exports per hour.{" "}
         {wait > 0
           ? "Try again in " + wait + " seconds."
           : "You can try again now."}

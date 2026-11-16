@@ -1,19 +1,27 @@
 "use client"
 
 import { useEffect, useMemo, useRef, useState } from "react"
-import { ArrowRight, BookOpen, CornerDownLeft, FileCode, Hash, Search, X } from "lucide-react"
+import {
+  ArrowRight,
+  BookOpen,
+  CornerDownLeft,
+  FileCode,
+  Hash,
+  Search,
+  X,
+} from "@designali/icons"
 
 const pages = [
   { title: "Getting started", section: "Guides", icon: BookOpen },
-  { title: "Authentication", section: "Guides", icon: BookOpen },
-  { title: "Webhooks", section: "Guides", icon: BookOpen },
-  { title: "POST /v1/payments", section: "API", icon: FileCode },
-  { title: "GET /v1/customers", section: "API", icon: FileCode },
-  { title: "Idempotency keys", section: "Concepts", icon: Hash },
-  { title: "Rate limits", section: "Concepts", icon: Hash },
+  { title: "Installation", section: "Guides", icon: BookOpen },
+  { title: "Theming", section: "Guides", icon: BookOpen },
+  { title: "@designali/icons", section: "Packages", icon: FileCode },
+  { title: "@designali/logos", section: "Packages", icon: FileCode },
+  { title: "Bento", section: "Components", icon: Hash },
+  { title: "Number Counter", section: "Components", icon: Hash },
 ]
 
-const links = ["Guides", "API", "SDKs", "Changelog"]
+const links = ["Guides", "Components", "Packages", "Blogs"]
 
 export default function Header13() {
   const [open, setOpen] = useState(false)
@@ -47,9 +55,9 @@ export default function Header13() {
         <div className="mx-auto flex h-14 max-w-7xl items-center gap-6 px-6">
           <a href="#" className="flex shrink-0 items-center gap-2 text-sm font-semibold">
             <span className="flex size-6 items-center justify-center bg-foreground font-mono text-[11px] text-background">
-              t/
+              d/
             </span>
-            Tollgate Docs
+            Designali Docs
           </a>
           <nav className="hidden gap-5 text-sm lg:flex">
             {links.map((link, index) => (
@@ -105,7 +113,7 @@ export default function Header13() {
                   ref={inputRef}
                   value={query}
                   onChange={(event) => setQuery(event.target.value)}
-                  placeholder="Search guides and endpoints..."
+                  placeholder="Search guides and components..."
                   className="h-12 w-full min-w-0 bg-transparent text-sm outline-none placeholder:text-muted-foreground"
                 />
                 <button type="button" onClick={() => setOpen(false)} aria-label="Close search">

@@ -1,4 +1,6 @@
-import { FlaskConicalIcon } from "lucide-react"
+import {
+  FlaskConical as FlaskConicalIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import { Label } from "@workspace/ui/components/label"
@@ -7,14 +9,14 @@ import { Switch } from "@workspace/ui/components/switch"
 const labs = [
   {
     id: "canvas",
-    title: "Infinite canvas",
-    description: "Pan and zoom freely across your notes.",
+    title: "AI block generator",
+    description: "Generate Designali blocks from a prompt.",
     stage: "Beta",
   },
   {
     id: "voice",
-    title: "Voice notes",
-    description: "Record and transcribe audio inline.",
+    title: "Figma to code",
+    description: "Turn Figma frames into Next.js components.",
     stage: "Alpha",
   },
 ]

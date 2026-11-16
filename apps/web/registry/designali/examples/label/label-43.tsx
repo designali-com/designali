@@ -8,7 +8,7 @@ export default function RatingScaleLabels() {
   return (
     <div className="flex w-full max-w-sm flex-col gap-3">
       <span className="text-sm font-medium">
-        How likely are you to recommend Pinecone Notes?
+        How likely are you to recommend Designali templates?
       </span>
       <RadioGroup className="grid grid-cols-5 gap-1.5">
         {[1, 2, 3, 4, 5].map((n) => (

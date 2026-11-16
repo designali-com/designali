@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { DownloadIcon } from "lucide-react"
+import {
+  Download as DownloadIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -47,7 +49,7 @@ export default function ExportDataLoadingDialog() {
       </DialogTrigger>
       <DialogContent showCloseButton={!exporting}>
         <DialogHeader>
-          <DialogTitle>Export transactions</DialogTitle>
+          <DialogTitle>Export Designali orders</DialogTitle>
           <DialogDescription>
             2,418 rows from Jan 1 – Mar 31, 2026.
           </DialogDescription>
@@ -86,7 +88,7 @@ export default function ExportDataLoadingDialog() {
           </FieldSet>
           <Field orientation="horizontal">
             <FieldLabel htmlFor="export-archived">
-              Include archived accounts
+              Include archived orders
             </FieldLabel>
             <Switch id="export-archived" disabled={exporting} />
           </Field>

@@ -58,7 +58,7 @@ export default function OutOfOfficeSettings() {
         />
         <Textarea
           disabled={!enabled}
-          placeholder="I'm away with limited access to email. For urgent issues contact Jonah Reyes."
+          placeholder="I'm away with limited access to email. For urgent issues contact hello@designali.com."
           className="min-h-16 text-xs"
         />
       </CardContent>

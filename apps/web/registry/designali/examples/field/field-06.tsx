@@ -18,7 +18,7 @@ export default function ResponsiveOrientationFields() {
         </FieldContent>
         <Input
           id="resp-company"
-          defaultValue="Bramble & Oak Ltd"
+          defaultValue="Designali"
           className="@md/field-group:w-56"
         />
       </Field>
@@ -43,7 +43,7 @@ export default function ResponsiveOrientationFields() {
         <Input
           id="resp-email"
           type="email"
-          defaultValue="accounts@brambleoak.co"
+          defaultValue="billing@designali.com"
           className="@md/field-group:w-56"
         />
       </Field>

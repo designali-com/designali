@@ -1,14 +1,14 @@
 const metrics = [
-  { value: "99.98%", label: "Uptime across all regions", detail: "Last 90 days" },
-  { value: "38ms", label: "Median API response time", detail: "p50, global edge" },
-  { value: "2.4B", label: "Requests served this month", detail: "Up 18% MoM" },
+  { value: "99.98%", label: "Uptime for designali.com on Vercel", detail: "Last 90 days" },
+  { value: "38ms", label: "Median page response time", detail: "p50, global edge" },
+  { value: "1.2M", label: "Icon & block downloads this month", detail: "Up 18% MoM" },
 ]
 
 const goals = [
-  { name: "Q4 onboarding completion", current: 78, target: 85 },
-  { name: "Weekly active teams", current: 64, target: 70 },
-  { name: "Support tickets resolved < 4h", current: 91, target: 90 },
-  { name: "Self-serve upgrades", current: 42, target: 60 },
+  { name: "Blocks published (460 target)", current: 78, target: 85 },
+  { name: "Icons added to @designali/icons", current: 64, target: 70 },
+  { name: "Client tickets resolved < 24h", current: 91, target: 90 },
+  { name: "Designali Pro upgrades", current: 42, target: 60 },
 ]
 
 export default function Analytics03() {
@@ -16,8 +16,8 @@ export default function Analytics03() {
     <section className="w-full bg-background py-16 text-foreground md:py-28">
       <div className="mx-auto max-w-5xl px-6">
         <h2 className="max-w-2xl text-3xl font-medium tracking-tight md:text-5xl">
-          Infrastructure you can measure,{" "}
-          <span className="text-muted-foreground">not just trust.</span>
+          designali, measured in public,{" "}
+          <span className="text-muted-foreground">design se code tak.</span>
         </h2>
 
         <div className="mt-14 grid divide-y divide-border border-y border-border md:grid-cols-3 md:divide-x md:divide-y-0">
@@ -34,7 +34,7 @@ export default function Analytics03() {
 
         <div className="mt-16">
           <div className="mb-6 flex items-baseline justify-between">
-            <h3 className="text-lg font-medium">Quarterly goals</h3>
+            <h3 className="text-lg font-medium">Studio goals this quarter</h3>
             <span className="text-xs text-muted-foreground">Updated Nov 14</span>
           </div>
           <div className="space-y-6">

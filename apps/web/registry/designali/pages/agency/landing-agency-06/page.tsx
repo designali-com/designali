@@ -9,21 +9,22 @@ import {
   Palette,
   PenTool,
   Plus,
-} from "lucide-react"
+} from "@designali/icons"
 
+import { Logo } from "@/src/components/logo"
 import { Button } from "@workspace/ui/components/button"
 
-const navLinks = ["Work", "Services", "Studio", "Journal", "Careers"]
+const navLinks = ["Work", "Services", "Studio", "Blog", "Docs"]
 
 const logos = [
-  "Hollis Hotels",
-  "Juniper Bank",
-  "Strata Outdoor",
-  "Mercer & Co",
-  "Atelier Nord",
-  "Bloom Coffee",
-  "Vela Motors",
-  "Copperleaf",
+  "Dalim Icons",
+  "Dalim UI",
+  "Dalim Visuals",
+  "Dalim Tools",
+  "Dalim Works",
+  "Dalim Fonts",
+  "Dalim Agency",
+  "Dalim Graphic",
 ]
 
 const features = [
@@ -31,110 +32,110 @@ const features = [
     icon: PenTool,
     title: "Design systems",
     description:
-      "Component libraries and guidelines that keep your brand consistent as your team grows.",
+      "Component libraries, tokens and guidelines built on shadcn-style UI and Tailwind CSS.",
   },
   {
     icon: ChartNoAxesCombined,
-    title: "Growth and analytics",
+    title: "Creative development",
     description:
-      "Experimentation, conversion optimisation and reporting tied to the metrics you care about.",
+      "Interactive details, animation and micro-interactions that make a site feel alive.",
   },
   {
     icon: Package,
-    title: "Packaging",
+    title: "Type",
     description:
-      "Packaging and retail design that stands out on the shelf and in the unboxing video.",
+      "Social templates, illustrations and vectors that keep every channel on-brand.",
   },
   {
     icon: Compass,
     title: "Brand strategy",
     description:
-      "Positioning, naming and messaging grounded in research with your customers and your market.",
+      "Positioning, naming and messaging shaped with you before a single pixel is drawn.",
   },
   {
     icon: Palette,
-    title: "Identity design",
+    title: "Brand identity",
     description:
-      "Logos, type, colour and motion systems built to flex from a favicon to a billboard.",
+      "Logos, type, colour and motion systems built to flex from a favicon to a launch film.",
   },
   {
     icon: MonitorSmartphone,
-    title: "Websites and products",
+    title: "Web design and development",
     description:
-      "Fast, accessible websites and digital products designed and engineered by the same team.",
+      "Fast, accessible Next.js websites and products, designed and coded by Ali Imam himself.",
   },
 ]
 
 const stats = [
-  { value: "3", label: "Studios worldwide" },
-  { value: "14", label: "Years in business" },
-  { value: "220+", label: "Projects launched" },
-  { value: "38", label: "Industry awards" },
+  { value: "8+", label: "Brands and product lines by Ali" },
+  { value: "460+", label: "Blocks on designali.com" },
+  { value: "240+", label: "Landing pages published" },
+  { value: "4000+", label: "Icons in @designali/icons" },
 ]
 
 const steps = [
   {
     title: "Discover",
     description:
-      "Workshops, stakeholder interviews and audits to understand your business, audience and goals.",
+      "A discovery call and a short audit to understand your business, audience and goals.",
   },
   {
     title: "Define",
     description:
-      "A clear strategy, creative direction and roadmap that everyone signs off before design begins.",
+      "A clear direction, scope and timeline that you sign off before design begins.",
   },
   {
     title: "Design and build",
     description:
-      "Iterative sprints with weekly reviews, so you see progress and steer direction throughout.",
+      "Weekly reviews in Figma and a live preview on Vercel, so you steer the work throughout.",
   },
   {
     title: "Launch and grow",
     description:
-      "We launch together, measure results and keep optimising with an ongoing partnership.",
+      "We launch together, measure results and keep refining the experience over time.",
   },
 ]
 
 const showcase = [
   {
-    name: "Juniper Bank",
-    meta: "Rebrand and digital banking app",
-    tag: "Branding",
+    name: "Dalim UI",
+    meta: "Component library and docs site",
+    tag: "UI",
     price: "2025",
     tile: "bg-gradient-to-br from-violet-200 via-purple-300 to-fuchsia-400 dark:from-violet-700 dark:via-purple-800 dark:to-fuchsia-900",
   },
   {
-    name: "Vela Motors",
-    meta: "Website and launch campaign",
+    name: "Dalim Agency",
+    meta: "Studio website and brand",
     tag: "Web",
     price: "2025",
     tile: "bg-gradient-to-br from-emerald-200 via-green-300 to-lime-300 dark:from-emerald-700 dark:via-green-800 dark:to-lime-900",
   },
   {
-    name: "Bloom Coffee",
-    meta: "Packaging for a national rollout",
-    tag: "Packaging",
+    name: "Dalim Fonts",
+    meta: "Type foundry identity and store",
+    tag: "Type",
     price: "2024",
     tile: "bg-gradient-to-br from-stone-200 via-neutral-300 to-zinc-400 dark:from-stone-700 dark:via-neutral-800 dark:to-zinc-900",
   },
   {
-    name: "Hollis Hotels",
-    meta: "Booking experience redesign",
+    name: "Dalim Icons",
+    meta: "Icon library and search experience",
     tag: "Product",
     price: "2024",
     tile: "bg-gradient-to-br from-rose-200 via-pink-300 to-purple-300 dark:from-rose-700 dark:via-pink-800 dark:to-purple-900",
   },
   {
-    name: "Strata Outdoor",
-    meta: "Brand film and social content",
-    tag: "Film",
+    name: "Dalim Visuals",
+    meta: "CGI, 3D and motion work",
+    tag: "Motion",
     price: "2024",
     tile: "bg-gradient-to-br from-blue-200 via-indigo-300 to-violet-400 dark:from-blue-700 dark:via-indigo-800 dark:to-violet-900",
   },
   {
-    name: "Atelier Nord",
-    meta: "Identity and e-commerce store",
-    tag: "Commerce",
+    name: "Dalim Works",
+    meta: "Portfolio and case-study site",
+    tag: "Web",
     price: "2023",
     tile: "bg-gradient-to-br from-yellow-100 via-amber-200 to-orange-300 dark:from-yellow-700 dark:via-amber-800 dark:to-orange-900",
   },
@@ -143,62 +144,62 @@ const showcase = [
 const testimonials = [
   {
     quote:
-      "The launch film did more for awareness than our entire previous year of paid social. Phenomenal craft.",
-    name: "Ravi Kapoor",
-    role: "CEO, Strata Outdoor",
+      "The 3D launch loop Designali made did more for awareness than a year of paid social. Phenomenal craft.",
+    name: "Ravi K.",
+    role: "Founder, Designali client",
   },
   {
     quote:
-      "They challenged our brief in the best possible way. The rebrand gave our sales team something they are genuinely proud to show.",
-    name: "Isabelle Grant",
-    role: "CMO, Juniper Bank",
+      "Designali challenged our brief in the best possible way. The new brand gave our team something they are proud to show.",
+    name: "Isabelle G.",
+    role: "Marketing lead, Designali client",
   },
   {
     quote:
-      "Our new website doubled demo requests in the first quarter. The team felt like an extension of our own.",
-    name: "Mateo Rossi",
-    role: "Head of Marketing, Vela Motors",
+      "Our new website was designed and coded by the same person. Nothing got lost between Figma and production.",
+    name: "Mateo R.",
+    role: "Head of marketing, Designali client",
   },
 ]
 
 const tiers = [
   {
     name: "Sprint",
-    price: "$18k",
+    price: "$2,400",
     period: "fixed",
-    description: "A focused two-week engagement for a defined problem.",
+    description: "A focused two-week engagement for one landing page or feature.",
     features: [
-      "Discovery workshop",
-      "One core deliverable",
+      "Discovery call with Ali",
+      "One designed and coded page",
       "Two review rounds",
-      "Handover documentation",
+      "Figma files and source code",
     ],
     cta: "Book a sprint",
   },
   {
     name: "Project",
-    price: "From $60k",
+    price: "From $6k",
     period: "per project",
-    description: "End-to-end brand or product launches.",
+    description: "End-to-end brand identity and website launches.",
     features: [
       "Strategy and creative direction",
-      "Dedicated project lead",
-      "Design and development",
+      "Ali Imam as your lead",
+      "Design and Next.js development",
       "Weekly reviews",
       "30 days of post-launch support",
     ],
     cta: "Start a project",
   },
   {
-    name: "Partnership",
-    price: "$25k",
+    name: "Studio plan",
+    price: "$4,500",
     period: "/month",
-    description: "An embedded team for ongoing work.",
+    description: "Ongoing design and development, month to month.",
     features: [
-      "Dedicated multidisciplinary team",
-      "Quarterly strategy sessions",
+      "Design and code in one person",
+      "Monthly strategy session",
       "Unlimited requests in scope",
-      "Monthly performance reports",
+      "Pause or cancel any time",
     ],
     cta: "Let us talk",
   },
@@ -207,32 +208,32 @@ const tiers = [
 const faqs = [
   {
     q: "What does a typical project cost?",
-    a: "Brand identity projects usually range from $60k to $150k, and websites from $80k to $250k depending on scope.",
+    a: "Sprints start at $2,400 and full brand plus website projects from $6k, depending on scope. See /pricing for details.",
   },
   {
-    q: "What size of companies do you work with?",
-    a: "Mostly growth-stage startups and established mid-market brands, though we take on a few founder-led early projects each year.",
+    q: "Who does Designali work with?",
+    a: "Founders, startups and growing brands who want thoughtful design and production-ready code from one studio.",
   },
   {
     q: "How soon can you start?",
-    a: "We typically book four to six weeks ahead. Sprints can sometimes start within two weeks.",
+    a: "Projects are usually booked a few weeks ahead. Sprints can often start within two weeks.",
   },
   {
     q: "Do you work with in-house teams?",
-    a: "Often. We are happy to lead, to collaborate or to coach your team so they can carry the work forward.",
+    a: "Often. Ali is happy to lead, collaborate or hand off a design system your team can carry forward.",
   },
   {
     q: "Do you work remotely?",
-    a: "Yes. We have studios in three cities and work with clients worldwide, meeting in person for key workshops.",
+    a: "Yes. Designali works online with clients worldwide, with calls, Figma reviews and live previews.",
   },
 ]
 
 const footer = [
-  { title: "Studio", links: ["About", "Team", "Careers", "Press"] },
-  { title: "Services", links: ["Branding", "Digital", "Film", "Campaigns"] },
+  { title: "Studio", links: ["About", "Ali Imam", "Docs", "Pricing"] },
+  { title: "Services", links: ["UI", "Resources", "Motion", "AI workflows"] },
   {
     title: "Connect",
-    links: ["Instagram", "LinkedIn", "Dribbble", "Newsletter"],
+    links: ["Instagram", "LinkedIn", "X", "21st.dev"],
   },
 ]
 
@@ -245,10 +246,8 @@ export default function LandingAgency06() {
             href="#"
             className="flex items-center gap-2 font-semibold tracking-tight"
           >
-            <span className="flex size-7 items-center justify-center rounded-md bg-violet-600 text-white text-sm">
-              F
-            </span>
-            <span className="">Fieldnote</span>
+            <Logo className="h-5 w-auto" />
+            <span className="">designali</span>
           </a>
           <nav className="hidden items-center gap-7 text-sm md:flex">
             {navLinks.map((link) => (
@@ -272,7 +271,7 @@ export default function LandingAgency06() {
               Contact
             </Button>
             <Button size="sm" nativeButton={false} render={<a href="#" />}>
-              Plan a study
+              Plan a project
             </Button>
           </div>
         </div>
@@ -280,9 +279,9 @@ export default function LandingAgency06() {
       <section className="border-b">
         <div className="mx-auto max-w-7xl px-6">
           <div className="flex items-center justify-between border-x border-b px-6 py-3 text-xs text-muted-foreground">
-            <span>UX research studio</span>
+            <span>Designali UI/UX design</span>
             <span className="hidden sm:inline">
-              Research that changes roadmaps.
+              UX that changes roadmaps.
             </span>
           </div>
           <div className="border-x px-6 py-16 md:py-28">
@@ -294,13 +293,11 @@ export default function LandingAgency06() {
             </h1>
             <div className="mt-12 flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
               <p className="max-w-md text-base leading-7 text-muted-foreground">
-                Fieldnote runs interviews, usability tests and diary studies
-                that turn customer behaviour into clear product decisions for
-                your roadmap.
+                Designali runs UX audits, flows and prototypes in Figma that turn customer behaviour into clear product decisions, then builds them in code.
               </p>
               <div className="flex flex-wrap gap-3 ">
                 <Button size="lg" nativeButton={false} render={<a href="#" />}>
-                  Plan a study
+                  Plan a project
                   <ArrowRight />
                 </Button>
                 <Button
@@ -309,7 +306,7 @@ export default function LandingAgency06() {
                   nativeButton={false}
                   render={<a href="#" />}
                 >
-                  See research reports
+                  See UI examples
                 </Button>
               </div>
             </div>
@@ -337,7 +334,7 @@ export default function LandingAgency06() {
       <section className="border-b">
         <div className="mx-auto max-w-7xl px-6 py-12">
           <p className="text-center text-sm text-muted-foreground">
-            Brands we have partnered with
+            Brands and product lines by Ali Imam
           </p>
           <div className="mt-8 grid grid-cols-2 items-center gap-x-8 gap-y-6 sm:grid-cols-4 lg:grid-cols-8">
             {logos.map((logo) => (
@@ -358,11 +355,10 @@ export default function LandingAgency06() {
               Services
             </p>
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl  mt-3">
-              Strategy, design and technology under one roof
+              Strategy, design and code under one roof
             </h2>
             <p className="mt-4 text-lg leading-8 text-muted-foreground">
-              We partner with ambitious brands from the first workshop to launch
-              day and beyond, with senior people on every project.
+              Where thoughtful design meets production-ready code. Ali Imam designs and builds every project, from first call to launch day.
             </p>
           </div>
           <div className="mt-14 grid overflow-hidden rounded-2xl border sm:grid-cols-2 lg:grid-cols-3">
@@ -389,8 +385,7 @@ export default function LandingAgency06() {
                 Selected work
               </h2>
               <p className="mt-4 text-lg leading-8 text-muted-foreground">
-                A few recent projects for clients who wanted to be remembered,
-                not just noticed.
+                A few projects from the Designali and Dalim archive, designed and coded in-house.
               </p>
             </div>
             <Button
@@ -433,7 +428,7 @@ export default function LandingAgency06() {
         <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl">
-              What our clients say
+              What clients say
             </h2>
           </div>
           <div className="mt-14 grid gap-6 md:grid-cols-3">
@@ -493,11 +488,10 @@ export default function LandingAgency06() {
         <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl">
-              Ways to work with us
+              Ways to work with Designali
             </h2>
             <p className="mt-4 text-lg leading-8 text-muted-foreground">
-              Clear engagement models with fixed scopes or dedicated teams. No
-              surprise invoices, ever.
+              Fixed-scope projects or a monthly studio plan. No surprise invoices, ever.
             </p>
           </div>
           <div className="mx-auto mt-14 grid max-w-6xl items-start gap-6 lg:grid-cols-3">
@@ -559,7 +553,7 @@ export default function LandingAgency06() {
                 href="#"
                 className="font-medium text-foreground underline underline-offset-4"
               >
-                Get in touch
+                Email hello@designali.com
               </a>
               .
             </p>
@@ -587,12 +581,11 @@ export default function LandingAgency06() {
               Stop guessing what your users want
             </h2>
             <p className="text-lg text-muted-foreground">
-              Book a scoping call and get a research plan with timelines and
-              costs within a week.
+              Book a scoping call and get a UX plan with timelines and costs within a week.
             </p>
             <div className="flex flex-wrap gap-3 justify-center">
               <Button size="lg" nativeButton={false} render={<a href="#" />}>
-                Plan a study
+                Plan a project
                 <ArrowRight />
               </Button>
               <Button
@@ -601,7 +594,7 @@ export default function LandingAgency06() {
                 nativeButton={false}
                 render={<a href="#" />}
               >
-                See research reports
+                See UI examples
               </Button>
             </div>
           </div>
@@ -614,13 +607,11 @@ export default function LandingAgency06() {
               href="#"
               className="flex items-center gap-2 font-semibold tracking-tight"
             >
-              <span className="flex size-7 items-center justify-center rounded-md bg-violet-600 text-white text-sm">
-                F
-              </span>
-              <span className="">Fieldnote</span>
+              <Logo className="h-5 w-auto" />
+              <span className="">designali</span>
             </a>
             <p className="max-w-xs text-sm text-muted-foreground">
-              Research that changes roadmaps.
+              UX that changes roadmaps.
             </p>
           </div>
           {footer.map((column) => (
@@ -644,7 +635,7 @@ export default function LandingAgency06() {
         <div className="border-t ">
           <div className="mx-auto flex max-w-7xl flex-col justify-between gap-4 px-6 py-6 text-xs text-muted-foreground sm:flex-row">
             <span>
-              © {new Date().getFullYear()} Fieldnote. All rights reserved.
+              © {new Date().getFullYear()} Designali. All rights reserved.
             </span>
             <div className="flex gap-6">
               <a href="#" className="hover:text-foreground">

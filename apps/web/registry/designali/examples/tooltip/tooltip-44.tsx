@@ -1,4 +1,6 @@
-import { MapPinIcon } from "lucide-react"
+import {
+  MapPin as MapPinIcon,
+} from "@designali/icons"
 
 import {
   Tooltip,
@@ -8,9 +10,9 @@ import {
 } from "@workspace/ui/components/tooltip"
 
 const pins = [
-  { name: "Harbor Street store", top: "28%", left: "22%" },
-  { name: "Old Town kiosk", top: "55%", left: "48%" },
-  { name: "Riverside pickup point", top: "38%", left: "76%" },
+  { name: "Designali studio", top: "28%", left: "22%" },
+  { name: "Client workshop", top: "55%", left: "48%" },
+  { name: "Design meetup", top: "38%", left: "76%" },
 ]
 
 export default function MapPinTooltips() {

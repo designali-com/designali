@@ -1,4 +1,8 @@
-import { CalendarIcon, FolderIcon, MailIcon } from "lucide-react"
+import {
+  Calendar as CalendarIcon,
+  Folder as FolderIcon,
+  Mail as MailIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import { Button } from "@workspace/ui/components/button"
@@ -22,13 +26,13 @@ const apps = [
   },
   {
     name: "Mailbox",
-    description: "Log customer emails",
+    description: "Log client emails to hello@designali.com",
     icon: MailIcon,
     state: "connecting",
   },
   {
     name: "Storage",
-    description: "Attach files from your drive",
+    description: "Attach Figma and brand files",
     icon: FolderIcon,
     state: "idle",
   },

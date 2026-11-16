@@ -38,7 +38,7 @@ export function CallToAction() {
             <p className="text-muted-foreground max-w-2xl text-sm md:text-xl">
               Bring your brand and ideas to life with professional design
               services. Whether it’s branding, UI/UX, or marketing materials,
-              our team is ready to help.
+              Designali is ready to help.
             </p>
           </div>
 

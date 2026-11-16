@@ -1,23 +1,27 @@
 "use client"
 
 import { useState } from "react"
-import { Grid2x2, Grid3x3, LayoutGrid } from "lucide-react"
+import {
+  Grid2x2,
+  Grid3x3,
+  LayoutGrid,
+} from "@designali/icons"
 
 import { cn } from "@workspace/ui/lib/utils"
 
 const assets = [
-  { name: "hero-banner-final.png", size: "4.2 MB", dims: "3840x2160", gradient: "linear-gradient(135deg, var(--chart-1), var(--chart-2))" },
-  { name: "team-offsite-07.jpg", size: "2.8 MB", dims: "4000x3000", gradient: "linear-gradient(200deg, var(--chart-3), var(--chart-4))" },
-  { name: "product-angle-left.png", size: "1.1 MB", dims: "2048x2048", gradient: "linear-gradient(60deg, var(--chart-5), var(--chart-1))" },
-  { name: "office-lobby.jpg", size: "3.4 MB", dims: "5472x3648", gradient: "linear-gradient(160deg, var(--chart-2), var(--chart-5))" },
-  { name: "packaging-mock-v3.png", size: "6.0 MB", dims: "3000x3000", gradient: "linear-gradient(90deg, var(--chart-4), var(--chart-3))" },
-  { name: "founder-portrait.jpg", size: "2.2 MB", dims: "3200x4000", gradient: "linear-gradient(300deg, var(--chart-1), var(--chart-4))" },
-  { name: "event-stage-wide.jpg", size: "5.1 MB", dims: "6000x3376", gradient: "linear-gradient(20deg, var(--chart-4), var(--chart-2))" },
-  { name: "icon-set-preview.png", size: "0.8 MB", dims: "1600x1200", gradient: "linear-gradient(250deg, var(--chart-5), var(--chart-3))" },
-  { name: "billboard-draft.png", size: "7.3 MB", dims: "7200x2400", gradient: "linear-gradient(110deg, var(--chart-2), var(--chart-1))" },
-  { name: "newsletter-header.png", size: "0.6 MB", dims: "1200x600", gradient: "linear-gradient(180deg, var(--chart-3), var(--chart-5))" },
-  { name: "store-front-night.jpg", size: "3.9 MB", dims: "4896x3264", gradient: "linear-gradient(45deg, var(--chart-1), var(--chart-3))" },
-  { name: "app-screens-set.png", size: "2.5 MB", dims: "2880x1800", gradient: "linear-gradient(330deg, var(--chart-4), var(--chart-5))" },
+  { name: "designali-og.jpg", size: "4.2 MB", dims: "3840x2160", gradient: 'url("/og.jpg") center / cover' },
+  { name: "ali-imam-portrait.jpg", size: "2.8 MB", dims: "4000x3000", gradient: 'url("/ali.jpg") center / cover' },
+  { name: "hero-1.jpg", size: "1.1 MB", dims: "2048x2048", gradient: 'url("/img/hero-1.jpg") center / cover' },
+  { name: "hero-2.jpg", size: "3.4 MB", dims: "5472x3648", gradient: 'url("/img/hero-2.jpg") center / cover' },
+  { name: "dashboard-light.jpg", size: "6.0 MB", dims: "3000x3000", gradient: 'url("/img/dashboard-1-light.jpg") center / cover' },
+  { name: "dashboard-dark.jpg", size: "2.2 MB", dims: "3200x4000", gradient: 'url("/img/dashboard-1-dark.jpg") center / cover' },
+  { name: "chat-light.jpg", size: "5.1 MB", dims: "6000x3376", gradient: 'url("/img/chat-1-light.jpg") center / cover' },
+  { name: "login-screen.jpg", size: "0.8 MB", dims: "1600x1200", gradient: 'url("/img/login-1.jpg") center / cover' },
+  { name: "stock-design.jpg", size: "7.3 MB", dims: "7200x2400", gradient: 'url("/stock/design.jpg") center / cover' },
+  { name: "stock-development.jpg", size: "0.6 MB", dims: "1200x600", gradient: 'url("/stock/development.jpg") center / cover' },
+  { name: "stock-strategy.jpg", size: "3.9 MB", dims: "4896x3264", gradient: 'url("/stock/strategy.jpg") center / cover' },
+  { name: "wallpaper-2.jpg", size: "2.5 MB", dims: "2880x1800", gradient: 'url("/stock/wallpaper-2.jpg") center / cover' },
 ]
 
 const densities = [
@@ -40,8 +44,8 @@ export default function Gallery19() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="flex flex-col gap-4 border-b border-border pb-4 md:flex-row md:items-center md:justify-between">
           <div>
-            <h2 className="text-2xl font-semibold tracking-tight">Brand assets</h2>
-            <p className="text-sm text-muted-foreground">{assets.length} files in Marketing / 2025</p>
+            <h2 className="text-2xl font-semibold tracking-tight">Designali brand assets</h2>
+            <p className="text-sm text-muted-foreground">{assets.length} files in Designali / 2025</p>
           </div>
           <div className="flex flex-wrap items-center gap-3">
             <div className="flex border border-border" role="group" aria-label="Aspect ratio">

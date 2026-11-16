@@ -1,4 +1,6 @@
-import { GiftIcon } from "lucide-react"
+import {
+  Gift as GiftIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import {
@@ -19,20 +21,20 @@ const releases = [
   {
     version: "v3.2",
     date: "Nov 4",
-    title: "Saved views",
-    body: "Pin your favourite filters and share them with a link.",
+    title: "460+ blocks",
+    body: "New analytics, auth and pricing blocks on designali.com/blocks.",
   },
   {
     version: "v3.1",
     date: "Oct 18",
-    title: "Bulk edit",
-    body: "Update status, owner, and due date on many rows at once.",
+    title: "4000+ icons",
+    body: "@designali/icons now covers every UI example on the site.",
   },
   {
     version: "v3.0",
     date: "Sep 30",
-    title: "New editor",
-    body: "Faster typing, slash commands, and inline comments.",
+    title: "Logos package",
+    body: "Install @designali/logos for Github, Vercel, Figma and more.",
   },
 ]
 

@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { UsersIcon } from "lucide-react"
+import {
+  Users as UsersIcon,
+} from "@designali/icons"
 
 import {
   Combobox,
@@ -15,14 +17,14 @@ import { InputGroupAddon } from "@workspace/ui/components/input-group"
 import { Spinner } from "@workspace/ui/components/spinner"
 
 const directory = [
-  "Abigail Stone",
-  "Adrian Park",
-  "Beatriz Lopes",
-  "Callum Reid",
-  "Dalia Rahman",
-  "Elliot Grant",
-  "Farah Noor",
-  "Gideon Hale",
+  "Ali Imam",
+  "Amir · Designer",
+  "Bella · Client",
+  "Chris · Developer",
+  "Dana · Motion Designer",
+  "Eli · Brand Designer",
+  "Farah · Client",
+  "Gia · Designer",
 ]
 
 export default function AsyncUserSearch() {

@@ -2,12 +2,12 @@
 
 import * as React from "react"
 import {
-  CloudIcon,
-  HardDriveIcon,
-  UsersIcon,
-  WifiIcon,
-  WifiOffIcon,
-} from "lucide-react"
+  Cloud as CloudIcon,
+  HardDrive as HardDriveIcon,
+  Users as UsersIcon,
+  Wifi as WifiIcon,
+  WifiOff as WifiOffIcon,
+} from "@designali/icons"
 
 import {
   Command,
@@ -43,7 +43,7 @@ export default function OfflineDisabledSearch() {
         <CommandInput
           disabled={!online}
           placeholder={
-            online ? "Search workspace..." : "Search unavailable offline"
+            online ? "Search Designali workspace..." : "Search unavailable offline"
           }
         />
         <CommandList>
@@ -51,7 +51,7 @@ export default function OfflineDisabledSearch() {
           <CommandGroup heading="Cloud">
             <CommandItem disabled={!online}>
               <CloudIcon />
-              <span>Search shared drives</span>
+              <span>Search shared Figma files</span>
             </CommandItem>
             <CommandItem disabled={!online}>
               <UsersIcon />

@@ -1,4 +1,6 @@
-import { CheckCircle2Icon } from "lucide-react"
+import {
+  CircleCheck as CheckCircle2Icon,
+} from "@designali/icons"
 
 import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
 import {
@@ -10,13 +12,13 @@ import { cn } from "@workspace/ui/lib/utils"
 
 const comments = [
   {
-    author: "Hana Sato",
-    text: "Can we cap liability at 12 months of fees?",
+    author: "Hana",
+    text: "Can we add a second round of logo revisions?",
     resolved: false,
   },
   {
-    author: "Victor Lund",
-    text: "Renewal term updated to annual.",
+    author: "Ali Imam",
+    text: "Added. Scope now covers brand identity and website.",
     resolved: true,
   },
 ]
@@ -31,7 +33,7 @@ export default function DocumentReviewComments() {
         <div className="flex h-full items-start justify-center bg-muted/50 p-4">
           <div className="flex w-full max-w-64 flex-col gap-2 bg-background p-4 shadow-sm">
             <span className="text-xs font-semibold">
-              Master Services Agreement
+              Designali project agreement
             </span>
             <div className="h-1.5 w-full bg-muted" />
             <div className="h-1.5 w-5/6 bg-muted" />

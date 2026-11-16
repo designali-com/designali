@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { BadgePercentIcon } from "lucide-react"
+import {
+  BadgePercent as BadgePercentIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -23,7 +25,7 @@ export default function CouponCodeField() {
         <Input
           id="promo-code"
           value={code}
-          placeholder="SPRING25"
+          placeholder="DESIGNALI25"
           aria-invalid={result === "bad"}
           onChange={(e) => {
             setCode(e.target.value.toUpperCase())

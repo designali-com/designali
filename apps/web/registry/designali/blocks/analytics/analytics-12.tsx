@@ -15,7 +15,7 @@ const metrics = [
   },
   {
     key: "trials",
-    label: "Trials started",
+    label: "Free blocks copied",
     value: "1,284",
     change: "+15.6%",
     data: [720, 760, 810, 790, 880, 940, 920, 1010, 1080, 1120, 1210, 1284],
@@ -58,7 +58,7 @@ export default function Analytics12() {
     <section className="w-full bg-background py-16 text-foreground md:py-24">
       <div className="mx-auto max-w-7xl px-6">
         <h2 className="text-2xl font-medium tracking-tight md:text-3xl">Growth overview</h2>
-        <p className="mt-1 text-sm text-muted-foreground">Trailing twelve months, Tessellate workspace plans</p>
+        <p className="mt-1 text-sm text-muted-foreground">Trailing twelve months, Designali Pro plans</p>
 
         <div className="mt-8 border">
           <div role="tablist" className="grid grid-cols-2 border-b md:grid-cols-4">

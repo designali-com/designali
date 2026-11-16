@@ -1,4 +1,6 @@
-import { ListFilterIcon } from "lucide-react"
+import {
+  ListFilter as ListFilterIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {

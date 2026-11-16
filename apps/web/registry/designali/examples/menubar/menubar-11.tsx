@@ -1,14 +1,14 @@
 import {
-  CircleIcon,
-  EllipsisIcon,
-  PenToolIcon,
-  PencilIcon,
-  ShapesIcon,
-  SquareIcon,
-  StarIcon,
-  TriangleIcon,
-  TypeIcon,
-} from "lucide-react"
+  Circle as CircleIcon,
+  Ellipsis as EllipsisIcon,
+  PenTool as PenToolIcon,
+  Pencil as PencilIcon,
+  Shapes as ShapesIcon,
+  Square as SquareIcon,
+  Star as StarIcon,
+  Triangle as TriangleIcon,
+  Type as TypeIcon,
+} from "@designali/icons"
 
 import {
   Menubar,

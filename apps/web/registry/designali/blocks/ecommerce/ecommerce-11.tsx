@@ -1,7 +1,10 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { ArrowRight, Copy } from "lucide-react"
+import {
+  ArrowRight,
+  Copy,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 
@@ -57,10 +60,10 @@ export default function Ecommerce11() {
             <h2 className="mt-4 text-5xl leading-none font-semibold tracking-tight md:text-7xl">
               30% off
               <br />
-              outerwear
+              templates
             </h2>
             <p className="mt-5 max-w-sm text-background/70">
-              Parkas, shells and down jackets from Tundra &amp; Pine. Discount applied at checkout,
+              Templates, blocks and icon packs from Designali. Discount applied at checkout,
               no minimum spend.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-3">
@@ -95,7 +98,7 @@ export default function Ecommerce11() {
             </div>
             <div className="mt-6">
               <div className="flex justify-between text-xs text-background/60">
-                <span>Stock claimed</span>
+                <span>Codes claimed</span>
                 <span>72%</span>
               </div>
               <div className="mt-2 h-1.5 bg-background/15">

@@ -1,7 +1,9 @@
 "use client"
 
 import { REGEXP_ONLY_DIGITS } from "input-otp"
-import { ArrowRightIcon } from "lucide-react"
+import {
+  ArrowRight as ArrowRightIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Field, FieldLabel } from "@workspace/ui/components/field"
@@ -16,10 +18,10 @@ export default function ChangeEmailConfirmation() {
     <div className="flex w-full max-w-sm flex-col gap-4">
       <div className="flex items-center gap-2 border bg-muted/40 p-3 text-xs">
         <span className="truncate text-muted-foreground line-through">
-          jonah@oldmail.dev
+          ali@example.com
         </span>
         <ArrowRightIcon className="size-3.5 shrink-0" />
-        <span className="truncate font-medium">jonah.reyes@fieldnotes.io</span>
+        <span className="truncate font-medium">ali@designali.com</span>
       </div>
       <Field>
         <FieldLabel htmlFor="change-email-otp">

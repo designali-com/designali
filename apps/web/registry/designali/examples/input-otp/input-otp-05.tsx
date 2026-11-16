@@ -1,7 +1,9 @@
 "use client"
 
 import { REGEXP_ONLY_DIGITS } from "input-otp"
-import { ShieldCheckIcon } from "lucide-react"
+import {
+  ShieldCheck as ShieldCheckIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Checkbox } from "@workspace/ui/components/checkbox"
@@ -22,7 +24,7 @@ export default function TwoFactorLoginStep() {
       <div className="space-y-1">
         <h3 className="text-sm font-semibold">Two-factor authentication</h3>
         <p className="text-xs text-muted-foreground">
-          Open your authenticator app and enter the code for Lumen.
+          Open your authenticator app and enter the code for Designali.
         </p>
       </div>
       <InputOTP maxLength={6} pattern={REGEXP_ONLY_DIGITS}>

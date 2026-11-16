@@ -45,7 +45,7 @@ export default function LicenseKeyActivation() {
         </InputOTPGroup>
       </InputOTP>
       <FieldDescription>
-        Find it in your purchase receipt from Quillstack Pro.
+        Find it in your purchase receipt from Designali Templates Pro.
       </FieldDescription>
     </Field>
   )

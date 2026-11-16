@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { CheckIcon, DownloadIcon } from "lucide-react"
+import {
+  Check as CheckIcon,
+  Download as DownloadIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -41,7 +44,7 @@ export default function ExportWithLoadingState() {
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-52">
         <DropdownMenuGroup>
-          <DropdownMenuLabel>Export 1,284 rows</DropdownMenuLabel>
+          <DropdownMenuLabel>Export 1,284 orders</DropdownMenuLabel>
           {formats.map((f) => (
             <DropdownMenuItem
               key={f.id}

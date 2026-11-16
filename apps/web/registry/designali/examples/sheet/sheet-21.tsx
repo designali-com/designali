@@ -1,4 +1,7 @@
-import { RssIcon, ScrollTextIcon } from "lucide-react"
+import {
+  Rss as RssIcon,
+  ScrollText as ScrollTextIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import { Button } from "@workspace/ui/components/button"
@@ -17,9 +20,9 @@ const entries = Array.from({ length: 12 }, (_, i) => ({
   version: "3." + (12 - i) + ".0",
   date: "Week " + (48 - i),
   notes: [
-    "Improved sync reliability for offline edits",
-    "New keyboard shortcuts in the editor",
-    "Fixed a crash when importing large spreadsheets",
+    "460+ blocks now live on designali.com",
+    "4000+ icons in @designali/icons",
+    "Fixed dark mode in pricing blocks",
   ].slice(0, (i % 3) + 1),
 }))
 

@@ -1,4 +1,9 @@
-import { EyeIcon, LockIcon, MessageSquareIcon, PencilIcon } from "lucide-react"
+import {
+  Eye as EyeIcon,
+  Lock as LockIcon,
+  MessageSquare as MessageSquareIcon,
+  Pencil as PencilIcon,
+} from "@designali/icons"
 
 import {
   ToggleGroup,
@@ -29,7 +34,7 @@ export default function DisabledToggleGroup() {
       </ToggleGroup>
       <p className="flex items-center gap-1.5 text-xs text-muted-foreground">
         <LockIcon className="size-3" />
-        Locked while Priya Raman is editing.
+        Locked while Ali Imam is editing.
       </p>
     </div>
   )

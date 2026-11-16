@@ -2,8 +2,8 @@ import { Input } from "@workspace/ui/components/input"
 import { Label } from "@workspace/ui/components/label"
 
 const rows = [
-  { id: "h-name", label: "Full name", value: "Iris Navarro" },
-  { id: "h-role", label: "Job title", value: "Staff Engineer" },
+  { id: "h-name", label: "Full name", value: "Ali Imam" },
+  { id: "h-role", label: "Job title", value: "Founder, Design Engineer" },
   { id: "h-loc", label: "Location", value: "Lisbon, Portugal" },
 ]
 

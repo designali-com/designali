@@ -1,4 +1,6 @@
-import { TrendingUp } from "lucide-react"
+import {
+  TrendingUp,
+} from "@designali/icons"
 
 const rows = [
   { customer: "Wrenfield Insurance", initials: "WI", metric: "Claims handled per agent", before: "42 / week", after: "71 / week", delta: "+69%", quote: "Agents spend their time on people, not paperwork." },

@@ -14,16 +14,16 @@ import { Tabs, TabsList, TabsTrigger } from "@workspace/ui/components/tabs"
 import { cn } from "@workspace/ui/lib/utils"
 
 const invoices = [
-  { id: "INV-2041", client: "Brightpath Tutors", amount: 1200, status: "Paid" },
+  { id: "INV-2041", client: "Brand identity", amount: 1200, status: "Paid" },
   {
     id: "INV-2042",
-    client: "Copperleaf Dental",
+    client: "UI/UX audit",
     amount: 860,
     status: "Overdue",
   },
-  { id: "INV-2043", client: "Northgate Gym", amount: 450, status: "Draft" },
-  { id: "INV-2044", client: "Saltwater Surf Co", amount: 2300, status: "Paid" },
-  { id: "INV-2045", client: "Juniper Florist", amount: 310, status: "Overdue" },
+  { id: "INV-2043", client: "Design system", amount: 450, status: "Draft" },
+  { id: "INV-2044", client: "Next.js website", amount: 2300, status: "Paid" },
+  { id: "INV-2045", client: "CGI & motion reel", amount: 310, status: "Overdue" },
 ]
 
 const filters = ["All", "Paid", "Overdue", "Draft"]
@@ -54,7 +54,7 @@ export default function StatusFilterTabsTable() {
           <TableHeader>
             <TableRow>
               <TableHead>Invoice</TableHead>
-              <TableHead>Client</TableHead>
+              <TableHead>Project</TableHead>
               <TableHead className="text-right">Amount</TableHead>
             </TableRow>
           </TableHeader>

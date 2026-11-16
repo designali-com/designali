@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { FlagIcon } from "lucide-react"
+import {
+  Flag as FlagIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -25,13 +27,13 @@ export default function ReportContentDialog() {
     <Dialog>
       <DialogTrigger render={<Button variant="outline" />}>
         <FlagIcon data-icon="inline-start" />
-        Report post
+        Report comment
       </DialogTrigger>
       <DialogContent className="sm:max-w-sm">
         <DialogHeader>
-          <DialogTitle>Report this post</DialogTitle>
+          <DialogTitle>Report this comment</DialogTitle>
           <DialogDescription>
-            Reports are anonymous. Our moderators review them within 24 hours.
+            Reports are anonymous. The Designali team reviews them within 24 hours.
           </DialogDescription>
         </DialogHeader>
         <div className="flex flex-wrap gap-1.5">

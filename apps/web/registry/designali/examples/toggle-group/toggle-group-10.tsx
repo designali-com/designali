@@ -21,7 +21,7 @@ export default function DateRangePresetToggleGroup() {
   return (
     <div className="flex w-full max-w-sm flex-col gap-4 border p-4">
       <div className="flex items-center justify-between gap-2">
-        <span className="text-sm font-medium">Revenue</span>
+        <span className="text-sm font-medium">Designali template sales</span>
         <ToggleGroup
           size="sm"
           spacing={0}

@@ -1,29 +1,35 @@
-import { ArrowUpRight, Briefcase, Building2, GraduationCap, Rocket } from "lucide-react"
+import {
+  ArrowUpRight,
+  Briefcase,
+  Building2,
+  GraduationCap,
+  Rocket,
+} from "@designali/icons"
 
 const audiences = [
   {
     icon: Rocket,
     title: "Startups",
-    body: "Free credits for your first year if you have raised under $5M.",
-    cta: "Apply for credits",
+    body: "A brand identity, UI design and Next.js site delivered as one sprint.",
+    cta: "Start a project",
   },
   {
     icon: Briefcase,
     title: "Agencies",
-    body: "White-label client workspaces and a 30% partner revenue share.",
-    cta: "Join partner program",
+    body: "White-label design, CGI, motion and front-end builds under your name.",
+    cta: "Partner with Designali",
   },
   {
     icon: Building2,
-    title: "Enterprise",
-    body: "SSO, audit logs, data residency and a named account team.",
-    cta: "Contact sales",
+    title: "Product teams",
+    body: "Design systems, UI/UX and creative development alongside your team.",
+    cta: "Talk to Ali",
   },
   {
     icon: GraduationCap,
     title: "Education",
-    body: "Unlimited seats for verified students, teachers and classrooms.",
-    cta: "Verify your school",
+    body: "Free Designali templates, blocks and icons for students and teachers.",
+    cta: "Get student access",
   },
 ]
 
@@ -36,7 +42,7 @@ export default function CallToAction18() {
             Pick the path that fits your team.
           </h2>
           <p className="mt-4 text-sm leading-7 text-muted-foreground">
-            Same product, tailored terms. Choose where you are today and we
+            Same studio, tailored terms. Choose where you are today and we
             will set you up accordingly.
           </p>
         </div>

@@ -1,7 +1,11 @@
 "use client"
 
 import * as React from "react"
-import { FileTextIcon, HashIcon, UserIcon } from "lucide-react"
+import {
+  FileText as FileTextIcon,
+  Hash as HashIcon,
+  User as UserIcon,
+} from "@designali/icons"
 
 import {
   Command,
@@ -17,12 +21,12 @@ import {
 } from "@workspace/ui/components/toggle-group"
 
 const results = [
-  { scope: "docs", label: "Release checklist", icon: FileTextIcon },
-  { scope: "docs", label: "Incident runbook", icon: FileTextIcon },
-  { scope: "people", label: "Hana Sato", icon: UserIcon },
-  { scope: "people", label: "Marcus Bell", icon: UserIcon },
-  { scope: "channels", label: "#releases", icon: HashIcon },
-  { scope: "channels", label: "#on-call", icon: HashIcon },
+  { scope: "docs", label: "Template launch checklist", icon: FileTextIcon },
+  { scope: "docs", label: "Design-to-code handoff", icon: FileTextIcon },
+  { scope: "people", label: "Ali Imam", icon: UserIcon },
+  { scope: "people", label: "Sara", icon: UserIcon },
+  { scope: "channels", label: "#designali-releases", icon: HashIcon },
+  { scope: "channels", label: "#client-projects", icon: HashIcon },
 ]
 
 export default function ScopedSearchTabs() {

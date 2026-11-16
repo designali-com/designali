@@ -1,4 +1,6 @@
-import { ArrowDownIcon } from "lucide-react"
+import {
+  ArrowDown as ArrowDownIcon,
+} from "@designali/icons"
 
 import {
   Accordion,
@@ -10,18 +12,18 @@ import {
 const faqs = [
   {
     value: "1",
-    q: "What makes Tideline different?",
-    a: "Tideline turns customer calls into searchable insight in minutes, without manual tagging.",
+    q: "What makes Designali different?",
+    a: "Designali is design se code tak — one studio that designs your brand and ships production-ready Next.js code.",
   },
   {
     value: "2",
-    q: "Is my data used to train models?",
-    a: "Never. Your recordings and transcripts stay in your workspace and are deleted on request.",
+    q: "Do you use AI in your workflow?",
+    a: "Yes, AI-assisted workflows speed things up — but every design and line of code is reviewed by Ali.",
   },
   {
     value: "3",
     q: "How long does setup take?",
-    a: "Most teams connect their calendar and record the first call within ten minutes.",
+    a: "Most projects start with a short call and a Figma direction within the first week.",
   },
 ]
 

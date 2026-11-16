@@ -4,7 +4,7 @@ import { useLayoutEffect, useRef, useState } from "react"
 
 import { cn } from "@workspace/ui/lib/utils"
 
-const links = ["Overview", "Integrations", "Changelog", "Pricing", "Docs"]
+const links = ["Overview", "Blocks", "Changelog", "Pricing", "Docs"]
 
 type Box = { left: number; width: number }
 
@@ -37,7 +37,7 @@ export default function Navigation11() {
         <header className="flex w-full max-w-3xl items-center justify-between gap-4 border bg-background p-2">
           <a href="#" className="flex shrink-0 items-center gap-2 ps-2 text-sm font-semibold">
             <span className="size-4 rotate-45 border-2 border-foreground" />
-            <span className="hidden sm:inline">Prism</span>
+            <span className="hidden sm:inline">designali</span>
           </a>
           <nav
             className="relative flex min-w-0 overflow-x-auto"
@@ -79,7 +79,7 @@ export default function Navigation11() {
             href="#"
             className="hidden h-9 shrink-0 items-center bg-primary px-4 text-sm text-primary-foreground md:flex"
           >
-            Try free
+            Get started
           </a>
         </header>
 

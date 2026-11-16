@@ -1,4 +1,7 @@
-import { CircleCheckBigIcon, DownloadIcon } from "lucide-react"
+import {
+  CircleCheckBig as CircleCheckBigIcon,
+  Download as DownloadIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -24,7 +27,7 @@ export default function PaymentSuccessDialog() {
           <DialogHeader className="items-center text-center">
             <DialogTitle>Payment received</DialogTitle>
             <DialogDescription>
-              Invoice INV-2026-0311 is now paid in full.
+              Designali invoice INV-2026-0311 is now paid in full.
             </DialogDescription>
           </DialogHeader>
         </div>

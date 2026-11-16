@@ -8,132 +8,133 @@ import {
   Layers,
   Lock,
   Plus,
-} from "lucide-react"
+} from "@designali/icons"
 
+import { Logo } from "@/src/components/logo"
 import { Button } from "@workspace/ui/components/button"
 
-const navLinks = ["Product", "Models", "Pricing", "Research", "Docs"]
+const navLinks = ["Workflows", "Tools", "Pricing", "Work", "Docs"]
 
 const features = [
   {
     icon: Bot,
-    title: "Custom agents",
+    title: "Prompt-to-prototype",
     description:
-      "Give agents tools, instructions and guardrails, then let them handle multi-step tasks end to end.",
+      "Turn a written brief into clickable Next.js prototypes built from Designali blocks in a day.",
   },
   {
     icon: Lock,
-    title: "Private by design",
+    title: "Human-crafted finish",
     description:
-      "Your data is never used to train models. Zero data retention options and customer-managed keys.",
+      "AI speeds up exploration, but Ali Imam reviews, refines and hand-codes every final detail.",
   },
   {
     icon: Gauge,
-    title: "Low-latency inference",
+    title: "Faster iterations",
     description:
-      "Streaming responses start in under 300ms, served from regions close to your users.",
+      "Explore dozens of layout and visual directions in hours instead of weeks.",
   },
   {
     icon: FlaskConical,
-    title: "Built-in evaluations",
+    title: "Design QA with AI",
     description:
-      "Test prompts against golden datasets and catch regressions before they reach customers.",
+      "Automated checks for spacing, contrast and copy catch issues before a review call.",
   },
   {
     icon: Layers,
-    title: "Model routing",
+    title: "The right tool per task",
     description:
-      "Send each request to the best model for the job and cut inference costs by up to 60%.",
+      "Figma for craft, Cursor and Claude for code, image models for moodboards. Each tool where it shines.",
   },
 ]
 
 const stats = [
-  { value: "280ms", label: "Median time to first token" },
-  { value: "61%", label: "Average cost reduction" },
-  { value: "9,000+", label: "Companies building with us" },
-  { value: "40+", label: "Languages supported" },
+  { value: "2300+", label: "UI examples as references" },
+  { value: "3x", label: "Faster first concepts" },
+  { value: "4000+", label: "Icons in @designali/icons" },
+  { value: "240+", label: "Landing pages to start from" },
 ]
 
 const steps = [
   {
-    title: "Connect your sources",
+    title: "Share your brief",
     description:
-      "Sync Google Drive, Notion, Confluence, Zendesk and more with permission-aware connectors.",
+      "Send goals, references and brand assets. We turn them into a structured AI-ready brief.",
   },
   {
-    title: "Design the assistant",
+    title: "Explore with AI",
     description:
-      "Write instructions, choose tools and set guardrails in a visual builder or in code.",
+      "Generate moodboards, layouts and copy directions fast, then pick the strongest routes together.",
   },
   {
-    title: "Evaluate before launch",
+    title: "Refine by hand",
     description:
-      "Run test suites against real questions and compare models side by side on quality and cost.",
+      "Ali refines the chosen direction in Figma, with real type, spacing and motion decisions.",
   },
   {
-    title: "Deploy anywhere",
+    title: "Ship production code",
     description:
-      "Ship to Slack, your help center, your app or the API, and monitor every conversation live.",
+      "We build it in Next.js, TypeScript and Tailwind CSS and deploy it on Vercel.",
   },
 ]
 
 const showcase = [
   {
-    name: "Support Copilot",
-    meta: "Drafts replies from your help center",
+    name: "Moodboard sprint",
+    meta: "AI-generated visual directions",
     tag: "Popular",
-    price: "2 min setup",
+    price: "1 day",
   },
   {
-    name: "Research Agent",
-    meta: "Summarises accounts before sales calls",
-    tag: "Sales",
-    price: "5 min setup",
+    name: "Brief to wireframe",
+    meta: "Structured flows from a written brief",
+    tag: "UX",
+    price: "2 days",
   },
   {
-    name: "Contract Reviewer",
-    meta: "Flags risky clauses against your playbook",
-    tag: "Legal",
-    price: "10 min setup",
+    name: "Design QA pass",
+    meta: "Checks contrast, spacing and consistency",
+    tag: "QA",
+    price: "3 days",
   },
   {
-    name: "Data Analyst",
-    meta: "Answers questions in plain English with SQL",
+    name: "Prompt to prototype",
+    meta: "Clickable Next.js prototype from blocks",
     tag: "New",
-    price: "8 min setup",
+    price: "5 days",
   },
   {
-    name: "Meeting Notes",
-    meta: "Action items and decisions after every call",
+    name: "Copy drafts",
+    meta: "On-brand UI and landing page copy",
     tag: "Popular",
-    price: "1 min setup",
+    price: "Same day",
   },
   {
-    name: "Onboarding Guide",
-    meta: "Answers new-hire questions from your wiki",
-    tag: "HR",
-    price: "3 min setup",
+    name: "CGI concepts",
+    meta: "AI-assisted 3D and render explorations",
+    tag: "3D",
+    price: "2 days",
   },
 ]
 
 const testimonials = [
   {
     quote:
-      "We evaluated six vendors. This was the only one where evals, routing and logging were first-class instead of an afterthought.",
-    name: "Rafael Ortiz",
-    role: "ML Platform Lead, Quanta",
+      "Ali uses AI to move fast, not to cut corners. Every component in the final build was clean and typed.",
+    name: "Rafael O.",
+    role: "Engineering lead, Designali client",
   },
   {
     quote:
-      "Legal approved the rollout in a week because of zero retention and the audit trail. That is unheard of here.",
-    name: "Grace Whitfield",
-    role: "General Counsel, Cobalt Health",
+      "We went from a one-page brief to a working prototype in three days. Our investors thought it was live.",
+    name: "Grace W.",
+    role: "Product lead, Designali client",
   },
   {
     quote:
-      "Model routing cut our monthly inference bill by more than half without any drop in answer quality.",
-    name: "Kenji Watanabe",
-    role: "CTO, Silverpine",
+      "The AI-assisted workflow cut our design timeline in half without any drop in quality.",
+    name: "Kenji W.",
+    role: "CTO, Designali client",
   },
 ]
 
@@ -142,74 +143,74 @@ const tiers = [
     name: "Free",
     price: "$0",
     period: "/month",
-    description: "For individuals exploring what AI can do.",
+    description: "For makers exploring AI-assisted design.",
     features: [
-      "100 messages per day",
-      "Standard models",
-      "3 connected sources",
-      "Community support",
+      "Free Designali blocks",
+      "Free @designali/icons",
+      "Starter prompt library",
+      "Docs and blog guides",
     ],
     cta: "Start for free",
   },
   {
-    name: "Team",
-    price: "$25",
-    period: "/user/month",
-    description: "For teams deploying assistants to real workflows.",
+    name: "Pro",
+    price: "$29",
+    period: "/month",
+    description: "For designers and developers shipping with AI every day.",
     features: [
-      "Unlimited messages",
-      "Frontier models and routing",
-      "Unlimited sources",
-      "Custom agents",
-      "Evaluations and analytics",
+      "All blocks and templates",
+      "Full AI prompt library",
+      "All 2300+ UI examples",
+      "Prompt-to-prototype",
+      "New releases every month",
     ],
-    cta: "Start 14-day trial",
+    cta: "Get Pro",
   },
   {
-    name: "Enterprise",
+    name: "Studio",
     price: "Custom",
     period: "",
-    description: "For organisations with strict governance needs.",
+    description: "An AI-assisted design and build project with Ali Imam.",
     features: [
-      "Zero data retention",
-      "Customer-managed keys",
-      "SSO, SCIM and audit logs",
-      "Private deployment options",
-      "Dedicated solutions engineer",
+      "Custom AI workflow setup",
+      "Brand-trained prompt library",
+      "Design system in code",
+      "Next.js build on Vercel",
+      "Weekly calls with Ali",
     ],
-    cta: "Contact sales",
+    cta: "Start a project",
   },
 ]
 
 const faqs = [
   {
-    q: "Which models do you support?",
-    a: "We support leading frontier and open-weight models, and automatically route each request to the best fit for quality, latency and cost.",
+    q: "Which AI tools do you use?",
+    a: "We pick the right tool per task, such as Claude, Cursor and image models, alongside Figma and Next.js.",
   },
   {
-    q: "How do you prevent hallucinations?",
-    a: "Answers are grounded in your connected sources with inline citations, and evaluations let you measure accuracy before and after every change.",
+    q: "How do you keep AI output on-brand?",
+    a: "Prompts start from your brand guidelines and components, and every output goes through a human design review.",
   },
   {
-    q: "Can we bring our own model?",
-    a: "Yes. Enterprise plans can connect fine-tuned or self-hosted models through a standard OpenAI-compatible endpoint.",
+    q: "Can you set up AI workflows for our team?",
+    a: "Yes. Studio projects can include a documented prompt library and workflow your team keeps using after launch.",
   },
   {
-    q: "How is usage billed?",
-    a: "Team plans include generous usage per seat. Heavy API workloads are billed per million tokens with volume discounts.",
+    q: "How is the work billed?",
+    a: "Pro is a simple monthly plan. Studio projects are quoted as a fixed price after a discovery call.",
   },
   {
-    q: "Is there an on-premise option?",
-    a: "We offer single-tenant VPC deployments on AWS, Azure and GCP for customers with data residency or regulatory requirements.",
+    q: "Will our files be kept private?",
+    a: "Yes. Your assets are only used for your project, and you own every Figma file and line of code we produce.",
   },
 ]
 
 const footer = [
-  { title: "Product", links: ["Assistants", "Agents", "API", "Pricing"] },
-  { title: "Company", links: ["About", "Research", "Careers", "Contact"] },
+  { title: "Workflows", links: ["Moodboards", "Prototypes", "Design QA", "Pricing"] },
+  { title: "Studio", links: ["About", "Work", "Blog", "Contact"] },
   {
-    title: "Trust",
-    links: ["Security", "Privacy", "Responsible AI", "Status"],
+    title: "Follow",
+    links: ["Instagram", "X", "LinkedIn", "21st.dev"],
   },
 ]
 
@@ -222,10 +223,8 @@ export default function LandingAi02() {
             href="#"
             className="flex items-center gap-2 font-semibold tracking-tight"
           >
-            <span className="flex size-7 items-center justify-center rounded-md bg-indigo-600 text-white text-sm">
-              I
-            </span>
-            <span className="font-serif text-lg font-normal">Inferno</span>
+            <Logo className="h-5 w-auto" />
+            <span className="font-serif text-lg font-normal">designali</span>
           </a>
           <nav className="hidden items-center gap-7 text-sm md:flex">
             {navLinks.map((link) => (
@@ -246,10 +245,10 @@ export default function LandingAi02() {
               nativeButton={false}
               render={<a href="#" />}
             >
-              Log in
+              View work
             </Button>
             <Button size="sm" nativeButton={false} render={<a href="#" />}>
-              Get an API key
+              Start a project
             </Button>
           </div>
         </div>
@@ -257,27 +256,25 @@ export default function LandingAi02() {
       <section className="border-b">
         <div className="mx-auto max-w-7xl px-6 pt-16 pb-12 md:pt-28">
           <div className="flex items-center justify-between border-b pb-4 text-xs tracking-widest text-muted-foreground uppercase">
-            <span>Inference API</span>
+            <span>Designali AI product design</span>
             <span className="hidden sm:inline">
-              Fast, affordable model inference.
+              AI features, designed and coded.
             </span>
           </div>
           <h1 className="mt-12 max-w-5xl text-4xl leading-[1.05] font-semibold tracking-tight text-balance sm:text-5xl md:text-8xl font-serif font-normal">
-            {"Run any model at the "}
+            {"Ship AI features at the "}
             <span className="text-indigo-600 dark:text-indigo-400">
               speed of thought
             </span>
           </h1>
           <div className="mt-12 grid gap-8 md:grid-cols-2 md:items-end">
             <p className="max-w-lg text-lg leading-8 text-muted-foreground">
-              Inferno serves open and frontier models on optimised GPUs with
-              predictable latency, so you can ship AI features without managing
-              clusters.
+              Designali designs and builds AI features into your product, from chat and streaming UI to settings and onboarding, ready for production.
             </p>
             <div className="md:justify-self-end">
               <div className="flex flex-wrap gap-3 ">
                 <Button size="lg" nativeButton={false} render={<a href="#" />}>
-                  Get an API key
+                  Start a project
                   <ArrowRight />
                 </Button>
                 <Button
@@ -321,11 +318,10 @@ export default function LandingAi02() {
                 Capabilities
               </p>
               <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl font-serif font-normal mt-3">
-                AI that works where your team already works
+                AI that speeds up design without replacing craft
               </h2>
               <p className="mt-4 text-lg leading-8 text-muted-foreground">
-                Grounded in your own data, governed by your own policies, and
-                fast enough to feel like part of the interface.
+                Where thoughtful design meets production-ready code, with AI handling the busywork in between.
               </p>
             </div>
           </div>
@@ -354,11 +350,10 @@ export default function LandingAi02() {
           <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
             <div className="max-w-2xl">
               <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl font-serif font-normal">
-                Ready-made agents for every team
+                Ready-made AI workflows
               </h2>
               <p className="mt-4 text-lg leading-8 text-muted-foreground">
-                Start from a tested template, connect your sources and deploy in
-                minutes. Every agent can be customised and audited.
+                Start from a tested Designali workflow, add your brand and get results fast. Every step is reviewed by a human.
               </p>
             </div>
             <Button
@@ -401,7 +396,7 @@ export default function LandingAi02() {
       <section className="border-b">
         <div className="mx-auto max-w-5xl px-6 py-20 text-center md:py-28">
           <p className="text-sm tracking-widest text-muted-foreground uppercase">
-            Loved by teams putting AI to real work
+            Loved by teams shipping with Designali
           </p>
           {testimonials.slice(0, 1).map((t) => (
             <figure key={t.name} className="mt-10">
@@ -460,11 +455,10 @@ export default function LandingAi02() {
         <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl font-serif font-normal">
-              Pay for what you use
+              Simple, transparent pricing
             </h2>
             <p className="mt-4 text-lg leading-8 text-muted-foreground">
-              Transparent per-seat and usage pricing. No minimums on self-serve
-              plans and volume discounts as you grow.
+              Free resources, a simple Pro plan, or a custom AI-assisted project with Ali Imam.
             </p>
           </div>
           <div className="mx-auto mt-14 grid max-w-6xl items-start gap-6 lg:grid-cols-3">
@@ -526,7 +520,7 @@ export default function LandingAi02() {
                 href="#"
                 className="font-medium text-foreground underline underline-offset-4"
               >
-                Get in touch
+                Email hello@designali.com
               </a>
               .
             </p>
@@ -550,11 +544,10 @@ export default function LandingAi02() {
         <div className="mx-auto flex max-w-7xl flex-col gap-10 px-6 py-20 md:flex-row md:items-end md:justify-between md:py-28">
           <div className="max-w-2xl">
             <h2 className="text-4xl font-semibold tracking-tight text-balance md:text-6xl font-serif font-normal">
-              Ship your AI feature this week
+              Ship your AI feature sooner
             </h2>
             <p className="mt-5 text-lg text-background/65">
-              Get $10 in free credits and make your first request in one line of
-              code.
+              Start with a two-week sprint and get a working AI interface you can test with real users.
             </p>
           </div>
           <div className="flex flex-wrap gap-3 ">
@@ -564,7 +557,7 @@ export default function LandingAi02() {
               nativeButton={false}
               render={<a href="#" />}
             >
-              Get an API key
+              Start a project
               <ArrowRight />
             </Button>
             <Button
@@ -586,13 +579,11 @@ export default function LandingAi02() {
               href="#"
               className="flex items-center gap-2 font-semibold tracking-tight"
             >
-              <span className="flex size-7 items-center justify-center rounded-md bg-indigo-600 text-white text-sm">
-                I
-              </span>
-              <span className="font-serif text-lg font-normal">Inferno</span>
+              <Logo className="h-5 w-auto" />
+              <span className="font-serif text-lg font-normal">designali</span>
             </a>
             <p className="max-w-xs text-sm text-muted-foreground">
-              Fast, affordable model inference.
+              AI features, designed and coded.
             </p>
           </div>
           {footer.map((column) => (
@@ -616,7 +607,7 @@ export default function LandingAi02() {
         <div className="border-t ">
           <div className="mx-auto flex max-w-7xl flex-col justify-between gap-4 px-6 py-6 text-xs text-muted-foreground sm:flex-row">
             <span>
-              © {new Date().getFullYear()} Inferno. All rights reserved.
+              © {new Date().getFullYear()} Designali. All rights reserved.
             </span>
             <div className="flex gap-6">
               <a href="#" className="hover:text-foreground">
@@ -645,7 +636,7 @@ function HeroVisual() {
         <span className="size-2.5 rounded-full bg-muted-foreground/30" />
         <span className="size-2.5 rounded-full bg-muted-foreground/30" />
         <span className="ml-3 hidden rounded-md bg-muted px-3 py-0.5 text-[11px] text-muted-foreground sm:inline">
-          app.inferno.com
+          designali.com/ai
         </span>
       </div>
       <div className="grid md:grid-cols-[180px_1fr]">

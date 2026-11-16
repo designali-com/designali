@@ -5,11 +5,11 @@ import { Button } from "@workspace/ui/components/button"
 import * as React from "react"
 
 const images = [
-  { src: "/img/hero-1.jpg", alt: "Hero 1" },
-  { src: "/img/chat-1-light.jpg", alt: "Chat UI" },
-  { src: "/img/hero-2.jpg", alt: "Hero 2" },
-  { src: "/img/dashboard-1-dark.jpg", alt: "Dashboard" },
-  { src: "/img/login-1.jpg", alt: "Login Screen" },
+  { src: "/img/hero-1.jpg", alt: "Designali hero template" },
+  { src: "/img/chat-1-light.jpg", alt: "Designali chat UI design" },
+  { src: "/img/hero-2.jpg", alt: "Designali landing page" },
+  { src: "/img/dashboard-1-dark.jpg", alt: "Designali dashboard UI" },
+  { src: "/img/login-1.jpg", alt: "Designali login screen" },
 ]
 
 function createCSS(
@@ -151,11 +151,11 @@ export function HeroSection() {
           </div>
 
           <p className="mt-10 max-w-[620px] px-6 text-center text-sm text-nuted-foreground">
-            WE CREATE VISUAL IDENTITIES, DIGITAL EXPERIENCES,
+            DESIGNALI CREATES BRAND IDENTITIES, UI/UX DESIGN,
             <br className="hidden sm:block" />
-            AND STORIES THAT MAKE BRANDS IMPOSSIBLE TO IGNORE.
+            AND PRODUCTION-READY WEBSITES FOR AMBITIOUS BRANDS.
             <br className="hidden sm:block" />
-            STRATEGY, DESIGN, AND CREATIVITY — BUILT TOGETHER.
+            DESIGN SE CODE TAK — DESIGN AND CODE, BUILT TOGETHER.
           </p>
 
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
@@ -245,7 +245,7 @@ export function HeroSection() {
           </div>
 
           <span>
-            EST. 2026
+            DESIGNALI.COM
           </span>
 
         </div>

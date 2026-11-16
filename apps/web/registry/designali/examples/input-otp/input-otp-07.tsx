@@ -2,7 +2,9 @@
 
 import * as React from "react"
 import { REGEXP_ONLY_DIGITS } from "input-otp"
-import { CircleCheckIcon } from "lucide-react"
+import {
+  CircleCheck as CircleCheckIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {

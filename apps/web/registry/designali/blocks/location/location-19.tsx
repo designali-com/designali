@@ -1,31 +1,38 @@
-import { Accessibility, Bike, Bus, Car, MapPin, Plane } from "lucide-react"
+import {
+  Accessibility,
+  Globe,
+  Mail,
+  MapPin,
+  MessageCircle,
+  Video,
+} from "@designali/icons"
 
 const cards = [
   {
-    icon: Car,
-    title: "Parking",
-    body: "620 spaces in the West Deck. First 30 minutes free, then £2 per hour. 24 EV chargers on level 1.",
+    icon: Mail,
+    title: "Email",
+    body: "Write to hello@designali.com for new projects, support@designali.com for templates and billing@designali.com for invoices.",
     className: "md:col-span-2",
   },
   {
-    icon: Bus,
-    title: "Bus & tram",
-    body: "Tram line T2 stops at Science Park North. Buses 14 and X7 every 10 minutes.",
+    icon: MessageCircle,
+    title: "Social",
+    body: "Say hi on X @designali_com or Instagram @designali.code.",
   },
   {
-    icon: Bike,
-    title: "Cycling",
-    body: "Covered racks for 300 bikes, showers and lockers in Building C.",
+    icon: Video,
+    title: "Calls",
+    body: "Book a free discovery call with Ali Imam from the contact page.",
   },
   {
-    icon: Plane,
-    title: "From the airport",
-    body: "35 minutes by taxi or the A1 airport express to Central, then tram T2.",
+    icon: Globe,
+    title: "Website",
+    body: "Templates, blocks, UI designs and docs live on designali.com.",
   },
   {
     icon: Accessibility,
     title: "Accessibility",
-    body: "Step-free throughout. Blue badge bays at every entrance and hearing loops in all halls.",
+    body: "Every Designali block ships with semantic HTML, keyboard support and accessible colour tokens.",
     className: "md:col-span-2",
   },
 ]
@@ -41,7 +48,7 @@ function CampusMap() {
       <rect x="220" y="110" width="50" height="40" className="fill-indigo-300 dark:fill-indigo-700" />
       <rect x="150" y="160" width="40" height="30" className="fill-indigo-300 dark:fill-indigo-700" />
       <rect x="20" y="110" width="56" height="60" className="fill-background/80 stroke-indigo-300 dark:stroke-indigo-700" strokeDasharray="3 3" />
-      <text x="48" y="144" textAnchor="middle" className="fill-indigo-500 text-[16px] font-bold dark:fill-indigo-300">P</text>
+      <text x="48" y="144" textAnchor="middle" className="fill-indigo-500 text-[16px] font-bold dark:fill-indigo-300">D</text>
       <circle cx="104" cy="74" r="6" className="fill-background stroke-indigo-500" strokeWidth="3" />
     </svg>
   )
@@ -53,10 +60,10 @@ export default function Location19() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="max-w-2xl">
           <p className="text-xs font-medium tracking-widest text-muted-foreground uppercase">
-            Visitor information
+            Contact information
           </p>
           <h2 className="mt-3 text-4xl font-semibold tracking-tight md:text-5xl">
-            Getting to Meridian Science Park
+            Getting in touch with Designali
           </h2>
         </div>
 
@@ -66,8 +73,8 @@ export default function Location19() {
             <div className="absolute inset-x-4 bottom-4 flex items-start gap-3 border bg-background p-4">
               <MapPin className="mt-0.5 size-4 shrink-0" />
               <div className="text-sm">
-                <p className="font-medium">Main reception, Building A</p>
-                <p className="text-muted-foreground">1 Meridian Way, Cambridge CB4 0WS</p>
+                <p className="font-medium">Designali studio</p>
+                <p className="text-muted-foreground">Remote · Worldwide · hello@designali.com</p>
               </div>
             </div>
           </div>

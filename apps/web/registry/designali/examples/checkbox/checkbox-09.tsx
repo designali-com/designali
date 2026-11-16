@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { PlusIcon } from "lucide-react"
+import {
+  Plus as PlusIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Checkbox } from "@workspace/ui/components/checkbox"
@@ -10,9 +12,9 @@ import { cn } from "@workspace/ui/lib/utils"
 
 export default function TodoListStrikethrough() {
   const [todos, setTodos] = React.useState([
-    { id: 1, text: "Reply to design feedback", done: true },
-    { id: 2, text: "Prepare sprint demo", done: false },
-    { id: 3, text: "Book venue for offsite", done: false },
+    { id: 1, text: "Reply to client design feedback", done: true },
+    { id: 2, text: "Prepare Designali blocks demo", done: false },
+    { id: 3, text: "Export new icons to @designali/icons", done: false },
   ])
   const [draft, setDraft] = React.useState("")
   const remaining = todos.filter((t) => !t.done).length

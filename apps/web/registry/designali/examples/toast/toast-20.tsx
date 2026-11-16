@@ -1,6 +1,8 @@
 "use client"
 
-import { BellIcon } from "lucide-react"
+import {
+  Bell as BellIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import { Button } from "@workspace/ui/components/button"
@@ -35,7 +37,7 @@ export default function ActiveToastCounter() {
             className="flex-1"
             onClick={() =>
               notify.add({
-                title: "Build #812 passed",
+                title: "designali.com build #812 passed",
                 description: "main - 3m 12s",
               })
             }

@@ -1,4 +1,8 @@
-import { DropletIcon, FootprintsIcon, MoonIcon } from "lucide-react"
+import {
+  Droplet as DropletIcon,
+  Footprints as FootprintsIcon,
+  Moon as MoonIcon,
+} from "@designali/icons"
 
 import { Progress, ProgressLabel } from "@workspace/ui/components/progress"
 

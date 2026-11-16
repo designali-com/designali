@@ -1,4 +1,7 @@
-import { ArrowUpIcon, SparklesIcon } from "lucide-react"
+import {
+  ArrowUp as ArrowUpIcon,
+  Sparkles as SparklesIcon,
+} from "@designali/icons"
 
 import {
   Field,
@@ -23,7 +26,7 @@ export default function AiPromptTextareaField() {
         <InputGroupTextarea
           id="ai-prompt"
           rows={3}
-          placeholder="Follow up with Dana about the Q3 proposal and ask for a call next week..."
+          placeholder="Follow up with the client about the Designali brand identity proposal and ask for a call next week..."
         />
         <InputGroupAddon align="block-end" className="justify-between border-t">
           <InputGroupText>

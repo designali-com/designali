@@ -1,6 +1,8 @@
 "use client"
 
-import { GitMergeIcon } from "lucide-react"
+import {
+  GitMerge as GitMergeIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import { Button } from "@workspace/ui/components/button"
@@ -21,7 +23,7 @@ export default function RichContentToast() {
                 <Badge variant="secondary">#1287</Badge>
                 <span>
                   <strong className="font-medium text-foreground">
-                    Add audit log export
+                    Add Designali pricing blocks
                   </strong>{" "}
                   into
                 </span>

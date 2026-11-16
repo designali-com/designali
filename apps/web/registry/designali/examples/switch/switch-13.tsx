@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { CheckIcon } from "lucide-react"
+import {
+  Check as CheckIcon,
+} from "@designali/icons"
 
 import { Label } from "@workspace/ui/components/label"
 import { Spinner } from "@workspace/ui/components/spinner"
@@ -40,7 +42,7 @@ export default function AsyncSavingSwitch() {
               <CheckIcon className="size-3" /> Saved at {savedAt}
             </>
           ) : (
-            "Anyone with the link can view your profile."
+            "Anyone can view your designali.com profile."
           )}
         </p>
       </div>

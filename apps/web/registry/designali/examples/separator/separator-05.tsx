@@ -3,8 +3,8 @@ import * as React from "react"
 import { Separator } from "@workspace/ui/components/separator"
 
 const kpis = [
-  { label: "MRR", value: "$48.2k", delta: "+6.4%" },
-  { label: "Active users", value: "3,912", delta: "+2.1%" },
+  { label: "Template sales", value: "$48.2k", delta: "+6.4%" },
+  { label: "Active customers", value: "3,912", delta: "+2.1%" },
   { label: "Churn", value: "1.8%", delta: "-0.3%" },
 ]
 

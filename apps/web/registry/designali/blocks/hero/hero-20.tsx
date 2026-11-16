@@ -1,29 +1,34 @@
-import { ArrowRight, Hammer, Lightbulb, Rocket } from "lucide-react"
+import {
+  ArrowRight,
+  Hammer,
+  Lightbulb,
+  Rocket,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 
 const steps = [
   {
     icon: Lightbulb,
-    title: "Describe the workflow",
-    body: "Write what should happen in plain English. Tidewater drafts the automation and shows every step before it runs.",
-    meta: "about 2 minutes",
+    title: "Share your idea",
+    body: "Tell Designali what you want to build. We shape the brief, the brand direction and the scope before any pixels move.",
+    meta: "week 1",
   },
   {
     icon: Hammer,
-    title: "Connect your tools",
-    body: "300+ integrations including your CRM, helpdesk, billing and internal APIs. Credentials stay encrypted in your region.",
-    meta: "about 5 minutes",
+    title: "Design and build",
+    body: "Brand identity and UI/UX in Figma, then production-ready code with Next.js, React and Tailwind CSS.",
+    meta: "weeks 2 to 5",
   },
   {
     icon: Rocket,
-    title: "Turn it on",
-    body: "Runs on a schedule, a webhook or a button. Every run is logged, replayable and alertable.",
-    meta: "instant",
+    title: "Launch",
+    body: "Deploy on Vercel, hand off the code and the design system, and keep iterating with the studio.",
+    meta: "week 6",
   },
 ]
 
-const brands = ["Halcyon", "Northpeak", "Ostara", "Brindle & Co", "Vantage Rail"]
+const brands = ["Dalim", "Dalim Agency", "Dalim Fonts", "Dalim UI", "Dalim Works"]
 
 export default function Hero20() {
   return (
@@ -32,18 +37,18 @@ export default function Hero20() {
         <div className="grid gap-16 lg:grid-cols-2">
           <div className="lg:sticky lg:top-24 lg:self-start">
             <p className="font-mono text-xs tracking-widest text-muted-foreground uppercase">
-              Workflow automation
+              How Designali works
             </p>
             <h1 className="mt-6 text-4xl font-medium tracking-tight md:text-6xl">
-              From idea to running automation before lunch.
+              From idea to production-ready website.
             </h1>
             <p className="mt-6 max-w-lg text-base leading-7 text-muted-foreground">
-              Tidewater replaces brittle scripts and one-off zaps with
-              workflows your whole ops team can read, review and trust.
+              Designali combines brand, UI/UX design and web development in one
+              studio — design se code tak, led by Ali Imam.
             </p>
             <div className="mt-10 flex flex-wrap gap-3">
-              <Button size="lg" nativeButton={false} render={<a href="#" />}>
-                Build your first workflow
+              <Button size="lg" nativeButton={false} render={<a href="/contact" />}>
+                Start a project
                 <ArrowRight />
               </Button>
             </div>
@@ -70,7 +75,7 @@ export default function Hero20() {
 
         <div className="mt-20 border-t border-border pt-8">
           <p className="text-center text-xs text-muted-foreground">
-            Running 4 million workflows a day for operations teams at
+            The same process behind Designali projects like
           </p>
           <ul className="mt-6 flex flex-wrap items-center justify-center gap-x-10 gap-y-4">
             {brands.map((brand) => (

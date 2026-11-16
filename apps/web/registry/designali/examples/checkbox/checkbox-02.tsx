@@ -21,7 +21,7 @@ export function CheckboxDescription() {
             Accept terms and conditions
           </FieldLabel>
           <FieldDescription>
-            By clicking this checkbox, you agree to the terms and conditions.
+            By clicking this checkbox, you agree to the Designali terms and conditions.
           </FieldDescription>
         </FieldContent>
       </Field>

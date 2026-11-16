@@ -1,10 +1,10 @@
 import {
-  DownloadIcon,
-  FileSpreadsheetIcon,
-  HistoryIcon,
-  InfoIcon,
-  Share2Icon,
-} from "lucide-react"
+  Download as DownloadIcon,
+  FileSpreadsheet as FileSpreadsheetIcon,
+  History as HistoryIcon,
+  Info as InfoIcon,
+  Share2 as Share2Icon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -19,8 +19,8 @@ import {
 import { Separator } from "@workspace/ui/components/separator"
 
 const activity = [
-  { who: "Ravi", what: "edited", when: "Today, 10:42" },
-  { who: "Anouk", what: "commented", when: "Yesterday" },
+  { who: "Ali", what: "edited", when: "Today, 10:42" },
+  { who: "Client", what: "commented", when: "Yesterday" },
   { who: "You", what: "uploaded", when: "Nov 2" },
 ]
 
@@ -34,7 +34,7 @@ export default function FileDetailsDrawer() {
         <FileSpreadsheetIcon className="size-8 text-emerald-600" />
         <span className="min-w-0 flex-1">
           <span className="block truncate font-medium">
-            2026-budget-forecast.xlsx
+            designali-roadmap-2026.xlsx
           </span>
           <span className="block text-muted-foreground">
             1.8 MB · Edited today
@@ -45,9 +45,9 @@ export default function FileDetailsDrawer() {
       <DrawerContent>
         <DrawerHeader>
           <DrawerTitle className="truncate">
-            2026-budget-forecast.xlsx
+            designali-roadmap-2026.xlsx
           </DrawerTitle>
-          <DrawerDescription>Finance / Planning</DrawerDescription>
+          <DrawerDescription>Designali / Planning</DrawerDescription>
         </DrawerHeader>
         <div className="flex flex-1 flex-col gap-5 overflow-y-auto p-4">
           <div className="flex h-32 items-center justify-center bg-emerald-500/10">
@@ -59,7 +59,7 @@ export default function FileDetailsDrawer() {
             <dt className="text-muted-foreground">Size</dt>
             <dd>1.8 MB</dd>
             <dt className="text-muted-foreground">Owner</dt>
-            <dd>Anouk de Vries</dd>
+            <dd>Ali Imam</dd>
             <dt className="text-muted-foreground">Created</dt>
             <dd>Nov 2, 2026</dd>
           </dl>

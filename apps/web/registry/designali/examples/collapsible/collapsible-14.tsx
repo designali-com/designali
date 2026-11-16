@@ -1,7 +1,11 @@
 "use client"
 
 import * as React from "react"
-import { CheckIcon, ChevronDownIcon, MinusIcon } from "lucide-react"
+import {
+  Check as CheckIcon,
+  ChevronDown as ChevronDownIcon,
+  Minus as MinusIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -11,12 +15,12 @@ import {
 } from "@workspace/ui/components/collapsible"
 
 const rows = [
-  { feature: "Projects", free: "3", pro: "Unlimited" },
-  { feature: "Storage", free: "2 GB", pro: "100 GB" },
-  { feature: "Guests", free: false, pro: true },
-  { feature: "SSO", free: false, pro: true },
-  { feature: "API access", free: false, pro: true },
-  { feature: "Audit log", free: false, pro: true },
+  { feature: "Templates", free: "3", pro: "All" },
+  { feature: "Blocks", free: "50", pro: "460+" },
+  { feature: "Figma files", free: false, pro: true },
+  { feature: "Commercial license", free: false, pro: true },
+  { feature: "Landing pages", free: false, pro: true },
+  { feature: "Priority support", free: false, pro: true },
 ]
 
 function Cell({ value }: { value: string | boolean }) {

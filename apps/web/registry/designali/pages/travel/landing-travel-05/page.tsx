@@ -10,7 +10,7 @@ import {
   Sparkles,
   Users,
   Wallet,
-} from "lucide-react"
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Input } from "@workspace/ui/components/input"

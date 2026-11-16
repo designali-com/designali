@@ -1,4 +1,7 @@
-import { CloudOffIcon, GlobeIcon } from "lucide-react"
+import {
+  CloudOff as CloudOffIcon,
+  Globe as GlobeIcon,
+} from "@designali/icons"
 
 import {
   AlertDialog,
@@ -26,7 +29,7 @@ export default function UnpublishSiteDialog() {
           <AlertDialogMedia>
             <CloudOffIcon />
           </AlertDialogMedia>
-          <AlertDialogTitle>Take maple-bakery.site offline?</AlertDialogTitle>
+          <AlertDialogTitle>Take design-agency.designali.com offline?</AlertDialogTitle>
           <AlertDialogDescription>
             Visitors will see a placeholder page until you publish again. Your
             content and settings are kept.

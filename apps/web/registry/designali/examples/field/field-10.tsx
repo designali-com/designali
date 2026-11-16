@@ -22,7 +22,7 @@ export default function ShippingAddressFields() {
             <Input
               id="ship-first"
               autoComplete="given-name"
-              defaultValue="Leah"
+              defaultValue="Ali"
             />
           </Field>
           <Field>
@@ -30,7 +30,7 @@ export default function ShippingAddressFields() {
             <Input
               id="ship-last"
               autoComplete="family-name"
-              defaultValue="Okonkwo"
+              defaultValue="Imam"
             />
           </Field>
         </div>

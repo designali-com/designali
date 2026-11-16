@@ -13,7 +13,7 @@ import { Textarea } from "@workspace/ui/components/textarea"
 
 export default function WritePreviewTabs() {
   const [text, setText] = React.useState(
-    "Looks great! Two notes:\n- rename the env var\n- add a test for empty carts"
+    "Looks great! Two notes:\n- rename the env var\n- add a test for the hero block"
   )
 
   return (

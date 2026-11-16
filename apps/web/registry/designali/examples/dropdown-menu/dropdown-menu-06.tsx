@@ -1,14 +1,14 @@
 import {
-  DownloadIcon,
-  ExternalLinkIcon,
-  FileTextIcon,
-  FolderIcon,
-  FolderInputIcon,
-  FolderPlusIcon,
-  MoreVerticalIcon,
-  PencilIcon,
-  Trash2Icon,
-} from "lucide-react"
+  Download as DownloadIcon,
+  ExternalLink as ExternalLinkIcon,
+  FileText as FileTextIcon,
+  Folder as FolderIcon,
+  FolderInput as FolderInputIcon,
+  FolderPlus as FolderPlusIcon,
+  EllipsisVertical as MoreVerticalIcon,
+  Pencil as PencilIcon,
+  Trash2 as Trash2Icon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -26,7 +26,7 @@ import {
 const folders = [
   "Design reviews",
   "Client handoff",
-  "Archive 2025",
+  "Designali templates",
   "Shared with me",
 ]
 
@@ -37,7 +37,7 @@ export default function FileItemMenuWithMoveSubmenu() {
         <FileTextIcon className="size-4 text-muted-foreground" />
       </div>
       <div className="min-w-0 flex-1">
-        <p className="truncate text-xs font-medium">Q3-brand-guidelines.pdf</p>
+        <p className="truncate text-xs font-medium">designali-brand-guidelines.pdf</p>
         <p className="text-xs text-muted-foreground">4.2 MB · Edited 2h ago</p>
       </div>
       <DropdownMenu>

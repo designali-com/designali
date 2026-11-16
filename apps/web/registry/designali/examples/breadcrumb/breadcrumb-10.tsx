@@ -1,4 +1,6 @@
-import { PlusIcon } from "lucide-react"
+import {
+  Plus as PlusIcon,
+} from "@designali/icons"
 
 import {
   Breadcrumb,

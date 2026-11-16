@@ -1,16 +1,18 @@
 "use client"
 
 import * as React from "react"
-import { DownloadIcon } from "lucide-react"
+import {
+  Download as DownloadIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Checkbox } from "@workspace/ui/components/checkbox"
 
 const tracks = [
-  { title: "Morning Static", artist: "June Avenue", mb: 8.4 },
-  { title: "Glass Rooms", artist: "Mira Sol", mb: 9.1 },
-  { title: "Long Way North", artist: "Atlas Choir", mb: 11.6 },
-  { title: "Paper Boats", artist: "Harbor Lights", mb: 7.2 },
+  { title: "Colorful Spheres", artist: "Designali Motion", mb: 8.4 },
+  { title: "Abstract Fluid", artist: "Designali Motion", mb: 9.1 },
+  { title: "Studio Reel", artist: "Designali CGI", mb: 11.6 },
+  { title: "Icon Animations", artist: "Designali Icons", mb: 7.2 },
 ]
 
 export default function OfflineDownloadTracks() {

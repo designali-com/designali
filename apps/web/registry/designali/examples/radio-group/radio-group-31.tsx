@@ -1,9 +1,9 @@
 import {
-  KeyRoundIcon,
-  MessageSquareIcon,
-  ShieldCheckIcon,
-  SmartphoneIcon,
-} from "lucide-react"
+  KeyRound as KeyRoundIcon,
+  MessageSquare as MessageSquareIcon,
+  ShieldCheck as ShieldCheckIcon,
+  Smartphone as SmartphoneIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import { Button } from "@workspace/ui/components/button"

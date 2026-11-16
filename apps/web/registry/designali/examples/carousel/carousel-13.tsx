@@ -1,4 +1,7 @@
-import { TrendingDownIcon, TrendingUpIcon } from "lucide-react"
+import {
+  TrendingDown as TrendingDownIcon,
+  TrendingUp as TrendingUpIcon,
+} from "@designali/icons"
 
 import { Card, CardContent } from "@workspace/ui/components/card"
 import {
@@ -12,21 +15,21 @@ import { cn } from "@workspace/ui/lib/utils"
 
 const kpis = [
   {
-    label: "Revenue",
+    label: "Template sales",
     value: "$48.2k",
     delta: "+12.4%",
     up: true,
     points: [8, 10, 9, 13, 12, 16, 18],
   },
   {
-    label: "Active users",
+    label: "Icon downloads",
     value: "3,904",
     delta: "+4.1%",
     up: true,
     points: [10, 11, 10, 12, 13, 13, 14],
   },
   {
-    label: "Churn",
+    label: "Refund rate",
     value: "2.3%",
     delta: "-0.4%",
     up: false,
@@ -40,7 +43,7 @@ const kpis = [
     points: [9, 9, 10, 9, 11, 11, 12],
   },
   {
-    label: "Tickets",
+    label: "Support tickets",
     value: "128",
     delta: "-9.0%",
     up: false,

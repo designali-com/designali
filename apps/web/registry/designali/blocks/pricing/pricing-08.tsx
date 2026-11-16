@@ -1,4 +1,6 @@
-import { ArrowRight } from "lucide-react"
+import {
+  ArrowRight,
+} from "@designali/icons"
 
 const packages = [
   {
@@ -6,20 +8,20 @@ const packages = [
     price: "$4,800",
     duration: "2 weeks",
     summary:
-      "Logo, color, type and a one-page brand guide for early-stage teams.",
+      "Logo, colour, type and a one-page brand guide, designed by Ali Imam.",
   },
   {
     name: "Website build",
     price: "$12,500",
     duration: "5 weeks",
-    summary: "Strategy, design and a production Next.js site with CMS handoff.",
+    summary: "UI/UX design and a production-ready Next.js site built on Designali blocks.",
   },
   {
     name: "Design partner",
     price: "$6,900/mo",
     duration: "Ongoing",
     summary:
-      "A senior designer embedded in your team, one active request at a time.",
+      "Designali as your design and development partner, one active request at a time.",
   },
 ]
 
@@ -29,18 +31,18 @@ export default function Pricing08() {
       <div className="mx-auto max-w-5xl px-6">
         <div className="grid gap-6 md:grid-cols-2 md:items-end">
           <h2 className="text-3xl font-semibold tracking-tight md:text-5xl">
-            Fixed scope. Fixed price.
+            Designali studio packages.
           </h2>
           <p className="text-muted-foreground md:text-right">
-            No hourly billing and no surprises. Every engagement starts with a
-            free 30-minute call.
+            Fixed scope, fixed price, no surprises. Every Designali engagement
+            starts with a free 30-minute call.
           </p>
         </div>
         <div className="mt-12 border-t border-border">
           {packages.map((pkg, i) => (
             <a
               key={pkg.name}
-              href="#"
+              href="/contact"
               className="group grid gap-4 border-b border-border py-8 transition-colors hover:bg-muted/50 md:grid-cols-[3rem_1.2fr_2fr_auto] md:items-center md:px-4"
             >
               <span className="text-sm text-muted-foreground tabular-nums">

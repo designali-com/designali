@@ -2,13 +2,13 @@
 
 import * as React from "react"
 import {
-  BathIcon,
-  BedDoubleIcon,
-  HeartIcon,
-  HouseIcon,
-  MapPinIcon,
-  RulerIcon,
-} from "lucide-react"
+  PenTool as BathIcon,
+  Layers as BedDoubleIcon,
+  Heart as HeartIcon,
+  House as HouseIcon,
+  MapPin as MapPinIcon,
+  Code as RulerIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import { Button } from "@workspace/ui/components/button"
@@ -22,9 +22,9 @@ import {
 import { cn } from "@workspace/ui/lib/utils"
 
 const specs = [
-  { icon: BedDoubleIcon, label: "3 beds" },
-  { icon: BathIcon, label: "2 baths" },
-  { icon: RulerIcon, label: "118 m²" },
+  { icon: BedDoubleIcon, label: "12 pages" },
+  { icon: BathIcon, label: "Figma" },
+  { icon: RulerIcon, label: "Next.js" },
 ]
 
 export default function PropertyListingCard() {
@@ -37,7 +37,7 @@ export default function PropertyListingCard() {
           className="absolute inset-0 m-auto size-16 text-white/70"
           strokeWidth={1}
         />
-        <Badge className="absolute start-3 top-3">New listing</Badge>
+        <Badge className="absolute start-3 top-3">New template</Badge>
         <Button
           size="icon-sm"
           variant="secondary"
@@ -50,10 +50,10 @@ export default function PropertyListingCard() {
         </Button>
       </div>
       <CardHeader>
-        <CardTitle className="text-lg font-semibold">€640,000</CardTitle>
+        <CardTitle className="text-lg font-semibold">Resort Template · $79</CardTitle>
         <CardDescription className="flex items-center gap-1">
           <MapPinIcon className="size-3" />
-          14 Linden Court, Eastgate
+          designali.com/templates
         </CardDescription>
       </CardHeader>
       <CardFooter className="justify-between">

@@ -16,7 +16,7 @@ export default function HorizontalSettingsInputs() {
           <FieldLabel htmlFor="ws-name">Workspace name</FieldLabel>
           <FieldDescription>Shown in emails and the sidebar.</FieldDescription>
         </FieldContent>
-        <Input id="ws-name" defaultValue="Harbor Labs" className="w-40" />
+        <Input id="ws-name" defaultValue="Designali" className="w-40" />
       </Field>
       <FieldSeparator />
       <Field orientation="horizontal">

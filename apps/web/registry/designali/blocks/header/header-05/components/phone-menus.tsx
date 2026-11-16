@@ -1,89 +1,53 @@
 const PhoneMenu = () => {
   const mainNav = [
     {
-      title: "Products",
+      title: "Templates",
       items: [
-        { label: "New Arrivals", href: "#" },
-        { label: "Best Sellers", href: "#" },
-        { label: "Trending Now", href: "#" },
-        { label: "Gift Ideas", href: "#" },
+        { label: "Portfolio", href: "/templates" },
+        { label: "Design Agency", href: "/templates" },
+        { label: "AI", href: "/templates" },
       ],
     },
     {
-      title: "Services",
+      title: "Blocks",
       items: [
-        { label: "Consulting", href: "#" },
-        { label: "Custom Solutions", href: "#" },
-        { label: "Training & Support", href: "#" },
-        { label: "Maintenance Plans", href: "#" },
+        { label: "Heroes", href: "/blocks" },
+        { label: "Features", href: "/blocks" },
+        { label: "Pricing", href: "/blocks" },
+        { label: "Footers", href: "/blocks" },
       ],
     },
     {
-      title: "Company",
-      items: [
-        { label: "About Us", href: "#" },
-        { label: "Careers", href: "#" },
-        { label: "Press", href: "#" },
-        { label: "Partners", href: "#" },
-      ],
+      title: "UI Designs",
+      items: [{ label: "2300+ UI examples", href: "/ui" }],
     },
     {
-      title: "Resources",
-      items: [
-        { label: "Blog", href: "#" },
-        { label: "Guides & Tutorials", href: "#" },
-        { label: "Webinars", href: "#" },
-        { label: "Documentation", href: "#" },
-      ],
+      title: "Icons",
+      items: [{ label: "@designali/icons", href: "/icons" }],
     },
     {
-      title: "Support",
-      items: [
-        { label: "Help Center", href: "#" },
-        { label: "Contact Support", href: "#" },
-        { label: "FAQ", href: "#" },
-        { label: "Community Forums", href: "#" },
-      ],
+      title: "Logos",
+      items: [{ label: "@designali/logos", href: "/logos" }],
     },
     {
-      title: "Legal",
-      items: [
-        { label: "Privacy Policy", href: "#" },
-        { label: "Terms of Service", href: "#" },
-        { label: "Cookie Policy", href: "#" },
-      ],
+      title: "Illustration",
+      items: [{ label: "@designali/vectors", href: "/illustration" }],
     },
     {
-      title: "Locations",
-      items: [
-        { label: "Find a Store", href: "#" },
-        { label: "International Offices", href: "#" },
-        { label: "Events", href: "#" },
-      ],
+      title: "Pricing",
+      items: [{ label: "Plans", href: "/pricing" }],
+    },
+    {
+      title: "Docs",
+      items: [{ label: "Getting started", href: "/docs" }],
+    },
+    {
+      title: "Blogs",
+      items: [{ label: "Latest posts", href: "/blogs" }],
     },
     {
       title: "Contact",
-      items: [
-        { label: "Email Us", href: "#" },
-        { label: "Request a Call", href: "#" },
-        { label: "Live Chat", href: "#" },
-      ],
-    },
-    {
-      title: "Community",
-      items: [
-        { label: "Forums", href: "#" },
-        { label: "Ambassadors", href: "#" },
-        { label: "User Stories", href: "#" },
-      ],
-    },
-    {
-      title: "Extras",
-      items: [
-        { label: "Gift Cards", href: "#" },
-        { label: "Promotions", href: "#" },
-        { label: "Newsletter", href: "#" },
-      ],
+      items: [{ label: "hello@designali.com", href: "mailto:hello@designali.com" }],
     },
   ]
 

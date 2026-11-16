@@ -1,4 +1,8 @@
-import { CreditCardIcon, LandmarkIcon, WalletIcon } from "lucide-react"
+import {
+  CreditCard as CreditCardIcon,
+  Landmark as LandmarkIcon,
+  Wallet as WalletIcon,
+} from "@designali/icons"
 
 import {
   ToggleGroup,

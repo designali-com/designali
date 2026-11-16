@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { KeyRoundIcon } from "lucide-react"
+import {
+  KeyRound as KeyRoundIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Checkbox } from "@workspace/ui/components/checkbox"
@@ -27,7 +29,7 @@ import {
 import { Input } from "@workspace/ui/components/input"
 
 const scopes = [
-  { id: "read", label: "Read", description: "List and fetch resources" },
+  { id: "read", label: "Read", description: "List and fetch templates and blocks" },
   { id: "write", label: "Write", description: "Create and update resources" },
   { id: "billing", label: "Billing", description: "View invoices and usage" },
 ]
@@ -69,7 +71,7 @@ export default function CreateApiKeyDialog() {
             <FieldGroup>
               <Field>
                 <FieldLabel htmlFor="key-name">Name</FieldLabel>
-                <Input id="key-name" defaultValue="Production server" />
+                <Input id="key-name" defaultValue="designali.com production" />
               </Field>
               <FieldSet>
                 <FieldLegend variant="label">Scopes</FieldLegend>

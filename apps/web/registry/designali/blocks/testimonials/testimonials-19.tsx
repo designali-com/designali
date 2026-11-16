@@ -1,4 +1,6 @@
-import { Quote } from "lucide-react"
+import {
+  Quote,
+} from "@designali/icons"
 
 const brands = [
   { name: "northpeak", className: "font-semibold tracking-tight lowercase" },

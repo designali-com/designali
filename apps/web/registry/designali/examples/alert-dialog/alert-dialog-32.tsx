@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { ArchiveIcon, Undo2Icon } from "lucide-react"
+import {
+  Archive as ArchiveIcon,
+  Undo2 as Undo2Icon,
+} from "@designali/icons"
 
 import {
   AlertDialog,
@@ -43,7 +46,7 @@ export default function ArchiveWithUndo() {
       <AlertDialogContent size="sm">
         <AlertDialogHeader>
           <AlertDialogTitle>
-            Archive &quot;Website refresh&quot;?
+            Archive &quot;designali.com refresh&quot;?
           </AlertDialogTitle>
           <AlertDialogDescription>
             It will be hidden from the sidebar for all members.

@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { StarIcon } from "lucide-react"
+import {
+  Star as StarIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -52,7 +54,7 @@ export default function ProductReviewTextarea() {
           value={text}
           aria-invalid={tooShort || undefined}
           onChange={(e) => setText(e.target.value)}
-          placeholder="How did the Alder desk lamp work out?"
+          placeholder="How did the Designali portfolio template work out?"
         />
         {tooShort ? (
           <FieldError>{30 - text.length} more characters needed.</FieldError>

@@ -20,19 +20,19 @@ const plans = [
     value: "starter",
     name: "Starter",
     price: "$0",
-    note: "1 project, community support",
+    note: "Free blocks and icons",
   },
   {
     value: "pro",
     name: "Pro",
     price: "$18",
-    note: "Unlimited projects, analytics",
+    note: "All templates, blocks and UI examples",
   },
   {
     value: "business",
-    name: "Business",
+    name: "Studio",
     price: "$49",
-    note: "SAML SSO, audit logs, SLA",
+    note: "Team license and design-to-code support",
   },
 ]
 

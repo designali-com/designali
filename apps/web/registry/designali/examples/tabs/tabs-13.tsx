@@ -1,4 +1,6 @@
-import { StarIcon } from "lucide-react"
+import {
+  Star as StarIcon,
+} from "@designali/icons"
 
 import {
   Tabs,
@@ -9,10 +11,10 @@ import {
 import { cn } from "@workspace/ui/lib/utils"
 
 const specs = [
-  ["Weight", "1.2 kg"],
-  ["Capacity", "22 L"],
-  ["Material", "Recycled nylon"],
-  ["Warranty", "Lifetime"],
+  ["Format", "Next.js + Figma"],
+  ["Pages", "12"],
+  ["Stack", "React, Tailwind CSS"],
+  ["Updates", "Lifetime"],
 ]
 
 export default function ProductDetailTabs() {
@@ -24,8 +26,8 @@ export default function ProductDetailTabs() {
         <TabsTrigger value="reviews">Reviews (86)</TabsTrigger>
       </TabsList>
       <TabsContent value="description" className="text-muted-foreground">
-        The Trailhead 22 is a lightweight daypack with a padded laptop sleeve
-        and weatherproof zips.
+        The Designali Portfolio Simple template is a clean, production-ready
+        Next.js site with a matching Figma file.
       </TabsContent>
       <TabsContent value="specs">
         <dl className="divide-y border">

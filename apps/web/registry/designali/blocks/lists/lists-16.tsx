@@ -1,12 +1,15 @@
-import { CircleAlert, CircleCheck } from "lucide-react"
+import {
+  CircleAlert,
+  CircleCheck,
+} from "@designali/icons"
 
 const services = [
-  { name: "Web app", uptime: 99.99, incidents: [] as number[], degraded: [] as number[] },
-  { name: "Public API", uptime: 99.94, incidents: [61], degraded: [12, 62] },
-  { name: "Realtime sync", uptime: 99.97, incidents: [], degraded: [33, 34] },
-  { name: "File storage", uptime: 100, incidents: [], degraded: [] },
-  { name: "Webhooks", uptime: 99.81, incidents: [78, 79], degraded: [45, 80] },
-  { name: "Search", uptime: 99.96, incidents: [], degraded: [88] },
+  { name: "designali.com", uptime: 99.99, incidents: [] as number[], degraded: [] as number[] },
+  { name: "Blocks registry", uptime: 99.94, incidents: [61], degraded: [12, 62] },
+  { name: "Template downloads", uptime: 99.97, incidents: [], degraded: [33, 34] },
+  { name: "Image CDN", uptime: 100, incidents: [], degraded: [] },
+  { name: "Newsletter", uptime: 99.81, incidents: [78, 79], degraded: [45, 80] },
+  { name: "Icon search", uptime: 99.96, incidents: [], degraded: [88] },
 ]
 
 const days = 90
@@ -18,7 +21,7 @@ export default function Lists16() {
         <div className="flex items-center gap-4 border border-emerald-600/30 bg-emerald-50 p-5 dark:bg-emerald-500/10">
           <CircleCheck className="size-6 shrink-0 text-emerald-600 dark:text-emerald-400" />
           <div>
-            <h2 className="font-semibold">All systems operational</h2>
+            <h2 className="font-semibold">All Designali systems operational</h2>
             <p className="text-xs text-muted-foreground">Last checked 40 seconds ago</p>
           </div>
         </div>

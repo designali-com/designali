@@ -28,17 +28,17 @@ export default function AccountPasswordTabs() {
           <CardHeader>
             <CardTitle>Account</CardTitle>
             <CardDescription>
-              Update how your name appears to teammates.
+              Update how your name appears to Designali teammates.
             </CardDescription>
           </CardHeader>
           <CardContent className="flex flex-col gap-3">
             <div className="grid gap-1.5">
               <Label htmlFor="tabs-name">Display name</Label>
-              <Input id="tabs-name" defaultValue="Nora Lindqvist" />
+              <Input id="tabs-name" defaultValue="Ali Imam" />
             </div>
             <div className="grid gap-1.5">
               <Label htmlFor="tabs-handle">Handle</Label>
-              <Input id="tabs-handle" defaultValue="@nora" />
+              <Input id="tabs-handle" defaultValue="@designali_com" />
             </div>
           </CardContent>
           <CardFooter>

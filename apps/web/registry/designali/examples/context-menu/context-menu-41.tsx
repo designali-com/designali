@@ -29,8 +29,8 @@ export default function TextFormattingInsetMenu() {
           className={cn("text-sm", bold && "font-semibold", italic && "italic")}
           style={{ textAlign: align as "left" | "center" | "right" }}
         >
-          Welcome to the spring collection. Free shipping on orders over $50
-          through Sunday.
+          Welcome to Designali. New templates, blocks and icons ship every
+          week. Design se code tak.
         </p>
       </ContextMenuTrigger>
       <ContextMenuContent className="w-48">

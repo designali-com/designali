@@ -1,4 +1,7 @@
-import { CircleCheckIcon, LockIcon } from "lucide-react"
+import {
+  CircleCheck as CircleCheckIcon,
+  Lock as LockIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -19,11 +22,11 @@ import { Progress } from "@workspace/ui/components/progress"
 import { cn } from "@workspace/ui/lib/utils"
 
 const lessons = [
-  { title: "Foundations of color", progress: 100 },
-  { title: "Building a palette", progress: 100 },
-  { title: "Contrast and accessibility", progress: 45 },
-  { title: "Color in data viz", progress: 0, locked: true },
-  { title: "Theming systems", progress: 0, locked: true },
+  { title: "Design in Figma", progress: 100 },
+  { title: "Tokens with Tailwind CSS", progress: 100 },
+  { title: "Building Designali blocks", progress: 45 },
+  { title: "Next.js and TypeScript", progress: 0, locked: true },
+  { title: "Shipping to Vercel", progress: 0, locked: true },
 ]
 
 export default function CourseLessonsCarousel() {

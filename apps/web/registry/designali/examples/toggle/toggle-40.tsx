@@ -2,11 +2,11 @@
 
 import * as React from "react"
 import {
-  LockIcon,
-  LockOpenIcon,
-  ShieldCheckIcon,
-  ShieldIcon,
-} from "lucide-react"
+  Lock as LockIcon,
+  LockOpen as LockOpenIcon,
+  ShieldCheck as ShieldCheckIcon,
+  Shield as ShieldIcon,
+} from "@designali/icons"
 
 import { Toggle } from "@workspace/ui/components/toggle"
 import { cn } from "@workspace/ui/lib/utils"
@@ -34,7 +34,7 @@ export default function EncryptionLockToggle() {
         <p className="text-sm font-medium">End-to-end encryption</p>
         <p className="text-xs text-muted-foreground">
           {encrypted
-            ? "Only invited people can decrypt."
+            ? "Only invited Designali clients can decrypt."
             : "Files are encrypted at rest only."}
         </p>
       </div>

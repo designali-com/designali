@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { BellIcon, BellOffIcon } from "lucide-react"
+import {
+  Bell as BellIcon,
+  BellOff as BellOffIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {

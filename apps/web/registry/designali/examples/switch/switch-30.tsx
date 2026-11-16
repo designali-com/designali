@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { CloudIcon, CloudOffIcon } from "lucide-react"
+import {
+  Cloud as CloudIcon,
+  CloudOff as CloudOffIcon,
+} from "@designali/icons"
 
 import { Label } from "@workspace/ui/components/label"
 import { Progress } from "@workspace/ui/components/progress"
@@ -20,9 +23,9 @@ export default function CloudSyncSwitch() {
           <CloudOffIcon className="size-5 text-muted-foreground" />
         )}
         <div className="flex-1">
-          <Label htmlFor="cloud-sync">Sync photos to cloud</Label>
+          <Label htmlFor="cloud-sync">Sync Designali assets to cloud</Label>
           <p className="text-xs text-muted-foreground">
-            {sync ? "Last synced 4 minutes ago" : "Photos stay on this device"}
+            {sync ? "Last synced 4 minutes ago" : "Assets stay on this device"}
           </p>
         </div>
         <Switch id="cloud-sync" checked={sync} onCheckedChange={setSync} />

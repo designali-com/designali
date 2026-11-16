@@ -1,12 +1,12 @@
 "use client"
 
 import {
-  MinusIcon,
-  SignalHighIcon,
-  SignalLowIcon,
-  SignalMediumIcon,
-  SirenIcon,
-} from "lucide-react"
+  Minus as MinusIcon,
+  SignalHigh as SignalHighIcon,
+  SignalLow as SignalLowIcon,
+  SignalMedium as SignalMediumIcon,
+  Siren as SirenIcon,
+} from "@designali/icons"
 
 import { Field, FieldLabel } from "@workspace/ui/components/field"
 import {

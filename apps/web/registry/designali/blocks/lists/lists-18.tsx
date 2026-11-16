@@ -1,4 +1,7 @@
-import { Check, X } from "lucide-react"
+import {
+  Check,
+  X,
+} from "@designali/icons"
 
 const guidelines = [
   {
@@ -32,7 +35,7 @@ export default function Lists18() {
   return (
     <section className="w-full bg-background py-24">
       <div className="mx-auto max-w-6xl px-6">
-        <p className="text-xs tracking-widest text-muted-foreground uppercase">Content guidelines</p>
+        <p className="text-xs tracking-widest text-muted-foreground uppercase">Designali content guidelines</p>
         <h2 className="mt-3 max-w-2xl text-4xl font-semibold tracking-tight md:text-5xl">
           Do this, not that.
         </h2>

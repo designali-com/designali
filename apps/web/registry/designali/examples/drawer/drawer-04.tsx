@@ -1,15 +1,19 @@
 import {
-  CalendarIcon,
-  ChartColumnIcon,
-  FolderKanbanIcon,
-  HexagonIcon,
-  InboxIcon,
-  LayoutDashboardIcon,
-  LogOutIcon,
-  MenuIcon,
-} from "lucide-react"
+  Calendar as CalendarIcon,
+  ChartColumn as ChartColumnIcon,
+  FolderKanban as FolderKanbanIcon,
+  Hexagon as HexagonIcon,
+  Inbox as InboxIcon,
+  LayoutDashboard as LayoutDashboardIcon,
+  LogOut as LogOutIcon,
+  Menu as MenuIcon,
+} from "@designali/icons"
 
-import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from "@workspace/ui/components/avatar"
 import { Badge } from "@workspace/ui/components/badge"
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -44,7 +48,7 @@ export default function MobileNavigationDrawer() {
           <div className="flex size-7 items-center justify-center bg-primary text-primary-foreground">
             <HexagonIcon className="size-4" />
           </div>
-          <DrawerTitle>Pinecone HQ</DrawerTitle>
+          <DrawerTitle>Designali Studio</DrawerTitle>
           <DrawerDescription className="sr-only">
             Main navigation
           </DrawerDescription>
@@ -68,11 +72,12 @@ export default function MobileNavigationDrawer() {
         </nav>
         <DrawerFooter className="flex-row items-center gap-3 border-t pt-4">
           <Avatar size="sm">
-            <AvatarFallback>JS</AvatarFallback>
+            <AvatarImage src="/ali.jpg" alt="Ali Imam" />
+            <AvatarFallback>AI</AvatarFallback>
           </Avatar>
           <div className="min-w-0 flex-1">
-            <p className="truncate font-medium">Jade Sorensen</p>
-            <p className="truncate text-muted-foreground">jade@pinecone.io</p>
+            <p className="truncate font-medium">Ali Imam</p>
+            <p className="truncate text-muted-foreground">ali@designali.com</p>
           </div>
           <Button variant="ghost" size="icon-sm" aria-label="Sign out">
             <LogOutIcon />

@@ -1,17 +1,20 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { Moon, Sun } from "lucide-react"
+import {
+  Moon,
+  Sun,
+} from "@designali/icons"
 
 import { cn } from "@workspace/ui/lib/utils"
 
 const offices = [
-  { city: "San Francisco", zone: "America/Los_Angeles", email: "sf@parallax.studio", phone: "+1 415 555 0119" },
-  { city: "New York", zone: "America/New_York", email: "nyc@parallax.studio", phone: "+1 212 555 0186" },
-  { city: "London", zone: "Europe/London", email: "ldn@parallax.studio", phone: "+44 20 7946 0321" },
-  { city: "Berlin", zone: "Europe/Berlin", email: "ber@parallax.studio", phone: "+49 30 5557 1290" },
-  { city: "Singapore", zone: "Asia/Singapore", email: "sg@parallax.studio", phone: "+65 6555 0148" },
-  { city: "Sydney", zone: "Australia/Sydney", email: "syd@parallax.studio", phone: "+61 2 5550 1934" },
+  { city: "San Francisco", zone: "America/Los_Angeles", email: "hello@designali.com", phone: "Book a call" },
+  { city: "New York", zone: "America/New_York", email: "hello@designali.com", phone: "Book a call" },
+  { city: "London", zone: "Europe/London", email: "hello@designali.com", phone: "Book a call" },
+  { city: "Berlin", zone: "Europe/Berlin", email: "hello@designali.com", phone: "Book a call" },
+  { city: "Singapore", zone: "Asia/Singapore", email: "hello@designali.com", phone: "Book a call" },
+  { city: "Sydney", zone: "Australia/Sydney", email: "hello@designali.com", phone: "Book a call" },
 ]
 
 function localTime(date: Date, zone: string) {
@@ -45,15 +48,15 @@ export default function Contact17() {
         <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
           <div>
             <p className="text-xs font-medium tracking-widest text-muted-foreground uppercase">
-              Around the clock
+              Clients everywhere
             </p>
             <h2 className="mt-3 text-4xl font-semibold tracking-tight md:text-5xl">
-              Someone is always awake.
+              Designali works across time zones.
             </h2>
           </div>
           <p className="max-w-sm text-muted-foreground">
-            Call the studio that&apos;s open right now. Green means the team is
-            at their desks.
+            Ali Imam works async with clients worldwide. Green means it&apos;s
+            working hours in that city.
           </p>
         </div>
 
@@ -95,7 +98,7 @@ export default function Contact17() {
                   <a href={`mailto:${office.email}`} className="block hover:underline">
                     {office.email}
                   </a>
-                  <a href="#" className="block text-muted-foreground hover:text-foreground">
+                  <a href="https://cal.com/aliimam/30min" className="block text-muted-foreground hover:text-foreground">
                     {office.phone}
                   </a>
                 </div>

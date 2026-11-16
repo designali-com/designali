@@ -2,7 +2,9 @@
 
 import * as React from "react"
 import { addDays, format, startOfMonth } from "date-fns"
-import { InfoIcon } from "lucide-react"
+import {
+  Info as InfoIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Calendar } from "@workspace/ui/components/calendar"
@@ -18,7 +20,7 @@ export default function AppointmentWindow() {
       <div className="flex items-start gap-2 border bg-muted/40 p-3 text-xs">
         <InfoIcon className="mt-0.5 size-4 shrink-0 text-muted-foreground" />
         <p>
-          Appointments open up to 30 days ahead, until{" "}
+          Discovery calls with Ali Imam open up to 30 days ahead, until{" "}
           <span className="font-medium">{format(lastDay, "MMMM d")}</span>.
         </p>
       </div>

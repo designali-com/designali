@@ -1,4 +1,8 @@
-import { CrownIcon, DownloadIcon, LockIcon } from "lucide-react"
+import {
+  Crown as CrownIcon,
+  Download as DownloadIcon,
+  Lock as LockIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -27,7 +31,7 @@ export default function LockedFeatureTooltip() {
           </TooltipTrigger>
           <TooltipContent>
             <CrownIcon className="size-3" />
-            Available on the Scale plan
+            Available on the Designali Pro plan
           </TooltipContent>
         </Tooltip>
       </div>

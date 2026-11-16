@@ -1,7 +1,11 @@
 "use client"
 
 import * as React from "react"
-import { CheckIcon, CopyIcon, PlayCircleIcon } from "lucide-react"
+import {
+  Check as CheckIcon,
+  Copy as CopyIcon,
+  CirclePlay as PlayCircleIcon,
+} from "@designali/icons"
 
 import { AspectRatio } from "@workspace/ui/components/aspect-ratio"
 import { Button } from "@workspace/ui/components/button"
@@ -17,13 +21,13 @@ export default function EmbedCodeSnippet() {
       >
         <div className="absolute inset-0 flex items-center justify-center gap-2 text-white">
           <PlayCircleIcon className="size-8" />
-          <span className="text-sm font-medium">Quarterly update</span>
+          <span className="text-sm font-medium">Designali showreel</span>
         </div>
       </AspectRatio>
       <div className="flex items-center gap-2 border bg-muted/40 p-2">
         <code className="min-w-0 flex-1 truncate font-mono text-[10px] text-muted-foreground">
           &lt;div style=&quot;aspect-ratio:16/9&quot;&gt;&lt;iframe
-          src=&quot;https://player.lumen.tv/e/4kq9&quot; /&gt;&lt;/div&gt;
+          src=&quot;https://www.designali.com/vid/colorful-spheres.mp4&quot; /&gt;&lt;/div&gt;
         </code>
         <Button size="xs" variant="outline" onClick={() => setCopied(true)}>
           {copied ? (

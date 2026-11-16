@@ -1,16 +1,18 @@
 "use client"
 
 import { useState } from "react"
-import { Plus } from "lucide-react"
+import {
+  Plus,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { cn } from "@workspace/ui/lib/utils"
 
 const hotspots = [
-  { id: "lamp", name: "Dome Table Lamp", price: 129, detail: "Opal glass, dimmable", x: 18, y: 38 },
-  { id: "sofa", name: "Harbor 3-Seater Sofa", price: 1890, detail: "Boucle, oatmeal", x: 52, y: 66 },
-  { id: "art", name: "Tidal Print, Framed", price: 210, detail: "70 x 50 cm, oak frame", x: 54, y: 24 },
-  { id: "plant", name: "Terracotta Planter", price: 58, detail: "Large, with saucer", x: 86, y: 62 },
+  { id: "lamp", name: "iPhone Mockup", price: 19, detail: "PNG + Figma, light and dark", x: 18, y: 38 },
+  { id: "sofa", name: "MacBook Mockup", price: 29, detail: "Next.js component + Figma", x: 52, y: 66 },
+  { id: "art", name: "Studio Display Mockup", price: 25, detail: "5K frame, React component", x: 54, y: 24 },
+  { id: "plant", name: "iPad Mockup", price: 19, detail: "Portrait and landscape", x: 86, y: 62 },
 ]
 
 export default function Ecommerce14() {
@@ -65,10 +67,10 @@ export default function Ecommerce14() {
           </div>
 
           <div className="flex flex-col">
-            <p className="text-xs tracking-widest text-muted-foreground uppercase">Shop the room</p>
-            <h2 className="mt-2 text-3xl font-medium tracking-tight">The Seaview Living Room</h2>
+            <p className="text-xs tracking-widest text-muted-foreground uppercase">Shop the mockups</p>
+            <h2 className="mt-2 text-3xl font-medium tracking-tight">The Designali Mockup Set</h2>
             <p className="mt-2 text-sm text-muted-foreground">
-              Tap a marker to see each piece. Buy them together and save 10%.
+              Tap a marker to see each Apple device mockup. Buy them together and save 10%.
             </p>
 
             <ul className="mt-6 divide-y divide-border border-y border-border">
@@ -114,14 +116,14 @@ export default function Ecommerce14() {
 
             <div className="mt-auto pt-6">
               <div className="flex items-baseline justify-between text-sm">
-                <span className="text-muted-foreground">Complete the room</span>
+                <span className="text-muted-foreground">Complete the set</span>
                 <span>
                   <span className="mr-2 text-muted-foreground line-through tabular-nums">${total.toLocaleString()}</span>
                   <span className="text-lg font-medium tabular-nums">${Math.round(total * 0.9).toLocaleString()}</span>
                 </span>
               </div>
               <Button size="lg" className="mt-4 w-full" onClick={() => setCart(hotspots.map((h) => h.id))}>
-                Add all 4 pieces
+                Add all 4 mockups
               </Button>
             </div>
           </div>

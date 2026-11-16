@@ -10,127 +10,127 @@ import {
   RefreshCw,
   Sparkles,
   Trophy,
-} from "lucide-react"
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 
-const navLinks = ["Game", "Editions", "Roadmap", "Community", "Press"]
+const navLinks = ["Services", "Packages", "Process", "Work", "Contact"]
 
 const logos = [
-  "Respawn Weekly",
-  "Critical Hit",
-  "Lootbox",
-  "IndieVerse",
-  "The Joystick",
-  "PC Arena",
-  "Pixel Press",
-  "GameFront",
+  "HUD design",
+  "Launch sites",
+  "CGI & 3D",
+  "Motion trailers",
+  "Design systems",
+  "Brand identity",
+  "Key art",
+  "Game UI",
 ]
 
 const features = [
   {
     icon: Trophy,
-    title: "Ranked seasons",
+    title: "Key art & store assets",
     description:
-      "Climb from Bronze to Apex in eight-week seasons with skill-based matchmaking and exclusive cosmetic rewards.",
+      "Capsule art, banners and social formats sized for every storefront, all exported from one consistent visual system.",
   },
   {
     icon: Cpu,
-    title: "Runs at 120 FPS",
+    title: "CGI, 3D & motion",
     description:
-      "Optimised for current consoles and mid-range PCs, with DLSS, FSR and full ultrawide support.",
+      "3D renders, logo stingers and motion loops for trailers, socials and devlogs, made in the same style as your game.",
   },
   {
     icon: RefreshCw,
-    title: "Cross-progression",
+    title: "Design systems",
     description:
-      "Start on console, continue on PC or Steam Deck. Your saves, unlocks and friends follow you everywhere.",
+      "Tokens, components and docs that keep your site, launcher and in-game UI consistent as the team and the roadmap grow.",
   },
   {
     icon: Headphones,
-    title: "Original soundtrack",
+    title: "Devlogs & socials",
     description:
-      "Over four hours of original music recorded with a live orchestra and a dynamic score that reacts to combat.",
+      "Templates and motion assets for devlogs, patch notes and social posts, so your community updates always look on brand.",
   },
   {
     icon: Accessibility,
     title: "Accessible by design",
     description:
-      "Remappable controls, colour-blind modes, subtitles with speaker names and adjustable combat speed.",
+      "Readable type, colour-blind friendly palettes and clear UI states are built into every interface we design.",
   },
 ]
 
 const stats = [
-  { value: "18", label: "Languages supported" },
-  { value: "$1.5M", label: "Tournament prize pool" },
-  { value: "240K", label: "Discord members" },
-  { value: "3.2M", label: "Players in the first month" },
+  { value: "18", label: "Days to a launch-ready site" },
+  { value: "4 wks", label: "Average brand sprint" },
+  { value: "2300+", label: "UI examples to start from" },
+  { value: "50+", label: "Game screens designed per project" },
 ]
 
 const steps = [
   {
-    title: "Create your character",
+    title: "Share your game",
     description:
-      "Pick from five classes and shape your look, voice and backstory in a detailed creator.",
+      "Send a build, a pitch deck or a few screenshots. Ali Imam reviews it and replies with ideas and a scope.",
   },
   {
-    title: "Survive the prologue",
+    title: "Discovery call",
     description:
-      "A tight two-hour opening teaches every system without a single tutorial pop-up.",
+      "A short call to understand your genre, audience, launch date and what the studio needs most.",
   },
   {
-    title: "Find your squad",
+    title: "Design sprint",
     description:
-      "Invite friends or use in-game matchmaking to form a party of up to four players.",
+      "Brand, key art direction and UI concepts are explored in Figma with weekly reviews.",
   },
   {
-    title: "Enter ranked",
+    title: "Build & launch",
     description:
-      "Unlock ranked after level 20 and start climbing the seasonal ladder.",
+      "The approved designs ship as a Next.js site and an engine-ready UI kit, tested before launch.",
   },
 ]
 
 const showcase = [
   {
-    name: "The Ashen Coast",
-    meta: "Starting region · Levels 1-15",
-    tag: "Act I",
-    price: "8 hrs",
+    name: "Indie action RPG",
+    meta: "Brand identity · Launch site",
+    tag: "Case study",
+    price: "6 wks",
     tile: "bg-gradient-to-br from-violet-200 via-purple-300 to-fuchsia-400 dark:from-violet-700 dark:via-purple-800 dark:to-fuchsia-900",
   },
   {
-    name: "Hollow Peaks",
-    meta: "Frozen highlands · Levels 15-30",
-    tag: "Act II",
-    price: "12 hrs",
+    name: "Cosy farming sim",
+    meta: "Key art · Store capsules",
+    tag: "Case study",
+    price: "3 wks",
     tile: "bg-gradient-to-br from-emerald-200 via-green-300 to-lime-300 dark:from-emerald-700 dark:via-green-800 dark:to-lime-900",
   },
   {
-    name: "Verdant Deep",
-    meta: "Overgrown ruins · Levels 30-45",
-    tag: "Act III",
-    price: "14 hrs",
+    name: "Co-op horror",
+    meta: "Trailer motion · Socials",
+    tag: "Case study",
+    price: "5 wks",
     tile: "bg-gradient-to-br from-stone-200 via-neutral-300 to-zinc-400 dark:from-stone-700 dark:via-neutral-800 dark:to-zinc-900",
   },
   {
-    name: "The Iron Citadel",
-    meta: "Raid dungeon · 4 players",
-    tag: "Raid",
-    price: "3 hrs",
+    name: "Tactics game HUD",
+    meta: "Game UI · 4 weeks",
+    tag: "UI kit",
+    price: "4 wks",
     tile: "bg-gradient-to-br from-rose-200 via-pink-300 to-purple-300 dark:from-rose-700 dark:via-pink-800 dark:to-purple-900",
   },
   {
-    name: "Duskmarket",
-    meta: "Social hub · Trading and crafting",
-    tag: "Hub",
+    name: "Esports team rebrand",
+    meta: "Brand system · Merch graphics",
+    tag: "Brand",
     price: "Free",
     tile: "bg-gradient-to-br from-blue-200 via-indigo-300 to-violet-400 dark:from-blue-700 dark:via-indigo-800 dark:to-violet-900",
   },
   {
-    name: "The Rift",
-    meta: "Endgame arena · Ranked only",
-    tag: "Season 3",
-    price: "Ranked",
+    name: "Studio design system",
+    meta: "Tokens · Components · Docs",
+    tag: "System",
+    price: "Ongoing",
     tile: "bg-gradient-to-br from-yellow-100 via-amber-200 to-orange-300 dark:from-yellow-700 dark:via-amber-800 dark:to-orange-900",
   },
 ]
@@ -138,101 +138,101 @@ const showcase = [
 const testimonials = [
   {
     quote:
-      "Finally a ranked mode that feels fair. The matchmaking is tight and the seasons give you a reason to come back.",
-    name: "Aisha Bello",
-    role: "Pro player, Team Vortex",
+      "Our launch page went from placeholder to polished in three weeks. The design system made every later update painless.",
+    name: "Nina",
+    role: "Marketing lead, indie studio",
   },
   {
     quote:
-      "A small team made something that stands next to the biggest releases of the year. Essential.",
-    name: "Rhys Morgan",
-    role: "Reviewer, IndieVerse",
+      "Designali gave our small team a brand that sits comfortably next to much bigger games on the store.",
+    name: "Omar",
+    role: "Creative director, indie studio",
   },
   {
     quote:
-      "The accessibility options are the best I have seen. I could finally finish a game like this with my friends.",
-    name: "Hannah Klein",
-    role: "Community member",
+      "Accessibility was part of the design from day one. Our menus are clearer and more players can enjoy the game.",
+    name: "Hana",
+    role: "Designali client",
   },
 ]
 
 const tiers = [
   {
-    name: "Standard",
-    price: "$39",
-    period: "one-time",
-    description: "The complete base game.",
+    name: "Launch Kit",
+    price: "$1,900",
+    period: "per project",
+    description: "Brand and launch site for a single title.",
     features: [
-      "Full campaign",
-      "Online co-op",
-      "Ranked seasons",
-      "Free seasonal updates",
+      "Logo and wordmark",
+      "Next.js launch site",
+      "Key art & store assets",
+      "Press kit page",
     ],
-    cta: "Buy Standard",
+    cta: "Book Launch Kit",
   },
   {
-    name: "Deluxe",
-    price: "$59",
-    period: "one-time",
-    description: "The game plus year-one content.",
+    name: "Studio",
+    price: "$4,900",
+    period: "per project",
+    description: "Brand, key art and site for a full launch.",
     features: [
-      "Everything in Standard",
-      "Year 1 expansion pass",
-      "Digital soundtrack",
-      "Exclusive armour set",
+      "Everything in Launch Kit",
+      "Key art and store capsules",
+      "Trailer logo stinger",
+      "Social media templates",
       "72-hour early access",
     ],
-    cta: "Buy Deluxe",
+    cta: "Book Studio",
   },
   {
-    name: "Collector's",
-    price: "$149",
-    period: "one-time",
-    description: "For the most dedicated players.",
+    name: "Full Production",
+    price: "$9,800",
+    period: "per project",
+    description: "For studios that want design end to end.",
     features: [
-      "Everything in Deluxe",
-      "30 cm resin statue",
-      "Hardcover art book",
-      "Steelbook case",
-      "Cloth world map",
+      "Everything in Studio",
+      "Motion trailer package",
+      "Game UI and HUD kit",
+      "CGI and 3D renders",
+      "Design system and docs",
     ],
-    cta: "Pre-order now",
+    cta: "Start a project",
   },
 ]
 
 const faqs = [
   {
-    q: "Can I play solo?",
-    a: "Absolutely. The full campaign is designed for solo play, with co-op as an optional extra.",
+    q: "Do you work with existing brands?",
+    a: "Absolutely. We can refresh a current identity or extend it into new key art, UI or a launch site.",
   },
   {
-    q: "What are the minimum PC requirements?",
-    a: "A GTX 1660 or RX 5600, 16 GB of RAM and an SSD with 70 GB of free space.",
+    q: "What does the website stack look like?",
+    a: "Next.js, React, TypeScript and Tailwind CSS, deployed on Vercel, so the site is fast and easy for your team to update.",
   },
   {
-    q: "When does early access start?",
-    a: "Deluxe and Collector's owners can start playing 72 hours before the global launch.",
+    q: "How long does a typical project take?",
+    a: "A Launch Kit usually takes three to four weeks. Studio and Full Production projects run six to ten weeks.",
   },
   {
-    q: "Which platforms is the game available on?",
-    a: "PC via Steam and Epic, PlayStation 5 and Xbox Series X and S. Steam Deck is fully verified.",
+    q: "Which kinds of game studios does Designali work with?",
+    a: "Mostly indie and small studios, from solo developers to teams of a few dozen, across PC, console and mobile games.",
   },
   {
-    q: "Is there cross-play?",
-    a: "Yes. Co-op and ranked matchmaking work across all platforms, and you can opt out at any time.",
+    q: "Can you design in-game UI as well as the website?",
+    a: "Yes. Ali Imam designs both, so the store page, the launch site and the HUD share one visual language.",
   },
 ]
 
 const footer = [
   {
-    title: "Game",
-    links: ["Editions", "Roadmap", "Patch notes", "System requirements"],
+    title: "Services",
+    links: ["Packages", "Process", "UI kits", "Templates"],
   },
   {
-    title: "Community",
-    links: ["Discord", "Forums", "Creator program", "Esports"],
+    title: "Work",
+    links: ["Instagram", "X", "LinkedIn", "Blog"],
   },
-  { title: "Studio", links: ["About", "Careers", "Press kit", "Support"] },
+  { title: "Studio", links: ["About", "Pricing", "Docs", "Support"] },
 ]
 
 export default function LandingGaming04() {
@@ -247,7 +247,7 @@ export default function LandingGaming04() {
             <span className="flex size-7 items-center justify-center rounded-md bg-amber-600 text-white text-sm">
               S
             </span>
-            <span className="">Starforge</span>
+            <span className="">designali</span>
           </a>
           <nav className="hidden items-center gap-7 text-sm md:flex">
             {navLinks.map((link) => (
@@ -268,10 +268,10 @@ export default function LandingGaming04() {
               nativeButton={false}
               render={<a href="#" />}
             >
-              Join Discord
+              Book a call
             </Button>
             <Button size="sm" nativeButton={false} render={<a href="#" />}>
-              Join early access
+              Book a call
             </Button>
           </div>
         </div>
@@ -281,21 +281,21 @@ export default function LandingGaming04() {
           <div className="mx-auto max-w-3xl space-y-6 text-center">
             <span className="inline-flex items-center gap-2 rounded-full border bg-background text-muted-foreground px-3 py-1 text-xs font-medium">
               <Sparkles className="size-3.5 text-amber-600 dark:text-amber-400" />
-              Early access, season one
+              Design for strategy games
             </span>
             <h1 className="text-4xl leading-[1.05] font-semibold tracking-tight text-balance sm:text-5xl md:text-6xl ">
-              {"Command a fleet across a "}
+              {"Design a UI across a "}
               <span className="text-amber-600 dark:text-amber-400">
-                living galaxy
+                complex game
               </span>
             </h1>
             <p className="mx-auto max-w-2xl text-lg leading-8 text-muted-foreground">
-              Starforge is a grand strategy game where every system, trade route
-              and alliance is shaped by thousands of players in real time.
+              Strategy games live in their interfaces. Designali designs dense maps, menus
+              and dashboards that stay readable after hundreds of hours.
             </p>
             <div className="flex flex-wrap gap-3 justify-center">
               <Button size="lg" nativeButton={false} render={<a href="#" />}>
-                Join early access
+                Book a call
                 <ArrowRight />
               </Button>
               <Button
@@ -304,7 +304,7 @@ export default function LandingGaming04() {
                 nativeButton={false}
                 render={<a href="#" />}
               >
-                Read the roadmap
+                View our process
               </Button>
             </div>
           </div>
@@ -331,7 +331,7 @@ export default function LandingGaming04() {
       <section className="border-b">
         <div className="mx-auto max-w-7xl px-6 py-12">
           <p className="text-center text-sm text-muted-foreground">
-            Featured by
+            Services include
           </p>
           <div className="mt-8 grid grid-cols-2 items-center gap-x-8 gap-y-6 sm:grid-cols-4 lg:grid-cols-8">
             {logos.map((logo) => (
@@ -352,11 +352,11 @@ export default function LandingGaming04() {
               Gameplay
             </p>
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl  mt-3">
-              Built for the long session
+              Built for game launches
             </h2>
             <p className="mt-4 text-lg leading-8 text-muted-foreground">
-              Deep systems, hand-crafted worlds and a combat loop that rewards
-              practice, whether you play for twenty minutes or all night.
+              Brand, UI, art and code from one studio, so every touchpoint of
+              your game looks and feels like the same world.
             </p>
           </div>
           <div className="mt-14 grid gap-3 md:grid-cols-3">
@@ -388,11 +388,11 @@ export default function LandingGaming04() {
           <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
             <div className="max-w-2xl">
               <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl">
-                Explore the worlds
+                Recent game projects
               </h2>
               <p className="mt-4 text-lg leading-8 text-muted-foreground">
-                Every region has its own factions, music and secrets. Here is a
-                first look at where your journey begins.
+                A few of the studios, genres and launches Designali has designed
+                for, from cosy sims to competitive tactics.
               </p>
             </div>
             <Button
@@ -400,7 +400,7 @@ export default function LandingGaming04() {
               nativeButton={false}
               render={<a href="#" />}
             >
-              View all
+              View all work
               <ArrowUpRight />
             </Button>
           </div>
@@ -435,7 +435,7 @@ export default function LandingGaming04() {
         <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl">
-              What players and critics are saying
+              What game studios say about Designali
             </h2>
           </div>
           <div className="mt-14 grid gap-4 md:grid-cols-3">
@@ -473,7 +473,7 @@ export default function LandingGaming04() {
         <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl">
-              Your first night in the game
+              How a project with Designali runs
             </h2>
           </div>
           <ol className="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
@@ -498,11 +498,11 @@ export default function LandingGaming04() {
         <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl">
-              Choose your edition
+              Choose a package
             </h2>
             <p className="mt-4 text-lg leading-8 text-muted-foreground">
-              Every edition includes the full campaign, free seasonal updates
-              and cross-progression across PC and console.
+              Every package includes Figma source files, a clear handoff and
+              support from Ali Imam through launch day.
             </p>
           </div>
           <div className="mx-auto mt-14 grid max-w-6xl items-start gap-6 lg:grid-cols-3">
@@ -564,7 +564,7 @@ export default function LandingGaming04() {
                 href="#"
                 className="font-medium text-foreground underline underline-offset-4"
               >
-                Get in touch
+                Contact us
               </a>
               .
             </p>
@@ -589,14 +589,14 @@ export default function LandingGaming04() {
           <div className="pointer-events-none absolute -top-24 left-1/2 size-96 -translate-x-1/2 rounded-full bg-gradient-to-b from-amber-500/25 via-yellow-500/10 to-transparent blur-3xl" />
           <div className="relative mx-auto max-w-2xl space-y-6">
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl">
-              The galaxy is waiting for its next admiral
+              Your game is waiting for its interface
             </h2>
             <p className="text-lg text-muted-foreground">
-              Early access includes every future season at no extra cost.
+              Every UI package includes a documented Figma kit and a launch site.
             </p>
             <div className="flex flex-wrap gap-3 justify-center">
               <Button size="lg" nativeButton={false} render={<a href="#" />}>
-                Join early access
+                Book a call
                 <ArrowRight />
               </Button>
               <Button
@@ -605,7 +605,7 @@ export default function LandingGaming04() {
                 nativeButton={false}
                 render={<a href="#" />}
               >
-                Read the roadmap
+                View our process
               </Button>
             </div>
           </div>
@@ -621,10 +621,10 @@ export default function LandingGaming04() {
               <span className="flex size-7 items-center justify-center rounded-md bg-amber-600 text-white text-sm">
                 S
               </span>
-              <span className="">Starforge</span>
+              <span className="">designali</span>
             </a>
             <p className="max-w-xs text-sm text-muted-foreground">
-              Grand strategy at galactic scale.
+              Design se code tak, for strategy games.
             </p>
           </div>
           {footer.map((column) => (
@@ -648,7 +648,7 @@ export default function LandingGaming04() {
         <div className="border-t ">
           <div className="mx-auto flex max-w-7xl flex-col justify-between gap-4 px-6 py-6 text-xs text-muted-foreground sm:flex-row">
             <span>
-              © {new Date().getFullYear()} Starforge. All rights reserved.
+              © {new Date().getFullYear()} designali. All rights reserved.
             </span>
             <div className="flex gap-6">
               <a href="#" className="hover:text-foreground">

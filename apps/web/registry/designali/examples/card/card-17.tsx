@@ -1,7 +1,12 @@
 "use client"
 
 import * as React from "react"
-import { CheckIcon, ClockIcon, MapPinIcon, Share2Icon } from "lucide-react"
+import {
+  Check as CheckIcon,
+  Clock as ClockIcon,
+  MapPin as MapPinIcon,
+  Share2 as Share2Icon,
+} from "@designali/icons"
 
 import {
   Avatar,
@@ -32,15 +37,15 @@ export default function UpcomingEventCard() {
           </span>
           <span className="text-lg leading-none font-semibold">14</span>
         </div>
-        <CardTitle>Spring product meetup</CardTitle>
-        <CardDescription>Hosted by the Northside Design Guild</CardDescription>
+        <CardTitle>Designali design to code workshop</CardTitle>
+        <CardDescription>Hosted by Ali Imam, Designali</CardDescription>
       </CardHeader>
       <CardContent className="grid gap-2 text-muted-foreground">
         <span className="flex items-center gap-2">
           <ClockIcon className="size-3.5" /> 6:30 PM - 9:00 PM
         </span>
         <span className="flex items-center gap-2">
-          <MapPinIcon className="size-3.5" /> The Foundry, 22 Mill Lane
+          <MapPinIcon className="size-3.5" /> Online · designali.com
         </span>
         <div className="flex items-center gap-2 pt-1">
           <AvatarGroup>

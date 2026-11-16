@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { FileTextIcon } from "lucide-react"
+import {
+  FileText as FileTextIcon,
+} from "@designali/icons"
 
 import {
   NavigationMenu,
@@ -14,7 +16,7 @@ import {
 } from "@workspace/ui/components/navigation-menu"
 import { Skeleton } from "@workspace/ui/components/skeleton"
 
-const recent = ["Q1 roadmap", "Partner portal", "Pricing experiment"]
+const recent = ["Brand identity", "Templates v2", "Pricing page"]
 
 export default function LoadingContentNav() {
   const [loaded, setLoaded] = React.useState(false)

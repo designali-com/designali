@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { InboxIcon } from "lucide-react"
+import {
+  Inbox as InboxIcon,
+} from "@designali/icons"
 
 import { Field, FieldLabel } from "@workspace/ui/components/field"
 import {
@@ -15,7 +17,7 @@ const densities = [
   { value: "default", label: "Default", gap: "gap-1", row: "py-2" },
   { value: "relaxed", label: "Relaxed", gap: "gap-2", row: "py-3" },
 ]
-const rows = ["Quarterly planning", "Design review", "Vendor invoices"]
+const rows = ["Brand identity brief", "Design review", "Client invoices"]
 
 export default function ListDensityPreview() {
   const [density, setDensity] = React.useState("default")

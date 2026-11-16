@@ -1,7 +1,11 @@
 "use client"
 
 import * as React from "react"
-import { MinusIcon, PlusIcon, ShoppingCartIcon } from "lucide-react"
+import {
+  Minus as MinusIcon,
+  Plus as PlusIcon,
+  ShoppingCart as ShoppingCartIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -19,24 +23,24 @@ import { cn } from "@workspace/ui/lib/utils"
 const initialItems = [
   {
     id: "mug",
-    name: "Stoneware mug",
-    variant: "Sand · 350ml",
+    name: "Templates Pro",
+    variant: "Next.js · Tailwind CSS",
     price: 22,
     qty: 2,
     gradient: "from-amber-200 to-orange-400",
   },
   {
     id: "tote",
-    name: "Canvas tote",
-    variant: "Natural",
+    name: "Icons Pro",
+    variant: "4000+ icons",
     price: 35,
     qty: 1,
     gradient: "from-stone-200 to-stone-400",
   },
   {
     id: "candle",
-    name: "Cedar candle",
-    variant: "200g",
+    name: "Logo pack",
+    variant: "SVG + React",
     price: 28,
     qty: 1,
     gradient: "from-emerald-200 to-teal-500",
@@ -68,7 +72,7 @@ export default function ShoppingCartDrawer() {
         <DrawerHeader>
           <DrawerTitle>Your cart</DrawerTitle>
           <DrawerDescription>
-            {count} items · Free shipping over $75
+            {count} items · Instant download after checkout
           </DrawerDescription>
         </DrawerHeader>
         <div className="flex flex-1 flex-col gap-4 overflow-y-auto p-4">

@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { EyeIcon, EyeOffIcon } from "lucide-react"
+import {
+  Eye as EyeIcon,
+  EyeOff as EyeOffIcon,
+} from "@designali/icons"
 
 import { Toggle } from "@workspace/ui/components/toggle"
 
@@ -12,7 +15,7 @@ export default function MaskBalanceToggle() {
     <div className="flex w-full max-w-xs flex-col gap-3 border bg-gradient-to-br from-muted/60 to-background p-5">
       <div className="flex items-center justify-between">
         <span className="text-xs font-medium text-muted-foreground">
-          Main account
+          Designali studio account
         </span>
         <Toggle
           size="sm"

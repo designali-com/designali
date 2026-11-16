@@ -1,6 +1,9 @@
 "use client"
 
-import { ArrowUpIcon, InfoIcon } from "lucide-react"
+import {
+  ArrowUp as ArrowUpIcon,
+  Info as InfoIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -40,7 +43,7 @@ export default function TopCenterToastViewport() {
       <Button
         variant="outline"
         onClick={() =>
-          notify.add({ description: "A new version of the app is available." })
+          notify.add({ description: "A new version of Designali is available." })
         }
       >
         <ArrowUpIcon data-icon="inline-start" />

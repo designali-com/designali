@@ -1,29 +1,34 @@
-import { Bike, Car, CircleParking, TrainFront } from "lucide-react"
+import {
+  Calendar,
+  Globe,
+  Mail,
+  Video,
+} from "@designali/icons"
 
 const routes = [
   {
-    icon: TrainFront,
-    title: "By train",
+    icon: Globe,
+    title: "Join online",
     detail:
-      "Take the U2 to Rosenthaler Platz. The venue is a four minute walk north along Weinbergsweg.",
+      "Designali Live streams from designali.com. Sign in with your free account to join from anywhere.",
   },
   {
-    icon: Car,
-    title: "By car",
+    icon: Video,
+    title: "Watch live",
     detail:
-      "Exit the A100 at Prenzlauer Berg and follow signs for Mitte. Allow extra time on weekday mornings.",
+      "Ali Imam walks through brand, UI/UX and Next.js builds in real time, with live Q&A after each session.",
   },
   {
-    icon: CircleParking,
-    title: "Parking",
+    icon: Calendar,
+    title: "Add to calendar",
     detail:
-      "Underground parking at Brunnenstraße 7, open 24 hours. Attendees get 50% off with their badge.",
+      "Sessions are scheduled across time zones. Add them to your calendar and get a reminder before each one.",
   },
   {
-    icon: Bike,
-    title: "By bike",
+    icon: Mail,
+    title: "Get the recording",
     detail:
-      "Covered racks for 120 bikes at the main entrance, plus a free repair stand courtesy of our hosts.",
+      "Missed a session? Recordings and source files land in your inbox from hello@designali.com.",
   },
 ]
 
@@ -34,16 +39,16 @@ export default function Location04() {
         <div className="grid gap-10 border-b pb-12 md:grid-cols-2">
           <div>
             <p className="text-xs tracking-widest text-muted-foreground uppercase">
-              Venue &middot; 14 &ndash; 15 May
+              Online event &middot; 14 &ndash; 15 May
             </p>
             <h2 className="mt-3 text-4xl font-semibold tracking-tight md:text-6xl">
-              Kraftwerk Hall
+              Designali Live
             </h2>
           </div>
           <div className="flex flex-col justify-end gap-2 md:items-end md:text-end">
-            <p className="text-lg">Köpenicker Str. 70, 10179 Berlin</p>
+            <p className="text-lg">Online · Remote, worldwide</p>
             <p className="font-mono text-xs text-muted-foreground">
-              52.5112° N, 13.4197° E
+              designali.com
             </p>
           </div>
         </div>

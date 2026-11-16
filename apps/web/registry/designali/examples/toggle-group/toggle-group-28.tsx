@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { HeadphonesIcon } from "lucide-react"
+import {
+  Headphones as HeadphonesIcon,
+} from "@designali/icons"
 
 import {
   ToggleGroup,
@@ -21,7 +23,7 @@ export default function PlaybackSpeedToggleGroup() {
         </div>
         <div className="flex flex-col">
           <span className="text-sm font-medium">
-            Ep. 42 - Shipping calm software
+            Ep. 42 - Design se code tak
           </span>
           <span className="text-xs text-muted-foreground">
             Playing at {speed}x

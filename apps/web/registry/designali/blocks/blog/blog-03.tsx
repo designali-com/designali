@@ -1,21 +1,23 @@
 "use client"
 
 import { useState } from "react"
-import { ArrowRight } from "lucide-react"
+import {
+  ArrowRight,
+} from "@designali/icons"
 
 import { cn } from "@workspace/ui/lib/utils"
 
 const categories = ["All", "Design", "Engineering", "Company", "Guides"]
 
 const posts = [
-  { title: "Introducing variable themes for every block", category: "Company", date: "Nov 13, 2026", read: 4 },
-  { title: "Building accessible comboboxes without a framework", category: "Engineering", date: "Nov 9, 2026", read: 12 },
-  { title: "Grids that bend: layout for editorial products", category: "Design", date: "Nov 6, 2026", read: 7 },
-  { title: "How to migrate a design system without a freeze", category: "Guides", date: "Oct 31, 2026", read: 9 },
-  { title: "We are opening a studio in Lisbon", category: "Company", date: "Oct 24, 2026", read: 3 },
-  { title: "Color contrast is a product decision", category: "Design", date: "Oct 18, 2026", read: 6 },
-  { title: "Server components for marketing sites, one year in", category: "Engineering", date: "Oct 11, 2026", read: 10 },
-  { title: "Writing a component brief your engineers will read", category: "Guides", date: "Oct 4, 2026", read: 5 },
+  { title: "Introducing themes for every Designali block", category: "Company", date: "Nov 13, 2026", read: 4 },
+  { title: "Building accessible components with Tailwind CSS", category: "Engineering", date: "Nov 9, 2026", read: 12 },
+  { title: "Grid Pattern and Dot Pattern: backgrounds that bend", category: "Design", date: "Nov 6, 2026", read: 7 },
+  { title: "Migrating Dalim UI to the Designali design system", category: "Guides", date: "Oct 31, 2026", read: 9 },
+  { title: "From Dalim to Designali: a new name for the studio", category: "Company", date: "Oct 24, 2026", read: 3 },
+  { title: "Why Designali blue is #00A8FF", category: "Design", date: "Oct 18, 2026", read: 6 },
+  { title: "Server components for designali.com, one year in", category: "Engineering", date: "Oct 11, 2026", read: 10 },
+  { title: "Writing a design brief for a Designali project", category: "Guides", date: "Oct 4, 2026", read: 5 },
 ]
 
 export default function Blog03() {
@@ -27,8 +29,8 @@ export default function Blog03() {
       <div className="mx-auto max-w-4xl px-6">
         <h2 className="text-4xl font-medium tracking-tight md:text-6xl">Writing</h2>
         <p className="mt-4 max-w-lg text-muted-foreground">
-          Product updates, long-form essays, and practical guides from the people
-          building the platform.
+          Product updates, long-form essays, and practical guides from Ali Imam and
+          the Designali studio.
         </p>
 
         <div className="mt-10 flex flex-wrap gap-2 border-b border-border pb-6">

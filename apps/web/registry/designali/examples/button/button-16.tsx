@@ -1,13 +1,16 @@
 "use client"
 
 import * as React from "react"
-import { CheckIcon, CopyIcon } from "lucide-react"
+import {
+  Check as CheckIcon,
+  Copy as CopyIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 
 export default function CopyToClipboardButton() {
   const [copied, setCopied] = React.useState(false)
-  const link = "https://app.example.com/join/k7Qx2"
+  const link = "https://www.designali.com/join/k7Qx2"
 
   function copy() {
     void navigator.clipboard?.writeText(link)

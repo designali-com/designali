@@ -14,7 +14,6 @@ import {
   Component,
   Cpu,
   Globe,
-  Layers,
   LayoutGrid,
   Network,
   PenTool,
@@ -24,7 +23,7 @@ import {
   Smile,
   Sparkle,
   Sparkles,
-} from "lucide-react"
+} from "@designali/icons"
 
 import {
   NavigationMenu,
@@ -44,202 +43,202 @@ type MenuItem = {
 
 const cloud: MenuItem[] = [
   {
-    title: "AI SDK",
-    href: "#",
+    title: "Bento",
+    href: "/ui",
     icon: <BoxIcon />,
-    description: "The AI Toolkit for Typescript",
+    description: "Bento grid layouts for any product",
   },
   {
-    title: "AI Gateway",
-    href: "#",
+    title: "Number Counter",
+    href: "/ui",
     icon: <Sparkle strokeWidth={2} />,
-    description: "One endpoint, all your models",
+    description: "Animated stats that count up",
   },
   {
-    title: "Vercel Agent",
-    href: "#",
+    title: "Marquee",
+    href: "/ui",
     icon: <AArrowUp strokeWidth={2} />,
-    description: "An agent that knows your stack",
+    description: "Infinite scrolling logos and cards",
   },
 ]
 
 const core: MenuItem[] = [
   {
-    title: "CI/CD",
-    href: "#",
+    title: "Templates",
+    href: "/templates",
     icon: <LayoutGrid strokeWidth={2} />,
-    description: "Helping teams ship 6× faster",
+    description: "Next.js templates ready to ship",
   },
   {
-    title: "Content Delivery",
-    href: "#",
+    title: "Blocks",
+    href: "/blocks",
     icon: <Globe strokeWidth={2} />,
-    description: "Fast, scalable, and reliable",
+    description: "460+ copy-and-paste sections",
   },
   {
-    title: "Fluid Compute",
-    href: "#",
+    title: "UI Designs",
+    href: "/ui",
     icon: <Cpu strokeWidth={2} />,
-    description: "Servers, in serverless form",
+    description: "2300+ real-world UI examples",
   },
   {
-    title: "Observability",
-    href: "#",
+    title: "Landing Pages",
+    href: "/blocks",
     icon: <ChartNoAxesColumnIncreasing strokeWidth={2} />,
-    description: "Trace every step",
+    description: "240+ complete page layouts",
   },
 ]
 
 const security: MenuItem[] = [
   {
-    title: "Bot Management",
-    href: "#",
+    title: "Icons",
+    href: "/icons",
     icon: <Bot strokeWidth={2} />,
-    description: "Scalable bot protection",
+    description: "4000+ icons in @designali/icons",
   },
   {
-    title: "BotID",
-    href: "#",
+    title: "Logos",
+    href: "/logos",
     icon: <ScanText strokeWidth={2} />,
-    description: "Invisible CAPTCHA",
+    description: "Brand logos in @designali/logos",
   },
   {
-    title: "Platform Security",
-    href: "#",
+    title: "Illustration",
+    href: "/illustration",
     icon: <Shield strokeWidth={2} />,
-    description: "DDOS Protection, Firewall",
+    description: "Vectors in @designali/vectors",
   },
   {
-    title: "Web Application Firewall",
-    href: "#",
+    title: "Device Mockups",
+    href: "/ui",
     icon: <Calendar1 strokeWidth={2} />,
-    description: "Granular, custom protection",
+    description: "iPhone, iPad, MacBook and iMac",
   },
 ]
 
 const company: MenuItem[] = [
   {
-    title: "Customers",
-    href: "#",
+    title: "Work",
+    href: "/work",
     icon: <Smile strokeWidth={2} />,
-    description: "Trusted by the best teams",
+    description: "Projects designed by Designali",
   },
   {
-    title: "Blog",
-    href: "#",
+    title: "Blogs",
+    href: "/blogs",
     icon: <PenTool strokeWidth={2} />,
-    description: "The latest posts and changes",
+    description: "The latest posts and updates",
   },
   {
-    title: "Changelog",
-    href: "#",
+    title: "Ali Imam",
+    href: "https://www.linkedin.com/in/aliimam-in/",
     icon: <BookText strokeWidth={2} />,
-    description: "See what shipped",
+    description: "Founder and design engineer",
   },
   {
-    title: "Press",
-    href: "#",
+    title: "Contact",
+    href: "/contact",
     icon: <BriefcaseBusiness strokeWidth={2} />,
-    description: "Read the latest news",
+    description: "hello@designali.com",
   },
   {
-    title: "Events",
-    href: "#",
+    title: "Support",
+    href: "mailto:support@designali.com",
     icon: <Calendar1 strokeWidth={2} />,
-    description: "Join us at an event",
+    description: "Get help quickly",
   },
 ]
 
 const open: MenuItem[] = [
   {
-    title: "Next.js",
-    href: "#",
+    title: "Instagram",
+    href: "https://www.instagram.com/designali.code/",
     icon: <Code strokeWidth={2} />,
-    description: "The native Next.js platform",
+    description: "Follow @designali.code",
   },
   {
-    title: "Nuxt",
-    href: "#",
+    title: "X",
+    href: "https://x.com/designali_com",
     icon: <Component strokeWidth={2} />,
-    description: "The progressive web framework",
+    description: "Follow @designali_com",
   },
   {
-    title: "Svelte",
-    href: "#",
+    title: "LinkedIn",
+    href: "https://www.linkedin.com/company/designali-com/",
     icon: <Component strokeWidth={2} />,
-    description: "The web's efficient UI framework",
+    description: "Designali on LinkedIn",
   },
   {
-    title: "Turborepo",
-    href: "#",
+    title: "21st.dev",
+    href: "https://21st.dev/@designali-in",
     icon: <Network strokeWidth={2} />,
-    description: "Speed with Enterprise scale",
+    description: "Designali components on 21st.dev",
   },
 ]
 
 const tools: MenuItem[] = [
   {
-    title: "Academy",
-    href: "#",
+    title: "Docs",
+    href: "/docs",
     icon: <Code strokeWidth={2} />,
-    description: "Learn the ins and outs of Vercel",
+    description: "Install and customise Designali",
   },
   {
-    title: "Marketplace",
-    href: "#",
+    title: "Pricing",
+    href: "/pricing",
     icon: <Component strokeWidth={2} />,
-    description: "Extend and automate workflows",
+    description: "Plans for every project",
   },
   {
-    title: "Templates",
-    href: "#",
+    title: "Terms",
+    href: "/docs/legal/terms",
     icon: <Component strokeWidth={2} />,
-    description: "Jumpstart app development",
+    description: "Licensing and terms of use",
   },
   {
-    title: "Guides",
-    href: "#",
+    title: "Dalim",
+    href: "/work",
     icon: <Network strokeWidth={2} />,
-    description: "Find help quickly",
+    description: "Earlier projects by Ali Imam",
   },
   {
-    title: "Partner Finder",
-    href: "#",
+    title: "Components",
+    href: "/docs",
     icon: <Network strokeWidth={2} />,
-    description: "Get help from solution partners",
+    description: "Component APIs and usage",
   },
 ]
 
 const cases: MenuItem[] = [
   {
-    title: "AI Apps",
-    href: "#",
+    title: "Brand Identity",
+    href: "/work",
     icon: <Sparkles strokeWidth={2} />,
-    description: "Deploy at the speed of AI",
+    description: "Logos, type and colour systems",
   },
   {
-    title: "Composable Commerce",
-    href: "#",
+    title: "UI/UX Design",
+    href: "/work",
     icon: <Component strokeWidth={2} />,
-    description: "Power storefronts that convert",
+    description: "Intuitive product interfaces",
   },
   {
-    title: "Marketing Sites",
-    href: "#",
+    title: "Web Development",
+    href: "/work",
     icon: <ScreenShare strokeWidth={2} />,
-    description: "Jumpstart app development",
+    description: "Production-ready Next.js sites",
   },
   {
-    title: "Multi-tenant Platforms",
-    href: "#",
+    title: "Design Systems",
+    href: "/work",
     icon: <Network strokeWidth={2} />,
-    description: "Scale apps with one codebase",
+    description: "Tokens and components in sync",
   },
   {
-    title: "Web Apps",
-    href: "#",
+    title: "CGI & Motion",
+    href: "/work",
     icon: <AppWindow strokeWidth={2} />,
-    description: "Ship features, not infrastructure",
+    description: "3D, CGI and motion design",
   },
 ]
  
@@ -330,7 +329,7 @@ export function NavMenu() {
       <NavigationMenuList>
         {/* Cloud */}
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Cloud</NavigationMenuTrigger>
+          <NavigationMenuTrigger>Components</NavigationMenuTrigger>
 
           <NavigationMenuContent>
             <MenuGrid
@@ -342,7 +341,7 @@ export function NavMenu() {
 
         {/* Core */}
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Core</NavigationMenuTrigger>
+          <NavigationMenuTrigger>Products</NavigationMenuTrigger>
 
           <NavigationMenuContent>
             <MenuGrid
@@ -354,7 +353,7 @@ export function NavMenu() {
 
         {/* Security */}
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Security</NavigationMenuTrigger>
+          <NavigationMenuTrigger>Assets</NavigationMenuTrigger>
 
           <NavigationMenuContent>
             <MenuGrid
@@ -366,7 +365,7 @@ export function NavMenu() {
 
         {/* Company */}
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Company</NavigationMenuTrigger>
+          <NavigationMenuTrigger>Studio</NavigationMenuTrigger>
 
           <NavigationMenuContent>
             <MenuGrid
@@ -378,7 +377,7 @@ export function NavMenu() {
 
         {/* Open Source */}
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Open Source</NavigationMenuTrigger>
+          <NavigationMenuTrigger>Social</NavigationMenuTrigger>
 
           <NavigationMenuContent>
             <MenuGrid
@@ -402,7 +401,7 @@ export function NavMenu() {
 
         {/* Use Cases */}
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Use Cases</NavigationMenuTrigger>
+          <NavigationMenuTrigger>Services</NavigationMenuTrigger>
 
           <NavigationMenuContent>
             <MenuGrid

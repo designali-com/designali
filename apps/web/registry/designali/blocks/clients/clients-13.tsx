@@ -1,34 +1,36 @@
-import { ArrowUpRight } from "lucide-react"
+import {
+  ArrowUpRight,
+} from "@designali/icons"
 
 const cases = [
   {
-    company: "Oakmont Health",
-    initials: "OH",
-    industry: "Healthcare",
+    company: "Resort Website",
+    initials: "RW",
+    industry: "Hospitality",
     metric: "3x",
-    metricLabel: "faster patient portal releases",
+    metricLabel: "more direct booking enquiries",
     summary:
-      "Replaced four legacy UI kits with one accessible system across web, kiosk and mobile.",
+      "Brand identity, UI/UX and a Next.js site built from the Designali Resort template.",
     gradient: "from-emerald-500/20 to-teal-500/5",
   },
   {
-    company: "Parallax Freight",
-    initials: "PF",
-    industry: "Logistics",
+    company: "Design Agency Site",
+    initials: "DA",
+    industry: "Agency",
     metric: "-62%",
     metricLabel: "front-end bug reports",
     summary:
-      "Dispatch dashboards now ship from shared blocks, so QA focuses on routing logic instead of pixels.",
+      "Case study pages now ship from shared Designali blocks, so the team focuses on the work instead of pixels.",
     gradient: "from-sky-500/20 to-indigo-500/5",
   },
   {
-    company: "Nimbus Bank",
-    initials: "NB",
-    industry: "Fintech",
+    company: "AI Product Launch",
+    initials: "AI",
+    industry: "AI startup",
     metric: "11 days",
-    metricLabel: "to launch a new card product",
+    metricLabel: "from brief to launch page",
     summary:
-      "The growth team assembles compliant onboarding flows without waiting on a design sprint.",
+      "A launch page, product UI and motion assets designed and coded in one Designali sprint.",
     gradient: "from-amber-500/20 to-orange-500/5",
   },
 ]

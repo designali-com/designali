@@ -1,10 +1,13 @@
-import { ArrowDownRight, ArrowUpRight } from "lucide-react"
+import {
+  ArrowDownRight,
+  ArrowUpRight,
+} from "@designali/icons"
 
 const stats = [
-  { label: "Monthly revenue", value: "$184,320", change: "+12.4%", up: true },
-  { label: "Active subscribers", value: "8,942", change: "+6.1%", up: true },
-  { label: "Churn rate", value: "2.3%", change: "-0.4%", up: false },
-  { label: "Avg. order value", value: "$64.80", change: "+3.2%", up: true },
+  { label: "Template revenue", value: "$184,320", change: "+12.4%", up: true },
+  { label: "Designali Pro members", value: "8,942", change: "+6.1%", up: true },
+  { label: "Refund rate", value: "2.3%", change: "-0.4%", up: false },
+  { label: "Avg. order (blocks & icons)", value: "$64.80", change: "+3.2%", up: true },
 ]
 
 const revenue = [42, 48, 45, 53, 58, 55, 62, 68, 64, 72, 79, 86]
@@ -30,12 +33,12 @@ export default function Analytics01() {
               Overview
             </p>
             <h2 className="mt-2 text-3xl font-medium tracking-tight md:text-4xl">
-              Revenue performance, 2026
+              designali.com revenue, 2026
             </h2>
           </div>
           <p className="max-w-sm text-sm text-muted-foreground">
-            Figures update every 15 minutes from your billing provider. All
-            amounts are shown in USD before tax.
+            Sales of Designali templates, blocks, icons and UI kits. Figures
+            update every 15 minutes and are shown in USD before tax.
           </p>
         </div>
 
@@ -64,7 +67,7 @@ export default function Analytics01() {
 
         <div className="border-x border-b border-border p-6">
           <div className="mb-6 flex items-center justify-between">
-            <p className="text-sm font-medium">Monthly recurring revenue ($k)</p>
+            <p className="text-sm font-medium">Designali Pro recurring revenue ($k)</p>
             <span className="text-xs text-muted-foreground">Jan – Dec</span>
           </div>
           <div className="relative h-56 w-full">

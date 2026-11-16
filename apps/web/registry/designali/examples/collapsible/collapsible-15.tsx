@@ -1,4 +1,6 @@
-import { MessageSquareIcon } from "lucide-react"
+import {
+  MessageSquare as MessageSquareIcon,
+} from "@designali/icons"
 
 import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
 import { Button } from "@workspace/ui/components/button"
@@ -10,19 +12,19 @@ import {
 
 const replies = [
   {
-    name: "Priya Nair",
+    name: "Sara Designer",
     time: "2h",
     text: "Agreed, the new spacing reads much better on mobile.",
   },
   {
-    name: "Tomás Ruiz",
+    name: "Omar Developer",
     time: "1h",
-    text: "Can we keep the old icon for the export action?",
+    text: "Can we use the @designali/icons download icon for export?",
   },
   {
-    name: "Lena Ford",
+    name: "Ali Imam",
     time: "45m",
-    text: "Updated the file with both icon options.",
+    text: "Updated the Figma file with both icon options.",
   },
 ]
 
@@ -31,16 +33,16 @@ export default function CommentReplies() {
     <div className="w-full max-w-md">
       <div className="flex gap-3">
         <Avatar>
-          <AvatarFallback>JO</AvatarFallback>
+          <AvatarFallback>NM</AvatarFallback>
         </Avatar>
         <div className="flex-1 space-y-1">
           <p className="text-sm">
-            <span className="font-medium">Jonah Okafor</span>{" "}
+            <span className="font-medium">Nina Motion</span>{" "}
             <span className="text-xs text-muted-foreground">3h</span>
           </p>
           <p className="text-sm">
-            I tightened the card spacing on the pricing page. Thoughts before I
-            ship?
+            I tightened the card spacing on the designali.com pricing page.
+            Thoughts before I ship?
           </p>
           <Collapsible>
             <CollapsibleTrigger

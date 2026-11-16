@@ -1,4 +1,6 @@
-import { BuildingIcon } from "lucide-react"
+import {
+  Building as BuildingIcon,
+} from "@designali/icons"
 
 import {
   Alert,
@@ -13,9 +15,9 @@ export default function AdminManagedReadOnly() {
     <div className="flex w-full max-w-sm flex-col gap-3 border p-4">
       <Alert>
         <BuildingIcon />
-        <AlertTitle>Managed by Northwind IT</AlertTitle>
+        <AlertTitle>Managed by Designali</AlertTitle>
         <AlertDescription>
-          These settings are set by your organization.
+          These settings are set by the Designali studio.
         </AlertDescription>
       </Alert>
       <div className="flex items-center justify-between gap-4">

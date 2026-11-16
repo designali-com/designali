@@ -3,9 +3,9 @@ import type { CSSProperties } from "react"
 import { Button } from "@workspace/ui/components/button"
 
 const columns = [
-  ["Northwind", "Halcyon", "Orbital", "Kestrel", "Fieldnote"],
-  ["Quanta", "Driftwave", "Tessel", "Monolith", "Sable"],
-  ["Arcwell", "Lumen", "Corvid", "Brightline", "Ferro"],
+  ["Designali", "Dalim", "Dalim Agency", "Dalim Fonts", "Dalim Graphic"],
+  ["Dalim Icons", "Dalim Tools", "Dalim UI", "Dalim Works", "Dalim Visuals"],
+  ["Designali Icons", "Designali Logos", "Designali Vectors", "Designali Blocks", "Designali Templates"],
 ]
 
 function Column({ names, duration }: { names: string[]; duration: string }) {
@@ -43,12 +43,11 @@ export default function Clients15() {
             Customers
           </p>
           <h2 className="mt-4 text-3xl font-semibold tracking-tight md:text-5xl">
-            Chosen by teams who sweat the details.
+            Designed by a studio that sweats the details.
           </h2>
           <p className="mt-5 max-w-md text-base leading-7 text-muted-foreground">
-            More than 900 companies run their marketing sites, dashboards and
-            internal tools on our blocks. Most of them switched from a custom
-            in-house kit.
+            Every Designali and Dalim brand, website and library is designed
+            and coded by Ali Imam, design se code tak.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Button nativeButton={false} render={<a href="#" />}>
@@ -59,7 +58,7 @@ export default function Clients15() {
               nativeButton={false}
               render={<a href="#" />}
             >
-              Talk to sales
+              Talk to Ali
             </Button>
           </div>
         </div>

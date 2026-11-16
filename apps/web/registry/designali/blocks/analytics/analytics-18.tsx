@@ -1,18 +1,23 @@
-import { ArrowUpRight, Clock, Users, Zap } from "lucide-react"
+import {
+  ArrowUpRight,
+  Clock,
+  Users,
+  Zap,
+} from "@designali/icons"
 
 const hourly = [12, 9, 7, 6, 8, 14, 26, 41, 58, 64, 61, 57, 60, 63, 66, 62, 55, 48, 40, 34, 29, 24, 19, 15]
 
 const plans = [
-  { name: "Starter", value: 54, color: "var(--chart-1)" },
-  { name: "Team", value: 31, color: "var(--chart-2)" },
-  { name: "Business", value: 15, color: "var(--chart-3)" },
+  { name: "Free", value: 54, color: "var(--chart-1)" },
+  { name: "Pro", value: 31, color: "var(--chart-2)" },
+  { name: "Studio", value: 15, color: "var(--chart-3)" },
 ]
 
 const features = [
-  { name: "Shared boards", usage: 88 },
-  { name: "AI summaries", usage: 71 },
-  { name: "Time tracking", usage: 46 },
-  { name: "Client portal", usage: 23 },
+  { name: "Blocks library", usage: 88 },
+  { name: "Icons search", usage: 71 },
+  { name: "Templates", usage: 46 },
+  { name: "UI kits", usage: 23 },
 ]
 
 export default function Analytics18() {
@@ -28,8 +33,8 @@ export default function Analytics18() {
   return (
     <section className="w-full bg-muted/40 py-16 text-foreground md:py-24">
       <div className="mx-auto max-w-7xl px-6">
-        <h2 className="text-2xl font-medium tracking-tight md:text-3xl">Workspace health</h2>
-        <p className="mt-1 text-sm text-muted-foreground">Kitebase, all workspaces, today</p>
+        <h2 className="text-2xl font-medium tracking-tight md:text-3xl">designali.com health</h2>
+        <p className="mt-1 text-sm text-muted-foreground">designali.com, all members, today</p>
 
         <div className="mt-8 grid auto-rows-[minmax(160px,auto)] gap-4 md:grid-cols-4">
           <div className="flex flex-col justify-between bg-primary p-6 text-primary-foreground md:col-span-2 md:row-span-2">
@@ -68,7 +73,7 @@ export default function Analytics18() {
 
           <div className="flex flex-col justify-between border bg-background p-6">
             <div className="flex items-center justify-between text-sm text-muted-foreground">
-              Automations run
+              Blocks copied
               <Zap className="size-4" />
             </div>
             <p className="text-4xl font-semibold tracking-tight">1.2M</p>

@@ -1,4 +1,6 @@
-import { CreditCardIcon } from "lucide-react"
+import {
+  CreditCard as CreditCardIcon,
+} from "@designali/icons"
 
 import { Card, CardContent } from "@workspace/ui/components/card"
 import { Spinner } from "@workspace/ui/components/spinner"

@@ -1,4 +1,6 @@
-import { HardDriveIcon } from "lucide-react"
+import {
+  HardDrive as HardDriveIcon,
+} from "@designali/icons"
 
 import {
   Progress,
@@ -8,9 +10,9 @@ import {
 import { cn } from "@workspace/ui/lib/utils"
 
 const breakdown = [
-  { label: "Documents", size: "3.1 GB", className: "bg-primary" },
-  { label: "Media", size: "2.8 GB", className: "bg-primary/60" },
-  { label: "Backups", size: "1.5 GB", className: "bg-primary/30" },
+  { label: "Templates", size: "3.1 GB", className: "bg-primary" },
+  { label: "CGI renders", size: "2.8 GB", className: "bg-primary/60" },
+  { label: "Figma files", size: "1.5 GB", className: "bg-primary/30" },
 ]
 
 export default function StorageUsageMeter() {
@@ -19,7 +21,7 @@ export default function StorageUsageMeter() {
       <div className="flex items-center gap-2">
         <HardDriveIcon className="size-4 text-muted-foreground" />
         <span className="text-sm font-medium">Storage</span>
-        <span className="ms-auto text-xs text-muted-foreground">Team plan</span>
+        <span className="ms-auto text-xs text-muted-foreground">Designali studio</span>
       </div>
       <Progress value={74} className="[&_[data-slot=progress-track]]:h-2">
         <ProgressLabel className="text-sm">7.4 GB of 10 GB used</ProgressLabel>

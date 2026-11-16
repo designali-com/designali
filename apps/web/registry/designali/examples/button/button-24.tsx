@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { FileSpreadsheetIcon, UploadIcon } from "lucide-react"
+import {
+  FileSpreadsheet as FileSpreadsheetIcon,
+  Upload as UploadIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 

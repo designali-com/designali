@@ -1,7 +1,11 @@
 "use client"
 
 import * as React from "react"
-import { KanbanIcon, LayoutGridIcon, ListIcon } from "lucide-react"
+import {
+  Kanban as KanbanIcon,
+  LayoutGrid as LayoutGridIcon,
+  List as ListIcon,
+} from "@designali/icons"
 
 import {
   RadioGroup,

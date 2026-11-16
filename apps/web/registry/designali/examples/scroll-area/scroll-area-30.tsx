@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { FileIcon, FolderOpenIcon } from "lucide-react"
+import {
+  File as FileIcon,
+  FolderOpen as FolderOpenIcon,
+} from "@designali/icons"
 
 import {
   Empty,
@@ -15,12 +18,12 @@ import { ScrollArea } from "@workspace/ui/components/scroll-area"
 import { Switch } from "@workspace/ui/components/switch"
 
 const files = [
-  "brand-guide.pdf",
-  "q3-forecast.xlsx",
-  "hero-v4.fig",
-  "onboarding.mp4",
+  "designali-brand-guide.pdf",
+  "project-estimate.xlsx",
+  "designali-hero-v4.fig",
+  "abstract-fluid.mp4",
   "contract-signed.pdf",
-  "logo-pack.zip",
+  "designali-logos.zip",
   "team-photo-alt.txt",
   "launch-plan.md",
 ]

@@ -1,7 +1,12 @@
 "use client"
 
 import * as React from "react"
-import { MicIcon, MicOffIcon, VideoIcon, VideoOffIcon } from "lucide-react"
+import {
+  Mic as MicIcon,
+  MicOff as MicOffIcon,
+  Video as VideoIcon,
+  VideoOff as VideoOffIcon,
+} from "@designali/icons"
 
 import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
 import { Button } from "@workspace/ui/components/button"

@@ -2,12 +2,12 @@
 
 import * as React from "react"
 import {
-  EraserIcon,
-  MousePointer2Icon,
-  PenToolIcon,
-  SquareIcon,
-  TypeIcon,
-} from "lucide-react"
+  Eraser as EraserIcon,
+  MousePointer2 as MousePointer2Icon,
+  PenTool as PenToolIcon,
+  Square as SquareIcon,
+  Type as TypeIcon,
+} from "@designali/icons"
 
 import {
   ToggleGroup,

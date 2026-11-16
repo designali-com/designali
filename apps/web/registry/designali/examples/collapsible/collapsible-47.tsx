@@ -1,4 +1,8 @@
-import { ArchiveIcon, ChevronDownIcon, DownloadIcon } from "lucide-react"
+import {
+  Archive as ArchiveIcon,
+  ChevronDown as ChevronDownIcon,
+  Download as DownloadIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {

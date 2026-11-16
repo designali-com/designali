@@ -33,10 +33,10 @@ export default function HotelStayRange() {
   return (
     <Card className="w-full max-w-xs">
       <CardHeader>
-        <CardTitle>Harbor View Suite</CardTitle>
-        <CardDescription>Minimum 2 nights, maximum 14.</CardDescription>
+        <CardTitle>Designali design sprint</CardTitle>
+        <CardDescription>Minimum 2 days, maximum 14.</CardDescription>
         <CardAction>
-          <Badge variant="outline">{"$" + rate} / night</Badge>
+          <Badge variant="outline">{"$" + rate} / day</Badge>
         </CardAction>
       </CardHeader>
       <CardContent className="flex justify-center">
@@ -57,14 +57,14 @@ export default function HotelStayRange() {
           <span className="text-muted-foreground">
             {range?.from && range?.to
               ? format(range.from, "MMM d") + " - " + format(range.to, "MMM d")
-              : "Select check-in and check-out"}
+              : "Select sprint start and end"}
           </span>
           <span className="font-medium">
-            {nights} {nights === 1 ? "night" : "nights"} ·{" "}
+            {nights} {nights === 1 ? "day" : "days"} ·{" "}
             {"$" + (nights * rate).toLocaleString()}
           </span>
         </div>
-        <Button disabled={nights < 2}>Reserve</Button>
+        <Button disabled={nights < 2}>Book sprint</Button>
       </CardFooter>
     </Card>
   )

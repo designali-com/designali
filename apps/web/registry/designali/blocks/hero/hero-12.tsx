@@ -1,13 +1,17 @@
 "use client"
 
 import { useState } from "react"
-import { MapPin, Search, Star } from "lucide-react"
+import {
+  Code,
+  Search,
+  Star,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 
-const categories = ["All", "Plumbing", "Electrical", "Cleaning", "Painting", "Moving", "Gardening"]
+const categories = ["All", "Templates", "Blocks", "Landing pages", "UI designs", "Icons", "Logos"]
 
-const popular = ["Leaky faucet", "Deep clean", "Ceiling fan install", "Fence repair"]
+const popular = ["Pricing table", "Hero section", "Login page", "Dashboard"]
 
 export default function Hero12() {
   const [category, setCategory] = useState("All")
@@ -22,14 +26,14 @@ export default function Hero12() {
       <div className="relative mx-auto max-w-4xl text-center">
         <p className="inline-flex items-center gap-1.5 text-sm text-muted-foreground">
           <Star className="size-4 fill-amber-400 text-amber-400" />
-          4.9 average from 38,000 completed jobs
+          Loved by designers and developers on designali.com
         </p>
         <h1 className="mt-6 text-4xl font-medium tracking-tight md:text-6xl">
-          Vetted local pros, booked in minutes.
+          Find the right Designali block in seconds.
         </h1>
         <p className="mx-auto mt-5 max-w-xl text-base leading-7 text-muted-foreground">
-          Upfront pricing, background-checked tradespeople and a 90-day
-          workmanship guarantee on every booking.
+          Search 460+ blocks, 240+ landing pages, 2300+ UI designs and 4000+
+          icons — all built with Next.js, React and Tailwind CSS.
         </p>
 
         <form
@@ -41,20 +45,20 @@ export default function Hero12() {
             <input
               value={query}
               onChange={(event) => setQuery(event.target.value)}
-              placeholder="What do you need done?"
+              placeholder="What are you building?"
               className="w-full min-w-0 bg-transparent text-sm outline-none placeholder:text-muted-foreground"
             />
           </label>
           <label className="flex items-center gap-3 px-4 py-3 sm:w-52">
-            <MapPin className="size-4 shrink-0 text-muted-foreground" />
+            <Code className="size-4 shrink-0 text-muted-foreground" />
             <input
-              defaultValue="Portland, OR"
-              aria-label="Location"
+              defaultValue="Next.js + Tailwind"
+              aria-label="Stack"
               className="w-full min-w-0 bg-transparent text-sm outline-none"
             />
           </label>
           <Button type="submit" size="lg" className="h-auto py-3 sm:h-auto">
-            Find a pro
+            Search
           </Button>
         </form>
 

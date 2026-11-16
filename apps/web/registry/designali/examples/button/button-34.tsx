@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { CheckIcon, ShoppingCartIcon } from "lucide-react"
+import {
+  Check as CheckIcon,
+  ShoppingCart as ShoppingCartIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Spinner } from "@workspace/ui/components/spinner"
@@ -17,7 +20,7 @@ export default function AddToCartButton() {
   return (
     <div className="flex w-full max-w-xs items-center justify-between gap-3 border p-3">
       <div className="flex flex-col">
-        <span className="text-sm font-medium">Linen tote bag</span>
+        <span className="text-sm font-medium">Design agency template</span>
         <span className="text-sm text-muted-foreground">$38.00</span>
       </div>
       <Button

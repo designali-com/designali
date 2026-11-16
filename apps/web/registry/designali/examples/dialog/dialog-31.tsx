@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { CircleAlertIcon } from "lucide-react"
+import {
+  CircleAlert as CircleAlertIcon,
+} from "@designali/icons"
 
 import {
   Alert,
@@ -21,7 +23,7 @@ import {
 import { Textarea } from "@workspace/ui/components/textarea"
 
 const initial =
-  "Launch the spring collection with a two-week early access window for members."
+  "Launch the new Designali templates with a two-week early access window for Pro members."
 
 export default function UnsavedChangesGuardDialog() {
   const [open, setOpen] = React.useState(false)

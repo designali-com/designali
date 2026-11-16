@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { ArrowUpIcon, CheckIcon } from "lucide-react"
+import {
+  ArrowUp as ArrowUpIcon,
+  Check as CheckIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Input } from "@workspace/ui/components/input"
@@ -13,12 +16,12 @@ import {
 
 const thread = [
   {
-    author: "Maya Chen",
+    author: "Maya",
     body: "Can this headline be one line on mobile?",
     time: "10:24",
   },
   {
-    author: "Leo Varga",
+    author: "Leo",
     body: "Trimmed it to 32 characters, check now.",
     time: "10:31",
   },
@@ -44,7 +47,7 @@ export default function CommentPinPopover() {
             />
           }
         >
-          MC
+          M
         </PopoverTrigger>
         <PopoverContent side="right" align="start" className="w-64">
           <div className="flex flex-col gap-2.5">

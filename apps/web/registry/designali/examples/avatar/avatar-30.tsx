@@ -1,4 +1,7 @@
-import { CameraIcon, UploadIcon } from "lucide-react"
+import {
+  Camera as CameraIcon,
+  Upload as UploadIcon,
+} from "@designali/icons"
 
 import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
 import { Button } from "@workspace/ui/components/button"
@@ -8,7 +11,7 @@ export default function ProfilePhotoSettings() {
     <div className="flex w-full max-w-md flex-wrap items-center gap-4 border p-4">
       <div className="relative">
         <Avatar className="size-16">
-          <AvatarFallback className="text-lg font-medium">LM</AvatarFallback>
+          <AvatarFallback className="text-lg font-medium">AI</AvatarFallback>
         </Avatar>
         <Button
           size="icon-xs"

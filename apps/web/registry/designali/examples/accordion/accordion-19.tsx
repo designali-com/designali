@@ -1,4 +1,7 @@
-import { ChevronDownIcon, PackageIcon } from "lucide-react"
+import {
+  ChevronDown as ChevronDownIcon,
+  Package as PackageIcon,
+} from "@designali/icons"
 
 import {
   Accordion,
@@ -13,29 +16,29 @@ const orders = [
   {
     value: "48213",
     date: "Nov 9",
-    status: "Shipped",
+    status: "Downloaded",
     total: 132.5,
-    items: ["Ceramic pour-over set", "Filter papers x100"],
+    items: ["Design Agency template", "Landing page blocks"],
   },
   {
     value: "47990",
     date: "Oct 30",
-    status: "Delivered",
+    status: "Updated",
     total: 58.0,
-    items: ["Oak serving board"],
+    items: ["Portfolio Simple template"],
   },
   {
     value: "47512",
     date: "Oct 2",
     status: "Refunded",
     total: 24.0,
-    items: ["Stoneware mug (Sage)"],
+    items: ["Designali icon pack"],
   },
 ]
 
 const statusVariant: Record<string, "default" | "secondary" | "destructive"> = {
-  Shipped: "default",
-  Delivered: "secondary",
+  Downloaded: "default",
+  Updated: "secondary",
   Refunded: "destructive",
 }
 

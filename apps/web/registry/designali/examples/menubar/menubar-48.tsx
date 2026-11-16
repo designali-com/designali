@@ -1,7 +1,11 @@
 "use client"
 
 import * as React from "react"
-import { MailIcon, ShieldIcon, UserMinusIcon } from "lucide-react"
+import {
+  Mail as MailIcon,
+  Shield as ShieldIcon,
+  UserMinus as UserMinusIcon,
+} from "@designali/icons"
 
 import { Checkbox } from "@workspace/ui/components/checkbox"
 import {
@@ -18,9 +22,9 @@ import {
 } from "@workspace/ui/components/menubar"
 
 const users = [
-  { id: 1, name: "Hana Ito", role: "Admin" },
-  { id: 2, name: "Diego Mora", role: "Editor" },
-  { id: 3, name: "Ines Duarte", role: "Viewer" },
+  { id: 1, name: "Ali Imam", role: "Admin" },
+  { id: 2, name: "Studio Designer", role: "Editor" },
+  { id: 3, name: "Client Reviewer", role: "Viewer" },
 ]
 
 export default function TableBulkActionsMenubar() {

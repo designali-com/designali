@@ -4,23 +4,23 @@ import { cn } from "@workspace/ui/lib/utils"
 const invoices = [
   {
     id: "INV-1042",
-    client: "Northlake Dental",
+    client: "Brand identity project",
     amount: "$2,400.00",
     status: "Paid",
   },
   {
     id: "INV-1043",
-    client: "Fern & Finch",
+    client: "Next.js website build",
     amount: "$860.00",
     status: "Overdue",
   },
   {
     id: "INV-1044",
-    client: "Orbit Fitness",
+    client: "UI/UX design sprint",
     amount: "$1,125.50",
     status: "Scheduled",
   },
-  { id: "INV-1045", client: "Quill Press", amount: "$340.00", status: "Draft" },
+  { id: "INV-1045", client: "3D & motion assets", amount: "$340.00", status: "Draft" },
 ]
 
 export default function InvoiceStatusList() {

@@ -19,7 +19,7 @@ export default function InlineLabelColumnForm() {
         </FieldLabel>
         <Input
           id="sku-code"
-          defaultValue="TEE-ORG-M-BLK"
+          defaultValue="DSG-TPL-PRO-01"
           className="font-mono"
         />
       </Field>

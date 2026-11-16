@@ -1,4 +1,6 @@
-import { ChevronDownIcon } from "lucide-react"
+import {
+  ChevronDown as ChevronDownIcon,
+} from "@designali/icons"
 
 import {
   Accordion,
@@ -11,7 +13,7 @@ import { cn } from "@workspace/ui/lib/utils"
 const incidents = [
   {
     value: "i1",
-    title: "Elevated API error rates",
+    title: "designali.com downloads slow",
     date: "Nov 14",
     severity: "major",
     updates: [
@@ -28,20 +30,20 @@ const incidents = [
       {
         time: "13:58",
         label: "Investigating",
-        text: "We are seeing 5xx errors on the EU cluster.",
+        text: "Template downloads are timing out for some users.",
       },
     ],
   },
   {
     value: "i2",
-    title: "Delayed webhook delivery",
+    title: "Delayed order emails",
     date: "Nov 3",
     severity: "minor",
     updates: [
       {
         time: "09:40",
         label: "Resolved",
-        text: "The delivery backlog has been cleared.",
+        text: "All order confirmation emails have been sent.",
       },
       {
         time: "09:05",

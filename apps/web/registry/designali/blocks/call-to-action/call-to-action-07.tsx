@@ -1,4 +1,6 @@
-import { ArrowRight } from "lucide-react"
+import {
+  ArrowRight,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 
@@ -8,7 +10,7 @@ const stats = [
   { value: "48h", label: "Typical first draft" },
 ]
 
-const initials = ["AK", "MR", "JL", "SN", "TO"]
+const initials = ["AI", "DA", "DS", "DV", "CL"]
 
 export default function CallToAction07() {
   return (
@@ -38,7 +40,7 @@ export default function CallToAction07() {
             ))}
           </div>
           <h2 className="max-w-2xl text-3xl font-medium tracking-tight md:text-5xl">
-            Join the studios already designing with us.
+            Join the founders and teams already designing with Designali.
           </h2>
           <Button size="lg" nativeButton={false} render={<a href="#" />}>
             Get started today

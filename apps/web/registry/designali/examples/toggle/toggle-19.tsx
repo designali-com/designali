@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { ListOrderedIcon, WrapTextIcon } from "lucide-react"
+import {
+  ListOrdered as ListOrderedIcon,
+  TextWrap as WrapTextIcon,
+} from "@designali/icons"
 
 import { Toggle } from "@workspace/ui/components/toggle"
 import { cn } from "@workspace/ui/lib/utils"

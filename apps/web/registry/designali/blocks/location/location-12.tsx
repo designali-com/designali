@@ -5,11 +5,11 @@ import { useState } from "react"
 import { cn } from "@workspace/ui/lib/utils"
 
 const zones = [
-  { id: 1, name: "Main stage", detail: "Keynotes, 1,200 seats", x: 20, y: 20, w: 260, h: 150, tone: "fill-violet-200 dark:fill-violet-900/50" },
-  { id: 2, name: "Workshop rooms A-D", detail: "Hands-on sessions, 40 seats each", x: 300, y: 20, w: 180, h: 150, tone: "fill-sky-200 dark:fill-sky-900/50" },
-  { id: 3, name: "Expo hall", detail: "38 partner booths", x: 20, y: 190, w: 300, h: 130, tone: "fill-amber-200 dark:fill-amber-900/50" },
-  { id: 4, name: "Food court", detail: "Lunch served 12:00-14:00", x: 340, y: 190, w: 140, h: 130, tone: "fill-emerald-200 dark:fill-emerald-900/50" },
-  { id: 5, name: "Registration", detail: "Badges from 08:00", x: 200, y: 340, w: 120, h: 50, tone: "fill-rose-200 dark:fill-rose-900/50" },
+  { id: 1, name: "Main stage", detail: "Keynotes with Ali Imam", x: 20, y: 20, w: 260, h: 150, tone: "fill-violet-200 dark:fill-violet-900/50" },
+  { id: 2, name: "Workshop rooms A-D", detail: "Hands-on Figma and Next.js sessions", x: 300, y: 20, w: 180, h: 150, tone: "fill-sky-200 dark:fill-sky-900/50" },
+  { id: 3, name: "Showcase", detail: "Designali templates, blocks and icons", x: 20, y: 190, w: 300, h: 130, tone: "fill-amber-200 dark:fill-amber-900/50" },
+  { id: 4, name: "Lounge", detail: "Portfolio reviews 12:00-14:00", x: 340, y: 190, w: 140, h: 130, tone: "fill-emerald-200 dark:fill-emerald-900/50" },
+  { id: 5, name: "Registration", detail: "Sign in from 08:00", x: 200, y: 340, w: 120, h: 50, tone: "fill-rose-200 dark:fill-rose-900/50" },
 ]
 
 export default function Location12() {
@@ -20,16 +20,16 @@ export default function Location12() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="max-w-2xl">
           <p className="text-xs font-medium tracking-widest text-muted-foreground uppercase">
-            Venue map &middot; Level 1
+            Designali Live &middot; Virtual venue
           </p>
           <h2 className="mt-3 text-4xl font-semibold tracking-tight md:text-5xl">
-            Finding your way around Forge Summit
+            Finding your way around Designali Live
           </h2>
         </div>
 
         <div className="mt-12 grid gap-8 lg:grid-cols-[1.6fr_1fr]">
           <div className="border bg-background p-4 md:p-6">
-            <svg viewBox="0 0 500 410" className="h-auto w-full" role="img" aria-label="Venue floor plan">
+            <svg viewBox="0 0 500 410" className="h-auto w-full" role="img" aria-label="Designali Live virtual venue plan">
               <rect x="10" y="10" width="480" height="390" className="fill-none stroke-foreground/40" strokeWidth="2" />
               {zones.map((zone) => (
                 <g

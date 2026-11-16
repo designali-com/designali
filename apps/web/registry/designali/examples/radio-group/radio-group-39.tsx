@@ -1,4 +1,9 @@
-import { BookOpenIcon, FileIcon, KanbanIcon, MilestoneIcon } from "lucide-react"
+import {
+  BookOpen as BookOpenIcon,
+  File as FileIcon,
+  Kanban as KanbanIcon,
+  Milestone as MilestoneIcon,
+} from "@designali/icons"
 
 import {
   RadioGroup,

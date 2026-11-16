@@ -1,11 +1,11 @@
 import {
-  ChevronDownIcon,
-  FlaskConicalIcon,
-  GitBranchIcon,
-  GlobeIcon,
-  RocketIcon,
-  RotateCcwIcon,
-} from "lucide-react"
+  ChevronDown as ChevronDownIcon,
+  FlaskConical as FlaskConicalIcon,
+  GitBranch as GitBranchIcon,
+  Globe as GlobeIcon,
+  Rocket as RocketIcon,
+  RotateCcw as RotateCcwIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { ButtonGroup } from "@workspace/ui/components/button-group"
@@ -25,7 +25,7 @@ export default function SplitDeployButton() {
     <ButtonGroup>
       <Button>
         <RocketIcon data-icon="inline-start" />
-        Deploy to production
+        Deploy designali.com
       </Button>
       <DropdownMenu>
         <DropdownMenuTrigger

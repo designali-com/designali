@@ -1,7 +1,12 @@
 "use client"
 
 import * as React from "react"
-import { ColumnsIcon, CopyIcon, TagIcon, TrashIcon } from "lucide-react"
+import {
+  Columns2 as ColumnsIcon,
+  Copy as CopyIcon,
+  Tag as TagIcon,
+  Trash as TrashIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import {
@@ -43,7 +48,7 @@ export default function KanbanCardMenu() {
             WEB-219
           </span>
           <span className="text-sm">
-            Fix coupon field losing focus on mobile Safari
+            Fix pricing block spacing on mobile Safari
           </span>
           <div className="flex flex-wrap gap-1">
             {labels.frontend ? (

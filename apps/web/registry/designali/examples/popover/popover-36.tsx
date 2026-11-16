@@ -1,7 +1,11 @@
 "use client"
 
 import * as React from "react"
-import { CheckIcon, ChevronsUpDownIcon, PlusIcon } from "lucide-react"
+import {
+  Check as CheckIcon,
+  ChevronsUpDown as ChevronsUpDownIcon,
+  Plus as PlusIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -15,19 +19,19 @@ import { cn } from "@workspace/ui/lib/utils"
 const workspaces = [
   {
     id: "acme",
-    name: "Northwind Studio",
+    name: "Designali Studio",
     plan: "Business",
     tone: "from-indigo-400 to-sky-400",
   },
   {
     id: "side",
-    name: "Weekend Builds",
+    name: "Dalim Works",
     plan: "Free",
     tone: "from-amber-400 to-rose-400",
   },
   {
     id: "client",
-    name: "Harborline Co-op",
+    name: "Client projects",
     plan: "Pro",
     tone: "from-emerald-400 to-teal-400",
   },

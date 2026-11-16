@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { CircleCheckIcon, MessageSquareIcon } from "lucide-react"
+import {
+  CircleCheck as CircleCheckIcon,
+  MessageSquare as MessageSquareIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Field, FieldLabel } from "@workspace/ui/components/field"
@@ -46,7 +49,7 @@ export default function FeedbackFormSheet() {
             <SheetHeader>
               <SheetTitle>How was your experience?</SheetTitle>
               <SheetDescription>
-                Rate the new reporting dashboard.
+                Rate the new Designali blocks.
               </SheetDescription>
             </SheetHeader>
             <div className="flex flex-col gap-4 px-4">

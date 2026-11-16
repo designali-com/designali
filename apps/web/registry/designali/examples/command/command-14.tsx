@@ -1,11 +1,11 @@
 import {
-  CalendarClockIcon,
-  DatabaseIcon,
-  FileSpreadsheetIcon,
-  FileTextIcon,
-  LinkIcon,
-  SparklesIcon,
-} from "lucide-react"
+  CalendarClock as CalendarClockIcon,
+  Database as DatabaseIcon,
+  FileSpreadsheet as FileSpreadsheetIcon,
+  FileText as FileTextIcon,
+  Link as LinkIcon,
+  Sparkles as SparklesIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import { Button } from "@workspace/ui/components/button"
@@ -24,7 +24,7 @@ const actions = [
   { label: "Share public link", icon: LinkIcon, pro: false },
   { label: "Export as PDF report", icon: FileTextIcon, pro: true },
   { label: "Schedule email digest", icon: CalendarClockIcon, pro: true },
-  { label: "Sync to data warehouse", icon: DatabaseIcon, pro: true },
+  { label: "Sync to Figma", icon: DatabaseIcon, pro: true },
 ]
 
 export default function PlanGatedCommands() {

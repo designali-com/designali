@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { BookOpenIcon } from "lucide-react"
+import {
+  BookOpen as BookOpenIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import {
@@ -15,25 +17,25 @@ import {
 
 const articles = [
   {
-    title: "Authentication",
-    summary: "Sign users in with email links, passkeys, or SSO providers.",
+    title: "Authentication blocks",
+    summary: "Add sign-in pages to your Next.js app with Designali blocks.",
     section: "Guides",
   },
   {
-    title: "Webhooks",
+    title: "Icons",
     summary:
-      "Receive signed HTTP callbacks when events happen in your workspace.",
+      "Install @designali/icons and use 4000+ icons in React.",
     section: "Guides",
   },
   {
-    title: "Rate limits",
-    summary: "Each API key can make 600 requests per minute before throttling.",
+    title: "Registry",
+    summary: "Add Designali components to your project from the registry.",
     section: "Reference",
   },
   {
-    title: "Pagination",
+    title: "Theming",
     summary:
-      "List endpoints return cursors so you can page through large result sets.",
+      "Theme every block with semantic design tokens and Tailwind CSS.",
     section: "Reference",
   },
 ]

@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { PackageIcon } from "lucide-react"
+import {
+  Package as PackageIcon,
+} from "@designali/icons"
 
 import {
   Command,
@@ -14,14 +16,14 @@ import {
 import { Spinner } from "@workspace/ui/components/spinner"
 
 const catalog = [
-  "Wireless keyboard",
-  "Ergonomic mouse",
-  "USB-C dock",
-  "4K monitor arm",
-  "Noise-cancelling headset",
-  "Laptop stand",
-  "Webcam light",
-  "Desk mat",
+  "Portfolio template",
+  "Design agency template",
+  "Hero blocks",
+  "Pricing blocks",
+  "Icon pack",
+  "Logo library",
+  "iPhone mockup",
+  "Dot pattern",
 ]
 
 export default function AsyncSearchLoading() {
@@ -48,13 +50,13 @@ export default function AsyncSearchLoading() {
       <CommandInput
         value={query}
         onValueChange={onQueryChange}
-        placeholder="Search inventory..."
+        placeholder="Search Designali products..."
       />
       <CommandList>
         {loading ? (
           <div className="flex items-center justify-center gap-2 py-6 text-xs text-muted-foreground">
             <Spinner />
-            Searching inventory...
+            Searching products...
           </div>
         ) : (
           <>

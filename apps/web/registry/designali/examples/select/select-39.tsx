@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { DownloadIcon } from "lucide-react"
+import {
+  Download as DownloadIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {

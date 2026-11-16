@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { WifiIcon, WifiOffIcon } from "lucide-react"
+import {
+  Wifi as WifiIcon,
+  WifiOff as WifiOffIcon,
+} from "@designali/icons"
 
 import { Label } from "@workspace/ui/components/label"
 import { Switch } from "@workspace/ui/components/switch"

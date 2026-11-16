@@ -1,4 +1,6 @@
-import { BellIcon } from "lucide-react"
+import {
+  Bell as BellIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Checkbox } from "@workspace/ui/components/checkbox"
@@ -21,7 +23,7 @@ import {
   TableRow,
 } from "@workspace/ui/components/table"
 
-const events = ["New comment", "Mention", "Task assigned", "Weekly report"]
+const events = ["New comment", "Mention", "Project update", "New templates"]
 const channels = ["Email", "Push", "SMS"]
 
 export default function NotificationChannelsDialog() {

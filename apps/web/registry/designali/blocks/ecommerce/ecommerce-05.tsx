@@ -1,18 +1,24 @@
-import { Leaf, Package, RefreshCw, ShieldCheck, Star } from "lucide-react"
+import {
+  Download,
+  RefreshCw,
+  ShieldCheck,
+  Star,
+  Zap,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 
 const perks = [
-  { icon: Package, title: "Free shipping", text: "On every order over $75, worldwide." },
-  { icon: RefreshCw, title: "60-day returns", text: "Changed your mind? Send it back free." },
-  { icon: ShieldCheck, title: "Two-year warranty", text: "Repairs or replacements, no questions." },
-  { icon: Leaf, title: "Carbon neutral", text: "Offset deliveries and recycled packaging." },
+  { icon: Download, title: "Instant download", text: "Files in your inbox the moment you check out." },
+  { icon: RefreshCw, title: "Free updates", text: "Every new block and icon for 12 months." },
+  { icon: ShieldCheck, title: "Commercial license", text: "Use it in client work, no questions." },
+  { icon: Zap, title: "Built to ship", text: "Next.js, React, TypeScript and Tailwind CSS." },
 ]
 
 const bundle = [
-  { name: "Ceramic Planter, Large", price: 64 },
-  { name: "Watering Can, Brass", price: 48 },
-  { name: "Plant Mister", price: 22 },
+  { name: "Design Agency Template", price: 79 },
+  { name: "Designali Icons Pro", price: 39 },
+  { name: "Vectors Starter Pack", price: 19 },
 ]
 
 export default function Ecommerce05() {
@@ -33,7 +39,7 @@ export default function Ecommerce05() {
             <p className="text-xs tracking-widest text-muted-foreground uppercase">
               Bundle
             </p>
-            <h2 className="mt-2 text-3xl font-medium tracking-tight">The Plant Care Set</h2>
+            <h2 className="mt-2 text-3xl font-medium tracking-tight">The Studio Launch Set</h2>
             <p className="mt-2 flex items-center gap-1 text-sm text-muted-foreground">
               <Star className="size-4 fill-current text-amber-500" />
               4.9 from 1,204 reviews

@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { CookieIcon } from "lucide-react"
+import {
+  Cookie as CookieIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Toaster, createToastManager } from "@workspace/ui/components/toast"

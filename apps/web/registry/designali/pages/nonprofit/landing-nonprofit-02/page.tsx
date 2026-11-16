@@ -8,116 +8,116 @@ import {
   Plus,
   Repeat,
   Shield,
-} from "lucide-react"
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 
-const navLinks = ["Our work", "Impact", "Stories", "Get involved", "About"]
+const navLinks = ["Resources", "Impact", "Stories", "Contribute", "About"]
 
 const features = [
   {
     icon: ChartPie,
-    title: "87% to programmes",
+    title: "Free to start",
     description:
-      "Eighty-seven cents of every dollar funds frontline work. Our accounts are audited and public.",
+      "Hundreds of blocks, UI examples, icons and vectors are free to use, with no credit card and no sign-up wall.",
   },
   {
     icon: FileCheck,
-    title: "Independently evaluated",
+    title: "Production-ready code",
     description:
-      "Third-party evaluators measure outcomes every year, and we publish what did not work too.",
+      "Every resource is built with Next.js, React, TypeScript and Tailwind CSS, so it drops straight into real projects.",
   },
   {
     icon: Repeat,
     title: "Built to last",
     description:
-      "Programmes are designed to become locally sustainable within five to seven years.",
+      "Resources follow one design system with semantic tokens, so they stay consistent as the library grows.",
   },
   {
     icon: Mail,
     title: "Updates you can see",
     description:
-      "Donors receive quarterly reports with photos, stories and numbers from the projects they fund.",
+      "New blocks, pages and icons ship regularly, with every release listed on designali.com.",
   },
   {
     icon: Shield,
-    title: "Safeguarding first",
+    title: "Clear licensing",
     description:
-      "Strict safeguarding and anti-corruption policies protect the people we work with.",
+      "Simple terms explain how free resources can be used, shared and credited in your work.",
   },
 ]
 
 const stats = [
-  { value: "87%", label: "Spent on programmes" },
-  { value: "14", label: "Countries" },
-  { value: "120", label: "Local partners" },
-  { value: "32,000", label: "Monthly donors" },
+  { value: "100%", label: "Free to start" },
+  { value: "4000+", label: "Resource libraries" },
+  { value: "9", label: "Icons in @designali/icons" },
+  { value: "12K+", label: "Pro members" },
 ]
 
 const steps = [
   {
-    title: "You give",
+    title: "You browse",
     description:
-      "Donate once or monthly. Every gift is processed securely and receipted instantly.",
+      "Explore blocks, pages, UI examples, icons and vectors on designali.com, all free to preview.",
   },
   {
-    title: "We fund local partners",
+    title: "You copy or install",
     description:
-      "Funds go to vetted community organisations who know the needs best.",
+      "Copy the code or install the packages, and drop them into your Next.js project.",
   },
   {
-    title: "Programmes deliver",
+    title: "You build faster",
     description:
-      "Clean water, education and health services reach families on the ground.",
+      "Ship landing pages, dashboards and apps in days instead of weeks.",
   },
   {
-    title: "You see the results",
+    title: "You share back",
     description:
-      "Quarterly reports show exactly what your support made possible.",
+      "Send feedback or show what you built, and help shape the next release.",
   },
 ]
 
 const showcase = [
   {
-    name: "Clean Water Access",
-    meta: "Wells and filtration in rural East Africa",
-    tag: "Water",
-    price: "412 wells",
+    name: "Free Blocks",
+    meta: "Heroes, pricing, footers and more",
+    tag: "Blocks",
+    price: "460+ blocks",
     tile: "bg-gradient-to-br from-violet-200 via-purple-300 to-fuchsia-400 dark:from-violet-700 dark:via-purple-800 dark:to-fuchsia-900",
   },
   {
-    name: "Girls in School",
-    meta: "Scholarships and mentoring",
-    tag: "Education",
-    price: "9,800 students",
+    name: "Landing Pages",
+    meta: "Full pages for every industry",
+    tag: "Pages",
+    price: "240+ pages",
     tile: "bg-gradient-to-br from-emerald-200 via-green-300 to-lime-300 dark:from-emerald-700 dark:via-green-800 dark:to-lime-900",
   },
   {
-    name: "Community Health Workers",
-    meta: "Trained local health teams",
-    tag: "Health",
-    price: "1,200 trained",
+    name: "UI Examples",
+    meta: "Dashboards, forms and app screens",
+    tag: "UI",
+    price: "2300+ examples",
     tile: "bg-gradient-to-br from-stone-200 via-neutral-300 to-zinc-400 dark:from-stone-700 dark:via-neutral-800 dark:to-zinc-900",
   },
   {
-    name: "Emergency Response",
-    meta: "Rapid relief after disasters",
-    tag: "Relief",
-    price: "72 hrs",
+    name: "Icons",
+    meta: "@designali/icons for React",
+    tag: "Icons",
+    price: "4000+ icons",
     tile: "bg-gradient-to-br from-rose-200 via-pink-300 to-purple-300 dark:from-rose-700 dark:via-pink-800 dark:to-purple-900",
   },
   {
-    name: "Food Security Hubs",
-    meta: "Local growing and food banks",
-    tag: "Food",
-    price: "36 hubs",
+    name: "Logos",
+    meta: "@designali/logos brand marks",
+    tag: "Logos",
+    price: "Brand marks",
     tile: "bg-gradient-to-br from-blue-200 via-indigo-300 to-violet-400 dark:from-blue-700 dark:via-indigo-800 dark:to-violet-900",
   },
   {
-    name: "Climate Resilience",
-    meta: "Drought-proof farming practices",
-    tag: "Climate",
-    price: "14,000 farmers",
+    name: "Vectors",
+    meta: "@designali/vectors shapes",
+    tag: "Vectors",
+    price: "Abstract shapes",
     tile: "bg-gradient-to-br from-yellow-100 via-amber-200 to-orange-300 dark:from-yellow-700 dark:via-amber-800 dark:to-orange-900",
   },
 ]
@@ -125,103 +125,103 @@ const showcase = [
 const testimonials = [
   {
     quote:
-      "The mentoring programme gave me the confidence to apply for university. I am the first in my family to go.",
-    name: "Ahmed Siddiqui",
-    role: "Programme graduate",
+      "The free icons saved our tiny team hours on every screen. Installing the package took one command.",
+    name: "Ahmed",
+    role: "Indie developer",
   },
   {
     quote:
-      "I have given monthly for six years. The quarterly updates make me feel like part of the work.",
-    name: "Rebecca Lawson",
-    role: "Monthly donor",
+      "I started with the free blocks and went Pro a year later. The updates make me feel part of the project.",
+    name: "Rebecca",
+    role: "designali.com Pro member",
   },
   {
     quote:
-      "They listened to what our village needed, not what looked good in a brochure. That is rare.",
-    name: "Luis Ortega",
-    role: "Partner organisation, Guatemala",
+      "The free blocks gave our small nonprofit a website that looks professional. That is rare for free resources.",
+    name: "Luis",
+    role: "Volunteer web designer",
   },
 ]
 
 const tiers = [
   {
     name: "Supporter",
-    price: "$15",
+    price: "$5",
     period: "/month",
-    description: "Provides clean water for one family each month.",
+    description: "Help keep free resources free for everyone.",
     features: [
-      "Quarterly impact reports",
-      "Annual tax receipt",
+      "Release update emails",
+      "Early access to new blocks",
       "Supporter newsletter",
       "Cancel anytime",
     ],
-    cta: "Give $15 monthly",
+    cta: "Support monthly",
   },
   {
-    name: "Champion",
-    price: "$40",
+    name: "Pro",
+    price: "$12",
     period: "/month",
-    description: "Funds a girl's school fees and supplies.",
+    description: "Unlock every template, block and UI example.",
     features: [
       "Everything in Supporter",
-      "Letters from programmes",
-      "Invitation to donor calls",
-      "Annual field report",
-      "Champion pin",
+      "All Pro templates and blocks",
+      "Pro icons and vectors",
+      "Commercial license",
+      "Priority feedback",
     ],
-    cta: "Become a Champion",
+    cta: "Go Pro",
   },
   {
-    name: "Partner",
-    price: "$100",
+    name: "Studio",
+    price: "$49",
     period: "/month",
-    description: "Trains and equips a community health worker.",
+    description: "For teams and agencies building with Designali.",
     features: [
-      "Everything in Champion",
-      "Named programme updates",
-      "Site visit opportunities",
-      "Direct contact with our team",
-      "Recognition in annual report",
+      "Everything in Pro",
+      "Team seats",
+      "Custom blocks on request",
+      "Direct contact with Ali Imam",
+      "Credit on designali.com",
     ],
-    cta: "Become a Partner",
+    cta: "Become a Studio partner",
   },
 ]
 
 const faqs = [
   {
-    q: "How much goes to programmes?",
-    a: "87% funds programmes directly, 9% goes to fundraising and 4% to administration. Our audited accounts are published every year.",
+    q: "Where does support go?",
+    a: "Supporter and Pro plans fund new blocks, pages, icons and documentation, so the free library keeps growing.",
   },
   {
-    q: "Can I choose where my money goes?",
-    a: "Yes. You can restrict your gift to a specific programme, or give unrestricted to let us direct funds where the need is greatest.",
+    q: "Can I request a resource?",
+    a: "Yes. Send a request to hello@designali.com or share it on X, and popular requests are added to the roadmap.",
   },
   {
-    q: "How do I cancel a monthly gift?",
-    a: "Email or call our supporter team, or manage it yourself in your donor account. There is never any pressure to continue.",
+    q: "How do I cancel a plan?",
+    a: "Manage your plan from your designali.com account, or email billing@designali.com. There is never any pressure to continue.",
   },
   {
-    q: "Can my company match my donation?",
-    a: "Many employers match gifts. Search for your company on our matching page or ask your HR team.",
+    q: "Can my team use Designali together?",
+    a: "Yes. The Studio plan adds team seats, or contact us for a custom arrangement for your agency.",
   },
   {
-    q: "Can I volunteer?",
-    a: "Yes. We have local volunteering roles, skilled remote roles and fundraising opportunities. Visit the get involved page.",
+    q: "How can I contribute?",
+    a: "Share feedback, request blocks, or show what you built with Designali on X and Instagram. Find us on 21st.dev too.",
   },
 ]
 
 const footer = [
   {
-    title: "Our work",
-    links: ["Programmes", "Where we work", "Impact reports", "Stories"],
+    title: "Resources",
+    links: ["Resources", "Blocks", "Icons", "Stories"],
   },
   {
-    title: "Get involved",
-    links: ["Donate", "Fundraise", "Volunteer", "Corporate partners"],
+    title: "Contribute",
+    links: ["Pro", "Templates", "Contribute", "Studio work"],
   },
   {
     title: "About",
-    links: ["Our team", "Accounts", "Safeguarding", "Contact"],
+    links: ["About Ali", "Licensing", "Docs", "Contact"],
   },
 ]
 
@@ -237,7 +237,7 @@ export default function LandingNonprofit02() {
             <span className="flex size-7 items-center justify-center rounded-md bg-violet-600 text-white text-sm">
               B
             </span>
-            <span className="font-serif text-lg font-normal">Brightpath</span>
+            <span className="font-serif text-lg font-normal">designali</span>
           </a>
           <nav className="hidden items-center gap-7 text-sm md:flex">
             {navLinks.map((link) => (
@@ -261,7 +261,7 @@ export default function LandingNonprofit02() {
               Volunteer
             </Button>
             <Button size="sm" nativeButton={false} render={<a href="#" />}>
-              Sponsor a student
+              Explore free UI
             </Button>
           </div>
         </div>
@@ -269,27 +269,27 @@ export default function LandingNonprofit02() {
       <section className="border-b">
         <div className="mx-auto max-w-7xl px-6 pt-16 pb-12 md:pt-28">
           <div className="flex items-center justify-between border-b pb-4 text-xs tracking-widest text-muted-foreground uppercase">
-            <span>Education for every girl</span>
+            <span>Free UI for every learner</span>
             <span className="hidden sm:inline">
-              Every girl, every classroom.
+              Every learner, every project.
             </span>
           </div>
           <h1 className="mt-12 max-w-5xl text-4xl leading-[1.05] font-semibold tracking-tight text-balance sm:text-5xl md:text-8xl font-serif font-normal">
-            {"When girls learn, "}
+            {"When designers learn, "}
             <span className="text-violet-600 dark:text-violet-400">
-              communities rise
+              products rise
             </span>
           </h1>
           <div className="mt-12 grid gap-8 md:grid-cols-2 md:items-end">
             <p className="max-w-lg text-lg leading-8 text-muted-foreground">
-              Brightpath funds scholarships, mentors and safe transport so girls
-              in rural communities can finish secondary school and go on to
+              designali shares free UI examples, blocks and docs so students and
+              self-taught designers can learn real patterns and go on to
               lead.
             </p>
             <div className="md:justify-self-end">
               <div className="flex flex-wrap gap-3 ">
                 <Button size="lg" nativeButton={false} render={<a href="#" />}>
-                  Sponsor a student
+                  Explore free UI
                   <ArrowRight />
                 </Button>
                 <Button
@@ -298,7 +298,7 @@ export default function LandingNonprofit02() {
                   nativeButton={false}
                   render={<a href="#" />}
                 >
-                  Read their stories
+                  See what people built
                 </Button>
               </div>
             </div>
@@ -330,14 +330,14 @@ export default function LandingNonprofit02() {
           <div className="lg:sticky lg:top-24 lg:self-start">
             <div className="max-w-2xl">
               <p className="text-sm font-medium text-violet-600 dark:text-violet-400">
-                How we work
+                How it works
               </p>
               <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl font-serif font-normal mt-3">
-                Every gift goes further with us
+                Every resource goes further with you
               </h2>
               <p className="mt-4 text-lg leading-8 text-muted-foreground">
-                We partner with local organisations, measure everything and
-                publish the results, so you always know what your support
+                We design, build and document every resource, then share it
+                openly, so you always know what you can create and what we have
                 achieved.
               </p>
             </div>
@@ -367,11 +367,11 @@ export default function LandingNonprofit02() {
           <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
             <div className="max-w-2xl">
               <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl font-serif font-normal">
-                Our programmes
+                Free resource libraries
               </h2>
               <p className="mt-4 text-lg leading-8 text-muted-foreground">
-                Long-term programmes led by the communities they serve, funded
-                by people like you.
+                Libraries designed and built by Ali Imam, shaped by feedback
+                from people like you.
               </p>
             </div>
             <Button
@@ -415,7 +415,7 @@ export default function LandingNonprofit02() {
       <section className="border-b">
         <div className="mx-auto max-w-5xl px-6 py-20 text-center md:py-28">
           <p className="text-sm tracking-widest text-muted-foreground uppercase">
-            Voices from the communities we serve
+            Voices from the Designali community
           </p>
           {testimonials.slice(0, 1).map((t) => (
             <figure key={t.name} className="mt-10">
@@ -449,7 +449,7 @@ export default function LandingNonprofit02() {
         <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
           <div className="max-w-2xl">
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl font-serif font-normal">
-              Where your donation goes
+              From browse to build
             </h2>
           </div>
           <ol className="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
@@ -474,11 +474,11 @@ export default function LandingNonprofit02() {
         <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl font-serif font-normal">
-              Choose your impact
+              Choose how to support
             </h2>
             <p className="mt-4 text-lg leading-8 text-muted-foreground">
-              Monthly gifts let us plan ahead and respond faster. Every donation
-              is tax deductible.
+              Supporter and Pro plans fund the free library and help it grow faster. Every plan
+              can be cancelled anytime.
             </p>
           </div>
           <div className="mx-auto mt-14 grid max-w-6xl items-start gap-6 lg:grid-cols-3">
@@ -532,7 +532,7 @@ export default function LandingNonprofit02() {
         <div className="mx-auto grid max-w-7xl gap-12 px-6 py-20 md:py-28 lg:grid-cols-[1fr_1.5fr]">
           <div className="lg:sticky lg:top-24 lg:self-start">
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl font-serif font-normal">
-              Giving questions
+              Common questions
             </h2>
             <p className="mt-4 text-muted-foreground">
               Still curious?{" "}
@@ -540,7 +540,7 @@ export default function LandingNonprofit02() {
                 href="#"
                 className="font-medium text-foreground underline underline-offset-4"
               >
-                Get in touch
+                Contact us
               </a>
               .
             </p>
@@ -564,10 +564,10 @@ export default function LandingNonprofit02() {
         <div className="mx-auto flex max-w-7xl flex-col gap-10 px-6 py-20 md:flex-row md:items-end md:justify-between md:py-28">
           <div className="max-w-2xl">
             <h2 className="text-4xl font-semibold tracking-tight text-balance md:text-6xl font-serif font-normal">
-              Keep a girl in school this year
+              Help keep learning resources free
             </h2>
             <p className="mt-5 text-lg text-background/65">
-              Your monthly gift covers fees, uniforms, books and a mentor.
+              Your support funds new examples, tutorials and docs.
             </p>
           </div>
           <div className="flex flex-wrap gap-3 ">
@@ -577,7 +577,7 @@ export default function LandingNonprofit02() {
               nativeButton={false}
               render={<a href="#" />}
             >
-              Sponsor a student
+              Explore free UI
               <ArrowRight />
             </Button>
             <Button
@@ -587,7 +587,7 @@ export default function LandingNonprofit02() {
               nativeButton={false}
               render={<a href="#" />}
             >
-              Read their stories
+              See what people built
             </Button>
           </div>
         </div>
@@ -602,10 +602,10 @@ export default function LandingNonprofit02() {
               <span className="flex size-7 items-center justify-center rounded-md bg-violet-600 text-white text-sm">
                 B
               </span>
-              <span className="font-serif text-lg font-normal">Brightpath</span>
+              <span className="font-serif text-lg font-normal">designali</span>
             </a>
             <p className="max-w-xs text-sm text-muted-foreground">
-              Every girl, every classroom.
+              Every learner, every project.
             </p>
           </div>
           {footer.map((column) => (
@@ -629,7 +629,7 @@ export default function LandingNonprofit02() {
         <div className="border-t ">
           <div className="mx-auto flex max-w-7xl flex-col justify-between gap-4 px-6 py-6 text-xs text-muted-foreground sm:flex-row">
             <span>
-              © {new Date().getFullYear()} Brightpath. All rights reserved.
+              © {new Date().getFullYear()} designali. All rights reserved.
             </span>
             <div className="flex gap-6">
               <a href="#" className="hover:text-foreground">

@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { BookmarkIcon } from "lucide-react"
+import {
+  Bookmark as BookmarkIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import { Button } from "@workspace/ui/components/button"
@@ -23,15 +25,15 @@ export default function JobPostingCard() {
     <Card className="w-full max-w-sm">
       <CardHeader className="grid-cols-[auto_1fr_auto] gap-x-3">
         <div className="row-span-2 flex size-10 items-center justify-center bg-foreground text-sm font-bold text-background">
-          Q
+          D
         </div>
-        <CardTitle>Senior Frontend Engineer</CardTitle>
-        <CardDescription>Quillstack · Berlin or remote (EU)</CardDescription>
+        <CardTitle>Landing page build</CardTitle>
+        <CardDescription>Designali studio brief · Remote</CardDescription>
         <CardAction className="col-start-3">
           <Button
             variant="ghost"
             size="icon-sm"
-            aria-label={saved ? "Unsave job" : "Save job"}
+            aria-label={saved ? "Unsave brief" : "Save brief"}
             aria-pressed={saved}
             onClick={() => setSaved(!saved)}
           >
@@ -41,22 +43,22 @@ export default function JobPostingCard() {
       </CardHeader>
       <CardContent className="grid gap-3">
         <div className="flex flex-wrap gap-1.5">
-          <Badge variant="secondary">Full-time</Badge>
+          <Badge variant="secondary">Project</Badge>
           <Badge variant="secondary">React</Badge>
           <Badge variant="secondary">TypeScript</Badge>
-          <Badge variant="outline">Visa support</Badge>
+          <Badge variant="outline">Next.js</Badge>
         </div>
         <p className="text-muted-foreground">
-          Own our editor surface end to end, from collaborative cursors to
-          performance budgets on low-end devices.
+          Take Designali blocks and templates from Figma to production-ready
+          code with Next.js and Tailwind CSS.
         </p>
       </CardContent>
       <CardFooter className="justify-between">
         <div className="grid">
-          <span className="font-medium">€85k - €105k</span>
+          <span className="font-medium">Fixed scope · 2 weeks</span>
           <span className="text-muted-foreground">Posted 3 days ago</span>
         </div>
-        <Button size="sm">Apply now</Button>
+        <Button size="sm">Send proposal</Button>
       </CardFooter>
     </Card>
   )

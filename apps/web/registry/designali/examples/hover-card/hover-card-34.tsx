@@ -1,4 +1,8 @@
-import { BugIcon, GraduationCapIcon, RocketIcon } from "lucide-react"
+import {
+  Bug as BugIcon,
+  GraduationCap as GraduationCapIcon,
+  Rocket as RocketIcon,
+} from "@designali/icons"
 
 import {
   HoverCard,
@@ -12,7 +16,7 @@ const badges = [
     name: "First Ship",
     icon: RocketIcon,
     earned: "Jan 4, 2025",
-    how: "Deployed your first project to production.",
+    how: "Shipped your first Designali template to production.",
     tone: "bg-violet-500/15 text-violet-600",
   },
   {

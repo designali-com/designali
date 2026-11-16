@@ -15,7 +15,7 @@ export default function CustomAvatarSizes() {
       {sizes.map((size) => (
         <div key={size.label} className="flex flex-col items-center gap-2">
           <Avatar className={size.className}>
-            <AvatarFallback className={size.text}>HW</AvatarFallback>
+            <AvatarFallback className={size.text}>AI</AvatarFallback>
           </Avatar>
           <span className="text-[10px] text-muted-foreground">
             {size.label}

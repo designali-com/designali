@@ -1,4 +1,8 @@
-import { PauseIcon, SkipBackIcon, SkipForwardIcon } from "lucide-react"
+import {
+  Pause as PauseIcon,
+  SkipBack as SkipBackIcon,
+  SkipForward as SkipForwardIcon,
+} from "@designali/icons"
 
 import { AspectRatio } from "@workspace/ui/components/aspect-ratio"
 import { Button } from "@workspace/ui/components/button"
@@ -32,9 +36,9 @@ export default function AlbumCoverPlayer() {
         </svg>
       </AspectRatio>
       <div className="mt-3">
-        <p className="truncate text-sm font-medium">Low Tide Radio</p>
+        <p className="truncate text-sm font-medium">Design se code tak</p>
         <p className="truncate text-xs text-muted-foreground">
-          The Marrow Sisters
+          Designali studio playlist
         </p>
       </div>
       <Progress value={38} className="mt-3" />

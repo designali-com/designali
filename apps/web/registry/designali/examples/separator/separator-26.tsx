@@ -1,10 +1,10 @@
 import {
-  CopyIcon,
-  FolderInputIcon,
-  PencilIcon,
-  Share2Icon,
-  Trash2Icon,
-} from "lucide-react"
+  Copy as CopyIcon,
+  FolderInput as FolderInputIcon,
+  Pencil as PencilIcon,
+  Share2 as Share2Icon,
+  Trash2 as Trash2Icon,
+} from "@designali/icons"
 
 import { Separator } from "@workspace/ui/components/separator"
 

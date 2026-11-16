@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { ClockIcon } from "lucide-react"
+import {
+  Clock as ClockIcon,
+} from "@designali/icons"
 
 import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
 import {
@@ -22,26 +24,26 @@ export default function ParentalControls() {
       <CardHeader>
         <div className="flex items-center gap-3">
           <Avatar>
-            <AvatarFallback>LM</AvatarFallback>
+            <AvatarFallback>DT</AvatarFallback>
           </Avatar>
           <div>
-            <CardTitle>Leo&apos;s profile</CardTitle>
-            <CardDescription>Age 9</CardDescription>
+            <CardTitle>Design Intern&apos;s profile</CardTitle>
+            <CardDescription>Designali studio</CardDescription>
           </div>
         </div>
       </CardHeader>
       <CardContent className="flex flex-col gap-4">
         <div className="flex items-center justify-between">
-          <Label htmlFor="pc-filter">Filter mature content</Label>
+          <Label htmlFor="pc-filter">Hide client-confidential projects</Label>
           <Switch id="pc-filter" defaultChecked />
         </div>
         <div className="flex items-center justify-between">
-          <Label htmlFor="pc-purchases">Require approval for purchases</Label>
+          <Label htmlFor="pc-purchases">Require approval for asset purchases</Label>
           <Switch id="pc-purchases" defaultChecked />
         </div>
         <div className="flex flex-col gap-2">
           <div className="flex items-center justify-between">
-            <Label htmlFor="pc-limit">Daily screen time limit</Label>
+            <Label htmlFor="pc-limit">Daily working hours limit</Label>
             <Switch
               id="pc-limit"
               checked={screenLimit}
@@ -50,8 +52,8 @@ export default function ParentalControls() {
           </div>
           {screenLimit && (
             <p className="flex items-center gap-1.5 text-xs text-muted-foreground">
-              <ClockIcon className="size-3" /> 2 hours on school days, 3 hours
-              on weekends
+              <ClockIcon className="size-3" /> 6 hours on weekdays, off on
+              weekends
             </p>
           )}
         </div>

@@ -1,11 +1,15 @@
 import {
-  ChevronsUpDownIcon,
-  LogOutIcon,
-  SettingsIcon,
-  UserIcon,
-} from "lucide-react"
+  ChevronsUpDown as ChevronsUpDownIcon,
+  LogOut as LogOutIcon,
+  Settings as SettingsIcon,
+  User as UserIcon,
+} from "@designali/icons"
 
-import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from "@workspace/ui/components/avatar"
 import { Button } from "@workspace/ui/components/button"
 import {
   DropdownMenu,
@@ -23,11 +27,12 @@ export default function AccountMenuButton() {
         render={<Button variant="ghost" className="h-auto gap-2 px-2 py-1.5" />}
       >
         <Avatar size="sm">
-          <AvatarFallback>DK</AvatarFallback>
+          <AvatarImage src="/ali.jpg" alt="Ali Imam" />
+          <AvatarFallback>AI</AvatarFallback>
         </Avatar>
         <span className="flex flex-col items-start leading-tight">
-          <span className="text-xs font-medium">Dara Kim</span>
-          <span className="text-[10px] text-muted-foreground">Admin</span>
+          <span className="text-xs font-medium">Ali Imam</span>
+          <span className="text-[10px] text-muted-foreground">Founder</span>
         </span>
         <ChevronsUpDownIcon
           data-icon="inline-end"

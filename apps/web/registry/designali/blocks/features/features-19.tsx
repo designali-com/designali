@@ -1,19 +1,23 @@
-import { BadgeCheck, Check, Shield } from "lucide-react"
+import {
+  BadgeCheck,
+  Check,
+  Shield,
+} from "@designali/icons"
 
-const badges = ["SOC 2 Type II", "ISO 27001", "GDPR", "HIPAA", "PCI DSS L1"]
+const badges = ["Accessible", "Responsive", "Dark mode", "TypeScript", "SEO-ready"]
 
 const groups = [
   {
-    title: "Infrastructure",
-    items: ["Isolated tenant databases", "Encrypted at rest with AES-256", "Daily backups, 35-day retention"],
+    title: "Design",
+    items: ["Brand identity and UI/UX", "Design systems in Figma", "Semantic design tokens"],
   },
   {
-    title: "Access",
-    items: ["SAML SSO and SCIM provisioning", "Granular role permissions", "Session and device controls"],
+    title: "Code",
+    items: ["Next.js, React and TypeScript", "Tailwind CSS components", "Clean, documented code"],
   },
   {
-    title: "Oversight",
-    items: ["Immutable audit log export", "Annual third-party pen tests", "Public trust center"],
+    title: "Launch",
+    items: ["Deployed on Vercel", "Optimised Core Web Vitals", "Support from Ali Imam"],
   },
 ]
 
@@ -25,12 +29,12 @@ export default function Features19() {
           <div className="max-w-xl">
             <Shield className="size-8 text-emerald-400" />
             <h2 className="mt-6 text-3xl font-medium tracking-tight md:text-5xl">
-              Enterprise-grade from the first seat.
+              Production-ready from the first block.
             </h2>
           </div>
           <p className="max-w-sm text-sm leading-7 text-neutral-400">
-            The controls your security team asks for are on every plan, not
-            locked behind a sales call.
+            Every Designali template and block meets the same quality bar,
+            on every plan.
           </p>
         </div>
         <div className="mt-12 flex flex-wrap gap-2">

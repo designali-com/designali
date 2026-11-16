@@ -21,14 +21,14 @@ export default function StartDateValidation() {
   const error = !date
     ? "Choose a start date."
     : isBefore(date, minDate)
-      ? "Contracts need at least 3 days' notice."
+      ? "Designali projects need at least 3 days' notice."
       : isWeekend(date)
         ? "Start dates must fall on a weekday."
         : null
 
   return (
     <Field data-invalid={error ? true : undefined} className="w-fit">
-      <FieldLabel>Contract start date</FieldLabel>
+      <FieldLabel>Project start date</FieldLabel>
       <Calendar
         mode="single"
         selected={date}

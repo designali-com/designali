@@ -1,4 +1,6 @@
-import { GitCommitHorizontalIcon } from "lucide-react"
+import {
+  GitCommitHorizontal as GitCommitHorizontalIcon,
+} from "@designali/icons"
 
 import {
   ResizableHandle,
@@ -9,10 +11,10 @@ import { Separator } from "@workspace/ui/components/separator"
 import { cn } from "@workspace/ui/lib/utils"
 
 const commits = [
-  { hash: "a3f9c21", message: "fix: debounce search input", author: "rk" },
-  { hash: "7b21e0d", message: "feat: add bulk archive", author: "mt" },
+  { hash: "a3f9c21", message: "fix: debounce icon search input", author: "rk" },
+  { hash: "7b21e0d", message: "feat: add pricing blocks", author: "mt" },
   { hash: "c04d8aa", message: "chore: bump dependencies", author: "rk" },
-  { hash: "19ee7f3", message: "docs: webhook retries", author: "sl" },
+  { hash: "19ee7f3", message: "docs: @designali/logos usage", author: "sl" },
 ]
 
 export default function CommitHistoryDetails() {
@@ -43,9 +45,9 @@ export default function CommitHistoryDetails() {
       <ResizableHandle withHandle />
       <ResizablePanel defaultSize="50%" minSize="30%">
         <div className="flex h-full flex-col gap-2 p-3 text-xs">
-          <span className="font-medium">feat: add bulk archive</span>
+          <span className="font-medium">feat: add pricing blocks</span>
           <span className="font-mono text-[11px] text-muted-foreground">
-            7b21e0d - Mira Toivonen - 2h ago
+            7b21e0d - Ali Imam - 2h ago
           </span>
           <Separator />
           <div className="flex flex-col gap-1 font-mono text-[11px]">

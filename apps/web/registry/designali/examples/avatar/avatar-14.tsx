@@ -2,9 +2,9 @@ import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
 import { cn } from "@workspace/ui/lib/utils"
 
 const messages = [
-  { from: "them", text: "Hey! Did the new build fix the export bug?" },
-  { from: "me", text: "Yes, CSV and PDF exports both work now." },
-  { from: "them", text: "Amazing, shipping it to beta testers tonight." },
+  { from: "them", text: "Hey Ali! Did the new build fix the icon export bug?" },
+  { from: "me", text: "Yes, SVG and React exports from @designali/icons both work now." },
+  { from: "them", text: "Amazing, shipping it to designali.com tonight." },
 ]
 
 export default function ChatConversationAvatars() {
@@ -21,7 +21,7 @@ export default function ChatConversationAvatars() {
               <AvatarFallback
                 className={cn(mine && "bg-primary text-primary-foreground")}
               >
-                {mine ? "ME" : "JR"}
+                {mine ? "ME" : "AI"}
               </AvatarFallback>
             </Avatar>
             <p

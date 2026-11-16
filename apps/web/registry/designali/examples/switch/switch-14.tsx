@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { ShieldCheckIcon } from "lucide-react"
+import {
+  ShieldCheck as ShieldCheckIcon,
+} from "@designali/icons"
 
 import {
   AlertDialog,

@@ -1,5 +1,5 @@
 import { AspectRatio } from "@workspace/ui/components/aspect-ratio"
-import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
+import { Avatar, AvatarFallback, AvatarImage } from "@workspace/ui/components/avatar"
 import { Button } from "@workspace/ui/components/button"
 
 export default function ProfileBannerAvatar() {
@@ -11,14 +11,15 @@ export default function ProfileBannerAvatar() {
       />
       <div className="flex items-end justify-between gap-3 px-4 pb-4">
         <Avatar className="-mt-8 size-16 ring-4 ring-background">
-          <AvatarFallback className="text-lg">OB</AvatarFallback>
+          <AvatarImage src="/ali.jpg" alt="Ali Imam" />
+          <AvatarFallback className="text-lg">AI</AvatarFallback>
         </Avatar>
         <Button size="sm">Follow</Button>
       </div>
       <div className="px-4 pb-4">
-        <p className="text-sm font-semibold">Oren Baxter</p>
+        <p className="text-sm font-semibold">Ali Imam</p>
         <p className="text-xs text-muted-foreground">
-          Product designer - Lisbon
+          Founder &amp; design engineer - Designali
         </p>
       </div>
     </div>

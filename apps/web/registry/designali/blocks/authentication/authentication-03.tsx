@@ -1,7 +1,9 @@
 "use client"
 
 import { useRef, useState } from "react"
-import { ShieldCheck } from "lucide-react"
+import {
+  ShieldCheck,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 
@@ -35,7 +37,7 @@ export default function Authentication03() {
         </span>
         <h2 className="mt-6 text-3xl font-semibold tracking-tight">Check your inbox</h2>
         <p className="mt-2 text-sm text-muted-foreground">
-          We sent a 6-digit code to <span className="text-foreground">m.chen@harbor.io</span>.
+          We sent a 6-digit code to <span className="text-foreground">you@designali.com</span>.
           It expires in 10 minutes.
         </p>
 

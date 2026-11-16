@@ -1,4 +1,6 @@
-import { UserPlusIcon } from "lucide-react"
+import {
+  UserPlus as UserPlusIcon,
+} from "@designali/icons"
 
 import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
 import { Button } from "@workspace/ui/components/button"
@@ -16,19 +18,19 @@ import {
 } from "@workspace/ui/components/native-select"
 
 const members = [
-  { name: "Amara Okafor", email: "amara@lumen.studio", role: "owner" },
-  { name: "Theo Lindqvist", email: "theo@lumen.studio", role: "admin" },
-  { name: "Sofia Marin", email: "sofia@lumen.studio", role: "editor" },
-  { name: "Kenji Watanabe", email: "kenji@lumen.studio", role: "viewer" },
+  { name: "Ali Imam", email: "ali@designali.com", role: "owner" },
+  { name: "Sam Designer", email: "sam@designali.com", role: "admin" },
+  { name: "Maya Developer", email: "maya@designali.com", role: "editor" },
+  { name: "Ravi Client", email: "ravi@example.com", role: "viewer" },
 ]
 
 export default function TeamMembersCard() {
   return (
     <Card className="w-full max-w-md">
       <CardHeader>
-        <CardTitle>Team members</CardTitle>
+        <CardTitle>Designali studio team</CardTitle>
         <CardDescription>
-          Invite people and manage their access.
+          Invite teammates and clients to Designali projects.
         </CardDescription>
         <CardAction>
           <Button size="sm">

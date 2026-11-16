@@ -1,4 +1,9 @@
-import { BanIcon, CopyIcon, EyeIcon, SendIcon } from "lucide-react"
+import {
+  Ban as BanIcon,
+  Copy as CopyIcon,
+  Eye as EyeIcon,
+  Send as SendIcon,
+} from "@designali/icons"
 
 import {
   ContextMenu,
@@ -21,19 +26,19 @@ import {
 const invoices = [
   {
     id: "INV-2041",
-    customer: "Brightside Bakery",
+    customer: "Brand identity project",
     amount: "$1,240.00",
     status: "Paid",
   },
   {
     id: "INV-2042",
-    customer: "Northwind Travel",
+    customer: "Designali Templates",
     amount: "$860.50",
     status: "Due",
   },
   {
     id: "INV-2043",
-    customer: "Lumen Studio",
+    customer: "Next.js website build",
     amount: "$3,100.00",
     status: "Overdue",
   },
@@ -46,7 +51,7 @@ export default function TableRowContextActions() {
         <TableHeader>
           <TableRow>
             <TableHead>Invoice</TableHead>
-            <TableHead>Customer</TableHead>
+            <TableHead>Project</TableHead>
             <TableHead className="text-end">Amount</TableHead>
           </TableRow>
         </TableHeader>

@@ -37,7 +37,7 @@ export default function OverflowingTabsBar() {
           value={t}
           className="border p-4 text-xs text-muted-foreground"
         >
-          {t} content for the Orbit Labs workspace.
+          {t} content for the Designali workspace.
         </TabsContent>
       ))}
     </Tabs>

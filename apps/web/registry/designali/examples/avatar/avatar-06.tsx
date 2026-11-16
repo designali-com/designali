@@ -1,4 +1,6 @@
-import { PlusIcon } from "lucide-react";
+import {
+  Plus as PlusIcon,
+} from "@designali/icons"
 
 import {
   Avatar,
@@ -12,19 +14,19 @@ export default function AvatarGroupCountIconExample() {
   return (
     <AvatarGroup>
       <Avatar>
-        <AvatarImage src="https://github.com/designali-com.png" alt="@designali" />
+        <AvatarImage src="/ali.jpg" alt="Ali Imam" />
+        <AvatarFallback>AI</AvatarFallback>
+      </Avatar>
+      <Avatar>
+        <AvatarImage src="/logo.svg" alt="Designali" />
         <AvatarFallback>DA</AvatarFallback>
       </Avatar>
       <Avatar>
-        <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
-        <AvatarFallback>CN</AvatarFallback>
-      </Avatar>
-      <Avatar>
         <AvatarImage
-          src="https://github.com/evilrabbit.png"
-          alt="@evilrabbit"
+          src="/ai.jpg"
+          alt="Designali AI"
         />
-        <AvatarFallback>ER</AvatarFallback>
+        <AvatarFallback>DS</AvatarFallback>
       </Avatar>
       <AvatarGroupCount>
         <PlusIcon />

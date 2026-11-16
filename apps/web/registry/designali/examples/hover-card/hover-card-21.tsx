@@ -1,4 +1,6 @@
-import { CheckIcon } from "lucide-react"
+import {
+  Check as CheckIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import {
@@ -10,9 +12,9 @@ import { cn } from "@workspace/ui/lib/utils"
 
 const steps = ["Placed", "Packed", "Shipped", "Delivered"]
 const orders = [
-  { id: "#ORD-2041", customer: "Nadia Haddad", step: 2 },
-  { id: "#ORD-2040", customer: "Ben Carter", step: 3 },
-  { id: "#ORD-2039", customer: "Yuki Mori", step: 1 },
+  { id: "#ORD-2041", customer: "Brand identity client", step: 2 },
+  { id: "#ORD-2040", customer: "Templates customer", step: 3 },
+  { id: "#ORD-2039", customer: "Icons Pro customer", step: 1 },
 ]
 
 export default function OrderStatusHoverCard() {

@@ -1,4 +1,8 @@
-import { BugOffIcon, PlayIcon, TerminalIcon } from "lucide-react"
+import {
+  BugOff as BugOffIcon,
+  Play as PlayIcon,
+  Terminal as TerminalIcon,
+} from "@designali/icons"
 
 import {
   Menubar,

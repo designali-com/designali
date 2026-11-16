@@ -1,50 +1,55 @@
 "use client"
 
 import { useState } from "react"
-import { ChevronDown, Package, RotateCcw, Truck } from "lucide-react"
+import {
+  ChevronDown,
+  Package,
+  RotateCcw,
+  Truck,
+} from "@designali/icons"
 
 import { cn } from "@workspace/ui/lib/utils"
 
 const orders = [
   {
-    id: "FN-20841",
+    id: "DSG-20841",
     date: "Nov 12, 2026",
-    status: "In transit",
+    status: "Processing",
     total: 248,
-    eta: "Arrives Nov 16",
+    eta: "Download link sent to your email",
     items: [
-      { name: "Linen overshirt", variant: "Oat · M", qty: 1, price: 128 },
-      { name: "Merino crew socks", variant: "Charcoal · 3 pack", qty: 2, price: 36 },
-      { name: "Canvas tote", variant: "Natural", qty: 1, price: 48 },
+      { name: "Designali Pro", variant: "Personal · 1 year", qty: 1, price: 128 },
+      { name: "Dashboard UI kit", variant: "Figma + React", qty: 2, price: 36 },
+      { name: "Icon pack add-on", variant: "@designali/icons", qty: 1, price: 48 },
     ],
   },
   {
-    id: "FN-20517",
+    id: "DSG-20517",
     date: "Oct 28, 2026",
     status: "Delivered",
     total: 186,
-    eta: "Delivered Oct 31",
+    eta: "Delivered to your inbox Oct 28",
     items: [
-      { name: "Waxed field jacket", variant: "Olive · L", qty: 1, price: 186 },
+      { name: "Portfolio template", variant: "Next.js · Commercial", qty: 1, price: 186 },
     ],
   },
   {
-    id: "FN-19902",
+    id: "DSG-19902",
     date: "Sep 14, 2026",
-    status: "Returned",
+    status: "Refunded",
     total: 94,
     eta: "Refunded Sep 25",
     items: [
-      { name: "Wool beanie", variant: "Rust", qty: 1, price: 38 },
-      { name: "Leather card holder", variant: "Tan", qty: 1, price: 56 },
+      { name: "Landing page pack", variant: "Tailwind CSS", qty: 1, price: 38 },
+      { name: "Illustration set", variant: "@designali/vectors", qty: 1, price: 56 },
     ],
   },
 ]
 
 const statusStyle: Record<string, string> = {
-  "In transit": "bg-sky-100 text-sky-800 dark:bg-sky-500/15 dark:text-sky-300",
+  Processing: "bg-sky-100 text-sky-800 dark:bg-sky-500/15 dark:text-sky-300",
   Delivered: "bg-emerald-100 text-emerald-800 dark:bg-emerald-500/15 dark:text-emerald-300",
-  Returned: "bg-muted text-muted-foreground",
+  Refunded: "bg-muted text-muted-foreground",
 }
 
 export default function Lists10() {
@@ -53,8 +58,8 @@ export default function Lists10() {
   return (
     <section className="w-full bg-background py-24">
       <div className="mx-auto max-w-3xl px-6">
-        <h2 className="text-3xl font-semibold tracking-tight">Order history</h2>
-        <p className="mt-2 text-sm text-muted-foreground">Track, return or reorder from the last 12 months.</p>
+        <h2 className="text-3xl font-semibold tracking-tight">Designali orders</h2>
+        <p className="mt-2 text-sm text-muted-foreground">Download, renew or reorder your Designali templates from the last 12 months.</p>
 
         <ul className="mt-10 space-y-3">
           {orders.map((order) => {
@@ -108,7 +113,7 @@ export default function Lists10() {
                       </span>
                       <div className="flex gap-2">
                         <a href="#" className="inline-flex h-8 items-center border border-border bg-background px-3 text-xs hover:bg-muted">
-                          Track parcel
+                          Download files
                         </a>
                         <a href="#" className="inline-flex h-8 items-center gap-1.5 border border-border bg-background px-3 text-xs hover:bg-muted">
                           <RotateCcw className="size-3" /> Reorder

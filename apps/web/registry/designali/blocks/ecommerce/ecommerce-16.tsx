@@ -1,7 +1,12 @@
 "use client"
 
 import { useState } from "react"
-import { CalendarClock, Check, PauseCircle, Star } from "lucide-react"
+import {
+  CalendarClock,
+  Check,
+  CirclePause as PauseCircle,
+  Star,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { cn } from "@workspace/ui/lib/utils"
@@ -10,11 +15,11 @@ const PRICE = 22
 
 const plans = [
   { id: "once", label: "One-time purchase", discount: 0, note: "" },
-  { id: "sub", label: "Subscribe & save", discount: 0.15, note: "Save 15% on every bag" },
+  { id: "sub", label: "Subscribe & save", discount: 0.15, note: "Save 15% on every renewal" },
 ]
 
-const frequencies = ["Every 2 weeks", "Every 4 weeks", "Every 6 weeks"]
-const grinds = ["Whole bean", "Espresso", "Filter", "Cafetiere"]
+const frequencies = ["Monthly", "Quarterly", "Yearly"]
+const grinds = ["Next.js", "React", "Figma", "HTML"]
 
 export default function Ecommerce16() {
   const [plan, setPlan] = useState("sub")
@@ -39,15 +44,15 @@ export default function Ecommerce16() {
             <rect x="70" y="160" width="60" height="5" className="fill-stone-900" />
             <rect x="80" y="172" width="40" height="4" className="fill-stone-500" />
           </svg>
-          <span className="absolute top-4 left-4 bg-background px-2 py-1 text-xs">Roasted Monday</span>
+          <span className="absolute top-4 left-4 bg-background px-2 py-1 text-xs">Updated Monday</span>
         </div>
 
         <div>
-          <p className="text-xs tracking-widest text-muted-foreground uppercase">Single origin · Colombia</p>
-          <h2 className="mt-2 text-3xl font-medium tracking-tight md:text-4xl">Huila El Mirador</h2>
+          <p className="text-xs tracking-widest text-muted-foreground uppercase">Membership · Designali</p>
+          <h2 className="mt-2 text-3xl font-medium tracking-tight md:text-4xl">Designali Pro</h2>
           <p className="mt-2 flex items-center gap-1.5 text-sm text-muted-foreground">
             <Star className="size-4 fill-amber-400 text-amber-400" />
-            4.9 · 1,840 reviews · Notes of red apple, panela, cocoa
+            4.9 · 1,840 reviews · 460+ blocks, 4,000+ icons, every template
           </p>
 
           <fieldset className="mt-8 space-y-2">
@@ -102,7 +107,7 @@ export default function Ecommerce16() {
                         ))}
                       </span>
                       <span className="flex flex-col gap-1.5 text-xs text-muted-foreground">
-                        <span className="flex items-center gap-2"><Check className="size-3.5" /> Free delivery on every order</span>
+                        <span className="flex items-center gap-2"><Check className="size-3.5" /> New blocks every week</span>
                         <span className="flex items-center gap-2"><PauseCircle className="size-3.5" /> Pause, skip or cancel any time</span>
                       </span>
                     </span>
@@ -114,7 +119,7 @@ export default function Ecommerce16() {
 
           <div className="mt-6 grid gap-6 sm:grid-cols-[1fr_auto]">
             <div>
-              <p className="text-sm font-medium">Grind</p>
+              <p className="text-sm font-medium">Stack</p>
               <div className="mt-2 grid grid-cols-2 gap-2 sm:grid-cols-4">
                 {grinds.map((g) => (
                   <button
@@ -132,7 +137,7 @@ export default function Ecommerce16() {
               </div>
             </div>
             <div>
-              <p className="text-sm font-medium">Bags (250g)</p>
+              <p className="text-sm font-medium">Seats</p>
               <div className="mt-2 flex">
                 {[1, 2, 3].map((n) => (
                   <button
@@ -152,7 +157,7 @@ export default function Ecommerce16() {
           </div>
 
           <Button size="lg" className="mt-8 w-full">
-            {plan === "sub" ? "Start subscription" : "Add to bag"} · ${total.toFixed(2)}
+            {plan === "sub" ? "Start subscription" : "Add to cart"} · ${total.toFixed(2)}
           </Button>
           {plan === "sub" && (
             <p className="mt-3 flex items-center justify-center gap-2 text-xs text-muted-foreground">

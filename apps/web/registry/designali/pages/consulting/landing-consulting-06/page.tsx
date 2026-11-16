@@ -9,127 +9,128 @@ import {
   Leaf,
   Plus,
   Target,
-} from "lucide-react"
+} from "@designali/icons"
 
+import { Logo } from "@/src/components/logo"
 import { Button } from "@workspace/ui/components/button"
 
-const navLinks = ["Services", "Industries", "Case studies", "Insights", "About"]
+const navLinks = ["Services", "Audits", "Case studies", "Blog", "About"]
 
 const logos = [
-  "Bluewave",
-  "Ironclad",
-  "Summit Bank",
-  "Corvex",
-  "Stratus Group",
-  "Pinnacle Health",
-  "Atlas Retail",
-  "Ferro Industries",
+  "Vercel",
+  "shadcn/ui",
+  "@designali/icons",
+  "Next.js",
+  "React",
+  "TypeScript",
+  "Tailwind CSS",
+  "Figma",
 ]
 
 const features = [
   {
     icon: Cpu,
-    title: "Digital transformation",
+    title: "Design engineering advisory",
     description:
-      "Prioritise technology investments, select vendors and run programmes that land on time.",
+      "Ali Imam advises on Next.js, React and Tailwind CSS architecture so design ships as production-ready code.",
   },
   {
     icon: Leaf,
-    title: "Sustainability",
+    title: "Accessibility",
     description:
-      "Decarbonisation roadmaps and ESG reporting that hold up to investor and regulator scrutiny.",
+      "Accessibility audits and fixes that make your product usable by everyone, checked against WCAG.",
   },
   {
     icon: GraduationCap,
     title: "Capability building",
     description:
-      "We train your people as we go, so the change sticks long after we leave.",
+      "We train your team as we go, so the system sticks long after the engagement ends.",
   },
   {
     icon: Target,
-    title: "Growth strategy",
+    title: "UX strategy",
     description:
-      "Market sizing, positioning and portfolio choices grounded in customer evidence, not assumptions.",
+      "Journeys, positioning and product priorities grounded in real user evidence, not assumptions.",
   },
   {
     icon: Cog,
-    title: "Operational excellence",
+    title: "Design system audits",
     description:
-      "Redesign processes, cut cost-to-serve and build the operating rhythm to sustain the gains.",
+      "A clear review of your components, tokens and docs, with a roadmap to make the system scale.",
   },
   {
     icon: ChartNoAxesCombined,
-    title: "Data and analytics",
+    title: "Dashboard and data UX",
     description:
-      "Turn scattered data into decision-ready dashboards and models your teams actually use.",
+      "Turn crowded screens into decision-ready dashboards your teams actually use.",
   },
 ]
 
 const stats = [
-  { value: "6 wks", label: "Typical diagnostic" },
-  { value: "$2.4B", label: "Value delivered for clients" },
-  { value: "320+", label: "Engagements completed" },
-  { value: "18%", label: "Average margin uplift" },
+  { value: "2 wks", label: "Typical audit" },
+  { value: "60+", label: "Products reviewed" },
+  { value: "460+", label: "Blocks in the Designali library" },
+  { value: "2300+", label: "UI examples on designali.com" },
 ]
 
 const steps = [
   {
-    title: "Diagnose",
+    title: "Audit",
     description:
-      "A focused six-week diagnostic to quantify the opportunity and agree priorities with leadership.",
+      "A focused two-week review of your product, brand and code to find the highest-impact fixes.",
   },
   {
     title: "Design",
     description:
-      "Co-create the strategy, operating model and business case with your team, not for them.",
+      "Co-create the UX strategy, design principles and system roadmap with your team, not for them.",
   },
   {
-    title: "Deliver",
+    title: "Build",
     description:
-      "Mobilise pilots, track value weekly and scale what works across the organisation.",
+      "Ship real components and pages in code, review weekly and scale what works across the product.",
   },
   {
-    title: "Sustain",
+    title: "Hand over",
     description:
-      "Hand over tools, governance and trained owners so results keep compounding.",
+      "Hand over Figma libraries, docs and trained owners so quality keeps compounding.",
   },
 ]
 
 const showcase = [
   {
-    name: "Retail pricing reset",
-    meta: "National retailer · 1,200 stores",
+    name: "E-commerce UX audit",
+    meta: "Checkout and product pages",
     tag: "Strategy",
-    price: "+11 pts margin",
+    price: "12 key fixes",
   },
   {
-    name: "Plant network redesign",
-    meta: "Industrial manufacturer · 9 plants",
-    tag: "Operations",
+    name: "Design system rebuild",
+    meta: "SaaS platform · 140 components",
+    tag: "Systems",
     price: "-22% cost",
   },
   {
-    name: "Patient flow programme",
-    meta: "Regional health system",
-    tag: "Healthcare",
+    name: "Onboarding redesign",
+    meta: "Health app",
+    tag: "UX",
     price: "-34% wait time",
   },
   {
-    name: "Post-merger integration",
-    meta: "Two regional banks",
-    tag: "M&A",
-    price: "$180M synergies",
+    name: "Two-brand merge",
+    meta: "Unified identity and UI",
+    tag: "Brand",
+    price: "1 design system",
   },
   {
-    name: "Data platform roadmap",
-    meta: "Insurance group",
-    tag: "Digital",
-    price: "4x faster reporting",
+    name: "Analytics dashboard",
+    meta: "Data-heavy web app",
+    tag: "Data UX",
+    price: "4x faster reviews",
   },
   {
-    name: "Net zero roadmap",
-    meta: "Logistics operator",
-    tag: "Sustainability",
+    name: "Accessibility programme",
+    meta: "Logistics web app",
+    tag: "Accessibility",
     price: "-40% emissions",
   },
 ]
@@ -137,95 +138,95 @@ const showcase = [
 const testimonials = [
   {
     quote:
-      "They built the analytics capability in-house rather than making us dependent on them. That is rare.",
-    name: "David Kim",
-    role: "Chief Data Officer, Summit Bank",
+      "Designali built the dashboard system in-house with us rather than making us dependent on them. That is rare.",
+    name: "David K.",
+    role: "Data product lead, Designali client",
   },
   {
     quote:
-      "They challenged our assumptions in the first week and were right. The new pricing model added 11 points of margin in a year.",
-    name: "Catherine Doyle",
-    role: "CFO, Atlas Retail",
+      "Ali challenged our assumptions in the first week and was right. The audit gave us a clear list of fixes we shipped in a month.",
+    name: "Catherine D.",
+    role: "Product lead, Designali client",
   },
   {
     quote:
-      "Unlike other firms, their team stayed through implementation. Our plants are running 22% more efficiently.",
-    name: "Hiroshi Nakamura",
-    role: "COO, Ferro Industries",
+      "Unlike other consultants, Designali stayed through implementation and wrote real components, not just slides.",
+    name: "Hiroshi N.",
+    role: "Engineering manager, SaaS team",
   },
 ]
 
 const tiers = [
   {
-    name: "Diagnostic",
-    price: "$85K",
-    period: "/6 weeks",
-    description: "Size the prize and set priorities.",
+    name: "Audit",
+    price: "$1,800",
+    period: "/2 weeks",
+    description: "Find the biggest UX and design system wins.",
     features: [
-      "Leadership interviews",
-      "Data deep-dive",
-      "Opportunity sizing",
+      "Stakeholder interviews",
+      "Product and code review",
+      "Accessibility check",
       "Prioritised roadmap",
     ],
-    cta: "Scope a diagnostic",
+    cta: "Book an audit",
   },
   {
-    name: "Transformation",
-    price: "From $450K",
-    period: "/quarter",
-    description: "Design and deliver change at scale.",
+    name: "Embedded",
+    price: "From $4,500",
+    period: "/month",
+    description: "Design and build alongside your team.",
     features: [
-      "Dedicated senior team",
-      "Weekly value tracking",
-      "Pilot to scale delivery",
-      "Change management",
-      "Executive steering",
+      "Ali embedded in your team",
+      "Weekly design reviews",
+      "Components shipped in code",
+      "Figma library upkeep",
+      "Monthly roadmap check-in",
     ],
-    cta: "Discuss a programme",
+    cta: "Discuss an engagement",
   },
   {
-    name: "Advisory retainer",
+    name: "Advisory",
     price: "Custom",
     period: "",
-    description: "On-call counsel for the C-suite.",
+    description: "On-call design engineering advice.",
     features: [
-      "Partner access",
-      "Board preparation",
-      "Deal and market reviews",
+      "Direct access to Ali",
+      "Launch reviews",
+      "Design and code reviews",
       "Quarterly strategy sessions",
       "Flexible scope",
     ],
-    cta: "Talk to a partner",
+    cta: "Talk to Ali",
   },
 ]
 
 const faqs = [
   {
     q: "Do you sign NDAs?",
-    a: "Always. Confidentiality is standard, and we never work for direct competitors on the same issue.",
+    a: "Always. Confidentiality is standard and your files stay private.",
   },
   {
-    q: "What size of companies do you work with?",
-    a: "Mostly mid-market and enterprise organisations with 200 to 20,000 employees, plus private equity funds and their portfolio companies.",
+    q: "What size of teams do you work with?",
+    a: "Mostly startups and product teams from two to two hundred people, plus founders who need a senior design partner.",
   },
   {
     q: "How are engagements priced?",
-    a: "We price by scope and outcome. Many engagements include a fee at risk tied to the results we agree at the start.",
+    a: "Audits are fixed price. Embedded and advisory work is a simple monthly fee you can pause or cancel.",
   },
   {
-    q: "Who will be on our team?",
-    a: "A partner leads every engagement personally, supported by a small senior team. We do not staff projects with junior analysts alone.",
+    q: "Who will we work with?",
+    a: "Ali Imam leads every engagement personally. You work directly with the person who designs and codes.",
   },
   {
     q: "How quickly can you start?",
-    a: "We can usually mobilise a diagnostic team within two to three weeks of agreeing the scope.",
+    a: "Audits can usually start within one to two weeks of agreeing the scope.",
   },
 ]
 
 const footer = [
-  { title: "Services", links: ["Strategy", "Operations", "Digital", "M&A"] },
-  { title: "Firm", links: ["About", "Our people", "Careers", "Alumni"] },
-  { title: "Insights", links: ["Articles", "Reports", "Events", "Newsletter"] },
+  { title: "Services", links: ["Strategy", "Systems", "Data UX", "Brand"] },
+  { title: "Studio", links: ["About", "Ali Imam", "Work", "Contact"] },
+  { title: "Blog", links: ["Templates", "Blocks", "Docs", "Icons"] },
 ]
 
 export default function LandingConsulting06() {
@@ -237,10 +238,8 @@ export default function LandingConsulting06() {
             href="#"
             className="flex items-center gap-2 font-semibold tracking-tight"
           >
-            <span className="flex size-7 items-center justify-center rounded-md bg-amber-600 text-white text-sm">
-              L
-            </span>
-            <span className="">Ledger Path</span>
+            <Logo className="h-5 w-auto" />
+            <span className="">designali</span>
           </a>
           <nav className="hidden items-center gap-7 text-sm md:flex">
             {navLinks.map((link) => (
@@ -261,10 +260,10 @@ export default function LandingConsulting06() {
               nativeButton={false}
               render={<a href="#" />}
             >
-              Client login
+              View work
             </Button>
             <Button size="sm" nativeButton={false} render={<a href="#" />}>
-              Book a finance review
+              Book a dashboard review
             </Button>
           </div>
         </div>
@@ -272,25 +271,23 @@ export default function LandingConsulting06() {
       <section className="border-b">
         <div className="mx-auto max-w-7xl px-6">
           <div className="flex items-center justify-between border-x border-b px-6 py-3 text-xs text-muted-foreground">
-            <span>Finance transformation</span>
-            <span className="hidden sm:inline">Finance that leads.</span>
+            <span>Designali for data-heavy products</span>
+            <span className="hidden sm:inline">Dashboards that lead.</span>
           </div>
           <div className="border-x px-6 py-16 md:py-28">
             <h1 className="max-w-5xl text-4xl leading-[1.05] font-semibold tracking-tight text-balance sm:text-5xl md:text-8xl ">
-              {"A faster close and a "}
+              {"Faster reports and a "}
               <span className="text-amber-600 dark:text-amber-400">
-                sharper forecast
+                sharper dashboard
               </span>
             </h1>
             <div className="mt-12 flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
               <p className="max-w-md text-base leading-7 text-muted-foreground">
-                Ledger Path helps finance teams redesign close processes,
-                implement planning tools and give the CFO numbers the board can
-                trust.
+                Designali helps product teams redesign dashboards, tables and charts so every user finds the numbers they need in seconds.
               </p>
               <div className="flex flex-wrap gap-3 ">
                 <Button size="lg" nativeButton={false} render={<a href="#" />}>
-                  Book a finance review
+                  Book a dashboard review
                   <ArrowRight />
                 </Button>
                 <Button
@@ -327,7 +324,7 @@ export default function LandingConsulting06() {
       <section className="border-b">
         <div className="mx-auto max-w-7xl px-6 py-12">
           <p className="text-center text-sm text-muted-foreground">
-            Trusted by leadership teams at
+            Designed in Figma, built with
           </p>
           <div className="mt-8 grid grid-cols-2 items-center gap-x-8 gap-y-6 sm:grid-cols-4 lg:grid-cols-8">
             {logos.map((logo) => (
@@ -348,11 +345,10 @@ export default function LandingConsulting06() {
               Capabilities
             </p>
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl  mt-3">
-              Strategy that turns into results
+              Strategy that turns into shipped product
             </h2>
             <p className="mt-4 text-lg leading-8 text-muted-foreground">
-              We work alongside your leadership team from diagnosis to delivery,
-              and we measure success by outcomes, not slide count.
+              We work alongside your team from audit to delivery, and we measure success by what ships, not slide count.
             </p>
           </div>
           <div className="mt-14 grid overflow-hidden rounded-2xl border sm:grid-cols-2 lg:grid-cols-3">
@@ -376,11 +372,10 @@ export default function LandingConsulting06() {
           <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
             <div className="max-w-2xl">
               <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl">
-                Selected case studies
+                Selected engagements
               </h2>
               <p className="mt-4 text-lg leading-8 text-muted-foreground">
-                A few of the engagements where our clients moved the numbers
-                that matter.
+                A few engagements where Designali helped teams fix what mattered most.
               </p>
             </div>
             <Button
@@ -388,7 +383,7 @@ export default function LandingConsulting06() {
               nativeButton={false}
               render={<a href="#" />}
             >
-              View all
+              View all work
               <ArrowUpRight />
             </Button>
           </div>
@@ -424,7 +419,7 @@ export default function LandingConsulting06() {
         <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl">
-              What leaders say about working with us
+              What teams say about working with Designali
             </h2>
           </div>
           <div className="mt-14 grid gap-6 md:grid-cols-3">
@@ -459,7 +454,7 @@ export default function LandingConsulting06() {
         <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl">
-              Our engagement model
+              How an engagement works
             </h2>
           </div>
           <ol className="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
@@ -484,11 +479,10 @@ export default function LandingConsulting06() {
         <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl">
-              Ways to engage
+              Ways to work with Designali
             </h2>
             <p className="mt-4 text-lg leading-8 text-muted-foreground">
-              From a focused diagnostic to a long-term transformation
-              partnership, every engagement has clear scope and outcomes.
+              From a focused audit to an embedded design engineer, every engagement has clear scope and outcomes.
             </p>
           </div>
           <div className="mx-auto mt-14 grid max-w-6xl items-start gap-6 lg:grid-cols-3">
@@ -542,7 +536,7 @@ export default function LandingConsulting06() {
         <div className="mx-auto grid max-w-7xl gap-12 px-6 py-20 md:py-28 lg:grid-cols-[1fr_1.5fr]">
           <div className="lg:sticky lg:top-24 lg:self-start">
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl">
-              Working with us
+              Working with Designali
             </h2>
             <p className="mt-4 text-muted-foreground">
               Still curious?{" "}
@@ -550,7 +544,7 @@ export default function LandingConsulting06() {
                 href="#"
                 className="font-medium text-foreground underline underline-offset-4"
               >
-                Get in touch
+                Email hello@designali.com
               </a>
               .
             </p>
@@ -575,15 +569,14 @@ export default function LandingConsulting06() {
           <div className="pointer-events-none absolute -top-24 left-1/2 size-96 -translate-x-1/2 rounded-full bg-gradient-to-b from-amber-500/25 via-yellow-500/10 to-transparent blur-3xl" />
           <div className="relative mx-auto max-w-2xl space-y-6">
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl">
-              Close your books in days, not weeks
+              Ship clearer dashboards in weeks, not months
             </h2>
             <p className="text-lg text-muted-foreground">
-              Start with a free two-hour finance process review with a senior
-              advisor.
+              Start with a free 30-minute dashboard review with Ali Imam.
             </p>
             <div className="flex flex-wrap gap-3 justify-center">
               <Button size="lg" nativeButton={false} render={<a href="#" />}>
-                Book a finance review
+                Book a dashboard review
                 <ArrowRight />
               </Button>
               <Button
@@ -605,13 +598,11 @@ export default function LandingConsulting06() {
               href="#"
               className="flex items-center gap-2 font-semibold tracking-tight"
             >
-              <span className="flex size-7 items-center justify-center rounded-md bg-amber-600 text-white text-sm">
-                L
-              </span>
-              <span className="">Ledger Path</span>
+              <Logo className="h-5 w-auto" />
+              <span className="">designali</span>
             </a>
             <p className="max-w-xs text-sm text-muted-foreground">
-              Finance that leads.
+              Dashboards that lead.
             </p>
           </div>
           {footer.map((column) => (
@@ -635,7 +626,7 @@ export default function LandingConsulting06() {
         <div className="border-t ">
           <div className="mx-auto flex max-w-7xl flex-col justify-between gap-4 px-6 py-6 text-xs text-muted-foreground sm:flex-row">
             <span>
-              © {new Date().getFullYear()} Ledger Path. All rights reserved.
+              © {new Date().getFullYear()} Designali. All rights reserved.
             </span>
             <div className="flex gap-6">
               <a href="#" className="hover:text-foreground">
@@ -664,7 +655,7 @@ function HeroVisual() {
         <span className="size-2.5 rounded-full bg-muted-foreground/30" />
         <span className="size-2.5 rounded-full bg-muted-foreground/30" />
         <span className="ml-3 hidden rounded-md bg-muted px-3 py-0.5 text-[11px] text-muted-foreground sm:inline">
-          app.ledgerpath.com
+          designali.com/blocks
         </span>
       </div>
       <div className="grid md:grid-cols-[180px_1fr]">
@@ -693,7 +684,7 @@ function HeroVisual() {
           </div>
           <div className="rounded-lg border p-4">
             <div className="mb-4 flex items-center justify-between text-xs">
-              <span className="font-medium">Last 12 weeks</span>
+              <span className="font-medium">Usability score, last 12 weeks</span>
               <span className="text-amber-600 dark:text-amber-400">+24.6%</span>
             </div>
             <div className="flex h-32 items-end gap-1.5">

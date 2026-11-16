@@ -2,12 +2,12 @@
 
 import * as React from "react"
 import {
-  FilePlusIcon,
-  HistoryIcon,
-  SearchIcon,
-  SettingsIcon,
-  UserPlusIcon,
-} from "lucide-react"
+  FilePlus as FilePlusIcon,
+  History as HistoryIcon,
+  Search as SearchIcon,
+  Settings as SettingsIcon,
+  UserPlus as UserPlusIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -24,7 +24,7 @@ import {
   SheetTrigger,
 } from "@workspace/ui/components/sheet"
 
-const recent = ["quarterly report", "onboarding checklist", "brand colors"]
+const recent = ["pricing blocks", "portfolio template", "brand colors"]
 const quick = [
   { label: "Create document", icon: FilePlusIcon },
   { label: "Invite teammate", icon: UserPlusIcon },

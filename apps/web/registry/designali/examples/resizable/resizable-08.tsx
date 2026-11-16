@@ -11,7 +11,7 @@ import { Textarea } from "@workspace/ui/components/textarea"
 
 export default function MarkdownEditorPreview() {
   const [text, setText] = React.useState(
-    "# Release 2.4\n\nFaster sync and a brand new activity feed.\n\n- Offline drafts\n- Bulk archive\n- Dark mode polish"
+    "# designali 2.4\n\nNew blocks, templates and a fresh icon set.\n\n- 460+ blocks\n- 240 landing pages\n- 4000+ icons"
   )
   const lines = text.split("\n")
 

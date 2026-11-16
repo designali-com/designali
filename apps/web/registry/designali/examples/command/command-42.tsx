@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { AudioLinesIcon } from "lucide-react"
+import {
+  AudioLines as AudioLinesIcon,
+} from "@designali/icons"
 
 import {
   Command,
@@ -14,22 +16,22 @@ import {
 import { cn } from "@workspace/ui/lib/utils"
 
 const tracks = [
-  { title: "Paper Lanterns", artist: "Mira Sol", length: "3:42" },
-  { title: "Low Tide", artist: "The Harbor Lights", length: "4:05" },
-  { title: "Glasshouse", artist: "Ondine", length: "2:58" },
-  { title: "Night Bus", artist: "Kofi & The Rails", length: "3:21" },
-  { title: "Static Bloom", artist: "Mira Sol", length: "5:10" },
+  { title: "Colorful Spheres", artist: "Designali Motion", length: "3:42" },
+  { title: "Abstract Fluid", artist: "Designali Motion", length: "4:05" },
+  { title: "Design se code tak", artist: "Ali Imam", length: "2:58" },
+  { title: "Studio Session", artist: "Designali", length: "3:21" },
+  { title: "Late Night Build", artist: "Ali Imam", length: "5:10" },
 ]
 
 export default function LoopingPlaylistSearch() {
-  const [playing, setPlaying] = React.useState("Low Tide")
+  const [playing, setPlaying] = React.useState("Abstract Fluid")
 
   return (
     <Command loop className="w-full max-w-sm border">
       <CommandInput placeholder="Search songs or artists..." />
       <CommandList>
         <CommandEmpty>No tracks found.</CommandEmpty>
-        <CommandGroup heading="Road trip mix · 5 songs">
+        <CommandGroup heading="Designali studio mix · 5 tracks">
           {tracks.map((track, index) => (
             <CommandItem
               key={track.title}

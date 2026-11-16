@@ -1,6 +1,13 @@
-import { HashIcon, UsersIcon } from "lucide-react"
+import {
+  Hash as HashIcon,
+  Users as UsersIcon,
+} from "@designali/icons"
 
-import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from "@workspace/ui/components/avatar"
 import { Button } from "@workspace/ui/components/button"
 import {
   HoverCard,
@@ -12,11 +19,12 @@ export default function ChannelMentionHoverCard() {
   return (
     <div className="flex w-full max-w-sm gap-2 text-sm">
       <Avatar size="sm">
-        <AvatarFallback>KB</AvatarFallback>
+        <AvatarImage src="/ali.jpg" alt="Ali Imam" />
+        <AvatarFallback>AI</AvatarFallback>
       </Avatar>
       <div>
         <p className="font-medium">
-          Kofi Boateng{" "}
+          Ali Imam{" "}
           <span className="text-xs font-normal text-muted-foreground">
             11:02
           </span>
@@ -28,15 +36,15 @@ export default function ChannelMentionHoverCard() {
               href="#"
               className="bg-blue-500/10 px-1 font-medium text-blue-600 dark:text-blue-400"
             >
-              #launch-room
+              #designali-launch
             </HoverCardTrigger>
             <HoverCardContent className="flex flex-col gap-2">
               <div className="flex items-center gap-1.5 font-medium">
                 <HashIcon className="size-3.5" />
-                launch-room
+                designali-launch
               </div>
               <p className="text-muted-foreground">
-                Coordination for the v4.0 launch: timelines, blockers, and
+                Coordination for the Designali v4.0 launch: timelines, blockers, and
                 go/no-go calls.
               </p>
               <div className="flex items-center justify-between">

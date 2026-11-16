@@ -1,39 +1,41 @@
 "use client"
 
 import { useState } from "react"
-import { ArrowUpRight } from "lucide-react"
+import {
+  ArrowUpRight,
+} from "@designali/icons"
 
 import { cn } from "@workspace/ui/lib/utils"
 
 const entries = [
   {
-    title: "Tidewater Hotel",
-    kind: "Hospitality identity",
-    year: "2025",
+    title: "Dalim Agency",
+    kind: "Agency identity",
+    year: "Brand",
     gradient: "from-amber-200 via-orange-300 to-rose-400",
   },
   {
-    title: "Quill & Ledger",
-    kind: "Editorial platform",
-    year: "2025",
+    title: "Dalim Fonts",
+    kind: "Type platform",
+    year: "Web",
     gradient: "from-emerald-200 via-teal-300 to-cyan-500",
   },
   {
-    title: "Vanta Audio",
-    kind: "Product launch site",
-    year: "2024",
+    title: "Dalim UI",
+    kind: "Component library",
+    year: "Code",
     gradient: "from-zinc-300 via-zinc-500 to-zinc-800",
   },
   {
-    title: "Fernhill Dairy",
-    kind: "Packaging system",
-    year: "2024",
+    title: "Dalim Icons",
+    kind: "Icon system",
+    year: "Design",
     gradient: "from-lime-200 via-green-300 to-emerald-500",
   },
   {
-    title: "Northgate Transit",
-    kind: "Wayfinding",
-    year: "2023",
+    title: "Dalim Visuals",
+    kind: "CGI and motion",
+    year: "3D",
     gradient: "from-sky-200 via-blue-400 to-indigo-600",
   },
 ]

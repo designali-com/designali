@@ -1,7 +1,13 @@
 "use client"
 
 import { useState } from "react"
-import { Minus, Plus, ShoppingBag, Truck, X } from "lucide-react"
+import {
+  Minus,
+  Plus,
+  ShoppingBag,
+  Truck,
+  X,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { cn } from "@workspace/ui/lib/utils"
@@ -9,11 +15,11 @@ import { cn } from "@workspace/ui/lib/utils"
 const FREE_SHIPPING = 120
 
 const initial = [
-  { id: 1, name: "Cedar & Smoke Candle", variant: "300g", price: 38, qty: 1, tone: "from-amber-700/60 to-amber-200/40" },
-  { id: 2, name: "Linen Room Spray", variant: "100ml · Fig", price: 24, qty: 2, tone: "from-lime-600/50 to-lime-100/40" },
+  { id: 1, name: "Design Agency Template", variant: "Pro license", price: 38, qty: 1, tone: "from-amber-700/60 to-amber-200/40" },
+  { id: 2, name: "Designali Icons Pro", variant: "Personal license", price: 24, qty: 2, tone: "from-lime-600/50 to-lime-100/40" },
 ]
 
-const upsell = { id: 3, name: "Brass Wick Trimmer", variant: "Polished", price: 18, qty: 1, tone: "from-yellow-500/60 to-yellow-100/40" }
+const upsell = { id: 3, name: "Apple Device Mockups", variant: "iPhone, iPad, MacBook", price: 18, qty: 1, tone: "from-yellow-500/60 to-yellow-100/40" }
 
 export default function Ecommerce13() {
   const [open, setOpen] = useState(true)
@@ -38,11 +44,11 @@ export default function Ecommerce13() {
         <div className="relative h-[640px] overflow-hidden border border-border bg-muted/30">
           {/* Mock storefront header */}
           <header className="flex items-center justify-between border-b border-border bg-background px-5 py-4">
-            <span className="text-sm font-semibold tracking-tight">Hearth Supply</span>
+            <span className="text-sm font-semibold tracking-tight">designali</span>
             <nav className="hidden gap-6 text-sm text-muted-foreground sm:flex">
-              <span>Candles</span>
-              <span>Home fragrance</span>
-              <span>Gifts</span>
+              <span>Templates</span>
+              <span>Blocks</span>
+              <span>Icons</span>
             </nav>
             <button
               type="button"
@@ -95,10 +101,10 @@ export default function Ecommerce13() {
                 <Truck className="size-3.5" />
                 {remaining > 0 ? (
                   <span>
-                    Spend <strong className="font-medium">${remaining}</strong> more for free delivery
+                    Spend <strong className="font-medium">${remaining}</strong> more for free updates
                   </span>
                 ) : (
-                  <span>You&apos;ve unlocked free delivery</span>
+                  <span>You&apos;ve unlocked free updates</span>
                 )}
               </p>
               <div className="mt-2 h-1 bg-muted">

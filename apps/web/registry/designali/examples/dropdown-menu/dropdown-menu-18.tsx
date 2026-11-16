@@ -1,11 +1,11 @@
 import {
-  FileTextIcon,
-  LanguagesIcon,
-  LockIcon,
-  ScissorsIcon,
-  SparklesIcon,
-  TextIcon,
-} from "lucide-react"
+  FileText as FileTextIcon,
+  Languages as LanguagesIcon,
+  Lock as LockIcon,
+  Scissors as ScissorsIcon,
+  Sparkles as SparklesIcon,
+  TextInitial as TextIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import { Button } from "@workspace/ui/components/button"

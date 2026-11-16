@@ -13,13 +13,13 @@ import {
 import { cn } from "@workspace/ui/lib/utils"
 
 const aisles = [
-  { name: "Produce", items: ["Spinach", "Lemons", "Avocados"] },
-  { name: "Dairy", items: ["Greek yogurt", "Oat milk"] },
-  { name: "Pantry", items: ["Basmati rice", "Chickpeas", "Olive oil"] },
+  { name: "Brand", items: ["Logo", "Color palette", "Typography"] },
+  { name: "UI", items: ["Wireframes", "Design system"] },
+  { name: "Code", items: ["Next.js setup", "Tailwind config", "Vercel deploy"] },
 ]
 
 export default function GroceryListByAisle() {
-  const [got, setGot] = React.useState<string[]>(["Lemons", "Oat milk"])
+  const [got, setGot] = React.useState<string[]>(["Color palette", "Design system"])
 
   return (
     <div className="flex w-full max-w-xs flex-col gap-5">

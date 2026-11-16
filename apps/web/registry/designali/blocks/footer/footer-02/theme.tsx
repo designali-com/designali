@@ -1,6 +1,10 @@
 "use client"
 
-import { ArrowUp, Moon, Sun } from "lucide-react"
+import {
+  ArrowUp,
+  Moon,
+  Sun,
+} from "@designali/icons"
 import { useTheme } from "next-themes"
 
 function handleScrollTop() {

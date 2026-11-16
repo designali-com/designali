@@ -8,11 +8,11 @@ import {
 } from "@workspace/ui/components/tabs"
 
 const connected = [
-  { name: "Slack", desc: "Post deploy updates to #releases" },
-  { name: "GitHub", desc: "Sync pull request status" },
+  { name: "Slack", desc: "Post designali.com deploy updates to #releases" },
+  { name: "GitHub", desc: "Sync Designali pull request status" },
 ]
 const available = [
-  { name: "Linear", desc: "Create issues from feedback" },
+  { name: "Linear", desc: "Create issues from client feedback" },
   { name: "PagerDuty", desc: "Escalate failed health checks" },
 ]
 

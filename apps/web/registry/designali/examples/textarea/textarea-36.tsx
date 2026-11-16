@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { ClockIcon } from "lucide-react"
+import {
+  Clock as ClockIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Label } from "@workspace/ui/components/label"
@@ -9,7 +11,7 @@ import { Textarea } from "@workspace/ui/components/textarea"
 
 export default function MeetingNotesTimestamp() {
   const ref = React.useRef<null | HTMLTextAreaElement>(null)
-  const [notes, setNotes] = React.useState("Weekly sync\n")
+  const [notes, setNotes] = React.useState("Designali weekly sync\n")
 
   function stamp() {
     const el = ref.current

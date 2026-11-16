@@ -1,7 +1,12 @@
 "use client"
 
 import { useState } from "react"
-import { Bell, Heart, ShoppingBag, Trash2 } from "lucide-react"
+import {
+  Bell,
+  Heart,
+  ShoppingBag,
+  Trash2,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { cn } from "@workspace/ui/lib/utils"
@@ -18,16 +23,16 @@ type Item = {
 }
 
 const initial: Item[] = [
-  { id: 1, name: "Merino Travel Blazer", variant: "Navy · 40R", price: 245, was: 295, stock: "in", added: "Added 3 days ago", tone: "from-blue-900/70 to-blue-400/30" },
-  { id: 2, name: "Leather Weekender", variant: "Cognac", price: 380, stock: "low", added: "Added 2 weeks ago", tone: "from-amber-800/70 to-orange-300/30" },
-  { id: 3, name: "Cashmere Scarf", variant: "Heather grey", price: 120, stock: "out", added: "Added 1 month ago", tone: "from-zinc-500/60 to-zinc-200/30" },
-  { id: 4, name: "Suede Chelsea Boot", variant: "Sand · UK 9", price: 210, stock: "in", added: "Added 1 month ago", tone: "from-yellow-700/50 to-stone-200/30" },
+  { id: 1, name: "Blocks Pro Bundle", variant: "Pro license · 460+ blocks", price: 149, was: 199, stock: "in", added: "Added 3 days ago", tone: "from-blue-900/70 to-blue-400/30" },
+  { id: 2, name: "Design Agency Template", variant: "Studio license", price: 179, stock: "low", added: "Added 2 weeks ago", tone: "from-amber-800/70 to-orange-300/30" },
+  { id: 3, name: "Dalim Fonts Collection", variant: "Desktop + web", price: 59, stock: "out", added: "Added 1 month ago", tone: "from-zinc-500/60 to-zinc-200/30" },
+  { id: 4, name: "Apple Device Mockups", variant: "iPhone, iPad, MacBook, iMac", price: 35, stock: "in", added: "Added 1 month ago", tone: "from-yellow-700/50 to-stone-200/30" },
 ]
 
 const stockLabel = {
   in: { text: "In stock", className: "text-emerald-700 dark:text-emerald-400" },
-  low: { text: "Only 2 left", className: "text-amber-700 dark:text-amber-400" },
-  out: { text: "Sold out", className: "text-muted-foreground" },
+  low: { text: "Launch price ends soon", className: "text-amber-700 dark:text-amber-400" },
+  out: { text: "Coming soon", className: "text-muted-foreground" },
 }
 
 export default function Ecommerce17() {

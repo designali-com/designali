@@ -1,7 +1,11 @@
 "use client"
 
 import * as React from "react"
-import { SignalHighIcon, SignalLowIcon, SignalMediumIcon } from "lucide-react"
+import {
+  SignalHigh as SignalHighIcon,
+  SignalLow as SignalLowIcon,
+  SignalMedium as SignalMediumIcon,
+} from "@designali/icons"
 
 import { Checkbox } from "@workspace/ui/components/checkbox"
 import {
@@ -15,9 +19,9 @@ import {
 import { cn } from "@workspace/ui/lib/utils"
 
 const initialTasks = [
-  { id: 1, title: "Send onboarding survey", priority: "high", done: false },
+  { id: 1, title: "Send client onboarding survey", priority: "high", done: false },
   { id: 2, title: "Update pricing FAQ", priority: "medium", done: true },
-  { id: 3, title: "Archive old campaigns", priority: "low", done: false },
+  { id: 3, title: "Archive old Dalim projects", priority: "low", done: false },
   { id: 4, title: "Fix broken footer links", priority: "high", done: false },
 ]
 

@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { BatteryFullIcon, BatteryMediumIcon } from "lucide-react"
+import {
+  BatteryFull as BatteryFullIcon,
+  BatteryMedium as BatteryMediumIcon,
+} from "@designali/icons"
 
 import { Slider } from "@workspace/ui/components/slider"
 

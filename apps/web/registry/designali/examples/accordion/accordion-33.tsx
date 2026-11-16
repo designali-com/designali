@@ -1,4 +1,7 @@
-import { CalendarDaysIcon, ChevronDownIcon } from "lucide-react"
+import {
+  CalendarDays as CalendarDaysIcon,
+  ChevronDown as ChevronDownIcon,
+} from "@designali/icons"
 
 import {
   Accordion,
@@ -13,12 +16,12 @@ const days = [
     label: "Day 1",
     date: "Thu, Mar 12",
     sessions: [
-      { time: "09:30", title: "Opening keynote", speaker: "Harper Nguyen" },
-      { time: "11:00", title: "Designing for trust", speaker: "Omar Siddiqui" },
+      { time: "09:30", title: "Design se code tak", speaker: "Ali Imam" },
+      { time: "11:00", title: "Brand identity for studios", speaker: "Designali studio" },
       {
         time: "14:00",
-        title: "Workshop: motion systems",
-        speaker: "Clara Jensen",
+        title: "Workshop: CGI & motion",
+        speaker: "Designali studio",
       },
     ],
   },
@@ -29,8 +32,8 @@ const days = [
     sessions: [
       {
         time: "10:00",
-        title: "Scaling a design system",
-        speaker: "Theo Laurent",
+        title: "Building 460+ blocks",
+        speaker: "Ali Imam",
       },
       { time: "15:30", title: "Closing panel", speaker: "Various speakers" },
     ],

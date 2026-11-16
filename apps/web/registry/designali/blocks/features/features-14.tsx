@@ -8,23 +8,23 @@ import {
   Plug,
   Server,
   Webhook,
-} from "lucide-react"
+} from "@designali/icons"
 
 const nodes = [
-  { icon: GitBranch, label: "Git", pos: "left-1/2 top-0 -translate-x-1/2" },
-  { icon: MessageCircle, label: "Chat", pos: "right-[6%] top-[14%]" },
-  { icon: Database, label: "Postgres", pos: "right-0 top-1/2 -translate-y-1/2" },
+  { icon: GitBranch, label: "GitHub", pos: "left-1/2 top-0 -translate-x-1/2" },
+  { icon: MessageCircle, label: "Feedback", pos: "right-[6%] top-[14%]" },
+  { icon: Database, label: "Database", pos: "right-0 top-1/2 -translate-y-1/2" },
   { icon: Mail, label: "Email", pos: "right-[6%] bottom-[14%]" },
-  { icon: Cloud, label: "Storage", pos: "left-1/2 bottom-0 -translate-x-1/2" },
-  { icon: Bell, label: "Pager", pos: "left-[6%] bottom-[14%]" },
-  { icon: Server, label: "Kubernetes", pos: "left-0 top-1/2 -translate-y-1/2" },
+  { icon: Cloud, label: "Vercel", pos: "left-1/2 bottom-0 -translate-x-1/2" },
+  { icon: Bell, label: "Alerts", pos: "left-[6%] bottom-[14%]" },
+  { icon: Server, label: "Next.js", pos: "left-0 top-1/2 -translate-y-1/2" },
   { icon: Webhook, label: "Webhooks", pos: "left-[6%] top-[14%]" },
 ]
 
 const points = [
-  ["120+ connectors", "Maintained by us, versioned, and tested nightly against each vendor's sandbox."],
-  ["Two-way sync", "Changes flow both directions with conflict resolution you can configure per field."],
-  ["Bring your own", "Anything with an HTTP API becomes a connector with a 20-line manifest."],
+  ["Next.js and React", "Every Designali block is built with Next.js, React and TypeScript."],
+  ["Figma to code", "Designs move from Figma to Tailwind CSS without losing a single detail."],
+  ["Deploy on Vercel", "Ship your site in minutes and keep iterating with every push to GitHub."],
 ]
 
 export default function Features14() {
@@ -33,11 +33,11 @@ export default function Features14() {
       <div className="mx-auto grid max-w-6xl items-center gap-16 lg:grid-cols-2">
         <div>
           <h2 className="text-3xl font-medium tracking-tight md:text-5xl">
-            Plugs into the tools you already pay for.
+            Fits right into the stack you already use.
           </h2>
           <p className="mt-5 max-w-md text-sm leading-7 text-muted-foreground">
-            Switchyard sits in the middle of your stack and turns events from
-            any system into actions in any other. No glue code, no cron jobs.
+            Designali designs and builds with modern tools, so your website
+            plugs straight into your workflow. Design se code tak.
           </p>
           <dl className="mt-10 space-y-6">
             {points.map(([title, body]) => (

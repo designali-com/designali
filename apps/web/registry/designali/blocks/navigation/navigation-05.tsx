@@ -1,7 +1,13 @@
 "use client"
 
 import { useState } from "react"
-import { Bell, Compass, House, Plus, User } from "lucide-react"
+import {
+  Bell,
+  Compass,
+  House,
+  Plus,
+  User,
+} from "@designali/icons"
 
 import { cn } from "@workspace/ui/lib/utils"
 
@@ -13,7 +19,7 @@ const items = [
   { icon: User, label: "Profile" },
 ]
 
-const dock = ["Work", "About", "Journal", "Contact"]
+const dock = ["Work", "About", "Blog", "Contact"]
 
 export default function Navigation05() {
   const [active, setActive] = useState("Home")
@@ -44,8 +50,8 @@ export default function Navigation05() {
             ))}
           </nav>
           <p className="max-w-sm text-sm text-muted-foreground">
-            A compact pill navigation that sits above content, ideal for
-            portfolios and single-page sites.
+            A compact pill navigation from Designali that sits above content,
+            ideal for portfolios like Ali Imam&apos;s and single-page sites.
           </p>
         </div>
 

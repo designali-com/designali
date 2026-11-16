@@ -1,10 +1,10 @@
 import {
-  InboxIcon,
-  LayoutDashboardIcon,
-  SettingsIcon,
-  SparklesIcon,
-  WorkflowIcon,
-} from "lucide-react"
+  Inbox as InboxIcon,
+  LayoutDashboard as LayoutDashboardIcon,
+  Settings as SettingsIcon,
+  Sparkles as SparklesIcon,
+  Workflow as WorkflowIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import { cn } from "@workspace/ui/lib/utils"
@@ -12,19 +12,19 @@ import { cn } from "@workspace/ui/lib/utils"
 const nav = [
   { label: "Dashboard", icon: LayoutDashboardIcon },
   {
-    label: "Inbox",
+    label: "Templates",
     icon: InboxIcon,
     badge: "12",
     variant: "secondary" as const,
   },
   {
-    label: "Automations",
+    label: "Blocks",
     icon: WorkflowIcon,
     badge: "New",
     variant: "default" as const,
   },
   {
-    label: "AI insights",
+    label: "AI workflows",
     icon: SparklesIcon,
     badge: "Beta",
     variant: "outline" as const,

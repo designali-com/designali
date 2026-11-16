@@ -2,14 +2,18 @@
 
 import * as React from "react"
 import {
-  ChevronsUpDownIcon,
-  CreditCardIcon,
-  LogOutIcon,
-  SettingsIcon,
-  UserIcon,
-} from "lucide-react"
+  ChevronsUpDown as ChevronsUpDownIcon,
+  CreditCard as CreditCardIcon,
+  LogOut as LogOutIcon,
+  Settings as SettingsIcon,
+  User as UserIcon,
+} from "@designali/icons"
 
-import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from "@workspace/ui/components/avatar"
 import {
   Menubar,
   MenubarContent,
@@ -25,9 +29,9 @@ import {
 } from "@workspace/ui/components/menubar"
 
 const workspaces = [
-  { id: "acme", name: "Lumen Studio" },
-  { id: "north", name: "Northfield Labs" },
-  { id: "orbit", name: "Orbit Collective" },
+  { id: "acme", name: "Designali Studio" },
+  { id: "north", name: "Dalim Agency" },
+  { id: "orbit", name: "Dalim Works" },
 ]
 
 export default function WorkspaceAccountMenubar() {
@@ -64,15 +68,16 @@ export default function WorkspaceAccountMenubar() {
       <MenubarMenu>
         <MenubarTrigger aria-label="Account" className="p-0.5">
           <Avatar className="size-6">
-            <AvatarFallback className="text-[10px]">EK</AvatarFallback>
+            <AvatarImage src="/ali.jpg" alt="Ali Imam" />
+            <AvatarFallback className="text-[10px]">AI</AvatarFallback>
           </Avatar>
         </MenubarTrigger>
         <MenubarContent align="end" alignOffset={0} className="w-52">
           <MenubarGroup>
             <MenubarLabel>
-              <p className="font-medium text-foreground">Elena Kovač</p>
+              <p className="font-medium text-foreground">Ali Imam</p>
               <p className="font-normal text-muted-foreground">
-                elena@lumen.studio
+                ali@designali.com
               </p>
             </MenubarLabel>
           </MenubarGroup>

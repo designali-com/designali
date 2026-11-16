@@ -3,7 +3,9 @@
 import * as React from "react"
 import { addDays, format } from "date-fns"
 import { type DateRange } from "react-day-picker"
-import { PlaneIcon } from "lucide-react"
+import {
+  Plane as PlaneIcon,
+} from "@designali/icons"
 
 import { Calendar } from "@workspace/ui/components/calendar"
 import {
@@ -35,7 +37,7 @@ export default function FlightTripDates() {
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
           <PlaneIcon className="size-4 text-muted-foreground" />
-          Lisbon to Reykjavik
+          Designali client workshop trip
         </CardTitle>
       </CardHeader>
       <CardContent>

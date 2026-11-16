@@ -1,4 +1,6 @@
-import { CirclePauseIcon } from "lucide-react"
+import {
+  CirclePause as CirclePauseIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {

@@ -1,4 +1,9 @@
-import { ChartBarIcon, CodeIcon, PenToolIcon, UsersIcon } from "lucide-react"
+import {
+  ChartBar as ChartBarIcon,
+  Code as CodeIcon,
+  PenTool as PenToolIcon,
+  Users as UsersIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import {

@@ -1,4 +1,8 @@
-import { BellIcon, MailIcon, MessageSquareTextIcon } from "lucide-react"
+import {
+  Bell as BellIcon,
+  Mail as MailIcon,
+  MessageSquareText as MessageSquareTextIcon,
+} from "@designali/icons"
 
 import {
   ToggleGroup,

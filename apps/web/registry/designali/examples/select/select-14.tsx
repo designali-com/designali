@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { TruckIcon } from "lucide-react"
+import {
+  Truck as TruckIcon,
+} from "@designali/icons"
 
 import { Field, FieldLabel } from "@workspace/ui/components/field"
 import {

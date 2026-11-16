@@ -1,7 +1,12 @@
 "use client"
 
 import * as React from "react"
-import { FanIcon, HeaterIcon, LampIcon, TvIcon } from "lucide-react"
+import {
+  Fan as FanIcon,
+  Heater as HeaterIcon,
+  Lamp as LampIcon,
+  Tv as TvIcon,
+} from "@designali/icons"
 
 import { Switch } from "@workspace/ui/components/switch"
 import { cn } from "@workspace/ui/lib/utils"
@@ -9,16 +14,16 @@ import { cn } from "@workspace/ui/lib/utils"
 const devices = [
   {
     id: "lamp",
-    name: "Floor lamp",
-    room: "Living room",
+    name: "Desk lamp",
+    room: "Designali studio",
     icon: LampIcon,
     on: true,
   },
-  { id: "fan", name: "Ceiling fan", room: "Bedroom", icon: FanIcon, on: false },
+  { id: "fan", name: "Ceiling fan", room: "Meeting room", icon: FanIcon, on: false },
   {
     id: "tv",
-    name: "Television",
-    room: "Living room",
+    name: "Review display",
+    room: "Design room",
     icon: TvIcon,
     on: false,
   },

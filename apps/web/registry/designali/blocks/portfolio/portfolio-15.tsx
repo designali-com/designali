@@ -1,7 +1,10 @@
 "use client"
 
 import { useState } from "react"
-import { ArrowLeft, ArrowRight } from "lucide-react"
+import {
+  ArrowLeft,
+  ArrowRight,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { cn } from "@workspace/ui/lib/utils"
@@ -10,30 +13,30 @@ const phases = [
   {
     name: "Listen",
     weeks: "Weeks 1-2",
-    title: "Twenty-four interviews before a single sketch",
-    body: "We sat with dispatchers, drivers and warehouse leads at Gullwing Freight. The brief said the app was slow. The interviews said drivers did not trust the ETAs it gave them.",
-    artefacts: ["Interview synthesis", "Journey map", "Opportunity backlog"],
+    title: "Discovery before a single sketch",
+    body: "We started with the brief, the brand and a few honest conversations. The client said the site looked dated. The research said visitors could not find the work.",
+    artefacts: ["Discovery notes", "Site audit", "Moodboard"],
   },
   {
     name: "Frame",
     weeks: "Weeks 3-4",
-    title: "One problem worth solving, written on one page",
-    body: "We narrowed forty findings to a single statement the whole team signed: drivers need to know, and be able to tell customers, exactly when they will arrive.",
-    artefacts: ["Problem statement", "Success metrics", "Scope agreement"],
+    title: "One direction, written on one page",
+    body: "We narrowed every idea to a single statement the whole team signed: show the work first, and make starting a project one click away.",
+    artefacts: ["Brand direction", "Sitemap", "Scope agreement"],
   },
   {
     name: "Make",
     weeks: "Weeks 5-10",
-    title: "Prototypes in drivers' hands every Friday",
-    body: "Six weekly rounds of clickable prototypes, tested in the cab on real routes. The live ETA card went through eleven versions before it stuck.",
-    artefacts: ["Interactive prototypes", "Design system", "Usability reports"],
+    title: "Figma prototypes every Friday",
+    body: "Six weekly rounds of clickable prototypes in Figma, then the same screens built as Designali blocks in Next.js and Tailwind CSS.",
+    artefacts: ["Figma prototypes", "Design system", "Next.js build"],
   },
   {
     name: "Ship",
     weeks: "Weeks 11-14",
-    title: "Rolled out to 640 drivers, one depot at a time",
-    body: "We paired with Gullwing's engineers through launch, watching support tickets daily and shipping fixes within the week.",
-    artefacts: ["Production specs", "Launch playbook", "Post-launch review"],
+    title: "Launched on Vercel, then refined",
+    body: "Ali Imam stayed on through launch, watching analytics and feedback daily and shipping fixes within the week.",
+    artefacts: ["Production code", "Launch checklist", "Post-launch review"],
   },
 ]
 
@@ -45,7 +48,7 @@ export default function Portfolio15() {
     <section className="w-full bg-muted/40 py-16 text-foreground md:py-24">
       <div className="mx-auto max-w-6xl px-6">
         <p className="text-xs tracking-widest text-muted-foreground uppercase">
-          How the Gullwing project unfolded
+          How a Designali project unfolds
         </p>
         <h2 className="mt-3 max-w-2xl text-3xl font-medium tracking-tight md:text-5xl">
           Fourteen weeks, four phases

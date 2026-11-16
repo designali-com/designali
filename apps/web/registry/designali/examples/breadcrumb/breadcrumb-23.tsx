@@ -1,4 +1,6 @@
-import { MailIcon } from "lucide-react"
+import {
+  Mail as MailIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import {

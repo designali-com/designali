@@ -1,7 +1,11 @@
 "use client"
 
 import * as React from "react"
-import { GitBranchIcon, RocketIcon, TriangleAlertIcon } from "lucide-react"
+import {
+  GitBranch as GitBranchIcon,
+  Rocket as RocketIcon,
+  TriangleAlert as TriangleAlertIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -54,7 +58,7 @@ export default function DeployEnvironmentSelect() {
       {env === "prod" && (
         <p className="flex items-start gap-1.5 text-xs text-destructive">
           <TriangleAlertIcon className="mt-px size-3.5 shrink-0" />
-          This deploys to live customers. Make sure staging checks passed.
+          This deploys designali.com to live customers. Make sure staging checks passed.
         </p>
       )}
       <Button variant={env === "prod" ? "destructive" : "default"}>

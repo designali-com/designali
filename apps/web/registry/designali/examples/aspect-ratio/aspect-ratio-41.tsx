@@ -9,9 +9,9 @@ import {
 import { cn } from "@workspace/ui/lib/utils"
 
 const slides = [
-  { title: "Plan", className: "from-sky-400 to-indigo-600" },
-  { title: "Build", className: "from-emerald-400 to-teal-700" },
-  { title: "Launch", className: "from-orange-400 to-rose-600" },
+  { title: "Design", className: "from-sky-400 to-indigo-600" },
+  { title: "Code", className: "from-emerald-400 to-teal-700" },
+  { title: "Ship", className: "from-orange-400 to-rose-600" },
 ]
 
 export default function AspectRatioCarousel() {

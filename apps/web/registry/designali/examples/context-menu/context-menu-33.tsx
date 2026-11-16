@@ -2,13 +2,13 @@
 
 import * as React from "react"
 import {
-  ArchiveIcon,
-  ExternalLinkIcon,
-  HashIcon,
-  PencilIcon,
-  StarIcon,
-  StarOffIcon,
-} from "lucide-react"
+  Archive as ArchiveIcon,
+  ExternalLink as ExternalLinkIcon,
+  Hash as HashIcon,
+  Pencil as PencilIcon,
+  Star as StarIcon,
+  StarOff as StarOffIcon,
+} from "@designali/icons"
 
 import {
   ContextMenu,
@@ -20,9 +20,9 @@ import {
 } from "@workspace/ui/components/context-menu"
 
 const initialProjects = [
-  { name: "Atlas Redesign", favorite: true },
-  { name: "Orbit API", favorite: false },
-  { name: "Harbor Mobile", favorite: false },
+  { name: "Designali Website", favorite: true },
+  { name: "Dalim UI", favorite: false },
+  { name: "Dalim Icons", favorite: false },
 ]
 
 export default function SidebarProjectMenu() {

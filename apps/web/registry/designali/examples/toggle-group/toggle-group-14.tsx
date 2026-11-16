@@ -8,11 +8,11 @@ import {
 } from "@workspace/ui/components/toggle-group"
 
 const articles = [
-  { title: "Connecting a custom domain", tag: "setup" },
-  { title: "Rotating API keys", tag: "security" },
-  { title: "Understanding invoices", tag: "billing" },
+  { title: "Installing Designali blocks", tag: "setup" },
+  { title: "Securing your designali.com account", tag: "security" },
+  { title: "Understanding Designali invoices", tag: "billing" },
   { title: "Enabling two-factor login", tag: "security" },
-  { title: "Inviting your team", tag: "setup" },
+  { title: "Using @designali/icons", tag: "setup" },
 ]
 
 export default function TagFilterToggleGroup() {

@@ -7,7 +7,7 @@ import {
   ArrowRight,
   Moon,
   Sun,
-} from "lucide-react";
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button";
 import { Card } from "@workspace/ui/components/card";
@@ -107,8 +107,8 @@ export function HeroSection() {
                   font-medium  
                 "
               >
-                We are a study of production creative
-                for CGI, 3D, motion and development web.
+                Design se code tak. A studio for brand,
+                UI/UX, CGI, 3D, motion and web development.
               </h1>
 
               {/* Description */}

@@ -36,7 +36,7 @@ export default function TermsAcceptGate() {
     <div className="flex w-full max-w-sm flex-col gap-3">
       <ScrollArea className="h-56 border">
         <div className="flex flex-col gap-3 p-4 text-xs leading-relaxed">
-          <h3 className="text-sm font-semibold">Terms of Service</h3>
+          <h3 className="text-sm font-semibold">Designali Terms of Service</h3>
           {clauses.map((clause, i) => (
             <p key={i}>
               <span className="font-medium">{i + 1}.</span> {clause}

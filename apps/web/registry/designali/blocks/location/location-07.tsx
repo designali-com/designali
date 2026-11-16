@@ -1,14 +1,14 @@
-const hq = { city: "Toronto", x: 270, y: 150 }
+const hq = { city: "Designali", x: 270, y: 150 }
 
 const offices = [
-  { city: "Mexico City", x: 225, y: 215, team: 18 },
-  { city: "São Paulo", x: 340, y: 300, team: 26 },
-  { city: "Dublin", x: 470, y: 125, team: 41 },
-  { city: "Lagos", x: 510, y: 225, team: 12 },
-  { city: "Dubai", x: 640, y: 190, team: 9 },
-  { city: "Bengaluru", x: 705, y: 215, team: 55 },
-  { city: "Tokyo", x: 885, y: 160, team: 22 },
-  { city: "Melbourne", x: 905, y: 330, team: 14 },
+  { city: "Central America", x: 225, y: 215, team: 18 },
+  { city: "South America", x: 340, y: 300, team: 26 },
+  { city: "Europe", x: 470, y: 125, team: 41 },
+  { city: "Africa", x: 510, y: 225, team: 12 },
+  { city: "Middle East", x: 640, y: 190, team: 9 },
+  { city: "South Asia", x: 705, y: 215, team: 55 },
+  { city: "East Asia", x: 885, y: 160, team: 22 },
+  { city: "Oceania", x: 905, y: 330, team: 14 },
 ]
 
 // Very rough continent ellipses used to mask a dot grid.
@@ -48,19 +48,19 @@ export default function Location07() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="mx-auto max-w-2xl text-center">
           <p className="text-xs font-medium tracking-widest text-muted-foreground uppercase">
-            Distributed by design
+            Remote by design
           </p>
           <h2 className="mt-3 text-4xl font-semibold tracking-tight md:text-5xl">
-            One company, nine cities
+            One studio, clients worldwide
           </h2>
           <p className="mt-4 text-muted-foreground">
-            Headquartered in Toronto, Corvid Health has {total} people working
-            across four continents.
+            Designali is a remote design and development studio with {total}+
+            projects shipped for clients around the world.
           </p>
         </div>
 
         <div className="mt-12 border bg-muted/30">
-          <svg viewBox="0 0 1000 420" className="h-auto w-full" role="img" aria-label="World map of office locations">
+          <svg viewBox="0 0 1000 420" className="h-auto w-full" role="img" aria-label="World map of Designali client regions">
             <g className="fill-foreground/15">
               {dots.map((d) => (
                 <circle key={`${d.x}-${d.y}`} cx={d.x} cy={d.y} r="2.6" />
@@ -85,12 +85,12 @@ export default function Location07() {
         <ul className="grid grid-cols-2 border-x border-b sm:grid-cols-3 lg:grid-cols-9">
           <li className="border-e border-b bg-primary p-4 text-primary-foreground lg:border-b-0">
             <p className="text-sm font-medium">{hq.city}</p>
-            <p className="text-xs opacity-80">HQ &middot; 120</p>
+            <p className="text-xs opacity-80">Remote studio &middot; 120</p>
           </li>
           {offices.map((o) => (
             <li key={o.city} className="border-e border-b p-4 lg:border-b-0 lg:last:border-e-0">
               <p className="text-sm font-medium">{o.city}</p>
-              <p className="text-xs text-muted-foreground">{o.team} people</p>
+              <p className="text-xs text-muted-foreground">{o.team} projects</p>
             </li>
           ))}
         </ul>

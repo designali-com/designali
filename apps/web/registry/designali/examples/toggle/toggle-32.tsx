@@ -1,22 +1,24 @@
 "use client"
 
 import * as React from "react"
-import { StarIcon } from "lucide-react"
+import {
+  Star as StarIcon,
+} from "@designali/icons"
 
 import { Toggle } from "@workspace/ui/components/toggle"
 
 const initial = [
   {
     id: 1,
-    from: "Nadia Ruiz",
-    subject: "Contract redlines attached",
+    from: "Ali Imam",
+    subject: "Brand identity proposal attached",
     starred: true,
   },
-  { id: 2, from: "Billing", subject: "Your October receipt", starred: false },
+  { id: 2, from: "Billing", subject: "Your Designali receipt", starred: false },
   {
     id: 3,
-    from: "Kofi Mensah",
-    subject: "Offsite venue shortlist",
+    from: "Designali Studio",
+    subject: "New blocks are live on designali.com",
     starred: false,
   },
 ]

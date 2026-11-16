@@ -1,4 +1,7 @@
-import { LockIcon, ShieldCheckIcon } from "lucide-react"
+import {
+  Lock as LockIcon,
+  ShieldCheck as ShieldCheckIcon,
+} from "@designali/icons"
 
 import {
   Field,

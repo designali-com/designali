@@ -2,7 +2,12 @@
 
 import * as React from "react"
 import { format, isAfter, startOfDay } from "date-fns"
-import { FrownIcon, LaughIcon, MehIcon, SmileIcon } from "lucide-react"
+import {
+  Frown as FrownIcon,
+  Laugh as LaughIcon,
+  Meh as MehIcon,
+  Smile as SmileIcon,
+} from "@designali/icons"
 
 import { Calendar, CalendarDayButton } from "@workspace/ui/components/calendar"
 import { Card, CardContent } from "@workspace/ui/components/card"
@@ -66,7 +71,7 @@ export default function MoodTrackerCalendar() {
               {format(date, "EEEE, MMM d")} · {mood?.label}
             </span>
             <span className="text-xs text-muted-foreground">
-              Slept well, long walk by the river after work.
+              Shipped new Designali blocks and finished the icon set.
             </span>
           </div>
         </div>

@@ -10,127 +10,128 @@ import {
   Recycle,
   Sparkles,
   Tag,
-} from "lucide-react"
+} from "@designali/icons"
 
+import { Logo } from "@/src/components/logo"
 import { Button } from "@workspace/ui/components/button"
 
-const navLinks = ["Shop", "New arrivals", "Bestsellers", "Our story", "Journal"]
+const navLinks = ["Store", "Templates", "Blocks", "Work", "Blog"]
 
 const logos = [
-  "The Guardian",
-  "Monocle",
-  "Kinfolk",
-  "Dezeen",
-  "Elle Decor",
-  "Vogue",
-  "GQ",
-  "Wired",
+  "Tailwind CSS",
+  "Figma",
+  "Vercel",
+  "Stripe",
+  "shadcn/ui",
+  "Next.js",
+  "React",
+  "TypeScript",
 ]
 
 const features = [
   {
     icon: Award,
-    title: "Lifetime guarantee",
+    title: "Lifetime updates",
     description:
-      "Our core pieces are built to last. If something breaks, we repair or replace it for free.",
+      "Templates and blocks bought on designali.com get free updates whenever Ali ships improvements.",
   },
   {
     icon: Recycle,
-    title: "Plastic-free packaging",
+    title: "CGI product renders",
     description:
-      "Every order ships in recycled, compostable packaging that looks great on the doorstep.",
+      "3D renders and motion loops of your products for hero banners, ads and product pages.",
   },
   {
     icon: Tag,
     title: "Fair, transparent prices",
     description:
-      "We show the true cost of every product, from materials to labour to shipping.",
+      "Fixed project quotes and simple one-time prices in the Designali store. No hidden fees.",
   },
   {
     icon: Headphones,
     title: "Real human support",
     description:
-      "Chat with our customer care team seven days a week. Average reply time is eight minutes.",
+      "Questions about a template or a project go straight to Ali at support@designali.com.",
   },
   {
     icon: Gift,
-    title: "Gift wrapping",
+    title: "Instant download",
     description:
-      "Add a handwritten note and gift wrap at checkout for any occasion, completely free.",
+      "Store purchases are available right away, with code, docs and Figma files in one place.",
   },
 ]
 
 const stats = [
-  { value: "100%", label: "Plastic-free packaging" },
-  { value: "32", label: "Countries we ship to" },
-  { value: "1%", label: "Of revenue to climate projects" },
-  { value: "250k+", label: "Happy customers" },
+  { value: "100%", label: "CGI product renders" },
+  { value: "2300+", label: "UI design examples" },
+  { value: "240+", label: "Landing pages" },
+  { value: "460+", label: "Blocks in the store" },
 ]
 
 const steps = [
   {
-    title: "Designed in house",
+    title: "Designed in Figma",
     description:
-      "Our small design team develops every product over months of testing and refinement.",
+      "Every template, block and store starts as a carefully considered design by Ali Imam.",
   },
   {
-    title: "Made by experts",
+    title: "Coded in Next.js",
     description:
-      "Crafted by family-run workshops we have partnered with for years, paid fairly for their skill.",
+      "Designs become typed React and Tailwind CSS code, using semantic tokens and accessible components.",
   },
   {
     title: "Checked by hand",
     description:
-      "Every piece is inspected before it leaves our warehouse, so only the best reaches you.",
+      "Every page is reviewed on real devices in light and dark mode before it ships.",
   },
   {
     title: "Delivered to you",
     description:
-      "Packed in plastic-free materials and shipped carbon-neutral, with tracking from door to door.",
+      "Download from designali.com or receive your finished store, ready to deploy on Vercel.",
   },
 ]
 
 const showcase = [
   {
-    name: "The Everyday Tote",
-    meta: "Waxed canvas, 3 colours",
+    name: "Portfolio Template",
+    meta: "Next.js · Light and dark",
     tag: "Bestseller",
-    price: "$98",
+    price: "$49",
     tile: "bg-gradient-to-br from-rose-200 via-pink-300 to-purple-300 dark:from-rose-700 dark:via-pink-800 dark:to-purple-900",
   },
   {
-    name: "Merino Crew Sweater",
-    meta: "Extra-fine merino, 6 colours",
+    name: "Design Agency Template",
+    meta: "Next.js · Figma file included",
     tag: "New",
-    price: "$120",
+    price: "$79",
     tile: "bg-gradient-to-br from-blue-200 via-indigo-300 to-violet-400 dark:from-blue-700 dark:via-indigo-800 dark:to-violet-900",
   },
   {
-    name: "Ceramic Pour-Over Set",
-    meta: "Hand-glazed stoneware",
-    tag: "Limited",
-    price: "$64",
+    name: "Pro Blocks Bundle",
+    meta: "460+ copy-paste sections",
+    tag: "Bundle",
+    price: "$99",
     tile: "bg-gradient-to-br from-yellow-100 via-amber-200 to-orange-300 dark:from-yellow-700 dark:via-amber-800 dark:to-orange-900",
   },
   {
-    name: "Linen Bedding Bundle",
-    meta: "Stonewashed European flax",
+    name: "AI Startup Template",
+    meta: "Next.js · Tailwind CSS",
     tag: "Bestseller",
-    price: "$240",
+    price: "$69",
     tile: "bg-gradient-to-br from-amber-200 via-orange-300 to-rose-400 dark:from-amber-700 dark:via-orange-800 dark:to-rose-900",
   },
   {
-    name: "Leather Card Wallet",
-    meta: "Vegetable-tanned leather",
-    tag: "Gift idea",
-    price: "$45",
+    name: "Apple Device Mockups",
+    meta: "iPhone, iPad, MacBook and iMac",
+    tag: "Component",
+    price: "$29",
     tile: "bg-gradient-to-br from-sky-200 via-cyan-300 to-teal-400 dark:from-sky-700 dark:via-cyan-800 dark:to-teal-900",
   },
   {
-    name: "Wool Throw Blanket",
-    meta: "Woven in Portugal",
-    tag: "Back in stock",
-    price: "$135",
+    name: "Resort Template",
+    meta: "Hospitality landing page",
+    tag: "Updated",
+    price: "$59",
     tile: "bg-gradient-to-br from-violet-200 via-purple-300 to-fuchsia-400 dark:from-violet-700 dark:via-purple-800 dark:to-fuchsia-900",
   },
 ]
@@ -138,99 +139,99 @@ const showcase = [
 const testimonials = [
   {
     quote:
-      "Two years in and it still looks brand new. Worth every penny and then some.",
-    name: "Rachel Adams",
-    role: "Verified buyer",
+      "Two years in and our storefront still looks brand new. Worth every penny and then some.",
+    name: "Rachel A.",
+    role: "Verified designali.com customer",
   },
   {
     quote:
-      "Love knowing exactly where my things are made and who made them. More brands should be this honest.",
-    name: "Daniel Kim",
-    role: "Verified buyer",
+      "Love that one person designs and codes everything. The details in the product pages are on another level.",
+    name: "Daniel K.",
+    role: "Verified designali.com customer",
   },
   {
     quote:
-      "Customer service sorted a delivery issue in minutes over chat. Genuinely the best experience I have had online.",
-    name: "Sophie Laurent",
-    role: "Verified buyer",
+      "The CGI product renders Designali made for our launch looked better than any photo shoot we had done.",
+    name: "Sophie L.",
+    role: "Verified designali.com customer",
   },
 ]
 
 const tiers = [
   {
-    name: "Guest",
-    price: "Free",
+    name: "Free",
+    price: "$0",
     period: "",
-    description: "Shop any time, no account needed.",
+    description: "Free blocks and UI examples, no account needed.",
     features: [
-      "Free shipping over $75",
-      "60-day returns",
-      "Order tracking",
+      "Store design and build",
+      "Own every file",
+      "Free blocks and icons",
       "Email support",
     ],
-    cta: "Start shopping",
+    cta: "Browse free",
   },
   {
-    name: "Member",
-    price: "$49",
-    period: "/year",
-    description: "For people who shop with us often.",
+    name: "Pro",
+    price: "$149",
+    period: "/one-time",
+    description: "The full Designali library for your own and client projects.",
     features: [
-      "10% off every order",
-      "Free shipping on everything",
+      "All 460+ blocks",
+      "All premium templates",
       "Early access to new drops",
-      "Free returns for life",
-      "Birthday gift",
+      "Lifetime updates",
+      "Figma source files",
     ],
-    cta: "Become a member",
+    cta: "Get Pro",
   },
   {
-    name: "Wholesale",
+    name: "Store build",
     price: "Custom",
     period: "",
-    description: "For retailers, hotels and corporate gifting.",
+    description: "A custom online store designed and built by Designali.",
     features: [
-      "Volume pricing",
-      "Custom branding",
-      "Dedicated account manager",
-      "Net-30 payment terms",
+      "Brand identity and UI/UX",
+      "Next.js storefront",
+      "Work directly with Ali Imam",
+      "Launch support on Vercel",
     ],
-    cta: "Enquire now",
+    cta: "Start a project",
   },
 ]
 
 const faqs = [
   {
-    q: "How do I care for my products?",
-    a: "Every order includes a care card, and detailed guides for each material are available in our journal.",
+    q: "How do I customise a template?",
+    a: "Every template includes docs, and detailed guides for theming and components are on designali.com/docs.",
   },
   {
-    q: "Can I change or cancel my order?",
-    a: "Yes, within one hour of placing it. After that it is usually already being packed, but our team will do its best.",
+    q: "Can I change the scope of a project?",
+    a: "Yes. Scope is agreed up front and any changes are priced clearly before work continues.",
   },
   {
-    q: "Do you offer gift cards?",
-    a: "Digital gift cards are available from $25 to $500 and never expire.",
+    q: "Can I use templates for client work?",
+    a: "Yes. Pro licenses cover personal and commercial projects, including work you deliver to clients.",
   },
   {
-    q: "How long does shipping take?",
-    a: "Orders are dispatched within 48 hours. Domestic delivery takes two to four working days and international seven to ten.",
+    q: "How fast do I get my files?",
+    a: "Store purchases are instant. A custom store build usually takes six to ten weeks from kickoff to launch.",
   },
   {
-    q: "What is your return policy?",
-    a: "You can return any unused item within 60 days for a full refund. Return labels are free for members.",
+    q: "What is your refund policy?",
+    a: "Digital products are covered by the terms at designali.com/docs/legal/terms. If something is broken, we fix it.",
   },
 ]
 
 const footer = [
   {
-    title: "Shop",
-    links: ["New arrivals", "Bestsellers", "Gift cards", "Sale"],
+    title: "Store",
+    links: ["Templates", "Blocks", "Pages", "Icons"],
   },
-  { title: "Help", links: ["Shipping", "Returns", "Size guide", "Contact us"] },
+  { title: "Help", links: ["Docs", "Licensing", "Pricing", "Contact us"] },
   {
     title: "About",
-    links: ["Our story", "Makers", "Sustainability", "Journal"],
+    links: ["Work", "Ali Imam", "Instagram", "Blog"],
   },
 ]
 
@@ -243,10 +244,8 @@ export default function LandingEcommerce04() {
             href="#"
             className="flex items-center gap-2 font-semibold tracking-tight"
           >
-            <span className="flex size-7 items-center justify-center rounded-md bg-orange-600 text-white text-sm">
-              L
-            </span>
-            <span className="">Lumi Skin</span>
+            <Logo className="h-5 w-auto" />
+            <span className="">designali</span>
           </a>
           <nav className="hidden items-center gap-7 text-sm md:flex">
             {navLinks.map((link) => (
@@ -270,7 +269,7 @@ export default function LandingEcommerce04() {
               Cart (0)
             </Button>
             <Button size="sm" nativeButton={false} render={<a href="#" />}>
-              Find your routine
+              Start a project
             </Button>
           </div>
         </div>
@@ -280,21 +279,20 @@ export default function LandingEcommerce04() {
           <div className="mx-auto max-w-3xl space-y-6 text-center">
             <span className="inline-flex items-center gap-2 rounded-full border bg-background text-muted-foreground px-3 py-1 text-xs font-medium">
               <Sparkles className="size-3.5 text-orange-600 dark:text-orange-400" />
-              Dermatologist developed
+              Designali for beauty brands
             </span>
             <h1 className="text-4xl leading-[1.05] font-semibold tracking-tight text-balance sm:text-5xl md:text-6xl ">
-              {"Skincare that keeps it "}
+              {"Beauty stores that keep it "}
               <span className="text-orange-600 dark:text-orange-400">
                 simple
               </span>
             </h1>
             <p className="mx-auto max-w-2xl text-lg leading-8 text-muted-foreground">
-              Lumi Skin makes a short routine of fragrance-free essentials,
-              clinically tested on sensitive skin and priced honestly.
+              Designali designs clean, minimal skincare and beauty stores with product quizzes, routine builders and honest product pages.
             </p>
             <div className="flex flex-wrap gap-3 justify-center">
               <Button size="lg" nativeButton={false} render={<a href="#" />}>
-                Find your routine
+                Start a project
                 <ArrowRight />
               </Button>
               <Button
@@ -303,7 +301,7 @@ export default function LandingEcommerce04() {
                 nativeButton={false}
                 render={<a href="#" />}
               >
-                Take the skin quiz
+                See case studies
               </Button>
             </div>
           </div>
@@ -330,7 +328,7 @@ export default function LandingEcommerce04() {
       <section className="border-b">
         <div className="mx-auto max-w-7xl px-6 py-12">
           <p className="text-center text-sm text-muted-foreground">
-            As featured in
+            Designed in Figma, built with
           </p>
           <div className="mt-8 grid grid-cols-2 items-center gap-x-8 gap-y-6 sm:grid-cols-4 lg:grid-cols-8">
             {logos.map((logo) => (
@@ -348,14 +346,13 @@ export default function LandingEcommerce04() {
         <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
           <div className="mx-auto max-w-2xl text-center">
             <p className="text-sm font-medium text-orange-600 dark:text-orange-400">
-              Why shop with us
+              Why work with Designali
             </p>
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl  mt-3">
-              Made better, delivered faster
+              Designed better, shipped faster
             </h2>
             <p className="mt-4 text-lg leading-8 text-muted-foreground">
-              We work directly with the makers, skip the middlemen and pass the
-              savings on, without ever cutting corners on quality.
+              Where thoughtful design meets production-ready code. One studio from brand to checkout, without hand-off gaps.
             </p>
           </div>
           <div className="mt-14 grid gap-3 md:grid-cols-3">
@@ -387,11 +384,10 @@ export default function LandingEcommerce04() {
           <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
             <div className="max-w-2xl">
               <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl">
-                Bestsellers this week
+                Bestsellers in the Designali store
               </h2>
               <p className="mt-4 text-lg leading-8 text-muted-foreground">
-                The pieces our customers keep coming back for. Free shipping on
-                every order over $75.
+                The templates and bundles developers and founders keep coming back for. Instant download.
               </p>
             </div>
             <Button
@@ -434,7 +430,7 @@ export default function LandingEcommerce04() {
         <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl">
-              Thousands of five-star reviews
+              What customers and clients say
             </h2>
           </div>
           <div className="mt-14 grid gap-4 md:grid-cols-3">
@@ -472,7 +468,7 @@ export default function LandingEcommerce04() {
         <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl">
-              From our workshop to your door
+              From Figma to your storefront
             </h2>
           </div>
           <ol className="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
@@ -497,11 +493,10 @@ export default function LandingEcommerce04() {
         <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl">
-              Join the members club
+              Pick your plan
             </h2>
             <p className="mt-4 text-lg leading-8 text-muted-foreground">
-              Members save on every order, get early access to drops and enjoy
-              free returns for life.
+              Start with free blocks, unlock the full library with Pro or have Designali build your store.
             </p>
           </div>
           <div className="mx-auto mt-14 grid max-w-6xl items-start gap-6 lg:grid-cols-3">
@@ -555,7 +550,7 @@ export default function LandingEcommerce04() {
         <div className="mx-auto grid max-w-7xl gap-12 px-6 py-20 md:py-28 lg:grid-cols-[1fr_1.5fr]">
           <div className="lg:sticky lg:top-24 lg:self-start">
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl">
-              Shipping, returns and more
+              Downloads, licensing and projects
             </h2>
             <p className="mt-4 text-muted-foreground">
               Still curious?{" "}
@@ -563,7 +558,7 @@ export default function LandingEcommerce04() {
                 href="#"
                 className="font-medium text-foreground underline underline-offset-4"
               >
-                Get in touch
+                Email hello@designali.com
               </a>
               .
             </p>
@@ -588,14 +583,14 @@ export default function LandingEcommerce04() {
           <div className="pointer-events-none absolute -top-24 left-1/2 size-96 -translate-x-1/2 rounded-full bg-gradient-to-b from-orange-500/25 via-amber-500/10 to-transparent blur-3xl" />
           <div className="relative mx-auto max-w-2xl space-y-6">
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl">
-              Healthier skin in three simple steps
+              A better store in three simple steps
             </h2>
             <p className="text-lg text-muted-foreground">
-              Take our two-minute quiz and get a routine matched to your skin.
+              Book a call, approve the design and launch your new store.
             </p>
             <div className="flex flex-wrap gap-3 justify-center">
               <Button size="lg" nativeButton={false} render={<a href="#" />}>
-                Find your routine
+                Start a project
                 <ArrowRight />
               </Button>
               <Button
@@ -604,7 +599,7 @@ export default function LandingEcommerce04() {
                 nativeButton={false}
                 render={<a href="#" />}
               >
-                Take the skin quiz
+                See case studies
               </Button>
             </div>
           </div>
@@ -617,13 +612,11 @@ export default function LandingEcommerce04() {
               href="#"
               className="flex items-center gap-2 font-semibold tracking-tight"
             >
-              <span className="flex size-7 items-center justify-center rounded-md bg-orange-600 text-white text-sm">
-                L
-              </span>
-              <span className="">Lumi Skin</span>
+              <Logo className="h-5 w-auto" />
+              <span className="">designali</span>
             </a>
             <p className="max-w-xs text-sm text-muted-foreground">
-              Clean, simple skincare.
+              Clean, simple storefronts.
             </p>
           </div>
           {footer.map((column) => (
@@ -647,7 +640,7 @@ export default function LandingEcommerce04() {
         <div className="border-t ">
           <div className="mx-auto flex max-w-7xl flex-col justify-between gap-4 px-6 py-6 text-xs text-muted-foreground sm:flex-row">
             <span>
-              © {new Date().getFullYear()} Lumi Skin. All rights reserved.
+              © {new Date().getFullYear()} Designali. All rights reserved.
             </span>
             <div className="flex gap-6">
               <a href="#" className="hover:text-foreground">

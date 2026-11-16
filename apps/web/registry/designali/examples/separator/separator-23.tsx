@@ -1,4 +1,7 @@
-import { CheckIcon, XIcon } from "lucide-react"
+import {
+  Check as CheckIcon,
+  X as XIcon,
+} from "@designali/icons"
 
 import { Separator } from "@workspace/ui/components/separator"
 

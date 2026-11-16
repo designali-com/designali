@@ -1,6 +1,8 @@
 "use client"
 
-import { BellRingIcon } from "lucide-react"
+import {
+  BellRing as BellRingIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Toaster, createToastManager } from "@workspace/ui/components/toast"
@@ -8,8 +10,8 @@ import { Toaster, createToastManager } from "@workspace/ui/components/toast"
 const notify = createToastManager()
 
 const alerts = [
-  "Disk usage on db-primary is above 85%",
-  "SSL certificate for status page expires in 6 days",
+  "Disk usage on designali-db is above 85%",
+  "SSL certificate for designali.com expires in 6 days",
   "3 background jobs failed in the last hour",
 ]
 

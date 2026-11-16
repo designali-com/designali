@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { PauseIcon, PlayIcon } from "lucide-react"
+import {
+  Pause as PauseIcon,
+  Play as PlayIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Slider } from "@workspace/ui/components/slider"
@@ -24,9 +27,9 @@ export default function AudioScrubberSlider() {
         <div className="size-10 shrink-0 bg-gradient-to-br from-amber-400 to-rose-500" />
         <div className="min-w-0 flex-1">
           <div className="truncate text-sm font-medium">
-            Episode 48: Slow Software
+            Episode 48: Design se code tak
           </div>
-          <div className="text-xs text-muted-foreground">The Workbench</div>
+          <div className="text-xs text-muted-foreground">designali</div>
         </div>
         <Button
           size="icon"

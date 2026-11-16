@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { ChevronLeftIcon, ChevronRightIcon } from "lucide-react"
+import {
+  ChevronLeft as ChevronLeftIcon,
+  ChevronRight as ChevronRightIcon,
+} from "@designali/icons"
 
 import {
   Pagination,
@@ -13,13 +16,13 @@ import { cn } from "@workspace/ui/lib/utils"
 
 const shots = [
   {
-    title: "Dune ridge at dawn",
+    title: "Colorful spheres (CGI)",
     tone: "from-orange-300 via-rose-300 to-purple-400",
   },
-  { title: "Glacier lagoon", tone: "from-cyan-200 via-sky-300 to-blue-500" },
-  { title: "Pine valley", tone: "from-emerald-300 via-green-400 to-teal-600" },
+  { title: "Abstract fluid (motion)", tone: "from-cyan-200 via-sky-300 to-blue-500" },
+  { title: "Dalim Visuals render", tone: "from-emerald-300 via-green-400 to-teal-600" },
   {
-    title: "Desert bloom",
+    title: "Designali brand study",
     tone: "from-yellow-200 via-amber-300 to-orange-400",
   },
 ]

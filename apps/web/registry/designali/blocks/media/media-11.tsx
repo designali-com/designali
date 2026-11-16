@@ -1,19 +1,24 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { Pause, Play, Rewind, FastForward } from "lucide-react"
+import {
+  Pause,
+  Play,
+  Rewind,
+  FastForward,
+} from "@designali/icons"
 
 import { cn } from "@workspace/ui/lib/utils"
 
 const segments = [
-  { at: 0, speaker: "Ada", text: "Welcome back to Small Batch, the show about people who build things slowly on purpose. I'm Ada." },
-  { at: 9, speaker: "Ada", text: "Today I'm with Rafael, who has been running a two-person bicycle frame shop for eleven years." },
-  { at: 18, speaker: "Rafael", text: "Thanks for having me. Eleven and a half, technically, but who's counting." },
-  { at: 25, speaker: "Ada", text: "Let's start with the waitlist. You have, what, fourteen months of orders?" },
-  { at: 32, speaker: "Rafael", text: "Sixteen now. And honestly the waitlist is the hardest part of the business, not the welding." },
-  { at: 42, speaker: "Rafael", text: "People are paying for something they won't touch for over a year. That's an enormous amount of trust." },
-  { at: 52, speaker: "Ada", text: "So how do you keep that trust alive for sixteen months?" },
-  { at: 58, speaker: "Rafael", text: "A photo every month. Their tubes arriving, the mitres, the first tack weld. It costs me an hour a week." },
+  { at: 0, speaker: "Ali", text: "Welcome back to the Designali Podcast, the show about design, code and the space between. I'm Ali Imam." },
+  { at: 9, speaker: "Ali", text: "Today I'm with Rafael, a designer who recently started shipping his own websites in code." },
+  { at: 18, speaker: "Rafael", text: "Thanks for having me. I've been a long-time user of the Designali blocks." },
+  { at: 25, speaker: "Ali", text: "Let's start with the handoff. Why did you stop handing designs to developers?" },
+  { at: 32, speaker: "Rafael", text: "Because the handoff was the hardest part of every project, not the design itself." },
+  { at: 42, speaker: "Rafael", text: "Every time a Figma file became code, something got lost. Spacing, motion, the small details." },
+  { at: 52, speaker: "Ali", text: "That's exactly why I started Designali. Design se code tak, without losing anything." },
+  { at: 58, speaker: "Rafael", text: "Now I start from a block, tweak the tokens and ship. It saves me days on every site." },
 ]
 const DURATION = 70
 const fmt = (s: number) => `${Math.floor(s / 60)}:${String(Math.floor(s) % 60).padStart(2, "0")}`
@@ -36,8 +41,8 @@ export default function Media11() {
         <div className="flex items-center gap-4">
           <div className="size-16 shrink-0 border border-border" style={{ background: "linear-gradient(135deg, var(--chart-3), var(--chart-5))" }} />
           <div className="min-w-0">
-            <p className="text-xs text-muted-foreground">Small Batch - Episode 87</p>
-            <h2 className="truncate text-xl font-semibold tracking-tight md:text-2xl">The sixteen-month waitlist</h2>
+            <p className="text-xs text-muted-foreground">Designali Podcast - Episode 87</p>
+            <h2 className="truncate text-xl font-semibold tracking-tight md:text-2xl">Design se code tak, without the handoff</h2>
           </div>
         </div>
         <div className="sticky top-0 z-10 mt-6 border border-border bg-background/95 p-4 backdrop-blur">

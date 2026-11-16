@@ -2,13 +2,13 @@
 
 import * as React from "react"
 import {
-  InfoIcon,
-  LaptopIcon,
-  LogOutIcon,
-  MoreHorizontalIcon,
-  SmartphoneIcon,
-  TabletIcon,
-} from "lucide-react"
+  Info as InfoIcon,
+  Laptop as LaptopIcon,
+  LogOut as LogOutIcon,
+  Ellipsis as MoreHorizontalIcon,
+  Smartphone as SmartphoneIcon,
+  Tablet as TabletIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {

@@ -1,6 +1,8 @@
 "use client"
 
-import { CopyIcon } from "lucide-react"
+import {
+  Copy as CopyIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Label } from "@workspace/ui/components/label"
@@ -15,7 +17,7 @@ export default function CopyApiKeyToast() {
     notify.add({
       type: "success",
       title: "Copied to clipboard",
-      description: "Keep this key secret.",
+      description: "Keep your Designali API key secret.",
       timeout: 2500,
     })
   }

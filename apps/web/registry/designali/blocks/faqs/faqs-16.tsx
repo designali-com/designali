@@ -1,4 +1,9 @@
-import { CreditCard, LogOut, Rocket, ShoppingCart } from "lucide-react"
+import {
+  CreditCard,
+  LogOut,
+  Rocket,
+  ShoppingCart,
+} from "@designali/icons"
 
 const stages = [
   {

@@ -1,14 +1,16 @@
 "use client"
 
 import * as React from "react"
-import { ChevronRightIcon } from "lucide-react"
+import {
+  ChevronRight as ChevronRightIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import { Toggle } from "@workspace/ui/components/toggle"
 
 const items = [
-  { name: "Linen tote bag", qty: 2, price: "$36.00" },
-  { name: "Beeswax wraps (set of 3)", qty: 1, price: "$18.00" },
+  { name: "Designali Templates", qty: 2, price: "$36.00" },
+  { name: "UI Blocks (lifetime)", qty: 1, price: "$18.00" },
 ]
 
 export default function ExpandableRowToggle() {

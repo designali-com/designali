@@ -1,12 +1,14 @@
-import { ArrowUpRight } from "lucide-react"
+import {
+  ArrowUpRight,
+} from "@designali/icons"
 
 const offices = [
-  { city: "Lisbon", country: "Portugal", role: "Headquarters", address: "Rua da Prata 182, 1100-420", people: 64, utc: "UTC+0", x: 46, y: 38 },
-  { city: "Montreal", country: "Canada", role: "Engineering", address: "4200 Boul. Saint-Laurent", people: 38, utc: "UTC-5", x: 28, y: 30 },
-  { city: "Nairobi", country: "Kenya", role: "Customer success", address: "Westlands Rd, Block C", people: 22, utc: "UTC+3", x: 58, y: 56 },
-  { city: "Singapore", country: "Singapore", role: "APAC sales", address: "71 Robinson Road, #14", people: 27, utc: "UTC+8", x: 77, y: 54 },
-  { city: "Melbourne", country: "Australia", role: "Design studio", address: "12 Flinders Lane", people: 15, utc: "UTC+11", x: 86, y: 76 },
-  { city: "Mexico City", country: "Mexico", role: "Support", address: "Av. Álvaro Obregón 130", people: 19, utc: "UTC-6", x: 22, y: 48 },
+  { city: "Europe", country: "Remote clients", role: "Brand identity", address: "Logos, type and colour systems for growing brands.", people: 64, utc: "UTC+1", x: 48, y: 32 },
+  { city: "North America", country: "Remote clients", role: "Web development", address: "Next.js websites and landing pages.", people: 38, utc: "UTC-5", x: 26, y: 34 },
+  { city: "Middle East", country: "Remote clients", role: "UI/UX design", address: "Product interfaces and design systems.", people: 22, utc: "UTC+4", x: 60, y: 44 },
+  { city: "South Asia", country: "Studio home", role: "Design & code", address: "Where Ali Imam designs and builds Designali.", people: 27, utc: "UTC+5:30", x: 70, y: 48 },
+  { city: "Australia", country: "Remote clients", role: "CGI & motion", address: "3D, CGI and motion for brand launches.", people: 15, utc: "UTC+11", x: 86, y: 76 },
+  { city: "South America", country: "Remote clients", role: "Templates", address: "Designali templates and blocks in production.", people: 19, utc: "UTC-3", x: 32, y: 66 },
 ]
 
 export default function Grid15() {
@@ -15,13 +17,13 @@ export default function Grid15() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="grid gap-10 lg:grid-cols-[1fr_1.2fr] lg:items-center">
           <div>
-            <p className="text-xs tracking-widest text-muted-foreground uppercase">Offices</p>
+            <p className="text-xs tracking-widest text-muted-foreground uppercase">Clients</p>
             <h2 className="mt-3 text-4xl font-semibold tracking-tight md:text-5xl">
-              185 people, six hubs, one shared calendar.
+              Clients worldwide, one studio.
             </h2>
             <p className="mt-4 max-w-md text-sm leading-6 text-muted-foreground">
-              Work from any hub, or from home. Every office has open desks for
-              visiting teammates and a kitchen that takes coffee seriously.
+              Designali works remotely with brands around the world, from first
+              brief to launch. Design se code tak.
             </p>
           </div>
 
@@ -56,11 +58,11 @@ export default function Grid15() {
                 </div>
                 <dl className="grid grid-cols-3 gap-4 border-t border-border pt-4 text-xs">
                   <div>
-                    <dt className="text-muted-foreground">Team</dt>
+                    <dt className="text-muted-foreground">Focus</dt>
                     <dd className="mt-1 font-medium">{office.role}</dd>
                   </div>
                   <div>
-                    <dt className="text-muted-foreground">People</dt>
+                    <dt className="text-muted-foreground">Projects</dt>
                     <dd className="mt-1 font-mono">{office.people}</dd>
                   </div>
                   <div>

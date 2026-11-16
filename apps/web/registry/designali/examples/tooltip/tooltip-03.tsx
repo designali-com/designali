@@ -1,10 +1,10 @@
 import {
-  ImagePlusIcon,
-  MessageSquarePlusIcon,
-  Redo2Icon,
-  TableIcon,
-  Undo2Icon,
-} from "lucide-react"
+  ImagePlus as ImagePlusIcon,
+  MessageSquarePlus as MessageSquarePlusIcon,
+  Redo2 as Redo2Icon,
+  Table as TableIcon,
+  Undo2 as Undo2Icon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {

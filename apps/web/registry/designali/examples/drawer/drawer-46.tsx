@@ -2,13 +2,13 @@
 
 import * as React from "react"
 import {
-  BluetoothIcon,
-  MoonIcon,
-  PlaneIcon,
-  SlidersVerticalIcon,
-  SunIcon,
-  WifiIcon,
-} from "lucide-react"
+  Bluetooth as BluetoothIcon,
+  Moon as MoonIcon,
+  Plane as PlaneIcon,
+  SlidersVertical as SlidersVerticalIcon,
+  Sun as SunIcon,
+  Wifi as WifiIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {

@@ -1,16 +1,18 @@
 "use client"
 
 import * as React from "react"
-import { ZapIcon } from "lucide-react"
+import {
+  Zap as ZapIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Textarea } from "@workspace/ui/components/textarea"
 
 const templates = [
-  { label: "Greeting", text: "Hi there, thanks for reaching out! " },
+  { label: "Greeting", text: "Hi there, thanks for reaching out to Designali! " },
   {
     label: "Refund",
-    text: "I've issued a full refund, it should appear within 5 business days. ",
+    text: "I've issued a full refund for your Designali template, it should appear within 5 business days. ",
   },
   {
     label: "Closing",
@@ -40,7 +42,7 @@ export default function QuickReplyTemplates() {
         value={value}
         onChange={(e) => setValue(e.target.value)}
         className="min-h-24"
-        placeholder="Reply to Hana…"
+        placeholder="Reply to the Designali customer…"
         aria-label="Reply"
       />
       <div className="flex justify-end">

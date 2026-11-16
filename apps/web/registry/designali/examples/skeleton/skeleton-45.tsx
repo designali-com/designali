@@ -1,10 +1,10 @@
 import {
-  BookmarkIcon,
-  HeartIcon,
-  MessageCircleIcon,
-  MoreHorizontalIcon,
-  RepeatIcon,
-} from "lucide-react"
+  Bookmark as BookmarkIcon,
+  Heart as HeartIcon,
+  MessageCircle as MessageCircleIcon,
+  Ellipsis as MoreHorizontalIcon,
+  Repeat as RepeatIcon,
+} from "@designali/icons"
 
 import { Skeleton } from "@workspace/ui/components/skeleton"
 

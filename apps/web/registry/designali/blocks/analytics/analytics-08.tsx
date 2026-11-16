@@ -1,5 +1,5 @@
 const gauges = [
-  { name: "API availability", value: 99.97, target: 99.95, unit: "%", min: 99, max: 100 },
+  { name: "designali.com availability", value: 99.97, target: 99.95, unit: "%", min: 99, max: 100 },
   { name: "Checkout latency p95", value: 412, target: 500, unit: "ms", min: 0, max: 800, lowerIsBetter: true },
   { name: "Error budget left", value: 63, target: 25, unit: "%", min: 0, max: 100 },
 ]
@@ -36,11 +36,11 @@ export default function Analytics08() {
             Service level objectives
           </p>
           <h2 className="mt-3 text-3xl font-medium tracking-tight md:text-4xl">
-            Northwind Pay reliability, rolling 30 days
+            designali.com reliability, rolling 30 days
           </h2>
           <p className="mt-4 text-muted-foreground">
-            Every objective is measured at the load balancer and published to
-            customers without smoothing or exclusions.
+            Every objective is measured at the Vercel edge and published to
+            Designali customers without smoothing or exclusions.
           </p>
         </div>
 

@@ -1,12 +1,12 @@
 import {
-  BugIcon,
-  EyeIcon,
-  FlameIcon,
-  GitCommitHorizontalIcon,
-  GraduationCapIcon,
-  LockIcon,
-  MoonIcon,
-} from "lucide-react"
+  Bug as BugIcon,
+  Eye as EyeIcon,
+  Flame as FlameIcon,
+  GitCommitHorizontal as GitCommitHorizontalIcon,
+  GraduationCap as GraduationCapIcon,
+  Lock as LockIcon,
+  Moon as MoonIcon,
+} from "@designali/icons"
 
 import {
   Carousel,
@@ -17,11 +17,11 @@ import { Progress } from "@workspace/ui/components/progress"
 import { cn } from "@workspace/ui/lib/utils"
 
 const badges = [
-  { name: "First commit", icon: GitCommitHorizontalIcon, state: "earned" },
+  { name: "First block", icon: GitCommitHorizontalIcon, state: "earned" },
   { name: "7-day streak", icon: FlameIcon, state: "earned" },
   { name: "Bug hunter", icon: BugIcon, state: "earned" },
   { name: "Reviewer", icon: EyeIcon, state: "progress", value: 60 },
-  { name: "Mentor", icon: GraduationCapIcon, state: "locked" },
+  { name: "Designali Pro", icon: GraduationCapIcon, state: "locked" },
   { name: "Night owl", icon: MoonIcon, state: "locked" },
 ]
 
@@ -29,7 +29,7 @@ export default function AchievementBadgesRail() {
   return (
     <div className="w-full max-w-sm">
       <div className="mb-2 flex items-center justify-between">
-        <span className="text-sm font-medium">Achievements</span>
+        <span className="text-sm font-medium">Designali achievements</span>
         <span className="text-xs text-muted-foreground">3 of 6 earned</span>
       </div>
       <Carousel opts={{ dragFree: true, align: "start" }}>

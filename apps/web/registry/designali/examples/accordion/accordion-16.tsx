@@ -1,9 +1,9 @@
 import {
-  ArrowRightIcon,
-  ChevronDownIcon,
-  CircleCheckIcon,
-  CircleIcon,
-} from "lucide-react"
+  ArrowRight as ArrowRightIcon,
+  ChevronDown as ChevronDownIcon,
+  CircleCheck as CircleCheckIcon,
+  Circle as CircleIcon,
+} from "@designali/icons"
 
 import {
   Accordion,
@@ -20,25 +20,25 @@ const steps = [
     value: "profile",
     title: "Complete your profile",
     done: true,
-    body: "Add a photo and job title so teammates recognise you.",
+    body: "Add your name and studio so Designali can tailor recommendations.",
   },
   {
     value: "invite",
-    title: "Invite your team",
+    title: "Download your first template",
     done: true,
-    body: "Workspaces with three or more members get the most out of shared boards.",
+    body: "Pick a Designali template and run it locally with Next.js.",
   },
   {
     value: "connect",
-    title: "Connect your calendar",
+    title: "Install @designali/icons",
     done: false,
-    body: "Sync meetings so action items land on the right board automatically.",
+    body: "Add 4000+ icons to your project with a single install.",
   },
   {
     value: "board",
-    title: "Create your first board",
+    title: "Deploy to Vercel",
     done: false,
-    body: "Start from a template or a blank board and add a few cards.",
+    body: "Push your project live — design se code tak.",
   },
 ]
 
@@ -49,7 +49,7 @@ export default function AccordionOnboardingChecklist() {
     <div className="w-full max-w-md border">
       <div className="space-y-2 border-b p-3">
         <div className="flex items-center justify-between text-xs">
-          <span className="font-medium">Set up your workspace</span>
+          <span className="font-medium">Set up your Designali project</span>
           <span className="text-muted-foreground">
             {done}/{steps.length} done
           </span>

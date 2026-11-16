@@ -1,9 +1,9 @@
 import {
-  SignalHighIcon,
-  SignalLowIcon,
-  SignalMediumIcon,
-  SirenIcon,
-} from "lucide-react"
+  SignalHigh as SignalHighIcon,
+  SignalLow as SignalLowIcon,
+  SignalMedium as SignalMediumIcon,
+  Siren as SirenIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 

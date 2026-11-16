@@ -1,11 +1,11 @@
 import {
-  CarIcon,
-  CoffeeIcon,
-  DumbbellIcon,
-  PawPrintIcon,
-  WavesIcon,
-  WifiIcon,
-} from "lucide-react"
+  Car as CarIcon,
+  Coffee as CoffeeIcon,
+  Dumbbell as DumbbellIcon,
+  PawPrint as PawPrintIcon,
+  Waves as WavesIcon,
+  Wifi as WifiIcon,
+} from "@designali/icons"
 
 import { Toggle } from "@workspace/ui/components/toggle"
 

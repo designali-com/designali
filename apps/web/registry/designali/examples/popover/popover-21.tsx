@@ -1,7 +1,12 @@
 "use client"
 
 import * as React from "react"
-import { BellRingIcon, HashIcon, MailIcon, SmartphoneIcon } from "lucide-react"
+import {
+  BellRing as BellRingIcon,
+  Hash as HashIcon,
+  Mail as MailIcon,
+  Smartphone as SmartphoneIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Label } from "@workspace/ui/components/label"
@@ -31,7 +36,7 @@ const channels = [
   {
     id: "slack",
     label: "Chat app",
-    description: "Alerts in #ops-alerts",
+    description: "Alerts in #designali-alerts",
     icon: HashIcon,
   },
 ]

@@ -1,7 +1,12 @@
 "use client"
 
 import * as React from "react"
-import { HeartIcon, ShirtIcon, ShoppingBagIcon, StarIcon } from "lucide-react"
+import {
+  Heart as HeartIcon,
+  LayoutTemplate as ShirtIcon,
+  ShoppingBag as ShoppingBagIcon,
+  Star as StarIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import { Button } from "@workspace/ui/components/button"
@@ -16,13 +21,13 @@ import {
 import { cn } from "@workspace/ui/lib/utils"
 
 const colors = [
-  { name: "Sand", className: "bg-amber-200" },
-  { name: "Sage", className: "bg-emerald-300" },
-  { name: "Slate", className: "bg-slate-500" },
+  { name: "Light", className: "bg-amber-200" },
+  { name: "Accent", className: "bg-emerald-300" },
+  { name: "Dark", className: "bg-slate-500" },
 ]
 
 export default function ProductCard() {
-  const [color, setColor] = React.useState("Sand")
+  const [color, setColor] = React.useState("Light")
 
   return (
     <Card className="w-full max-w-64 pt-0">
@@ -35,14 +40,14 @@ export default function ProductCard() {
         <Button
           variant="secondary"
           size="icon-sm"
-          aria-label="Save to wishlist"
+          aria-label="Save to favorites"
           className="absolute end-3 top-3"
         >
           <HeartIcon />
         </Button>
       </div>
       <CardHeader>
-        <CardTitle>Everyday Linen Shirt</CardTitle>
+        <CardTitle>Portfolio Simple Template</CardTitle>
         <CardDescription className="flex items-center gap-1">
           <StarIcon className="size-3 fill-amber-400 text-amber-400" /> 4.7 ·
           312 reviews
@@ -73,7 +78,7 @@ export default function ProductCard() {
       <CardFooter>
         <Button className="w-full">
           <ShoppingBagIcon data-icon="inline-start" />
-          Add to bag
+          Add to cart
         </Button>
       </CardFooter>
     </Card>

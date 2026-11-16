@@ -2,7 +2,9 @@
 
 import * as React from "react"
 import { addDays, format, isWeekend } from "date-fns"
-import { TruckIcon } from "lucide-react"
+import {
+  Truck as TruckIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Calendar } from "@workspace/ui/components/calendar"
@@ -33,10 +35,10 @@ export default function DeliveryDateCheckout() {
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
           <TruckIcon className="size-4 text-muted-foreground" />
-          Choose delivery date
+          Choose handoff date
         </CardTitle>
         <CardDescription>
-          Weekdays only. Couriers are off on public holidays.
+          Weekdays only. The Designali studio is closed on public holidays.
         </CardDescription>
       </CardHeader>
       <CardContent className="flex justify-center">
@@ -56,7 +58,7 @@ export default function DeliveryDateCheckout() {
       </CardContent>
       <CardFooter className="justify-between gap-2">
         <div className="grid gap-0.5">
-          <span className="text-muted-foreground">Arrives</span>
+          <span className="text-muted-foreground">Files delivered</span>
           <span className="font-medium">
             {date ? format(date, "EEEE, MMM d") : "No date selected"}
           </span>

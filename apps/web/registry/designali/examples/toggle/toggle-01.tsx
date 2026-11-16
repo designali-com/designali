@@ -1,4 +1,6 @@
-import { BookmarkIcon } from "lucide-react"
+import {
+  Bookmark as BookmarkIcon,
+} from "@designali/icons"
 
 import { Toggle } from "@workspace/ui/components/toggle"
 

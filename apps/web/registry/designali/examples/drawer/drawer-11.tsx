@@ -1,8 +1,14 @@
 "use client"
 
-import { UserPenIcon } from "lucide-react"
+import {
+  UserPen as UserPenIcon,
+} from "@designali/icons"
 
-import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from "@workspace/ui/components/avatar"
 import { Button } from "@workspace/ui/components/button"
 import {
   Drawer,
@@ -44,7 +50,8 @@ export default function EditProfileSideDrawer() {
           <FieldGroup className="flex-1 overflow-y-auto p-4">
             <div className="flex items-center gap-3">
               <Avatar size="lg">
-                <AvatarFallback>LM</AvatarFallback>
+                <AvatarImage src="/ali.jpg" alt="Ali Imam" />
+                <AvatarFallback>AI</AvatarFallback>
               </Avatar>
               <Button variant="outline" size="sm" type="button">
                 Change
@@ -53,22 +60,22 @@ export default function EditProfileSideDrawer() {
             <div className="grid grid-cols-2 gap-3">
               <Field>
                 <FieldLabel htmlFor="pf-first">First name</FieldLabel>
-                <Input id="pf-first" defaultValue="Leila" />
+                <Input id="pf-first" defaultValue="Ali" />
               </Field>
               <Field>
                 <FieldLabel htmlFor="pf-last">Last name</FieldLabel>
-                <Input id="pf-last" defaultValue="Moradi" />
+                <Input id="pf-last" defaultValue="Imam" />
               </Field>
             </div>
             <Field>
               <FieldLabel htmlFor="pf-title">Job title</FieldLabel>
-              <Input id="pf-title" defaultValue="Staff Product Designer" />
+              <Input id="pf-title" defaultValue="Founder, Design Engineer" />
             </Field>
             <Field>
               <FieldLabel htmlFor="pf-bio">Bio</FieldLabel>
               <Textarea
                 id="pf-bio"
-                defaultValue="Designing calm software for busy teams. Based in Lisbon."
+                defaultValue="I design and build digital experiences at Designali. Design se code tak."
               />
               <FieldDescription>Max 160 characters.</FieldDescription>
             </Field>

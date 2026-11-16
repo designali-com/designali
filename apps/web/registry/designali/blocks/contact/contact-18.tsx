@@ -1,13 +1,15 @@
 "use client"
 
 import { useState } from "react"
-import { Check } from "lucide-react"
+import {
+  Check,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Textarea } from "@workspace/ui/components/textarea"
 import { cn } from "@workspace/ui/lib/utils"
 
-const tags = ["Speed", "Reliability", "Pricing", "Design", "Docs", "Support"]
+const tags = ["Blocks", "Templates", "Icons", "Design", "Docs", "Support"]
 
 export default function Contact18() {
   const [score, setScore] = useState<number | null>(null)
@@ -32,7 +34,7 @@ export default function Contact18() {
               <Check className="size-8 text-emerald-600 dark:text-emerald-400" />
               <h2 className="mt-4 text-2xl font-semibold">Feedback received</h2>
               <p className="mt-2 text-sm text-muted-foreground">
-                The Pathwise product team reads every response on Fridays.
+                The Designali studio reads every response on Fridays.
               </p>
             </div>
           ) : (
@@ -46,7 +48,7 @@ export default function Contact18() {
                 Feedback
               </p>
               <h2 className="mt-3 text-2xl font-semibold tracking-tight md:text-3xl">
-                How likely are you to recommend Pathwise to a colleague?
+                How likely are you to recommend Designali to a colleague?
               </h2>
 
               <div className="mt-8 grid grid-cols-6 gap-1.5 sm:grid-cols-11">

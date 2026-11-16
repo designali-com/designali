@@ -12,9 +12,9 @@ import {
 import { cn } from "@workspace/ui/lib/utils"
 
 const steps = [
-  "Create workspace",
+  "Create your designali account",
   "Invite your team",
-  "Connect a data source",
+  "Install @designali/icons",
   "Pick a template",
 ]
 

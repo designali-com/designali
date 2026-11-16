@@ -1,10 +1,10 @@
 import {
-  CarrotIcon,
-  ChevronDownIcon,
-  ClockIcon,
-  CookingPotIcon,
-  UsersIcon,
-} from "lucide-react"
+  Carrot as CarrotIcon,
+  ChevronDown as ChevronDownIcon,
+  Clock as ClockIcon,
+  CookingPot as CookingPotIcon,
+  Users as UsersIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -21,29 +21,29 @@ import {
 } from "@workspace/ui/components/collapsible"
 
 const ingredients = [
-  "2 cups arborio rice",
-  "1 litre vegetable stock",
-  "200 g chestnut mushrooms",
-  "1 shallot, diced",
-  "40 g parmesan",
+  "Logo mark and wordmark",
+  "Colour palette and type scale",
+  "Icon set from @designali/icons",
+  "Figma brand guidelines",
+  "Next.js landing page",
 ]
 const steps = [
-  "Soften the shallot in butter over a low heat.",
-  "Toast the rice for two minutes, then add stock a ladle at a time.",
-  "Fold in the seared mushrooms and parmesan, rest for two minutes.",
+  "Discovery call with Ali Imam to define the brand.",
+  "Explore logo directions, then refine one in Figma.",
+  "Hand off the design system and ship the site to Vercel.",
 ]
 
 export default function RecipeSections() {
   return (
     <Card className="w-full max-w-sm gap-3">
       <CardHeader>
-        <CardTitle>Mushroom risotto</CardTitle>
+        <CardTitle>Brand identity sprint</CardTitle>
         <CardDescription className="flex gap-3">
           <span className="flex items-center gap-1">
-            <ClockIcon className="size-3.5" /> 35 min
+            <ClockIcon className="size-3.5" /> 2 weeks
           </span>
           <span className="flex items-center gap-1">
-            <UsersIcon className="size-3.5" /> Serves 4
+            <UsersIcon className="size-3.5" /> Team of 2
           </span>
         </CardDescription>
       </CardHeader>
@@ -59,7 +59,7 @@ export default function RecipeSections() {
             }
           >
             <CarrotIcon />
-            Ingredients
+            Deliverables
             <ChevronDownIcon className="ml-auto transition-transform group-data-panel-open/button:rotate-180" />
           </CollapsibleTrigger>
           <CollapsibleContent className="h-(--collapsible-panel-height) overflow-hidden transition-[height] duration-200 ease-out data-ending-style:h-0 data-starting-style:h-0">
@@ -81,7 +81,7 @@ export default function RecipeSections() {
             }
           >
             <CookingPotIcon />
-            Method
+            Process
             <ChevronDownIcon className="ml-auto transition-transform group-data-panel-open/button:rotate-180" />
           </CollapsibleTrigger>
           <CollapsibleContent className="h-(--collapsible-panel-height) overflow-hidden transition-[height] duration-200 ease-out data-ending-style:h-0 data-starting-style:h-0">

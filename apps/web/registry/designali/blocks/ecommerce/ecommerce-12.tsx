@@ -1,7 +1,11 @@
 "use client"
 
 import { useState } from "react"
-import { BadgeCheck, Star, ThumbsUp } from "lucide-react"
+import {
+  BadgeCheck,
+  Star,
+  ThumbsUp,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { cn } from "@workspace/ui/lib/utils"
@@ -15,10 +19,10 @@ const distribution = [
 ]
 
 const reviews = [
-  { name: "Tomasz W.", initials: "TW", rating: 5, date: "2 Nov 2026", title: "Finally a pack that fits a 16-inch laptop and lunch", body: "Commute is 40 minutes each way on the bike. Stayed dry through two proper downpours and the back panel does not turn into a sauna.", fit: "Torso: Regular", helpful: 48 },
-  { name: "Aisha R.", initials: "AR", rating: 4, date: "28 Oct 2026", title: "Great build, side pocket is a bit tight", body: "Materials feel excellent and the roll-top is easy one-handed. My 750ml bottle only just fits in the side pocket, which is the only reason for four stars.", fit: "Torso: Short", helpful: 21 },
-  { name: "Lena K.", initials: "LK", rating: 5, date: "19 Oct 2026", title: "Replaced my old pack after eight years", body: "Carried this through a week of hut-to-hut walking. Hip belt pockets fit my phone, and the strap adjustments stay put.", fit: "Torso: Long", helpful: 17 },
-  { name: "Marcus O.", initials: "MO", rating: 3, date: "4 Oct 2026", title: "Solid, but heavier than I expected", body: "It is built like a tank. If you want ultralight this is not it, but for daily abuse I have no complaints.", fit: "Torso: Regular", helpful: 9 },
+  { name: "Tomasz W.", initials: "TW", rating: 5, date: "2 Nov 2026", title: "Launched my studio site in a weekend", body: "The Next.js code is clean and the Figma file matches it block for block. Swapped the copy, changed the primary color and shipped it on Vercel.", fit: "License: Pro", helpful: 48 },
+  { name: "Aisha R.", initials: "AR", rating: 4, date: "28 Oct 2026", title: "Great build, wish it had one more case study layout", body: "Typography and spacing feel excellent and dark mode just works. I wanted one more case study page, which is the only reason for four stars.", fit: "License: Solo", helpful: 21 },
+  { name: "Lena K.", initials: "LK", rating: 5, date: "19 Oct 2026", title: "Replaced my old agency site after eight years", body: "Used it with Designali blocks and @designali/icons. Every section is responsive and the components stay consistent.", fit: "License: Studio", helpful: 17 },
+  { name: "Marcus O.", initials: "MO", rating: 3, date: "4 Oct 2026", title: "Solid, but more than I needed", body: "It is a full design system. If you want a one-page site this is a lot, but for a growing studio I have no complaints.", fit: "License: Pro", helpful: 9 },
 ]
 
 function Stars({ value, className }: { value: number; className?: string }) {
@@ -81,7 +85,7 @@ export default function Ecommerce12() {
           </ul>
 
           <div className="mt-8 border border-border p-5">
-            <p className="text-sm font-medium">Own the Ridgeline 28L?</p>
+            <p className="text-sm font-medium">Own the Design Agency Template?</p>
             <p className="mt-1 text-xs text-muted-foreground">Share how it has held up for you.</p>
             <Button variant="outline" className="mt-4 w-full">
               Write a review

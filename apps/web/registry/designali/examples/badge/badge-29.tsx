@@ -2,10 +2,10 @@ import { Badge } from "@workspace/ui/components/badge"
 import { cn } from "@workspace/ui/lib/utils"
 
 const entries = [
-  { type: "Added", text: "Bulk export for invoices and receipts." },
-  { type: "Improved", text: "Search results now load 40% faster." },
-  { type: "Fixed", text: "Timezone offset on recurring events." },
-  { type: "Removed", text: "Legacy v1 webhooks endpoint." },
+  { type: "Added", text: "Bulk SVG export for @designali/icons." },
+  { type: "Improved", text: "Blocks search now loads 40% faster." },
+  { type: "Fixed", text: "Dark mode tokens on landing page templates." },
+  { type: "Removed", text: "Legacy Dalim UI components." },
 ]
 
 const styles: Record<string, string> = {
@@ -20,7 +20,7 @@ export default function ChangelogTypeBadges() {
   return (
     <div className="flex w-full max-w-md flex-col gap-3">
       <div className="flex items-center gap-2">
-        <span className="text-sm font-semibold">Version 4.8</span>
+        <span className="text-sm font-semibold">Designali 4.8</span>
         <span className="text-xs text-muted-foreground">November 3</span>
       </div>
       {entries.map((entry) => (

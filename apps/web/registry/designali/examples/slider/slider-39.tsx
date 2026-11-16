@@ -1,7 +1,11 @@
 "use client"
 
 import * as React from "react"
-import { MapPinIcon, MinusIcon, PlusIcon } from "lucide-react"
+import {
+  MapPin as MapPinIcon,
+  Minus as MinusIcon,
+  Plus as PlusIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Slider } from "@workspace/ui/components/slider"

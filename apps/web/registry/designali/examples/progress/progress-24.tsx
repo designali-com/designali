@@ -1,4 +1,8 @@
-import { CpuIcon, HardDriveIcon, MemoryStickIcon } from "lucide-react"
+import {
+  Cpu as CpuIcon,
+  HardDrive as HardDriveIcon,
+  MemoryStick as MemoryStickIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import {
@@ -18,7 +22,7 @@ export default function ServerResourceMonitor() {
   return (
     <div className="flex w-full max-w-sm flex-col gap-4 border p-4">
       <div className="flex items-center justify-between">
-        <span className="font-mono text-sm">api-prod-03</span>
+        <span className="font-mono text-sm">designali-web-01</span>
         <Badge variant="outline">
           <span className="size-1.5 bg-emerald-500" />
           Online

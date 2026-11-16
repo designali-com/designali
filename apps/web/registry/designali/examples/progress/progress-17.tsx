@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { CircleCheckIcon, UploadIcon } from "lucide-react"
+import {
+  CircleCheck as CircleCheckIcon,
+  Upload as UploadIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {

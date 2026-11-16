@@ -11,7 +11,7 @@ import {
 import { Input } from "@workspace/ui/components/input"
 
 export default function BrandColorField() {
-  const [color, setColor] = React.useState("#6d28d9")
+  const [color, setColor] = React.useState("#00a8ff")
   const valid = /^#[0-9a-fA-F]{6}$/.test(color)
 
   return (

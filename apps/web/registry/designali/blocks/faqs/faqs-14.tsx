@@ -1,6 +1,9 @@
 "use client"
 
-import { Minus, Plus } from "lucide-react"
+import {
+  Minus,
+  Plus,
+} from "@designali/icons"
 
 import {
   Collapsible,

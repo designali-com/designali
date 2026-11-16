@@ -2,15 +2,15 @@
 
 import * as React from "react"
 import {
-  BringToFrontIcon,
-  CopyIcon,
-  EyeOffIcon,
-  LayoutTemplateIcon,
-  PlusIcon,
-  PresentationIcon,
-  SendToBackIcon,
-  SquareIcon,
-} from "lucide-react"
+  BringToFront as BringToFrontIcon,
+  Copy as CopyIcon,
+  EyeOff as EyeOffIcon,
+  LayoutTemplate as LayoutTemplateIcon,
+  Plus as PlusIcon,
+  Presentation as PresentationIcon,
+  SendToBack as SendToBackIcon,
+  Square as SquareIcon,
+} from "@designali/icons"
 
 import {
   Menubar,

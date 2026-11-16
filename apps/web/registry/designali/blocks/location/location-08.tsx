@@ -1,41 +1,46 @@
 "use client"
 
 import { useState } from "react"
-import { Car, Clock, MapPin, TrainFront } from "lucide-react"
+import {
+  Clock,
+  Mail,
+  MapPin,
+  Video,
+} from "@designali/icons"
 
 import { cn } from "@workspace/ui/lib/utils"
 
 const cities = [
   {
-    id: "lisbon",
-    city: "Lisbon",
-    venue: "Rua da Prata 214",
-    area: "Baixa, 1100-420 Lisboa",
-    hours: "Tue-Sun, 10:00-22:00",
-    transit: "Metro Baixa-Chiado, 3 min walk",
-    parking: "Parque Chão do Loureiro, 250 m",
+    id: "americas",
+    city: "Americas",
+    venue: "Remote studio",
+    area: "Async across UTC−8 to UTC−3",
+    hours: "Mon-Fri, 9:00-18:00 local",
+    transit: "Video calls on your schedule",
+    parking: "hello@designali.com",
     pin: { x: 38, y: 58 },
     river: "M0 78 C 30 70, 60 86, 100 74",
   },
   {
-    id: "porto",
-    city: "Porto",
-    venue: "Rua das Flores 61",
-    area: "Ribeira, 4050-265 Porto",
-    hours: "Tue-Sun, 11:00-23:00",
-    transit: "São Bento station, 4 min walk",
-    parking: "Parque Infante, 400 m",
+    id: "europe",
+    city: "Europe",
+    venue: "Remote studio",
+    area: "Live across UTC to UTC+3",
+    hours: "Mon-Fri, 9:00-18:00 local",
+    transit: "Weekly design reviews",
+    parking: "hello@designali.com",
     pin: { x: 56, y: 40 },
     river: "M0 66 C 25 60, 55 72, 100 60",
   },
   {
-    id: "madrid",
-    city: "Madrid",
-    venue: "Calle de Huertas 17",
-    area: "Barrio de las Letras, 28012",
-    hours: "Mon-Sun, 12:00-00:00",
-    transit: "Metro Antón Martín, 2 min walk",
-    parking: "Parking Santa Ana, 180 m",
+    id: "asia",
+    city: "Asia",
+    venue: "Remote studio",
+    area: "Live across UTC+4 to UTC+9",
+    hours: "Mon-Sat, 10:00-19:00 local",
+    transit: "Daily async updates",
+    parking: "ali@designali.com",
     pin: { x: 64, y: 48 },
     river: "M10 100 C 20 80, 8 60, 18 40",
   },
@@ -50,7 +55,7 @@ export default function Location08() {
       <div className="mx-auto max-w-6xl px-6">
         <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
           <h2 className="text-4xl font-semibold tracking-tight md:text-5xl">
-            Find Taberna Sal
+            Work with Designali
           </h2>
           <div className="flex border" role="tablist">
             {cities.map((c) => (
@@ -109,8 +114,8 @@ export default function Location08() {
             <dl className="mt-8 space-y-5 text-sm">
               {[
                 { icon: Clock, label: "Hours", value: city.hours },
-                { icon: TrainFront, label: "Transit", value: city.transit },
-                { icon: Car, label: "Parking", value: city.parking },
+                { icon: Video, label: "Calls", value: city.transit },
+                { icon: Mail, label: "Email", value: city.parking },
               ].map((row) => (
                 <div key={row.label} className="flex gap-3">
                   <row.icon className="mt-0.5 size-4 shrink-0 text-muted-foreground" />
@@ -121,8 +126,8 @@ export default function Location08() {
                 </div>
               ))}
             </dl>
-            <a href="#" className="mt-auto pt-8 text-sm font-medium underline underline-offset-4">
-              Reserve a table in {city.city}
+            <a href="/contact" className="mt-auto pt-8 text-sm font-medium underline underline-offset-4">
+              Book a call for {city.city}
             </a>
           </div>
         </div>

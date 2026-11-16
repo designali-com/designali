@@ -8,11 +8,11 @@ import {
 import { cn } from "@workspace/ui/lib/utils"
 
 const leaders = [
-  { name: "Rosa Diaz", initials: "RD", amount: "$84,200" },
-  { name: "Tomás Herrera", initials: "TH", amount: "$71,950" },
-  { name: "Wen Li", initials: "WL", amount: "$66,300" },
-  { name: "Kai Johansson", initials: "KJ", amount: "$52,780" },
-  { name: "Noor Aziz", initials: "NA", amount: "$48,010" },
+  { name: "Templates", initials: "TP", amount: "$84,200" },
+  { name: "Blocks", initials: "BL", amount: "$71,950" },
+  { name: "UI Designs", initials: "UI", amount: "$66,300" },
+  { name: "Icons", initials: "IC", amount: "$52,780" },
+  { name: "Logos", initials: "LG", amount: "$48,010" },
 ]
 
 const medals = ["ring-amber-400", "ring-zinc-400", "ring-orange-700"]
@@ -21,7 +21,7 @@ export default function SalesLeaderboard() {
   return (
     <Card className="w-full max-w-sm">
       <CardHeader>
-        <CardTitle>Top sellers this quarter</CardTitle>
+        <CardTitle>Top Designali products this quarter</CardTitle>
       </CardHeader>
       <CardContent className="flex flex-col gap-3">
         {leaders.map((leader, index) => (

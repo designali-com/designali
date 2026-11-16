@@ -1,19 +1,21 @@
 "use client"
 
 import * as React from "react"
-import { FileTextIcon } from "lucide-react"
+import {
+  FileText as FileTextIcon,
+} from "@designali/icons"
 
 import { Input } from "@workspace/ui/components/input"
 import { ScrollArea } from "@workspace/ui/components/scroll-area"
 
 const docs = [
-  "Webhook signing secrets and how to rotate them",
-  "Retry policy for failed webhook deliveries",
-  "Testing webhooks locally with the CLI",
-  "Filtering webhook events by type",
-  "Webhook payload reference",
-  "Troubleshooting webhook timeouts",
-  "Migrating from legacy webhook endpoints",
+  "Installing @designali/icons",
+  "Using @designali/logos in Next.js",
+  "Customizing blocks with Tailwind CSS",
+  "Theming blocks with semantic tokens",
+  "Apple device mockups reference",
+  "Troubleshooting icons imports",
+  "Migrating from Dalim UI to designali",
 ]
 
 function Highlight({ text, query }: { text: string; query: string }) {
@@ -31,7 +33,7 @@ function Highlight({ text, query }: { text: string; query: string }) {
 }
 
 export default function SearchResultsHighlight() {
-  const [query, setQuery] = React.useState("webhook")
+  const [query, setQuery] = React.useState("icons")
   const results = docs.filter((d) =>
     d.toLowerCase().includes(query.toLowerCase())
   )

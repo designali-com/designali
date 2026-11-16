@@ -19,7 +19,7 @@ import {
 } from "@workspace/ui/components/input-otp"
 
 const rows = [
-  { label: "To", value: "Harbor Lane Studio" },
+  { label: "To", value: "Designali Studio" },
   { label: "Account", value: "•••• 7730" },
   { label: "Amount", value: "$2,450.00" },
 ]

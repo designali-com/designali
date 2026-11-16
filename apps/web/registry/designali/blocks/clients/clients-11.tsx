@@ -1,21 +1,21 @@
 const rowOne = [
-  "Northwind",
-  "Halcyon",
-  "Kestrel Labs",
-  "Orbital",
-  "Fieldnote",
-  "Monolith",
-  "Brightline",
+  "Designali",
+  "Dalim",
+  "Dalim Agency",
+  "Dalim Fonts",
+  "Dalim Graphic",
+  "Dalim Icons",
+  "Dalim Tools",
 ]
 
 const rowTwo = [
-  "Quanta",
-  "Sable & Co",
-  "Driftwave",
-  "Tessel",
-  "Arcwell",
-  "Lumen",
-  "Corvid",
+  "Dalim UI",
+  "Dalim Works",
+  "Dalim Visuals",
+  "Designali Icons",
+  "Designali Logos",
+  "Designali Blocks",
+  "Designali Templates",
 ]
 
 function Glyph({ index }: { index: number }) {
@@ -65,11 +65,11 @@ export default function Clients11() {
     <section className="w-full overflow-hidden bg-foreground py-20 text-background">
       <div className="mx-auto flex max-w-7xl flex-col gap-6 px-6 md:flex-row md:items-end md:justify-between">
         <h2 className="max-w-xl text-3xl font-semibold tracking-tight md:text-4xl">
-          The quiet infrastructure behind 3,000+ product launches.
+          The studio behind 460+ blocks and 4,000+ icons.
         </h2>
         <p className="max-w-sm text-sm leading-6 text-background/60">
-          Design leads, platform engineers and founders standardise on one
-          system so every release looks and feels like the last.
+          Brands, products and libraries designed and coded by Ali Imam on one
+          system, so every release looks and feels like the last.
         </p>
       </div>
       <div className="mt-14 space-y-8 [mask-image:linear-gradient(to_right,transparent,black_12%,black_88%,transparent)]">

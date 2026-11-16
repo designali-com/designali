@@ -7,14 +7,14 @@ import {
 
 const categories = [
   "All",
-  "Pizza",
-  "Sushi",
-  "Burgers",
-  "Salads",
-  "Tacos",
-  "Ramen",
-  "Desserts",
-  "Drinks",
+  "Templates",
+  "Blocks",
+  "Icons",
+  "Logos",
+  "Illustrations",
+  "Mockups",
+  "Components",
+  "Pages",
 ]
 
 export default function ScrollableCategoryTabs() {
@@ -36,8 +36,8 @@ export default function ScrollableCategoryTabs() {
           className="border p-3 text-muted-foreground"
         >
           Showing{" "}
-          {c === "All" ? "every restaurant" : c.toLowerCase() + " places"} near
-          you.
+          {c === "All" ? "every Designali product" : "Designali " + c.toLowerCase()}{" "}
+          on designali.com.
         </TabsContent>
       ))}
     </Tabs>

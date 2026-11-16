@@ -1,12 +1,14 @@
-import { ArrowRight } from "lucide-react"
+import {
+  ArrowRight,
+} from "@designali/icons"
 
 const roles = [
-  { title: "Senior Product Designer", team: "Design", location: "Remote, EU", type: "Full-time" },
-  { title: "Design Engineer", team: "Design", location: "Amsterdam", type: "Full-time" },
-  { title: "Staff Frontend Engineer", team: "Engineering", location: "Remote, Americas", type: "Full-time" },
-  { title: "Platform Engineer, Rendering", team: "Engineering", location: "Berlin", type: "Full-time" },
-  { title: "Content Strategist", team: "Marketing", location: "London", type: "Contract" },
-  { title: "Customer Success Lead", team: "Operations", location: "New York", type: "Full-time" },
+  { title: "UI/UX Designer", team: "Design", location: "Remote, worldwide", type: "Full-time" },
+  { title: "Design Engineer", team: "Design", location: "Remote, worldwide", type: "Full-time" },
+  { title: "Next.js Developer", team: "Development", location: "Remote, worldwide", type: "Full-time" },
+  { title: "3D and Motion Designer", team: "CGI", location: "Remote, worldwide", type: "Contract" },
+  { title: "Brand Identity Designer", team: "Brand", location: "Remote, worldwide", type: "Contract" },
+  { title: "Icon and Illustration Designer", team: "Design", location: "Remote, worldwide", type: "Freelance" },
 ]
 
 export default function Lists01() {
@@ -15,9 +17,9 @@ export default function Lists01() {
       <div className="mx-auto max-w-5xl px-6">
         <div className="flex items-end justify-between gap-6">
           <div>
-            <h2 className="text-4xl font-semibold tracking-tight md:text-5xl">Open roles</h2>
+            <h2 className="text-4xl font-semibold tracking-tight md:text-5xl">Work with Designali</h2>
             <p className="mt-3 text-sm text-muted-foreground">
-              Join a team of 64 building the next generation of creative tools.
+              Join Ali Imam and the Designali studio — design se code tak.
             </p>
           </div>
           <span className="hidden font-mono text-sm text-muted-foreground sm:block">

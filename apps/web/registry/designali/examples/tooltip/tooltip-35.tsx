@@ -2,13 +2,13 @@
 
 import * as React from "react"
 import {
-  PauseIcon,
-  PlayIcon,
-  SkipBackIcon,
-  SkipForwardIcon,
-  Volume2Icon,
-  VolumeXIcon,
-} from "lucide-react"
+  Pause as PauseIcon,
+  Play as PlayIcon,
+  SkipBack as SkipBackIcon,
+  SkipForward as SkipForwardIcon,
+  Volume2 as Volume2Icon,
+  VolumeX as VolumeXIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Kbd } from "@workspace/ui/components/kbd"

@@ -1,7 +1,10 @@
 "use client"
 
 import { useMemo, useState } from "react"
-import { SlidersHorizontal, X } from "lucide-react"
+import {
+  SlidersHorizontal,
+  X,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { cn } from "@workspace/ui/lib/utils"
@@ -15,19 +18,19 @@ type Product = {
 }
 
 const products: Product[] = [
-  { name: "Arc Floor Lamp", category: "Lighting", price: 340, material: "Brass", tone: "from-amber-300/70 to-yellow-100/30" },
-  { name: "Pebble Side Table", category: "Tables", price: 210, material: "Oak", tone: "from-orange-300/60 to-amber-50/30" },
-  { name: "Loop Pendant", category: "Lighting", price: 180, material: "Steel", tone: "from-zinc-400/70 to-zinc-100/30" },
-  { name: "Low Lounge Chair", category: "Seating", price: 690, material: "Wool", tone: "from-stone-400/70 to-stone-100/30" },
-  { name: "Trestle Desk", category: "Tables", price: 520, material: "Oak", tone: "from-yellow-700/40 to-amber-100/30" },
-  { name: "Bistro Stool", category: "Seating", price: 145, material: "Steel", tone: "from-slate-500/60 to-slate-200/30" },
-  { name: "Mushroom Lamp", category: "Lighting", price: 95, material: "Glass", tone: "from-rose-300/60 to-orange-100/30" },
-  { name: "Bench, Long", category: "Seating", price: 410, material: "Oak", tone: "from-lime-700/40 to-lime-100/30" },
-  { name: "Nest Tables, Set of 2", category: "Tables", price: 260, material: "Walnut", tone: "from-amber-900/50 to-orange-200/30" },
+  { name: "Design Agency Template", category: "Templates", price: 79, material: "Next.js", tone: "from-amber-300/70 to-yellow-100/30" },
+  { name: "Hero Blocks Pack", category: "Blocks", price: 39, material: "React", tone: "from-orange-300/60 to-amber-50/30" },
+  { name: "Portfolio Simple Template", category: "Templates", price: 49, material: "Figma", tone: "from-zinc-400/70 to-zinc-100/30" },
+  { name: "Designali Icons Pro", category: "Icons", price: 39, material: "SVG", tone: "from-stone-400/70 to-stone-100/30" },
+  { name: "Blocks Pro Bundle", category: "Blocks", price: 149, material: "Next.js", tone: "from-yellow-700/40 to-amber-100/30" },
+  { name: "Designali Logos Pack", category: "Icons", price: 29, material: "React", tone: "from-slate-500/60 to-slate-200/30" },
+  { name: "Resort Template", category: "Templates", price: 69, material: "Tailwind CSS", tone: "from-rose-300/60 to-orange-100/30" },
+  { name: "Vectors Starter Pack", category: "Icons", price: 19, material: "Figma", tone: "from-lime-700/40 to-lime-100/30" },
+  { name: "Pricing & FAQ Blocks", category: "Blocks", price: 35, material: "Tailwind CSS", tone: "from-amber-900/50 to-orange-200/30" },
 ]
 
-const categories = ["Lighting", "Tables", "Seating"]
-const materials = ["Oak", "Walnut", "Brass", "Steel", "Glass", "Wool"]
+const categories = ["Templates", "Blocks", "Icons"]
+const materials = ["Next.js", "React", "Tailwind CSS", "Figma", "SVG"]
 const sorts = [
   { id: "featured", label: "Featured" },
   { id: "low", label: "Price: low to high" },
@@ -41,7 +44,7 @@ function toggle(list: string[], value: string) {
 export default function Ecommerce06() {
   const [cats, setCats] = useState<string[]>([])
   const [mats, setMats] = useState<string[]>([])
-  const [maxPrice, setMaxPrice] = useState(700)
+  const [maxPrice, setMaxPrice] = useState(150)
   const [sort, setSort] = useState("featured")
   const [showFilters, setShowFilters] = useState(false)
 
@@ -61,7 +64,7 @@ export default function Ecommerce06() {
   const clear = () => {
     setCats([])
     setMats([])
-    setMaxPrice(700)
+    setMaxPrice(150)
   }
 
   return (
@@ -69,7 +72,7 @@ export default function Ecommerce06() {
       <div className="mx-auto max-w-6xl px-6">
         <div className="flex flex-col justify-between gap-4 border-b border-border pb-6 sm:flex-row sm:items-end">
           <div>
-            <h2 className="text-3xl font-medium tracking-tight">Furniture & lighting</h2>
+            <h2 className="text-3xl font-medium tracking-tight">Designali store</h2>
             <p className="mt-1 text-sm text-muted-foreground">{visible.length} products</p>
           </div>
           <div className="flex items-center gap-2">
@@ -114,7 +117,7 @@ export default function Ecommerce06() {
               </div>
             </fieldset>
             <fieldset>
-              <legend className="font-medium">Material</legend>
+              <legend className="font-medium">Stack</legend>
               <div className="mt-3 flex flex-wrap gap-2">
                 {materials.map((m) => (
                   <button
@@ -138,9 +141,9 @@ export default function Ecommerce06() {
               </legend>
               <input
                 type="range"
-                min={100}
-                max={700}
-                step={10}
+                min={20}
+                max={150}
+                step={5}
                 value={maxPrice}
                 onChange={(e) => setMaxPrice(Number(e.target.value))}
                 aria-label="Maximum price"

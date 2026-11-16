@@ -11,16 +11,16 @@ import {
 import { Progress } from "@workspace/ui/components/progress"
 
 const swatches = [
-  "Slate",
-  "Stone",
-  "Sand",
-  "Sage",
-  "Moss",
-  "Ocean",
-  "Dusk",
-  "Plum",
-  "Clay",
-  "Rust",
+  "Artwork 01",
+  "Artwork 02",
+  "Artwork 03",
+  "Artwork 04",
+  "Artwork 05",
+  "Artwork 06",
+  "Artwork 07",
+  "Artwork 08",
+  "Artwork 09",
+  "Artwork 10",
 ]
 
 export default function ScrollProgressCarousel() {
@@ -39,11 +39,15 @@ export default function ScrollProgressCarousel() {
         <CarouselContent className="-ms-2">
           {swatches.map((swatch, index) => (
             <CarouselItem key={swatch} className="basis-1/3 ps-2">
-              <div
-                className="flex aspect-[3/4] flex-col justify-end border bg-muted p-2"
-                style={{ opacity: 0.4 + (index % 5) * 0.15 }}
-              >
-                <span className="text-xs font-medium">{swatch}</span>
+              <div className="relative flex aspect-[3/4] flex-col justify-end overflow-hidden border bg-muted p-2">
+                <img
+                  src={"/img/ask/ask" + (index + 1) + ".jpg"}
+                  alt={swatch + " by Designali"}
+                  className="absolute inset-0 size-full object-cover"
+                />
+                <span className="relative bg-background/80 px-1 text-xs font-medium">
+                  {swatch}
+                </span>
               </div>
             </CarouselItem>
           ))}

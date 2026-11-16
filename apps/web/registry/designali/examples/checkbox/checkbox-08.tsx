@@ -3,8 +3,8 @@ import { Checkbox } from "@workspace/ui/components/checkbox"
 const channels = ["Email", "Push", "SMS"]
 const events = [
   { id: "mentions", label: "Mentions", defaults: ["Email", "Push"] },
-  { id: "comments", label: "Comments", defaults: ["Push"] },
-  { id: "invoices", label: "Invoices", defaults: ["Email"] },
+  { id: "comments", label: "Client comments", defaults: ["Push"] },
+  { id: "invoices", label: "Designali invoices", defaults: ["Email"] },
   {
     id: "security",
     label: "Security alerts",

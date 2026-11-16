@@ -1,4 +1,6 @@
-import { ChevronDownIcon } from "lucide-react"
+import {
+  ChevronDown as ChevronDownIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import { Button } from "@workspace/ui/components/button"
@@ -13,21 +15,21 @@ const releases = [
     version: "v3.2.0",
     date: "Nov 12",
     changes: [
-      { type: "New", text: "Bulk edit for invoices" },
-      { type: "Fix", text: "CSV export kept timezone offsets" },
+      { type: "New", text: "120 new Designali blocks" },
+      { type: "Fix", text: "Icon search now matches @designali/icons aliases" },
     ],
   },
   {
     version: "v3.1.4",
     date: "Oct 28",
-    changes: [{ type: "Fix", text: "Sidebar no longer jumps on resize" }],
+    changes: [{ type: "Fix", text: "Template previews no longer jump on resize" }],
   },
   {
     version: "v3.1.0",
     date: "Oct 09",
     changes: [
-      { type: "New", text: "Saved filters on every table" },
-      { type: "Improved", text: "Faster dashboard load times" },
+      { type: "New", text: "Saved filters on /ui examples" },
+      { type: "Improved", text: "Faster designali.com page loads" },
     ],
   },
 ]

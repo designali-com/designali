@@ -7,8 +7,8 @@ import {
 } from "@workspace/ui/components/tabs"
 
 const plans = [
-  { name: "Starter", monthly: 9, yearly: 90 },
-  { name: "Team", monthly: 29, yearly: 290 },
+  { name: "Designali Pro", monthly: 9, yearly: 90 },
+  { name: "Designali Team", monthly: 29, yearly: 290 },
 ]
 
 export default function BillingCycleTabs() {

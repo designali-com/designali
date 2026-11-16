@@ -18,7 +18,7 @@ export default function PublishDateRequired() {
         className="border"
       />
       <p className="text-center text-xs text-muted-foreground">
-        Scheduled to publish on{" "}
+        Designali blog post scheduled to publish on{" "}
         <span className="font-medium text-foreground">
           {format(date, "EEEE, MMMM d")}
         </span>

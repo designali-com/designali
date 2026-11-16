@@ -1,4 +1,7 @@
-import { ArrowUp, BookOpen } from "lucide-react"
+import {
+  ArrowUp,
+  BookOpen,
+} from "@designali/icons"
 
 const sections = [
   {

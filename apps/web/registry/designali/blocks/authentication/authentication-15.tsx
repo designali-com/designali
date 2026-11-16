@@ -1,7 +1,12 @@
 "use client"
 
 import { useState } from "react"
-import { ArrowLeft, ChevronDown, MessageSquare, Phone } from "lucide-react"
+import {
+  ArrowLeft,
+  ChevronDown,
+  MessageSquare,
+  Phone,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Input } from "@workspace/ui/components/input"
@@ -37,9 +42,9 @@ export default function Authentication15() {
           <div className="absolute inset-x-12 top-16 bottom-0 border-8 border-b-0 border-zinc-950 bg-white p-5 text-zinc-950">
             <p className="text-xs text-zinc-500">Messages &middot; now</p>
             <div className="mt-4 max-w-[85%] bg-zinc-100 p-3 text-sm">
-              Your Sprout code is <span className="font-mono font-semibold">482 913</span>. It expires in 5 minutes. Don&apos;t share it with anyone.
+              Your Designali code is <span className="font-mono font-semibold">482 913</span>. It expires in 5 minutes. Don&apos;t share it with anyone.
             </div>
-            <div className="mt-3 max-w-[60%] bg-zinc-100 p-3 text-sm">Sprout will never call you for this code.</div>
+            <div className="mt-3 max-w-[60%] bg-zinc-100 p-3 text-sm">Designali will never call you for this code.</div>
           </div>
         </div>
 
@@ -82,7 +87,7 @@ export default function Authentication15() {
                       inputMode="tel"
                       value={phone}
                       onChange={(event) => setPhone(formatPhone(event.target.value))}
-                      placeholder="415 555 0132"
+                      placeholder="Mobile number"
                       className="w-full min-w-0 bg-transparent px-3 text-sm tabular-nums outline-none placeholder:text-muted-foreground"
                     />
                   </div>

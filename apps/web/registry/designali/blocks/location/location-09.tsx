@@ -1,61 +1,66 @@
 "use client"
 
 import { useState } from "react"
-import { Bike, Car, Footprints, TrainFront } from "lucide-react"
+import {
+  Calendar,
+  Mail,
+  MessageCircle,
+  Video,
+} from "@designali/icons"
 
 import { cn } from "@workspace/ui/lib/utils"
 
 const modes = [
   {
-    id: "transit",
-    label: "Transit",
-    icon: TrainFront,
-    time: "18 min",
-    detail: "U2 to Senefelderplatz",
+    id: "email",
+    label: "Email",
+    icon: Mail,
+    time: "24 h",
+    detail: "Reply from hello@designali.com",
     route: "M40 300 L40 220 L180 220 L180 120 L330 120 L330 60 L420 60",
     steps: [
-      "Walk 3 min to Alexanderplatz station",
-      "Take U2 towards Pankow, 3 stops",
-      "Exit Senefelderplatz, walk north 4 min on Kastanienallee",
+      "Write to hello@designali.com with your idea",
+      "Share links, references and a rough timeline",
+      "Get a reply from Ali Imam within one working day",
     ],
   },
   {
-    id: "walk",
-    label: "Walk",
-    icon: Footprints,
-    time: "26 min",
-    detail: "2.1 km, mostly flat",
+    id: "call",
+    label: "Call",
+    icon: Video,
+    time: "30 min",
+    detail: "Free discovery call",
     route: "M40 300 C 100 260, 120 200, 200 190 S 300 140, 330 100 S 400 70, 420 60",
     steps: [
-      "Head north on Karl-Liebknecht-Strasse",
-      "Turn right onto Torstrasse after 900 m",
-      "Continue up Kastanienallee to number 44",
+      "Pick a slot on the contact page",
+      "Walk through goals, scope and budget",
+      "Get a proposal within a few days",
     ],
   },
   {
-    id: "bike",
-    label: "Bike",
-    icon: Bike,
-    time: "9 min",
-    detail: "Protected lane most of the way",
+    id: "chat",
+    label: "DM",
+    icon: MessageCircle,
+    time: "Same day",
+    detail: "Message @designali_com on X",
     route: "M40 300 L120 300 L120 160 L300 160 L300 60 L420 60",
     steps: [
-      "Dock bikes at Alexanderplatz, Gate C",
-      "Ride the protected lane on Rosenthaler Strasse",
-      "Bike racks are in our courtyard, code 4402",
+      "Send a DM on X or Instagram",
+      "Share a quick summary of your project",
+      "We move the conversation to email or a call",
     ],
   },
   {
-    id: "car",
-    label: "Car",
-    icon: Car,
-    time: "12 min",
-    detail: "Parking garage on Schönhauser Allee",
+    id: "kickoff",
+    label: "Kickoff",
+    icon: Calendar,
+    time: "1 week",
+    detail: "From first message to kickoff",
     route: "M40 300 L260 300 L260 200 L420 200 L420 60",
     steps: [
-      "Take Grunerstrasse east onto Prenzlauer Allee",
-      "Turn left at Schönhauser Allee",
-      "Park at Arkaden garage, 2 min walk to us",
+      "Agree on scope and timeline",
+      "Share brand assets and access",
+      "Start designing in Figma together",
     ],
   },
 ]
@@ -69,10 +74,10 @@ export default function Location09() {
       <div className="mx-auto grid max-w-6xl gap-10 px-6 lg:grid-cols-[1fr_1.2fr] lg:items-center">
         <div>
           <p className="text-xs font-medium tracking-widest text-muted-foreground uppercase">
-            Getting here
+            Getting in touch
           </p>
           <h2 className="mt-3 text-4xl font-semibold tracking-tight md:text-5xl">
-            From Alexanderplatz to Studio Nordlicht
+            From your idea to Designali
           </h2>
 
           <div className="mt-8 grid grid-cols-4 border">
@@ -142,8 +147,8 @@ export default function Location09() {
             <circle cx="40" cy="300" r="8" className="fill-background stroke-foreground" strokeWidth="3" />
             <circle cx="420" cy="60" r="12" className="fill-primary" />
             <circle cx="420" cy="60" r="4" className="fill-primary-foreground" />
-            <text x="54" y="322" className="fill-muted-foreground text-[11px]">Alexanderplatz</text>
-            <text x="330" y="38" className="fill-foreground text-[11px] font-medium">Kastanienallee 44</text>
+            <text x="54" y="322" className="fill-muted-foreground text-[11px]">Your idea</text>
+            <text x="330" y="38" className="fill-foreground text-[11px] font-medium">designali.com</text>
           </svg>
           <style>{`@keyframes location-09-draw { to { stroke-dashoffset: 0; } }`}</style>
         </div>

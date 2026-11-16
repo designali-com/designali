@@ -1,10 +1,10 @@
 import {
-  CircleDotIcon,
-  FilePenIcon,
-  FolderKanbanIcon,
-  NotebookTabsIcon,
-  RefreshCwIcon,
-} from "lucide-react"
+  CircleDot as CircleDotIcon,
+  FilePen as FilePenIcon,
+  FolderKanban as FolderKanbanIcon,
+  NotebookTabs as NotebookTabsIcon,
+  RefreshCw as RefreshCwIcon,
+} from "@designali/icons"
 
 import {
   Command,
@@ -38,12 +38,12 @@ const creatables = [
   },
   {
     label: "Cycle",
-    hint: "Plan a two-week sprint",
+    hint: "Plan a two-week design sprint",
     icon: RefreshCwIcon,
     key: "Y",
   },
   {
-    label: "Meeting notes",
+    label: "Client brief",
     hint: "Start from a template",
     icon: NotebookTabsIcon,
     key: "M",

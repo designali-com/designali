@@ -2,13 +2,13 @@
 
 import * as React from "react"
 import {
-  BadgeCheckIcon,
-  BanIcon,
-  CopyIcon,
-  DownloadIcon,
-  RotateCcwIcon,
-  SendIcon,
-} from "lucide-react"
+  BadgeCheck as BadgeCheckIcon,
+  Ban as BanIcon,
+  Copy as CopyIcon,
+  Download as DownloadIcon,
+  RotateCcw as RotateCcwIcon,
+  Send as SendIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import {
@@ -32,7 +32,7 @@ export default function InvoiceActionsMenubar() {
         <div>
           <p className="text-sm font-medium">INV-2026-0187</p>
           <p className="text-xs text-muted-foreground">
-            Fernwood Bakery · $2,340.00
+            Designali client · $2,340.00
           </p>
         </div>
         <Badge

@@ -5,7 +5,7 @@ export default function DemoOne() {
     <main className="flex h-80 items-center justify-center">
       <Typewriter
         className="text-5xl"
-        words={["Developer", "Designer", "Freelancer"]}
+        words={["Design Engineer", "Designer", "Developer"]}
       />
     </main>
   )

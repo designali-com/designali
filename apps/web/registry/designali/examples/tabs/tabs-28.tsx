@@ -1,4 +1,6 @@
-import { FilePenIcon } from "lucide-react"
+import {
+  FilePen as FilePenIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -25,7 +27,7 @@ export default function EmptyStateTabs() {
         <TabsTrigger value="scheduled">Scheduled</TabsTrigger>
       </TabsList>
       <TabsContent value="published" className="border p-3">
-        How we cut build times by 60%
+        How Designali goes from design to code
       </TabsContent>
       <TabsContent value="drafts">
         <Empty className="border">
@@ -44,7 +46,7 @@ export default function EmptyStateTabs() {
         </Empty>
       </TabsContent>
       <TabsContent value="scheduled" className="border p-3">
-        Release notes v4.2 · Nov 20, 09:00
+        Designali blocks update · Nov 20, 09:00
       </TabsContent>
     </Tabs>
   )

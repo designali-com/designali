@@ -1,6 +1,8 @@
-import { BadgeCheckIcon } from "lucide-react"
+import {
+  BadgeCheck as BadgeCheckIcon,
+} from "@designali/icons"
 
-import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
+import { Avatar, AvatarFallback, AvatarImage } from "@workspace/ui/components/avatar"
 import {
   Tooltip,
   TooltipContent,
@@ -11,11 +13,12 @@ export default function VerifiedBadgeTooltip() {
   return (
     <div className="flex items-center gap-3">
       <Avatar size="lg">
-        <AvatarFallback>RV</AvatarFallback>
+        <AvatarImage src="/ali.jpg" alt="Ali Imam" />
+        <AvatarFallback>AI</AvatarFallback>
       </Avatar>
       <div className="flex flex-col">
         <div className="flex items-center gap-1">
-          <span className="text-sm font-semibold">Rosa Vidal</span>
+          <span className="text-sm font-semibold">Ali Imam</span>
           <Tooltip>
             <TooltipTrigger
               render={
@@ -32,7 +35,7 @@ export default function VerifiedBadgeTooltip() {
           </Tooltip>
         </div>
         <span className="text-xs text-muted-foreground">
-          Product designer · Lisbon
+          Design engineer · Designali
         </span>
       </div>
     </div>

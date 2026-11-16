@@ -4,21 +4,21 @@ import { Switch } from "@workspace/ui/components/switch"
 const features = [
   {
     id: "ai",
-    label: "AI summaries",
+    label: "AI workflows",
     stage: "Beta",
-    description: "Summarize long threads automatically.",
+    description: "Generate Designali blocks from a prompt.",
   },
   {
     id: "canvas",
-    label: "Infinite canvas",
+    label: "3D & motion previews",
     stage: "Alpha",
-    description: "Arrange notes on a freeform board.",
+    description: "Preview CGI assets inside templates.",
   },
   {
     id: "offline",
-    label: "Offline mode",
+    label: "Figma sync",
     stage: "Beta",
-    description: "Keep working without a connection.",
+    description: "Keep designs and code in sync.",
   },
 ]
 

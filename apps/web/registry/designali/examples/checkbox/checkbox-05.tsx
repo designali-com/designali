@@ -29,7 +29,7 @@ export function CheckboxDemo() {
             Accept terms and conditions
           </FieldLabel>
           <FieldDescription>
-            By clicking this checkbox, you agree to the terms.
+            By clicking this checkbox, you agree to the Designali terms.
           </FieldDescription>
         </FieldContent>
       </Field>

@@ -1,15 +1,18 @@
-import { Check, ShieldCheck } from "lucide-react"
+import {
+  Check,
+  ShieldCheck,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 
 const included = [
-  "All 600+ blocks and page templates",
+  "All 460+ blocks and 240+ page templates",
   "Figma source with auto-layout and variables",
-  "React, Tailwind and Base UI code",
+  "React, TypeScript and Tailwind CSS code",
   "Lifetime updates, no renewals",
   "Commercial licence for unlimited projects",
-  "Private Discord with the core team",
-  "CLI install into any Next.js project",
+  "4000+ icons in @designali/icons",
+  "shadcn CLI install into any Next.js project",
   "Theme generator and token export",
 ]
 
@@ -28,7 +31,7 @@ export default function Pricing09() {
         </div>
         <div className="mx-auto mt-14 grid max-w-5xl border border-border lg:grid-cols-[1.5fr_1fr]">
           <div className="p-8 md:p-12">
-            <h3 className="text-lg font-medium">Lifetime access</h3>
+            <h3 className="text-lg font-medium">Designali lifetime access</h3>
             <p className="mt-2 text-sm leading-6 text-muted-foreground">
               For freelancers, studios and in-house teams who want a complete
               system without a subscription.
@@ -62,7 +65,7 @@ export default function Pricing09() {
               size="lg"
               className="w-full"
               nativeButton={false}
-              render={<a href="#" />}
+              render={<a href="/pricing" />}
             >
               Get lifetime access
             </Button>

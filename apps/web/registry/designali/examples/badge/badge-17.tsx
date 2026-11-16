@@ -1,4 +1,7 @@
-import { TrendingDownIcon, TrendingUpIcon } from "lucide-react"
+import {
+  TrendingDown as TrendingDownIcon,
+  TrendingUp as TrendingUpIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import { cn } from "@workspace/ui/lib/utils"
@@ -6,7 +9,7 @@ import { cn } from "@workspace/ui/lib/utils"
 const metrics = [
   { label: "Revenue", value: "$48.2k", change: 12.4 },
   { label: "Churn", value: "2.1%", change: -0.6 },
-  { label: "Signups", value: "1,284", change: -4.3 },
+  { label: "Template sales", value: "1,284", change: -4.3 },
 ]
 
 export default function KpiTrendBadges() {

@@ -1,9 +1,9 @@
 import {
-  CreditCardIcon,
-  SettingsIcon,
-  ShieldIcon,
-  UsersIcon,
-} from "lucide-react"
+  CreditCard as CreditCardIcon,
+  Settings as SettingsIcon,
+  Shield as ShieldIcon,
+  Users as UsersIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -18,19 +18,19 @@ const sections = [
     value: "general",
     label: "General",
     icon: SettingsIcon,
-    text: "Workspace name, URL and default language.",
+    text: "Designali workspace name, URL and default language.",
   },
   {
     value: "members",
     label: "Members",
     icon: UsersIcon,
-    text: "Invite people and manage their roles.",
+    text: "Invite studio teammates and manage their roles.",
   },
   {
     value: "billing",
     label: "Billing",
     icon: CreditCardIcon,
-    text: "Plan, invoices and payment methods.",
+    text: "Designali Pro plan, invoices and payment methods.",
   },
   {
     value: "security",

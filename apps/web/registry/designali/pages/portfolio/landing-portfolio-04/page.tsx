@@ -10,21 +10,21 @@ import {
   Search,
   Sparkles,
   Wand,
-} from "lucide-react"
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 
 const navLinks = ["Work", "About", "Services", "Writing", "Contact"]
 
 const logos = [
-  "Kindred",
-  "Lumen Bank",
-  "Studio Kiln",
-  "Parcel",
-  "Moonrise",
-  "Fable Health",
-  "Orchard",
-  "Waypoint",
+  "designali.com",
+  "Dalim UI",
+  "Dalim Fonts",
+  "Dalim Icons",
+  "Dalim Visuals",
+  "Dalim Tools",
+  "Dalim Agency",
+  "Dalim Works",
 ]
 
 const features = [
@@ -32,25 +32,25 @@ const features = [
     icon: LayoutTemplate,
     title: "Design systems",
     description:
-      "Reusable component libraries in Figma and code that keep products consistent as they grow.",
+      "Reusable component libraries in Figma and code, like the blocks and UI on designali.com.",
   },
   {
     icon: Search,
-    title: "User research",
+    title: "CGI, 3D & motion",
     description:
-      "Interviews, usability tests and analytics reviews that ground design decisions in evidence.",
+      "Product renders, motion loops and visuals that make launches and landing pages stand out.",
   },
   {
     icon: Wand,
     title: "Prototyping",
     description:
-      "Interactive prototypes that let you test ideas with customers and investors before building.",
+      "Interactive prototypes that let you test ideas with customers before building.",
   },
   {
     icon: Presentation,
     title: "Workshops",
     description:
-      "Facilitated sessions to align teams on vision, priorities and the problems worth solving.",
+      "Focused sessions to align teams on vision, priorities and the problems worth solving.",
   },
   {
     icon: Gauge,
@@ -61,10 +61,10 @@ const features = [
 ]
 
 const stats = [
-  { value: "4", label: "Design awards" },
+  { value: "4", label: "Icon and logo libraries" },
   { value: "100%", label: "Projects delivered on time" },
-  { value: "2M+", label: "People using my work" },
-  { value: "9", label: "Years of experience" },
+  { value: "1M+", label: "People using my resources" },
+  { value: "9", label: "Years designing and coding" },
 ]
 
 const steps = [
@@ -92,67 +92,73 @@ const steps = [
 
 const showcase = [
   {
-    name: "Kindred",
-    meta: "Mobile app for family caregivers",
+    name: "designali.com",
+    meta: "Templates, blocks, UI and icons",
     tag: "Product",
     price: "2025",
     tile: "bg-gradient-to-br from-amber-200 via-orange-300 to-rose-400 dark:from-amber-700 dark:via-orange-800 dark:to-rose-900",
+    image: "/images/templates/design-agency.jpg",
   },
   {
-    name: "Lumen Bank",
-    meta: "Onboarding redesign for a neobank",
-    tag: "UX",
+    name: "Dalim UI",
+    meta: "Component library for React",
+    tag: "UI",
     price: "2025",
     tile: "bg-gradient-to-br from-sky-200 via-cyan-300 to-teal-400 dark:from-sky-700 dark:via-cyan-800 dark:to-teal-900",
+    image: "/images/templates/dalim-ui-old.jpg",
   },
   {
-    name: "Studio Kiln",
-    meta: "Identity and site for a ceramics studio",
-    tag: "Brand",
+    name: "Dalim Fonts",
+    meta: "Type and lettering experiments",
+    tag: "Type",
     price: "2024",
     tile: "bg-gradient-to-br from-violet-200 via-purple-300 to-fuchsia-400 dark:from-violet-700 dark:via-purple-800 dark:to-fuchsia-900",
+    image: "/images/templates/dalim-fonts-old.jpg",
   },
   {
-    name: "Parcel",
-    meta: "Design system for a logistics platform",
-    tag: "System",
+    name: "Dalim Icons",
+    meta: "Icon system for products",
+    tag: "Icons",
     price: "2024",
     tile: "bg-gradient-to-br from-emerald-200 via-green-300 to-lime-300 dark:from-emerald-700 dark:via-green-800 dark:to-lime-900",
+    image: "/images/templates/dalim-icons-old.jpg",
   },
   {
-    name: "Waypoint",
-    meta: "Trip planning web app",
+    name: "Dalim Works",
+    meta: "Portfolio and studio site",
     tag: "Web",
     price: "2023",
     tile: "bg-gradient-to-br from-stone-200 via-neutral-300 to-zinc-400 dark:from-stone-700 dark:via-neutral-800 dark:to-zinc-900",
+    image: "/images/templates/dalim-works-old.jpg",
   },
   {
-    name: "Moonrise",
-    meta: "Sleep tracking dashboard",
-    tag: "Data",
+    name: "Dalim Visuals",
+    meta: "CGI and 3D visual series",
+    tag: "CGI",
     price: "2023",
     tile: "bg-gradient-to-br from-rose-200 via-pink-300 to-purple-300 dark:from-rose-700 dark:via-pink-800 dark:to-purple-900",
+    image: "/images/templates/dalim-visuals-old.jpg",
   },
 ]
 
 const testimonials = [
   {
     quote:
-      "The design system they built is still the backbone of our app two years later. Every new hire loves it.",
-    name: "Pedro Alves",
-    role: "Engineering Manager, Parcel",
+      "The design system Ali built is still the backbone of our product. Every new teammate picks it up in a day.",
+    name: "Pedro",
+    role: "Engineering manager, Designali client",
   },
   {
     quote:
-      "Rare to find someone with this much taste who also writes clean, well-tested code.",
-    name: "Hana Sato",
-    role: "CTO, Orchard",
+      "Rare to find someone with this much taste who also writes clean, production-ready code.",
+    name: "Hana",
+    role: "CTO, Designali client",
   },
   {
     quote:
-      "They ran a workshop that finally got our founders aligned. The roadmap we left with is still the one we follow.",
-    name: "Michael Duarte",
-    role: "COO, Moonrise",
+      "Ali ran a workshop that finally got our founders aligned. The roadmap we left with is still the one we follow.",
+    name: "Michael",
+    role: "COO, Designali client",
   },
 ]
 
@@ -178,7 +184,7 @@ const tiers = [
     features: [
       "Discovery and strategy",
       "Full visual design",
-      "Production front-end code",
+      "Next.js front-end code",
       "Two rounds of revisions",
       "30 days of support",
     ],
@@ -192,7 +198,7 @@ const tiers = [
     features: [
       "Two days per week",
       "Design and code",
-      "Slack access",
+      "Shared Slack channel",
       "Pause or cancel any time",
     ],
     cta: "Check availability",
@@ -202,11 +208,11 @@ const tiers = [
 const faqs = [
   {
     q: "Which tools do you use?",
-    a: "Figma for design, React, Next.js and Tailwind CSS for code, and Linear or Notion to keep projects organised.",
+    a: "Figma for design, Next.js, React, TypeScript and Tailwind CSS for code, and Vercel for deployment.",
   },
   {
     q: "Can you work in my time zone?",
-    a: "I am based in Lisbon and overlap comfortably with both European and US East Coast working hours.",
+    a: "I work remotely with clients across time zones and schedule calls at hours that suit both sides.",
   },
   {
     q: "How do payments work?",
@@ -214,7 +220,7 @@ const faqs = [
   },
   {
     q: "Are you available for full-time roles?",
-    a: "Not at the moment. I work independently with a small number of clients so I can give each project my full attention.",
+    a: "Not at the moment. I run Designali and work with a small number of clients so each project gets my full attention.",
   },
   {
     q: "How far in advance should I book?",
@@ -224,7 +230,7 @@ const faqs = [
 
 const footer = [
   { title: "Sitemap", links: ["Work", "About", "Services", "Writing"] },
-  { title: "Elsewhere", links: ["Dribbble", "GitHub", "LinkedIn", "Read.cv"] },
+  { title: "Elsewhere", links: ["Instagram", "X", "LinkedIn", "21st.dev"] },
   {
     title: "Contact",
     links: ["Email me", "Book a call", "Newsletter", "Resume"],
@@ -243,7 +249,7 @@ export default function LandingPortfolio04() {
             <span className="flex size-7 items-center justify-center rounded-md bg-violet-600 text-white text-sm">
               L
             </span>
-            <span className="">Leo Martins</span>
+            <span className="">Ali Imam</span>
           </a>
           <nav className="hidden items-center gap-7 text-sm md:flex">
             {navLinks.map((link) => (
@@ -277,17 +283,17 @@ export default function LandingPortfolio04() {
           <div className="mx-auto max-w-3xl space-y-6 text-center">
             <span className="inline-flex items-center gap-2 rounded-full border bg-background text-muted-foreground px-3 py-1 text-xs font-medium">
               <Sparkles className="size-3.5 text-violet-600 dark:text-violet-400" />
-              UX research and strategy
+              UX strategy and design
             </span>
             <h1 className="text-4xl leading-[1.05] font-semibold tracking-tight text-balance sm:text-5xl md:text-6xl ">
-              {"Evidence for "}
+              {"Clarity for "}
               <span className="text-violet-600 dark:text-violet-400">
                 every product decision
               </span>
             </h1>
             <p className="mx-auto max-w-2xl text-lg leading-8 text-muted-foreground">
-              I am Leo, a UX researcher who helps product teams understand their
-              users and prioritise what to build next.
+              I am Ali, a design engineer who helps product teams understand their
+              users and design what to build next.
             </p>
             <div className="flex flex-wrap gap-3 justify-center">
               <Button size="lg" nativeButton={false} render={<a href="#" />}>
@@ -327,7 +333,7 @@ export default function LandingPortfolio04() {
       <section className="border-b">
         <div className="mx-auto max-w-7xl px-6 py-12">
           <p className="text-center text-sm text-muted-foreground">
-            Previously worked with
+            Projects I have built
           </p>
           <div className="mt-8 grid grid-cols-2 items-center gap-x-8 gap-y-6 sm:grid-cols-4 lg:grid-cols-8">
             {logos.map((logo) => (
@@ -351,8 +357,8 @@ export default function LandingPortfolio04() {
               Design and code from first sketch to shipped product
             </h2>
             <p className="mt-4 text-lg leading-8 text-muted-foreground">
-              I help founders and teams turn fuzzy ideas into products people
-              enjoy using, handling everything from research to production code.
+              I design and build digital experiences that look great, feel intuitive
+              and work beautifully, handling everything from brand to production code.
             </p>
           </div>
           <div className="mt-14 grid gap-3 md:grid-cols-3">
@@ -387,7 +393,7 @@ export default function LandingPortfolio04() {
                 Selected projects
               </h2>
               <p className="mt-4 text-lg leading-8 text-muted-foreground">
-                A handful of recent projects I am proud of. Full case studies
+                From designali.com to the Dalim projects that came before it. Full case studies
                 are available on request.
               </p>
             </div>
@@ -406,6 +412,7 @@ export default function LandingPortfolio04() {
                 <div
                   className={`relative aspect-[4/3] overflow-hidden rounded-2xl ${item.tile}`}
                 >
+                  <img src={item.image} alt={item.name} className="absolute inset-0 size-full object-cover" />
                   <div className="absolute inset-0 bg-black/0 transition-colors group-hover:bg-black/10" />
                   <span className="absolute top-3 left-3 rounded-full bg-white/85 px-2.5 py-1 text-[11px] font-medium text-zinc-900 backdrop-blur">
                     {item.tag}
@@ -588,7 +595,7 @@ export default function LandingPortfolio04() {
               Stop guessing what your users want
             </h2>
             <p className="text-lg text-muted-foreground">
-              A two-week research sprint is often all it takes. Let us find out
+              A two-week design sprint is often all it takes. Let us find out
               together.
             </p>
             <div className="flex flex-wrap gap-3 justify-center">
@@ -618,10 +625,10 @@ export default function LandingPortfolio04() {
               <span className="flex size-7 items-center justify-center rounded-md bg-violet-600 text-white text-sm">
                 L
               </span>
-              <span className="">Leo Martins</span>
+              <span className="">Ali Imam</span>
             </a>
             <p className="max-w-xs text-sm text-muted-foreground">
-              Research that changes roadmaps.
+              Design that changes roadmaps.
             </p>
           </div>
           {footer.map((column) => (
@@ -645,7 +652,7 @@ export default function LandingPortfolio04() {
         <div className="border-t ">
           <div className="mx-auto flex max-w-7xl flex-col justify-between gap-4 px-6 py-6 text-xs text-muted-foreground sm:flex-row">
             <span>
-              © {new Date().getFullYear()} Leo Martins. All rights reserved.
+              © {new Date().getFullYear()} Ali Imam. All rights reserved.
             </span>
             <div className="flex gap-6">
               <a href="#" className="hover:text-foreground">
@@ -673,6 +680,7 @@ function HeroVisual() {
           key={item.name}
           className={`relative overflow-hidden rounded-2xl ${item.tile} ${i === 0 ? "col-span-2 row-span-2 aspect-square md:aspect-auto" : "aspect-[4/3]"}`}
         >
+          <img src={item.image} alt={item.name} className="absolute inset-0 size-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/0 to-black/0" />
           <span className="absolute top-3 left-3 rounded-full bg-white/85 px-2.5 py-1 text-[11px] font-medium text-zinc-900 backdrop-blur">
             {item.tag}

@@ -1,13 +1,13 @@
 import {
-  CodeIcon,
-  Heading1Icon,
-  Heading2Icon,
-  ListIcon,
-  ListTodoIcon,
-  MinusIcon,
-  QuoteIcon,
-  TypeIcon,
-} from "lucide-react"
+  Code as CodeIcon,
+  Heading1 as Heading1Icon,
+  Heading2 as Heading2Icon,
+  List as ListIcon,
+  ListTodo as ListTodoIcon,
+  Minus as MinusIcon,
+  Quote as QuoteIcon,
+  Type as TypeIcon,
+} from "@designali/icons"
 
 import {
   Command,
@@ -51,7 +51,7 @@ export default function EditorSlashCommands() {
   return (
     <div className="flex w-full max-w-sm flex-col gap-1">
       <p className="px-1 text-sm">
-        Meeting notes <span className="text-muted-foreground">/</span>
+        Client brief <span className="text-muted-foreground">/</span>
       </p>
       <Command className="border shadow-md">
         <CommandInput placeholder="Filter blocks..." autoFocus />

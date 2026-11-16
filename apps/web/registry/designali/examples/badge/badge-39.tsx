@@ -3,7 +3,7 @@ import { cn } from "@workspace/ui/lib/utils"
 
 const files = [
   {
-    name: "Quarterly report",
+    name: "Designali brand guidelines",
     ext: "PDF",
     size: "2.4 MB",
     className: "bg-red-600 text-white",
@@ -15,13 +15,13 @@ const files = [
     className: "bg-sky-600 text-white",
   },
   {
-    name: "Customer list",
+    name: "Icon list",
     ext: "CSV",
     size: "64 KB",
     className: "bg-emerald-600 text-white",
   },
   {
-    name: "Brand assets",
+    name: "Designali logos",
     ext: "ZIP",
     size: "31 MB",
     className: "bg-zinc-700 text-white",

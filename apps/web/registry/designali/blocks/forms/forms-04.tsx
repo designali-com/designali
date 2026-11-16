@@ -8,7 +8,7 @@ import { cn } from "@workspace/ui/lib/utils"
 
 const scores = Array.from({ length: 11 }, (_, index) => index)
 
-const topics = ["Onboarding", "Pricing", "Performance", "Docs", "Support"]
+const topics = ["Templates", "Blocks", "Icons", "Docs", "Pricing"]
 
 export default function Forms04() {
   const [score, setScore] = useState<number | null>(8)
@@ -28,7 +28,7 @@ export default function Forms04() {
           Quarterly survey · 2 minutes
         </p>
         <h2 className="mt-4 text-3xl font-semibold tracking-tight md:text-4xl">
-          How likely are you to recommend Fieldnote to a colleague?
+          How likely are you to recommend Designali to a colleague?
         </h2>
 
         <div className="mt-10 grid grid-cols-11 border border-border">
@@ -77,7 +77,7 @@ export default function Forms04() {
           <Textarea
             rows={4}
             className="mt-3"
-            placeholder="The search in docs could surface API references faster…"
+            placeholder="I would love more dashboard blocks and Figma files for each template…"
           />
         </div>
 

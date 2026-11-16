@@ -1,4 +1,6 @@
-import { Quote } from "lucide-react"
+import {
+  Quote,
+} from "@designali/icons"
 
 type Card =
   | { kind: "post"; tag: string; title: string; excerpt: string; date: string; art?: string }
@@ -8,47 +10,47 @@ type Card =
 const cards: Card[] = [
   {
     kind: "post",
-    tag: "Ceramics",
-    title: "Firing a wood kiln for three days straight",
-    excerpt: "Shift rotas, ash glaze, and the twelve pieces that survived out of eighty.",
+    tag: "CGI & 3D",
+    title: "Rendering the Designali brand in 3D",
+    excerpt: "Lighting, materials, and the twelve renders that survived out of eighty.",
     date: "Nov 12",
     art: "aspect-[4/5] bg-gradient-to-b from-chart-5/60 to-chart-1/20",
   },
-  { kind: "note", title: "Studio open house moved to December 7", date: "Nov 10" },
+  { kind: "note", title: "New Designali templates drop on December 7", date: "Nov 10" },
   {
     kind: "quote",
-    text: "The glaze does what it wants. My job is to give it good reasons.",
-    source: "From our interview with potter Saoirse Byrne",
+    text: "Where thoughtful design meets production-ready code. That is the whole job.",
+    source: "Ali Imam, founder of Designali",
   },
   {
     kind: "post",
     tag: "Process",
-    title: "Throwing the same bowl a hundred times",
-    excerpt: "A practice log on consistency, wrist pain, and when to stop.",
+    title: "Drawing the same icon a hundred times",
+    excerpt: "A practice log on consistency, optical balance, and when to stop.",
     date: "Nov 6",
     art: "aspect-square bg-gradient-to-tr from-chart-2/50 to-chart-3/20",
   },
   {
     kind: "post",
-    tag: "Materials",
-    title: "Local clay, tested",
-    excerpt: "We dug from four riverbanks and fired the samples to cone 10. Results inside.",
+    tag: "Code",
+    title: "Tailwind CSS tokens, tested",
+    excerpt: "We themed 460+ blocks in light and dark mode. Results inside.",
     date: "Oct 30",
   },
   {
     kind: "post",
-    tag: "Visit",
-    title: "A week at the Mashiko pottery fair",
-    excerpt: "Notes, sketches, and a very heavy suitcase.",
+    tag: "Archive",
+    title: "A week in the Dalim Visuals archive",
+    excerpt: "Notes, sketches, and a very heavy Figma file.",
     date: "Oct 24",
     art: "aspect-[3/4] bg-gradient-to-br from-chart-4/60 to-chart-2/20",
   },
-  { kind: "note", title: "New glaze recipe cards are in the shop", date: "Oct 20" },
+  { kind: "note", title: "New icon packs are in the Designali store", date: "Oct 20" },
   {
     kind: "post",
     tag: "Tools",
-    title: "The trimming tools we actually reach for",
-    excerpt: "Nine tools, six of them homemade from banding steel.",
+    title: "The design tools we actually reach for",
+    excerpt: "Nine tools, from Figma and Cursor to a homemade icon builder.",
     date: "Oct 15",
     art: "aspect-video bg-gradient-to-r from-chart-1/50 to-chart-4/20",
   },
@@ -59,7 +61,7 @@ export default function Blog11() {
     <section className="w-full bg-background py-16 text-foreground md:py-24">
       <div className="mx-auto max-w-7xl px-6">
         <div className="mb-12 max-w-xl">
-          <h2 className="font-serif text-4xl tracking-tight md:text-5xl">Kiln &amp; Kettle journal</h2>
+          <h2 className="font-serif text-4xl tracking-tight md:text-5xl">Designali journal</h2>
           <p className="mt-3 text-muted-foreground">
             Long reads, short notes, and things overheard in the studio.
           </p>

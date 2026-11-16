@@ -1,4 +1,5 @@
-import { Figma, Github, LinkedIn, X } from "@designali/logos"
+import { Instagram, LinkedIn, X } from "@designali/logos"
+import { Logo } from "@/src/components/logo"
 
 export default function Footer() {
   return (
@@ -7,21 +8,27 @@ export default function Footer() {
         <div className="flex h-auto flex-col items-start justify-start gap-8 p-4 md:p-8">
           <div className="flex items-center justify-start gap-3 self-stretch">
             <div className="text-center text-xl leading-4 font-semibold">
-              <Figma />
+              <Logo className="h-8 w-auto" />
             </div>
           </div>
           <div className="text-sm font-medium">
-            <h1 className="text-lg font-medium">Design without limits</h1>
+            <h1 className="text-lg font-medium">designali — design se code tak</h1>
             <p className="max-w-md text-muted-foreground">
-              I create digital experiences that connect and inspire. I build
-              apps, websites, brands, and products end-to-end.
+              I design and build digital experiences that look great, feel
+              intuitive, and work beautifully. Brands, websites and products, end-to-end.
             </p>
           </div>
 
           <div className="flex items-start justify-start gap-6">
-            <LinkedIn className="w-6" />
-            <X className="w-6" />
-            <Github className="w-6" />
+            <a href="https://www.linkedin.com/company/designali-com/" aria-label="Designali on LinkedIn">
+              <LinkedIn className="w-6" />
+            </a>
+            <a href="https://x.com/designali_com" aria-label="Designali on X">
+              <X className="w-6" />
+            </a>
+            <a href="https://www.instagram.com/designali.code/" aria-label="Designali on Instagram">
+              <Instagram className="w-6" />
+            </a>
           </div>
         </div>
 
@@ -32,19 +39,19 @@ export default function Footer() {
             </div>
             <div className="flex flex-col items-start justify-end gap-2">
               <div className="cursor-pointer text-sm leading-5 font-normal text-muted-foreground transition-colors hover:text-primary">
-                Features
+                Templates
+              </div>
+              <div className="cursor-pointer text-sm leading-5 font-normal text-muted-foreground transition-colors hover:text-primary">
+                Blocks
+              </div>
+              <div className="cursor-pointer text-sm leading-5 font-normal text-muted-foreground transition-colors hover:text-primary">
+                UI Designs
+              </div>
+              <div className="cursor-pointer text-sm leading-5 font-normal text-muted-foreground transition-colors hover:text-primary">
+                Icons
               </div>
               <div className="cursor-pointer text-sm leading-5 font-normal text-muted-foreground transition-colors hover:text-primary">
                 Pricing
-              </div>
-              <div className="cursor-pointer text-sm leading-5 font-normal text-muted-foreground transition-colors hover:text-primary">
-                Integrations
-              </div>
-              <div className="cursor-pointer text-sm leading-5 font-normal text-muted-foreground transition-colors hover:text-primary">
-                Real-time Previews
-              </div>
-              <div className="cursor-pointer text-sm leading-5 font-normal text-muted-foreground transition-colors hover:text-primary">
-                Multi-Agent Coding
               </div>
             </div>
           </div>
@@ -53,16 +60,16 @@ export default function Footer() {
             <div className="text-sm leading-5 font-medium">Company</div>
             <div className="flex flex-col items-start justify-center gap-2">
               <div className="cursor-pointer text-sm leading-5 font-normal text-muted-foreground transition-colors hover:text-primary">
-                About us
+                Work
               </div>
               <div className="cursor-pointer text-sm leading-5 font-normal text-muted-foreground transition-colors hover:text-primary">
-                Our team
+                Ali Imam
               </div>
               <div className="cursor-pointer text-sm leading-5 font-normal text-muted-foreground transition-colors hover:text-primary">
-                Careers
+                Services
               </div>
               <div className="cursor-pointer text-sm leading-5 font-normal text-muted-foreground transition-colors hover:text-primary">
-                Brand
+                Blogs
               </div>
               <div className="cursor-pointer text-sm leading-5 font-normal text-muted-foreground transition-colors hover:text-primary">
                 Contact
@@ -77,13 +84,13 @@ export default function Footer() {
                 Terms of use
               </div>
               <div className="cursor-pointer self-stretch text-sm leading-5 font-normal text-muted-foreground transition-colors hover:text-primary">
-                API Reference
+                Logos
               </div>
               <div className="cursor-pointer self-stretch text-sm leading-5 font-normal text-muted-foreground transition-colors hover:text-primary">
-                Documentation
+                Docs
               </div>
               <div className="cursor-pointer self-stretch text-sm leading-5 font-normal text-muted-foreground transition-colors hover:text-primary">
-                Community
+                Illustration
               </div>
               <div className="cursor-pointer self-stretch text-sm leading-5 font-normal text-muted-foreground transition-colors hover:text-primary">
                 Support

@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { BookOpenIcon, StarIcon } from "lucide-react"
+import {
+  BookOpen as BookOpenIcon,
+  Star as StarIcon,
+} from "@designali/icons"
 
 import {
   Breadcrumb,

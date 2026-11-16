@@ -1,4 +1,8 @@
-import { ArrowUpRightIcon, ChevronDownIcon, MapPinIcon } from "lucide-react"
+import {
+  ArrowUpRight as ArrowUpRightIcon,
+  ChevronDown as ChevronDownIcon,
+  MapPin as MapPinIcon,
+} from "@designali/icons"
 
 import {
   Accordion,
@@ -12,30 +16,30 @@ import { Button } from "@workspace/ui/components/button"
 const roles = [
   {
     value: "pd",
-    title: "Senior Product Designer",
+    title: "UI/UX Designer",
     team: "Design",
-    location: "Remote, Europe",
+    location: "Remote",
     type: "Full-time",
     summary:
-      "Own the end-to-end experience of our invoicing product, from discovery to polished UI.",
+      "Design client websites and Designali blocks, from first sketch in Figma to polished UI.",
   },
   {
     value: "fe",
-    title: "Frontend Engineer",
+    title: "Next.js Developer",
     team: "Engineering",
-    location: "Lisbon",
+    location: "Remote",
     type: "Full-time",
     summary:
-      "Build fast, accessible interfaces in React and help shape our component library.",
+      "Turn Designali designs into fast, accessible Next.js and Tailwind CSS code.",
   },
   {
     value: "cs",
-    title: "Customer Success Lead",
-    team: "Operations",
-    location: "Remote, US",
+    title: "Motion & 3D Designer",
+    team: "Creative",
+    location: "Remote",
     type: "Contract",
     summary:
-      "Guide new customers through onboarding and turn their feedback into product insight.",
+      "Create CGI, 3D and motion work for Designali client projects and launches.",
   },
 ]
 

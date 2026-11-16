@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import {
-  BarChart3,
+  ChartColumn as BarChart3,
   Calendar,
   ChevronsLeft,
   ChevronsRight,
@@ -11,17 +11,17 @@ import {
   Settings,
   Users,
   Wallet,
-} from "lucide-react"
+} from "@designali/icons"
 
 import { cn } from "@workspace/ui/lib/utils"
 
 const items = [
   { icon: House, label: "Home" },
-  { icon: BarChart3, label: "Reports", badge: "New" },
+  { icon: BarChart3, label: "Analytics", badge: "New" },
   { icon: Calendar, label: "Schedule" },
   { icon: MessageSquare, label: "Messages", count: 4 },
   { icon: Users, label: "Clients" },
-  { icon: Wallet, label: "Payouts" },
+  { icon: Wallet, label: "Invoices" },
 ]
 
 export default function Navigation08() {
@@ -39,9 +39,9 @@ export default function Navigation08() {
         >
           <div className="flex h-16 items-center gap-3 border-b px-4">
             <span className="flex size-8 shrink-0 items-center justify-center bg-primary text-xs font-bold text-primary-foreground">
-              Tl
+              Da
             </span>
-            {expanded && <span className="truncate font-semibold">Tally Studio</span>}
+            {expanded && <span className="truncate font-semibold">Designali Studio</span>}
           </div>
           <nav className="flex-1 space-y-1 p-3">
             {items.map((item) => (
@@ -108,9 +108,9 @@ export default function Navigation08() {
 
         <div className="min-w-0 flex-1 p-6 md:p-10">
           <p className="text-xs tracking-widest text-muted-foreground uppercase">{active}</p>
-          <h2 className="mt-2 text-2xl font-semibold tracking-tight">Good morning, Priya</h2>
+          <h2 className="mt-2 text-2xl font-semibold tracking-tight">Good morning, Ali</h2>
           <div className="mt-8 grid gap-4 sm:grid-cols-3">
-            {["Bookings this week", "Unpaid invoices", "New clients"].map((label, index) => (
+            {["Projects this week", "Unpaid invoices", "New clients"].map((label, index) => (
               <div key={label} className="border p-5">
                 <p className="text-xs text-muted-foreground">{label}</p>
                 <p className="mt-2 text-2xl font-semibold tabular-nums">

@@ -9,12 +9,12 @@ import {
 import { cn } from "@workspace/ui/lib/utils"
 
 const rows = [
-  { ticker: "ORBT", price: 142.31, change: 1.24, volume: "3.2M" },
-  { ticker: "NOVA", price: 58.07, change: -0.82, volume: "1.1M" },
-  { ticker: "HLXS", price: 311.9, change: 2.75, volume: "842K" },
-  { ticker: "QUIL", price: 12.45, change: -3.1, volume: "6.7M" },
-  { ticker: "VRDN", price: 77.6, change: 0.15, volume: "2.4M" },
-  { ticker: "ZEPH", price: 203.18, change: -1.02, volume: "990K" },
+  { ticker: "ICONS", price: 142.31, change: 1.24, volume: "3.2M" },
+  { ticker: "LOGOS", price: 58.07, change: -0.82, volume: "1.1M" },
+  { ticker: "BLOCKS", price: 311.9, change: 2.75, volume: "842K" },
+  { ticker: "VECTORS", price: 12.45, change: -3.1, volume: "6.7M" },
+  { ticker: "UI", price: 77.6, change: 0.15, volume: "2.4M" },
+  { ticker: "PAGES", price: 203.18, change: -1.02, volume: "990K" },
 ]
 
 export default function StripedDenseTable() {
@@ -23,10 +23,10 @@ export default function StripedDenseTable() {
       <Table className="text-[11px]">
         <TableHeader>
           <TableRow>
-            <TableHead className="h-8">Ticker</TableHead>
+            <TableHead className="h-8">Product</TableHead>
             <TableHead className="h-8 text-right">Price</TableHead>
             <TableHead className="h-8 text-right">Change</TableHead>
-            <TableHead className="h-8 text-right">Volume</TableHead>
+            <TableHead className="h-8 text-right">Downloads</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>

@@ -1,14 +1,14 @@
 import {
-  AlignLeftIcon,
-  DatabaseBackupIcon,
-  DownloadIcon,
-  EraserIcon,
-  HistoryIcon,
-  KeyRoundIcon,
-  ListTreeIcon,
-  PlayIcon,
-  TableIcon,
-} from "lucide-react"
+  TextAlignStart as AlignLeftIcon,
+  DatabaseBackup as DatabaseBackupIcon,
+  Download as DownloadIcon,
+  Eraser as EraserIcon,
+  History as HistoryIcon,
+  KeyRound as KeyRoundIcon,
+  ListTree as ListTreeIcon,
+  Play as PlayIcon,
+  Table as TableIcon,
+} from "@designali/icons"
 
 import {
   Menubar,

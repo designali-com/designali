@@ -8,116 +8,116 @@ import {
   FileText,
   Landmark,
   Plus,
-} from "lucide-react"
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 
-const navLinks = ["Buy", "Rent", "Sell", "Agents", "Insights"]
+const navLinks = ["Studio", "Work", "Process", "Pricing", "Insights"]
 
 const features = [
   {
     icon: ChartLine,
-    title: "Accurate valuations",
+    title: "Listing websites",
     description:
-      "Pricing backed by recent sales data, so your home sells fast without leaving money on the table.",
+      "Fast Next.js property sites with search, filters and listing pages your team can update without a developer.",
   },
   {
     icon: Camera,
-    title: "Professional media",
+    title: "CGI & 3D renders",
     description:
-      "Photography, floor plans and 3D tours included with every listing at no extra cost.",
+      "Architectural renders, interiors and walkthrough motion so buyers can see a home before it is built.",
   },
   {
     icon: Bell,
-    title: "Instant alerts",
+    title: "Lead capture flows",
     description:
-      "Get notified the moment a home matching your criteria comes on the market.",
+      "Viewing requests, enquiry forms and valuation flows designed to be short and easy to complete on a phone.",
   },
   {
     icon: FileText,
-    title: "Paperless offers",
+    title: "Brochures & sales kits",
     description:
-      "Make, track and sign offers online with legally binding e-signatures.",
+      "Digital and print brochures, floor plan layouts and sales decks in one consistent visual system.",
   },
   {
     icon: Landmark,
-    title: "Mortgage support",
+    title: "Design systems",
     description:
-      "Compare rates from 40+ lenders and get pre-approved in as little as 24 hours.",
+      "Tokens, components and docs that keep your website, portal and marketing consistent as you grow.",
   },
 ]
 
 const stats = [
-  { value: "4,600", label: "Homes sold" },
-  { value: "180", label: "Local agents" },
+  { value: "2300+", label: "Screens designed" },
+  { value: "60+", label: "Projects shipped" },
   { value: "4.9/5", label: "Client rating" },
-  { value: "$2.8B", label: "Property sold last year" },
+  { value: "240+", label: "Property pages designed" },
 ]
 
 const steps = [
   {
-    title: "Book a consultation",
+    title: "Book a discovery call",
     description:
-      "Meet a local agent to talk budget, timeline and the neighbourhoods you love.",
+      "Meet Ali Imam to talk about your brand, your listings and what the project needs.",
   },
   {
-    title: "Tour your shortlist",
+    title: "Shortlist the direction",
     description:
-      "View homes in person or by video, with honest notes on every property.",
+      "Review moodboards and concepts in Figma, with honest notes on what will work best.",
   },
   {
-    title: "Make a strong offer",
+    title: "Design and build",
     description:
-      "We use recent sales data to help you offer confidently and negotiate the best terms.",
+      "Brand, CGI and website are designed together, then built in Next.js and tested.",
   },
   {
-    title: "Close and move in",
+    title: "Launch and hand over",
     description:
-      "We coordinate inspections, lenders and lawyers right up to handing over the keys.",
+      "We launch the site, hand over Figma files and documentation, and stay on for updates.",
   },
 ]
 
 const showcase = [
   {
-    name: "Hillside Modern Residence",
-    meta: "4 bed · 3 bath · 280 m²",
-    tag: "New listing",
-    price: "$1,450,000",
+    name: "Hillside Residence Launch",
+    meta: "Brand · Website · CGI renders",
+    tag: "New project",
+    price: "6 wks",
     tile: "bg-gradient-to-br from-rose-200 via-pink-300 to-purple-300 dark:from-rose-700 dark:via-pink-800 dark:to-purple-900",
   },
   {
-    name: "Riverside Loft",
-    meta: "2 bed · 2 bath · 118 m²",
-    tag: "Open house",
-    price: "$725,000",
+    name: "Riverside Loft Site",
+    meta: "Listing site · 12 pages",
+    tag: "Website",
+    price: "4 wks",
     tile: "bg-gradient-to-br from-blue-200 via-indigo-300 to-violet-400 dark:from-blue-700 dark:via-indigo-800 dark:to-violet-900",
   },
   {
-    name: "Garden Townhouse",
-    meta: "3 bed · 2.5 bath · 190 m²",
-    tag: "Price reduced",
-    price: "$899,000",
+    name: "Townhouse Brochure",
+    meta: "Print · Digital brochure",
+    tag: "Brochure",
+    price: "5 wks",
     tile: "bg-gradient-to-br from-yellow-100 via-amber-200 to-orange-300 dark:from-yellow-700 dark:via-amber-800 dark:to-orange-900",
   },
   {
-    name: "Penthouse at The Arbor",
-    meta: "3 bed · 3 bath · 210 m²",
-    tag: "Exclusive",
-    price: "$2,300,000",
+    name: "Penthouse CGI Walkthrough",
+    meta: "3D · Motion · 90 seconds",
+    tag: "CGI",
+    price: "8 wks",
     tile: "bg-gradient-to-br from-amber-200 via-orange-300 to-rose-400 dark:from-amber-700 dark:via-orange-800 dark:to-rose-900",
   },
   {
-    name: "Coastal Cottage",
-    meta: "2 bed · 1 bath · 92 m²",
-    tag: "Sea view",
-    price: "$640,000",
+    name: "Coastal Resort Brand",
+    meta: "Identity · Booking site",
+    tag: "Brand",
+    price: "3 wks",
     tile: "bg-gradient-to-br from-sky-200 via-cyan-300 to-teal-400 dark:from-sky-700 dark:via-cyan-800 dark:to-teal-900",
   },
   {
-    name: "Downtown Studio",
-    meta: "1 bed · 1 bath · 48 m²",
-    tag: "For rent",
-    price: "$2,100/mo",
+    name: "Agency Design System",
+    meta: "Components · Docs",
+    tag: "System",
+    price: "From $2,100/mo",
     tile: "bg-gradient-to-br from-violet-200 via-purple-300 to-fuchsia-400 dark:from-violet-700 dark:via-purple-800 dark:to-fuchsia-900",
   },
 ]
@@ -125,100 +125,100 @@ const showcase = [
 const testimonials = [
   {
     quote:
-      "They managed our rental from tenant search to repairs. We have had zero void months in three years.",
-    name: "Marta Kowalski",
-    role: "Landlord, 4 properties",
+      "Designali redesigned our lettings portal end to end. Landlords finally find what they need without calling us.",
+    name: "Marta",
+    role: "Director, lettings agency",
   },
   {
     quote:
-      "The market report they sent before listing helped us time the sale perfectly. Clear advice, no pressure.",
-    name: "David Chen",
-    role: "Sold in Austin",
+      "The launch site Ali designed helped us time the release perfectly. Clear advice, no pressure.",
+    name: "David",
+    role: "Founder, development studio",
   },
   {
     quote:
-      "Mortgage pre-approval in one day, offer accepted in a week. I still cannot believe how smooth it was.",
-    name: "Sasha Ivanova",
-    role: "Bought a condo",
+      "From brief to launch in four weeks. I still cannot believe how smooth working with Designali was.",
+    name: "Sasha",
+    role: "Founder, proptech startup",
   },
 ]
 
 const tiers = [
   {
-    name: "Essentials",
-    price: "1.5%",
-    period: "of sale price",
-    description: "For confident sellers who want expert marketing.",
+    name: "Website",
+    price: "$2,900",
+    period: "per project",
+    description: "For agencies that need a modern listing site.",
     features: [
-      "Professional photography",
-      "Listing on all major portals",
-      "Online offer management",
-      "Sale progression support",
+      "Next.js listing site",
+      "Search and filter pages",
+      "Enquiry and viewing flows",
+      "Launch support",
     ],
-    cta: "Get a valuation",
+    cta: "Start a website",
   },
   {
-    name: "Full service",
-    price: "2.5%",
-    period: "of sale price",
-    description: "Our most popular, fully managed sale.",
+    name: "Launch",
+    price: "$6,500",
+    period: "per project",
+    description: "Our most popular package for new developments.",
     features: [
-      "Everything in Essentials",
-      "Accompanied viewings",
-      "3D tour and floor plan",
-      "Dedicated negotiator",
-      "Weekly progress reports",
+      "Everything in Website",
+      "Brand identity",
+      "CGI renders and floor plans",
+      "Digital brochure",
+      "Weekly progress calls",
     ],
-    cta: "Book an agent",
+    cta: "Book a launch",
   },
   {
-    name: "Premier",
+    name: "Signature",
     price: "Custom",
     period: "",
-    description: "For luxury and architect-designed homes.",
+    description: "For luxury and architect-designed projects.",
     features: [
-      "Bespoke marketing campaign",
-      "Print and film production",
-      "Private buyer network",
-      "International exposure",
-      "Senior partner as lead agent",
+      "Full brand campaign",
+      "CGI walkthrough film",
+      "Print and digital sales kit",
+      "Design system and docs",
+      "Ali Imam as lead designer",
     ],
-    cta: "Speak to a partner",
+    cta: "Talk to the studio",
   },
 ]
 
 const faqs = [
   {
-    q: "Can you help me get a mortgage?",
-    a: "Yes. Our in-house advisers compare rates from more than 40 lenders and can arrange pre-approval quickly.",
+    q: "Can you create renders before construction?",
+    a: "Yes. We create CGI renders and walkthroughs from plans, sketches or CAD files, so you can market homes early.",
   },
   {
-    q: "Do you manage rental properties?",
-    a: "We offer tenant finding and fully managed lettings, including rent collection, maintenance and compliance.",
+    q: "Do you support the site after launch?",
+    a: "Yes. Monthly design support covers new listings templates, campaign pages and small updates.",
   },
   {
-    q: "Can I view homes outside office hours?",
-    a: "Yes. We run viewings on weekday evenings and weekends, as well as live video tours.",
+    q: "Can you work with our existing brand?",
+    a: "Yes. We can extend your current identity into a new website, brochures and CGI, or refresh it gently.",
   },
   {
-    q: "How much is my home worth?",
-    a: "Book a free valuation and a local agent will visit, review recent comparable sales and give you a written estimate within 48 hours.",
+    q: "How much does a property website cost?",
+    a: "Book a free discovery call and Ali Imam will review your listings and goals, then send a written scope and fixed price within 48 hours.",
   },
   {
-    q: "How long does it take to sell?",
-    a: "Our homes sell in an average of 21 days, though timing depends on price, location and the season.",
+    q: "How long does a project take?",
+    a: "Most websites launch in about four weeks, though timing depends on scope, content and CGI work.",
   },
 ]
 
 const footer = [
-  { title: "Property", links: ["Buy", "Rent", "Sell", "New developments"] },
+  { title: "Studio", links: ["Studio", "Work", "Process", "Brand identity"] },
   {
-    title: "Services",
-    links: ["Valuations", "Mortgages", "Property management", "Commercial"],
+    title: "Studio",
+    links: ["Websites", "CGI renders", "Design systems", "Brochures"],
   },
   {
-    title: "Company",
-    links: ["Our agents", "Market insights", "Careers", "Contact"],
+    title: "Designali",
+    links: ["About Ali", "Insights", "Templates", "Contact"],
   },
 ]
 
@@ -235,7 +235,7 @@ export default function LandingRealEstate10() {
               S
             </span>
             <span className="font-serif text-lg font-normal">
-              Stillwater Homes
+              designali
             </span>
           </a>
           <nav className="hidden items-center gap-7 text-sm md:flex">
@@ -257,10 +257,10 @@ export default function LandingRealEstate10() {
               nativeButton={false}
               render={<a href="#" />}
             >
-              Saved homes
+              Our work
             </Button>
             <Button size="sm" nativeButton={false} render={<a href="#" />}>
-              View holiday homes
+              View resort work
             </Button>
           </div>
         </div>
@@ -268,25 +268,25 @@ export default function LandingRealEstate10() {
       <section className="border-b">
         <div className="mx-auto max-w-7xl px-6 pt-16 pb-12 md:pt-28">
           <div className="flex items-center justify-between border-b pb-4 text-xs tracking-widest text-muted-foreground uppercase">
-            <span>Second homes by the coast</span>
-            <span className="hidden sm:inline">Your weekend place, found.</span>
+            <span>Design for holiday homes and resorts</span>
+            <span className="hidden sm:inline">Your resort brand, found.</span>
           </div>
           <h1 className="mt-12 max-w-5xl text-4xl leading-[1.05] font-semibold tracking-tight text-balance sm:text-5xl md:text-8xl font-serif font-normal">
             {"Lakeside cabins and "}
             <span className="text-indigo-600 dark:text-indigo-400">
-              coastal cottages
+              coastal resorts
             </span>
-            {" for sale"}
+            {" designed beautifully"}
           </h1>
           <div className="mt-12 grid gap-8 md:grid-cols-2 md:items-end">
             <p className="max-w-lg text-lg leading-8 text-muted-foreground">
-              Stillwater Homes helps buyers find second homes on the lakes and
-              coast, with rental income estimates for every listing.
+              Designali designs brands and booking sites for holiday homes and resorts,
+              with galleries, availability and enquiry flows for every property.
             </p>
             <div className="md:justify-self-end">
               <div className="flex flex-wrap gap-3 ">
                 <Button size="lg" nativeButton={false} render={<a href="#" />}>
-                  View holiday homes
+                  View resort work
                   <ArrowRight />
                 </Button>
                 <Button
@@ -295,7 +295,7 @@ export default function LandingRealEstate10() {
                   nativeButton={false}
                   render={<a href="#" />}
                 >
-                  Estimate rental income
+                  See the resort template
                 </Button>
               </div>
             </div>
@@ -327,14 +327,14 @@ export default function LandingRealEstate10() {
           <div className="lg:sticky lg:top-24 lg:self-start">
             <div className="max-w-2xl">
               <p className="text-sm font-medium text-indigo-600 dark:text-indigo-400">
-                Why choose us
+                Why choose Designali
               </p>
               <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl font-serif font-normal mt-3">
-                A smarter way to buy, sell and rent
+                A smarter way to market property
               </h2>
               <p className="mt-4 text-lg leading-8 text-muted-foreground">
-                Local experts, accurate data and a process that keeps you
-                informed from the first viewing to the final signature.
+                Brand, CGI and code from one studio, with a process that keeps you
+                informed from the first concept to launch day.
               </p>
             </div>
           </div>
@@ -363,11 +363,11 @@ export default function LandingRealEstate10() {
           <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
             <div className="max-w-2xl">
               <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl font-serif font-normal">
-                Featured listings
+                Featured projects
               </h2>
               <p className="mt-4 text-lg leading-8 text-muted-foreground">
-                Hand-picked homes, updated daily. Book a viewing in person or
-                take a 3D tour from your sofa.
+                Hand-picked property projects, from launch sites to 3D walkthroughs.
+                Explore case studies in detail on the work page.
               </p>
             </div>
             <Button
@@ -411,7 +411,7 @@ export default function LandingRealEstate10() {
       <section className="border-b">
         <div className="mx-auto max-w-5xl px-6 py-20 text-center md:py-28">
           <p className="text-sm tracking-widest text-muted-foreground uppercase">
-            Homeowners who trusted us
+            Clients who trusted Designali
           </p>
           {testimonials.slice(0, 1).map((t) => (
             <figure key={t.name} className="mt-10">
@@ -445,7 +445,7 @@ export default function LandingRealEstate10() {
         <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
           <div className="max-w-2xl">
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl font-serif font-normal">
-              From first viewing to keys in hand
+              From first concept to launch day
             </h2>
           </div>
           <ol className="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
@@ -470,10 +470,10 @@ export default function LandingRealEstate10() {
         <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl font-serif font-normal">
-              Fair fees, clearly explained
+              Fair pricing, clearly explained
             </h2>
             <p className="mt-4 text-lg leading-8 text-muted-foreground">
-              Choose the level of service that suits your sale. No hidden
+              Choose the package that suits your project. No hidden
               charges and no long tie-in contracts.
             </p>
           </div>
@@ -528,7 +528,7 @@ export default function LandingRealEstate10() {
         <div className="mx-auto grid max-w-7xl gap-12 px-6 py-20 md:py-28 lg:grid-cols-[1fr_1.5fr]">
           <div className="lg:sticky lg:top-24 lg:self-start">
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl font-serif font-normal">
-              Buying and selling questions
+              Common questions
             </h2>
             <p className="mt-4 text-muted-foreground">
               Still curious?{" "}
@@ -536,7 +536,7 @@ export default function LandingRealEstate10() {
                 href="#"
                 className="font-medium text-foreground underline underline-offset-4"
               >
-                Get in touch
+                Contact us
               </a>
               .
             </p>
@@ -560,11 +560,11 @@ export default function LandingRealEstate10() {
         <div className="mx-auto flex max-w-7xl flex-col gap-10 px-6 py-20 md:flex-row md:items-end md:justify-between md:py-28">
           <div className="max-w-2xl">
             <h2 className="text-4xl font-semibold tracking-tight text-balance md:text-6xl font-serif font-normal">
-              Dreaming of a place to escape to?
+              Launching a holiday rental brand?
             </h2>
             <p className="mt-5 text-lg text-background/65">
-              Tell us where you love to holiday and we will send matching homes
-              every week.
+              Tell us about your property and we will send a scope and ideas
+              this week.
             </p>
           </div>
           <div className="flex flex-wrap gap-3 ">
@@ -574,7 +574,7 @@ export default function LandingRealEstate10() {
               nativeButton={false}
               render={<a href="#" />}
             >
-              View holiday homes
+              View resort work
               <ArrowRight />
             </Button>
             <Button
@@ -584,7 +584,7 @@ export default function LandingRealEstate10() {
               nativeButton={false}
               render={<a href="#" />}
             >
-              Estimate rental income
+              See the resort template
             </Button>
           </div>
         </div>
@@ -600,11 +600,11 @@ export default function LandingRealEstate10() {
                 S
               </span>
               <span className="font-serif text-lg font-normal">
-                Stillwater Homes
+                designali
               </span>
             </a>
             <p className="max-w-xs text-sm text-muted-foreground">
-              Your weekend place, found.
+              Your resort brand, found.
             </p>
           </div>
           {footer.map((column) => (
@@ -628,7 +628,7 @@ export default function LandingRealEstate10() {
         <div className="border-t ">
           <div className="mx-auto flex max-w-7xl flex-col justify-between gap-4 px-6 py-6 text-xs text-muted-foreground sm:flex-row">
             <span>
-              © {new Date().getFullYear()} Stillwater Homes. All rights
+              © {new Date().getFullYear()} designali. All rights
               reserved.
             </span>
             <div className="flex gap-6">

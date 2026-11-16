@@ -1,4 +1,6 @@
-import { ArrowLeftIcon } from "lucide-react"
+import {
+  ArrowLeft as ArrowLeftIcon,
+} from "@designali/icons"
 
 import {
   Breadcrumb,

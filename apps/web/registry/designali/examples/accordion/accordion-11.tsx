@@ -1,10 +1,10 @@
 import {
-  ChevronDownIcon,
-  HeadphonesIcon,
-  RotateCcwIcon,
-  ShieldCheckIcon,
-  TruckIcon,
-} from "lucide-react"
+  ChevronDown as ChevronDownIcon,
+  Headphones as HeadphonesIcon,
+  RotateCcw as RotateCcwIcon,
+  ShieldCheck as ShieldCheckIcon,
+  Truck as TruckIcon,
+} from "@designali/icons"
 
 import {
   Accordion,
@@ -17,26 +17,26 @@ const policies = [
   {
     value: "shipping",
     icon: TruckIcon,
-    title: "Shipping",
-    body: "Orders ship within 2 business days. Standard delivery takes 3 to 5 days.",
+    title: "Delivery",
+    body: "Templates and blocks are available to download instantly after checkout on designali.com.",
   },
   {
     value: "returns",
     icon: RotateCcwIcon,
     title: "Returns",
-    body: "Return unworn items within 30 days for a full refund. Return labels are free.",
+    body: "Not the right fit? Email support@designali.com within 14 days for a full refund.",
   },
   {
     value: "warranty",
     icon: ShieldCheckIcon,
-    title: "Warranty",
-    body: "Every product is covered by a 2 year warranty against manufacturing defects.",
+    title: "Updates",
+    body: "Every template gets free updates as Next.js, React and Tailwind CSS evolve.",
   },
   {
     value: "support",
     icon: HeadphonesIcon,
     title: "Support",
-    body: "Our team answers within 4 hours, seven days a week.",
+    body: "Questions go straight to the Designali studio at hello@designali.com.",
   },
 ]
 

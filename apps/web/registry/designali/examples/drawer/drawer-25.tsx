@@ -2,12 +2,12 @@
 
 import * as React from "react"
 import {
-  BusIcon,
-  CarFrontIcon,
-  CarIcon,
-  NavigationIcon,
-  UserIcon,
-} from "lucide-react"
+  Bus as BusIcon,
+  CarFront as CarFrontIcon,
+  Car as CarIcon,
+  Navigation as NavigationIcon,
+  User as UserIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {

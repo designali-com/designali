@@ -2,13 +2,13 @@
 
 import * as React from "react"
 import {
-  CalculatorIcon,
-  CalendarIcon,
-  CreditCardIcon,
-  SettingsIcon,
-  SmileIcon,
-  UserIcon,
-} from "lucide-react"
+  Calculator as CalculatorIcon,
+  Calendar as CalendarIcon,
+  CreditCard as CreditCardIcon,
+  Settings as SettingsIcon,
+  Smile as SmileIcon,
+  User as UserIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {

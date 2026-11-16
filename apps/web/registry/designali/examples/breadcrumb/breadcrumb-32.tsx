@@ -10,13 +10,13 @@ import {
 } from "@workspace/ui/components/breadcrumb"
 
 const path = [
-  "Company",
-  "Engineering",
-  "Platform",
-  "Observability",
-  "Dashboards",
-  "Alerts",
-  "Paging rules",
+  "Designali",
+  "Studio",
+  "Projects",
+  "Dalim Agency",
+  "Brand identity",
+  "Deliverables",
+  "Logo files",
 ]
 
 export default function ScrollableBreadcrumb() {

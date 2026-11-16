@@ -1,4 +1,6 @@
-import { SparklesIcon } from "lucide-react"
+import {
+  Sparkles as SparklesIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import { Button } from "@workspace/ui/components/button"
@@ -14,9 +16,9 @@ import {
 } from "@workspace/ui/components/sheet"
 
 const changes = [
-  { tag: "New", text: "Recurring invoices with custom schedules" },
-  { tag: "Improved", text: "Dashboard loads 40% faster on large teams" },
-  { tag: "Fixed", text: "CSV exports now respect your timezone" },
+  { tag: "New", text: "460+ blocks and 240 landing pages" },
+  { tag: "Improved", text: "Icon search on designali.com is faster" },
+  { tag: "Fixed", text: "Pricing blocks now respect dark mode" },
 ]
 
 export default function ReleaseNotesTopSheet() {

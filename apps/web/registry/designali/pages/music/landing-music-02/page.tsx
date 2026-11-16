@@ -8,116 +8,116 @@ import {
   ShoppingBag,
   Ticket,
   Users,
-} from "lucide-react"
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 
-const navLinks = ["Music", "Tour", "Videos", "Store", "About"]
+const navLinks = ["Services", "Process", "Work", "Pricing", "About"]
 
 const features = [
   {
     icon: Ticket,
-    title: "Fair ticketing",
+    title: "Artist brand identity",
     description:
-      "Face-value tickets with no dynamic pricing and a resale cap, so real fans get through the door.",
+      "Logos, wordmarks, colour and type that work on a festival poster, a profile picture and a T-shirt.",
   },
   {
     icon: Radio,
-    title: "Live sessions",
+    title: "Motion visualizers",
     description:
-      "Monthly stripped-back sessions recorded live in the studio, free to stream for members.",
+      "Looping canvases, lyric videos and visualizers made in motion and CGI to match each release.",
   },
   {
     icon: Mic,
-    title: "Behind the songs",
+    title: "Release websites",
     description:
-      "Voice notes, demos and lyric sheets from the writing process, shared as each record takes shape.",
+      "Fast Next.js sites for releases and tours, with streaming links, store and newsletter in one place.",
   },
   {
     icon: Users,
-    title: "Fan community",
+    title: "Social campaign kits",
     description:
-      "A members-only space for listening parties, setlist votes and early access to new music.",
+      "Templates for announcements, countdowns and tour posts, so every update looks on brand.",
   },
   {
     icon: ShoppingBag,
-    title: "Official store",
+    title: "Merch & print graphics",
     description:
-      "Limited merch runs printed on organic cotton, signed records and bundles shipped worldwide.",
+      "T-shirts, posters and tour graphics designed in the same visual language as the record.",
   },
 ]
 
 const stats = [
-  { value: "86", label: "Shows on the last tour" },
-  { value: "3", label: "Gold-certified records" },
-  { value: "1.4M", label: "Monthly listeners" },
-  { value: "24", label: "Countries visited" },
+  { value: "60+", label: "Release campaigns designed" },
+  { value: "3", label: "Weeks to a full release kit" },
+  { value: "4000+", label: "Icons and vectors to build with" },
+  { value: "2", label: "Revision rounds included" },
 ]
 
 const steps = [
   {
-    title: "Written in the cabin",
+    title: "Listen to the record",
     description:
-      "Every record begins as voice memos and late-night demos in a small rented cabin.",
+      "Every project starts with your demos, lyrics and references, so the visuals grow from the music.",
   },
   {
-    title: "Recorded live to tape",
+    title: "Moodboards and concepts",
     description:
-      "The band tracks together in one room to keep the energy of a live performance.",
+      "Ali Imam explores directions in Figma and 3D, and you choose the one that feels right.",
   },
   {
-    title: "Mixed and mastered",
+    title: "Design and motion",
     description:
-      "Mixed in analogue, mastered separately for vinyl, streaming and spatial audio.",
+      "Cover art, visualizers and campaign assets are produced together as one system.",
   },
   {
-    title: "Played on the road",
+    title: "Launch everywhere",
     description:
-      "New songs are road-tested on tour before they ever reach a final release.",
+      "Final files are exported for every platform, and the release site goes live in Next.js.",
   },
 ]
 
 const showcase = [
   {
-    name: "Northern Lights",
-    meta: "Album · 12 tracks",
+    name: "Album campaign",
+    meta: "Cover art · 12 assets",
     tag: "New",
-    price: "48 min",
+    price: "4 wks",
     tile: "bg-gradient-to-br from-sky-200 via-cyan-300 to-teal-400 dark:from-sky-700 dark:via-cyan-800 dark:to-teal-900",
   },
   {
-    name: "Glass Houses",
-    meta: "Single · Radio edit",
+    name: "Single artwork",
+    meta: "Cover · Canvas loop",
     tag: "Single",
-    price: "3:42",
+    price: "1 wk",
     tile: "bg-gradient-to-br from-violet-200 via-purple-300 to-fuchsia-400 dark:from-violet-700 dark:via-purple-800 dark:to-fuchsia-900",
   },
   {
-    name: "Live at the Roundhouse",
-    meta: "Live album · 18 tracks",
+    name: "Live album visuals",
+    meta: "Stage visuals · 18 loops",
     tag: "Live",
-    price: "92 min",
+    price: "6 wks",
     tile: "bg-gradient-to-br from-emerald-200 via-green-300 to-lime-300 dark:from-emerald-700 dark:via-green-800 dark:to-lime-900",
   },
   {
-    name: "Slow Motion",
-    meta: "EP · 5 tracks",
+    name: "EP identity",
+    meta: "Brand · 5 covers",
     tag: "EP",
-    price: "21 min",
+    price: "3 wks",
     tile: "bg-gradient-to-br from-stone-200 via-neutral-300 to-zinc-400 dark:from-stone-700 dark:via-neutral-800 dark:to-zinc-900",
   },
   {
-    name: "Static Bloom",
-    meta: "Album · 10 tracks",
-    tag: "Gold",
-    price: "41 min",
+    name: "Label rebrand",
+    meta: "Identity · Release templates",
+    tag: "Brand",
+    price: "5 wks",
     tile: "bg-gradient-to-br from-rose-200 via-pink-300 to-purple-300 dark:from-rose-700 dark:via-pink-800 dark:to-purple-900",
   },
   {
-    name: "Cabin Sessions",
-    meta: "Acoustic · 7 tracks",
-    tag: "Members",
-    price: "29 min",
+    name: "Acoustic sessions",
+    meta: "Motion · 7 lyric videos",
+    tag: "Motion",
+    price: "2 wks",
     tile: "bg-gradient-to-br from-blue-200 via-indigo-300 to-violet-400 dark:from-blue-700 dark:via-indigo-800 dark:to-violet-900",
   },
 ]
@@ -125,98 +125,98 @@ const showcase = [
 const testimonials = [
   {
     quote:
-      "The live show is an event. Two hours, no filler, and a crowd singing every word back to the stage.",
-    name: "Owen Price",
-    role: "Live Reviewer, Stage Left",
+      "The visualizers Designali made for our live set turned a small venue show into something people filmed all night.",
+    name: "Owen",
+    role: "Drummer, indie band",
   },
   {
     quote:
-      "We played the lead single on rotation for six weeks straight. Listeners kept calling in to ask for it.",
-    name: "Nadia Haddad",
-    role: "Host, Night Shift Radio",
+      "Our label finally has one visual system. Every new release takes hours to prepare instead of days.",
+    name: "Nadia",
+    role: "Founder, independent label",
   },
   {
     quote:
-      "Buying direct means the artists actually get paid. The vinyl pressing quality is outstanding.",
-    name: "Ben Carter",
-    role: "Collector, Vinyl Digest reader",
+      "The release site and merch graphics matched the cover perfectly. Fans kept asking who designed it all.",
+    name: "Ben",
+    role: "Singer-songwriter",
   },
 ]
 
 const tiers = [
   {
-    name: "General",
-    price: "$45",
-    period: "/ticket",
-    description: "Standing access to the main floor.",
+    name: "Single",
+    price: "$900",
+    period: "/project",
+    description: "Artwork for one release.",
     features: [
-      "Main floor standing",
-      "Doors from 7pm",
-      "Mobile ticket",
-      "Cloakroom access",
+      "Cover art and variations",
+      "Streaming platform exports",
+      "Canvas loop",
+      "Two rounds of revisions",
     ],
-    cta: "Buy tickets",
+    cta: "Book Single",
   },
   {
-    name: "Early Entry",
-    price: "$85",
-    period: "/ticket",
-    description: "Get in first and get close to the stage.",
+    name: "Release",
+    price: "$2,800",
+    period: "/project",
+    description: "A full campaign for an EP or album.",
     features: [
-      "Entry 60 minutes early",
-      "Exclusive tour poster",
-      "Dedicated bar",
-      "Merch pre-order pickup",
-      "Commemorative laminate",
+      "Everything in Single",
+      "Visualizer and lyric video",
+      "Social campaign kit",
+      "Release website",
+      "Merch graphics",
     ],
-    cta: "Buy early entry",
+    cta: "Book Release",
   },
   {
-    name: "Soundcheck",
-    price: "$190",
-    period: "/ticket",
-    description: "Watch the band prepare before the show.",
+    name: "Artist Brand",
+    price: "$6,500",
+    period: "/project",
+    description: "A complete identity for artists and labels.",
     features: [
-      "Live soundcheck access",
-      "Q and A with the band",
-      "Signed vinyl",
-      "Early entry included",
-      "Limited to 50 per show",
+      "Logo and brand guidelines",
+      "CGI and 3D visuals",
+      "Tour and stage visuals",
+      "Release website included",
+      "Limited slots each quarter",
     ],
-    cta: "Get soundcheck",
+    cta: "Book Artist Brand",
   },
 ]
 
 const faqs = [
   {
-    q: "Are shows all ages?",
-    a: "Most shows are all ages with under-16s accompanied by an adult. Check the individual venue listing.",
+    q: "Can you create motion and 3D as well as static art?",
+    a: "Yes. Ali Imam designs cover art and produces motion, CGI and visualizers, so every asset shares one look.",
   },
   {
-    q: "When does vinyl ship?",
-    a: "Pre-orders ship one week before release day so they arrive on time in most countries.",
+    q: "What files will I receive?",
+    a: "Print-ready artwork, streaming exports, motion files and the Figma source, plus a Next.js site if included.",
   },
   {
-    q: "Is the music on streaming services?",
-    a: "Every release is available on all major streaming platforms. Members get early access to selected tracks.",
+    q: "How long does a release campaign take?",
+    a: "A single usually takes one to two weeks. Full album campaigns take four to six weeks, depending on scope.",
   },
   {
-    q: "Do you offer accessible tickets?",
-    a: "Yes. Accessible platforms and companion tickets are available at every venue. Contact our access team to book.",
+    q: "Can you work with my existing logo?",
+    a: "Yes. We can extend an existing identity or refresh it gently so it fits your new era.",
   },
   {
-    q: "What happens if a show is cancelled?",
-    a: "You will be refunded automatically to your original payment method within seven working days.",
+    q: "What if my release date moves?",
+    a: "No problem. Timelines are planned with buffer, and we can adjust delivery dates as your plans change.",
   },
 ]
 
 const footer = [
-  { title: "Music", links: ["Releases", "Videos", "Lyrics", "Playlists"] },
+  { title: "Services", links: ["Work", "Work", "Services", "Process"] },
   {
     title: "Live",
-    links: ["Tour dates", "VIP", "Accessibility", "Venue info"],
+    links: ["Packages", "Pricing", "Templates", "Docs"],
   },
-  { title: "More", links: ["Store", "Newsletter", "Press", "Contact"] },
+  { title: "More", links: ["Pricing", "Blog", "Instagram", "Contact"] },
 ]
 
 export default function LandingMusic02() {
@@ -232,7 +232,7 @@ export default function LandingMusic02() {
               L
             </span>
             <span className="font-serif text-lg font-normal">
-              Low Tide Records
+              designali
             </span>
           </a>
           <nav className="hidden items-center gap-7 text-sm md:flex">
@@ -254,10 +254,10 @@ export default function LandingMusic02() {
               nativeButton={false}
               render={<a href="#" />}
             >
-              Listen now
+              Start a project
             </Button>
             <Button size="sm" nativeButton={false} render={<a href="#" />}>
-              Browse the catalogue
+              See our work
             </Button>
           </div>
         </div>
@@ -265,26 +265,26 @@ export default function LandingMusic02() {
       <section className="border-b">
         <div className="mx-auto max-w-7xl px-6 pt-16 pb-12 md:pt-28">
           <div className="flex items-center justify-between border-b pb-4 text-xs tracking-widest text-muted-foreground uppercase">
-            <span>Independent since 2012</span>
+            <span>Design for record labels</span>
             <span className="hidden sm:inline">
-              Records that reward repeat listening.
+              Labels that look as good as they sound.
             </span>
           </div>
           <h1 className="mt-12 max-w-5xl text-4xl leading-[1.05] font-semibold tracking-tight text-balance sm:text-5xl md:text-8xl font-serif font-normal">
-            {"A small label for "}
+            {"A visual system for "}
             <span className="text-orange-600 dark:text-orange-400">
-              patient music
+              every release
             </span>
           </h1>
           <div className="mt-12 grid gap-8 md:grid-cols-2 md:items-end">
             <p className="max-w-lg text-lg leading-8 text-muted-foreground">
-              We release ambient, jazz and left-field electronic records on
-              vinyl and lossless, and we pay artists 60% of every sale.
+              Designali designs label identities, release templates and catalogue
+              sites, so every new record arrives looking consistent and considered.
             </p>
             <div className="md:justify-self-end">
               <div className="flex flex-wrap gap-3 ">
                 <Button size="lg" nativeButton={false} render={<a href="#" />}>
-                  Browse the catalogue
+                  See our work
                   <ArrowRight />
                 </Button>
                 <Button
@@ -293,7 +293,7 @@ export default function LandingMusic02() {
                   nativeButton={false}
                   render={<a href="#" />}
                 >
-                  Submit a demo
+                  Start a project
                 </Button>
               </div>
             </div>
@@ -331,8 +331,8 @@ export default function LandingMusic02() {
                 Everything around the music
               </h2>
               <p className="mt-4 text-lg leading-8 text-muted-foreground">
-                Releases, live shows, behind-the-scenes sessions and a community
-                that turns up, all in one place.
+                Artwork, motion, merch and a release site that works,
+                all designed and built by one studio.
               </p>
             </div>
           </div>
@@ -361,11 +361,11 @@ export default function LandingMusic02() {
           <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
             <div className="max-w-2xl">
               <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl font-serif font-normal">
-                Latest releases
+                Recent music projects
               </h2>
               <p className="mt-4 text-lg leading-8 text-muted-foreground">
-                New records, singles and live sessions. Stream on every platform
-                or buy direct to support the artists.
+                Cover art, visualizers and campaigns designed for artists and labels.
+                Every one built as a system, not a one-off.
               </p>
             </div>
             <Button
@@ -373,7 +373,7 @@ export default function LandingMusic02() {
               nativeButton={false}
               render={<a href="#" />}
             >
-              View all
+              View all work
               <ArrowUpRight />
             </Button>
           </div>
@@ -409,7 +409,7 @@ export default function LandingMusic02() {
       <section className="border-b">
         <div className="mx-auto max-w-5xl px-6 py-20 text-center md:py-28">
           <p className="text-sm tracking-widest text-muted-foreground uppercase">
-            Heard on the radio and in the press
+            What artists say about Designali
           </p>
           {testimonials.slice(0, 1).map((t) => (
             <figure key={t.name} className="mt-10">
@@ -443,7 +443,7 @@ export default function LandingMusic02() {
         <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
           <div className="max-w-2xl">
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl font-serif font-normal">
-              From the studio to your speakers
+              From demo to release day
             </h2>
           </div>
           <ol className="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
@@ -468,11 +468,11 @@ export default function LandingMusic02() {
         <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl font-serif font-normal">
-              Get your tickets
+              Choose a package
             </h2>
             <p className="mt-4 text-lg leading-8 text-muted-foreground">
-              Limited capacity at every show. Tickets are personal and
-              transferable through the official app only.
+              Every package includes source files, platform-ready exports and
+              support from Ali Imam through release day.
             </p>
           </div>
           <div className="mx-auto mt-14 grid max-w-6xl items-start gap-6 lg:grid-cols-3">
@@ -534,7 +534,7 @@ export default function LandingMusic02() {
                 href="#"
                 className="font-medium text-foreground underline underline-offset-4"
               >
-                Get in touch
+                Contact us
               </a>
               .
             </p>
@@ -558,11 +558,11 @@ export default function LandingMusic02() {
         <div className="mx-auto flex max-w-7xl flex-col gap-10 px-6 py-20 md:flex-row md:items-end md:justify-between md:py-28">
           <div className="max-w-2xl">
             <h2 className="text-4xl font-semibold tracking-tight text-balance md:text-6xl font-serif font-normal">
-              Making something slow and beautiful?
+              Running a label with a growing catalogue?
             </h2>
             <p className="mt-5 text-lg text-background/65">
-              We listen to every demo. Send us a private link and a few words
-              about the record.
+              Send a few releases and a short note about your label. Ali Imam replies
+              with ideas and a scope.
             </p>
           </div>
           <div className="flex flex-wrap gap-3 ">
@@ -572,7 +572,7 @@ export default function LandingMusic02() {
               nativeButton={false}
               render={<a href="#" />}
             >
-              Browse the catalogue
+              See our work
               <ArrowRight />
             </Button>
             <Button
@@ -582,7 +582,7 @@ export default function LandingMusic02() {
               nativeButton={false}
               render={<a href="#" />}
             >
-              Submit a demo
+              Start a project
             </Button>
           </div>
         </div>
@@ -598,11 +598,11 @@ export default function LandingMusic02() {
                 L
               </span>
               <span className="font-serif text-lg font-normal">
-                Low Tide Records
+                designali
               </span>
             </a>
             <p className="max-w-xs text-sm text-muted-foreground">
-              Records that reward repeat listening.
+              Labels that look as good as they sound.
             </p>
           </div>
           {footer.map((column) => (
@@ -626,7 +626,7 @@ export default function LandingMusic02() {
         <div className="border-t ">
           <div className="mx-auto flex max-w-7xl flex-col justify-between gap-4 px-6 py-6 text-xs text-muted-foreground sm:flex-row">
             <span>
-              © {new Date().getFullYear()} Low Tide Records. All rights
+              © {new Date().getFullYear()} designali. All rights
               reserved.
             </span>
             <div className="flex gap-6">

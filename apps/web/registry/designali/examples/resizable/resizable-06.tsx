@@ -2,13 +2,13 @@
 
 import * as React from "react"
 import {
-  BarChart3Icon,
-  FolderIcon,
-  LayoutDashboardIcon,
-  PanelLeftCloseIcon,
-  PanelLeftOpenIcon,
-  SettingsIcon,
-} from "lucide-react"
+  ChartColumn as BarChart3Icon,
+  Folder as FolderIcon,
+  LayoutDashboard as LayoutDashboardIcon,
+  PanelLeftClose as PanelLeftCloseIcon,
+  PanelLeftOpen as PanelLeftOpenIcon,
+  Settings as SettingsIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {

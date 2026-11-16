@@ -1,7 +1,11 @@
 "use client"
 
 import * as React from "react"
-import { ArrowUpIcon, CornerDownLeftIcon, SparklesIcon } from "lucide-react"
+import {
+  ArrowUp as ArrowUpIcon,
+  CornerDownLeft as CornerDownLeftIcon,
+  Sparkles as SparklesIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -18,20 +22,20 @@ const starters = [
   {
     group: "Write",
     prompts: [
-      "Draft a launch announcement",
+      "Draft a Designali Blocks launch post",
       "Rewrite this in a friendlier tone",
     ],
   },
   {
     group: "Analyze",
     prompts: [
-      "Summarize this quarter's churn",
-      "Find anomalies in last week's signups",
+      "Summarize this month's template sales",
+      "Find the most downloaded icons",
     ],
   },
   {
     group: "Plan",
-    prompts: ["Outline a two-week sprint", "Create an onboarding checklist"],
+    prompts: ["Outline a brand identity sprint", "Create a client onboarding checklist"],
   },
 ]
 
@@ -61,7 +65,7 @@ export default function AiPromptStarters() {
         <Textarea
           value={prompt}
           onChange={(event) => setPrompt(event.target.value)}
-          placeholder="Ask the assistant..."
+          placeholder="Ask Designali AI..."
           className="min-h-16"
         />
         <Button size="icon" aria-label="Send" disabled={!prompt}>

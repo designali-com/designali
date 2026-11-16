@@ -7,7 +7,7 @@ import { Textarea } from "@workspace/ui/components/textarea"
 
 export default function EnvVariablesTextarea() {
   const [raw, setRaw] = React.useState(
-    "DATABASE_URL=postgres://localhost/app\nPAYMENTS_KEY=key_demo_123\n# comment\nPORT=3000"
+    "DATABASE_URL=postgres://localhost/designali\nPAYMENTS_KEY=key_demo_123\n# comment\nPORT=3000"
   )
   const vars = raw
     .split("\n")

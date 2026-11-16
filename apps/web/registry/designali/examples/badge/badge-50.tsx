@@ -1,4 +1,8 @@
-import { CheckIcon, ChevronRightIcon, TruckIcon } from "lucide-react"
+import {
+  Check as CheckIcon,
+  ChevronRight as ChevronRightIcon,
+  Rocket as RocketIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import {
@@ -10,19 +14,19 @@ import {
   CardTitle,
 } from "@workspace/ui/components/card"
 
-const steps = ["Ordered", "Packed", "In transit", "Delivered"]
+const steps = ["Brief", "Design", "Development", "Launch"]
 const current = 2
 
 export default function ShippingProgressBadges() {
   return (
     <Card className="w-full max-w-sm">
       <CardHeader>
-        <CardTitle>Order #48213</CardTitle>
-        <CardDescription>Estimated delivery Friday, Apr 11</CardDescription>
+        <CardTitle>Designali project #48213</CardTitle>
+        <CardDescription>Website launch estimated Friday, Apr 11</CardDescription>
         <CardAction>
           <Badge className="bg-blue-50 text-blue-700 dark:bg-blue-950 dark:text-blue-300">
-            <TruckIcon data-icon="inline-start" />
-            On the way
+            <RocketIcon data-icon="inline-start" />
+            On track
           </Badge>
         </CardAction>
       </CardHeader>

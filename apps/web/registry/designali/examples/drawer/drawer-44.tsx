@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { ListTreeIcon } from "lucide-react"
+import {
+  ListTree as ListTreeIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -37,7 +39,7 @@ export default function DocumentOutlineDrawer() {
       </DrawerTrigger>
       <DrawerContent>
         <DrawerHeader>
-          <DrawerTitle>RFC-031: Event sourcing</DrawerTitle>
+          <DrawerTitle>RFC-031: Designali design tokens</DrawerTitle>
           <DrawerDescription>8 sections · 14 min read</DrawerDescription>
         </DrawerHeader>
         <nav

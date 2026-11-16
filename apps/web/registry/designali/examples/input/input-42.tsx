@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { ZapIcon } from "lucide-react"
+import {
+  Zap as ZapIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import { Button } from "@workspace/ui/components/button"
@@ -14,7 +16,7 @@ import { Input } from "@workspace/ui/components/input"
 import { Spinner } from "@workspace/ui/components/spinner"
 
 export default function WebhookTestInput() {
-  const [url, setUrl] = React.useState("https://hooks.harborlabs.io/billing")
+  const [url, setUrl] = React.useState("https://hooks.designali.com/orders")
   const [state, setState] = React.useState<"idle" | "sending" | "ok">("idle")
 
   return (

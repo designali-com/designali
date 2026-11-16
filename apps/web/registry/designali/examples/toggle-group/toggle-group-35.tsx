@@ -2,11 +2,11 @@
 
 import * as React from "react"
 import {
-  HeartIcon,
-  LaughIcon,
-  PartyPopperIcon,
-  ThumbsUpIcon,
-} from "lucide-react"
+  Heart as HeartIcon,
+  Laugh as LaughIcon,
+  PartyPopper as PartyPopperIcon,
+  ThumbsUp as ThumbsUpIcon,
+} from "@designali/icons"
 
 import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
 import {
@@ -27,11 +27,11 @@ export default function MessageReactionToggleGroup() {
   return (
     <div className="flex w-full max-w-sm gap-3">
       <Avatar>
-        <AvatarFallback>JK</AvatarFallback>
+        <AvatarFallback>AI</AvatarFallback>
       </Avatar>
       <div className="flex flex-col gap-2">
         <div className="bg-muted px-3 py-2 text-sm">
-          The staging deploy is green, ship it whenever you&apos;re ready!
+          The designali.com staging deploy is green, ship it whenever you&apos;re ready!
         </div>
         <ToggleGroup
           multiple

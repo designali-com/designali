@@ -2,12 +2,12 @@
 
 import * as React from "react"
 import {
-  FileArchiveIcon,
-  FileImageIcon,
-  FileSpreadsheetIcon,
-  FileTextIcon,
-  FilesIcon,
-} from "lucide-react"
+  FileArchive as FileArchiveIcon,
+  FileImage as FileImageIcon,
+  FileSpreadsheet as FileSpreadsheetIcon,
+  FileText as FileTextIcon,
+  Files as FilesIcon,
+} from "@designali/icons"
 
 import {
   Select,
@@ -26,10 +26,10 @@ const types = [
 ]
 
 const files = [
-  { name: "Brand guidelines.pdf", type: "doc", size: "4.2 MB" },
+  { name: "Designali brand guidelines.pdf", type: "doc", size: "4.2 MB" },
   { name: "Hero banner.png", type: "image", size: "1.8 MB" },
-  { name: "Q3 forecast.xlsx", type: "sheet", size: "320 KB" },
-  { name: "Assets export.zip", type: "zip", size: "86 MB" },
+  { name: "Project estimate.xlsx", type: "sheet", size: "320 KB" },
+  { name: "Designali logos.zip", type: "zip", size: "86 MB" },
   { name: "Meeting notes.docx", type: "doc", size: "44 KB" },
 ]
 

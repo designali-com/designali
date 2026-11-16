@@ -1,20 +1,20 @@
 const menu = [
   {
-    course: "Small plates",
+    course: "Design",
     items: [
-      { name: "Charred leeks", note: "Romesco, toasted hazelnut", price: 11 },
-      { name: "Burrata", note: "Blood orange, fennel pollen", price: 14, tag: "V" },
-      { name: "Crispy squid", note: "Smoked paprika aioli, lime", price: 13 },
-      { name: "Sourdough", note: "Cultured butter, sea salt", price: 6, tag: "V" },
+      { name: "Brand identity", note: "Logo, type, colour and guidelines", price: 2400 },
+      { name: "UI/UX design", note: "Flows, wireframes and Figma UI", price: 3200, tag: "F" },
+      { name: "Design system", note: "Tokens, components and docs", price: 4800 },
+      { name: "Icon set", note: "Custom icons in the @designali/icons style", price: 900, tag: "F" },
     ],
   },
   {
-    course: "Large plates",
+    course: "Development",
     items: [
-      { name: "Hake", note: "Brown butter, capers, potato rösti", price: 26 },
-      { name: "Lamb shoulder", note: "12-hour braise, white beans, salsa verde", price: 29 },
-      { name: "Wild mushroom orzo", note: "Aged parmesan, thyme", price: 21, tag: "V" },
-      { name: "Half chicken", note: "Piri piri, charred greens", price: 24 },
+      { name: "Landing page", note: "Next.js, Tailwind CSS, deployed on Vercel", price: 2600 },
+      { name: "Marketing website", note: "Multi-page site with CMS and blog", price: 6400 },
+      { name: "CGI and motion", note: "3D renders and motion design", price: 3600, tag: "F" },
+      { name: "Digital product", note: "Design and build, end to end", price: 12000 },
     ],
   },
 ]
@@ -24,11 +24,11 @@ export default function Lists15() {
     <section className="w-full bg-stone-950 py-24 text-stone-100">
       <div className="mx-auto max-w-5xl px-6">
         <div className="text-center">
-          <p className="font-mono text-xs tracking-[0.3em] text-amber-300/80 uppercase">Dinner · From 18:00</p>
-          <h2 className="mt-4 font-serif text-5xl tracking-tight md:text-6xl">Salt &amp; Ember</h2>
+          <p className="font-mono text-xs tracking-[0.3em] text-amber-300/80 uppercase">Studio services · Remote, worldwide</p>
+          <h2 className="mt-4 font-serif text-5xl tracking-tight md:text-6xl">designali</h2>
           <p className="mx-auto mt-4 max-w-md text-sm text-stone-400">
-            A short menu that changes with the market. Everything is cooked over
-            the wood grill unless it shouldn&apos;t be.
+            A short menu of studio services, priced in USD. Everything is
+            designed and coded by Ali Imam — design se code tak.
           </p>
         </div>
 
@@ -58,7 +58,7 @@ export default function Lists15() {
         </div>
 
         <p className="mt-16 border-t border-stone-800 pt-6 text-center text-xs text-stone-500">
-          V vegetarian · Please tell us about any allergies · A discretionary 12.5% service charge is added
+          F includes Figma source files · Starting prices, final quote after a free call · hello@designali.com
         </p>
       </div>
     </section>

@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { HistoryIcon } from "lucide-react"
+import {
+  History as HistoryIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Toaster, createToastManager } from "@workspace/ui/components/toast"
@@ -10,8 +12,8 @@ const notify = createToastManager()
 
 const events = [
   "Ticket SUP-88 assigned to you",
-  "Refund of $42.00 approved",
-  "New review: 5 stars",
+  "Refund for Designali template approved",
+  "New template review: 5 stars",
 ]
 
 export default function ToastActivityLog() {

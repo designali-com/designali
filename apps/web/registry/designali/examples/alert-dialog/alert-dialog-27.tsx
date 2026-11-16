@@ -1,4 +1,7 @@
-import { ArrowDownCircleIcon, XIcon } from "lucide-react"
+import {
+  CircleArrowDown as ArrowDownCircleIcon,
+  X as XIcon,
+} from "@designali/icons"
 
 import {
   AlertDialog,
@@ -16,9 +19,9 @@ import { Badge } from "@workspace/ui/components/badge"
 import { Button } from "@workspace/ui/components/button"
 
 const losing = [
-  "Unlimited version history",
-  "SSO and SCIM provisioning",
-  "Advanced analytics dashboards",
+  "All 460+ Designali blocks",
+  "240+ landing pages",
+  "Premium templates and Figma files",
   "Priority support",
 ]
 
@@ -35,7 +38,7 @@ export default function PlanDowngradeFeatureLoss() {
           </AlertDialogMedia>
           <AlertDialogTitle>Downgrade to Starter?</AlertDialogTitle>
           <AlertDialogDescription>
-            Your Business plan ends on your next billing date, July 1.
+            Your Designali Business plan ends on your next billing date, July 1.
           </AlertDialogDescription>
         </AlertDialogHeader>
         <div className="flex flex-col gap-2 border bg-muted/40 p-3">

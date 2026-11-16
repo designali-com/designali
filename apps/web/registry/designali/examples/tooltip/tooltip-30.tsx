@@ -1,4 +1,6 @@
-import { CircleHelpIcon } from "lucide-react"
+import {
+  CircleQuestionMark as CircleHelpIcon,
+} from "@designali/icons"
 
 import {
   Table,
@@ -21,8 +23,8 @@ const columns = [
   { label: "CPA", help: "Spend divided by conversions." },
 ]
 const rows = [
-  ["Spring launch", "3.4%", "$18.20"],
-  ["Retargeting", "5.1%", "$9.75"],
+  ["Designali templates", "3.4%", "$18.20"],
+  ["@designali/icons", "5.1%", "$9.75"],
 ]
 
 export default function TableHeaderHelpTooltips() {

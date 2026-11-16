@@ -2,13 +2,13 @@
 
 import * as React from "react"
 import {
-  HeartIcon,
-  ListEndIcon,
-  ListPlusIcon,
-  ListStartIcon,
-  MicVocalIcon,
-  PlusIcon,
-} from "lucide-react"
+  Heart as HeartIcon,
+  ListEnd as ListEndIcon,
+  ListPlus as ListPlusIcon,
+  ListStart as ListStartIcon,
+  MicVocal as MicVocalIcon,
+  Plus as PlusIcon,
+} from "@designali/icons"
 
 import {
   ContextMenu,
@@ -24,13 +24,13 @@ import {
 } from "@workspace/ui/components/context-menu"
 
 const tracks = [
-  { title: "Paper Lanterns", artist: "Mira Sol", length: "3:42" },
-  { title: "Low Tide", artist: "The Harbor Lights", length: "4:05" },
-  { title: "Glasshouse", artist: "Ondine", length: "2:58" },
+  { title: "Brand identity reel", artist: "Designali", length: "3:42" },
+  { title: "Design se code tak", artist: "Ali Imam", length: "4:05" },
+  { title: "Colorful spheres", artist: "Designali", length: "2:58" },
 ]
 
 export default function MusicTrackMenu() {
-  const [liked, setLiked] = React.useState<string[]>(["Low Tide"])
+  const [liked, setLiked] = React.useState<string[]>(["Design se code tak"])
 
   return (
     <div className="flex w-full max-w-sm flex-col border">
@@ -73,9 +73,9 @@ export default function MusicTrackMenu() {
                   </ContextMenuGroup>
                   <ContextMenuSeparator />
                   <ContextMenuGroup>
-                    <ContextMenuItem>Focus flow</ContextMenuItem>
-                    <ContextMenuItem>Sunday cooking</ContextMenuItem>
-                    <ContextMenuItem>Road trip mix</ContextMenuItem>
+                    <ContextMenuItem>Studio focus</ContextMenuItem>
+                    <ContextMenuItem>Motion design</ContextMenuItem>
+                    <ContextMenuItem>CGI &amp; 3D</ContextMenuItem>
                   </ContextMenuGroup>
                 </ContextMenuSubContent>
               </ContextMenuSub>

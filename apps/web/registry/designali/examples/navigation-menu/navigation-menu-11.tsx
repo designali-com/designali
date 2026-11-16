@@ -1,4 +1,6 @@
-import { PlusIcon } from "lucide-react"
+import {
+  Plus as PlusIcon,
+} from "@designali/icons"
 
 import {
   NavigationMenu,
@@ -13,9 +15,9 @@ import { Separator } from "@workspace/ui/components/separator"
 import { cn } from "@workspace/ui/lib/utils"
 
 const projects = [
-  { name: "Marketing site", status: "bg-emerald-500", env: "Production" },
-  { name: "Mobile API", status: "bg-amber-500", env: "Deploying" },
-  { name: "Data pipeline", status: "bg-red-500", env: "Failed" },
+  { name: "designali.com", status: "bg-emerald-500", env: "Production" },
+  { name: "Blocks registry", status: "bg-amber-500", env: "Deploying" },
+  { name: "Icons package", status: "bg-red-500", env: "Failed" },
 ]
 
 export default function DashboardProjectsNav() {

@@ -1,4 +1,8 @@
-import { BellIcon, CloudIcon, RefreshCwIcon } from "lucide-react"
+import {
+  Bell as BellIcon,
+  Cloud as CloudIcon,
+  RefreshCw as RefreshCwIcon,
+} from "@designali/icons"
 
 import { Toggle } from "@workspace/ui/components/toggle"
 
@@ -20,7 +24,7 @@ export default function DisabledToggleStates() {
         </Toggle>
       </div>
       <p className="text-xs text-muted-foreground">
-        Sync and Backup are managed by your organization admin.
+        Sync and Backup are managed by your Designali studio admin.
       </p>
     </div>
   )

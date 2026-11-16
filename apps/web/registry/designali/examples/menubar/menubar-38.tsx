@@ -2,12 +2,12 @@
 
 import * as React from "react"
 import {
-  ArchiveIcon,
-  ArrowDownToLineIcon,
-  ArrowUpFromLineIcon,
-  GitBranchIcon,
-  RefreshCwIcon,
-} from "lucide-react"
+  Archive as ArchiveIcon,
+  ArrowDownToLine as ArrowDownToLineIcon,
+  ArrowUpFromLine as ArrowUpFromLineIcon,
+  GitBranch as GitBranchIcon,
+  RefreshCw as RefreshCwIcon,
+} from "@designali/icons"
 
 import {
   Menubar,

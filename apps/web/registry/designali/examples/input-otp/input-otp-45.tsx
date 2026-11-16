@@ -2,7 +2,9 @@
 
 import * as React from "react"
 import { REGEXP_ONLY_DIGITS } from "input-otp"
-import { PencilIcon } from "lucide-react"
+import {
+  Pencil as PencilIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Field, FieldLabel } from "@workspace/ui/components/field"

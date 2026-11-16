@@ -1,4 +1,7 @@
-import { BadgeCheckIcon, StarIcon } from "lucide-react"
+import {
+  BadgeCheck as BadgeCheckIcon,
+  Star as StarIcon,
+} from "@designali/icons"
 
 import {
   Card,
@@ -20,25 +23,25 @@ const reviews = [
     name: "Kara M.",
     rating: 5,
     title: "Worth every penny",
-    body: "Comfortable from day one and the battery easily lasts a week.",
+    body: "The Designali blocks dropped straight into my Next.js app. Clean code.",
   },
   {
     name: "Devin L.",
     rating: 4,
     title: "Great, minor quirks",
-    body: "Sound is excellent. The case is a little bulky for small pockets.",
+    body: "Beautiful templates. I wish there were a few more dashboard layouts.",
   },
   {
     name: "Ruth A.",
     rating: 5,
     title: "My daily driver",
-    body: "Pairs instantly with my laptop and phone. No more fiddling.",
+    body: "@designali/icons is in every project I ship now. No more fiddling.",
   },
   {
     name: "Sam P.",
     rating: 3,
     title: "Good but pricey",
-    body: "Solid build. I wish the app had more equalizer presets.",
+    body: "Solid design system. I wish the Pro plan had a monthly option.",
   },
 ]
 

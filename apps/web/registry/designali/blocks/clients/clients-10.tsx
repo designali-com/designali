@@ -1,15 +1,15 @@
 const tiers = [
   {
-    label: "Enterprise",
-    names: ["Meridian Group", "Halcyon Bank", "Atlas Freight"],
+    label: "Products",
+    names: ["Designali Templates", "Designali Blocks", "Designali Icons"],
   },
   {
-    label: "Scale-ups",
-    names: ["Driftwave", "Quanta AI", "Tessel", "Polar"],
+    label: "Libraries",
+    names: ["@designali/icons", "@designali/logos", "@designali/vectors", "Dalim UI"],
   },
   {
-    label: "Studios",
-    names: ["Corvid", "Blockhaus", "Lumen & Co", "Fieldnote", "Sable"],
+    label: "Brands",
+    names: ["Dalim", "Dalim Agency", "Dalim Fonts", "Dalim Graphic", "Dalim Works"],
   },
 ]
 
@@ -18,7 +18,7 @@ export default function Clients10() {
     <section className="w-full bg-background py-20">
       <div className="mx-auto max-w-5xl px-6">
         <h2 className="max-w-xl text-3xl font-semibold tracking-tight md:text-4xl">
-          Companies of every size build their brand on our foundation.
+          Every Designali brand, product and library, built on one foundation.
         </h2>
         <div className="mt-12 divide-y divide-border border-y border-border">
           {tiers.map((tier) => (

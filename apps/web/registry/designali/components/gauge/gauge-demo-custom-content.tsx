@@ -24,7 +24,7 @@ export function GaugeDemoCustomContent() {
             <span className="text-4xl font-medium tracking-tight">82</span>
 
             <span className="text-xs font-normal text-muted-foreground">
-              Score
+              Lighthouse
             </span>
           </div>
         </GaugeValueText>
@@ -41,7 +41,7 @@ export function GaugeDemoCustomContent() {
             <span className="text-4xl font-medium">64%</span>
 
             <span className="text-xs font-normal text-muted-foreground">
-              Healthy
+              Delivered
             </span>
           </div>
         </GaugeValueText>

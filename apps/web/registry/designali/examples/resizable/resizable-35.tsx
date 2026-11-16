@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { FileTextIcon, SendIcon } from "lucide-react"
+import {
+  FileText as FileTextIcon,
+  Send as SendIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Input } from "@workspace/ui/components/input"
@@ -16,11 +19,11 @@ import { cn } from "@workspace/ui/lib/utils"
 const templates = [
   {
     name: "Welcome aboard",
-    body: "Thanks for joining Fieldnote! Here is how to get started...",
+    body: "Thanks for joining Designali! Here is how to get started...",
   },
   {
     name: "Trial ending",
-    body: "Your trial ends in 3 days. Upgrade to keep your projects...",
+    body: "Your trial ends in 3 days. Upgrade to keep every template...",
   },
   {
     name: "Payment failed",

@@ -2,12 +2,12 @@
 
 import * as React from "react"
 import {
-  CircleAlertIcon,
-  MinusIcon,
-  SignalHighIcon,
-  SignalLowIcon,
-  SignalMediumIcon,
-} from "lucide-react"
+  CircleAlert as CircleAlertIcon,
+  Minus as MinusIcon,
+  SignalHigh as SignalHighIcon,
+  SignalLow as SignalLowIcon,
+  SignalMedium as SignalMediumIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {

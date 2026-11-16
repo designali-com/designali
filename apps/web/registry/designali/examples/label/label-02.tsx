@@ -63,7 +63,7 @@ export function FieldDemo() {
                 </FieldLabel>
                 <Input
                   id="checkout-7j9-card-name-43j"
-                  placeholder="Evil Rabbit"
+                  placeholder="Ali Imam"
                   required
                 />
               </Field>

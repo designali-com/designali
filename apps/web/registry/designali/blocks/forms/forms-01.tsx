@@ -1,4 +1,6 @@
-import { ArrowRight } from "lucide-react"
+import {
+  ArrowRight,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Input } from "@workspace/ui/components/input"
@@ -16,11 +18,11 @@ export default function Forms01() {
             New project
           </p>
           <h2 className="text-4xl font-semibold tracking-tight md:text-5xl">
-            Tell us about the thing you want to build.
+            Tell Designali about the thing you want to build.
           </h2>
           <p className="max-w-sm text-sm leading-6 text-muted-foreground">
-            A short brief helps us come to the first call prepared. We reply to
-            every inquiry within two business days.
+            A short brief helps Ali Imam come to the first call prepared. Brand
+            identity, UI/UX and Next.js development, start to finish.
           </p>
           <dl className="grid grid-cols-2 gap-px border border-border bg-border">
             <div className="bg-background p-4">
@@ -38,21 +40,21 @@ export default function Forms01() {
           <div className="grid gap-6 sm:grid-cols-2">
             <div className="space-y-2">
               <Label htmlFor="f1-name">Full name</Label>
-              <Input id="f1-name" placeholder="Maya Lindqvist" className="h-10" />
+              <Input id="f1-name" placeholder="Your name" className="h-10" />
             </div>
             <div className="space-y-2">
               <Label htmlFor="f1-email">Work email</Label>
               <Input
                 id="f1-email"
                 type="email"
-                placeholder="maya@northwind.studio"
+                placeholder="you@example.com"
                 className="h-10"
               />
             </div>
           </div>
           <div className="space-y-2">
             <Label htmlFor="f1-company">Company</Label>
-            <Input id="f1-company" placeholder="Northwind Studio" className="h-10" />
+            <Input id="f1-company" placeholder="Your company" className="h-10" />
           </div>
           <fieldset className="space-y-3">
             <legend className="text-xs">Estimated budget</legend>
@@ -79,13 +81,13 @@ export default function Forms01() {
             <Textarea
               id="f1-brief"
               rows={5}
-              placeholder="We're relaunching our marketing site and need a design system that scales across three product lines…"
+              placeholder="We need a new brand identity and a production-ready Next.js website that feels like us…"
               className="min-h-32"
             />
           </div>
           <div className="flex flex-col gap-4 border-t border-border pt-6 sm:flex-row sm:items-center sm:justify-between">
             <p className="text-xs text-muted-foreground">
-              By submitting you agree to our privacy policy.
+              Prefer email? Write to hello@designali.com.
             </p>
             <Button type="submit" size="lg">
               Send inquiry

@@ -2,12 +2,12 @@
 
 import * as React from "react"
 import {
-  ChevronRightIcon,
-  CircleHelpIcon,
-  MailIcon,
-  MessageCircleIcon,
-  SearchIcon,
-} from "lucide-react"
+  ChevronRight as ChevronRightIcon,
+  CircleQuestionMark as CircleHelpIcon,
+  Mail as MailIcon,
+  MessageCircle as MessageCircleIcon,
+  Search as SearchIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -26,10 +26,10 @@ import {
 } from "@workspace/ui/components/sheet"
 
 const articles = [
-  "Setting up single sign-on",
-  "Exporting reports to CSV",
-  "Managing seats and roles",
-  "Understanding usage limits",
+  "Installing @designali/icons",
+  "Downloading template files",
+  "Licensing for client work",
+  "Customizing blocks with Tailwind",
 ]
 
 export default function HelpCenterSheet() {

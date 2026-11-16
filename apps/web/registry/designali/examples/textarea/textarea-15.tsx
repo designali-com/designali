@@ -1,7 +1,12 @@
 "use client"
 
 import * as React from "react"
-import { BoldIcon, CodeIcon, ItalicIcon, LinkIcon } from "lucide-react"
+import {
+  Bold as BoldIcon,
+  Code as CodeIcon,
+  Italic as ItalicIcon,
+  Link as LinkIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Textarea } from "@workspace/ui/components/textarea"

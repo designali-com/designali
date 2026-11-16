@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { ChartColumnIcon } from "lucide-react"
+import {
+  ChartColumn as ChartColumnIcon,
+} from "@designali/icons"
 
 import {
   Select,

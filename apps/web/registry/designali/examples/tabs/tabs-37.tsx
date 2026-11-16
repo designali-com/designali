@@ -1,4 +1,6 @@
-import { UserPlusIcon } from "lucide-react"
+import {
+  UserPlus as UserPlusIcon,
+} from "@designali/icons"
 
 import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
 import { Badge } from "@workspace/ui/components/badge"
@@ -11,11 +13,11 @@ import {
 } from "@workspace/ui/components/tabs"
 
 const members = [
-  { name: "Rhea Kapoor", role: "Owner" },
-  { name: "Felix Navarro", role: "Admin" },
-  { name: "June Abara", role: "Member" },
+  { name: "Ali Imam", role: "Owner" },
+  { name: "Sara Khan", role: "Admin" },
+  { name: "Omar Ali", role: "Member" },
 ]
-const invites = ["oscar@fieldnotes.io", "wren@fieldnotes.io"]
+const invites = ["zara@designali.com", "client@example.com"]
 
 export default function TeamMembersTabs() {
   return (

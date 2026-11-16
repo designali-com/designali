@@ -10,9 +10,9 @@ import { Textarea } from "@workspace/ui/components/textarea"
 import { cn } from "@workspace/ui/lib/utils"
 
 const tickets = [
-  { id: "#4821", subject: "Cannot reset password", priority: "High" },
-  { id: "#4819", subject: "Refund for duplicate charge", priority: "Medium" },
-  { id: "#4815", subject: "Export stuck at 90%", priority: "Low" },
+  { id: "#4821", subject: "Template download link expired", priority: "High" },
+  { id: "#4819", subject: "Refund for duplicate order", priority: "Medium" },
+  { id: "#4815", subject: "Icons package install fails", priority: "Low" },
 ]
 
 export default function SupportTicketWorkspace() {
@@ -55,15 +55,15 @@ export default function SupportTicketWorkspace() {
         <div className="flex h-full flex-col gap-3 p-3">
           <div className="flex items-center gap-2">
             <Avatar className="size-6">
-              <AvatarFallback className="text-[10px]">EH</AvatarFallback>
+              <AvatarFallback className="text-[10px]">E</AvatarFallback>
             </Avatar>
-            <span className="text-xs font-medium">Elif Hansen</span>
+            <span className="text-xs font-medium">Elif</span>
             <span className="text-[11px] text-muted-foreground">
               12 min ago
             </span>
           </div>
           <p className="text-xs">
-            The reset email never arrives. I&apos;ve checked spam and tried
+            The download email never arrives. I&apos;ve checked spam and tried
             twice.
           </p>
           <Textarea

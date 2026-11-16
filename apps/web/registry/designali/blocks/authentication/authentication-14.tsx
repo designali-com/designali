@@ -1,7 +1,10 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { ArrowRight, Lock } from "lucide-react"
+import {
+  ArrowRight,
+  Lock,
+} from "@designali/icons"
 
 function useClock() {
   const [now, setNow] = useState<Date | null>(null)
@@ -36,9 +39,9 @@ export default function Authentication14() {
 
       <form className="relative flex w-full max-w-xs flex-col items-center" onSubmit={(event) => event.preventDefault()}>
         <span className="flex size-20 items-center justify-center rounded-full bg-gradient-to-br from-amber-300 to-rose-500 text-2xl font-semibold text-zinc-950 ring-4 ring-white/10">
-          KO
+          AI
         </span>
-        <p className="mt-4 text-lg font-medium">Kofi Owusu</p>
+        <p className="mt-4 text-lg font-medium">Ali Imam</p>
         <p className="flex items-center gap-1.5 text-xs text-white/60">
           <Lock className="size-3" />
           Locked after 15 minutes of inactivity
@@ -61,7 +64,7 @@ export default function Authentication14() {
             <ArrowRight className="size-4" />
           </button>
         </label>
-        <p className="mt-3 text-xs text-white/50">Your unsaved drafts in Ledgerline are kept while locked.</p>
+        <p className="mt-3 text-xs text-white/50">Your unsaved drafts in the Designali studio are kept while locked.</p>
       </form>
 
       <div className="relative flex gap-6 text-xs text-white/60">

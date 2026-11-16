@@ -1,7 +1,11 @@
 "use client"
 
 import * as React from "react"
-import { ArrowDownIcon, ArrowUpIcon, ChevronsUpDownIcon } from "lucide-react"
+import {
+  ArrowDown as ArrowDownIcon,
+  ArrowUp as ArrowUpIcon,
+  ChevronsUpDown as ChevronsUpDownIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -15,10 +19,10 @@ import {
 import { cn } from "@workspace/ui/lib/utils"
 
 const rows = [
-  { name: "Atlas", stars: 4820, updated: 3, language: "TypeScript" },
-  { name: "Beacon", stars: 1290, updated: 12, language: "Go" },
-  { name: "Comet", stars: 9310, updated: 1, language: "Rust" },
-  { name: "Drift", stars: 560, updated: 30, language: "Python" },
+  { name: "designali", stars: 4820, updated: 3, language: "TypeScript" },
+  { name: "designali-icons", stars: 1290, updated: 12, language: "TypeScript" },
+  { name: "designali-logos", stars: 9310, updated: 1, language: "SVG" },
+  { name: "designali-vectors", stars: 560, updated: 30, language: "MDX" },
 ]
 
 type SortKey = "name" | "stars" | "updated"

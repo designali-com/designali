@@ -1,6 +1,8 @@
 "use client"
 
-import { LockIcon } from "lucide-react"
+import {
+  Lock as LockIcon,
+} from "@designali/icons"
 
 import {
   Combobox,
@@ -16,13 +18,13 @@ import {
 } from "@workspace/ui/components/field"
 import { InputGroupAddon } from "@workspace/ui/components/input-group"
 
-const owners = ["Rhea Kapoor", "Daniel Osei", "Freya Lund"]
+const owners = ["Ali Imam", "Sara", "Omar"]
 
 export default function ReadOnlyCombobox() {
   return (
     <Field className="w-full max-w-xs">
       <FieldLabel htmlFor="owner">Account owner</FieldLabel>
-      <Combobox items={owners} defaultValue="Daniel Osei" readOnly>
+      <Combobox items={owners} defaultValue="Ali Imam" readOnly>
         <ComboboxInput
           id="owner"
           readOnly

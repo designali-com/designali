@@ -1,4 +1,8 @@
-import { ArrowRight, Check, X } from "lucide-react"
+import {
+  ArrowRight,
+  Check,
+  X,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { cn } from "@workspace/ui/lib/utils"

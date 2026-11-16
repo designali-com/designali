@@ -3,52 +3,52 @@
 import { useState } from "react"
 import {
   ArrowRight,
-  Building2,
+  Boxes,
   ChevronDown,
-  GraduationCap,
-  HeartPulse,
-  Landmark,
-  ShoppingBag,
-} from "lucide-react"
+  Code,
+  Palette,
+  PenTool,
+  Sparkles,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { cn } from "@workspace/ui/lib/utils"
 
 const industries = [
   {
-    icon: Landmark,
-    label: "Financial services",
-    blurb: "Audit-ready workflows for banks, lenders and insurers.",
-    links: ["KYC automation", "Loan origination", "Claims intake", "Regulatory reporting"],
-    stat: "42 of the top 100 credit unions",
+    icon: Palette,
+    label: "Brand identity",
+    blurb: "Logos, type and colour systems that feel unmistakably yours.",
+    links: ["Logo design", "Visual identity", "Brand guidelines", "Rebrands"],
+    stat: "Guidelines and source files included",
   },
   {
-    icon: HeartPulse,
-    label: "Healthcare",
-    blurb: "HIPAA-aligned forms and patient journeys.",
-    links: ["Patient intake", "Referral routing", "Prior authorization", "Care plans"],
-    stat: "1.8M patient forms processed monthly",
+    icon: PenTool,
+    label: "UI/UX design",
+    blurb: "Interfaces that look great and feel intuitive.",
+    links: ["Product design", "Design systems", "Prototypes", "UX audits"],
+    stat: "Figma files that match the code",
   },
   {
-    icon: GraduationCap,
-    label: "Education",
-    blurb: "Admissions and student services without the paperwork.",
-    links: ["Applications", "Financial aid", "Course approvals", "Alumni updates"],
-    stat: "Used by 300+ campuses",
+    icon: Code,
+    label: "Web development",
+    blurb: "Production-ready websites with Next.js and Tailwind CSS.",
+    links: ["Marketing sites", "Landing pages", "Web apps", "CMS setup"],
+    stat: "Built on 460+ Designali blocks",
   },
   {
-    icon: ShoppingBag,
-    label: "Retail",
-    blurb: "Vendor onboarding and store operations at scale.",
-    links: ["Supplier portal", "Store audits", "Returns approvals", "Franchise ops"],
-    stat: "8,000 stores run daily checklists",
+    icon: Boxes,
+    label: "CGI, 3D and motion",
+    blurb: "Renders, motion design and visuals for launches.",
+    links: ["Product renders", "Motion design", "Showreels", "3D illustrations"],
+    stat: "Art direction from concept to final frame",
   },
   {
-    icon: Building2,
-    label: "Public sector",
-    blurb: "Accessible services for residents and agencies.",
-    links: ["Permits", "Grant applications", "Public records", "Inspections"],
-    stat: "FedRAMP Moderate in process",
+    icon: Sparkles,
+    label: "AI workflows",
+    blurb: "AI-assisted research, design and development.",
+    links: ["Design automation", "Content pipelines", "Prototyping with AI", "Workflow audits"],
+    stat: "Faster from idea to launch",
   },
 ]
 
@@ -61,7 +61,7 @@ export default function Navigation18() {
     <section className="relative w-full bg-background">
       <nav className="relative border-b">
         <div className="mx-auto flex h-16 max-w-7xl items-center gap-8 px-6">
-          <a href="#" className="font-semibold tracking-tight">Formwell</a>
+          <a href="#" className="font-semibold tracking-tight">designali</a>
           <ul className="hidden items-center gap-1 text-sm md:flex">
             <li>
               <button
@@ -73,11 +73,11 @@ export default function Navigation18() {
                   open && "text-foreground"
                 )}
               >
-                Industries
+                Services
                 <ChevronDown className={cn("size-3.5 transition-transform", open && "rotate-180")} />
               </button>
             </li>
-            {["Product", "Customers", "Pricing"].map((link) => (
+            {["Templates", "Work", "Pricing"].map((link) => (
               <li key={link}>
                 <a href="#" className="flex h-9 items-center px-3 text-muted-foreground hover:text-foreground">
                   {link}
@@ -85,7 +85,7 @@ export default function Navigation18() {
               </li>
             ))}
           </ul>
-          <Button className="ms-auto">Book a demo</Button>
+          <Button className="ms-auto">Start a project</Button>
         </div>
 
         {open && (
@@ -131,7 +131,7 @@ export default function Navigation18() {
                 <a href="#" className="flex flex-col justify-between gap-6 bg-foreground p-6 text-background">
                   <current.icon className="size-6" />
                   <span>
-                    <span className="block text-xs tracking-widest text-background/60 uppercase">Proof</span>
+                    <span className="block text-xs tracking-widest text-background/60 uppercase">Includes</span>
                     <span className="mt-1 block font-medium">{current.stat}</span>
                   </span>
                 </a>

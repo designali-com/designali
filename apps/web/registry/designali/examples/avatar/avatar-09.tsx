@@ -2,12 +2,12 @@ import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
 import { cn } from "@workspace/ui/lib/utils"
 
 const people = [
-  "Maya Chen",
-  "Theo Alvarez",
-  "Priya Natarajan",
-  "Jonas Berg",
-  "Lena Okafor",
-  "Sami Haddad",
+  "Ali Imam",
+  "Sara Designer",
+  "Omar Developer",
+  "Zara Motion",
+  "Kabir Brand",
+  "Nadia Client",
 ]
 
 const tints = [

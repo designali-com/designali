@@ -1,4 +1,6 @@
-import { MicOffIcon } from "lucide-react"
+import {
+  MicOff as MicOffIcon,
+} from "@designali/icons"
 
 import { AspectRatio } from "@workspace/ui/components/aspect-ratio"
 import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
@@ -6,25 +8,25 @@ import { cn } from "@workspace/ui/lib/utils"
 
 const people = [
   {
-    name: "Ada Brennan",
+    name: "Ali Imam",
     tone: "from-sky-700 to-sky-900",
     muted: false,
     speaking: true,
   },
   {
-    name: "Ravi Iyer",
+    name: "Sara Khan",
     tone: "from-emerald-700 to-emerald-900",
     muted: true,
     speaking: false,
   },
   {
-    name: "Lucia Ferro",
+    name: "Zaid Ahmed",
     tone: "from-violet-700 to-violet-900",
     muted: false,
     speaking: false,
   },
   {
-    name: "Ken Ito",
+    name: "Designali client",
     tone: "from-zinc-700 to-zinc-900",
     muted: true,
     speaking: false,

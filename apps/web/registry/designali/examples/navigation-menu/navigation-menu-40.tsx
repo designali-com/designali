@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { CheckIcon, GlobeIcon } from "lucide-react"
+import {
+  Check as CheckIcon,
+  Globe as GlobeIcon,
+} from "@designali/icons"
 
 import {
   NavigationMenu,

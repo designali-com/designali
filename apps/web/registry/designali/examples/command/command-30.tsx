@@ -1,7 +1,11 @@
 "use client"
 
 import * as React from "react"
-import { CalendarIcon, CalendarPlusIcon, UsersIcon } from "lucide-react"
+import {
+  Calendar as CalendarIcon,
+  CalendarPlus as CalendarPlusIcon,
+  Users as UsersIcon,
+} from "@designali/icons"
 
 import {
   Command,
@@ -19,7 +23,7 @@ const when = [
 ]
 
 export default function NaturalLanguageScheduler() {
-  const [text, setText] = React.useState("Design review")
+  const [text, setText] = React.useState("Designali design review")
   const title = text.trim() || "Untitled event"
 
   return (

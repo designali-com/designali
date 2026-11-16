@@ -1,9 +1,9 @@
 import {
-  ChartPieIcon,
-  ChevronRightIcon,
-  FolderIcon,
-  UsersIcon,
-} from "lucide-react"
+  ChartPie as ChartPieIcon,
+  ChevronRight as ChevronRightIcon,
+  Folder as FolderIcon,
+  Users as UsersIcon,
+} from "@designali/icons"
 
 import {
   Menubar,
@@ -19,7 +19,7 @@ const menus = [
   {
     label: "Projects",
     icon: FolderIcon,
-    items: ["Northwind redesign", "Billing revamp", "Mobile v3"],
+    items: ["Designali redesign", "Templates v2", "Icons v3"],
   },
   {
     label: "Reports",

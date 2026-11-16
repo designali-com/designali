@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { ShoppingBagIcon } from "lucide-react"
+import {
+  ShoppingBag as ShoppingBagIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Toaster, createToastManager } from "@workspace/ui/components/toast"
@@ -22,7 +24,7 @@ export default function ToastStackLimit() {
           onClick={() => {
             count.current += 1
             notify.add({
-              title: "New order #" + (1040 + count.current),
+              title: "New template order #" + (1040 + count.current),
               description: "Paid via Apple Pay",
             })
           }}

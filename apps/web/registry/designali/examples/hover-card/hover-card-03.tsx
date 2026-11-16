@@ -1,4 +1,8 @@
-import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from "@workspace/ui/components/avatar"
 import { Button } from "@workspace/ui/components/button"
 import {
   HoverCard,
@@ -15,24 +19,25 @@ export default function UserMentionHoverCard() {
           href="#"
           className="font-medium text-foreground underline-offset-4 hover:underline"
         >
-          @maya.chen
+          @designali_com
         </HoverCardTrigger>
         <HoverCardContent className="w-72">
           <div className="flex gap-3">
             <Avatar size="lg">
-              <AvatarFallback>MC</AvatarFallback>
+              <AvatarImage src="/ali.jpg" alt="Ali Imam" />
+              <AvatarFallback>AI</AvatarFallback>
             </Avatar>
             <div className="flex flex-1 flex-col gap-1">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-sm font-semibold">Maya Chen</p>
-                  <p className="text-muted-foreground">@maya.chen</p>
+                  <p className="text-sm font-semibold">Ali Imam</p>
+                  <p className="text-muted-foreground">@designali_com</p>
                 </div>
                 <Button size="xs">Follow</Button>
               </div>
               <p>
-                Design systems lead at Northwind Studio. Writing about tokens
-                and motion.
+                Founder of Designali. Designing and coding thoughtful digital
+                experiences.
               </p>
               <div className="flex gap-3 text-muted-foreground">
                 <span>
@@ -46,7 +51,7 @@ export default function UserMentionHoverCard() {
           </div>
         </HoverCardContent>
       </HoverCard>{" "}
-      since she owns the spacing tokens.
+      since Ali owns the spacing tokens.
     </p>
   )
 }

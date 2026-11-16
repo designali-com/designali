@@ -1,7 +1,11 @@
 "use client"
 
 import * as React from "react"
-import { EyeIcon, ShoppingBagIcon, StarIcon } from "lucide-react"
+import {
+  Eye as EyeIcon,
+  ShoppingBag as ShoppingBagIcon,
+  Star as StarIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {

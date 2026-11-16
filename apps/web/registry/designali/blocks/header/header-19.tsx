@@ -1,6 +1,10 @@
-import { Check, ChevronLeft, LockKeyhole } from "lucide-react"
+import {
+  Check,
+  ChevronLeft,
+  LockKeyhole,
+} from "@designali/icons"
 
-const steps = ["Cart", "Shipping", "Payment", "Review"]
+const steps = ["Cart", "Details", "Payment", "Download"]
 const current = 2
 
 export default function Header19() {
@@ -10,10 +14,10 @@ export default function Header19() {
         <div className="mx-auto grid h-16 max-w-7xl grid-cols-[auto_1fr_auto] items-center gap-4 px-6">
           <a href="#" className="flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
             <ChevronLeft className="size-4" />
-            <span className="hidden sm:inline">Back to store</span>
+            <span className="hidden sm:inline">Back to templates</span>
           </a>
           <a href="#" className="justify-self-center text-lg font-semibold tracking-[0.2em] uppercase">
-            Kettle
+            designali
           </a>
           <p className="flex items-center gap-1.5 text-xs text-muted-foreground">
             <LockKeyhole className="size-3.5" />

@@ -1,6 +1,8 @@
-import { PlusIcon } from "lucide-react"
+import {
+  Plus as PlusIcon,
+} from "@designali/icons"
 
-import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
+import { Avatar, AvatarFallback, AvatarImage } from "@workspace/ui/components/avatar"
 import {
   Carousel,
   CarouselContent,
@@ -10,14 +12,14 @@ import { cn } from "@workspace/ui/lib/utils"
 
 const stories = [
   { name: "You", add: true },
-  { name: "Mila Novak", unseen: true },
-  { name: "Jonah Park", unseen: true },
-  { name: "Rosa Diaz" },
-  { name: "Eli Brooks", unseen: true },
-  { name: "Nora Quinn" },
-  { name: "Theo Grant" },
-  { name: "Ivy Chen", unseen: true },
-  { name: "Omar Haddad" },
+  { name: "Ali Imam", unseen: true },
+  { name: "Designali", unseen: true },
+  { name: "Templates" },
+  { name: "Blocks", unseen: true },
+  { name: "Icons" },
+  { name: "Logos" },
+  { name: "Motion", unseen: true },
+  { name: "CGI 3D" },
 ]
 
 export default function StoriesAvatarRail() {
@@ -42,7 +44,10 @@ export default function StoriesAvatarRail() {
                 )}
               >
                 <Avatar size="lg" className="ring-2 ring-background">
-                  <AvatarFallback>
+                  {story.name === "Ali Imam" ? (
+              <AvatarImage src="/ali.jpg" alt="Ali Imam" />
+            ) : null}
+            <AvatarFallback>
                     {story.add ? (
                       <PlusIcon className="size-4" />
                     ) : (

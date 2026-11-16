@@ -2,12 +2,12 @@
 
 import * as React from "react"
 import {
-  CircleCheckIcon,
-  CircleDashedIcon,
-  CircleDotIcon,
-  CircleIcon,
-  CircleXIcon,
-} from "lucide-react"
+  CircleCheck as CircleCheckIcon,
+  CircleDashed as CircleDashedIcon,
+  CircleDot as CircleDotIcon,
+  Circle as CircleIcon,
+  CircleX as CircleXIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {

@@ -1,4 +1,7 @@
-import { BriefcaseIcon, UserIcon } from "lucide-react"
+import {
+  Briefcase as BriefcaseIcon,
+  User as UserIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -17,7 +20,7 @@ export default function SignupAccountType() {
   return (
     <div className="flex w-full max-w-sm flex-col gap-4">
       <div>
-        <p className="text-base font-semibold">How will you use Brightpost?</p>
+        <p className="text-base font-semibold">How will you use Designali?</p>
         <p className="text-sm text-muted-foreground">
           You can change this later in settings.
         </p>
@@ -29,7 +32,7 @@ export default function SignupAccountType() {
             <FieldContent>
               <FieldTitle>Personal</FieldTitle>
               <FieldDescription>
-                For side projects and newsletters.
+                For side projects and portfolios.
               </FieldDescription>
             </FieldContent>
             <RadioGroupItem
@@ -45,7 +48,7 @@ export default function SignupAccountType() {
             <FieldContent>
               <FieldTitle>Business</FieldTitle>
               <FieldDescription>
-                For teams, invoices, and billing.
+                For client work and team licenses.
               </FieldDescription>
             </FieldContent>
             <RadioGroupItem

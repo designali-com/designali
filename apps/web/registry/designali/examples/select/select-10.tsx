@@ -23,7 +23,7 @@ export default function IssueStatusSelect() {
       <div className="flex min-w-0 flex-col">
         <span className="text-xs text-muted-foreground">DES-482</span>
         <span className="truncate text-sm font-medium">
-          Redesign onboarding checklist
+          Redesign designali.com onboarding
         </span>
       </div>
       <Select items={statuses} defaultValue="progress">

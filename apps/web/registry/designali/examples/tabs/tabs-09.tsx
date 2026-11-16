@@ -14,7 +14,7 @@ const steps = [
   {
     value: "profile",
     label: "Profile",
-    text: "Tell us your name and role so we can tailor your workspace.",
+    text: "Tell us your name and role so we can tailor your Designali workspace.",
   },
   {
     value: "team",
@@ -24,7 +24,7 @@ const steps = [
   {
     value: "finish",
     label: "Finish",
-    text: "You're all set. We created a starter project for you.",
+    text: "You're all set. We added a Designali starter template for you.",
   },
 ]
 

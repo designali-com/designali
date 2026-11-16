@@ -1,4 +1,6 @@
-import { ShieldIcon } from "lucide-react"
+import {
+  Shield as ShieldIcon,
+} from "@designali/icons"
 
 import { FieldLegend, FieldSet } from "@workspace/ui/components/field"
 import {

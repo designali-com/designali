@@ -15,14 +15,14 @@ import {
 } from "@workspace/ui/components/input-group"
 
 export default function WorkspaceSlugInput() {
-  const [slug, setSlug] = React.useState("harbor-labs")
+  const [slug, setSlug] = React.useState("ali-imam")
 
   return (
     <Field className="w-full max-w-sm">
       <FieldLabel htmlFor="slug">Workspace URL</FieldLabel>
       <InputGroup>
         <InputGroupAddon>
-          <InputGroupText>fieldnote.app/</InputGroupText>
+          <InputGroupText>designali.com/</InputGroupText>
         </InputGroupAddon>
         <InputGroupInput
           id="slug"

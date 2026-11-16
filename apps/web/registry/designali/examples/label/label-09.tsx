@@ -9,7 +9,7 @@ export default function SwitchSettingRow() {
           Weekly digest
         </Label>
         <p id="weekly-digest-desc" className="text-xs text-muted-foreground">
-          A Monday summary of comments and mentions across your projects.
+          A Monday summary of new Designali templates, blocks and comments.
         </p>
       </div>
       <Switch

@@ -1,9 +1,9 @@
 const steps = [
   { title: "Discovery call", duration: "Week 1", text: "A 90-minute session to map goals, constraints and the people who will sign off." },
-  { title: "Audit & research", duration: "Weeks 1-2", text: "We review analytics, interview six customers and benchmark three competitors." },
-  { title: "Direction", duration: "Week 3", text: "Two distinct creative routes presented as working prototypes, not mood boards." },
+  { title: "Audit & research", duration: "Weeks 1-2", text: "We review your brand, analytics and audience, and benchmark three competitors." },
+  { title: "Direction", duration: "Week 3", text: "Two distinct brand and UI routes presented as working Figma prototypes." },
   { title: "Design sprint", duration: "Weeks 4-6", text: "Daily builds in a shared preview link. Feedback lands in hours, not weeks." },
-  { title: "Build & QA", duration: "Weeks 7-8", text: "Production code, accessibility audit and performance budget checks on every page." },
+  { title: "Build & QA", duration: "Weeks 7-8", text: "Production-ready Next.js and Tailwind CSS, with accessibility and performance checks on every page." },
   { title: "Launch & handover", duration: "Week 9", text: "We ship, train your team and stay on call for 30 days after go-live." },
 ]
 
@@ -12,9 +12,9 @@ export default function Grid11() {
     <section className="w-full bg-background py-24">
       <div className="mx-auto max-w-7xl px-6">
         <div className="max-w-2xl">
-          <p className="text-xs tracking-widest text-muted-foreground uppercase">How we work</p>
+          <p className="text-xs tracking-widest text-muted-foreground uppercase">How Designali works</p>
           <h2 className="mt-3 text-4xl font-semibold tracking-tight md:text-5xl">
-            Nine weeks from kickoff to launch.
+            Nine weeks from kickoff to launch, design se code tak.
           </h2>
         </div>
 

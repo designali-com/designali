@@ -35,7 +35,7 @@ export default function FontFamilyPicker() {
   return (
     <div className="flex w-full max-w-xs flex-col gap-2">
       <p className={cn("border p-3 text-lg", active?.className)}>
-        The quick brown fox
+        design se code tak
       </p>
       <Command className="border">
         <CommandInput placeholder="Search fonts..." />

@@ -28,8 +28,8 @@ export default function LoadingSkeletonCard() {
             </>
           ) : (
             <>
-              <CardTitle>Weekly report</CardTitle>
-              <CardDescription>Nov 10 - Nov 16 · Growth team</CardDescription>
+              <CardTitle>Designali weekly report</CardTitle>
+              <CardDescription>Nov 10 - Nov 16 · designali.com</CardDescription>
             </>
           )}
           <CardAction>
@@ -59,7 +59,7 @@ export default function LoadingSkeletonCard() {
                 ))}
               </div>
               <p className="text-muted-foreground">
-                Signups grew 18% week over week, driven by the referral launch.
+                Template downloads grew 18% week over week, driven by the new blocks launch.
               </p>
             </>
           )}

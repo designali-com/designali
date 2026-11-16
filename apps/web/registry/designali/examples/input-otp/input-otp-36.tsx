@@ -1,7 +1,9 @@
 "use client"
 
 import { REGEXP_ONLY_DIGITS_AND_CHARS } from "input-otp"
-import { MessageSquareIcon } from "lucide-react"
+import {
+  MessageSquare as MessageSquareIcon,
+} from "@designali/icons"
 
 import {
   Avatar,
@@ -16,7 +18,7 @@ import {
   InputOTPSlot,
 } from "@workspace/ui/components/input-otp"
 
-const members = ["Ava Lindqvist", "Ben Okafor", "Chloe Marsh"]
+const members = ["Ali Imam", "Brand Designer", "Studio Developer"]
 
 export default function JoinPrivateChatRoom() {
   return (

@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { CheckIcon, CopyIcon } from "lucide-react"
+import {
+  Check as CheckIcon,
+  Copy as CopyIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -12,10 +15,10 @@ import {
 } from "@workspace/ui/components/tabs"
 
 const commands = {
-  npm: "npm install @acme/charts",
-  pnpm: "pnpm add @acme/charts",
-  yarn: "yarn add @acme/charts",
-  bun: "bun add @acme/charts",
+  npm: "npm install @designali/icons",
+  pnpm: "pnpm add @designali/icons",
+  yarn: "yarn add @designali/icons",
+  bun: "bun add @designali/icons",
 }
 
 export default function PackageManagerTabs() {

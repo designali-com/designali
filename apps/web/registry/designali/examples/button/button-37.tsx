@@ -1,4 +1,8 @@
-import { PlusIcon, UploadIcon, UsersIcon } from "lucide-react"
+import {
+  Plus as PlusIcon,
+  Upload as UploadIcon,
+  Users as UsersIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -17,16 +21,16 @@ export default function EmptyStateCtaButtons() {
         <EmptyMedia variant="icon">
           <UsersIcon />
         </EmptyMedia>
-        <EmptyTitle>No contacts yet</EmptyTitle>
+        <EmptyTitle>No clients yet</EmptyTitle>
         <EmptyDescription>
-          Add your first contact or import a list from a CSV file.
+          Add your first Designali client or import a list from a CSV file.
         </EmptyDescription>
       </EmptyHeader>
       <EmptyContent>
         <div className="flex gap-2">
           <Button size="sm">
             <PlusIcon data-icon="inline-start" />
-            Add contact
+            Add client
           </Button>
           <Button size="sm" variant="outline">
             <UploadIcon data-icon="inline-start" />

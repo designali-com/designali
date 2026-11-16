@@ -1,6 +1,10 @@
 "use client"
 
-import { CodeIcon, LinkIcon, MailIcon } from "lucide-react"
+import {
+  Code as CodeIcon,
+  Link as LinkIcon,
+  Mail as MailIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Toaster, createToastManager } from "@workspace/ui/components/toast"

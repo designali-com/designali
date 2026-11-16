@@ -1,12 +1,17 @@
 "use client"
 
 import { useState } from "react"
-import { Menu, Search, ShoppingBag, X } from "lucide-react"
+import {
+  Menu,
+  Search,
+  ShoppingBag,
+  X,
+} from "@designali/icons"
 
 import { cn } from "@workspace/ui/lib/utils"
 
-const left = ["Shop", "Collections", "Journal"]
-const right = ["Stores", "About"]
+const left = ["Templates", "Blocks", "Blog"]
+const right = ["Pricing", "About"]
 
 export default function Navigation06() {
   const [open, setOpen] = useState(false)
@@ -39,9 +44,9 @@ export default function Navigation06() {
           </div>
 
           <a href="#" className="flex flex-col items-center leading-none">
-            <span className="font-serif text-2xl tracking-[0.3em] uppercase">Ostra</span>
+            <span className="font-serif text-2xl tracking-[0.3em] uppercase">Designali</span>
             <span className="mt-1 text-[10px] tracking-[0.4em] text-muted-foreground uppercase">
-              Ceramics
+              Design se code tak
             </span>
           </a>
 
@@ -68,7 +73,7 @@ export default function Navigation06() {
               </button>
               <button
                 type="button"
-                aria-label="Bag, 2 items"
+                aria-label="Cart, 2 templates"
                 className="relative -me-2 flex size-10 items-center justify-center"
               >
                 <ShoppingBag className="size-4" />
@@ -100,10 +105,10 @@ export default function Navigation06() {
 
       <div className="mx-auto max-w-7xl px-6 py-16 text-center">
         <p className="text-xs tracking-[0.3em] text-muted-foreground uppercase">
-          Autumn glaze series
+          New template collection
         </p>
         <p className="mx-auto mt-4 max-w-xl font-serif text-3xl leading-snug md:text-4xl">
-          Hand-thrown stoneware, fired slowly in small batches.
+          Production-ready templates, designed and coded by Ali Imam.
         </p>
       </div>
     </section>

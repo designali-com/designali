@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { TerminalIcon } from "lucide-react"
+import {
+  Terminal as TerminalIcon,
+} from "@designali/icons"
 
 import {
   ToggleGroup,
@@ -9,10 +11,10 @@ import {
 } from "@workspace/ui/components/toggle-group"
 
 const commands: Record<string, string> = {
-  npm: "npm install @acme/charts",
-  pnpm: "pnpm add @acme/charts",
-  yarn: "yarn add @acme/charts",
-  bun: "bun add @acme/charts",
+  npm: "npm install @designali/icons",
+  pnpm: "pnpm add @designali/icons",
+  yarn: "yarn add @designali/icons",
+  bun: "bun add @designali/icons",
 }
 
 export default function PackageManagerToggleGroup() {

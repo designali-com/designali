@@ -1,7 +1,11 @@
 "use client"
 
 import * as React from "react"
-import { Columns2Icon, Grid2x2Icon, SquareIcon } from "lucide-react"
+import {
+  Columns2 as Columns2Icon,
+  Grid2x2 as Grid2x2Icon,
+  Square as SquareIcon,
+} from "@designali/icons"
 
 import {
   Menubar,

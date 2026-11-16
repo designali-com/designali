@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { PlusIcon } from "lucide-react"
+import {
+  Plus as PlusIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -20,13 +22,13 @@ type Workspace = { id: string; name: string; plan: string; gradient: string }
 const workspaces: Workspace[] = [
   {
     id: "w1",
-    name: "Northwind",
+    name: "Designali",
     plan: "Business",
     gradient: "from-sky-500 to-indigo-600",
   },
   {
     id: "w2",
-    name: "Fernway Studio",
+    name: "Dalim Works",
     plan: "Team",
     gradient: "from-emerald-400 to-teal-600",
   },

@@ -3,12 +3,12 @@
 import * as React from "react"
 import { addDays, format, isBefore, nextMonday, startOfDay } from "date-fns"
 import {
-  BanIcon,
-  CalendarArrowUpIcon,
-  CalendarClockIcon,
-  SunIcon,
-  SunriseIcon,
-} from "lucide-react"
+  Ban as BanIcon,
+  CalendarArrowUp as CalendarArrowUpIcon,
+  CalendarClock as CalendarClockIcon,
+  Sun as SunIcon,
+  Sunrise as SunriseIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Calendar } from "@workspace/ui/components/calendar"
@@ -43,7 +43,7 @@ export default function TaskDueDatePopover() {
       <div className="flex min-w-0 items-center gap-2">
         <Checkbox aria-label="Complete task" />
         <span className="truncate text-sm">
-          Send revised quote to Halcyon Labs
+          Send revised website quote to a Designali client
         </span>
       </div>
       <Popover open={open} onOpenChange={setOpen}>

@@ -18,7 +18,7 @@ function strength(pw: string) {
 const levels = ["Too short", "Weak", "Fair", "Good", "Strong"]
 
 export default function PasswordStrengthLabel() {
-  const [pw, setPw] = React.useState("Lantern7")
+  const [pw, setPw] = React.useState("Designali7")
   const score = strength(pw)
 
   return (

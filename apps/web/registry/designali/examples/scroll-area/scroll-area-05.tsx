@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { SendIcon } from "lucide-react"
+import {
+  Send as SendIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Input } from "@workspace/ui/components/input"
@@ -13,7 +15,7 @@ const seed = [
   { me: true, text: "Yep, finished ten minutes ago." },
   { me: false, text: "Great, I'll start the QA pass." },
   { me: true, text: "Ping me if anything looks off." },
-  { me: false, text: "Checkout flow looks good so far." },
+  { me: false, text: "Pricing block looks good so far." },
   { me: false, text: "Found a typo on the receipt page." },
 ]
 

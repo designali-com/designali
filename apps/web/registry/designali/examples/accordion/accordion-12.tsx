@@ -1,4 +1,7 @@
-import { ChevronDownIcon, ShoppingBagIcon } from "lucide-react"
+import {
+  ChevronDown as ChevronDownIcon,
+  ShoppingBag as ShoppingBagIcon,
+} from "@designali/icons"
 
 import {
   Accordion,
@@ -8,9 +11,9 @@ import {
 } from "@workspace/ui/components/accordion"
 
 const lines = [
-  { name: "Linen overshirt", meta: "Sand / M", qty: 1, price: 89 },
-  { name: "Merino crew socks", meta: "Charcoal", qty: 3, price: 14 },
-  { name: "Canvas tote", meta: "Natural", qty: 1, price: 24 },
+  { name: "Design Agency template", meta: "Next.js / Personal", qty: 1, price: 89 },
+  { name: "Landing page blocks", meta: "Tailwind CSS", qty: 3, price: 14 },
+  { name: "Designali icon pack", meta: "SVG + React", qty: 1, price: 24 },
 ]
 
 export default function AccordionCheckoutOrderSummary() {
@@ -55,7 +58,7 @@ export default function AccordionCheckoutOrderSummary() {
               <dd>${subtotal.toFixed(2)}</dd>
             </div>
             <div className="flex justify-between text-muted-foreground">
-              <dt>Shipping</dt>
+              <dt>Tax</dt>
               <dd>${shipping.toFixed(2)}</dd>
             </div>
             <div className="flex justify-between text-sm font-semibold">

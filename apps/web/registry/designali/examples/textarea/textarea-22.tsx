@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { CloudCheckIcon } from "lucide-react"
+import {
+  CloudCheck as CloudCheckIcon,
+} from "@designali/icons"
 
 import { Label } from "@workspace/ui/components/label"
 import { Spinner } from "@workspace/ui/components/spinner"
@@ -9,7 +11,7 @@ import { Textarea } from "@workspace/ui/components/textarea"
 
 export default function AutosaveTextarea() {
   const [value, setValue] = React.useState(
-    "Call the venue about the projector."
+    "Share the Designali homepage moodboard with the client."
   )
   const [status, setStatus] = React.useState<"saved" | "saving" | "idle">(
     "saved"

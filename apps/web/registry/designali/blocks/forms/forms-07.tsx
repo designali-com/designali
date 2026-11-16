@@ -1,4 +1,7 @@
-import { KeyRound, Lock } from "lucide-react"
+import {
+  KeyRound,
+  Lock,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Checkbox } from "@workspace/ui/components/checkbox"
@@ -14,8 +17,8 @@ function GlyphMark({ letter }: { letter: string }) {
 }
 
 const providers = [
-  { name: "Continue with Orbit ID", letter: "O" },
-  { name: "Continue with Stackhouse", letter: "S" },
+  { name: "Continue with GitHub", letter: "G" },
+  { name: "Continue with Figma", letter: "F" },
 ]
 
 export default function Forms07() {
@@ -27,10 +30,10 @@ export default function Forms07() {
             <span className="flex size-7 items-center justify-center bg-primary text-primary-foreground">
               <Lock className="size-3.5" />
             </span>
-            Ledgerline
+            designali
           </div>
           <h2 className="mt-8 text-2xl font-semibold tracking-tight">
-            Sign in to your workspace
+            Sign in to Designali
           </h2>
           <p className="mt-2 text-sm text-muted-foreground">
             New here?{" "}
@@ -61,7 +64,7 @@ export default function Forms07() {
           <form className="space-y-5">
             <div className="space-y-2">
               <Label htmlFor="f7-email">Email</Label>
-              <Input id="f7-email" type="email" autoComplete="email" placeholder="ines@harbourfoods.co" className="h-10" />
+              <Input id="f7-email" type="email" autoComplete="email" placeholder="you@example.com" className="h-10" />
             </div>
             <div className="space-y-2">
               <div className="flex items-center justify-between">
@@ -82,7 +85,7 @@ export default function Forms07() {
           </form>
         </div>
         <p className="mt-6 text-center text-xs text-muted-foreground">
-          Protected by SOC 2 Type II controls and hardware-backed keys.
+          By signing in you agree to the Designali terms of use.
         </p>
       </div>
     </section>

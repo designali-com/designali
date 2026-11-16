@@ -6,25 +6,25 @@ const releases = [
   {
     version: "3.2.0",
     date: "Nov 12",
-    notes: "Bulk archive, faster search indexing.",
+    notes: "460+ blocks and faster icon search.",
   },
   {
     version: "3.1.4",
     date: "Nov 02",
-    notes: "Fixed CSV export timezone offsets.",
+    notes: "Fixed dark mode in pricing blocks.",
   },
   {
     version: "3.1.0",
     date: "Oct 21",
-    notes: "New activity feed and saved filters.",
+    notes: "240 landing pages added.",
   },
-  { version: "3.0.2", date: "Oct 09", notes: "Improved SSO error messages." },
+  { version: "3.0.2", date: "Oct 09", notes: "New @designali/logos package." },
   {
     version: "3.0.0",
     date: "Sep 30",
-    notes: "Redesigned navigation and dark mode.",
+    notes: "Redesigned designali.com navigation.",
   },
-  { version: "2.9.1", date: "Sep 14", notes: "Webhook retries with backoff." },
+  { version: "2.9.1", date: "Sep 14", notes: "Apple device mockups: iPhone, iPad, MacBook." },
 ]
 
 export default function ChangelogTimeline() {

@@ -1,4 +1,7 @@
-import { ChevronDownIcon, TerminalIcon } from "lucide-react"
+import {
+  ChevronDown as ChevronDownIcon,
+  Terminal as TerminalIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import { Button } from "@workspace/ui/components/button"
@@ -17,11 +20,11 @@ import {
 } from "@workspace/ui/components/collapsible"
 
 const logs = [
-  { time: "12:04:01", text: "Cloning repository (main @ 4f2a9c1)" },
+  { time: "12:04:01", text: "Cloning designali/web (main @ 4f2a9c1)" },
   { time: "12:04:07", text: "Installing dependencies" },
   { time: "12:04:39", text: "Running build" },
-  { time: "12:05:12", text: "Generated 128 static pages" },
-  { time: "12:05:18", text: "Deployment ready" },
+  { time: "12:05:12", text: "Generated 460 block pages" },
+  { time: "12:05:18", text: "Deployed to designali.com" },
 ]
 
 export default function DeploymentBuildLogs() {

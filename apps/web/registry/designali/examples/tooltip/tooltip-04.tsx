@@ -1,4 +1,8 @@
-import { FilePlusIcon, SaveIcon, SearchIcon } from "lucide-react"
+import {
+  FilePlus as FilePlusIcon,
+  Save as SaveIcon,
+  Search as SearchIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Kbd, KbdGroup } from "@workspace/ui/components/kbd"

@@ -1,4 +1,6 @@
-import { ArrowUpRightIcon } from "lucide-react"
+import {
+  ArrowUpRight as ArrowUpRightIcon,
+} from "@designali/icons"
 
 import { AspectRatio } from "@workspace/ui/components/aspect-ratio"
 
@@ -12,9 +14,9 @@ export default function HoverZoomCard() {
         </div>
       </AspectRatio>
       <p className="mt-2 text-sm font-medium group-hover:underline">
-        Autumn collection
+        Dalim Works archive
       </p>
-      <p className="text-xs text-muted-foreground">24 pieces</p>
+      <p className="text-xs text-muted-foreground">24 case studies</p>
     </a>
   )
 }

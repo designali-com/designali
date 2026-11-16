@@ -1,4 +1,8 @@
-import { CircleCheckIcon, GraduationCapIcon, PlayIcon } from "lucide-react"
+import {
+  CircleCheck as CircleCheckIcon,
+  GraduationCap as GraduationCapIcon,
+  Play as PlayIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import { Button } from "@workspace/ui/components/button"
@@ -15,9 +19,9 @@ import { Progress } from "@workspace/ui/components/progress"
 import { cn } from "@workspace/ui/lib/utils"
 
 const modules = [
-  { title: "Foundations of color", lessons: 6, done: 6 },
-  { title: "Typography systems", lessons: 8, done: 5 },
-  { title: "Layout and grids", lessons: 7, done: 0 },
+  { title: "Designing in Figma", lessons: 6, done: 6 },
+  { title: "Building a design system", lessons: 8, done: 5 },
+  { title: "Shipping with Next.js", lessons: 7, done: 0 },
 ]
 
 export default function CourseProgressCard() {
@@ -29,7 +33,7 @@ export default function CourseProgressCard() {
       <CardHeader>
         <CardDescription className="flex items-center gap-1.5">
           <GraduationCapIcon className="size-3.5" />
-          Visual Design Essentials
+          Designali: design se code tak
         </CardDescription>
         <CardTitle className="text-base">
           {Math.round((done / total) * 100)}% complete
@@ -65,7 +69,7 @@ export default function CourseProgressCard() {
         <div className="grid min-w-0">
           <span className="text-muted-foreground">Up next</span>
           <span className="truncate font-medium">
-            2.6 Pairing serif and sans
+            2.6 Tokens with Tailwind CSS
           </span>
         </div>
         <Button size="sm">

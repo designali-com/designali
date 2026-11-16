@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { CircleCheckIcon, CircleIcon } from "lucide-react"
+import {
+  CircleCheck as CircleCheckIcon,
+  Circle as CircleIcon,
+} from "@designali/icons"
 
 import { Field, FieldLabel } from "@workspace/ui/components/field"
 import { Input } from "@workspace/ui/components/input"
@@ -15,7 +18,7 @@ const rules = [
 ]
 
 export default function PasswordRequirementsField() {
-  const [value, setValue] = React.useState("Harbor7")
+  const [value, setValue] = React.useState("Designali7")
 
   return (
     <Field className="w-full max-w-xs">

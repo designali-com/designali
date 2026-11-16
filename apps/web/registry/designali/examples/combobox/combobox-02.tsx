@@ -16,11 +16,11 @@ import {
 } from "@workspace/ui/components/combobox"
 
 const frameworks = [
-  "Next.js",
-  "SvelteKit",
-  "Nuxt.js",
-  "Remix",
-  "Astro",
+  "Templates",
+  "Blocks",
+  "UI Designs",
+  "Icons",
+  "Logos",
 ] as const
 
 export function ComboboxMultiple() {

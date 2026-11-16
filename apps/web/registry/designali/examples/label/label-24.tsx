@@ -8,7 +8,7 @@ export default function InsetLabelInput() {
       </Label>
       <input
         id="inset-card"
-        defaultValue="Elena Petrova"
+        defaultValue="Ali Imam"
         className="mt-1 bg-transparent text-sm outline-none"
       />
     </div>

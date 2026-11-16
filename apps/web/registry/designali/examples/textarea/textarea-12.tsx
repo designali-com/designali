@@ -1,6 +1,8 @@
 "use client"
 
-import { PaperclipIcon } from "lucide-react"
+import {
+  Paperclip as PaperclipIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -18,7 +20,7 @@ export default function SupportTicketForm() {
       <FieldGroup>
         <Field>
           <FieldLabel htmlFor="st-subject">Subject</FieldLabel>
-          <Input id="st-subject" placeholder="Can't export invoices to CSV" />
+          <Input id="st-subject" placeholder="Can't download my Designali template files" />
         </Field>
         <Field>
           <FieldLabel htmlFor="st-body">Describe the problem</FieldLabel>

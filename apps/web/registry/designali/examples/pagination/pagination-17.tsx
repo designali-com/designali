@@ -1,4 +1,6 @@
-import { LockIcon } from "lucide-react"
+import {
+  Lock as LockIcon,
+} from "@designali/icons"
 
 import {
   Pagination,
@@ -31,7 +33,7 @@ export default function DisabledPagination() {
       </Pagination>
       <p className="flex items-center gap-1.5 text-xs text-muted-foreground">
         <LockIcon className="size-3" />
-        Navigation paused while the index rebuilds
+        Navigation paused while the icon index rebuilds
       </p>
     </div>
   )

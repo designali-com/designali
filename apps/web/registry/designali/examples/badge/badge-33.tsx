@@ -1,4 +1,6 @@
-import { EyeIcon } from "lucide-react"
+import {
+  Eye as EyeIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 
@@ -18,7 +20,7 @@ export default function LiveRecordingBadges() {
       </Badge>
       <Badge variant="secondary">
         <EyeIcon data-icon="inline-start" />
-        1,204 watching
+        1,204 watching Ali design
       </Badge>
     </div>
   )

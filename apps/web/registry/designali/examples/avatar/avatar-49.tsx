@@ -1,4 +1,8 @@
-import { CrownIcon, ShieldIcon, StarIcon } from "lucide-react"
+import {
+  Crown as CrownIcon,
+  Shield as ShieldIcon,
+  Star as StarIcon,
+} from "@designali/icons"
 
 import {
   Avatar,
@@ -8,19 +12,19 @@ import {
 
 const roles = [
   {
-    initials: "OW",
+    initials: "AI",
     role: "Owner",
     icon: CrownIcon,
     tone: "bg-amber-500 text-white",
   },
   {
-    initials: "AD",
+    initials: "SA",
     role: "Admin",
     icon: ShieldIcon,
     tone: "bg-blue-600 text-white",
   },
   {
-    initials: "MO",
+    initials: "OM",
     role: "Moderator",
     icon: StarIcon,
     tone: "bg-violet-600 text-white",

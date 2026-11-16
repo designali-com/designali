@@ -1,28 +1,32 @@
-import { Headphones, Mic, Radio } from "lucide-react"
+import {
+  Headphones,
+  Mic,
+  Radio,
+} from "@designali/icons"
 
 const episodes = [
   {
     number: "48",
     title: "The case for boring interfaces",
-    guest: "Marcus Webb",
+    guest: "Marcus",
     length: "52 min",
   },
   {
     number: "47",
     title: "Hiring your first design engineer",
-    guest: "Priya Nair",
+    guest: "Priya",
     length: "44 min",
   },
   {
     number: "46",
     title: "Brand systems at scale",
-    guest: "Sofia Alvarez",
+    guest: "Sofia",
     length: "61 min",
   },
   {
     number: "45",
-    title: "What we learned from 1,000 audits",
-    guest: "Jonas Lindqvist",
+    title: "What we learned building 460+ blocks",
+    guest: "Jonas",
     length: "38 min",
   },
 ]
@@ -40,11 +44,11 @@ export default function Media06() {
         <div className="grid gap-8 md:grid-cols-[1fr_auto] md:items-end">
           <div>
             <h2 className="text-3xl font-semibold tracking-tight md:text-4xl">
-              The Design Room
+              Designali Podcast
             </h2>
             <p className="mt-3 max-w-lg text-muted-foreground">
-              A weekly conversation with people building the tools designers use
-              every day.
+              A weekly conversation hosted by Ali Imam on design, code and the
+              space between — design se code tak.
             </p>
           </div>
           <div className="flex flex-wrap gap-2">

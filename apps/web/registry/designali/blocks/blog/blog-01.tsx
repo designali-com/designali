@@ -1,32 +1,34 @@
-import { ArrowUpRight } from "lucide-react"
+import {
+  ArrowUpRight,
+} from "@designali/icons"
 
 const posts = [
   {
     category: "Design systems",
-    title: "Why your tokens should describe intent, not color",
+    title: "How I name design tokens for designali.com",
     excerpt:
-      "A naming model that survives rebrands, dark mode, and the third product team joining your library.",
-    author: "Maya Okafor",
+      "The semantic token model behind every Designali block: survives rebrands, dark mode and new products.",
+    author: "Ali Imam",
     date: "Nov 12, 2026",
     read: "8 min read",
     gradient: "from-chart-1/60 to-chart-3/30",
   },
   {
     category: "Engineering",
-    title: "Shipping a component library to four frameworks",
+    title: "Shipping 460+ blocks from Figma to Next.js",
     excerpt:
-      "What we learned compiling one source of truth to React, Vue, Svelte, and plain web components.",
-    author: "Daniel Reyes",
+      "What I learned turning one Figma file into a React, TypeScript and Tailwind CSS registry.",
+    author: "Ali Imam",
     date: "Nov 5, 2026",
     read: "11 min read",
     gradient: "from-chart-2/60 to-chart-4/30",
   },
   {
     category: "Process",
-    title: "The two-week design sprint we actually kept",
+    title: "Design se code tak: the Designali workflow",
     excerpt:
-      "Trimming rituals until only the ones that changed decisions were left on the calendar.",
-    author: "Lena Fischer",
+      "How a brief becomes a brand identity, a UI design and a production-ready website.",
+    author: "Ali Imam",
     date: "Oct 29, 2026",
     read: "6 min read",
     gradient: "from-chart-5/60 to-chart-1/30",
@@ -43,7 +45,7 @@ export default function Blog01() {
               Journal
             </p>
             <h2 className="mt-2 text-3xl font-medium tracking-tight md:text-4xl">
-              Latest from the studio
+              Latest from the Designali studio
             </h2>
           </div>
           <a

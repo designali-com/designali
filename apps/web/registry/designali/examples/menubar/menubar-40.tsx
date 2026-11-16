@@ -2,13 +2,13 @@
 
 import * as React from "react"
 import {
-  AtSignIcon,
-  CalendarIcon,
-  GripVerticalIcon,
-  PaperclipIcon,
-  SquareCheckIcon,
-  TypeIcon,
-} from "lucide-react"
+  AtSign as AtSignIcon,
+  Calendar as CalendarIcon,
+  GripVertical as GripVerticalIcon,
+  Paperclip as PaperclipIcon,
+  SquareCheck as SquareCheckIcon,
+  Type as TypeIcon,
+} from "@designali/icons"
 
 import {
   Menubar,

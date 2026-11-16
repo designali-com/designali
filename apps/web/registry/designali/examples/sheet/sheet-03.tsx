@@ -1,7 +1,11 @@
 "use client"
 
 import * as React from "react"
-import { MinusIcon, PlusIcon, ShoppingCartIcon } from "lucide-react"
+import {
+  Minus as MinusIcon,
+  Plus as PlusIcon,
+  ShoppingCart as ShoppingCartIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -17,13 +21,13 @@ import {
 const initialItems = [
   {
     id: "mug",
-    name: "Stoneware mug",
-    variant: "Sand / 350ml",
+    name: "Portfolio Simple template",
+    variant: "Next.js · Figma",
     price: 18,
     qty: 2,
   },
-  { id: "tote", name: "Canvas tote", variant: "Natural", price: 24, qty: 1 },
-  { id: "candle", name: "Cedar candle", variant: "8oz", price: 32, qty: 1 },
+  { id: "tote", name: "Icons Pack", variant: "4000+ icons", price: 24, qty: 1 },
+  { id: "candle", name: "Logos Pack", variant: "SVG · React", price: 32, qty: 1 },
 ]
 
 export default function ShoppingCartSheet() {

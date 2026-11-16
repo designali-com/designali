@@ -1,9 +1,9 @@
 import {
-  BanIcon,
-  ChevronDownIcon,
-  WashingMachineIcon,
-  WindIcon,
-} from "lucide-react"
+  Code as CodeIcon,
+  ChevronDown as ChevronDownIcon,
+  Figma as FigmaIcon,
+  Rocket as RocketIcon,
+} from "@designali/icons"
 
 import {
   Accordion,
@@ -13,18 +13,18 @@ import {
 } from "@workspace/ui/components/accordion"
 
 const sizes = [
-  { size: "S", chest: "92", length: "70" },
-  { size: "M", chest: "100", length: "72" },
-  { size: "L", chest: "108", length: "74" },
+  { size: "Personal", chest: "1", length: "42" },
+  { size: "Studio", chest: "5", length: "99" },
+  { size: "Unlimited", chest: "∞", length: "199" },
 ]
 
 export default function AccordionProductDetails() {
   return (
     <div className="w-full max-w-sm space-y-3">
       <div>
-        <p className="text-sm font-semibold">Heavyweight cotton tee</p>
+        <p className="text-sm font-semibold">Design Agency template</p>
         <p className="text-xs text-muted-foreground">
-          $42.00 &middot; Washed black
+          $42.00 &middot; Next.js + Tailwind CSS
         </p>
       </div>
       <Accordion multiple defaultValue={["details"]} className="border-y">
@@ -37,13 +37,13 @@ export default function AccordionProductDetails() {
             />
           </AccordionTrigger>
           <AccordionContent className="text-muted-foreground">
-            A boxy, dropped-shoulder tee in 280 gsm organic cotton. Garment dyed
-            for a soft, lived-in feel.
+            A production-ready studio website by Designali. Built with Next.js,
+            TypeScript and Tailwind CSS, with a matching Figma file.
           </AccordionContent>
         </AccordionItem>
         <AccordionItem value="size">
           <AccordionTrigger className="tracking-wide uppercase">
-            Size guide
+            License guide
             <ChevronDownIcon
               data-slot="accordion-trigger-icon"
               className="transition-transform duration-200 group-aria-expanded/accordion-trigger:rotate-180"
@@ -53,9 +53,9 @@ export default function AccordionProductDetails() {
             <table className="w-full text-start">
               <thead className="text-muted-foreground">
                 <tr className="border-b">
-                  <th className="py-1 text-start font-normal">Size</th>
-                  <th className="py-1 text-start font-normal">Chest (cm)</th>
-                  <th className="py-1 text-start font-normal">Length (cm)</th>
+                  <th className="py-1 text-start font-normal">License</th>
+                  <th className="py-1 text-start font-normal">Projects</th>
+                  <th className="py-1 text-start font-normal">Price ($)</th>
                 </tr>
               </thead>
               <tbody>
@@ -72,7 +72,7 @@ export default function AccordionProductDetails() {
         </AccordionItem>
         <AccordionItem value="care">
           <AccordionTrigger className="tracking-wide uppercase">
-            Care
+            Workflow
             <ChevronDownIcon
               data-slot="accordion-trigger-icon"
               className="transition-transform duration-200 group-aria-expanded/accordion-trigger:rotate-180"
@@ -81,16 +81,16 @@ export default function AccordionProductDetails() {
           <AccordionContent>
             <ul className="space-y-1.5 text-muted-foreground">
               <li className="flex items-center gap-2">
-                <WashingMachineIcon className="size-3.5" />
-                Machine wash cold, inside out
+                <FigmaIcon className="size-3.5" />
+                Customise the design in Figma
               </li>
               <li className="flex items-center gap-2">
-                <WindIcon className="size-3.5" />
-                Line dry in the shade
+                <CodeIcon className="size-3.5" />
+                Edit the Next.js code
               </li>
               <li className="flex items-center gap-2">
-                <BanIcon className="size-3.5" />
-                Do not bleach
+                <RocketIcon className="size-3.5" />
+                Deploy to Vercel
               </li>
             </ul>
           </AccordionContent>

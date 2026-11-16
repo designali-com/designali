@@ -24,7 +24,7 @@ export default function FormDataSwitches() {
       }}
     >
       <div className="flex items-center justify-between">
-        <Label htmlFor="form-newsletter">Product newsletter</Label>
+        <Label htmlFor="form-newsletter">Designali newsletter</Label>
         <Switch id="form-newsletter" name="newsletter" defaultChecked />
       </div>
       <div className="flex items-center justify-between">

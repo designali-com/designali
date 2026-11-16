@@ -1,4 +1,8 @@
-import { ActivityIcon, GlobeIcon, SearchIcon } from "lucide-react"
+import {
+  Activity as ActivityIcon,
+  Globe as GlobeIcon,
+  Search as SearchIcon,
+} from "@designali/icons"
 
 import { Checkbox } from "@workspace/ui/components/checkbox"
 import {
@@ -16,7 +20,7 @@ const settings = [
     id: "profile",
     icon: GlobeIcon,
     title: "Public profile",
-    description: "Anyone can see your name and bio.",
+    description: "Anyone on designali.com can see your name and bio.",
     on: true,
   },
   {

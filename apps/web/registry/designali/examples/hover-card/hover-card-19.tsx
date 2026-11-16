@@ -7,14 +7,14 @@ import {
 const sources = [
   {
     id: 1,
-    title: "Remote Work and Focus Time",
-    publisher: "Halden Institute Review",
+    title: "From Figma to Next.js",
+    publisher: "Designali Blog",
     year: 2023,
   },
   {
     id: 2,
-    title: "Meeting Load in Distributed Teams",
-    publisher: "Journal of Work Design",
+    title: "Design se code tak",
+    publisher: "Designali Blog",
     year: 2022,
   },
 ]
@@ -22,7 +22,7 @@ const sources = [
 export default function CitationFootnoteHoverCard() {
   return (
     <p className="max-w-sm text-sm leading-relaxed">
-      Teams with two no-meeting days report 26% more deep work
+      Teams using Designali blocks ship landing pages faster
       {sources.map((s) => (
         <HoverCard key={s.id}>
           <HoverCardTrigger
@@ -39,7 +39,7 @@ export default function CitationFootnoteHoverCard() {
           </HoverCardContent>
         </HoverCard>
       ))}
-      , with no measurable drop in collaboration quality.
+      , with no drop in design quality.
     </p>
   )
 }

@@ -2,12 +2,12 @@
 
 import * as React from "react"
 import {
-  CalendarIcon,
-  CloudIcon,
-  GitBranchIcon,
-  MessageSquareIcon,
-  PlugIcon,
-} from "lucide-react"
+  Calendar as CalendarIcon,
+  Cloud as CloudIcon,
+  GitBranch as GitBranchIcon,
+  MessageSquare as MessageSquareIcon,
+  Plug as PlugIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {

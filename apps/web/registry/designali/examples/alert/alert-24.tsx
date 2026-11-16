@@ -1,4 +1,6 @@
-import { FlaskConicalIcon } from "lucide-react"
+import {
+  FlaskConical as FlaskConicalIcon,
+} from "@designali/icons"
 
 import {
   Alert,
@@ -16,7 +18,7 @@ export default function AlertBetaFeature() {
         <Badge variant="outline">Beta</Badge>
       </AlertTitle>
       <AlertDescription>
-        Summaries are generated for threads with more than 10 replies. Results
+        Designali AI summarises client feedback threads with more than 10 replies. Results
         may be imperfect. <a href="#">Share feedback</a>
       </AlertDescription>
     </Alert>

@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { ArrowDownIcon, ArrowUpIcon } from "lucide-react"
+import {
+  ArrowDown as ArrowDownIcon,
+  ArrowUp as ArrowUpIcon,
+} from "@designali/icons"
 
 import {
   ToggleGroup,
@@ -9,9 +12,9 @@ import {
 } from "@workspace/ui/components/toggle-group"
 
 const rows = [
-  { name: "Orbit", score: 82, date: 3 },
-  { name: "Juniper", score: 95, date: 1 },
-  { name: "Kestrel", score: 71, date: 2 },
+  { name: "Dalim UI", score: 82, date: 3 },
+  { name: "Dalim Icons", score: 95, date: 1 },
+  { name: "Dalim Fonts", score: 71, date: 2 },
 ]
 
 export default function SortDirectionToggleGroup() {

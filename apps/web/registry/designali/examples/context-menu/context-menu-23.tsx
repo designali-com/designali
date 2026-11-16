@@ -2,12 +2,12 @@
 
 import * as React from "react"
 import {
-  CopyIcon,
-  MapPinIcon,
-  MapPinPlusIcon,
-  NavigationIcon,
-  RulerIcon,
-} from "lucide-react"
+  Copy as CopyIcon,
+  MapPin as MapPinIcon,
+  MapPinPlus as MapPinPlusIcon,
+  Navigation as NavigationIcon,
+  Ruler as RulerIcon,
+} from "@designali/icons"
 
 import {
   ContextMenu,

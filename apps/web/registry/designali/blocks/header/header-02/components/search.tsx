@@ -2,13 +2,13 @@
 
 import * as React from "react"
 import {
-  ArrowUpRightIcon,
-  FilePlus2Icon,
-  LayoutTemplateIcon,
-  PaletteIcon,
-  PenToolIcon,
-  SearchIcon,
-} from "lucide-react"
+  ArrowUpRight as ArrowUpRightIcon,
+  FilePlusCorner as FilePlus2Icon,
+  LayoutTemplate as LayoutTemplateIcon,
+  Palette as PaletteIcon,
+  PenTool as PenToolIcon,
+  Search as SearchIcon,
+} from "@designali/icons"
 
 import {
   Command,
@@ -55,7 +55,7 @@ export function Search() {
           />
 
           <span className="font-normal text-muted-foreground/70">
-            Search design tools...
+            Search Designali...
           </span>
         </span>
 
@@ -67,7 +67,7 @@ export function Search() {
       {/* Command Dialog */}
       <CommandDialog open={open} onOpenChange={setOpen}>
         <Command>
-          <CommandInput placeholder="Type to search components, assets, or docs..." />
+          <CommandInput placeholder="Search blocks, templates, icons, or docs..." />
 
           <CommandList>
             <CommandEmpty>No matches found.</CommandEmpty>
@@ -122,7 +122,7 @@ export function Search() {
                   aria-hidden="true"
                 />
 
-                <span>Go to workspace</span>
+                <span>Go to work</span>
               </CommandItem>
 
               <CommandItem>

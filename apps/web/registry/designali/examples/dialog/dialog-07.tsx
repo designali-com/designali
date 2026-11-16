@@ -1,7 +1,11 @@
 "use client"
 
 import * as React from "react"
-import { CheckIcon, CopyIcon, Share2Icon } from "lucide-react"
+import {
+  Check as CheckIcon,
+  Copy as CopyIcon,
+  Share2 as Share2Icon,
+} from "@designali/icons"
 
 import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
 import { Button } from "@workspace/ui/components/button"
@@ -26,9 +30,9 @@ import {
 import { Separator } from "@workspace/ui/components/separator"
 
 const people = [
-  { name: "Priya Raman", email: "priya@lumen.app", access: "owner" },
-  { name: "Jonas Weber", email: "jonas@lumen.app", access: "edit" },
-  { name: "Ada Okafor", email: "ada@lumen.app", access: "view" },
+  { name: "Ali Imam", email: "ali@designali.com", access: "owner" },
+  { name: "Studio Designer", email: "design@designali.com", access: "edit" },
+  { name: "Client Reviewer", email: "client@example.com", access: "view" },
 ]
 
 export default function ShareDocumentDialog() {
@@ -42,7 +46,7 @@ export default function ShareDocumentDialog() {
       </DialogTrigger>
       <DialogContent className="sm:max-w-md">
         <DialogHeader>
-          <DialogTitle>Share &quot;Q3 Roadmap&quot;</DialogTitle>
+          <DialogTitle>Share &quot;Brand Identity&quot;</DialogTitle>
           <DialogDescription>
             Anyone with the link can view this document.
           </DialogDescription>
@@ -50,7 +54,7 @@ export default function ShareDocumentDialog() {
         <InputGroup>
           <InputGroupInput
             readOnly
-            value="https://lumen.app/d/q3-roadmap"
+            value="https://www.designali.com/work/brand-identity"
             aria-label="Share link"
           />
           <InputGroupAddon align="inline-end">

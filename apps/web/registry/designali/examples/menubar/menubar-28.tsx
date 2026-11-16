@@ -1,7 +1,11 @@
 "use client"
 
 import * as React from "react"
-import { LinkIcon, SignalIcon, UserPlusIcon } from "lucide-react"
+import {
+  Link as LinkIcon,
+  Signal as SignalIcon,
+  UserPlus as UserPlusIcon,
+} from "@designali/icons"
 
 import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
 import { Badge } from "@workspace/ui/components/badge"
@@ -22,9 +26,9 @@ import {
 } from "@workspace/ui/components/menubar"
 
 const people = [
-  { id: "mc", name: "Maya Chen" },
-  { id: "or", name: "Omar Reyes" },
-  { id: "lb", name: "Lena Brandt" },
+  { id: "mc", name: "Ali Imam" },
+  { id: "or", name: "Studio Developer" },
+  { id: "lb", name: "Brand Designer" },
 ]
 
 export default function IssueTrackerMenubar() {
@@ -90,7 +94,7 @@ export default function IssueTrackerMenubar() {
       </Menubar>
       <div className="flex items-center gap-2 border p-3 text-xs">
         <span className="font-mono text-muted-foreground">ENG-412</span>
-        <span className="flex-1 truncate">Checkout fails on saved cards</span>
+        <span className="flex-1 truncate">Pricing block breaks on mobile Safari</span>
         <Badge
           variant={priority === "urgent" ? "destructive" : "secondary"}
           className="capitalize"

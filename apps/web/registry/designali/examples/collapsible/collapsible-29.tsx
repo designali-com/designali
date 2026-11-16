@@ -1,4 +1,8 @@
-import { ChevronDownIcon, CloudRainIcon, SunIcon } from "lucide-react"
+import {
+  ChevronDown as ChevronDownIcon,
+  CloudRain as CloudRainIcon,
+  Sun as SunIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {

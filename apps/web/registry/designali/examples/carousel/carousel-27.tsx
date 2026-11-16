@@ -1,4 +1,6 @@
-import { PlayIcon } from "lucide-react"
+import {
+  Play as PlayIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -8,38 +10,37 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@workspace/ui/components/carousel"
-import { cn } from "@workspace/ui/lib/utils"
 
 const albums = [
   {
-    title: "Low Tide",
-    artist: "Harbor Lights",
-    tone: "from-cyan-400 to-blue-700",
+    title: "Dalim Works",
+    artist: "Showreel",
+    src: "/images/templates/dalim-works-old.jpg",
   },
   {
-    title: "Paper Moons",
-    artist: "June Avenue",
-    tone: "from-pink-300 to-purple-600",
+    title: "Dalim Visuals",
+    artist: "CGI & 3D",
+    src: "/images/templates/dalim-visuals-old.jpg",
   },
   {
-    title: "Static Bloom",
-    artist: "Velvet Era",
-    tone: "from-lime-300 to-green-700",
+    title: "Dalim Graphic",
+    artist: "Brand identity",
+    src: "/images/templates/dalim-graphic-old.jpg",
   },
   {
-    title: "Ember",
-    artist: "The Quiet Hours",
-    tone: "from-orange-300 to-red-700",
+    title: "Dalim Agency",
+    artist: "Motion design",
+    src: "/images/templates/dalim-agency-old.jpg",
   },
   {
-    title: "Northbound",
-    artist: "Atlas Choir",
-    tone: "from-slate-300 to-slate-700",
+    title: "Dalim UI",
+    artist: "UI/UX design",
+    src: "/images/templates/dalim-ui-old.jpg",
   },
   {
-    title: "Glasshouse",
-    artist: "Mira Sol",
-    tone: "from-teal-200 to-teal-600",
+    title: "Ali Imam",
+    artist: "Portfolio",
+    src: "/images/templates/aliimam-old.jpg",
   },
 ]
 
@@ -56,12 +57,12 @@ export default function AlbumCoversCarousel() {
             className="basis-1/2 ps-3 sm:basis-1/3"
           >
             <div className="group/album flex flex-col gap-1.5">
-              <div
-                className={cn(
-                  "relative aspect-square bg-gradient-to-br",
-                  album.tone
-                )}
-              >
+              <div className="relative aspect-square overflow-hidden bg-muted">
+                <img
+                  src={album.src}
+                  alt={album.title + " project"}
+                  className="absolute inset-0 size-full object-cover"
+                />
                 <Button
                   size="icon"
                   aria-label={"Play " + album.title}

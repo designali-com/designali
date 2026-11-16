@@ -26,7 +26,7 @@ export default function TabbedAnalyticsCard() {
   return (
     <Card className="w-full max-w-md">
       <CardHeader>
-        <CardDescription>This week</CardDescription>
+        <CardDescription>designali.com this week</CardDescription>
         <CardTitle className="text-xl font-semibold tabular-nums">
           {current.total}
         </CardTitle>

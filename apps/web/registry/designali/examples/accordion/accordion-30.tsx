@@ -1,7 +1,11 @@
 "use client"
 
 import * as React from "react"
-import { ChevronDownIcon, SearchIcon, SearchXIcon } from "lucide-react"
+import {
+  ChevronDown as ChevronDownIcon,
+  Search as SearchIcon,
+  SearchX as SearchXIcon,
+} from "@designali/icons"
 
 import {
   Accordion,
@@ -15,7 +19,7 @@ const articles = [
   {
     value: "reset",
     q: "How do I reset my password?",
-    a: "Choose Forgot password on the sign-in page and follow the emailed link within 30 minutes.",
+    a: "Choose Forgot password on the designali.com sign-in page and follow the emailed link within 30 minutes.",
   },
   {
     value: "2fa",
@@ -25,12 +29,12 @@ const articles = [
   {
     value: "email",
     q: "Can I change my login email?",
-    a: "Yes. Update it under Settings, Account. We send a confirmation to both addresses.",
+    a: "Yes. Update it under Settings, Account. Designali sends a confirmation to both addresses.",
   },
   {
     value: "delete",
     q: "How do I delete my account?",
-    a: "Settings, Account, Delete account. Your data is removed permanently after 30 days.",
+    a: "Settings, Account, Delete account. Your downloads and data are removed after 30 days.",
   },
 ]
 
@@ -47,7 +51,7 @@ export default function AccordionKnowledgeBaseSearch() {
         <Input
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          placeholder="Search account help"
+          placeholder="Search Designali help"
           className="ps-8"
         />
       </div>
@@ -75,7 +79,7 @@ export default function AccordionKnowledgeBaseSearch() {
             No articles match &ldquo;{query}&rdquo;
           </p>
           <p className="text-xs text-muted-foreground">
-            Try a different keyword or contact support.
+            Try a different keyword or email support@designali.com.
           </p>
         </div>
       )}

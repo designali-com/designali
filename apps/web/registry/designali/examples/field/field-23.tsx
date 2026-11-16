@@ -18,7 +18,7 @@ export default function NpsScoreField() {
   return (
     <FieldSet className="w-full max-w-md">
       <FieldLegend variant="label">
-        How likely are you to recommend Fieldnote to a friend?
+        How likely are you to recommend Designali to a friend?
       </FieldLegend>
       <ToggleGroup
         variant="outline"

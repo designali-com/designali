@@ -13,12 +13,12 @@ import {
 } from "@workspace/ui/components/field"
 
 const topics = [
-  "Engineering",
+  "Templates",
   "Design",
-  "Product",
-  "Leadership",
-  "Careers",
-  "Events",
+  "Icons",
+  "Development",
+  "Case studies",
+  "Motion",
 ]
 const LIMIT = 3
 
@@ -28,7 +28,7 @@ export default function MaxSelectionLimit() {
 
   return (
     <FieldSet className="w-full max-w-xs">
-      <FieldLegend>Newsletter topics</FieldLegend>
+      <FieldLegend>Designali newsletter topics</FieldLegend>
       <FieldDescription>
         Choose up to {LIMIT}. {LIMIT - picked.length} left.
       </FieldDescription>

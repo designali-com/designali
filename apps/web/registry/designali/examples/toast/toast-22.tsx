@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { SparklesIcon } from "lucide-react"
+import {
+  Sparkles as SparklesIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -24,7 +26,7 @@ export default function PlanUpgradeToast() {
       loading: "Upgrading your workspace...",
       success: {
         title: "Welcome to Pro",
-        description: "Unlimited projects and priority support are now on.",
+        description: "All Designali templates, blocks and priority support are now on.",
       },
       error: "Upgrade failed",
     })

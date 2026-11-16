@@ -11,11 +11,11 @@ import {
 import { cn } from "@workspace/ui/lib/utils"
 
 const quotes = [
-  "Ship small, ship often.",
-  "Clarity beats cleverness.",
-  "Make it work, then make it nice.",
-  "Defaults matter.",
-  "Leave it better than you found it.",
+  "design se code tak.",
+  "Thoughtful design, production-ready code.",
+  "Look great, feel intuitive.",
+  "Design it in Figma, ship it on Vercel.",
+  "Work beautifully.",
 ]
 
 export default function CenterFocusCarousel() {

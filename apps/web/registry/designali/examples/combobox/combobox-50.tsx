@@ -1,6 +1,8 @@
 "use client"
 
-import { LanguagesIcon } from "lucide-react"
+import {
+  Languages as LanguagesIcon,
+} from "@designali/icons"
 
 import {
   Combobox,

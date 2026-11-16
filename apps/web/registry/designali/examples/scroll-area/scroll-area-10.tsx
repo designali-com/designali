@@ -12,7 +12,7 @@ const columns = [
 ]
 const rows = Array.from({ length: 12 }, (_, i) => [
   "INV-" + (2040 + i),
-  ["Kai Moreno", "Rosa Lind", "Omar Aziz", "Lena Fox"][i % 4],
+  ["Kai", "Rosa", "Omar", "Lena"][i % 4],
   ["kai", "rosa", "omar", "lena"][i % 4] + "@example.com",
   ["Pro", "Team", "Starter"][i % 3],
   "$" + (49 + i * 12) + ".00",

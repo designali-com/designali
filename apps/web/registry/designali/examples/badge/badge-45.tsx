@@ -1,4 +1,7 @@
-import { CalendarIcon, ClockIcon } from "lucide-react"
+import {
+  Calendar as CalendarIcon,
+  Clock as ClockIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 
@@ -7,7 +10,7 @@ export default function ArticleMetaBadges() {
     <article className="flex w-full max-w-sm flex-col gap-2 border p-4">
       <div className="flex flex-wrap items-center gap-1">
         <Badge variant="link" className="px-0" render={<a href="#" />}>
-          Engineering
+          Designali blog
         </Badge>
         <span className="text-muted-foreground">·</span>
         <Badge variant="ghost">
@@ -18,10 +21,10 @@ export default function ArticleMetaBadges() {
           Feb 21
         </Badge>
       </div>
-      <h3 className="text-base font-semibold">How we cut cold starts by 60%</h3>
+      <h3 className="text-base font-semibold">How I ship Designali blocks from Figma to code</h3>
       <p className="text-sm text-muted-foreground">
-        Lazy module loading, smarter bundling, and a few surprises from
-        profiling production traffic.
+        Design tokens, Tailwind CSS, and a few tricks for turning Figma
+        frames into production-ready Next.js components.
       </p>
     </article>
   )

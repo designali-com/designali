@@ -1,7 +1,11 @@
 "use client"
 
 import * as React from "react"
-import { CircleHelpIcon, MessagesSquareIcon, SearchIcon } from "lucide-react"
+import {
+  CircleQuestionMark as CircleHelpIcon,
+  MessagesSquare as MessagesSquareIcon,
+  Search as SearchIcon,
+} from "@designali/icons"
 
 import {
   Accordion,
@@ -39,8 +43,8 @@ const faqs = [
     a: "Invoices live under Billing → History and can be downloaded as PDF.",
   },
   {
-    q: "How do I export my data?",
-    a: "Use Workspace → Export to download a ZIP with all projects in CSV and JSON.",
+    q: "How do I install Designali icons?",
+    a: "Follow the install guide in /docs, then import icons from @designali/icons.",
   },
 ]
 
@@ -90,7 +94,7 @@ export default function HelpCenterDrawer() {
         </div>
         <DrawerFooter className="border-t pt-4">
           <p className="text-muted-foreground">
-            Still stuck? Our team replies within an hour.
+            Still stuck? Email support@designali.com.
           </p>
           <Button>
             <MessagesSquareIcon data-icon="inline-start" />

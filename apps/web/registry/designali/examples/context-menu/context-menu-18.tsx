@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { CircleIcon } from "lucide-react"
+import {
+  Circle as CircleIcon,
+} from "@designali/icons"
 
 import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
 import { Badge } from "@workspace/ui/components/badge"
@@ -15,9 +17,9 @@ import {
 } from "@workspace/ui/components/context-menu"
 
 const tasks = [
-  { title: "Prepare investor update", owner: "MC", due: "Nov 18", points: 3 },
-  { title: "Audit cookie banner copy", owner: "JR", due: "Nov 20", points: 1 },
-  { title: "Migrate billing webhooks", owner: "PN", due: "Nov 24", points: 5 },
+  { title: "Design new pricing blocks", owner: "AI", due: "Nov 18", points: 3 },
+  { title: "Export icon set to @designali/icons", owner: "AI", due: "Nov 20", points: 1 },
+  { title: "Ship Next.js landing template", owner: "AI", due: "Nov 24", points: 5 },
 ]
 
 export default function ListDisplayOptions() {

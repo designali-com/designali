@@ -1,9 +1,19 @@
 "use client"
 
 import { useState } from "react"
-import { ChevronDown, Heart, Menu, Phone, Search, ShoppingBag, Truck, User, X } from "lucide-react"
+import {
+  ChevronDown,
+  Heart,
+  Mail,
+  Menu,
+  Search,
+  ShoppingBag,
+  Download,
+  User,
+  X,
+} from "@designali/icons"
 
-const categories = ["New in", "Women", "Men", "Home", "Outdoor", "Sale"]
+const categories = ["New in", "Templates", "Blocks", "Icons", "Logos", "Sale"]
 
 export default function Header14() {
   const [open, setOpen] = useState(false)
@@ -14,16 +24,16 @@ export default function Header14() {
       <div className="bg-muted text-xs text-muted-foreground">
         <div className="mx-auto flex h-9 max-w-7xl items-center justify-between gap-4 px-6">
           <p className="flex items-center gap-2 truncate">
-            <Truck className="size-3.5 shrink-0" />
-            Free shipping on orders over $75. Returns within 60 days.
+            <Download className="size-3.5 shrink-0" />
+            Instant download on every Designali template and block.
           </p>
           <div className="hidden items-center gap-5 md:flex">
             <a href="#" className="flex items-center gap-1.5 hover:text-foreground">
-              <Phone className="size-3.5" />
-              1-800-555-0142
+              <Mail className="size-3.5" />
+              hello@designali.com
             </a>
             <a href="#" className="hover:text-foreground">
-              Store locator
+              Contact
             </a>
             <button type="button" className="flex items-center gap-1 hover:text-foreground">
               USD
@@ -44,7 +54,7 @@ export default function Header14() {
             <Menu className="size-5" />
           </button>
           <a href="#" className="font-serif text-2xl tracking-tight">
-            Fieldhouse
+            designali
           </a>
           <nav className="ms-8 hidden gap-6 text-sm lg:flex">
             {categories.map((category) => (
@@ -65,7 +75,7 @@ export default function Header14() {
             <label className="hidden h-9 w-56 items-center gap-2 border px-3 text-sm md:flex">
               <Search className="size-4 text-muted-foreground" />
               <input
-                placeholder="Search products"
+                placeholder="Search templates"
                 className="w-full min-w-0 bg-transparent outline-none placeholder:text-muted-foreground"
               />
             </label>
@@ -98,7 +108,7 @@ export default function Header14() {
           />
           <div className="relative flex h-full w-[85%] max-w-sm flex-col bg-background">
             <div className="flex h-16 items-center justify-between border-b px-6">
-              <span className="font-serif text-xl">Fieldhouse</span>
+              <span className="font-serif text-xl">designali</span>
               <button type="button" aria-label="Close menu" onClick={() => setOpen(false)}>
                 <X className="size-5" />
               </button>
@@ -126,7 +136,7 @@ export default function Header14() {
                 <Heart className="size-4" /> Wishlist
               </a>
               <a href="#" className="flex items-center gap-3">
-                <Phone className="size-4" /> 1-800-555-0142
+                <Mail className="size-4" /> hello@designali.com
               </a>
             </div>
           </div>

@@ -1,4 +1,9 @@
-import { CopyIcon, EyeIcon, HistoryIcon, RotateCcwIcon } from "lucide-react"
+import {
+  Copy as CopyIcon,
+  Eye as EyeIcon,
+  History as HistoryIcon,
+  RotateCcw as RotateCcwIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -17,14 +22,14 @@ const versions = [
   { id: "v12", label: "Current version", who: "You", when: "Just now" },
   {
     id: "v11",
-    label: "Added pricing table",
-    who: "Ines Duarte",
+    label: "Added pricing blocks",
+    who: "Ali Imam",
     when: "Today, 09:12",
   },
   {
     id: "v10",
     label: "Reworked intro",
-    who: "Caleb Ford",
+    who: "Studio Designer",
     when: "Yesterday, 17:40",
   },
 ]

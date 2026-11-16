@@ -1,4 +1,6 @@
-import { CornerDownLeftIcon } from "lucide-react"
+import {
+  CornerDownLeft as CornerDownLeftIcon,
+} from "@designali/icons"
 
 import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
 import { Button } from "@workspace/ui/components/button"
@@ -9,15 +11,15 @@ export default function ThreadReplyTextarea() {
     <div className="flex w-full max-w-sm flex-col gap-3 border p-3">
       <div className="flex gap-2">
         <Avatar size="sm">
-          <AvatarFallback>RV</AvatarFallback>
+          <AvatarFallback>AI</AvatarFallback>
         </Avatar>
         <div className="text-xs">
           <p>
-            <span className="font-medium">Rosa Vidal</span>{" "}
+            <span className="font-medium">Ali Imam</span>{" "}
             <span className="text-muted-foreground">· 2h</span>
           </p>
           <p className="text-muted-foreground">
-            Should we push the launch to Monday so support is fully staffed?
+            Should we push the new Designali blocks launch to Monday?
           </p>
         </div>
       </div>

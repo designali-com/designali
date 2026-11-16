@@ -1,4 +1,6 @@
-import { ExternalLinkIcon } from "lucide-react"
+import {
+  ExternalLink as ExternalLinkIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 

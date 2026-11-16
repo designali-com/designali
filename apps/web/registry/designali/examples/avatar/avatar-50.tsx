@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { UserPlusIcon } from "lucide-react"
+import {
+  UserPlus as UserPlusIcon,
+} from "@designali/icons"
 
 import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
 
@@ -11,7 +13,7 @@ export default function UnassignedAssigneeSlot() {
   return (
     <div className="flex w-full max-w-xs items-center justify-between border p-3">
       <div>
-        <p className="text-sm font-medium">Fix flaky checkout test</p>
+        <p className="text-sm font-medium">Fix flaky Designali checkout test</p>
         <p className="text-xs text-muted-foreground">
           {assigned ? "Assigned to you" : "No assignee"}
         </p>

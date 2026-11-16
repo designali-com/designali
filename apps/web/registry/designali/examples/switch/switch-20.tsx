@@ -1,4 +1,8 @@
-import { BellOffIcon, CheckCheckIcon, PinIcon } from "lucide-react"
+import {
+  BellOff as BellOffIcon,
+  CheckCheck as CheckCheckIcon,
+  Pin as PinIcon,
+} from "@designali/icons"
 
 import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
 import { Switch } from "@workspace/ui/components/switch"
@@ -19,10 +23,10 @@ export default function ChatConversationOptions() {
     <div className="w-full max-w-xs border">
       <div className="flex items-center gap-3 border-b p-4">
         <Avatar>
-          <AvatarFallback>DS</AvatarFallback>
+          <AvatarFallback>DA</AvatarFallback>
         </Avatar>
         <div>
-          <p className="text-sm font-medium">Design Squad</p>
+          <p className="text-sm font-medium">Designali Studio</p>
           <p className="text-xs text-muted-foreground">8 members</p>
         </div>
       </div>

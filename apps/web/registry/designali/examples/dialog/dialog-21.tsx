@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { TimerIcon } from "lucide-react"
+import {
+  Timer as TimerIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -45,7 +47,7 @@ export default function SessionTimeoutDialog() {
         <DialogHeader>
           <DialogTitle>Are you still there?</DialogTitle>
           <DialogDescription>
-            For your security, you&apos;ll be signed out of Ledgerly soon.
+            For your security, you&apos;ll be signed out of Designali soon.
           </DialogDescription>
         </DialogHeader>
         <div className="flex flex-col items-center gap-1 border bg-muted/50 py-4">

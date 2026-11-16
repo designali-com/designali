@@ -1,7 +1,12 @@
 "use client"
 
 import { useState } from "react"
-import { Bug, CreditCard, Lightbulb, UserCog } from "lucide-react"
+import {
+  Bug,
+  CreditCard,
+  Lightbulb,
+  UserCog,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Input } from "@workspace/ui/components/input"
@@ -10,10 +15,10 @@ import { Textarea } from "@workspace/ui/components/textarea"
 import { cn } from "@workspace/ui/lib/utils"
 
 const categories = [
-  { id: "bug", icon: Bug, title: "Something is broken", hint: "Errors, crashes, data issues" },
-  { id: "billing", icon: CreditCard, title: "Billing", hint: "Invoices, plans, refunds" },
-  { id: "account", icon: UserCog, title: "Account access", hint: "SSO, seats, permissions" },
-  { id: "idea", icon: Lightbulb, title: "Feature request", hint: "Tell us what is missing" },
+  { id: "bug", icon: Bug, title: "Something is broken", hint: "Blocks, templates or downloads" },
+  { id: "billing", icon: CreditCard, title: "Billing", hint: "Invoices, plans, licences" },
+  { id: "account", icon: UserCog, title: "Account access", hint: "Login, email, team seats" },
+  { id: "idea", icon: Lightbulb, title: "Feature request", hint: "Request a new block or icon" },
 ]
 
 const priorities = [
@@ -31,7 +36,7 @@ export default function Forms14() {
     <section className="w-full bg-muted/40 py-20">
       <div className="mx-auto max-w-3xl px-6">
         <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
-          <h2 className="text-3xl font-semibold tracking-tight">Open a support ticket</h2>
+          <h2 className="text-3xl font-semibold tracking-tight">Open a Designali support ticket</h2>
           <p className="text-xs text-muted-foreground">
             Median first response: <span className="text-foreground">2h 14m</span>
           </p>
@@ -87,7 +92,7 @@ export default function Forms14() {
 
           <div className="space-y-2">
             <Label htmlFor="f14-subject">Subject</Label>
-            <Input id="f14-subject" placeholder="CSV export times out for reports over 50k rows" className="h-10" />
+            <Input id="f14-subject" placeholder="Download link for the portfolio template is not working" className="h-10" />
           </div>
           <div className="space-y-2">
             <Label htmlFor="f14-details">Details</Label>
@@ -100,7 +105,7 @@ export default function Forms14() {
 
           <div className="flex flex-col gap-4 border-t border-border pt-6 sm:flex-row sm:items-center sm:justify-between">
             <p className="text-xs text-muted-foreground">
-              Workspace <span className="font-mono text-foreground">acme-prod</span> will be attached automatically.
+              Workspace <span className="font-mono text-foreground">designali-pro</span> will be attached automatically.
             </p>
             <Button type="submit" size="lg">Submit ticket</Button>
           </div>

@@ -1,4 +1,6 @@
-import { BellIcon } from "lucide-react"
+import {
+  Bell as BellIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -28,7 +30,7 @@ export default function NotificationBellTooltip() {
           </span>
         </TooltipTrigger>
         <TooltipContent side="bottom" align="end">
-          5 unread: 3 mentions, 2 approvals
+          5 unread: 3 client mentions, 2 design approvals
         </TooltipContent>
       </Tooltip>
     </div>

@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { Trash2Icon } from "lucide-react"
+import {
+  Trash2 as Trash2Icon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -17,7 +19,7 @@ import {
 import { Field, FieldLabel } from "@workspace/ui/components/field"
 import { Input } from "@workspace/ui/components/input"
 
-const projectName = "atlas-marketing-site"
+const projectName = "designali-website"
 
 export default function TypeToConfirmDeleteDialog() {
   const [value, setValue] = React.useState("")

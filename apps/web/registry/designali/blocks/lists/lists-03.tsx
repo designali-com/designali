@@ -6,12 +6,12 @@ import { Checkbox } from "@workspace/ui/components/checkbox"
 import { cn } from "@workspace/ui/lib/utils"
 
 const initialTasks = [
-  { id: 1, title: "Finalise homepage hero copy", owner: "AK", due: "Today", done: true },
-  { id: 2, title: "Review pricing page with legal", owner: "JM", due: "Today", done: false },
-  { id: 3, title: "Export icon set at 1.5px stroke", owner: "SL", due: "Tomorrow", done: false },
-  { id: 4, title: "QA dark mode on dashboard", owner: "AK", due: "Wed", done: false },
-  { id: 5, title: "Write release notes for v4.2", owner: "RP", due: "Thu", done: false },
-  { id: 6, title: "Schedule launch newsletter", owner: "JM", due: "Fri", done: true },
+  { id: 1, title: "Finalise designali.com hero copy", owner: "AI", due: "Today", done: true },
+  { id: 2, title: "Review Designali Pro pricing page", owner: "SR", due: "Today", done: false },
+  { id: 3, title: "Export @designali/icons at 1.5px stroke", owner: "MK", due: "Tomorrow", done: false },
+  { id: 4, title: "QA dark mode on dashboard blocks", owner: "AI", due: "Wed", done: false },
+  { id: 5, title: "Write release notes for new templates", owner: "NJ", due: "Thu", done: false },
+  { id: 6, title: "Schedule Designali launch newsletter", owner: "SR", due: "Fri", done: true },
 ]
 
 export default function Lists03() {
@@ -29,7 +29,7 @@ export default function Lists03() {
         <div className="border border-border bg-background">
           <header className="border-b border-border p-6">
             <div className="flex items-center justify-between">
-              <h2 className="text-xl font-semibold tracking-tight">Launch week</h2>
+              <h2 className="text-xl font-semibold tracking-tight">Designali launch week</h2>
               <span className="font-mono text-xs text-muted-foreground">
                 {completed}/{tasks.length}
               </span>

@@ -11,14 +11,14 @@ export default function InputStatesShowcase() {
     <FieldGroup className="w-full max-w-sm">
       <Field>
         <FieldLabel htmlFor="state-default">Default</FieldLabel>
-        <Input id="state-default" placeholder="Project name" />
+        <Input id="state-default" placeholder="Designali project name" />
       </Field>
       <Field>
         <FieldLabel htmlFor="state-readonly">Read-only</FieldLabel>
         <Input
           id="state-readonly"
           readOnly
-          defaultValue="proj_8f2k19"
+          defaultValue="designali_8f2k19"
           className="bg-muted/50 font-mono"
         />
       </Field>

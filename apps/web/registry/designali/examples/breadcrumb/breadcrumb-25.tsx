@@ -1,4 +1,6 @@
-import { UsersIcon } from "lucide-react"
+import {
+  Users as UsersIcon,
+} from "@designali/icons"
 
 import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
 import {

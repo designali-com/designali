@@ -20,10 +20,10 @@ export default function DesktopWindowMenubar() {
         </div>
         <Menubar className="h-7 border-0 bg-transparent p-0">
           <MenubarMenu>
-            <MenubarTrigger className="font-semibold">Ledger</MenubarTrigger>
+            <MenubarTrigger className="font-semibold">Designali</MenubarTrigger>
             <MenubarContent>
               <MenubarGroup>
-                <MenubarItem>About Ledger</MenubarItem>
+                <MenubarItem>About Designali</MenubarItem>
                 <MenubarItem>
                   Settings... <MenubarShortcut>⌘,</MenubarShortcut>
                 </MenubarItem>
@@ -31,7 +31,7 @@ export default function DesktopWindowMenubar() {
               <MenubarSeparator />
               <MenubarGroup>
                 <MenubarItem>
-                  Quit Ledger <MenubarShortcut>⌘Q</MenubarShortcut>
+                  Quit Designali <MenubarShortcut>⌘Q</MenubarShortcut>
                 </MenubarItem>
               </MenubarGroup>
             </MenubarContent>

@@ -1,18 +1,18 @@
 const stats = [
-  { value: "48%", label: "Faster design-to-dev handoff" },
-  { value: "2.1M", label: "Components rendered daily" },
-  { value: "99.98%", label: "Registry uptime last 12 months" },
+  { value: "48%", label: "Faster design-to-code handoff" },
+  { value: "2.1M", label: "Designali blocks rendered daily" },
+  { value: "99.98%", label: "designali.com uptime last 12 months" },
 ]
 
 const logos = [
-  { name: "Halcyon", mark: "ring" },
-  { name: "Brightline", mark: "bars" },
-  { name: "Kestrel", mark: "chevron" },
-  { name: "Oakmont", mark: "leaf" },
-  { name: "Parallax", mark: "slash" },
-  { name: "Nimbus", mark: "cloud" },
-  { name: "Ferro", mark: "hex" },
-  { name: "Vantage", mark: "peak" },
+  { name: "Designali", mark: "ring" },
+  { name: "Dalim", mark: "bars" },
+  { name: "Dalim UI", mark: "chevron" },
+  { name: "Dalim Fonts", mark: "leaf" },
+  { name: "Dalim Icons", mark: "slash" },
+  { name: "Dalim Works", mark: "cloud" },
+  { name: "Dalim Tools", mark: "hex" },
+  { name: "Dalim Visuals", mark: "peak" },
 ] as const
 
 function Mark({ type }: { type: (typeof logos)[number]["mark"] }) {
@@ -55,7 +55,7 @@ export default function Clients12() {
               Customers
             </p>
             <h2 className="mt-4 text-3xl font-semibold tracking-tight md:text-4xl">
-              Numbers our customers report after their first quarter.
+              Numbers Designali customers report after their first quarter.
             </h2>
           </div>
           <dl className="grid grid-cols-1 border-t border-border sm:grid-cols-3 sm:border-t-0">

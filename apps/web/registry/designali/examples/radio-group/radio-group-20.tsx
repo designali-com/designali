@@ -2,11 +2,11 @@
 
 import * as React from "react"
 import {
-  DownloadIcon,
-  FileJsonIcon,
-  FileSpreadsheetIcon,
-  FileTextIcon,
-} from "lucide-react"
+  Download as DownloadIcon,
+  FileBraces as FileJsonIcon,
+  FileSpreadsheet as FileSpreadsheetIcon,
+  FileText as FileTextIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {

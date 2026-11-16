@@ -1,24 +1,27 @@
 import {
   Cpu,
-  Fingerprint,
+  FingerprintPattern as Fingerprint,
   HardDrive,
-  type LucideIcon,
   Network,
   RefreshCw,
   ScanEye,
   ShieldCheck,
   Timer,
-} from "lucide-react"
+} from "@designali/icons"
 
-const features: { icon: LucideIcon; title: string; text: string }[] = [
-  { icon: ShieldCheck, title: "SOC 2 Type II", text: "Audited annually by an independent firm. Report available under NDA." },
-  { icon: Fingerprint, title: "SSO & SCIM", text: "SAML with Okta, Entra and Google. Users provision and deprovision automatically." },
-  { icon: HardDrive, title: "Data residency", text: "Pin workspaces to EU, US or APAC regions. Data never leaves its region." },
-  { icon: ScanEye, title: "Audit logs", text: "Every permission change and export, streamed to your SIEM in real time." },
-  { icon: Network, title: "Private networking", text: "Connect over private link. No traffic crosses the public internet." },
-  { icon: RefreshCw, title: "Point-in-time restore", text: "Roll any project back to any minute in the last 35 days." },
-  { icon: Cpu, title: "Dedicated compute", text: "Isolated build runners sized to your workloads, billed per minute." },
-  { icon: Timer, title: "99.99% uptime SLA", text: "Financially backed, with a status page and 15-minute incident response." },
+import type * as React from "react"
+
+type IconComponent = React.ComponentType<React.SVGProps<SVGSVGElement> & { size?: number | string; strokeWidth?: number }>
+
+const features: { icon: IconComponent; title: string; text: string }[] = [
+  { icon: ShieldCheck, title: "Accessible by default", text: "Every Designali block is checked for keyboard, focus and contrast before release." },
+  { icon: Fingerprint, title: "Unique brand identity", text: "Logos, type and colour systems that make your product instantly recognisable." },
+  { icon: HardDrive, title: "Own your code", text: "Copy blocks straight into your repo. No lock-in, no runtime dependency." },
+  { icon: ScanEye, title: "Pixel-perfect review", text: "Ali Imam reviews every screen in light and dark mode before it ships." },
+  { icon: Network, title: "Modern stack", text: "Next.js, React, TypeScript and Tailwind CSS, deployed on Vercel." },
+  { icon: RefreshCw, title: "Regular updates", text: "New blocks, templates and icons land on designali.com every month." },
+  { icon: Cpu, title: "Built for performance", text: "Lightweight components optimised for Core Web Vitals." },
+  { icon: Timer, title: "Direct support", text: "Questions go straight to the studio at support@designali.com." },
 ]
 
 export default function Grid13() {
@@ -27,16 +30,16 @@ export default function Grid13() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="grid gap-8 border-b border-background/15 pb-12 lg:grid-cols-[1fr_auto] lg:items-end">
           <div>
-            <p className="font-mono text-xs text-background/60">Northwind for Enterprise</p>
+            <p className="font-mono text-xs text-background/60">Designali for Teams</p>
             <h2 className="mt-3 max-w-2xl text-4xl font-semibold tracking-tight md:text-5xl">
-              Security your procurement team will actually sign off on.
+              Quality your whole team will actually sign off on.
             </h2>
           </div>
           <a
-            href="#"
+            href="/docs"
             className="inline-flex h-11 items-center justify-center bg-background px-6 text-sm font-medium text-foreground transition-opacity hover:opacity-90"
           >
-            Download security whitepaper
+            Read the Designali docs
           </a>
         </div>
 

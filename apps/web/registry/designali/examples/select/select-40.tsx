@@ -1,6 +1,10 @@
 "use client"
 
-import { GlobeIcon, LockIcon, UsersIcon } from "lucide-react"
+import {
+  Globe as GlobeIcon,
+  Lock as LockIcon,
+  Users as UsersIcon,
+} from "@designali/icons"
 
 import {
   Select,
@@ -21,7 +25,7 @@ const levels = [
     label: "Team",
     value: "team",
     icon: UsersIcon,
-    hint: "Everyone in Lumen Labs",
+    hint: "Everyone at Designali",
   },
   {
     label: "Public link",
@@ -35,7 +39,7 @@ export default function VisibilitySelect() {
   return (
     <div className="flex w-full max-w-sm items-center justify-between gap-3 border p-3">
       <div className="flex min-w-0 flex-col">
-        <span className="truncate text-sm font-medium">Launch plan v2</span>
+        <span className="truncate text-sm font-medium">designali.com launch plan v2</span>
         <span className="text-xs text-muted-foreground">
           Edited 5 minutes ago
         </span>

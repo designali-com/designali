@@ -10,17 +10,17 @@ import {
 } from "@workspace/ui/components/combobox"
 
 const frameworks = [
-  "Next.js",
-  "SvelteKit",
-  "Nuxt.js",
-  "Remix",
-  "Astro",
+  "Templates",
+  "Blocks",
+  "UI Designs",
+  "Icons",
+  "Logos",
 ] as const
 
 export function ComboboxInvalid() {
   return (
     <Combobox items={frameworks}>
-      <ComboboxInput placeholder="Select a framework" aria-invalid="true" />
+      <ComboboxInput placeholder="Select a Designali product" aria-invalid="true" />
       <ComboboxContent>
         <ComboboxEmpty>No items found.</ComboboxEmpty>
         <ComboboxList>

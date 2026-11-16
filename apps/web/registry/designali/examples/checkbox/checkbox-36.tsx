@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { RocketIcon } from "lucide-react"
+import {
+  Rocket as RocketIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Checkbox } from "@workspace/ui/components/checkbox"
@@ -24,7 +26,7 @@ const steps = [
   {
     id: "oncall",
     label: "On-call engineer notified",
-    hint: "Priya is on call",
+    hint: "Ali is on call",
   },
 ]
 
@@ -64,7 +66,7 @@ export default function DeployChecklistGate() {
       <Button disabled={!ready}>
         <RocketIcon data-icon="inline-start" />
         {ready
-          ? "Deploy to production"
+          ? "Deploy designali.com"
           : done.length + "/" + steps.length + " checks complete"}
       </Button>
     </div>

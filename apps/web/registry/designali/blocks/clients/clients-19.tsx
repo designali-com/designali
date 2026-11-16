@@ -1,27 +1,30 @@
 "use client"
 
 import { useState } from "react"
-import { ArrowLeft, ArrowRight } from "lucide-react"
+import {
+  ArrowLeft,
+  ArrowRight,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { cn } from "@workspace/ui/lib/utils"
 
 const stories = [
   {
-    company: "Vantage Travel",
-    tagline: "Booking flows rebuilt for mobile",
+    company: "Resort Website",
+    tagline: "Booking pages rebuilt for mobile",
     gradient: "from-sky-500 via-indigo-500 to-violet-600",
     stats: [
-      { value: "+18%", label: "Mobile conversion" },
+      { value: "+18%", label: "Mobile enquiries" },
       { value: "5 wks", label: "Time to launch" },
     ],
     quote:
-      "We expected a redesign. We got a system our engineers actually enjoy extending.",
-    person: "Priya Raman",
-    role: "VP Product",
+      "We expected a redesign. Designali gave us a brand and a site our team actually enjoys extending.",
+    person: "Lena",
+    role: "Marketing Lead, Designali client",
   },
   {
-    company: "Oakmont Health",
+    company: "Design Agency Site",
     tagline: "One accessible system across 3 platforms",
     gradient: "from-emerald-500 via-teal-500 to-cyan-600",
     stats: [
@@ -29,22 +32,22 @@ const stories = [
       { value: "3x", label: "Release frequency" },
     ],
     quote:
-      "Accessibility stopped being an audit finding and became the default state of every screen.",
-    person: "Rhea Banerjee",
-    role: "Director of Digital",
+      "Accessibility stopped being an audit finding and became the default state of every Designali block we use.",
+    person: "Rohan",
+    role: "Creative Director, Designali client",
   },
   {
-    company: "Ledgerly",
-    tagline: "Finance dashboards at startup speed",
+    company: "AI Product Launch",
+    tagline: "Product dashboards at startup speed",
     gradient: "from-amber-500 via-orange-500 to-rose-500",
     stats: [
       { value: "-54%", label: "UI code per feature" },
       { value: "2 days", label: "Onboarding for new devs" },
     ],
     quote:
-      "New engineers ship a production screen in their first week. That used to take a month.",
-    person: "Marcus Hale",
-    role: "CTO",
+      "Ali designed it in Figma and shipped it in Next.js. New engineers built a production screen in their first week.",
+    person: "Daniel",
+    role: "CTO, Designali client",
   },
 ]
 

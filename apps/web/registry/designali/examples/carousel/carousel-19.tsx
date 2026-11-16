@@ -14,25 +14,25 @@ const days = [
   {
     day: "Mon",
     sessions: [
-      ["09:00", "Opening keynote"],
-      ["11:00", "Designing for trust"],
-      ["14:00", "Scaling small teams"],
+      ["09:00", "Brand identity kickoff"],
+      ["11:00", "Moodboard review"],
+      ["14:00", "Logo concepts"],
     ],
   },
   {
     day: "Tue",
     sessions: [
-      ["09:30", "State of the web"],
-      ["13:00", "Accessible motion"],
-      ["16:00", "Lightning talks"],
+      ["09:30", "UI/UX wireframes in Figma"],
+      ["13:00", "Design system tokens"],
+      ["16:00", "Client feedback call"],
     ],
   },
   {
     day: "Wed",
     sessions: [
-      ["10:00", "Data at the edge"],
-      ["12:30", "Roundtable lunch"],
-      ["15:00", "Closing panel"],
+      ["10:00", "Next.js build"],
+      ["12:30", "Motion and CGI pass"],
+      ["15:00", "Deploy to Vercel"],
     ],
   },
 ]

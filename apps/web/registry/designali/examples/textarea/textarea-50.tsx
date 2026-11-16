@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { FileDiffIcon } from "lucide-react"
+import {
+  FileDiff as FileDiffIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Textarea } from "@workspace/ui/components/textarea"

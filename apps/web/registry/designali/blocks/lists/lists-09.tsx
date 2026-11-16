@@ -40,10 +40,10 @@ export default function Lists09() {
         <div className="lg:sticky lg:top-24 lg:self-start">
           <div className="aspect-[3/4] max-w-[260px] bg-gradient-to-br from-stone-900 to-stone-700 p-6 text-stone-100 shadow-2xl dark:from-stone-200 dark:to-stone-400 dark:text-stone-900">
             <div className="flex h-full flex-col justify-between border border-current/30 p-4">
-              <p className="font-mono text-[10px] tracking-widest uppercase opacity-70">Second edition</p>
+              <p className="font-mono text-[10px] tracking-widest uppercase opacity-70">A Designali guide</p>
               <div>
-                <p className="text-3xl leading-tight font-semibold tracking-tight">The Quiet System</p>
-                <p className="mt-2 text-xs opacity-70">Mira Castell</p>
+                <p className="text-3xl leading-tight font-semibold tracking-tight">Design se code tak</p>
+                <p className="mt-2 text-xs opacity-70">Ali Imam</p>
               </div>
             </div>
           </div>

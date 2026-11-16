@@ -2,10 +2,10 @@ import { Separator } from "@workspace/ui/components/separator"
 import { cn } from "@workspace/ui/lib/utils"
 
 const events = [
-  { title: "Order placed", time: "Mar 2, 09:14", done: true },
-  { title: "Payment confirmed", time: "Mar 2, 09:15", done: true },
-  { title: "Shipped from Rotterdam", time: "Mar 3, 16:40", done: true },
-  { title: "Out for delivery", time: "Expected Mar 5", done: false },
+  { title: "Project brief received", time: "Mar 2, 09:14", done: true },
+  { title: "Kickoff call with Ali", time: "Mar 2, 09:15", done: true },
+  { title: "Figma designs delivered", time: "Mar 3, 16:40", done: true },
+  { title: "Next.js build in review", time: "Launch Mar 5", done: false },
 ]
 
 export default function VerticalTimeline() {

@@ -2,12 +2,12 @@
 
 import * as React from "react"
 import {
-  ArchiveIcon,
-  FolderInputIcon,
-  MailIcon,
-  MailOpenIcon,
-  TrashIcon,
-} from "lucide-react"
+  Archive as ArchiveIcon,
+  FolderInput as FolderInputIcon,
+  Mail as MailIcon,
+  MailOpen as MailOpenIcon,
+  Trash as TrashIcon,
+} from "@designali/icons"
 
 import {
   ContextMenu,
@@ -26,17 +26,17 @@ import { cn } from "@workspace/ui/lib/utils"
 const initial = [
   {
     id: 1,
-    from: "Ava Thompson",
-    subject: "Contract redlines for review",
+    from: "Ali Imam",
+    subject: "Brand identity concepts for review",
     read: false,
   },
   {
     id: 2,
     from: "Billing",
-    subject: "Your November invoice is ready",
+    subject: "Your Designali Pro invoice is ready",
     read: true,
   },
-  { id: 3, from: "Kai Okafor", subject: "Offsite agenda draft", read: false },
+  { id: 3, from: "Designali Studio", subject: "New templates are live", read: false },
 ]
 
 export default function InboxRowMenu() {

@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { PencilIcon } from "lucide-react"
+import {
+  Pencil as PencilIcon,
+} from "@designali/icons"
 
 import { Input } from "@workspace/ui/components/input"
 import {
@@ -14,9 +16,9 @@ import {
 } from "@workspace/ui/components/table"
 
 const initialProducts = [
-  { sku: "TS-001", name: "Classic tee", price: 24 },
-  { sku: "HD-014", name: "Zip hoodie", price: 58 },
-  { sku: "CP-207", name: "Canvas cap", price: 19 },
+  { sku: "TPL-001", name: "Portfolio template", price: 49 },
+  { sku: "BLK-014", name: "Blocks Pro bundle", price: 99 },
+  { sku: "ICN-207", name: "Icons Pro license", price: 29 },
 ]
 
 export default function InlineEditableTable() {

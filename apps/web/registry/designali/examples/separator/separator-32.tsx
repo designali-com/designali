@@ -1,5 +1,8 @@
 import * as React from "react"
-import { FileIcon, Share2Icon } from "lucide-react"
+import {
+  File as FileIcon,
+  Share2 as Share2Icon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Separator } from "@workspace/ui/components/separator"
@@ -8,7 +11,7 @@ const meta = [
   { label: "Type", value: "Figma file" },
   { label: "Size", value: "12.4 MB" },
   { label: "Modified", value: "Yesterday, 18:02" },
-  { label: "Owner", value: "Ada Kowalski" },
+  { label: "Owner", value: "Ali Imam" },
 ]
 
 export default function FileDetailsPanel() {
@@ -18,7 +21,7 @@ export default function FileDetailsPanel() {
         <FileIcon className="size-8 text-muted-foreground" />
       </div>
       <span className="truncate text-sm font-medium">
-        Onboarding flow v4.fig
+        designali-blocks-v4.fig
       </span>
       <Separator />
       <dl className="grid grid-cols-2 gap-y-1.5 text-xs">

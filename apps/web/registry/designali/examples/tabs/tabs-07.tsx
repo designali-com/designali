@@ -1,4 +1,8 @@
-import { KanbanIcon, LayoutGridIcon, ListIcon } from "lucide-react"
+import {
+  Kanban as KanbanIcon,
+  LayoutGrid as LayoutGridIcon,
+  List as ListIcon,
+} from "@designali/icons"
 
 import {
   Tabs,
@@ -7,7 +11,7 @@ import {
   TabsTrigger,
 } from "@workspace/ui/components/tabs"
 
-const projects = ["Atlas", "Beacon", "Cinder", "Drift"]
+const projects = ["Templates", "Blocks", "Icons", "Logos"]
 
 export default function IconOnlyViewSwitcher() {
   return (

@@ -1,7 +1,9 @@
 "use client"
 
 import { useState } from "react"
-import { Lock } from "lucide-react"
+import {
+  Lock,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { cn } from "@workspace/ui/lib/utils"

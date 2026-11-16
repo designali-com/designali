@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { ArchiveIcon, Trash2Icon } from "lucide-react"
+import {
+  Archive as ArchiveIcon,
+  Trash2 as Trash2Icon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Checkbox } from "@workspace/ui/components/checkbox"
@@ -15,10 +18,10 @@ import {
 } from "@workspace/ui/components/table"
 
 const initialTickets = [
-  { id: "T-1201", subject: "Can't reset password", priority: "High" },
+  { id: "T-1201", subject: "Can't download Pro template", priority: "High" },
   { id: "T-1202", subject: "Invoice shows wrong VAT", priority: "Medium" },
-  { id: "T-1203", subject: "Feature request: dark mode", priority: "Low" },
-  { id: "T-1204", subject: "Export stuck at 90%", priority: "High" },
+  { id: "T-1203", subject: "Feature request: more 3D icons", priority: "Low" },
+  { id: "T-1204", subject: "SVG icon export stuck at 90%", priority: "High" },
 ]
 
 export default function BulkActionsTable() {

@@ -4,10 +4,10 @@ import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
 import { Separator } from "@workspace/ui/components/separator"
 
 const members = [
-  { name: "Ruth Achebe", role: "Engineering lead", initials: "RA" },
-  { name: "Mateo Silva", role: "Product designer", initials: "MS" },
-  { name: "Yuna Park", role: "Data analyst", initials: "YP" },
-  { name: "Felix Brandt", role: "Support", initials: "FB" },
+  { name: "Ali Imam", role: "Founder & design engineer", initials: "AI" },
+  { name: "Mateo", role: "Product designer", initials: "M" },
+  { name: "Yuna", role: "Frontend developer", initials: "Y" },
+  { name: "Felix", role: "3D & motion artist", initials: "F" },
 ]
 
 export default function TeamMembersInsetSeparators() {

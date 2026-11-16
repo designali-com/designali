@@ -8,9 +8,9 @@ import {
 import { cn } from "@workspace/ui/lib/utils"
 
 const milestones = [
-  { at: 25, label: "$5k: Prototype funded" },
-  { at: 60, label: "$12k: First production run" },
-  { at: 100, label: "$20k: Retail packaging" },
+  { at: 25, label: "25%: Figma designs" },
+  { at: 60, label: "60%: Next.js build" },
+  { at: 100, label: "100%: Launch on Vercel" },
 ]
 
 export default function ProgressMilestoneTooltip() {
@@ -18,8 +18,8 @@ export default function ProgressMilestoneTooltip() {
     <TooltipProvider>
       <div className="flex w-full max-w-sm flex-col gap-3">
         <div className="flex justify-between text-sm">
-          <span className="font-medium">$13,420 raised</span>
-          <span className="text-muted-foreground">of $20,000</span>
+          <span className="font-medium">Designali client site</span>
+          <span className="text-muted-foreground">67% complete</span>
         </div>
         <div className="relative">
           <Progress value={67} />

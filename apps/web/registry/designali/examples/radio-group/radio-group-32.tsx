@@ -1,6 +1,8 @@
-import { VideoIcon } from "lucide-react"
+import {
+  Video as VideoIcon,
+} from "@designali/icons"
 
-import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
+import { Avatar, AvatarFallback, AvatarImage } from "@workspace/ui/components/avatar"
 import {
   RadioGroup,
   RadioGroupItem,
@@ -13,10 +15,11 @@ export default function MeetingDurationTiles() {
     <div className="flex w-full max-w-sm flex-col gap-3">
       <div className="flex items-center gap-3">
         <Avatar>
-          <AvatarFallback>EK</AvatarFallback>
+          <AvatarImage src="/ali.jpg" alt="Ali Imam" />
+          <AvatarFallback>AI</AvatarFallback>
         </Avatar>
         <div>
-          <p className="text-sm font-medium">Intro call with Elena Kovac</p>
+          <p className="text-sm font-medium">Intro call with Ali Imam</p>
           <p className="flex items-center gap-1 text-xs text-muted-foreground">
             <VideoIcon className="size-3" />
             Video meeting

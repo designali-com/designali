@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { HeadsetIcon } from "lucide-react"
+import {
+  Headset as HeadsetIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Toaster, createToastManager } from "@workspace/ui/components/toast"
@@ -16,7 +18,7 @@ export default function LiveSupportQueueToast() {
     let position = 3
     const id = notify.add({
       type: "loading",
-      title: "Waiting for an agent",
+      title: "Waiting for Designali support",
       description: "You are #3 in line",
       timeout: 0,
     })
@@ -26,7 +28,7 @@ export default function LiveSupportQueueToast() {
         clearInterval(timer)
         notify.update(id, {
           type: "success",
-          title: "Hana from Support joined",
+          title: "Ali from Designali joined",
           description: "Say hello!",
           timeout: 5000,
         })

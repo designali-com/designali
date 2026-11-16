@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { MailCheckIcon, MailIcon } from "lucide-react"
+import {
+  MailCheck as MailCheckIcon,
+  Mail as MailIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Checkbox } from "@workspace/ui/components/checkbox"
@@ -24,7 +27,7 @@ import {
 } from "@workspace/ui/components/field"
 import { Input } from "@workspace/ui/components/input"
 
-const topics = ["Product updates", "Design deep dives", "Hiring news"]
+const topics = ["New templates", "Design deep dives", "Studio news"]
 
 export default function NewsletterSignupDrawer() {
   const [subscribed, setSubscribed] = React.useState(false)
@@ -42,7 +45,7 @@ export default function NewsletterSignupDrawer() {
               <MailCheckIcon className="size-8" />
               <DrawerTitle>Check your inbox</DrawerTitle>
               <DrawerDescription>
-                Confirm your email to start receiving The Field Notes.
+                Confirm your email to start receiving Designali Notes.
               </DrawerDescription>
               <DrawerClose
                 render={<Button variant="outline" className="mt-2" />}
@@ -58,9 +61,9 @@ export default function NewsletterSignupDrawer() {
               }}
             >
               <DrawerHeader>
-                <DrawerTitle>The Field Notes</DrawerTitle>
+                <DrawerTitle>Designali Notes</DrawerTitle>
                 <DrawerDescription>
-                  One thoughtful email every other Tuesday. No spam.
+                  New templates, blocks and design notes from Ali Imam. No spam.
                 </DrawerDescription>
               </DrawerHeader>
               <FieldGroup className="p-4">
@@ -79,7 +82,7 @@ export default function NewsletterSignupDrawer() {
                     <Field key={topic} orientation="horizontal">
                       <Checkbox
                         id={"nl-" + topic}
-                        defaultChecked={topic !== "Hiring news"}
+                        defaultChecked={topic !== "Studio news"}
                       />
                       <FieldLabel htmlFor={"nl-" + topic}>{topic}</FieldLabel>
                     </Field>

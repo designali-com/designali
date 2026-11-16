@@ -1,7 +1,12 @@
 "use client"
 
 import { useState } from "react"
-import { CalendarCheck, Clock, Globe, Video } from "lucide-react"
+import {
+  CalendarCheck,
+  Clock,
+  Globe,
+  Video,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { cn } from "@workspace/ui/lib/utils"
@@ -33,11 +38,11 @@ export default function Contact12() {
         <div className="flex flex-col gap-8 border-b p-8 lg:border-e lg:border-b-0 lg:p-10">
           <div className="flex items-center gap-3">
             <span className="flex size-11 items-center justify-center rounded-full bg-gradient-to-br from-violet-400 to-indigo-600 text-sm font-semibold text-white">
-              NH
+              AI
             </span>
             <div className="text-sm">
-              <p className="font-medium">Noor Haddad</p>
-              <p className="text-muted-foreground">Onboarding lead, Tidepool</p>
+              <p className="font-medium">Ali Imam</p>
+              <p className="text-muted-foreground">Founder, Designali</p>
             </div>
           </div>
           <div>
@@ -45,8 +50,8 @@ export default function Contact12() {
               Book a 30-minute intro call
             </h2>
             <p className="mt-3 text-sm text-muted-foreground">
-              We&apos;ll look at your current setup, answer questions and
-              sketch a migration plan together.
+              We&apos;ll look at your brand, product and goals, answer questions
+              and sketch a design-to-code plan together.
             </p>
           </div>
           <ul className="space-y-3 text-sm text-muted-foreground">
@@ -57,7 +62,7 @@ export default function Contact12() {
               <Video className="size-4" /> Video call, link sent on booking
             </li>
             <li className="flex items-center gap-3">
-              <Globe className="size-4" /> Times shown in Central European Time
+              <Globe className="size-4" /> Times shown in your local time zone
             </li>
           </ul>
         </div>

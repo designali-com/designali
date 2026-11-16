@@ -1,7 +1,11 @@
 "use client"
 
 import * as React from "react"
-import { MessageCirclePlusIcon, SearchIcon, XIcon } from "lucide-react"
+import {
+  MessageCirclePlus as MessageCirclePlusIcon,
+  Search as SearchIcon,
+  X as XIcon,
+} from "@designali/icons"
 
 import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
 import { Badge } from "@workspace/ui/components/badge"
@@ -24,17 +28,17 @@ import {
 } from "@workspace/ui/components/input-group"
 
 const people = [
-  "Aiko Mori",
-  "Benedikt Hahn",
-  "Carla Ruiz",
-  "Daniel Osei",
-  "Elif Yılmaz",
-  "Farah Siddiqui",
+  "Ali Imam",
+  "Brand Designer",
+  "Client Lead",
+  "Design Engineer",
+  "Motion Designer",
+  "Studio Developer",
 ]
 
 export default function NewGroupChatDialog() {
   const [query, setQuery] = React.useState("")
-  const [selected, setSelected] = React.useState<string[]>(["Carla Ruiz"])
+  const [selected, setSelected] = React.useState<string[]>(["Client Lead"])
   const visible = people.filter((person) =>
     person.toLowerCase().includes(query.toLowerCase())
   )

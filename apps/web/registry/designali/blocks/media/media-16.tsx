@@ -1,20 +1,25 @@
 "use client"
 
 import { useState } from "react"
-import { Pause, Play, Radio, Volume2 } from "lucide-react"
+import {
+  Pause,
+  Play,
+  Radio,
+  Volume2,
+} from "@designali/icons"
 
 import { cn } from "@workspace/ui/lib/utils"
 
 const stations = [
-  { name: "Lowlight FM", genre: "Ambient - Downtempo", listeners: "2.4k", freq: "88.1" },
-  { name: "Brass Kitchen", genre: "Jazz - Soul", listeners: "1.1k", freq: "92.6" },
-  { name: "Signal North", genre: "Electronic - House", listeners: "5.8k", freq: "97.3" },
-  { name: "Common Ground", genre: "Talk - Culture", listeners: "860", freq: "101.9" },
+  { name: "Deep Work", genre: "Ambient - Downtempo", listeners: "2.4k", freq: "88.1" },
+  { name: "Pixel Jazz", genre: "Jazz - Soul", listeners: "1.1k", freq: "92.6" },
+  { name: "Code Beats", genre: "Electronic - House", listeners: "5.8k", freq: "97.3" },
+  { name: "Studio Talk", genre: "Talk - Design and code", listeners: "860", freq: "101.9" },
 ]
 const schedule = [
-  { time: "18:00", show: "Golden Hour", host: "with Talia Moss", live: true },
-  { time: "20:00", show: "Field Recordings", host: "with Bram Kessel" },
-  { time: "22:00", show: "Night Swim", host: "with June Ortega" },
+  { time: "18:00", show: "Design se Code Tak", host: "with Ali Imam", live: true },
+  { time: "20:00", show: "Figma Hour", host: "with Sara" },
+  { time: "22:00", show: "Night Build", host: "with Omar" },
   { time: "00:00", show: "Overnight Drift", host: "automated mix" },
 ]
 
@@ -68,9 +73,9 @@ export default function Media16() {
         </div>
         <div>
           <p className="flex items-center gap-2 text-xs tracking-widest text-background/60 uppercase">
-            <Radio className="size-3.5" /> Wavelength community radio
+            <Radio className="size-3.5" /> Designali Radio
           </p>
-          <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-4xl">Independent radio, streaming 24/7.</h2>
+          <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-4xl">Music for design and code, streaming 24/7.</h2>
           <ul className="mt-8 grid grid-cols-2 gap-px border border-background/15 bg-background/15">
             {stations.map((s, i) => (
               <li key={s.name}>

@@ -19,25 +19,25 @@ const channels = [
   {
     id: "mentions",
     label: "Mentions",
-    description: "When someone @mentions you in a comment.",
+    description: "When a Designali teammate @mentions you on a design review.",
     on: true,
   },
   {
     id: "digest",
     label: "Weekly digest",
-    description: "A Monday summary of project activity.",
+    description: "A Monday summary of new templates, blocks and icons.",
     on: true,
   },
   {
     id: "billing",
     label: "Billing alerts",
-    description: "Failed payments and upcoming renewals.",
+    description: "Designali Pro payments and upcoming renewals.",
     on: false,
   },
   {
     id: "product",
     label: "Product updates",
-    description: "New features and occasional tips.",
+    description: "New Designali releases and design-to-code tips.",
     on: false,
   },
 ]
@@ -47,7 +47,7 @@ export default function NotificationSettingsCard() {
     <Card className="w-full max-w-sm">
       <CardHeader className="border-b">
         <CardTitle>Email notifications</CardTitle>
-        <CardDescription>Choose what lands in your inbox.</CardDescription>
+        <CardDescription>Choose which designali.com emails land in your inbox.</CardDescription>
       </CardHeader>
       <CardContent className="grid gap-4">
         {channels.map((c) => (

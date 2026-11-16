@@ -8,115 +8,116 @@ import {
   Palette,
   PenTool,
   Plus,
-} from "lucide-react"
+} from "@designali/icons"
 
+import { Logo } from "@/src/components/logo"
 import { Button } from "@workspace/ui/components/button"
 
-const navLinks = ["Work", "Services", "Studio", "Journal", "Careers"]
+const navLinks = ["Work", "Services", "Studio", "Blog", "Docs"]
 
 const features = [
   {
     icon: Palette,
-    title: "Identity design",
+    title: "Brand identity",
     description:
-      "Logos, type, colour and motion systems built to flex from a favicon to a billboard.",
+      "Logos, type, colour and motion systems built to flex from a favicon to a launch film.",
   },
   {
     icon: MonitorSmartphone,
-    title: "Websites and products",
+    title: "Web design and development",
     description:
-      "Fast, accessible websites and digital products designed and engineered by the same team.",
+      "Fast, accessible Next.js websites and products, designed and coded by Ali Imam himself.",
   },
   {
     icon: Clapperboard,
-    title: "Film and motion",
+    title: "CGI, 3D and motion",
     description:
-      "Launch films, product animations and social content produced by our in-house studio.",
+      "Product renders, launch loops and UI motion produced in-house at Designali.",
   },
   {
     icon: Megaphone,
-    title: "Campaigns",
+    title: "AI workflows",
     description:
-      "Integrated campaigns across digital, out-of-home and social that move real numbers.",
+      "AI-assisted exploration and content drafts that speed up the work without replacing craft.",
   },
   {
     icon: PenTool,
     title: "Design systems",
     description:
-      "Component libraries and guidelines that keep your brand consistent as your team grows.",
+      "Component libraries, tokens and guidelines built on shadcn-style UI and Tailwind CSS.",
   },
 ]
 
 const stats = [
-  { value: "92%", label: "Clients who return" },
-  { value: "45", label: "Designers and engineers" },
-  { value: "3", label: "Studios worldwide" },
-  { value: "14", label: "Years in business" },
+  { value: "2300+", label: "UI examples to explore" },
+  { value: "1", label: "Founder who designs and codes" },
+  { value: "8+", label: "Brands and product lines by Ali" },
+  { value: "460+", label: "Blocks on designali.com" },
 ]
 
 const steps = [
   {
     title: "Discover",
     description:
-      "Workshops, stakeholder interviews and audits to understand your business, audience and goals.",
+      "A discovery call and a short audit to understand your business, audience and goals.",
   },
   {
     title: "Define",
     description:
-      "A clear strategy, creative direction and roadmap that everyone signs off before design begins.",
+      "A clear direction, scope and timeline that you sign off before design begins.",
   },
   {
     title: "Design and build",
     description:
-      "Iterative sprints with weekly reviews, so you see progress and steer direction throughout.",
+      "Weekly reviews in Figma and a live preview on Vercel, so you steer the work throughout.",
   },
   {
     title: "Launch and grow",
     description:
-      "We launch together, measure results and keep optimising with an ongoing partnership.",
+      "We launch together, measure results and keep refining the experience over time.",
   },
 ]
 
 const showcase = [
   {
-    name: "Juniper Bank",
-    meta: "Rebrand and digital banking app",
-    tag: "Branding",
+    name: "Dalim UI",
+    meta: "Component library and docs site",
+    tag: "UI",
     price: "2025",
     tile: "bg-gradient-to-br from-violet-200 via-purple-300 to-fuchsia-400 dark:from-violet-700 dark:via-purple-800 dark:to-fuchsia-900",
   },
   {
-    name: "Vela Motors",
-    meta: "Website and launch campaign",
+    name: "Dalim Agency",
+    meta: "Studio website and brand",
     tag: "Web",
     price: "2025",
     tile: "bg-gradient-to-br from-emerald-200 via-green-300 to-lime-300 dark:from-emerald-700 dark:via-green-800 dark:to-lime-900",
   },
   {
-    name: "Bloom Coffee",
-    meta: "Packaging for a national rollout",
-    tag: "Packaging",
+    name: "Dalim Fonts",
+    meta: "Type foundry identity and store",
+    tag: "Type",
     price: "2024",
     tile: "bg-gradient-to-br from-stone-200 via-neutral-300 to-zinc-400 dark:from-stone-700 dark:via-neutral-800 dark:to-zinc-900",
   },
   {
-    name: "Hollis Hotels",
-    meta: "Booking experience redesign",
+    name: "Dalim Icons",
+    meta: "Icon library and search experience",
     tag: "Product",
     price: "2024",
     tile: "bg-gradient-to-br from-rose-200 via-pink-300 to-purple-300 dark:from-rose-700 dark:via-pink-800 dark:to-purple-900",
   },
   {
-    name: "Strata Outdoor",
-    meta: "Brand film and social content",
-    tag: "Film",
+    name: "Dalim Visuals",
+    meta: "CGI, 3D and motion work",
+    tag: "Motion",
     price: "2024",
     tile: "bg-gradient-to-br from-blue-200 via-indigo-300 to-violet-400 dark:from-blue-700 dark:via-indigo-800 dark:to-violet-900",
   },
   {
-    name: "Atelier Nord",
-    meta: "Identity and e-commerce store",
-    tag: "Commerce",
+    name: "Dalim Works",
+    meta: "Portfolio and case-study site",
+    tag: "Web",
     price: "2023",
     tile: "bg-gradient-to-br from-yellow-100 via-amber-200 to-orange-300 dark:from-yellow-700 dark:via-amber-800 dark:to-orange-900",
   },
@@ -125,62 +126,62 @@ const showcase = [
 const testimonials = [
   {
     quote:
-      "The packaging redesign lifted shelf sales by thirty percent. We have since hired them for three more lines.",
-    name: "Sam Achebe",
-    role: "Brand Director, Bloom Coffee",
+      "The design system Designali built still carries every page we ship. We have come back for three more projects.",
+    name: "Sam A.",
+    role: "Brand director, Designali client",
   },
   {
     quote:
-      "They built us a design system our engineers actually use. Shipping new pages now takes days, not weeks.",
-    name: "Chloe Bennett",
-    role: "VP Product, Copperleaf",
+      "Designali built us a design system our engineers actually use. Shipping new pages now takes days, not weeks.",
+    name: "Chloe B.",
+    role: "Product lead, Designali client",
   },
   {
     quote:
-      "The launch film did more for awareness than our entire previous year of paid social. Phenomenal craft.",
-    name: "Ravi Kapoor",
-    role: "CEO, Strata Outdoor",
+      "The 3D launch loop Designali made did more for awareness than a year of paid social. Phenomenal craft.",
+    name: "Ravi K.",
+    role: "Founder, Designali client",
   },
 ]
 
 const tiers = [
   {
     name: "Sprint",
-    price: "$18k",
+    price: "$2,400",
     period: "fixed",
-    description: "A focused two-week engagement for a defined problem.",
+    description: "A focused two-week engagement for one landing page or feature.",
     features: [
-      "Discovery workshop",
-      "One core deliverable",
+      "Discovery call with Ali",
+      "One designed and coded page",
       "Two review rounds",
-      "Handover documentation",
+      "Figma files and source code",
     ],
     cta: "Book a sprint",
   },
   {
     name: "Project",
-    price: "From $60k",
+    price: "From $6k",
     period: "per project",
-    description: "End-to-end brand or product launches.",
+    description: "End-to-end brand identity and website launches.",
     features: [
       "Strategy and creative direction",
-      "Dedicated project lead",
-      "Design and development",
+      "Ali Imam as your lead",
+      "Design and Next.js development",
       "Weekly reviews",
       "30 days of post-launch support",
     ],
     cta: "Start a project",
   },
   {
-    name: "Partnership",
-    price: "$25k",
+    name: "Studio plan",
+    price: "$4,500",
     period: "/month",
-    description: "An embedded team for ongoing work.",
+    description: "Ongoing design and development, month to month.",
     features: [
-      "Dedicated multidisciplinary team",
-      "Quarterly strategy sessions",
+      "Design and code in one person",
+      "Monthly strategy session",
       "Unlimited requests in scope",
-      "Monthly performance reports",
+      "Pause or cancel any time",
     ],
     cta: "Let us talk",
   },
@@ -189,32 +190,32 @@ const tiers = [
 const faqs = [
   {
     q: "Do you work remotely?",
-    a: "Yes. We have studios in three cities and work with clients worldwide, meeting in person for key workshops.",
+    a: "Yes. Designali works online with clients worldwide, with calls, Figma reviews and live previews.",
   },
   {
     q: "Who owns the work?",
-    a: "You do. All intellectual property transfers to you on final payment, including source files and code.",
+    a: "You do. Figma files and source code transfer to you on final payment.",
   },
   {
     q: "What does a typical project cost?",
-    a: "Brand identity projects usually range from $60k to $150k, and websites from $80k to $250k depending on scope.",
+    a: "Sprints start at $2,400 and full brand plus website projects from $6k, depending on scope. See /pricing for details.",
   },
   {
-    q: "What size of companies do you work with?",
-    a: "Mostly growth-stage startups and established mid-market brands, though we take on a few founder-led early projects each year.",
+    q: "Who does Designali work with?",
+    a: "Founders, startups and growing brands who want thoughtful design and production-ready code from one studio.",
   },
   {
     q: "How soon can you start?",
-    a: "We typically book four to six weeks ahead. Sprints can sometimes start within two weeks.",
+    a: "Projects are usually booked a few weeks ahead. Sprints can often start within two weeks.",
   },
 ]
 
 const footer = [
-  { title: "Studio", links: ["About", "Team", "Careers", "Press"] },
-  { title: "Services", links: ["Branding", "Digital", "Film", "Campaigns"] },
+  { title: "Studio", links: ["About", "Ali Imam", "Docs", "Pricing"] },
+  { title: "Services", links: ["UI", "Resources", "Motion", "AI workflows"] },
   {
     title: "Connect",
-    links: ["Instagram", "LinkedIn", "Dribbble", "Newsletter"],
+    links: ["Instagram", "LinkedIn", "X", "21st.dev"],
   },
 ]
 
@@ -227,10 +228,8 @@ export default function LandingAgency10() {
             href="#"
             className="flex items-center gap-2 font-semibold tracking-tight"
           >
-            <span className="flex size-7 items-center justify-center rounded-md bg-sky-600 text-white text-sm">
-              Q
-            </span>
-            <span className="font-serif text-lg font-normal">Quiet Type</span>
+            <Logo className="h-5 w-auto" />
+            <span className="font-serif text-lg font-normal">designali</span>
           </a>
           <nav className="hidden items-center gap-7 text-sm md:flex">
             {navLinks.map((link) => (
@@ -254,7 +253,7 @@ export default function LandingAgency10() {
               Contact
             </Button>
             <Button size="sm" nativeButton={false} render={<a href="#" />}>
-              Commission copy
+              Start a project
             </Button>
           </div>
         </div>
@@ -262,26 +261,25 @@ export default function LandingAgency10() {
       <section className="border-b">
         <div className="mx-auto max-w-7xl px-6 pt-16 pb-12 md:pt-28">
           <div className="flex items-center justify-between border-b pb-4 text-xs tracking-widest text-muted-foreground uppercase">
-            <span>Copywriting and brand voice</span>
+            <span>Designali brand voice and identity</span>
             <span className="hidden sm:inline">
-              Clear words for good companies.
+              Clear brands for good companies.
             </span>
           </div>
           <h1 className="mt-12 max-w-5xl text-4xl leading-[1.05] font-semibold tracking-tight text-balance sm:text-5xl md:text-8xl font-serif font-normal">
-            {"Words that sound "}
+            {"Brands that sound "}
             <span className="text-sky-600 dark:text-sky-400">
               exactly like you
             </span>
           </h1>
           <div className="mt-12 grid gap-8 md:grid-cols-2 md:items-end">
             <p className="max-w-lg text-lg leading-8 text-muted-foreground">
-              Quiet Type writes websites, brand voice guides and launch copy for
-              founders who want clear, human language instead of buzzwords.
+              Designali shapes brand voice, identity and website copy for founders who want clear, human brands instead of buzzwords.
             </p>
             <div className="md:justify-self-end">
               <div className="flex flex-wrap gap-3 ">
                 <Button size="lg" nativeButton={false} render={<a href="#" />}>
-                  Commission copy
+                  Start a project
                   <ArrowRight />
                 </Button>
                 <Button
@@ -290,7 +288,7 @@ export default function LandingAgency10() {
                   nativeButton={false}
                   render={<a href="#" />}
                 >
-                  Read our writing
+                  Read the blog
                 </Button>
               </div>
             </div>
@@ -325,11 +323,10 @@ export default function LandingAgency10() {
                 Services
               </p>
               <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl font-serif font-normal mt-3">
-                Strategy, design and technology under one roof
+                Strategy, design and code under one roof
               </h2>
               <p className="mt-4 text-lg leading-8 text-muted-foreground">
-                We partner with ambitious brands from the first workshop to
-                launch day and beyond, with senior people on every project.
+                Where thoughtful design meets production-ready code. Ali Imam designs and builds every project, from first call to launch day.
               </p>
             </div>
           </div>
@@ -361,8 +358,7 @@ export default function LandingAgency10() {
                 Selected work
               </h2>
               <p className="mt-4 text-lg leading-8 text-muted-foreground">
-                A few recent projects for clients who wanted to be remembered,
-                not just noticed.
+                A few projects from the Designali and Dalim archive, designed and coded in-house.
               </p>
             </div>
             <Button
@@ -406,7 +402,7 @@ export default function LandingAgency10() {
       <section className="border-b">
         <div className="mx-auto max-w-5xl px-6 py-20 text-center md:py-28">
           <p className="text-sm tracking-widest text-muted-foreground uppercase">
-            What our clients say
+            What clients say
           </p>
           {testimonials.slice(0, 1).map((t) => (
             <figure key={t.name} className="mt-10">
@@ -465,11 +461,10 @@ export default function LandingAgency10() {
         <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl font-serif font-normal">
-              Ways to work with us
+              Ways to work with Designali
             </h2>
             <p className="mt-4 text-lg leading-8 text-muted-foreground">
-              Clear engagement models with fixed scopes or dedicated teams. No
-              surprise invoices, ever.
+              Fixed-scope projects or a monthly studio plan. No surprise invoices, ever.
             </p>
           </div>
           <div className="mx-auto mt-14 grid max-w-6xl items-start gap-6 lg:grid-cols-3">
@@ -531,7 +526,7 @@ export default function LandingAgency10() {
                 href="#"
                 className="font-medium text-foreground underline underline-offset-4"
               >
-                Get in touch
+                Email hello@designali.com
               </a>
               .
             </p>
@@ -555,11 +550,10 @@ export default function LandingAgency10() {
         <div className="mx-auto flex max-w-7xl flex-col gap-10 px-6 py-20 md:flex-row md:items-end md:justify-between md:py-28">
           <div className="max-w-2xl">
             <h2 className="text-4xl font-semibold tracking-tight text-balance md:text-6xl font-serif font-normal">
-              Your product deserves better words
+              Your product deserves a better brand
             </h2>
             <p className="mt-5 text-lg text-background/65">
-              Share your current site and we will send back a rewritten homepage
-              hero for free.
+              Share your current site and Ali will send back a redesigned homepage hero for free.
             </p>
           </div>
           <div className="flex flex-wrap gap-3 ">
@@ -569,7 +563,7 @@ export default function LandingAgency10() {
               nativeButton={false}
               render={<a href="#" />}
             >
-              Commission copy
+              Start a project
               <ArrowRight />
             </Button>
             <Button
@@ -579,7 +573,7 @@ export default function LandingAgency10() {
               nativeButton={false}
               render={<a href="#" />}
             >
-              Read our writing
+              Read the blog
             </Button>
           </div>
         </div>
@@ -591,13 +585,11 @@ export default function LandingAgency10() {
               href="#"
               className="flex items-center gap-2 font-semibold tracking-tight"
             >
-              <span className="flex size-7 items-center justify-center rounded-md bg-sky-600 text-white text-sm">
-                Q
-              </span>
-              <span className="font-serif text-lg font-normal">Quiet Type</span>
+              <Logo className="h-5 w-auto" />
+              <span className="font-serif text-lg font-normal">designali</span>
             </a>
             <p className="max-w-xs text-sm text-muted-foreground">
-              Clear words for good companies.
+              Clear brands for good companies.
             </p>
           </div>
           {footer.map((column) => (
@@ -621,7 +613,7 @@ export default function LandingAgency10() {
         <div className="border-t ">
           <div className="mx-auto flex max-w-7xl flex-col justify-between gap-4 px-6 py-6 text-xs text-muted-foreground sm:flex-row">
             <span>
-              © {new Date().getFullYear()} Quiet Type. All rights reserved.
+              © {new Date().getFullYear()} Designali. All rights reserved.
             </span>
             <div className="flex gap-6">
               <a href="#" className="hover:text-foreground">

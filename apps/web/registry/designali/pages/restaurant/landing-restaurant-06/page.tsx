@@ -9,133 +9,133 @@ import {
   Salad,
   Truck,
   Wine,
-} from "lucide-react"
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 
-const navLinks = ["Menu", "About", "Private dining", "Gift cards", "Visit"]
+const navLinks = ["Services", "About", "Packages", "Work", "Contact"]
 
 const logos = [
-  "Food & Wine",
-  "The Guardian",
-  "Condé Nast",
-  "Michelin Guide",
-  "Eater",
-  "Bon Appétit",
-  "The Infatuation",
-  "Time Out",
+  "Social visuals",
+  "Signage",
+  "Motion",
+  "Brand identity",
+  "Menu design",
+  "Packaging",
+  "Booking sites",
+  "Ordering flows",
 ]
 
 const features = [
   {
     icon: Salad,
-    title: "Every diet welcome",
+    title: "Social & motion visuals",
     description:
-      "Vegetarian, vegan and gluten-free versions of most dishes, without compromise.",
+      "Templates, short motion loops and launch visuals so your feed always looks as good as the food.",
   },
   {
     icon: Truck,
-    title: "Delivery and pickup",
+    title: "Delivery & ordering UX",
     description:
-      "Order our favourite dishes for pickup or delivery within three miles.",
+      "Clear ordering flows for pickup and delivery, designed to be quick on any phone.",
   },
   {
     icon: Gift,
-    title: "Gift cards",
+    title: "Work",
     description:
-      "Give the gift of a great meal, with digital gift cards delivered instantly.",
+      "Gift cards, vouchers and loyalty cards designed to match your brand.",
   },
   {
     icon: Leaf,
-    title: "Farm to table",
+    title: "Brand from the table up",
     description:
-      "Produce from twelve local farms within 80 miles, delivered fresh every morning.",
+      "Logos, colour and type that work on a menu, a coffee cup, a storefront sign and an Instagram post.",
   },
   {
     icon: Flame,
-    title: "Wood-fired kitchen",
+    title: "Menus that sell",
     description:
-      "Our oak-burning hearth gives everything from bread to fish a gentle smoky depth.",
+      "Print and digital menus designed for clarity, so guests find what they want and the specials stand out.",
   },
   {
     icon: Wine,
-    title: "Natural wine list",
+    title: "Booking & ordering sites",
     description:
-      "Over 200 low-intervention wines, with a sommelier on hand to find your perfect glass.",
+      "Fast Next.js websites with reservations, online ordering links and opening hours that are easy to update.",
   },
 ]
 
 const stats = [
-  { value: "65", label: "Seats in the dining room" },
-  { value: "1 Michelin", label: "Star since 2021" },
-  { value: "12", label: "Partner farms" },
-  { value: "48h", label: "Sourdough fermentation" },
+  { value: "30+", label: "Pages and screens per project" },
+  { value: "2-4 wks", label: "Typical brand sprint" },
+  { value: "20+", label: "Deliverables per brand" },
+  { value: "3", label: "Revision rounds included" },
 ]
 
 const steps = [
   {
-    title: "Reserve a table",
+    title: "Book a discovery call",
     description:
-      "Book online up to 60 days ahead. We hold a few tables for walk-ins every evening.",
+      "Tell us about your restaurant, your guests and what you want people to feel when they walk in.",
   },
   {
-    title: "Tell us your needs",
+    title: "Share your references",
     description:
-      "Add allergies, dietary requirements or a special occasion to your booking.",
+      "Add photos, menus and brands you love, plus any dietary or accessibility notes for the menu.",
   },
   {
-    title: "Join us for dinner",
+    title: "Design together",
     description:
-      "Arrive a little early for a drink at the bar while we prepare your table.",
+      "Concepts are shared in Figma with weekly reviews until the brand feels right.",
   },
   {
-    title: "Take a taste home",
+    title: "Launch and serve",
     description:
-      "Pick up sourdough, preserves and gift cards from our counter on your way out.",
+      "We deliver print files, the website and social templates, ready for opening night.",
   },
 ]
 
 const showcase = [
   {
-    name: "Wood-roasted Hake",
-    meta: "Brown butter, sea herbs, smoked mussels",
-    tag: "Chef's pick",
-    price: "$34",
+    name: "Menu Design",
+    meta: "Print and digital menus, specials boards",
+    tag: "Popular",
+    price: "$1,800",
     tile: "bg-gradient-to-br from-blue-200 via-indigo-300 to-violet-400 dark:from-blue-700 dark:via-indigo-800 dark:to-violet-900",
   },
   {
-    name: "Heritage Beetroot",
-    meta: "Whipped goat curd, hazelnut, honey",
-    tag: "Vegetarian",
-    price: "$16",
+    name: "Logo & Identity",
+    meta: "Logo, colour, type, brand guidelines",
+    tag: "Brand",
+    price: "$1,400",
     tile: "bg-gradient-to-br from-yellow-100 via-amber-200 to-orange-300 dark:from-yellow-700 dark:via-amber-800 dark:to-orange-900",
   },
   {
-    name: "Dry-aged Ribeye",
-    meta: "Bone marrow, charred onion, chips",
-    tag: "For two",
-    price: "$78",
+    name: "Booking Website",
+    meta: "Next.js site, reservations, hours",
+    tag: "Website",
+    price: "$1,200",
     tile: "bg-gradient-to-br from-amber-200 via-orange-300 to-rose-400 dark:from-amber-700 dark:via-orange-800 dark:to-rose-900",
   },
   {
-    name: "Hand-cut Tagliatelle",
-    meta: "Wild mushrooms, aged parmesan, truffle",
-    tag: "Signature",
-    price: "$26",
+    name: "Packaging Set",
+    meta: "Boxes, bags, cups and labels",
+    tag: "Print",
+    price: "$2,400",
     tile: "bg-gradient-to-br from-sky-200 via-cyan-300 to-teal-400 dark:from-sky-700 dark:via-cyan-800 dark:to-teal-900",
   },
   {
-    name: "Sourdough and Butter",
+    name: "Social Kit",
     meta: "48-hour heritage grain loaf",
-    tag: "Baked daily",
-    price: "$8",
+    tag: "Templates and launch posts",
+    price: "$600",
     tile: "bg-gradient-to-br from-violet-200 via-purple-300 to-fuchsia-400 dark:from-violet-700 dark:via-purple-800 dark:to-fuchsia-900",
   },
   {
-    name: "Burnt Honey Tart",
-    meta: "Crème fraîche, poached rhubarb",
-    tag: "Dessert",
-    price: "$13",
+    name: "Motion Loops",
+    meta: "Short videos for menus and screens",
+    tag: "Motion",
+    price: "$900",
     tile: "bg-gradient-to-br from-emerald-200 via-green-300 to-lime-300 dark:from-emerald-700 dark:via-green-800 dark:to-lime-900",
   },
 ]
@@ -143,100 +143,100 @@ const showcase = [
 const testimonials = [
   {
     quote:
-      "The sommelier found us a bottle under $60 that beat anything we have ever ordered. Great value, zero snobbery.",
-    name: "Patrick Walsh",
-    role: "Wine lover",
+      "Designali found a brand direction that beat anything we had imagined. Great value, zero fuss.",
+    name: "Patrick",
+    role: "Owner, wine bar",
   },
   {
     quote:
-      "The best meal we have had all year. Every course was a surprise, and the staff made our anniversary feel truly special.",
+      "Ali designed our menu, signage and website in one go. Guests keep telling us how easy everything is to read.",
     name: "Hannah and Leo",
-    role: "Anniversary dinner",
+    role: "Owners, neighbourhood restaurant",
   },
   {
     quote:
-      "That wood-fired bread with cultured butter is worth the trip on its own. I dream about it.",
-    name: "Marcus Bell",
-    role: "Regular guest",
+      "The new brand finally matches the food. Our takeaway packaging gets photographed more than our dishes.",
+    name: "Marcus",
+    role: "Owner, bakery",
   },
 ]
 
 const tiers = [
   {
-    name: "Lunch set",
-    price: "$45",
-    period: "/person",
-    description: "Three courses, served Wednesday to Saturday.",
+    name: "Menu Refresh",
+    price: "$1,200",
+    period: "/project",
+    description: "A new look for your menus and specials.",
     features: [
-      "Choice of three starters",
-      "Seasonal main course",
-      "Dessert or cheese",
-      "Optional wine pairing",
+      "Menu layout and typography",
+      "Print-ready files",
+      "Digital menu version",
+      "Two rounds of revisions",
     ],
-    cta: "Book lunch",
+    cta: "Book a menu refresh",
   },
   {
-    name: "Chef's tasting",
-    price: "$125",
-    period: "/person",
-    description: "Seven courses that change with the seasons.",
+    name: "Full Brand",
+    price: "$4,800",
+    period: "/project",
+    description: "Identity, menus and website for a new opening.",
     features: [
-      "Seven seasonal courses",
-      "Snacks and house bread",
-      "Sommelier wine pairing",
-      "Vegetarian version available",
-      "Kitchen table option",
+      "Logo and brand guidelines",
+      "Menus and signage",
+      "Next.js booking website",
+      "Social media templates",
+      "Packaging design",
     ],
-    cta: "Reserve tasting",
+    cta: "Book Full Brand",
   },
   {
-    name: "Catering and events",
-    price: "From $65",
-    period: "/guest",
-    description: "Private dining and off-site catering.",
+    name: "Ongoing support",
+    price: "From $650",
+    period: "/month",
+    description: "Monthly design support for busy restaurants.",
     features: [
-      "Private room for 24",
-      "Bespoke menus",
-      "Dedicated event host",
-      "Canapés and drinks packages",
-      "Off-site catering available",
+      "Seasonal menu updates",
+      "Campaign graphics",
+      "Website updates",
+      "Social content templates",
+      "Motion loops for screens",
     ],
-    cta: "Plan an event",
+    cta: "Start support",
   },
 ]
 
 const faqs = [
   {
-    q: "Do you offer gift cards?",
-    a: "Yes. Digital gift cards are available in any amount and are valid for 24 months.",
+    q: "Do you offer gift card designs?",
+    a: "Yes. Gift cards, vouchers and loyalty cards can be added to any package.",
   },
   {
-    q: "Do you take walk-ins?",
-    a: "Yes. We keep the bar and a few tables free for walk-ins every evening, served on a first-come basis.",
+    q: "Do you work with new openings?",
+    a: "Yes. We often start months before opening, so the brand, menus and website are ready for the first service.",
   },
   {
-    q: "Can you accommodate allergies?",
-    a: "Absolutely. Let us know when you book and our kitchen will adapt your dishes. We handle nuts and gluten in the kitchen.",
+    q: "Can you design for dietary labels and allergens?",
+    a: "Absolutely. Menus are designed with clear dietary icons and allergen notes, based on the information you provide.",
   },
   {
-    q: "Is there a dress code?",
-    a: "No dress code. Come as you are, whether that is jeans or a special-occasion outfit.",
+    q: "Do you also build the website?",
+    a: "Yes. Ali Imam designs and builds the site in Next.js, connected to the booking or ordering tools you already use.",
   },
   {
-    q: "Do you have a cancellation policy?",
-    a: "Please give us 24 hours notice to cancel. Late cancellations for tasting menus incur a $25 per person fee.",
+    q: "What is your cancellation policy?",
+    a: "Projects are scoped up front. If plans change, we pause or adjust the scope together before the next milestone.",
   },
 ]
 
 const footer = [
   {
-    title: "Visit",
-    links: ["Reservations", "Opening hours", "Find us", "Accessibility"],
+    title: "Contact",
+    links: ["Services", "Process", "Work", "Pricing"],
   },
-  { title: "Menus", links: ["Dinner", "Lunch", "Wine list", "Desserts"] },
+  { title: "Menus", links: ["Brand identity", "Websites", "Packaging", "Social kits"] },
   {
     title: "More",
-    links: ["Private dining", "Gift cards", "Careers", "Press"],
+    links: ["Packages", "Work", "About Ali", "Blog"],
   },
 ]
 
@@ -252,7 +252,7 @@ export default function LandingRestaurant06() {
             <span className="flex size-7 items-center justify-center rounded-md bg-violet-600 text-white text-sm">
               H
             </span>
-            <span className="">Hanami Ramen</span>
+            <span className="">designali</span>
           </a>
           <nav className="hidden items-center gap-7 text-sm md:flex">
             {navLinks.map((link) => (
@@ -273,10 +273,10 @@ export default function LandingRestaurant06() {
               nativeButton={false}
               render={<a href="#" />}
             >
-              Book a table
+              Book a call
             </Button>
             <Button size="sm" nativeButton={false} render={<a href="#" />}>
-              See the bowls
+              See the work
             </Button>
           </div>
         </div>
@@ -284,24 +284,24 @@ export default function LandingRestaurant06() {
       <section className="border-b">
         <div className="mx-auto max-w-7xl px-6">
           <div className="flex items-center justify-between border-x border-b px-6 py-3 text-xs text-muted-foreground">
-            <span>Broth simmered for 18 hours</span>
-            <span className="hidden sm:inline">Slurp loudly, leave happy.</span>
+            <span>Brand systems built to last</span>
+            <span className="hidden sm:inline">Design boldly, serve happily.</span>
           </div>
           <div className="border-x px-6 py-16 md:py-28">
             <h1 className="max-w-5xl text-4xl leading-[1.05] font-semibold tracking-tight text-balance sm:text-5xl md:text-8xl ">
-              {"Rich tonkotsu ramen, "}
+              {"Ramen bar brands, "}
               <span className="text-violet-600 dark:text-violet-400">
-                made by hand daily
+                designed by hand
               </span>
             </h1>
             <div className="mt-12 flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
               <p className="max-w-md text-base leading-7 text-muted-foreground">
-                Hanami Ramen is a 24-seat counter serving hand-pulled noodles,
-                slow-simmered broths and small plates late into the night.
+                Designali designs counter menus, signage and late-night ordering sites
+                for ramen bars and small plates restaurants with a strong personality.
               </p>
               <div className="flex flex-wrap gap-3 ">
                 <Button size="lg" nativeButton={false} render={<a href="#" />}>
-                  See the bowls
+                  See the work
                   <ArrowRight />
                 </Button>
                 <Button
@@ -310,7 +310,7 @@ export default function LandingRestaurant06() {
                   nativeButton={false}
                   render={<a href="#" />}
                 >
-                  Find us
+                  Contact us
                 </Button>
               </div>
             </div>
@@ -338,7 +338,7 @@ export default function LandingRestaurant06() {
       <section className="border-b">
         <div className="mx-auto max-w-7xl px-6 py-12">
           <p className="text-center text-sm text-muted-foreground">
-            As reviewed by
+            Services include
           </p>
           <div className="mt-8 grid grid-cols-2 items-center gap-x-8 gap-y-6 sm:grid-cols-4 lg:grid-cols-8">
             {logos.map((logo) => (
@@ -356,14 +356,14 @@ export default function LandingRestaurant06() {
         <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
           <div className="max-w-2xl">
             <p className="text-sm font-medium text-violet-600 dark:text-violet-400">
-              Our kitchen
+              Our approach
             </p>
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl  mt-3">
-              Seasonal cooking, made with care
+              Restaurant design, made with care
             </h2>
             <p className="mt-4 text-lg leading-8 text-muted-foreground">
-              We work with local farms and fishermen, change the menu with the
-              seasons and make almost everything in house.
+              We work closely with chefs and owners, design every touchpoint
+              together and make almost everything production ready.
             </p>
           </div>
           <div className="mt-14 grid overflow-hidden rounded-2xl border sm:grid-cols-2 lg:grid-cols-3">
@@ -387,11 +387,11 @@ export default function LandingRestaurant06() {
           <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
             <div className="max-w-2xl">
               <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl">
-                From the menu
+                Our services
               </h2>
               <p className="mt-4 text-lg leading-8 text-muted-foreground">
                 {
-                  "A taste of what is cooking this week. Dishes change with the market, so ask your server for today's specials."
+                  "A taste of what Designali creates for restaurants. Every project is scoped around your menu, your space and your guests."
                 }
               </p>
             </div>
@@ -435,7 +435,7 @@ export default function LandingRestaurant06() {
         <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl">
-              What our guests are saying
+              What restaurant owners are saying
             </h2>
           </div>
           <div className="mt-14 grid gap-6 md:grid-cols-3">
@@ -470,7 +470,7 @@ export default function LandingRestaurant06() {
         <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl">
-              Planning your visit
+              How a project works
             </h2>
           </div>
           <ol className="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
@@ -495,11 +495,11 @@ export default function LandingRestaurant06() {
         <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl">
-              Tasting menus and events
+              Packages and support
             </h2>
             <p className="mt-4 text-lg leading-8 text-muted-foreground">
               {
-                "Celebrate with a chef's tasting menu, or let us cater your next gathering. Dietary needs always welcome."
+                "Start with a menu refresh, go for a full brand, or keep Designali on for monthly updates."
               }
             </p>
           </div>
@@ -562,7 +562,7 @@ export default function LandingRestaurant06() {
                 href="#"
                 className="font-medium text-foreground underline underline-offset-4"
               >
-                Get in touch
+                Contact us
               </a>
               .
             </p>
@@ -587,15 +587,15 @@ export default function LandingRestaurant06() {
           <div className="pointer-events-none absolute -top-24 left-1/2 size-96 -translate-x-1/2 rounded-full bg-gradient-to-b from-violet-500/25 via-fuchsia-500/10 to-transparent blur-3xl" />
           <div className="relative mx-auto max-w-2xl space-y-6">
             <h2 className="text-3xl font-semibold tracking-tight text-balance md:text-5xl">
-              Hungry after midnight?
+              Opening a counter restaurant?
             </h2>
             <p className="text-lg text-muted-foreground">
-              No reservations, just a short queue and a warm bowl waiting at the
-              counter.
+              No long forms, just a short call and a clear scope waiting in
+              your inbox.
             </p>
             <div className="flex flex-wrap gap-3 justify-center">
               <Button size="lg" nativeButton={false} render={<a href="#" />}>
-                See the bowls
+                See the work
                 <ArrowRight />
               </Button>
               <Button
@@ -604,7 +604,7 @@ export default function LandingRestaurant06() {
                 nativeButton={false}
                 render={<a href="#" />}
               >
-                Find us
+                Contact us
               </Button>
             </div>
           </div>
@@ -620,10 +620,10 @@ export default function LandingRestaurant06() {
               <span className="flex size-7 items-center justify-center rounded-md bg-violet-600 text-white text-sm">
                 H
               </span>
-              <span className="">Hanami Ramen</span>
+              <span className="">designali</span>
             </a>
             <p className="max-w-xs text-sm text-muted-foreground">
-              Slurp loudly, leave happy.
+              Design boldly, serve happily.
             </p>
           </div>
           {footer.map((column) => (
@@ -647,7 +647,7 @@ export default function LandingRestaurant06() {
         <div className="border-t ">
           <div className="mx-auto flex max-w-7xl flex-col justify-between gap-4 px-6 py-6 text-xs text-muted-foreground sm:flex-row">
             <span>
-              © {new Date().getFullYear()} Hanami Ramen. All rights reserved.
+              © {new Date().getFullYear()} designali. All rights reserved.
             </span>
             <div className="flex gap-6">
               <a href="#" className="hover:text-foreground">

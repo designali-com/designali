@@ -2,12 +2,12 @@
 
 import * as React from "react"
 import {
-  HistoryIcon,
-  SparklesIcon,
-  StarIcon,
-  Trash2Icon,
-  XIcon,
-} from "lucide-react"
+  History as HistoryIcon,
+  Sparkles as SparklesIcon,
+  Star as StarIcon,
+  Trash2 as Trash2Icon,
+  X as XIcon,
+} from "@designali/icons"
 
 import {
   Command,
@@ -21,9 +21,9 @@ import {
 
 export default function ClearableRecentSearches() {
   const [recent, setRecent] = React.useState([
-    "invoice 2026-114",
-    "refund policy",
-    "Acme onboarding deck",
+    "portfolio template",
+    "@designali/icons",
+    "Dalim Agency case study",
   ])
 
   return (
@@ -68,7 +68,7 @@ export default function ClearableRecentSearches() {
           </CommandItem>
           <CommandItem>
             <StarIcon />
-            <span>Starred reports</span>
+            <span>Starred templates</span>
           </CommandItem>
         </CommandGroup>
       </CommandList>

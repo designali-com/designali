@@ -1,4 +1,6 @@
-import { ArrowUpRight } from "lucide-react"
+import {
+  ArrowUpRight,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 
@@ -36,7 +38,7 @@ export default function CallToAction12() {
       </div>
       <div className="mt-12 flex justify-center px-6">
         <Button size="lg" nativeButton={false} render={<a href="#" />}>
-          Explore 400+ blocks
+          Explore 460+ Designali blocks
           <ArrowUpRight data-icon="inline-end" />
         </Button>
       </div>

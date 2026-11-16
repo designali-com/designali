@@ -1,4 +1,6 @@
-import { KeyboardIcon } from "lucide-react"
+import {
+  Keyboard as KeyboardIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -16,14 +18,14 @@ const groups = [
     title: "Navigation",
     items: [
       { label: "Open command menu", keys: ["⌘", "K"] },
-      { label: "Go to inbox", keys: ["G", "I"] },
-      { label: "Go to projects", keys: ["G", "P"] },
+      { label: "Go to templates", keys: ["G", "T"] },
+      { label: "Go to blocks", keys: ["G", "B"] },
     ],
   },
   {
     title: "Editing",
     items: [
-      { label: "New issue", keys: ["C"] },
+      { label: "New project", keys: ["C"] },
       { label: "Assign to me", keys: ["I"] },
       { label: "Change status", keys: ["S"] },
     ],

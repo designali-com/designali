@@ -2,16 +2,16 @@
 
 import * as React from "react"
 import {
-  PauseIcon,
-  PlayIcon,
-  Repeat1Icon,
-  RepeatIcon,
-  ShuffleIcon,
-  SkipBackIcon,
-  SkipForwardIcon,
-  Volume2Icon,
-  VolumeXIcon,
-} from "lucide-react"
+  Pause as PauseIcon,
+  Play as PlayIcon,
+  Repeat1 as Repeat1Icon,
+  Repeat as RepeatIcon,
+  Shuffle as ShuffleIcon,
+  SkipBack as SkipBackIcon,
+  SkipForward as SkipForwardIcon,
+  Volume2 as Volume2Icon,
+  VolumeX as VolumeXIcon,
+} from "@designali/icons"
 
 import {
   Menubar,
@@ -88,9 +88,9 @@ export default function MusicPlayerMenubar() {
       <div className="flex items-center gap-3 border p-3">
         <div className="size-10 shrink-0 bg-gradient-to-br from-fuchsia-500 to-sky-500" />
         <div className="min-w-0 flex-1">
-          <p className="truncate text-sm font-medium">Harbor Lights</p>
+          <p className="truncate text-sm font-medium">Design se code tak</p>
           <p className="truncate text-xs text-muted-foreground">
-            The Quiet Tides
+            Designali
           </p>
         </div>
         <div className="flex items-center gap-1.5 text-muted-foreground">

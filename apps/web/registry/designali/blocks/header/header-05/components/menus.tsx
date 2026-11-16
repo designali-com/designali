@@ -43,19 +43,19 @@ export function Menus() {
             <NavigationMenuContent isOpen={activeMenu === "design"}>
               <ul className="grid w-full grid-cols-1 gap-6 md:grid-cols-5">
                 <li>
-                  <a href="#" className="group block">
+                  <a href="/work" className="group block">
                     <div className="mb-3 text-xl font-semibold text-background/80 hover:text-background">
-                      UI/UX
+                      Brand Identity
                     </div>
                   </a>
-                  <a href="#" className="group block">
+                  <a href="/work" className="group block">
                     <div className="mb-3 text-xl font-semibold text-background/80 hover:text-background">
-                      Branding
+                      UI/UX Design
                     </div>
                   </a>
-                  <a href="#" className="group block">
+                  <a href="/work" className="group block">
                     <div className="mb-3 text-xl font-semibold text-background/80 hover:text-background">
-                      Prototypes
+                      Design Systems
                     </div>
                   </a>
                 </li>
@@ -74,19 +74,19 @@ export function Menus() {
             <NavigationMenuContent isOpen={activeMenu === "dev"}>
               <ul className="grid w-full grid-cols-1 gap-6 md:grid-cols-5">
                 <li>
-                  <a href="#" className="group block">
+                  <a href="/work" className="group block">
                     <div className="mb-3 text-xl font-semibold text-background/80 hover:text-background">
-                      Frontend
+                      Next.js
                     </div>
                   </a>
-                  <a href="#" className="group block">
+                  <a href="/work" className="group block">
                     <div className="mb-3 text-xl font-semibold text-background/80 hover:text-background">
-                      Backend
+                      Web Development
                     </div>
                   </a>
-                  <a href="#" className="group block">
+                  <a href="/work" className="group block">
                     <div className="mb-3 text-xl font-semibold text-background/80 hover:text-background">
-                      DevOps
+                      AI Workflows
                     </div>
                   </a>
                 </li>
@@ -100,24 +100,24 @@ export function Menus() {
             onMouseLeave={handleMouseLeave}
           >
             <NavigationMenuTrigger isActive={activeMenu === "learning"}>
-              Learning
+              Templates
             </NavigationMenuTrigger>
             <NavigationMenuContent isOpen={activeMenu === "learning"}>
               <ul className="grid w-full grid-cols-1 gap-6 md:grid-cols-5">
                 <li>
-                  <a href="#" className="group block">
+                  <a href="/templates" className="group block">
                     <div className="mb-3 text-xl font-semibold text-background/80 hover:text-background">
-                      Tutorials
+                      Portfolio
                     </div>
                   </a>
-                  <a href="#" className="group block">
+                  <a href="/templates" className="group block">
                     <div className="mb-3 text-xl font-semibold text-background/80 hover:text-background">
-                      Courses
+                      Design Agency
                     </div>
                   </a>
-                  <a href="#" className="group block">
+                  <a href="/templates" className="group block">
                     <div className="mb-3 text-xl font-semibold text-background/80 hover:text-background">
-                      Blogs
+                      AI Templates
                     </div>
                   </a>
                 </li>
@@ -136,19 +136,19 @@ export function Menus() {
             <NavigationMenuContent isOpen={activeMenu === "community"}>
               <ul className="grid w-full grid-cols-1 gap-6 md:grid-cols-5">
                 <li>
-                  <a href="#" className="group block">
+                  <a href="https://www.instagram.com/designali.code/" className="group block">
                     <div className="mb-3 text-xl font-semibold text-background/80 hover:text-background">
-                      Forums
+                      Instagram
                     </div>
                   </a>
-                  <a href="#" className="group block">
+                  <a href="https://x.com/designali_com" className="group block">
                     <div className="mb-3 text-xl font-semibold text-background/80 hover:text-background">
-                      Discord
+                      X
                     </div>
                   </a>
-                  <a href="#" className="group block">
+                  <a href="https://www.linkedin.com/company/designali-com/" className="group block">
                     <div className="mb-3 text-xl font-semibold text-background/80 hover:text-background">
-                      GitHub
+                      LinkedIn
                     </div>
                   </a>
                 </li>
@@ -167,19 +167,19 @@ export function Menus() {
             <NavigationMenuContent isOpen={activeMenu === "resources"}>
               <ul className="grid w-full grid-cols-1 gap-6 md:grid-cols-5">
                 <li>
-                  <a href="#" className="group block">
+                  <a href="/docs" className="group block">
                     <div className="mb-3 text-xl font-semibold text-background/80 hover:text-background">
-                      Documentation
+                      Docs
                     </div>
                   </a>
-                  <a href="#" className="group block">
+                  <a href="/blogs" className="group block">
                     <div className="mb-3 text-xl font-semibold text-background/80 hover:text-background">
-                      API Reference
+                      Blogs
                     </div>
                   </a>
-                  <a href="#" className="group block">
+                  <a href="/docs/legal/terms" className="group block">
                     <div className="mb-3 text-xl font-semibold text-background/80 hover:text-background">
-                      Changelog
+                      Terms
                     </div>
                   </a>
                 </li>
@@ -193,24 +193,24 @@ export function Menus() {
             onMouseLeave={handleMouseLeave}
           >
             <NavigationMenuTrigger isActive={activeMenu === "tools"}>
-              Tools
+              Assets
             </NavigationMenuTrigger>
             <NavigationMenuContent isOpen={activeMenu === "tools"}>
               <ul className="grid w-full grid-cols-1 gap-6 md:grid-cols-5">
                 <li>
-                  <a href="#" className="group block">
+                  <a href="/icons" className="group block">
                     <div className="mb-3 text-xl font-semibold text-background/80 hover:text-background">
-                      Figma
+                      Icons
                     </div>
                   </a>
-                  <a href="#" className="group block">
+                  <a href="/logos" className="group block">
                     <div className="mb-3 text-xl font-semibold text-background/80 hover:text-background">
-                      Sketch
+                      Logos
                     </div>
                   </a>
-                  <a href="#" className="group block">
+                  <a href="/illustration" className="group block">
                     <div className="mb-3 text-xl font-semibold text-background/80 hover:text-background">
-                      Photoshop
+                      Illustration
                     </div>
                   </a>
                 </li>
@@ -224,24 +224,24 @@ export function Menus() {
               onMouseLeave={handleMouseLeave}
             >
               <NavigationMenuTrigger isActive={activeMenu === "services"}>
-                Services
+                Blocks
               </NavigationMenuTrigger>
               <NavigationMenuContent isOpen={activeMenu === "services"}>
                 <ul className="grid w-full grid-cols-1 gap-6 md:grid-cols-5">
                   <li>
-                    <a href="#" className="group block">
+                    <a href="/blocks" className="group block">
                       <div className="mb-3 text-xl font-semibold text-background/80 hover:text-background">
-                        Consulting
+                        Blocks
                       </div>
                     </a>
-                    <a href="#" className="group block">
+                    <a href="/ui" className="group block">
                       <div className="mb-3 text-xl font-semibold text-background/80 hover:text-background">
-                        Workshops
+                        UI Designs
                       </div>
                     </a>
-                    <a href="#" className="group block">
+                    <a href="/pricing" className="group block">
                       <div className="mb-3 text-xl font-semibold text-background/80 hover:text-background">
-                        Support
+                        Pricing
                       </div>
                     </a>
                   </li>
@@ -259,17 +259,17 @@ export function Menus() {
               <NavigationMenuContent isOpen={activeMenu === "company"}>
                 <ul className="grid w-full grid-cols-1 gap-6 md:grid-cols-5">
                   <li>
-                    <a href="#" className="group block">
+                    <a href="https://www.linkedin.com/in/aliimam-in/" className="group block">
                       <div className="mb-3 text-xl font-semibold text-background/80 hover:text-background">
-                        About Us
+                        Ali Imam
                       </div>
                     </a>
-                    <a href="#" className="group block">
+                    <a href="/work" className="group block">
                       <div className="mb-3 text-xl font-semibold text-background/80 hover:text-background">
-                        Careers
+                        Work
                       </div>
                     </a>
-                    <a href="#" className="group block">
+                    <a href="/contact" className="group block">
                       <div className="mb-3 text-xl font-semibold text-background/80 hover:text-background">
                         Contact
                       </div>

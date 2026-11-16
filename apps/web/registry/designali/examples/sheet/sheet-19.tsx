@@ -1,4 +1,9 @@
-import { BanIcon, KeyIcon, MailIcon, UserIcon } from "lucide-react"
+import {
+  Ban as BanIcon,
+  Key as KeyIcon,
+  Mail as MailIcon,
+  User as UserIcon,
+} from "@designali/icons"
 
 import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
 import { Badge } from "@workspace/ui/components/badge"
@@ -27,11 +32,11 @@ export default function AdminUserProfileSheet() {
       <SheetContent>
         <div className="flex flex-col items-center gap-2 border-b p-6 text-center">
           <Avatar size="lg">
-            <AvatarFallback>TB</AvatarFallback>
+            <AvatarFallback>T</AvatarFallback>
           </Avatar>
-          <SheetTitle>Tomas Berg</SheetTitle>
+          <SheetTitle>Tomas</SheetTitle>
           <SheetDescription>
-            tomas@fjordworks.example · joined Jan 2024
+            tomas@example.com · joined Jan 2024
           </SheetDescription>
           <div className="flex gap-1">
             <Badge>Pro plan</Badge>

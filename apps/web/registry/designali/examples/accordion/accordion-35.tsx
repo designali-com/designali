@@ -1,9 +1,9 @@
 import {
-  ChevronDownIcon,
-  CircleCheckIcon,
-  CircleDashedIcon,
-  CircleXIcon,
-} from "lucide-react"
+  ChevronDown as ChevronDownIcon,
+  CircleCheck as CircleCheckIcon,
+  CircleDashed as CircleDashedIcon,
+  CircleX as CircleXIcon,
+} from "@designali/icons"
 
 import {
   Accordion,
@@ -28,7 +28,7 @@ const steps = [
     duration: "1m 04s",
     log: [
       "Compiling 312 modules",
-      "Generated static pages (48/48)",
+      "Generated static pages for designali.com (48/48)",
       "Build completed",
     ],
   },
@@ -38,8 +38,8 @@ const steps = [
     status: "failed",
     duration: "42s",
     log: [
-      "PASS  billing/total.test.ts",
-      "FAIL  auth/session.test.ts",
+      "PASS  blocks/pricing.test.ts",
+      "FAIL  templates/design-agency.test.ts",
       "1 failed, 86 passed",
     ],
   },

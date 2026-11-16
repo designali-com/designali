@@ -1,4 +1,6 @@
-import { TruckIcon } from "lucide-react"
+import {
+  Truck as TruckIcon,
+} from "@designali/icons"
 
 import { Progress } from "@workspace/ui/components/progress"
 import { cn } from "@workspace/ui/lib/utils"

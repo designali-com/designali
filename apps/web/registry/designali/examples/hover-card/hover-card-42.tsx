@@ -1,6 +1,14 @@
-import { CalendarPlusIcon, MessageSquareIcon, PhoneIcon } from "lucide-react"
+import {
+  CalendarPlus as CalendarPlusIcon,
+  MessageSquare as MessageSquareIcon,
+  Phone as PhoneIcon,
+} from "@designali/icons"
 
-import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from "@workspace/ui/components/avatar"
 import { Button } from "@workspace/ui/components/button"
 import {
   HoverCard,
@@ -13,13 +21,14 @@ export default function ContactActionsHoverCard() {
     <HoverCard>
       <HoverCardTrigger href="#" className="flex items-center gap-2 text-sm">
         <Avatar size="sm">
-          <AvatarFallback>FO</AvatarFallback>
+          <AvatarImage src="/ali.jpg" alt="Ali Imam" />
+          <AvatarFallback>AI</AvatarFallback>
         </Avatar>
-        <span className="font-medium hover:underline">Fatima Osei</span>
+        <span className="font-medium hover:underline">Ali Imam</span>
       </HoverCardTrigger>
       <HoverCardContent className="w-64">
-        <p className="text-sm font-medium">Fatima Osei</p>
-        <p className="text-muted-foreground">Account Executive · EMEA</p>
+        <p className="text-sm font-medium">Ali Imam</p>
+        <p className="text-muted-foreground">Founder · Designali</p>
         <div className="mt-3 grid grid-cols-3 gap-1">
           <Button variant="outline" size="sm">
             <MessageSquareIcon />

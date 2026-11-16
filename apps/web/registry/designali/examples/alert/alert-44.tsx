@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { CloudCheckIcon } from "lucide-react"
+import {
+  CloudCheck as CloudCheckIcon,
+} from "@designali/icons"
 
 import { Alert, AlertTitle } from "@workspace/ui/components/alert"
 import { Spinner } from "@workspace/ui/components/spinner"
@@ -34,7 +36,7 @@ export default function AlertAutosaveStatus() {
       <Textarea
         rows={4}
         onChange={onChange}
-        defaultValue="Hi team, here are the notes from Tuesday's planning session."
+        defaultValue="Hi team, here are the notes from Tuesday's Designali client kickoff."
         aria-label="Draft"
       />
     </div>

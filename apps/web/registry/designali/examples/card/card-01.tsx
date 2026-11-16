@@ -1,4 +1,7 @@
-import { Building2, ChevronRight } from "lucide-react"
+import {
+  Building2,
+  ChevronRight,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {

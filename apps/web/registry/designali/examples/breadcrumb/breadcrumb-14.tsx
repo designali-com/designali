@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { CheckIcon, ChevronsUpDownIcon } from "lucide-react"
+import {
+  Check as CheckIcon,
+  ChevronsUpDown as ChevronsUpDownIcon,
+} from "@designali/icons"
 
 import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
 import {
@@ -23,9 +26,9 @@ import {
 } from "@workspace/ui/components/dropdown-menu"
 
 const workspaces = [
-  { name: "Harbor Labs", initials: "HL" },
-  { name: "Quill & Co", initials: "QC" },
-  { name: "Orbit Health", initials: "OH" },
+  { name: "Designali", initials: "DA" },
+  { name: "Dalim Works", initials: "DW" },
+  { name: "Dalim UI", initials: "DU" },
 ]
 
 export default function WorkspaceSwitcherBreadcrumb() {
@@ -74,7 +77,7 @@ export default function WorkspaceSwitcherBreadcrumb() {
         </BreadcrumbItem>
         <BreadcrumbSeparator />
         <BreadcrumbItem>
-          <BreadcrumbPage>Mobile app</BreadcrumbPage>
+          <BreadcrumbPage>Landing page</BreadcrumbPage>
         </BreadcrumbItem>
       </BreadcrumbList>
     </Breadcrumb>

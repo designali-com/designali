@@ -7,18 +7,18 @@ import {
 
 const reports = [
   {
-    name: "Tariq Aziz",
-    initials: "TA",
-    title: "Eng Manager",
-    dept: "Platform",
-    office: "Austin",
+    name: "Studio Developer",
+    initials: "SD",
+    title: "Design Engineer",
+    dept: "Web development",
+    office: "Remote",
   },
   {
-    name: "Sofia Rossi",
-    initials: "SR",
+    name: "Brand Designer",
+    initials: "BD",
     title: "Design Lead",
-    dept: "Product Design",
-    office: "Milan",
+    dept: "Brand identity",
+    office: "Remote",
   },
 ]
 
@@ -26,8 +26,8 @@ export default function OrgChartHoverCard() {
   return (
     <div className="flex flex-col items-center gap-3">
       <div className="border bg-muted/50 px-3 py-2 text-center text-sm">
-        <p className="font-medium">Helena Brandt</p>
-        <p className="text-xs text-muted-foreground">VP Product</p>
+        <p className="font-medium">Ali Imam</p>
+        <p className="text-xs text-muted-foreground">Founder, Designali</p>
       </div>
       <div className="h-4 w-px bg-border" />
       <div className="flex gap-3">
@@ -49,7 +49,7 @@ export default function OrgChartHoverCard() {
                 <dt className="text-muted-foreground">Department</dt>
                 <dd>{r.dept}</dd>
                 <dt className="text-muted-foreground">Reports to</dt>
-                <dd>Helena Brandt</dd>
+                <dd>Ali Imam</dd>
                 <dt className="text-muted-foreground">Office</dt>
                 <dd>{r.office}</dd>
               </dl>

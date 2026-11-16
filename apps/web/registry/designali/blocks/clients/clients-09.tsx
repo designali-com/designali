@@ -1,27 +1,29 @@
-import { ArrowUpRight } from "lucide-react"
+import {
+  ArrowUpRight,
+} from "@designali/icons"
 
 const cases = [
   {
-    client: "Halcyon Bank",
+    client: "Dalim UI",
     metric: "38%",
     label: "faster design handoff",
-    sector: "Fintech",
+    sector: "UI kit",
   },
   {
-    client: "Orbital Health",
+    client: "Designali Blocks",
     metric: "2.4x",
     label: "component reuse",
-    sector: "Healthcare",
+    sector: "Component library",
   },
   {
-    client: "Fieldnote",
+    client: "Dalim to Designali",
     metric: "12 wks",
     label: "to full rebrand",
-    sector: "Media",
+    sector: "Brand identity",
   },
 ]
 
-const names = ["Halcyon", "Orbital", "Fieldnote", "Kestrel", "Vertex", "Sable"]
+const names = ["Designali", "Dalim", "Dalim UI", "Dalim Fonts", "Dalim Works", "Dalim Visuals"]
 
 export default function Clients09() {
   return (

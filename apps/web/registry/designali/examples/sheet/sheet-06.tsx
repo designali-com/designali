@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { BellIcon, CheckCheckIcon } from "lucide-react"
+import {
+  Bell as BellIcon,
+  CheckCheck as CheckCheckIcon,
+} from "@designali/icons"
 
 import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
 import { Button } from "@workspace/ui/components/button"
@@ -19,15 +22,15 @@ import { cn } from "@workspace/ui/lib/utils"
 const initial = [
   {
     id: 1,
-    who: "Omar Haddad",
-    what: "commented on Q3 roadmap",
+    who: "Ali Imam",
+    what: "commented on Blocks roadmap",
     when: "2m ago",
     unread: true,
   },
   {
     id: 2,
-    who: "Priya Nair",
-    what: "assigned you to Billing revamp",
+    who: "Priya",
+    what: "assigned you to Pricing page revamp",
     when: "1h ago",
     unread: true,
   },
@@ -40,7 +43,7 @@ const initial = [
   },
   {
     id: 4,
-    who: "Jonas Weber",
+    who: "Jonas",
     what: "requested your review",
     when: "Yesterday",
     unread: false,

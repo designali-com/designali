@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { MessageCircleIcon, SendIcon } from "lucide-react"
+import {
+  MessageCircle as MessageCircleIcon,
+  Send as SendIcon,
+} from "@designali/icons"
 
 import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
 import { Button } from "@workspace/ui/components/button"
@@ -18,9 +21,9 @@ import { cn } from "@workspace/ui/lib/utils"
 
 export default function SupportChatSheet() {
   const [messages, setMessages] = React.useState([
-    { from: "agent", text: "Hi! I'm Mira from support. How can I help today?" },
-    { from: "me", text: "My invoice shows the wrong billing address." },
-    { from: "agent", text: "I can fix that. Which address should we use?" },
+    { from: "agent", text: "Hi! I'm Mira from Designali support. How can I help today?" },
+    { from: "me", text: "My template download link has expired." },
+    { from: "agent", text: "I can fix that. Which template did you buy?" },
   ])
   const [draft, setDraft] = React.useState("")
 
@@ -41,10 +44,10 @@ export default function SupportChatSheet() {
         <SheetHeader className="border-b">
           <div className="flex items-center gap-2">
             <Avatar size="sm">
-              <AvatarFallback>MS</AvatarFallback>
+              <AvatarFallback>M</AvatarFallback>
             </Avatar>
             <div>
-              <SheetTitle>Mira · Support</SheetTitle>
+              <SheetTitle>Mira · Designali Support</SheetTitle>
               <SheetDescription>
                 Typically replies in 2 minutes
               </SheetDescription>

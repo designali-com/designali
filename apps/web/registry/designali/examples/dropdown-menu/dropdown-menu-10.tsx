@@ -1,7 +1,11 @@
 "use client"
 
 import * as React from "react"
-import { CheckIcon, ChevronsUpDownIcon, PlusIcon } from "lucide-react"
+import {
+  Check as CheckIcon,
+  ChevronsUpDown as ChevronsUpDownIcon,
+  Plus as PlusIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -17,14 +21,14 @@ import {
 import { cn } from "@workspace/ui/lib/utils"
 
 const workspaces = [
-  { id: "acme", name: "Lumen Collective", plan: "Pro", color: "bg-violet-500" },
+  { id: "acme", name: "Designali Studio", plan: "Pro", color: "bg-violet-500" },
   {
     id: "orbit",
-    name: "Orbit Analytics",
+    name: "Dalim Agency",
     plan: "Team",
     color: "bg-emerald-500",
   },
-  { id: "side", name: "Weekend Projects", plan: "Free", color: "bg-amber-500" },
+  { id: "side", name: "Dalim UI", plan: "Free", color: "bg-amber-500" },
 ]
 
 export default function WorkspaceSwitcherMenu() {

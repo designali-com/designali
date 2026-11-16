@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { RepeatIcon } from "lucide-react"
+import {
+  Repeat as RepeatIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {

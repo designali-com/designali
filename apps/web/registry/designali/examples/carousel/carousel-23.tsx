@@ -1,4 +1,6 @@
-import { PlusIcon } from "lucide-react"
+import {
+  Plus as PlusIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import { Button } from "@workspace/ui/components/button"
@@ -11,13 +13,13 @@ import {
 } from "@workspace/ui/components/carousel"
 
 const columns = [
-  { title: "Backlog", cards: ["Audit pricing page", "Refresh empty states"] },
+  { title: "Backlog", cards: ["Audit /pricing page", "New logo set"] },
   {
     title: "In progress",
-    cards: ["Billing settings revamp", "Mobile nav", "Usage alerts"],
+    cards: ["Hero block variants", "Icons search", "CGI product render"],
   },
-  { title: "Review", cards: ["Invoice PDF layout"] },
-  { title: "Done", cards: ["Dark mode tokens", "Team invites"] },
+  { title: "Review", cards: ["Client brand identity"] },
+  { title: "Done", cards: ["Dark mode tokens", "Portfolio template"] },
 ]
 
 export default function KanbanColumnsSwipe() {

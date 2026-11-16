@@ -1,18 +1,20 @@
 "use client"
 
 import * as React from "react"
-import { BookOpenIcon } from "lucide-react"
+import {
+  BookOpen as BookOpenIcon,
+} from "@designali/icons"
 
 import { Progress } from "@workspace/ui/components/progress"
 import { ScrollArea } from "@workspace/ui/components/scroll-area"
 
 const paragraphs = [
-  "Remote teams often struggle with context. Decisions happen in calls, and the reasoning disappears.",
-  "Writing things down changes that. A short decision log turns tribal knowledge into something searchable.",
-  "Start small: one page per project, updated weekly, with links to the discussions that mattered.",
-  "Over time, the log becomes the onboarding guide you never had time to write.",
-  "New teammates read the history instead of interrupting the people who lived it.",
-  "The habit compounds. Each entry makes the next decision faster and the team more aligned.",
+  "Design and code often live in separate worlds. Decisions made in Figma get lost on the way to production.",
+  "Designali closes that gap: every block is designed and built by the same hands, design se code tak.",
+  "Start in Figma with spacing, type and color, then rebuild it in Next.js, React and Tailwind CSS.",
+  "Semantic tokens keep light and dark mode consistent across 460+ blocks and 240 landing pages.",
+  "Clients get production-ready code instead of a handoff file that still needs translating.",
+  "The result looks great, feels intuitive and works beautifully.",
 ]
 
 export default function ReadingProgressBar() {
@@ -38,7 +40,7 @@ export default function ReadingProgressBar() {
       <div className="flex items-center gap-2 border-b px-3 py-2">
         <BookOpenIcon className="size-3.5" />
         <span className="flex-1 truncate text-xs font-medium">
-          The case for decision logs
+          Design se code tak
         </span>
         <span className="text-[11px] text-muted-foreground tabular-nums">
           {progress}%

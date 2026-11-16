@@ -2,7 +2,9 @@
 
 import * as React from "react"
 import { addDays, format, isSameDay } from "date-fns"
-import { XIcon } from "lucide-react"
+import {
+  X as XIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import { Button } from "@workspace/ui/components/button"
@@ -28,9 +30,9 @@ export default function MeetingPollDates() {
   return (
     <Card className="w-full max-w-xs">
       <CardHeader>
-        <CardTitle>Propose meeting dates</CardTitle>
+        <CardTitle>Propose design review dates</CardTitle>
         <CardDescription>
-          Pick up to 5 options for the team to vote on.
+          Pick up to 5 options for the Designali team to vote on.
         </CardDescription>
       </CardHeader>
       <CardContent className="flex flex-col items-center gap-3">

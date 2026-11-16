@@ -1,15 +1,18 @@
 "use client"
 
 import * as React from "react"
-import { CircleCheckIcon, CircleIcon } from "lucide-react"
+import {
+  CircleCheck as CircleCheckIcon,
+  Circle as CircleIcon,
+} from "@designali/icons"
 
 import { Toggle } from "@workspace/ui/components/toggle"
 import { cn } from "@workspace/ui/lib/utils"
 
 const initialTasks = [
-  { id: 1, title: "Send venue deposit", done: true },
-  { id: 2, title: "Draft speaker bios", done: false },
-  { id: 3, title: "Order name badges", done: false },
+  { id: 1, title: "Send brand identity proposal", done: true },
+  { id: 2, title: "Design homepage in Figma", done: false },
+  { id: 3, title: "Build site with Next.js", done: false },
 ]
 
 export default function TaskCompleteToggles() {
@@ -18,7 +21,7 @@ export default function TaskCompleteToggles() {
   return (
     <div className="flex w-full max-w-xs flex-col border">
       <div className="border-b px-3 py-2 text-xs font-medium text-muted-foreground">
-        Conference prep - {tasks.filter((t) => t.done).length}/{tasks.length}
+        Client project - {tasks.filter((t) => t.done).length}/{tasks.length}
       </div>
       {tasks.map((t) => (
         <div

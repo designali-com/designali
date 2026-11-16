@@ -1,4 +1,8 @@
-import { Apple, Smartphone, Star } from "lucide-react"
+import {
+  Apple,
+  Smartphone,
+  Star,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 
@@ -34,15 +38,15 @@ export default function CallToAction17() {
               <Star key={i} className="size-4 fill-current" />
             ))}
             <span className="ml-2 text-xs text-muted-foreground">
-              4.8 from 21,000 ratings
+              Loved by designers and developers
             </span>
           </div>
           <h2 className="mt-5 text-3xl font-medium tracking-tight md:text-5xl">
-            Your budget, in your pocket.
+            Designali, in your pocket.
           </h2>
           <p className="mt-4 max-w-md text-sm leading-7 text-muted-foreground">
-            Tally syncs every account overnight and tells you, in plain words,
-            what you can safely spend today.
+            Browse 4,000+ icons, 460+ blocks and every Designali template,
+            and send them straight to your next project.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Button size="lg" nativeButton={false} render={<a href="#" />}>

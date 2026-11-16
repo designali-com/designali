@@ -1,4 +1,6 @@
-import { PlayIcon } from "lucide-react"
+import {
+  Play as PlayIcon,
+} from "@designali/icons"
 
 import { AspectRatio } from "@workspace/ui/components/aspect-ratio"
 import { Button } from "@workspace/ui/components/button"
@@ -15,7 +17,7 @@ export default function AudioWaveformStrip() {
     <div className="flex w-full max-w-md items-center gap-3 border p-3">
       <Button
         size="icon"
-        aria-label="Play memo"
+        aria-label="Play voice note from Ali"
         className="shrink-0 rounded-full"
       >
         <PlayIcon className="fill-current" />

@@ -1,4 +1,6 @@
-import { BanIcon } from "lucide-react"
+import {
+  Ban as BanIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {

@@ -1,12 +1,16 @@
 "use client"
 
 import { useState } from "react"
-import { Check, Copy, Globe } from "lucide-react"
+import {
+  Check,
+  Copy,
+  Globe,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { cn } from "@workspace/ui/lib/utils"
 
-const email = "hello@ines-moreau.studio"
+const email = "hello@designali.com"
 
 const slots = [
   { day: "Tue", date: "18 Nov", times: ["10:00", "14:30"] },
@@ -16,10 +20,10 @@ const slots = [
 ]
 
 const links = [
-  { label: "Read.cv", handle: "/inesmoreau" },
-  { label: "Dribbble", handle: "@ines.m" },
-  { label: "LinkedIn", handle: "in/inesmoreau" },
-  { label: "Newsletter", handle: "Field Notes" },
+  { label: "Instagram", handle: "@designali.code" },
+  { label: "X", handle: "@designali_com" },
+  { label: "LinkedIn", handle: "in/aliimam-in" },
+  { label: "21st.dev", handle: "@designali-in" },
 ]
 
 export default function Portfolio20() {
@@ -46,7 +50,7 @@ export default function Portfolio20() {
             <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-500 opacity-60" />
             <span className="relative inline-flex size-2 rounded-full bg-emerald-500" />
           </span>
-          Taking on two projects for Q1 2027
+          Available for selected projects
         </div>
 
         <h2 className="mt-6 text-4xl leading-[1.05] font-medium tracking-tight md:text-7xl">
@@ -77,7 +81,7 @@ export default function Portfolio20() {
               <h3 className="font-medium">Book a 30-minute intro call</h3>
               <span className="flex items-center gap-1 text-xs text-muted-foreground">
                 <Globe className="size-3.5" />
-                Lyon, CET
+                Remote · your timezone
               </span>
             </div>
             <div className="mt-6 grid grid-cols-4 gap-2">

@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { ScanBarcodeIcon } from "lucide-react"
+import {
+  ScanBarcode as ScanBarcodeIcon,
+} from "@designali/icons"
 
 import {
   Combobox,
@@ -16,11 +18,11 @@ import { InputGroupAddon } from "@workspace/ui/components/input-group"
 type Product = { sku: string; name: string; price: number; stock: number }
 
 const products: Product[] = [
-  { sku: "A1", name: "Flat white", price: 3.6, stock: 40 },
-  { sku: "A2", name: "Oat latte", price: 4.2, stock: 32 },
-  { sku: "B1", name: "Almond croissant", price: 3.9, stock: 6 },
-  { sku: "B2", name: "Banana bread", price: 3.2, stock: 0 },
-  { sku: "C1", name: "Sparkling water", price: 2.1, stock: 18 },
+  { sku: "A1", name: "Portfolio template", price: 49, stock: 40 },
+  { sku: "A2", name: "Blocks bundle", price: 79, stock: 32 },
+  { sku: "B1", name: "Icon pack", price: 19, stock: 6 },
+  { sku: "B2", name: "Founding member license", price: 199, stock: 0 },
+  { sku: "C1", name: "Logo pack", price: 29, stock: 18 },
 ]
 
 export default function ProductQuickAdd() {

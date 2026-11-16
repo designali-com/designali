@@ -9,10 +9,10 @@ import { Toaster, createToastManager } from "@workspace/ui/components/toast"
 const notify = createToastManager()
 
 const tickets = [
-  { id: "SUP-201", title: "Cannot reset password" },
-  { id: "SUP-202", title: "Invoice shows wrong VAT" },
-  { id: "SUP-203", title: "Export stuck at 90%" },
-  { id: "SUP-204", title: "Feature request: dark mode" },
+  { id: "SUP-201", title: "Cannot download template ZIP" },
+  { id: "SUP-202", title: "Invoice for blocks shows wrong VAT" },
+  { id: "SUP-203", title: "Icons export stuck at 90%" },
+  { id: "SUP-204", title: "Feature request: more logos" },
 ]
 
 export default function BulkActionToast() {

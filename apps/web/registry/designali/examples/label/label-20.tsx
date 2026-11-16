@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { Volume2Icon } from "lucide-react"
+import {
+  Volume2 as Volume2Icon,
+} from "@designali/icons"
 
 import { Label } from "@workspace/ui/components/label"
 import { Slider } from "@workspace/ui/components/slider"

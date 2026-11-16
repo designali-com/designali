@@ -1,4 +1,7 @@
-import { DownloadIcon, PlusIcon } from "lucide-react"
+import {
+  Download as DownloadIcon,
+  Plus as PlusIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Separator } from "@workspace/ui/components/separator"
@@ -10,7 +13,7 @@ export default function PageHeaderDivider() {
         <div className="flex flex-col gap-1">
           <h2 className="text-lg font-semibold">Customers</h2>
           <p className="text-xs text-muted-foreground">
-            1,482 accounts across 3 regions
+            1,482 designali.com customers
           </p>
         </div>
         <div className="flex gap-2">

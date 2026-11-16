@@ -1,9 +1,9 @@
 import {
-  ChartBarIcon,
-  ChevronRightIcon,
-  FolderKanbanIcon,
-  LayoutDashboardIcon,
-} from "lucide-react"
+  ChartBar as ChartBarIcon,
+  ChevronRight as ChevronRightIcon,
+  FolderKanban as FolderKanbanIcon,
+  LayoutDashboard as LayoutDashboardIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -23,13 +23,13 @@ const sections = [
   {
     title: "Projects",
     icon: FolderKanbanIcon,
-    links: ["Website refresh", "Mobile app", "Brand guidelines"],
+    links: ["designali.com refresh", "Templates", "Brand identity"],
     open: true,
   },
   {
     title: "Reports",
     icon: ChartBarIcon,
-    links: ["Revenue", "Retention"],
+    links: ["Template sales", "Downloads"],
     open: false,
   },
 ]
@@ -60,7 +60,7 @@ export default function SidebarNavSections() {
                     href="#"
                     className={cn(
                       "block px-2 py-1.5 text-xs text-muted-foreground hover:bg-muted hover:text-foreground",
-                      link === "Mobile app" &&
+                      link === "Templates" &&
                         "bg-muted font-medium text-foreground"
                     )}
                   >

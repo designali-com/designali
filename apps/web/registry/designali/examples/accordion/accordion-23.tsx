@@ -1,4 +1,6 @@
-import { ChevronDownIcon } from "lucide-react"
+import {
+  ChevronDown as ChevronDownIcon,
+} from "@designali/icons"
 
 import {
   Accordion,
@@ -12,29 +14,29 @@ const endpoints = [
   {
     value: "list",
     method: "GET",
-    path: "/v1/invoices",
-    summary: "List invoices for the current account.",
+    path: "/v1/templates",
+    summary: "List Designali templates in your account.",
     params: [
       { name: "limit", type: "integer", note: "1 to 100, default 20" },
-      { name: "status", type: "string", note: "draft, open or paid" },
+      { name: "category", type: "string", note: "blocks, pages or templates" },
     ],
   },
   {
     value: "create",
     method: "POST",
-    path: "/v1/invoices",
-    summary: "Create a draft invoice for a customer.",
+    path: "/v1/projects",
+    summary: "Create a new client project from a template.",
     params: [
-      { name: "customer", type: "string", note: "Required customer ID" },
+      { name: "template", type: "string", note: "Required template ID" },
       { name: "due_date", type: "date", note: "ISO 8601 date" },
     ],
   },
   {
     value: "delete",
     method: "DELETE",
-    path: "/v1/invoices/:id",
-    summary: "Delete a draft invoice. Finalised invoices cannot be deleted.",
-    params: [{ name: "id", type: "string", note: "Invoice ID in the path" }],
+    path: "/v1/projects/:id",
+    summary: "Delete a draft project. Deployed projects cannot be deleted.",
+    params: [{ name: "id", type: "string", note: "Project ID in the path" }],
   },
 ]
 

@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { CheckIcon, ChevronDownIcon } from "lucide-react"
+import {
+  Check as CheckIcon,
+  ChevronDown as ChevronDownIcon,
+} from "@designali/icons"
 
 import {
   Accordion,
@@ -15,7 +18,7 @@ import { cn } from "@workspace/ui/lib/utils"
 
 const steps = [
   { value: "contact", title: "Contact" },
-  { value: "shipping", title: "Shipping address" },
+  { value: "shipping", title: "Billing address" },
   { value: "payment", title: "Payment" },
 ]
 

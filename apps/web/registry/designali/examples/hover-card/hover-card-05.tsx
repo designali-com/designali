@@ -12,30 +12,30 @@ import { cn } from "@workspace/ui/lib/utils"
 
 const team = [
   {
-    name: "Ava Patel",
-    initials: "AP",
-    role: "Product Manager",
+    name: "Ali Imam",
+    initials: "AI",
+    role: "Founder · Design Engineer",
     status: "Available",
     online: true,
   },
   {
-    name: "Jonas Weber",
-    initials: "JW",
+    name: "Studio Developer",
+    initials: "SD",
     role: "Frontend Engineer",
     status: "In a meeting until 3 PM",
     online: false,
   },
   {
-    name: "Lina Okafor",
-    initials: "LO",
-    role: "UX Researcher",
+    name: "Brand Designer",
+    initials: "BD",
+    role: "Brand identity",
     status: "Available",
     online: true,
   },
   {
-    name: "Marco Silva",
-    initials: "MS",
-    role: "Backend Engineer",
+    name: "Motion Designer",
+    initials: "MD",
+    role: "CGI & motion",
     status: "Out of office",
     online: false,
   },
@@ -71,7 +71,7 @@ export default function TeamAvatarStackHoverCards() {
           </HoverCard>
         ))}
       </AvatarGroup>
-      <p className="text-xs text-muted-foreground">Checkout redesign squad</p>
+      <p className="text-xs text-muted-foreground">Designali studio</p>
     </div>
   )
 }

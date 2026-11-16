@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { CircleCheckIcon, CircleIcon } from "lucide-react"
+import {
+  CircleCheck as CircleCheckIcon,
+  Circle as CircleIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Progress } from "@workspace/ui/components/progress"
@@ -11,10 +14,10 @@ import { cn } from "@workspace/ui/lib/utils"
 const notify = createToastManager()
 
 const tasks = [
-  "Create your workspace",
+  "Create your Designali account",
   "Invite a teammate",
-  "Connect a calendar",
-  "Publish first page",
+  "Download a template",
+  "Publish your first page",
 ]
 
 export default function OnboardingProgressToast() {

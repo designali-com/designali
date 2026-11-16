@@ -1,4 +1,7 @@
-import { ChevronDownIcon, FileCodeIcon } from "lucide-react"
+import {
+  ChevronDown as ChevronDownIcon,
+  FileCode as FileCodeIcon,
+} from "@designali/icons"
 
 import {
   Accordion,
@@ -11,7 +14,7 @@ import { cn } from "@workspace/ui/lib/utils"
 const files = [
   {
     value: "price",
-    path: "src/billing/price.ts",
+    path: "src/pricing/template-price.ts",
     added: 4,
     removed: 2,
     diff: [
@@ -22,7 +25,7 @@ const files = [
   },
   {
     value: "region",
-    path: "src/billing/region.ts",
+    path: "src/pricing/region.ts",
     added: 12,
     removed: 0,
     diff: [

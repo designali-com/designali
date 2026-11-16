@@ -2,12 +2,12 @@
 
 import * as React from "react"
 import {
-  CommandIcon,
-  CreditCardIcon,
-  FolderPlusIcon,
-  MoonIcon,
-  UserPlusIcon,
-} from "lucide-react"
+  Command as CommandIcon,
+  CreditCard as CreditCardIcon,
+  FolderPlus as FolderPlusIcon,
+  Moon as MoonIcon,
+  UserPlus as UserPlusIcon,
+} from "@designali/icons"
 
 import { Input } from "@workspace/ui/components/input"
 

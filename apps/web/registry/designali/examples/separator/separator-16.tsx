@@ -1,12 +1,14 @@
-import { CheckIcon } from "lucide-react"
+import {
+  Check as CheckIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Separator } from "@workspace/ui/components/separator"
 
 const features = [
-  "Unlimited projects",
-  "10 GB storage",
-  "Version history",
+  "All templates &amp; blocks",
+  "4000+ icons",
+  "Figma source files",
   "Priority support",
 ]
 
@@ -20,7 +22,7 @@ export default function PricingCardSeparator() {
           <span className="text-sm text-muted-foreground">/ month</span>
         </div>
         <span className="text-xs text-muted-foreground">
-          For freelancers and small teams.
+          For freelancers and small studios.
         </span>
       </div>
       <Button className="w-full">Start free trial</Button>

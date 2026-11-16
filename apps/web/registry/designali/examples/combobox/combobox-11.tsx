@@ -21,9 +21,9 @@ const titles = [
   "Product Manager",
   "Frontend Engineer",
   "Backend Engineer",
-  "Data Analyst",
+  "Design Engineer",
   "Engineering Manager",
-  "Customer Success Lead",
+  "Motion Designer",
 ]
 
 export default function JobTitleField() {
@@ -31,7 +31,7 @@ export default function JobTitleField() {
     <FieldGroup className="w-full max-w-xs">
       <Field>
         <FieldLabel htmlFor="full-name">Full name</FieldLabel>
-        <Input id="full-name" defaultValue="Hana Okada" />
+        <Input id="full-name" defaultValue="Ali Imam" />
       </Field>
       <Field>
         <FieldLabel htmlFor="job-title">Job title</FieldLabel>

@@ -1,34 +1,40 @@
-import { CheckCircle2, FileText, Search, Send, Wand2 } from "lucide-react"
+import {
+  CircleCheck as CheckCircle2,
+  FileText,
+  Search,
+  Send,
+  WandSparkles as Wand2,
+} from "@designali/icons"
 
 const steps = [
   {
     icon: FileText,
-    title: "Drop in your brief",
-    body: "Paste a doc, a Figma link or a messy Slack thread. Quill extracts goals, audience and constraints.",
+    title: "Share your brief",
+    body: "Send a doc, a Figma link or a few notes to hello@designali.com. Ali Imam reviews goals, audience and constraints.",
     tag: "Input",
   },
   {
     icon: Search,
-    title: "Research runs in parallel",
-    body: "Competitor pages, search intent and your own past content are pulled into one source panel with citations.",
-    tag: "2 to 4 min",
+    title: "Strategy and direction",
+    body: "We research your market and shape brand positioning and creative direction before any pixels are pushed.",
+    tag: "Week 1",
   },
   {
     icon: Wand2,
-    title: "Drafts in your voice",
-    body: "Three outlines and a first draft, written against your style guide and banned-phrase list.",
+    title: "Design in Figma",
+    body: "Brand identity and UI/UX screens are designed in Figma with a reusable design system.",
     tag: "Review",
   },
   {
     icon: CheckCircle2,
-    title: "Approve with comments",
-    body: "Editors leave inline notes; Quill revises only the flagged paragraphs and tracks every change.",
+    title: "Review together",
+    body: "You leave feedback on each screen and we refine the details until everything feels right.",
     tag: "Team",
   },
   {
     icon: Send,
-    title: "Publish everywhere",
-    body: "Push to your CMS, newsletter tool and social scheduler with per-channel formatting applied.",
+    title: "Build and launch",
+    body: "Designs become production-ready Next.js code with Tailwind CSS, deployed on Vercel.",
     tag: "Output",
   },
 ]
@@ -41,7 +47,7 @@ export default function Features13() {
           How it works
         </p>
         <h2 className="mt-4 text-center text-3xl font-medium tracking-tight md:text-5xl">
-          From brief to published in one afternoon.
+          From brief to launch with Designali.
         </h2>
         <ol className="relative mt-16">
           <span className="absolute top-2 bottom-2 left-5 w-px bg-border md:left-1/2" aria-hidden />

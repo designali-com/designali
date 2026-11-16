@@ -1,6 +1,9 @@
 "use client"
 
-import { Plus, X } from "lucide-react"
+import {
+  Plus,
+  X,
+} from "@designali/icons"
 import { cn } from "@workspace/ui/lib/utils"
 import {
   Accordion,

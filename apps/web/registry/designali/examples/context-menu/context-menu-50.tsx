@@ -2,13 +2,13 @@
 
 import * as React from "react"
 import {
-  BookmarkCheckIcon,
-  BookmarkPlusIcon,
-  CodeIcon,
-  ExternalLinkIcon,
-  EyeOffIcon,
-  LinkIcon,
-} from "lucide-react"
+  BookmarkCheck as BookmarkCheckIcon,
+  BookmarkPlus as BookmarkPlusIcon,
+  Code as CodeIcon,
+  ExternalLink as ExternalLinkIcon,
+  EyeOff as EyeOffIcon,
+  Link as LinkIcon,
+} from "@designali/icons"
 
 import {
   ContextMenu,
@@ -30,14 +30,14 @@ export default function LinkPreviewCardMenu() {
           <div className="w-24 shrink-0 bg-linear-to-br from-teal-400 to-cyan-600" />
           <div className="flex min-w-0 flex-col gap-0.5 p-3 text-xs">
             <span className="text-[11px] text-muted-foreground">
-              fieldnote.io/blog
+              designali.com/blogs
             </span>
             <span className="truncate font-medium">
-              How we cut onboarding time in half
+              From Figma to Next.js: design se code tak
             </span>
             <span className="line-clamp-2 text-muted-foreground">
-              Five small changes to our signup flow that doubled activation in a
-              quarter.
+              How Ali Imam turns thoughtful design into production-ready code
+              with Designali blocks.
             </span>
           </div>
         </ContextMenuTrigger>

@@ -1,4 +1,9 @@
-import { ArrowRight, CalendarDays, MapPin, Ticket } from "lucide-react"
+import {
+  ArrowRight,
+  CalendarDays,
+  MapPin,
+  Ticket,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 
@@ -9,10 +14,10 @@ const countdown = [
 ]
 
 const speakers = [
-  { initials: "AO", name: "Ada Obi", topic: "Type systems at scale", color: "from-chart-1 to-chart-2" },
-  { initials: "LM", name: "Luca Moretti", topic: "The edge is a lie", color: "from-chart-3 to-chart-4" },
-  { initials: "SN", name: "Sun Ning", topic: "Designing for latency", color: "from-chart-5 to-chart-1" },
-  { initials: "RK", name: "Rhea Kapoor", topic: "Postgres is enough", color: "from-chart-2 to-chart-5" },
+  { initials: "AI", name: "Ali Imam", topic: "Design se code tak", color: "from-chart-1 to-chart-2" },
+  { initials: "SA", name: "Sara", topic: "Design systems in Figma", color: "from-chart-3 to-chart-4" },
+  { initials: "OM", name: "Omar", topic: "Tailwind CSS tokens", color: "from-chart-5 to-chart-1" },
+  { initials: "NI", name: "Nina", topic: "Motion for the web", color: "from-chart-2 to-chart-5" },
 ]
 
 export default function Hero19() {
@@ -22,34 +27,34 @@ export default function Hero19() {
         <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-muted-foreground">
           <span className="flex items-center gap-2">
             <CalendarDays className="size-4" />
-            March 18 to 20, 2027
+            Three live sessions
           </span>
           <span className="flex items-center gap-2">
             <MapPin className="size-4" />
-            Pier 27, San Francisco and online
+            Online · Remote, worldwide
           </span>
         </div>
 
         <h1 className="mt-8 text-5xl leading-[0.95] font-medium tracking-tight sm:text-7xl md:text-8xl lg:text-9xl">
-          Frontier
+          Designali
           <span className="block bg-gradient-to-r from-chart-1 via-chart-2 to-chart-4 bg-clip-text text-transparent">
-            Conf 27
+            Live
           </span>
         </h1>
 
         <div className="mt-12 grid gap-10 border-t border-border pt-10 lg:grid-cols-[1fr_auto] lg:items-end">
           <div className="max-w-xl">
             <p className="text-base leading-7 text-muted-foreground">
-              Three days, 60 talks and one very long hallway track for people
-              who build the web&apos;s infrastructure. Early-bird pricing ends
-              when the countdown does.
+              Live workshops with Ali Imam on brand, UI/UX and production-ready
+              code with Next.js and Tailwind CSS. Early access closes when the
+              countdown does.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Button size="lg" nativeButton={false} render={<a href="#" />}>
                 <Ticket />
-                Get tickets from $349
+                Reserve your seat
               </Button>
-              <Button size="lg" variant="outline" nativeButton={false} render={<a href="#" />}>
+              <Button size="lg" variant="outline" nativeButton={false} render={<a href="/blogs" />}>
                 Browse the agenda
                 <ArrowRight />
               </Button>

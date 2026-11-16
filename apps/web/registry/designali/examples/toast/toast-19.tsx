@@ -1,6 +1,8 @@
 "use client"
 
-import { DownloadIcon } from "lucide-react"
+import {
+  Download as DownloadIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Toaster, createToastManager } from "@workspace/ui/components/toast"
@@ -23,7 +25,7 @@ export default function DownloadProgressToast() {
         notify.update(id, {
           type: "success",
           title: "Export ready",
-          description: "sales-q3.csv downloaded",
+          description: "designali-sales-q3.csv downloaded",
           timeout: 4000,
         })
         return

@@ -1,6 +1,8 @@
 "use client"
 
-import { Check } from "lucide-react"
+import {
+  Check,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -26,22 +28,22 @@ const audiences: { id: string; label: string; plans: Plan[] }[] = [
     label: "Individuals",
     plans: [
       {
-        name: "Hobby",
+        name: "Free",
         price: "$0",
         unit: "forever",
         blurb: "Side projects and learning.",
-        features: ["3 active projects", "Community templates", "1 GB storage"],
+        features: ["40 Designali blocks", "Free icons and logos", "Personal use"],
       },
       {
-        name: "Creator",
+        name: "Pro",
         price: "$12",
         unit: "per month",
         blurb: "Freelancers shipping client work.",
         features: [
-          "Unlimited projects",
-          "Custom domains",
-          "50 GB storage",
-          "Remove branding",
+          "All 460+ blocks",
+          "240+ landing pages",
+          "Figma source files",
+          "Commercial license",
         ],
         featured: true,
       },
@@ -52,22 +54,22 @@ const audiences: { id: string; label: string; plans: Plan[] }[] = [
     label: "Teams",
     plans: [
       {
-        name: "Studio",
+        name: "Team",
         price: "$29",
         unit: "per seat / month",
         blurb: "Small teams up to 20 people.",
-        features: ["Shared libraries", "Comments and reviews", "Version history"],
+        features: ["Everything in Pro", "Shared Figma library", "Priority support"],
       },
       {
-        name: "Business",
+        name: "Studio",
         price: "$49",
         unit: "per seat / month",
-        blurb: "Growing orgs with many products.",
+        blurb: "Agencies building for many clients.",
         features: [
-          "Everything in Studio",
-          "SAML SSO",
-          "Role-based permissions",
-          "Usage analytics",
+          "Everything in Team",
+          "Client project licenses",
+          "Private registry",
+          "Early access to new blocks",
         ],
         featured: true,
       },
@@ -75,27 +77,27 @@ const audiences: { id: string; label: string; plans: Plan[] }[] = [
   },
   {
     id: "enterprise",
-    label: "Enterprise",
+    label: "Studio services",
     plans: [
       {
-        name: "Enterprise",
+        name: "Design + build",
         price: "Custom",
-        unit: "annual contract",
-        blurb: "Security reviews, SLAs and procurement.",
+        unit: "per project",
+        blurb: "Brand, UI/UX and Next.js, end to end.",
         features: [
-          "99.99% uptime SLA",
-          "SCIM and audit logs",
-          "Data residency (EU / US)",
-          "Named success manager",
+          "Brand identity",
+          "UI/UX design in Figma",
+          "Production-ready Next.js site",
+          "Direct with Ali Imam",
         ],
         featured: true,
       },
       {
-        name: "Education",
+        name: "Students",
         price: "$0",
-        unit: "for verified schools",
-        blurb: "Free for classrooms and students.",
-        features: ["Unlimited student seats", "LMS integrations", "Teacher dashboard"],
+        unit: "with a student email",
+        blurb: "Free Pro access for students.",
+        features: ["All 460+ blocks", "Figma source files", "Personal projects"],
       },
     ],
   },
@@ -107,7 +109,7 @@ export default function Pricing10() {
       <div className="mx-auto max-w-5xl px-6">
         <Tabs defaultValue="teams" className="items-center gap-0">
           <h2 className="text-center text-3xl font-semibold tracking-tight md:text-4xl">
-            Pricing that fits how you work
+            Designali pricing that fits how you work
           </h2>
           <p className="mt-3 text-center text-sm text-muted-foreground">
             Choose who you are buying for to see the plans that make sense.
@@ -171,7 +173,7 @@ export default function Pricing10() {
                       className="mt-8 w-full"
                       variant={plan.featured ? "default" : "outline"}
                       nativeButton={false}
-                      render={<a href="#" />}
+                      render={<a href="/pricing" />}
                     >
                       {plan.price === "Custom" ? "Contact sales" : `Choose ${plan.name}`}
                     </Button>

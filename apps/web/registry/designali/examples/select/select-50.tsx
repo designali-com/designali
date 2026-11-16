@@ -1,4 +1,6 @@
-import { ActivityIcon } from "lucide-react"
+import {
+  Activity as ActivityIcon,
+} from "@designali/icons"
 
 import { Field, FieldLabel } from "@workspace/ui/components/field"
 import {
@@ -21,7 +23,7 @@ export default function RecordItemsSelect() {
     <div className="flex w-full max-w-sm flex-col gap-3 border p-4">
       <div className="flex items-center gap-2">
         <ActivityIcon className="size-4 text-emerald-500" />
-        <span className="text-sm font-medium">api.fieldnote.app/health</span>
+        <span className="text-sm font-medium">www.designali.com/api/health</span>
       </div>
       <Field orientation="horizontal" className="justify-between">
         <FieldLabel htmlFor="interval">Check interval</FieldLabel>

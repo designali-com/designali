@@ -1,7 +1,11 @@
 "use client"
 
 import { useState } from "react"
-import { ArrowRight, Gift, X } from "lucide-react"
+import {
+  ArrowRight,
+  Gift,
+  X,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 
@@ -30,7 +34,7 @@ export default function CallToAction16() {
               </span>
               <div className="min-w-0">
                 <p className="text-sm font-medium">
-                  Winter release: 40% off annual plans
+                  Winter release: 40% off Designali Pro annual plans
                 </p>
                 <p className="text-xs text-muted-foreground">
                   Ends Sunday at midnight. Applies to new and upgrading teams.

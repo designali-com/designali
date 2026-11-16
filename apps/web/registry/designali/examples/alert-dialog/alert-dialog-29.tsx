@@ -31,13 +31,13 @@ export default function DeleteUserReassignChoice() {
   return (
     <AlertDialog>
       <AlertDialogTrigger render={<Button variant="destructive" />}>
-        Offboard Maya Chen
+        Offboard Sara Khan
       </AlertDialogTrigger>
       <AlertDialogContent>
         <AlertDialogHeader>
-          <AlertDialogTitle>Offboard Maya Chen?</AlertDialogTitle>
+          <AlertDialogTitle>Offboard Sara Khan?</AlertDialogTitle>
           <AlertDialogDescription>
-            Maya owns 27 documents and 4 automations. Choose what happens to
+            Sara owns 27 Figma files and 4 client projects. Choose what happens to
             them.
           </AlertDialogDescription>
         </AlertDialogHeader>
@@ -63,7 +63,7 @@ export default function DeleteUserReassignChoice() {
                 Delete all content
               </FieldLabel>
               <FieldDescription>
-                Permanently remove her documents and automations.
+                Permanently remove her files and projects.
               </FieldDescription>
             </FieldContent>
           </Field>

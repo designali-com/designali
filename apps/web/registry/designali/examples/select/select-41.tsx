@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { XIcon } from "lucide-react"
+import {
+  X as XIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -18,9 +20,9 @@ import {
 } from "@workspace/ui/components/select"
 
 const projects = [
-  { label: "Website refresh", value: "website" },
-  { label: "Mobile app v3", value: "mobile" },
-  { label: "Internal tools", value: "internal" },
+  { label: "designali.com refresh", value: "website" },
+  { label: "Blocks v3", value: "mobile" },
+  { label: "Icons & logos", value: "internal" },
 ]
 
 export default function ClearableSelect() {

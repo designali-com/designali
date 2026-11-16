@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { Trash2Icon, TriangleAlertIcon } from "lucide-react"
+import {
+  Trash2 as Trash2Icon,
+  TriangleAlert as TriangleAlertIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Field, FieldLabel } from "@workspace/ui/components/field"
@@ -17,7 +20,7 @@ import {
   SheetTrigger,
 } from "@workspace/ui/components/sheet"
 
-const projectName = "atlas-marketing"
+const projectName = "dalim-works"
 
 export default function DeleteProjectSheet() {
   const [value, setValue] = React.useState("")

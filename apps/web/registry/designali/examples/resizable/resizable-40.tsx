@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { MonitorSmartphoneIcon } from "lucide-react"
+import {
+  MonitorSmartphone as MonitorSmartphoneIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import {

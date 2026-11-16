@@ -1,4 +1,9 @@
-import { AtSignIcon, InboxIcon, MailIcon, StarIcon } from "lucide-react"
+import {
+  AtSign as AtSignIcon,
+  Inbox as InboxIcon,
+  Mail as MailIcon,
+  Star as StarIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import {

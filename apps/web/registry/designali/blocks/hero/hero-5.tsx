@@ -4,11 +4,11 @@ import { Button } from "@workspace/ui/components/button"
 import * as React from "react"
 
 const images = [
-  { src: "/img/hero-1.jpg", alt: "Hero 1" },
-  { src: "/img/chat-1-light.jpg", alt: "Chat UI" },
-  { src: "/img/hero-2.jpg", alt: "Hero 2" },
-  { src: "/img/dashboard-1-dark.jpg", alt: "Dashboard" },
-  { src: "/img/login-1.jpg", alt: "Login Screen" },
+  { src: "/img/hero-1.jpg", alt: "Designali hero template" },
+  { src: "/img/chat-1-light.jpg", alt: "Designali chat UI design" },
+  { src: "/img/hero-2.jpg", alt: "Designali landing page" },
+  { src: "/img/dashboard-1-dark.jpg", alt: "Designali dashboard UI" },
+  { src: "/img/login-1.jpg", alt: "Designali login screen" },
 ]
 
 function createCSS(id: string) {
@@ -102,14 +102,14 @@ export function HeroSection() {
             <div className="w-full mt-auto mb-20 md:mb-0 md:mt-0 max-w-sm lg:max-w-md">
               <div className="select-none text-left">
                 <h1 className="text-[12vw] font-black uppercase leading-[0.8] tracking-[-0.065em] sm:text-[9vw] lg:text-[6.8vw]">
-                  DESIGN MOVES BRANDS
+                  DESIGN SE CODE TAK
                 </h1> 
               </div>
 
               <p className="mt-8 max-w-md text-left text-xs md:text-sm md:leading-6 text-muted-foreground">
-                WE BUILD BOLD VISUAL IDENTITIES, DIGITAL EXPERIENCES,
-                AND INTERFACES THAT TURN IDEAS INTO MEMORABLE BRANDS.
-                STRATEGY, DESIGN, AND TECHNOLOGY — CRAFTED TOGETHER. 
+                DESIGNALI DESIGNS AND BUILDS BRAND IDENTITIES, INTERFACES,
+                AND PRODUCTION-READY WEBSITES WITH NEXT.JS AND TAILWIND.
+                DESIGN AND CODE — CRAFTED TOGETHER BY ALI IMAM. 
               </p>
 
               <div className="my-8 flex flex-wrap gap-3">

@@ -10,9 +10,9 @@ import {
 } from "@workspace/ui/components/table"
 
 const users = [
-  { id: "u1", name: "Grace Holloway", role: "Owner" },
-  { id: "u2", name: "Marcus Bell", role: "Editor" },
-  { id: "u3", name: "Tomoko Arai", role: "Viewer" },
+  { id: "u1", name: "Ali Imam", role: "Owner" },
+  { id: "u2", name: "Studio Designer", role: "Editor" },
+  { id: "u3", name: "Client Reviewer", role: "Viewer" },
 ]
 
 export default function TableRowSelectLabels() {

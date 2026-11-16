@@ -1,4 +1,6 @@
-import { TrophyIcon } from "lucide-react"
+import {
+  Trophy as TrophyIcon,
+} from "@designali/icons"
 
 import { Progress, ProgressLabel } from "@workspace/ui/components/progress"
 

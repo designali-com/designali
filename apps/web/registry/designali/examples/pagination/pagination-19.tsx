@@ -24,8 +24,8 @@ export default function ChangelogNewerOlder() {
         {index === 0 && <Badge>Latest</Badge>}
       </div>
       <p className="text-xs text-muted-foreground">
-        Improved sync reliability, faster cold starts, and a new audit log
-        export.
+        460+ blocks, 240 landing pages and 2300+ UI examples, now live on
+        designali.com.
       </p>
       <Pagination>
         <PaginationContent className="w-full justify-between">

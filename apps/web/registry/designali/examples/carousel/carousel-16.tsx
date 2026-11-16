@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { ClockIcon } from "lucide-react"
+import {
+  Clock as ClockIcon,
+} from "@designali/icons"
 
 import {
   Carousel,
@@ -13,12 +15,12 @@ import {
 } from "@workspace/ui/components/carousel"
 
 const guides = [
-  { title: "Set up your first workspace", minutes: 4 },
-  { title: "Invite teammates and assign roles", minutes: 3 },
-  { title: "Connect your calendar", minutes: 2 },
-  { title: "Build an automation", minutes: 6 },
-  { title: "Share a public dashboard", minutes: 5 },
-  { title: "Export data to CSV", minutes: 2 },
+  { title: "Install @designali/icons", minutes: 4 },
+  { title: "Add your first Designali block", minutes: 3 },
+  { title: "Customize a landing page", minutes: 2 },
+  { title: "Theme with semantic tokens", minutes: 6 },
+  { title: "Use @designali/logos", minutes: 5 },
+  { title: "Deploy a template to Vercel", minutes: 2 },
 ]
 
 export default function SlideCounterHeader() {

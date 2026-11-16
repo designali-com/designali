@@ -1,4 +1,8 @@
-import { ChevronRightIcon, EllipsisIcon, FolderIcon } from "lucide-react"
+import {
+  ChevronRight as ChevronRightIcon,
+  Ellipsis as EllipsisIcon,
+  Folder as FolderIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -8,7 +12,7 @@ import {
   DropdownMenuTrigger,
 } from "@workspace/ui/components/dropdown-menu"
 
-const hidden = ["Clients", "Northwind", "2026 campaigns"]
+const hidden = ["Clients", "Designali", "2026 projects"]
 
 export default function BreadcrumbOverflowMenu() {
   return (
@@ -17,7 +21,7 @@ export default function BreadcrumbOverflowMenu() {
       className="flex items-center gap-1 text-xs text-muted-foreground"
     >
       <a href="#" className="hover:text-foreground">
-        Drive
+        Studio
       </a>
       <ChevronRightIcon className="size-3.5" />
       <DropdownMenu>
@@ -47,10 +51,10 @@ export default function BreadcrumbOverflowMenu() {
       </DropdownMenu>
       <ChevronRightIcon className="size-3.5" />
       <a href="#" className="hover:text-foreground">
-        Spring launch
+        Brand identity
       </a>
       <ChevronRightIcon className="size-3.5" />
-      <span className="font-medium text-foreground">Hero assets</span>
+      <span className="font-medium text-foreground">Logo assets</span>
     </nav>
   )
 }

@@ -1,6 +1,8 @@
-import { ArrowUpRightIcon } from "lucide-react"
+import {
+  ArrowUpRight as ArrowUpRightIcon,
+} from "@designali/icons"
 
-import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
+import { Avatar, AvatarFallback, AvatarImage } from "@workspace/ui/components/avatar"
 import { Badge } from "@workspace/ui/components/badge"
 import {
   Card,
@@ -30,18 +32,19 @@ export default function ArticleLinkCard() {
             <Badge variant="outline">8 min read</Badge>
           </div>
           <CardTitle className="mt-1 text-base group-hover:underline">
-            How we cut cold starts by 70% with edge caching
+            How we cut designali.com load times by 70% on Vercel
           </CardTitle>
           <CardDescription>
-            A look at the request path, the cache keys we chose and what broke
-            along the way.
+            A look at the Next.js caching, image pipeline and what broke along
+            the way.
           </CardDescription>
         </CardHeader>
         <CardFooter className="gap-2">
           <Avatar size="sm">
-            <AvatarFallback>RP</AvatarFallback>
+            <AvatarImage src="/ali.jpg" alt="Ali Imam" />
+            <AvatarFallback>AI</AvatarFallback>
           </Avatar>
-          <span className="flex-1">Ravi Patel · Nov 12</span>
+          <span className="flex-1">Ali Imam · Nov 12</span>
           <ArrowUpRightIcon className="size-4 text-muted-foreground transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
         </CardFooter>
       </Card>

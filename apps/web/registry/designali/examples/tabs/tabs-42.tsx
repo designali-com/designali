@@ -1,4 +1,9 @@
-import { HouseIcon, SearchIcon, ShoppingBagIcon, UserIcon } from "lucide-react"
+import {
+  House as HouseIcon,
+  Search as SearchIcon,
+  ShoppingBag as ShoppingBagIcon,
+  User as UserIcon,
+} from "@designali/icons"
 
 import {
   Tabs,
@@ -10,7 +15,7 @@ import {
 const tabs = [
   { value: "home", label: "Home", icon: HouseIcon },
   { value: "search", label: "Search", icon: SearchIcon },
-  { value: "orders", label: "Orders", icon: ShoppingBagIcon },
+  { value: "orders", label: "Downloads", icon: ShoppingBagIcon },
   { value: "profile", label: "Profile", icon: UserIcon },
 ]
 

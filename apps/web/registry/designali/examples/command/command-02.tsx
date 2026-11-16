@@ -1,7 +1,11 @@
 "use client"
 
 import * as React from "react"
-import { CreditCardIcon, SettingsIcon, UserIcon } from "lucide-react"
+import {
+  CreditCard as CreditCardIcon,
+  Settings as SettingsIcon,
+  User as UserIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {

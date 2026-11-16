@@ -6,12 +6,12 @@ import { Button } from "@workspace/ui/components/button"
 import { Spinner } from "@workspace/ui/components/spinner"
 
 const names = [
-  "Amara Osei",
-  "Theo Lindqvist",
-  "Priya Raman",
-  "Jonah Weller",
-  "Lucia Ferro",
-  "Kenji Arata",
+  "Ali Imam",
+  "Sara (Designer)",
+  "Omar (Developer)",
+  "Priya (Motion)",
+  "Daniel (3D artist)",
+  "Lena (Strategist)",
 ]
 
 export default function LoadMoreButton() {

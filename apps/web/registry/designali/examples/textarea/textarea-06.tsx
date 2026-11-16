@@ -1,14 +1,17 @@
 "use client"
 
 import * as React from "react"
-import { CheckIcon, CopyIcon } from "lucide-react"
+import {
+  Check as CheckIcon,
+  Copy as CopyIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Label } from "@workspace/ui/components/label"
 import { Textarea } from "@workspace/ui/components/textarea"
 
 const key =
-  "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIK3m9qP0xVb7rT2sYw8fLh4cN1jQeZ6uD5oG2aRk9WvX deploy@orbit-ci"
+  "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIK3m9qP0xVb7rT2sYw8fLh4cN1jQeZ6uD5oG2aRk9WvX deploy@designali.com"
 
 export default function ReadOnlyKeyTextarea() {
   const [copied, setCopied] = React.useState(false)

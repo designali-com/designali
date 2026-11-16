@@ -8,7 +8,7 @@ export default function LabeledSectionDivider() {
     <div className="flex w-full max-w-sm flex-col gap-4">
       <div className="flex flex-col gap-2">
         <Label htmlFor="project-name">Project name</Label>
-        <Input id="project-name" defaultValue="Northwind portal" />
+        <Input id="project-name" defaultValue="designali-portfolio" />
       </div>
       <div className="flex items-center gap-3">
         <span className="text-xs font-medium tracking-wide text-muted-foreground uppercase">

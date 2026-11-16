@@ -59,7 +59,7 @@ const items = [
     id: "8",
     title: "Let’s connect",
     content:
-      "You can reach me through contact@aliimam.in or on social platforms. I’m always open to new projects, collaborations, and conversations.",
+      "You can reach me through hello@designali.com or on social platforms. I’m always open to new projects, collaborations, and conversations.",
   },
 ]
 

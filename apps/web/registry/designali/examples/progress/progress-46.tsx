@@ -1,4 +1,6 @@
-import { DatabaseBackupIcon } from "lucide-react"
+import {
+  DatabaseBackup as DatabaseBackupIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import { Button } from "@workspace/ui/components/button"

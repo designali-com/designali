@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { ArrowLeftIcon, ArrowRightIcon } from "lucide-react"
+import {
+  ArrowLeft as ArrowLeftIcon,
+  ArrowRight as ArrowRightIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Label } from "@workspace/ui/components/label"
@@ -19,7 +22,7 @@ export default function SurveyOpenQuestion() {
       </div>
       <Progress value={80} />
       <Label htmlFor="sv-q4" className="text-sm">
-        What&apos;s one thing that would make you recommend us to a friend?
+        What&apos;s one thing that would make you recommend Designali to a friend?
       </Label>
       <Textarea
         id="sv-q4"

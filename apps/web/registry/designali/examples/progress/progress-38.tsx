@@ -1,4 +1,8 @@
-import { CreditCardIcon, ShoppingCartIcon, TruckIcon } from "lucide-react"
+import {
+  CreditCard as CreditCardIcon,
+  ShoppingCart as ShoppingCartIcon,
+  Truck as TruckIcon,
+} from "@designali/icons"
 
 import { Progress } from "@workspace/ui/components/progress"
 import { cn } from "@workspace/ui/lib/utils"

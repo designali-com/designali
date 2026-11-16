@@ -2,16 +2,16 @@
 
 import * as React from "react"
 import {
-  BookmarkIcon,
-  DownloadIcon,
-  EllipsisIcon,
-  MailIcon,
-  MessageCircleIcon,
-  PrinterIcon,
-  QrCodeIcon,
-  ShareIcon,
-  StickyNoteIcon,
-} from "lucide-react"
+  Bookmark as BookmarkIcon,
+  Download as DownloadIcon,
+  Ellipsis as EllipsisIcon,
+  Mail as MailIcon,
+  MessageCircle as MessageCircleIcon,
+  Printer as PrinterIcon,
+  QrCode as QrCodeIcon,
+  Share as ShareIcon,
+  StickyNote as StickyNoteIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -53,7 +53,7 @@ export default function ShareSheetDrawer() {
       </DrawerTrigger>
       <DrawerContent>
         <DrawerHeader>
-          <DrawerTitle>Share &quot;Charred leek risotto&quot;</DrawerTitle>
+          <DrawerTitle>Share &quot;Designali Templates&quot;</DrawerTitle>
           <DrawerDescription>
             Send it to a friend or save it for later.
           </DrawerDescription>
@@ -76,7 +76,7 @@ export default function ShareSheetDrawer() {
           <InputGroup>
             <InputGroupInput
               readOnly
-              value="sprig.cooking/r/leek-risotto"
+              value="designali.com/templates"
               aria-label="Link"
             />
             <InputGroupAddon align="inline-end">

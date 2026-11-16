@@ -1,16 +1,16 @@
 const funnel = [
-  { step: "Visited landing page", users: 24800 },
-  { step: "Started free trial", users: 6120 },
-  { step: "Created first project", users: 3940 },
-  { step: "Invited a teammate", users: 1870 },
-  { step: "Upgraded to paid", users: 742 },
+  { step: "Visited designali.com", users: 24800 },
+  { step: "Browsed /blocks", users: 6120 },
+  { step: "Copied a free block", users: 3940 },
+  { step: "Downloaded @designali/icons", users: 1870 },
+  { step: "Bought Designali Pro", users: 742 },
 ]
 
 const segments = [
-  { label: "Design teams", value: 46, color: "var(--chart-1)" },
+  { label: "Design engineers", value: 46, color: "var(--chart-1)" },
   { label: "Agencies", value: 28, color: "var(--chart-2)" },
   { label: "Freelancers", value: 17, color: "var(--chart-3)" },
-  { label: "Enterprise", value: 9, color: "var(--chart-4)" },
+  { label: "Startups", value: 9, color: "var(--chart-4)" },
 ]
 
 export default function Analytics05() {
@@ -27,7 +27,7 @@ export default function Analytics05() {
             Conversion funnel
           </p>
           <h2 className="mt-2 text-3xl font-medium tracking-tight">
-            From first visit to paid plan
+            From first visit to Designali Pro
           </h2>
           <div className="mt-10 space-y-2">
             {funnel.map((item, i) => {
@@ -61,7 +61,7 @@ export default function Analytics05() {
         </div>
 
         <div className="border border-border p-6 md:p-8">
-          <p className="text-sm font-medium">Paid accounts by segment</p>
+          <p className="text-sm font-medium">Designali Pro members by segment</p>
           <div className="relative mx-auto mt-8 size-48">
             <svg viewBox="0 0 100 100" className="size-full -rotate-90">
               {segments.map((segment) => {

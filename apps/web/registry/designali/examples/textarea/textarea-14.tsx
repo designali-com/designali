@@ -16,7 +16,7 @@ import { Textarea } from "@workspace/ui/components/textarea"
 
 export default function ProfileBioTextarea() {
   const [bio, setBio] = React.useState(
-    "Product designer in Oslo. Into type, trains and tiny apps."
+    "Design engineer at Designali. I design and code thoughtful digital experiences."
   )
   const max = 160
 

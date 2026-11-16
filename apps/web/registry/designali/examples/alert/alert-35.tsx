@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { ClockIcon, LockIcon } from "lucide-react"
+import {
+  Clock as ClockIcon,
+  Lock as LockIcon,
+} from "@designali/icons"
 
 import {
   Alert,
@@ -22,8 +25,8 @@ export default function AlertPermissionDenied() {
       </AlertTitle>
       <AlertDescription>
         {requested
-          ? "We’ll email you when Daniel Okafor responds."
-          : "Revenue by region is shared with Finance only. Ask the owner, Daniel Okafor, for access."}
+          ? "We’ll email you when Ali Imam responds."
+          : "Designali template sales are shared with the studio only. Ask the owner, Ali Imam, for access."}
       </AlertDescription>
       {!requested && (
         <AlertAction>

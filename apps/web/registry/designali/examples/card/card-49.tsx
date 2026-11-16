@@ -1,4 +1,7 @@
-import { LockIcon, SparklesIcon } from "lucide-react"
+import {
+  Lock as LockIcon,
+  Sparkles as SparklesIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -37,9 +40,9 @@ export default function LockedPremiumCard() {
         <span className="flex size-9 items-center justify-center border bg-card">
           <LockIcon className="size-4" />
         </span>
-        <span className="text-sm font-medium">Available on Growth</span>
+        <span className="text-sm font-medium">Available on Designali Pro</span>
         <span className="text-xs text-muted-foreground">
-          See where users drop off and which cohorts stick around.
+          See which customers keep coming back for templates and blocks.
         </span>
         <Button size="sm" className="mt-1">
           <SparklesIcon data-icon="inline-start" />

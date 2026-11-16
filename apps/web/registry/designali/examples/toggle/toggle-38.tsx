@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { LanguagesIcon } from "lucide-react"
+import {
+  Languages as LanguagesIcon,
+} from "@designali/icons"
 
 import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
 import { Toggle } from "@workspace/ui/components/toggle"
@@ -21,7 +23,7 @@ export default function MessageTranslateToggle() {
             : "On peut décaler l'appel à jeudi matin ?"}
         </div>
         <div className="flex items-center gap-2 text-xs text-muted-foreground">
-          <span>Louis Martin - 10:42</span>
+          <span>Client - 10:42</span>
           <Toggle
             size="sm"
             pressed={translated}

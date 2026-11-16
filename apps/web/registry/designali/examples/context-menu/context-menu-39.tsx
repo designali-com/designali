@@ -2,14 +2,14 @@
 
 import * as React from "react"
 import {
-  ActivityIcon,
-  BookmarkXIcon,
-  LinkIcon,
-  MapIcon,
-  PencilIcon,
-  ShapesIcon,
-  WalletIcon,
-} from "lucide-react"
+  Activity as ActivityIcon,
+  BookmarkX as BookmarkXIcon,
+  Link as LinkIcon,
+  Map as MapIcon,
+  Pencil as PencilIcon,
+  Shapes as ShapesIcon,
+  Wallet as WalletIcon,
+} from "@designali/icons"
 
 import {
   ContextMenu,
@@ -21,10 +21,10 @@ import {
 } from "@workspace/ui/components/context-menu"
 
 const initialBookmarks = [
-  { title: "Roadmap", icon: MapIcon },
-  { title: "Status", icon: ActivityIcon },
-  { title: "Design system", icon: ShapesIcon },
-  { title: "Payroll", icon: WalletIcon },
+  { title: "Templates", icon: MapIcon },
+  { title: "Blocks", icon: ActivityIcon },
+  { title: "Icons", icon: ShapesIcon },
+  { title: "Pricing", icon: WalletIcon },
 ]
 
 export default function BookmarksBarMenu() {

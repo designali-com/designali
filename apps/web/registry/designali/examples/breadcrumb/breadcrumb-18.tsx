@@ -16,7 +16,7 @@ export default function ChipBreadcrumb() {
             href="#"
             className="border bg-background px-2 py-1 hover:bg-muted"
           >
-            Courses
+            Docs
           </BreadcrumbLink>
         </BreadcrumbItem>
         <BreadcrumbSeparator />
@@ -25,13 +25,13 @@ export default function ChipBreadcrumb() {
             href="#"
             className="border bg-background px-2 py-1 hover:bg-muted"
           >
-            Data design
+            Design systems
           </BreadcrumbLink>
         </BreadcrumbItem>
         <BreadcrumbSeparator />
         <BreadcrumbItem>
           <BreadcrumbPage className="bg-primary px-2 py-1 text-primary-foreground">
-            Color scales
+            Color tokens
           </BreadcrumbPage>
         </BreadcrumbItem>
       </BreadcrumbList>

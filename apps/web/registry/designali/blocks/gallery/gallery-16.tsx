@@ -1,11 +1,14 @@
-import { Lock, Plus } from "lucide-react"
+import {
+  Lock,
+  Plus,
+} from "@designali/icons"
 
 const albums = [
-  { name: "Wedding - Ana & Rui", count: 342, updated: "2 days ago", shared: 14, colors: ["var(--chart-1)", "var(--chart-4)", "var(--chart-2)"] },
-  { name: "Lisbon studio shoot", count: 86, updated: "1 week ago", shared: 3, colors: ["var(--chart-2)", "var(--chart-3)", "var(--chart-5)"] },
-  { name: "Product - Spring line", count: 128, updated: "3 weeks ago", shared: 6, colors: ["var(--chart-5)", "var(--chart-1)", "var(--chart-3)"] },
-  { name: "Family archive 1998", count: 512, updated: "1 month ago", shared: 0, colors: ["var(--chart-4)", "var(--chart-2)", "var(--chart-1)"] },
-  { name: "Brand portraits", count: 44, updated: "2 months ago", shared: 2, colors: ["var(--chart-3)", "var(--chart-5)", "var(--chart-4)"] },
+  { name: "Designali brand assets", count: 342, updated: "2 days ago", shared: 14, colors: ['url("/og.jpg") center / cover', 'url("/images/templates/design-agency.jpg") center / cover', 'url("/images/templates/aliimam-comp.jpg") center / cover'] },
+  { name: "Dalim Agency archive", count: 86, updated: "1 week ago", shared: 3, colors: ['url("/images/templates/dalim-agency-old.jpg") center / cover', 'url("/images/templates/dalim-works-old.jpg") center / cover', 'url("/images/templates/dalim-visuals-old.jpg") center / cover'] },
+  { name: "Templates - Spring drop", count: 128, updated: "3 weeks ago", shared: 6, colors: ['url("/images/templates/portfolio-simple.jpg") center / cover', 'url("/images/templates/resort.jpg") center / cover', 'url("/images/templates/ai.jpg") center / cover'] },
+  { name: "Dalim archive", count: 512, updated: "1 month ago", shared: 0, colors: ['url("/images/templates/dalim-old.jpg") center / cover', 'url("/images/templates/dalim-fonts-old.jpg") center / cover', 'url("/images/templates/dalim-icons-old.jpg") center / cover'] },
+  { name: "Ali Imam portraits", count: 44, updated: "2 months ago", shared: 2, colors: ['url("/ali.jpg") center / cover', 'url("/ai.jpg") center / cover', 'url("/stock/design.jpg") center / cover'] },
 ]
 
 export default function Gallery16() {
@@ -15,7 +18,7 @@ export default function Gallery16() {
         <div className="flex flex-wrap items-center justify-between gap-4">
           <div>
             <h2 className="text-2xl font-semibold tracking-tight md:text-3xl">Albums</h2>
-            <p className="mt-1 text-sm text-muted-foreground">5 albums - 1,112 photos - 18.4 GB used</p>
+            <p className="mt-1 text-sm text-muted-foreground">5 Designali albums - 1,112 files - 18.4 GB used</p>
           </div>
         </div>
         <div className="mt-10 grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
@@ -32,7 +35,7 @@ export default function Gallery16() {
                 />
                 <div
                   className="absolute inset-0 border border-border shadow-lg transition duration-300 group-hover:-translate-y-2"
-                  style={{ background: `linear-gradient(150deg, ${album.colors[0]}, ${album.colors[1]})` }}
+                  style={{ background: album.colors[0] }}
                 />
                 <span className="absolute top-3 right-3 bg-background/85 px-2 py-0.5 font-mono text-[11px] tabular-nums backdrop-blur">
                   {album.count}
@@ -47,7 +50,7 @@ export default function Gallery16() {
                   <div className="flex -space-x-1.5">
                     {Array.from({ length: Math.min(album.shared, 3) }).map((_, i) => (
                       <span key={i} className="flex size-6 items-center justify-center rounded-full border-2 border-background bg-muted text-[9px] font-medium">
-                        {["AR", "JM", "KT"][i]}
+                        {["AI", "SR", "MK"][i]}
                       </span>
                     ))}
                     {album.shared > 3 && (

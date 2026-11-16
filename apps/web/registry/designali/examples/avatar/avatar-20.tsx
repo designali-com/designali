@@ -1,4 +1,8 @@
-import { UserIcon, UserXIcon, VenetianMaskIcon } from "lucide-react"
+import {
+  User as UserIcon,
+  UserX as UserXIcon,
+  VenetianMask as VenetianMaskIcon,
+} from "@designali/icons"
 
 import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
 

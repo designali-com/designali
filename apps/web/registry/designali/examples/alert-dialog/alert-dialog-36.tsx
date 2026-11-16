@@ -1,4 +1,8 @@
-import { FileVideoIcon, UploadCloudIcon, XIcon } from "lucide-react"
+import {
+  FileVideoCamera as FileVideoIcon,
+  CloudUpload as UploadCloudIcon,
+  X as XIcon,
+} from "@designali/icons"
 
 import {
   AlertDialog,
@@ -24,7 +28,7 @@ export default function StopUploadProgress() {
         </div>
         <div className="min-w-0 flex-1">
           <p className="truncate text-sm font-medium">
-            product-launch-keynote.mp4
+            designali-cgi-showreel.mp4
           </p>
           <p className="text-xs text-muted-foreground">
             1.2 GB of 1.9 GB - 2 min left

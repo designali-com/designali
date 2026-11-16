@@ -1,10 +1,10 @@
 import {
-  ActivityIcon,
-  KeyIcon,
-  LogInIcon,
-  ShieldCheckIcon,
-  UserPlusIcon,
-} from "lucide-react"
+  Activity as ActivityIcon,
+  Key as KeyIcon,
+  LogIn as LogInIcon,
+  ShieldCheck as ShieldCheckIcon,
+  UserPlus as UserPlusIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -17,7 +17,7 @@ import {
 } from "@workspace/ui/components/sheet"
 
 const events = [
-  { icon: LogInIcon, text: "Signed in from Lisbon, PT", when: "Today, 08:12" },
+  { icon: LogInIcon, text: "Signed in to designali.com", when: "Today, 08:12" },
   {
     icon: KeyIcon,
     text: 'Created API key "ci-runner"',
@@ -25,7 +25,7 @@ const events = [
   },
   {
     icon: UserPlusIcon,
-    text: "Invited dana@orbit.example",
+    text: "Invited dana@designali.com",
     when: "Mar 3, 11:05",
   },
   {

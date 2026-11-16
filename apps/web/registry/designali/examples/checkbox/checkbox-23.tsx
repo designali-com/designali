@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { CookieIcon } from "lucide-react"
+import {
+  Cookie as CookieIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -30,7 +32,7 @@ const categories = [
   {
     id: "analytics",
     title: "Analytics",
-    description: "Helps us understand how the site is used.",
+    description: "Helps us understand how designali.com is used.",
   },
   {
     id: "marketing",

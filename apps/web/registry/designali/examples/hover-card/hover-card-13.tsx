@@ -1,4 +1,8 @@
-import { FileSpreadsheetIcon, FileTextIcon, FileVideoIcon } from "lucide-react"
+import {
+  FileSpreadsheet as FileSpreadsheetIcon,
+  FileText as FileTextIcon,
+  FileVideoCamera as FileVideoIcon,
+} from "@designali/icons"
 
 import {
   HoverCard,
@@ -8,24 +12,24 @@ import {
 
 const files = [
   {
-    name: "Q3-forecast.xlsx",
+    name: "designali-roadmap.xlsx",
     icon: FileSpreadsheetIcon,
     size: "248 KB",
-    owner: "Hana Ito",
+    owner: "Ali Imam",
     modified: "Today, 9:14 AM",
   },
   {
-    name: "brand-guidelines.pdf",
+    name: "designali-brand-guidelines.pdf",
     icon: FileTextIcon,
     size: "12.4 MB",
-    owner: "Leo Martins",
+    owner: "Ali Imam",
     modified: "Mar 2, 2025",
   },
   {
-    name: "onboarding-video.mp4",
+    name: "colorful-spheres.mp4",
     icon: FileVideoIcon,
     size: "184 MB",
-    owner: "Sara Novak",
+    owner: "Designali",
     modified: "Feb 18, 2025",
   },
 ]

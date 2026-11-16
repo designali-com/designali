@@ -1,4 +1,6 @@
-import { DownloadIcon } from "lucide-react"
+import {
+  Download as DownloadIcon,
+} from "@designali/icons"
 
 import { Badge } from "@workspace/ui/components/badge"
 import {

@@ -11,19 +11,19 @@ import { cn } from "@workspace/ui/lib/utils"
 
 const products = [
   {
-    name: "Linen Shirt",
+    name: "Portfolio Simple template",
     sku: "LS-001",
     stock: 42,
     tone: "from-stone-300 to-stone-500",
   },
   {
-    name: "Canvas Tote",
+    name: "Design Agency template",
     sku: "CT-014",
     stock: 8,
     tone: "from-amber-200 to-orange-400",
   },
   {
-    name: "Wool Beanie",
+    name: "Resort template",
     sku: "WB-220",
     stock: 0,
     tone: "from-slate-400 to-slate-700",
@@ -67,7 +67,7 @@ export default function ProductEditorSplit() {
         <form className="flex h-full flex-col gap-3 p-4">
           <Field>
             <FieldLabel htmlFor="product-name">Name</FieldLabel>
-            <Input id="product-name" defaultValue="Linen Shirt" />
+            <Input id="product-name" defaultValue="Portfolio Simple template" />
           </Field>
           <div className="grid grid-cols-2 gap-2">
             <Field>

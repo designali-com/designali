@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { HeartIcon } from "lucide-react"
+import {
+  Heart as HeartIcon,
+} from "@designali/icons"
 
 import { Toggle } from "@workspace/ui/components/toggle"
 
@@ -12,7 +14,7 @@ export default function FavoriteHeartToggle() {
   return (
     <div className="flex w-full max-w-xs flex-col gap-3 border p-4">
       <p className="text-sm">
-        Sunrise over the Dolomites, shot on a 45mm at f/8.
+        New on designali.com: 4000+ icons in @designali/icons.
       </p>
       <div className="flex items-center gap-2">
         <Toggle

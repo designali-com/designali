@@ -1,4 +1,6 @@
-import { LockIcon } from "lucide-react"
+import {
+  Lock as LockIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -26,7 +28,7 @@ export default function DisabledPlanTab() {
         Signup → Activation → Paid conversion.
       </TabsContent>
       <p className="text-muted-foreground">
-        Cohort analysis is available on the Growth plan.{" "}
+        Cohort analysis is available on the Designali Pro plan.{" "}
         <Button variant="link" size="xs" className="h-auto p-0">
           Upgrade
         </Button>

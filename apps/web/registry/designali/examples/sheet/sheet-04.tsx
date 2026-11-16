@@ -1,13 +1,13 @@
 import {
-  CalendarIcon,
-  ChartBarIcon,
-  FolderIcon,
-  HomeIcon,
-  InboxIcon,
-  MenuIcon,
-} from "lucide-react"
+  Calendar as CalendarIcon,
+  ChartBar as ChartBarIcon,
+  Folder as FolderIcon,
+  House as HomeIcon,
+  Inbox as InboxIcon,
+  Menu as MenuIcon,
+} from "@designali/icons"
 
-import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
+import { Avatar, AvatarFallback, AvatarImage } from "@workspace/ui/components/avatar"
 import { Badge } from "@workspace/ui/components/badge"
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -39,7 +39,7 @@ export default function MobileNavigationSheet() {
       </SheetTrigger>
       <SheetContent side="left" className="w-72">
         <SheetHeader>
-          <SheetTitle>Northwind Studio</SheetTitle>
+          <SheetTitle>Designali</SheetTitle>
           <SheetDescription>Workspace navigation</SheetDescription>
         </SheetHeader>
         <nav className="flex flex-col gap-0.5 px-2">
@@ -62,12 +62,13 @@ export default function MobileNavigationSheet() {
         <SheetFooter className="border-t">
           <div className="flex items-center gap-2">
             <Avatar size="sm">
-              <AvatarFallback>LP</AvatarFallback>
+              <AvatarImage src="/ali.jpg" alt="Ali Imam" />
+              <AvatarFallback>AI</AvatarFallback>
             </Avatar>
             <div className="flex flex-col">
-              <span className="font-medium">Lena Park</span>
+              <span className="font-medium">Ali Imam</span>
               <span className="text-muted-foreground">
-                lena@northwind.studio
+                ali@designali.com
               </span>
             </div>
           </div>

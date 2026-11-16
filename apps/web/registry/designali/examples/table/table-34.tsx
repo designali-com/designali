@@ -1,4 +1,9 @@
-import { KeyRoundIcon, LogInIcon, MailIcon, UserPlusIcon } from "lucide-react"
+import {
+  KeyRound as KeyRoundIcon,
+  LogIn as LogInIcon,
+  Mail as MailIcon,
+  UserPlus as UserPlusIcon,
+} from "@designali/icons"
 
 import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
 import {
@@ -12,28 +17,28 @@ import {
 
 const events = [
   {
-    actor: "Rina Sato",
+    actor: "Ali Imam",
     action: "Signed in",
     icon: LogInIcon,
     ip: "203.0.113.24",
     time: "10:42",
   },
   {
-    actor: "Rina Sato",
+    actor: "Ali Imam",
     action: "Changed billing email",
     icon: MailIcon,
     ip: "203.0.113.24",
     time: "10:45",
   },
   {
-    actor: "Owen Hart",
+    actor: "Sara Khan",
     action: "Invited 3 members",
     icon: UserPlusIcon,
     ip: "198.51.100.7",
     time: "11:03",
   },
   {
-    actor: "Owen Hart",
+    actor: "Sara Khan",
     action: "Deleted API key",
     icon: KeyRoundIcon,
     ip: "198.51.100.7",

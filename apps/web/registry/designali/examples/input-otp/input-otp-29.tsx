@@ -1,4 +1,6 @@
-import { BadgeCheckIcon } from "lucide-react"
+import {
+  BadgeCheck as BadgeCheckIcon,
+} from "@designali/icons"
 
 import {
   InputOTP,

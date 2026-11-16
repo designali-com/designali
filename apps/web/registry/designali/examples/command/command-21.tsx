@@ -1,6 +1,8 @@
 "use client"
 
-import { AppleIcon } from "lucide-react"
+import {
+  Apple as AppleIcon,
+} from "@designali/icons"
 
 import {
   Command,

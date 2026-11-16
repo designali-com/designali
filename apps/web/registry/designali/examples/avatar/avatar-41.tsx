@@ -1,7 +1,11 @@
 "use client"
 
 import * as React from "react"
-import { CheckIcon, LogOutIcon, UserPlusIcon } from "lucide-react"
+import {
+  Check as CheckIcon,
+  LogOut as LogOutIcon,
+  UserPlus as UserPlusIcon,
+} from "@designali/icons"
 
 import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
 import { Button } from "@workspace/ui/components/button"
@@ -16,8 +20,8 @@ import {
 } from "@workspace/ui/components/dropdown-menu"
 
 const accounts = [
-  { name: "Ines Carvalho", email: "ines@personal.me", initials: "IC" },
-  { name: "Ines Carvalho", email: "ines@orbitworks.io", initials: "IC" },
+  { name: "Ali Imam", email: "ali@designali.com", initials: "AI" },
+  { name: "Designali", email: "hello@designali.com", initials: "DA" },
 ]
 
 export default function AccountSwitcherMenu() {
@@ -36,7 +40,7 @@ export default function AccountSwitcherMenu() {
         }
       >
         <Avatar>
-          <AvatarFallback>IC</AvatarFallback>
+          <AvatarFallback>AI</AvatarFallback>
         </Avatar>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-64" align="end">

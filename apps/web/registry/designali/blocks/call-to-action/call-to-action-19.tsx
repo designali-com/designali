@@ -1,9 +1,11 @@
-import { ArrowRight } from "lucide-react"
+import {
+  ArrowRight,
+} from "@designali/icons"
 
 const links = [
   ["Start a project", "Tell us what you are building"],
-  ["Book a studio visit", "Lisbon, Thursdays 10:00 to 16:00"],
-  ["Read our process", "How we run a six-week sprint"],
+  ["Book a call", "30 minutes with Ali Imam"],
+  ["See our work", "Projects at designali.com/work"],
 ]
 
 export default function CallToAction19() {
@@ -11,7 +13,7 @@ export default function CallToAction19() {
     <section className="w-full overflow-hidden bg-background px-6 py-20 md:py-28">
       <div className="mx-auto max-w-7xl">
         <p className="text-xs tracking-[0.2em] text-muted-foreground uppercase">
-          Atelier Vanta, independent design studio
+          Designali, design se code tak
         </p>
         <h2 className="mt-6 text-[13vw] leading-[0.9] font-medium tracking-tighter break-words md:text-[9rem]">
           Let&apos;s make
@@ -39,8 +41,8 @@ export default function CallToAction19() {
         </div>
         <p className="mt-8 text-sm text-muted-foreground">
           Or write directly to{" "}
-          <a href="#" className="text-foreground underline underline-offset-4">
-            hello@ateliervanta.studio
+          <a href="mailto:hello@designali.com" className="text-foreground underline underline-offset-4">
+            hello@designali.com
           </a>
         </p>
       </div>

@@ -1,7 +1,12 @@
 "use client"
 
 import { useState } from "react"
-import { Minus, Plus, ThumbsDown, ThumbsUp } from "lucide-react"
+import {
+  Minus,
+  Plus,
+  ThumbsDown,
+  ThumbsUp,
+} from "@designali/icons"
 
 import {
   Accordion,

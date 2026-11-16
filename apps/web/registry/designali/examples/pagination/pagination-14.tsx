@@ -13,15 +13,15 @@ import {
 import { cn } from "@workspace/ui/lib/utils"
 
 const products = [
-  { name: "Linen Tote", price: 38, tone: "from-amber-200 to-orange-300" },
-  { name: "Canvas Cap", price: 24, tone: "from-sky-200 to-indigo-300" },
-  { name: "Wool Beanie", price: 29, tone: "from-rose-200 to-pink-300" },
-  { name: "Trail Bottle", price: 19, tone: "from-emerald-200 to-teal-300" },
-  { name: "Desk Mat", price: 42, tone: "from-violet-200 to-purple-300" },
-  { name: "Cork Coasters", price: 16, tone: "from-lime-200 to-green-300" },
-  { name: "Field Notebook", price: 12, tone: "from-yellow-200 to-amber-300" },
-  { name: "Pocket Lamp", price: 34, tone: "from-cyan-200 to-sky-300" },
-  { name: "Clay Mug", price: 22, tone: "from-orange-200 to-red-300" },
+  { name: "Portfolio Template", price: 38, tone: "from-amber-200 to-orange-300" },
+  { name: "Agency Template", price: 24, tone: "from-sky-200 to-indigo-300" },
+  { name: "Icons Pack", price: 29, tone: "from-rose-200 to-pink-300" },
+  { name: "Logos Pack", price: 19, tone: "from-emerald-200 to-teal-300" },
+  { name: "Bento Blocks", price: 42, tone: "from-violet-200 to-purple-300" },
+  { name: "Marquee", price: 16, tone: "from-lime-200 to-green-300" },
+  { name: "Number Counter", price: 12, tone: "from-yellow-200 to-amber-300" },
+  { name: "Device Mockups", price: 34, tone: "from-cyan-200 to-sky-300" },
+  { name: "Illustrations", price: 22, tone: "from-orange-200 to-red-300" },
 ]
 
 const PAGE_SIZE = 3

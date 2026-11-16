@@ -12,7 +12,7 @@ export default function DeletingConfirmation() {
   return (
     <Card className="w-full max-w-sm">
       <CardHeader>
-        <CardTitle>Delete project &quot;Atlas&quot;?</CardTitle>
+        <CardTitle>Delete project &quot;Dalim Works&quot;?</CardTitle>
         <CardDescription>
           This removes 38 environments and all deployment history. This
           can&apos;t be undone.

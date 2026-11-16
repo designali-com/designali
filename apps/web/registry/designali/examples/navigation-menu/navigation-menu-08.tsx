@@ -1,4 +1,8 @@
-import { FolderIcon, HouseIcon, InboxIcon } from "lucide-react"
+import {
+  Folder as FolderIcon,
+  House as HouseIcon,
+  Inbox as InboxIcon,
+} from "@designali/icons"
 
 import {
   NavigationMenu,
@@ -33,7 +37,7 @@ export default function VerticalNavigation() {
           </NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="flex w-48 flex-col gap-1">
-              {["Atlas rebrand", "Checkout v2", "Help center"].map((p) => (
+              {["Designali rebrand", "Templates v2", "Docs site"].map((p) => (
                 <li key={p}>
                   <NavigationMenuLink href="#">{p}</NavigationMenuLink>
                 </li>

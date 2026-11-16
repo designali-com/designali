@@ -1,8 +1,8 @@
 import {
-  ChevronRightIcon,
-  ExternalLinkIcon,
-  TrendingUpIcon,
-} from "lucide-react"
+  ChevronRight as ChevronRightIcon,
+  ExternalLink as ExternalLinkIcon,
+  TrendingUp as TrendingUpIcon,
+} from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -48,7 +48,7 @@ export default function MetricBreakdownDrawer() {
       </DrawerTrigger>
       <DrawerContent>
         <DrawerHeader>
-          <DrawerTitle>Visitors by channel</DrawerTitle>
+          <DrawerTitle>designali.com visitors by channel</DrawerTitle>
           <DrawerDescription>Oct 16 – Nov 15, 2026</DrawerDescription>
         </DrawerHeader>
         <div className="flex flex-1 flex-col gap-4 overflow-y-auto p-4">

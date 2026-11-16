@@ -1,9 +1,9 @@
 import {
-  BlocksIcon,
-  ChartLineIcon,
-  ShieldCheckIcon,
-  WorkflowIcon,
-} from "lucide-react"
+  Blocks as BlocksIcon,
+  ChartLine as ChartLineIcon,
+  ShieldCheck as ShieldCheckIcon,
+  Workflow as WorkflowIcon,
+} from "@designali/icons"
 
 import {
   NavigationMenu,
@@ -17,23 +17,23 @@ import {
 
 const features = [
   {
-    title: "Analytics",
-    description: "Dashboards that update in real time.",
+    title: "Templates",
+    description: "Production-ready Next.js websites.",
     icon: ChartLineIcon,
   },
   {
-    title: "Automations",
-    description: "Trigger workflows from any event.",
+    title: "UI Designs",
+    description: "2300+ UI examples to remix.",
     icon: WorkflowIcon,
   },
   {
-    title: "Security",
-    description: "SSO, audit logs and roles.",
+    title: "Icons",
+    description: "4000+ icons in @designali/icons.",
     icon: ShieldCheckIcon,
   },
   {
-    title: "Integrations",
-    description: "Connect the tools you already use.",
+    title: "Blocks",
+    description: "460+ copy-paste sections.",
     icon: BlocksIcon,
   },
 ]

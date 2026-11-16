@@ -1,4 +1,6 @@
-import { GiftIcon } from "lucide-react"
+import {
+  Gift as GiftIcon,
+} from "@designali/icons"
 
 import {
   Alert,
@@ -14,7 +16,7 @@ export default function AlertPromoGradient() {
       <GiftIcon className="text-foreground" />
       <AlertTitle>Get 2 months free</AlertTitle>
       <AlertDescription>
-        Switch to yearly billing before Nov 30 and save 17% on every seat.
+        Switch to yearly billing before Nov 30 and save 17% on Designali Pro.
       </AlertDescription>
       <AlertAction>
         <Button size="xs">Switch to yearly</Button>
