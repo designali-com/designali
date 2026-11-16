@@ -13,41 +13,42 @@ import { cn } from "@workspace/ui/lib/utils"
 
 const periods = ["This week", "This month", "All time"] as const
 
-const ranking: Record<(typeof periods)[number], { name: string; maker: string; price: number; sold: string; move: number; hue: number }[]> = {
+const ranking: Record<(typeof periods)[number], { name: string; maker: string; price: number; sold: string; move: number }[]> = {
   "This week": [
-    { name: "Designali Icons Pro", maker: "Designali", price: 39, sold: "2,140", move: 3, hue: 60 },
-    { name: "Design Agency Template", maker: "Designali", price: 79, sold: "1,980", move: 0, hue: 25 },
-    { name: "Blocks Pro Bundle", maker: "Designali", price: 149, sold: "1,610", move: -1, hue: 230 },
-    { name: "Apple Device Mockups", maker: "Designali", price: 35, sold: "1,402", move: 4, hue: 40 },
-    { name: "Portfolio Simple Template", maker: "Designali", price: 49, sold: "1,155", move: -2, hue: 85 },
-    { name: "Dalim UI Kit", maker: "Dalim", price: 29, sold: "980", move: 1, hue: 110 },
+    { name: "Designali Icons Pro", maker: "Designali", price: 39, sold: "2,140", move: 3 },
+    { name: "Design Agency Template", maker: "Designali", price: 79, sold: "1,980", move: 0 },
+    { name: "Blocks Pro Bundle", maker: "Designali", price: 149, sold: "1,610", move: -1 },
+    { name: "Apple Device Mockups", maker: "Designali", price: 35, sold: "1,402", move: 4 },
+    { name: "Portfolio Simple Template", maker: "Designali", price: 49, sold: "1,155", move: -2 },
+    { name: "Dalim UI Kit", maker: "Dalim", price: 29, sold: "980", move: 1 },
   ],
   "This month": [
-    { name: "Design Agency Template", maker: "Designali", price: 79, sold: "8,420", move: 1, hue: 25 },
-    { name: "Blocks Pro Bundle", maker: "Designali", price: 149, sold: "7,960", move: -1, hue: 230 },
-    { name: "Designali Icons Pro", maker: "Designali", price: 39, sold: "6,880", move: 5, hue: 60 },
-    { name: "Designali Logos Pack", maker: "Designali", price: 29, sold: "5,210", move: 0, hue: 75 },
-    { name: "Portfolio Simple Template", maker: "Designali", price: 49, sold: "4,730", move: 2, hue: 85 },
-    { name: "Apple Device Mockups", maker: "Designali", price: 35, sold: "4,010", move: -3, hue: 40 },
+    { name: "Design Agency Template", maker: "Designali", price: 79, sold: "8,420", move: 1 },
+    { name: "Blocks Pro Bundle", maker: "Designali", price: 149, sold: "7,960", move: -1 },
+    { name: "Designali Icons Pro", maker: "Designali", price: 39, sold: "6,880", move: 5 },
+    { name: "Designali Logos Pack", maker: "Designali", price: 29, sold: "5,210", move: 0 },
+    { name: "Portfolio Simple Template", maker: "Designali", price: 49, sold: "4,730", move: 2 },
+    { name: "Apple Device Mockups", maker: "Designali", price: 35, sold: "4,010", move: -3 },
   ],
   "All time": [
-    { name: "Blocks Pro Bundle", maker: "Designali", price: 149, sold: "184k", move: 0, hue: 230 },
-    { name: "Design Agency Template", maker: "Designali", price: 79, sold: "161k", move: 0, hue: 25 },
-    { name: "Designali Logos Pack", maker: "Designali", price: 29, sold: "122k", move: 0, hue: 75 },
-    { name: "Resort Template", maker: "Designali", price: 69, sold: "98k", move: 1, hue: 120 },
-    { name: "Portfolio Simple Template", maker: "Designali", price: 49, sold: "87k", move: -1, hue: 85 },
-    { name: "Designali Icons Pro", maker: "Designali", price: 39, sold: "64k", move: 2, hue: 60 },
+    { name: "Blocks Pro Bundle", maker: "Designali", price: 149, sold: "184k", move: 0 },
+    { name: "Design Agency Template", maker: "Designali", price: 79, sold: "161k", move: 0 },
+    { name: "Designali Logos Pack", maker: "Designali", price: 29, sold: "122k", move: 0 },
+    { name: "Resort Template", maker: "Designali", price: 69, sold: "98k", move: 1 },
+    { name: "Portfolio Simple Template", maker: "Designali", price: 49, sold: "87k", move: -1 },
+    { name: "Designali Icons Pro", maker: "Designali", price: 39, sold: "64k", move: 2 },
   ],
 }
 
-function Jar({ hue }: { hue: number }) {
-  return (
-    <svg viewBox="0 0 40 48" className="size-full" aria-hidden="true">
-      <rect x="10" y="2" width="20" height="7" rx="1.5" fill={`oklch(0.35 0.05 ${hue})`} />
-      <rect x="6" y="9" width="28" height="36" rx="5" fill={`oklch(0.72 0.14 ${hue})`} />
-      <rect x="9" y="20" width="22" height="13" fill="white" opacity="0.85" />
-    </svg>
-  )
+const thumbnails: Record<string, string> = {
+  "Designali Icons Pro": "dalim-icons-old",
+  "Design Agency Template": "design-agency",
+  "Blocks Pro Bundle": "aliimam-comp",
+  "Apple Device Mockups": "aliimam-old",
+  "Portfolio Simple Template": "portfolio-simple",
+  "Dalim UI Kit": "dalim-ui-old",
+  "Designali Logos Pack": "dalim-graphic-old",
+  "Resort Template": "resort",
 }
 
 export default function Ecommerce19() {
@@ -95,9 +96,11 @@ export default function Ecommerce19() {
                 >
                   {i + 1}
                 </span>
-                <span className="size-12 shrink-0 bg-muted p-1.5">
-                  <Jar hue={item.hue} />
-                </span>
+                <img
+                  src={`/images/templates/${thumbnails[item.name] ?? "dalim-old"}.jpg`}
+                  alt={item.name}
+                  className="size-12 shrink-0 border border-border object-cover object-top"
+                />
                 <span className="min-w-0 flex-1">
                   <a href="#" className="block truncate font-medium hover:underline">{item.name}</a>
                   <span className="block text-xs text-muted-foreground">

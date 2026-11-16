@@ -8,7 +8,7 @@ import { VectorViewControlsPanel } from "@/src/components/templates/(icons)/vect
 import { VectorDownloadPanel } from "@/src/components/templates/(icons)/vectors/vector-download"
 import { Vectors } from "@/src/components/templates/(icons)/vectors/vectors"
 
-import { allVectors } from "@designali/vectors"
+import { allVectors } from "@designali/vectors/all"
 
 import { Button } from "@workspace/ui/components/button"
 import {

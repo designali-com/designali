@@ -1,11 +1,19 @@
-const tiles = [
-  { label: "Typography", value: "Aa", className: "col-span-2 row-span-2", tone: "bg-foreground text-background" },
-  { label: "Spacing", value: "4pt", className: "", tone: "bg-muted" },
-  { label: "Radius", value: "0", className: "", tone: "bg-background" },
-  { label: "Columns", value: "12", className: "row-span-2", tone: "bg-primary text-primary-foreground" },
-  { label: "Breakpoints", value: "5", className: "", tone: "bg-background" },
-  { label: "Motion", value: "160ms", className: "col-span-2", tone: "bg-muted" },
-  { label: "Icons", value: "1.5px", className: "", tone: "bg-background" },
+import { BentoGrid, BentoGridItem } from "@/registry/designali/ui/bento"
+
+const tiles: {
+  label: string
+  value: string
+  colSpan?: 1 | 2
+  rowSpan?: 1 | 2
+  tone: string
+}[] = [
+  { label: "Typography", value: "Aa", colSpan: 2, rowSpan: 2, tone: "bg-foreground text-background" },
+  { label: "Spacing", value: "4pt", tone: "bg-muted" },
+  { label: "Radius", value: "0", tone: "bg-background" },
+  { label: "Columns", value: "12", rowSpan: 2, tone: "bg-primary text-primary-foreground" },
+  { label: "Breakpoints", value: "5", tone: "bg-background" },
+  { label: "Motion", value: "160ms", colSpan: 2, tone: "bg-muted" },
+  { label: "Icons", value: "1.5px", tone: "bg-background" },
 ]
 
 export default function Grid04() {
@@ -31,19 +39,26 @@ export default function Grid04() {
           </a>
         </div>
 
-        <div className="grid auto-rows-[140px] grid-cols-2 gap-px border border-border bg-border md:grid-cols-4 md:auto-rows-[160px]">
+        <BentoGrid
+          cols={{ base: 2, md: 4 }}
+          gap={2}
+          rowHeight={{ base: "140px", md: "160px" }}
+          className="h-auto"
+        >
           {tiles.map((tile) => (
-            <div
+            <BentoGridItem
               key={tile.label}
-              className={`flex flex-col justify-between p-5 ${tile.tone} ${tile.className}`}
+              colSpan={tile.colSpan ?? 1}
+              rowSpan={tile.rowSpan ?? 1}
+              className={`flex flex-col justify-between p-5 ${tile.tone}`}
             >
               <span className="text-xs opacity-70">{tile.label}</span>
               <span className="text-3xl font-semibold tracking-tight md:text-4xl">
                 {tile.value}
               </span>
-            </div>
+            </BentoGridItem>
           ))}
-        </div>
+        </BentoGrid>
       </div>
     </section>
   )

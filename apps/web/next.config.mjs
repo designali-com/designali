@@ -2,7 +2,22 @@ import { createMDX } from "fumadocs-mdx/next"
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  transpilePackages: ["@workspace/ui"],
+  transpilePackages: [
+    "@workspace/ui",
+    "@designali/icons",
+    "@designali/logos",
+    "@designali/vectors",
+  ],
+
+  experimental: {
+    // These packages export thousands of components from one barrel file.
+    // Only load the components that are actually imported.
+    optimizePackageImports: [
+      "@designali/icons",
+      "@designali/logos",
+      "@designali/vectors",
+    ],
+  },
 
   // Scoped specifically to routes that actually need them, instead of global "/*"
   outputFileTracingIncludes: {

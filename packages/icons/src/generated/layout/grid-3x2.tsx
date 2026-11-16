@@ -1,5 +1,4 @@
 /** Auto-generated - Do not edit */
-'use client';
 import React from 'react';
 
 export interface Grid3x2Props extends React.SVGProps<SVGSVGElement> {

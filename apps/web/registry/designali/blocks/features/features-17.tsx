@@ -7,6 +7,8 @@ import {
   Smartphone,
 } from "@designali/icons"
 
+import { IPhone } from "@/registry/designali/ui/apple/iphone"
+
 const left = [
   { icon: Search, title: "Instant search", body: "Find any Designali block, template or icon in seconds." },
   { icon: Bell, title: "Release updates", body: "Get notified when new blocks and templates drop." },
@@ -48,9 +50,8 @@ export default function Features17() {
         </h2>
         <div className="mt-16 grid items-center gap-12 lg:grid-cols-[1fr_auto_1fr] lg:gap-14">
           <Column items={left} align="left" />
-          <div className="mx-auto w-56 rounded-[2.5rem] border-8 border-foreground bg-background p-3 shadow-2xl">
-            <div className="mx-auto h-4 w-16 rounded-full bg-foreground" />
-            <div className="mt-5 space-y-2 px-1">
+          <IPhone size="md" color="black" className="mx-auto">
+            <div className="space-y-2 px-4 pt-12 pb-4">
               <div className="text-sm font-medium">Launch list</div>
               {["Brand identity", "UI/UX in Figma", "Build in Next.js", "Deploy on Vercel"].map(
                 (t, i) => (
@@ -62,9 +63,13 @@ export default function Features17() {
                   </div>
                 )
               )}
-              <div className="mt-3 h-24 bg-gradient-to-br from-primary/20 to-primary/20 dark:from-chart-5/60 dark:to-chart-5/60" />
+              <img
+                src="/images/templates/portfolio-simple.jpg"
+                alt="Designali portfolio template"
+                className="mt-3 aspect-[4/3] w-full border border-border object-cover"
+              />
             </div>
-          </div>
+          </IPhone>
           <Column items={right} align="right" />
         </div>
       </div>

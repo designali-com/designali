@@ -1,5 +1,4 @@
 /** Auto-generated - Do not edit */
-'use client';
 import React from 'react';
 
 export interface Receipt2RoundedProps extends React.SVGProps<SVGSVGElement> {

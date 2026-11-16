@@ -52,9 +52,13 @@ export default function Contact04() {
               key={person.name}
               className="flex items-center gap-5 border-b px-6 py-8 last:border-b-0 lg:px-10"
             >
-              <span className="flex size-14 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-primary/80 to-primary/30 text-sm font-semibold text-primary-foreground">
-                {person.initials}
-              </span>
+              {person.name === "Ali Imam" ? (
+                <img src="/ali.jpg" alt="Ali Imam" className="size-14 shrink-0 rounded-full object-cover" />
+              ) : (
+                <span className="flex size-14 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-primary/80 to-primary/30 text-sm font-semibold text-primary-foreground">
+                  {person.initials}
+                </span>
+              )}
               <div>
                 <p className="font-medium">{person.name}</p>
                 <p className="text-sm text-muted-foreground">{person.role}</p>

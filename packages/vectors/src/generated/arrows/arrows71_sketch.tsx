@@ -1,5 +1,4 @@
 
-'use client';
 import React from 'react';
 
 export interface Arrows71SketchProps extends React.SVGProps<SVGSVGElement> {

@@ -1,5 +1,4 @@
 /** Auto-generated - Do not edit */
-'use client';
 import React from 'react';
 
 export interface StoryFilledProps extends React.SVGProps<SVGSVGElement> {

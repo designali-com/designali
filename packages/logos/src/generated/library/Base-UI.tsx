@@ -4,7 +4,6 @@
  * Do not edit manually
  */
 
-'use client';
 import React from 'react';
 
 export interface BaseUIProps extends React.SVGProps<SVGSVGElement> {

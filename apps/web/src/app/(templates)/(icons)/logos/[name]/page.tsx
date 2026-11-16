@@ -8,7 +8,7 @@ import { LogoCode } from "@/src/components/templates/(icons)/logos/logo-code"
  import { LogoViewControlsPanel } from "@/src/components/templates/(icons)/logos/logo-controls"
 import { Logos } from "@/src/components/templates/(icons)/logos/logos"
 
-import { allLogos } from "@designali/logos"
+import { allLogos } from "@designali/logos/all"
 
 import { Button } from "@workspace/ui/components/button"
 import {

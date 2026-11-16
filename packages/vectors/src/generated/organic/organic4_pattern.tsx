@@ -1,5 +1,4 @@
 
-'use client';
 import React from 'react';
 
 export interface Organic4PatternProps extends React.SVGProps<SVGSVGElement> {

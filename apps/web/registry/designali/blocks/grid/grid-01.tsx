@@ -9,51 +9,52 @@ import {
 
 import type * as React from "react"
 
+import { BentoGrid, BentoGridItem } from "@/registry/designali/ui/bento"
+import { CounterNumber } from "@/registry/designali/ui/counter-number"
+
 type IconComponent = React.ComponentType<React.SVGProps<SVGSVGElement> & { size?: number | string; strokeWidth?: number }>
 
 const cells: {
   icon: IconComponent
   title: string
   description: string
-  className: string
+  colSpan?: 1 | 2
+  rowSpan?: 1 | 2
 }[] = [
   {
     icon: Gauge,
     title: "Production-ready blocks",
     description:
       "Designali ships 460+ copy-and-paste blocks built with Next.js, React and Tailwind CSS.",
-    className: "md:col-span-2 md:row-span-2",
+    colSpan: 2,
+    rowSpan: 2,
   },
   {
     icon: GitBranch,
     title: "Templates",
     description: "Launch-ready Next.js templates for any brand.",
-    className: "",
   },
   {
     icon: KeyRound,
     title: "Icons",
     description: "4000+ icons in @designali/icons.",
-    className: "",
   },
   {
     icon: Globe,
     title: "Deploy on Vercel",
     description: "Ship your site in minutes.",
-    className: "",
   },
   {
     icon: Layers,
     title: "Design systems",
     description: "Semantic tokens for light and dark.",
-    className: "",
   },
   {
     icon: Blocks,
     title: "Logos and vectors",
     description:
       "Brand logos from @designali/logos and abstract shapes from @designali/vectors, ready for any page.",
-    className: "md:col-span-2",
+    colSpan: 2,
   },
 ]
 
@@ -65,18 +66,28 @@ export default function Grid01() {
           Everything you need to ship with Designali, design se code tak.
         </h2>
 
-        <div className="mt-14 grid auto-rows-[minmax(180px,auto)] grid-cols-1 gap-px border border-border bg-border md:grid-cols-4">
+        <BentoGrid
+          cols={{ base: 1, md: 4 }}
+          gap={2}
+          rowHeight="minmax(180px,auto)"
+          className="mt-14 h-auto"
+        >
           {cells.map((cell, index) => (
-            <article
+            <BentoGridItem
               key={cell.title}
-              className={`flex flex-col justify-between bg-background p-6 ${cell.className}`}
+              colSpan={{ base: 1, md: cell.colSpan ?? 1 }}
+              rowSpan={{ base: 1, md: cell.rowSpan ?? 1 }}
+              className="flex flex-col justify-between p-6"
             >
               <cell.icon className="size-5 text-muted-foreground" />
               {index === 0 && (
                 <div className="my-8 flex items-end gap-2">
-                  <span className="text-7xl font-semibold tracking-tighter md:text-8xl">
-                    460+
-                  </span>
+                  <CounterNumber
+                    value={460}
+                    suffix="+"
+                    size="2xl"
+                    className="font-semibold tracking-tighter md:text-8xl"
+                  />
                   <span className="mb-3 text-sm text-muted-foreground">Designali blocks</span>
                 </div>
               )}
@@ -86,9 +97,9 @@ export default function Grid01() {
                   {cell.description}
                 </p>
               </div>
-            </article>
+            </BentoGridItem>
           ))}
-        </div>
+        </BentoGrid>
       </div>
     </section>
   )

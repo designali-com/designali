@@ -1,5 +1,4 @@
 /** Auto-generated - Do not edit */
-'use client';
 import React from 'react';
 
 export interface Grid7RoundedProps extends React.SVGProps<SVGSVGElement> {

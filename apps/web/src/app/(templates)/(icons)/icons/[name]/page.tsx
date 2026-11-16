@@ -8,7 +8,7 @@ import { IconViewControlsPanel } from "@/src/components/templates/(icons)/icons/
 import { IconDownloadPanel } from "@/src/components/templates/(icons)/icons/icon-download"
 import { Icons } from "@/src/components/templates/(icons)/icons/icons"
 
-import { allIcons } from "@designali/icons"
+import { allIcons } from "@designali/icons/all"
 
 import { Button } from "@workspace/ui/components/button"
 import {

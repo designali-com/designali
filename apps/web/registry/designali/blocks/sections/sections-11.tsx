@@ -5,17 +5,17 @@ import {
 } from "@designali/icons"
 
 const before = [
-  "Quotes built in a spreadsheet, emailed as PDFs",
-  "Site photos lost in five different group chats",
-  "Invoices chased by phone at month end",
-  "Nobody knows which crew is on which job",
+  "Brand, UI and code handled by three different vendors",
+  "Figma files that never quite match the live site",
+  "Handoff docs nobody reads",
+  "Every new page designed from scratch",
 ]
 
 const after = [
-  "Branded quotes sent from the van, signed on the spot",
-  "Every photo pinned to the job, with timestamp and GPS",
-  "Automatic reminders and card payments on completion",
-  "A live board of crews, jobs and travel time",
+  "Brand identity, UI/UX and Next.js from one studio",
+  "What you approve in Figma is what ships",
+  "A design system your team can keep using",
+  "460+ blocks to build new pages fast",
 ]
 
 export default function Sections11() {
@@ -23,14 +23,14 @@ export default function Sections11() {
     <section className="w-full bg-muted/40 py-24">
       <div className="mx-auto max-w-6xl px-6">
         <h2 className="mx-auto max-w-2xl text-center text-4xl font-semibold tracking-tight md:text-5xl">
-          Running a trades business, before and after Plumbline.
+          Shipping a product, before and after Designali.
         </h2>
 
         <div className="relative mt-14 grid gap-4 md:grid-cols-2">
           <div className="border border-border bg-background p-6 md:p-10">
             <p className="text-xs font-medium tracking-widest text-muted-foreground uppercase">The old way</p>
-            <p className="mt-4 text-3xl font-semibold tracking-tight text-muted-foreground">11 hrs / week</p>
-            <p className="text-xs text-muted-foreground">spent on admin per owner</p>
+            <p className="mt-4 text-3xl font-semibold tracking-tight text-muted-foreground">3 teams</p>
+            <p className="text-xs text-muted-foreground">brand, design and dev, all separate</p>
             <ul className="mt-8 space-y-4">
               {before.map((item) => (
                 <li key={item} className="flex gap-3 text-sm text-muted-foreground">
@@ -46,9 +46,9 @@ export default function Sections11() {
           </span>
 
           <div className="border border-foreground bg-foreground p-6 text-background md:p-10">
-            <p className="text-xs font-medium tracking-widest uppercase opacity-60">With Plumbline</p>
-            <p className="mt-4 text-3xl font-semibold tracking-tight">2.5 hrs / week</p>
-            <p className="text-xs opacity-60">median across 3,200 businesses</p>
+            <p className="text-xs font-medium tracking-widest uppercase opacity-60">With Designali</p>
+            <p className="mt-4 text-3xl font-semibold tracking-tight">1 studio</p>
+            <p className="text-xs opacity-60">design se code tak</p>
             <ul className="mt-8 space-y-4">
               {after.map((item) => (
                 <li key={item} className="flex gap-3 text-sm">

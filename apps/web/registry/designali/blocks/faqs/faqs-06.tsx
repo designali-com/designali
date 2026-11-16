@@ -11,29 +11,29 @@ import { cn } from "@workspace/ui/lib/utils"
 
 const faqs = [
   {
-    question: "Is there a free trial?",
+    question: "Is Designali free to use?",
     answer:
-      "Every plan starts with a 14-day trial with full access to Pro features. No credit card is needed, and your workspace stays intact if you decide to upgrade later.",
+      "Many blocks, icons and logos on designali.com are free. Designali Pro unlocks the full library of templates, landing pages and premium blocks.",
   },
   {
-    question: "What happens when my trial ends?",
+    question: "What do I get with Designali Pro?",
     answer:
-      "Your workspace moves to the Free plan automatically. Projects beyond the free limit become read-only until you upgrade or archive them.",
+      "Access to 460+ blocks, 240+ landing pages, templates and 2300+ UI examples, all built with Next.js, React, TypeScript and Tailwind CSS.",
   },
   {
     question: "Can I bring my existing components?",
     answer:
-      "Yes. Import from Figma, Storybook or a public npm package and we will map your tokens and variants automatically during onboarding.",
+      "Yes. Blocks use semantic tokens like background, foreground and primary, so they sit next to your own components and inherit your theme.",
   },
   {
-    question: "Do you offer discounts for nonprofits?",
+    question: "Can I hire Ali Imam for a custom project?",
     answer:
-      "Registered nonprofits and schools get 50% off any paid plan. Send us proof of status and we will apply the discount within one business day.",
+      "Yes. Designali takes on brand identity, UI/UX design and Next.js development projects. Share your brief at hello@designali.com.",
   },
   {
     question: "How does support work?",
     answer:
-      "Free and Pro plans get email support with a 24-hour response time. Business plans include a shared Slack channel and a named success manager.",
+      "Write to support@designali.com with a link to the block or template you are using and you will get a reply from the Designali studio.",
   },
 ]
 

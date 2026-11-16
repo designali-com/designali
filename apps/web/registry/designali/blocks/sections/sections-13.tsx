@@ -14,38 +14,38 @@ import { cn } from "@workspace/ui/lib/utils"
 const steps = [
   {
     icon: Search,
-    title: "Survey",
-    duration: "Day 1",
-    body: "An engineer visits, measures every room and checks the electrics, insulation and roof orientation.",
-    outputs: ["Thermal imaging report", "Load assessment", "Photo log"],
+    title: "Discover",
+    duration: "Week 1",
+    body: "A call with Ali Imam to understand your product, audience and goals, followed by a review of your current brand and site.",
+    outputs: ["Project brief", "Brand audit", "Sitemap"],
   },
   {
     icon: PencilRuler,
     title: "Design",
-    duration: "Days 2 - 5",
-    body: "We model your home and size the heat pump, panels and battery to your actual usage, not a rule of thumb.",
-    outputs: ["System design", "Savings forecast", "Fixed quote"],
+    duration: "Weeks 2 - 4",
+    body: "Brand identity and UI/UX designed in Figma with real content, real components and every breakpoint.",
+    outputs: ["Figma files", "Design system", "Prototype"],
   },
   {
     icon: ClipboardList,
-    title: "Permits",
-    duration: "Weeks 2 - 4",
-    body: "We file the grid connection, planning notices and grant paperwork on your behalf and keep you posted.",
-    outputs: ["DNO approval", "Grant application", "Install date"],
+    title: "Review",
+    duration: "Week 5",
+    body: "We walk through every screen together, collect feedback and lock the scope before a line of production code.",
+    outputs: ["Feedback round", "Final designs", "Build plan"],
   },
   {
     icon: Wrench,
-    title: "Install",
-    duration: "2 - 3 days",
-    body: "A certified crew of three installs everything, cleans up and walks you through the app before leaving.",
-    outputs: ["Commissioning cert", "App setup", "Handover pack"],
+    title: "Build",
+    duration: "Weeks 6 - 8",
+    body: "Production-ready Next.js, React, TypeScript and Tailwind CSS, built by the same people who designed it.",
+    outputs: ["Next.js codebase", "CMS setup", "Preview links"],
   },
   {
     icon: Rocket,
-    title: "Monitor",
+    title: "Launch",
     duration: "Ongoing",
-    body: "We watch performance remotely and call you before you notice a problem. Ten-year warranty included.",
-    outputs: ["Monthly report", "Remote tuning", "10-year cover"],
+    body: "Deployed on Vercel with a handover session, plus ongoing support as you add new pages and features.",
+    outputs: ["Vercel deploy", "Handover", "Ongoing support"],
   },
 ]
 
@@ -59,7 +59,7 @@ export default function Sections13() {
         <div className="max-w-2xl">
           <p className="font-sans text-xs tracking-widest text-muted-foreground uppercase">How it works</p>
           <h2 className="mt-4 text-4xl font-semibold tracking-tight md:text-5xl">
-            From survey to switch-on in about five weeks.
+            From first call to launch, design se code tak.
           </h2>
         </div>
 

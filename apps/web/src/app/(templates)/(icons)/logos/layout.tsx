@@ -1,7 +1,7 @@
 import { Suspense } from "react"
 import type { Metadata } from "next"
 
-import { LogoSidebar } from "@/src/components/templates/(icons)/all-sidebar"
+import { LogoSidebar } from "@/src/components/templates/(icons)/logo-sidebar"
 
 import {
   SidebarProvider,

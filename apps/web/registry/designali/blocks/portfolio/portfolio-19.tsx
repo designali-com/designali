@@ -1,10 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import {
-  ArrowUpRight,
-  Plus,
-} from "@designali/icons"
+import { ArrowUpRight, Plus } from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { cn } from "@workspace/ui/lib/utils"
@@ -67,8 +64,12 @@ export default function Portfolio19() {
     <section className="w-full bg-background py-16 text-foreground md:py-24">
       <div className="mx-auto max-w-5xl px-6">
         <div className="flex items-end justify-between gap-4">
-          <h2 className="text-3xl font-medium tracking-tight md:text-5xl">Selected Designali projects</h2>
-          <span className="font-sans text-xs text-muted-foreground">Dalim · Designali</span>
+          <h2 className="text-3xl font-medium tracking-tight md:text-5xl">
+            Selected Designali projects
+          </h2>
+          <span className="font-sans text-xs text-muted-foreground">
+            Dalim · Designali
+          </span>
         </div>
 
         <ul className="mt-10 border-t border-border">
@@ -93,7 +94,9 @@ export default function Portfolio19() {
                       {project.category}
                     </span>
                   </span>
-                  <span className="hidden text-sm text-muted-foreground md:block">{project.category}</span>
+                  <span className="hidden text-sm text-muted-foreground md:block">
+                    {project.category}
+                  </span>
                   <span className="hidden w-12 text-right font-sans text-xs text-muted-foreground md:block">
                     {project.year}
                   </span>
@@ -107,19 +110,30 @@ export default function Portfolio19() {
                 <div
                   className={cn(
                     "grid transition-all duration-500 ease-out",
-                    isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
+                    isOpen
+                      ? "grid-rows-[1fr] opacity-100"
+                      : "grid-rows-[0fr] opacity-0"
                   )}
                 >
                   <div className="overflow-hidden">
                     <div className="grid gap-6 pb-8 md:grid-cols-[1fr_1.2fr] md:pl-12">
-                      <div className="aspect-[16/10] border border-border" style={{ background: project.background }} />
+                      <div
+                        className="aspect-[16/10] border border-border"
+                        style={{ background: project.background }}
+                      />
                       <div className="flex flex-col">
-                        <p className="leading-7 text-muted-foreground">{project.summary}</p>
+                        <p className="leading-7 text-muted-foreground">
+                          {project.summary}
+                        </p>
                         <dl className="mt-6 grid grid-cols-2 gap-4">
                           {project.facts.map((fact) => (
                             <div key={fact.label}>
-                              <dt className="text-xs text-muted-foreground">{fact.label}</dt>
-                              <dd className="mt-1 text-sm font-medium">{fact.value}</dd>
+                              <dt className="text-xs text-muted-foreground">
+                                {fact.label}
+                              </dt>
+                              <dd className="mt-1 text-sm font-medium">
+                                {fact.value}
+                              </dd>
                             </div>
                           ))}
                         </dl>

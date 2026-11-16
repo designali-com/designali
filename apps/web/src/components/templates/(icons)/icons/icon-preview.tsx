@@ -3,7 +3,7 @@
 
 import { useEffect, useState } from "react"
 import Link from "next/link"
-import { allIcons } from "@designali/icons"
+import { allIcons } from "@designali/icons/all"
 
 import { Button } from "@workspace/ui/components/button"
 import {

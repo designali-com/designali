@@ -1,26 +1,26 @@
 import {
   ArrowRight,
-  Baby,
   BookOpen,
-  HeartPulse,
-  Laptop,
-  TreePalm as Palmtree,
-  PiggyBank,
-  Plane,
-  Sprout,
+  Code,
+  Figma as FigmaIcon,
+  Layers,
+  Palette,
+  Rocket,
+  Sparkles,
+  Wand,
 } from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 
 const perks = [
-  { icon: HeartPulse, title: "Full health cover", body: "Medical, dental and vision for you and dependants, 100% paid." },
-  { icon: Palmtree, title: "30 days off", body: "Plus local holidays, and a mandatory week off in December." },
-  { icon: Baby, title: "20 weeks parental leave", body: "Fully paid, for every parent, however your family grows." },
-  { icon: Laptop, title: "$3,000 setup budget", body: "Desk, chair, screen, whatever helps you do your best work." },
-  { icon: BookOpen, title: "$2,000 learning budget", body: "Courses, books and conferences. No approval needed under $200." },
-  { icon: PiggyBank, title: "Pension match", body: "We match contributions up to 6% of salary from day one." },
-  { icon: Plane, title: "Work from anywhere", body: "Up to 8 weeks a year from any country with good wifi." },
-  { icon: Sprout, title: "Equity for everyone", body: "Meaningful stock options with a 10-year exercise window." },
+  { icon: Palette, title: "Brand identity", body: "Logo, type, color and guidelines designed as one system." },
+  { icon: FigmaIcon, title: "UI/UX design", body: "Every screen and breakpoint designed in Figma with real content." },
+  { icon: Code, title: "Next.js development", body: "Production-ready React, TypeScript and Tailwind CSS code." },
+  { icon: Layers, title: "Design system", body: "Tokens and components your team can keep building with." },
+  { icon: Sparkles, title: "CGI, 3D & motion", body: "Renders and motion design that bring the brand to life." },
+  { icon: Wand, title: "AI workflows", body: "AI-assisted tools where they genuinely speed up the work." },
+  { icon: Rocket, title: "Vercel launch", body: "Deployed, tested and handed over, ready for real traffic." },
+  { icon: BookOpen, title: "Designali library", body: "Access to 460+ blocks, 4000+ icons and logos to keep shipping." },
 ]
 
 export default function Sections20() {
@@ -28,9 +28,9 @@ export default function Sections20() {
     <section className="w-full bg-background py-24">
       <div className="mx-auto max-w-7xl px-6">
         <div className="max-w-2xl">
-          <p className="font-sans text-xs tracking-widest text-muted-foreground uppercase">Benefits</p>
+          <p className="text-xs tracking-widest text-muted-foreground uppercase">What you get</p>
           <h2 className="mt-4 text-4xl font-semibold tracking-tight md:text-5xl">
-            We take care of the basics so you can focus on the work.
+            Everything a product needs, design se code tak.
           </h2>
         </div>
 
@@ -48,16 +48,16 @@ export default function Sections20() {
 
         <div className="mt-6 flex flex-col gap-6 bg-foreground p-8 text-background md:flex-row md:items-center md:justify-between md:p-10">
           <div>
-            <p className="text-2xl font-semibold tracking-tight">12 roles open across 5 teams</p>
-            <p className="mt-1 text-sm opacity-70">Remote within UTC-5 to UTC+3. Salary bands on every listing.</p>
+            <p className="text-2xl font-semibold tracking-tight">Start a project with Designali</p>
+            <p className="mt-1 text-sm opacity-70">Tell Ali Imam about your brand or product at hello@designali.com.</p>
           </div>
           <Button
             size="lg"
             className="bg-background text-foreground hover:bg-background/90"
             nativeButton={false}
-            render={<a href="#" />}
+            render={<a href="mailto:hello@designali.com" />}
           >
-            View open roles
+            Start a project
             <ArrowRight />
           </Button>
         </div>

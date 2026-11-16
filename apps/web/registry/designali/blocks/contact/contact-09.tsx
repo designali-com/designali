@@ -66,11 +66,15 @@ export default function Contact09() {
               className="flex flex-col gap-8 border-b border-background/15 py-10 sm:px-6 sm:[&:nth-child(odd)]:border-e lg:border-b-0 lg:not-last:border-e lg:first:ps-0"
             >
               <div className="flex items-center gap-4">
-                <span
-                  className={`flex size-14 shrink-0 items-center justify-center rounded-full bg-gradient-to-br ${person.hue} text-lg font-semibold text-black/80`}
-                >
-                  {initials(person.name)}
-                </span>
+                {person.name === "Ali Imam" ? (
+                  <img src="/ali.jpg" alt="Ali Imam" className="size-14 shrink-0 rounded-full object-cover" />
+                ) : (
+                  <span
+                    className={`flex size-14 shrink-0 items-center justify-center rounded-full bg-gradient-to-br ${person.hue} text-lg font-semibold text-black/80`}
+                  >
+                    {initials(person.name)}
+                  </span>
+                )}
                 <div>
                   <p className="font-medium">{person.name}</p>
                   <p className="text-sm text-background/60">{person.role}</p>

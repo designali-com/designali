@@ -1,11 +1,7 @@
 "use client"
 
 import { useRef } from "react"
-import {
-  ArrowLeft,
-  ArrowRight,
-  ArrowUpRight,
-} from "@designali/icons"
+import { ArrowLeft, ArrowRight, ArrowUpRight } from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 
@@ -69,10 +65,20 @@ export default function Portfolio06() {
             </h2>
           </div>
           <div className="flex shrink-0 gap-2">
-            <Button variant="outline" size="icon-lg" aria-label="Previous project" onClick={() => scroll(-1)}>
+            <Button
+              variant="outline"
+              size="icon-lg"
+              aria-label="Previous project"
+              onClick={() => scroll(-1)}
+            >
               <ArrowLeft />
             </Button>
-            <Button variant="outline" size="icon-lg" aria-label="Next project" onClick={() => scroll(1)}>
+            <Button
+              variant="outline"
+              size="icon-lg"
+              aria-label="Next project"
+              onClick={() => scroll(1)}
+            >
               <ArrowRight />
             </Button>
           </div>
@@ -80,7 +86,7 @@ export default function Portfolio06() {
 
         <div
           ref={track}
-          className="mt-10 -mx-6 flex snap-x snap-mandatory gap-4 overflow-x-auto scroll-px-6 px-6 pb-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+          className="-mx-6 mt-10 flex snap-x snap-mandatory scroll-px-6 gap-4 overflow-x-auto px-6 pb-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
         >
           {projects.map((project, i) => (
             <a
@@ -94,7 +100,8 @@ export default function Portfolio06() {
                   style={{ background: project.background }}
                 />
                 <span className="absolute top-4 left-4 font-sans text-xs text-white/90">
-                  {String(i + 1).padStart(2, "0")} / {String(projects.length).padStart(2, "0")}
+                  {String(i + 1).padStart(2, "0")} /{" "}
+                  {String(projects.length).padStart(2, "0")}
                 </span>
                 <span className="absolute top-4 right-4 bg-background/90 px-2 py-0.5 text-[11px] backdrop-blur">
                   {project.tag}
@@ -104,10 +111,16 @@ export default function Portfolio06() {
                 </span>
               </div>
               <div className="mt-4 flex items-baseline justify-between gap-4">
-                <p className="text-sm text-muted-foreground">{project.client}</p>
-                <span className="font-sans text-xs text-muted-foreground">{project.year}</span>
+                <p className="text-sm text-muted-foreground">
+                  {project.client}
+                </p>
+                <span className="font-sans text-xs text-muted-foreground">
+                  {project.year}
+                </span>
               </div>
-              <h3 className="mt-1 text-lg leading-snug font-medium">{project.title}</h3>
+              <h3 className="mt-1 text-lg leading-snug font-medium">
+                {project.title}
+              </h3>
             </a>
           ))}
         </div>

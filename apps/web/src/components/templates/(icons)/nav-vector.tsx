@@ -15,7 +15,7 @@ import {
   SidebarMenuItem,
 } from "@workspace/ui/components/sidebar"
 
-import { allVectors } from "@designali/vectors"
+import { allVectors } from "@designali/vectors/all"
 
 import { useVectorFilter } from "./vectors/vector-filter-context"
 

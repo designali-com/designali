@@ -1,5 +1,4 @@
 /** Auto-generated - Do not edit */
-'use client';
 import React from 'react';
 
 export interface BitcoinConvertFilledProps extends React.SVGProps<SVGSVGElement> {

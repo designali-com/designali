@@ -1,5 +1,4 @@
 /** Auto-generated - Do not edit */
-'use client';
 import React from 'react';
 
 export interface ArrowUp3RoundedProps extends React.SVGProps<SVGSVGElement> {

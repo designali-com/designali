@@ -3,7 +3,8 @@ import type { Metadata } from "next"
 import { notFound } from "next/navigation"
 
 import { siteConfig } from "@/src/config/site"
-import { getRegistryComponent, getRegistryItem } from "@/src/lib/registry"
+import { getRegistryItem } from "@/src/lib/registry"
+import { getRegistryComponent } from "@/src/lib/registry-component"
 import { cn } from "@workspace/ui/lib/utils"
 
 export const revalidate = false
@@ -60,7 +61,7 @@ export async function generateMetadata({
 }
 
 export async function generateStaticParams() {
-  const { Index } = await import("@/registry/__index__")
+  const { RegistryMeta: Index } = await import("@/registry/__meta__")
 
   return Object.values(Index)
     .filter((block) =>

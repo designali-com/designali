@@ -1,5 +1,4 @@
 
-'use client';
 import React from 'react';
 
 export interface Abstract59ShapesProps extends React.SVGProps<SVGSVGElement> {

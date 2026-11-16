@@ -22,7 +22,8 @@ const tracks = [
   { title: "Tailwind Drift", length: 231 },
   { title: "Ship It", length: 298 },
 ]
-const fmt = (s: number) => `${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}`
+const fmt = (s: number) =>
+  `${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}`
 
 export default function Media08() {
   const [current, setCurrent] = useState(0)
@@ -53,7 +54,10 @@ export default function Media08() {
       <div className="mx-auto grid max-w-5xl overflow-hidden border border-border md:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)]">
         <div className="flex flex-col bg-muted/40 p-6 md:p-8">
           <div
-            className={cn("relative aspect-square w-full overflow-hidden border border-border transition-transform duration-500", playing && "scale-[1.02]")}
+            className={cn(
+              "relative aspect-square w-full overflow-hidden border border-border transition-transform duration-500",
+              playing && "scale-[1.02]"
+            )}
           >
             <img
               src="/img/ask/ask7.jpg"
@@ -73,10 +77,23 @@ export default function Media08() {
               type="button"
               aria-label="Like"
               aria-pressed={liked.includes(current)}
-              onClick={() => setLiked((l) => (l.includes(current) ? l.filter((x) => x !== current) : [...l, current]))}
+              onClick={() =>
+                setLiked((l) =>
+                  l.includes(current)
+                    ? l.filter((x) => x !== current)
+                    : [...l, current]
+                )
+              }
               className="p-1"
             >
-              <Heart className={cn("size-5", liked.includes(current) ? "fill-primary text-primary" : "text-muted-foreground")} />
+              <Heart
+                className={cn(
+                  "size-5",
+                  liked.includes(current)
+                    ? "fill-primary text-primary"
+                    : "text-muted-foreground"
+                )}
+              />
             </button>
           </div>
           <div className="mt-4">
@@ -95,28 +112,68 @@ export default function Media08() {
             </div>
           </div>
           <div className="mt-4 flex items-center justify-between">
-            <button type="button" aria-label="Shuffle" aria-pressed={shuffle} onClick={() => setShuffle((s) => !s)} className={cn("p-2", shuffle ? "text-foreground" : "text-muted-foreground")}>
+            <button
+              type="button"
+              aria-label="Shuffle"
+              aria-pressed={shuffle}
+              onClick={() => setShuffle((s) => !s)}
+              className={cn(
+                "p-2",
+                shuffle ? "text-foreground" : "text-muted-foreground"
+              )}
+            >
               <Shuffle className="size-4" />
             </button>
-            <button type="button" aria-label="Previous" onClick={() => go(-1)} className="p-2"><SkipBack className="size-5 fill-current" /></button>
+            <button
+              type="button"
+              aria-label="Previous"
+              onClick={() => go(-1)}
+              className="p-2"
+            >
+              <SkipBack className="size-5 fill-current" />
+            </button>
             <button
               type="button"
               aria-label={playing ? "Pause" : "Play"}
               onClick={() => setPlaying((p) => !p)}
               className="flex size-14 items-center justify-center rounded-full bg-foreground text-background transition-transform active:scale-95"
             >
-              {playing ? <Pause className="size-6 fill-current" /> : <Play className="size-6 translate-x-0.5 fill-current" />}
+              {playing ? (
+                <Pause className="size-6 fill-current" />
+              ) : (
+                <Play className="size-6 translate-x-0.5 fill-current" />
+              )}
             </button>
-            <button type="button" aria-label="Next" onClick={() => go(1)} className="p-2"><SkipForward className="size-5 fill-current" /></button>
-            <button type="button" aria-label="Repeat" aria-pressed={repeat} onClick={() => setRepeat((r) => !r)} className={cn("p-2", repeat ? "text-foreground" : "text-muted-foreground")}>
+            <button
+              type="button"
+              aria-label="Next"
+              onClick={() => go(1)}
+              className="p-2"
+            >
+              <SkipForward className="size-5 fill-current" />
+            </button>
+            <button
+              type="button"
+              aria-label="Repeat"
+              aria-pressed={repeat}
+              onClick={() => setRepeat((r) => !r)}
+              className={cn(
+                "p-2",
+                repeat ? "text-foreground" : "text-muted-foreground"
+              )}
+            >
               <Repeat className="size-4" />
             </button>
           </div>
         </div>
         <div className="flex flex-col p-6 md:p-8">
           <div className="flex items-center justify-between">
-            <h2 className="flex items-center gap-2 font-semibold"><ListMusic className="size-4" /> Tracklist</h2>
-            <span className="text-xs text-muted-foreground">6 songs - 21 min</span>
+            <h2 className="flex items-center gap-2 font-semibold">
+              <ListMusic className="size-4" /> Tracklist
+            </h2>
+            <span className="text-xs text-muted-foreground">
+              6 songs - 21 min
+            </span>
           </div>
           <ol className="mt-4 divide-y divide-border">
             {tracks.map((t, i) => (
@@ -128,24 +185,40 @@ export default function Media08() {
                     setTime(0)
                     setPlaying(true)
                   }}
-                  className={cn("grid w-full grid-cols-[1.5rem_1fr_auto] items-center gap-3 py-3 text-left text-sm hover:bg-muted/50", i === current && "font-medium")}
+                  className={cn(
+                    "grid w-full grid-cols-[1.5rem_1fr_auto] items-center gap-3 py-3 text-left text-sm hover:bg-muted/50",
+                    i === current && "font-medium"
+                  )}
                 >
                   {i === current && playing ? (
                     <span className="flex h-3 items-end gap-0.5" aria-hidden>
                       {[0, 1, 2].map((b) => (
-                        <span key={b} className="w-0.5 animate-pulse bg-foreground" style={{ height: `${[60, 100, 40][b]}%`, animationDelay: `${b * 150}ms` }} />
+                        <span
+                          key={b}
+                          className="w-0.5 animate-pulse bg-foreground"
+                          style={{
+                            height: `${[60, 100, 40][b]}%`,
+                            animationDelay: `${b * 150}ms`,
+                          }}
+                        />
                       ))}
                     </span>
                   ) : (
-                    <span className="font-sans text-xs text-muted-foreground">{i + 1}</span>
+                    <span className="font-sans text-xs text-muted-foreground">
+                      {i + 1}
+                    </span>
                   )}
                   <span className="truncate">{t.title}</span>
-                  <span className="font-sans text-xs text-muted-foreground tabular-nums">{fmt(t.length)}</span>
+                  <span className="font-sans text-xs text-muted-foreground tabular-nums">
+                    {fmt(t.length)}
+                  </span>
                 </button>
               </li>
             ))}
           </ol>
-          <p className="mt-auto pt-6 text-xs text-muted-foreground">A Designali playlist for deep design and code work</p>
+          <p className="mt-auto pt-6 text-xs text-muted-foreground">
+            A Designali playlist for deep design and code work
+          </p>
         </div>
       </div>
     </section>

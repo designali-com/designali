@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { allIcons } from "@designali/icons"
+import { allIcons } from "@designali/icons/all"
+import { IconGlyph } from "./icon-glyph"
 
 interface IconProps extends React.SVGProps<SVGSVGElement> {
   name: string
@@ -74,26 +75,18 @@ export function Icons({
   }
 
   if (!match) return null
-  const { Component, metadata } = match
-
-  const resolvedVariant = (metadata.variant ?? "default").toLowerCase()
-  const isFilledVariant =
-    resolvedVariant === "filled" || resolvedVariant === "doodle"
-
-  const resolvedFill = fill ?? (isFilledVariant ? "currentColor" : "none")
-  const resolvedStroke = stroke ?? (isFilledVariant ? "none" : "currentColor")
 
   return (
-    <Component
+    <IconGlyph
       {...props}
+      entry={match}
       size={size}
-      fill={resolvedFill}
-      stroke={resolvedStroke}
-      viewBox={metadata.viewBox}
-      strokeWidth={isFilledVariant ? 0 : strokeWidth}
-      strokeLinejoin={isFilledVariant ? undefined : strokeLinejoin}
-      strokeLinecap={isFilledVariant ? undefined : strokeLinecap}
-      style={{ color }}
+      color={color}
+      strokeWidth={strokeWidth}
+      fill={fill}
+      stroke={stroke}
+      strokeLinejoin={strokeLinejoin}
+      strokeLinecap={strokeLinecap}
     />
   )
 }

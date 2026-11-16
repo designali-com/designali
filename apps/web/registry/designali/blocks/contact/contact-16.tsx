@@ -7,11 +7,13 @@ import { Button } from "@workspace/ui/components/button"
 import { Input } from "@workspace/ui/components/input"
 import { Label } from "@workspace/ui/components/label"
 import { Textarea } from "@workspace/ui/components/textarea"
+import { CounterNumber } from "@/registry/designali/ui/counter-number"
+import { GridPattern } from "@/registry/designali/ui/grid-pattern"
 
 const stats = [
-  { value: "1 day", label: "Median reply" },
-  { value: "460+", label: "Blocks shipped" },
-  { value: "4.9/5", label: "Client rating" },
+  { value: 1, suffix: " day", decimals: 0, label: "Median reply" },
+  { value: 460, suffix: "+", decimals: 0, label: "Blocks shipped" },
+  { value: 4.9, suffix: "/5", decimals: 1, label: "Client rating" },
 ]
 
 export default function Contact16() {
@@ -21,9 +23,10 @@ export default function Contact16() {
         <div className="absolute -top-24 -left-24 size-[28rem] rounded-full bg-chart-1/40 blur-3xl dark:bg-primary/20" />
         <div className="absolute -right-24 -bottom-32 size-[30rem] rounded-full bg-primary/40 blur-3xl dark:bg-chart-2/25" />
       </div>
-      <div
-        aria-hidden
-        className="absolute inset-0 opacity-40 [background-image:linear-gradient(var(--border)_1px,transparent_1px),linear-gradient(90deg,var(--border)_1px,transparent_1px)] [background-size:56px_56px] [mask-image:radial-gradient(ellipse_at_center,black,transparent_75%)]"
+      <GridPattern
+        width={56}
+        height={56}
+        className="stroke-border opacity-60 [mask-image:radial-gradient(ellipse_at_center,black,transparent_75%)]"
       />
 
       <div className="relative mx-auto max-w-xl px-6">
@@ -40,7 +43,14 @@ export default function Contact16() {
             {stats.map((stat) => (
               <div key={stat.label} className="py-4 text-center not-last:border-e">
                 <dt className="text-[11px] text-muted-foreground uppercase">{stat.label}</dt>
-                <dd className="mt-1 text-lg font-semibold">{stat.value}</dd>
+                <dd className="mt-1">
+                  <CounterNumber
+                    value={stat.value}
+                    suffix={stat.suffix}
+                    decimalPlaces={stat.decimals}
+                    className="text-lg font-semibold tracking-normal"
+                  />
+                </dd>
               </div>
             ))}
           </dl>

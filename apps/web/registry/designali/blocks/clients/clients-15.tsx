@@ -1,6 +1,6 @@
-import type { CSSProperties } from "react"
-
 import { Button } from "@workspace/ui/components/button"
+
+import { Marquee } from "@/registry/designali/ui/marquee"
 
 const columns = [
   ["Designali", "Dalim", "Dalim Agency", "Dalim Fonts", "Dalim Graphic"],
@@ -8,29 +8,18 @@ const columns = [
   ["Designali Icons", "Designali Logos", "Designali Vectors", "Designali Blocks", "Designali Templates"],
 ]
 
-function Column({ names, duration }: { names: string[]; duration: string }) {
+function Column({ names, duration }: { names: string[]; duration: number }) {
   return (
-    <div
-      className="flex flex-col gap-(--gap) overflow-hidden [--gap:1rem]"
-      style={{ "--duration": duration } as CSSProperties}
-    >
-      {[0, 1].map((copy) => (
+    <Marquee vertical speed={duration} gap="1rem" repeat={3} className="h-full p-0">
+      {names.map((name) => (
         <div
-          key={copy}
-          aria-hidden={copy === 1}
-          className="flex shrink-0 animate-marquee-vertical flex-col gap-(--gap)"
+          key={name}
+          className="flex h-20 items-center justify-center border border-border bg-background px-3 text-sm font-semibold tracking-tight text-muted-foreground sm:text-base"
         >
-          {names.map((name) => (
-            <div
-              key={name}
-              className="flex h-20 items-center justify-center border border-border bg-background px-3 text-sm font-semibold tracking-tight text-muted-foreground sm:text-base"
-            >
-              {name}
-            </div>
-          ))}
+          {name}
         </div>
       ))}
-    </div>
+    </Marquee>
   )
 }
 
@@ -63,9 +52,9 @@ export default function Clients15() {
           </div>
         </div>
         <div className="grid h-[420px] grid-cols-3 gap-4 [mask-image:linear-gradient(to_bottom,transparent,black_15%,black_85%,transparent)] lg:h-[560px]">
-          <Column names={columns[0]!} duration="22s" />
-          <Column names={columns[1]!} duration="30s" />
-          <Column names={columns[2]!} duration="26s" />
+          <Column names={columns[0]!} duration={22} />
+          <Column names={columns[1]!} duration={30} />
+          <Column names={columns[2]!} duration={26} />
         </div>
       </div>
     </section>

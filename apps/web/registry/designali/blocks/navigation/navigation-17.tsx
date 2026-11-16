@@ -15,6 +15,8 @@ import {
 
 import { cn } from "@workspace/ui/lib/utils"
 
+import { Logo } from "@/src/components/logo"
+
 const workspaces = [
   { name: "Designali Studio", plan: "Team", initials: "DS" },
   { name: "Side project", plan: "Free", initials: "SP" },
@@ -41,7 +43,7 @@ export default function Navigation17() {
     <section className="w-full bg-muted/40 pb-72">
       <header className="relative border-b bg-background">
         <div className="mx-auto flex h-14 max-w-7xl items-center gap-3 px-4 sm:px-6">
-          <span className="size-6 shrink-0 bg-foreground [clip-path:polygon(50%_0,100%_100%,0_100%)]" />
+          <Logo className="h-5 w-auto shrink-0" />
           <span className="text-muted-foreground/50">/</span>
 
           <div className="relative min-w-0">

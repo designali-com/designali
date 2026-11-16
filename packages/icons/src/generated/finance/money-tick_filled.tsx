@@ -1,5 +1,4 @@
 /** Auto-generated - Do not edit */
-'use client';
 import React from 'react';
 
 export interface MoneyTickFilledProps extends React.SVGProps<SVGSVGElement> {

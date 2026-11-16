@@ -1,5 +1,4 @@
 /** Auto-generated - Do not edit */
-'use client';
 import React from 'react';
 
 export interface ChainlinkLinkRoundedProps extends React.SVGProps<SVGSVGElement> {

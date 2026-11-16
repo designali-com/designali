@@ -1,5 +1,4 @@
 /** Auto-generated - Do not edit */
-'use client';
 import React from 'react';
 
 export interface Heading6Props extends React.SVGProps<SVGSVGElement> {

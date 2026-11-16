@@ -8,6 +8,8 @@ import {
   ResizablePanelGroup,
 } from "@workspace/ui/components/resizable"
 
+import { GridPattern } from "@/registry/designali/ui/grid-pattern"
+
 const stores = [
   { name: "Harbor Street", distance: "0.4 km", open: true },
   { name: "Old Town Market", distance: "1.2 km", open: true },
@@ -40,7 +42,8 @@ export default function MapWithResults() {
       </ResizablePanel>
       <ResizableHandle withHandle />
       <ResizablePanel defaultSize="60%" minSize="35%">
-        <div className="relative h-full bg-primary/5 bg-[linear-gradient(var(--border)_1px,transparent_1px),linear-gradient(90deg,var(--border)_1px,transparent_1px)] bg-[size:24px_24px] dark:bg-primary/30">
+        <div className="relative h-full bg-primary/5 dark:bg-primary/30">
+          <GridPattern width={24} height={24} />
           {pins.map((pin, i) => (
             <MapPinIcon
               key={i}

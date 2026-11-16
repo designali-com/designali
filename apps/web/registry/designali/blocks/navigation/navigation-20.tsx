@@ -12,31 +12,31 @@ const entries = [
     title: "Dalim Agency",
     kind: "Agency identity",
     year: "Brand",
-    gradient: "from-primary/20 via-chart-1 to-primary",
+    image: "/images/templates/dalim-agency-old.jpg",
   },
   {
     title: "Dalim Fonts",
     kind: "Type platform",
     year: "Web",
-    gradient: "from-primary/20 via-chart-1 to-primary",
+    image: "/images/templates/dalim-fonts-old.jpg",
   },
   {
     title: "Dalim UI",
     kind: "Component library",
     year: "Code",
-    gradient: "from-border via-muted-foreground to-foreground",
+    image: "/images/templates/dalim-ui-old.jpg",
   },
   {
     title: "Dalim Icons",
     kind: "Icon system",
     year: "Design",
-    gradient: "from-primary/20 via-chart-1 to-primary",
+    image: "/images/templates/dalim-icons-old.jpg",
   },
   {
     title: "Dalim Visuals",
     kind: "CGI and motion",
     year: "3D",
-    gradient: "from-primary/20 via-primary to-chart-2",
+    image: "/images/templates/dalim-visuals-old.jpg",
   },
 ]
 
@@ -87,15 +87,18 @@ export default function Navigation20() {
             <div
               key={entry.title}
               className={cn(
-                "absolute inset-0 flex flex-col justify-end bg-gradient-to-br p-6 text-foreground transition-all duration-500",
-                entry.gradient,
+                "absolute inset-0 flex flex-col justify-end bg-muted p-6 text-white transition-all duration-500",
                 hovered === index ? "scale-100 opacity-100" : "scale-105 opacity-0"
               )}
             >
-              <span className="absolute top-6 left-6 size-24 rounded-full border-2 border-foreground/30" />
-              <span className="absolute top-20 right-8 h-40 w-16 bg-foreground/10" />
-              <p className="text-xs tracking-widest uppercase opacity-70">{entry.kind}</p>
-              <p className="mt-1 text-2xl font-semibold">{entry.title}</p>
+              <img
+                src={entry.image}
+                alt={`${entry.title} — Designali case study`}
+                className="absolute inset-0 size-full object-cover"
+              />
+              <span className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
+              <p className="relative text-xs tracking-widest uppercase opacity-70">{entry.kind}</p>
+              <p className="relative mt-1 text-2xl font-semibold">{entry.title}</p>
             </div>
           ))}
         </div>

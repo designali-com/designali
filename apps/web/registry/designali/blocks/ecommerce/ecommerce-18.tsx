@@ -16,11 +16,12 @@ import {
   TabsTrigger,
 } from "@workspace/ui/components/tabs"
 import { cn } from "@workspace/ui/lib/utils"
+import { Macbook } from "@/registry/designali/ui/apple/macbook"
 
 const finishes = [
-  { id: "graphite", label: "Outline", body: "#000000", accent: "#00A8FF" },
-  { id: "sage", label: "Duotone", body: "#155DFC", accent: "#8EC5FF" },
-  { id: "clay", label: "Solid", body: "#00A8FF", accent: "#FFFFFF" },
+  { id: "graphite", label: "Outline", body: "black", accent: "var(--primary)" },
+  { id: "sage", label: "Duotone", body: "var(--chart-3)", accent: "var(--chart-1)" },
+  { id: "clay", label: "Solid", body: "var(--primary)", accent: "white" },
 ]
 
 const highlights = [
@@ -53,16 +54,16 @@ export default function Ecommerce18() {
               className="absolute size-[70%] rounded-full opacity-40 blur-3xl transition-colors duration-500"
               style={{ background: finish.body }}
             />
-            <svg viewBox="0 0 260 140" className="relative w-full max-w-md drop-shadow-2xl" aria-hidden="true">
-              <rect x="10" y="20" width="240" height="100" rx="50" fill={finish.body} className="transition-[fill] duration-500" />
-              <rect x="30" y="34" width="200" height="72" rx="36" fill={finish.accent} opacity="0.25" />
-              {Array.from({ length: 9 }).map((_, row) =>
-                Array.from({ length: 30 }).map((__, col) => (
-                  <circle key={`${row}-${col}`} cx={44 + col * 6} cy={46 + row * 6} r="1.2" fill={finish.accent} opacity="0.6" />
-                ))
-              )}
-              <rect x="110" y="8" width="40" height="14" rx="7" fill={finish.body} />
-            </svg>
+            <Macbook variant="macbook-pro" color="black" size="sm" className="relative w-full! max-w-md drop-shadow-2xl">
+              <div className="relative size-full">
+                <img src="/images/templates/dalim-icons-old.jpg" alt="Designali Icons Pro preview" className="size-full object-cover object-top" />
+                <div
+                  aria-hidden="true"
+                  className="absolute inset-0 opacity-25 mix-blend-color transition-colors duration-500"
+                  style={{ background: finish.accent }}
+                />
+              </div>
+            </Macbook>
           </div>
 
           <div className="p-6 pt-0 md:p-10 lg:pt-10 lg:pl-0">

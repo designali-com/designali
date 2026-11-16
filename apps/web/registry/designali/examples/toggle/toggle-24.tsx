@@ -5,6 +5,8 @@ import * as React from "react"
 import { Toggle } from "@workspace/ui/components/toggle"
 import { cn } from "@workspace/ui/lib/utils"
 
+import { CounterNumber } from "@/registry/designali/ui/counter-number"
+
 export default function LiveUpdatesToggle() {
   const [live, setLive] = React.useState(true)
   const [visitors, setVisitors] = React.useState(1284)
@@ -40,9 +42,13 @@ export default function LiveUpdatesToggle() {
           {live ? "Live" : "Paused"}
         </Toggle>
       </div>
-      <p className="text-3xl font-semibold tabular-nums">
-        {visitors.toLocaleString()}
-      </p>
+      <CounterNumber
+        value={visitors}
+        startValue={1284}
+        size="lg"
+        duration={600}
+        className="font-semibold tracking-normal"
+      />
     </div>
   )
 }

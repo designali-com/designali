@@ -4,40 +4,40 @@ import {
 
 const reviews = [
   {
-    name: "Daniel Okafor",
-    role: "Founder, Driftwave",
-    initials: "DO",
-    text: "The blocks are thoughtfully built. We launched our marketing site in four days instead of four weeks.",
+    name: "Daniel",
+    role: "Founder, Designali client",
+    initials: "DA",
+    text: "Designali blocks are thoughtfully built. We launched our marketing site in days instead of weeks.",
   },
   {
-    name: "Lena Fischer",
-    role: "Product Designer, Tessel",
-    initials: "LF",
+    name: "Lena",
+    role: "Product Designer",
+    initials: "LE",
     text: "Dark mode just works. Every token maps cleanly, which is rare in component libraries.",
   },
   {
-    name: "Arjun Mehta",
-    role: "CTO, Quanta AI",
-    initials: "AM",
-    text: "Clean TSX, no magic. My engineers can read and extend everything without a learning curve.",
+    name: "Arjun",
+    role: "CTO, Designali client",
+    initials: "AR",
+    text: "Clean TSX, no magic. My engineers can read and extend every Designali block without a learning curve.",
   },
   {
-    name: "Sofia Alvarez",
-    role: "Creative Director, Corvid",
-    initials: "SA",
-    text: "Finally a library with editorial taste. It feels designed, not assembled.",
+    name: "Sofia",
+    role: "Creative Director",
+    initials: "SO",
+    text: "Ali Imam's work has real editorial taste. It feels designed, not assembled.",
   },
   {
-    name: "Tom Becker",
+    name: "Tom",
     role: "Freelance Developer",
-    initials: "TB",
-    text: "I reuse the pricing and FAQ sections on nearly every client project. Huge time saver.",
+    initials: "TO",
+    text: "I reuse the Designali pricing and FAQ blocks on nearly every client project. Huge time saver.",
   },
   {
-    name: "Priya Nair",
-    role: "Design Lead, Orbital Health",
-    initials: "PN",
-    text: "Accessible defaults out of the box meant our audit came back with almost nothing to fix.",
+    name: "Priya",
+    role: "Design Lead, Designali client",
+    initials: "PR",
+    text: "@designali/icons and accessible defaults out of the box meant our audit came back with almost nothing to fix.",
   },
 ]
 
@@ -47,10 +47,10 @@ export default function Testimonials03() {
       <div className="mx-auto max-w-6xl px-6">
         <div className="max-w-2xl">
           <h2 className="text-3xl font-semibold tracking-tight md:text-4xl">
-            Loved by people who ship
+            Loved by people who ship with designali
           </h2>
           <p className="mt-3 text-muted-foreground">
-            Rated 4.9 out of 5 by more than 3,000 designers and developers.
+            Designers and developers building with 460+ Designali blocks.
           </p>
         </div>
         <div className="mt-12 grid border-t border-l border-border sm:grid-cols-2 lg:grid-cols-3">

@@ -1,20 +1,19 @@
 "use client"
 
 import { useState } from "react"
-import {
-  CalendarDays,
-  Check,
-  Clock,
-  Globe,
-  Users,
-} from "@designali/icons"
+import { CalendarDays, Check, Clock, Globe, Users } from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { Input } from "@workspace/ui/components/input"
 import { Label } from "@workspace/ui/components/label"
 
 const speakers = [
-  { name: "Ali Imam", role: "Founder, Designali", initials: "AI", avatar: "/ali.jpg" },
+  {
+    name: "Ali Imam",
+    role: "Founder, Designali",
+    initials: "AI",
+    avatar: "/ali.jpg",
+  },
   { name: "Sara", role: "UI/UX Designer, Designali", initials: "SA" },
   { name: "Omar", role: "Next.js Developer, Designali", initials: "OM" },
 ]
@@ -32,22 +31,33 @@ export default function Media09() {
       <div className="mx-auto grid max-w-6xl gap-10 px-6 lg:grid-cols-[1.3fr_1fr]">
         <div>
           <span className="inline-flex items-center gap-2 border border-border px-2.5 py-1 text-xs font-medium">
-            <span className="size-1.5 rounded-full bg-primary" /> Free Designali webinar
+            <span className="size-1.5 rounded-full bg-primary" /> Free Designali
+            webinar
           </span>
           <h2 className="mt-5 text-3xl font-semibold tracking-tight md:text-5xl">
             Shipping a website in 30 days, not 6 months
           </h2>
           <div className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-sm text-muted-foreground">
-            <span className="flex items-center gap-2"><CalendarDays className="size-4" /> Thu, 4 Dec 2025</span>
-            <span className="flex items-center gap-2"><Clock className="size-4" /> 17:00 - 18:00 GMT</span>
-            <span className="flex items-center gap-2"><Globe className="size-4" /> Online, English</span>
-            <span className="flex items-center gap-2"><Users className="size-4" /> 1,286 registered</span>
+            <span className="flex items-center gap-2">
+              <CalendarDays className="size-4" /> Thu, 4 Dec 2025
+            </span>
+            <span className="flex items-center gap-2">
+              <Clock className="size-4" /> 17:00 - 18:00 GMT
+            </span>
+            <span className="flex items-center gap-2">
+              <Globe className="size-4" /> Online, English
+            </span>
+            <span className="flex items-center gap-2">
+              <Users className="size-4" /> 1,286 registered
+            </span>
           </div>
           <h3 className="mt-10 text-sm font-medium">What we&apos;ll cover</h3>
           <ol className="mt-3 space-y-3">
             {agenda.map((item, i) => (
               <li key={item} className="flex gap-4 text-sm">
-                <span className="font-sans text-muted-foreground">0{i + 1}</span>
+                <span className="font-sans text-muted-foreground">
+                  0{i + 1}
+                </span>
                 <span>{item}</span>
               </li>
             ))}
@@ -76,10 +86,19 @@ export default function Media09() {
         <div className="lg:sticky lg:top-10 lg:self-start">
           <div className="border border-border bg-card p-6 text-card-foreground">
             <div className="grid grid-cols-4 gap-2 text-center">
-              {[["18", "days"], ["06", "hrs"], ["42", "min"], ["09", "sec"]].map(([n, l]) => (
+              {[
+                ["18", "days"],
+                ["06", "hrs"],
+                ["42", "min"],
+                ["09", "sec"],
+              ].map(([n, l]) => (
                 <div key={l} className="border border-border py-3">
-                  <p className="font-sans text-2xl font-semibold tabular-nums">{n}</p>
-                  <p className="text-[11px] text-muted-foreground uppercase">{l}</p>
+                  <p className="font-sans text-2xl font-semibold tabular-nums">
+                    {n}
+                  </p>
+                  <p className="text-[11px] text-muted-foreground uppercase">
+                    {l}
+                  </p>
                 </div>
               ))}
             </div>
@@ -89,7 +108,9 @@ export default function Media09() {
                   <Check className="size-6" />
                 </span>
                 <p className="mt-4 font-medium">You&apos;re registered</p>
-                <p className="mt-1 text-sm text-muted-foreground">A calendar invite and joining link are on their way.</p>
+                <p className="mt-1 text-sm text-muted-foreground">
+                  A calendar invite and joining link are on their way.
+                </p>
               </div>
             ) : (
               <form
@@ -105,14 +126,24 @@ export default function Media09() {
                 </div>
                 <div className="space-y-1.5">
                   <Label htmlFor="m09-email">Work email</Label>
-                  <Input id="m09-email" type="email" required placeholder="you@example.com" />
+                  <Input
+                    id="m09-email"
+                    type="email"
+                    required
+                    placeholder="you@example.com"
+                  />
                 </div>
                 <div className="space-y-1.5">
                   <Label htmlFor="m09-company">Company</Label>
                   <Input id="m09-company" placeholder="Optional" />
                 </div>
-                <Button type="submit" size="lg" className="w-full">Save my seat</Button>
-                <p className="text-center text-xs text-muted-foreground">Can&apos;t make it live? Register and we&apos;ll send the recording.</p>
+                <Button type="submit" size="lg" className="w-full">
+                  Save my seat
+                </Button>
+                <p className="text-center text-xs text-muted-foreground">
+                  Can&apos;t make it live? Register and we&apos;ll send the
+                  recording.
+                </p>
               </form>
             )}
           </div>

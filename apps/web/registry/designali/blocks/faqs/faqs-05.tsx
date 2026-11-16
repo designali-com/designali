@@ -13,14 +13,14 @@ const groups = [
     name: "Billing",
     items: [
       {
-        question: "Can I change plans at any time?",
+        question: "Can I upgrade to Designali Pro at any time?",
         answer:
-          "Yes. Upgrades take effect immediately and are prorated. Downgrades apply at the start of your next billing cycle.",
+          "Yes. Upgrade from your account page on designali.com and Pro blocks, templates and icon sets unlock straight away.",
       },
       {
-        question: "Do you offer refunds?",
+        question: "Where do I find my invoices?",
         answer:
-          "Annual plans can be refunded in full within 14 days of purchase. Monthly plans can be cancelled at any time and won't renew.",
+          "Every receipt is emailed after purchase. For copies or billing questions, write to billing@designali.com.",
       },
     ],
   },
@@ -28,29 +28,29 @@ const groups = [
     name: "Account",
     items: [
       {
-        question: "How do I invite teammates?",
+        question: "Can my team share one Designali account?",
         answer:
-          "Open Settings, then Members, and send invites by email. New members join with Viewer access until an admin changes their role.",
+          "Each person should have their own account. Studio teammates can still share the same blocks, @designali/icons and @designali/logos in your codebase.",
       },
       {
-        question: "Can I use single sign-on?",
+        question: "How do I change the email on my account?",
         answer:
-          "SAML SSO and SCIM provisioning are available on the Business plan for Okta, Azure AD and Google Workspace.",
+          "Sign in, open Settings and update your email. If you no longer have access to the old address, contact support@designali.com.",
       },
     ],
   },
   {
-    name: "Data & privacy",
+    name: "Code & usage",
     items: [
       {
-        question: "Where is my data stored?",
+        question: "What stack are the blocks built with?",
         answer:
-          "All workspaces are hosted in the EU (Frankfurt) by default. US data residency is available on request for Business customers.",
+          "Next.js, React, TypeScript and Tailwind CSS with shadcn-style UI primitives. Each block copies straight into your project.",
       },
       {
-        question: "Can I export everything?",
+        question: "Can I use blocks in client projects?",
         answer:
-          "You can export your full workspace as JSON or CSV at any time from Settings, with no limits and no support ticket required.",
+          "Yes. Designali blocks, templates and icons can be used in personal and client work under the license listed on each resource.",
       },
     ],
   },
@@ -81,7 +81,7 @@ export default function Faqs05() {
           Help center
         </h2>
         <p className="mt-3 text-center text-sm text-muted-foreground">
-          Search our most common questions or browse by topic.
+          Search common questions about Designali blocks, templates and icons, or browse by topic.
         </p>
         <div className="relative mt-10">
           <Search className="absolute start-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground" />

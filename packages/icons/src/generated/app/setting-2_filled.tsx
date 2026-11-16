@@ -1,5 +1,4 @@
 /** Auto-generated - Do not edit */
-'use client';
 import React from 'react';
 
 export interface Setting2FilledProps extends React.SVGProps<SVGSVGElement> {

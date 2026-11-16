@@ -1,5 +1,4 @@
 /** Auto-generated - Do not edit */
-'use client';
 import React from 'react';
 
 export interface FingerScanRoundedProps extends React.SVGProps<SVGSVGElement> {

@@ -1,5 +1,4 @@
 /** Auto-generated - Do not edit */
-'use client';
 import React from 'react';
 
 export interface HashtagDownRoundedProps extends React.SVGProps<SVGSVGElement> {

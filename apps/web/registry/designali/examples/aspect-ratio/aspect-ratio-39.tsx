@@ -10,12 +10,16 @@ export default function ScreenshotHotspots() {
   return (
     <div className="w-full max-w-md">
       <AspectRatio ratio={16 / 10} className="border bg-muted/40">
-        <div className="absolute inset-y-0 start-0 w-1/4 border-e bg-muted" />
-        <div className="absolute inset-x-0 top-0 ms-[25%] h-[12%] border-b bg-background" />
-        <div className="absolute end-[6%] bottom-[8%] ms-[25%] grid h-[66%] w-[63%] grid-cols-2 gap-2">
-          <div className="bg-background ring-1 ring-border" />
-          <div className="bg-background ring-1 ring-border" />
-        </div>
+        <img
+          src="/img/dashboard-1-light.jpg"
+          alt="designali.com dashboard screenshot"
+          className="size-full object-cover dark:hidden"
+        />
+        <img
+          src="/img/dashboard-1-dark.jpg"
+          alt="designali.com dashboard screenshot"
+          className="hidden size-full object-cover dark:block"
+        />
         {spots.map((spot) => (
           <span
             key={spot.id}

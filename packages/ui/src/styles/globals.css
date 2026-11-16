@@ -3,8 +3,9 @@
 @import "shadcn/tailwind.css";
 
 @custom-variant dark (&:is(.dark *));
-@source "../../../apps/**/*.{ts,tsx}";
-@source "../../../components/**/*.{ts,tsx}";
+/* Each app's own folder is scanned automatically (Tailwind uses the app's
+   working directory). Only add this shared package; scanning every app
+   made each app's CSS build include the other three apps' classes. */
 @source "../**/*.{ts,tsx}";
 
 @import "./themes.css";

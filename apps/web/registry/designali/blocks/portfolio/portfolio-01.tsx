@@ -1,6 +1,4 @@
-import {
-  ArrowUpRight,
-} from "@designali/icons"
+import { ArrowUpRight } from "@designali/icons"
 
 const projects = [
   {
@@ -43,7 +41,8 @@ export default function Portfolio01() {
           </h2>
           <p className="text-muted-foreground md:text-right">
             Brand, UI/UX and web work by Designali — design se code tak.
-            <br className="hidden md:block" /> Dalim projects and Designali templates.
+            <br className="hidden md:block" /> Dalim projects and Designali
+            templates.
           </p>
         </div>
 
@@ -67,7 +66,9 @@ export default function Portfolio01() {
               </div>
               <div className="mt-5 flex items-start justify-between gap-4">
                 <div>
-                  <p className="text-sm text-muted-foreground">{project.client}</p>
+                  <p className="text-sm text-muted-foreground">
+                    {project.client}
+                  </p>
                   <h3 className="mt-1 text-xl font-medium">{project.title}</h3>
                 </div>
                 <span className="font-sans text-xs text-muted-foreground">
@@ -76,7 +77,10 @@ export default function Portfolio01() {
               </div>
               <div className="mt-3 flex flex-wrap gap-2">
                 {project.services.map((service) => (
-                  <span key={service} className="border border-border px-2 py-0.5 text-xs text-muted-foreground">
+                  <span
+                    key={service}
+                    className="border border-border px-2 py-0.5 text-xs text-muted-foreground"
+                  >
                     {service}
                   </span>
                 ))}

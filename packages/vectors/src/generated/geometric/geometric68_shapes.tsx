@@ -1,5 +1,4 @@
 
-'use client';
 import React from 'react';
 
 export interface Geometric68ShapesProps extends React.SVGProps<SVGSVGElement> {

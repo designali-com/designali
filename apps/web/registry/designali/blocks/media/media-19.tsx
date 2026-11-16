@@ -1,10 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import {
-  Play,
-  X,
-} from "@designali/icons"
+import { Play, X } from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { CounterNumber } from "@/registry/designali/ui/counter-number"
@@ -37,10 +34,15 @@ export default function Media19() {
           />
           <div className="relative grid gap-12 lg:grid-cols-[1.1fr_1fr] lg:items-center">
             <div>
-              <p className="text-xs tracking-widest text-background/60 uppercase">Keynote replay - Designali Live</p>
-              <h2 className="mt-4 text-3xl font-semibold tracking-tight md:text-5xl">Watch the launch in 4 minutes.</h2>
+              <p className="text-xs tracking-widest text-background/60 uppercase">
+                Keynote replay - Designali Live
+              </p>
+              <h2 className="mt-4 text-3xl font-semibold tracking-tight md:text-5xl">
+                Watch the launch in 4 minutes.
+              </h2>
               <p className="mt-4 max-w-md text-background/70">
-                New Designali blocks, templates and icons, demoed live by Ali Imam — design se code tak, in real time.
+                New Designali blocks, templates and icons, demoed live by Ali
+                Imam — design se code tak, in real time.
               </p>
               <dl className="mt-10 grid grid-cols-3 gap-4 border-t border-background/20 pt-6">
                 {stats.map((s) => (
@@ -73,24 +75,49 @@ export default function Media19() {
                 <span className="absolute inset-0 animate-ping rounded-full bg-white/40" />
                 <Play className="relative size-7 translate-x-0.5 fill-current" />
               </span>
-              <span className="absolute bottom-3 left-3 bg-black/60 px-2 py-1 text-xs text-white backdrop-blur">Keynote - 4:06</span>
+              <span className="absolute bottom-3 left-3 bg-black/60 px-2 py-1 text-xs text-white backdrop-blur">
+                Keynote - 4:06
+              </span>
             </button>
           </div>
         </div>
       </div>
 
       {open && (
-        <div role="dialog" aria-modal="true" aria-label="Keynote video" className="fixed inset-0 z-50 flex items-center justify-center bg-black/85 p-4 backdrop-blur-sm" onClick={() => setOpen(false)}>
-          <div className="relative w-full max-w-4xl" onClick={(e) => e.stopPropagation()}>
-            <Button variant="outline" size="icon-lg" aria-label="Close" className="absolute -top-12 right-0 border-white/20 bg-transparent text-white hover:bg-white/10 hover:text-white" onClick={() => setOpen(false)}>
+        <div
+          role="dialog"
+          aria-modal="true"
+          aria-label="Keynote video"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/85 p-4 backdrop-blur-sm"
+          onClick={() => setOpen(false)}
+        >
+          <div
+            className="relative w-full max-w-4xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <Button
+              variant="outline"
+              size="icon-lg"
+              aria-label="Close"
+              className="absolute -top-12 right-0 border-white/20 bg-transparent text-white hover:bg-white/10 hover:text-white"
+              onClick={() => setOpen(false)}
+            >
               <X />
             </Button>
             <div className="relative aspect-video w-full overflow-hidden border border-white/10 bg-black">
-              <img src="/img/hero-2.jpg" alt="" className="absolute inset-0 size-full object-cover" />
+              <img
+                src="/img/hero-2.jpg"
+                alt=""
+                className="absolute inset-0 size-full object-cover"
+              />
               <div className="absolute inset-x-0 bottom-0 flex items-center gap-3 bg-gradient-to-t from-black/90 to-transparent p-4 text-white">
                 <Play className="size-4 fill-current" />
-                <div className="h-1 flex-1 bg-white/25"><div className="h-full w-[6%] bg-white" /></div>
-                <span className="font-sans text-xs tabular-nums">0:14 / 4:06</span>
+                <div className="h-1 flex-1 bg-white/25">
+                  <div className="h-full w-[6%] bg-white" />
+                </div>
+                <span className="font-sans text-xs tabular-nums">
+                  0:14 / 4:06
+                </span>
               </div>
             </div>
           </div>

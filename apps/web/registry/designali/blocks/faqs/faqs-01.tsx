@@ -14,34 +14,34 @@ interface FAQItem {
 
 const faqData: FAQItem[] = [
   {
-    question: "What is Brillance and who is it for?",
+    question: "What is Designali and who is it for?",
     answer:
-      "Brillance is a modern design-driven platform built for teams that care about clarity, consistency, and scalable systems. It’s ideal for startups, product teams, and agencies looking to create cohesive digital experiences.",
+      "Designali is a design and development studio by Ali Imam. Alongside client work, designali.com offers templates, 460+ blocks, 240+ landing pages and 4000+ icons for designers, developers and design engineers who want to ship polished interfaces faster.",
   },
   {
-    question: "How does Brillance improve my design workflow?",
+    question: "How does Designali improve my design workflow?",
     answer:
-      "Brillance helps you build structured layouts, reusable components, and consistent visual patterns. From typography to spacing systems, everything is designed to reduce friction and increase creative velocity.",
+      "Every block is designed in Figma and built in Next.js, React, TypeScript and Tailwind CSS, so what you see is what you copy. Design se code tak: structured layouts, reusable components and consistent spacing without starting from a blank file.",
   },
   {
-    question: "Can Brillance fit into my existing design system?",
+    question: "Can Designali blocks fit into my existing design system?",
     answer:
-      "Yes. Brillance is built to be flexible and token-based, allowing you to integrate your brand colors, typography scales, and spacing rules seamlessly into your existing workflow.",
+      "Yes. Blocks use semantic design tokens like background, foreground, muted and primary, so your brand colors, typography and radius carry through automatically once your tokens are set.",
   },
   {
-    question: "Is it suitable for large teams?",
+    question: "Is it suitable for larger teams?",
     answer:
-      "Absolutely. Brillance supports scalable architecture and consistent component patterns, making collaboration between designers and developers smooth and predictable.",
+      "Absolutely. Shared components, @designali/icons and @designali/logos give designers and developers one vocabulary, which keeps handoff smooth and predictable across projects.",
   },
   {
-    question: "Does Brillance support responsive design?",
+    question: "Are the blocks responsive?",
     answer:
-      "Yes. Every component is built with responsiveness in mind, ensuring your layouts adapt beautifully across desktop, tablet, and mobile devices.",
+      "Yes. Every block is built mobile-first and tested across phone, tablet and desktop widths, with light and dark themes included.",
   },
   {
     question: "How do I get started?",
     answer:
-      "Start by integrating the core components into your project, customize your design tokens, and build your first layout. Brillance is structured to help you move from idea to interface quickly and confidently.",
+      "Browse /blocks or /templates on designali.com, copy what you need into your project and adjust the tokens. The /docs cover installation, and hello@designali.com is always open for questions.",
   },
 ]
 
@@ -54,9 +54,9 @@ export function FAQs() {
             Frequently Asked Questions
           </h2>
           <p className="text-muted-foreground text-base leading-7">
-            Explore your data, build your dashboard,
+            Everything about Designali blocks, templates and icons,
             <br className="hidden md:block" />
-            bring your team together.
+            design se code tak.
           </p>
         </div>
 

@@ -1,5 +1,4 @@
 
-'use client';
 import React from 'react';
 
 export interface Organic50ShapesProps extends React.SVGProps<SVGSVGElement> {

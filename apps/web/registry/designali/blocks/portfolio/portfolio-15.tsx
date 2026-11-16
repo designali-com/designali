@@ -1,10 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import {
-  ArrowLeft,
-  ArrowRight,
-} from "@designali/icons"
+import { ArrowLeft, ArrowRight } from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { cn } from "@workspace/ui/lib/utils"
@@ -72,11 +69,15 @@ export default function Portfolio15() {
                   />
                 </span>
                 <span className="mt-3 flex items-baseline gap-2">
-                  <span className="font-sans text-xs text-muted-foreground">0{i + 1}</span>
+                  <span className="font-sans text-xs text-muted-foreground">
+                    0{i + 1}
+                  </span>
                   <span
                     className={cn(
                       "text-sm font-medium transition-colors",
-                      active === i ? "text-foreground" : "text-muted-foreground group-hover:text-foreground"
+                      active === i
+                        ? "text-foreground"
+                        : "text-muted-foreground group-hover:text-foreground"
                     )}
                   >
                     {p.name}
@@ -97,7 +98,9 @@ export default function Portfolio15() {
           </div>
           <div className="flex flex-col justify-between gap-8 md:border-l md:border-border md:pl-8">
             <div>
-              <p className="text-xs tracking-widest text-muted-foreground uppercase">Artefacts</p>
+              <p className="text-xs tracking-widest text-muted-foreground uppercase">
+                Artefacts
+              </p>
               <ul className="mt-4 space-y-3">
                 {phase.artefacts.map((item) => (
                   <li key={item} className="flex items-center gap-3 text-sm">

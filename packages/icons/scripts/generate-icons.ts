@@ -321,7 +321,6 @@ for (const category of categories) {
 
     const componentName = toComponentName(logo.id)
     const componentCode = `/** Auto-generated - Do not edit */
-'use client';
 import React from 'react';
 
 export interface ${componentName}Props extends React.SVGProps<SVGSVGElement> {
@@ -424,15 +423,18 @@ for (const category of categories) {
 
 allIconsObject += "};\n"
 
-// Sabko combine karke file write karein
+// index.tsx is a pure re-export barrel so bundlers can load only the icons
+// that are imported. The big `allIcons` lookup object lives in all.tsx and is
+// only pulled in by code that imports `allIcons`.
+fs.writeFileSync(
+  path.join(GENERATED_DIR, "all.tsx"),
+  mainIndexContent + internalImports + "\n" + allIconsObject
+)
 fs.writeFileSync(
   mainIndexPath,
-  mainIndexContent +
-  namedExports +
-  "\n" +
-  internalImports +
-  "\n" +
-  allIconsObject
+  `/** Auto-generated main index - Do not edit manually */\n` +
+  `export { allIcons, type LogoEntry } from './all';\n\n` +
+  namedExports
 )
 
 console.log(

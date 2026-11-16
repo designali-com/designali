@@ -15,11 +15,41 @@ import { cn } from "@workspace/ui/lib/utils"
 
 type Lesson = { title: string; length: string; locked?: boolean }
 const modules: { title: string; lessons: Lesson[] }[] = [
-  { title: "Foundations", lessons: [{ title: "Welcome and course map", length: "3:12" }, { title: "Installing Designali blocks", length: "8:40" }, { title: "Your first layout", length: "12:05" }] },
-  { title: "Typography systems", lessons: [{ title: "Choosing a type scale", length: "9:18" }, { title: "Line length and rhythm", length: "7:52" }, { title: "Pairing typefaces", length: "11:30" }] },
-  { title: "Colour and contrast", lessons: [{ title: "Building a palette from one hue", length: "10:44", locked: true }, { title: "Accessible contrast in practice", length: "8:21", locked: true }] },
+  {
+    title: "Foundations",
+    lessons: [
+      { title: "Welcome and course map", length: "3:12" },
+      { title: "Installing Designali blocks", length: "8:40" },
+      { title: "Your first layout", length: "12:05" },
+    ],
+  },
+  {
+    title: "Typography systems",
+    lessons: [
+      { title: "Choosing a type scale", length: "9:18" },
+      { title: "Line length and rhythm", length: "7:52" },
+      { title: "Pairing typefaces", length: "11:30" },
+    ],
+  },
+  {
+    title: "Colour and contrast",
+    lessons: [
+      {
+        title: "Building a palette from one hue",
+        length: "10:44",
+        locked: true,
+      },
+      {
+        title: "Accessible contrast in practice",
+        length: "8:21",
+        locked: true,
+      },
+    ],
+  },
 ]
-const flat = modules.flatMap((m, mi) => m.lessons.map((l, li) => ({ ...l, key: `${mi}-${li}`, module: m.title })))
+const flat = modules.flatMap((m, mi) =>
+  m.lessons.map((l, li) => ({ ...l, key: `${mi}-${li}`, module: m.title }))
+)
 
 export default function Media13() {
   const [current, setCurrent] = useState("1-0")
@@ -40,30 +70,47 @@ export default function Media13() {
       <div className="mx-auto grid max-w-7xl gap-6 px-6 lg:grid-cols-[1fr_360px]">
         <div className="min-w-0">
           <div className="relative flex aspect-video items-center justify-center overflow-hidden border border-border bg-muted">
-            <img src="/img/dashboard-1-light.jpg" alt={lesson.title} className="absolute inset-0 size-full object-cover" />
+            <img
+              src="/img/dashboard-1-light.jpg"
+              alt={lesson.title}
+              className="absolute inset-0 size-full object-cover"
+            />
             <div className="absolute inset-0 bg-background/40" />
             <div className="relative text-center">
-              <PlayCircle className="mx-auto size-14 text-foreground/80" strokeWidth={1.25} />
+              <PlayCircle
+                className="mx-auto size-14 text-foreground/80"
+                strokeWidth={1.25}
+              />
               <p className="mt-3 text-xs text-foreground">{lesson.length}</p>
             </div>
           </div>
           <div className="mt-6 flex flex-wrap items-start justify-between gap-4">
             <div>
-              <p className="text-xs text-muted-foreground">{lesson.module} - Lesson {idx + 1} of {flat.length}</p>
-              <h2 className="mt-1 text-2xl font-semibold tracking-tight">{lesson.title}</h2>
+              <p className="text-xs text-muted-foreground">
+                {lesson.module} - Lesson {idx + 1} of {flat.length}
+              </p>
+              <h2 className="mt-1 text-2xl font-semibold tracking-tight">
+                {lesson.title}
+              </h2>
             </div>
-            <Button onClick={complete} disabled={done.includes(current) && (!next || !!next.locked)}>
+            <Button
+              onClick={complete}
+              disabled={done.includes(current) && (!next || !!next.locked)}
+            >
               {done.includes(current) ? "Next lesson" : "Mark complete"}
             </Button>
           </div>
           <p className="mt-4 max-w-2xl text-sm text-muted-foreground">
-            In this lesson Ali Imam works through a real Designali landing page and rebuilds its hierarchy using only type. Download the
-            starter file from the resources tab and follow along at your own pace.
+            In this lesson Ali Imam works through a real Designali landing page
+            and rebuilds its hierarchy using only type. Download the starter
+            file from the resources tab and follow along at your own pace.
           </p>
         </div>
         <aside className="border border-border lg:self-start">
           <div className="border-b border-border p-4">
-            <p className="text-sm font-medium">Designali: Layout for Developers</p>
+            <p className="text-sm font-medium">
+              Designali: Layout for Developers
+            </p>
             <div className="mt-3 flex items-center gap-3">
               <Progress value={pct} className="flex-1" />
               <span className="font-sans text-xs tabular-nums">{pct}%</span>
@@ -72,24 +119,42 @@ export default function Media13() {
           {modules.map((m, mi) => {
             const isOpen = open.includes(mi)
             return (
-              <div key={m.title} className="border-b border-border last:border-b-0">
+              <div
+                key={m.title}
+                className="border-b border-border last:border-b-0"
+              >
                 <button
                   type="button"
                   aria-expanded={isOpen}
-                  onClick={() => setOpen((o) => (o.includes(mi) ? o.filter((x) => x !== mi) : [...o, mi]))}
+                  onClick={() =>
+                    setOpen((o) =>
+                      o.includes(mi) ? o.filter((x) => x !== mi) : [...o, mi]
+                    )
+                  }
                   className="flex w-full items-center justify-between gap-3 px-4 py-3 text-left text-sm font-medium hover:bg-muted/50"
                 >
                   <span>
-                    <span className="mr-2 font-sans text-xs text-muted-foreground">0{mi + 1}</span>
+                    <span className="mr-2 font-sans text-xs text-muted-foreground">
+                      0{mi + 1}
+                    </span>
                     {m.title}
                   </span>
-                  <ChevronDown className={cn("size-4 transition-transform", isOpen && "rotate-180")} />
+                  <ChevronDown
+                    className={cn(
+                      "size-4 transition-transform",
+                      isOpen && "rotate-180"
+                    )}
+                  />
                 </button>
                 {isOpen && (
                   <ul className="pb-2">
                     {m.lessons.map((l, li) => {
                       const key = `${mi}-${li}`
-                      const Icon = l.locked ? Lock : done.includes(key) ? CheckCircle2 : Circle
+                      const Icon = l.locked
+                        ? Lock
+                        : done.includes(key)
+                          ? CheckCircle2
+                          : Circle
                       return (
                         <li key={key}>
                           <button
@@ -98,12 +163,25 @@ export default function Media13() {
                             onClick={() => setCurrent(key)}
                             className={cn(
                               "flex w-full items-center gap-3 px-4 py-2 text-left text-sm disabled:cursor-not-allowed disabled:opacity-50",
-                              key === current ? "bg-muted font-medium" : "hover:bg-muted/50"
+                              key === current
+                                ? "bg-muted font-medium"
+                                : "hover:bg-muted/50"
                             )}
                           >
-                            <Icon className={cn("size-4 shrink-0", done.includes(key) && !l.locked ? "text-primary dark:text-primary" : "text-muted-foreground")} />
-                            <span className="min-w-0 flex-1 truncate">{l.title}</span>
-                            <span className="font-sans text-xs text-muted-foreground">{l.length}</span>
+                            <Icon
+                              className={cn(
+                                "size-4 shrink-0",
+                                done.includes(key) && !l.locked
+                                  ? "text-primary dark:text-primary"
+                                  : "text-muted-foreground"
+                              )}
+                            />
+                            <span className="min-w-0 flex-1 truncate">
+                              {l.title}
+                            </span>
+                            <span className="font-sans text-xs text-muted-foreground">
+                              {l.length}
+                            </span>
                           </button>
                         </li>
                       )

@@ -1,5 +1,4 @@
 /** Auto-generated - Do not edit */
-'use client';
 import React from 'react';
 
 export interface Note1FilledProps extends React.SVGProps<SVGSVGElement> {

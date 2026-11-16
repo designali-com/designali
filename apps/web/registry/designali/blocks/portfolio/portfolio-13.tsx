@@ -1,9 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import {
-  MoveHorizontal,
-} from "@designali/icons"
+import { MoveHorizontal } from "@designali/icons"
 
 const changes = [
   { label: "Steps to book", before: "7", after: "3" },
@@ -12,52 +10,21 @@ const changes = [
 ]
 
 function Screen({ variant }: { variant: "before" | "after" }) {
-  if (variant === "before") {
-    return (
-      <div className="absolute inset-0 bg-muted p-6 dark:bg-card">
-        <div className="h-full border border-border bg-muted p-4 dark:border-border dark:bg-card">
-          <div className="h-3 w-1/3 bg-muted-foreground dark:bg-muted-foreground" />
-          <div className="mt-4 grid grid-cols-4 gap-1">
-            {Array.from({ length: 16 }).map((_, i) => (
-              <div key={i} className="h-5 bg-border dark:bg-muted" />
-            ))}
-          </div>
-          <div className="mt-4 space-y-1.5">
-            {Array.from({ length: 6 }).map((_, i) => (
-              <div key={i} className="h-2 bg-border dark:bg-muted" style={{ width: `${90 - i * 9}%` }} />
-            ))}
-          </div>
-          <div className="mt-4 flex gap-1">
-            <div className="h-6 w-16 bg-muted-foreground dark:bg-muted-foreground" />
-            <div className="h-6 w-16 bg-border dark:bg-muted" />
-            <div className="h-6 w-16 bg-border dark:bg-muted" />
-          </div>
-        </div>
-      </div>
-    )
-  }
   return (
-    <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-chart-1 p-6 dark:from-chart-5 dark:to-chart-5">
-      <div className="mx-auto flex h-full max-w-sm flex-col bg-background p-5 shadow-2xl">
-        <div className="h-3 w-1/2 bg-foreground" />
-        <div className="mt-2 h-2 w-2/3 bg-muted-foreground/40" />
-        <div className="mt-6 grid grid-cols-3 gap-2">
-          {["Mon 12", "Tue 13", "Wed 14"].map((d, i) => (
-            <div key={d} className={`py-3 text-center text-[10px] ${i === 1 ? "bg-primary text-primary-foreground" : "bg-muted"}`}>
-              {d}
-            </div>
-          ))}
-        </div>
-        <div className="mt-3 grid grid-cols-2 gap-2">
-          {["09:30", "11:00", "14:15", "16:45"].map((t) => (
-            <div key={t} className="border border-border py-2 text-center text-[10px]">
-              {t}
-            </div>
-          ))}
-        </div>
-        <div className="mt-auto h-8 bg-primary" />
-      </div>
-    </div>
+    <img
+      src={
+        variant === "before"
+          ? "/images/templates/dalim-old.jpg"
+          : "/images/templates/resort.jpg"
+      }
+      alt={
+        variant === "before"
+          ? "Booking page before the Designali redesign"
+          : "Designali Resort template booking page"
+      }
+      draggable={false}
+      className="absolute inset-0 size-full object-cover object-top"
+    />
   )
 }
 
@@ -81,11 +48,18 @@ export default function Portfolio13() {
 
         <div className="relative mt-10 aspect-[4/3] w-full overflow-hidden border border-border select-none md:aspect-[16/8]">
           <Screen variant="after" />
-          <div className="absolute inset-0" style={{ clipPath: `inset(0 ${100 - position}% 0 0)` }}>
+          <div
+            className="absolute inset-0"
+            style={{ clipPath: `inset(0 ${100 - position}% 0 0)` }}
+          >
             <Screen variant="before" />
           </div>
-          <span className="absolute top-4 left-4 bg-background/90 px-2 py-1 text-xs">Before</span>
-          <span className="absolute top-4 right-4 bg-background/90 px-2 py-1 text-xs">After</span>
+          <span className="absolute top-4 left-4 bg-background/90 px-2 py-1 text-xs">
+            Before
+          </span>
+          <span className="absolute top-4 right-4 bg-background/90 px-2 py-1 text-xs">
+            After
+          </span>
           <div
             className="pointer-events-none absolute inset-y-0 w-px bg-foreground"
             style={{ left: `${position}%` }}
@@ -110,8 +84,12 @@ export default function Portfolio13() {
             <div key={c.label} className="bg-background p-5">
               <dt className="text-xs text-muted-foreground">{c.label}</dt>
               <dd className="mt-2 flex items-baseline gap-3">
-                <span className="text-sm text-muted-foreground line-through">{c.before}</span>
-                <span className="text-2xl font-semibold tracking-tight">{c.after}</span>
+                <span className="text-sm text-muted-foreground line-through">
+                  {c.before}
+                </span>
+                <span className="text-2xl font-semibold tracking-tight">
+                  {c.after}
+                </span>
               </dd>
             </div>
           ))}

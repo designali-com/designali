@@ -1,5 +1,4 @@
 /** Auto-generated - Do not edit */
-'use client';
 import React from 'react';
 
 export interface DocumentTextRoundedProps extends React.SVGProps<SVGSVGElement> {

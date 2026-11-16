@@ -15,24 +15,24 @@ export function TestimonialsSection() {
   const testimonials = [
     {
       quote:
-        "Working with this team elevated our entire product experience. Every interaction now feels intentional and beautifully crafted.",
-      name: "Aarav Mehta",
-      company: "Founder, Nova Labs",
-      image: "https://github.com/shadcn.png",
+        "Designali took us from a rough idea to a live Next.js site. Every interaction now feels intentional and beautifully crafted.",
+      name: "Aarav",
+      company: "Founder, Designali client",
+      image: "/img/ask/ask1.jpg",
     },
     {
       quote:
-        "Their design thinking completely reshaped our platform. The clarity, usability, and visual polish exceeded our expectations.",
-      name: "Emily Carter",
-      company: "Head of Product, Lumina",
-      image: "https://github.com/vercel.png",
+        "Ali designed and coded our platform himself. What we approved in Figma is exactly what shipped, down to the last pixel.",
+      name: "Emily",
+      company: "Head of Product, Designali client",
+      image: "/img/ask/ask2.jpg",
     },
     {
       quote:
-        "From branding to interface design, the attention to detail was exceptional. Our launch received incredible feedback from users.",
-      name: "Daniel Kim",
-      company: "CEO, Horizon Tech",
-      image: "https://github.com/claude.png",
+        "From brand identity to UI design and development, Designali handled it all. design se code tak, exactly as promised.",
+      name: "Daniel",
+      company: "CEO, Designali client",
+      image: "/img/ask/ask3.jpg",
     },
   ]
 

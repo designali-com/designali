@@ -1,5 +1,4 @@
 
-'use client';
 import React from 'react';
 
 export interface Scribble144SketchProps extends React.SVGProps<SVGSVGElement> {

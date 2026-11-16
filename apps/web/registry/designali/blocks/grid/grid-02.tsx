@@ -1,5 +1,5 @@
 const swatches = [
-  { name: "Designali Blue", hex: "#00A8FF", tone: "bg-primary" },
+  { name: "Designali Blue", hex: "--primary", tone: "bg-primary" },
   { name: "Ink", hex: "--foreground", tone: "bg-foreground" },
   { name: "Paper", hex: "--background", tone: "bg-background" },
   { name: "Muted", hex: "--muted", tone: "bg-muted" },

@@ -1,12 +1,14 @@
+import { DotPattern } from "@/registry/designali/ui/dot-pattern"
+
 const team = [
-  { name: "Ali Imam", role: "Founder & Design Engineer", city: "Studio", hue: 230, bio: "Designs and codes every Designali product. Design se code tak." },
-  { name: "Sara", role: "Brand Designer", city: "Brand", hue: 200, bio: "Logos, type and colour systems for Designali client projects." },
-  { name: "Rohan", role: "UI/UX Designer", city: "Product", hue: 330, bio: "Turns briefs into intuitive interfaces and clickable prototypes in Figma." },
-  { name: "Mei", role: "Frontend Developer", city: "Web", hue: 150, bio: "Ships Next.js and Tailwind CSS builds with clean, typed components." },
-  { name: "Omar", role: "Motion Designer", city: "CGI", hue: 270, bio: "CGI, 3D and motion for brand launches and landing page heroes." },
-  { name: "Lina", role: "Design Systems", city: "Systems", hue: 60, bio: "Keeps tokens, components and Figma libraries in sync across 460+ blocks." },
-  { name: "Dev", role: "Client Success", city: "Clients", hue: 0, bio: "First point of contact for Designali clients at hello@designali.com." },
-  { name: "Noor", role: "Content Designer", city: "Blogs", hue: 100, bio: "Writes the docs and the Designali blog, and answers support emails." },
+  { name: "Ali Imam", role: "Founder & Design Engineer", city: "Studio", bio: "Designs and codes every Designali product. Design se code tak." },
+  { name: "Sara", role: "Brand Designer", city: "Brand", bio: "Logos, type and colour systems for Designali client projects." },
+  { name: "Rohan", role: "UI/UX Designer", city: "Product", bio: "Turns briefs into intuitive interfaces and clickable prototypes in Figma." },
+  { name: "Mei", role: "Frontend Developer", city: "Web", bio: "Ships Next.js and Tailwind CSS builds with clean, typed components." },
+  { name: "Omar", role: "Motion Designer", city: "CGI", bio: "CGI, 3D and motion for brand launches and landing page heroes." },
+  { name: "Lina", role: "Design Systems", city: "Systems", bio: "Keeps tokens, components and Figma libraries in sync across 460+ blocks." },
+  { name: "Dev", role: "Client Success", city: "Clients", bio: "First point of contact for Designali clients at hello@designali.com." },
+  { name: "Noor", role: "Content Designer", city: "Blogs", bio: "Writes the docs and the Designali blog, and answers support emails." },
 ]
 
 function initials(name: string) {
@@ -36,15 +38,21 @@ export default function Grid06() {
         <ul className="mt-14 grid grid-cols-1 gap-px border border-border bg-border sm:grid-cols-2 lg:grid-cols-4">
           {team.map((person) => (
             <li key={person.name} className="group relative overflow-hidden bg-background">
-              <div
-                className="flex aspect-[4/3] items-center justify-center"
-                style={{
-                  background: `linear-gradient(135deg, oklch(0.75 0.12 ${person.hue}), oklch(0.45 0.14 ${person.hue + 40}))`,
-                }}
-              >
-                <span className="text-5xl font-semibold tracking-tight text-white/90">
-                  {initials(person.name)}
-                </span>
+              <div className="relative flex aspect-[4/3] items-center justify-center overflow-hidden bg-muted">
+                {person.name === "Ali Imam" ? (
+                  <img
+                    src="/ali.jpg"
+                    alt="Ali Imam"
+                    className="absolute inset-0 size-full object-cover"
+                  />
+                ) : (
+                  <>
+                    <DotPattern className="text-muted-foreground/60 [mask-image:radial-gradient(circle_at_center,white,transparent_75%)]" />
+                    <span className="relative text-5xl font-semibold tracking-tight text-foreground/80">
+                      {initials(person.name)}
+                    </span>
+                  </>
+                )}
               </div>
               <div className="p-5">
                 <div className="flex items-baseline justify-between gap-3">

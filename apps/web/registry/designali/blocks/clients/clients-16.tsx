@@ -2,6 +2,9 @@ import {
   ArrowRight,
 } from "@designali/icons"
 
+import { BentoGrid, BentoGridItem } from "@/registry/designali/ui/bento"
+import { CounterNumber } from "@/registry/designali/ui/counter-number"
+
 const small = [
   "Dalim",
   "Dalim UI",
@@ -18,10 +21,15 @@ export default function Clients16() {
         <h2 className="max-w-2xl text-3xl font-semibold tracking-tight md:text-4xl">
           From Dalim to Designali, one studio and many brands.
         </h2>
-        <div className="mt-12 grid grid-cols-2 gap-4 md:grid-cols-4 md:grid-rows-[repeat(3,minmax(0,8rem))]">
+        <BentoGrid cols={{ base: 2, md: 4 }} gap={4} rowHeight="8rem" className="mt-12">
+          <BentoGridItem
+            colSpan={2}
+            rowSpan={2}
+            className="group relative overflow-hidden border-border bg-foreground p-0 text-background"
+          >
           <a
             href="#"
-            className="group relative col-span-2 flex min-h-64 flex-col justify-between overflow-hidden border border-border bg-foreground p-6 text-background md:row-span-2 md:min-h-0 md:p-8"
+            className="flex size-full flex-col justify-between p-6 md:p-8"
           >
             <div
               aria-hidden="true"
@@ -41,9 +49,12 @@ export default function Clients16() {
               </span>
             </div>
             <div className="relative">
-              <p className="text-5xl font-semibold tracking-tight md:text-6xl">
-                460+
-              </p>
+              <CounterNumber
+                value={460}
+                suffix="+"
+                color="default"
+                className="block text-5xl font-semibold tracking-tight text-background md:text-6xl"
+              />
               <p className="mt-2 max-w-xs text-sm text-background/70">
                 production-ready blocks, designed in Figma and shipped in
                 Next.js on designali.com.
@@ -54,23 +65,24 @@ export default function Clients16() {
               </span>
             </div>
           </a>
-          <div className="col-span-2 flex flex-col justify-center border border-border bg-muted/50 p-6">
+          </BentoGridItem>
+          <BentoGridItem colSpan={2} className="flex flex-col justify-center border-border bg-muted/50 p-6">
             <p className="text-sm leading-6">
               &ldquo;Where thoughtful design meets production-ready code.&rdquo;
             </p>
             <p className="mt-3 text-xs text-muted-foreground">
               Ali Imam, Founder of Designali
             </p>
-          </div>
+          </BentoGridItem>
           {small.map((name) => (
-            <div
+            <BentoGridItem
               key={name}
-              className="flex h-28 items-center justify-center border border-border text-lg font-semibold tracking-tight text-muted-foreground md:h-auto"
+              className="flex items-center justify-center border-border text-lg font-semibold tracking-tight text-muted-foreground"
             >
               {name}
-            </div>
+            </BentoGridItem>
           ))}
-        </div>
+        </BentoGrid>
       </div>
     </section>
   )

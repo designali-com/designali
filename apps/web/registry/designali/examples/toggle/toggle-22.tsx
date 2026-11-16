@@ -9,6 +9,8 @@ import {
 import { Toggle } from "@workspace/ui/components/toggle"
 import { cn } from "@workspace/ui/lib/utils"
 
+import { DotPattern } from "@/registry/designali/ui/dot-pattern"
+
 export default function CanvasGridSnapToggles() {
   const [grid, setGrid] = React.useState(true)
   const [snap, setSnap] = React.useState(false)
@@ -30,18 +32,15 @@ export default function CanvasGridSnapToggles() {
           Snap
         </Toggle>
       </div>
-      <div
-        className="relative h-40 bg-background"
-        style={
-          grid
-            ? {
-                backgroundImage:
-                  "radial-gradient(var(--color-border) 1px, transparent 1px)",
-                backgroundSize: "16px 16px",
-              }
-            : undefined
-        }
-      >
+      <div className="relative h-40 bg-background">
+        {grid && (
+          <DotPattern
+            width={16}
+            height={16}
+            dotSize={1}
+            className="rounded-none p-0 text-muted-foreground"
+          />
+        )}
         <div
           className={cn(
             "absolute size-12 bg-primary/80",

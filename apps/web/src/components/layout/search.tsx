@@ -2,7 +2,8 @@
 
 import * as React from "react"
 
-import { ArrowUpRight, SearchIcon, icons } from "lucide-react"
+import { ArrowUpRight, SearchIcon } from "lucide-react"
+import { getCategoryIcon } from "@/src/lib/category-icons"
 
 import { Button } from "@workspace/ui/components/button"
 
@@ -59,7 +60,7 @@ export function Search() {
    * Dynamic Lucide icon
    */
   const getIcon = (iconName: string) => {
-    return icons[iconName as keyof typeof icons] ?? SearchIcon
+    return getCategoryIcon(iconName) ?? SearchIcon
   }
 
   /**

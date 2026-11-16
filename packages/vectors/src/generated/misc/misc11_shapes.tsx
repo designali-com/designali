@@ -1,5 +1,4 @@
 
-'use client';
 import React from 'react';
 
 export interface Misc11ShapesProps extends React.SVGProps<SVGSVGElement> {

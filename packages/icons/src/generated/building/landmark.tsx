@@ -1,5 +1,4 @@
 /** Auto-generated - Do not edit */
-'use client';
 import React from 'react';
 
 export interface LandmarkProps extends React.SVGProps<SVGSVGElement> {

@@ -3,7 +3,7 @@
 
 import { useEffect, useMemo, useRef, useState } from "react"
 import { useSearchParams } from "next/navigation"
-import { allVectors } from "@designali/vectors"
+import { allVectors } from "@designali/vectors/all"
 
 import { useVectorFilter } from "./vector-filter-context"
 

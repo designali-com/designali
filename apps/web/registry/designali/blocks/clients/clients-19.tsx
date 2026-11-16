@@ -9,14 +9,18 @@ import {
 import { Button } from "@workspace/ui/components/button"
 import { cn } from "@workspace/ui/lib/utils"
 
+import { Macbook } from "@/registry/designali/ui/apple/macbook"
+import { CounterNumber } from "@/registry/designali/ui/counter-number"
+
 const stories = [
   {
     company: "Resort Website",
+    image: "/images/templates/resort.jpg",
     tagline: "Booking pages rebuilt for mobile",
     gradient: "from-primary via-primary to-chart-2",
     stats: [
-      { value: "+18%", label: "Mobile enquiries" },
-      { value: "5 wks", label: "Time to launch" },
+      { value: 18, prefix: "+", suffix: "%", label: "Mobile enquiries" },
+      { value: 5, prefix: "", suffix: " wks", label: "Time to launch" },
     ],
     quote:
       "We expected a redesign. Designali gave us a brand and a site our team actually enjoys extending.",
@@ -25,11 +29,12 @@ const stories = [
   },
   {
     company: "Design Agency Site",
+    image: "/images/templates/design-agency.jpg",
     tagline: "One accessible system across 3 platforms",
     gradient: "from-primary via-primary to-chart-2",
     stats: [
-      { value: "100%", label: "WCAG 2.2 AA pages" },
-      { value: "3x", label: "Release frequency" },
+      { value: 100, prefix: "", suffix: "%", label: "WCAG 2.2 AA pages" },
+      { value: 3, prefix: "", suffix: "x", label: "Release frequency" },
     ],
     quote:
       "Accessibility stopped being an audit finding and became the default state of every Designali block we use.",
@@ -38,11 +43,12 @@ const stories = [
   },
   {
     company: "AI Product Launch",
+    image: "/images/templates/ai.jpg",
     tagline: "Product dashboards at startup speed",
     gradient: "from-primary via-primary to-primary",
     stats: [
-      { value: "-54%", label: "UI code per feature" },
-      { value: "2 days", label: "Onboarding for new devs" },
+      { value: -54, prefix: "", suffix: "%", label: "UI code per feature" },
+      { value: 2, prefix: "", suffix: " days", label: "Onboarding for new devs" },
     ],
     quote:
       "Ali designed it in Figma and shipped it in Next.js. New engineers built a production screen in their first week.",
@@ -97,14 +103,23 @@ export default function Clients19() {
           >
             <div
               aria-hidden="true"
-              className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(255,255,255,0.25),transparent_50%)]"
+              className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,color-mix(in_oklch,white_25%,transparent),transparent_50%)]"
             />
             <p className="relative text-3xl font-semibold tracking-tight md:text-4xl">
               {story.company}
             </p>
-            <p className="relative mt-16 max-w-xs text-lg text-white/85">
+            <p className="relative mt-3 max-w-xs text-lg text-white/85">
               {story.tagline}
             </p>
+            <div className="relative mt-8 flex justify-center">
+              <Macbook variant="macbook-pro" color="silver" size="sm" className="max-w-full">
+                <img
+                  src={story.image}
+                  alt={`${story.company} preview`}
+                  className="size-full object-cover object-top"
+                />
+              </Macbook>
+            </div>
           </div>
           <div className="flex flex-col justify-between gap-10 p-8 md:p-10">
             <dl className="grid grid-cols-2 gap-6">
@@ -113,8 +128,13 @@ export default function Clients19() {
                   <dt className="text-xs text-muted-foreground">
                     {stat.label}
                   </dt>
-                  <dd className="mt-2 text-3xl font-semibold tracking-tight md:text-4xl">
-                    {stat.value}
+                  <dd className="mt-2">
+                    <CounterNumber
+                      value={stat.value}
+                      prefix={stat.prefix}
+                      suffix={stat.suffix}
+                      className="text-3xl font-semibold tracking-tight md:text-4xl"
+                    />
                   </dd>
                 </div>
               ))}

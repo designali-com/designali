@@ -3,17 +3,17 @@ import {
 } from "@designali/icons"
 
 const awards = [
-  { year: "2026", award: "Product of the Year", body: "Interface Awards", project: "Atlas Maps 4.0", level: "Gold" },
-  { year: "2026", award: "Best Use of Typography", body: "European Type Review", project: "Atlas brand refresh", level: "Winner" },
-  { year: "2025", award: "Design for Good", body: "Civic Design Prize", project: "Floodline alerts", level: "Shortlist" },
-  { year: "2025", award: "Mobile App of the Year", body: "Pocket Craft Awards", project: "Atlas Offline", level: "Silver" },
-  { year: "2024", award: "Accessibility Excellence", body: "Inclusive Web Forum", project: "Atlas Maps 3.2", level: "Winner" },
-  { year: "2023", award: "Emerging Studio", body: "North Design Week", project: "Studio", level: "Winner" },
+  { year: "Now", award: "Designali", body: "Design and development studio", project: "designali.com", level: "Live" },
+  { year: "Lib", award: "@designali/icons", body: "4000+ icons for React", project: "Icons", level: "Live" },
+  { year: "Lib", award: "Designali Blocks", body: "460+ production-ready blocks", project: "Blocks", level: "Live" },
+  { year: "Old", award: "Dalim Agency", body: "Brand and web projects for clients", project: "Client work", level: "Archive" },
+  { year: "Old", award: "Dalim UI", body: "React and Tailwind CSS components", project: "Components", level: "Archive" },
+  { year: "Old", award: "Dalim Fonts", body: "Type designed by Ali Imam", project: "Typography", level: "Archive" },
 ]
 
 const press = [
-  { quote: "The rare mapping app that feels calm.", source: "The Weekly Interface" },
-  { quote: "Atlas has quietly set the bar for offline-first design.", source: "Signal & Noise" },
+  { quote: "Where thoughtful design meets production-ready code.", source: "Ali Imam, founder of Designali" },
+  { quote: "I design and build digital experiences that look great, feel intuitive and work beautifully.", source: "Ali Imam" },
 ]
 
 export default function Sections17() {
@@ -23,9 +23,9 @@ export default function Sections17() {
         <div className="grid gap-12 lg:grid-cols-[1fr_2fr]">
           <div>
             <Award className="size-6" />
-            <h2 className="mt-6 text-4xl font-semibold tracking-tight md:text-5xl">Recognition</h2>
+            <h2 className="mt-6 text-4xl font-semibold tracking-tight md:text-5xl">Selected work</h2>
             <p className="mt-4 max-w-xs text-sm leading-6 text-muted-foreground">
-              Awards are nice. Users who stay for years are nicer. Here are both.
+              From Dalim to designali: the brands, libraries and products Ali Imam has designed and built.
             </p>
             <div className="mt-10 space-y-6">
               {press.map((item) => (
@@ -41,16 +41,16 @@ export default function Sections17() {
             <table className="w-full text-left text-sm">
               <thead className="border-b border-border bg-muted/50 text-xs text-muted-foreground">
                 <tr>
-                  <th scope="col" className="w-16 p-3 font-medium sm:p-4">Year</th>
-                  <th scope="col" className="p-3 font-medium sm:p-4">Award</th>
+                  <th scope="col" className="w-16 p-3 font-medium sm:p-4">Type</th>
+                  <th scope="col" className="p-3 font-medium sm:p-4">Focus</th>
                   <th scope="col" className="hidden p-3 font-medium sm:p-4 md:table-cell">Project</th>
-                  <th scope="col" className="p-3 text-right font-medium sm:p-4">Result</th>
+                  <th scope="col" className="p-3 text-right font-medium sm:p-4">Status</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-border">
                 {awards.map((item) => (
                   <tr key={`${item.year}-${item.award}`} className="transition-colors hover:bg-muted/40">
-                    <td className="p-3 align-top font-sans text-xs text-muted-foreground sm:p-4">{item.year}</td>
+                    <td className="p-3 align-top text-xs text-muted-foreground sm:p-4">{item.year}</td>
                     <td className="p-3 sm:p-4">
                       <span className="block font-medium">{item.award}</span>
                       <span className="text-xs text-muted-foreground">{item.body}</span>
@@ -59,7 +59,7 @@ export default function Sections17() {
                     <td className="p-3 text-right sm:p-4">
                       <span
                         className={
-                          item.level === "Shortlist"
+                          item.level === "Archive"
                             ? "border border-border px-2 py-0.5 text-xs text-muted-foreground"
                             : "bg-foreground px-2 py-0.5 text-xs text-background"
                         }

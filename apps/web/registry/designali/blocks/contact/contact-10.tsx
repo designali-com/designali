@@ -8,6 +8,8 @@ import {
 } from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
+import { CounterNumber } from "@/registry/designali/ui/counter-number"
+import { BentoGrid, BentoGridItem } from "@/registry/designali/ui/bento"
 
 export default function Contact10() {
   return (
@@ -22,8 +24,8 @@ export default function Contact10() {
           </h2>
         </div>
 
-        <div className="grid auto-rows-[minmax(180px,auto)] gap-4 md:grid-cols-4">
-          <div className="relative flex flex-col justify-between overflow-hidden border bg-primary p-8 text-primary-foreground md:col-span-2 md:row-span-2">
+        <BentoGrid cols={{ base: 1, md: 4 }} gap={4} rowHeight="minmax(180px,auto)">
+          <BentoGridItem colSpan={{ base: 1, md: 2 }} rowSpan={{ base: 1, md: 2 }} className="relative flex flex-col justify-between overflow-hidden bg-primary p-8 text-primary-foreground">
             <div className="absolute -end-16 -top-16 size-64 rounded-full border-[40px] border-primary-foreground/10" />
             <MessageCircle className="size-8" />
             <div className="relative space-y-4">
@@ -38,9 +40,10 @@ export default function Contact10() {
                 Start a conversation
               </Button>
             </div>
-          </div>
+          </BentoGridItem>
 
-          <a href="https://x.com/designali_com" className="group flex flex-col justify-between border bg-card p-6 transition-colors hover:bg-muted md:col-span-2">
+          <BentoGridItem colSpan={{ base: 1, md: 2 }} className="p-0">
+          <a href="https://x.com/designali_com" className="group flex size-full flex-col justify-between bg-card p-6 transition-colors hover:bg-muted">
             <div className="flex items-center justify-between">
               <Users className="size-5" />
               <ArrowUpRight className="size-4 text-muted-foreground transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
@@ -52,24 +55,25 @@ export default function Contact10() {
               </p>
             </div>
           </a>
+          </BentoGridItem>
 
-          <div className="flex flex-col justify-between border bg-card p-6">
+          <BentoGridItem className="flex flex-col justify-between bg-card p-6">
             <Phone className="size-5" />
             <div>
               <p className="font-medium">Book a call</p>
               <p className="mt-1 text-sm text-muted-foreground">30 minutes with Ali Imam</p>
             </div>
-          </div>
+          </BentoGridItem>
 
-          <div className="flex flex-col justify-between border bg-card p-6">
+          <BentoGridItem className="flex flex-col justify-between bg-card p-6">
             <Clock className="size-5" />
             <div>
               <p className="font-medium">Mon&ndash;Fri, studio hours</p>
               <p className="mt-1 text-sm text-muted-foreground">Weekend replies for Designali Pro</p>
             </div>
-          </div>
+          </BentoGridItem>
 
-          <div className="flex flex-col justify-between border bg-muted/50 p-6 md:col-span-3">
+          <BentoGridItem colSpan={{ base: 1, md: 3 }} className="flex flex-col justify-between bg-muted/50 p-6">
             <div className="flex items-center gap-2 text-sm">
               <span className="relative flex size-2">
                 <span className="absolute inline-flex size-full animate-ping rounded-full bg-primary opacity-60" />
@@ -90,11 +94,13 @@ export default function Contact10() {
               ))}
             </div>
             <p className="mt-2 text-xs text-muted-foreground">
-              designali.com: 99.98% uptime over the last 60 days
+              designali.com:{" "}
+              <CounterNumber value={99.98} decimalPlaces={2} suffix="%" size="sm" color="secondary" className="text-xs tracking-normal" />{" "}
+              uptime over the last 60 days
             </p>
-          </div>
+          </BentoGridItem>
 
-          <div className="flex flex-col justify-between border bg-card p-6">
+          <BentoGridItem className="flex flex-col justify-between bg-card p-6">
             <Globe className="size-5" />
             <div>
               <p className="font-medium">www.designali.com</p>
@@ -102,8 +108,8 @@ export default function Contact10() {
                 Docs, templates, blocks and icons
               </p>
             </div>
-          </div>
-        </div>
+          </BentoGridItem>
+        </BentoGrid>
       </div>
     </section>
   )

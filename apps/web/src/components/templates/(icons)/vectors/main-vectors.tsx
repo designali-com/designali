@@ -9,7 +9,7 @@ import {
   TooltipTrigger,
 } from "@workspace/ui/components/tooltip"
 
-import { allVectors } from "@designali/vectors"
+import { allVectors } from "@designali/vectors/all"
 import { useVectorFilter } from "./vector-filter-context"
 import { Vectors } from "./vectors"
 

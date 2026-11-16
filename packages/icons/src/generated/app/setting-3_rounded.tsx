@@ -1,5 +1,4 @@
 /** Auto-generated - Do not edit */
-'use client';
 import React from 'react';
 
 export interface Setting3RoundedProps extends React.SVGProps<SVGSVGElement> {

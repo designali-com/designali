@@ -1,7 +1,7 @@
 import { getAllBlockIds } from "@/src/lib/blocks"
 import { BlockDisplay } from "@/src/components/templates/blocks/block-display"
 import { registryCategories } from "@/registry/registry-categories"
-import * as Icons from "lucide-react"
+import { getCategoryIcon } from "@/src/lib/category-icons"
 
 export const revalidate = false
 export const dynamic = "force-static"
@@ -32,12 +32,7 @@ export default async function BlocksPage({
     currentCategory?.description ??
     "A collection of beautifully designed blocks for your projects."
 
-  // Dynamically derive the icon component using iconName
-  const Icon = currentCategory?.iconName
-    ? (Icons[
-      currentCategory.iconName as keyof typeof Icons
-    ] as React.ElementType)
-    : null
+  const Icon = getCategoryIcon(currentCategory?.iconName)
 
   return (
     <div className="mb-20 mt-10">

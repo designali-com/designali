@@ -1,5 +1,4 @@
 /** Auto-generated - Do not edit */
-'use client';
 import React from 'react';
 
 export interface FlameKindlingProps extends React.SVGProps<SVGSVGElement> {

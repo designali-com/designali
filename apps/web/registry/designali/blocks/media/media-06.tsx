@@ -1,8 +1,4 @@
-import {
-  Headphones,
-  Mic,
-  Radio,
-} from "@designali/icons"
+import { Headphones, Mic, Radio } from "@designali/icons"
 
 const episodes = [
   {

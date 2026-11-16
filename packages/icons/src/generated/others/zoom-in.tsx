@@ -1,5 +1,4 @@
 /** Auto-generated - Do not edit */
-'use client';
 import React from 'react';
 
 export interface ZoomInProps extends React.SVGProps<SVGSVGElement> {

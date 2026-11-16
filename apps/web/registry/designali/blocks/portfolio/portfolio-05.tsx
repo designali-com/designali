@@ -1,23 +1,46 @@
-import {
-  ArrowUpRight,
-  MapPin,
-} from "@designali/icons"
+import { ArrowUpRight, MapPin } from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 
 const experience = [
   { role: "Founder, Design Engineer", company: "Designali", period: "Now" },
   { role: "Designer and Developer", company: "Dalim Agency", period: "Before" },
-  { role: "Creator", company: "Dalim UI, Icons and Fonts", period: "Side projects" },
+  {
+    role: "Creator",
+    company: "Dalim UI, Icons and Fonts",
+    period: "Side projects",
+  },
 ]
 
 const highlights = [
-  { title: "Dalim UI", subtitle: "Component library", tag: "Product", image: "/images/templates/dalim-ui-old.jpg" },
-  { title: "Dalim Agency", subtitle: "Identity & website", tag: "Brand", image: "/images/templates/dalim-agency-old.jpg" },
-  { title: "Ali Imam portfolio", subtitle: "Personal site in Next.js", tag: "Web", image: "/images/templates/aliimam-comp.jpg" },
+  {
+    title: "Dalim UI",
+    subtitle: "Component library",
+    tag: "Product",
+    image: "/images/templates/dalim-ui-old.jpg",
+  },
+  {
+    title: "Dalim Agency",
+    subtitle: "Identity & website",
+    tag: "Brand",
+    image: "/images/templates/dalim-agency-old.jpg",
+  },
+  {
+    title: "Ali Imam portfolio",
+    subtitle: "Personal site in Next.js",
+    tag: "Web",
+    image: "/images/templates/aliimam-comp.jpg",
+  },
 ]
 
-const clients = ["Dalim", "Dalim Agency", "Dalim Fonts", "Dalim Graphic", "Dalim Icons", "Dalim Visuals"]
+const clients = [
+  "Dalim",
+  "Dalim Agency",
+  "Dalim Fonts",
+  "Dalim Graphic",
+  "Dalim Icons",
+  "Dalim Visuals",
+]
 
 export default function Portfolio05() {
   return (
@@ -43,8 +66,17 @@ export default function Portfolio05() {
             code tak.
           </h2>
           <div className="mt-8 flex flex-wrap gap-3">
-            <Button nativeButton={false} render={<a href="mailto:ali@designali.com" />}>Get in touch</Button>
-            <Button variant="outline" nativeButton={false} render={<a href="/work" />}>
+            <Button
+              nativeButton={false}
+              render={<a href="mailto:ali@designali.com" />}
+            >
+              Get in touch
+            </Button>
+            <Button
+              variant="outline"
+              nativeButton={false}
+              render={<a href="/work" />}
+            >
               View work
             </Button>
           </div>
@@ -71,7 +103,11 @@ export default function Portfolio05() {
         </div>
 
         {highlights.map((item, i) => (
-          <a key={item.title} href="#" className="group flex flex-col bg-background p-6">
+          <a
+            key={item.title}
+            href="#"
+            className="group flex flex-col bg-background p-6"
+          >
             <div
               className="aspect-video w-full border border-border"
               style={{
@@ -83,7 +119,7 @@ export default function Portfolio05() {
                 <p className="font-medium">{item.title}</p>
                 <p className="text-xs text-muted-foreground">{item.subtitle}</p>
               </div>
-              <ArrowUpRight className="size-4 text-muted-foreground transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+              <ArrowUpRight className="size-4 text-muted-foreground transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </div>
           </a>
         ))}

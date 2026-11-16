@@ -1,21 +1,23 @@
+import { CounterNumber } from "@/registry/designali/ui/counter-number"
+
 const rows = [
   {
-    value: "460+",
+    value: 460,
     label: "Blocks",
     body: "Copy-and-paste sections for heroes, features, pricing, footers and dashboards, built with Next.js and Tailwind CSS.",
   },
   {
-    value: "240+",
+    value: 240,
     label: "Landing pages",
     body: "Complete page layouts you can launch as-is or remix into your own Designali-powered product.",
   },
   {
-    value: "2300+",
+    value: 2300,
     label: "UI examples",
     body: "Every component shown in real-world states, so you can see exactly how it behaves before you use it.",
   },
   {
-    value: "4000+",
+    value: 4000,
     label: "Icons",
     body: "Lucide-compatible icons in @designali/icons, plus brand logos in @designali/logos.",
   },
@@ -39,9 +41,13 @@ export default function Features12() {
               key={row.label}
               className="grid gap-4 border-b border-border py-8 md:grid-cols-[1fr_1fr_1.4fr] md:items-baseline md:gap-10"
             >
-              <div className="font-sans text-5xl font-medium tracking-tighter md:text-6xl">
-                {row.value}
-              </div>
+              <CounterNumber
+                value={row.value}
+                suffix="+"
+                separator=""
+                size="xl"
+                className="font-medium tracking-tighter md:text-6xl"
+              />
               <div className="text-base font-medium">{row.label}</div>
               <p className="text-sm leading-7 text-muted-foreground">{row.body}</p>
             </div>

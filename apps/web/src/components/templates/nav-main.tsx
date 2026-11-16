@@ -4,7 +4,7 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 
 import { Blocks } from "lucide-react"
-import * as Icons from "lucide-react"
+import { getCategoryIcon } from "@/src/lib/category-icons"
 
 import {
   SidebarGroup,
@@ -59,11 +59,7 @@ export function NavMain() {
           const isActive = pathname === href || pathname.startsWith(`${href}/`)
 
           // Dynamically resolve the icon from iconName
-          const Icon = category.iconName
-            ? (Icons[
-                category.iconName as keyof typeof Icons
-              ] as React.ElementType)
-            : null
+          const Icon = getCategoryIcon(category.iconName)
 
           return (
             <SidebarMenuItem key={category.slug}>

@@ -1,5 +1,4 @@
 /** Auto-generated - Do not edit */
-'use client';
 import React from 'react';
 
 export interface CloudNotifRoundedProps extends React.SVGProps<SVGSVGElement> {

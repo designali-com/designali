@@ -1,26 +1,61 @@
-import {
-  Award,
-  Mic,
-  Newspaper,
-} from "@designali/icons"
+import { Award, Mic, Newspaper } from "@designali/icons"
 
 const awards = [
-  { year: "Now", name: "460+ blocks", detail: "Live on designali.com", project: "Designali" },
-  { year: "Now", name: "4000+ icons", detail: "Published as @designali/icons", project: "Designali" },
-  { year: "Live", name: "240+ landing pages", detail: "Templates for Next.js", project: "Designali" },
-  { year: "Live", name: "2300+ UI designs", detail: "UI examples to remix", project: "Designali" },
-  { year: "Archive", name: "Dalim UI", detail: "Became the Designali block library", project: "Dalim" },
+  {
+    year: "Now",
+    name: "460+ blocks",
+    detail: "Live on designali.com",
+    project: "Designali",
+  },
+  {
+    year: "Now",
+    name: "4000+ icons",
+    detail: "Published as @designali/icons",
+    project: "Designali",
+  },
+  {
+    year: "Live",
+    name: "240+ landing pages",
+    detail: "Templates for Next.js",
+    project: "Designali",
+  },
+  {
+    year: "Live",
+    name: "2300+ UI designs",
+    detail: "UI examples to remix",
+    project: "Designali",
+  },
+  {
+    year: "Archive",
+    name: "Dalim UI",
+    detail: "Became the Designali block library",
+    project: "Dalim",
+  },
 ]
 
 const press = [
-  { outlet: "Designali Blog", title: "Design se code tak: why I design and code" },
-  { outlet: "Designali Blog", title: "Building 460+ blocks with Next.js and Tailwind" },
+  {
+    outlet: "Designali Blog",
+    title: "Design se code tak: why I design and code",
+  },
+  {
+    outlet: "Designali Blog",
+    title: "Building 460+ blocks with Next.js and Tailwind",
+  },
   { outlet: "Designali Blog", title: "From Dalim to Designali" },
 ]
 
 const talks = [
-  { event: "Designali Live", city: "Online", topic: "Design systems that ship as code" },
-  { event: "Designali Live", city: "Online", topic: "Icons on one grid, one stroke" },
+  {
+    event: "Designali Live",
+    city: "Online",
+    topic: "Design systems that ship as code",
+  },
+  {
+    event: "Designali Live",
+    city: "Online",
+    topic: "Icons on one grid, one stroke",
+  },
 ]
 
 export default function Portfolio16() {
@@ -31,7 +66,9 @@ export default function Portfolio16() {
           <div>
             <div className="flex items-center gap-3">
               <Award className="size-5" />
-              <h2 className="text-2xl font-medium tracking-tight md:text-3xl">Milestones</h2>
+              <h2 className="text-2xl font-medium tracking-tight md:text-3xl">
+                Milestones
+              </h2>
               <span className="ml-auto font-sans text-xs text-muted-foreground">
                 {awards.length} of 31
               </span>
@@ -46,7 +83,9 @@ export default function Portfolio16() {
                     {award.year}
                   </span>
                   <span className="font-medium">{award.name}</span>
-                  <span className="text-sm text-muted-foreground">{award.detail}</span>
+                  <span className="text-sm text-muted-foreground">
+                    {award.detail}
+                  </span>
                   <span className="col-start-2 text-xs text-muted-foreground sm:col-start-auto sm:text-right">
                     {award.project}
                   </span>
@@ -64,8 +103,13 @@ export default function Portfolio16() {
               <ul className="mt-4 space-y-4">
                 {press.map((item) => (
                   <li key={item.title}>
-                    <a href="#" className="group block border-l-2 border-border pl-4 transition-colors hover:border-foreground">
-                      <p className="text-xs text-muted-foreground">{item.outlet}</p>
+                    <a
+                      href="#"
+                      className="group block border-l-2 border-border pl-4 transition-colors hover:border-foreground"
+                    >
+                      <p className="text-xs text-muted-foreground">
+                        {item.outlet}
+                      </p>
                       <p className="mt-1 text-sm font-medium group-hover:underline">
                         &ldquo;{item.title}&rdquo;
                       </p>
@@ -81,7 +125,7 @@ export default function Portfolio16() {
               </div>
               <ul className="mt-4 space-y-3">
                 {talks.map((talk) => (
-                  <li key={talk.event} className="bg-muted p-4">
+                  <li key={talk.topic} className="bg-muted p-4">
                     <p className="text-sm font-medium">{talk.topic}</p>
                     <p className="mt-1 text-xs text-muted-foreground">
                       {talk.event}, {talk.city}

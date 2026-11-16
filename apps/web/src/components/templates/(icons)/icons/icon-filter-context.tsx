@@ -2,7 +2,7 @@
 "use client"
 
 import { createContext, useContext, useMemo, useState } from "react"
-import { allIcons } from "@designali/icons"
+import { allIcons } from "@designali/icons/all"
 
 type LogoFilterContext = {
   query: string

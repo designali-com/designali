@@ -4,6 +4,8 @@ import {
 
 import { Button } from "@workspace/ui/components/button"
 
+import { CounterNumber } from "@/registry/designali/ui/counter-number"
+
 const marks = [
   { initials: "DA", className: "bg-primary" },
   { initials: "DU", className: "bg-primary" },
@@ -40,7 +42,7 @@ export default function Clients20() {
                     <Star key={i} className="size-4 fill-current" />
                   ))}
                 </div>
-                <span className="text-sm font-medium">4.9 / 5</span>
+                <CounterNumber value={4.9} decimalPlaces={1} suffix=" / 5" className="text-sm font-medium tracking-normal" />
               </div>
               <p className="mt-1 text-sm text-muted-foreground">
                 Rated by 4,200+ designers and developers using{" "}

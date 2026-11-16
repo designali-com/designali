@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { allLogos } from "@designali/logos"
+import { allLogos } from "@designali/logos/all"
+import { LogoGlyph } from "./logo-glyph"
 
 interface IconProps extends React.SVGProps<SVGSVGElement> {
   name: string
@@ -68,15 +69,6 @@ export function Logos({
   }
 
   if (!match) return null
-  const { Component, metadata } = match
 
-  return (
-    <Component
-      size={size}
-      fill={color}
-      style={{ color }}
-      viewBox={metadata.viewBox}
-      {...props}
-    />
-  )
+  return <LogoGlyph entry={match} size={size} color={color} {...props} />
 }

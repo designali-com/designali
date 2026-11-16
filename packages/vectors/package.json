@@ -14,8 +14,9 @@
   "scripts": {
     "generate:vectors": "tsx scripts/generate-vectors.ts",
     "registry:gen": "tsx scripts/generate-registry.ts",
-    "build": "tsup",
-    "prepublishOnly": "npm run generate:vectors && npm run build"
+    "build": "tsup && node scripts/bundle-all.mjs",
+    "prepublishOnly": "npm run generate:vectors && npm run build",
+    "bundle:all": "node scripts/bundle-all.mjs"
   },
   "publishConfig": {
     "access": "public"

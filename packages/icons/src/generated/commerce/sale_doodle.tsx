@@ -1,5 +1,4 @@
 /** Auto-generated - Do not edit */
-'use client';
 import React from 'react';
 
 export interface SaleDoodleProps extends React.SVGProps<SVGSVGElement> {

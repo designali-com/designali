@@ -1,11 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import {
-  Check,
-  Copy,
-  Globe,
-} from "@designali/icons"
+import { Check, Copy, Globe } from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import { cn } from "@workspace/ui/lib/utils"
@@ -20,10 +16,22 @@ const slots = [
 ]
 
 const links = [
-  { label: "Instagram", handle: "@designali.code" },
-  { label: "X", handle: "@designali_com" },
-  { label: "LinkedIn", handle: "in/aliimam-in" },
-  { label: "21st.dev", handle: "@designali-in" },
+  {
+    label: "Instagram",
+    handle: "@designali.code",
+    href: "https://www.instagram.com/designali.code/",
+  },
+  { label: "X", handle: "@designali_com", href: "https://x.com/designali_com" },
+  {
+    label: "LinkedIn",
+    handle: "in/aliimam-in",
+    href: "https://www.linkedin.com/in/aliimam-in/",
+  },
+  {
+    label: "21st.dev",
+    handle: "@designali-in",
+    href: "https://21st.dev/@designali-in",
+  },
 ]
 
 export default function Portfolio20() {
@@ -56,7 +64,9 @@ export default function Portfolio20() {
         <h2 className="mt-6 text-4xl leading-[1.05] font-medium tracking-tight md:text-7xl">
           Have something in mind?
           <br />
-          <span className="text-muted-foreground">Let&apos;s talk it through.</span>
+          <span className="text-muted-foreground">
+            Let&apos;s talk it through.
+          </span>
         </h2>
 
         <button
@@ -95,7 +105,9 @@ export default function Portfolio20() {
                   }}
                   className={cn(
                     "border py-3 text-center transition-colors",
-                    day === i ? "border-foreground bg-foreground text-background" : "border-border hover:bg-muted"
+                    day === i
+                      ? "border-foreground bg-foreground text-background"
+                      : "border-border hover:bg-muted"
                   )}
                 >
                   <span className="block text-xs opacity-70">{slot.day}</span>
@@ -111,24 +123,40 @@ export default function Portfolio20() {
                   onClick={() => setTime(t)}
                   className={cn(
                     "border px-4 py-2 font-sans text-sm transition-colors",
-                    time === t ? "border-foreground bg-muted" : "border-border hover:bg-muted"
+                    time === t
+                      ? "border-foreground bg-muted"
+                      : "border-border hover:bg-muted"
                   )}
                 >
                   {t}
                 </button>
               ))}
             </div>
-            <Button size="lg" className="mt-6 w-full sm:w-auto" disabled={!time}>
-              {time ? `Confirm ${selected.day} ${selected.date} at ${time}` : "Pick a time"}
+            <Button
+              size="lg"
+              className="mt-6 w-full sm:w-auto"
+              disabled={!time}
+            >
+              {time
+                ? `Confirm ${selected.day} ${selected.date} at ${time}`
+                : "Pick a time"}
             </Button>
           </div>
 
           <ul className="bg-background">
             {links.map((link) => (
-              <li key={link.label} className="border-b border-border last:border-b-0">
-                <a href="#" className="flex items-center justify-between gap-4 px-6 py-5 transition-colors hover:bg-muted md:px-8">
+              <li
+                key={link.label}
+                className="border-b border-border last:border-b-0"
+              >
+                <a
+                  href={link.href}
+                  className="flex items-center justify-between gap-4 px-6 py-5 transition-colors hover:bg-muted md:px-8"
+                >
                   <span className="font-medium">{link.label}</span>
-                  <span className="text-sm text-muted-foreground">{link.handle}</span>
+                  <span className="text-sm text-muted-foreground">
+                    {link.handle}
+                  </span>
                 </a>
               </li>
             ))}

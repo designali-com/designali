@@ -14,9 +14,9 @@ const topics = [
     title: "Getting started",
     count: 14,
     questions: [
-      "How do I create my first project?",
-      "Importing from another tool",
-      "Inviting your first teammate",
+      "Copying your first Designali block",
+      "Installing @designali/icons",
+      "Setting up design tokens",
     ],
   },
   {
@@ -24,49 +24,49 @@ const topics = [
     title: "Billing and plans",
     count: 11,
     questions: [
-      "Changing or cancelling a plan",
+      "Upgrading to Designali Pro",
       "Downloading invoices",
-      "Discounts for nonprofits",
+      "Contacting billing@designali.com",
     ],
   },
   {
     icon: Users,
-    title: "Teams and roles",
+    title: "Teams and studios",
     count: 9,
     questions: [
-      "What each role can do",
-      "Transferring workspace ownership",
-      "Removing a member safely",
+      "Using Designali in client work",
+      "Sharing templates with your team",
+      "Hiring Ali Imam for a project",
     ],
   },
   {
     icon: KeyRound,
-    title: "Login and SSO",
+    title: "Account and login",
     count: 7,
     questions: [
-      "Resetting two-factor authentication",
-      "Setting up SAML with Okta",
-      "Enforcing SSO for all members",
+      "Resetting your password",
+      "Changing your account email",
+      "Signing in on a new device",
     ],
   },
   {
     icon: Plug,
-    title: "Integrations",
+    title: "Stack and integrations",
     count: 18,
     questions: [
-      "Connecting Slack notifications",
-      "Syncing with GitHub issues",
-      "Using webhooks and the REST API",
+      "Using blocks with Next.js and Vercel",
+      "Tailwind CSS and shadcn-style UI",
+      "Importing Figma files",
     ],
   },
   {
     icon: ShieldCheck,
-    title: "Security and privacy",
+    title: "Licensing",
     count: 10,
     questions: [
-      "Where is my data hosted?",
-      "Requesting our SOC 2 report",
-      "Deleting your account and data",
+      "What the Designali license covers",
+      "Using icons and logos commercially",
+      "Reading the terms at /docs/legal/terms",
     ],
   },
 ]
@@ -81,7 +81,7 @@ export default function Faqs09() {
               Help center
             </p>
             <h2 className="mt-4 text-3xl font-semibold tracking-tight md:text-4xl">
-              Browse answers by topic
+              Browse Designali answers by topic
             </h2>
           </div>
           <a

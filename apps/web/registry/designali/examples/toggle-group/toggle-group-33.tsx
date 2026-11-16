@@ -7,6 +7,8 @@ import {
   ToggleGroupItem,
 } from "@workspace/ui/components/toggle-group"
 
+import { CounterNumber } from "@/registry/designali/ui/counter-number"
+
 const rates: Record<string, { symbol: string; rate: number }> = {
   usd: { symbol: "$", rate: 1 },
   eur: { symbol: "€", rate: 0.92 },
@@ -32,10 +34,15 @@ export default function CurrencyToggleGroup() {
           </ToggleGroupItem>
         ))}
       </ToggleGroup>
-      <span className="text-3xl font-semibold tabular-nums">
-        {symbol}
-        {(49 * rate).toFixed(2)}
-      </span>
+      <CounterNumber
+        value={49 * rate}
+        startValue={49}
+        prefix={symbol}
+        decimalPlaces={2}
+        size="lg"
+        duration={400}
+        className="font-semibold tracking-normal"
+      />
       <span className="text-xs text-muted-foreground">
         Designali Pro, per month
       </span>

@@ -1,7 +1,7 @@
 import { Suspense } from "react"
 import type { Metadata } from "next"
 
-import { VectorSidebar } from "@/src/components/templates/(icons)/all-sidebar"
+import { VectorSidebar } from "@/src/components/templates/(icons)/vector-sidebar"
 
 import {
   SidebarProvider,

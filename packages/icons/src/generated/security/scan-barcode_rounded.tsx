@@ -1,5 +1,4 @@
 /** Auto-generated - Do not edit */
-'use client';
 import React from 'react';
 
 export interface ScanBarcodeRoundedProps extends React.SVGProps<SVGSVGElement> {

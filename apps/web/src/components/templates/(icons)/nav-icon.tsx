@@ -13,7 +13,7 @@ import {
   SidebarMenuItem,
 } from "@workspace/ui/components/sidebar"
 
-import { allIcons } from "@designali/icons"
+import { allIcons } from "@designali/icons/all"
 
 import { useIconFilter } from "./icons/icon-filter-context"
 

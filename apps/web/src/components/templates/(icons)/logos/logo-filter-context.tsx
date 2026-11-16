@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 "use client"
 
-import { allLogos } from "@designali/logos"
+import { allLogos } from "@designali/logos/all"
 import { createContext, useContext, useMemo, useState } from "react"
 
 type LogoFilterContext = {

@@ -14,23 +14,23 @@ const distribution = [
 const reviews = [
   {
     title: "Paid for itself in week one",
-    body: "Caught a double-billing issue with a supplier on the first sync. That alone covered the annual plan.",
-    name: "Rachel G.",
-    meta: "Bookkeeper, 12 clients",
+    body: "A Designali template got our launch page live on day two. That alone covered the cost.",
+    name: "Rachel",
+    meta: "Founder, designali.com customer",
     rating: 5,
   },
   {
     title: "Clean, fast, no fluff",
-    body: "The mobile app is as capable as desktop. I approve invoices from the school pickup line now.",
-    name: "Owen P.",
-    meta: "Owner, Harbor Joinery",
+    body: "The blocks are plain Next.js and Tailwind CSS. My team reads and extends them without a learning curve.",
+    name: "Owen",
+    meta: "Frontend Developer",
     rating: 5,
   },
   {
     title: "Great, with one wish",
-    body: "Bank feeds are excellent. I would love multi-entity consolidation, which the team says is on the roadmap.",
-    name: "Sofia L.",
-    meta: "Controller, Mosaic Retail",
+    body: "@designali/icons covers almost everything. I would love even more brand logos, which Ali says are on the way.",
+    name: "Sofia",
+    meta: "Product Designer, designali.com customer",
     rating: 4,
   },
 ]
@@ -50,12 +50,12 @@ export default function Testimonials10() {
     <section className="w-full bg-background py-20 md:py-28">
       <div className="mx-auto grid max-w-6xl gap-12 px-6 lg:grid-cols-[320px_1fr]">
         <div>
-          <h2 className="text-3xl font-medium tracking-tight">Customer reviews</h2>
+          <h2 className="text-3xl font-medium tracking-tight">designali reviews</h2>
           <div className="mt-6 flex items-end gap-3">
             <span className="text-6xl font-medium tracking-tight">4.9</span>
             <div className="pb-2">
               <Stars n={5} />
-              <div className="mt-1 text-xs text-muted-foreground">2,318 verified reviews</div>
+              <div className="mt-1 text-xs text-muted-foreground">From designali.com customers</div>
             </div>
           </div>
           <div className="mt-8 space-y-2">
@@ -75,7 +75,7 @@ export default function Testimonials10() {
             <article key={r.name} className="py-6">
               <div className="flex flex-wrap items-center justify-between gap-2">
                 <Stars n={r.rating} />
-                <span className="inline-flex items-center gap-1 text-xs text-chart-3 dark:text-primary">
+                <span className="inline-flex items-center gap-1 text-xs text-primary">
                   <BadgeCheck className="size-3.5" /> Verified customer
                 </span>
               </div>

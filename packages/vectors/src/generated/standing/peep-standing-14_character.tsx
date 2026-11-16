@@ -1,5 +1,4 @@
 
-'use client';
 import React from 'react';
 
 export interface PeepStanding14CharacterProps extends React.SVGProps<SVGSVGElement> {

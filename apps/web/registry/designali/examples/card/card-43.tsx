@@ -5,7 +5,6 @@ import {
   PenTool as BathIcon,
   Layers as BedDoubleIcon,
   Heart as HeartIcon,
-  House as HouseIcon,
   MapPin as MapPinIcon,
   Code as RulerIcon,
 } from "@designali/icons"
@@ -32,10 +31,11 @@ export default function PropertyListingCard() {
 
   return (
     <Card className="w-full max-w-xs pt-0">
-      <div className="relative aspect-[4/3] bg-gradient-to-br from-border via-primary/20 to-chart-1 dark:from-muted dark:via-chart-5 dark:to-chart-5">
-        <HouseIcon
-          className="absolute inset-0 m-auto size-16 text-white/70"
-          strokeWidth={1}
+      <div className="relative aspect-[4/3] overflow-hidden bg-muted">
+        <img
+          src="/images/templates/design-agency.jpg"
+          alt="Design agency template preview"
+          className="size-full object-cover"
         />
         <Badge className="absolute start-3 top-3">New template</Badge>
         <Button

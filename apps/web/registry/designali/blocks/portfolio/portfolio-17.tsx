@@ -1,7 +1,4 @@
-import {
-  GitFork,
-  Star,
-} from "@designali/icons"
+import { GitFork, Star } from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 
@@ -31,9 +28,7 @@ const repos = [
     description: "Abstract shapes and illustrations for Designali blocks.",
     stars: "1.2k",
     forks: "41",
-    languages: [
-      { name: "TypeScript", share: 100, color: "bg-primary" },
-    ],
+    languages: [{ name: "TypeScript", share: 100, color: "bg-primary" }],
   },
   {
     name: "designali-blocks",
@@ -68,17 +63,26 @@ export default function Portfolio17() {
       <div className="mx-auto max-w-6xl px-6">
         <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
           <div className="flex items-center gap-4">
-            <span className="flex size-14 shrink-0 items-center justify-center bg-foreground font-sans text-lg text-background">
-              AI
-            </span>
+            <img
+              src="/ali.jpg"
+              alt="Ali Imam"
+              className="size-14 shrink-0 object-cover"
+            />
             <div>
-              <h2 className="text-2xl font-medium tracking-tight md:text-3xl">Ali Imam</h2>
+              <h2 className="text-2xl font-medium tracking-tight md:text-3xl">
+                Ali Imam
+              </h2>
               <p className="text-sm text-muted-foreground">
-                Design engineer. Maintainer of @designali/icons and @designali/logos.
+                Design engineer. Maintainer of @designali/icons and
+                @designali/logos.
               </p>
             </div>
           </div>
-          <Button variant="outline" nativeButton={false} render={<a href="https://21st.dev/@designali-in" />}>
+          <Button
+            variant="outline"
+            nativeButton={false}
+            render={<a href="https://21st.dev/@designali-in" />}
+          >
             View on 21st.dev
           </Button>
         </div>
@@ -97,7 +101,10 @@ export default function Portfolio17() {
           <div className="mt-4 overflow-hidden">
             <div className="grid grid-flow-col grid-cols-[repeat(26,minmax(0,1fr))] grid-rows-7 gap-[3px]">
               {activity.map((level, i) => (
-                <span key={i} className={`aspect-square w-full ${levels[level]}`} />
+                <span
+                  key={i}
+                  className={`aspect-square w-full ${levels[level]}`}
+                />
               ))}
             </div>
           </div>
@@ -111,7 +118,9 @@ export default function Portfolio17() {
               className="group flex flex-col border border-border bg-card p-5 transition-colors hover:border-foreground/40"
             >
               <div className="flex items-start justify-between gap-4">
-                <p className="font-sans text-sm font-medium group-hover:underline">{repo.name}</p>
+                <p className="font-sans text-sm font-medium group-hover:underline">
+                  {repo.name}
+                </p>
                 <span className="flex shrink-0 items-center gap-3 text-xs text-muted-foreground">
                   <span className="flex items-center gap-1">
                     <Star className="size-3.5" />
@@ -123,10 +132,16 @@ export default function Portfolio17() {
                   </span>
                 </span>
               </div>
-              <p className="mt-2 flex-1 text-sm text-muted-foreground">{repo.description}</p>
+              <p className="mt-2 flex-1 text-sm text-muted-foreground">
+                {repo.description}
+              </p>
               <div className="mt-5 flex h-1.5 w-full overflow-hidden">
                 {repo.languages.map((lang) => (
-                  <span key={lang.name} className={lang.color} style={{ width: `${lang.share}%` }} />
+                  <span
+                    key={lang.name}
+                    className={lang.color}
+                    style={{ width: `${lang.share}%` }}
+                  />
                 ))}
               </div>
               <div className="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-xs text-muted-foreground">

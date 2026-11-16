@@ -9,13 +9,13 @@ import { Button } from "@workspace/ui/components/button"
 import { cn } from "@workspace/ui/lib/utils"
 
 const roles = [
-  { title: "Senior Backend Engineer, Ledger", team: "Engineering", location: "Remote (EU)", type: "Full-time" },
-  { title: "Staff Engineer, Developer Platform", team: "Engineering", location: "Berlin", type: "Full-time" },
-  { title: "Product Designer, Onboarding", team: "Design", location: "Remote (EU)", type: "Full-time" },
-  { title: "Brand Designer", team: "Design", location: "Amsterdam", type: "Contract" },
-  { title: "Account Executive, DACH", team: "Sales", location: "Munich", type: "Full-time" },
-  { title: "Customer Success Lead", team: "Sales", location: "Remote (EU)", type: "Full-time" },
-  { title: "People Partner", team: "Operations", location: "Amsterdam", type: "Part-time" },
+  { title: "Senior Product Designer", team: "Design", location: "Remote", type: "Full-time" },
+  { title: "Brand Designer", team: "Design", location: "Remote", type: "Contract" },
+  { title: "Frontend Developer, Next.js", team: "Engineering", location: "Remote", type: "Full-time" },
+  { title: "Design Engineer, Components", team: "Engineering", location: "Remote", type: "Full-time" },
+  { title: "Motion & 3D Designer", team: "Creative", location: "Remote", type: "Contract" },
+  { title: "Illustrator, @designali/vectors", team: "Creative", location: "Remote", type: "Part-time" },
+  { title: "Studio Producer", team: "Operations", location: "Remote", type: "Full-time" },
 ]
 
 const teams = ["All", ...Array.from(new Set(roles.map((role) => role.team)))]
@@ -35,7 +35,7 @@ export default function Sections10() {
             </h2>
           </div>
           <p className="max-w-xs text-sm leading-6 text-muted-foreground">
-            Salary bands are published on every listing. We reply to every applicant within a week.
+            Join Ali Imam and the Designali studio. Design se code tak.
           </p>
         </div>
 
@@ -65,7 +65,7 @@ export default function Sections10() {
           {visible.map((role) => (
             <li key={role.title}>
               <a
-                href="#"
+                href="mailto:hello@designali.com"
                 className="group grid gap-2 border-b border-border py-5 transition-colors hover:bg-muted/50 sm:grid-cols-[1fr_140px_120px_24px] sm:items-center sm:gap-6 sm:px-3"
               >
                 <span>
@@ -82,9 +82,9 @@ export default function Sections10() {
 
         <div className="mt-10 flex flex-col items-start gap-4 border border-dashed border-border p-6 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-sm text-muted-foreground">
-            Nothing that fits? Send us a note about what you would build here.
+            Nothing that fits? Write to hello@designali.com with your work.
           </p>
-          <Button variant="outline" nativeButton={false} render={<a href="#" />}>
+          <Button variant="outline" nativeButton={false} render={<a href="mailto:hello@designali.com" />}>
             Open application
           </Button>
         </div>

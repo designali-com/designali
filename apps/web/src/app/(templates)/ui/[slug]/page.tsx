@@ -1,12 +1,12 @@
 import { notFound } from "next/navigation"
 
-import * as Icons from "lucide-react"
+import { getCategoryIcon } from "@/src/lib/category-icons"
 
 import { ComponentPreview } from "@/src/components/docs/component-preview"
 
 import { uiCategories } from "@/registry/registry-categories"
 
-import { Index } from "@/registry/__index__"
+import { RegistryMeta } from "@/registry/__meta__"
 
 export const revalidate = false
 
@@ -35,16 +35,12 @@ export default async function UIPage({
     notFound()
   }
 
-  const components = Object.keys(Index).filter((name) => {
+  const components = Object.keys(RegistryMeta).filter((name) => {
     // Exact "<slug>-NN" match, so e.g. "input" doesn't pick up "input-otp-01".
     return name === `${slug}-variants` || new RegExp(`^${slug}-\\d+$`).test(name)
   })
 
-  const Icon = currentCategory.iconName
-    ? (Icons[
-      currentCategory.iconName as keyof typeof Icons
-    ] as React.ElementType)
-    : null
+  const Icon = getCategoryIcon(currentCategory.iconName)
 
   const twoColumnCategories = [
     "alert",

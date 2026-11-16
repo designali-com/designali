@@ -9,7 +9,7 @@ import {
   TooltipTrigger,
 } from "@workspace/ui/components/tooltip"
 
-import { allIcons } from "@designali/icons"
+import { allIcons } from "@designali/icons/all"
 import { useIconFilter } from "./icon-filter-context"
 import { Icons } from "./icons"
 

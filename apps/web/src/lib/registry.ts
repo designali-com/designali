@@ -2,7 +2,9 @@
 import { promises as fs } from "node:fs"
 import path from "node:path"
 
-import { Index } from "@/registry/__index__"
+// Metadata only. Importing "@/registry/__index__" here would make every page
+// that reads registry files compile all registry components.
+import { RegistryMeta } from "@/registry/__meta__"
 
 type RegistryFile = {
   path: string
@@ -11,12 +13,8 @@ type RegistryFile = {
   content?: string
 }
 
-export function getRegistryComponent(name: string) {
-  return Index[name]?.component
-}
-
 export async function getRegistryItem(name: string) {
-  const item = Index[name]
+  const item = RegistryMeta[name]
 
   if (!item) {
     return null

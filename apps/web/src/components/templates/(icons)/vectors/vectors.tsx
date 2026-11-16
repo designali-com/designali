@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { allVectors } from "@designali/vectors"
+import { allVectors } from "@designali/vectors/all"
+import { VectorGlyph } from "./vector-glyph"
 
 interface IconProps extends React.SVGProps<SVGSVGElement> {
   name: string
@@ -61,14 +62,6 @@ export function Vectors({
   }
 
   if (!match) return null
-  const { Component, metadata } = match
- 
-  return (
-    <Component
-      size={size}
-      style={{ color }}
-      viewBox={metadata.viewBox}  
-      {...props}
-    />
-  )
+
+  return <VectorGlyph entry={match} size={size} color={color} {...props} />
 }

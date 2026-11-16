@@ -1,7 +1,9 @@
+import { CounterNumber } from "@/registry/designali/ui/counter-number"
+
 const stats = [
-  { value: "4.9/5", label: "Average rating" },
-  { value: "3,200+", label: "Teams onboarded" },
-  { value: "97%", label: "Would recommend" },
+  { value: 460, suffix: "+", label: "Designali blocks" },
+  { value: 2300, suffix: "+", label: "UI design examples" },
+  { value: 4000, suffix: "+", label: "Icons in @designali/icons" },
 ]
 
 export default function Testimonials06() {
@@ -11,25 +13,21 @@ export default function Testimonials06() {
         <div className="grid border border-border lg:grid-cols-2">
           <div className="flex flex-col justify-between border-b border-border p-8 md:p-12 lg:border-r lg:border-b-0">
             <p className="text-xs tracking-widest text-muted-foreground uppercase">
-              Case study &middot; Atlas Freight
+              Case study &middot; Designali client
             </p>
             <blockquote className="mt-8 text-2xl leading-snug font-medium tracking-tight md:text-3xl">
-              &ldquo;We rolled out a single design language across 14 internal
-              tools in one quarter. Support tickets about confusing UI dropped
-              by half.&rdquo;
+              &ldquo;Designali rolled out a single design language across all
+              our internal tools, then shipped it as Next.js code. Our team
+              finally designs and builds from the same system.&rdquo;
             </blockquote>
             <div className="mt-10 flex items-center gap-4">
-              <div
-                className="size-14 rounded-full"
-                style={{
-                  background:
-                    "linear-gradient(135deg, var(--chart-1), var(--chart-3))",
-                }}
-              />
+              <span className="flex size-14 items-center justify-center rounded-full bg-primary text-sm font-semibold text-primary-foreground">
+                JO
+              </span>
               <div>
-                <p className="font-medium">Jonas Lindqvist</p>
+                <p className="font-medium">Jonas</p>
                 <p className="text-sm text-muted-foreground">
-                  Director of Product, Atlas Freight
+                  Director of Product, Designali client
                 </p>
               </div>
             </div>
@@ -43,9 +41,11 @@ export default function Testimonials06() {
                 <span className="text-sm text-muted-foreground">
                   {stat.label}
                 </span>
-                <span className="text-4xl font-semibold tracking-tighter md:text-5xl">
-                  {stat.value}
-                </span>
+                <CounterNumber
+                  value={stat.value}
+                  suffix={stat.suffix}
+                  className="text-4xl font-semibold tracking-tighter md:text-5xl"
+                />
               </div>
             ))}
           </div>

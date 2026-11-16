@@ -1,5 +1,4 @@
 /** Auto-generated - Do not edit */
-'use client';
 import React from 'react';
 
 export interface RectangleGogglesProps extends React.SVGProps<SVGSVGElement> {

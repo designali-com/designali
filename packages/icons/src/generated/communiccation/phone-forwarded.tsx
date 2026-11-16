@@ -1,5 +1,4 @@
 /** Auto-generated - Do not edit */
-'use client';
 import React from 'react';
 
 export interface PhoneForwardedProps extends React.SVGProps<SVGSVGElement> {

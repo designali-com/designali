@@ -3,7 +3,7 @@
 
 import { useEffect, useState } from "react"
 import Link from "next/link"
-import { allVectors } from "@designali/vectors"
+import { allVectors } from "@designali/vectors/all"
 
 import { Button } from "@workspace/ui/components/button"
 import {

@@ -11,24 +11,24 @@ import { Button } from "@workspace/ui/components/button"
 const testimonials = [
   {
     quote:
-      "Our conversion rate on the pricing page went up 22% after we switched to these layouts. The hierarchy is simply clearer.",
-    name: "Hannah Lee",
+      "Our pricing page finally makes sense. Designali redesigned and rebuilt it in Next.js, and the hierarchy is simply clearer.",
+    name: "Hannah",
     role: "Growth Lead",
-    company: "Polar",
+    company: "Designali client",
   },
   {
     quote:
-      "It is the first library our brand team and our engineers both agreed on. That alone was worth it.",
-    name: "Marcus Webb",
+      "It is the first studio our brand team and our engineers both agreed on. Ali designs it and codes it, so nothing gets lost.",
+    name: "Marcus",
     role: "VP Engineering",
-    company: "Meridian Group",
+    company: "Designali client",
   },
   {
     quote:
-      "Every section reads like it was art-directed. Clients assume we built everything from scratch.",
-    name: "Aiko Tanaka",
+      "Every Designali block reads like it was art-directed. Our clients assume we built everything from scratch.",
+    name: "Aiko",
     role: "Partner",
-    company: "Blockhaus Studio",
+    company: "Design studio, designali.com customer",
   },
 ]
 
@@ -47,7 +47,7 @@ export default function Testimonials04() {
               Testimonials
             </p>
             <h2 className="mt-3 text-3xl font-semibold tracking-tight">
-              What our customers say
+              What clients say about designali
             </h2>
           </div>
           <div className="flex items-center gap-2">

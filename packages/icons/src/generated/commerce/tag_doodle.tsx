@@ -1,5 +1,4 @@
 /** Auto-generated - Do not edit */
-'use client';
 import React from 'react';
 
 export interface TagDoodleProps extends React.SVGProps<SVGSVGElement> {

@@ -18,6 +18,8 @@ import {
 } from "@workspace/ui/components/card"
 import { Switch } from "@workspace/ui/components/switch"
 
+import { CounterNumber } from "@/registry/designali/ui/counter-number"
+
 const features = [
   "All 460+ blocks and 240+ pages",
   "Up to 25 team seats",
@@ -41,9 +43,13 @@ export default function PricingPlanCard() {
       </CardHeader>
       <CardContent className="flex flex-col gap-4">
         <div className="flex items-end gap-1">
-          <span className="text-3xl font-semibold tabular-nums">
-            {"$" + price}
-          </span>
+          <CounterNumber
+            value={price}
+            startValue={price}
+            prefix="$"
+            size="lg"
+            className="font-semibold tracking-normal"
+          />
           <span className="pb-1 text-muted-foreground">per seat / month</span>
         </div>
         <label className="flex items-center gap-2 text-xs">

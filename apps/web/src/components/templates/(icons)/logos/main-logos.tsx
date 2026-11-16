@@ -9,7 +9,7 @@ import {
   TooltipTrigger,
 } from "@workspace/ui/components/tooltip"
 
-import { allLogos } from "@designali/logos"
+import { allLogos } from "@designali/logos/all"
 import { useLogoFilter } from "./logo-filter-context"
 import { Logos } from "./logos"
 

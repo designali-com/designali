@@ -1,5 +1,4 @@
 /** Auto-generated - Do not edit */
-'use client';
 import React from 'react';
 
 export interface WineProps extends React.SVGProps<SVGSVGElement> {

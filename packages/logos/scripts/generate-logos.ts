@@ -338,7 +338,6 @@ for (const category of categories) {
  * Do not edit manually
  */
 
-'use client';
 import React from 'react';
 
 export interface ${componentName}Props extends React.SVGProps<SVGSVGElement> {
@@ -429,10 +428,15 @@ for (const [cat, comps] of Object.entries(categoryStructure)) {
 }
 allLogosExport += `} as const;\n`
 
-// Final file content: Exports + Imports + Object
+// index.tsx is a pure re-export barrel so bundlers can load only the logos
+// that are imported. The big `allLogos` lookup object lives in all.tsx.
+fs.writeFileSync(
+  path.join(GENERATED_DIR, "all.tsx"),
+  `/** Auto-generated - Do not edit manually */\n` + internalImports + "\n" + allLogosExport
+)
 fs.writeFileSync(
   mainIndexPath,
-  namedExports + "\n" + internalImports + "\n" + allLogosExport
+  namedExports + `\nexport { allLogos } from './all';\n`
 )
 
 console.log(`[SUCCESS] Generated ${logos.length} logos.`)

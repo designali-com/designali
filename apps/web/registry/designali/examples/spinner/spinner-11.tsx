@@ -7,6 +7,8 @@ import {
 } from "@workspace/ui/components/card"
 import { Spinner } from "@workspace/ui/components/spinner"
 
+import { CounterNumber } from "@/registry/designali/ui/counter-number"
+
 export default function CardLoadingOverlay() {
   return (
     <Card className="relative w-full max-w-sm">
@@ -15,7 +17,12 @@ export default function CardLoadingOverlay() {
         <CardDescription>Last 30 days</CardDescription>
       </CardHeader>
       <CardContent className="flex flex-col gap-1">
-        <span className="text-3xl font-semibold tabular-nums">$48,210</span>
+        <CounterNumber
+          value={48210}
+          prefix="$"
+          size="lg"
+          className="font-semibold tracking-normal"
+        />
         <span className="text-xs text-muted-foreground">
           +12.4% from previous period
         </span>

@@ -11,7 +11,22 @@
         "../../packages/ui/src/*"
       ],
       "@designali/logos": [
-        "../../packages/logos/src/index.ts"
+        "../../packages/logos/src/generated/index.tsx"
+      ],
+      "@designali/icons": [
+        "../../packages/icons/src/generated/index.tsx"
+      ],
+      "@designali/vectors": [
+        "../../packages/vectors/src/generated/index.tsx"
+      ],
+      "@designali/icons/all": [
+        "../../packages/icons/dist/all.mjs"
+      ],
+      "@designali/logos/all": [
+        "../../packages/logos/dist/all.mjs"
+      ],
+      "@designali/vectors/all": [
+        "../../packages/vectors/dist/all.mjs"
       ]
     },
     "plugins": [

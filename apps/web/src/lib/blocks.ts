@@ -48,7 +48,7 @@ export async function getAllBlocks(
   types: RegistryItemType[] = ["registry:block", "registry:internal"],
   categories: string[] = []
 ): Promise<RegistryItem[]> {
-  const { Index } = await import("@/registry/__index__")
+  const { RegistryMeta: Index } = await import("@/registry/__meta__")
 
   const result = z.record(z.string(), registryItemSchema).safeParse(Index)
 
@@ -56,7 +56,7 @@ export async function getAllBlocks(
     console.error("Invalid registry index:", result.error.flatten())
 
     throw new Error(
-      "Invalid registry index. Check registry/__index__.ts and registry item definitions."
+      "Invalid registry index. Check registry/__meta__.ts and registry item definitions."
     )
   }
 
@@ -76,7 +76,7 @@ export async function getAllPages(
   types: RegistryItemType[] = ["registry:page", "registry:internal"],
   categories: string[] = []
 ): Promise<RegistryItem[]> {
-  const { Index } = await import("@/registry/__index__")
+  const { RegistryMeta: Index } = await import("@/registry/__meta__")
 
   const result = z.record(z.string(), registryItemSchema).safeParse(Index)
 
@@ -84,7 +84,7 @@ export async function getAllPages(
     console.error("Invalid registry index:", result.error.flatten())
 
     throw new Error(
-      "Invalid registry index. Check registry/__index__.ts and registry item definitions."
+      "Invalid registry index. Check registry/__meta__.ts and registry item definitions."
     )
   }
 

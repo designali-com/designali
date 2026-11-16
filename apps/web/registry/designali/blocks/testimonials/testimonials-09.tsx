@@ -9,32 +9,32 @@ import { cn } from "@workspace/ui/lib/utils"
 
 const people = [
   {
-    initials: "EM",
-    name: "Elena Moretti",
-    role: "Chief Product Officer, Vellum",
-    tone: "from-primary to-chart-1",
-    quote: "We rebuilt our entire onboarding in a sprint. Activation went from 31% to 54%, and I did not have to file a single ticket with engineering.",
+    initials: "EL",
+    name: "Elena",
+    role: "Chief Product Officer, Designali client",
+    image: null,
+    quote: "Designali rebuilt our onboarding in a sprint, designed in Figma and shipped in Next.js, without a single ticket to our engineering team.",
   },
   {
-    initials: "KA",
-    name: "Kwame Asante",
-    role: "Founder, Lattice Coffee",
-    tone: "from-primary to-chart-1",
-    quote: "As a three-person team we cannot afford a growth engineer. This is the closest thing to having one on staff.",
+    initials: "KW",
+    name: "Kwame",
+    role: "Founder, Designali client",
+    image: null,
+    quote: "As a three-person team we cannot afford a design and a dev agency. Designali is both, in one studio.",
   },
   {
-    initials: "YN",
-    name: "Yuki Nakamura",
-    role: "Head of Growth, Strata",
-    tone: "from-primary to-chart-1",
-    quote: "The experiment reports are the cleanest I have seen. My CFO reads them without asking me to explain the stats.",
+    initials: "AI",
+    name: "Ali Imam",
+    role: "Founder, Designali",
+    image: "/ali.jpg",
+    quote: "I design and build digital experiences that look great, feel intuitive and work beautifully.",
   },
   {
-    initials: "BW",
-    name: "Ben Whitaker",
-    role: "Product Lead, Corvid Health",
-    tone: "from-primary to-chart-1",
-    quote: "HIPAA review took two weeks instead of the usual three months. Their security docs answered every question up front.",
+    initials: "BE",
+    name: "Ben",
+    role: "Product Lead, designali.com customer",
+    image: null,
+    quote: "Designali blocks and @designali/icons gave our team a head start on every new page we ship.",
   },
 ]
 
@@ -66,14 +66,21 @@ export default function Testimonials09() {
               aria-label={person.name}
               onClick={() => setActive(i)}
               className={cn(
-                "flex size-12 items-center justify-center rounded-full bg-gradient-to-br text-sm font-medium text-white transition-all",
-                person.tone,
+                "flex size-12 items-center justify-center overflow-hidden rounded-full bg-primary text-sm font-medium text-primary-foreground transition-all",
                 i === active
                   ? "scale-110 ring-2 ring-foreground ring-offset-2 ring-offset-background"
                   : "opacity-50 grayscale hover:opacity-100 hover:grayscale-0"
               )}
             >
-              {person.initials}
+              {person.image ? (
+                <img
+                  src={person.image}
+                  alt={person.name}
+                  className="size-full object-cover"
+                />
+              ) : (
+                person.initials
+              )}
             </button>
           ))}
         </div>

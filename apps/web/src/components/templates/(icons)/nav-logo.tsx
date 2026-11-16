@@ -11,7 +11,7 @@ import {
   SidebarMenuItem,
 } from "@workspace/ui/components/sidebar"
 
-import { allLogos } from "@designali/logos"
+import { allLogos } from "@designali/logos/all"
 import { useLogoFilter } from "./logos/logo-filter-context"
 
 function matchesVariantTab(

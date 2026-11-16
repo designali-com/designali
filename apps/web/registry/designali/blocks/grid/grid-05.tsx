@@ -1,16 +1,31 @@
+import {
+  ClaudeAI,
+  Cursor,
+  Figma,
+  Github,
+  Nextjs,
+  Notion,
+  OpenAI,
+  ReactLib,
+  Stripe,
+  TailwindCSS,
+  TypeScript,
+  Vercel,
+} from "@designali/logos"
+
 const integrations = [
-  { name: "Next.js", category: "Framework", hue: 0 },
-  { name: "React", category: "UI library", hue: 220 },
-  { name: "TypeScript", category: "Language", hue: 250 },
-  { name: "Tailwind CSS", category: "Styling", hue: 200 },
-  { name: "Figma", category: "Design", hue: 15 },
-  { name: "Vercel", category: "Hosting", hue: 260 },
-  { name: "GitHub", category: "Code", hue: 290 },
-  { name: "Notion", category: "Docs", hue: 40 },
-  { name: "Cursor", category: "Editor", hue: 160 },
-  { name: "Claude", category: "AI workflows", hue: 30 },
-  { name: "OpenAI", category: "AI workflows", hue: 150 },
-  { name: "Stripe", category: "Payments", hue: 270 },
+  { name: "Next.js", category: "Framework", logo: Nextjs },
+  { name: "React", category: "UI library", logo: ReactLib },
+  { name: "TypeScript", category: "Language", logo: TypeScript },
+  { name: "Tailwind CSS", category: "Styling", logo: TailwindCSS },
+  { name: "Figma", category: "Design", logo: Figma },
+  { name: "Vercel", category: "Hosting", logo: Vercel },
+  { name: "GitHub", category: "Code", logo: Github },
+  { name: "Notion", category: "Docs", logo: Notion },
+  { name: "Cursor", category: "Editor", logo: Cursor },
+  { name: "Claude", category: "AI workflows", logo: ClaudeAI },
+  { name: "OpenAI", category: "AI workflows", logo: OpenAI },
+  { name: "Stripe", category: "Payments", logo: Stripe },
 ]
 
 export default function Grid05() {
@@ -31,11 +46,8 @@ export default function Grid05() {
               key={item.name}
               className="group flex flex-col gap-6 bg-background p-5 transition-colors hover:bg-muted"
             >
-              <span
-                className="flex size-10 items-center justify-center text-sm font-semibold text-white"
-                style={{ backgroundColor: `oklch(0.55 0.15 ${item.hue})` }}
-              >
-                {item.name[0]}
+              <span className="flex size-10 items-center justify-center border border-border bg-muted">
+                <item.logo size={20} />
               </span>
               <div>
                 <p className="text-sm font-medium">{item.name}</p>

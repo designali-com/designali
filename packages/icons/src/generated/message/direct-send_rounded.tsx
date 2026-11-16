@@ -1,5 +1,4 @@
 /** Auto-generated - Do not edit */
-'use client';
 import React from 'react';
 
 export interface DirectSendRoundedProps extends React.SVGProps<SVGSVGElement> {

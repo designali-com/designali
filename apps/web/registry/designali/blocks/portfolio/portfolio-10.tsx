@@ -1,9 +1,6 @@
 "use client"
 
-import {
-  ArrowRight,
-  Check,
-} from "@designali/icons"
+import { ArrowRight, Check } from "@designali/icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -20,7 +17,11 @@ const disciplines = [
     project: "Dalim Agency",
     headline: "One identity for a growing family of Dalim brands",
     body: "Dalim Agency, Fonts, Graphic and Visuals grew one by one. We built a shared identity so every brand feels part of the same studio.",
-    deliverables: ["Logotype and monogram", "Brand guidelines", "Agency website"],
+    deliverables: [
+      "Logotype and monogram",
+      "Brand guidelines",
+      "Agency website",
+    ],
     background: "url(/images/templates/dalim-agency-old.jpg) center / cover",
   },
   {
@@ -29,7 +30,11 @@ const disciplines = [
     project: "Dalim UI",
     headline: "Components for designers who code",
     body: "Dalim UI paired every Figma component with production-ready React. It grew into the Designali library of 460+ blocks.",
-    deliverables: ["Figma UI kit", "React and Tailwind components", "Design tokens"],
+    deliverables: [
+      "Figma UI kit",
+      "React and Tailwind components",
+      "Design tokens",
+    ],
     background: "url(/images/templates/dalim-ui-old.jpg) center / cover",
   },
   {
@@ -61,9 +66,16 @@ export default function Portfolio10() {
         </h2>
 
         <Tabs defaultValue="brand" className="mt-10 gap-8">
-          <TabsList variant="line" className="w-full justify-start gap-6 border-b border-border">
+          <TabsList
+            variant="line"
+            className="w-full justify-start gap-6 border-b border-border"
+          >
             {disciplines.map((d) => (
-              <TabsTrigger key={d.id} value={d.id} className="flex-none px-0 text-sm">
+              <TabsTrigger
+                key={d.id}
+                value={d.id}
+                className="flex-none px-0 text-sm"
+              >
                 {d.label}
               </TabsTrigger>
             ))}
@@ -73,7 +85,10 @@ export default function Portfolio10() {
             <TabsContent key={d.id} value={d.id} className="text-sm">
               <div className="grid gap-8 md:grid-cols-2 md:gap-12">
                 <div className="relative aspect-[4/3] overflow-hidden border border-border">
-                  <div className="absolute inset-0" style={{ background: d.background }} />
+                  <div
+                    className="absolute inset-0"
+                    style={{ background: d.background }}
+                  />
                   <span className="absolute bottom-4 left-4 bg-background px-3 py-1.5 text-xs font-medium">
                     {d.project}
                   </span>
@@ -85,7 +100,9 @@ export default function Portfolio10() {
                   <h3 className="mt-3 text-2xl leading-tight font-medium tracking-tight md:text-3xl">
                     {d.headline}
                   </h3>
-                  <p className="mt-4 text-base leading-7 text-muted-foreground">{d.body}</p>
+                  <p className="mt-4 text-base leading-7 text-muted-foreground">
+                    {d.body}
+                  </p>
                   <ul className="mt-6 space-y-2 text-base">
                     {d.deliverables.map((item) => (
                       <li key={item} className="flex items-center gap-3">
@@ -95,7 +112,11 @@ export default function Portfolio10() {
                     ))}
                   </ul>
                   <div className="mt-8">
-                    <Button variant="outline" nativeButton={false} render={<a href="/work" />}>
+                    <Button
+                      variant="outline"
+                      nativeButton={false}
+                      render={<a href="/work" />}
+                    >
                       See all {d.label.toLowerCase()} work
                       <ArrowRight />
                     </Button>

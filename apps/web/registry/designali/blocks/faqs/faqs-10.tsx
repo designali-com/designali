@@ -6,20 +6,24 @@ import { Button } from "@workspace/ui/components/button"
 
 const thread = [
   {
-    q: "Is there a free plan, or just a trial?",
-    a: "Both. The free plan never expires and covers one workspace with up to three projects. Paid plans come with a 14-day trial, no card needed.",
+    q: "Are Designali blocks free, or is it just a trial?",
+    a:
+      "Both exist. Plenty of blocks, icons and logos are free on designali.com, and Designali Pro unlocks the full library of templates and landing pages.",
   },
   {
-    q: "Can my clients see projects without paying for a seat?",
-    a: "Yes. Viewers and commenters are always free, on every plan. You only pay for people who edit.",
+    q: "Can my clients use sites I build with Designali templates?",
+    a:
+      "Yes. You can deliver client work built with Designali templates and blocks. You just can't resell the raw files as your own kit.",
   },
   {
-    q: "We already use another tool. Is moving painful?",
-    a: "Usually it takes an afternoon. Our importer brings across pages, assets and comments, and we'll run the migration for you on annual plans.",
+    q: "We already have a design system. Will the blocks clash?",
+    a:
+      "Unlikely. Blocks only use semantic tokens like background, muted and primary, so they pick up your theme as soon as you paste them in.",
   },
   {
-    q: "What if I need help at 2am?",
-    a: "Our docs and status page are always on. Business customers also get a 24/7 on-call engineer for production incidents.",
+    q: "Can I talk to the person who built them?",
+    a:
+      "Yes. Ali Imam designs and codes every Designali block. Write to hello@designali.com or reach out on X at @designali_com.",
   },
 ]
 
@@ -32,7 +36,7 @@ export default function Faqs10() {
             You asked, we answered
           </h2>
           <p className="mt-3 text-sm text-muted-foreground">
-            The questions we hear most on sales calls, answered straight.
+            The questions designers and developers ask Designali most, answered straight.
           </p>
         </div>
         <div className="mt-14 space-y-8">
@@ -59,7 +63,7 @@ export default function Faqs10() {
             Got a question that isn&apos;t here?
           </p>
           <Button nativeButton={false} render={<a href="#" />}>
-            Chat with our team
+            Email hello@designali.com
           </Button>
         </div>
       </div>

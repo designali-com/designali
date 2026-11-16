@@ -4,7 +4,6 @@
  * Do not edit manually
  */
 
-'use client';
 import React from 'react';
 
 export interface SolanaProps extends React.SVGProps<SVGSVGElement> {

@@ -1,33 +1,33 @@
 const faqs = [
   {
-    question: "How long does a typical project take?",
+    question: "How long does a typical Designali project take?",
     answer:
-      "Most brand and website projects run six to ten weeks from kickoff to launch. Smaller scopes, like a landing page or a component audit, usually ship in two to three weeks.",
+      "Timelines depend on scope. A brand identity or a full website is planned in clear phases from kickoff to launch, while smaller pieces like a landing page or a component audit move faster. You get a schedule before anything starts.",
   },
   {
     question: "Do you work with early-stage startups?",
     answer:
-      "Yes. Around half of our clients are pre-seed to Series A. We offer a fixed-scope launch package designed for teams that need to move quickly on a lean budget.",
+      "Yes. Designali works with founders and small teams who need a brand, a product UI or a production-ready Next.js site without building an in-house design team first.",
   },
   {
     question: "What do you need from us to get started?",
     answer:
-      "A short brief, access to any existing brand assets, and one decision-maker who can join a weekly review. We handle the rest, including research and stakeholder interviews.",
+      "A short brief, access to any existing brand assets, and one decision-maker who can join regular reviews. Ali Imam handles research, design and development from there.",
   },
   {
     question: "Can you hand off to our in-house developers?",
     answer:
-      "Every project ships with annotated Figma files, a token library and a recorded walkthrough. We stay on Slack for two weeks after handoff to answer questions.",
+      "Every project ships with organised Figma files, design tokens and clean TypeScript and Tailwind CSS code, so your team can pick it up and keep building.",
   },
   {
     question: "How do payments work?",
     answer:
-      "We invoice 50% at kickoff and 50% at delivery. Retainers are billed monthly in advance and can be paused or cancelled with 30 days' notice.",
+      "Payment terms are agreed up front in the proposal. Write to billing@designali.com for invoices, receipts or anything related to billing.",
   },
   {
     question: "Do you sign NDAs?",
     answer:
-      "Of course. We are happy to sign your NDA before the first call, or we can send over our standard mutual agreement.",
+      "Of course. Designali is happy to sign your NDA before the first call. Just send it to hello@designali.com.",
   },
 ]
 
@@ -37,10 +37,10 @@ export default function Faqs04() {
       <div className="mx-auto max-w-6xl px-6">
         <div className="max-w-2xl">
           <p className="text-xs tracking-[0.2em] text-muted-foreground uppercase">
-            Questions
+            Designali FAQ
           </p>
           <h2 className="mt-4 text-3xl font-semibold tracking-tight md:text-5xl">
-            Everything you need to know before we start.
+            Everything you need to know before we work together.
           </h2>
         </div>
         <dl className="mt-14 grid border-t border-l border-border md:grid-cols-2">

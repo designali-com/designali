@@ -10,13 +10,15 @@ import {
 import { Button } from "@workspace/ui/components/button"
 import { Slider } from "@workspace/ui/components/slider"
 
+import { GridPattern } from "@/registry/designali/ui/grid-pattern"
+
 export default function MapZoomVerticalSlider() {
   const [zoom, setZoom] = React.useState([12])
   const set = (z: number) => setZoom([Math.min(18, Math.max(3, z))])
 
   return (
     <div className="relative h-64 w-full max-w-sm overflow-hidden border bg-muted/40">
-      <div className="absolute inset-0 bg-[linear-gradient(var(--border)_1px,transparent_1px),linear-gradient(90deg,var(--border)_1px,transparent_1px)] bg-[size:24px_24px]" />
+      <GridPattern width={24} height={24} />
       <MapPinIcon className="absolute top-1/2 left-1/2 size-6 -translate-x-1/2 -translate-y-full text-primary" />
       <div className="absolute top-3 right-3 flex flex-col items-center gap-2 border bg-background p-1">
         <Button

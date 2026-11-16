@@ -1,7 +1,7 @@
 import { Suspense } from "react"
 import type { Metadata } from "next"
 
-import { IconSidebar } from "@/src/components/templates/(icons)/all-sidebar"
+import { IconSidebar } from "@/src/components/templates/(icons)/icon-sidebar"
 
 import {
   SidebarProvider,

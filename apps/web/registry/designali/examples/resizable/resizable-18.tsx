@@ -13,6 +13,8 @@ import {
 } from "@workspace/ui/components/resizable"
 import { cn } from "@workspace/ui/lib/utils"
 
+import { DotPattern } from "@/registry/designali/ui/dot-pattern"
+
 const layers = [
   { name: "Header", icon: FrameIcon },
   { name: "Hero title", icon: TypeIcon },
@@ -47,8 +49,14 @@ export default function DesignToolPanels() {
       </ResizablePanel>
       <ResizableHandle />
       <ResizablePanel defaultSize="56%" minSize="30%">
-        <div className="flex h-full items-center justify-center bg-muted/50 bg-[radial-gradient(circle,var(--border)_1px,transparent_1px)] bg-[size:12px_12px] p-4">
-          <div className="flex w-full max-w-40 flex-col gap-2 border bg-background p-3 shadow-sm">
+        <div className="relative flex h-full items-center justify-center bg-muted/50 p-4">
+          <DotPattern
+            width={12}
+            height={12}
+            dotSize={1}
+            className="rounded-none p-0 text-muted-foreground"
+          />
+          <div className="relative flex w-full max-w-40 flex-col gap-2 border bg-background p-3 shadow-sm">
             <div className="h-2 w-2/3 bg-foreground/80" />
             <div className="h-1.5 w-full bg-muted-foreground/30" />
             <div className="h-5 w-16 border-2 border-primary bg-primary/80" />

@@ -4,7 +4,7 @@
 import { useEffect, useState } from "react"
 import Link from "next/link"
 import { ExpandIcon, Link2, PanelRightClose } from "lucide-react"
-import { allLogos } from "@designali/logos"
+import { allLogos } from "@designali/logos/all"
 import {
   ToggleGroup,
   ToggleGroupItem,
