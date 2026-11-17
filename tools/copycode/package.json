@@ -1,11 +1,12 @@
 {
   "name": "copycode",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "private": true,
-  "description": "Chrome extension: select any block on a web page and copy an exact copy as HTML, JSX, TSX, or vectors for Figma / Paper.",
+  "description": "Chrome extension: copy any block of a web page as a Next.js + shadcn/ui + Tailwind component, JSX, HTML, an image, or layers for Figma and Paper.",
   "type": "module",
-  "scripts": {
-    "icons": "node scripts/make-icons.mjs",
-    "zip": "rm -f copycode.zip && zip -r copycode.zip manifest.json background.js vector.js content.js icons"
+  "scripts": { 
+    "tailwind": "node scripts/build-tailwind-data.mjs",
+    "shadcn": "node scripts/build-shadcn-data.mjs",
+    "zip": "rm -f copycode.zip && zip -r copycode.zip manifest.json background.js tailwind-data.js shadcn-data.js tailwind.js vector.js content.js icons"
   }
 }

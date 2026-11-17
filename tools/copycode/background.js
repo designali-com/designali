@@ -1,7 +1,7 @@
 // Clicking the toolbar icon (or pressing Alt+Shift+C) injects the content
 // scripts. content.js guards itself, so a second injection toggles the
 // toolbar instead of creating a duplicate.
-const FILES = ["vector.js", "content.js"]
+const FILES = ["tailwind-data.js", "shadcn-data.js", "tailwind.js", "vector.js", "content.js"]
 
 chrome.action.onClicked.addListener(async (tab) => {
   if (!tab?.id) return

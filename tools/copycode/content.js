@@ -1,13 +1,16 @@
 /* CopyCode — select a block on any page and copy an exact copy of it:
- *   HTML / JSX / TSX  — markup with inline styles, exactly as the browser renders it
- *   SVG               — real vectors (boxes, text, images) for Figma, Paper & co. (vector.js)
- *   PNG               — screenshot (download)
+ *   Code   TSX  — Next.js component with Tailwind v4 classes and shadcn/ui components
+ *          JSX / HTML — inline styles, exactly as the browser renders it
+ *   Image  PNG of the block
+ *   Figma  vector SVG (vector.js) → pastes as layers
+ *   Paper  inline-styled HTML → pastes as layers
  *
- * Code pipeline: DOM ──capture()──▶ { tag, attrs, style, children } ──toHTML()/toJSX()──▶ text
- *
- * Styles come from getComputedStyle and are diffed against a plain <div>, not the
- * tag's browser defaults, so the copy stays exact even where a CSS reset
- * (Tailwind preflight, normalize…) changes those defaults.
+ * Code pipeline: DOM ──capture()──▶ { tag, attrs, style | classes, children } ──toHTML()/toJSX()──▶ text
+ *   "css" mode (JSX/HTML): computed styles diffed against a plain <div> and the tag's
+ *          own default, so the copy stays exact with or without a CSS reset.
+ *   "tw"  mode (TSX): computed styles diffed against Tailwind's preflight and converted
+ *          to classes that mean the same in the target project (tailwind.js); shadcn
+ *          components found by data-slot (shadcn-data.js).
  */
 ;(() => {
   "use strict"
@@ -17,11 +20,13 @@
     return
   }
 
-  const FORMATS = ["tsx", "jsx", "html", "svg"]
-  const DOWNLOADS = ["tsx", "jsx", "html", "svg", "png"]
+  // Two tabs, three formats each.
+  const TABS = { code: ["tsx", "html", "svg"], image: ["png", "jpg", "svg"] }
   const MAX_NODES = 4000
   const SVG_NS = "http://www.w3.org/2000/svg"
   const XHTML_NS = "http://www.w3.org/1999/xhtml"
+  const UI_IMPORT = "@/components/ui"
+  const UTILS_IMPORT = "@/lib/utils"
 
   /* ------------------------------------------------------------------ */
   /* Style capture                                                       */
@@ -107,8 +112,9 @@
         "opacity:0!important;pointer-events:none!important;left:-9999px!important;"
       document.documentElement.appendChild(frame)
       const doc = frame.contentDocument
+      const css = mode === "tw" ? globalThis.__copycodeTW?.preflight || "" : ""
       doc.open()
-      doc.write(`<!doctype html><html><head></head><body><svg></svg></body></html>`)
+      doc.write(`<!doctype html><html><head><style>${css}</style></head><body><svg></svg></body></html>`)
       doc.close()
       sandboxes[mode] = frame
     }
@@ -166,26 +172,43 @@
       if (!v) continue
       // Skip a value only when it's what the element gets anyway, with or without a reset:
       // the same as a plain <div> *and* the same as the tag's own browser default.
+      // (TSX targets a Tailwind project, so there the defaults are preflight's.)
       const tagSetsIt = own[p] !== base[p] // e.g. h1 margin/font-size, button border, a color
       if (isInherited(p)) {
         if (isRoot) {
-          if (!ROOT_FORCE.has(p) && base[p] === v && !tagSetsIt) continue
+          if (!(mode === "css" && ROOT_FORCE.has(p)) && base[p] === v && !tagSetsIt) continue
         } else if (parentCS && parentCS.getPropertyValue(p) === v && !tagSetsIt) continue
       } else if (p === "display") {
-        if (!ALWAYS_DISPLAY.has(defaultTag) && own[p] === v) continue
-      } else if (base[p] === v && own[p] === v) continue
+        if ((mode === "tw" || !ALWAYS_DISPLAY.has(defaultTag)) && own[p] === v) continue
+      } else if (mode === "tw" ? own[p] === v : base[p] === v && own[p] === v) continue
       out[p] = v
     }
-    if (ALWAYS_FORM.has(defaultTag)) for (const p of FORM_PROPS) out[p] = cs.getPropertyValue(p)
+    if (mode === "css" && ALWAYS_FORM.has(defaultTag)) for (const p of FORM_PROPS) out[p] = cs.getPropertyValue(p)
     const def = own
     if (out.display && parentCS && /flex|grid/.test(parentCS.display) && out.display === blockify(def.display)) {
       delete out.display
     }
-    prune(out, cs, isRoot, own)
+    prune(out, cs, isRoot, own, mode)
     return out
   }
 
-  function prune(s, cs, isRoot, own = {}) {
+  // next/font hashes family names (__Inter_d65c78, __Inter_Fallback_d65c78); those don't
+  // exist anywhere else. Restore the real names and drop the generated fallbacks.
+  const GENERIC_FONTS = /^(serif|sans-serif|monospace|cursive|fantasy|system-ui|ui-sans-serif|ui-serif|ui-monospace|ui-rounded|math|emoji|fangsong)$/i
+  function cleanFontFamily(v) {
+    const out = []
+    for (const part of v.split(/,(?=(?:[^"']*["'][^"']*["'])*[^"']*$)/)) {
+      const bare = part.trim().replace(/^['"]|['"]$/g, "")
+      if (!bare || /^__.+_Fallback_[0-9a-f]{5,}$/i.test(bare)) continue
+      const m = /^__(.+?)_[0-9a-f]{5,}$/i.exec(bare)
+      const name = m ? m[1].replace(/_/g, " ") : bare
+      if (!out.some((x) => x.toLowerCase() === name.toLowerCase())) out.push(name)
+    }
+    return out.map((n) => (GENERIC_FONTS.test(n) || /^-?[a-zA-Z][\w-]*$/.test(n) ? n : `"${n}"`)).join(", ")
+  }
+
+  function prune(s, cs, isRoot, own = {}, mode = "css") {
+    if (s["font-family"]) s["font-family"] = cleanFontFamily(s["font-family"])
     const color = cs.getPropertyValue("color")
     for (const p of Object.keys(s)) {
       if (p.endsWith("-color") && p !== "color" && p !== "background-color" && s[p] === color) delete s[p]
@@ -198,12 +221,13 @@
       if (style === "none" || style === "hidden" || width === "0px") {
         delete s[`border-${side}-color`]
         // The tag has a border of its own (button, input, hr, fieldset…): say it's gone.
-        if (own[`border-${side}-style`] && own[`border-${side}-style`] !== "none") {
+        if (own[`border-${side}-style`] && own[`border-${side}-style`] !== "none" && parseFloat(own[`border-${side}-width`]) > 0) {
           s[`border-${side}-width`] = "0px"
           s[`border-${side}-style`] = "none"
         } else {
           delete s[`border-${side}-width`]
-          if (width === "0px" && style !== "none") delete s[`border-${side}-style`]
+          // Under Tailwind's preflight (0 solid) a zero-width border needs no style at all.
+          if (width === "0px" && (mode === "tw" || style !== "none")) delete s[`border-${side}-style`]
         }
       }
     }
@@ -251,7 +275,7 @@
 
   const REPLACED = new Set(["img", "video", "canvas", "iframe", "input", "textarea", "select", "svg", "picture", "embed", "object", "progress", "meter"])
 
-  function sizeStyles(el, cs, parentEl, parentCS, isRoot, hasContent, textOnly) {
+  function sizeStyles(el, cs, parentEl, parentCS, isRoot, hasContent, textOnly, mode = "css") {
     const out = {}
     const display = cs.display
     if (display === "inline" || display === "contents") return out
@@ -271,15 +295,16 @@
       out.height = h
       return out
     }
+    const fills = () => parentEl && fillsParent(el, cs, parentEl, parentCS)
     if (!hasContent) {
       // Empty boxes (dividers, dots, spacers): keep what CSS gives them.
-      if (isRoot || isExplicit(el, "width")) out.width = w
+      if ((isRoot && mode === "css") || isExplicit(el, "width")) out.width = fills() ? "100%" : w
       if (isExplicit(el, "height")) out.height = h
       return out
     }
     if (isExplicit(el, "height")) out.height = h // buttons, bars, fixed panels
-    if (isRoot) {
-      out.width = w
+    if (isRoot && mode === "css") {
+      out.width = w // a snapshot: keep the copied width
       return out
     }
 
@@ -335,7 +360,7 @@
           return alpha >= 1 ? base : base + hex2(alpha * 255)
         }
       )
-      .replace(/(-?\d+\.\d{3,})(px|em|rem|deg|s)\b/g, (_, n, u) => `${+parseFloat(n).toFixed(2)}${u}`)
+      .replace(/(-?\d+\.\d{3,})(px|deg|s)\b/g, (_, n, u) => `${+parseFloat(n).toFixed(2)}${u}`)
   }
 
   const cleanStyle = (style) => {
@@ -417,6 +442,243 @@
   }
 
   /* ------------------------------------------------------------------ */
+  /* TSX: shadcn/ui components, Next.js, the site's own Tailwind classes  */
+  /* ------------------------------------------------------------------ */
+
+  const TEXT_INPUTS = new Set(["text", "email", "password", "search", "url", "tel", "number", "date", "time", "datetime-local", "month", "week"])
+  const SIDES4 = ["top", "right", "bottom", "left"]
+  const BOX_PIN = [
+    ...SIDES4.map((d) => `padding-${d}`),
+    ...SIDES4.map((d) => `border-${d}-width`),
+    ...["top-left", "top-right", "bottom-right", "bottom-left"].map((c) => `border-${c}-radius`),
+  ]
+  const TEXT_PIN = ["color", "font-size", "font-weight", "line-height", "font-family", "letter-spacing", "text-align"]
+  const LAYOUT_PIN = ["display", "flex-shrink", "align-items", "justify-content", "column-gap", "white-space-collapse", "text-wrap-mode", "outline-style"]
+
+  // Plain elements mapped to shadcn components. Their look is pinned (written out)
+  // so the classes win over the component's own defaults through cn()/tailwind-merge.
+  const COMPONENTS = {
+    Button: { file: "button", pin: [...TEXT_PIN, ...LAYOUT_PIN, "background-color", "background-clip", "height", "width", ...BOX_PIN] },
+    Input: { file: "input", pin: [...TEXT_PIN, "background-color", "height", "width", "min-width", "outline-style", ...BOX_PIN] },
+    Textarea: { file: "textarea", pin: [...TEXT_PIN, "background-color", "height", "width", "outline-style", ...BOX_PIN] },
+    Label: { file: "label", pin: [...TEXT_PIN, "display", "align-items", "column-gap"] },
+    Separator: { file: "separator", pin: [] },
+  }
+
+  function componentFor(tag, el) {
+    if (tag === "button") return "Button"
+    if (tag === "input" && TEXT_INPUTS.has((el.getAttribute("type") || "text").toLowerCase())) return "Input"
+    if (tag === "textarea") return "Textarea"
+    if (tag === "label") return "Label"
+    if (tag === "hr") return "Separator"
+    return null
+  }
+
+  function buttonVariant(classes, cs) {
+    const has = (c) => classes.includes(c)
+    const drop = (...list) => list.forEach((c) => {
+      const i = classes.indexOf(c)
+      if (i >= 0) classes.splice(i, 1)
+    })
+    const transparent = /rgba\(0, 0, 0, 0\)|transparent/.test(cs.backgroundColor)
+    const bordered = SIDES4.some((d) => parseFloat(cs.getPropertyValue(`border-${d}-width`)) > 0)
+    if (has("bg-secondary")) {
+      drop("bg-secondary", "text-secondary-foreground")
+      return "secondary"
+    }
+    if (classes.some((c) => c.startsWith("bg-destructive"))) return "destructive"
+    if (transparent && bordered) return "outline"
+    if (transparent) {
+      drop("bg-transparent")
+      return /underline/.test(cs.textDecorationLine) ? "link" : "ghost"
+    }
+    drop("bg-primary", "text-primary-foreground")
+    return null
+  }
+
+  const UI = () => globalThis.__copycodeUI || { slots: {}, cva: {} }
+
+  // shadcn marks every component part with data-slot (card, card-header, button…).
+  function slotComponent(el) {
+    const slot = el.getAttribute("data-slot")
+    const info = slot && UI().slots[slot]
+    if (!info) return null
+    return { slot, ...info, tokenSet: new Set(info.tokens) }
+  }
+
+  // Same version as this project's component? (≥ 85% of the classes it always applies.)
+  // Otherwise it's copied as plain, exact elements.
+  function sameVersion(slot, classList, ctx) {
+    const have = new Set(classList)
+    const fraction = (alternatives) =>
+      Math.max(0, ...alternatives.map((b) => {
+        const toks = b.filter((t) => ctx.page.looksUtility(t))
+        return toks.length ? toks.filter((t) => have.has(t)).length / toks.length : 1
+      }))
+    if (fraction(slot.bases || [[]]) < 0.85) return false
+    const def = slot.cva && UI().cva[slot.cva]
+    return !def || fraction(def.bases || [def.base]) >= 0.85
+  }
+
+  // cva variants (variant, size…) whose classes are all on the element.
+  function detectVariants(comp, el, classSet) {
+    const props = {}
+    const def = comp.cva && UI().cva[comp.cva]
+    for (const key of ["variant", "size"]) {
+      const v = el.getAttribute(`data-${key}`)
+      if (v && (!def || def.variants[key]?.[v])) props[key] = v
+    }
+    if (def) {
+      for (const [group, opts] of Object.entries(def.variants)) {
+        if (props[group]) continue
+        let best = null, bestScore = 0
+        for (const [opt, alternatives] of Object.entries(opts)) {
+          for (const toks of alternatives) {
+            if (!toks.length) continue
+            const hit = toks.filter((t) => classSet.has(t)).length
+            const score = hit === toks.length ? 1000 + toks.length : hit / toks.length
+            if (score > bestScore) {
+              best = opt
+              bestScore = score
+            }
+          }
+        }
+        if (best && bestScore >= 0.6) props[group] = best
+      }
+      for (const [k, v] of Object.entries(props)) if (def.defaults?.[k] === v) delete props[k]
+    } else {
+      for (const [k, v] of Object.entries(props)) if (v === "default") delete props[k]
+    }
+    return props
+  }
+
+  // Props a component needs that the DOM only shows as state.
+  function stateProps(comp, el) {
+    const out = []
+    const checked = el.getAttribute("aria-checked") === "true" || el.hasAttribute("data-checked")
+    if (/^(checkbox|switch|radio-group-item|toggle)$/.test(comp.slot) && checked) out.push(comp.slot === "toggle" ? "defaultPressed" : "defaultChecked")
+    if (comp.slot === "progress") {
+      const v = el.getAttribute("aria-valuenow") || el.querySelector("[aria-valuenow]")?.getAttribute("aria-valuenow")
+      if (v) out.push(`value={${Math.round(+v)}}`)
+    }
+    if (el.getAttribute("data-orientation") === "vertical" || el.hasAttribute("data-vertical")) out.push('orientation="vertical"')
+    if (el.hasAttribute("disabled") || el.getAttribute("aria-disabled") === "true" || el.hasAttribute("data-disabled")) out.push("disabled")
+    return out
+  }
+
+  // Site classes computed CSS can't hold: state/responsive variants, transitions,
+  // group/peer markers. Kept when they behave the same in this project,
+  // otherwise rewritten with the site's real values.
+  const BEHAVIOR = /^-?(transition|duration|ease|delay|animate|cursor|select|touch|will|scroll|snap)(-|$)/
+  function siteExtras(classList, existing, ctx, cs) {
+    if (!ctx.page.isTailwind) return []
+    const have = new Set(existing)
+    const out = []
+    for (const t of classList) {
+      if (have.has(t) || /(^|:)(before|after):/.test(t)) continue
+      const variant = ctx.page.isVariant(t)
+      if (!/^(group|peer)(\/[\w-]+)?$/.test(t) && !variant && !BEHAVIOR.test(t.split(":").pop())) continue
+      if (ctx.page.portable(t)) out.push(t)
+      else if (variant) out.push(...rewriteVariant(t, ctx, cs))
+    }
+    return [...new Set(out)].filter((t) => !have.has(t))
+  }
+
+  // hover:bg-gray-200 from a site whose gray-200 differs → hover:bg-[#e8e3d9]
+  function rewriteVariant(token, ctx, cs) {
+    const tr = ctx.page.translate(token)
+    if (!tr || !tr.decls.length) return []
+    const probe = (ctx.probe ||= (() => {
+      const d = document.createElement("div")
+      document.documentElement.appendChild(d)
+      return d
+    })())
+    const style = {}
+    for (const { prop, value } of tr.decls) {
+      if (prop.startsWith("--") || /var\(--tw-/.test(value)) return []
+      probe.removeAttribute("style")
+      probe.style.setProperty(prop, value)
+      probe.style.setProperty("display", "none", "important")
+      const pcs = getComputedStyle(probe)
+      for (const lp of longhands(prop)) {
+        const v = pcs.getPropertyValue(lp)
+        if (v) style[lp] = v
+      }
+    }
+    return ctx.tw.convert(cleanStyle(style), cs).map((c) => `${tr.variants.join(":")}:${c}`)
+  }
+
+  const SIDES_OF = (p) => SIDES4.map((d) => p.replace("%", d))
+  const LONGHANDS = {
+    padding: SIDES_OF("padding-%"), margin: SIDES_OF("margin-%"), inset: SIDES4,
+    "padding-inline": ["padding-left", "padding-right"], "padding-block": ["padding-top", "padding-bottom"],
+    "margin-inline": ["margin-left", "margin-right"], "margin-block": ["margin-top", "margin-bottom"],
+    "padding-inline-start": ["padding-left"], "padding-inline-end": ["padding-right"],
+    "margin-inline-start": ["margin-left"], "margin-inline-end": ["margin-right"],
+    "inset-inline": ["left", "right"], "inset-block": ["top", "bottom"],
+    "border-width": SIDES_OF("border-%-width"), "border-style": SIDES_OF("border-%-style"), "border-color": SIDES_OF("border-%-color"),
+    border: [...SIDES_OF("border-%-width"), ...SIDES_OF("border-%-style"), ...SIDES_OF("border-%-color")],
+    "border-radius": ["border-top-left-radius", "border-top-right-radius", "border-bottom-right-radius", "border-bottom-left-radius"],
+    gap: ["row-gap", "column-gap"], overflow: ["overflow-x", "overflow-y"], size: ["width", "height"],
+    "inline-size": ["width"], "block-size": ["height"], background: ["background-color", "background-image"],
+    font: ["font-size", "font-weight", "font-family", "line-height", "font-style"], flex: ["flex-grow", "flex-shrink", "flex-basis"],
+    "text-decoration": ["text-decoration-line", "text-decoration-color", "text-decoration-style"],
+    outline: ["outline-width", "outline-style", "outline-color"],
+  }
+  const longhands = (p) => {
+    if (LONGHANDS[p]) return LONGHANDS[p]
+    for (const side of SIDES4) if (p === `border-${side}`) return [`border-${side}-width`, `border-${side}-style`, `border-${side}-color`]
+    return [p]
+  }
+
+  // Tailwind's preflight makes everything border-box. Convert explicit sizes of
+  // content-box elements so they render the same, and drop the box-sizing.
+  function toBorderBox(style, cs) {
+    if (cs.boxSizing !== "content-box") return
+    delete style["box-sizing"]
+    const extra = (a, b) =>
+      ["padding", "border"].reduce((sum, k) => {
+        const suffix = k === "border" ? "-width" : ""
+        return sum + parseFloat(cs.getPropertyValue(`${k}-${a}${suffix}`)) + parseFloat(cs.getPropertyValue(`${k}-${b}${suffix}`))
+      }, 0)
+    const dx = extra("left", "right"), dy = extra("top", "bottom")
+    for (const [prop, d] of [["width", dx], ["min-width", dx], ["max-width", dx], ["height", dy], ["min-height", dy], ["max-height", dy]]) {
+      const m = /^([\d.]+)px$/.exec(style[prop] || "")
+      if (m && d) style[prop] = `${Math.round((+m[1] + d) * 100) / 100}px`
+    }
+  }
+
+  // Values that shift with width but mean the same: equal grid tracks → repeat(n, 1fr),
+  // letter-spacing → em (Tailwind's tracking is relative to the font size).
+  function twNormalize(style, cs) {
+    const g = style["grid-template-columns"]
+    if (g && g !== "none") {
+      const tracks = g.split(/\s+(?![^(]*\))/).map((t) => parseFloat(t))
+      if (tracks.length && tracks.every((t) => !Number.isNaN(t) && Math.abs(t - tracks[0]) <= 1) && /^[\d.\s px]+$/.test(g)) {
+        style["grid-template-columns"] = `repeat(${tracks.length}, minmax(0, 1fr))`
+      }
+    }
+    const ls = /^(-?[\d.]+)px$/.exec(style["letter-spacing"] || "")
+    if (ls) style["letter-spacing"] = `${Math.round((+ls[1] / parseFloat(cs.fontSize)) * 1000) / 1000}em`
+  }
+
+  // An icon the component renders itself (SelectTrigger's chevron), or a wrapper around one.
+  function isInternalIcon(node, icons) {
+    if (node.type !== "el") return false
+    if (node.lucide && icons.includes(node.lucide)) return true
+    const els = node.children.filter((c) => c.type === "el")
+    const text = node.children.some((c) => c.type === "text" && c.text.trim())
+    return !text && els.length === 1 && isInternalIcon(els[0], icons)
+  }
+
+  // import specifier → Set of names ("default:Link" for default imports)
+  const addImport = (ctx, from, name) => {
+    if (!ctx.imports.has(from)) ctx.imports.set(from, new Set())
+    ctx.imports.get(from).add(name)
+  }
+  const pascal = (s) => s.replace(/(^|-)([a-z0-9])/g, (_, __, c) => c.toUpperCase())
+
+  /* ------------------------------------------------------------------ */
   /* DOM → neutral tree                                                  */
   /* ------------------------------------------------------------------ */
 
@@ -430,6 +692,17 @@
     "method", "autocomplete", "inputmode", "loading", "decoding", "allow",
     ...BOOL_ATTRS,
   ])
+
+  // Image optimizer URLs (/_next/image?url=…&w=48&q=75, /_vercel/image?url=…) → the original image.
+  function unwrapImage(url) {
+    try {
+      const u = new URL(url, document.baseURI)
+      const inner = /\/_(next|vercel)\/image\/?$/.test(u.pathname) && u.searchParams.get("url")
+      return inner ? new URL(inner, u.origin).href : u.href
+    } catch {
+      return url
+    }
+  }
 
   const absolutize = (url) => {
     try {
@@ -459,8 +732,6 @@
     return /^[A-Z][A-Za-z0-9]*$/.test(pascal) && pascal.length <= 40 ? pascal : SEMANTIC_NAMES[el.localName] || "CopiedBlock"
   }
 
-  const kebab = (name) => name.replace(/([a-z0-9])([A-Z])/g, "$1-$2").toLowerCase()
-
   function placeholderDefaults(tag) {
     const key = `placeholder:${tag}`
     if (defaultsCache.has(key)) return defaultsCache.get(key)
@@ -482,6 +753,12 @@
       css: [], // rules that can't be inline (::placeholder)
       count: 0,
       truncated: false,
+      imports: new Map(),
+      skipSlots: new Set(), // parts a component renders itself
+      imageHosts: new Set(), // next/image remote hosts
+      stats: { components: 0 },
+      tw: mode === "tw" ? globalThis.__copycodeTailwind.createConverter() : null,
+      page: mode === "tw" ? globalThis.__copycodeTailwind.readPageClasses() : null,
       // ids that something inside the block points at (label for=, aria-labelledby…)
       referencedIds: new Set(
         [rootEl, ...rootEl.querySelectorAll("[for],[aria-labelledby],[aria-describedby],[aria-controls]")].flatMap((e) =>
@@ -491,10 +768,15 @@
     }
     const parentEl = rootEl.parentElement
     const parentCS = parentEl ? getComputedStyle(parentEl) : null
-    const tree =
-      rootEl instanceof SVGElement && rootEl.localName === "svg"
-        ? captureSvg(rootEl, parentCS, true, ctx)
-        : captureEl(rootEl, parentEl, parentCS, true, ctx)
+    let tree
+    try {
+      tree =
+        rootEl instanceof SVGElement && rootEl.localName === "svg"
+          ? captureSvg(rootEl, parentCS, true, ctx)
+          : captureEl(rootEl, parentEl, parentCS, true, ctx)
+    } finally {
+      ctx.probe?.remove()
+    }
     if (tree && ctx.css.length && !VOID.has(tree.tag) && !tree.svg) {
       tree.children.unshift({ type: "el", tag: "style", attrs: {}, style: {}, svg: false, children: [{ type: "text", text: ctx.css.join("\n"), pre: true }] })
     }
@@ -511,8 +793,11 @@
   }
 
   // Turn a collected style map into the node's final representation.
-  function finishStyle(node, style) {
-    node.style = cleanStyle(style)
+  function finishStyle(node, style, cs, ctx) {
+    if (ctx?.mode === "tw") {
+      node.classes = ctx.tw.convert(cleanStyle(style), cs, { hints: ctx.hints })
+      node.style = {}
+    } else node.style = cleanStyle(style)
     return node
   }
 
@@ -533,6 +818,7 @@
     if (cs.display === "none") return null
     // Visually-hidden form inputs that headless UI libraries render next to their controls.
     if (tag === "input" && el.getAttribute("aria-hidden") === "true") return null
+    if (ctx.skipSlots.size && ctx.skipSlots.has(el.getAttribute("data-slot"))) return null
 
     // <picture> → its rendered <img>
     if (tag === "picture") {
@@ -559,7 +845,7 @@
       let src = el.currentSrc || el.src
       const lazy = el.getAttribute("data-src") || el.getAttribute("data-lazy-src")
       if (lazy && (!src || src.startsWith("data:image/gif") || src.startsWith("data:image/svg"))) src = lazy
-      if (src) attrs.src = absolutize(src)
+      if (src) attrs.src = absolutize(unwrapImage(src))
       if (!("alt" in attrs)) attrs.alt = ""
       delete attrs.loading
     }
@@ -600,17 +886,37 @@
         // color/opacity always: resets restyle placeholders (Tailwind mixes them to 50% currentColor)
         .filter((p) => p === "color" || p === "opacity" || ph.getPropertyValue(p) !== def[p])
         .map((p) => `${p}: ${cleanValue(ph.getPropertyValue(p))}`)
-      if (rules.length) {
+      if (rules.length && ctx.mode === "tw") {
+        const map = {}
+        for (const p of ["color", "opacity", "font-style", "font-weight", "letter-spacing", "text-transform"]) {
+          if (p === "color" || ph.getPropertyValue(p) !== def[p]) map[p] = ph.getPropertyValue(p)
+        }
+        if (map.opacity === "1") delete map.opacity
+        ctx.placeholderClasses = ctx.tw.convert(cleanStyle(map), ph).map((c) => `placeholder:${c}`)
+      } else if (rules.length) {
         const id = String(ctx.css.length + 1)
         attrs["data-placeholder"] = id
         ctx.css.push(`[data-placeholder="${id}"]::placeholder { ${rules.join("; ")} }`)
       }
     }
 
+    // TSX: a shadcn component (data-slot, same version as this project's), a plain
+    // button/input/… mapped to one, or plain elements — all with exact classes.
+    const tw = ctx.mode === "tw"
+    const classList = Array.from(el.classList)
+    ctx.hints = new Set(classList.map((t) => t.split(":").pop()))
+    let slot = tw ? slotComponent(el) : null
+    if (slot && !sameVersion(slot, classList, ctx)) slot = null
+    const component = slot ? slot.name : tw ? componentFor(tag, el) : null
     const style = diffStyles(cs, parentCS, isRoot, tag, ctx.mode)
+    const pseudoInClasses = slot && slot.tokens.some((t) => /(^|:)(before|after):/.test(t))
+    const placeholderClasses = ctx.placeholderClasses
+    ctx.placeholderClasses = null
 
+    const savedSkip = ctx.skipSlots
+    if (slot?.internal.length) ctx.skipSlots = new Set([...savedSkip, ...slot.internal])
     if (tag !== "textarea") {
-      const before = capturePseudo(el, "::before", cs, ctx)
+      const before = pseudoInClasses ? null : capturePseudo(el, "::before", cs, ctx)
       if (before) children.push(before)
       const pre = /pre|break-spaces/.test(cs.whiteSpace)
       for (const node of childNodesOf(el)) {
@@ -623,18 +929,284 @@
           if (child) children.push(child)
         }
       }
-      const after = capturePseudo(el, "::after", cs, ctx)
+      const after = pseudoInClasses ? null : capturePseudo(el, "::after", cs, ctx)
       if (after) children.push(after)
     }
+    ctx.skipSlots = savedSkip
+    if (slot?.icons.length) children = children.filter((c) => !isInternalIcon(c, slot.icons))
 
     const hasText = children.some((c) => c.type === "text" && c.text.trim())
     const hasEls = children.some((c) => c.type === "el")
-    Object.assign(style, sizeStyles(el, cs, parentEl, parentCS, isRoot, hasText || hasEls, hasText && !hasEls))
+    Object.assign(style, sizeStyles(el, cs, parentEl, parentCS, isRoot, hasText || hasEls, hasText && !hasEls, ctx.mode))
+    if (tw) twNormalize(style, cs)
     // A reset may switch box-sizing; whenever a size is written, say which box it measures.
-    if (style.width || style.height || style["min-height"] || style["max-width"]) style["box-sizing"] = cs.boxSizing
+    if (!tw && (style.width || style.height || style["min-height"] || style["max-width"])) style["box-sizing"] = cs.boxSizing
+
+    const heuristic = component && !slot
+    if (heuristic) {
+      if (component === "Separator") for (const k of Object.keys(style)) if (!k.startsWith("margin-")) delete style[k]
+      for (const p of COMPONENTS[component].pin) style[p] = cs.getPropertyValue(p)
+    }
+    if (tw) toBorderBox(style, cs)
 
     const node = { type: "el", tag, attrs, children, svg: false, inline: cs.display.startsWith("inline"), flow: /flex|grid/.test(cs.display) }
-    return finishStyle(node, style)
+    if (slot) {
+      // The component draws itself. Keep the site's extra classes that mean the same here;
+      // replace the others (and inline styles) with exact computed values.
+      const extra = []
+      const replace = new Set()
+      for (const t of classList) {
+        if (slot.tokenSet.has(t) || /(^|:)(before|after):/.test(t)) continue
+        if (ctx.page.isTailwind && ctx.page.portable(t)) extra.push(t)
+        else if (!ctx.page.isVariant(t)) ctx.page.propertiesOf(t).forEach((p) => replace.add(p))
+      }
+      for (let i = 0; i < el.style.length; i++) replace.add(el.style[i])
+      const fix = {}
+      for (const p of replace) for (const lp of longhands(p)) fix[lp] = cs.getPropertyValue(lp)
+      node.classes = [...ctx.tw.convert(cleanStyle(fix), cs), ...extra]
+      node.style = {}
+    } else {
+      finishStyle(node, style, cs, ctx)
+      if (tw) {
+        node._extras = siteExtras(classList, node.classes, ctx, cs)
+        node.classes.push(...node._extras)
+        // For the responsive pass: this element's style here, and how to find it again.
+        if (!heuristic) node._resp = { path: domPath(el), style: cleanStyle(style), cs, isRoot, tag: el.localName, hasContent: hasText || hasEls, textOnly: hasText && !hasEls, hints: ctx.hints }
+      }
+    }
+    if (placeholderClasses) {
+      node._ph = placeholderClasses.filter((c) => !node.classes.includes(c))
+      node.classes.push(...node._ph)
+    }
+
+    if (slot) {
+      node.component = slot.name
+      node.props = [...Object.entries(detectVariants(slot, el, new Set(classList))).map(([k, v]) => `${k}="${v}"`), ...stateProps(slot, el)]
+      for (const k of Object.keys(node.attrs)) {
+        if (k === "role" || k === "tabindex" || (k.startsWith("aria-") && k !== "aria-label") || k === "disabled") delete node.attrs[k]
+      }
+      if (node.attrs.type === "button") delete node.attrs.type
+      // base-ui keeps the form id on a hidden <input> next to the control; put it on the component.
+      const hidden = [el.nextElementSibling, el.querySelector("input")].find((x) => x?.localName === "input" && x.getAttribute("aria-hidden") === "true" && x.id)
+      if (!node.attrs.id && hidden && ctx.referencedIds.has(hidden.id)) node.attrs.id = hidden.id
+      if (tag === "a" && node.attrs.href) {
+        // base-ui: render the component as a Next.js link
+        node.props.push(`render={<Link href=${jsxString(linkHref(node.attrs.href))} />}`)
+        if (slot.name === "Button") node.props.push("nativeButton={false}")
+        addImport(ctx, "next/link", "default:Link")
+        delete node.attrs.href
+      }
+      addImport(ctx, `${UI_IMPORT}/${slot.file}`, slot.name)
+      ctx.stats.components++
+    } else if (component) {
+      node.component = component
+      addImport(ctx, `${UI_IMPORT}/${COMPONENTS[component].file}`, component)
+      ctx.stats.components++
+      if (component === "Button") {
+        const variant = buttonVariant(node.classes, cs)
+        if (variant) node.attrs = { variant, ...node.attrs }
+      }
+      if (component === "Separator") node.children = []
+      if (component === "Input" || component === "Textarea") {
+        // shadcn inputs shrink their text at md: (`md:text-sm`); pin ours there too.
+        const size = node.classes.find((c) => /^text-(xs|sm|base|lg|\d?xl|\[[\d.]+px\])(\/|$)/.test(c))
+        if (size) node.classes.push(`md:${size}`)
+      }
+    } else if (tw && tag === "a" && node.attrs.href) {
+      node.component = "Link"
+      node.attrs.href = linkHref(node.attrs.href)
+      addImport(ctx, "next/link", "default:Link")
+    } else if (tw && tag === "img" && node.attrs.src && !node.attrs.src.startsWith("data:")) {
+      // next/image needs the intrinsic size; use the rendered one.
+      const r = el.getBoundingClientRect()
+      node.component = "Image"
+      node.props = [`width={${Math.round(r.width) || el.naturalWidth || 1}}`, `height={${Math.round(r.height) || el.naturalHeight || 1}}`]
+      delete node.attrs.width
+      delete node.attrs.height
+      // The image lives on the copied site, not in your app: keep its absolute URL, and mark it
+      // unoptimized so it works without images.remotePatterns / localPatterns config.
+      try {
+        ctx.imageHosts.add(new URL(node.attrs.src).hostname)
+      } catch {
+        /* not a URL */
+      }
+      node.props.push("unoptimized")
+      addImport(ctx, "next/image", "default:Image")
+    }
+    return node
+  }
+
+  // Element-child indices from <html> down to el (to find the same element in another copy of the page).
+  function domPath(el) {
+    const path = []
+    for (let e = el; e && e.parentElement; e = e.parentElement) path.unshift([...e.parentElement.children].indexOf(e))
+    return path
+  }
+  function byPath(doc, path) {
+    let e = doc.documentElement
+    for (const i of path) {
+      e = e?.children[i]
+      if (!e) return null
+    }
+    return e
+  }
+
+  /* ---------------------- responsive (TSX) ---------------------- */
+  // The page is loaded again in hidden iframes at the project's breakpoint widths.
+  // Each element's real computed style there becomes the base (mobile) classes and
+  // sm:/md:/lg:… overrides — the site's actual responsive behaviour, from any CSS.
+
+  const BREAKPOINTS = ["sm", "md", "lg", "xl", "2xl"]
+  const MOBILE_WIDTH = 375
+  const SIZE_DEFAULT = { width: "auto", height: "auto", "min-width": "auto", "min-height": "auto", "max-width": "none", "max-height": "none" }
+
+  function breakpointWidths() {
+    const t = globalThis.__copycodeTailwind.target()
+    return BREAKPOINTS.map((name) => ({ name, width: parseFloat(t.resolve("width", `var(--breakpoint-${name})`)) || 0 })).filter((b) => b.width > 0)
+  }
+
+  // Widths where the site's own CSS changes (@media min-width / max-width), in px.
+  function siteBreakpoints() {
+    const rootPx = parseFloat(getComputedStyle(document.documentElement).fontSize) || 16
+    const out = new Set()
+    const toPx = (n, unit) => (unit === "px" ? +n : +n * rootPx)
+    const visit = (list) => {
+      for (const r of list) {
+        const c = r.conditionText || r.media?.mediaText || ""
+        for (const m of c.matchAll(/(?:min-width:\s*|width\s*>=\s*)([\d.]+)(px|rem|em)/g)) out.add(Math.round(toPx(m[1], m[2])))
+        for (const m of c.matchAll(/(?:width\s*>\s*)([\d.]+)(px|rem|em)/g)) out.add(Math.round(toPx(m[1], m[2]) + 1))
+        // desktop-first: (max-width: 767px) / (width < 768px) change at the next pixel
+        for (const m of c.matchAll(/(?:max-width:\s*)([\d.]+)(px|rem|em)/g)) out.add(Math.round(toPx(m[1], m[2]) + 1))
+        for (const m of c.matchAll(/(?:width\s*<\s*)([\d.]+)(px|rem|em)/g)) out.add(Math.round(toPx(m[1], m[2])))
+        if (r.cssRules) visit(r.cssRules)
+      }
+    }
+    for (const sheet of document.styleSheets) {
+      try {
+        visit(sheet.cssRules)
+      } catch {
+        /* cross-origin */
+      }
+    }
+    return [...out]
+  }
+
+  function loadFrame(width) {
+    return new Promise((resolve) => {
+      const frame = document.createElement("iframe")
+      frame.setAttribute("aria-hidden", "true")
+      frame.tabIndex = -1
+      frame.style.cssText = `position:fixed!important;left:-${width + 1000}px!important;top:0!important;width:${width}px!important;height:${innerHeight}px!important;border:0!important;opacity:0!important;pointer-events:none!important;`
+      let done = false
+      const finish = (ok) => {
+        if (done) return
+        done = true
+        clearTimeout(timer)
+        resolve(ok ? frame : (frame.remove(), null))
+      }
+      const timer = setTimeout(() => finish(false), 12000)
+      frame.addEventListener("load", async () => {
+        try {
+          const doc = frame.contentDocument
+          if (!doc || doc.location.href !== location.href) return finish(false) // blocked or redirected
+          await doc.fonts?.ready
+          await new Promise((r) => setTimeout(r, 400)) // let client-side rendering settle
+          finish(true)
+        } catch {
+          finish(false)
+        }
+      })
+      frame.src = location.href
+      document.documentElement.appendChild(frame)
+    })
+  }
+
+  async function applyResponsive(tree, ctx, onProgress) {
+    const nodes = []
+    const walk = (n) => {
+      if (n.type !== "el") return
+      if (n._resp) nodes.push(n)
+      n.children.forEach(walk)
+    }
+    walk(tree)
+    if (!nodes.length) return { breakpoints: [] }
+    // Where to look: the project's breakpoints (sm, md…) plus the site's own (as min-[…]).
+    const named = breakpointWidths()
+    const points = new Map(named.map((b) => [b.width, b.name]))
+    for (const w of siteBreakpoints()) {
+      if (w > MOBILE_WIDTH && w <= innerWidth && ![...points.keys()].some((k) => Math.abs(k - w) <= 1)) points.set(w, `min-[${w}px]`)
+    }
+    const bps = [...points.entries()].map(([width, name]) => ({ width, name })).sort((a, b) => a.width - b.width).filter((b) => b.width <= innerWidth)
+    const current = bps[bps.length - 1]
+    if (!current) return { breakpoints: [] } // already copying at mobile width
+    // Keep the number of page loads reasonable: the nearest 8 points below the current width.
+    const samples = [{ name: null, width: MOBILE_WIDTH }, ...bps.slice(0, -1).slice(-8)]
+    let loadedCount = 0
+    onProgress?.({ step: `Loading breakpoints 0/${samples.length}`, part: 0 })
+    const frames = await Promise.all(
+      samples.map((s) =>
+        loadFrame(s.width).then((f) => {
+          loadedCount++
+          onProgress?.({ step: `Loading breakpoints ${loadedCount}/${samples.length} · ${s.name || "mobile"}`, part: loadedCount / samples.length })
+          return f
+        })
+      )
+    )
+    onProgress?.({ step: "Measuring each breakpoint", part: 1 })
+    await nextFrame()
+    try {
+      const loaded = samples.map((s, i) => ({ ...s, frame: frames[i] })).filter((s) => s.frame)
+      if (!loaded.length) return { breakpoints: [], failed: true }
+      for (const node of nodes) {
+        const r = node._resp
+        // Style maps from narrow to wide; the live page is the widest.
+        const maps = []
+        for (const s of loaded) {
+          const el2 = byPath(s.frame.contentDocument, r.path)
+          if (!el2 || el2.localName !== r.tag) continue
+          const cs2 = s.frame.contentWindow.getComputedStyle(el2)
+          const p2 = el2.parentElement
+          const pcs2 = p2 ? s.frame.contentWindow.getComputedStyle(p2) : null
+          // Hidden at this width: keep its styling (shown later by sm:/md:…) and add display: none.
+          const style = diffStyles(cs2, pcs2, r.isRoot, r.tag, "tw")
+          if (cs2.display !== "none") Object.assign(style, sizeStyles(el2, cs2, p2, pcs2, r.isRoot, r.hasContent, r.textOnly, "tw"))
+          toBorderBox(style, cs2)
+          twNormalize(style, cs2)
+          maps.push({ name: s.name, style: cleanStyle(style), cs: cs2 })
+        }
+        if (!maps.length) continue
+        maps.push({ name: current.name, style: r.style, cs: r.cs })
+        const valueAt = (m, p) => m.style[p] ?? (p in SIZE_DEFAULT ? SIZE_DEFAULT[p] : cleanValue(m.cs.getPropertyValue(p)))
+        const hints = { hints: r.hints }
+        const classes = ctx.tw.convert(maps[0].style, maps[0].cs, hints)
+        const seen = new Set(Object.keys(maps[0].style))
+        for (let i = 1; i < maps.length; i++) {
+          const changed = {}
+          for (const p of Object.keys(maps[i].style)) seen.add(p)
+          for (const p of seen) {
+            const before = valueAt(maps[i - 1], p), now = valueAt(maps[i], p)
+            if (before !== now) changed[p] = now
+          }
+          if (Object.keys(changed).length) classes.push(...ctx.tw.convert(changed, maps[i].cs, hints).map((c) => `${maps[i].name}:${c}`))
+        }
+        // The site's own breakpoint classes are now covered; keep its state variants (hover:, focus:…).
+        const extras = (node._extras || []).filter((t) => !/(^|:)(sm|md|lg|xl|2xl|max-\w+|min-\[[^\]]+\]|max-\[[^\]]+\]):/.test(t))
+        node.classes = [...new Set([...classes, ...extras, ...(node._ph || [])])]
+      }
+      return { breakpoints: loaded.filter((s) => s.name).map((s) => s.name).concat(current.name) }
+    } finally {
+      frames.forEach((f) => f?.remove())
+    }
+  }
+
+  // Same-site links become app routes ("/pricing"); others stay absolute.
+  function linkHref(href) {
+    try {
+      const u = new URL(href, location.href)
+      return u.origin === location.origin ? u.pathname + u.search + u.hash : u.href
+    } catch {
+      return href
+    }
   }
 
   function capturePseudo(el, which, cs, ctx) {
@@ -657,7 +1229,8 @@
       svg: false,
       inline: ps.display.startsWith("inline"),
     }
-    return finishStyle(node, style)
+    if (ctx.mode === "tw") toBorderBox(style, ps)
+    return finishStyle(node, style, ps, ctx)
   }
 
   function captureSvg(el, parentCS, isRoot, ctx, extraDefs) {
@@ -743,7 +1316,23 @@
 
     const node = { type: "el", tag, attrs, children, svg: true, inline: !isSvgRoot || cs.display.startsWith("inline") }
 
-    return finishStyle(node, style)
+    // lucide icons → <ArrowRightIcon /> from lucide-react
+    const lucide = ctx.mode === "tw" && isSvgRoot && [...el.classList].find((c) => /^lucide-[a-z0-9-]+$/.test(c))
+    if (lucide) {
+      const name = `${pascal(lucide.slice(7))}Icon`
+      node.component = name
+      node.lucide = lucide
+      node.children = []
+      node.attrs = el.getAttribute("aria-label") ? { "aria-label": el.getAttribute("aria-label") } : {}
+      node.props = []
+      const sw = style["stroke-width"] || el.getAttribute("stroke-width")
+      if (sw && parseFloat(sw) !== 2) node.props.push(`strokeWidth={${parseFloat(sw)}}`)
+      delete style["stroke-width"]
+      delete style.fill
+      delete style.stroke
+      addImport(ctx, "lucide-react", name)
+    }
+    return finishStyle(node, style, cs, ctx)
   }
 
   /* ------------------------------------------------------------------ */
@@ -823,9 +1412,12 @@
       if (node.pre) return pad + "{`" + node.text.replace(/[`\\]/g, "\\$&").replace(/\$\{/g, "\\${") + "`}"
       return pad + escJSXText(node.text)
     }
-    const tag = node.tag
+    const tag = node.component || node.tag
     const parts = []
-    if (rootClass !== null) parts.push(rootClass)
+    const classes = (node.classes || []).join(" ")
+    if (rootClass !== null) parts.push(typeof rootClass === "function" ? rootClass(classes) : rootClass)
+    else if (classes) parts.push(`className=${jsxString(classes)}`)
+    if (node.props) parts.push(...node.props)
 
     const oneLine = inline || hasInlineText(node)
     const kids = visibleChildren(node, oneLine)
@@ -867,40 +1459,97 @@
     return `export default function ${name}(${props}) {\n  return (\n${body}\n  )\n}\n`
   }
 
-  function generate(el, format) {
-    const { tree, ctx } = capture(el, "css")
+  // Next.js + shadcn/ui + Tailwind component.
+  function toNextComponent(tree, name, ctx) {
+    let usesCn = false
+    const body = toJSX(tree, 2, false, (classes) => {
+      if (!classes) return "className={className}"
+      usesCn = true
+      return `className={cn(${JSON.stringify(classes)}, className)}`
+    })
+    const order = (from) => (from.startsWith("next/") ? 0 : from.startsWith(UI_IMPORT) ? 2 : 1)
+    const imports = [...ctx.imports.entries()]
+      .sort(([a], [b]) => order(a) - order(b) || a.localeCompare(b))
+      .map(([from, names]) => {
+        const list = [...names]
+        const def = list.find((n) => n.startsWith("default:"))?.slice(8)
+        const named = list.filter((n) => !n.startsWith("default:")).sort()
+        return `import ${[def, named.length ? `{ ${named.join(", ")} }` : ""].filter(Boolean).join(", ")} from "${from}"`
+      })
+    if (usesCn) imports.push(`import { cn } from "${UTILS_IMPORT}"`)
+    const fonts = new Set()
+    const findFonts = (n) => {
+      if (n.type !== "el") return
+      for (const c of n.classes || []) {
+        const m = /(?:^|:)font-\[family-name:([^\],]+)/.exec(c)
+        const name = m && m[1].replace(/['\\]/g, "").replace(/_/g, " ")
+        if (name && !GENERIC_FONTS.test(name) && !/^-apple-system|BlinkMacSystemFont$/i.test(name)) fonts.add(name)
+      }
+      n.children.forEach(findFonts)
+    }
+    findFonts(tree)
+    const notes =
+      (fonts.size ? `// Fonts: ${[...fonts].join(", ")} — load them in your app (e.g. next/font/google) so they render the same.\n` : "") +
+      (ctx.imageHosts.size
+        ? `// Images load from ${[...ctx.imageHosts].join(", ")}. To optimize them, add the host(s) to images.remotePatterns in next.config and remove \`unoptimized\` — or copy the files into /public.\n`
+        : "")
+    return `${notes}${imports.join("\n")}${imports.length ? "\n\n" : ""}export function ${name}({ className }: { className?: string }) {\n  return (\n${body}\n  )\n}\n`
+  }
+
+  // TSX with responsive classes (loads the page at other widths).
+  async function generateTSX(el, onProgress) {
+    const { tree, ctx } = capture(el, "tw")
     if (!tree) throw new Error("Nothing visible to copy here")
-    const name = componentName(el)
+    const responsive = await applyResponsive(tree, ctx, onProgress)
+    let name = componentName(el)
+    const imported = new Set([...ctx.imports.values()].flatMap((n) => [...n].map((x) => x.replace(/^default:/, ""))))
+    if (imported.has(name)) name = `Copied${name}`
+    return { code: toNextComponent(tree, name, ctx), name, nodes: Math.min(ctx.count, MAX_NODES), truncated: ctx.truncated, stats: ctx.stats, responsive }
+  }
+
+  function generate(el, format) {
+    const mode = format === "tsx" ? "tw" : "css"
+    const { tree, ctx } = capture(el, mode)
+    if (!tree) throw new Error("Nothing visible to copy here")
+    let name = componentName(el)
+    const imported = new Set([...ctx.imports.values()].flatMap((n) => [...n].map((x) => x.replace(/^default:/, ""))))
+    if (imported.has(name)) name = `Copied${name}`
     let code
     if (format === "html") code = toHTML(tree, 0, false) + "\n"
-    else code = toComponent(tree, name, format === "tsx")
-    return { code, name, nodes: Math.min(ctx.count, MAX_NODES), truncated: ctx.truncated }
+    else if (format === "jsx") code = toComponent(tree, name, false)
+    else code = toNextComponent(tree, name, ctx)
+    return { code, name, nodes: Math.min(ctx.count, MAX_NODES), truncated: ctx.truncated, stats: ctx.stats }
   }
 
   // Vector SVG for design tools (vector.js). Async: images are embedded.
-  async function generateSVG(el) {
-    const svg = await globalThis.__copycodeVector.toSVG(el, { exclude: host })
+  async function generateSVG(el, onProgress) {
+    const svg = await globalThis.__copycodeVector.toSVG(el, { exclude: host, onProgress })
     return { code: svg, name: componentName(el), nodes: el.querySelectorAll("*").length + 1, truncated: false }
   }
 
   /* ------------------------------------------------------------------ */
-  /* Clipboard, files, screenshots                                       */
+  /* Clipboard and screenshots                                           */
   /* ------------------------------------------------------------------ */
 
-  // SVG goes on the clipboard as text (Figma imports pasted SVG markup as layers)
-  // and as HTML for apps that read rich clipboard content. The promise keeps the
-  // click's user activation while images are being embedded.
-  async function copySVG(promise) {
-    const blob = (type) => promise.then(({ code }) => new Blob([code], { type }))
+  const supports = (type) => (typeof ClipboardItem.supports === "function" ? ClipboardItem.supports(type) : /^(text\/plain|text\/html|image\/png)$/.test(type))
+
+  // Write several representations at once; every app picks the one it reads
+  // (editors: text/plain, Paper: text/html, Figma: SVG markup, image apps: image/png).
+  // Promises inside the ClipboardItem keep the click's user activation while data is built.
+  async function writeClipboard(parts) {
+    const items = {}
+    for (const [type, promise] of Object.entries(parts)) if (promise && supports(type)) items[type] = promise
     try {
-      await navigator.clipboard.write([new ClipboardItem({ "text/plain": blob("text/plain"), "text/html": blob("text/html") })])
-      return await promise
+      await navigator.clipboard.write([new ClipboardItem(items)])
     } catch (err) {
-      const result = await promise
-      if (await copyText(result.code)) return result
-      throw err
+      // Some types may be refused: retry with the essentials only.
+      const essential = {}
+      for (const t of ["text/plain", "image/png"]) if (items[t]) essential[t] = items[t]
+      if (!Object.keys(essential).length || Object.keys(essential).length === Object.keys(items).length) throw err
+      await navigator.clipboard.write([new ClipboardItem(essential)])
     }
   }
+  const textBlob = (type, promise) => Promise.resolve(promise).then((t) => new Blob([t], { type }))
 
   async function copyText(text) {
     try {
@@ -918,20 +1567,9 @@
     }
   }
 
-  function saveBlob(blob, filename) {
-    const url = URL.createObjectURL(blob)
-    const a = document.createElement("a")
-    a.href = url
-    a.download = filename
-    // Inside our shadow root, so the picker's click interception ignores it.
-    shadow.appendChild(a)
-    a.click()
-    a.remove()
-    setTimeout(() => URL.revokeObjectURL(url), 30_000)
-  }
-
   const nextFrame = () => new Promise((r) => requestAnimationFrame(() => r()))
 
+  // The block as pixels: a screenshot of the tab, cropped. Returns a canvas.
   async function screenshot(el) {
     let rect = el.getBoundingClientRect()
     if (rect.top < 0 || rect.left < 0 || rect.bottom > innerHeight || rect.right > innerWidth) {
@@ -961,29 +1599,9 @@
     canvas.width = Math.round(w * scale)
     canvas.height = Math.round(h * scale)
     canvas.getContext("2d").drawImage(img, x * scale, y * scale, w * scale, h * scale, 0, 0, canvas.width, canvas.height)
-    const blob = await new Promise((r) => canvas.toBlob(r, "image/png"))
-    const cropped = rect.width > w + 1 || rect.height > h + 1
-    return { blob, cropped }
+    return { canvas, cropped: rect.width > w + 1 || rect.height > h + 1 }
   }
-
-  const htmlDocument = (code, name) =>
-    `<!doctype html>\n<html lang="en">\n<head>\n  <meta charset="utf-8" />\n  <meta name="viewport" content="width=device-width, initial-scale=1" />\n  <title>${name}</title>\n</head>\n<body style="margin: 0; padding: 24px">\n${code}</body>\n</html>\n`
-
-  async function download(el, fmt) {
-    const name = componentName(el)
-    const file = `${kebab(name)}.${fmt}`
-    if (fmt === "png") {
-      const { blob, cropped } = await screenshot(el)
-      saveBlob(blob, file)
-      return { file, detail: cropped ? "Cropped to the visible area" : `${Math.round(blob.size / 1024)} KB` }
-    }
-    const { code } = fmt === "svg" ? await generateSVG(el) : generate(el, fmt)
-    const body = fmt === "html" ? htmlDocument(code, name) : code
-    const type = { tsx: "text/plain", jsx: "text/plain", html: "text/html", svg: "image/svg+xml" }[fmt]
-    const blob = new Blob([body], { type: `${type};charset=utf-8` })
-    saveBlob(blob, file)
-    return { file, detail: `${(blob.size / 1024).toFixed(1)} KB` }
-  }
+  const canvasBlob = (canvas, type, quality) => new Promise((r) => canvas.toBlob(r, type, quality))
 
   /* ------------------------------------------------------------------ */
   /* Toolbar UI                                                          */
@@ -992,21 +1610,18 @@
   const ICON = {
     logo: `<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 7l-5 5 5 5"/><path d="M16 7l5 5-5 5"/><path d="M13.5 4l-3 16"/></svg>`,
     cursor: `<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l7 17 2.5-7.5L21 11z"/></svg>`,
-    download: `<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11"/><path d="M7 10l5 5 5-5"/><path d="M5 20h14"/></svg>`,
-    chevron: `<svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>`,
+    code: `<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 7l-5 5 5 5"/><path d="M16 7l5 5-5 5"/></svg>`,
+    image: `<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="1.6"/><path d="M21 16l-5-5-9 9"/></svg>`,
     close: `<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>`,
     check: `<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>`,
+    spinner: `<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M12 3a9 9 0 1 0 9 9"/></svg>`,
     alert: `<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M12 7v6M12 17h.01"/></svg>`,
   }
 
   const FORMAT_INFO = {
-    html: "HTML, inline styles",
-    jsx: "React, inline styles",
-    tsx: "React + TypeScript, inline styles",
-    svg: "Vectors for Figma / Paper",
-    png: "Screenshot",
+    code: { tsx: "Next.js · shadcn/ui · Tailwind", html: "HTML with inline styles", svg: "SVG code (vector)" },
+    image: { png: "PNG image", jpg: "JPG image (opaque)", svg: "SVG vector image" },
   }
-  const FORMAT_LABEL = { html: "HTML", jsx: "JSX", tsx: "TSX", svg: "Figma" }
 
   const CSS = `
     :host { all: initial; }
@@ -1039,31 +1654,11 @@
     }
     button:hover { background: var(--hover); color: var(--fg); }
     button:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
-    .seg button { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 11px; letter-spacing: .02em; }
     .seg button[aria-pressed="true"] { background: var(--fg); color: #09090b; }
+    .formats button { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 11px; letter-spacing: .02em; min-width: 42px; }
     .pick[aria-pressed="true"] { background: rgba(59,130,246,.18); color: #93c5fd; }
-    .dl[aria-expanded="true"] { background: var(--hover); color: var(--fg); }
-    .dl .chev { opacity: .6; margin-left: -2px; }
     .sep { width: 1px; height: 18px; background: var(--line); margin: 0 2px; }
     .icon { width: 28px; padding: 0; }
-    .menu-wrap { position: relative; }
-    .menu {
-      position: absolute; top: calc(100% + 10px); right: -6px; min-width: 232px; padding: 6px;
-      background: var(--bg); border: 1px solid var(--line); border-radius: 12px;
-      box-shadow: 0 16px 40px rgba(0,0,0,.4); display: none; flex-direction: column; gap: 2px;
-      backdrop-filter: blur(14px) saturate(1.4); -webkit-backdrop-filter: blur(14px) saturate(1.4);
-    }
-    .menu.open { display: flex; animation: menu-in .14s cubic-bezier(.2,.8,.2,1); }
-    @keyframes menu-in { from { opacity: 0; transform: translateY(-4px); } }
-    .menu-title { padding: 6px 8px 8px; color: var(--muted); font-size: 11px; }
-    .menu button { height: 34px; justify-content: flex-start; gap: 10px; padding: 0 8px; color: var(--fg); }
-    .menu .ext {
-      width: 40px; height: 20px; display: inline-flex; align-items: center; justify-content: center;
-      border-radius: 5px; background: rgba(255,255,255,.07); color: var(--fg);
-      font: 600 10px/1 ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: .03em;
-    }
-    .menu .desc { color: var(--muted); font-size: 12px; }
-    .menu button:hover .ext { background: var(--accent); color: #fff; }
     .hint {
       position: fixed; top: 60px; left: 50%; transform: translateX(-50%);
       padding: 6px 10px; border-radius: 8px; background: var(--bg); border: 1px solid var(--line);
@@ -1071,7 +1666,6 @@
       transition: opacity .2s; z-index: 2;
     }
     .hint kbd { font: inherit; color: var(--fg); padding: 1px 4px; border-radius: 4px; background: rgba(255,255,255,.08); }
-    .hint.pending { color: #bfdbfe; border-color: rgba(59,130,246,.5); }
     .hl {
       position: fixed; pointer-events: none; border: 1.5px solid var(--accent);
       background: rgba(59,130,246,.08); border-radius: 2px; display: none; z-index: 1;
@@ -1104,21 +1698,25 @@
     .toast .text { display: flex; flex-direction: column; gap: 4px; margin-right: auto; }
     .toast .title { font-size: 13px; font-weight: 600; color: var(--fg); }
     .toast .detail { font-size: 11px; color: var(--muted); }
-    .toast .action { height: 28px; padding: 0 10px; background: rgba(255,255,255,.08); color: var(--fg); }
-    .toast .action:hover { background: var(--accent); color: #fff; }
-    .toast .action[hidden] { display: none; }
     .toast .x { width: 28px; padding: 0; }
+    .toast { overflow: hidden; }
+    .toast .progress { position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: rgba(255,255,255,.06); display: none; }
+    .toast .progress i { display: block; height: 100%; width: 0; background: var(--accent); border-radius: 0 2px 2px 0; transition: width .25s ease; }
+    .toast.busy .progress { display: block; }
+    .toast.busy .badge { background: rgba(59,130,246,.16); color: #93c5fd; }
+    .toast.busy .badge svg { animation: spin .8s linear infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .toast .pct { font-variant-numeric: tabular-nums; color: var(--muted); font-size: 11px; min-width: 30px; text-align: right; }
+    .toast:not(.busy) .pct { display: none; }
   `
 
   let host, shadow, ui
-  let format = "tsx"
+  let tab = "code"
+  const formats = { code: "tsx", image: "png" }
   let picking = false
   let current = null // hovered element
-  let lastEl = null // last copied / downloaded element
-  let pendingDownload = null // format waiting for a click
   let trail = [] // elements visited via ArrowUp, for ArrowDown
   let toastTimer = 0
-  let toastAction = null
 
   function buildUI() {
     host = document.createElement("copycode-root")
@@ -1129,18 +1727,13 @@
       <div class="root">
         <div class="bar" role="toolbar" aria-label="CopyCode">
           <div class="brand" title="Drag to move">${ICON.logo}CopyCode</div>
-          <div class="seg" role="group" aria-label="Copy format">
-            ${FORMATS.map((f, i) => `<button data-format="${f}" title="Copy as ${FORMAT_INFO[f]} (${i + 1})">${FORMAT_LABEL[f]}</button>`).join("")}
+          <div class="seg tabs" role="tablist" aria-label="Copy as">
+            <button data-tab="code" role="tab" title="Copy code (C)">${ICON.code}Code</button>
+            <button data-tab="image" role="tab" title="Copy an image (I)">${ICON.image}Image</button>
           </div>
+          <div class="seg formats" role="group" aria-label="Format"></div>
           <div class="sep"></div>
           <button class="pick" title="Select element (S)">${ICON.cursor}Select</button>
-          <div class="menu-wrap">
-            <button class="dl" aria-haspopup="menu" aria-expanded="false" title="Download (D)">${ICON.download}Download<span class="chev">${ICON.chevron}</span></button>
-            <div class="menu" role="menu">
-              <div class="menu-title">Download selected block as</div>
-              ${DOWNLOADS.map((f) => `<button role="menuitem" data-download="${f}"><span class="ext">.${f}</span><span class="desc">${FORMAT_INFO[f]}</span></button>`).join("")}
-            </div>
-          </div>
           <button class="icon close" title="Close (Esc)" aria-label="Close">${ICON.close}</button>
         </div>
         <div class="hint"></div>
@@ -1148,39 +1741,26 @@
         <div class="toast" role="status" aria-live="polite">
           <div class="badge"></div>
           <div class="text"><div class="title"></div><div class="detail"></div></div>
-          <button class="action"></button>
+          <span class="pct"></span>
           <button class="x" aria-label="Dismiss">${ICON.close}</button>
+          <div class="progress"><i></i></div>
         </div>
       </div>`
     const $ = (s) => shadow.querySelector(s)
     ui = {
       bar: $(".bar"), hint: $(".hint"), hl: $(".hl"), tag: $(".tag"), pick: $(".pick"),
-      dl: $(".dl"), menu: $(".menu"), formats: shadow.querySelectorAll("[data-format]"),
-      toast: $(".toast"), badge: $(".toast .badge"), title: $(".toast .title"),
-      detail: $(".toast .detail"), action: $(".toast .action"),
+      tabs: shadow.querySelectorAll("[data-tab]"), formats: $(".formats"),
+      toast: $(".toast"), badge: $(".toast .badge"), title: $(".toast .title"), detail: $(".toast .detail"),
+      fill: $(".toast .progress i"), pct: $(".toast .pct"),
     }
-
-    ui.formats.forEach((b) => b.addEventListener("click", () => setFormat(b.dataset.format)))
+    ui.tabs.forEach((b) => b.addEventListener("click", () => setTab(b.dataset.tab)))
     ui.pick.addEventListener("click", () => setPicking(!picking))
-    ui.dl.addEventListener("click", () => toggleMenu())
-    shadow.querySelectorAll("[data-download]").forEach((b) =>
-      b.addEventListener("click", () => {
-        toggleMenu(false)
-        requestDownload(b.dataset.download)
-      })
-    )
     $(".close").addEventListener("click", close)
     $(".toast .x").addEventListener("click", hideToast)
-    ui.action.addEventListener("click", () => {
-      const fn = toastAction
-      hideToast()
-      fn?.()
-    })
     ui.toast.addEventListener("pointerenter", () => clearTimeout(toastTimer))
     ui.toast.addEventListener("pointerleave", () => scheduleHide(1500))
     makeDraggable($(".brand"), ui.bar)
     document.documentElement.appendChild(host)
-    renderHint()
   }
 
   function makeDraggable(handle, bar) {
@@ -1205,38 +1785,45 @@
     })
   }
 
-  function renderHint() {
-    ui.hint.classList.toggle("pending", !!pendingDownload)
-    ui.hint.innerHTML = pendingDownload
-      ? `Click a block to download it as <kbd>.${pendingDownload}</kbd> · <kbd>Esc</kbd> cancel`
-      : `Click a block to copy · <kbd>↑</kbd> parent · <kbd>↓</kbd> child · <kbd>D</kbd> download · <kbd>Esc</kbd> exit`
-  }
-
-  function setFormat(f) {
-    if (!FORMATS.includes(f)) return
-    format = f
-    ui.formats.forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.format === f)))
+  function save() {
     try {
-      chrome.storage?.local.set({ format: f })
+      chrome.storage?.local.set({ tab, formats })
     } catch {
       /* storage unavailable */
     }
+  }
+
+  function render() {
+    ui.tabs.forEach((b) => b.setAttribute("aria-selected", String(b.dataset.tab === tab)))
+    ui.tabs.forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.tab === tab)))
+    ui.formats.innerHTML = TABS[tab]
+      .map((f, i) => `<button data-format="${f}" aria-pressed="${f === formats[tab]}" title="${FORMAT_INFO[tab][f]} (${i + 1})">${f.toUpperCase()}</button>`)
+      .join("")
+    ui.formats.querySelectorAll("[data-format]").forEach((b) => b.addEventListener("click", () => setFormat(b.dataset.format)))
+    const what = tab === "code" ? `${formats.code.toUpperCase()} code` : `a ${formats.image.toUpperCase()} image`
+    const paste = tab === "image" && formats.image !== "svg" ? "pastes as an image" : "pastes as layers in Figma / Paper"
+    ui.hint.innerHTML = `Click a block to copy ${what} · ${paste} · <kbd>↑</kbd><kbd>↓</kbd> parent/child · <kbd>Esc</kbd> exit`
+  }
+
+  function setTab(t) {
+    if (!TABS[t]) return
+    tab = t
+    render()
+    save()
+  }
+
+  function setFormat(f) {
+    if (!TABS[tab].includes(f)) return
+    formats[tab] = f
+    render()
+    save()
   }
 
   function setPicking(on) {
     picking = on
     ui.pick.setAttribute("aria-pressed", String(on))
     ui.hint.style.display = on ? "" : "none"
-    if (!on) {
-      hideHighlight()
-      pendingDownload = null
-      renderHint()
-    }
-  }
-
-  function toggleMenu(open = ui.dl.getAttribute("aria-expanded") !== "true") {
-    ui.dl.setAttribute("aria-expanded", String(open))
-    ui.menu.classList.toggle("open", open)
+    if (!on) hideHighlight()
   }
 
   /* ---------------------------- highlight --------------------------- */
@@ -1278,15 +1865,34 @@
 
   /* ------------------------------ toast ----------------------------- */
 
-  function toast({ title, detail = "", error = false, action = null }) {
+  // A toast that stays until the work is done: spinner, current step, progress bar.
+  function startProgress(title) {
+    let shown = 0
+    clearTimeout(toastTimer)
+    ui.toast.classList.remove("err")
+    ui.toast.classList.add("busy")
+    ui.badge.innerHTML = ICON.spinner
+    ui.title.textContent = title
+    ui.detail.textContent = "Starting…"
+    ui.fill.style.width = "0%"
+    ui.pct.textContent = "0%"
+    ui.toast.classList.add("show")
+    return (fraction, step) => {
+      if (!ui) return
+      shown = Math.max(shown, Math.min(0.99, fraction)) // never goes backwards
+      ui.fill.style.width = `${Math.round(shown * 100)}%`
+      ui.pct.textContent = `${Math.round(shown * 100)}%`
+      if (step) ui.detail.textContent = step
+    }
+  }
+
+  function toast({ title, detail = "", error = false }) {
+    ui.toast.classList.remove("busy")
+    ui.fill.style.width = "100%"
     ui.toast.classList.toggle("err", error)
     ui.badge.innerHTML = error ? ICON.alert : ICON.check
     ui.title.textContent = title
     ui.detail.textContent = detail
-    toastAction = action?.run || null
-    ui.action.hidden = !action
-    if (action) ui.action.innerHTML = `${ICON.download}${action.label}`
-    // Restart the entrance animation for back-to-back toasts.
     ui.toast.classList.remove("show")
     void ui.toast.offsetWidth
     ui.toast.classList.add("show")
@@ -1301,50 +1907,102 @@
     ui?.toast.classList.remove("show")
   }
 
-  /* ----------------------------- actions ---------------------------- */
+  /* ------------------------------ copy ------------------------------ */
+
+  // Background behind the block, for JPG (no transparency).
+  function backdropColor(el) {
+    for (let e = el; e; e = e.parentElement) {
+      const c = getComputedStyle(e).backgroundColor
+      if (c && c !== "transparent" && !/rgba\(.*,\s*0\)$/.test(c)) return c
+    }
+    return "#ffffff"
+  }
+
+  // Run fn after the browser has painted (so the progress toast shows before heavy work).
+  const later = (fn) => nextFrame().then(() => new Promise((r) => setTimeout(r, 0))).then(fn)
 
   async function copyEl(el) {
+    const f = formats[tab]
+    const what = tab === "code" ? f.toUpperCase() : `${f.toUpperCase()} image`
+    const progress = startProgress(`Copying ${what}…`)
     try {
-      let result
-      if (format === "svg") result = await copySVG(generateSVG(el))
-      else {
-        result = generate(el, format)
-        if (!(await copyText(result.code))) throw new Error("Clipboard access was blocked on this page")
+      let title, detail
+      // Vector SVG: Figma/Paper layers (and the SVG formats themselves). Image embedding reports progress.
+      const svgWeight = tab === "code" && f !== "svg" ? 0 : 1
+      const svg = later(() => {
+        if (svgWeight) progress(0.1, "Drawing vector layers")
+        return generateSVG(el, (n, total) => svgWeight && total && progress(0.2 + 0.7 * (n / total), `Embedding images ${n}/${total}`))
+      }).then((r) => r.code)
+
+      if (tab === "code") {
+        progress(0.05, "Reading styles")
+        const html = later(() => generate(el, "html"))
+        let pending
+        if (f === "tsx") {
+          pending = html.then(() => {
+            progress(0.15, "Converting to Tailwind + shadcn/ui")
+            return later(() =>
+              generateTSX(el, ({ step, part }) => progress(0.2 + 0.65 * part, step))
+            )
+          })
+        } else if (f === "html") pending = html
+        else pending = svg.then((code) => ({ code }))
+        await writeClipboard({
+          "text/plain": textBlob("text/plain", pending.then((r) => r.code)), // the code (editors; Figma for SVG)
+          "text/html": f === "svg" ? null : textBlob("text/html", html.then((r) => r.code)), // Paper: frames and text layers
+          "image/svg+xml": textBlob("image/svg+xml", svg), // vector layers for apps that read SVG
+        })
+        const result = await pending
+        progress(0.95, "Finishing")
+        const code = result.code
+        title = `Copied ${f.toUpperCase()}`
+        detail = [
+          result.nodes ? `${result.nodes} elements` : null,
+          result.stats?.components ? `${result.stats.components} shadcn components` : null,
+          result.responsive?.breakpoints?.length ? `responsive: base ${result.responsive.breakpoints.join(" ")}` : result.responsive?.failed ? "responsive unavailable on this site" : null,
+          `${(code.length / 1024).toFixed(1)} KB`,
+          f === "svg" ? "pastes as layers in Figma / Paper" : "Paper pastes it as layers",
+        ].filter(Boolean).join(" · ")
+      } else if (f === "svg") {
+        await writeClipboard({
+          "text/plain": textBlob("text/plain", svg), // Figma / Paper: layers
+          "image/svg+xml": textBlob("image/svg+xml", svg),
+        })
+        title = "Copied SVG image"
+        detail = `Vector · pastes as layers in Figma / Paper · ${((await svg).length / 1024).toFixed(1)} KB`
+      } else {
+        progress(0.1, "Capturing the screen")
+        const shot = screenshot(el)
+        const png = shot.then(({ canvas }) => {
+          progress(0.6, `Encoding ${f.toUpperCase()}`)
+          if (f !== "jpg") return canvasBlob(canvas, "image/png")
+          // JPG has no transparency: flatten onto the page background.
+          const flat = document.createElement("canvas")
+          flat.width = canvas.width
+          flat.height = canvas.height
+          const g = flat.getContext("2d")
+          g.fillStyle = backdropColor(el)
+          g.fillRect(0, 0, flat.width, flat.height)
+          g.drawImage(canvas, 0, 0)
+          shot.flat = flat
+          return canvasBlob(flat, "image/png")
+        })
+        await writeClipboard({
+          "image/png": png,
+          // Browsers can't put JPEG on the clipboard as an image; also offer the real JPEG bytes.
+          "web image/jpeg": f === "jpg" ? png.then(() => canvasBlob(shot.flat, "image/jpeg", 0.92)) : null,
+        })
+        const { cropped } = await shot
+        const size = (await png).size
+        title = `Copied ${f.toUpperCase()} image`
+        detail = `${Math.round(size / 1024)} KB${cropped ? " · cropped to the visible area" : ""}`
       }
-      const { code, nodes, truncated } = result
-      lastEl = el
       flash(el)
-      const kb = (new Blob([code]).size / 1024).toFixed(1)
-      const fmt = format
-      toast({
-        title: fmt === "svg" ? "Copied for Figma / Paper" : `Copied as ${fmt.toUpperCase()}`,
-        detail: fmt === "svg" ? `Paste in Figma or Paper · ${kb} KB` : `${nodes} elements · ${kb} KB${truncated ? ` · truncated at ${MAX_NODES}` : ""}`,
-        action: { label: `.${fmt}`, run: () => downloadEl(el, fmt) },
-      })
+      toast({ title, detail })
     } catch (err) {
       console.error("[CopyCode]", err)
       toast({ title: "Couldn't copy", detail: err?.message || String(err), error: true })
     }
-  }
-
-  async function downloadEl(el, fmt) {
-    try {
-      const { file, detail } = await download(el, fmt)
-      lastEl = el
-      flash(el)
-      toast({ title: `Downloaded ${file}`, detail })
-    } catch (err) {
-      console.error("[CopyCode]", err)
-      toast({ title: "Couldn't download", detail: err?.message || String(err), error: true })
-    }
-  }
-
-  function requestDownload(fmt) {
-    const target = lastEl?.isConnected ? lastEl : null
-    if (target) return downloadEl(target, fmt)
-    pendingDownload = fmt
-    if (!picking) setPicking(true)
-    renderHint()
   }
 
   /* ----------------------------- events ----------------------------- */
@@ -1367,45 +2025,29 @@
   }
 
   function onClick(e) {
-    if (isOurs(e)) {
-      // Clicking elsewhere in the toolbar closes the menu.
-      if (!e.composedPath().some((n) => n.classList?.contains("menu-wrap"))) toggleMenu(false)
-      return
-    }
-    toggleMenu(false)
-    if (!picking) return
+    if (isOurs(e) || !picking) return
     swallow(e)
-    if (!current) return
-    if (pendingDownload) {
-      const fmt = pendingDownload
-      pendingDownload = null
-      renderHint()
-      downloadEl(current, fmt)
-    } else copyEl(current)
+    if (current) copyEl(current)
   }
 
   function onKey(e) {
     if (e.key === "Escape") {
       e.preventDefault()
       e.stopPropagation()
-      if (ui.menu.classList.contains("open")) toggleMenu(false)
-      else if (pendingDownload) {
-        pendingDownload = null
-        renderHint()
-      } else close()
+      close()
       return
     }
     if (!picking || e.metaKey || e.ctrlKey || e.altKey) return
-    const n = Number(e.key)
-    if (n >= 1 && n <= FORMATS.length) {
+    const key = e.key.toLowerCase()
+    if (key === "c" || key === "i") {
       swallow(e)
-      setFormat(FORMATS[n - 1])
+      setTab(key === "c" ? "code" : "image")
       return
     }
-    if (e.key === "d" || e.key === "D") {
+    const n = Number(e.key)
+    if (n >= 1 && n <= 3) {
       swallow(e)
-      if (current) downloadEl(current, format)
-      else toggleMenu(true)
+      setFormat(TABS[tab][n - 1])
       return
     }
     if (!current) return
@@ -1447,9 +2089,13 @@
 
   function open() {
     buildUI()
-    setFormat("tsx")
+    render()
     try {
-      chrome.storage?.local.get("format", (r) => r?.format && setFormat(r.format))
+      chrome.storage?.local.get(["tab", "formats"], (r) => {
+        if (r?.formats) for (const t of Object.keys(TABS)) if (TABS[t].includes(r.formats[t])) formats[t] = r.formats[t]
+        if (r?.tab && TABS[r.tab]) tab = r.tab
+        render()
+      })
     } catch {
       /* storage unavailable */
     }
@@ -1470,15 +2116,19 @@
       delete sandboxes[k]
     }
     defaultsCache.clear()
+    globalThis.__copycodeTailwind?.disposeTarget()
+    globalThis.__copycodePageCache = null
     host = shadow = ui = null
     picking = false
-    current = lastEl = pendingDownload = null
+    current = null
   }
 
   window.__copycode = {
     toggle: () => (host ? close() : open()),
     // For DevTools (CopyCode context): __copycode.generate($0, "tsx").code
     generate,
+    generateTSX,
+    generateSVG,
   }
   open()
 })()

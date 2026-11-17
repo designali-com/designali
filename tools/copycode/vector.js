@@ -441,6 +441,14 @@
       } else if (tag === "img" || tag === "video" || tag === "canvas") {
         if (visible) {
           let url = tag === "img" ? el.currentSrc || el.src : tag === "video" ? el.poster : null
+          // Optimizer URLs (/_next/image?url=…&w=48) → the full-size original.
+          try {
+            const u = new URL(url, document.baseURI)
+            const inner = /\/_(next|vercel)\/image\/?$/.test(u.pathname) && u.searchParams.get("url")
+            if (inner) url = new URL(inner, u.origin).href
+          } catch {
+            /* keep */
+          }
           if (tag === "canvas") {
             try {
               url = el.toDataURL("image/png")
@@ -492,7 +500,11 @@
       `</svg>`
 
     // Embed images as data: URIs so design tools can show them.
-    const embedded = await Promise.all(images.map((img) => embed(img.url, img.el)))
+    let embeddedCount = 0
+    opts.onProgress?.(0, images.length)
+    const embedded = await Promise.all(
+      images.map((img) => embed(img.url, img.el).then((r) => (opts.onProgress?.(++embeddedCount, images.length), r)))
+    )
     images.forEach((img, i) => {
       svg = svg.split(img.token).join(esc(embedded[i] || img.url))
     })

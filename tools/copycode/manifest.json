@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "name": "CopyCode",
-  "version": "0.2.0",
-  "description": "Select any block on a web page and copy an exact copy as HTML, JSX, TSX, or vectors for Figma and Paper.",
+  "version": "0.3.0",
+  "description": "Copy any block of a web page as a Next.js + shadcn/ui + Tailwind component, JSX, HTML, an image, or layers for Figma and Paper.",
   "action": {
     "default_title": "CopyCode (Alt+Shift+C)",
     "default_icon": {
