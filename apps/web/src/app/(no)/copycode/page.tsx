@@ -246,9 +246,9 @@ export default function CopyCodePage() {
         </div>
       </section>
 
-      <section className="relative w-full h-full max-h-[600px] overflow-hidden">
+      <section className="relative mx-auto w-full max-w-6xl aspect-video overflow-hidden">
         <iframe
-          className="w-full h-full min-h-[400px] max-h-[600px]"
+          className="absolute inset-0 h-full w-full"
           src="https://www.youtube.com/embed/giPQ8kFGU7Y?si=GpQn_rEU2D7alnrr"
           title="YouTube video player"
           frameBorder="0"
