@@ -2,7 +2,7 @@
   "name": "copycode",
   "version": "0.3.0",
   "private": true,
-  "description": "Chrome extension: copy any block of a web page as a Next.js + shadcn/ui + Tailwind component, JSX, HTML, an image, or layers for Figma and Paper.",
+  "description": "Copy any element from a website and reuse it in your development or design workflow.",
   "type": "module",
   "scripts": { 
     "tailwind": "node scripts/build-tailwind-data.mjs",

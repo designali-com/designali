@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "CopyCode",
   "version": "0.3.0",
-  "description": "Copy any block of a web page as a Next.js + shadcn/ui + Tailwind component, JSX, HTML, an image, or layers for Figma and Paper.",
+  "description": "Copy any element from a website and reuse it in your development or design workflow.",
   "action": {
     "default_title": "CopyCode (Alt+Shift+C)",
     "default_icon": {
