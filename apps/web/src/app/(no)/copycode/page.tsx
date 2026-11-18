@@ -5,7 +5,7 @@ import {
   BracesIcon,
   ClipboardCheckIcon,
   CodeIcon,
-  DownloadIcon, 
+  DownloadIcon,
   ImageIcon,
   LayoutIcon,
   LayersIcon,
@@ -244,6 +244,18 @@ export default function CopyCodePage() {
             Free · Works offline · Only reads the tab you activate it on
           </p>
         </div>
+      </section>
+
+      <section className="relative w-full h-full max-h-[600px] overflow-hidden">
+        <iframe
+          className="w-full h-full min-h-[400px] max-h-[600px]"
+          src="https://www.youtube.com/embed/giPQ8kFGU7Y?si=GpQn_rEU2D7alnrr"
+          title="YouTube video player"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerPolicy="strict-origin-when-cross-origin"
+          allowFullScreen
+        />
       </section>
 
       {/* Format preview */}
