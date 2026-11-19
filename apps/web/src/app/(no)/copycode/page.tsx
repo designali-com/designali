@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import Image from "next/image"
 import {
   ArrowRightIcon,
+  BookOpenIcon,
   BracesIcon,
   ClipboardCheckIcon,
   CodeIcon,
@@ -28,7 +29,10 @@ import {
 } from "@workspace/ui/components/tabs"
 
 const VERSION = "0.3.0"
-const DOWNLOAD_URL = "https://github.com/designali-com/designali/blob/main/tools/copycode/README.md"
+const CHROME_STORE_URL =
+  "https://chromewebstore.google.com/detail/copycode/fajlocncaecjhlabpeoldjlfcmkonpdb"
+const DOCS_URL =
+  "https://github.com/designali-com/designali/blob/main/tools/copycode/README.md"
 
 export const metadata: Metadata = {
   title: "CopyCode: copy any element from any website",
@@ -183,11 +187,10 @@ const pasteTargets = [
 ]
 
 const installSteps = [
-  "Download and unzip copycode.zip.",
-  "Open chrome://extensions in Chrome, Arc, Brave or Edge.",
-  "Turn on Developer mode (top right).",
-  "Click Load unpacked and choose the unzipped folder.",
+  "Open CopyCode on the Chrome Web Store.",
+  "Click Add to Chrome (works in Chrome, Arc, Brave and Edge).",
   "Pin CopyCode to your toolbar.",
+  "Open any page and press Alt + Shift + C to start copying.",
 ]
 
 export default function CopyCodePage() {
@@ -224,11 +227,13 @@ export default function CopyCodePage() {
           <div className="flex flex-col gap-2 sm:flex-row">
             <Button
               size="lg"
-              render={<a href={DOWNLOAD_URL} download />}
+              render={
+                <a href={CHROME_STORE_URL} target="_blank" rel="noopener noreferrer" />
+              }
               nativeButton={false}
             >
               <DownloadIcon />
-              Download for Chrome
+              Add to Chrome
             </Button>
             <Button
               size="lg"
@@ -402,14 +407,27 @@ export default function CopyCodePage() {
               No account, no build step. CopyCode only asks for access to the
               tab you activate it on and the clipboard.
             </p>
-            <div>
+            <div className="flex flex-col gap-2 sm:flex-row">
               <Button
                 size="lg"
-                render={<a href={DOWNLOAD_URL} download />}
+                render={
+                  <a href={CHROME_STORE_URL} target="_blank" rel="noopener noreferrer" />
+                }
                 nativeButton={false}
               >
                 <DownloadIcon />
-                Download copycode.zip
+                Add to Chrome
+              </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                render={
+                  <a href={DOCS_URL} target="_blank" rel="noopener noreferrer" />
+                }
+                nativeButton={false}
+              >
+                <BookOpenIcon />
+                Read the docs
               </Button>
             </div>
           </div>
