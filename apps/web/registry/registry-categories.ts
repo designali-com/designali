@@ -7,6 +7,7 @@ import {
   FileText,
   Frame,
   Triangle,
+  Type,
   Image,
   LayoutGrid,
   LayoutTemplate,
@@ -66,6 +67,11 @@ export const data = {
       title: "Vectors",
       url: "/vectors",
       icon: Triangle,
+    },
+    {
+      title: "Fonts",
+      url: "/fonts",
+      icon: Type,
     }, 
     {
       title: "UI Designs",
