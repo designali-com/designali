@@ -1,5 +1,6 @@
 import { Button } from "@workspace/ui/components/button"
 import { Logo } from "@workspace/ui/designali/logo"
+import { HorizonGradient } from "@workspace/ui/shaders/horizon-gradient"
 import Link from "next/link"
 
 export function HeroSection() {
@@ -21,6 +22,15 @@ export function HeroSection() {
           ))}
         </div>
       </div>
+      <HorizonGradient
+        color="#00A8FF"
+        direction="top"
+        curve={2}
+        reach={0.6}
+        softness={1}
+        speed={1}
+        grain={0.02}
+      >
 
       {/* Center Panel */}
       <div className="relative z-10 m-2.5 flex h-[calc(100%-30px)] w-[calc(100%-30px)] items-center justify-center border border-dotted bg-background md:h-[calc(100%-70px)] md:w-[calc(100%-70px)]">
@@ -42,6 +52,7 @@ export function HeroSection() {
           </Button>
         </div>
       </div> 
+      </HorizonGradient>
     </section>
   )
 }
