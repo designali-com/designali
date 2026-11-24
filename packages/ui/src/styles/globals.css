@@ -1,3 +1,8 @@
+/* ui-sdk behavior CSS (hidden popups, overlays) lives in this layer. Declared
+   first so Tailwind and our styles always win. We do NOT import
+   @ui-sdk/core/web.css: it targets every [data-slot], which shadcn uses too. */
+@layer ui-sdk;
+
 @import "tailwindcss";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";

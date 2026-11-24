@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-16T10:01:09.292Z",
+  "generatedAt": "2026-11-23T10:07:19.844Z",
   "items": [
     {
       "name": "iphone",
@@ -84,6 +84,24 @@
       "name": "typewriter",
       "type": "registry:ui",
       "description": "",
+      "categories": []
+    },
+    {
+      "name": "ui-sdk-dialog",
+      "type": "registry:ui",
+      "description": "A focused task over the page, built on UI SDK with focus, Escape, outside-press and sheet presentation handled for you.",
+      "categories": []
+    },
+    {
+      "name": "ui-sdk-dialog-demo-sheet",
+      "type": "registry:component",
+      "description": "Dialog demo built on UI SDK.",
+      "categories": []
+    },
+    {
+      "name": "ui-sdk-dialog-demo",
+      "type": "registry:component",
+      "description": "Dialog demo built on UI SDK.",
       "categories": []
     },
     {

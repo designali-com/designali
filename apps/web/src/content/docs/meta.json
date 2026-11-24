@@ -1,8 +1,9 @@
 {
   "root": true,
   "pages": [
-    "(root)", 
+    "(root)",
     "components",
+    "ui-sdk",
     "apple",
     "legal"
   ]

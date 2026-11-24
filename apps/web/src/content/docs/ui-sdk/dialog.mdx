@@ -1,0 +1,102 @@
+---
+title: Dialog
+description: A focused task over the page, built on UI SDK with focus, Escape, outside-press and sheet presentation handled for you.
+links:
+  doc: https://ui-sdk.dev/docs/react/components/dialog
+---
+
+<ComponentPreview name="ui-sdk-dialog-demo" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add https://designali.com/r/ui-sdk-dialog.json
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Install the following dependencies:</Step>
+
+```bash
+npm install @ui-sdk/react @ui-sdk/core lucide-react
+```
+
+<Step>Declare the `ui-sdk` layer as the first rule of your global stylesheet.</Step>
+
+```css
+@layer ui-sdk;
+
+@import "tailwindcss";
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="ui-sdk-dialog" title="components/ui-sdk/dialog.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import {
+  Dialog,
+  DialogClose,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui-sdk/dialog"
+```
+
+```tsx
+<Dialog>
+  <DialogTrigger>Open</DialogTrigger>
+  <DialogContent>
+    <DialogHeader>
+      <DialogTitle>Are you absolutely sure?</DialogTitle>
+      <DialogDescription>This action cannot be undone.</DialogDescription>
+    </DialogHeader>
+    <DialogFooter>
+      <DialogClose>Cancel</DialogClose>
+    </DialogFooter>
+  </DialogContent>
+</Dialog>
+```
+
+## Examples
+
+### Sheet on mobile
+
+`presentation="auto"` shows a swipeable bottom sheet on small touch screens and a centered dialog everywhere else.
+
+<ComponentPreview name="ui-sdk-dialog-demo-sheet" />
+
+## Notes
+
+- There is no portal. UI SDK renders the content in the browser's top layer, so `DialogPortal` is a pass-through.
+- Open and close animate with CSS transitions on `data-starting-style` and `data-ending-style`; the dialog stays mounted until the exit finishes.
+- `DialogClose` takes an async `action`. The dialog stays open, with `data-pending` on the button, until the promise resolves.
+
+## API Reference
+
+See the [UI SDK Dialog reference](https://ui-sdk.dev/docs/react/components/dialog) for every prop, data attribute and CSS variable.

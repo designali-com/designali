@@ -107,6 +107,15 @@ function fixFilePaths(files: RegistryFile[]) {
 }
 
 export function fixImport(content: string) {
+  // UI SDK wrappers install to components/ui-sdk/<name> (not components/ui,
+  // so they never overwrite the shadcn component with the same name):
+  // @workspace/ui/components/ui-sdk/dialog -> @/components/ui-sdk/dialog
+  // @/registry/designali/ui/ui-sdk/dialog  -> @/components/ui-sdk/dialog
+  content = content.replace(
+    /@(?:workspace\/ui\/components|\/registry\/[\w-]+\/ui)\/ui-sdk\/([\w-]+)/g,
+    "@/components/ui-sdk/$1"
+  )
+
   // Handle @workspace/ui/* monorepo aliases:
   // @workspace/ui/components/navigation-menu -> @/components/ui/navigation-menu
   // @workspace/ui/lib/utils                  -> @/lib/utils

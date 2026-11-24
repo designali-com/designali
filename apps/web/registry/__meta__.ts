@@ -241,6 +241,68 @@ export const RegistryMeta: Record<string, any> = {
     categories: [],
     meta: {},
   },
+  "ui-sdk-dialog": {
+    name: "ui-sdk-dialog",
+    description:
+      "A focused task over the page, built on UI SDK with focus, Escape, outside-press and sheet presentation handled for you.",
+    type: "registry:ui",
+    registryDependencies: ["button"],
+    dependencies: ["@ui-sdk/core", "@ui-sdk/react", "lucide-react"],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/ui/ui-sdk/dialog.tsx",
+        type: "registry:ui",
+        target: "components/ui-sdk/dialog.tsx",
+      },
+    ],
+    categories: [],
+    meta: {},
+  },
+  "ui-sdk-dialog-demo-sheet": {
+    name: "ui-sdk-dialog-demo-sheet",
+    description: "Dialog demo built on UI SDK.",
+    type: "registry:component",
+    registryDependencies: [
+      "button",
+      "https://designali.com/r/ui-sdk-dialog.json",
+      "input",
+      "label",
+    ],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/components/ui-sdk/dialog/dialog-demo-sheet.tsx",
+        type: "registry:component",
+        target: "components/ui-sdk/dialog/dialog-demo-sheet.tsx",
+      },
+    ],
+    categories: [],
+    meta: {},
+  },
+  "ui-sdk-dialog-demo": {
+    name: "ui-sdk-dialog-demo",
+    description: "Dialog demo built on UI SDK.",
+    type: "registry:component",
+    registryDependencies: [
+      "button",
+      "https://designali.com/r/ui-sdk-dialog.json",
+      "input",
+      "label",
+    ],
+    dependencies: [],
+    devDependencies: [],
+    files: [
+      {
+        path: "registry/designali/components/ui-sdk/dialog/dialog-demo.tsx",
+        type: "registry:component",
+        target: "components/ui-sdk/dialog/dialog-demo.tsx",
+      },
+    ],
+    categories: [],
+    meta: {},
+  },
   "header-01": {
     name: "header-01",
     description: "A simple header section.",
